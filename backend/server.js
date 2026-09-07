@@ -3,6 +3,7 @@ const { WebSocketServer } = require('ws');
 const cors = require('cors');
 const http = require('http');
 const { getMixedQuestions, warmCache, listCategories } = require('./questions');
+const reports = require('./reports');
 
 const app = express();
 const server = http.createServer(app);
@@ -56,6 +57,7 @@ async function startGame(p1, p2, categoryKey) {
     currentRound: -1,
     questionStart: 0,
     roundAnswers: {}, // playerId -> { answerIndex, correct, elapsedMs, points }
+    reported: new Set(), // `${playerId}:${round}` — one report per player per question
     roundTimer: null,
     status: 'active',
   };
@@ -241,6 +243,22 @@ wss.on('connection', (ws) => {
       }
     }
 
+    if (data.type === 'report') {
+      const gameId = playerSessions.get(playerId);
+      const game = gameId && activeGames.get(gameId);
+      if (game && game.currentRound >= 0) {
+        const key = `${playerId}:${game.currentRound}`;
+        if (!game.reported.has(key)) {
+          game.reported.add(key);
+          // Use the server's own current question text (not client-supplied)
+          // so a report always targets the real question.
+          const q = game.questions[game.currentRound];
+          if (q) reports.report(q.text);
+          send(ws, { type: 'report_ack' });
+        }
+      }
+    }
+
     if (data.type === 'leave') {
       const gameId = playerSessions.get(playerId);
       const game = gameId && activeGames.get(gameId);
@@ -266,6 +284,7 @@ app.get('/health', (req, res) =>
   res.json({ status: 'ok', activeGames: activeGames.size, waiting: waitingPlayers.length })
 );
 app.get('/categories', (req, res) => res.json(listCategories()));
+app.get('/reports/stats', (req, res) => res.json(reports.stats()));
 
 server.listen(PORT, () => {
   console.log(`🎮 QuizzUp backend on http://localhost:${PORT}`);

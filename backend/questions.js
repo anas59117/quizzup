@@ -9,6 +9,7 @@
 // so the game is always playable offline too.
 
 const trivia = require('./trivia-api');
+const reports = require('./reports');
 
 const CATEGORIES = {
   movies: {
@@ -135,12 +136,15 @@ async function getMixedQuestions(count, categoryKey) {
   const questions = [];
   const seen = new Set();
 
-  // 1) API first — huge pool, maximum variety.
+  const accept = (q) => !seen.has(q.text) && !reports.isQuarantined(q.text);
+
+  // 1) API first — huge pool, maximum variety. Pull extra to absorb any
+  //    quarantined/duplicate questions we skip.
   if (categoryKey && CATEGORIES[categoryKey] && trivia.isSupported(categoryKey)) {
     const cat = CATEGORIES[categoryKey];
-    for (const q of trivia.takeFromCache(count, categoryKey, cat.label, cat.icon)) {
+    for (const q of trivia.takeFromCache(count * 2, categoryKey, cat.label, cat.icon)) {
       if (questions.length >= count) break;
-      if (!seen.has(q.text)) {
+      if (accept(q)) {
         questions.push(q);
         seen.add(q.text);
       }
@@ -151,7 +155,7 @@ async function getMixedQuestions(count, categoryKey) {
   if (questions.length < count) {
     for (const q of getQuestions(count, categoryKey)) {
       if (questions.length >= count) break;
-      if (!seen.has(q.text)) {
+      if (accept(q)) {
         questions.push(q);
         seen.add(q.text);
       }

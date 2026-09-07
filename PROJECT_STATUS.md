@@ -27,9 +27,15 @@ Objectif : **~3000€/mois**, budget ~350€, solo, web-first.
     compléter et quand l'API est indisponible/bloquée/rate-limitée.
   - Priorité : API d'abord (max de variété), local en complément. Fiabilité :
     local = 100% ; OpenTDB = communautaire (~95-98%, non garanti à 100%).
-    → à terme, ajouter un bouton "signaler cette question" pour nettoyer.
+    → nettoyage assuré par le signalement communautaire (voir ci-dessous).
   - Note : l'API est bloquée dans la sandbox de dev (egress proxy) mais
     marchera en prod (Railway). Le jeu reste jouable en local grâce au fallback.
+- **Signalement communautaire** (`backend/reports.js`) : bouton "🚩 Report"
+  pendant le reveal. Une question atteignant 3 signalements est mise en
+  quarantaine et n'est plus jamais servie → la base se nettoie toute seule.
+  Anti-abus : 1 signalement/joueur/question, texte pris côté serveur. Persisté
+  dans un fichier JSON (best-effort ; migrer vers Firebase pour du durable
+  multi-instance). Endpoint `/reports/stats`. Testé (quarantaine + exclusion).
 - **Backend réécrit** (`backend/server.js`) — testé end-to-end (2 joueurs) :
   - 🐛 **Bug corrigé** : les réponses n'étaient jamais enregistrées, le jeu
     n'avançait que par timeout. Maintenant le round avance dès que les 2 ont répondu.

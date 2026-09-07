@@ -47,6 +47,7 @@ export default function App() {
   const [selected, setSelected] = useState(null);
   const [timeLeft, setTimeLeft] = useState(10);
   const [reveal, setReveal] = useState(null); // round_result payload
+  const [reported, setReported] = useState(false);
   const [result, setResult] = useState(null);
   const wsRef = useRef(null);
   const tickRef = useRef(null);
@@ -96,6 +97,10 @@ export default function App() {
             setRound(data.round);
             setSelected(null);
             setReveal(null);
+            setReported(false);
+            break;
+          case 'report_ack':
+            setReported(true);
             break;
           case 'round_result':
             setReveal(data);
@@ -128,6 +133,13 @@ export default function App() {
     setSelected(index);
     if (wsRef.current && wsRef.current.readyState === 1) {
       wsRef.current.send(JSON.stringify({ type: 'answer', answerIndex: index }));
+    }
+  };
+
+  const reportQuestion = () => {
+    if (reported) return;
+    if (wsRef.current && wsRef.current.readyState === 1) {
+      wsRef.current.send(JSON.stringify({ type: 'report' }));
     }
   };
 
@@ -283,6 +295,12 @@ export default function App() {
             <div className="reveal-note">
               {reveal.yourCorrect ? `✅ +${reveal.pointsEarned} points` : reveal.timedOut && selected === null ? '⏱️ Time up' : '❌ Wrong'}
             </div>
+          )}
+
+          {showReveal && (
+            <button className="report-btn" onClick={reportQuestion} disabled={reported}>
+              {reported ? '✓ Reported, thanks' : '🚩 Report this question'}
+            </button>
           )}
         </div>
       </div>
