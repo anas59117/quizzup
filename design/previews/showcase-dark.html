@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Poppins', sans-serif; background: #060510; padding: 40px; }
+  .showcase { display: flex; gap: 24px; align-items: flex-start; justify-content: flex-start; flex-wrap: nowrap; width: fit-content; }
+  .phone { width: 300px; flex-shrink: 0; }
+  .phone-label { color: #7f5af0; font-size: 0.8em; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; text-align: center; margin-bottom: 12px; }
+  .screen { width: 300px; height: 620px; background: #0f0e17; border-radius: 32px; border: 8px solid #1a1a24; overflow: hidden; position: relative; }
+  .scr-pad { padding: 28px 22px; height: 100%; position: relative; overflow: hidden; }
+
+  .glow { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4; z-index: 0; }
+  .g1 { width: 200px; height: 200px; background: #7f5af0; top: -60px; left: -60px; }
+  .g2 { width: 200px; height: 200px; background: #2cb67d; bottom: -60px; right: -60px; }
+  .gy { width: 220px; height: 220px; background: #ffd803; opacity: 0.3; top: -80px; left: 50%; transform: translateX(-50%); }
+  .gp { width: 180px; height: 180px; background: #7f5af0; opacity: 0.35; top: 40%; left: 25%; }
+  .z { position: relative; z-index: 1; }
+
+  .center { text-align: center; }
+  .badge { display: inline-block; background: rgba(127,90,240,0.15); color: #7f5af0; padding: 5px 14px; border-radius: 20px; font-size: 0.65em; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; margin-top: 40px; }
+  .logo { font-size: 2.4em; font-weight: 800; color: #fffffe; letter-spacing: -1px; }
+  .logo span { color: #7f5af0; }
+  .tagline { color: #94a1b2; font-size: 0.85em; font-weight: 600; margin-top: 2px; margin-bottom: 28px; }
+  .input { background: #16161a; border: 2px solid #242629; border-radius: 12px; padding: 14px 16px; color: #fffffe; font-size: 0.85em; text-align: left; margin-bottom: 12px; }
+  .btn { background: #7f5af0; border-radius: 12px; padding: 15px; color: #fffffe; font-weight: 700; font-size: 0.9em; text-align: center; }
+  .btn-ghost { background: transparent; border: 2px solid #242629; color: #94a1b2; margin-top: 10px; }
+  .stats { display: flex; gap: 8px; margin-top: 24px; }
+  .stat { flex: 1; background: #16161a; border: 1px solid #242629; padding: 12px 6px; border-radius: 12px; }
+  .stat-num { font-size: 1.1em; font-weight: 800; color: #7f5af0; }
+  .stat-lbl { font-size: 0.6em; color: #94a1b2; margin-top: 2px; font-weight: 600; }
+
+  .cat-head { color: #fffffe; font-size: 1.1em; font-weight: 800; margin-bottom: 4px; }
+  .coins { display: inline-block; background: #16161a; border: 1px solid #242629; padding: 5px 10px; border-radius: 16px; color: #ffd803; font-weight: 700; font-size: 0.7em; margin-bottom: 16px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .cat { height: 96px; border-radius: 14px; padding: 12px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
+  .cat-ic { font-size: 1.5em; }
+  .cat-nm { color: #fffffe; font-weight: 700; font-size: 0.8em; }
+  .cat-ct { color: rgba(255,255,255,0.7); font-size: 0.6em; font-weight: 600; }
+  .c1 { background: linear-gradient(135deg,#ff6b6b,#ee5a6f); }
+  .c2 { background: linear-gradient(135deg,#7f5af0,#6246ea); }
+  .c3 { background: linear-gradient(135deg,#2cb67d,#0ea472); }
+  .c4 { background: linear-gradient(135deg,#f9bc60,#f79e1b); }
+  .hot { position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.3); color: #fff; padding: 2px 7px; border-radius: 10px; font-size: 0.5em; font-weight: 700; text-transform: uppercase; }
+
+  .players { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; margin-top: 8px; }
+  .pl { flex: 1; background: #16161a; border: 1px solid #242629; border-radius: 12px; padding: 10px; display: flex; align-items: center; gap: 7px; }
+  .pl.me { border-color: #7f5af0; }
+  .pl-av { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85em; flex-shrink: 0; }
+  .av1 { background: linear-gradient(135deg,#7f5af0,#2cb67d); }
+  .av2 { background: linear-gradient(135deg,#ff6b6b,#f9bc60); }
+  .pl-nm { color: #fffffe; font-weight: 700; font-size: 0.65em; }
+  .pl-sc { color: #7f5af0; font-weight: 800; font-size: 1em; }
+  .pl-sc.opp { color: #ff6b6b; }
+  .vs { color: #72757e; font-weight: 800; font-size: 0.7em; }
+  .round { text-align: center; color: #94a1b2; font-size: 0.62em; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+  .timer { width: 52px; height: 52px; border-radius: 50%; border: 4px solid #242629; border-top-color: #ffd803; display: flex; align-items: center; justify-content: center; color: #ffd803; font-weight: 800; font-size: 1.2em; margin: 0 auto 14px; }
+  .cat-tag { text-align: center; color: #2cb67d; font-size: 0.62em; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .q { color: #fffffe; font-size: 0.95em; font-weight: 700; text-align: center; line-height: 1.4; margin-bottom: 18px; }
+  .ans-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .ans { padding: 13px 8px; background: #16161a; border: 2px solid #242629; border-radius: 12px; color: #fffffe; font-weight: 600; font-size: 0.68em; text-align: center; }
+  .ans.correct { background: rgba(44,182,125,0.2); border-color: #2cb67d; color: #2cb67d; }
+
+  .crown { font-size: 2.6em; text-align: center; margin-top: 30px; }
+  .win { color: #fffffe; font-size: 1.7em; font-weight: 800; text-align: center; }
+  .win-sub { color: #ffd803; font-weight: 700; font-size: 0.72em; text-align: center; margin-bottom: 22px; }
+  .board { display: flex; gap: 8px; margin-bottom: 16px; }
+  .fin { flex: 1; background: #16161a; border: 2px solid #242629; border-radius: 14px; padding: 16px 8px; text-align: center; }
+  .fin.w { border-color: #ffd803; background: rgba(255,216,3,0.06); }
+  .fin-av { width: 40px; height: 40px; border-radius: 50%; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1em; }
+  .fin-nm { color: #fffffe; font-weight: 700; font-size: 0.65em; margin-bottom: 4px; }
+  .fin-sc { color: #ffd803; font-weight: 800; font-size: 1.5em; }
+  .fin-sc.opp { color: #94a1b2; }
+  .rew { background: #16161a; border: 1px solid #242629; border-radius: 12px; padding: 12px; display: flex; justify-content: space-around; margin-bottom: 16px; }
+  .rew-v { color: #2cb67d; font-weight: 800; font-size: 0.85em; }
+  .rew-l { color: #94a1b2; font-size: 0.55em; font-weight: 600; margin-top: 2px; }
+
+  .versus2 { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 50px 0 30px; }
+  .f2 { text-align: center; }
+  .f2-av { width: 62px; height: 62px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6em; margin: 0 auto 10px; }
+  .f2-av.me { background: linear-gradient(135deg,#7f5af0,#2cb67d); }
+  .f2-av.s { background: #16161a; border: 2px dashed #242629; color: #72757e; }
+  .f2-lbl { color: #fffffe; font-weight: 700; font-size: 0.72em; }
+  .f2-lbl.dim { color: #72757e; }
+  .vsb { color: #ffd803; font-weight: 800; font-size: 1.1em; }
+  .search-txt { color: #94a1b2; font-size: 0.78em; font-weight: 600; text-align: center; }
+  .bar { width: 150px; height: 4px; background: #242629; border-radius: 4px; margin: 20px auto 0; overflow: hidden; }
+  .bar-f { height: 100%; width: 45%; background: #7f5af0; border-radius: 4px; }
+  .status-lbl { color: #94a1b2; font-size: 0.68em; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; text-align: center; margin-top: 30px; }
+</style>
+</head>
+<body>
+<div class="showcase">
+
+  <!-- JOIN -->
+  <div class="phone">
+    <div class="phone-label">1 · Join</div>
+    <div class="screen"><div class="scr-pad">
+      <div class="glow g1"></div><div class="glow g2"></div>
+      <div class="z center">
+        <div class="badge">⚡ The legend is back</div>
+        <div class="logo">Quizz<span>Up</span></div>
+        <div class="tagline">Real-time trivia battles</div>
+        <div class="input">AlphaWolf</div>
+        <div class="btn">Play Now →</div>
+        <div class="stats">
+          <div class="stat"><div class="stat-num">2.4M</div><div class="stat-lbl">Players</div></div>
+          <div class="stat"><div class="stat-num">180+</div><div class="stat-lbl">Categories</div></div>
+          <div class="stat"><div class="stat-num">4.8★</div><div class="stat-lbl">Rating</div></div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <div class="phone">
+    <div class="phone-label">2 · Categories</div>
+    <div class="screen"><div class="scr-pad">
+      <div class="z">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">
+          <div class="cat-head">Choose a category</div>
+        </div>
+        <div class="coins">🪙 1,250</div>
+        <div class="grid">
+          <div class="cat c1"><div class="hot">🔥 Hot</div><div class="cat-ic">🎬</div><div><div class="cat-nm">Movies</div><div class="cat-ct">240 questions</div></div></div>
+          <div class="cat c2"><div class="cat-ic">🎵</div><div><div class="cat-nm">Music</div><div class="cat-ct">180 questions</div></div></div>
+          <div class="cat c3"><div class="cat-ic">⚽</div><div><div class="cat-nm">Sports</div><div class="cat-ct">200 questions</div></div></div>
+          <div class="cat c4"><div class="cat-ic">🌍</div><div><div class="cat-nm">Geography</div><div class="cat-ct">150 questions</div></div></div>
+          <div class="cat c2"><div class="cat-ic">🎮</div><div><div class="cat-nm">Gaming</div><div class="cat-ct">175 questions</div></div></div>
+          <div class="cat c1"><div class="hot">✨ New</div><div class="cat-ic">🧬</div><div><div class="cat-nm">Science</div><div class="cat-ct">190 questions</div></div></div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- MATCHMAKING -->
+  <div class="phone">
+    <div class="phone-label">3 · Matchmaking</div>
+    <div class="screen"><div class="scr-pad">
+      <div class="glow gp"></div>
+      <div class="z">
+        <div class="status-lbl">⚡ Finding opponent</div>
+        <div class="versus2">
+          <div class="f2"><div class="f2-av me">🐺</div><div class="f2-lbl">You</div></div>
+          <div class="vsb">VS</div>
+          <div class="f2"><div class="f2-av s">?</div><div class="f2-lbl dim">Searching</div></div>
+        </div>
+        <div class="search-txt">Matching you with a player...</div>
+        <div class="bar"><div class="bar-f"></div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- GAME -->
+  <div class="phone">
+    <div class="phone-label">4 · Battle</div>
+    <div class="screen"><div class="scr-pad">
+      <div class="z">
+        <div class="players">
+          <div class="pl me"><div class="pl-av av1">🐺</div><div><div class="pl-nm">You</div><div class="pl-sc">320</div></div></div>
+          <div class="vs">VS</div>
+          <div class="pl"><div class="pl-av av2">🦁</div><div><div class="pl-nm">LionKing_99</div><div class="pl-sc opp">280</div></div></div>
+        </div>
+        <div class="round">Round 3 of 6</div>
+        <div class="timer">7</div>
+        <div class="cat-tag">🎬 Movies</div>
+        <div class="q">Who won Best Picture at the 2023 Oscars?</div>
+        <div class="ans-grid">
+          <div class="ans">Everything Everywhere</div>
+          <div class="ans correct">Oppenheimer</div>
+          <div class="ans">Poor Things</div>
+          <div class="ans">Barbie</div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="phone">
+    <div class="phone-label">5 · Victory</div>
+    <div class="screen"><div class="scr-pad">
+      <div class="glow gy"></div>
+      <div class="z">
+        <div class="crown">👑</div>
+        <div class="win">Victory!</div>
+        <div class="win-sub">You climbed to Rank #142 globally</div>
+        <div class="board">
+          <div class="fin w"><div class="fin-av av1">🐺</div><div class="fin-nm">You</div><div class="fin-sc">420</div></div>
+          <div class="fin"><div class="fin-av av2">🦁</div><div class="fin-nm">LionKing_99</div><div class="fin-sc opp">380</div></div>
+        </div>
+        <div class="rew">
+          <div><div class="rew-v">+50 🪙</div><div class="rew-l">Coins</div></div>
+          <div><div class="rew-v">+120 XP</div><div class="rew-l">Experience</div></div>
+          <div><div class="rew-v">🔥 3</div><div class="rew-l">Streak</div></div>
+        </div>
+        <div class="btn">Play Again</div>
+        <div class="btn btn-ghost">Share Result</div>
+      </div>
+    </div></div>
+  </div>
+
+</div>
+</body>
+</html>

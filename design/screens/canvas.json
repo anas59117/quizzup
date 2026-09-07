@@ -1,0 +1,10 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 520, "h": 700, "title": "Join Screen" },
+    { "file": "Categories.dc.html", "x": 600, "y": 0, "w": 620, "h": 700, "title": "Category Select" },
+    { "file": "Waiting.dc.html", "x": 1300, "y": 0, "w": 520, "h": 700, "title": "Matchmaking" },
+    { "file": "Playing.dc.html", "x": 0, "y": 800, "w": 620, "h": 760, "title": "Game Screen" },
+    { "file": "Results.dc.html", "x": 700, "y": 800, "w": 520, "h": 760, "title": "Results" }
+  ],
+  "launch": { "view": "canvas" }
+}

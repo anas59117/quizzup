@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap">
+  <style>
+    body { margin: 0; font-family: 'Poppins', -apple-system, sans-serif; background: #0f0e17; min-height: 100vh; padding: 24px; }
+    * { box-sizing: border-box; }
+    .game { max-width: 560px; margin: 0 auto; }
+    .players { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+    .player { flex: 1; background: #16161a; border: 1px solid #242629; border-radius: 16px; padding: 14px; display: flex; align-items: center; gap: 10px; }
+    .player.me { border-color: #7f5af0; }
+    .p-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1em; flex-shrink: 0; }
+    .p-avatar.a1 { background: linear-gradient(135deg, #7f5af0, #2cb67d); }
+    .p-avatar.a2 { background: linear-gradient(135deg, #ff6b6b, #f9bc60); }
+    .p-info { min-width: 0; }
+    .p-name { color: #fffffe; font-weight: 700; font-size: 0.85em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .p-score { color: #7f5af0; font-weight: 800; font-size: 1.3em; }
+    .p-score.opp { color: #ff6b6b; }
+    .vs { color: #72757e; font-weight: 800; font-size: 0.9em; }
+    .round { text-align: center; color: #94a1b2; font-size: 0.8em; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .timer-ring { display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .timer-circle { width: 70px; height: 70px; border-radius: 50%; border: 4px solid #242629; border-top-color: #ffd803; display: flex; align-items: center; justify-content: center; color: #ffd803; font-weight: 800; font-size: 1.6em; animation: spin 8s linear infinite; }
+    .timer-circle span { animation: counter-spin 8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes counter-spin { to { transform: rotate(-360deg); } }
+    .category-tag { text-align: center; color: #2cb67d; font-size: 0.8em; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
+    .question { color: #fffffe; font-size: 1.5em; font-weight: 700; text-align: center; line-height: 1.4; margin-bottom: 28px; }
+    .answers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .answer { padding: 20px 16px; background: #16161a; border: 2px solid #242629; border-radius: 16px; cursor: pointer; color: #fffffe; font-weight: 600; font-size: 0.95em; text-align: center; transition: all 0.2s; }
+    .answer:hover { border-color: #7f5af0; background: #1c1b22; }
+    .answer.correct { background: rgba(44, 182, 125, 0.2); border-color: #2cb67d; color: #2cb67d; }
+    .answer.wrong { background: rgba(255, 107, 107, 0.15); border-color: #ff6b6b; color: #ff6b6b; }
+  </style>
+</helmet>
+<div class="game">
+  <div class="players">
+    <div class="player me">
+      <div class="p-avatar a1">🐺</div>
+      <div class="p-info">
+        <div class="p-name">You</div>
+        <div class="p-score">320</div>
+      </div>
+    </div>
+    <div class="vs">VS</div>
+    <div class="player">
+      <div class="p-avatar a2">🦁</div>
+      <div class="p-info">
+        <div class="p-name">LionKing_99</div>
+        <div class="p-score opp">280</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="round">Round 3 of 6</div>
+
+  <div class="timer-ring">
+    <div class="timer-circle"><span>7</span></div>
+  </div>
+
+  <div class="category-tag">🎬 Movies</div>
+  <div class="question">Who won Best Picture at the 2023 Oscars?</div>
+
+  <div class="answers">
+    <div class="answer">Everything Everywhere</div>
+    <div class="answer correct">Oppenheimer</div>
+    <div class="answer">Poor Things</div>
+    <div class="answer">Barbie</div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
