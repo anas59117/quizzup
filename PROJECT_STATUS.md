@@ -17,13 +17,17 @@ Objectif : **~3000€/mois**, budget ~350€, solo, web-first.
 
 ### Session solo (backend + frontend production-ready)
 
-- **Questions via API + fallback** :
+- **Questions via API + fallback** — priorité au VOLUME (choix produit) :
   - Source principale : **Open Trivia DB** (`backend/trivia-api.js`) — ~4000
     questions gratuites, sans clé. Cache par catégorie + refill en tâche de
     fond (respecte le rate-limit ~1 req/5s), décodage base64. Parsing validé
     par mock (decode + shuffle + index correct).
-  - Fallback : **60 questions locales** (`backend/questions.js`) sur 6
-    catégories, utilisées si l'API est indisponible/bloquée/rate-limitée.
+  - Fallback / filet : **60 questions locales vérifiées** (`backend/questions.js`)
+    sur 6 catégories (100% correctes, relues une par une), utilisées pour
+    compléter et quand l'API est indisponible/bloquée/rate-limitée.
+  - Priorité : API d'abord (max de variété), local en complément. Fiabilité :
+    local = 100% ; OpenTDB = communautaire (~95-98%, non garanti à 100%).
+    → à terme, ajouter un bouton "signaler cette question" pour nettoyer.
   - Note : l'API est bloquée dans la sandbox de dev (egress proxy) mais
     marchera en prod (Railway). Le jeu reste jouable en local grâce au fallback.
 - **Backend réécrit** (`backend/server.js`) — testé end-to-end (2 joueurs) :

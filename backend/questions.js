@@ -126,27 +126,30 @@ function getQuestions(count, categoryKey) {
   return shuffled.slice(0, Math.min(count, pool.length)).map((q, i) => ({ ...q, id: i }));
 }
 
-// Preferred entry point. VERIFIED local questions come FIRST (hand-checked,
-// 100% correct), and the Open Trivia DB cache only tops up the remainder for
-// volume/variety. De-duplicates by text. Always resolves to `count` questions
-// with stable per-match ids. Never rejects.
+// Preferred entry point. Maximizes VOLUME/variety: the Open Trivia DB cache
+// (~4000 questions) is used first, and the 60 verified local questions top up
+// the remainder — and act as the safety net when the API is unavailable,
+// rate-limited, or blocked. De-duplicates by text. Always resolves to `count`
+// questions with stable per-match ids. Never rejects.
 async function getMixedQuestions(count, categoryKey) {
   const questions = [];
   const seen = new Set();
 
-  // 1) Verified local bank first — quality is guaranteed.
-  for (const q of getQuestions(count, categoryKey)) {
-    if (questions.length >= count) break;
-    if (!seen.has(q.text)) {
-      questions.push(q);
-      seen.add(q.text);
+  // 1) API first — huge pool, maximum variety.
+  if (categoryKey && CATEGORIES[categoryKey] && trivia.isSupported(categoryKey)) {
+    const cat = CATEGORIES[categoryKey];
+    for (const q of trivia.takeFromCache(count, categoryKey, cat.label, cat.icon)) {
+      if (questions.length >= count) break;
+      if (!seen.has(q.text)) {
+        questions.push(q);
+        seen.add(q.text);
+      }
     }
   }
 
-  // 2) Top up from the API only if the verified bank couldn't fill the match.
-  if (questions.length < count && categoryKey && CATEGORIES[categoryKey] && trivia.isSupported(categoryKey)) {
-    const cat = CATEGORIES[categoryKey];
-    for (const q of trivia.takeFromCache(count, categoryKey, cat.label, cat.icon)) {
+  // 2) Fill the rest from the verified local bank (also the offline fallback).
+  if (questions.length < count) {
+    for (const q of getQuestions(count, categoryKey)) {
       if (questions.length >= count) break;
       if (!seen.has(q.text)) {
         questions.push(q);
