@@ -1,8 +1,14 @@
-// QuizzUp question bank.
+// QuizzUp question bank (local fallback).
 // Each question: { text, answers: [4], correct: index }
 // Categories match the design's category grid. Extend freely — the game
 // picks a random subset per match, so more questions = better replayability.
 // `correct` is the 0-based index into `answers` and must always be valid.
+//
+// Primary source is the Open Trivia DB (see trivia-api.js). This local bank
+// is the fallback used when the API is unavailable, rate-limited, or blocked,
+// so the game is always playable offline too.
+
+const trivia = require('./trivia-api');
 
 const CATEGORIES = {
   movies: {
@@ -120,6 +126,38 @@ function getQuestions(count, categoryKey) {
   return shuffled.slice(0, Math.min(count, pool.length)).map((q, i) => ({ ...q, id: i }));
 }
 
+// Preferred entry point: pull from the Open Trivia DB cache first, then top
+// up (or fully fall back) from the local bank, de-duplicating by text. Always
+// resolves to `count` questions with stable per-match ids. Never rejects.
+async function getMixedQuestions(count, categoryKey) {
+  let questions = [];
+  if (categoryKey && CATEGORIES[categoryKey] && trivia.isSupported(categoryKey)) {
+    const cat = CATEGORIES[categoryKey];
+    questions = trivia.takeFromCache(count, categoryKey, cat.label, cat.icon);
+  }
+  if (questions.length < count) {
+    const seen = new Set(questions.map((q) => q.text));
+    for (const q of getQuestions(count, categoryKey)) {
+      if (questions.length >= count) break;
+      if (!seen.has(q.text)) {
+        questions.push(q);
+        seen.add(q.text);
+      }
+    }
+  }
+  return questions
+    .sort(() => 0.5 - Math.random())
+    .slice(0, count)
+    .map((q, i) => ({ ...q, id: i }));
+}
+
+// Warm the API cache for every supported category (best-effort, non-blocking).
+function warmCache() {
+  for (const [key, c] of Object.entries(CATEGORIES)) {
+    if (trivia.isSupported(key)) trivia.refill(key, c.label, c.icon);
+  }
+}
+
 function listCategories() {
   return Object.entries(CATEGORIES).map(([key, c]) => ({
     key,
@@ -129,4 +167,4 @@ function listCategories() {
   }));
 }
 
-module.exports = { CATEGORIES, getQuestions, listCategories };
+module.exports = { CATEGORIES, getQuestions, getMixedQuestions, warmCache, listCategories };

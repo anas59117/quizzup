@@ -2,7 +2,7 @@ const express = require('express');
 const { WebSocketServer } = require('ws');
 const cors = require('cors');
 const http = require('http');
-const { getQuestions, listCategories } = require('./questions');
+const { getMixedQuestions, warmCache, listCategories } = require('./questions');
 
 const app = express();
 const server = http.createServer(app);
@@ -43,9 +43,9 @@ function scoreAnswer(elapsedMs, isFinalRound) {
 }
 
 // --- Game lifecycle -------------------------------------------------------
-function startGame(p1, p2, categoryKey) {
+async function startGame(p1, p2, categoryKey) {
   const gameId = rid('game_');
-  const questions = getQuestions(GAME_CONFIG.ROUNDS, categoryKey);
+  const questions = await getMixedQuestions(GAME_CONFIG.ROUNDS, categoryKey);
   const game = {
     id: gameId,
     players: [p1, p2].map((p) => ({
@@ -222,7 +222,11 @@ wss.on('connection', (ws) => {
       );
       if (oppIdx !== -1) {
         const opp = waitingPlayers.splice(oppIdx, 1)[0];
-        startGame(opp, { ws, id: playerId, name, avatar }, categoryKey);
+        startGame(opp, { ws, id: playerId, name, avatar }, categoryKey).catch((err) => {
+          console.error('startGame failed:', err);
+          send(opp.ws, { type: 'error' });
+          send(ws, { type: 'error' });
+        });
       } else {
         waitingPlayers.push({ ws, id: playerId, name, avatar, categoryKey });
         send(ws, { type: 'waiting' });
@@ -265,4 +269,5 @@ app.get('/categories', (req, res) => res.json(listCategories()));
 
 server.listen(PORT, () => {
   console.log(`🎮 QuizzUp backend on http://localhost:${PORT}`);
+  warmCache(); // best-effort prefetch of Open Trivia DB questions
 });

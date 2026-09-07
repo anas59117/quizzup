@@ -17,8 +17,15 @@ Objectif : **~3000€/mois**, budget ~350€, solo, web-first.
 
 ### Session solo (backend + frontend production-ready)
 
-- **Base de questions** (`backend/questions.js`) : 60 questions vraies,
-  6 catégories (Movies, Music, Sports, Geography, Gaming, Science). Extensible.
+- **Questions via API + fallback** :
+  - Source principale : **Open Trivia DB** (`backend/trivia-api.js`) — ~4000
+    questions gratuites, sans clé. Cache par catégorie + refill en tâche de
+    fond (respecte le rate-limit ~1 req/5s), décodage base64. Parsing validé
+    par mock (decode + shuffle + index correct).
+  - Fallback : **60 questions locales** (`backend/questions.js`) sur 6
+    catégories, utilisées si l'API est indisponible/bloquée/rate-limitée.
+  - Note : l'API est bloquée dans la sandbox de dev (egress proxy) mais
+    marchera en prod (Railway). Le jeu reste jouable en local grâce au fallback.
 - **Backend réécrit** (`backend/server.js`) — testé end-to-end (2 joueurs) :
   - 🐛 **Bug corrigé** : les réponses n'étaient jamais enregistrées, le jeu
     n'avançait que par timeout. Maintenant le round avance dès que les 2 ont répondu.
@@ -80,7 +87,6 @@ questions (60q), ✅ gestion déconnexion. Reste :
 - [ ] **Cosmétiques persistants** (shop + inventory) — nécessite Firebase
       (structure prête : coins/XP en fin de partie, avatars sélectionnables)
 - [ ] **Leaderboard global persistant** — nécessite Firebase
-- [ ] Étendre la base de questions (60 → 300+)
 - [ ] Reconnexion en cours de partie (actuellement : déconnexion = forfait)
 - [ ] Intégrer les images dans les questions (champ `image` optionnel)
 
