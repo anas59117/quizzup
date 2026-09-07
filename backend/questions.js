@@ -67,7 +67,7 @@ const CATEGORIES = {
       { text: 'Which is the largest ocean on Earth?', answers: ['Atlantic', 'Pacific', 'Indian', 'Arctic'], correct: 1 },
       { text: 'Mount Everest is located in which mountain range?', answers: ['Andes', 'Alps', 'Himalayas', 'Rockies'], correct: 2 },
       { text: 'Which country has the most people?', answers: ['China', 'USA', 'Indonesia', 'India'], correct: 3 },
-      { text: 'What is the longest river in the world?', answers: ['Nile', 'Amazon', 'Yangtze', 'Mississippi'], correct: 0 },
+      { text: 'What is the capital of Australia?', answers: ['Canberra', 'Sydney', 'Melbourne', 'Perth'], correct: 0 },
       { text: 'Which desert is the largest hot desert?', answers: ['Gobi', 'Sahara', 'Kalahari', 'Mojave'], correct: 1 },
       { text: 'What is the capital of Japan?', answers: ['Osaka', 'Kyoto', 'Tokyo', 'Nagoya'], correct: 2 },
       { text: 'On which continent is the Amazon rainforest?', answers: ['Africa', 'Asia', 'Australia', 'South America'], correct: 3 },
@@ -126,18 +126,27 @@ function getQuestions(count, categoryKey) {
   return shuffled.slice(0, Math.min(count, pool.length)).map((q, i) => ({ ...q, id: i }));
 }
 
-// Preferred entry point: pull from the Open Trivia DB cache first, then top
-// up (or fully fall back) from the local bank, de-duplicating by text. Always
-// resolves to `count` questions with stable per-match ids. Never rejects.
+// Preferred entry point. VERIFIED local questions come FIRST (hand-checked,
+// 100% correct), and the Open Trivia DB cache only tops up the remainder for
+// volume/variety. De-duplicates by text. Always resolves to `count` questions
+// with stable per-match ids. Never rejects.
 async function getMixedQuestions(count, categoryKey) {
-  let questions = [];
-  if (categoryKey && CATEGORIES[categoryKey] && trivia.isSupported(categoryKey)) {
-    const cat = CATEGORIES[categoryKey];
-    questions = trivia.takeFromCache(count, categoryKey, cat.label, cat.icon);
+  const questions = [];
+  const seen = new Set();
+
+  // 1) Verified local bank first — quality is guaranteed.
+  for (const q of getQuestions(count, categoryKey)) {
+    if (questions.length >= count) break;
+    if (!seen.has(q.text)) {
+      questions.push(q);
+      seen.add(q.text);
+    }
   }
-  if (questions.length < count) {
-    const seen = new Set(questions.map((q) => q.text));
-    for (const q of getQuestions(count, categoryKey)) {
+
+  // 2) Top up from the API only if the verified bank couldn't fill the match.
+  if (questions.length < count && categoryKey && CATEGORIES[categoryKey] && trivia.isSupported(categoryKey)) {
+    const cat = CATEGORIES[categoryKey];
+    for (const q of trivia.takeFromCache(count, categoryKey, cat.label, cat.icon)) {
       if (questions.length >= count) break;
       if (!seen.has(q.text)) {
         questions.push(q);
@@ -145,6 +154,7 @@ async function getMixedQuestions(count, categoryKey) {
       }
     }
   }
+
   return questions
     .sort(() => 0.5 - Math.random())
     .slice(0, count)
