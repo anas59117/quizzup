@@ -1,171 +1,344 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './App.css';
 
+const AVATARS = ['🐺', '🦁', '🦊', '🐼', '🦉', '🐸', '🐯', '🦄'];
+
+const CATEGORIES = [
+  { key: 'movies', label: 'Movies', icon: '🎬', cls: 'c1', tag: '🔥 Hot' },
+  { key: 'music', label: 'Music', icon: '🎵', cls: 'c2' },
+  { key: 'sports', label: 'Sports', icon: '⚽', cls: 'c3' },
+  { key: 'geography', label: 'Geography', icon: '🌍', cls: 'c4' },
+  { key: 'gaming', label: 'Gaming', icon: '🎮', cls: 'c2' },
+  { key: 'science', label: 'Science', icon: '🧬', cls: 'c1', tag: '✨ New' },
+];
+
+function useTheme() {
+  const [theme, setTheme] = useState(() => {
+    try {
+      return localStorage.getItem('quizzup-theme') || 'dark';
+    } catch {
+      return 'dark';
+    }
+  });
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem('quizzup-theme', theme);
+    } catch {
+      /* storage may be unavailable (private mode) — ignore */
+    }
+  }, [theme]);
+  const toggle = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
+  return [theme, toggle];
+}
+
 export default function App() {
-  const [stage, setStage] = useState('join'); // join, waiting, playing, finished
-  const [playerName, setPlayerName] = useState('');
-  const [opponentName, setOpponentName] = useState('');
-  const [playerId, setPlayerId] = useState('');
-  const [currentQuestion, setCurrentQuestion] = useState(null);
+  const [theme, toggleTheme] = useTheme();
+  const [stage, setStage] = useState('join'); // join | categories | waiting | playing | finished
+  const [name, setName] = useState('');
+  const [avatar, setAvatar] = useState(AVATARS[0]);
+  const [category, setCategory] = useState(null);
+  const [opponent, setOpponent] = useState({ name: '', avatar: '🦁' });
+  const [question, setQuestion] = useState(null);
   const [score, setScore] = useState(0);
   const [opponentScore, setOpponentScore] = useState(0);
   const [round, setRound] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [totalRounds, setTotalRounds] = useState(6);
+  const [selected, setSelected] = useState(null);
   const [timeLeft, setTimeLeft] = useState(10);
+  const [reveal, setReveal] = useState(null); // round_result payload
   const [result, setResult] = useState(null);
   const wsRef = useRef(null);
-  const timerRef = useRef(null);
+  const tickRef = useRef(null);
 
   useEffect(() => {
     return () => {
       if (wsRef.current) wsRef.current.close();
-      if (timerRef.current) clearInterval(timerRef.current);
+      if (tickRef.current) clearInterval(tickRef.current);
     };
   }, []);
 
-  const connectWebSocket = (name) => {
-    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    const wsUrl = `${protocol}//${window.location.host}/ws`;
+  // Countdown timer, restarted on each new question.
+  useEffect(() => {
+    if (stage !== 'playing' || !question || reveal) return undefined;
+    setTimeLeft(question.timeLimit);
+    if (tickRef.current) clearInterval(tickRef.current);
+    tickRef.current = setInterval(() => {
+      setTimeLeft((t) => (t > 0 ? t - 1 : 0));
+    }, 1000);
+    return () => clearInterval(tickRef.current);
+  }, [question, stage, reveal]);
 
-    wsRef.current = new WebSocket(wsUrl);
+  const connect = useCallback(
+    (categoryKey) => {
+      const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+      // In dev, the backend runs on :3001; in prod it's same-host behind a proxy.
+      const host = window.location.port === '3000' ? `${window.location.hostname}:3001` : window.location.host;
+      const ws = new WebSocket(`${proto}//${host}/ws`);
+      wsRef.current = ws;
 
-    wsRef.current.onopen = () => {
-      wsRef.current.send(JSON.stringify({ type: 'join', name }));
-    };
+      ws.onopen = () => ws.send(JSON.stringify({ type: 'join', name, avatar, category: categoryKey }));
+      ws.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        switch (data.type) {
+          case 'waiting':
+            setStage('waiting');
+            break;
+          case 'game_start':
+            setOpponent(data.opponent);
+            setTotalRounds(data.totalRounds);
+            setScore(0);
+            setOpponentScore(0);
+            setStage('playing');
+            break;
+          case 'question':
+            setQuestion(data);
+            setRound(data.round);
+            setSelected(null);
+            setReveal(null);
+            break;
+          case 'round_result':
+            setReveal(data);
+            setScore(data.yourScore);
+            setOpponentScore(data.opponentScore);
+            if (tickRef.current) clearInterval(tickRef.current);
+            break;
+          case 'game_end':
+            setResult(data);
+            setScore(data.finalScore);
+            setOpponentScore(data.opponentScore);
+            setStage('finished');
+            break;
+          default:
+            break;
+        }
+      };
+      ws.onerror = () => setStage('error');
+    },
+    [name, avatar]
+  );
 
-    wsRef.current.onmessage = (event) => {
-      const data = JSON.parse(event.data);
-
-      if (data.type === 'joined') {
-        setPlayerId(data.playerId);
-      }
-
-      if (data.type === 'waiting') {
-        setStage('waiting');
-      }
-
-      if (data.type === 'game_start') {
-        setOpponentName(data.opponent);
-        setStage('playing');
-        setScore(0);
-        setOpponentScore(0);
-      }
-
-      if (data.type === 'question') {
-        setCurrentQuestion(data);
-        setRound(data.round);
-        setSelectedAnswer(null);
-        setTimeLeft(data.timeLimit);
-      }
-
-      if (data.type === 'game_end') {
-        setStage('finished');
-        setResult(data);
-        setOpponentScore(data.opponentScore);
-      }
-    };
-
-    wsRef.current.onerror = (err) => console.error('WS Error:', err);
+  const startWithCategory = (catKey) => {
+    setCategory(catKey);
+    connect(catKey);
   };
 
-  const handleJoin = (e) => {
-    e.preventDefault();
-    if (playerName.trim()) {
-      setPlayerName(playerName);
-      connectWebSocket(playerName);
+  const answer = (index) => {
+    if (selected !== null || reveal) return;
+    setSelected(index);
+    if (wsRef.current && wsRef.current.readyState === 1) {
+      wsRef.current.send(JSON.stringify({ type: 'answer', answerIndex: index }));
     }
   };
 
-  const handleAnswerSelect = (index) => {
-    if (selectedAnswer === null) {
-      setSelectedAnswer(index);
-      setScore(score + 20); // Assume correct for MVP
-      wsRef.current.send(JSON.stringify({
-        type: 'answer',
-        answerIndex: index,
-      }));
-    }
+  const playAgain = () => {
+    if (wsRef.current) wsRef.current.close();
+    setResult(null);
+    setQuestion(null);
+    setStage('categories');
   };
 
-  return (
-    <div className="app">
-      {stage === 'join' && (
-        <div className="container join-screen">
-          <h1>🎮 QuizzUp 2.0</h1>
-          <p>Real-time Multiplayer Quiz</p>
-          <form onSubmit={handleJoin}>
-            <input
-              type="text"
-              placeholder="Enter your name"
-              value={playerName}
-              onChange={(e) => setPlayerName(e.target.value)}
-              className="input"
-            />
-            <button type="submit" className="btn">Join Game</button>
-          </form>
-        </div>
-      )}
+  const ThemeToggle = () => (
+    <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme" title="Toggle theme">
+      {theme === 'dark' ? '☀️' : '🌙'}
+    </button>
+  );
 
-      {stage === 'waiting' && (
-        <div className="container waiting-screen">
-          <h2>Waiting for opponent...</h2>
-          <div className="spinner"></div>
-          <p className="player-name">{playerName}</p>
-        </div>
-      )}
-
-      {stage === 'playing' && currentQuestion && (
-        <div className="container game-screen">
-          <div className="header">
-            <div className="player-info">
-              <span>{playerName}</span>
-              <span className="score">{score}</span>
-            </div>
-            <div className="round-counter">Round {round}/6</div>
-            <div className="player-info opponent">
-              <span className="score">{opponentScore}</span>
-              <span>{opponentName}</span>
-            </div>
-          </div>
-
-          <div className="question-box">
-            <p className="category">{currentQuestion.category}</p>
-            <h2>{currentQuestion.question}</h2>
-            <p className="timer">⏱️ {timeLeft}s</p>
-          </div>
-
-          <div className="answers">
-            {currentQuestion.answers.map((answer, idx) => (
+  // --- Screens ------------------------------------------------------------
+  if (stage === 'join') {
+    return (
+      <div className="app">
+        <ThemeToggle />
+        <div className="glow glow-1" />
+        <div className="glow glow-2" />
+        <div className="container center">
+          <div className="badge">⚡ The legend is back</div>
+          <h1 className="logo">Quizz<span>Up</span></h1>
+          <p className="tagline">Real-time trivia battles</p>
+          <input
+            className="input"
+            placeholder="Choose your username"
+            value={name}
+            maxLength={20}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <div className="avatar-picker">
+            {AVATARS.map((a) => (
               <button
-                key={idx}
-                className={`answer-btn ${selectedAnswer === idx ? 'selected' : ''} ${selectedAnswer !== null ? 'disabled' : ''}`}
-                onClick={() => handleAnswerSelect(idx)}
-                disabled={selectedAnswer !== null}
+                key={a}
+                className={`avatar-opt ${avatar === a ? 'active' : ''}`}
+                onClick={() => setAvatar(a)}
               >
-                {answer}
+                {a}
+              </button>
+            ))}
+          </div>
+          <button className="btn" disabled={!name.trim()} onClick={() => setStage('categories')}>
+            Continue →
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (stage === 'categories') {
+    return (
+      <div className="app app-top">
+        <ThemeToggle />
+        <div className="container wide">
+          <div className="cat-header">
+            <h2>Choose a category</h2>
+            <div className="you-chip">{avatar} {name}</div>
+          </div>
+          <div className="cat-grid">
+            {CATEGORIES.map((c) => (
+              <button key={c.key} className={`cat ${c.cls}`} onClick={() => startWithCategory(c.key)}>
+                {c.tag && <span className="cat-tag-badge">{c.tag}</span>}
+                <span className="cat-ic">{c.icon}</span>
+                <span className="cat-nm">{c.label}</span>
               </button>
             ))}
           </div>
         </div>
-      )}
+      </div>
+    );
+  }
 
-      {stage === 'finished' && result && (
-        <div className="container result-screen">
-          <h2>{result.winner === true ? '🎉 You Won!' : result.winner === 'tie' ? '🤝 Tie!' : '😅 You Lost'}</h2>
-          <div className="final-scores">
-            <div>
-              <p className="winner-name">{playerName}</p>
-              <p className="final-score">{result.finalScore}</p>
+  if (stage === 'waiting') {
+    return (
+      <div className="app">
+        <ThemeToggle />
+        <div className="glow glow-1" />
+        <div className="container center">
+          <div className="status-label">⚡ Finding opponent</div>
+          <div className="versus">
+            <div className="fighter">
+              <div className="f-ava me">{avatar}</div>
+              <div className="f-lbl">{name}</div>
             </div>
-            <div className="vs">vs</div>
-            <div>
-              <p className="winner-name">{opponentName}</p>
-              <p className="final-score">{result.opponentScore}</p>
+            <div className="vs-badge">VS</div>
+            <div className="fighter">
+              <div className="f-ava searching">?</div>
+              <div className="f-lbl dim">Searching…</div>
             </div>
           </div>
-          <button className="btn" onClick={() => window.location.reload()}>Play Again</button>
+          <div className="loading-bar"><div className="loading-fill" /></div>
         </div>
-      )}
-    </div>
-  );
+      </div>
+    );
+  }
+
+  if (stage === 'playing' && question) {
+    const showReveal = !!reveal;
+    return (
+      <div className="app app-top">
+        <ThemeToggle />
+        <div className="container game">
+          <div className="players">
+            <div className="pl me">
+              <div className="pl-av a1">{avatar}</div>
+              <div>
+                <div className="pl-nm">You</div>
+                <div className="pl-sc">{score}</div>
+              </div>
+            </div>
+            <div className="vs">VS</div>
+            <div className="pl">
+              <div className="pl-av a2">{opponent.avatar}</div>
+              <div>
+                <div className="pl-nm">{opponent.name}</div>
+                <div className="pl-sc opp">{opponentScore}</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="round-label">
+            Round {round} of {totalRounds}{question.isBonus ? ' · ⭐ BONUS (x2)' : ''}
+          </div>
+
+          <div className={`timer ${timeLeft <= 3 ? 'urgent' : ''}`}>{showReveal ? '✓' : timeLeft}</div>
+
+          <div className="cat-tag">{question.icon} {question.category}</div>
+          <div className="question">{question.question}</div>
+
+          <div className="answers">
+            {question.answers.map((a, idx) => {
+              let cls = 'answer';
+              if (showReveal) {
+                if (idx === reveal.correctIndex) cls += ' correct';
+                else if (idx === selected) cls += ' wrong';
+                else cls += ' dim';
+              } else if (idx === selected) {
+                cls += ' selected';
+              }
+              return (
+                <button key={idx} className={cls} onClick={() => answer(idx)} disabled={selected !== null || showReveal}>
+                  {a}
+                </button>
+              );
+            })}
+          </div>
+
+          {showReveal && (
+            <div className="reveal-note">
+              {reveal.yourCorrect ? `✅ +${reveal.pointsEarned} points` : reveal.timedOut && selected === null ? '⏱️ Time up' : '❌ Wrong'}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  if (stage === 'finished' && result) {
+    const won = result.won;
+    const tie = result.tie;
+    return (
+      <div className="app">
+        <ThemeToggle />
+        <div className="glow glow-win" />
+        <div className="container center">
+          <div className="crown">{won ? '👑' : tie ? '🤝' : '💪'}</div>
+          <h1 className="win-text">{won ? 'Victory!' : tie ? "It's a tie!" : 'Good game!'}</h1>
+          <p className="win-sub">
+            {result.reason === 'opponent_disconnected' ? 'Opponent disconnected' : `Final score ${result.finalScore} – ${result.opponentScore}`}
+          </p>
+
+          <div className="scoreboard">
+            <div className={`final ${won ? 'winner' : ''}`}>
+              <div className="f-av a1">{avatar}</div>
+              <div className="f-nm">You</div>
+              <div className="f-score">{result.finalScore}</div>
+            </div>
+            <div className="final">
+              <div className="f-av a2">{opponent.avatar}</div>
+              <div className="f-nm">{opponent.name}</div>
+              <div className="f-score opp">{result.opponentScore}</div>
+            </div>
+          </div>
+
+          <div className="rewards">
+            <div className="reward"><div className="reward-val">+{result.coins} 🪙</div><div className="reward-label">Coins</div></div>
+            <div className="reward"><div className="reward-val">+{result.xp} XP</div><div className="reward-label">Experience</div></div>
+          </div>
+
+          <button className="btn" onClick={playAgain}>Play Again</button>
+        </div>
+      </div>
+    );
+  }
+
+  if (stage === 'error') {
+    return (
+      <div className="app">
+        <ThemeToggle />
+        <div className="container center">
+          <h2 className="logo">Connection lost</h2>
+          <p className="tagline">Couldn't reach the game server.</p>
+          <button className="btn" onClick={() => window.location.reload()}>Retry</button>
+        </div>
+      </div>
+    );
+  }
+
+  return null;
 }

@@ -10,11 +10,33 @@ Objectif : **~3000€/mois**, budget ~350€, solo, web-first.
 
 ## ✅ Fait
 
-- **Code MVP** : backend (Node.js + WebSocket + matchmaking) + frontend (React) → `backend/` et `frontend/`
 - **Design validé** : 5 écrans, 2 thèmes (dark + light)
   - Sources interactives : `design/screens/*.dc.html`
   - Aperçus : `design/previews/` (HTML + PNG, dark & light)
 - **GitHub** : app Claude installée, push OK
+
+### Session solo (backend + frontend production-ready)
+
+- **Base de questions** (`backend/questions.js`) : 60 questions vraies,
+  6 catégories (Movies, Music, Sports, Geography, Gaming, Science). Extensible.
+- **Backend réécrit** (`backend/server.js`) — testé end-to-end (2 joueurs) :
+  - 🐛 **Bug corrigé** : les réponses n'étaient jamais enregistrées, le jeu
+    n'avançait que par timeout. Maintenant le round avance dès que les 2 ont répondu.
+  - **Scoring à la vitesse** : réponse rapide = plus de points (20 max → 5 min).
+    Vérifié : 250ms = 20 pts vs 3000ms = 15 pts sur la même question.
+  - **Anti-triche** : timer serveur = source de vérité, rejet des réponses
+    hors-temps et des double-submits.
+  - **Bonus round** : dernière question vaut x2.
+  - **Feedback par round** : reveal de la bonne réponse + points gagnés.
+  - **Déconnexion** : forfait automatique (l'adversaire n'est pas bloqué).
+  - Sélection de catégorie au matchmaking + endpoint `/categories`.
+- **Frontend réécrit** (`frontend/src/App.js` + `App.css`) — compile OK,
+  rendu vérifié dark + light :
+  - Matche le design validé (dark premium + light vibrant).
+  - **Toggle thème dark/light** + sauvegarde localStorage. ✅ Testé.
+  - Sélection d'avatar, écran catégories, timer countdown visuel.
+  - Score affiché = **score serveur** (plus de score assumé côté client).
+  - Feedback correct/faux/temps écoulé après chaque round.
 
 ## 🎨 Décision design (validée)
 
@@ -50,13 +72,29 @@ Cible revenue : mois 3 = ~750€/mois, mois 6 = ~4500€/mois.
 
 ## ⏭️ Prochaines étapes (reprise)
 
-- [ ] Implémenter le **toggle thème dark/light** (CSS variables + localStorage)
-- [ ] Décider : lancer MVP web (Option A, 48h) ou app complète (Option B, 2 semaines)
-- [ ] Setup comptes hosting (Railway, Vercel, Firebase) — côté utilisateur
-- [ ] Anti-triche : timer côté serveur = source de vérité
-- [ ] Seed base de questions (500q, 5-6 catégories)
-- [ ] Système cosmétiques (shop + inventory)
-- [ ] Reconnect/timeout handling multijoueur
+Fait en session solo : ✅ toggle thème, ✅ anti-triche serveur, ✅ base de
+questions (60q), ✅ gestion déconnexion. Reste :
+
+- [ ] **Décider** : lancer MVP web (Option A, 48h) ou app complète (Option B)
+- [ ] Setup comptes hosting (Railway, Vercel, Firebase) — **côté utilisateur**
+- [ ] **Cosmétiques persistants** (shop + inventory) — nécessite Firebase
+      (structure prête : coins/XP en fin de partie, avatars sélectionnables)
+- [ ] **Leaderboard global persistant** — nécessite Firebase
+- [ ] Étendre la base de questions (60 → 300+)
+- [ ] Reconnexion en cours de partie (actuellement : déconnexion = forfait)
+- [ ] Intégrer les images dans les questions (champ `image` optionnel)
+
+## ▶️ Lancer en local (dev)
+
+```bash
+# Terminal 1 — backend
+cd quizzup-game/backend && npm install && npm start   # :3001
+
+# Terminal 2 — frontend
+cd quizzup-game/frontend && npm install && npm start   # :3000
+```
+Ouvre 2 onglets sur http://localhost:3000, choisis un nom + catégorie dans
+les deux → le match se lance. Le frontend parle au backend sur :3001 en dev.
 
 ## 🔧 Tech stack
 
