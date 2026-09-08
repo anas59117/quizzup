@@ -140,7 +140,22 @@ body {
 .home-play:hover { transform: scale(1.05); }
 .home-play-bolt { font-size: 1.6em; }
 .home-hint { color: var(--text-dim); font-size: 0.85em; font-weight: 600; margin-top: 24px; }
+.home-actions { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 300px; margin-top: 24px; }
+.home-action { padding: 14px; border-radius: 14px; border: 2px solid var(--accent); background: var(--accent); color: #fff; font-family: inherit; font-size: 0.95em; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+.home-action:hover { transform: translateY(-2px); }
+.home-action.ghost { background: transparent; color: var(--accent); }
 .home-themes-link { margin-top: 16px; background: none; border: none; color: var(--accent); font-family: inherit; font-size: 0.9em; font-weight: 700; cursor: pointer; }
+
+/* Challenge-a-friend room code screens */
+.room-code-label { color: var(--text-dim); font-size: 0.9em; font-weight: 600; margin-bottom: 12px; }
+.room-code { font-family: 'Poppins', monospace; font-size: 2.8em; font-weight: 800; letter-spacing: 8px; color: var(--accent); background: var(--surface); border: 2px dashed var(--accent); border-radius: 16px; padding: 18px 28px; cursor: pointer; transition: transform 0.15s; }
+.room-code:hover { transform: scale(1.03); }
+.room-copy-hint { color: var(--text-faint); font-size: 0.8em; font-weight: 600; margin-top: 10px; }
+.room-wait-status { margin: 36px 0 20px; width: 100%; }
+.room-wait-text { color: var(--text-dim); font-size: 0.9em; font-weight: 600; margin-top: 16px; }
+.code-input { text-align: center; text-transform: uppercase; letter-spacing: 8px; font-size: 1.6em; font-weight: 800; max-width: 260px; margin: 0 auto 16px; }
+.code-input.err { border-color: var(--danger); }
+.code-err-msg { color: var(--danger); font-size: 0.85em; font-weight: 600; margin-bottom: 16px; }
 
 /* Bottom navigation bar */
 .navbar { position: fixed; bottom: 0; left: 0; right: 0; height: 68px; background: var(--surface); border-top: 1px solid var(--border); display: flex; z-index: 5; }

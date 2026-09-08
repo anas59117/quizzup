@@ -50,6 +50,10 @@ export default function App() {
   const [reveal, setReveal] = useState(null); // round_result payload
   const [reported, setReported] = useState(false);
   const [result, setResult] = useState(null);
+  const [roomCode, setRoomCode] = useState('');
+  const [joinCode, setJoinCode] = useState('');
+  const [joinError, setJoinError] = useState(false);
+  const [copied, setCopied] = useState(false);
   const wsRef = useRef(null);
   const tickRef = useRef(null);
 
@@ -72,19 +76,26 @@ export default function App() {
   }, [question, stage, reveal]);
 
   const connect = useCallback(
-    (categoryKey) => {
+    (action) => {
       const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
       // In dev, the backend runs on :3001; in prod it's same-host behind a proxy.
       const host = window.location.port === '3000' ? `${window.location.hostname}:3001` : window.location.host;
       const ws = new WebSocket(`${proto}//${host}/ws`);
       wsRef.current = ws;
 
-      ws.onopen = () => ws.send(JSON.stringify({ type: 'join', name, avatar, category: categoryKey }));
+      ws.onopen = () => ws.send(JSON.stringify({ ...action, name, avatar }));
       ws.onmessage = (event) => {
         const data = JSON.parse(event.data);
         switch (data.type) {
           case 'waiting':
             setStage('waiting');
+            break;
+          case 'room_created':
+            setRoomCode(data.code);
+            setStage('room_wait');
+            break;
+          case 'room_not_found':
+            setJoinError(true);
             break;
           case 'game_start':
             setOpponent(data.opponent);
@@ -134,14 +145,29 @@ export default function App() {
 
   const startWithCategory = (catKey) => {
     setCategory(catKey);
-    connect(catKey);
+    connect({ type: 'join', category: catKey });
   };
 
   // Quick match from the home screen: pick a random category so the API pool
   // (and variety) is still used, then jump straight into matchmaking.
   const quickMatch = () => {
     const random = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
-    startWithCategory(random.key);
+    setCategory(random.key);
+    connect({ type: 'join', category: random.key });
+  };
+
+  // Challenge a friend: create a private room, get a shareable code.
+  const createRoom = () => {
+    const random = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
+    setCategory(random.key);
+    connect({ type: 'create_room', category: random.key });
+  };
+
+  // Join a friend's room by code.
+  const joinRoom = (code) => {
+    if (!code || code.trim().length < 4) return;
+    setJoinError(false);
+    connect({ type: 'join_room', code: code.trim().toUpperCase() });
   };
 
   const NavBar = ({ active }) => (
@@ -235,11 +261,73 @@ export default function App() {
             <span>Play now</span>
           </button>
           <div className="home-hint">Quick match against a random player</div>
+          <div className="home-actions">
+            <button className="home-action" onClick={createRoom}>⚔️ Challenge a friend</button>
+            <button className="home-action ghost" onClick={() => { setJoinError(false); setJoinCode(''); setStage('enter_code'); }}>
+              🔑 Enter a code
+            </button>
+          </div>
           <button className="home-themes-link" onClick={() => setStage('categories')}>
             or pick a theme →
           </button>
         </div>
         <NavBar active="home" />
+      </div>
+    );
+  }
+
+  if (stage === 'room_wait') {
+    const copyCode = () => {
+      try {
+        navigator.clipboard.writeText(roomCode);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+      } catch {
+        /* clipboard may be blocked — the code is shown on screen anyway */
+      }
+    };
+    return (
+      <div className="app">
+        <ThemeToggle />
+        <div className="glow glow-1" />
+        <div className="container center">
+          <div className="status-label">⚔️ Challenge a friend</div>
+          <div className="room-code-label">Share this code</div>
+          <button className="room-code" onClick={copyCode}>{roomCode}</button>
+          <div className="room-copy-hint">{copied ? '✓ Copied!' : 'Tap the code to copy'}</div>
+          <div className="room-wait-status">
+            <div className="loading-bar"><div className="loading-fill" /></div>
+            <div className="room-wait-text">Waiting for your friend to join…</div>
+          </div>
+          <button className="home-themes-link" onClick={() => { if (wsRef.current) wsRef.current.close(); setStage('home'); }}>
+            ← Cancel
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (stage === 'enter_code') {
+    return (
+      <div className="app">
+        <ThemeToggle />
+        <div className="glow glow-1" />
+        <div className="container center">
+          <div className="status-label">🔑 Join a friend</div>
+          <div className="room-code-label">Enter their code</div>
+          <input
+            className={`input code-input ${joinError ? 'err' : ''}`}
+            placeholder="ABC12"
+            value={joinCode}
+            maxLength={5}
+            onChange={(e) => { setJoinCode(e.target.value.toUpperCase()); setJoinError(false); }}
+          />
+          {joinError && <div className="code-err-msg">Code not found — check and try again</div>}
+          <button className="btn" disabled={joinCode.trim().length < 4} onClick={() => joinRoom(joinCode)}>
+            Join match
+          </button>
+          <button className="home-themes-link" onClick={() => setStage('home')}>← Back</button>
+        </div>
       </div>
     );
   }

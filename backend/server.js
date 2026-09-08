@@ -18,6 +18,19 @@ const PORT = process.env.PORT || 3001;
 const waitingPlayers = []; // players looking for a match, per category key
 const activeGames = new Map(); // gameId -> game
 const playerSessions = new Map(); // playerId -> gameId
+const privateRooms = new Map(); // code -> { host, categoryKey, createdAt }
+
+const ROOM_TTL_MS = 10 * 60 * 1000; // private rooms expire after 10 min
+
+// Room codes: unambiguous alphabet (no O/0, I/1) so they're easy to share.
+const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+function newRoomCode() {
+  let code;
+  do {
+    code = Array.from({ length: 5 }, () => CODE_ALPHABET[Math.floor(Math.random() * CODE_ALPHABET.length)]).join('');
+  } while (privateRooms.has(code));
+  return code;
+}
 
 const GAME_CONFIG = {
   ROUNDS: 6,
@@ -260,6 +273,41 @@ wss.on('connection', (ws) => {
       }
     }
 
+    if (data.type === 'create_room') {
+      if (typeof data.name === 'string' && data.name.trim()) name = data.name.trim().slice(0, 20);
+      const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '🐺';
+      const categoryKey = typeof data.category === 'string' ? data.category : null;
+      const code = newRoomCode();
+      privateRooms.set(code, {
+        host: { ws, id: playerId, name, avatar },
+        categoryKey,
+        createdAt: Date.now(),
+      });
+      send(ws, { type: 'room_created', code });
+    }
+
+    if (data.type === 'join_room') {
+      const code = String(data.code || '').toUpperCase().trim();
+      const room = privateRooms.get(code);
+      if (!room || room.host.ws.readyState !== 1) {
+        if (room) privateRooms.delete(code); // host already gone
+        send(ws, { type: 'room_not_found' });
+        return;
+      }
+      if (room.host.id === playerId) {
+        send(ws, { type: 'room_not_found' }); // can't join your own room
+        return;
+      }
+      privateRooms.delete(code);
+      if (typeof data.name === 'string' && data.name.trim()) name = data.name.trim().slice(0, 20);
+      const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '🦁';
+      startGame(room.host, { ws, id: playerId, name, avatar }, room.categoryKey).catch((err) => {
+        console.error('startGame (room) failed:', err);
+        send(room.host.ws, { type: 'error' });
+        send(ws, { type: 'error' });
+      });
+    }
+
     if (data.type === 'report') {
       const gameId = playerSessions.get(playerId);
       const game = gameId && activeGames.get(gameId);
@@ -287,6 +335,11 @@ wss.on('connection', (ws) => {
     const wi = waitingPlayers.findIndex((w) => w.id === playerId);
     if (wi !== -1) waitingPlayers.splice(wi, 1);
 
+    // Drop any private room this player was hosting.
+    for (const [code, room] of privateRooms) {
+      if (room.host.id === playerId) privateRooms.delete(code);
+    }
+
     const gameId = playerSessions.get(playerId);
     const game = gameId && activeGames.get(gameId);
     if (game && game.status === 'active') {
@@ -302,6 +355,16 @@ app.get('/health', (req, res) =>
 );
 app.get('/categories', (req, res) => res.json(listCategories()));
 app.get('/reports/stats', (req, res) => res.json(reports.stats()));
+
+// Sweep expired private rooms so abandoned codes don't pile up.
+setInterval(() => {
+  const now = Date.now();
+  for (const [code, room] of privateRooms) {
+    if (now - room.createdAt > ROOM_TTL_MS || room.host.ws.readyState !== 1) {
+      privateRooms.delete(code);
+    }
+  }
+}, 60 * 1000);
 
 server.listen(PORT, () => {
   console.log(`🎮 QuizzUp backend on http://localhost:${PORT}`);
