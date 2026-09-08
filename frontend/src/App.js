@@ -148,19 +148,18 @@ export default function App() {
     connect({ type: 'join', category: catKey });
   };
 
-  // Quick match from the home screen: pick a random category so the API pool
-  // (and variety) is still used, then jump straight into matchmaking.
+  // Quick match: join the shared quick pool (category null). The server pairs
+  // any two quick players together and picks the category, so matchmaking
+  // never fragments across categories.
   const quickMatch = () => {
-    const random = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
-    setCategory(random.key);
-    connect({ type: 'join', category: random.key });
+    setCategory(null);
+    connect({ type: 'join', category: null });
   };
 
-  // Challenge a friend: create a private room, get a shareable code.
+  // Challenge a friend: create a private room (server picks the category).
   const createRoom = () => {
-    const random = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
-    setCategory(random.key);
-    connect({ type: 'create_room', category: random.key });
+    setCategory(null);
+    connect({ type: 'create_room', category: null });
   };
 
   // Join a friend's room by code.

@@ -58,9 +58,17 @@ function scoreAnswer(elapsedMs, isFinalRound) {
 }
 
 // --- Game lifecycle -------------------------------------------------------
+function pickRandomCategory() {
+  const cats = listCategories();
+  return cats.length ? cats[Math.floor(Math.random() * cats.length)].key : null;
+}
+
 async function startGame(p1, p2, categoryKey) {
   const gameId = rid('game_');
-  const questions = await getMixedQuestions(GAME_CONFIG.ROUNDS, categoryKey);
+  // Quick match / private room with no chosen category: pick one at random so
+  // both players share it and the API question pool is used (not just local).
+  const resolvedCategory = categoryKey || pickRandomCategory();
+  const questions = await getMixedQuestions(GAME_CONFIG.ROUNDS, resolvedCategory);
   const game = {
     id: gameId,
     players: [p1, p2].map((p) => ({
