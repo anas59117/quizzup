@@ -55,22 +55,49 @@ Objectif : **~3000€/mois**, budget ~350€, solo, web-first.
   - Score affiché = **score serveur** (plus de score assumé côté client).
   - Feedback correct/faux/temps écoulé après chaque round.
 
-## 🎨 Décision design (validée)
+### Session « rapprochement QuizUp » + social (à partir des 2 vidéos fournies)
 
-- **2 thèmes au choix de l'utilisateur** : Dark (gaming/premium) + Light (casual/Kahoot-like)
-- Toggle dans les settings + sauvegarde localStorage
-- Optionnel : 3e mode "Auto" (suit le système)
-- Palette dark : fond `#0f0e17`, accents `#7f5af0` (violet), `#2cb67d` (vert), `#ffd803` (jaune)
-- Palette light : gradients violet/orange/jaune, cartes blanches
-- Font : Poppins
+Analyse des vidéos QuizUp (frames extraites via ffmpeg) → on reprend le
+LAYOUT et le FEEL (mécaniques, pas la marque : notre nom/identité restent) :
 
-## 📋 Écrans (5)
+- **Écran d'intro « Round X — Get ready! »** avant chaque question (icône
+  catégorie), synchronisé serveur, sans grignoter le temps de réponse.
+- **Réponses en colonne** (au lieu de la grille 2×2) + **barre de temps**
+  horizontale (au lieu du cercle).
+- **Thème LIGHT par défaut**, dark en option (toggle 🌙).
+- **Palette chaude corail/rouge** (`#f5164f` clair / `#ff3b5c` sombre) au
+  lieu du violet — feel énergique type QuizUp.
+- **Accueil façon QuizUp** : gros bouton central « Play now » (quick match)
+  + barre de navigation basse (Home / Themes / Profile).
+- **Catégories en liste** (icône + description + badges) au lieu de la grille.
+- **Profil** (placeholder) : stats + « friends/ranking coming soon ».
 
-1. **Join** — username + badge "The legend is back" + stats
-2. **Categories** — grille 2×2 colorée, icônes, badges Hot/New, coins
-3. **Matchmaking** — versus "You vs ?" animé
-4. **Battle** — face-à-face live, timer 10s, scoring, réponses 2×2
-5. **Victory** — couronne, rank global, rewards (coins/XP/streak), Share
+### Social — brique 1 faite : « Défi par ami » (levier viral n°1)
+
+- **Rooms privées par code** (`backend/server.js`) : `create_room` génère un
+  code 5 lettres partageable (alphabet sans ambiguïté), `join_room` matche
+  hôte + invité en partie privée. Codes expirent (10 min) + nettoyés à la
+  déconnexion ; mauvais code → `room_not_found`. Testé (hôte+invité matchés).
+- **Frontend** : « Challenge a friend » (affiche le code, tap pour copier) +
+  « Enter a code ». Partage type « bats-moi : ABC12 » sur WhatsApp/Discord.
+- 🐛 **Bug corrigé** : le quick match choisissait une catégorie aléatoire
+  côté client → 2 joueurs ne se matchaient jamais. Désormais quick match =
+  pool commun (category null), le serveur résout la catégorie au démarrage.
+
+Brique 2 (profils persistants + follow + classement global) → **nécessite
+Firebase** (compte à créer par l'utilisateur). Non commencée.
+
+## 📋 Écrans
+
+1. **Join** — username + choix d'avatar + badge "The legend is back"
+2. **Home** — logo + bouton central "Play now" + navbar (façon QuizUp)
+3. **Themes** — liste des catégories (icône + description + badges)
+4. **Challenge / Enter code** — défi par code entre amis
+5. **Matchmaking** — versus "You vs ?" animé
+6. **Round intro** — "Round X — Get ready!" + icône catégorie
+7. **Battle** — face-à-face live, barre de temps, réponses en colonne, reveal
+8. **Victory** — couronne, rewards (coins/XP/streak)
+9. **Profile** — stats (placeholder, social à venir)
 
 ## 💰 Monétisation (plan)
 
@@ -89,14 +116,16 @@ Cible revenue : mois 3 = ~750€/mois, mois 6 = ~4500€/mois.
 
 ## ⏭️ Prochaines étapes (reprise)
 
-Fait en session solo : ✅ toggle thème, ✅ anti-triche serveur, ✅ base de
-questions (60q), ✅ gestion déconnexion. Reste :
+Fait : ✅ toggle thème, ✅ anti-triche serveur, ✅ questions API+local, ✅
+signalement communautaire, ✅ rapprochement QuizUp (intro/colonne/barre/accueil/
+liste/palette), ✅ défi par code, ✅ fix quick match. Reste :
 
 - [ ] **Décider** : lancer MVP web (Option A, 48h) ou app complète (Option B)
 - [ ] Setup comptes hosting (Railway, Vercel, Firebase) — **côté utilisateur**
+- [ ] **Social brique 2** : profils persistants + follow + classement global
+      — nécessite Firebase
 - [ ] **Cosmétiques persistants** (shop + inventory) — nécessite Firebase
       (structure prête : coins/XP en fin de partie, avatars sélectionnables)
-- [ ] **Leaderboard global persistant** — nécessite Firebase
 - [ ] Reconnexion en cours de partie (actuellement : déconnexion = forfait)
 - [ ] Intégrer les images dans les questions (champ `image` optionnel)
 
