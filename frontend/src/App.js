@@ -39,6 +39,7 @@ export default function App() {
   const [avatar, setAvatar] = useState(AVATARS[0]);
   const [category, setCategory] = useState(null);
   const [opponent, setOpponent] = useState({ name: '', avatar: '🦁' });
+  const [intro, setIntro] = useState(null); // round_intro payload (build-up screen)
   const [question, setQuestion] = useState(null);
   const [score, setScore] = useState(0);
   const [opponentScore, setOpponentScore] = useState(0);
@@ -92,12 +93,20 @@ export default function App() {
             setOpponentScore(0);
             setStage('playing');
             break;
+          case 'round_intro':
+            setIntro(data);
+            setQuestion(null);
+            setRound(data.round);
+            setReveal(null);
+            setReported(false);
+            setStage('playing');
+            break;
           case 'question':
+            setIntro(null);
             setQuestion(data);
             setRound(data.round);
             setSelected(null);
             setReveal(null);
-            setReported(false);
             break;
           case 'report_ack':
             setReported(true);
@@ -240,8 +249,26 @@ export default function App() {
     );
   }
 
+  if (stage === 'playing' && intro && !question) {
+    return (
+      <div className="app">
+        <ThemeToggle />
+        <div className="glow glow-1" />
+        <div className="container center">
+          <div className={`round-intro-icon ${intro.isBonus ? 'bonus' : ''}`}>{intro.icon}</div>
+          <div className="round-intro-cat">{intro.category}</div>
+          <div className="round-intro-round">
+            {intro.isBonus ? '⭐ BONUS ROUND' : `Round ${intro.round}`}
+          </div>
+          <div className="round-intro-sub">{intro.isBonus ? 'Double points — get ready!' : 'Get ready!'}</div>
+        </div>
+      </div>
+    );
+  }
+
   if (stage === 'playing' && question) {
     const showReveal = !!reveal;
+    const timerPct = Math.max(0, Math.min(100, (timeLeft / question.timeLimit) * 100));
     return (
       <div className="app app-top">
         <ThemeToggle />
@@ -268,7 +295,13 @@ export default function App() {
             Round {round} of {totalRounds}{question.isBonus ? ' · ⭐ BONUS (x2)' : ''}
           </div>
 
-          <div className={`timer ${timeLeft <= 3 ? 'urgent' : ''}`}>{showReveal ? '✓' : timeLeft}</div>
+          <div className="timer-bar-wrap">
+            <div
+              className={`timer-bar-fill ${timeLeft <= 3 && !showReveal ? 'urgent' : ''}`}
+              style={{ width: showReveal ? '100%' : `${timerPct}%` }}
+            />
+            <span className="timer-bar-num">{showReveal ? '✓' : `${timeLeft}s`}</span>
+          </div>
 
           <div className="cat-tag">{question.icon} {question.category}</div>
           <div className="question">{question.question}</div>

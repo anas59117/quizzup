@@ -25,6 +25,7 @@ const GAME_CONFIG = {
   BASE_POINTS: 20, // max points for an instant correct answer
   MIN_POINTS: 5, // floor for a correct-but-slow answer
   BONUS_MULTIPLIER: 2, // final round is worth double
+  INTRO_MS: 1600, // "Round X — Get ready!" build-up before each question
 };
 
 const rid = (p) => p + Math.random().toString(36).slice(2, 11);
@@ -87,30 +88,46 @@ function nextQuestion(game) {
 
   game.currentRound = nextRound;
   game.roundAnswers = {};
-  game.questionStart = Date.now();
   const q = game.questions[nextRound];
   const isFinal = nextRound === game.questions.length - 1;
 
+  // Phase 1 — "Round X, get ready!" build-up, synced to both players. The
+  // clock does NOT run yet, so the intro never eats into answer time.
   game.players.forEach((p) => {
     send(p.ws, {
-      type: 'question',
+      type: 'round_intro',
       round: nextRound + 1,
       totalRounds: game.questions.length,
-      question: q.text,
       category: q.category,
       icon: q.icon,
-      answers: q.answers,
-      timeLimit: GAME_CONFIG.TIME_PER_QUESTION,
       isBonus: isFinal,
     });
   });
 
-  // Server-authoritative timeout: reveal once time is up even if nobody
-  // (or only one player) answered. +500ms grace for network latency.
-  game.roundTimer = setTimeout(
-    () => revealRound(game, true),
-    GAME_CONFIG.TIME_PER_QUESTION * 1000 + 500
-  );
+  // Phase 2 — after the intro, deliver the question and start the clock.
+  game.roundTimer = setTimeout(() => {
+    if (game.status !== 'active') return;
+    game.questionStart = Date.now();
+    game.players.forEach((p) => {
+      send(p.ws, {
+        type: 'question',
+        round: nextRound + 1,
+        totalRounds: game.questions.length,
+        question: q.text,
+        category: q.category,
+        icon: q.icon,
+        answers: q.answers,
+        timeLimit: GAME_CONFIG.TIME_PER_QUESTION,
+        isBonus: isFinal,
+      });
+    });
+    // Server-authoritative timeout: reveal once time is up even if nobody
+    // (or only one player) answered. +500ms grace for network latency.
+    game.roundTimer = setTimeout(
+      () => revealRound(game, true),
+      GAME_CONFIG.TIME_PER_QUESTION * 1000 + 500
+    );
+  }, GAME_CONFIG.INTRO_MS);
 }
 
 function revealRound(game, timedOut) {
