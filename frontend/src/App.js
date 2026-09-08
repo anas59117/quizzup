@@ -15,9 +15,9 @@ const CATEGORIES = [
 function useTheme() {
   const [theme, setTheme] = useState(() => {
     try {
-      return localStorage.getItem('quizzup-theme') || 'dark';
+      return localStorage.getItem('quizzup-theme') || 'light';
     } catch {
-      return 'dark';
+      return 'light';
     }
   });
   useEffect(() => {
