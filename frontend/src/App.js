@@ -4,12 +4,12 @@ import './App.css';
 const AVATARS = ['🐺', '🦁', '🦊', '🐼', '🦉', '🐸', '🐯', '🦄'];
 
 const CATEGORIES = [
-  { key: 'movies', label: 'Movies', icon: '🎬', cls: 'c1', tag: '🔥 Hot' },
-  { key: 'music', label: 'Music', icon: '🎵', cls: 'c2' },
-  { key: 'sports', label: 'Sports', icon: '⚽', cls: 'c3' },
-  { key: 'geography', label: 'Geography', icon: '🌍', cls: 'c4' },
-  { key: 'gaming', label: 'Gaming', icon: '🎮', cls: 'c2' },
-  { key: 'science', label: 'Science', icon: '🧬', cls: 'c1', tag: '✨ New' },
+  { key: 'movies', label: 'Movies', icon: '🎬', cls: 'c1', tag: '🔥 Hot', desc: 'Blockbusters, directors & classics' },
+  { key: 'music', label: 'Music', icon: '🎵', cls: 'c2', desc: 'Artists, albums & lyrics' },
+  { key: 'sports', label: 'Sports', icon: '⚽', cls: 'c3', desc: 'Teams, records & champions' },
+  { key: 'geography', label: 'Geography', icon: '🌍', cls: 'c4', desc: 'Capitals, countries & landmarks' },
+  { key: 'gaming', label: 'Gaming', icon: '🎮', cls: 'c2', desc: 'Consoles, franchises & lore' },
+  { key: 'science', label: 'Science', icon: '🧬', cls: 'c1', tag: '✨ New', desc: 'Space, biology & physics' },
 ];
 
 function useTheme() {
@@ -137,6 +137,27 @@ export default function App() {
     connect(catKey);
   };
 
+  // Quick match from the home screen: pick a random category so the API pool
+  // (and variety) is still used, then jump straight into matchmaking.
+  const quickMatch = () => {
+    const random = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
+    startWithCategory(random.key);
+  };
+
+  const NavBar = ({ active }) => (
+    <nav className="navbar">
+      <button className={`nav-item ${active === 'home' ? 'active' : ''}`} onClick={() => setStage('home')}>
+        <span className="nav-ic">🏠</span><span className="nav-lbl">Home</span>
+      </button>
+      <button className={`nav-item ${active === 'categories' ? 'active' : ''}`} onClick={() => setStage('categories')}>
+        <span className="nav-ic">🗂️</span><span className="nav-lbl">Themes</span>
+      </button>
+      <button className={`nav-item ${active === 'profile' ? 'active' : ''}`} onClick={() => setStage('profile')}>
+        <span className="nav-ic">👤</span><span className="nav-lbl">Profile</span>
+      </button>
+    </nav>
+  );
+
   const answer = (index) => {
     if (selected !== null || reveal) return;
     setSelected(index);
@@ -194,7 +215,7 @@ export default function App() {
               </button>
             ))}
           </div>
-          <button className="btn" disabled={!name.trim()} onClick={() => setStage('categories')}>
+          <button className="btn" disabled={!name.trim()} onClick={() => setStage('home')}>
             Continue →
           </button>
         </div>
@@ -202,25 +223,75 @@ export default function App() {
     );
   }
 
+  if (stage === 'home') {
+    return (
+      <div className="app app-nav">
+        <ThemeToggle />
+        <div className="home-hero">
+          <div className="home-logo">Quizz<span>Up</span></div>
+          <div className="home-tagline">Real-time trivia battles</div>
+          <button className="home-play" onClick={quickMatch}>
+            <span className="home-play-bolt">⚡</span>
+            <span>Play now</span>
+          </button>
+          <div className="home-hint">Quick match against a random player</div>
+          <button className="home-themes-link" onClick={() => setStage('categories')}>
+            or pick a theme →
+          </button>
+        </div>
+        <NavBar active="home" />
+      </div>
+    );
+  }
+
   if (stage === 'categories') {
     return (
-      <div className="app app-top">
+      <div className="app app-nav app-top">
         <ThemeToggle />
         <div className="container wide">
           <div className="cat-header">
-            <h2>Choose a category</h2>
+            <h2>Themes</h2>
             <div className="you-chip">{avatar} {name}</div>
           </div>
-          <div className="cat-grid">
+          <div className="cat-list">
             {CATEGORIES.map((c) => (
-              <button key={c.key} className={`cat ${c.cls}`} onClick={() => startWithCategory(c.key)}>
-                {c.tag && <span className="cat-tag-badge">{c.tag}</span>}
-                <span className="cat-ic">{c.icon}</span>
-                <span className="cat-nm">{c.label}</span>
+              <button key={c.key} className="cat-row" onClick={() => startWithCategory(c.key)}>
+                <span className={`cat-row-ic ${c.cls}`}>{c.icon}</span>
+                <span className="cat-row-text">
+                  <span className="cat-row-name">
+                    {c.label}
+                    {c.tag && <span className="cat-row-tag">{c.tag}</span>}
+                  </span>
+                  <span className="cat-row-desc">{c.desc}</span>
+                </span>
+                <span className="cat-row-arrow">›</span>
               </button>
             ))}
           </div>
         </div>
+        <NavBar active="categories" />
+      </div>
+    );
+  }
+
+  if (stage === 'profile') {
+    return (
+      <div className="app app-nav app-top">
+        <ThemeToggle />
+        <div className="container">
+          <div className="profile-head">
+            <div className="profile-avatar">{avatar}</div>
+            <div className="profile-name">{name || 'Player'}</div>
+            <div className="profile-sub">Level 1 · Rookie</div>
+          </div>
+          <div className="profile-stats">
+            <div className="pstat"><div className="pstat-val">0</div><div className="pstat-lbl">Games</div></div>
+            <div className="pstat"><div className="pstat-val">0</div><div className="pstat-lbl">Wins</div></div>
+            <div className="pstat"><div className="pstat-val">0</div><div className="pstat-lbl">Streak</div></div>
+          </div>
+          <div className="profile-soon">🚧 Friends, follow &amp; global ranking coming soon</div>
+        </div>
+        <NavBar active="profile" />
       </div>
     );
   }
