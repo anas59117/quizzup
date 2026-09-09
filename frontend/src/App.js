@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './App.css';
+import SFX from './sounds';
 
 const AVATARS = ['🐺', '🦁', '🦊', '🐼', '🦉', '🐸', '🐯', '🦄'];
 
@@ -34,6 +35,8 @@ function useTheme() {
 
 export default function App() {
   const [theme, toggleTheme] = useTheme();
+  const [muted, setMuted] = useState(SFX.muted);
+  const toggleMute = () => setMuted(SFX.toggle());
   const [stage, setStage] = useState('join'); // join | categories | waiting | playing | finished
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState(AVATARS[0]);
@@ -70,7 +73,12 @@ export default function App() {
     setTimeLeft(question.timeLimit);
     if (tickRef.current) clearInterval(tickRef.current);
     tickRef.current = setInterval(() => {
-      setTimeLeft((t) => (t > 0 ? t - 1 : 0));
+      setTimeLeft((t) => {
+        const next = t > 0 ? t - 1 : 0;
+        if (next > 0 && next <= 3) SFX.countdownBeep();
+        else if (next > 3) SFX.tick(next <= 5);
+        return next;
+      });
     }, 1000);
     return () => clearInterval(tickRef.current);
   }, [question, stage, reveal]);
@@ -98,6 +106,7 @@ export default function App() {
             setJoinError(true);
             break;
           case 'game_start':
+            SFX.gameStart();
             setOpponent(data.opponent);
             setTotalRounds(data.totalRounds);
             setScore(0);
@@ -105,6 +114,7 @@ export default function App() {
             setStage('playing');
             break;
           case 'round_intro':
+            if (data.isBonus) SFX.bonusIntro(); else SFX.roundIntro();
             setIntro(data);
             setQuestion(null);
             setRound(data.round);
@@ -123,12 +133,18 @@ export default function App() {
             setReported(true);
             break;
           case 'round_result':
+            if (data.yourCorrect) SFX.correct();
+            else if (data.timedOut && !data.yourAnswer && data.yourAnswer !== 0) SFX.timeUp();
+            else SFX.wrong();
             setReveal(data);
             setScore(data.yourScore);
             setOpponentScore(data.opponentScore);
             if (tickRef.current) clearInterval(tickRef.current);
             break;
           case 'game_end':
+            if (data.won) SFX.victory();
+            else if (data.tie) SFX.tie();
+            else SFX.defeat();
             setResult(data);
             setScore(data.finalScore);
             setOpponentScore(data.opponentScore);
@@ -185,6 +201,7 @@ export default function App() {
 
   const answer = (index) => {
     if (selected !== null || reveal) return;
+    SFX.select();
     setSelected(index);
     if (wsRef.current && wsRef.current.readyState === 1) {
       wsRef.current.send(JSON.stringify({ type: 'answer', answerIndex: index }));
@@ -205,17 +222,22 @@ export default function App() {
     setStage('categories');
   };
 
-  const ThemeToggle = () => (
-    <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme" title="Toggle theme">
-      {theme === 'dark' ? '☀️' : '🌙'}
-    </button>
+  const TopControls = () => (
+    <div className="top-controls">
+      <button className="ctrl-btn" onClick={toggleMute} aria-label="Toggle sound" title="Toggle sound">
+        {muted ? '🔇' : '🔊'}
+      </button>
+      <button className="ctrl-btn" onClick={toggleTheme} aria-label="Toggle theme" title="Toggle theme">
+        {theme === 'dark' ? '☀️' : '🌙'}
+      </button>
+    </div>
   );
 
   // --- Screens ------------------------------------------------------------
   if (stage === 'join') {
     return (
       <div className="app">
-        <ThemeToggle />
+        <TopControls />
         <div className="glow glow-1" />
         <div className="glow glow-2" />
         <div className="container center">
@@ -251,7 +273,7 @@ export default function App() {
   if (stage === 'home') {
     return (
       <div className="app app-nav">
-        <ThemeToggle />
+        <TopControls />
         <div className="home-hero">
           <div className="home-logo">Quizz<span>Up</span></div>
           <div className="home-tagline">Real-time trivia battles</div>
@@ -287,7 +309,7 @@ export default function App() {
     };
     return (
       <div className="app">
-        <ThemeToggle />
+        <TopControls />
         <div className="glow glow-1" />
         <div className="container center">
           <div className="status-label">⚔️ Challenge a friend</div>
@@ -309,7 +331,7 @@ export default function App() {
   if (stage === 'enter_code') {
     return (
       <div className="app">
-        <ThemeToggle />
+        <TopControls />
         <div className="glow glow-1" />
         <div className="container center">
           <div className="status-label">🔑 Join a friend</div>
@@ -334,7 +356,7 @@ export default function App() {
   if (stage === 'categories') {
     return (
       <div className="app app-nav app-top">
-        <ThemeToggle />
+        <TopControls />
         <div className="container wide">
           <div className="cat-header">
             <h2>Themes</h2>
@@ -364,7 +386,7 @@ export default function App() {
   if (stage === 'profile') {
     return (
       <div className="app app-nav app-top">
-        <ThemeToggle />
+        <TopControls />
         <div className="container">
           <div className="profile-head">
             <div className="profile-avatar">{avatar}</div>
@@ -386,7 +408,7 @@ export default function App() {
   if (stage === 'waiting') {
     return (
       <div className="app">
-        <ThemeToggle />
+        <TopControls />
         <div className="glow glow-1" />
         <div className="container center">
           <div className="status-label">⚡ Finding opponent</div>
@@ -410,7 +432,7 @@ export default function App() {
   if (stage === 'playing' && intro && !question) {
     return (
       <div className="app">
-        <ThemeToggle />
+        <TopControls />
         <div className="glow glow-1" />
         <div className="container center">
           <div className={`round-intro-icon ${intro.isBonus ? 'bonus' : ''}`}>{intro.icon}</div>
@@ -429,7 +451,7 @@ export default function App() {
     const timerPct = Math.max(0, Math.min(100, (timeLeft / question.timeLimit) * 100));
     return (
       <div className="app app-top">
-        <ThemeToggle />
+        <TopControls />
         <div className="container game">
           <div className="players">
             <div className="pl me">
@@ -503,7 +525,7 @@ export default function App() {
     const tie = result.tie;
     return (
       <div className="app">
-        <ThemeToggle />
+        <TopControls />
         <div className="glow glow-win" />
         <div className="container center">
           <div className="crown">{won ? '👑' : tie ? '🤝' : '💪'}</div>
@@ -539,7 +561,7 @@ export default function App() {
   if (stage === 'error') {
     return (
       <div className="app">
-        <ThemeToggle />
+        <TopControls />
         <div className="container center">
           <h2 className="logo">Connection lost</h2>
           <p className="tagline">Couldn't reach the game server.</p>

@@ -66,14 +66,14 @@ body {
 .glow-2 { width: 380px; height: 380px; background: var(--accent-2); bottom: -100px; right: -80px; }
 .glow-win { width: 400px; height: 400px; background: var(--gold); opacity: 0.3; top: -120px; left: 50%; transform: translateX(-50%); }
 
-/* ---- Theme toggle ------------------------------------------------------ */
-.theme-toggle {
-  position: fixed; top: 20px; right: 20px; z-index: 10;
+/* ---- Top controls (theme + sound) -------------------------------------- */
+.top-controls { position: fixed; top: 20px; right: 20px; z-index: 10; display: flex; gap: 8px; }
+.ctrl-btn {
   width: 44px; height: 44px; border-radius: 50%;
   background: var(--surface); border: 1px solid var(--border);
   font-size: 1.2em; cursor: pointer; transition: transform 0.2s;
 }
-.theme-toggle:hover { transform: scale(1.1); }
+.ctrl-btn:hover { transform: scale(1.1); }
 
 /* ---- Join -------------------------------------------------------------- */
 .badge {
