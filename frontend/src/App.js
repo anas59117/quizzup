@@ -5,12 +5,12 @@ import SFX from './sounds';
 const AVATARS = ['🐺', '🦁', '🦊', '🐼', '🦉', '🐸', '🐯', '🦄'];
 
 const CATEGORIES = [
-  { key: 'movies', label: 'Movies', icon: '🎬', cls: 'c1', tag: '🔥 Hot', desc: 'Blockbusters, directors & classics' },
-  { key: 'music', label: 'Music', icon: '🎵', cls: 'c2', desc: 'Artists, albums & lyrics' },
-  { key: 'sports', label: 'Sports', icon: '⚽', cls: 'c3', desc: 'Teams, records & champions' },
-  { key: 'geography', label: 'Geography', icon: '🌍', cls: 'c4', desc: 'Capitals, countries & landmarks' },
-  { key: 'gaming', label: 'Gaming', icon: '🎮', cls: 'c2', desc: 'Consoles, franchises & lore' },
-  { key: 'science', label: 'Science', icon: '🧬', cls: 'c1', tag: '✨ New', desc: 'Space, biology & physics' },
+  { key: 'movies', label: 'Movies', icon: '🎬', grad: 'g1', tag: '🔥', desc: 'Blockbusters & classics' },
+  { key: 'music', label: 'Music', icon: '🎵', grad: 'g2', desc: 'Artists, albums & lyrics' },
+  { key: 'sports', label: 'Sports', icon: '⚽', grad: 'g3', desc: 'Teams & champions' },
+  { key: 'geography', label: 'Geography', icon: '🌍', grad: 'g4', desc: 'Capitals & landmarks' },
+  { key: 'gaming', label: 'Gaming', icon: '🎮', grad: 'g5', desc: 'Consoles & lore' },
+  { key: 'science', label: 'Science', icon: '🧬', grad: 'g6', tag: '✨', desc: 'Space, bio & physics' },
 ];
 
 function useTheme() {
@@ -277,25 +277,51 @@ export default function App() {
 
   if (stage === 'home') {
     return (
-      <div className="app app-nav">
+      <div className="app app-nav app-top">
         <TopControls />
-        <div className="home-hero">
-          <div className="home-logo">Quizz<span>Up</span></div>
-          <div className="home-tagline">Real-time trivia battles</div>
-          <button className="home-play" onClick={quickMatch}>
-            <span className="home-play-bolt">⚡</span>
-            <span>Play now</span>
-          </button>
-          <div className="home-hint">Quick match against a random player</div>
-          <div className="home-actions">
-            <button className="home-action" onClick={createRoom}>⚔️ Challenge a friend</button>
-            <button className="home-action ghost" onClick={() => { setJoinError(false); setJoinCode(''); setStage('enter_code'); }}>
-              🔑 Enter a code
-            </button>
+        <div className="container wide">
+          <div className="home-head">
+            <div>
+              <div className="home-greeting">Hey {name} 👋</div>
+              <div className="home-logo-sm">Quizz<span>Up</span></div>
+            </div>
+            <div className="home-avatar-chip" onClick={() => setStage('profile')}>{avatar}</div>
           </div>
-          <button className="home-themes-link" onClick={() => setStage('categories')}>
-            or pick a theme →
+
+          <button className="quick-play" onClick={quickMatch}>
+            <span className="qp-left"><span className="qp-bolt">⚡</span> Quick Play</span>
+            <span className="qp-sub">Random topic</span>
           </button>
+
+          <div className="section-title">🔥 Popular Topics</div>
+          <div className="topics-scroll">
+            {CATEGORIES.map((c) => (
+              <button key={c.key} className={`topic-card ${c.grad}`} onClick={() => startWithCategory(c.key)}>
+                <span className="tc-icon">{c.icon}</span>
+                <span className="tc-name">{c.label}</span>
+                {c.tag && <span className="tc-tag">{c.tag}</span>}
+              </button>
+            ))}
+          </div>
+
+          <div className="section-title">
+            <span>All Topics</span>
+            <button className="see-all" onClick={() => setStage('categories')}>See all ›</button>
+          </div>
+          <div className="topics-grid">
+            {CATEGORIES.map((c) => (
+              <button key={c.key} className={`topic-tile ${c.grad}`} onClick={() => startWithCategory(c.key)}>
+                <span className="tile-icon">{c.icon}</span>
+                <span className="tile-label">{c.label}</span>
+                <span className="tile-desc">{c.desc}</span>
+              </button>
+            ))}
+          </div>
+
+          <div className="social-row">
+            <button className="social-btn" onClick={createRoom}>⚔️ Challenge</button>
+            <button className="social-btn outline" onClick={() => { setJoinError(false); setJoinCode(''); setStage('enter_code'); }}>🔑 Join code</button>
+          </div>
         </div>
         <NavBar active="home" />
       </div>
@@ -303,57 +329,32 @@ export default function App() {
   }
 
   if (stage === 'room_wait') {
-    const copyCode = () => {
-      try {
-        navigator.clipboard.writeText(roomCode);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1500);
-      } catch {
-        /* clipboard may be blocked — the code is shown on screen anyway */
-      }
-    };
+    const copyCode = () => { try { navigator.clipboard.writeText(roomCode); setCopied(true); setTimeout(() => setCopied(false), 1500); } catch {} };
     return (
-      <div className="app">
-        <TopControls />
+      <div className="app"><TopControls />
         <div className="container center">
           <div className="status-label">⚔️ Challenge a friend</div>
           <div className="room-code-label">Share this code</div>
           <button className="room-code" onClick={copyCode}>{roomCode}</button>
           <div className="room-copy-hint">{copied ? '✓ Copied!' : 'Tap the code to copy'}</div>
-          <div className="room-wait-status">
-            <div className="loading-bar"><div className="loading-fill" /></div>
-            <div className="room-wait-text">Waiting for your friend to join…</div>
-          </div>
-          <button className="home-themes-link" onClick={() => { if (wsRef.current) wsRef.current.close(); setStage('home'); }}>
-            ← Cancel
-          </button>
-        </div>
-      </div>
-    );
+          <div className="room-wait-status"><div className="loading-bar"><div className="loading-fill" /></div>
+            <div className="room-wait-text">Waiting for your friend…</div></div>
+          <button className="home-themes-link" onClick={() => { if (wsRef.current) wsRef.current.close(); setStage('home'); }}>← Cancel</button>
+        </div></div>);
   }
 
   if (stage === 'enter_code') {
     return (
-      <div className="app">
-        <TopControls />
+      <div className="app"><TopControls />
         <div className="container center">
           <div className="status-label">🔑 Join a friend</div>
           <div className="room-code-label">Enter their code</div>
-          <input
-            className={`input code-input ${joinError ? 'err' : ''}`}
-            placeholder="ABC12"
-            value={joinCode}
-            maxLength={5}
-            onChange={(e) => { setJoinCode(e.target.value.toUpperCase()); setJoinError(false); }}
-          />
+          <input className={`input code-input ${joinError ? 'err' : ''}`} placeholder="ABC12" value={joinCode} maxLength={5}
+            onChange={(e) => { setJoinCode(e.target.value.toUpperCase()); setJoinError(false); }} />
           {joinError && <div className="code-err-msg">Code not found — check and try again</div>}
-          <button className="btn" disabled={joinCode.trim().length < 4} onClick={() => joinRoom(joinCode)}>
-            Join match
-          </button>
+          <button className="btn" disabled={joinCode.trim().length < 4} onClick={() => joinRoom(joinCode)}>Join match</button>
           <button className="home-themes-link" onClick={() => setStage('home')}>← Back</button>
-        </div>
-      </div>
-    );
+        </div></div>);
   }
 
   if (stage === 'categories') {
@@ -362,21 +363,16 @@ export default function App() {
         <TopControls />
         <div className="container wide">
           <div className="cat-header">
-            <h2>Themes</h2>
-            <div className="you-chip">{avatar} {name}</div>
+            <h2>All Topics</h2>
+            <button className="back-link" onClick={() => setStage('home')}>← Back</button>
           </div>
-          <div className="cat-list">
+          <div className="topics-grid full">
             {CATEGORIES.map((c) => (
-              <button key={c.key} className="cat-row" onClick={() => startWithCategory(c.key)}>
-                <span className={`cat-row-ic ${c.cls}`}>{c.icon}</span>
-                <span className="cat-row-text">
-                  <span className="cat-row-name">
-                    {c.label}
-                    {c.tag && <span className="cat-row-tag">{c.tag}</span>}
-                  </span>
-                  <span className="cat-row-desc">{c.desc}</span>
-                </span>
-                <span className="cat-row-arrow">›</span>
+              <button key={c.key} className={`topic-tile tall ${c.grad}`} onClick={() => startWithCategory(c.key)}>
+                <span className="tile-icon lg">{c.icon}</span>
+                <span className="tile-label">{c.label}</span>
+                <span className="tile-desc">{c.desc}</span>
+                {c.tag && <span className="tile-tag">{c.tag}</span>}
               </button>
             ))}
           </div>
@@ -387,9 +383,9 @@ export default function App() {
   }
 
   if (stage === 'profile') {
+    const stats = [['0','Games'],['0','Wins'],['0','Streak']];
     return (
-      <div className="app app-nav app-top">
-        <TopControls />
+      <div className="app app-nav app-top"><TopControls />
         <div className="container">
           <div className="profile-head">
             <div className="profile-avatar">{avatar}</div>
@@ -397,38 +393,25 @@ export default function App() {
             <div className="profile-sub">Level 1 · Rookie</div>
           </div>
           <div className="profile-stats">
-            <div className="pstat"><div className="pstat-val">0</div><div className="pstat-lbl">Games</div></div>
-            <div className="pstat"><div className="pstat-val">0</div><div className="pstat-lbl">Wins</div></div>
-            <div className="pstat"><div className="pstat-val">0</div><div className="pstat-lbl">Streak</div></div>
+            {stats.map(([v,l]) => <div key={l} className="pstat"><div className="pstat-val">{v}</div><div className="pstat-lbl">{l}</div></div>)}
           </div>
-          <div className="profile-soon">🚧 Friends, follow &amp; global ranking coming soon</div>
-        </div>
-        <NavBar active="profile" />
-      </div>
-    );
+          <div className="profile-soon">Friends, follow &amp; global ranking coming soon</div>
+        </div><NavBar active="profile" />
+      </div>);
   }
 
   if (stage === 'waiting') {
     return (
-      <div className="app">
-        <TopControls />
+      <div className="app"><TopControls />
         <div className="container center">
           <div className="status-label">⚡ Finding opponent</div>
           <div className="versus">
-            <div className="fighter">
-              <div className="f-ava me">{avatar}</div>
-              <div className="f-lbl">{name}</div>
-            </div>
+            <div className="fighter"><div className="f-ava me">{avatar}</div><div className="f-lbl">{name}</div></div>
             <div className="vs-badge">VS</div>
-            <div className="fighter">
-              <div className="f-ava searching">?</div>
-              <div className="f-lbl dim">Searching…</div>
-            </div>
+            <div className="fighter"><div className="f-ava searching">?</div><div className="f-lbl dim">Searching…</div></div>
           </div>
           <div className="loading-bar"><div className="loading-fill" /></div>
-        </div>
-      </div>
-    );
+        </div></div>);
   }
 
   if (stage === 'playing' && intro && !question) {
@@ -448,127 +431,62 @@ export default function App() {
   }
 
   if (stage === 'playing' && question) {
-    const showReveal = !!reveal;
-    const timerPct = Math.max(0, Math.min(100, (timeLeft / question.timeLimit) * 100));
+    const sr = !!reveal;
+    const pct = Math.max(0, Math.min(100, (timeLeft / question.timeLimit) * 100));
+    const ansCls = (idx) => {
+      if (sr) return idx === reveal.correctIndex ? 'answer correct' : idx === selected ? 'answer wrong' : 'answer dim';
+      return idx === selected ? 'answer selected' : 'answer';
+    };
     return (
-      <div className="app app-top">
-        <TopControls />
+      <div className="app app-top"><TopControls />
         <div className="container game">
           <div className="players">
-            <div className="pl me">
-              <div className="pl-av a1">{avatar}</div>
-              <div>
-                <div className="pl-nm">You</div>
-                <div className="pl-sc">{score}</div>
-              </div>
-            </div>
+            <div className="pl me"><div className="pl-av a1">{avatar}</div><div><div className="pl-nm">You</div><div className="pl-sc">{score}</div></div></div>
             <div className="vs">VS</div>
-            <div className="pl">
-              <div className="pl-av a2">{opponent.avatar}</div>
-              <div>
-                <div className="pl-nm">{opponent.name}</div>
-                <div className="pl-sc opp">{opponentScore}</div>
-              </div>
-            </div>
+            <div className="pl"><div className="pl-av a2">{opponent.avatar}</div><div><div className="pl-nm">{opponent.name}</div><div className="pl-sc opp">{opponentScore}</div></div></div>
           </div>
-
-          <div className="round-label">
-            Round {round} of {totalRounds}{question.isBonus ? ' · ⭐ BONUS (x2)' : ''}
-          </div>
-
-          <div className="timer-bar-wrap">
-            <div
-              className={`timer-bar-fill ${timeLeft <= 3 && !showReveal ? 'urgent' : ''}`}
-              style={{ width: showReveal ? '100%' : `${timerPct}%` }}
-            />
-          </div>
-          <span className="timer-bar-num">{showReveal ? '✓' : `${timeLeft}s`}</span>
-
+          <div className="round-label">Round {round} of {totalRounds}{question.isBonus ? ' · ⭐ BONUS (x2)' : ''}</div>
+          <div className="timer-bar-wrap"><div className={`timer-bar-fill ${timeLeft <= 3 && !sr ? 'urgent' : ''}`} style={{ width: sr ? '100%' : `${pct}%` }} /></div>
+          <span className="timer-bar-num">{sr ? '✓' : `${timeLeft}s`}</span>
           <div className="cat-tag">{question.icon} {question.category}</div>
           <div className="question">{question.question}</div>
-
           <div className="answers">
-            {question.answers.map((a, idx) => {
-              let cls = 'answer';
-              if (showReveal) {
-                if (idx === reveal.correctIndex) cls += ' correct';
-                else if (idx === selected) cls += ' wrong';
-                else cls += ' dim';
-              } else if (idx === selected) {
-                cls += ' selected';
-              }
-              return (
-                <button key={idx} className={cls} onClick={() => answer(idx)} disabled={selected !== null || showReveal}>
-                  {a}
-                </button>
-              );
-            })}
+            {question.answers.map((a, idx) => <button key={idx} className={ansCls(idx)} onClick={() => answer(idx)} disabled={selected !== null || sr}>{a}</button>)}
           </div>
-
-          {showReveal && (
-            <div className="reveal-note">
-              {reveal.yourCorrect ? `✅ +${reveal.pointsEarned} points` : reveal.timedOut && selected === null ? '⏱️ Time up' : '❌ Wrong'}
-            </div>
-          )}
-
-          {showReveal && (
-            <button className="report-btn" onClick={reportQuestion} disabled={reported}>
-              {reported ? '✓ Reported, thanks' : '🚩 Report this question'}
-            </button>
-          )}
-        </div>
-      </div>
-    );
+          {sr && <div className="reveal-note">{reveal.yourCorrect ? `✅ +${reveal.pointsEarned} points` : reveal.timedOut && selected === null ? '⏱️ Time up' : '❌ Wrong'}</div>}
+          {sr && <button className="report-btn" onClick={reportQuestion} disabled={reported}>{reported ? '✓ Reported' : '🚩 Report'}</button>}
+        </div></div>);
   }
 
   if (stage === 'finished' && result) {
-    const won = result.won;
-    const tie = result.tie;
+    const { won, tie } = result;
+    const left = result.reason === 'opponent_disconnected' || result.reason === 'opponent_left';
     return (
-      <div className="app">
-        <TopControls />
+      <div className="app"><TopControls />
         <div className="container center">
           <div className="crown">{won ? '👑' : tie ? '🤝' : '💪'}</div>
           <h1 className="win-text">{won ? 'Victory!' : tie ? "It's a tie!" : 'Good game!'}</h1>
-          <p className="win-sub">
-            {result.reason === 'opponent_disconnected' || result.reason === 'opponent_left' ? 'Opponent left the match' : `Final score ${result.finalScore} – ${result.opponentScore}`}
-          </p>
-
+          <p className="win-sub">{left ? 'Opponent left the match' : `Final score ${result.finalScore} – ${result.opponentScore}`}</p>
           <div className="scoreboard">
-            <div className={`final ${won ? 'winner' : ''}`}>
-              <div className="f-av a1">{avatar}</div>
-              <div className="f-nm">You</div>
-              <div className="f-score">{result.finalScore}</div>
-            </div>
-            <div className="final">
-              <div className="f-av a2">{opponent.avatar}</div>
-              <div className="f-nm">{opponent.name}</div>
-              <div className="f-score opp">{result.opponentScore}</div>
-            </div>
+            <div className={`final ${won ? 'winner' : ''}`}><div className="f-av a1">{avatar}</div><div className="f-nm">You</div><div className="f-score">{result.finalScore}</div></div>
+            <div className="final"><div className="f-av a2">{opponent.avatar}</div><div className="f-nm">{opponent.name}</div><div className="f-score opp">{result.opponentScore}</div></div>
           </div>
-
           <div className="rewards">
             <div className="reward"><div className="reward-val">+{result.coins} 🪙</div><div className="reward-label">Coins</div></div>
             <div className="reward"><div className="reward-val">+{result.xp} XP</div><div className="reward-label">Experience</div></div>
           </div>
-
           <button className="btn" onClick={playAgain}>Play Again</button>
-        </div>
-      </div>
-    );
+        </div></div>);
   }
 
   if (stage === 'error') {
     return (
-      <div className="app">
-        <TopControls />
+      <div className="app"><TopControls />
         <div className="container center">
           <h2 className="logo">Connection lost</h2>
           <p className="tagline">Couldn't reach the game server.</p>
           <button className="btn" onClick={() => window.location.reload()}>Retry</button>
-        </div>
-      </div>
-    );
+        </div></div>);
   }
 
   return null;
