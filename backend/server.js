@@ -249,6 +249,11 @@ wss.on('connection', (ws) => {
     if (!data || typeof data.type !== 'string') return;
 
     if (data.type === 'join') {
+      // Prevent joining while already in a game or already waiting.
+      if (playerSessions.has(playerId)) return;
+      const alreadyWaiting = waitingPlayers.some((w) => w.id === playerId);
+      if (alreadyWaiting) return;
+
       if (typeof data.name === 'string' && data.name.trim()) {
         name = data.name.trim().slice(0, 20);
       }
@@ -276,12 +281,14 @@ wss.on('connection', (ws) => {
     if (data.type === 'answer') {
       const gameId = playerSessions.get(playerId);
       const game = gameId && activeGames.get(gameId);
-      if (game && game.status === 'active' && Number.isInteger(data.answerIndex)) {
+      if (game && game.status === 'active' && Number.isInteger(data.answerIndex)
+          && data.answerIndex >= 0 && data.answerIndex <= 3) {
         recordAnswer(game, playerId, data.answerIndex);
       }
     }
 
     if (data.type === 'create_room') {
+      if (playerSessions.has(playerId)) return;
       if (typeof data.name === 'string' && data.name.trim()) name = data.name.trim().slice(0, 20);
       const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '🐺';
       const categoryKey = typeof data.category === 'string' ? data.category : null;

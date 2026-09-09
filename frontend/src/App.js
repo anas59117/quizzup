@@ -85,15 +85,16 @@ export default function App() {
 
   const connect = useCallback(
     (action) => {
+      if (wsRef.current) { wsRef.current.close(); wsRef.current = null; }
       const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-      // In dev, the backend runs on :3001; in prod it's same-host behind a proxy.
       const host = window.location.port === '3000' ? `${window.location.hostname}:3001` : window.location.host;
       const ws = new WebSocket(`${proto}//${host}/ws`);
       wsRef.current = ws;
 
       ws.onopen = () => ws.send(JSON.stringify({ ...action, name, avatar }));
       ws.onmessage = (event) => {
-        const data = JSON.parse(event.data);
+        let data;
+        try { data = JSON.parse(event.data); } catch { return; }
         switch (data.type) {
           case 'waiting':
             setStage('waiting');
@@ -149,6 +150,9 @@ export default function App() {
             setScore(data.finalScore);
             setOpponentScore(data.opponentScore);
             setStage('finished');
+            break;
+          case 'error':
+            setStage('error');
             break;
           default:
             break;
@@ -216,10 +220,13 @@ export default function App() {
   };
 
   const playAgain = () => {
-    if (wsRef.current) wsRef.current.close();
+    if (wsRef.current) { wsRef.current.close(); wsRef.current = null; }
     setResult(null);
     setQuestion(null);
-    setStage('categories');
+    setIntro(null);
+    setReveal(null);
+    setSelected(null);
+    setStage('home');
   };
 
   const TopControls = () => (
@@ -238,10 +245,8 @@ export default function App() {
     return (
       <div className="app">
         <TopControls />
-        <div className="glow glow-1" />
-        <div className="glow glow-2" />
         <div className="container center">
-          <div className="badge">⚡ The legend is back</div>
+          <div className="badge">⚡ THE LEGEND IS BACK</div>
           <h1 className="logo">Quizz<span>Up</span></h1>
           <p className="tagline">Real-time trivia battles</p>
           <input
@@ -310,7 +315,6 @@ export default function App() {
     return (
       <div className="app">
         <TopControls />
-        <div className="glow glow-1" />
         <div className="container center">
           <div className="status-label">⚔️ Challenge a friend</div>
           <div className="room-code-label">Share this code</div>
@@ -332,7 +336,6 @@ export default function App() {
     return (
       <div className="app">
         <TopControls />
-        <div className="glow glow-1" />
         <div className="container center">
           <div className="status-label">🔑 Join a friend</div>
           <div className="room-code-label">Enter their code</div>
@@ -409,7 +412,6 @@ export default function App() {
     return (
       <div className="app">
         <TopControls />
-        <div className="glow glow-1" />
         <div className="container center">
           <div className="status-label">⚡ Finding opponent</div>
           <div className="versus">
@@ -433,7 +435,6 @@ export default function App() {
     return (
       <div className="app">
         <TopControls />
-        <div className="glow glow-1" />
         <div className="container center">
           <div className={`round-intro-icon ${intro.isBonus ? 'bonus' : ''}`}>{intro.icon}</div>
           <div className="round-intro-cat">{intro.category}</div>
@@ -480,8 +481,8 @@ export default function App() {
               className={`timer-bar-fill ${timeLeft <= 3 && !showReveal ? 'urgent' : ''}`}
               style={{ width: showReveal ? '100%' : `${timerPct}%` }}
             />
-            <span className="timer-bar-num">{showReveal ? '✓' : `${timeLeft}s`}</span>
           </div>
+          <span className="timer-bar-num">{showReveal ? '✓' : `${timeLeft}s`}</span>
 
           <div className="cat-tag">{question.icon} {question.category}</div>
           <div className="question">{question.question}</div>
@@ -526,12 +527,11 @@ export default function App() {
     return (
       <div className="app">
         <TopControls />
-        <div className="glow glow-win" />
         <div className="container center">
           <div className="crown">{won ? '👑' : tie ? '🤝' : '💪'}</div>
           <h1 className="win-text">{won ? 'Victory!' : tie ? "It's a tie!" : 'Good game!'}</h1>
           <p className="win-sub">
-            {result.reason === 'opponent_disconnected' ? 'Opponent disconnected' : `Final score ${result.finalScore} – ${result.opponentScore}`}
+            {result.reason === 'opponent_disconnected' || result.reason === 'opponent_left' ? 'Opponent left the match' : `Final score ${result.finalScore} – ${result.opponentScore}`}
           </p>
 
           <div className="scoreboard">
