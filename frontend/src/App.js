@@ -194,6 +194,10 @@ export default function App() {
       <button className={`nav-item ${active === 'home' ? 'active' : ''}`} onClick={() => setStage('home')}>
         <span className="nav-ic">🏠</span><span className="nav-lbl">Home</span>
       </button>
+      <button className="nav-item dimmed">
+        <span className="nav-ic">🛒</span><span className="nav-lbl">Shop</span>
+      </button>
+      <button className="nav-bolt" onClick={quickMatch} aria-label="Quick Play">⚡</button>
       <button className={`nav-item ${active === 'categories' ? 'active' : ''}`} onClick={() => setStage('categories')}>
         <span className="nav-ic">🗂️</span><span className="nav-lbl">Themes</span>
       </button>
@@ -402,13 +406,19 @@ export default function App() {
 
   if (stage === 'waiting') {
     return (
-      <div className="app"><TopControls />
+      <div className="app game-bg"><TopControls />
         <div className="container center">
-          <div className="status-label">⚡ Finding opponent</div>
-          <div className="versus">
-            <div className="fighter"><div className="f-ava me">{avatar}</div><div className="f-lbl">{name}</div></div>
-            <div className="vs-badge">VS</div>
-            <div className="fighter"><div className="f-ava searching">?</div><div className="f-lbl dim">Searching…</div></div>
+          <div className="vs-screen">
+            <div className="vs-player">
+              <div className="vs-ava me">{avatar}</div>
+              <div className="vs-name">{name}</div>
+              <div className="vs-rank">Novice</div>
+            </div>
+            <div className="vs-bolt-wrap"><div className="vs-bolt">⚡</div></div>
+            <div className="vs-player">
+              <div className="vs-ava searching">?</div>
+              <div className="vs-name dim">Searching…</div>
+            </div>
           </div>
           <div className="loading-bar"><div className="loading-fill" /></div>
         </div></div>);
@@ -416,18 +426,13 @@ export default function App() {
 
   if (stage === 'playing' && intro && !question) {
     return (
-      <div className="app">
-        <TopControls />
+      <div className="app game-bg"><TopControls />
         <div className="container center">
           <div className={`round-intro-icon ${intro.isBonus ? 'bonus' : ''}`}>{intro.icon}</div>
           <div className="round-intro-cat">{intro.category}</div>
-          <div className="round-intro-round">
-            {intro.isBonus ? '⭐ BONUS ROUND' : `Round ${intro.round}`}
-          </div>
-          <div className="round-intro-sub">{intro.isBonus ? 'Double points — get ready!' : 'Get ready!'}</div>
-        </div>
-      </div>
-    );
+          <div className="round-intro-round">{intro.isBonus ? 'BONUS ROUND' : `Round ${intro.round}`}</div>
+          <div className="round-intro-sub">{intro.isBonus ? 'Double points!' : `${intro.round} of ${totalRounds}`}</div>
+        </div></div>);
   }
 
   if (stage === 'playing' && question) {
@@ -438,22 +443,19 @@ export default function App() {
       return idx === selected ? 'answer selected' : 'answer';
     };
     return (
-      <div className="app app-top"><TopControls />
+      <div className="app game-bg"><TopControls />
         <div className="container game">
-          <div className="players">
-            <div className="pl me"><div className="pl-av a1">{avatar}</div><div><div className="pl-nm">You</div><div className="pl-sc">{score}</div></div></div>
-            <div className="vs">VS</div>
-            <div className="pl"><div className="pl-av a2">{opponent.avatar}</div><div><div className="pl-nm">{opponent.name}</div><div className="pl-sc opp">{opponentScore}</div></div></div>
+          <div className="game-hud">
+            <div className="hud-side left"><div className="hud-av">{avatar}</div><span className="hud-name">{name}</span><span className="hud-score">{score}</span></div>
+            <div className="hud-mid"><span className="hud-timer-label">TIME</span><span className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr ? '✓' : timeLeft}</span></div>
+            <div className="hud-side right"><span className="hud-score opp">{opponentScore}</span><span className="hud-name">{opponent.name}</span><div className="hud-av opp">{opponent.avatar}</div></div>
           </div>
-          <div className="round-label">Round {round} of {totalRounds}{question.isBonus ? ' · ⭐ BONUS (x2)' : ''}</div>
-          <div className="timer-bar-wrap"><div className={`timer-bar-fill ${timeLeft <= 3 && !sr ? 'urgent' : ''}`} style={{ width: sr ? '100%' : `${pct}%` }} /></div>
-          <span className="timer-bar-num">{sr ? '✓' : `${timeLeft}s`}</span>
-          <div className="cat-tag">{question.icon} {question.category}</div>
           <div className="question">{question.question}</div>
           <div className="answers">
             {question.answers.map((a, idx) => <button key={idx} className={ansCls(idx)} onClick={() => answer(idx)} disabled={selected !== null || sr}>{a}</button>)}
           </div>
-          {sr && <div className="reveal-note">{reveal.yourCorrect ? `✅ +${reveal.pointsEarned} points` : reveal.timedOut && selected === null ? '⏱️ Time up' : '❌ Wrong'}</div>}
+          <div className="timer-bar-bottom"><div className={`timer-bar-fill ${timeLeft <= 3 && !sr ? 'urgent' : ''}`} style={{ width: sr ? '0%' : `${pct}%` }} /></div>
+          {sr && <div className="reveal-note">{reveal.yourCorrect ? `+${reveal.pointsEarned} pts` : reveal.timedOut && selected === null ? 'Time up' : 'Wrong'}</div>}
           {sr && <button className="report-btn" onClick={reportQuestion} disabled={reported}>{reported ? '✓ Reported' : '🚩 Report'}</button>}
         </div></div>);
   }
@@ -461,21 +463,22 @@ export default function App() {
   if (stage === 'finished' && result) {
     const { won, tie } = result;
     const left = result.reason === 'opponent_disconnected' || result.reason === 'opponent_left';
+    const rematch = () => { playAgain(); setTimeout(() => quickMatch(), 50); };
     return (
-      <div className="app"><TopControls />
+      <div className="app game-bg"><TopControls />
         <div className="container center">
-          <div className="crown">{won ? '👑' : tie ? '🤝' : '💪'}</div>
-          <h1 className="win-text">{won ? 'Victory!' : tie ? "It's a tie!" : 'Good game!'}</h1>
-          <p className="win-sub">{left ? 'Opponent left the match' : `Final score ${result.finalScore} – ${result.opponentScore}`}</p>
-          <div className="scoreboard">
-            <div className={`final ${won ? 'winner' : ''}`}><div className="f-av a1">{avatar}</div><div className="f-nm">You</div><div className="f-score">{result.finalScore}</div></div>
-            <div className="final"><div className="f-av a2">{opponent.avatar}</div><div className="f-nm">{opponent.name}</div><div className="f-score opp">{result.opponentScore}</div></div>
+          <div className={`result-title ${won ? 'win' : tie ? 'tie' : 'loss'}`}>{won ? 'VICTORY!' : tie ? 'DRAW!' : 'DEFEAT'}</div>
+          <div className="result-avatars">
+            <div className={`ra ${won ? 'winner' : ''}`}>{avatar}</div>
+            <div className={`ra ${!won && !tie ? 'winner' : ''}`}>{opponent.avatar}</div>
           </div>
-          <div className="rewards">
-            <div className="reward"><div className="reward-val">+{result.coins} 🪙</div><div className="reward-label">Coins</div></div>
-            <div className="reward"><div className="reward-val">+{result.xp} XP</div><div className="reward-label">Experience</div></div>
+          <div className="result-sub">{left ? 'Opponent left' : `${result.finalScore} — ${result.opponentScore}`}</div>
+          <div className="rewards-row"><span className="rw">+{result.coins} coins</span><span className="rw">+{result.xp} XP</span></div>
+          <div className="result-actions">
+            <button className="ra-btn rematch" onClick={rematch}>Rematch</button>
+            <button className="ra-btn new-opp" onClick={playAgain}>New opponent</button>
+            <button className="ra-btn see-res" onClick={playAgain}>Back to home</button>
           </div>
-          <button className="btn" onClick={playAgain}>Play Again</button>
         </div></div>);
   }
 
