@@ -238,4 +238,39 @@ body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sa
 .ra-btn.rematch { background: var(--accent); }
 .ra-btn.new-opp { background: #3a1525; color: rgba(255,255,255,0.85); }
 .ra-btn.see-res { background: #152a2a; color: rgba(255,255,255,0.7); }
+.add-friend-link { background: none; border: none; color: var(--accent); font-weight: 700; font-size: 0.85em; margin-bottom: 18px; cursor: pointer; font-family: inherit; }
+.add-friend-link:disabled { color: #4caf50; cursor: default; }
 @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+/* ---- Friends & chat ------------------------------------------------------ */
+.friends-screen { margin-top: 8px; }
+.friends-block { margin-bottom: 6px; }
+.friends-section-title { font-weight: 700; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-dim); margin: 16px 0 8px; }
+.friends-empty { color: var(--text-dim); font-size: 0.85em; padding: 12px 0; }
+.friend-row { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: var(--surface); border-radius: 10px; margin-bottom: 6px; cursor: pointer; }
+.friend-ava { width: 36px; height: 36px; border-radius: 50%; background: var(--surface-2); display: flex; align-items: center; justify-content: center; font-size: 1.1em; position: relative; }
+.friend-ava.online::after { content: ''; position: absolute; bottom: -1px; right: -1px; width: 10px; height: 10px; border-radius: 50%; background: #4caf50; border: 2px solid var(--surface); }
+.friend-name { flex: 1; font-weight: 600; font-size: 0.9em; }
+.friend-status { font-size: 0.75em; font-weight: 600; }
+.friend-status.on { color: #4caf50; }
+.friend-status.off { color: var(--text-dim); }
+.friend-btn { border: none; border-radius: 8px; padding: 6px 12px; font-weight: 700; font-size: 0.8em; cursor: pointer; font-family: inherit; }
+.friend-btn.accept { background: var(--accent); color: #fff; }
+.friend-btn.decline { background: var(--surface-2); color: var(--text-dim); }
+.friend-chat { background: var(--surface); border-radius: 10px; padding: 10px; margin: -2px 0 8px; }
+.friend-chat-msgs { max-height: 160px; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
+.friend-chat-input { display: flex; gap: 6px; }
+.friend-chat-input input { flex: 1; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font-family: inherit; font-size: 0.85em; }
+.friend-chat-input button { border: none; background: var(--accent); color: #fff; border-radius: 8px; padding: 8px 14px; font-weight: 700; font-size: 0.8em; cursor: pointer; }
+.chat-bubble { padding: 6px 10px; border-radius: 12px; font-size: 0.85em; max-width: 80%; word-break: break-word; }
+.chat-bubble.me { align-self: flex-end; background: var(--accent); color: #fff; }
+.chat-bubble.them { align-self: flex-start; background: var(--surface-2); color: var(--text); }
+
+.game-chat { position: fixed; right: 16px; bottom: 84px; z-index: 6; display: flex; flex-direction: column; align-items: flex-end; }
+.game-chat-toggle { width: 44px; height: 44px; border-radius: 50%; border: none; background: rgba(255,255,255,0.08); color: #fff; font-size: 1.2em; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.game-chat.open .game-chat-toggle { margin-bottom: 8px; }
+.game-chat-panel { width: 240px; max-height: 220px; background: #14141f; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 10px; display: flex; flex-direction: column; }
+.game-chat-msgs { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; max-height: 140px; }
+.game-chat-input { display: flex; gap: 6px; }
+.game-chat-input input { flex: 1; padding: 7px 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: #fff; font-family: inherit; font-size: 0.8em; }
+.game-chat-input button { border: none; background: var(--accent); color: #fff; border-radius: 8px; padding: 7px 12px; font-weight: 700; cursor: pointer; }

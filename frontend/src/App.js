@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './App.css';
 import SFX from './sounds';
+import { getClientId, useSocial, FriendsScreen, GameChat } from './social';
 
 const AVATARS = ['🐺', '🦁', '🦊', '🐼', '🦉', '🐸', '🐯', '🦄'];
 
@@ -53,18 +54,19 @@ export default function App() {
   const [reveal, setReveal] = useState(null); // round_result payload
   const [reported, setReported] = useState(false);
   const [result, setResult] = useState(null);
+  const [friendRequestSent, setFriendRequestSent] = useState(false);
   const [roomCode, setRoomCode] = useState('');
   const [joinCode, setJoinCode] = useState('');
   const [joinError, setJoinError] = useState(false);
   const [copied, setCopied] = useState(false);
   const wsRef = useRef(null);
   const tickRef = useRef(null);
+  const clientIdRef = useRef(getClientId());
+  const social = useSocial(wsRef);
 
-  useEffect(() => {
-    return () => {
-      if (wsRef.current) wsRef.current.close();
-      if (tickRef.current) clearInterval(tickRef.current);
-    };
+  useEffect(() => () => {
+    if (wsRef.current) wsRef.current.close();
+    if (tickRef.current) clearInterval(tickRef.current);
   }, []);
 
   // Countdown timer, restarted on each new question.
@@ -75,93 +77,66 @@ export default function App() {
     tickRef.current = setInterval(() => {
       setTimeLeft((t) => {
         const next = t > 0 ? t - 1 : 0;
-        if (next > 0 && next <= 3) SFX.countdownBeep();
-        else if (next > 3) SFX.tick(next <= 5);
+        if (next > 0 && next <= 3) SFX.countdownBeep(); else if (next > 3) SFX.tick(next <= 5);
         return next;
       });
     }, 1000);
     return () => clearInterval(tickRef.current);
   }, [question, stage, reveal]);
 
-  const connect = useCallback(
-    (action) => {
-      if (wsRef.current) { wsRef.current.close(); wsRef.current = null; }
-      const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-      const host = window.location.port === '3000' ? `${window.location.hostname}:3001` : window.location.host;
-      const ws = new WebSocket(`${proto}//${host}/ws`);
-      wsRef.current = ws;
+  // Reuses the already-open socket (e.g. the identify connection opened on
+  // reaching Home) instead of tearing it down for every action.
+  const connect = useCallback((action) => {
+    const payload = { ...action, name, avatar, clientId: clientIdRef.current };
+    if (wsRef.current && wsRef.current.readyState === 1) { wsRef.current.send(JSON.stringify(payload)); return; }
+    if (wsRef.current) { wsRef.current.close(); wsRef.current = null; }
+    const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const host = window.location.port === '3000' ? `${window.location.hostname}:3001` : window.location.host;
+    const ws = new WebSocket(`${proto}//${host}/ws`);
+    wsRef.current = ws;
+    ws.onopen = () => ws.send(JSON.stringify(payload));
+    ws.onmessage = (event) => {
+      let data;
+      try { data = JSON.parse(event.data); } catch { return; }
+      switch (data.type) {
+        case 'waiting': setStage('waiting'); break;
+        case 'room_created': setRoomCode(data.code); setStage('room_wait'); break;
+        case 'room_not_found': setJoinError(true); break;
+        case 'game_start':
+          SFX.gameStart(); setOpponent(data.opponent); setTotalRounds(data.totalRounds);
+          setScore(0); setOpponentScore(0); setStage('playing');
+          break;
+        case 'round_intro':
+          if (data.isBonus) SFX.bonusIntro(); else SFX.roundIntro();
+          setIntro(data); setQuestion(null); setRound(data.round); setReveal(null); setReported(false); setStage('playing');
+          break;
+        case 'question':
+          setIntro(null); setQuestion(data); setRound(data.round); setSelected(null); setReveal(null);
+          break;
+        case 'report_ack': setReported(true); break;
+        case 'round_result':
+          if (data.yourCorrect) SFX.correct();
+          else if (data.timedOut && !data.yourAnswer && data.yourAnswer !== 0) SFX.timeUp();
+          else SFX.wrong();
+          setReveal(data); setScore(data.yourScore); setOpponentScore(data.opponentScore);
+          if (tickRef.current) clearInterval(tickRef.current);
+          break;
+        case 'game_end':
+          if (data.won) SFX.victory(); else if (data.tie) SFX.tie(); else SFX.defeat();
+          setResult(data); setScore(data.finalScore); setOpponentScore(data.opponentScore); setStage('finished');
+          break;
+        case 'error': setStage('error'); break;
+        default: social.handleMessage(data); break;
+      }
+    };
+    ws.onerror = () => setStage('error');
+  }, [name, avatar, social]);
 
-      ws.onopen = () => ws.send(JSON.stringify({ ...action, name, avatar }));
-      ws.onmessage = (event) => {
-        let data;
-        try { data = JSON.parse(event.data); } catch { return; }
-        switch (data.type) {
-          case 'waiting':
-            setStage('waiting');
-            break;
-          case 'room_created':
-            setRoomCode(data.code);
-            setStage('room_wait');
-            break;
-          case 'room_not_found':
-            setJoinError(true);
-            break;
-          case 'game_start':
-            SFX.gameStart();
-            setOpponent(data.opponent);
-            setTotalRounds(data.totalRounds);
-            setScore(0);
-            setOpponentScore(0);
-            setStage('playing');
-            break;
-          case 'round_intro':
-            if (data.isBonus) SFX.bonusIntro(); else SFX.roundIntro();
-            setIntro(data);
-            setQuestion(null);
-            setRound(data.round);
-            setReveal(null);
-            setReported(false);
-            setStage('playing');
-            break;
-          case 'question':
-            setIntro(null);
-            setQuestion(data);
-            setRound(data.round);
-            setSelected(null);
-            setReveal(null);
-            break;
-          case 'report_ack':
-            setReported(true);
-            break;
-          case 'round_result':
-            if (data.yourCorrect) SFX.correct();
-            else if (data.timedOut && !data.yourAnswer && data.yourAnswer !== 0) SFX.timeUp();
-            else SFX.wrong();
-            setReveal(data);
-            setScore(data.yourScore);
-            setOpponentScore(data.opponentScore);
-            if (tickRef.current) clearInterval(tickRef.current);
-            break;
-          case 'game_end':
-            if (data.won) SFX.victory();
-            else if (data.tie) SFX.tie();
-            else SFX.defeat();
-            setResult(data);
-            setScore(data.finalScore);
-            setOpponentScore(data.opponentScore);
-            setStage('finished');
-            break;
-          case 'error':
-            setStage('error');
-            break;
-          default:
-            break;
-        }
-      };
-      ws.onerror = () => setStage('error');
-    },
-    [name, avatar]
-  );
+  // Open a persistent connection once identity is set, so friends/presence
+  // work even while just browsing — not only during a match.
+  useEffect(() => {
+    if (stage === 'home' && (!wsRef.current || wsRef.current.readyState > 1)) connect({ type: 'identify' });
+  }, [stage, connect]);
 
   const startWithCategory = (catKey) => {
     setCategory(catKey);
@@ -230,6 +205,8 @@ export default function App() {
     setIntro(null);
     setReveal(null);
     setSelected(null);
+    setFriendRequestSent(false);
+    social.clearGameChat();
     setStage('home');
   };
 
@@ -399,7 +376,7 @@ export default function App() {
           <div className="profile-stats">
             {stats.map(([v,l]) => <div key={l} className="pstat"><div className="pstat-val">{v}</div><div className="pstat-lbl">{l}</div></div>)}
           </div>
-          <div className="profile-soon">Friends, follow &amp; global ranking coming soon</div>
+          <FriendsScreen social={social} />
         </div><NavBar active="profile" />
       </div>);
   }
@@ -457,6 +434,7 @@ export default function App() {
           <div className="timer-bar-bottom"><div className={`timer-bar-fill ${timeLeft <= 3 && !sr ? 'urgent' : ''}`} style={{ width: sr ? '0%' : `${pct}%` }} /></div>
           {sr && <div className="reveal-note">{reveal.yourCorrect ? `+${reveal.pointsEarned} pts` : reveal.timedOut && selected === null ? 'Time up' : 'Wrong'}</div>}
           {sr && <button className="report-btn" onClick={reportQuestion} disabled={reported}>{reported ? '✓ Reported' : '🚩 Report'}</button>}
+          <GameChat social={social} />
         </div></div>);
   }
 
@@ -464,6 +442,7 @@ export default function App() {
     const { won, tie } = result;
     const left = result.reason === 'opponent_disconnected' || result.reason === 'opponent_left';
     const rematch = () => { playAgain(); setTimeout(() => quickMatch(), 50); };
+    const isFriend = opponent.clientId && social.friends.some((f) => f.id === opponent.clientId);
     return (
       <div className="app game-bg"><TopControls />
         <div className="container center">
@@ -474,6 +453,12 @@ export default function App() {
           </div>
           <div className="result-sub">{left ? 'Opponent left' : `${result.finalScore} — ${result.opponentScore}`}</div>
           <div className="rewards-row"><span className="rw">+{result.coins} coins</span><span className="rw">+{result.xp} XP</span></div>
+          {opponent.clientId && !isFriend && (
+            <button className="add-friend-link" disabled={friendRequestSent}
+              onClick={() => { social.addFriend(opponent.clientId); setFriendRequestSent(true); }}>
+              {friendRequestSent ? '✓ Request sent' : `+ Add ${opponent.name} as friend`}
+            </button>
+          )}
           <div className="result-actions">
             <button className="ra-btn rematch" onClick={rematch}>Rematch</button>
             <button className="ra-btn new-opp" onClick={playAgain}>New opponent</button>

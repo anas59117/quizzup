@@ -4,6 +4,7 @@ const cors = require('cors');
 const http = require('http');
 const { getMixedQuestions, warmCache, listCategories } = require('./questions');
 const reports = require('./reports');
+const social = require('./social');
 
 const app = express();
 const server = http.createServer(app);
@@ -72,7 +73,7 @@ async function startGame(p1, p2, categoryKey) {
   const game = {
     id: gameId,
     players: [p1, p2].map((p) => ({
-      ws: p.ws, id: p.id, name: p.name, avatar: p.avatar || '🐺',
+      ws: p.ws, id: p.id, clientId: p.clientId || null, name: p.name, avatar: p.avatar || '🐺',
       score: 0, connected: true,
     })),
     questions,
@@ -94,6 +95,7 @@ async function startGame(p1, p2, categoryKey) {
       opponent: {
         name: game.players[1 - idx].name,
         avatar: game.players[1 - idx].avatar,
+        clientId: game.players[1 - idx].clientId,
       },
       totalRounds: game.questions.length,
     });
@@ -234,10 +236,19 @@ function endGame(game, reason) {
   }, 5000);
 }
 
+// --- Social (friends & presence) ------------------------------------------
+function notifyPresence(clientId, isOnline) {
+  social.getFriendsList(clientId).forEach((f) => {
+    const fws = social.getWs(f.id);
+    if (fws) send(fws, { type: 'presence', id: clientId, online: isOnline });
+  });
+}
+
 // --- WebSocket ------------------------------------------------------------
 wss.on('connection', (ws) => {
   const playerId = rid('player_');
   let name = 'Player' + Math.floor(1000 + Math.random() * 9000);
+  let clientId = null;
 
   ws.on('message', (raw) => {
     let data;
@@ -247,6 +258,75 @@ wss.on('connection', (ws) => {
       return; // ignore malformed input at the boundary
     }
     if (!data || typeof data.type !== 'string') return;
+
+    if (typeof data.clientId === 'string' && data.clientId) clientId = data.clientId.slice(0, 64);
+
+    if (data.type === 'identify') {
+      if (typeof data.name === 'string' && data.name.trim()) name = data.name.trim().slice(0, 20);
+      const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '🐺';
+      if (clientId) {
+        social.setOnline(clientId, ws, name, avatar);
+        send(ws, { type: 'friends_list', friends: social.getFriendsList(clientId) });
+        send(ws, { type: 'friend_requests', requests: social.getPendingRequests(clientId) });
+        notifyPresence(clientId, true);
+      }
+    }
+
+    if (data.type === 'friend_request') {
+      const targetId = String(data.targetId || '');
+      if (clientId && targetId) {
+        const result = social.sendRequest(clientId, targetId);
+        const me = result.ok && social.profileOf(clientId);
+        const targetWs = result.ok && social.getWs(targetId);
+        if (targetWs && me) send(targetWs, { type: 'friend_request_received', from: me });
+      }
+    }
+
+    if (data.type === 'friend_accept') {
+      const fromId = String(data.requesterId || '');
+      if (clientId && fromId) {
+        social.acceptRequest(clientId, fromId);
+        const them = social.profileOf(fromId);
+        const me = social.profileOf(clientId);
+        if (them) send(ws, { type: 'friend_added', friend: them });
+        const fromWs = social.getWs(fromId);
+        if (fromWs && me) send(fromWs, { type: 'friend_added', friend: me });
+      }
+    }
+
+    if (data.type === 'friend_decline') {
+      const fromId = String(data.requesterId || '');
+      if (clientId && fromId) social.declineRequest(clientId, fromId);
+    }
+
+    if (data.type === 'friend_remove') {
+      const targetId = String(data.targetId || '');
+      if (clientId && targetId) {
+        social.removeFriend(clientId, targetId);
+        send(ws, { type: 'friend_removed', id: targetId });
+        const targetWs = social.getWs(targetId);
+        if (targetWs) send(targetWs, { type: 'friend_removed', id: clientId });
+      }
+    }
+
+    if (data.type === 'dm') {
+      const targetId = String(data.targetId || '');
+      const text = typeof data.text === 'string' ? data.text.trim().slice(0, 300) : '';
+      if (clientId && targetId && text && social.areFriends(clientId, targetId)) {
+        const targetWs = social.getWs(targetId);
+        if (targetWs) send(targetWs, { type: 'dm', from: clientId, text });
+      }
+    }
+
+    if (data.type === 'game_chat') {
+      const gameId = playerSessions.get(playerId);
+      const game = gameId && activeGames.get(gameId);
+      const text = typeof data.text === 'string' ? data.text.trim().slice(0, 200) : '';
+      if (game && game.status === 'active' && text) {
+        const opponent = game.players.find((p) => p.id !== playerId);
+        if (opponent) send(opponent.ws, { type: 'game_chat', text });
+      }
+    }
 
     if (data.type === 'join') {
       // Prevent joining while already in a game or already waiting.
@@ -267,13 +347,13 @@ wss.on('connection', (ws) => {
       );
       if (oppIdx !== -1) {
         const opp = waitingPlayers.splice(oppIdx, 1)[0];
-        startGame(opp, { ws, id: playerId, name, avatar }, categoryKey).catch((err) => {
+        startGame(opp, { ws, id: playerId, clientId, name, avatar }, categoryKey).catch((err) => {
           console.error('startGame failed:', err);
           send(opp.ws, { type: 'error' });
           send(ws, { type: 'error' });
         });
       } else {
-        waitingPlayers.push({ ws, id: playerId, name, avatar, categoryKey });
+        waitingPlayers.push({ ws, id: playerId, clientId, name, avatar, categoryKey });
         send(ws, { type: 'waiting' });
       }
     }
@@ -294,7 +374,7 @@ wss.on('connection', (ws) => {
       const categoryKey = typeof data.category === 'string' ? data.category : null;
       const code = newRoomCode();
       privateRooms.set(code, {
-        host: { ws, id: playerId, name, avatar },
+        host: { ws, id: playerId, clientId, name, avatar },
         categoryKey,
         createdAt: Date.now(),
       });
@@ -316,7 +396,7 @@ wss.on('connection', (ws) => {
       privateRooms.delete(code);
       if (typeof data.name === 'string' && data.name.trim()) name = data.name.trim().slice(0, 20);
       const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '🦁';
-      startGame(room.host, { ws, id: playerId, name, avatar }, room.categoryKey).catch((err) => {
+      startGame(room.host, { ws, id: playerId, clientId, name, avatar }, room.categoryKey).catch((err) => {
         console.error('startGame (room) failed:', err);
         send(room.host.ws, { type: 'error' });
         send(ws, { type: 'error' });
@@ -347,6 +427,10 @@ wss.on('connection', (ws) => {
   });
 
   ws.on('close', () => {
+    if (clientId) {
+      social.setOffline(clientId);
+      notifyPresence(clientId, false);
+    }
     const wi = waitingPlayers.findIndex((w) => w.id === playerId);
     if (wi !== -1) waitingPlayers.splice(wi, 1);
 
