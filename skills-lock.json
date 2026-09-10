@@ -31,6 +31,12 @@
       "skillPath": "skills/analytics/SKILL.md",
       "computedHash": "f7f83a1c1c4ad904deba3164076b0407df00832463e93d998b36efe781f26867"
     },
+    "animate": {
+      "source": "delphi-ai/animate-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "ffe5d0020ae97e7af2eeab79a3cdb2d13da004cc998dff6817b071308923b71f"
+    },
     "api-rate-limiting": {
       "source": "secondsky/claude-skills",
       "sourceType": "github",
@@ -222,6 +228,12 @@
       "sourceType": "github",
       "skillPath": "skills/marketing-growth/MetaAds/SKILL.md",
       "computedHash": "049df170dfb0ae0f7f3e0f8dc001b3f7b88165b2a3060d11a234b4ff9640efef"
+    },
+    "motion": {
+      "source": "secondsky/claude-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/motion/skills/motion/SKILL.md",
+      "computedHash": "7b293f2fd97c563bbe9835ba0010ef6771aa0493493fb9c31cfa704a556da8aa"
     },
     "nodejs-backend": {
       "source": "alinaqi/claude-bootstrap",
