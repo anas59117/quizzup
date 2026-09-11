@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback, useMemo, memo } from '
 import './App.css';
 import SFX from './sounds';
 import { getClientId, useSocial, FriendsScreen, GameChat } from './social';
+import { ensureSignedIn, linkGoogleAccount } from './firebase';
 
 const AVATARS = ['\u{1F43A}', '\u{1F981}', '\u{1F98A}', '\u{1F43C}', '\u{1F989}', '\u{1F438}', '\u{1F42F}', '\u{1F984}'];
 
@@ -84,14 +85,40 @@ export default function App() {
   const [joinCode, setJoinCode] = useState('');
   const [joinError, setJoinError] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [firebaseUser, setFirebaseUser] = useState(null);
+  const [linking, setLinking] = useState(false);
   const wsRef = useRef(null);
   const tickRef = useRef(null);
-  const clientIdRef = useRef(getClientId());
   const social = useSocial(wsRef);
+  const clientId = firebaseUser?.uid || null;
 
   useEffect(() => () => {
     if (wsRef.current) wsRef.current.close();
     if (tickRef.current) clearInterval(tickRef.current);
+  }, []);
+
+  // Sign in (anonymously, at first) so every player has a stable Firebase
+  // uid — this replaces the old localStorage clientId as the persistent
+  // identity behind friends/presence. Falls back to the old local id if
+  // Firebase is unreachable so the app never gets stuck on a blank screen.
+  useEffect(() => {
+    let cancelled = false;
+    ensureSignedIn()
+      .then((user) => { if (!cancelled) setFirebaseUser(user); })
+      .catch(() => { if (!cancelled) setFirebaseUser({ uid: getClientId(), isAnonymous: true }); });
+    return () => { cancelled = true; };
+  }, []);
+
+  const linkGoogle = useCallback(async () => {
+    setLinking(true);
+    try {
+      const result = await linkGoogleAccount();
+      setFirebaseUser(result.user);
+    } catch (err) {
+      console.error('Google link failed', err);
+    } finally {
+      setLinking(false);
+    }
   }, []);
 
   useEffect(() => {
@@ -109,7 +136,7 @@ export default function App() {
   }, [question, stage, reveal]);
 
   const connect = useCallback((action) => {
-    const payload = { ...action, name, avatar, clientId: clientIdRef.current };
+    const payload = { ...action, name, avatar, clientId };
     if (wsRef.current && wsRef.current.readyState === 1) { wsRef.current.send(JSON.stringify(payload)); return; }
     if (wsRef.current) { wsRef.current.close(); wsRef.current = null; }
     const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
@@ -152,11 +179,11 @@ export default function App() {
       }
     };
     ws.onerror = () => setStage('error');
-  }, [name, avatar, social]);
+  }, [name, avatar, social, clientId]);
 
   useEffect(() => {
-    if (stage === 'home' && (!wsRef.current || wsRef.current.readyState > 1)) connect({ type: 'identify' });
-  }, [stage, connect]);
+    if (stage === 'home' && clientId && (!wsRef.current || wsRef.current.readyState > 1)) connect({ type: 'identify' });
+  }, [stage, connect, clientId]);
 
   const startWithCategory = useCallback((catKey) => {
     setCategory(catKey);
@@ -334,6 +361,7 @@ export default function App() {
 
   if (stage === 'profile') {
     const stats = [['0','Games'],['0','Wins'],['0','Streak']];
+    const isGoogleLinked = firebaseUser && !firebaseUser.isAnonymous;
     return (
       <div className="app app-nav app-top"><TopControls {...topProps} />
         <div className="container">
@@ -345,6 +373,13 @@ export default function App() {
           <div className="profile-stats">
             {stats.map(([v,l]) => <div key={l} className="pstat"><div className="pstat-val">{v}</div><div className="pstat-lbl">{l}</div></div>)}
           </div>
+          {isGoogleLinked ? (
+            <div className="account-linked">{'✓'} Connecté avec Google ({firebaseUser.email})</div>
+          ) : (
+            <button className="social-btn outline account-link-btn" onClick={linkGoogle} disabled={linking || !clientId}>
+              {linking ? 'Connexion…' : `${'\u{1F511}'} Se connecter avec Google`}
+            </button>
+          )}
           <FriendsScreen social={social} />
         </div><NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);
