@@ -2,6 +2,9 @@
 /build
 # Dependencies
 /node_modules
+# Environment (Firebase config — never commit real keys)
+.env
+.env.local
 # Misc
 .DS_Store
 npm-debug.log*
