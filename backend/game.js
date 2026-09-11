@@ -30,6 +30,19 @@ async function startGame(p1, p2, categoryKey) {
   const gameId = rid('game_');
   const resolvedCategory = categoryKey || pickRandomCategory();
   const questions = await getMixedQuestions(GAME_CONFIG.ROUNDS, resolvedCategory);
+
+  // Either player may have disconnected while questions were loading (the
+  // OpenTDB fetch can take seconds). Starting anyway would leave the other
+  // player stuck playing a full match against a dead socket. Bail and let
+  // the live player know instead of creating a zombie game.
+  const p1Open = p1.ws.readyState === 1;
+  const p2Open = p2.ws.readyState === 1;
+  if (!p1Open || !p2Open) {
+    if (p1Open) send(p1.ws, { type: 'error' });
+    if (p2Open) send(p2.ws, { type: 'error' });
+    return;
+  }
+
   const game = {
     id: gameId,
     players: [p1, p2].map((p) => ({

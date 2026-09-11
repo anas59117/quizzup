@@ -2,5 +2,8 @@
 # Runtime stores (regenerated at runtime)
 reports.json
 social.json
+# Environment (Firebase Web API key — never commit)
+.env
+.env.local
 .DS_Store
 npm-debug.log*

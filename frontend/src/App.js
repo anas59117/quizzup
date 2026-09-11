@@ -136,14 +136,31 @@ export default function App() {
   }, [question, stage, reveal]);
 
   const connect = useCallback((action) => {
-    const payload = { ...action, name, avatar, clientId };
-    if (wsRef.current && wsRef.current.readyState === 1) { wsRef.current.send(JSON.stringify(payload)); return; }
-    if (wsRef.current) { wsRef.current.close(); wsRef.current = null; }
-    const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    const host = window.location.port === '3000' ? `${window.location.hostname}:3001` : window.location.host;
-    const ws = new WebSocket(`${proto}//${host}/ws`);
-    wsRef.current = ws;
-    ws.onopen = () => ws.send(JSON.stringify(payload));
+    const send = (payload) => {
+      if (wsRef.current && wsRef.current.readyState === 1) { wsRef.current.send(JSON.stringify(payload)); return; }
+      if (wsRef.current) { wsRef.current.close(); wsRef.current = null; }
+      const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+      const host = window.location.port === '3000' ? `${window.location.hostname}:3001` : window.location.host;
+      const ws = new WebSocket(`${proto}//${host}/ws`);
+      wsRef.current = ws;
+      ws.onopen = () => ws.send(JSON.stringify(payload));
+      attachHandlers(ws);
+    };
+
+    // The server verifies clientId from a Firebase ID token rather than
+    // trusting the value directly — a raw clientId would let anyone claim
+    // to be someone else. Only the identify message needs the token; other
+    // actions ride on the identity that identify already established.
+    if (action.type === 'identify' && firebaseUser && typeof firebaseUser.getIdToken === 'function') {
+      firebaseUser.getIdToken()
+        .then((idToken) => send({ ...action, name, avatar, clientId, idToken }))
+        .catch(() => send({ ...action, name, avatar, clientId }));
+      return;
+    }
+    send({ ...action, name, avatar, clientId });
+  }, [name, avatar, social, clientId, firebaseUser]);
+
+  function attachHandlers(ws) {
     ws.onmessage = (event) => {
       let data;
       try { data = JSON.parse(event.data); } catch { return; }
@@ -179,7 +196,7 @@ export default function App() {
       }
     };
     ws.onerror = () => setStage('error');
-  }, [name, avatar, social, clientId]);
+  }
 
   useEffect(() => {
     if (stage === 'home' && clientId && (!wsRef.current || wsRef.current.readyState > 1)) connect({ type: 'identify' });

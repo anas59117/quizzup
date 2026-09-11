@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const { WebSocketServer } = require('ws');
 const cors = require('cors');
@@ -7,11 +8,14 @@ const reports = require('./reports');
 const social = require('./social');
 const game = require('./game');
 const RateLimiter = require('./rate-limit');
+const { verifyIdToken, sweepCache } = require('./auth');
 const { ROOM_TTL_MS, CODE_ALPHABET } = require('./config');
 
 const app = express();
 const server = http.createServer(app);
-const wss = new WebSocketServer({ server, path: '/ws' });
+// maxPayload caps a single WebSocket frame (ws defaults to 100MiB, which lets
+// one client force multi-MB JSON.parse calls on the server for free).
+const wss = new WebSocketServer({ server, path: '/ws', maxPayload: 16 * 1024 });
 
 app.use(cors());
 app.use(express.json());
@@ -21,7 +25,11 @@ const PORT = process.env.PORT || 3001;
 // --- State shared across handlers ----------------------------------------
 const waitingPlayers = [];
 const privateRooms = new Map();
+// Two limiters: per-connection (playerId resets on reconnect, so it alone is
+// trivially bypassed) and per-IP (survives reconnects, catches the abuse
+// case reconnecting is meant to dodge).
 const limiter = new RateLimiter();
+const ipLimiter = new RateLimiter(2000, 40);
 
 function newRoomCode() {
   let code;
@@ -42,15 +50,23 @@ function notifyPresence(clientId, isOnline) {
 }
 
 // --- WebSocket handlers ---------------------------------------------------
-function handleIdentify(ws, data, state) {
+// clientId is never trusted from the client directly — a raw client-supplied
+// id would let anyone identify as anyone else (hijacking their presence,
+// friend requests, and DMs; the game even hands opponents each other's id
+// in game_start). It is only ever set here, from a Firebase ID token this
+// server verifies itself, so a client can never forge someone else's uid.
+async function handleIdentify(ws, data, state) {
   if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
   const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
-  if (state.clientId) {
-    social.setOnline(state.clientId, ws, state.name, avatar);
-    game.send(ws, { type: 'friends_list', friends: social.getFriendsList(state.clientId) });
-    game.send(ws, { type: 'friend_requests', requests: social.getPendingRequests(state.clientId) });
-    notifyPresence(state.clientId, true);
-  }
+
+  const uid = await verifyIdToken(data.idToken);
+  if (!uid) return; // unverifiable — proceed without social features rather than trusting the claim
+
+  state.clientId = uid;
+  social.setOnline(state.clientId, ws, state.name, avatar);
+  game.send(ws, { type: 'friends_list', friends: social.getFriendsList(state.clientId) });
+  game.send(ws, { type: 'friend_requests', requests: social.getPendingRequests(state.clientId) });
+  notifyPresence(state.clientId, true);
 }
 
 function handleSocial(ws, data, state) {
@@ -206,26 +222,24 @@ function handleGameplay(ws, data, state) {
 }
 
 // --- WebSocket connection -------------------------------------------------
-wss.on('connection', (ws) => {
+wss.on('connection', (ws, req) => {
+  const ip = req.socket.remoteAddress || 'unknown';
   const state = {
     playerId: game.rid('player_'),
     name: 'Player' + Math.floor(1000 + Math.random() * 9000),
     clientId: null,
   };
 
-  ws.on('message', (raw) => {
+  ws.on('message', async (raw) => {
     let data;
     try { data = JSON.parse(raw); } catch { return; }
     if (!data || typeof data.type !== 'string') return;
 
-    // Rate-limit: drop messages from spammy connections.
-    if (!limiter.check(state.playerId)) return;
+    // Rate-limit: per-connection AND per-IP, so reconnecting with a fresh
+    // playerId can't reset the limit (the per-connection bucket alone can).
+    if (!limiter.check(state.playerId) || !ipLimiter.check(ip)) return;
 
-    if (typeof data.clientId === 'string' && data.clientId) {
-      state.clientId = data.clientId.slice(0, 64);
-    }
-
-    if (data.type === 'identify') { handleIdentify(ws, data, state); return; }
+    if (data.type === 'identify') { await handleIdentify(ws, data, state); return; }
     if (handleSocial(ws, data, state)) return;
     handleGameplay(ws, data, state);
   });
@@ -256,7 +270,7 @@ app.get('/health', (req, res) =>
 app.get('/categories', (req, res) => res.json(listCategories()));
 app.get('/reports/stats', (req, res) => res.json(reports.stats()));
 
-// Sweep expired private rooms + stale rate-limit buckets.
+// Sweep expired private rooms + stale rate-limit buckets + verified-token cache.
 setInterval(() => {
   const now = Date.now();
   for (const [code, room] of privateRooms) {
@@ -265,6 +279,8 @@ setInterval(() => {
     }
   }
   limiter.sweep();
+  ipLimiter.sweep();
+  sweepCache();
 }, 60 * 1000);
 
 server.listen(PORT, () => {
