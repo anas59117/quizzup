@@ -49,7 +49,7 @@ async function startGame(p1, p2, categoryKey) {
     players: [p1, p2].map((p) => ({
       ws: p.ws, id: p.id, clientId: p.clientId || null,
       name: p.name, avatar: p.avatar || '\u{1F43A}',
-      score: 0, connected: true,
+      score: 0,
     })),
     questions,
     currentRound: -1,
