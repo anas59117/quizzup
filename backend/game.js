@@ -3,6 +3,7 @@
 
 const { getMixedQuestions, listCategories } = require('./questions');
 const { GAME_CONFIG } = require('./config');
+const stats = require('./stats');
 
 const activeGames = new Map();
 const playerSessions = new Map();
@@ -172,13 +173,17 @@ function endGame(game, reason) {
     .sort((x, y) => y.score - x.score);
 
   game.players.forEach((p, idx) => {
+    const won = winnerIdx === idx;
+    const tie = winnerIdx === -1;
+    stats.recordResult(p.clientId, won, tie);
     send(p.ws, {
       type: 'game_end', finalScore: p.score,
       opponentScore: game.players[1 - idx].score,
-      won: winnerIdx === idx, tie: winnerIdx === -1,
+      won, tie,
       leaderboard: board, reason: reason || 'complete',
-      coins: winnerIdx === idx ? 50 : 20,
+      coins: won ? 50 : 20,
       xp: 40 + p.score,
+      stats: stats.getStats(p.clientId),
     });
   });
 

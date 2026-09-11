@@ -9,6 +9,7 @@ const social = require('./social');
 const game = require('./game');
 const RateLimiter = require('./rate-limit');
 const { verifyIdToken, sweepCache } = require('./auth');
+const stats = require('./stats');
 const { ROOM_TTL_MS, CODE_ALPHABET } = require('./config');
 
 const app = express();
@@ -66,6 +67,7 @@ async function handleIdentify(ws, data, state) {
   social.setOnline(state.clientId, ws, state.name, avatar);
   game.send(ws, { type: 'friends_list', friends: social.getFriendsList(state.clientId) });
   game.send(ws, { type: 'friend_requests', requests: social.getPendingRequests(state.clientId) });
+  game.send(ws, { type: 'stats', stats: stats.getStats(state.clientId) });
   notifyPresence(state.clientId, true);
 }
 

@@ -3,6 +3,7 @@ import './App.css';
 import SFX from './sounds';
 import { getClientId, useSocial, FriendsScreen, GameChat } from './social';
 import { ensureSignedIn, linkGoogleAccount } from './firebase';
+import { useStats, ProfileStats } from './stats';
 
 const AVATARS = ['\u{1F43A}', '\u{1F981}', '\u{1F98A}', '\u{1F43C}', '\u{1F989}', '\u{1F438}', '\u{1F42F}', '\u{1F984}'];
 
@@ -67,13 +68,11 @@ export default function App() {
   const [stage, setStage] = useState('join');
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState(AVATARS[0]);
-  const [category, setCategory] = useState(null);
   const [opponent, setOpponent] = useState({ name: '', avatar: '\u{1F981}' });
   const [intro, setIntro] = useState(null);
   const [question, setQuestion] = useState(null);
   const [score, setScore] = useState(0);
   const [opponentScore, setOpponentScore] = useState(0);
-  const [round, setRound] = useState(0);
   const [totalRounds, setTotalRounds] = useState(6);
   const [selected, setSelected] = useState(null);
   const [timeLeft, setTimeLeft] = useState(10);
@@ -90,6 +89,7 @@ export default function App() {
   const wsRef = useRef(null);
   const tickRef = useRef(null);
   const social = useSocial(wsRef);
+  const statsHook = useStats();
   const clientId = firebaseUser?.uid || null;
 
   useEffect(() => () => {
@@ -174,10 +174,10 @@ export default function App() {
           break;
         case 'round_intro':
           if (data.isBonus) SFX.bonusIntro(); else SFX.roundIntro();
-          setIntro(data); setQuestion(null); setRound(data.round); setReveal(null); setReported(false); setStage('playing');
+          setIntro(data); setQuestion(null); setReveal(null); setReported(false); setStage('playing');
           break;
         case 'question':
-          setIntro(null); setQuestion(data); setRound(data.round); setSelected(null); setReveal(null);
+          setIntro(null); setQuestion(data); setSelected(null); setReveal(null);
           break;
         case 'report_ack': setReported(true); break;
         case 'round_result':
@@ -190,7 +190,9 @@ export default function App() {
         case 'game_end':
           if (data.won) SFX.victory(); else if (data.tie) SFX.tie(); else SFX.defeat();
           setResult(data); setScore(data.finalScore); setOpponentScore(data.opponentScore); setStage('finished');
+          statsHook.handleStatsMessage(data);
           break;
+        case 'stats': statsHook.handleStatsMessage(data); break;
         case 'error': setStage('error'); break;
         default: social.handleMessage(data); break;
       }
@@ -203,17 +205,14 @@ export default function App() {
   }, [stage, connect, clientId]);
 
   const startWithCategory = useCallback((catKey) => {
-    setCategory(catKey);
     connect({ type: 'join', category: catKey });
   }, [connect]);
 
   const quickMatch = useCallback(() => {
-    setCategory(null);
     connect({ type: 'join', category: null });
   }, [connect]);
 
   const createRoom = useCallback(() => {
-    setCategory(null);
     connect({ type: 'create_room', category: null });
   }, [connect]);
 
@@ -377,7 +376,6 @@ export default function App() {
   }
 
   if (stage === 'profile') {
-    const stats = [['0','Games'],['0','Wins'],['0','Streak']];
     const isGoogleLinked = firebaseUser && !firebaseUser.isAnonymous;
     return (
       <div className="app app-nav app-top"><TopControls {...topProps} />
@@ -387,9 +385,7 @@ export default function App() {
             <div className="profile-name">{name || 'Player'}</div>
             <div className="profile-sub">Level 1 {'·'} Rookie</div>
           </div>
-          <div className="profile-stats">
-            {stats.map(([v,l]) => <div key={l} className="pstat"><div className="pstat-val">{v}</div><div className="pstat-lbl">{l}</div></div>)}
-          </div>
+          <ProfileStats stats={statsHook.stats} />
           {isGoogleLinked ? (
             <div className="account-linked">{'✓'} Connecté avec Google ({firebaseUser.email})</div>
           ) : (
