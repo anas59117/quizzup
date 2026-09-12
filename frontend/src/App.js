@@ -440,7 +440,7 @@ export default function App() {
             <span className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr ? '✓' : timeLeft}</span>
           </div>
           <PlayerHud me={{ avatar, name, score }} others={opponents} revealing={sr} />
-          <PlayerPhoto image={question.image} credit={question.credit} timeLeft={timeLeft} timeLimit={question.timeLimit} revealed={sr} />
+          <PlayerPhoto image={question.image} credit={question.credit} revealed={sr} />
           <div className="question">{question.question}</div>
           <div className="answers">
             {question.answers.map((a, idx) => <button key={idx} className={ansCls(idx)} onClick={() => answer(idx)} disabled={selected !== null || sr}>{a}</button>)}
