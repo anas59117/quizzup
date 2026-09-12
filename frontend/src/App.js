@@ -85,9 +85,14 @@ export default function App() {
     const send = (payload) => {
       if (wsRef.current && wsRef.current.readyState === 1) { wsRef.current.send(JSON.stringify(payload)); return; }
       if (wsRef.current) { wsRef.current.close(); wsRef.current = null; }
+      // In production the frontend (Vercel) and backend (Railway) are on
+      // different hosts, so the URL must be explicit via env var. Falls back
+      // to same-host logic for local dev, where frontend:3000 talks to
+      // backend:3001 on localhost.
       const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
       const host = window.location.port === '3000' ? `${window.location.hostname}:3001` : window.location.host;
-      const ws = new WebSocket(`${proto}//${host}/ws`);
+      const wsUrl = process.env.REACT_APP_WS_URL || `${proto}//${host}/ws`;
+      const ws = new WebSocket(wsUrl);
       wsRef.current = ws;
       ws.onopen = () => ws.send(JSON.stringify(payload));
       attachHandlers(ws);
