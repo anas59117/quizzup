@@ -237,8 +237,13 @@ export default function App() {
     }
   }, [reported]);
 
+  // Keeps the same (already-identified) connection instead of closing and
+  // reopening it — the backend now recognizes a just-finished game as free
+  // to leave immediately, so there's no need to force a fresh connection
+  // between matches. That close/reopen used to race against the new
+  // socket's handshake on any real network latency, occasionally dropping
+  // the identify message that links a rematch's stats to the player.
   const playAgain = useCallback(() => {
-    if (wsRef.current) { wsRef.current.close(); wsRef.current = null; }
     setResult(null); setQuestion(null); setIntro(null); setReveal(null);
     setSelected(null); setFriendRequestSent({}); setRoom(null);
     social.clearGameChat();
@@ -452,7 +457,7 @@ export default function App() {
   if (stage === 'finished' && result) {
     const { won, tie } = result;
     const left = result.reason === 'opponent_disconnected' || result.reason === 'opponent_left';
-    const rematch = () => { playAgain(); setTimeout(() => quickMatch(), 50); };
+    const rematch = () => { playAgain(); quickMatch(); };
     const addableOpponents = opponents.filter(
       (o) => o.clientId && !social.friends.some((f) => f.id === o.clientId) && !friendRequestSent[o.clientId]
     );

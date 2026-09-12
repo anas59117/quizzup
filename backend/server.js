@@ -138,6 +138,18 @@ function broadcastRoomUpdate(room) {
   });
 }
 
+// A finished game lingers in playerSessions/activeGames for 5s after
+// endGame (see game.js) so late messages don't hit a missing session. But
+// that means playerSessions.has(playerId) alone can't tell "still playing"
+// from "just finished" — checking .status too lets a player queue up a
+// rematch on the same connection immediately instead of being silently
+// blocked until the 5s cleanup runs.
+function isInActiveGame(playerId) {
+  const gameId = game.playerSessions.get(playerId);
+  const g = gameId && game.activeGames.get(gameId);
+  return !!(g && g.status === 'active');
+}
+
 function handleGameplay(ws, data, state) {
   const { playerId } = state;
 
@@ -155,7 +167,7 @@ function handleGameplay(ws, data, state) {
   }
 
   if (data.type === 'join') {
-    if (game.playerSessions.has(playerId)) return true;
+    if (isInActiveGame(playerId)) return true;
     if (waitingPlayers.some((w) => w.id === playerId)) return true;
     if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
     const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
@@ -186,7 +198,7 @@ function handleGameplay(ws, data, state) {
   }
 
   if (data.type === 'create_room') {
-    if (game.playerSessions.has(playerId)) return true;
+    if (isInActiveGame(playerId)) return true;
     if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
     const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
     const categoryKey = typeof data.category === 'string' ? data.category : null;
