@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import './App.css';
 import SFX from './sounds';
+import music from './music';
 import { getClientId, useSocial, FriendsScreen, GameChat } from './social';
 import { ensureSignedIn, linkGoogleAccount } from './firebase';
 import { useStats, ProfileStats } from './stats';
@@ -11,6 +12,7 @@ export default function App() {
   const [theme, toggleTheme] = useTheme();
   const [muted, setMuted] = useState(SFX.muted);
   const toggleMute = useCallback(() => setMuted(SFX.toggle()), []);
+  useEffect(() => { music.setMuted(muted); }, [muted]);
   const [stage, setStage] = useState('join');
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState(AVATARS[0]);
@@ -80,6 +82,23 @@ export default function App() {
     }, 1000);
     return () => clearInterval(tickRef.current);
   }, [question, stage, reveal]);
+
+  // Background music per screen — one track per context, cross-faded on
+  // switch. During the reveal pause we keep whatever was already playing
+  // rather than interrupting it for the ~2.5s pause between rounds.
+  useEffect(() => {
+    if (stage === 'home' || stage === 'categories' || stage === 'profile' || stage === 'enter_code') {
+      music.play('menu');
+    } else if (stage === 'waiting' || stage === 'room_wait') {
+      music.play('lobby');
+    } else if (stage === 'playing' && intro && !question) {
+      music.play('transition', { loop: false });
+    } else if (stage === 'playing' && question && !reveal) {
+      music.play(timeLeft <= 3 ? 'urgent' : 'thinking');
+    } else if (stage === 'join' || stage === 'finished' || stage === 'error') {
+      music.stop();
+    }
+  }, [stage, intro, question, reveal, timeLeft]);
 
   const connect = useCallback((action) => {
     const send = (payload) => {
