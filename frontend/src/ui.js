@@ -40,13 +40,15 @@ export const TopControls = memo(function TopControls({ muted, toggleMute, theme,
   );
 });
 
-// "Guess the player" rounds carry an optional photo, shown sharp throughout
-// with its required CC attribution once the round is revealed.
-export const PlayerPhoto = memo(function PlayerPhoto({ image, credit, revealed }) {
+// "Guess the player" rounds carry an optional photo. It starts sharp and
+// blurs more as the clock runs down — like the original QuizUp — to reward
+// fast answers, then shows full + its required CC attribution once revealed.
+export const PlayerPhoto = memo(function PlayerPhoto({ image, credit, timeLeft, timeLimit, revealed }) {
   if (!image) return null;
+  const blur = revealed ? 0 : Math.max(0, (1 - timeLeft / timeLimit) * 18);
   return (
     <div className="player-photo-wrap">
-      <img src={image} alt="Guess the player" className="player-photo" />
+      <img src={image} alt="Guess the player" className="player-photo" style={{ filter: `blur(${blur}px)` }} />
       {revealed && credit && <div className="photo-credit">{credit}</div>}
     </div>
   );

@@ -220,9 +220,9 @@ body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sa
 /* Question */
 .question { font-size: 1.3em; font-weight: 700; text-align: center; line-height: 1.35; padding: 20px 0 28px; animation: fadeSlideUp 0.35s ease-out; }
 
-/* "Guess the player" photo */
+/* "Guess the player" blurred photo */
 .player-photo-wrap { display: flex; flex-direction: column; align-items: center; margin: 4px 0 8px; }
-.player-photo { width: 160px; height: 160px; object-fit: cover; border-radius: 50%; border: 3px solid rgba(255,255,255,0.5); }
+.player-photo { width: 160px; height: 160px; object-fit: cover; border-radius: 50%; border: 3px solid rgba(255,255,255,0.5); transition: filter 0.2s linear; }
 .photo-credit { margin-top: 6px; font-size: 0.65em; color: rgba(255,255,255,0.5); text-align: center; }
 
 /* Answers — QuizUp white-border on dark */
