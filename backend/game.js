@@ -165,6 +165,30 @@ function recordAnswer(game, playerId, answerIndex) {
   if (game.players.every((p) => game.roundAnswers[p.id])) revealRound(game, false);
 }
 
+// A player disconnecting mid-match no longer ends it outright for everyone
+// else — only when fewer than 2 players remain is a match unplayable.
+function removePlayer(game, playerId) {
+  if (game.status !== 'active') return;
+  const idx = game.players.findIndex((p) => p.id === playerId);
+  if (idx === -1) return;
+
+  const [left] = game.players.splice(idx, 1);
+  playerSessions.delete(playerId);
+
+  if (game.players.length < 2) {
+    endGame(game, 'opponent_disconnected');
+    return;
+  }
+
+  game.players.forEach((p) => send(p.ws, { type: 'player_left', name: left.name }));
+
+  // The departed player can never answer now — if everyone still in the
+  // match already has, reveal immediately instead of waiting out the clock.
+  if (game.currentRound >= 0 && game.players.every((p) => game.roundAnswers[p.id])) {
+    revealRound(game, false);
+  }
+}
+
 function endGame(game, reason) {
   if (game.status === 'finished') return;
   game.status = 'finished';
@@ -183,7 +207,7 @@ function endGame(game, reason) {
     send(p.ws, {
       type: 'game_end', finalScore: p.score,
       won, tie: isTie,
-      others: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, score: o.score })),
+      others: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, score: o.score, clientId: o.clientId })),
       leaderboard: board, reason: reason || 'complete',
       coins: won ? 50 : 20,
       xp: 40 + p.score,
@@ -199,5 +223,5 @@ function endGame(game, reason) {
 
 module.exports = {
   activeGames, playerSessions, rid, send,
-  startGame, recordAnswer, endGame,
+  startGame, recordAnswer, endGame, removePlayer,
 };

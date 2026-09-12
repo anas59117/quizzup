@@ -167,19 +167,16 @@ export default function App() {
           else if (data.timedOut && !data.yourAnswer && data.yourAnswer !== 0) SFX.timeUp();
           else SFX.wrong();
           setReveal(data); setScore(data.yourScore);
-          setOpponents((prev) => prev.map((o) => {
-            const upd = data.others.find((x) => x.id === o.id);
-            return upd ? { ...o, score: upd.score, answered: upd.answered, correct: upd.correct } : o;
-          }));
+          // Replace (not merge) so a player who disconnected mid-match and
+          // dropped out of the backend's list disappears from the HUD too,
+          // instead of lingering forever on their last known state.
+          setOpponents((prev) => data.others.map((upd) => ({ ...prev.find((o) => o.id === upd.id), ...upd })));
           if (tickRef.current) clearInterval(tickRef.current);
           break;
         case 'game_end':
           if (data.won) SFX.victory(); else if (data.tie) SFX.tie(); else SFX.defeat();
           setResult(data); setScore(data.finalScore); setStage('finished');
-          setOpponents((prev) => prev.map((o) => {
-            const upd = data.others.find((x) => x.id === o.id);
-            return upd ? { ...o, score: upd.score } : o;
-          }));
+          setOpponents((prev) => data.others.map((upd) => ({ ...prev.find((o) => o.id === upd.id), ...upd })));
           statsHook.handleStatsMessage(data);
           break;
         case 'stats': statsHook.handleStatsMessage(data); break;

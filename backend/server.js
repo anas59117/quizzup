@@ -262,7 +262,7 @@ function handleGameplay(ws, data, state) {
   if (data.type === 'leave') {
     const gameId = game.playerSessions.get(playerId);
     const g = gameId && game.activeGames.get(gameId);
-    if (g) game.endGame(g, 'opponent_left');
+    if (g && g.status === 'active') game.removePlayer(g, playerId);
     return true;
   }
 
@@ -319,7 +319,7 @@ wss.on('connection', (ws, req) => {
 
     const gameId = game.playerSessions.get(state.playerId);
     const g = gameId && game.activeGames.get(gameId);
-    if (g && g.status === 'active') game.endGame(g, 'opponent_disconnected');
+    if (g && g.status === 'active') game.removePlayer(g, state.playerId);
   });
 });
 

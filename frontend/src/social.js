@@ -41,6 +41,7 @@ export function useSocial(wsRef) {
       case 'presence': setFriends((f) => f.map((x) => (x.id === data.id ? { ...x, online: data.online } : x))); break;
       case 'dm': setDms((c) => ({ ...c, [data.from]: [...(c[data.from] || []), { from: 'them', text: data.text }] })); break;
       case 'game_chat': setGameChat((m) => [...m, { from: 'them', text: data.text, senderName: data.from }]); break;
+      case 'player_left': setGameChat((m) => [...m, { from: 'system', text: `${data.name} left the game` }]); break;
       default: break;
     }
   }, []);
@@ -126,7 +127,7 @@ export function GameChat({ social }) {
         <div className="game-chat-panel">
           <div className="game-chat-msgs">
             {social.gameChat.map((m, i) => (
-              <div key={i} className={`chat-bubble ${m.from === 'me' ? 'me' : 'them'}`}>
+              <div key={i} className={`chat-bubble ${m.from === 'me' ? 'me' : m.from === 'system' ? 'system' : 'them'}`}>
                 {m.from !== 'me' && m.senderName && <span className="chat-sender">{m.senderName}: </span>}
                 {m.text}
               </div>
