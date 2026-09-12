@@ -1,5 +1,7 @@
-// Game lifecycle: creation, rounds, scoring, and end-game. Pure game logic
-// separated from transport so it can be tested independently.
+// Game lifecycle: creation, rounds, scoring, and end-game. Supports 2-4
+// players uniformly (quick match always pairs exactly 2; private rooms can
+// gather up to 4 before the host starts). Pure game logic, separated from
+// transport so it can be tested independently.
 
 const { getMixedQuestions, listCategories } = require('./questions');
 const { GAME_CONFIG } = require('./config');
@@ -27,26 +29,29 @@ function scoreAnswer(elapsedMs, isFinalRound) {
   return pts;
 }
 
-async function startGame(p1, p2, categoryKey) {
+// `others` for a given player: every other player's public info, in the
+// original seating order, for the client to render as opponents.
+function othersOf(game, selfId, mapper) {
+  return game.players.filter((p) => p.id !== selfId).map(mapper);
+}
+
+async function startGame(rawPlayers, categoryKey) {
   const gameId = rid('game_');
   const resolvedCategory = categoryKey || pickRandomCategory();
   const questions = await getMixedQuestions(GAME_CONFIG.ROUNDS, resolvedCategory);
 
-  // Either player may have disconnected while questions were loading (the
-  // OpenTDB fetch can take seconds). Starting anyway would leave the other
-  // player stuck playing a full match against a dead socket. Bail and let
-  // the live player know instead of creating a zombie game.
-  const p1Open = p1.ws.readyState === 1;
-  const p2Open = p2.ws.readyState === 1;
-  if (!p1Open || !p2Open) {
-    if (p1Open) send(p1.ws, { type: 'error' });
-    if (p2Open) send(p2.ws, { type: 'error' });
+  // Any player may have disconnected while questions were loading (the
+  // OpenTDB fetch can take seconds). Starting anyway would leave everyone
+  // else stuck playing against a dead socket. Bail and notify the living.
+  const stillOpen = rawPlayers.filter((p) => p.ws.readyState === 1);
+  if (stillOpen.length !== rawPlayers.length) {
+    stillOpen.forEach((p) => send(p.ws, { type: 'error' }));
     return;
   }
 
   const game = {
     id: gameId,
-    players: [p1, p2].map((p) => ({
+    players: rawPlayers.map((p) => ({
       ws: p.ws, id: p.id, clientId: p.clientId || null,
       name: p.name, avatar: p.avatar || '\u{1F43A}',
       score: 0,
@@ -62,15 +67,11 @@ async function startGame(p1, p2, categoryKey) {
   activeGames.set(gameId, game);
   game.players.forEach((p) => playerSessions.set(p.id, gameId));
 
-  game.players.forEach((p, idx) => {
+  game.players.forEach((p) => {
     send(p.ws, {
       type: 'game_start', gameId,
       you: { name: p.name, avatar: p.avatar },
-      opponent: {
-        name: game.players[1 - idx].name,
-        avatar: game.players[1 - idx].avatar,
-        clientId: game.players[1 - idx].clientId,
-      },
+      opponents: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, clientId: o.clientId })),
       totalRounds: game.questions.length,
     });
   });
@@ -120,9 +121,8 @@ function revealRound(game, timedOut) {
   if (game.roundTimer) clearTimeout(game.roundTimer);
   const q = game.questions[game.currentRound];
 
-  game.players.forEach((p, idx) => {
+  game.players.forEach((p) => {
     const mine = game.roundAnswers[p.id];
-    const theirs = game.roundAnswers[game.players[1 - idx].id];
     send(p.ws, {
       type: 'round_result', round: game.currentRound + 1,
       correctIndex: q.correct,
@@ -130,9 +130,13 @@ function revealRound(game, timedOut) {
       yourCorrect: mine ? mine.correct : false,
       pointsEarned: mine ? mine.points : 0,
       yourScore: p.score,
-      opponentAnswer: theirs ? theirs.answerIndex : null,
-      opponentCorrect: theirs ? theirs.correct : false,
-      opponentScore: game.players[1 - idx].score,
+      others: othersOf(game, p.id, (o) => {
+        const ans = game.roundAnswers[o.id];
+        return {
+          id: o.id, name: o.name, avatar: o.avatar, score: o.score,
+          answered: !!ans, correct: ans ? ans.correct : false,
+        };
+      }),
       timedOut: !!timedOut,
     });
   });
@@ -166,20 +170,20 @@ function endGame(game, reason) {
   game.status = 'finished';
   if (game.roundTimer) clearTimeout(game.roundTimer);
 
-  const [a, b] = game.players;
-  const winnerIdx = a.score > b.score ? 0 : b.score > a.score ? 1 : -1;
+  const topScore = Math.max(...game.players.map((p) => p.score));
+  const winners = game.players.filter((p) => p.score === topScore);
+  const isTie = winners.length > 1;
   const board = game.players
-    .map((p) => ({ name: p.name, avatar: p.avatar, score: p.score }))
+    .map((p) => ({ id: p.id, name: p.name, avatar: p.avatar, score: p.score }))
     .sort((x, y) => y.score - x.score);
 
-  game.players.forEach((p, idx) => {
-    const won = winnerIdx === idx;
-    const tie = winnerIdx === -1;
-    stats.recordResult(p.clientId, won, tie);
+  game.players.forEach((p) => {
+    const won = !isTie && p.score === topScore;
+    stats.recordResult(p.clientId, won, isTie);
     send(p.ws, {
       type: 'game_end', finalScore: p.score,
-      opponentScore: game.players[1 - idx].score,
-      won, tie,
+      won, tie: isTie,
+      others: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, score: o.score })),
       leaderboard: board, reason: reason || 'complete',
       coins: won ? 50 : 20,
       xp: 40 + p.score,

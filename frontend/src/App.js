@@ -1,65 +1,11 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo, memo } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import './App.css';
 import SFX from './sounds';
 import { getClientId, useSocial, FriendsScreen, GameChat } from './social';
 import { ensureSignedIn, linkGoogleAccount } from './firebase';
 import { useStats, ProfileStats } from './stats';
-
-const AVATARS = ['\u{1F43A}', '\u{1F981}', '\u{1F98A}', '\u{1F43C}', '\u{1F989}', '\u{1F438}', '\u{1F42F}', '\u{1F984}'];
-
-const CATEGORIES = [
-  { key: 'movies', label: 'Movies', icon: '\u{1F3AC}', grad: 'g1', tag: '\u{1F525}', desc: 'Blockbusters & classics' },
-  { key: 'music', label: 'Music', icon: '\u{1F3B5}', grad: 'g2', desc: 'Artists, albums & lyrics' },
-  { key: 'sports', label: 'Sports', icon: '⚽', grad: 'g3', desc: 'Teams & champions' },
-  { key: 'geography', label: 'Geography', icon: '\u{1F30D}', grad: 'g4', desc: 'Capitals & landmarks' },
-  { key: 'gaming', label: 'Gaming', icon: '\u{1F3AE}', grad: 'g5', desc: 'Consoles & lore' },
-  { key: 'science', label: 'Science', icon: '\u{1F9EC}', grad: 'g6', tag: '✨', desc: 'Space, bio & physics' },
-];
-
-function useTheme() {
-  const [theme, setTheme] = useState(() => {
-    try { return localStorage.getItem('quizzup-theme') || 'light'; } catch { return 'light'; }
-  });
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    try { localStorage.setItem('quizzup-theme', theme); } catch {}
-  }, [theme]);
-  const toggle = useCallback(() => setTheme((t) => (t === 'dark' ? 'light' : 'dark')), []);
-  return [theme, toggle];
-}
-
-const TopControls = memo(function TopControls({ muted, toggleMute, theme, toggleTheme }) {
-  return (
-    <div className="top-controls">
-      <button className="ctrl-btn" onClick={toggleMute} aria-label="Toggle sound" title="Toggle sound">
-        {muted ? '\u{1F507}' : '\u{1F50A}'}
-      </button>
-      <button className="ctrl-btn" onClick={toggleTheme} aria-label="Toggle theme" title="Toggle theme">
-        {theme === 'dark' ? '☀️' : '\u{1F319}'}
-      </button>
-    </div>
-  );
-});
-
-const NavBar = memo(function NavBar({ active, onNav, onQuickMatch }) {
-  return (
-    <nav className="navbar">
-      <button className={`nav-item ${active === 'home' ? 'active' : ''}`} onClick={() => onNav('home')}>
-        <span className="nav-ic">{'\u{1F3E0}'}</span><span className="nav-lbl">Home</span>
-      </button>
-      <button className="nav-item dimmed">
-        <span className="nav-ic">{'\u{1F6D2}'}</span><span className="nav-lbl">Shop</span>
-      </button>
-      <button className="nav-bolt" onClick={onQuickMatch} aria-label="Quick Play">{'⚡'}</button>
-      <button className={`nav-item ${active === 'categories' ? 'active' : ''}`} onClick={() => onNav('categories')}>
-        <span className="nav-ic">{'\u{1F5C2}️'}</span><span className="nav-lbl">Themes</span>
-      </button>
-      <button className={`nav-item ${active === 'profile' ? 'active' : ''}`} onClick={() => onNav('profile')}>
-        <span className="nav-ic">{'\u{1F464}'}</span><span className="nav-lbl">Profile</span>
-      </button>
-    </nav>
-  );
-});
+import { RoomLobby, PlayerHud, Leaderboard } from './multiplayer';
+import { AVATARS, CATEGORIES, useTheme, TopControls, NavBar } from './ui';
 
 export default function App() {
   const [theme, toggleTheme] = useTheme();
@@ -68,19 +14,19 @@ export default function App() {
   const [stage, setStage] = useState('join');
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState(AVATARS[0]);
-  const [opponent, setOpponent] = useState({ name: '', avatar: '\u{1F981}' });
+  const [myId, setMyId] = useState(null);
+  const [opponents, setOpponents] = useState([]); // [{id,name,avatar,clientId,score,answered,correct}]
+  const [room, setRoom] = useState(null); // { code, players, isHost, canStart }
   const [intro, setIntro] = useState(null);
   const [question, setQuestion] = useState(null);
   const [score, setScore] = useState(0);
-  const [opponentScore, setOpponentScore] = useState(0);
   const [totalRounds, setTotalRounds] = useState(6);
   const [selected, setSelected] = useState(null);
   const [timeLeft, setTimeLeft] = useState(10);
   const [reveal, setReveal] = useState(null);
   const [reported, setReported] = useState(false);
   const [result, setResult] = useState(null);
-  const [friendRequestSent, setFriendRequestSent] = useState(false);
-  const [roomCode, setRoomCode] = useState('');
+  const [friendRequestSent, setFriendRequestSent] = useState({});
   const [joinCode, setJoinCode] = useState('');
   const [joinError, setJoinError] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -165,12 +111,23 @@ export default function App() {
       let data;
       try { data = JSON.parse(event.data); } catch { return; }
       switch (data.type) {
+        case 'session': setMyId(data.playerId); break;
         case 'waiting': setStage('waiting'); break;
-        case 'room_created': setRoomCode(data.code); setStage('room_wait'); break;
+        case 'room_created':
+        case 'room_update':
+          setRoom({ code: data.code, players: data.players, isHost: data.isHost, canStart: data.canStart });
+          setJoinError(false);
+          setStage('room_wait');
+          break;
         case 'room_not_found': setJoinError(true); break;
+        case 'room_full': setJoinError(true); break;
+        case 'room_closed': setRoom(null); setStage('home'); break;
         case 'game_start':
-          SFX.gameStart(); setOpponent(data.opponent); setTotalRounds(data.totalRounds);
-          setScore(0); setOpponentScore(0); setStage('playing');
+          SFX.gameStart();
+          setOpponents(data.opponents.map((o) => ({ ...o, score: 0, answered: false, correct: false })));
+          setTotalRounds(data.totalRounds);
+          setScore(0); setRoom(null);
+          setStage('playing');
           break;
         case 'round_intro':
           if (data.isBonus) SFX.bonusIntro(); else SFX.roundIntro();
@@ -178,18 +135,27 @@ export default function App() {
           break;
         case 'question':
           setIntro(null); setQuestion(data); setSelected(null); setReveal(null);
+          setOpponents((prev) => prev.map((o) => ({ ...o, answered: false, correct: false })));
           break;
         case 'report_ack': setReported(true); break;
         case 'round_result':
           if (data.yourCorrect) SFX.correct();
           else if (data.timedOut && !data.yourAnswer && data.yourAnswer !== 0) SFX.timeUp();
           else SFX.wrong();
-          setReveal(data); setScore(data.yourScore); setOpponentScore(data.opponentScore);
+          setReveal(data); setScore(data.yourScore);
+          setOpponents((prev) => prev.map((o) => {
+            const upd = data.others.find((x) => x.id === o.id);
+            return upd ? { ...o, score: upd.score, answered: upd.answered, correct: upd.correct } : o;
+          }));
           if (tickRef.current) clearInterval(tickRef.current);
           break;
         case 'game_end':
           if (data.won) SFX.victory(); else if (data.tie) SFX.tie(); else SFX.defeat();
-          setResult(data); setScore(data.finalScore); setOpponentScore(data.opponentScore); setStage('finished');
+          setResult(data); setScore(data.finalScore); setStage('finished');
+          setOpponents((prev) => prev.map((o) => {
+            const upd = data.others.find((x) => x.id === o.id);
+            return upd ? { ...o, score: upd.score } : o;
+          }));
           statsHook.handleStatsMessage(data);
           break;
         case 'stats': statsHook.handleStatsMessage(data); break;
@@ -222,6 +188,13 @@ export default function App() {
     connect({ type: 'join_room', code: code.trim().toUpperCase() });
   }, [connect]);
 
+  const startRoomMatch = useCallback(() => {
+    if (!room) return;
+    if (wsRef.current && wsRef.current.readyState === 1) {
+      wsRef.current.send(JSON.stringify({ type: 'start_room', code: room.code }));
+    }
+  }, [room]);
+
   const onNav = useCallback((s) => setStage(s), []);
 
   const answer = useCallback((index) => {
@@ -243,7 +216,7 @@ export default function App() {
   const playAgain = useCallback(() => {
     if (wsRef.current) { wsRef.current.close(); wsRef.current = null; }
     setResult(null); setQuestion(null); setIntro(null); setReveal(null);
-    setSelected(null); setFriendRequestSent(false);
+    setSelected(null); setFriendRequestSent({}); setRoom(null);
     social.clearGameChat();
     setStage('home');
   }, [social]);
@@ -312,7 +285,7 @@ export default function App() {
             ))}
           </div>
           <div className="social-row">
-            <button className="social-btn" onClick={createRoom}>{'⚔️'} Challenge</button>
+            <button className="social-btn" onClick={createRoom}>{'⚔️'} Party (2-4)</button>
             <button className="social-btn outline" onClick={() => { setJoinError(false); setJoinCode(''); setStage('enter_code'); }}>{'\u{1F511}'} Join code</button>
           </div>
         </div>
@@ -321,19 +294,16 @@ export default function App() {
     );
   }
 
-  if (stage === 'room_wait') {
-    const copyCode = () => { try { navigator.clipboard.writeText(roomCode); setCopied(true); setTimeout(() => setCopied(false), 1500); } catch {} };
+  if (stage === 'room_wait' && room) {
+    const copyCode = () => { try { navigator.clipboard.writeText(room.code); setCopied(true); setTimeout(() => setCopied(false), 1500); } catch {} };
+    const cancel = () => { if (wsRef.current) wsRef.current.close(); setRoom(null); setStage('home'); };
     return (
       <div className="app"><TopControls {...topProps} />
-        <div className="container center">
-          <div className="status-label">{'⚔️'} Challenge a friend</div>
-          <div className="room-code-label">Share this code</div>
-          <button className="room-code" onClick={copyCode}>{roomCode}</button>
-          <div className="room-copy-hint">{copied ? '✓ Copied!' : 'Tap the code to copy'}</div>
-          <div className="room-wait-status"><div className="loading-bar"><div className="loading-fill" /></div>
-            <div className="room-wait-text">Waiting for your friend…</div></div>
-          <button className="home-themes-link" onClick={() => { if (wsRef.current) wsRef.current.close(); setStage('home'); }}>{'←'} Cancel</button>
-        </div></div>);
+        <RoomLobby
+          code={room.code} players={room.players} isHost={room.isHost} canStart={room.canStart}
+          onStart={startRoomMatch} onCancel={cancel} copied={copied} onCopyCode={copyCode}
+        />
+      </div>);
   }
 
   if (stage === 'enter_code') {
@@ -344,7 +314,7 @@ export default function App() {
           <div className="room-code-label">Enter their code</div>
           <input className={`input code-input ${joinError ? 'err' : ''}`} placeholder="ABC12" value={joinCode} maxLength={5}
             onChange={(e) => { setJoinCode(e.target.value.toUpperCase()); setJoinError(false); }} />
-          {joinError && <div className="code-err-msg">Code not found {'—'} check and try again</div>}
+          {joinError && <div className="code-err-msg">Code not found, full, or already started</div>}
           <button className="btn" disabled={joinCode.trim().length < 4} onClick={() => joinRoom(joinCode)}>Join match</button>
           <button className="home-themes-link" onClick={() => setStage('home')}>{'←'} Back</button>
         </div></div>);
@@ -439,11 +409,11 @@ export default function App() {
     return (
       <div className="app game-bg"><TopControls {...topProps} />
         <div className="container game">
-          <div className="game-hud">
-            <div className="hud-side left"><div className="hud-av">{avatar}</div><span className="hud-name">{name}</span><span className="hud-score">{score}</span></div>
-            <div className="hud-mid"><span className="hud-timer-label">TIME</span><span className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr ? '✓' : timeLeft}</span></div>
-            <div className="hud-side right"><span className="hud-score opp">{opponentScore}</span><span className="hud-name">{opponent.name}</span><div className="hud-av opp">{opponent.avatar}</div></div>
+          <div className="hud-timer-block">
+            <span className="hud-timer-label">TIME</span>
+            <span className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr ? '✓' : timeLeft}</span>
           </div>
+          <PlayerHud me={{ avatar, name, score }} others={opponents} revealing={sr} />
           <div className="question">{question.question}</div>
           <div className="answers">
             {question.answers.map((a, idx) => <button key={idx} className={ansCls(idx)} onClick={() => answer(idx)} disabled={selected !== null || sr}>{a}</button>)}
@@ -459,23 +429,24 @@ export default function App() {
     const { won, tie } = result;
     const left = result.reason === 'opponent_disconnected' || result.reason === 'opponent_left';
     const rematch = () => { playAgain(); setTimeout(() => quickMatch(), 50); };
-    const isFriend = opponent.clientId && social.friends.some((f) => f.id === opponent.clientId);
+    const addableOpponents = opponents.filter(
+      (o) => o.clientId && !social.friends.some((f) => f.id === o.clientId) && !friendRequestSent[o.clientId]
+    );
     return (
       <div className="app game-bg"><TopControls {...topProps} />
         <div className="container center">
           <div className={`result-title ${won ? 'win' : tie ? 'tie' : 'loss'}`}>{won ? 'VICTORY!' : tie ? 'DRAW!' : 'DEFEAT'}</div>
-          <div className="result-avatars">
-            <div className={`ra ${won ? 'winner' : ''}`}>{avatar}</div>
-            <div className={`ra ${!won && !tie ? 'winner' : ''}`}>{opponent.avatar}</div>
-          </div>
-          <div className="result-sub">{left ? 'Opponent left' : `${result.finalScore} — ${result.opponentScore}`}</div>
+          <div className="result-sub">{left ? 'Someone left' : `Final score: ${result.finalScore}`}</div>
+          <Leaderboard leaderboard={result.leaderboard} myId={myId} />
           <div className="rewards-row"><span className="rw">+{result.coins} coins</span><span className="rw">+{result.xp} XP</span></div>
-          {opponent.clientId && !isFriend && (
-            <button className="add-friend-link" disabled={friendRequestSent}
-              onClick={() => { social.addFriend(opponent.clientId); setFriendRequestSent(true); }}>
-              {friendRequestSent ? '✓ Request sent' : `+ Add ${opponent.name} as friend`}
+          {addableOpponents.map((o) => (
+            <button key={o.clientId} className="add-friend-link" onClick={() => {
+              social.addFriend(o.clientId);
+              setFriendRequestSent((prev) => ({ ...prev, [o.clientId]: true }));
+            }}>
+              {`+ Add ${o.name} as friend`}
             </button>
-          )}
+          ))}
           <div className="result-actions">
             <button className="ra-btn rematch" onClick={rematch}>Rematch</button>
             <button className="ra-btn new-opp" onClick={playAgain}>New opponent</button>

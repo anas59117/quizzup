@@ -10,7 +10,7 @@ const game = require('./game');
 const RateLimiter = require('./rate-limit');
 const { verifyIdToken, sweepCache } = require('./auth');
 const stats = require('./stats');
-const { ROOM_TTL_MS, CODE_ALPHABET } = require('./config');
+const { ROOM_TTL_MS, CODE_ALPHABET, MAX_ROOM_PLAYERS } = require('./config');
 
 const app = express();
 const server = http.createServer(app);
@@ -122,6 +122,22 @@ function handleSocial(ws, data, state) {
   return false;
 }
 
+// A room's player list, shaped for the client (id lets a client find "self").
+function roomView(room) {
+  return room.players.map((p) => ({ id: p.id, name: p.name, avatar: p.avatar }));
+}
+
+function broadcastRoomUpdate(room) {
+  const view = roomView(room);
+  const hostId = room.players[0].id;
+  room.players.forEach((p) => {
+    game.send(p.ws, {
+      type: 'room_update', code: room.code, players: view,
+      isHost: p.id === hostId, canStart: room.players.length >= 2,
+    });
+  });
+}
+
 function handleGameplay(ws, data, state) {
   const { playerId } = state;
 
@@ -130,8 +146,10 @@ function handleGameplay(ws, data, state) {
     const g = gameId && game.activeGames.get(gameId);
     const text = typeof data.text === 'string' ? data.text.trim().slice(0, 200) : '';
     if (g && g.status === 'active' && text) {
-      const opponent = g.players.find((p) => p.id !== playerId);
-      if (opponent) game.send(opponent.ws, { type: 'game_chat', text });
+      const sender = g.players.find((p) => p.id === playerId);
+      g.players
+        .filter((p) => p.id !== playerId)
+        .forEach((p) => game.send(p.ws, { type: 'game_chat', text, from: sender ? sender.name : 'Player' }));
     }
     return true;
   }
@@ -148,7 +166,7 @@ function handleGameplay(ws, data, state) {
     );
     if (oppIdx !== -1) {
       const opp = waitingPlayers.splice(oppIdx, 1)[0];
-      game.startGame(opp, { ws, id: playerId, clientId: state.clientId, name: state.name, avatar }, categoryKey)
+      game.startGame([opp, { ws, id: playerId, clientId: state.clientId, name: state.name, avatar }], categoryKey)
         .catch(() => { game.send(opp.ws, { type: 'error' }); game.send(ws, { type: 'error' }); });
     } else {
       waitingPlayers.push({ ws, id: playerId, clientId: state.clientId, name: state.name, avatar, categoryKey });
@@ -173,28 +191,44 @@ function handleGameplay(ws, data, state) {
     const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
     const categoryKey = typeof data.category === 'string' ? data.category : null;
     const code = newRoomCode();
-    privateRooms.set(code, {
-      host: { ws, id: playerId, clientId: state.clientId, name: state.name, avatar },
+    const room = {
+      code,
+      players: [{ ws, id: playerId, clientId: state.clientId, name: state.name, avatar }],
       categoryKey, createdAt: Date.now(),
-    });
-    game.send(ws, { type: 'room_created', code });
+    };
+    privateRooms.set(code, room);
+    game.send(ws, { type: 'room_created', code, players: roomView(room), isHost: true, canStart: false });
     return true;
   }
 
   if (data.type === 'join_room') {
     const code = String(data.code || '').toUpperCase().trim();
     const room = privateRooms.get(code);
-    if (!room || room.host.ws.readyState !== 1) {
+    if (!room || room.players[0].ws.readyState !== 1) {
       if (room) privateRooms.delete(code);
       game.send(ws, { type: 'room_not_found' });
       return true;
     }
-    if (room.host.id === playerId) { game.send(ws, { type: 'room_not_found' }); return true; }
-    privateRooms.delete(code);
+    if (room.players.some((p) => p.id === playerId)) { game.send(ws, { type: 'room_not_found' }); return true; }
+    if (room.players.length >= MAX_ROOM_PLAYERS) { game.send(ws, { type: 'room_full' }); return true; }
     if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
     const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F981}';
-    game.startGame(room.host, { ws, id: playerId, clientId: state.clientId, name: state.name, avatar }, room.categoryKey)
-      .catch(() => { game.send(room.host.ws, { type: 'error' }); game.send(ws, { type: 'error' }); });
+    room.players.push({ ws, id: playerId, clientId: state.clientId, name: state.name, avatar });
+    broadcastRoomUpdate(room);
+    return true;
+  }
+
+  if (data.type === 'start_room') {
+    const code = String(data.code || '').toUpperCase().trim();
+    const room = privateRooms.get(code);
+    if (!room) return true;
+    // Only the host (first to create the room) may start it.
+    if (room.players[0].id !== playerId) return true;
+    if (room.players.length < 2 || room.players.length > MAX_ROOM_PLAYERS) return true;
+    privateRooms.delete(code);
+    const players = room.players;
+    game.startGame(players, room.categoryKey)
+      .catch(() => players.forEach((p) => game.send(p.ws, { type: 'error' })));
     return true;
   }
 
@@ -231,6 +265,9 @@ wss.on('connection', (ws, req) => {
     name: 'Player' + Math.floor(1000 + Math.random() * 9000),
     clientId: null,
   };
+  // Every game/lobby message identifies players by this id, so the client
+  // needs to know its own to tell itself apart in an N-player leaderboard.
+  game.send(ws, { type: 'session', playerId: state.playerId });
 
   ws.on('message', async (raw) => {
     let data;
@@ -256,7 +293,16 @@ wss.on('connection', (ws, req) => {
     if (wi !== -1) waitingPlayers.splice(wi, 1);
 
     for (const [code, room] of privateRooms) {
-      if (room.host.id === state.playerId) privateRooms.delete(code);
+      const idx = room.players.findIndex((p) => p.id === state.playerId);
+      if (idx === -1) continue;
+      if (idx === 0) {
+        // Host left before starting — dissolve the room for everyone.
+        privateRooms.delete(code);
+        room.players.forEach((p) => { if (p.id !== state.playerId) game.send(p.ws, { type: 'room_closed' }); });
+      } else {
+        room.players.splice(idx, 1);
+        broadcastRoomUpdate(room);
+      }
     }
 
     const gameId = game.playerSessions.get(state.playerId);
@@ -276,7 +322,7 @@ app.get('/reports/stats', (req, res) => res.json(reports.stats()));
 setInterval(() => {
   const now = Date.now();
   for (const [code, room] of privateRooms) {
-    if (now - room.createdAt > ROOM_TTL_MS || room.host.ws.readyState !== 1) {
+    if (now - room.createdAt > ROOM_TTL_MS || room.players[0].ws.readyState !== 1) {
       privateRooms.delete(code);
     }
   }
