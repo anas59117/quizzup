@@ -6,7 +6,7 @@ import { getClientId, useSocial, FriendsScreen, GameChat } from './social';
 import { ensureSignedIn, linkGoogleAccount } from './firebase';
 import { useStats, ProfileStats } from './stats';
 import { RoomLobby, PlayerHud, Leaderboard } from './multiplayer';
-import { AVATARS, CATEGORIES, useTheme, TopControls, NavBar } from './ui';
+import { AVATARS, CATEGORIES, useTheme, TopControls, NavBar, PlayerPhoto } from './ui';
 
 export default function App() {
   const [theme, toggleTheme] = useTheme();
@@ -440,6 +440,7 @@ export default function App() {
             <span className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr ? '✓' : timeLeft}</span>
           </div>
           <PlayerHud me={{ avatar, name, score }} others={opponents} revealing={sr} />
+          <PlayerPhoto image={question.image} credit={question.credit} timeLeft={timeLeft} timeLimit={question.timeLimit} revealed={sr} />
           <div className="question">{question.question}</div>
           <div className="answers">
             {question.answers.map((a, idx) => <button key={idx} className={ansCls(idx)} onClick={() => answer(idx)} disabled={selected !== null || sr}>{a}</button>)}

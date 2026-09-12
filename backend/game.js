@@ -107,6 +107,7 @@ function nextQuestion(game) {
         question: q.text, category: q.category, icon: q.icon,
         answers: q.answers, timeLimit: GAME_CONFIG.TIME_PER_QUESTION,
         isBonus: isFinal,
+        image: q.image || null, credit: q.credit || null,
       });
     });
     game.roundTimer = setTimeout(

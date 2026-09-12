@@ -40,6 +40,20 @@ export const TopControls = memo(function TopControls({ muted, toggleMute, theme,
   );
 });
 
+// "Guess the player" rounds carry an optional blurred photo. It sharpens as
+// the timer runs out (harder while time is plentiful) and shows full + its
+// required CC attribution once the round is revealed.
+export const PlayerPhoto = memo(function PlayerPhoto({ image, credit, timeLeft, timeLimit, revealed }) {
+  if (!image) return null;
+  const blur = revealed ? 0 : Math.max(0, (timeLeft / timeLimit) * 18);
+  return (
+    <div className="player-photo-wrap">
+      <img src={image} alt="Guess the player" className="player-photo" style={{ filter: `blur(${blur}px)` }} />
+      {revealed && credit && <div className="photo-credit">{credit}</div>}
+    </div>
+  );
+});
+
 export const NavBar = memo(function NavBar({ active, onNav, onQuickMatch }) {
   return (
     <nav className="navbar">
