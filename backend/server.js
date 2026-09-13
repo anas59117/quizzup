@@ -6,6 +6,7 @@ const http = require('http');
 const { listCategories, warmCache, questionKey } = require('./questions');
 const reports = require('./reports');
 const social = require('./social');
+const posts = require('./posts');
 const game = require('./game');
 const RateLimiter = require('./rate-limit');
 const { verifyIdToken, sweepCache } = require('./auth');
@@ -59,6 +60,7 @@ function notifyPresence(clientId, isOnline) {
 async function handleIdentify(ws, data, state) {
   if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
   const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
+  state.avatar = avatar;
 
   const uid = await verifyIdToken(data.idToken);
   if (!uid) return; // unverifiable — proceed without social features rather than trusting the claim
@@ -68,7 +70,28 @@ async function handleIdentify(ws, data, state) {
   game.send(ws, { type: 'friends_list', friends: social.getFriendsList(state.clientId) });
   game.send(ws, { type: 'friend_requests', requests: social.getPendingRequests(state.clientId) });
   game.send(ws, { type: 'stats', stats: stats.getStats(state.clientId) });
+  game.send(ws, { type: 'feed_list', posts: posts.getFeed() });
   notifyPresence(state.clientId, true);
+}
+
+function handleFeed(ws, data, state) {
+  const { clientId } = state;
+  if (data.type === 'feed_list') {
+    game.send(ws, { type: 'feed_list', posts: posts.getFeed() });
+    return true;
+  }
+  if (data.type === 'post_create') {
+    const post = posts.addPost(clientId, state.name, state.avatar, data.category, data.text);
+    if (post) social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_created', post }));
+    return true;
+  }
+  if (data.type === 'post_react') {
+    if (!clientId) return true;
+    const result = posts.toggleReaction(String(data.postId || ''), clientId);
+    if (result) social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_reacted', ...result }));
+    return true;
+  }
+  return false;
 }
 
 function handleSocial(ws, data, state) {
@@ -307,6 +330,7 @@ wss.on('connection', (ws, req) => {
 
     if (data.type === 'identify') { await handleIdentify(ws, data, state); return; }
     if (handleSocial(ws, data, state)) return;
+    if (handleFeed(ws, data, state)) return;
     handleGameplay(ws, data, state);
   });
 

@@ -5,8 +5,9 @@ import music from './music';
 import { getClientId, useSocial, FriendsScreen, GameChat } from './social';
 import { ensureSignedIn, linkGoogleAccount } from './firebase';
 import { useStats, ProfileStats } from './stats';
+import { useFeed, FeedScreen } from './feed';
 import { RoomLobby, PlayerHud, Leaderboard } from './multiplayer';
-import { AVATARS, CATEGORIES, useTheme, TopControls, NavBar, PlayerPhoto, SoloToggle, CategoryTile, LevelRing } from './ui';
+import { AVATARS, CATEGORIES, useTheme, TopControls, NavBar, PlayerPhoto, SoloToggle, CategoryTile, LevelRing, JoinScreen, ErrorScreen } from './ui';
 
 export default function App() {
   const [theme, toggleTheme] = useTheme();
@@ -38,6 +39,7 @@ export default function App() {
   const tickRef = useRef(null);
   const social = useSocial(wsRef);
   const statsHook = useStats();
+  const feed = useFeed(wsRef);
   const clientId = firebaseUser?.uid || null;
 
   useEffect(() => () => {
@@ -181,7 +183,7 @@ export default function App() {
           break;
         case 'stats': statsHook.handleStatsMessage(data); break;
         case 'error': setStage('error'); break;
-        default: social.handleMessage(data); break;
+        default: social.handleMessage(data); feed.handleMessage(data); break;
       }
     };
     ws.onerror = () => setStage('error');
@@ -255,19 +257,7 @@ export default function App() {
     return (
       <div className="app">
         <TopControls {...topProps} />
-        <div className="container center">
-          <div className="badge">{'⚡'} THE LEGEND IS BACK</div>
-          <h1 className="logo">Quizz<span>Up</span></h1>
-          <p className="tagline">Real-time trivia battles</p>
-          <input className="input" placeholder="Choose your username" value={name} maxLength={20}
-            onChange={(e) => setName(e.target.value)} />
-          <div className="avatar-picker">
-            {AVATARS.map((a) => (
-              <button key={a} className={`avatar-opt ${avatar === a ? 'active' : ''}`} onClick={() => setAvatar(a)}>{a}</button>
-            ))}
-          </div>
-          <button className="btn" disabled={!name.trim()} onClick={() => setStage('home')}>Continue →</button>
-        </div>
+        <JoinScreen name={name} setName={setName} avatar={avatar} setAvatar={setAvatar} onContinue={() => setStage('home')} />
       </div>
     );
   }
@@ -350,6 +340,21 @@ export default function App() {
           </div>
         </div>
         <NavBar active="categories" onNav={onNav} onQuickMatch={quickMatch} />
+      </div>
+    );
+  }
+
+  if (stage === 'feed') {
+    return (
+      <div className="app app-nav app-top">
+        <TopControls {...topProps} />
+        <div className="container wide">
+          <div className="cat-header">
+            <h2>Accueil</h2>
+          </div>
+          <FeedScreen feed={feed} />
+        </div>
+        <NavBar active="feed" onNav={onNav} onQuickMatch={quickMatch} />
       </div>
     );
   }
@@ -483,11 +488,8 @@ export default function App() {
   if (stage === 'error') {
     return (
       <div className="app"><TopControls {...topProps} />
-        <div className="container center">
-          <h2 className="logo">Connection lost</h2>
-          <p className="tagline">Couldn't reach the game server.</p>
-          <button className="btn" onClick={() => window.location.reload()}>Retry</button>
-        </div></div>);
+        <ErrorScreen onRetry={() => window.location.reload()} />
+      </div>);
   }
 
   return null;

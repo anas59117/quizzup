@@ -31,6 +31,34 @@ export const CATEGORIES = [
   { key: 'retro_games', label: 'Jeux Vidéo Rétro', icon: '\u{1F47E}', grad: 'g24', desc: 'Mario, Sonic & arcade' },
 ];
 
+export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setAvatar, onContinue }) {
+  return (
+    <div className="container center">
+      <div className="badge">{'⚡'} THE LEGEND IS BACK</div>
+      <h1 className="logo">Quizz<span>Up</span></h1>
+      <p className="tagline">Real-time trivia battles</p>
+      <input className="input" placeholder="Choose your username" value={name} maxLength={20}
+        onChange={(e) => setName(e.target.value)} />
+      <div className="avatar-picker">
+        {AVATARS.map((a) => (
+          <button key={a} className={`avatar-opt ${avatar === a ? 'active' : ''}`} onClick={() => setAvatar(a)}>{a}</button>
+        ))}
+      </div>
+      <button className="btn" disabled={!name.trim()} onClick={onContinue}>Continue →</button>
+    </div>
+  );
+});
+
+export const ErrorScreen = memo(function ErrorScreen({ onRetry }) {
+  return (
+    <div className="container center">
+      <h2 className="logo">Connection lost</h2>
+      <p className="tagline">Couldn't reach the game server.</p>
+      <button className="btn" onClick={onRetry}>Retry</button>
+    </div>
+  );
+});
+
 export function useTheme() {
   const [theme, setTheme] = useState(() => {
     try { return localStorage.getItem('quizzup-theme') || 'light'; } catch { return 'light'; }
@@ -109,8 +137,8 @@ export const NavBar = memo(function NavBar({ active, onNav, onQuickMatch }) {
       <button className={`nav-item ${active === 'home' ? 'active' : ''}`} onClick={() => onNav('home')}>
         <span className="nav-ic">{'\u{1F3E0}'}</span><span className="nav-lbl">Home</span>
       </button>
-      <button className="nav-item dimmed">
-        <span className="nav-ic">{'\u{1F6D2}'}</span><span className="nav-lbl">Shop</span>
+      <button className={`nav-item ${active === 'feed' ? 'active' : ''}`} onClick={() => onNav('feed')}>
+        <span className="nav-ic">{'\u{1F4F0}'}</span><span className="nav-lbl">Feed</span>
       </button>
       <button className="nav-bolt" onClick={onQuickMatch} aria-label="Quick Play">{'⚡'}</button>
       <button className={`nav-item ${active === 'categories' ? 'active' : ''}`} onClick={() => onNav('categories')}>
