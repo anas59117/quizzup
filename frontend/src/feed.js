@@ -72,7 +72,7 @@ export function FeedScreen({ feed }) {
   return (
     <div className="feed-screen">
       <div className="feed-composer">
-        <select className="feed-cat-select" aria-label="Post category" value={category} onChange={(e) => setCategory(e.target.value)}>
+        <select className="feed-cat-select" aria-label={t('postCategory')} value={category} onChange={(e) => setCategory(e.target.value)}>
           {CATEGORIES.map((c) => <option key={c.key} value={c.key}>{c.label}</option>)}
         </select>
         <input className="feed-input" value={draft} maxLength={240} placeholder={t('whatsNew')}
