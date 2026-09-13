@@ -3,7 +3,7 @@ const express = require('express');
 const { WebSocketServer } = require('ws');
 const cors = require('cors');
 const http = require('http');
-const { listCategories, warmCache, questionKey } = require('./questions');
+const { listCategories, warmCache, questionKey, CATEGORIES } = require('./questions');
 const reports = require('./reports');
 const social = require('./social');
 const posts = require('./posts');
@@ -81,7 +81,8 @@ function handleFeed(ws, data, state) {
     return true;
   }
   if (data.type === 'post_create') {
-    const post = posts.addPost(clientId, state.name, state.avatar, data.category, data.text);
+    const category = typeof data.category === 'string' && CATEGORIES[data.category] ? data.category : null;
+    const post = posts.addPost(clientId, state.name, state.avatar, category, data.text);
     if (post) social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_created', post }));
     return true;
   }
@@ -89,6 +90,12 @@ function handleFeed(ws, data, state) {
     if (!clientId) return true;
     const result = posts.toggleReaction(String(data.postId || ''), clientId);
     if (result) social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_reacted', ...result }));
+    return true;
+  }
+  if (data.type === 'post_report') {
+    if (!clientId) return true;
+    const result = posts.reportPost(String(data.postId || ''), clientId);
+    if (result && result.hidden) social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_hidden', id: result.id }));
     return true;
   }
   return false;

@@ -15,10 +15,15 @@ export function useFeed(wsRef) {
   const handleMessage = useCallback((data) => {
     switch (data.type) {
       case 'feed_list': setPosts(data.posts); break;
-      case 'post_created': setPosts((p) => [data.post, ...p]); break;
+      case 'post_created':
+        // Guards against a double-insert if the same identity has two
+        // sockets open (two tabs/devices) and both receive the broadcast.
+        setPosts((p) => (p.some((post) => post.id === data.post.id) ? p : [data.post, ...p]));
+        break;
       case 'post_reacted':
         setPosts((p) => p.map((post) => (post.id === data.id ? { ...post, reactions: data.reactions } : post)));
         break;
+      case 'post_hidden': setPosts((p) => p.filter((post) => post.id !== data.id)); break;
       default: break;
     }
   }, []);
@@ -28,9 +33,10 @@ export function useFeed(wsRef) {
     send({ type: 'post_create', category, text: text.trim() });
   };
   const react = (postId) => send({ type: 'post_react', postId });
+  const report = (postId) => send({ type: 'post_report', postId });
   const refresh = () => send({ type: 'feed_list' });
 
-  return { posts, handleMessage, createPost, react, refresh };
+  return { posts, handleMessage, createPost, react, report, refresh };
 }
 
 function timeAgo(ts) {
@@ -48,17 +54,22 @@ function categoryLabel(key) {
 export function FeedScreen({ feed }) {
   const [category, setCategory] = useState(CATEGORIES[0].key);
   const [draft, setDraft] = useState('');
+  const [reportedIds, setReportedIds] = useState(() => new Set());
 
   const submit = () => {
     if (!draft.trim()) return;
     feed.createPost(category, draft);
     setDraft('');
   };
+  const reportPost = (id) => {
+    feed.report(id);
+    setReportedIds((prev) => new Set(prev).add(id));
+  };
 
   return (
     <div className="feed-screen">
       <div className="feed-composer">
-        <select className="feed-cat-select" value={category} onChange={(e) => setCategory(e.target.value)}>
+        <select className="feed-cat-select" aria-label="Catégorie du post" value={category} onChange={(e) => setCategory(e.target.value)}>
           {CATEGORIES.map((c) => <option key={c.key} value={c.key}>{c.label}</option>)}
         </select>
         <input className="feed-input" value={draft} maxLength={240} placeholder="Quoi de neuf ?"
@@ -76,7 +87,12 @@ export function FeedScreen({ feed }) {
               <span className="feed-post-meta">a publié dans <span className="feed-post-cat">{categoryLabel(p.category)}</span> {'·'} {timeAgo(p.createdAt)}</span>
             </div>
             <div className="feed-post-text">{p.text}</div>
-            <button className="feed-react-btn" onClick={() => feed.react(p.id)}>{'⚡'} {p.reactions}</button>
+            <div className="feed-post-actions">
+              <button className="feed-react-btn" onClick={() => feed.react(p.id)}>{'⚡'} {p.reactions}</button>
+              <button className="feed-report-btn" onClick={() => reportPost(p.id)} disabled={reportedIds.has(p.id)}>
+                {reportedIds.has(p.id) ? '✓ Signalé' : 'Signaler'}
+              </button>
+            </div>
           </div>
         </div>
       ))}

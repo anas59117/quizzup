@@ -399,5 +399,9 @@ body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sa
 .feed-post-meta { color: var(--text-dim); font-size: 0.7em; }
 .feed-post-cat { color: var(--accent); font-weight: 600; }
 .feed-post-text { font-size: 0.85em; margin-bottom: 8px; word-wrap: break-word; }
+.feed-post-actions { display: flex; align-items: center; gap: 8px; }
 .feed-react-btn { padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border); background: var(--surface-2); color: var(--text); font-family: inherit; font-size: 0.75em; font-weight: 600; cursor: pointer; }
 .feed-react-btn:hover { border-color: var(--accent); }
+.feed-report-btn { padding: 4px 10px; border-radius: 20px; border: none; background: none; color: var(--text-faint); font-family: inherit; font-size: 0.7em; cursor: pointer; }
+.feed-report-btn:hover:not(:disabled) { color: var(--text-dim); text-decoration: underline; }
+.feed-report-btn:disabled { cursor: default; }
