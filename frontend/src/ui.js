@@ -15,6 +15,10 @@ export const CATEGORIES = [
   { key: 'culture_fr', label: 'Culture Générale FR', icon: '\u{1F1EB}\u{1F1F7}', grad: 'g10', desc: 'Histoire, géo & traditions' },
   { key: 'premier_league', label: 'Premier League', icon: '\u{1F981}', grad: 'g11', tag: '\u{1F4F8}', desc: 'Devine le joueur anglais' },
   { key: 'la_liga', label: 'La Liga', icon: '\u{1F402}', grad: 'g12', tag: '\u{1F4F8}', desc: 'Devine le joueur espagnol' },
+  // `logo` (path under /images/logos/) shows the real brand mark once
+  // provided; until then the emoji `icon` is the fallback.
+  { key: 'netflix', label: 'Netflix', icon: '\u{1F3AC}', logo: null, grad: 'g13', desc: 'Séries & films Netflix' },
+  { key: 'got', label: 'Game of Thrones', icon: '\u{1F409}', logo: null, grad: 'g14', desc: 'Le Trône de Fer' },
 ];
 
 export function useTheme() {
@@ -81,7 +85,7 @@ export const CategoryTile = memo(function CategoryTile({ c, onClick }) {
   return (
     <button className="topic-tile" onClick={onClick}>
       <span className={`tile-icon-sq ${c.grad}`}>
-        {c.icon}
+        {c.logo ? <img src={c.logo} alt={c.label} className="tile-logo-img" /> : c.icon}
         {c.tag && <span className="tile-tag-badge">{c.tag}</span>}
       </span>
       <span className="tile-label">{c.label}</span>
