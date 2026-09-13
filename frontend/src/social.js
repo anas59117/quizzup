@@ -1,4 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
+import { useI18n } from './i18n';
 
 const CLIENT_ID_KEY = 'quizzup-client-id';
 
@@ -66,31 +67,32 @@ export function useSocial(wsRef) {
 }
 
 export function FriendsScreen({ social }) {
+  const { t } = useI18n();
   const [openChat, setOpenChat] = useState(null);
   const [draft, setDraft] = useState('');
   return (
     <div className="friends-screen">
       {social.requests.length > 0 && (
         <div className="friends-block">
-          <div className="friends-section-title">Friend requests</div>
+          <div className="friends-section-title">{t('friendRequests')}</div>
           {social.requests.map((r) => (
             <div key={r.id} className="friend-row">
               <div className="friend-ava">{r.avatar}</div>
               <div className="friend-name">{r.name}</div>
-              <button className="friend-btn accept" onClick={() => social.acceptFriend(r.id)}>Accept</button>
+              <button className="friend-btn accept" onClick={() => social.acceptFriend(r.id)}>{t('accept')}</button>
               <button className="friend-btn decline" onClick={() => social.declineFriend(r.id)}>✕</button>
             </div>
           ))}
         </div>
       )}
-      <div className="friends-section-title">Friends ({social.friends.length})</div>
-      {social.friends.length === 0 && <div className="friends-empty">Add friends after a match to see them here.</div>}
+      <div className="friends-section-title">{t('friendsCount', { count: social.friends.length })}</div>
+      {social.friends.length === 0 && <div className="friends-empty">{t('friendsEmpty')}</div>}
       {social.friends.map((f) => (
         <div key={f.id} className="friends-block">
           <div className="friend-row" onClick={() => setOpenChat(openChat === f.id ? null : f.id)}>
             <div className={`friend-ava ${f.online ? 'online' : ''}`}>{f.avatar}</div>
             <div className="friend-name">{f.name}</div>
-            <div className={`friend-status ${f.online ? 'on' : 'off'}`}>{f.online ? 'Online' : 'Offline'}</div>
+            <div className={`friend-status ${f.online ? 'on' : 'off'}`}>{f.online ? t('online') : t('offline')}</div>
           </div>
           {openChat === f.id && (
             <div className="friend-chat">
@@ -100,10 +102,10 @@ export function FriendsScreen({ social }) {
                 ))}
               </div>
               <div className="friend-chat-input">
-                <input value={draft} maxLength={200} placeholder="Message…"
+                <input value={draft} maxLength={200} placeholder={t('messagePlaceholder')}
                   onChange={(e) => setDraft(e.target.value)}
                   onKeyDown={(e) => { if (e.key === 'Enter' && draft.trim()) { social.sendDM(f.id, draft); setDraft(''); } }} />
-                <button onClick={() => { if (draft.trim()) { social.sendDM(f.id, draft); setDraft(''); } }}>Send</button>
+                <button onClick={() => { if (draft.trim()) { social.sendDM(f.id, draft); setDraft(''); } }}>{t('send')}</button>
               </div>
             </div>
           )}
@@ -114,6 +116,7 @@ export function FriendsScreen({ social }) {
 }
 
 export function GameChat({ social }) {
+  const { t } = useI18n();
   const [open, setOpen] = useState(false);
   const [draft, setDraft] = useState('');
   const endRef = useRef(null);
@@ -135,7 +138,7 @@ export function GameChat({ social }) {
             <div ref={endRef} />
           </div>
           <div className="game-chat-input">
-            <input value={draft} maxLength={100} placeholder="Say something…"
+            <input value={draft} maxLength={100} placeholder={t('sayPlaceholder')}
               onChange={(e) => setDraft(e.target.value)}
               onKeyDown={(e) => { if (e.key === 'Enter' && draft.trim()) { social.sendGameChat(draft); setDraft(''); } }} />
             <button onClick={() => { if (draft.trim()) { social.sendGameChat(draft); setDraft(''); } }}>➤</button>

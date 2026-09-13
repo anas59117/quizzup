@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { useI18n } from './i18n';
 
 const DEFAULT_STATS = { games: 0, wins: 0, streak: 0, level: 1 };
 
@@ -14,7 +15,8 @@ export function useStats() {
 }
 
 export function ProfileStats({ stats }) {
-  const rows = [[stats.level, 'Level'], [stats.games, 'Games'], [stats.wins, 'Wins'], [stats.streak, 'Streak']];
+  const { t } = useI18n();
+  const rows = [[stats.level, t('level')], [stats.games, t('games')], [stats.wins, t('wins')], [stats.streak, t('streak')]];
   return (
     <div className="profile-stats">
       {rows.map(([v, l]) => (

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, memo } from 'react';
+import { useI18n } from './i18n';
 
 export const AVATARS = ['\u{1F43A}', '\u{1F981}', '\u{1F98A}', '\u{1F43C}', '\u{1F989}', '\u{1F438}', '\u{1F42F}', '\u{1F984}'];
 
@@ -32,29 +33,31 @@ export const CATEGORIES = [
 ];
 
 export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setAvatar, onContinue }) {
+  const { t } = useI18n();
   return (
     <div className="container center">
-      <div className="badge">{'⚡'} THE LEGEND IS BACK</div>
+      <div className="badge">{'⚡'} {t('legendBack')}</div>
       <h1 className="logo">Quizz<span>Up</span></h1>
-      <p className="tagline">Real-time trivia battles</p>
-      <input className="input" placeholder="Choose your username" value={name} maxLength={20}
+      <p className="tagline">{t('tagline')}</p>
+      <input className="input" placeholder={t('usernamePlaceholder')} value={name} maxLength={20}
         onChange={(e) => setName(e.target.value)} />
       <div className="avatar-picker">
         {AVATARS.map((a) => (
           <button key={a} className={`avatar-opt ${avatar === a ? 'active' : ''}`} onClick={() => setAvatar(a)}>{a}</button>
         ))}
       </div>
-      <button className="btn" disabled={!name.trim()} onClick={onContinue}>Continue →</button>
+      <button className="btn" disabled={!name.trim()} onClick={onContinue}>{t('continue')}</button>
     </div>
   );
 });
 
 export const ErrorScreen = memo(function ErrorScreen({ onRetry }) {
+  const { t } = useI18n();
   return (
     <div className="container center">
-      <h2 className="logo">Connection lost</h2>
-      <p className="tagline">Couldn't reach the game server.</p>
-      <button className="btn" onClick={onRetry}>Retry</button>
+      <h2 className="logo">{t('connectionLost')}</h2>
+      <p className="tagline">{t('serverUnreachable')}</p>
+      <button className="btn" onClick={onRetry}>{t('retry')}</button>
     </div>
   );
 });
@@ -72,6 +75,7 @@ export function useTheme() {
 }
 
 export const TopControls = memo(function TopControls({ muted, toggleMute, theme, toggleTheme }) {
+  const { lang, toggleLang } = useI18n();
   return (
     <div className="top-controls">
       <button className="ctrl-btn" onClick={toggleMute} aria-label="Toggle sound" title="Toggle sound">
@@ -80,14 +84,18 @@ export const TopControls = memo(function TopControls({ muted, toggleMute, theme,
       <button className="ctrl-btn" onClick={toggleTheme} aria-label="Toggle theme" title="Toggle theme">
         {theme === 'dark' ? '☀️' : '\u{1F319}'}
       </button>
+      <button className="ctrl-btn" onClick={toggleLang} aria-label="Toggle language" title="Toggle language">
+        {lang === 'fr' ? '\u{1F1EB}\u{1F1F7}' : '\u{1F1EC}\u{1F1E7}'}
+      </button>
     </div>
   );
 });
 
 export const SoloToggle = memo(function SoloToggle({ solo, onToggle }) {
+  const { t } = useI18n();
   return (
     <button className={`solo-toggle ${solo ? 'active' : ''}`} onClick={onToggle}>
-      {solo ? '\u{1F9CD} Solo' : '\u{1F465} Multijoueur'}
+      {solo ? t('solo') : t('multiplayer')}
     </button>
   );
 });
@@ -132,20 +140,21 @@ export const CategoryTile = memo(function CategoryTile({ c, onClick }) {
 });
 
 export const NavBar = memo(function NavBar({ active, onNav, onQuickMatch }) {
+  const { t } = useI18n();
   return (
     <nav className="navbar">
       <button className={`nav-item ${active === 'home' ? 'active' : ''}`} onClick={() => onNav('home')}>
-        <span className="nav-ic">{'\u{1F3E0}'}</span><span className="nav-lbl">Home</span>
+        <span className="nav-ic">{'\u{1F3E0}'}</span><span className="nav-lbl">{t('navHome')}</span>
       </button>
       <button className={`nav-item ${active === 'feed' ? 'active' : ''}`} onClick={() => onNav('feed')}>
-        <span className="nav-ic">{'\u{1F4F0}'}</span><span className="nav-lbl">Feed</span>
+        <span className="nav-ic">{'\u{1F4F0}'}</span><span className="nav-lbl">{t('navFeed')}</span>
       </button>
       <button className="nav-bolt" onClick={onQuickMatch} aria-label="Quick Play">{'⚡'}</button>
       <button className={`nav-item ${active === 'categories' ? 'active' : ''}`} onClick={() => onNav('categories')}>
-        <span className="nav-ic">{'\u{1F5C2}️'}</span><span className="nav-lbl">Themes</span>
+        <span className="nav-ic">{'\u{1F5C2}️'}</span><span className="nav-lbl">{t('navThemes')}</span>
       </button>
       <button className={`nav-item ${active === 'profile' ? 'active' : ''}`} onClick={() => onNav('profile')}>
-        <span className="nav-ic">{'\u{1F464}'}</span><span className="nav-lbl">Profile</span>
+        <span className="nav-ic">{'\u{1F464}'}</span><span className="nav-lbl">{t('navProfile')}</span>
       </button>
     </nav>
   );
