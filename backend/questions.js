@@ -214,13 +214,21 @@ function getQuestions(count, categoryKey) {
 // Preferred entry point. Maximizes VOLUME/variety: the Open Trivia DB cache
 // (~4000 questions) is used first, and the 60 verified local questions top up
 // the remainder — and act as the safety net when the API is unavailable,
-// rate-limited, or blocked. De-duplicates by text. Always resolves to `count`
-// questions with stable per-match ids. Never rejects.
+// rate-limited, or blocked. De-duplicates by `questionKey` (see below).
+// Always resolves to `count` questions with stable per-match ids. Never
+// rejects.
+//
+// Photo questions (guess-the-player) all share the same generic prompt text
+// ("Qui est ce joueur ?"), so keying dedup on `text` alone would treat every
+// one of them as a duplicate of the first and cap a match at 1 real question.
+// `image` is unique per photo question, so it's used as the key when present.
+const questionKey = (q) => q.image || q.text;
+
 async function getMixedQuestions(count, categoryKey) {
   const questions = [];
   const seen = new Set();
 
-  const accept = (q) => !seen.has(q.text) && !reports.isQuarantined(q.text);
+  const accept = (q) => !seen.has(questionKey(q)) && !reports.isQuarantined(questionKey(q));
 
   // 1) API first — huge pool, maximum variety. Pull extra to absorb any
   //    quarantined/duplicate questions we skip.
@@ -230,7 +238,7 @@ async function getMixedQuestions(count, categoryKey) {
       if (questions.length >= count) break;
       if (accept(q)) {
         questions.push(q);
-        seen.add(q.text);
+        seen.add(questionKey(q));
       }
     }
   }
@@ -241,7 +249,7 @@ async function getMixedQuestions(count, categoryKey) {
       if (questions.length >= count) break;
       if (accept(q)) {
         questions.push(q);
-        seen.add(q.text);
+        seen.add(questionKey(q));
       }
     }
   }
@@ -268,4 +276,4 @@ function listCategories() {
   }));
 }
 
-module.exports = { CATEGORIES, getQuestions, getMixedQuestions, warmCache, listCategories };
+module.exports = { CATEGORIES, getQuestions, getMixedQuestions, warmCache, listCategories, questionKey };

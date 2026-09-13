@@ -3,7 +3,7 @@ const express = require('express');
 const { WebSocketServer } = require('ws');
 const cors = require('cors');
 const http = require('http');
-const { listCategories, warmCache } = require('./questions');
+const { listCategories, warmCache, questionKey } = require('./questions');
 const reports = require('./reports');
 const social = require('./social');
 const game = require('./game');
@@ -267,7 +267,7 @@ function handleGameplay(ws, data, state) {
       if (!g.reported.has(key)) {
         g.reported.add(key);
         const q = g.questions[g.currentRound];
-        if (q) reports.report(q.text);
+        if (q) reports.report(questionKey(q));
         game.send(ws, { type: 'report_ack' });
       }
     }
