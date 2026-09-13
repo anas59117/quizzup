@@ -318,6 +318,7 @@ body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sa
 .friends-block { margin-bottom: 6px; }
 .friends-section-title { font-weight: 700; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-dim); margin: 16px 0 8px; }
 .friends-empty { color: var(--text-dim); font-size: 0.85em; padding: 12px 0; }
+.privacy-link { display: block; text-align: center; margin-top: 24px; color: var(--text-faint); font-size: 0.75em; text-decoration: underline; }
 .friend-row { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: var(--surface); border-radius: 10px; margin-bottom: 6px; cursor: pointer; transition: background 0.15s ease; }
 .friend-row:hover { background: var(--surface-2); }
 .friend-ava { width: 36px; height: 36px; border-radius: 50%; background: var(--surface-2); display: flex; align-items: center; justify-content: center; font-size: 1.1em; position: relative; }

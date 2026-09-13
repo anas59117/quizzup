@@ -88,6 +88,9 @@ export function ProfileContent({ avatar, name, stats, isGoogleLinked, googleEmai
         </button>
       )}
       <FriendsScreen social={social} />
+      <a className="privacy-link" href="/privacy.html" target="_blank" rel="noopener noreferrer">
+        {t('privacyPolicy')}
+      </a>
     </div>
   );
 }
