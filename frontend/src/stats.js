@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 
-const DEFAULT_STATS = { games: 0, wins: 0, streak: 0 };
+const DEFAULT_STATS = { games: 0, wins: 0, streak: 0, level: 1 };
 
 // Player stats (games/wins/streak) live server-side, keyed by the Firebase
 // uid. Pushed on identify (so Profile shows real numbers right away) and
@@ -14,7 +14,7 @@ export function useStats() {
 }
 
 export function ProfileStats({ stats }) {
-  const rows = [[stats.games, 'Games'], [stats.wins, 'Wins'], [stats.streak, 'Streak']];
+  const rows = [[stats.level, 'Level'], [stats.games, 'Games'], [stats.wins, 'Wins'], [stats.streak, 'Streak']];
   return (
     <div className="profile-stats">
       {rows.map(([v, l]) => (

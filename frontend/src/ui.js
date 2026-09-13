@@ -64,6 +64,31 @@ export const PlayerPhoto = memo(function PlayerPhoto({ image, credit, timeLeft, 
   );
 });
 
+// Post-match level-up ring: a conic-gradient arc (no SVG needed) showing
+// progress toward the next level, with the level number in the center.
+export const LevelRing = memo(function LevelRing({ level, xpIntoLevel, xpForLevel }) {
+  const pct = xpForLevel ? Math.round((xpIntoLevel / xpForLevel) * 100) : 0;
+  return (
+    <div className="level-ring" style={{ background: `conic-gradient(var(--accent) ${pct}%, rgba(255,255,255,0.15) ${pct}%)` }}>
+      <div className="level-ring-inner">{level}</div>
+    </div>
+  );
+});
+
+// A single home-screen topic tile: square icon + label underneath, matching
+// the original QuizUp's dense topic grid rather than a big descriptive card.
+export const CategoryTile = memo(function CategoryTile({ c, onClick }) {
+  return (
+    <button className="topic-tile" onClick={onClick}>
+      <span className={`tile-icon-sq ${c.grad}`}>
+        {c.icon}
+        {c.tag && <span className="tile-tag-badge">{c.tag}</span>}
+      </span>
+      <span className="tile-label">{c.label}</span>
+    </button>
+  );
+});
+
 export const NavBar = memo(function NavBar({ active, onNav, onQuickMatch }) {
   return (
     <nav className="navbar">

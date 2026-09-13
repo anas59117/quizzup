@@ -104,28 +104,20 @@ body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sa
 .section-title { display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; font-weight: 700; color: var(--text); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
 .see-all { background: none; border: none; color: var(--accent); font-family: inherit; font-size: 0.85em; font-weight: 600; cursor: pointer; text-transform: none; letter-spacing: 0; }
 
-/* Horizontal scroll — popular topics */
-.topics-scroll { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 4px; margin-bottom: 24px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+/* Horizontal scroll — popular topics (same dense tile as the full grid) */
+.topics-scroll { display: flex; gap: 14px; overflow-x: auto; padding-bottom: 4px; margin-bottom: 24px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .topics-scroll::-webkit-scrollbar { display: none; }
-.topic-card { flex: 0 0 110px; height: 120px; border-radius: 16px; border: none; cursor: pointer; color: #fff; font-family: inherit; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; position: relative; overflow: hidden; transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1); box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
-.topic-card:hover { transform: translateY(-4px) scale(1.02); }
-.topic-card:active { transform: scale(0.97); }
-.tc-icon { font-size: 2em; }
-.tc-name { font-weight: 700; font-size: 0.8em; }
-.tc-tag { position: absolute; top: 6px; right: 6px; font-size: 0.7em; }
+.topics-scroll .topic-tile { flex: 0 0 68px; }
 
-/* 2-column grid — all topics */
-.topics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
-.topics-grid.full { gap: 12px; }
-.topic-tile { border-radius: 14px; border: none; cursor: pointer; color: #fff; font-family: inherit; padding: 18px 14px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; position: relative; overflow: hidden; transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1); box-shadow: 0 3px 12px rgba(0,0,0,0.15); text-align: left; }
-.topic-tile:hover { transform: translateY(-3px) scale(1.02); }
-.topic-tile:active { transform: scale(0.97); }
-.topic-tile.tall { padding: 24px 16px; }
-.tile-icon { font-size: 1.8em; margin-bottom: 4px; }
-.tile-icon.lg { font-size: 2.4em; margin-bottom: 8px; }
-.tile-label { font-weight: 800; font-size: 0.95em; }
-.tile-desc { font-size: 0.7em; font-weight: 400; opacity: 0.85; }
-.tile-tag { position: absolute; top: 10px; right: 10px; font-size: 0.8em; }
+/* Dense topic grid — small square icon + label, like the original QuizUp's
+   topic tiles (not a big descriptive gradient card). */
+.topics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px 8px; margin-bottom: 20px; }
+.topics-grid.full { grid-template-columns: repeat(4, 1fr); gap: 20px 10px; }
+.topic-tile { background: none; border: none; cursor: pointer; font-family: inherit; padding: 0; display: flex; flex-direction: column; align-items: center; gap: 6px; transition: transform 0.15s ease; }
+.topic-tile:active { transform: scale(0.93); }
+.tile-icon-sq { width: 100%; aspect-ratio: 1; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.7em; box-shadow: 0 3px 10px rgba(0,0,0,0.25); position: relative; }
+.tile-tag-badge { position: absolute; top: -5px; right: -5px; width: 20px; height: 20px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.65em; }
+.tile-label { font-weight: 700; font-size: 0.7em; color: var(--text); text-align: center; line-height: 1.15; }
 
 /* Social actions row */
 .social-row { display: flex; gap: 10px; margin-bottom: 16px; }
@@ -230,18 +222,20 @@ body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sa
 .player-photo { width: 160px; height: 160px; object-fit: cover; border-radius: 50%; border: 3px solid rgba(255,255,255,0.5); transition: filter 0.2s linear; }
 .photo-credit { margin-top: 6px; font-size: 0.65em; color: rgba(255,255,255,0.5); text-align: center; }
 
-/* Answers — QuizUp white-border on dark */
+/* Answers — QuizUp solid alternating blocks */
 .answers { display: flex; flex-direction: column; gap: 8px; }
-.answer { padding: 15px 18px; background: transparent; border: 2px solid rgba(255,255,255,0.45); border-radius: 10px; color: #f0f0f5; font-weight: 600; font-size: 0.95em; text-align: center; cursor: pointer; transition: all 0.2s cubic-bezier(0.25,0.46,0.45,0.94); font-family: inherit; animation: fadeSlideUp 0.35s ease-out both; }
+.answer { padding: 16px 18px; border: none; border-radius: 10px; color: #fff; font-weight: 700; font-size: 0.95em; text-align: center; cursor: pointer; transition: all 0.15s ease; font-family: inherit; animation: fadeSlideUp 0.35s ease-out both; }
+.answer:nth-child(odd) { background: #c62828; }
+.answer:nth-child(even) { background: #37474f; }
 .answer:nth-child(1) { animation-delay: 0.05s; }
 .answer:nth-child(2) { animation-delay: 0.1s; }
 .answer:nth-child(3) { animation-delay: 0.15s; }
 .answer:nth-child(4) { animation-delay: 0.2s; }
-.answer:hover:not(:disabled) { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.04); transform: translateX(3px); }
+.answer:hover:not(:disabled) { filter: brightness(1.15); transform: translateX(3px); }
 .answer:disabled { cursor: default; }
-.answer.selected { border-color: #fff; background: rgba(255,255,255,0.08); }
-.answer.correct { background: #2e7d32 !important; border-color: #4caf50 !important; color: #fff !important; box-shadow: 0 0 16px rgba(76,175,80,0.35); animation: correctReveal 0.4s cubic-bezier(0.34,1.56,0.64,1); }
-.answer.wrong { background: rgba(183,28,28,0.5) !important; border-color: #c62828 !important; color: rgba(255,255,255,0.7) !important; animation: shake 0.4s ease; }
+.answer.selected { outline: 3px solid #fff; outline-offset: -3px; }
+.answer.correct { background: #2e7d32 !important; outline: none; color: #fff !important; box-shadow: 0 0 16px rgba(76,175,80,0.35); animation: correctReveal 0.4s cubic-bezier(0.34,1.56,0.64,1); }
+.answer.wrong { background: #4e0000 !important; outline: none; color: rgba(255,255,255,0.7) !important; animation: shake 0.4s ease; }
 .answer.dim { opacity: 0.18; }
 
 /* Timer bar — bottom, yellow (QuizUp style) */
@@ -267,6 +261,14 @@ body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sa
 .result-title.tie { color: var(--gold); }
 .result-title.loss { color: rgba(255,255,255,0.5); }
 .result-sub { color: rgba(255,255,255,0.6); font-weight: 600; font-size: 1em; margin-bottom: 16px; animation: fadeSlideUp 0.4s ease-out 0.25s both; }
+
+/* Level-up ring + XP breakdown, shown between the result title and leaderboard */
+.level-ring { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 4px auto 14px; }
+.level-ring-inner { width: 52px; height: 52px; border-radius: 50%; background: #0a0a14; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2em; }
+.xp-breakdown { display: flex; flex-direction: column; gap: 4px; margin-bottom: 16px; font-size: 0.8em; }
+.xpb-row { display: flex; justify-content: space-between; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+.xpb-row.total { color: #fff; font-size: 1.1em; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 6px; margin-top: 2px; }
+.share-link { display: block; margin: 0 auto 16px; background: none; border: none; color: rgba(255,255,255,0.6); font-family: inherit; font-size: 0.8em; font-weight: 600; cursor: pointer; }
 
 /* Results leaderboard — ranked list for 2-4 players */
 .leaderboard { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; animation: fadeSlideUp 0.4s ease-out 0.15s both; }

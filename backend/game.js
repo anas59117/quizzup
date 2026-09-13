@@ -204,14 +204,18 @@ function endGame(game, reason) {
 
   game.players.forEach((p) => {
     const won = !isTie && p.score === topScore;
-    stats.recordResult(p.clientId, won, isTie);
+    const finishBonus = 40;
+    const winBonus = won ? 100 : isTie ? 50 : 0;
+    const xpTotal = p.score + finishBonus + winBonus;
+    stats.recordResult(p.clientId, won, isTie, xpTotal);
     send(p.ws, {
       type: 'game_end', finalScore: p.score,
       won, tie: isTie,
       others: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, score: o.score, clientId: o.clientId })),
       leaderboard: board, reason: reason || 'complete',
-      coins: won ? 50 : 20,
-      xp: 40 + p.score,
+      coins: won ? 50 : isTie ? 35 : 20,
+      xp: xpTotal,
+      xpBreakdown: { matchScore: p.score, finishBonus, winBonus, xpTotal },
       stats: stats.getStats(p.clientId),
     });
   });

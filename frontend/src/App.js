@@ -6,7 +6,7 @@ import { getClientId, useSocial, FriendsScreen, GameChat } from './social';
 import { ensureSignedIn, linkGoogleAccount } from './firebase';
 import { useStats, ProfileStats } from './stats';
 import { RoomLobby, PlayerHud, Leaderboard } from './multiplayer';
-import { AVATARS, CATEGORIES, useTheme, TopControls, NavBar, PlayerPhoto, SoloToggle } from './ui';
+import { AVATARS, CATEGORIES, useTheme, TopControls, NavBar, PlayerPhoto, SoloToggle, CategoryTile, LevelRing } from './ui';
 
 export default function App() {
   const [theme, toggleTheme] = useTheme();
@@ -291,26 +291,14 @@ export default function App() {
           </button>
           <div className="section-title">{'\u{1F525}'} Popular Topics</div>
           <div className="topics-scroll">
-            {CATEGORIES.map((c) => (
-              <button key={c.key} className={`topic-card ${c.grad}`} onClick={() => startWithCategory(c.key)}>
-                <span className="tc-icon">{c.icon}</span>
-                <span className="tc-name">{c.label}</span>
-                {c.tag && <span className="tc-tag">{c.tag}</span>}
-              </button>
-            ))}
+            {CATEGORIES.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} />)}
           </div>
           <div className="section-title">
             <span>All Topics</span>
             <button className="see-all" onClick={() => setStage('categories')}>See all {'›'}</button>
           </div>
           <div className="topics-grid">
-            {CATEGORIES.map((c) => (
-              <button key={c.key} className={`topic-tile ${c.grad}`} onClick={() => startWithCategory(c.key)}>
-                <span className="tile-icon">{c.icon}</span>
-                <span className="tile-label">{c.label}</span>
-                <span className="tile-desc">{c.desc}</span>
-              </button>
-            ))}
+            {CATEGORIES.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} />)}
           </div>
           <div className="social-row">
             <button className="social-btn" onClick={createRoom}>{'⚔️'} Party (2-4)</button>
@@ -358,14 +346,7 @@ export default function App() {
             <button className="back-link" onClick={() => setStage('home')}>{'←'} Back</button>
           </div>
           <div className="topics-grid full">
-            {CATEGORIES.map((c) => (
-              <button key={c.key} className={`topic-tile tall ${c.grad}`} onClick={() => startWithCategory(c.key)}>
-                <span className="tile-icon lg">{c.icon}</span>
-                <span className="tile-label">{c.label}</span>
-                <span className="tile-desc">{c.desc}</span>
-                {c.tag && <span className="tile-tag">{c.tag}</span>}
-              </button>
-            ))}
+            {CATEGORIES.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} />)}
           </div>
         </div>
         <NavBar active="categories" onNav={onNav} onQuickMatch={quickMatch} />
@@ -462,13 +443,27 @@ export default function App() {
     const addableOpponents = opponents.filter(
       (o) => o.clientId && !social.friends.some((f) => f.id === o.clientId) && !friendRequestSent[o.clientId]
     );
+    const shareResult = () => {
+      const text = isSolo ? `J'ai fait ${result.finalScore} points sur QuizzUp !`
+        : won ? 'Je viens de gagner sur QuizzUp !' : tie ? 'Match nul sur QuizzUp !' : 'Je viens de jouer sur QuizzUp !';
+      if (navigator.share) navigator.share({ text }).catch(() => {});
+      else navigator.clipboard?.writeText(text).catch(() => {});
+    };
     return (
       <div className="app game-bg"><TopControls {...topProps} />
         <div className="container center">
           <div className={`result-title ${isSolo ? 'tie' : won ? 'win' : tie ? 'tie' : 'loss'}`}>{isSolo ? 'TERMINÉ !' : won ? 'VICTORY!' : tie ? 'DRAW!' : 'DEFEAT'}</div>
           <div className="result-sub">{left ? 'Someone left' : `Final score: ${result.finalScore}`}</div>
+          {result.stats && <LevelRing level={result.stats.level} xpIntoLevel={result.stats.xpIntoLevel} xpForLevel={result.stats.xpForLevel} />}
+          <div className="xp-breakdown">
+            <div className="xpb-row"><span>Score du match</span><span>{result.finalScore}</span></div>
+            <div className="xpb-row"><span>Bonus fin</span><span>+{result.xpBreakdown?.finishBonus ?? 0}</span></div>
+            <div className="xpb-row"><span>Bonus victoire</span><span>+{result.xpBreakdown?.winBonus ?? 0}</span></div>
+            <div className="xpb-row total"><span>XP totale</span><span>{result.xp}</span></div>
+          </div>
           <Leaderboard leaderboard={result.leaderboard} myId={myId} />
-          <div className="rewards-row"><span className="rw">+{result.coins} coins</span><span className="rw">+{result.xp} XP</span></div>
+          <div className="rewards-row"><span className="rw">+{result.coins} coins</span></div>
+          <button className="share-link" onClick={shareResult}>{'\u{1F4E4}'} Partager</button>
           {addableOpponents.map((o) => (
             <button key={o.clientId} className="add-friend-link" onClick={() => {
               social.addFriend(o.clientId);
