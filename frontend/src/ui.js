@@ -19,6 +19,16 @@ export const CATEGORIES = [
   // provided; until then the emoji `icon` is the fallback.
   { key: 'netflix', label: 'Netflix', icon: '\u{1F3AC}', logo: null, grad: 'g13', desc: 'Séries & films Netflix' },
   { key: 'got', label: 'Game of Thrones', icon: '\u{1F409}', logo: null, grad: 'g14', desc: 'Le Trône de Fer' },
+  { key: 'harry_potter', label: 'Harry Potter', icon: '\u{1FA84}', grad: 'g15', desc: 'Poudlard & sorcellerie' },
+  { key: 'marvel', label: 'Marvel', icon: '\u{1F9B8}', grad: 'g16', desc: 'Avengers & super-héros' },
+  { key: 'star_wars', label: 'Star Wars', icon: '\u{2694}\u{FE0F}', grad: 'g17', desc: 'Jedi, Sith & la Force' },
+  { key: 'disney', label: 'Disney Classics', icon: '\u{1F3F0}', grad: 'g18', desc: 'Contes animés cultes' },
+  { key: 'pokemon', label: 'Pokémon', icon: '\u{26A1}', grad: 'g19', desc: 'Dresseurs & Pokéballs' },
+  { key: 'f1', label: 'Formule 1', icon: '\u{1F3CE}\u{FE0F}', grad: 'g20', desc: 'Écuries & champions' },
+  { key: 'nba', label: 'Basket NBA', icon: '\u{1F3C0}', grad: 'g21', desc: 'Légendes du parquet' },
+  { key: 'tv_shows', label: 'Séries Cultes', icon: '\u{1F4FA}', grad: 'g22', desc: 'Friends, House & co.' },
+  { key: 'histoire_fr', label: 'Histoire de France', icon: '\u{269C}\u{FE0F}', grad: 'g23', desc: 'Rois, guerres & dates' },
+  { key: 'retro_games', label: 'Jeux Vidéo Rétro', icon: '\u{1F47E}', grad: 'g24', desc: 'Mario, Sonic & arcade' },
 ];
 
 export function useTheme() {
