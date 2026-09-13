@@ -11,6 +11,14 @@
 const trivia = require('./trivia-api');
 const reports = require('./reports');
 
+// "Guess the player" photo questions, pre-built (image, credit, baked
+// distractors) by scripts/fetch-player-photos.js + a one-off build step.
+// Kept as data files rather than inline literals so this file stays short.
+const playersFootFr = require('./data/players-foot-fr.json');
+const playersRapFr = require('./data/players-rap-fr.json');
+const playersPremierLeague = require('./data/players-premier-league.json');
+const playersLaLiga = require('./data/players-la-liga.json');
+
 const CATEGORIES = {
   movies: {
     label: 'Movies',
@@ -122,6 +130,7 @@ const CATEGORIES = {
       { text: 'En août 2018, une bagarre médiatisée entre Booba et Kaaris a éclaté dans quel aéroport ?', answers: ['Roissy CDG', 'Orly', 'Marseille Provence', 'Nice'], correct: 1 },
       { text: 'Bigflo et Oli sont originaires de quelle ville ?', answers: ['Bordeaux', 'Lyon', 'Toulouse', 'Nantes'], correct: 2 },
       { text: 'SCH est originaire de quelle ville ?', answers: ['Paris', 'Marseille', 'Aix-en-Provence', 'Toulon'], correct: 1 },
+      ...playersRapFr,
     ],
   },
   foot_fr: {
@@ -138,7 +147,18 @@ const CATEGORIES = {
       { text: 'L’Olympique Lyonnais joue dans quel stade depuis 2016 ?', answers: ['Stade Vélodrome', 'Parc des Princes', 'Groupama Stadium', 'Allianz Riviera'], correct: 2 },
       { text: 'Quel est le principal club de la ville de Monaco en Ligue 1 ?', answers: ['AS Monaco', 'OGC Nice', 'SC Toulon', 'AS Cannes'], correct: 0 },
       { text: 'Michel Platini a remporté combien de Ballons d’Or consécutifs (1983-1985) ?', answers: ['1', '2', '3', '4'], correct: 2 },
+      ...playersFootFr,
     ],
+  },
+  premier_league: {
+    label: 'Premier League',
+    icon: '🦁',
+    questions: [...playersPremierLeague],
+  },
+  la_liga: {
+    label: 'La Liga',
+    icon: '🐂',
+    questions: [...playersLaLiga],
   },
   cinema_fr: {
     label: 'Cinéma Français',
