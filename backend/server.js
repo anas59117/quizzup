@@ -166,6 +166,21 @@ function handleGameplay(ws, data, state) {
     return true;
   }
 
+  // Solo play: skips matchmaking entirely and starts a 1-player match. The
+  // game engine already treats `players` generically (score/reveal/end-game
+  // logic work the same whether there are 1, 2, or 4 of them), so no changes
+  // to game.js were needed to support this.
+  if (data.type === 'solo') {
+    if (isInActiveGame(playerId)) return true;
+    if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
+    const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
+    const categoryKey = typeof data.category === 'string' ? data.category : null;
+    game.send(ws, { type: 'joined', playerId, name: state.name });
+    game.startGame([{ ws, id: playerId, clientId: state.clientId, name: state.name, avatar }], categoryKey)
+      .catch(() => game.send(ws, { type: 'error' }));
+    return true;
+  }
+
   if (data.type === 'join') {
     if (isInActiveGame(playerId)) return true;
     if (waitingPlayers.some((w) => w.id === playerId)) return true;

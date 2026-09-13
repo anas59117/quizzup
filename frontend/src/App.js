@@ -6,7 +6,7 @@ import { getClientId, useSocial, FriendsScreen, GameChat } from './social';
 import { ensureSignedIn, linkGoogleAccount } from './firebase';
 import { useStats, ProfileStats } from './stats';
 import { RoomLobby, PlayerHud, Leaderboard } from './multiplayer';
-import { AVATARS, CATEGORIES, useTheme, TopControls, NavBar, PlayerPhoto } from './ui';
+import { AVATARS, CATEGORIES, useTheme, TopControls, NavBar, PlayerPhoto, SoloToggle } from './ui';
 
 export default function App() {
   const [theme, toggleTheme] = useTheme();
@@ -191,13 +191,14 @@ export default function App() {
     if (stage === 'home' && clientId && (!wsRef.current || wsRef.current.readyState > 1)) connect({ type: 'identify' });
   }, [stage, connect, clientId]);
 
+  const [soloMode, setSoloMode] = useState(false);
   const startWithCategory = useCallback((catKey) => {
-    connect({ type: 'join', category: catKey });
-  }, [connect]);
+    connect({ type: soloMode ? 'solo' : 'join', category: catKey });
+  }, [connect, soloMode]);
 
   const quickMatch = useCallback(() => {
-    connect({ type: 'join', category: null });
-  }, [connect]);
+    connect({ type: soloMode ? 'solo' : 'join', category: null });
+  }, [connect, soloMode]);
 
   const createRoom = useCallback(() => {
     connect({ type: 'create_room', category: null });
@@ -283,6 +284,7 @@ export default function App() {
             </div>
             <div className="home-avatar-chip" onClick={() => setStage('profile')}>{avatar}</div>
           </div>
+          <SoloToggle solo={soloMode} onToggle={() => setSoloMode((s) => !s)} />
           <button className="quick-play" onClick={quickMatch}>
             <span className="qp-left"><span className="qp-bolt">{'⚡'}</span> Quick Play</span>
             <span className="qp-sub">Random topic</span>
@@ -455,6 +457,7 @@ export default function App() {
   if (stage === 'finished' && result) {
     const { won, tie } = result;
     const left = result.reason === 'opponent_disconnected' || result.reason === 'opponent_left';
+    const isSolo = opponents.length === 0 && !left;
     const rematch = () => { playAgain(); quickMatch(); };
     const addableOpponents = opponents.filter(
       (o) => o.clientId && !social.friends.some((f) => f.id === o.clientId) && !friendRequestSent[o.clientId]
@@ -462,7 +465,7 @@ export default function App() {
     return (
       <div className="app game-bg"><TopControls {...topProps} />
         <div className="container center">
-          <div className={`result-title ${won ? 'win' : tie ? 'tie' : 'loss'}`}>{won ? 'VICTORY!' : tie ? 'DRAW!' : 'DEFEAT'}</div>
+          <div className={`result-title ${isSolo ? 'tie' : won ? 'win' : tie ? 'tie' : 'loss'}`}>{isSolo ? 'TERMINÉ !' : won ? 'VICTORY!' : tie ? 'DRAW!' : 'DEFEAT'}</div>
           <div className="result-sub">{left ? 'Someone left' : `Final score: ${result.finalScore}`}</div>
           <Leaderboard leaderboard={result.leaderboard} myId={myId} />
           <div className="rewards-row"><span className="rw">+{result.coins} coins</span><span className="rw">+{result.xp} XP</span></div>
@@ -476,7 +479,7 @@ export default function App() {
           ))}
           <div className="result-actions">
             <button className="ra-btn rematch" onClick={rematch}>Rematch</button>
-            <button className="ra-btn new-opp" onClick={playAgain}>New opponent</button>
+            <button className="ra-btn new-opp" onClick={playAgain}>{isSolo ? 'New game' : 'New opponent'}</button>
             <button className="ra-btn see-res" onClick={playAgain}>Back to home</button>
           </div>
         </div></div>);

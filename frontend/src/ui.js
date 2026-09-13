@@ -42,6 +42,14 @@ export const TopControls = memo(function TopControls({ muted, toggleMute, theme,
   );
 });
 
+export const SoloToggle = memo(function SoloToggle({ solo, onToggle }) {
+  return (
+    <button className={`solo-toggle ${solo ? 'active' : ''}`} onClick={onToggle}>
+      {solo ? '\u{1F9CD} Solo' : '\u{1F465} Multijoueur'}
+    </button>
+  );
+});
+
 // "Guess the player" rounds carry an optional photo. It starts sharp and
 // blurs more as the clock runs down — like the original QuizUp — to reward
 // fast answers, then shows full + its required CC attribution once revealed.
