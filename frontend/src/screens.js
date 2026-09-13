@@ -142,7 +142,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
       <PlayerHud me={{ avatar, name, score }} others={opponents} revealing={sr} />
       <PlayerPhoto image={question.image} credit={question.credit} timeLeft={timeLeft} timeLimit={question.timeLimit} revealed={sr} />
       <div className="question">{question.question}</div>
-      <div className="answers">
+      <div className={`answers ${question.image ? '' : 'single-col'}`}>
         {question.answers.map((a, idx) => <button key={idx} className={ansCls(idx)} onClick={() => answer(idx)} disabled={selected !== null || sr}>{a}</button>)}
       </div>
       <div className="timer-bar-bottom"><div className={`timer-bar-fill ${timeLeft <= 3 && !sr ? 'urgent' : ''}`} style={{ width: sr ? '0%' : `${pct}%` }} /></div>
