@@ -32,6 +32,11 @@ final class GameSocket: ObservableObject {
     @Published var name: String = UserDefaults.standard.string(forKey: "quizzup.name") ?? ""
     @Published var avatar: String = UserDefaults.standard.string(forKey: "quizzup.avatar") ?? "🐺"
     @Published var soloMode = false
+    // True from the moment a join/solo/quick-match request is sent until
+    // the server actually answers (waiting, round_intro, or error) — guards
+    // against a double-tap firing two start requests before the server's
+    // own re-entrancy check (isInActiveGame in server.js) can see the first.
+    @Published var isStarting = false
     @Published var categories: [Category] = []
 
     @Published var myId: String?
@@ -77,7 +82,10 @@ final class GameSocket: ObservableObject {
             guard let self else { return }
             switch result {
             case .failure:
-                Task { @MainActor in self.stage = .error }
+                // Drop the dead task so a later connect() (e.g. after the
+                // user taps "Réessayer") actually opens a new socket instead
+                // of silently reusing/sending on this broken one forever.
+                Task { @MainActor in self.disconnect(); self.stage = .error }
             case .success(let message):
                 if case .data(let data) = message { Task { @MainActor in self.handle(data) } }
                 if case .string(let str) = message, let data = str.data(using: .utf8) {
@@ -98,12 +106,14 @@ final class GameSocket: ObservableObject {
             myId = obj["playerId"] as? String
         case "waiting":
             stage = .waiting
+            isStarting = false
         case "game_start":
             if let arr = obj["opponents"], let d = try? JSONSerialization.data(withJSONObject: arr) {
                 opponents = (try? decoder.decode([Opponent].self, from: d)) ?? []
             }
             totalRounds = obj["totalRounds"] as? Int ?? 6
             score = 0
+            isStarting = false
             // No stage change here — the server always sends round_intro
             // immediately after game_start, which drives the transition.
         case "round_intro":
@@ -137,6 +147,7 @@ final class GameSocket: ObservableObject {
                 stopTimer()
             }
         case "error":
+            isStarting = false
             stage = .error
         default:
             break
@@ -181,11 +192,15 @@ final class GameSocket: ObservableObject {
     }
 
     func startWithCategory(_ key: String) {
+        guard !isStarting else { return }
+        isStarting = true
         persistIdentity()
         connect(["type": soloMode ? "solo" : "join", "name": name, "avatar": avatar, "category": key])
     }
 
     func quickMatch() {
+        guard !isStarting else { return }
+        isStarting = true
         persistIdentity()
         connect(["type": soloMode ? "solo" : "join", "name": name, "avatar": avatar, "category": NSNull()])
     }
@@ -209,5 +224,6 @@ final class GameSocket: ObservableObject {
         stopTimer()
         task?.cancel(with: .goingAway, reason: nil)
         task = nil
+        isStarting = false
     }
 }

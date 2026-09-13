@@ -44,7 +44,9 @@ struct HomeView: View {
                     .padding()
                     .background(Theme.accent)
                     .cornerRadius(14)
+                    .opacity(game.isStarting ? 0.6 : 1)
                 }
+                .disabled(game.isStarting)
 
                 Text("🔥 TOUS LES THÈMES").font(.caption.bold()).foregroundColor(Theme.textDim)
 
@@ -64,6 +66,8 @@ struct HomeView: View {
                         }
                     }
                 }
+                .disabled(game.isStarting)
+                .opacity(game.isStarting ? 0.6 : 1)
             }
             .padding(20)
         }

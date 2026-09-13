@@ -10,6 +10,12 @@ struct Category: Codable, Identifiable, Hashable {
     var id: String { key }
 }
 
+// Custom Decodable: game_start's `opponents` only ever sends
+// {id, name, avatar, clientId} (see game.js:74) — score/answered/correct
+// arrive later via round_result/game_end. Swift's synthesized Decodable
+// does NOT fall back to a property's default value for a missing key (only
+// Optional properties tolerate an absent key), so without this the whole
+// array would fail to decode and silently become empty for every match.
 struct Opponent: Codable, Identifiable, Hashable {
     let id: String
     let name: String
@@ -18,6 +24,24 @@ struct Opponent: Codable, Identifiable, Hashable {
     var score: Int = 0
     var answered: Bool = false
     var correct: Bool = false
+
+    enum CodingKeys: String, CodingKey { case id, name, avatar, clientId, score, answered, correct }
+
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        id = try c.decode(String.self, forKey: .id)
+        name = try c.decode(String.self, forKey: .name)
+        avatar = try c.decode(String.self, forKey: .avatar)
+        clientId = try c.decodeIfPresent(String.self, forKey: .clientId)
+        score = try c.decodeIfPresent(Int.self, forKey: .score) ?? 0
+        answered = try c.decodeIfPresent(Bool.self, forKey: .answered) ?? false
+        correct = try c.decodeIfPresent(Bool.self, forKey: .correct) ?? false
+    }
+
+    init(id: String, name: String, avatar: String, clientId: String? = nil, score: Int = 0, answered: Bool = false, correct: Bool = false) {
+        self.id = id; self.name = name; self.avatar = avatar; self.clientId = clientId
+        self.score = score; self.answered = answered; self.correct = correct
+    }
 }
 
 struct RoundIntro: Codable {
