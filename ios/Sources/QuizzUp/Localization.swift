@@ -45,6 +45,7 @@ enum L10n {
             "connectionLost": "Connexion perdue",
             "serverUnreachable": "Impossible de joindre le serveur.",
             "retry": "Réessayer",
+            "privacyPolicy": "Confidentialité",
         ],
         "en": [
             "legendBack": "THE LEGEND IS BACK",
@@ -85,6 +86,7 @@ enum L10n {
             "connectionLost": "Connection lost",
             "serverUnreachable": "Couldn't reach the game server.",
             "retry": "Retry",
+            "privacyPolicy": "Privacy Policy",
         ],
     ]
 

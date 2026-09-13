@@ -49,6 +49,12 @@ struct JoinView: View {
             }
             .buttonStyle(PrimaryButtonStyle())
             .disabled(game.name.trimmingCharacters(in: .whitespaces).isEmpty)
+
+            if let url = URL(string: "https://\(GameSocket.frontendHost)/privacy.html") {
+                Link(game.t("privacyPolicy"), destination: url)
+                    .font(.caption)
+                    .foregroundColor(Theme.textDim)
+            }
             Spacer()
         }
         .padding(24)
