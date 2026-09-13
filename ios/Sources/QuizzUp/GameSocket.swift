@@ -38,6 +38,13 @@ final class GameSocket: ObservableObject {
     // own re-entrancy check (isInActiveGame in server.js) can see the first.
     @Published var isStarting = false
     @Published var categories: [Category] = []
+    @Published var lang: String = L10n.detectDefaultLang()
+
+    func t(_ key: String, _ vars: [String: String] = [:]) -> String { L10n.t(key, lang: lang, vars) }
+    func toggleLang() {
+        lang = lang == "fr" ? "en" : "fr"
+        UserDefaults.standard.set(lang, forKey: "quizzup.lang")
+    }
 
     @Published var myId: String?
     @Published var opponents: [Opponent] = []

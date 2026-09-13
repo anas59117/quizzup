@@ -11,7 +11,7 @@ struct QuestionView: View {
             ScrollView {
             VStack(spacing: 14) {
                 VStack(spacing: 2) {
-                    Text("TIME").font(.caption2.bold()).foregroundColor(Theme.textDim)
+                    Text(game.t("time")).font(.caption2.bold()).foregroundColor(Theme.textDim)
                     Text(revealing ? "✓" : "\(game.timeLeft)")
                         .font(.system(size: 26, weight: .heavy))
                         .foregroundColor(game.timeLeft <= 3 && !revealing ? .red : Theme.gold)
@@ -59,7 +59,7 @@ struct QuestionView: View {
                 .padding(.horizontal)
 
                 if let reveal = game.reveal {
-                    Text(reveal.yourCorrect ? "+\(reveal.pointsEarned) pts" : (reveal.yourAnswer == nil ? "Time up" : "Wrong"))
+                    Text(reveal.yourCorrect ? game.t("ptsEarned", ["n": "\(reveal.pointsEarned)"]) : (reveal.yourAnswer == nil ? game.t("timeUp") : game.t("wrong")))
                         .font(.headline)
                         .foregroundColor(reveal.yourCorrect ? Theme.green : Theme.red)
                 }

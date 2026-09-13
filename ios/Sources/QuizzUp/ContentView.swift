@@ -25,9 +25,9 @@ struct ErrorView: View {
     @EnvironmentObject var game: GameSocket
     var body: some View {
         VStack(spacing: 16) {
-            Text("Connexion perdue").font(.title2.bold())
-            Text("Impossible de joindre le serveur.").foregroundColor(Theme.textDim)
-            Button("Réessayer") { game.stage = .home }
+            Text(game.t("connectionLost")).font(.title2.bold())
+            Text(game.t("serverUnreachable")).foregroundColor(Theme.textDim)
+            Button(game.t("retry")) { game.stage = .home }
                 .buttonStyle(PrimaryButtonStyle())
         }
         .padding()

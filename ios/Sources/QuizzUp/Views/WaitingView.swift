@@ -26,10 +26,10 @@ struct WaitingView: View {
                         .overlay(Circle().stroke(Theme.border, style: StrokeStyle(lineWidth: 2, dash: [5])))
                         .clipShape(Circle())
                         .opacity(pulse ? 0.4 : 1)
-                    Text("Searching…").font(.headline).foregroundColor(Theme.textDim)
+                    Text(game.t("searching")).font(.headline).foregroundColor(Theme.textDim)
                 }
             }
-            Text("En recherche d'un adversaire…").foregroundColor(Theme.textDim)
+            Text(game.t("searchingOpponent")).foregroundColor(Theme.textDim)
             Spacer()
         }
         .onAppear {

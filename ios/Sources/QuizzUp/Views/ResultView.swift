@@ -15,7 +15,7 @@ struct ResultView: View {
                         .font(.system(size: 30, weight: .heavy))
                         .foregroundColor(titleColor(isSolo: isSolo, won: result.won, tie: result.tie))
 
-                    Text(left ? "Someone left" : "Final score: \(result.finalScore)")
+                    Text(left ? game.t("someoneLeft") : game.t("finalScore", ["n": "\(result.finalScore)"]))
                         .foregroundColor(Theme.textDim)
 
                     if let stats = result.stats {
@@ -23,10 +23,10 @@ struct ResultView: View {
                     }
 
                     VStack(spacing: 6) {
-                        xpRow("Score du match", "\(result.xpBreakdown.matchScore)")
-                        xpRow("Bonus fin", "+\(result.xpBreakdown.finishBonus)")
-                        xpRow("Bonus victoire", "+\(result.xpBreakdown.winBonus)")
-                        xpRow("XP totale", "\(result.xp)", bold: true)
+                        xpRow(game.t("matchScore"), "\(result.xpBreakdown.matchScore)")
+                        xpRow(game.t("finishBonus"), "+\(result.xpBreakdown.finishBonus)")
+                        xpRow(game.t("winBonus"), "+\(result.xpBreakdown.winBonus)")
+                        xpRow(game.t("xpTotal"), "\(result.xp)", bold: true)
                     }
                     .padding()
                     .background(Theme.surface)
@@ -48,18 +48,18 @@ struct ResultView: View {
                         }
                     }
 
-                    Text("+\(result.coins) coins").font(.headline).foregroundColor(Theme.gold)
+                    Text(game.t("coins", ["n": "\(result.coins)"])).font(.headline).foregroundColor(Theme.gold)
 
                     VStack(spacing: 10) {
-                        Button("Rematch") {
+                        Button(game.t("rematch")) {
                             game.playAgain()
                             game.quickMatch()
                         }.buttonStyle(PrimaryButtonStyle())
 
-                        Button(isSolo ? "New game" : "New opponent") { game.playAgain() }
+                        Button(isSolo ? game.t("newGame") : game.t("newOpponent")) { game.playAgain() }
                             .buttonStyle(SecondaryButtonStyle())
 
-                        Button("Back to home") { game.playAgain() }
+                        Button(game.t("backHome")) { game.playAgain() }
                             .buttonStyle(SecondaryButtonStyle())
                     }
                 }
@@ -69,7 +69,7 @@ struct ResultView: View {
     }
 
     private func titleText(isSolo: Bool, won: Bool, tie: Bool) -> String {
-        isSolo ? "TERMINÉ !" : won ? "VICTORY!" : tie ? "DRAW!" : "DEFEAT"
+        isSolo ? game.t("finished") : won ? game.t("victory") : tie ? game.t("draw") : game.t("defeat")
     }
     private func titleColor(isSolo: Bool, won: Bool, tie: Bool) -> Color {
         isSolo || tie ? Theme.gold : won ? Theme.green : Theme.red

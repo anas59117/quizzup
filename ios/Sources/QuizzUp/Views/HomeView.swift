@@ -9,10 +9,12 @@ struct HomeView: View {
             VStack(alignment: .leading, spacing: 20) {
                 HStack {
                     VStack(alignment: .leading) {
-                        Text("Hey \(game.name) 👋").font(.caption).foregroundColor(Theme.textDim)
+                        Text("\(game.t("hey", ["name": game.name])) 👋").font(.caption).foregroundColor(Theme.textDim)
                         (Text("Quizz").font(.title2.bold()) + Text("Up").font(.title2.bold()).foregroundColor(Theme.accent))
                     }
                     Spacer()
+                    Button(game.lang == "fr" ? "🇫🇷" : "🇬🇧") { game.toggleLang() }
+                        .font(.system(size: 18))
                     Text(game.avatar).font(.system(size: 20))
                         .frame(width: 40, height: 40)
                         .background(Theme.accent)
@@ -22,7 +24,7 @@ struct HomeView: View {
                 Button {
                     game.soloMode.toggle()
                 } label: {
-                    Text(game.soloMode ? "🧍 Solo" : "👥 Multijoueur")
+                    Text(game.soloMode ? "🧍 \(game.t("solo"))" : "👥 \(game.t("multiplayer"))")
                         .font(.caption.bold())
                         .padding(.horizontal, 14).padding(.vertical, 6)
                         .background(game.soloMode ? Theme.accent : Theme.surface)
@@ -35,8 +37,8 @@ struct HomeView: View {
                 Button { game.quickMatch() } label: {
                     HStack {
                         VStack(alignment: .leading) {
-                            Text("⚡ Quick Play").font(.headline.bold())
-                            Text("Random topic").font(.caption).opacity(0.8)
+                            Text("⚡ \(game.t("quickPlay"))").font(.headline.bold())
+                            Text(game.t("randomTopic")).font(.caption).opacity(0.8)
                         }
                         Spacer()
                     }
@@ -48,7 +50,7 @@ struct HomeView: View {
                 }
                 .disabled(game.isStarting)
 
-                Text("🔥 TOUS LES THÈMES").font(.caption.bold()).foregroundColor(Theme.textDim)
+                Text("🔥 \(game.t("allThemes"))").font(.caption.bold()).foregroundColor(Theme.textDim)
 
                 LazyVGrid(columns: columns, spacing: 16) {
                     ForEach(game.categories) { c in

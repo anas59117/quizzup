@@ -7,8 +7,13 @@ struct JoinView: View {
 
     var body: some View {
         VStack(spacing: 20) {
+            HStack {
+                Spacer()
+                Button(game.lang == "fr" ? "🇫🇷" : "🇬🇧") { game.toggleLang() }
+                    .font(.system(size: 20))
+            }
             Spacer()
-            Text("⚡ THE LEGEND IS BACK")
+            Text("⚡ \(game.t("legendBack"))")
                 .font(.caption.bold())
                 .padding(.horizontal, 14).padding(.vertical, 6)
                 .background(Theme.accent)
@@ -16,9 +21,9 @@ struct JoinView: View {
                 .cornerRadius(20)
             Text("Quizz").font(.system(size: 40, weight: .heavy)) +
             Text("Up").font(.system(size: 40, weight: .heavy)).foregroundColor(Theme.accent)
-            Text("Real-time trivia battles").foregroundColor(Theme.textDim)
+            Text(game.t("tagline")).foregroundColor(Theme.textDim)
 
-            TextField("Choose your username", text: $game.name)
+            TextField(game.t("usernamePlaceholder"), text: $game.name)
                 .textFieldStyle(.plain)
                 .padding()
                 .background(Theme.surface)
@@ -38,7 +43,7 @@ struct JoinView: View {
                 }
             }
 
-            Button("Continue →") {
+            Button(game.t("continue")) {
                 game.persistIdentity()
                 game.stage = .home
             }
