@@ -2,12 +2,13 @@ import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import './App.css';
 import SFX from './sounds';
 import music from './music';
-import { getClientId, useSocial, FriendsScreen, GameChat } from './social';
+import { getClientId, useSocial, GameChat } from './social';
 import { ensureSignedIn, linkGoogleAccount } from './firebase';
-import { useStats, ProfileStats } from './stats';
+import { useStats } from './stats';
 import { useFeed, FeedScreen } from './feed';
-import { RoomLobby, PlayerHud, Leaderboard } from './multiplayer';
-import { AVATARS, CATEGORIES, useTheme, TopControls, NavBar, PlayerPhoto, SoloToggle, CategoryTile, LevelRing, JoinScreen, ErrorScreen } from './ui';
+import { RoomLobby } from './multiplayer';
+import { AVATARS, useTheme, TopControls, NavBar, JoinScreen, ErrorScreen } from './ui';
+import { HomeContent, EnterCodeContent, CategoriesContent, ProfileContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent } from './screens';
 import { useI18n } from './i18n';
 
 export default function App() {
@@ -268,35 +269,12 @@ export default function App() {
     return (
       <div className="app app-nav app-top">
         <TopControls {...topProps} />
-        <div className="container wide">
-          <div className="home-head">
-            <div>
-              <div className="home-greeting">{t('hey', { name })} {'\u{1F44B}'}</div>
-              <div className="home-logo-sm">Quizz<span>Up</span></div>
-            </div>
-            <button className="home-avatar-chip" onClick={() => setStage('profile')} aria-label="Open profile">{avatar}</button>
-          </div>
-          <SoloToggle solo={soloMode} onToggle={() => setSoloMode((s) => !s)} />
-          <button className="quick-play" onClick={quickMatch}>
-            <span className="qp-left"><span className="qp-bolt">{'⚡'}</span> {t('quickPlay')}</span>
-            <span className="qp-sub">{t('randomTopic')}</span>
-          </button>
-          <div className="section-title">{'\u{1F525}'} {t('popularTopics')}</div>
-          <div className="topics-scroll">
-            {CATEGORIES.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} />)}
-          </div>
-          <div className="section-title">
-            <span>{t('allTopics')}</span>
-            <button className="see-all" onClick={() => setStage('categories')}>{t('seeAll')}</button>
-          </div>
-          <div className="topics-grid">
-            {CATEGORIES.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} />)}
-          </div>
-          <div className="social-row">
-            <button className="social-btn" onClick={createRoom}>{'⚔️'} {t('party')}</button>
-            <button className="social-btn outline" onClick={() => { setJoinError(false); setJoinCode(''); setStage('enter_code'); }}>{'\u{1F511}'} {t('joinCode')}</button>
-          </div>
-        </div>
+        <HomeContent
+          name={name} avatar={avatar} soloMode={soloMode} setSoloMode={setSoloMode}
+          quickMatch={quickMatch} startWithCategory={startWithCategory}
+          onOpenProfile={() => setStage('profile')} onSeeAll={() => setStage('categories')}
+          createRoom={createRoom} onOpenEnterCode={() => { setJoinError(false); setJoinCode(''); setStage('enter_code'); }}
+        />
         <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
       </div>
     );
@@ -317,30 +295,18 @@ export default function App() {
   if (stage === 'enter_code') {
     return (
       <div className="app"><TopControls {...topProps} />
-        <div className="container center">
-          <div className="status-label">{'\u{1F511}'} {t('joinFriend')}</div>
-          <div className="room-code-label">{t('enterCode')}</div>
-          <input className={`input code-input ${joinError ? 'err' : ''}`} placeholder="ABC12" value={joinCode} maxLength={5}
-            onChange={(e) => { setJoinCode(e.target.value.toUpperCase()); setJoinError(false); }} />
-          {joinError && <div className="code-err-msg">{t('codeError')}</div>}
-          <button className="btn" disabled={joinCode.trim().length < 4} onClick={() => joinRoom(joinCode)}>{t('joinMatch')}</button>
-          <button className="home-themes-link" onClick={() => setStage('home')}>{t('back')}</button>
-        </div></div>);
+        <EnterCodeContent
+          joinCode={joinCode} setJoinCode={setJoinCode} joinError={joinError} setJoinError={setJoinError}
+          joinRoom={joinRoom} onBack={() => setStage('home')}
+        />
+      </div>);
   }
 
   if (stage === 'categories') {
     return (
       <div className="app app-nav app-top">
         <TopControls {...topProps} />
-        <div className="container wide">
-          <div className="cat-header">
-            <h2>{t('allTopics')}</h2>
-            <button className="back-link" onClick={() => setStage('home')}>{t('back')}</button>
-          </div>
-          <div className="topics-grid full">
-            {CATEGORIES.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} />)}
-          </div>
-        </div>
+        <CategoriesContent startWithCategory={startWithCategory} onBack={() => setStage('home')} />
         <NavBar active="categories" onNav={onNav} onQuickMatch={quickMatch} />
       </div>
     );
@@ -362,129 +328,55 @@ export default function App() {
   }
 
   if (stage === 'profile') {
-    const isGoogleLinked = firebaseUser && !firebaseUser.isAnonymous;
     return (
       <div className="app app-nav app-top"><TopControls {...topProps} />
-        <div className="container">
-          <div className="profile-head">
-            <div className="profile-avatar">{avatar}</div>
-            <div className="profile-name">{name || 'Player'}</div>
-            <div className="profile-sub">{t('level')} {statsHook.stats.level} {'·'} {t('rookie')}</div>
-          </div>
-          <ProfileStats stats={statsHook.stats} />
-          {isGoogleLinked ? (
-            <div className="account-linked">{'✓'} {t('connectedGoogle', { email: firebaseUser.email })}</div>
-          ) : (
-            <button className="social-btn outline account-link-btn" onClick={linkGoogle} disabled={linking || !clientId}>
-              {linking ? t('connecting') : t('connectGoogle')}
-            </button>
-          )}
-          <FriendsScreen social={social} />
-        </div><NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
+        <ProfileContent
+          avatar={avatar} name={name} stats={statsHook.stats}
+          isGoogleLinked={!!(firebaseUser && !firebaseUser.isAnonymous)} googleEmail={firebaseUser?.email}
+          linkGoogle={linkGoogle} linking={linking} clientId={clientId} social={social}
+        />
+        <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);
   }
 
   if (stage === 'waiting') {
     return (
       <div className="app game-bg"><TopControls {...topProps} />
-        <div className="container center">
-          <div className="vs-screen">
-            <div className="vs-player">
-              <div className="vs-ava me">{avatar}</div>
-              <div className="vs-name">{name}</div>
-              <div className="vs-rank">{t('novice')}</div>
-            </div>
-            <div className="vs-bolt-wrap"><div className="vs-bolt">{'⚡'}</div></div>
-            <div className="vs-player">
-              <div className="vs-ava searching">?</div>
-              <div className="vs-name dim">{t('searching')}</div>
-            </div>
-          </div>
-          <div className="loading-bar"><div className="loading-fill" /></div>
-        </div></div>);
+        <WaitingContent avatar={avatar} name={name} />
+      </div>);
   }
 
   if (stage === 'playing' && intro && !question) {
     return (
       <div className="app game-bg"><TopControls {...topProps} />
-        <div className="container center">
-          <div className={`round-intro-icon ${intro.isBonus ? 'bonus' : ''}`}>{intro.icon}</div>
-          <div className="round-intro-cat">{intro.category}</div>
-          <div className="round-intro-round">{intro.isBonus ? t('bonusRound') : t('round', { n: intro.round })}</div>
-          <div className="round-intro-sub">{intro.isBonus ? t('doublePoints') : t('roundOf', { n: intro.round, total: totalRounds })}</div>
-        </div></div>);
+        <RoundIntroContent intro={intro} totalRounds={totalRounds} />
+      </div>);
   }
 
   if (stage === 'playing' && question) {
-    const sr = !!reveal;
-    const pct = Math.max(0, Math.min(100, (timeLeft / question.timeLimit) * 100));
-    const ansCls = (idx) => {
-      if (sr) return idx === reveal.correctIndex ? 'answer correct' : idx === selected ? 'answer wrong' : 'answer dim';
-      return idx === selected ? 'answer selected' : 'answer';
-    };
     return (
       <div className="app game-bg"><TopControls {...topProps} />
-        <div className="container game">
-          <div className="hud-timer-block">
-            <span className="hud-timer-label">{t('time')}</span>
-            <span className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr ? '✓' : timeLeft}</span>
-          </div>
-          <PlayerHud me={{ avatar, name, score }} others={opponents} revealing={sr} />
-          <PlayerPhoto image={question.image} credit={question.credit} timeLeft={timeLeft} timeLimit={question.timeLimit} revealed={sr} />
-          <div className="question">{question.question}</div>
-          <div className="answers">
-            {question.answers.map((a, idx) => <button key={idx} className={ansCls(idx)} onClick={() => answer(idx)} disabled={selected !== null || sr}>{a}</button>)}
-          </div>
-          <div className="timer-bar-bottom"><div className={`timer-bar-fill ${timeLeft <= 3 && !sr ? 'urgent' : ''}`} style={{ width: sr ? '0%' : `${pct}%` }} /></div>
-          {sr && <div className="reveal-note">{reveal.yourCorrect ? t('ptsEarned', { n: reveal.pointsEarned }) : reveal.timedOut && selected === null ? t('timeUp') : t('wrong')}</div>}
-          {sr && <button className="report-btn" onClick={reportQuestion} disabled={reported}>{reported ? t('reported') : t('report')}</button>}
-          <GameChat social={social} />
-        </div></div>);
+        <QuestionContent
+          question={question} timeLeft={timeLeft} reveal={reveal} selected={selected} answer={answer}
+          opponents={opponents} avatar={avatar} name={name} score={score}
+          reportQuestion={reportQuestion} reported={reported} social={social} GameChat={GameChat}
+        />
+      </div>);
   }
 
   if (stage === 'finished' && result) {
-    const { won, tie } = result;
-    const left = result.reason === 'opponent_disconnected' || result.reason === 'opponent_left';
-    const isSolo = opponents.length === 0 && !left;
-    const rematch = () => { playAgain(); quickMatch(); };
-    const addableOpponents = opponents.filter(
-      (o) => o.clientId && !social.friends.some((f) => f.id === o.clientId) && !friendRequestSent[o.clientId]
-    );
-    const shareResult = () => {
-      const text = isSolo ? t('shareSolo', { n: result.finalScore })
-        : won ? t('shareWon') : tie ? t('shareTie') : t('sharePlayed');
-      if (navigator.share) navigator.share({ text }).catch(() => {});
-      else navigator.clipboard?.writeText(text).catch(() => {});
+    const addFriend = (targetClientId) => {
+      social.addFriend(targetClientId);
+      setFriendRequestSent((prev) => ({ ...prev, [targetClientId]: true }));
     };
     return (
       <div className="app game-bg"><TopControls {...topProps} />
-        <div className="container center">
-          <div className={`result-title ${isSolo ? 'tie' : won ? 'win' : tie ? 'tie' : 'loss'}`}>{isSolo ? t('finished') : won ? t('victory') : tie ? t('draw') : t('defeat')}</div>
-          <div className="result-sub">{left ? t('someoneLeft') : t('finalScore', { n: result.finalScore })}</div>
-          {result.stats && <LevelRing level={result.stats.level} xpIntoLevel={result.stats.xpIntoLevel} xpForLevel={result.stats.xpForLevel} />}
-          <div className="xp-breakdown">
-            <div className="xpb-row"><span>{t('matchScore')}</span><span>{result.finalScore}</span></div>
-            <div className="xpb-row"><span>{t('finishBonus')}</span><span>+{result.xpBreakdown?.finishBonus ?? 0}</span></div>
-            <div className="xpb-row"><span>{t('winBonus')}</span><span>+{result.xpBreakdown?.winBonus ?? 0}</span></div>
-            <div className="xpb-row total"><span>{t('xpTotal')}</span><span>{result.xp}</span></div>
-          </div>
-          <Leaderboard leaderboard={result.leaderboard} myId={myId} />
-          <div className="rewards-row"><span className="rw">{t('coins', { n: result.coins })}</span></div>
-          <button className="share-link" onClick={shareResult}>{t('share')}</button>
-          {addableOpponents.map((o) => (
-            <button key={o.clientId} className="add-friend-link" onClick={() => {
-              social.addFriend(o.clientId);
-              setFriendRequestSent((prev) => ({ ...prev, [o.clientId]: true }));
-            }}>
-              {t('addFriend', { name: o.name })}
-            </button>
-          ))}
-          <div className="result-actions">
-            <button className="ra-btn rematch" onClick={rematch}>{t('rematch')}</button>
-            <button className="ra-btn new-opp" onClick={playAgain}>{isSolo ? t('newGame') : t('newOpponent')}</button>
-            <button className="ra-btn see-res" onClick={playAgain}>{t('backHome')}</button>
-          </div>
-        </div></div>);
+        <FinishedContent
+          result={result} opponents={opponents} myId={myId} social={social}
+          friendRequestSent={friendRequestSent} addFriend={addFriend}
+          playAgain={playAgain} rematch={() => { playAgain(); quickMatch(); }}
+        />
+      </div>);
   }
 
   if (stage === 'error') {
