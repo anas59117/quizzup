@@ -282,7 +282,7 @@ export default function App() {
               <div className="home-greeting">Hey {name} {'\u{1F44B}'}</div>
               <div className="home-logo-sm">Quizz<span>Up</span></div>
             </div>
-            <div className="home-avatar-chip" onClick={() => setStage('profile')}>{avatar}</div>
+            <button className="home-avatar-chip" onClick={() => setStage('profile')} aria-label="Open profile">{avatar}</button>
           </div>
           <SoloToggle solo={soloMode} onToggle={() => setSoloMode((s) => !s)} />
           <button className="quick-play" onClick={quickMatch}>
@@ -362,7 +362,7 @@ export default function App() {
           <div className="profile-head">
             <div className="profile-avatar">{avatar}</div>
             <div className="profile-name">{name || 'Player'}</div>
-            <div className="profile-sub">Level 1 {'·'} Rookie</div>
+            <div className="profile-sub">Level {statsHook.stats.level} {'·'} Rookie</div>
           </div>
           <ProfileStats stats={statsHook.stats} />
           {isGoogleLinked ? (
