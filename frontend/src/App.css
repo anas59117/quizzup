@@ -63,6 +63,20 @@ body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sa
 .g8 { background: linear-gradient(135deg, #1e88e5, #0d47a1); }
 .g9 { background: linear-gradient(135deg, #d81b60, #880e4f); }
 .g10 { background: linear-gradient(135deg, #3949ab, #1a237e); }
+.g11 { background: linear-gradient(135deg, #7b1fa2, #4a148c); }
+.g12 { background: linear-gradient(135deg, #c62828, #6a0000); }
+.g13 { background: linear-gradient(135deg, #1a1a1a, #000000); }
+.g14 { background: linear-gradient(135deg, #4a3728, #1a1208); }
+.g15 { background: linear-gradient(135deg, #7b1e1e, #2c0a0a); }
+.g16 { background: linear-gradient(135deg, #b71c1c, #4a0e0e); }
+.g17 { background: linear-gradient(135deg, #263238, #000000); }
+.g18 { background: linear-gradient(135deg, #0288d1, #01579b); }
+.g19 { background: linear-gradient(135deg, #fbc02d, #e65100); }
+.g20 { background: linear-gradient(135deg, #e53935, #7f0000); }
+.g21 { background: linear-gradient(135deg, #ff6f00, #b23c00); }
+.g22 { background: linear-gradient(135deg, #5d4037, #2c1a14); }
+.g23 { background: linear-gradient(135deg, #1a237e, #0d1350); }
+.g24 { background: linear-gradient(135deg, #6a1b9a, #2e0854); }
 
 /* ---- Join screen ------------------------------------------------------- */
 .badge { display: inline-block; background: var(--accent); color: #fff; padding: 6px 16px; border-radius: 20px; font-size: 0.7em; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; animation: fadeSlideUp 0.4s ease-out; }
@@ -86,8 +100,11 @@ body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sa
 .home-greeting { color: var(--text-dim); font-size: 0.85em; font-weight: 500; }
 .home-logo-sm { font-size: 1.6em; font-weight: 800; letter-spacing: -0.5px; }
 .home-logo-sm span { color: var(--accent); }
-.home-avatar-chip { width: 40px; height: 40px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 1.2em; cursor: pointer; transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1); }
+.home-avatar-chip { width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 1.2em; font-family: inherit; cursor: pointer; transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1); }
 .home-avatar-chip:hover { transform: scale(1.12); }
+
+.solo-toggle { display: block; margin: 0 0 14px auto; padding: 6px 14px; border-radius: 20px; border: 1px solid var(--border); background: var(--surface); color: var(--text-dim); font-family: inherit; font-size: 0.8em; font-weight: 600; cursor: pointer; transition: all 0.2s ease; }
+.solo-toggle.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 
 .quick-play { width: 100%; padding: 16px 20px; border-radius: 14px; border: none; cursor: pointer; font-family: inherit; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s ease; box-shadow: 0 4px 20px rgba(233,30,99,0.3); }
 .quick-play:hover { transform: translateY(-3px) scale(1.01); box-shadow: 0 8px 28px rgba(233,30,99,0.4); }
@@ -99,28 +116,21 @@ body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sa
 .section-title { display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; font-weight: 700; color: var(--text); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
 .see-all { background: none; border: none; color: var(--accent); font-family: inherit; font-size: 0.85em; font-weight: 600; cursor: pointer; text-transform: none; letter-spacing: 0; }
 
-/* Horizontal scroll — popular topics */
-.topics-scroll { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 4px; margin-bottom: 24px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+/* Horizontal scroll — popular topics (same dense tile as the full grid) */
+.topics-scroll { display: flex; gap: 14px; overflow-x: auto; padding-bottom: 4px; margin-bottom: 24px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .topics-scroll::-webkit-scrollbar { display: none; }
-.topic-card { flex: 0 0 110px; height: 120px; border-radius: 16px; border: none; cursor: pointer; color: #fff; font-family: inherit; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; position: relative; overflow: hidden; transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1); box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
-.topic-card:hover { transform: translateY(-4px) scale(1.02); }
-.topic-card:active { transform: scale(0.97); }
-.tc-icon { font-size: 2em; }
-.tc-name { font-weight: 700; font-size: 0.8em; }
-.tc-tag { position: absolute; top: 6px; right: 6px; font-size: 0.7em; }
+.topics-scroll .topic-tile { flex: 0 0 68px; }
 
-/* 2-column grid — all topics */
-.topics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
-.topics-grid.full { gap: 12px; }
-.topic-tile { border-radius: 14px; border: none; cursor: pointer; color: #fff; font-family: inherit; padding: 18px 14px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; position: relative; overflow: hidden; transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1); box-shadow: 0 3px 12px rgba(0,0,0,0.15); text-align: left; }
-.topic-tile:hover { transform: translateY(-3px) scale(1.02); }
-.topic-tile:active { transform: scale(0.97); }
-.topic-tile.tall { padding: 24px 16px; }
-.tile-icon { font-size: 1.8em; margin-bottom: 4px; }
-.tile-icon.lg { font-size: 2.4em; margin-bottom: 8px; }
-.tile-label { font-weight: 800; font-size: 0.95em; }
-.tile-desc { font-size: 0.7em; font-weight: 400; opacity: 0.85; }
-.tile-tag { position: absolute; top: 10px; right: 10px; font-size: 0.8em; }
+/* Dense topic grid — small square icon + label, like the original QuizUp's
+   topic tiles (not a big descriptive gradient card). */
+.topics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px 8px; margin-bottom: 20px; }
+.topics-grid.full { grid-template-columns: repeat(4, 1fr); gap: 20px 10px; }
+.topic-tile { background: none; border: none; cursor: pointer; font-family: inherit; padding: 0; display: flex; flex-direction: column; align-items: center; gap: 6px; transition: transform 0.15s ease; }
+.topic-tile:active { transform: scale(0.93); }
+.tile-icon-sq { width: 100%; aspect-ratio: 1; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.7em; box-shadow: 0 3px 10px rgba(0,0,0,0.25); position: relative; overflow: hidden; }
+.tile-logo-img { width: 60%; height: 60%; object-fit: contain; }
+.tile-tag-badge { position: absolute; top: -5px; right: -5px; width: 20px; height: 20px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.65em; }
+.tile-label { font-weight: 700; font-size: 0.7em; color: var(--text); text-align: center; line-height: 1.15; }
 
 /* Social actions row */
 .social-row { display: flex; gap: 10px; margin-bottom: 16px; }
@@ -225,19 +235,25 @@ body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sa
 .player-photo { width: 160px; height: 160px; object-fit: cover; border-radius: 50%; border: 3px solid rgba(255,255,255,0.5); transition: filter 0.2s linear; }
 .photo-credit { margin-top: 6px; font-size: 0.65em; color: rgba(255,255,255,0.5); text-align: center; }
 
-/* Answers — QuizUp white-border on dark */
-.answers { display: flex; flex-direction: column; gap: 8px; }
-.answer { padding: 15px 18px; background: transparent; border: 2px solid rgba(255,255,255,0.45); border-radius: 10px; color: #f0f0f5; font-weight: 600; font-size: 0.95em; text-align: center; cursor: pointer; transition: all 0.2s cubic-bezier(0.25,0.46,0.45,0.94); font-family: inherit; animation: fadeSlideUp 0.35s ease-out both; }
+/* Answers — QuizUp solid alternating blocks */
+/* QuizUp only uses the 2x2 grid for photo questions, where screen space
+   is tight; text-only questions (the majority) use a full-width vertical
+   list instead — confirmed across multiple reference frames (e.g. a
+   4-option "Lenin/Hitler/Stalin/Mussolini" text question stacked in a
+   single column, vs. a photo question's answers laid out 2x2). */
+.answers { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.answers.single-col { grid-template-columns: 1fr; }
+.answer { padding: 18px 12px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); color: var(--text); font-weight: 700; font-size: 0.9em; text-align: center; cursor: pointer; transition: all 0.15s ease; font-family: inherit; box-shadow: 0 2px 6px rgba(0,0,0,0.08); animation: fadeSlideUp 0.35s ease-out both; }
 .answer:nth-child(1) { animation-delay: 0.05s; }
 .answer:nth-child(2) { animation-delay: 0.1s; }
 .answer:nth-child(3) { animation-delay: 0.15s; }
 .answer:nth-child(4) { animation-delay: 0.2s; }
-.answer:hover:not(:disabled) { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.04); transform: translateX(3px); }
+.answer:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
 .answer:disabled { cursor: default; }
-.answer.selected { border-color: #fff; background: rgba(255,255,255,0.08); }
-.answer.correct { background: #2e7d32 !important; border-color: #4caf50 !important; color: #fff !important; box-shadow: 0 0 16px rgba(76,175,80,0.35); animation: correctReveal 0.4s cubic-bezier(0.34,1.56,0.64,1); }
-.answer.wrong { background: rgba(183,28,28,0.5) !important; border-color: #c62828 !important; color: rgba(255,255,255,0.7) !important; animation: shake 0.4s ease; }
-.answer.dim { opacity: 0.18; }
+.answer.selected { outline: 3px solid var(--accent); outline-offset: -3px; }
+.answer.correct { background: #2e7d32 !important; border-color: #2e7d32; outline: none; color: #fff !important; box-shadow: 0 0 16px rgba(76,175,80,0.35); animation: correctReveal 0.4s cubic-bezier(0.34,1.56,0.64,1); }
+.answer.wrong { background: #c62828 !important; border-color: #c62828; outline: none; color: #fff !important; animation: shake 0.4s ease; }
+.answer.dim { opacity: 0.35; }
 
 /* Timer bar — bottom, yellow (QuizUp style) */
 .timer-bar-bottom { height: 5px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden; margin-top: 20px; }
@@ -262,6 +278,14 @@ body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sa
 .result-title.tie { color: var(--gold); }
 .result-title.loss { color: rgba(255,255,255,0.5); }
 .result-sub { color: rgba(255,255,255,0.6); font-weight: 600; font-size: 1em; margin-bottom: 16px; animation: fadeSlideUp 0.4s ease-out 0.25s both; }
+
+/* Level-up ring + XP breakdown, shown between the result title and leaderboard */
+.level-ring { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 4px auto 14px; }
+.level-ring-inner { width: 52px; height: 52px; border-radius: 50%; background: #0a0a14; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2em; }
+.xp-breakdown { display: flex; flex-direction: column; gap: 4px; margin-bottom: 16px; font-size: 0.8em; }
+.xpb-row { display: flex; justify-content: space-between; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+.xpb-row.total { color: #fff; font-size: 1.1em; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 6px; margin-top: 2px; }
+.share-link { display: block; margin: 0 auto 16px; background: none; border: none; color: rgba(255,255,255,0.6); font-family: inherit; font-size: 0.8em; font-weight: 600; cursor: pointer; }
 
 /* Results leaderboard — ranked list for 2-4 players */
 .leaderboard { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; animation: fadeSlideUp 0.4s ease-out 0.15s both; }
@@ -294,6 +318,7 @@ body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sa
 .friends-block { margin-bottom: 6px; }
 .friends-section-title { font-weight: 700; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-dim); margin: 16px 0 8px; }
 .friends-empty { color: var(--text-dim); font-size: 0.85em; padding: 12px 0; }
+.privacy-link { display: block; text-align: center; margin-top: 24px; color: var(--text-faint); font-size: 0.75em; text-decoration: underline; }
 .friend-row { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: var(--surface); border-radius: 10px; margin-bottom: 6px; cursor: pointer; transition: background 0.15s ease; }
 .friend-row:hover { background: var(--surface-2); }
 .friend-ava { width: 36px; height: 36px; border-radius: 50%; background: var(--surface-2); display: flex; align-items: center; justify-content: center; font-size: 1.1em; position: relative; }
@@ -366,3 +391,24 @@ body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sa
   from { opacity: 0; transform: scaleY(0.8); transform-origin: top; }
   to { opacity: 1; transform: scaleY(1); }
 }
+
+/* ---- Feed (Accueil topic wall) ------------------------------------------ */
+.feed-composer { display: flex; gap: 6px; margin-bottom: 16px; }
+.feed-cat-select { flex: 0 0 auto; max-width: 90px; padding: 10px 4px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font-family: inherit; font-size: 0.75em; }
+.feed-input { flex: 1; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font-family: inherit; font-size: 0.85em; min-width: 0; }
+.feed-post-btn { flex: 0 0 auto; padding: 10px 14px; border-radius: 10px; border: none; background: var(--accent); color: #fff; font-family: inherit; font-weight: 700; font-size: 0.8em; cursor: pointer; }
+.feed-post-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.feed-post { display: flex; gap: 10px; padding: 12px; background: var(--surface); border-radius: 12px; margin-bottom: 10px; animation: fadeSlideUp 0.3s ease-out both; }
+.feed-post-ava { flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%; background: var(--surface-2); display: flex; align-items: center; justify-content: center; font-size: 1.1em; }
+.feed-post-body { flex: 1; min-width: 0; }
+.feed-post-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px; margin-bottom: 4px; }
+.feed-post-author { font-weight: 700; font-size: 0.85em; }
+.feed-post-meta { color: var(--text-dim); font-size: 0.7em; }
+.feed-post-cat { color: var(--accent); font-weight: 600; }
+.feed-post-text { font-size: 0.85em; margin-bottom: 8px; word-wrap: break-word; }
+.feed-post-actions { display: flex; align-items: center; gap: 8px; }
+.feed-react-btn { padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border); background: var(--surface-2); color: var(--text); font-family: inherit; font-size: 0.75em; font-weight: 600; cursor: pointer; }
+.feed-react-btn:hover { border-color: var(--accent); }
+.feed-report-btn { padding: 4px 10px; border-radius: 20px; border: none; background: none; color: var(--text-faint); font-family: inherit; font-size: 0.7em; cursor: pointer; }
+.feed-report-btn:hover:not(:disabled) { color: var(--text-dim); text-decoration: underline; }
+.feed-report-btn:disabled { cursor: default; }

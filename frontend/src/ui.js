@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, memo } from 'react';
+import { useI18n } from './i18n';
 
 export const AVATARS = ['\u{1F43A}', '\u{1F981}', '\u{1F98A}', '\u{1F43C}', '\u{1F989}', '\u{1F438}', '\u{1F42F}', '\u{1F984}'];
 
@@ -13,7 +14,53 @@ export const CATEGORIES = [
   { key: 'foot_fr', label: 'Foot Français', icon: '⚽', grad: 'g8', desc: 'Ligue 1, Bleus & légendes' },
   { key: 'cinema_fr', label: 'Cinéma Français', icon: '\u{1F3AD}', grad: 'g9', desc: 'Films, séries & acteurs' },
   { key: 'culture_fr', label: 'Culture Générale FR', icon: '\u{1F1EB}\u{1F1F7}', grad: 'g10', desc: 'Histoire, géo & traditions' },
+  { key: 'premier_league', label: 'Premier League', icon: '\u{1F981}', grad: 'g11', tag: '\u{1F4F8}', desc: 'Devine le joueur anglais' },
+  { key: 'la_liga', label: 'La Liga', icon: '\u{1F402}', grad: 'g12', tag: '\u{1F4F8}', desc: 'Devine le joueur espagnol' },
+  // `logo` (path under /images/logos/) shows the real brand mark once
+  // provided; until then the emoji `icon` is the fallback.
+  { key: 'netflix', label: 'Netflix', icon: '\u{1F3AC}', logo: null, grad: 'g13', desc: 'Séries & films Netflix' },
+  { key: 'got', label: 'Game of Thrones', icon: '\u{1F409}', logo: null, grad: 'g14', desc: 'Le Trône de Fer' },
+  { key: 'harry_potter', label: 'Harry Potter', icon: '\u{1FA84}', grad: 'g15', desc: 'Poudlard & sorcellerie' },
+  { key: 'marvel', label: 'Marvel', icon: '\u{1F9B8}', grad: 'g16', desc: 'Avengers & super-héros' },
+  { key: 'star_wars', label: 'Star Wars', icon: '\u{2694}\u{FE0F}', grad: 'g17', desc: 'Jedi, Sith & la Force' },
+  { key: 'disney', label: 'Disney Classics', icon: '\u{1F3F0}', grad: 'g18', desc: 'Contes animés cultes' },
+  { key: 'pokemon', label: 'Pokémon', icon: '\u{26A1}', grad: 'g19', desc: 'Dresseurs & Pokéballs' },
+  { key: 'f1', label: 'Formule 1', icon: '\u{1F3CE}\u{FE0F}', grad: 'g20', desc: 'Écuries & champions' },
+  { key: 'nba', label: 'Basket NBA', icon: '\u{1F3C0}', grad: 'g21', desc: 'Légendes du parquet' },
+  { key: 'tv_shows', label: 'Séries Cultes', icon: '\u{1F4FA}', grad: 'g22', desc: 'Friends, House & co.' },
+  { key: 'histoire_fr', label: 'Histoire de France', icon: '\u{269C}\u{FE0F}', grad: 'g23', desc: 'Rois, guerres & dates' },
+  { key: 'retro_games', label: 'Jeux Vidéo Rétro', icon: '\u{1F47E}', grad: 'g24', desc: 'Mario, Sonic & arcade' },
 ];
+
+export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setAvatar, onContinue }) {
+  const { t } = useI18n();
+  return (
+    <div className="container center">
+      <div className="badge">{'⚡'} {t('legendBack')}</div>
+      <h1 className="logo">Quizz<span>Up</span></h1>
+      <p className="tagline">{t('tagline')}</p>
+      <input className="input" placeholder={t('usernamePlaceholder')} value={name} maxLength={20}
+        onChange={(e) => setName(e.target.value)} />
+      <div className="avatar-picker">
+        {AVATARS.map((a) => (
+          <button key={a} className={`avatar-opt ${avatar === a ? 'active' : ''}`} onClick={() => setAvatar(a)}>{a}</button>
+        ))}
+      </div>
+      <button className="btn" disabled={!name.trim()} onClick={onContinue}>{t('continue')}</button>
+    </div>
+  );
+});
+
+export const ErrorScreen = memo(function ErrorScreen({ onRetry }) {
+  const { t } = useI18n();
+  return (
+    <div className="container center">
+      <h2 className="logo">{t('connectionLost')}</h2>
+      <p className="tagline">{t('serverUnreachable')}</p>
+      <button className="btn" onClick={onRetry}>{t('retry')}</button>
+    </div>
+  );
+});
 
 export function useTheme() {
   const [theme, setTheme] = useState(() => {
@@ -28,6 +75,7 @@ export function useTheme() {
 }
 
 export const TopControls = memo(function TopControls({ muted, toggleMute, theme, toggleTheme }) {
+  const { lang, toggleLang } = useI18n();
   return (
     <div className="top-controls">
       <button className="ctrl-btn" onClick={toggleMute} aria-label="Toggle sound" title="Toggle sound">
@@ -36,7 +84,19 @@ export const TopControls = memo(function TopControls({ muted, toggleMute, theme,
       <button className="ctrl-btn" onClick={toggleTheme} aria-label="Toggle theme" title="Toggle theme">
         {theme === 'dark' ? '☀️' : '\u{1F319}'}
       </button>
+      <button className="ctrl-btn" onClick={toggleLang} aria-label="Toggle language" title="Toggle language">
+        {lang === 'fr' ? '\u{1F1EB}\u{1F1F7}' : '\u{1F1EC}\u{1F1E7}'}
+      </button>
     </div>
+  );
+});
+
+export const SoloToggle = memo(function SoloToggle({ solo, onToggle }) {
+  const { t } = useI18n();
+  return (
+    <button className={`solo-toggle ${solo ? 'active' : ''}`} onClick={onToggle}>
+      {solo ? t('solo') : t('multiplayer')}
+    </button>
   );
 });
 
@@ -54,21 +114,47 @@ export const PlayerPhoto = memo(function PlayerPhoto({ image, credit, timeLeft, 
   );
 });
 
+// Post-match level-up ring: a conic-gradient arc (no SVG needed) showing
+// progress toward the next level, with the level number in the center.
+export const LevelRing = memo(function LevelRing({ level, xpIntoLevel, xpForLevel }) {
+  const pct = xpForLevel ? Math.round((xpIntoLevel / xpForLevel) * 100) : 0;
+  return (
+    <div className="level-ring" style={{ background: `conic-gradient(var(--accent) ${pct}%, rgba(255,255,255,0.15) ${pct}%)` }}>
+      <div className="level-ring-inner">{level}</div>
+    </div>
+  );
+});
+
+// A single home-screen topic tile: square icon + label underneath, matching
+// the original QuizUp's dense topic grid rather than a big descriptive card.
+export const CategoryTile = memo(function CategoryTile({ c, onClick }) {
+  return (
+    <button className="topic-tile" onClick={onClick}>
+      <span className={`tile-icon-sq ${c.grad}`}>
+        {c.logo ? <img src={c.logo} alt={c.label} className="tile-logo-img" /> : c.icon}
+        {c.tag && <span className="tile-tag-badge">{c.tag}</span>}
+      </span>
+      <span className="tile-label">{c.label}</span>
+    </button>
+  );
+});
+
 export const NavBar = memo(function NavBar({ active, onNav, onQuickMatch }) {
+  const { t } = useI18n();
   return (
     <nav className="navbar">
       <button className={`nav-item ${active === 'home' ? 'active' : ''}`} onClick={() => onNav('home')}>
-        <span className="nav-ic">{'\u{1F3E0}'}</span><span className="nav-lbl">Home</span>
+        <span className="nav-ic">{'\u{1F3E0}'}</span><span className="nav-lbl">{t('navHome')}</span>
       </button>
-      <button className="nav-item dimmed">
-        <span className="nav-ic">{'\u{1F6D2}'}</span><span className="nav-lbl">Shop</span>
+      <button className={`nav-item ${active === 'feed' ? 'active' : ''}`} onClick={() => onNav('feed')}>
+        <span className="nav-ic">{'\u{1F4F0}'}</span><span className="nav-lbl">{t('navFeed')}</span>
       </button>
       <button className="nav-bolt" onClick={onQuickMatch} aria-label="Quick Play">{'⚡'}</button>
       <button className={`nav-item ${active === 'categories' ? 'active' : ''}`} onClick={() => onNav('categories')}>
-        <span className="nav-ic">{'\u{1F5C2}️'}</span><span className="nav-lbl">Themes</span>
+        <span className="nav-ic">{'\u{1F5C2}️'}</span><span className="nav-lbl">{t('navThemes')}</span>
       </button>
       <button className={`nav-item ${active === 'profile' ? 'active' : ''}`} onClick={() => onNav('profile')}>
-        <span className="nav-ic">{'\u{1F464}'}</span><span className="nav-lbl">Profile</span>
+        <span className="nav-ic">{'\u{1F464}'}</span><span className="nav-lbl">{t('navProfile')}</span>
       </button>
     </nav>
   );

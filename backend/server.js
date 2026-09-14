@@ -3,9 +3,10 @@ const express = require('express');
 const { WebSocketServer } = require('ws');
 const cors = require('cors');
 const http = require('http');
-const { listCategories, warmCache } = require('./questions');
+const { listCategories, warmCache, questionKey, CATEGORIES } = require('./questions');
 const reports = require('./reports');
 const social = require('./social');
+const posts = require('./posts');
 const game = require('./game');
 const RateLimiter = require('./rate-limit');
 const { verifyIdToken, sweepCache } = require('./auth');
@@ -59,6 +60,7 @@ function notifyPresence(clientId, isOnline) {
 async function handleIdentify(ws, data, state) {
   if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
   const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
+  state.avatar = avatar;
 
   const uid = await verifyIdToken(data.idToken);
   if (!uid) return; // unverifiable — proceed without social features rather than trusting the claim
@@ -68,7 +70,35 @@ async function handleIdentify(ws, data, state) {
   game.send(ws, { type: 'friends_list', friends: social.getFriendsList(state.clientId) });
   game.send(ws, { type: 'friend_requests', requests: social.getPendingRequests(state.clientId) });
   game.send(ws, { type: 'stats', stats: stats.getStats(state.clientId) });
+  game.send(ws, { type: 'feed_list', posts: posts.getFeed() });
   notifyPresence(state.clientId, true);
+}
+
+function handleFeed(ws, data, state) {
+  const { clientId } = state;
+  if (data.type === 'feed_list') {
+    game.send(ws, { type: 'feed_list', posts: posts.getFeed() });
+    return true;
+  }
+  if (data.type === 'post_create') {
+    const category = typeof data.category === 'string' && CATEGORIES[data.category] ? data.category : null;
+    const post = posts.addPost(clientId, state.name, state.avatar, category, data.text);
+    if (post) social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_created', post }));
+    return true;
+  }
+  if (data.type === 'post_react') {
+    if (!clientId) return true;
+    const result = posts.toggleReaction(String(data.postId || ''), clientId);
+    if (result) social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_reacted', ...result }));
+    return true;
+  }
+  if (data.type === 'post_report') {
+    if (!clientId) return true;
+    const result = posts.reportPost(String(data.postId || ''), clientId);
+    if (result && result.hidden) social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_hidden', id: result.id }));
+    return true;
+  }
+  return false;
 }
 
 function handleSocial(ws, data, state) {
@@ -166,6 +196,21 @@ function handleGameplay(ws, data, state) {
     return true;
   }
 
+  // Solo play: skips matchmaking entirely and starts a 1-player match. The
+  // game engine already treats `players` generically (score/reveal/end-game
+  // logic work the same whether there are 1, 2, or 4 of them), so no changes
+  // to game.js were needed to support this.
+  if (data.type === 'solo') {
+    if (isInActiveGame(playerId)) return true;
+    if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
+    const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
+    const categoryKey = typeof data.category === 'string' ? data.category : null;
+    game.send(ws, { type: 'joined', playerId, name: state.name });
+    game.startGame([{ ws, id: playerId, clientId: state.clientId, name: state.name, avatar }], categoryKey)
+      .catch(() => game.send(ws, { type: 'error' }));
+    return true;
+  }
+
   if (data.type === 'join') {
     if (isInActiveGame(playerId)) return true;
     if (waitingPlayers.some((w) => w.id === playerId)) return true;
@@ -252,7 +297,7 @@ function handleGameplay(ws, data, state) {
       if (!g.reported.has(key)) {
         g.reported.add(key);
         const q = g.questions[g.currentRound];
-        if (q) reports.report(q.text);
+        if (q) reports.report(questionKey(q));
         game.send(ws, { type: 'report_ack' });
       }
     }
@@ -292,6 +337,7 @@ wss.on('connection', (ws, req) => {
 
     if (data.type === 'identify') { await handleIdentify(ws, data, state); return; }
     if (handleSocial(ws, data, state)) return;
+    if (handleFeed(ws, data, state)) return;
     handleGameplay(ws, data, state);
   });
 

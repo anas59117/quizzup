@@ -57,6 +57,12 @@ function getWs(clientId) {
   return online.get(clientId) || null;
 }
 
+// All currently-connected sockets — used for feed broadcasts, which (unlike
+// friend requests/DMs) go out to everyone rather than one target.
+function getAllOnline() {
+  return [...online.values()];
+}
+
 function profileOf(clientId) {
   const p = profiles[clientId];
   return p ? { id: clientId, name: p.name, avatar: p.avatar, online: isOnline(clientId) } : null;
@@ -106,7 +112,7 @@ function getPendingRequests(clientId) {
 }
 
 module.exports = {
-  setOnline, setOffline, isOnline, getWs, areFriends,
+  setOnline, setOffline, isOnline, getWs, getAllOnline, areFriends,
   sendRequest, acceptRequest, declineRequest, removeFriend,
   getFriendsList, getPendingRequests, profileOf,
 };
