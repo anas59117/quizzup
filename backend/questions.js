@@ -18,6 +18,9 @@ const playersFootFr = require('./data/players-foot-fr.json');
 const playersRapFr = require('./data/players-rap-fr.json');
 const playersPremierLeague = require('./data/players-premier-league.json');
 const playersLaLiga = require('./data/players-la-liga.json');
+const playersBundesliga = require('./data/players-bundesliga.json');
+const playersSerieA = require('./data/players-serie-a.json');
+const playersLigue1 = require('./data/players-ligue-1.json');
 
 const CATEGORIES = {
   movies: {
@@ -159,6 +162,21 @@ const CATEGORIES = {
     label: 'La Liga',
     icon: '🐂',
     questions: [...playersLaLiga],
+  },
+  bundesliga: {
+    label: 'Bundesliga',
+    icon: '🦅',
+    questions: [...playersBundesliga],
+  },
+  serie_a: {
+    label: 'Serie A',
+    icon: '👢',
+    questions: [...playersSerieA],
+  },
+  ligue_1: {
+    label: 'Ligue 1',
+    icon: '🐓',
+    questions: [...playersLigue1],
   },
   netflix: {
     label: 'Netflix',

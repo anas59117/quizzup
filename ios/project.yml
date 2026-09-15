@@ -3,18 +3,45 @@ options:
   bundleIdPrefix: com.quizzup
   deploymentTarget:
     iOS: "16.0"
+packages:
+  # Only the Auth product is pulled in (not Firestore/Analytics/etc.) — this
+  # app talks to its own WebSocket backend, not Firebase's database products;
+  # Firebase here is purely the identity provider shared with the web app.
+  FirebaseSDK:
+    url: https://github.com/firebase/firebase-ios-sdk
+    from: 10.29.0
+  GoogleSignIn:
+    url: https://github.com/google/GoogleSignIn-iOS
+    from: 7.1.0
 targets:
   QuizzUp:
     type: application
     platform: iOS
     sources:
       - Sources/QuizzUp
+    dependencies:
+      - package: FirebaseSDK
+        product: FirebaseAuth
+      - package: GoogleSignIn
+        product: GoogleSignIn
     info:
       path: Sources/QuizzUp/Resources/Info.plist
       properties:
         UILaunchScreen: {}
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait
+        # Google Sign-In's OAuth redirect comes back through this custom URL
+        # scheme — replace REPLACE_WITH_REVERSED_CLIENT_ID with the
+        # REVERSED_CLIENT_ID value found inside GoogleService-Info.plist once
+        # it's added. Google Sign-In will fail silently without this.
+        CFBundleURLTypes:
+          - CFBundleURLSchemes:
+              - REPLACE_WITH_REVERSED_CLIENT_ID
+    entitlements:
+      path: Sources/QuizzUp/Resources/QuizzUp.entitlements
+      properties:
+        com.apple.developer.applesignin:
+          - Default
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.quizzup.app

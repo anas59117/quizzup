@@ -46,6 +46,9 @@ enum L10n {
             "serverUnreachable": "Impossible de joindre le serveur.",
             "retry": "Réessayer",
             "privacyPolicy": "Confidentialité",
+            "signInApple": "Continuer avec Apple",
+            "signInGoogle": "Continuer avec Google",
+            "signInFailed": "Connexion impossible. Réessaie.",
         ],
         "en": [
             "legendBack": "THE LEGEND IS BACK",
@@ -87,6 +90,9 @@ enum L10n {
             "serverUnreachable": "Couldn't reach the game server.",
             "retry": "Retry",
             "privacyPolicy": "Privacy Policy",
+            "signInApple": "Continue with Apple",
+            "signInGoogle": "Continue with Google",
+            "signInFailed": "Couldn't sign in. Please try again.",
         ],
     ]
 

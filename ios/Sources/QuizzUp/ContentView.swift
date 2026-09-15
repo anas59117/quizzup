@@ -7,6 +7,7 @@ struct ContentView: View {
         ZStack {
             Theme.bg.ignoresSafeArea()
             switch game.stage {
+            case .authGate: AuthGateView()
             case .join: JoinView()
             case .home: HomeView()
             case .waiting: WaitingView()

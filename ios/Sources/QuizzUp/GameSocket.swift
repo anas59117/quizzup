@@ -2,15 +2,15 @@ import Foundation
 import Combine
 
 enum Stage {
-    case join, home, waiting, roundIntro, question, finished, error
+    case authGate, join, home, waiting, roundIntro, question, finished, error
 }
 
 /// Talks to the same Node.js/WebSocket backend as the web app (backend/server.js).
-/// v1 skips the Firebase identify step entirely — the server already treats a
-/// connection with no verified clientId as valid for gameplay (see
-/// handleIdentify's early return in server.js), so solo/quick-play/categories
-/// all work; only clientId-gated features (friends, stats, feed) are out of
-/// scope for this native client's first version.
+/// Unlike the web app (which allows anonymous play), this app requires a
+/// real Firebase-backed account (Sign in with Apple/Google, see
+/// AuthManager) before .join — a deliberate product decision for the iOS
+/// version. Once signed in, `identify` is sent with a real ID token, so
+/// friends/stats/feed all work identically to a Google-linked web player.
 @MainActor
 final class GameSocket: ObservableObject {
     // Configure this to your deployed backend. The web app reads the same
@@ -28,7 +28,7 @@ final class GameSocket: ObservableObject {
         return URL(string: "https://\(frontendHost)\(path)")
     }
 
-    @Published var stage: Stage = .join
+    @Published var stage: Stage = .authGate
     @Published var name: String = UserDefaults.standard.string(forKey: "quizzup.name") ?? ""
     @Published var avatar: String = UserDefaults.standard.string(forKey: "quizzup.avatar") ?? "🐺"
     @Published var soloMode = false
@@ -61,22 +61,53 @@ final class GameSocket: ObservableObject {
 
     private var task: URLSessionWebSocketTask?
     private var timer: Timer?
+    // Set once by identify(idToken:authManager:) after sign-in. Kept only as
+    // a fallback for the immediate identify — every reconnect asks
+    // `authManager` for a fresh token instead, since Firebase ID tokens
+    // expire after ~1 hour and a long-idle socket can easily outlive that.
+    private var idToken: String?
+    private weak var authManager: AuthManager?
 
     // MARK: - Connection
 
+    private func ensureConnected() {
+        guard task == nil else { return }
+        var comps = URLComponents()
+        comps.scheme = "wss"
+        comps.host = Self.backendHost
+        comps.path = "/ws"
+        guard let url = comps.url else { return }
+        let t = URLSession.shared.webSocketTask(with: url)
+        task = t
+        t.resume()
+        listen()
+        if let idToken { send(["type": "identify", "idToken": idToken]) }
+    }
+
+    /// Opens a socket (if needed) with an up-to-date ID token, then sends
+    /// `payload` — used for join/solo requests so identify always rides on
+    /// a fresh token instead of one that may have expired since sign-in.
     private func connect(_ payload: [String: Any]) {
-        if task == nil {
-            var comps = URLComponents()
-            comps.scheme = "wss"
-            comps.host = Self.backendHost
-            comps.path = "/ws"
-            guard let url = comps.url else { return }
-            let t = URLSession.shared.webSocketTask(with: url)
-            task = t
-            t.resume()
-            listen()
+        guard task == nil, let authManager else {
+            ensureConnected()
+            send(payload)
+            return
         }
-        send(payload)
+        Task {
+            if let fresh = await authManager.getIdToken() { self.idToken = fresh }
+            self.ensureConnected()
+            self.send(payload)
+        }
+    }
+
+    /// Called once after AuthManager completes sign-in. Establishes the
+    /// socket and sends `identify` with a real Firebase ID token — the same
+    /// handshake the web app does for a Google-linked player, so friends/
+    /// stats/feed all resolve to the same clientId server-side.
+    func identify(idToken: String, authManager: AuthManager) {
+        self.idToken = idToken
+        self.authManager = authManager
+        ensureConnected()
     }
 
     private func send(_ payload: [String: Any]) {
@@ -232,5 +263,15 @@ final class GameSocket: ObservableObject {
         task?.cancel(with: .goingAway, reason: nil)
         task = nil
         isStarting = false
+    }
+
+    /// Called after AuthManager.signOut() so a signed-out user can't keep
+    /// using the socket identity from the previous account, and lands back
+    /// on the mandatory auth gate instead of wherever they were in the app.
+    func resetForSignOut() {
+        disconnect()
+        idToken = nil
+        authManager = nil
+        stage = .authGate
     }
 }

@@ -2,6 +2,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var game: GameSocket
+    @EnvironmentObject var auth: AuthManager
     private let columns = Array(repeating: GridItem(.flexible(), spacing: 12), count: 3)
 
     var body: some View {
@@ -13,6 +14,14 @@ struct HomeView: View {
                         (Text("Quizz").font(.title2.bold()) + Text("Up").font(.title2.bold()).foregroundColor(Theme.accent))
                     }
                     Spacer()
+                    Button {
+                        auth.signOut()
+                        game.resetForSignOut()
+                    } label: {
+                        Image(systemName: "rectangle.portrait.and.arrow.right")
+                    }
+                    .font(.system(size: 16))
+                    .foregroundColor(Theme.textDim)
                     Button(game.lang == "fr" ? "🇫🇷" : "🇬🇧") { game.toggleLang() }
                         .font(.system(size: 18))
                     Text(game.avatar).font(.system(size: 20))

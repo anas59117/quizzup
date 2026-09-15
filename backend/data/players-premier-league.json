@@ -158,7 +158,7 @@
   {
     "text": "Qui est ce joueur ?",
     "image": "/images/players/gianluigi_donnarumma.jpg",
-    "credit": "Photo : Original:  MichaelEmilio / Derivative work:  Danyele (CC BY 4.0)",
+    "credit": "Photo : Original: MichaelEmilio / Derivative work: Danyele (CC BY 4.0)",
     "answers": [
       "Xavi Simons",
       "Andrew Robertson",
@@ -398,7 +398,7 @@
   {
     "text": "Qui est ce joueur ?",
     "image": "/images/players/ross_barkley.jpg",
-    "credit": "Photo : https://www.flickr.com/photos/cfcunofficial/ (CC BY-SA 2.0)",
+    "credit": "Photo : cfcunofficial (CC BY-SA 2.0)",
     "answers": [
       "Eberechi Eze",
       "Ross Barkley",
@@ -482,7 +482,7 @@
   {
     "text": "Qui est ce joueur ?",
     "image": "/images/players/rodrigo_bentancur.jpg",
-    "credit": "Photo : Original:  Ailura\nDerivative work:  Danyele (CC BY-SA 3.0 at)",
+    "credit": "Photo : Original: Ailura\nDerivative work: Danyele (CC BY-SA 3.0 at)",
     "answers": [
       "Rodrigo Bentancur",
       "Lisandro Martínez",
@@ -806,7 +806,7 @@
   {
     "text": "Qui est ce joueur ?",
     "image": "/images/players/xavi_simons.jpg",
-    "credit": "Photo : Original:  Steffen Prößdorf; Derivative work:  SonoGrazy (CC BY-SA 4.0)",
+    "credit": "Photo : Original: Steffen Prößdorf; Derivative work: SonoGrazy (CC BY-SA 4.0)",
     "answers": [
       "Ben Chilwell",
       "Thomas Heaton",
@@ -914,7 +914,7 @@
   {
     "text": "Qui est ce joueur ?",
     "image": "/images/players/gerard_deulofeu.jpg",
-    "credit": "Photo : Original:  Mech867\nDerivative work:  Danyele (CC BY-SA 4.0)",
+    "credit": "Photo : Original: Mech867\nDerivative work: Danyele (CC BY-SA 4.0)",
     "answers": [
       "David Raya",
       "Gerard Deulofeu",
@@ -1022,7 +1022,7 @@
   {
     "text": "Qui est ce joueur ?",
     "image": "/images/players/ben_davies.jpg",
-    "credit": "Photo : Steindy (talk) 16:11, 10 November 2016 (UTC) (CC BY-SA 3.0)",
+    "credit": "Photo : Steindy (CC BY-SA 3.0)",
     "answers": [
       "Jordan Henderson",
       "Omar Marmoush",
@@ -1126,5 +1126,65 @@
       "Riccardo Calafiori"
     ],
     "correct": 3
+  },
+  {
+    "text": "Qui est ce joueur ?",
+    "image": "/images/players/john_stones.jpg",
+    "credit": "Photo : Bryan Berlin (CC BY-SA 4.0)",
+    "answers": [
+      "Kobbie Mainoo",
+      "John Stones",
+      "Dominic Calvert-Lewin",
+      "Joško Gvardiol"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui est ce joueur ?",
+    "image": "/images/players/donyell_malen.jpg",
+    "credit": "Photo : Sandro Halank, Wikimedia Commons (CC BY-SA 4.0)",
+    "answers": [
+      "Kai Havertz",
+      "Bruno Fernandes",
+      "Donyell Malen",
+      "Xavi Simons"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Qui est ce joueur ?",
+    "image": "/images/players/robert_sanchez.jpg",
+    "credit": "Photo : The White House (Public domain)",
+    "answers": [
+      "Moisés Caicedo",
+      "Robert Sánchez",
+      "Bruno Guimarães",
+      "Matthijs de Ligt"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui est ce joueur ?",
+    "image": "/images/players/curtis_jones.jpg",
+    "credit": "Photo : Werner100359 (CC BY-SA 4.0)",
+    "answers": [
+      "Curtis Jones",
+      "Exequiel Palacios",
+      "Phil Foden",
+      "Omar Marmoush"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Qui est ce joueur ?",
+    "image": "/images/players/ethan_nwaneri.jpg",
+    "credit": "Photo : WorldWide1z (CC BY 3.0)",
+    "answers": [
+      "Eberechi Eze",
+      "Ethan Nwaneri",
+      "Kai Havertz",
+      "Virgil van Dijk"
+    ],
+    "correct": 1
   }
 ]
