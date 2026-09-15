@@ -4,36 +4,61 @@ import { useI18n } from './i18n';
 export const AVATARS = ['\u{1F43A}', '\u{1F981}', '\u{1F98A}', '\u{1F43C}', '\u{1F989}', '\u{1F438}', '\u{1F42F}', '\u{1F984}'];
 
 export const CATEGORIES = [
-  { key: 'movies', label: 'Movies', icon: '\u{1F3AC}', grad: 'g1', tag: '\u{1F525}', desc: 'Blockbusters & classics' },
-  { key: 'music', label: 'Music', icon: '\u{1F3B5}', grad: 'g2', desc: 'Artists, albums & lyrics' },
-  { key: 'sports', label: 'Sports', icon: '⚽', grad: 'g3', desc: 'Teams & champions' },
-  { key: 'geography', label: 'Geography', icon: '\u{1F30D}', grad: 'g4', desc: 'Capitals & landmarks' },
-  { key: 'gaming', label: 'Gaming', icon: '\u{1F3AE}', grad: 'g5', desc: 'Consoles & lore' },
-  { key: 'science', label: 'Science', icon: '\u{1F9EC}', grad: 'g6', tag: '✨', desc: 'Space, bio & physics' },
-  { key: 'rap_fr', label: 'Rap Français', icon: '\u{1F3A4}', grad: 'g7', tag: '\u{1F525}', desc: 'PNL, Booba, Jul & co.' },
-  { key: 'foot_fr', label: 'Foot Français', icon: '⚽', grad: 'g8', desc: 'Ligue 1, Bleus & légendes' },
-  { key: 'cinema_fr', label: 'Cinéma Français', icon: '\u{1F3AD}', grad: 'g9', desc: 'Films, séries & acteurs' },
-  { key: 'culture_fr', label: 'Culture Générale FR', icon: '\u{1F1EB}\u{1F1F7}', grad: 'g10', desc: 'Histoire, géo & traditions' },
-  { key: 'premier_league', label: 'Premier League', icon: '\u{1F981}', grad: 'g11', tag: '\u{1F4F8}', desc: 'Devine le joueur anglais' },
-  { key: 'la_liga', label: 'La Liga', icon: '\u{1F402}', grad: 'g12', tag: '\u{1F4F8}', desc: 'Devine le joueur espagnol' },
-  { key: 'bundesliga', label: 'Bundesliga', icon: '\u{1F985}', grad: 'g25', tag: '\u{1F4F8}', desc: 'Devine le joueur allemand' },
-  { key: 'serie_a', label: 'Serie A', icon: '\u{1F462}', grad: 'g26', tag: '\u{1F4F8}', desc: 'Devine le joueur italien' },
-  { key: 'ligue_1', label: 'Ligue 1', icon: '\u{1F413}', grad: 'g27', tag: '\u{1F4F8}', desc: 'Devine le joueur français' },
+  { key: 'movies', label: 'Movies', icon: '\u{1F3AC}', grad: 'g1', tag: '\u{1F525}', desc: 'Blockbusters & classics', family: 'entertainment' },
+  { key: 'music', label: 'Music', icon: '\u{1F3B5}', grad: 'g2', desc: 'Artists, albums & lyrics', family: 'music' },
+  { key: 'sports', label: 'Sports', icon: '⚽', grad: 'g3', desc: 'Teams & champions', family: 'sport' },
+  { key: 'geography', label: 'Geography', icon: '\u{1F30D}', grad: 'g4', desc: 'Capitals & landmarks', family: 'culture' },
+  { key: 'gaming', label: 'Gaming', icon: '\u{1F3AE}', grad: 'g5', desc: 'Consoles & lore', family: 'gaming' },
+  { key: 'science', label: 'Science', icon: '\u{1F9EC}', grad: 'g6', tag: '✨', desc: 'Space, bio & physics', family: 'culture' },
+  { key: 'rap_fr', label: 'Rap Français', icon: '\u{1F3A4}', grad: 'g7', tag: '\u{1F525}', desc: 'PNL, Booba, Jul & co.', family: 'music', cover: '/images/players/booba.jpg' },
+  { key: 'foot_fr', label: 'Foot Français', icon: '⚽', grad: 'g8', desc: 'Ligue 1, Bleus & légendes', family: 'sport', cover: '/images/players/ousmane_dembele.jpg' },
+  { key: 'cinema_fr', label: 'Cinéma Français', icon: '\u{1F3AD}', grad: 'g9', desc: 'Films, séries & acteurs', family: 'entertainment' },
+  { key: 'culture_fr', label: 'Culture Générale FR', icon: '\u{1F1EB}\u{1F1F7}', grad: 'g10', desc: 'Histoire, géo & traditions', family: 'culture' },
+  { key: 'premier_league', label: 'Premier League', icon: '\u{1F981}', grad: 'g11', tag: '\u{1F4F8}', desc: 'Devine le joueur anglais', family: 'sport', cover: '/images/players/erling_braut_haaland.jpg' },
+  { key: 'la_liga', label: 'La Liga', icon: '\u{1F402}', grad: 'g12', tag: '\u{1F4F8}', desc: 'Devine le joueur espagnol', family: 'sport', cover: '/images/players/lamine_yamal.jpg' },
+  { key: 'bundesliga', label: 'Bundesliga', icon: '\u{1F985}', grad: 'g25', tag: '\u{1F4F8}', desc: 'Devine le joueur allemand', family: 'sport', cover: '/images/players/harry_kane.jpg' },
+  { key: 'serie_a', label: 'Serie A', icon: '\u{1F462}', grad: 'g26', tag: '\u{1F4F8}', desc: 'Devine le joueur italien', family: 'sport', cover: '/images/players/lautaro_martinez.jpg' },
+  { key: 'ligue_1', label: 'Ligue 1', icon: '\u{1F413}', grad: 'g27', tag: '\u{1F4F8}', desc: 'Devine le joueur français', family: 'sport', cover: '/images/players/achraf_hakimi.jpg' },
   // `logo` (path under /images/logos/) shows the real brand mark once
   // provided; until then the emoji `icon` is the fallback.
-  { key: 'netflix', label: 'Netflix', icon: '\u{1F3AC}', logo: null, grad: 'g13', desc: 'Séries & films Netflix' },
-  { key: 'got', label: 'Game of Thrones', icon: '\u{1F409}', logo: null, grad: 'g14', desc: 'Le Trône de Fer' },
-  { key: 'harry_potter', label: 'Harry Potter', icon: '\u{1FA84}', grad: 'g15', desc: 'Poudlard & sorcellerie' },
-  { key: 'marvel', label: 'Marvel', icon: '\u{1F9B8}', grad: 'g16', desc: 'Avengers & super-héros' },
-  { key: 'star_wars', label: 'Star Wars', icon: '\u{2694}\u{FE0F}', grad: 'g17', desc: 'Jedi, Sith & la Force' },
-  { key: 'disney', label: 'Disney Classics', icon: '\u{1F3F0}', grad: 'g18', desc: 'Contes animés cultes' },
-  { key: 'pokemon', label: 'Pokémon', icon: '\u{26A1}', grad: 'g19', desc: 'Dresseurs & Pokéballs' },
-  { key: 'f1', label: 'Formule 1', icon: '\u{1F3CE}\u{FE0F}', grad: 'g20', desc: 'Écuries & champions' },
-  { key: 'nba', label: 'Basket NBA', icon: '\u{1F3C0}', grad: 'g21', desc: 'Légendes du parquet' },
-  { key: 'tv_shows', label: 'Séries Cultes', icon: '\u{1F4FA}', grad: 'g22', desc: 'Friends, House & co.' },
-  { key: 'histoire_fr', label: 'Histoire de France', icon: '\u{269C}\u{FE0F}', grad: 'g23', desc: 'Rois, guerres & dates' },
-  { key: 'retro_games', label: 'Jeux Vidéo Rétro', icon: '\u{1F47E}', grad: 'g24', desc: 'Mario, Sonic & arcade' },
+  { key: 'netflix', label: 'Netflix', icon: '\u{1F3AC}', logo: null, grad: 'g13', desc: 'Séries & films Netflix', family: 'entertainment' },
+  { key: 'got', label: 'Game of Thrones', icon: '\u{1F409}', logo: null, grad: 'g14', desc: 'Le Trône de Fer', family: 'entertainment' },
+  { key: 'harry_potter', label: 'Harry Potter', icon: '\u{1FA84}', grad: 'g15', desc: 'Poudlard & sorcellerie', family: 'entertainment' },
+  { key: 'marvel', label: 'Marvel', icon: '\u{1F9B8}', grad: 'g16', desc: 'Avengers & super-héros', family: 'entertainment' },
+  { key: 'star_wars', label: 'Star Wars', icon: '\u{2694}\u{FE0F}', grad: 'g17', desc: 'Jedi, Sith & la Force', family: 'entertainment' },
+  { key: 'disney', label: 'Disney Classics', icon: '\u{1F3F0}', grad: 'g18', desc: 'Contes animés cultes', family: 'entertainment' },
+  { key: 'pokemon', label: 'Pokémon', icon: '\u{26A1}', grad: 'g19', desc: 'Dresseurs & Pokéballs', family: 'gaming' },
+  { key: 'f1', label: 'Formule 1', icon: '\u{1F3CE}\u{FE0F}', grad: 'g20', desc: 'Écuries & champions', family: 'sport' },
+  { key: 'nba', label: 'Basket NBA', icon: '\u{1F3C0}', grad: 'g21', desc: 'Légendes du parquet', family: 'sport' },
+  { key: 'tv_shows', label: 'Séries Cultes', icon: '\u{1F4FA}', grad: 'g22', desc: 'Friends, House & co.', family: 'entertainment' },
+  { key: 'histoire_fr', label: 'Histoire de France', icon: '\u{269C}\u{FE0F}', grad: 'g23', desc: 'Rois, guerres & dates', family: 'culture' },
+  { key: 'retro_games', label: 'Jeux Vidéo Rétro', icon: '\u{1F47E}', grad: 'g24', desc: 'Mario, Sonic & arcade', family: 'gaming' },
 ];
+
+// Big topic families (QuizUp-style browsing: tap a broad category to see
+// every quiz inside it) — labels/descriptions are translated UI chrome,
+// unlike the quiz-specific CATEGORIES labels above.
+export const FAMILIES = [
+  { key: 'sport', icon: '⚽', grad: 'g3' },
+  { key: 'entertainment', icon: '\u{1F3AC}', grad: 'g13' },
+  { key: 'music', icon: '\u{1F3B5}', grad: 'g7' },
+  { key: 'culture', icon: '\u{1F30D}', grad: 'g10' },
+  { key: 'gaming', icon: '\u{1F3AE}', grad: 'g5' },
+];
+
+export function categoriesInFamily(familyKey) {
+  return CATEGORIES.filter((c) => c.family === familyKey);
+}
+
+// Strips accents so "francais" matches "Français" — search shouldn't
+// require the visitor to type the exact diacritics of an on-screen label.
+export function normalizeForSearch(s) {
+  return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+}
+
+export function famLabel(t, key, suffix = '') {
+  return t(`fam${key[0].toUpperCase()}${key.slice(1)}${suffix}`);
+}
 
 export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setAvatar, onContinue }) {
   const { t } = useI18n();
@@ -130,15 +155,68 @@ export const LevelRing = memo(function LevelRing({ level, xpIntoLevel, xpForLeve
 
 // A single home-screen topic tile: square icon + label underneath, matching
 // the original QuizUp's dense topic grid rather than a big descriptive card.
+// `cover` (a real player photo already in the game's own asset set) replaces
+// the flat gradient with an actual illustration for photo-quiz categories.
 export const CategoryTile = memo(function CategoryTile({ c, onClick }) {
   return (
     <button className="topic-tile" onClick={onClick}>
-      <span className={`tile-icon-sq ${c.grad}`}>
-        {c.logo ? <img src={c.logo} alt={c.label} className="tile-logo-img" /> : c.icon}
+      <span
+        className={`tile-icon-sq ${c.grad} ${c.cover ? 'has-cover' : ''}`}
+        style={c.cover ? { backgroundImage: `url(${c.cover})` } : undefined}
+      >
+        {!c.cover && (c.logo ? <img src={c.logo} alt={c.label} className="tile-logo-img" /> : c.icon)}
+        {c.cover && <span className="tile-cover-icon">{c.icon}</span>}
         {c.tag && <span className="tile-tag-badge">{c.tag}</span>}
       </span>
       <span className="tile-label">{c.label}</span>
     </button>
+  );
+});
+
+// A big "family" card — the QuizUp-style broad topic (Sport, Music...) that
+// opens onto every specific quiz inside it, rather than listing all quizzes
+// flat on one screen.
+export const FamilyTile = memo(function FamilyTile({ fam, label, desc, count, onClick }) {
+  return (
+    <button className="family-tile" onClick={onClick}>
+      <span className={`family-icon ${fam.grad}`}>{fam.icon}</span>
+      <span className="family-info">
+        <span className="family-label">{label}</span>
+        <span className="family-desc">{desc}</span>
+      </span>
+      <span className="family-count">{count}</span>
+    </button>
+  );
+});
+
+// Shared by Home's "All Topics" section and the Themes screen's overview —
+// keeps both in sync instead of duplicating the same map/props in two files.
+export const FamilyGrid = memo(function FamilyGrid({ onSelect }) {
+  const { t } = useI18n();
+  return (
+    <div className="family-list">
+      {FAMILIES.map((fam) => (
+        <FamilyTile key={fam.key} fam={fam} label={famLabel(t, fam.key)} desc={famLabel(t, fam.key, 'Desc')}
+          count={t('quizCount', { n: categoriesInFamily(fam.key).length })}
+          onClick={() => onSelect(fam.key)} />
+      ))}
+    </div>
+  );
+});
+
+export const SearchBar = memo(function SearchBar({ value, onChange, placeholder }) {
+  return (
+    <div className="search-bar">
+      <span className="search-icon" aria-hidden="true">{'\u{1F50D}'}</span>
+      <input
+        className="search-input"
+        type="search"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+        aria-label={placeholder}
+      />
+    </div>
   );
 });
 

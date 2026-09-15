@@ -18,6 +18,7 @@ export default function App() {
   const toggleMute = useCallback(() => setMuted(SFX.toggle()), []);
   useEffect(() => { music.setMuted(muted); }, [muted]);
   const [stage, setStage] = useState('join');
+  const [categoryFamily, setCategoryFamily] = useState(null);
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState(AVATARS[0]);
   const [myId, setMyId] = useState(null);
@@ -222,7 +223,10 @@ export default function App() {
     }
   }, [room]);
 
-  const onNav = useCallback((s) => setStage(s), []);
+  // Tapping the "Themes" nav tab directly (not via a family tile on Home)
+  // should land on the family overview, not silently reuse whichever family
+  // was last opened.
+  const onNav = useCallback((s) => { if (s === 'categories') setCategoryFamily(null); setStage(s); }, []);
 
   const answer = useCallback((index) => {
     if (selected !== null || reveal) return;
@@ -272,7 +276,7 @@ export default function App() {
         <HomeContent
           name={name} avatar={avatar} soloMode={soloMode} setSoloMode={setSoloMode}
           quickMatch={quickMatch} startWithCategory={startWithCategory}
-          onOpenProfile={() => setStage('profile')} onSeeAll={() => setStage('categories')}
+          onOpenProfile={() => setStage('profile')} onSeeAll={(fam) => { setCategoryFamily(fam || null); setStage('categories'); }}
           createRoom={createRoom} onOpenEnterCode={() => { setJoinError(false); setJoinCode(''); setStage('enter_code'); }}
         />
         <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
@@ -306,7 +310,7 @@ export default function App() {
     return (
       <div className="app app-nav app-top">
         <TopControls {...topProps} />
-        <CategoriesContent startWithCategory={startWithCategory} onBack={() => setStage('home')} />
+        <CategoriesContent startWithCategory={startWithCategory} onBack={() => setStage('home')} initialFamily={categoryFamily} />
         <NavBar active="categories" onNav={onNav} onQuickMatch={quickMatch} />
       </div>
     );

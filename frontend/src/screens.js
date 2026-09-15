@@ -1,5 +1,5 @@
-import React from 'react';
-import { CATEGORIES, SoloToggle, CategoryTile, PlayerPhoto, LevelRing } from './ui';
+import React, { useState, useMemo } from 'react';
+import { CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing } from './ui';
 import { PlayerHud, Leaderboard } from './multiplayer';
 import { ProfileStats } from './stats';
 import { FriendsScreen } from './social';
@@ -27,11 +27,9 @@ export function HomeContent({ name, avatar, soloMode, setSoloMode, quickMatch, s
       </div>
       <div className="section-title">
         <span>{t('allTopics')}</span>
-        <button className="see-all" onClick={onSeeAll}>{t('seeAll')}</button>
+        <button className="see-all" onClick={() => onSeeAll()}>{t('seeAll')}</button>
       </div>
-      <div className="topics-grid">
-        {CATEGORIES.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} />)}
-      </div>
+      <FamilyGrid onSelect={onSeeAll} />
       <div className="social-row">
         <button className="social-btn" onClick={createRoom}>{'⚔️'} {t('party')}</button>
         <button className="social-btn outline" onClick={onOpenEnterCode}>{'\u{1F511}'} {t('joinCode')}</button>
@@ -55,17 +53,44 @@ export function EnterCodeContent({ joinCode, setJoinCode, joinError, setJoinErro
   );
 }
 
-export function CategoriesContent({ startWithCategory, onBack }) {
+export function CategoriesContent({ startWithCategory, onBack, initialFamily }) {
   const { t } = useI18n();
+  const [family, setFamily] = useState(initialFamily || null);
+  const [query, setQuery] = useState('');
+
+  const results = useMemo(() => {
+    const q = normalizeForSearch(query.trim());
+    if (!q) return null;
+    return CATEGORIES.filter((c) => normalizeForSearch(c.label).includes(q));
+  }, [query]);
+
+  const activeFamily = FAMILIES.find((f) => f.key === family);
+
   return (
     <div className="container wide">
       <div className="cat-header">
-        <h2>{t('allTopics')}</h2>
+        <h2>{activeFamily && !results ? famLabel(t, activeFamily.key) : t('allTopics')}</h2>
         <button className="back-link" onClick={onBack}>{t('back')}</button>
       </div>
-      <div className="topics-grid full">
-        {CATEGORIES.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} />)}
-      </div>
+      <SearchBar value={query} onChange={setQuery} placeholder={t('searchPlaceholder')} />
+      {results ? (
+        results.length ? (
+          <div className="topics-grid full">
+            {results.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} />)}
+          </div>
+        ) : (
+          <div className="no-results">{t('noResults', { q: query })}</div>
+        )
+      ) : activeFamily ? (
+        <>
+          <button className="back-to-topics" onClick={() => setFamily(null)}>{t('backToTopics')}</button>
+          <div className="topics-grid full">
+            {categoriesInFamily(activeFamily.key).map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} />)}
+          </div>
+        </>
+      ) : (
+        <FamilyGrid onSelect={setFamily} />
+      )}
     </div>
   );
 }
