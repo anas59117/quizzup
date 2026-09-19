@@ -221,6 +221,29 @@ body { font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', san
 .nav-bolt:hover { transform: scale(1.12); }
 .nav-bolt:active { transform: scale(0.95); }
 
+/* ---- Desktop framing — same mobile layout, presented as a device instead
+   of floating loose in a big empty viewport with a full-bleed nav bar ---- */
+@media (min-width: 640px) {
+  body { background: linear-gradient(160deg, var(--surface-2) 0%, var(--bg) 100%); }
+  .app {
+    position: relative;
+    width: 480px;
+    max-width: 480px;
+    min-height: 0;
+    height: 90vh;
+    max-height: 880px;
+    margin: 5vh auto;
+    border-radius: 36px;
+    align-items: safe center;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.35), 0 0 0 1px var(--border);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .app .container.wide { max-width: 440px; }
+  .top-controls { position: absolute; top: 16px; right: 16px; }
+  .navbar { position: absolute; left: 0; right: 0; bottom: 0; border-radius: 0 0 36px 36px; }
+}
+
 /* Profile screen */
 .profile-head { text-align: center; margin-bottom: 20px; }
 .profile-avatar { width: 80px; height: 80px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 2.2em; margin: 0 auto 10px; }
