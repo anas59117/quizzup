@@ -21,6 +21,9 @@ const playersLaLiga = require('./data/players-la-liga.json');
 const playersBundesliga = require('./data/players-bundesliga.json');
 const playersSerieA = require('./data/players-serie-a.json');
 const playersLigue1 = require('./data/players-ligue-1.json');
+const playersBollywood = require('./data/players-bollywood.json');
+const playersActorsAZ = require('./data/players-actors-az.json');
+const playersActorsMZ = require('./data/players-actors-mz.json');
 
 const CATEGORIES = {
   movies: {
@@ -177,6 +180,21 @@ const CATEGORIES = {
     label: 'Ligue 1',
     icon: '🐓',
     questions: [...playersLigue1],
+  },
+  bollywood: {
+    label: 'Bollywood',
+    icon: '🇮🇳',
+    questions: [...playersBollywood],
+  },
+  actors_az: {
+    label: 'Acteurs (A-L)',
+    icon: '⭐',
+    questions: [...playersActorsAZ],
+  },
+  actors_mz: {
+    label: 'Acteurs (M-Z)',
+    icon: '🌟',
+    questions: [...playersActorsMZ],
   },
   netflix: {
     label: 'Netflix',
@@ -384,6 +402,10 @@ const CATEGORIES = {
       { text: 'Quel acteur a incarné Astérix face à Gérard Depardieu (Obélix) dans les premiers films ?', answers: ['Christian Clavier', 'Édouard Baer', 'Guillaume Gallienne', 'Franck Dubosc'], correct: 0 },
       { text: 'Gérard Depardieu incarne quel personnage de bande dessinée au cinéma ?', answers: ['Astérix', 'Obélix', 'Panoramix', 'Abraracourcix'], correct: 1 },
       { text: 'Quelle actrice a remporté l’Oscar de la meilleure actrice pour son rôle d’Édith Piaf dans "La Môme" ?', answers: ['Juliette Binoche', 'Marion Cotillard', 'Audrey Tautou', 'Léa Seydoux'], correct: 1 },
+      { text: 'Qui est cet acteur ?', image: '/images/players/gerard_depardieu.jpg', credit: 'Photo : Siebbi (CC BY 3.0)', answers: ['Gérard Depardieu', 'Catherine Deneuve', 'Isabelle Adjani', 'Juliette Binoche'], correct: 0 },
+      { text: 'Qui est cette actrice ?', image: '/images/players/catherine_deneuve.jpg', credit: 'Photo : Martin Kraft (CC BY-SA 3.0)', answers: ['Juliette Binoche', 'Gérard Depardieu', 'Catherine Deneuve', 'Isabelle Adjani'], correct: 2 },
+      { text: 'Qui est cette actrice ?', image: '/images/players/isabelle_adjani.jpg', credit: 'Photo : Georges Biard (CC BY-SA 4.0)', answers: ['Isabelle Adjani', 'Gérard Depardieu', 'Juliette Binoche', 'Catherine Deneuve'], correct: 0 },
+      { text: 'Qui est cette actrice ?', image: '/images/players/juliette_binoche.jpg', credit: 'Photo : Elena Ternovaja (CC BY-SA 3.0)', answers: ['Isabelle Adjani', 'Gérard Depardieu', 'Catherine Deneuve', 'Juliette Binoche'], correct: 3 },
     ],
   },
   culture_fr: {

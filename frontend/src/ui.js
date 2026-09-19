@@ -19,6 +19,9 @@ export const CATEGORIES = [
   { key: 'bundesliga', label: 'Bundesliga', icon: '\u{1F985}', grad: 'g25', tag: '\u{1F4F8}', desc: 'Devine le joueur allemand', family: 'sport', cover: '/images/players/harry_kane.jpg' },
   { key: 'serie_a', label: 'Serie A', icon: '\u{1F462}', grad: 'g26', tag: '\u{1F4F8}', desc: 'Devine le joueur italien', family: 'sport', cover: '/images/players/lautaro_martinez.jpg' },
   { key: 'ligue_1', label: 'Ligue 1', icon: '\u{1F413}', grad: 'g27', tag: '\u{1F4F8}', desc: 'Devine le joueur français', family: 'sport', cover: '/images/players/achraf_hakimi.jpg' },
+  { key: 'bollywood', label: 'Bollywood', icon: '\u{1F1EE}\u{1F1F3}', grad: 'g28', tag: '\u{1F4F8}', desc: 'Devine la star indienne', family: 'entertainment', cover: '/images/players/shahrukh_khan.jpg' },
+  { key: 'actors_az', label: 'Acteurs (A-L)', icon: '⭐', grad: 'g29', tag: '\u{1F4F8}', desc: 'Devine la star (A à L)', family: 'entertainment', cover: '/images/players/brad_pitt.jpg' },
+  { key: 'actors_mz', label: 'Acteurs (M-Z)', icon: '\u{1F31F}', grad: 'g30', tag: '\u{1F4F8}', desc: 'Devine la star (M à Z)', family: 'entertainment', cover: '/images/players/robert_de_niro.jpg' },
   // `logo` (path under /images/logos/) shows the real brand mark once
   // provided; until then the emoji `icon` is the fallback.
   { key: 'netflix', label: 'Netflix', icon: '\u{1F3AC}', logo: null, grad: 'g13', desc: 'Séries & films Netflix', family: 'entertainment' },
