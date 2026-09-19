@@ -1,12 +1,6 @@
 {
   "version": 1,
   "skills": {
-    "code-review-skill": {
-      "source": "awesome-skills/code-review-skill",
-      "sourceType": "github",
-      "skillPath": "SKILL.md",
-      "computedHash": "b4d7f9ac724de8b6df3ffbbc584a69f4af20db001d1e0b5960c5b672333372b2"
-    },
     "ab-testing": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
@@ -78,6 +72,12 @@
       "sourceType": "github",
       "skillPath": "skills/co-marketing/SKILL.md",
       "computedHash": "675836e59bd48ab226a165e65873fe0f2ca7dfa8223ec040bb81e40bf9e1b4b8"
+    },
+    "code-review-skill": {
+      "source": "awesome-skills/code-review-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "b4d7f9ac724de8b6df3ffbbc584a69f4af20db001d1e0b5960c5b672333372b2"
     },
     "cold-email": {
       "source": "coreyhaines31/marketingskills",
@@ -300,6 +300,12 @@
       "sourceType": "github",
       "skillPath": "skills/public-relations/SKILL.md",
       "computedHash": "0c7c5c26c158ea752ab7112503931ba0bc0b4a747058b3027c6785dcb3a464fe"
+    },
+    "redesign-existing-projects": {
+      "source": "Leonxlnx/taste-skill",
+      "sourceType": "github",
+      "skillPath": "skills/redesign-skill/SKILL.md",
+      "computedHash": "47eced3e960a2c961d3cbee11fa1216264f589344b586a5cbd03967cd6b9c54b"
     },
     "referrals": {
       "source": "coreyhaines31/marketingskills",
