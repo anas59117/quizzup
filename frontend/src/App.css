@@ -221,27 +221,29 @@ body { font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', san
 .nav-bolt:hover { transform: scale(1.12); }
 .nav-bolt:active { transform: scale(0.95); }
 
-/* ---- Desktop framing — same mobile layout, presented as a device instead
-   of floating loose in a big empty viewport with a full-bleed nav bar ---- */
-@media (min-width: 640px) {
-  body { background: linear-gradient(160deg, var(--surface-2) 0%, var(--bg) 100%); }
-  .app {
-    position: relative;
-    width: 480px;
-    max-width: 480px;
-    min-height: 0;
-    height: 90vh;
-    max-height: 880px;
-    margin: 5vh auto;
-    border-radius: 36px;
-    align-items: safe center;
-    box-shadow: 0 30px 70px rgba(0,0,0,0.35), 0 0 0 1px var(--border);
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-  .app .container.wide { max-width: 440px; }
-  .top-controls { position: absolute; top: 16px; right: 16px; }
-  .navbar { position: absolute; left: 0; right: 0; bottom: 0; border-radius: 0 0 36px 36px; }
+/* ---- Desktop layout — fill the screen instead of a narrow mobile strip -- */
+@media (min-width: 768px) {
+  .app { align-items: flex-start; padding: 24px 40px 80px; }
+  .container { max-width: 720px; }
+  .container.wide { max-width: 720px; }
+  .topics-scroll { flex-wrap: wrap; overflow-x: visible; }
+  .topics-scroll .topic-tile { flex: 0 0 80px; }
+  .topics-grid { grid-template-columns: repeat(6, 1fr); }
+  .topics-grid.full { grid-template-columns: repeat(6, 1fr); }
+  .family-list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .social-row { max-width: 400px; }
+  .navbar { max-width: 720px; left: 50%; transform: translateX(-50%); border-radius: 20px 20px 0 0; }
+}
+@media (min-width: 1024px) {
+  .app { padding: 32px 60px 80px; }
+  .container { max-width: 900px; }
+  .container.wide { max-width: 900px; }
+  .topics-scroll .topic-tile { flex: 0 0 90px; }
+  .topics-grid { grid-template-columns: repeat(8, 1fr); }
+  .topics-grid.full { grid-template-columns: repeat(8, 1fr); }
+  .family-list { grid-template-columns: 1fr 1fr 1fr; }
+  .home-head { padding-right: 80px; }
+  .navbar { max-width: 900px; }
 }
 
 /* Profile screen */
