@@ -25,6 +25,38 @@ const playersBollywood = require('./data/players-bollywood.json');
 const playersActorsAZ = require('./data/players-actors-az.json');
 const playersActorsMZ = require('./data/players-actors-mz.json');
 
+// Batch 1 of the 224-category content expansion (text-only, no photos).
+const secondeGuerreMondiale = require('./data/seconde-guerre-mondiale.json');
+const espaceAstronomie = require('./data/espace-astronomie.json');
+const corpsHumain = require('./data/corps-humain.json');
+
+// Batch 2 — Sport family (text-only, no photos).
+const ligueChampions = require('./data/ligue-champions.json');
+const coupeDuMondeHistoire = require('./data/coupe-du-monde-histoire.json');
+const tourDeFrance = require('./data/tour-de-france.json');
+const joEteHistoire = require('./data/jo-ete-histoire.json');
+
+// Batch 3 — Sport family, suite (text-only, no photos).
+const canFootAfricain = require('./data/can-foot-africain.json');
+const copaAmerica = require('./data/copa-america.json');
+const legendesFootAllemandAnglaisItalien = require('./data/legendes-foot-allemand-anglais-italien.json');
+const eredivisie = require('./data/eredivisie.json');
+
+// "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
+// portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
+// occupation-mismatch contamination from the raw Wikidata query results.
+const playersTennis = require('./data/tennis.json');
+const playersBasketball = require('./data/basketball.json');
+const playersRugby = require('./data/rugby.json');
+const playersBoxe = require('./data/boxe.json');
+const playersAthletisme = require('./data/athletisme.json');
+const playersScience = require('./data/science.json');
+const playersHumour = require('./data/humour.json');
+const playersMode = require('./data/mode.json');
+const playersKpop = require('./data/kpop.json');
+const playersSeriesAdoRomance = require('./data/series_ado_romance.json');
+const playersDrapeaux = require('./data/drapeaux.json');
+
 const CATEGORIES = {
   movies: {
     label: 'Movies',
@@ -372,6 +404,61 @@ const CATEGORIES = {
       { text: 'Quel palais royal Louis XIV a-t-il fait construire près de Paris ?', answers: ['Le Louvre', 'Le Château de Versailles', 'Fontainebleau', 'Le Château de Chambord'], correct: 1 },
     ],
   },
+  seconde_guerre_mondiale: {
+    label: 'Seconde Guerre Mondiale',
+    icon: '⚔️',
+    questions: [...secondeGuerreMondiale],
+  },
+  espace_astronomie: {
+    label: 'Espace & Astronomie',
+    icon: '🚀',
+    questions: [...espaceAstronomie],
+  },
+  corps_humain: {
+    label: 'Corps Humain',
+    icon: '🫀',
+    questions: [...corpsHumain],
+  },
+  ligue_champions: {
+    label: 'Ligue des Champions',
+    icon: '🏆',
+    questions: [...ligueChampions],
+  },
+  coupe_du_monde_histoire: {
+    label: 'Coupe du Monde (Histoire)',
+    icon: '🌍',
+    questions: [...coupeDuMondeHistoire],
+  },
+  tour_de_france: {
+    label: 'Tour de France',
+    icon: '🚴',
+    questions: [...tourDeFrance],
+  },
+  jo_ete_histoire: {
+    label: "JO d'Été (Histoire)",
+    icon: '🥇',
+    questions: [...joEteHistoire],
+  },
+  can_foot_africain: {
+    label: "CAN (Foot Africain)",
+    icon: '🌍',
+    questions: [...canFootAfricain],
+  },
+  copa_america: {
+    label: 'Copa América',
+    icon: '🏆',
+    questions: [...copaAmerica],
+  },
+  legendes_foot_allemand_anglais_italien: {
+    label: 'Légendes Foot ALL/ANG/ITA',
+    icon: '⭐',
+    questions: [...legendesFootAllemandAnglaisItalien],
+  },
+  eredivisie: {
+    label: 'Eredivisie',
+    icon: '🇳🇱',
+    questions: [...eredivisie],
+  },
   retro_games: {
     label: 'Jeux Vidéo Rétro',
     icon: '👾',
@@ -423,6 +510,61 @@ const CATEGORIES = {
       { text: 'Qui a écrit "Les Misérables" ?', answers: ['Victor Hugo', 'Émile Zola', 'Honoré de Balzac', 'Gustave Flaubert'], correct: 0 },
       { text: 'Quelle ville française est surnommée "la Ville Lumière" ?', answers: ['Lyon', 'Nice', 'Paris', 'Bordeaux'], correct: 2 },
     ],
+  },
+  tennis: {
+    label: 'Tennis',
+    icon: '🎾',
+    questions: [...playersTennis],
+  },
+  basketball: {
+    label: 'Basketball',
+    icon: '🏀',
+    questions: [...playersBasketball],
+  },
+  rugby: {
+    label: 'Rugby',
+    icon: '🏉',
+    questions: [...playersRugby],
+  },
+  boxe: {
+    label: 'Boxe',
+    icon: '🥊',
+    questions: [...playersBoxe],
+  },
+  athletisme: {
+    label: 'Athlétisme',
+    icon: '🏃',
+    questions: [...playersAthletisme],
+  },
+  science_stars: {
+    label: 'Savants Célèbres',
+    icon: '🔬',
+    questions: [...playersScience],
+  },
+  humour: {
+    label: 'Humour',
+    icon: '😂',
+    questions: [...playersHumour],
+  },
+  mode: {
+    label: 'Mode',
+    icon: '💃',
+    questions: [...playersMode],
+  },
+  kpop: {
+    label: 'K-pop',
+    icon: '🇰🇷',
+    questions: [...playersKpop],
+  },
+  series_ado_romance: {
+    label: 'Séries Ado & Romance',
+    icon: '💕',
+    questions: [...playersSeriesAdoRomance],
+  },
+  drapeaux: {
+    label: 'Drapeaux',
+    icon: '🚩',
+    questions: [...playersDrapeaux],
   },
 };
 

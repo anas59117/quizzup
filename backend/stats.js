@@ -21,11 +21,10 @@ function persist() {
   writeScheduled = true;
   setTimeout(() => {
     writeScheduled = false;
-    try {
-      fs.writeFileSync(STORE, JSON.stringify(stats));
-    } catch {
-      /* disk may be read-only/full — stats still work in memory */
-    }
+    // Async write: avoids blocking the event loop (and every in-flight
+    // game's message handling) on a synchronous full-file rewrite as this
+    // grows with total-users-ever.
+    fs.writeFile(STORE, JSON.stringify(stats), () => {});
   }, 1000);
 }
 

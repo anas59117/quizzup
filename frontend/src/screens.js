@@ -5,7 +5,7 @@ import { ProfileStats } from './stats';
 import { FriendsScreen } from './social';
 import { useI18n } from './i18n';
 
-export function HomeContent({ name, avatar, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode }) {
+export function HomeContent({ name, avatar, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, pending }) {
   const { t } = useI18n();
   return (
     <div className="container wide">
@@ -17,13 +17,13 @@ export function HomeContent({ name, avatar, soloMode, setSoloMode, quickMatch, s
         <button className="home-avatar-chip" onClick={onOpenProfile} aria-label="Open profile">{avatar}</button>
       </div>
       <SoloToggle solo={soloMode} onToggle={() => setSoloMode((s) => !s)} />
-      <button className="quick-play" onClick={quickMatch}>
+      <button className="quick-play" onClick={quickMatch} disabled={pending} aria-busy={pending || undefined}>
         <span className="qp-left"><span className="qp-bolt">{'⚡'}</span> {t('quickPlay')}</span>
         <span className="qp-sub">{t('randomTopic')}</span>
       </button>
       <div className="section-title">{'\u{1F525}'} {t('popularTopics')}</div>
       <div className="topics-scroll">
-        {CATEGORIES.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} />)}
+        {CATEGORIES.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}
       </div>
       <div className="section-title">
         <span>{t('allTopics')}</span>
@@ -31,14 +31,14 @@ export function HomeContent({ name, avatar, soloMode, setSoloMode, quickMatch, s
       </div>
       <FamilyGrid onSelect={onSeeAll} />
       <div className="social-row">
-        <button className="social-btn" onClick={createRoom}>{'⚔️'} {t('party')}</button>
+        <button className="social-btn" onClick={createRoom} disabled={pending}>{'⚔️'} {t('party')}</button>
         <button className="social-btn outline" onClick={onOpenEnterCode}>{'\u{1F511}'} {t('joinCode')}</button>
       </div>
     </div>
   );
 }
 
-export function EnterCodeContent({ joinCode, setJoinCode, joinError, setJoinError, joinRoom, onBack }) {
+export function EnterCodeContent({ joinCode, setJoinCode, joinError, setJoinError, joinRoom, onBack, pending }) {
   const { t } = useI18n();
   return (
     <div className="container center">
@@ -46,14 +46,16 @@ export function EnterCodeContent({ joinCode, setJoinCode, joinError, setJoinErro
       <div className="room-code-label">{t('enterCode')}</div>
       <input className={`input code-input ${joinError ? 'err' : ''}`} placeholder="ABC12" value={joinCode} maxLength={5}
         onChange={(e) => { setJoinCode(e.target.value.toUpperCase()); setJoinError(false); }} />
-      {joinError && <div className="code-err-msg">{t('codeError')}</div>}
-      <button className="btn" disabled={joinCode.trim().length < 4} onClick={() => joinRoom(joinCode)}>{t('joinMatch')}</button>
+      {/* role="alert" so a screen reader announces the invalid-code error
+          immediately, instead of it being silent to anyone not looking. */}
+      {joinError && <div className="code-err-msg" role="alert">{t('codeError')}</div>}
+      <button className="btn" disabled={joinCode.trim().length < 4 || pending} onClick={() => joinRoom(joinCode)}>{t('joinMatch')}</button>
       <button className="home-themes-link" onClick={onBack}>{t('back')}</button>
     </div>
   );
 }
 
-export function CategoriesContent({ startWithCategory, onBack, initialFamily }) {
+export function CategoriesContent({ startWithCategory, onBack, initialFamily, pending }) {
   const { t } = useI18n();
   const [family, setFamily] = useState(initialFamily || null);
   const [query, setQuery] = useState('');
@@ -76,7 +78,7 @@ export function CategoriesContent({ startWithCategory, onBack, initialFamily }) 
       {results ? (
         results.length ? (
           <div className="topics-grid full">
-            {results.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} />)}
+            {results.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}
           </div>
         ) : (
           <div className="no-results">{t('noResults', { q: query })}</div>
@@ -85,7 +87,7 @@ export function CategoriesContent({ startWithCategory, onBack, initialFamily }) 
         <>
           <button className="back-to-topics" onClick={() => setFamily(null)}>{t('backToTopics')}</button>
           <div className="topics-grid full">
-            {categoriesInFamily(activeFamily.key).map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} />)}
+            {categoriesInFamily(activeFamily.key).map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}
           </div>
         </>
       ) : (
@@ -181,7 +183,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
   );
 }
 
-export function FinishedContent({ result, opponents, myId, social, friendRequestSent, addFriend, playAgain, rematch }) {
+export function FinishedContent({ result, opponents, myId, social, friendRequestSent, addFriend, playAgain, rematch, newMatch }) {
   const { t } = useI18n();
   const { won, tie } = result;
   const left = result.reason === 'opponent_disconnected' || result.reason === 'opponent_left';
@@ -216,7 +218,7 @@ export function FinishedContent({ result, opponents, myId, social, friendRequest
       ))}
       <div className="result-actions">
         <button className="ra-btn rematch" onClick={rematch}>{t('rematch')}</button>
-        <button className="ra-btn new-opp" onClick={playAgain}>{isSolo ? t('newGame') : t('newOpponent')}</button>
+        <button className="ra-btn new-opp" onClick={newMatch}>{isSolo ? t('newGame') : t('newOpponent')}</button>
         <button className="ra-btn see-res" onClick={playAgain}>{t('backHome')}</button>
       </div>
     </div>

@@ -19,14 +19,35 @@ const server = http.createServer(app);
 // one client force multi-MB JSON.parse calls on the server for free).
 const wss = new WebSocketServer({ server, path: '/ws', maxPayload: 16 * 1024 });
 
-app.use(cors());
-app.use(express.json());
+// If deployed behind a trusted reverse proxy/load balancer (nginx, a CDN,
+// Heroku's router, etc.), set CORS_ORIGIN/TRUST_PROXY so the IP rate limiter
+// below sees the real client IP instead of the proxy's own address for
+// every request.
+const allowedOrigin = process.env.CORS_ORIGIN;
+app.use(cors(allowedOrigin ? { origin: allowedOrigin } : {}));
 
 const PORT = process.env.PORT || 3001;
+
+function getClientIp(req) {
+  if (process.env.TRUST_PROXY === 'true') {
+    const xff = req.headers['x-forwarded-for'];
+    if (xff) return xff.split(',')[0].trim();
+  }
+  return req.socket.remoteAddress || 'unknown';
+}
 
 // --- State shared across handlers ----------------------------------------
 const waitingPlayers = [];
 const privateRooms = new Map();
+// Codes of not-yet-started rooms, keyed by the host's playerId — lets
+// create_room reuse an already-open room instead of piling up unbounded
+// abandoned rooms for one connection.
+const openRoomByPlayer = new Map();
+// Players who are between "matched" and "game.startGame's async question
+// fetch resolved" — reserved synchronously so a second join/solo/room-start
+// message on the same connection (double-tap, auto-retry) can't pair the
+// same player into two simultaneous games before playerSessions is set.
+const pendingPlayers = new Set();
 // Two limiters: per-connection (playerId resets on reconnect, so it alone is
 // trivially bypassed) and per-IP (survives reconnects, catches the abuse
 // case reconnecting is meant to dodge).
@@ -65,6 +86,14 @@ async function handleIdentify(ws, data, state) {
   const uid = await verifyIdToken(data.idToken);
   if (!uid) return; // unverifiable — proceed without social features rather than trusting the claim
 
+  // A connection re-identifying as a different clientId (rare, but nothing
+  // stops a client from sending `identify` twice) must not leave the old id
+  // stuck "online" forever pointing at this same socket.
+  if (state.clientId && state.clientId !== uid) {
+    social.setOffline(state.clientId);
+    notifyPresence(state.clientId, false);
+  }
+
   state.clientId = uid;
   social.setOnline(state.clientId, ws, state.name, avatar);
   game.send(ws, { type: 'friends_list', friends: social.getFriendsList(state.clientId) });
@@ -81,7 +110,8 @@ function handleFeed(ws, data, state) {
     return true;
   }
   if (data.type === 'post_create') {
-    const category = typeof data.category === 'string' && CATEGORIES[data.category] ? data.category : null;
+    const category = typeof data.category === 'string' && Object.prototype.hasOwnProperty.call(CATEGORIES, data.category)
+      ? data.category : null;
     const post = posts.addPost(clientId, state.name, state.avatar, category, data.text);
     if (post) social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_created', post }));
     return true;
@@ -115,8 +145,10 @@ function handleSocial(ws, data, state) {
   }
   if (data.type === 'friend_accept') {
     const fromId = String(data.requesterId || '');
-    if (clientId && fromId) {
-      social.acceptRequest(clientId, fromId);
+    // acceptRequest returns false (and mutates nothing) unless fromId is an
+    // actual pending requester of clientId — without this check anyone
+    // could force a mutual friendship (and DM access) with an arbitrary id.
+    if (clientId && fromId && social.acceptRequest(clientId, fromId)) {
       const them = social.profileOf(fromId);
       const me = social.profileOf(clientId);
       if (them) game.send(ws, { type: 'friend_added', friend: them });
@@ -180,6 +212,24 @@ function isInActiveGame(playerId) {
   return !!(g && g.status === 'active');
 }
 
+// isInActiveGame alone has a gap: game.startGame is async (it awaits
+// getMixedQuestions, which can take seconds), and playerSessions isn't set
+// until that resolves. During that window a player is neither in
+// waitingPlayers nor in playerSessions, so a second join/solo/room-start on
+// the same connection would slip past every guard and start a second,
+// overlapping game. pendingPlayers closes that gap by reserving the player
+// synchronously, the instant they're matched/about to start.
+function isBusy(playerId) {
+  return isInActiveGame(playerId) || pendingPlayers.has(playerId);
+}
+
+function startGameGuarded(players, categoryKey) {
+  players.forEach((p) => pendingPlayers.add(p.id));
+  return game.startGame(players, categoryKey)
+    .catch(() => players.forEach((p) => game.send(p.ws, { type: 'error' })))
+    .finally(() => players.forEach((p) => pendingPlayers.delete(p.id)));
+}
+
 function handleGameplay(ws, data, state) {
   const { playerId } = state;
 
@@ -201,30 +251,28 @@ function handleGameplay(ws, data, state) {
   // logic work the same whether there are 1, 2, or 4 of them), so no changes
   // to game.js were needed to support this.
   if (data.type === 'solo') {
-    if (isInActiveGame(playerId)) return true;
+    if (isBusy(playerId)) return true;
     if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
     const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
     const categoryKey = typeof data.category === 'string' ? data.category : null;
     game.send(ws, { type: 'joined', playerId, name: state.name });
-    game.startGame([{ ws, id: playerId, clientId: state.clientId, name: state.name, avatar }], categoryKey)
-      .catch(() => game.send(ws, { type: 'error' }));
+    startGameGuarded([{ ws, id: playerId, clientId: state.clientId, name: state.name, avatar }], categoryKey);
     return true;
   }
 
   if (data.type === 'join') {
-    if (isInActiveGame(playerId)) return true;
+    if (isBusy(playerId)) return true;
     if (waitingPlayers.some((w) => w.id === playerId)) return true;
     if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
     const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
     const categoryKey = typeof data.category === 'string' ? data.category : null;
     game.send(ws, { type: 'joined', playerId, name: state.name });
     const oppIdx = waitingPlayers.findIndex(
-      (w) => w.categoryKey === categoryKey && w.ws.readyState === 1
+      (w) => w.categoryKey === categoryKey && w.ws.readyState === 1 && !isBusy(w.id)
     );
     if (oppIdx !== -1) {
       const opp = waitingPlayers.splice(oppIdx, 1)[0];
-      game.startGame([opp, { ws, id: playerId, clientId: state.clientId, name: state.name, avatar }], categoryKey)
-        .catch(() => { game.send(opp.ws, { type: 'error' }); game.send(ws, { type: 'error' }); });
+      startGameGuarded([opp, { ws, id: playerId, clientId: state.clientId, name: state.name, avatar }], categoryKey);
     } else {
       waitingPlayers.push({ ws, id: playerId, clientId: state.clientId, name: state.name, avatar, categoryKey });
       game.send(ws, { type: 'waiting' });
@@ -243,7 +291,20 @@ function handleGameplay(ws, data, state) {
   }
 
   if (data.type === 'create_room') {
-    if (isInActiveGame(playerId)) return true;
+    if (isBusy(playerId)) return true;
+    // Reuse the caller's already-open room instead of piling up a new one
+    // per call — otherwise a single connection could flood privateRooms
+    // with repeated create_room calls (bounded only by the general
+    // message rate limit).
+    const existingCode = openRoomByPlayer.get(playerId);
+    const existing = existingCode && privateRooms.get(existingCode);
+    if (existing) {
+      game.send(ws, {
+        type: 'room_created', code: existing.code, players: roomView(existing),
+        isHost: true, canStart: existing.players.length >= 2,
+      });
+      return true;
+    }
     if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
     const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
     const categoryKey = typeof data.category === 'string' ? data.category : null;
@@ -254,11 +315,13 @@ function handleGameplay(ws, data, state) {
       categoryKey, createdAt: Date.now(),
     };
     privateRooms.set(code, room);
+    openRoomByPlayer.set(playerId, code);
     game.send(ws, { type: 'room_created', code, players: roomView(room), isHost: true, canStart: false });
     return true;
   }
 
   if (data.type === 'join_room') {
+    if (isBusy(playerId)) { game.send(ws, { type: 'already_playing' }); return true; }
     const code = String(data.code || '').toUpperCase().trim();
     const room = privateRooms.get(code);
     if (!room || room.players[0].ws.readyState !== 1) {
@@ -282,10 +345,17 @@ function handleGameplay(ws, data, state) {
     // Only the host (first to create the room) may start it.
     if (room.players[0].id !== playerId) return true;
     if (room.players.length < 2 || room.players.length > MAX_ROOM_PLAYERS) return true;
+    // Re-check every player in the room right now — one of them could have
+    // joined a different game (or another room) between join_room and this
+    // start_room, and starting anyway would attach their connection to two
+    // simultaneous games.
+    if (room.players.some((p) => isBusy(p.id))) {
+      room.players.forEach((p) => game.send(p.ws, { type: 'already_playing' }));
+      return true;
+    }
     privateRooms.delete(code);
-    const players = room.players;
-    game.startGame(players, room.categoryKey)
-      .catch(() => players.forEach((p) => game.send(p.ws, { type: 'error' })));
+    openRoomByPlayer.delete(playerId);
+    startGameGuarded(room.players, room.categoryKey);
     return true;
   }
 
@@ -316,7 +386,7 @@ function handleGameplay(ws, data, state) {
 
 // --- WebSocket connection -------------------------------------------------
 wss.on('connection', (ws, req) => {
-  const ip = req.socket.remoteAddress || 'unknown';
+  const ip = getClientIp(req);
   const state = {
     playerId: game.rid('player_'),
     name: 'Player' + Math.floor(1000 + Math.random() * 9000),
@@ -356,6 +426,7 @@ wss.on('connection', (ws, req) => {
       if (idx === 0) {
         // Host left before starting — dissolve the room for everyone.
         privateRooms.delete(code);
+        openRoomByPlayer.delete(state.playerId);
         room.players.forEach((p) => { if (p.id !== state.playerId) game.send(p.ws, { type: 'room_closed' }); });
       } else {
         room.players.splice(idx, 1);
@@ -382,6 +453,7 @@ setInterval(() => {
   for (const [code, room] of privateRooms) {
     if (now - room.createdAt > ROOM_TTL_MS || room.players[0].ws.readyState !== 1) {
       privateRooms.delete(code);
+      openRoomByPlayer.delete(room.players[0].id);
     }
   }
   limiter.sweep();

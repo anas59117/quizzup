@@ -10,7 +10,9 @@ export function RoomLobby({ code, players, isHost, canStart, onStart, onCancel, 
       <div className="status-label">{t('partyLobby')}</div>
       <div className="room-code-label">{t('shareCode')}</div>
       <button className="room-code" onClick={onCopyCode}>{code}</button>
-      <div className="room-copy-hint">{copied ? t('copied') : t('tapToCopy')}</div>
+      {/* aria-live so a screen reader announces "Copied!" — previously this
+          status change was silent to anyone not looking at the screen. */}
+      <div className="room-copy-hint" aria-live="polite">{copied ? t('copied') : t('tapToCopy')}</div>
       <div className="lobby-players">
         {players.map((p) => (
           <div key={p.id} className="lobby-player">

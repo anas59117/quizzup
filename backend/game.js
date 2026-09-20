@@ -142,7 +142,10 @@ function revealRound(game, timedOut) {
     });
   });
 
-  setTimeout(() => {
+  // Stored on game.roundTimer like the other round timers so the
+  // clear-before-scheduling-a-new-one pattern used elsewhere covers this one
+  // too (previously untracked, which was harmless only by coincidence).
+  game.roundTimer = setTimeout(() => {
     if (game.status === 'active') nextQuestion(game);
   }, 2500);
 }

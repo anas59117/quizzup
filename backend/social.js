@@ -27,11 +27,10 @@ function persist() {
   writeScheduled = true;
   setTimeout(() => {
     writeScheduled = false;
-    try {
-      fs.writeFileSync(STORE, JSON.stringify({ profiles, friends, requests }));
-    } catch {
-      /* disk may be read-only/full — social features still work in memory */
-    }
+    // Async write: this file grows with total-users-ever and a sync write
+    // would block the event loop (and every in-flight game) while it
+    // serializes. fs.writeFile keeps the same debounce without blocking.
+    fs.writeFile(STORE, JSON.stringify({ profiles, friends, requests }), () => {});
   }, 1000);
 }
 
@@ -83,13 +82,20 @@ function sendRequest(fromId, toId) {
   return { ok: true };
 }
 
+// Only creates the friendship if `fromId` is actually a pending requester of
+// `id` — without this check, any authenticated client could send
+// { type: 'friend_accept', requesterId: '<anyone>' } and force a mutual
+// friendship (and therefore DM access, gated by areFriends()) with a victim
+// who never sent a request.
 function acceptRequest(id, fromId) {
-  requests[id] = (requests[id] || []).filter((r) => r !== fromId);
+  if (!(requests[id] || []).includes(fromId)) return false;
+  requests[id] = requests[id].filter((r) => r !== fromId);
   friends[id] = friends[id] || [];
   friends[fromId] = friends[fromId] || [];
   if (!friends[id].includes(fromId)) friends[id].push(fromId);
   if (!friends[fromId].includes(id)) friends[fromId].push(id);
   persist();
+  return true;
 }
 
 function declineRequest(id, fromId) {

@@ -31,11 +31,7 @@ function persist() {
   writeScheduled = true;
   setTimeout(() => {
     writeScheduled = false;
-    try {
-      fs.writeFileSync(STORE, JSON.stringify({ counts, quarantined: [...quarantined] }));
-    } catch {
-      /* disk may be read-only/full — moderation still works in memory */
-    }
+    fs.writeFile(STORE, JSON.stringify({ counts, quarantined: [...quarantined] }), () => {});
   }, 1000);
 }
 

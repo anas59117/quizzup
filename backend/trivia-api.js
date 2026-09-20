@@ -25,7 +25,16 @@ let lastFetch = 0;
 const refilling = new Set();
 
 const b64 = (s) => Buffer.from(s, 'base64').toString('utf8');
-const shuffle = (arr) => arr.sort(() => 0.5 - Math.random());
+// Fisher-Yates: uniform-random permutation. (sort(() => Math.random() - 0.5)
+// is not uniform — it's biased by the sort algorithm's comparison pattern.)
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 
 // Turn one OpenTDB result (base64-encoded) into our question shape.
 function normalize(r, label, icon) {

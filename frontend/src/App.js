@@ -41,14 +41,17 @@ export default function App() {
   const [linking, setLinking] = useState(false);
   const wsRef = useRef(null);
   const tickRef = useRef(null);
+  const copyTimerRef = useRef(null);
+  const [pending, setPending] = useState(false);
   const social = useSocial(wsRef);
   const statsHook = useStats();
   const feed = useFeed(wsRef);
   const clientId = firebaseUser?.uid || null;
 
   useEffect(() => () => {
-    if (wsRef.current) wsRef.current.close();
+    if (wsRef.current) { wsRef.current.intentionalClose = true; wsRef.current.close(); }
     if (tickRef.current) clearInterval(tickRef.current);
+    if (copyTimerRef.current) clearTimeout(copyTimerRef.current);
   }, []);
 
   // Sign in (anonymously, at first) so every player has a stable Firebase
@@ -109,7 +112,7 @@ export default function App() {
   const connect = useCallback((action) => {
     const send = (payload) => {
       if (wsRef.current && wsRef.current.readyState === 1) { wsRef.current.send(JSON.stringify(payload)); return; }
-      if (wsRef.current) { wsRef.current.close(); wsRef.current = null; }
+      if (wsRef.current) { wsRef.current.intentionalClose = true; wsRef.current.close(); wsRef.current = null; }
       // In production the frontend (Vercel) and backend (Railway) are on
       // different hosts, so the URL must be explicit via env var. Falls back
       // to same-host logic for local dev, where frontend:3000 talks to
@@ -142,18 +145,21 @@ export default function App() {
       try { data = JSON.parse(event.data); } catch { return; }
       switch (data.type) {
         case 'session': setMyId(data.playerId); break;
-        case 'waiting': setStage('waiting'); break;
+        case 'waiting': setPending(false); setStage('waiting'); break;
         case 'room_created':
         case 'room_update':
+          setPending(false);
           setRoom({ code: data.code, players: data.players, isHost: data.isHost, canStart: data.canStart });
           setJoinError(false);
           setStage('room_wait');
           break;
-        case 'room_not_found': setJoinError(true); break;
-        case 'room_full': setJoinError(true); break;
+        case 'room_not_found': setPending(false); setJoinError(true); break;
+        case 'room_full': setPending(false); setJoinError(true); break;
+        case 'already_playing': setPending(false); break;
         case 'room_closed': setRoom(null); setStage('home'); break;
         case 'game_start':
           SFX.gameStart();
+          setPending(false);
           setOpponents(data.opponents.map((o) => ({ ...o, score: 0, answered: false, correct: false })));
           setTotalRounds(data.totalRounds);
           setScore(0); setRoom(null);
@@ -186,11 +192,24 @@ export default function App() {
           statsHook.handleStatsMessage(data);
           break;
         case 'stats': statsHook.handleStatsMessage(data); break;
-        case 'error': setStage('error'); break;
+        case 'error': setPending(false); setStage('error'); break;
         default: social.handleMessage(data); feed.handleMessage(data); break;
       }
     };
-    ws.onerror = () => setStage('error');
+    ws.onerror = () => { setPending(false); setStage('error'); };
+    // Without this, a clean/server-initiated close (server restart, idle
+    // kick, proxy timeout, a backgrounded mobile tab having its socket
+    // suspended by the OS) never fired onerror, so the app just froze on
+    // whatever screen it was on — a dead countdown, a dead lobby button —
+    // with no feedback and no way out short of a manual refresh. Closes we
+    // trigger ourselves (cancel, unmount, reconnecting) are marked
+    // intentionalClose beforehand so they don't bounce the player to the
+    // error screen.
+    ws.onclose = () => {
+      if (ws.intentionalClose) return;
+      setPending(false);
+      setStage((s) => (s === 'finished' || s === 'join' ? s : 'error'));
+    };
   }
 
   useEffect(() => {
@@ -198,30 +217,49 @@ export default function App() {
   }, [stage, connect, clientId]);
 
   const [soloMode, setSoloMode] = useState(false);
+  // `pending` blocks a second matchmaking request (double-tap, rapid-fire
+  // click) from going out before the server answers the first one — nothing
+  // previously stopped duplicate join/solo/create_room/join_room/start_room
+  // sends from the same click burst. Cleared by every terminal server
+  // response (see attachHandlers) and defensively after a short timeout in
+  // case a response is somehow missed.
+  const beginPending = useCallback(() => {
+    setPending(true);
+    setTimeout(() => setPending(false), 8000);
+  }, []);
+
   const startWithCategory = useCallback((catKey) => {
+    if (pending) return;
+    beginPending();
     connect({ type: soloMode ? 'solo' : 'join', category: catKey });
-  }, [connect, soloMode]);
+  }, [connect, soloMode, pending, beginPending]);
 
   const quickMatch = useCallback(() => {
+    if (pending) return;
+    beginPending();
     connect({ type: soloMode ? 'solo' : 'join', category: null });
-  }, [connect, soloMode]);
+  }, [connect, soloMode, pending, beginPending]);
 
   const createRoom = useCallback(() => {
+    if (pending) return;
+    beginPending();
     connect({ type: 'create_room', category: null });
-  }, [connect]);
+  }, [connect, pending, beginPending]);
 
   const joinRoom = useCallback((code) => {
-    if (!code || code.trim().length < 4) return;
+    if (!code || code.trim().length < 4 || pending) return;
     setJoinError(false);
+    beginPending();
     connect({ type: 'join_room', code: code.trim().toUpperCase() });
-  }, [connect]);
+  }, [connect, pending, beginPending]);
 
   const startRoomMatch = useCallback(() => {
-    if (!room) return;
+    if (!room || pending) return;
     if (wsRef.current && wsRef.current.readyState === 1) {
+      beginPending();
       wsRef.current.send(JSON.stringify({ type: 'start_room', code: room.code }));
     }
-  }, [room]);
+  }, [room, pending, beginPending]);
 
   // Tapping the "Themes" nav tab directly (not via a family tile on Home)
   // should land on the family overview, not silently reuse whichever family
@@ -230,10 +268,17 @@ export default function App() {
 
   const answer = useCallback((index) => {
     if (selected !== null || reveal) return;
-    SFX.select();
-    setSelected(index);
+    // Only mark the answer as "selected" once it's actually been sent — the
+    // old code called setSelected unconditionally before checking the
+    // socket, so if the connection had silently dropped the button would
+    // still highlight as picked while nothing was transmitted, locking the
+    // player into a screen that looks answered but never gets a result.
     if (wsRef.current && wsRef.current.readyState === 1) {
+      SFX.select();
+      setSelected(index);
       wsRef.current.send(JSON.stringify({ type: 'answer', answerIndex: index }));
+    } else {
+      setStage('error');
     }
   }, [selected, reveal]);
 
@@ -257,6 +302,13 @@ export default function App() {
     setStage('home');
   }, [social]);
 
+  // "New opponent" / "New game" previously reused playAgain — identical to
+  // "Back Home" — so the button's own label ("nouvel adversaire") was a
+  // promise it never kept: the player landed on Home and had to manually
+  // tap Quick Play again. This mirrors what `rematch` already does, minus
+  // forcing the same category/opponent.
+  const newMatch = useCallback(() => { playAgain(); quickMatch(); }, [playAgain, quickMatch]);
+
   const topProps = useMemo(() => ({ muted, toggleMute, theme, toggleTheme }), [muted, toggleMute, theme, toggleTheme]);
 
   // --- Screens ---------------------------------------------------------------
@@ -278,6 +330,7 @@ export default function App() {
           quickMatch={quickMatch} startWithCategory={startWithCategory}
           onOpenProfile={() => setStage('profile')} onSeeAll={(fam) => { setCategoryFamily(fam || null); setStage('categories'); }}
           createRoom={createRoom} onOpenEnterCode={() => { setJoinError(false); setJoinCode(''); setStage('enter_code'); }}
+          pending={pending}
         />
         <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
       </div>
@@ -285,8 +338,15 @@ export default function App() {
   }
 
   if (stage === 'room_wait' && room) {
-    const copyCode = () => { try { navigator.clipboard.writeText(room.code); setCopied(true); setTimeout(() => setCopied(false), 1500); } catch {} };
-    const cancel = () => { if (wsRef.current) wsRef.current.close(); setRoom(null); setStage('home'); };
+    const copyCode = () => {
+      try {
+        navigator.clipboard.writeText(room.code);
+        setCopied(true);
+        if (copyTimerRef.current) clearTimeout(copyTimerRef.current);
+        copyTimerRef.current = setTimeout(() => { setCopied(false); copyTimerRef.current = null; }, 1500);
+      } catch {}
+    };
+    const cancel = () => { if (wsRef.current) { wsRef.current.intentionalClose = true; wsRef.current.close(); } setRoom(null); setStage('home'); };
     return (
       <div className="app"><TopControls {...topProps} />
         <RoomLobby
@@ -301,7 +361,7 @@ export default function App() {
       <div className="app"><TopControls {...topProps} />
         <EnterCodeContent
           joinCode={joinCode} setJoinCode={setJoinCode} joinError={joinError} setJoinError={setJoinError}
-          joinRoom={joinRoom} onBack={() => setStage('home')}
+          joinRoom={joinRoom} onBack={() => setStage('home')} pending={pending}
         />
       </div>);
   }
@@ -310,7 +370,7 @@ export default function App() {
     return (
       <div className="app app-nav app-top">
         <TopControls {...topProps} />
-        <CategoriesContent startWithCategory={startWithCategory} onBack={() => setStage('home')} initialFamily={categoryFamily} />
+        <CategoriesContent startWithCategory={startWithCategory} onBack={() => setStage('home')} initialFamily={categoryFamily} pending={pending} />
         <NavBar active="categories" onNav={onNav} onQuickMatch={quickMatch} />
       </div>
     );
@@ -378,7 +438,7 @@ export default function App() {
         <FinishedContent
           result={result} opponents={opponents} myId={myId} social={social}
           friendRequestSent={friendRequestSent} addFriend={addFriend}
-          playAgain={playAgain} rematch={() => { playAgain(); quickMatch(); }}
+          playAgain={playAgain} rematch={() => { playAgain(); quickMatch(); }} newMatch={newMatch}
         />
       </div>);
   }

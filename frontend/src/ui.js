@@ -11,14 +11,14 @@ export const CATEGORIES = [
   { key: 'gaming', label: 'Gaming', icon: '\u{1F3AE}', grad: 'g5', desc: 'Consoles & lore', family: 'gaming' },
   { key: 'science', label: 'Science', icon: '\u{1F9EC}', grad: 'g6', tag: '✨', desc: 'Space, bio & physics', family: 'culture' },
   { key: 'rap_fr', label: 'Rap Français', icon: '\u{1F3A4}', grad: 'g7', tag: '\u{1F525}', desc: 'PNL, Booba, Jul & co.', family: 'music', cover: '/images/players/booba.jpg' },
-  { key: 'foot_fr', label: 'Foot Français', icon: '⚽', grad: 'g8', desc: 'Ligue 1, Bleus & légendes', family: 'sport', cover: '/images/players/ousmane_dembele.jpg' },
+  { key: 'foot_fr', label: 'Foot Français', icon: '⚽', grad: 'g8', desc: 'Ligue 1, Bleus & légendes', family: 'sport', cover: '/images/covers/foot_fr.jpg' },
   { key: 'cinema_fr', label: 'Cinéma Français', icon: '\u{1F3AD}', grad: 'g9', desc: 'Films, séries & acteurs', family: 'entertainment' },
   { key: 'culture_fr', label: 'Culture Générale FR', icon: '\u{1F1EB}\u{1F1F7}', grad: 'g10', desc: 'Histoire, géo & traditions', family: 'culture' },
-  { key: 'premier_league', label: 'Premier League', icon: '\u{1F981}', grad: 'g11', tag: '\u{1F4F8}', desc: 'Devine le joueur anglais', family: 'sport', cover: '/images/players/erling_braut_haaland.jpg' },
-  { key: 'la_liga', label: 'La Liga', icon: '\u{1F402}', grad: 'g12', tag: '\u{1F4F8}', desc: 'Devine le joueur espagnol', family: 'sport', cover: '/images/players/lamine_yamal.jpg' },
-  { key: 'bundesliga', label: 'Bundesliga', icon: '\u{1F985}', grad: 'g25', tag: '\u{1F4F8}', desc: 'Devine le joueur allemand', family: 'sport', cover: '/images/players/harry_kane.jpg' },
-  { key: 'serie_a', label: 'Serie A', icon: '\u{1F462}', grad: 'g26', tag: '\u{1F4F8}', desc: 'Devine le joueur italien', family: 'sport', cover: '/images/players/lautaro_martinez.jpg' },
-  { key: 'ligue_1', label: 'Ligue 1', icon: '\u{1F413}', grad: 'g27', tag: '\u{1F4F8}', desc: 'Devine le joueur français', family: 'sport', cover: '/images/players/achraf_hakimi.jpg' },
+  { key: 'premier_league', label: 'Premier League', icon: '\u{1F981}', grad: 'g11', tag: '\u{1F4F8}', desc: 'Devine le joueur anglais', family: 'sport', cover: '/images/covers/premier_league.jpg' },
+  { key: 'la_liga', label: 'La Liga', icon: '\u{1F402}', grad: 'g12', tag: '\u{1F4F8}', desc: 'Devine le joueur espagnol', family: 'sport', cover: '/images/covers/la_liga.jpg' },
+  { key: 'bundesliga', label: 'Bundesliga', icon: '\u{1F985}', grad: 'g25', tag: '\u{1F4F8}', desc: 'Devine le joueur allemand', family: 'sport', cover: '/images/covers/bundesliga.jpg' },
+  { key: 'serie_a', label: 'Serie A', icon: '\u{1F462}', grad: 'g26', tag: '\u{1F4F8}', desc: 'Devine le joueur italien', family: 'sport', cover: '/images/covers/serie_a.jpg' },
+  { key: 'ligue_1', label: 'Ligue 1', icon: '\u{1F413}', grad: 'g27', tag: '\u{1F4F8}', desc: 'Devine le joueur français', family: 'sport', cover: '/images/covers/ligue_1.jpg' },
   { key: 'bollywood', label: 'Bollywood', icon: '\u{1F1EE}\u{1F1F3}', grad: 'g28', tag: '\u{1F4F8}', desc: 'Devine la star indienne', family: 'entertainment', cover: '/images/players/shahrukh_khan.jpg' },
   { key: 'actors_az', label: 'Acteurs (A-L)', icon: '⭐', grad: 'g29', tag: '\u{1F4F8}', desc: 'Devine la star (A à L)', family: 'entertainment', cover: '/images/players/brad_pitt.jpg' },
   { key: 'actors_mz', label: 'Acteurs (M-Z)', icon: '\u{1F31F}', grad: 'g30', tag: '\u{1F4F8}', desc: 'Devine la star (M à Z)', family: 'entertainment', cover: '/images/players/robert_de_niro.jpg' },
@@ -36,6 +36,28 @@ export const CATEGORIES = [
   { key: 'tv_shows', label: 'Séries Cultes', icon: '\u{1F4FA}', grad: 'g22', desc: 'Friends, House & co.', family: 'entertainment' },
   { key: 'histoire_fr', label: 'Histoire de France', icon: '\u{269C}\u{FE0F}', grad: 'g23', desc: 'Rois, guerres & dates', family: 'culture' },
   { key: 'retro_games', label: 'Jeux Vidéo Rétro', icon: '\u{1F47E}', grad: 'g24', desc: 'Mario, Sonic & arcade', family: 'gaming' },
+  { key: 'seconde_guerre_mondiale', label: 'Seconde Guerre Mondiale', icon: '\u{2694}\u{FE0F}', grad: 'g31', desc: 'Dates, batailles & figures clés', family: 'culture' },
+  { key: 'espace_astronomie', label: 'Espace & Astronomie', icon: '\u{1F680}', grad: 'g32', desc: 'Planètes, missions & étoiles', family: 'culture' },
+  { key: 'corps_humain', label: 'Corps Humain', icon: '\u{1FAC0}', grad: 'g33', desc: 'Anatomie & physiologie', family: 'culture' },
+  { key: 'ligue_champions', label: 'Ligue des Champions', icon: '\u{1F3C6}', grad: 'g34', desc: 'Finales, légendes & records', family: 'sport' },
+  { key: 'coupe_du_monde_histoire', label: 'Coupe du Monde (Histoire)', icon: '\u{1F30D}', grad: 'g35', desc: 'Vainqueurs & moments cultes', family: 'sport' },
+  { key: 'tour_de_france', label: 'Tour de France', icon: '\u{1F6B4}', grad: 'g36', desc: 'Maillots, cols & champions', family: 'sport' },
+  { key: 'jo_ete_histoire', label: "JO d'Été (Histoire)", icon: '\u{1F947}', grad: 'g37', desc: 'Villes hôtes & exploits', family: 'sport' },
+  { key: 'can_foot_africain', label: 'CAN (Foot Africain)', icon: '\u{1F30D}', grad: 'g38', desc: 'Palmarès & légendes africaines', family: 'sport' },
+  { key: 'copa_america', label: 'Copa América', icon: '\u{1F3C6}', grad: 'g39', desc: 'Argentine, Brésil & Uruguay', family: 'sport' },
+  { key: 'legendes_foot_allemand_anglais_italien', label: 'Légendes Foot ALL/ANG/ITA', icon: '\u{2B50}', grad: 'g40', desc: 'Beckenbauer, Best & Baggio', family: 'sport' },
+  { key: 'eredivisie', label: 'Eredivisie', icon: '\u{1F1F3}\u{1F1F1}', grad: 'g41', desc: 'Ajax, PSV & Feyenoord', family: 'sport' },
+  { key: 'tennis', label: 'Tennis', icon: '\u{1F3BE}', grad: 'g42', tag: '\u{1F4F8}', desc: 'Devine la légende du tennis', family: 'sport', cover: '/images/quizphotos/tennis/rafael_nadal.jpg' },
+  { key: 'basketball', label: 'Basketball', icon: '\u{1F3C0}', grad: 'g43', tag: '\u{1F4F8}', desc: 'Devine la légende du basket', family: 'sport', cover: '/images/quizphotos/basketball/michael_jordan.jpg' },
+  { key: 'rugby', label: 'Rugby', icon: '\u{1F3C9}', grad: 'g44', tag: '\u{1F4F8}', desc: 'Devine la légende du rugby', family: 'sport', cover: '/images/quizphotos/rugby/antoine_dupont.jpg' },
+  { key: 'boxe', label: 'Boxe', icon: '\u{1F94A}', grad: 'g45', tag: '\u{1F4F8}', desc: 'Devine le champion de boxe', family: 'sport', cover: '/images/quizphotos/boxe/mohamed_ali.jpg' },
+  { key: 'athletisme', label: 'Athlétisme', icon: '\u{1F3C3}', grad: 'g46', tag: '\u{1F4F8}', desc: "Devine la légende de l'athlé", family: 'sport', cover: '/images/quizphotos/athletisme/usain_bolt.jpg' },
+  { key: 'science_stars', label: 'Savants Célèbres', icon: '\u{1F52C}', grad: 'g47', tag: '\u{1F4F8}', desc: 'Devine le grand scientifique', family: 'culture', cover: '/images/quizphotos/science/leonard_de_vinci.png' },
+  { key: 'humour', label: 'Humour', icon: '\u{1F602}', grad: 'g48', tag: '\u{1F4F8}', desc: 'Devine la légende comique', family: 'entertainment', cover: '/images/quizphotos/humour/charlie_chaplin.jpg' },
+  { key: 'mode', label: 'Mode', icon: '\u{1F483}', grad: 'g49', tag: '\u{1F4F8}', desc: "Devine l'icône de mode", family: 'entertainment', cover: '/images/quizphotos/mode/marilyn_monroe.jpg' },
+  { key: 'kpop', label: 'K-pop', icon: '\u{1F1F0}\u{1F1F7}', grad: 'g50', tag: '\u{1F4F8}', desc: 'Devine la star ou le groupe K-pop', family: 'music', cover: '/images/quizphotos/kpop/rm.jpg' },
+  { key: 'series_ado_romance', label: 'Séries Ado & Romance', icon: '\u{1F495}', grad: 'g51', tag: '\u{1F4F8}', desc: "Devine l'acteur de ta série préférée", family: 'entertainment', cover: '/images/quizphotos/series_ado_romance/zendaya.jpg' },
+  { key: 'drapeaux', label: 'Drapeaux', icon: '\u{1F6A9}', grad: 'g52', desc: 'Devine le pays', family: 'culture' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
@@ -131,15 +153,13 @@ export const SoloToggle = memo(function SoloToggle({ solo, onToggle }) {
   );
 });
 
-// "Guess the player" rounds carry an optional photo. It starts sharp and
-// blurs more as the clock runs down — like the original QuizUp — to reward
-// fast answers, then shows full + its required CC attribution once revealed.
+// "Guess the player" rounds carry an optional photo, shown fully sharp
+// throughout the round, then with its required CC attribution once revealed.
 export const PlayerPhoto = memo(function PlayerPhoto({ image, credit, timeLeft, timeLimit, revealed }) {
   if (!image) return null;
-  const blur = revealed ? 0 : Math.max(0, (1 - timeLeft / timeLimit) * 18);
   return (
     <div className="player-photo-wrap">
-      <img src={image} alt="Guess the player" className="player-photo" style={{ filter: `blur(${blur}px)` }} />
+      <img src={image} alt="Guess the player" className="player-photo" />
       {revealed && credit && <div className="photo-credit">{credit}</div>}
     </div>
   );
@@ -158,17 +178,18 @@ export const LevelRing = memo(function LevelRing({ level, xpIntoLevel, xpForLeve
 
 // A single home-screen topic tile: square icon + label underneath, matching
 // the original QuizUp's dense topic grid rather than a big descriptive card.
-// `cover` (a real player photo already in the game's own asset set) replaces
-// the flat gradient with an actual illustration for photo-quiz categories.
-export const CategoryTile = memo(function CategoryTile({ c, onClick }) {
+// `cover` (a real photo already in the game's own asset set) replaces the
+// flat gradient with a full-bleed illustration — the emoji `icon` is only
+// shown on tiles WITHOUT a cover, so a photo tile isn't cluttered with a
+// small floating emoji on top of the artwork.
+export const CategoryTile = memo(function CategoryTile({ c, onClick, disabled }) {
   return (
-    <button className="topic-tile" onClick={onClick}>
+    <button className="topic-tile" onClick={onClick} disabled={disabled}>
       <span
         className={`tile-icon-sq ${c.grad} ${c.cover ? 'has-cover' : ''}`}
         style={c.cover ? { backgroundImage: `url(${c.cover})` } : undefined}
       >
         {!c.cover && (c.logo ? <img src={c.logo} alt={c.label} className="tile-logo-img" /> : c.icon)}
-        {c.cover && <span className="tile-cover-icon">{c.icon}</span>}
         {c.tag && <span className="tile-tag-badge">{c.tag}</span>}
       </span>
       <span className="tile-label">{c.label}</span>

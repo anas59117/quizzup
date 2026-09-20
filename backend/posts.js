@@ -35,11 +35,7 @@ function persist() {
   writeScheduled = true;
   setTimeout(() => {
     writeScheduled = false;
-    try {
-      fs.writeFileSync(STORE, JSON.stringify({ posts }));
-    } catch {
-      /* disk may be read-only/full — feed still works in memory */
-    }
+    fs.writeFile(STORE, JSON.stringify({ posts }), () => {});
   }, 1000);
 }
 
