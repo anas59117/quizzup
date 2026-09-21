@@ -43,6 +43,8 @@ function normalizeRecentMatches(value, limit = 10) {
     const outcome = MATCH_OUTCOMES.has(raw.outcome) ? raw.outcome : null;
     const mode = MATCH_MODES.has(raw.mode) ? raw.mode : null;
     if (!outcome || !mode) continue;
+    if (mode === 'solo' && outcome !== 'solo') continue;
+    if (mode === 'multiplayer' && outcome === 'solo') continue;
 
     const opponents = Array.isArray(raw.opponents)
       ? raw.opponents.slice(0, 3).map((opponent) => ({
