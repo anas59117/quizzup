@@ -392,7 +392,13 @@ function endGame(game, reason) {
   });
 
   setTimeout(() => {
-    game.players.forEach((p) => playerSessions.delete(p.id));
+    // A player can start a new match on the same socket before this old
+    // game's delayed cleanup runs. Only delete the session if it still
+    // points at THIS game, otherwise we'd silently break the new match's
+    // answer/chat routing a few seconds after it started.
+    game.players.forEach((p) => {
+      if (playerSessions.get(p.id) === game.id) playerSessions.delete(p.id);
+    });
     activeGames.delete(game.id);
   }, 5000);
 }
