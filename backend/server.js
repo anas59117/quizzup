@@ -476,7 +476,7 @@ function handleGameplay(ws, data, state) {
   const { playerId } = state;
 
   const gameplayTypes = new Set([
-    'game_chat', 'solo', 'join', 'answer', 'create_room', 'join_room',
+    'game_chat', 'solo', 'join', 'cancel_queue', 'answer', 'create_room', 'join_room',
     'start_room', 'leave_room', 'report', 'leave',
   ]);
   if (gameplayTypes.has(data.type) && !requireAuth(ws, state)) return true;
@@ -535,6 +535,15 @@ function handleGameplay(ws, data, state) {
       waitingPlayers.push({ ws, id: playerId, clientId: state.clientId, name: state.name, avatar, categoryKey });
       game.send(ws, { type: 'waiting' });
     }
+    return true;
+  }
+
+  if (data.type === 'cancel_queue') {
+    const index = waitingPlayers.findIndex(
+      (p) => p.id === playerId || p.clientId === state.clientId
+    );
+    if (index !== -1) waitingPlayers.splice(index, 1);
+    game.send(ws, { type: 'queue_cancelled' });
     return true;
   }
 
