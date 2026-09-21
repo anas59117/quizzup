@@ -156,13 +156,14 @@ export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setA
   );
 });
 
-export const ErrorScreen = memo(function ErrorScreen({ reason = 'connection', onRetry }) {
+export const ErrorScreen = memo(function ErrorScreen({ reason = 'connection', code = '', onRetry }) {
   const { t } = useI18n();
   const isAuth = reason === 'auth';
   return (
     <div className="container center">
       <h2 className="logo">{t(isAuth ? 'authProblem' : 'connectionLost')}</h2>
       <p className="tagline">{t(isAuth ? 'authUnavailable' : 'serverUnreachable')}</p>
+      {code && <div className="error-code">{String(code).slice(0, 120)}</div>}
       <button className="btn" onClick={onRetry}>{t('retry')}</button>
     </div>
   );
