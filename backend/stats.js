@@ -4,14 +4,15 @@
 
 const { createJsonWriter, readJsonFileSync } = require('./json-writer');
 const { getStorePath } = require('./store-path');
+const { normalizeStatsStore } = require('./store-normalize');
 
 const STORE = getStorePath('stats.json');
 
-const stats = readJsonFileSync(
+const stats = normalizeStatsStore(readJsonFileSync(
   STORE,
   {},
   (value) => !!value && typeof value === 'object' && !Array.isArray(value)
-); // clientId -> { games, wins, streak, xp }
+)); // clientId -> { games, wins, streak, xp }
 
 const persist = createJsonWriter(STORE, () => stats);
 
