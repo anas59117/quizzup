@@ -73,6 +73,7 @@ The backend expects Firebase-authenticated WebSocket clients. Copy `backend/.env
 - `CORS_ORIGIN` — exact frontend origin(s), comma-separated. Set this in production so WebSocket origin checks are not left open.
 - `TRUST_PROXY=true` only when the backend is behind a trusted reverse proxy that owns `X-Forwarded-For`.
 - `MAX_WS_CONNECTIONS_PER_IP` — optional per-IP connection cap (default 100, `0` disables it).
+- `DATA_DIR` — optional durable directory for the current JSON stores. On Railway, point it to a mounted persistent Volume (for example `/data`) so stats/friends/feed/moderation survive container replacement.
 
 The frontend Firebase/WebSocket variables are documented in `frontend/.env.example`.
 
@@ -83,7 +84,8 @@ The frontend Firebase/WebSocket variables are documented in `frontend/.env.examp
 - Match reconnect grace period and refresh recovery.
 - Duplicate-account protection across matchmaking, rooms and game startup.
 - WebSocket payload limit, heartbeat cleanup, origin validation and per-action rate limits.
-- Serialized JSON persistence writes for the current single-instance MVP.
+- Crash-resistant JSON persistence: serialized atomic writes + backup recovery.
+- Optional `DATA_DIR` for a mounted persistent volume without changing the current store APIs.
 - GitHub Actions CI: backend syntax/tests + production frontend build.
 
 The JSON stores are still intentionally **single-instance MVP storage**. Before horizontal scaling, move durable stats/social/feed/moderation data to a shared database and move matchmaking/session state to Redis or another shared realtime store.
