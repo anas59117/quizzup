@@ -43,6 +43,17 @@ function recentMatchSnapshot(
   player,
   { outcome, xp = 0, coins = 0, leftEarly = false, playedAt = Date.now() }
 ) {
+  const participants = [...game.players, ...(game.departedPlayers || [])];
+  const seen = new Set();
+  const opponents = participants
+    .filter((opponent) => opponent.id !== player?.id && !seen.has(opponent.id) && seen.add(opponent.id))
+    .slice(0, 3)
+    .map((opponent) => ({
+      name: opponent.name,
+      avatar: opponent.avatar,
+      score: opponent.score,
+    }));
+
   return {
     playedAt,
     mode: game.mode === 'solo' ? 'solo' : 'multiplayer',
@@ -52,11 +63,7 @@ function recentMatchSnapshot(
     coins,
     categoryKey: game.categoryKey || null,
     leftEarly,
-    opponents: othersOf(game, player?.id, (opponent) => ({
-      name: opponent.name,
-      avatar: opponent.avatar,
-      score: opponent.score,
-    })).slice(0, 3),
+    opponents,
   };
 }
 
@@ -131,6 +138,7 @@ async function startGame(rawPlayers, categoryKey) {
       mode: rawPlayers.length === 1 ? 'solo' : 'multiplayer',
       categoryKey: resolvedCategory,
       rematchRequests: new Set(),
+      departedPlayers: [],
     };
     activeGames.set(gameId, game);
     game.players.forEach((p) => playerSessions.set(p.id, gameId));
@@ -252,6 +260,13 @@ function removePlayer(game, playerId) {
   const [left] = game.players.splice(idx, 1);
   if (left.reconnectTimer) clearTimeout(left.reconnectTimer);
   playerSessions.delete(playerId);
+  game.departedPlayers = game.departedPlayers || [];
+  game.departedPlayers.push({
+    id: left.id,
+    name: left.name,
+    avatar: left.avatar,
+    score: left.score,
+  });
 
   // A permanent leave/expired reconnect window is a forfeit. Record it now
   // because this player is removed from game.players and would otherwise
