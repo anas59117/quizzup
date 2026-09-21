@@ -99,10 +99,10 @@ export function useGameSocket({
   }
 
   function flushQueuedAction(ws) {
-    if (!identifiedRef.current || !queuedActionRef.current) return;
+    if (!identifiedRef.current || !queuedActionRef.current) return false;
     const action = queuedActionRef.current;
     queuedActionRef.current = null;
-    sendAction(ws, action);
+    return sendAction(ws, action);
   }
 
   function deliver(data) {
@@ -159,8 +159,8 @@ export function useGameSocket({
           clearPending();
         }
 
-        flushQueuedAction(ws);
-        deliver(data);
+        const queuedActionFlushed = flushQueuedAction(ws);
+        deliver({ ...data, queuedActionFlushed });
         return;
       }
 
@@ -191,15 +191,15 @@ export function useGameSocket({
       deliver(data);
     };
 
-    // Browser WebSocket errors are normally followed by close. Let close own
-    // recovery so an error event cannot race a successful reconnect.
-    ws.onerror = () => clearPending();
+    // Browser WebSocket errors are normally followed by close. Do not mutate
+    // pending/recovery state here; doing so can change shouldRecover before
+    // the close event gets a chance to schedule the retry.
+    ws.onerror = () => {};
 
     ws.onclose = () => {
       if (wsRef.current === ws) wsRef.current = null;
       identifiedRef.current = false;
       identifySentRef.current = false;
-      clearPending();
 
       if (ws.intentionalClose) return;
       if (shouldRecoverRef.current) scheduleRecovery();
