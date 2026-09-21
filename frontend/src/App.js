@@ -64,6 +64,7 @@ export default function App() {
   const [reported, setReported] = useState(false);
   const [result, setResult] = useState(null);
   const [rematchWaiting, setRematchWaiting] = useState(false);
+  const [rematchStarting, setRematchStarting] = useState(false);
   const [joinCode, setJoinCode] = useState('');
   const [joinError, setJoinError] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -294,15 +295,18 @@ export default function App() {
       case 'rematch_waiting':
         clearPending();
         setRematchWaiting(true);
+        setRematchStarting(false);
         break;
       case 'rematch_starting':
         clearPending();
-        setRematchWaiting(true);
+        setRematchWaiting(false);
+        setRematchStarting(true);
         break;
       case 'rematch_unavailable':
       case 'rematch_cancelled':
         clearPending();
         setRematchWaiting(false);
+        setRematchStarting(false);
         break;
       case 'match_aborted':
         cancelQueueRef.current = false;
@@ -332,6 +336,7 @@ export default function App() {
         break;
       case 'game_start':
         setRematchWaiting(false);
+        setRematchStarting(false);
         cancelQueueRef.current = false;
         bootSessionRef.current = 'game';
         writeLiveSession('game');
@@ -377,6 +382,7 @@ export default function App() {
         break;
       case 'game_end':
         setRematchWaiting(false);
+        setRematchStarting(false);
         bootSessionRef.current = null;
         writeLiveSession(null);
         if (data.won) SFX.victory(); else if (data.tie) SFX.tie(); else SFX.defeat();
@@ -510,6 +516,7 @@ export default function App() {
   const playAgain = useCallback(() => {
     sendSocket({ type: 'cancel_rematch' });
     setRematchWaiting(false);
+    setRematchStarting(false);
     bootSessionRef.current = null;
     writeLiveSession(null);
     matchActionRef.current = null;
@@ -525,7 +532,7 @@ export default function App() {
   // tap Quick Play again. This mirrors what `rematch` already does, minus
   // forcing the same category/opponent.
   function requestRematch() {
-    if (pending || rematchWaiting) return;
+    if (pending || rematchWaiting || rematchStarting) return;
     beginPending();
     if (!connect({ type: 'rematch' })) clearPending();
   }
@@ -678,7 +685,8 @@ export default function App() {
         <FinishedContent
           result={result} opponents={opponents} myId={myId} social={social}
           addFriend={social.addFriend}
-          playAgain={playAgain} rematch={requestRematch} rematchWaiting={rematchWaiting}
+          playAgain={playAgain} rematch={requestRematch}
+          rematchWaiting={rematchWaiting} rematchStarting={rematchStarting}
           newMatch={newMatch}
         />
       </div>);
