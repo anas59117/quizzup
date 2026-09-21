@@ -17,6 +17,7 @@ export function useGameSocket({
   firebaseUser,
   shouldRecover,
   expectGameRecovery = false,
+  expectRoomRecovery = false,
   onMessageRef,
   onFatalError,
   onPendingClear,
@@ -32,6 +33,7 @@ export function useGameSocket({
   const identityRef = useRef({ name, avatar, firebaseUser });
   const shouldRecoverRef = useRef(shouldRecover);
   const expectGameRecoveryRef = useRef(expectGameRecovery);
+  const expectRoomRecoveryRef = useRef(expectRoomRecovery);
   const fatalRef = useRef(onFatalError);
   const clearPendingRef = useRef(onPendingClear);
 
@@ -40,6 +42,7 @@ export function useGameSocket({
   identityRef.current = { name, avatar, firebaseUser };
   shouldRecoverRef.current = shouldRecover;
   expectGameRecoveryRef.current = expectGameRecovery;
+  expectRoomRecoveryRef.current = expectRoomRecovery;
   fatalRef.current = onFatalError;
   clearPendingRef.current = onPendingClear;
 
@@ -140,15 +143,28 @@ export function useGameSocket({
         identifiedRef.current = true;
         identifySentRef.current = false;
 
-        // Some recoveries require the server to find an active/finished
-        // match (in-game disconnect/refresh). Matchmaking recovery only needs
-        // a healthy authenticated socket, then App replays the queued action.
-        if (reconnectingRef.current && data.reconnected === false && expectGameRecoveryRef.current) {
+        // Recoveries can require a specific server-side object to still
+        // exist (active match or private lobby). If its grace window expired,
+        // a plain authenticated socket is not enough: surface a fatal recovery
+        // failure instead of leaving the UI on stale state.
+        if (reconnectingRef.current && expectGameRecoveryRef.current && data.reconnected === false) {
+          fatal();
+          return;
+        }
+        if (reconnectingRef.current && expectRoomRecoveryRef.current && data.roomReconnected === false) {
           fatal();
           return;
         }
 
-        if (reconnectingRef.current && !expectGameRecoveryRef.current) {
+        // Matchmaking only needs transport recovery. Private rooms additionally
+        // require roomReconnected=true, but once that is confirmed the socket
+        // can leave reconnect mode immediately. Active-game recovery is cleared
+        // by the earlier game_reconnected snapshot.
+        if (
+          reconnectingRef.current
+          && !expectGameRecoveryRef.current
+          && (!expectRoomRecoveryRef.current || data.roomReconnected === true)
+        ) {
           if (reconnectTimerRef.current) {
             clearTimeout(reconnectTimerRef.current);
             reconnectTimerRef.current = null;
