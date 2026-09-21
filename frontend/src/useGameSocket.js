@@ -1,0 +1,277 @@
+import { useEffect, useRef, useState } from 'react';
+
+function getWebSocketUrl() {
+  const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+  const host = window.location.port === '3000'
+    ? `${window.location.hostname}:3001`
+    : window.location.host;
+  return process.env.REACT_APP_WS_URL || `${proto}//${host}/ws`;
+}
+
+// Owns transport/authentication/reconnect concerns. Game/UI state stays in
+// App.js so protocol events remain easy to review, while socket lifecycle is
+// no longer mixed into rendering code.
+export function useGameSocket({
+  name,
+  avatar,
+  firebaseUser,
+  shouldRecover,
+  onMessageRef,
+  onFatalError,
+  onPendingClear,
+}) {
+  const wsRef = useRef(null);
+  const reconnectTimerRef = useRef(null);
+  const reconnectAttemptsRef = useRef(0);
+  const identifiedRef = useRef(false);
+  const identifySentRef = useRef(false);
+  const queuedActionRef = useRef(null);
+  const reconnectingRef = useRef(false);
+
+  const identityRef = useRef({ name, avatar, firebaseUser });
+  const shouldRecoverRef = useRef(shouldRecover);
+  const fatalRef = useRef(onFatalError);
+  const clearPendingRef = useRef(onPendingClear);
+
+  const [reconnecting, setReconnecting] = useState(false);
+
+  identityRef.current = { name, avatar, firebaseUser };
+  shouldRecoverRef.current = shouldRecover;
+  fatalRef.current = onFatalError;
+  clearPendingRef.current = onPendingClear;
+
+  function clearPending() {
+    if (typeof clearPendingRef.current === 'function') clearPendingRef.current();
+  }
+
+  function fatal() {
+    if (reconnectTimerRef.current) {
+      clearTimeout(reconnectTimerRef.current);
+      reconnectTimerRef.current = null;
+    }
+    reconnectAttemptsRef.current = 0;
+    reconnectingRef.current = false;
+    setReconnecting(false);
+    clearPending();
+    if (typeof fatalRef.current === 'function') fatalRef.current();
+  }
+
+  function sendAction(ws, action) {
+    if (!ws || ws.readyState !== 1 || !action) return false;
+    const identity = identityRef.current;
+    ws.send(JSON.stringify({
+      ...action,
+      name: identity.name,
+      avatar: identity.avatar,
+      clientId: identity.firebaseUser?.uid || null,
+    }));
+    return true;
+  }
+
+  async function sendIdentify(ws) {
+    if (!ws || ws.readyState !== 1 || identifySentRef.current) return;
+    const identity = identityRef.current;
+    const user = identity.firebaseUser;
+    if (!user || typeof user.getIdToken !== 'function') {
+      fatal();
+      return;
+    }
+
+    identifySentRef.current = true;
+    try {
+      const idToken = await user.getIdToken();
+      if (wsRef.current !== ws || ws.readyState !== 1) return;
+      ws.send(JSON.stringify({
+        type: 'identify',
+        name: identity.name,
+        avatar: identity.avatar,
+        clientId: user.uid,
+        idToken,
+      }));
+    } catch (err) {
+      console.error('Firebase token retrieval failed', err);
+      identifySentRef.current = false;
+      fatal();
+    }
+  }
+
+  function flushQueuedAction(ws) {
+    if (!identifiedRef.current || !queuedActionRef.current) return;
+    const action = queuedActionRef.current;
+    queuedActionRef.current = null;
+    sendAction(ws, action);
+  }
+
+  function deliver(data) {
+    if (onMessageRef && typeof onMessageRef.current === 'function') {
+      onMessageRef.current(data);
+    }
+  }
+
+  function scheduleRecovery() {
+    if (reconnectTimerRef.current) return;
+    reconnectingRef.current = true;
+    setReconnecting(true);
+
+    // Total retry window is below the server's 15s reconnect grace period.
+    const delays = [250, 500, 1000, 1500, 2000, 2500, 3000];
+    const attempt = reconnectAttemptsRef.current;
+    if (attempt >= delays.length) {
+      fatal();
+      return;
+    }
+
+    reconnectTimerRef.current = setTimeout(() => {
+      reconnectTimerRef.current = null;
+      reconnectAttemptsRef.current += 1;
+      openSocket();
+    }, delays[attempt]);
+  }
+
+  function attachHandlers(ws) {
+    ws.onmessage = (event) => {
+      let data;
+      try { data = JSON.parse(event.data); } catch { return; }
+
+      if (data.type === 'identified') {
+        identifiedRef.current = true;
+        identifySentRef.current = false;
+
+        // A socket opened specifically to recover an active game must be
+        // attached to that game. If the grace window expired, fail clearly.
+        if (reconnectingRef.current && data.reconnected === false) {
+          fatal();
+          return;
+        }
+
+        flushQueuedAction(ws);
+        return;
+      }
+
+      if (data.type === 'auth_required' || data.type === 'already_connected') {
+        queuedActionRef.current = null;
+        identifiedRef.current = false;
+        identifySentRef.current = false;
+        fatal();
+        return;
+      }
+
+      if (data.type === 'game_reconnected') {
+        if (reconnectTimerRef.current) {
+          clearTimeout(reconnectTimerRef.current);
+          reconnectTimerRef.current = null;
+        }
+        reconnectAttemptsRef.current = 0;
+        reconnectingRef.current = false;
+        setReconnecting(false);
+        clearPending();
+      }
+
+      deliver(data);
+    };
+
+    // Browser WebSocket errors are normally followed by close. Let close own
+    // recovery so an error event cannot race a successful reconnect.
+    ws.onerror = () => clearPending();
+
+    ws.onclose = () => {
+      if (wsRef.current === ws) wsRef.current = null;
+      identifiedRef.current = false;
+      identifySentRef.current = false;
+      clearPending();
+
+      if (ws.intentionalClose) return;
+      if (shouldRecoverRef.current) scheduleRecovery();
+      else fatal();
+    };
+  }
+
+  function openSocket() {
+    const current = wsRef.current;
+    if (current && (current.readyState === 0 || current.readyState === 1)) return current;
+
+    let ws;
+    try {
+      ws = new WebSocket(getWebSocketUrl());
+    } catch {
+      if (shouldRecoverRef.current) scheduleRecovery();
+      else fatal();
+      return null;
+    }
+
+    wsRef.current = ws;
+    identifiedRef.current = false;
+    identifySentRef.current = false;
+    attachHandlers(ws);
+    ws.onopen = () => sendIdentify(ws);
+    return ws;
+  }
+
+  function connect(action) {
+    if (action && action.type !== 'identify') queuedActionRef.current = action;
+
+    const user = identityRef.current.firebaseUser;
+    if (!user || typeof user.getIdToken !== 'function') return false;
+
+    const ws = openSocket();
+    if (!ws) return false;
+
+    if (ws.readyState === 1) {
+      if (action?.type === 'identify') {
+        // Re-identifying an already-open socket refreshes display name/avatar
+        // without creating a second connection.
+        sendIdentify(ws);
+      } else if (identifiedRef.current) {
+        flushQueuedAction(ws);
+      } else {
+        sendIdentify(ws);
+      }
+    }
+    return true;
+  }
+
+  function send(payload) {
+    const ws = wsRef.current;
+    if (!ws || ws.readyState !== 1 || !identifiedRef.current) return false;
+    ws.send(JSON.stringify(payload));
+    return true;
+  }
+
+  function closeSocket() {
+    if (reconnectTimerRef.current) {
+      clearTimeout(reconnectTimerRef.current);
+      reconnectTimerRef.current = null;
+    }
+    queuedActionRef.current = null;
+    reconnectAttemptsRef.current = 0;
+    reconnectingRef.current = false;
+    setReconnecting(false);
+
+    const ws = wsRef.current;
+    if (ws) {
+      ws.intentionalClose = true;
+      ws.close();
+      wsRef.current = null;
+    }
+    identifiedRef.current = false;
+    identifySentRef.current = false;
+  }
+
+  useEffect(() => () => {
+    if (reconnectTimerRef.current) clearTimeout(reconnectTimerRef.current);
+    const ws = wsRef.current;
+    if (ws) {
+      ws.intentionalClose = true;
+      ws.close();
+    }
+  }, []);
+
+  return {
+    wsRef,
+    connect,
+    send,
+    closeSocket,
+    scheduleRecovery,
+    reconnecting,
+  };
+}
