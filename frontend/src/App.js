@@ -76,6 +76,7 @@ export default function App() {
   const bootNameRef = useRef(name);
   const bootSessionRef = useRef(readLiveSession());
   const matchActionRef = useRef(null);
+  const cancelQueueRef = useRef(false);
   const [skipRoomRecovery, setSkipRoomRecovery] = useState(false);
   const messageHandlerRef = useRef(null);
 
@@ -194,6 +195,11 @@ export default function App() {
         setMyId(data.playerId);
         break;
       case 'identified':
+        if (cancelQueueRef.current && stage === 'waiting') {
+          sendSocket({ type: 'cancel_queue' });
+          break;
+        }
+
         if (skipRoomRecovery) {
           setSkipRoomRecovery(false);
           // Defensive fallback: the server should not reconnect a room when
@@ -256,15 +262,18 @@ export default function App() {
         setStage('waiting');
         break;
       case 'queue_cancelled':
+        cancelQueueRef.current = false;
         matchActionRef.current = null;
         clearPending();
         setStage('home');
         break;
       case 'queue_cancel_failed':
+        cancelQueueRef.current = false;
         clearPending();
         break;
       case 'room_created':
       case 'room_update':
+        setSkipRoomRecovery(false);
         bootSessionRef.current = 'room';
         writeLiveSession('room');
         clearPending();
@@ -300,6 +309,7 @@ export default function App() {
         setStage('home');
         break;
       case 'game_start':
+        cancelQueueRef.current = false;
         bootSessionRef.current = 'game';
         writeLiveSession('game');
         matchActionRef.current = null;
@@ -412,9 +422,11 @@ export default function App() {
 
   function cancelMatchmaking() {
     if (pending) return;
+    cancelQueueRef.current = true;
     matchActionRef.current = null;
     beginPending();
     if (!sendSocket({ type: 'cancel_queue' })) {
+      cancelQueueRef.current = false;
       clearPending();
       closeSocket();
       setStage('home');
