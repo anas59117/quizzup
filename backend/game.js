@@ -321,6 +321,7 @@ function sendCurrentState(game, player) {
   } else if (game.phase === 'question') {
     const elapsed = performance.now() - game.questionStart;
     const remainingMs = Math.max(0, GAME_CONFIG.TIME_PER_QUESTION * 1000 - elapsed);
+    const expired = remainingMs <= 0;
     const mine = game.roundAnswers[player.id];
     send(player.ws, {
       type: 'question', round: game.currentRound + 1,
@@ -330,6 +331,7 @@ function sendCurrentState(game, player) {
       isBonus: game.currentRound === game.questions.length - 1,
       image: q.image || null, credit: q.credit || null,
       reconnect: true,
+      expired,
       answered: !!mine,
       yourAnswer: mine ? mine.answerIndex : null,
     });
