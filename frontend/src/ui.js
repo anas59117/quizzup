@@ -20,6 +20,7 @@ export const Icon = memo(function Icon({ name, size = 20, className = '' }) {
     check: <path d="m5 12.5 4 4L19 6.5"/>,
     info: <><circle cx="12" cy="12" r="9"/><path d="M12 10v6"/><circle cx="12" cy="7" r=".8" fill="currentColor" stroke="none"/></>,
     close: <><path d="m7 7 10 10"/><path d="m17 7-10 10"/></>,
+    trophy: <><path d="M8 4h8v4c0 4-1.8 6-4 6s-4-2-4-6V4Z"/><path d="M8 6H4v1c0 3 1.5 5 4 5"/><path d="M16 6h4v1c0 3-1.5 5-4 5"/><path d="M12 14v4"/><path d="M8.5 21h7"/><path d="M10 18h4"/></>,
   };
   return (
     <svg

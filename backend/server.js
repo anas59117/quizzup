@@ -87,6 +87,7 @@ const actionLimiters = {
   roomJoin: new RateLimiter(30 * 1000, 10),
   roomJoinIp: new RateLimiter(30 * 1000, 30),
   feedList: new RateLimiter(10 * 1000, 10),
+  leaderboardList: new RateLimiter(10 * 1000, 8),
   postCreate: new RateLimiter(60 * 1000, 5),
   postReact: new RateLimiter(10 * 1000, 30),
   postReport: new RateLimiter(60 * 1000, 20),
@@ -211,6 +212,38 @@ async function handleIdentify(ws, data, state) {
   game.send(ws, { type: 'stats', stats: stats.getStats(state.clientId) });
   game.send(ws, { type: 'feed_list', posts: posts.getFeed() });
   notifyPresence(state.clientId, true);
+}
+
+function handleLeaderboard(ws, data, state) {
+  if (data.type !== 'leaderboard_list') return false;
+
+  const key = state.clientId || state.ip;
+  if (!allowAction(actionLimiters.leaderboardList, key, ws, 'LEADERBOARD_RATE_LIMITED')) return true;
+
+  const board = stats.getLeaderboard(50, state.clientId);
+  const entries = board.entries.map((entry) => {
+    const profile = social.profileOf(entry.clientId);
+    return {
+      rank: entry.rank,
+      name: profile?.name || 'Player',
+      avatar: profile?.avatar || 'Q',
+      games: entry.games,
+      wins: entry.wins,
+      streak: entry.streak,
+      xp: entry.xp,
+      level: entry.level,
+      winRate: entry.winRate,
+      isYou: !!state.clientId && entry.clientId === state.clientId,
+    };
+  });
+
+  game.send(ws, {
+    type: 'leaderboard_list',
+    entries,
+    total: board.total,
+    yourRank: board.yourRank,
+  });
+  return true;
 }
 
 function handleFeed(ws, data, state) {
@@ -773,6 +806,7 @@ wss.on('connection', (ws, req) => {
       return;
     }
     if (handleSocial(ws, data, state)) return;
+    if (handleLeaderboard(ws, data, state)) return;
     if (handleFeed(ws, data, state)) return;
     handleGameplay(ws, data, state);
   });

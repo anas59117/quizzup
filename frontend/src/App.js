@@ -8,7 +8,7 @@ import { useStats } from './stats';
 import { useFeed, FeedScreen } from './feed';
 import { RoomLobby } from './multiplayer';
 import { AVATARS, useTheme, TopControls, NavBar, JoinScreen, ErrorScreen, Toast } from './ui';
-import { HomeContent, EnterCodeContent, CategoriesContent, ProfileContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent } from './screens';
+import { HomeContent, EnterCodeContent, CategoriesContent, ProfileContent, LeaderboardContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent } from './screens';
 import { useI18n } from './i18n';
 import { useGameSocket } from './useGameSocket';
 
@@ -74,6 +74,8 @@ export default function App() {
   const [linking, setLinking] = useState(false);
   const [pending, setPending] = useState(false);
   const [toast, setToast] = useState(null);
+  const [leaderboard, setLeaderboard] = useState({ entries: [], total: 0, yourRank: null });
+  const [leaderboardLoading, setLeaderboardLoading] = useState(false);
   const tickRef = useRef(null);
   const copyTimerRef = useRef(null);
   const pendingTimerRef = useRef(null);
@@ -207,7 +209,7 @@ export default function App() {
   // switch. During the reveal pause we keep whatever was already playing
   // rather than interrupting it for the ~2.5s pause between rounds.
   useEffect(() => {
-    if (stage === 'home' || stage === 'categories' || stage === 'profile' || stage === 'enter_code') {
+    if (stage === 'home' || stage === 'categories' || stage === 'profile' || stage === 'leaderboard' || stage === 'enter_code') {
       music.play('menu');
     } else if (stage === 'waiting' || stage === 'room_wait') {
       music.play('lobby');
@@ -227,6 +229,10 @@ export default function App() {
         break;
       case 'identified':
         if (stage === 'feed') feed.refresh();
+        if (stage === 'leaderboard' && !data.queuedActionFlushed) {
+          setLeaderboardLoading(true);
+          if (!sendSocket({ type: 'leaderboard_list' })) setLeaderboardLoading(false);
+        }
         if (cancelQueueRef.current && stage === 'waiting') {
           sendSocket({ type: 'cancel_queue' });
           break;
@@ -351,6 +357,7 @@ export default function App() {
         break;
       case 'rate_limited':
         clearPending();
+        if (stage === 'leaderboard') setLeaderboardLoading(false);
         showToast(t('slowDown'), 'error');
         break;
       case 'room_left':
@@ -428,6 +435,14 @@ export default function App() {
       case 'stats':
         statsHook.handleStatsMessage(data);
         break;
+      case 'leaderboard_list':
+        setLeaderboard({
+          entries: Array.isArray(data.entries) ? data.entries : [],
+          total: Number(data.total) || 0,
+          yourRank: Number(data.yourRank) || null,
+        });
+        setLeaderboardLoading(false);
+        break;
       case 'error':
         matchActionRef.current = null;
         clearPending();
@@ -499,6 +514,15 @@ export default function App() {
       clearPending();
       closeSocket();
       setStage('home');
+    }
+  }
+
+  function openLeaderboard() {
+    setLeaderboardLoading(true);
+    setStage('leaderboard');
+    if (!connect({ type: 'leaderboard_list' })) {
+      setLeaderboardLoading(false);
+      showToast(t('rankingUnavailable'), 'error');
     }
   }
 
@@ -677,10 +701,24 @@ export default function App() {
           avatar={avatar} name={name} stats={statsHook.stats}
           isGoogleLinked={!!(firebaseUser && !firebaseUser.isAnonymous)} googleEmail={firebaseUser?.email}
           linkGoogle={linkGoogle} linking={linking} clientId={clientId} social={social}
+          onOpenLeaderboard={openLeaderboard}
         />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);
   }
+
+  if (stage === 'leaderboard') {
+    return (
+      <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+        <LeaderboardContent
+          board={leaderboard}
+          loading={leaderboardLoading}
+          onBack={() => setStage('profile')}
+        />
+        <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
+      </div>);
+  }
+
 
   if (stage === 'playing' && reconnecting) {
     return (
