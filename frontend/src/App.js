@@ -17,10 +17,20 @@ export default function App() {
   const [muted, setMuted] = useState(SFX.muted);
   const toggleMute = useCallback(() => setMuted(SFX.toggle()), []);
   useEffect(() => { music.setMuted(muted); }, [muted]);
+  useEffect(() => {
+    try {
+      if (name.trim()) localStorage.setItem('quizzup-name', name.trim());
+      localStorage.setItem('quizzup-avatar', avatar);
+    } catch {}
+  }, [name, avatar]);
   const [stage, setStage] = useState('join');
   const [categoryFamily, setCategoryFamily] = useState(null);
-  const [name, setName] = useState('');
-  const [avatar, setAvatar] = useState(AVATARS[0]);
+  const [name, setName] = useState(() => {
+    try { return localStorage.getItem('quizzup-name') || ''; } catch { return ''; }
+  });
+  const [avatar, setAvatar] = useState(() => {
+    try { return localStorage.getItem('quizzup-avatar') || AVATARS[0]; } catch { return AVATARS[0]; }
+  });
   const [myId, setMyId] = useState(null);
   const [opponents, setOpponents] = useState([]); // [{id,name,avatar,clientId,score,answered,correct}]
   const [room, setRoom] = useState(null); // { code, players, isHost, canStart }
@@ -394,12 +404,16 @@ export default function App() {
   }
 
   useEffect(() => {
-    if (stage === 'home' && clientId && firebaseUser && typeof firebaseUser.getIdToken === 'function') {
+    const canIdentify = clientId && firebaseUser && typeof firebaseUser.getIdToken === 'function';
+    // Returning players identify from the join screen too: if the page was
+    // refreshed mid-match, Firebase + the persisted display identity are
+    // enough to recover without waiting for another click.
+    if (canIdentify && (stage === 'home' || (stage === 'join' && name.trim()))) {
       connect({ type: 'identify' });
     }
     // connect intentionally reads the latest identity through refs.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [stage, clientId, firebaseUser]);
+  }, [stage, clientId, firebaseUser, name]);
 
   const [soloMode, setSoloMode] = useState(false);
   // `pending` blocks a second matchmaking request (double-tap, rapid-fire
