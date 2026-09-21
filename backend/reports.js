@@ -6,10 +6,10 @@
 // instance. For multi-instance/durable moderation, move this to Firebase
 // (same interface: report / isQuarantined / stats).
 
-const path = require('path');
 const { createJsonWriter, readJsonFileSync } = require('./json-writer');
+const { getStorePath } = require('./store-path');
 
-const STORE = path.join(__dirname, 'reports.json');
+const STORE = getStorePath('reports.json');
 const REPORT_THRESHOLD = 3; // flags before a question is quarantined
 const MAX_TRACKED = 5000; // cap the counts map so it can't grow unbounded
 
