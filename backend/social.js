@@ -4,21 +4,19 @@
 
 const { createJsonWriter, readJsonFileSync } = require('./json-writer');
 const { getStorePath } = require('./store-path');
+const { normalizeSocialStore } = require('./store-normalize');
 
 const STORE = getStorePath('social.json');
 const MAX_FRIENDS = 200;
 const MAX_PENDING_REQUESTS = 100;
 
-const savedSocial = readJsonFileSync(
-  STORE,
-  { profiles: {}, friends: {}, requests: {} },
-  (value) => (
-    !!value
-    && typeof value === 'object'
-    && !!value.profiles && typeof value.profiles === 'object' && !Array.isArray(value.profiles)
-    && !!value.friends && typeof value.friends === 'object' && !Array.isArray(value.friends)
-    && !!value.requests && typeof value.requests === 'object' && !Array.isArray(value.requests)
-  )
+const savedSocial = normalizeSocialStore(
+  readJsonFileSync(
+    STORE,
+    { profiles: {}, friends: {}, requests: {} },
+    (value) => !!value && typeof value === 'object' && !Array.isArray(value)
+  ),
+  { maxFriends: MAX_FRIENDS, maxRequests: MAX_PENDING_REQUESTS }
 );
 let profiles = savedSocial.profiles; // clientId -> { name, avatar }
 let friends = savedSocial.friends; // clientId -> [clientId, ...]
@@ -66,7 +64,10 @@ function profileOf(clientId) {
 }
 
 function areFriends(a, b) {
-  return !!(friends[a] && friends[a].includes(b));
+  return !!(
+    friends[a] && friends[a].includes(b)
+    && friends[b] && friends[b].includes(a)
+  );
 }
 
 function sendRequest(fromId, toId) {
@@ -114,7 +115,10 @@ function removeFriend(id, otherId) {
 }
 
 function getFriendsList(clientId) {
-  return (friends[clientId] || []).map((id) => profileOf(id)).filter(Boolean);
+  return (friends[clientId] || [])
+    .filter((id) => areFriends(clientId, id))
+    .map((id) => profileOf(id))
+    .filter(Boolean);
 }
 
 function getPendingRequests(clientId) {
