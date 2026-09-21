@@ -3,3 +3,7 @@ node_modules/
 .env.local
 .DS_Store
 npm-debug.log*
+
+# Runtime JSON persistence scratch/backup files
+backend/*.json.tmp
+backend/*.json.bak
