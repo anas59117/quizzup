@@ -114,7 +114,7 @@ export function CategoriesContent({ startWithCategory, onBack, initialFamily, pe
   );
 }
 
-export function ProfileContent({ avatar, name, stats, isGoogleLinked, googleEmail, linkGoogle, linking, clientId, social }) {
+export function ProfileContent({ avatar, name, stats, isGoogleLinked, googleEmail, linkGoogle, linking, clientId, social, onOpenLeaderboard }) {
   const { t } = useI18n();
   return (
     <div className="container">
@@ -126,6 +126,14 @@ export function ProfileContent({ avatar, name, stats, isGoogleLinked, googleEmai
         </div>
       </div>
       <ProfileStats stats={stats} />
+      <button className="leaderboard-cta" onClick={onOpenLeaderboard}>
+        <span className="leaderboard-cta-icon"><Icon name="trophy" size={20} /></span>
+        <span className="leaderboard-cta-copy">
+          <strong>{t('globalLeaderboard')}</strong>
+          <small>{t('leaderboardCta')}</small>
+        </span>
+        <Icon name="arrow" size={18} />
+      </button>
       {isGoogleLinked ? (
         <div className="account-linked">{'✓'} {t('connectedGoogle', { email: googleEmail })}</div>
       ) : (
@@ -137,6 +145,71 @@ export function ProfileContent({ avatar, name, stats, isGoogleLinked, googleEmai
       <a className="privacy-link" href="/privacy.html" target="_blank" rel="noopener noreferrer">
         {t('privacyPolicy')}
       </a>
+    </div>
+  );
+}
+
+
+export function LeaderboardContent({ board, loading, onBack }) {
+  const { t } = useI18n();
+  const entries = board?.entries || [];
+  const topThree = entries.slice(0, 3);
+
+  return (
+    <div className="container wide">
+      <div className="cat-header">
+        <div>
+          <div className="status-label">{t('seasonAllTime')}</div>
+          <h2>{t('globalLeaderboard')}</h2>
+        </div>
+        <button className="back-link" onClick={onBack}>{t('back')}</button>
+      </div>
+
+      {loading && !entries.length ? (
+        <div className="leaderboard-loading" aria-live="polite">
+          <div className="loading-bar"><div className="loading-fill" /></div>
+          <span>{t('loadingRanking')}</span>
+        </div>
+      ) : entries.length ? (
+        <>
+          <div className="podium">
+            {topThree.map((entry) => (
+              <div key={entry.rank} className={`podium-card rank-${entry.rank} ${entry.isYou ? 'mine' : ''}`}>
+                <div className="podium-rank">#{entry.rank}</div>
+                <div className="podium-avatar">{entry.avatar}</div>
+                <div className="podium-name">{entry.name}</div>
+                <div className="podium-level">{t('level')} {entry.level}</div>
+                <div className="podium-xp">{entry.xp.toLocaleString()} XP</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="leaderboard-summary">
+            <span>{t('rankedPlayers', { n: board.total })}</span>
+            {board.yourRank && <strong>{t('yourRank', { n: board.yourRank })}</strong>}
+          </div>
+
+          <div className="global-leaderboard-list">
+            {entries.map((entry) => (
+              <div key={entry.rank} className={`global-leaderboard-row ${entry.isYou ? 'mine' : ''}`}>
+                <span className="global-rank">{entry.rank}</span>
+                <span className="global-avatar">{entry.avatar}</span>
+                <span className="global-player">
+                  <strong>{entry.name}{entry.isYou ? ` · ${t('you')}` : ''}</strong>
+                  <small>{t('level')} {entry.level} · {entry.winRate}% {String(t('wins')).toLowerCase()}</small>
+                </span>
+                <span className="global-xp">{entry.xp.toLocaleString()}<small>XP</small></span>
+              </div>
+            ))}
+          </div>
+        </>
+      ) : (
+        <div className="leaderboard-empty">
+          <Icon name="trophy" size={28} />
+          <strong>{t('rankingEmpty')}</strong>
+          <span>{t('rankingEmptyHint')}</span>
+        </div>
+      )}
     </div>
   );
 }
