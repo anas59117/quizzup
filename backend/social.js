@@ -2,10 +2,10 @@
 // file (same pattern as reports.js); presence is always in-memory since it
 // can't outlive a live WebSocket connection anyway.
 
-const path = require('path');
 const { createJsonWriter, readJsonFileSync } = require('./json-writer');
+const { getStorePath } = require('./store-path');
 
-const STORE = path.join(__dirname, 'social.json');
+const STORE = getStorePath('social.json');
 const MAX_FRIENDS = 200;
 const MAX_PENDING_REQUESTS = 100;
 
