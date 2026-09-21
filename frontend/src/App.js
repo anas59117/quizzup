@@ -17,12 +17,6 @@ export default function App() {
   const [muted, setMuted] = useState(SFX.muted);
   const toggleMute = useCallback(() => setMuted(SFX.toggle()), []);
   useEffect(() => { music.setMuted(muted); }, [muted]);
-  useEffect(() => {
-    try {
-      if (name.trim()) localStorage.setItem('quizzup-name', name.trim());
-      localStorage.setItem('quizzup-avatar', avatar);
-    } catch {}
-  }, [name, avatar]);
   const [stage, setStage] = useState('join');
   const [categoryFamily, setCategoryFamily] = useState(null);
   const [name, setName] = useState(() => {
@@ -31,6 +25,13 @@ export default function App() {
   const [avatar, setAvatar] = useState(() => {
     try { return localStorage.getItem('quizzup-avatar') || AVATARS[0]; } catch { return AVATARS[0]; }
   });
+  useEffect(() => {
+    try {
+      if (name.trim()) localStorage.setItem('quizzup-name', name.trim());
+      else localStorage.removeItem('quizzup-name');
+      localStorage.setItem('quizzup-avatar', avatar);
+    } catch {}
+  }, [name, avatar]);
   const [myId, setMyId] = useState(null);
   const [opponents, setOpponents] = useState([]); // [{id,name,avatar,clientId,score,answered,correct}]
   const [room, setRoom] = useState(null); // { code, players, isHost, canStart }
