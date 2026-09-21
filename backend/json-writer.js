@@ -8,7 +8,7 @@
 
 const fs = require('fs');
 
-function createJsonWriter(filePath, getSnapshot, delayMs = 1000) {
+function createJsonWriter(filePath, getSnapshot, delayMs = 1000, writeFile = fs.writeFile) {
   let timer = null;
   let writing = false;
   let dirty = false;
@@ -32,7 +32,7 @@ function createJsonWriter(filePath, getSnapshot, delayMs = 1000) {
 
     dirty = false;
     writing = true;
-    fs.writeFile(filePath, payload, (err) => {
+    writeFile(filePath, payload, (err) => {
       writing = false;
       if (err) {
         // Keep the state marked dirty. We avoid a tight retry loop; the next
