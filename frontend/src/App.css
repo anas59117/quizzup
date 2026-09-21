@@ -1620,7 +1620,13 @@ button:focus-visible, input:focus-visible, select:focus-visible {
     padding: 30px;
   }
   .play-title { font-size: 3.65rem; }
-  .topics-scroll .topic-tile { flex-basis: 136px; }
+  .topics-scroll {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    overflow: visible;
+    margin-inline: 0;
+  }
+  .topics-scroll .topic-tile { flex: initial; }
   .topics-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
   .topics-grid.full { grid-template-columns: repeat(6, minmax(0,1fr)); }
   .family-list { grid-template-columns: repeat(3, minmax(0,1fr)); }
