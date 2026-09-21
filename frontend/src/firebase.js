@@ -13,7 +13,7 @@ import {
 // a missing/placeholder REACT_APP_* variable. A complete valid environment
 // config can still override this for previews or future migrations.
 const DEFAULT_FIREBASE_CONFIG = {
-  apiKey: 'AIzaSyAQhrcbG2-1YujgQbmJSykNda_fgUpvz0o',
+  apiKey: 'AIzaSyAQhrcbG2-1YujgQbmJSykNda_fgUpvzOo',
   authDomain: 'quizzup-ae633.firebaseapp.com',
   projectId: 'quizzup-ae633',
   storageBucket: 'quizzup-ae633.firebasestorage.app',
