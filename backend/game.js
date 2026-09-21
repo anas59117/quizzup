@@ -46,6 +46,9 @@ function allActivePlayersAnswered(game) {
 async function startGame(rawPlayers, categoryKey) {
   if (!rawPlayers.length) throw new Error('NO_PLAYERS');
 
+  const clientIds = rawPlayers.map((p) => p.clientId).filter(Boolean);
+  if (new Set(clientIds).size !== clientIds.length) throw new Error('DUPLICATE_IDENTITY');
+
   // A verified Firebase identity may only own one active game at a time.
   // This closes the duplicate-session gap caused by opening a second
   // WebSocket before the first game has finished.
@@ -196,6 +199,15 @@ function removePlayer(game, playerId) {
   const idx = game.players.findIndex((p) => p.id === playerId);
   if (idx === -1) return;
 
+  const player = game.players[idx];
+  // server.js currently calls removePlayer from the socket close handler.
+  // If the socket is already closed, turn it into a reconnect grace period;
+  // an explicit in-game "leave" still has an open socket and remains instant.
+  if (!player.ws || player.ws.readyState !== 1) {
+    disconnectPlayer(game, playerId);
+    return;
+  }
+
   const [left] = game.players.splice(idx, 1);
   if (left.reconnectTimer) clearTimeout(left.reconnectTimer);
   playerSessions.delete(playerId);
@@ -313,7 +325,7 @@ function reconnectPlayer(clientId, ws, newPlayerId) {
 
   sendCurrentState(game, player);
   activePlayers(game).filter((p) => p.id !== newPlayerId).forEach((p) => {
-    send(p.ws, { type: 'player_reconnected', name: player.name });
+    send(p.ws, { type: 'player_reconnected', name: player.name, playerId: newPlayerId });
   });
   return true;
 }
