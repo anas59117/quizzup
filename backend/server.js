@@ -226,7 +226,12 @@ function handleSocial(ws, data, state) {
     if (clientId && targetId && text && social.areFriends(clientId, targetId)) {
       if (!allowAction(actionLimiters.dm, clientId, ws, 'DM_RATE_LIMITED')) return true;
       const targetWs = social.getWs(targetId);
-      if (targetWs) game.send(targetWs, { type: 'dm', from: clientId, text });
+      if (targetWs) {
+        game.send(targetWs, { type: 'dm', from: clientId, text });
+        game.send(ws, { type: 'dm_sent', targetId, text });
+      } else {
+        game.send(ws, { type: 'dm_unavailable', targetId });
+      }
     }
     return true;
   }
@@ -311,6 +316,7 @@ function handleGameplay(ws, data, state) {
       g.players.filter((p) => p.id !== playerId).forEach((p) => game.send(p.ws, {
         type: 'game_chat', text, from: sender ? sender.name : 'Player',
       }));
+      game.send(ws, { type: 'game_chat_sent', text });
     }
     return true;
   }
