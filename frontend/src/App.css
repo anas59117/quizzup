@@ -481,3 +481,84 @@ button:focus-visible,input:focus-visible,select:focus-visible { outline:2px soli
   font: 600 .72rem/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   overflow-wrap: anywhere;
 }
+
+
+/* Product polish */
+.toast {
+  position: fixed;
+  top: max(18px, env(safe-area-inset-top));
+  left: 50%;
+  z-index: 40;
+  width: min(440px, calc(100% - 28px));
+  min-height: 50px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px 10px 12px;
+  transform: translateX(-50%);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: color-mix(in srgb, var(--surface) 96%, transparent);
+  color: var(--text);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(18px);
+  animation: toast-in .2s ease-out both;
+}
+.toast-icon {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--surface-2);
+  color: var(--text-dim);
+}
+.toast-success .toast-icon { color: var(--success); }
+.toast-error .toast-icon { color: var(--danger); }
+.toast-text {
+  min-width: 0;
+  font-size: .82rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.toast-close {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--text-faint);
+  cursor: pointer;
+}
+.toast-close:hover { background: var(--surface-2); color: var(--text); }
+
+.search-meta {
+  margin: 2px 0 2px;
+  color: rgba(255,255,255,.42);
+  font-size: .68rem;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .08em;
+}
+
+.app > .container,
+.app > .game,
+.app > .container.wide {
+  animation: screen-in .24s ease-out both;
+}
+
+@keyframes screen-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes toast-in {
+  from { opacity: 0; transform: translate(-50%, -8px) scale(.985); }
+  to { opacity: 1; transform: translate(-50%, 0) scale(1); }
+}
+
+@media (max-width: 480px) {
+  .toast { top: 66px; }
+}
