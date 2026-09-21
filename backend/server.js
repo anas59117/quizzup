@@ -169,14 +169,21 @@ async function handleIdentify(ws, data, state) {
   }
 
   state.clientId = uid;
-  const finishedSession = data.recoverGame === false
-    ? null
-    : game.findFinishedSessionByClientId(uid);
-  const recoverySession = activeSession || finishedSession;
+  const finishedSession = game.findFinishedSessionByClientId(uid);
+  const recoverySession = activeSession || (
+    data.recoverGame === false ? null : finishedSession
+  );
   const reconnected = !!(
     recoverySession
     && game.reconnectPlayer(uid, ws, state.playerId)
   );
+
+  // If the result screen is already in browser memory, do not replay it, but
+  // still attach the new socket to the retained finished game. This keeps a
+  // genuine rematch possible after a brief connection drop on the result page.
+  if (!reconnected && data.recoverGame === false && finishedSession) {
+    game.reattachFinishedPlayer(uid, ws, state.playerId);
+  }
   const roomReconnected = (
     !reconnected
     && data.recoverRoom !== false
