@@ -1,0 +1,167 @@
+name: Firebase Auth Diagnostic
+
+on:
+  push:
+    branches:
+      - diagnostic/firebase-auth
+
+permissions:
+  contents: read
+
+jobs:
+  auth-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install WebSocket client
+        run: npm install ws@8 --no-save
+
+      - name: Test Firebase anonymous auth and Railway identify
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const WebSocket = require('ws');
+
+          const source = fs.readFileSync('frontend/src/firebase.js', 'utf8');
+          const get = (name) => {
+            const match = source.match(new RegExp(name + ":\\s*'([^']+)'"));
+            if (!match) throw new Error('Missing ' + name + ' in DEFAULT_FIREBASE_CONFIG');
+            return match[1];
+          };
+
+          const config = {
+            apiKey: get('apiKey'),
+            authDomain: get('authDomain'),
+            projectId: get('projectId'),
+            storageBucket: get('storageBucket'),
+            messagingSenderId: get('messagingSenderId'),
+            appId: get('appId'),
+          };
+
+          const origin = 'https://quizzup-ten.vercel.app';
+          const headers = {
+            'Content-Type': 'application/json',
+            Origin: origin,
+            Referer: origin + '/',
+          };
+
+          function safeError(data) {
+            return data?.error?.message || data?.error?.status || 'UNKNOWN_ERROR';
+          }
+
+          async function jsonResponse(resp) {
+            return resp.json().catch(() => ({}));
+          }
+
+          async function main() {
+            const projectsResp = await fetch(
+              'https://identitytoolkit.googleapis.com/v1/projects?key=' + encodeURIComponent(config.apiKey)
+                + '&firebaseAppId=' + encodeURIComponent(config.appId),
+              { headers }
+            );
+            const projects = await jsonResponse(projectsResp);
+            console.log('project_config_status=' + projectsResp.status);
+            console.log('project_id=' + (projects.projectId || 'missing'));
+            console.log('origin_authorized=' + Boolean(
+              Array.isArray(projects.authorizedDomains)
+              && projects.authorizedDomains.includes('quizzup-ten.vercel.app')
+            ));
+            if (!projectsResp.ok) {
+              console.log('project_config_error=' + safeError(projects));
+              process.exit(2);
+            }
+
+            const signResp = await fetch(
+              'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' + encodeURIComponent(config.apiKey),
+              {
+                method: 'POST',
+                headers,
+                body: JSON.stringify({ returnSecureToken: true }),
+              }
+            );
+            const sign = await jsonResponse(signResp);
+            console.log('anonymous_sign_in_status=' + signResp.status);
+            if (!signResp.ok || !sign.idToken || !sign.localId) {
+              console.log('anonymous_sign_in_error=' + safeError(sign));
+              process.exit(3);
+            }
+            console.log('anonymous_sign_in=ok');
+
+            let socket;
+            try {
+              const result = await new Promise((resolve, reject) => {
+                const timer = setTimeout(() => reject(new Error('WS_TIMEOUT')), 10000);
+                socket = new WebSocket('wss://quizzup-production.up.railway.app/ws', {
+                  origin,
+                });
+
+                let sessionSeen = false;
+                socket.on('message', (raw) => {
+                  let msg;
+                  try { msg = JSON.parse(String(raw)); } catch { return; }
+
+                  if (msg.type === 'session' && !sessionSeen) {
+                    sessionSeen = true;
+                    socket.send(JSON.stringify({
+                      type: 'identify',
+                      idToken: sign.idToken,
+                      clientId: sign.localId,
+                      name: 'Diagnostic',
+                      avatar: 'Q',
+                      recoverGame: false,
+                      recoverRoom: false,
+                    }));
+                    return;
+                  }
+
+                  if (msg.type === 'identified') {
+                    clearTimeout(timer);
+                    resolve({ type: 'identified' });
+                    return;
+                  }
+
+                  if (msg.type === 'auth_required' || msg.type === 'already_connected' || msg.type === 'error') {
+                    clearTimeout(timer);
+                    resolve({ type: msg.type, code: msg.code || '' });
+                  }
+                });
+
+                socket.on('error', (err) => {
+                  clearTimeout(timer);
+                  reject(err);
+                });
+              });
+
+              console.log('websocket_identify=' + result.type);
+              if (result.code) console.log('websocket_code=' + result.code);
+              if (result.type !== 'identified') process.exitCode = 4;
+            } finally {
+              if (socket) {
+                try { socket.close(); } catch {}
+              }
+
+              await fetch(
+                'https://identitytoolkit.googleapis.com/v1/accounts:delete?key=' + encodeURIComponent(config.apiKey),
+                {
+                  method: 'POST',
+                  headers,
+                  body: JSON.stringify({ idToken: sign.idToken }),
+                }
+              ).catch(() => {});
+            }
+
+            if (process.exitCode) process.exit(process.exitCode);
+            console.log('diagnostic=ok');
+          }
+
+          main().catch((err) => {
+            console.log('diagnostic_error=' + (err?.message || 'UNKNOWN'));
+            process.exit(5);
+          });
+          NODE
