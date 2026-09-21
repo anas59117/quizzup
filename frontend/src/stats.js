@@ -74,6 +74,7 @@ export function RecentMatches({ matches }) {
           const categoryLabel = category?.label || match.categoryKey || t('randomTopic');
           const opponent = match.opponents?.[0];
           const extraOpponents = Math.max(0, (match.opponents?.length || 0) - 1);
+          const timeLabel = relativeMatchTime(match.playedAt, lang);
           const outcomeLabel = match.leftEarly
             ? t('matchAbandoned')
             : match.outcome === 'win'
@@ -103,9 +104,7 @@ export function RecentMatches({ matches }) {
                         extra: extraOpponents ? ` +${extraOpponents}` : '',
                       })
                       : t('multiplayer')}
-                  {relativeMatchTime(match.playedAt, lang) && (
-                    <span aria-hidden="true"> · {relativeMatchTime(match.playedAt, lang)}</span>
-                  )}
+                  {timeLabel && <span aria-hidden="true"> · {timeLabel}</span>}
                 </div>
               </div>
               <div className="recent-score">
