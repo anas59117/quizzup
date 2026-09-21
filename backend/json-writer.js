@@ -1,14 +1,62 @@
-// Debounced, serialized JSON persistence for the single-instance MVP.
+// Crash-resistant JSON persistence for the current single-instance MVP.
 //
-// The old modules cleared their "write scheduled" flag before fs.writeFile
-// completed. A second mutation could therefore start a second write while the
-// first was still in flight; if the older write finished last it could
-// overwrite newer state. This helper guarantees at most one write at a time
-// and queues one follow-up snapshot when mutations happen during a write.
+// Writes are debounced + serialized, then committed through a temp file. The
+// previous complete snapshot is kept as ".bak" so a process/filesystem crash
+// cannot silently turn a partially-written JSON file into a total data reset.
 
 const fs = require('fs');
 
-function createJsonWriter(filePath, getSnapshot, delayMs = 1000, writeFile = fs.writeFile) {
+function atomicWriteFile(filePath, payload, callback) {
+  const tempPath = `${filePath}.tmp`;
+  const backupPath = `${filePath}.bak`;
+
+  fs.writeFile(tempPath, payload, (writeErr) => {
+    if (writeErr) {
+      callback(writeErr);
+      return;
+    }
+
+    // Replace the previous backup with the last complete primary snapshot.
+    fs.rm(backupPath, { force: true }, () => {
+      fs.rename(filePath, backupPath, (backupErr) => {
+        if (backupErr && backupErr.code !== 'ENOENT') {
+          // A backup failure should not prevent the newer durable snapshot
+          // from being committed; keep going and report only commit failure.
+          console.error(`Failed to rotate JSON backup ${backupPath}:`, backupErr);
+        }
+
+        fs.rename(tempPath, filePath, (commitErr) => {
+          if (!commitErr) {
+            callback(null);
+            return;
+          }
+
+          // Best-effort rollback if the new snapshot could not be committed.
+          fs.rename(backupPath, filePath, () => callback(commitErr));
+        });
+      });
+    });
+  });
+}
+
+function readJsonFileSync(filePath, fallback, validate = () => true) {
+  const candidates = [filePath, `${filePath}.bak`];
+
+  for (const candidate of candidates) {
+    try {
+      const parsed = JSON.parse(fs.readFileSync(candidate, 'utf8'));
+      if (!validate(parsed)) throw new Error('JSON store failed validation');
+      return parsed;
+    } catch (err) {
+      if (err && err.code === 'ENOENT') continue;
+      console.error(`Failed to read JSON store ${candidate}:`, err);
+    }
+  }
+
+  return fallback;
+}
+
+function createJsonWriter(filePath, getSnapshot, delayMs = 1000, writeFile = atomicWriteFile) {
   let timer = null;
   let writing = false;
   let dirty = false;
@@ -35,8 +83,8 @@ function createJsonWriter(filePath, getSnapshot, delayMs = 1000, writeFile = fs.
     writeFile(filePath, payload, (err) => {
       writing = false;
       if (err) {
-        // Keep the state marked dirty. We avoid a tight retry loop; the next
-        // mutation will schedule another attempt.
+        // Keep state dirty. The next mutation schedules another attempt,
+        // avoiding a tight retry loop if the filesystem is unavailable.
         dirty = true;
         console.error(`Failed to persist JSON store ${filePath}:`, err);
         return;
@@ -51,4 +99,4 @@ function createJsonWriter(filePath, getSnapshot, delayMs = 1000, writeFile = fs.
   };
 }
 
-module.exports = { createJsonWriter };
+module.exports = { createJsonWriter, readJsonFileSync, atomicWriteFile };
