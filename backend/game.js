@@ -254,6 +254,16 @@ function findActiveSessionByClientId(clientId) {
   return null;
 }
 
+function findFinishedSessionByClientId(clientId) {
+  if (!clientId) return null;
+  for (const g of activeGames.values()) {
+    if (g.status !== 'finished') continue;
+    const player = g.players.find((p) => p.clientId === clientId);
+    if (player) return { game: g, player };
+  }
+  return null;
+}
+
 function sendCurrentState(game, player) {
   if (!player.ws || player.ws.readyState !== 1) return;
   send(player.ws, {
@@ -271,6 +281,11 @@ function sendCurrentState(game, player) {
       connected: !!o.connected,
     })),
   });
+
+  if (game.status === 'finished') {
+    if (player.finalResult) send(player.ws, player.finalResult);
+    return;
+  }
 
   const q = game.questions[game.currentRound];
   if (!q || game.currentRound < 0) return;
@@ -331,10 +346,12 @@ function sendCurrentState(game, player) {
 }
 
 function reconnectPlayer(clientId, ws, newPlayerId) {
-  const found = findActiveSessionByClientId(clientId);
-  if (!found || found.player.connected) return false;
+  const found = findActiveSessionByClientId(clientId) || findFinishedSessionByClientId(clientId);
+  if (!found) return false;
 
   const { game, player } = found;
+  if (game.status === 'active' && player.connected) return false;
+  if (game.status === 'finished' && player.ws && player.ws.readyState === 1) return false;
   if (player.reconnectTimer) clearTimeout(player.reconnectTimer);
   player.reconnectTimer = null;
   player.connected = true;
@@ -379,7 +396,7 @@ function endGame(game, reason) {
     const winBonus = won ? 100 : isTie ? 50 : 0;
     const xpTotal = p.score + finishBonus + winBonus;
     stats.recordResult(p.clientId, won, isTie, xpTotal);
-    send(p.ws, {
+    const finalResult = {
       type: 'game_end', finalScore: p.score,
       won, tie: isTie,
       others: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, score: o.score, clientId: o.clientId })),
@@ -388,7 +405,9 @@ function endGame(game, reason) {
       xp: xpTotal,
       xpBreakdown: { matchScore: p.score, finishBonus, winBonus, xpTotal },
       stats: stats.getStats(p.clientId),
-    });
+    };
+    p.finalResult = finalResult;
+    send(p.ws, finalResult);
   });
 
   setTimeout(() => {
@@ -400,11 +419,11 @@ function endGame(game, reason) {
       if (playerSessions.get(p.id) === game.id) playerSessions.delete(p.id);
     });
     activeGames.delete(game.id);
-  }, 5000);
+  }, RECONNECT_GRACE_MS);
 }
 
 module.exports = {
   activeGames, playerSessions, rid, send,
   startGame, recordAnswer, endGame, removePlayer,
-  disconnectPlayer, reconnectPlayer, findActiveSessionByClientId,
+  disconnectPlayer, reconnectPlayer, findActiveSessionByClientId, findFinishedSessionByClientId,
 };
