@@ -126,7 +126,7 @@ async function handleIdentify(ws, data, state) {
   // Check the target identity before attaching it to this socket. This
   // prevents a rejected duplicate socket from marking the legitimate one
   // offline when its close event fires.
-  const activeSession = game.findActiveSessionByClientId(uid);
+  let activeSession = game.findActiveSessionByClientId(uid);
   if (activeSession && activeSession.player.connected && activeSession.player.ws !== ws) {
     game.send(ws, { type: 'already_connected' });
     ws.close(1008, 'Account already connected to an active game');
@@ -145,6 +145,11 @@ async function handleIdentify(ws, data, state) {
     return;
   }
 
+  if (data.recoverGame === false && activeSession && activeSession.player.connected === false) {
+    game.removePlayer(activeSession.game, activeSession.player.id);
+    activeSession = null;
+  }
+
   if (data.recoverRoom === false && roomSession && roomSession.player.connected === false) {
     leaveRoomByClientId(uid);
     roomSession = null;
@@ -156,9 +161,15 @@ async function handleIdentify(ws, data, state) {
   }
 
   state.clientId = uid;
-  const finishedSession = game.findFinishedSessionByClientId(uid);
+  const finishedSession = data.recoverGame === false
+    ? null
+    : game.findFinishedSessionByClientId(uid);
   const recoverySession = activeSession || finishedSession;
-  const reconnected = !!(recoverySession && game.reconnectPlayer(uid, ws, state.playerId));
+  const reconnected = !!(
+    data.recoverGame !== false
+    && recoverySession
+    && game.reconnectPlayer(uid, ws, state.playerId)
+  );
   const roomReconnected = (
     !reconnected
     && data.recoverRoom !== false
