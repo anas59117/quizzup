@@ -38,6 +38,7 @@ export default function App() {
   useEffect(() => { music.setMuted(muted); }, [muted]);
   const [stage, setStage] = useState('join');
   const [fatalReason, setFatalReason] = useState('connection');
+  const [fatalCode, setFatalCode] = useState('');
   const [categoryFamily, setCategoryFamily] = useState(null);
   const [name, setName] = useState(() => {
     try { return localStorage.getItem('quizzup-name') || ''; } catch { return ''; }
@@ -119,8 +120,9 @@ export default function App() {
       )
     ),
     onMessageRef: messageHandlerRef,
-    onFatalError: () => {
+    onFatalError: (err) => {
       setFatalReason('connection');
+      setFatalCode(err?.code || '');
       setStage('error');
     },
     onPendingClear: clearPending,
@@ -148,6 +150,7 @@ export default function App() {
         console.error('Firebase sign-in failed', err);
         if (!cancelled) {
           setFatalReason('auth');
+          setFatalCode(err?.code || err?.message || '');
           setStage('error');
         }
       });
@@ -702,7 +705,7 @@ export default function App() {
   if (stage === 'error') {
     return (
       <div className="app"><TopControls {...topProps} />
-        <ErrorScreen reason={fatalReason} onRetry={() => window.location.reload()} />
+        <ErrorScreen reason={fatalReason} code={fatalCode} onRetry={() => window.location.reload()} />
       </div>);
   }
 
