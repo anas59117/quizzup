@@ -43,8 +43,11 @@ function setOnline(clientId, ws, name, avatar) {
   persist();
 }
 
-function setOffline(clientId) {
-  if (clientId) online.delete(clientId);
+function setOffline(clientId, ws = null) {
+  if (!clientId) return;
+  // Do not let a late close event from an old socket erase a newer
+  // connection that has already registered for the same account.
+  if (!ws || online.get(clientId) === ws) online.delete(clientId);
 }
 
 function isOnline(clientId) {
@@ -104,9 +107,11 @@ function declineRequest(id, fromId) {
 }
 
 function removeFriend(id, otherId) {
+  if (!areFriends(id, otherId)) return false;
   friends[id] = (friends[id] || []).filter((f) => f !== otherId);
   friends[otherId] = (friends[otherId] || []).filter((f) => f !== id);
   persist();
+  return true;
 }
 
 function getFriendsList(clientId) {
