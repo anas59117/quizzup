@@ -632,3 +632,51 @@ test('finished game can silently reattach a new socket for rematch', () => {
   assert.equal(g.players[0].finalResult.leaderboard[0].id, 'new-silent');
   assert.equal(game.playerSessions.get('new-silent'), g.id);
 });
+
+
+test('pending rematch request is released when finished-game retention expires', () => {
+  const ws = fakeWs();
+  const originalSetTimeout = global.setTimeout;
+  const scheduled = [];
+  global.setTimeout = (fn, delay) => {
+    scheduled.push({ fn, delay });
+    return { unref() {} };
+  };
+
+  try {
+    const g = {
+      id: 'rematch-expiry',
+      mode: 'multiplayer',
+      status: 'active',
+      phase: 'question',
+      categoryKey: 'sports',
+      rematchRequests: new Set(),
+      players: [{
+        id: 'p1', clientId: null, ws, connected: true,
+        score: 5, name: 'A', avatar: 'A', reconnectTimer: null,
+      }],
+      roundTimer: null,
+    };
+    game.activeGames.set(g.id, g);
+    game.playerSessions.set('p1', g.id);
+    game.endGame(g);
+
+    // Simulate a retained rematch request after game_end. This test uses a
+    // null client id to avoid touching persistent stats.
+    g.players[0].clientId = 'rematch-user';
+    g.rematchRequests.add('rematch-user');
+
+    const cleanup = scheduled.find((entry) => entry.delay === 60000);
+    assert.ok(cleanup);
+    cleanup.fn();
+
+    assert.equal(
+      ws.messages.some((m) => m.type === 'rematch_unavailable'),
+      true
+    );
+    assert.equal(g.rematchRequests.size, 0);
+    assert.equal(game.activeGames.has(g.id), false);
+  } finally {
+    global.setTimeout = originalSetTimeout;
+  }
+});
