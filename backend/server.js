@@ -145,11 +145,6 @@ async function handleIdentify(ws, data, state) {
     return;
   }
 
-  if (data.recoverGame === false && activeSession && activeSession.player.connected === false) {
-    game.removePlayer(activeSession.game, activeSession.player.id);
-    activeSession = null;
-  }
-
   if (data.recoverRoom === false && roomSession && roomSession.player.connected === false) {
     leaveRoomByClientId(uid);
     roomSession = null;
@@ -166,8 +161,7 @@ async function handleIdentify(ws, data, state) {
     : game.findFinishedSessionByClientId(uid);
   const recoverySession = activeSession || finishedSession;
   const reconnected = !!(
-    data.recoverGame !== false
-    && recoverySession
+    recoverySession
     && game.reconnectPlayer(uid, ws, state.playerId)
   );
   const roomReconnected = (
