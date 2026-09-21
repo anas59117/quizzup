@@ -46,7 +46,11 @@ Objectif : **~3000€/mois**, budget ~350€, solo, web-first.
   - **Bonus round** : dernière question vaut x2.
   - **Feedback par round** : reveal de la bonne réponse + points gagnés.
   - **Déconnexion / reconnexion** : grâce de 15 s, reprise de la partie (y compris après refresh), puis forfait automatique si le joueur ne revient pas.
+  - **Vraie revanche** : consentement des joueurs côté serveur, même catégorie,
+    attente/expiration propre et reprise possible après une micro-coupure sur l'écran résultat.
   - Sélection de catégorie au matchmaking + endpoint `/categories`.
+- **Progression serveur** : XP/niveau + **pièces persistantes** créditées
+  autoritairement en fin de partie (solo ne peut plus farmer les victoires PvP).
 - **Frontend réécrit** (`frontend/src/App.js` + `App.css`) — compile OK,
   rendu vérifié dark + light :
   - Matche le design validé (dark premium + light vibrant).
@@ -162,7 +166,8 @@ les deux → le match se lance. Le frontend parle au backend sur :3001 en dev.
 
 - Frontend : React + WebSocket client
 - Backend : Node.js + Express + WS (+ Redis pour matchmaking à l'échelle)
-- DB actuelle : JSON local sérialisé (MVP single-instance)
+- DB actuelle : JSON local sérialisé + écritures atomiques/backups + `DATA_DIR`
+  pour volume persistant (MVP single-instance)
 - DB cible : Firebase Firestore (stats/social/feed/modération/cosmétiques)
 - État temps réel cible multi-instance : Redis (matchmaking/sessions/presence)
 - Hosting : Railway + Vercel
