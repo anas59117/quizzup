@@ -97,6 +97,7 @@ export function FriendsScreen({ social }) {
   const { t } = useI18n();
   const [openChat, setOpenChat] = useState(null);
   const [draft, setDraft] = useState('');
+  const [confirmRemove, setConfirmRemove] = useState(null);
   return (
     <div className="friends-screen">
       {social.requests.length > 0 && (
@@ -123,7 +124,13 @@ export function FriendsScreen({ social }) {
       {social.friends.length === 0 && <div className="friends-empty">{t('friendsEmpty')}</div>}
       {social.friends.map((f) => (
         <div key={f.id} className="friends-block">
-          <div className="friend-row" onClick={() => setOpenChat(openChat === f.id ? null : f.id)}>
+          <div
+            className="friend-row"
+            onClick={() => {
+              setConfirmRemove(null);
+              setOpenChat(openChat === f.id ? null : f.id);
+            }}
+          >
             <div className={`friend-ava ${f.online ? 'online' : ''}`}>{f.avatar}</div>
             <div className="friend-name">{f.name}</div>
             <div className={`friend-status ${f.online ? 'on' : 'off'}`}>{f.online ? t('online') : t('offline')}</div>
@@ -150,6 +157,21 @@ export function FriendsScreen({ social }) {
                   if (draft.trim() && social.sendDM(f.id, draft)) setDraft('');
                 }}>{t('send')}</button>
               </div>
+              <button
+                className={`friend-remove-link ${confirmRemove === f.id ? 'confirm' : ''}`}
+                onClick={() => {
+                  if (confirmRemove === f.id) {
+                    if (social.removeFriend(f.id)) {
+                      setOpenChat(null);
+                      setConfirmRemove(null);
+                    }
+                  } else {
+                    setConfirmRemove(f.id);
+                  }
+                }}
+              >
+                {confirmRemove === f.id ? t('confirmRemoveFriend') : t('removeFriend')}
+              </button>
             </div>
           )}
         </div>
@@ -162,18 +184,28 @@ export function GameChat({ social }) {
   const { t } = useI18n();
   const [open, setOpen] = useState(false);
   const [draft, setDraft] = useState('');
+  const [seenCount, setSeenCount] = useState(0);
   const endRef = useRef(null);
-  useEffect(() => { if (open) endRef.current?.scrollIntoView({ block: 'nearest' }); }, [social.gameChat, open]);
+  const unread = Math.max(0, social.gameChat.length - seenCount);
+  useEffect(() => {
+    if (!open) return;
+    setSeenCount(social.gameChat.length);
+    endRef.current?.scrollIntoView({ block: 'nearest' });
+  }, [social.gameChat, open]);
   return (
     <div className={`game-chat ${open ? 'open' : ''}`}>
       <button
         className="game-chat-toggle"
-        onClick={() => setOpen((o) => !o)}
+        onClick={() => setOpen((o) => {
+          const next = !o;
+          if (next) setSeenCount(social.gameChat.length);
+          return next;
+        })}
         aria-label={t('gameChat')}
         title={t('gameChat')}
       >
         <Icon name="chat" size={18} />
-        {social.gameChat.length > 0 && !open && <span className="game-chat-count">{social.gameChat.length}</span>}
+        {unread > 0 && !open && <span className="game-chat-count">{unread}</span>}
       </button>
       {open && (
         <div className="game-chat-panel">
