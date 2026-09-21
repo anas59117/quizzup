@@ -568,6 +568,15 @@ const CATEGORIES = {
   },
 };
 
+function shuffleQuestions(items, random = Math.random) {
+  const shuffled = items.slice();
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 // Return `count` questions from a category (or mixed if no category), each
 // tagged with its category label + icon and a stable per-match id.
 function getQuestions(count, categoryKey) {
@@ -581,8 +590,9 @@ function getQuestions(count, categoryKey) {
       pool.push(...cat.questions.map((q) => ({ ...q, category: cat.label, icon: cat.icon })));
     }
   }
-  const shuffled = pool.sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, Math.min(count, pool.length)).map((q, i) => ({ ...q, id: i }));
+  return shuffleQuestions(pool)
+    .slice(0, Math.min(count, pool.length))
+    .map((question, i) => ({ ...question, id: i }));
 }
 
 // Preferred entry point. Maximizes VOLUME/variety: the Open Trivia DB cache
@@ -628,10 +638,9 @@ async function getMixedQuestions(count, categoryKey) {
     }
   }
 
-  return questions
-    .sort(() => 0.5 - Math.random())
+  return shuffleQuestions(questions)
     .slice(0, count)
-    .map((q, i) => ({ ...q, id: i }));
+    .map((question, i) => ({ ...question, id: i }));
 }
 
 // Warm the API cache for every supported category (best-effort, non-blocking).
@@ -650,4 +659,12 @@ function listCategories() {
   }));
 }
 
-module.exports = { CATEGORIES, getQuestions, getMixedQuestions, warmCache, listCategories, questionKey };
+module.exports = {
+  CATEGORIES,
+  getQuestions,
+  getMixedQuestions,
+  warmCache,
+  listCategories,
+  questionKey,
+  shuffleQuestions,
+};
