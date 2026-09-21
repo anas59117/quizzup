@@ -127,3 +127,49 @@ test('reader rejects structurally invalid primary data and uses a valid backup',
     fs.rmSync(dir, { recursive: true, force: true });
   }
 });
+
+
+test('flush writes immediately without waiting for the debounce timer', async () => {
+  let state = { value: 11 };
+  const writes = [];
+
+  const fakeWrite = (_path, payload, cb) => {
+    writes.push(JSON.parse(payload));
+    cb(null);
+  };
+
+  const persist = createJsonWriter('/tmp/flush-now.json', () => state, 60_000, fakeWrite);
+  persist();
+
+  await persist.flush();
+  assert.deepEqual(writes, [{ value: 11 }]);
+  persist.dispose();
+});
+
+test('flush waits for an in-flight write and persists a newer dirty snapshot', async () => {
+  let state = { value: 1 };
+  const writes = [];
+  const callbacks = [];
+
+  const fakeWrite = (_path, payload, cb) => {
+    writes.push(JSON.parse(payload));
+    callbacks.push(cb);
+  };
+
+  const persist = createJsonWriter('/tmp/flush-dirty.json', () => state, 1, fakeWrite);
+  persist();
+  await sleep(5);
+  assert.deepEqual(writes, [{ value: 1 }]);
+
+  state = { value: 2 };
+  persist();
+  const flushPromise = persist.flush();
+
+  callbacks.shift()(null);
+  await sleep(1);
+  assert.deepEqual(writes, [{ value: 1 }, { value: 2 }]);
+
+  callbacks.shift()(null);
+  await flushPromise;
+  persist.dispose();
+});
