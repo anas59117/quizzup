@@ -121,7 +121,9 @@ export function ProfileContent({ avatar, name, stats, isGoogleLinked, googleEmai
       <div className="profile-head">
         <div className="profile-avatar">{avatar}</div>
         <div className="profile-name">{name || 'Player'}</div>
-        <div className="profile-sub">{t('level')} {stats.level} {'·'} {t('rookie')}</div>
+        <div className="profile-sub">
+          {t('level')} {stats.level} {'·'} {stats.games ? Math.round((stats.wins / stats.games) * 100) : 0}% {String(t('wins')).toLowerCase()}
+        </div>
       </div>
       <ProfileStats stats={stats} />
       {isGoogleLinked ? (
@@ -149,7 +151,7 @@ export function WaitingContent({ avatar, name, onCancel, pending }) {
           <div className="vs-name">{name}</div>
           <div className="vs-rank">{t('novice')}</div>
         </div>
-        <div className="vs-bolt-wrap"><div className="vs-bolt">{'⚡'}</div></div>
+        <div className="vs-bolt-wrap"><div className="vs-bolt"><Icon name="bolt" size={24} /></div></div>
         <div className="vs-player">
           <div className="vs-ava searching">?</div>
           <div className="vs-name dim">{t('searching')}</div>
