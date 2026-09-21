@@ -257,13 +257,25 @@ export function useGameSocket({
     const user = identityRef.current.firebaseUser;
     if (!user || typeof user.getIdToken !== 'function') return false;
 
+    const current = wsRef.current;
+    if (
+      action?.type === 'identify'
+      && identifiedRef.current
+      && current?.readyState === 1
+      && !action.force
+    ) {
+      // Most screen transitions return to Home on an already-authenticated
+      // socket. Re-sending Firebase identify here was unnecessary and could
+      // consume the server's auth rate-limit during fast navigation.
+      identifyOptionsRef.current = {};
+      return true;
+    }
+
     const ws = openSocket();
     if (!ws) return false;
 
     if (ws.readyState === 1) {
       if (action?.type === 'identify') {
-        // Re-identifying an already-open socket refreshes display name/avatar
-        // without creating a second connection.
         sendIdentify(ws);
       } else if (identifiedRef.current) {
         flushQueuedAction(ws);
