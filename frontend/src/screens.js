@@ -193,13 +193,13 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
   );
 }
 
-export function FinishedContent({ result, opponents, myId, social, friendRequestSent, addFriend, playAgain, rematch, newMatch }) {
+export function FinishedContent({ result, opponents, myId, social, addFriend, playAgain, rematch, newMatch }) {
   const { t } = useI18n();
   const { won, tie } = result;
   const left = result.reason === 'opponent_disconnected' || result.reason === 'opponent_left';
   const isSolo = opponents.length === 0 && !left;
   const addableOpponents = opponents.filter(
-    (o) => o.clientId && !social.friends.some((f) => f.id === o.clientId) && !friendRequestSent[o.clientId]
+    (o) => o.clientId && !social.friends.some((f) => f.id === o.clientId) && !social.outgoingRequests.has(o.clientId)
   );
   const shareResult = () => {
     const text = isSolo ? t('shareSolo', { n: result.finalScore })
