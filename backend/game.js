@@ -378,21 +378,12 @@ function sendCurrentState(game, player) {
   }
 }
 
-function reconnectPlayer(clientId, ws, newPlayerId) {
-  const found = findActiveSessionByClientId(clientId) || findFinishedSessionByClientId(clientId);
-  if (!found) return false;
-
-  const { game, player } = found;
-  if (game.status === 'active' && player.connected) return false;
-  if (game.status === 'finished' && player.ws && player.ws.readyState === 1) return false;
+function movePlayerTransport(game, player, ws, newPlayerId) {
   if (player.reconnectTimer) clearTimeout(player.reconnectTimer);
   player.reconnectTimer = null;
   player.connected = true;
   player.ws = ws;
 
-  // The transport-level playerId changes with every WebSocket connection.
-  // Move any per-round answer to the new key so a reconnect cannot answer
-  // twice or lose its already-earned score/result state.
   const oldPlayerId = player.id;
   if (player.finalResult?.leaderboard) {
     player.finalResult = {
@@ -409,11 +400,37 @@ function reconnectPlayer(clientId, ws, newPlayerId) {
   playerSessions.delete(oldPlayerId);
   player.id = newPlayerId;
   playerSessions.set(newPlayerId, game.id);
+  return oldPlayerId;
+}
+
+function reconnectPlayer(clientId, ws, newPlayerId) {
+  const found = findActiveSessionByClientId(clientId) || findFinishedSessionByClientId(clientId);
+  if (!found) return false;
+
+  const { game, player } = found;
+  if (game.status === 'active' && player.connected) return false;
+  if (game.status === 'finished' && player.ws && player.ws.readyState === 1) return false;
+  // The transport-level playerId changes with every WebSocket connection.
+  // Move per-round/final-result state to the new key before resyncing.
+  movePlayerTransport(game, player, ws, newPlayerId);
 
   sendCurrentState(game, player);
   activePlayers(game).filter((p) => p.id !== newPlayerId).forEach((p) => {
     send(p.ws, { type: 'player_reconnected', name: player.name, playerId: newPlayerId });
   });
+  return true;
+}
+
+function reattachFinishedPlayer(clientId, ws, newPlayerId) {
+  const found = findFinishedSessionByClientId(clientId);
+  if (!found) return false;
+
+  const { game, player } = found;
+  if (player.ws && player.ws.readyState === 1) {
+    return player.ws === ws;
+  }
+
+  movePlayerTransport(game, player, ws, newPlayerId);
   return true;
 }
 
@@ -516,6 +533,7 @@ function endGame(game, reason) {
 module.exports = {
   activeGames, playerSessions, startingClients, rid, send,
   startGame, recordAnswer, endGame, removePlayer,
-  disconnectPlayer, reconnectPlayer, findActiveSessionByClientId, findFinishedSessionByClientId,
+  disconnectPlayer, reconnectPlayer, reattachFinishedPlayer,
+  findActiveSessionByClientId, findFinishedSessionByClientId,
   requestRematch, cancelRematch,
 };
