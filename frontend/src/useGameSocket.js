@@ -18,6 +18,7 @@ export function useGameSocket({
   shouldRecover,
   expectGameRecovery = false,
   expectRoomRecovery = false,
+  recoverRoomOnIdentify = true,
   onMessageRef,
   onFatalError,
   onPendingClear,
@@ -29,12 +30,12 @@ export function useGameSocket({
   const identifySentRef = useRef(false);
   const queuedActionRef = useRef(null);
   const reconnectingRef = useRef(false);
-  const identifyOptionsRef = useRef({});
 
   const identityRef = useRef({ name, avatar, firebaseUser });
   const shouldRecoverRef = useRef(shouldRecover);
   const expectGameRecoveryRef = useRef(expectGameRecovery);
   const expectRoomRecoveryRef = useRef(expectRoomRecovery);
+  const recoverRoomOnIdentifyRef = useRef(recoverRoomOnIdentify);
   const fatalRef = useRef(onFatalError);
   const clearPendingRef = useRef(onPendingClear);
 
@@ -44,6 +45,7 @@ export function useGameSocket({
   shouldRecoverRef.current = shouldRecover;
   expectGameRecoveryRef.current = expectGameRecovery;
   expectRoomRecoveryRef.current = expectRoomRecovery;
+  recoverRoomOnIdentifyRef.current = recoverRoomOnIdentify;
   fatalRef.current = onFatalError;
   clearPendingRef.current = onPendingClear;
 
@@ -94,7 +96,7 @@ export function useGameSocket({
         avatar: identity.avatar,
         clientId: user.uid,
         idToken,
-        recoverRoom: identifyOptionsRef.current.recoverRoom !== false,
+        recoverRoom: recoverRoomOnIdentifyRef.current,
       }));
     } catch (err) {
       console.error('Firebase token retrieval failed', err);
@@ -144,7 +146,6 @@ export function useGameSocket({
       if (data.type === 'identified') {
         identifiedRef.current = true;
         identifySentRef.current = false;
-        identifyOptionsRef.current = {};
 
         // Recoveries can require a specific server-side object to still
         // exist (active match or private lobby). If its grace window expired,
@@ -248,9 +249,7 @@ export function useGameSocket({
   }
 
   function connect(action) {
-    if (action?.type === 'identify') {
-      identifyOptionsRef.current = { recoverRoom: action.recoverRoom };
-    } else if (action) {
+    if (action && action.type !== 'identify') {
       queuedActionRef.current = action;
     }
 
@@ -265,9 +264,8 @@ export function useGameSocket({
       && !action.force
     ) {
       // Most screen transitions return to Home on an already-authenticated
-      // socket. Re-sending Firebase identify here was unnecessary and could
+      // socket. Re-sending Firebase identify here is unnecessary and could
       // consume the server's auth rate-limit during fast navigation.
-      identifyOptionsRef.current = {};
       return true;
     }
 
