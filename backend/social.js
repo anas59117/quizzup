@@ -4,6 +4,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { createJsonWriter } = require('./json-writer');
 
 const STORE = path.join(__dirname, 'social.json');
 const MAX_FRIENDS = 200;
@@ -22,18 +23,10 @@ try {
   /* no store yet or unreadable — start fresh */
 }
 
-let writeScheduled = false;
-function persist() {
-  if (writeScheduled) return;
-  writeScheduled = true;
-  setTimeout(() => {
-    writeScheduled = false;
-    // Async write: this file grows with total-users-ever and a sync write
-    // would block the event loop (and every in-flight game) while it
-    // serializes. fs.writeFile keeps the same debounce without blocking.
-    fs.writeFile(STORE, JSON.stringify({ profiles, friends, requests }), () => {});
-  }, 1000);
-}
+const persist = createJsonWriter(
+  STORE,
+  () => ({ profiles, friends, requests })
+);
 
 const online = new Map(); // clientId -> ws
 
