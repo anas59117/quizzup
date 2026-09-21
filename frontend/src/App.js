@@ -205,6 +205,7 @@ export default function App() {
         setStage('room_wait');
         break;
       case 'room_not_found':
+      case 'room_unavailable':
       case 'room_full':
         clearPending();
         setJoinError(true);
