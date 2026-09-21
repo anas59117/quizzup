@@ -193,7 +193,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
   );
 }
 
-export function FinishedContent({ result, opponents, myId, social, addFriend, playAgain, rematch, rematchWaiting, newMatch }) {
+export function FinishedContent({ result, opponents, myId, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch }) {
   const { t } = useI18n();
   const { won, tie } = result;
   const left = result.reason === 'opponent_disconnected' || result.reason === 'opponent_left';
@@ -227,11 +227,13 @@ export function FinishedContent({ result, opponents, myId, social, addFriend, pl
         </button>
       ))}
       <div className="result-actions">
-        <button className="ra-btn rematch" onClick={rematch} disabled={rematchWaiting}>
-          {rematchWaiting ? t('waitingDots') : t('rematch')}
+        <button className="ra-btn rematch" onClick={rematch} disabled={rematchWaiting || rematchStarting}>
+          {rematchWaiting || rematchStarting ? t('waitingDots') : t('rematch')}
         </button>
-        <button className="ra-btn new-opp" onClick={newMatch}>{isSolo ? t('newGame') : t('newOpponent')}</button>
-        <button className="ra-btn see-res" onClick={playAgain}>{t('backHome')}</button>
+        <button className="ra-btn new-opp" onClick={newMatch} disabled={rematchStarting}>
+          {isSolo ? t('newGame') : t('newOpponent')}
+        </button>
+        <button className="ra-btn see-res" onClick={playAgain} disabled={rematchStarting}>{t('backHome')}</button>
       </div>
     </div>
   );
