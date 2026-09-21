@@ -358,3 +358,82 @@ test('rejects an answer that arrives after the advertised question deadline', ()
   assert.equal(g.roundAnswers.p1, undefined);
   assert.equal(g.players[0].score, 0);
 });
+
+
+test('solo completion does not count as a PvP win or grant a win bonus', () => {
+  const ws = fakeWs();
+  const originalSetTimeout = global.setTimeout;
+  const scheduled = [];
+  global.setTimeout = (fn) => {
+    scheduled.push(fn);
+    return { unref() {} };
+  };
+
+  try {
+    const g = {
+      id: 'solo-result',
+      mode: 'solo',
+      status: 'active',
+      phase: 'question',
+      players: [{
+        id: 'solo-player', clientId: null, ws, connected: true,
+        score: 80, name: 'Solo', avatar: 'S', reconnectTimer: null,
+      }],
+      roundTimer: null,
+    };
+
+    game.activeGames.set(g.id, g);
+    game.playerSessions.set('solo-player', g.id);
+    game.endGame(g);
+
+    const result = ws.messages.find((m) => m.type === 'game_end');
+    assert.equal(result.solo, true);
+    assert.equal(result.won, false);
+    assert.equal(result.tie, false);
+    assert.equal(result.xpBreakdown.winBonus, 0);
+    assert.equal(result.xp, 120);
+    assert.equal(result.coins, 20);
+
+    scheduled[0]();
+  } finally {
+    global.setTimeout = originalSetTimeout;
+  }
+});
+
+test('a surviving player in a multiplayer forfeit still receives the win', () => {
+  const ws = fakeWs();
+  const originalSetTimeout = global.setTimeout;
+  const scheduled = [];
+  global.setTimeout = (fn) => {
+    scheduled.push(fn);
+    return { unref() {} };
+  };
+
+  try {
+    const g = {
+      id: 'forfeit-result',
+      mode: 'multiplayer',
+      status: 'active',
+      phase: 'question',
+      players: [{
+        id: 'survivor', clientId: null, ws, connected: true,
+        score: 10, name: 'Winner', avatar: 'W', reconnectTimer: null,
+      }],
+      roundTimer: null,
+    };
+
+    game.activeGames.set(g.id, g);
+    game.playerSessions.set('survivor', g.id);
+    game.endGame(g, 'opponent_disconnected');
+
+    const result = ws.messages.find((m) => m.type === 'game_end');
+    assert.equal(result.solo, false);
+    assert.equal(result.won, true);
+    assert.equal(result.xpBreakdown.winBonus, 100);
+    assert.equal(result.coins, 50);
+
+    scheduled[0]();
+  } finally {
+    global.setTimeout = originalSetTimeout;
+  }
+});
