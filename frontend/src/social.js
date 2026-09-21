@@ -29,6 +29,12 @@ export function useSocial(wsRef) {
       case 'presence': setFriends((f) => f.map((x) => (x.id === data.id ? { ...x, online: data.online } : x))); break;
       case 'dm': setDms((c) => ({ ...c, [data.from]: [...(c[data.from] || []), { from: 'them', text: data.text }] })); break;
       case 'dm_sent': setDms((c) => ({ ...c, [data.targetId]: [...(c[data.targetId] || []), { from: 'me', text: data.text }] })); break;
+      case 'dm_unavailable':
+        setDms((c) => ({
+          ...c,
+          [data.targetId]: [...(c[data.targetId] || []), { from: 'system', kind: 'unavailable' }],
+        }));
+        break;
       case 'game_chat': setGameChat((m) => [...m, { from: 'them', text: data.text, senderName: data.from }]); break;
       case 'game_chat_sent': setGameChat((m) => [...m, { from: 'me', text: data.text }]); break;
       case 'player_left': setGameChat((m) => [...m, { from: 'system', text: `${data.name} left the game` }]); break;
@@ -87,7 +93,12 @@ export function FriendsScreen({ social }) {
             <div className="friend-chat">
               <div className="friend-chat-msgs">
                 {(social.dms[f.id] || []).map((m, i) => (
-                  <div key={i} className={`chat-bubble ${m.from === 'me' ? 'me' : 'them'}`}>{m.text}</div>
+                  <div
+                    key={i}
+                    className={`chat-bubble ${m.from === 'me' ? 'me' : m.from === 'system' ? 'system' : 'them'}`}
+                  >
+                    {m.kind === 'unavailable' ? t('messageUnavailable') : m.text}
+                  </div>
                 ))}
               </div>
               <div className="friend-chat-input">
