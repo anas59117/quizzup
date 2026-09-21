@@ -1,23 +1,6 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { useI18n } from './i18n';
 
-const CLIENT_ID_KEY = 'quizzup-client-id';
-
-// Stable per-browser identity so friends persist across reconnects (no
-// account system yet — this is a local anonymous ID, not a login).
-export function getClientId() {
-  try {
-    let id = localStorage.getItem(CLIENT_ID_KEY);
-    if (!id) {
-      id = 'u_' + Math.random().toString(36).slice(2, 11) + Date.now().toString(36);
-      localStorage.setItem(CLIENT_ID_KEY, id);
-    }
-    return id;
-  } catch {
-    return 'u_' + Math.random().toString(36).slice(2, 11);
-  }
-}
-
 export function useSocial(wsRef) {
   const [friends, setFriends] = useState([]);
   const [requests, setRequests] = useState([]);
@@ -25,7 +8,11 @@ export function useSocial(wsRef) {
   const [gameChat, setGameChat] = useState([]);
 
   const send = useCallback(
-    (obj) => { if (wsRef.current && wsRef.current.readyState === 1) wsRef.current.send(JSON.stringify(obj)); },
+    (obj) => {
+      if (!wsRef.current || wsRef.current.readyState !== 1) return false;
+      wsRef.current.send(JSON.stringify(obj));
+      return true;
+    },
     [wsRef]
   );
 
@@ -41,7 +28,9 @@ export function useSocial(wsRef) {
       case 'friend_removed': setFriends((f) => f.filter((x) => x.id !== data.id)); break;
       case 'presence': setFriends((f) => f.map((x) => (x.id === data.id ? { ...x, online: data.online } : x))); break;
       case 'dm': setDms((c) => ({ ...c, [data.from]: [...(c[data.from] || []), { from: 'them', text: data.text }] })); break;
+      case 'dm_sent': setDms((c) => ({ ...c, [data.targetId]: [...(c[data.targetId] || []), { from: 'me', text: data.text }] })); break;
       case 'game_chat': setGameChat((m) => [...m, { from: 'them', text: data.text, senderName: data.from }]); break;
+      case 'game_chat_sent': setGameChat((m) => [...m, { from: 'me', text: data.text }]); break;
       case 'player_left': setGameChat((m) => [...m, { from: 'system', text: `${data.name} left the game` }]); break;
       case 'player_disconnected': setGameChat((m) => [...m, { from: 'system', text: `${data.name} disconnected — reconnecting…` }]); break;
       case 'player_reconnected': setGameChat((m) => [...m, { from: 'system', text: `${data.name} reconnected` }]); break;
@@ -54,14 +43,12 @@ export function useSocial(wsRef) {
   const declineFriend = (id) => { send({ type: 'friend_decline', requesterId: id }); setRequests((r) => r.filter((x) => x.id !== id)); };
   const removeFriend = (id) => send({ type: 'friend_remove', targetId: id });
   const sendDM = (targetId, text) => {
-    if (!text.trim()) return;
-    send({ type: 'dm', targetId, text: text.trim() });
-    setDms((c) => ({ ...c, [targetId]: [...(c[targetId] || []), { from: 'me', text: text.trim() }] }));
+    if (!text.trim()) return false;
+    return send({ type: 'dm', targetId, text: text.trim() });
   };
   const sendGameChat = (text) => {
-    if (!text.trim()) return;
-    send({ type: 'game_chat', text: text.trim() });
-    setGameChat((m) => [...m, { from: 'me', text: text.trim() }]);
+    if (!text.trim()) return false;
+    return send({ type: 'game_chat', text: text.trim() });
   };
   const clearGameChat = () => setGameChat([]);
 
