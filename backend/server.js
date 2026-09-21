@@ -113,15 +113,32 @@ function notifyPresence(clientId, isOnline) {
 }
 
 async function handleIdentify(ws, data, state) {
-  if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
-  const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
-  state.avatar = avatar;
+  const requestedName = (
+    typeof data.name === 'string' && data.name.trim()
+      ? data.name.trim().slice(0, 20)
+      : state.name
+  );
+  const requestedAvatar = typeof data.avatar === 'string'
+    ? data.avatar.slice(0, 4)
+    : state.avatar;
 
   const uid = await verifyIdToken(data.idToken);
   if (!uid) {
     game.send(ws, { type: 'auth_required', code: 'INVALID_TOKEN' });
     return;
   }
+
+  // A live WebSocket is bound to one verified Firebase identity. Account
+  // switching on the same transport creates ambiguous game/social ownership
+  // and can bypass account-keyed abuse limits. Open a fresh socket instead.
+  if (state.clientId && state.clientId !== uid) {
+    game.send(ws, { type: 'auth_required', code: 'IDENTITY_SWITCH_NOT_ALLOWED' });
+    ws.close(1008, 'Identity switch is not allowed on an authenticated socket');
+    return;
+  }
+
+  state.name = requestedName;
+  state.avatar = requestedAvatar;
 
   // Check the target identity before attaching it to this socket. This
   // prevents a rejected duplicate socket from marking the legitimate one
@@ -148,11 +165,6 @@ async function handleIdentify(ws, data, state) {
   if (data.recoverRoom === false && roomSession && roomSession.player.connected === false) {
     leaveRoomByClientId(uid);
     roomSession = null;
-  }
-
-  if (state.clientId && state.clientId !== uid) {
-    social.setOffline(state.clientId, ws);
-    notifyPresence(state.clientId, false);
   }
 
   state.clientId = uid;
