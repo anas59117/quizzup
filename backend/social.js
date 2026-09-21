@@ -36,6 +36,13 @@ function setOnline(clientId, ws, name, avatar) {
   persist();
 }
 
+function updateProfile(clientId, name, avatar) {
+  if (!clientId) return null;
+  profiles[clientId] = { name, avatar };
+  persist();
+  return profileOf(clientId);
+}
+
 function setOffline(clientId, ws = null) {
   if (!clientId) return;
   // Do not let a late close event from an old socket erase a newer
@@ -129,7 +136,7 @@ function getPendingRequests(clientId) {
 }
 
 module.exports = {
-  setOnline, setOffline, isOnline, getWs, getAllOnline, areFriends,
+  setOnline, updateProfile, setOffline, isOnline, getWs, getAllOnline, areFriends,
   sendRequest, acceptRequest, declineRequest, removeFriend,
   getFriendsList, getPendingRequests, profileOf,
 };
