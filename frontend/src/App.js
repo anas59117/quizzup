@@ -56,6 +56,7 @@ export default function App() {
   const copyTimerRef = useRef(null);
   const pendingTimerRef = useRef(null);
   const bootNameRef = useRef(name);
+  const matchActionRef = useRef(null);
   const messageHandlerRef = useRef(null);
 
   const clearPending = useCallback(() => {
@@ -65,6 +66,9 @@ export default function App() {
     }
     setPending(false);
   }, []);
+
+  const bootGameRecovery = stage === 'join' && !!bootNameRef.current.trim();
+  const matchmakingRecovery = stage === 'waiting' || (pending && !!matchActionRef.current);
 
   const {
     wsRef,
@@ -77,7 +81,8 @@ export default function App() {
     name,
     avatar,
     firebaseUser,
-    shouldRecover: stage === 'playing' || (stage === 'join' && !!bootNameRef.current.trim()),
+    shouldRecover: stage === 'playing' || bootGameRecovery || matchmakingRecovery,
+    expectGameRecovery: stage === 'playing' || bootGameRecovery,
     onMessageRef: messageHandlerRef,
     onFatalError: () => setStage('error'),
     onPendingClear: clearPending,
@@ -156,7 +161,13 @@ export default function App() {
       case 'session':
         setMyId(data.playerId);
         break;
+      case 'identified':
+        if (matchActionRef.current && (stage === 'waiting' || pending)) {
+          connect(matchActionRef.current);
+        }
+        break;
       case 'game_reconnected':
+        matchActionRef.current = null;
         clearPending();
         setScore(data.score || 0);
         setTotalRounds(data.totalRounds || 6);
@@ -190,6 +201,9 @@ export default function App() {
         setJoinError(true);
         break;
       case 'already_playing':
+        matchActionRef.current = null;
+        clearPending();
+        break;
       case 'rate_limited':
         clearPending();
         break;
@@ -198,6 +212,7 @@ export default function App() {
         setStage('home');
         break;
       case 'game_start':
+        matchActionRef.current = null;
         SFX.gameStart();
         clearPending();
         setOpponents(data.opponents.map((o) => ({ ...o, score: 0, answered: false, correct: false })));
@@ -249,6 +264,7 @@ export default function App() {
         statsHook.handleStatsMessage(data);
         break;
       case 'error':
+        matchActionRef.current = null;
         clearPending();
         setStage('error');
         break;
@@ -288,14 +304,18 @@ export default function App() {
 
   function startWithCategory(catKey) {
     if (pending) return;
+    const action = { type: soloMode ? 'solo' : 'join', category: catKey };
+    matchActionRef.current = action;
     beginPending();
-    connect({ type: soloMode ? 'solo' : 'join', category: catKey });
+    connect(action);
   }
 
   function quickMatch() {
     if (pending) return;
+    const action = { type: soloMode ? 'solo' : 'join', category: null };
+    matchActionRef.current = action;
     beginPending();
-    connect({ type: soloMode ? 'solo' : 'join', category: null });
+    connect(action);
   }
 
   function createRoom() {
@@ -349,6 +369,7 @@ export default function App() {
   // socket's handshake on any real network latency, occasionally dropping
   // the identify message that links a rematch's stats to the player.
   const playAgain = useCallback(() => {
+    matchActionRef.current = null;
     setResult(null); setQuestion(null); setIntro(null); setReveal(null);
     setSelected(null); setFriendRequestSent({}); setRoom(null);
     social.clearGameChat();
