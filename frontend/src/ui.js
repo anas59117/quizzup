@@ -132,8 +132,16 @@ export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setA
         <input className="input" placeholder={t('usernamePlaceholder')} value={name} maxLength={20}
           onChange={(e) => setName(e.target.value)} />
         <div className="avatar-picker">
-        {AVATARS.map((a) => (
-          <button key={a} className={`avatar-opt ${avatar === a ? 'active' : ''}`} onClick={() => setAvatar(a)}>{a}</button>
+        {AVATARS.map((a, index) => (
+          <button
+            key={a}
+            className={`avatar-opt ${avatar === a ? 'active' : ''}`}
+            onClick={() => setAvatar(a)}
+            aria-label={`Avatar ${index + 1}`}
+            aria-pressed={avatar === a}
+          >
+            {a}
+          </button>
         ))}
         </div>
         <button className="btn" disabled={!name.trim()} onClick={onContinue}>{t('continue')} <Icon name="arrow" size={18} /></button>
