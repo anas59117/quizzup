@@ -7,9 +7,14 @@ import { useI18n } from './i18n';
 // friends/chat since it follows the same send/handleMessage shape.
 export function useFeed(wsRef) {
   const [posts, setPosts] = useState([]);
+  const [reportedIds, setReportedIds] = useState(() => new Set());
 
   const send = useCallback(
-    (obj) => { if (wsRef.current && wsRef.current.readyState === 1) wsRef.current.send(JSON.stringify(obj)); },
+    (obj) => {
+      if (!wsRef.current || wsRef.current.readyState !== 1) return false;
+      wsRef.current.send(JSON.stringify(obj));
+      return true;
+    },
     [wsRef]
   );
 
@@ -24,20 +29,25 @@ export function useFeed(wsRef) {
       case 'post_reacted':
         setPosts((p) => p.map((post) => (post.id === data.id ? { ...post, reactions: data.reactions } : post)));
         break;
-      case 'post_hidden': setPosts((p) => p.filter((post) => post.id !== data.id)); break;
+      case 'post_report_ack':
+        setReportedIds((prev) => new Set(prev).add(data.id));
+        break;
+      case 'post_hidden':
+        setPosts((p) => p.filter((post) => post.id !== data.id));
+        break;
       default: break;
     }
   }, []);
 
   const createPost = (category, text) => {
-    if (!text.trim()) return;
-    send({ type: 'post_create', category, text: text.trim() });
+    if (!text.trim()) return false;
+    return send({ type: 'post_create', category, text: text.trim() });
   };
   const react = (postId) => send({ type: 'post_react', postId });
   const report = (postId) => send({ type: 'post_report', postId });
   const refresh = () => send({ type: 'feed_list' });
 
-  return { posts, handleMessage, createPost, react, report, refresh };
+  return { posts, reportedIds, handleMessage, createPost, react, report, refresh };
 }
 
 function timeAgo(ts, lang) {
@@ -57,16 +67,13 @@ export function FeedScreen({ feed }) {
   const { t, lang } = useI18n();
   const [category, setCategory] = useState(CATEGORIES[0].key);
   const [draft, setDraft] = useState('');
-  const [reportedIds, setReportedIds] = useState(() => new Set());
 
   const submit = () => {
     if (!draft.trim()) return;
-    feed.createPost(category, draft);
-    setDraft('');
+    if (feed.createPost(category, draft)) setDraft('');
   };
   const reportPost = (id) => {
     feed.report(id);
-    setReportedIds((prev) => new Set(prev).add(id));
   };
 
   return (
@@ -92,8 +99,8 @@ export function FeedScreen({ feed }) {
             <div className="feed-post-text">{p.text}</div>
             <div className="feed-post-actions">
               <button className="feed-react-btn" onClick={() => feed.react(p.id)}>{'⚡'} {p.reactions}</button>
-              <button className="feed-report-btn" onClick={() => reportPost(p.id)} disabled={reportedIds.has(p.id)}>
-                {reportedIds.has(p.id) ? t('signaled') : t('signal')}
+              <button className="feed-report-btn" onClick={() => reportPost(p.id)} disabled={feed.reportedIds.has(p.id)}>
+                {feed.reportedIds.has(p.id) ? t('signaled') : t('signal')}
               </button>
             </div>
           </div>
