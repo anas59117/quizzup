@@ -70,6 +70,8 @@ const STRINGS = {
     coins: '+{n} pièces',
     connectionLost: 'Connexion perdue',
     serverUnreachable: 'Impossible de joindre le serveur.',
+    authProblem: 'Connexion au compte impossible',
+    authUnavailable: 'L’authentification Firebase est indisponible. Réessaie dans un instant.',
     retry: 'Réessayer',
     partyLobby: '⚔️ Salon de groupe',
     shareCode: 'Partage ce code',
