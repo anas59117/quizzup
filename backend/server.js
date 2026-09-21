@@ -542,8 +542,20 @@ function handleGameplay(ws, data, state) {
     const index = waitingPlayers.findIndex(
       (p) => p.id === playerId || p.clientId === state.clientId
     );
-    if (index !== -1) waitingPlayers.splice(index, 1);
-    game.send(ws, { type: 'queue_cancelled' });
+    if (index !== -1) {
+      waitingPlayers.splice(index, 1);
+      game.send(ws, { type: 'queue_cancelled' });
+      return true;
+    }
+
+    const startAlreadyWonRace = (
+      pendingClients.has(state.clientId)
+      || game.startingClients.has(state.clientId)
+      || !!game.findActiveSessionByClientId(state.clientId)
+    );
+    game.send(ws, {
+      type: startAlreadyWonRace ? 'queue_cancel_failed' : 'queue_cancelled',
+    });
     return true;
   }
 
