@@ -21,8 +21,32 @@ const REFILL_AT = 12; // refill when a category drops below this
 const RATE_LIMIT_MS = 5500; // OpenTDB: ~1 req / 5s per IP
 
 const cache = new Map(); // categoryKey -> question[]
-let lastFetch = 0;
 const refilling = new Set();
+
+function createRateLimitedQueue(
+  intervalMs,
+  now = () => Date.now(),
+  sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
+) {
+  let nextAllowedAt = 0;
+  let chain = Promise.resolve();
+
+  return function schedule(task) {
+    const run = async () => {
+      const wait = Math.max(0, nextAllowedAt - now());
+      if (wait > 0) await sleep(wait);
+      nextAllowedAt = now() + intervalMs;
+      return task();
+    };
+
+    const result = chain.then(run, run);
+    // Keep the queue alive even when one request fails.
+    chain = result.catch(() => {});
+    return result;
+  };
+}
+
+const scheduleFetch = createRateLimitedQueue(RATE_LIMIT_MS);
 
 const b64 = (s) => Buffer.from(s, 'base64').toString('utf8');
 // Fisher-Yates: uniform-random permutation. (sort(() => Math.random() - 0.5)
@@ -49,24 +73,26 @@ async function fetchBatch(categoryKey, label, icon) {
   const otdbId = OTDB_CATEGORY[categoryKey];
   if (!otdbId) return null;
 
-  // Respect the rate limit: space requests out globally.
-  const wait = RATE_LIMIT_MS - (Date.now() - lastFetch);
-  if (wait > 0) await new Promise((res) => setTimeout(res, wait));
-  lastFetch = Date.now();
-
-  const url = `https://opentdb.com/api.php?amount=${CACHE_TARGET}&category=${otdbId}&type=multiple&encode=base64`;
-  try {
+  // OpenTDB limits by source IP. Every category refill therefore shares one
+  // serialized queue; concurrent warm-up calls cannot wake up together and
+  // accidentally burst several requests after the same delay.
+  return scheduleFetch(async () => {
+    const url = `https://opentdb.com/api.php?amount=${CACHE_TARGET}&category=${otdbId}&type=multiple&encode=base64`;
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 8000);
-    const resp = await fetch(url, { signal: controller.signal });
-    clearTimeout(timeout);
-    if (!resp.ok) return null;
-    const data = await resp.json();
-    if (data.response_code !== 0 || !Array.isArray(data.results)) return null;
-    return data.results.map((r) => normalize(r, label, icon));
-  } catch {
-    return null; // network error, abort, bad JSON — fall back to local
-  }
+
+    try {
+      const resp = await fetch(url, { signal: controller.signal });
+      if (!resp.ok) return null;
+      const data = await resp.json();
+      if (data.response_code !== 0 || !Array.isArray(data.results)) return null;
+      return data.results.map((r) => normalize(r, label, icon));
+    } catch {
+      return null; // network error, abort, bad JSON — fall back to local
+    } finally {
+      clearTimeout(timeout);
+    }
+  });
 }
 
 // Kick off a background refill for a category (non-blocking, deduplicated).
@@ -98,4 +124,4 @@ function isSupported(categoryKey) {
   return !!OTDB_CATEGORY[categoryKey];
 }
 
-module.exports = { takeFromCache, refill, isSupported };
+module.exports = { takeFromCache, refill, isSupported, createRateLimitedQueue };
