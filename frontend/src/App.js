@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import './App.css';
 import SFX from './sounds';
 import music from './music';
-import { getClientId, useSocial, GameChat } from './social';
+import { useSocial, GameChat } from './social';
 import { ensureSignedIn, linkGoogleAccount } from './firebase';
 import { useStats } from './stats';
 import { useFeed, FeedScreen } from './feed';
@@ -39,30 +39,45 @@ export default function App() {
   const [copied, setCopied] = useState(false);
   const [firebaseUser, setFirebaseUser] = useState(null);
   const [linking, setLinking] = useState(false);
+  const [reconnecting, setReconnecting] = useState(false);
   const wsRef = useRef(null);
   const tickRef = useRef(null);
   const copyTimerRef = useRef(null);
+  const reconnectTimerRef = useRef(null);
+  const reconnectAttemptsRef = useRef(0);
+  const identifiedRef = useRef(false);
+  const identifySentRef = useRef(false);
+  const queuedActionRef = useRef(null);
+  const stageRef = useRef(stage);
+  const reconnectingRef = useRef(false);
+  const identityRef = useRef({ name, avatar, firebaseUser });
   const [pending, setPending] = useState(false);
   const social = useSocial(wsRef);
   const statsHook = useStats();
   const feed = useFeed(wsRef);
   const clientId = firebaseUser?.uid || null;
+  stageRef.current = stage;
+  reconnectingRef.current = reconnecting;
+  identityRef.current = { name, avatar, firebaseUser };
 
   useEffect(() => () => {
     if (wsRef.current) { wsRef.current.intentionalClose = true; wsRef.current.close(); }
     if (tickRef.current) clearInterval(tickRef.current);
     if (copyTimerRef.current) clearTimeout(copyTimerRef.current);
+    if (reconnectTimerRef.current) clearTimeout(reconnectTimerRef.current);
   }, []);
 
-  // Sign in (anonymously, at first) so every player has a stable Firebase
-  // uid — this replaces the old localStorage clientId as the persistent
-  // identity behind friends/presence. Falls back to the old local id if
-  // Firebase is unreachable so the app never gets stuck on a blank screen.
+  // A verified Firebase identity is required by the authoritative backend.
+  // Do not fall back to an unverified local id: that would make the UI look
+  // authenticated while every gameplay action is correctly rejected.
   useEffect(() => {
     let cancelled = false;
     ensureSignedIn()
       .then((user) => { if (!cancelled) setFirebaseUser(user); })
-      .catch(() => { if (!cancelled) setFirebaseUser({ uid: getClientId(), isAnonymous: true }); });
+      .catch((err) => {
+        console.error('Firebase sign-in failed', err);
+        if (!cancelled) setStage('error');
+      });
     return () => { cancelled = true; };
   }, []);
 
@@ -109,43 +124,170 @@ export default function App() {
     }
   }, [stage, intro, question, reveal, timeLeft]);
 
-  const connect = useCallback((action) => {
-    const send = (payload) => {
-      if (wsRef.current && wsRef.current.readyState === 1) { wsRef.current.send(JSON.stringify(payload)); return; }
-      if (wsRef.current) { wsRef.current.intentionalClose = true; wsRef.current.close(); wsRef.current = null; }
-      // In production the frontend (Vercel) and backend (Railway) are on
-      // different hosts, so the URL must be explicit via env var. Falls back
-      // to same-host logic for local dev, where frontend:3000 talks to
-      // backend:3001 on localhost.
-      const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-      const host = window.location.port === '3000' ? `${window.location.hostname}:3001` : window.location.host;
-      const wsUrl = process.env.REACT_APP_WS_URL || `${proto}//${host}/ws`;
-      const ws = new WebSocket(wsUrl);
-      wsRef.current = ws;
-      ws.onopen = () => ws.send(JSON.stringify(payload));
-      attachHandlers(ws);
-    };
+  function wsUrl() {
+    const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const host = window.location.port === '3000' ? `${window.location.hostname}:3001` : window.location.host;
+    return process.env.REACT_APP_WS_URL || `${proto}//${host}/ws`;
+  }
 
-    // The server verifies clientId from a Firebase ID token rather than
-    // trusting the value directly — a raw clientId would let anyone claim
-    // to be someone else. Only the identify message needs the token; other
-    // actions ride on the identity that identify already established.
-    if (action.type === 'identify' && firebaseUser && typeof firebaseUser.getIdToken === 'function') {
-      firebaseUser.getIdToken()
-        .then((idToken) => send({ ...action, name, avatar, clientId, idToken }))
-        .catch(() => send({ ...action, name, avatar, clientId }));
+  function sendAction(ws, action) {
+    if (!ws || ws.readyState !== 1 || !action) return false;
+    const identity = identityRef.current;
+    ws.send(JSON.stringify({
+      ...action,
+      name: identity.name,
+      avatar: identity.avatar,
+      clientId: identity.firebaseUser?.uid || null,
+    }));
+    return true;
+  }
+
+  async function sendIdentify(ws) {
+    if (!ws || ws.readyState !== 1 || identifySentRef.current) return;
+    const identity = identityRef.current;
+    const user = identity.firebaseUser;
+    if (!user || typeof user.getIdToken !== 'function') {
+      setPending(false);
+      setStage('error');
       return;
     }
-    send({ ...action, name, avatar, clientId });
-  }, [name, avatar, social, clientId, firebaseUser]);
+
+    identifySentRef.current = true;
+    try {
+      const idToken = await user.getIdToken();
+      if (wsRef.current !== ws || ws.readyState !== 1) return;
+      ws.send(JSON.stringify({
+        type: 'identify',
+        name: identity.name,
+        avatar: identity.avatar,
+        clientId: user.uid,
+        idToken,
+      }));
+    } catch (err) {
+      console.error('Firebase token retrieval failed', err);
+      identifySentRef.current = false;
+      setPending(false);
+      setStage('error');
+    }
+  }
+
+  function flushQueuedAction(ws) {
+    if (!identifiedRef.current || !queuedActionRef.current) return;
+    const action = queuedActionRef.current;
+    queuedActionRef.current = null;
+    sendAction(ws, action);
+  }
+
+  function openSocket() {
+    const current = wsRef.current;
+    if (current && (current.readyState === 0 || current.readyState === 1)) return current;
+
+    let ws;
+    try {
+      ws = new WebSocket(wsUrl());
+    } catch {
+      scheduleRecovery();
+      return null;
+    }
+
+    wsRef.current = ws;
+    identifiedRef.current = false;
+    identifySentRef.current = false;
+    attachHandlers(ws);
+    ws.onopen = () => sendIdentify(ws);
+    return ws;
+  }
+
+  function scheduleRecovery() {
+    if (reconnectTimerRef.current) return;
+    setReconnecting(true);
+    reconnectingRef.current = true;
+
+    const delays = [250, 500, 1000, 1500, 2000, 2500, 3000];
+    const attempt = reconnectAttemptsRef.current;
+    if (attempt >= delays.length) {
+      setReconnecting(false);
+      reconnectingRef.current = false;
+      setStage('error');
+      return;
+    }
+
+    reconnectTimerRef.current = setTimeout(() => {
+      reconnectTimerRef.current = null;
+      reconnectAttemptsRef.current += 1;
+      openSocket();
+    }, delays[attempt]);
+  }
+
+  function connect(action) {
+    if (action && action.type !== 'identify') queuedActionRef.current = action;
+
+    const ws = openSocket();
+    if (!ws) return;
+
+    if (ws.readyState === 1) {
+      if (identifiedRef.current) flushQueuedAction(ws);
+      else sendIdentify(ws);
+    }
+  }
 
   function attachHandlers(ws) {
     ws.onmessage = (event) => {
       let data;
       try { data = JSON.parse(event.data); } catch { return; }
       switch (data.type) {
-        case 'session': setMyId(data.playerId); break;
-        case 'waiting': setPending(false); setStage('waiting'); break;
+        case 'session':
+          setMyId(data.playerId);
+          break;
+        case 'identified':
+          identifiedRef.current = true;
+          identifySentRef.current = false;
+          if (reconnectingRef.current && data.reconnected === false) {
+            setReconnecting(false);
+            reconnectingRef.current = false;
+            setStage('error');
+            return;
+          }
+          flushQueuedAction(ws);
+          break;
+        case 'auth_required':
+        case 'already_connected':
+          queuedActionRef.current = null;
+          identifiedRef.current = false;
+          identifySentRef.current = false;
+          setPending(false);
+          setReconnecting(false);
+          reconnectingRef.current = false;
+          setStage('error');
+          break;
+        case 'game_reconnected':
+          if (reconnectTimerRef.current) {
+            clearTimeout(reconnectTimerRef.current);
+            reconnectTimerRef.current = null;
+          }
+          reconnectAttemptsRef.current = 0;
+          setReconnecting(false);
+          reconnectingRef.current = false;
+          setPending(false);
+          setScore(data.score || 0);
+          setTotalRounds(data.totalRounds || 6);
+          if (data.you) {
+            if (data.you.name) setName(data.you.name);
+            if (data.you.avatar) setAvatar(data.you.avatar);
+          }
+          setOpponents((data.opponents || []).map((o) => ({
+            ...o,
+            score: o.score || 0,
+            answered: !!o.answered,
+            correct: !!o.correct,
+          })));
+          setRoom(null);
+          setStage('playing');
+          break;
+        case 'waiting':
+          setPending(false);
+          setStage('waiting');
+          break;
         case 'room_created':
         case 'room_update':
           setPending(false);
@@ -153,68 +295,104 @@ export default function App() {
           setJoinError(false);
           setStage('room_wait');
           break;
-        case 'room_not_found': setPending(false); setJoinError(true); break;
-        case 'room_full': setPending(false); setJoinError(true); break;
-        case 'already_playing': setPending(false); break;
-        case 'room_closed': setRoom(null); setStage('home'); break;
+        case 'room_not_found':
+        case 'room_full':
+          setPending(false);
+          setJoinError(true);
+          break;
+        case 'already_playing':
+          setPending(false);
+          break;
+        case 'room_closed':
+          setRoom(null);
+          setStage('home');
+          break;
         case 'game_start':
           SFX.gameStart();
+          reconnectAttemptsRef.current = 0;
+          setReconnecting(false);
+          reconnectingRef.current = false;
           setPending(false);
           setOpponents(data.opponents.map((o) => ({ ...o, score: 0, answered: false, correct: false })));
           setTotalRounds(data.totalRounds);
-          setScore(0); setRoom(null);
+          setScore(0);
+          setRoom(null);
           setStage('playing');
           break;
         case 'round_intro':
           if (data.isBonus) SFX.bonusIntro(); else SFX.roundIntro();
-          setIntro(data); setQuestion(null); setReveal(null); setReported(false); setStage('playing');
+          setIntro(data);
+          setQuestion(null);
+          setReveal(null);
+          setReported(false);
+          setStage('playing');
           break;
         case 'question':
-          setIntro(null); setQuestion(data); setSelected(null); setReveal(null);
+          setIntro(null);
+          setQuestion(data);
+          setSelected(data.reconnect && data.answered ? data.yourAnswer : null);
+          setReveal(null);
           setOpponents((prev) => prev.map((o) => ({ ...o, answered: false, correct: false })));
           break;
-        case 'report_ack': setReported(true); break;
+        case 'report_ack':
+          setReported(true);
+          break;
         case 'round_result':
-          if (data.yourCorrect) SFX.correct();
-          else if (data.timedOut && !data.yourAnswer && data.yourAnswer !== 0) SFX.timeUp();
-          else SFX.wrong();
-          setReveal(data); setScore(data.yourScore);
-          // Replace (not merge) so a player who disconnected mid-match and
-          // dropped out of the backend's list disappears from the HUD too,
-          // instead of lingering forever on their last known state.
+          if (!data.reconnect) {
+            if (data.yourCorrect) SFX.correct();
+            else if (data.timedOut && !data.yourAnswer && data.yourAnswer !== 0) SFX.timeUp();
+            else SFX.wrong();
+          }
+          setReveal(data);
+          setScore(data.yourScore);
           setOpponents((prev) => data.others.map((upd) => ({ ...prev.find((o) => o.id === upd.id), ...upd })));
           if (tickRef.current) clearInterval(tickRef.current);
           break;
         case 'game_end':
           if (data.won) SFX.victory(); else if (data.tie) SFX.tie(); else SFX.defeat();
-          setResult(data); setScore(data.finalScore); setStage('finished');
+          setResult(data);
+          setScore(data.finalScore);
+          setStage('finished');
           setOpponents((prev) => data.others.map((upd) => ({ ...prev.find((o) => o.id === upd.id), ...upd })));
           statsHook.handleStatsMessage(data);
           break;
-        case 'stats': statsHook.handleStatsMessage(data); break;
-        case 'error': setPending(false); setStage('error'); break;
-        default: social.handleMessage(data); feed.handleMessage(data); break;
+        case 'stats':
+          statsHook.handleStatsMessage(data);
+          break;
+        case 'error':
+          setPending(false);
+          setStage('error');
+          break;
+        default:
+          social.handleMessage(data);
+          feed.handleMessage(data);
+          break;
       }
     };
-    ws.onerror = () => { setPending(false); setStage('error'); };
-    // Without this, a clean/server-initiated close (server restart, idle
-    // kick, proxy timeout, a backgrounded mobile tab having its socket
-    // suspended by the OS) never fired onerror, so the app just froze on
-    // whatever screen it was on — a dead countdown, a dead lobby button —
-    // with no feedback and no way out short of a manual refresh. Closes we
-    // trigger ourselves (cancel, unmount, reconnecting) are marked
-    // intentionalClose beforehand so they don't bounce the player to the
-    // error screen.
+
+    // Most browser WebSocket errors are followed by close; letting close own
+    // recovery avoids racing an error screen against a successful reconnect.
+    ws.onerror = () => { setPending(false); };
+
     ws.onclose = () => {
-      if (ws.intentionalClose) return;
+      if (wsRef.current === ws) wsRef.current = null;
+      identifiedRef.current = false;
+      identifySentRef.current = false;
       setPending(false);
-      setStage((s) => (s === 'finished' || s === 'join' ? s : 'error'));
+      if (ws.intentionalClose) return;
+
+      if (stageRef.current === 'playing') scheduleRecovery();
+      else setStage((s) => (s === 'finished' || s === 'join' ? s : 'error'));
     };
   }
 
   useEffect(() => {
-    if (stage === 'home' && clientId && (!wsRef.current || wsRef.current.readyState > 1)) connect({ type: 'identify' });
-  }, [stage, connect, clientId]);
+    if (stage === 'home' && clientId && firebaseUser && typeof firebaseUser.getIdToken === 'function') {
+      connect({ type: 'identify' });
+    }
+    // connect intentionally reads the latest identity through refs.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stage, clientId, firebaseUser]);
 
   const [soloMode, setSoloMode] = useState(false);
   // `pending` blocks a second matchmaking request (double-tap, rapid-fire
@@ -255,10 +433,8 @@ export default function App() {
 
   const startRoomMatch = useCallback(() => {
     if (!room || pending) return;
-    if (wsRef.current && wsRef.current.readyState === 1) {
-      beginPending();
-      wsRef.current.send(JSON.stringify({ type: 'start_room', code: room.code }));
-    }
+    beginPending();
+    connect({ type: 'start_room', code: room.code });
   }, [room, pending, beginPending]);
 
   // Tapping the "Themes" nav tab directly (not via a family tile on Home)
@@ -267,7 +443,7 @@ export default function App() {
   const onNav = useCallback((s) => { if (s === 'categories') setCategoryFamily(null); setStage(s); }, []);
 
   const answer = useCallback((index) => {
-    if (selected !== null || reveal) return;
+    if (selected !== null || reveal || reconnecting) return;
     // Only mark the answer as "selected" once it's actually been sent — the
     // old code called setSelected unconditionally before checking the
     // socket, so if the connection had silently dropped the button would
@@ -278,9 +454,9 @@ export default function App() {
       setSelected(index);
       wsRef.current.send(JSON.stringify({ type: 'answer', answerIndex: index }));
     } else {
-      setStage('error');
+      scheduleRecovery();
     }
-  }, [selected, reveal]);
+  }, [selected, reveal, reconnecting]);
 
   const reportQuestion = useCallback(() => {
     if (reported) return;
@@ -401,6 +577,17 @@ export default function App() {
         />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);
+  }
+
+  if (stage === 'playing' && reconnecting) {
+    return (
+      <div className="app game-bg"><TopControls {...topProps} />
+        <div className="container center">
+          <h2 className="logo">Reconnexion…</h2>
+          <p className="tagline">La partie est conservée pendant quelques secondes.</p>
+        </div>
+      </div>
+    );
   }
 
   if (stage === 'waiting') {
