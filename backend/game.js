@@ -98,6 +98,7 @@ async function startGame(rawPlayers, categoryKey) {
       roundTimer: null,
       phase: 'idle',
       status: 'active',
+      mode: rawPlayers.length === 1 ? 'solo' : 'multiplayer',
     };
     activeGames.set(gameId, game);
     game.players.forEach((p) => playerSessions.set(p.id, gameId));
@@ -411,25 +412,29 @@ function endGame(game, reason) {
   if (game.roundTimer) clearTimeout(game.roundTimer);
   game.players.forEach((p) => { if (p.reconnectTimer) clearTimeout(p.reconnectTimer); });
 
+  const isSolo = game.mode === 'solo';
   const topScore = Math.max(...game.players.map((p) => p.score));
   const winners = game.players.filter((p) => p.score === topScore);
-  const isTie = winners.length > 1;
+  const isTie = !isSolo && winners.length > 1;
   const board = game.players
     .map((p) => ({ id: p.id, name: p.name, avatar: p.avatar, score: p.score }))
     .sort((x, y) => y.score - x.score);
 
   game.players.forEach((p) => {
-    const won = !isTie && p.score === topScore;
+    const won = !isSolo && !isTie && p.score === topScore;
     const finishBonus = 40;
-    const winBonus = won ? 100 : isTie ? 50 : 0;
+    const winBonus = isSolo ? 0 : won ? 100 : isTie ? 50 : 0;
     const xpTotal = p.score + finishBonus + winBonus;
-    stats.recordResult(p.clientId, won, isTie, xpTotal);
+    // Solo sessions count as games played but neither extend nor break a PvP
+    // win streak, and they cannot farm the multiplayer win bonus.
+    stats.recordResult(p.clientId, won, isSolo || isTie, xpTotal);
     const finalResult = {
       type: 'game_end', finalScore: p.score,
+      solo: isSolo,
       won, tie: isTie,
       others: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, score: o.score, clientId: o.clientId })),
       leaderboard: board, reason: reason || 'complete',
-      coins: won ? 50 : isTie ? 35 : 20,
+      coins: isSolo ? 20 : won ? 50 : isTie ? 35 : 20,
       xp: xpTotal,
       xpBreakdown: { matchScore: p.score, finishBonus, winBonus, xpTotal },
       stats: stats.getStats(p.clientId),
