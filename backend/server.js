@@ -253,13 +253,19 @@ function handleGameplay(ws, data, state) {
 
   if (data.type === 'join') {
     if (isBusy(playerId)) return true;
-    if (waitingPlayers.some((w) => w.id === playerId)) return true;
+    if (waitingPlayers.some((w) => w.id === playerId || w.clientId === state.clientId)) {
+      game.send(ws, { type: 'already_playing' });
+      return true;
+    }
     if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
     const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
     const categoryKey = typeof data.category === 'string' ? data.category : null;
     game.send(ws, { type: 'joined', playerId, name: state.name });
     const oppIdx = waitingPlayers.findIndex((w) =>
-      w.categoryKey === categoryKey && w.ws.readyState === 1 && !isBusy(w.id)
+      w.categoryKey === categoryKey
+      && w.clientId !== state.clientId
+      && w.ws.readyState === 1
+      && !isBusy(w.id)
     );
     if (oppIdx !== -1) {
       const opp = waitingPlayers.splice(oppIdx, 1)[0];
@@ -312,7 +318,10 @@ function handleGameplay(ws, data, state) {
       game.send(ws, { type: 'room_not_found' });
       return true;
     }
-    if (room.players.some((p) => p.id === playerId)) { game.send(ws, { type: 'room_not_found' }); return true; }
+    if (room.players.some((p) => p.id === playerId || p.clientId === state.clientId)) {
+      game.send(ws, { type: 'already_playing' });
+      return true;
+    }
     if (room.players.length >= MAX_ROOM_PLAYERS) { game.send(ws, { type: 'room_full' }); return true; }
     if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
     const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F981}';
