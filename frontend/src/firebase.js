@@ -8,7 +8,20 @@ import {
   GoogleAuthProvider, linkWithPopup,
 } from 'firebase/auth';
 
-const firebaseConfig = {
+// Firebase's web config is public client configuration (not a service-account
+// secret). Keep a checked-in fallback so the Vercel build cannot be bricked by
+// a missing/placeholder REACT_APP_* variable. A complete valid environment
+// config can still override this for previews or future migrations.
+const DEFAULT_FIREBASE_CONFIG = {
+  apiKey: 'AIzaSyAQhrcbG2-1YujgQbmJSykNda_fgUpvz0o',
+  authDomain: 'quizzup-ae633.firebaseapp.com',
+  projectId: 'quizzup-ae633',
+  storageBucket: 'quizzup-ae633.firebasestorage.app',
+  messagingSenderId: '825347964948',
+  appId: '1:825347964948:web:cfbb51e27eb3224253e701',
+};
+
+const envFirebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
@@ -16,6 +29,13 @@ const firebaseConfig = {
   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
+
+const hasValidEnvConfig = (
+  /^AIza[0-9A-Za-z_-]{30,}$/.test(envFirebaseConfig.apiKey || '')
+  && Object.values(envFirebaseConfig).every((value) => typeof value === 'string' && value.trim())
+);
+
+const firebaseConfig = hasValidEnvConfig ? envFirebaseConfig : DEFAULT_FIREBASE_CONFIG;
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
