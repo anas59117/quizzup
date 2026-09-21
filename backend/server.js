@@ -75,7 +75,10 @@ const actionLimiters = {
 
 function allowAction(limiterInstance, key, ws, code = 'RATE_LIMITED') {
   if (!key || limiterInstance.check(key)) return true;
-  game.send(ws, { type: 'error', code });
+  // Rate limiting is a recoverable action-level condition, not a fatal
+  // transport/game error. Keep it out of the generic "error" message type
+  // because the frontend intentionally sends those to the full error screen.
+  game.send(ws, { type: 'rate_limited', code });
   return false;
 }
 
