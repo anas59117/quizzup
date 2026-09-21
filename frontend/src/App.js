@@ -63,6 +63,7 @@ export default function App() {
   const [reveal, setReveal] = useState(null);
   const [reported, setReported] = useState(false);
   const [result, setResult] = useState(null);
+  const [rematchWaiting, setRematchWaiting] = useState(false);
   const [joinCode, setJoinCode] = useState('');
   const [joinError, setJoinError] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -290,6 +291,19 @@ export default function App() {
         matchActionRef.current = null;
         clearPending();
         break;
+      case 'rematch_waiting':
+        clearPending();
+        setRematchWaiting(true);
+        break;
+      case 'rematch_starting':
+        clearPending();
+        setRematchWaiting(true);
+        break;
+      case 'rematch_unavailable':
+      case 'rematch_cancelled':
+        clearPending();
+        setRematchWaiting(false);
+        break;
       case 'match_aborted':
         cancelQueueRef.current = false;
         matchActionRef.current = null;
@@ -317,6 +331,7 @@ export default function App() {
         setStage('home');
         break;
       case 'game_start':
+        setRematchWaiting(false);
         cancelQueueRef.current = false;
         bootSessionRef.current = 'game';
         writeLiveSession('game');
@@ -361,6 +376,7 @@ export default function App() {
         if (tickRef.current) clearInterval(tickRef.current);
         break;
       case 'game_end':
+        setRematchWaiting(false);
         bootSessionRef.current = null;
         writeLiveSession(null);
         if (data.won) SFX.victory(); else if (data.tie) SFX.tie(); else SFX.defeat();
@@ -492,6 +508,8 @@ export default function App() {
   // socket's handshake on any real network latency, occasionally dropping
   // the identify message that links a rematch's stats to the player.
   const playAgain = useCallback(() => {
+    sendSocket({ type: 'cancel_rematch' });
+    setRematchWaiting(false);
     bootSessionRef.current = null;
     writeLiveSession(null);
     matchActionRef.current = null;
@@ -499,13 +517,19 @@ export default function App() {
     setSelected(null); setRoom(null);
     social.clearGameChat();
     setStage('home');
-  }, [social]);
+  }, [social, sendSocket]);
 
   // "New opponent" / "New game" previously reused playAgain — identical to
   // "Back Home" — so the button's own label ("nouvel adversaire") was a
   // promise it never kept: the player landed on Home and had to manually
   // tap Quick Play again. This mirrors what `rematch` already does, minus
   // forcing the same category/opponent.
+  function requestRematch() {
+    if (pending || rematchWaiting) return;
+    beginPending();
+    if (!connect({ type: 'rematch' })) clearPending();
+  }
+
   function newMatch() { playAgain(); quickMatch(); }
 
   const topProps = useMemo(() => ({ muted, toggleMute, theme, toggleTheme }), [muted, toggleMute, theme, toggleTheme]);
@@ -654,7 +678,8 @@ export default function App() {
         <FinishedContent
           result={result} opponents={opponents} myId={myId} social={social}
           addFriend={social.addFriend}
-          playAgain={playAgain} rematch={() => { playAgain(); quickMatch(); }} newMatch={newMatch}
+          playAgain={playAgain} rematch={requestRematch} rematchWaiting={rematchWaiting}
+          newMatch={newMatch}
         />
       </div>);
   }
