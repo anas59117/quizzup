@@ -99,8 +99,9 @@ migration vers Firestore encore à faire avant le scale.
   posts, demandes d'amis).
 - Reconnexion : état de manche restauré, réponse déjà envoyée conservée,
   reveal et résultat final récupérables après refresh/coupure.
-- Persistence JSON : écritures debounce **sérialisées** (plus d'écritures
-  concurrentes pouvant réécrire un snapshot ancien).
+- Persistence JSON : écritures debounce **sérialisées et atomiques**, backup
+  automatique + récupération après corruption. `DATA_DIR` permet de pointer
+  ces stores vers un volume persistant Railway sans casser les APIs actuelles.
 - CI GitHub Actions : syntax check backend + tests Node + build React production.
 
 ## 📋 Écrans
