@@ -593,3 +593,42 @@ test('disconnect grace remains 15 seconds while finished games retain rematch st
     global.setTimeout = originalSetTimeout;
   }
 });
+
+
+test('finished game can silently reattach a new socket for rematch', () => {
+  const oldWs = { readyState: 3, messages: [], send() {} };
+  const newWs = fakeWs();
+  const g = {
+    id: 'silent-finished',
+    status: 'finished',
+    phase: 'finished',
+    finishedAt: Date.now(),
+    roundAnswers: {},
+    players: [{
+      id: 'old-silent',
+      clientId: 'silent-user',
+      ws: oldWs,
+      connected: true,
+      score: 12,
+      name: 'A',
+      avatar: 'A',
+      reconnectTimer: null,
+      finalResult: {
+        type: 'game_end',
+        leaderboard: [{ id: 'old-silent', name: 'A', avatar: 'A', score: 12 }],
+      },
+    }],
+  };
+  game.activeGames.set(g.id, g);
+  game.playerSessions.set('old-silent', g.id);
+
+  assert.equal(
+    game.reattachFinishedPlayer('silent-user', newWs, 'new-silent'),
+    true
+  );
+  assert.equal(newWs.messages.length, 0);
+  assert.equal(g.players[0].ws, newWs);
+  assert.equal(g.players[0].id, 'new-silent');
+  assert.equal(g.players[0].finalResult.leaderboard[0].id, 'new-silent');
+  assert.equal(game.playerSessions.get('new-silent'), g.id);
+});
