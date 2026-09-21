@@ -1,29 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-
-const PRODUCTION_WS_URL = 'wss://quizzup-production.up.railway.app/ws';
-
-function getWebSocketUrl() {
-  const configured = process.env.REACT_APP_WS_URL?.trim();
-  if (configured) return configured;
-
-  const isLocal = (
-    window.location.hostname === 'localhost'
-    || window.location.hostname === '127.0.0.1'
-  );
-  if (isLocal) {
-    const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    const host = window.location.port === '3000'
-      ? `${window.location.hostname}:3001`
-      : window.location.host;
-    return `${proto}//${host}/ws`;
-  }
-
-  // Production must never silently fall back to the frontend host: Vercel
-  // only serves the React app and has no /ws endpoint. Keeping an explicit
-  // Railway fallback makes the deployed app work even if the Vercel env var
-  // is missing, while REACT_APP_WS_URL can still override it per environment.
-  return PRODUCTION_WS_URL;
-}
+import { getWebSocketUrl } from './backend';
 
 // Owns transport/authentication/reconnect concerns. Game/UI state stays in
 // App.js so protocol events remain easy to review, while socket lifecycle is
