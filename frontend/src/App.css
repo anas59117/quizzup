@@ -62,6 +62,8 @@ button:focus-visible,input:focus-visible,select:focus-visible { outline:2px soli
 .game-bg .top-controls { background:rgba(17,17,19,.94); border-color:#29292d; }
 .game-bg .ctrl-btn { color:#aaaab2; }
 .game-bg .ctrl-btn:hover { color:#fff; background:#1d1d20; }
+.game-bg .home-themes-link { color:#aaaab2; }
+.game-bg .home-themes-link:hover { color:#fff; }
 
 /* Flat poster palette */
 .g1,.g9,.g16,.g20,.g25,.g29,.g37,.g45,.g48,.g49,.g51,.g56,.g60,.g64,.g68,.g72 { background:#a8465d; }
