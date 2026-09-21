@@ -246,15 +246,19 @@ function isInActiveGame(playerId) {
   return !!(g && g.status === 'active');
 }
 
-function isBusy(playerId, clientId) {
+function isGameBusy(playerId, clientId) {
   return isInActiveGame(playerId)
     || pendingPlayers.has(playerId)
     || (!!clientId && (
       pendingClients.has(clientId)
       || !!game.findActiveSessionByClientId(clientId)
       || game.startingClients.has(clientId)
-      || roomByClient.has(clientId)
     ));
+}
+
+function isBusy(playerId, clientId) {
+  return isGameBusy(playerId, clientId)
+    || (!!clientId && roomByClient.has(clientId));
 }
 
 function requireAuth(ws, state) {
@@ -404,7 +408,7 @@ function handleGameplay(ws, data, state) {
     const room = privateRooms.get(code);
     if (!room || room.players[0].id !== playerId) return true;
     if (room.players.length < 2 || room.players.length > MAX_ROOM_PLAYERS) return true;
-    if (room.players.some((p) => isBusy(p.id, p.clientId))) {
+    if (room.players.some((p) => isGameBusy(p.id, p.clientId))) {
       room.players.forEach((p) => game.send(p.ws, { type: 'already_playing' }));
       return true;
     }
