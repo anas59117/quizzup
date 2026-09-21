@@ -46,11 +46,15 @@ app.use(cors(
 ));
 
 const PORT = process.env.PORT || 3001;
-const MAX_WS_CONNECTIONS_PER_IP = Math.max(
-  2,
-  Math.min(100, Number(process.env.MAX_WS_CONNECTIONS_PER_IP) || 20)
-);
+const configuredConnectionCap = Number(process.env.MAX_WS_CONNECTIONS_PER_IP);
+const MAX_WS_CONNECTIONS_PER_IP = Number.isFinite(configuredConnectionCap)
+  ? Math.max(0, Math.min(1000, configuredConnectionCap))
+  : 100;
 const WS_HEARTBEAT_MS = 30 * 1000;
+
+if (process.env.NODE_ENV === 'production' && !allowedOrigins.length) {
+  console.warn('CORS_ORIGIN is not configured; WebSocket origin checks are open.');
+}
 
 function getClientIp(req) {
   if (process.env.TRUST_PROXY === 'true') {
@@ -461,7 +465,7 @@ function handleGameplay(ws, data, state) {
 wss.on('connection', (ws, req) => {
   const ip = getClientIp(req);
   const currentConnections = connectionsByIp.get(ip) || 0;
-  if (currentConnections >= MAX_WS_CONNECTIONS_PER_IP) {
+  if (MAX_WS_CONNECTIONS_PER_IP > 0 && currentConnections >= MAX_WS_CONNECTIONS_PER_IP) {
     ws.close(1008, 'Too many connections');
     return;
   }
