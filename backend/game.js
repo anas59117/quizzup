@@ -223,8 +223,9 @@ function removePlayer(game, playerId) {
 
   // A permanent leave/expired reconnect window is a forfeit. Record it now
   // because this player is removed from game.players and would otherwise
-  // disappear from endGame() without a loss ever being persisted.
-  stats.recordResult(left.clientId, false, false, 0);
+  // disappear from endGame() without an outcome ever being persisted. Solo
+  // abandonment must not break a PvP win streak.
+  stats.recordResult(left.clientId, false, game.mode === 'solo', 0);
 
   if (game.players.length < 2) {
     endGame(game, 'opponent_disconnected');
