@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon } from './ui';
+import { AVATARS, CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon } from './ui';
 import { PlayerHud, Leaderboard } from './multiplayer';
 import { ProfileStats } from './stats';
 import { FriendsScreen } from './social';
@@ -114,8 +114,52 @@ export function CategoriesContent({ startWithCategory, onBack, initialFamily, pe
   );
 }
 
-export function ProfileContent({ avatar, name, stats, isGoogleLinked, googleEmail, linkGoogle, linking, clientId, social, onOpenLeaderboard }) {
+export function ProfileContent({
+  avatar, name, stats, isGoogleLinked, googleEmail, linkGoogle, linking,
+  clientId, social, onOpenLeaderboard, onSaveProfile, profileSaving,
+}) {
   const { t } = useI18n();
+  const [editing, setEditing] = useState(false);
+  const [draftName, setDraftName] = useState(name || '');
+  const [draftAvatar, setDraftAvatar] = useState(avatar || AVATARS[0]);
+  const [submitted, setSubmitted] = useState(false);
+
+  const normalizedName = draftName.replace(/\s+/g, ' ').trim().slice(0, 20);
+  const unchanged = normalizedName === (name || '') && draftAvatar === avatar;
+
+  useEffect(() => {
+    if (!editing) {
+      setDraftName(name || '');
+      setDraftAvatar(avatar || AVATARS[0]);
+    }
+  }, [name, avatar, editing]);
+
+  useEffect(() => {
+    if (
+      submitted
+      && !profileSaving
+      && normalizedName === (name || '')
+      && draftAvatar === avatar
+    ) {
+      setSubmitted(false);
+      setEditing(false);
+    }
+  }, [submitted, profileSaving, normalizedName, draftAvatar, name, avatar]);
+
+  const cancelEdit = () => {
+    if (profileSaving) return;
+    setDraftName(name || '');
+    setDraftAvatar(avatar || AVATARS[0]);
+    setSubmitted(false);
+    setEditing(false);
+  };
+
+  const saveEdit = () => {
+    if (!normalizedName || unchanged || profileSaving) return;
+    setSubmitted(true);
+    onSaveProfile(normalizedName, draftAvatar);
+  };
+
   return (
     <div className="container">
       <div className="profile-head">
@@ -124,7 +168,56 @@ export function ProfileContent({ avatar, name, stats, isGoogleLinked, googleEmai
         <div className="profile-sub">
           {t('level')} {stats.level} {'·'} {stats.games ? Math.round((stats.wins / stats.games) * 100) : 0}% {String(t('wins')).toLowerCase()}
         </div>
+        <button
+          className="profile-edit-btn"
+          onClick={() => setEditing((value) => !value)}
+          aria-label={t('editProfile')}
+          aria-expanded={editing}
+        >
+          <Icon name="edit" size={17} />
+        </button>
       </div>
+
+      {editing && (
+        <div className="profile-editor">
+          <label className="profile-editor-label" htmlFor="profile-name-input">{t('displayName')}</label>
+          <input
+            id="profile-name-input"
+            className="input profile-name-input"
+            value={draftName}
+            maxLength={20}
+            autoComplete="nickname"
+            onChange={(event) => setDraftName(event.target.value)}
+          />
+          <div className="profile-editor-label">{t('chooseAvatar')}</div>
+          <div className="profile-avatar-grid" role="group" aria-label={t('chooseAvatar')}>
+            {AVATARS.map((option, index) => (
+              <button
+                key={option}
+                className={`avatar-opt ${draftAvatar === option ? 'active' : ''}`}
+                onClick={() => setDraftAvatar(option)}
+                aria-label={`${t('avatar')} ${index + 1}`}
+                aria-pressed={draftAvatar === option}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+          <div className="profile-editor-actions">
+            <button className="profile-editor-cancel" onClick={cancelEdit} disabled={profileSaving}>
+              {t('cancelEdit')}
+            </button>
+            <button
+              className="profile-editor-save"
+              onClick={saveEdit}
+              disabled={!normalizedName || unchanged || profileSaving}
+            >
+              {profileSaving ? t('saving') : t('saveChanges')}
+            </button>
+          </div>
+        </div>
+      )}
+
       <ProfileStats stats={stats} />
       <button className="leaderboard-cta" onClick={onOpenLeaderboard}>
         <span className="leaderboard-cta-icon"><Icon name="trophy" size={20} /></span>
