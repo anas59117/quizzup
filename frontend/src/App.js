@@ -63,7 +63,6 @@ export default function App() {
   const [reveal, setReveal] = useState(null);
   const [reported, setReported] = useState(false);
   const [result, setResult] = useState(null);
-  const [friendRequestSent, setFriendRequestSent] = useState({});
   const [joinCode, setJoinCode] = useState('');
   const [joinError, setJoinError] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -488,7 +487,7 @@ export default function App() {
     writeLiveSession(null);
     matchActionRef.current = null;
     setResult(null); setQuestion(null); setIntro(null); setReveal(null);
-    setSelected(null); setFriendRequestSent({}); setRoom(null);
+    setSelected(null); setRoom(null);
     social.clearGameChat();
     setStage('home');
   }, [social]);
@@ -641,15 +640,11 @@ export default function App() {
   }
 
   if (stage === 'finished' && result) {
-    const addFriend = (targetClientId) => {
-      social.addFriend(targetClientId);
-      setFriendRequestSent((prev) => ({ ...prev, [targetClientId]: true }));
-    };
     return (
       <div className="app game-bg"><TopControls {...topProps} />
         <FinishedContent
           result={result} opponents={opponents} myId={myId} social={social}
-          friendRequestSent={friendRequestSent} addFriend={addFriend}
+          addFriend={social.addFriend}
           playAgain={playAgain} rematch={() => { playAgain(); quickMatch(); }} newMatch={newMatch}
         />
       </div>);
