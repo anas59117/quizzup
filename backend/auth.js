@@ -17,20 +17,27 @@ const LOOKUP_URL = 'https://identitytoolkit.googleapis.com/v1/accounts:lookup';
 // message — a token is valid for its own lifetime (~1h), so caching for a
 // few minutes is safe and cuts the network round-trip on the hot path.
 const CACHE_TTL_MS = 5 * 60 * 1000;
+const MAX_CACHE_ENTRIES = 5000;
 const cache = new Map(); // sha256(idToken) -> { uid, expiresAt }
+const pending = new Map(); // sha256(idToken) -> Promise<uid|null>
 
 function tokenCacheKey(idToken) {
   return crypto.createHash('sha256').update(idToken).digest('hex');
 }
 
-async function verifyIdToken(idToken) {
-  if (!idToken || typeof idToken !== 'string') return null;
-  if (!API_KEY) return null; // misconfigured server — fail closed, not open
+function tokenExpiryMs(idToken) {
+  try {
+    const parts = String(idToken).split('.');
+    if (parts.length !== 3) return 0;
+    const payload = JSON.parse(Buffer.from(parts[1], 'base64url').toString('utf8'));
+    const expSeconds = Number(payload.exp);
+    return Number.isFinite(expSeconds) && expSeconds > 0 ? expSeconds * 1000 : 0;
+  } catch {
+    return 0;
+  }
+}
 
-  const cacheKey = tokenCacheKey(idToken);
-  const cached = cache.get(cacheKey);
-  if (cached && cached.expiresAt > Date.now()) return cached.uid;
-
+async function verifyRemote(idToken, cacheKey) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 5000);
   try {
@@ -44,12 +51,49 @@ async function verifyIdToken(idToken) {
     const data = await resp.json();
     const uid = data?.users?.[0]?.localId;
     if (!uid || typeof uid !== 'string') return null;
-    cache.set(cacheKey, { uid, expiresAt: Date.now() + CACHE_TTL_MS });
+
+    const now = Date.now();
+    const jwtExpiry = tokenExpiryMs(idToken);
+    if (jwtExpiry && jwtExpiry <= now) return null;
+    const expiresAt = jwtExpiry
+      ? Math.min(now + CACHE_TTL_MS, jwtExpiry)
+      : now + CACHE_TTL_MS;
+
+    if (cache.size >= MAX_CACHE_ENTRIES) {
+      sweepCache();
+      if (cache.size >= MAX_CACHE_ENTRIES) {
+        const oldestKey = cache.keys().next().value;
+        if (oldestKey) cache.delete(oldestKey);
+      }
+    }
+    cache.set(cacheKey, { uid, expiresAt });
     return uid;
   } catch {
     return null; // network error / timeout / bad response — fail closed
   } finally {
     clearTimeout(timeout);
+  }
+}
+
+async function verifyIdToken(idToken) {
+  if (!idToken || typeof idToken !== 'string') return null;
+  if (!API_KEY) return null; // misconfigured server — fail closed, not open
+
+  const cacheKey = tokenCacheKey(idToken);
+  const cached = cache.get(cacheKey);
+  if (cached && cached.expiresAt > Date.now()) return cached.uid;
+
+  // A burst of reconnects for the same token should share one Firebase
+  // lookup instead of multiplying outbound verification requests.
+  const inFlight = pending.get(cacheKey);
+  if (inFlight) return inFlight;
+
+  const verification = verifyRemote(idToken, cacheKey);
+  pending.set(cacheKey, verification);
+  try {
+    return await verification;
+  } finally {
+    if (pending.get(cacheKey) === verification) pending.delete(cacheKey);
   }
 }
 
@@ -61,4 +105,4 @@ function sweepCache() {
   }
 }
 
-module.exports = { verifyIdToken, sweepCache };
+module.exports = { verifyIdToken, sweepCache, tokenExpiryMs };
