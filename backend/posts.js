@@ -4,18 +4,21 @@
 
 const { createJsonWriter, readJsonFileSync } = require('./json-writer');
 const { getStorePath } = require('./store-path');
+const { normalizePostsStore } = require('./store-normalize');
 
 const STORE = getStorePath('posts.json');
 const MAX_POSTS = 500; // oldest posts drop off once this cap is hit
 const MAX_TEXT_LEN = 240;
 const REPORT_THRESHOLD = 3; // flags before a post is hidden from the feed (same bar as reports.js)
 
-const savedPosts = readJsonFileSync(
-  STORE,
-  { posts: [] },
-  (value) => !!value && typeof value === 'object' && Array.isArray(value.posts)
-);
-let posts = savedPosts.posts; // newest first
+let posts = normalizePostsStore(
+  readJsonFileSync(
+    STORE,
+    { posts: [] },
+    (value) => !!value && typeof value === 'object' && Array.isArray(value.posts)
+  ),
+  { maxPosts: MAX_POSTS, maxTextLen: MAX_TEXT_LEN }
+); // newest first
 
 if (posts.length === 0) {
   posts = [
