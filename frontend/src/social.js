@@ -1,5 +1,6 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { useI18n } from './i18n';
+import { Icon } from './ui';
 
 export function useSocial(wsRef) {
   const [friends, setFriends] = useState([]);
@@ -47,6 +48,12 @@ export function useSocial(wsRef) {
         });
         break;
       case 'friend_removed': setFriends((f) => f.filter((x) => x.id !== data.id)); break;
+      case 'friend_profile_updated':
+        if (data.profile?.id) {
+          setFriends((f) => f.map((x) => (x.id === data.profile.id ? { ...x, ...data.profile } : x)));
+          setRequests((r) => r.map((x) => (x.id === data.profile.id ? { ...x, ...data.profile } : x)));
+        }
+        break;
       case 'presence': setFriends((f) => f.map((x) => (x.id === data.id ? { ...x, online: data.online } : x))); break;
       case 'dm': setDms((c) => ({ ...c, [data.from]: [...(c[data.from] || []), { from: 'them', text: data.text }] })); break;
       case 'dm_sent': setDms((c) => ({ ...c, [data.targetId]: [...(c[data.targetId] || []), { from: 'me', text: data.text }] })); break;
@@ -58,9 +65,9 @@ export function useSocial(wsRef) {
         break;
       case 'game_chat': setGameChat((m) => [...m, { from: 'them', text: data.text, senderName: data.from }]); break;
       case 'game_chat_sent': setGameChat((m) => [...m, { from: 'me', text: data.text }]); break;
-      case 'player_left': setGameChat((m) => [...m, { from: 'system', text: `${data.name} left the game` }]); break;
-      case 'player_disconnected': setGameChat((m) => [...m, { from: 'system', text: `${data.name} disconnected — reconnecting…` }]); break;
-      case 'player_reconnected': setGameChat((m) => [...m, { from: 'system', text: `${data.name} reconnected` }]); break;
+      case 'player_left': setGameChat((m) => [...m, { from: 'system', kind: 'left', name: data.name }]); break;
+      case 'player_disconnected': setGameChat((m) => [...m, { from: 'system', kind: 'disconnected', name: data.name }]); break;
+      case 'player_reconnected': setGameChat((m) => [...m, { from: 'system', kind: 'reconnected', name: data.name }]); break;
       default: break;
     }
   }, []);
@@ -100,7 +107,14 @@ export function FriendsScreen({ social }) {
               <div className="friend-ava">{r.avatar}</div>
               <div className="friend-name">{r.name}</div>
               <button className="friend-btn accept" onClick={() => social.acceptFriend(r.id)}>{t('accept')}</button>
-              <button className="friend-btn decline" onClick={() => social.declineFriend(r.id)}>✕</button>
+              <button
+                className="friend-btn decline"
+                onClick={() => social.declineFriend(r.id)}
+                aria-label={t('decline')}
+                title={t('decline')}
+              >
+                <Icon name="close" size={15} />
+              </button>
             </div>
           ))}
         </div>
@@ -152,8 +166,14 @@ export function GameChat({ social }) {
   useEffect(() => { if (open) endRef.current?.scrollIntoView({ block: 'nearest' }); }, [social.gameChat, open]);
   return (
     <div className={`game-chat ${open ? 'open' : ''}`}>
-      <button className="game-chat-toggle" onClick={() => setOpen((o) => !o)}>
-        💬{social.gameChat.length > 0 && !open ? ` ${social.gameChat.length}` : ''}
+      <button
+        className="game-chat-toggle"
+        onClick={() => setOpen((o) => !o)}
+        aria-label={t('gameChat')}
+        title={t('gameChat')}
+      >
+        <Icon name="chat" size={18} />
+        {social.gameChat.length > 0 && !open && <span className="game-chat-count">{social.gameChat.length}</span>}
       </button>
       {open && (
         <div className="game-chat-panel">
@@ -161,7 +181,15 @@ export function GameChat({ social }) {
             {social.gameChat.map((m, i) => (
               <div key={i} className={`chat-bubble ${m.from === 'me' ? 'me' : m.from === 'system' ? 'system' : 'them'}`}>
                 {m.from !== 'me' && m.senderName && <span className="chat-sender">{m.senderName}: </span>}
-                {m.text}
+                {m.from === 'system'
+                  ? m.kind === 'left'
+                    ? t('chatPlayerLeft', { name: m.name })
+                    : m.kind === 'disconnected'
+                      ? t('chatPlayerDisconnected', { name: m.name })
+                      : m.kind === 'reconnected'
+                        ? t('chatPlayerReconnected', { name: m.name })
+                        : m.text
+                  : m.text}
               </div>
             ))}
             <div ref={endRef} />
@@ -172,9 +200,15 @@ export function GameChat({ social }) {
               onKeyDown={(e) => {
                 if (e.key === 'Enter' && draft.trim() && social.sendGameChat(draft)) setDraft('');
               }} />
-            <button onClick={() => {
-              if (draft.trim() && social.sendGameChat(draft)) setDraft('');
-            }}>➤</button>
+            <button
+              onClick={() => {
+                if (draft.trim() && social.sendGameChat(draft)) setDraft('');
+              }}
+              aria-label={t('send')}
+              title={t('send')}
+            >
+              <Icon name="send" size={16} />
+            </button>
           </div>
         </div>
       )}
