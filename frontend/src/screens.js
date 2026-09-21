@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing } from './ui';
+import { CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon } from './ui';
 import { PlayerHud, Leaderboard } from './multiplayer';
 import { ProfileStats } from './stats';
 import { FriendsScreen } from './social';
@@ -10,18 +10,27 @@ export function HomeContent({ name, avatar, soloMode, setSoloMode, quickMatch, s
   return (
     <div className="container wide">
       <div className="home-head">
-        <div>
-          <div className="home-greeting">{t('hey', { name })} {'\u{1F44B}'}</div>
-          <div className="home-logo-sm">Quizz<span>Up</span></div>
+        <div className="home-brand">
+          <div className="home-brandmark">Q</div>
+          <div>
+            <div className="home-logo-sm">Quizz<span>Up</span></div>
+            <div className="home-greeting">{t('hey', { name })}</div>
+          </div>
         </div>
         <button className="home-avatar-chip" onClick={onOpenProfile} aria-label="Open profile">{avatar}</button>
       </div>
-      <SoloToggle solo={soloMode} onToggle={() => setSoloMode((s) => !s)} />
-      <button className="quick-play" onClick={quickMatch} disabled={pending} aria-busy={pending || undefined}>
-        <span className="qp-left"><span className="qp-bolt">{'⚡'}</span> {t('quickPlay')}</span>
-        <span className="qp-sub">{t('randomTopic')}</span>
-      </button>
-      <div className="section-title">{'\u{1F525}'} {t('popularTopics')}</div>
+      <div className="play-card">
+        <div className="play-card-copy">
+          <SoloToggle solo={soloMode} onToggle={() => setSoloMode((s) => !s)} />
+          <div className="play-title">{t('quickPlay')}</div>
+          <div className="play-subtitle">{t('randomTopic')}</div>
+        </div>
+        <button className="quick-play" onClick={quickMatch} disabled={pending} aria-busy={pending || undefined}>
+          <Icon name="bolt" size={21} />
+          <Icon name="arrow" size={20} className="quick-arrow" />
+        </button>
+      </div>
+      <div className="section-title">{t('popularTopics')}</div>
       <div className="topics-scroll">
         {CATEGORIES.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}
       </div>
@@ -31,8 +40,8 @@ export function HomeContent({ name, avatar, soloMode, setSoloMode, quickMatch, s
       </div>
       <FamilyGrid onSelect={onSeeAll} />
       <div className="social-row">
-        <button className="social-btn" onClick={createRoom} disabled={pending}>{'⚔️'} {t('party')}</button>
-        <button className="social-btn outline" onClick={onOpenEnterCode}>{'\u{1F511}'} {t('joinCode')}</button>
+        <button className="social-btn" onClick={createRoom} disabled={pending}><Icon name="users" size={18} /> {t('party')}</button>
+        <button className="social-btn outline" onClick={onOpenEnterCode}><Icon name="key" size={18} /> {t('joinCode')}</button>
       </div>
     </div>
   );
@@ -42,7 +51,7 @@ export function EnterCodeContent({ joinCode, setJoinCode, joinError, setJoinErro
   const { t } = useI18n();
   return (
     <div className="container center">
-      <div className="status-label">{'\u{1F511}'} {t('joinFriend')}</div>
+      <div className="status-label">{t('joinFriend')}</div>
       <div className="room-code-label">{t('enterCode')}</div>
       <input className={`input code-input ${joinError ? 'err' : ''}`} placeholder="ABC12" value={joinCode} maxLength={5}
         onChange={(e) => { setJoinCode(e.target.value.toUpperCase()); setJoinError(false); }} />
@@ -172,8 +181,9 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
       </div>
       <PlayerHud me={{ avatar, name, score }} others={opponents} revealing={sr} />
       <PlayerPhoto image={question.image} credit={question.credit} timeLeft={timeLeft} timeLimit={question.timeLimit} revealed={sr} />
-      <div className="question">{question.question}</div>
-      <div className={`answers ${question.image ? '' : 'single-col'}`}>
+      <div className="question-panel">
+        <div className="question">{question.question}</div>
+        <div className={`answers ${question.image ? '' : 'single-col'}`}>
         {question.answers.map((a, idx) => (
           <button
             key={idx}
@@ -184,8 +194,9 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
             {a}
           </button>
         ))}
+        </div>
+        <div className="timer-bar-bottom"><div className={`timer-bar-fill ${timeLeft <= 3 && !sr ? 'urgent' : ''}`} style={{ width: sr ? '0%' : `${pct}%` }} /></div>
       </div>
-      <div className="timer-bar-bottom"><div className={`timer-bar-fill ${timeLeft <= 3 && !sr ? 'urgent' : ''}`} style={{ width: sr ? '0%' : `${pct}%` }} /></div>
       {sr && <div className="reveal-note">{reveal.yourCorrect ? t('ptsEarned', { n: reveal.pointsEarned }) : reveal.timedOut && selected === null ? t('timeUp') : t('wrong')}</div>}
       {sr && <button className="report-btn" onClick={reportQuestion} disabled={reported}>{reported ? t('reported') : t('report')}</button>}
       <GameChat social={social} />
@@ -209,8 +220,10 @@ export function FinishedContent({ result, opponents, myId, social, addFriend, pl
   };
   return (
     <div className="container center">
-      <div className={`result-title ${isSolo ? 'tie' : won ? 'win' : tie ? 'tie' : 'loss'}`}>{isSolo ? t('finished') : won ? t('victory') : tie ? t('draw') : t('defeat')}</div>
-      <div className="result-sub">{left ? t('someoneLeft') : t('finalScore', { n: result.finalScore })}</div>
+      <div className="result-hero">
+        <div className={`result-title ${isSolo ? 'tie' : won ? 'win' : tie ? 'tie' : 'loss'}`}>{isSolo ? t('finished') : won ? t('victory') : tie ? t('draw') : t('defeat')}</div>
+        <div className="result-sub">{left ? t('someoneLeft') : t('finalScore', { n: result.finalScore })}</div>
+      </div>
       {result.stats && <LevelRing level={result.stats.level} xpIntoLevel={result.stats.xpIntoLevel} xpForLevel={result.stats.xpForLevel} />}
       <div className="xp-breakdown">
         <div className="xpb-row"><span>{t('matchScore')}</span><span>{result.finalScore}</span></div>
