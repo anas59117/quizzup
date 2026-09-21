@@ -519,10 +519,22 @@ function endGame(game, reason) {
   });
 
   setTimeout(() => {
+    // Wake any result screen still waiting for a rematch before dropping the
+    // retained match state. Otherwise its button could stay in "waiting"
+    // forever after the 60-second retention window expires.
+    if (game.rematchRequests?.size) {
+      game.players.forEach((p) => {
+        if (game.rematchRequests.has(p.clientId)) {
+          send(p.ws, { type: 'rematch_unavailable' });
+        }
+      });
+      game.rematchRequests.clear();
+    }
+
     // A player can start a new match on the same socket before this old
     // game's delayed cleanup runs. Only delete the session if it still
     // points at THIS game, otherwise we'd silently break the new match's
-    // answer/chat routing a few seconds after it started.
+    // answer/chat routing after it started.
     game.players.forEach((p) => {
       if (playerSessions.get(p.id) === game.id) playerSessions.delete(p.id);
     });
