@@ -14,12 +14,17 @@ export function RoomLobby({ code, players, isHost, canStart, onStart, onCancel, 
           status change was silent to anyone not looking at the screen. */}
       <div className="room-copy-hint" aria-live="polite">{copied ? t('copied') : t('tapToCopy')}</div>
       <div className="lobby-players">
-        {players.map((p) => (
-          <div key={p.id} className="lobby-player">
-            <div className="lobby-ava">{p.avatar}</div>
-            <div className="lobby-name">{p.name}</div>
-          </div>
-        ))}
+        {players.map((p) => {
+          const disconnected = p.connected === false;
+          return (
+            <div key={p.id} className="lobby-player">
+              <div className={`lobby-ava ${disconnected ? 'dim' : ''}`}>{p.avatar}</div>
+              <div className={`lobby-name ${disconnected ? 'dim' : ''}`}>
+                {p.name}{disconnected ? ' …' : ''}
+              </div>
+            </div>
+          );
+        })}
         {Array.from({ length: Math.max(0, 4 - players.length) }).map((_, i) => (
           <div key={`empty-${i}`} className="lobby-player empty">
             <div className="lobby-ava dim">?</div>
