@@ -7,7 +7,11 @@ A viral quiz game with real-time multiplayer, cosmetics, and solid monetization.
 ✅ **Real-time Multiplayer** — WebSocket-based instant matchmaking
 ✅ **6 Rounds of Questions** — Category-based trivia
 ✅ **Live Scoring** — Points awarded for correct answers
-✅ **Leaderboard Ready** — Track player stats
+✅ **Persistent Progress** — XP, level, wins, streaks and coins
+✅ **Reconnect & Rematch** — Resume dropped matches and request a true rematch
+✅ **Private Rooms** — 2–4 player friend lobbies with reconnect grace
+✅ **Firebase Auth** — Anonymous play with Google account linking
+✅ **Social** — Friends, presence, DMs and in-game chat
 ✅ **Clean UI** — Mobile-responsive design
 
 ## Architecture
@@ -47,14 +51,16 @@ App runs on http://localhost:3000
 
 ## Next Steps
 
-- [ ] User authentication & profiles
+- [x] User authentication & persistent profiles/stats
+- [x] Match reconnect, private-room reconnect and true rematch flow
+- [x] Persistent XP + coin balance
 - [ ] Cosmetics shop (avatars, effects)
 - [ ] Battle pass system
-- [ ] Leaderboards & rankings
-- [ ] Affiliate links in results
+- [ ] Global leaderboards & rankings
 - [ ] Analytics tracking
-- [ ] Deploy to Railway/Vercel
-- [ ] Mobile app wrapper (React Native)
+- [ ] Move durable data to Firestore before horizontal scaling
+- [ ] Move matchmaking/session state to Redis before multi-instance scaling
+- [ ] Mobile app wrapper
 
 ## Monetization Strategy
 
