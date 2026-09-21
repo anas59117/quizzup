@@ -242,3 +242,68 @@ test('old game cleanup does not erase a newer session mapping', () => {
     global.setTimeout = originalSetTimeout;
   }
 });
+
+
+test('finished recovery chooses the newest retained match', () => {
+  const oldGame = {
+    id: 'finished-old', status: 'finished', finishedAt: 100,
+    players: [{ id: 'old-p', clientId: 'same-user' }],
+  };
+  const newGame = {
+    id: 'finished-new', status: 'finished', finishedAt: 200,
+    players: [{ id: 'new-p', clientId: 'same-user' }],
+  };
+  game.activeGames.set(oldGame.id, oldGame);
+  game.activeGames.set(newGame.id, newGame);
+
+  const found = game.findFinishedSessionByClientId('same-user');
+  assert.equal(found.game.id, 'finished-new');
+  assert.equal(found.player.id, 'new-p');
+});
+
+test('finished match recovery resends result and updates leaderboard transport id', () => {
+  const ws = fakeWs();
+  const g = {
+    id: 'finished-recover',
+    status: 'finished',
+    phase: 'finished',
+    finishedAt: Date.now(),
+    currentRound: 0,
+    questions: [{ text: 'Q', answers: ['A', 'B', 'C', 'D'], correct: 0 }],
+    roundAnswers: {},
+    players: [{
+      id: 'old-finished-id',
+      clientId: 'finished-user',
+      ws: null,
+      connected: false,
+      score: 123,
+      name: 'Alice',
+      avatar: 'A',
+      reconnectTimer: null,
+      finalResult: {
+        type: 'game_end',
+        finalScore: 123,
+        won: true,
+        tie: false,
+        others: [],
+        leaderboard: [{ id: 'old-finished-id', name: 'Alice', avatar: 'A', score: 123 }],
+        reason: 'complete',
+        coins: 50,
+        xp: 263,
+        xpBreakdown: { matchScore: 123, finishBonus: 40, winBonus: 100, xpTotal: 263 },
+        stats: {},
+      },
+    }],
+  };
+
+  game.activeGames.set(g.id, g);
+  game.playerSessions.set('old-finished-id', g.id);
+
+  assert.equal(game.reconnectPlayer('finished-user', ws, 'fresh-finished-id'), true);
+
+  const types = ws.messages.map((m) => m.type);
+  assert.deepEqual(types.slice(0, 2), ['game_reconnected', 'game_end']);
+  assert.equal(ws.messages[1].leaderboard[0].id, 'fresh-finished-id');
+  assert.equal(game.playerSessions.get('fresh-finished-id'), g.id);
+  assert.equal(game.playerSessions.has('old-finished-id'), false);
+});
