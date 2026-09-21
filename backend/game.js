@@ -299,6 +299,19 @@ function sendCurrentState(game, player) {
     });
   } else if (game.phase === 'revealed') {
     const mine = game.roundAnswers[player.id];
+    // A full page refresh has no local question state. Rehydrate the
+    // question first, then immediately overlay the already-computed result.
+    send(player.ws, {
+      type: 'question', round: game.currentRound + 1,
+      totalRounds: game.questions.length,
+      question: q.text, category: q.category, icon: q.icon,
+      answers: q.answers, timeLimit: 1,
+      isBonus: game.currentRound === game.questions.length - 1,
+      image: q.image || null, credit: q.credit || null,
+      reconnect: true,
+      answered: !!mine,
+      yourAnswer: mine ? mine.answerIndex : null,
+    });
     send(player.ws, {
       type: 'round_result', round: game.currentRound + 1,
       correctIndex: q.correct,
