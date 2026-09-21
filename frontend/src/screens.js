@@ -29,7 +29,7 @@ export function HomeContent({ name, avatar, soloMode, setSoloMode, quickMatch, s
       </div>
       <div className="play-card">
         <div className="play-card-copy">
-          <SoloToggle solo={soloMode} onToggle={() => setSoloMode((s) => !s)} />
+          <SoloToggle solo={soloMode} onChange={setSoloMode} />
           <div className="play-title">{t('quickPlay')}</div>
           <div className="play-subtitle">{t('randomTopic')}</div>
         </div>

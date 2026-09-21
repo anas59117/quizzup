@@ -144,11 +144,16 @@ button:focus-visible,input:focus-visible,select:focus-visible { outline:2px soli
 .play-title { margin-top:24px; font-size:clamp(2rem,7vw,3.3rem); line-height:.95; font-weight:900; letter-spacing:-.055em; }
 .play-subtitle { margin-top:9px; color:var(--text-dim); font-size:.88rem; }
 .solo-toggle {
-  display:inline-flex; align-items:center; gap:7px; border:0; background:transparent; color:var(--text-dim);
-  font-size:.7rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; cursor:pointer;
+  display:inline-flex; align-items:center; gap:3px; padding:3px; border:1px solid var(--border);
+  border-radius:10px; background:var(--surface-2);
 }
-.solo-dot { width:8px; height:8px; border-radius:50%; background:var(--text-faint); box-shadow:0 0 0 4px color-mix(in srgb,var(--text) 5%,transparent); }
-.solo-toggle.active .solo-dot { background:var(--accent); }
+.solo-toggle button {
+  min-height:30px; padding:0 11px; border:0; border-radius:7px; background:transparent; color:var(--text-dim);
+  font-size:.67rem; font-weight:800; text-transform:uppercase; letter-spacing:.09em; cursor:pointer;
+  transition:background .15s ease,color .15s ease,box-shadow .15s ease;
+}
+.solo-toggle button:hover { color:var(--text); }
+.solo-toggle button.active { background:var(--surface); color:var(--text); box-shadow:var(--shadow-sm); }
 .quick-play {
   width:62px; height:62px; display:grid; place-items:center; position:relative; border:0; border-radius:17px;
   background:var(--accent); color:#fff; cursor:pointer; transition:background .15s ease,transform .15s ease;
