@@ -37,6 +37,52 @@ function levelFromXp(rawXp) {
   };
 }
 
+function rankLeaderboard(source, limit = 50, clientId = null) {
+  const safeLimit = Math.max(1, Math.min(100, Math.floor(Number(limit) || 50)));
+  const rows = Object.entries(source || {})
+    .map(([id, value]) => {
+      const games = Math.max(0, Math.floor(Number(value?.games) || 0));
+      const wins = Math.max(0, Math.min(games, Math.floor(Number(value?.wins) || 0)));
+      const streak = Math.max(0, Math.floor(Number(value?.streak) || 0));
+      const xp = Math.max(0, Math.floor(Number(value?.xp) || 0));
+      const coins = Math.max(0, Math.floor(Number(value?.coins) || 0));
+      const level = levelFromXp(xp).level;
+      return {
+        clientId: id,
+        games,
+        wins,
+        streak,
+        xp,
+        coins,
+        level,
+        winRate: games ? Math.round((wins / games) * 100) : 0,
+      };
+    })
+    .filter((row) => row.games > 0)
+    .sort((a, b) => (
+      b.xp - a.xp
+      || b.wins - a.wins
+      || b.streak - a.streak
+      || a.games - b.games
+      || a.clientId.localeCompare(b.clientId)
+    ))
+    .map((row, index) => ({ ...row, rank: index + 1 }));
+
+  const yourRank = clientId
+    ? (rows.find((row) => row.clientId === clientId)?.rank || null)
+    : null;
+
+  return {
+    total: rows.length,
+    yourRank,
+    entries: rows.slice(0, safeLimit),
+  };
+}
+
+function getLeaderboard(limit = 50, clientId = null) {
+  return rankLeaderboard(stats, limit, clientId);
+}
+
 function getStats(clientId) {
   const s = clientId && stats[clientId];
   const xp = s ? s.xp || 0 : 0;
@@ -73,4 +119,4 @@ function recordResult(clientId, won, tie, xpEarned, coinsEarned = 0) {
   persist();
 }
 
-module.exports = { getStats, recordResult, levelFromXp };
+module.exports = { getStats, getLeaderboard, rankLeaderboard, recordResult, levelFromXp };
