@@ -109,7 +109,7 @@ export function RecentMatches({ matches }) {
               </div>
               <div className="recent-score">
                 <strong>{match.score}</strong>
-                <small>{match.xp ? `+${match.xp} XP` : 'XP'}</small>
+                <small>{`${match.xp ? '+' : ''}${match.xp || 0} XP`}</small>
               </div>
             </div>
           );
