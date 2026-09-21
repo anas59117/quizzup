@@ -79,11 +79,14 @@ const actionLimiters = {
   identifySocket: new RateLimiter(60 * 1000, 6),
   identifyIp: new RateLimiter(60 * 1000, 30),
   friendRequest: new RateLimiter(60 * 1000, 10),
+  friendMutation: new RateLimiter(60 * 1000, 30),
   dm: new RateLimiter(10 * 1000, 20),
   gameChat: new RateLimiter(10 * 1000, 12),
   roomJoin: new RateLimiter(30 * 1000, 10),
   roomJoinIp: new RateLimiter(30 * 1000, 30),
+  feedList: new RateLimiter(10 * 1000, 10),
   postCreate: new RateLimiter(60 * 1000, 5),
+  postReact: new RateLimiter(10 * 1000, 30),
   postReport: new RateLimiter(60 * 1000, 20),
 };
 
@@ -178,6 +181,8 @@ async function handleIdentify(ws, data, state) {
 function handleFeed(ws, data, state) {
   const { clientId } = state;
   if (data.type === 'feed_list') {
+    const feedKey = clientId || state.ip;
+    if (!allowAction(actionLimiters.feedList, feedKey, ws, 'FEED_RATE_LIMITED')) return true;
     game.send(ws, { type: 'feed_list', posts: posts.getFeed() });
     return true;
   }
@@ -191,6 +196,7 @@ function handleFeed(ws, data, state) {
   }
   if (data.type === 'post_react') {
     if (!clientId) return true;
+    if (!allowAction(actionLimiters.postReact, clientId, ws, 'REACTION_RATE_LIMITED')) return true;
     const result = posts.toggleReaction(String(data.postId || ''), clientId);
     if (result) social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_reacted', ...result }));
     return true;
@@ -219,6 +225,7 @@ function handleSocial(ws, data, state) {
     return true;
   }
   if (data.type === 'friend_accept') {
+    if (clientId && !allowAction(actionLimiters.friendMutation, clientId, ws, 'FRIEND_ACTION_RATE_LIMITED')) return true;
     const fromId = String(data.requesterId || '');
     if (clientId && fromId && social.acceptRequest(clientId, fromId)) {
       const them = social.profileOf(fromId);
@@ -230,11 +237,13 @@ function handleSocial(ws, data, state) {
     return true;
   }
   if (data.type === 'friend_decline') {
+    if (clientId && !allowAction(actionLimiters.friendMutation, clientId, ws, 'FRIEND_ACTION_RATE_LIMITED')) return true;
     const fromId = String(data.requesterId || '');
     if (clientId && fromId) social.declineRequest(clientId, fromId);
     return true;
   }
   if (data.type === 'friend_remove') {
+    if (clientId && !allowAction(actionLimiters.friendMutation, clientId, ws, 'FRIEND_ACTION_RATE_LIMITED')) return true;
     const targetId = String(data.targetId || '');
     if (clientId && targetId && social.areFriends(clientId, targetId)) {
       social.removeFriend(clientId, targetId);
@@ -422,7 +431,11 @@ function startGameGuarded(players, categoryKey) {
   return game.startGame(players, categoryKey)
     .catch((err) => {
       const code = err && err.message ? err.message : 'GAME_START_FAILED';
-      players.forEach((p) => game.send(p.ws, { type: 'error', code }));
+      const recoverable = code === 'CLIENT_ALREADY_PLAYING';
+      players.forEach((p) => game.send(
+        p.ws,
+        recoverable ? { type: 'already_playing' } : { type: 'error', code }
+      ));
     })
     .finally(() => players.forEach((p) => {
       pendingPlayers.delete(p.id);
