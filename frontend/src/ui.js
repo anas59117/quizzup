@@ -123,6 +123,11 @@ export const CATEGORIES = [
   { key: 'real_madrid', label: 'Real Madrid', icon: '\u{26AA}', grad: 'g73', tag: '\u{1F525}', desc: 'Bernabéu & Ligue des Champions', family: 'sport' },
   { key: 'lionel_messi', label: 'Lionel Messi', icon: '\u{1F410}', grad: 'g74', tag: '\u{1F525}', desc: 'La Pulga, Ballons d’Or & Mondial', family: 'sport' },
   { key: 'cristiano_ronaldo', label: 'Cristiano Ronaldo', icon: '\u{1F410}', grad: 'g75', tag: '\u{1F525}', desc: 'CR7, buts & records', family: 'sport' },
+  { key: 'fortnite', label: 'Fortnite', icon: '\u{1FA82}', grad: 'g76', tag: '\u{1F525}', desc: 'Battle Royale, objets & personnages', family: 'gaming' },
+  { key: 'minecraft', label: 'Minecraft', icon: '\u{26CF}\u{FE0F}', grad: 'g77', tag: '\u{1F525}', desc: 'Blocs, créatures & dimensions', family: 'gaming' },
+  { key: 'gta', label: 'GTA', icon: '\u{1F698}', grad: 'g78', tag: '\u{1F525}', desc: 'Villes, personnages & missions', family: 'gaming' },
+  { key: 'league_of_legends', label: 'League of Legends', icon: '\u{2694}\u{FE0F}', grad: 'g79', tag: '\u{1F525}', desc: 'Champions, rôles & Runeterra', family: 'gaming' },
+  { key: 'valorant', label: 'VALORANT', icon: '\u{1F3AF}', grad: 'g80', tag: '\u{1F525}', desc: 'Agents, armes & cartes', family: 'gaming' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
