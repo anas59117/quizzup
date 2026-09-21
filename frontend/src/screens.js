@@ -197,7 +197,7 @@ export function FinishedContent({ result, opponents, myId, social, addFriend, pl
   const { t } = useI18n();
   const { won, tie } = result;
   const left = result.reason === 'opponent_disconnected' || result.reason === 'opponent_left';
-  const isSolo = opponents.length === 0 && !left;
+  const isSolo = !!result.solo;
   const addableOpponents = opponents.filter(
     (o) => o.clientId && !social.friends.some((f) => f.id === o.clientId) && !social.outgoingRequests.has(o.clientId)
   );
