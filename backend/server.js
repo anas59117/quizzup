@@ -80,14 +80,15 @@ async function handleIdentify(ws, data, state) {
   }
 
   state.clientId = uid;
-  const reconnected = !!(activeSession && !activeSession.player.connected
-    && game.reconnectPlayer(uid, ws, state.playerId));
+  const finishedSession = game.findFinishedSessionByClientId(uid);
+  const recoverySession = activeSession || finishedSession;
+  const reconnected = !!(recoverySession && game.reconnectPlayer(uid, ws, state.playerId));
 
   // On recovery, keep the identity already attached to the match instead of
   // overwriting the social profile with a fresh tab's temporary defaults.
-  if (reconnected && activeSession) {
-    state.name = activeSession.player.name;
-    state.avatar = activeSession.player.avatar;
+  if (reconnected && recoverySession) {
+    state.name = recoverySession.player.name;
+    state.avatar = recoverySession.player.avatar;
   }
 
   social.setOnline(state.clientId, ws, state.name, state.avatar);
