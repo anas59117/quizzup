@@ -41,18 +41,34 @@ function getStats(clientId) {
   const s = clientId && stats[clientId];
   const xp = s ? s.xp || 0 : 0;
   const { level, xpIntoLevel, xpForLevel } = levelFromXp(xp);
-  return { games: s ? s.games : 0, wins: s ? s.wins : 0, streak: s ? s.streak : 0, xp, level, xpIntoLevel, xpForLevel };
+  return {
+    games: s ? s.games : 0,
+    wins: s ? s.wins : 0,
+    streak: s ? s.streak : 0,
+    xp,
+    coins: s ? s.coins || 0 : 0,
+    level,
+    xpIntoLevel,
+    xpForLevel,
+  };
 }
 
 // Records one finished game's outcome. A tie neither extends nor breaks
 // streak. `xpEarned` accumulates toward the player's persistent level.
-function recordResult(clientId, won, tie, xpEarned) {
+function recordResult(clientId, won, tie, xpEarned, coinsEarned = 0) {
   if (!clientId) return;
-  const s = stats[clientId] || { games: 0, wins: 0, streak: 0, xp: 0 };
+  const s = stats[clientId] || { games: 0, wins: 0, streak: 0, xp: 0, coins: 0 };
   s.games += 1;
   if (won) { s.wins += 1; s.streak += 1; }
   else if (!tie) { s.streak = 0; }
-  s.xp = (s.xp || 0) + (xpEarned || 0);
+  s.xp = Math.min(
+    Number.MAX_SAFE_INTEGER,
+    (s.xp || 0) + Math.max(0, Math.floor(Number(xpEarned) || 0))
+  );
+  s.coins = Math.min(
+    Number.MAX_SAFE_INTEGER,
+    (s.coins || 0) + Math.max(0, Math.floor(Number(coinsEarned) || 0))
+  );
   stats[clientId] = s;
   persist();
 }
