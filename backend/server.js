@@ -9,6 +9,7 @@ const social = require('./social');
 const posts = require('./posts');
 const game = require('./game');
 const RateLimiter = require('./rate-limit');
+const { getClientIp } = require('./client-ip');
 const { verifyIdToken, sweepCache } = require('./auth');
 const stats = require('./stats');
 const { ROOM_TTL_MS, CODE_ALPHABET, MAX_ROOM_PLAYERS } = require('./config');
