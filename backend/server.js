@@ -64,26 +64,27 @@ async function handleIdentify(ws, data, state) {
     return;
   }
 
-  if (state.clientId && state.clientId !== uid) {
-    social.setOffline(state.clientId);
-    notifyPresence(state.clientId, false);
-  }
-
-  state.clientId = uid;
-
-  // A fresh socket can resume a match that was disconnected for less than
-  // the game's reconnect grace period. If the account already has a live
-  // connection in an active game, reject the duplicate instead of creating
-  // a second session for the same account.
+  // Check the target identity before attaching it to this socket. This
+  // prevents a rejected duplicate socket from marking the legitimate one
+  // offline when its close event fires.
   const activeSession = game.findActiveSessionByClientId(uid);
-  if (activeSession && activeSession.player.connected) {
+  if (activeSession && activeSession.player.connected && activeSession.player.ws !== ws) {
     game.send(ws, { type: 'already_connected' });
     ws.close(1008, 'Account already connected to an active game');
     return;
   }
-  game.reconnectPlayer(uid, ws, state.playerId);
+
+  if (state.clientId && state.clientId !== uid) {
+    social.setOffline(state.clientId, ws);
+    notifyPresence(state.clientId, false);
+  }
+
+  state.clientId = uid;
+  const reconnected = !!(activeSession && !activeSession.player.connected
+    && game.reconnectPlayer(uid, ws, state.playerId));
 
   social.setOnline(state.clientId, ws, state.name, avatar);
+  game.send(ws, { type: 'identified', reconnected });
   game.send(ws, { type: 'friends_list', friends: social.getFriendsList(state.clientId) });
   game.send(ws, { type: 'friend_requests', requests: social.getPendingRequests(state.clientId) });
   game.send(ws, { type: 'stats', stats: stats.getStats(state.clientId) });
@@ -332,7 +333,7 @@ function handleGameplay(ws, data, state) {
     const gameId = game.playerSessions.get(playerId);
     const g = gameId && game.activeGames.get(gameId);
     if (g && g.currentRound >= 0) {
-      const key = `${playerId}:${g.currentRound}`;
+      const key = `${state.clientId}:${g.currentRound}`;
       if (!g.reported.has(key)) {
         g.reported.add(key);
         const q = g.questions[g.currentRound];
@@ -382,7 +383,7 @@ wss.on('connection', (ws, req) => {
   ws.on('close', () => {
     limiter.remove(state.playerId);
     if (state.clientId) {
-      social.setOffline(state.clientId);
+      social.setOffline(state.clientId, ws);
       notifyPresence(state.clientId, false);
     }
 
@@ -406,7 +407,7 @@ wss.on('connection', (ws, req) => {
 
     const gameId = game.playerSessions.get(state.playerId);
     const g = gameId && game.activeGames.get(gameId);
-    if (g && g.status === 'active') game.removePlayer(g, state.playerId);
+    if (g && g.status === 'active') game.disconnectPlayer(g, state.playerId);
   });
 });
 
