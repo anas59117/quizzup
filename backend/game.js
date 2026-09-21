@@ -435,16 +435,17 @@ function endGame(game, reason) {
     const finishBonus = 40;
     const winBonus = isSolo ? 0 : won ? 100 : isTie ? 50 : 0;
     const xpTotal = p.score + finishBonus + winBonus;
+    const coinsEarned = isSolo ? 20 : won ? 50 : isTie ? 35 : 20;
     // Solo sessions count as games played but neither extend nor break a PvP
     // win streak, and they cannot farm the multiplayer win bonus.
-    stats.recordResult(p.clientId, won, isSolo || isTie, xpTotal);
+    stats.recordResult(p.clientId, won, isSolo || isTie, xpTotal, coinsEarned);
     const finalResult = {
       type: 'game_end', finalScore: p.score,
       solo: isSolo,
       won, tie: isTie,
       others: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, score: o.score, clientId: o.clientId })),
       leaderboard: board, reason: reason || 'complete',
-      coins: isSolo ? 20 : won ? 50 : isTie ? 35 : 20,
+      coins: coinsEarned,
       xp: xpTotal,
       xpBreakdown: { matchScore: p.score, finishBonus, winBonus, xpTotal },
       stats: stats.getStats(p.clientId),
