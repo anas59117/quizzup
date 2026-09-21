@@ -180,6 +180,7 @@ export default function App() {
         setJoinError(true);
         break;
       case 'already_playing':
+      case 'rate_limited':
         setPending(false);
         break;
       case 'room_closed':
