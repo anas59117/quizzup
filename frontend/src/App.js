@@ -57,7 +57,7 @@ export default function App() {
   const pendingTimerRef = useRef(null);
   const bootNameRef = useRef(name);
   const matchActionRef = useRef(null);
-  const skipRoomRecoveryRef = useRef(false);
+  const [skipRoomRecovery, setSkipRoomRecovery] = useState(false);
   const messageHandlerRef = useRef(null);
 
   const clearPending = useCallback(() => {
@@ -88,6 +88,7 @@ export default function App() {
     // visible playing screen requires a missing match to be fatal.
     expectGameRecovery: stage === 'playing',
     expectRoomRecovery: stage === 'room_wait',
+    recoverRoomOnIdentify: !skipRoomRecovery,
     onMessageRef: messageHandlerRef,
     onFatalError: () => setStage('error'),
     onPendingClear: clearPending,
@@ -167,8 +168,8 @@ export default function App() {
         setMyId(data.playerId);
         break;
       case 'identified':
-        if (skipRoomRecoveryRef.current) {
-          skipRoomRecoveryRef.current = false;
+        if (skipRoomRecovery) {
+          setSkipRoomRecovery(false);
           // Defensive fallback: the server should not reconnect a room when
           // recoverRoom=false, but if it ever does, leave it immediately.
           if (data.roomReconnected) sendSocket({ type: 'leave_room' });
@@ -245,12 +246,12 @@ export default function App() {
         clearPending();
         break;
       case 'room_left':
-        skipRoomRecoveryRef.current = false;
+        setSkipRoomRecovery(false);
         setRoom(null);
         setStage('home');
         break;
       case 'room_closed':
-        skipRoomRecoveryRef.current = false;
+        setSkipRoomRecovery(false);
         setRoom(null);
         setStage('home');
         break;
@@ -325,10 +326,7 @@ export default function App() {
     // their name; they identify after entering Home instead.
     const recoveringFromRefresh = stage === 'join' && !!bootNameRef.current.trim();
     if (canIdentify && (stage === 'home' || recoveringFromRefresh)) {
-      connect({
-        type: 'identify',
-        recoverRoom: !skipRoomRecoveryRef.current,
-      });
+      connect({ type: 'identify' });
     }
   }, [stage, clientId, firebaseUser]);
 
@@ -470,7 +468,7 @@ export default function App() {
       // If the socket is alive, leave explicitly and keep the authenticated
       // connection. If it is already down, cancel the scheduled reconnect so
       // the client cannot reattach to a lobby the user just chose to leave.
-      skipRoomRecoveryRef.current = true;
+      setSkipRoomRecovery(true);
       if (!sendSocket({ type: 'leave_room' })) closeSocket();
       setRoom(null);
       setStage('home');
