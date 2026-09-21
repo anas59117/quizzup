@@ -336,3 +336,25 @@ test('rejects duplicate Firebase identities inside the same game batch', async (
     /CLIENT_ALREADY_PLAYING/
   );
 });
+
+
+test('rejects an answer that arrives after the advertised question deadline', () => {
+  const ws = fakeWs();
+  const g = {
+    status: 'active',
+    phase: 'question',
+    currentRound: 0,
+    questionStart: performance.now() - 10001,
+    questions: [{ correct: 0 }],
+    players: [
+      { id: 'p1', ws, connected: true, score: 0 },
+      { id: 'p2', ws: fakeWs(), connected: true, score: 0 },
+    ],
+    roundAnswers: {},
+    roundTimer: null,
+  };
+
+  game.recordAnswer(g, 'p1', 0);
+  assert.equal(g.roundAnswers.p1, undefined);
+  assert.equal(g.players[0].score, 0);
+});
