@@ -4,6 +4,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { createJsonWriter } = require('./json-writer');
 
 const STORE = path.join(__dirname, 'posts.json');
 const MAX_POSTS = 500; // oldest posts drop off once this cap is hit
@@ -29,15 +30,7 @@ if (posts.length === 0) {
   ];
 }
 
-let writeScheduled = false;
-function persist() {
-  if (writeScheduled) return;
-  writeScheduled = true;
-  setTimeout(() => {
-    writeScheduled = false;
-    fs.writeFile(STORE, JSON.stringify({ posts }), () => {});
-  }, 1000);
-}
+const persist = createJsonWriter(STORE, () => ({ posts }));
 
 function toClientShape(p) {
   return {
@@ -95,9 +88,14 @@ function reportPost(postId, clientId) {
   if (!clientId) return null;
   const post = posts.find((p) => p.id === postId);
   if (!post) return null;
-  if (!post.reportedBy.includes(clientId)) post.reportedBy.push(clientId);
-  persist();
-  return { id: post.id, hidden: post.reportedBy.length >= REPORT_THRESHOLD };
+
+  const wasHidden = post.reportedBy.length >= REPORT_THRESHOLD;
+  if (!post.reportedBy.includes(clientId)) {
+    post.reportedBy.push(clientId);
+    persist();
+  }
+  const isHidden = post.reportedBy.length >= REPORT_THRESHOLD;
+  return { id: post.id, hidden: !wasHidden && isHidden };
 }
 
 module.exports = { getFeed, addPost, toggleReaction, reportPost };
