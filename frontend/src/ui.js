@@ -253,12 +253,27 @@ export const TopControls = memo(function TopControls({ muted, toggleMute, theme,
   );
 });
 
-export const SoloToggle = memo(function SoloToggle({ solo, onToggle }) {
+export const SoloToggle = memo(function SoloToggle({ solo, onChange }) {
   const { t } = useI18n();
   return (
-    <button className={`solo-toggle ${solo ? 'active' : ''}`} onClick={onToggle}>
-      <span className="solo-dot" />{solo ? t('solo') : t('multiplayer')}
-    </button>
+    <div className="solo-toggle" role="group" aria-label={`${t('multiplayer')} / ${t('solo')}`}>
+      <button
+        type="button"
+        className={!solo ? 'active' : ''}
+        aria-pressed={!solo}
+        onClick={() => onChange(false)}
+      >
+        {t('multiplayer')}
+      </button>
+      <button
+        type="button"
+        className={solo ? 'active' : ''}
+        aria-pressed={solo}
+        onClick={() => onChange(true)}
+      >
+        {t('solo')}
+      </button>
+    </div>
   );
 });
 
