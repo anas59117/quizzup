@@ -63,3 +63,27 @@ App runs on http://localhost:3000
 - **Sponsored Categories**: Branded quizzes (Nike, Netflix)
 - **Referral Bonus**: Invite friends = free cosmetics
 - **Ads**: Optional rewarded videos for extra points
+
+
+## Production configuration
+
+The backend expects Firebase-authenticated WebSocket clients. Copy `backend/.env.example` and configure at least:
+
+- `FIREBASE_API_KEY` — Firebase Web API key used to verify ID tokens.
+- `CORS_ORIGIN` — exact frontend origin(s), comma-separated. Set this in production so WebSocket origin checks are not left open.
+- `TRUST_PROXY=true` only when the backend is behind a trusted reverse proxy that owns `X-Forwarded-For`.
+- `MAX_WS_CONNECTIONS_PER_IP` — optional per-IP connection cap (default 100, `0` disables it).
+
+The frontend Firebase/WebSocket variables are documented in `frontend/.env.example`.
+
+## Reliability / security already implemented
+
+- Server-authoritative answers, scoring and timers.
+- Firebase ID-token verification before persistent gameplay/social actions.
+- Match reconnect grace period and refresh recovery.
+- Duplicate-account protection across matchmaking, rooms and game startup.
+- WebSocket payload limit, heartbeat cleanup, origin validation and per-action rate limits.
+- Serialized JSON persistence writes for the current single-instance MVP.
+- GitHub Actions CI: backend syntax/tests + production frontend build.
+
+The JSON stores are still intentionally **single-instance MVP storage**. Before horizontal scaling, move durable stats/social/feed/moderation data to a shared database and move matchmaking/session state to Redis or another shared realtime store.
