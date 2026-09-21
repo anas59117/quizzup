@@ -58,14 +58,6 @@ if (process.env.NODE_ENV === 'production' && !allowedOrigins.length) {
   console.warn('CORS_ORIGIN is not configured; WebSocket origin checks are open.');
 }
 
-function getClientIp(req) {
-  if (process.env.TRUST_PROXY === 'true') {
-    const xff = req.headers['x-forwarded-for'];
-    if (xff) return xff.split(',')[0].trim();
-  }
-  return req.socket.remoteAddress || 'unknown';
-}
-
 const waitingPlayers = [];
 const privateRooms = new Map();
 const connectionsByIp = new Map();
