@@ -11,6 +11,7 @@ afterEach(() => {
   }
   game.activeGames.clear();
   game.playerSessions.clear();
+  game.startingClients.clear();
 });
 
 function fakeWs() {
@@ -306,4 +307,31 @@ test('finished match recovery resends result and updates leaderboard transport i
   assert.equal(ws.messages[1].leaderboard[0].id, 'fresh-finished-id');
   assert.equal(game.playerSessions.get('fresh-finished-id'), g.id);
   assert.equal(game.playerSessions.has('old-finished-id'), false);
+});
+
+
+test('rejects a game start while the same account identity is already reserved', async () => {
+  game.startingClients.add('u-reserved');
+  await assert.rejects(
+    game.startGame([
+      {
+        id: 'p-reserved',
+        clientId: 'u-reserved',
+        ws: fakeWs(),
+        name: 'Alice',
+        avatar: 'A',
+      },
+    ], null),
+    /CLIENT_ALREADY_PLAYING/
+  );
+});
+
+test('rejects duplicate Firebase identities inside the same game batch', async () => {
+  await assert.rejects(
+    game.startGame([
+      { id: 'p1', clientId: 'same-uid', ws: fakeWs(), name: 'A', avatar: 'A' },
+      { id: 'p2', clientId: 'same-uid', ws: fakeWs(), name: 'B', avatar: 'B' },
+    ], null),
+    /CLIENT_ALREADY_PLAYING/
+  );
 });
