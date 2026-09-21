@@ -61,6 +61,19 @@ function waitForOpponent(topic = 'Partie rapide') {
   receive({ type: 'waiting' });
 }
 
+test('shows both game modes and starts solo directly when selected', () => {
+  const multiplayer = [...container.querySelectorAll('button')].find((el) => el.textContent === 'Multijoueur');
+  const solo = [...container.querySelectorAll('button')].find((el) => el.textContent === 'Solo');
+  expect(multiplayer.getAttribute('aria-pressed')).toBe('true');
+  expect(solo.getAttribute('aria-pressed')).toBe('false');
+
+  click('Solo');
+  expect(multiplayer.getAttribute('aria-pressed')).toBe('false');
+  expect(solo.getAttribute('aria-pressed')).toBe('true');
+  click('Partie rapide');
+  expect(soloCalls()).toEqual([[{ type: 'solo', category: null }]]);
+});
+
 test('shows the real level and truthful wait feedback with a delayed solo option', () => {
   receive({ type: 'stats', stats: { level: 7 } });
   waitForOpponent();
