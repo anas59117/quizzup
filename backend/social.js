@@ -7,6 +7,7 @@ const path = require('path');
 
 const STORE = path.join(__dirname, 'social.json');
 const MAX_FRIENDS = 200;
+const MAX_PENDING_REQUESTS = 100;
 
 let profiles = {}; // clientId -> { name, avatar }
 let friends = {}; // clientId -> [clientId, ...]
@@ -76,10 +77,13 @@ function areFriends(a, b) {
 
 function sendRequest(fromId, toId) {
   if (!fromId || !toId || fromId === toId) return { ok: false };
+  if (!profiles[toId]) return { ok: false, reason: 'unknown_user' };
   if (areFriends(fromId, toId)) return { ok: false, reason: 'already_friends' };
   requests[toId] = requests[toId] || [];
   if (requests[toId].includes(fromId)) return { ok: false, reason: 'already_sent' };
+  if (requests[toId].length >= MAX_PENDING_REQUESTS) return { ok: false, reason: 'request_inbox_full' };
   if ((friends[toId] || []).length >= MAX_FRIENDS) return { ok: false, reason: 'friend_list_full' };
+  if ((friends[fromId] || []).length >= MAX_FRIENDS) return { ok: false, reason: 'friend_list_full' };
   requests[toId].push(fromId);
   persist();
   return { ok: true };
@@ -92,9 +96,10 @@ function sendRequest(fromId, toId) {
 // who never sent a request.
 function acceptRequest(id, fromId) {
   if (!(requests[id] || []).includes(fromId)) return false;
-  requests[id] = requests[id].filter((r) => r !== fromId);
   friends[id] = friends[id] || [];
   friends[fromId] = friends[fromId] || [];
+  if (friends[id].length >= MAX_FRIENDS || friends[fromId].length >= MAX_FRIENDS) return false;
+  requests[id] = requests[id].filter((r) => r !== fromId);
   if (!friends[id].includes(fromId)) friends[id].push(fromId);
   if (!friends[fromId].includes(id)) friends[fromId].push(id);
   persist();
