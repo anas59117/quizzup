@@ -244,7 +244,13 @@ export default function App() {
       case 'rate_limited':
         clearPending();
         break;
+      case 'room_left':
+        skipRoomRecoveryRef.current = false;
+        setRoom(null);
+        setStage('home');
+        break;
       case 'room_closed':
+        skipRoomRecoveryRef.current = false;
         setRoom(null);
         setStage('home');
         break;
@@ -464,10 +470,8 @@ export default function App() {
       // If the socket is alive, leave explicitly and keep the authenticated
       // connection. If it is already down, cancel the scheduled reconnect so
       // the client cannot reattach to a lobby the user just chose to leave.
-      if (!sendSocket({ type: 'leave_room' })) {
-        skipRoomRecoveryRef.current = true;
-        closeSocket();
-      }
+      skipRoomRecoveryRef.current = true;
+      if (!sendSocket({ type: 'leave_room' })) closeSocket();
       setRoom(null);
       setStage('home');
     };
