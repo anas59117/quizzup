@@ -45,14 +45,17 @@ function recentMatchSnapshot(
 ) {
   const participants = [...game.players, ...(game.departedPlayers || [])];
   const seen = new Set();
-  const opponents = participants
-    .filter((opponent) => opponent.id !== player?.id && !seen.has(opponent.id) && seen.add(opponent.id))
-    .slice(0, 3)
-    .map((opponent) => ({
+  const opponents = [];
+  for (const opponent of participants) {
+    if (opponent.id === player?.id || seen.has(opponent.id)) continue;
+    seen.add(opponent.id);
+    opponents.push({
       name: opponent.name,
       avatar: opponent.avatar,
       score: opponent.score,
-    }));
+    });
+    if (opponents.length >= 3) break;
+  }
 
   return {
     playedAt,
