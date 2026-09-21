@@ -87,9 +87,6 @@ export default function App() {
     setPending(false);
   }, []);
 
-  const bootGameRecovery = stage === 'join' && !!bootNameRef.current.trim();
-  const matchmakingRecovery = stage === 'waiting' || (pending && !!matchActionRef.current);
-
   const {
     wsRef,
     connect,
