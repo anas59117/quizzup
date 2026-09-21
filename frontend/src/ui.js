@@ -99,11 +99,11 @@ export const CATEGORIES = [
 // every quiz inside it) — labels/descriptions are translated UI chrome,
 // unlike the quiz-specific CATEGORIES labels above.
 export const FAMILIES = [
-  { key: 'sport', icon: '⚽', grad: 'g3' },
-  { key: 'entertainment', icon: '\u{1F3AC}', grad: 'g13' },
-  { key: 'music', icon: '\u{1F3B5}', grad: 'g7' },
-  { key: 'culture', icon: '\u{1F30D}', grad: 'g10' },
-  { key: 'gaming', icon: '\u{1F3AE}', grad: 'g5' },
+  { key: 'sport', mark: 'SP', grad: 'g3' },
+  { key: 'entertainment', mark: 'TV', grad: 'g13' },
+  { key: 'music', mark: 'MU', grad: 'g7' },
+  { key: 'culture', mark: 'IQ', grad: 'g10' },
+  { key: 'gaming', mark: 'GG', grad: 'g5' },
 ];
 
 export function categoriesInFamily(familyKey) {
@@ -241,7 +241,7 @@ export const CategoryTile = memo(function CategoryTile({ c, onClick, disabled })
 export const FamilyTile = memo(function FamilyTile({ fam, label, desc, count, onClick }) {
   return (
     <button className="family-tile" onClick={onClick}>
-      <span className={`family-icon ${fam.grad}`}>{fam.icon}</span>
+      <span className={`family-icon ${fam.grad}`}>{fam.mark}</span>
       <span className="family-info">
         <span className="family-label">{label}</span>
         <span className="family-desc">{desc}</span>
