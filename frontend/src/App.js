@@ -74,14 +74,13 @@ export default function App() {
     wsRef,
     connect,
     send: sendSocket,
-    closeSocket,
     scheduleRecovery,
     reconnecting,
   } = useGameSocket({
     name,
     avatar,
     firebaseUser,
-    shouldRecover: stage === 'playing' || bootGameRecovery || matchmakingRecovery,
+    shouldRecover: stage === 'playing' || stage === 'room_wait' || bootGameRecovery || matchmakingRecovery,
     expectGameRecovery: stage === 'playing' || bootGameRecovery,
     onMessageRef: messageHandlerRef,
     onFatalError: () => setStage('error'),
@@ -428,7 +427,11 @@ export default function App() {
         copyTimerRef.current = setTimeout(() => { setCopied(false); copyTimerRef.current = null; }, 1500);
       } catch {}
     };
-    const cancel = () => { closeSocket(); setRoom(null); setStage('home'); };
+    const cancel = () => {
+      sendSocket({ type: 'leave_room' });
+      setRoom(null);
+      setStage('home');
+    };
     return (
       <div className="app"><TopControls {...topProps} />
         <RoomLobby
