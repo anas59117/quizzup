@@ -352,10 +352,38 @@ button:focus-visible,input:focus-visible,select:focus-visible { outline:2px soli
 .ra-btn.see-res { background:transparent; }
 
 /* Profile + social */
-.profile-head { display:grid; grid-template-columns:auto 1fr; align-items:center; column-gap:14px; margin-bottom:24px; text-align:left; }
+.profile-head { display:grid; grid-template-columns:auto 1fr auto; align-items:center; column-gap:14px; margin-bottom:24px; text-align:left; }
 .profile-avatar { grid-row:1/3; width:68px; height:68px; display:flex; align-items:center; justify-content:center; border:1px solid var(--border); border-radius:17px; background:var(--surface); font-size:2rem; }
 .profile-name { font-size:1.55rem; font-weight:900; letter-spacing:-.035em; }
 .profile-sub { color:var(--text-dim); font-size:.78rem; }
+.profile-edit-btn {
+  grid-column:3; grid-row:1/3; width:42px; height:42px; display:grid; place-items:center;
+  border:1px solid var(--border); border-radius:11px; background:var(--surface); color:var(--text-dim);
+  cursor:pointer; transition:border-color .15s ease,background .15s ease,color .15s ease;
+}
+.profile-edit-btn:hover { border-color:var(--border-strong); background:var(--surface-2); color:var(--text); }
+.profile-editor {
+  margin:-8px 0 18px; padding:14px; border:1px solid var(--border); border-radius:14px;
+  background:var(--surface); box-shadow:var(--shadow-sm);
+}
+.profile-editor-label {
+  display:block; margin:0 0 7px; color:var(--text-dim); font-size:.66rem; font-weight:800;
+  text-transform:uppercase; letter-spacing:.1em;
+}
+.profile-name-input { min-height:46px; margin-bottom:14px; }
+.profile-avatar-grid {
+  display:grid; grid-template-columns:repeat(8,minmax(0,1fr)); gap:7px; margin-bottom:14px;
+}
+.profile-avatar-grid .avatar-opt {
+  width:100%; height:auto; min-height:42px; aspect-ratio:1/1; min-width:0; flex:none;
+}
+.profile-editor-actions { display:grid; grid-template-columns:1fr 1.4fr; gap:8px; }
+.profile-editor-cancel,.profile-editor-save {
+  min-height:44px; padding:10px 12px; border-radius:10px; font-size:.8rem; font-weight:800; cursor:pointer;
+}
+.profile-editor-cancel { border:1px solid var(--border); background:transparent; color:var(--text-dim); }
+.profile-editor-save { border:0; background:var(--accent); color:#fff; }
+.profile-editor-cancel:disabled,.profile-editor-save:disabled { opacity:.45; cursor:not-allowed; }
 .profile-stats { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:7px; margin-bottom:16px; }
 .pstat { min-width:0; padding:14px 8px; border:1px solid var(--border); border-radius:11px; background:var(--surface); text-align:center; }
 .pstat-val { color:var(--text); font-size:1.15rem; font-weight:850; }
@@ -390,7 +418,15 @@ button:focus-visible,input:focus-visible,select:focus-visible { outline:2px soli
 .privacy-link { display:block; min-height:44px; margin-top:20px; color:var(--text-faint); font-size:.72rem; text-align:center; text-decoration:underline; }
 
 .game-chat { position:fixed; right:16px; bottom:92px; z-index:16; display:flex; flex-direction:column; align-items:flex-end; }
-.game-chat-toggle { width:44px; height:44px; display:flex; align-items:center; justify-content:center; border:1px solid #29292d; border-radius:12px; background:#171719; color:#fff; cursor:pointer; }
+.game-chat-toggle {
+  width:44px; height:44px; display:flex; align-items:center; justify-content:center; position:relative;
+  border:1px solid #29292d; border-radius:12px; background:#171719; color:#fff; cursor:pointer;
+}
+.game-chat-count {
+  position:absolute; top:-6px; right:-6px; min-width:18px; height:18px; display:grid; place-items:center;
+  padding:0 5px; border:2px solid #09090a; border-radius:999px; background:var(--accent); color:#fff;
+  font-size:.58rem; font-weight:900; font-variant-numeric:tabular-nums;
+}
 .game-chat.open .game-chat-toggle { margin-bottom:8px; }
 .game-chat-panel { width:250px; max-height:240px; padding:10px; display:flex; flex-direction:column; border:1px solid #29292d; border-radius:14px; background:#111113; }
 .game-chat-msgs { max-height:150px; margin-bottom:8px; }
@@ -782,4 +818,8 @@ button:focus-visible,input:focus-visible,select:focus-visible { outline:2px soli
     grid-template-columns: 26px 36px minmax(0,1fr) auto;
     gap: 8px;
   }
+}
+
+@media (max-width: 520px) {
+  .profile-avatar-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
 }
