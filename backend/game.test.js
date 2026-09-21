@@ -167,3 +167,78 @@ test('removePlayer removes a disconnected player instead of restarting grace', (
   assert.equal(g.players.length, 2);
   assert.equal(g.players.some((p) => p.id === 'p1'), false);
 });
+
+
+test('reconnect during reveal rehydrates the question before the result', () => {
+  const newWs = fakeWs();
+  const g = {
+    id: 'g-reveal',
+    status: 'active',
+    phase: 'revealed',
+    currentRound: 0,
+    questionStart: Date.now() - 1000,
+    questions: [{
+      text: 'Reveal Q', category: 'Test', icon: 'T',
+      answers: ['A', 'B', 'C', 'D'], correct: 1,
+    }],
+    players: [
+      {
+        id: 'old-r', clientId: 'u-reveal', ws: null, connected: false,
+        score: 15, name: 'Alice', avatar: 'A', reconnectTimer: null,
+      },
+      {
+        id: 'other-r', clientId: 'u-other', ws: fakeWs(), connected: true,
+        score: 10, name: 'Bob', avatar: 'B', reconnectTimer: null,
+      },
+    ],
+    roundAnswers: {
+      'old-r': { answerIndex: 1, correct: true, elapsedMs: 800, points: 15 },
+    },
+    roundTimer: null,
+    reported: new Set(),
+  };
+
+  game.activeGames.set(g.id, g);
+  game.playerSessions.set('old-r', g.id);
+
+  assert.equal(game.reconnectPlayer('u-reveal', newWs, 'new-r'), true);
+  const types = newWs.messages.map((m) => m.type);
+  assert.deepEqual(types.slice(0, 3), ['game_reconnected', 'question', 'round_result']);
+  assert.equal(newWs.messages[1].question, 'Reveal Q');
+  assert.equal(newWs.messages[2].yourCorrect, true);
+});
+
+test('old game cleanup does not erase a newer session mapping', () => {
+  const originalSetTimeout = global.setTimeout;
+  const scheduled = [];
+  global.setTimeout = (fn) => {
+    scheduled.push(fn);
+    return { unref() {} };
+  };
+
+  try {
+    const g = {
+      id: 'old-game',
+      status: 'active',
+      phase: 'question',
+      players: [{
+        id: 'same-player', clientId: null, ws: fakeWs(), connected: true,
+        score: 5, name: 'A', avatar: 'A', reconnectTimer: null,
+      }],
+      roundTimer: null,
+    };
+
+    game.activeGames.set(g.id, g);
+    game.playerSessions.set('same-player', g.id);
+    game.endGame(g);
+
+    game.playerSessions.set('same-player', 'new-game');
+    assert.equal(scheduled.length, 1);
+    scheduled[0]();
+
+    assert.equal(game.playerSessions.get('same-player'), 'new-game');
+    assert.equal(game.activeGames.has('old-game'), false);
+  } finally {
+    global.setTimeout = originalSetTimeout;
+  }
+});
