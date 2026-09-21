@@ -173,7 +173,16 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
       <PlayerPhoto image={question.image} credit={question.credit} timeLeft={timeLeft} timeLimit={question.timeLimit} revealed={sr} />
       <div className="question">{question.question}</div>
       <div className={`answers ${question.image ? '' : 'single-col'}`}>
-        {question.answers.map((a, idx) => <button key={idx} className={ansCls(idx)} onClick={() => answer(idx)} disabled={selected !== null || sr}>{a}</button>)}
+        {question.answers.map((a, idx) => (
+          <button
+            key={idx}
+            className={ansCls(idx)}
+            onClick={() => answer(idx)}
+            disabled={question.expired || selected !== null || sr}
+          >
+            {a}
+          </button>
+        ))}
       </div>
       <div className="timer-bar-bottom"><div className={`timer-bar-fill ${timeLeft <= 3 && !sr ? 'urgent' : ''}`} style={{ width: sr ? '0%' : `${pct}%` }} /></div>
       {sr && <div className="reveal-note">{reveal.yourCorrect ? t('ptsEarned', { n: reveal.pointsEarned }) : reveal.timedOut && selected === null ? t('timeUp') : t('wrong')}</div>}
