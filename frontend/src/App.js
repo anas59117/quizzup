@@ -412,7 +412,6 @@ export default function App() {
       connect({ type: 'identify' });
     }
     // connect intentionally reads the latest identity through refs.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [stage, clientId, firebaseUser, name]);
 
   const [soloMode, setSoloMode] = useState(false);
