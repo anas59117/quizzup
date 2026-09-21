@@ -79,7 +79,14 @@ async function startGame(rawPlayers, categoryKey) {
 
     const stillOpen = rawPlayers.filter((p) => p.ws.readyState === 1);
     if (stillOpen.length !== rawPlayers.length) {
-      stillOpen.forEach((p) => send(p.ws, { type: 'error', code: 'PLAYER_DISCONNECTED' }));
+      // The match never became active, so this is not a fatal game error for
+      // the players whose sockets are still healthy. Let them return to the
+      // lobby/home and queue again instead of throwing the whole app onto the
+      // connection-error screen.
+      stillOpen.forEach((p) => send(p.ws, {
+        type: 'match_aborted',
+        code: 'PLAYER_DISCONNECTED_BEFORE_START',
+      }));
       return;
     }
 
