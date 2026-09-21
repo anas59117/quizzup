@@ -410,6 +410,12 @@ button:focus-visible,input:focus-visible,select:focus-visible { outline:2px soli
 .friend-chat-input,.game-chat-input { display:flex; gap:6px; }
 .friend-chat-input input,.game-chat-input input { flex:1; min-width:0; padding:9px 10px; border-radius:8px; font-size:.82rem; }
 .friend-chat-input button,.game-chat-input button { padding:8px 12px; border:0; border-radius:8px; background:var(--accent); color:#fff; font-size:.78rem; font-weight:800; cursor:pointer; }
+.friend-remove-link {
+  min-height:40px; margin-top:8px; padding:8px 10px; border:1px solid var(--border); border-radius:8px;
+  background:transparent; color:var(--text-faint); font-size:.7rem; font-weight:750; cursor:pointer;
+}
+.friend-remove-link:hover { color:var(--danger); border-color:color-mix(in srgb,var(--danger) 45%,var(--border)); }
+.friend-remove-link.confirm { color:#fff; border-color:var(--danger); background:var(--danger); }
 .chat-bubble { max-width:80%; padding:7px 10px; border-radius:10px; font-size:.82rem; word-break:break-word; }
 .chat-bubble.me { align-self:flex-end; background:var(--accent); color:#fff; }
 .chat-bubble.them { align-self:flex-start; background:var(--surface-2); color:var(--text); }
