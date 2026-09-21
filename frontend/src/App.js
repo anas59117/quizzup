@@ -82,7 +82,10 @@ export default function App() {
     avatar,
     firebaseUser,
     shouldRecover: stage === 'playing' || stage === 'room_wait' || bootGameRecovery || matchmakingRecovery,
-    expectGameRecovery: stage === 'playing' || bootGameRecovery,
+    // A page load with a persisted name is only an *opportunistic* recovery
+    // probe. Most returning users have no active match, so only an already
+    // visible playing screen requires a missing match to be fatal.
+    expectGameRecovery: stage === 'playing',
     expectRoomRecovery: stage === 'room_wait',
     onMessageRef: messageHandlerRef,
     onFatalError: () => setStage('error'),
@@ -163,6 +166,19 @@ export default function App() {
         setMyId(data.playerId);
         break;
       case 'identified':
+        // A returning browser probes for an unfinished game/lobby because the
+        // display identity is persisted locally. No recovery is the normal
+        // case: continue to Home instead of treating it as an error.
+        if (
+          stage === 'join'
+          && bootNameRef.current.trim()
+          && !data.reconnected
+          && !data.roomReconnected
+        ) {
+          setStage('home');
+          break;
+        }
+
         // If the transport hook already flushed an action that was queued
         // before authentication, do not replay it a second time. If the
         // action had previously reached the server (e.g. we were waiting for
