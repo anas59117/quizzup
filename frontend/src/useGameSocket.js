@@ -31,6 +31,7 @@ export function useGameSocket({
   const identifySentRef = useRef(false);
   const queuedActionRef = useRef(null);
   const reconnectingRef = useRef(false);
+  const boundUidRef = useRef(null);
 
   const identityRef = useRef({ name, avatar, firebaseUser });
   const shouldRecoverRef = useRef(shouldRecover);
@@ -150,6 +151,7 @@ export function useGameSocket({
       if (data.type === 'identified') {
         identifiedRef.current = true;
         identifySentRef.current = false;
+        boundUidRef.current = identityRef.current.firebaseUser?.uid || null;
 
         // Recoveries can require a specific server-side object to still
         // exist (active match or private lobby). If its grace window expired,
@@ -260,6 +262,13 @@ export function useGameSocket({
     const user = identityRef.current.firebaseUser;
     if (!user || typeof user.getIdToken !== 'function') return false;
 
+    // If Firebase itself changed account identity, a fresh transport is
+    // required because the server deliberately forbids identity switching on
+    // an authenticated WebSocket.
+    if (boundUidRef.current && boundUidRef.current !== user.uid) {
+      closeSocket();
+    }
+
     const current = wsRef.current;
     if (
       action?.type === 'identify'
@@ -313,6 +322,7 @@ export function useGameSocket({
     }
     identifiedRef.current = false;
     identifySentRef.current = false;
+    boundUidRef.current = null;
   }
 
   useEffect(() => () => {
