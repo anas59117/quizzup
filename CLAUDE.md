@@ -12,6 +12,24 @@
 - Keep files under 500 lines
 - Validate input at system boundaries
 
+
+## Visual Design Rules
+
+QuizzUp's visual direction is **editorial gaming**, not generic glassmorphism.
+
+- Use one brand accent: rose for primary actions, active state and identity.
+- Prefer real quiz photography when available; fallback topic art should use a small flat poster palette.
+- Do not reintroduce rainbow gradients as the default visual language.
+- Avoid emoji-only navigation chrome. Main navigation and utility controls use the custom line-icon system in `frontend/src/ui.js`.
+- Use sharp hierarchy: large type for Quick Play, rounds and results; compact labels elsewhere.
+- Avoid excessive pills and circles. Normal controls/cards use roughly 10–14px radii; hero surfaces can go to 18–22px.
+- Keep motion restrained and functional.
+- Mobile must stay thumb-friendly; desktop must use an intentional wide composition rather than a stretched phone layout.
+- Keep network-backed success states server-confirmed; do not fake sent/accepted states in the UI.
+- Preserve visible keyboard focus, ~44px interactive targets, readable contrast and `prefers-reduced-motion`.
+
+Before merging visual work, review Join, Home, Themes, Feed, Profile, Lobby, Question and Result in both themes, at mobile (~390px) and desktop (~1440px), then run the production frontend build.
+
 ## Ruflo Capability Brain & Implementation Loop
 
 Ruflo is the coordination ledger and policy decision point. Claude Code is the
