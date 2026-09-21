@@ -385,6 +385,45 @@ button:focus-visible,input:focus-visible,select:focus-visible { outline:2px soli
 .profile-editor-save { border:0; background:var(--accent); color:#fff; }
 .profile-editor-cancel:disabled,.profile-editor-save:disabled { opacity:.45; cursor:not-allowed; }
 .profile-stats { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:7px; margin-bottom:16px; }
+
+.recent-matches { margin: 4px 0 16px; }
+.recent-match-list {
+  display:flex; flex-direction:column; overflow:hidden;
+  border:1px solid var(--border); border-radius:13px; background:var(--surface);
+}
+.recent-match {
+  min-height:62px; display:grid; grid-template-columns:34px minmax(0,1fr) auto;
+  align-items:center; gap:10px; padding:10px 11px; border-bottom:1px solid var(--border);
+}
+.recent-match:last-child { border-bottom:0; }
+.recent-outcome {
+  width:30px; height:30px; display:grid; place-items:center; border-radius:9px;
+  background:var(--surface-2); color:var(--text-dim); font-size:.72rem; font-weight:900;
+}
+.recent-win .recent-outcome { background:color-mix(in srgb,var(--success) 15%,var(--surface)); color:var(--success); }
+.recent-loss .recent-outcome { background:color-mix(in srgb,var(--danger) 13%,var(--surface)); color:var(--danger); }
+.recent-tie .recent-outcome { background:color-mix(in srgb,var(--gold) 13%,var(--surface)); color:var(--gold); }
+.recent-copy { min-width:0; }
+.recent-title { display:flex; align-items:center; gap:7px; min-width:0; }
+.recent-title strong {
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  font-size:.82rem; font-weight:850; letter-spacing:-.01em;
+}
+.recent-result {
+  flex:0 0 auto; padding:2px 5px; border-radius:5px; background:var(--surface-2);
+  color:var(--text-faint); font-size:.52rem; font-weight:850; text-transform:uppercase; letter-spacing:.06em;
+}
+.result-win { color:var(--success); }
+.result-loss { color:var(--danger); }
+.result-tie { color:var(--gold); }
+.recent-meta { margin-top:3px; color:var(--text-faint); font-size:.65rem; }
+.recent-score { display:flex; flex-direction:column; align-items:flex-end; gap:1px; font-variant-numeric:tabular-nums; }
+.recent-score strong { font-size:.86rem; font-weight:900; }
+.recent-score small { color:var(--text-faint); font-size:.55rem; font-weight:750; }
+.recent-empty {
+  padding:15px; border:1px dashed var(--border); border-radius:11px;
+  color:var(--text-faint); font-size:.78rem; text-align:center;
+}
 .pstat { min-width:0; padding:14px 8px; border:1px solid var(--border); border-radius:11px; background:var(--surface); text-align:center; }
 .pstat-val { color:var(--text); font-size:1.15rem; font-weight:850; }
 .pstat-lbl { margin-top:4px; color:var(--text-faint); font-size:.6rem; text-transform:uppercase; letter-spacing:.07em; }
