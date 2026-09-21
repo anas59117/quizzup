@@ -588,6 +588,11 @@ button:focus-visible,input:focus-visible,select:focus-visible { outline:2px soli
   letter-spacing: .08em;
 }
 
+.matchmaking-topic { color: #d7d7dd; font-size: .85rem; font-weight: 650; }
+.matchmaking-alternative { width: min(100%, 340px); text-align: center; }
+.matchmaking-alternative p { color: #b9b9c3; font-size: .85rem; line-height: 1.6; margin: 0 0 16px; }
+.matchmaking-alternative .btn { width: 100%; min-height: 44px; }
+
 .app > .container,
 .app > .game,
 .app > .container.wide {

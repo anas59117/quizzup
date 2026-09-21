@@ -310,9 +310,10 @@ export function LeaderboardContent({ board, loading, onBack }) {
   );
 }
 
-export function WaitingContent({ avatar, name, onCancel, pending }) {
+export function WaitingContent({ avatar, name, level = 1, categoryKey, onCancel, onPlaySolo, pending, reconnecting }) {
   const { t } = useI18n();
   const [elapsed, setElapsed] = useState(0);
+  const category = CATEGORIES.find((item) => item.key === categoryKey);
 
   useEffect(() => {
     const startedAt = Date.now();
@@ -324,12 +325,15 @@ export function WaitingContent({ avatar, name, onCancel, pending }) {
 
   return (
     <div className="container center">
-      <div className="status-label">{elapsed < 12 ? t('matchmaking') : t('searchWidening')}</div>
+      <div className="status-label" role="status">
+        {reconnecting ? t('reconnecting') : pending ? t('leavingQueue') : t('matchmaking')}
+      </div>
+      <div className="matchmaking-topic">{category?.label || t('randomTopic')}</div>
       <div className="vs-screen">
         <div className="vs-player">
           <div className="vs-ava me">{avatar}</div>
           <div className="vs-name">{name}</div>
-          <div className="vs-rank">{t('novice')}</div>
+          <div className="vs-rank">{t('level')} {level}</div>
         </div>
         <div className="vs-bolt-wrap"><div className="vs-bolt"><Icon name="bolt" size={24} /></div></div>
         <div className="vs-player">
@@ -339,7 +343,17 @@ export function WaitingContent({ avatar, name, onCancel, pending }) {
       </div>
       <div className="search-meta">{t('searchElapsed', { n: elapsed })}</div>
       <div className="loading-bar"><div className="loading-fill" /></div>
-      <button className="home-themes-link" onClick={onCancel} disabled={pending}>{t('cancel')}</button>
+      {elapsed >= 12 && (
+        <div className="matchmaking-alternative">
+          <p role="status">{t('searchTakingLonger')}</p>
+          <button className="btn" onClick={onPlaySolo} disabled={pending || reconnecting}>
+            {t('playSoloInstead')}
+          </button>
+        </div>
+      )}
+      <button className="home-themes-link" onClick={onCancel} disabled={pending}>
+        {pending ? t('leavingQueue') : t('cancel')}
+      </button>
     </div>
   );
 }
