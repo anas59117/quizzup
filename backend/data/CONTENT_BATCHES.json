@@ -1,4 +1,10 @@
 {
   "version": 1,
-  "batches": []
+  "batches": [
+    {
+      "name": "gaming-populaire-1",
+      "minimumQuestions": 50,
+      "categories": ["fortnite", "minecraft", "gta", "league_of_legends", "valorant"]
+    }
+  ]
 }
