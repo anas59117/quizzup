@@ -60,6 +60,17 @@ jobs:
           }
 
           async function main() {
+            // Firebase Hosting exposes the web app's public SDK config when
+            // Hosting is initialized. Prefer it for diagnosis if available,
+            // without ever printing the key itself.
+            const initResp = await fetch('https://quizzup-ae633.firebaseapp.com/__/firebase/init.json');
+            const initConfig = await jsonResponse(initResp);
+            console.log('hosting_init_status=' + initResp.status);
+            if (initResp.ok && typeof initConfig.apiKey === 'string' && initConfig.apiKey) {
+              console.log('hosting_key_differs=' + (initConfig.apiKey !== config.apiKey));
+              config.apiKey = initConfig.apiKey;
+            }
+
             const projectsResp = await fetch(
               'https://identitytoolkit.googleapis.com/v1/projects?key=' + encodeURIComponent(config.apiKey)
                 + '&firebaseAppId=' + encodeURIComponent(config.appId),
