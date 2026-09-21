@@ -1,6 +1,41 @@
 import React, { useState, useEffect, useCallback, memo } from 'react';
 import { useI18n } from './i18n';
 
+
+export const Icon = memo(function Icon({ name, size = 20, className = '' }) {
+  const paths = {
+    home: <><path d="M3.5 10.5 12 3l8.5 7.5"/><path d="M5.5 9.8V21h13V9.8"/><path d="M9.5 21v-6h5v6"/></>,
+    feed: <><path d="M5 5h14"/><path d="M5 12h14"/><path d="M5 19h10"/><circle cx="3" cy="5" r=".7" fill="currentColor" stroke="none"/><circle cx="3" cy="12" r=".7" fill="currentColor" stroke="none"/><circle cx="3" cy="19" r=".7" fill="currentColor" stroke="none"/></>,
+    themes: <><rect x="4" y="4" width="6" height="6" rx="1.4"/><rect x="14" y="4" width="6" height="6" rx="1.4"/><rect x="4" y="14" width="6" height="6" rx="1.4"/><rect x="14" y="14" width="6" height="6" rx="1.4"/></>,
+    profile: <><circle cx="12" cy="8" r="3.2"/><path d="M5.5 20c.8-4 3-6 6.5-6s5.7 2 6.5 6"/></>,
+    bolt: <path d="m13.5 2-8 11H11l-.5 9 8-12H13l.5-8Z"/>,
+    search: <><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 4 4"/></>,
+    volume: <><path d="M4 10v4h4l5 4V6l-5 4H4Z"/><path d="M16 9.5c1.3 1.3 1.3 3.7 0 5"/><path d="M18.5 7c2.7 2.7 2.7 7.3 0 10"/></>,
+    mute: <><path d="M4 10v4h4l5 4V6l-5 4H4Z"/><path d="m17 10 4 4"/><path d="m21 10-4 4"/></>,
+    sun: <><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></>,
+    moon: <path d="M20 15.5A8 8 0 0 1 8.5 4 8 8 0 1 0 20 15.5Z"/>,
+    arrow: <><path d="M5 12h14"/><path d="m14 7 5 5-5 5"/></>,
+    users: <><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3.5 20c.6-3.7 2.4-5.5 5.5-5.5s4.9 1.8 5.5 5.5"/><path d="M14 15.5c2.9-.7 5.1.8 6 4.5"/></>,
+    key: <><circle cx="8.5" cy="12.5" r="4.5"/><path d="m12 10 8-8"/><path d="m16 6 2 2"/><path d="m18 4 2 2"/></>,
+  };
+  return (
+    <svg
+      className={`icon ${className}`}
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      {paths[name] || paths.bolt}
+    </svg>
+  );
+});
+
 export const AVATARS = ['\u{1F43A}', '\u{1F981}', '\u{1F98A}', '\u{1F43C}', '\u{1F989}', '\u{1F438}', '\u{1F42F}', '\u{1F984}'];
 
 export const CATEGORIES = [
@@ -89,17 +124,20 @@ export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setA
   const { t } = useI18n();
   return (
     <div className="container center">
-      <div className="badge">{'⚡'} {t('legendBack')}</div>
+      <div className="join-brandmark">Q</div>
+      <div className="badge">{t('legendBack')}</div>
       <h1 className="logo">Quizz<span>Up</span></h1>
       <p className="tagline">{t('tagline')}</p>
-      <input className="input" placeholder={t('usernamePlaceholder')} value={name} maxLength={20}
-        onChange={(e) => setName(e.target.value)} />
-      <div className="avatar-picker">
+      <div className="join-panel">
+        <input className="input" placeholder={t('usernamePlaceholder')} value={name} maxLength={20}
+          onChange={(e) => setName(e.target.value)} />
+        <div className="avatar-picker">
         {AVATARS.map((a) => (
           <button key={a} className={`avatar-opt ${avatar === a ? 'active' : ''}`} onClick={() => setAvatar(a)}>{a}</button>
         ))}
+        </div>
+        <button className="btn" disabled={!name.trim()} onClick={onContinue}>{t('continue')} <Icon name="arrow" size={18} /></button>
       </div>
-      <button className="btn" disabled={!name.trim()} onClick={onContinue}>{t('continue')}</button>
     </div>
   );
 });
@@ -132,13 +170,13 @@ export const TopControls = memo(function TopControls({ muted, toggleMute, theme,
   return (
     <div className="top-controls">
       <button className="ctrl-btn" onClick={toggleMute} aria-label="Toggle sound" title="Toggle sound">
-        {muted ? '\u{1F507}' : '\u{1F50A}'}
+        <Icon name={muted ? 'mute' : 'volume'} size={18} />
       </button>
       <button className="ctrl-btn" onClick={toggleTheme} aria-label="Toggle theme" title="Toggle theme">
-        {theme === 'dark' ? '☀️' : '\u{1F319}'}
+        <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={18} />
       </button>
-      <button className="ctrl-btn" onClick={toggleLang} aria-label="Toggle language" title="Toggle language">
-        {lang === 'fr' ? '\u{1F1EB}\u{1F1F7}' : '\u{1F1EC}\u{1F1E7}'}
+      <button className="ctrl-btn lang-btn" onClick={toggleLang} aria-label="Toggle language" title="Toggle language">
+        {lang === 'fr' ? 'FR' : 'EN'}
       </button>
     </div>
   );
@@ -148,7 +186,7 @@ export const SoloToggle = memo(function SoloToggle({ solo, onToggle }) {
   const { t } = useI18n();
   return (
     <button className={`solo-toggle ${solo ? 'active' : ''}`} onClick={onToggle}>
-      {solo ? t('solo') : t('multiplayer')}
+      <span className="solo-dot" />{solo ? t('solo') : t('multiplayer')}
     </button>
   );
 });
@@ -190,7 +228,7 @@ export const CategoryTile = memo(function CategoryTile({ c, onClick, disabled })
         style={c.cover ? { backgroundImage: `url(${c.cover})` } : undefined}
       >
         {!c.cover && (c.logo ? <img src={c.logo} alt={c.label} className="tile-logo-img" /> : c.icon)}
-        {c.tag && <span className="tile-tag-badge">{c.tag}</span>}
+        {c.tag && <span className="tile-tag-badge">{String(c.tag).includes('📸') ? 'PHOTO' : 'HOT'}</span>}
       </span>
       <span className="tile-label">{c.label}</span>
     </button>
@@ -231,7 +269,7 @@ export const FamilyGrid = memo(function FamilyGrid({ onSelect }) {
 export const SearchBar = memo(function SearchBar({ value, onChange, placeholder }) {
   return (
     <div className="search-bar">
-      <span className="search-icon" aria-hidden="true">{'\u{1F50D}'}</span>
+      <span className="search-icon" aria-hidden="true"><Icon name="search" size={17} /></span>
       <input
         className="search-input"
         type="search"
@@ -249,17 +287,17 @@ export const NavBar = memo(function NavBar({ active, onNav, onQuickMatch }) {
   return (
     <nav className="navbar">
       <button className={`nav-item ${active === 'home' ? 'active' : ''}`} onClick={() => onNav('home')}>
-        <span className="nav-ic">{'\u{1F3E0}'}</span><span className="nav-lbl">{t('navHome')}</span>
+        <span className="nav-ic"><Icon name="home" size={20} /></span><span className="nav-lbl">{t('navHome')}</span>
       </button>
       <button className={`nav-item ${active === 'feed' ? 'active' : ''}`} onClick={() => onNav('feed')}>
-        <span className="nav-ic">{'\u{1F4F0}'}</span><span className="nav-lbl">{t('navFeed')}</span>
+        <span className="nav-ic"><Icon name="feed" size={20} /></span><span className="nav-lbl">{t('navFeed')}</span>
       </button>
-      <button className="nav-bolt" onClick={onQuickMatch} aria-label="Quick Play">{'⚡'}</button>
+      <button className="nav-bolt" onClick={onQuickMatch} aria-label="Quick Play"><Icon name="bolt" size={22} /></button>
       <button className={`nav-item ${active === 'categories' ? 'active' : ''}`} onClick={() => onNav('categories')}>
-        <span className="nav-ic">{'\u{1F5C2}️'}</span><span className="nav-lbl">{t('navThemes')}</span>
+        <span className="nav-ic"><Icon name="themes" size={20} /></span><span className="nav-lbl">{t('navThemes')}</span>
       </button>
       <button className={`nav-item ${active === 'profile' ? 'active' : ''}`} onClick={() => onNav('profile')}>
-        <span className="nav-ic">{'\u{1F464}'}</span><span className="nav-lbl">{t('navProfile')}</span>
+        <span className="nav-ic"><Icon name="profile" size={20} /></span><span className="nav-lbl">{t('navProfile')}</span>
       </button>
     </nav>
   );
