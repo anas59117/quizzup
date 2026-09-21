@@ -29,6 +29,7 @@ export function useGameSocket({
   const identifySentRef = useRef(false);
   const queuedActionRef = useRef(null);
   const reconnectingRef = useRef(false);
+  const identifyOptionsRef = useRef({});
 
   const identityRef = useRef({ name, avatar, firebaseUser });
   const shouldRecoverRef = useRef(shouldRecover);
@@ -93,6 +94,7 @@ export function useGameSocket({
         avatar: identity.avatar,
         clientId: user.uid,
         idToken,
+        recoverRoom: identifyOptionsRef.current.recoverRoom !== false,
       }));
     } catch (err) {
       console.error('Firebase token retrieval failed', err);
@@ -142,6 +144,7 @@ export function useGameSocket({
       if (data.type === 'identified') {
         identifiedRef.current = true;
         identifySentRef.current = false;
+        identifyOptionsRef.current = {};
 
         // Recoveries can require a specific server-side object to still
         // exist (active match or private lobby). If its grace window expired,
@@ -245,7 +248,11 @@ export function useGameSocket({
   }
 
   function connect(action) {
-    if (action && action.type !== 'identify') queuedActionRef.current = action;
+    if (action?.type === 'identify') {
+      identifyOptionsRef.current = { recoverRoom: action.recoverRoom };
+    } else if (action) {
+      queuedActionRef.current = action;
+    }
 
     const user = identityRef.current.firebaseUser;
     if (!user || typeof user.getIdToken !== 'function') return false;
