@@ -83,7 +83,14 @@ async function handleIdentify(ws, data, state) {
   const reconnected = !!(activeSession && !activeSession.player.connected
     && game.reconnectPlayer(uid, ws, state.playerId));
 
-  social.setOnline(state.clientId, ws, state.name, avatar);
+  // On recovery, keep the identity already attached to the match instead of
+  // overwriting the social profile with a fresh tab's temporary defaults.
+  if (reconnected && activeSession) {
+    state.name = activeSession.player.name;
+    state.avatar = activeSession.player.avatar;
+  }
+
+  social.setOnline(state.clientId, ws, state.name, state.avatar);
   game.send(ws, { type: 'identified', reconnected });
   game.send(ws, { type: 'friends_list', friends: social.getFriendsList(state.clientId) });
   game.send(ws, { type: 'friend_requests', requests: social.getPendingRequests(state.clientId) });
@@ -384,7 +391,7 @@ wss.on('connection', (ws, req) => {
     limiter.remove(state.playerId);
     if (state.clientId) {
       social.setOffline(state.clientId, ws);
-      notifyPresence(state.clientId, false);
+      if (!social.isOnline(state.clientId)) notifyPresence(state.clientId, false);
     }
 
     const wi = waitingPlayers.findIndex((w) => w.id === state.playerId);
