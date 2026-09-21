@@ -18,6 +18,7 @@ export function useGameSocket({
   shouldRecover,
   expectGameRecovery = false,
   expectRoomRecovery = false,
+  recoverGameOnIdentify = true,
   recoverRoomOnIdentify = true,
   onMessageRef,
   onFatalError,
@@ -35,6 +36,7 @@ export function useGameSocket({
   const shouldRecoverRef = useRef(shouldRecover);
   const expectGameRecoveryRef = useRef(expectGameRecovery);
   const expectRoomRecoveryRef = useRef(expectRoomRecovery);
+  const recoverGameOnIdentifyRef = useRef(recoverGameOnIdentify);
   const recoverRoomOnIdentifyRef = useRef(recoverRoomOnIdentify);
   const fatalRef = useRef(onFatalError);
   const clearPendingRef = useRef(onPendingClear);
@@ -45,6 +47,7 @@ export function useGameSocket({
   shouldRecoverRef.current = shouldRecover;
   expectGameRecoveryRef.current = expectGameRecovery;
   expectRoomRecoveryRef.current = expectRoomRecovery;
+  recoverGameOnIdentifyRef.current = recoverGameOnIdentify;
   recoverRoomOnIdentifyRef.current = recoverRoomOnIdentify;
   fatalRef.current = onFatalError;
   clearPendingRef.current = onPendingClear;
@@ -96,6 +99,7 @@ export function useGameSocket({
         avatar: identity.avatar,
         clientId: user.uid,
         idToken,
+        recoverGame: recoverGameOnIdentifyRef.current,
         recoverRoom: recoverRoomOnIdentifyRef.current,
       }));
     } catch (err) {
