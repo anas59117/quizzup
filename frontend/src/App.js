@@ -427,7 +427,7 @@ export default function App() {
   const onNav = useCallback((s) => { if (s === 'categories') setCategoryFamily(null); setStage(s); }, []);
 
   function answer(index) {
-    if (selected !== null || reveal || reconnecting) return;
+    if (selected !== null || reveal || reconnecting || question?.expired) return;
     // Only mark the answer as "selected" once it's actually been sent — the
     // old code called setSelected unconditionally before checking the
     // socket, so if the connection had silently dropped the button would
