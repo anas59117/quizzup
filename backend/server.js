@@ -546,9 +546,14 @@ function handleGameplay(ws, data, state) {
     if (!allowAction(actionLimiters.roomJoinIp, state.ip, ws, 'ROOM_JOIN_RATE_LIMITED')) return true;
     const code = String(data.code || '').toUpperCase().trim();
     const room = privateRooms.get(code);
-    if (!room || room.players[0].connected === false || !room.players[0].ws || room.players[0].ws.readyState !== 1) {
-      if (room) removeRoom(code, { notify: true });
+    if (!room) {
       game.send(ws, { type: 'room_not_found' });
+      return true;
+    }
+    if (room.players[0].connected === false || !room.players[0].ws || room.players[0].ws.readyState !== 1) {
+      // Preserve the room during the host's reconnect grace period. A third
+      // party trying the code should not be able to destroy that recovery.
+      game.send(ws, { type: 'room_unavailable' });
       return true;
     }
     if (room.players.some((p) => p.id === playerId || p.clientId === state.clientId)) {
