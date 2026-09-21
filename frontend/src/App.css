@@ -191,6 +191,7 @@ body { font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', san
 .topic-tile:active { transform: scale(0.93); }
 .tile-icon-sq { width: 100%; aspect-ratio: 1; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.7em; box-shadow: var(--shadow-md); position: relative; overflow: hidden; }
 .tile-logo-img { width: 60%; height: 60%; object-fit: contain; }
+.tile-monogram { font-size: 1.3rem; font-weight: 900; letter-spacing: -.05em; color: rgba(255,255,255,.94); }
 /* Photo-quiz categories (leagues, Foot FR, Rap FR) show a real cropped
    player photo instead of a flat gradient — a much more "attractive"
    illustration than an emoji on a solid color, at zero new-asset cost since
@@ -1049,7 +1050,10 @@ button:focus-visible, input:focus-visible, select:focus-visible {
   height: 58px;
   border-radius: 10px;
   box-shadow: none;
-  font-size: 1.35rem;
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  color: rgba(255,255,255,.94);
 }
 .family-label { font-size: .92rem; letter-spacing: -.02em; }
 .family-desc {
