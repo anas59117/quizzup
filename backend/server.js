@@ -10,6 +10,7 @@ const posts = require('./posts');
 const game = require('./game');
 const RateLimiter = require('./rate-limit');
 const { getClientIp } = require('./client-ip');
+const { flushAllJsonWriters } = require('./json-writer');
 const { verifyIdToken, sweepCache } = require('./auth');
 const stats = require('./stats');
 const { ROOM_TTL_MS, CODE_ALPHABET, MAX_ROOM_PLAYERS } = require('./config');
@@ -730,6 +731,40 @@ setInterval(() => {
 }, 60 * 1000);
 
 server.on('close', () => clearInterval(heartbeatTimer));
+
+let shuttingDown = false;
+async function gracefulShutdown(signal) {
+  if (shuttingDown) return;
+  shuttingDown = true;
+  console.log(`Received ${signal}; flushing persistent state before shutdown...`);
+
+  // Ask clients to reconnect to the replacement instance instead of waiting
+  // for the process to be killed underneath an apparently-open socket.
+  wss.clients.forEach((ws) => {
+    try { ws.close(1012, 'Server restart'); } catch {}
+  });
+
+  const forceExit = setTimeout(() => {
+    console.error('Graceful shutdown timed out.');
+    process.exit(1);
+  }, 5000);
+  forceExit.unref();
+
+  try {
+    await flushAllJsonWriters();
+    server.close(() => {
+      clearTimeout(forceExit);
+      process.exit(0);
+    });
+  } catch (err) {
+    console.error('Failed to flush persistent state during shutdown:', err);
+    clearTimeout(forceExit);
+    process.exit(1);
+  }
+}
+
+process.once('SIGTERM', () => gracefulShutdown('SIGTERM'));
+process.once('SIGINT', () => gracefulShutdown('SIGINT'));
 
 server.listen(PORT, () => {
   console.log(`\u{1F3AE} QuizzUp backend on http://localhost:${PORT}`);
