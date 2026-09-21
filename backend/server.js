@@ -57,8 +57,9 @@ function getClientIp(req) {
 
 const waitingPlayers = [];
 const privateRooms = new Map();
-const openRoomByPlayer = new Map();
+const openRoomByClient = new Map();
 const pendingPlayers = new Set();
+const pendingClients = new Set();
 const limiter = new RateLimiter();
 const ipLimiter = new RateLimiter(2000, 40);
 
@@ -245,8 +246,14 @@ function isInActiveGame(playerId) {
   return !!(g && g.status === 'active');
 }
 
-function isBusy(playerId) {
-  return isInActiveGame(playerId) || pendingPlayers.has(playerId);
+function isBusy(playerId, clientId) {
+  return isInActiveGame(playerId)
+    || pendingPlayers.has(playerId)
+    || (!!clientId && (
+      pendingClients.has(clientId)
+      || !!game.findActiveSessionByClientId(clientId)
+      || game.startingClients.has(clientId)
+    ));
 }
 
 function requireAuth(ws, state) {
@@ -256,13 +263,19 @@ function requireAuth(ws, state) {
 }
 
 function startGameGuarded(players, categoryKey) {
-  players.forEach((p) => pendingPlayers.add(p.id));
+  players.forEach((p) => {
+    pendingPlayers.add(p.id);
+    if (p.clientId) pendingClients.add(p.clientId);
+  });
   return game.startGame(players, categoryKey)
     .catch((err) => {
       const code = err && err.message ? err.message : 'GAME_START_FAILED';
       players.forEach((p) => game.send(p.ws, { type: 'error', code }));
     })
-    .finally(() => players.forEach((p) => pendingPlayers.delete(p.id)));
+    .finally(() => players.forEach((p) => {
+      pendingPlayers.delete(p.id);
+      if (p.clientId) pendingClients.delete(p.clientId);
+    }));
 }
 
 function handleGameplay(ws, data, state) {
@@ -289,7 +302,7 @@ function handleGameplay(ws, data, state) {
   }
 
   if (data.type === 'solo') {
-    if (isBusy(playerId)) return true;
+    if (isBusy(playerId, state.clientId)) return true;
     if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
     const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
     const categoryKey = typeof data.category === 'string' ? data.category : null;
@@ -299,7 +312,7 @@ function handleGameplay(ws, data, state) {
   }
 
   if (data.type === 'join') {
-    if (isBusy(playerId)) return true;
+    if (isBusy(playerId, state.clientId)) return true;
     if (waitingPlayers.some((w) => w.id === playerId || w.clientId === state.clientId)) {
       game.send(ws, { type: 'already_playing' });
       return true;
@@ -312,7 +325,7 @@ function handleGameplay(ws, data, state) {
       w.categoryKey === categoryKey
       && w.clientId !== state.clientId
       && w.ws.readyState === 1
-      && !isBusy(w.id)
+      && !isBusy(w.id, w.clientId)
     );
     if (oppIdx !== -1) {
       const opp = waitingPlayers.splice(oppIdx, 1)[0];
@@ -334,8 +347,8 @@ function handleGameplay(ws, data, state) {
   }
 
   if (data.type === 'create_room') {
-    if (isBusy(playerId)) return true;
-    const existingCode = openRoomByPlayer.get(playerId);
+    if (isBusy(playerId, state.clientId)) return true;
+    const existingCode = openRoomByClient.get(state.clientId);
     const existing = existingCode && privateRooms.get(existingCode);
     if (existing) {
       game.send(ws, { type: 'room_created', code: existing.code, players: roomView(existing), isHost: true, canStart: existing.players.length >= 2 });
@@ -351,13 +364,13 @@ function handleGameplay(ws, data, state) {
       categoryKey, createdAt: Date.now(),
     };
     privateRooms.set(code, room);
-    openRoomByPlayer.set(playerId, code);
+    openRoomByClient.set(state.clientId, code);
     game.send(ws, { type: 'room_created', code, players: roomView(room), isHost: true, canStart: false });
     return true;
   }
 
   if (data.type === 'join_room') {
-    if (isBusy(playerId)) { game.send(ws, { type: 'already_playing' }); return true; }
+    if (isBusy(playerId, state.clientId)) { game.send(ws, { type: 'already_playing' }); return true; }
     if (!allowAction(actionLimiters.roomJoin, state.clientId, ws, 'ROOM_JOIN_RATE_LIMITED')) return true;
     if (!allowAction(actionLimiters.roomJoinIp, state.ip, ws, 'ROOM_JOIN_RATE_LIMITED')) return true;
     const code = String(data.code || '').toUpperCase().trim();
@@ -384,12 +397,12 @@ function handleGameplay(ws, data, state) {
     const room = privateRooms.get(code);
     if (!room || room.players[0].id !== playerId) return true;
     if (room.players.length < 2 || room.players.length > MAX_ROOM_PLAYERS) return true;
-    if (room.players.some((p) => isBusy(p.id))) {
+    if (room.players.some((p) => isBusy(p.id, p.clientId))) {
       room.players.forEach((p) => game.send(p.ws, { type: 'already_playing' }));
       return true;
     }
     privateRooms.delete(code);
-    openRoomByPlayer.delete(playerId);
+    openRoomByClient.delete(room.players[0].clientId);
     startGameGuarded(room.players, room.categoryKey);
     return true;
   }
@@ -461,7 +474,7 @@ wss.on('connection', (ws, req) => {
       if (idx === -1) continue;
       if (idx === 0) {
         privateRooms.delete(code);
-        openRoomByPlayer.delete(state.playerId);
+        openRoomByClient.delete(room.players[0].clientId);
         room.players.forEach((p) => {
           if (p.id !== state.playerId) game.send(p.ws, { type: 'room_closed' });
         });
@@ -488,7 +501,7 @@ setInterval(() => {
   for (const [code, room] of privateRooms) {
     if (now - room.createdAt > ROOM_TTL_MS || room.players[0].ws.readyState !== 1) {
       privateRooms.delete(code);
-      openRoomByPlayer.delete(room.players[0].id);
+      openRoomByClient.delete(room.players[0].clientId);
     }
   }
   limiter.sweep();
