@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { levelFromXp, rankLeaderboard } = require('./stats');
+const { levelFromXp, rankLeaderboard, appendRecentMatch } = require('./stats');
 
 test('level curve matches exact triangular XP boundaries', () => {
   assert.deepEqual(levelFromXp(0), { level: 1, xpIntoLevel: 0, xpForLevel: 200 });
@@ -55,4 +55,36 @@ test('leaderboard limit is clamped and current rank can be outside the page', ()
   assert.equal(result.yourRank, 120);
   assert.equal(result.entries[0].rank, 1);
   assert.equal(result.entries[99].rank, 100);
+});
+
+
+test('new recent matches are prepended without mutating existing history', () => {
+  const existing = [{
+    playedAt: 1,
+    mode: 'solo',
+    outcome: 'solo',
+    score: 10,
+    xp: 10,
+    coins: 1,
+    categoryKey: 'science',
+    opponents: [],
+    leftEarly: false,
+  }];
+
+  const next = appendRecentMatch(existing, {
+    playedAt: 2,
+    mode: 'multiplayer',
+    outcome: 'win',
+    score: 200,
+    xp: 340,
+    coins: 50,
+    categoryKey: 'tennis',
+    opponents: [{ name: 'Rival', avatar: '🦁', score: 150 }],
+  });
+
+  assert.equal(existing.length, 1);
+  assert.equal(next.length, 2);
+  assert.equal(next[0].playedAt, 2);
+  assert.equal(next[0].outcome, 'win');
+  assert.equal(next[1].playedAt, 1);
 });
