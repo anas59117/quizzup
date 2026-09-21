@@ -437,3 +437,40 @@ test('a surviving player in a multiplayer forfeit still receives the win', () =>
     global.setTimeout = originalSetTimeout;
   }
 });
+
+
+test('reconnect after the answer deadline marks the question as expired', () => {
+  const ws = fakeWs();
+  const g = {
+    id: 'expired-reconnect',
+    status: 'active',
+    phase: 'question',
+    currentRound: 0,
+    questionStart: performance.now() - 10001,
+    questions: [{
+      text: 'Q', category: 'Test', icon: 'T',
+      answers: ['A', 'B', 'C', 'D'], correct: 0,
+    }],
+    players: [
+      {
+        id: 'old-expired', clientId: 'expired-user', ws: null, connected: false,
+        score: 0, name: 'A', avatar: 'A', reconnectTimer: null,
+      },
+      {
+        id: 'other-expired', clientId: 'other-user', ws: fakeWs(), connected: true,
+        score: 0, name: 'B', avatar: 'B', reconnectTimer: null,
+      },
+    ],
+    roundAnswers: {},
+    roundTimer: null,
+    reported: new Set(),
+  };
+
+  game.activeGames.set(g.id, g);
+  game.playerSessions.set('old-expired', g.id);
+
+  assert.equal(game.reconnectPlayer('expired-user', ws, 'new-expired'), true);
+  const question = ws.messages.find((m) => m.type === 'question');
+  assert.equal(question.expired, true);
+  assert.equal(question.answered, false);
+});
