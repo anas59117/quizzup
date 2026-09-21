@@ -8,6 +8,8 @@
 // presence, friend requests, and DMs. Every verified uid now comes from a
 // token Firebase itself signed, which a client cannot forge.
 
+const crypto = require('crypto');
+
 const API_KEY = process.env.FIREBASE_API_KEY;
 const LOOKUP_URL = 'https://identitytoolkit.googleapis.com/v1/accounts:lookup';
 
@@ -15,33 +17,39 @@ const LOOKUP_URL = 'https://identitytoolkit.googleapis.com/v1/accounts:lookup';
 // message — a token is valid for its own lifetime (~1h), so caching for a
 // few minutes is safe and cuts the network round-trip on the hot path.
 const CACHE_TTL_MS = 5 * 60 * 1000;
-const cache = new Map(); // idToken -> { uid, expiresAt }
+const cache = new Map(); // sha256(idToken) -> { uid, expiresAt }
+
+function tokenCacheKey(idToken) {
+  return crypto.createHash('sha256').update(idToken).digest('hex');
+}
 
 async function verifyIdToken(idToken) {
   if (!idToken || typeof idToken !== 'string') return null;
   if (!API_KEY) return null; // misconfigured server — fail closed, not open
 
-  const cached = cache.get(idToken);
+  const cacheKey = tokenCacheKey(idToken);
+  const cached = cache.get(cacheKey);
   if (cached && cached.expiresAt > Date.now()) return cached.uid;
 
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 5000);
   try {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 5000);
     const resp = await fetch(`${LOOKUP_URL}?key=${API_KEY}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ idToken }),
       signal: controller.signal,
     });
-    clearTimeout(timeout);
     if (!resp.ok) return null;
     const data = await resp.json();
     const uid = data?.users?.[0]?.localId;
     if (!uid || typeof uid !== 'string') return null;
-    cache.set(idToken, { uid, expiresAt: Date.now() + CACHE_TTL_MS });
+    cache.set(cacheKey, { uid, expiresAt: Date.now() + CACHE_TTL_MS });
     return uid;
   } catch {
     return null; // network error / timeout / bad response — fail closed
+  } finally {
+    clearTimeout(timeout);
   }
 }
 
