@@ -44,33 +44,6 @@ jobs:
             appId: get('appId'),
           };
 
-          // The Firebase console screenshot uses a font where uppercase O and
-          // zero are easy to confuse. Probe only those final visible variants
-          // and report labels/statuses, never the key values.
-          const prefix = config.apiKey.slice(0, -2);
-          const suffixCandidates = ['Oo', '0o', 'OO', '00', 'O0', 'oO', 'o0'];
-          let validApiKey = null;
-          for (const suffix of suffixCandidates) {
-            const candidate = prefix + suffix;
-            const probe = await fetch(
-              'https://identitytoolkit.googleapis.com/v1/projects?key=' + encodeURIComponent(candidate)
-                + '&firebaseAppId=' + encodeURIComponent(config.appId),
-              { headers: {
-                'Content-Type': 'application/json',
-                Origin: 'https://quizzup-ten.vercel.app',
-                Referer: 'https://quizzup-ten.vercel.app/',
-              } }
-            );
-            console.log('key_variant_' + suffix.replace(/0/g, 'zero') + '_status=' + probe.status);
-            if (probe.ok && !validApiKey) validApiKey = candidate;
-          }
-          if (!validApiKey) {
-            console.log('key_variant_result=none');
-            process.exit(2);
-          }
-          config.apiKey = validApiKey;
-          console.log('key_variant_result=found');
-
           const origin = 'https://quizzup-ten.vercel.app';
           const headers = {
             'Content-Type': 'application/json',
@@ -124,9 +97,7 @@ jobs:
             try {
               const result = await new Promise((resolve, reject) => {
                 const timer = setTimeout(() => reject(new Error('WS_TIMEOUT')), 10000);
-                socket = new WebSocket('wss://quizzup-production.up.railway.app/ws', {
-                  origin,
-                });
+                socket = new WebSocket('wss://quizzup-production.up.railway.app/ws', { origin });
 
                 let sessionSeen = false;
                 socket.on('message', (raw) => {
