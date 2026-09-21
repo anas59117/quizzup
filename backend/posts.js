@@ -5,6 +5,7 @@
 const { createJsonWriter, readJsonFileSync } = require('./json-writer');
 const { getStorePath } = require('./store-path');
 const { normalizePostsStore } = require('./store-normalize');
+const { randomId } = require('./ids');
 
 const STORE = getStorePath('posts.json');
 const MAX_POSTS = 500; // oldest posts drop off once this cap is hit
@@ -54,7 +55,7 @@ function addPost(clientId, authorName, authorAvatar, category, text) {
   const clean = String(text || '').trim().slice(0, MAX_TEXT_LEN);
   if (!clean) return null;
   const post = {
-    id: `p_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`,
+    id: randomId('p_'),
     authorId: clientId,
     authorName: String(authorName || 'Player').slice(0, 20),
     authorAvatar: String(authorAvatar || '\u{1F43A}').slice(0, 4),
@@ -90,12 +91,23 @@ function reportPost(postId, clientId) {
   if (!post) return null;
 
   const wasHidden = post.reportedBy.length >= REPORT_THRESHOLD;
-  if (!post.reportedBy.includes(clientId)) {
-    post.reportedBy.push(clientId);
-    persist();
+  if (wasHidden) {
+    return { id: post.id, accepted: false, hidden: false };
   }
+
+  if (post.reportedBy.includes(clientId)) {
+    return { id: post.id, accepted: true, duplicate: true, hidden: false };
+  }
+
+  post.reportedBy.push(clientId);
+  persist();
   const isHidden = post.reportedBy.length >= REPORT_THRESHOLD;
-  return { id: post.id, hidden: !wasHidden && isHidden };
+  return {
+    id: post.id,
+    accepted: true,
+    duplicate: false,
+    hidden: !wasHidden && isHidden,
+  };
 }
 
 module.exports = { getFeed, addPost, toggleReaction, reportPost };
