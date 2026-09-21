@@ -75,6 +75,8 @@ const limiter = new RateLimiter();
 const ipLimiter = new RateLimiter(2000, 40);
 
 const actionLimiters = {
+  identifySocket: new RateLimiter(60 * 1000, 6),
+  identifyIp: new RateLimiter(60 * 1000, 30),
   friendRequest: new RateLimiter(60 * 1000, 10),
   dm: new RateLimiter(10 * 1000, 20),
   gameChat: new RateLimiter(10 * 1000, 12),
@@ -645,6 +647,13 @@ wss.on('connection', (ws, req) => {
     if (!limiter.check(state.playerId) || !ipLimiter.check(ip)) return;
 
     if (data.type === 'identify') {
+      if (
+        !actionLimiters.identifySocket.check(state.playerId)
+        || !actionLimiters.identifyIp.check(ip)
+      ) {
+        game.send(ws, { type: 'auth_required', code: 'AUTH_RATE_LIMITED' });
+        return;
+      }
       await handleIdentify(ws, data, state);
       return;
     }
