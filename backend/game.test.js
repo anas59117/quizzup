@@ -474,3 +474,74 @@ test('reconnect after the answer deadline marks the question as expired', () => 
   assert.equal(question.expired, true);
   assert.equal(question.answered, false);
 });
+
+
+test('multiplayer rematch waits until every player requests it', () => {
+  const g = {
+    id: 'finished-rematch',
+    status: 'finished',
+    phase: 'finished',
+    mode: 'multiplayer',
+    categoryKey: 'sports',
+    finishedAt: Date.now(),
+    rematchRequests: new Set(),
+    players: [
+      { id: 'p1', clientId: 'u1', ws: fakeWs(), name: 'A', avatar: 'A', score: 10 },
+      { id: 'p2', clientId: 'u2', ws: fakeWs(), name: 'B', avatar: 'B', score: 5 },
+    ],
+  };
+  game.activeGames.set(g.id, g);
+
+  const first = game.requestRematch('u1');
+  assert.equal(first.status, 'waiting');
+  assert.equal(g.rematchRequests.has('u1'), true);
+
+  const second = game.requestRematch('u2');
+  assert.equal(second.status, 'ready');
+  assert.equal(second.categoryKey, 'sports');
+  assert.deepEqual(second.players.map((p) => p.clientId), ['u1', 'u2']);
+  assert.equal(g.rematchRequests.size, 0);
+});
+
+test('solo rematch is immediately ready on the same category', () => {
+  const g = {
+    id: 'finished-solo-rematch',
+    status: 'finished',
+    phase: 'finished',
+    mode: 'solo',
+    categoryKey: 'science',
+    finishedAt: Date.now(),
+    rematchRequests: new Set(),
+    players: [
+      { id: 'solo', clientId: 'solo-u', ws: fakeWs(), name: 'Solo', avatar: 'S', score: 42 },
+    ],
+  };
+  game.activeGames.set(g.id, g);
+
+  const request = game.requestRematch('solo-u');
+  assert.equal(request.status, 'ready');
+  assert.equal(request.categoryKey, 'science');
+  assert.equal(request.players.length, 1);
+});
+
+test('rematch can be cancelled before the other player accepts', () => {
+  const g = {
+    id: 'finished-cancel-rematch',
+    status: 'finished',
+    phase: 'finished',
+    mode: 'multiplayer',
+    categoryKey: null,
+    finishedAt: Date.now(),
+    rematchRequests: new Set(),
+    players: [
+      { id: 'p1', clientId: 'u1', ws: fakeWs(), name: 'A', avatar: 'A', score: 1 },
+      { id: 'p2', clientId: 'u2', ws: fakeWs(), name: 'B', avatar: 'B', score: 0 },
+    ],
+  };
+  game.activeGames.set(g.id, g);
+
+  assert.equal(game.requestRematch('u1').status, 'waiting');
+  assert.equal(game.cancelRematch('u1'), true);
+  assert.equal(g.rematchRequests.size, 0);
+  assert.equal(game.requestRematch('u2').status, 'waiting');
+});
