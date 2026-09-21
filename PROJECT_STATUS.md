@@ -45,7 +45,7 @@ Objectif : **~3000€/mois**, budget ~350€, solo, web-first.
     hors-temps et des double-submits.
   - **Bonus round** : dernière question vaut x2.
   - **Feedback par round** : reveal de la bonne réponse + points gagnés.
-  - **Déconnexion** : forfait automatique (l'adversaire n'est pas bloqué).
+  - **Déconnexion / reconnexion** : grâce de 15 s, reprise de la partie (y compris après refresh), puis forfait automatique si le joueur ne revient pas.
   - Sélection de catégorie au matchmaking + endpoint `/categories`.
 - **Frontend réécrit** (`frontend/src/App.js` + `App.css`) — compile OK,
   rendu vérifié dark + light :
@@ -84,8 +84,24 @@ LAYOUT et le FEEL (mécaniques, pas la marque : notre nom/identité restent) :
   côté client → 2 joueurs ne se matchaient jamais. Désormais quick match =
   pool commun (category null), le serveur résout la catégorie au démarrage.
 
-Brique 2 (profils persistants + follow + classement global) → **nécessite
-Firebase** (compte à créer par l'utilisateur). Non commencée.
+Brique 2 partiellement faite : **Firebase Auth** (anonyme + liaison Google),
+profils sociaux, amis, demandes d'amis, présence et DM sont fonctionnels.
+La persistance sociale/stats/feed reste toutefois en JSON local single-instance :
+migration vers Firestore encore à faire avant le scale.
+
+### Hardening / fiabilité
+
+- Firebase ID token vérifié côté backend avant gameplay/social persistant.
+- Serveur autoritaire pour réponses, score et timer.
+- Protection double-compte : matchmaking, rooms privées et démarrage asynchrone.
+- WebSocket : payload max 16 KiB, origin allowlist via `CORS_ORIGIN`, heartbeat,
+  plafond de connexions/IP configurable et rate limits dédiés (DM, chat, rooms,
+  posts, demandes d'amis).
+- Reconnexion : état de manche restauré, réponse déjà envoyée conservée,
+  reveal et résultat final récupérables après refresh/coupure.
+- Persistence JSON : écritures debounce **sérialisées** (plus d'écritures
+  concurrentes pouvant réécrire un snapshot ancien).
+- CI GitHub Actions : syntax check backend + tests Node + build React production.
 
 ## 📋 Écrans
 
@@ -126,7 +142,7 @@ liste/palette), ✅ défi par code, ✅ fix quick match. Reste :
       — nécessite Firebase
 - [ ] **Cosmétiques persistants** (shop + inventory) — nécessite Firebase
       (structure prête : coins/XP en fin de partie, avatars sélectionnables)
-- [ ] Reconnexion en cours de partie (actuellement : déconnexion = forfait)
+- [x] Reconnexion en cours de partie + refresh recovery (grâce 15 s)
 - [ ] Intégrer les images dans les questions (champ `image` optionnel)
 
 ## ▶️ Lancer en local (dev)
@@ -145,5 +161,7 @@ les deux → le match se lance. Le frontend parle au backend sur :3001 en dev.
 
 - Frontend : React + WebSocket client
 - Backend : Node.js + Express + WS (+ Redis pour matchmaking à l'échelle)
-- DB : Firebase Firestore (leaderboards, users, cosmétiques)
+- DB actuelle : JSON local sérialisé (MVP single-instance)
+- DB cible : Firebase Firestore (stats/social/feed/modération/cosmétiques)
+- État temps réel cible multi-instance : Redis (matchmaking/sessions/presence)
 - Hosting : Railway + Vercel
