@@ -205,6 +205,11 @@ function removePlayer(game, playerId) {
   if (left.reconnectTimer) clearTimeout(left.reconnectTimer);
   playerSessions.delete(playerId);
 
+  // A permanent leave/expired reconnect window is a forfeit. Record it now
+  // because this player is removed from game.players and would otherwise
+  // disappear from endGame() without a loss ever being persisted.
+  stats.recordResult(left.clientId, false, false, 0);
+
   if (game.players.length < 2) {
     endGame(game, 'opponent_disconnected');
     return;
