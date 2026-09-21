@@ -5,7 +5,7 @@
 import { initializeApp } from 'firebase/app';
 import {
   getAuth, onAuthStateChanged, signInAnonymously,
-  GoogleAuthProvider, signInWithPopup, linkWithPopup,
+  GoogleAuthProvider, linkWithPopup,
 } from 'firebase/auth';
 
 const firebaseConfig = {
@@ -38,7 +38,14 @@ function ensureSignedIn() {
 async function linkGoogleAccount() {
   const user = auth.currentUser;
   if (!user) throw new Error('Not signed in');
-  if (!user.isAnonymous) return signInWithPopup(auth, googleProvider);
+
+  // Never sign into a different uid here: stats/friends are keyed by uid and
+  // the backend binds one WebSocket to one verified identity. If Google is
+  // already linked, return the current user; otherwise link the provider to
+  // this exact account (anonymous or otherwise).
+  if (user.providerData.some((provider) => provider.providerId === 'google.com')) {
+    return { user };
+  }
   return linkWithPopup(user, googleProvider);
 }
 
