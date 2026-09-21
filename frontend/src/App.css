@@ -1153,6 +1153,7 @@ button:focus-visible, input:focus-visible, select:focus-visible {
   border-radius: 15px;
   background: var(--accent);
   color: #fff;
+  border: 0;
   box-shadow: none;
   transform: none;
 }
@@ -1629,3 +1630,7 @@ button:focus-visible, input:focus-visible, select:focus-visible {
 }
 .game-bg .ctrl-btn { color: #aaaab2; }
 .game-bg .ctrl-btn:hover { color: #fff; background: #1d1d20; }
+
+.room-code:hover { transform: translateY(-1px); }
+.vs-screen,
+.vs-ava.me { animation: none; }
