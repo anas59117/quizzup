@@ -2,10 +2,10 @@
 // debounced-JSON-file pattern as reports.js/social.js — good enough for a
 // single instance; move to a real DB if this ever needs to scale out.
 
-const path = require('path');
 const { createJsonWriter, readJsonFileSync } = require('./json-writer');
+const { getStorePath } = require('./store-path');
 
-const STORE = path.join(__dirname, 'stats.json');
+const STORE = getStorePath('stats.json');
 
 const stats = readJsonFileSync(
   STORE,
