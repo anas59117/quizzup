@@ -246,6 +246,21 @@ function roomView(room) {
   return room.players.map((p) => ({ id: p.id, name: p.name, avatar: p.avatar }));
 }
 
+function removeRoom(code, { notify = false, exceptPlayerId = null } = {}) {
+  const room = privateRooms.get(code);
+  if (!room) return null;
+
+  privateRooms.delete(code);
+  room.players.forEach((p) => roomByClient.delete(p.clientId));
+
+  if (notify) {
+    room.players.forEach((p) => {
+      if (p.id !== exceptPlayerId) game.send(p.ws, { type: 'room_closed' });
+    });
+  }
+  return room;
+}
+
 function broadcastRoomUpdate(room) {
   if (!room.players.length) return;
   const view = roomView(room);
@@ -343,7 +358,10 @@ function handleGameplay(ws, data, state) {
   }
 
   if (data.type === 'join') {
-    if (isBusy(playerId, state.clientId)) return true;
+    if (isBusy(playerId, state.clientId)) {
+      game.send(ws, { type: 'already_playing' });
+      return true;
+    }
     if (waitingPlayers.some((w) => w.id === playerId || w.clientId === state.clientId)) {
       game.send(ws, { type: 'already_playing' });
       return true;
@@ -380,6 +398,7 @@ function handleGameplay(ws, data, state) {
   if (data.type === 'create_room') {
     const existingCode = roomByClient.get(state.clientId);
     const existing = existingCode && privateRooms.get(existingCode);
+    if (existingCode && !existing) roomByClient.delete(state.clientId);
     if (existing) {
       const host = existing.players[0];
       if (host && host.id === playerId) {
@@ -418,7 +437,7 @@ function handleGameplay(ws, data, state) {
     const code = String(data.code || '').toUpperCase().trim();
     const room = privateRooms.get(code);
     if (!room || room.players[0].ws.readyState !== 1) {
-      if (room) privateRooms.delete(code);
+      if (room) removeRoom(code, { notify: true });
       game.send(ws, { type: 'room_not_found' });
       return true;
     }
@@ -444,8 +463,7 @@ function handleGameplay(ws, data, state) {
       room.players.forEach((p) => game.send(p.ws, { type: 'already_playing' }));
       return true;
     }
-    privateRooms.delete(code);
-    room.players.forEach((p) => roomByClient.delete(p.clientId));
+    removeRoom(code);
     startGameGuarded(room.players, room.categoryKey);
     return true;
   }
@@ -530,11 +548,7 @@ wss.on('connection', (ws, req) => {
       const idx = room.players.findIndex((p) => p.id === state.playerId);
       if (idx === -1) continue;
       if (idx === 0) {
-        privateRooms.delete(code);
-        room.players.forEach((p) => roomByClient.delete(p.clientId));
-        room.players.forEach((p) => {
-          if (p.id !== state.playerId) game.send(p.ws, { type: 'room_closed' });
-        });
+        removeRoom(code, { notify: true, exceptPlayerId: state.playerId });
       } else {
         const [left] = room.players.splice(idx, 1);
         if (left?.clientId) roomByClient.delete(left.clientId);
@@ -574,8 +588,7 @@ setInterval(() => {
   const now = Date.now();
   for (const [code, room] of privateRooms) {
     if (now - room.createdAt > ROOM_TTL_MS || room.players[0].ws.readyState !== 1) {
-      privateRooms.delete(code);
-      room.players.forEach((p) => roomByClient.delete(p.clientId));
+      removeRoom(code, { notify: true });
     }
   }
   limiter.sweep();
