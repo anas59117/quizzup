@@ -545,3 +545,51 @@ test('rematch can be cancelled before the other player accepts', () => {
   assert.equal(g.rematchRequests.size, 0);
   assert.equal(game.requestRematch('u2').status, 'waiting');
 });
+
+
+test('disconnect grace remains 15 seconds while finished games retain rematch state for 60 seconds', () => {
+  const originalSetTimeout = global.setTimeout;
+  const delays = [];
+  global.setTimeout = (fn, delay) => {
+    delays.push(delay);
+    return { unref() {} };
+  };
+
+  try {
+    const disconnectGame = {
+      id: 'grace-check',
+      status: 'active',
+      phase: 'intro',
+      players: [
+        {
+          id: 'gone', clientId: 'u-gone', ws: fakeWs(), connected: true,
+          score: 0, name: 'Gone', avatar: 'G', reconnectTimer: null,
+        },
+        {
+          id: 'stay', clientId: 'u-stay', ws: fakeWs(), connected: true,
+          score: 0, name: 'Stay', avatar: 'S', reconnectTimer: null,
+        },
+      ],
+      roundAnswers: {},
+      roundTimer: null,
+    };
+    game.disconnectPlayer(disconnectGame, 'gone');
+    assert.equal(delays[0], 15000);
+
+    const finishedGame = {
+      id: 'retention-check',
+      mode: 'multiplayer',
+      status: 'active',
+      phase: 'question',
+      players: [{
+        id: 'winner', clientId: null, ws: fakeWs(), connected: true,
+        score: 1, name: 'Winner', avatar: 'W', reconnectTimer: null,
+      }],
+      roundTimer: null,
+    };
+    game.endGame(finishedGame);
+    assert.equal(delays.at(-1), 60000);
+  } finally {
+    global.setTimeout = originalSetTimeout;
+  }
+});
