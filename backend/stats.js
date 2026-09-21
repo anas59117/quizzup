@@ -16,16 +16,25 @@ const stats = normalizeStatsStore(readJsonFileSync(
 
 const persist = createJsonWriter(STORE, () => stats);
 
-// Linear level curve: reaching level N costs N*200 cumulative XP. Returns
-// the player's current level plus progress within it, for a level-up ring.
-function levelFromXp(xp) {
-  let level = 1;
-  let consumed = 0;
-  while (xp - consumed >= level * 200) {
-    consumed += level * 200;
-    level += 1;
-  }
-  return { level, xpIntoLevel: xp - consumed, xpForLevel: level * 200 };
+// Linear per-level cost (level N costs N*200 XP) has a triangular
+// cumulative curve: completing n levels costs 100*n*(n+1). Solve the
+// quadratic directly so a corrupted/very large XP value cannot force
+// millions of loop iterations during profile rendering.
+function levelFromXp(rawXp) {
+  const xp = Number.isFinite(Number(rawXp)) && Number(rawXp) > 0
+    ? Math.floor(Number(rawXp))
+    : 0;
+  const completedLevels = Math.max(
+    0,
+    Math.floor((-1 + Math.sqrt(1 + xp / 25)) / 2)
+  );
+  const level = completedLevels + 1;
+  const consumed = 100 * completedLevels * (completedLevels + 1);
+  return {
+    level,
+    xpIntoLevel: xp - consumed,
+    xpForLevel: level * 200,
+  };
 }
 
 function getStats(clientId) {
@@ -48,4 +57,4 @@ function recordResult(clientId, won, tie, xpEarned) {
   persist();
 }
 
-module.exports = { getStats, recordResult };
+module.exports = { getStats, recordResult, levelFromXp };
