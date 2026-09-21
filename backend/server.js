@@ -274,6 +274,10 @@ function isGameBusy(playerId, clientId) {
     ));
 }
 
+function isWaiting(clientId) {
+  return !!clientId && waitingPlayers.some((p) => p.clientId === clientId);
+}
+
 function isBusy(playerId, clientId) {
   return isGameBusy(playerId, clientId)
     || (!!clientId && roomByClient.has(clientId));
@@ -326,7 +330,10 @@ function handleGameplay(ws, data, state) {
   }
 
   if (data.type === 'solo') {
-    if (isBusy(playerId, state.clientId)) return true;
+    if (isBusy(playerId, state.clientId) || isWaiting(state.clientId)) {
+      game.send(ws, { type: 'already_playing' });
+      return true;
+    }
     if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
     const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
     const categoryKey = typeof data.category === 'string' ? data.category : null;
@@ -382,7 +389,10 @@ function handleGameplay(ws, data, state) {
       }
       return true;
     }
-    if (isBusy(playerId, state.clientId)) { game.send(ws, { type: 'already_playing' }); return true; }
+    if (isBusy(playerId, state.clientId) || isWaiting(state.clientId)) {
+      game.send(ws, { type: 'already_playing' });
+      return true;
+    }
     if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
     const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
     const categoryKey = typeof data.category === 'string' ? data.category : null;
@@ -399,7 +409,10 @@ function handleGameplay(ws, data, state) {
   }
 
   if (data.type === 'join_room') {
-    if (isBusy(playerId, state.clientId)) { game.send(ws, { type: 'already_playing' }); return true; }
+    if (isBusy(playerId, state.clientId) || isWaiting(state.clientId)) {
+      game.send(ws, { type: 'already_playing' });
+      return true;
+    }
     if (!allowAction(actionLimiters.roomJoin, state.clientId, ws, 'ROOM_JOIN_RATE_LIMITED')) return true;
     if (!allowAction(actionLimiters.roomJoinIp, state.ip, ws, 'ROOM_JOIN_RATE_LIMITED')) return true;
     const code = String(data.code || '').toUpperCase().trim();
