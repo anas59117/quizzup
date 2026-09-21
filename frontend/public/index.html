@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0b0b0c" />
   <meta name="color-scheme" content="dark light" />
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('quizzup-theme');
+      const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = savedTheme || preferredTheme;
+    } catch {}
+  </script>
   <meta name="description" content="QuizzUp — des duels de quiz rapides, des thèmes cultes et des parties entre amis." />
   <meta property="og:title" content="QuizzUp" />
   <meta property="og:description" content="Affronte tes amis ou un adversaire en temps réel sur tes thèmes préférés." />
