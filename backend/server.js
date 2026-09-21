@@ -133,7 +133,7 @@ async function handleIdentify(ws, data, state) {
     return;
   }
 
-  const roomSession = findRoomSessionByClientId(uid);
+  let roomSession = findRoomSessionByClientId(uid);
   if (
     roomSession
     && roomSession.player.connected !== false
@@ -145,6 +145,11 @@ async function handleIdentify(ws, data, state) {
     return;
   }
 
+  if (data.recoverRoom === false && roomSession && roomSession.player.connected === false) {
+    leaveRoomByClientId(uid);
+    roomSession = null;
+  }
+
   if (state.clientId && state.clientId !== uid) {
     social.setOffline(state.clientId, ws);
     notifyPresence(state.clientId, false);
@@ -154,7 +159,11 @@ async function handleIdentify(ws, data, state) {
   const finishedSession = game.findFinishedSessionByClientId(uid);
   const recoverySession = activeSession || finishedSession;
   const reconnected = !!(recoverySession && game.reconnectPlayer(uid, ws, state.playerId));
-  const roomReconnected = !reconnected && reconnectRoomPlayer(uid, ws, state.playerId);
+  const roomReconnected = (
+    !reconnected
+    && data.recoverRoom !== false
+    && reconnectRoomPlayer(uid, ws, state.playerId)
+  );
 
   // On recovery, keep the identity already attached to the match/lobby
   // instead of overwriting it with a fresh tab's temporary defaults.
@@ -372,21 +381,27 @@ function disconnectRoomPlayer(clientId, ws) {
   return true;
 }
 
-function leaveRoom(clientId, playerId) {
+function leaveRoomByClientId(clientId, exceptPlayerId = null) {
   const found = findRoomSessionByClientId(clientId);
-  if (!found || found.player.id !== playerId) return false;
+  if (!found) return false;
 
   const { code, room, player, index } = found;
   if (player.reconnectTimer) clearTimeout(player.reconnectTimer);
 
   if (index === 0) {
-    removeRoom(code, { notify: true, exceptPlayerId: playerId });
+    removeRoom(code, { notify: true, exceptPlayerId });
   } else {
     room.players.splice(index, 1);
     roomByClient.delete(clientId);
     broadcastRoomUpdate(room);
   }
   return true;
+}
+
+function leaveRoom(clientId, playerId) {
+  const found = findRoomSessionByClientId(clientId);
+  if (!found || found.player.id !== playerId) return false;
+  return leaveRoomByClientId(clientId, playerId);
 }
 
 function isInActiveGame(playerId) {
