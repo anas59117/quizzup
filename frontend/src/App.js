@@ -7,7 +7,7 @@ import { ensureSignedIn, linkGoogleAccount } from './firebase';
 import { useStats } from './stats';
 import { useFeed, FeedScreen } from './feed';
 import { RoomLobby } from './multiplayer';
-import { AVATARS, useTheme, TopControls, NavBar, JoinScreen, ErrorScreen } from './ui';
+import { AVATARS, useTheme, TopControls, NavBar, JoinScreen, ErrorScreen, Toast } from './ui';
 import { HomeContent, EnterCodeContent, CategoriesContent, ProfileContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent } from './screens';
 import { useI18n } from './i18n';
 import { useGameSocket } from './useGameSocket';
@@ -73,9 +73,11 @@ export default function App() {
   const [firebaseUser, setFirebaseUser] = useState(null);
   const [linking, setLinking] = useState(false);
   const [pending, setPending] = useState(false);
+  const [toast, setToast] = useState(null);
   const tickRef = useRef(null);
   const copyTimerRef = useRef(null);
   const pendingTimerRef = useRef(null);
+  const toastTimerRef = useRef(null);
   const bootNameRef = useRef(name);
   const bootSessionRef = useRef(readLiveSession());
   const matchActionRef = useRef(null);
@@ -89,6 +91,22 @@ export default function App() {
       pendingTimerRef.current = null;
     }
     setPending(false);
+  }, []);
+
+  const showToast = useCallback((message, tone = 'info', duration = 3200) => {
+    if (!message) return;
+    if (toastTimerRef.current) clearTimeout(toastTimerRef.current);
+    setToast({ message, tone });
+    toastTimerRef.current = setTimeout(() => {
+      toastTimerRef.current = null;
+      setToast(null);
+    }, duration);
+  }, []);
+
+  const dismissToast = useCallback(() => {
+    if (toastTimerRef.current) clearTimeout(toastTimerRef.current);
+    toastTimerRef.current = null;
+    setToast(null);
   }, []);
 
   const {
@@ -137,6 +155,7 @@ export default function App() {
     if (tickRef.current) clearInterval(tickRef.current);
     if (copyTimerRef.current) clearTimeout(copyTimerRef.current);
     if (pendingTimerRef.current) clearTimeout(pendingTimerRef.current);
+    if (toastTimerRef.current) clearTimeout(toastTimerRef.current);
   }, []);
 
   // The authoritative backend requires a cryptographically verified identity.
@@ -161,12 +180,14 @@ export default function App() {
     try {
       const result = await linkGoogleAccount();
       setFirebaseUser(result.user);
+      showToast(t('googleLinked'), 'success');
     } catch (err) {
       console.error('Google link failed', err);
+      showToast(t('googleLinkUnavailable'), 'error', 4500);
     } finally {
       setLinking(false);
     }
-  }, []);
+  }, [showToast, t]);
 
   useEffect(() => {
     if (stage !== 'playing' || !question || reveal) return undefined;
@@ -205,6 +226,7 @@ export default function App() {
         setMyId(data.playerId);
         break;
       case 'identified':
+        if (stage === 'feed') feed.refresh();
         if (cancelQueueRef.current && stage === 'waiting') {
           sendSocket({ type: 'cancel_queue' });
           break;
@@ -300,6 +322,7 @@ export default function App() {
       case 'already_playing':
         matchActionRef.current = null;
         clearPending();
+        showToast(t('alreadyPlaying'), 'info');
         break;
       case 'rematch_waiting':
         clearPending();
@@ -328,6 +351,7 @@ export default function App() {
         break;
       case 'rate_limited':
         clearPending();
+        showToast(t('slowDown'), 'error');
         break;
       case 'room_left':
         bootSessionRef.current = null;
@@ -407,6 +431,8 @@ export default function App() {
       case 'error':
         matchActionRef.current = null;
         clearPending();
+        setFatalReason('connection');
+        setFatalCode(data.code || 'SERVER_ERROR');
         setStage('error');
         break;
       default:
@@ -426,6 +452,10 @@ export default function App() {
       connect({ type: 'identify' });
     }
   }, [stage, clientId, firebaseUser]);
+
+  useEffect(() => {
+    if (stage === 'feed') feed.refresh();
+  }, [stage]);
 
   const [soloMode, setSoloMode] = useState(false);
   // `pending` blocks a second matchmaking request (double-tap, rapid-fire
@@ -554,7 +584,7 @@ export default function App() {
   if (stage === 'join') {
     return (
       <div className="app">
-        <TopControls {...topProps} />
+        <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <JoinScreen name={name} setName={setName} avatar={avatar} setAvatar={setAvatar} onContinue={() => setStage('home')} />
       </div>
     );
@@ -563,7 +593,7 @@ export default function App() {
   if (stage === 'home') {
     return (
       <div className="app app-nav app-top">
-        <TopControls {...topProps} />
+        <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <HomeContent
           name={name} avatar={avatar} soloMode={soloMode} setSoloMode={setSoloMode}
           quickMatch={quickMatch} startWithCategory={startWithCategory}
@@ -597,7 +627,7 @@ export default function App() {
       setStage('home');
     };
     return (
-      <div className="app"><TopControls {...topProps} />
+      <div className="app"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <RoomLobby
           code={room.code} players={room.players} isHost={room.isHost} canStart={room.canStart}
           onStart={startRoomMatch} onCancel={cancel} copied={copied} onCopyCode={copyCode}
@@ -607,7 +637,7 @@ export default function App() {
 
   if (stage === 'enter_code') {
     return (
-      <div className="app"><TopControls {...topProps} />
+      <div className="app"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <EnterCodeContent
           joinCode={joinCode} setJoinCode={setJoinCode} joinError={joinError} setJoinError={setJoinError}
           joinRoom={joinRoom} onBack={() => setStage('home')} pending={pending}
@@ -618,7 +648,7 @@ export default function App() {
   if (stage === 'categories') {
     return (
       <div className="app app-nav app-top">
-        <TopControls {...topProps} />
+        <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <CategoriesContent startWithCategory={startWithCategory} onBack={() => setStage('home')} initialFamily={categoryFamily} pending={pending} />
         <NavBar active="categories" onNav={onNav} onQuickMatch={quickMatch} />
       </div>
@@ -628,7 +658,7 @@ export default function App() {
   if (stage === 'feed') {
     return (
       <div className="app app-nav app-top">
-        <TopControls {...topProps} />
+        <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <div className="container wide">
           <div className="cat-header">
             <h2>{t('accueil')}</h2>
@@ -642,7 +672,7 @@ export default function App() {
 
   if (stage === 'profile') {
     return (
-      <div className="app app-nav app-top"><TopControls {...topProps} />
+      <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <ProfileContent
           avatar={avatar} name={name} stats={statsHook.stats}
           isGoogleLinked={!!(firebaseUser && !firebaseUser.isAnonymous)} googleEmail={firebaseUser?.email}
@@ -654,7 +684,7 @@ export default function App() {
 
   if (stage === 'playing' && reconnecting) {
     return (
-      <div className="app game-bg"><TopControls {...topProps} />
+      <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <div className="container center">
           <h2 className="logo">Reconnexion…</h2>
           <p className="tagline">La partie est conservée pendant quelques secondes.</p>
@@ -665,21 +695,21 @@ export default function App() {
 
   if (stage === 'waiting') {
     return (
-      <div className="app game-bg"><TopControls {...topProps} />
+      <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <WaitingContent avatar={avatar} name={name} onCancel={cancelMatchmaking} pending={pending} />
       </div>);
   }
 
   if (stage === 'playing' && intro && !question) {
     return (
-      <div className="app game-bg"><TopControls {...topProps} />
+      <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <RoundIntroContent intro={intro} totalRounds={totalRounds} />
       </div>);
   }
 
   if (stage === 'playing' && question) {
     return (
-      <div className="app game-bg"><TopControls {...topProps} />
+      <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <QuestionContent
           question={question} timeLeft={timeLeft} reveal={reveal} selected={selected} answer={answer}
           opponents={opponents} avatar={avatar} name={name} score={score}
@@ -690,7 +720,7 @@ export default function App() {
 
   if (stage === 'finished' && result) {
     return (
-      <div className="app game-bg"><TopControls {...topProps} />
+      <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <FinishedContent
           result={result} opponents={opponents} myId={myId} social={social}
           addFriend={social.addFriend}
@@ -703,7 +733,7 @@ export default function App() {
 
   if (stage === 'error') {
     return (
-      <div className="app"><TopControls {...topProps} />
+      <div className="app"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <ErrorScreen reason={fatalReason} code={fatalCode} onRetry={() => window.location.reload()} />
       </div>);
   }
