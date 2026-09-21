@@ -57,7 +57,7 @@ function getClientIp(req) {
 
 const waitingPlayers = [];
 const privateRooms = new Map();
-const openRoomByClient = new Map();
+const roomByClient = new Map();
 const pendingPlayers = new Set();
 const pendingClients = new Set();
 const limiter = new RateLimiter();
@@ -253,6 +253,7 @@ function isBusy(playerId, clientId) {
       pendingClients.has(clientId)
       || !!game.findActiveSessionByClientId(clientId)
       || game.startingClients.has(clientId)
+      || roomByClient.has(clientId)
     ));
 }
 
@@ -347,13 +348,18 @@ function handleGameplay(ws, data, state) {
   }
 
   if (data.type === 'create_room') {
-    if (isBusy(playerId, state.clientId)) return true;
-    const existingCode = openRoomByClient.get(state.clientId);
+    const existingCode = roomByClient.get(state.clientId);
     const existing = existingCode && privateRooms.get(existingCode);
     if (existing) {
-      game.send(ws, { type: 'room_created', code: existing.code, players: roomView(existing), isHost: true, canStart: existing.players.length >= 2 });
+      const host = existing.players[0];
+      if (host && host.id === playerId) {
+        game.send(ws, { type: 'room_created', code: existing.code, players: roomView(existing), isHost: true, canStart: existing.players.length >= 2 });
+      } else {
+        game.send(ws, { type: 'already_playing' });
+      }
       return true;
     }
+    if (isBusy(playerId, state.clientId)) { game.send(ws, { type: 'already_playing' }); return true; }
     if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
     const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
     const categoryKey = typeof data.category === 'string' ? data.category : null;
@@ -364,7 +370,7 @@ function handleGameplay(ws, data, state) {
       categoryKey, createdAt: Date.now(),
     };
     privateRooms.set(code, room);
-    openRoomByClient.set(state.clientId, code);
+    roomByClient.set(state.clientId, code);
     game.send(ws, { type: 'room_created', code, players: roomView(room), isHost: true, canStart: false });
     return true;
   }
@@ -388,6 +394,7 @@ function handleGameplay(ws, data, state) {
     if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
     const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F981}';
     room.players.push({ ws, id: playerId, clientId: state.clientId, name: state.name, avatar });
+    roomByClient.set(state.clientId, code);
     broadcastRoomUpdate(room);
     return true;
   }
@@ -402,7 +409,7 @@ function handleGameplay(ws, data, state) {
       return true;
     }
     privateRooms.delete(code);
-    openRoomByClient.delete(room.players[0].clientId);
+    room.players.forEach((p) => roomByClient.delete(p.clientId));
     startGameGuarded(room.players, room.categoryKey);
     return true;
   }
@@ -474,12 +481,13 @@ wss.on('connection', (ws, req) => {
       if (idx === -1) continue;
       if (idx === 0) {
         privateRooms.delete(code);
-        openRoomByClient.delete(room.players[0].clientId);
+        room.players.forEach((p) => roomByClient.delete(p.clientId));
         room.players.forEach((p) => {
           if (p.id !== state.playerId) game.send(p.ws, { type: 'room_closed' });
         });
       } else {
-        room.players.splice(idx, 1);
+        const [left] = room.players.splice(idx, 1);
+        if (left?.clientId) roomByClient.delete(left.clientId);
         broadcastRoomUpdate(room);
       }
     }
@@ -501,7 +509,7 @@ setInterval(() => {
   for (const [code, room] of privateRooms) {
     if (now - room.createdAt > ROOM_TTL_MS || room.players[0].ws.readyState !== 1) {
       privateRooms.delete(code);
-      openRoomByClient.delete(room.players[0].clientId);
+      room.players.forEach((p) => roomByClient.delete(p.clientId));
     }
   }
   limiter.sweep();
