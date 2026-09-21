@@ -7,13 +7,14 @@ const { performance } = require('node:perf_hooks');
 const { getMixedQuestions, listCategories } = require('./questions');
 const { GAME_CONFIG } = require('./config');
 const stats = require('./stats');
+const { randomId } = require('./ids');
 
 const activeGames = new Map();
 const playerSessions = new Map();
 const startingClients = new Set();
 
 const RECONNECT_GRACE_MS = 15000;
-const rid = (p) => p + Math.random().toString(36).slice(2, 11);
+const rid = (prefix) => randomId(prefix);
 const send = (ws, obj) => {
   if (ws && ws.readyState === 1) ws.send(JSON.stringify(obj));
 };
