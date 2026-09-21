@@ -122,7 +122,7 @@ export function ProfileContent({ avatar, name, stats, isGoogleLinked, googleEmai
   );
 }
 
-export function WaitingContent({ avatar, name, onCancel }) {
+export function WaitingContent({ avatar, name, onCancel, pending }) {
   const { t } = useI18n();
   return (
     <div className="container center">
@@ -139,7 +139,7 @@ export function WaitingContent({ avatar, name, onCancel }) {
         </div>
       </div>
       <div className="loading-bar"><div className="loading-fill" /></div>
-      <button className="home-themes-link" onClick={onCancel}>{t('cancel')}</button>
+      <button className="home-themes-link" onClick={onCancel} disabled={pending}>{t('cancel')}</button>
     </div>
   );
 }
