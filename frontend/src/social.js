@@ -93,8 +93,12 @@ export function FriendsScreen({ social }) {
               <div className="friend-chat-input">
                 <input value={draft} maxLength={200} placeholder={t('messagePlaceholder')}
                   onChange={(e) => setDraft(e.target.value)}
-                  onKeyDown={(e) => { if (e.key === 'Enter' && draft.trim()) { social.sendDM(f.id, draft); setDraft(''); } }} />
-                <button onClick={() => { if (draft.trim()) { social.sendDM(f.id, draft); setDraft(''); } }}>{t('send')}</button>
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && draft.trim() && social.sendDM(f.id, draft)) setDraft('');
+                  }} />
+                <button onClick={() => {
+                  if (draft.trim() && social.sendDM(f.id, draft)) setDraft('');
+                }}>{t('send')}</button>
               </div>
             </div>
           )}
@@ -129,8 +133,12 @@ export function GameChat({ social }) {
           <div className="game-chat-input">
             <input value={draft} maxLength={100} placeholder={t('sayPlaceholder')}
               onChange={(e) => setDraft(e.target.value)}
-              onKeyDown={(e) => { if (e.key === 'Enter' && draft.trim()) { social.sendGameChat(draft); setDraft(''); } }} />
-            <button onClick={() => { if (draft.trim()) { social.sendGameChat(draft); setDraft(''); } }}>➤</button>
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && draft.trim() && social.sendGameChat(draft)) setDraft('');
+              }} />
+            <button onClick={() => {
+              if (draft.trim() && social.sendGameChat(draft)) setDraft('');
+            }}>➤</button>
           </div>
         </div>
       )}
