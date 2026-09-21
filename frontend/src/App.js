@@ -84,6 +84,7 @@ export default function App() {
   const bootSessionRef = useRef(readLiveSession());
   const matchActionRef = useRef(null);
   const cancelQueueRef = useRef(false);
+  const afterQueueExitRef = useRef(null);
   const [skipRoomRecovery, setSkipRoomRecovery] = useState(false);
   const messageHandlerRef = useRef(null);
 
@@ -141,6 +142,8 @@ export default function App() {
     ),
     onMessageRef: messageHandlerRef,
     onFatalError: (err) => {
+      cancelQueueRef.current = false;
+      afterQueueExitRef.current = null;
       setFatalReason('connection');
       setFatalCode(err?.code || '');
       setStage('error');
@@ -234,7 +237,7 @@ export default function App() {
           if (!sendSocket({ type: 'leaderboard_list' })) setLeaderboardLoading(false);
         }
         if (cancelQueueRef.current && stage === 'waiting') {
-          sendSocket({ type: 'cancel_queue' });
+          if (!data.queuedActionFlushed) sendSocket({ type: 'cancel_queue' });
           break;
         }
 
@@ -276,6 +279,8 @@ export default function App() {
         }
         break;
       case 'game_reconnected':
+        cancelQueueRef.current = false;
+        afterQueueExitRef.current = null;
         bootSessionRef.current = 'game';
         writeLiveSession('game');
         matchActionRef.current = null;
@@ -299,14 +304,29 @@ export default function App() {
         clearPending();
         setStage('waiting');
         break;
-      case 'queue_cancelled':
+      case 'queue_cancelled': {
+        if (!cancelQueueRef.current) break;
+        const nextAction = afterQueueExitRef.current;
         cancelQueueRef.current = false;
+        afterQueueExitRef.current = null;
         matchActionRef.current = null;
         clearPending();
         setStage('home');
+        if (nextAction) {
+          setSoloMode(true);
+          matchActionRef.current = nextAction;
+          beginPending();
+          if (!connect(nextAction)) {
+            matchActionRef.current = null;
+            clearPending();
+            showToast(t('matchStartUnavailable'), 'error');
+          }
+        }
         break;
+      }
       case 'queue_cancel_failed':
         cancelQueueRef.current = false;
+        afterQueueExitRef.current = null;
         clearPending();
         break;
       case 'room_created':
@@ -348,6 +368,7 @@ export default function App() {
         break;
       case 'match_aborted':
         cancelQueueRef.current = false;
+        afterQueueExitRef.current = null;
         matchActionRef.current = null;
         bootSessionRef.current = null;
         writeLiveSession(null);
@@ -378,6 +399,7 @@ export default function App() {
         setRematchWaiting(false);
         setRematchStarting(false);
         cancelQueueRef.current = false;
+        afterQueueExitRef.current = null;
         bootSessionRef.current = 'game';
         writeLiveSession('game');
         matchActionRef.current = null;
@@ -452,6 +474,8 @@ export default function App() {
         setLeaderboardLoading(false);
         break;
       case 'error':
+        cancelQueueRef.current = false;
+        afterQueueExitRef.current = null;
         matchActionRef.current = null;
         clearPending();
         setFatalReason('connection');
@@ -481,6 +505,7 @@ export default function App() {
   }, [stage, feed.refresh]);
 
   const [soloMode, setSoloMode] = useState(false);
+  const [matchCategory, setMatchCategory] = useState(null);
   // `pending` blocks a second matchmaking request (double-tap, rapid-fire
   // click) from going out before the server answers the first one — nothing
   // previously stopped duplicate join/solo/create_room/join_room/start_room
@@ -498,6 +523,7 @@ export default function App() {
 
   function startWithCategory(catKey) {
     if (pending) return;
+    setMatchCategory(catKey);
     const action = { type: soloMode ? 'solo' : 'join', category: catKey };
     matchActionRef.current = action;
     beginPending();
@@ -506,23 +532,33 @@ export default function App() {
 
   function quickMatch() {
     if (pending) return;
+    setMatchCategory(null);
     const action = { type: soloMode ? 'solo' : 'join', category: null };
     matchActionRef.current = action;
     beginPending();
     connect(action);
   }
 
-  function cancelMatchmaking() {
+  function cancelMatchmaking(nextAction = null) {
     if (pending) return;
     cancelQueueRef.current = true;
+    afterQueueExitRef.current = nextAction;
     matchActionRef.current = null;
     beginPending();
-    if (!sendSocket({ type: 'cancel_queue' })) {
+    // Queue the cancellation through authentication/reconnection too. Never
+    // start solo until the server confirms the multiplayer queue was left.
+    if (!connect({ type: 'cancel_queue' })) {
       cancelQueueRef.current = false;
+      afterQueueExitRef.current = null;
       clearPending();
       closeSocket();
       setStage('home');
+      showToast(t('matchStartUnavailable'), 'error');
     }
+  }
+
+  function switchToSolo() {
+    cancelMatchmaking({ type: 'solo', category: matchCategory });
   }
 
   function openLeaderboard() {
@@ -754,7 +790,12 @@ export default function App() {
   if (stage === 'waiting') {
     return (
       <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
-        <WaitingContent avatar={avatar} name={name} onCancel={cancelMatchmaking} pending={pending} />
+        <WaitingContent
+          avatar={avatar} name={name} level={statsHook.stats.level}
+          categoryKey={matchCategory}
+          onCancel={() => cancelMatchmaking()} onPlaySolo={switchToSolo}
+          pending={pending} reconnecting={reconnecting}
+        />
       </div>);
   }
 
