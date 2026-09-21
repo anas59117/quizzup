@@ -229,6 +229,10 @@ export default function App() {
         break;
       case 'identified':
         if (stage === 'feed') feed.refresh();
+        if (stage === 'leaderboard' && !data.queuedActionFlushed) {
+          setLeaderboardLoading(true);
+          if (!sendSocket({ type: 'leaderboard_list' })) setLeaderboardLoading(false);
+        }
         if (cancelQueueRef.current && stage === 'waiting') {
           sendSocket({ type: 'cancel_queue' });
           break;
@@ -468,15 +472,6 @@ export default function App() {
     if (stage === 'feed') feed.refresh();
   }, [stage, feed.refresh]);
 
-  useEffect(() => {
-    if (stage !== 'leaderboard' || !firebaseUser) return;
-    setLeaderboardLoading(true);
-    if (!connect({ type: 'leaderboard_list' })) {
-      setLeaderboardLoading(false);
-      showToast(t('rankingUnavailable'), 'error');
-    }
-  }, [stage, firebaseUser, connect, showToast, t]);
-
   const [soloMode, setSoloMode] = useState(false);
   // `pending` blocks a second matchmaking request (double-tap, rapid-fire
   // click) from going out before the server answers the first one — nothing
@@ -519,6 +514,15 @@ export default function App() {
       clearPending();
       closeSocket();
       setStage('home');
+    }
+  }
+
+  function openLeaderboard() {
+    setLeaderboardLoading(true);
+    setStage('leaderboard');
+    if (!connect({ type: 'leaderboard_list' })) {
+      setLeaderboardLoading(false);
+      showToast(t('rankingUnavailable'), 'error');
     }
   }
 
@@ -697,7 +701,7 @@ export default function App() {
           avatar={avatar} name={name} stats={statsHook.stats}
           isGoogleLinked={!!(firebaseUser && !firebaseUser.isAnonymous)} googleEmail={firebaseUser?.email}
           linkGoogle={linkGoogle} linking={linking} clientId={clientId} social={social}
-          onOpenLeaderboard={() => setStage('leaderboard')}
+          onOpenLeaderboard={openLeaderboard}
         />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);
