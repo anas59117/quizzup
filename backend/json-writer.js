@@ -12,29 +12,57 @@ function atomicWriteFile(filePath, payload, callback) {
   const tempPath = `${filePath}.tmp`;
   const backupPath = `${filePath}.bak`;
 
+  function commitTemp(movedPrimary) {
+    fs.rename(tempPath, filePath, (commitErr) => {
+      if (!commitErr) {
+        callback(null);
+        return;
+      }
+
+      // Best-effort rollback only when this write actually moved the primary.
+      // If primary was already missing, an existing .bak may be the only valid
+      // snapshot and must be left untouched.
+      if (movedPrimary) {
+        fs.rename(backupPath, filePath, () => callback(commitErr));
+      } else {
+        callback(commitErr);
+      }
+    });
+  }
+
   fs.writeFile(tempPath, payload, (writeErr) => {
     if (writeErr) {
       callback(writeErr);
       return;
     }
 
-    // Replace the previous backup with the last complete primary snapshot.
-    fs.rm(backupPath, { force: true }, () => {
-      fs.rename(filePath, backupPath, (backupErr) => {
-        if (backupErr && backupErr.code !== 'ENOENT') {
-          // A backup failure should not prevent the newer durable snapshot
-          // from being committed; keep going and report only commit failure.
-          console.error(`Failed to rotate JSON backup ${backupPath}:`, backupErr);
+    fs.stat(filePath, (statErr) => {
+      if (statErr && statErr.code === 'ENOENT') {
+        // This can happen after a crash between "primary -> backup" and
+        // "temp -> primary". Preserve the backup and simply install the new
+        // complete snapshot.
+        commitTemp(false);
+        return;
+      }
+      if (statErr) {
+        callback(statErr);
+        return;
+      }
+
+      // A complete primary exists. Rotate it to backup before installing the
+      // new snapshot. Remove the older backup first for Windows compatibility.
+      fs.rm(backupPath, { force: true }, (removeErr) => {
+        if (removeErr) {
+          callback(removeErr);
+          return;
         }
 
-        fs.rename(tempPath, filePath, (commitErr) => {
-          if (!commitErr) {
-            callback(null);
+        fs.rename(filePath, backupPath, (backupErr) => {
+          if (backupErr) {
+            callback(backupErr);
             return;
           }
-
-          // Best-effort rollback if the new snapshot could not be committed.
-          fs.rename(backupPath, filePath, () => callback(commitErr));
+          commitTemp(true);
         });
       });
     });
