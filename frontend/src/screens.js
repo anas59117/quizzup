@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon } from './ui';
 import { PlayerHud, Leaderboard } from './multiplayer';
 import { ProfileStats } from './stats';
@@ -143,8 +143,19 @@ export function ProfileContent({ avatar, name, stats, isGoogleLinked, googleEmai
 
 export function WaitingContent({ avatar, name, onCancel, pending }) {
   const { t } = useI18n();
+  const [elapsed, setElapsed] = useState(0);
+
+  useEffect(() => {
+    const startedAt = Date.now();
+    const timer = setInterval(() => {
+      setElapsed(Math.floor((Date.now() - startedAt) / 1000));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="container center">
+      <div className="status-label">{elapsed < 12 ? t('matchmaking') : t('searchWidening')}</div>
       <div className="vs-screen">
         <div className="vs-player">
           <div className="vs-ava me">{avatar}</div>
@@ -157,6 +168,7 @@ export function WaitingContent({ avatar, name, onCancel, pending }) {
           <div className="vs-name dim">{t('searching')}</div>
         </div>
       </div>
+      <div className="search-meta">{t('searchElapsed', { n: elapsed })}</div>
       <div className="loading-bar"><div className="loading-fill" /></div>
       <button className="home-themes-link" onClick={onCancel} disabled={pending}>{t('cancel')}</button>
     </div>
