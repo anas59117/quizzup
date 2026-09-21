@@ -120,6 +120,12 @@ export function famLabel(t, key, suffix = '') {
   return t(`fam${key[0].toUpperCase()}${key.slice(1)}${suffix}`);
 }
 
+function topicMark(label) {
+  const words = String(label).replace(/\([^)]*\)/g, '').trim().split(/\s+/).filter(Boolean);
+  if (words.length > 1) return (words[0][0] + words[1][0]).toUpperCase();
+  return words[0]?.slice(0, 2).toUpperCase() || 'QZ';
+}
+
 export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setAvatar, onContinue }) {
   const { t } = useI18n();
   return (
@@ -235,8 +241,12 @@ export const CategoryTile = memo(function CategoryTile({ c, onClick, disabled })
         className={`tile-icon-sq ${c.grad} ${c.cover ? 'has-cover' : ''}`}
         style={c.cover ? { backgroundImage: `url(${c.cover})` } : undefined}
       >
-        {!c.cover && (c.logo ? <img src={c.logo} alt={c.label} className="tile-logo-img" /> : c.icon)}
-        {c.tag && <span className="tile-tag-badge">{String(c.tag).includes('📸') ? 'PHOTO' : 'HOT'}</span>}
+        {!c.cover && (
+          c.logo
+            ? <img src={c.logo} alt={c.label} className="tile-logo-img" />
+            : <span className="tile-monogram">{topicMark(c.label)}</span>
+        )}
+        {c.tag && <span className="tile-tag-badge">{String(c.tag).includes('📸') ? 'PHOTO' : 'TOP'}</span>}
       </span>
       <span className="tile-label">{c.label}</span>
     </button>
