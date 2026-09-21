@@ -1,5 +1,6 @@
 const { test, afterEach } = require('node:test');
 const assert = require('node:assert/strict');
+const { performance } = require('node:perf_hooks');
 const game = require('./game');
 
 afterEach(() => {
@@ -28,7 +29,7 @@ test('ignores answers outside the question phase', () => {
     status: 'active',
     phase: 'intro',
     currentRound: 0,
-    questionStart: Date.now(),
+    questionStart: performance.now(),
     questions: [{ correct: 0 }],
     players: [{ id: 'p1', ws, connected: true, score: 0 }],
     roundAnswers: {},
@@ -46,7 +47,7 @@ test('accepts only the first answer from a player', () => {
     status: 'active',
     phase: 'question',
     currentRound: 0,
-    questionStart: Date.now(),
+    questionStart: performance.now(),
     questions: [{ correct: 0 }],
     players: [{ id: 'p1', ws, connected: true, score: 0 }, { id: 'p2', ws: fakeWs(), connected: true, score: 0 }],
     roundAnswers: {},
@@ -67,7 +68,7 @@ test('rejects answers from disconnected players', () => {
     status: 'active',
     phase: 'question',
     currentRound: 0,
-    questionStart: Date.now(),
+    questionStart: performance.now(),
     questions: [{ correct: 0 }],
     players: [{ id: 'p1', ws, connected: false, score: 0 }],
     roundAnswers: {},
@@ -84,7 +85,7 @@ test('a disconnected player keeps the round open until timeout or removal', () =
     status: 'active',
     phase: 'question',
     currentRound: 0,
-    questionStart: Date.now(),
+    questionStart: performance.now(),
     questions: [{ correct: 0 }],
     players: [
       { id: 'p1', clientId: 'u1', ws: fakeWs(), connected: true, score: 0 },
@@ -106,7 +107,7 @@ test('reconnect migrates an existing answer to the new transport player id', () 
     status: 'active',
     phase: 'question',
     currentRound: 0,
-    questionStart: Date.now(),
+    questionStart: performance.now(),
     questions: [{
       text: 'Q', category: 'Test', icon: 'T',
       answers: ['A', 'B', 'C', 'D'], correct: 0,
@@ -153,7 +154,7 @@ test('removePlayer removes a disconnected player instead of restarting grace', (
     status: 'active',
     phase: 'question',
     currentRound: 0,
-    questionStart: Date.now(),
+    questionStart: performance.now(),
     questions: [{ correct: 0 }],
     players: [
       { id: 'p1', clientId: 'u1', ws: null, connected: false, score: 0, name: 'A', reconnectTimer: null },
@@ -177,7 +178,7 @@ test('reconnect during reveal rehydrates the question before the result', () => 
     status: 'active',
     phase: 'revealed',
     currentRound: 0,
-    questionStart: Date.now() - 1000,
+    questionStart: performance.now() - 1000,
     questions: [{
       text: 'Reveal Q', category: 'Test', icon: 'T',
       answers: ['A', 'B', 'C', 'D'], correct: 1,
