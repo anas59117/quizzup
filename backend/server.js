@@ -46,6 +46,11 @@ app.use(cors(
 ));
 
 const PORT = process.env.PORT || 3001;
+const MAX_WS_CONNECTIONS_PER_IP = Math.max(
+  2,
+  Math.min(100, Number(process.env.MAX_WS_CONNECTIONS_PER_IP) || 20)
+);
+const WS_HEARTBEAT_MS = 30 * 1000;
 
 function getClientIp(req) {
   if (process.env.TRUST_PROXY === 'true') {
@@ -57,6 +62,7 @@ function getClientIp(req) {
 
 const waitingPlayers = [];
 const privateRooms = new Map();
+const connectionsByIp = new Map();
 const roomByClient = new Map();
 const pendingPlayers = new Set();
 const pendingClients = new Set();
@@ -448,6 +454,16 @@ function handleGameplay(ws, data, state) {
 
 wss.on('connection', (ws, req) => {
   const ip = getClientIp(req);
+  const currentConnections = connectionsByIp.get(ip) || 0;
+  if (currentConnections >= MAX_WS_CONNECTIONS_PER_IP) {
+    ws.close(1008, 'Too many connections');
+    return;
+  }
+  connectionsByIp.set(ip, currentConnections + 1);
+
+  ws.isAlive = true;
+  ws.on('pong', () => { ws.isAlive = true; });
+
   const state = {
     playerId: game.rid('player_'),
     name: 'Player' + Math.floor(1000 + Math.random() * 9000),
@@ -474,6 +490,10 @@ wss.on('connection', (ws, req) => {
   });
 
   ws.on('close', () => {
+    const remainingConnections = Math.max(0, (connectionsByIp.get(ip) || 1) - 1);
+    if (remainingConnections === 0) connectionsByIp.delete(ip);
+    else connectionsByIp.set(ip, remainingConnections);
+
     limiter.remove(state.playerId);
     if (state.clientId) {
       social.setOffline(state.clientId, ws);
@@ -506,10 +526,26 @@ wss.on('connection', (ws, req) => {
 });
 
 app.get('/health', (req, res) =>
-  res.json({ status: 'ok', activeGames: game.activeGames.size, waiting: waitingPlayers.length })
+  res.json({
+    status: 'ok',
+    activeGames: game.activeGames.size,
+    waiting: waitingPlayers.length,
+    connections: wss.clients.size,
+  })
 );
 app.get('/categories', (req, res) => res.json(listCategories()));
 app.get('/reports/stats', (req, res) => res.json(reports.stats()));
+
+const heartbeatTimer = setInterval(() => {
+  wss.clients.forEach((ws) => {
+    if (ws.isAlive === false) {
+      ws.terminate();
+      return;
+    }
+    ws.isAlive = false;
+    try { ws.ping(); } catch { ws.terminate(); }
+  });
+}, WS_HEARTBEAT_MS);
 
 setInterval(() => {
   const now = Date.now();
@@ -524,6 +560,8 @@ setInterval(() => {
   Object.values(actionLimiters).forEach((rl) => rl.sweep());
   sweepCache();
 }, 60 * 1000);
+
+server.on('close', () => clearInterval(heartbeatTimer));
 
 server.listen(PORT, () => {
   console.log(`\u{1F3AE} QuizzUp backend on http://localhost:${PORT}`);
