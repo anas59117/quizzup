@@ -97,6 +97,133 @@ async function verifyIdToken(idToken) {
   }
 }
 
+async function diagnoseFirebaseAuth(origin = '') {
+  if (!API_KEY) return { ok: false, stage: 'config', code: 'MISSING_API_KEY' };
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
+  const headers = { 'Content-Type': 'application/json' };
+  if (origin) {
+    headers.Origin = origin;
+    headers.Referer = `${origin.replace(/\/$/, '')}/`;
+  }
+
+  let idToken = null;
+  try {
+    const projectResp = await fetch(
+      `https://identitytoolkit.googleapis.com/v1/projects?key=${encodeURIComponent(API_KEY)}`,
+      { headers, signal: controller.signal }
+    );
+    const projectData = await projectResp.json().catch(() => ({}));
+    if (!projectResp.ok) {
+      return {
+        ok: false,
+        stage: 'project_config',
+        status: projectResp.status,
+        code: projectData?.error?.message || 'PROJECT_CONFIG_FAILED',
+      };
+    }
+
+    let originAuthorized = null;
+    try {
+      const hostname = origin ? new URL(origin).hostname : '';
+      originAuthorized = hostname
+        ? (projectData.authorizedDomains || []).includes(hostname)
+        : null;
+    } catch {
+      originAuthorized = null;
+    }
+
+    const signUpResp = await fetch(
+      `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${encodeURIComponent(API_KEY)}`,
+      {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({ returnSecureToken: true }),
+        signal: controller.signal,
+      }
+    );
+    const signUpData = await signUpResp.json().catch(() => ({}));
+    if (!signUpResp.ok) {
+      return {
+        ok: false,
+        stage: 'anonymous_sign_in',
+        status: signUpResp.status,
+        code: signUpData?.error?.message || 'ANONYMOUS_SIGN_IN_FAILED',
+        projectId: projectData.projectId || null,
+        originAuthorized,
+      };
+    }
+
+    idToken = signUpData.idToken || null;
+    if (!idToken) {
+      return {
+        ok: false,
+        stage: 'anonymous_sign_in',
+        code: 'MISSING_ID_TOKEN',
+        projectId: projectData.projectId || null,
+        originAuthorized,
+      };
+    }
+
+    const lookupResp = await fetch(
+      `${LOOKUP_URL}?key=${encodeURIComponent(API_KEY)}`,
+      {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({ idToken }),
+        signal: controller.signal,
+      }
+    );
+    const lookupData = await lookupResp.json().catch(() => ({}));
+    const lookupOk = (
+      lookupResp.ok
+      && lookupData?.users?.[0]?.localId
+      && lookupData.users[0].localId === signUpData.localId
+    );
+
+    if (!lookupOk) {
+      return {
+        ok: false,
+        stage: 'token_lookup',
+        status: lookupResp.status,
+        code: lookupData?.error?.message || 'TOKEN_LOOKUP_FAILED',
+        projectId: projectData.projectId || null,
+        originAuthorized,
+      };
+    }
+
+    return {
+      ok: true,
+      stage: 'complete',
+      projectId: projectData.projectId || null,
+      originAuthorized,
+      anonymousSignIn: true,
+      tokenLookup: true,
+    };
+  } catch (err) {
+    return {
+      ok: false,
+      stage: 'network',
+      code: err?.name === 'AbortError' ? 'TIMEOUT' : 'NETWORK_ERROR',
+    };
+  } finally {
+    clearTimeout(timeout);
+    if (idToken) {
+      // Best-effort cleanup: the diagnostic should not leave a test
+      // anonymous account behind in Firebase Authentication.
+      fetch(
+        `https://identitytoolkit.googleapis.com/v1/accounts:delete?key=${encodeURIComponent(API_KEY)}`,
+        {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({ idToken }),
+        }
+      ).catch(() => {});
+    }
+  }
+}
+
 // Periodic cleanup so the cache can't grow unbounded with one-shot tokens.
 function sweepCache() {
   const now = Date.now();
@@ -105,4 +232,4 @@ function sweepCache() {
   }
 }
 
-module.exports = { verifyIdToken, sweepCache, tokenExpiryMs };
+module.exports = { verifyIdToken, sweepCache, tokenExpiryMs, diagnoseFirebaseAuth };
