@@ -43,6 +43,8 @@ export function useSocial(wsRef) {
       case 'dm': setDms((c) => ({ ...c, [data.from]: [...(c[data.from] || []), { from: 'them', text: data.text }] })); break;
       case 'game_chat': setGameChat((m) => [...m, { from: 'them', text: data.text, senderName: data.from }]); break;
       case 'player_left': setGameChat((m) => [...m, { from: 'system', text: `${data.name} left the game` }]); break;
+      case 'player_disconnected': setGameChat((m) => [...m, { from: 'system', text: `${data.name} disconnected — reconnecting…` }]); break;
+      case 'player_reconnected': setGameChat((m) => [...m, { from: 'system', text: `${data.name} reconnected` }]); break;
       default: break;
     }
   }, []);
