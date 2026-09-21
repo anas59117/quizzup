@@ -209,7 +209,7 @@ export default function App() {
   // switch. During the reveal pause we keep whatever was already playing
   // rather than interrupting it for the ~2.5s pause between rounds.
   useEffect(() => {
-    if (stage === 'home' || stage === 'categories' || stage === 'profile' || stage === 'enter_code') {
+    if (stage === 'home' || stage === 'categories' || stage === 'profile' || stage === 'leaderboard' || stage === 'enter_code') {
       music.play('menu');
     } else if (stage === 'waiting' || stage === 'room_wait') {
       music.play('lobby');
@@ -353,6 +353,7 @@ export default function App() {
         break;
       case 'rate_limited':
         clearPending();
+        if (stage === 'leaderboard') setLeaderboardLoading(false);
         showToast(t('slowDown'), 'error');
         break;
       case 'room_left':
