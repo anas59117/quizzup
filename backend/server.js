@@ -641,13 +641,18 @@ function handleGameplay(ws, data, state) {
   if (data.type === 'report') {
     const gameId = game.playerSessions.get(playerId);
     const g = gameId && game.activeGames.get(gameId);
-    if (g && g.currentRound >= 0) {
+    // Reporting is intentionally limited to the reveal window, when the
+    // player has actually seen both the prompt and the authoritative answer.
+    // A crafted client can no longer mass-flag unseen questions during play.
+    if (g && g.status === 'active' && g.phase === 'revealed' && g.currentRound >= 0) {
       const key = `${state.clientId}:${g.currentRound}`;
       if (!g.reported.has(key)) {
-        g.reported.add(key);
         const q = g.questions[g.currentRound];
-        if (q) reports.report(questionKey(q));
-        game.send(ws, { type: 'report_ack' });
+        const accepted = q && reports.report(questionKey(q));
+        if (accepted) {
+          g.reported.add(key);
+          game.send(ws, { type: 'report_ack' });
+        }
       }
     }
     return true;
