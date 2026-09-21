@@ -68,7 +68,7 @@ export default function App() {
     name,
     avatar,
     firebaseUser,
-    shouldRecover: stage === 'playing',
+    shouldRecover: stage === 'playing' || (stage === 'join' && !!bootNameRef.current.trim()),
     onMessageRef: messageHandlerRef,
     onFatalError: () => setStage('error'),
     onPendingClear: () => setPending(false),
