@@ -17,13 +17,23 @@ test('stats normalization prevents string concatenation and invalid counters', (
   assert.equal(Object.getPrototypeOf(stats), null);
 });
 
-test('social normalization deduplicates ids and removes self edges', () => {
+test('social normalization deduplicates ids and repairs ghost edges', () => {
   const social = normalizeSocialStore({
-    profiles: { u1: { name: ' Alice ', avatar: 'A' } },
-    friends: { u1: ['u1', 'u2', 'u2'] },
-    requests: { u1: ['u1', 'u3', 'u3'] },
+    profiles: {
+      u1: { name: ' Alice ', avatar: 'A' },
+      u2: { name: 'Bob', avatar: 'B' },
+      u3: { name: 'Cara', avatar: 'C' },
+    },
+    friends: {
+      u1: ['u1', 'u2', 'u2', 'ghost'],
+      u2: ['u1'],
+      u3: ['u1'],
+    },
+    requests: { u1: ['u1', 'u3', 'u3', 'ghost'] },
   });
   assert.deepEqual(social.friends.u1, ['u2']);
+  assert.deepEqual(social.friends.u2, ['u1']);
+  assert.deepEqual(social.friends.u3, []);
   assert.deepEqual(social.requests.u1, ['u3']);
   assert.equal(social.profiles.u1.name, 'Alice');
 });
