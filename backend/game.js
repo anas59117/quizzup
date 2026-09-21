@@ -14,6 +14,7 @@ const playerSessions = new Map();
 const startingClients = new Set();
 
 const RECONNECT_GRACE_MS = 15000;
+const FINISHED_RETENTION_MS = 60 * 1000;
 const rid = (prefix) => randomId(prefix);
 const send = (ws, obj) => {
   if (ws && ws.readyState === 1) ws.send(JSON.stringify(obj));
@@ -106,6 +107,8 @@ async function startGame(rawPlayers, categoryKey) {
       phase: 'idle',
       status: 'active',
       mode: rawPlayers.length === 1 ? 'solo' : 'multiplayer',
+      categoryKey: resolvedCategory,
+      rematchRequests: new Set(),
     };
     activeGames.set(gameId, game);
     game.players.forEach((p) => playerSessions.set(p.id, gameId));
@@ -261,7 +264,7 @@ function disconnectPlayer(game, playerId) {
     if (game.status !== 'active') return;
     const stillMissing = game.players.find((p) => p.id === playerId && !p.connected);
     if (stillMissing) removePlayer(game, playerId);
-  }, RECONNECT_GRACE_MS);
+  }, FINISHED_RETENTION_MS);
 
   if (game.phase === 'question' && allPlayersAnswered(game)) {
     revealRound(game, false);
@@ -414,6 +417,50 @@ function reconnectPlayer(clientId, ws, newPlayerId) {
   return true;
 }
 
+function requestRematch(clientId) {
+  const found = findFinishedSessionByClientId(clientId);
+  if (!found) return { status: 'unavailable' };
+
+  const { game } = found;
+  game.rematchRequests = game.rematchRequests || new Set();
+
+  // If somebody already moved into a new active match, the old group can no
+  // longer be resurrected underneath that newer session.
+  if (game.players.some((p) => findActiveSessionByClientId(p.clientId))) {
+    game.rematchRequests.clear();
+    return { status: 'unavailable' };
+  }
+
+  game.rematchRequests.add(clientId);
+  const allRequested = game.players.every((p) => game.rematchRequests.has(p.clientId));
+  const allConnected = game.players.every((p) => p.ws && p.ws.readyState === 1);
+
+  if (!allRequested || !allConnected) {
+    return { status: 'waiting', game };
+  }
+
+  const players = game.players.map((p) => ({
+    ws: p.ws,
+    id: p.id,
+    clientId: p.clientId,
+    name: p.name,
+    avatar: p.avatar,
+  }));
+  game.rematchRequests.clear();
+  return {
+    status: 'ready',
+    game,
+    players,
+    categoryKey: game.categoryKey || null,
+  };
+}
+
+function cancelRematch(clientId) {
+  const found = findFinishedSessionByClientId(clientId);
+  if (!found?.game?.rematchRequests) return false;
+  return found.game.rematchRequests.delete(clientId);
+}
+
 function endGame(game, reason) {
   if (game.status === 'finished') return;
   game.status = 'finished';
@@ -470,4 +517,5 @@ module.exports = {
   activeGames, playerSessions, startingClients, rid, send,
   startGame, recordAnswer, endGame, removePlayer,
   disconnectPlayer, reconnectPlayer, findActiveSessionByClientId, findFinishedSessionByClientId,
+  requestRematch, cancelRematch,
 };
