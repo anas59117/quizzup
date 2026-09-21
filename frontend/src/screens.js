@@ -154,6 +154,7 @@ export function LeaderboardContent({ board, loading, onBack }) {
   const { t } = useI18n();
   const entries = board?.entries || [];
   const topThree = entries.slice(0, 3);
+  const remaining = entries.slice(3);
 
   return (
     <div className="container wide">
@@ -189,19 +190,21 @@ export function LeaderboardContent({ board, loading, onBack }) {
             {board.yourRank && <strong>{t('yourRank', { n: board.yourRank })}</strong>}
           </div>
 
-          <div className="global-leaderboard-list">
-            {entries.map((entry) => (
-              <div key={entry.rank} className={`global-leaderboard-row ${entry.isYou ? 'mine' : ''}`}>
-                <span className="global-rank">{entry.rank}</span>
-                <span className="global-avatar">{entry.avatar}</span>
-                <span className="global-player">
-                  <strong>{entry.name}{entry.isYou ? ` · ${t('you')}` : ''}</strong>
-                  <small>{t('level')} {entry.level} · {entry.winRate}% {String(t('wins')).toLowerCase()}</small>
-                </span>
-                <span className="global-xp">{entry.xp.toLocaleString()}<small>XP</small></span>
-              </div>
-            ))}
-          </div>
+          {remaining.length > 0 && (
+            <div className="global-leaderboard-list">
+              {remaining.map((entry) => (
+                <div key={entry.rank} className={`global-leaderboard-row ${entry.isYou ? 'mine' : ''}`}>
+                  <span className="global-rank">{entry.rank}</span>
+                  <span className="global-avatar">{entry.avatar}</span>
+                  <span className="global-player">
+                    <strong>{entry.name}{entry.isYou ? ` · ${t('you')}` : ''}</strong>
+                    <small>{t('level')} {entry.level} · {entry.winRate}% {String(t('wins')).toLowerCase()}</small>
+                  </span>
+                  <span className="global-xp">{entry.xp.toLocaleString()}<small>XP</small></span>
+                </div>
+              ))}
+            </div>
+          )}
         </>
       ) : (
         <div className="leaderboard-empty">
