@@ -455,7 +455,7 @@ export default function App() {
 
   useEffect(() => {
     if (stage === 'feed') feed.refresh();
-  }, [stage]);
+  }, [stage, feed.refresh]);
 
   const [soloMode, setSoloMode] = useState(false);
   // `pending` blocks a second matchmaking request (double-tap, rapid-fire
