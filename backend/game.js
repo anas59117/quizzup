@@ -195,7 +195,7 @@ function recordAnswer(game, playerId, answerIndex) {
   if (game.roundAnswers[playerId]) return;
 
   const elapsedMs = performance.now() - game.questionStart;
-  if (elapsedMs < 0 || elapsedMs > GAME_CONFIG.TIME_PER_QUESTION * 1000 + 500) return;
+  if (elapsedMs < 0 || elapsedMs > GAME_CONFIG.TIME_PER_QUESTION * 1000) return;
 
   const q = game.questions[game.currentRound];
   const isCorrect = answerIndex === q.correct;
