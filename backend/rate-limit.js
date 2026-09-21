@@ -16,7 +16,7 @@ class RateLimiter {
   check(id) {
     const now = Date.now();
     let bucket = this.clients.get(id);
-    if (!bucket || now - bucket.windowStart > this.windowMs) {
+    if (!bucket || now - bucket.windowStart >= this.windowMs) {
       bucket = { windowStart: now, count: 0 };
       this.clients.set(id, bucket);
     }
