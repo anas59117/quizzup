@@ -135,7 +135,7 @@ async function handleIdentify(ws, data, state) {
     return;
   }
 
-  // A live WebSocket is bound to one verified Firebase identity. Account
+  // A live WebSocket is bound to one verified QuizzUp identity. Account
   // switching on the same transport creates ambiguous game/social ownership
   // and can bypass account-keyed abuse limits. Open a fresh socket instead.
   if (state.clientId && state.clientId !== uid) {
