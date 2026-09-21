@@ -6,24 +6,27 @@
 // instance. For multi-instance/durable moderation, move this to Firebase
 // (same interface: report / isQuarantined / stats).
 
-const fs = require('fs');
 const path = require('path');
-const { createJsonWriter } = require('./json-writer');
+const { createJsonWriter, readJsonFileSync } = require('./json-writer');
 
 const STORE = path.join(__dirname, 'reports.json');
 const REPORT_THRESHOLD = 3; // flags before a question is quarantined
 const MAX_TRACKED = 5000; // cap the counts map so it can't grow unbounded
 
-let counts = {}; // question text -> flag count
-const quarantined = new Set();
-
-try {
-  const saved = JSON.parse(fs.readFileSync(STORE, 'utf8'));
-  counts = saved.counts || {};
-  (saved.quarantined || []).forEach((t) => quarantined.add(t));
-} catch {
-  /* no store yet or unreadable — start fresh */
-}
+const savedReports = readJsonFileSync(
+  STORE,
+  { counts: {}, quarantined: [] },
+  (value) => (
+    !!value
+    && typeof value === 'object'
+    && !!value.counts
+    && typeof value.counts === 'object'
+    && !Array.isArray(value.counts)
+    && Array.isArray(value.quarantined)
+  )
+);
+let counts = savedReports.counts; // question key -> flag count
+const quarantined = new Set(savedReports.quarantined);
 
 const persist = createJsonWriter(
   STORE,
