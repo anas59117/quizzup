@@ -97,6 +97,12 @@ function allowAction(limiterInstance, key, ws, code = 'RATE_LIMITED') {
   return false;
 }
 
+function validCategoryKey(value) {
+  return typeof value === 'string' && Object.prototype.hasOwnProperty.call(CATEGORIES, value)
+    ? value
+    : null;
+}
+
 function newRoomCode() {
   let code;
   do {
@@ -508,7 +514,7 @@ function handleGameplay(ws, data, state) {
     }
     state.name = cleanDisplayName(data.name, state.name);
     const avatar = cleanAvatar(data.avatar, state.avatar || '\u{1F43A}');
-    const categoryKey = typeof data.category === 'string' ? data.category : null;
+    const categoryKey = validCategoryKey(data.category);
     game.send(ws, { type: 'joined', playerId, name: state.name });
     startGameGuarded([{ ws, id: playerId, clientId: state.clientId, name: state.name, avatar }], categoryKey);
     return true;
@@ -525,7 +531,7 @@ function handleGameplay(ws, data, state) {
     }
     state.name = cleanDisplayName(data.name, state.name);
     const avatar = cleanAvatar(data.avatar, state.avatar || '\u{1F43A}');
-    const categoryKey = typeof data.category === 'string' ? data.category : null;
+    const categoryKey = validCategoryKey(data.category);
     game.send(ws, { type: 'joined', playerId, name: state.name });
     const oppIdx = waitingPlayers.findIndex((w) =>
       w.categoryKey === categoryKey
@@ -592,7 +598,7 @@ function handleGameplay(ws, data, state) {
     }
     state.name = cleanDisplayName(data.name, state.name);
     const avatar = cleanAvatar(data.avatar, state.avatar || '\u{1F43A}');
-    const categoryKey = typeof data.category === 'string' ? data.category : null;
+    const categoryKey = validCategoryKey(data.category);
     const code = newRoomCode();
     const room = {
       code,
