@@ -220,6 +220,11 @@ export default function App() {
   }
 
   function connect(action) {
+    const user = identityRef.current.firebaseUser;
+    if (!user || typeof user.getIdToken !== 'function') {
+      setPending(false);
+      return;
+    }
     if (action && action.type !== 'identify') queuedActionRef.current = action;
 
     const ws = openSocket();
@@ -332,7 +337,9 @@ export default function App() {
           setQuestion(data);
           setSelected(data.reconnect && data.answered ? data.yourAnswer : null);
           setReveal(null);
-          setOpponents((prev) => prev.map((o) => ({ ...o, answered: false, correct: false })));
+          if (!data.reconnect) {
+            setOpponents((prev) => prev.map((o) => ({ ...o, answered: false, correct: false })));
+          }
           break;
         case 'report_ack':
           setReported(true);
@@ -406,43 +413,43 @@ export default function App() {
     setTimeout(() => setPending(false), 8000);
   }, []);
 
-  const startWithCategory = useCallback((catKey) => {
+  function startWithCategory(catKey) {
     if (pending) return;
     beginPending();
     connect({ type: soloMode ? 'solo' : 'join', category: catKey });
-  }, [connect, soloMode, pending, beginPending]);
+  }
 
-  const quickMatch = useCallback(() => {
+  function quickMatch() {
     if (pending) return;
     beginPending();
     connect({ type: soloMode ? 'solo' : 'join', category: null });
-  }, [connect, soloMode, pending, beginPending]);
+  }
 
-  const createRoom = useCallback(() => {
+  function createRoom() {
     if (pending) return;
     beginPending();
     connect({ type: 'create_room', category: null });
-  }, [connect, pending, beginPending]);
+  }
 
-  const joinRoom = useCallback((code) => {
+  function joinRoom(code) {
     if (!code || code.trim().length < 4 || pending) return;
     setJoinError(false);
     beginPending();
     connect({ type: 'join_room', code: code.trim().toUpperCase() });
-  }, [connect, pending, beginPending]);
+  }
 
-  const startRoomMatch = useCallback(() => {
+  function startRoomMatch() {
     if (!room || pending) return;
     beginPending();
     connect({ type: 'start_room', code: room.code });
-  }, [room, pending, beginPending]);
+  }
 
   // Tapping the "Themes" nav tab directly (not via a family tile on Home)
   // should land on the family overview, not silently reuse whichever family
   // was last opened.
   const onNav = useCallback((s) => { if (s === 'categories') setCategoryFamily(null); setStage(s); }, []);
 
-  const answer = useCallback((index) => {
+  function answer(index) {
     if (selected !== null || reveal || reconnecting) return;
     // Only mark the answer as "selected" once it's actually been sent — the
     // old code called setSelected unconditionally before checking the
@@ -456,7 +463,7 @@ export default function App() {
     } else {
       scheduleRecovery();
     }
-  }, [selected, reveal, reconnecting]);
+  }
 
   const reportQuestion = useCallback(() => {
     if (reported) return;
@@ -483,7 +490,7 @@ export default function App() {
   // promise it never kept: the player landed on Home and had to manually
   // tap Quick Play again. This mirrors what `rematch` already does, minus
   // forcing the same category/opponent.
-  const newMatch = useCallback(() => { playAgain(); quickMatch(); }, [playAgain, quickMatch]);
+  function newMatch() { playAgain(); quickMatch(); }
 
   const topProps = useMemo(() => ({ muted, toggleMute, theme, toggleTheme }), [muted, toggleMute, theme, toggleTheme]);
 
