@@ -228,7 +228,10 @@ function handleFeed(ws, data, state) {
     if (!clientId) return true;
     if (!allowAction(actionLimiters.postReport, clientId, ws, 'REPORT_RATE_LIMITED')) return true;
     const result = posts.reportPost(String(data.postId || ''), clientId);
-    if (result && result.hidden) social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_hidden', id: result.id }));
+    if (result?.accepted) game.send(ws, { type: 'post_report_ack', id: result.id });
+    if (result?.hidden) {
+      social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_hidden', id: result.id }));
+    }
     return true;
   }
   return false;
