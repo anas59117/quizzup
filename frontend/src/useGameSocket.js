@@ -16,6 +16,7 @@ export function useGameSocket({
   avatar,
   firebaseUser,
   shouldRecover,
+  expectGameRecovery = false,
   onMessageRef,
   onFatalError,
   onPendingClear,
@@ -30,6 +31,7 @@ export function useGameSocket({
 
   const identityRef = useRef({ name, avatar, firebaseUser });
   const shouldRecoverRef = useRef(shouldRecover);
+  const expectGameRecoveryRef = useRef(expectGameRecovery);
   const fatalRef = useRef(onFatalError);
   const clearPendingRef = useRef(onPendingClear);
 
@@ -37,6 +39,7 @@ export function useGameSocket({
 
   identityRef.current = { name, avatar, firebaseUser };
   shouldRecoverRef.current = shouldRecover;
+  expectGameRecoveryRef.current = expectGameRecovery;
   fatalRef.current = onFatalError;
   clearPendingRef.current = onPendingClear;
 
@@ -137,14 +140,27 @@ export function useGameSocket({
         identifiedRef.current = true;
         identifySentRef.current = false;
 
-        // A socket opened specifically to recover an active game must be
-        // attached to that game. If the grace window expired, fail clearly.
-        if (reconnectingRef.current && data.reconnected === false) {
+        // Some recoveries require the server to find an active/finished
+        // match (in-game disconnect/refresh). Matchmaking recovery only needs
+        // a healthy authenticated socket, then App replays the queued action.
+        if (reconnectingRef.current && data.reconnected === false && expectGameRecoveryRef.current) {
           fatal();
           return;
         }
 
+        if (reconnectingRef.current && !expectGameRecoveryRef.current) {
+          if (reconnectTimerRef.current) {
+            clearTimeout(reconnectTimerRef.current);
+            reconnectTimerRef.current = null;
+          }
+          reconnectAttemptsRef.current = 0;
+          reconnectingRef.current = false;
+          setReconnecting(false);
+          clearPending();
+        }
+
         flushQueuedAction(ws);
+        deliver(data);
         return;
       }
 
