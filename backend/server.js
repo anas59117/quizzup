@@ -16,14 +16,20 @@ const { ROOM_TTL_MS, CODE_ALPHABET, MAX_ROOM_PLAYERS } = require('./config');
 const app = express();
 const server = http.createServer(app);
 
+function normalizeOrigin(origin) {
+  if (!origin) return '';
+  return String(origin).trim().replace(/\/$/, '');
+}
+
 const allowedOrigins = String(process.env.CORS_ORIGIN || '')
   .split(',')
-  .map((origin) => origin.trim())
+  .map(normalizeOrigin)
   .filter(Boolean);
+const allowAnyOrigin = allowedOrigins.includes('*');
 
 function isAllowedOrigin(origin) {
-  if (!allowedOrigins.length) return true;
-  return !!origin && allowedOrigins.includes(origin);
+  if (!allowedOrigins.length || allowAnyOrigin) return true;
+  return !!origin && allowedOrigins.includes(normalizeOrigin(origin));
 }
 
 const wss = new WebSocketServer({
@@ -33,7 +39,11 @@ const wss = new WebSocketServer({
   verifyClient: ({ origin }) => isAllowedOrigin(origin),
 });
 
-app.use(cors(allowedOrigins.length ? { origin: allowedOrigins } : {}));
+app.use(cors(
+  !allowedOrigins.length || allowAnyOrigin
+    ? {}
+    : { origin: allowedOrigins }
+));
 
 const PORT = process.env.PORT || 3001;
 
