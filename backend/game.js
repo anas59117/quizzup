@@ -9,6 +9,7 @@ const stats = require('./stats');
 
 const activeGames = new Map();
 const playerSessions = new Map();
+const startingClients = new Set();
 
 const RECONNECT_GRACE_MS = 15000;
 const rid = (p) => p + Math.random().toString(36).slice(2, 11);
@@ -57,49 +58,61 @@ async function startGame(rawPlayers, categoryKey) {
   const clientIds = rawPlayers.map((p) => p.clientId);
   if (new Set(clientIds).size !== clientIds.length) throw new Error('CLIENT_ALREADY_PLAYING');
 
-  // A verified Firebase identity may only own one active game at a time.
+  // A verified Firebase identity may only own one active or starting game.
   const duplicate = rawPlayers.find((p) => findActiveSessionByClientId(p.clientId));
-  if (duplicate) throw new Error('CLIENT_ALREADY_PLAYING');
-
-  const gameId = rid('game_');
-  const resolvedCategory = categoryKey || pickRandomCategory();
-  const questions = await getMixedQuestions(GAME_CONFIG.ROUNDS, resolvedCategory);
-
-  const stillOpen = rawPlayers.filter((p) => p.ws.readyState === 1);
-  if (stillOpen.length !== rawPlayers.length) {
-    stillOpen.forEach((p) => send(p.ws, { type: 'error', code: 'PLAYER_DISCONNECTED' }));
-    return;
+  if (duplicate || clientIds.some((id) => startingClients.has(id))) {
+    throw new Error('CLIENT_ALREADY_PLAYING');
   }
 
-  const game = {
-    id: gameId,
-    players: rawPlayers.map((p) => ({
-      ws: p.ws, id: p.id, clientId: p.clientId,
-      name: p.name, avatar: p.avatar || '\u{1F43A}',
-      score: 0, connected: true, reconnectTimer: null,
-    })),
-    questions,
-    currentRound: -1,
-    questionStart: 0,
-    roundAnswers: {},
-    reported: new Set(),
-    roundTimer: null,
-    phase: 'idle',
-    status: 'active',
-  };
-  activeGames.set(gameId, game);
-  game.players.forEach((p) => playerSessions.set(p.id, gameId));
+  clientIds.forEach((id) => startingClients.add(id));
+  try {
+    const gameId = rid('game_');
+    const resolvedCategory = categoryKey || pickRandomCategory();
+    const questions = await getMixedQuestions(GAME_CONFIG.ROUNDS, resolvedCategory);
 
-  game.players.forEach((p) => {
-    send(p.ws, {
-      type: 'game_start', gameId,
-      you: { name: p.name, avatar: p.avatar },
-      opponents: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, clientId: o.clientId })),
-      totalRounds: game.questions.length,
+    // Re-check after the await as a defensive invariant in case another code
+    // path created a session while questions were loading.
+    const becameBusy = rawPlayers.find((p) => findActiveSessionByClientId(p.clientId));
+    if (becameBusy) throw new Error('CLIENT_ALREADY_PLAYING');
+
+    const stillOpen = rawPlayers.filter((p) => p.ws.readyState === 1);
+    if (stillOpen.length !== rawPlayers.length) {
+      stillOpen.forEach((p) => send(p.ws, { type: 'error', code: 'PLAYER_DISCONNECTED' }));
+      return;
+    }
+
+    const game = {
+      id: gameId,
+      players: rawPlayers.map((p) => ({
+        ws: p.ws, id: p.id, clientId: p.clientId,
+        name: p.name, avatar: p.avatar || '\u{1F43A}',
+        score: 0, connected: true, reconnectTimer: null,
+      })),
+      questions,
+      currentRound: -1,
+      questionStart: 0,
+      roundAnswers: {},
+      reported: new Set(),
+      roundTimer: null,
+      phase: 'idle',
+      status: 'active',
+    };
+    activeGames.set(gameId, game);
+    game.players.forEach((p) => playerSessions.set(p.id, gameId));
+
+    game.players.forEach((p) => {
+      send(p.ws, {
+        type: 'game_start', gameId,
+        you: { name: p.name, avatar: p.avatar },
+        opponents: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, clientId: o.clientId })),
+        totalRounds: game.questions.length,
+      });
     });
-  });
 
-  nextQuestion(game);
+    nextQuestion(game);
+  } finally {
+    clientIds.forEach((id) => startingClients.delete(id));
+  }
 }
 
 function nextQuestion(game) {
@@ -436,7 +449,7 @@ function endGame(game, reason) {
 }
 
 module.exports = {
-  activeGames, playerSessions, rid, send,
+  activeGames, playerSessions, startingClients, rid, send,
   startGame, recordAnswer, endGame, removePlayer,
   disconnectPlayer, reconnectPlayer, findActiveSessionByClientId, findFinishedSessionByClientId,
 };
