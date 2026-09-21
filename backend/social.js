@@ -102,8 +102,11 @@ function acceptRequest(id, fromId) {
 }
 
 function declineRequest(id, fromId) {
-  requests[id] = (requests[id] || []).filter((r) => r !== fromId);
+  const current = requests[id] || [];
+  if (!current.includes(fromId)) return false;
+  requests[id] = current.filter((r) => r !== fromId);
   persist();
+  return true;
 }
 
 function removeFriend(id, otherId) {
