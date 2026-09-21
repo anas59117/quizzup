@@ -435,6 +435,14 @@ export default function App() {
       case 'stats':
         statsHook.handleStatsMessage(data);
         break;
+      case 'profile_updated':
+        clearPending();
+        if (data.profile) {
+          if (data.profile.name) setName(data.profile.name);
+          if (data.profile.avatar) setAvatar(data.profile.avatar);
+        }
+        showToast(t('profileUpdated'), 'success');
+        break;
       case 'leaderboard_list':
         setLeaderboard({
           entries: Array.isArray(data.entries) ? data.entries : [],
@@ -523,6 +531,17 @@ export default function App() {
     if (!connect({ type: 'leaderboard_list' })) {
       setLeaderboardLoading(false);
       showToast(t('rankingUnavailable'), 'error');
+    }
+  }
+
+  function saveProfile(nextName, nextAvatar) {
+    if (pending) return;
+    const cleanName = String(nextName || '').replace(/\s+/g, ' ').trim().slice(0, 20);
+    if (!cleanName) return;
+    beginPending();
+    if (!connect({ type: 'profile_update', name: cleanName, avatar: nextAvatar })) {
+      clearPending();
+      showToast(t('profileUpdateUnavailable'), 'error');
     }
   }
 
@@ -702,6 +721,7 @@ export default function App() {
           isGoogleLinked={!!(firebaseUser && !firebaseUser.isAnonymous)} googleEmail={firebaseUser?.email}
           linkGoogle={linkGoogle} linking={linking} clientId={clientId} social={social}
           onOpenLeaderboard={openLeaderboard}
+          onSaveProfile={saveProfile} profileSaving={pending}
         />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);

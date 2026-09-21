@@ -82,6 +82,7 @@ const actionLimiters = {
   identifyIp: new RateLimiter(60 * 1000, 30),
   friendRequest: new RateLimiter(60 * 1000, 10),
   friendMutation: new RateLimiter(60 * 1000, 30),
+  profileUpdate: new RateLimiter(60 * 1000, 8),
   dm: new RateLimiter(10 * 1000, 20),
   gameChat: new RateLimiter(10 * 1000, 12),
   roomJoin: new RateLimiter(30 * 1000, 10),
@@ -134,7 +135,7 @@ async function handleIdentify(ws, data, state) {
     return;
   }
 
-  // A live WebSocket is bound to one verified Firebase identity. Account
+  // A live WebSocket is bound to one verified QuizzUp identity. Account
   // switching on the same transport creates ambiguous game/social ownership
   // and can bypass account-keyed abuse limits. Open a fresh socket instead.
   if (state.clientId && state.clientId !== uid) {
@@ -284,6 +285,35 @@ function handleFeed(ws, data, state) {
 
 function handleSocial(ws, data, state) {
   const { clientId } = state;
+
+  if (data.type === 'profile_update') {
+    if (!clientId) {
+      game.send(ws, { type: 'auth_required', code: 'AUTH_REQUIRED' });
+      return true;
+    }
+    if (!allowAction(actionLimiters.profileUpdate, clientId, ws, 'PROFILE_UPDATE_RATE_LIMITED')) {
+      return true;
+    }
+
+    const name = cleanDisplayName(data.name, state.name);
+    const avatar = cleanAvatar(data.avatar, state.avatar);
+    state.name = name;
+    state.avatar = avatar;
+    const profile = social.updateProfile(clientId, name, avatar);
+
+    game.send(ws, { type: 'profile_updated', profile });
+    social.getFriendsList(clientId).forEach((friend) => {
+      const friendWs = social.getWs(friend.id);
+      if (friendWs) {
+        game.send(friendWs, {
+          type: 'friend_profile_updated',
+          profile: { id: clientId, name, avatar, online: true },
+        });
+      }
+    });
+    return true;
+  }
+
   if (data.type === 'friend_request') {
     const targetId = String(data.targetId || '');
     if (clientId && targetId) {

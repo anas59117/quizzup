@@ -56,12 +56,12 @@ async function startGame(rawPlayers, categoryKey) {
   // Gameplay and persistent progression require a verified identity.
   if (rawPlayers.some((p) => !p.clientId)) throw new Error('AUTH_REQUIRED');
 
-  // Reject the same Firebase account twice in the batch itself (possible in
+  // Reject the same verified account twice in the batch itself (possible in
   // a private room before either socket has entered an active game).
   const clientIds = rawPlayers.map((p) => p.clientId);
   if (new Set(clientIds).size !== clientIds.length) throw new Error('CLIENT_ALREADY_PLAYING');
 
-  // A verified Firebase identity may only own one active or starting game.
+  // A verified QuizzUp identity may only own one active or starting game.
   const duplicate = rawPlayers.find((p) => findActiveSessionByClientId(p.clientId));
   if (duplicate || clientIds.some((id) => startingClients.has(id))) {
     throw new Error('CLIENT_ALREADY_PLAYING');
