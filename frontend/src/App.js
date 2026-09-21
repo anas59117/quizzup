@@ -686,8 +686,8 @@ export default function App() {
     return (
       <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <div className="container center">
-          <h2 className="logo">Reconnexion…</h2>
-          <p className="tagline">La partie est conservée pendant quelques secondes.</p>
+          <h2 className="logo">{t('reconnecting')}</h2>
+          <p className="tagline">{t('reconnectHold')}</p>
         </div>
       </div>
     );
