@@ -33,7 +33,7 @@ export function HomeContent({ name, avatar, soloMode, setSoloMode, quickMatch, s
           <div className="play-title">{t('quickPlay')}</div>
           <div className="play-subtitle">{t('randomTopic')}</div>
         </div>
-        <button className="quick-play" onClick={quickMatch} disabled={pending} aria-busy={pending || undefined}>
+        <button className="quick-play" onClick={quickMatch} disabled={pending} aria-busy={pending || undefined} aria-label={t('quickPlay')}>
           <Icon name="bolt" size={21} />
           <Icon name="arrow" size={20} className="quick-arrow" />
         </button>
