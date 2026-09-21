@@ -15,6 +15,7 @@ const { verifyIdToken, sweepCache } = require('./auth');
 const stats = require('./stats');
 const { ROOM_TTL_MS, CODE_ALPHABET, MAX_ROOM_PLAYERS } = require('./config');
 const { randomRoomCode } = require('./ids');
+const { cleanDisplayName, cleanAvatar } = require('./sanitize');
 
 const app = express();
 const server = http.createServer(app);
@@ -113,14 +114,8 @@ function notifyPresence(clientId, isOnline) {
 }
 
 async function handleIdentify(ws, data, state) {
-  const requestedName = (
-    typeof data.name === 'string' && data.name.trim()
-      ? data.name.trim().slice(0, 20)
-      : state.name
-  );
-  const requestedAvatar = typeof data.avatar === 'string'
-    ? data.avatar.slice(0, 4)
-    : state.avatar;
+  const requestedName = cleanDisplayName(data.name, state.name);
+  const requestedAvatar = cleanAvatar(data.avatar, state.avatar);
 
   const uid = await verifyIdToken(data.idToken);
   if (!uid) {
@@ -511,8 +506,8 @@ function handleGameplay(ws, data, state) {
       game.send(ws, { type: 'already_playing' });
       return true;
     }
-    if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
-    const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
+    state.name = cleanDisplayName(data.name, state.name);
+    const avatar = cleanAvatar(data.avatar, state.avatar || '\u{1F43A}');
     const categoryKey = typeof data.category === 'string' ? data.category : null;
     game.send(ws, { type: 'joined', playerId, name: state.name });
     startGameGuarded([{ ws, id: playerId, clientId: state.clientId, name: state.name, avatar }], categoryKey);
@@ -528,8 +523,8 @@ function handleGameplay(ws, data, state) {
       game.send(ws, { type: 'already_playing' });
       return true;
     }
-    if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
-    const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
+    state.name = cleanDisplayName(data.name, state.name);
+    const avatar = cleanAvatar(data.avatar, state.avatar || '\u{1F43A}');
     const categoryKey = typeof data.category === 'string' ? data.category : null;
     game.send(ws, { type: 'joined', playerId, name: state.name });
     const oppIdx = waitingPlayers.findIndex((w) =>
@@ -595,8 +590,8 @@ function handleGameplay(ws, data, state) {
       game.send(ws, { type: 'already_playing' });
       return true;
     }
-    if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
-    const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F43A}';
+    state.name = cleanDisplayName(data.name, state.name);
+    const avatar = cleanAvatar(data.avatar, state.avatar || '\u{1F43A}');
     const categoryKey = typeof data.category === 'string' ? data.category : null;
     const code = newRoomCode();
     const room = {
@@ -637,8 +632,8 @@ function handleGameplay(ws, data, state) {
       return true;
     }
     if (room.players.length >= MAX_ROOM_PLAYERS) { game.send(ws, { type: 'room_full' }); return true; }
-    if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
-    const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F981}';
+    state.name = cleanDisplayName(data.name, state.name);
+    const avatar = cleanAvatar(data.avatar, state.avatar || '\u{1F981}');
     room.players.push({
       ws, id: playerId, clientId: state.clientId, name: state.name, avatar,
       connected: true, reconnectTimer: null,
