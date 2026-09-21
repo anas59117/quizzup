@@ -264,7 +264,7 @@ function disconnectPlayer(game, playerId) {
     if (game.status !== 'active') return;
     const stillMissing = game.players.find((p) => p.id === playerId && !p.connected);
     if (stillMissing) removePlayer(game, playerId);
-  }, FINISHED_RETENTION_MS);
+  }, RECONNECT_GRACE_MS);
 
   if (game.phase === 'question' && allPlayersAnswered(game)) {
     revealRound(game, false);
@@ -510,7 +510,7 @@ function endGame(game, reason) {
       if (playerSessions.get(p.id) === game.id) playerSessions.delete(p.id);
     });
     activeGames.delete(game.id);
-  }, RECONNECT_GRACE_MS);
+  }, FINISHED_RETENTION_MS);
 }
 
 module.exports = {
