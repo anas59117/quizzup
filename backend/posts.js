@@ -2,10 +2,10 @@
 // posts tagged with a topic, with a lightning-bolt reaction. Persistence is
 // a local JSON file (same pattern as reports.js/social.js).
 
-const path = require('path');
 const { createJsonWriter, readJsonFileSync } = require('./json-writer');
+const { getStorePath } = require('./store-path');
 
-const STORE = path.join(__dirname, 'posts.json');
+const STORE = getStorePath('posts.json');
 const MAX_POSTS = 500; // oldest posts drop off once this cap is hit
 const MAX_TEXT_LEN = 240;
 const REPORT_THRESHOLD = 3; // flags before a post is hidden from the feed (same bar as reports.js)
