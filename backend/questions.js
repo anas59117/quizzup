@@ -42,6 +42,27 @@ const copaAmerica = require('./data/copa-america.json');
 const legendesFootAllemandAnglaisItalien = require('./data/legendes-foot-allemand-anglais-italien.json');
 const eredivisie = require('./data/eredivisie.json');
 
+// Batch 4 — Sport family, suite (text-only, no photos).
+const ligaPortugal = require('./data/liga_portugal.json');
+const mls = require('./data/mls.json');
+const tennisAtp = require('./data/tennis_atp.json');
+const tennisWta = require('./data/tennis_wta.json');
+const rolandGarros = require('./data/roland_garros.json');
+const wimbledon = require('./data/wimbledon.json');
+const rugbyTop14 = require('./data/rugby_top_14.json');
+const mmaUfc = require('./data/mma_ufc.json');
+const legendesDuCyclisme = require('./data/legendes_du_cyclisme.json');
+const natationOlympique = require('./data/natation_olympique.json');
+const joDHiverHistoire = require('./data/jo_d_hiver_histoire.json');
+const volleyball = require('./data/volleyball.json');
+const skiAlpin = require('./data/ski_alpin.json');
+const sportsDHiver = require('./data/sports_d_hiver.json');
+const golf = require('./data/golf.json');
+const nhl = require('./data/nhl.json');
+const baseballMlb = require('./data/baseball_mlb.json');
+const motogp = require('./data/motogp.json');
+const rallyeWrc = require('./data/rallye_wrc.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -566,6 +587,25 @@ const CATEGORIES = {
     icon: '🚩',
     questions: [...playersDrapeaux],
   },
+  liga_portugal: { label: 'Liga Portugal', icon: '🇵🇹', questions: [...ligaPortugal] },
+  mls: { label: 'MLS', icon: '🇺🇸', questions: [...mls] },
+  tennis_atp: { label: 'Tennis ATP', icon: '🎾', questions: [...tennisAtp] },
+  tennis_wta: { label: 'Tennis WTA', icon: '🎾', questions: [...tennisWta] },
+  roland_garros: { label: 'Roland-Garros', icon: '🎾', questions: [...rolandGarros] },
+  wimbledon: { label: 'Wimbledon', icon: '🎾', questions: [...wimbledon] },
+  rugby_top_14: { label: 'Rugby Top 14', icon: '🏉', questions: [...rugbyTop14] },
+  mma_ufc: { label: 'MMA/UFC', icon: '🥋', questions: [...mmaUfc] },
+  legendes_du_cyclisme: { label: 'Légendes du cyclisme', icon: '🚴', questions: [...legendesDuCyclisme] },
+  natation_olympique: { label: 'Natation olympique', icon: '🏊', questions: [...natationOlympique] },
+  jo_d_hiver_histoire: { label: "JO d'hiver (histoire)", icon: '⛄', questions: [...joDHiverHistoire] },
+  volleyball: { label: 'Volleyball', icon: '🏐', questions: [...volleyball] },
+  ski_alpin: { label: 'Ski alpin', icon: '⛷️', questions: [...skiAlpin] },
+  sports_d_hiver: { label: "Sports d'hiver", icon: '🥌', questions: [...sportsDHiver] },
+  golf: { label: 'Golf', icon: '⛳', questions: [...golf] },
+  nhl: { label: 'NHL', icon: '🏒', questions: [...nhl] },
+  baseball_mlb: { label: 'Baseball MLB', icon: '⚾', questions: [...baseballMlb] },
+  motogp: { label: 'MotoGP', icon: '🏍️', questions: [...motogp] },
+  rallye_wrc: { label: 'Rallye WRC', icon: '🚗', questions: [...rallyeWrc] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
