@@ -46,22 +46,17 @@ function allActivePlayersAnswered(game) {
 async function startGame(rawPlayers, categoryKey) {
   if (!rawPlayers.length) throw new Error('NO_PLAYERS');
 
-  const clientIds = rawPlayers.map((p) => p.clientId).filter(Boolean);
-  if (new Set(clientIds).size !== clientIds.length) throw new Error('DUPLICATE_IDENTITY');
-
-  // A verified Firebase identity may only own one active game at a time.
-  // This closes the duplicate-session gap caused by opening a second
-  // WebSocket before the first game has finished.
-  const duplicate = rawPlayers.find((p) => p.clientId && findActiveSessionByClientId(p.clientId));
-  if (duplicate) throw new Error('CLIENT_ALREADY_PLAYING');
-
-  // Also reject the same Firebase account appearing twice in the batch
-  // itself (possible in a private room before either socket has a game).
-  const clientIds = rawPlayers.map((p) => p.clientId).filter(Boolean);
-  if (new Set(clientIds).size !== clientIds.length) throw new Error('CLIENT_ALREADY_PLAYING');
-
   // Gameplay and persistent progression require a verified identity.
   if (rawPlayers.some((p) => !p.clientId)) throw new Error('AUTH_REQUIRED');
+
+  // Reject the same Firebase account twice in the batch itself (possible in
+  // a private room before either socket has entered an active game).
+  const clientIds = rawPlayers.map((p) => p.clientId);
+  if (new Set(clientIds).size !== clientIds.length) throw new Error('CLIENT_ALREADY_PLAYING');
+
+  // A verified Firebase identity may only own one active game at a time.
+  const duplicate = rawPlayers.find((p) => findActiveSessionByClientId(p.clientId));
+  if (duplicate) throw new Error('CLIENT_ALREADY_PLAYING');
 
   const gameId = rid('game_');
   const resolvedCategory = categoryKey || pickRandomCategory();
@@ -196,22 +191,12 @@ function recordAnswer(game, playerId, answerIndex) {
   if (allActivePlayersAnswered(game)) revealRound(game, false);
 }
 
-// A deliberate leave is immediate. A transport disconnect uses
-// disconnectPlayer() below so a short network interruption does not forfeit
-// the match.
+// A deliberate leave is immediate. Transport disconnects must call
+// disconnectPlayer() so they get a grace period before this removal path.
 function removePlayer(game, playerId) {
   if (game.status !== 'active') return;
   const idx = game.players.findIndex((p) => p.id === playerId);
   if (idx === -1) return;
-
-  const player = game.players[idx];
-  // server.js currently calls removePlayer from the socket close handler.
-  // If the socket is already closed, turn it into a reconnect grace period;
-  // an explicit in-game "leave" still has an open socket and remains instant.
-  if (!player.ws || player.ws.readyState !== 1) {
-    disconnectPlayer(game, playerId);
-    return;
-  }
 
   const [left] = game.players.splice(idx, 1);
   if (left.reconnectTimer) clearTimeout(left.reconnectTimer);
