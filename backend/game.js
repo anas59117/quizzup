@@ -3,6 +3,7 @@
 // gather up to 4 before the host starts). Pure game logic, separated from
 // transport so it can be tested independently.
 
+const { performance } = require('node:perf_hooks');
 const { getMixedQuestions, listCategories } = require('./questions');
 const { GAME_CONFIG } = require('./config');
 const stats = require('./stats');
@@ -138,7 +139,7 @@ function nextQuestion(game) {
   game.roundTimer = setTimeout(() => {
     if (game.status !== 'active') return;
     game.phase = 'question';
-    game.questionStart = Date.now();
+    game.questionStart = performance.now();
     activePlayers(game).forEach((p) => {
       send(p.ws, {
         type: 'question', round: nextRound + 1,
@@ -193,7 +194,7 @@ function recordAnswer(game, playerId, answerIndex) {
   if (idx === -1 || !game.players[idx].connected) return;
   if (game.roundAnswers[playerId]) return;
 
-  const elapsedMs = Date.now() - game.questionStart;
+  const elapsedMs = performance.now() - game.questionStart;
   if (elapsedMs < 0 || elapsedMs > GAME_CONFIG.TIME_PER_QUESTION * 1000 + 500) return;
 
   const q = game.questions[game.currentRound];
@@ -315,7 +316,7 @@ function sendCurrentState(game, player) {
       isBonus: game.currentRound === game.questions.length - 1,
     });
   } else if (game.phase === 'question') {
-    const elapsed = Date.now() - game.questionStart;
+    const elapsed = performance.now() - game.questionStart;
     const remainingMs = Math.max(0, GAME_CONFIG.TIME_PER_QUESTION * 1000 - elapsed);
     const mine = game.roundAnswers[player.id];
     send(player.ws, {
