@@ -98,6 +98,16 @@ export function FriendsScreen({ social }) {
   const [openChat, setOpenChat] = useState(null);
   const [draft, setDraft] = useState('');
   const [confirmRemove, setConfirmRemove] = useState(null);
+  const [pendingRemove, setPendingRemove] = useState(null);
+
+  useEffect(() => {
+    if (pendingRemove && !social.friends.some((friend) => friend.id === pendingRemove)) {
+      setOpenChat(null);
+      setConfirmRemove(null);
+      setPendingRemove(null);
+    }
+  }, [social.friends, pendingRemove]);
+
   return (
     <div className="friends-screen">
       {social.requests.length > 0 && (
@@ -126,9 +136,19 @@ export function FriendsScreen({ social }) {
         <div key={f.id} className="friends-block">
           <div
             className="friend-row"
+            role="button"
+            tabIndex={0}
+            aria-expanded={openChat === f.id}
             onClick={() => {
               setConfirmRemove(null);
               setOpenChat(openChat === f.id ? null : f.id);
+            }}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                setConfirmRemove(null);
+                setOpenChat(openChat === f.id ? null : f.id);
+              }
             }}
           >
             <div className={`friend-ava ${f.online ? 'online' : ''}`}>{f.avatar}</div>
@@ -161,16 +181,18 @@ export function FriendsScreen({ social }) {
                 className={`friend-remove-link ${confirmRemove === f.id ? 'confirm' : ''}`}
                 onClick={() => {
                   if (confirmRemove === f.id) {
-                    if (social.removeFriend(f.id)) {
-                      setOpenChat(null);
-                      setConfirmRemove(null);
-                    }
+                    if (social.removeFriend(f.id)) setPendingRemove(f.id);
                   } else {
                     setConfirmRemove(f.id);
                   }
                 }}
+                disabled={pendingRemove === f.id}
               >
-                {confirmRemove === f.id ? t('confirmRemoveFriend') : t('removeFriend')}
+                {pendingRemove === f.id
+                  ? t('removingFriend')
+                  : confirmRemove === f.id
+                    ? t('confirmRemoveFriend')
+                    : t('removeFriend')}
               </button>
             </div>
           )}
@@ -188,9 +210,14 @@ export function GameChat({ social }) {
   const endRef = useRef(null);
   const unread = Math.max(0, social.gameChat.length - seenCount);
   useEffect(() => {
-    if (!open) return;
-    setSeenCount(social.gameChat.length);
-    endRef.current?.scrollIntoView({ block: 'nearest' });
+    if (open) {
+      setSeenCount(social.gameChat.length);
+      endRef.current?.scrollIntoView({ block: 'nearest' });
+      return;
+    }
+    // A new match clears the chat array. Clamp the read cursor as well or a
+    // previous game's message count could suppress unread badges in the next.
+    setSeenCount((count) => Math.min(count, social.gameChat.length));
   }, [social.gameChat, open]);
   return (
     <div className={`game-chat ${open ? 'open' : ''}`}>
