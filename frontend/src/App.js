@@ -139,15 +139,14 @@ export default function App() {
     if (pendingTimerRef.current) clearTimeout(pendingTimerRef.current);
   }, []);
 
-  // A verified Firebase identity is required by the authoritative backend.
-  // Do not fall back to an unverified local id: that would make the UI look
-  // authenticated while every gameplay action is correctly rejected.
+  // The authoritative backend requires a cryptographically verified identity.
+  // Guest mode uses a backend-signed token; Google linking remains optional.
   useEffect(() => {
     let cancelled = false;
     ensureSignedIn()
       .then((user) => { if (!cancelled) setFirebaseUser(user); })
       .catch((err) => {
-        console.error('Firebase sign-in failed', err);
+        console.error('Identity bootstrap failed', err);
         if (!cancelled) {
           setFatalReason('auth');
           setFatalCode(err?.code || err?.message || '');
