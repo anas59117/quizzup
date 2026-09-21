@@ -11,7 +11,7 @@ const game = require('./game');
 const RateLimiter = require('./rate-limit');
 const { getClientIp } = require('./client-ip');
 const { flushAllJsonWriters } = require('./json-writer');
-const { verifyIdToken, sweepCache } = require('./auth');
+const { verifyIdToken, sweepCache, diagnoseFirebaseAuth } = require('./auth');
 const stats = require('./stats');
 const { ROOM_TTL_MS, CODE_ALPHABET, MAX_ROOM_PLAYERS } = require('./config');
 const { randomRoomCode } = require('./ids');
@@ -62,6 +62,17 @@ if (process.env.NODE_ENV === 'production' && !allowedOrigins.length) {
 }
 if (process.env.NODE_ENV === 'production' && !process.env.DATA_DIR) {
   console.warn('DATA_DIR is not configured; JSON persistence may be ephemeral on this host.');
+}
+
+if (process.env.RUN_FIREBASE_DIAGNOSTIC_ON_STARTUP === 'true') {
+  const diagnosticOrigin = allowedOrigins.find((origin) => origin !== '*') || '';
+  diagnoseFirebaseAuth(diagnosticOrigin)
+    .then((result) => {
+      console.log('Firebase auth diagnostic:', JSON.stringify(result));
+    })
+    .catch(() => {
+      console.warn('Firebase auth diagnostic: unexpected failure');
+    });
 }
 
 const waitingPlayers = [];
