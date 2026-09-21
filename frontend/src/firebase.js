@@ -1,13 +1,12 @@
 // Identity bootstrap.
 //
-// Gameplay no longer depends on Firebase Anonymous Auth. Every visitor can get
-// a backend-signed QuizzUp guest identity from Railway. Firebase is used only
-// when the player explicitly links a Google account.
+// Gameplay does not depend on Firebase Anonymous Auth. Every visitor gets a
+// backend-signed QuizzUp guest identity from Railway. Firebase is contacted
+// only when the player explicitly links a Google account.
 
 import { initializeApp, getApps, getApp } from 'firebase/app';
 import {
   getAuth,
-  onAuthStateChanged,
   GoogleAuthProvider,
   linkWithPopup,
   signInWithPopup,
@@ -16,6 +15,7 @@ import { getBackendOrigin } from './backend';
 
 const GUEST_TOKEN_KEY = 'quizzup-guest-token-v1';
 const GOOGLE_LINKED_KEY = 'quizzup-google-linked-v1';
+const GOOGLE_EMAIL_KEY = 'quizzup-google-email-v1';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -49,42 +49,33 @@ function getFirebaseAuth() {
   return authInstance;
 }
 
-function readStoredGuestToken() {
+function readLocal(key) {
   try {
-    return localStorage.getItem(GUEST_TOKEN_KEY) || '';
+    return localStorage.getItem(key) || '';
   } catch {
     return '';
   }
 }
 
-function storeGuestToken(token) {
+function writeLocal(key, value) {
   try {
-    if (token) localStorage.setItem(GUEST_TOKEN_KEY, token);
-    else localStorage.removeItem(GUEST_TOKEN_KEY);
+    if (value) localStorage.setItem(key, value);
+    else localStorage.removeItem(key);
   } catch {}
 }
 
-function hasLinkedGoogleMarker() {
-  try {
-    return localStorage.getItem(GOOGLE_LINKED_KEY) === '1';
-  } catch {
-    return false;
-  }
-}
-
-function setLinkedGoogleMarker(value) {
-  try {
-    if (value) localStorage.setItem(GOOGLE_LINKED_KEY, '1');
-    else localStorage.removeItem(GOOGLE_LINKED_KEY);
-  } catch {}
+function readStoredGuestToken() {
+  return readLocal(GUEST_TOKEN_KEY);
 }
 
 function makeGuestUser(uid, token) {
+  const googleLinked = readLocal(GOOGLE_LINKED_KEY) === '1';
+  const email = googleLinked ? readLocal(GOOGLE_EMAIL_KEY) || null : null;
   return {
     uid,
-    isAnonymous: true,
-    email: null,
-    providerData: [],
+    isAnonymous: !googleLinked,
+    email,
+    providerData: googleLinked ? [{ providerId: 'google.com', email }] : [],
     _quizzupGuest: true,
     getIdToken: async () => token,
   };
@@ -116,66 +107,22 @@ async function requestGuestIdentity() {
     throw err;
   }
 
-  storeGuestToken(data.token);
+  writeLocal(GUEST_TOKEN_KEY, data.token);
   return makeGuestUser(data.uid, data.token);
 }
 
-async function existingLinkedFirebaseUser() {
-  if (!hasLinkedGoogleMarker() || !firebaseConfigReady()) return null;
-
-  let auth;
-  try {
-    auth = getFirebaseAuth();
-  } catch {
-    return null;
-  }
-
-  return new Promise((resolve) => {
-    let settled = false;
-    let unsubscribe = () => {};
-    const finish = (user) => {
-      if (settled) return;
-      settled = true;
-      unsubscribe();
-      resolve(user || null);
-    };
-
-    const timer = setTimeout(() => finish(null), 1500);
-    unsubscribe = onAuthStateChanged(
-      auth,
-      async (user) => {
-        clearTimeout(timer);
-        if (!user || user.isAnonymous) {
-          finish(null);
-          return;
-        }
-        try {
-          await user.getIdToken();
-          finish(user);
-        } catch {
-          finish(null);
-        }
-      },
-      () => {
-        clearTimeout(timer);
-        finish(null);
-      }
-    );
-  });
-}
-
-// Prefer a previously-linked Google session when it is healthy. Otherwise,
-// issue/refresh a signed guest identity. Firebase outages therefore cannot
-// prevent a player from reaching the game.
+// The backend-signed guest token is always the gameplay identity. This keeps
+// startup independent from Firebase even after a Google account has been
+// linked. Google remains an account-recovery/linking provider, not a boot
+// dependency.
 async function ensureSignedIn() {
-  const linkedUser = await existingLinkedFirebaseUser();
-  if (linkedUser) return linkedUser;
   return requestGuestIdentity();
 }
 
-// Links the current QuizzUp guest identity to a Firebase Google account.
-// The backend stores Firebase UID -> guest UID, so stats/friends remain on the
-// same canonical QuizzUp account after the transport switches to Firebase.
+// Link Google to the existing canonical guest account. The frontend continues
+// using the guest token after linking, so a later Firebase outage cannot knock
+// the player out of the game. The backend persists Firebase UID -> guest UID
+// for future account-recovery flows.
 async function linkGoogleAccount() {
   const guestToken = readStoredGuestToken();
   if (!guestToken) {
@@ -208,20 +155,22 @@ async function linkGoogleAccount() {
   });
   const data = await response.json().catch(() => ({}));
 
-  if (!response.ok || !data.ok) {
+  if (!response.ok || !data.ok || !data.uid) {
     try { await auth.signOut(); } catch {}
     const err = new Error(data.code || 'Google account link failed');
     err.code = `auth/${String(data.code || 'google-link-failed').toLowerCase()}`;
     throw err;
   }
 
-  setLinkedGoogleMarker(true);
-  return result;
+  writeLocal(GOOGLE_LINKED_KEY, '1');
+  writeLocal(GOOGLE_EMAIL_KEY, result.user.email || '');
+  return { user: makeGuestUser(data.uid, guestToken) };
 }
 
 async function signOutUser() {
-  storeGuestToken('');
-  setLinkedGoogleMarker(false);
+  writeLocal(GUEST_TOKEN_KEY, '');
+  writeLocal(GOOGLE_LINKED_KEY, '');
+  writeLocal(GOOGLE_EMAIL_KEY, '');
   if (authInstance) await authInstance.signOut();
 }
 
@@ -229,6 +178,5 @@ export {
   ensureSignedIn,
   linkGoogleAccount,
   signOutUser,
-  onAuthStateChanged,
   firebaseConfigReady,
 };
