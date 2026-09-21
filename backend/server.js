@@ -51,6 +51,7 @@ const MAX_WS_CONNECTIONS_PER_IP = Number.isFinite(configuredConnectionCap)
   ? Math.max(0, Math.min(1000, configuredConnectionCap))
   : 100;
 const WS_HEARTBEAT_MS = 30 * 1000;
+const ROOM_RECONNECT_GRACE_MS = 15 * 1000;
 
 if (process.env.NODE_ENV === 'production' && !allowedOrigins.length) {
   console.warn('CORS_ORIGIN is not configured; WebSocket origin checks are open.');
@@ -129,6 +130,18 @@ async function handleIdentify(ws, data, state) {
     return;
   }
 
+  const roomSession = findRoomSessionByClientId(uid);
+  if (
+    roomSession
+    && roomSession.player.connected !== false
+    && roomSession.player.ws
+    && roomSession.player.ws !== ws
+  ) {
+    game.send(ws, { type: 'already_connected' });
+    ws.close(1008, 'Account already connected to a private room');
+    return;
+  }
+
   if (state.clientId && state.clientId !== uid) {
     social.setOffline(state.clientId, ws);
     notifyPresence(state.clientId, false);
@@ -138,16 +151,20 @@ async function handleIdentify(ws, data, state) {
   const finishedSession = game.findFinishedSessionByClientId(uid);
   const recoverySession = activeSession || finishedSession;
   const reconnected = !!(recoverySession && game.reconnectPlayer(uid, ws, state.playerId));
+  const roomReconnected = !reconnected && reconnectRoomPlayer(uid, ws, state.playerId);
 
-  // On recovery, keep the identity already attached to the match instead of
-  // overwriting the social profile with a fresh tab's temporary defaults.
+  // On recovery, keep the identity already attached to the match/lobby
+  // instead of overwriting it with a fresh tab's temporary defaults.
   if (reconnected && recoverySession) {
     state.name = recoverySession.player.name;
     state.avatar = recoverySession.player.avatar;
+  } else if (roomReconnected && roomSession) {
+    state.name = roomSession.player.name;
+    state.avatar = roomSession.player.avatar;
   }
 
   social.setOnline(state.clientId, ws, state.name, state.avatar);
-  game.send(ws, { type: 'identified', reconnected });
+  game.send(ws, { type: 'identified', reconnected, roomReconnected });
   game.send(ws, { type: 'friends_list', friends: social.getFriendsList(state.clientId) });
   game.send(ws, { type: 'friend_requests', requests: social.getPendingRequests(state.clientId) });
   game.send(ws, { type: 'stats', stats: stats.getStats(state.clientId) });
@@ -243,7 +260,32 @@ function handleSocial(ws, data, state) {
 }
 
 function roomView(room) {
-  return room.players.map((p) => ({ id: p.id, name: p.name, avatar: p.avatar }));
+  return room.players.map((p) => ({
+    id: p.id,
+    name: p.name,
+    avatar: p.avatar,
+    connected: p.connected !== false,
+  }));
+}
+
+function roomCanStart(room) {
+  return room.players.length >= 2
+    && room.players.every((p) => p.connected !== false && p.ws && p.ws.readyState === 1);
+}
+
+function findRoomSessionByClientId(clientId) {
+  const code = clientId && roomByClient.get(clientId);
+  const room = code && privateRooms.get(code);
+  if (!room) {
+    if (clientId && code) roomByClient.delete(clientId);
+    return null;
+  }
+  const index = room.players.findIndex((p) => p.clientId === clientId);
+  if (index === -1) {
+    roomByClient.delete(clientId);
+    return null;
+  }
+  return { code, room, player: room.players[index], index };
 }
 
 function removeRoom(code, { notify = false, exceptPlayerId = null } = {}) {
@@ -251,7 +293,13 @@ function removeRoom(code, { notify = false, exceptPlayerId = null } = {}) {
   if (!room) return null;
 
   privateRooms.delete(code);
-  room.players.forEach((p) => roomByClient.delete(p.clientId));
+  room.players.forEach((p) => {
+    roomByClient.delete(p.clientId);
+    if (p.reconnectTimer) {
+      clearTimeout(p.reconnectTimer);
+      p.reconnectTimer = null;
+    }
+  });
 
   if (notify) {
     room.players.forEach((p) => {
@@ -265,12 +313,71 @@ function broadcastRoomUpdate(room) {
   if (!room.players.length) return;
   const view = roomView(room);
   const hostId = room.players[0].id;
+  const canStart = roomCanStart(room);
   room.players.forEach((p) => {
     game.send(p.ws, {
       type: 'room_update', code: room.code, players: view,
-      isHost: p.id === hostId, canStart: room.players.length >= 2,
+      isHost: p.id === hostId, canStart,
     });
   });
+}
+
+function reconnectRoomPlayer(clientId, ws, newPlayerId) {
+  const found = findRoomSessionByClientId(clientId);
+  if (!found || found.player.connected !== false) return false;
+
+  const { room, player } = found;
+  if (player.reconnectTimer) clearTimeout(player.reconnectTimer);
+  player.reconnectTimer = null;
+  player.connected = true;
+  player.ws = ws;
+  player.id = newPlayerId;
+  broadcastRoomUpdate(room);
+  return true;
+}
+
+function disconnectRoomPlayer(clientId, ws) {
+  const found = findRoomSessionByClientId(clientId);
+  if (!found || found.player.ws !== ws || found.player.connected === false) return false;
+
+  const { code, room, player, index } = found;
+  player.connected = false;
+  player.ws = null;
+  if (player.reconnectTimer) clearTimeout(player.reconnectTimer);
+
+  player.reconnectTimer = setTimeout(() => {
+    const current = findRoomSessionByClientId(clientId);
+    if (!current || current.player !== player || current.player.connected !== false) return;
+
+    if (index === 0 || current.index === 0) {
+      removeRoom(code, { notify: true });
+      return;
+    }
+
+    current.room.players.splice(current.index, 1);
+    roomByClient.delete(clientId);
+    broadcastRoomUpdate(current.room);
+  }, ROOM_RECONNECT_GRACE_MS);
+
+  broadcastRoomUpdate(room);
+  return true;
+}
+
+function leaveRoom(clientId, playerId) {
+  const found = findRoomSessionByClientId(clientId);
+  if (!found || found.player.id !== playerId) return false;
+
+  const { code, room, player, index } = found;
+  if (player.reconnectTimer) clearTimeout(player.reconnectTimer);
+
+  if (index === 0) {
+    removeRoom(code, { notify: true, exceptPlayerId: playerId });
+  } else {
+    room.players.splice(index, 1);
+    roomByClient.delete(clientId);
+    broadcastRoomUpdate(room);
+  }
+  return true;
 }
 
 function isInActiveGame(playerId) {
@@ -325,7 +432,7 @@ function handleGameplay(ws, data, state) {
 
   const gameplayTypes = new Set([
     'game_chat', 'solo', 'join', 'answer', 'create_room', 'join_room',
-    'start_room', 'report', 'leave',
+    'start_room', 'leave_room', 'report', 'leave',
   ]);
   if (gameplayTypes.has(data.type) && !requireAuth(ws, state)) return true;
 
@@ -402,7 +509,7 @@ function handleGameplay(ws, data, state) {
     if (existing) {
       const host = existing.players[0];
       if (host && host.id === playerId) {
-        game.send(ws, { type: 'room_created', code: existing.code, players: roomView(existing), isHost: true, canStart: existing.players.length >= 2 });
+        game.send(ws, { type: 'room_created', code: existing.code, players: roomView(existing), isHost: true, canStart: roomCanStart(existing) });
       } else {
         game.send(ws, { type: 'already_playing' });
       }
@@ -418,7 +525,10 @@ function handleGameplay(ws, data, state) {
     const code = newRoomCode();
     const room = {
       code,
-      players: [{ ws, id: playerId, clientId: state.clientId, name: state.name, avatar }],
+      players: [{
+        ws, id: playerId, clientId: state.clientId, name: state.name, avatar,
+        connected: true, reconnectTimer: null,
+      }],
       categoryKey, createdAt: Date.now(),
     };
     privateRooms.set(code, room);
@@ -436,7 +546,7 @@ function handleGameplay(ws, data, state) {
     if (!allowAction(actionLimiters.roomJoinIp, state.ip, ws, 'ROOM_JOIN_RATE_LIMITED')) return true;
     const code = String(data.code || '').toUpperCase().trim();
     const room = privateRooms.get(code);
-    if (!room || room.players[0].ws.readyState !== 1) {
+    if (!room || room.players[0].connected === false || !room.players[0].ws || room.players[0].ws.readyState !== 1) {
       if (room) removeRoom(code, { notify: true });
       game.send(ws, { type: 'room_not_found' });
       return true;
@@ -448,7 +558,10 @@ function handleGameplay(ws, data, state) {
     if (room.players.length >= MAX_ROOM_PLAYERS) { game.send(ws, { type: 'room_full' }); return true; }
     if (typeof data.name === 'string' && data.name.trim()) state.name = data.name.trim().slice(0, 20);
     const avatar = typeof data.avatar === 'string' ? data.avatar.slice(0, 4) : '\u{1F981}';
-    room.players.push({ ws, id: playerId, clientId: state.clientId, name: state.name, avatar });
+    room.players.push({
+      ws, id: playerId, clientId: state.clientId, name: state.name, avatar,
+      connected: true, reconnectTimer: null,
+    });
     roomByClient.set(state.clientId, code);
     broadcastRoomUpdate(room);
     return true;
@@ -458,13 +571,18 @@ function handleGameplay(ws, data, state) {
     const code = String(data.code || '').toUpperCase().trim();
     const room = privateRooms.get(code);
     if (!room || room.players[0].id !== playerId) return true;
-    if (room.players.length < 2 || room.players.length > MAX_ROOM_PLAYERS) return true;
+    if (!roomCanStart(room) || room.players.length > MAX_ROOM_PLAYERS) return true;
     if (room.players.some((p) => isGameBusy(p.id, p.clientId))) {
       room.players.forEach((p) => game.send(p.ws, { type: 'already_playing' }));
       return true;
     }
     removeRoom(code);
     startGameGuarded(room.players, room.categoryKey);
+    return true;
+  }
+
+  if (data.type === 'leave_room') {
+    leaveRoom(state.clientId, playerId);
     return true;
   }
 
@@ -544,17 +662,7 @@ wss.on('connection', (ws, req) => {
     const wi = waitingPlayers.findIndex((w) => w.id === state.playerId);
     if (wi !== -1) waitingPlayers.splice(wi, 1);
 
-    for (const [code, room] of privateRooms) {
-      const idx = room.players.findIndex((p) => p.id === state.playerId);
-      if (idx === -1) continue;
-      if (idx === 0) {
-        removeRoom(code, { notify: true, exceptPlayerId: state.playerId });
-      } else {
-        const [left] = room.players.splice(idx, 1);
-        if (left?.clientId) roomByClient.delete(left.clientId);
-        broadcastRoomUpdate(room);
-      }
-    }
+    if (state.clientId) disconnectRoomPlayer(state.clientId, ws);
 
     const gameId = game.playerSessions.get(state.playerId);
     const g = gameId && game.activeGames.get(gameId);
@@ -587,7 +695,7 @@ const heartbeatTimer = setInterval(() => {
 setInterval(() => {
   const now = Date.now();
   for (const [code, room] of privateRooms) {
-    if (now - room.createdAt > ROOM_TTL_MS || room.players[0].ws.readyState !== 1) {
+    if (now - room.createdAt > ROOM_TTL_MS) {
       removeRoom(code, { notify: true });
     }
   }
