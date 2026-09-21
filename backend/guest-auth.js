@@ -11,7 +11,8 @@ function getSecret() {
 }
 
 function tokenTtlMs() {
-  const raw = Number(process.env.GUEST_AUTH_TTL_DAYS);
+  const rawText = String(process.env.GUEST_AUTH_TTL_DAYS || '').trim();
+  const raw = rawText ? Number(rawText) : Number.NaN;
   const days = Number.isFinite(raw) ? Math.max(1, Math.min(365, raw)) : DEFAULT_TTL_DAYS;
   return Math.floor(days * 24 * 60 * 60 * 1000);
 }
