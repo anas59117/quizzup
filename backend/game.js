@@ -38,6 +38,28 @@ function othersOf(game, selfId, mapper) {
   return game.players.filter((p) => p.id !== selfId).map(mapper);
 }
 
+function recentMatchSnapshot(
+  game,
+  player,
+  { outcome, xp = 0, coins = 0, leftEarly = false, playedAt = Date.now() }
+) {
+  return {
+    playedAt,
+    mode: game.mode === 'solo' ? 'solo' : 'multiplayer',
+    outcome,
+    score: Math.max(0, Math.floor(Number(player?.score) || 0)),
+    xp,
+    coins,
+    categoryKey: game.categoryKey || null,
+    leftEarly,
+    opponents: othersOf(game, player?.id, (opponent) => ({
+      name: opponent.name,
+      avatar: opponent.avatar,
+      score: opponent.score,
+    })).slice(0, 3),
+  };
+}
+
 function activePlayers(game) {
   return game.players.filter((p) => p.connected && p.ws && p.ws.readyState === 1);
 }
@@ -235,7 +257,17 @@ function removePlayer(game, playerId) {
   // because this player is removed from game.players and would otherwise
   // disappear from endGame() without an outcome ever being persisted. Solo
   // abandonment must not break a PvP win streak.
-  stats.recordResult(left.clientId, false, game.mode === 'solo', 0);
+  stats.recordResult(
+    left.clientId,
+    false,
+    game.mode === 'solo',
+    0,
+    0,
+    recentMatchSnapshot(game, left, {
+      outcome: game.mode === 'solo' ? 'solo' : 'loss',
+      leftEarly: true,
+    })
+  );
 
   if (game.players.length < 2) {
     endGame(game, 'opponent_disconnected');
@@ -502,7 +534,19 @@ function endGame(game, reason) {
     const coinsEarned = isSolo ? 20 : won ? 50 : isTie ? 35 : 20;
     // Solo sessions count as games played but neither extend nor break a PvP
     // win streak, and they cannot farm the multiplayer win bonus.
-    stats.recordResult(p.clientId, won, isSolo || isTie, xpTotal, coinsEarned);
+    stats.recordResult(
+      p.clientId,
+      won,
+      isSolo || isTie,
+      xpTotal,
+      coinsEarned,
+      recentMatchSnapshot(game, p, {
+        outcome: isSolo ? 'solo' : won ? 'win' : isTie ? 'tie' : 'loss',
+        xp: xpTotal,
+        coins: coinsEarned,
+        playedAt: game.finishedAt,
+      })
+    );
     const finalResult = {
       type: 'game_end', finalScore: p.score,
       solo: isSolo,
