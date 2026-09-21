@@ -8,6 +8,7 @@ export function useSocial(wsRef) {
   const [outgoingRequests, setOutgoingRequests] = useState(() => new Set());
   const [dms, setDms] = useState({}); // targetId -> [{from,text}]
   const [gameChat, setGameChat] = useState([]);
+  const gameChatSeenRef = useRef(0);
 
   const send = useCallback(
     (obj) => {
@@ -84,10 +85,13 @@ export function useSocial(wsRef) {
     if (!text.trim()) return false;
     return send({ type: 'game_chat', text: text.trim() });
   };
-  const clearGameChat = () => setGameChat([]);
+  const clearGameChat = () => {
+    gameChatSeenRef.current = 0;
+    setGameChat([]);
+  };
 
   return {
-    friends, requests, outgoingRequests, dms, gameChat,
+    friends, requests, outgoingRequests, dms, gameChat, gameChatSeenRef,
     handleMessage, addFriend, acceptFriend, declineFriend, removeFriend,
     sendDM, sendGameChat, clearGameChat,
   };
@@ -107,6 +111,12 @@ export function FriendsScreen({ social }) {
       setPendingRemove(null);
     }
   }, [social.friends, pendingRemove]);
+
+  useEffect(() => {
+    if (!pendingRemove) return undefined;
+    const timer = setTimeout(() => setPendingRemove(null), 6000);
+    return () => clearTimeout(timer);
+  }, [pendingRemove]);
 
   return (
     <div className="friends-screen">
@@ -206,18 +216,26 @@ export function GameChat({ social }) {
   const { t } = useI18n();
   const [open, setOpen] = useState(false);
   const [draft, setDraft] = useState('');
-  const [seenCount, setSeenCount] = useState(0);
+  const [seenCount, setSeenCount] = useState(() => Math.min(
+    social.gameChatSeenRef.current,
+    social.gameChat.length
+  ));
   const endRef = useRef(null);
   const unread = Math.max(0, social.gameChat.length - seenCount);
   useEffect(() => {
     if (open) {
+      social.gameChatSeenRef.current = social.gameChat.length;
       setSeenCount(social.gameChat.length);
       endRef.current?.scrollIntoView({ block: 'nearest' });
       return;
     }
     // A new match clears the chat array. Clamp the read cursor as well or a
     // previous game's message count could suppress unread badges in the next.
-    setSeenCount((count) => Math.min(count, social.gameChat.length));
+    setSeenCount((count) => {
+      const next = Math.min(count, social.gameChat.length);
+      social.gameChatSeenRef.current = next;
+      return next;
+    });
   }, [social.gameChat, open]);
   return (
     <div className={`game-chat ${open ? 'open' : ''}`}>
@@ -225,7 +243,10 @@ export function GameChat({ social }) {
         className="game-chat-toggle"
         onClick={() => setOpen((o) => {
           const next = !o;
-          if (next) setSeenCount(social.gameChat.length);
+          if (next) {
+            social.gameChatSeenRef.current = social.gameChat.length;
+            setSeenCount(social.gameChat.length);
+          }
           return next;
         })}
         aria-label={t('gameChat')}
