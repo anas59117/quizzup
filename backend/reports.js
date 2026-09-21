@@ -8,25 +8,22 @@
 
 const { createJsonWriter, readJsonFileSync } = require('./json-writer');
 const { getStorePath } = require('./store-path');
+const { normalizeReportsStore } = require('./store-normalize');
 
 const STORE = getStorePath('reports.json');
 const REPORT_THRESHOLD = 3; // flags before a question is quarantined
 const MAX_TRACKED = 5000; // cap the counts map so it can't grow unbounded
 
-const savedReports = readJsonFileSync(
-  STORE,
-  { counts: {}, quarantined: [] },
-  (value) => (
-    !!value
-    && typeof value === 'object'
-    && !!value.counts
-    && typeof value.counts === 'object'
-    && !Array.isArray(value.counts)
-    && Array.isArray(value.quarantined)
-  )
+const savedReports = normalizeReportsStore(
+  readJsonFileSync(
+    STORE,
+    { counts: {}, quarantined: [] },
+    (value) => !!value && typeof value === 'object' && !Array.isArray(value)
+  ),
+  { threshold: REPORT_THRESHOLD, maxTracked: MAX_TRACKED }
 );
 let counts = savedReports.counts; // question key -> flag count
-const quarantined = new Set(savedReports.quarantined);
+const quarantined = savedReports.quarantined;
 
 const persist = createJsonWriter(
   STORE,
