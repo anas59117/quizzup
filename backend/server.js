@@ -14,6 +14,7 @@ const { flushAllJsonWriters } = require('./json-writer');
 const { verifyIdToken, sweepCache } = require('./auth');
 const stats = require('./stats');
 const { ROOM_TTL_MS, CODE_ALPHABET, MAX_ROOM_PLAYERS } = require('./config');
+const { randomRoomCode } = require('./ids');
 
 const app = express();
 const server = http.createServer(app);
@@ -98,7 +99,7 @@ function allowAction(limiterInstance, key, ws, code = 'RATE_LIMITED') {
 function newRoomCode() {
   let code;
   do {
-    code = Array.from({ length: 5 }, () => CODE_ALPHABET[Math.floor(Math.random() * CODE_ALPHABET.length)]).join('');
+    code = randomRoomCode(CODE_ALPHABET, 5);
   } while (privateRooms.has(code));
   return code;
 }
