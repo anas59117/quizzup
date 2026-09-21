@@ -260,6 +260,9 @@ export default function App() {
         clearPending();
         setStage('home');
         break;
+      case 'queue_cancel_failed':
+        clearPending();
+        break;
       case 'room_created':
       case 'room_update':
         bootSessionRef.current = 'room';
@@ -408,10 +411,14 @@ export default function App() {
   }
 
   function cancelMatchmaking() {
+    if (pending) return;
     matchActionRef.current = null;
-    clearPending();
-    if (!sendSocket({ type: 'cancel_queue' })) closeSocket();
-    setStage('home');
+    beginPending();
+    if (!sendSocket({ type: 'cancel_queue' })) {
+      clearPending();
+      closeSocket();
+      setStage('home');
+    }
   }
 
   function createRoom() {
@@ -599,7 +606,7 @@ export default function App() {
   if (stage === 'waiting') {
     return (
       <div className="app game-bg"><TopControls {...topProps} />
-        <WaitingContent avatar={avatar} name={name} onCancel={cancelMatchmaking} />
+        <WaitingContent avatar={avatar} name={name} onCancel={cancelMatchmaking} pending={pending} />
       </div>);
   }
 
