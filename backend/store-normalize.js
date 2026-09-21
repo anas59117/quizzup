@@ -44,6 +44,7 @@ function normalizeStatsStore(value) {
       wins,
       streak: asNonNegativeInt(raw.streak, 0, 1_000_000_000),
       xp: asNonNegativeInt(raw.xp, 0, Number.MAX_SAFE_INTEGER),
+      coins: asNonNegativeInt(raw.coins, 0, Number.MAX_SAFE_INTEGER),
     };
   }
   return out;
