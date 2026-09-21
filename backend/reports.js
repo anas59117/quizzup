@@ -8,6 +8,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { createJsonWriter } = require('./json-writer');
 
 const STORE = path.join(__dirname, 'reports.json');
 const REPORT_THRESHOLD = 3; // flags before a question is quarantined
@@ -24,16 +25,10 @@ try {
   /* no store yet or unreadable — start fresh */
 }
 
-let writeScheduled = false;
-function persist() {
-  // Debounce writes so a burst of reports doesn't hammer the disk.
-  if (writeScheduled) return;
-  writeScheduled = true;
-  setTimeout(() => {
-    writeScheduled = false;
-    fs.writeFile(STORE, JSON.stringify({ counts, quarantined: [...quarantined] }), () => {});
-  }, 1000);
-}
+const persist = createJsonWriter(
+  STORE,
+  () => ({ counts, quarantined: [...quarantined] })
+);
 
 function report(text) {
   if (!text || typeof text !== 'string') return false;
