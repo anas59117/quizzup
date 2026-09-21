@@ -74,6 +74,7 @@ export default function App() {
     wsRef,
     connect,
     send: sendSocket,
+    closeSocket,
     scheduleRecovery,
     reconnecting,
   } = useGameSocket({
@@ -82,6 +83,7 @@ export default function App() {
     firebaseUser,
     shouldRecover: stage === 'playing' || stage === 'room_wait' || bootGameRecovery || matchmakingRecovery,
     expectGameRecovery: stage === 'playing' || bootGameRecovery,
+    expectRoomRecovery: stage === 'room_wait',
     onMessageRef: messageHandlerRef,
     onFatalError: () => setStage('error'),
     onPendingClear: clearPending,
@@ -428,7 +430,10 @@ export default function App() {
       } catch {}
     };
     const cancel = () => {
-      sendSocket({ type: 'leave_room' });
+      // If the socket is alive, leave explicitly and keep the authenticated
+      // connection. If it is already down, cancel the scheduled reconnect so
+      // the client cannot reattach to a lobby the user just chose to leave.
+      if (!sendSocket({ type: 'leave_room' })) closeSocket();
       setRoom(null);
       setStage('home');
     };
