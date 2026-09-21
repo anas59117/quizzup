@@ -12,6 +12,24 @@ import { HomeContent, EnterCodeContent, CategoriesContent, ProfileContent, Waiti
 import { useI18n } from './i18n';
 import { useGameSocket } from './useGameSocket';
 
+const LIVE_SESSION_KEY = 'quizzup-live-session';
+
+function readLiveSession() {
+  try {
+    const value = sessionStorage.getItem(LIVE_SESSION_KEY);
+    return value === 'game' || value === 'room' ? value : null;
+  } catch {
+    return null;
+  }
+}
+
+function writeLiveSession(value) {
+  try {
+    if (value) sessionStorage.setItem(LIVE_SESSION_KEY, value);
+    else sessionStorage.removeItem(LIVE_SESSION_KEY);
+  } catch {}
+}
+
 export default function App() {
   const { t } = useI18n();
   const [theme, toggleTheme] = useTheme();
@@ -56,6 +74,7 @@ export default function App() {
   const copyTimerRef = useRef(null);
   const pendingTimerRef = useRef(null);
   const bootNameRef = useRef(name);
+  const bootSessionRef = useRef(readLiveSession());
   const matchActionRef = useRef(null);
   const [skipRoomRecovery, setSkipRoomRecovery] = useState(false);
   const messageHandlerRef = useRef(null);
@@ -88,7 +107,17 @@ export default function App() {
     // visible playing screen requires a missing match to be fatal.
     expectGameRecovery: stage === 'playing',
     expectRoomRecovery: stage === 'room_wait',
-    recoverRoomOnIdentify: !skipRoomRecovery,
+    recoverGameOnIdentify: (
+      stage === 'playing'
+      || (stage === 'join' && bootSessionRef.current === 'game')
+    ),
+    recoverRoomOnIdentify: (
+      !skipRoomRecovery
+      && (
+        stage === 'room_wait'
+        || (stage === 'join' && bootSessionRef.current === 'room')
+      )
+    ),
     onMessageRef: messageHandlerRef,
     onFatalError: () => setStage('error'),
     onPendingClear: clearPending,
@@ -187,6 +216,8 @@ export default function App() {
           && !data.reconnected
           && !data.roomReconnected
         ) {
+          bootSessionRef.current = null;
+          writeLiveSession(null);
           setStage('home');
           break;
         }
@@ -204,6 +235,8 @@ export default function App() {
         }
         break;
       case 'game_reconnected':
+        bootSessionRef.current = 'game';
+        writeLiveSession('game');
         matchActionRef.current = null;
         clearPending();
         setScore(data.score || 0);
@@ -227,6 +260,8 @@ export default function App() {
         break;
       case 'room_created':
       case 'room_update':
+        bootSessionRef.current = 'room';
+        writeLiveSession('room');
         clearPending();
         setRoom({ code: data.code, players: data.players, isHost: data.isHost, canStart: data.canStart });
         setJoinError(false);
@@ -246,16 +281,22 @@ export default function App() {
         clearPending();
         break;
       case 'room_left':
+        bootSessionRef.current = null;
+        writeLiveSession(null);
         setSkipRoomRecovery(false);
         setRoom(null);
         setStage('home');
         break;
       case 'room_closed':
+        bootSessionRef.current = null;
+        writeLiveSession(null);
         setSkipRoomRecovery(false);
         setRoom(null);
         setStage('home');
         break;
       case 'game_start':
+        bootSessionRef.current = 'game';
+        writeLiveSession('game');
         matchActionRef.current = null;
         SFX.gameStart();
         clearPending();
@@ -297,6 +338,8 @@ export default function App() {
         if (tickRef.current) clearInterval(tickRef.current);
         break;
       case 'game_end':
+        bootSessionRef.current = null;
+        writeLiveSession(null);
         if (data.won) SFX.victory(); else if (data.tie) SFX.tie(); else SFX.defeat();
         setResult(data);
         setScore(data.finalScore);
@@ -413,6 +456,8 @@ export default function App() {
   // socket's handshake on any real network latency, occasionally dropping
   // the identify message that links a rematch's stats to the player.
   const playAgain = useCallback(() => {
+    bootSessionRef.current = null;
+    writeLiveSession(null);
     matchActionRef.current = null;
     setResult(null); setQuestion(null); setIntro(null); setReveal(null);
     setSelected(null); setFriendRequestSent({}); setRoom(null);
@@ -468,6 +513,8 @@ export default function App() {
       // If the socket is alive, leave explicitly and keep the authenticated
       // connection. If it is already down, cancel the scheduled reconnect so
       // the client cannot reattach to a lobby the user just chose to leave.
+      bootSessionRef.current = null;
+      writeLiveSession(null);
       setSkipRoomRecovery(true);
       if (!sendSocket({ type: 'leave_room' })) closeSocket();
       setRoom(null);
