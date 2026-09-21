@@ -37,6 +37,7 @@ export default function App() {
   const toggleMute = useCallback(() => setMuted(SFX.toggle()), []);
   useEffect(() => { music.setMuted(muted); }, [muted]);
   const [stage, setStage] = useState('join');
+  const [fatalReason, setFatalReason] = useState('connection');
   const [categoryFamily, setCategoryFamily] = useState(null);
   const [name, setName] = useState(() => {
     try { return localStorage.getItem('quizzup-name') || ''; } catch { return ''; }
@@ -118,7 +119,10 @@ export default function App() {
       )
     ),
     onMessageRef: messageHandlerRef,
-    onFatalError: () => setStage('error'),
+    onFatalError: () => {
+      setFatalReason('connection');
+      setStage('error');
+    },
     onPendingClear: clearPending,
   });
 
@@ -142,7 +146,10 @@ export default function App() {
       .then((user) => { if (!cancelled) setFirebaseUser(user); })
       .catch((err) => {
         console.error('Firebase sign-in failed', err);
-        if (!cancelled) setStage('error');
+        if (!cancelled) {
+          setFatalReason('auth');
+          setStage('error');
+        }
       });
     return () => { cancelled = true; };
   }, []);
@@ -695,7 +702,7 @@ export default function App() {
   if (stage === 'error') {
     return (
       <div className="app"><TopControls {...topProps} />
-        <ErrorScreen onRetry={() => window.location.reload()} />
+        <ErrorScreen reason={fatalReason} onRetry={() => window.location.reload()} />
       </div>);
   }
 
