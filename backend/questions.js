@@ -69,6 +69,13 @@ const realMadrid = require('./data/real_madrid.json');
 const lionelMessi = require('./data/lionel_messi.json');
 const cristianoRonaldo = require('./data/cristiano_ronaldo.json');
 
+// Batch 6 — gaming populaire (text-only, no photos).
+const fortnite = require('./data/fortnite.json');
+const minecraft = require('./data/minecraft.json');
+const gta = require('./data/gta.json');
+const leagueOfLegends = require('./data/league_of_legends.json');
+const valorant = require('./data/valorant.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -616,6 +623,11 @@ const CATEGORIES = {
   real_madrid: { label: 'Real Madrid', icon: '⚪', questions: [...realMadrid] },
   lionel_messi: { label: 'Lionel Messi', icon: '🐐', questions: [...lionelMessi] },
   cristiano_ronaldo: { label: 'Cristiano Ronaldo', icon: '🐐', questions: [...cristianoRonaldo] },
+  fortnite: { label: 'Fortnite', icon: '🪂', questions: [...fortnite] },
+  minecraft: { label: 'Minecraft', icon: '⛏️', questions: [...minecraft] },
+  gta: { label: 'GTA', icon: '🚘', questions: [...gta] },
+  league_of_legends: { label: 'League of Legends', icon: '⚔️', questions: [...leagueOfLegends] },
+  valorant: { label: 'VALORANT', icon: '🎯', questions: [...valorant] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
