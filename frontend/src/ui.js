@@ -17,6 +17,9 @@ export const Icon = memo(function Icon({ name, size = 20, className = '' }) {
     arrow: <><path d="M5 12h14"/><path d="m14 7 5 5-5 5"/></>,
     users: <><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3.5 20c.6-3.7 2.4-5.5 5.5-5.5s4.9 1.8 5.5 5.5"/><path d="M14 15.5c2.9-.7 5.1.8 6 4.5"/></>,
     key: <><circle cx="8.5" cy="12.5" r="4.5"/><path d="m12 10 8-8"/><path d="m16 6 2 2"/><path d="m18 4 2 2"/></>,
+    check: <path d="m5 12.5 4 4L19 6.5"/>,
+    info: <><circle cx="12" cy="12" r="9"/><path d="M12 10v6"/><circle cx="12" cy="7" r=".8" fill="currentColor" stroke="none"/></>,
+    close: <><path d="m7 7 10 10"/><path d="m17 7-10 10"/></>,
   };
   return (
     <svg
@@ -126,6 +129,23 @@ function topicMark(label) {
   return words[0]?.slice(0, 2).toUpperCase() || 'QZ';
 }
 
+
+export const Toast = memo(function Toast({ toast, onDismiss }) {
+  if (!toast) return null;
+  const tone = toast.tone || 'info';
+  return (
+    <div className={`toast toast-${tone}`} role={tone === 'error' ? 'alert' : 'status'} aria-live="polite">
+      <span className="toast-icon">
+        <Icon name={tone === 'success' ? 'check' : 'info'} size={17} />
+      </span>
+      <span className="toast-text">{toast.message}</span>
+      <button className="toast-close" onClick={onDismiss} aria-label="Dismiss">
+        <Icon name="close" size={16} />
+      </button>
+    </div>
+  );
+});
+
 export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setAvatar, onContinue }) {
   const { t } = useI18n();
   return (
@@ -159,11 +179,15 @@ export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setA
 export const ErrorScreen = memo(function ErrorScreen({ reason = 'connection', code = '', onRetry }) {
   const { t } = useI18n();
   const isAuth = reason === 'auth';
+  const showDebugCode = (
+    process.env.NODE_ENV !== 'production'
+    || new URLSearchParams(window.location.search).has('debug')
+  );
   return (
     <div className="container center">
       <h2 className="logo">{t(isAuth ? 'authProblem' : 'connectionLost')}</h2>
       <p className="tagline">{t(isAuth ? 'authUnavailable' : 'serverUnreachable')}</p>
-      {code && <div className="error-code">{String(code).slice(0, 120)}</div>}
+      {showDebugCode && code && <div className="error-code">{String(code).slice(0, 120)}</div>}
       <button className="btn" onClick={onRetry}>{t('retry')}</button>
     </div>
   );
