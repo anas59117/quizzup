@@ -15,10 +15,25 @@ const { ROOM_TTL_MS, CODE_ALPHABET, MAX_ROOM_PLAYERS } = require('./config');
 
 const app = express();
 const server = http.createServer(app);
-const wss = new WebSocketServer({ server, path: '/ws', maxPayload: 16 * 1024 });
 
-const allowedOrigin = process.env.CORS_ORIGIN;
-app.use(cors(allowedOrigin ? { origin: allowedOrigin } : {}));
+const allowedOrigins = String(process.env.CORS_ORIGIN || '')
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
+function isAllowedOrigin(origin) {
+  if (!allowedOrigins.length) return true;
+  return !!origin && allowedOrigins.includes(origin);
+}
+
+const wss = new WebSocketServer({
+  server,
+  path: '/ws',
+  maxPayload: 16 * 1024,
+  verifyClient: ({ origin }) => isAllowedOrigin(origin),
+});
+
+app.use(cors(allowedOrigins.length ? { origin: allowedOrigins } : {}));
 
 const PORT = process.env.PORT || 3001;
 
@@ -36,6 +51,22 @@ const openRoomByPlayer = new Map();
 const pendingPlayers = new Set();
 const limiter = new RateLimiter();
 const ipLimiter = new RateLimiter(2000, 40);
+
+const actionLimiters = {
+  friendRequest: new RateLimiter(60 * 1000, 10),
+  dm: new RateLimiter(10 * 1000, 20),
+  gameChat: new RateLimiter(10 * 1000, 12),
+  roomJoin: new RateLimiter(30 * 1000, 10),
+  roomJoinIp: new RateLimiter(30 * 1000, 30),
+  postCreate: new RateLimiter(60 * 1000, 5),
+  postReport: new RateLimiter(60 * 1000, 20),
+};
+
+function allowAction(limiterInstance, key, ws, code = 'RATE_LIMITED') {
+  if (!key || limiterInstance.check(key)) return true;
+  game.send(ws, { type: 'error', code });
+  return false;
+}
 
 function newRoomCode() {
   let code;
@@ -108,6 +139,7 @@ function handleFeed(ws, data, state) {
   }
   if (data.type === 'post_create') {
     if (!clientId) { game.send(ws, { type: 'auth_required' }); return true; }
+    if (!allowAction(actionLimiters.postCreate, clientId, ws, 'POST_RATE_LIMITED')) return true;
     const category = typeof data.category === 'string' && Object.prototype.hasOwnProperty.call(CATEGORIES, data.category) ? data.category : null;
     const post = posts.addPost(clientId, state.name, state.avatar, category, data.text);
     if (post) social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_created', post }));
@@ -121,6 +153,7 @@ function handleFeed(ws, data, state) {
   }
   if (data.type === 'post_report') {
     if (!clientId) return true;
+    if (!allowAction(actionLimiters.postReport, clientId, ws, 'REPORT_RATE_LIMITED')) return true;
     const result = posts.reportPost(String(data.postId || ''), clientId);
     if (result && result.hidden) social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_hidden', id: result.id }));
     return true;
@@ -133,6 +166,7 @@ function handleSocial(ws, data, state) {
   if (data.type === 'friend_request') {
     const targetId = String(data.targetId || '');
     if (clientId && targetId) {
+      if (!allowAction(actionLimiters.friendRequest, clientId, ws, 'FRIEND_REQUEST_RATE_LIMITED')) return true;
       const result = social.sendRequest(clientId, targetId);
       const me = result.ok && social.profileOf(clientId);
       const targetWs = result.ok && social.getWs(targetId);
@@ -170,6 +204,7 @@ function handleSocial(ws, data, state) {
     const targetId = String(data.targetId || '');
     const text = typeof data.text === 'string' ? data.text.trim().slice(0, 300) : '';
     if (clientId && targetId && text && social.areFriends(clientId, targetId)) {
+      if (!allowAction(actionLimiters.dm, clientId, ws, 'DM_RATE_LIMITED')) return true;
       const targetWs = social.getWs(targetId);
       if (targetWs) game.send(targetWs, { type: 'dm', from: clientId, text });
     }
@@ -230,6 +265,7 @@ function handleGameplay(ws, data, state) {
   if (gameplayTypes.has(data.type) && !requireAuth(ws, state)) return true;
 
   if (data.type === 'game_chat') {
+    if (!allowAction(actionLimiters.gameChat, state.clientId, ws, 'CHAT_RATE_LIMITED')) return true;
     const gameId = game.playerSessions.get(playerId);
     const g = gameId && game.activeGames.get(gameId);
     const text = typeof data.text === 'string' ? data.text.trim().slice(0, 200) : '';
@@ -312,6 +348,8 @@ function handleGameplay(ws, data, state) {
 
   if (data.type === 'join_room') {
     if (isBusy(playerId)) { game.send(ws, { type: 'already_playing' }); return true; }
+    if (!allowAction(actionLimiters.roomJoin, state.clientId, ws, 'ROOM_JOIN_RATE_LIMITED')) return true;
+    if (!allowAction(actionLimiters.roomJoinIp, state.ip, ws, 'ROOM_JOIN_RATE_LIMITED')) return true;
     const code = String(data.code || '').toUpperCase().trim();
     const room = privateRooms.get(code);
     if (!room || room.players[0].ws.readyState !== 1) {
@@ -378,6 +416,7 @@ wss.on('connection', (ws, req) => {
     name: 'Player' + Math.floor(1000 + Math.random() * 9000),
     clientId: null,
     avatar: '\u{1F43A}',
+    ip,
   };
 
   game.send(ws, { type: 'session', playerId: state.playerId });
@@ -444,6 +483,7 @@ setInterval(() => {
   }
   limiter.sweep();
   ipLimiter.sweep();
+  Object.values(actionLimiters).forEach((rl) => rl.sweep());
   sweepCache();
 }, 60 * 1000);
 
