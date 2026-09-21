@@ -4,6 +4,7 @@ import { useI18n } from './i18n';
 export function useSocial(wsRef) {
   const [friends, setFriends] = useState([]);
   const [requests, setRequests] = useState([]);
+  const [outgoingRequests, setOutgoingRequests] = useState(() => new Set());
   const [dms, setDms] = useState({}); // targetId -> [{from,text}]
   const [gameChat, setGameChat] = useState([]);
 
@@ -20,10 +21,30 @@ export function useSocial(wsRef) {
     switch (data.type) {
       case 'friends_list': setFriends(data.friends); break;
       case 'friend_requests': setRequests(data.requests); break;
-      case 'friend_request_received': setRequests((r) => [...r, data.from]); break;
+      case 'friend_request_received':
+        setRequests((r) => (r.some((x) => x.id === data.from.id) ? r : [...r, data.from]));
+        break;
+      case 'friend_request_sent':
+        setOutgoingRequests((prev) => new Set(prev).add(data.targetId));
+        break;
+      case 'friend_request_rejected':
+        setOutgoingRequests((prev) => {
+          const next = new Set(prev);
+          next.delete(data.targetId);
+          return next;
+        });
+        break;
+      case 'friend_declined':
+        setRequests((r) => r.filter((x) => x.id !== data.id));
+        break;
       case 'friend_added':
         setFriends((f) => (f.some((x) => x.id === data.friend.id) ? f : [...f, data.friend]));
         setRequests((r) => r.filter((x) => x.id !== data.friend.id));
+        setOutgoingRequests((prev) => {
+          const next = new Set(prev);
+          next.delete(data.friend.id);
+          return next;
+        });
         break;
       case 'friend_removed': setFriends((f) => f.filter((x) => x.id !== data.id)); break;
       case 'presence': setFriends((f) => f.map((x) => (x.id === data.id ? { ...x, online: data.online } : x))); break;
@@ -46,7 +67,7 @@ export function useSocial(wsRef) {
 
   const addFriend = (targetId) => send({ type: 'friend_request', targetId });
   const acceptFriend = (id) => send({ type: 'friend_accept', requesterId: id });
-  const declineFriend = (id) => { send({ type: 'friend_decline', requesterId: id }); setRequests((r) => r.filter((x) => x.id !== id)); };
+  const declineFriend = (id) => send({ type: 'friend_decline', requesterId: id });
   const removeFriend = (id) => send({ type: 'friend_remove', targetId: id });
   const sendDM = (targetId, text) => {
     if (!text.trim()) return false;
@@ -58,7 +79,11 @@ export function useSocial(wsRef) {
   };
   const clearGameChat = () => setGameChat([]);
 
-  return { friends, requests, dms, gameChat, handleMessage, addFriend, acceptFriend, declineFriend, removeFriend, sendDM, sendGameChat, clearGameChat };
+  return {
+    friends, requests, outgoingRequests, dms, gameChat,
+    handleMessage, addFriend, acceptFriend, declineFriend, removeFriend,
+    sendDM, sendGameChat, clearGameChat,
+  };
 }
 
 export function FriendsScreen({ social }) {
