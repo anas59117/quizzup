@@ -85,6 +85,26 @@ function normalizeSocialStore(value, { maxFriends = 200, maxRequests = 100 } = {
     }
   }
 
+  // Persisted social data can be left half-written by old versions or manual
+  // edits. Only keep mutual friendship edges between known profiles, and only
+  // keep pending requests from known users. This prevents invisible "ghost"
+  // edges from consuming friend/request limits forever.
+  for (const [id, list] of Object.entries(friends)) {
+    friends[id] = list.filter(
+      (otherId) => (
+        !!profiles[id]
+        && !!profiles[otherId]
+        && Array.isArray(friends[otherId])
+        && friends[otherId].includes(id)
+      )
+    );
+  }
+  for (const [id, list] of Object.entries(requests)) {
+    requests[id] = list.filter(
+      (fromId) => !!profiles[id] && !!profiles[fromId] && fromId !== id
+    );
+  }
+
   return { profiles, friends, requests };
 }
 
