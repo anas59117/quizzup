@@ -1,6 +1,17 @@
-const test = require('node:test');
+const { test, afterEach } = require('node:test');
 const assert = require('node:assert/strict');
 const game = require('./game');
+
+afterEach(() => {
+  for (const g of game.activeGames.values()) {
+    if (g.roundTimer) clearTimeout(g.roundTimer);
+    for (const p of g.players || []) {
+      if (p.reconnectTimer) clearTimeout(p.reconnectTimer);
+    }
+  }
+  game.activeGames.clear();
+  game.playerSessions.clear();
+});
 
 function fakeWs() {
   return {
@@ -64,4 +75,95 @@ test('rejects answers from disconnected players', () => {
 
   game.recordAnswer(g, 'p1', 0);
   assert.deepEqual(g.roundAnswers, {});
+});
+
+
+test('a disconnected player keeps the round open until timeout or removal', () => {
+  const g = {
+    status: 'active',
+    phase: 'question',
+    currentRound: 0,
+    questionStart: Date.now(),
+    questions: [{ correct: 0 }],
+    players: [
+      { id: 'p1', clientId: 'u1', ws: fakeWs(), connected: true, score: 0 },
+      { id: 'p2', clientId: 'u2', ws: null, connected: false, score: 0 },
+    ],
+    roundAnswers: {},
+    roundTimer: null,
+  };
+
+  game.recordAnswer(g, 'p1', 0);
+  assert.equal(g.phase, 'question');
+  assert.equal(g.roundAnswers.p1.correct, true);
+});
+
+test('reconnect migrates an existing answer to the new transport player id', () => {
+  const newWs = fakeWs();
+  const g = {
+    id: 'g1',
+    status: 'active',
+    phase: 'question',
+    currentRound: 0,
+    questionStart: Date.now(),
+    questions: [{
+      text: 'Q', category: 'Test', icon: 'T',
+      answers: ['A', 'B', 'C', 'D'], correct: 0,
+    }],
+    players: [
+      {
+        id: 'old-id', clientId: 'u1', ws: null, connected: false,
+        score: 20, name: 'Alice', avatar: 'A', reconnectTimer: null,
+      },
+      {
+        id: 'p2', clientId: 'u2', ws: fakeWs(), connected: true,
+        score: 10, name: 'Bob', avatar: 'B', reconnectTimer: null,
+      },
+    ],
+    roundAnswers: {
+      'old-id': { answerIndex: 0, correct: true, elapsedMs: 100, points: 20 },
+    },
+    roundTimer: null,
+    reported: new Set(),
+  };
+
+  game.activeGames.set(g.id, g);
+  game.playerSessions.set('old-id', g.id);
+
+  assert.equal(game.reconnectPlayer('u1', newWs, 'new-id'), true);
+  assert.equal(g.players[0].id, 'new-id');
+  assert.equal(game.playerSessions.has('old-id'), false);
+  assert.equal(game.playerSessions.get('new-id'), 'g1');
+  assert.equal(g.roundAnswers['old-id'], undefined);
+  assert.equal(g.roundAnswers['new-id'].answerIndex, 0);
+
+  const snapshot = newWs.messages.find((m) => m.type === 'game_reconnected');
+  const question = newWs.messages.find((m) => m.type === 'question');
+  assert.equal(snapshot.score, 20);
+  assert.equal(snapshot.opponents[0].name, 'Bob');
+  assert.equal(question.reconnect, true);
+  assert.equal(question.answered, true);
+  assert.equal(question.yourAnswer, 0);
+});
+
+test('removePlayer removes a disconnected player instead of restarting grace', () => {
+  const g = {
+    id: 'g2',
+    status: 'active',
+    phase: 'question',
+    currentRound: 0,
+    questionStart: Date.now(),
+    questions: [{ correct: 0 }],
+    players: [
+      { id: 'p1', clientId: 'u1', ws: null, connected: false, score: 0, name: 'A', reconnectTimer: null },
+      { id: 'p2', clientId: 'u2', ws: fakeWs(), connected: true, score: 0, name: 'B', reconnectTimer: null },
+      { id: 'p3', clientId: 'u3', ws: fakeWs(), connected: true, score: 0, name: 'C', reconnectTimer: null },
+    ],
+    roundAnswers: {},
+    roundTimer: null,
+  };
+
+  game.removePlayer(g, 'p1');
+  assert.equal(g.players.length, 2);
+  assert.equal(g.players.some((p) => p.id === 'p1'), false);
 });
