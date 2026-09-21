@@ -6,6 +6,8 @@
 
 const fs = require('fs');
 
+const writerControllers = new Set();
+
 function atomicWriteFile(filePath, payload, callback) {
   const tempPath = `${filePath}.tmp`;
   const backupPath = `${filePath}.bak`;
@@ -60,6 +62,21 @@ function createJsonWriter(filePath, getSnapshot, delayMs = 1000, writeFile = ato
   let timer = null;
   let writing = false;
   let dirty = false;
+  let waiters = [];
+
+  function resolveWaiters() {
+    if (writing || dirty || timer || waiters.length === 0) return;
+    const current = waiters;
+    waiters = [];
+    current.forEach(({ resolve }) => resolve());
+  }
+
+  function rejectWaiters(err) {
+    if (waiters.length === 0) return;
+    const current = waiters;
+    waiters = [];
+    current.forEach(({ reject }) => reject(err));
+  }
 
   function arm() {
     if (timer || writing || !dirty) return;
@@ -68,12 +85,17 @@ function createJsonWriter(filePath, getSnapshot, delayMs = 1000, writeFile = ato
 
   function flush() {
     timer = null;
-    if (writing || !dirty) return;
+    if (writing || !dirty) {
+      resolveWaiters();
+      return;
+    }
 
     let payload;
     try {
       payload = JSON.stringify(getSnapshot());
     } catch (err) {
+      dirty = false;
+      rejectWaiters(err);
       console.error(`Failed to serialize JSON store ${filePath}:`, err);
       return;
     }
@@ -83,20 +105,64 @@ function createJsonWriter(filePath, getSnapshot, delayMs = 1000, writeFile = ato
     writeFile(filePath, payload, (err) => {
       writing = false;
       if (err) {
-        // Keep state dirty. The next mutation schedules another attempt,
-        // avoiding a tight retry loop if the filesystem is unavailable.
+        // Keep state dirty for a future mutation/retry, but reject explicit
+        // flush callers so shutdown can detect that durability failed.
         dirty = true;
+        rejectWaiters(err);
         console.error(`Failed to persist JSON store ${filePath}:`, err);
         return;
       }
-      if (dirty) arm();
+      if (dirty) {
+        // Mutations that happened during the write should be persisted next.
+        if (waiters.length) flush();
+        else arm();
+      } else {
+        resolveWaiters();
+      }
     });
   }
 
-  return function persist() {
+  function persist() {
     dirty = true;
     arm();
+  }
+
+  persist.flush = function flushNow() {
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
+
+    return new Promise((resolve, reject) => {
+      waiters.push({ resolve, reject });
+      if (!writing) {
+        if (dirty) flush();
+        else resolveWaiters();
+      }
+    });
   };
+
+  const controller = { flush: persist.flush };
+  writerControllers.add(controller);
+  persist.dispose = () => writerControllers.delete(controller);
+
+  return persist;
 }
 
-module.exports = { createJsonWriter, readJsonFileSync, atomicWriteFile };
+async function flushAllJsonWriters() {
+  const writers = [...writerControllers];
+  const results = await Promise.allSettled(writers.map((writer) => writer.flush()));
+  const failures = results.filter((result) => result.status === 'rejected');
+  if (failures.length) {
+    const err = new Error(`Failed to flush ${failures.length} JSON store(s)`);
+    err.causes = failures.map((failure) => failure.reason);
+    throw err;
+  }
+}
+
+module.exports = {
+  createJsonWriter,
+  readJsonFileSync,
+  atomicWriteFile,
+  flushAllJsonWriters,
+};
