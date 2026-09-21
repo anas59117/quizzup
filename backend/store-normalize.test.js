@@ -118,3 +118,16 @@ test('recent match history is capped', () => {
   assert.equal(recent[0].score, 0);
   assert.equal(recent[9].score, 9);
 });
+
+
+test('recent match normalization rejects impossible solo/multiplayer outcomes', () => {
+  const recent = normalizeRecentMatches([
+    { mode: 'solo', outcome: 'win', score: 10 },
+    { mode: 'multiplayer', outcome: 'solo', score: 20 },
+    { mode: 'solo', outcome: 'solo', score: 30 },
+  ]);
+
+  assert.equal(recent.length, 1);
+  assert.equal(recent[0].mode, 'solo');
+  assert.equal(recent[0].outcome, 'solo');
+});
