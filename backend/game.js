@@ -256,12 +256,16 @@ function findActiveSessionByClientId(clientId) {
 
 function findFinishedSessionByClientId(clientId) {
   if (!clientId) return null;
+  let latest = null;
   for (const g of activeGames.values()) {
     if (g.status !== 'finished') continue;
     const player = g.players.find((p) => p.clientId === clientId);
-    if (player) return { game: g, player };
+    if (!player) continue;
+    if (!latest || (g.finishedAt || 0) > (latest.game.finishedAt || 0)) {
+      latest = { game: g, player };
+    }
   }
-  return null;
+  return latest;
 }
 
 function sendCurrentState(game, player) {
@@ -361,6 +365,14 @@ function reconnectPlayer(clientId, ws, newPlayerId) {
   // Move any per-round answer to the new key so a reconnect cannot answer
   // twice or lose its already-earned score/result state.
   const oldPlayerId = player.id;
+  if (player.finalResult?.leaderboard) {
+    player.finalResult = {
+      ...player.finalResult,
+      leaderboard: player.finalResult.leaderboard.map((entry) =>
+        entry.id === oldPlayerId ? { ...entry, id: newPlayerId } : entry
+      ),
+    };
+  }
   if (game.roundAnswers[oldPlayerId]) {
     game.roundAnswers[newPlayerId] = game.roundAnswers[oldPlayerId];
     delete game.roundAnswers[oldPlayerId];
@@ -380,6 +392,7 @@ function endGame(game, reason) {
   if (game.status === 'finished') return;
   game.status = 'finished';
   game.phase = 'finished';
+  game.finishedAt = Date.now();
   if (game.roundTimer) clearTimeout(game.roundTimer);
   game.players.forEach((p) => { if (p.reconnectTimer) clearTimeout(p.reconnectTimer); });
 
