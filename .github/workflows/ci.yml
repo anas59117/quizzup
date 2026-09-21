@@ -28,6 +28,8 @@ jobs:
       - run: npm ci
       - name: Syntax check backend
         run: for file in *.js; do node --check "$file"; done
+      - name: Validate quiz content
+        run: npm run validate:content
       - run: npm test
 
   frontend:
