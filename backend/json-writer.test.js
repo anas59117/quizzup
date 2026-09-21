@@ -173,3 +173,27 @@ test('flush waits for an in-flight write and persists a newer dirty snapshot', a
   await flushPromise;
   persist.dispose();
 });
+
+
+test('atomic writer preserves an existing backup when the primary is missing', async () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'quizzup-json-'));
+  const store = path.join(dir, 'store.json');
+
+  try {
+    fs.writeFileSync(`${store}.bak`, JSON.stringify({ value: 'recovery' }));
+
+    await new Promise((resolve, reject) => {
+      atomicWriteFile(store, JSON.stringify({ value: 'new' }), (err) => {
+        if (err) reject(err); else resolve();
+      });
+    });
+
+    assert.deepEqual(JSON.parse(fs.readFileSync(store, 'utf8')), { value: 'new' });
+    assert.deepEqual(
+      JSON.parse(fs.readFileSync(`${store}.bak`, 'utf8')),
+      { value: 'recovery' }
+    );
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+});
