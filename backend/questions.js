@@ -63,6 +63,12 @@ const baseballMlb = require('./data/baseball_mlb.json');
 const motogp = require('./data/motogp.json');
 const rallyeWrc = require('./data/rallye_wrc.json');
 
+// Batch 5 — clubs & stars populaires (text-only, no photos).
+const parisSaintGermain = require('./data/paris_saint_germain.json');
+const realMadrid = require('./data/real_madrid.json');
+const lionelMessi = require('./data/lionel_messi.json');
+const cristianoRonaldo = require('./data/cristiano_ronaldo.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -606,6 +612,10 @@ const CATEGORIES = {
   baseball_mlb: { label: 'Baseball MLB', icon: '⚾', questions: [...baseballMlb] },
   motogp: { label: 'MotoGP', icon: '🏍️', questions: [...motogp] },
   rallye_wrc: { label: 'Rallye WRC', icon: '🚗', questions: [...rallyeWrc] },
+  paris_saint_germain: { label: 'Paris Saint-Germain', icon: '🔴', questions: [...parisSaintGermain] },
+  real_madrid: { label: 'Real Madrid', icon: '⚪', questions: [...realMadrid] },
+  lionel_messi: { label: 'Lionel Messi', icon: '🐐', questions: [...lionelMessi] },
+  cristiano_ronaldo: { label: 'Cristiano Ronaldo', icon: '🐐', questions: [...cristianoRonaldo] },
 };
 
 function shuffleQuestions(items, random = Math.random) {

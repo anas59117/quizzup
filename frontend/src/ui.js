@@ -17,13 +17,6 @@ export const Icon = memo(function Icon({ name, size = 20, className = '' }) {
     arrow: <><path d="M5 12h14"/><path d="m14 7 5 5-5 5"/></>,
     users: <><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3.5 20c.6-3.7 2.4-5.5 5.5-5.5s4.9 1.8 5.5 5.5"/><path d="M14 15.5c2.9-.7 5.1.8 6 4.5"/></>,
     key: <><circle cx="8.5" cy="12.5" r="4.5"/><path d="m12 10 8-8"/><path d="m16 6 2 2"/><path d="m18 4 2 2"/></>,
-    check: <path d="m5 12.5 4 4L19 6.5"/>,
-    info: <><circle cx="12" cy="12" r="9"/><path d="M12 10v6"/><circle cx="12" cy="7" r=".8" fill="currentColor" stroke="none"/></>,
-    close: <><path d="m7 7 10 10"/><path d="m17 7-10 10"/></>,
-    trophy: <><path d="M8 4h8v4c0 4-1.8 6-4 6s-4-2-4-6V4Z"/><path d="M8 6H4v1c0 3 1.5 5 4 5"/><path d="M16 6h4v1c0 3-1.5 5-4 5"/><path d="M12 14v4"/><path d="M8.5 21h7"/><path d="M10 18h4"/></>,
-    edit: <><path d="m4 20 4.2-1 10.7-10.7-3.2-3.2L5 15.8 4 20Z"/><path d="m13.8 7 3.2 3.2"/></>,
-    chat: <><path d="M5 5h14v10H9l-4 4V5Z"/><path d="M8 9h8"/><path d="M8 12h5"/></>,
-    send: <><path d="m3 11 17-7-7 17-2.6-7.4L3 11Z"/><path d="m10.4 13.6 4.4-4.4"/></>,
   };
   return (
     <svg
@@ -119,6 +112,10 @@ export const CATEGORIES = [
   { key: 'baseball_mlb', label: 'Baseball MLB', icon: '\u{26BE}', grad: 'g69', desc: 'World Series & légendes', family: 'sport' },
   { key: 'motogp', label: 'MotoGP', icon: '\u{1F3CD}\u{FE0F}', grad: 'g70', desc: 'Champions & circuits mythiques', family: 'sport' },
   { key: 'rallye_wrc', label: 'Rallye WRC', icon: '\u{1F3CE}\u{FE0F}', grad: 'g71', desc: 'Monte-Carlo, Safari & champions', family: 'sport' },
+  { key: 'paris_saint_germain', label: 'Paris Saint-Germain', icon: '\u{1F534}', grad: 'g72', tag: '\u{1F525}', desc: 'Parc des Princes & légendes', family: 'sport' },
+  { key: 'real_madrid', label: 'Real Madrid', icon: '\u{26AA}', grad: 'g73', tag: '\u{1F525}', desc: 'Bernabéu & Ligue des Champions', family: 'sport' },
+  { key: 'lionel_messi', label: 'Lionel Messi', icon: '\u{1F410}', grad: 'g74', tag: '\u{1F525}', desc: 'La Pulga, Ballons d’Or & Mondial', family: 'sport' },
+  { key: 'cristiano_ronaldo', label: 'Cristiano Ronaldo', icon: '\u{1F410}', grad: 'g75', tag: '\u{1F525}', desc: 'CR7, buts & records', family: 'sport' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
@@ -152,23 +149,6 @@ function topicMark(label) {
   return words[0]?.slice(0, 2).toUpperCase() || 'QZ';
 }
 
-
-export const Toast = memo(function Toast({ toast, onDismiss }) {
-  if (!toast) return null;
-  const tone = toast.tone || 'info';
-  return (
-    <div className={`toast toast-${tone}`} role={tone === 'error' ? 'alert' : 'status'} aria-live="polite">
-      <span className="toast-icon">
-        <Icon name={tone === 'success' ? 'check' : 'info'} size={17} />
-      </span>
-      <span className="toast-text">{toast.message}</span>
-      <button className="toast-close" onClick={onDismiss} aria-label="Dismiss">
-        <Icon name="close" size={16} />
-      </button>
-    </div>
-  );
-});
-
 export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setAvatar, onContinue }) {
   const { t } = useI18n();
   return (
@@ -199,18 +179,12 @@ export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setA
   );
 });
 
-export const ErrorScreen = memo(function ErrorScreen({ reason = 'connection', code = '', onRetry }) {
+export const ErrorScreen = memo(function ErrorScreen({ onRetry }) {
   const { t } = useI18n();
-  const isAuth = reason === 'auth';
-  const showDebugCode = (
-    process.env.NODE_ENV !== 'production'
-    || new URLSearchParams(window.location.search).has('debug')
-  );
   return (
     <div className="container center">
-      <h2 className="logo">{t(isAuth ? 'authProblem' : 'connectionLost')}</h2>
-      <p className="tagline">{t(isAuth ? 'authUnavailable' : 'serverUnreachable')}</p>
-      {showDebugCode && code && <div className="error-code">{String(code).slice(0, 120)}</div>}
+      <h2 className="logo">{t('connectionLost')}</h2>
+      <p className="tagline">{t('serverUnreachable')}</p>
       <button className="btn" onClick={onRetry}>{t('retry')}</button>
     </div>
   );
