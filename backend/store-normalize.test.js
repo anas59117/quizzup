@@ -44,7 +44,7 @@ test('post normalization drops malformed rows and repairs missing arrays', () =>
 
 test('report normalization uses null-prototype keys and quarantines threshold hits', () => {
   const reports = normalizeReportsStore({
-    counts: { normal: 2, danger: 3, __proto__: 2 },
+    counts: JSON.parse('{"normal":2,"danger":3,"__proto__":2}'),
     quarantined: [],
   }, { threshold: 3 });
 
@@ -52,4 +52,5 @@ test('report normalization uses null-prototype keys and quarantines threshold hi
   assert.equal(reports.counts.normal, 2);
   assert.equal(reports.counts.danger, undefined);
   assert.equal(reports.quarantined.has('danger'), true);
+  assert.equal(reports.counts.__proto__, 2);
 });
