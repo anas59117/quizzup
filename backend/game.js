@@ -55,6 +55,11 @@ async function startGame(rawPlayers, categoryKey) {
   const duplicate = rawPlayers.find((p) => p.clientId && findActiveSessionByClientId(p.clientId));
   if (duplicate) throw new Error('CLIENT_ALREADY_PLAYING');
 
+  // Also reject the same Firebase account appearing twice in the batch
+  // itself (possible in a private room before either socket has a game).
+  const clientIds = rawPlayers.map((p) => p.clientId).filter(Boolean);
+  if (new Set(clientIds).size !== clientIds.length) throw new Error('CLIENT_ALREADY_PLAYING');
+
   // Gameplay and persistent progression require a verified identity.
   if (rawPlayers.some((p) => !p.clientId)) throw new Error('AUTH_REQUIRED');
 
@@ -265,6 +270,13 @@ function sendCurrentState(game, player) {
     totalRounds: game.questions.length,
     phase: game.phase,
     score: player.score,
+    you: { name: player.name, avatar: player.avatar },
+    opponents: othersOf(game, player.id, (o) => ({
+      id: o.id, name: o.name, avatar: o.avatar, clientId: o.clientId,
+      score: o.score, answered: !!game.roundAnswers[o.id],
+      correct: game.roundAnswers[o.id] ? game.roundAnswers[o.id].correct : false,
+      connected: !!o.connected,
+    })),
   });
 
   const q = game.questions[game.currentRound];
@@ -280,15 +292,17 @@ function sendCurrentState(game, player) {
   } else if (game.phase === 'question') {
     const elapsed = Date.now() - game.questionStart;
     const remainingMs = Math.max(0, GAME_CONFIG.TIME_PER_QUESTION * 1000 - elapsed);
-    if (remainingMs <= 0) return;
+    const mine = game.roundAnswers[player.id];
     send(player.ws, {
       type: 'question', round: game.currentRound + 1,
       totalRounds: game.questions.length,
       question: q.text, category: q.category, icon: q.icon,
-      answers: q.answers, timeLimit: Math.ceil(remainingMs / 1000),
+      answers: q.answers, timeLimit: Math.max(1, Math.ceil(remainingMs / 1000)),
       isBonus: game.currentRound === game.questions.length - 1,
       image: q.image || null, credit: q.credit || null,
       reconnect: true,
+      answered: !!mine,
+      yourAnswer: mine ? mine.answerIndex : null,
     });
   } else if (game.phase === 'revealed') {
     const mine = game.roundAnswers[player.id];
@@ -319,7 +333,16 @@ function reconnectPlayer(clientId, ws, newPlayerId) {
   player.reconnectTimer = null;
   player.connected = true;
   player.ws = ws;
-  playerSessions.delete(player.id);
+
+  // The transport-level playerId changes with every WebSocket connection.
+  // Move any per-round answer to the new key so a reconnect cannot answer
+  // twice or lose its already-earned score/result state.
+  const oldPlayerId = player.id;
+  if (game.roundAnswers[oldPlayerId]) {
+    game.roundAnswers[newPlayerId] = game.roundAnswers[oldPlayerId];
+    delete game.roundAnswers[oldPlayerId];
+  }
+  playerSessions.delete(oldPlayerId);
   player.id = newPlayerId;
   playerSessions.set(newPlayerId, game.id);
 
