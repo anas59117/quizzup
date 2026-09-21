@@ -39,13 +39,13 @@ export function useFeed(wsRef) {
     }
   }, []);
 
-  const createPost = (category, text) => {
+  const createPost = useCallback((category, text) => {
     if (!text.trim()) return false;
     return send({ type: 'post_create', category, text: text.trim() });
-  };
-  const react = (postId) => send({ type: 'post_react', postId });
-  const report = (postId) => send({ type: 'post_report', postId });
-  const refresh = () => send({ type: 'feed_list' });
+  }, [send]);
+  const react = useCallback((postId) => send({ type: 'post_react', postId }), [send]);
+  const report = useCallback((postId) => send({ type: 'post_report', postId }), [send]);
+  const refresh = useCallback(() => send({ type: 'feed_list' }), [send]);
 
   return { posts, reportedIds, handleMessage, createPost, react, report, refresh };
 }
