@@ -101,7 +101,7 @@ export default function App() {
     name,
     avatar,
     firebaseUser,
-    shouldRecover: stage === 'playing' || stage === 'room_wait' || bootGameRecovery || matchmakingRecovery,
+    shouldRecover: !!firebaseUser && stage !== 'error',
     // A page load with a persisted name is only an *opportunistic* recovery
     // probe. Most returning users have no active match, so only an already
     // visible playing screen requires a missing match to be fatal.
