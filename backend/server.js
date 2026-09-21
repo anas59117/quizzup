@@ -57,6 +57,9 @@ const ROOM_RECONNECT_GRACE_MS = 15 * 1000;
 if (process.env.NODE_ENV === 'production' && !allowedOrigins.length) {
   console.warn('CORS_ORIGIN is not configured; WebSocket origin checks are open.');
 }
+if (process.env.NODE_ENV === 'production' && !process.env.DATA_DIR) {
+  console.warn('DATA_DIR is not configured; JSON persistence may be ephemeral on this host.');
+}
 
 const waitingPlayers = [];
 const privateRooms = new Map();
@@ -696,6 +699,7 @@ app.get('/health', (req, res) =>
     activeGames: game.activeGames.size,
     waiting: waitingPlayers.length,
     connections: wss.clients.size,
+    persistentStorageConfigured: !!process.env.DATA_DIR,
   })
 );
 app.get('/categories', (req, res) => res.json(listCategories()));
