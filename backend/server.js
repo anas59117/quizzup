@@ -488,7 +488,7 @@ function handleGameplay(ws, data, state) {
 
   const gameplayTypes = new Set([
     'game_chat', 'solo', 'join', 'cancel_queue', 'answer', 'create_room', 'join_room',
-    'start_room', 'leave_room', 'report', 'leave',
+    'start_room', 'leave_room', 'rematch', 'cancel_rematch', 'report', 'leave',
   ]);
   if (gameplayTypes.has(data.type) && !requireAuth(ws, state)) return true;
 
@@ -670,6 +670,28 @@ function handleGameplay(ws, data, state) {
     return true;
   }
 
+  if (data.type === 'rematch') {
+    const request = game.requestRematch(state.clientId);
+    if (request.status === 'unavailable') {
+      game.send(ws, { type: 'rematch_unavailable' });
+      return true;
+    }
+    if (request.status === 'waiting') {
+      game.send(ws, { type: 'rematch_waiting' });
+      return true;
+    }
+
+    request.players.forEach((p) => game.send(p.ws, { type: 'rematch_starting' }));
+    startGameGuarded(request.players, request.categoryKey);
+    return true;
+  }
+
+  if (data.type === 'cancel_rematch') {
+    game.cancelRematch(state.clientId);
+    game.send(ws, { type: 'rematch_cancelled' });
+    return true;
+  }
+
   if (data.type === 'report') {
     const gameId = game.playerSessions.get(playerId);
     const g = gameId && game.activeGames.get(gameId);
@@ -762,7 +784,11 @@ wss.on('connection', (ws, req) => {
 
     const gameId = game.playerSessions.get(state.playerId);
     const g = gameId && game.activeGames.get(gameId);
-    if (g && g.status === 'active') game.disconnectPlayer(g, state.playerId);
+    if (g && g.status === 'active') {
+      game.disconnectPlayer(g, state.playerId);
+    } else if (g && g.status === 'finished' && state.clientId) {
+      game.cancelRematch(state.clientId);
+    }
   });
 });
 
