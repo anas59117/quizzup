@@ -162,7 +162,15 @@ export default function App() {
         setMyId(data.playerId);
         break;
       case 'identified':
-        if (matchActionRef.current && (stage === 'waiting' || pending)) {
+        // If the transport hook already flushed an action that was queued
+        // before authentication, do not replay it a second time. If the
+        // action had previously reached the server (e.g. we were waiting for
+        // an opponent), replay it after reconnect so the server can requeue us.
+        if (
+          matchActionRef.current
+          && !data.queuedActionFlushed
+          && (stage === 'waiting' || stage === 'home' || pending)
+        ) {
           connect(matchActionRef.current);
         }
         break;
