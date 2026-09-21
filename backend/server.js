@@ -246,7 +246,12 @@ function handleSocial(ws, data, state) {
       const result = social.sendRequest(clientId, targetId);
       const me = result.ok && social.profileOf(clientId);
       const targetWs = result.ok && social.getWs(targetId);
-      if (targetWs && me) game.send(targetWs, { type: 'friend_request_received', from: me });
+      if (result.ok) {
+        game.send(ws, { type: 'friend_request_sent', targetId });
+        if (targetWs && me) game.send(targetWs, { type: 'friend_request_received', from: me });
+      } else {
+        game.send(ws, { type: 'friend_request_rejected', targetId, reason: result.reason || 'invalid' });
+      }
     }
     return true;
   }
@@ -265,7 +270,9 @@ function handleSocial(ws, data, state) {
   if (data.type === 'friend_decline') {
     if (clientId && !allowAction(actionLimiters.friendMutation, clientId, ws, 'FRIEND_ACTION_RATE_LIMITED')) return true;
     const fromId = String(data.requesterId || '');
-    if (clientId && fromId) social.declineRequest(clientId, fromId);
+    if (clientId && fromId && social.declineRequest(clientId, fromId)) {
+      game.send(ws, { type: 'friend_declined', id: fromId });
+    }
     return true;
   }
   if (data.type === 'friend_remove') {
