@@ -615,7 +615,9 @@ function handleGameplay(ws, data, state) {
   }
 
   if (data.type === 'leave_room') {
-    leaveRoom(state.clientId, playerId);
+    if (leaveRoom(state.clientId, playerId)) {
+      game.send(ws, { type: 'room_left' });
+    }
     return true;
   }
 
