@@ -54,8 +54,17 @@ export default function App() {
   const [pending, setPending] = useState(false);
   const tickRef = useRef(null);
   const copyTimerRef = useRef(null);
+  const pendingTimerRef = useRef(null);
   const bootNameRef = useRef(name);
   const messageHandlerRef = useRef(null);
+
+  const clearPending = useCallback(() => {
+    if (pendingTimerRef.current) {
+      clearTimeout(pendingTimerRef.current);
+      pendingTimerRef.current = null;
+    }
+    setPending(false);
+  }, []);
 
   const {
     wsRef,
@@ -71,7 +80,7 @@ export default function App() {
     shouldRecover: stage === 'playing' || (stage === 'join' && !!bootNameRef.current.trim()),
     onMessageRef: messageHandlerRef,
     onFatalError: () => setStage('error'),
-    onPendingClear: () => setPending(false),
+    onPendingClear: clearPending,
   });
 
   const social = useSocial(wsRef);
@@ -82,6 +91,7 @@ export default function App() {
   useEffect(() => () => {
     if (tickRef.current) clearInterval(tickRef.current);
     if (copyTimerRef.current) clearTimeout(copyTimerRef.current);
+    if (pendingTimerRef.current) clearTimeout(pendingTimerRef.current);
   }, []);
 
   // A verified Firebase identity is required by the authoritative backend.
@@ -147,7 +157,7 @@ export default function App() {
         setMyId(data.playerId);
         break;
       case 'game_reconnected':
-        setPending(false);
+        clearPending();
         setScore(data.score || 0);
         setTotalRounds(data.totalRounds || 6);
         if (data.you) {
@@ -164,24 +174,24 @@ export default function App() {
         setStage('playing');
         break;
       case 'waiting':
-        setPending(false);
+        clearPending();
         setStage('waiting');
         break;
       case 'room_created':
       case 'room_update':
-        setPending(false);
+        clearPending();
         setRoom({ code: data.code, players: data.players, isHost: data.isHost, canStart: data.canStart });
         setJoinError(false);
         setStage('room_wait');
         break;
       case 'room_not_found':
       case 'room_full':
-        setPending(false);
+        clearPending();
         setJoinError(true);
         break;
       case 'already_playing':
       case 'rate_limited':
-        setPending(false);
+        clearPending();
         break;
       case 'room_closed':
         setRoom(null);
@@ -189,7 +199,7 @@ export default function App() {
         break;
       case 'game_start':
         SFX.gameStart();
-        setPending(false);
+        clearPending();
         setOpponents(data.opponents.map((o) => ({ ...o, score: 0, answered: false, correct: false })));
         setTotalRounds(data.totalRounds);
         setScore(0);
@@ -239,7 +249,7 @@ export default function App() {
         statsHook.handleStatsMessage(data);
         break;
       case 'error':
-        setPending(false);
+        clearPending();
         setStage('error');
         break;
       default:
@@ -268,8 +278,12 @@ export default function App() {
   // response (see attachHandlers) and defensively after a short timeout in
   // case a response is somehow missed.
   const beginPending = useCallback(() => {
+    if (pendingTimerRef.current) clearTimeout(pendingTimerRef.current);
     setPending(true);
-    setTimeout(() => setPending(false), 8000);
+    pendingTimerRef.current = setTimeout(() => {
+      pendingTimerRef.current = null;
+      setPending(false);
+    }, 15000);
   }, []);
 
   function startWithCategory(catKey) {
