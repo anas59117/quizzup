@@ -8,7 +8,7 @@ import { useStats } from './stats';
 import { useFeed, FeedScreen } from './feed';
 import { RoomLobby } from './multiplayer';
 import { AVATARS, useTheme, TopControls, NavBar, JoinScreen, ErrorScreen, Toast } from './ui';
-import { HomeContent, EnterCodeContent, CategoriesContent, ProfileContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent } from './screens';
+import { HomeContent, EnterCodeContent, CategoriesContent, ProfileContent, LeaderboardContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent } from './screens';
 import { useI18n } from './i18n';
 import { useGameSocket } from './useGameSocket';
 
@@ -74,6 +74,8 @@ export default function App() {
   const [linking, setLinking] = useState(false);
   const [pending, setPending] = useState(false);
   const [toast, setToast] = useState(null);
+  const [leaderboard, setLeaderboard] = useState({ entries: [], total: 0, yourRank: null });
+  const [leaderboardLoading, setLeaderboardLoading] = useState(false);
   const tickRef = useRef(null);
   const copyTimerRef = useRef(null);
   const pendingTimerRef = useRef(null);
@@ -428,6 +430,14 @@ export default function App() {
       case 'stats':
         statsHook.handleStatsMessage(data);
         break;
+      case 'leaderboard_list':
+        setLeaderboard({
+          entries: Array.isArray(data.entries) ? data.entries : [],
+          total: Number(data.total) || 0,
+          yourRank: Number(data.yourRank) || null,
+        });
+        setLeaderboardLoading(false);
+        break;
       case 'error':
         matchActionRef.current = null;
         clearPending();
@@ -456,6 +466,15 @@ export default function App() {
   useEffect(() => {
     if (stage === 'feed') feed.refresh();
   }, [stage, feed.refresh]);
+
+  useEffect(() => {
+    if (stage !== 'leaderboard' || !firebaseUser) return;
+    setLeaderboardLoading(true);
+    if (!connect({ type: 'leaderboard_list' })) {
+      setLeaderboardLoading(false);
+      showToast(t('rankingUnavailable'), 'error');
+    }
+  }, [stage, firebaseUser, connect, showToast, t]);
 
   const [soloMode, setSoloMode] = useState(false);
   // `pending` blocks a second matchmaking request (double-tap, rapid-fire
@@ -677,10 +696,24 @@ export default function App() {
           avatar={avatar} name={name} stats={statsHook.stats}
           isGoogleLinked={!!(firebaseUser && !firebaseUser.isAnonymous)} googleEmail={firebaseUser?.email}
           linkGoogle={linkGoogle} linking={linking} clientId={clientId} social={social}
+          onOpenLeaderboard={() => setStage('leaderboard')}
         />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);
   }
+
+  if (stage === 'leaderboard') {
+    return (
+      <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+        <LeaderboardContent
+          board={leaderboard}
+          loading={leaderboardLoading}
+          onBack={() => setStage('profile')}
+        />
+        <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
+      </div>);
+  }
+
 
   if (stage === 'playing' && reconnecting) {
     return (
