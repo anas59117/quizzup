@@ -38,9 +38,12 @@ function activePlayers(game) {
   return game.players.filter((p) => p.connected && p.ws && p.ws.readyState === 1);
 }
 
-function allActivePlayersAnswered(game) {
-  const players = activePlayers(game);
-  return players.length > 0 && players.every((p) => game.roundAnswers[p.id]);
+function allPlayersAnswered(game) {
+  // A temporarily disconnected player still belongs to the round. Do not
+  // fast-forward just because only the connected players have answered;
+  // that would make a short reconnect skip questions. Removal after the
+  // grace period shrinks game.players and then this condition can pass.
+  return game.players.length > 0 && game.players.every((p) => game.roundAnswers[p.id]);
 }
 
 async function startGame(rawPlayers, categoryKey) {
@@ -188,7 +191,7 @@ function recordAnswer(game, playerId, answerIndex) {
 
   game.roundAnswers[playerId] = { answerIndex, correct: isCorrect, elapsedMs, points };
 
-  if (allActivePlayersAnswered(game)) revealRound(game, false);
+  if (allPlayersAnswered(game)) revealRound(game, false);
 }
 
 // A deliberate leave is immediate. Transport disconnects must call
@@ -209,7 +212,7 @@ function removePlayer(game, playerId) {
 
   activePlayers(game).forEach((p) => send(p.ws, { type: 'player_left', name: left.name }));
 
-  if (game.phase === 'question' && allActivePlayersAnswered(game)) {
+  if (game.phase === 'question' && allPlayersAnswered(game)) {
     revealRound(game, false);
   }
 }
@@ -231,7 +234,7 @@ function disconnectPlayer(game, playerId) {
     if (stillMissing) removePlayer(game, playerId);
   }, RECONNECT_GRACE_MS);
 
-  if (game.phase === 'question' && allActivePlayersAnswered(game)) {
+  if (game.phase === 'question' && allPlayersAnswered(game)) {
     revealRound(game, false);
   }
 }
