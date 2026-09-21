@@ -5,6 +5,14 @@ import { ProfileStats } from './stats';
 import { FriendsScreen } from './social';
 import { useI18n } from './i18n';
 
+const FEATURED_TOPIC_KEYS = [
+  'foot_fr', 'rap_fr', 'premier_league', 'la_liga',
+  'tennis', 'basketball', 'kpop', 'actors_az',
+];
+const FEATURED_TOPICS = FEATURED_TOPIC_KEYS
+  .map((key) => CATEGORIES.find((category) => category.key === key))
+  .filter(Boolean);
+
 export function HomeContent({ name, avatar, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, pending }) {
   const { t } = useI18n();
   return (
@@ -32,7 +40,7 @@ export function HomeContent({ name, avatar, soloMode, setSoloMode, quickMatch, s
       </div>
       <div className="section-title">{t('popularTopics')}</div>
       <div className="topics-scroll">
-        {CATEGORIES.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}
+        {FEATURED_TOPICS.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}
       </div>
       <div className="section-title">
         <span>{t('allTopics')}</span>
