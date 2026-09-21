@@ -469,3 +469,15 @@ button:focus-visible,input:focus-visible,select:focus-visible { outline:2px soli
   .social-row { max-width:520px; }
   .feed-screen { max-width:820px; }
 }
+
+.error-code {
+  max-width: 520px;
+  margin: -10px auto 18px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--text-dim);
+  font: 600 .72rem/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  overflow-wrap: anywhere;
+}
