@@ -10,6 +10,7 @@ const stats = require('./stats');
 const activeGames = new Map();
 const playerSessions = new Map();
 
+const RECONNECT_GRACE_MS = 15000;
 const rid = (p) => p + Math.random().toString(36).slice(2, 11);
 const send = (ws, obj) => {
   if (ws && ws.readyState === 1) ws.send(JSON.stringify(obj));
@@ -29,32 +30,47 @@ function scoreAnswer(elapsedMs, isFinalRound) {
   return pts;
 }
 
-// `others` for a given player: every other player's public info, in the
-// original seating order, for the client to render as opponents.
 function othersOf(game, selfId, mapper) {
   return game.players.filter((p) => p.id !== selfId).map(mapper);
 }
 
+function activePlayers(game) {
+  return game.players.filter((p) => p.connected && p.ws && p.ws.readyState === 1);
+}
+
+function allActivePlayersAnswered(game) {
+  const players = activePlayers(game);
+  return players.length > 0 && players.every((p) => game.roundAnswers[p.id]);
+}
+
 async function startGame(rawPlayers, categoryKey) {
+  if (!rawPlayers.length) throw new Error('NO_PLAYERS');
+
+  // A verified Firebase identity may only own one active game at a time.
+  // This closes the duplicate-session gap caused by opening a second
+  // WebSocket before the first game has finished.
+  const duplicate = rawPlayers.find((p) => p.clientId && findActiveSessionByClientId(p.clientId));
+  if (duplicate) throw new Error('CLIENT_ALREADY_PLAYING');
+
+  // Gameplay and persistent progression require a verified identity.
+  if (rawPlayers.some((p) => !p.clientId)) throw new Error('AUTH_REQUIRED');
+
   const gameId = rid('game_');
   const resolvedCategory = categoryKey || pickRandomCategory();
   const questions = await getMixedQuestions(GAME_CONFIG.ROUNDS, resolvedCategory);
 
-  // Any player may have disconnected while questions were loading (the
-  // OpenTDB fetch can take seconds). Starting anyway would leave everyone
-  // else stuck playing against a dead socket. Bail and notify the living.
   const stillOpen = rawPlayers.filter((p) => p.ws.readyState === 1);
   if (stillOpen.length !== rawPlayers.length) {
-    stillOpen.forEach((p) => send(p.ws, { type: 'error' }));
+    stillOpen.forEach((p) => send(p.ws, { type: 'error', code: 'PLAYER_DISCONNECTED' }));
     return;
   }
 
   const game = {
     id: gameId,
     players: rawPlayers.map((p) => ({
-      ws: p.ws, id: p.id, clientId: p.clientId || null,
+      ws: p.ws, id: p.id, clientId: p.clientId,
       name: p.name, avatar: p.avatar || '\u{1F43A}',
-      score: 0,
+      score: 0, connected: true, reconnectTimer: null,
     })),
     questions,
     currentRound: -1,
@@ -62,6 +78,7 @@ async function startGame(rawPlayers, categoryKey) {
     roundAnswers: {},
     reported: new Set(),
     roundTimer: null,
+    phase: 'idle',
     status: 'active',
   };
   activeGames.set(gameId, game);
@@ -80,16 +97,18 @@ async function startGame(rawPlayers, categoryKey) {
 }
 
 function nextQuestion(game) {
+  if (game.status !== 'active') return;
   if (game.roundTimer) clearTimeout(game.roundTimer);
   const nextRound = game.currentRound + 1;
   if (nextRound >= game.questions.length) return endGame(game);
 
   game.currentRound = nextRound;
   game.roundAnswers = {};
+  game.phase = 'intro';
   const q = game.questions[nextRound];
   const isFinal = nextRound === game.questions.length - 1;
 
-  game.players.forEach((p) => {
+  activePlayers(game).forEach((p) => {
     send(p.ws, {
       type: 'round_intro', round: nextRound + 1,
       totalRounds: game.questions.length,
@@ -99,8 +118,9 @@ function nextQuestion(game) {
 
   game.roundTimer = setTimeout(() => {
     if (game.status !== 'active') return;
+    game.phase = 'question';
     game.questionStart = Date.now();
-    game.players.forEach((p) => {
+    activePlayers(game).forEach((p) => {
       send(p.ws, {
         type: 'question', round: nextRound + 1,
         totalRounds: game.questions.length,
@@ -118,11 +138,12 @@ function nextQuestion(game) {
 }
 
 function revealRound(game, timedOut) {
-  if (game.status !== 'active') return;
+  if (game.status !== 'active' || game.phase !== 'question') return;
   if (game.roundTimer) clearTimeout(game.roundTimer);
+  game.phase = 'revealed';
   const q = game.questions[game.currentRound];
 
-  game.players.forEach((p) => {
+  activePlayers(game).forEach((p) => {
     const mine = game.roundAnswers[p.id];
     send(p.ws, {
       type: 'round_result', round: game.currentRound + 1,
@@ -142,21 +163,19 @@ function revealRound(game, timedOut) {
     });
   });
 
-  // Stored on game.roundTimer like the other round timers so the
-  // clear-before-scheduling-a-new-one pattern used elsewhere covers this one
-  // too (previously untracked, which was harmless only by coincidence).
   game.roundTimer = setTimeout(() => {
     if (game.status === 'active') nextQuestion(game);
   }, 2500);
 }
 
 function recordAnswer(game, playerId, answerIndex) {
+  if (game.status !== 'active' || game.phase !== 'question') return;
   const idx = game.players.findIndex((p) => p.id === playerId);
-  if (idx === -1) return;
+  if (idx === -1 || !game.players[idx].connected) return;
   if (game.roundAnswers[playerId]) return;
 
   const elapsedMs = Date.now() - game.questionStart;
-  if (elapsedMs > GAME_CONFIG.TIME_PER_QUESTION * 1000 + 500) return;
+  if (elapsedMs < 0 || elapsedMs > GAME_CONFIG.TIME_PER_QUESTION * 1000 + 500) return;
 
   const q = game.questions[game.currentRound];
   const isCorrect = answerIndex === q.correct;
@@ -166,17 +185,19 @@ function recordAnswer(game, playerId, answerIndex) {
 
   game.roundAnswers[playerId] = { answerIndex, correct: isCorrect, elapsedMs, points };
 
-  if (game.players.every((p) => game.roundAnswers[p.id])) revealRound(game, false);
+  if (allActivePlayersAnswered(game)) revealRound(game, false);
 }
 
-// A player disconnecting mid-match no longer ends it outright for everyone
-// else — only when fewer than 2 players remain is a match unplayable.
+// A deliberate leave is immediate. A transport disconnect uses
+// disconnectPlayer() below so a short network interruption does not forfeit
+// the match.
 function removePlayer(game, playerId) {
   if (game.status !== 'active') return;
   const idx = game.players.findIndex((p) => p.id === playerId);
   if (idx === -1) return;
 
   const [left] = game.players.splice(idx, 1);
+  if (left.reconnectTimer) clearTimeout(left.reconnectTimer);
   playerSessions.delete(playerId);
 
   if (game.players.length < 2) {
@@ -184,19 +205,125 @@ function removePlayer(game, playerId) {
     return;
   }
 
-  game.players.forEach((p) => send(p.ws, { type: 'player_left', name: left.name }));
+  activePlayers(game).forEach((p) => send(p.ws, { type: 'player_left', name: left.name }));
 
-  // The departed player can never answer now — if everyone still in the
-  // match already has, reveal immediately instead of waiting out the clock.
-  if (game.currentRound >= 0 && game.players.every((p) => game.roundAnswers[p.id])) {
+  if (game.phase === 'question' && allActivePlayersAnswered(game)) {
     revealRound(game, false);
   }
+}
+
+function disconnectPlayer(game, playerId) {
+  if (game.status !== 'active') return;
+  const player = game.players.find((p) => p.id === playerId);
+  if (!player || !player.connected) return;
+
+  player.connected = false;
+  player.ws = null;
+  if (player.reconnectTimer) clearTimeout(player.reconnectTimer);
+
+  activePlayers(game).forEach((p) => send(p.ws, { type: 'player_disconnected', name: player.name }));
+
+  player.reconnectTimer = setTimeout(() => {
+    if (game.status !== 'active') return;
+    const stillMissing = game.players.find((p) => p.id === playerId && !p.connected);
+    if (stillMissing) removePlayer(game, playerId);
+  }, RECONNECT_GRACE_MS);
+
+  if (game.phase === 'question' && allActivePlayersAnswered(game)) {
+    revealRound(game, false);
+  }
+}
+
+function findActiveSessionByClientId(clientId) {
+  if (!clientId) return null;
+  for (const g of activeGames.values()) {
+    if (g.status !== 'active') continue;
+    const player = g.players.find((p) => p.clientId === clientId);
+    if (player) return { game: g, player };
+  }
+  return null;
+}
+
+function sendCurrentState(game, player) {
+  if (!player.ws || player.ws.readyState !== 1) return;
+  send(player.ws, {
+    type: 'game_reconnected',
+    gameId: game.id,
+    round: Math.max(0, game.currentRound + 1),
+    totalRounds: game.questions.length,
+    phase: game.phase,
+    score: player.score,
+  });
+
+  const q = game.questions[game.currentRound];
+  if (!q || game.currentRound < 0) return;
+
+  if (game.phase === 'intro') {
+    send(player.ws, {
+      type: 'round_intro', round: game.currentRound + 1,
+      totalRounds: game.questions.length,
+      category: q.category, icon: q.icon,
+      isBonus: game.currentRound === game.questions.length - 1,
+    });
+  } else if (game.phase === 'question') {
+    const elapsed = Date.now() - game.questionStart;
+    const remainingMs = Math.max(0, GAME_CONFIG.TIME_PER_QUESTION * 1000 - elapsed);
+    if (remainingMs <= 0) return;
+    send(player.ws, {
+      type: 'question', round: game.currentRound + 1,
+      totalRounds: game.questions.length,
+      question: q.text, category: q.category, icon: q.icon,
+      answers: q.answers, timeLimit: Math.ceil(remainingMs / 1000),
+      isBonus: game.currentRound === game.questions.length - 1,
+      image: q.image || null, credit: q.credit || null,
+      reconnect: true,
+    });
+  } else if (game.phase === 'revealed') {
+    const mine = game.roundAnswers[player.id];
+    send(player.ws, {
+      type: 'round_result', round: game.currentRound + 1,
+      correctIndex: q.correct,
+      yourAnswer: mine ? mine.answerIndex : null,
+      yourCorrect: mine ? mine.correct : false,
+      pointsEarned: mine ? mine.points : 0,
+      yourScore: player.score,
+      others: othersOf(game, player.id, (o) => ({
+        id: o.id, name: o.name, avatar: o.avatar, score: o.score,
+        answered: !!game.roundAnswers[o.id],
+        correct: game.roundAnswers[o.id] ? game.roundAnswers[o.id].correct : false,
+      })),
+      timedOut: false,
+      reconnect: true,
+    });
+  }
+}
+
+function reconnectPlayer(clientId, ws, newPlayerId) {
+  const found = findActiveSessionByClientId(clientId);
+  if (!found || found.player.connected) return false;
+
+  const { game, player } = found;
+  if (player.reconnectTimer) clearTimeout(player.reconnectTimer);
+  player.reconnectTimer = null;
+  player.connected = true;
+  player.ws = ws;
+  playerSessions.delete(player.id);
+  player.id = newPlayerId;
+  playerSessions.set(newPlayerId, game.id);
+
+  sendCurrentState(game, player);
+  activePlayers(game).filter((p) => p.id !== newPlayerId).forEach((p) => {
+    send(p.ws, { type: 'player_reconnected', name: player.name });
+  });
+  return true;
 }
 
 function endGame(game, reason) {
   if (game.status === 'finished') return;
   game.status = 'finished';
+  game.phase = 'finished';
   if (game.roundTimer) clearTimeout(game.roundTimer);
+  game.players.forEach((p) => { if (p.reconnectTimer) clearTimeout(p.reconnectTimer); });
 
   const topScore = Math.max(...game.players.map((p) => p.score));
   const winners = game.players.filter((p) => p.score === topScore);
@@ -232,4 +359,5 @@ function endGame(game, reason) {
 module.exports = {
   activeGames, playerSessions, rid, send,
   startGame, recordAnswer, endGame, removePlayer,
+  disconnectPlayer, reconnectPlayer, findActiveSessionByClientId,
 };
