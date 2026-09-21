@@ -11,7 +11,9 @@ const game = require('./game');
 const RateLimiter = require('./rate-limit');
 const { getClientIp } = require('./client-ip');
 const { flushAllJsonWriters } = require('./json-writer');
-const { verifyIdToken, sweepCache, diagnoseFirebaseAuth } = require('./auth');
+const { verifyIdToken, verifyFirebaseIdToken, sweepCache } = require('./auth');
+const { issueOrRefreshGuestToken, verifyGuestToken } = require('./guest-auth');
+const { linkFirebaseIdentity } = require('./account-links');
 const stats = require('./stats');
 const { ROOM_TTL_MS, CODE_ALPHABET, MAX_ROOM_PLAYERS } = require('./config');
 const { randomRoomCode } = require('./ids');
@@ -64,17 +66,6 @@ if (process.env.NODE_ENV === 'production' && !process.env.DATA_DIR) {
   console.warn('DATA_DIR is not configured; JSON persistence may be ephemeral on this host.');
 }
 
-if (process.env.RUN_FIREBASE_DIAGNOSTIC_ON_STARTUP === 'true') {
-  const diagnosticOrigin = allowedOrigins.find((origin) => origin !== '*') || '';
-  diagnoseFirebaseAuth(diagnosticOrigin)
-    .then((result) => {
-      console.log('Firebase auth diagnostic:', JSON.stringify(result));
-    })
-    .catch(() => {
-      console.warn('Firebase auth diagnostic: unexpected failure');
-    });
-}
-
 const waitingPlayers = [];
 const privateRooms = new Map();
 const connectionsByIp = new Map();
@@ -83,6 +74,8 @@ const pendingPlayers = new Set();
 const pendingClients = new Set();
 const limiter = new RateLimiter();
 const ipLimiter = new RateLimiter(2000, 40);
+const guestAuthLimiter = new RateLimiter(60 * 1000, 30);
+const accountLinkLimiter = new RateLimiter(60 * 1000, 10);
 
 const actionLimiters = {
   identifySocket: new RateLimiter(60 * 1000, 6),
@@ -810,6 +803,63 @@ wss.on('connection', (ws, req) => {
   });
 });
 
+function authorizationBearer(req) {
+  const header = String(req.headers.authorization || '');
+  return header.startsWith('Bearer ') ? header.slice(7).trim() : '';
+}
+
+app.post('/auth/guest', (req, res) => {
+  const ip = getClientIp(req);
+  if (!guestAuthLimiter.check(ip)) {
+    res.status(429).json({ code: 'RATE_LIMITED' });
+    return;
+  }
+
+  const issued = issueOrRefreshGuestToken(authorizationBearer(req));
+  if (!issued) {
+    res.status(503).json({ code: 'GUEST_AUTH_NOT_CONFIGURED' });
+    return;
+  }
+
+  res.set('Cache-Control', 'no-store');
+  res.json({
+    uid: issued.uid,
+    token: issued.token,
+    expiresAt: issued.expiresAt,
+  });
+});
+
+app.post('/auth/link-google', async (req, res) => {
+  const ip = getClientIp(req);
+  if (!accountLinkLimiter.check(ip)) {
+    res.status(429).json({ code: 'RATE_LIMITED' });
+    return;
+  }
+
+  const guestToken = authorizationBearer(req);
+  const firebaseToken = String(req.headers['x-firebase-id-token'] || '');
+  const guestUid = verifyGuestToken(guestToken);
+  if (!guestUid) {
+    res.status(401).json({ code: 'INVALID_GUEST_TOKEN' });
+    return;
+  }
+
+  const firebaseUid = await verifyFirebaseIdToken(firebaseToken);
+  if (!firebaseUid) {
+    res.status(401).json({ code: 'INVALID_FIREBASE_TOKEN' });
+    return;
+  }
+
+  const linked = linkFirebaseIdentity(firebaseUid, guestUid);
+  if (!linked.ok) {
+    res.status(409).json({ code: linked.reason || 'LINK_CONFLICT' });
+    return;
+  }
+
+  res.set('Cache-Control', 'no-store');
+  res.json({ ok: true, uid: guestUid });
+});
+
 app.get('/health', (req, res) =>
   res.json({
     status: 'ok',
@@ -817,6 +867,7 @@ app.get('/health', (req, res) =>
     waiting: waitingPlayers.length,
     connections: wss.clients.size,
     persistentStorageConfigured: !!process.env.DATA_DIR,
+    guestAuthConfigured: !!process.env.GUEST_AUTH_SECRET,
   })
 );
 app.get('/categories', (req, res) => res.json(listCategories()));
@@ -843,6 +894,8 @@ setInterval(() => {
   limiter.sweep();
   ipLimiter.sweep();
   Object.values(actionLimiters).forEach((rl) => rl.sweep());
+  guestAuthLimiter.sweep();
+  accountLinkLimiter.sweep();
   sweepCache();
 }, 60 * 1000);
 
