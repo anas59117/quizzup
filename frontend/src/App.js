@@ -290,6 +290,15 @@ export default function App() {
         matchActionRef.current = null;
         clearPending();
         break;
+      case 'match_aborted':
+        cancelQueueRef.current = false;
+        matchActionRef.current = null;
+        bootSessionRef.current = null;
+        writeLiveSession(null);
+        clearPending();
+        setRoom(null);
+        setStage('home');
+        break;
       case 'rate_limited':
         clearPending();
         break;
