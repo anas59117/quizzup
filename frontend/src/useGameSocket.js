@@ -157,6 +157,11 @@ export function useGameSocket({
       }
 
       if (data.type === 'game_reconnected') {
+        // The backend only sends this after Firebase token verification.
+        // It can arrive just before the separate "identified" ack, so mark
+        // the socket usable immediately and avoid a tiny answer-drop window.
+        identifiedRef.current = true;
+        identifySentRef.current = false;
         if (reconnectTimerRef.current) {
           clearTimeout(reconnectTimerRef.current);
           reconnectTimerRef.current = null;
