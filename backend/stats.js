@@ -4,6 +4,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { createJsonWriter } = require('./json-writer');
 
 const STORE = path.join(__dirname, 'stats.json');
 
@@ -15,18 +16,7 @@ try {
   /* no store yet or unreadable — start fresh */
 }
 
-let writeScheduled = false;
-function persist() {
-  if (writeScheduled) return;
-  writeScheduled = true;
-  setTimeout(() => {
-    writeScheduled = false;
-    // Async write: avoids blocking the event loop (and every in-flight
-    // game's message handling) on a synchronous full-file rewrite as this
-    // grows with total-users-ever.
-    fs.writeFile(STORE, JSON.stringify(stats), () => {});
-  }, 1000);
-}
+const persist = createJsonWriter(STORE, () => stats);
 
 // Linear level curve: reaching level N costs N*200 cumulative XP. Returns
 // the player's current level plus progress within it, for a level-up ring.
