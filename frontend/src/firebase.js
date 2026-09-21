@@ -1,27 +1,23 @@
-// Firebase Auth — replaces the localStorage clientId with a real, persistent
-// identity. Anonymous sign-in keeps "play without an account" working; users
-// can later link a Google account to the same uid without losing progress.
+// Identity bootstrap.
+//
+// Gameplay no longer depends on Firebase Anonymous Auth. Every visitor can get
+// a backend-signed QuizzUp guest identity from Railway. Firebase is used only
+// when the player explicitly links a Google account.
 
-import { initializeApp } from 'firebase/app';
+import { initializeApp, getApps, getApp } from 'firebase/app';
 import {
-  getAuth, onAuthStateChanged, signInAnonymously,
-  GoogleAuthProvider, linkWithPopup,
+  getAuth,
+  onAuthStateChanged,
+  GoogleAuthProvider,
+  linkWithPopup,
+  signInWithPopup,
 } from 'firebase/auth';
+import { getBackendOrigin } from './backend';
 
-// Firebase's web config is public client configuration (not a service-account
-// secret). Keep a checked-in fallback so the Vercel build cannot be bricked by
-// a missing/placeholder REACT_APP_* variable. A complete valid environment
-// config can still override this for previews or future migrations.
-const DEFAULT_FIREBASE_CONFIG = {
-  apiKey: 'AIzaSyAQhrcbG2-1YujgQbmJSykNda_fgUpvz0o',
-  authDomain: 'quizzup-ae633.firebaseapp.com',
-  projectId: 'quizzup-ae633',
-  storageBucket: 'quizzup-ae633.firebasestorage.app',
-  messagingSenderId: '825347964948',
-  appId: '1:825347964948:web:cfbb51e27eb3224253e701',
-};
+const GUEST_TOKEN_KEY = 'quizzup-guest-token-v1';
+const GOOGLE_LINKED_KEY = 'quizzup-google-linked-v1';
 
-const envFirebaseConfig = {
+const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
@@ -30,47 +26,209 @@ const envFirebaseConfig = {
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
-const hasValidEnvConfig = (
-  /^AIza[0-9A-Za-z_-]{30,}$/.test(envFirebaseConfig.apiKey || '')
-  && Object.values(envFirebaseConfig).every((value) => typeof value === 'string' && value.trim())
-);
+let authInstance = null;
 
-const firebaseConfig = hasValidEnvConfig ? envFirebaseConfig : DEFAULT_FIREBASE_CONFIG;
+function firebaseConfigReady() {
+  return (
+    /^AIza[0-9A-Za-z_-]{30,}$/.test(firebaseConfig.apiKey || '')
+    && Object.values(firebaseConfig).every(
+      (value) => typeof value === 'string' && value.trim()
+    )
+  );
+}
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const googleProvider = new GoogleAuthProvider();
+function getFirebaseAuth() {
+  if (!firebaseConfigReady()) {
+    const err = new Error('Firebase Web configuration is unavailable');
+    err.code = 'auth/firebase-config-unavailable';
+    throw err;
+  }
+  if (authInstance) return authInstance;
+  const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+  authInstance = getAuth(app);
+  return authInstance;
+}
 
-// Ensures a signed-in user (anonymous if nobody has signed in yet) and
-// resolves with the Firebase user. Safe to call on every app load.
-function ensureSignedIn() {
-  return new Promise((resolve, reject) => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+function readStoredGuestToken() {
+  try {
+    return localStorage.getItem(GUEST_TOKEN_KEY) || '';
+  } catch {
+    return '';
+  }
+}
+
+function storeGuestToken(token) {
+  try {
+    if (token) localStorage.setItem(GUEST_TOKEN_KEY, token);
+    else localStorage.removeItem(GUEST_TOKEN_KEY);
+  } catch {}
+}
+
+function hasLinkedGoogleMarker() {
+  try {
+    return localStorage.getItem(GOOGLE_LINKED_KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+
+function setLinkedGoogleMarker(value) {
+  try {
+    if (value) localStorage.setItem(GOOGLE_LINKED_KEY, '1');
+    else localStorage.removeItem(GOOGLE_LINKED_KEY);
+  } catch {}
+}
+
+function makeGuestUser(uid, token) {
+  return {
+    uid,
+    isAnonymous: true,
+    email: null,
+    providerData: [],
+    _quizzupGuest: true,
+    getIdToken: async () => token,
+  };
+}
+
+async function requestGuestIdentity() {
+  const existingToken = readStoredGuestToken();
+  const headers = {};
+  if (existingToken) headers.Authorization = `Bearer ${existingToken}`;
+
+  let response;
+  try {
+    response = await fetch(`${getBackendOrigin()}/auth/guest`, {
+      method: 'POST',
+      headers,
+      cache: 'no-store',
+    });
+  } catch (cause) {
+    const err = new Error('Guest identity service is unreachable');
+    err.code = 'auth/guest-service-unreachable';
+    err.cause = cause;
+    throw err;
+  }
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.uid || !data.token) {
+    const err = new Error(data.code || 'Guest identity request failed');
+    err.code = `auth/${String(data.code || 'guest-request-failed').toLowerCase()}`;
+    throw err;
+  }
+
+  storeGuestToken(data.token);
+  return makeGuestUser(data.uid, data.token);
+}
+
+async function existingLinkedFirebaseUser() {
+  if (!hasLinkedGoogleMarker() || !firebaseConfigReady()) return null;
+
+  let auth;
+  try {
+    auth = getFirebaseAuth();
+  } catch {
+    return null;
+  }
+
+  return new Promise((resolve) => {
+    let settled = false;
+    let unsubscribe = () => {};
+    const finish = (user) => {
+      if (settled) return;
+      settled = true;
       unsubscribe();
-      if (user) { resolve(user); return; }
-      signInAnonymously(auth).then((cred) => resolve(cred.user)).catch(reject);
-    }, reject);
+      resolve(user || null);
+    };
+
+    const timer = setTimeout(() => finish(null), 1500);
+    unsubscribe = onAuthStateChanged(
+      auth,
+      async (user) => {
+        clearTimeout(timer);
+        if (!user || user.isAnonymous) {
+          finish(null);
+          return;
+        }
+        try {
+          await user.getIdToken();
+          finish(user);
+        } catch {
+          finish(null);
+        }
+      },
+      () => {
+        clearTimeout(timer);
+        finish(null);
+      }
+    );
   });
 }
 
-// Upgrades the current anonymous session to a Google account, keeping the
-// same uid (so friends/stats tied to that uid carry over automatically).
+// Prefer a previously-linked Google session when it is healthy. Otherwise,
+// issue/refresh a signed guest identity. Firebase outages therefore cannot
+// prevent a player from reaching the game.
+async function ensureSignedIn() {
+  const linkedUser = await existingLinkedFirebaseUser();
+  if (linkedUser) return linkedUser;
+  return requestGuestIdentity();
+}
+
+// Links the current QuizzUp guest identity to a Firebase Google account.
+// The backend stores Firebase UID -> guest UID, so stats/friends remain on the
+// same canonical QuizzUp account after the transport switches to Firebase.
 async function linkGoogleAccount() {
-  const user = auth.currentUser;
-  if (!user) throw new Error('Not signed in');
-
-  // Never sign into a different uid here: stats/friends are keyed by uid and
-  // the backend binds one WebSocket to one verified identity. If Google is
-  // already linked, return the current user; otherwise link the provider to
-  // this exact account (anonymous or otherwise).
-  if (user.providerData.some((provider) => provider.providerId === 'google.com')) {
-    return { user };
+  const guestToken = readStoredGuestToken();
+  if (!guestToken) {
+    const err = new Error('Guest identity is missing');
+    err.code = 'auth/guest-token-missing';
+    throw err;
   }
-  return linkWithPopup(user, googleProvider);
+
+  const auth = getFirebaseAuth();
+  const googleProvider = new GoogleAuthProvider();
+
+  let result;
+  const current = auth.currentUser;
+  if (current?.providerData?.some((provider) => provider.providerId === 'google.com')) {
+    result = { user: current };
+  } else if (current?.isAnonymous) {
+    result = await linkWithPopup(current, googleProvider);
+  } else {
+    result = await signInWithPopup(auth, googleProvider);
+  }
+
+  const firebaseToken = await result.user.getIdToken(true);
+  const response = await fetch(`${getBackendOrigin()}/auth/link-google`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${guestToken}`,
+      'X-Firebase-ID-Token': firebaseToken,
+    },
+    cache: 'no-store',
+  });
+  const data = await response.json().catch(() => ({}));
+
+  if (!response.ok || !data.ok) {
+    try { await auth.signOut(); } catch {}
+    const err = new Error(data.code || 'Google account link failed');
+    err.code = `auth/${String(data.code || 'google-link-failed').toLowerCase()}`;
+    throw err;
+  }
+
+  setLinkedGoogleMarker(true);
+  return result;
 }
 
-function signOutUser() {
-  return auth.signOut();
+async function signOutUser() {
+  storeGuestToken('');
+  setLinkedGoogleMarker(false);
+  if (authInstance) await authInstance.signOut();
 }
 
-export { auth, ensureSignedIn, linkGoogleAccount, signOutUser, onAuthStateChanged };
+export {
+  ensureSignedIn,
+  linkGoogleAccount,
+  signOutUser,
+  onAuthStateChanged,
+  firebaseConfigReady,
+};
