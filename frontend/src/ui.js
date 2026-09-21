@@ -169,7 +169,11 @@ export const ErrorScreen = memo(function ErrorScreen({ onRetry }) {
 
 export function useTheme() {
   const [theme, setTheme] = useState(() => {
-    try { return localStorage.getItem('quizzup-theme') || 'light'; } catch { return 'light'; }
+    try {
+      const saved = localStorage.getItem('quizzup-theme');
+      if (saved) return saved;
+      return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    } catch { return 'light'; }
   });
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
