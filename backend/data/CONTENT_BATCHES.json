@@ -60,6 +60,11 @@
       "name": "animation-et-cinema-1",
       "minimumQuestions": 50,
       "categories": ["films_pixar", "films_dreamworks", "comedies_francaises", "comedies_us_cultes", "films_d_horreur"]
+    },
+    {
+      "name": "science-fiction-et-palmares-1",
+      "minimumQuestions": 50,
+      "categories": ["science_fiction", "films_cultes_90s", "films_cultes_2000s", "oscars_histoire", "cesars"]
     }
   ]
 }

@@ -183,6 +183,11 @@ export const CATEGORIES = [
   { key: 'comedies_francaises', label: 'Comédies françaises', icon: '\u{1F1EB}\u{1F1F7}', grad: 'g133', desc: 'Films, acteurs & répliques cultes', family: 'entertainment' },
   { key: 'comedies_us_cultes', label: 'Comédies US cultes', icon: '\u{1F602}', grad: 'g134', desc: 'Classiques, personnages & réalisateurs', family: 'entertainment' },
   { key: 'films_d_horreur', label: "Films d'horreur", icon: '\u{1F47B}', grad: 'g135', desc: 'Monstres, lieux & classiques du genre', family: 'entertainment' },
+  { key: 'science_fiction', label: 'Science-fiction', icon: '\u{1F680}', grad: 'g136', desc: 'Futurs, vaisseaux & mondes imaginaires', family: 'entertainment' },
+  { key: 'films_cultes_90s', label: 'Films cultes 90s', icon: '\u{1F4FC}', grad: 'g137', desc: 'Classiques, personnages & réalisateurs', family: 'entertainment' },
+  { key: 'films_cultes_2000s', label: 'Films cultes 2000s', icon: '\u{1F4BF}', grad: 'g138', desc: 'Cinéma marquant des années 2000', family: 'entertainment' },
+  { key: 'oscars_histoire', label: 'Oscars — histoire', icon: '\u{1F3C6}', grad: 'g139', desc: 'Palmarès, acteurs & réalisateurs', family: 'entertainment' },
+  { key: 'cesars', label: 'Césars', icon: '\u{1F3AC}', grad: 'g140', desc: 'Films, cinéastes & interprètes français', family: 'entertainment' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see

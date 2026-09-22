@@ -153,6 +153,13 @@ const comediesFrancaises = require('./data/comedies_francaises.json');
 const comediesUsCultes = require('./data/comedies_us_cultes.json');
 const filmsDHorreur = require('./data/films_d_horreur.json');
 
+// Batch 18 — science-fiction, films cultes et récompenses (text-only, no photos).
+const scienceFiction = require('./data/science_fiction.json');
+const filmsCultes90s = require('./data/films_cultes_90s.json');
+const filmsCultes2000s = require('./data/films_cultes_2000s.json');
+const oscarsHistoire = require('./data/oscars_histoire.json');
+const cesars = require('./data/cesars.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -760,6 +767,11 @@ const CATEGORIES = {
   comedies_francaises: { label: 'Comédies françaises', icon: '🇫🇷', questions: [...comediesFrancaises] },
   comedies_us_cultes: { label: 'Comédies US cultes', icon: '😂', questions: [...comediesUsCultes] },
   films_d_horreur: { label: "Films d'horreur", icon: '👻', questions: [...filmsDHorreur] },
+  science_fiction: { label: 'Science-fiction', icon: '🚀', questions: [...scienceFiction] },
+  films_cultes_90s: { label: 'Films cultes 90s', icon: '📼', questions: [...filmsCultes90s] },
+  films_cultes_2000s: { label: 'Films cultes 2000s', icon: '💿', questions: [...filmsCultes2000s] },
+  oscars_histoire: { label: 'Oscars — histoire', icon: '🏆', questions: [...oscarsHistoire] },
+  cesars: { label: 'Césars', icon: '🎬', questions: [...cesars] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
