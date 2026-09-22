@@ -1089,68 +1089,134 @@ function shuffleQuestions(items, random = Math.random) {
 
 // Return `count` questions from a category (or mixed if no category), each
 // tagged with its category label + icon and a stable per-match id.
-function getQuestions(count, categoryKey) {
-  let pool = [];
-  if (categoryKey && CATEGORIES[categoryKey]) {
-    const cat = CATEGORIES[categoryKey];
-    pool = cat.questions.map((q) => ({ ...q, category: cat.label, icon: cat.icon }));
-  } else {
-    for (const key of Object.keys(CATEGORIES)) {
-      const cat = CATEGORIES[key];
-      pool.push(...cat.questions.map((q) => ({ ...q, category: cat.label, icon: cat.icon })));
-    }
-  }
-  return shuffleQuestions(pool)
-    .slice(0, Math.min(count, pool.length))
-    .map((question, i) => ({ ...question, id: i }));
+const DIFFICULTY_SEQUENCE = ['easy', 'easy', 'medium', 'medium', 'hard', 'expert'];
+const DIFFICULTY_SCORE = { easy: 0.15, medium: 0.5, hard: 0.75, expert: 0.95 };
+const DIFFICULTY_BANDS = {
+  easy: [0, 0.36],
+  medium: [0.24, 0.7],
+  hard: [0.58, 0.9],
+  expert: [0.8, 1],
+};
+
+// Photo questions share a generic prompt, so the image remains their stable
+// identity. Text questions use the prompt itself.
+const questionKey = (q) => q.image || q.text;
+const answerKey = (q) => String(q.answers?.[q.correct] ?? '').trim().toLocaleLowerCase('fr');
+
+function difficultyForRound(index, count) {
+  if (index < 2) return 'easy';
+  if (index === count - 1) return 'expert';
+  const progress = index / Math.max(1, count - 1);
+  if (progress < 0.6) return 'medium';
+  if (progress < 0.84) return 'hard';
+  return 'expert';
 }
 
-// Preferred entry point. Maximizes VOLUME/variety: the Open Trivia DB cache
-// (~4000 questions) is used first, and the 60 verified local questions top up
-// the remainder — and act as the safety net when the API is unavailable,
-// rate-limited, or blocked. De-duplicates by `questionKey` (see below).
-// Always resolves to `count` questions with stable per-match ids. Never
-// rejects.
-//
-// Photo questions (guess-the-player) all share the same generic prompt text
-// ("Qui est ce joueur ?"), so keying dedup on `text` alone would treat every
-// one of them as a duplicate of the first and cap a match at 1 real question.
-// `image` is unique per photo question, so it's used as the key when present.
-const questionKey = (q) => q.image || q.text;
+function difficultyScore(question, index, total) {
+  const explicit = question.difficulty;
+  if (typeof explicit === 'number' && Number.isFinite(explicit)) {
+    return Math.max(0, Math.min(1, explicit));
+  }
+  if (DIFFICULTY_SCORE[explicit] != null) return DIFFICULTY_SCORE[explicit];
+  // Every curated bank is editorially ordered from broadly recognizable
+  // material toward specialist details. Preserve that signal instead of
+  // destroying it with a global shuffle.
+  return total <= 1 ? 0.5 : index / (total - 1);
+}
 
+function categoryPool(categoryKey) {
+  const categories = categoryKey && CATEGORIES[categoryKey]
+    ? [[categoryKey, CATEGORIES[categoryKey]]]
+    : Object.entries(CATEGORIES);
+
+  const pool = [];
+  for (const [key, cat] of categories) {
+    const total = cat.questions.length;
+    cat.questions.forEach((question, index) => {
+      pool.push({
+        ...question,
+        category: cat.label,
+        icon: cat.icon,
+        _categoryKey: key,
+        _difficultyScore: difficultyScore(question, index, total),
+      });
+    });
+  }
+  return pool;
+}
+
+function selectProgressiveQuestions(items, count, random = Math.random) {
+  const available = items.slice();
+  const selected = [];
+  const usedQuestions = new Set();
+  const usedAnswers = new Set();
+
+  for (let round = 0; round < Math.min(count, available.length); round++) {
+    const difficulty = difficultyForRound(round, count);
+    const [min, max] = DIFFICULTY_BANDS[difficulty];
+    const unused = available.filter((q) => !usedQuestions.has(questionKey(q)));
+    let candidates = unused.filter((q) => q._difficultyScore >= min && q._difficultyScore <= max);
+
+    // Avoid asking two paraphrases whose correct answer is identical whenever
+    // the bank offers enough variety. This notably removes repeated fact-pairs
+    // from the same six-question match.
+    const diverse = candidates.filter((q) => !usedAnswers.has(answerKey(q)));
+    if (diverse.length) candidates = diverse;
+
+    // A small or heavily quarantined bank may not fill every ideal band.
+    // Pick the closest remaining question rather than shortening the match.
+    if (!candidates.length) {
+      const target = DIFFICULTY_SCORE[difficulty];
+      candidates = unused
+        .slice()
+        .sort((a, b) => Math.abs(a._difficultyScore - target) - Math.abs(b._difficultyScore - target));
+      const closestDistance = candidates.length
+        ? Math.abs(candidates[0]._difficultyScore - target)
+        : Infinity;
+      candidates = candidates.filter((q) =>
+        Math.abs(Math.abs(q._difficultyScore - target) - closestDistance) < 1e-9
+      );
+    }
+
+    if (!candidates.length) break;
+    const chosen = candidates[Math.floor(random() * candidates.length)];
+    selected.push({ ...chosen, difficulty });
+    usedQuestions.add(questionKey(chosen));
+    usedAnswers.add(answerKey(chosen));
+  }
+
+  return selected.map(({ _categoryKey, _difficultyScore, ...question }, id) => ({ ...question, id }));
+}
+
+// Return a progressive sequence: two approachable openers, two intermediate
+// rounds, one difficult round and an expert bonus for the standard six-round
+// match.
+function getQuestions(count, categoryKey, random = Math.random) {
+  return selectProgressiveQuestions(categoryPool(categoryKey), count, random);
+}
+
+// Curated French content is authoritative now that every category contains at
+// least 50 reviewed local questions. OpenTDB remains an emergency fallback for
+// an unexpectedly undersized bank, but it no longer overrides the difficulty
+// curve or injects random English questions into normal matches.
 async function getMixedQuestions(count, categoryKey) {
-  const questions = [];
-  const seen = new Set();
+  const localPool = categoryPool(categoryKey)
+    .filter((q) => !reports.isQuarantined(questionKey(q)));
+  const questions = selectProgressiveQuestions(localPool, count);
 
-  const accept = (q) => !seen.has(questionKey(q)) && !reports.isQuarantined(questionKey(q));
-
-  // 1) API first — huge pool, maximum variety. Pull extra to absorb any
-  //    quarantined/duplicate questions we skip.
-  if (categoryKey && CATEGORIES[categoryKey] && trivia.isSupported(categoryKey)) {
+  if (questions.length < count && categoryKey && CATEGORIES[categoryKey] && trivia.isSupported(categoryKey)) {
     const cat = CATEGORIES[categoryKey];
-    for (const q of trivia.takeFromCache(count * 2, categoryKey, cat.label, cat.icon)) {
+    const seen = new Set(questions.map(questionKey));
+    for (const q of trivia.takeFromCache((count - questions.length) * 2, categoryKey, cat.label, cat.icon)) {
       if (questions.length >= count) break;
-      if (accept(q)) {
-        questions.push(q);
+      if (!seen.has(questionKey(q)) && !reports.isQuarantined(questionKey(q))) {
+        questions.push({ ...q, difficulty: difficultyForRound(questions.length, count), id: questions.length });
         seen.add(questionKey(q));
       }
     }
   }
 
-  // 2) Fill the rest from the verified local bank (also the offline fallback).
-  if (questions.length < count) {
-    for (const q of getQuestions(count, categoryKey)) {
-      if (questions.length >= count) break;
-      if (accept(q)) {
-        questions.push(q);
-        seen.add(questionKey(q));
-      }
-    }
-  }
-
-  return shuffleQuestions(questions)
-    .slice(0, count)
-    .map((question, i) => ({ ...question, id: i }));
+  return questions.slice(0, count).map((question, id) => ({ ...question, id }));
 }
 
 // Warm the API cache for every supported category (best-effort, non-blocking).
@@ -1176,5 +1242,7 @@ module.exports = {
   warmCache,
   listCategories,
   questionKey,
+  difficultyForRound,
+  selectProgressiveQuestions,
   shuffleQuestions,
 };
