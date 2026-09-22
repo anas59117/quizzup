@@ -1,0 +1,502 @@
+[
+  {
+    "text": "Dans quelle région se situe principalement Nil ?",
+    "answers": [
+      "l'Afrique du Nord-Est",
+      "Nil",
+      "l'Amérique du Sud",
+      "Amazone"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à l'Afrique du Nord-Est ?",
+    "answers": [
+      "l'Amérique du Sud",
+      "Nil",
+      "Amazone",
+      "l'Europe centrale et orientale"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quelle région se situe principalement Amazone ?",
+    "answers": [
+      "Amazone",
+      "l'Europe centrale et orientale",
+      "l'Amérique du Sud",
+      "Danube"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à l'Amérique du Sud ?",
+    "answers": [
+      "l'Europe centrale et orientale",
+      "Danube",
+      "les États-Unis",
+      "Amazone"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle région se situe principalement Danube ?",
+    "answers": [
+      "l'Europe centrale et orientale",
+      "Danube",
+      "les États-Unis",
+      "Mississippi"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à l'Europe centrale et orientale ?",
+    "answers": [
+      "les États-Unis",
+      "Danube",
+      "Mississippi",
+      "la Chine"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quelle région se situe principalement Mississippi ?",
+    "answers": [
+      "Mississippi",
+      "la Chine",
+      "les États-Unis",
+      "Yangtsé"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à les États-Unis ?",
+    "answers": [
+      "la Chine",
+      "Yangtsé",
+      "l'Inde et le Bangladesh",
+      "Mississippi"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle région se situe principalement Yangtsé ?",
+    "answers": [
+      "la Chine",
+      "Yangtsé",
+      "l'Inde et le Bangladesh",
+      "Gange"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à la Chine ?",
+    "answers": [
+      "l'Inde et le Bangladesh",
+      "Yangtsé",
+      "Gange",
+      "l'Asie du Sud-Est"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quelle région se situe principalement Gange ?",
+    "answers": [
+      "Gange",
+      "l'Asie du Sud-Est",
+      "l'Inde et le Bangladesh",
+      "Mékong"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à l'Inde et le Bangladesh ?",
+    "answers": [
+      "l'Asie du Sud-Est",
+      "Mékong",
+      "la Russie",
+      "Gange"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle région se situe principalement Mékong ?",
+    "answers": [
+      "l'Asie du Sud-Est",
+      "Mékong",
+      "la Russie",
+      "Volga"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à l'Asie du Sud-Est ?",
+    "answers": [
+      "la Russie",
+      "Mékong",
+      "Volga",
+      "l'Europe occidentale"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quelle région se situe principalement Volga ?",
+    "answers": [
+      "Volga",
+      "l'Europe occidentale",
+      "la Russie",
+      "Rhin"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à la Russie ?",
+    "answers": [
+      "l'Europe occidentale",
+      "Rhin",
+      "l'Afrique centrale",
+      "Volga"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle région se situe principalement Rhin ?",
+    "answers": [
+      "l'Europe occidentale",
+      "Rhin",
+      "l'Afrique centrale",
+      "Congo"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à l'Europe occidentale ?",
+    "answers": [
+      "l'Afrique centrale",
+      "Rhin",
+      "Congo",
+      "l'Afrique de l'Ouest"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quelle région se situe principalement Congo ?",
+    "answers": [
+      "Congo",
+      "l'Afrique de l'Ouest",
+      "l'Afrique centrale",
+      "Niger"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à l'Afrique centrale ?",
+    "answers": [
+      "l'Afrique de l'Ouest",
+      "Niger",
+      "la Mésopotamie",
+      "Congo"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle région se situe principalement Niger ?",
+    "answers": [
+      "l'Afrique de l'Ouest",
+      "Niger",
+      "la Mésopotamie",
+      "Tigre"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à l'Afrique de l'Ouest ?",
+    "answers": [
+      "la Mésopotamie",
+      "Niger",
+      "Tigre",
+      "Euphrate"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quelle région se situe principalement Tigre ?",
+    "answers": [
+      "Tigre",
+      "Euphrate",
+      "la Mésopotamie",
+      "le Venezuela et la Colombie"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à la Mésopotamie ?",
+    "answers": [
+      "la Mésopotamie",
+      "Euphrate",
+      "le Venezuela et la Colombie",
+      "Tigre"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle région se situe principalement Euphrate ?",
+    "answers": [
+      "la Mésopotamie",
+      "Euphrate",
+      "le Venezuela et la Colombie",
+      "Orénoque"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à la Mésopotamie ?",
+    "answers": [
+      "le Venezuela et la Colombie",
+      "Euphrate",
+      "Orénoque",
+      "l'Australie"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quelle région se situe principalement Orénoque ?",
+    "answers": [
+      "Orénoque",
+      "l'Australie",
+      "le Venezuela et la Colombie",
+      "Murray"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à le Venezuela et la Colombie ?",
+    "answers": [
+      "l'Australie",
+      "Murray",
+      "l'Himalaya",
+      "Orénoque"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle région se situe principalement Murray ?",
+    "answers": [
+      "l'Australie",
+      "Murray",
+      "l'Himalaya",
+      "Everest"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à l'Australie ?",
+    "answers": [
+      "l'Himalaya",
+      "Murray",
+      "Everest",
+      "le Karakoram"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quelle région se situe principalement Everest ?",
+    "answers": [
+      "Everest",
+      "le Karakoram",
+      "l'Himalaya",
+      "K2"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à l'Himalaya ?",
+    "answers": [
+      "le Karakoram",
+      "K2",
+      "la Tanzanie",
+      "Everest"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle région se situe principalement K2 ?",
+    "answers": [
+      "le Karakoram",
+      "K2",
+      "la Tanzanie",
+      "Kilimandjaro"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à le Karakoram ?",
+    "answers": [
+      "la Tanzanie",
+      "K2",
+      "Kilimandjaro",
+      "les Alpes"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quelle région se situe principalement Kilimandjaro ?",
+    "answers": [
+      "Kilimandjaro",
+      "les Alpes",
+      "la Tanzanie",
+      "Mont Blanc"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à la Tanzanie ?",
+    "answers": [
+      "les Alpes",
+      "Mont Blanc",
+      "les Andes",
+      "Kilimandjaro"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle région se situe principalement Mont Blanc ?",
+    "answers": [
+      "les Alpes",
+      "Mont Blanc",
+      "les Andes",
+      "Aconcagua"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à les Alpes ?",
+    "answers": [
+      "les Andes",
+      "Mont Blanc",
+      "Aconcagua",
+      "l'Alaska"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quelle région se situe principalement Aconcagua ?",
+    "answers": [
+      "Aconcagua",
+      "l'Alaska",
+      "les Andes",
+      "Denali"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à les Andes ?",
+    "answers": [
+      "l'Alaska",
+      "Denali",
+      "le Caucase",
+      "Aconcagua"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle région se situe principalement Denali ?",
+    "answers": [
+      "l'Alaska",
+      "Denali",
+      "le Caucase",
+      "Elbrouz"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à l'Alaska ?",
+    "answers": [
+      "le Caucase",
+      "Denali",
+      "Elbrouz",
+      "le Japon"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quelle région se situe principalement Elbrouz ?",
+    "answers": [
+      "Elbrouz",
+      "le Japon",
+      "le Caucase",
+      "Fuji"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à le Caucase ?",
+    "answers": [
+      "le Japon",
+      "Fuji",
+      "l'Italie",
+      "Elbrouz"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle région se situe principalement Fuji ?",
+    "answers": [
+      "le Japon",
+      "Fuji",
+      "l'Italie",
+      "Vésuve"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à le Japon ?",
+    "answers": [
+      "l'Italie",
+      "Fuji",
+      "Vésuve",
+      "la Sicile"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quelle région se situe principalement Vésuve ?",
+    "answers": [
+      "Vésuve",
+      "la Sicile",
+      "l'Italie",
+      "Etna"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à l'Italie ?",
+    "answers": [
+      "la Sicile",
+      "Etna",
+      "l'Afrique du Nord-Est",
+      "Vésuve"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle région se situe principalement Etna ?",
+    "answers": [
+      "la Sicile",
+      "Etna",
+      "l'Afrique du Nord-Est",
+      "Nil"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel fleuve ou sommet est associé à la Sicile ?",
+    "answers": [
+      "l'Afrique du Nord-Est",
+      "Etna",
+      "Nil",
+      "l'Amérique du Sud"
+    ],
+    "correct": 1
+  }
+]
