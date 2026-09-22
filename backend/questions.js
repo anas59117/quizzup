@@ -216,6 +216,13 @@ const iconesDeLaMode = require('./data/icones_de_la_mode.json');
 const emissionsJeunesseCultes = require('./data/emissions_jeunesse_cultes.json');
 const dessinsAnimes90s2000s = require('./data/dessins_animes_90s_2000s.json');
 
+// Batch 27 — Disney, fantastique et séries de genre (text-only, no photos).
+const disneyRenaissance = require('./data/disney_renaissance.json');
+const sagasFantastiques = require('./data/sagas_fantastiques.json');
+const sherlockHolmesEnquetes = require('./data/sherlock_holmes_enquetes.json');
+const seriesPolicieres = require('./data/series_policieres.json');
+const seriesMedicales = require('./data/series_medicales.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -868,6 +875,11 @@ const CATEGORIES = {
   icones_de_la_mode: { label: 'Icônes de la mode', icon: '✨', questions: [...iconesDeLaMode] },
   emissions_jeunesse_cultes: { label: 'Émissions jeunesse cultes', icon: '📺', questions: [...emissionsJeunesseCultes] },
   dessins_animes_90s_2000s: { label: 'Dessins animés 90s-2000s', icon: '🖍️', questions: [...dessinsAnimes90s2000s] },
+  disney_renaissance: { label: 'Disney Renaissance', icon: '🏰', questions: [...disneyRenaissance] },
+  sagas_fantastiques: { label: 'Sagas fantastiques', icon: '🐉', questions: [...sagasFantastiques] },
+  sherlock_holmes_enquetes: { label: 'Sherlock Holmes & enquêtes', icon: '🔎', questions: [...sherlockHolmesEnquetes] },
+  series_policieres: { label: 'Séries policières', icon: '🚔', questions: [...seriesPolicieres] },
+  series_medicales: { label: 'Séries médicales', icon: '🩺', questions: [...seriesMedicales] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
