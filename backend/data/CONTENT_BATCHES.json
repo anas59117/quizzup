@@ -242,6 +242,17 @@
         "series_policieres",
         "series_medicales"
       ]
+    },
+    {
+      "name": "cinema-international-1",
+      "minimumQuestions": 50,
+      "categories": [
+        "stars_bollywood",
+        "cinema_d_auteur_francais",
+        "palme_d_or_cannes",
+        "acteurs_britanniques",
+        "comediens_cultes"
+      ]
     }
   ]
 }

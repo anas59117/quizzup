@@ -233,6 +233,11 @@ export const CATEGORIES = [
   { key: 'sherlock_holmes_enquetes', label: 'Sherlock Holmes & enquêtes', icon: '\u{1F50E}', grad: 'g183', desc: 'Affaires, indices & Baker Street', family: 'entertainment' },
   { key: 'series_policieres', label: 'Séries policières', icon: '\u{1F694}', grad: 'g184', desc: 'Enquêteurs, villes & affaires', family: 'entertainment' },
   { key: 'series_medicales', label: 'Séries médicales', icon: '\u{1FA7A}', grad: 'g185', desc: 'Médecins, hôpitaux & diagnostics', family: 'entertainment' },
+  { key: 'stars_bollywood', label: 'Stars Bollywood', icon: '\u{1F39E}\u{FE0F}', grad: 'g186', desc: 'Interprètes, rôles & cinéma hindi', family: 'entertainment' },
+  { key: 'cinema_d_auteur_francais', label: 'Cinéma d’auteur français', icon: '\u{1F1EB}\u{1F1F7}', grad: 'g187', desc: 'Cinéastes, films & Nouvelle Vague', family: 'entertainment' },
+  { key: 'palme_d_or_cannes', label: 'Palme d’Or Cannes', icon: '\u{1F33F}', grad: 'g188', desc: 'Lauréats, réalisateurs & palmarès', family: 'entertainment' },
+  { key: 'acteurs_britanniques', label: 'Acteurs britanniques', icon: '\u{1F1EC}\u{1F1E7}', grad: 'g189', desc: 'Rôles, films & récompenses', family: 'entertainment' },
+  { key: 'comediens_cultes', label: 'Comédiens cultes', icon: '\u{1F3AD}', grad: 'g190', desc: 'Personnages, duos & classiques comiques', family: 'entertainment' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
