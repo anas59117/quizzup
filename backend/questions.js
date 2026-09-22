@@ -1106,10 +1106,8 @@ const answerKey = (q) => String(q.answers?.[q.correct] ?? '').trim().toLocaleLow
 function difficultyForRound(index, count) {
   if (index < 2) return 'easy';
   if (index === count - 1) return 'expert';
-  const progress = index / Math.max(1, count - 1);
-  if (progress < 0.6) return 'medium';
-  if (progress < 0.84) return 'hard';
-  return 'expert';
+  if (index < Math.ceil((count * 2) / 3)) return 'medium';
+  return 'hard';
 }
 
 function difficultyScore(question, index, total) {
