@@ -231,6 +231,17 @@
         "emissions_jeunesse_cultes",
         "dessins_animes_90s_2000s"
       ]
+    },
+    {
+      "name": "disney-et-series-1",
+      "minimumQuestions": 50,
+      "categories": [
+        "disney_renaissance",
+        "sagas_fantastiques",
+        "sherlock_holmes_enquetes",
+        "series_policieres",
+        "series_medicales"
+      ]
     }
   ]
 }
