@@ -128,6 +128,11 @@ export const CATEGORIES = [
   { key: 'gta', label: 'GTA', icon: '\u{1F698}', grad: 'g78', tag: '\u{1F525}', desc: 'Villes, personnages & missions', family: 'gaming' },
   { key: 'league_of_legends', label: 'League of Legends', icon: '\u{2694}\u{FE0F}', grad: 'g79', tag: '\u{1F525}', desc: 'Champions, rôles & Runeterra', family: 'gaming' },
   { key: 'valorant', label: 'VALORANT', icon: '\u{1F3AF}', grad: 'g80', tag: '\u{1F525}', desc: 'Agents, armes & cartes', family: 'gaming' },
+  { key: 'roblox', label: 'Roblox', icon: '\u{1F9F1}', grad: 'g81', tag: '\u{1F525}', desc: 'Expériences, création & avatars', family: 'gaming' },
+  { key: 'call_of_duty', label: 'Call of Duty', icon: '\u{1F396}\u{FE0F}', grad: 'g82', tag: '\u{1F525}', desc: 'Campagnes, Zombies & Warzone', family: 'gaming' },
+  { key: 'genshin_impact', label: 'Genshin Impact', icon: '\u{2728}', grad: 'g83', tag: '\u{1F525}', desc: 'Teyvat, personnages & éléments', family: 'gaming' },
+  { key: 'zelda', label: 'Zelda', icon: '\u{1F6E1}\u{FE0F}', grad: 'g84', tag: '\u{1F525}', desc: 'Hyrule, donjons & légendes', family: 'gaming' },
+  { key: 'univers_mario', label: 'Univers Mario', icon: '\u{1F344}', grad: 'g85', tag: '\u{1F525}', desc: 'Royaumes, bonus & personnages', family: 'gaming' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
