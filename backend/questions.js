@@ -195,6 +195,13 @@ const acteursHollywoodiensActuels = require('./data/acteurs_hollywoodiens_actuel
 const actricesHollywoodiennesActuelles = require('./data/actrices_hollywoodiennes_actuelles.json');
 const starsDuCinemaCoreen = require('./data/stars_du_cinema_coreen.json');
 
+// Batch 24 — humour, télévision et créateurs (text-only, no photos).
+const sitcomsCultes = require('./data/sitcoms_cultes.json');
+const teleRealiteFr = require('./data/tele_realite_fr.json');
+const humoristesFrancais = require('./data/humoristes_francais.json');
+const standUpUs = require('./data/stand_up_us.json');
+const youtubeursFrancais = require('./data/youtubeurs_francais.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -832,6 +839,11 @@ const CATEGORIES = {
   acteurs_hollywoodiens_actuels: { label: 'Acteurs hollywoodiens actuels', icon: '🎭', questions: [...acteursHollywoodiensActuels] },
   actrices_hollywoodiennes_actuelles: { label: 'Actrices hollywoodiennes actuelles', icon: '🌟', questions: [...actricesHollywoodiennesActuelles] },
   stars_du_cinema_coreen: { label: 'Stars du cinéma coréen', icon: '🎬', questions: [...starsDuCinemaCoreen] },
+  sitcoms_cultes: { label: 'Sitcoms cultes', icon: '📺', questions: [...sitcomsCultes] },
+  tele_realite_fr: { label: 'Télé-réalité FR', icon: '🎦', questions: [...teleRealiteFr] },
+  humoristes_francais: { label: 'Humoristes français', icon: '😂', questions: [...humoristesFrancais] },
+  stand_up_us: { label: 'Stand-up US', icon: '🎙️', questions: [...standUpUs] },
+  youtubeurs_francais: { label: 'YouTubeurs français', icon: '▶️', questions: [...youtubeursFrancais] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
