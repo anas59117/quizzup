@@ -55,6 +55,11 @@
       "name": "anime-manga-comics-1",
       "minimumQuestions": 50,
       "categories": ["anime_shonen", "studio_ghibli", "anime_cultes", "culture_manga", "dc_comics"]
+    },
+    {
+      "name": "animation-et-cinema-1",
+      "minimumQuestions": 50,
+      "categories": ["films_pixar", "films_dreamworks", "comedies_francaises", "comedies_us_cultes", "films_d_horreur"]
     }
   ]
 }
