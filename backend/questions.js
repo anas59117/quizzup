@@ -118,6 +118,13 @@ const chansonFrancaiseClassique = require('./data/chanson_francaise_classique.js
 const rockFrancais = require('./data/rock_francais.json');
 const rockLegendesAngloUs = require('./data/rock_legendes_anglo_us.json');
 
+// Batch 13 — metal, pop rock et musiques électroniques (text-only, no photos).
+const metal = require('./data/metal.json');
+const popRock2000s = require('./data/pop_rock_2000s.json');
+const electroEdm = require('./data/electro_edm.json');
+const houseTechno = require('./data/house_techno.json');
+const reggaeDancehall = require('./data/reggae_dancehall.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -700,6 +707,11 @@ const CATEGORIES = {
   chanson_francaise_classique: { label: 'Chanson française classique', icon: '🎼', questions: [...chansonFrancaiseClassique] },
   rock_francais: { label: 'Rock français', icon: '🎸', questions: [...rockFrancais] },
   rock_legendes_anglo_us: { label: 'Rock légendes anglo-US', icon: '🤘', questions: [...rockLegendesAngloUs] },
+  metal: { label: 'Metal', icon: '🤘', questions: [...metal] },
+  pop_rock_2000s: { label: 'Pop rock 2000s', icon: '🎸', questions: [...popRock2000s] },
+  electro_edm: { label: 'Electro/EDM', icon: '🎛️', questions: [...electroEdm] },
+  house_techno: { label: 'House & techno', icon: '🎚️', questions: [...houseTechno] },
+  reggae_dancehall: { label: 'Reggae & dancehall', icon: '🇯🇲', questions: [...reggaeDancehall] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
