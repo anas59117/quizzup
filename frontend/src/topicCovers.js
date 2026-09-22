@@ -35,7 +35,7 @@ export const TOPIC_COVERS = {
   culture_fr: cover('Mont Saint-Michel France.jpg', 'center 42%'),
   premier_league: cover('Interior of Hill Dickinson Stadium.jpg', 'center 42%'),
   la_liga: cover('Lamine Yamal France v Spain 7.24.26-187.jpg', 'center 24%'),
-  ligue_1: cover('Ousmane Dembele paris derby.jpg', 'center 25%'),
+  ligue_1: cover('PSG - Lille Ligue 1.jpg', 'center 42%'),
   netflix: cover('100 Winchester Circle.jpg', 'center 42%'),
   seconde_guerre_mondiale: cover('WW2Montage.PNG', 'center 42%'),
   fortnite: cover('Fortnite cosplay at E3 2018.jpg', 'center 25%'),
