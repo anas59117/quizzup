@@ -218,6 +218,11 @@ export const CATEGORIES = [
   { key: 'humoristes_francais', label: 'Humoristes français', icon: '\u{1F602}', grad: 'g168', desc: 'Sketches, spectacles & cinéma', family: 'entertainment' },
   { key: 'stand_up_us', label: 'Stand-up US', icon: '\u{1F399}\u{FE0F}', grad: 'g169', desc: 'Comiques, spectacles & styles', family: 'entertainment' },
   { key: 'youtubeurs_francais', label: 'YouTubeurs français', icon: '\u{25B6}\u{FE0F}', grad: 'g170', desc: 'Chaînes, formats & projets web', family: 'entertainment' },
+  { key: 'streamers_twitch_fr', label: 'Streamers Twitch FR', icon: '\u{1F7E3}', grad: 'g171', desc: 'Lives, événements & scènes françaises', family: 'entertainment' },
+  { key: 'streamers_internationaux', label: 'Streamers internationaux', icon: '\u{1F30D}', grad: 'g172', desc: 'Créateurs, jeux & collectifs mondiaux', family: 'entertainment' },
+  { key: 'tiktokeurs_celebres', label: 'TikTokeurs célèbres', icon: '\u{1F4F1}', grad: 'g173', desc: 'Vidéos courtes, danses & humour', family: 'entertainment' },
+  { key: 'influenceurs_beaute', label: 'Influenceurs beauté', icon: '\u{1F484}', grad: 'g174', desc: 'Maquillage, marques & tutoriels', family: 'entertainment' },
+  { key: 'createurs_gaming', label: 'Créateurs gaming', icon: '\u{1F3AE}', grad: 'g175', desc: 'Jeux, critiques & formats vidéo', family: 'gaming' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
