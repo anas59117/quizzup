@@ -90,6 +90,13 @@ const boxeChampions = require('./data/boxe_champions.json');
 const handball = require('./data/handball.json');
 const nfl = require('./data/nfl.json');
 
+// Batch 9 — disciplines et figures sportives (text-only, no photos).
+const gymnastique = require('./data/gymnastique.json');
+const patinageArtistique = require('./data/patinage_artistique.json');
+const sportsExtremes = require('./data/sports_extremes.json');
+const femmesDuSport = require('./data/femmes_du_sport.json');
+const jeunesTalentsDuSport = require('./data/jeunes_talents_du_sport.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -652,6 +659,11 @@ const CATEGORIES = {
   boxe_champions: { label: 'Boxe (champions)', icon: '🥊', questions: [...boxeChampions] },
   handball: { label: 'Handball', icon: '🤾', questions: [...handball] },
   nfl: { label: 'NFL', icon: '🏈', questions: [...nfl] },
+  gymnastique: { label: 'Gymnastique', icon: '🤸', questions: [...gymnastique] },
+  patinage_artistique: { label: 'Patinage artistique', icon: '⛸️', questions: [...patinageArtistique] },
+  sports_extremes: { label: 'Sports extrêmes', icon: '🪂', questions: [...sportsExtremes] },
+  femmes_du_sport: { label: 'Femmes du sport', icon: '🏅', questions: [...femmesDuSport] },
+  jeunes_talents_du_sport: { label: 'Jeunes talents du sport', icon: '🌟', questions: [...jeunesTalentsDuSport] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
