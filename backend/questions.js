@@ -223,6 +223,13 @@ const sherlockHolmesEnquetes = require('./data/sherlock_holmes_enquetes.json');
 const seriesPolicieres = require('./data/series_policieres.json');
 const seriesMedicales = require('./data/series_medicales.json');
 
+// Batch 28 — cinéma international, auteurs et comédiens (text-only, no photos).
+const starsBollywood = require('./data/stars_bollywood.json');
+const cinemaDAuteurFrancais = require('./data/cinema_d_auteur_francais.json');
+const palmeDOrCannes = require('./data/palme_d_or_cannes.json');
+const acteursBritanniques = require('./data/acteurs_britanniques.json');
+const comediensCultes = require('./data/comediens_cultes.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -880,6 +887,11 @@ const CATEGORIES = {
   sherlock_holmes_enquetes: { label: 'Sherlock Holmes & enquêtes', icon: '🔎', questions: [...sherlockHolmesEnquetes] },
   series_policieres: { label: 'Séries policières', icon: '🚔', questions: [...seriesPolicieres] },
   series_medicales: { label: 'Séries médicales', icon: '🩺', questions: [...seriesMedicales] },
+  stars_bollywood: { label: 'Stars Bollywood', icon: '🎞️', questions: [...starsBollywood] },
+  cinema_d_auteur_francais: { label: "Cinéma d’auteur français", icon: '🇫🇷', questions: [...cinemaDAuteurFrancais] },
+  palme_d_or_cannes: { label: "Palme d’Or Cannes", icon: '🌿', questions: [...palmeDOrCannes] },
+  acteurs_britanniques: { label: 'Acteurs britanniques', icon: '🇬🇧', questions: [...acteursBritanniques] },
+  comediens_cultes: { label: 'Comédiens cultes', icon: '🎭', questions: [...comediensCultes] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
