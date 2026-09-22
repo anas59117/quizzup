@@ -143,6 +143,11 @@ export const CATEGORIES = [
   { key: 'sports_extremes', label: 'Sports extrêmes', icon: '\u{1FA82}', grad: 'g93', desc: 'Glisse, hauteur & adrénaline', family: 'sport' },
   { key: 'femmes_du_sport', label: 'Femmes du sport', icon: '\u{1F3C5}', grad: 'g94', desc: 'Championnes & exploits historiques', family: 'sport' },
   { key: 'jeunes_talents_du_sport', label: 'Jeunes talents du sport', icon: '\u{1F31F}', grad: 'g95', desc: 'Records précoces & révélations', family: 'sport' },
+  { key: 'legendes_du_sport_francais', label: 'Légendes du sport français', icon: '\u{1F1EB}\u{1F1F7}', grad: 'g96', desc: 'Champions, records & exploits', family: 'sport' },
+  { key: 'padel', label: 'Padel', icon: '\u{1F3BE}', grad: 'g97', desc: 'Règles, coups & champions', family: 'sport' },
+  { key: 'beach_volley', label: 'Beach-volley', icon: '\u{1F3D0}', grad: 'g98', desc: 'Sable, règles & légendes', family: 'sport' },
+  { key: 'k_pop_groupes_feminins', label: 'K-pop groupes féminins', icon: '\u{1F3A4}', grad: 'g99', desc: 'Groupes, débuts & fandoms', family: 'music' },
+  { key: 'k_pop_groupes_masculins', label: 'K-pop groupes masculins', icon: '\u{1F3B6}', grad: 'g100', desc: 'Groupes, débuts & fandoms', family: 'music' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see

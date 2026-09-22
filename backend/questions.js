@@ -97,6 +97,13 @@ const sportsExtremes = require('./data/sports_extremes.json');
 const femmesDuSport = require('./data/femmes_du_sport.json');
 const jeunesTalentsDuSport = require('./data/jeunes_talents_du_sport.json');
 
+// Batch 10 — sports & groupes K-pop (text-only, no photos).
+const legendesDuSportFrancais = require('./data/legendes_du_sport_francais.json');
+const padel = require('./data/padel.json');
+const beachVolley = require('./data/beach_volley.json');
+const kPopGroupesFeminins = require('./data/k_pop_groupes_feminins.json');
+const kPopGroupesMasculins = require('./data/k_pop_groupes_masculins.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -664,6 +671,11 @@ const CATEGORIES = {
   sports_extremes: { label: 'Sports extrêmes', icon: '🪂', questions: [...sportsExtremes] },
   femmes_du_sport: { label: 'Femmes du sport', icon: '🏅', questions: [...femmesDuSport] },
   jeunes_talents_du_sport: { label: 'Jeunes talents du sport', icon: '🌟', questions: [...jeunesTalentsDuSport] },
+  legendes_du_sport_francais: { label: 'Légendes du sport français', icon: '🇫🇷', questions: [...legendesDuSportFrancais] },
+  padel: { label: 'Padel', icon: '🎾', questions: [...padel] },
+  beach_volley: { label: 'Beach-volley', icon: '🏐', questions: [...beachVolley] },
+  k_pop_groupes_feminins: { label: 'K-pop groupes féminins', icon: '🎤', questions: [...kPopGroupesFeminins] },
+  k_pop_groupes_masculins: { label: 'K-pop groupes masculins', icon: '🎶', questions: [...kPopGroupesMasculins] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
