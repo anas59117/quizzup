@@ -133,6 +133,11 @@ export const CATEGORIES = [
   { key: 'genshin_impact', label: 'Genshin Impact', icon: '\u{2728}', grad: 'g83', tag: '\u{1F525}', desc: 'Teyvat, personnages & éléments', family: 'gaming' },
   { key: 'zelda', label: 'Zelda', icon: '\u{1F6E1}\u{FE0F}', grad: 'g84', tag: '\u{1F525}', desc: 'Hyrule, donjons & légendes', family: 'gaming' },
   { key: 'univers_mario', label: 'Univers Mario', icon: '\u{1F344}', grad: 'g85', tag: '\u{1F525}', desc: 'Royaumes, bonus & personnages', family: 'gaming' },
+  { key: 'rugby_coupe_du_monde', label: 'Rugby Coupe du Monde', icon: '\u{1F3C9}', grad: 'g86', desc: 'Trophée Webb Ellis & grandes finales', family: 'sport' },
+  { key: 'xv_de_france', label: 'XV de France', icon: '\u{1F413}', grad: 'g87', desc: 'Les Bleus, Tournoi & légendes', family: 'sport' },
+  { key: 'boxe_champions', label: 'Boxe (champions)', icon: '\u{1F94A}', grad: 'g88', desc: 'Ceintures, combats & champions', family: 'sport' },
+  { key: 'handball', label: 'Handball', icon: '\u{1F93E}', grad: 'g89', desc: 'Règles, sélections & grands titres', family: 'sport' },
+  { key: 'nfl', label: 'NFL', icon: '\u{1F3C8}', grad: 'g90', desc: 'Super Bowl, franchises & légendes', family: 'sport' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see

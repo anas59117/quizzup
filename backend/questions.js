@@ -83,6 +83,13 @@ const genshinImpact = require('./data/genshin_impact.json');
 const zelda = require('./data/zelda.json');
 const universMario = require('./data/univers_mario.json');
 
+// Batch 8 — sports internationaux (text-only, no photos).
+const rugbyCoupeDuMonde = require('./data/rugby_coupe_du_monde.json');
+const xvDeFrance = require('./data/xv_de_france.json');
+const boxeChampions = require('./data/boxe_champions.json');
+const handball = require('./data/handball.json');
+const nfl = require('./data/nfl.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -640,6 +647,11 @@ const CATEGORIES = {
   genshin_impact: { label: 'Genshin Impact', icon: '✨', questions: [...genshinImpact] },
   zelda: { label: 'Zelda', icon: '🛡️', questions: [...zelda] },
   univers_mario: { label: 'Univers Mario', icon: '🍄', questions: [...universMario] },
+  rugby_coupe_du_monde: { label: 'Rugby Coupe du Monde', icon: '🏉', questions: [...rugbyCoupeDuMonde] },
+  xv_de_france: { label: 'XV de France', icon: '🐓', questions: [...xvDeFrance] },
+  boxe_champions: { label: 'Boxe (champions)', icon: '🥊', questions: [...boxeChampions] },
+  handball: { label: 'Handball', icon: '🤾', questions: [...handball] },
+  nfl: { label: 'NFL', icon: '🏈', questions: [...nfl] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
