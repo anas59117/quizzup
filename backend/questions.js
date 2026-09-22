@@ -167,6 +167,13 @@ const chappellRoanPopAlternative = require('./data/chappell_roan_pop_alternative
 const rapUsNouvelleGeneration = require('./data/rap_us_nouvelle_generation.json');
 const drillFrUk = require('./data/drill_fr_uk.json');
 
+// Batch 20 — décennies, viralité et nouvelles scènes rap FR (text-only, no photos).
+const musiqueAnnees90 = require('./data/musique_annees_90.json');
+const musiqueAnnees2010 = require('./data/musique_annees_2010.json');
+const sonsVirauxTiktok = require('./data/sons_viraux_tiktok.json');
+const rappeusesFrancaises = require('./data/rappeuses_francaises.json');
+const nouvelleSceneRapFr = require('./data/nouvelle_scene_rap_fr.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -784,6 +791,11 @@ const CATEGORIES = {
   chappell_roan_pop_alternative: { label: 'Chappell Roan & pop alternative', icon: '💖', questions: [...chappellRoanPopAlternative] },
   rap_us_nouvelle_generation: { label: 'Rap US nouvelle génération', icon: '🔥', questions: [...rapUsNouvelleGeneration] },
   drill_fr_uk: { label: 'Drill FR/UK', icon: '🎧', questions: [...drillFrUk] },
+  musique_annees_90: { label: 'Musique années 90', icon: '📀', questions: [...musiqueAnnees90] },
+  musique_annees_2010: { label: 'Musique années 2010', icon: '🎵', questions: [...musiqueAnnees2010] },
+  sons_viraux_tiktok: { label: 'Sons viraux TikTok', icon: '📱', questions: [...sonsVirauxTiktok] },
+  rappeuses_francaises: { label: 'Rappeuses françaises', icon: '🎤', questions: [...rappeusesFrancaises] },
+  nouvelle_scene_rap_fr: { label: 'Nouvelle scène rap FR', icon: '🚀', questions: [...nouvelleSceneRapFr] },
 };
 
 function shuffleQuestions(items, random = Math.random) {

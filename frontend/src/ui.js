@@ -193,6 +193,11 @@ export const CATEGORIES = [
   { key: 'chappell_roan_pop_alternative', label: 'Chappell Roan & pop alternative', icon: '\u{1F496}', grad: 'g143', desc: 'Artistes, identités & titres alternatifs', family: 'music' },
   { key: 'rap_us_nouvelle_generation', label: 'Rap US nouvelle génération', icon: '\u{1F525}', grad: 'g144', desc: 'Flows, projets & nouveaux talents', family: 'music' },
   { key: 'drill_fr_uk', label: 'Drill FR/UK', icon: '\u{1F3A7}', grad: 'g145', desc: 'Scènes, artistes & projets majeurs', family: 'music' },
+  { key: 'musique_annees_90', label: 'Musique années 90', icon: '\u{1F4BF}', grad: 'g146', desc: 'Groupes, tubes & albums emblématiques', family: 'music' },
+  { key: 'musique_annees_2010', label: 'Musique années 2010', icon: '\u{1F3B5}', grad: 'g147', desc: 'Succès, artistes & albums de la décennie', family: 'music' },
+  { key: 'sons_viraux_tiktok', label: 'Sons viraux TikTok', icon: '\u{1F4F1}', grad: 'g148', desc: 'Titres, tendances & percées virales', family: 'music' },
+  { key: 'rappeuses_francaises', label: 'Rappeuses françaises', icon: '\u{1F3A4}', grad: 'g149', desc: 'Artistes, projets & scènes francophones', family: 'music' },
+  { key: 'nouvelle_scene_rap_fr', label: 'Nouvelle scène rap FR', icon: '\u{1F680}', grad: 'g150', desc: 'Nouveaux flows, projets & révélations', family: 'music' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
