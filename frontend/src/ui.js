@@ -228,6 +228,11 @@ export const CATEGORIES = [
   { key: 'icones_de_la_mode', label: 'Icônes de la mode', icon: '\u{2728}', grad: 'g178', desc: 'Créateurs, mannequins & signatures', family: 'entertainment' },
   { key: 'emissions_jeunesse_cultes', label: 'Émissions jeunesse cultes', icon: '\u{1F4FA}', grad: 'g179', desc: 'Animateurs, chaînes & souvenirs télé', family: 'entertainment' },
   { key: 'dessins_animes_90s_2000s', label: 'Dessins animés 90s-2000s', icon: '\u{1F58D}\u{FE0F}', grad: 'g180', desc: 'Héros, univers & classiques animés', family: 'entertainment' },
+  { key: 'disney_renaissance', label: 'Disney Renaissance', icon: '\u{1F3F0}', grad: 'g181', desc: 'Films, héros & chansons de 1989 à 1999', family: 'entertainment' },
+  { key: 'sagas_fantastiques', label: 'Sagas fantastiques', icon: '\u{1F409}', grad: 'g182', desc: 'Mondes, héros & objets légendaires', family: 'entertainment' },
+  { key: 'sherlock_holmes_enquetes', label: 'Sherlock Holmes & enquêtes', icon: '\u{1F50E}', grad: 'g183', desc: 'Affaires, indices & Baker Street', family: 'entertainment' },
+  { key: 'series_policieres', label: 'Séries policières', icon: '\u{1F694}', grad: 'g184', desc: 'Enquêteurs, villes & affaires', family: 'entertainment' },
+  { key: 'series_medicales', label: 'Séries médicales', icon: '\u{1FA7A}', grad: 'g185', desc: 'Médecins, hôpitaux & diagnostics', family: 'entertainment' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
