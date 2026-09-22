@@ -111,6 +111,13 @@ const afrobeats = require('./data/afrobeats.json');
 const latinPopReggaeton = require('./data/latin_pop_reggaeton.json');
 const rapUsLegendes = require('./data/rap_us_legendes.json');
 
+// Batch 12 — R&B, chanson et rock (text-only, no photos).
+const rB = require('./data/r_b.json');
+const varieteFrancaise = require('./data/variete_francaise.json');
+const chansonFrancaiseClassique = require('./data/chanson_francaise_classique.json');
+const rockFrancais = require('./data/rock_francais.json');
+const rockLegendesAngloUs = require('./data/rock_legendes_anglo_us.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -688,6 +695,11 @@ const CATEGORIES = {
   afrobeats: { label: 'Afrobeats', icon: '🌍', questions: [...afrobeats] },
   latin_pop_reggaeton: { label: 'Latin pop & reggaeton', icon: '🔥', questions: [...latinPopReggaeton] },
   rap_us_legendes: { label: 'Rap US légendes', icon: '🎙️', questions: [...rapUsLegendes] },
+  r_b: { label: 'R&B', icon: '🎙️', questions: [...rB] },
+  variete_francaise: { label: 'Variété française', icon: '🇫🇷', questions: [...varieteFrancaise] },
+  chanson_francaise_classique: { label: 'Chanson française classique', icon: '🎼', questions: [...chansonFrancaiseClassique] },
+  rock_francais: { label: 'Rock français', icon: '🎸', questions: [...rockFrancais] },
+  rock_legendes_anglo_us: { label: 'Rock légendes anglo-US', icon: '🤘', questions: [...rockLegendesAngloUs] },
 };
 
 function shuffleQuestions(items, random = Math.random) {

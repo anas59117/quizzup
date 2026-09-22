@@ -153,6 +153,11 @@ export const CATEGORIES = [
   { key: 'afrobeats', label: 'Afrobeats', icon: '\u{1F30D}', grad: 'g103', desc: 'Artistes, albums & grands titres', family: 'music' },
   { key: 'latin_pop_reggaeton', label: 'Latin pop & reggaeton', icon: '\u{1F525}', grad: 'g104', desc: 'Hits, artistes & rythmes latinos', family: 'music' },
   { key: 'rap_us_legendes', label: 'Rap US légendes', icon: '\u{1F399}\u{FE0F}', grad: 'g105', desc: 'Albums, labels & classiques', family: 'music' },
+  { key: 'r_b', label: 'R&B', icon: '\u{1F399}\u{FE0F}', grad: 'g106', desc: 'Voix, albums & grands classiques', family: 'music' },
+  { key: 'variete_francaise', label: 'Variété française', icon: '\u{1F1EB}\u{1F1F7}', grad: 'g107', desc: 'Interprètes, albums & chansons', family: 'music' },
+  { key: 'chanson_francaise_classique', label: 'Chanson française classique', icon: '\u{1F3BC}', grad: 'g108', desc: 'Piaf, Brel, Brassens & légendes', family: 'music' },
+  { key: 'rock_francais', label: 'Rock français', icon: '\u{1F3B8}', grad: 'g109', desc: 'Groupes, albums & hymnes', family: 'music' },
+  { key: 'rock_legendes_anglo_us', label: 'Rock légendes anglo-US', icon: '\u{1F918}', grad: 'g110', desc: 'Groupes cultes, albums & riffs', family: 'music' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
