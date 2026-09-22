@@ -208,6 +208,11 @@ export const CATEGORIES = [
   { key: 'squid_game', label: 'Squid Game', icon: '\u{1F53A}', grad: 'g158', desc: 'Joueurs, épreuves & secrets du jeu', family: 'entertainment' },
   { key: 'james_bond', label: 'James Bond', icon: '\u{1F378}', grad: 'g159', desc: 'Agents, adversaires & missions 007', family: 'entertainment' },
   { key: 'fast_furious', label: 'Fast & Furious', icon: '\u{1F3CE}\u{FE0F}', grad: 'g160', desc: 'Pilotes, bolides & famille', family: 'entertainment' },
+  { key: 'films_de_braquage', label: 'Films de braquage', icon: '\u{1F4B0}', grad: 'g161', desc: 'Casses, équipes & plans mémorables', family: 'entertainment' },
+  { key: 'realisateurs_cultes', label: 'Réalisateurs cultes', icon: '\u{1F3A5}', grad: 'g162', desc: 'Films, styles & collaborations majeures', family: 'entertainment' },
+  { key: 'acteurs_hollywoodiens_actuels', label: 'Acteurs hollywoodiens actuels', icon: '\u{1F3AD}', grad: 'g163', desc: 'Rôles, films & récompenses', family: 'entertainment' },
+  { key: 'actrices_hollywoodiennes_actuelles', label: 'Actrices hollywoodiennes actuelles', icon: '\u{1F31F}', grad: 'g164', desc: 'Rôles, films & récompenses', family: 'entertainment' },
+  { key: 'stars_du_cinema_coreen', label: 'Stars du cinéma coréen', icon: '\u{1F3AC}', grad: 'g165', desc: 'Interprètes, cinéastes & films coréens', family: 'entertainment' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see

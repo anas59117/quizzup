@@ -188,6 +188,13 @@ const squidGame = require('./data/squid_game.json');
 const jamesBond = require('./data/james_bond.json');
 const fastFurious = require('./data/fast_furious.json');
 
+// Batch 23 — braquages, cinéastes et interprètes (text-only, no photos).
+const filmsDeBraquage = require('./data/films_de_braquage.json');
+const realisateursCultes = require('./data/realisateurs_cultes.json');
+const acteursHollywoodiensActuels = require('./data/acteurs_hollywoodiens_actuels.json');
+const actricesHollywoodiennesActuelles = require('./data/actrices_hollywoodiennes_actuelles.json');
+const starsDuCinemaCoreen = require('./data/stars_du_cinema_coreen.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -820,6 +827,11 @@ const CATEGORIES = {
   squid_game: { label: 'Squid Game', icon: '🔺', questions: [...squidGame] },
   james_bond: { label: 'James Bond', icon: '🍸', questions: [...jamesBond] },
   fast_furious: { label: 'Fast & Furious', icon: '🏎️', questions: [...fastFurious] },
+  films_de_braquage: { label: 'Films de braquage', icon: '💰', questions: [...filmsDeBraquage] },
+  realisateurs_cultes: { label: 'Réalisateurs cultes', icon: '🎥', questions: [...realisateursCultes] },
+  acteurs_hollywoodiens_actuels: { label: 'Acteurs hollywoodiens actuels', icon: '🎭', questions: [...acteursHollywoodiensActuels] },
+  actrices_hollywoodiennes_actuelles: { label: 'Actrices hollywoodiennes actuelles', icon: '🌟', questions: [...actricesHollywoodiennesActuelles] },
+  stars_du_cinema_coreen: { label: 'Stars du cinéma coréen', icon: '🎬', questions: [...starsDuCinemaCoreen] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
