@@ -178,6 +178,11 @@ export const CATEGORIES = [
   { key: 'anime_cultes', label: 'Anime cultes', icon: '\u{1F4FA}', grad: 'g128', desc: 'Classiques, studios & personnages', family: 'entertainment' },
   { key: 'culture_manga', label: 'Culture manga', icon: '\u{1F4DA}', grad: 'g129', desc: 'Auteurs, magazines & personnages', family: 'entertainment' },
   { key: 'dc_comics', label: 'DC Comics', icon: '\u{1F9B8}', grad: 'g130', desc: 'Héros, identités & villes mythiques', family: 'entertainment' },
+  { key: 'films_pixar', label: 'Films Pixar', icon: '\u{1F4A1}', grad: 'g131', desc: 'Films, personnages & univers animés', family: 'entertainment' },
+  { key: 'films_dreamworks', label: 'Films DreamWorks', icon: '\u{1F319}', grad: 'g132', desc: 'Héros, réalisateurs & mondes animés', family: 'entertainment' },
+  { key: 'comedies_francaises', label: 'Comédies françaises', icon: '\u{1F1EB}\u{1F1F7}', grad: 'g133', desc: 'Films, acteurs & répliques cultes', family: 'entertainment' },
+  { key: 'comedies_us_cultes', label: 'Comédies US cultes', icon: '\u{1F602}', grad: 'g134', desc: 'Classiques, personnages & réalisateurs', family: 'entertainment' },
+  { key: 'films_d_horreur', label: "Films d'horreur", icon: '\u{1F47B}', grad: 'g135', desc: 'Monstres, lieux & classiques du genre', family: 'entertainment' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
