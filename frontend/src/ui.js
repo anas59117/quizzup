@@ -213,6 +213,11 @@ export const CATEGORIES = [
   { key: 'acteurs_hollywoodiens_actuels', label: 'Acteurs hollywoodiens actuels', icon: '\u{1F3AD}', grad: 'g163', desc: 'Rôles, films & récompenses', family: 'entertainment' },
   { key: 'actrices_hollywoodiennes_actuelles', label: 'Actrices hollywoodiennes actuelles', icon: '\u{1F31F}', grad: 'g164', desc: 'Rôles, films & récompenses', family: 'entertainment' },
   { key: 'stars_du_cinema_coreen', label: 'Stars du cinéma coréen', icon: '\u{1F3AC}', grad: 'g165', desc: 'Interprètes, cinéastes & films coréens', family: 'entertainment' },
+  { key: 'sitcoms_cultes', label: 'Sitcoms cultes', icon: '\u{1F4FA}', grad: 'g166', desc: 'Personnages, décors & séries comiques', family: 'entertainment' },
+  { key: 'tele_realite_fr', label: 'Télé-réalité FR', icon: '\u{1F3A6}', grad: 'g167', desc: 'Émissions, concepts & moments marquants', family: 'entertainment' },
+  { key: 'humoristes_francais', label: 'Humoristes français', icon: '\u{1F602}', grad: 'g168', desc: 'Sketches, spectacles & cinéma', family: 'entertainment' },
+  { key: 'stand_up_us', label: 'Stand-up US', icon: '\u{1F399}\u{FE0F}', grad: 'g169', desc: 'Comiques, spectacles & styles', family: 'entertainment' },
+  { key: 'youtubeurs_francais', label: 'YouTubeurs français', icon: '\u{25B6}\u{FE0F}', grad: 'g170', desc: 'Chaînes, formats & projets web', family: 'entertainment' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
