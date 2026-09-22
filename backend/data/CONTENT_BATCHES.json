@@ -4,92 +4,211 @@
     {
       "name": "gaming-populaire-1",
       "minimumQuestions": 50,
-      "categories": ["fortnite", "minecraft", "gta", "league_of_legends", "valorant"]
+      "categories": [
+        "fortnite",
+        "minecraft",
+        "gta",
+        "league_of_legends",
+        "valorant"
+      ]
     },
     {
       "name": "gaming-populaire-2",
       "minimumQuestions": 50,
-      "categories": ["roblox", "call_of_duty", "genshin_impact", "zelda", "univers_mario"]
+      "categories": [
+        "roblox",
+        "call_of_duty",
+        "genshin_impact",
+        "zelda",
+        "univers_mario"
+      ]
     },
     {
       "name": "sports-internationaux-1",
       "minimumQuestions": 50,
-      "categories": ["rugby_coupe_du_monde", "xv_de_france", "boxe_champions", "handball", "nfl"]
+      "categories": [
+        "rugby_coupe_du_monde",
+        "xv_de_france",
+        "boxe_champions",
+        "handball",
+        "nfl"
+      ]
     },
     {
       "name": "disciplines-et-figures-sportives-1",
       "minimumQuestions": 50,
-      "categories": ["gymnastique", "patinage_artistique", "sports_extremes", "femmes_du_sport", "jeunes_talents_du_sport"]
+      "categories": [
+        "gymnastique",
+        "patinage_artistique",
+        "sports_extremes",
+        "femmes_du_sport",
+        "jeunes_talents_du_sport"
+      ]
     },
     {
       "name": "sport-et-kpop-1",
       "minimumQuestions": 50,
-      "categories": ["legendes_du_sport_francais", "padel", "beach_volley", "k_pop_groupes_feminins", "k_pop_groupes_masculins"]
+      "categories": [
+        "legendes_du_sport_francais",
+        "padel",
+        "beach_volley",
+        "k_pop_groupes_feminins",
+        "k_pop_groupes_masculins"
+      ]
     },
     {
       "name": "artistes-internationaux-1",
       "minimumQuestions": 50,
-      "categories": ["bts", "blackpink", "afrobeats", "latin_pop_reggaeton", "rap_us_legendes"]
+      "categories": [
+        "bts",
+        "blackpink",
+        "afrobeats",
+        "latin_pop_reggaeton",
+        "rap_us_legendes"
+      ]
     },
     {
       "name": "rnb-chanson-rock-1",
       "minimumQuestions": 50,
-      "categories": ["r_b", "variete_francaise", "chanson_francaise_classique", "rock_francais", "rock_legendes_anglo_us"]
+      "categories": [
+        "r_b",
+        "variete_francaise",
+        "chanson_francaise_classique",
+        "rock_francais",
+        "rock_legendes_anglo_us"
+      ]
     },
     {
       "name": "metal-electro-reggae-1",
       "minimumQuestions": 50,
-      "categories": ["metal", "pop_rock_2000s", "electro_edm", "house_techno", "reggae_dancehall"]
+      "categories": [
+        "metal",
+        "pop_rock_2000s",
+        "electro_edm",
+        "house_techno",
+        "reggae_dancehall"
+      ]
     },
     {
       "name": "culture-musicale-1",
       "minimumQuestions": 50,
-      "categories": ["jazz_legendes", "compositeurs_classiques", "eurovision", "festivals_de_musique", "clips_iconiques"]
+      "categories": [
+        "jazz_legendes",
+        "compositeurs_classiques",
+        "eurovision",
+        "festivals_de_musique",
+        "clips_iconiques"
+      ]
     },
     {
       "name": "collaborations-et-spectacles-1",
       "minimumQuestions": 50,
-      "categories": ["duos_collabs_celebres", "bandes_originales_de_films", "comedies_musicales", "girl_groups_boys_bands_2000s_2010s", "musique_annees_80"]
+      "categories": [
+        "duos_collabs_celebres",
+        "bandes_originales_de_films",
+        "comedies_musicales",
+        "girl_groups_boys_bands_2000s_2010s",
+        "musique_annees_80"
+      ]
     },
     {
       "name": "anime-manga-comics-1",
       "minimumQuestions": 50,
-      "categories": ["anime_shonen", "studio_ghibli", "anime_cultes", "culture_manga", "dc_comics"]
+      "categories": [
+        "anime_shonen",
+        "studio_ghibli",
+        "anime_cultes",
+        "culture_manga",
+        "dc_comics"
+      ]
     },
     {
       "name": "animation-et-cinema-1",
       "minimumQuestions": 50,
-      "categories": ["films_pixar", "films_dreamworks", "comedies_francaises", "comedies_us_cultes", "films_d_horreur"]
+      "categories": [
+        "films_pixar",
+        "films_dreamworks",
+        "comedies_francaises",
+        "comedies_us_cultes",
+        "films_d_horreur"
+      ]
     },
     {
       "name": "science-fiction-et-palmares-1",
       "minimumQuestions": 50,
-      "categories": ["science_fiction", "films_cultes_90s", "films_cultes_2000s", "oscars_histoire", "cesars"]
+      "categories": [
+        "science_fiction",
+        "films_cultes_90s",
+        "films_cultes_2000s",
+        "oscars_histoire",
+        "cesars"
+      ]
     },
     {
       "name": "nouvelles-scenes-musicales-1",
       "minimumQuestions": 50,
-      "categories": ["k_pop_rookies_2025_26", "pop_us_montante", "chappell_roan_pop_alternative", "rap_us_nouvelle_generation", "drill_fr_uk"]
+      "categories": [
+        "k_pop_rookies_2025_26",
+        "pop_us_montante",
+        "chappell_roan_pop_alternative",
+        "rap_us_nouvelle_generation",
+        "drill_fr_uk"
+      ]
     },
     {
       "name": "decennies-et-rap-fr-1",
       "minimumQuestions": 50,
-      "categories": ["musique_annees_90", "musique_annees_2010", "sons_viraux_tiktok", "rappeuses_francaises", "nouvelle_scene_rap_fr"]
+      "categories": [
+        "musique_annees_90",
+        "musique_annees_2010",
+        "sons_viraux_tiktok",
+        "rappeuses_francaises",
+        "nouvelle_scene_rap_fr"
+      ]
     },
     {
       "name": "series-ado-et-fantastiques-1",
       "minimumQuestions": 50,
-      "categories": ["wednesday", "stranger_things", "euphoria", "heartbreak_high", "xo_kitty"]
+      "categories": [
+        "wednesday",
+        "stranger_things",
+        "euphoria",
+        "heartbreak_high",
+        "xo_kitty"
+      ]
     },
     {
       "name": "series-et-franchises-1",
       "minimumQuestions": 50,
-      "categories": ["sex_education", "k_dramas", "squid_game", "james_bond", "fast_furious"]
+      "categories": [
+        "sex_education",
+        "k_dramas",
+        "squid_game",
+        "james_bond",
+        "fast_furious"
+      ]
     },
     {
       "name": "cinema-auteurs-et-stars-1",
       "minimumQuestions": 50,
-      "categories": ["films_de_braquage", "realisateurs_cultes", "acteurs_hollywoodiens_actuels", "actrices_hollywoodiennes_actuelles", "stars_du_cinema_coreen"]
+      "categories": [
+        "films_de_braquage",
+        "realisateurs_cultes",
+        "acteurs_hollywoodiens_actuels",
+        "actrices_hollywoodiennes_actuelles",
+        "stars_du_cinema_coreen"
+      ]
+    },
+    {
+      "name": "humour-et-createurs-1",
+      "minimumQuestions": 50,
+      "categories": [
+        "sitcoms_cultes",
+        "tele_realite_fr",
+        "humoristes_francais",
+        "stand_up_us",
+        "youtubeurs_francais"
+      ]
     }
   ]
 }
