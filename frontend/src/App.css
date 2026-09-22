@@ -349,7 +349,16 @@ button:focus-visible,input:focus-visible,select:focus-visible { outline:2px soli
 .report-btn:hover:not(:disabled) { color:#ff8b54; border-color:#ff8b54; }
 .report-btn:disabled { color:#73ae7b; cursor:default; }
 .round-intro-icon { margin-bottom:10px; font-size:3rem; }
-.round-intro-cat { margin-bottom:6px; color:rgba(255,255,255,.5); font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.16em; }
+.round-intro-cat { margin-bottom:8px; color:rgba(255,255,255,.5); font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.16em; }
+.difficulty-pill {
+  width:max-content; margin:0 auto 18px; padding:5px 10px; border:1px solid rgba(255,255,255,.14);
+  border-radius:999px; color:rgba(255,255,255,.72); font-size:.62rem; font-weight:900;
+  letter-spacing:.1em; text-transform:uppercase;
+}
+.difficulty-pill.easy { border-color:rgba(95,157,104,.45); color:#91c89a; }
+.difficulty-pill.medium { border-color:rgba(255,209,102,.38); color:#e4c778; }
+.difficulty-pill.hard { border-color:rgba(255,139,84,.42); color:#ff9f73; }
+.difficulty-pill.expert { border-color:rgba(228,29,97,.55); color:#ff6b9b; }
 .round-intro-round { font-size:clamp(2.8rem,10vw,5rem); line-height:.9; font-weight:900; letter-spacing:-.055em; }
 .round-intro-sub { margin-top:8px; color:rgba(255,255,255,.55); font-size:.82rem; }
 
