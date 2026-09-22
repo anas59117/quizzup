@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { shuffleQuestions, difficultyForRound, selectProgressiveQuestions } = require('./questions');
+const { CATEGORIES, getQuestions, shuffleQuestions, difficultyForRound, selectProgressiveQuestions } = require('./questions');
 
 test('question shuffle does not mutate the source array', () => {
   const source = [1, 2, 3, 4];
@@ -55,4 +55,23 @@ test('progressive selection avoids repeated correct answers when alternatives ex
   const selected = selectProgressiveQuestions(source, 6, () => 0);
   const correctAnswers = selected.map((q) => q.answers[q.correct]);
   assert.equal(new Set(correctAnswers).size, correctAnswers.length);
+});
+
+
+test('every quiz category produces a complete progressive six-round match', () => {
+  const expected = ['easy', 'easy', 'medium', 'medium', 'hard', 'expert'];
+  for (const key of Object.keys(CATEGORIES)) {
+    const selected = getQuestions(6, key, () => 0);
+    assert.equal(selected.length, 6, `${key} must provide six questions`);
+    assert.deepEqual(
+      selected.map((q) => q.difficulty),
+      expected,
+      `${key} must follow the global difficulty curve`
+    );
+    assert.equal(
+      new Set(selected.map((q) => q.image || q.text)).size,
+      6,
+      `${key} must not repeat a question in one match`
+    );
+  }
 });
