@@ -173,6 +173,11 @@ export const CATEGORIES = [
   { key: 'comedies_musicales', label: 'Comédies musicales', icon: '\u{1F3AD}', grad: 'g123', desc: 'Scènes, auteurs & chansons', family: 'music' },
   { key: 'girl_groups_boys_bands_2000s_2010s', label: 'Girl groups & boys bands', icon: '\u{1F3A4}', grad: 'g124', desc: 'Groupes, membres & tubes 2000s-2010s', family: 'music' },
   { key: 'musique_annees_80', label: 'Musique années 80', icon: '\u{1F4FC}', grad: 'g125', desc: 'Albums, tubes & productions cultes', family: 'music' },
+  { key: 'anime_shonen', label: 'Anime shōnen', icon: '\u{2694}\u{FE0F}', grad: 'g126', desc: 'Héros, pouvoirs & univers cultes', family: 'entertainment' },
+  { key: 'studio_ghibli', label: 'Studio Ghibli', icon: '\u{1F331}', grad: 'g127', desc: 'Films, personnages & musiques', family: 'entertainment' },
+  { key: 'anime_cultes', label: 'Anime cultes', icon: '\u{1F4FA}', grad: 'g128', desc: 'Classiques, studios & personnages', family: 'entertainment' },
+  { key: 'culture_manga', label: 'Culture manga', icon: '\u{1F4DA}', grad: 'g129', desc: 'Auteurs, magazines & personnages', family: 'entertainment' },
+  { key: 'dc_comics', label: 'DC Comics', icon: '\u{1F9B8}', grad: 'g130', desc: 'Héros, identités & villes mythiques', family: 'entertainment' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
