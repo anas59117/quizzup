@@ -237,6 +237,13 @@ const emissionsDeCuisine = require('./data/emissions_de_cuisine.json');
 const chefsCelebres = require('./data/chefs_celebres.json');
 const topModels = require('./data/top_models.json');
 
+// Batch 30 — concours, culture internet et cinéma populaire (text-only, no photos).
+const missFrance = require('./data/miss_france.json');
+const cultureMemeInternet = require('./data/culture_meme_internet.json');
+const comediesRomantiques = require('./data/comedies_romantiques.json');
+const filmsMusicaux = require('./data/films_musicaux.json');
+const biopicsCelebres = require('./data/biopics_celebres.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -904,6 +911,11 @@ const CATEGORIES = {
   emissions_de_cuisine: { label: 'Émissions de cuisine', icon: '📺', questions: [...emissionsDeCuisine] },
   chefs_celebres: { label: 'Chefs célèbres', icon: '👨‍🍳', questions: [...chefsCelebres] },
   top_models: { label: 'Top models', icon: '📸', questions: [...topModels] },
+  miss_france: { label: 'Miss France', icon: '👑', questions: [...missFrance] },
+  culture_meme_internet: { label: 'Culture mème & Internet', icon: '🧠', questions: [...cultureMemeInternet] },
+  comedies_romantiques: { label: 'Comédies romantiques', icon: '💞', questions: [...comediesRomantiques] },
+  films_musicaux: { label: 'Films musicaux', icon: '🎶', questions: [...filmsMusicaux] },
+  biopics_celebres: { label: 'Biopics célèbres', icon: '🎬', questions: [...biopicsCelebres] },
 };
 
 function shuffleQuestions(items, random = Math.random) {

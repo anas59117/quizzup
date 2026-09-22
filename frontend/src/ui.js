@@ -243,6 +243,11 @@ export const CATEGORIES = [
   { key: 'emissions_de_cuisine', label: 'Émissions de cuisine', icon: '\u{1F4FA}', grad: 'g193', desc: 'Concours, animateurs & concepts culinaires', family: 'entertainment' },
   { key: 'chefs_celebres', label: 'Chefs célèbres', icon: '\u{1F468}\u{200D}\u{1F373}', grad: 'g194', desc: 'Restaurants, styles & parcours', family: 'entertainment' },
   { key: 'top_models', label: 'Top models', icon: '\u{1F4F8}', grad: 'g195', desc: 'Podiums, campagnes & supermodels', family: 'entertainment' },
+  { key: 'miss_france', label: 'Miss France', icon: '\u{1F451}', grad: 'g196', desc: 'Lauréates, régions & parcours', family: 'entertainment' },
+  { key: 'culture_meme_internet', label: 'Culture mème & Internet', icon: '\u{1F9E0}', grad: 'g197', desc: 'Images virales, formats & origines', family: 'entertainment' },
+  { key: 'comedies_romantiques', label: 'Comédies romantiques', icon: '\u{1F49E}', grad: 'g198', desc: 'Couples, villes & classiques du genre', family: 'entertainment' },
+  { key: 'films_musicaux', label: 'Films musicaux', icon: '\u{1F3B6}', grad: 'g199', desc: 'Chansons, interprètes & mise en scène', family: 'entertainment' },
+  { key: 'biopics_celebres', label: 'Biopics célèbres', icon: '\u{1F3AC}', grad: 'g200', desc: 'Personnalités, acteurs & histoires vraies', family: 'entertainment' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
