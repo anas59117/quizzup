@@ -78,6 +78,12 @@ button:focus-visible,input:focus-visible,select:focus-visible { outline:2px soli
 .g203,.g208,.g213,.g218 { background:#466e56; }
 .g204,.g209,.g214,.g219 { background:#3e6688; }
 .g205,.g210,.g215,.g220 { background:#62518a; }
+/* Culture générale étendue — batch 32 */
+.g221,.g226,.g231,.g236,.g241,.g246 { background:#a8465d; }
+.g222,.g227,.g232,.g237,.g242,.g247 { background:#a85e3b; }
+.g223,.g228,.g233,.g238,.g243,.g248 { background:#466e56; }
+.g224,.g229,.g234,.g239,.g244,.g249 { background:#3e6688; }
+.g225,.g230,.g235,.g240,.g245,.g250 { background:#62518a; }
 .g7,.g13,.g14,.g17,.g22,.g30,.g31 { background:#3e3e43; }
 .g10,.g12,.g15,.g19,.g23,.g27 { background:#8b7042; }
 

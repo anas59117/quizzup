@@ -264,6 +264,38 @@ const litteratureMondiale = require('./data/litterature_mondiale.json');
 const philosophesCelebres = require('./data/philosophes_celebres.json');
 const peintresOeuvresDArt = require('./data/peintres_oeuvres_d_art.json');
 const sculpteursMonuments = require('./data/sculpteurs_monuments.json');
+// Batch 32 — culture générale étendue et Sonic.
+const architectureCelebre = require('./data/architecture_celebre.json');
+const merveillesDuMonde = require('./data/merveilles_du_monde.json');
+const animaux = require('./data/animaux.json');
+const oceans = require('./data/oceans.json');
+const dinosaures = require('./data/dinosaures.json');
+const environnementEcologie = require('./data/environnement_ecologie.json');
+const inventionsInventeurs = require('./data/inventions_inventeurs.json');
+const prixNobel = require('./data/prix_nobel.json');
+const languesDuMonde = require('./data/langues_du_monde.json');
+const traditionsFetesDuMonde = require('./data/traditions_fetes_du_monde.json');
+const gastronomieFrancaise = require('./data/gastronomie_francaise.json');
+const gastronomieDuMonde = require('./data/gastronomie_du_monde.json');
+const vinsTerroirs = require('./data/vins_terroirs.json');
+const hymnesNationaux = require('./data/hymnes_nationaux.json');
+const femmesCelebresDeLHistoire = require('./data/femmes_celebres_de_l_histoire.json');
+const datesClesDeLHistoire = require('./data/dates_cles_de_l_histoire.json');
+const roisReinesDEurope = require('./data/rois_reines_d_europe.json');
+const presidentsFrancais = require('./data/presidents_francais.json');
+const presidentsAmericains = require('./data/presidents_americains.json');
+const grandesVillesDuMonde = require('./data/grandes_villes_du_monde.json');
+const especesEnVoieDeDisparition = require('./data/especes_en_voie_de_disparition.json');
+const histoireDuMaroc = require('./data/histoire_du_maroc.json');
+const histoireDeLAlgerie = require('./data/histoire_de_l_algerie.json');
+const histoireDeLaTunisie = require('./data/histoire_de_la_tunisie.json');
+const islam = require('./data/islam.json');
+const christianisme = require('./data/christianisme.json');
+const judaisme = require('./data/judaisme.json');
+const bouddhisme = require('./data/bouddhisme.json');
+const hindouisme = require('./data/hindouisme.json');
+const sonic = require('./data/sonic.json');
+
 
 
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
@@ -958,6 +990,36 @@ const CATEGORIES = {
   philosophes_celebres: { label: 'Philosophes célèbres', icon: '💭', questions: [...philosophesCelebres] },
   peintres_oeuvres_d_art: { label: 'Peintres & œuvres d\'art', icon: '🎨', questions: [...peintresOeuvresDArt] },
   sculpteurs_monuments: { label: 'Sculpteurs & monuments', icon: '🗿', questions: [...sculpteursMonuments] },
+  architecture_celebre: { label: "Architecture célèbre", icon: "🏛️", questions: [...architectureCelebre] },
+  merveilles_du_monde: { label: "Merveilles du monde", icon: "🌐", questions: [...merveillesDuMonde] },
+  animaux: { label: "Animaux", icon: "🐾", questions: [...animaux] },
+  oceans: { label: "Océans", icon: "🌊", questions: [...oceans] },
+  dinosaures: { label: "Dinosaures", icon: "🦖", questions: [...dinosaures] },
+  environnement_ecologie: { label: "Environnement & écologie", icon: "🌱", questions: [...environnementEcologie] },
+  inventions_inventeurs: { label: "Inventions & inventeurs", icon: "💡", questions: [...inventionsInventeurs] },
+  prix_nobel: { label: "Prix Nobel", icon: "🏅", questions: [...prixNobel] },
+  langues_du_monde: { label: "Langues du monde", icon: "🗣️", questions: [...languesDuMonde] },
+  traditions_fetes_du_monde: { label: "Traditions & fêtes du monde", icon: "🎊", questions: [...traditionsFetesDuMonde] },
+  gastronomie_francaise: { label: "Gastronomie française", icon: "🥐", questions: [...gastronomieFrancaise] },
+  gastronomie_du_monde: { label: "Gastronomie du monde", icon: "🍜", questions: [...gastronomieDuMonde] },
+  vins_terroirs: { label: "Vins & terroirs", icon: "🍇", questions: [...vinsTerroirs] },
+  hymnes_nationaux: { label: "Hymnes nationaux", icon: "🎼", questions: [...hymnesNationaux] },
+  femmes_celebres_de_l_histoire: { label: "Femmes célèbres de l'histoire", icon: "👩‍🏫", questions: [...femmesCelebresDeLHistoire] },
+  dates_cles_de_l_histoire: { label: "Dates clés de l'histoire", icon: "📅", questions: [...datesClesDeLHistoire] },
+  rois_reines_d_europe: { label: "Rois & reines d'Europe", icon: "👑", questions: [...roisReinesDEurope] },
+  presidents_francais: { label: "Présidents français", icon: "🇫🇷", questions: [...presidentsFrancais] },
+  presidents_americains: { label: "Présidents américains", icon: "🇺🇸", questions: [...presidentsAmericains] },
+  grandes_villes_du_monde: { label: "Grandes villes du monde", icon: "🏙️", questions: [...grandesVillesDuMonde] },
+  especes_en_voie_de_disparition: { label: "Espèces en voie de disparition", icon: "🐼", questions: [...especesEnVoieDeDisparition] },
+  histoire_du_maroc: { label: "Histoire du Maroc", icon: "🇲🇦", questions: [...histoireDuMaroc] },
+  histoire_de_l_algerie: { label: "Histoire de l'Algérie", icon: "🇩🇿", questions: [...histoireDeLAlgerie] },
+  histoire_de_la_tunisie: { label: "Histoire de la Tunisie", icon: "🇹🇳", questions: [...histoireDeLaTunisie] },
+  islam: { label: "Islam", icon: "☪️", questions: [...islam] },
+  christianisme: { label: "Christianisme", icon: "✝️", questions: [...christianisme] },
+  judaisme: { label: "Judaïsme", icon: "✡️", questions: [...judaisme] },
+  bouddhisme: { label: "Bouddhisme", icon: "☸️", questions: [...bouddhisme] },
+  hindouisme: { label: "Hindouisme", icon: "🕉️", questions: [...hindouisme] },
+  sonic: { label: "Sonic", icon: "💨", questions: [...sonic] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
