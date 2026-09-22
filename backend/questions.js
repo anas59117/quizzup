@@ -76,6 +76,13 @@ const gta = require('./data/gta.json');
 const leagueOfLegends = require('./data/league_of_legends.json');
 const valorant = require('./data/valorant.json');
 
+// Batch 7 — gaming populaire, suite (text-only, no photos).
+const roblox = require('./data/roblox.json');
+const callOfDuty = require('./data/call_of_duty.json');
+const genshinImpact = require('./data/genshin_impact.json');
+const zelda = require('./data/zelda.json');
+const universMario = require('./data/univers_mario.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -628,6 +635,11 @@ const CATEGORIES = {
   gta: { label: 'GTA', icon: '🚘', questions: [...gta] },
   league_of_legends: { label: 'League of Legends', icon: '⚔️', questions: [...leagueOfLegends] },
   valorant: { label: 'VALORANT', icon: '🎯', questions: [...valorant] },
+  roblox: { label: 'Roblox', icon: '🧱', questions: [...roblox] },
+  call_of_duty: { label: 'Call of Duty', icon: '🎖️', questions: [...callOfDuty] },
+  genshin_impact: { label: 'Genshin Impact', icon: '✨', questions: [...genshinImpact] },
+  zelda: { label: 'Zelda', icon: '🛡️', questions: [...zelda] },
+  univers_mario: { label: 'Univers Mario', icon: '🍄', questions: [...universMario] },
 };
 
 function shuffleQuestions(items, random = Math.random) {

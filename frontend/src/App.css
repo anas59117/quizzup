@@ -66,11 +66,11 @@ button:focus-visible,input:focus-visible,select:focus-visible { outline:2px soli
 .game-bg .home-themes-link:hover { color:#fff; }
 
 /* Flat poster palette */
-.g1,.g9,.g16,.g20,.g25,.g29,.g37,.g45,.g48,.g49,.g51,.g56,.g60,.g64,.g68,.g72,.g76 { background:#a8465d; }
-.g2,.g21,.g28,.g36,.g38,.g41,.g43,.g46,.g54,.g58,.g62,.g66,.g70,.g73,.g77 { background:#a85e3b; }
-.g3,.g35,.g42,.g59,.g63,.g67,.g71,.g74,.g78 { background:#466e56; }
-.g4,.g8,.g18,.g26,.g34,.g39,.g44,.g52,.g55,.g61,.g65,.g69,.g75,.g79 { background:#3e6688; }
-.g5,.g11,.g24,.g32,.g40,.g50,.g53,.g57,.g80 { background:#62518a; }
+.g1,.g9,.g16,.g20,.g25,.g29,.g37,.g45,.g48,.g49,.g51,.g56,.g60,.g64,.g68,.g72,.g76,.g81 { background:#a8465d; }
+.g2,.g21,.g28,.g36,.g38,.g41,.g43,.g46,.g54,.g58,.g62,.g66,.g70,.g73,.g77,.g82 { background:#a85e3b; }
+.g3,.g35,.g42,.g59,.g63,.g67,.g71,.g74,.g78,.g83 { background:#466e56; }
+.g4,.g8,.g18,.g26,.g34,.g39,.g44,.g52,.g55,.g61,.g65,.g69,.g75,.g79,.g84 { background:#3e6688; }
+.g5,.g11,.g24,.g32,.g40,.g50,.g53,.g57,.g80,.g85 { background:#62518a; }
 .g6,.g33,.g47 { background:#397278; }
 .g7,.g13,.g14,.g17,.g22,.g30,.g31 { background:#3e3e43; }
 .g10,.g12,.g15,.g19,.g23,.g27 { background:#8b7042; }
