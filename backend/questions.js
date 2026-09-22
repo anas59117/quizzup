@@ -209,6 +209,13 @@ const tiktokeursCelebres = require('./data/tiktokeurs_celebres.json');
 const influenceursBeaute = require('./data/influenceurs_beaute.json');
 const createursGaming = require('./data/createurs_gaming.json');
 
+// Batch 26 — réseaux sociaux, mode et jeunesse (text-only, no photos).
+const celebritesReseauxSociaux = require('./data/celebrites_reseaux_sociaux.json');
+const modeDefiles = require('./data/mode_defiles.json');
+const iconesDeLaMode = require('./data/icones_de_la_mode.json');
+const emissionsJeunesseCultes = require('./data/emissions_jeunesse_cultes.json');
+const dessinsAnimes90s2000s = require('./data/dessins_animes_90s_2000s.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -856,6 +863,11 @@ const CATEGORIES = {
   tiktokeurs_celebres: { label: 'TikTokeurs célèbres', icon: '📱', questions: [...tiktokeursCelebres] },
   influenceurs_beaute: { label: 'Influenceurs beauté', icon: '💄', questions: [...influenceursBeaute] },
   createurs_gaming: { label: 'Créateurs gaming', icon: '🎮', questions: [...createursGaming] },
+  celebrites_reseaux_sociaux: { label: 'Célébrités réseaux sociaux', icon: '📲', questions: [...celebritesReseauxSociaux] },
+  mode_defiles: { label: 'Mode & défilés', icon: '👗', questions: [...modeDefiles] },
+  icones_de_la_mode: { label: 'Icônes de la mode', icon: '✨', questions: [...iconesDeLaMode] },
+  emissions_jeunesse_cultes: { label: 'Émissions jeunesse cultes', icon: '📺', questions: [...emissionsJeunesseCultes] },
+  dessins_animes_90s_2000s: { label: 'Dessins animés 90s-2000s', icon: '🖍️', questions: [...dessinsAnimes90s2000s] },
 };
 
 function shuffleQuestions(items, random = Math.random) {

@@ -223,6 +223,11 @@ export const CATEGORIES = [
   { key: 'tiktokeurs_celebres', label: 'TikTokeurs célèbres', icon: '\u{1F4F1}', grad: 'g173', desc: 'Vidéos courtes, danses & humour', family: 'entertainment' },
   { key: 'influenceurs_beaute', label: 'Influenceurs beauté', icon: '\u{1F484}', grad: 'g174', desc: 'Maquillage, marques & tutoriels', family: 'entertainment' },
   { key: 'createurs_gaming', label: 'Créateurs gaming', icon: '\u{1F3AE}', grad: 'g175', desc: 'Jeux, critiques & formats vidéo', family: 'gaming' },
+  { key: 'celebrites_reseaux_sociaux', label: 'Célébrités réseaux sociaux', icon: '\u{1F4F2}', grad: 'g176', desc: 'Plateformes, contenus & projets viraux', family: 'entertainment' },
+  { key: 'mode_defiles', label: 'Mode & défilés', icon: '\u{1F457}', grad: 'g177', desc: 'Fashion Weeks, podiums & événements', family: 'entertainment' },
+  { key: 'icones_de_la_mode', label: 'Icônes de la mode', icon: '\u{2728}', grad: 'g178', desc: 'Créateurs, mannequins & signatures', family: 'entertainment' },
+  { key: 'emissions_jeunesse_cultes', label: 'Émissions jeunesse cultes', icon: '\u{1F4FA}', grad: 'g179', desc: 'Animateurs, chaînes & souvenirs télé', family: 'entertainment' },
+  { key: 'dessins_animes_90s_2000s', label: 'Dessins animés 90s-2000s', icon: '\u{1F58D}\u{FE0F}', grad: 'g180', desc: 'Héros, univers & classiques animés', family: 'entertainment' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
