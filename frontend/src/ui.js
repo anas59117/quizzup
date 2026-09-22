@@ -168,6 +168,11 @@ export const CATEGORIES = [
   { key: 'eurovision', label: 'Eurovision', icon: '\u{1F3A4}', grad: 'g118', desc: 'Vainqueurs, chansons & villes hôtes', family: 'music' },
   { key: 'festivals_de_musique', label: 'Festivals de musique', icon: '\u{1F3AA}', grad: 'g119', desc: 'Scènes, lieux & rendez-vous cultes', family: 'music' },
   { key: 'clips_iconiques', label: 'Clips iconiques', icon: '\u{1F3AC}', grad: 'g120', desc: 'Réalisateurs, images & chansons cultes', family: 'music' },
+  { key: 'duos_collabs_celebres', label: 'Duos & collabs célèbres', icon: '\u{1F91D}', grad: 'g121', desc: 'Artistes, albums & collaborations cultes', family: 'music' },
+  { key: 'bandes_originales_de_films', label: 'Bandes originales de films', icon: '\u{1F39E}\u{FE0F}', grad: 'g122', desc: 'Compositeurs, chansons & cinéma', family: 'music' },
+  { key: 'comedies_musicales', label: 'Comédies musicales', icon: '\u{1F3AD}', grad: 'g123', desc: 'Scènes, auteurs & chansons', family: 'music' },
+  { key: 'girl_groups_boys_bands_2000s_2010s', label: 'Girl groups & boys bands', icon: '\u{1F3A4}', grad: 'g124', desc: 'Groupes, membres & tubes 2000s-2010s', family: 'music' },
+  { key: 'musique_annees_80', label: 'Musique années 80', icon: '\u{1F4FC}', grad: 'g125', desc: 'Albums, tubes & productions cultes', family: 'music' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see

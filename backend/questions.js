@@ -132,6 +132,13 @@ const eurovision = require('./data/eurovision.json');
 const festivalsDeMusique = require('./data/festivals_de_musique.json');
 const clipsIconiques = require('./data/clips_iconiques.json');
 
+// Batch 15 — collaborations et spectacles musicaux (text-only, no photos).
+const duosCollabsCelebres = require('./data/duos_collabs_celebres.json');
+const bandesOriginalesDeFilms = require('./data/bandes_originales_de_films.json');
+const comediesMusicales = require('./data/comedies_musicales.json');
+const girlGroupsBoysBands2000s2010s = require('./data/girl_groups_boys_bands_2000s_2010s.json');
+const musiqueAnnees80 = require('./data/musique_annees_80.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -724,6 +731,11 @@ const CATEGORIES = {
   eurovision: { label: 'Eurovision', icon: '🎤', questions: [...eurovision] },
   festivals_de_musique: { label: 'Festivals de musique', icon: '🎪', questions: [...festivalsDeMusique] },
   clips_iconiques: { label: 'Clips iconiques', icon: '🎬', questions: [...clipsIconiques] },
+  duos_collabs_celebres: { label: 'Duos & collabs célèbres', icon: '🤝', questions: [...duosCollabsCelebres] },
+  bandes_originales_de_films: { label: 'Bandes originales de films', icon: '🎞️', questions: [...bandesOriginalesDeFilms] },
+  comedies_musicales: { label: 'Comédies musicales', icon: '🎭', questions: [...comediesMusicales] },
+  girl_groups_boys_bands_2000s_2010s: { label: 'Girl groups & boys bands 2000s-2010s', icon: '🎤', questions: [...girlGroupsBoysBands2000s2010s] },
+  musique_annees_80: { label: 'Musique années 80', icon: '📼', questions: [...musiqueAnnees80] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
