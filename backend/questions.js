@@ -296,6 +296,35 @@ const bouddhisme = require('./data/bouddhisme.json');
 const hindouisme = require('./data/hindouisme.json');
 const sonic = require('./data/sonic.json');
 
+// Batch 33 — lot final : gaming, grands clubs et stars.
+const fifaEaSportsFc = require('./data/fifa_ea_sports_fc.json');
+const assassinSCreed = require('./data/assassin_s_creed.json');
+const theWitcher = require('./data/the_witcher.json');
+const eldenRing = require('./data/elden_ring.json');
+const amongUs = require('./data/among_us.json');
+const animalCrossing = require('./data/animal_crossing.json');
+const theSims = require('./data/the_sims.json');
+const overwatch = require('./data/overwatch.json');
+const counterStrike = require('./data/counter_strike.json');
+const worldOfWarcraft = require('./data/world_of_warcraft.json');
+const legendesDeLEsport = require('./data/legendes_de_l_esport.json');
+const streamersGamingFr = require('./data/streamers_gaming_fr.json');
+const jeuxMobilePopulaires = require('./data/jeux_mobile_populaires.json');
+const histoireDesConsoles = require('./data/histoire_des_consoles.json');
+const fcBarcelone = require('./data/fc_barcelone.json');
+const manchesterUnited = require('./data/manchester_united.json');
+const liverpool = require('./data/liverpool.json');
+const bayernMunich = require('./data/bayern_munich.json');
+const manchesterCity = require('./data/manchester_city.json');
+const chelsea = require('./data/chelsea.json');
+const arsenal = require('./data/arsenal.json');
+const interMilan = require('./data/inter_milan.json');
+const borussiaDortmund = require('./data/borussia_dortmund.json');
+const ajaxAmsterdam = require('./data/ajax_amsterdam.json');
+const olympiqueDeMarseille = require('./data/olympique_de_marseille.json');
+const cyclismeStars = require('./data/cyclisme_stars.json');
+const musiqueStars = require('./data/musique_stars.json');
+
 
 
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
@@ -1020,6 +1049,33 @@ const CATEGORIES = {
   bouddhisme: { label: "Bouddhisme", icon: "☸️", questions: [...bouddhisme] },
   hindouisme: { label: "Hindouisme", icon: "🕉️", questions: [...hindouisme] },
   sonic: { label: "Sonic", icon: "💨", questions: [...sonic] },
+  fifa_ea_sports_fc: { label: "FIFA/EA Sports FC", icon: "⚽", questions: [...fifaEaSportsFc] },
+  assassin_s_creed: { label: "Assassin's Creed", icon: "🗡️", questions: [...assassinSCreed] },
+  the_witcher: { label: "The Witcher", icon: "🐺", questions: [...theWitcher] },
+  elden_ring: { label: "Elden Ring", icon: "💍", questions: [...eldenRing] },
+  among_us: { label: "Among Us", icon: "🚀", questions: [...amongUs] },
+  animal_crossing: { label: "Animal Crossing", icon: "🏝️", questions: [...animalCrossing] },
+  the_sims: { label: "The Sims", icon: "💚", questions: [...theSims] },
+  overwatch: { label: "Overwatch", icon: "🦸", questions: [...overwatch] },
+  counter_strike: { label: "Counter-Strike", icon: "🎯", questions: [...counterStrike] },
+  world_of_warcraft: { label: "World of Warcraft", icon: "⚔️", questions: [...worldOfWarcraft] },
+  legendes_de_l_esport: { label: "Légendes de l'esport", icon: "🏆", questions: [...legendesDeLEsport] },
+  streamers_gaming_fr: { label: "Streamers gaming FR", icon: "🎙️", questions: [...streamersGamingFr] },
+  jeux_mobile_populaires: { label: "Jeux mobile populaires", icon: "📱", questions: [...jeuxMobilePopulaires] },
+  histoire_des_consoles: { label: "Histoire des consoles", icon: "🎮", questions: [...histoireDesConsoles] },
+  fc_barcelone: { label: "FC Barcelone", icon: "🔵", questions: [...fcBarcelone] },
+  manchester_united: { label: "Manchester United", icon: "🔴", questions: [...manchesterUnited] },
+  liverpool: { label: "Liverpool", icon: "🔴", questions: [...liverpool] },
+  bayern_munich: { label: "Bayern Munich", icon: "🔴", questions: [...bayernMunich] },
+  manchester_city: { label: "Manchester City", icon: "🔵", questions: [...manchesterCity] },
+  chelsea: { label: "Chelsea", icon: "🔵", questions: [...chelsea] },
+  arsenal: { label: "Arsenal", icon: "🔴", questions: [...arsenal] },
+  inter_milan: { label: "Inter Milan", icon: "🔵", questions: [...interMilan] },
+  borussia_dortmund: { label: "Borussia Dortmund", icon: "🟡", questions: [...borussiaDortmund] },
+  ajax_amsterdam: { label: "Ajax Amsterdam", icon: "⚪", questions: [...ajaxAmsterdam] },
+  olympique_de_marseille: { label: "Olympique de Marseille", icon: "⚪", questions: [...olympiqueDeMarseille] },
+  cyclisme_stars: { label: "Cyclisme (Stars)", icon: "🚴", questions: [...cyclismeStars] },
+  musique_stars: { label: "Musique (Stars)", icon: "🎤", questions: [...musiqueStars] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
