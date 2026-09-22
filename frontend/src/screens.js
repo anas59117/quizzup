@@ -360,10 +360,14 @@ export function WaitingContent({ avatar, name, level = 1, categoryKey, onCancel,
 
 export function RoundIntroContent({ intro, totalRounds }) {
   const { t } = useI18n();
+  const difficultyKey = intro.difficulty
+    ? `difficulty${intro.difficulty[0].toUpperCase()}${intro.difficulty.slice(1)}`
+    : null;
   return (
     <div className="container center">
       <div className={`round-intro-icon ${intro.isBonus ? 'bonus' : ''}`}>{intro.icon}</div>
       <div className="round-intro-cat">{intro.category}</div>
+      {difficultyKey && <div className={`difficulty-pill ${intro.difficulty}`}>{t(difficultyKey)}</div>}
       <div className="round-intro-round">{intro.isBonus ? t('bonusRound') : t('round', { n: intro.round })}</div>
       <div className="round-intro-sub">{intro.isBonus ? t('doublePoints') : t('roundOf', { n: intro.round, total: totalRounds })}</div>
     </div>
