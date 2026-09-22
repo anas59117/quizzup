@@ -181,6 +181,13 @@ const euphoria = require('./data/euphoria.json');
 const heartbreakHigh = require('./data/heartbreak_high.json');
 const xoKitty = require('./data/xo_kitty.json');
 
+// Batch 22 — séries internationales et franchises cinéma (text-only, no photos).
+const sexEducation = require('./data/sex_education.json');
+const kDramas = require('./data/k_dramas.json');
+const squidGame = require('./data/squid_game.json');
+const jamesBond = require('./data/james_bond.json');
+const fastFurious = require('./data/fast_furious.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -808,6 +815,11 @@ const CATEGORIES = {
   euphoria: { label: 'Euphoria', icon: '✨', questions: [...euphoria] },
   heartbreak_high: { label: 'Heartbreak High', icon: '💔', questions: [...heartbreakHigh] },
   xo_kitty: { label: 'XO, Kitty', icon: '💌', questions: [...xoKitty] },
+  sex_education: { label: 'Sex Education', icon: '🌼', questions: [...sexEducation] },
+  k_dramas: { label: 'K-dramas', icon: '🇰🇷', questions: [...kDramas] },
+  squid_game: { label: 'Squid Game', icon: '🔺', questions: [...squidGame] },
+  james_bond: { label: 'James Bond', icon: '🍸', questions: [...jamesBond] },
+  fast_furious: { label: 'Fast & Furious', icon: '🏎️', questions: [...fastFurious] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
