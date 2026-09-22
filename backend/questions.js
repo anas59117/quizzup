@@ -202,6 +202,13 @@ const humoristesFrancais = require('./data/humoristes_francais.json');
 const standUpUs = require('./data/stand_up_us.json');
 const youtubeursFrancais = require('./data/youtubeurs_francais.json');
 
+// Batch 25 — streamers, influence et création gaming (text-only, no photos).
+const streamersTwitchFr = require('./data/streamers_twitch_fr.json');
+const streamersInternationaux = require('./data/streamers_internationaux.json');
+const tiktokeursCelebres = require('./data/tiktokeurs_celebres.json');
+const influenceursBeaute = require('./data/influenceurs_beaute.json');
+const createursGaming = require('./data/createurs_gaming.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -844,6 +851,11 @@ const CATEGORIES = {
   humoristes_francais: { label: 'Humoristes français', icon: '😂', questions: [...humoristesFrancais] },
   stand_up_us: { label: 'Stand-up US', icon: '🎙️', questions: [...standUpUs] },
   youtubeurs_francais: { label: 'YouTubeurs français', icon: '▶️', questions: [...youtubeursFrancais] },
+  streamers_twitch_fr: { label: 'Streamers Twitch FR', icon: '🟣', questions: [...streamersTwitchFr] },
+  streamers_internationaux: { label: 'Streamers internationaux', icon: '🌍', questions: [...streamersInternationaux] },
+  tiktokeurs_celebres: { label: 'TikTokeurs célèbres', icon: '📱', questions: [...tiktokeursCelebres] },
+  influenceurs_beaute: { label: 'Influenceurs beauté', icon: '💄', questions: [...influenceursBeaute] },
+  createurs_gaming: { label: 'Créateurs gaming', icon: '🎮', questions: [...createursGaming] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
