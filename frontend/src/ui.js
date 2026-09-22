@@ -203,6 +203,11 @@ export const CATEGORIES = [
   { key: 'euphoria', label: 'Euphoria', icon: '\u{2728}', grad: 'g153', desc: 'Personnages, relations & East Highland', family: 'entertainment' },
   { key: 'heartbreak_high', label: 'Heartbreak High', icon: '\u{1F494}', grad: 'g154', desc: 'Hartley High, amitiés & relations', family: 'entertainment' },
   { key: 'xo_kitty', label: 'XO, Kitty', icon: '\u{1F48C}', grad: 'g155', desc: 'Séoul, KISS & histoires de cœur', family: 'entertainment' },
+  { key: 'sex_education', label: 'Sex Education', icon: '\u{1F33C}', grad: 'g156', desc: 'Moordale, relations & passage à l’âge adulte', family: 'entertainment' },
+  { key: 'k_dramas', label: 'K-dramas', icon: '\u{1F1F0}\u{1F1F7}', grad: 'g157', desc: 'Séries coréennes, personnages & intrigues', family: 'entertainment' },
+  { key: 'squid_game', label: 'Squid Game', icon: '\u{1F53A}', grad: 'g158', desc: 'Joueurs, épreuves & secrets du jeu', family: 'entertainment' },
+  { key: 'james_bond', label: 'James Bond', icon: '\u{1F378}', grad: 'g159', desc: 'Agents, adversaires & missions 007', family: 'entertainment' },
+  { key: 'fast_furious', label: 'Fast & Furious', icon: '\u{1F3CE}\u{FE0F}', grad: 'g160', desc: 'Pilotes, bolides & famille', family: 'entertainment' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
