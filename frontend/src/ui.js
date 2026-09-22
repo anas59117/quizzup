@@ -238,6 +238,11 @@ export const CATEGORIES = [
   { key: 'palme_d_or_cannes', label: 'Palme d’Or Cannes', icon: '\u{1F33F}', grad: 'g188', desc: 'Lauréats, réalisateurs & palmarès', family: 'entertainment' },
   { key: 'acteurs_britanniques', label: 'Acteurs britanniques', icon: '\u{1F1EC}\u{1F1E7}', grad: 'g189', desc: 'Rôles, films & récompenses', family: 'entertainment' },
   { key: 'comediens_cultes', label: 'Comédiens cultes', icon: '\u{1F3AD}', grad: 'g190', desc: 'Personnages, duos & classiques comiques', family: 'entertainment' },
+  { key: 'personnages_de_contes_de_fees', label: 'Personnages de contes de fées', icon: '\u{1F9DA}', grad: 'g191', desc: 'Héros, objets magiques & récits classiques', family: 'entertainment' },
+  { key: 'sagas_young_adult', label: 'Sagas young adult', icon: '\u{1F4DA}', grad: 'g192', desc: 'Héros, mondes & symboles littéraires', family: 'entertainment' },
+  { key: 'emissions_de_cuisine', label: 'Émissions de cuisine', icon: '\u{1F4FA}', grad: 'g193', desc: 'Concours, animateurs & concepts culinaires', family: 'entertainment' },
+  { key: 'chefs_celebres', label: 'Chefs célèbres', icon: '\u{1F468}\u{200D}\u{1F373}', grad: 'g194', desc: 'Restaurants, styles & parcours', family: 'entertainment' },
+  { key: 'top_models', label: 'Top models', icon: '\u{1F4F8}', grad: 'g195', desc: 'Podiums, campagnes & supermodels', family: 'entertainment' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
