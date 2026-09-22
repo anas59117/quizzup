@@ -1,0 +1,502 @@
+[
+  {
+    "text": "Combien de joueurs une équipe aligne-t-elle ?",
+    "answers": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelles sont les dimensions du terrain ?",
+    "answers": [
+      "18 m sur 9 m",
+      "16 m sur 8 m",
+      "20 m sur 10 m",
+      "12 m sur 6 m"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la hauteur du filet masculin ?",
+    "answers": [
+      "2,24 m",
+      "2,35 m",
+      "2,43 m",
+      "2,50 m"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est la hauteur du filet féminin ?",
+    "answers": [
+      "2,15 m",
+      "2,30 m",
+      "2,43 m",
+      "2,24 m"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Sur quelle surface joue-t-on ?",
+    "answers": [
+      "Du sable",
+      "Du parquet",
+      "Du gazon",
+      "De la terre battue"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Combien de sets faut-il gagner ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "À combien de points se jouent les deux premiers sets ?",
+    "answers": [
+      "15",
+      "25",
+      "21",
+      "30"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "À combien de points se joue le set décisif ?",
+    "answers": [
+      "11",
+      "21",
+      "25",
+      "15"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel écart faut-il pour gagner un set ?",
+    "answers": [
+      "2 points",
+      "1 point",
+      "3 points",
+      "5 points"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Tous les combien de points change-t-on de côté dans les deux premiers sets ?",
+    "answers": [
+      "5",
+      "7",
+      "6",
+      "8"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Tous les combien de points change-t-on de côté au set décisif ?",
+    "answers": [
+      "3",
+      "7",
+      "5",
+      "10"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Le bloc compte-t-il comme une touche d'équipe ?",
+    "answers": [
+      "Non",
+      "Seulement chez les hommes",
+      "Seulement au troisième set",
+      "Oui"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Combien de touches reste-t-il après un bloc ?",
+    "answers": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Combien de touches maximum sans bloc préalable ?",
+    "answers": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Un joueur peut-il toucher deux fois de suite hors bloc ?",
+    "answers": [
+      "Oui toujours",
+      "Seulement au service",
+      "Non",
+      "Seulement en défense"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Peut-on servir depuis toute la largeur derrière la ligne de fond ?",
+    "answers": [
+      "Non",
+      "Seulement au centre",
+      "Seulement à droite",
+      "Oui"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Le service peut-il toucher le filet et passer ?",
+    "answers": [
+      "Oui",
+      "Non",
+      "Seulement au tie-break",
+      "Le point est rejoué"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Une balle sur la ligne est-elle bonne ?",
+    "answers": [
+      "Non",
+      "Oui",
+      "Seulement au service",
+      "Seulement après vidéo"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Peut-on utiliser les pieds ?",
+    "answers": [
+      "Non",
+      "Seulement en défense",
+      "Oui",
+      "Une fois par set"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Combien de remplaçants entrent normalement en match ?",
+    "answers": [
+      "Un",
+      "Deux",
+      "Quatre",
+      "Aucun"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Un entraîneur intervient-il depuis un banc pendant le match olympique ?",
+    "answers": [
+      "Non",
+      "Oui",
+      "Seulement au troisième set",
+      "Seulement en finale"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle feinte ouverte des doigts est interdite ?",
+    "answers": [
+      "La manchette",
+      "Le dink",
+      "Le smash",
+      "Le service flottant"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Comment appelle-t-on la passe avec les avant-bras ?",
+    "answers": [
+      "La feinte",
+      "Le contre",
+      "La manchette",
+      "La roulette"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Comment appelle-t-on l'attaque puissante vers le sol ?",
+    "answers": [
+      "Le bloc",
+      "La réception",
+      "Le toss",
+      "Le smash"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel geste arrête l'attaque au filet ?",
+    "answers": [
+      "Le bloc",
+      "Le service",
+      "La manchette",
+      "Le plongeon"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "À quels Jeux le sport est-il devenu olympique ?",
+    "answers": [
+      "Barcelone 1992",
+      "Atlanta 1996",
+      "Sydney 2000",
+      "Séoul 1988"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel pays accueillait ces Jeux ?",
+    "answers": [
+      "Australie",
+      "Espagne",
+      "États-Unis",
+      "Brésil"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel organisme international régit ce sport ?",
+    "answers": [
+      "La FIFA",
+      "La FIBA",
+      "La FIH",
+      "La FIVB"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "En quelle année eut lieu le premier Mondial officiel FIVB ?",
+    "answers": [
+      "1997",
+      "1992",
+      "2001",
+      "1986"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle ville accueillit ce premier Mondial ?",
+    "answers": [
+      "Rio de Janeiro",
+      "Los Angeles",
+      "Sydney",
+      "Marseille"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel Américain a gagné l'or olympique en salle puis sur sable ?",
+    "answers": [
+      "Phil Dalhausser",
+      "Todd Rogers",
+      "Karch Kiraly",
+      "Sinjin Smith"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Avec qui Karch Kiraly a-t-il gagné l'or en 1996 ?",
+    "answers": [
+      "Sinjin Smith",
+      "Randy Stoklos",
+      "Todd Rogers",
+      "Kent Steffes"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle paire a gagné trois titres olympiques féminins de suite ?",
+    "answers": [
+      "May-Treanor et Walsh Jennings",
+      "Ross et Kessy",
+      "Branagh et Youngs",
+      "McPeak et Reno"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En quelles années cette paire a-t-elle gagné ?",
+    "answers": [
+      "1996, 2000 et 2004",
+      "2004, 2008 et 2012",
+      "2008, 2012 et 2016",
+      "2012, 2016 et 2020"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel Brésilien était surnommé 'le Mammouth' ?",
+    "answers": [
+      "Emanuel Rego",
+      "Bruno Schmidt",
+      "Ricardo Santos",
+      "Alison Cerutti"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Qui a gagné l'or 2004 avec Ricardo ?",
+    "answers": [
+      "Alison Cerutti",
+      "Bruno Schmidt",
+      "André Loyola",
+      "Emanuel Rego"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle paire a gagné l'or masculin à Rio 2016 ?",
+    "answers": [
+      "Alison et Bruno Schmidt",
+      "Ricardo et Emanuel",
+      "André et George",
+      "Evandro et Pedro"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle paire norvégienne a gagné l'or masculin à Tokyo ?",
+    "answers": [
+      "Mol et Berntsen",
+      "Mol et Sørum",
+      "Horrem et Pettersen",
+      "Kjemperud et Høidalen"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel surnom porte Mol et Sørum ?",
+    "answers": [
+      "Les Sand Kings",
+      "Les Nordic Spikers",
+      "Les Beachvolley Vikings",
+      "Les Oslo Twins"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle paire allemande a gagné l'or féminin à Rio 2016 ?",
+    "answers": [
+      "Holtwick et Semmler",
+      "Borger et Büthe",
+      "Laboureur et Sude",
+      "Ludwig et Walkenhorst"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle paire australienne a gagné l'or féminin à Sydney 2000 ?",
+    "answers": [
+      "Cook et Pottharst",
+      "Artacho et Clancy",
+      "Bawden et Palmer",
+      "Hinchley et Manser"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle paire a gagné le premier titre olympique féminin ?",
+    "answers": [
+      "Adriana Behar et Shelda",
+      "Jackie Silva et Sandra Pires",
+      "Ana Paula et Mônica",
+      "Talita et Larissa"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle nation a gagné le premier titre olympique masculin ?",
+    "answers": [
+      "Brésil",
+      "Allemagne",
+      "États-Unis",
+      "Italie"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Où se trouvait le site olympique de Rio 2016 ?",
+    "answers": [
+      "Stade Maracanã",
+      "Plage d'Ipanema",
+      "Baie de Guanabara",
+      "Plage de Copacabana"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel service flotte sans rotation marquée ?",
+    "answers": [
+      "Le service flottant",
+      "Le service lifté",
+      "Le skyball",
+      "Le service smashé"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel service très haut est appelé skyball ?",
+    "answers": [
+      "Un service rasant",
+      "Un service en cloche",
+      "Un service avec rebond",
+      "Un service à deux mains"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel signal annonce la stratégie de bloc ?",
+    "answers": [
+      "Un carton",
+      "Un drapeau",
+      "Des doigts derrière le dos",
+      "Un sifflement"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Pourquoi change-t-on régulièrement de côté ?",
+    "answers": [
+      "Pour changer de serveur",
+      "Pour arroser le sable",
+      "Pour remplacer le ballon",
+      "Pour équilibrer vent et soleil"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Les joueurs olympiques évoluent-ils généralement pieds nus ?",
+    "answers": [
+      "Oui",
+      "Non, chaussures obligatoires",
+      "Seulement en finale",
+      "Seulement sous la pluie"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle zone ne fait pas partie du terrain de beach-volley ?",
+    "answers": [
+      "La ligne de fond",
+      "La ligne des 3 mètres",
+      "La ligne latérale",
+      "La zone de service"
+    ],
+    "correct": 1
+  }
+]
