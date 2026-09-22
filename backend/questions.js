@@ -243,6 +243,28 @@ const cultureMemeInternet = require('./data/culture_meme_internet.json');
 const comediesRomantiques = require('./data/comedies_romantiques.json');
 const filmsMusicaux = require('./data/films_musicaux.json');
 const biopicsCelebres = require('./data/biopics_celebres.json');
+// Batch 31 — culture générale : géographie, histoire, mythologies, lettres et arts.
+const capitalesDuMonde = require('./data/capitales_du_monde.json');
+const fleuvesMontagnes = require('./data/fleuves_montagnes.json');
+const europeCultureHistoire = require('./data/europe_culture_histoire.json');
+const afriqueCultureHistoire = require('./data/afrique_culture_histoire.json');
+const asieCultureHistoire = require('./data/asie_culture_histoire.json');
+const ameriqueLatine = require('./data/amerique_latine.json');
+const etatsUnisCultureGenerale = require('./data/etats_unis_culture_generale.json');
+const histoireAntique = require('./data/histoire_antique.json');
+const mythologieGrecque = require('./data/mythologie_grecque.json');
+const mythologieNordique = require('./data/mythologie_nordique.json');
+const mythologieEgyptienne = require('./data/mythologie_egyptienne.json');
+const moyenAge = require('./data/moyen_age.json');
+const premiereGuerreMondiale = require('./data/premiere_guerre_mondiale.json');
+const revolutionsDansLeMonde = require('./data/revolutions_dans_le_monde.json');
+const grandesExplorations = require('./data/grandes_explorations.json');
+const litteratureFrancaiseClassique = require('./data/litterature_francaise_classique.json');
+const litteratureMondiale = require('./data/litterature_mondiale.json');
+const philosophesCelebres = require('./data/philosophes_celebres.json');
+const peintresOeuvresDArt = require('./data/peintres_oeuvres_d_art.json');
+const sculpteursMonuments = require('./data/sculpteurs_monuments.json');
+
 
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
@@ -916,6 +938,26 @@ const CATEGORIES = {
   comedies_romantiques: { label: 'Comédies romantiques', icon: '💞', questions: [...comediesRomantiques] },
   films_musicaux: { label: 'Films musicaux', icon: '🎶', questions: [...filmsMusicaux] },
   biopics_celebres: { label: 'Biopics célèbres', icon: '🎬', questions: [...biopicsCelebres] },
+  capitales_du_monde: { label: 'Capitales du monde', icon: '🌍', questions: [...capitalesDuMonde] },
+  fleuves_montagnes: { label: 'Fleuves & montagnes', icon: '🏔️', questions: [...fleuvesMontagnes] },
+  europe_culture_histoire: { label: 'Europe (culture/histoire)', icon: '🏰', questions: [...europeCultureHistoire] },
+  afrique_culture_histoire: { label: 'Afrique (culture/histoire)', icon: '🌍', questions: [...afriqueCultureHistoire] },
+  asie_culture_histoire: { label: 'Asie (culture/histoire)', icon: '🏯', questions: [...asieCultureHistoire] },
+  amerique_latine: { label: 'Amérique latine', icon: '🌎', questions: [...ameriqueLatine] },
+  etats_unis_culture_generale: { label: 'États-Unis (culture générale)', icon: '🗽', questions: [...etatsUnisCultureGenerale] },
+  histoire_antique: { label: 'Histoire antique', icon: '🏛️', questions: [...histoireAntique] },
+  mythologie_grecque: { label: 'Mythologie grecque', icon: '⚡', questions: [...mythologieGrecque] },
+  mythologie_nordique: { label: 'Mythologie nordique', icon: '🔨', questions: [...mythologieNordique] },
+  mythologie_egyptienne: { label: 'Mythologie égyptienne', icon: '𓂀', questions: [...mythologieEgyptienne] },
+  moyen_age: { label: 'Moyen Âge', icon: '⚔️', questions: [...moyenAge] },
+  premiere_guerre_mondiale: { label: 'Première Guerre mondiale', icon: '🪖', questions: [...premiereGuerreMondiale] },
+  revolutions_dans_le_monde: { label: 'Révolutions dans le monde', icon: '✊', questions: [...revolutionsDansLeMonde] },
+  grandes_explorations: { label: 'Grandes explorations', icon: '🧭', questions: [...grandesExplorations] },
+  litterature_francaise_classique: { label: 'Littérature française classique', icon: '📖', questions: [...litteratureFrancaiseClassique] },
+  litterature_mondiale: { label: 'Littérature mondiale', icon: '📚', questions: [...litteratureMondiale] },
+  philosophes_celebres: { label: 'Philosophes célèbres', icon: '💭', questions: [...philosophesCelebres] },
+  peintres_oeuvres_d_art: { label: 'Peintres & œuvres d\'art', icon: '🎨', questions: [...peintresOeuvresDArt] },
+  sculpteurs_monuments: { label: 'Sculpteurs & monuments', icon: '🗿', questions: [...sculpteursMonuments] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
