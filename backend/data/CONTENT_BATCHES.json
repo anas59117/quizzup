@@ -30,6 +30,11 @@
       "name": "artistes-internationaux-1",
       "minimumQuestions": 50,
       "categories": ["bts", "blackpink", "afrobeats", "latin_pop_reggaeton", "rap_us_legendes"]
+    },
+    {
+      "name": "rnb-chanson-rock-1",
+      "minimumQuestions": 50,
+      "categories": ["r_b", "variete_francaise", "chanson_francaise_classique", "rock_francais", "rock_legendes_anglo_us"]
     }
   ]
 }
