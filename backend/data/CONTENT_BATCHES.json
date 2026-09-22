@@ -45,6 +45,11 @@
       "name": "culture-musicale-1",
       "minimumQuestions": 50,
       "categories": ["jazz_legendes", "compositeurs_classiques", "eurovision", "festivals_de_musique", "clips_iconiques"]
+    },
+    {
+      "name": "collaborations-et-spectacles-1",
+      "minimumQuestions": 50,
+      "categories": ["duos_collabs_celebres", "bandes_originales_de_films", "comedies_musicales", "girl_groups_boys_bands_2000s_2010s", "musique_annees_80"]
     }
   ]
 }
