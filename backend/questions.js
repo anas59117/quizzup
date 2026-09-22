@@ -174,6 +174,13 @@ const sonsVirauxTiktok = require('./data/sons_viraux_tiktok.json');
 const rappeusesFrancaises = require('./data/rappeuses_francaises.json');
 const nouvelleSceneRapFr = require('./data/nouvelle_scene_rap_fr.json');
 
+// Batch 21 — séries adolescentes et fantastiques (text-only, no photos).
+const wednesday = require('./data/wednesday.json');
+const strangerThings = require('./data/stranger_things.json');
+const euphoria = require('./data/euphoria.json');
+const heartbreakHigh = require('./data/heartbreak_high.json');
+const xoKitty = require('./data/xo_kitty.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -796,6 +803,11 @@ const CATEGORIES = {
   sons_viraux_tiktok: { label: 'Sons viraux TikTok', icon: '📱', questions: [...sonsVirauxTiktok] },
   rappeuses_francaises: { label: 'Rappeuses françaises', icon: '🎤', questions: [...rappeusesFrancaises] },
   nouvelle_scene_rap_fr: { label: 'Nouvelle scène rap FR', icon: '🚀', questions: [...nouvelleSceneRapFr] },
+  wednesday: { label: 'Wednesday', icon: '🖤', questions: [...wednesday] },
+  stranger_things: { label: 'Stranger Things', icon: '🚲', questions: [...strangerThings] },
+  euphoria: { label: 'Euphoria', icon: '✨', questions: [...euphoria] },
+  heartbreak_high: { label: 'Heartbreak High', icon: '💔', questions: [...heartbreakHigh] },
+  xo_kitty: { label: 'XO, Kitty', icon: '💌', questions: [...xoKitty] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
