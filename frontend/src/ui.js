@@ -163,6 +163,11 @@ export const CATEGORIES = [
   { key: 'electro_edm', label: 'Electro/EDM', icon: '\u{1F39B}\u{FE0F}', grad: 'g113', desc: 'DJs, albums & classiques électroniques', family: 'music' },
   { key: 'house_techno', label: 'House & techno', icon: '\u{1F39A}\u{FE0F}', grad: 'g114', desc: 'Pionniers, clubs, labels & titres', family: 'music' },
   { key: 'reggae_dancehall', label: 'Reggae & dancehall', icon: '\u{1F1EF}\u{1F1F2}', grad: 'g115', desc: 'Artistes, albums & classiques jamaïcains', family: 'music' },
+  { key: 'jazz_legendes', label: 'Jazz légendes', icon: '\u{1F3B7}', grad: 'g116', desc: 'Artistes, instruments & standards', family: 'music' },
+  { key: 'compositeurs_classiques', label: 'Compositeurs classiques', icon: '\u{1F3BC}', grad: 'g117', desc: 'Époques, œuvres & grands maîtres', family: 'music' },
+  { key: 'eurovision', label: 'Eurovision', icon: '\u{1F3A4}', grad: 'g118', desc: 'Vainqueurs, chansons & villes hôtes', family: 'music' },
+  { key: 'festivals_de_musique', label: 'Festivals de musique', icon: '\u{1F3AA}', grad: 'g119', desc: 'Scènes, lieux & rendez-vous cultes', family: 'music' },
+  { key: 'clips_iconiques', label: 'Clips iconiques', icon: '\u{1F3AC}', grad: 'g120', desc: 'Réalisateurs, images & chansons cultes', family: 'music' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
