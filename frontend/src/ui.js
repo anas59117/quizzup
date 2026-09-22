@@ -188,6 +188,11 @@ export const CATEGORIES = [
   { key: 'films_cultes_2000s', label: 'Films cultes 2000s', icon: '\u{1F4BF}', grad: 'g138', desc: 'Cinéma marquant des années 2000', family: 'entertainment' },
   { key: 'oscars_histoire', label: 'Oscars — histoire', icon: '\u{1F3C6}', grad: 'g139', desc: 'Palmarès, acteurs & réalisateurs', family: 'entertainment' },
   { key: 'cesars', label: 'Césars', icon: '\u{1F3AC}', grad: 'g140', desc: 'Films, cinéastes & interprètes français', family: 'entertainment' },
+  { key: 'k_pop_rookies_2025_26', label: 'K-pop rookies 2025-26', icon: '\u{1F31F}', grad: 'g141', desc: 'Débuts, groupes & nouvelles générations', family: 'music' },
+  { key: 'pop_us_montante', label: 'Pop US montante', icon: '\u{1F399}\u{FE0F}', grad: 'g142', desc: 'Nouvelles voix, albums & succès', family: 'music' },
+  { key: 'chappell_roan_pop_alternative', label: 'Chappell Roan & pop alternative', icon: '\u{1F496}', grad: 'g143', desc: 'Artistes, identités & titres alternatifs', family: 'music' },
+  { key: 'rap_us_nouvelle_generation', label: 'Rap US nouvelle génération', icon: '\u{1F525}', grad: 'g144', desc: 'Flows, projets & nouveaux talents', family: 'music' },
+  { key: 'drill_fr_uk', label: 'Drill FR/UK', icon: '\u{1F3A7}', grad: 'g145', desc: 'Scènes, artistes & projets majeurs', family: 'music' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
