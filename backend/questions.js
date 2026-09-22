@@ -139,6 +139,13 @@ const comediesMusicales = require('./data/comedies_musicales.json');
 const girlGroupsBoysBands2000s2010s = require('./data/girl_groups_boys_bands_2000s_2010s.json');
 const musiqueAnnees80 = require('./data/musique_annees_80.json');
 
+// Batch 16 — anime, manga et comics (text-only, no photos).
+const animeShonen = require('./data/anime_shonen.json');
+const studioGhibli = require('./data/studio_ghibli.json');
+const animeCultes = require('./data/anime_cultes.json');
+const cultureManga = require('./data/culture_manga.json');
+const dcComics = require('./data/dc_comics.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -736,6 +743,11 @@ const CATEGORIES = {
   comedies_musicales: { label: 'Comédies musicales', icon: '🎭', questions: [...comediesMusicales] },
   girl_groups_boys_bands_2000s_2010s: { label: 'Girl groups & boys bands 2000s-2010s', icon: '🎤', questions: [...girlGroupsBoysBands2000s2010s] },
   musique_annees_80: { label: 'Musique années 80', icon: '📼', questions: [...musiqueAnnees80] },
+  anime_shonen: { label: 'Anime shōnen', icon: '⚔️', questions: [...animeShonen] },
+  studio_ghibli: { label: 'Studio Ghibli', icon: '🌱', questions: [...studioGhibli] },
+  anime_cultes: { label: 'Anime cultes', icon: '📺', questions: [...animeCultes] },
+  culture_manga: { label: 'Culture manga', icon: '📚', questions: [...cultureManga] },
+  dc_comics: { label: 'DC Comics', icon: '🦸', questions: [...dcComics] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
