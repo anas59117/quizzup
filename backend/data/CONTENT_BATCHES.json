@@ -35,6 +35,11 @@
       "name": "rnb-chanson-rock-1",
       "minimumQuestions": 50,
       "categories": ["r_b", "variete_francaise", "chanson_francaise_classique", "rock_francais", "rock_legendes_anglo_us"]
+    },
+    {
+      "name": "metal-electro-reggae-1",
+      "minimumQuestions": 50,
+      "categories": ["metal", "pop_rock_2000s", "electro_edm", "house_techno", "reggae_dancehall"]
     }
   ]
 }

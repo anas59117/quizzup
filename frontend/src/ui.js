@@ -158,6 +158,11 @@ export const CATEGORIES = [
   { key: 'chanson_francaise_classique', label: 'Chanson française classique', icon: '\u{1F3BC}', grad: 'g108', desc: 'Piaf, Brel, Brassens & légendes', family: 'music' },
   { key: 'rock_francais', label: 'Rock français', icon: '\u{1F3B8}', grad: 'g109', desc: 'Groupes, albums & hymnes', family: 'music' },
   { key: 'rock_legendes_anglo_us', label: 'Rock légendes anglo-US', icon: '\u{1F918}', grad: 'g110', desc: 'Groupes cultes, albums & riffs', family: 'music' },
+  { key: 'metal', label: 'Metal', icon: '\u{1F918}', grad: 'g111', desc: 'Groupes, albums & hymnes puissants', family: 'music' },
+  { key: 'pop_rock_2000s', label: 'Pop rock 2000s', icon: '\u{1F3B8}', grad: 'g112', desc: 'Groupes, albums & tubes des années 2000', family: 'music' },
+  { key: 'electro_edm', label: 'Electro/EDM', icon: '\u{1F39B}\u{FE0F}', grad: 'g113', desc: 'DJs, albums & classiques électroniques', family: 'music' },
+  { key: 'house_techno', label: 'House & techno', icon: '\u{1F39A}\u{FE0F}', grad: 'g114', desc: 'Pionniers, clubs, labels & titres', family: 'music' },
+  { key: 'reggae_dancehall', label: 'Reggae & dancehall', icon: '\u{1F1EF}\u{1F1F2}', grad: 'g115', desc: 'Artistes, albums & classiques jamaïcains', family: 'music' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
