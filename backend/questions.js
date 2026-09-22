@@ -146,6 +146,13 @@ const animeCultes = require('./data/anime_cultes.json');
 const cultureManga = require('./data/culture_manga.json');
 const dcComics = require('./data/dc_comics.json');
 
+// Batch 17 — animation et cinéma populaire (text-only, no photos).
+const filmsPixar = require('./data/films_pixar.json');
+const filmsDreamworks = require('./data/films_dreamworks.json');
+const comediesFrancaises = require('./data/comedies_francaises.json');
+const comediesUsCultes = require('./data/comedies_us_cultes.json');
+const filmsDHorreur = require('./data/films_d_horreur.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -748,6 +755,11 @@ const CATEGORIES = {
   anime_cultes: { label: 'Anime cultes', icon: '📺', questions: [...animeCultes] },
   culture_manga: { label: 'Culture manga', icon: '📚', questions: [...cultureManga] },
   dc_comics: { label: 'DC Comics', icon: '🦸', questions: [...dcComics] },
+  films_pixar: { label: 'Films Pixar', icon: '💡', questions: [...filmsPixar] },
+  films_dreamworks: { label: 'Films DreamWorks', icon: '🌙', questions: [...filmsDreamworks] },
+  comedies_francaises: { label: 'Comédies françaises', icon: '🇫🇷', questions: [...comediesFrancaises] },
+  comedies_us_cultes: { label: 'Comédies US cultes', icon: '😂', questions: [...comediesUsCultes] },
+  films_d_horreur: { label: "Films d'horreur", icon: '👻', questions: [...filmsDHorreur] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
