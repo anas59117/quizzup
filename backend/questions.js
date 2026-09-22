@@ -125,6 +125,13 @@ const electroEdm = require('./data/electro_edm.json');
 const houseTechno = require('./data/house_techno.json');
 const reggaeDancehall = require('./data/reggae_dancehall.json');
 
+// Batch 14 — patrimoine et culture musicale (text-only, no photos).
+const jazzLegendes = require('./data/jazz_legendes.json');
+const compositeursClassiques = require('./data/compositeurs_classiques.json');
+const eurovision = require('./data/eurovision.json');
+const festivalsDeMusique = require('./data/festivals_de_musique.json');
+const clipsIconiques = require('./data/clips_iconiques.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -712,6 +719,11 @@ const CATEGORIES = {
   electro_edm: { label: 'Electro/EDM', icon: '🎛️', questions: [...electroEdm] },
   house_techno: { label: 'House & techno', icon: '🎚️', questions: [...houseTechno] },
   reggae_dancehall: { label: 'Reggae & dancehall', icon: '🇯🇲', questions: [...reggaeDancehall] },
+  jazz_legendes: { label: 'Jazz légendes', icon: '🎷', questions: [...jazzLegendes] },
+  compositeurs_classiques: { label: 'Compositeurs classiques', icon: '🎼', questions: [...compositeursClassiques] },
+  eurovision: { label: 'Eurovision', icon: '🎤', questions: [...eurovision] },
+  festivals_de_musique: { label: 'Festivals de musique', icon: '🎪', questions: [...festivalsDeMusique] },
+  clips_iconiques: { label: 'Clips iconiques', icon: '🎬', questions: [...clipsIconiques] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
