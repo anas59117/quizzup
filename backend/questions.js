@@ -160,6 +160,13 @@ const filmsCultes2000s = require('./data/films_cultes_2000s.json');
 const oscarsHistoire = require('./data/oscars_histoire.json');
 const cesars = require('./data/cesars.json');
 
+// Batch 19 — nouvelles scènes pop, K-pop, rap et drill (text-only, no photos).
+const kPopRookies2025_26 = require('./data/k_pop_rookies_2025_26.json');
+const popUsMontante = require('./data/pop_us_montante.json');
+const chappellRoanPopAlternative = require('./data/chappell_roan_pop_alternative.json');
+const rapUsNouvelleGeneration = require('./data/rap_us_nouvelle_generation.json');
+const drillFrUk = require('./data/drill_fr_uk.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -772,6 +779,11 @@ const CATEGORIES = {
   films_cultes_2000s: { label: 'Films cultes 2000s', icon: '💿', questions: [...filmsCultes2000s] },
   oscars_histoire: { label: 'Oscars — histoire', icon: '🏆', questions: [...oscarsHistoire] },
   cesars: { label: 'Césars', icon: '🎬', questions: [...cesars] },
+  k_pop_rookies_2025_26: { label: 'K-pop rookies 2025-26', icon: '🌟', questions: [...kPopRookies2025_26] },
+  pop_us_montante: { label: 'Pop US montante', icon: '🎙️', questions: [...popUsMontante] },
+  chappell_roan_pop_alternative: { label: 'Chappell Roan & pop alternative', icon: '💖', questions: [...chappellRoanPopAlternative] },
+  rap_us_nouvelle_generation: { label: 'Rap US nouvelle génération', icon: '🔥', questions: [...rapUsNouvelleGeneration] },
+  drill_fr_uk: { label: 'Drill FR/UK', icon: '🎧', questions: [...drillFrUk] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
