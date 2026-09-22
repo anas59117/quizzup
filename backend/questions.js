@@ -230,6 +230,13 @@ const palmeDOrCannes = require('./data/palme_d_or_cannes.json');
 const acteursBritanniques = require('./data/acteurs_britanniques.json');
 const comediensCultes = require('./data/comediens_cultes.json');
 
+// Batch 29 — contes, young adult, cuisine et mode (text-only, no photos).
+const personnagesDeContesDeFees = require('./data/personnages_de_contes_de_fees.json');
+const sagasYoungAdult = require('./data/sagas_young_adult.json');
+const emissionsDeCuisine = require('./data/emissions_de_cuisine.json');
+const chefsCelebres = require('./data/chefs_celebres.json');
+const topModels = require('./data/top_models.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -892,6 +899,11 @@ const CATEGORIES = {
   palme_d_or_cannes: { label: "Palme d’Or Cannes", icon: '🌿', questions: [...palmeDOrCannes] },
   acteurs_britanniques: { label: 'Acteurs britanniques', icon: '🇬🇧', questions: [...acteursBritanniques] },
   comediens_cultes: { label: 'Comédiens cultes', icon: '🎭', questions: [...comediensCultes] },
+  personnages_de_contes_de_fees: { label: 'Personnages de contes de fées', icon: '🧚', questions: [...personnagesDeContesDeFees] },
+  sagas_young_adult: { label: 'Sagas young adult', icon: '📚', questions: [...sagasYoungAdult] },
+  emissions_de_cuisine: { label: 'Émissions de cuisine', icon: '📺', questions: [...emissionsDeCuisine] },
+  chefs_celebres: { label: 'Chefs célèbres', icon: '👨‍🍳', questions: [...chefsCelebres] },
+  top_models: { label: 'Top models', icon: '📸', questions: [...topModels] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
