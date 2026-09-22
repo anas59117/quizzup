@@ -138,6 +138,11 @@ export const CATEGORIES = [
   { key: 'boxe_champions', label: 'Boxe (champions)', icon: '\u{1F94A}', grad: 'g88', desc: 'Ceintures, combats & champions', family: 'sport' },
   { key: 'handball', label: 'Handball', icon: '\u{1F93E}', grad: 'g89', desc: 'Règles, sélections & grands titres', family: 'sport' },
   { key: 'nfl', label: 'NFL', icon: '\u{1F3C8}', grad: 'g90', desc: 'Super Bowl, franchises & légendes', family: 'sport' },
+  { key: 'gymnastique', label: 'Gymnastique', icon: '\u{1F938}', grad: 'g91', desc: 'Agrès, figures & champions', family: 'sport' },
+  { key: 'patinage_artistique', label: 'Patinage artistique', icon: '\u{26F8}\u{FE0F}', grad: 'g92', desc: 'Sauts, glace & champions', family: 'sport' },
+  { key: 'sports_extremes', label: 'Sports extrêmes', icon: '\u{1FA82}', grad: 'g93', desc: 'Glisse, hauteur & adrénaline', family: 'sport' },
+  { key: 'femmes_du_sport', label: 'Femmes du sport', icon: '\u{1F3C5}', grad: 'g94', desc: 'Championnes & exploits historiques', family: 'sport' },
+  { key: 'jeunes_talents_du_sport', label: 'Jeunes talents du sport', icon: '\u{1F31F}', grad: 'g95', desc: 'Records précoces & révélations', family: 'sport' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
