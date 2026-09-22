@@ -110,6 +110,9 @@ export function CategoriesContent({ startWithCategory, onBack, initialFamily, pe
       ) : (
         <FamilyGrid onSelect={setFamily} />
       )}
+      <a className="cover-credits-link" href="/image-credits.html" target="_blank" rel="noopener noreferrer">
+        Crédits photos
+      </a>
     </div>
   );
 }
