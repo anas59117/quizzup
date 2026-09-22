@@ -148,6 +148,11 @@ export const CATEGORIES = [
   { key: 'beach_volley', label: 'Beach-volley', icon: '\u{1F3D0}', grad: 'g98', desc: 'Sable, règles & légendes', family: 'sport' },
   { key: 'k_pop_groupes_feminins', label: 'K-pop groupes féminins', icon: '\u{1F3A4}', grad: 'g99', desc: 'Groupes, débuts & fandoms', family: 'music' },
   { key: 'k_pop_groupes_masculins', label: 'K-pop groupes masculins', icon: '\u{1F3B6}', grad: 'g100', desc: 'Groupes, débuts & fandoms', family: 'music' },
+  { key: 'bts', label: 'BTS', icon: '\u{1F49C}', grad: 'g101', tag: '\u{1F525}', desc: 'Membres, albums & chansons', family: 'music' },
+  { key: 'blackpink', label: 'BLACKPINK', icon: '\u{1F5A4}', grad: 'g102', tag: '\u{1F525}', desc: 'Membres, albums & performances', family: 'music' },
+  { key: 'afrobeats', label: 'Afrobeats', icon: '\u{1F30D}', grad: 'g103', desc: 'Artistes, albums & grands titres', family: 'music' },
+  { key: 'latin_pop_reggaeton', label: 'Latin pop & reggaeton', icon: '\u{1F525}', grad: 'g104', desc: 'Hits, artistes & rythmes latinos', family: 'music' },
+  { key: 'rap_us_legendes', label: 'Rap US légendes', icon: '\u{1F399}\u{FE0F}', grad: 'g105', desc: 'Albums, labels & classiques', family: 'music' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
