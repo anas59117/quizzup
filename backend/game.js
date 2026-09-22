@@ -144,7 +144,7 @@ function nextQuestion(game) {
     send(p.ws, {
       type: 'round_intro', round: nextRound + 1,
       totalRounds: game.questions.length,
-      category: q.category, icon: q.icon, isBonus: isFinal,
+      category: q.category, icon: q.icon, difficulty: q.difficulty, isBonus: isFinal,
     });
   });
 
@@ -156,7 +156,7 @@ function nextQuestion(game) {
       send(p.ws, {
         type: 'question', round: nextRound + 1,
         totalRounds: game.questions.length,
-        question: q.text, category: q.category, icon: q.icon,
+        question: q.text, category: q.category, icon: q.icon, difficulty: q.difficulty,
         answers: q.answers, timeLimit: GAME_CONFIG.TIME_PER_QUESTION,
         isBonus: isFinal,
         image: q.image || null, credit: q.credit || null,
@@ -336,7 +336,7 @@ function sendCurrentState(game, player) {
     send(player.ws, {
       type: 'question', round: game.currentRound + 1,
       totalRounds: game.questions.length,
-      question: q.text, category: q.category, icon: q.icon,
+      question: q.text, category: q.category, icon: q.icon, difficulty: q.difficulty,
       answers: q.answers, timeLimit: Math.max(1, Math.ceil(remainingMs / 1000)),
       isBonus: game.currentRound === game.questions.length - 1,
       image: q.image || null, credit: q.credit || null,
@@ -352,7 +352,7 @@ function sendCurrentState(game, player) {
     send(player.ws, {
       type: 'question', round: game.currentRound + 1,
       totalRounds: game.questions.length,
-      question: q.text, category: q.category, icon: q.icon,
+      question: q.text, category: q.category, icon: q.icon, difficulty: q.difficulty,
       answers: q.answers, timeLimit: 1,
       isBonus: game.currentRound === game.questions.length - 1,
       image: q.image || null, credit: q.credit || null,
