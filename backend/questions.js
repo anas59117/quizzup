@@ -104,6 +104,13 @@ const beachVolley = require('./data/beach_volley.json');
 const kPopGroupesFeminins = require('./data/k_pop_groupes_feminins.json');
 const kPopGroupesMasculins = require('./data/k_pop_groupes_masculins.json');
 
+// Batch 11 — artistes internationaux (text-only, no photos).
+const bts = require('./data/bts.json');
+const blackpink = require('./data/blackpink.json');
+const afrobeats = require('./data/afrobeats.json');
+const latinPopReggaeton = require('./data/latin_pop_reggaeton.json');
+const rapUsLegendes = require('./data/rap_us_legendes.json');
+
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
 // portraits) + flagcdn.com for Drapeaux, then manually filtered to remove
 // occupation-mismatch contamination from the raw Wikidata query results.
@@ -676,6 +683,11 @@ const CATEGORIES = {
   beach_volley: { label: 'Beach-volley', icon: '🏐', questions: [...beachVolley] },
   k_pop_groupes_feminins: { label: 'K-pop groupes féminins', icon: '🎤', questions: [...kPopGroupesFeminins] },
   k_pop_groupes_masculins: { label: 'K-pop groupes masculins', icon: '🎶', questions: [...kPopGroupesMasculins] },
+  bts: { label: 'BTS', icon: '💜', questions: [...bts] },
+  blackpink: { label: 'BLACKPINK', icon: '🖤', questions: [...blackpink] },
+  afrobeats: { label: 'Afrobeats', icon: '🌍', questions: [...afrobeats] },
+  latin_pop_reggaeton: { label: 'Latin pop & reggaeton', icon: '🔥', questions: [...latinPopReggaeton] },
+  rap_us_legendes: { label: 'Rap US légendes', icon: '🎙️', questions: [...rapUsLegendes] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
