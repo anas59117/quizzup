@@ -198,6 +198,11 @@ export const CATEGORIES = [
   { key: 'sons_viraux_tiktok', label: 'Sons viraux TikTok', icon: '\u{1F4F1}', grad: 'g148', desc: 'Titres, tendances & percées virales', family: 'music' },
   { key: 'rappeuses_francaises', label: 'Rappeuses françaises', icon: '\u{1F3A4}', grad: 'g149', desc: 'Artistes, projets & scènes francophones', family: 'music' },
   { key: 'nouvelle_scene_rap_fr', label: 'Nouvelle scène rap FR', icon: '\u{1F680}', grad: 'g150', desc: 'Nouveaux flows, projets & révélations', family: 'music' },
+  { key: 'wednesday', label: 'Wednesday', icon: '\u{1F5A4}', grad: 'g151', desc: 'Nevermore, mystères & famille Addams', family: 'entertainment' },
+  { key: 'stranger_things', label: 'Stranger Things', icon: '\u{1F6B2}', grad: 'g152', desc: 'Hawkins, personnages & Monde à l’envers', family: 'entertainment' },
+  { key: 'euphoria', label: 'Euphoria', icon: '\u{2728}', grad: 'g153', desc: 'Personnages, relations & East Highland', family: 'entertainment' },
+  { key: 'heartbreak_high', label: 'Heartbreak High', icon: '\u{1F494}', grad: 'g154', desc: 'Hartley High, amitiés & relations', family: 'entertainment' },
+  { key: 'xo_kitty', label: 'XO, Kitty', icon: '\u{1F48C}', grad: 'g155', desc: 'Séoul, KISS & histoires de cœur', family: 'entertainment' },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
