@@ -1,0 +1,502 @@
+[
+  {
+    "text": "Quel artiste a peint La Joconde ?",
+    "answers": [
+      "Léonard de Vinci",
+      "Sandro Botticelli",
+      "Raphaël",
+      "Michel-Ange"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel peintre associe-t-on à La Joconde ?",
+    "answers": [
+      "Sandro Botticelli",
+      "Léonard de Vinci",
+      "Raphaël",
+      "Michel-Ange"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel artiste a peint La Cène ?",
+    "answers": [
+      "Sandro Botticelli",
+      "Raphaël",
+      "Léonard de Vinci",
+      "Michel-Ange"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel peintre associe-t-on à La Cène ?",
+    "answers": [
+      "Sandro Botticelli",
+      "Raphaël",
+      "Michel-Ange",
+      "Léonard de Vinci"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel artiste a peint La Naissance de Vénus ?",
+    "answers": [
+      "Sandro Botticelli",
+      "Raphaël",
+      "Michel-Ange",
+      "Diego Vélasquez"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel peintre associe-t-on à La Naissance de Vénus ?",
+    "answers": [
+      "Raphaël",
+      "Sandro Botticelli",
+      "Michel-Ange",
+      "Diego Vélasquez"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel artiste a peint L'École d'Athènes ?",
+    "answers": [
+      "Michel-Ange",
+      "Diego Vélasquez",
+      "Raphaël",
+      "Johannes Vermeer"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel peintre associe-t-on à L'École d'Athènes ?",
+    "answers": [
+      "Michel-Ange",
+      "Diego Vélasquez",
+      "Johannes Vermeer",
+      "Raphaël"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel artiste a peint La Création d'Adam ?",
+    "answers": [
+      "Michel-Ange",
+      "Diego Vélasquez",
+      "Johannes Vermeer",
+      "Rembrandt"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel peintre associe-t-on à La Création d'Adam ?",
+    "answers": [
+      "Diego Vélasquez",
+      "Michel-Ange",
+      "Johannes Vermeer",
+      "Rembrandt"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel artiste a peint Les Ménines ?",
+    "answers": [
+      "Johannes Vermeer",
+      "Rembrandt",
+      "Diego Vélasquez",
+      "Jacques-Louis David"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel peintre associe-t-on à Les Ménines ?",
+    "answers": [
+      "Johannes Vermeer",
+      "Rembrandt",
+      "Jacques-Louis David",
+      "Diego Vélasquez"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel artiste a peint La Jeune Fille à la perle ?",
+    "answers": [
+      "Johannes Vermeer",
+      "Rembrandt",
+      "Jacques-Louis David",
+      "Eugène Delacroix"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel peintre associe-t-on à La Jeune Fille à la perle ?",
+    "answers": [
+      "Rembrandt",
+      "Johannes Vermeer",
+      "Jacques-Louis David",
+      "Eugène Delacroix"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel artiste a peint La Ronde de nuit ?",
+    "answers": [
+      "Jacques-Louis David",
+      "Eugène Delacroix",
+      "Rembrandt",
+      "Édouard Manet"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel peintre associe-t-on à La Ronde de nuit ?",
+    "answers": [
+      "Jacques-Louis David",
+      "Eugène Delacroix",
+      "Édouard Manet",
+      "Rembrandt"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel artiste a peint Le Sacre de Napoléon ?",
+    "answers": [
+      "Jacques-Louis David",
+      "Eugène Delacroix",
+      "Édouard Manet",
+      "Claude Monet"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel peintre associe-t-on à Le Sacre de Napoléon ?",
+    "answers": [
+      "Eugène Delacroix",
+      "Jacques-Louis David",
+      "Édouard Manet",
+      "Claude Monet"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel artiste a peint La Liberté guidant le peuple ?",
+    "answers": [
+      "Édouard Manet",
+      "Claude Monet",
+      "Eugène Delacroix",
+      "Auguste Renoir"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel peintre associe-t-on à La Liberté guidant le peuple ?",
+    "answers": [
+      "Édouard Manet",
+      "Claude Monet",
+      "Auguste Renoir",
+      "Eugène Delacroix"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel artiste a peint Olympia ?",
+    "answers": [
+      "Édouard Manet",
+      "Claude Monet",
+      "Auguste Renoir",
+      "Vincent van Gogh"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel peintre associe-t-on à Olympia ?",
+    "answers": [
+      "Claude Monet",
+      "Édouard Manet",
+      "Auguste Renoir",
+      "Vincent van Gogh"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel artiste a peint Impression, soleil levant ?",
+    "answers": [
+      "Auguste Renoir",
+      "Vincent van Gogh",
+      "Claude Monet",
+      "Edvard Munch"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel peintre associe-t-on à Impression, soleil levant ?",
+    "answers": [
+      "Auguste Renoir",
+      "Vincent van Gogh",
+      "Edvard Munch",
+      "Claude Monet"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel artiste a peint Bal du moulin de la Galette ?",
+    "answers": [
+      "Auguste Renoir",
+      "Vincent van Gogh",
+      "Edvard Munch",
+      "Pablo Picasso"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel peintre associe-t-on à Bal du moulin de la Galette ?",
+    "answers": [
+      "Vincent van Gogh",
+      "Auguste Renoir",
+      "Edvard Munch",
+      "Pablo Picasso"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel artiste a peint La Nuit étoilée ?",
+    "answers": [
+      "Edvard Munch",
+      "Pablo Picasso",
+      "Vincent van Gogh",
+      "Salvador Dalí"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel peintre associe-t-on à La Nuit étoilée ?",
+    "answers": [
+      "Edvard Munch",
+      "Pablo Picasso",
+      "Salvador Dalí",
+      "Vincent van Gogh"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel artiste a peint Le Cri ?",
+    "answers": [
+      "Edvard Munch",
+      "Pablo Picasso",
+      "Salvador Dalí",
+      "Grant Wood"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel peintre associe-t-on à Le Cri ?",
+    "answers": [
+      "Pablo Picasso",
+      "Edvard Munch",
+      "Salvador Dalí",
+      "Grant Wood"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel artiste a peint Les Demoiselles d'Avignon ?",
+    "answers": [
+      "Salvador Dalí",
+      "Grant Wood",
+      "Pablo Picasso",
+      "Edward Hopper"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel peintre associe-t-on à Les Demoiselles d'Avignon ?",
+    "answers": [
+      "Salvador Dalí",
+      "Grant Wood",
+      "Edward Hopper",
+      "Pablo Picasso"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel artiste a peint Guernica ?",
+    "answers": [
+      "Pablo Picasso",
+      "Salvador Dalí",
+      "Grant Wood",
+      "Edward Hopper"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel peintre associe-t-on à Guernica ?",
+    "answers": [
+      "Salvador Dalí",
+      "Pablo Picasso",
+      "Grant Wood",
+      "Edward Hopper"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel artiste a peint La Persistance de la mémoire ?",
+    "answers": [
+      "Grant Wood",
+      "Edward Hopper",
+      "Salvador Dalí",
+      "Frida Kahlo"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel peintre associe-t-on à La Persistance de la mémoire ?",
+    "answers": [
+      "Grant Wood",
+      "Edward Hopper",
+      "Frida Kahlo",
+      "Salvador Dalí"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel artiste a peint American Gothic ?",
+    "answers": [
+      "Grant Wood",
+      "Edward Hopper",
+      "Frida Kahlo",
+      "Vassily Kandinsky"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel peintre associe-t-on à American Gothic ?",
+    "answers": [
+      "Edward Hopper",
+      "Grant Wood",
+      "Frida Kahlo",
+      "Vassily Kandinsky"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel artiste a peint Nighthawks ?",
+    "answers": [
+      "Frida Kahlo",
+      "Vassily Kandinsky",
+      "Edward Hopper",
+      "Kasimir Malevitch"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel peintre associe-t-on à Nighthawks ?",
+    "answers": [
+      "Frida Kahlo",
+      "Vassily Kandinsky",
+      "Kasimir Malevitch",
+      "Edward Hopper"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel artiste a peint Autoportrait au collier d'épines et colibri ?",
+    "answers": [
+      "Frida Kahlo",
+      "Vassily Kandinsky",
+      "Kasimir Malevitch",
+      "René Magritte"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel peintre associe-t-on à Autoportrait au collier d'épines et colibri ?",
+    "answers": [
+      "Vassily Kandinsky",
+      "Frida Kahlo",
+      "Kasimir Malevitch",
+      "René Magritte"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel artiste a peint Composition VIII ?",
+    "answers": [
+      "Kasimir Malevitch",
+      "René Magritte",
+      "Vassily Kandinsky",
+      "Andy Warhol"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel peintre associe-t-on à Composition VIII ?",
+    "answers": [
+      "Kasimir Malevitch",
+      "René Magritte",
+      "Andy Warhol",
+      "Vassily Kandinsky"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel artiste a peint Carré noir ?",
+    "answers": [
+      "Kasimir Malevitch",
+      "René Magritte",
+      "Andy Warhol",
+      "Léonard de Vinci"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel peintre associe-t-on à Carré noir ?",
+    "answers": [
+      "René Magritte",
+      "Kasimir Malevitch",
+      "Andy Warhol",
+      "Léonard de Vinci"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel artiste a peint Les Amants ?",
+    "answers": [
+      "Andy Warhol",
+      "Léonard de Vinci",
+      "René Magritte",
+      "Sandro Botticelli"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel peintre associe-t-on à Les Amants ?",
+    "answers": [
+      "Andy Warhol",
+      "Léonard de Vinci",
+      "Sandro Botticelli",
+      "René Magritte"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel artiste a peint Campbell's Soup Cans ?",
+    "answers": [
+      "Andy Warhol",
+      "Léonard de Vinci",
+      "Sandro Botticelli",
+      "Raphaël"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel peintre associe-t-on à Campbell's Soup Cans ?",
+    "answers": [
+      "Léonard de Vinci",
+      "Andy Warhol",
+      "Sandro Botticelli",
+      "Raphaël"
+    ],
+    "correct": 1
+  }
+]

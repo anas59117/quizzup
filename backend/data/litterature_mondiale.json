@@ -1,0 +1,502 @@
+[
+  {
+    "text": "Qui a écrit L'Odyssée ?",
+    "answers": [
+      "Homère",
+      "Dante Alighieri",
+      "Miguel de Cervantes",
+      "William Shakespeare"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel écrivain est l'auteur de L'Odyssée ?",
+    "answers": [
+      "Dante Alighieri",
+      "Homère",
+      "Miguel de Cervantes",
+      "William Shakespeare"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit La Divine Comédie ?",
+    "answers": [
+      "Miguel de Cervantes",
+      "William Shakespeare",
+      "Dante Alighieri",
+      "Johann Wolfgang von Goethe"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel écrivain est l'auteur de La Divine Comédie ?",
+    "answers": [
+      "Miguel de Cervantes",
+      "William Shakespeare",
+      "Johann Wolfgang von Goethe",
+      "Dante Alighieri"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Don Quichotte ?",
+    "answers": [
+      "Miguel de Cervantes",
+      "William Shakespeare",
+      "Johann Wolfgang von Goethe",
+      "Jane Austen"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Don Quichotte ?",
+    "answers": [
+      "William Shakespeare",
+      "Miguel de Cervantes",
+      "Johann Wolfgang von Goethe",
+      "Jane Austen"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Hamlet ?",
+    "answers": [
+      "Johann Wolfgang von Goethe",
+      "Jane Austen",
+      "William Shakespeare",
+      "Mary Shelley"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Hamlet ?",
+    "answers": [
+      "Johann Wolfgang von Goethe",
+      "Jane Austen",
+      "Mary Shelley",
+      "William Shakespeare"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Faust ?",
+    "answers": [
+      "Johann Wolfgang von Goethe",
+      "Jane Austen",
+      "Mary Shelley",
+      "Emily Brontë"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Faust ?",
+    "answers": [
+      "Jane Austen",
+      "Johann Wolfgang von Goethe",
+      "Mary Shelley",
+      "Emily Brontë"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Orgueil et Préjugés ?",
+    "answers": [
+      "Mary Shelley",
+      "Emily Brontë",
+      "Jane Austen",
+      "Herman Melville"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Orgueil et Préjugés ?",
+    "answers": [
+      "Mary Shelley",
+      "Emily Brontë",
+      "Herman Melville",
+      "Jane Austen"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Frankenstein ?",
+    "answers": [
+      "Mary Shelley",
+      "Emily Brontë",
+      "Herman Melville",
+      "Léon Tolstoï"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Frankenstein ?",
+    "answers": [
+      "Emily Brontë",
+      "Mary Shelley",
+      "Herman Melville",
+      "Léon Tolstoï"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Les Hauts de Hurlevent ?",
+    "answers": [
+      "Herman Melville",
+      "Léon Tolstoï",
+      "Emily Brontë",
+      "Fiodor Dostoïevski"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Les Hauts de Hurlevent ?",
+    "answers": [
+      "Herman Melville",
+      "Léon Tolstoï",
+      "Fiodor Dostoïevski",
+      "Emily Brontë"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Moby-Dick ?",
+    "answers": [
+      "Herman Melville",
+      "Léon Tolstoï",
+      "Fiodor Dostoïevski",
+      "Mark Twain"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Moby-Dick ?",
+    "answers": [
+      "Léon Tolstoï",
+      "Herman Melville",
+      "Fiodor Dostoïevski",
+      "Mark Twain"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Guerre et Paix ?",
+    "answers": [
+      "Fiodor Dostoïevski",
+      "Mark Twain",
+      "Léon Tolstoï",
+      "Franz Kafka"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Guerre et Paix ?",
+    "answers": [
+      "Fiodor Dostoïevski",
+      "Mark Twain",
+      "Franz Kafka",
+      "Léon Tolstoï"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Crime et Châtiment ?",
+    "answers": [
+      "Fiodor Dostoïevski",
+      "Mark Twain",
+      "Franz Kafka",
+      "James Joyce"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Crime et Châtiment ?",
+    "answers": [
+      "Mark Twain",
+      "Fiodor Dostoïevski",
+      "Franz Kafka",
+      "James Joyce"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Les Aventures de Huckleberry Finn ?",
+    "answers": [
+      "Franz Kafka",
+      "James Joyce",
+      "Mark Twain",
+      "Virginia Woolf"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Les Aventures de Huckleberry Finn ?",
+    "answers": [
+      "Franz Kafka",
+      "James Joyce",
+      "Virginia Woolf",
+      "Mark Twain"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit La Métamorphose ?",
+    "answers": [
+      "Franz Kafka",
+      "James Joyce",
+      "Virginia Woolf",
+      "George Orwell"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel écrivain est l'auteur de La Métamorphose ?",
+    "answers": [
+      "James Joyce",
+      "Franz Kafka",
+      "Virginia Woolf",
+      "George Orwell"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Ulysse ?",
+    "answers": [
+      "Virginia Woolf",
+      "Franz Kafka",
+      "James Joyce",
+      "George Orwell"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Ulysse ?",
+    "answers": [
+      "Virginia Woolf",
+      "Franz Kafka",
+      "George Orwell",
+      "James Joyce"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Mrs Dalloway ?",
+    "answers": [
+      "Virginia Woolf",
+      "Franz Kafka",
+      "George Orwell",
+      "Ernest Hemingway"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Mrs Dalloway ?",
+    "answers": [
+      "Franz Kafka",
+      "Virginia Woolf",
+      "George Orwell",
+      "Ernest Hemingway"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Le Procès ?",
+    "answers": [
+      "George Orwell",
+      "Ernest Hemingway",
+      "Franz Kafka",
+      "Gabriel García Márquez"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Le Procès ?",
+    "answers": [
+      "George Orwell",
+      "Ernest Hemingway",
+      "Gabriel García Márquez",
+      "Franz Kafka"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit 1984 ?",
+    "answers": [
+      "George Orwell",
+      "Ernest Hemingway",
+      "Gabriel García Márquez",
+      "Mikhaïl Boulgakov"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel écrivain est l'auteur de 1984 ?",
+    "answers": [
+      "Ernest Hemingway",
+      "George Orwell",
+      "Gabriel García Márquez",
+      "Mikhaïl Boulgakov"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Le Vieil Homme et la Mer ?",
+    "answers": [
+      "Gabriel García Márquez",
+      "Mikhaïl Boulgakov",
+      "Ernest Hemingway",
+      "Umberto Eco"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Le Vieil Homme et la Mer ?",
+    "answers": [
+      "Gabriel García Márquez",
+      "Mikhaïl Boulgakov",
+      "Umberto Eco",
+      "Ernest Hemingway"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Cent ans de solitude ?",
+    "answers": [
+      "Gabriel García Márquez",
+      "Mikhaïl Boulgakov",
+      "Umberto Eco",
+      "Margaret Atwood"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Cent ans de solitude ?",
+    "answers": [
+      "Mikhaïl Boulgakov",
+      "Gabriel García Márquez",
+      "Umberto Eco",
+      "Margaret Atwood"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Le Maître et Marguerite ?",
+    "answers": [
+      "Umberto Eco",
+      "Margaret Atwood",
+      "Mikhaïl Boulgakov",
+      "Toni Morrison"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Le Maître et Marguerite ?",
+    "answers": [
+      "Umberto Eco",
+      "Margaret Atwood",
+      "Toni Morrison",
+      "Mikhaïl Boulgakov"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Le Nom de la rose ?",
+    "answers": [
+      "Umberto Eco",
+      "Margaret Atwood",
+      "Toni Morrison",
+      "Salman Rushdie"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Le Nom de la rose ?",
+    "answers": [
+      "Margaret Atwood",
+      "Umberto Eco",
+      "Toni Morrison",
+      "Salman Rushdie"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit La Servante écarlate ?",
+    "answers": [
+      "Toni Morrison",
+      "Salman Rushdie",
+      "Margaret Atwood",
+      "Arundhati Roy"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel écrivain est l'auteur de La Servante écarlate ?",
+    "answers": [
+      "Toni Morrison",
+      "Salman Rushdie",
+      "Arundhati Roy",
+      "Margaret Atwood"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Beloved ?",
+    "answers": [
+      "Toni Morrison",
+      "Salman Rushdie",
+      "Arundhati Roy",
+      "Homère"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Beloved ?",
+    "answers": [
+      "Salman Rushdie",
+      "Toni Morrison",
+      "Arundhati Roy",
+      "Homère"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Les Enfants de minuit ?",
+    "answers": [
+      "Arundhati Roy",
+      "Homère",
+      "Salman Rushdie",
+      "Dante Alighieri"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Les Enfants de minuit ?",
+    "answers": [
+      "Arundhati Roy",
+      "Homère",
+      "Dante Alighieri",
+      "Salman Rushdie"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Le Dieu des Petits Riens ?",
+    "answers": [
+      "Arundhati Roy",
+      "Homère",
+      "Dante Alighieri",
+      "Miguel de Cervantes"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel écrivain est l'auteur de Le Dieu des Petits Riens ?",
+    "answers": [
+      "Homère",
+      "Arundhati Roy",
+      "Dante Alighieri",
+      "Miguel de Cervantes"
+    ],
+    "correct": 1
+  }
+]

@@ -1,0 +1,502 @@
+[
+  {
+    "text": "Qui a écrit Le Cid ?",
+    "answers": [
+      "Pierre Corneille",
+      "Jean Racine",
+      "Molière",
+      "Madame de La Fayette"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel auteur est associé à Le Cid ?",
+    "answers": [
+      "Jean Racine",
+      "Pierre Corneille",
+      "Molière",
+      "Madame de La Fayette"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Phèdre ?",
+    "answers": [
+      "Molière",
+      "Madame de La Fayette",
+      "Jean Racine",
+      "Jean de La Bruyère"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel auteur est associé à Phèdre ?",
+    "answers": [
+      "Molière",
+      "Madame de La Fayette",
+      "Jean de La Bruyère",
+      "Jean Racine"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Le Misanthrope ?",
+    "answers": [
+      "Molière",
+      "Madame de La Fayette",
+      "Jean de La Bruyère",
+      "Voltaire"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel auteur est associé à Le Misanthrope ?",
+    "answers": [
+      "Madame de La Fayette",
+      "Molière",
+      "Jean de La Bruyère",
+      "Voltaire"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit La Princesse de Clèves ?",
+    "answers": [
+      "Jean de La Bruyère",
+      "Voltaire",
+      "Madame de La Fayette",
+      "Jean-Jacques Rousseau"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel auteur est associé à La Princesse de Clèves ?",
+    "answers": [
+      "Jean de La Bruyère",
+      "Voltaire",
+      "Jean-Jacques Rousseau",
+      "Madame de La Fayette"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Les Caractères ?",
+    "answers": [
+      "Jean de La Bruyère",
+      "Voltaire",
+      "Jean-Jacques Rousseau",
+      "Beaumarchais"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel auteur est associé à Les Caractères ?",
+    "answers": [
+      "Voltaire",
+      "Jean de La Bruyère",
+      "Jean-Jacques Rousseau",
+      "Beaumarchais"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Candide ?",
+    "answers": [
+      "Jean-Jacques Rousseau",
+      "Beaumarchais",
+      "Voltaire",
+      "Stendhal"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel auteur est associé à Candide ?",
+    "answers": [
+      "Jean-Jacques Rousseau",
+      "Beaumarchais",
+      "Stendhal",
+      "Voltaire"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Les Confessions ?",
+    "answers": [
+      "Jean-Jacques Rousseau",
+      "Beaumarchais",
+      "Stendhal",
+      "Honoré de Balzac"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel auteur est associé à Les Confessions ?",
+    "answers": [
+      "Beaumarchais",
+      "Jean-Jacques Rousseau",
+      "Stendhal",
+      "Honoré de Balzac"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Le Mariage de Figaro ?",
+    "answers": [
+      "Stendhal",
+      "Honoré de Balzac",
+      "Beaumarchais",
+      "Victor Hugo"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel auteur est associé à Le Mariage de Figaro ?",
+    "answers": [
+      "Stendhal",
+      "Honoré de Balzac",
+      "Victor Hugo",
+      "Beaumarchais"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Le Rouge et le Noir ?",
+    "answers": [
+      "Stendhal",
+      "Honoré de Balzac",
+      "Victor Hugo",
+      "Gustave Flaubert"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel auteur est associé à Le Rouge et le Noir ?",
+    "answers": [
+      "Honoré de Balzac",
+      "Stendhal",
+      "Victor Hugo",
+      "Gustave Flaubert"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Le Père Goriot ?",
+    "answers": [
+      "Victor Hugo",
+      "Gustave Flaubert",
+      "Honoré de Balzac",
+      "Émile Zola"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel auteur est associé à Le Père Goriot ?",
+    "answers": [
+      "Victor Hugo",
+      "Gustave Flaubert",
+      "Émile Zola",
+      "Honoré de Balzac"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Les Misérables ?",
+    "answers": [
+      "Victor Hugo",
+      "Gustave Flaubert",
+      "Émile Zola",
+      "Guy de Maupassant"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel auteur est associé à Les Misérables ?",
+    "answers": [
+      "Gustave Flaubert",
+      "Victor Hugo",
+      "Émile Zola",
+      "Guy de Maupassant"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Madame Bovary ?",
+    "answers": [
+      "Émile Zola",
+      "Guy de Maupassant",
+      "Gustave Flaubert",
+      "Charles Baudelaire"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel auteur est associé à Madame Bovary ?",
+    "answers": [
+      "Émile Zola",
+      "Guy de Maupassant",
+      "Charles Baudelaire",
+      "Gustave Flaubert"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Germinal ?",
+    "answers": [
+      "Émile Zola",
+      "Guy de Maupassant",
+      "Charles Baudelaire",
+      "Arthur Rimbaud"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel auteur est associé à Germinal ?",
+    "answers": [
+      "Guy de Maupassant",
+      "Émile Zola",
+      "Charles Baudelaire",
+      "Arthur Rimbaud"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Bel-Ami ?",
+    "answers": [
+      "Charles Baudelaire",
+      "Arthur Rimbaud",
+      "Guy de Maupassant",
+      "Edmond Rostand"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel auteur est associé à Bel-Ami ?",
+    "answers": [
+      "Charles Baudelaire",
+      "Arthur Rimbaud",
+      "Edmond Rostand",
+      "Guy de Maupassant"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Les Fleurs du mal ?",
+    "answers": [
+      "Charles Baudelaire",
+      "Arthur Rimbaud",
+      "Edmond Rostand",
+      "Marcel Proust"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel auteur est associé à Les Fleurs du mal ?",
+    "answers": [
+      "Arthur Rimbaud",
+      "Charles Baudelaire",
+      "Edmond Rostand",
+      "Marcel Proust"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Le Bateau ivre ?",
+    "answers": [
+      "Edmond Rostand",
+      "Marcel Proust",
+      "Arthur Rimbaud",
+      "André Malraux"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel auteur est associé à Le Bateau ivre ?",
+    "answers": [
+      "Edmond Rostand",
+      "Marcel Proust",
+      "André Malraux",
+      "Arthur Rimbaud"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Cyrano de Bergerac ?",
+    "answers": [
+      "Edmond Rostand",
+      "Marcel Proust",
+      "André Malraux",
+      "Albert Camus"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel auteur est associé à Cyrano de Bergerac ?",
+    "answers": [
+      "Marcel Proust",
+      "Edmond Rostand",
+      "André Malraux",
+      "Albert Camus"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Du côté de chez Swann ?",
+    "answers": [
+      "André Malraux",
+      "Albert Camus",
+      "Marcel Proust",
+      "Jean-Paul Sartre"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel auteur est associé à Du côté de chez Swann ?",
+    "answers": [
+      "André Malraux",
+      "Albert Camus",
+      "Jean-Paul Sartre",
+      "Marcel Proust"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit La Condition humaine ?",
+    "answers": [
+      "André Malraux",
+      "Albert Camus",
+      "Jean-Paul Sartre",
+      "Simone de Beauvoir"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel auteur est associé à La Condition humaine ?",
+    "answers": [
+      "Albert Camus",
+      "André Malraux",
+      "Jean-Paul Sartre",
+      "Simone de Beauvoir"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit L'Étranger ?",
+    "answers": [
+      "Jean-Paul Sartre",
+      "Simone de Beauvoir",
+      "Albert Camus",
+      "Marguerite Yourcenar"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel auteur est associé à L'Étranger ?",
+    "answers": [
+      "Jean-Paul Sartre",
+      "Simone de Beauvoir",
+      "Marguerite Yourcenar",
+      "Albert Camus"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Huis clos ?",
+    "answers": [
+      "Jean-Paul Sartre",
+      "Simone de Beauvoir",
+      "Albert Camus",
+      "Marguerite Yourcenar"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel auteur est associé à Huis clos ?",
+    "answers": [
+      "Simone de Beauvoir",
+      "Jean-Paul Sartre",
+      "Albert Camus",
+      "Marguerite Yourcenar"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit Le Deuxième Sexe ?",
+    "answers": [
+      "Jean-Paul Sartre",
+      "Albert Camus",
+      "Simone de Beauvoir",
+      "Marguerite Yourcenar"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel auteur est associé à Le Deuxième Sexe ?",
+    "answers": [
+      "Jean-Paul Sartre",
+      "Albert Camus",
+      "Marguerite Yourcenar",
+      "Simone de Beauvoir"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Les Mots ?",
+    "answers": [
+      "Jean-Paul Sartre",
+      "Albert Camus",
+      "Marguerite Yourcenar",
+      "Pierre Corneille"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel auteur est associé à Les Mots ?",
+    "answers": [
+      "Albert Camus",
+      "Jean-Paul Sartre",
+      "Marguerite Yourcenar",
+      "Pierre Corneille"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a écrit La Peste ?",
+    "answers": [
+      "Marguerite Yourcenar",
+      "Pierre Corneille",
+      "Albert Camus",
+      "Jean Racine"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel auteur est associé à La Peste ?",
+    "answers": [
+      "Marguerite Yourcenar",
+      "Pierre Corneille",
+      "Jean Racine",
+      "Albert Camus"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a écrit Mémoires d'Hadrien ?",
+    "answers": [
+      "Marguerite Yourcenar",
+      "Pierre Corneille",
+      "Jean Racine",
+      "Molière"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel auteur est associé à Mémoires d'Hadrien ?",
+    "answers": [
+      "Pierre Corneille",
+      "Marguerite Yourcenar",
+      "Jean Racine",
+      "Molière"
+    ],
+    "correct": 1
+  }
+]

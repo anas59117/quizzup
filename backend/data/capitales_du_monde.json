@@ -1,0 +1,502 @@
+[
+  {
+    "text": "Quelle est la capitale de France ?",
+    "answers": [
+      "Paris",
+      "Berlin",
+      "Rome",
+      "Madrid"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle est la capitale de Allemagne ?",
+    "answers": [
+      "Rome",
+      "Berlin",
+      "Madrid",
+      "Lisbonne"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la capitale de Italie ?",
+    "answers": [
+      "Madrid",
+      "Lisbonne",
+      "Rome",
+      "Bruxelles"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est la capitale de Espagne ?",
+    "answers": [
+      "Lisbonne",
+      "Bruxelles",
+      "Amsterdam",
+      "Madrid"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la capitale de Portugal ?",
+    "answers": [
+      "Lisbonne",
+      "Bruxelles",
+      "Amsterdam",
+      "Berne"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle est la capitale de Belgique ?",
+    "answers": [
+      "Amsterdam",
+      "Bruxelles",
+      "Berne",
+      "Vienne"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la capitale de Pays-Bas ?",
+    "answers": [
+      "Berne",
+      "Vienne",
+      "Amsterdam",
+      "Varsovie"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est la capitale de Suisse ?",
+    "answers": [
+      "Vienne",
+      "Varsovie",
+      "Athènes",
+      "Berne"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la capitale de Autriche ?",
+    "answers": [
+      "Vienne",
+      "Varsovie",
+      "Athènes",
+      "Dublin"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle est la capitale de Pologne ?",
+    "answers": [
+      "Athènes",
+      "Varsovie",
+      "Dublin",
+      "Oslo"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la capitale de Grèce ?",
+    "answers": [
+      "Dublin",
+      "Oslo",
+      "Athènes",
+      "Stockholm"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est la capitale de Irlande ?",
+    "answers": [
+      "Oslo",
+      "Stockholm",
+      "Helsinki",
+      "Dublin"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la capitale de Norvège ?",
+    "answers": [
+      "Oslo",
+      "Stockholm",
+      "Helsinki",
+      "Copenhague"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle est la capitale de Suède ?",
+    "answers": [
+      "Helsinki",
+      "Stockholm",
+      "Copenhague",
+      "Reykjavik"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la capitale de Finlande ?",
+    "answers": [
+      "Copenhague",
+      "Reykjavik",
+      "Helsinki",
+      "Ottawa"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est la capitale de Danemark ?",
+    "answers": [
+      "Reykjavik",
+      "Ottawa",
+      "Washington",
+      "Copenhague"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la capitale de Islande ?",
+    "answers": [
+      "Reykjavik",
+      "Ottawa",
+      "Washington",
+      "Mexico"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle est la capitale de Canada ?",
+    "answers": [
+      "Washington",
+      "Ottawa",
+      "Mexico",
+      "Brasília"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la capitale de États-Unis ?",
+    "answers": [
+      "Mexico",
+      "Brasília",
+      "Washington",
+      "Buenos Aires"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est la capitale de Mexique ?",
+    "answers": [
+      "Brasília",
+      "Buenos Aires",
+      "Santiago",
+      "Mexico"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la capitale de Brésil ?",
+    "answers": [
+      "Brasília",
+      "Buenos Aires",
+      "Santiago",
+      "Lima"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle est la capitale de Argentine ?",
+    "answers": [
+      "Santiago",
+      "Buenos Aires",
+      "Lima",
+      "Bogota"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la capitale de Chili ?",
+    "answers": [
+      "Lima",
+      "Bogota",
+      "Santiago",
+      "Rabat"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est la capitale de Pérou ?",
+    "answers": [
+      "Bogota",
+      "Rabat",
+      "Alger",
+      "Lima"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la capitale de Colombie ?",
+    "answers": [
+      "Bogota",
+      "Rabat",
+      "Alger",
+      "Tunis"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle est la capitale de Maroc ?",
+    "answers": [
+      "Alger",
+      "Rabat",
+      "Tunis",
+      "Le Caire"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la capitale de Algérie ?",
+    "answers": [
+      "Tunis",
+      "Le Caire",
+      "Alger",
+      "Dakar"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est la capitale de Tunisie ?",
+    "answers": [
+      "Le Caire",
+      "Dakar",
+      "Nairobi",
+      "Tunis"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la capitale de Égypte ?",
+    "answers": [
+      "Le Caire",
+      "Dakar",
+      "Nairobi",
+      "Addis-Abeba"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle est la capitale de Sénégal ?",
+    "answers": [
+      "Nairobi",
+      "Dakar",
+      "Addis-Abeba",
+      "Abuja"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la capitale de Kenya ?",
+    "answers": [
+      "Addis-Abeba",
+      "Abuja",
+      "Nairobi",
+      "Accra"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est la capitale de Éthiopie ?",
+    "answers": [
+      "Abuja",
+      "Accra",
+      "Tokyo",
+      "Addis-Abeba"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la capitale de Nigeria ?",
+    "answers": [
+      "Abuja",
+      "Accra",
+      "Tokyo",
+      "Pékin"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle est la capitale de Ghana ?",
+    "answers": [
+      "Tokyo",
+      "Accra",
+      "Pékin",
+      "Séoul"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la capitale de Japon ?",
+    "answers": [
+      "Pékin",
+      "Séoul",
+      "Tokyo",
+      "New Delhi"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est la capitale de Chine ?",
+    "answers": [
+      "Séoul",
+      "New Delhi",
+      "Bangkok",
+      "Pékin"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la capitale de Corée du Sud ?",
+    "answers": [
+      "Séoul",
+      "New Delhi",
+      "Bangkok",
+      "Hanoï"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle est la capitale de Inde ?",
+    "answers": [
+      "Bangkok",
+      "New Delhi",
+      "Hanoï",
+      "Jakarta"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la capitale de Thaïlande ?",
+    "answers": [
+      "Hanoï",
+      "Jakarta",
+      "Bangkok",
+      "Manille"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est la capitale de Vietnam ?",
+    "answers": [
+      "Jakarta",
+      "Manille",
+      "Canberra",
+      "Hanoï"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la capitale de Indonésie ?",
+    "answers": [
+      "Jakarta",
+      "Manille",
+      "Canberra",
+      "Wellington"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle est la capitale de Philippines ?",
+    "answers": [
+      "Canberra",
+      "Manille",
+      "Wellington",
+      "Ankara"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la capitale de Australie ?",
+    "answers": [
+      "Wellington",
+      "Ankara",
+      "Canberra",
+      "Riyad"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est la capitale de Nouvelle-Zélande ?",
+    "answers": [
+      "Ankara",
+      "Riyad",
+      "Amman",
+      "Wellington"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la capitale de Turquie ?",
+    "answers": [
+      "Ankara",
+      "Riyad",
+      "Amman",
+      "Beyrouth"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle est la capitale de Arabie saoudite ?",
+    "answers": [
+      "Amman",
+      "Riyad",
+      "Beyrouth",
+      "Islamabad"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la capitale de Jordanie ?",
+    "answers": [
+      "Beyrouth",
+      "Islamabad",
+      "Amman",
+      "Dacca"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est la capitale de Liban ?",
+    "answers": [
+      "Islamabad",
+      "Dacca",
+      "Paris",
+      "Beyrouth"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la capitale de Pakistan ?",
+    "answers": [
+      "Islamabad",
+      "Dacca",
+      "Paris",
+      "Berlin"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle est la capitale de Bangladesh ?",
+    "answers": [
+      "Paris",
+      "Dacca",
+      "Berlin",
+      "Rome"
+    ],
+    "correct": 1
+  }
+]

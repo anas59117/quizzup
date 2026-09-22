@@ -72,6 +72,12 @@ button:focus-visible,input:focus-visible,select:focus-visible { outline:2px soli
 .g4,.g8,.g18,.g26,.g34,.g39,.g44,.g52,.g55,.g61,.g65,.g69,.g75,.g79,.g84,.g89,.g94,.g99,.g104,.g109,.g114,.g119,.g124,.g129,.g134,.g139,.g144,.g149,.g154,.g159,.g164,.g169,.g174,.g179,.g184,.g189,.g194,.g199 { background:#3e6688; }
 .g5,.g11,.g24,.g32,.g40,.g50,.g53,.g57,.g80,.g85,.g90,.g95,.g100,.g105,.g110,.g115,.g120,.g125,.g130,.g135,.g140,.g145,.g150,.g155,.g160,.g165,.g170,.g175,.g180,.g185,.g190,.g195,.g200 { background:#62518a; }
 .g6,.g33,.g47 { background:#397278; }
+/* Culture générale — batch 31 */
+.g201,.g206,.g211,.g216 { background:#a8465d; }
+.g202,.g207,.g212,.g217 { background:#a85e3b; }
+.g203,.g208,.g213,.g218 { background:#466e56; }
+.g204,.g209,.g214,.g219 { background:#3e6688; }
+.g205,.g210,.g215,.g220 { background:#62518a; }
 .g7,.g13,.g14,.g17,.g22,.g30,.g31 { background:#3e3e43; }
 .g10,.g12,.g15,.g19,.g23,.g27 { background:#8b7042; }
 
