@@ -2,15 +2,12 @@ import { CATEGORIES } from './ui';
 import { FAMILY_TOPIC_COVERS, TOPIC_COVERS, getTopicCover } from './topicCovers';
 
 describe('topic cover catalog', () => {
-  test('every quiz category resolves to a stable HTTPS cover', () => {
-    const missing = CATEGORIES.filter((category) => {
-      const cover = getTopicCover(category);
-      if (!cover || !/^(https:\/\/|\/)/.test(cover.src)) return true;
-      return cover.src.startsWith('https://')
-        && (!cover.source || !cover.source.startsWith('https://'));
-    });
+  test('all remote editorial covers have a stable image and source', () => {
+    const invalid = Object.entries(TOPIC_COVERS).filter(([, cover]) => (
+      !cover.src.startsWith('https://') || !cover.source.startsWith('https://')
+    ));
 
-    expect(missing.map((category) => category.key)).toEqual([]);
+    expect(invalid.map(([key]) => key)).toEqual([]);
   });
 
   test('existing topic-specific covers win over family fallbacks', () => {
@@ -25,13 +22,19 @@ describe('topic cover catalog', () => {
     expect(getTopicCover(actors).src).toContain('/players/');
   });
 
-  test('every family fallback is available', () => {
+  test('uncurated topics never receive a misleading family photo', () => {
+    const uncurated = CATEGORIES.find((category) => category.key === 'jo_ete_histoire');
+
+    expect(getTopicCover(uncurated)).toBeNull();
+  });
+
+  test('every family fallback remains available for future explicit use', () => {
     expect(Object.keys(FAMILY_TOPIC_COVERS).sort()).toEqual(
       ['culture', 'entertainment', 'gaming', 'music', 'sport']
     );
   });
 
-  test('the first editorial batch contains only known category keys', () => {
+  test('the editorial catalog contains only known category keys', () => {
     const categoryKeys = new Set(CATEGORIES.map((category) => category.key));
     const unknown = Object.keys(TOPIC_COVERS).filter((key) => !categoryKeys.has(key));
 
