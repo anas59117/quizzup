@@ -202,6 +202,65 @@ describe('topic cover catalog', () => {
     expect(reviewedKeys.filter((key) => !TOPIC_COVERS[key])).toEqual([]);
   });
 
+  test('the fourth batch of fifty reviewed topics has dedicated covers', () => {
+    const reviewedKeys = [
+      'stars_bollywood',
+      'cinema_d_auteur_francais',
+      'palme_d_or_cannes',
+      'acteurs_britanniques',
+      'comediens_cultes',
+      'personnages_de_contes_de_fees',
+      'sagas_young_adult',
+      'emissions_de_cuisine',
+      'chefs_celebres',
+      'top_models',
+      'miss_france',
+      'culture_meme_internet',
+      'comedies_romantiques',
+      'biopics_celebres',
+      'capitales_du_monde',
+      'fleuves_montagnes',
+      'europe_culture_histoire',
+      'afrique_culture_histoire',
+      'asie_culture_histoire',
+      'amerique_latine',
+      'etats_unis_culture_generale',
+      'histoire_antique',
+      'mythologie_nordique',
+      'moyen_age',
+      'premiere_guerre_mondiale',
+      'revolutions_dans_le_monde',
+      'grandes_explorations',
+      'litterature_francaise_classique',
+      'litterature_mondiale',
+      'philosophes_celebres',
+      'peintres_oeuvres_d_art',
+      'sculpteurs_monuments',
+      'architecture_celebre',
+      'merveilles_du_monde',
+      'animaux',
+      'oceans',
+      'dinosaures',
+      'environnement_ecologie',
+      'inventions_inventeurs',
+      'prix_nobel',
+      'langues_du_monde',
+      'traditions_fetes_du_monde',
+      'gastronomie_francaise',
+      'gastronomie_du_monde',
+      'vins_terroirs',
+      'hymnes_nationaux',
+      'femmes_celebres_de_l_histoire',
+      'dates_cles_de_l_histoire',
+      'rois_reines_d_europe',
+      'presidents_francais',
+    ];
+
+    expect(reviewedKeys).toHaveLength(50);
+    expect(new Set(reviewedKeys).size).toBe(50);
+    expect(reviewedKeys.filter((key) => !TOPIC_COVERS[key])).toEqual([]);
+  });
+
   test('uncurated topics never receive a misleading family photo', () => {
     const uncurated = CATEGORIES.find((category) => !category.cover && !TOPIC_COVERS[category.key]);
 
