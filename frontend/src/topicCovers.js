@@ -107,7 +107,7 @@ export const TOPIC_COVERS = {
   nfl: cover('Tom Brady Super Bowl LII 85F9D5D.jpg', 'center 24%'),
   gymnastique: cover('Simone biles 2024 Olympics.jpg', 'center 25%'),
   patinage_artistique: cover('2019 Skate Canada International - Yuzuru Hanyu FS.jpg', 'center 27%'),
-  sports_extremes: cover('Tony Hawk skating the Ann Arbor skatepark at Veteran's Memorial Park (cropped).jpg', 'center 35%'),
+  sports_extremes: cover("Tony Hawk skating the Ann Arbor skatepark at Veteran's Memorial Park (cropped).jpg", 'center 35%'),
   femmes_du_sport: cover('SERENA WILLIAMS (3247978825).jpg', 'center 24%'),
   jeunes_talents_du_sport: cover('Lamine Yamal in 2025 (cropped).jpg', 'center 24%'),
   legendes_du_sport_francais: cover('Zinedine zidane wcf 2006.jpg', 'center 25%'),
