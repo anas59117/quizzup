@@ -51,11 +51,9 @@ export const TOPIC_COVERS = {
 };
 
 export function getTopicCover(category) {
-  if (TOPIC_COVERS[category.key]) return TOPIC_COVERS[category.key];
-
-  // Keep an existing hand-picked quiz photo ahead of any generic family
-  // fallback. These covers are already specific to the topic (Nadal for
-  // tennis, Jordan for basketball, a K-pop artist for K-pop, etc.).
+  // Existing covers were already selected for the exact quiz and validated
+  // in production. A new editorial candidate must never silently replace
+  // an obvious subject such as Booba, Nadal or a league-specific montage.
   if (category.cover) {
     return {
       src: category.cover,
@@ -63,6 +61,8 @@ export function getTopicCover(category) {
       focal: category.coverFocal || 'center 25%',
     };
   }
+
+  if (TOPIC_COVERS[category.key]) return TOPIC_COVERS[category.key];
 
   // Never pretend a generic family photo represents a specific quiz.
   // Uncurated topics keep their original graphic tile until a reviewed,
