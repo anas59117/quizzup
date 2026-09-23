@@ -26,21 +26,66 @@ describe('topic cover catalog', () => {
     expect(getTopicCover(premierLeague).src).toBe('/images/covers/premier_league.jpg');
   });
 
-  test('the first twenty reviewed topics have dedicated covers', () => {
+  test('the first batch of fifty reviewed topics has dedicated covers', () => {
     const reviewedKeys = [
-      'got', 'harry_potter', 'marvel', 'star_wars', 'disney',
-      'pokemon', 'f1', 'nba', 'tv_shows', 'histoire_fr',
-      'retro_games', 'espace_astronomie', 'corps_humain',
-      'ligue_champions', 'coupe_du_monde_histoire', 'tour_de_france',
-      'jo_ete_histoire', 'can_foot_africain', 'copa_america',
+      'got',
+      'harry_potter',
+      'marvel',
+      'star_wars',
+      'disney',
+      'pokemon',
+      'f1',
+      'nba',
+      'tv_shows',
+      'histoire_fr',
+      'retro_games',
+      'espace_astronomie',
+      'corps_humain',
+      'ligue_champions',
+      'coupe_du_monde_histoire',
+      'tour_de_france',
+      'jo_ete_histoire',
+      'can_foot_africain',
+      'copa_america',
       'legendes_foot_allemand_anglais_italien',
+      'eredivisie',
+      'drapeaux',
+      'liga_portugal',
+      'mls',
+      'tennis_atp',
+      'tennis_wta',
+      'roland_garros',
+      'wimbledon',
+      'rugby_top_14',
+      'mma_ufc',
+      'legendes_du_cyclisme',
+      'natation_olympique',
+      'jo_d_hiver_histoire',
+      'volleyball',
+      'ski_alpin',
+      'sports_d_hiver',
+      'golf',
+      'nhl',
+      'baseball_mlb',
+      'motogp',
+      'rallye_wrc',
+      'paris_saint_germain',
+      'real_madrid',
+      'cristiano_ronaldo',
+      'minecraft',
+      'gta',
+      'league_of_legends',
+      'valorant',
+      'roblox',
+      'call_of_duty',
     ];
 
+    expect(reviewedKeys).toHaveLength(50);
     expect(reviewedKeys.filter((key) => !TOPIC_COVERS[key])).toEqual([]);
   });
 
   test('uncurated topics never receive a misleading family photo', () => {
-    const uncurated = CATEGORIES.find((category) => category.key === 'motogp');
+    const uncurated = CATEGORIES.find((category) => !category.cover && !TOPIC_COVERS[category.key]);
 
     expect(getTopicCover(uncurated)).toBeNull();
   });
