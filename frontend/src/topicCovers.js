@@ -51,5 +51,21 @@ export const TOPIC_COVERS = {
 };
 
 export function getTopicCover(category) {
-  return TOPIC_COVERS[category.key] || FAMILY_TOPIC_COVERS[category.family];
+  if (TOPIC_COVERS[category.key]) return TOPIC_COVERS[category.key];
+
+  // Keep an existing hand-picked quiz photo ahead of any generic family
+  // fallback. These covers are already specific to the topic (Nadal for
+  // tennis, Jordan for basketball, a K-pop artist for K-pop, etc.).
+  if (category.cover) {
+    return {
+      src: category.cover,
+      source: null,
+      focal: category.coverFocal || 'center 25%',
+    };
+  }
+
+  // Never pretend a generic family photo represents a specific quiz.
+  // Uncurated topics keep their original graphic tile until a reviewed,
+  // category-specific image is available.
+  return null;
 }
