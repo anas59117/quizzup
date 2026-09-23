@@ -282,7 +282,7 @@ export const TOPIC_COVERS = {
   inter_milan: cover("Inter Curva Nord.jpg", 'center 35%'),
   borussia_dortmund: cover("Signal Iduna Park Dortmund.jpeg", 'center 35%'),
   ajax_amsterdam: cover("Ajax logo.jpg", 'center 35%'),
-  olympique_de_marseille: cover("TifOM.png", 'center 35%'),
+  olympique_de_marseille: cover("Supporters de l'Olympique de Marseille.jpg", 'center 35%'),
   musique_stars: cover("Concert The Weeknd Paris 11.jpg", 'center 35%'),
 };
 
