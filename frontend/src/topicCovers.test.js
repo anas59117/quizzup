@@ -143,6 +143,65 @@ describe('topic cover catalog', () => {
     expect(reviewedKeys.filter((key) => !TOPIC_COVERS[key])).toEqual([]);
   });
 
+  test('the third batch of fifty reviewed topics has dedicated covers', () => {
+    const reviewedKeys = [
+      'science_fiction',
+      'films_cultes_90s',
+      'films_cultes_2000s',
+      'oscars_histoire',
+      'cesars',
+      'k_pop_rookies_2025_26',
+      'pop_us_montante',
+      'chappell_roan_pop_alternative',
+      'rap_us_nouvelle_generation',
+      'drill_fr_uk',
+      'musique_annees_90',
+      'musique_annees_2010',
+      'sons_viraux_tiktok',
+      'rappeuses_francaises',
+      'nouvelle_scene_rap_fr',
+      'wednesday',
+      'stranger_things',
+      'euphoria',
+      'heartbreak_high',
+      'xo_kitty',
+      'sex_education',
+      'k_dramas',
+      'squid_game',
+      'james_bond',
+      'fast_furious',
+      'films_de_braquage',
+      'realisateurs_cultes',
+      'acteurs_hollywoodiens_actuels',
+      'actrices_hollywoodiennes_actuelles',
+      'stars_du_cinema_coreen',
+      'sitcoms_cultes',
+      'tele_realite_fr',
+      'humoristes_francais',
+      'stand_up_us',
+      'youtubeurs_francais',
+      'streamers_twitch_fr',
+      'streamers_internationaux',
+      'tiktokeurs_celebres',
+      'influenceurs_beaute',
+      'createurs_gaming',
+      'celebrites_reseaux_sociaux',
+      'mode_defiles',
+      'icones_de_la_mode',
+      'emissions_jeunesse_cultes',
+      'dessins_animes_90s_2000s',
+      'disney_renaissance',
+      'sagas_fantastiques',
+      'sherlock_holmes_enquetes',
+      'series_policieres',
+      'series_medicales',
+    ];
+
+    expect(reviewedKeys).toHaveLength(50);
+    expect(new Set(reviewedKeys).size).toBe(50);
+    expect(reviewedKeys.filter((key) => !TOPIC_COVERS[key])).toEqual([]);
+  });
+
   test('uncurated topics never receive a misleading family photo', () => {
     const uncurated = CATEGORIES.find((category) => !category.cover && !TOPIC_COVERS[category.key]);
 
