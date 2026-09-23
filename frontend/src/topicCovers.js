@@ -64,5 +64,8 @@ export function getTopicCover(category) {
     };
   }
 
-  return FAMILY_TOPIC_COVERS[category.family];
+  // Never pretend a generic family photo represents a specific quiz.
+  // Uncurated topics keep their original graphic tile until a reviewed,
+  // category-specific image is available.
+  return null;
 }
