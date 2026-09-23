@@ -96,7 +96,7 @@ export const TOPIC_COVERS = {
   league_of_legends: cover('Faker at Worlds 2024.jpg', 'center 24%'),
   valorant: cover('Valorant Champions Tour logo.png', 'center 50%'),
   roblox: cover('Roblox Logo.svg', 'center 50%'),
-  call_of_duty: cover('Call Of Duty.jpg', 'center 50%'),
+  call_of_duty: cover('Captain Price cosplay.jpg', 'center 24%'),
 };
 
 export function getTopicCover(category) {
