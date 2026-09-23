@@ -14,7 +14,7 @@ describe('topic cover catalog', () => {
     const tennis = CATEGORIES.find((category) => category.key === 'tennis');
     const basketball = CATEGORIES.find((category) => category.key === 'basketball');
     const kpop = CATEGORIES.find((category) => category.key === 'kpop');
-    const actors = CATEGORIES.find((category) => category.key === 'actors_az');
+    const actors = CATEGORIES.find((category) => category.key === 'actors');
     const rapFr = CATEGORIES.find((category) => category.key === 'rap_fr');
     const premierLeague = CATEGORIES.find((category) => category.key === 'premier_league');
 
@@ -30,8 +30,8 @@ describe('topic cover catalog', () => {
     const ligue1 = CATEGORIES.find((category) => category.key === 'ligue_1');
     const serieA = CATEGORIES.find((category) => category.key === 'serie_a');
 
-    expect(getTopicCover(ligue1).src).toContain('Ligue%201%20Trophy%202024');
-    expect(getTopicCover(serieA).src).toContain('Coppa%20Campioni');
+    expect(getTopicCover(ligue1).src).toContain('Paris%20Saint-Germain%20-%20Olympique%20de%20Marseille');
+    expect(getTopicCover(serieA).src).toContain('Derby-%20AC%20Milan%20vs%20Inter');
   });
 
   test('the first batch of fifty reviewed topics has dedicated covers', () => {
@@ -166,7 +166,6 @@ describe('topic cover catalog', () => {
       'musique_annees_90',
       'musique_annees_2010',
       'sons_viraux_tiktok',
-      'rappeuses_francaises',
       'nouvelle_scene_rap_fr',
       'wednesday',
       'stranger_things',
@@ -205,8 +204,8 @@ describe('topic cover catalog', () => {
       'series_medicales',
     ];
 
-    expect(reviewedKeys).toHaveLength(50);
-    expect(new Set(reviewedKeys).size).toBe(50);
+    expect(reviewedKeys).toHaveLength(49);
+    expect(new Set(reviewedKeys).size).toBe(49);
     expect(reviewedKeys.filter((key) => !TOPIC_COVERS[key])).toEqual([]);
   });
 
@@ -269,7 +268,7 @@ describe('topic cover catalog', () => {
     expect(reviewedKeys.filter((key) => !TOPIC_COVERS[key])).toEqual([]);
   });
 
-  test('the final thirty-seven topics have distinct, dedicated covers', () => {
+  test('the final thirty-five topics have distinct, dedicated covers', () => {
     const reviewedKeys = [
       'presidents_americains',
       'grandes_villes_du_monde',
@@ -287,7 +286,6 @@ describe('topic cover catalog', () => {
       'assassin_s_creed',
       'the_witcher',
       'elden_ring',
-      'among_us',
       'animal_crossing',
       'the_sims',
       'overwatch',
@@ -305,13 +303,12 @@ describe('topic cover catalog', () => {
       'arsenal',
       'inter_milan',
       'borussia_dortmund',
-      'ajax_amsterdam',
       'olympique_de_marseille',
       'musique_stars',
     ];
 
-    expect(reviewedKeys).toHaveLength(37);
-    expect(new Set(reviewedKeys).size).toBe(37);
+    expect(reviewedKeys).toHaveLength(35);
+    expect(new Set(reviewedKeys).size).toBe(35);
     expect(reviewedKeys.filter((key) => !TOPIC_COVERS[key])).toEqual([]);
   });
 
@@ -333,4 +330,17 @@ describe('topic cover catalog', () => {
 
     expect(unknown).toEqual([]);
   });
+  test('retired quizzes are absent and actors are unified', () => {
+    const keys = CATEGORIES.map((category) => category.key);
+
+    expect(keys).toContain('actors');
+    expect(keys).not.toEqual(expect.arrayContaining([
+      'actors_az',
+      'actors_mz',
+      'ajax_amsterdam',
+      'rappeuses_francaises',
+      'among_us',
+    ]));
+  });
+
 });

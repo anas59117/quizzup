@@ -171,7 +171,6 @@ const drillFrUk = require('./data/drill_fr_uk.json');
 const musiqueAnnees90 = require('./data/musique_annees_90.json');
 const musiqueAnnees2010 = require('./data/musique_annees_2010.json');
 const sonsVirauxTiktok = require('./data/sons_viraux_tiktok.json');
-const rappeusesFrancaises = require('./data/rappeuses_francaises.json');
 const nouvelleSceneRapFr = require('./data/nouvelle_scene_rap_fr.json');
 
 // Batch 21 — séries adolescentes et fantastiques (text-only, no photos).
@@ -301,7 +300,6 @@ const fifaEaSportsFc = require('./data/fifa_ea_sports_fc.json');
 const assassinSCreed = require('./data/assassin_s_creed.json');
 const theWitcher = require('./data/the_witcher.json');
 const eldenRing = require('./data/elden_ring.json');
-const amongUs = require('./data/among_us.json');
 const animalCrossing = require('./data/animal_crossing.json');
 const theSims = require('./data/the_sims.json');
 const overwatch = require('./data/overwatch.json');
@@ -320,7 +318,6 @@ const chelsea = require('./data/chelsea.json');
 const arsenal = require('./data/arsenal.json');
 const interMilan = require('./data/inter_milan.json');
 const borussiaDortmund = require('./data/borussia_dortmund.json');
-const ajaxAmsterdam = require('./data/ajax_amsterdam.json');
 const olympiqueDeMarseille = require('./data/olympique_de_marseille.json');
 const cyclismeStars = require('./data/cyclisme_stars.json');
 const musiqueStars = require('./data/musique_stars.json');
@@ -503,15 +500,10 @@ const CATEGORIES = {
     icon: '🇮🇳',
     questions: [...playersBollywood],
   },
-  actors_az: {
-    label: 'Acteurs (A-L)',
+  actors: {
+    label: 'Acteurs',
     icon: '⭐',
-    questions: [...playersActorsAZ],
-  },
-  actors_mz: {
-    label: 'Acteurs (M-Z)',
-    icon: '🌟',
-    questions: [...playersActorsMZ],
+    questions: [...playersActorsAZ, ...playersActorsMZ],
   },
   netflix: {
     label: 'Netflix',
@@ -947,7 +939,6 @@ const CATEGORIES = {
   musique_annees_90: { label: 'Musique années 90', icon: '📀', questions: [...musiqueAnnees90] },
   musique_annees_2010: { label: 'Musique années 2010', icon: '🎵', questions: [...musiqueAnnees2010] },
   sons_viraux_tiktok: { label: 'Sons viraux TikTok', icon: '📱', questions: [...sonsVirauxTiktok] },
-  rappeuses_francaises: { label: 'Rappeuses françaises', icon: '🎤', questions: [...rappeusesFrancaises] },
   nouvelle_scene_rap_fr: { label: 'Nouvelle scène rap FR', icon: '🚀', questions: [...nouvelleSceneRapFr] },
   wednesday: { label: 'Wednesday', icon: '🖤', questions: [...wednesday] },
   stranger_things: { label: 'Stranger Things', icon: '🚲', questions: [...strangerThings] },
@@ -1053,7 +1044,6 @@ const CATEGORIES = {
   assassin_s_creed: { label: "Assassin's Creed", icon: "🗡️", questions: [...assassinSCreed] },
   the_witcher: { label: "The Witcher", icon: "🐺", questions: [...theWitcher] },
   elden_ring: { label: "Elden Ring", icon: "💍", questions: [...eldenRing] },
-  among_us: { label: "Among Us", icon: "🚀", questions: [...amongUs] },
   animal_crossing: { label: "Animal Crossing", icon: "🏝️", questions: [...animalCrossing] },
   the_sims: { label: "The Sims", icon: "💚", questions: [...theSims] },
   overwatch: { label: "Overwatch", icon: "🦸", questions: [...overwatch] },
@@ -1072,7 +1062,6 @@ const CATEGORIES = {
   arsenal: { label: "Arsenal", icon: "🔴", questions: [...arsenal] },
   inter_milan: { label: "Inter Milan", icon: "🔵", questions: [...interMilan] },
   borussia_dortmund: { label: "Borussia Dortmund", icon: "🟡", questions: [...borussiaDortmund] },
-  ajax_amsterdam: { label: "Ajax Amsterdam", icon: "⚪", questions: [...ajaxAmsterdam] },
   olympique_de_marseille: { label: "Olympique de Marseille", icon: "⚪", questions: [...olympiqueDeMarseille] },
   cyclisme_stars: { label: "Cyclisme (Stars)", icon: "🚴", questions: [...cyclismeStars] },
   musique_stars: { label: "Musique (Stars)", icon: "🎤", questions: [...musiqueStars] },
