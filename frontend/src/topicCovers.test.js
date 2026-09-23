@@ -26,8 +26,21 @@ describe('topic cover catalog', () => {
     expect(getTopicCover(premierLeague).src).toBe('/images/covers/premier_league.jpg');
   });
 
+  test('the first twenty reviewed topics have dedicated covers', () => {
+    const reviewedKeys = [
+      'got', 'harry_potter', 'marvel', 'star_wars', 'disney',
+      'pokemon', 'f1', 'nba', 'tv_shows', 'histoire_fr',
+      'retro_games', 'espace_astronomie', 'corps_humain',
+      'ligue_champions', 'coupe_du_monde_histoire', 'tour_de_france',
+      'jo_ete_histoire', 'can_foot_africain', 'copa_america',
+      'legendes_foot_allemand_anglais_italien',
+    ];
+
+    expect(reviewedKeys.filter((key) => !TOPIC_COVERS[key])).toEqual([]);
+  });
+
   test('uncurated topics never receive a misleading family photo', () => {
-    const uncurated = CATEGORIES.find((category) => category.key === 'jo_ete_histoire');
+    const uncurated = CATEGORIES.find((category) => category.key === 'motogp');
 
     expect(getTopicCover(uncurated)).toBeNull();
   });
