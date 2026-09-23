@@ -18,10 +18,9 @@ export const FAMILY_TOPIC_COVERS = {
   gaming: cover('ArcadeGames.jpg', 'center 45%'),
 };
 
-// The first editorial pass focuses on the categories surfaced on Home and the
-// most recognisable flagship quizzes. Remaining categories deliberately use a
-// family photograph until their own reviewed cover is added: every tile gets
-// a real image without relying on random-photo services.
+// Every entry is reviewed for immediate topic recognition at thumbnail size.
+// Unreviewed categories intentionally keep their graphic tile instead of
+// receiving a misleading generic family photograph.
 export const TOPIC_COVERS = {
   movies: cover('Debrie Parvo 35mm Movie Camera.jpg', 'center 48%'),
   music: cover('BBC Proms 31.jpg', 'center 46%'),
@@ -48,6 +47,26 @@ export const TOPIC_COVERS = {
   films_musicaux: cover('Gentlemen Prefer Blondes Movie Trailer Screenshot (34).jpg', 'center 25%'),
   legendes_de_l_esport: cover('Caps 2025.jpg', 'center 24%'),
   cyclisme_stars: cover('Vélo de route.jpg', 'center 42%'),
+  got: cover('Iron Throne Moscow Metro (2019-05-11) 01 (cropped).jpg', 'center 38%'),
+  harry_potter: cover('Wizarding World of Harry Potter Castle.jpg', 'center 44%'),
+  marvel: cover('Avengers Cosplay at the 2019 New York Comic Con.jpg', 'center 30%'),
+  star_wars: cover('NYCC 2023 Cosplay of Darth Vader.jpg', 'center 24%'),
+  disney: cover('SleepingBeautyCastle.JPG', 'center 42%'),
+  pokemon: cover('Pikachu Parade (14905092432).jpg', 'center 34%'),
+  f1: cover('Lewis Hamilton during Hungarian Formula 1 GP.jpg', 'center 24%'),
+  nba: cover('LeBron James (31944491583).jpg', 'center 28%'),
+  tv_shows: cover('Central Perk set.jpg', 'center 46%'),
+  histoire_fr: cover('Eugène Delacroix - La liberté guidant le peuple - après restauration 2024.jpg', 'center 36%'),
+  retro_games: cover('NES-Console-Set.jpg', 'center 48%'),
+  espace_astronomie: cover('Pillars of Creation.jpeg', 'center 42%'),
+  corps_humain: cover('BLW Human Anatomy.jpg', 'center 32%'),
+  ligue_champions: cover('Champions League Trophy (52736201132).jpg', 'center 38%'),
+  coupe_du_monde_histoire: cover('Kylian Mbappé World Cup Trophy.jpg', 'center 25%'),
+  tour_de_france: cover('UAE Team, Tadej Pogačar - Yellow jersey peloton with crowd in Peyresourdes during stage 14 of Tour de France 2025 (cropped).jpg', 'center 30%'),
+  jo_ete_histoire: cover('Olympic rings on the Eiffel Tower 2024 (11).jpg', 'center 43%'),
+  can_foot_africain: cover('Trophée CAN (1).jpg', 'center 38%'),
+  copa_america: cover('Copa america trofeo.jpg', 'center 38%'),
+  legendes_foot_allemand_anglais_italien: cover('Cristiano Ronaldo 2018 (4x5 cropped).jpg', 'center 24%'),
 };
 
 export function getTopicCover(category) {
