@@ -84,6 +84,65 @@ describe('topic cover catalog', () => {
     expect(reviewedKeys.filter((key) => !TOPIC_COVERS[key])).toEqual([]);
   });
 
+  test('the second batch of fifty reviewed topics has dedicated covers', () => {
+    const reviewedKeys = [
+      'genshin_impact',
+      'zelda',
+      'univers_mario',
+      'rugby_coupe_du_monde',
+      'xv_de_france',
+      'boxe_champions',
+      'handball',
+      'nfl',
+      'gymnastique',
+      'patinage_artistique',
+      'sports_extremes',
+      'femmes_du_sport',
+      'jeunes_talents_du_sport',
+      'legendes_du_sport_francais',
+      'padel',
+      'beach_volley',
+      'k_pop_groupes_feminins',
+      'k_pop_groupes_masculins',
+      'bts',
+      'blackpink',
+      'afrobeats',
+      'latin_pop_reggaeton',
+      'rap_us_legendes',
+      'r_b',
+      'variete_francaise',
+      'chanson_francaise_classique',
+      'rock_francais',
+      'rock_legendes_anglo_us',
+      'metal',
+      'pop_rock_2000s',
+      'electro_edm',
+      'house_techno',
+      'reggae_dancehall',
+      'jazz_legendes',
+      'compositeurs_classiques',
+      'eurovision',
+      'festivals_de_musique',
+      'clips_iconiques',
+      'duos_collabs_celebres',
+      'comedies_musicales',
+      'girl_groups_boys_bands_2000s_2010s',
+      'musique_annees_80',
+      'anime_shonen',
+      'studio_ghibli',
+      'anime_cultes',
+      'dc_comics',
+      'films_dreamworks',
+      'comedies_francaises',
+      'comedies_us_cultes',
+      'films_d_horreur',
+    ];
+
+    expect(reviewedKeys).toHaveLength(50);
+    expect(new Set(reviewedKeys).size).toBe(50);
+    expect(reviewedKeys.filter((key) => !TOPIC_COVERS[key])).toEqual([]);
+  });
+
   test('uncurated topics never receive a misleading family photo', () => {
     const uncurated = CATEGORIES.find((category) => !category.cover && !TOPIC_COVERS[category.key]);
 
