@@ -63,8 +63,7 @@ export const CATEGORIES = [
   { key: 'serie_a', label: 'Serie A', icon: '\u{1F462}', grad: 'g26', tag: '\u{1F4F8}', desc: 'Devine le joueur italien', family: 'sport' },
   { key: 'ligue_1', label: 'Ligue 1', icon: '\u{1F413}', grad: 'g27', tag: '\u{1F4F8}', desc: 'Devine le joueur français', family: 'sport' },
   { key: 'bollywood', label: 'Bollywood', icon: '\u{1F1EE}\u{1F1F3}', grad: 'g28', tag: '\u{1F4F8}', desc: 'Devine la star indienne', family: 'entertainment', cover: '/images/players/shahrukh_khan.jpg' },
-  { key: 'actors_az', label: 'Acteurs (A-L)', icon: '⭐', grad: 'g29', tag: '\u{1F4F8}', desc: 'Devine la star (A à L)', family: 'entertainment', cover: '/images/players/brad_pitt.jpg' },
-  { key: 'actors_mz', label: 'Acteurs (M-Z)', icon: '\u{1F31F}', grad: 'g30', tag: '\u{1F4F8}', desc: 'Devine la star (M à Z)', family: 'entertainment', cover: '/images/players/robert_de_niro.jpg' },
+  { key: 'actors', label: 'Acteurs', icon: '⭐', grad: 'g29', tag: '\u{1F4F8}', desc: 'Devine les stars du cinéma', family: 'entertainment', cover: '/images/players/brad_pitt.jpg' },
   // `logo` (path under /images/logos/) shows the real brand mark once
   // provided; until then the emoji `icon` is the fallback.
   { key: 'netflix', label: 'Netflix', icon: '\u{1F3AC}', logo: null, grad: 'g13', desc: 'Séries & films Netflix', family: 'entertainment' },
@@ -197,7 +196,6 @@ export const CATEGORIES = [
   { key: 'musique_annees_90', label: 'Musique années 90', icon: '\u{1F4BF}', grad: 'g146', desc: 'Groupes, tubes & albums emblématiques', family: 'music' },
   { key: 'musique_annees_2010', label: 'Musique années 2010', icon: '\u{1F3B5}', grad: 'g147', desc: 'Succès, artistes & albums de la décennie', family: 'music' },
   { key: 'sons_viraux_tiktok', label: 'Sons viraux TikTok', icon: '\u{1F4F1}', grad: 'g148', desc: 'Titres, tendances & percées virales', family: 'music' },
-  { key: 'rappeuses_francaises', label: 'Rappeuses françaises', icon: '\u{1F3A4}', grad: 'g149', desc: 'Artistes, projets & scènes francophones', family: 'music' },
   { key: 'nouvelle_scene_rap_fr', label: 'Nouvelle scène rap FR', icon: '\u{1F680}', grad: 'g150', desc: 'Nouveaux flows, projets & révélations', family: 'music' },
   { key: 'wednesday', label: 'Wednesday', icon: '\u{1F5A4}', grad: 'g151', desc: 'Nevermore, mystères & famille Addams', family: 'entertainment' },
   { key: 'stranger_things', label: 'Stranger Things', icon: '\u{1F6B2}', grad: 'g152', desc: 'Hawkins, personnages & Monde à l’envers', family: 'entertainment' },
@@ -303,7 +301,6 @@ export const CATEGORIES = [
   { key: 'assassin_s_creed', label: "Assassin's Creed", icon: "🗡️", grad: 'g252', desc: "Assassins, époques & personnages", family: 'gaming' },
   { key: 'the_witcher', label: "The Witcher", icon: "🐺", grad: 'g253', desc: "Sorceleurs, signes & Continents", family: 'gaming' },
   { key: 'elden_ring', label: "Elden Ring", icon: "💍", grad: 'g254', desc: "Boss, runes & Entre-terre", family: 'gaming' },
-  { key: 'among_us', label: "Among Us", icon: "🚀", grad: 'g255', desc: "Rôles, cartes & sabotages", family: 'gaming' },
   { key: 'animal_crossing', label: "Animal Crossing", icon: "🏝️", grad: 'g256', desc: "Habitants, objets & villages", family: 'gaming' },
   { key: 'the_sims', label: "The Sims", icon: "💚", grad: 'g257', desc: "Sims, construction & simulation", family: 'gaming' },
   { key: 'overwatch', label: "Overwatch", icon: "🦸", grad: 'g258', desc: "Héros, cartes & organisations", family: 'gaming' },
@@ -322,7 +319,6 @@ export const CATEGORIES = [
   { key: 'arsenal', label: "Arsenal", icon: "🔴", grad: 'g271', desc: "Gunners, Highbury & Invincibles", family: 'sport' },
   { key: 'inter_milan', label: "Inter Milan", icon: "🔵", grad: 'g272', desc: "Nerazzurri, derbys & triplé", family: 'sport' },
   { key: 'borussia_dortmund', label: "Borussia Dortmund", icon: "🟡", grad: 'g273', desc: "Mur jaune, BVB & Europe", family: 'sport' },
-  { key: 'ajax_amsterdam', label: "Ajax Amsterdam", icon: "⚪", grad: 'g274', desc: "Football total, académie & légendes", family: 'sport' },
   { key: 'olympique_de_marseille', label: "Olympique de Marseille", icon: "⚪", grad: 'g275', desc: "Vélodrome, légendes & 1993", family: 'sport' },
   { key: 'cyclisme_stars', label: "Cyclisme (Stars)", icon: "🚴", grad: 'g276', desc: "Champions, Grands Tours & classiques", family: 'sport' },
   { key: 'musique_stars', label: "Musique (Stars)", icon: "🎤", grad: 'g277', desc: "Icônes, chansons & albums", family: 'music' },
