@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, memo } from 'react';
 import { useI18n } from './i18n';
+import { getTopicCover } from './topicCovers';
 
 
 export const Icon = memo(function Icon({ name, size = 20, className = '' }) {
@@ -509,17 +510,27 @@ export const LevelRing = memo(function LevelRing({ level, xpIntoLevel, xpForLeve
 // shown on tiles WITHOUT a cover, so a photo tile isn't cluttered with a
 // small floating emoji on top of the artwork.
 export const CategoryTile = memo(function CategoryTile({ c, onClick, disabled }) {
+  const cover = getTopicCover(c);
   return (
     <button className="topic-tile" onClick={onClick} disabled={disabled}>
       <span
-        className={`tile-icon-sq ${c.grad} ${c.cover ? 'has-cover' : ''}`}
-        style={c.cover ? { backgroundImage: `url(${c.cover})` } : undefined}
+        className={`tile-icon-sq ${c.grad} ${cover ? 'has-cover' : ''}`}
+        style={cover ? { '--cover-focal': cover.focal } : undefined}
       >
-        {!c.cover && (
-          c.logo
-            ? <img src={c.logo} alt={c.label} className="tile-logo-img" />
-            : <span className="tile-monogram">{topicMark(c.label)}</span>
-        )}
+        <span className="tile-monogram tile-cover-fallback">{topicMark(c.label)}</span>
+        {cover ? (
+          <img
+            src={cover.src}
+            alt=""
+            className="tile-cover-img"
+            loading="lazy"
+            decoding="async"
+            referrerPolicy="no-referrer"
+            onError={(event) => { event.currentTarget.hidden = true; }}
+          />
+        ) : c.logo ? (
+          <img src={c.logo} alt={c.label} className="tile-logo-img" />
+        ) : null}
         {c.tag && <span className="tile-tag-badge">{String(c.tag).includes('📸') ? 'PHOTO' : 'TOP'}</span>}
       </span>
       <span className="tile-label">{c.label}</span>
