@@ -26,6 +26,14 @@ describe('topic cover catalog', () => {
     expect(getTopicCover(premierLeague).src).toContain('Premier%20League%20Trophy');
   });
 
+  test('league cards display their reviewed trophy images', () => {
+    const ligue1 = CATEGORIES.find((category) => category.key === 'ligue_1');
+    const serieA = CATEGORIES.find((category) => category.key === 'serie_a');
+
+    expect(getTopicCover(ligue1).src).toContain('Ligue%201%20Trophy%202024');
+    expect(getTopicCover(serieA).src).toContain('Coppa%20Campioni');
+  });
+
   test('the first batch of fifty reviewed topics has dedicated covers', () => {
     const reviewedKeys = [
       'got',
