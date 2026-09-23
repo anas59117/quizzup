@@ -7,7 +7,7 @@ import { useI18n } from './i18n';
 
 const FEATURED_TOPIC_KEYS = [
   'foot_fr', 'rap_fr', 'premier_league', 'la_liga',
-  'tennis', 'basketball', 'kpop', 'actors_az',
+  'tennis', 'basketball', 'kpop', 'actors',
 ];
 const FEATURED_TOPICS = FEATURED_TOPIC_KEYS
   .map((key) => CATEGORIES.find((category) => category.key === key))
