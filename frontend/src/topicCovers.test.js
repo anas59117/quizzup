@@ -261,10 +261,56 @@ describe('topic cover catalog', () => {
     expect(reviewedKeys.filter((key) => !TOPIC_COVERS[key])).toEqual([]);
   });
 
-  test('uncurated topics never receive a misleading family photo', () => {
-    const uncurated = CATEGORIES.find((category) => !category.cover && !TOPIC_COVERS[category.key]);
+  test('the final thirty-seven topics have distinct, dedicated covers', () => {
+    const reviewedKeys = [
+      'presidents_americains',
+      'grandes_villes_du_monde',
+      'especes_en_voie_de_disparition',
+      'histoire_du_maroc',
+      'histoire_de_l_algerie',
+      'histoire_de_la_tunisie',
+      'islam',
+      'christianisme',
+      'judaisme',
+      'bouddhisme',
+      'hindouisme',
+      'sonic',
+      'fifa_ea_sports_fc',
+      'assassin_s_creed',
+      'the_witcher',
+      'elden_ring',
+      'among_us',
+      'animal_crossing',
+      'the_sims',
+      'overwatch',
+      'counter_strike',
+      'world_of_warcraft',
+      'streamers_gaming_fr',
+      'jeux_mobile_populaires',
+      'histoire_des_consoles',
+      'fc_barcelone',
+      'manchester_united',
+      'liverpool',
+      'bayern_munich',
+      'manchester_city',
+      'chelsea',
+      'arsenal',
+      'inter_milan',
+      'borussia_dortmund',
+      'ajax_amsterdam',
+      'olympique_de_marseille',
+      'musique_stars',
+    ];
 
-    expect(getTopicCover(uncurated)).toBeNull();
+    expect(reviewedKeys).toHaveLength(37);
+    expect(new Set(reviewedKeys).size).toBe(37);
+    expect(reviewedKeys.filter((key) => !TOPIC_COVERS[key])).toEqual([]);
+  });
+
+  test('every quiz category has its own usable cover', () => {
+    const uncovered = CATEGORIES.filter((category) => !getTopicCover(category));
+
+    expect(uncovered).toEqual([]);
   });
 
   test('every family fallback remains available for future explicit use', () => {
