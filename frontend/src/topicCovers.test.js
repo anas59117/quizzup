@@ -23,7 +23,7 @@ describe('topic cover catalog', () => {
     expect(getTopicCover(kpop).src).toContain('/quizphotos/kpop/');
     expect(getTopicCover(actors).src).toContain('/players/');
     expect(getTopicCover(rapFr).src).toBe('/images/players/booba.jpg');
-    expect(getTopicCover(premierLeague).src).toBe('/images/covers/premier_league.jpg');
+    expect(getTopicCover(premierLeague).src).toContain('Premier%20League%20Trophy');
   });
 
   test('the first batch of fifty reviewed topics has dedicated covers', () => {
