@@ -16,6 +16,8 @@ const { issueOrRefreshGuestToken, verifyGuestToken } = require('./guest-auth');
 const { linkFirebaseIdentity } = require('./account-links');
 const stats = require('./stats');
 const categoryStats = require('./category-stats');
+const topicStats = require('./topic-stats');
+const follows = require('./follows');
 const crypto = require('crypto');
 const { ROOM_TTL_MS, CODE_ALPHABET, MAX_ROOM_PLAYERS } = require('./config');
 const { randomRoomCode } = require('./ids');
@@ -91,6 +93,8 @@ const actionLimiters = {
   roomJoinIp: new RateLimiter(30 * 1000, 30),
   feedList: new RateLimiter(10 * 1000, 10),
   leaderboardList: new RateLimiter(10 * 1000, 8),
+  playerProfile: new RateLimiter(10 * 1000, 15),
+  follow: new RateLimiter(60 * 1000, 30),
   postCreate: new RateLimiter(60 * 1000, 5),
   postReact: new RateLimiter(10 * 1000, 30),
   postReport: new RateLimiter(60 * 1000, 20),
@@ -212,7 +216,7 @@ async function handleIdentify(ws, data, state) {
   game.send(ws, { type: 'identified', reconnected, roomReconnected });
   game.send(ws, { type: 'friends_list', friends: social.getFriendsList(state.clientId) });
   game.send(ws, { type: 'friend_requests', requests: social.getPendingRequests(state.clientId) });
-  game.send(ws, { type: 'stats', stats: stats.getStats(state.clientId) });
+  game.send(ws, { type: 'stats', stats: fullStats(state.clientId) });
   game.send(ws, { type: 'feed_list', posts: posts.getFeed() });
   notifyPresence(state.clientId, true);
 }
@@ -223,10 +227,14 @@ function handleLeaderboard(ws, data, state) {
   const key = state.clientId || state.ip;
   if (!allowAction(actionLimiters.leaderboardList, key, ws, 'LEADERBOARD_RATE_LIMITED')) return true;
 
-  const board = stats.getLeaderboard(50, state.clientId);
+  const category = validCategoryKey(data.category);
+  const board = category
+    ? topicStats.getTopicLeaderboard(category, 50, state.clientId)
+    : stats.getLeaderboard(50, state.clientId);
   const entries = board.entries.map((entry) => {
     const profile = social.profileOf(entry.clientId);
     return {
+      id: entry.clientId,
       rank: entry.rank,
       name: profile?.name || 'Player',
       avatar: profile?.avatar || 'Q',
@@ -242,6 +250,7 @@ function handleLeaderboard(ws, data, state) {
 
   game.send(ws, {
     type: 'leaderboard_list',
+    category,
     entries,
     total: board.total,
     yourRank: board.yourRank,
@@ -254,7 +263,14 @@ function handleFeed(ws, data, state) {
   if (data.type === 'feed_list') {
     const feedKey = clientId || state.ip;
     if (!allowAction(actionLimiters.feedList, feedKey, ws, 'FEED_RATE_LIMITED')) return true;
-    game.send(ws, { type: 'feed_list', posts: posts.getFeed() });
+    const category = validCategoryKey(data.category);
+    const scope = data.scope === 'following' && clientId ? 'following' : 'all';
+    const feedPosts = posts.getFeed({
+      limit: 40,
+      category,
+      authorIds: scope === 'following' ? follows.getFollowing(clientId) : undefined,
+    });
+    game.send(ws, { type: 'feed_list', posts: feedPosts, category, scope });
     return true;
   }
   if (data.type === 'post_create') {
@@ -285,8 +301,72 @@ function handleFeed(ws, data, state) {
   return false;
 }
 
+function fullStats(clientId) {
+  return {
+    ...stats.getStats(clientId),
+    topics: topicStats.getPlayerTopics(clientId, 12),
+    ...follows.counts(clientId),
+  };
+}
+
+function publicProfile(viewerId, targetId) {
+  const profile = social.profileOf(targetId);
+  if (!profile) return null;
+  const s = stats.getStats(targetId);
+  return {
+    id: targetId,
+    name: profile.name,
+    avatar: profile.avatar,
+    online: profile.online,
+    level: s.level,
+    games: s.games,
+    wins: s.wins,
+    ...follows.counts(targetId),
+    topics: topicStats.getPlayerTopics(targetId, 6),
+    isYou: viewerId === targetId,
+    isFollowing: !!viewerId && follows.isFollowing(viewerId, targetId),
+    isFriend: !!viewerId && social.areFriends(viewerId, targetId),
+  };
+}
+
+function handleFollow(ws, data, state) {
+  const { clientId } = state;
+  if (data.type === 'player_profile') {
+    const key = clientId || state.ip;
+    if (!allowAction(actionLimiters.playerProfile, key, ws, 'PROFILE_RATE_LIMITED')) return true;
+    const profile = publicProfile(clientId, String(data.targetId || ''));
+    game.send(ws, profile
+      ? { type: 'player_profile', profile }
+      : { type: 'player_profile_unavailable', targetId: String(data.targetId || '') });
+    return true;
+  }
+  if (data.type === 'follow' || data.type === 'unfollow') {
+    if (!clientId) { game.send(ws, { type: 'auth_required', code: 'AUTH_REQUIRED' }); return true; }
+    if (!allowAction(actionLimiters.follow, clientId, ws, 'FOLLOW_RATE_LIMITED')) return true;
+    const targetId = String(data.targetId || '');
+    if (!social.profileOf(targetId)) return true;
+    const result = data.type === 'follow' ? follows.follow(clientId, targetId) : follows.unfollow(clientId, targetId);
+    game.send(ws, {
+      type: 'follow_updated',
+      targetId,
+      isFollowing: follows.isFollowing(clientId, targetId),
+      ...follows.counts(targetId),
+      mine: follows.counts(clientId),
+      reason: result.ok ? undefined : result.reason,
+    });
+    if (data.type === 'follow' && result.changed) {
+      const me = social.profileOf(clientId);
+      const targetWs = social.getWs(targetId);
+      if (targetWs && me) game.send(targetWs, { type: 'new_follower', from: me, ...follows.counts(targetId) });
+    }
+    return true;
+  }
+  return false;
+}
+
 function handleSocial(ws, data, state) {
   const { clientId } = state;
+  if (handleFollow(ws, data, state)) return true;
 
   if (data.type === 'profile_update') {
     if (!clientId) {

@@ -6,6 +6,7 @@ import { useSocial, GameChat } from './social';
 import { ensureSignedIn, linkGoogleAccount } from './firebase';
 import { useStats } from './stats';
 import { useFeed, FeedScreen } from './feed';
+import { usePlayers, PlayerSheet } from './players';
 import { RoomLobby } from './multiplayer';
 import { AVATARS, useTheme, TopControls, NavBar, JoinScreen, ErrorScreen, Toast } from './ui';
 import { HomeContent, EnterCodeContent, CategoriesContent, ProfileContent, LeaderboardContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent } from './screens';
@@ -76,6 +77,9 @@ export default function App() {
   const [toast, setToast] = useState(null);
   const [leaderboard, setLeaderboard] = useState({ entries: [], total: 0, yourRank: null });
   const [leaderboardLoading, setLeaderboardLoading] = useState(false);
+  const [leaderboardCategory, setLeaderboardCategory] = useState(null);
+  const [leaderboardReturn, setLeaderboardReturn] = useState('profile');
+  const leaderboardCategoryRef = useRef(null);
   const tickRef = useRef(null);
   const copyTimerRef = useRef(null);
   const pendingTimerRef = useRef(null);
@@ -154,6 +158,7 @@ export default function App() {
   const social = useSocial(wsRef);
   const statsHook = useStats();
   const feed = useFeed(wsRef);
+  const players = usePlayers(wsRef);
   const clientId = firebaseUser?.uid || null;
 
   useEffect(() => () => {
@@ -234,7 +239,7 @@ export default function App() {
         if (stage === 'feed') feed.refresh();
         if (stage === 'leaderboard' && !data.queuedActionFlushed) {
           setLeaderboardLoading(true);
-          if (!sendSocket({ type: 'leaderboard_list' })) setLeaderboardLoading(false);
+          if (!sendSocket({ type: 'leaderboard_list', category: leaderboardCategoryRef.current || undefined })) setLeaderboardLoading(false);
         }
         if (cancelQueueRef.current && stage === 'waiting') {
           if (!data.queuedActionFlushed) sendSocket({ type: 'cancel_queue' });
@@ -465,7 +470,18 @@ export default function App() {
         }
         showToast(t('profileUpdated'), 'success');
         break;
+      case 'follow_updated':
+        players.handleMessage(data);
+        if (data.mine) statsHook.handleStatsMessage({ stats: data.mine });
+        if (data.reason === 'limit') showToast(t('followLimit'), 'error');
+        break;
+      case 'new_follower':
+        statsHook.handleStatsMessage({ stats: { followers: data.followers } });
+        if (data.from?.name) showToast(t('newFollower', { name: data.from.name }), 'success');
+        break;
       case 'leaderboard_list':
+        // Drop a late reply for a ranking the user already switched away from.
+        if ((data.category || null) !== leaderboardCategoryRef.current) break;
         setLeaderboard({
           entries: Array.isArray(data.entries) ? data.entries : [],
           total: Number(data.total) || 0,
@@ -485,6 +501,7 @@ export default function App() {
       default:
         social.handleMessage(data);
         feed.handleMessage(data);
+        players.handleMessage(data);
         break;
     }
   };
@@ -561,13 +578,26 @@ export default function App() {
     cancelMatchmaking({ type: 'solo', category: matchCategory });
   }
 
-  function openLeaderboard() {
+  // Called as an onClick handler too, so a non-string argument means "global".
+  function openLeaderboard(category = null, returnTo = 'profile') {
+    const cat = typeof category === 'string' ? category : null;
+    leaderboardCategoryRef.current = cat;
+    setLeaderboardCategory(cat);
+    setLeaderboardReturn(typeof returnTo === 'string' ? returnTo : 'profile');
+    setLeaderboard({ entries: [], total: 0, yourRank: null });
     setLeaderboardLoading(true);
     setStage('leaderboard');
-    if (!connect({ type: 'leaderboard_list' })) {
+    if (!connect({ type: 'leaderboard_list', category: cat || undefined })) {
       setLeaderboardLoading(false);
       showToast(t('rankingUnavailable'), 'error');
     }
+  }
+
+  // Opens a theme's community page (its filtered feed + level + ranking).
+  function openTopic(key) {
+    if (!key) return;
+    feed.setFilter({ scope: 'all', category: key });
+    setStage('feed');
   }
 
   function saveProfile(nextName, nextAvatar) {
@@ -742,8 +772,15 @@ export default function App() {
           <div className="cat-header">
             <h2>{t('accueil')}</h2>
           </div>
-          <FeedScreen feed={feed} />
+          <FeedScreen
+            feed={feed}
+            myTopics={statsHook.stats.topics || []}
+            onPlayTopic={startWithCategory}
+            onOpenTopicLeaderboard={(key) => openLeaderboard(key, 'feed')}
+            onOpenPlayer={players.open}
+          />
         </div>
+        <PlayerSheet players={players} social={social} onSelectTopic={openTopic} />
         <NavBar active="feed" onNav={onNav} onQuickMatch={quickMatch} />
       </div>
     );
@@ -758,7 +795,9 @@ export default function App() {
           linkGoogle={linkGoogle} linking={linking} clientId={clientId} social={social}
           onOpenLeaderboard={openLeaderboard}
           onSaveProfile={saveProfile} profileSaving={pending}
+          onOpenTopic={openTopic}
         />
+        <PlayerSheet players={players} social={social} onSelectTopic={openTopic} />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);
   }
@@ -769,8 +808,12 @@ export default function App() {
         <LeaderboardContent
           board={leaderboard}
           loading={leaderboardLoading}
-          onBack={() => setStage('profile')}
+          category={leaderboardCategory}
+          onChangeCategory={(key) => openLeaderboard(key, leaderboardReturn)}
+          onOpenPlayer={players.open}
+          onBack={() => setStage(leaderboardReturn)}
         />
+        <PlayerSheet players={players} social={social} onSelectTopic={openTopic} />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);
   }

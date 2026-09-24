@@ -8,6 +8,7 @@ const { getMixedQuestions, listCategories } = require('./questions');
 const { GAME_CONFIG } = require('./config');
 const stats = require('./stats');
 const categoryStats = require('./category-stats');
+const topicStats = require('./topic-stats');
 const { randomId } = require('./ids');
 
 const activeGames = new Map();
@@ -491,7 +492,11 @@ function endGame(game, reason) {
   game.finishedAt = Date.now();
   if (game.roundTimer) clearTimeout(game.roundTimer);
   try {
-    categoryStats.recordFinish(game.categoryKey, reason || 'complete');
+    // Real games always have identified players (startGame enforces it);
+    // skip anonymous/test sessions so they don't pollute the analytics.
+    if (game.players.some((p) => p.clientId)) {
+      categoryStats.recordFinish(game.categoryKey, reason || 'complete');
+    }
   } catch (err) {
     console.error('category-stats recordFinish failed:', err);
   }
@@ -514,6 +519,11 @@ function endGame(game, reason) {
     // Solo sessions count as games played but neither extend nor break a PvP
     // win streak, and they cannot farm the multiplayer win bonus.
     stats.recordResult(p.clientId, won, isSolo || isTie, xpTotal, coinsEarned);
+    try {
+      topicStats.record(p.clientId, game.categoryKey, { won, xp: xpTotal });
+    } catch (err) {
+      console.error('topic-stats record failed:', err);
+    }
     const finalResult = {
       type: 'game_end', finalScore: p.score,
       solo: isSolo,
@@ -523,7 +533,8 @@ function endGame(game, reason) {
       coins: coinsEarned,
       xp: xpTotal,
       xpBreakdown: { matchScore: p.score, finishBonus, winBonus, xpTotal },
-      stats: stats.getStats(p.clientId),
+      stats: { ...stats.getStats(p.clientId), topics: topicStats.getPlayerTopics(p.clientId, 12) },
+      topic: game.categoryKey ? topicStats.getTopic(p.clientId, game.categoryKey) : null,
     };
     p.finalResult = finalResult;
     send(p.ws, finalResult);

@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import { useI18n } from './i18n';
 
-const DEFAULT_STATS = { games: 0, wins: 0, streak: 0, level: 1, coins: 0 };
+const DEFAULT_STATS = { games: 0, wins: 0, streak: 0, level: 1, coins: 0, topics: [], followers: 0, following: 0 };
 
 // Player stats (games/wins/streak) live server-side, keyed by the verified
 // QuizzUp identity. Pushed on identify (so Profile shows real numbers right
@@ -9,7 +9,8 @@ const DEFAULT_STATS = { games: 0, wins: 0, streak: 0, level: 1, coins: 0 };
 export function useStats() {
   const [stats, setStats] = useState(DEFAULT_STATS);
   const handleStatsMessage = useCallback((data) => {
-    if (data.stats) setStats(data.stats);
+    // Merge: some messages (game_end, follow updates) only carry part of it.
+    if (data.stats) setStats((prev) => ({ ...prev, ...data.stats }));
   }, []);
   return { stats, handleStatsMessage };
 }

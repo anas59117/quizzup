@@ -3,6 +3,7 @@ import { AVATARS, CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, 
 import { PlayerHud, Leaderboard } from './multiplayer';
 import { ProfileStats } from './stats';
 import { FriendsScreen } from './social';
+import { TopicLevelList, topicTitleKey, topicLabel } from './players';
 import { useI18n } from './i18n';
 
 const FEATURED_TOPIC_KEYS = [
@@ -119,7 +120,7 @@ export function CategoriesContent({ startWithCategory, onBack, initialFamily, pe
 
 export function ProfileContent({
   avatar, name, stats, isGoogleLinked, googleEmail, linkGoogle, linking,
-  clientId, social, onOpenLeaderboard, onSaveProfile, profileSaving,
+  clientId, social, onOpenLeaderboard, onSaveProfile, profileSaving, onOpenTopic,
 }) {
   const { t } = useI18n();
   const [editing, setEditing] = useState(false);
@@ -221,7 +222,13 @@ export function ProfileContent({
         </div>
       )}
 
+      <div className="follow-counts">
+        <div><strong>{stats.followers || 0}</strong><small>{t('followers')}</small></div>
+        <div><strong>{stats.following || 0}</strong><small>{t('followingCount')}</small></div>
+      </div>
       <ProfileStats stats={stats} />
+      <div className="section-title">{t('myTopics')}</div>
+      <TopicLevelList topics={stats.topics} onSelect={onOpenTopic} />
       <button className="leaderboard-cta" onClick={onOpenLeaderboard}>
         <span className="leaderboard-cta-icon"><Icon name="trophy" size={20} /></span>
         <span className="leaderboard-cta-copy">
@@ -246,9 +253,14 @@ export function ProfileContent({
 }
 
 
-export function LeaderboardContent({ board, loading, onBack }) {
-  const { t } = useI18n();
+export function LeaderboardContent({ board, loading, onBack, category = null, onChangeCategory, onOpenPlayer }) {
+  const { t, lang } = useI18n();
   const entries = board?.entries || [];
+  const sortedCategories = useMemo(
+    () => [...CATEGORIES].sort((a, b) => a.label.localeCompare(b.label, lang)),
+    [lang]
+  );
+  const openRow = (entry) => { if (entry.id && !entry.isYou && onOpenPlayer) onOpenPlayer(entry.id); };
   const topThree = entries.slice(0, 3);
   const remaining = entries.slice(3);
 
@@ -257,10 +269,17 @@ export function LeaderboardContent({ board, loading, onBack }) {
       <div className="cat-header">
         <div>
           <div className="status-label">{t('seasonAllTime')}</div>
-          <h2>{t('globalLeaderboard')}</h2>
+          <h2>{category ? topicLabel(category) : t('globalLeaderboard')}</h2>
         </div>
         <button className="back-link" onClick={onBack}>{t('back')}</button>
       </div>
+      {onChangeCategory && (
+        <select className="feed-cat-select leaderboard-cat-select" aria-label={t('topicLeaderboard')}
+          value={category || ''} onChange={(e) => onChangeCategory(e.target.value || null)}>
+          <option value="">{t('generalRanking')}</option>
+          {sortedCategories.map((c) => <option key={c.key} value={c.key}>{c.label}</option>)}
+        </select>
+      )}
 
       {loading && !entries.length ? (
         <div className="leaderboard-loading" aria-live="polite">
@@ -271,7 +290,9 @@ export function LeaderboardContent({ board, loading, onBack }) {
         <>
           <div className="podium">
             {topThree.map((entry) => (
-              <div key={entry.rank} className={`podium-card rank-${entry.rank} ${entry.isYou ? 'mine' : ''}`}>
+              <div key={entry.rank} className={`podium-card rank-${entry.rank} ${entry.isYou ? 'mine' : ''} ${entry.id && !entry.isYou ? 'clickable' : ''}`}
+                role={entry.id && !entry.isYou ? 'button' : undefined} tabIndex={entry.id && !entry.isYou ? 0 : undefined}
+                onClick={() => openRow(entry)} onKeyDown={(e) => { if (e.key === 'Enter') openRow(entry); }}>
                 <div className="podium-rank">#{entry.rank}</div>
                 <div className="podium-avatar">{entry.avatar}</div>
                 <div className="podium-name">{entry.name}</div>
@@ -289,7 +310,9 @@ export function LeaderboardContent({ board, loading, onBack }) {
           {remaining.length > 0 && (
             <div className="global-leaderboard-list">
               {remaining.map((entry) => (
-                <div key={entry.rank} className={`global-leaderboard-row ${entry.isYou ? 'mine' : ''}`}>
+                <div key={entry.rank} className={`global-leaderboard-row ${entry.isYou ? 'mine' : ''} ${entry.id && !entry.isYou ? 'clickable' : ''}`}
+                  role={entry.id && !entry.isYou ? 'button' : undefined} tabIndex={entry.id && !entry.isYou ? 0 : undefined}
+                  onClick={() => openRow(entry)} onKeyDown={(e) => { if (e.key === 'Enter') openRow(entry); }}>
                   <span className="global-rank">{entry.rank}</span>
                   <span className="global-avatar">{entry.avatar}</span>
                   <span className="global-player">
@@ -437,6 +460,15 @@ export function FinishedContent({ result, opponents, myId, social, addFriend, pl
         <div className="result-sub">{left ? t('someoneLeft') : t('finalScore', { n: result.finalScore })}</div>
       </div>
       {result.stats && <LevelRing level={result.stats.level} xpIntoLevel={result.stats.xpIntoLevel} xpForLevel={result.stats.xpForLevel} />}
+      {result.topic && (
+        <div className="result-topic-level">
+          <span className="topic-level-badge">{result.topic.level}</span>
+          <span>
+            <strong>{t('topicLevelUp', { level: result.topic.level, topic: topicLabel(result.topic.key) })}</strong>
+            <small>{t(topicTitleKey(result.topic.level))}</small>
+          </span>
+        </div>
+      )}
       <div className="xp-breakdown">
         <div className="xpb-row"><span>{t('matchScore')}</span><span>{result.finalScore}</span></div>
         <div className="xpb-row"><span>{t('finishBonus')}</span><span>+{result.xpBreakdown?.finishBonus ?? 0}</span></div>

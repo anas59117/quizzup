@@ -8,7 +8,7 @@ const { normalizePostsStore } = require('./store-normalize');
 const { randomId } = require('./ids');
 
 const STORE = getStorePath('posts.json');
-const MAX_POSTS = 500; // oldest posts drop off once this cap is hit
+const MAX_POSTS = 3000; // oldest posts drop off once this cap is hit (per-theme feeds need depth)
 const MAX_TEXT_LEN = 240;
 const REPORT_THRESHOLD = 3; // flags before a post is hidden from the feed (same bar as reports.js)
 
@@ -35,16 +35,26 @@ const persist = createJsonWriter(STORE, () => ({ posts }));
 
 function toClientShape(p) {
   return {
-    id: p.id, authorName: p.authorName, authorAvatar: p.authorAvatar,
+    id: p.id, authorId: p.authorId || null, authorName: p.authorName, authorAvatar: p.authorAvatar,
     category: p.category, text: p.text, reactions: p.reactedBy.length, createdAt: p.createdAt,
   };
 }
 
-function getFeed(limit = 30) {
-  return posts
-    .filter((p) => p.reportedBy.length < REPORT_THRESHOLD)
-    .slice(0, limit)
-    .map(toClientShape);
+// getFeed(30) still works; getFeed({ category, authorIds }) filters to one
+// theme's community or to the players someone follows.
+function getFeed(options = 30) {
+  const opts = typeof options === 'number' ? { limit: options } : (options || {});
+  const limit = Math.max(1, Math.min(100, Math.floor(Number(opts.limit) || 30)));
+  const authors = Array.isArray(opts.authorIds) ? new Set(opts.authorIds) : null;
+  const out = [];
+  for (const p of posts) {
+    if (p.reportedBy.length >= REPORT_THRESHOLD) continue;
+    if (opts.category && p.category !== opts.category) continue;
+    if (authors && !authors.has(p.authorId)) continue;
+    out.push(toClientShape(p));
+    if (out.length >= limit) break;
+  }
+  return out;
 }
 
 // clientId is required — an identified poster (see server.js's handleFeed)
