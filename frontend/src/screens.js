@@ -268,7 +268,7 @@ export function LeaderboardContent({ board, loading, onBack, category = null, on
     <div className="container wide">
       <div className="cat-header">
         <div>
-          <div className="status-label">{t('seasonAllTime')}</div>
+          <div className="status-label">{category ? t('topicLeaderboard') : t('seasonAllTime')}</div>
           <h2>{category ? topicLabel(category) : t('globalLeaderboard')}</h2>
         </div>
         <button className="back-link" onClick={onBack}>{t('back')}</button>
