@@ -322,6 +322,58 @@ const olympiqueDeMarseille = require('./data/olympique_de_marseille.json');
 const cyclismeStars = require('./data/cyclisme_stars.json');
 const musiqueStars = require('./data/musique_stars.json');
 
+// Catalogue expansion batch 1 — artists, anime and flagship series.
+const booba = require('./data/booba.json');
+const jul = require('./data/jul.json');
+const pnl = require('./data/pnl.json');
+const ninho = require('./data/ninho.json');
+const sch = require('./data/sch.json');
+const damso = require('./data/damso.json');
+const orelsan = require('./data/orelsan.json');
+const gims = require('./data/gims.json');
+const ayaNakamura = require('./data/aya_nakamura.json');
+const nekfeu = require('./data/nekfeu.json');
+const gazo = require('./data/gazo.json');
+const tiakola = require('./data/tiakola.json');
+const lomepal = require('./data/lomepal.json');
+const soprano = require('./data/soprano.json');
+const drake = require('./data/drake.json');
+const eminem = require('./data/eminem.json');
+const kanyeWest = require('./data/kanye_west.json');
+const travisScott = require('./data/travis_scott.json');
+const theWeeknd = require('./data/the_weeknd.json');
+const rihanna = require('./data/rihanna.json');
+const beyonce = require('./data/beyonce.json');
+const taylorSwift = require('./data/taylor_swift.json');
+const michaelJackson = require('./data/michael_jackson.json');
+const duaLipa = require('./data/dua_lipa.json');
+const billieEilish = require('./data/billie_eilish.json');
+const onePiece = require('./data/one_piece.json');
+const naruto = require('./data/naruto.json');
+const dragonBall = require('./data/dragon_ball.json');
+const demonSlayer = require('./data/demon_slayer.json');
+const jujutsuKaisen = require('./data/jujutsu_kaisen.json');
+const attaqueDesTitans = require('./data/attaque_des_titans.json');
+const hunterXHunter = require('./data/hunter_x_hunter.json');
+const myHeroAcademia = require('./data/my_hero_academia.json');
+const deathNote = require('./data/death_note.json');
+const breakingBad = require('./data/breaking_bad.json');
+const theWalkingDead = require('./data/the_walking_dead.json');
+const laCasaDePapel = require('./data/la_casa_de_papel.json');
+const peakyBlinders = require('./data/peaky_blinders.json');
+const theBoys = require('./data/the_boys.json');
+const theLastOfUsSerie = require('./data/the_last_of_us_serie.json');
+const houseOfTheDragon = require('./data/house_of_the_dragon.json');
+const friends = require('./data/friends.json');
+const theOffice = require('./data/the_office.json');
+const vikings = require('./data/vikings.json');
+const prisonBreak = require('./data/prison_break.json');
+const blackMirror = require('./data/black_mirror.json');
+const lesSimpson = require('./data/les_simpson.json');
+const southPark = require('./data/south_park.json');
+const avatarLeDernierMaitreDeLAir = require('./data/avatar_le_dernier_maitre_de_l_air.json');
+const bobLEponge = require('./data/bob_l_eponge.json');
+
 
 
 // "Qui est-ce ?" photo quizzes, harvested from Wikidata/Wikipedia (CC-licensed
@@ -1065,6 +1117,58 @@ const CATEGORIES = {
   olympique_de_marseille: { label: "Olympique de Marseille", icon: "⚪", questions: [...olympiqueDeMarseille] },
   cyclisme_stars: { label: "Cyclisme (Stars)", icon: "🚴", questions: [...cyclismeStars] },
   musique_stars: { label: "Musique (Stars)", icon: "🎤", questions: [...musiqueStars] },
+
+  // Catalogue expansion batch 1.
+  booba: { label: "Booba", icon: "🎤", questions: [...booba] },
+  jul: { label: "JUL", icon: "🎤", questions: [...jul] },
+  pnl: { label: "PNL", icon: "🎤", questions: [...pnl] },
+  ninho: { label: "Ninho", icon: "🎤", questions: [...ninho] },
+  sch: { label: "SCH", icon: "🎤", questions: [...sch] },
+  damso: { label: "Damso", icon: "🎤", questions: [...damso] },
+  orelsan: { label: "Orelsan", icon: "🎤", questions: [...orelsan] },
+  gims: { label: "Gims", icon: "🎤", questions: [...gims] },
+  aya_nakamura: { label: "Aya Nakamura", icon: "🎤", questions: [...ayaNakamura] },
+  nekfeu: { label: "Nekfeu", icon: "🎤", questions: [...nekfeu] },
+  gazo: { label: "Gazo", icon: "🎤", questions: [...gazo] },
+  tiakola: { label: "Tiakola", icon: "🎤", questions: [...tiakola] },
+  lomepal: { label: "Lomepal", icon: "🎤", questions: [...lomepal] },
+  soprano: { label: "Soprano", icon: "🎤", questions: [...soprano] },
+  drake: { label: "Drake", icon: "🎤", questions: [...drake] },
+  eminem: { label: "Eminem", icon: "🎤", questions: [...eminem] },
+  kanye_west: { label: "Kanye West", icon: "🎤", questions: [...kanyeWest] },
+  travis_scott: { label: "Travis Scott", icon: "🎤", questions: [...travisScott] },
+  the_weeknd: { label: "The Weeknd", icon: "🎤", questions: [...theWeeknd] },
+  rihanna: { label: "Rihanna", icon: "🎤", questions: [...rihanna] },
+  beyonce: { label: "Beyoncé", icon: "🎤", questions: [...beyonce] },
+  taylor_swift: { label: "Taylor Swift", icon: "🎤", questions: [...taylorSwift] },
+  michael_jackson: { label: "Michael Jackson", icon: "🎤", questions: [...michaelJackson] },
+  dua_lipa: { label: "Dua Lipa", icon: "🎤", questions: [...duaLipa] },
+  billie_eilish: { label: "Billie Eilish", icon: "🎤", questions: [...billieEilish] },
+  one_piece: { label: "One Piece", icon: "📺", questions: [...onePiece] },
+  naruto: { label: "Naruto", icon: "📺", questions: [...naruto] },
+  dragon_ball: { label: "Dragon Ball", icon: "📺", questions: [...dragonBall] },
+  demon_slayer: { label: "Demon Slayer", icon: "📺", questions: [...demonSlayer] },
+  jujutsu_kaisen: { label: "Jujutsu Kaisen", icon: "📺", questions: [...jujutsuKaisen] },
+  attaque_des_titans: { label: "L’Attaque des Titans", icon: "📺", questions: [...attaqueDesTitans] },
+  hunter_x_hunter: { label: "Hunter × Hunter", icon: "📺", questions: [...hunterXHunter] },
+  my_hero_academia: { label: "My Hero Academia", icon: "📺", questions: [...myHeroAcademia] },
+  death_note: { label: "Death Note", icon: "📺", questions: [...deathNote] },
+  breaking_bad: { label: "Breaking Bad", icon: "🎬", questions: [...breakingBad] },
+  the_walking_dead: { label: "The Walking Dead", icon: "🎬", questions: [...theWalkingDead] },
+  la_casa_de_papel: { label: "La Casa de Papel", icon: "🎬", questions: [...laCasaDePapel] },
+  peaky_blinders: { label: "Peaky Blinders", icon: "🎬", questions: [...peakyBlinders] },
+  the_boys: { label: "The Boys", icon: "🎬", questions: [...theBoys] },
+  the_last_of_us_serie: { label: "The Last of Us (série)", icon: "🎬", questions: [...theLastOfUsSerie] },
+  house_of_the_dragon: { label: "House of the Dragon", icon: "🎬", questions: [...houseOfTheDragon] },
+  friends: { label: "Friends", icon: "🎬", questions: [...friends] },
+  the_office: { label: "The Office", icon: "🎬", questions: [...theOffice] },
+  vikings: { label: "Vikings", icon: "🎬", questions: [...vikings] },
+  prison_break: { label: "Prison Break", icon: "🎬", questions: [...prisonBreak] },
+  black_mirror: { label: "Black Mirror", icon: "🎬", questions: [...blackMirror] },
+  les_simpson: { label: "Les Simpson", icon: "🎬", questions: [...lesSimpson] },
+  south_park: { label: "South Park", icon: "🎬", questions: [...southPark] },
+  avatar_le_dernier_maitre_de_l_air: { label: "Avatar : le dernier maître de l’air", icon: "🎬", questions: [...avatarLeDernierMaitreDeLAir] },
+  bob_l_eponge: { label: "Bob l’éponge", icon: "🎬", questions: [...bobLEponge] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
