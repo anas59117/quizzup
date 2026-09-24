@@ -1,0 +1,17 @@
+{
+  "short_name": "QuizzUp",
+  "name": "QuizzUp — Duels de quiz en temps réel",
+  "description": "Défie tes amis en duel de quiz sur 300+ thèmes.",
+  "lang": "fr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0b0b0c",
+  "background_color": "#f2f0ec",
+  "icons": [
+    { "src": "favicon.ico", "sizes": "16x16 32x32 48x48", "type": "image/x-icon" },
+    { "src": "logo192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "logo512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

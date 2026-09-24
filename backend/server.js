@@ -15,6 +15,8 @@ const { verifyIdToken, verifyFirebaseIdToken, sweepCache } = require('./auth');
 const { issueOrRefreshGuestToken, verifyGuestToken } = require('./guest-auth');
 const { linkFirebaseIdentity } = require('./account-links');
 const stats = require('./stats');
+const categoryStats = require('./category-stats');
+const crypto = require('crypto');
 const { ROOM_TTL_MS, CODE_ALPHABET, MAX_ROOM_PLAYERS } = require('./config');
 const { randomRoomCode } = require('./ids');
 const { cleanDisplayName, cleanAvatar } = require('./sanitize');
@@ -936,6 +938,30 @@ app.get('/health', (req, res) =>
 );
 app.get('/categories', (req, res) => res.json(listCategories()));
 app.get('/reports/stats', (req, res) => res.json(reports.stats()));
+
+// Admin-only analytics: which quiz themes are actually played.
+// Disabled (404) unless ADMIN_STATS_TOKEN is set. Usage:
+//   curl -H "Authorization: Bearer <token>" https://<backend>/admin/category-stats?days=7
+function adminTokenOk(req) {
+  const expected = process.env.ADMIN_STATS_TOKEN || '';
+  if (expected.length < 16) return false;
+  const header = String(req.get('authorization') || '');
+  const given = header.startsWith('Bearer ') ? header.slice(7) : String(req.query.token || '');
+  const a = Buffer.from(given);
+  const b = Buffer.from(expected);
+  return a.length === b.length && crypto.timingSafeEqual(a, b);
+}
+
+app.get('/admin/category-stats', (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  if (!process.env.ADMIN_STATS_TOKEN) return res.status(404).json({ error: 'not_found' });
+  if (!adminTokenOk(req)) return res.status(401).json({ error: 'unauthorized' });
+  const labels = Object.fromEntries(
+    Object.entries(CATEGORIES).map(([key, c]) => [key, c && c.label ? c.label : key])
+  );
+  res.json(categoryStats.getReport({ days: req.query.days, labels }));
+});
+
 
 const heartbeatTimer = setInterval(() => {
   wss.clients.forEach((ws) => {

@@ -7,6 +7,7 @@ const { performance } = require('node:perf_hooks');
 const { getMixedQuestions, listCategories } = require('./questions');
 const { GAME_CONFIG } = require('./config');
 const stats = require('./stats');
+const categoryStats = require('./category-stats');
 const { randomId } = require('./ids');
 
 const activeGames = new Map();
@@ -111,6 +112,11 @@ async function startGame(rawPlayers, categoryKey) {
       rematchRequests: new Set(),
     };
     activeGames.set(gameId, game);
+    try {
+      categoryStats.recordStart(resolvedCategory, { players: game.players.length, chosen: !!categoryKey });
+    } catch (err) {
+      console.error('category-stats recordStart failed:', err);
+    }
     game.players.forEach((p) => playerSessions.set(p.id, gameId));
 
     game.players.forEach((p) => {
@@ -484,6 +490,11 @@ function endGame(game, reason) {
   game.phase = 'finished';
   game.finishedAt = Date.now();
   if (game.roundTimer) clearTimeout(game.roundTimer);
+  try {
+    categoryStats.recordFinish(game.categoryKey, reason || 'complete');
+  } catch (err) {
+    console.error('category-stats recordFinish failed:', err);
+  }
   game.players.forEach((p) => { if (p.reconnectTimer) clearTimeout(p.reconnectTimer); });
 
   const isSolo = game.mode === 'solo';
