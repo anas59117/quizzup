@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { AVATARS, CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon } from './ui';
 import { PlayerHud, Leaderboard } from './multiplayer';
-import { ProfileStats } from './stats';
+import { ProfileStats, RecentMatches } from './stats';
 import { FriendsScreen } from './social';
 import { useI18n } from './i18n';
 
@@ -222,6 +222,7 @@ export function ProfileContent({
       )}
 
       <ProfileStats stats={stats} />
+      <RecentMatches matches={stats.recent} />
       <button className="leaderboard-cta" onClick={onOpenLeaderboard}>
         <span className="leaderboard-cta-icon"><Icon name="trophy" size={20} /></span>
         <span className="leaderboard-cta-copy">

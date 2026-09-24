@@ -29,6 +29,51 @@ function uniqueStringList(value, { limit = 1000, maxLength = 160, exclude = null
   return out;
 }
 
+
+const MATCH_OUTCOMES = new Set(['win', 'loss', 'tie', 'solo']);
+const MATCH_MODES = new Set(['solo', 'multiplayer']);
+
+function normalizeRecentMatches(value, limit = 10) {
+  if (!Array.isArray(value)) return [];
+  const safeLimit = Math.max(1, Math.min(25, Math.floor(Number(limit) || 10)));
+  const out = [];
+
+  for (const raw of value) {
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) continue;
+    const outcome = MATCH_OUTCOMES.has(raw.outcome) ? raw.outcome : null;
+    const mode = MATCH_MODES.has(raw.mode) ? raw.mode : null;
+    if (!outcome || !mode) continue;
+    if (mode === 'solo' && outcome !== 'solo') continue;
+    if (mode === 'multiplayer' && outcome === 'solo') continue;
+
+    const opponents = Array.isArray(raw.opponents)
+      ? raw.opponents.slice(0, 3).map((opponent) => ({
+        name: String(opponent?.name || 'Player').trim().slice(0, 20) || 'Player',
+        avatar: String(opponent?.avatar || '\u{1F43A}').slice(0, 16),
+        score: asNonNegativeInt(opponent?.score, 0, 1_000_000_000),
+      }))
+      : [];
+
+    out.push({
+      playedAt: asNonNegativeInt(raw.playedAt, 0, Number.MAX_SAFE_INTEGER),
+      mode,
+      outcome,
+      score: asNonNegativeInt(raw.score, 0, 1_000_000_000),
+      xp: asNonNegativeInt(raw.xp, 0, Number.MAX_SAFE_INTEGER),
+      coins: asNonNegativeInt(raw.coins, 0, Number.MAX_SAFE_INTEGER),
+      categoryKey: typeof raw.categoryKey === 'string'
+        ? raw.categoryKey.trim().slice(0, 80) || null
+        : null,
+      opponents,
+      leftEarly: raw.leftEarly === true,
+    });
+
+    if (out.length >= safeLimit) break;
+  }
+
+  return out;
+}
+
 function normalizeStatsStore(value) {
   const out = nullDict();
   if (!value || typeof value !== 'object' || Array.isArray(value)) return out;
@@ -45,6 +90,7 @@ function normalizeStatsStore(value) {
       streak: asNonNegativeInt(raw.streak, 0, 1_000_000_000),
       xp: asNonNegativeInt(raw.xp, 0, Number.MAX_SAFE_INTEGER),
       coins: asNonNegativeInt(raw.coins, 0, Number.MAX_SAFE_INTEGER),
+      recent: normalizeRecentMatches(raw.recent, 10),
     };
   }
   return out;
@@ -170,6 +216,7 @@ module.exports = {
   asNonNegativeInt,
   uniqueStringList,
   normalizeStatsStore,
+  normalizeRecentMatches,
   normalizeSocialStore,
   normalizePostsStore,
   normalizeReportsStore,

@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const {
   normalizeStatsStore,
+  normalizeRecentMatches,
   normalizeSocialStore,
   normalizePostsStore,
   normalizeReportsStore,
@@ -14,7 +15,7 @@ test('stats normalization prevents string concatenation and invalid counters', (
   });
   assert.deepEqual(
     { ...stats.user },
-    { games: 12, wins: 12, streak: 0, xp: 450, coins: 0 }
+    { games: 12, wins: 12, streak: 0, xp: 450, coins: 0, recent: [] }
   );
   assert.equal(stats.bad, undefined);
   assert.equal(Object.getPrototypeOf(stats), null);
@@ -66,4 +67,67 @@ test('report normalization uses null-prototype keys and quarantines threshold hi
   assert.equal(reports.counts.danger, undefined);
   assert.equal(reports.quarantined.has('danger'), true);
   assert.equal(reports.counts.__proto__, 2);
+});
+
+
+test('recent match normalization bounds and sanitizes persisted history', () => {
+  const recent = normalizeRecentMatches([
+    {
+      playedAt: '1234',
+      mode: 'multiplayer',
+      outcome: 'win',
+      score: '420',
+      xp: 560,
+      coins: 50,
+      categoryKey: ' tennis ',
+      opponents: [
+        { name: ' Alice ', avatar: '🦊', score: '300' },
+        { name: '', avatar: '', score: -4 },
+      ],
+    },
+    { mode: 'invalid', outcome: 'win' },
+  ]);
+
+  assert.deepEqual(recent, [{
+    playedAt: 1234,
+    mode: 'multiplayer',
+    outcome: 'win',
+    score: 420,
+    xp: 560,
+    coins: 50,
+    categoryKey: 'tennis',
+    opponents: [
+      { name: 'Alice', avatar: '🦊', score: 300 },
+      { name: 'Player', avatar: '🐺', score: 0 },
+    ],
+    leftEarly: false,
+  }]);
+});
+
+test('recent match history is capped', () => {
+  const recent = normalizeRecentMatches(
+    Array.from({ length: 20 }, (_, index) => ({
+      playedAt: index,
+      mode: 'solo',
+      outcome: 'solo',
+      score: index,
+    })),
+    10
+  );
+  assert.equal(recent.length, 10);
+  assert.equal(recent[0].score, 0);
+  assert.equal(recent[9].score, 9);
+});
+
+
+test('recent match normalization rejects impossible solo/multiplayer outcomes', () => {
+  const recent = normalizeRecentMatches([
+    { mode: 'solo', outcome: 'win', score: 10 },
+    { mode: 'multiplayer', outcome: 'solo', score: 20 },
+    { mode: 'solo', outcome: 'solo', score: 30 },
+  ]);
+
+  assert.equal(recent.length, 1);
+  assert.equal(recent[0].mode, 'solo');
+  assert.equal(recent[0].outcome, 'solo');
 });

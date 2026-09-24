@@ -4,7 +4,7 @@
 
 const { createJsonWriter, readJsonFileSync } = require('./json-writer');
 const { getStorePath } = require('./store-path');
-const { normalizeStatsStore } = require('./store-normalize');
+const { normalizeStatsStore, normalizeRecentMatches } = require('./store-normalize');
 
 const STORE = getStorePath('stats.json');
 
@@ -83,6 +83,11 @@ function getLeaderboard(limit = 50, clientId = null) {
   return rankLeaderboard(stats, limit, clientId);
 }
 
+function appendRecentMatch(existing, match) {
+  if (!match) return Array.isArray(existing) ? existing.slice(0, 10) : [];
+  return normalizeRecentMatches([match, ...(Array.isArray(existing) ? existing : [])], 10);
+}
+
 function getStats(clientId) {
   const s = clientId && stats[clientId];
   const xp = s ? s.xp || 0 : 0;
@@ -96,14 +101,17 @@ function getStats(clientId) {
     level,
     xpIntoLevel,
     xpForLevel,
+    recent: s?.recent || [],
   };
 }
 
 // Records one finished game's outcome. A tie neither extends nor breaks
 // streak. `xpEarned` accumulates toward the player's persistent level.
-function recordResult(clientId, won, tie, xpEarned, coinsEarned = 0) {
+function recordResult(clientId, won, tie, xpEarned, coinsEarned = 0, match = null) {
   if (!clientId) return;
-  const s = stats[clientId] || { games: 0, wins: 0, streak: 0, xp: 0, coins: 0 };
+  const s = stats[clientId] || {
+    games: 0, wins: 0, streak: 0, xp: 0, coins: 0, recent: [],
+  };
   s.games += 1;
   if (won) { s.wins += 1; s.streak += 1; }
   else if (!tie) { s.streak = 0; }
@@ -115,8 +123,16 @@ function recordResult(clientId, won, tie, xpEarned, coinsEarned = 0) {
     Number.MAX_SAFE_INTEGER,
     (s.coins || 0) + Math.max(0, Math.floor(Number(coinsEarned) || 0))
   );
+  s.recent = appendRecentMatch(s.recent, match);
   stats[clientId] = s;
   persist();
 }
 
-module.exports = { getStats, getLeaderboard, rankLeaderboard, recordResult, levelFromXp };
+module.exports = {
+  getStats,
+  getLeaderboard,
+  rankLeaderboard,
+  recordResult,
+  levelFromXp,
+  appendRecentMatch,
+};
