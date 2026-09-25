@@ -373,6 +373,56 @@ const lesSimpson = require('./data/les_simpson.json');
 const southPark = require('./data/south_park.json');
 const avatarLeDernierMaitreDeLAir = require('./data/avatar_le_dernier_maitre_de_l_air.json');
 const bobLEponge = require('./data/bob_l_eponge.json');
+const shrek = require('./data/shrek.json');
+const jurassicPark = require('./data/jurassic_park.json');
+const indianaJones = require('./data/indiana_jones.json');
+const leSeigneurDesAnneaux = require('./data/le_seigneur_des_anneaux.json');
+const missionImpossible = require('./data/mission_impossible.json');
+const gtaV = require('./data/gta_v.json');
+const gtaSanAndreas = require('./data/gta_san_andreas.json');
+const redDeadRedemption = require('./data/red_dead_redemption.json');
+const godOfWar = require('./data/god_of_war.json');
+const residentEvil = require('./data/resident_evil.json');
+const finalFantasy = require('./data/final_fantasy.json');
+const brawlStars = require('./data/brawl_stars.json');
+const clashRoyale = require('./data/clash_royale.json');
+const rocketLeague = require('./data/rocket_league.json');
+const playstation = require('./data/playstation.json');
+const nintendo = require('./data/nintendo.json');
+const xbox = require('./data/xbox.json');
+const superSmashBros = require('./data/super_smash_bros.json');
+const marioKart = require('./data/mario_kart.json');
+const cyberpunk_2077 = require('./data/cyberpunk_2077.json');
+const theLastOfUsJeux = require('./data/the_last_of_us_jeux.json');
+const uncharted = require('./data/uncharted.json');
+const metalGear = require('./data/metal_gear.json');
+const tombRaider = require('./data/tomb_raider.json');
+const streetFighter = require('./data/street_fighter.json');
+const equipeDeFranceFootball = require('./data/equipe_de_france_football.json');
+const marocFootball = require('./data/maroc_football.json');
+const algerieFootball = require('./data/algerie_football.json');
+const portugalFootball = require('./data/portugal_football.json');
+const bresilFootball = require('./data/bresil_football.json');
+const argentineFootball = require('./data/argentine_football.json');
+const juventus = require('./data/juventus.json');
+const acMilan = require('./data/ac_milan.json');
+const atleticoDeMadrid = require('./data/atletico_de_madrid.json');
+const napoli = require('./data/napoli.json');
+const kylianMbappe = require('./data/kylian_mbappe.json');
+const zinedineZidane = require('./data/zinedine_zidane.json');
+const neymar = require('./data/neymar.json');
+const ronaldinho = require('./data/ronaldinho.json');
+const karimBenzema = require('./data/karim_benzema.json');
+const thierryHenry = require('./data/thierry_henry.json');
+const erlingHaaland = require('./data/erling_haaland.json');
+const mohamedSalah = require('./data/mohamed_salah.json');
+const lebronJames = require('./data/lebron_james.json');
+const michaelJordan = require('./data/michael_jordan.json');
+const automobile = require('./data/automobile.json');
+const logosGrandesMarques = require('./data/logos_grandes_marques.json');
+const sneakers = require('./data/sneakers.json');
+const marquesDeLuxe = require('./data/marques_de_luxe.json');
+const smartphones = require('./data/smartphones.json');
 
 
 
@@ -1169,6 +1219,56 @@ const CATEGORIES = {
   south_park: { label: "South Park", icon: "🎬", questions: [...southPark] },
   avatar_le_dernier_maitre_de_l_air: { label: "Avatar : le dernier maître de l’air", icon: "🎬", questions: [...avatarLeDernierMaitreDeLAir] },
   bob_l_eponge: { label: "Bob l’éponge", icon: "🎬", questions: [...bobLEponge] },
+  shrek: { label: "Shrek", icon: "🎬", questions: [...shrek] },
+  jurassic_park: { label: "Jurassic Park", icon: "🎬", questions: [...jurassicPark] },
+  indiana_jones: { label: "Indiana Jones", icon: "🎬", questions: [...indianaJones] },
+  le_seigneur_des_anneaux: { label: "Le Seigneur des anneaux", icon: "🎬", questions: [...leSeigneurDesAnneaux] },
+  mission_impossible: { label: "Mission: Impossible", icon: "🎬", questions: [...missionImpossible] },
+  gta_v: { label: "GTA V", icon: "🎮", questions: [...gtaV] },
+  gta_san_andreas: { label: "GTA: San Andreas", icon: "🎮", questions: [...gtaSanAndreas] },
+  red_dead_redemption: { label: "Red Dead Redemption", icon: "🎮", questions: [...redDeadRedemption] },
+  god_of_war: { label: "God of War", icon: "🎮", questions: [...godOfWar] },
+  resident_evil: { label: "Resident Evil", icon: "🎮", questions: [...residentEvil] },
+  final_fantasy: { label: "Final Fantasy", icon: "🎮", questions: [...finalFantasy] },
+  brawl_stars: { label: "Brawl Stars", icon: "🎮", questions: [...brawlStars] },
+  clash_royale: { label: "Clash Royale", icon: "🎮", questions: [...clashRoyale] },
+  rocket_league: { label: "Rocket League", icon: "🎮", questions: [...rocketLeague] },
+  playstation: { label: "PlayStation", icon: "🎮", questions: [...playstation] },
+  nintendo: { label: "Nintendo", icon: "🎮", questions: [...nintendo] },
+  xbox: { label: "Xbox", icon: "🎮", questions: [...xbox] },
+  super_smash_bros: { label: "Super Smash Bros.", icon: "🎮", questions: [...superSmashBros] },
+  mario_kart: { label: "Mario Kart", icon: "🎮", questions: [...marioKart] },
+  cyberpunk_2077: { label: "Cyberpunk 2077", icon: "🎮", questions: [...cyberpunk_2077] },
+  the_last_of_us_jeux: { label: "The Last of Us (jeux)", icon: "🎮", questions: [...theLastOfUsJeux] },
+  uncharted: { label: "Uncharted", icon: "🎮", questions: [...uncharted] },
+  metal_gear: { label: "Metal Gear", icon: "🎮", questions: [...metalGear] },
+  tomb_raider: { label: "Tomb Raider", icon: "🎮", questions: [...tombRaider] },
+  street_fighter: { label: "Street Fighter", icon: "🎮", questions: [...streetFighter] },
+  equipe_de_france_football: { label: "Équipe de France de football", icon: "⚽", questions: [...equipeDeFranceFootball] },
+  maroc_football: { label: "Maroc — Lions de l’Atlas", icon: "⚽", questions: [...marocFootball] },
+  algerie_football: { label: "Algérie — Fennecs", icon: "⚽", questions: [...algerieFootball] },
+  portugal_football: { label: "Portugal — Seleção", icon: "⚽", questions: [...portugalFootball] },
+  bresil_football: { label: "Brésil — Seleção", icon: "⚽", questions: [...bresilFootball] },
+  argentine_football: { label: "Argentine — Albiceleste", icon: "⚽", questions: [...argentineFootball] },
+  juventus: { label: "Juventus", icon: "⚽", questions: [...juventus] },
+  ac_milan: { label: "AC Milan", icon: "⚽", questions: [...acMilan] },
+  atletico_de_madrid: { label: "Atlético de Madrid", icon: "⚽", questions: [...atleticoDeMadrid] },
+  napoli: { label: "Napoli", icon: "⚽", questions: [...napoli] },
+  kylian_mbappe: { label: "Kylian Mbappé", icon: "⚽", questions: [...kylianMbappe] },
+  zinedine_zidane: { label: "Zinédine Zidane", icon: "⚽", questions: [...zinedineZidane] },
+  neymar: { label: "Neymar", icon: "⚽", questions: [...neymar] },
+  ronaldinho: { label: "Ronaldinho", icon: "⚽", questions: [...ronaldinho] },
+  karim_benzema: { label: "Karim Benzema", icon: "⚽", questions: [...karimBenzema] },
+  thierry_henry: { label: "Thierry Henry", icon: "⚽", questions: [...thierryHenry] },
+  erling_haaland: { label: "Erling Haaland", icon: "⚽", questions: [...erlingHaaland] },
+  mohamed_salah: { label: "Mohamed Salah", icon: "⚽", questions: [...mohamedSalah] },
+  lebron_james: { label: "LeBron James", icon: "⚽", questions: [...lebronJames] },
+  michael_jordan: { label: "Michael Jordan", icon: "⚽", questions: [...michaelJordan] },
+  automobile: { label: "Automobile", icon: "✨", questions: [...automobile] },
+  logos_grandes_marques: { label: "Logos et grandes marques", icon: "✨", questions: [...logosGrandesMarques] },
+  sneakers: { label: "Sneakers", icon: "✨", questions: [...sneakers] },
+  marques_de_luxe: { label: "Marques de luxe", icon: "✨", questions: [...marquesDeLuxe] },
+  smartphones: { label: "Smartphones", icon: "✨", questions: [...smartphones] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
@@ -1337,3 +1437,4 @@ module.exports = {
   selectProgressiveQuestions,
   shuffleQuestions,
 };
+
