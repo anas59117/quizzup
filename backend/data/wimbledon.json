@@ -96,5 +96,7 @@
   {"text": "Quel joueur a remporte le titre en double messieurs le plus souvent a Wimbledon ?", "answers": ["Todd Woodbridge", "Bob Bryan", "Mike Bryan", "John McEnroe"], "correct": 0},
   {"text": "Quelle est la particularite du Court Numero 18 de Wimbledon ?", "answers": ["Le plus ancien", "C'est la ou s'est joue le match Isner-Mahut", "Le plus petit", "Reserve aux juniors"], "correct": 1},
   {"text": "Quel joueur indien a remporte le titre en double mixte a Wimbledon en 2015 ?", "answers": ["Rohan Bopanna", "Sania Mirza", "Leander Paes", "Mahesh Bhupathi"], "correct": 2},
-  {"text": "En quelle annee le tournoi de Wimbledon a-t-il admis les joueurs professionnels pour la premiere fois ?", "answers": ["1970", "1975", "1965", "1968"], "correct": 3}
+  {"text": "En quelle annee le tournoi de Wimbledon a-t-il admis les joueurs professionnels pour la premiere fois ?", "answers": ["1970", "1975", "1965", "1968"], "correct": 3},
+  {"text":"Qui est devenue la première championne du simple dames à Wimbledon, en 1884 ?","answers":["Lottie Dod","Maud Watson","Blanche Bingley","Charlotte Cooper"],"correct":1,"difficulty":"expert"},
+  {"text":"Quelle joueuse est devenue en 1957 la première personne noire à gagner un titre de simple à Wimbledon ?","answers":["Althea Gibson","Angela Buxton","Darlene Hard","Zina Garrison"],"correct":0,"difficulty":"expert"}
 ]
