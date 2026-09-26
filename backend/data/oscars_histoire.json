@@ -498,5 +498,555 @@
       "Ellen DeGeneres"
     ],
     "correct": 1
+  },
+  {
+    "text": "Quel film muet reste le seul à avoir remporté l'Oscar du meilleur film ?",
+    "answers": [
+      "Wings",
+      "L'Aurore",
+      "The Artist",
+      "La Foule"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel film parlant fut le premier à remporter l'Oscar du meilleur film ?",
+    "answers": [
+      "The Jazz Singer",
+      "The Broadway Melody",
+      "Cimarron",
+      "All Quiet on the Western Front"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel film fut le premier long métrage en couleur sacré meilleur film ?",
+    "answers": [
+      "Le Magicien d'Oz",
+      "Rebecca",
+      "Autant en emporte le vent",
+      "Les Chaussons rouges"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel film est devenu en 1974 la première suite à gagner l'Oscar du meilleur film ?",
+    "answers": [
+      "L'Empire contre-attaque",
+      "Rocky II",
+      "French Connection II",
+      "Le Parrain, 2e partie"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle autre suite, après Le Parrain, 2e partie, a remporté l'Oscar du meilleur film ?",
+    "answers": [
+      "Le Seigneur des anneaux : Le Retour du roi",
+      "Toy Story 3",
+      "Mad Max: Fury Road",
+      "Avatar : La Voie de l'eau"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel film classé X lors de sa sortie est le seul à avoir remporté l'Oscar du meilleur film ?",
+    "answers": [
+      "Orange mécanique",
+      "Macadam Cowboy",
+      "Le Dernier Tango à Paris",
+      "La Grande Bouffe"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film français fut le premier film non anglophone nommé pour l'Oscar du meilleur film ?",
+    "answers": [
+      "Les Enfants du paradis",
+      "La Règle du jeu",
+      "La Grande Illusion",
+      "Le Salaire de la peur"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film britannique fut le premier film produit hors de Hollywood à remporter un Oscar, grâce à Charles Laughton ?",
+    "answers": [
+      "Les 39 Marches",
+      "Brève Rencontre",
+      "Henry V",
+      "La Vie privée d'Henry VIII"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film financé et tourné en Angleterre fut le premier film non hollywoodien sacré meilleur film ?",
+    "answers": [
+      "Hamlet",
+      "Henry V",
+      "Les Chaussons rouges",
+      "Brève Rencontre"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film de 1951 a remporté trois Oscars d'interprétation sans gagner les quatre ?",
+    "answers": [
+      "Ève",
+      "Un tramway nommé Désir",
+      "Tant qu'il y aura des hommes",
+      "Sur les quais"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film de 1976 a égalé le record de trois Oscars d'interprétation ?",
+    "answers": [
+      "Rocky",
+      "Taxi Driver",
+      "Network",
+      "Les Hommes du président"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice fut la première à gagner un Oscar pour une interprétation dans une langue autre que l'anglais ?",
+    "answers": [
+      "Anna Magnani",
+      "Ingrid Bergman",
+      "Giulietta Masina",
+      "Sophia Loren"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice fut la première à remporter deux Oscars d'interprétation deux années consécutives ?",
+    "answers": [
+      "Luise Rainer",
+      "Bette Davis",
+      "Katharine Hepburn",
+      "Vivien Leigh"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur remporta deux Oscars consécutifs pour Capitaines courageux puis Des hommes sont nés ?",
+    "answers": [
+      "Gary Cooper",
+      "Spencer Tracy",
+      "James Stewart",
+      "Clark Gable"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice remporta deux Oscars consécutifs pour Devine qui vient dîner ? puis Le Lion en hiver ?",
+    "answers": [
+      "Elizabeth Taylor",
+      "Anne Bancroft",
+      "Katharine Hepburn",
+      "Maggie Smith"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur remporta deux Oscars consécutifs du second rôle pour Les Hommes du président puis Julia ?",
+    "answers": [
+      "Walter Matthau",
+      "George Burns",
+      "Jack Nicholson",
+      "Jason Robards"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur remporta deux Oscars consécutifs pour Philadelphia puis Forrest Gump ?",
+    "answers": [
+      "Tom Hanks",
+      "Dustin Hoffman",
+      "Daniel Day-Lewis",
+      "Jack Nicholson"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice a gagné l'Oscar du second rôle pour avoir incarné un personnage masculin dans L'Année de tous les dangers ?",
+    "answers": [
+      "Tilda Swinton",
+      "Linda Hunt",
+      "Glenn Close",
+      "Jodie Foster"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur fut nommé à la fois comme acteur principal et second rôle pour la même prestation dans La Route semée d'étoiles ?",
+    "answers": [
+      "Bing Crosby",
+      "Walter Brennan",
+      "Barry Fitzgerald",
+      "Claude Rains"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur reçut un Oscar du second rôle et un Oscar d'honneur pour la même prestation dans Les Plus Belles Années de notre vie ?",
+    "answers": [
+      "Fredric March",
+      "Dana Andrews",
+      "Claude Rains",
+      "Harold Russell"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui détient le record masculin de quatre Oscars remportés lors d'une même cérémonie ?",
+    "answers": [
+      "Walt Disney",
+      "John Ford",
+      "Billy Wilder",
+      "Francis Ford Coppola"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle artiste a gagné trois Oscars lors de la soirée consacrant Le Retour du roi, pour le film, le scénario adapté et la chanson ?",
+    "answers": [
+      "Philippa Boyens",
+      "Fran Walsh",
+      "Annie Lennox",
+      "Peter Jackson"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel scénariste d'Autant en emporte le vent fut le premier lauréat posthume d'un Oscar ?",
+    "answers": [
+      "Ben Hecht",
+      "Robert Riskin",
+      "Sidney Howard",
+      "Herman J. Mankiewicz"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur de Network fut le premier lauréat posthume d'un Oscar d'interprétation ?",
+    "answers": [
+      "Heath Ledger",
+      "James Dean",
+      "Spencer Tracy",
+      "Peter Finch"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quels coréalisateurs ont tous deux reçu l'Oscar de la réalisation pour West Side Story ?",
+    "answers": [
+      "Robert Wise et Jerome Robbins",
+      "Gene Kelly et Stanley Donen",
+      "Joel et Ethan Coen",
+      "Michael Powell et Emeric Pressburger"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quels frères coréalisateurs ont tous deux reçu l'Oscar de la réalisation pour No Country for Old Men ?",
+    "answers": [
+      "Anthony et Joe Russo",
+      "Joel et Ethan Coen",
+      "Jean-Pierre et Luc Dardenne",
+      "Albert et Allen Hughes"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel réalisateur a remporté l'Oscar de la réalisation dramatique lors de la première cérémonie, pour L'Heure suprême ?",
+    "answers": [
+      "King Vidor",
+      "Frank Borzage",
+      "Lewis Milestone",
+      "Ernst Lubitsch"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel cinéaste fut le premier à gagner la même année les Oscars du meilleur film, de la réalisation et du scénario ?",
+    "answers": [
+      "William Wyler",
+      "David Lean",
+      "Elia Kazan",
+      "Billy Wilder"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle famille compte trois générations oscarisées avec Walter, John et Anjelica ?",
+    "answers": [
+      "La famille Huston",
+      "La famille Barrymore",
+      "La famille Fonda",
+      "La famille Redgrave"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle famille compte trois générations oscarisées avec Carmine, Francis Ford et Sofia ?",
+    "answers": [
+      "La famille Huston",
+      "La famille Coppola",
+      "La famille Newman",
+      "La famille Minnelli"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel frère et quelle sœur ont tous deux remporté un Oscar d'interprétation ?",
+    "answers": [
+      "Warren Beatty et Shirley MacLaine",
+      "Jake et Maggie Gyllenhaal",
+      "Lionel et Ethel Barrymore",
+      "John et Joan Cusack"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelles sœurs ont toutes deux remporté un Oscar de la meilleure actrice ?",
+    "answers": [
+      "Vanessa et Lynn Redgrave",
+      "Shirley MacLaine et Anne Baxter",
+      "Norma et Constance Talmadge",
+      "Olivia de Havilland et Joan Fontaine"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel couple marié a remporté des Oscars d'interprétation avec Monsieur Verdoux et Les Trois Visages d'Ève parmi leurs films respectifs ?",
+    "answers": [
+      "Paul Newman et Joanne Woodward",
+      "Laurence Olivier et Vivien Leigh",
+      "Spencer Tracy et Katharine Hepburn",
+      "Humphrey Bogart et Lauren Bacall"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice oscarisée avait une mère et un père eux-mêmes récompensés par l'Academy ?",
+    "answers": [
+      "Jane Fonda",
+      "Liza Minnelli",
+      "Angelina Jolie",
+      "Jamie Lee Curtis"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel scénariste de L'Informateur fut la première personne à refuser un Oscar ?",
+    "answers": [
+      "Dalton Trumbo",
+      "Woody Allen",
+      "Dudley Nichols",
+      "George C. Scott"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel directeur de la photographie gagna en 1935 le seul Oscar attribué à un candidat inscrit par vote libre ?",
+    "answers": [
+      "Gregg Toland",
+      "James Wong Howe",
+      "Karl Struss",
+      "Hal Mohr"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel directeur artistique de la MGM a conçu la statuette des Oscars ?",
+    "answers": [
+      "Cedric Gibbons",
+      "William Cameron Menzies",
+      "Jack Martin Smith",
+      "Edwin B. Willis"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel sculpteur a donné sa forme tridimensionnelle à la statuette conçue par Cedric Gibbons ?",
+    "answers": [
+      "Paul Manship",
+      "George Stanley",
+      "Alexander Calder",
+      "Isamu Noguchi"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Que représente la statuette des Oscars ?",
+    "answers": [
+      "Un réalisateur tenant une caméra",
+      "Une muse portant une pellicule",
+      "Un chevalier tenant une épée sur une bobine de film",
+      "Un acteur levant une étoile"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Que symbolisent les cinq rayons de la bobine au pied de la statuette ?",
+    "answers": [
+      "Les cinq premiers films primés",
+      "Les cinq grands studios de Hollywood",
+      "Les cinq catégories de la première cérémonie",
+      "Les cinq branches originelles de l'Academy"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le nom officiel de la statuette surnommée Oscar ?",
+    "answers": [
+      "Academy Award of Merit",
+      "Golden Academy Trophy",
+      "Motion Picture Medal",
+      "Hollywood Award of Excellence"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année l'Academy a-t-elle officiellement adopté le surnom « Oscar » ?",
+    "answers": [
+      "1929",
+      "1939",
+      "1934",
+      "1945"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "De quel matériau sont faites les statuettes actuelles avant leur placage à l'or 24 carats ?",
+    "answers": [
+      "Argent massif",
+      "Laiton",
+      "Bronze massif",
+      "Acier inoxydable"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quel matériau les Oscars furent-ils fabriqués pendant trois ans durant la Seconde Guerre mondiale ?",
+    "answers": [
+      "Bois doré",
+      "Aluminium",
+      "Verre moulé",
+      "Plâtre peint"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle est approximativement la hauteur d'une statuette Oscar ?",
+    "answers": [
+      "34,3 cm",
+      "25,4 cm",
+      "40,6 cm",
+      "50,8 cm"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est approximativement le poids d'une statuette Oscar ?",
+    "answers": [
+      "1,8 kg",
+      "3,9 kg",
+      "5,7 kg",
+      "7,5 kg"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui fut le premier récipiendaire d'une statuette Oscar, comme meilleur acteur en 1929 ?",
+    "answers": [
+      "Warner Baxter",
+      "George Arliss",
+      "Emil Jannings",
+      "Lionel Barrymore"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel hôtel de Los Angeles s'est tenu le premier banquet des Oscars le 16 mai 1929 ?",
+    "answers": [
+      "Beverly Hills Hotel",
+      "Biltmore Hotel",
+      "Ambassador Hotel",
+      "Hollywood Roosevelt Hotel"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui fut la première lauréate de l'Oscar de la meilleure actrice ?",
+    "answers": [
+      "Janet Gaynor",
+      "Mary Pickford",
+      "Norma Shearer",
+      "Marie Dressler"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de catégories distinctes de réalisation furent récompensées lors de la première cérémonie des Oscars ?",
+    "answers": [
+      "Une",
+      "Deux",
+      "Trois",
+      "Quatre"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
   }
 ]
