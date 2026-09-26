@@ -498,5 +498,555 @@
       "Chaque saison étudie une institution de la ville"
     ],
     "correct": 1
+  },
+  {
+    "text": "Quel téléfilm de 1968 précède la série régulière Columbo ?",
+    "answers": [
+      "Prescription: Murder",
+      "Murder by the Book",
+      "Dead Weight",
+      "A Friend in Deed"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle voiture le lieutenant Columbo conduit-il le plus souvent ?",
+    "answers": [
+      "Une Citroën DS",
+      "Une Peugeot 403",
+      "Une Renault 4",
+      "Une Fiat 500"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel vêtement froissé est associé au lieutenant Columbo ?",
+    "answers": [
+      "Un trench noir",
+      "Une veste en cuir",
+      "Un imperméable beige",
+      "Un pardessus rouge"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle phrase annonce souvent le retour de Columbo après une fausse sortie ?",
+    "answers": [
+      "« Je connais le coupable »",
+      "« Affaire classée »",
+      "« Appelez mon avocat »",
+      "« Encore une chose… »"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel cinéaste réalise l'épisode « Murder by the Book » de Columbo ?",
+    "answers": [
+      "Steven Spielberg",
+      "Brian De Palma",
+      "Sidney Lumet",
+      "Robert Altman"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur incarne Stringer Bell dans The Wire ?",
+    "answers": [
+      "Michael K. Williams",
+      "Idris Elba",
+      "Wendell Pierce",
+      "Clarke Peters"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Qui interprète Omar Little dans The Wire ?",
+    "answers": [
+      "Idris Elba",
+      "Lance Reddick",
+      "Michael K. Williams",
+      "Andre Royo"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel milieu occupe une place centrale dans la saison 2 de The Wire ?",
+    "answers": [
+      "Les salles de rédaction",
+      "Les écoles publiques",
+      "Les tribunaux fédéraux",
+      "Les docks de Baltimore"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle institution est explorée dans la saison 4 de The Wire ?",
+    "answers": [
+      "L'école publique",
+      "Le port marchand",
+      "La presse écrite",
+      "L'université de médecine"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel secteur devient central dans la saison 5 de The Wire ?",
+    "answers": [
+      "Les chantiers navals",
+      "La presse et les journaux",
+      "Le réseau scolaire",
+      "Les services hospitaliers"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice incarne l'avocate Joséphine Karlsson dans Engrenages ?",
+    "answers": [
+      "Caroline Proust",
+      "Emmanuelle Devos",
+      "Audrey Fleurot",
+      "Camille Cottin"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel juge d'instruction est incarné par Philippe Duclos dans Engrenages ?",
+    "answers": [
+      "Pierre Clément",
+      "Gilles Escoffier",
+      "Vincent Brémont",
+      "François Roban"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le vrai nom du policier surnommé « Gilou » dans Engrenages ?",
+    "answers": [
+      "Gilles Escoffier",
+      "François Roban",
+      "Pierre Clément",
+      "François Brémont"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur incarne « Gilou » dans Engrenages ?",
+    "answers": [
+      "Fred Bianconi",
+      "Thierry Godard",
+      "Grégory Fitoussi",
+      "Philippe Duclos"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel métier exerce Joséphine Karlsson dans Engrenages ?",
+    "answers": [
+      "Juge d'instruction",
+      "Lieutenante de police",
+      "Avocate",
+      "Médecin légiste"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice interprète l'enquêtrice Ellie Miller dans Broadchurch ?",
+    "answers": [
+      "Jodie Whittaker",
+      "Vicky McClure",
+      "Suranne Jones",
+      "Olivia Colman"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel lien unit Joe Miller à l'enquêtrice Ellie Miller dans Broadchurch ?",
+    "answers": [
+      "Il est son mari",
+      "Il est son frère",
+      "Il est son supérieur",
+      "Il est son père"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel personnage est jugé au cours de la deuxième saison de Broadchurch ?",
+    "answers": [
+      "Alec Hardy",
+      "Joe Miller",
+      "Mark Latimer",
+      "Paul Coates"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice incarne Beth Latimer, la mère de Danny, dans Broadchurch ?",
+    "answers": [
+      "Olivia Colman",
+      "Charlotte Rampling",
+      "Jodie Whittaker",
+      "Julie Hesmondhalgh"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans la saison 3 de Broadchurch, sur quelle agression Hardy et Miller enquêtent-ils ?",
+    "answers": [
+      "Le cambriolage de l'église",
+      "L'enlèvement de Tom Miller",
+      "L'incendie du port",
+      "L'agression sexuelle de Trish Winterman"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur incarne Marty Hart aux côtés de Rust Cohle dans la saison 1 de True Detective ?",
+    "answers": [
+      "Woody Harrelson",
+      "Colin Farrell",
+      "Vince Vaughn",
+      "Michael Potts"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel acteur joue Ray Velcoro dans la saison 2 de True Detective ?",
+    "answers": [
+      "Taylor Kitsch",
+      "Colin Farrell",
+      "Woody Harrelson",
+      "Stephen Dorff"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel comédien interprète Wayne Hays dans la saison 3 de True Detective ?",
+    "answers": [
+      "Michael Potts",
+      "Stephen Dorff",
+      "Mahershala Ali",
+      "Scoot McNairy"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice joue Liz Danvers dans True Detective: Night Country ?",
+    "answers": [
+      "Kali Reis",
+      "Rachel McAdams",
+      "Carmen Ejogo",
+      "Jodie Foster"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel État américain se déroule principalement True Detective: Night Country ?",
+    "answers": [
+      "L'Alaska",
+      "La Louisiane",
+      "La Californie",
+      "L'Arkansas"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur interprète le docteur John Watson dans Sherlock, la série de la BBC ?",
+    "answers": [
+      "Mark Gatiss",
+      "Martin Freeman",
+      "Andrew Scott",
+      "Rupert Graves"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel acteur incarne Jim Moriarty dans Sherlock ?",
+    "answers": [
+      "Mark Gatiss",
+      "Martin Freeman",
+      "Andrew Scott",
+      "Lars Mikkelsen"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel personnage Mark Gatiss joue-t-il dans Sherlock ?",
+    "answers": [
+      "John Watson",
+      "Jim Moriarty",
+      "Greg Lestrade",
+      "Mycroft Holmes"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice incarne Mme Hudson dans Sherlock ?",
+    "answers": [
+      "Una Stubbs",
+      "Amanda Abbington",
+      "Louise Brealey",
+      "Lara Pulver"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le titre du premier épisode de la série Sherlock (BBC) ?",
+    "answers": [
+      "The Blind Banker",
+      "A Study in Pink",
+      "The Great Game",
+      "A Scandal in Belgravia"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice interprète Alice Morgan dans la série Luther ?",
+    "answers": [
+      "Cynthia Erivo",
+      "Nicola Walker",
+      "Ruth Wilson",
+      "Indira Varma"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel est le titre du long métrage prolongeant la série Luther ?",
+    "answers": [
+      "Luther: The Dark City",
+      "Luther: Final Hour",
+      "Luther: Nightfall",
+      "Luther: The Fallen Sun"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel acteur incarne David Robey dans Luther: The Fallen Sun ?",
+    "answers": [
+      "Andy Serkis",
+      "Idris Elba",
+      "Dermot Crowley",
+      "Himesh Patel"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel personnage Cynthia Erivo interprète-t-elle dans Luther: The Fallen Sun ?",
+    "answers": [
+      "Alice Morgan",
+      "Odette Raine",
+      "Erin Gray",
+      "Megan Cantor"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Au début du film Luther: The Fallen Sun, quelle est la situation de John Luther ?",
+    "answers": [
+      "Il a quitté la police pour enseigner",
+      "Il vit en exil au Canada",
+      "Il est emprisonné",
+      "Il dirige la police de Londres"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle enquêtrice du CBI travaille étroitement avec Patrick Jane dans Mentalist ?",
+    "answers": [
+      "Grace Van Pelt",
+      "Erica Flynn",
+      "Lorelei Martins",
+      "Teresa Lisbon"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sous quel pseudonyme le tueur en série traqué par Patrick Jane est-il connu dans Mentalist ?",
+    "answers": [
+      "John le Rouge",
+      "Le Tueur au tarot",
+      "Le Fantôme rouge",
+      "Le Professeur"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel acteur incarne l'agent Kimball Cho dans Mentalist ?",
+    "answers": [
+      "Owain Yeoman",
+      "Tim Kang",
+      "Simon Baker",
+      "Pedro Pascal"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel personnage Amanda Righetti incarne-t-elle dans Mentalist ?",
+    "answers": [
+      "Teresa Lisbon",
+      "Erica Flynn",
+      "Grace Van Pelt",
+      "Kristina Frye"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur interprète Wayne Rigsby dans Mentalist ?",
+    "answers": [
+      "Tim Kang",
+      "Robin Tunney",
+      "Michael Gaston",
+      "Owain Yeoman"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment s'appelle la fille de Harry Bosch dans la série Bosch ?",
+    "answers": [
+      "Maddie",
+      "Ellie",
+      "Jess",
+      "Liz"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel acteur joue Jerry Edgar, partenaire de Bosch ?",
+    "answers": [
+      "Lance Reddick",
+      "Jamie Hector",
+      "Titus Welliver",
+      "Paul Calderón"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel métier Harry Bosch exerce-t-il au début de Bosch: Legacy ?",
+    "answers": [
+      "Procureur adjoint",
+      "Journaliste d'enquête",
+      "Détective privé",
+      "Médecin légiste"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice joue Maddie Bosch dans Bosch: Legacy ?",
+    "answers": [
+      "Mimi Rogers",
+      "Sarah Clarke",
+      "Annie Wersching",
+      "Madison Lintz"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel personnage d'avocate Mimi Rogers incarne-t-elle dans Bosch: Legacy ?",
+    "answers": [
+      "Honey Chandler",
+      "Eleanor Wish",
+      "Irvin Irving",
+      "Grace Billets"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle agence fédérale emploie Holden Ford et Bill Tench dans Mindhunter ?",
+    "answers": [
+      "La CIA",
+      "Le FBI",
+      "L'ATF",
+      "Le Secret Service"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Comment s'appelle la psychologue qui rejoint Ford et Tench dans Mindhunter ?",
+    "answers": [
+      "Carrie Mathison",
+      "Nancy Tench",
+      "Wendy Carr",
+      "Debbie Mitford"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel acteur interprète Holden Ford dans Mindhunter ?",
+    "answers": [
+      "Holt McCallany",
+      "Cameron Britton",
+      "Michael Cerveris",
+      "Jonathan Groff"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur joue l'agent Bill Tench dans Mindhunter ?",
+    "answers": [
+      "Holt McCallany",
+      "Jonathan Groff",
+      "Joe Tuttle",
+      "Cotter Smith"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice incarne la psychologue Wendy Carr dans Mindhunter ?",
+    "answers": [
+      "Hannah Gross",
+      "Anna Torv",
+      "Stacey Roca",
+      "Lauren Glazier"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
   }
 ]
