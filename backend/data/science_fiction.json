@@ -498,5 +498,555 @@
       "les réplicants"
     ],
     "correct": 1
+  },
+  {
+    "text": "Ex Machina : quel test Nathan demande-t-il à Caleb de mener auprès d'Ava ?",
+    "answers": [
+      "Le test de Turing",
+      "Le test de Voight-Kampff",
+      "Le test de Bechdel",
+      "Le test de Rorschach"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans Ex Machina, quel est le métier de Caleb Smith ?",
+    "answers": [
+      "Journaliste",
+      "Programmeur",
+      "Pilote",
+      "Neurologue"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Ex Machina : quel acteur incarne Nathan Bateman ?",
+    "answers": [
+      "Domhnall Gleeson",
+      "Jude Law",
+      "Oscar Isaac",
+      "Michael Fassbender"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Ex Machina : quelle actrice incarne Ava ?",
+    "answers": [
+      "Amy Adams",
+      "Rebecca Ferguson",
+      "Saoirse Ronan",
+      "Alicia Vikander"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel prix des Oscars Ex Machina a-t-il remporté en 2016 ?",
+    "answers": [
+      "Meilleurs effets visuels",
+      "Meilleur montage",
+      "Meilleure musique originale",
+      "Meilleur scénario adapté"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Gattaca : quelle institution Vincent rêve-t-il d'intégrer pour voyager dans l'espace ?",
+    "answers": [
+      "Tyrell Corporation",
+      "Gattaca Aerospace Corporation",
+      "Lunar Industries",
+      "Weyland-Yutani"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans Gattaca, comment la société désigne-t-elle Vincent, conçu sans sélection génétique ?",
+    "answers": [
+      "Un réplicant",
+      "Un précrime",
+      "Un In-Valid",
+      "Un Fremen"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Gattaca : de quel personnage Vincent emprunte-t-il l'identité génétique ?",
+    "answers": [
+      "Anton Freeman",
+      "Irene Cassini",
+      "Hugo Gernsback",
+      "Jerome Eugene Morrow"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Gattaca : quel acteur joue Vincent Freeman ?",
+    "answers": [
+      "Ethan Hawke",
+      "Jude Law",
+      "Alan Arkin",
+      "Oscar Isaac"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Gattaca : qui incarne Irene Cassini ?",
+    "answers": [
+      "Jodie Foster",
+      "Uma Thurman",
+      "Sigourney Weaver",
+      "Jennifer Connelly"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "District 9 : dans quelle ville sud-africaine les extraterrestres sont-ils regroupés ?",
+    "answers": [
+      "Le Cap",
+      "Durban",
+      "Johannesburg",
+      "Pretoria"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui a réalisé District 9 ?",
+    "answers": [
+      "Duncan Jones",
+      "Alex Garland",
+      "Gareth Edwards",
+      "Neill Blomkamp"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "District 9 : quel cinéaste est crédité comme producteur du film ?",
+    "answers": [
+      "Peter Jackson",
+      "James Cameron",
+      "Steven Spielberg",
+      "Guillermo del Toro"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans District 9, quelle technologie extraterrestre attire les convoitises humaines ?",
+    "answers": [
+      "Les téléporteurs",
+      "Les armes",
+      "Les machines à voyager dans le temps",
+      "Les droïdes de médecine"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "District 9 : dans quel type d'endroit les extraterrestres vivent-ils en périphérie de la ville ?",
+    "answers": [
+      "Une base lunaire",
+      "Une cité sous-marine",
+      "Un bidonville",
+      "Une station orbitale"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Moon : pour quelle entreprise Sam Bell travaille-t-il ?",
+    "answers": [
+      "Gattaca Aerospace",
+      "Weyland-Yutani",
+      "MNU",
+      "Lunar Industries"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Moon : quelle est la durée du contrat de Sam Bell sur la Lune ?",
+    "answers": [
+      "Trois ans",
+      "Six mois",
+      "Un an",
+      "Dix ans"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Moon : comment s'appelle l'ordinateur compagnon de Sam Bell ?",
+    "answers": [
+      "HAL 9000",
+      "GERTY",
+      "TARS",
+      "JARVIS"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Moon : quel acteur joue Sam Bell ?",
+    "answers": [
+      "Ethan Hawke",
+      "Matt Damon",
+      "Sam Rockwell",
+      "Sharlto Copley"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Moon : quel accident précède la découverte troublante de Sam Bell ?",
+    "answers": [
+      "Un incendie à bord d'un vaisseau",
+      "Une collision avec un astéroïde",
+      "Une panne sur Terre",
+      "Un accident à la surface lunaire"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Seul sur Mars : quel astronaute est abandonné après avoir été présumé mort ?",
+    "answers": [
+      "Mark Watney",
+      "Cooper",
+      "David Bowman",
+      "Sam Bell"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Qui a réalisé Seul sur Mars, sorti en 2015 ?",
+    "answers": [
+      "James Cameron",
+      "Ridley Scott",
+      "Christopher Nolan",
+      "Denis Villeneuve"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Seul sur Mars : qui interprète Mark Watney ?",
+    "answers": [
+      "Matthew McConaughey",
+      "Sam Rockwell",
+      "Matt Damon",
+      "Jake Gyllenhaal"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans Seul sur Mars, sur quelle planète Mark Watney lutte-t-il pour survivre ?",
+    "answers": [
+      "Vénus",
+      "Mercure",
+      "Jupiter",
+      "Mars"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Seul sur Mars : quel écrivain est l'auteur du roman adapté au cinéma ?",
+    "answers": [
+      "Andy Weir",
+      "Ted Chiang",
+      "Frank Herbert",
+      "Arthur C. Clarke"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Alien (1979) : quel est le nom du remorqueur spatial de l'équipage ?",
+    "answers": [
+      "Sulaco",
+      "Nostromo",
+      "Prometheus",
+      "Discovery One"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Alien (1979) : qui interprète Ellen Ripley ?",
+    "answers": [
+      "Jodie Foster",
+      "Linda Hamilton",
+      "Sigourney Weaver",
+      "Amy Adams"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Alien (1979) : quelle actrice interprète Lambert ?",
+    "answers": [
+      "Jodie Foster",
+      "Carrie Henn",
+      "Noomi Rapace",
+      "Veronica Cartwright"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Alien (1979) : quel acteur joue Ash, l'officier scientifique ?",
+    "answers": [
+      "Ian Holm",
+      "John Hurt",
+      "Tom Skerritt",
+      "Harry Dean Stanton"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Alien (1979) : quel artiste a conçu l'apparence de la créature xénomorphe ?",
+    "answers": [
+      "Syd Mead",
+      "H. R. Giger",
+      "Ralph McQuarrie",
+      "Carlo Rambaldi"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Avatar (2009) : comment s'appelle la lune sur laquelle Jake Sully est envoyé ?",
+    "answers": [
+      "Arrakis",
+      "LV-426",
+      "Pandora",
+      "Titan"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Avatar (2009) : quel est le prénom de la guerrière na'vi jouée par Zoe Saldaña ?",
+    "answers": [
+      "Kiri",
+      "Mo'at",
+      "Tsireya",
+      "Neytiri"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Avatar (2009) : quel ancien métier militaire Jake Sully exerçait-il ?",
+    "answers": [
+      "Marine",
+      "Pilote de chasse",
+      "Médecin militaire",
+      "Officier de marine"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Avatar (2009) : quel minerai rare la compagnie humaine exploite-t-elle sur Pandora ?",
+    "answers": [
+      "Épice",
+      "Unobtanium",
+      "Vibranium",
+      "Mithril"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Avatar (2009) : qui compose la musique du film ?",
+    "answers": [
+      "John Williams",
+      "Hans Zimmer",
+      "James Horner",
+      "Michael Giacchino"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Elysium : quel acteur joue Max ?",
+    "answers": [
+      "Sharlto Copley",
+      "Diego Luna",
+      "Sam Rockwell",
+      "Matt Damon"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Elysium : quelle actrice interprète Delacourt ?",
+    "answers": [
+      "Jodie Foster",
+      "Alice Braga",
+      "Sigourney Weaver",
+      "Amy Adams"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Elysium : quel acteur interprète Kruger ?",
+    "answers": [
+      "Oscar Isaac",
+      "Sharlto Copley",
+      "Jude Law",
+      "Jeremy Renner"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Elysium : quel cinéaste en a assuré la réalisation et l'écriture ?",
+    "answers": [
+      "Alex Garland",
+      "Duncan Jones",
+      "Neill Blomkamp",
+      "Denis Villeneuve"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Elysium : quel personnage est interprété par Alice Braga ?",
+    "answers": [
+      "Delacourt",
+      "Irene",
+      "Lambert",
+      "Frey"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Premier Contact (Arrival) : quel scénariste est crédité pour l'adaptation du film ?",
+    "answers": [
+      "Eric Heisserer",
+      "Ted Chiang",
+      "Jonathan Nolan",
+      "Alex Garland"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Premier Contact (Arrival) : qui signe la photographie du film ?",
+    "answers": [
+      "Roger Deakins",
+      "Bradford Young",
+      "Greig Fraser",
+      "Hoyte van Hoytema"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Premier Contact (Arrival) : quel acteur joue Ian Donnelly ?",
+    "answers": [
+      "Forest Whitaker",
+      "Oscar Isaac",
+      "Jeremy Renner",
+      "Michael Stuhlbarg"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Premier Contact (Arrival) : quel compositeur a écrit sa musique originale ?",
+    "answers": [
+      "Hans Zimmer",
+      "Clint Mansell",
+      "James Horner",
+      "Jóhann Jóhannsson"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Premier Contact (Arrival) : de quelle nouvelle de Ted Chiang le film est-il adapté ?",
+    "answers": [
+      "L'Histoire de ta vie",
+      "La Tour de Babylone",
+      "Comprends",
+      "Expiration"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Interstellar : quel compositeur signe sa bande originale ?",
+    "answers": [
+      "James Horner",
+      "Hans Zimmer",
+      "John Williams",
+      "Clint Mansell"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Interstellar : quel robot accompagne Cooper et son équipage ?",
+    "answers": [
+      "GERTY",
+      "HAL 9000",
+      "TARS",
+      "K-2SO"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Interstellar : quel prénom porte la fille de Cooper ?",
+    "answers": [
+      "Brand",
+      "Doyle",
+      "Mann",
+      "Murph"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Interstellar : quel acteur interprète le professeur Brand ?",
+    "answers": [
+      "Michael Caine",
+      "Matt Damon",
+      "John Lithgow",
+      "Casey Affleck"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Interstellar : quel nom porte le vaisseau utilisé pour franchir le trou de ver ?",
+    "answers": [
+      "Discovery One",
+      "Endurance",
+      "Nostromo",
+      "Hermes"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
   }
 ]
