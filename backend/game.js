@@ -142,6 +142,14 @@ async function startGame(rawPlayers, categoryKey) {
   }
 }
 
+// Photos of this round and the next one, sent with the round intro so the
+// browser downloads them before the question appears.
+function upcomingImages(game, round) {
+  return [game.questions[round], game.questions[round + 1]]
+    .map((q) => (q && q.image) || null)
+    .filter(Boolean);
+}
+
 function nextQuestion(game) {
   if (game.status !== 'active') return;
   if (game.roundTimer) clearTimeout(game.roundTimer);
@@ -159,6 +167,7 @@ function nextQuestion(game) {
       type: 'round_intro', round: nextRound + 1,
       totalRounds: game.questions.length,
       category: q.category, icon: q.icon, difficulty: q.difficulty, isBonus: isFinal,
+      preloadImages: upcomingImages(game, nextRound),
     });
   });
 
@@ -341,6 +350,7 @@ function sendCurrentState(game, player) {
       totalRounds: game.questions.length,
       category: q.category, icon: q.icon,
       isBonus: game.currentRound === game.questions.length - 1,
+      preloadImages: upcomingImages(game, game.currentRound),
     });
   } else if (game.phase === 'question') {
     const elapsed = performance.now() - game.questionStart;

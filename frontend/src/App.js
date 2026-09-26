@@ -87,6 +87,8 @@ export default function App() {
   const [leaderboardReturn, setLeaderboardReturn] = useState('profile');
   const leaderboardCategoryRef = useRef(null);
   const tickRef = useRef(null);
+  // Keeps preloading <img> objects alive until their download finishes.
+  const preloadedImagesRef = useRef(new Map());
   const copyTimerRef = useRef(null);
   const pendingTimerRef = useRef(null);
   const toastTimerRef = useRef(null);
@@ -430,6 +432,17 @@ export default function App() {
         setStage('playing');
         break;
       case 'round_intro':
+        if (Array.isArray(data.preloadImages)) {
+          const cache = preloadedImagesRef.current;
+          data.preloadImages.forEach((src) => {
+            if (typeof src !== 'string' || cache.has(src)) return;
+            const img = new window.Image();
+            img.decoding = 'async';
+            img.src = src;
+            cache.set(src, img);
+            if (cache.size > 40) cache.delete(cache.keys().next().value);
+          });
+        }
         if (data.isBonus) SFX.bonusIntro(); else SFX.roundIntro();
         setIntro(data);
         setQuestion(null);

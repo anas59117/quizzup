@@ -94,7 +94,7 @@ export const CATEGORIES = [
   { key: 'rugby', label: 'Rugby', icon: '\u{1F3C9}', grad: 'g44', tag: '\u{1F4F8}', desc: 'Devine la légende du rugby', family: 'sport', cover: '/images/quizphotos/rugby/antoine_dupont.jpg' },
   { key: 'boxe', label: 'Boxe', icon: '\u{1F94A}', grad: 'g45', tag: '\u{1F4F8}', desc: 'Devine le champion de boxe', family: 'sport', cover: '/images/quizphotos/boxe/mohamed_ali.jpg' },
   { key: 'athletisme', label: 'Athlétisme', icon: '\u{1F3C3}', grad: 'g46', tag: '\u{1F4F8}', desc: "Devine la légende de l'athlé", family: 'sport', cover: '/images/quizphotos/athletisme/usain_bolt.jpg' },
-  { key: 'science_stars', label: 'Savants Célèbres', icon: '\u{1F52C}', grad: 'g47', tag: '\u{1F4F8}', desc: 'Devine le grand scientifique', family: 'culture', cover: '/images/quizphotos/science/leonard_de_vinci.png' },
+  { key: 'science_stars', label: 'Savants Célèbres', icon: '\u{1F52C}', grad: 'g47', tag: '\u{1F4F8}', desc: 'Devine le grand scientifique', family: 'culture', cover: '/images/quizphotos/science/leonard_de_vinci.webp' },
   { key: 'humour', label: 'Humour', icon: '\u{1F602}', grad: 'g48', tag: '\u{1F4F8}', desc: 'Devine la légende comique', family: 'entertainment', cover: '/images/quizphotos/humour/charlie_chaplin.jpg' },
   { key: 'mode', label: 'Mode', icon: '\u{1F483}', grad: 'g49', tag: '\u{1F4F8}', desc: "Devine l'icône de mode", family: 'entertainment', cover: '/images/quizphotos/mode/marilyn_monroe.jpg' },
   { key: 'kpop', label: 'K-pop', icon: '\u{1F1F0}\u{1F1F7}', grad: 'g50', tag: '\u{1F4F8}', desc: 'Devine la star ou le groupe K-pop', family: 'music', cover: '/images/quizphotos/kpop/rm.jpg' },
