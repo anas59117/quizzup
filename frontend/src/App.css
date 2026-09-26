@@ -946,3 +946,6 @@ button.topic-level-row:hover { border-color:var(--border-strong); }
 .result-topic-level strong { display:block; font-size:.86rem; }
 .result-topic-level small { color:#aaaab2; font-size:.72rem; }
 
+/* Boot splash (replaces the pseudo/avatar screen) */
+.boot-splash { min-height:70vh; justify-content:center; }
+.boot-splash .loading-bar { width:min(220px,60vw); margin-top:28px; }

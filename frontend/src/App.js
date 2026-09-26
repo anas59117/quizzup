@@ -8,7 +8,7 @@ import { useStats } from './stats';
 import { useFeed, FeedScreen } from './feed';
 import { usePlayers, PlayerSheet } from './players';
 import { RoomLobby } from './multiplayer';
-import { AVATARS, useTheme, TopControls, NavBar, JoinScreen, ErrorScreen, Toast } from './ui';
+import { AVATARS, useTheme, TopControls, NavBar, ErrorScreen, Toast } from './ui';
 import { HomeContent, EnterCodeContent, CategoriesContent, ProfileContent, LeaderboardContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent } from './screens';
 import { useI18n } from './i18n';
 import { useGameSocket } from './useGameSocket';
@@ -42,10 +42,16 @@ export default function App() {
   const [fatalCode, setFatalCode] = useState('');
   const [categoryFamily, setCategoryFamily] = useState(null);
   const [name, setName] = useState(() => {
-    try { return localStorage.getItem('quizzup-name') || ''; } catch { return ''; }
+    // No sign-up screen: first-time visitors get a generated pseudo they can
+    // change later in Profile, and go straight to Home.
+    let saved = '';
+    try { saved = localStorage.getItem('quizzup-name') || ''; } catch { /* ignore */ }
+    return saved.trim() ? saved : `Joueur${Math.floor(1000 + Math.random() * 9000)}`;
   });
   const [avatar, setAvatar] = useState(() => {
-    try { return localStorage.getItem('quizzup-avatar') || AVATARS[0]; } catch { return AVATARS[0]; }
+    let saved = '';
+    try { saved = localStorage.getItem('quizzup-avatar') || ''; } catch { /* ignore */ }
+    return saved || AVATARS[Math.floor(Math.random() * AVATARS.length)];
   });
   useEffect(() => {
     try {
@@ -687,14 +693,27 @@ export default function App() {
 
   function newMatch() { playAgain(); quickMatch(); }
 
+  // Safety net: never leave someone on the splash if the connection is slow.
+  useEffect(() => {
+    if (stage !== 'join') return undefined;
+    const timer = setTimeout(() => setStage((s) => (s === 'join' ? 'home' : s)), 5000);
+    return () => clearTimeout(timer);
+  }, [stage]);
+
   const topProps = useMemo(() => ({ muted, toggleMute, theme, toggleTheme }), [muted, toggleMute, theme, toggleTheme]);
 
   // --- Screens ---------------------------------------------------------------
   if (stage === 'join') {
+    // Brief splash while the saved/generated identity connects and any
+    // unfinished game is recovered; then Home (or the recovered match).
     return (
       <div className="app">
         <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
-        <JoinScreen name={name} setName={setName} avatar={avatar} setAvatar={setAvatar} onContinue={() => setStage('home')} />
+        <div className="container center boot-splash" aria-busy="true">
+          <div className="join-brandmark">Q</div>
+          <h1 className="logo">Quizz<span>Up</span></h1>
+          <div className="loading-bar"><div className="loading-fill" /></div>
+        </div>
       </div>
     );
   }
