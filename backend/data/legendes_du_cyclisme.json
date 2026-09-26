@@ -1,100 +1,1002 @@
 [
-  {"text": "Quel coureur belge est surnomme 'Le Cannibale' ?", "answers": ["Roger De Vlaeminck", "Eddy Merckx", "Freddy Maertens", "Rik Van Looy"], "correct": 1},
-  {"text": "Combien de Tours de France Eddy Merckx a-t-il remportes ?", "answers": ["3", "4", "5", "6"], "correct": 2},
-  {"text": "Quel coureur francais est surnomme 'Le Blaireau' ?", "answers": ["Jacques Anquetil", "Bernard Hinault", "Laurent Fignon", "Raymond Poulidor"], "correct": 1},
-  {"text": "Combien de Tours de France Bernard Hinault a-t-il gagnes ?", "answers": ["3", "4", "5", "6"], "correct": 2},
-  {"text": "Quel coureur espagnol a remporte cinq Tours de France consecutifs de 1991 a 1995 ?", "answers": ["Alberto Contador", "Miguel Indurain", "Pedro Delgado", "Federico Bahamontes"], "correct": 1},
-  {"text": "En quelle annee le premier Tour de France a-t-il eu lieu ?", "answers": ["1899", "1903", "1907", "1910"], "correct": 1},
-  {"text": "Quel coureur francais a remporte le premier Tour de France en 1903 ?", "answers": ["Lucien Petit-Breton", "Maurice Garin", "Henri Desgrange", "Louis Trousselier"], "correct": 1},
-  {"text": "Quel journaliste a fonde le Tour de France ?", "answers": ["Pierre Giffard", "Henri Desgrange", "Victor Goddet", "Albert Londres"], "correct": 1},
-  {"text": "Comment s'appelle le maillot porte par le leader du classement general du Tour de France ?", "answers": ["Maillot vert", "Maillot a pois", "Maillot jaune", "Maillot blanc"], "correct": 2},
-  {"text": "Quel maillot recompense le meilleur grimpeur du Tour de France ?", "answers": ["Maillot jaune", "Maillot vert", "Maillot a pois rouges", "Maillot blanc"], "correct": 2},
-  {"text": "Quel maillot recompense le meilleur sprinteur au classement par points du Tour de France ?", "answers": ["Maillot jaune", "Maillot vert", "Maillot a pois", "Maillot blanc"], "correct": 1},
-  {"text": "A qui est destine le maillot blanc du Tour de France ?", "answers": ["Le meilleur grimpeur", "Le leader du general", "Le meilleur jeune", "Le meilleur Francais"], "correct": 2},
-  {"text": "Quel coureur francais n'a jamais gagne le Tour de France malgre 14 participations et 8 podiums ?", "answers": ["Bernard Hinault", "Laurent Fignon", "Raymond Poulidor", "Louison Bobet"], "correct": 2},
-  {"text": "Combien de Tours de France Jacques Anquetil a-t-il remportes ?", "answers": ["3", "4", "5", "6"], "correct": 2},
-  {"text": "Quel coureur americain a ete dechu de ses 7 victoires au Tour de France pour dopage ?", "answers": ["Floyd Landis", "Lance Armstrong", "Tyler Hamilton", "Levi Leipheimer"], "correct": 1},
-  {"text": "Combien de victoires au Tour de France Lance Armstrong s'est-il vu retirer ?", "answers": ["3", "5", "7", "9"], "correct": 2},
-  {"text": "Quel col mythique du Tour de France culmine a 2115 metres dans les Pyrenees ?", "answers": ["Col du Galibier", "Col du Tourmalet", "Col de l'Izoard", "Col de Peyresourde"], "correct": 1},
-  {"text": "Quel sommet des Alpes est l'arrivee la plus mythique du Tour de France ?", "answers": ["Col du Galibier", "Le Mont Ventoux", "L'Alpe d'Huez", "Col de la Madeleine"], "correct": 2},
-  {"text": "Combien de lacets compte la montee de l'Alpe d'Huez ?", "answers": ["15", "18", "21", "24"], "correct": 2},
-  {"text": "Quel coureur italien a remporte le Tour de France 2014 ?", "answers": ["Fabio Aru", "Ivan Basso", "Vincenzo Nibali", "Damiano Cunego"], "correct": 2},
-  {"text": "Quelle classique cycliste est surnommee 'La Reine des classiques' ou 'L'Enfer du Nord' ?", "answers": ["Milan-San Remo", "Paris-Roubaix", "Le Tour des Flandres", "Liege-Bastogne-Liege"], "correct": 1},
-  {"text": "Quelles sont les cinq courses cyclistes appelees 'les Monuments du cyclisme' ?", "answers": ["Tour, Giro, Vuelta, classiques, championnats", "Milan-San Remo, Tour des Flandres, Paris-Roubaix, Liege-Bastogne-Liege, Tour de Lombardie", "Fleche Wallonne, Amstel, Strade Bianche, San Remo, Roubaix", "Paris-Nice, Tirreno, Dauphine, Suisse, Pays Basque"], "correct": 1},
-  {"text": "Quel coureur belge est le recordman de victoires sur Paris-Roubaix avec 4 victoires ?", "answers": ["Eddy Merckx", "Roger De Vlaeminck", "Tom Boonen", "Johan Museeuw"], "correct": 1},
-  {"text": "Comment appelle-t-on les trois grands tours cyclistes ?", "answers": ["Tour, Giro, Vuelta", "Tour, Classiques, Championnats", "Giro, Vuelta, Tour de Suisse", "Tour, Giro, Tour de Pologne"], "correct": 0},
-  {"text": "Quel coureur britannique a remporte le Tour de France 2012 ?", "answers": ["Chris Froome", "Bradley Wiggins", "Mark Cavendish", "Geraint Thomas"], "correct": 1},
-  {"text": "Combien de Tours de France Chris Froome a-t-il remportes ?", "answers": ["2", "3", "4", "5"], "correct": 2},
-  {"text": "Quel sprinter britannique detient le record de victoires d'etapes sur le Tour de France (34) ?", "answers": ["Chris Froome", "Bradley Wiggins", "Mark Cavendish", "Tom Simpson"], "correct": 2},
-  {"text": "Quel coureur francais a gagne le Tour de France 1985 et 1986 ?", "answers": ["Bernard Hinault", "Laurent Fignon", "Greg LeMond", "Pedro Delgado"], "correct": 0},
-  {"text": "Quel coureur americain a remporte le Tour de France 1986 avec seulement 8 secondes d'avance ?", "answers": ["Lance Armstrong", "Greg LeMond", "Floyd Landis", "Andy Hampsten"], "correct": 1},
-  {"text": "En quelle annee Greg LeMond a-t-il remporte le Tour de France avec la plus faible marge de l'histoire (8 secondes) ?", "answers": ["1986", "1987", "1989", "1990"], "correct": 2},
-  {"text": "Quel coureur francais a perdu le Tour 1989 face a LeMond pour 8 secondes ?", "answers": ["Bernard Hinault", "Laurent Fignon", "Raymond Poulidor", "Charly Mottet"], "correct": 1},
-  {"text": "Quel coureur italien est surnomme 'Il Pirata' ?", "answers": ["Marco Pantani", "Ivan Basso", "Vincenzo Nibali", "Fabio Casartelli"], "correct": 0},
-  {"text": "Quel coureur a realise le double Giro-Tour de France en 1998 ?", "answers": ["Jan Ullrich", "Marco Pantani", "Bjarne Riis", "Laurent Jalabert"], "correct": 1},
-  {"text": "Quel coureur allemand a remporte le Tour de France 1997 ?", "answers": ["Erik Zabel", "Andreas Kloden", "Jan Ullrich", "Jens Voigt"], "correct": 2},
-  {"text": "Quel col alpin est surnomme 'le Geant de Provence' ?", "answers": ["L'Alpe d'Huez", "Le Mont Ventoux", "Le Col du Galibier", "Le Col de la Bonette"], "correct": 1},
-  {"text": "Quel coureur britannique est mort sur les pentes du Mont Ventoux lors du Tour 1967 ?", "answers": ["Tom Simpson", "Barry Hoban", "Robert Millar", "Brian Robinson"], "correct": 0},
-  {"text": "Quel coureur francais a remporte trois Tours de France consecutifs (1953-1955) ?", "answers": ["Jacques Anquetil", "Louison Bobet", "Andre Leducq", "Rene Vietto"], "correct": 1},
-  {"text": "Quel coureur slovene a domine le Tour de France dans les annees 2020 ?", "answers": ["Primoz Roglic", "Tadej Pogacar", "Matej Mohoric", "Jan Polanc"], "correct": 1},
-  {"text": "En quelle annee Tadej Pogacar a-t-il remporte son premier Tour de France ?", "answers": ["2019", "2020", "2021", "2022"], "correct": 1},
-  {"text": "Quel coureur danois a remporte le Tour de France 2022 ?", "answers": ["Kasper Asgreen", "Jonas Vingegaard", "Jakob Fuglsang", "Magnus Cort"], "correct": 1},
-  {"text": "Quel coureur detient le record d'etapes remportees sur le Tour de France (tous temps) ?", "answers": ["Eddy Merckx", "Mark Cavendish", "Bernard Hinault", "Andre Leducq"], "correct": 1},
-  {"text": "Combien d'etapes Eddy Merckx a-t-il remportees sur le Tour de France ?", "answers": ["28", "30", "34", "36"], "correct": 2},
-  {"text": "Quel est le surnom du Giro d'Italia ?", "answers": ["La Grande Boucle", "La Corsa Rosa", "La Vuelta Rosa", "Il Grande Giro"], "correct": 1},
-  {"text": "De quelle couleur est le maillot du leader du Giro d'Italia ?", "answers": ["Jaune", "Rouge", "Rose", "Bleu"], "correct": 2},
-  {"text": "Quel coureur italien detient le record de victoires au Giro avec 5 succes ?", "answers": ["Fausto Coppi", "Alfredo Binda", "Gino Bartali", "Les trois en ont 5 sauf Bartali"], "correct": 1},
-  {"text": "Quel coureur legendaire est surnomme 'Il Campionissimo' ?", "answers": ["Gino Bartali", "Fausto Coppi", "Alfredo Binda", "Costante Girardengo"], "correct": 1},
-  {"text": "Quelle rivalite cycliste italienne a divise le pays apres la Seconde Guerre mondiale ?", "answers": ["Moser vs Saronni", "Binda vs Guerra", "Coppi vs Bartali", "Nibali vs Aru"], "correct": 2},
-  {"text": "Quel coureur espagnol a remporte 3 Tours d'Espagne et 2 Tours de France ?", "answers": ["Miguel Indurain", "Alberto Contador", "Pedro Delgado", "Federico Bahamontes"], "correct": 1},
-  {"text": "Quel coureur est surnomme 'El Pistolero' ?", "answers": ["Miguel Indurain", "Alejandro Valverde", "Alberto Contador", "Oscar Pereiro"], "correct": 2},
-  {"text": "Quelle est la plus ancienne des classiques cyclistes (premiere edition en 1892) ?", "answers": ["Paris-Roubaix", "Milan-San Remo", "Liege-Bastogne-Liege", "Tour de Lombardie"], "correct": 2},
-  {"text": "Milan-San Remo est surnommee comment ?", "answers": ["L'Enfer du Nord", "La Classicissima", "La Doyenne", "La Primavera"], "correct": 3},
-  {"text": "Liege-Bastogne-Liege est surnommee comment ?", "answers": ["La Primavera", "L'Enfer du Nord", "La Doyenne", "Le Monument des Ardennes"], "correct": 2},
-  {"text": "Quel coureur belge a remporte le plus de classiques et est surnomme 'le Lion des Flandres' ?", "answers": ["Eddy Merckx", "Johan Museeuw", "Roger De Vlaeminck", "Tom Boonen"], "correct": 1},
-  {"text": "Quel coureur belge a remporte 4 Paris-Roubaix et 4 Tours des Flandres ?", "answers": ["Roger De Vlaeminck", "Tom Boonen", "Eddy Merckx", "Fabian Cancellara"], "correct": 1},
-  {"text": "Quel coureur suisse est surnomme 'Spartacus' ?", "answers": ["Tony Rominger", "Fabian Cancellara", "Stefan Kung", "Hugo Koblet"], "correct": 1},
-  {"text": "Quel coureur slovaque a remporte le maillot vert du Tour de France 3 fois pour la Bora-Hansgrohe ?", "answers": ["Juraj Sagan", "Peter Sagan", "Michael Kolar", "Erik Baska"], "correct": 1},
-  {"text": "Combien de maillots verts Peter Sagan a-t-il remportes au Tour de France ?", "answers": ["5", "6", "7", "8"], "correct": 2},
-  {"text": "Quelle course a etapes espagnole fait partie des trois grands tours ?", "answers": ["Le Tour de Catalogne", "La Vuelta a Espana", "Le Tour du Pays Basque", "La Classica San Sebastian"], "correct": 1},
-  {"text": "De quelle couleur est le maillot du leader de la Vuelta a Espana ?", "answers": ["Jaune", "Rose", "Rouge", "Blanc"], "correct": 2},
-  {"text": "Quel coureur espagnol legendaire est surnomme 'L'Aigle de Tolede' ?", "answers": ["Miguel Indurain", "Alberto Contador", "Pedro Delgado", "Federico Bahamontes"], "correct": 3},
-  {"text": "Quel coureur a remporte le plus de Championnats du monde sur route ?", "answers": ["Eddy Merckx", "Alfredo Binda", "Peter Sagan", "Rik Van Steenbergen"], "correct": 1},
-  {"text": "De quelle couleur est le maillot du Champion du monde sur route ?", "answers": ["Jaune", "Arc-en-ciel (bandes multicolores)", "Blanc", "Bleu"], "correct": 1},
-  {"text": "Quel coureur neerlandais etait un contre-la-montre legendaire surnomme 'Le Professeur' ?", "answers": ["Jan Janssen", "Joop Zoetemelk", "Tom Dumoulin", "Steven Kruijswijk"], "correct": 1},
-  {"text": "Quel coureur francais a remporte 8 etapes du Tour 1970 et le maillot jaune ?", "answers": ["Bernard Hinault", "Eddy Merckx", "Luis Ocana", "Raymond Poulidor"], "correct": 1},
-  {"text": "Quel coureur colombien est surnomme 'le Scarabee' et a excelle en montagne dans les annees 1980 ?", "answers": ["Nairo Quintana", "Lucho Herrera", "Fabio Parra", "Rigoberto Uran"], "correct": 1},
-  {"text": "Quel contre-la-montre historique Greg LeMond a-t-il remporte pour gagner le Tour 1989 ?", "answers": ["Le prologue a Paris", "Le CLM des Champs-Elysees", "Le CLM de Versailles a Paris", "Le CLM de Pau"], "correct": 2},
-  {"text": "Quel equipement revolutionnaire Greg LeMond a-t-il utilise lors du CLM final du Tour 1989 ?", "answers": ["Un casque pointu", "Un guidon de triathlon (prolongateur)", "Des roues lenticulaires", "Des pedales automatiques"], "correct": 1},
-  {"text": "Quel coureur irlandais a porte le maillot jaune du Tour de France en 1987 ?", "answers": ["Sean Kelly", "Stephen Roche", "Martin Earley", "Sam Bennett"], "correct": 1},
-  {"text": "Quel coureur irlandais a realise le triple couronne (Giro, Tour, Mondial) en 1987 ?", "answers": ["Sean Kelly", "Stephen Roche", "Nicolas Roche", "Dan Martin"], "correct": 1},
-  {"text": "Quel coureur francais est devenu champion du monde en 1997 a San Sebastian ?", "answers": ["Richard Virenque", "Laurent Brochard", "Laurent Jalabert", "Luc Leblanc"], "correct": 1},
-  {"text": "Quel coureur francais etait le 'meilleur grimpeur' avec 7 maillots a pois au Tour ?", "answers": ["Laurent Jalabert", "Richard Virenque", "Thibaut Pinot", "Thomas Voeckler"], "correct": 1},
-  {"text": "Quel scandale de dopage a secoue le Tour de France 1998 ?", "answers": ["L'affaire Puerto", "L'affaire Festina", "L'affaire Armstrong", "L'affaire Fuentes"], "correct": 1},
-  {"text": "Quel coureur francais a porte le maillot jaune au Tour 2011 avec panache ?", "answers": ["Thibaut Pinot", "Thomas Voeckler", "Romain Bardet", "Sylvain Chavanel"], "correct": 1},
-  {"text": "Quel coureur a gagne le Tour de France en portant le numero 51 en 2011 ?", "answers": ["Andy Schleck", "Cadel Evans", "Alberto Contador", "Frank Schleck"], "correct": 1},
-  {"text": "Quel coureur australien a remporte le Tour de France 2011 ?", "answers": ["Richie Porte", "Cadel Evans", "Simon Gerrans", "Michael Matthews"], "correct": 1},
-  {"text": "Quel coureur gallois a remporte le Tour de France 2018 ?", "answers": ["Chris Froome", "Geraint Thomas", "Luke Rowe", "Simon Yates"], "correct": 1},
-  {"text": "Quel colombien a termine deuxieme du Tour 2019 et 2020 ?", "answers": ["Nairo Quintana", "Egan Bernal", "Rigoberto Uran", "Daniel Martinez"], "correct": 1},
-  {"text": "Quel coureur colombien a remporte le Tour de France 2019 ?", "answers": ["Nairo Quintana", "Egan Bernal", "Rigoberto Uran", "Esteban Chaves"], "correct": 1},
-  {"text": "Quel est le record de l'heure en cyclisme sur piste (non motorise) ?", "answers": ["Environ 50 km", "Environ 52 km", "Environ 56 km", "Environ 60 km"], "correct": 2},
-  {"text": "Quel type de course cycliste se deroule sur un velodrome ?", "answers": ["La route", "Le cyclocross", "La piste", "Le VTT"], "correct": 2},
-  {"text": "Quel coureur britannique a domine le cyclisme sur piste aux Jeux olympiques ?", "answers": ["Bradley Wiggins", "Chris Hoy", "Mark Cavendish", "Jason Kenny"], "correct": 3},
-  {"text": "Quelle classique pavee se court au printemps en Belgique et passe par le Mur de Grammont ?", "answers": ["Paris-Roubaix", "Gand-Wevelgem", "Le Tour des Flandres", "La Fleche Brabanconne"], "correct": 2},
-  {"text": "Quel secteur pave de Paris-Roubaix est le plus redoute, surnomme la 'trouee' ?", "answers": ["Mons-en-Pevele", "Carrefour de l'Arbre", "Trouee d'Arenberg", "Wandignies-Hamage"], "correct": 2},
-  {"text": "Ou se termine traditionnellement Paris-Roubaix ?", "answers": ["Sur les Champs-Elysees", "Sur le velodrome de Roubaix", "Au stade Pierre-Mauroy", "A la Grand-Place de Roubaix"], "correct": 1},
-  {"text": "Quel coureur neerlandais a detenu le record de participations au Tour de France (16) ?", "answers": ["Jan Janssen", "Joop Zoetemelk", "Erik Dekker", "Michael Boogerd"], "correct": 1},
-  {"text": "Quel coureur francais a remporte 5 Tours de France entre 1957 et 1964 ?", "answers": ["Louison Bobet", "Jacques Anquetil", "Raymond Poulidor", "Roger Riviere"], "correct": 1},
-  {"text": "Quel pays accueille traditionnellement le Grand Depart du Giro d'Italia ?", "answers": ["Toujours l'Italie", "Un pays different chaque annee", "L'Italie, mais parfois un autre pays", "Toujours le Vatican"], "correct": 2},
-  {"text": "Quelle ville accueille traditionnellement l'arrivee finale du Tour de France ?", "answers": ["Lyon", "Marseille", "Paris (Champs-Elysees)", "Nice"], "correct": 2},
-  {"text": "Quel coureur detient le record de victoires sur Milan-San Remo (7) ?", "answers": ["Fausto Coppi", "Eddy Merckx", "Costante Girardengo", "Erik Zabel"], "correct": 1},
-  {"text": "Quel coureur neerlandais a remporte le Tour de France 2 fois et 6 fois le maillot a pois ?", "answers": ["Joop Zoetemelk", "Jan Janssen", "Michael Rasmussen", "Steven Kruijswijk"], "correct": 0},
-  {"text": "Quelle course d'un jour se tient traditionnellement le premier dimanche d'octobre en Lombardie ?", "answers": ["Milan-San Remo", "Le Tour de Lombardie", "La Classica San Sebastian", "Le GP de Montreal"], "correct": 1},
-  {"text": "Quel coureur a remporte le Tour de France 2023 pour la deuxieme fois ?", "answers": ["Tadej Pogacar", "Jonas Vingegaard", "Remco Evenepoel", "Primoz Roglic"], "correct": 1},
-  {"text": "Quel coureur belge prodige a remporte la Vuelta 2022 et Liege-Bastogne-Liege ?", "answers": ["Wout van Aert", "Remco Evenepoel", "Jasper Philipsen", "Tim Merlier"], "correct": 1},
-  {"text": "Quel coureur belge polyvalent excelle au sprint, contre-la-montre et en montagne pour Visma ?", "answers": ["Remco Evenepoel", "Philippe Gilbert", "Wout van Aert", "Greg Van Avermaet"], "correct": 2},
-  {"text": "Quel coureur neerlandais a domine le cyclisme dans les annees 2020 avec Jumbo-Visma puis Visma-Lease a Bike ?", "answers": ["Tom Dumoulin", "Mathieu van der Poel", "Jonas Vingegaard", "Dylan van Baarle"], "correct": 2},
-  {"text": "Quel coureur neerlandais petit-fils de Raymond Poulidor a remporte le Championnat du monde 2023 ?", "answers": ["Tom Dumoulin", "Mathieu van der Poel", "Bauke Mollema", "Dylan van Baarle"], "correct": 1},
-  {"text": "Quel est le surnom du Mont Ventoux en raison de son sommet denude ?", "answers": ["Le Geant de Provence", "Le Mont Chauve", "La Montagne de la Mort", "Le Sommet Blanc"], "correct": 0},
-  {"text": "Quel coureur detient le record de victoires sur le Tour de Lombardie ?", "answers": ["Eddy Merckx", "Fausto Coppi", "Alfredo Binda", "Vincenzo Nibali"], "correct": 1}
+  {
+    "text": "Quel coureur belge est surnomme 'Le Cannibale' ?",
+    "answers": [
+      "Roger De Vlaeminck",
+      "Eddy Merckx",
+      "Freddy Maertens",
+      "Rik Van Looy"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de Tours de France Eddy Merckx a-t-il remportes ?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coureur francais est surnomme 'Le Blaireau' ?",
+    "answers": [
+      "Jacques Anquetil",
+      "Bernard Hinault",
+      "Laurent Fignon",
+      "Raymond Poulidor"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de Tours de France Bernard Hinault a-t-il gagnes ?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coureur espagnol a remporte cinq Tours de France consecutifs de 1991 a 1995 ?",
+    "answers": [
+      "Alberto Contador",
+      "Miguel Indurain",
+      "Pedro Delgado",
+      "Federico Bahamontes"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "En quelle annee le premier Tour de France a-t-il eu lieu ?",
+    "answers": [
+      "1899",
+      "1903",
+      "1907",
+      "1910"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur francais a remporte le premier Tour de France en 1903 ?",
+    "answers": [
+      "Lucien Petit-Breton",
+      "Maurice Garin",
+      "Henri Desgrange",
+      "Louis Trousselier"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel journaliste a fonde le Tour de France ?",
+    "answers": [
+      "Pierre Giffard",
+      "Henri Desgrange",
+      "Victor Goddet",
+      "Albert Londres"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Comment s'appelle le maillot porte par le leader du classement general du Tour de France ?",
+    "answers": [
+      "Maillot vert",
+      "Maillot a pois",
+      "Maillot jaune",
+      "Maillot blanc"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel maillot recompense le meilleur grimpeur du Tour de France ?",
+    "answers": [
+      "Maillot jaune",
+      "Maillot vert",
+      "Maillot a pois rouges",
+      "Maillot blanc"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel maillot recompense le meilleur sprinteur au classement par points du Tour de France ?",
+    "answers": [
+      "Maillot jaune",
+      "Maillot vert",
+      "Maillot a pois",
+      "Maillot blanc"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "A qui est destine le maillot blanc du Tour de France ?",
+    "answers": [
+      "Le meilleur grimpeur",
+      "Le leader du general",
+      "Le meilleur jeune",
+      "Le meilleur Francais"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coureur francais n'a jamais gagne le Tour de France malgre 14 participations et 8 podiums ?",
+    "answers": [
+      "Bernard Hinault",
+      "Laurent Fignon",
+      "Raymond Poulidor",
+      "Louison Bobet"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Combien de Tours de France Jacques Anquetil a-t-il remportes ?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coureur americain a ete dechu de ses 7 victoires au Tour de France pour dopage ?",
+    "answers": [
+      "Floyd Landis",
+      "Lance Armstrong",
+      "Tyler Hamilton",
+      "Levi Leipheimer"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de victoires au Tour de France Lance Armstrong s'est-il vu retirer ?",
+    "answers": [
+      "3",
+      "5",
+      "7",
+      "9"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel col mythique du Tour de France culmine a 2115 metres dans les Pyrenees ?",
+    "answers": [
+      "Col du Galibier",
+      "Col du Tourmalet",
+      "Col de l'Izoard",
+      "Col de Peyresourde"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel sommet des Alpes est l'arrivee la plus mythique du Tour de France ?",
+    "answers": [
+      "Col du Galibier",
+      "Le Mont Ventoux",
+      "L'Alpe d'Huez",
+      "Col de la Madeleine"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Combien de lacets compte la montee de l'Alpe d'Huez ?",
+    "answers": [
+      "15",
+      "18",
+      "21",
+      "24"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coureur italien a remporte le Tour de France 2014 ?",
+    "answers": [
+      "Fabio Aru",
+      "Ivan Basso",
+      "Vincenzo Nibali",
+      "Damiano Cunego"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle classique cycliste est surnommee 'La Reine des classiques' ou 'L'Enfer du Nord' ?",
+    "answers": [
+      "Milan-San Remo",
+      "Paris-Roubaix",
+      "Le Tour des Flandres",
+      "Liege-Bastogne-Liege"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelles sont les cinq courses cyclistes appelees 'les Monuments du cyclisme' ?",
+    "answers": [
+      "Tour, Giro, Vuelta, classiques, championnats",
+      "Milan-San Remo, Tour des Flandres, Paris-Roubaix, Liege-Bastogne-Liege, Tour de Lombardie",
+      "Fleche Wallonne, Amstel, Strade Bianche, San Remo, Roubaix",
+      "Paris-Nice, Tirreno, Dauphine, Suisse, Pays Basque"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur belge est le recordman de victoires sur Paris-Roubaix avec 4 victoires ?",
+    "answers": [
+      "Eddy Merckx",
+      "Roger De Vlaeminck",
+      "Tom Boonen",
+      "Johan Museeuw"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Comment appelle-t-on les trois grands tours cyclistes ?",
+    "answers": [
+      "Tour, Giro, Vuelta",
+      "Tour, Classiques, Championnats",
+      "Giro, Vuelta, Tour de Suisse",
+      "Tour, Giro, Tour de Pologne"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel coureur britannique a remporte le Tour de France 2012 ?",
+    "answers": [
+      "Chris Froome",
+      "Bradley Wiggins",
+      "Mark Cavendish",
+      "Geraint Thomas"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de Tours de France Chris Froome a-t-il remportes ?",
+    "answers": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel sprinter britannique detient le record de victoires d'etapes sur le Tour de France (34) ?",
+    "answers": [
+      "Chris Froome",
+      "Bradley Wiggins",
+      "Mark Cavendish",
+      "Tom Simpson"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coureur francais a gagne le Tour de France 1985 et 1986 ?",
+    "answers": [
+      "Bernard Hinault",
+      "Laurent Fignon",
+      "Greg LeMond",
+      "Pedro Delgado"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel coureur americain a remporte le Tour de France 1986 avec seulement 8 secondes d'avance ?",
+    "answers": [
+      "Lance Armstrong",
+      "Greg LeMond",
+      "Floyd Landis",
+      "Andy Hampsten"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "En quelle annee Greg LeMond a-t-il remporte le Tour de France avec la plus faible marge de l'histoire (8 secondes) ?",
+    "answers": [
+      "1986",
+      "1987",
+      "1989",
+      "1990"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coureur francais a perdu le Tour 1989 face a LeMond pour 8 secondes ?",
+    "answers": [
+      "Bernard Hinault",
+      "Laurent Fignon",
+      "Raymond Poulidor",
+      "Charly Mottet"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur italien est surnomme 'Il Pirata' ?",
+    "answers": [
+      "Marco Pantani",
+      "Ivan Basso",
+      "Vincenzo Nibali",
+      "Fabio Casartelli"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel coureur a realise le double Giro-Tour de France en 1998 ?",
+    "answers": [
+      "Jan Ullrich",
+      "Marco Pantani",
+      "Bjarne Riis",
+      "Laurent Jalabert"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur allemand a remporte le Tour de France 1997 ?",
+    "answers": [
+      "Erik Zabel",
+      "Andreas Kloden",
+      "Jan Ullrich",
+      "Jens Voigt"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel col alpin est surnomme 'le Geant de Provence' ?",
+    "answers": [
+      "L'Alpe d'Huez",
+      "Le Mont Ventoux",
+      "Le Col du Galibier",
+      "Le Col de la Bonette"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur britannique est mort sur les pentes du Mont Ventoux lors du Tour 1967 ?",
+    "answers": [
+      "Tom Simpson",
+      "Barry Hoban",
+      "Robert Millar",
+      "Brian Robinson"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel coureur francais a remporte trois Tours de France consecutifs (1953-1955) ?",
+    "answers": [
+      "Jacques Anquetil",
+      "Louison Bobet",
+      "Andre Leducq",
+      "Rene Vietto"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur slovene a domine le Tour de France dans les annees 2020 ?",
+    "answers": [
+      "Primoz Roglic",
+      "Tadej Pogacar",
+      "Matej Mohoric",
+      "Jan Polanc"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "En quelle annee Tadej Pogacar a-t-il remporte son premier Tour de France ?",
+    "answers": [
+      "2019",
+      "2020",
+      "2021",
+      "2022"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur danois a remporte le Tour de France 2022 ?",
+    "answers": [
+      "Kasper Asgreen",
+      "Jonas Vingegaard",
+      "Jakob Fuglsang",
+      "Magnus Cort"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur detient le record d'etapes remportees sur le Tour de France (tous temps) ?",
+    "answers": [
+      "Eddy Merckx",
+      "Mark Cavendish",
+      "Bernard Hinault",
+      "Andre Leducq"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien d'etapes Eddy Merckx a-t-il remportees sur le Tour de France ?",
+    "answers": [
+      "28",
+      "30",
+      "34",
+      "36"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel est le surnom du Giro d'Italia ?",
+    "answers": [
+      "La Grande Boucle",
+      "La Corsa Rosa",
+      "La Vuelta Rosa",
+      "Il Grande Giro"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "De quelle couleur est le maillot du leader du Giro d'Italia ?",
+    "answers": [
+      "Jaune",
+      "Rouge",
+      "Rose",
+      "Bleu"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coureur italien detient le record de victoires au Giro avec 5 succes ?",
+    "answers": [
+      "Fausto Coppi",
+      "Alfredo Binda",
+      "Gino Bartali",
+      "Les trois en ont 5 sauf Bartali"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur legendaire est surnomme 'Il Campionissimo' ?",
+    "answers": [
+      "Gino Bartali",
+      "Fausto Coppi",
+      "Alfredo Binda",
+      "Costante Girardengo"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle rivalite cycliste italienne a divise le pays apres la Seconde Guerre mondiale ?",
+    "answers": [
+      "Moser vs Saronni",
+      "Binda vs Guerra",
+      "Coppi vs Bartali",
+      "Nibali vs Aru"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coureur espagnol a remporte 3 Tours d'Espagne et 2 Tours de France ?",
+    "answers": [
+      "Miguel Indurain",
+      "Alberto Contador",
+      "Pedro Delgado",
+      "Federico Bahamontes"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur est surnomme 'El Pistolero' ?",
+    "answers": [
+      "Miguel Indurain",
+      "Alejandro Valverde",
+      "Alberto Contador",
+      "Oscar Pereiro"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est la plus ancienne des classiques cyclistes (premiere edition en 1892) ?",
+    "answers": [
+      "Paris-Roubaix",
+      "Milan-San Remo",
+      "Liege-Bastogne-Liege",
+      "Tour de Lombardie"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Milan-San Remo est surnommee comment ?",
+    "answers": [
+      "L'Enfer du Nord",
+      "La Classicissima",
+      "La Doyenne",
+      "La Primavera"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Liege-Bastogne-Liege est surnommee comment ?",
+    "answers": [
+      "La Primavera",
+      "L'Enfer du Nord",
+      "La Doyenne",
+      "Le Monument des Ardennes"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coureur belge a remporte le plus de classiques et est surnomme 'le Lion des Flandres' ?",
+    "answers": [
+      "Eddy Merckx",
+      "Johan Museeuw",
+      "Roger De Vlaeminck",
+      "Tom Boonen"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur belge a remporte 4 Paris-Roubaix et 4 Tours des Flandres ?",
+    "answers": [
+      "Roger De Vlaeminck",
+      "Tom Boonen",
+      "Eddy Merckx",
+      "Fabian Cancellara"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur suisse est surnomme 'Spartacus' ?",
+    "answers": [
+      "Tony Rominger",
+      "Fabian Cancellara",
+      "Stefan Kung",
+      "Hugo Koblet"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur slovaque a remporte le maillot vert du Tour de France 3 fois pour la Bora-Hansgrohe ?",
+    "answers": [
+      "Juraj Sagan",
+      "Peter Sagan",
+      "Michael Kolar",
+      "Erik Baska"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de maillots verts Peter Sagan a-t-il remportes au Tour de France ?",
+    "answers": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle course a etapes espagnole fait partie des trois grands tours ?",
+    "answers": [
+      "Le Tour de Catalogne",
+      "La Vuelta a Espana",
+      "Le Tour du Pays Basque",
+      "La Classica San Sebastian"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "De quelle couleur est le maillot du leader de la Vuelta a Espana ?",
+    "answers": [
+      "Jaune",
+      "Rose",
+      "Rouge",
+      "Blanc"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coureur espagnol legendaire est surnomme 'L'Aigle de Tolede' ?",
+    "answers": [
+      "Miguel Indurain",
+      "Alberto Contador",
+      "Pedro Delgado",
+      "Federico Bahamontes"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel coureur a remporte le plus de Championnats du monde sur route ?",
+    "answers": [
+      "Eddy Merckx",
+      "Alfredo Binda",
+      "Peter Sagan",
+      "Rik Van Steenbergen"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "De quelle couleur est le maillot du Champion du monde sur route ?",
+    "answers": [
+      "Jaune",
+      "Arc-en-ciel (bandes multicolores)",
+      "Blanc",
+      "Bleu"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur neerlandais etait un contre-la-montre legendaire surnomme 'Le Professeur' ?",
+    "answers": [
+      "Jan Janssen",
+      "Joop Zoetemelk",
+      "Tom Dumoulin",
+      "Steven Kruijswijk"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur francais a remporte 8 etapes du Tour 1970 et le maillot jaune ?",
+    "answers": [
+      "Bernard Hinault",
+      "Eddy Merckx",
+      "Luis Ocana",
+      "Raymond Poulidor"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur colombien est surnomme 'le Scarabee' et a excelle en montagne dans les annees 1980 ?",
+    "answers": [
+      "Nairo Quintana",
+      "Lucho Herrera",
+      "Fabio Parra",
+      "Rigoberto Uran"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel contre-la-montre historique Greg LeMond a-t-il remporte pour gagner le Tour 1989 ?",
+    "answers": [
+      "Le prologue a Paris",
+      "Le CLM des Champs-Elysees",
+      "Le CLM de Versailles a Paris",
+      "Le CLM de Pau"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel equipement revolutionnaire Greg LeMond a-t-il utilise lors du CLM final du Tour 1989 ?",
+    "answers": [
+      "Un casque pointu",
+      "Un guidon de triathlon (prolongateur)",
+      "Des roues lenticulaires",
+      "Des pedales automatiques"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur irlandais a porte le maillot jaune du Tour de France en 1987 ?",
+    "answers": [
+      "Sean Kelly",
+      "Stephen Roche",
+      "Martin Earley",
+      "Sam Bennett"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur irlandais a realise le triple couronne (Giro, Tour, Mondial) en 1987 ?",
+    "answers": [
+      "Sean Kelly",
+      "Stephen Roche",
+      "Nicolas Roche",
+      "Dan Martin"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur francais est devenu champion du monde en 1997 a San Sebastian ?",
+    "answers": [
+      "Richard Virenque",
+      "Laurent Brochard",
+      "Laurent Jalabert",
+      "Luc Leblanc"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur francais etait le 'meilleur grimpeur' avec 7 maillots a pois au Tour ?",
+    "answers": [
+      "Laurent Jalabert",
+      "Richard Virenque",
+      "Thibaut Pinot",
+      "Thomas Voeckler"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel scandale de dopage a secoue le Tour de France 1998 ?",
+    "answers": [
+      "L'affaire Puerto",
+      "L'affaire Festina",
+      "L'affaire Armstrong",
+      "L'affaire Fuentes"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur francais a porte le maillot jaune au Tour 2011 avec panache ?",
+    "answers": [
+      "Thibaut Pinot",
+      "Thomas Voeckler",
+      "Romain Bardet",
+      "Sylvain Chavanel"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur a gagne le Tour de France en portant le numero 51 en 2011 ?",
+    "answers": [
+      "Andy Schleck",
+      "Cadel Evans",
+      "Alberto Contador",
+      "Frank Schleck"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur australien a remporte le Tour de France 2011 ?",
+    "answers": [
+      "Richie Porte",
+      "Cadel Evans",
+      "Simon Gerrans",
+      "Michael Matthews"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur gallois a remporte le Tour de France 2018 ?",
+    "answers": [
+      "Chris Froome",
+      "Geraint Thomas",
+      "Luke Rowe",
+      "Simon Yates"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel colombien a termine deuxieme du Tour 2019 et 2020 ?",
+    "answers": [
+      "Nairo Quintana",
+      "Egan Bernal",
+      "Rigoberto Uran",
+      "Daniel Martinez"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur colombien a remporte le Tour de France 2019 ?",
+    "answers": [
+      "Nairo Quintana",
+      "Egan Bernal",
+      "Rigoberto Uran",
+      "Esteban Chaves"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel est le record de l'heure en cyclisme sur piste (non motorise) ?",
+    "answers": [
+      "Environ 50 km",
+      "Environ 52 km",
+      "Environ 56 km",
+      "Environ 60 km"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel type de course cycliste se deroule sur un velodrome ?",
+    "answers": [
+      "La route",
+      "Le cyclocross",
+      "La piste",
+      "Le VTT"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coureur britannique a domine le cyclisme sur piste aux Jeux olympiques ?",
+    "answers": [
+      "Bradley Wiggins",
+      "Chris Hoy",
+      "Mark Cavendish",
+      "Jason Kenny"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle classique pavee se court au printemps en Belgique et passe par le Mur de Grammont ?",
+    "answers": [
+      "Paris-Roubaix",
+      "Gand-Wevelgem",
+      "Le Tour des Flandres",
+      "La Fleche Brabanconne"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel secteur pave de Paris-Roubaix est le plus redoute, surnomme la 'trouee' ?",
+    "answers": [
+      "Mons-en-Pevele",
+      "Carrefour de l'Arbre",
+      "Trouee d'Arenberg",
+      "Wandignies-Hamage"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Ou se termine traditionnellement Paris-Roubaix ?",
+    "answers": [
+      "Sur les Champs-Elysees",
+      "Sur le velodrome de Roubaix",
+      "Au stade Pierre-Mauroy",
+      "A la Grand-Place de Roubaix"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur neerlandais a detenu le record de participations au Tour de France (16) ?",
+    "answers": [
+      "Jan Janssen",
+      "Joop Zoetemelk",
+      "Erik Dekker",
+      "Michael Boogerd"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur francais a remporte 5 Tours de France entre 1957 et 1964 ?",
+    "answers": [
+      "Louison Bobet",
+      "Jacques Anquetil",
+      "Raymond Poulidor",
+      "Roger Riviere"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel pays accueille traditionnellement le Grand Depart du Giro d'Italia ?",
+    "answers": [
+      "Toujours l'Italie",
+      "Un pays different chaque annee",
+      "L'Italie, mais parfois un autre pays",
+      "Toujours le Vatican"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle ville accueille traditionnellement l'arrivee finale du Tour de France ?",
+    "answers": [
+      "Lyon",
+      "Marseille",
+      "Paris (Champs-Elysees)",
+      "Nice"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coureur detient le record de victoires sur Milan-San Remo (7) ?",
+    "answers": [
+      "Fausto Coppi",
+      "Eddy Merckx",
+      "Costante Girardengo",
+      "Erik Zabel"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur neerlandais a remporte le Tour de France 2 fois et 6 fois le maillot a pois ?",
+    "answers": [
+      "Joop Zoetemelk",
+      "Jan Janssen",
+      "Michael Rasmussen",
+      "Steven Kruijswijk"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle course d'un jour se tient traditionnellement le premier dimanche d'octobre en Lombardie ?",
+    "answers": [
+      "Milan-San Remo",
+      "Le Tour de Lombardie",
+      "La Classica San Sebastian",
+      "Le GP de Montreal"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur a remporte le Tour de France 2023 pour la deuxieme fois ?",
+    "answers": [
+      "Tadej Pogacar",
+      "Jonas Vingegaard",
+      "Remco Evenepoel",
+      "Primoz Roglic"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur belge prodige a remporte la Vuelta 2022 et Liege-Bastogne-Liege ?",
+    "answers": [
+      "Wout van Aert",
+      "Remco Evenepoel",
+      "Jasper Philipsen",
+      "Tim Merlier"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur belge polyvalent excelle au sprint, contre-la-montre et en montagne pour Visma ?",
+    "answers": [
+      "Remco Evenepoel",
+      "Philippe Gilbert",
+      "Wout van Aert",
+      "Greg Van Avermaet"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coureur neerlandais a domine le cyclisme dans les annees 2020 avec Jumbo-Visma puis Visma-Lease a Bike ?",
+    "answers": [
+      "Tom Dumoulin",
+      "Mathieu van der Poel",
+      "Jonas Vingegaard",
+      "Dylan van Baarle"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coureur neerlandais petit-fils de Raymond Poulidor a remporte le Championnat du monde 2023 ?",
+    "answers": [
+      "Tom Dumoulin",
+      "Mathieu van der Poel",
+      "Bauke Mollema",
+      "Dylan van Baarle"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel est le surnom du Mont Ventoux en raison de son sommet denude ?",
+    "answers": [
+      "Le Geant de Provence",
+      "Le Mont Chauve",
+      "La Montagne de la Mort",
+      "Le Sommet Blanc"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel coureur detient le record de victoires sur le Tour de Lombardie ?",
+    "answers": [
+      "Eddy Merckx",
+      "Fausto Coppi",
+      "Alfredo Binda",
+      "Vincenzo Nibali"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coureur a remporté le premier Tour d'Italie en 1909 ?",
+    "answers": [
+      "Carlo Galetti",
+      "Giovanni Rossignoli",
+      "Eberardo Pavesi",
+      "Luigi Ganna"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel coureur a remporté le Tour de France 1947 après avoir renversé le classement général durant la dernière étape ?",
+    "answers": [
+      "Pierre Brambilla",
+      "René Vietto",
+      "Édouard Fachleitner",
+      "Jean Robic"
+    ],
+    "correct": 3
+  }
 ]
