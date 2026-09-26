@@ -60,14 +60,15 @@
     "correct": 0
   },
   {
-    "text": "En janvier 2024, quel pays remporte la CAN 2023 (édition disputée avec un an de retard) en battant le Nigeria 2-1 ?",
+    "text": "Quelle sélection a remporté la CAN 2023, dont la finale s'est jouée en février 2024, en battant le Nigeria 2-1 ?",
     "answers": [
-      "Le Sénégal",
+      "Le Nigeria",
       "La Côte d'Ivoire",
-      "Le Maroc",
-      "L'Algérie"
+      "Le Sénégal",
+      "Le Cameroun"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
     "text": "Où se déroule la CAN 2023, remportée par la Côte d'Ivoire ?",
@@ -110,14 +111,15 @@
     "correct": 1
   },
   {
-    "text": "Quel pays organise la CAN 2021/2022, en pleine saison des pluies ?",
+    "text": "Quel pays a accueilli la CAN 2021, finalement disputée en janvier et février 2022 ?",
     "answers": [
       "Le Gabon",
+      "L'Égypte",
       "Le Cameroun",
-      "La Guinée équatoriale",
-      "Le Congo"
+      "La Côte d'Ivoire"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
     "text": "Dans quel pays se déroule la CAN 2017, remportée par le Cameroun face à l'Égypte ?",
@@ -222,14 +224,15 @@
     "correct": 1
   },
   {
-    "text": "Quel attaquant égyptien, star de Liverpool puis d'autres clubs européens, ne parvient toujours pas à remporter la CAN avec sa sélection malgré plusieurs finales ?",
+    "text": "Quel attaquant égyptien a disputé les finales 2017 et 2021 sans remporter le trophée ?",
     "answers": [
       "Mohamed Salah",
       "Mahmoud Trezeguet",
       "Mostafa Mohamed",
       "Amr Warda"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
     "text": "Combien de fois la Côte d'Ivoire a-t-elle remporté la CAN, à fin 2024 ?",
@@ -272,14 +275,15 @@
     "correct": 0
   },
   {
-    "text": "Quel est le nom du trophée remis au vainqueur de la Coupe d'Afrique des Nations ?",
+    "text": "Depuis 2002, quel motif principal domine le trophée actuel de la CAN ?",
     "answers": [
-      "La Coupe des Nations Africaines",
-      "La Coupe d'Afrique (CAF)",
-      "Le Trophée continental africain",
-      "La Coupe Nelson Mandela"
+      "Un ballon argenté",
+      "Une carte de l'Afrique",
+      "Un lion portant une couronne",
+      "Un globe doré entouré de lauriers"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
     "text": "Quelle confédération continentale organise la Coupe d'Afrique des Nations ?",
@@ -322,14 +326,15 @@
     "correct": 2
   },
   {
-    "text": "Quel pays remporte la CAN 1998, la dernière avant une longue disette pour cette nation historique ?",
+    "text": "Quelle sélection a remporté la CAN 1998 au Burkina Faso ?",
     "answers": [
+      "Le Cameroun",
       "L'Égypte",
       "Le Nigeria",
-      "Le Cameroun",
-      "La Tunisie"
+      "L'Afrique du Sud"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
     "text": "En 2004, quel pays organise et remporte la Coupe d'Afrique des Nations à domicile ?",
@@ -424,14 +429,15 @@
     "correct": 0
   },
   {
-    "text": "Quel pays d'Afrique de l'Est, aujourd'hui rarement qualifié, remporte la CAN 1962 à domicile, à une époque où il figure parmi les forces du continent ?",
+    "text": "Quelle sélection a remporté la CAN 1962 à domicile ?",
     "answers": [
-      "Le Kenya",
       "L'Éthiopie",
-      "La Tanzanie",
-      "La Somalie"
+      "Le Soudan",
+      "Le Ghana",
+      "L'Égypte"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
     "text": "Quel pays remporte la CAN 1970, disputée au Soudan ?",
@@ -475,14 +481,15 @@
     "correct": 0
   },
   {
-    "text": "Quelle chaîne de télévision ou compétition n'est PAS liée à la CAN : laquelle de ces réponses est un tournoi distinct réservé aux joueurs locaux (non-expatriés) organisé par la CAF ?",
+    "text": "Quel tournoi de la CAF est réservé aux joueurs évoluant dans les championnats nationaux de leur pays ?",
     "answers": [
-      "Le CHAN (Championnat d'Afrique des Nations)",
-      "La Coupe CAF des clubs champions",
+      "Le CHAN",
       "La Ligue des champions CAF",
-      "La Supercoupe d'Afrique"
+      "La Coupe de la Confédération",
+      "La Supercoupe de la CAF"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
     "text": "Que signifie le sigle CHAN, tournoi africain réservé aux joueurs évoluant dans leur championnat national ?",
