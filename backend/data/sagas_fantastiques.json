@@ -498,5 +498,555 @@
       "L’œuvre est publiée en trois volumes"
     ],
     "correct": 1
+  },
+  {
+    "text": "Dans Harry Potter, quel objet ayant appartenu à Serdaigle devient un Horcruxe ?",
+    "answers": [
+      "Son diadème",
+      "Sa coupe",
+      "Son médaillon",
+      "Son épée"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Harry Potter : quels mots recouvrent les initiales R.A.B. laissées près d'un faux Horcruxe ?",
+    "answers": [
+      "Remus Albus Black",
+      "Regulus Arcturus Black",
+      "Rodolphus Arcturus Black",
+      "Regulus Alastor Black"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel animal représente le Patronus d'Hermione Granger dans Harry Potter ?",
+    "answers": [
+      "Un cerf",
+      "Un cygne",
+      "Une loutre",
+      "Un chien"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel frère de Dumbledore tient l'auberge de la Tête de Sanglier ?",
+    "answers": [
+      "Percival",
+      "Albus",
+      "Ariana",
+      "Aberforth"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Harry Potter : quelle boutique les jumeaux Weasley ouvrent-ils sur le Chemin de Traverse ?",
+    "answers": [
+      "Weasley, Farces pour sorciers facétieux",
+      "Fleury et Bott",
+      "Ollivander",
+      "Barjow et Beurk"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans Le Seigneur des anneaux, comment s'appelle le père de Boromir et Faramir ?",
+    "answers": [
+      "Théoden",
+      "Denethor",
+      "Elrond",
+      "Ecthelion"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel Anneau elfique Gandalf porte-t-il dans Le Seigneur des anneaux ?",
+    "answers": [
+      "Nenya",
+      "Vilya",
+      "Narya",
+      "Barahir"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Anneau elfique est confié à Galadriel dans l'œuvre de Tolkien ?",
+    "answers": [
+      "Narya",
+      "Vilya",
+      "L'Anneau Unique",
+      "Nenya"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel pain de voyage elfique est donné à la Communauté en Lothlórien ?",
+    "answers": [
+      "Le lembas",
+      "Le cram",
+      "L'athelas",
+      "Le miruvor"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le nom du cheval de Gandalf dans Le Seigneur des anneaux ?",
+    "answers": [
+      "Arod",
+      "Gripoil",
+      "Hasufel",
+      "Brego"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans Le Fauteuil d'argent, quel prince Eustache et Jill cherchent-ils à retrouver ?",
+    "answers": [
+      "Caspian",
+      "Corin",
+      "Rilian",
+      "Tirian"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel personnage de Narnia appartient au peuple des touille-marais ?",
+    "answers": [
+      "Reepicheep",
+      "Tumnus",
+      "Rilian",
+      "Puddleglum"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel roman de Narnia raconte notamment l'arrivée de Digory Kirke dans le monde d'Aslan ?",
+    "answers": [
+      "Le Neveu du magicien",
+      "Le Fauteuil d'argent",
+      "L'Odyssée du Passeur d'Aurore",
+      "Le Prince Caspian"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans Narnia, comment s'appelle l'amie d'Eustache qui part à la recherche de Rilian ?",
+    "answers": [
+      "Lucy Pevensie",
+      "Jill Pole",
+      "Susan Pevensie",
+      "Aravis"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel jeune garçon fuit vers Narnia avec le cheval parlant Bree dans Le Cheval et son écuyer ?",
+    "answers": [
+      "Digory",
+      "Caspian",
+      "Shasta",
+      "Eustache"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À la croisée des mondes : comment s'appelle le dæmon de Lyra ?",
+    "answers": [
+      "Kirjava",
+      "Stelmaria",
+      "Hester",
+      "Pantalaimon"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel ours en armure accompagne Lyra dans À la croisée des mondes ?",
+    "answers": [
+      "Iorek Byrnison",
+      "Iofur Raknison",
+      "Lee Scoresby",
+      "Farder Coram"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel personnage possède le couteau subtil dans la trilogie de Philip Pullman ?",
+    "answers": [
+      "Lord Asriel",
+      "Will Parry",
+      "Roger Parslow",
+      "Lee Scoresby"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui construit la longue-vue d'ambre dans le troisième tome d'À la croisée des mondes ?",
+    "answers": [
+      "Marisa Coulter",
+      "Serafina Pekkala",
+      "Mary Malone",
+      "Ma Costa"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel peuple muni de roues figure dans Le Miroir d'ambre ?",
+    "answers": [
+      "Les Gallivespiens",
+      "Les Panserbjørnes",
+      "Les Gyptiens",
+      "Les Mulefas"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans Percy Jackson, de quelle déesse Annabeth Chase est-elle la fille ?",
+    "answers": [
+      "Athéna",
+      "Artémis",
+      "Héra",
+      "Aphrodite"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel ami satyre accompagne Percy Jackson dans la saga ?",
+    "answers": [
+      "Luke Castellan",
+      "Grover Underwood",
+      "Tyson",
+      "Nico di Angelo"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel nom anglais porte l'épée de Percy Jackson appelée Anaklusmos en grec ?",
+    "answers": [
+      "Backbiter",
+      "Stygian Iron",
+      "Riptide",
+      "Stormbringer"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel tome de Percy Jackson conclut la première série de cinq romans ?",
+    "answers": [
+      "La Bataille du labyrinthe",
+      "Le Sort du titan",
+      "La Mer des monstres",
+      "Le Dernier Olympien"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Percy Jackson : quel titan est l'ennemi principal de la première série ?",
+    "answers": [
+      "Cronos",
+      "Atlas",
+      "Océan",
+      "Japet"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans L'Héritage, quel dragon est lié à Murtagh ?",
+    "answers": [
+      "Saphira",
+      "Thorn",
+      "Fírnen",
+      "Shruikan"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel dragon Galbatorix a-t-il volé et assujetti dans la saga L'Héritage ?",
+    "answers": [
+      "Glaedr",
+      "Thorn",
+      "Shruikan",
+      "Saphira"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel ancien Dragonnier entraîne Eragon pendant le premier roman ?",
+    "answers": [
+      "Orik",
+      "Roran",
+      "Orrin",
+      "Brom"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Comment s'appelle la cité elfique où Eragon poursuit sa formation ?",
+    "answers": [
+      "Ellesméra",
+      "Teirm",
+      "Dras-Leona",
+      "Carvahall"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le titre du quatrième roman de la saga initiale d'Eragon ?",
+    "answers": [
+      "Brisingr",
+      "L'Héritage",
+      "L'Aîné",
+      "Murtagh"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel roman ouvre la série La Roue du temps de Robert Jordan ?",
+    "answers": [
+      "La Grande Quête",
+      "Le Dragon réincarné",
+      "L'Œil du monde",
+      "Un nouveau printemps"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel auteur a achevé les derniers romans de La Roue du temps après Robert Jordan ?",
+    "answers": [
+      "Patrick Rothfuss",
+      "Terry Goodkind",
+      "Joe Abercrombie",
+      "Brandon Sanderson"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel ouvrage est le dernier roman de la série principale La Roue du temps ?",
+    "answers": [
+      "Un souvenir de lumière",
+      "Les Tours de minuit",
+      "La Tempête imminente",
+      "Un nouveau printemps"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel roman constitue une préquelle à La Roue du temps ?",
+    "answers": [
+      "L'Œil du monde",
+      "Un nouveau printemps",
+      "La Grande Quête",
+      "Le Dragon réincarné"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans La Roue du temps, quel titre prophétique Rand al'Thor porte-t-il ?",
+    "answers": [
+      "L'Amyrlin",
+      "Le Roi-Sorcier",
+      "Le Dragon réincarné",
+      "Le Fléau des ombres"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel barde est l'ami récurrent de Geralt de Riv dans Le Sorceleur ?",
+    "answers": [
+      "Vesemir",
+      "Emhyr",
+      "Cahir",
+      "Jaskier"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le nom de la forteresse associée à l'entraînement des sorceleurs de l'École du Loup ?",
+    "answers": [
+      "Kaer Morhen",
+      "Cintra",
+      "Aretuza",
+      "Brokilon"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "De quelle cité vient la magicienne Yennefer dans Le Sorceleur ?",
+    "answers": [
+      "Cintra",
+      "Vengerberg",
+      "Toussaint",
+      "Oxenfurt"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle princesse de Cintra est liée au destin de Geralt ?",
+    "answers": [
+      "Triss",
+      "Fringilla",
+      "Ciri",
+      "Pavetta"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le titre du recueil de nouvelles où paraît « Le Moindre Mal » dans Le Sorceleur ?",
+    "answers": [
+      "L'Épée de la providence",
+      "Le Sang des elfes",
+      "La Dame du lac",
+      "Le Dernier Vœu"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment s'appelle l'ami d'enfance qui accompagne Camille Duciel en Gwendalavir ?",
+    "answers": [
+      "Salim",
+      "Edwin",
+      "Mathieu",
+      "Artis"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le titre du deuxième tome de La Quête d'Ewilan ?",
+    "answers": [
+      "D'un monde à l'autre",
+      "Les Frontières de glace",
+      "L'Île du destin",
+      "Le Souffle de la hyène"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel prénom porte le frère de Camille, qu'elle convainc de la suivre dans Gwendalavir ?",
+    "answers": [
+      "Salim",
+      "Edwin",
+      "Mathieu",
+      "Bjorn"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment se nomme l'ancienne Sentinelle antagoniste de La Quête d'Ewilan ?",
+    "answers": [
+      "Ellana Caldin",
+      "Merwyn Ril'Avalon",
+      "Erylis",
+      "Éléa Ril'Morienval"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel lieu les parents de Camille sont-ils retenus prisonniers dans La Quête d'Ewilan ?",
+    "answers": [
+      "Les îles Alines",
+      "L'Arche",
+      "Le Royaume d'Ombre",
+      "Les terres de Glace"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le titre du premier tome de La Passe-miroir de Christelle Dabos ?",
+    "answers": [
+      "Les Disparus du Clairdelune",
+      "Les Fiancés de l'hiver",
+      "La Mémoire de Babel",
+      "La Tempête des échos"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel tome de La Passe-miroir s'intitule Les Disparus du Clairdelune ?",
+    "answers": [
+      "Le premier",
+      "Le troisième",
+      "Le deuxième",
+      "Le quatrième"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Outre traverser les miroirs, quel don Ophélie possède-t-elle dans La Passe-miroir ?",
+    "answers": [
+      "Contrôler les tempêtes",
+      "Se transformer en animal",
+      "Parler aux morts",
+      "Lire le passé des objets"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel personnage devient le fiancé d'Ophélie au début de La Passe-miroir ?",
+    "answers": [
+      "Thorn",
+      "Archibald",
+      "Farouk",
+      "Renard"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel roman est le quatrième volume de La Passe-miroir ?",
+    "answers": [
+      "La Mémoire de Babel",
+      "La Tempête des échos",
+      "Les Disparus du Clairdelune",
+      "Les Fiancés de l'hiver"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
   }
 ]
