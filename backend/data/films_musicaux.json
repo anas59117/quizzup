@@ -498,5 +498,555 @@
       "Le film transpose Roméo et Juliette à New York"
     ],
     "correct": 1
+  },
+  {
+    "text": "Quel réalisateur est crédité à la mise en scène du Magicien d'Oz (1939) ?",
+    "answers": [
+      "Victor Fleming",
+      "George Cukor",
+      "Vincente Minnelli",
+      "Rouben Mamoulian"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "De quelle couleur sont les souliers de Dorothy dans le roman original de L. Frank Baum ?",
+    "answers": [
+      "Rubis",
+      "Argent",
+      "Émeraude",
+      "Or"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel compositeur a écrit la musique de Over the Rainbow ?",
+    "answers": [
+      "Irving Berlin",
+      "George Gershwin",
+      "Harold Arlen",
+      "Richard Rodgers"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel parolier a écrit les paroles de Over the Rainbow ?",
+    "answers": [
+      "Ira Gershwin",
+      "Oscar Hammerstein II",
+      "Cole Porter",
+      "E. Y. Harburg"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a reçu l'Oscar de la musique de film pour Le Magicien d'Oz ?",
+    "answers": [
+      "Herbert Stothart",
+      "Harold Arlen",
+      "Max Steiner",
+      "Alfred Newman"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel réalisateur a signé Un Américain à Paris ?",
+    "answers": [
+      "Stanley Donen",
+      "Vincente Minnelli",
+      "George Sidney",
+      "Robert Z. Leonard"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le métier de Jerry Mulligan dans Un Américain à Paris ?",
+    "answers": [
+      "Pianiste",
+      "Photographe",
+      "Peintre",
+      "Chorégraphe"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice incarne Lise Bouvier dans Un Américain à Paris ?",
+    "answers": [
+      "Cyd Charisse",
+      "Vera-Ellen",
+      "Debbie Reynolds",
+      "Leslie Caron"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel compositeur a écrit la suite symphonique qui donne son titre à Un Américain à Paris ?",
+    "answers": [
+      "George Gershwin",
+      "Leonard Bernstein",
+      "Aaron Copland",
+      "Cole Porter"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur joue le pianiste Adam Cook dans Un Américain à Paris ?",
+    "answers": [
+      "Fred Astaire",
+      "Oscar Levant",
+      "Danny Kaye",
+      "Donald O'Connor"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui joue Maria dans La Mélodie du bonheur ?",
+    "answers": [
+      "Judy Garland",
+      "Doris Day",
+      "Julie Andrews",
+      "Audrey Hepburn"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel acteur interprète le capitaine von Trapp dans La Mélodie du bonheur ?",
+    "answers": [
+      "Rex Harrison",
+      "Peter O'Toole",
+      "Richard Burton",
+      "Christopher Plummer"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel réalisateur a tourné La Mélodie du bonheur ?",
+    "answers": [
+      "Robert Wise",
+      "George Roy Hill",
+      "William Wyler",
+      "Stanley Donen"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle famille Maria rejoint-elle comme gouvernante dans La Mélodie du bonheur ?",
+    "answers": [
+      "Les Smith",
+      "Les von Trapp",
+      "Les Banks",
+      "Les March"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Combien d'Oscars La Mélodie du bonheur a-t-elle remportés ?",
+    "answers": [
+      "Trois",
+      "Quatre",
+      "Cinq",
+      "Six"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel compositeur a signé la musique des Demoiselles de Rochefort ?",
+    "answers": [
+      "Francis Lai",
+      "Georges Delerue",
+      "Jean-Claude Petit",
+      "Michel Legrand"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui joue Delphine dans Les Demoiselles de Rochefort ?",
+    "answers": [
+      "Catherine Deneuve",
+      "Françoise Dorléac",
+      "Danielle Darrieux",
+      "Jeanne Moreau"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui joue Solange, la sœur de Delphine, dans Les Demoiselles de Rochefort ?",
+    "answers": [
+      "Catherine Deneuve",
+      "Françoise Dorléac",
+      "Anna Karina",
+      "Anouk Aimée"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur américain incarne Andy Miller dans Les Demoiselles de Rochefort ?",
+    "answers": [
+      "Fred Astaire",
+      "Donald O'Connor",
+      "Gene Kelly",
+      "Frank Sinatra"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel marin interprété par Jacques Perrin cherche la femme de ses rêves dans Les Demoiselles de Rochefort ?",
+    "answers": [
+      "Guillaume",
+      "Étienne",
+      "Simon",
+      "Maxence"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel cinéaste a réalisé Cabaret (1972) ?",
+    "answers": [
+      "Bob Fosse",
+      "Rob Marshall",
+      "John Badham",
+      "Herbert Ross"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice incarne Sally Bowles dans Cabaret ?",
+    "answers": [
+      "Barbra Streisand",
+      "Liza Minnelli",
+      "Judy Garland",
+      "Rita Moreno"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur joue le maître de cérémonie du Kit Kat Klub dans Cabaret ?",
+    "answers": [
+      "Michael York",
+      "Helmut Griem",
+      "Joel Grey",
+      "Jack Gilford"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville se trouve le Kit Kat Klub du film Cabaret ?",
+    "answers": [
+      "Vienne",
+      "Munich",
+      "Prague",
+      "Berlin"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quelle décennie la montée du nazisme forme-t-elle l'arrière-plan du film Cabaret ?",
+    "answers": [
+      "Les années 1930",
+      "Les années 1910",
+      "Les années 1940",
+      "Les années 1960"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur tient le rôle du laitier Tevye dans Un violon sur le toit (1971) ?",
+    "answers": [
+      "Zero Mostel",
+      "Topol",
+      "Mandy Patinkin",
+      "Yul Brynner"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel village fictif Tevye habite-t-il dans Un violon sur le toit ?",
+    "answers": [
+      "Shtetlburg",
+      "Kievka",
+      "Anatevka",
+      "Vitebsk"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a composé les chansons de la comédie musicale adaptée par Un violon sur le toit ?",
+    "answers": [
+      "John Williams",
+      "Richard Rodgers",
+      "Marvin Hamlisch",
+      "Jerry Bock"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a écrit les paroles des chansons d'Un violon sur le toit ?",
+    "answers": [
+      "Sheldon Harnick",
+      "Stephen Sondheim",
+      "Alan Jay Lerner",
+      "Tim Rice"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "De quel auteur proviennent les histoires à l'origine d'Un violon sur le toit ?",
+    "answers": [
+      "Isaac Bashevis Singer",
+      "Sholem Aleichem",
+      "Chaim Potok",
+      "Joseph Roth"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur incarne le Dr Frank-N-Furter dans The Rocky Horror Picture Show ?",
+    "answers": [
+      "Richard O'Brien",
+      "Barry Bostwick",
+      "Tim Curry",
+      "Meat Loaf"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui joue Janet Weiss dans The Rocky Horror Picture Show ?",
+    "answers": [
+      "Patricia Quinn",
+      "Nell Campbell",
+      "Jessica Harper",
+      "Susan Sarandon"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel interprète joue Riff Raff et a écrit le spectacle original Rocky Horror ?",
+    "answers": [
+      "Richard O'Brien",
+      "Jim Sharman",
+      "Tim Curry",
+      "Barry Humphries"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel réalisateur a porté The Rocky Horror Picture Show à l'écran ?",
+    "answers": [
+      "John Waters",
+      "Jim Sharman",
+      "Ken Russell",
+      "Brian De Palma"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur interprète Brad Majors dans The Rocky Horror Picture Show ?",
+    "answers": [
+      "Richard O'Brien",
+      "Tim Curry",
+      "Barry Bostwick",
+      "Meat Loaf"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel cinéaste avait réalisé le premier film Hairspray en 1988, adapté ensuite en comédie musicale ?",
+    "answers": [
+      "Adam Shankman",
+      "Rob Marshall",
+      "John Landis",
+      "John Waters"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice incarne Tracy Turnblad dans Hairspray (2007) ?",
+    "answers": [
+      "Nikki Blonsky",
+      "Ricki Lake",
+      "Brittany Snow",
+      "Amanda Bynes"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle chanteuse joue Motormouth Maybelle dans Hairspray (2007) ?",
+    "answers": [
+      "Jennifer Hudson",
+      "Queen Latifah",
+      "Mary J. Blige",
+      "Jill Scott"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel réalisateur signe l'adaptation musicale Hairspray sortie en 2007 ?",
+    "answers": [
+      "John Waters",
+      "Kenny Ortega",
+      "Adam Shankman",
+      "Chris Columbus"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment s'appelle l'émission de télévision où Tracy veut danser dans Hairspray ?",
+    "answers": [
+      "The Ed Sullivan Show",
+      "American Bandstand",
+      "The Buddy Deane Show",
+      "The Corny Collins Show"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice interprète Effie White dans Dreamgirls (2006) ?",
+    "answers": [
+      "Jennifer Hudson",
+      "Beyoncé Knowles",
+      "Anika Noni Rose",
+      "Jordin Sparks"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel personnage Beyoncé Knowles joue-t-elle dans Dreamgirls ?",
+    "answers": [
+      "Effie White",
+      "Deena Jones",
+      "Lorrell Robinson",
+      "Michelle Morris"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel groupe fictif réunit initialement Effie, Deena et Lorrell ?",
+    "answers": [
+      "The Supremes",
+      "The Marvelettes",
+      "The Dreamettes",
+      "The Shirelles"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Pour quel film Jennifer Hudson a-t-elle gagné l'Oscar du second rôle féminin en 2007 ?",
+    "answers": [
+      "Hairspray",
+      "Chicago",
+      "Nine",
+      "Dreamgirls"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur joue Curtis Taylor Jr. dans Dreamgirls ?",
+    "answers": [
+      "Jamie Foxx",
+      "Eddie Murphy",
+      "Danny Glover",
+      "Terrence Howard"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel cinéaste a réalisé Les Misérables, adaptation musicale sortie en 2012 ?",
+    "answers": [
+      "Rob Marshall",
+      "Tom Hooper",
+      "Sam Mendes",
+      "Joe Wright"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur incarne Jean Valjean dans Les Misérables (2012) ?",
+    "answers": [
+      "Russell Crowe",
+      "Eddie Redmayne",
+      "Hugh Jackman",
+      "Aaron Tveit"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui joue l'inspecteur Javert dans Les Misérables (2012) ?",
+    "answers": [
+      "Hugh Jackman",
+      "Sacha Baron Cohen",
+      "Eddie Redmayne",
+      "Russell Crowe"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel personnage est incarné par Anne Hathaway dans Les Misérables (2012) ?",
+    "answers": [
+      "Fantine",
+      "Cosette",
+      "Éponine",
+      "Madame Thénardier"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel compositeur est crédité pour la chanson originale Suddenly dans Les Misérables (2012) ?",
+    "answers": [
+      "Michel Legrand",
+      "Claude-Michel Schönberg",
+      "Alain Boublil",
+      "Andrew Lloyd Webber"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
   }
 ]
