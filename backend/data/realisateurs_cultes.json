@@ -498,5 +498,555 @@
       "Toshirō Mifune"
     ],
     "correct": 1
+  },
+  {
+    "text": "Quel film a valu à Steven Spielberg son premier Oscar de la réalisation ?",
+    "answers": [
+      "La Liste de Schindler",
+      "Il faut sauver le soldat Ryan",
+      "E.T.",
+      "Jurassic Park"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel roman de Michael Crichton Spielberg a-t-il adapté en 1993 ?",
+    "answers": [
+      "Sphère",
+      "Jurassic Park",
+      "Le Monde perdu",
+      "Westworld"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel compositeur a écrit la musique des Dents de la mer de Spielberg ?",
+    "answers": [
+      "Jerry Goldsmith",
+      "James Horner",
+      "John Williams",
+      "Alan Silvestri"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel film de Spielberg suit un jeune garçon nommé Elliott et son ami extraterrestre ?",
+    "answers": [
+      "Rencontres du troisième type",
+      "A.I. Intelligence artificielle",
+      "La Guerre des mondes",
+      "E.T. l'extra-terrestre"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quel film de Spielberg Tom Hanks incarne-t-il le capitaine John Miller ?",
+    "answers": [
+      "Il faut sauver le soldat Ryan",
+      "Le Pont des espions",
+      "Pentagon Papers",
+      "Arrête-moi si tu peux"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel compositeur a signé la musique d'Inception de Christopher Nolan ?",
+    "answers": [
+      "John Williams",
+      "Hans Zimmer",
+      "Ludwig Göransson",
+      "Michael Giacchino"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur incarne Robert Oppenheimer dans le film de Christopher Nolan ?",
+    "answers": [
+      "Robert Downey Jr.",
+      "Matt Damon",
+      "Cillian Murphy",
+      "Rami Malek"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel roman de Christopher Priest Nolan a-t-il porté à l'écran ?",
+    "answers": [
+      "Le Labyrinthe de Pan",
+      "Le Maître du haut château",
+      "La Route",
+      "Le Prestige"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film a valu à Nolan l'Oscar de la meilleure réalisation lors de la cérémonie de 2024 ?",
+    "answers": [
+      "Oppenheimer",
+      "Dunkerque",
+      "Inception",
+      "Tenet"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice joue Murph adulte dans Interstellar de Christopher Nolan ?",
+    "answers": [
+      "Anne Hathaway",
+      "Jessica Chastain",
+      "Mackenzie Foy",
+      "Ellen Burstyn"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film de Quentin Tarantino a reçu la Palme d'or à Cannes en 1994 ?",
+    "answers": [
+      "Reservoir Dogs",
+      "Jackie Brown",
+      "Pulp Fiction",
+      "Kill Bill"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Pour quel film Tarantino a-t-il remporté l'Oscar du scénario original en 2013 ?",
+    "answers": [
+      "Les Huit Salopards",
+      "Inglourious Basterds",
+      "Once Upon a Time… in Hollywood",
+      "Django Unchained"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel compositeur a écrit la partition originale des Huit Salopards de Tarantino ?",
+    "answers": [
+      "Ennio Morricone",
+      "John Williams",
+      "Hans Zimmer",
+      "Alexandre Desplat"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le titre original du roman d'Elmore Leonard adapté pour Jackie Brown ?",
+    "answers": [
+      "Rum Punch",
+      "Get Shorty",
+      "Out of Sight",
+      "Maximum Bob"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice incarne Jackie Brown dans le film éponyme de Tarantino ?",
+    "answers": [
+      "Uma Thurman",
+      "Jennifer Jason Leigh",
+      "Pam Grier",
+      "Daryl Hannah"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel roman de Mario Puzo Francis Ford Coppola a-t-il adapté pour Le Parrain ?",
+    "answers": [
+      "Le Sicilien",
+      "Omertà",
+      "Le Dernier Don",
+      "Le Parrain"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel film de Coppola a remporté le Grand Prix à Cannes en 1974 ?",
+    "answers": [
+      "Conversation secrète",
+      "Le Parrain",
+      "Le Parrain 2",
+      "Apocalypse Now"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film de Coppola a partagé la Palme d'or à Cannes en 1979 ?",
+    "answers": [
+      "Coup de cœur",
+      "Apocalypse Now",
+      "Cotton Club",
+      "Le Parrain 3"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur incarne le colonel Kurtz dans Apocalypse Now ?",
+    "answers": [
+      "Robert Duvall",
+      "Martin Sheen",
+      "Marlon Brando",
+      "Dennis Hopper"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Pour quel film Coppola a-t-il reçu l'Oscar de la meilleure réalisation en 1975 ?",
+    "answers": [
+      "Le Parrain",
+      "Conversation secrète",
+      "Apocalypse Now",
+      "Le Parrain 2"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film de Guillermo del Toro a remporté l'Oscar du meilleur film en 2018 ?",
+    "answers": [
+      "La Forme de l'eau",
+      "Le Labyrinthe de Pan",
+      "Crimson Peak",
+      "La Maison de tous les cauchemars"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur incarne Hellboy dans le film de del Toro sorti en 2004 ?",
+    "answers": [
+      "Doug Jones",
+      "Ron Perlman",
+      "David Harbour",
+      "Michael Shannon"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel long métrage en animation de del Toro a remporté l'Oscar en 2023 ?",
+    "answers": [
+      "L'Étrange Noël de monsieur Jack",
+      "Frankenweenie",
+      "Pinocchio",
+      "Le Chat potté 2"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice joue Ofelia dans Le Labyrinthe de Pan de del Toro ?",
+    "answers": [
+      "Sally Hawkins",
+      "Mia Wasikowska",
+      "Jessica Chastain",
+      "Ivana Baquero"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice incarne Edith Cushing dans Crimson Peak de Guillermo del Toro ?",
+    "answers": [
+      "Sally Hawkins",
+      "Mia Wasikowska",
+      "Jessica Chastain",
+      "Tilda Swinton"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel roman de Chuck Palahniuk David Fincher a-t-il adapté au cinéma ?",
+    "answers": [
+      "Gone Girl",
+      "Fight Club",
+      "Zodiac",
+      "Le Jeu"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel scénariste a écrit le scénario de The Social Network réalisé par Fincher ?",
+    "answers": [
+      "Gillian Flynn",
+      "Andrew Kevin Walker",
+      "Aaron Sorkin",
+      "Eric Roth"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle romancière a également signé le scénario de Gone Girl de Fincher ?",
+    "answers": [
+      "Paula Hawkins",
+      "Donna Tartt",
+      "Tana French",
+      "Gillian Flynn"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur incarne Mark Zuckerberg dans The Social Network de Fincher ?",
+    "answers": [
+      "Jesse Eisenberg",
+      "Andrew Garfield",
+      "Armie Hammer",
+      "Justin Timberlake"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel film de Fincher suit l'enquête sur le tueur du Zodiaque ?",
+    "answers": [
+      "Seven",
+      "Zodiac",
+      "The Game",
+      "Panic Room"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel film des frères Coen a remporté l'Oscar du meilleur film en 2008 ?",
+    "answers": [
+      "Fargo",
+      "True Grit",
+      "No Country for Old Men",
+      "The Big Lebowski"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "De quel romancier les frères Coen ont-ils adapté No Country for Old Men ?",
+    "answers": [
+      "Elmore Leonard",
+      "Thomas Pynchon",
+      "James Ellroy",
+      "Cormac McCarthy"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui joue « le Dude » dans The Big Lebowski des frères Coen ?",
+    "answers": [
+      "Jeff Bridges",
+      "John Goodman",
+      "Steve Buscemi",
+      "Sam Elliott"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice a remporté l'Oscar pour son rôle de Marge Gunderson dans Fargo ?",
+    "answers": [
+      "Julianne Moore",
+      "Frances McDormand",
+      "Holly Hunter",
+      "Jessica Lange"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur joue le musicien Llewyn Davis dans Inside Llewyn Davis ?",
+    "answers": [
+      "Adam Driver",
+      "Justin Timberlake",
+      "Oscar Isaac",
+      "John Goodman"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel prix cannois a récompensé le scénario de Portrait de la jeune fille en feu de Céline Sciamma ?",
+    "answers": [
+      "La Palme d'or",
+      "Le Grand Prix",
+      "La Caméra d'or",
+      "Le prix du scénario"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment s'appelle la peintre chargée de réaliser un portrait dans le film de Sciamma Portrait de la jeune fille en feu ?",
+    "answers": [
+      "Marianne",
+      "Héloïse",
+      "Sophie",
+      "Adèle"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel film de Sciamma suit Marieme et un groupe de jeunes filles ?",
+    "answers": [
+      "Tomboy",
+      "Bande de filles",
+      "Petite Maman",
+      "Naissance des pieuvres"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans Petite Maman de Céline Sciamma, quel est le prénom de l'enfant au centre du récit ?",
+    "answers": [
+      "Marieme",
+      "Laure",
+      "Nelly",
+      "Héloïse"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film d'animation nommé à l'Oscar Céline Sciamma a-t-elle coscénarisé ?",
+    "answers": [
+      "J'ai perdu mon corps",
+      "Ernest et Célestine",
+      "Le Sommet des dieux",
+      "Ma vie de Courgette"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film de Park Chan-wook a reçu le Grand Prix du Festival de Cannes en 2004 ?",
+    "answers": [
+      "Old Boy",
+      "Lady Vengeance",
+      "Thirst",
+      "Decision to Leave"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel film de Park Chan-wook est adapté d'un roman de Sarah Waters ?",
+    "answers": [
+      "Stoker",
+      "Mademoiselle",
+      "Thirst",
+      "Sympathy for Mr. Vengeance"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel prix cannois Park Chan-wook a-t-il obtenu pour Decision to Leave en 2022 ?",
+    "answers": [
+      "La Palme d'or",
+      "Le Grand Prix",
+      "Le prix de la mise en scène",
+      "Le prix du scénario"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film de Park Chan-wook clôt sa trilogie dite de la vengeance ?",
+    "answers": [
+      "Old Boy",
+      "Thirst",
+      "Stoker",
+      "Lady Vengeance"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film en anglais Park Chan-wook a-t-il réalisé avec Mia Wasikowska et Nicole Kidman ?",
+    "answers": [
+      "Stoker",
+      "Mademoiselle",
+      "Decision to Leave",
+      "Je suis un cyborg"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film a fait de Kathryn Bigelow la première femme récompensée par l'Oscar de la réalisation ?",
+    "answers": [
+      "Zero Dark Thirty",
+      "Démineurs",
+      "Point Break",
+      "Detroit"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur joue l'agent Johnny Utah dans Point Break de Kathryn Bigelow ?",
+    "answers": [
+      "Patrick Swayze",
+      "Gary Busey",
+      "Keanu Reeves",
+      "Lori Petty"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice incarne Maya dans Zero Dark Thirty de Bigelow ?",
+    "answers": [
+      "Jennifer Lawrence",
+      "Amy Adams",
+      "Claire Danes",
+      "Jessica Chastain"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle ville américaine donne son titre au film de Bigelow sur les troubles de 1967 ?",
+    "answers": [
+      "Détroit",
+      "Chicago",
+      "Baltimore",
+      "New York"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel film de vampires de Kathryn Bigelow est sorti en 1987 ?",
+    "answers": [
+      "Point Break",
+      "Aux frontières de l'aube",
+      "Démineurs",
+      "Strange Days"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
   }
 ]
