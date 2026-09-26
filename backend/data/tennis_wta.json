@@ -96,7 +96,7 @@
   {"text": "Combien de titres en Grand Chelem Maria Sharapova a-t-elle remportes ?", "answers": ["3", "4", "5", "6"], "correct": 2},
   {"text": "Quelle joueuse a complete le Career Grand Chelem en remportant les 4 tournois majeurs ?", "answers": ["Venus Williams", "Maria Sharapova", "Serena Williams", "Justine Henin"], "correct": 1},
   {"text": "Quelle joueuse a remporte Wimbledon en 2022 ?", "answers": ["Ons Jabeur", "Elena Rybakina", "Simona Halep", "Coco Gauff"], "correct": 1},
-  {"text":"Quelle joueuse occupait la première place du tout premier classement informatique WTA publié en 1975 ?","answers":["Billie Jean King","Martina Navratilova","Evonne Goolagong","Chris Evert"],"correct":3},
-  {"text":"Dans quelle ville se sont tenues les premières WTA Finals, en 1972 ?","answers":["New York","Los Angeles","Oakland","Boca Raton"],"correct":3},
-  {"text":"Quelle joueuse a battu Martina Navratilova en finale des WTA Finals 1982 ?","answers":["Chris Evert","Tracy Austin","Andrea Jaeger","Sylvia Hanika"],"correct":3}
+  {"text":"Quelle joueuse occupait la première place du tout premier classement informatique WTA publié en 1975 ?","answers":["Billie Jean King","Martina Navratilova","Evonne Goolagong","Chris Evert"],"correct":3,"difficulty":"hard"},
+  {"text":"Dans quelle ville se sont tenues les premières WTA Finals, en 1972 ?","answers":["New York","Los Angeles","Oakland","Boca Raton"],"correct":3,"difficulty":"expert"},
+  {"text":"Quelle joueuse a battu Martina Navratilova en finale des WTA Finals 1982 ?","answers":["Chris Evert","Tracy Austin","Andrea Jaeger","Sylvia Hanika"],"correct":3,"difficulty":"expert"}
 ]

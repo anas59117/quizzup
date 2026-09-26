@@ -97,6 +97,6 @@
   {"text": "Quel coureur neerlandais petit-fils de Raymond Poulidor a remporte le Championnat du monde 2023 ?", "answers": ["Tom Dumoulin", "Mathieu van der Poel", "Bauke Mollema", "Dylan van Baarle"], "correct": 1},
   {"text": "Quel est le surnom du Mont Ventoux en raison de son sommet denude ?", "answers": ["Le Geant de Provence", "Le Mont Chauve", "La Montagne de la Mort", "Le Sommet Blanc"], "correct": 0},
   {"text": "Quel coureur detient le record de victoires sur le Tour de Lombardie ?", "answers": ["Eddy Merckx", "Fausto Coppi", "Alfredo Binda", "Vincenzo Nibali"], "correct": 1},
-  {"text":"Quel coureur a remporté le premier Tour d'Italie en 1909 ?","answers":["Carlo Galetti","Giovanni Rossignoli","Eberardo Pavesi","Luigi Ganna"],"correct":3},
-  {"text":"Quel coureur a remporté le Tour de France 1947 après avoir renversé le classement général durant la dernière étape ?","answers":["Pierre Brambilla","René Vietto","Édouard Fachleitner","Jean Robic"],"correct":3}
+  {"text":"Quel coureur a remporté le premier Tour d'Italie en 1909 ?","answers":["Carlo Galetti","Giovanni Rossignoli","Eberardo Pavesi","Luigi Ganna"],"correct":3,"difficulty":"expert"},
+  {"text":"Quel coureur a remporté le Tour de France 1947 après avoir renversé le classement général durant la dernière étape ?","answers":["Pierre Brambilla","René Vietto","Édouard Fachleitner","Jean Robic"],"correct":3,"difficulty":"expert"}
 ]
