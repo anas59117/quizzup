@@ -1,0 +1,502 @@
+[
+  {
+    "text": "Quelle entreprise commercialise l’iPhone ?",
+    "answers": [
+      "Apple",
+      "Sony",
+      "Nintendo",
+      "Canon"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel connecteur réversible est largement utilisé sur les appareils récents ?",
+    "answers": [
+      "VGA",
+      "USB-C",
+      "PS/2",
+      "Péritel"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : technologie radio de courte portée reliant notamment écouteurs et smartphones ?",
+    "answers": [
+      "Wi‑Fi",
+      "USB-C",
+      "Bluetooth",
+      "LiDAR"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à Bluetooth ?",
+    "answers": [
+      "code matriciel lisible par l’appareil photo d’un téléphone",
+      "système de positionnement reposant sur une constellation de satellites",
+      "interface numérique transportant image et son vers un écran",
+      "technologie radio de courte portée reliant notamment écouteurs et smartphones"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine Bluetooth appartient-il principalement ?",
+    "answers": [
+      "Connectivité sans fil",
+      "Identification optique",
+      "Capteurs",
+      "Stockage magnétique"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : famille de réseaux locaux sans fil fondée sur les normes IEEE 802.11 ?",
+    "answers": [
+      "QR code",
+      "Wi‑Fi",
+      "GPS",
+      "HDMI"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à Wi‑Fi ?",
+    "answers": [
+      "technologie d’écran où chaque pixel produit sa propre lumière",
+      "cinquième génération de réseaux mobiles cellulaires",
+      "famille de réseaux locaux sans fil fondée sur les normes IEEE 802.11",
+      "format audio immersif utilisant des objets sonores"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine Wi‑Fi appartient-il principalement ?",
+    "answers": [
+      "Identification optique",
+      "Capteurs",
+      "Stockage magnétique",
+      "Connectivité sans fil"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : code matriciel lisible par l’appareil photo d’un téléphone ?",
+    "answers": [
+      "QR code",
+      "OLED",
+      "5G",
+      "Dolby Atmos"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à QR code ?",
+    "answers": [
+      "communication à très courte portée utilisée notamment pour le paiement sans contact",
+      "code matriciel lisible par l’appareil photo d’un téléphone",
+      "carte SIM intégrée et programmable sans support plastique amovible",
+      "standard d’interopérabilité destiné aux objets de la maison connectée"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine QR code appartient-il principalement ?",
+    "answers": [
+      "Connectivité sans fil",
+      "Capteurs",
+      "Identification optique",
+      "Stockage magnétique"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : technologie d’écran où chaque pixel produit sa propre lumière ?",
+    "answers": [
+      "NFC",
+      "eSIM",
+      "Matter",
+      "OLED"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à OLED ?",
+    "answers": [
+      "technologie d’écran où chaque pixel produit sa propre lumière",
+      "format de connecteur compact et réversible adopté par de nombreux appareils",
+      "capteur mesurant des distances à l’aide d’impulsions laser",
+      "standard de recharge sans fil par induction du Wireless Power Consortium"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine OLED appartient-il principalement ?",
+    "answers": [
+      "Connectivité sans fil",
+      "Affichage",
+      "Capteurs",
+      "Stockage magnétique"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : communication à très courte portée utilisée notamment pour le paiement sans contact ?",
+    "answers": [
+      "USB-C",
+      "LiDAR",
+      "NFC",
+      "Qi"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à NFC ?",
+    "answers": [
+      "système de positionnement reposant sur une constellation de satellites",
+      "interface numérique transportant image et son vers un écran",
+      "architecture de jeu d’instructions ouverte conçue à l’université de Californie à Berkeley",
+      "communication à très courte portée utilisée notamment pour le paiement sans contact"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine NFC appartient-il principalement ?",
+    "answers": [
+      "Connectivité sans fil",
+      "Identification optique",
+      "Capteurs",
+      "Stockage magnétique"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : format de connecteur compact et réversible adopté par de nombreux appareils ?",
+    "answers": [
+      "GPS",
+      "USB-C",
+      "HDMI",
+      "RISC-V"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à USB-C ?",
+    "answers": [
+      "cinquième génération de réseaux mobiles cellulaires",
+      "format audio immersif utilisant des objets sonores",
+      "format de connecteur compact et réversible adopté par de nombreux appareils",
+      "technologie d’encre électronique bistable courante dans les liseuses"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine USB-C appartient-il principalement ?",
+    "answers": [
+      "Connectivité sans fil",
+      "Capteurs",
+      "Stockage magnétique",
+      "Connectique"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : système de positionnement reposant sur une constellation de satellites ?",
+    "answers": [
+      "GPS",
+      "5G",
+      "Dolby Atmos",
+      "E Ink"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à GPS ?",
+    "answers": [
+      "carte SIM intégrée et programmable sans support plastique amovible",
+      "système de positionnement reposant sur une constellation de satellites",
+      "standard d’interopérabilité destiné aux objets de la maison connectée",
+      "technologie radio de courte portée reliant notamment écouteurs et smartphones"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine GPS appartient-il principalement ?",
+    "answers": [
+      "Connectivité sans fil",
+      "Capteurs",
+      "Géolocalisation",
+      "Stockage magnétique"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : cinquième génération de réseaux mobiles cellulaires ?",
+    "answers": [
+      "eSIM",
+      "Matter",
+      "Bluetooth",
+      "5G"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à 5G ?",
+    "answers": [
+      "cinquième génération de réseaux mobiles cellulaires",
+      "capteur mesurant des distances à l’aide d’impulsions laser",
+      "standard de recharge sans fil par induction du Wireless Power Consortium",
+      "famille de réseaux locaux sans fil fondée sur les normes IEEE 802.11"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine 5G appartient-il principalement ?",
+    "answers": [
+      "Connectivité sans fil",
+      "Télécommunications",
+      "Capteurs",
+      "Stockage magnétique"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : carte SIM intégrée et programmable sans support plastique amovible ?",
+    "answers": [
+      "LiDAR",
+      "Qi",
+      "eSIM",
+      "Wi‑Fi"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à eSIM ?",
+    "answers": [
+      "interface numérique transportant image et son vers un écran",
+      "architecture de jeu d’instructions ouverte conçue à l’université de Californie à Berkeley",
+      "code matriciel lisible par l’appareil photo d’un téléphone",
+      "carte SIM intégrée et programmable sans support plastique amovible"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine eSIM appartient-il principalement ?",
+    "answers": [
+      "Télécommunications",
+      "Connectivité sans fil",
+      "Capteurs",
+      "Stockage magnétique"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : capteur mesurant des distances à l’aide d’impulsions laser ?",
+    "answers": [
+      "HDMI",
+      "LiDAR",
+      "RISC-V",
+      "QR code"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à LiDAR ?",
+    "answers": [
+      "format audio immersif utilisant des objets sonores",
+      "technologie d’encre électronique bistable courante dans les liseuses",
+      "capteur mesurant des distances à l’aide d’impulsions laser",
+      "technologie d’écran où chaque pixel produit sa propre lumière"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine LiDAR appartient-il principalement ?",
+    "answers": [
+      "Connectivité sans fil",
+      "Télécommunications",
+      "Stockage magnétique",
+      "Capteurs"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : interface numérique transportant image et son vers un écran ?",
+    "answers": [
+      "HDMI",
+      "Dolby Atmos",
+      "E Ink",
+      "OLED"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à HDMI ?",
+    "answers": [
+      "standard d’interopérabilité destiné aux objets de la maison connectée",
+      "interface numérique transportant image et son vers un écran",
+      "technologie radio de courte portée reliant notamment écouteurs et smartphones",
+      "communication à très courte portée utilisée notamment pour le paiement sans contact"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine HDMI appartient-il principalement ?",
+    "answers": [
+      "Connectivité sans fil",
+      "Capteurs",
+      "Connectique",
+      "Stockage magnétique"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : format audio immersif utilisant des objets sonores ?",
+    "answers": [
+      "Matter",
+      "Bluetooth",
+      "NFC",
+      "Dolby Atmos"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à Dolby Atmos ?",
+    "answers": [
+      "format audio immersif utilisant des objets sonores",
+      "standard de recharge sans fil par induction du Wireless Power Consortium",
+      "famille de réseaux locaux sans fil fondée sur les normes IEEE 802.11",
+      "format de connecteur compact et réversible adopté par de nombreux appareils"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine Dolby Atmos appartient-il principalement ?",
+    "answers": [
+      "Connectivité sans fil",
+      "Audio",
+      "Télécommunications",
+      "Stockage magnétique"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : standard d’interopérabilité destiné aux objets de la maison connectée ?",
+    "answers": [
+      "Qi",
+      "Wi‑Fi",
+      "Matter",
+      "USB-C"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à Matter ?",
+    "answers": [
+      "architecture de jeu d’instructions ouverte conçue à l’université de Californie à Berkeley",
+      "code matriciel lisible par l’appareil photo d’un téléphone",
+      "système de positionnement reposant sur une constellation de satellites",
+      "standard d’interopérabilité destiné aux objets de la maison connectée"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine Matter appartient-il principalement ?",
+    "answers": [
+      "Domotique",
+      "Connectivité sans fil",
+      "Télécommunications",
+      "Stockage magnétique"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : standard de recharge sans fil par induction du Wireless Power Consortium ?",
+    "answers": [
+      "RISC-V",
+      "Qi",
+      "QR code",
+      "GPS"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à Qi ?",
+    "answers": [
+      "technologie d’encre électronique bistable courante dans les liseuses",
+      "technologie d’écran où chaque pixel produit sa propre lumière",
+      "standard de recharge sans fil par induction du Wireless Power Consortium",
+      "cinquième génération de réseaux mobiles cellulaires"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine Qi appartient-il principalement ?",
+    "answers": [
+      "Connectivité sans fil",
+      "Télécommunications",
+      "Stockage magnétique",
+      "Recharge"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : architecture de jeu d’instructions ouverte conçue à l’université de Californie à Berkeley ?",
+    "answers": [
+      "RISC-V",
+      "E Ink",
+      "OLED",
+      "5G"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à RISC-V ?",
+    "answers": [
+      "technologie radio de courte portée reliant notamment écouteurs et smartphones",
+      "architecture de jeu d’instructions ouverte conçue à l’université de Californie à Berkeley",
+      "communication à très courte portée utilisée notamment pour le paiement sans contact",
+      "carte SIM intégrée et programmable sans support plastique amovible"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine RISC-V appartient-il principalement ?",
+    "answers": [
+      "Connectivité sans fil",
+      "Télécommunications",
+      "Informatique",
+      "Stockage magnétique"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : technologie d’encre électronique bistable courante dans les liseuses ?",
+    "answers": [
+      "Bluetooth",
+      "NFC",
+      "eSIM",
+      "E Ink"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Technologie grand public », quelle description correspond à E Ink ?",
+    "answers": [
+      "technologie d’encre électronique bistable courante dans les liseuses",
+      "famille de réseaux locaux sans fil fondée sur les normes IEEE 802.11",
+      "format de connecteur compact et réversible adopté par de nombreux appareils",
+      "capteur mesurant des distances à l’aide d’impulsions laser"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Technologie grand public », à quel domaine E Ink appartient-il principalement ?",
+    "answers": [
+      "Connectivité sans fil",
+      "Affichage",
+      "Capteurs",
+      "Stockage magnétique"
+    ],
+    "correct": 1
+  }
+]
