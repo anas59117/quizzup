@@ -42,6 +42,22 @@ test('progressive selection keeps approachable questions first and expert questi
   assert.ok(Number(selected[5].text.split(' ')[1]) >= 16);
 });
 
+test('expert round prioritizes editorially tagged questions', () => {
+  const source = [
+    { text: 'easy 1', answers: ['A', 'B', 'C', 'D'], correct: 0, _difficultyScore: 0.1 },
+    { text: 'easy 2', answers: ['B', 'A', 'C', 'D'], correct: 0, _difficultyScore: 0.2 },
+    { text: 'medium 1', answers: ['C', 'A', 'B', 'D'], correct: 0, _difficultyScore: 0.45 },
+    { text: 'medium 2', answers: ['D', 'A', 'B', 'C'], correct: 0, _difficultyScore: 0.55 },
+    { text: 'hard', answers: ['E', 'A', 'B', 'C'], correct: 0, _difficultyScore: 0.75 },
+    { text: 'position only', answers: ['F', 'A', 'B', 'C'], correct: 0, _difficultyScore: 0.95 },
+    { text: 'reviewed expert', answers: ['G', 'A', 'B', 'C'], correct: 0, difficulty: 'expert', _difficultyScore: 0.95 },
+  ];
+  const selected = selectProgressiveQuestions(source, 6, () => 0);
+  assert.equal(selected.length, 6);
+  assert.equal(selected[5].text, 'reviewed expert');
+  assert.equal(selected[5].difficulty, 'expert');
+});
+
 test('progressive selection avoids repeated correct answers when alternatives exist', () => {
   const source = [
     { text: 'A1', answers: ['A', 'B', 'C', 'D'], correct: 0, _difficultyScore: 0.1 },
