@@ -498,5 +498,555 @@
       "Il oppose le policier Vincent Hanna au braqueur Neil McCauley"
     ],
     "correct": 1
+  },
+  {
+    "text": "Quel cinéaste a réalisé Quand la ville dort (The Asphalt Jungle) ?",
+    "answers": [
+      "John Huston",
+      "Robert Siodmak",
+      "Jules Dassin",
+      "Anthony Mann"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel écrivain a signé le roman adapté par Quand la ville dort ?",
+    "answers": [
+      "James M. Cain",
+      "W. R. Burnett",
+      "Jim Thompson",
+      "Dashiell Hammett"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur incarne le spécialiste du casse Doc Riedenschneider dans Quand la ville dort ?",
+    "answers": [
+      "Sterling Hayden",
+      "Louis Calhern",
+      "Sam Jaffe",
+      "James Whitmore"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice apparaît dans Quand la ville dort dans l'entourage du personnage de Louis Calhern ?",
+    "answers": [
+      "Lauren Bacall",
+      "Ava Gardner",
+      "Gloria Grahame",
+      "Marilyn Monroe"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur incarne l'homme de main Dix Handley dans Quand la ville dort ?",
+    "answers": [
+      "Sterling Hayden",
+      "Sam Jaffe",
+      "John Garfield",
+      "Robert Ryan"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a réalisé Du rififi chez les hommes (1955) ?",
+    "answers": [
+      "Jean-Pierre Melville",
+      "Jules Dassin",
+      "Jacques Becker",
+      "Henri Verneuil"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel acteur interprète Tony le Stéphanois dans Du rififi chez les hommes ?",
+    "answers": [
+      "Lino Ventura",
+      "Jean Gabin",
+      "Jean Servais",
+      "Robert Hossein"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Sous quel pseudonyme Jules Dassin joue-t-il le perceur de coffres César dans Rififi ?",
+    "answers": [
+      "Paul Cézanne",
+      "Jean Daumier",
+      "Louis Vernet",
+      "Perlo Vita"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel compositeur a écrit la musique du film Rififi ?",
+    "answers": [
+      "Georges Auric",
+      "Michel Legrand",
+      "Maurice Jarre",
+      "Francis Lai"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel écrivain est l'auteur du roman adapté par Du rififi chez les hommes ?",
+    "answers": [
+      "Albert Simonin",
+      "Auguste Le Breton",
+      "José Giovanni",
+      "Frédéric Dard"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel réalisateur a signé L'Ultime Razzia (The Killing) ?",
+    "answers": [
+      "John Huston",
+      "Don Siegel",
+      "Stanley Kubrick",
+      "Robert Wise"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel type d'établissement est visé dans L'Ultime Razzia ?",
+    "answers": [
+      "Un casino",
+      "Un musée",
+      "Une banque",
+      "Un hippodrome"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur incarne le chef des braqueurs Johnny Clay dans L'Ultime Razzia ?",
+    "answers": [
+      "Sterling Hayden",
+      "Kirk Douglas",
+      "James Caan",
+      "Robert Mitchum"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "De quel roman de Lionel White L'Ultime Razzia est-il adapté ?",
+    "answers": [
+      "The Big Clock",
+      "Clean Break",
+      "The Hunter",
+      "The Killer Inside Me"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel écrivain de romans noirs a participé aux dialogues de L'Ultime Razzia ?",
+    "answers": [
+      "Raymond Chandler",
+      "Donald E. Westlake",
+      "Jim Thompson",
+      "Ross Macdonald"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le véritable nom du personnage surnommé Bob le flambeur ?",
+    "answers": [
+      "Robert Marchand",
+      "Robert Manet",
+      "Robert Malet",
+      "Robert Montagné"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle ville balnéaire abrite le casino convoité dans Bob le flambeur ?",
+    "answers": [
+      "Deauville",
+      "Biarritz",
+      "Trouville",
+      "Cannes"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui incarne Bob dans Bob le flambeur ?",
+    "answers": [
+      "Jean Gabin",
+      "Roger Duchesne",
+      "Alain Delon",
+      "Lino Ventura"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Pourquoi Bob ne met-il finalement pas son projet de casse à exécution ?",
+    "answers": [
+      "Il manque le dernier train",
+      "Le casino ferme pour travaux",
+      "Il est absorbé par le jeu au casino",
+      "Il perd les plans du coffre"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel réalisateur a tourné Bob le flambeur ?",
+    "answers": [
+      "Jules Dassin",
+      "Louis Malle",
+      "Jean-Luc Godard",
+      "Jean-Pierre Melville"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel acteur interprète Henry Holland dans De l'or en barres (The Lavender Hill Mob) ?",
+    "answers": [
+      "Alec Guinness",
+      "Peter Sellers",
+      "Alastair Sim",
+      "Michael Redgrave"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel est l'objet fabriqué avec l'or volé dans De l'or en barres ?",
+    "answers": [
+      "Des chandeliers",
+      "Des souvenirs de tour Eiffel",
+      "Des pièces commémoratives",
+      "Des statuettes de Big Ben"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui a réalisé De l'or en barres (1951) ?",
+    "answers": [
+      "Alexander Mackendrick",
+      "Robert Hamer",
+      "Charles Crichton",
+      "Henry Cornelius"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur interprète Pendlebury, complice de Holland ?",
+    "answers": [
+      "Sidney James",
+      "Alfie Bass",
+      "Cecil Parker",
+      "Stanley Holloway"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel scénariste a remporté un Oscar pour De l'or en barres ?",
+    "answers": [
+      "T. E. B. Clarke",
+      "William Rose",
+      "John Collier",
+      "John Michael Hayes"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel objet le groupe cherche-t-il à dérober dans Topkapi ?",
+    "answers": [
+      "Un masque en or",
+      "Un poignard orné d'émeraudes",
+      "Un manuscrit enluminé",
+      "Une couronne de diamants"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville se situe le palais visé par le film Topkapi ?",
+    "answers": [
+      "Athènes",
+      "Venise",
+      "Istanbul",
+      "Le Caire"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel roman d'Eric Ambler a inspiré Topkapi ?",
+    "answers": [
+      "The Mask of Dimitrios",
+      "A Coffin for Dimitrios",
+      "Judgment on Deltchev",
+      "The Light of Day"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur a remporté l'Oscar du second rôle pour Topkapi ?",
+    "answers": [
+      "Peter Ustinov",
+      "Maximilian Schell",
+      "Omar Sharif",
+      "Peter Sellers"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice joue Elizabeth Lipp dans Topkapi ?",
+    "answers": [
+      "Jeanne Moreau",
+      "Melina Mercouri",
+      "Sophia Loren",
+      "Irene Papas"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur interprète Charlie Croker dans L'or se barre (1969) ?",
+    "answers": [
+      "Terence Stamp",
+      "David Hemmings",
+      "Michael Caine",
+      "Oliver Reed"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel réalisateur a tourné le film britannique L'or se barre (1969) ?",
+    "answers": [
+      "Guy Hamilton",
+      "Michael Winner",
+      "John Mackenzie",
+      "Peter Collinson"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville italienne les Mini Cooper traversent-elles le trafic dans L'or se barre ?",
+    "answers": [
+      "Turin",
+      "Milan",
+      "Rome",
+      "Naples"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel compositeur a écrit la musique de L'or se barre (1969) ?",
+    "answers": [
+      "John Barry",
+      "Quincy Jones",
+      "Ron Goodwin",
+      "Lalo Schifrin"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel scénariste a écrit L'or se barre (1969) ?",
+    "answers": [
+      "David Sherwin",
+      "Dick Clement",
+      "Troy Kennedy Martin",
+      "Peter Yates"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur incarne Frank dans Le Solitaire (Thief) ?",
+    "answers": [
+      "Robert De Niro",
+      "Al Pacino",
+      "Harvey Keitel",
+      "James Caan"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel groupe a composé la bande originale de Le Solitaire (Thief) ?",
+    "answers": [
+      "Tangerine Dream",
+      "Goblin",
+      "Kraftwerk",
+      "Vangelis"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel long métrage marque les débuts de Michael Mann au cinéma ?",
+    "answers": [
+      "Heat",
+      "Le Solitaire (Thief)",
+      "Manhunter",
+      "Collateral"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice joue Jessie, dont Frank veut partager la vie dans Le Solitaire ?",
+    "answers": [
+      "Diane Keaton",
+      "Sissy Spacek",
+      "Tuesday Weld",
+      "Debra Winger"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "De quel ouvrage Le Solitaire (Thief) s'inspire-t-il ?",
+    "answers": [
+      "The Friends of Eddie Coyle",
+      "No Beast So Fierce",
+      "The Grifters",
+      "The Home Invaders: Confessions of a Cat Burglar"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui joue Gal, l'ancien truand retiré en Espagne dans Sexy Beast ?",
+    "answers": [
+      "Ray Winstone",
+      "Ben Kingsley",
+      "Ian McShane",
+      "Bob Hoskins"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel acteur incarne Don Logan dans Sexy Beast ?",
+    "answers": [
+      "Ray Winstone",
+      "Ben Kingsley",
+      "Ian McShane",
+      "Stephen Graham"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel réalisateur a signé Sexy Beast ?",
+    "answers": [
+      "Nicolas Winding Refn",
+      "Guy Ritchie",
+      "Jonathan Glazer",
+      "Matthew Vaughn"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel pays Gal profite-t-il de sa retraite au début de Sexy Beast ?",
+    "answers": [
+      "Portugal",
+      "France",
+      "Italie",
+      "Espagne"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le prénom de l'ex-truand que Don Logan veut recruter pour un dernier braquage ?",
+    "answers": [
+      "Gal",
+      "Don",
+      "Teddy",
+      "Harry"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans Reservoir Dogs, quel alias désigne le policier infiltré ?",
+    "answers": [
+      "M. Blanc",
+      "M. Orange",
+      "M. Rose",
+      "M. Brun"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel réalisateur a signé Reservoir Dogs ?",
+    "answers": [
+      "Robert Rodriguez",
+      "Tony Scott",
+      "Quentin Tarantino",
+      "Roger Avary"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel acteur incarne M. Blonde dans Reservoir Dogs ?",
+    "answers": [
+      "Harvey Keitel",
+      "Tim Roth",
+      "Steve Buscemi",
+      "Michael Madsen"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur interprète le chef de bande Joe Cabot dans Reservoir Dogs ?",
+    "answers": [
+      "Lawrence Tierney",
+      "Chris Penn",
+      "Edward Bunker",
+      "Randy Brooks"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle opération criminelle tourne mal dans Reservoir Dogs ?",
+    "answers": [
+      "Un transfert de lingots",
+      "Un vol de diamants",
+      "Un braquage de casino",
+      "Un vol de tableaux"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
   }
 ]
