@@ -94,5 +94,9 @@
   {"text": "Quel est le nom de la spéciale finale offrant des points bonus en WRC ?", "answers": ["Super Special", "Rally Finale", "Power Stage", "Bonus Stage"], "correct": 2},
   {"text": "Quel pilote gallois court actuellement en WRC pour Toyota ?", "answers": ["Nicky Grist", "Matthew Wilson", "Elfyn Evans", "Craig Breen"], "correct": 2},
   {"text": "Quel Groupe a succédé au Groupe B en 1987 ?", "answers": ["Groupe C", "Groupe N", "Groupe A", "Groupe S"], "correct": 2},
-  {"text": "Quel pilote a remporté le plus de titres consécutifs en WRC ?", "answers": ["Tommi Mäkinen", "Sébastien Loeb", "Sébastien Ogier", "Marcus Grönholm"], "correct": 1}
+  {"text": "Quel pilote a remporté le plus de titres consécutifs en WRC ?", "answers": ["Tommi Mäkinen", "Sébastien Loeb", "Sébastien Ogier", "Marcus Grönholm"], "correct": 1},
+  {"text":"Quel constructeur a remporté le premier titre mondial des marques en WRC, en 1973 ?","answers":["Fiat","Lancia","Ford","Alpine-Renault"],"correct":3,"difficulty":"expert"},
+  {"text":"Quel pilote a remporté le Rallye Monte-Carlo 1973, première manche de l'histoire du WRC ?","answers":["Jean-Claude Andruet","Sandro Munari","Bernard Darniche","Hannu Mikkola"],"correct":0,"difficulty":"expert"},
+  {"text":"Quelle pilote est devenue en 1981 la première femme à remporter une manche du WRC ?","answers":["Jutta Kleinschmidt","Michèle Mouton","Pat Moss","Fabrizia Pons"],"correct":1,"difficulty":"expert"},
+  {"text":"Sur quel rallye Kalle Rovanperä est-il devenu en 2021 le plus jeune vainqueur d'une manche du WRC ?","answers":["Rallye de Finlande","Rallye de Croatie","Rallye d'Estonie","Rallye de Suède"],"correct":2,"difficulty":"expert"}
 ]

@@ -94,5 +94,9 @@
   {"text": "Quel pays a remporté le plus de médailles aux Jeux olympiques d'hiver tous temps confondus ?", "answers": ["États-Unis", "Allemagne", "Norvège", "Russie/URSS"], "correct": 2},
   {"text": "Le boardercross est une épreuve de quel sport d'hiver ?", "answers": ["Ski alpin", "Ski acrobatique", "Snowboard", "Biathlon"], "correct": 2},
   {"text": "Quelle snowboardeuse américaine est devenue championne olympique de halfpipe à 17 ans en 2018 ?", "answers": ["Jamie Anderson", "Chloe Kim", "Kelly Clark", "Hannah Teter"], "correct": 1},
-  {"text": "Le patinage de vitesse sur longue piste utilise une piste de combien de mètres ?", "answers": ["200 m", "333 m", "400 m", "500 m"], "correct": 2}
+  {"text": "Le patinage de vitesse sur longue piste utilise une piste de combien de mètres ?", "answers": ["200 m", "333 m", "400 m", "500 m"], "correct": 2},
+  {"text":"Qui est devenue à Sotchi 2014 la première championne olympique de saut à ski ?","answers":["Sara Takanashi","Maren Lundby","Carina Vogt","Katharina Althaus"],"correct":2,"difficulty":"expert"},
+  {"text":"Lors de quels Jeux le skeleton a-t-il fait son retour durable au programme olympique ?","answers":["Nagano 1998","Salt Lake City 2002","Turin 2006","Vancouver 2010"],"correct":1,"difficulty":"expert"},
+  {"text":"Quel Canadien a remporté le premier titre olympique de l'histoire du snowboard, en 1998 ?","answers":["Ross Rebagliati","Jasey-Jay Anderson","Mark McMorris","Max Parrot"],"correct":0,"difficulty":"expert"},
+  {"text":"Quelle Américaine a remporté le premier titre olympique féminin de bobsleigh, en 2002, avec Jill Bakken ?","answers":["Elana Meyers Taylor","Vonetta Flowers","Jean Racine","Shauna Rohbock"],"correct":1,"difficulty":"expert"}
 ]
