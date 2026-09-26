@@ -180,14 +180,15 @@
     "correct": 1
   },
   {
-    "text": "Quel gardien nigérian bat, dans les années 2010, le record du plus grand nombre de minutes sans encaisser de but en sélection ?",
+    "text": "Quel gardien est le seul à avoir marqué dans une phase finale de CAN, sur penalty contre le Nigeria en 2013 ?",
     "answers": [
+      "Essam El-Hadary",
+      "Kennedy Mweene",
       "Vincent Enyeama",
-      "Austin Ejide",
-      "Daniel Akpeyi",
-      "Carl Ikeme"
+      "Thomas N'Kono"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
     "text": "À partir de quelle édition la CAN introduit-elle l'assistance vidéo à l'arbitrage (VAR) ?",
@@ -200,14 +201,15 @@
     "correct": 1
   },
   {
-    "text": "Quel attaquant ivoirien, plusieurs fois Ballon d'Or africain, ne remporte la CAN qu'à la toute fin de sa carrière, en 2015 ?",
+    "text": "Quel capitaine ivoirien soulève la CAN 2015 après les finales perdues par la Côte d’Ivoire en 2006 et 2012 ?",
     "answers": [
       "Didier Drogba",
+      "Kolo Touré",
       "Yaya Touré",
-      "Salomon Kalou",
       "Gervinho"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
     "text": "Quel milieu de terrain ivoirien remporte quatre Ballons d'Or africains consécutifs dans les années 2010 ?",
@@ -340,14 +342,15 @@
     "correct": 0
   },
   {
-    "text": "En 2000 et 2002, quelle sélection remporte deux CAN consécutives sous l'ère Roger Milla puis de la génération suivante ?",
+    "text": "Quelle sélection remporte deux CAN consécutives en 2000 et 2002 ?",
     "answers": [
-      "Le Cameroun",
       "Le Nigeria",
       "Le Sénégal",
-      "Le Ghana"
+      "Le Ghana",
+      "Le Cameroun"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "medium"
   },
   {
     "text": "Quel attaquant camerounais emblématique, connu pour ses célébrations au poteau de corner, marque l'histoire de la CAN dans les années 1980-1990 ?",
@@ -400,14 +403,15 @@
     "correct": 0
   },
   {
-    "text": "En 1990, quel pays africain du nord organise et atteint la finale de la CAN sans la remporter, battu par l'Algérie ?",
+    "text": "Quelle sélection s'incline 1-0 face à l'Algérie en finale de la CAN 1990 ?",
     "answers": [
+      "Le Nigeria",
       "Le Maroc",
       "La Tunisie",
-      "La Libye",
       "L'Égypte"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
     "text": "En 1990, quel pays remporte la CAN à domicile pour la première fois de son histoire ?",
@@ -440,14 +444,15 @@
     "correct": 0
   },
   {
-    "text": "Dans les années 1960-1970, quelle sélection d'Afrique centrale, alors appelée Congo-Kinshasa puis Zaïre, s'impose à plusieurs reprises sur le continent (1968, 1972, 1974) ?",
+    "text": "Quels deux pays actuels se partagent les titres remportés sous les noms Congo-Kinshasa, Congo et Zaïre en 1968, 1972 et 1974 ?",
     "answers": [
-      "Le Zaïre / Congo-Kinshasa",
-      "Le Congo-Brazzaville",
-      "Le Cameroun",
-      "La RCA"
+      "La RD Congo et le Cameroun",
+      "La RD Congo et la République du Congo",
+      "La République du Congo et la RCA",
+      "La RD Congo et l'Angola"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
     "text": "Combien de titres continentaux la RD Congo (ex-Congo/Zaïre) compte-t-elle au total dans l'histoire de la CAN ?",
@@ -568,5 +573,478 @@
       "Les Éléphants"
     ],
     "correct": 0
+  },
+  {
+    "text": "Qui détient le record absolu de buts en phase finale de CAN avec 18 réalisations ?",
+    "answers": [
+      "Samuel Eto'o",
+      "Laurent Pokou",
+      "Rashidi Yekini",
+      "Didier Drogba"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a inscrit le record de neuf buts lors d'une seule édition, en 1974 ?",
+    "answers": [
+      "Hassan El-Shazly",
+      "Ndaye Mulamba",
+      "Roger Milla",
+      "Kalusha Bwalya"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Ivoirien a marqué cinq buts contre l'Éthiopie en 1970, record pour un match de CAN ?",
+    "answers": [
+      "Abdoulaye Traoré",
+      "Didier Drogba",
+      "Laurent Pokou",
+      "Salomon Kalou"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a inscrit le but le plus rapide recensé en CAN, après 23 secondes contre le Gabon en 1994 ?",
+    "answers": [
+      "Hossam Hassan",
+      "Ahmed Hassan",
+      "Mohamed Zidan",
+      "Ayman Mansour"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Gabonais est devenu en 2000 le plus jeune joueur d'une phase finale de CAN, à 16 ans et 93 jours ?",
+    "answers": [
+      "Shiva N'Zigou",
+      "Pierre-Emerick Aubameyang",
+      "Mario Lemina",
+      "Denis Bouanga"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel gardien égyptien a établi en 2017 le record du joueur le plus âgé en CAN, à 44 ans et 21 jours ?",
+    "answers": [
+      "Nader El-Sayed",
+      "Essam El-Hadary",
+      "Ahmed Shobair",
+      "Sherif Ekramy"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Lequel de ces joueurs a marqué lors de six éditions différentes de la CAN ?",
+    "answers": [
+      "Abedi Pelé",
+      "Michael Essien",
+      "Asamoah Gyan",
+      "Sulley Muntari"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur a dirigé des équipes lors d'un record de neuf phases finales de CAN entre 1986 et 2017 ?",
+    "answers": [
+      "Hervé Renard",
+      "Hassan Shehata",
+      "Otto Pfister",
+      "Claude Le Roy"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel entraîneur détient le record de 38 matches dirigés en phase finale de CAN ?",
+    "answers": [
+      "Claude Le Roy",
+      "Hervé Renard",
+      "Rabah Saâdane",
+      "Milutin Sredojević"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Égyptien a remporté la CAN comme joueur en 1957 puis comme sélectionneur en 1998 ?",
+    "answers": [
+      "Hassan Shehata",
+      "Mahmoud El-Gohary",
+      "Ahmed Hassan",
+      "Mahmoud El Khatib"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Nigérian a remporté la CAN comme joueur en 1994 puis comme sélectionneur en 2013 ?",
+    "answers": [
+      "Augustine Eguavoen",
+      "Sunday Oliseh",
+      "Stephen Keshi",
+      "Samson Siasia"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel sélectionneur est le seul à avoir remporté la CAN avec deux pays différents, la Zambie en 2012 et la Côte d'Ivoire en 2015 ?",
+    "answers": [
+      "Claude Le Roy",
+      "Otto Pfister",
+      "Philippe Troussier",
+      "Hervé Renard"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur est devenu en 2004 le premier à gagner à la fois l'Euro et la CAN ?",
+    "answers": [
+      "Roger Lemerre",
+      "Hervé Renard",
+      "Bruno Metsu",
+      "Henri Michel"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quels deux Égyptiens ont chacun remporté quatre titres de CAN comme joueurs ?",
+    "answers": [
+      "Hossam Hassan et Wael Gomaa",
+      "Ahmed Hassan et Essam El-Hadary",
+      "Mohamed Aboutrika et Ahmed Fathy",
+      "Emad Moteab et Mohamed Zidan"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quels deux sélectionneurs ont chacun remporté trois CAN ?",
+    "answers": [
+      "Claude Le Roy et Hervé Renard",
+      "Roger Lemerre et Stephen Keshi",
+      "Charles Gyamfi et Hassan Shehata",
+      "Rabah Saâdane et Mahmoud El-Gohary"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel buteur égyptien affiche le meilleur ratio parmi les joueurs à au moins dix buts en CAN, avec 12 buts en 8 matches ?",
+    "answers": [
+      "Hossam Hassan",
+      "Ahmed Hassan",
+      "Mohamed Salah",
+      "Hassan El-Shazly"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur reste le seul à avoir réussi deux triplés en CAN ?",
+    "answers": [
+      "Hassan El-Shazly",
+      "Ad-Diba",
+      "Laurent Pokou",
+      "Ndaye Mulamba"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Égyptien a signé le premier triplé de l'histoire de la CAN, en marquant les quatre buts de la finale 1957 ?",
+    "answers": [
+      "Hassan El-Shazly",
+      "Ad-Diba",
+      "Mahmoud El-Gohary",
+      "Saleh Selim"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel score constitue le match le plus prolifique de l'histoire de la CAN, avec neuf buts en 1963 ?",
+    "answers": [
+      "Côte d'Ivoire 6-1 Éthiopie",
+      "Angola 4-4 Mali",
+      "Égypte 6-3 Nigeria",
+      "Guinée 6-1 Botswana"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a inscrit le premier but du Nigeria en phase finale de CAN, lors du match contre l'Égypte en 1963 ?",
+    "answers": [
+      "Teslim Balogun",
+      "Segun Odegbami",
+      "Rashidi Yekini",
+      "Asuquo Ekpe"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quels deux Égyptiens ont chacun réussi un triplé lors du 6-3 contre le Nigeria en 1963 ?",
+    "answers": [
+      "Hassan El-Shazly et Reda",
+      "Ad-Diba et Saleh Selim",
+      "Hossam Hassan et Ahmed Hassan",
+      "Mahmoud El Khatib et Taher Abouzeid"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À l'issue de la CAN 2023, quelle nation comptait le plus de médailles toutes couleurs confondues, avec 16 ?",
+    "answers": [
+      "L'Égypte",
+      "Le Nigeria",
+      "Le Ghana",
+      "Le Cameroun"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quels classements l'Afrique du Sud a-t-elle obtenus lors de ses trois premières CAN, de 1996 à 2000 ?",
+    "answers": [
+      "1re, 3e puis 2e",
+      "2e, 1re puis 3e",
+      "1re, 2e puis 3e",
+      "3e, 2e puis 1re"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel trio réunit les seules sélections sacrées dès leur première participation à la CAN ?",
+    "answers": [
+      "Égypte, Cameroun et Algérie",
+      "Ghana, Nigeria et Zambie",
+      "Afrique du Sud, Sénégal et Côte d'Ivoire",
+      "Égypte, Ghana et Afrique du Sud"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel pays avait organisé un record de cinq phases finales de CAN entre 1959 et 2019 ?",
+    "answers": [
+      "L'Égypte",
+      "Le Ghana",
+      "La Tunisie",
+      "Le Cameroun"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de pays hôtes avaient remporté la CAN à domicile après le sacre ivoirien de 2023 ?",
+    "answers": [
+      "Dix",
+      "Douze",
+      "Onze",
+      "Treize"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Lors de quelle édition le trophée doré actuel de la CAN a-t-il été remis pour la première fois ?",
+    "answers": [
+      "CAN 1998",
+      "CAN 2000",
+      "CAN 2002",
+      "CAN 2004"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle sélection a été la première à soulever le trophée actuel de la CAN en 2002 ?",
+    "answers": [
+      "Le Sénégal",
+      "L'Égypte",
+      "Le Nigeria",
+      "Le Cameroun"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel nom portait le premier trophée de la CAN, instauré en 1957 ?",
+    "answers": [
+      "Trophée Abdelaziz Abdallah Salem",
+      "Trophée de l'Unité africaine",
+      "Coupe Kwame-Nkrumah",
+      "Trophée Ydnekatchew-Tessema"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection a conservé définitivement le premier trophée après son troisième titre, en 1978 ?",
+    "answers": [
+      "L'Égypte",
+      "Le Ghana",
+      "Le Cameroun",
+      "Le Nigeria"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment s'appelait le deuxième trophée de la CAN, mis en circulation en 1980 ?",
+    "answers": [
+      "Trophée Abdelaziz Abdallah Salem",
+      "Coupe de la Renaissance africaine",
+      "Trophée de l'Unité africaine",
+      "Trophée Nelson-Mandela"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection a conservé définitivement le Trophée de l'Unité africaine après son titre de 2000 ?",
+    "answers": [
+      "Le Nigeria",
+      "L'Égypte",
+      "Le Ghana",
+      "Le Cameroun"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Depuis 2002, qui reste propriétaire du trophée original de la CAN après les célébrations du champion ?",
+    "answers": [
+      "La CAF",
+      "La fédération championne",
+      "Le pays hôte",
+      "L'Union africaine"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel pays le trophée actuel de la CAN a-t-il été inauguré lors de l'édition 2002 ?",
+    "answers": [
+      "Au Ghana",
+      "Au Mali",
+      "Au Nigeria",
+      "En Tunisie"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle particularité distingue l'édition 1976 remportée par le Maroc ?",
+    "answers": [
+      "La finale s'est rejouée deux jours plus tard",
+      "Le tournoi s'est achevé aux tirs au but",
+      "Le titre a été décidé par une poule finale",
+      "Deux pays ont partagé le titre"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection est devenue la première à conserver la CAN en remportant les éditions 1963 et 1965 ?",
+    "answers": [
+      "L'Égypte",
+      "Le Cameroun",
+      "Le Nigeria",
+      "Le Ghana"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection reste la seule à avoir remporté trois CAN consécutives ?",
+    "answers": [
+      "L'Égypte",
+      "Le Ghana",
+      "Le Cameroun",
+      "La Côte d'Ivoire"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel remplaçant a inscrit les deux buts de l'Afrique du Sud en finale de la CAN 1996 ?",
+    "answers": [
+      "Phil Masinga",
+      "Mark Williams",
+      "John Moshoeu",
+      "Doctor Khumalo"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a marqué l'unique but de la finale 2008 remportée par l'Égypte contre le Cameroun ?",
+    "answers": [
+      "Amr Zaki",
+      "Mohamed Zidan",
+      "Mohamed Aboutrika",
+      "Ahmed Hassan"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a inscrit l'unique but de la finale 2010, offrant à l'Égypte un troisième titre consécutif ?",
+    "answers": [
+      "Mohamed Aboutrika",
+      "Emad Moteab",
+      "Hossam Ghaly",
+      "Mohamed Gedo"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel Algérien a marqué l'unique but de la finale 2019 contre le Sénégal ?",
+    "answers": [
+      "Baghdad Bounedjah",
+      "Riyad Mahrez",
+      "Islam Slimani",
+      "Sofiane Feghouli"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel attaquant a inscrit le but victorieux de la Côte d'Ivoire contre le Nigeria en finale de la CAN 2023 ?",
+    "answers": [
+      "Franck Kessié",
+      "Sébastien Haller",
+      "Simon Adingra",
+      "Nicolas Pépé"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel milieu a marqué en prolongation l'unique but de la finale 2025 remportée par le Sénégal contre le Maroc ?",
+    "answers": [
+      "Sadio Mané",
+      "Iliman Ndiaye",
+      "Pape Gueye",
+      "Ismaïla Sarr"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
   }
 ]
