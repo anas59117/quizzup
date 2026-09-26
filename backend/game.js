@@ -11,6 +11,13 @@ const categoryStats = require('./category-stats');
 const topicStats = require('./topic-stats');
 const { randomId } = require('./ids');
 
+// Optional hook (set by server.js) told when a player gains XP in a theme,
+// so friends they overtake can be notified.
+let topicProgressListener = null;
+function setTopicProgressListener(fn) {
+  topicProgressListener = typeof fn === 'function' ? fn : null;
+}
+
 const activeGames = new Map();
 const playerSessions = new Map();
 const startingClients = new Set();
@@ -519,8 +526,21 @@ function endGame(game, reason) {
     // Solo sessions count as games played but neither extend nor break a PvP
     // win streak, and they cannot farm the multiplayer win bonus.
     stats.recordResult(p.clientId, won, isSolo || isTie, xpTotal, coinsEarned);
+    let day = { dayStreak: 0, increased: false };
     try {
+      day = stats.recordPlayDay(p.clientId);
+    } catch (err) {
+      console.error('day streak record failed:', err);
+    }
+    try {
+      const beforeXp = p.clientId && game.categoryKey ? topicStats.getTopic(p.clientId, game.categoryKey).xp : 0;
       topicStats.record(p.clientId, game.categoryKey, { won, xp: xpTotal });
+      if (topicProgressListener && p.clientId && game.categoryKey) {
+        const afterXp = topicStats.getTopic(p.clientId, game.categoryKey).xp;
+        if (afterXp > beforeXp) {
+          topicProgressListener({ clientId: p.clientId, categoryKey: game.categoryKey, beforeXp, afterXp });
+        }
+      }
     } catch (err) {
       console.error('topic-stats record failed:', err);
     }
@@ -535,6 +555,8 @@ function endGame(game, reason) {
       xpBreakdown: { matchScore: p.score, finishBonus, winBonus, xpTotal },
       stats: { ...stats.getStats(p.clientId), topics: topicStats.getPlayerTopics(p.clientId, 12) },
       topic: game.categoryKey ? topicStats.getTopic(p.clientId, game.categoryKey) : null,
+      dayStreak: day.dayStreak,
+      dayStreakUp: day.increased,
     };
     p.finalResult = finalResult;
     send(p.ws, finalResult);
@@ -569,5 +591,5 @@ module.exports = {
   startGame, recordAnswer, endGame, removePlayer,
   disconnectPlayer, reconnectPlayer, reattachFinishedPlayer,
   findActiveSessionByClientId, findFinishedSessionByClientId,
-  requestRematch, cancelRematch,
+  requestRematch, cancelRematch, setTopicProgressListener,
 };

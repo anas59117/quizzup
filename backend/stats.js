@@ -83,7 +83,45 @@ function getLeaderboard(limit = 50, clientId = null) {
   return rankLeaderboard(stats, limit, clientId);
 }
 
-function getStats(clientId) {
+// Days are counted on French time: the launch market is francophone, and a
+// player finishing at 00:30 should see "a new day", not yesterday's.
+const STREAK_TIME_ZONE = 'Europe/Paris';
+const dayFormatter = new Intl.DateTimeFormat('en-CA', {
+  timeZone: STREAK_TIME_ZONE, year: 'numeric', month: '2-digit', day: '2-digit',
+});
+
+function dayKey(now = Date.now()) {
+  return dayFormatter.format(new Date(now)); // "YYYY-MM-DD"
+}
+
+function dayIndex(key) {
+  const [y, m, d] = key.split('-').map(Number);
+  return Math.round(Date.UTC(y, m - 1, d) / 86400000);
+}
+
+// A streak is still alive if the player played today or yesterday.
+function currentDayStreak(s, now = Date.now()) {
+  if (!s || !s.lastPlayDay) return 0;
+  const gap = dayIndex(dayKey(now)) - dayIndex(s.lastPlayDay);
+  return gap >= 0 && gap <= 1 ? (s.dayStreak || 0) : 0;
+}
+
+// Called once per finished game. Returns whether today's game extended the
+// streak (only the first game of a day does).
+function recordPlayDay(clientId, now = Date.now()) {
+  if (!clientId) return { dayStreak: 0, increased: false };
+  const s = stats[clientId] || (stats[clientId] = { games: 0, wins: 0, streak: 0, xp: 0, coins: 0 });
+  const today = dayKey(now);
+  if (s.lastPlayDay === today) return { dayStreak: s.dayStreak || 1, increased: false };
+  const gap = s.lastPlayDay ? dayIndex(today) - dayIndex(s.lastPlayDay) : null;
+  s.dayStreak = gap === 1 ? (s.dayStreak || 0) + 1 : 1;
+  s.bestDayStreak = Math.max(s.bestDayStreak || 0, s.dayStreak);
+  s.lastPlayDay = today;
+  persist();
+  return { dayStreak: s.dayStreak, increased: true };
+}
+
+function getStats(clientId, now = Date.now()) {
   const s = clientId && stats[clientId];
   const xp = s ? s.xp || 0 : 0;
   const { level, xpIntoLevel, xpForLevel } = levelFromXp(xp);
@@ -93,6 +131,9 @@ function getStats(clientId) {
     streak: s ? s.streak : 0,
     xp,
     coins: s ? s.coins || 0 : 0,
+    dayStreak: currentDayStreak(s, now),
+    bestDayStreak: s ? s.bestDayStreak || 0 : 0,
+    playedToday: !!(s && s.lastPlayDay === dayKey(now)),
     level,
     xpIntoLevel,
     xpForLevel,
@@ -119,4 +160,4 @@ function recordResult(clientId, won, tie, xpEarned, coinsEarned = 0) {
   persist();
 }
 
-module.exports = { getStats, getLeaderboard, rankLeaderboard, recordResult, levelFromXp };
+module.exports = { getStats, getLeaderboard, rankLeaderboard, recordResult, recordPlayDay, dayKey, levelFromXp };

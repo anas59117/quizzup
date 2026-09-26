@@ -444,7 +444,7 @@ button:focus-visible,input:focus-visible,select:focus-visible { outline:2px soli
 .profile-editor-cancel { border:1px solid var(--border); background:transparent; color:var(--text-dim); }
 .profile-editor-save { border:0; background:var(--accent); color:#fff; }
 .profile-editor-cancel:disabled,.profile-editor-save:disabled { opacity:.45; cursor:not-allowed; }
-.profile-stats { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:7px; margin-bottom:16px; }
+.profile-stats { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:7px; margin-bottom:16px; }
 .pstat { min-width:0; padding:14px 8px; border:1px solid var(--border); border-radius:11px; background:var(--surface); text-align:center; }
 .pstat-val { color:var(--text); font-size:1.15rem; font-weight:850; }
 .pstat-lbl { margin-top:4px; color:var(--text-faint); font-size:.6rem; text-transform:uppercase; letter-spacing:.07em; }
@@ -945,6 +945,7 @@ button.topic-level-row:hover { border-color:var(--border-strong); }
 .result-topic-level { max-width:420px; display:flex; align-items:center; gap:12px; margin:4px auto 14px; padding:10px 14px; border:1px solid #26262a; border-radius:12px; background:#111113; color:#f7f7f2; text-align:left; }
 .result-topic-level strong { display:block; font-size:.86rem; }
 .result-topic-level small { color:#aaaab2; font-size:.72rem; }
+.result-day-streak { margin:-4px auto 14px; color:#f5a524; font-size:.86rem; font-weight:800; text-align:center; }
 
 /* Boot splash (replaces the pseudo/avatar screen) */
 .boot-splash { min-height:70vh; justify-content:center; }

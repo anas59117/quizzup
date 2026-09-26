@@ -3,10 +3,10 @@ import './App.css';
 import SFX from './sounds';
 import music from './music';
 import { useSocial, GameChat } from './social';
-import { ensureSignedIn, linkGoogleAccount } from './firebase';
+import { ensureSignedIn, linkGoogleAccount, preloadFirebase } from './firebase';
 import { useStats } from './stats';
 import { useFeed, FeedScreen } from './feed';
-import { usePlayers, PlayerSheet } from './players';
+import { usePlayers, PlayerSheet, topicLabel } from './players';
 import { RoomLobby } from './multiplayer';
 import { AVATARS, useTheme, TopControls, NavBar, ErrorScreen, Toast } from './ui';
 import { HomeContent, EnterCodeContent, CategoriesContent, ProfileContent, LeaderboardContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent } from './screens';
@@ -190,6 +190,13 @@ export default function App() {
       });
     return () => { cancelled = true; };
   }, []);
+
+  // Fetch the Google-link code only when the profile (where the button is)
+  // opens, so the popup still opens instantly on click.
+  const googleLinked = !!(firebaseUser && !firebaseUser.isAnonymous);
+  useEffect(() => {
+    if (stage === 'profile' && !googleLinked) preloadFirebase();
+  }, [stage, googleLinked]);
 
   const linkGoogle = useCallback(async () => {
     setLinking(true);
@@ -464,7 +471,22 @@ export default function App() {
         setStage('finished');
         setOpponents((prev) => data.others.map((upd) => ({ ...prev.find((o) => o.id === upd.id), ...upd })));
         statsHook.handleStatsMessage(data);
+        if (data.dayStreakUp && data.dayStreak > 1) showToast(t('dayStreakUp', { n: data.dayStreak }), 'success', 4500);
         break;
+      case 'notification':
+        if (data.notification?.type === 'friend_overtook') {
+          showToast(t('friendOvertook', { name: data.notification.fromName, topic: topicLabel(data.notification.category) }), 'info', 5000);
+        }
+        break;
+      case 'notifications': {
+        const list = Array.isArray(data.notifications) ? data.notifications.filter((n) => n?.type === 'friend_overtook') : [];
+        if (list.length === 1) {
+          showToast(t('friendOvertook', { name: list[0].fromName, topic: topicLabel(list[0].category) }), 'info', 5000);
+        } else if (list.length > 1) {
+          showToast(t('friendsOvertookMany', { n: list.length }), 'info', 5000);
+        }
+        break;
+      }
       case 'stats':
         statsHook.handleStatsMessage(data);
         break;

@@ -18,6 +18,7 @@ const stats = require('./stats');
 const categoryStats = require('./category-stats');
 const topicStats = require('./topic-stats');
 const follows = require('./follows');
+const notifications = require('./notifications');
 const crypto = require('crypto');
 const { ROOM_TTL_MS, CODE_ALPHABET, MAX_ROOM_PLAYERS } = require('./config');
 const { randomRoomCode } = require('./ids');
@@ -218,6 +219,8 @@ async function handleIdentify(ws, data, state) {
   game.send(ws, { type: 'friend_requests', requests: social.getPendingRequests(state.clientId) });
   game.send(ws, { type: 'stats', stats: fullStats(state.clientId) });
   game.send(ws, { type: 'feed_list', posts: posts.getFeed() });
+  const pending = notifications.take(state.clientId);
+  if (pending.length) game.send(ws, { type: 'notifications', notifications: pending });
   notifyPresence(state.clientId, true);
 }
 
@@ -300,6 +303,35 @@ function handleFeed(ws, data, state) {
   }
   return false;
 }
+
+// "Ton ami X t'a dépassé en NBA": when a player's theme XP passes a friend's,
+// tell that friend now if online, otherwise on their next visit.
+function notifyOvertakenFriends({ clientId, categoryKey, beforeXp, afterXp }) {
+  const me = social.profileOf(clientId);
+  if (!me) return;
+  for (const friend of social.getFriendsList(clientId)) {
+    const theirs = topicStats.getTopic(friend.id, categoryKey);
+    if (!theirs.games || !(beforeXp <= theirs.xp && afterXp > theirs.xp)) continue;
+    const notification = {
+      type: 'friend_overtook',
+      fromId: clientId,
+      fromName: me.name,
+      fromAvatar: me.avatar,
+      category: categoryKey,
+      at: Date.now(),
+    };
+    const ws = social.getWs(friend.id);
+    if (ws && ws.readyState === 1) game.send(ws, { type: 'notification', notification });
+    else notifications.push(friend.id, notification);
+  }
+}
+game.setTopicProgressListener((event) => {
+  try {
+    notifyOvertakenFriends(event);
+  } catch (err) {
+    console.error('friend overtake notification failed:', err);
+  }
+});
 
 function fullStats(clientId) {
   return {

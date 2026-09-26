@@ -469,6 +469,7 @@ export function FinishedContent({ result, opponents, myId, social, addFriend, pl
           </span>
         </div>
       )}
+      {result.dayStreak > 1 && <div className="result-day-streak">{t('dayStreakLine', { n: result.dayStreak })}</div>}
       <div className="xp-breakdown">
         <div className="xpb-row"><span>{t('matchScore')}</span><span>{result.finalScore}</span></div>
         <div className="xpb-row"><span>{t('finishBonus')}</span><span>+{result.xpBreakdown?.finishBonus ?? 0}</span></div>

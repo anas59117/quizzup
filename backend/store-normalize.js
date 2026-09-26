@@ -46,6 +46,12 @@ function normalizeStatsStore(value) {
       xp: asNonNegativeInt(raw.xp, 0, Number.MAX_SAFE_INTEGER),
       coins: asNonNegativeInt(raw.coins, 0, Number.MAX_SAFE_INTEGER),
     };
+    // Consecutive-days-played streak (optional; absent on older records).
+    if (typeof raw.lastPlayDay === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(raw.lastPlayDay)) {
+      out[id].lastPlayDay = raw.lastPlayDay;
+      out[id].dayStreak = asNonNegativeInt(raw.dayStreak, 0, 1_000_000);
+      out[id].bestDayStreak = Math.max(out[id].dayStreak, asNonNegativeInt(raw.bestDayStreak, 0, 1_000_000));
+    }
   }
   return out;
 }

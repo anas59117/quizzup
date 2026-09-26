@@ -4,14 +4,25 @@
 // backend-signed QuizzUp guest identity from Railway. Firebase is contacted
 // only when the player explicitly links a Google account.
 
-import { initializeApp, getApps, getApp } from 'firebase/app';
-import {
-  getAuth,
-  GoogleAuthProvider,
-  linkWithPopup,
-  signInWithPopup,
-} from 'firebase/auth';
 import { getBackendOrigin } from './backend';
+
+// The Firebase SDK is large and only needed for the optional Google link, so
+// it lives in its own chunk that is never downloaded at startup. The profile
+// screen preloads it so the popup still opens right after the click.
+let firebaseSdkPromise = null;
+function loadFirebaseSdk() {
+  if (!firebaseSdkPromise) {
+    firebaseSdkPromise = Promise.all([import('firebase/app'), import('firebase/auth')])
+      .then(([app, auth]) => ({ ...app, ...auth }))
+      .catch((err) => { firebaseSdkPromise = null; throw err; });
+  }
+  return firebaseSdkPromise;
+}
+
+function preloadFirebase() {
+  if (!firebaseConfigReady()) return;
+  loadFirebaseSdk().catch(() => {});
+}
 
 const GUEST_TOKEN_KEY = 'quizzup-guest-token-v1';
 const GOOGLE_LINKED_KEY = 'quizzup-google-linked-v1';
@@ -37,16 +48,17 @@ function firebaseConfigReady() {
   );
 }
 
-function getFirebaseAuth() {
+async function getFirebaseAuth() {
   if (!firebaseConfigReady()) {
     const err = new Error('Firebase Web configuration is unavailable');
     err.code = 'auth/firebase-config-unavailable';
     throw err;
   }
-  if (authInstance) return authInstance;
-  const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
-  authInstance = getAuth(app);
-  return authInstance;
+  const sdk = await loadFirebaseSdk();
+  if (authInstance) return { auth: authInstance, sdk };
+  const app = sdk.getApps().length ? sdk.getApp() : sdk.initializeApp(firebaseConfig);
+  authInstance = sdk.getAuth(app);
+  return { auth: authInstance, sdk };
 }
 
 function readLocal(key) {
@@ -131,17 +143,17 @@ async function linkGoogleAccount() {
     throw err;
   }
 
-  const auth = getFirebaseAuth();
-  const googleProvider = new GoogleAuthProvider();
+  const { auth, sdk } = await getFirebaseAuth();
+  const googleProvider = new sdk.GoogleAuthProvider();
 
   let result;
   const current = auth.currentUser;
   if (current?.providerData?.some((provider) => provider.providerId === 'google.com')) {
     result = { user: current };
   } else if (current?.isAnonymous) {
-    result = await linkWithPopup(current, googleProvider);
+    result = await sdk.linkWithPopup(current, googleProvider);
   } else {
-    result = await signInWithPopup(auth, googleProvider);
+    result = await sdk.signInWithPopup(auth, googleProvider);
   }
 
   const firebaseToken = await result.user.getIdToken(true);
@@ -177,6 +189,7 @@ async function signOutUser() {
 export {
   ensureSignedIn,
   linkGoogleAccount,
+  preloadFirebase,
   signOutUser,
   firebaseConfigReady,
 };
