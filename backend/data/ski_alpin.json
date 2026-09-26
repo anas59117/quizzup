@@ -85,15 +85,18 @@
   {"text": "Le Super-G se court en combien de manches ?", "answers": ["1", "2", "3", "Cela dépend"], "correct": 0},
   {"text": "Quel Français est devenu le plus jeune vainqueur d'une course de Coupe du monde à 17 ans en 2012 ?", "answers": ["Alexis Pinturault", "Clément Noël", "Cyprien Sarrazin", "Mathieu Faivre"], "correct": 0},
   {"text": "Clément Noël est un spécialiste français de quelle discipline ?", "answers": ["Descente", "Super-G", "Slalom géant", "Slalom"], "correct": 3},
-  {"text": "Quel skieur norvégien a dominé le slalom géant et le Super-G au début des années 2020 ?", "answers": ["Henrik Kristoffersen", "Aleksander Aamodt Kilde", "Lucas Braathen", "Atle Lie McGrath"], "correct": 1},
+  {"text":"Dans quelles deux disciplines de vitesse Aleksander Aamodt Kilde s'est-il principalement illustré au début des années 2020 ?","answers":["Slalom et géant","Descente et super-G","Géant et combiné","Slalom et super-G"],"correct":1,"difficulty":"hard"},
   {"text": "La Fédération Internationale de Ski (FIS) a été fondée en quelle année ?", "answers": ["1910", "1924", "1934", "1946"], "correct": 1},
   {"text": "Quelle ville accueille le siège de la FIS ?", "answers": ["Zurich", "Lausanne", "Oberhofen", "Berne"], "correct": 2},
   {"text": "Le 'schuss' est un terme désignant quelle position de ski ?", "answers": ["Position accroupie de recherche de vitesse", "Virage serré", "Saut en ski", "Freinage en chasse-neige"], "correct": 0},
-  {"text": "Quel skieur français a remporté le slalom des Championnats du monde en 2023 ?", "answers": ["Alexis Pinturault", "Clément Noël", "Victor Muffat-Jeandet", "Henrik Kristoffersen (Norvège)"], "correct": 1},
+  {"text":"Quel skieur a remporté le slalom masculin des Championnats du monde 2023 à Courchevel-Méribel ?","answers":["AJ Ginnis","Alex Vinatzer","Henrik Kristoffersen","Clément Noël"],"correct":2,"difficulty":"hard"},
   {"text": "Quel est le nombre minimum de portes en slalom masculin ?", "answers": ["40", "55", "65", "75"], "correct": 1},
   {"text": "Le 'dossard rouge' en slalom est attribué au leader de quel classement ?", "answers": ["Classement général", "Classement de la discipline", "Classement du jour", "Classement par pays"], "correct": 1},
-  {"text": "Quel skieur canadien a remporté la descente de Kitzbühel en 2023 ?", "answers": ["Manuel Osborne-Paradis", "Erik Guay", "James Crawford", "Cameron Alexander"], "correct": 2},
+  {"text":"Quel skieur canadien a remporté le super-G masculin des Championnats du monde 2023 à Courchevel-Méribel ?","answers":["James Crawford","Cameron Alexander","Erik Guay","Manuel Osborne-Paradis"],"correct":0,"difficulty":"hard"},
   {"text": "Val d'Isère accueille traditionnellement quelle épreuve phare en décembre ?", "answers": ["Le Critérium de la Première Neige", "Le Kandahar", "Le Trophée Andros", "La Coupe de l'Arlberg"], "correct": 0},
   {"text": "Quel skieur autrichien a été triple champion olympique en ski alpin aux JO de 2006 ?", "answers": ["Stephan Eberharter", "Benjamin Raich", "Aucun n'a réalisé cet exploit en 2006", "Hermann Maier"], "correct": 2},
-  {"text": "Quel skieur a remporté le globe de cristal du classement général en 2024 ?", "answers": ["Marcel Hirscher", "Marco Odermatt", "Henrik Kristoffersen", "Aleksander Aamodt Kilde"], "correct": 1}
+  {"text": "Quel skieur a remporté le globe de cristal du classement général en 2024 ?", "answers": ["Marcel Hirscher", "Marco Odermatt", "Henrik Kristoffersen", "Aleksander Aamodt Kilde"], "correct": 1},
+  {"text":"Qui a remporté le premier classement général masculin de la Coupe du monde de ski alpin, en 1967 ?","answers":["Karl Schranz","Jean-Claude Killy","Heinrich Messner","Guy Périllat"],"correct":1,"difficulty":"expert"},
+  {"text":"Qui a terminé deuxième du premier classement général masculin de la Coupe du monde, en 1967 ?","answers":["Heinrich Messner","Guy Périllat","Léo Lacroix","Georges Mauduit"],"correct":0,"difficulty":"expert"},
+  {"text":"Quelle Française a terminé deuxième du premier classement général féminin de la Coupe du monde, en 1967 ?","answers":["Annie Famose","Isabelle Mir","Florence Steurer","Marielle Goitschel"],"correct":3,"difficulty":"expert"}
 ]
