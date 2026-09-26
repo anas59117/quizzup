@@ -496,19 +496,20 @@ const CATEGORIES = {
     ],
   },
   geography: {
-    label: 'Geography',
+    label: 'Géographie',
     icon: '🌍',
     questions: [
-      { text: 'What is the capital of France?', answers: ['Paris', 'Lyon', 'Marseille', 'Nice'], correct: 0 },
-      { text: 'Which is the largest ocean on Earth?', answers: ['Atlantic', 'Pacific', 'Indian', 'Arctic'], correct: 1 },
-      { text: 'Mount Everest is located in which mountain range?', answers: ['Andes', 'Alps', 'Himalayas', 'Rockies'], correct: 2 },
-      { text: 'Which country has the most people?', answers: ['China', 'USA', 'Indonesia', 'India'], correct: 3 },
-      { text: 'What is the capital of Australia?', answers: ['Canberra', 'Sydney', 'Melbourne', 'Perth'], correct: 0 },
-      { text: 'Which desert is the largest hot desert?', answers: ['Gobi', 'Sahara', 'Kalahari', 'Mojave'], correct: 1 },
-      { text: 'What is the capital of Japan?', answers: ['Osaka', 'Kyoto', 'Tokyo', 'Nagoya'], correct: 2 },
-      { text: 'On which continent is the Amazon rainforest?', answers: ['Africa', 'Asia', 'Australia', 'South America'], correct: 3 },
-      { text: 'Which country is both in Europe and Asia?', answers: ['Turkey', 'Greece', 'Egypt', 'Italy'], correct: 0 },
-      { text: 'What is the smallest country in the world?', answers: ['Monaco', 'Vatican City', 'San Marino', 'Liechtenstein'], correct: 1 },
+      { text: 'Quelle est la capitale de la France ?', answers: ['Paris', 'Lyon', 'Marseille', 'Nice'], correct: 0 },
+      { text: 'Quel est le plus grand océan de la planète ?', answers: ['Atlantique', 'Pacifique', 'Indien', 'Arctique'], correct: 1 },
+      { text: 'Dans quelle chaîne de montagnes se trouve l’Everest ?', answers: ['Andes', 'Alpes', 'Himalaya', 'Rocheuses'], correct: 2 },
+      { text: 'Dans quel pays d’Asie du Sud se trouve l’État du Kerala ?', answers: ['Pakistan', 'Bangladesh', 'Sri Lanka', 'Inde'], correct: 3 },
+      { text: 'Quelle est la capitale de l’Australie ?', answers: ['Canberra', 'Sydney', 'Melbourne', 'Perth'], correct: 0 },
+      { text: 'Quel est le plus vaste désert chaud du monde ?', answers: ['Gobi', 'Sahara', 'Kalahari', 'Mojave'], correct: 1 },
+      { text: 'Quelle est la capitale du Japon ?', answers: ['Osaka', 'Kyoto', 'Tokyo', 'Nagoya'], correct: 2 },
+      { text: 'Sur quel continent se trouve la forêt amazonienne ?', answers: ['Afrique', 'Asie', 'Océanie', 'Amérique du Sud'], correct: 3 },
+      { text: 'Quel pays se situe à la fois en Europe et en Asie ?', answers: ['Turquie', 'Grèce', 'Égypte', 'Italie'], correct: 0 },
+      { text: 'Quel est le plus petit État souverain du monde ?', answers: ['Monaco', 'Vatican', 'Saint-Marin', 'Liechtenstein'], correct: 1 },
+      { text: 'À quel pays appartient l’enclave de Cabinda ?', answers: ['Namibie', 'République du Congo', 'République démocratique du Congo', 'Angola'], correct: 3, difficulty: 'expert' },
     ],
   },
   gaming: {
@@ -558,6 +559,7 @@ const CATEGORIES = {
       { text: 'Bigflo et Oli sont originaires de quelle ville ?', answers: ['Bordeaux', 'Lyon', 'Toulouse', 'Nantes'], correct: 2 },
       { text: 'SCH est originaire de quelle ville ?', answers: ['Paris', 'Marseille', 'Aix-en-Provence', 'Toulon'], correct: 1 },
       ...playersRapFr,
+      { text: 'Sur quel label indépendant Lunatic a-t-il publié l’album Mauvais Œil ?', answers: ['Secteur Ä', '45 Scientific', 'Time Bomb', 'Hostile Records'], correct: 1, difficulty: 'expert' },
     ],
   },
   foot_fr: {
@@ -575,6 +577,7 @@ const CATEGORIES = {
       { text: 'Quel est le principal club de la ville de Monaco en Ligue 1 ?', answers: ['AS Monaco', 'OGC Nice', 'SC Toulon', 'AS Cannes'], correct: 0 },
       { text: 'Michel Platini a remporté combien de Ballons d’Or consécutifs (1983-1985) ?', answers: ['1', '2', '3', '4'], correct: 2 },
       ...playersFootFr,
+      { text: 'Qui a inscrit le quatrième but français contre la Belgique lors du match pour la troisième place du Mondial 1986 ?', answers: ['Jean-Marc Ferreri', 'Jean-Pierre Papin', 'Bernard Genghini', 'Manuel Amoros'], correct: 3, difficulty: 'expert' },
     ],
   },
   premier_league: {
@@ -600,7 +603,10 @@ const CATEGORIES = {
   ligue_1: {
     label: 'Ligue 1',
     icon: '🐓',
-    questions: [...playersLigue1],
+    questions: [
+      ...playersLigue1,
+      { text: 'Quel entraîneur a conduit le RC Lens au titre de champion de France en 1997-1998 ?', answers: ['Élie Baup', 'Guy Roux', 'Daniel Leclercq', 'Claude Puel'], correct: 2, difficulty: 'expert' },
+    ],
   },
   bollywood: {
     label: 'Bollywood',
@@ -1357,6 +1363,13 @@ function selectProgressiveQuestions(items, count, random = Math.random) {
     const [min, max] = DIFFICULTY_BANDS[difficulty];
     const unused = available.filter((q) => !usedQuestions.has(questionKey(q)));
     let candidates = unused.filter((q) => q._difficultyScore >= min && q._difficultyScore <= max);
+
+    // Prefer questions whose expert level was checked editorially over the
+    // positional estimate when an expert round can offer one.
+    if (difficulty === 'expert') {
+      const editorialExperts = candidates.filter((q) => q.difficulty === 'expert');
+      if (editorialExperts.length) candidates = editorialExperts;
+    }
 
     // Avoid asking two paraphrases whose correct answer is identical whenever
     // the bank offers enough variety. This notably removes repeated fact-pairs
