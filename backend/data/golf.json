@@ -95,5 +95,8 @@
   {"text": "Le golf est redevenu sport olympique en quelle année ?", "answers": ["2008", "2012", "2016", "2020"], "correct": 2},
   {"text": "Quel golfeur britannique a remporté l'or olympique en 2016 ?", "answers": ["Rory McIlroy", "Danny Willett", "Justin Rose", "Lee Westwood"], "correct": 2},
   {"text": "Le Solheim Cup est l'équivalent féminin de quelle compétition ?", "answers": ["Presidents Cup", "Ryder Cup", "World Cup", "Walker Cup"], "correct": 1},
-  {"text": "Scottie Scheffler a remporté le Masters en quelle(s) année(s) ?", "answers": ["2022 uniquement", "2022 et 2024", "2023 uniquement", "2021 et 2023"], "correct": 1}
+  {"text": "Scottie Scheffler a remporté le Masters en quelle(s) année(s) ?", "answers": ["2022 uniquement", "2022 et 2024", "2023 uniquement", "2021 et 2023"], "correct": 1},
+  {"text":"Qui a remporté la toute première édition de l'Open britannique, à Prestwick en 1860 ?","answers":["Old Tom Morris","Willie Park Sr","Young Tom Morris","Allan Robertson"],"correct":1,"difficulty":"expert"},
+  {"text":"Quel golfeur a remporté le premier play-off de l'histoire de l'Open britannique, en 1883 ?","answers":["Bob Ferguson","Willie Park Jr","Jamie Anderson","Willie Fernie"],"correct":3,"difficulty":"expert"},
+  {"text":"Quel Français est devenu en 1907 le premier vainqueur étranger de l'Open britannique ?","answers":["Jean Gassiat","Marcel Dallemagne","Arnaud Massy","Julien Quesne"],"correct":2,"difficulty":"expert"}
 ]

@@ -498,5 +498,555 @@
       "L’action suit presque le temps réel"
     ],
     "correct": 1
+  },
+  {
+    "text": "Quel réalisateur a tourné Les Parapluies de Cherbourg ?",
+    "answers": [
+      "Jacques Demy",
+      "Jacques Tati",
+      "Louis Malle",
+      "Claude Lelouch"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui a composé la musique des Parapluies de Cherbourg ?",
+    "answers": [
+      "Georges Delerue",
+      "Michel Legrand",
+      "Francis Lai",
+      "Vladimir Cosma"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans Les Parapluies de Cherbourg, quel acteur incarne Guy, le jeune garagiste ?",
+    "answers": [
+      "Jacques Perrin",
+      "Marc Michel",
+      "Nino Castelnuovo",
+      "Jean-Pierre Cassel"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel dispositif musical caractérise la totalité des dialogues des Parapluies de Cherbourg ?",
+    "answers": [
+      "Ils sont improvisés",
+      "Ils sont chuchotés",
+      "Ils sont muets",
+      "Ils sont chantés"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel prix Les Parapluies de Cherbourg a-t-il remporté au Festival de Cannes de 1964 ?",
+    "answers": [
+      "La Palme d'or",
+      "Le Grand Prix",
+      "Le prix du scénario",
+      "La Caméra d'or"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans Les Demoiselles de Rochefort, quelle actrice est la sœur de Catherine Deneuve à l'écran et dans la vie ?",
+    "answers": [
+      "Anouk Aimée",
+      "Françoise Dorléac",
+      "Danielle Darrieux",
+      "Anna Karina"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui signe la partition musicale des Demoiselles de Rochefort ?",
+    "answers": [
+      "Francis Lai",
+      "Georges Delerue",
+      "Michel Legrand",
+      "Claude Bolling"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel danseur et acteur hollywoodien apparaît dans Les Demoiselles de Rochefort ?",
+    "answers": [
+      "Fred Astaire",
+      "Donald O'Connor",
+      "Richard Gere",
+      "Gene Kelly"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quels prénoms portent les deux sœurs au centre des Demoiselles de Rochefort ?",
+    "answers": [
+      "Delphine et Solange",
+      "Geneviève et Madeleine",
+      "Marianne et Héloïse",
+      "Adèle et Emma"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans Les Demoiselles de Rochefort, quel acteur joue le marin Maxence ?",
+    "answers": [
+      "Nino Castelnuovo",
+      "Jacques Perrin",
+      "Michel Piccoli",
+      "Jean-Claude Brialy"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a réalisé La Règle du jeu, film sorti en 1939 ?",
+    "answers": [
+      "Marcel Carné",
+      "René Clair",
+      "Jean Renoir",
+      "Julien Duvivier"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel personnage Jean Renoir joue-t-il lui-même dans La Règle du jeu ?",
+    "answers": [
+      "André Jurieux",
+      "Robert de la Chesnaye",
+      "Marceau",
+      "Octave"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur joue le marquis Robert de la Chesnaye dans La Règle du jeu ?",
+    "answers": [
+      "Marcel Dalio",
+      "Jean Gabin",
+      "Michel Simon",
+      "Louis Jouvet"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel cadre se déroule une grande partie de La Règle du jeu ?",
+    "answers": [
+      "Un voyage en mer",
+      "Une réception dans un château",
+      "Une mission spatiale",
+      "Un hôpital militaire"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice interprète Christine de la Chesnaye dans La Règle du jeu ?",
+    "answers": [
+      "Arletty",
+      "Michèle Morgan",
+      "Nora Gregor",
+      "Odette Joyeux"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a réalisé Les Enfants du paradis ?",
+    "answers": [
+      "Jean Renoir",
+      "Jacques Becker",
+      "Henri-Georges Clouzot",
+      "Marcel Carné"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel poète et scénariste a écrit Les Enfants du paradis ?",
+    "answers": [
+      "Jacques Prévert",
+      "Raymond Queneau",
+      "Jean Cocteau",
+      "Marcel Pagnol"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice incarne Garance dans Les Enfants du paradis ?",
+    "answers": [
+      "Danielle Darrieux",
+      "Arletty",
+      "Michèle Morgan",
+      "Anouk Aimée"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur joue le mime Baptiste Deburau dans Les Enfants du paradis ?",
+    "answers": [
+      "Pierre Brasseur",
+      "Jean Marais",
+      "Jean-Louis Barrault",
+      "Louis Jouvet"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans Les Enfants du paradis, quel comédien incarne Frédérick Lemaître ?",
+    "answers": [
+      "Marcel Dalio",
+      "Jean Gabin",
+      "Bernard Blier",
+      "Pierre Brasseur"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel réalisateur a adapté Le Mépris d'Alberto Moravia au cinéma ?",
+    "answers": [
+      "Jean-Luc Godard",
+      "François Truffaut",
+      "Claude Chabrol",
+      "Alain Resnais"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans Le Mépris, qui interprète Camille, l'épouse de Paul ?",
+    "answers": [
+      "Catherine Deneuve",
+      "Brigitte Bardot",
+      "Anna Karina",
+      "Jeanne Moreau"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur joue le scénariste Paul dans Le Mépris ?",
+    "answers": [
+      "Marcello Mastroianni",
+      "Jean-Paul Belmondo",
+      "Michel Piccoli",
+      "Jacques Perrin"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel réalisateur joue son propre rôle dans Le Mépris ?",
+    "answers": [
+      "Alfred Hitchcock",
+      "Orson Welles",
+      "Jean Renoir",
+      "Fritz Lang"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel compositeur a écrit le « Thème de Camille » pour Le Mépris ?",
+    "answers": [
+      "Georges Delerue",
+      "Michel Legrand",
+      "Francis Lai",
+      "Vladimir Cosma"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film de Laurent Cantet a reçu la Palme d'or au Festival de Cannes en 2008 ?",
+    "answers": [
+      "Ressources humaines",
+      "Entre les murs",
+      "L'Emploi du temps",
+      "Foxfire"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel écrivain a inspiré le film Entre les murs et y incarne l'enseignant ?",
+    "answers": [
+      "Daniel Pennac",
+      "David Foenkinos",
+      "François Bégaudeau",
+      "Philippe Djian"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le métier du personnage principal d'Entre les murs ?",
+    "answers": [
+      "Médecin",
+      "Avocat",
+      "Photographe",
+      "Professeur de français"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans Entre les murs, quel lieu constitue le principal cadre de l'intrigue ?",
+    "answers": [
+      "Un collège",
+      "Une prison",
+      "Une université",
+      "Une caserne"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle forme d'œuvre François Bégaudeau a-t-il publiée avant l'adaptation d'Entre les murs ?",
+    "answers": [
+      "Une bande dessinée",
+      "Un roman",
+      "Une pièce de théâtre",
+      "Un recueil de poèmes"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel film d'Abdellatif Kechiche a remporté la Palme d'or en 2013 ?",
+    "answers": [
+      "La Graine et le Mulet",
+      "L'Esquive",
+      "La Vie d'Adèle",
+      "Mektoub, My Love"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans La Vie d'Adèle, qui incarne Emma, la jeune femme aux cheveux bleus ?",
+    "answers": [
+      "Adèle Exarchopoulos",
+      "Sara Forestier",
+      "Anaïs Demoustier",
+      "Léa Seydoux"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le titre de la bande dessinée de Julie Maroh adaptée dans La Vie d'Adèle ?",
+    "answers": [
+      "Le bleu est une couleur chaude",
+      "Persepolis",
+      "La fille du professeur",
+      "L'Arabe du futur"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice tient le rôle-titre de La Vie d'Adèle ?",
+    "answers": [
+      "Léa Seydoux",
+      "Adèle Exarchopoulos",
+      "Sara Forestier",
+      "Marine Vacth"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Qui le jury de Cannes a-t-il associé à la Palme d'or 2013 de La Vie d'Adèle ?",
+    "answers": [
+      "Abdellatif Kechiche, Adèle Exarchopoulos et Julie Maroh",
+      "Abdellatif Kechiche, Julie Maroh et Léa Seydoux",
+      "Abdellatif Kechiche, Adèle Exarchopoulos et Léa Seydoux",
+      "Adèle Exarchopoulos, Léa Seydoux et Michel Legrand"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle réalisatrice a reçu la Palme d'or 2021 avec Titane ?",
+    "answers": [
+      "Justine Triet",
+      "Céline Sciamma",
+      "Alice Diop",
+      "Julia Ducournau"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice incarne Alexia dans Titane ?",
+    "answers": [
+      "Agathe Rousselle",
+      "Garance Marillier",
+      "Adèle Exarchopoulos",
+      "Noémie Merlant"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur joue Vincent dans Titane ?",
+    "answers": [
+      "Benoît Magimel",
+      "Vincent Lindon",
+      "Denis Ménochet",
+      "Louis Garrel"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel premier long métrage Julia Ducournau avait-elle réalisé avant Titane ?",
+    "answers": [
+      "Saint Maud",
+      "Raw Deal",
+      "Grave",
+      "The Substance"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le métier de Vincent dans Titane ?",
+    "answers": [
+      "Policier",
+      "Chirurgien",
+      "Routier",
+      "Pompier"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film de Justine Triet a remporté la Palme d'or en 2023 ?",
+    "answers": [
+      "Anatomie d'une chute",
+      "Victoria",
+      "Sibyl",
+      "La Bataille de Solférino"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice interprète Sandra dans Anatomie d'une chute ?",
+    "answers": [
+      "Virginie Efira",
+      "Sandra Hüller",
+      "Léa Drucker",
+      "Valeria Bruni Tedeschi"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans Anatomie d'une chute, quel est le prénom du fils malvoyant du couple ?",
+    "answers": [
+      "Vincent",
+      "Samuel",
+      "Daniel",
+      "Arthur"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel jeune acteur incarne Daniel dans Anatomie d'une chute ?",
+    "answers": [
+      "Paul Kircher",
+      "Raphaël Quenard",
+      "Sayyid El Alami",
+      "Milo Machado-Graner"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Oscar de scénario Anatomie d'une chute a-t-il remporté en 2024 ?",
+    "answers": [
+      "Le scénario original",
+      "Le scénario adapté",
+      "La musique originale",
+      "Le court métrage"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film de Jacques Audiard a remporté la Palme d'or en 2015 ?",
+    "answers": [
+      "Un prophète",
+      "Dheepan",
+      "De rouille et d'os",
+      "Les Olympiades"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur incarne le personnage éponyme dans Dheepan ?",
+    "answers": [
+      "Tahar Rahim",
+      "Roschdy Zem",
+      "Jesuthasan Antonythasan",
+      "Reda Kateb"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice interprète Yalini dans Dheepan ?",
+    "answers": [
+      "Leïla Bekhti",
+      "Emmanuelle Bercot",
+      "Hafsia Herzi",
+      "Kalieaswari Srinivasan"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "De quel pays fuient les personnages principaux du film Dheepan ?",
+    "answers": [
+      "Le Sri Lanka",
+      "Le Pakistan",
+      "L'Afghanistan",
+      "La Syrie"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans Dheepan, sous quelle identité collective les trois protagonistes tentent-ils d'obtenir l'asile ?",
+    "answers": [
+      "Une troupe de théâtre",
+      "Une famille",
+      "Une équipe sportive",
+      "Un groupe de journalistes"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
   }
 ]

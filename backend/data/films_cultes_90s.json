@@ -498,5 +498,555 @@
       "Isla Nublar"
     ],
     "correct": 1
+  },
+  {
+    "text": "Quel film de 1995 fut le premier long métrage entièrement animé par ordinateur ?",
+    "answers": [
+      "Toy Story",
+      "Fourmiz",
+      "Shrek",
+      "Final Fantasy : Les Créatures de l’esprit"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel réalisateur signa le premier Toy Story pour Pixar ?",
+    "answers": [
+      "Andrew Stanton",
+      "John Lasseter",
+      "Pete Docter",
+      "Brad Bird"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel jouet, voisin d’Andy, maltraite les autres jouets dans Toy Story ?",
+    "answers": [
+      "Al McWhiggin",
+      "Stinky Pete",
+      "Sid Phillips",
+      "Lotso"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel chanteur prête sa voix à Woody dans la version originale de Toy Story ?",
+    "answers": [
+      "Tim Allen",
+      "Billy Crystal",
+      "Robin Williams",
+      "Tom Hanks"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle chanson de Randy Newman accompagne l’amitié dans Toy Story ?",
+    "answers": [
+      "You’ve Got a Friend in Me",
+      "When She Loved Me",
+      "Life Is a Highway",
+      "Remember Me"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel compositeur a remporté l’Oscar de la musique originale pour Le Roi lion ?",
+    "answers": [
+      "Alan Menken",
+      "Hans Zimmer",
+      "Randy Newman",
+      "James Horner"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel duo a écrit la chanson « Hakuna Matata » du Roi lion ?",
+    "answers": [
+      "Hans Zimmer et Lebo M",
+      "Phil Collins et Stephen Schwartz",
+      "Elton John et Tim Rice",
+      "Alan Menken et Howard Ashman"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle chanson du Roi lion a gagné l’Oscar de la chanson originale ?",
+    "answers": [
+      "Circle of Life",
+      "Hakuna Matata",
+      "I Just Can’t Wait to Be King",
+      "Can You Feel the Love Tonight"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur double Scar dans la version originale animée du Roi lion de 1994 ?",
+    "answers": [
+      "Jeremy Irons",
+      "James Earl Jones",
+      "Nathan Lane",
+      "Matthew Broderick"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur prête sa voix à Timon dans la version originale du Roi lion de 1994 ?",
+    "answers": [
+      "Ernie Sabella",
+      "Nathan Lane",
+      "Jeremy Irons",
+      "Robert Guillaume"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a écrit le scénario de The Truman Show ?",
+    "answers": [
+      "Charlie Kaufman",
+      "Peter Weir",
+      "Andrew Niccol",
+      "David Koepp"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel réalisateur a mis en scène The Truman Show ?",
+    "answers": [
+      "Andrew Niccol",
+      "Ron Howard",
+      "Barry Levinson",
+      "Peter Weir"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle ville artificielle sert de décor à la vie filmée de Truman Burbank ?",
+    "answers": [
+      "Seahaven",
+      "Pleasantville",
+      "Hill Valley",
+      "Stepford"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur incarne Christof, le créateur de l’émission dans The Truman Show ?",
+    "answers": [
+      "Jeff Daniels",
+      "Ed Harris",
+      "Noah Emmerich",
+      "Philip Baker Hall"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice joue Lauren, également appelée Sylvia, dans The Truman Show ?",
+    "answers": [
+      "Laura Linney",
+      "Robin Wright",
+      "Natascha McElhone",
+      "Winona Ryder"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel nom porte le vaisseau de Morpheus dans Matrix ?",
+    "answers": [
+      "Logos",
+      "Osiris",
+      "Mjolnir",
+      "Nebuchadnezzar"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel personnage de Matrix est incarné par Carrie-Anne Moss ?",
+    "answers": [
+      "Trinity",
+      "Niobe",
+      "Switch",
+      "Oracle"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le nom civil de Neo dans Matrix ?",
+    "answers": [
+      "David Bowman",
+      "Thomas Anderson",
+      "John Connor",
+      "James Cole"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle technique visuelle de Matrix fige l’action tout en laissant tourner le point de vue ?",
+    "answers": [
+      "La rotoscopie",
+      "La capture volumétrique",
+      "Le bullet time",
+      "Le stop motion"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien d’Oscars le premier Matrix a-t-il remportés lors de la cérémonie de 2000 ?",
+    "answers": [
+      "Deux",
+      "Trois",
+      "Cinq",
+      "Quatre"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur incarne le T-1000 dans Terminator 2 ?",
+    "answers": [
+      "Robert Patrick",
+      "Michael Biehn",
+      "Lance Henriksen",
+      "Edward Furlong"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel jeune acteur interprète John Connor dans Terminator 2 ?",
+    "answers": [
+      "Nick Stahl",
+      "Edward Furlong",
+      "Thomas Dekker",
+      "Anton Yelchin"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel personnage joué par Joe Morton travaille chez Cyberdyne Systems dans Terminator 2 ?",
+    "answers": [
+      "John Connor",
+      "Peter Silberman",
+      "Miles Dyson",
+      "Todd Voight"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle actrice reprend le rôle de Sarah Connor dans Terminator 2 ?",
+    "answers": [
+      "Sigourney Weaver",
+      "Jamie Lee Curtis",
+      "Mia Farrow",
+      "Linda Hamilton"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "De quel matériau le T-1000 paraît-il constitué dans Terminator 2 ?",
+    "answers": [
+      "Un métal liquide mimétique",
+      "Du titane massif",
+      "Un polymère transparent",
+      "Une céramique blindée"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel auteur a écrit le roman dont Forrest Gump est l’adaptation ?",
+    "answers": [
+      "John Irving",
+      "Winston Groom",
+      "Nicholas Sparks",
+      "Robert Zemeckis"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel scénariste a adapté le roman Forrest Gump pour le cinéma ?",
+    "answers": [
+      "William Goldman",
+      "Robert Towne",
+      "Eric Roth",
+      "Frank Darabont"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur incarne le lieutenant Dan dans Forrest Gump ?",
+    "answers": [
+      "Robin Wright",
+      "Mykelti Williamson",
+      "Haley Joel Osment",
+      "Gary Sinise"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle actrice joue la mère de Forrest dans Forrest Gump ?",
+    "answers": [
+      "Sally Field",
+      "Robin Wright",
+      "Jessica Lange",
+      "Meryl Streep"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle discipline universitaire Forrest Gump obtient-il une bourse grâce à ses talents de coureur ?",
+    "answers": [
+      "L’athlétisme",
+      "Le football américain",
+      "Le basket-ball",
+      "Le baseball"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel scénariste a écrit Il faut sauver le soldat Ryan ?",
+    "answers": [
+      "David Webb Peoples",
+      "John Milius",
+      "Robert Rodat",
+      "Eric Roth"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur quelle plage normande s’ouvre le débarquement montré dans Il faut sauver le soldat Ryan ?",
+    "answers": [
+      "Utah Beach",
+      "Juno Beach",
+      "Sword Beach",
+      "Omaha Beach"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "À quelle division aéroportée appartient le soldat James Ryan recherché dans le film ?",
+    "answers": [
+      "La 101e division aéroportée",
+      "La 82e division aéroportée",
+      "La 4e division d’infanterie",
+      "La 2e division blindée"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a composé la musique d’Il faut sauver le soldat Ryan ?",
+    "answers": [
+      "Hans Zimmer",
+      "John Williams",
+      "Alan Silvestri",
+      "James Horner"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Pour quel film Steven Spielberg a-t-il reçu l’Oscar de la réalisation en 1999 ?",
+    "answers": [
+      "La Ligne rouge",
+      "Shakespeare in Love",
+      "Il faut sauver le soldat Ryan",
+      "Elizabeth"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quels acteurs ont remporté l’Oscar du scénario original pour Will Hunting ?",
+    "answers": [
+      "Matt Damon et Robin Williams",
+      "Ben Affleck et Gus Van Sant",
+      "Robin Williams et Stellan Skarsgård",
+      "Matt Damon et Ben Affleck"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur a remporté l’Oscar du second rôle pour Will Hunting ?",
+    "answers": [
+      "Robin Williams",
+      "Matt Damon",
+      "Ben Affleck",
+      "Stellan Skarsgård"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel acteur interprète le professeur Gerald Lambeau dans Will Hunting ?",
+    "answers": [
+      "Robin Williams",
+      "Stellan Skarsgård",
+      "Casey Affleck",
+      "Philip Seymour Hoffman"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle chanson d’Elliott Smith, entendue dans Will Hunting, fut nommée à l’Oscar ?",
+    "answers": [
+      "Between the Bars",
+      "Waltz #2",
+      "Miss Misery",
+      "Angeles"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel établissement Will travaille-t-il comme agent d’entretien au début de Will Hunting ?",
+    "answers": [
+      "Harvard",
+      "Caltech",
+      "Yale",
+      "Le MIT"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel roman de Jane Austen a inspiré Clueless ?",
+    "answers": [
+      "Emma",
+      "Orgueil et Préjugés",
+      "Raison et Sentiments",
+      "Mansfield Park"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle cinéaste a écrit et réalisé Clueless ?",
+    "answers": [
+      "Sofia Coppola",
+      "Amy Heckerling",
+      "Nora Ephron",
+      "Penny Marshall"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur joue Josh dans Clueless ?",
+    "answers": [
+      "Jeremy Sisto",
+      "Breckin Meyer",
+      "Paul Rudd",
+      "Justin Walker"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel personnage est joué par Stacey Dash dans Clueless ?",
+    "answers": [
+      "Cher",
+      "Tai",
+      "Amber",
+      "Dionne"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel personnage est joué par Brittany Murphy dans Clueless ?",
+    "answers": [
+      "Tai",
+      "Cher",
+      "Dionne",
+      "Amber"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel réalisateur a porté Men in Black à l’écran en 1997 ?",
+    "answers": [
+      "Ivan Reitman",
+      "Barry Sonnenfeld",
+      "Robert Zemeckis",
+      "Tim Burton"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel auteur a créé la bande dessinée dont est adapté Men in Black ?",
+    "answers": [
+      "Mark Millar",
+      "Grant Morrison",
+      "Lowell Cunningham",
+      "Frank Miller"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur incarne Edgar, dont le corps est occupé par un extraterrestre dans Men in Black ?",
+    "answers": [
+      "Rip Torn",
+      "Tony Shalhoub",
+      "John Turturro",
+      "Vincent D’Onofrio"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel artiste a composé la musique du premier Men in Black ?",
+    "answers": [
+      "Danny Elfman",
+      "John Williams",
+      "Alan Silvestri",
+      "James Newton Howard"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle catégorie Men in Black a-t-il remporté son Oscar ?",
+    "answers": [
+      "Effets visuels",
+      "Maquillage",
+      "Décors",
+      "Musique originale"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
   }
 ]
