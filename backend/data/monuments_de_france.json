@@ -1,0 +1,502 @@
+[
+  {
+    "text": "Dans quelle ville se trouve la tour Eiffel ?",
+    "answers": [
+      "Paris",
+      "Lyon",
+      "Bordeaux",
+      "Marseille"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel monument normand s’élève sur un îlot rocheux entouré par les marées ?",
+    "answers": [
+      "Le château de Chambord",
+      "Le Mont-Saint-Michel",
+      "Le pont du Gard",
+      "Le palais des Papes"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : tour de fer conçue pour l’Exposition universelle de 1889 ?",
+    "answers": [
+      "L’Arc de triomphe",
+      "Le pont du Gard",
+      "La tour Eiffel",
+      "Le château de Chenonceau"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à La tour Eiffel ?",
+    "answers": [
+      "abbaye médiévale bâtie sur un îlot rocheux de Normandie",
+      "cathédrale gothique située sur l’île de la Cité",
+      "édifice roman bourguignon associé aux pèlerinages vers Compostelle",
+      "tour de fer conçue pour l’Exposition universelle de 1889"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville La tour Eiffel se situe-t-il ?",
+    "answers": [
+      "Paris",
+      "Normandie",
+      "Provence-Alpes-Côte d’Azur",
+      "Hauts-de-France"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : monument commandé par Napoléon Ier au sommet des Champs-Élysées ?",
+    "answers": [
+      "Le Mont-Saint-Michel",
+      "L’Arc de triomphe",
+      "Notre-Dame de Paris",
+      "La basilique de Vézelay"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à L’Arc de triomphe ?",
+    "answers": [
+      "ancienne résidence royale transformée sous Louis XIV",
+      "ensemble fortifié restauré au XIXe siècle par Viollet-le-Duc",
+      "monument commandé par Napoléon Ier au sommet des Champs-Élysées",
+      "manufacture de sel en demi-cercle conçue par Claude-Nicolas Ledoux"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville L’Arc de triomphe se situe-t-il ?",
+    "answers": [
+      "Normandie",
+      "Provence-Alpes-Côte d’Azur",
+      "Hauts-de-France",
+      "Paris"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : abbaye médiévale bâtie sur un îlot rocheux de Normandie ?",
+    "answers": [
+      "Le Mont-Saint-Michel",
+      "Le château de Versailles",
+      "La cité de Carcassonne",
+      "La saline royale d’Arc-et-Senans"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à Le Mont-Saint-Michel ?",
+    "answers": [
+      "château de la Loire célèbre pour son escalier à double révolution",
+      "abbaye médiévale bâtie sur un îlot rocheux de Normandie",
+      "forteresse gothique rappelant le séjour des papes à Avignon",
+      "phare historique situé dans l’estuaire de la Gironde"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville Le Mont-Saint-Michel se situe-t-il ?",
+    "answers": [
+      "Paris",
+      "Provence-Alpes-Côte d’Azur",
+      "Normandie",
+      "Hauts-de-France"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : ancienne résidence royale transformée sous Louis XIV ?",
+    "answers": [
+      "Le château de Chambord",
+      "Le palais des Papes",
+      "Le phare de Cordouan",
+      "Le château de Versailles"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à Le château de Versailles ?",
+    "answers": [
+      "ancienne résidence royale transformée sous Louis XIV",
+      "aqueduc romain à trois niveaux franchissant le Gardon",
+      "château enjambant le Cher surnommé le château des Dames",
+      "forteresse dominant la plaine d’Alsace dans le massif des Vosges"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville Le château de Versailles se situe-t-il ?",
+    "answers": [
+      "Paris",
+      "Île-de-France",
+      "Provence-Alpes-Côte d’Azur",
+      "Hauts-de-France"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : château de la Loire célèbre pour son escalier à double révolution ?",
+    "answers": [
+      "Le pont du Gard",
+      "Le château de Chenonceau",
+      "Le château de Chambord",
+      "Le château du Haut-Kœnigsbourg"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à Le château de Chambord ?",
+    "answers": [
+      "cathédrale gothique située sur l’île de la Cité",
+      "édifice roman bourguignon associé aux pèlerinages vers Compostelle",
+      "abbaye cistercienne fondée au XIIe siècle en Bourgogne",
+      "château de la Loire célèbre pour son escalier à double révolution"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville Le château de Chambord se situe-t-il ?",
+    "answers": [
+      "Centre-Val de Loire",
+      "Paris",
+      "Provence-Alpes-Côte d’Azur",
+      "Hauts-de-France"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : aqueduc romain à trois niveaux franchissant le Gardon ?",
+    "answers": [
+      "Notre-Dame de Paris",
+      "Le pont du Gard",
+      "La basilique de Vézelay",
+      "L’abbaye de Fontenay"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à Le pont du Gard ?",
+    "answers": [
+      "ensemble fortifié restauré au XIXe siècle par Viollet-le-Duc",
+      "manufacture de sel en demi-cercle conçue par Claude-Nicolas Ledoux",
+      "aqueduc romain à trois niveaux franchissant le Gardon",
+      "ensemble classique du XVIIIe siècle au cœur de Nancy"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville Le pont du Gard se situe-t-il ?",
+    "answers": [
+      "Paris",
+      "Provence-Alpes-Côte d’Azur",
+      "Hauts-de-France",
+      "Occitanie"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : cathédrale gothique située sur l’île de la Cité ?",
+    "answers": [
+      "Notre-Dame de Paris",
+      "La cité de Carcassonne",
+      "La saline royale d’Arc-et-Senans",
+      "La place Stanislas"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à Notre-Dame de Paris ?",
+    "answers": [
+      "forteresse gothique rappelant le séjour des papes à Avignon",
+      "cathédrale gothique située sur l’île de la Cité",
+      "phare historique situé dans l’estuaire de la Gironde",
+      "tour de fer conçue pour l’Exposition universelle de 1889"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville Notre-Dame de Paris se situe-t-il ?",
+    "answers": [
+      "Normandie",
+      "Provence-Alpes-Côte d’Azur",
+      "Paris",
+      "Hauts-de-France"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : ensemble fortifié restauré au XIXe siècle par Viollet-le-Duc ?",
+    "answers": [
+      "Le palais des Papes",
+      "Le phare de Cordouan",
+      "La tour Eiffel",
+      "La cité de Carcassonne"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à La cité de Carcassonne ?",
+    "answers": [
+      "ensemble fortifié restauré au XIXe siècle par Viollet-le-Duc",
+      "château enjambant le Cher surnommé le château des Dames",
+      "forteresse dominant la plaine d’Alsace dans le massif des Vosges",
+      "monument commandé par Napoléon Ier au sommet des Champs-Élysées"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville La cité de Carcassonne se situe-t-il ?",
+    "answers": [
+      "Paris",
+      "Occitanie",
+      "Provence-Alpes-Côte d’Azur",
+      "Hauts-de-France"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : forteresse gothique rappelant le séjour des papes à Avignon ?",
+    "answers": [
+      "Le château de Chenonceau",
+      "Le château du Haut-Kœnigsbourg",
+      "Le palais des Papes",
+      "L’Arc de triomphe"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à Le palais des Papes ?",
+    "answers": [
+      "édifice roman bourguignon associé aux pèlerinages vers Compostelle",
+      "abbaye cistercienne fondée au XIIe siècle en Bourgogne",
+      "abbaye médiévale bâtie sur un îlot rocheux de Normandie",
+      "forteresse gothique rappelant le séjour des papes à Avignon"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville Le palais des Papes se situe-t-il ?",
+    "answers": [
+      "Provence-Alpes-Côte d’Azur",
+      "Paris",
+      "Occitanie",
+      "Hauts-de-France"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : château enjambant le Cher surnommé le château des Dames ?",
+    "answers": [
+      "La basilique de Vézelay",
+      "Le château de Chenonceau",
+      "L’abbaye de Fontenay",
+      "Le Mont-Saint-Michel"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à Le château de Chenonceau ?",
+    "answers": [
+      "manufacture de sel en demi-cercle conçue par Claude-Nicolas Ledoux",
+      "ensemble classique du XVIIIe siècle au cœur de Nancy",
+      "château enjambant le Cher surnommé le château des Dames",
+      "ancienne résidence royale transformée sous Louis XIV"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville Le château de Chenonceau se situe-t-il ?",
+    "answers": [
+      "Paris",
+      "Provence-Alpes-Côte d’Azur",
+      "Hauts-de-France",
+      "Centre-Val de Loire"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : édifice roman bourguignon associé aux pèlerinages vers Compostelle ?",
+    "answers": [
+      "La basilique de Vézelay",
+      "La saline royale d’Arc-et-Senans",
+      "La place Stanislas",
+      "Le château de Versailles"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à La basilique de Vézelay ?",
+    "answers": [
+      "phare historique situé dans l’estuaire de la Gironde",
+      "édifice roman bourguignon associé aux pèlerinages vers Compostelle",
+      "tour de fer conçue pour l’Exposition universelle de 1889",
+      "château de la Loire célèbre pour son escalier à double révolution"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville La basilique de Vézelay se situe-t-il ?",
+    "answers": [
+      "Paris",
+      "Occitanie",
+      "Bourgogne-Franche-Comté",
+      "Hauts-de-France"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : manufacture de sel en demi-cercle conçue par Claude-Nicolas Ledoux ?",
+    "answers": [
+      "Le phare de Cordouan",
+      "La tour Eiffel",
+      "Le château de Chambord",
+      "La saline royale d’Arc-et-Senans"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à La saline royale d’Arc-et-Senans ?",
+    "answers": [
+      "manufacture de sel en demi-cercle conçue par Claude-Nicolas Ledoux",
+      "forteresse dominant la plaine d’Alsace dans le massif des Vosges",
+      "monument commandé par Napoléon Ier au sommet des Champs-Élysées",
+      "aqueduc romain à trois niveaux franchissant le Gardon"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville La saline royale d’Arc-et-Senans se situe-t-il ?",
+    "answers": [
+      "Paris",
+      "Bourgogne-Franche-Comté",
+      "Occitanie",
+      "Hauts-de-France"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : phare historique situé dans l’estuaire de la Gironde ?",
+    "answers": [
+      "Le château du Haut-Kœnigsbourg",
+      "L’Arc de triomphe",
+      "Le phare de Cordouan",
+      "Le pont du Gard"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à Le phare de Cordouan ?",
+    "answers": [
+      "abbaye cistercienne fondée au XIIe siècle en Bourgogne",
+      "abbaye médiévale bâtie sur un îlot rocheux de Normandie",
+      "cathédrale gothique située sur l’île de la Cité",
+      "phare historique situé dans l’estuaire de la Gironde"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville Le phare de Cordouan se situe-t-il ?",
+    "answers": [
+      "Nouvelle-Aquitaine",
+      "Paris",
+      "Occitanie",
+      "Hauts-de-France"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : forteresse dominant la plaine d’Alsace dans le massif des Vosges ?",
+    "answers": [
+      "L’abbaye de Fontenay",
+      "Le château du Haut-Kœnigsbourg",
+      "Le Mont-Saint-Michel",
+      "Notre-Dame de Paris"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à Le château du Haut-Kœnigsbourg ?",
+    "answers": [
+      "ensemble classique du XVIIIe siècle au cœur de Nancy",
+      "ancienne résidence royale transformée sous Louis XIV",
+      "forteresse dominant la plaine d’Alsace dans le massif des Vosges",
+      "ensemble fortifié restauré au XIXe siècle par Viollet-le-Duc"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville Le château du Haut-Kœnigsbourg se situe-t-il ?",
+    "answers": [
+      "Paris",
+      "Occitanie",
+      "Hauts-de-France",
+      "Grand Est"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : abbaye cistercienne fondée au XIIe siècle en Bourgogne ?",
+    "answers": [
+      "L’abbaye de Fontenay",
+      "La place Stanislas",
+      "Le château de Versailles",
+      "La cité de Carcassonne"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à L’abbaye de Fontenay ?",
+    "answers": [
+      "tour de fer conçue pour l’Exposition universelle de 1889",
+      "abbaye cistercienne fondée au XIIe siècle en Bourgogne",
+      "château de la Loire célèbre pour son escalier à double révolution",
+      "forteresse gothique rappelant le séjour des papes à Avignon"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville L’abbaye de Fontenay se situe-t-il ?",
+    "answers": [
+      "Paris",
+      "Occitanie",
+      "Bourgogne-Franche-Comté",
+      "Hauts-de-France"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Monuments de France », quel monument correspond à cette description : ensemble classique du XVIIIe siècle au cœur de Nancy ?",
+    "answers": [
+      "La tour Eiffel",
+      "Le château de Chambord",
+      "Le palais des Papes",
+      "La place Stanislas"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Monuments de France », quelle description correspond à La place Stanislas ?",
+    "answers": [
+      "ensemble classique du XVIIIe siècle au cœur de Nancy",
+      "monument commandé par Napoléon Ier au sommet des Champs-Élysées",
+      "aqueduc romain à trois niveaux franchissant le Gardon",
+      "château enjambant le Cher surnommé le château des Dames"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Monuments de France », dans quelle région ou ville La place Stanislas se situe-t-il ?",
+    "answers": [
+      "Paris",
+      "Grand Est",
+      "Occitanie",
+      "Hauts-de-France"
+    ],
+    "correct": 1
+  }
+]

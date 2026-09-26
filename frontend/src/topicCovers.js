@@ -386,6 +386,11 @@ export const TOPIC_COVERS = {
   sneakers: remoteCover("https://717bros.com/cdn/shop/files/IMG_2833_2.heic?v=1758120656&width=1600", "https://717bros.com/", "center 50%"),
   marques_de_luxe: remoteCover("https://dorto.co/wp-content/uploads/2025/11/The-best-clothing-brands-in-the-world.webp", "https://dorto.co/famous-clothing-brands/", "center 48%"),
   smartphones: remoteCover("https://data.ibtimes.sg/en/full/82128/apple-samsung-google-phones.jpg?w=1200", "https://www.ibtimes.sg/google-mocks-apples-ios-26-humorous-podcast-video-samsung-joins-roast-80404", "center 50%"),
+  technologie_grand_public: remoteCover("https://portfolio.investmentguruindia.com/uploads/news/gadget263.jpg", "https://investmentguruindia.com/newsdetail/gadgets-how-smart-technology-is-transforming-everyday-life840575", "center 48%"),
+  fast_food: remoteCover("https://tb-static.uber.com/prod/image-proc/processed_images/142e44b2a6f21f04150967277f8efd85/30be7d11a3ed6f6183354d1933fbb6c7.jpeg", "https://www.ubereats.com/gb/store/safi-king-burger/fSC2tutgS-mAmqoZjeBtLw", "center 50%"),
+  annees_2000: remoteCover("https://i.blogs.es/5fe444/gadgets-vintage-retro-no-probaste-menos-25-anos-mexico/1200_900.jpeg", "https://www.xataka.com.mx/otros-dispositivos/tienes-25-anos-te-perdiste-posibilidad-probar-estos-espectaculares-gadgets", "center 48%"),
+  internet_reseaux_sociaux: remoteCover("https://idsb.tmgrup.com.tr/ly/uploads/images/2026/03/23/432798.jpg", "https://www.dailysabah.com/business/tech/users-scroll-between-reality-reflection-in-changed-social-media", "center 48%"),
+  monuments_de_france: remoteCover("https://i.pinimg.com/originals/79/ae/92/79ae92d3616ce864f5707405756907e6.jpg", "https://www.pinterest.com/pin/17-famous-french-landmarks-that-you-shouldnt-miss--125397170863535933/", "center 47%"),
 };
 
 export function getTopicCover(category) {
@@ -407,4 +412,5 @@ export function getTopicCover(category) {
   // category-specific image is available.
   return null;
 }
+
 

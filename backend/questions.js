@@ -423,6 +423,11 @@ const logosGrandesMarques = require('./data/logos_grandes_marques.json');
 const sneakers = require('./data/sneakers.json');
 const marquesDeLuxe = require('./data/marques_de_luxe.json');
 const smartphones = require('./data/smartphones.json');
+const technologieGrandPublic = require('./data/technologie_grand_public.json');
+const fastFood = require('./data/fast_food.json');
+const annees_2000 = require('./data/annees_2000.json');
+const internetReseauxSociaux = require('./data/internet_reseaux_sociaux.json');
+const monumentsDeFrance = require('./data/monuments_de_france.json');
 
 
 
@@ -1269,6 +1274,11 @@ const CATEGORIES = {
   sneakers: { label: "Sneakers", icon: "✨", questions: [...sneakers] },
   marques_de_luxe: { label: "Marques de luxe", icon: "✨", questions: [...marquesDeLuxe] },
   smartphones: { label: "Smartphones", icon: "✨", questions: [...smartphones] },
+  technologie_grand_public: { label: "Technologie grand public", icon: "✨", questions: [...technologieGrandPublic] },
+  fast_food: { label: "Fast-food", icon: "✨", questions: [...fastFood] },
+  annees_2000: { label: "Années 2000", icon: "✨", questions: [...annees_2000] },
+  internet_reseaux_sociaux: { label: "Internet et réseaux sociaux", icon: "✨", questions: [...internetReseauxSociaux] },
+  monuments_de_france: { label: "Monuments de France", icon: "✨", questions: [...monumentsDeFrance] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
@@ -1437,4 +1447,5 @@ module.exports = {
   selectProgressiveQuestions,
   shuffleQuestions,
 };
+
 

@@ -423,6 +423,11 @@ export const CATEGORIES = [
   { key: "sneakers", label: "Sneakers", icon: "✨", grad: 'g375', desc: "Icônes, marques & culture populaire", family: "culture" },
   { key: "marques_de_luxe", label: "Marques de luxe", icon: "✨", grad: 'g376', desc: "Icônes, marques & culture populaire", family: "culture" },
   { key: "smartphones", label: "Smartphones", icon: "✨", grad: 'g377', desc: "Icônes, marques & culture populaire", family: "culture" },
+  { key: "technologie_grand_public", label: "Technologie grand public", icon: "✨", grad: 'g378', desc: "Appareils, standards & innovations du quotidien", family: "culture" },
+  { key: "fast_food", label: "Fast-food", icon: "✨", grad: 'g379', desc: "Enseignes, spécialités & culture populaire", family: "culture" },
+  { key: "annees_2000", label: "Années 2000", icon: "✨", grad: 'g380', desc: "Technologie, musique, cinéma & souvenirs", family: "culture" },
+  { key: "internet_reseaux_sociaux", label: "Internet et réseaux sociaux", icon: "✨", grad: 'g381', desc: "Plateformes, protocoles & culture numérique", family: "culture" },
+  { key: "monuments_de_france", label: "Monuments de France", icon: "✨", grad: 'g382', desc: "Patrimoine, architecture & lieux emblématiques", family: "culture" },
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
@@ -702,4 +707,5 @@ export const NavBar = memo(function NavBar({ active, onNav, onQuickMatch }) {
     </nav>
   );
 });
+
 
