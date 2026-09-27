@@ -100,7 +100,7 @@
     "correct": 1
   },
   {
-    "text": "Quel club saoudien Ronaldo a-t-il rejoint fin 2022 ?",
+    "text": "Quel club saoudien Ronaldo a-t-il rejoint après son deuxième passage à Manchester United ?",
     "answers": [
       "Al-Hilal",
       "Al-Nassr",
@@ -351,14 +351,15 @@
     "difficulty": "hard"
   },
   {
-    "text": "Quel entraîneur portugais a longtemps dirigé la sélection avec Ronaldo comme capitaine ?",
+    "text": "Quel sélectionneur dirigeait le Portugal lors de son titre à l'Euro 2016 ?",
     "answers": [
       "Fernando Santos",
       "José Mourinho",
       "Carlos Queiroz",
       "Paulo Bento"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
     "text": "Dans quelle ville saoudienne joue le club Al-Nassr rejoint par Ronaldo ?",
