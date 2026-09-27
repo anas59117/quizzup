@@ -599,6 +599,10 @@ const CATEGORIES = {
       { text: 'Michel Platini a remporté combien de Ballons d’Or consécutifs (1983-1985) ?', answers: ['1', '2', '3', '4'], correct: 2 },
       ...playersFootFr,
       { text: 'Qui a inscrit le quatrième but français contre la Belgique lors du match pour la troisième place du Mondial 1986 ?', answers: ['Jean-Marc Ferreri', 'Jean-Pierre Papin', 'Bernard Genghini', 'Manuel Amoros'], correct: 3, difficulty: 'expert' },
+      { text: 'Quel défenseur inscrit un doublé pour les Bleus contre le Portugal en demi-finale de l’Euro 1984 ?', answers: ['Jean-François Domergue', 'Manuel Amoros', 'Maxime Bossis', 'Marius Trésor'], correct: 0, difficulty: 'expert' },
+      { text: 'Qui inscrit le troisième but français lors de la finale mondiale 1998 contre le Brésil ?', answers: ['Youri Djorkaeff', 'Emmanuel Petit', 'Christophe Dugarry', 'Lilian Thuram'], correct: 1, difficulty: 'expert' },
+      { text: 'Qui égalise pour la France contre l’Italie dans les arrêts de jeu de la finale de l’Euro 2000 ?', answers: ['David Trezeguet', 'Thierry Henry', 'Sylvain Wiltord', 'Robert Pirès'], correct: 2, difficulty: 'expert' },
+      { text: 'Quel joueur français reprend le coup franc de Zidane pour marquer contre le Brésil en quart de finale du Mondial 2006 ?', answers: ['Patrick Vieira', 'Franck Ribéry', 'Florent Malouda', 'Thierry Henry'], correct: 3, difficulty: 'expert' },
     ],
   },
   premier_league: {
@@ -627,6 +631,10 @@ const CATEGORIES = {
     questions: [
       ...playersLigue1,
       { text: 'Quel entraîneur a conduit le RC Lens au titre de champion de France en 1997-1998 ?', answers: ['Élie Baup', 'Guy Roux', 'Daniel Leclercq', 'Claude Puel'], correct: 2, difficulty: 'expert' },
+      { text: 'Quel entraîneur conduit Montpellier à son premier titre de champion de France en 2011-2012 ?', answers: ['René Girard', 'Rolland Courbis', 'Laurent Blanc', 'Christophe Galtier'], correct: 0, difficulty: 'expert' },
+      { text: 'Quel club réalise le doublé championnat et Coupe de France sous Guy Roux en 1995-1996 ?', answers: ['FC Nantes', 'AJ Auxerre', 'RC Lens', 'FC Metz'], correct: 1, difficulty: 'expert' },
+      { text: 'Quel club met fin aux sept sacres consécutifs de l’OL en remportant le championnat 2008-2009 ?', answers: ['Olympique de Marseille', 'LOSC Lille', 'Girondins de Bordeaux', 'AS Monaco'], correct: 2, difficulty: 'expert' },
+      { text: 'Quel entraîneur conduit Monaco au titre de champion de France en 2016-2017 ?', answers: ['Claudio Ranieri', 'Niko Kovač', 'Lucien Favre', 'Leonardo Jardim'], correct: 3, difficulty: 'expert' },
     ],
   },
   bollywood: {
