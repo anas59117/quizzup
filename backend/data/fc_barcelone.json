@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Pour FC Barcelone, quelle réponse correspond à la fondation du club ?",
+    "text": "En quelle année le FC Barcelone a-t-il été fondé ?",
     "answers": [
       "1899",
-      "Joan Gamper",
-      "le Camp Nou",
-      "Plus qu'un club"
+      "1902",
+      "1905",
+      "1910"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du FC Barcelone décrit la fondation du club ?",
+    "text": "Quel Suisse est considéré comme le fondateur du FC Barcelone ?",
     "answers": [
+      "Walter Wild",
       "Joan Gamper",
-      "1899",
-      "le Camp Nou",
-      "Plus qu'un club"
+      "Hans-Max Gamper Jr",
+      "Josep Sunyol"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour FC Barcelone, quelle réponse correspond au fondateur suisse du club ?",
+    "text": "Comment se nomme le stade inauguré par le Barça en 1957 ?",
     "answers": [
-      "le Camp Nou",
-      "Plus qu'un club",
-      "Joan Gamper",
-      "le bleu et le grenat"
+      "Les Corts",
+      "Sarrià",
+      "Camp Nou",
+      "Montjuïc"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du FC Barcelone décrit le fondateur suisse du club ?",
+    "text": "Quelles sont les deux couleurs traditionnellement associées au Barça ?",
     "answers": [
-      "le Camp Nou",
-      "Plus qu'un club",
-      "le bleu et le grenat",
+      "Bleu et blanc",
+      "Rouge et noir",
+      "Grenat et or",
+      "Bleu et grenat"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel club affronte le Barça dans le Clásico ?",
+    "answers": [
+      "Real Madrid",
+      "Atlético de Madrid",
+      "Espanyol",
+      "Athletic Club"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Comment s’appelle le centre de formation emblématique du Barça ?",
+    "answers": [
+      "La Fábrica",
+      "La Masia",
+      "Lezama",
+      "Maréo"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel joueur est le meilleur buteur de l’histoire du FC Barcelone ?",
+    "answers": [
+      "César Rodríguez",
+      "Luis Suárez",
+      "Lionel Messi",
+      "László Kubala"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel entraîneur dirigeait le Barça lors du sextuplé de 2009 ?",
+    "answers": [
+      "Frank Rijkaard",
+      "Luis Enrique",
+      "Johan Cruyff",
+      "Pep Guardiola"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel défenseur aux longs cheveux a longtemps été capitaine du Barça ?",
+    "answers": [
+      "Carles Puyol",
+      "Gerard Piqué",
+      "Rafael Márquez",
+      "Migueli"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel Brésilien du Barça a remporté le Ballon d’Or 2005 ?",
+    "answers": [
+      "Rivaldo",
+      "Ronaldinho",
+      "Romário",
+      "Neymar"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel Camerounais a marqué pour le Barça en finales de Ligue des champions 2006 et 2009 ?",
+    "answers": [
+      "Patrick Mboma",
+      "Roger Milla",
+      "Samuel Eto’o",
+      "Alex Song"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel Néerlandais a inscrit le but de la première Coupe d’Europe du Barça en 1992 ?",
+    "answers": [
+      "Johan Cruyff",
+      "Frank Rijkaard",
+      "Patrick Kluivert",
+      "Ronald Koeman"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Dans quelle ville le Barça a-t-il remporté sa première Coupe d’Europe en 1992 ?",
+    "answers": [
+      "Londres",
+      "Paris",
+      "Rome",
+      "Athènes"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel club le Barça a-t-il battu 6-1 lors de la remontada de 2017 ?",
+    "answers": [
+      "Chelsea",
+      "Paris Saint-Germain",
+      "Arsenal",
+      "AC Milan"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel Argentin a porté le numéro 10 du Barça après Ronaldinho ?",
+    "answers": [
+      "Javier Mascherano",
+      "Sergio Agüero",
+      "Lionel Messi",
+      "Juan Román Riquelme"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel milieu a marqué le but du titre mondial de l’Espagne en 2010 alors qu’il jouait au Barça ?",
+    "answers": [
+      "Xavi",
+      "Sergio Busquets",
+      "Cesc Fàbregas",
+      "Andrés Iniesta"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel ancien milieu du Barça est devenu entraîneur de l’équipe première en 2021 ?",
+    "answers": [
+      "Xavi Hernández",
+      "Andrés Iniesta",
+      "Sergio Busquets",
+      "Deco"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel trio offensif était surnommé MSN ?",
+    "answers": [
+      "Messi, Sánchez et Neymar",
+      "Messi, Suárez et Neymar",
+      "Maradona, Stoichkov et Neymar",
+      "Messi, Suárez et Henry"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel club partage la ville de Barcelone et dispute le derby catalan avec le Barça ?",
+    "answers": [
+      "Girona",
+      "Sabadell",
+      "Espanyol",
+      "Nàstic de Tarragone"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Que signifie la devise « Més que un club » ?",
+    "answers": [
+      "Toujours gagner",
+      "Unis par le football",
+      "Le club de tous",
+      "Plus qu’un club"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel stade le Barça utilisait-il avant le Camp Nou ?",
+    "answers": [
+      "Les Corts",
+      "Sarrià",
+      "Estadi de la Foixarda",
+      "Camp de la Indústria II"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel adversaire le Barça a-t-il battu en finale de la Ligue des champions 2006 ?",
+    "answers": [
+      "Manchester United",
+      "Arsenal",
+      "Juventus",
+      "Chelsea"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Qui a marqué le but victorieux du Barça en finale européenne de 2006 ?",
+    "answers": [
+      "Samuel Eto’o",
+      "Ronaldinho",
+      "Juliano Belletti",
+      "Deco"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel adversaire le Barça a-t-il battu en finale de Ligue des champions en 2009 et 2011 ?",
+    "answers": [
+      "Arsenal",
+      "Chelsea",
+      "Bayern Munich",
+      "Manchester United"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel entraîneur a conduit le Barça au triplé de 2015 ?",
+    "answers": [
+      "Luis Enrique",
+      "Pep Guardiola",
+      "Tito Vilanova",
+      "Ernesto Valverde"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quelle ville le Barça a-t-il remporté la Ligue des champions 2015 ?",
+    "answers": [
+      "Munich",
+      "Berlin",
+      "Lisbonne",
+      "Cardiff"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club le Barça a-t-il battu 3-1 en finale européenne en 2015 ?",
+    "answers": [
+      "AC Milan",
+      "Manchester United",
+      "Juventus",
+      "Bayern Munich"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur a ouvert le score lors de la finale européenne 2015 ?",
+    "answers": [
+      "Luis Suárez",
+      "Neymar",
+      "Lionel Messi",
+      "Ivan Rakitić"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Qui a marqué le dernier but du Barça en finale européenne 2015 ?",
+    "answers": [
+      "Neymar",
+      "Lionel Messi",
+      "Luis Suárez",
+      "Andrés Iniesta"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel gardien a rejoint le Barça en 2014 depuis le Borussia Mönchengladbach ?",
+    "answers": [
+      "Claudio Bravo",
+      "Marc-André ter Stegen",
+      "Jasper Cillessen",
+      "Neto"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur surnommé « El Pistolero » a rejoint le Barça en 2014 ?",
+    "answers": [
+      "David Villa",
+      "Pedro",
+      "Luis Suárez",
+      "Alexis Sánchez"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel Bulgare du Barça a remporté le Ballon d’Or 1994 ?",
+    "answers": [
+      "Gheorghe Hagi",
+      "Krasimir Balakov",
+      "Emil Kostadinov",
+      "Hristo Stoichkov"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel Brésilien du Barça a remporté le Ballon d’Or 1999 ?",
+    "answers": [
+      "Rivaldo",
+      "Romário",
+      "Ronaldinho",
+      "Ronaldo"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel attaquant brésilien a marqué 47 buts en 49 matches lors de son unique saison 1996-97 au Barça ?",
+    "answers": [
+      "Romário",
+      "Ronaldo Nazário",
+      "Rivaldo",
+      "Sonny Anderson"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel numéro Lionel Messi portait-il immédiatement avant de récupérer le 10 ?",
+    "answers": [
+      "18",
+      "20",
+      "19",
+      "30"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur a effectué une célébration en montrant son maillot au Bernabéu en avril 2017 ?",
+    "answers": [
+      "Neymar",
+      "Luis Suárez",
+      "Gerard Piqué",
+      "Lionel Messi"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel entraîneur néerlandais a mené le Barça à la Ligue des champions 2006 ?",
+    "answers": [
+      "Frank Rijkaard",
+      "Louis van Gaal",
+      "Ronald Koeman",
+      "Johan Neeskens"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel Français a marqué le troisième but du Barça lors du 6-2 au Bernabéu en 2009 ?",
+    "answers": [
+      "Éric Abidal",
+      "Thierry Henry",
+      "Ludovic Giuly",
+      "Ousmane Dembélé"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur a inscrit un triplé lors du Clásico 3-3 de mars 2007 ?",
+    "answers": [
+      "Ronaldinho",
+      "Samuel Eto’o",
+      "Lionel Messi",
+      "Xavi"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel ancien joueur du Barça a donné son nom au trophée amical annuel du club ?",
+    "answers": [
+      "László Kubala",
+      "Josep Samitier",
+      "Paulino Alcántara",
       "Joan Gamper"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "medium"
   },
   {
-    "text": "Pour FC Barcelone, quelle réponse correspond au stade inauguré en 1957 ?",
+    "text": "Qui fut le premier président du FC Barcelone ?",
     "answers": [
-      "le Camp Nou",
-      "Plus qu'un club",
-      "le bleu et le grenat",
-      "le Real Madrid"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit le stade inauguré en 1957 ?",
-    "answers": [
-      "Plus qu'un club",
-      "le Camp Nou",
-      "le bleu et le grenat",
-      "le Real Madrid"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond à la devise Més que un club ?",
-    "answers": [
-      "le bleu et le grenat",
-      "le Real Madrid",
-      "Plus qu'un club",
-      "le match contre l'Espanyol"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit la devise Més que un club ?",
-    "answers": [
-      "le bleu et le grenat",
-      "le Real Madrid",
-      "le match contre l'Espanyol",
-      "Plus qu'un club"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond aux couleurs blaugrana ?",
-    "answers": [
-      "le bleu et le grenat",
-      "le Real Madrid",
-      "le match contre l'Espanyol",
-      "le centre de formation"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit les couleurs blaugrana ?",
-    "answers": [
-      "le Real Madrid",
-      "le bleu et le grenat",
-      "le match contre l'Espanyol",
-      "le centre de formation"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond au rival du Clásico ?",
-    "answers": [
-      "le match contre l'Espanyol",
-      "le centre de formation",
-      "le Real Madrid",
-      "le joueur puis entraîneur influent du club"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit le rival du Clásico ?",
-    "answers": [
-      "le match contre l'Espanyol",
-      "le centre de formation",
-      "le joueur puis entraîneur influent du club",
-      "le Real Madrid"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond au derby barcelonais ?",
-    "answers": [
-      "le match contre l'Espanyol",
-      "le centre de formation",
-      "le joueur puis entraîneur influent du club",
-      "l'entraîneur du sextuplé de 2009"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit le derby barcelonais ?",
-    "answers": [
-      "le centre de formation",
-      "le match contre l'Espanyol",
-      "le joueur puis entraîneur influent du club",
-      "l'entraîneur du sextuplé de 2009"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond à la Masia ?",
-    "answers": [
-      "le joueur puis entraîneur influent du club",
-      "l'entraîneur du sextuplé de 2009",
-      "le centre de formation",
-      "le meilleur buteur de l'histoire du club"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit la Masia ?",
-    "answers": [
-      "le joueur puis entraîneur influent du club",
-      "l'entraîneur du sextuplé de 2009",
-      "le meilleur buteur de l'histoire du club",
-      "le centre de formation"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond à Johan Cruyff ?",
-    "answers": [
-      "le joueur puis entraîneur influent du club",
-      "l'entraîneur du sextuplé de 2009",
-      "le meilleur buteur de l'histoire du club",
-      "un milieu formé à la Masia"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit Johan Cruyff ?",
-    "answers": [
-      "l'entraîneur du sextuplé de 2009",
-      "le joueur puis entraîneur influent du club",
-      "le meilleur buteur de l'histoire du club",
-      "un milieu formé à la Masia"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond à Pep Guardiola ?",
-    "answers": [
-      "le meilleur buteur de l'histoire du club",
-      "un milieu formé à la Masia",
-      "l'entraîneur du sextuplé de 2009",
-      "le milieu auteur du but espagnol en finale mondiale 2010"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit Pep Guardiola ?",
-    "answers": [
-      "le meilleur buteur de l'histoire du club",
-      "un milieu formé à la Masia",
-      "le milieu auteur du but espagnol en finale mondiale 2010",
-      "l'entraîneur du sextuplé de 2009"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond à Lionel Messi ?",
-    "answers": [
-      "le meilleur buteur de l'histoire du club",
-      "un milieu formé à la Masia",
-      "le milieu auteur du but espagnol en finale mondiale 2010",
-      "le capitaine défenseur emblématique"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit Lionel Messi ?",
-    "answers": [
-      "un milieu formé à la Masia",
-      "le meilleur buteur de l'histoire du club",
-      "le milieu auteur du but espagnol en finale mondiale 2010",
-      "le capitaine défenseur emblématique"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond à Xavi Hernández ?",
-    "answers": [
-      "le milieu auteur du but espagnol en finale mondiale 2010",
-      "le capitaine défenseur emblématique",
-      "un milieu formé à la Masia",
-      "le Brésilien Ballon d'or 2005"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit Xavi Hernández ?",
-    "answers": [
-      "le milieu auteur du but espagnol en finale mondiale 2010",
-      "le capitaine défenseur emblématique",
-      "le Brésilien Ballon d'or 2005",
-      "un milieu formé à la Masia"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond à Andrés Iniesta ?",
-    "answers": [
-      "le milieu auteur du but espagnol en finale mondiale 2010",
-      "le capitaine défenseur emblématique",
-      "le Brésilien Ballon d'or 2005",
-      "l'attaquant camerounais des années 2000"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit Andrés Iniesta ?",
-    "answers": [
-      "le capitaine défenseur emblématique",
-      "le milieu auteur du but espagnol en finale mondiale 2010",
-      "le Brésilien Ballon d'or 2005",
-      "l'attaquant camerounais des années 2000"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond à Carles Puyol ?",
-    "answers": [
-      "le Brésilien Ballon d'or 2005",
-      "l'attaquant camerounais des années 2000",
-      "le capitaine défenseur emblématique",
-      "une légende des années 1950"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit Carles Puyol ?",
-    "answers": [
-      "le Brésilien Ballon d'or 2005",
-      "l'attaquant camerounais des années 2000",
-      "une légende des années 1950",
-      "le capitaine défenseur emblématique"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond à Ronaldinho ?",
-    "answers": [
-      "le Brésilien Ballon d'or 2005",
-      "l'attaquant camerounais des années 2000",
-      "une légende des années 1950",
-      "1992"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit Ronaldinho ?",
-    "answers": [
-      "l'attaquant camerounais des années 2000",
-      "le Brésilien Ballon d'or 2005",
-      "une légende des années 1950",
-      "1992"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond à Samuel Eto'o ?",
-    "answers": [
-      "une légende des années 1950",
-      "1992",
-      "l'attaquant camerounais des années 2000",
-      "Wembley"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit Samuel Eto'o ?",
-    "answers": [
-      "une légende des années 1950",
-      "1992",
-      "Wembley",
-      "l'attaquant camerounais des années 2000"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond à László Kubala ?",
-    "answers": [
-      "une légende des années 1950",
-      "1992",
-      "Wembley",
-      "Ronald Koeman"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit László Kubala ?",
-    "answers": [
-      "1992",
-      "une légende des années 1950",
-      "Wembley",
-      "Ronald Koeman"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond à la première Coupe d'Europe des clubs champions du club ?",
-    "answers": [
-      "Wembley",
-      "Ronald Koeman",
-      "1992",
-      "Liga, Coupe du Roi et Ligue des champions"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit la première Coupe d'Europe des clubs champions du club ?",
-    "answers": [
-      "Wembley",
-      "Ronald Koeman",
-      "Liga, Coupe du Roi et Ligue des champions",
-      "1992"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond à la finale européenne de 1992 ?",
-    "answers": [
-      "Wembley",
-      "Ronald Koeman",
-      "Liga, Coupe du Roi et Ligue des champions",
-      "six trophées sur l'année civile"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit la finale européenne de 1992 ?",
-    "answers": [
-      "Ronald Koeman",
-      "Wembley",
-      "Liga, Coupe du Roi et Ligue des champions",
-      "six trophées sur l'année civile"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond au but de Wembley en 1992 ?",
-    "answers": [
-      "Liga, Coupe du Roi et Ligue des champions",
-      "six trophées sur l'année civile",
-      "Ronald Koeman",
-      "6-1 en 2017"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit le but de Wembley en 1992 ?",
-    "answers": [
-      "Liga, Coupe du Roi et Ligue des champions",
-      "six trophées sur l'année civile",
-      "6-1 en 2017",
-      "Ronald Koeman"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond au triplé de 2009 ?",
-    "answers": [
-      "Liga, Coupe du Roi et Ligue des champions",
-      "six trophées sur l'année civile",
-      "6-1 en 2017",
-      "le FC Barcelona Femení"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit le triplé de 2009 ?",
-    "answers": [
-      "six trophées sur l'année civile",
-      "Liga, Coupe du Roi et Ligue des champions",
-      "6-1 en 2017",
-      "le FC Barcelona Femení"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond au sextuplé de 2009 ?",
-    "answers": [
-      "6-1 en 2017",
-      "le FC Barcelona Femení",
-      "six trophées sur l'année civile",
-      "un site lié au Camp Nou"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit le sextuplé de 2009 ?",
-    "answers": [
-      "6-1 en 2017",
-      "le FC Barcelona Femení",
-      "un site lié au Camp Nou",
-      "six trophées sur l'année civile"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond à la remontada contre le PSG ?",
-    "answers": [
-      "6-1 en 2017",
-      "le FC Barcelona Femení",
-      "un site lié au Camp Nou",
-      "1899"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit la remontada contre le PSG ?",
-    "answers": [
-      "le FC Barcelona Femení",
-      "6-1 en 2017",
-      "un site lié au Camp Nou",
-      "1899"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour FC Barcelone, quelle réponse correspond au club féminin ?",
-    "answers": [
-      "un site lié au Camp Nou",
-      "1899",
-      "le FC Barcelona Femení",
-      "Joan Gamper"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément du FC Barcelone décrit le club féminin ?",
-    "answers": [
-      "un site lié au Camp Nou",
-      "1899",
+      "Walter Wild",
       "Joan Gamper",
-      "le FC Barcelona Femení"
+      "Bartomeu Terradas",
+      "Arthur Witty"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour FC Barcelone, quelle réponse correspond au musée du club ?",
+    "text": "Dans quel gymnase l’assemblée fondatrice du Barça s’est-elle tenue en 1899 ?",
     "answers": [
-      "un site lié au Camp Nou",
-      "1899",
-      "Joan Gamper",
-      "le Camp Nou"
+      "Gimnasio Tolosa",
+      "Gimnasio Solé",
+      "Palau Sant Jordi",
+      "Ateneu Barcelonès"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément du FC Barcelone décrit le musée du club ?",
+    "text": "Quel était le prénom de naissance de Joan Gamper ?",
     "answers": [
-      "1899",
-      "un site lié au Camp Nou",
-      "Joan Gamper",
-      "le Camp Nou"
+      "Johann",
+      "Josef",
+      "Hans",
+      "Hermann"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur philippino-espagnol fut une grande vedette des débuts du Barça ?",
+    "answers": [
+      "Emilio Sagi-Barba",
+      "Vicente Piera",
+      "Ricardo Zamora",
+      "Paulino Alcántara"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien légendaire a quitté le Barça pour l’Espanyol en 1922 ?",
+    "answers": [
+      "Ricardo Zamora",
+      "Franz Platko",
+      "Juan Velasco",
+      "Antoni Ramallets"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel stade, inauguré en 1909, précédait Les Corts ?",
+    "answers": [
+      "Camp del carrer Muntaner",
+      "Camp de la Indústria",
+      "Estadi de Sarrià",
+      "Camp de la Bordeta"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année le stade des Corts a-t-il été inauguré ?",
+    "answers": [
+      "1919",
+      "1925",
+      "1922",
+      "1929"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel président du Barça fut exécuté en 1936 pendant la guerre civile espagnole ?",
+    "answers": [
+      "Agustí Montal",
+      "Enric Llaudet",
+      "Francesc Miró-Sans",
+      "Josep Sunyol"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien hongrois fut surnommé le héros de Wembley après un match de 1928 ?",
+    "answers": [
+      "Franz Platko",
+      "Ferenc Plattkó",
+      "Gyula Grosics",
+      "Antal Dunai"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel poète a consacré une ode au gardien Franz Platko ?",
+    "answers": [
+      "Federico García Lorca",
+      "Rafael Alberti",
+      "Pablo Neruda",
+      "Miguel Hernández"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur est associé à l’âge d’or du Barça des « Cinq Coupes » en 1952 ?",
+    "answers": [
+      "Luis Suárez Miramontes",
+      "Eulogio Martínez",
+      "László Kubala",
+      "Sándor Kocsis"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur dirigeait l’équipe des Cinq Coupes en 1951-52 ?",
+    "answers": [
+      "Helenio Herrera",
+      "Domènec Balmanya",
+      "Enrique Orizaola",
+      "Ferdinand Daučík"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel architecte a conçu le Camp Nou avec Francesc Mitjans et Josep Soteras ?",
+    "answers": [
+      "Lorenzo García-Barbón",
+      "Ricardo Bofill",
+      "Josep Lluís Sert",
+      "Antoni Bonet"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire a disputé le match inaugural du Camp Nou en 1957 ?",
+    "answers": [
+      "Benfica",
+      "Sélection de Varsovie",
+      "Real Madrid",
+      "Stade de Reims"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur du Barça a marqué le premier but au Camp Nou ?",
+    "answers": [
+      "László Kubala",
+      "Justo Tejada",
+      "Eulogio Martínez",
+      "Sándor Kocsis"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel Espagnol est devenu en 1960 le premier joueur du Barça à gagner le Ballon d’Or ?",
+    "answers": [
+      "César Rodríguez",
+      "Josep Samitier",
+      "Antoni Ramallets",
+      "Luis Suárez Miramontes"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club a battu le Barça lors de la finale de Coupe d’Europe 1961 ?",
+    "answers": [
+      "Benfica",
+      "Real Madrid",
+      "Inter Milan",
+      "AC Milan"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville s’est jouée la finale européenne perdue par le Barça en 1961 ?",
+    "answers": [
+      "Bâle",
+      "Berne",
+      "Genève",
+      "Zurich"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire le Barça a-t-il battu en finale de Coupe des Coupes 1979 ?",
+    "answers": [
+      "Standard de Liège",
+      "Arsenal",
+      "Fortuna Düsseldorf",
+      "Sampdoria"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville le Barça a-t-il gagné la Coupe des Coupes 1979 ?",
+    "answers": [
+      "Rotterdam",
+      "Bruxelles",
+      "Vienne",
+      "Bâle"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club le Barça a-t-il battu en finale de Coupe des Coupes 1982 ?",
+    "answers": [
+      "Standard de Liège",
+      "Sampdoria",
+      "Fortuna Düsseldorf",
+      "Anderlecht"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien du Barça a arrêté des penalties contre Göteborg en demi-finale européenne 1986 ?",
+    "answers": [
+      "Andoni Zubizarreta",
+      "Urruti",
+      "Carles Busquets",
+      "Salvador Sadurní"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club a battu le Barça en finale de Coupe d’Europe 1986 ?",
+    "answers": [
+      "Porto",
+      "Benfica",
+      "Steaua Bucarest",
+      "PSV Eindhoven"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien du Steaua a arrêté les quatre tirs au but barcelonais en finale 1986 ?",
+    "answers": [
+      "Silviu Lung",
+      "Bogdan Stelea",
+      "Florin Prunea",
+      "Helmuth Duckadam"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire le Barça a-t-il battu en finale de Coupe des Coupes 1989 ?",
+    "answers": [
+      "Sampdoria",
+      "Arsenal",
+      "Parme",
+      "Standard de Liège"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel attaquant anglais a marqué pour le Barça en finale de Coupe des Coupes 1989 ?",
+    "answers": [
+      "Mark Hughes",
+      "Gary Lineker",
+      "Steve Archibald",
+      "Terry Venables"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire le Barça a-t-il battu en finale de Coupe d’Europe 1992 ?",
+    "answers": [
+      "AC Milan",
+      "Benfica",
+      "Sampdoria",
+      "Marseille"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "À quelle minute Ronald Koeman a-t-il marqué en finale européenne 1992 ?",
+    "answers": [
+      "104e minute",
+      "116e minute",
+      "120e minute",
+      "112e minute"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien gardait les buts du Barça lors de la finale européenne 1992 ?",
+    "answers": [
+      "Andoni Zubizarreta",
+      "Carles Busquets",
+      "Urruti",
+      "Francesc Arnau"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur du Barça était surnommé « El Chapi » ?",
+    "answers": [
+      "Albert Ferrer",
+      "José Mari Bakero",
+      "Eusebio Sacristán",
+      "Txiki Begiristain"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club a battu le Barça 4-0 en finale européenne 1994 ?",
+    "answers": [
+      "Juventus",
+      "Ajax",
+      "AC Milan",
+      "Porto"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur anglais a mené le Barça au titre de Liga 1984-85 ?",
+    "answers": [
+      "Bobby Robson",
+      "Ron Greenwood",
+      "Howard Kendall",
+      "Terry Venables"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur a dirigé le Barça lors de la saison 1996-97 ?",
+    "answers": [
+      "Bobby Robson",
+      "Louis van Gaal",
+      "Johan Cruyff",
+      "Radomir Antić"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel tournoi européen le Barça a remporté en 1997 contre le Paris Saint-Germain ?",
+    "answers": [
+      "Coupe UEFA",
+      "Coupe des Coupes",
+      "Supercoupe de l’UEFA",
+      "Coupe Intertoto"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui a marqué sur penalty en finale de Coupe des Coupes 1997 ?",
+    "answers": [
+      "Luis Enrique",
+      "Hristo Stoichkov",
+      "Ronaldo Nazário",
+      "Pep Guardiola"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel capitaine a soulevé la Ligue des champions 2006 pour le Barça ?",
+    "answers": [
+      "Ronaldinho",
+      "Xavi",
+      "Víctor Valdés",
+      "Carles Puyol"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel défenseur a été expulsé côté Arsenal en finale européenne 2006 ?",
+    "answers": [
+      "Jens Lehmann",
+      "Sol Campbell",
+      "Kolo Touré",
+      "Emmanuel Eboué"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur d’Arsenal a ouvert le score contre le Barça en finale 2006 ?",
+    "answers": [
+      "Thierry Henry",
+      "Sol Campbell",
+      "Freddie Ljungberg",
+      "Robert Pirès"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel milieu du Barça a été élu homme du match de la finale européenne 2009 ?",
+    "answers": [
+      "Andrés Iniesta",
+      "Lionel Messi",
+      "Xavi Hernández",
+      "Sergio Busquets"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel attaquant a marqué de la tête en finale européenne 2009 ?",
+    "answers": [
+      "Samuel Eto’o",
+      "Thierry Henry",
+      "Gerard Piqué",
+      "Lionel Messi"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle enceinte le Barça a-t-il disputé son premier match en décembre 1899 ?",
+    "answers": [
+      "Velòdrom de la Bonanova",
+      "Camp de la Indústria",
+      "Les Corts",
+      "Camp del carrer Muntaner"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quelle équipe le Barça a-t-il disputé son premier match, en décembre 1899 ?",
+    "answers": [
+      "Català FC",
+      "English Colony of Barcelona",
+      "Hispania AC",
+      "Espanyol"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club le Barça a-t-il battu lors de sa première finale de Coupe d’Espagne en 1910 ?",
+    "answers": [
+      "Athletic Club",
+      "Real Sociedad",
+      "Español de Madrid",
+      "Madrid FC"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel journal Hans Gamper a-t-il publié en octobre 1899 son annonce pour former un club ?",
+    "answers": [
+      "La Vanguardia",
+      "El Mundo Deportivo",
+      "La Veu de Catalunya",
+      "Los Deportes"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur était surnommé « le Magicien » et formait une attaque célèbre avec Alcántara ?",
+    "answers": [
+      "Emilio Sagi-Barba",
+      "Vicente Piera",
+      "Agustín Sancho",
+      "José Samitier"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel ancien terrain du Barça était surnommé « L’Escopidora » ?",
+    "answers": [
+      "Les Corts",
+      "Camp de la Indústria",
+      "Camp del carrer Muntaner",
+      "Camp Nou"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel adversaire le Barça a-t-il battu lors de la finale de Coupe latine 1949 ?",
+    "answers": [
+      "Benfica",
+      "Torino",
+      "Sporting CP",
+      "Stade de Reims"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a marqué quatre buts lors du premier 5-0 du Barça contre le Real Madrid en 1935 ?",
+    "answers": [
+      "Josep Escolà",
+      "Josep Samitier",
+      "César Rodríguez",
+      "Martí Ventolrà"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel entraîneur slovaque a conduit le Barça à deux titres de Liga consécutifs en 1959 et 1960 ?",
+    "answers": [
+      "Helenio Herrera",
+      "Ferdinand Daučík",
+      "Ljubiša Broćić",
+      "Domènec Balmanya"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel gardien fut titulaire durant l’essentiel de l’ère du Barça des Cinq Coupes ?",
+    "answers": [
+      "Franz Platko",
+      "Antoni Ramallets",
+      "Ricardo Zamora",
+      "Juan Velasco"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur espagnol a marqué le but victorieux du Barça en finale de Coupe des Coupes 1982 ?",
+    "answers": [
+      "Esteban Vigo",
+      "José Ramón Alexanko",
+      "Quini",
+      "Tente Sánchez"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur danois du Barça a marqué en finale de Coupe des Coupes 1982 ?",
+    "answers": [
+      "Michael Laudrup",
+      "Henning Jensen",
+      "Preben Elkjær",
+      "Allan Simonsen"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a marqué le premier but du Barça en finale de Coupe des Coupes 1989 ?",
+    "answers": [
+      "Julio Salinas",
+      "Gary Lineker",
+      "Txiki Begiristain",
+      "Roberto Fernández"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel arbitre suisse a dirigé la finale européenne Barça–Sampdoria de 1992 ?",
+    "answers": [
+      "Michel Vautrot",
+      "Kurt Röthlisberger",
+      "Bruno Galler",
+      "Urs Meier"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a délivré la passe à Juliano Belletti pour le but victorieux en finale 2006 ?",
+    "answers": [
+      "Samuel Eto’o",
+      "Deco",
+      "Henrik Larsson",
+      "Ronaldinho"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel remplaçant a offert les deux passes décisives du Barça en finale européenne 2006 ?",
+    "answers": [
+      "Andrés Iniesta",
+      "Juliano Belletti",
+      "Sylvinho",
+      "Henrik Larsson"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a marqué le deuxième but du Barça lors de la finale du Mondial des clubs 2011 ?",
+    "answers": [
+      "Xavi Hernández",
+      "Lionel Messi",
+      "Cesc Fàbregas",
+      "David Villa"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel adversaire le Barça a-t-il battu en finale du Mondial des clubs 2009 ?",
+    "answers": [
+      "Santos",
+      "Estudiantes",
+      "Internacional",
+      "River Plate"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a marqué le but du titre mondial des clubs 2009 en prolongation ?",
+    "answers": [
+      "Pedro",
+      "Zlatan Ibrahimović",
+      "Lionel Messi",
+      "Sergio Busquets"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a inscrit le but décisif à Stamford Bridge en demi-finale européenne 2009 ?",
+    "answers": [
+      "Xavi",
+      "Lionel Messi",
+      "Dani Alves",
+      "Andrés Iniesta"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
