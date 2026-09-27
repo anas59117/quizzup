@@ -670,14 +670,15 @@
     "correct": 1
   },
   {
-    "text": "Quel joueur est le deuxième meilleur buteur de l'histoire de la compétition, derrière Cristiano Ronaldo ?",
+    "text": "Qui inscrit le but du 3-3 pour Liverpool face à l'AC Milan en finale 2005, en reprenant son penalty repoussé ?",
     "answers": [
-      "Kylian Mbappé",
-      "Thierry Henry",
-      "Lionel Messi",
-      "Raúl"
+      "Steven Gerrard",
+      "Vladimír Šmicer",
+      "Xabi Alonso",
+      "Harry Kewell"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
     "text": "En 2005, quel club réalise une remontée légendaire (« Miracle d'Istanbul ») en finale après avoir été mené 3-0 ?",
@@ -760,14 +761,15 @@
     "correct": 1
   },
   {
-    "text": "Quel club remporte la toute première édition de la Coupe d'Europe des clubs champions, en 1956 ?",
+    "text": "Quel joueur du PSG devient en 2025 le premier adolescent à inscrire deux buts dans une finale de Ligue des champions ?",
     "answers": [
-      "Real Madrid",
-      "Chelsea",
-      "AC Milan",
-      "Benfica"
+      "Bradley Barcola",
+      "Warren Zaïre-Emery",
+      "Khvicha Kvaratskhelia",
+      "Désiré Doué"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
     "text": "Combien de finales consécutives le Real Madrid remporte-t-il entre 1956 et 1960 ?",
@@ -780,34 +782,37 @@
     "correct": 2
   },
   {
-    "text": "Quel joueur portugais, ancienne star du Real Madrid, est le meilleur buteur all-time de la compétition ?",
+    "text": "Quel joueur de Manchester United marque le but victorieux contre le Bayern dans les arrêts de jeu de la finale 1999 ?",
     "answers": [
-      "Luís Figo",
-      "Cristiano Ronaldo",
-      "Eusébio",
-      "Nani"
+      "Teddy Sheringham",
+      "Ole Gunnar Solskjær",
+      "Dwight Yorke",
+      "Ryan Giggs"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel gardien espagnol, longtemps capitaine du Real Madrid, remporte trois Ligues des Champions consécutives (2016-2018) ?",
+    "text": "Quel gardien costaricien du Real Madrid est titulaire lors des trois finales victorieuses de 2016 à 2018 ?",
     "answers": [
-      "David de Gea",
-      "Iker Casillas",
       "Keylor Navas",
-      "Thibaut Courtois"
+      "Iker Casillas",
+      "Thibaut Courtois",
+      "Kiko Casilla"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "En quelle ville la finale de la Ligue des Champions 2022 (Real Madrid - Liverpool) est-elle disputée ?",
+    "text": "Qui marque sur coup franc l'unique but de la finale européenne 1992 entre Barcelone et la Sampdoria ?",
     "answers": [
-      "Paris",
-      "Londres",
-      "Munich",
-      "Istanbul"
+      "Hristo Stoichkov",
+      "Michael Laudrup",
+      "Ronald Koeman",
+      "José Mari Bakero"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
     "text": "Quel club allemand perd la finale à domicile en 2012 (aux tirs au but contre Chelsea) avant de remporter le trophée l'année suivante ?",
@@ -827,7 +832,8 @@
       "Fernando Morientes",
       "Davor Šuker"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
     "text": "Quel est le nom de l'hymne officiel de la Ligue des Champions, composé par Tony Britten à partir d'une œuvre de Haendel ?",
@@ -897,7 +903,8 @@
       "Universitatea Craiova",
       "Rapid Bucarest"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
     "text": "Combien de buts Cristiano Ronaldo inscrit-il lors de la finale 2017 (Real Madrid 4-1 Juventus) ?",
@@ -940,24 +947,26 @@
     "correct": 0
   },
   {
-    "text": "Quel joueur portugais marque le but unique de la finale 2020 (Bayern Munich 1-0 PSG) ?",
+    "text": "Quel joueur français marque l'unique but de la finale 2020 entre le Bayern Munich et le PSG ?",
     "answers": [
-      "Robert Lewandowski",
+      "Serge Gnabry",
       "Kingsley Coman",
       "Thomas Müller",
-      "Serge Gnabry"
+      "Corentin Tolisso"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
-    "text": "Combien de finales de Ligue des Champions Cristiano Ronaldo dispute-t-il au total dans sa carrière ?",
+    "text": "Quel joueur marque sur penalty le tir décisif de Chelsea face au Bayern en finale européenne 2012 ?",
     "answers": [
-      "Trois",
-      "Quatre",
-      "Cinq",
-      "Six"
+      "Frank Lampard",
+      "Juan Mata",
+      "Ashley Cole",
+      "Didier Drogba"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
     "text": "Quel club italien atteint sept finales de Ligue des Champions/C1 sans jamais réussir à en remporter la majorité, un record de défaites en finale ?",
@@ -967,17 +976,19 @@
       "Inter Milan",
       "SSC Naples"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "En quelle ville se joue la première finale de l'histoire de la Coupe d'Europe des clubs champions, en 1956 ?",
+    "text": "Quel joueur inscrit l'unique but de la finale européenne 1993 remportée par l'OM contre l'AC Milan ?",
     "answers": [
-      "Madrid",
-      "Paris",
-      "Berne",
-      "Bruxelles"
+      "Franck Sauzée",
+      "Jean-Pierre Papin",
+      "Basile Boli",
+      "Abedi Pelé"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
     "text": "Quel est le nombre minimum de matchs que doit désormais jouer un club en phase de ligue depuis la réforme 2024-2025 ?",
@@ -1007,6 +1018,7 @@
       "Paulo Dybala",
       "Mario Mandžukić"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   }
 ]
