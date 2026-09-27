@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Pour Arsenal, quelle réponse correspond à la fondation sous le nom Dial Square ?",
+    "text": "En quelle année Arsenal a-t-il été fondé ?",
     "answers": [
       "1886",
-      "l'Emirates Stadium",
-      "Highbury",
-      "les Gunners"
+      "1882",
+      "1891",
+      "1904"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément d'Arsenal décrit la fondation sous le nom Dial Square ?",
+    "text": "Quel était le premier nom du club devenu Arsenal ?",
     "answers": [
-      "l'Emirates Stadium",
-      "1886",
-      "Highbury",
-      "les Gunners"
+      "Royal Gunners",
+      "Dial Square",
+      "Woolwich United",
+      "London Arsenal"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Arsenal, quelle réponse correspond au stade actuel ?",
+    "text": "Pourquoi Arsenal est-il surnommé « The Gunners » ?",
     "answers": [
-      "Highbury",
-      "les Gunners",
-      "l'Emirates Stadium",
-      "le rouge avec manches blanches"
+      "Son premier entraîneur était artilleur",
+      "Le canon figurait sur le maillot avant la fondation",
+      "Le club est né parmi des ouvriers d’une manufacture d’armement",
+      "Le club appartenait à l’armée britannique"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément d'Arsenal décrit le stade actuel ?",
-    "answers": [
-      "Highbury",
-      "les Gunners",
-      "le rouge avec manches blanches",
-      "l'Emirates Stadium"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Arsenal, quelle réponse correspond à l'ancien stade ?",
+    "text": "Dans quel stade Arsenal joue-t-il depuis 2006 ?",
     "answers": [
       "Highbury",
-      "les Gunners",
-      "le rouge avec manches blanches",
-      "le match contre Tottenham"
+      "Wembley",
+      "Stamford Bridge",
+      "L’Emirates Stadium"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément d'Arsenal décrit l'ancien stade ?",
+    "text": "Quel stade Arsenal a-t-il quitté en 2006 ?",
     "answers": [
-      "les Gunners",
       "Highbury",
-      "le rouge avec manches blanches",
-      "le match contre Tottenham"
+      "Maine Road",
+      "White Hart Lane",
+      "Upton Park"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Arsenal, quelle réponse correspond au surnom du club ?",
+    "text": "Quelles sont les couleurs traditionnelles d’Arsenal ?",
     "answers": [
-      "le rouge avec manches blanches",
-      "le match contre Tottenham",
-      "les Gunners",
-      "l'entraîneur innovateur des années 1920 et 1930"
+      "Bleu et blanc",
+      "Rouge et blanc",
+      "Grenat et bleu",
+      "Rouge et noir"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément d'Arsenal décrit le surnom du club ?",
+    "text": "Quel club est le rival d’Arsenal dans le North London derby ?",
     "answers": [
-      "le rouge avec manches blanches",
-      "le match contre Tottenham",
-      "l'entraîneur innovateur des années 1920 et 1930",
-      "les Gunners"
+      "Chelsea",
+      "West Ham United",
+      "Tottenham Hotspur",
+      "Fulham"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Arsenal, quelle réponse correspond à la couleur traditionnelle ?",
+    "text": "Quel entraîneur français a dirigé Arsenal de 1996 à 2018 ?",
     "answers": [
-      "le rouge avec manches blanches",
-      "le match contre Tottenham",
-      "l'entraîneur innovateur des années 1920 et 1930",
-      "le capitaine défenseur surnommé Mr Arsenal"
+      "Gérard Houllier",
+      "Didier Deschamps",
+      "Jean Tigana",
+      "Arsène Wenger"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément d'Arsenal décrit la couleur traditionnelle ?",
+    "text": "Quel attaquant est le meilleur buteur historique d’Arsenal ?",
     "answers": [
-      "le match contre Tottenham",
-      "le rouge avec manches blanches",
-      "l'entraîneur innovateur des années 1920 et 1930",
-      "le capitaine défenseur surnommé Mr Arsenal"
+      "Thierry Henry",
+      "Ian Wright",
+      "Robin van Persie",
+      "Dennis Bergkamp"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Arsenal, quelle réponse correspond au derby du nord de Londres ?",
+    "text": "Quel défenseur fut longtemps surnommé « Mr Arsenal » ?",
     "answers": [
-      "l'entraîneur innovateur des années 1920 et 1930",
-      "le capitaine défenseur surnommé Mr Arsenal",
-      "le match contre Tottenham",
-      "un buteur anglais des années 1990"
+      "Martin Keown",
+      "Tony Adams",
+      "Sol Campbell",
+      "Lee Dixon"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément d'Arsenal décrit le derby du nord de Londres ?",
+    "text": "Quel gardien anglais emblématique a joué pour Arsenal de 1990 à 2003 ?",
     "answers": [
-      "l'entraîneur innovateur des années 1920 et 1930",
-      "le capitaine défenseur surnommé Mr Arsenal",
-      "un buteur anglais des années 1990",
-      "le match contre Tottenham"
+      "Jens Lehmann",
+      "Pat Jennings",
+      "David Seaman",
+      "Bob Wilson"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Arsenal, quelle réponse correspond à Herbert Chapman ?",
+    "text": "Quel Néerlandais surnommé « l’homme qui ne vole pas » a joué à Arsenal ?",
     "answers": [
-      "l'entraîneur innovateur des années 1920 et 1930",
-      "le capitaine défenseur surnommé Mr Arsenal",
-      "un buteur anglais des années 1990",
-      "un attaquant néerlandais surnommé l'homme de glace"
+      "Robin van Persie",
+      "Marc Overmars",
+      "Giovanni van Bronckhorst",
+      "Dennis Bergkamp"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément d'Arsenal décrit Herbert Chapman ?",
+    "text": "Quel Français a marqué le but décisif de la finale de FA Cup 2014 ?",
     "answers": [
-      "le capitaine défenseur surnommé Mr Arsenal",
-      "l'entraîneur innovateur des années 1920 et 1930",
-      "un buteur anglais des années 1990",
-      "un attaquant néerlandais surnommé l'homme de glace"
+      "Aaron Ramsey",
+      "Olivier Giroud",
+      "Laurent Koscielny",
+      "Santi Cazorla"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Arsenal, quelle réponse correspond à Tony Adams ?",
+    "text": "Comment surnomme-t-on l’équipe d’Arsenal championne sans défaite en 2003-2004 ?",
     "answers": [
-      "un buteur anglais des années 1990",
-      "un attaquant néerlandais surnommé l'homme de glace",
-      "le capitaine défenseur surnommé Mr Arsenal",
-      "le meilleur buteur historique du club"
+      "Les Immortels",
+      "Les Invincibles",
+      "Les Canonniers royaux",
+      "Les Centurions"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément d'Arsenal décrit Tony Adams ?",
+    "text": "Combien de défaites Arsenal a-t-il subies en championnat en 2003-2004 ?",
     "answers": [
-      "un buteur anglais des années 1990",
-      "un attaquant néerlandais surnommé l'homme de glace",
-      "le meilleur buteur historique du club",
-      "le capitaine défenseur surnommé Mr Arsenal"
+      "1",
+      "2",
+      "0",
+      "3"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Arsenal, quelle réponse correspond à Ian Wright ?",
+    "text": "Quel joueur français portait le numéro 14 à Arsenal ?",
     "answers": [
-      "un buteur anglais des années 1990",
-      "un attaquant néerlandais surnommé l'homme de glace",
-      "le meilleur buteur historique du club",
-      "le capitaine des Invincibles"
+      "Patrick Vieira",
+      "Robert Pirès",
+      "Sylvain Wiltord",
+      "Thierry Henry"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément d'Arsenal décrit Ian Wright ?",
+    "text": "Quel capitaine a soulevé le trophée de Premier League des Invincibles ?",
     "answers": [
-      "un attaquant néerlandais surnommé l'homme de glace",
-      "un buteur anglais des années 1990",
-      "le meilleur buteur historique du club",
-      "le capitaine des Invincibles"
+      "Patrick Vieira",
+      "Tony Adams",
+      "Thierry Henry",
+      "Sol Campbell"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Arsenal, quelle réponse correspond à Dennis Bergkamp ?",
+    "text": "Quel club Arsenal a-t-il affronté en finale de Ligue des champions 2006 ?",
     "answers": [
-      "le meilleur buteur historique du club",
-      "le capitaine des Invincibles",
-      "un attaquant néerlandais surnommé l'homme de glace",
-      "un ailier français des Invincibles"
+      "Le Real Madrid",
+      "Le FC Barcelone",
+      "L’AC Milan",
+      "La Juventus"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément d'Arsenal décrit Dennis Bergkamp ?",
+    "text": "Quel défenseur a marqué pour Arsenal en finale européenne 2006 ?",
     "answers": [
-      "le meilleur buteur historique du club",
-      "le capitaine des Invincibles",
-      "un ailier français des Invincibles",
-      "un attaquant néerlandais surnommé l'homme de glace"
+      "Kolo Touré",
+      "Ashley Cole",
+      "Sol Campbell",
+      "Emmanuel Eboué"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Arsenal, quelle réponse correspond à Thierry Henry ?",
+    "text": "Quel club Arsenal a-t-il battu en finale de FA Cup 2020 ?",
     "answers": [
-      "le meilleur buteur historique du club",
-      "le capitaine des Invincibles",
-      "un ailier français des Invincibles",
-      "l'entraîneur de 1996 à 2018"
+      "Manchester City",
+      "Liverpool",
+      "Manchester United",
+      "Chelsea"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément d'Arsenal décrit Thierry Henry ?",
-    "answers": [
-      "le capitaine des Invincibles",
-      "le meilleur buteur historique du club",
-      "un ailier français des Invincibles",
-      "l'entraîneur de 1996 à 2018"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Arsenal, quelle réponse correspond à Patrick Vieira ?",
-    "answers": [
-      "un ailier français des Invincibles",
-      "l'entraîneur de 1996 à 2018",
-      "le capitaine des Invincibles",
-      "Premier League et FA Cup"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément d'Arsenal décrit Patrick Vieira ?",
-    "answers": [
-      "un ailier français des Invincibles",
-      "l'entraîneur de 1996 à 2018",
-      "Premier League et FA Cup",
-      "le capitaine des Invincibles"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Arsenal, quelle réponse correspond à Robert Pirès ?",
-    "answers": [
-      "un ailier français des Invincibles",
-      "l'entraîneur de 1996 à 2018",
-      "Premier League et FA Cup",
-      "l'équipe championne 2003-2004 sans défaite"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément d'Arsenal décrit Robert Pirès ?",
-    "answers": [
-      "l'entraîneur de 1996 à 2018",
-      "un ailier français des Invincibles",
-      "Premier League et FA Cup",
-      "l'équipe championne 2003-2004 sans défaite"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Arsenal, quelle réponse correspond à Arsène Wenger ?",
-    "answers": [
-      "Premier League et FA Cup",
-      "l'équipe championne 2003-2004 sans défaite",
-      "l'entraîneur de 1996 à 2018",
-      "zéro"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément d'Arsenal décrit Arsène Wenger ?",
-    "answers": [
-      "Premier League et FA Cup",
-      "l'équipe championne 2003-2004 sans défaite",
-      "zéro",
-      "l'entraîneur de 1996 à 2018"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Arsenal, quelle réponse correspond au doublé de 1998 ?",
-    "answers": [
-      "Premier League et FA Cup",
-      "l'équipe championne 2003-2004 sans défaite",
-      "zéro",
-      "49 matchs"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément d'Arsenal décrit le doublé de 1998 ?",
-    "answers": [
-      "l'équipe championne 2003-2004 sans défaite",
-      "Premier League et FA Cup",
-      "zéro",
-      "49 matchs"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Arsenal, quelle réponse correspond aux Invincibles ?",
-    "answers": [
-      "zéro",
-      "49 matchs",
-      "l'équipe championne 2003-2004 sans défaite",
-      "le FC Barcelone"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément d'Arsenal décrit les Invincibles ?",
-    "answers": [
-      "zéro",
-      "49 matchs",
-      "le FC Barcelone",
-      "l'équipe championne 2003-2004 sans défaite"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Arsenal, quelle réponse correspond au nombre de défaites en championnat 2003-2004 ?",
-    "answers": [
-      "zéro",
-      "49 matchs",
-      "le FC Barcelone",
-      "2006"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément d'Arsenal décrit le nombre de défaites en championnat 2003-2004 ?",
-    "answers": [
-      "49 matchs",
-      "zéro",
-      "le FC Barcelone",
-      "2006"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Arsenal, quelle réponse correspond à la série d'invincibilité en championnat ?",
-    "answers": [
-      "le FC Barcelone",
-      "2006",
-      "49 matchs",
-      "le symbole du club"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément d'Arsenal décrit la série d'invincibilité en championnat ?",
-    "answers": [
-      "le FC Barcelone",
-      "2006",
-      "le symbole du club",
-      "49 matchs"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Arsenal, quelle réponse correspond à la finale de Ligue des champions 2006 ?",
-    "answers": [
-      "le FC Barcelone",
-      "2006",
-      "le symbole du club",
-      "une station du métro londonien renommée d'après le club"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément d'Arsenal décrit la finale de Ligue des champions 2006 ?",
-    "answers": [
-      "2006",
-      "le FC Barcelone",
-      "le symbole du club",
-      "une station du métro londonien renommée d'après le club"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Arsenal, quelle réponse correspond au dernier match à Highbury ?",
-    "answers": [
-      "le symbole du club",
-      "une station du métro londonien renommée d'après le club",
-      "2006",
-      "Arsenal Women"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément d'Arsenal décrit le dernier match à Highbury ?",
-    "answers": [
-      "le symbole du club",
-      "une station du métro londonien renommée d'après le club",
-      "Arsenal Women",
-      "2006"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Arsenal, quelle réponse correspond à l'ouverture de l'Emirates Stadium ?",
-    "answers": [
-      "2006",
-      "le symbole du club",
-      "une station du métro londonien renommée d'après le club",
-      "Arsenal Women"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément d'Arsenal décrit l'ouverture de l'Emirates Stadium ?",
-    "answers": [
-      "le symbole du club",
-      "2006",
-      "une station du métro londonien renommée d'après le club",
-      "Arsenal Women"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Arsenal, quelle réponse correspond au canon ?",
-    "answers": [
-      "une station du métro londonien renommée d'après le club",
-      "Arsenal Women",
-      "le symbole du club",
-      "Woolwich"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément d'Arsenal décrit le canon ?",
-    "answers": [
-      "une station du métro londonien renommée d'après le club",
-      "Arsenal Women",
-      "Woolwich",
-      "le symbole du club"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Arsenal, quelle réponse correspond à la gare Arsenal ?",
-    "answers": [
-      "une station du métro londonien renommée d'après le club",
-      "Arsenal Women",
-      "Woolwich",
-      "1886"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément d'Arsenal décrit la gare Arsenal ?",
-    "answers": [
-      "Arsenal Women",
-      "une station du métro londonien renommée d'après le club",
-      "Woolwich",
-      "1886"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Arsenal, quelle réponse correspond au club féminin ?",
+    "text": "Dans quel quartier du sud-est londonien Arsenal a-t-il été fondé ?",
     "answers": [
       "Woolwich",
-      "1886",
-      "Arsenal Women",
-      "l'Emirates Stadium"
+      "Islington",
+      "Camden",
+      "Hackney"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Quel élément d'Arsenal décrit le club féminin ?",
+    "text": "Sous quel nom le club est-il devenu professionnel en 1891 ?",
     "answers": [
-      "Woolwich",
-      "1886",
-      "l'Emirates Stadium",
-      "Arsenal Women"
+      "Dial Square",
+      "Royal Arsenal",
+      "Woolwich Arsenal",
+      "The Arsenal"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
-    "text": "Pour Arsenal, quelle réponse correspond au quartier historique ?",
+    "text": "En quelle année Arsenal s’est-il installé à Highbury ?",
     "answers": [
-      "Woolwich",
-      "1886",
-      "l'Emirates Stadium",
-      "Highbury"
+      "1904",
+      "1920",
+      "1913",
+      "1925"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Quel élément d'Arsenal décrit le quartier historique ?",
+    "text": "Quel dirigeant joua un rôle déterminant dans le déménagement à Highbury ?",
     "answers": [
-      "1886",
-      "Woolwich",
-      "l'Emirates Stadium",
-      "Highbury"
+      "Herbert Chapman",
+      "Samuel Hill-Wood",
+      "George Allison",
+      "Henry Norris"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel entraîneur a conduit Arsenal à son premier championnat d’Angleterre en 1931 ?",
+    "answers": [
+      "Herbert Chapman",
+      "George Allison",
+      "Tom Whittaker",
+      "Bertie Mee"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel fut le premier trophée majeur remporté par Arsenal ?",
+    "answers": [
+      "Le championnat 1931",
+      "La FA Cup 1930",
+      "La FA Cup 1936",
+      "Le championnat 1933"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu en finale de FA Cup 1930 ?",
+    "answers": [
+      "Sheffield United",
+      "Liverpool",
+      "Huddersfield Town",
+      "Newcastle United"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel fut le score de la finale de FA Cup 1930 ?",
+    "answers": [
+      "1-0",
+      "2-1",
+      "3-0",
+      "2-0"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quels joueurs ont marqué pour Arsenal en finale de FA Cup 1930 ?",
+    "answers": [
+      "Alex James et Jack Lambert",
+      "Cliff Bastin et David Jack",
+      "Joe Hulme et Ted Drake",
+      "Jack Lambert et Cliff Bastin"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel ancien club d’Herbert Chapman Arsenal a-t-il battu en finale de 1930 ?",
+    "answers": [
+      "Leeds United",
+      "Huddersfield Town",
+      "Northampton Town",
+      "Sheffield Wednesday"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "En quelle saison Arsenal a-t-il remporté son premier titre de champion ?",
+    "answers": [
+      "1929-1930",
+      "1931-1932",
+      "1930-1931",
+      "1932-1933"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel attaquant a marqué l’unique but de la finale de FA Cup 1936 ?",
+    "answers": [
+      "Cliff Bastin",
+      "Alex James",
+      "Joe Hulme",
+      "Ted Drake"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu en finale de FA Cup 1936 ?",
+    "answers": [
+      "Sheffield United",
+      "Sheffield Wednesday",
+      "Derby County",
+      "Preston North End"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur a inscrit les deux buts d’Arsenal en finale de FA Cup 1950 ?",
+    "answers": [
+      "Joe Mercer",
+      "Reg Lewis",
+      "Doug Lishman",
+      "Denis Compton"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu en finale de FA Cup 1950 ?",
+    "answers": [
+      "Blackpool",
+      "Newcastle United",
+      "Liverpool",
+      "Manchester United"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel entraîneur a mené Arsenal au doublé championnat-FA Cup en 1971 ?",
+    "answers": [
+      "Don Howe",
+      "Terry Neill",
+      "George Graham",
+      "Bertie Mee"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel terrain Arsenal a-t-il assuré le titre de champion 1971 ?",
+    "answers": [
+      "White Hart Lane",
+      "Anfield",
+      "Old Trafford",
+      "Maine Road"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel adversaire Arsenal a-t-il battu en finale de FA Cup 1971 ?",
+    "answers": [
+      "Leeds United",
+      "Liverpool",
+      "Chelsea",
+      "Everton"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur a marqué le but victorieux d’Arsenal en prolongation en finale de FA Cup 1971 ?",
+    "answers": [
+      "Eddie Kelly",
+      "John Radford",
+      "Charlie George",
+      "George Armstrong"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel capitaine a soulevé les deux trophées du doublé 1971 ?",
+    "answers": [
+      "Pat Rice",
+      "Peter Storey",
+      "Bob McNab",
+      "Frank McLintock"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel adversaire Arsenal devait-il battre par deux buts d’écart à Anfield pour être champion en 1989 ?",
+    "answers": [
+      "Liverpool",
+      "Everton",
+      "Manchester United",
+      "Nottingham Forest"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a inscrit le deuxième but décisif à Anfield en 1989 ?",
+    "answers": [
+      "Alan Smith",
+      "Michael Thomas",
+      "Paul Merson",
+      "Kevin Richardson"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a ouvert le score pour Arsenal à Anfield lors du match du titre 1989 ?",
+    "answers": [
+      "Michael Thomas",
+      "David Rocastle",
+      "Alan Smith",
+      "Brian Marwood"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur a conduit Arsenal au titre dramatique de 1989 ?",
+    "answers": [
+      "Terry Neill",
+      "Bruce Rioch",
+      "Don Howe",
+      "George Graham"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "À la différence de buts, combien de buts séparaient Arsenal et Liverpool au classement final de 1988-1989 ?",
+    "answers": [
+      "0, Arsenal étant champion grâce aux buts marqués",
+      "1 en faveur d’Arsenal",
+      "2 en faveur d’Arsenal",
+      "1 en faveur de Liverpool"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de défaites Arsenal a-t-il concédées lors du championnat 1990-1991 ?",
+    "answers": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club a infligé à Arsenal son unique défaite de championnat en 1990-1991 ?",
+    "answers": [
+      "Liverpool",
+      "Manchester United",
+      "Chelsea",
+      "Tottenham"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quels deux trophées Arsenal a-t-il remportés au cours de la saison 1992-1993 ?",
+    "answers": [
+      "Le championnat et la FA Cup",
+      "La League Cup et la Coupe des coupes",
+      "La FA Cup et la Supercoupe d’Europe",
+      "La FA Cup et la League Cup"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire Arsenal a-t-il battu dans les deux finales nationales de 1993 ?",
+    "answers": [
+      "Sheffield Wednesday",
+      "Manchester United",
+      "Aston Villa",
+      "Tottenham Hotspur"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel défenseur a marqué le but décisif de la finale rejouée de FA Cup 1993 ?",
+    "answers": [
+      "Tony Adams",
+      "Andy Linighan",
+      "Steve Bould",
+      "Lee Dixon"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu en finale de Coupe des vainqueurs de coupe 1994 ?",
+    "answers": [
+      "La Sampdoria",
+      "Le Benfica",
+      "Parme",
+      "Le Real Saragosse"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel attaquant a marqué l’unique but de la finale européenne 1994 ?",
+    "answers": [
+      "Ian Wright",
+      "Paul Merson",
+      "Kevin Campbell",
+      "Alan Smith"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville Arsenal a-t-il remporté la Coupe des vainqueurs de coupe 1994 ?",
+    "answers": [
+      "Copenhague",
+      "Bruxelles",
+      "Rotterdam",
+      "Vienne"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien d’Arsenal a préservé le 1-0 en finale européenne 1994 ?",
+    "answers": [
+      "John Lukic",
+      "David Seaman",
+      "Alex Manninger",
+      "Richard Wright"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club a battu Arsenal en finale de Coupe des vainqueurs de coupe 1995 ?",
+    "answers": [
+      "Parme",
+      "Le Paris Saint-Germain",
+      "Le Real Saragosse",
+      "La Sampdoria"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a marqué de très loin le but victorieux contre Arsenal en finale européenne 1995 ?",
+    "answers": [
+      "Gheorghe Hagi",
+      "Juan Esnáider",
+      "Gus Poyet",
+      "Nayim"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire a battu Arsenal aux tirs au but en finale de Coupe UEFA 2000 ?",
+    "answers": [
+      "Galatasaray",
+      "Le FC Copenhague",
+      "Valence",
+      "Le Feyenoord"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville s’est jouée la finale de Coupe UEFA 2000 ?",
+    "answers": [
+      "Istanbul",
+      "Copenhague",
+      "Göteborg",
+      "Rotterdam"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur d’Arsenal a vu son tir au but repoussé en finale de Coupe UEFA 2000 ?",
+    "answers": [
+      "Thierry Henry",
+      "Dennis Bergkamp",
+      "Patrick Vieira",
+      "Freddie Ljungberg"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur a réalisé le doublé Premier League-FA Cup avec Arsenal en 1998 et 2002 ?",
+    "answers": [
+      "George Graham",
+      "Bruce Rioch",
+      "Unai Emery",
+      "Arsène Wenger"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu en finale de FA Cup 1998 ?",
+    "answers": [
+      "Newcastle United",
+      "Liverpool",
+      "Chelsea",
+      "Manchester United"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quels joueurs ont marqué pour Arsenal en finale de FA Cup 1998 ?",
+    "answers": [
+      "Dennis Bergkamp et Marc Overmars",
+      "Marc Overmars et Nicolas Anelka",
+      "Nicolas Anelka et Ray Parlour",
+      "Patrick Vieira et Marc Overmars"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu en finale de FA Cup 2002 ?",
+    "answers": [
+      "Liverpool",
+      "Southampton",
+      "Chelsea",
+      "Manchester United"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quels joueurs ont marqué en finale de FA Cup 2002 ?",
+    "answers": [
+      "Thierry Henry et Robert Pirès",
+      "Sylvain Wiltord et Dennis Bergkamp",
+      "Patrick Vieira et Ray Parlour",
+      "Ray Parlour et Freddie Ljungberg"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a marqué à Old Trafford le but qui a assuré le titre 2002 ?",
+    "answers": [
+      "Sylvain Wiltord",
+      "Thierry Henry",
+      "Freddie Ljungberg",
+      "Robert Pirès"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire Arsenal a-t-il battu 1-0 en finale de FA Cup 2003 ?",
+    "answers": [
+      "Chelsea",
+      "Southampton",
+      "Liverpool",
+      "Millwall"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a marqué l’unique but de la finale de FA Cup 2003 ?",
+    "answers": [
+      "Thierry Henry",
+      "Freddie Ljungberg",
+      "Robert Pirès",
+      "Dennis Bergkamp"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel bilan exact Arsenal a-t-il enregistré en Premier League 2003-2004 ?",
+    "answers": [
+      "27 victoires, 11 nuls, 0 défaite",
+      "25 victoires, 13 nuls, 0 défaite",
+      "26 victoires, 11 nuls, 1 défaite",
+      "26 victoires, 12 nuls, 0 défaite"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Avec combien de points Arsenal a-t-il terminé la Premier League 2003-2004 ?",
+    "answers": [
+      "90",
+      "88",
+      "91",
+      "92"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle équipe Arsenal a-t-il affrontée lors du match qui a assuré le titre 2004 ?",
+    "answers": [
+      "Chelsea",
+      "Tottenham Hotspur",
+      "Liverpool",
+      "Manchester United"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel fut le score du match du titre à Tottenham en 2004 ?",
+    "answers": [
+      "2-1 pour Arsenal",
+      "1-1",
+      "2-2",
+      "3-2 pour Arsenal"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Sur combien de matches de championnat la série d’invincibilité d’Arsenal s’est-elle étendue ?",
+    "answers": [
+      "38",
+      "42",
+      "50",
+      "49"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club a mis fin à la série de 49 matches sans défaite d’Arsenal en octobre 2004 ?",
+    "answers": [
+      "Manchester United",
+      "Chelsea",
+      "Liverpool",
+      "Tottenham Hotspur"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel fut le score du match qui mit fin à la série des Invincibles ?",
+    "answers": [
+      "1-0",
+      "2-0",
+      "2-1",
+      "3-1"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire Arsenal a-t-il battu aux tirs au but en finale de FA Cup 2005 ?",
+    "answers": [
+      "Chelsea",
+      "Liverpool",
+      "Manchester United",
+      "Newcastle United"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a transformé le tir au but décisif de la finale de FA Cup 2005 ?",
+    "answers": [
+      "Thierry Henry",
+      "Robert Pirès",
+      "Freddie Ljungberg",
+      "Patrick Vieira"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel fut le score après prolongation en finale de FA Cup 2005 ?",
+    "answers": [
+      "0-0",
+      "1-1",
+      "1-0 pour Arsenal",
+      "2-2"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel stade s’est jouée la finale de Ligue des champions 2006 ?",
+    "answers": [
+      "Wembley",
+      "Le Stade de France",
+      "Le Stade olympique de Rome",
+      "Le Stade olympique d’Athènes"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien d’Arsenal a été expulsé en finale de Ligue des champions 2006 ?",
+    "answers": [
+      "Manuel Almunia",
+      "David Seaman",
+      "Jens Lehmann",
+      "Łukasz Fabiański"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quels joueurs du FC Barcelone ont marqué en finale européenne 2006 ?",
+    "answers": [
+      "Ronaldinho et Samuel Eto’o",
+      "Lionel Messi et Juliano Belletti",
+      "Deco et Samuel Eto’o",
+      "Samuel Eto’o et Juliano Belletti"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien a remplacé Robert Pirès après l’expulsion de Lehmann en finale 2006 ?",
+    "answers": [
+      "Manuel Almunia",
+      "Mart Poom",
+      "Vito Mannone",
+      "Richard Wright"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il éliminé en demi-finale de Ligue des champions 2006 ?",
+    "answers": [
+      "Le Real Madrid",
+      "Villarreal",
+      "La Juventus",
+      "Le FC Porto"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel gardien a arrêté un penalty de Juan Román Riquelme en demi-finale 2006 ?",
+    "answers": [
+      "Manuel Almunia",
+      "David Seaman",
+      "Jens Lehmann",
+      "Alex Manninger"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu lors du dernier match européen à Highbury ?",
+    "answers": [
+      "La Juventus",
+      "Le Real Madrid",
+      "L’Ajax",
+      "Villarreal"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a marqué le dernier but européen d’Arsenal à Highbury ?",
+    "answers": [
+      "Kolo Touré",
+      "Thierry Henry",
+      "Robert Pirès",
+      "Cesc Fàbregas"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel adversaire Arsenal a-t-il battu en finale de FA Cup 2014 après avoir été mené 2-0 ?",
+    "answers": [
+      "Aston Villa",
+      "Hull City",
+      "Chelsea",
+      "Wigan Athletic"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a marqué sur coup franc le premier but d’Arsenal en finale de FA Cup 2014 ?",
+    "answers": [
+      "Mesut Özil",
+      "Lukas Podolski",
+      "Santi Cazorla",
+      "Mikel Arteta"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel défenseur a égalisé pour Arsenal en finale de FA Cup 2014 ?",
+    "answers": [
+      "Per Mertesacker",
+      "Kieran Gibbs",
+      "Thomas Vermaelen",
+      "Laurent Koscielny"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu 4-0 en finale de FA Cup 2015 ?",
+    "answers": [
+      "Aston Villa",
+      "Hull City",
+      "Chelsea",
+      "Manchester City"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a marqué une frappe spectaculaire en finale de FA Cup 2015 ?",
+    "answers": [
+      "Theo Walcott",
+      "Alexis Sánchez",
+      "Santi Cazorla",
+      "Olivier Giroud"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel adversaire Arsenal a-t-il battu en finale de FA Cup 2017 ?",
+    "answers": [
+      "Manchester City",
+      "Tottenham Hotspur",
+      "Chelsea",
+      "Liverpool"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a marqué le but victorieux d’Arsenal en finale de FA Cup 2017 ?",
+    "answers": [
+      "Alexis Sánchez",
+      "Olivier Giroud",
+      "Mesut Özil",
+      "Aaron Ramsey"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur de Chelsea a été expulsé en finale de FA Cup 2017 ?",
+    "answers": [
+      "Victor Moses",
+      "Gary Cahill",
+      "César Azpilicueta",
+      "David Luiz"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quels étaient les buteurs d’Arsenal en finale de FA Cup 2020 ?",
+    "answers": [
+      "Alexandre Lacazette et Nicolas Pépé",
+      "Pierre-Emerick Aubameyang, deux fois",
+      "Pierre-Emerick Aubameyang et Nicolas Pépé",
+      "Kieran Tierney et Pierre-Emerick Aubameyang"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel entraîneur a remporté la FA Cup 2020 avec Arsenal ?",
+    "answers": [
+      "Unai Emery",
+      "Arsène Wenger",
+      "Mikel Arteta",
+      "Freddie Ljungberg"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club a battu Arsenal en finale de Ligue Europa 2019 ?",
+    "answers": [
+      "L’Atlético de Madrid",
+      "Le FC Séville",
+      "Villarreal",
+      "Chelsea"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel fut le score de la finale de Ligue Europa 2019 ?",
+    "answers": [
+      "4-1",
+      "3-1",
+      "2-0",
+      "4-2"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel ancien gardien de Chelsea était titulaire pour Arsenal en finale de Ligue Europa 2019 ?",
+    "answers": [
+      "Bernd Leno",
+      "Petr Čech",
+      "David Ospina",
+      "Emiliano Martínez"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur détient le record d’apparitions officielles avec Arsenal ?",
+    "answers": [
+      "Tony Adams",
+      "Pat Rice",
+      "David O’Leary",
+      "David Seaman"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts Thierry Henry a-t-il inscrits toutes compétitions confondues pour Arsenal ?",
+    "answers": [
+      "185",
+      "226",
+      "175",
+      "228"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
