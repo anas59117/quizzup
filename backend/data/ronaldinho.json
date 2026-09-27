@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Quel est le prénom complet le plus connu de Ronaldinho ?",
+    "text": "Quel est le nom complet de Ronaldinho ?",
     "answers": [
       "Ronaldo de Assis Moreira",
-      "Rivaldo Vítor Borba",
       "Ronaldo Luís Nazário",
-      "Romário de Souza"
+      "Rivaldo Vítor Borba",
+      "Romário de Souza Faria"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel numéro Ronaldinho portait-il généralement au FC Barcelone ?",
+    "text": "Dans quelle ville Ronaldinho est-il né ?",
     "answers": [
-      "Le 7",
-      "Le 10",
-      "Le 9",
-      "Le 11"
+      "Rio de Janeiro",
+      "Porto Alegre",
+      "São Paulo",
+      "Belo Horizonte"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : club brésilien formateur où Ronaldinho débute professionnellement ?",
+    "text": "À quelle date Ronaldinho est-il né ?",
     "answers": [
-      "Paris Saint-Germain",
-      "Atlético Mineiro",
+      "21 avril 1980",
+      "11 mars 1981",
+      "21 mars 1980",
+      "31 mars 1979"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Que signifie le diminutif « Ronaldinho » en portugais ?",
+    "answers": [
+      "Ronaldo le rapide",
+      "Ronaldo du Sud",
+      "Ronaldo junior officiel",
+      "Petit Ronaldo"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel surnom complet utilise-t-on souvent au Brésil ?",
+    "answers": [
+      "Ronaldinho Gaúcho",
+      "Ronaldinho Carioca",
+      "Ronaldinho Paulista",
+      "Ronaldinho Mineiro"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel club brésilien forme Ronaldinho ?",
+    "answers": [
+      "Flamengo",
       "Grêmio",
+      "Santos",
+      "Internacional"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel est le grand rival local du Grêmio ?",
+    "answers": [
+      "Corinthians",
+      "Palmeiras",
+      "Internacional",
+      "Cruzeiro"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel membre de la famille de Ronaldinho fut aussi joueur professionnel ?",
+    "answers": [
+      "Son père João",
+      "Son oncle Ronaldo",
+      "Son cousin Rivaldo",
+      "Son frère Roberto de Assis"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel poste Ronaldinho occupait-il principalement ?",
+    "answers": [
+      "Milieu offensif",
+      "Gardien",
+      "Défenseur central",
+      "Milieu récupérateur"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel championnat régional Ronaldinho remporte-t-il avec Grêmio en 1999 ?",
+    "answers": [
+      "Campeonato Carioca",
+      "Campeonato Gaúcho",
+      "Campeonato Paulista",
+      "Campeonato Mineiro"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Ronaldinho rejoint-il en Europe en 2001 ?",
+    "answers": [
+      "FC Barcelone",
+      "Inter Milan",
+      "Paris Saint-Germain",
       "Arsenal"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Ronaldinho », quelle description correspond à Grêmio ?",
+    "text": "Pourquoi ses débuts officiels au PSG sont-ils retardés ?",
     "answers": [
-      "club où il remporte le Ballon d’Or",
-      "adversaire contre lequel il marque un lointain coup franc à Seaman",
-      "stade rival qui l’applaudit après un doublé",
-      "club brésilien formateur où Ronaldinho débute professionnellement"
+      "Une blessure au genou",
+      "Une suspension FIFA pour dopage",
+      "Un problème de permis de travail",
+      "Un litige de transfert avec Grêmio"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition Grêmio est-il associé ?",
+    "text": "Quel numéro Ronaldinho porte-t-il principalement au PSG ?",
     "answers": [
-      "Débuts au Brésil",
-      "Période 2001-2003",
-      "FC Barcelone",
-      "Copa América 1999"
+      "10",
+      "7",
+      "9",
+      "11"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : premier club européen de Ronaldinho ?",
+    "text": "Quel entraîneur dirige le PSG lors de sa première saison ?",
     "answers": [
-      "FC Barcelone",
-      "Paris Saint-Germain",
-      "Angleterre",
-      "Santiago-Bernabéu"
+      "Vahid Halilhodžić",
+      "Luis Fernandez",
+      "Artur Jorge",
+      "Laurent Fournier"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Ronaldinho », quelle description correspond à Paris Saint-Germain ?",
+    "text": "Contre quel club Ronaldinho inscrit-il son premier but avec le PSG ?",
     "answers": [
-      "club italien rejoint après Barcelone",
-      "adversaire de la finale mondiale remportée à Yokohama",
-      "premier club européen de Ronaldinho",
-      "adversaire de son but sans élan à Stamford Bridge"
+      "AJ Auxerre",
+      "FC Nantes",
+      "Olympique lyonnais",
+      "Olympique de Marseille"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition Paris Saint-Germain est-il associé ?",
+    "text": "Quel club Ronaldinho affronte-t-il lors de ses Classiques avec Paris ?",
     "answers": [
-      "Débuts au Brésil",
-      "FC Barcelone",
-      "Copa América 1999",
-      "Période 2001-2003"
+      "AS Monaco",
+      "Olympique lyonnais",
+      "Girondins de Bordeaux",
+      "Olympique de Marseille"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : club où il remporte le Ballon d’Or ?",
+    "text": "Dans quel stade Ronaldinho réalise-t-il une prestation marquante contre Marseille en mars 2003 ?",
     "answers": [
-      "FC Barcelone",
+      "Stade Vélodrome",
+      "Parc des Princes",
+      "Stade de France",
+      "Stade Gerland"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le score d’OM-PSG le 9 mars 2003 ?",
+    "answers": [
+      "0-2",
+      "0-3",
+      "1-3",
+      "0-4"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel défenseur parisien marque aussi lors du 3-0 à Marseille en 2003 ?",
+    "answers": [
+      "Gabriel Heinze",
+      "Mauricio Pochettino",
+      "Jérôme Leroy",
+      "Frédéric Déhu"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Ronaldinho rejoint-il en 2003 ?",
+    "answers": [
+      "Real Madrid",
       "AC Milan",
-      "Allemagne",
-      "Chelsea"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Ronaldinho », quelle description correspond à FC Barcelone ?",
-    "answers": [
-      "club brésilien rejoint à son retour d’Europe",
-      "club où il remporte le Ballon d’Or",
-      "principale récompense individuelle remportée à Barcelone",
-      "tournoi où il termine meilleur buteur ex æquo"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition FC Barcelone est-il associé ?",
-    "answers": [
-      "Débuts au Brésil",
-      "FC Barcelone",
-      "Période 2003-2008",
-      "Copa América 1999"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : club italien rejoint après Barcelone ?",
-    "answers": [
-      "Flamengo",
-      "Ballon d’Or 2005",
-      "Confédérations 1999",
-      "AC Milan"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Ronaldinho », quelle description correspond à AC Milan ?",
-    "answers": [
-      "club italien rejoint après Barcelone",
-      "club avec lequel il remporte la Copa Libertadores",
-      "adversaire battu en finale européenne à Paris",
-      "tournoi où il obtient une médaille de bronze"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition AC Milan est-il associé ?",
-    "answers": [
-      "Débuts au Brésil",
-      "Période 2008-2011",
-      "FC Barcelone",
-      "Copa América 1999"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : club brésilien rejoint à son retour d’Europe ?",
-    "answers": [
-      "Atlético Mineiro",
-      "Arsenal",
-      "Flamengo",
-      "Jeux olympiques 2008"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Ronaldinho », quelle description correspond à Flamengo ?",
-    "answers": [
-      "adversaire contre lequel il marque un lointain coup franc à Seaman",
-      "stade rival qui l’applaudit après un doublé",
-      "club mexicain où il joue avant la fin de carrière",
-      "club brésilien rejoint à son retour d’Europe"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition Flamengo est-il associé ?",
-    "answers": [
-      "Retour au Brésil",
-      "Débuts au Brésil",
-      "FC Barcelone",
-      "Copa América 1999"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : club avec lequel il remporte la Copa Libertadores ?",
-    "answers": [
-      "Angleterre",
-      "Atlético Mineiro",
-      "Santiago-Bernabéu",
-      "Queretaro"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Ronaldinho », quelle description correspond à Atlético Mineiro ?",
-    "answers": [
-      "adversaire de la finale mondiale remportée à Yokohama",
-      "adversaire de son but sans élan à Stamford Bridge",
-      "club avec lequel il remporte la Copa Libertadores",
-      "dernier club professionnel de Ronaldinho"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition Atlético Mineiro est-il associé ?",
-    "answers": [
-      "Débuts au Brésil",
-      "FC Barcelone",
-      "Copa América 1999",
-      "Copa Libertadores 2013"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : adversaire contre lequel il marque un lointain coup franc à Seaman ?",
-    "answers": [
-      "Angleterre",
-      "Allemagne",
-      "Chelsea",
-      "Fluminense"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Ronaldinho », quelle description correspond à Angleterre ?",
-    "answers": [
-      "principale récompense individuelle remportée à Barcelone",
-      "adversaire contre lequel il marque un lointain coup franc à Seaman",
-      "tournoi où il termine meilleur buteur ex æquo",
-      "club brésilien formateur où Ronaldinho débute professionnellement"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition Angleterre est-il associé ?",
-    "answers": [
-      "Débuts au Brésil",
-      "FC Barcelone",
-      "Coupe du monde 2002",
-      "Copa América 1999"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : adversaire de la finale mondiale remportée à Yokohama ?",
-    "answers": [
-      "Ballon d’Or 2005",
-      "Confédérations 1999",
-      "Grêmio",
-      "Allemagne"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Ronaldinho », quelle description correspond à Allemagne ?",
-    "answers": [
-      "adversaire de la finale mondiale remportée à Yokohama",
-      "adversaire battu en finale européenne à Paris",
-      "tournoi où il obtient une médaille de bronze",
-      "premier club européen de Ronaldinho"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition Allemagne est-il associé ?",
-    "answers": [
-      "Débuts au Brésil",
-      "Coupe du monde 2002",
-      "FC Barcelone",
-      "Copa América 1999"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : principale récompense individuelle remportée à Barcelone ?",
-    "answers": [
-      "Arsenal",
-      "Jeux olympiques 2008",
-      "Ballon d’Or 2005",
-      "Paris Saint-Germain"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Ronaldinho », quelle description correspond à Ballon d’Or 2005 ?",
-    "answers": [
-      "stade rival qui l’applaudit après un doublé",
-      "club mexicain où il joue avant la fin de carrière",
-      "club où il remporte le Ballon d’Or",
-      "principale récompense individuelle remportée à Barcelone"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition Ballon d’Or 2005 est-il associé ?",
-    "answers": [
-      "FC Barcelone",
-      "Débuts au Brésil",
-      "Coupe du monde 2002",
-      "Copa América 1999"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : adversaire battu en finale européenne à Paris ?",
-    "answers": [
-      "Santiago-Bernabéu",
-      "Arsenal",
-      "Queretaro",
+      "Manchester United",
       "FC Barcelone"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Ronaldinho », quelle description correspond à Arsenal ?",
+    "text": "Quel président du Barça recrute Ronaldinho ?",
     "answers": [
-      "adversaire de son but sans élan à Stamford Bridge",
-      "dernier club professionnel de Ronaldinho",
-      "adversaire battu en finale européenne à Paris",
-      "club italien rejoint après Barcelone"
+      "Joan Laporta",
+      "Sandro Rosell",
+      "Josep Bartomeu",
+      "Florentino Pérez"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition Arsenal est-il associé ?",
+    "text": "Quel entraîneur dirige Barcelone à l’arrivée de Ronaldinho ?",
     "answers": [
-      "Débuts au Brésil",
-      "Coupe du monde 2002",
-      "Copa América 1999",
-      "Ligue des champions 2006"
+      "Louis van Gaal",
+      "Frank Rijkaard",
+      "Pep Guardiola",
+      "Radomir Antić"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : stade rival qui l’applaudit après un doublé ?",
+    "text": "Quel numéro Ronaldinho porte-t-il au FC Barcelone ?",
     "answers": [
-      "Santiago-Bernabéu",
+      "7",
+      "9",
+      "10",
+      "11"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "À quelle heure inhabituelle le match Barça-Séville de septembre 2003 débute-t-il ?",
+    "answers": [
+      "À 8 heures",
+      "À midi",
+      "À 23 heures",
+      "À minuit"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel titre national Barcelone remporte-t-il en 2004-2005 ?",
+    "answers": [
+      "Liga",
+      "Coupe du Roi",
+      "Supercoupe uniquement",
+      "Aucun titre"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel titre individuel mondial Ronaldinho remporte-t-il en 2004 ?",
+    "answers": [
+      "Ballon d’Or",
+      "FIFA World Player",
+      "Prix Puskás",
+      "Golden Boy"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Contre quel club Ronaldinho marque-t-il un but décisif à la 89e minute en C1 en novembre 2004 ?",
+    "answers": [
       "Chelsea",
-      "Fluminense",
-      "AC Milan"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Ronaldinho », quelle description correspond à Santiago-Bernabéu ?",
-    "answers": [
-      "tournoi où il termine meilleur buteur ex æquo",
-      "stade rival qui l’applaudit après un doublé",
-      "club brésilien formateur où Ronaldinho débute professionnellement",
-      "club brésilien rejoint à son retour d’Europe"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition Santiago-Bernabéu est-il associé ?",
-    "answers": [
-      "Débuts au Brésil",
-      "Coupe du monde 2002",
-      "FC Barcelone",
-      "Copa América 1999"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : adversaire de son but sans élan à Stamford Bridge ?",
-    "answers": [
-      "Confédérations 1999",
-      "Grêmio",
-      "Flamengo",
-      "Chelsea"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Ronaldinho », quelle description correspond à Chelsea ?",
-    "answers": [
-      "adversaire de son but sans élan à Stamford Bridge",
-      "tournoi où il obtient une médaille de bronze",
-      "premier club européen de Ronaldinho",
-      "club avec lequel il remporte la Copa Libertadores"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition Chelsea est-il associé ?",
-    "answers": [
-      "Débuts au Brésil",
-      "Ligue des champions 2005",
-      "Coupe du monde 2002",
-      "Copa América 1999"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : tournoi où il termine meilleur buteur ex æquo ?",
-    "answers": [
-      "Jeux olympiques 2008",
-      "Paris Saint-Germain",
-      "Confédérations 1999",
-      "Atlético Mineiro"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Ronaldinho », quelle description correspond à Confédérations 1999 ?",
-    "answers": [
-      "club mexicain où il joue avant la fin de carrière",
-      "club où il remporte le Ballon d’Or",
-      "adversaire contre lequel il marque un lointain coup franc à Seaman",
-      "tournoi où il termine meilleur buteur ex æquo"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition Confédérations 1999 est-il associé ?",
-    "answers": [
-      "Équipe du Brésil",
-      "Débuts au Brésil",
-      "Coupe du monde 2002",
-      "Copa América 1999"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : tournoi où il obtient une médaille de bronze ?",
-    "answers": [
-      "Queretaro",
-      "Jeux olympiques 2008",
-      "FC Barcelone",
-      "Angleterre"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Ronaldinho », quelle description correspond à Jeux olympiques 2008 ?",
-    "answers": [
-      "dernier club professionnel de Ronaldinho",
-      "club italien rejoint après Barcelone",
-      "tournoi où il obtient une médaille de bronze",
-      "adversaire de la finale mondiale remportée à Yokohama"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition Jeux olympiques 2008 est-il associé ?",
-    "answers": [
-      "Débuts au Brésil",
-      "Coupe du monde 2002",
-      "Copa América 1999",
-      "Équipe du Brésil"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : club mexicain où il joue avant la fin de carrière ?",
-    "answers": [
-      "Queretaro",
-      "Fluminense",
+      "Arsenal",
       "AC Milan",
-      "Allemagne"
+      "Inter Milan"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Ronaldinho », quelle description correspond à Queretaro ?",
+    "text": "Quel est le score de Barcelone-Milan en novembre 2004 ?",
     "answers": [
-      "club brésilien formateur où Ronaldinho débute professionnellement",
-      "club mexicain où il joue avant la fin de carrière",
-      "club brésilien rejoint à son retour d’Europe",
-      "principale récompense individuelle remportée à Barcelone"
+      "1-0",
+      "3-1",
+      "2-2",
+      "2-1"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition Queretaro est-il associé ?",
+    "text": "Quel joueur de Milan avait ouvert le score lors de ce match ?",
     "answers": [
-      "Débuts au Brésil",
-      "Coupe du monde 2002",
-      "Période 2014-2015",
-      "Copa América 1999"
+      "Andriy Shevchenko",
+      "Kaká",
+      "Filippo Inzaghi",
+      "Clarence Seedorf"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Ronaldinho », Quel repère de la carrière de Ronaldinho correspond à cette description : dernier club professionnel de Ronaldinho ?",
+    "text": "Quel club élimine Barcelone en huitièmes de C1 2004-2005 ?",
     "answers": [
-      "Grêmio",
+      "AC Milan",
+      "Chelsea",
+      "Arsenal",
+      "Liverpool"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel geste Ronaldinho utilise-t-il sur son deuxième but à Stamford Bridge ?",
+    "answers": [
+      "Un retourné",
+      "Une tête plongeante",
+      "Une frappe sans élan du bout du pied",
+      "Un coup franc sous le mur"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel gardien de Chelsea est battu sur cette frappe sans élan ?",
+    "answers": [
+      "Carlo Cudicini",
+      "Thibaut Courtois",
+      "Ed de Goey",
+      "Petr Čech"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel trophée individuel Ronaldinho remporte-t-il en 2005 ?",
+    "answers": [
+      "Ballon d’Or",
+      "Golden Boy",
+      "Prix Puskás",
+      "Soulier d’or européen"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Combien de fois Ronaldinho est-il élu FIFA World Player ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelles années reçoit-il le FIFA World Player ?",
+    "answers": [
+      "2003 et 2004",
+      "2005 et 2006",
+      "2004 et 2005",
+      "2002 et 2005"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Barcelone bat-il 3-0 au Bernabéu en novembre 2005 ?",
+    "answers": [
+      "Atlético de Madrid",
+      "Espanyol",
+      "Séville",
+      "Real Madrid"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Combien de buts Ronaldinho marque-t-il lors du 3-0 au Bernabéu ?",
+    "answers": [
+      "2",
+      "1",
+      "3",
+      "0"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel public adverse offre une ovation à Ronaldinho après son doublé ?",
+    "answers": [
+      "Celui de Chelsea",
+      "Celui du Real Madrid",
+      "Celui de Milan",
+      "Celui de l’Atlético"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel gardien madrilène est battu deux fois par Ronaldinho ce soir-là ?",
+    "answers": [
+      "Diego López",
+      "Keylor Navas",
+      "Iker Casillas",
+      "César Sánchez"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de Ligas Ronaldinho remporte-t-il avec Barcelone ?",
+    "answers": [
+      "1",
+      "3",
+      "4",
+      "2"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Combien de Supercoupes d’Espagne Ronaldinho remporte-t-il avec le Barça ?",
+    "answers": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel grand trophée européen Barcelone remporte-t-il en 2006 ?",
+    "answers": [
+      "Coupe UEFA",
+      "Ligue des champions",
+      "Coupe des coupes",
+      "Supercoupe de l’UEFA"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel club Barcelone élimine-t-il en huitièmes de finale de C1 2005-2006 ?",
+    "answers": [
+      "Arsenal",
+      "AC Milan",
+      "Chelsea",
+      "Benfica"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Barcelone élimine-t-il en quarts de finale de C1 2005-2006 ?",
+    "answers": [
+      "Chelsea",
+      "AC Milan",
+      "Villarreal",
+      "Benfica"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Barcelone élimine-t-il en demi-finale de C1 2005-2006 ?",
+    "answers": [
+      "AC Milan",
+      "Chelsea",
+      "Arsenal",
+      "Inter Milan"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui délivre la passe décisive à Ludovic Giuly au match aller contre Milan ?",
+    "answers": [
+      "Deco",
+      "Ronaldinho",
+      "Samuel Eto’o",
+      "Andrés Iniesta"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le score cumulé de la demi-finale Barça-Milan en 2006 ?",
+    "answers": [
+      "2-0",
+      "2-1",
+      "1-0",
+      "1-1"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Barcelone bat-il en finale de C1 2006 ?",
+    "answers": [
+      "Chelsea",
+      "AC Milan",
+      "Manchester United",
+      "Arsenal"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Dans quel stade se joue la finale de Ligue des champions 2006 ?",
+    "answers": [
+      "Stade de France",
+      "Camp Nou",
+      "Wembley",
+      "Stade olympique de Rome"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel est le score de la finale Barcelone-Arsenal 2006 ?",
+    "answers": [
+      "1-0",
+      "2-1",
+      "2-0",
+      "3-1"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui marque le premier but barcelonais de la finale 2006 ?",
+    "answers": [
+      "Ronaldinho",
+      "Henrik Larsson",
+      "Samuel Eto’o",
+      "Juliano Belletti"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui marque le but victorieux du Barça en finale 2006 ?",
+    "answers": [
+      "Ronaldinho",
+      "Samuel Eto’o",
+      "Deco",
+      "Juliano Belletti"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien d’Arsenal est expulsé au début de la finale 2006 ?",
+    "answers": [
+      "Jens Lehmann",
+      "Manuel Almunia",
+      "David Seaman",
+      "Wojciech Szczęsny"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club bat Barcelone en finale du Mondial des clubs 2006 ?",
+    "answers": [
+      "São Paulo",
+      "Internacional",
+      "Boca Juniors",
+      "Santos"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club élimine Barcelone en huitièmes de C1 2006-2007 ?",
+    "answers": [
+      "Chelsea",
+      "Arsenal",
+      "Liverpool",
+      "Manchester United"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Selon quelle règle Liverpool élimine-t-il Barcelone après un score cumulé de 2-2 ?",
+    "answers": [
+      "Tirs au but",
+      "Classement UEFA",
+      "Cartons jaunes",
+      "Buts à l’extérieur"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur reçoit le numéro 10 du Barça après le départ de Ronaldinho ?",
+    "answers": [
+      "Lionel Messi",
+      "Samuel Eto’o",
+      "Andrés Iniesta",
+      "Xavi"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel club Ronaldinho rejoint-il en 2008 ?",
+    "answers": [
+      "Inter Milan",
+      "AC Milan",
+      "Juventus",
+      "AS Roma"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel numéro Ronaldinho porte-t-il à l’AC Milan ?",
+    "answers": [
+      "10",
+      "7",
+      "80",
+      "11"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Pourquoi choisit-il le numéro 80 à Milan ?",
+    "answers": [
+      "Son 80e but",
+      "L’âge de son père",
+      "Le numéro 8 est indisponible",
+      "Son année de naissance, 1980"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel compatriote brésilien porte alors le numéro 10 à Milan ?",
+    "answers": [
+      "Clarence Seedorf",
+      "Kaká",
+      "Alexandre Pato",
+      "Ronaldo"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment Ronaldinho marque-t-il son premier but milanais dans le derby ?",
+    "answers": [
+      "Sur coup franc",
+      "De la tête",
+      "Sur penalty",
+      "D’un retourné"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur centre sur ce but dans le derby milanais ?",
+    "answers": [
+      "Alexandre Pato",
+      "Andrea Pirlo",
+      "Kaká",
+      "David Beckham"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel titre national Ronaldinho remporte-t-il avec Milan en 2010-2011 ?",
+    "answers": [
+      "Coupe d’Italie",
+      "Supercoupe uniquement",
+      "Aucun titre",
+      "Serie A"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel club brésilien Ronaldinho rejoint-il en janvier 2011 ?",
+    "answers": [
       "Flamengo",
-      "Ballon d’Or 2005",
+      "Grêmio",
+      "Atlético Mineiro",
       "Fluminense"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Ronaldinho », quelle description correspond à Fluminense ?",
+    "text": "Contre quel club Ronaldinho réussit-il un triplé lors d’un spectaculaire 5-4 avec Flamengo ?",
     "answers": [
-      "dernier club professionnel de Ronaldinho",
-      "premier club européen de Ronaldinho",
-      "club avec lequel il remporte la Copa Libertadores",
-      "adversaire battu en finale européenne à Paris"
+      "Corinthians",
+      "Santos",
+      "Vasco da Gama",
+      "Fluminense"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Ronaldinho », à quelle équipe ou compétition Fluminense est-il associé ?",
+    "text": "Quel jeune joueur de Santos marque aussi trois buts dans ce match ?",
     "answers": [
-      "Débuts au Brésil",
-      "Fin de carrière",
+      "Ganso",
+      "Robinho",
+      "Neymar",
+      "Gabigol"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Ronaldinho rejoint-il en 2012 ?",
+    "answers": [
+      "Cruzeiro",
+      "Fluminense",
+      "Botafogo",
+      "Atlético Mineiro"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quelle grande compétition sud-américaine remporte-t-il avec Atlético Mineiro en 2013 ?",
+    "answers": [
+      "Copa Libertadores",
+      "Copa Sudamericana",
+      "Recopa uniquement",
+      "Copa do Brasil"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel club Atlético Mineiro bat-il en finale de Libertadores 2013 ?",
+    "answers": [
+      "Newell’s Old Boys",
+      "Olimpia",
+      "Boca Juniors",
+      "Nacional"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "De quel pays est le Club Olimpia ?",
+    "answers": [
+      "Uruguay",
+      "Argentine",
+      "Paraguay",
+      "Colombie"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Comment la finale de Libertadores 2013 est-elle départagée ?",
+    "answers": [
+      "Au but en or",
+      "Par un match d’appui",
+      "Aux buts à l’extérieur",
+      "Aux tirs au but"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien de l’Atlético Mineiro est décisif pendant la campagne 2013 ?",
+    "answers": [
+      "Victor",
+      "Dida",
+      "Jefferson",
+      "Diego Alves"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club mexicain Ronaldinho rejoint-il en 2014 ?",
+    "answers": [
+      "América",
+      "Querétaro",
+      "Monterrey",
+      "Tigres"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club brésilien est le dernier de sa carrière professionnelle ?",
+    "answers": [
+      "Grêmio",
+      "Santos",
+      "Fluminense",
+      "Botafogo"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "En quelle année Ronaldinho annonce-t-il officiellement sa retraite ?",
+    "answers": [
+      "2016",
+      "2017",
+      "2019",
+      "2018"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "En quelle année Ronaldinho débute-t-il avec le Brésil A ?",
+    "answers": [
+      "1999",
+      "1997",
+      "1998",
+      "2000"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle compétition sud-américaine Ronaldinho remporte-t-il avec le Brésil en 1999 ?",
+    "answers": [
+      "Copa Libertadores",
+      "Copa América",
+      "Superclásico des Amériques",
+      "Finalissima"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel geste précède son but célèbre contre le Venezuela en 1999 ?",
+    "answers": [
+      "Une roulette sur le gardien",
+      "Un coup du scorpion",
+      "Un sombrero sur un défenseur",
+      "Une talonnade aérienne"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection le Brésil bat-il en finale de la Copa América 1999 ?",
+    "answers": [
+      "Argentine",
+      "Mexique",
+      "Chili",
+      "Uruguay"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle compétition mondiale Ronaldinho remporte-t-il en 2002 ?",
+    "answers": [
+      "Coupe du monde",
+      "Coupe des confédérations",
+      "Jeux olympiques",
+      "Mondial des clubs"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Dans quels pays se déroule la Coupe du monde 2002 ?",
+    "answers": [
+      "Chine et Japon",
+      "Corée du Sud et Japon",
+      "Japon et Australie",
+      "Corée du Sud et Chine"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle sélection Ronaldinho marque-t-il sur un lointain coup franc au Mondial 2002 ?",
+    "answers": [
+      "Belgique",
+      "Turquie",
+      "Angleterre",
+      "Allemagne"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel gardien anglais est lobé par ce coup franc ?",
+    "answers": [
+      "Paul Robinson",
+      "David James",
+      "Nigel Martyn",
+      "David Seaman"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "À quel tour a lieu Brésil-Angleterre en 2002 ?",
+    "answers": [
+      "Quart de finale",
+      "Huitième de finale",
+      "Demi-finale",
+      "Finale"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui marque l’autre but brésilien contre l’Angleterre ?",
+    "answers": [
+      "Ronaldo",
+      "Rivaldo",
+      "Cafu",
+      "Kaká"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Pourquoi Ronaldinho est-il expulsé contre l’Angleterre ?",
+    "answers": [
+      "Une main volontaire",
+      "Une contestation",
+      "Un tacle sur Danny Mills",
+      "Deux simulations"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection le Brésil bat-il en finale du Mondial 2002 ?",
+    "answers": [
+      "Turquie",
+      "Angleterre",
+      "Corée du Sud",
+      "Allemagne"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel est le score de la finale du Mondial 2002 ?",
+    "answers": [
+      "2-0",
+      "1-0",
+      "2-1",
+      "3-0"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui inscrit les deux buts de la finale mondiale 2002 ?",
+    "answers": [
+      "Ronaldinho",
+      "Ronaldo",
+      "Rivaldo",
+      "Kaká"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel trio offensif brésilien est surnommé les « trois R » en 2002 ?",
+    "answers": [
+      "Romário, Ronaldo et Ronaldinho",
+      "Rivaldo, Robinho et Ronaldinho",
+      "Ronaldo, Rivaldo et Ronaldinho",
+      "Ronaldo, Kaká et Ronaldinho"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle compétition FIFA Ronaldinho remporte-t-il en 2005 ?",
+    "answers": [
+      "Coupe du monde",
+      "Mondial des clubs",
+      "Jeux olympiques",
+      "Coupe des confédérations"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle sélection le Brésil bat-il en finale de la Coupe des confédérations 2005 ?",
+    "answers": [
+      "Argentine",
+      "Allemagne",
+      "Mexique",
+      "Italie"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le score de cette finale Brésil-Argentine ?",
+    "answers": [
+      "3-0",
+      "4-1",
+      "4-2",
+      "3-1"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Ronaldinho marque-t-il en finale de la Coupe des confédérations 2005 ?",
+    "answers": [
+      "Non",
+      "Oui, un doublé",
+      "Oui, le troisième but brésilien",
+      "Oui, sur coup franc indirect"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de sélections Ronaldinho compte-t-il avec le Brésil selon le Barça ?",
+    "answers": [
+      "91",
+      "94",
+      "101",
+      "97"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts internationaux inscrit-il selon le Barça ?",
+    "answers": [
+      "33",
+      "29",
+      "31",
+      "36"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le dernier Mondial disputé par Ronaldinho ?",
+    "answers": [
       "Coupe du monde 2002",
-      "Copa América 1999"
+      "Coupe du monde 2006",
+      "Coupe du monde 2010",
+      "Coupe du monde 2014"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle sélection élimine le Brésil en quart de finale du Mondial 2006 ?",
+    "answers": [
+      "Italie",
+      "Allemagne",
+      "France",
+      "Portugal"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Qui marque l’unique but de France-Brésil en 2006 ?",
+    "answers": [
+      "Zinédine Zidane",
+      "Franck Ribéry",
+      "Patrick Vieira",
+      "Thierry Henry"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
   }
 ]
