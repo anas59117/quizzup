@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Quel club anglais est le plus associé à Thierry Henry ?",
+    "text": "Quel est le nom complet de Thierry Henry ?",
+    "answers": [
+      "Thierry Daniel Henry",
+      "Thierry David Henry",
+      "Thierry Didier Henry",
+      "Thierry Laurent Henry"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Dans quelle commune Thierry Henry est-il né ?",
+    "answers": [
+      "Évry",
+      "Les Ulis",
+      "Massy",
+      "Palaiseau"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "À quelle date Thierry Henry est-il né ?",
+    "answers": [
+      "17 juillet 1977",
+      "7 août 1978",
+      "17 août 1977",
+      "27 août 1976"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club professionnel forme Thierry Henry ?",
     "answers": [
       "Arsenal",
+      "Paris Saint-Germain",
+      "AJ Auxerre",
+      "AS Monaco"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel entraîneur lance Thierry Henry en professionnel à Monaco ?",
+    "answers": [
+      "Arsène Wenger",
+      "Jean Tigana",
+      "Aimé Jacquet",
+      "Claude Puel"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Contre quel club Henry dispute-t-il son premier match professionnel ?",
+    "answers": [
+      "AS Cannes",
+      "OGC Nice",
+      "RC Lens",
+      "FC Nantes"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "À quel poste Henry est-il souvent utilisé au début de sa carrière ?",
+    "answers": [
+      "Gardien",
+      "Défenseur central",
+      "Ailier gauche",
+      "Milieu récupérateur"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel titre national Henry remporte-t-il avec Monaco en 1996-1997 ?",
+    "answers": [
+      "Coupe de France",
+      "Coupe de la Ligue",
+      "Trophée des champions",
+      "Championnat de France"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel club élimine Monaco en demi-finale de Ligue des champions 1997-1998 ?",
+    "answers": [
+      "Juventus",
+      "Real Madrid",
+      "Borussia Dortmund",
+      "Manchester United"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Henry marque-t-il en Ligue des champions 1997-1998 ?",
+    "answers": [
+      "5",
+      "7",
+      "6",
+      "8"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club italien recrute Henry en janvier 1999 ?",
+    "answers": [
+      "AC Milan",
+      "Inter Milan",
+      "Juventus",
+      "AS Roma"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel club anglais recrute Henry en août 1999 ?",
+    "answers": [
+      "Liverpool",
       "Chelsea",
+      "Manchester United",
+      "Arsenal"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel entraîneur retrouve-t-il à Arsenal ?",
+    "answers": [
+      "Arsène Wenger",
+      "George Graham",
+      "Alex Ferguson",
+      "Gérard Houllier"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel numéro devient emblématique de Thierry Henry à Arsenal ?",
+    "answers": [
+      "7",
+      "14",
+      "9",
+      "10"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Contre quel club Henry inscrit-il son premier but pour Arsenal ?",
+    "answers": [
+      "Manchester United",
+      "Leicester City",
+      "Southampton",
+      "Derby County"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel stade Henry joue-t-il principalement lors de son premier passage à Arsenal ?",
+    "answers": [
+      "Emirates Stadium",
+      "Wembley",
+      "White Hart Lane",
+      "Highbury"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Combien de buts Henry inscrit-il pour Arsenal toutes compétitions confondues ?",
+    "answers": [
+      "228",
+      "221",
+      "226",
+      "232"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel record de club Henry détient-il à Arsenal ?",
+    "answers": [
+      "Plus jeune capitaine",
+      "Meilleur buteur de l’histoire du club",
+      "Plus grand nombre de cartons",
+      "Gardien le plus capé"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel joueur Henry dépasse-t-il comme meilleur buteur d’Arsenal en 2005 ?",
+    "answers": [
+      "Cliff Bastin",
+      "Dennis Bergkamp",
+      "Ian Wright",
+      "Tony Adams"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quel club Henry bat-il le record de Ian Wright ?",
+    "answers": [
+      "Ajax",
+      "Rosenborg",
+      "Thun",
+      "Sparta Prague"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts Henry marque-t-il contre le Sparta Prague pour battre ce record ?",
+    "answers": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de titres de Premier League Henry remporte-t-il avec Arsenal ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelles saisons Arsenal est-il champion avec Henry ?",
+    "answers": [
+      "1999-2000 et 2001-2002",
+      "2000-2001 et 2002-2003",
+      "2001-2002 et 2003-2004",
+      "2002-2003 et 2004-2005"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel doublé Arsenal réalise-t-il en 2001-2002 ?",
+    "answers": [
+      "Premier League et Coupe de la Ligue",
+      "FA Cup et Coupe UEFA",
+      "Premier League et Ligue des champions",
+      "Premier League et FA Cup"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Arsenal bat-il en finale de FA Cup 2002 ?",
+    "answers": [
+      "Chelsea",
+      "Liverpool",
+      "Manchester United",
+      "Southampton"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui marque l’unique but de la finale de FA Cup 2003 ?",
+    "answers": [
+      "Thierry Henry",
+      "Robert Pirès",
+      "Sylvain Wiltord",
+      "Dennis Bergkamp"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment surnomme-t-on Arsenal lors de la saison 2003-2004 ?",
+    "answers": [
+      "Les Galactiques",
+      "Les Busby Babes",
+      "Les Invincibles",
+      "Les Centurions"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Combien de matchs Arsenal perd-il en Premier League 2003-2004 ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Combien de matchs compte la série sans défaite d’Arsenal en championnat ?",
+    "answers": [
+      "49",
+      "42",
+      "46",
+      "50"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club met fin à la série de 49 matchs sans défaite ?",
+    "answers": [
+      "Chelsea",
+      "Manchester United",
+      "Liverpool",
+      "Everton"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Henry inscrit-il en Premier League 2003-2004 ?",
+    "answers": [
+      "25",
+      "27",
+      "30",
+      "32"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Henry inscrit-il toutes compétitions confondues en 2003-2004 ?",
+    "answers": [
+      "34",
+      "36",
+      "41",
+      "39"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de Souliers d’or de Premier League Henry remporte-t-il ?",
+    "answers": [
+      "4",
+      "2",
+      "3",
+      "5"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "En quelles saisons Henry gagne-t-il le Soulier d’or de Premier League ?",
+    "answers": [
+      "2000-01, 2002-03, 2003-04 et 2005-06",
+      "2001-02, 2003-04, 2004-05 et 2005-06",
+      "2001-02, 2002-03, 2004-05 et 2006-07",
+      "2002-03, 2003-04, 2004-05 et 2005-06"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de passes décisives Henry réalise-t-il en Premier League 2002-2003 ?",
+    "answers": [
+      "16",
+      "18",
+      "20",
+      "22"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a ensuite égalé ce record de 20 passes sur une saison ?",
+    "answers": [
+      "David Silva",
+      "Mesut Özil",
+      "Cesc Fàbregas",
+      "Kevin De Bruyne"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel geste célèbre Henry réussit-il contre Manchester United en octobre 2000 ?",
+    "answers": [
+      "Contrôle dos au but puis volée",
+      "Retourné depuis le milieu",
+      "Coup franc sous le mur",
+      "But de la main"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien de Manchester United est battu sur ce but célèbre ?",
+    "answers": [
+      "Peter Schmeichel",
+      "Fabien Barthez",
+      "Edwin van der Sar",
+      "Tim Howard"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts Henry marque-t-il pour le dernier match à Highbury ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel était le score d’Arsenal-Wigan lors du dernier match à Highbury ?",
+    "answers": [
+      "3-1",
+      "4-1",
+      "5-2",
+      "4-2"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Arsenal élimine-t-il en demi-finale de Ligue des champions 2006 ?",
+    "answers": [
+      "Villarreal",
+      "Juventus",
+      "Real Madrid",
+      "AC Milan"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien d’Arsenal arrête un penalty décisif au retour contre Villarreal ?",
+    "answers": [
+      "David Seaman",
+      "Jens Lehmann",
+      "Manuel Almunia",
+      "Łukasz Fabiański"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club bat Arsenal en finale de Ligue des champions 2006 ?",
+    "answers": [
+      "Real Madrid",
+      "AC Milan",
+      "FC Barcelone",
+      "Juventus"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Dans quel stade se joue la finale européenne 2006 ?",
+    "answers": [
+      "Wembley",
+      "Stade olympique de Rome",
+      "Parc des Princes",
+      "Stade de France"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le score de la finale Arsenal-Barcelone 2006 ?",
+    "answers": [
+      "1-2",
+      "0-1",
+      "1-3",
+      "2-3"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui ouvre le score pour Arsenal en finale 2006 ?",
+    "answers": [
+      "Thierry Henry",
+      "Sol Campbell",
+      "Freddie Ljungberg",
+      "Robert Pirès"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien d’Arsenal est expulsé en finale 2006 ?",
+    "answers": [
+      "Manuel Almunia",
+      "David Seaman",
+      "Jens Lehmann",
+      "Bernd Leno"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Thierry Henry rejoint-il en 2007 ?",
+    "answers": [
+      "Real Madrid",
+      "AC Milan",
+      "Bayern Munich",
+      "FC Barcelone"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel numéro Henry porte-t-il à Barcelone ?",
+    "answers": [
+      "14",
+      "7",
+      "9",
+      "10"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel entraîneur prend Barcelone en 2008 ?",
+    "answers": [
+      "José Mourinho",
+      "Pep Guardiola",
+      "Ernesto Valverde",
+      "Ronald Koeman"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel triplé Barcelone réalise-t-il en 2008-2009 ?",
+    "answers": [
+      "Liga, Supercoupe et Mondial des clubs",
+      "Coupe du Roi, Ligue Europa et Supercoupe",
+      "Liga, Coupe du Roi et Ligue des champions",
+      "Liga, Coupe du Roi et Supercoupe"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Barcelone bat-il 6-2 au Bernabéu en mai 2009 ?",
+    "answers": [
+      "Atlético de Madrid",
+      "Séville",
+      "Valence",
+      "Real Madrid"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Combien de buts Henry marque-t-il lors du 6-2 au Bernabéu ?",
+    "answers": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel défenseur barcelonais marque de la tête pour donner l’avantage 2-1 ?",
+    "answers": [
+      "Gerard Piqué",
+      "Carles Puyol",
+      "Rafael Márquez",
+      "Dani Alves"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Barcelone bat-il en finale de Coupe du Roi 2009 ?",
+    "answers": [
+      "Real Madrid",
+      "Séville",
+      "Athletic Club",
+      "Valence"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Barcelone bat-il en finale de Ligue des champions 2009 ?",
+    "answers": [
+      "Chelsea",
+      "Arsenal",
       "Liverpool",
       "Manchester United"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "À quel poste Thierry Henry jouait-il principalement ?",
+    "text": "Dans quelle ville se joue la finale de Ligue des champions 2009 ?",
     "answers": [
-      "Gardien",
-      "Attaquant",
-      "Défenseur central",
-      "Milieu défensif"
+      "Rome",
+      "Londres",
+      "Athènes",
+      "Moscou"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : club formateur où Henry débute sous Arsène Wenger ?",
+    "text": "Qui marque les buts du Barça en finale européenne 2009 ?",
     "answers": [
-      "Juventus",
-      "Invincibles",
-      "AS Monaco",
-      "Italie"
+      "Henry et Messi",
+      "Samuel Eto’o et Lionel Messi",
+      "Eto’o et Henry",
+      "Xavi et Iniesta"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Thierry Henry », quelle description correspond à AS Monaco ?",
+    "text": "Combien de buts Henry inscrit-il avec Barcelone ?",
     "answers": [
-      "club dont il devient le meilleur buteur historique",
-      "stade où sa statue a été installée",
-      "adversaire contre lequel il inscrit son premier but mondial",
-      "club formateur où Henry débute sous Arsène Wenger"
+      "45",
+      "47",
+      "49",
+      "52"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition AS Monaco est-il associé ?",
+    "text": "Combien de matchs officiels Henry dispute-t-il avec Barcelone ?",
     "answers": [
-      "Période 1994-1999",
-      "Année 1999",
-      "Qualification mondiale 2010",
-      "Euro 2000"
+      "110",
+      "117",
+      "126",
+      "121"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : club italien où il passe quelques mois avant Arsenal ?",
+    "text": "Combien de trophées Henry remporte-t-il avec Barcelone ?",
     "answers": [
-      "Arsenal",
-      "Juventus",
-      "Highbury",
-      "Afrique du Sud"
+      "7",
+      "5",
+      "6",
+      "8"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Thierry Henry », quelle description correspond à Juventus ?",
+    "text": "Quel club Henry rejoint-il après Barcelone en 2010 ?",
     "answers": [
-      "club avec lequel il réalise le triplé en 2009",
-      "adversaire du barrage marqué par sa main avant la passe décisive",
-      "club italien où il passe quelques mois avant Arsenal",
-      "entraîneur qui le transforme durablement en avant-centre"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition Juventus est-il associé ?",
-    "answers": [
-      "Période 1994-1999",
-      "Qualification mondiale 2010",
-      "Euro 2000",
-      "Année 1999"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : club dont il devient le meilleur buteur historique ?",
-    "answers": [
-      "Arsenal",
-      "FC Barcelone",
-      "Irlande",
-      "Arsène Wenger"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Thierry Henry », quelle description correspond à Arsenal ?",
-    "answers": [
-      "club de MLS où il termine sa carrière de joueur",
-      "club dont il devient le meilleur buteur historique",
-      "adversaire contre lequel il marque en quart de finale à Francfort",
-      "récompense remportée deux saisons consécutives"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition Arsenal est-il associé ?",
-    "answers": [
-      "Période 1994-1999",
-      "Qualification mondiale 2010",
-      "Période 1999-2007",
-      "Euro 2000"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : club avec lequel il réalise le triplé en 2009 ?",
-    "answers": [
+      "LA Galaxy",
       "New York Red Bulls",
-      "Brésil",
-      "Soulier d’or européen",
-      "FC Barcelone"
+      "New York City FC",
+      "Inter Miami"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Thierry Henry », quelle description correspond à FC Barcelone ?",
+    "text": "Quel numéro Henry porte-t-il principalement aux New York Red Bulls ?",
     "answers": [
-      "club avec lequel il réalise le triplé en 2009",
-      "surnom de l’équipe d’Arsenal championne sans défaite",
-      "adversaire de sa finale européenne perdue aux tirs au but",
-      "numéro emblématique porté à Arsenal"
+      "7",
+      "9",
+      "14",
+      "10"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition FC Barcelone est-il associé ?",
+    "text": "Quel trophée de saison régulière MLS Henry remporte-t-il en 2013 ?",
     "answers": [
-      "Période 1994-1999",
-      "Période 2007-2010",
-      "Qualification mondiale 2010",
-      "Euro 2000"
+      "MLS Cup",
+      "US Open Cup",
+      "Leagues Cup",
+      "Supporters’ Shield"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : club de MLS où il termine sa carrière de joueur ?",
+    "text": "Sous quelle forme Henry revient-il jouer pour Arsenal en 2012 ?",
     "answers": [
-      "Invincibles",
-      "Italie",
-      "New York Red Bulls",
-      "Numéro 14"
+      "Un prêt",
+      "Un transfert définitif",
+      "Un contrat amateur",
+      "Un échange"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Thierry Henry », quelle description correspond à New York Red Bulls ?",
+    "text": "Contre quel club marque-t-il pour son retour à Arsenal en FA Cup ?",
     "answers": [
-      "stade où sa statue a été installée",
-      "adversaire contre lequel il inscrit son premier but mondial",
-      "sélection dont il devient entraîneur adjoint",
-      "club de MLS où il termine sa carrière de joueur"
+      "Sunderland",
+      "Leeds United",
+      "Aston Villa",
+      "Blackburn"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition New York Red Bulls est-il associé ?",
+    "text": "Contre quel club Henry inscrit-il son dernier but pour Arsenal ?",
     "answers": [
-      "Période 2010-2014",
-      "Période 1994-1999",
-      "Qualification mondiale 2010",
-      "Euro 2000"
+      "Leeds United",
+      "Tottenham",
+      "Sunderland",
+      "Blackburn"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : surnom de l’équipe d’Arsenal championne sans défaite ?",
+    "text": "À quel moment marque-t-il ce dernier but contre Sunderland ?",
     "answers": [
-      "Highbury",
-      "Invincibles",
+      "À la 1re minute",
+      "En première période",
+      "Pendant la prolongation",
+      "Dans le temps additionnel"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de sélections Thierry Henry compte-t-il avec la France ?",
+    "answers": [
+      "123",
+      "116",
+      "120",
+      "127"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Henry inscrit-il avec les Bleus ?",
+    "answers": [
+      "48",
+      "51",
+      "50",
+      "54"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel sélectionneur fait débuter Henry en équipe de France A ?",
+    "answers": [
+      "Roger Lemerre",
+      "Raymond Domenech",
+      "Aimé Jacquet",
+      "Jacques Santini"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année Henry débute-t-il avec les Bleus ?",
+    "answers": [
+      "1996",
+      "1998",
+      "1999",
+      "1997"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle compétition Henry remporte-t-il avec la France en 1998 ?",
+    "answers": [
+      "Coupe du monde",
+      "Euro",
+      "Coupe des confédérations",
+      "Ligue des nations"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Contre quelle sélection Henry marque-t-il son premier but en Coupe du monde ?",
+    "answers": [
+      "Arabie saoudite",
       "Afrique du Sud",
-      "Belgique"
+      "Danemark",
+      "Paraguay"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Thierry Henry », quelle description correspond à Invincibles ?",
+    "text": "Combien de buts Henry marque-t-il contre l’Arabie saoudite au Mondial 1998 ?",
     "answers": [
-      "adversaire du barrage marqué par sa main avant la passe décisive",
-      "entraîneur qui le transforme durablement en avant-centre",
-      "surnom de l’équipe d’Arsenal championne sans défaite",
-      "sélection menée à l’argent olympique comme entraîneur"
+      "1",
+      "3",
+      "2",
+      "4"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition Invincibles est-il associé ?",
+    "text": "Quel est le score de France-Arabie saoudite au Mondial 1998 ?",
     "answers": [
-      "Période 1994-1999",
-      "Qualification mondiale 2010",
-      "Euro 2000",
-      "Premier League 2004"
+      "3-0",
+      "4-1",
+      "5-0",
+      "4-0"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : stade où sa statue a été installée ?",
+    "text": "Combien de buts Henry inscrit-il au Mondial 1998 ?",
     "answers": [
-      "Highbury",
-      "Irlande",
-      "Arsène Wenger",
-      "Équipe de France Espoirs"
+      "3",
+      "2",
+      "4",
+      "5"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Thierry Henry », quelle description correspond à Highbury ?",
+    "text": "Quelle compétition européenne Henry remporte-t-il avec la France en 2000 ?",
     "answers": [
-      "adversaire contre lequel il marque en quart de finale à Francfort",
-      "stade où sa statue a été installée",
-      "récompense remportée deux saisons consécutives",
-      "club formateur où Henry débute sous Arsène Wenger"
+      "Ligue des nations",
+      "Championnat d’Europe",
+      "Coupe des confédérations",
+      "Finalissima"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition Highbury est-il associé ?",
+    "text": "Contre quelle sélection Henry marque-t-il en phase de groupes de l’Euro 2000 ?",
     "answers": [
-      "Période 1994-1999",
-      "Qualification mondiale 2010",
-      "Arsenal",
-      "Euro 2000"
+      "Pays-Bas",
+      "République tchèque",
+      "Danemark",
+      "Espagne"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : adversaire du barrage marqué par sa main avant la passe décisive ?",
-    "answers": [
-      "Brésil",
-      "Soulier d’or européen",
-      "AS Monaco",
-      "Irlande"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Thierry Henry », quelle description correspond à Irlande ?",
-    "answers": [
-      "adversaire du barrage marqué par sa main avant la passe décisive",
-      "adversaire de sa finale européenne perdue aux tirs au but",
-      "numéro emblématique porté à Arsenal",
-      "club italien où il passe quelques mois avant Arsenal"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition Irlande est-il associé ?",
-    "answers": [
-      "Période 1994-1999",
-      "Qualification mondiale 2010",
-      "Arsenal",
-      "Euro 2000"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : adversaire contre lequel il marque en quart de finale à Francfort ?",
+    "text": "Contre quelle sélection Henry marque-t-il en demi-finale de l’Euro 2000 ?",
     "answers": [
       "Italie",
-      "Numéro 14",
-      "Brésil",
-      "Juventus"
+      "Espagne",
+      "Pays-Bas",
+      "Portugal"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Thierry Henry », quelle description correspond à Brésil ?",
+    "text": "Qui marque le but en or de cette demi-finale contre le Portugal ?",
     "answers": [
-      "adversaire contre lequel il inscrit son premier but mondial",
-      "sélection dont il devient entraîneur adjoint",
-      "club dont il devient le meilleur buteur historique",
-      "adversaire contre lequel il marque en quart de finale à Francfort"
+      "Zinédine Zidane",
+      "Thierry Henry",
+      "David Trezeguet",
+      "Youri Djorkaeff"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition Brésil est-il associé ?",
+    "text": "Quelle sélection la France bat-elle en finale de l’Euro 2000 ?",
     "answers": [
+      "Portugal",
+      "Italie",
+      "Pays-Bas",
+      "Espagne"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel joueur égalise dans le temps additionnel de la finale de l’Euro 2000 ?",
+    "answers": [
+      "Thierry Henry",
+      "Robert Pirès",
+      "Sylvain Wiltord",
+      "Emmanuel Petit"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle compétition FIFA la France remporte-t-elle en 2003 ?",
+    "answers": [
+      "Coupe du monde",
+      "Coupe intercontinentale",
+      "Mondial des clubs",
+      "Coupe des confédérations"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle sélection la France bat-elle en finale de la Coupe des confédérations 2003 ?",
+    "answers": [
+      "Cameroun",
+      "Colombie",
+      "Turquie",
+      "Brésil"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui marque le but en or de la finale de la Coupe des confédérations 2003 ?",
+    "answers": [
+      "Robert Pirès",
+      "Thierry Henry",
+      "David Trezeguet",
+      "Ludovic Giuly"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle distinction Henry reçoit-il à la Coupe des confédérations 2003 ?",
+    "answers": [
+      "Gant d’or",
+      "Meilleur jeune uniquement",
+      "Ballon d’or et Soulier d’or",
+      "Prix du fair-play"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur tire le coup franc repris par Henry contre le Brésil ?",
+    "answers": [
+      "Franck Ribéry",
+      "Florent Malouda",
+      "Patrick Vieira",
+      "Zinédine Zidane"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle sélection bat la France en finale du Mondial 2006 ?",
+    "answers": [
+      "Italie",
+      "Portugal",
+      "Allemagne",
+      "Brésil"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Combien de matchs de phase finale de Coupe du monde Henry dispute-t-il ?",
+    "answers": [
+      "15",
+      "17",
+      "16",
+      "18"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Avec quel gardien français partage-t-il ce total de 17 matchs mondiaux ?",
+    "answers": [
+      "Hugo Lloris",
+      "Bernard Lama",
+      "Fabien Barthez",
+      "Grégory Coupet"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quelle sélection Henry devient-il meilleur buteur des Bleus en 2007 ?",
+    "answers": [
+      "Ukraine",
+      "Géorgie",
+      "Italie",
+      "Lituanie"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel record dépasse-t-il alors ?",
+    "answers": [
+      "Les 41 buts de Michel Platini",
+      "Les 34 buts de Trezeguet",
+      "Les 30 buts de Fontaine",
+      "Les 28 buts de Djorkaeff"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle sélection Henry marque-t-il à l’Euro 2008 ?",
+    "answers": [
+      "Italie",
+      "Pays-Bas",
+      "Roumanie",
+      "Espagne"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel est le score de Pays-Bas-France à l’Euro 2008 ?",
+    "answers": [
+      "3-1",
+      "4-2",
+      "4-1",
+      "3-0"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel geste controversé précède le but de William Gallas contre l’Irlande en 2009 ?",
+    "answers": [
+      "Une faute de Gallas",
+      "Un hors-jeu de Ribéry",
+      "Un corner inexistant",
+      "Une main de Thierry Henry"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "À quel tour qualificatif a lieu France-Irlande en 2009 ?",
+    "answers": [
+      "Barrages du Mondial 2010",
+      "Phase de groupes de l’Euro",
+      "Finale de Ligue des nations",
+      "Huitième du Mondial"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quel stade se joue le retour France-Irlande en 2009 ?",
+    "answers": [
+      "Croke Park",
+      "Stade de France",
+      "Parc des Princes",
+      "Aviva Stadium"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur français marque après la main d’Henry ?",
+    "answers": [
+      "Nicolas Anelka",
+      "Karim Benzema",
+      "William Gallas",
+      "Florent Malouda"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le dernier grand tournoi disputé par Henry avec la France ?",
+    "answers": [
+      "Euro 2008",
       "Coupe du monde 2006",
-      "Période 1994-1999",
-      "Arsenal",
-      "Euro 2000"
+      "Euro 2012",
+      "Coupe du monde 2010"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : adversaire de sa finale européenne perdue aux tirs au but ?",
-    "answers": [
-      "Afrique du Sud",
-      "Italie",
-      "Belgique",
-      "Arsenal"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Thierry Henry », quelle description correspond à Italie ?",
-    "answers": [
-      "entraîneur qui le transforme durablement en avant-centre",
-      "sélection menée à l’argent olympique comme entraîneur",
-      "adversaire de sa finale européenne perdue aux tirs au but",
-      "club avec lequel il réalise le triplé en 2009"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition Italie est-il associé ?",
-    "answers": [
-      "Période 1994-1999",
-      "Arsenal",
-      "Euro 2000",
-      "Coupe du monde 2006"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : adversaire contre lequel il inscrit son premier but mondial ?",
-    "answers": [
-      "Afrique du Sud",
-      "Arsène Wenger",
-      "Équipe de France Espoirs",
-      "FC Barcelone"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Thierry Henry », quelle description correspond à Afrique du Sud ?",
-    "answers": [
-      "récompense remportée deux saisons consécutives",
-      "adversaire contre lequel il inscrit son premier but mondial",
-      "club formateur où Henry débute sous Arsène Wenger",
-      "club de MLS où il termine sa carrière de joueur"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition Afrique du Sud est-il associé ?",
-    "answers": [
-      "Période 1994-1999",
-      "Arsenal",
-      "Coupe du monde 1998",
-      "Euro 2000"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : entraîneur qui le transforme durablement en avant-centre ?",
-    "answers": [
-      "Soulier d’or européen",
-      "AS Monaco",
-      "New York Red Bulls",
-      "Arsène Wenger"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Thierry Henry », quelle description correspond à Arsène Wenger ?",
-    "answers": [
-      "entraîneur qui le transforme durablement en avant-centre",
-      "numéro emblématique porté à Arsenal",
-      "club italien où il passe quelques mois avant Arsenal",
-      "surnom de l’équipe d’Arsenal championne sans défaite"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition Arsène Wenger est-il associé ?",
-    "answers": [
-      "Période 1994-1999",
-      "Arsenal",
-      "Qualification mondiale 2010",
-      "Euro 2000"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : récompense remportée deux saisons consécutives ?",
-    "answers": [
-      "Numéro 14",
-      "Juventus",
-      "Soulier d’or européen",
-      "Invincibles"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Thierry Henry », quelle description correspond à Soulier d’or européen ?",
-    "answers": [
-      "sélection dont il devient entraîneur adjoint",
-      "club dont il devient le meilleur buteur historique",
-      "stade où sa statue a été installée",
-      "récompense remportée deux saisons consécutives"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition Soulier d’or européen est-il associé ?",
-    "answers": [
-      "Arsenal",
-      "Période 1994-1999",
-      "Qualification mondiale 2010",
-      "Euro 2000"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : numéro emblématique porté à Arsenal ?",
-    "answers": [
-      "Belgique",
-      "Numéro 14",
-      "Arsenal",
-      "Highbury"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Thierry Henry », quelle description correspond à Numéro 14 ?",
-    "answers": [
-      "sélection menée à l’argent olympique comme entraîneur",
-      "club avec lequel il réalise le triplé en 2009",
-      "numéro emblématique porté à Arsenal",
-      "adversaire du barrage marqué par sa main avant la passe décisive"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition Numéro 14 est-il associé ?",
-    "answers": [
-      "Période 1994-1999",
-      "Qualification mondiale 2010",
-      "Euro 2000",
-      "Arsenal"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : sélection dont il devient entraîneur adjoint ?",
-    "answers": [
-      "Belgique",
-      "Équipe de France Espoirs",
-      "FC Barcelone",
-      "Irlande"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Thierry Henry », quelle description correspond à Belgique ?",
-    "answers": [
-      "club formateur où Henry débute sous Arsène Wenger",
-      "sélection dont il devient entraîneur adjoint",
-      "club de MLS où il termine sa carrière de joueur",
-      "adversaire contre lequel il marque en quart de finale à Francfort"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition Belgique est-il associé ?",
-    "answers": [
-      "Période 1994-1999",
-      "Arsenal",
-      "Carrière d’entraîneur",
-      "Euro 2000"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Thierry Henry », Quel repère de la carrière de Thierry Henry correspond à cette description : sélection menée à l’argent olympique comme entraîneur ?",
-    "answers": [
-      "AS Monaco",
-      "New York Red Bulls",
-      "Brésil",
-      "Équipe de France Espoirs"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Thierry Henry », quelle description correspond à Équipe de France Espoirs ?",
-    "answers": [
-      "sélection menée à l’argent olympique comme entraîneur",
-      "club italien où il passe quelques mois avant Arsenal",
-      "surnom de l’équipe d’Arsenal championne sans défaite",
-      "adversaire de sa finale européenne perdue aux tirs au but"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Thierry Henry », à quelle équipe ou compétition Équipe de France Espoirs est-il associé ?",
-    "answers": [
-      "Période 1994-1999",
-      "Jeux de Paris 2024",
-      "Arsenal",
-      "Euro 2000"
-    ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "medium"
   }
 ]
