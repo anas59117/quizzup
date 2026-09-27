@@ -1,13 +1,14 @@
 [
   {
-    "text": "Quel pays remporte la Coupe du Monde 1930 ?",
+    "text": "Quelle sélection remporte la première Coupe du monde, en 1930 ?",
     "answers": [
-      "Allemagne de l'Ouest",
-      "Brésil",
-      "Argentine",
-      "France"
+      "L'Argentine",
+      "L'Italie",
+      "L'Uruguay",
+      "Le Brésil"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
     "text": "Quel pays remporte la Coupe du Monde 1934 ?",
@@ -740,14 +741,15 @@
     "correct": 1
   },
   {
-    "text": "Quel est le seul joueur néerlandais à avoir disputé trois finales de Coupe du Monde sans jamais la remporter (1974, 1978, en tant que légende du foot total) ?",
+    "text": "Qui porte le brassard de capitaine des Pays-Bas lors de la finale mondiale de 1978 ?",
     "answers": [
-      "Marco van Basten",
       "Johan Cruyff",
-      "Dennis Bergkamp",
-      "Ruud Gullit"
+      "Ruud Krol",
+      "Johan Neeskens",
+      "Rob Rensenbrink"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
     "text": "Comment appelle-t-on le style de jeu néerlandais des années 1970, basé sur la mobilité et la polyvalence collective ?",
@@ -760,14 +762,15 @@
     "correct": 2
   },
   {
-    "text": "Quelle sélection est éliminée dès le premier tour de la Coupe du Monde 2010 alors qu'elle était tenante du titre, une première dans l'histoire moderne ?",
+    "text": "Quelle sélection, championne du monde sortante, est éliminée dès le premier tour en 2010 ?",
     "answers": [
-      "Le Brésil",
-      "L'Italie",
       "La France",
-      "L'Espagne"
+      "L'Espagne",
+      "L'Allemagne",
+      "L'Italie"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "medium"
   },
   {
     "text": "En 2018, quelle sélection atteint la finale pour la première fois de son histoire avant de s'incliner face à la France ?",
@@ -790,14 +793,15 @@
     "correct": 1
   },
   {
-    "text": "Quel pays africain atteint les quarts de finale de la Coupe du Monde 2010, organisée sur son propre sol ?",
+    "text": "Quelle sélection africaine dispute le quart de finale contre l'Uruguay lors du Mondial 2010 en Afrique du Sud ?",
     "answers": [
-      "L'Afrique du Sud",
       "Le Ghana",
+      "L'Afrique du Sud",
       "Le Nigeria",
-      "La Côte d'Ivoire"
+      "Le Cameroun"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
     "text": "Combien de fois l'Uruguay a-t-il été champion du monde, à fin 2025 ?",
@@ -820,14 +824,15 @@
     "correct": 1
   },
   {
-    "text": "Quel entraîneur mène la France au titre mondial en 1998 puis reste sélectionneur jusqu'en 2012 ?",
+    "text": "Quel sélectionneur succède à Aimé Jacquet à la tête des Bleus après la Coupe du monde 1998 ?",
     "answers": [
       "Raymond Domenech",
-      "Aimé Jacquet",
+      "Laurent Blanc",
       "Roger Lemerre",
-      "Didier Deschamps"
+      "Jacques Santini"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
     "text": "Quel joueur devient à la fois champion du monde comme joueur (1998) puis comme sélectionneur (2018) ?",
@@ -857,7 +862,8 @@
       "Rob Rensenbrink",
       "Johnny Rep"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
     "text": "En quelle année la Coupe du Monde est-elle organisée pour la première fois en Afrique ?",
@@ -870,14 +876,15 @@
     "correct": 2
   },
   {
-    "text": "Combien de sélections participent aux éliminatoires de la Coupe du Monde à travers le monde, tous continents confondus, à chaque édition récente ?",
+    "text": "Quel attaquant inscrit le but vainqueur de l'Allemagne de l'Ouest contre la Hongrie en finale 1954 ?",
     "answers": [
-      "Environ 50",
-      "Environ 100",
-      "Plus de 200",
-      "Exactement 32"
+      "Fritz Walter",
+      "Max Morlock",
+      "Uwe Seeler",
+      "Helmut Rahn"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
     "text": "Quel joueur croate remporte le Ballon d'Or FIFA de la Coupe du Monde 2018, malgré la défaite en finale ?",
@@ -890,14 +897,15 @@
     "correct": 1
   },
   {
-    "text": "En 1986, quel geste emblématique de Maradona en demi-finale est resté dans l'histoire sous le nom de « but du siècle » ?",
+    "text": "Quel Argentin marque le but décisif face à l'Allemagne de l'Ouest en finale du Mondial 1986 ?",
     "answers": [
-      "Un but de la tête après un centre",
-      "Un but en solitaire après un slalom sur 60 mètres",
-      "Une reprise de volée en pleine lucarne",
-      "Un but sur coup franc direct"
+      "Diego Maradona",
+      "Jorge Burruchaga",
+      "Jorge Valdano",
+      "Oscar Ruggeri"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
     "text": "Quel est le premier pays asiatique à avoir organisé une Coupe du Monde, en 2002 (conjointement avec le Japon) ?",
@@ -940,14 +948,15 @@
     "correct": 1
   },
   {
-    "text": "Quel joueur allemand inscrit un doublé lors de la finale 1990 remportée face à l'Argentine, sur penalty ?",
+    "text": "Qui inscrit l'unique but de la finale 1990, sur penalty, face à l'Argentine ?",
     "answers": [
-      "Lothar Matthäus",
       "Andreas Brehme",
+      "Lothar Matthäus",
       "Jürgen Klinsmann",
       "Rudi Völler"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
     "text": "En 1990, sur quel score minimal l'Allemagne de l'Ouest bat-elle l'Argentine en finale ?",
@@ -977,7 +986,8 @@
       "Bebeto",
       "Cafu"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
     "text": "Quel capitaine brésilien devient l'unique joueur à disputer trois finales de Coupe du Monde consécutives, en 1994, 1998 et 2002 ?",
@@ -987,7 +997,8 @@
       "Roberto Carlos",
       "Rivaldo"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
     "text": "Quel attaquant brésilien, surnommé « Le Phénomène », est double champion du monde (1994 comme réserviste, 2002 comme meilleur buteur) ?",
