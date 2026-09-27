@@ -1,502 +1,1102 @@
 [
   {
+    "text": "Quel est le nom complet de Karim Benzema ?",
+    "answers": [
+      "Karim Mostafa Benzema",
+      "Karim Mohamed Benzema",
+      "Karim Mustapha Ben Arfa",
+      "Karim Yacine Benzema"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
     "text": "Dans quelle ville Karim Benzema est-il né ?",
     "answers": [
-      "Lyon",
       "Paris",
+      "Lyon",
       "Marseille",
       "Lille"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel club a formé Karim Benzema ?",
+    "text": "À quelle date Karim Benzema est-il né ?",
     "answers": [
-      "Real Madrid",
+      "19 novembre 1987",
+      "9 décembre 1988",
+      "19 décembre 1987",
+      "29 décembre 1986"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club de quartier Benzema rejoint-il avant l’OL ?",
+    "answers": [
+      "AS Saint-Priest",
+      "FC Vaulx-en-Velin",
+      "Lyon-La Duchère",
+      "SC Bron Terraillon"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club professionnel forme Karim Benzema ?",
+    "answers": [
       "Olympique lyonnais",
+      "AS Saint-Étienne",
       "AS Monaco",
-      "Bordeaux"
+      "Girondins de Bordeaux"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : club où il débute et devient meilleur buteur de Ligue 1 ?",
+    "text": "À quel poste Benzema évolue-t-il principalement ?",
     "answers": [
+      "Gardien",
+      "Avant-centre",
+      "Défenseur central",
+      "Milieu défensif"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "En quelle année Benzema débute-t-il en professionnel avec Lyon ?",
+    "answers": [
+      "2003",
+      "2004",
+      "2005",
+      "2006"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Contre quel club Benzema dispute-t-il son premier match professionnel ?",
+    "answers": [
+      "AJ Auxerre",
+      "RC Lens",
+      "AS Monaco",
+      "FC Metz"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur Benzema remplace-t-il lors de ses débuts contre Metz ?",
+    "answers": [
+      "Pierre-Alain Frau",
+      "Sylvain Wiltord",
+      "Florent Malouda",
+      "John Carew"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle passe décisive Benzema délivre-t-il pour ses débuts ?",
+    "answers": [
+      "Une passe pour Juninho",
+      "Une passe pour Bryan Bergougnoux",
+      "Une passe pour Florent Malouda",
+      "Une passe pour Sidney Govou"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quel club Benzema inscrit-il son premier but en Ligue des champions ?",
+    "answers": [
+      "Olympiakos",
       "Real Madrid",
-      "Chelsea",
-      "Olympique lyonnais",
-      "Vinícius Júnior"
+      "Rosenborg",
+      "Dynamo Kiev"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Karim Benzema », quelle description correspond à Olympique lyonnais ?",
+    "text": "En quelle année Benzema marque-t-il son premier but en Ligue des champions ?",
     "answers": [
-      "club saoudien rejoint après le Real Madrid",
-      "adversaire contre lequel il réussit une panenka en demi-finale",
-      "numéro porté au Real Madrid à partir de sa deuxième saison",
-      "club où il débute et devient meilleur buteur de Ligue 1"
+      "2004",
+      "2006",
+      "2007",
+      "2005"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Olympique lyonnais est-il associé ?",
+    "text": "Quel numéro Benzema porte-t-il principalement à Lyon en 2007-2008 ?",
     "answers": [
-      "Période 2004-2009",
-      "Période 2009-2023",
-      "Euro 2020",
-      "Coupe du monde 2014"
+      "10",
+      "9",
+      "7",
+      "19"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : club rejoint en 2009 et quitté quatorze ans plus tard ?",
+    "text": "Quelles saisons de Ligue 1 Benzema remporte-t-il avec Lyon ?",
     "answers": [
-      "Al-Ittihad",
-      "Real Madrid",
-      "Manchester City",
-      "Numéro 9"
+      "2003-04 à 2006-07",
+      "2004-05 à 2007-08",
+      "2005-06 à 2008-09",
+      "2006-07 à 2009-10"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Karim Benzema », quelle description correspond à Real Madrid ?",
+    "text": "Quel doublé national Lyon réalise-t-il en 2007-2008 ?",
     "answers": [
-      "récompense reçue après une saison européenne décisive",
-      "adversaire battu en finale européenne au Stade de France",
-      "club rejoint en 2009 et quitté quatorze ans plus tard",
-      "adversaire de son doublé à l’Euro après son retour en sélection"
+      "Ligue 1 et Coupe de la Ligue",
+      "Coupe de France et Coupe UEFA",
+      "Ligue 1 et Coupe de France",
+      "Ligue 1 et Trophée des champions uniquement"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Real Madrid est-il associé ?",
+    "text": "Qui marque le but décisif de la finale de Coupe de France 2008 ?",
     "answers": [
-      "Période 2004-2009",
-      "Euro 2020",
-      "Coupe du monde 2014",
-      "Période 2009-2023"
+      "Karim Benzema",
+      "Juninho",
+      "Hatem Ben Arfa",
+      "Sidney Govou"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : club saoudien rejoint après le Real Madrid ?",
+    "text": "Combien de buts Benzema inscrit-il en Ligue 1 en 2007-2008 ?",
     "answers": [
-      "Al-Ittihad",
-      "Ballon d’Or 2022",
+      "20",
+      "18",
+      "22",
+      "24"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle distinction de Ligue 1 Benzema remporte-t-il en 2007-2008 ?",
+    "answers": [
+      "Meilleur gardien",
+      "Meilleur joueur de la saison",
+      "Meilleur espoir uniquement",
+      "Meilleur entraîneur"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Combien de buts Benzema inscrit-il toutes compétitions confondues en 2007-2008 ?",
+    "answers": [
+      "25",
+      "28",
+      "31",
+      "35"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Benzema rejoint-il à l’été 2009 ?",
+    "answers": [
+      "FC Barcelone",
+      "Manchester United",
+      "Juventus",
+      "Real Madrid"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel numéro Benzema porte-t-il lors de sa première saison au Real Madrid ?",
+    "answers": [
+      "11",
+      "9",
+      "10",
+      "19"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel numéro Benzema adopte-t-il au Real Madrid à partir de 2010-2011 ?",
+    "answers": [
+      "7",
+      "9",
+      "10",
+      "11"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel entraîneur dirige le Real Madrid lors de la première saison de Benzema ?",
+    "answers": [
+      "José Mourinho",
+      "Carlo Ancelotti",
+      "Manuel Pellegrini",
+      "Rafael Benítez"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de points le Real Madrid totalise-t-il lors de la Liga 2011-2012 ?",
+    "answers": [
+      "96",
+      "98",
+      "102",
+      "100"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel surnom est donné à l’attaque Ronaldo-Benzema-Bale ?",
+    "answers": [
+      "BBC",
+      "MSN",
+      "MNM",
+      "MVP"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel joueur complète la « BBC » avec Benzema et Cristiano Ronaldo ?",
+    "answers": [
+      "Luka Modrić",
+      "Gareth Bale",
+      "Ángel Di María",
+      "Isco"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel club le Real bat-il en finale de Ligue des champions 2014 ?",
+    "answers": [
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "Atlético de Madrid",
+      "Juventus"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Qui égalise pour le Real à la 93e minute en finale 2014 ?",
+    "answers": [
+      "Karim Benzema",
+      "Cristiano Ronaldo",
+      "Gareth Bale",
+      "Sergio Ramos"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Comment appelle-t-on la dixième Coupe d’Europe du Real remportée en 2014 ?",
+    "answers": [
+      "La Décima",
+      "La Undécima",
+      "La Duodécima",
+      "La Decimocuarta"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club le Real bat-il en finale de Ligue des champions 2016 ?",
+    "answers": [
+      "Juventus",
+      "Atlético de Madrid",
       "Liverpool",
-      "Ukraine"
+      "Bayern Munich"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Karim Benzema », quelle description correspond à Al-Ittihad ?",
+    "text": "Dans quelle ville se joue la finale de Ligue des champions 2016 ?",
     "answers": [
-      "adversaire de son triplé en huitième de finale retour",
-      "club saoudien rejoint après le Real Madrid",
-      "partenaire majeur de l’attaque madrilène pendant neuf saisons",
-      "adversaire de son but en finale de Ligue des nations"
+      "Lisbonne",
+      "Cardiff",
+      "Milan",
+      "Kiev"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Al-Ittihad est-il associé ?",
+    "text": "Quel club le Real bat-il en finale de Ligue des champions 2017 ?",
     "answers": [
-      "Période 2004-2009",
-      "Euro 2020",
-      "Arrivée en 2023",
-      "Coupe du monde 2014"
+      "Atlético de Madrid",
+      "Liverpool",
+      "Manchester United",
+      "Juventus"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : récompense reçue après une saison européenne décisive ?",
+    "text": "Dans quelle ville se joue la finale de Ligue des champions 2017 ?",
+    "answers": [
+      "Cardiff",
+      "Kiev",
+      "Milan",
+      "Lisbonne"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel défenseur de l’Atlético Benzema élimine-t-il près de la ligne avant le but d’Isco en demi-finale 2017 ?",
+    "answers": [
+      "Stefan Savić",
+      "Diego Godín",
+      "Filipe Luís",
+      "Juanfran"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club le Real bat-il en finale de Ligue des champions 2018 ?",
+    "answers": [
+      "Juventus",
+      "Bayern Munich",
+      "Liverpool",
+      "Paris Saint-Germain"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Dans quelle ville se joue la finale de Ligue des champions 2018 ?",
+    "answers": [
+      "Moscou",
+      "Varsovie",
+      "Istanbul",
+      "Kiev"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui inscrit le premier but de la finale 2018 ?",
+    "answers": [
+      "Karim Benzema",
+      "Gareth Bale",
+      "Cristiano Ronaldo",
+      "Luka Modrić"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel gardien commet l’erreur dont profite Benzema en finale 2018 ?",
+    "answers": [
+      "Alisson Becker",
+      "Loris Karius",
+      "Simon Mignolet",
+      "Manuel Neuer"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de Ligues des champions Benzema remporte-t-il avec le Real Madrid ?",
+    "answers": [
+      "4",
+      "6",
+      "5",
+      "3"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "En quelles années Benzema remporte-t-il la Ligue des champions avec le Real ?",
+    "answers": [
+      "2013, 2015, 2016, 2018 et 2022",
+      "2014, 2016, 2018, 2020 et 2022",
+      "2014, 2015, 2017, 2019 et 2022",
+      "2014, 2016, 2017, 2018 et 2022"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Benzema affronte-t-il en huitième de finale de C1 2021-2022 ?",
     "answers": [
       "Paris Saint-Germain",
-      "Cristiano Ronaldo",
-      "Espagne",
-      "Ballon d’Or 2022"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Karim Benzema », quelle description correspond à Ballon d’Or 2022 ?",
-    "answers": [
-      "récompense reçue après une saison européenne décisive",
-      "adversaire de son triplé à Stamford Bridge",
-      "ailier dont Benzema devient le mentor offensif",
-      "adversaire contre lequel il inscrit son premier but international"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Ballon d’Or 2022 est-il associé ?",
-    "answers": [
-      "Période 2004-2009",
-      "Real Madrid",
-      "Euro 2020",
-      "Coupe du monde 2014"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : adversaire de son triplé en huitième de finale retour ?",
-    "answers": [
       "Chelsea",
-      "Vinícius Júnior",
-      "Paris Saint-Germain",
-      "Brésil"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Karim Benzema », quelle description correspond à Paris Saint-Germain ?",
-    "answers": [
-      "adversaire contre lequel il réussit une panenka en demi-finale",
-      "numéro porté au Real Madrid à partir de sa deuxième saison",
-      "commune lyonnaise où il grandit",
-      "adversaire de son triplé en huitième de finale retour"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Paris Saint-Germain est-il associé ?",
-    "answers": [
-      "Ligue des champions 2022",
-      "Période 2004-2009",
-      "Euro 2020",
-      "Coupe du monde 2014"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : adversaire de son triplé à Stamford Bridge ?",
-    "answers": [
       "Manchester City",
-      "Chelsea",
-      "Numéro 9",
-      "Bron"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Karim Benzema », quelle description correspond à Chelsea ?",
-    "answers": [
-      "adversaire battu en finale européenne au Stade de France",
-      "adversaire de son doublé à l’Euro après son retour en sélection",
-      "adversaire de son triplé à Stamford Bridge",
-      "stade où il revient avec les Bleus contre la Finlande"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Chelsea est-il associé ?",
-    "answers": [
-      "Période 2004-2009",
-      "Euro 2020",
-      "Coupe du monde 2014",
-      "Ligue des champions 2022"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : adversaire contre lequel il réussit une panenka en demi-finale ?",
-    "answers": [
-      "Manchester City",
-      "Liverpool",
-      "Ukraine",
-      "Groupama Stadium"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Karim Benzema », quelle description correspond à Manchester City ?",
-    "answers": [
-      "partenaire majeur de l’attaque madrilène pendant neuf saisons",
-      "adversaire contre lequel il réussit une panenka en demi-finale",
-      "adversaire de son but en finale de Ligue des nations",
-      "club où il débute et devient meilleur buteur de Ligue 1"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Manchester City est-il associé ?",
-    "answers": [
-      "Période 2004-2009",
-      "Euro 2020",
-      "Ligue des champions 2022",
-      "Coupe du monde 2014"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : adversaire battu en finale européenne au Stade de France ?",
-    "answers": [
-      "Cristiano Ronaldo",
-      "Espagne",
-      "Olympique lyonnais",
       "Liverpool"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Karim Benzema », quelle description correspond à Liverpool ?",
+    "text": "Combien de buts Benzema marque-t-il au retour contre Paris en mars 2022 ?",
     "answers": [
-      "adversaire battu en finale européenne au Stade de France",
-      "ailier dont Benzema devient le mentor offensif",
-      "adversaire contre lequel il inscrit son premier but international",
-      "club rejoint en 2009 et quitté quatorze ans plus tard"
+      "1",
+      "3",
+      "2",
+      "4"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Liverpool est-il associé ?",
+    "text": "Quel est le score du retour Real-PSG en mars 2022 ?",
     "answers": [
-      "Période 2004-2009",
-      "Ligue des champions 2022",
-      "Euro 2020",
-      "Coupe du monde 2014"
+      "2-0",
+      "3-0",
+      "3-1",
+      "4-1"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : partenaire majeur de l’attaque madrilène pendant neuf saisons ?",
+    "text": "Quel gardien parisien est pressé par Benzema avant le premier but du retour ?",
     "answers": [
+      "Keylor Navas",
+      "Sergio Rico",
+      "Alphonse Areola",
+      "Gianluigi Donnarumma"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En combien de minutes Benzema inscrit-il son triplé contre le PSG ?",
+    "answers": [
+      "17 minutes",
+      "12 minutes",
+      "21 minutes",
+      "27 minutes"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Benzema affronte-t-il en quarts de finale de C1 2022 ?",
+    "answers": [
+      "Manchester City",
+      "Chelsea",
+      "Liverpool",
+      "Bayern Munich"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Combien de buts Benzema marque-t-il à Stamford Bridge en avril 2022 ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Comment Benzema inscrit-il ses deux premiers buts à Stamford Bridge ?",
+    "answers": [
+      "Sur penalty",
+      "Du pied gauche",
+      "Sur coup franc",
+      "De la tête"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien de Chelsea offre le troisième but à Benzema par une mauvaise relance ?",
+    "answers": [
+      "Édouard Mendy",
+      "Kepa Arrizabalaga",
+      "Thibaut Courtois",
+      "Petr Čech"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui marque le but décisif du Real en prolongation au retour contre Chelsea ?",
+    "answers": [
+      "Rodrygo",
+      "Karim Benzema",
       "Vinícius Júnior",
-      "Brésil",
-      "Cristiano Ronaldo",
-      "Real Madrid"
+      "Luka Modrić"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Karim Benzema », quelle description correspond à Cristiano Ronaldo ?",
+    "text": "Quel joueur centre pour le but décisif de Benzema contre Chelsea au retour ?",
     "answers": [
-      "numéro porté au Real Madrid à partir de sa deuxième saison",
-      "commune lyonnaise où il grandit",
-      "club saoudien rejoint après le Real Madrid",
-      "partenaire majeur de l’attaque madrilène pendant neuf saisons"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Cristiano Ronaldo est-il associé ?",
-    "answers": [
-      "Real Madrid",
-      "Période 2004-2009",
-      "Euro 2020",
-      "Coupe du monde 2014"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : ailier dont Benzema devient le mentor offensif ?",
-    "answers": [
-      "Numéro 9",
+      "Rodrygo",
+      "Dani Carvajal",
       "Vinícius Júnior",
-      "Bron",
-      "Al-Ittihad"
+      "Federico Valverde"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Karim Benzema », quelle description correspond à Vinícius Júnior ?",
+    "text": "Quel club Benzema affronte-t-il en demi-finale de C1 2022 ?",
     "answers": [
-      "adversaire de son doublé à l’Euro après son retour en sélection",
-      "stade où il revient avec les Bleus contre la Finlande",
-      "ailier dont Benzema devient le mentor offensif",
-      "récompense reçue après une saison européenne décisive"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Vinícius Júnior est-il associé ?",
-    "answers": [
-      "Période 2004-2009",
-      "Euro 2020",
-      "Coupe du monde 2014",
-      "Real Madrid"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : numéro porté au Real Madrid à partir de sa deuxième saison ?",
-    "answers": [
-      "Numéro 9",
-      "Ukraine",
-      "Groupama Stadium",
-      "Ballon d’Or 2022"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Karim Benzema », quelle description correspond à Numéro 9 ?",
-    "answers": [
-      "adversaire de son but en finale de Ligue des nations",
-      "numéro porté au Real Madrid à partir de sa deuxième saison",
-      "club où il débute et devient meilleur buteur de Ligue 1",
-      "adversaire de son triplé en huitième de finale retour"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Numéro 9 est-il associé ?",
-    "answers": [
-      "Période 2004-2009",
-      "Euro 2020",
-      "Real Madrid",
-      "Coupe du monde 2014"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : adversaire de son doublé à l’Euro après son retour en sélection ?",
-    "answers": [
-      "Espagne",
-      "Olympique lyonnais",
-      "Paris Saint-Germain",
-      "Ukraine"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Karim Benzema », quelle description correspond à Ukraine ?",
-    "answers": [
-      "adversaire de son doublé à l’Euro après son retour en sélection",
-      "adversaire contre lequel il inscrit son premier but international",
-      "club rejoint en 2009 et quitté quatorze ans plus tard",
-      "adversaire de son triplé à Stamford Bridge"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Ukraine est-il associé ?",
-    "answers": [
-      "Période 2004-2009",
-      "Euro 2020",
-      "Ligue des champions 2022",
-      "Coupe du monde 2014"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : adversaire de son but en finale de Ligue des nations ?",
-    "answers": [
-      "Brésil",
-      "Real Madrid",
-      "Espagne",
-      "Chelsea"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Karim Benzema », quelle description correspond à Espagne ?",
-    "answers": [
-      "commune lyonnaise où il grandit",
-      "club saoudien rejoint après le Real Madrid",
-      "adversaire contre lequel il réussit une panenka en demi-finale",
-      "adversaire de son but en finale de Ligue des nations"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Espagne est-il associé ?",
-    "answers": [
-      "Ligue des nations 2021",
-      "Période 2004-2009",
-      "Ligue des champions 2022",
-      "Coupe du monde 2014"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : adversaire contre lequel il inscrit son premier but international ?",
-    "answers": [
-      "Bron",
-      "Brésil",
-      "Al-Ittihad",
+      "Liverpool",
+      "Chelsea",
+      "Bayern Munich",
       "Manchester City"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Karim Benzema », quelle description correspond à Brésil ?",
+    "text": "Quel geste Benzema réussit-il sur penalty à Manchester lors de la demi-finale aller 2022 ?",
     "answers": [
-      "stade où il revient avec les Bleus contre la Finlande",
-      "récompense reçue après une saison européenne décisive",
-      "adversaire contre lequel il inscrit son premier but international",
-      "adversaire battu en finale européenne au Stade de France"
+      "Une panenka",
+      "Une talonnade",
+      "Une frappe en force au centre",
+      "Un contre-pied du pied gauche"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Brésil est-il associé ?",
+    "text": "Quel gardien encaisse la panenka de Benzema à l’Etihad ?",
     "answers": [
-      "Période 2004-2009",
-      "Ligue des champions 2022",
-      "Coupe du monde 2014",
-      "Équipe de France"
+      "Alisson",
+      "Ederson",
+      "Claudio Bravo",
+      "Stefan Ortega"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : commune lyonnaise où il grandit ?",
+    "text": "Quel est le score de Manchester City-Real Madrid à l’aller en 2022 ?",
     "answers": [
-      "Bron",
-      "Groupama Stadium",
-      "Ballon d’Or 2022",
-      "Liverpool"
+      "3-2",
+      "4-2",
+      "4-3",
+      "5-3"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Karim Benzema », quelle description correspond à Bron ?",
+    "text": "Qui inscrit un doublé tardif au retour pour envoyer le Real en prolongation ?",
     "answers": [
-      "club où il débute et devient meilleur buteur de Ligue 1",
-      "commune lyonnaise où il grandit",
-      "adversaire de son triplé en huitième de finale retour",
-      "partenaire majeur de l’attaque madrilène pendant neuf saisons"
+      "Vinícius Júnior",
+      "Karim Benzema",
+      "Marco Asensio",
+      "Rodrygo"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Bron est-il associé ?",
+    "text": "Qui marque sur penalty en prolongation pour éliminer Manchester City ?",
     "answers": [
-      "Période 2004-2009",
-      "Ligue des champions 2022",
-      "Formation",
-      "Coupe du monde 2014"
+      "Karim Benzema",
+      "Luka Modrić",
+      "Rodrygo",
+      "Toni Kroos"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Karim Benzema », Quel repère de la carrière de Benzema correspond à cette description : stade où il revient avec les Bleus contre la Finlande ?",
+    "text": "Quel club le Real bat-il en finale de Ligue des champions 2022 ?",
     "answers": [
-      "Olympique lyonnais",
-      "Paris Saint-Germain",
+      "Manchester City",
+      "Liverpool",
+      "Chelsea",
+      "Paris Saint-Germain"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Dans quel stade se joue la finale de C1 2022 ?",
+    "answers": [
+      "Wembley",
+      "Santiago-Bernabéu",
+      "Stade de France",
+      "Parc des Princes"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Qui inscrit l’unique but de la finale 2022 ?",
+    "answers": [
+      "Karim Benzema",
+      "Rodrygo",
+      "Federico Valverde",
+      "Vinícius Júnior"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Benzema inscrit-il en Ligue des champions 2021-2022 ?",
+    "answers": [
+      "15",
+      "12",
+      "14",
+      "17"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel titre individuel UEFA Benzema reçoit-il pour 2021-2022 ?",
+    "answers": [
+      "Meilleur jeune UEFA",
+      "Joueur de l’année UEFA",
+      "Meilleur gardien UEFA",
+      "Soulier d’or européen"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel trophée individuel suprême Benzema remporte-t-il en octobre 2022 ?",
+    "answers": [
+      "Prix Puskás",
+      "Golden Boy",
+      "Ballon d’Or",
+      "The Best du gardien"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Qui remet le Ballon d’Or 2022 à Benzema ?",
+    "answers": [
+      "Didier Deschamps",
+      "Florentino Pérez",
       "Cristiano Ronaldo",
-      "Groupama Stadium"
+      "Zinédine Zidane"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Karim Benzema », quelle description correspond à Groupama Stadium ?",
+    "text": "Dans quelle ville Benzema reçoit-il le Ballon d’Or 2022 ?",
     "answers": [
-      "stade où il revient avec les Bleus contre la Finlande",
-      "club rejoint en 2009 et quitté quatorze ans plus tard",
-      "adversaire de son triplé à Stamford Bridge",
-      "ailier dont Benzema devient le mentor offensif"
+      "Paris",
+      "Madrid",
+      "Lyon",
+      "Zurich"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Karim Benzema », à quelle équipe ou compétition Groupama Stadium est-il associé ?",
+    "text": "Quel classement Benzema occupe-t-il parmi les buteurs de l’histoire du Real à son départ ?",
     "answers": [
-      "Période 2004-2009",
-      "Équipe de France",
-      "Ligue des champions 2022",
-      "Coupe du monde 2014"
+      "Premier",
+      "Deuxième",
+      "Troisième",
+      "Quatrième"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Benzema a-t-il inscrits pour le Real Madrid à son départ ?",
+    "answers": [
+      "342",
+      "350",
+      "354",
+      "361"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de matchs Benzema a-t-il disputés avec le Real Madrid ?",
+    "answers": [
+      "620",
+      "642",
+      "655",
+      "648"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de trophées Benzema remporte-t-il avec le Real Madrid ?",
+    "answers": [
+      "25",
+      "22",
+      "24",
+      "27"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Avec quel joueur Benzema partage-t-il alors le record de 25 trophées au Real ?",
+    "answers": [
+      "Sergio Ramos",
+      "Marcelo",
+      "Luka Modrić",
+      "Nacho"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de titres de Liga Benzema remporte-t-il au Real ?",
+    "answers": [
+      "3",
+      "5",
+      "4",
+      "6"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de Coupes du Roi Benzema remporte-t-il au Real ?",
+    "answers": [
+      "1",
+      "2",
+      "4",
+      "3"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Benzema rejoint-il après le Real Madrid en 2023 ?",
+    "answers": [
+      "Al-Ittihad",
+      "Al-Hilal",
+      "Al-Nassr",
+      "Al-Ahli"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Dans quelle ville est basé Al-Ittihad ?",
+    "answers": [
+      "Riyad",
+      "Djeddah",
+      "Dammam",
+      "La Mecque"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel numéro Benzema porte-t-il à Al-Ittihad lors de son arrivée ?",
+    "answers": [
+      "7",
+      "10",
+      "9",
+      "11"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel sélectionneur fait débuter Benzema en équipe de France A ?",
+    "answers": [
+      "Didier Deschamps",
+      "Laurent Blanc",
+      "Jacques Santini",
+      "Raymond Domenech"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle sélection Benzema connaît-il sa première cape ?",
+    "answers": [
+      "Autriche",
+      "Roumanie",
+      "Ukraine",
+      "Grèce"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Benzema marque-t-il pour sa première sélection contre l’Autriche ?",
+    "answers": [
+      "Non",
+      "Oui, l’unique but du match",
+      "Oui, un doublé",
+      "Oui, sur penalty"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "En quelle année Benzema débute-t-il avec les Bleus ?",
+    "answers": [
+      "2006",
+      "2008",
+      "2007",
+      "2009"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel tournoi de jeunes Benzema remporte-t-il avec la France en 2004 ?",
+    "answers": [
+      "Mondial U17",
+      "Tournoi de Toulon",
+      "Euro Espoirs",
+      "Euro U17"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Benzema inscrit-il pendant l’Euro 2008 ?",
+    "answers": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection bat la France 2-0 lors de son dernier match à l’Euro 2008 ?",
+    "answers": [
+      "Roumanie",
+      "Italie",
+      "Pays-Bas",
+      "Espagne"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle sélection Benzema délivre-t-il deux passes décisives à l’Euro 2012 ?",
+    "answers": [
+      "Angleterre",
+      "Suède",
+      "Ukraine",
+      "Espagne"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts Benzema inscrit-il à l’Euro 2012 ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle sélection Benzema inscrit-il un doublé au Mondial 2014 ?",
+    "answers": [
+      "Honduras",
+      "Suisse",
+      "Équateur",
+      "Nigeria"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel est le score de France-Honduras au Mondial 2014 ?",
+    "answers": [
+      "2-0",
+      "3-0",
+      "3-1",
+      "4-0"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien hondurien marque contre son camp après un tir de Benzema en 2014 ?",
+    "answers": [
+      "Luis López",
+      "Donis Escober",
+      "Noel Valladares",
+      "Kevin Hernández"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quelle sélection Benzema marque-t-il ensuite au Mondial 2014 ?",
+    "answers": [
+      "Équateur",
+      "Nigeria",
+      "Allemagne",
+      "Suisse"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel est le score de France-Suisse au Mondial 2014 ?",
+    "answers": [
+      "5-2",
+      "4-1",
+      "5-1",
+      "4-2"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien suisse arrête un penalty de Benzema pendant ce match ?",
+    "answers": [
+      "Yann Sommer",
+      "Diego Benaglio",
+      "Roman Bürki",
+      "Gregor Kobel"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année Benzema revient-il en équipe de France après plus de cinq ans d’absence ?",
+    "answers": [
+      "2019",
+      "2020",
+      "2021",
+      "2022"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quelle compétition marque le retour de Benzema dans un grand tournoi ?",
+    "answers": [
+      "Mondial 2018",
+      "Ligue des nations 2019",
+      "Euro 2024",
+      "Euro 2020 disputé en 2021"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Contre quelle sélection Benzema marque-t-il deux fois en huitième de finale de l’Euro 2020 ?",
+    "answers": [
+      "Suisse",
+      "Portugal",
+      "Allemagne",
+      "Hongrie"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel est le score après prolongation de France-Suisse à l’Euro 2020 ?",
+    "answers": [
+      "2-2",
+      "3-3",
+      "3-2",
+      "4-4"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle sélection la France bat-elle en finale de Ligue des nations 2021 ?",
+    "answers": [
+      "Belgique",
+      "Italie",
+      "Espagne",
+      "Portugal"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Qui égalise pour la France en finale de Ligue des nations 2021 ?",
+    "answers": [
+      "Kylian Mbappé",
+      "Antoine Griezmann",
+      "Paul Pogba",
+      "Karim Benzema"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel gardien espagnol est battu par la frappe enroulée de Benzema ?",
+    "answers": [
+      "Unai Simón",
+      "David de Gea",
+      "Kepa Arrizabalaga",
+      "Iker Casillas"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel stade se joue la finale de Ligue des nations 2021 ?",
+    "answers": [
+      "Wembley",
+      "San Siro",
+      "Stade de France",
+      "Allianz Stadium"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle sélection la France élimine-t-elle en demi-finale de Ligue des nations 2021 ?",
+    "answers": [
+      "Italie",
+      "Portugal",
+      "Belgique",
+      "Angleterre"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Pourquoi Benzema ne dispute-t-il pas le Mondial 2022 ?",
+    "answers": [
+      "Une suspension",
+      "Un choix de club",
+      "Une blessure au genou",
+      "Une blessure à la cuisse"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
   }
 ]
