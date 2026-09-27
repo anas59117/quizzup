@@ -1,43 +1,1071 @@
 [
-  { "text": "Dans quel pays Lionel Messi est-il né ?", "answers": ["Argentine", "Espagne", "Uruguay", "Brésil"], "correct": 0 },
-  { "text": "Dans quelle ville argentine Messi est-il né ?", "answers": ["Buenos Aires", "Rosario", "Córdoba", "Mendoza"], "correct": 1 },
-  { "text": "À quel âge Messi a-t-il rejoint le centre de formation du FC Barcelone ?", "answers": ["11 ans", "13 ans", "15 ans", "17 ans"], "correct": 1 },
-  { "text": "Combien de Ballons d'Or Lionel Messi a-t-il remportés (record du monde) ?", "answers": ["6", "7", "8", "9"], "correct": 2 },
-  { "text": "En quelle année Messi a-t-il remporté son premier Ballon d'Or ?", "answers": ["2008", "2009", "2010", "2011"], "correct": 1 },
-  { "text": "Quel club Messi a-t-il rejoint en 2021 après avoir quitté le Barça ?", "answers": ["Manchester City", "Paris Saint-Germain", "Chelsea", "Inter Miami"], "correct": 1 },
-  { "text": "Quel club Messi a-t-il rejoint en 2023 aux États-Unis ?", "answers": ["LA Galaxy", "Inter Miami", "New York City FC", "Atlanta United"], "correct": 1 },
-  { "text": "En quelle année l'Argentine de Messi a-t-elle remporté la Coupe du Monde ?", "answers": ["2014", "2018", "2022", "2026"], "correct": 2 },
-  { "text": "Contre quel pays l'Argentine a-t-elle remporté la finale de la Coupe du Monde 2022 ?", "answers": ["France", "Croatie", "Brésil", "Pays-Bas"], "correct": 0 },
-  { "text": "Quel trophée individuel Messi a-t-il reçu lors de la Coupe du Monde 2022 ?", "answers": ["Soulier d'Or", "Ballon d'Or du tournoi", "Meilleur jeune joueur", "Prix du fair-play"], "correct": 1 },
-  { "text": "Combien de Ligues des Champions Messi a-t-il remportées avec le FC Barcelone ?", "answers": ["2", "3", "4", "5"], "correct": 2 },
-  { "text": "Quel surnom porte Lionel Messi ?", "answers": ["La Pulga", "El Pelusa", "El Matador", "El Fenómeno"], "correct": 0 },
-  { "text": "Quel numéro de maillot Messi porte-t-il traditionnellement ?", "answers": ["7", "9", "10", "11"], "correct": 2 },
-  { "text": "En quelle année Messi a-t-il fait ses débuts en équipe première du FC Barcelone ?", "answers": ["2003", "2004", "2005", "2006"], "correct": 1 },
-  { "text": "Quel record de buts en une année civile Messi a-t-il établi en 2012 ?", "answers": ["79 buts", "85 buts", "91 buts", "96 buts"], "correct": 2 },
-  { "text": "Combien de fois Messi a-t-il remporté le titre de meilleur buteur de Liga (Pichichi) environ ?", "answers": ["Environ 6", "Environ 8", "Environ 10", "Environ 12"], "correct": 1 },
-  { "text": "Avec quel joueur portugais Messi a-t-il formé la célèbre rivalité 'Messi-Ronaldo' ?", "answers": ["Cristiano Ronaldo", "Nani", "Ricardo Quaresma", "João Moutinho"], "correct": 0 },
-  { "text": "Quel entraîneur a fait ses débuts en équipe première avec Messi en 2004 ?", "answers": ["Frank Rijkaard", "Pep Guardiola", "Louis van Gaal", "Josep Guardiola"], "correct": 0 },
-  { "text": "Quelle Coupe d'Amérique des nations Messi a-t-il remportée avec l'Argentine en 2021 ?", "answers": ["Copa América", "Copa Libertadores", "Coupe des Confédérations", "Copa del Rey"], "correct": 0 },
-  { "text": "Contre quel pays l'Argentine a-t-elle remporté la Copa América 2021 ?", "answers": ["Uruguay", "Chili", "Brésil", "Colombie"], "correct": 2 },
-  { "text": "Combien de fois environ Messi a-t-il été élu meilleur joueur FIFA / Ballon d'Or FIFA ?", "answers": ["4 fois", "5 fois", "6 fois", "7 fois"], "correct": 1 },
-  { "text": "Quel record de buts en Liga espagnole Messi détient-il ?", "answers": ["Meilleur buteur de l'histoire de la Liga", "Deuxième meilleur buteur", "Troisième meilleur buteur", "Il ne détient pas ce record"], "correct": 0 },
-  { "text": "Combien de buts environ Messi a-t-il marqué avec le FC Barcelone en carrière (record du club) ?", "answers": ["Environ 474", "Environ 550", "Environ 672", "Environ 700"], "correct": 2 },
-  { "text": "Quel prix Messi a-t-il reçu en tant que meilleur joueur du tournoi lors de la Coupe du Monde 2014 malgré la défaite en finale ?", "answers": ["Ballon d'Or du Mondial", "Soulier d'Or", "Prix du fair-play", "Meilleur espoir"], "correct": 0 },
-  { "text": "Contre quel pays l'Argentine a-t-elle perdu la finale de la Coupe du Monde 2014 ?", "answers": ["Espagne", "Allemagne", "Pays-Bas", "Brésil"], "correct": 1 },
-  { "text": "Quel joueur formait le célèbre trio 'MSN' avec Messi et Suárez au Barça ?", "answers": ["Neymar", "Iniesta", "Xavi", "Piqué"], "correct": 0 },
-  { "text": "Quel milieu espagnol a longtemps été le complice de jeu de Messi au Barça ?", "answers": ["Xavi Hernández", "Andrés Iniesta", "Sergio Busquets", "Les trois à la fois"], "correct": 3 },
-  { "text": "En quelle année Messi a-t-il rejoint le PSG ?", "answers": ["2020", "2021", "2022", "2023"], "correct": 1 },
-  { "text": "Combien de saisons Messi a-t-il jouées au PSG ?", "answers": ["1", "2", "3", "4"], "correct": 1 },
-  { "text": "Quel est le vrai prénom complet de Messi ?", "answers": ["Lionel Andrés Messi", "Lionel Alejandro Messi", "Lionel Fernando Messi", "Lionel Gabriel Messi"], "correct": 0 },
-  { "text": "Messi a été diagnostiqué enfant d'un trouble nécessitant un traitement hormonal, lequel ?", "answers": ["Déficit en hormone de croissance", "Diabète", "Asthme", "Trouble cardiaque"], "correct": 0 },
-  { "text": "Quel club espagnol a financé le traitement médical du jeune Messi ?", "answers": ["Real Madrid", "FC Barcelone", "Atlético Madrid", "Valence"], "correct": 1 },
-  { "text": "Combien de Coupes du Roi Messi a-t-il remportées avec le Barça environ ?", "answers": ["4", "5", "6", "7"], "correct": 3 },
-  { "text": "Quel est le nombre de titres de champion d'Espagne (Liga) remportés par Messi avec le Barça ?", "answers": ["Environ 8", "Environ 10", "Environ 12", "Environ 14"], "correct": 1 },
-  { "text": "Quel geste emblématique Messi effectue-t-il souvent après avoir marqué, en hommage à sa grand-mère ?", "answers": ["Il pointe le ciel", "Il embrasse le brassard", "Il fait un salto", "Il s'agenouille"], "correct": 0 },
-  { "text": "Quel prix a reçu Messi comme meilleur joueur de la Coupe du Monde 2022 ?", "answers": ["Ballon d'Or du tournoi (Golden Ball)", "Soulier d'Or", "Prix du fair-play", "Meilleur gardien"], "correct": 0 },
-  { "text": "Combien de sélections Messi comptait-il approximativement avec l'Argentine après le Mondial 2022 ?", "answers": ["Environ 130", "Environ 160", "Environ 172", "Environ 190"], "correct": 2 },
-  { "text": "Quel est le nom de l'épouse de Lionel Messi ?", "answers": ["Antonella Roccuzzo", "Wanda Nara", "Sofia Balbi", "Eugenia Suárez"], "correct": 0 },
-  { "text": "Dans quelle ville d'Argentine Messi a-t-il grandi avec Antonella Roccuzzo, son épouse ?", "answers": ["Rosario", "Buenos Aires", "La Plata", "Mendoza"], "correct": 0 },
-  { "text": "Quel club de football Messi a-t-il rejoint tout jeune enfant avant Newell's Old Boys ?", "answers": ["Grandoli", "Boca Juniors", "River Plate", "Independiente"], "correct": 0 },
-  { "text": "Quel club argentin de jeunesse a formé Messi avant son départ pour l'Espagne ?", "answers": ["Boca Juniors", "Newell's Old Boys", "River Plate", "Racing Club"], "correct": 1 }
+  {
+    "text": "Dans quel pays Lionel Messi est-il né ?",
+    "answers": [
+      "Argentine",
+      "Espagne",
+      "Uruguay",
+      "Brésil"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans quelle ville argentine Messi est-il né ?",
+    "answers": [
+      "Buenos Aires",
+      "Rosario",
+      "Córdoba",
+      "Mendoza"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "À quel âge Messi a-t-il rejoint le centre de formation du FC Barcelone ?",
+    "answers": [
+      "11 ans",
+      "13 ans",
+      "15 ans",
+      "17 ans"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de Ballons d'Or Lionel Messi a-t-il remportés (record du monde) ?",
+    "answers": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "En quelle année Messi a-t-il remporté son premier Ballon d'Or ?",
+    "answers": [
+      "2008",
+      "2009",
+      "2010",
+      "2011"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel club Messi a-t-il rejoint en 2021 après avoir quitté le Barça ?",
+    "answers": [
+      "Manchester City",
+      "Paris Saint-Germain",
+      "Chelsea",
+      "Inter Miami"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel club Messi a-t-il rejoint en 2023 aux États-Unis ?",
+    "answers": [
+      "LA Galaxy",
+      "Inter Miami",
+      "New York City FC",
+      "Atlanta United"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "En quelle année l'Argentine de Messi a-t-elle remporté la Coupe du Monde ?",
+    "answers": [
+      "2014",
+      "2018",
+      "2022",
+      "2026"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Contre quel pays l'Argentine a-t-elle remporté la finale de la Coupe du Monde 2022 ?",
+    "answers": [
+      "France",
+      "Croatie",
+      "Brésil",
+      "Pays-Bas"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel trophée individuel Messi a-t-il reçu lors de la Coupe du Monde 2022 ?",
+    "answers": [
+      "Soulier d'Or",
+      "Ballon d'Or du tournoi",
+      "Meilleur jeune joueur",
+      "Prix du fair-play"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de Ligues des Champions Messi a-t-il remportées avec le FC Barcelone ?",
+    "answers": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel surnom porte Lionel Messi ?",
+    "answers": [
+      "La Pulga",
+      "El Pelusa",
+      "El Matador",
+      "El Fenómeno"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel numéro de maillot Messi porte-t-il traditionnellement ?",
+    "answers": [
+      "7",
+      "9",
+      "10",
+      "11"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "En quelle année Messi a-t-il fait ses débuts en équipe première du FC Barcelone ?",
+    "answers": [
+      "2003",
+      "2004",
+      "2005",
+      "2006"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel record de buts en une année civile Messi a-t-il établi en 2012 ?",
+    "answers": [
+      "79 buts",
+      "85 buts",
+      "91 buts",
+      "96 buts"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Combien de trophées Pichichi Messi a-t-il remportés en Liga ?",
+    "answers": [
+      "6",
+      "8",
+      "7",
+      "9"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Avec quel joueur portugais Messi a-t-il formé la célèbre rivalité 'Messi-Ronaldo' ?",
+    "answers": [
+      "Cristiano Ronaldo",
+      "Nani",
+      "Ricardo Quaresma",
+      "João Moutinho"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel entraîneur dirigeait Barcelone lors des débuts de Messi en Liga en 2004 ?",
+    "answers": [
+      "Louis van Gaal",
+      "Pep Guardiola",
+      "Frank Rijkaard",
+      "Luis Enrique"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel titre senior Messi a-t-il remporté pour la première fois avec l'Argentine en 2021 ?",
+    "answers": [
+      "Copa América",
+      "Coupe du monde",
+      "Finalissima",
+      "Coupe des confédérations"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Contre quel pays l'Argentine a-t-elle remporté la Copa América 2021 ?",
+    "answers": [
+      "Uruguay",
+      "Chili",
+      "Brésil",
+      "Colombie"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel club argentin Barcelone a-t-il battu en finale de la Coupe du monde des clubs 2009 avec Messi ?",
+    "answers": [
+      "River Plate",
+      "Boca Juniors",
+      "Estudiantes",
+      "San Lorenzo"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel record de buts en Liga espagnole Messi détient-il ?",
+    "answers": [
+      "Meilleur buteur de l'histoire de la Liga",
+      "Deuxième meilleur buteur",
+      "Troisième meilleur buteur",
+      "Il ne détient pas ce record"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Combien de buts officiels Messi a-t-il marqués avec le FC Barcelone ?",
+    "answers": [
+      "643",
+      "672",
+      "698",
+      "711"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel prix Messi a-t-il reçu en tant que meilleur joueur du tournoi lors de la Coupe du Monde 2014 malgré la défaite en finale ?",
+    "answers": [
+      "Ballon d'Or du Mondial",
+      "Soulier d'Or",
+      "Prix du fair-play",
+      "Meilleur espoir"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Contre quel pays l'Argentine a-t-elle perdu la finale de la Coupe du Monde 2014 ?",
+    "answers": [
+      "Espagne",
+      "Allemagne",
+      "Pays-Bas",
+      "Brésil"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel joueur formait le célèbre trio 'MSN' avec Messi et Suárez au Barça ?",
+    "answers": [
+      "Neymar",
+      "Iniesta",
+      "Xavi",
+      "Piqué"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel entraîneur dirigeait le FC Barcelone lors de son triplé de 2008-2009 avec Messi ?",
+    "answers": [
+      "Frank Rijkaard",
+      "Luis Enrique",
+      "Tito Vilanova",
+      "Pep Guardiola"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel numéro Messi portait-il au Paris Saint-Germain ?",
+    "answers": [
+      "30",
+      "10",
+      "19",
+      "7"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de saisons Messi a-t-il jouées au PSG ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quels sont les deux prénoms de Lionel Messi ?",
+    "answers": [
+      "Lionel Alejandro",
+      "Lionel Andrés",
+      "Lionel Fernando",
+      "Lionel Gabriel"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Messi a été diagnostiqué enfant d'un trouble nécessitant un traitement hormonal, lequel ?",
+    "answers": [
+      "Déficit en hormone de croissance",
+      "Diabète",
+      "Asthme",
+      "Trouble cardiaque"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel club espagnol a financé le traitement médical du jeune Messi ?",
+    "answers": [
+      "Real Madrid",
+      "FC Barcelone",
+      "Atlético Madrid",
+      "Valence"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de Coupes du Roi Messi a-t-il remportées avec Barcelone ?",
+    "answers": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de titres de Liga Messi a-t-il remportés avec Barcelone ?",
+    "answers": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur du Barça a servi Messi pour son but de la tête en finale européenne 2009 ?",
+    "answers": [
+      "Xavi Hernández",
+      "Andrés Iniesta",
+      "Dani Alves",
+      "Samuel Eto'o"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club argentin Messi a-t-il affronté en finale de la Coupe du monde des clubs 2015 ?",
+    "answers": [
+      "Boca Juniors",
+      "Estudiantes",
+      "San Lorenzo",
+      "River Plate"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel sélectionneur dirigeait l'Argentine de Messi lors du Mondial 2022 ?",
+    "answers": [
+      "Lionel Scaloni",
+      "Alejandro Sabella",
+      "Jorge Sampaoli",
+      "Gerardo Martino"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le nom de l'épouse de Lionel Messi ?",
+    "answers": [
+      "Antonella Roccuzzo",
+      "Wanda Nara",
+      "Sofia Balbi",
+      "Eugenia Suárez"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel ancien coéquipier de Messi a été nommé entraîneur du FC Barcelone en 2021 ?",
+    "answers": [
+      "Andrés Iniesta",
+      "Xavi Hernández",
+      "Sergio Busquets",
+      "Carles Puyol"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club de football Messi a-t-il rejoint tout jeune enfant avant Newell's Old Boys ?",
+    "answers": [
+      "Grandoli",
+      "Boca Juniors",
+      "River Plate",
+      "Independiente"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel club argentin de jeunesse a formé Messi avant son départ pour l'Espagne ?",
+    "answers": [
+      "Boca Juniors",
+      "Newell's Old Boys",
+      "River Plate",
+      "Racing Club"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Contre quel club Messi a-t-il inscrit son premier but officiel avec le Barça ?",
+    "answers": [
+      "Albacete",
+      "Getafe",
+      "Espanyol",
+      "Valence"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui a délivré la passe décisive sur le premier but officiel de Messi avec Barcelone ?",
+    "answers": [
+      "Xavi",
+      "Ronaldinho",
+      "Iniesta",
+      "Deco"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année Messi a-t-il marqué son premier but officiel avec Barcelone ?",
+    "answers": [
+      "2003",
+      "2004",
+      "2005",
+      "2006"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel numéro Messi portait-il lors de son premier but officiel avec Barcelone ?",
+    "answers": [
+      "19",
+      "10",
+      "11",
+      "30"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club catalan affrontait Barcelone lors des débuts de Messi en Liga en 2004 ?",
+    "answers": [
+      "Espanyol",
+      "Girona",
+      "Tarragone",
+      "Sabadell"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur Messi a-t-il dépassé au nombre de matches officiels avec Barcelone ?",
+    "answers": [
+      "Iniesta",
+      "Xavi",
+      "Busquets",
+      "Piqué"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de matches officiels Messi a-t-il disputés avec Barcelone ?",
+    "answers": [
+      "731",
+      "759",
+      "778",
+      "801"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de passes décisives Barcelone attribue-t-il à Messi dans son bilan au club ?",
+    "answers": [
+      "245",
+      "275",
+      "290",
+      "305"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de trophées Messi a-t-il gagnés avec Barcelone selon le bilan du club ?",
+    "answers": [
+      "35",
+      "31",
+      "38",
+      "42"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de Supercoupes d'Espagne Messi a-t-il remportées avec Barcelone ?",
+    "answers": [
+      "6",
+      "8",
+      "9",
+      "10"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de Supercoupes de l'UEFA Messi a-t-il remportées avec Barcelone ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de Coupes du monde des clubs Messi a-t-il remportées avec Barcelone ?",
+    "answers": [
+      "1",
+      "2",
+      "4",
+      "3"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quel club Messi a-t-il inscrit un quadruplé en Ligue des champions en 2010 ?",
+    "answers": [
+      "Arsenal",
+      "Chelsea",
+      "Inter Milan",
+      "Manchester United"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quel club Messi a-t-il marqué cinq buts dans un match de Ligue des champions en 2012 ?",
+    "answers": [
+      "Bayern Munich",
+      "Bayer Leverkusen",
+      "AC Milan",
+      "Olympique lyonnais"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel était le score du match où Messi a inscrit cinq buts contre Leverkusen ?",
+    "answers": [
+      "5-1",
+      "6-1",
+      "7-1",
+      "8-1"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quel stade de la Ligue des champions 2011-2012 Messi a-t-il inscrit cinq buts contre Leverkusen ?",
+    "answers": [
+      "Finale",
+      "Quart de finale",
+      "Phase de groupes",
+      "Huitième de finale"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quelle équipe Messi a-t-il inscrit un but de la tête en finale de Ligue des champions 2009 ?",
+    "answers": [
+      "Manchester United",
+      "Chelsea",
+      "Arsenal",
+      "Bayern Munich"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville Messi a-t-il marqué lors de la finale européenne 2011 contre Manchester United ?",
+    "answers": [
+      "Rome",
+      "Londres",
+      "Berlin",
+      "Lisbonne"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club a perdu la finale de Ligue des champions 2015 contre le Barcelone de Messi ?",
+    "answers": [
+      "Atlético de Madrid",
+      "Manchester United",
+      "Juventus",
+      "Bayern Munich"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quel club brésilien Messi a-t-il marqué en finale de la Coupe du monde des clubs 2011 ?",
+    "answers": [
+      "Corinthians",
+      "Flamengo",
+      "São Paulo",
+      "Santos"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Lors de quelle saison Messi a-t-il inscrit 50 buts en championnat d'Espagne ?",
+    "answers": [
+      "2011-2012",
+      "2010-2011",
+      "2012-2013",
+      "2014-2015"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Messi a-t-il marqués avec Barcelone pendant l'année civile 2012 ?",
+    "answers": [
+      "73",
+      "79",
+      "84",
+      "91"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts Messi a-t-il marqués avec l'Argentine pendant l'année civile 2012 ?",
+    "answers": [
+      "7",
+      "10",
+      "12",
+      "15"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Messi affrontait-il lors de son premier triplé en Liga, en 2007 ?",
+    "answers": [
+      "Séville",
+      "Valence",
+      "Atlético de Madrid",
+      "Real Madrid"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel pays Messi a-t-il remporté la Coupe du monde U20 en 2005 ?",
+    "answers": [
+      "Pays-Bas",
+      "Allemagne",
+      "Canada",
+      "Émirats arabes unis"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle équipe l'Argentine de Messi a-t-elle battue en finale du Mondial U20 2005 ?",
+    "answers": [
+      "Espagne",
+      "Nigeria",
+      "Brésil",
+      "Ukraine"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Messi a-t-il marqués en finale du Mondial U20 2005 ?",
+    "answers": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts Messi a-t-il marqués pendant le Mondial U20 2005 ?",
+    "answers": [
+      "4",
+      "5",
+      "7",
+      "6"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville s'est jouée la finale du Mondial U20 2005 remportée par Messi ?",
+    "answers": [
+      "Utrecht",
+      "Groningue",
+      "Amsterdam",
+      "Enschede"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle récompense de meilleur joueur Messi a-t-il reçue au Mondial U20 2005 ?",
+    "answers": [
+      "Soulier d'or",
+      "Ballon d'or",
+      "Gant d'or",
+      "Prix du fair-play"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle sélection Messi a-t-il été expulsé pour ses débuts avec l'Argentine senior ?",
+    "answers": [
+      "Paraguay",
+      "Allemagne",
+      "Hongrie",
+      "Équateur"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville Messi a-t-il remporté l'or olympique avec l'Argentine en 2008 ?",
+    "answers": [
+      "Athènes",
+      "Londres",
+      "Rio de Janeiro",
+      "Pékin"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a inscrit le but argentin en finale olympique 2008 contre le Nigeria ?",
+    "answers": [
+      "Ángel Di María",
+      "Sergio Agüero",
+      "Lionel Messi",
+      "Ezequiel Lavezzi"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection l'Argentine de Messi a-t-elle battue lors de la Finalissima 2022 ?",
+    "answers": [
+      "Angleterre",
+      "Italie",
+      "Espagne",
+      "Portugal"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui a inscrit le seul but de la finale de Copa América 2021 remportée par l'Argentine ?",
+    "answers": [
+      "Messi",
+      "Lautaro Martínez",
+      "Ángel Di María",
+      "Julián Álvarez"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel stade s'est jouée la finale de la Copa América 2021 remportée par Messi ?",
+    "answers": [
+      "Monumental",
+      "Bombonera",
+      "Mineirão",
+      "Maracanã"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts Messi a-t-il inscrits au Mondial 2014 ?",
+    "answers": [
+      "4",
+      "3",
+      "5",
+      "6"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle équipe Messi a-t-il marqué dans le temps additionnel au Mondial 2014 ?",
+    "answers": [
+      "Bosnie-Herzégovine",
+      "Iran",
+      "Nigeria",
+      "Suisse"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quelle sélection Messi a-t-il inscrit un doublé en phase de groupes du Mondial 2014 ?",
+    "answers": [
+      "Iran",
+      "Bosnie-Herzégovine",
+      "Nigeria",
+      "Suisse"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel stade Messi a-t-il joué la finale du Mondial 2014 ?",
+    "answers": [
+      "Mineirão",
+      "Arena Corinthians",
+      "Mané Garrincha",
+      "Maracanã"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quelle sélection Messi a-t-il marqué sur penalty au premier match de l'Argentine au Mondial 2022 ?",
+    "answers": [
+      "Arabie saoudite",
+      "Mexique",
+      "Pologne",
+      "Australie"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle sélection Messi a-t-il ouvert le score de l'Argentine d'une frappe de loin au Mondial 2022 ?",
+    "answers": [
+      "Australie",
+      "Mexique",
+      "Croatie",
+      "Pays-Bas"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle sélection Messi a-t-il marqué pour son 1 000e match professionnel au Mondial 2022 ?",
+    "answers": [
+      "Mexique",
+      "Pays-Bas",
+      "Australie",
+      "Croatie"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel gardien a repoussé le penalty de Messi dans le temps réglementaire contre la Pologne au Mondial 2022 ?",
+    "answers": [
+      "Emiliano Martínez",
+      "Hugo Lloris",
+      "Dominik Livaković",
+      "Wojciech Szczęsny"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection l'Argentine de Messi a-t-elle éliminée en demi-finale du Mondial 2022 ?",
+    "answers": [
+      "Croatie",
+      "Pays-Bas",
+      "Australie",
+      "Maroc"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "À quel coéquipier Messi a-t-il offert une passe décisive après un dribble face à la Croatie en demi-finale 2022 ?",
+    "answers": [
+      "Enzo Fernández",
+      "Julián Álvarez",
+      "Ángel Di María",
+      "Lautaro Martínez"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts Messi a-t-il marqués lors de la finale du Mondial 2022 ?",
+    "answers": [
+      "1",
+      "3",
+      "2",
+      "4"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Messi a-t-il inscrits sur l'ensemble du Mondial 2022 ?",
+    "answers": [
+      "5",
+      "6",
+      "8",
+      "7"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a terminé meilleur buteur du Mondial 2022 devant Messi ?",
+    "answers": [
+      "Kylian Mbappé",
+      "Olivier Giroud",
+      "Julián Álvarez",
+      "Richarlison"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle équipe Messi a-t-il marqué sur coup franc pour ses débuts à l'Inter Miami ?",
+    "answers": [
+      "Nashville SC",
+      "Cruz Azul",
+      "Orlando City",
+      "Atlanta United"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle compétition Messi a-t-il marqué sur coup franc pour ses débuts à Miami en 2023 ?",
+    "answers": [
+      "MLS",
+      "US Open Cup",
+      "Leagues Cup",
+      "Ligue des champions CONCACAF"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Miami a-t-il battu en finale de la Leagues Cup 2023 avec Messi ?",
+    "answers": [
+      "Cruz Azul",
+      "Orlando City",
+      "FC Cincinnati",
+      "Nashville SC"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment l'Inter Miami de Messi a-t-il gagné la finale de Leagues Cup 2023 ?",
+    "answers": [
+      "Aux tirs au but",
+      "En prolongation",
+      "Sur forfait",
+      "Au match retour"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel trophée récompensant la meilleure équipe de saison régulière MLS Miami a-t-il remporté en 2024 ?",
+    "answers": [
+      "MLS Cup",
+      "Supporters' Shield",
+      "US Open Cup",
+      "Campeones Cup"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Face à quelle sélection l'Argentine de Messi a-t-elle gagné la finale de Copa América 2024 ?",
+    "answers": [
+      "Uruguay",
+      "Brésil",
+      "Colombie",
+      "Canada"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui a inscrit le but décisif de l'Argentine en finale de Copa América 2024 ?",
+    "answers": [
+      "Messi",
+      "Di María",
+      "Álvarez",
+      "Lautaro Martínez"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de Ligues des champions Messi a-t-il remportées avec Barcelone sans jouer la finale ?",
+    "answers": [
+      "1",
+      "0",
+      "2",
+      "3"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts Messi a-t-il inscrits lors des finales de Ligue des champions 2009 et 2011 réunies ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur de Leverkusen a marqué l'unique but allemand lors du 7-1 contre le Barça en 2012 ?",
+    "answers": [
+      "Stefan Kießling",
+      "Michael Ballack",
+      "Lars Bender",
+      "Karim Bellarabi"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  }
 ]
