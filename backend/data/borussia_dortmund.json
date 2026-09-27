@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à la fondation du club ?",
+    "text": "En quelle année le Borussia Dortmund a-t-il été fondé ?",
     "answers": [
       "1909",
-      "le Signal Iduna Park",
-      "le Westfalenstadion",
-      "le jaune et le noir"
+      "1904",
+      "1911",
+      "1919"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit la fondation du club ?",
+    "text": "Dans quelle ville le Borussia Dortmund évolue-t-il ?",
     "answers": [
-      "le Signal Iduna Park",
-      "1909",
-      "le Westfalenstadion",
-      "le jaune et le noir"
+      "Essen",
+      "Dortmund",
+      "Gelsenkirchen",
+      "Bochum"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond au stade ?",
+    "text": "Quelles sont les couleurs emblématiques du BVB ?",
     "answers": [
-      "le Westfalenstadion",
-      "le jaune et le noir",
-      "le Signal Iduna Park",
-      "Ballspielverein Borussia"
+      "Bleu et blanc",
+      "Rouge et blanc",
+      "Jaune et noir",
+      "Vert et blanc"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit le stade ?",
+    "text": "Quel est le nom commercial actuel du stade du Borussia Dortmund ?",
     "answers": [
-      "le Westfalenstadion",
-      "le jaune et le noir",
-      "Ballspielverein Borussia",
-      "le Signal Iduna Park"
+      "Veltins-Arena",
+      "Allianz Arena",
+      "BayArena",
+      "Signal Iduna Park"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à l'ancien nom du stade ?",
+    "text": "Quel est le nom historique du Signal Iduna Park ?",
     "answers": [
-      "le Westfalenstadion",
-      "le jaune et le noir",
-      "Ballspielverein Borussia",
-      "le Mur jaune"
+      "Westfalenstadion",
+      "Stadion Rote Erde",
+      "Ruhrstadion",
+      "Rheinstadion"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit l'ancien nom du stade ?",
+    "text": "Quel club affronte Dortmund dans le Revierderby ?",
     "answers": [
-      "le jaune et le noir",
-      "le Westfalenstadion",
-      "Ballspielverein Borussia",
-      "le Mur jaune"
+      "Le Bayern Munich",
+      "Schalke 04",
+      "Le Bayer Leverkusen",
+      "Le Borussia Mönchengladbach"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond aux couleurs ?",
+    "text": "Comment surnomme-t-on la célèbre tribune sud du stade de Dortmund ?",
     "answers": [
-      "Ballspielverein Borussia",
-      "le Mur jaune",
-      "le jaune et le noir",
-      "le match contre Schalke 04"
+      "Le Virage noir",
+      "La Tribune de la Ruhr",
+      "Le Mur jaune",
+      "Le Kop westphalien"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit les couleurs ?",
+    "text": "Quel entraîneur a mené Dortmund aux titres de Bundesliga 2011 et 2012 ?",
     "answers": [
-      "Ballspielverein Borussia",
-      "le Mur jaune",
-      "le match contre Schalke 04",
-      "le jaune et le noir"
+      "Thomas Tuchel",
+      "Ottmar Hitzfeld",
+      "Lucien Favre",
+      "Jürgen Klopp"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond au surnom BVB ?",
+    "text": "Quel club Dortmund a-t-il battu en finale de Ligue des champions 1997 ?",
     "answers": [
-      "Ballspielverein Borussia",
-      "le Mur jaune",
-      "le match contre Schalke 04",
-      "le capitaine Ballon d'or 1996"
+      "La Juventus",
+      "L’Ajax",
+      "Le Bayern Munich",
+      "Le Real Madrid"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit le surnom BVB ?",
+    "text": "Quel joueur de Dortmund a inscrit un doublé en finale européenne 1997 ?",
     "answers": [
-      "le Mur jaune",
-      "Ballspielverein Borussia",
-      "le match contre Schalke 04",
-      "le capitaine Ballon d'or 1996"
+      "Lars Ricken",
+      "Karl-Heinz Riedle",
+      "Stéphane Chapuisat",
+      "Andreas Möller"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à la tribune sud ?",
+    "text": "Quel jeune remplaçant a marqué le troisième but de Dortmund en finale 1997 ?",
     "answers": [
-      "le match contre Schalke 04",
-      "le capitaine Ballon d'or 1996",
-      "le Mur jaune",
-      "un joueur puis directeur sportif historique"
+      "Michael Zorc",
+      "Heiko Herrlich",
+      "Lars Ricken",
+      "Jörg Heinrich"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit la tribune sud ?",
+    "text": "Quel adversaire Dortmund a-t-il affronté en finale de Ligue des champions 2013 ?",
     "answers": [
-      "le match contre Schalke 04",
-      "le capitaine Ballon d'or 1996",
-      "un joueur puis directeur sportif historique",
-      "le Mur jaune"
+      "Le Real Madrid",
+      "Le FC Barcelone",
+      "Chelsea",
+      "Le Bayern Munich"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond au derby de la Ruhr ?",
+    "text": "Quel joueur de Dortmund a égalisé sur penalty en finale 2013 ?",
     "answers": [
-      "le match contre Schalke 04",
-      "le capitaine Ballon d'or 1996",
-      "un joueur puis directeur sportif historique",
-      "le buteur en finale européenne 1997"
+      "İlkay Gündoğan",
+      "Marco Reus",
+      "Robert Lewandowski",
+      "Mats Hummels"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit le derby de la Ruhr ?",
+    "text": "Quel entraîneur a conduit Dortmund au sacre européen de 1997 ?",
     "answers": [
-      "le capitaine Ballon d'or 1996",
-      "le match contre Schalke 04",
-      "un joueur puis directeur sportif historique",
-      "le buteur en finale européenne 1997"
+      "Jürgen Klopp",
+      "Ottmar Hitzfeld",
+      "Matthias Sammer",
+      "Nevio Scala"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à Matthias Sammer ?",
+    "text": "Quel joueur de Dortmund a remporté le Ballon d’Or 1996 ?",
     "answers": [
-      "un joueur puis directeur sportif historique",
-      "le buteur en finale européenne 1997",
-      "le capitaine Ballon d'or 1996",
-      "1997"
+      "Andreas Möller",
+      "Jürgen Kohler",
+      "Matthias Sammer",
+      "Michael Zorc"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit Matthias Sammer ?",
+    "text": "Quel gardien était titulaire lors du sacre européen de Dortmund en 1997 ?",
     "answers": [
-      "un joueur puis directeur sportif historique",
-      "le buteur en finale européenne 1997",
-      "1997",
-      "le capitaine Ballon d'or 1996"
+      "Roman Weidenfeller",
+      "Jens Lehmann",
+      "Hans Tilkowski",
+      "Stefan Klos"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à Michael Zorc ?",
+    "text": "Quel Suisse a marqué de nombreux buts pour Dortmund dans les années 1990 ?",
     "answers": [
-      "un joueur puis directeur sportif historique",
-      "le buteur en finale européenne 1997",
-      "1997",
-      "la Juventus"
+      "Stéphane Chapuisat",
+      "Alexander Frei",
+      "Ciriaco Sforza",
+      "Alain Sutter"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit Michael Zorc ?",
+    "text": "Quel Polonais a quitté Dortmund pour le Bayern en 2014 ?",
     "answers": [
-      "le buteur en finale européenne 1997",
-      "un joueur puis directeur sportif historique",
-      "1997",
-      "la Juventus"
+      "Jakub Błaszczykowski",
+      "Robert Lewandowski",
+      "Łukasz Piszczek",
+      "Euzebiusz Smolarek"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à Lars Ricken ?",
+    "text": "Quel Norvégien a joué à Dortmund avant de rejoindre Manchester City en 2022 ?",
     "answers": [
-      "1997",
-      "la Juventus",
-      "le buteur en finale européenne 1997",
+      "Ole Gunnar Solskjær",
+      "John Carew",
+      "Erling Haaland",
+      "Joshua King"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel Anglais a quitté Dortmund pour le Real Madrid en 2023 ?",
+    "answers": [
+      "Jadon Sancho",
+      "Jamie Bynoe-Gittens",
+      "Owen Hargreaves",
+      "Jude Bellingham"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "À quelle date le Borussia Dortmund a-t-il été fondé ?",
+    "answers": [
+      "19 décembre 1909",
+      "9 novembre 1909",
+      "19 janvier 1910",
+      "9 décembre 1911"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quelle auberge de Dortmund le club a-t-il été fondé ?",
+    "answers": [
+      "Zum Alten Markt",
+      "Zum Wildschütz",
+      "Zum Adler",
+      "Zum Westfalen"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quel quartier de Dortmund l’histoire du BVB a-t-elle commencé ?",
+    "answers": [
+      "Kreuzviertel",
+      "Hörde",
+      "Borsigplatz",
+      "Aplerbeck"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Combien de fondateurs sont mentionnés par le club lors de sa création ?",
+    "answers": [
+      "11",
+      "22",
+      "24",
+      "18"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel fut le score du premier match officiel de l’histoire du BVB en 1911 ?",
+    "answers": [
+      "9-3",
+      "6-0",
+      "4-1",
+      "7-2"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel adversaire Dortmund a-t-il battu lors de son premier match officiel ?",
+    "answers": [
+      "Schalke 04",
+      "VfB Dortmund",
+      "Duisburger SV",
+      "Westfalia Herne"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "En quelle année Dortmund a-t-il remporté son premier championnat d’Allemagne ?",
+    "answers": [
+      "1953",
+      "1957",
+      "1956",
+      "1963"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Dortmund a-t-il battu en finale du championnat allemand 1956 ?",
+    "answers": [
+      "Hambourg SV",
+      "1. FC Cologne",
+      "Eintracht Francfort",
+      "Karlsruher SC"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "En quelle année Dortmund a-t-il conservé son titre de champion d’Allemagne pour la première fois ?",
+    "answers": [
+      "1957",
+      "1958",
+      "1962",
+      "1963"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Dortmund a-t-il battu en finale du championnat allemand 1957 ?",
+    "answers": [
+      "Karlsruher SC",
+      "Hambourg SV",
+      "1. FC Nuremberg",
+      "Schalke 04"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle année correspond au dernier titre allemand de Dortmund avant la création de la Bundesliga ?",
+    "answers": [
+      "1961",
+      "1962",
+      "1963",
+      "1964"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Dortmund a-t-il battu en finale du championnat allemand 1963 ?",
+    "answers": [
+      "Hambourg SV",
+      "Bayern Munich",
+      "Werder Brême",
+      "1. FC Cologne"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "En quelle année Dortmund a-t-il remporté sa première Coupe d’Allemagne ?",
+    "answers": [
+      "1965",
+      "1956",
+      "1963",
+      "1966"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club fut battu 2-0 par Dortmund en finale de Coupe d’Allemagne 1965 ?",
+    "answers": [
+      "Hambourg SV",
+      "Alemannia Aachen",
+      "Bayern Munich",
+      "Werder Brême"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel trophée européen Dortmund a-t-il remporté en 1966 ?",
+    "answers": [
+      "La Coupe des clubs champions",
+      "La Coupe UEFA",
+      "La Coupe des vainqueurs de coupe",
+      "La Coupe Intertoto"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Dortmund a-t-il battu en finale européenne 1966 ?",
+    "answers": [
+      "West Ham United",
+      "Rangers",
+      "Celtic",
+      "Liverpool"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel fut le score de la finale européenne 1966 après prolongation ?",
+    "answers": [
+      "2-1",
+      "1-0",
+      "3-1",
+      "2-0"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Qui a marqué le but victorieux de Dortmund en prolongation lors de la finale 1966 ?",
+    "answers": [
+      "Sigfried Held",
+      "Reinhard Libuda",
+      "Lothar Emmerich",
+      "Aki Schmidt"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur avait ouvert le score pour Dortmund en finale européenne 1966 ?",
+    "answers": [
+      "Reinhard Libuda",
+      "Lothar Emmerich",
+      "Sigfried Held",
+      "Wolfgang Paul"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Pourquoi le sacre européen de 1966 est-il historique pour le football allemand ?",
+    "answers": [
+      "C’est la première finale européenne jouée en Allemagne",
+      "Dortmund gagne sans encaisser de but",
+      "C’est le premier trophée européen décidé aux tirs au but",
+      "Dortmund devient le premier club allemand vainqueur d’une coupe d’Europe"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel fut le score de la finale de Ligue des champions 1997 ?",
+    "answers": [
+      "3-1",
+      "2-0",
+      "3-2",
+      "4-1"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville la finale européenne 1997 s’est-elle jouée ?",
+    "answers": [
+      "Dortmund",
+      "Munich",
+      "Rome",
+      "Vienne"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur de la Juventus a réduit le score en finale 1997 ?",
+    "answers": [
+      "Zinédine Zidane",
+      "Christian Vieri",
+      "Alessandro Del Piero",
+      "Didier Deschamps"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "À quelle minute Lars Ricken a-t-il marqué en finale 1997 ?",
+    "answers": [
+      "65e",
+      "78e",
+      "84e",
+      "71e"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel trophée mondial Dortmund a-t-il remporté en décembre 1997 ?",
+    "answers": [
+      "La Coupe intercontinentale",
+      "La Coupe du monde des clubs",
+      "La Supercoupe de l’UEFA",
+      "La Coupe Intertoto"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Dortmund a-t-il battu en Coupe intercontinentale 1997 ?",
+    "answers": [
+      "River Plate",
+      "Cruzeiro",
+      "Vasco da Gama",
+      "São Paulo"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel fut le score de Dortmund-Cruzeiro en Coupe intercontinentale 1997 ?",
+    "answers": [
+      "1-0",
+      "2-1",
+      "2-0",
       "3-1"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit Lars Ricken ?",
+    "text": "Quels joueurs ont marqué pour Dortmund contre Cruzeiro en 1997 ?",
     "answers": [
-      "1997",
-      "la Juventus",
+      "Lars Ricken et Karl-Heinz Riedle",
+      "Andreas Möller et Stéphane Chapuisat",
+      "Jörg Heinrich et Michael Zorc",
+      "Michael Zorc et Heiko Herrlich"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire a battu Dortmund en finale de Coupe UEFA 1993 ?",
+    "answers": [
+      "La Juventus",
+      "L’Inter Milan",
+      "Parme",
+      "Le Torino"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire a battu Dortmund en finale de Coupe UEFA 2002 ?",
+    "answers": [
+      "Le PSV Eindhoven",
+      "Feyenoord",
+      "Le FC Porto",
+      "Valence"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel stade la finale de Coupe UEFA 2002 s’est-elle jouée ?",
+    "answers": [
+      "L’ArenA d’Amsterdam",
+      "Le Westfalenstadion",
+      "De Kuip",
+      "Le Philips Stadion"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel fut le score de la finale Feyenoord-Dortmund en 2002 ?",
+    "answers": [
+      "2-1",
+      "4-2",
       "3-1",
-      "le buteur en finale européenne 1997"
+      "3-2"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à la Ligue des champions remportée ?",
+    "text": "Quel défenseur de Dortmund a été expulsé en finale de Coupe UEFA 2002 ?",
     "answers": [
-      "1997",
-      "la Juventus",
+      "Jürgen Kohler",
+      "Christian Wörns",
+      "Christoph Metzelder",
+      "Dedê"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quels joueurs ont marqué les deux buts de Dortmund en finale de Coupe UEFA 2002 ?",
+    "answers": [
+      "Dedê et Ewerthon",
+      "Márcio Amoroso et Jan Koller",
+      "Márcio Amoroso et Ewerthon",
+      "Jan Koller et Tomáš Rosický"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelles années Dortmund a-t-il remporté deux Bundesliga consécutives sous Ottmar Hitzfeld ?",
+    "answers": [
+      "1994 et 1995",
+      "1996 et 1997",
+      "1995 et 1996",
+      "1997 et 1998"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur fut le meilleur buteur de Dortmund en Bundesliga 1995-1996 avec 15 buts ?",
+    "answers": [
+      "Stéphane Chapuisat",
+      "Karl-Heinz Riedle",
+      "Andreas Möller",
+      "Michael Zorc"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur a conduit Dortmund au titre de Bundesliga 2002 ?",
+    "answers": [
+      "Matthias Sammer",
+      "Ottmar Hitzfeld",
+      "Jürgen Klopp",
+      "Bert van Marwijk"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a inscrit le but décisif du titre 2002 contre le Werder Brême ?",
+    "answers": [
+      "Márcio Amoroso",
+      "Ewerthon",
+      "Jan Koller",
+      "Tomáš Rosický"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de titres de champion d’Allemagne Dortmund totalisait-il après celui de 2012 ?",
+    "answers": [
+      "7",
+      "9",
+      "8",
+      "10"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelles sont les huit années de titres allemands du BVB jusqu’en 2012 ?",
+    "answers": [
+      "1955, 1957, 1963, 1994, 1996, 2002, 2011 et 2012",
+      "1956, 1958, 1963, 1995, 1997, 2002, 2010 et 2012",
+      "1956, 1957, 1964, 1995, 1996, 2003, 2011 et 2012",
+      "1956, 1957, 1963, 1995, 1996, 2002, 2011 et 2012"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de points Dortmund a-t-il obtenu lors de la Bundesliga 2011-2012 ?",
+    "answers": [
+      "81",
+      "78",
+      "79",
+      "82"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel doublé Dortmund a-t-il réalisé en 2011-2012 ?",
+    "answers": [
+      "Bundesliga et Ligue des champions",
+      "Bundesliga et Coupe d’Allemagne",
+      "Coupe d’Allemagne et Ligue Europa",
+      "Bundesliga et Supercoupe d’Allemagne"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Dortmund a-t-il battu 5-2 en finale de Coupe d’Allemagne 2012 ?",
+    "answers": [
+      "Schalke 04",
+      "Le Bayer Leverkusen",
+      "Le Bayern Munich",
+      "Le Werder Brême"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a inscrit un triplé en finale de Coupe d’Allemagne 2012 ?",
+    "answers": [
+      "Shinji Kagawa",
+      "Jakub Błaszczykowski",
+      "İlkay Gündoğan",
+      "Robert Lewandowski"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel Japonais a marqué le premier but de la finale de Coupe d’Allemagne 2012 ?",
+    "answers": [
+      "Shinji Kagawa",
+      "Maya Yoshida",
+      "Takumi Minamino",
+      "Makoto Hasebe"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire Dortmund a-t-il éliminé en demi-finale de Ligue des champions 2013 ?",
+    "answers": [
+      "Le Málaga CF",
+      "Le Real Madrid",
+      "Le Bayern Munich",
+      "La Juventus"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Lewandowski a-t-il inscrits lors du match aller contre le Real Madrid en 2013 ?",
+    "answers": [
+      "3",
+      "2",
+      "4",
+      "5"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel fut le score du match aller Dortmund-Real Madrid en demi-finale 2013 ?",
+    "answers": [
+      "3-0",
+      "4-0",
       "3-1",
-      "l'entraîneur champion d'Europe 1997"
+      "4-1"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit la Ligue des champions remportée ?",
+    "text": "Dans quel stade la finale de Ligue des champions 2013 s’est-elle jouée ?",
     "answers": [
-      "la Juventus",
-      "1997",
-      "3-1",
-      "l'entraîneur champion d'Europe 1997"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à l'adversaire en finale 1997 ?",
-    "answers": [
-      "3-1",
-      "l'entraîneur champion d'Europe 1997",
-      "la Juventus",
-      "l'entraîneur des titres 2011 et 2012"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément du Borussia Dortmund décrit l'adversaire en finale 1997 ?",
-    "answers": [
-      "3-1",
-      "l'entraîneur champion d'Europe 1997",
-      "l'entraîneur des titres 2011 et 2012",
-      "la Juventus"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond au score de la finale 1997 ?",
-    "answers": [
-      "3-1",
-      "l'entraîneur champion d'Europe 1997",
-      "l'entraîneur des titres 2011 et 2012",
-      "Bundesliga et Coupe d'Allemagne"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du Borussia Dortmund décrit le score de la finale 1997 ?",
-    "answers": [
-      "l'entraîneur champion d'Europe 1997",
-      "3-1",
-      "l'entraîneur des titres 2011 et 2012",
-      "Bundesliga et Coupe d'Allemagne"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à Ottmar Hitzfeld ?",
-    "answers": [
-      "l'entraîneur des titres 2011 et 2012",
-      "Bundesliga et Coupe d'Allemagne",
-      "l'entraîneur champion d'Europe 1997",
-      "le Bayern Munich"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément du Borussia Dortmund décrit Ottmar Hitzfeld ?",
-    "answers": [
-      "l'entraîneur des titres 2011 et 2012",
-      "Bundesliga et Coupe d'Allemagne",
-      "le Bayern Munich",
-      "l'entraîneur champion d'Europe 1997"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à Jürgen Klopp ?",
-    "answers": [
-      "l'entraîneur des titres 2011 et 2012",
-      "Bundesliga et Coupe d'Allemagne",
-      "le Bayern Munich",
-      "Wembley"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du Borussia Dortmund décrit Jürgen Klopp ?",
-    "answers": [
-      "Bundesliga et Coupe d'Allemagne",
-      "l'entraîneur des titres 2011 et 2012",
-      "le Bayern Munich",
-      "Wembley"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond au doublé national de 2012 ?",
-    "answers": [
-      "le Bayern Munich",
       "Wembley",
-      "Bundesliga et Coupe d'Allemagne",
-      "un capitaine et attaquant emblématique"
+      "L’Allianz Arena",
+      "Le Stade olympique de Berlin",
+      "Old Trafford"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit le doublé national de 2012 ?",
+    "text": "Qui a marqué le but victorieux contre Dortmund en finale européenne 2013 ?",
     "answers": [
-      "le Bayern Munich",
-      "Wembley",
-      "un capitaine et attaquant emblématique",
-      "Bundesliga et Coupe d'Allemagne"
+      "Mario Mandžukić",
+      "Arjen Robben",
+      "Thomas Müller",
+      "Franck Ribéry"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à la finale de Ligue des champions 2013 ?",
+    "text": "Quel gardien était titulaire pour Dortmund en finale européenne 2013 ?",
     "answers": [
-      "le Bayern Munich",
-      "Wembley",
-      "un capitaine et attaquant emblématique",
-      "l'auteur de quatre buts contre le Real Madrid en 2013"
+      "Marwin Hitz",
+      "Roman Bürki",
+      "Roman Weidenfeller",
+      "Mitchell Langerak"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit la finale de Ligue des champions 2013 ?",
+    "text": "Quel capitaine de Dortmund a disputé la finale européenne 2013 ?",
     "answers": [
-      "Wembley",
-      "le Bayern Munich",
-      "un capitaine et attaquant emblématique",
-      "l'auteur de quatre buts contre le Real Madrid en 2013"
+      "Mats Hummels",
+      "Marco Reus",
+      "Neven Subotić",
+      "Sebastian Kehl"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond au lieu de la finale 2013 ?",
+    "text": "Quel entraîneur a remplacé Jürgen Klopp à Dortmund en 2015 ?",
     "answers": [
-      "un capitaine et attaquant emblématique",
-      "l'auteur de quatre buts contre le Real Madrid en 2013",
-      "Wembley",
-      "un attaquant norvégien du club de 2020 à 2022"
+      "Thomas Tuchel",
+      "Peter Bosz",
+      "Lucien Favre",
+      "Edin Terzić"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit le lieu de la finale 2013 ?",
+    "text": "Quel club Dortmund a-t-il battu en finale de Coupe d’Allemagne 2017 ?",
     "answers": [
-      "un capitaine et attaquant emblématique",
-      "l'auteur de quatre buts contre le Real Madrid en 2013",
-      "un attaquant norvégien du club de 2020 à 2022",
-      "Wembley"
+      "Le RB Leipzig",
+      "L’Eintracht Francfort",
+      "Le Bayern Munich",
+      "Le Werder Brême"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à Marco Reus ?",
+    "text": "Quel fut le score de la finale de Coupe d’Allemagne 2017 ?",
     "answers": [
-      "un capitaine et attaquant emblématique",
-      "l'auteur de quatre buts contre le Real Madrid en 2013",
-      "un attaquant norvégien du club de 2020 à 2022",
-      "le championnat allemand"
+      "1-0",
+      "3-1",
+      "2-1",
+      "2-0"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit Marco Reus ?",
+    "text": "Quels joueurs ont marqué pour Dortmund en finale de Coupe d’Allemagne 2017 ?",
     "answers": [
-      "l'auteur de quatre buts contre le Real Madrid en 2013",
-      "un capitaine et attaquant emblématique",
-      "un attaquant norvégien du club de 2020 à 2022",
-      "le championnat allemand"
+      "Marco Reus et Christian Pulisic",
+      "Shinji Kagawa et Ousmane Dembélé",
+      "Pierre-Emerick Aubameyang et Marco Reus",
+      "Ousmane Dembélé et Pierre-Emerick Aubameyang"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à Robert Lewandowski ?",
+    "text": "Quel club Dortmund a-t-il battu en finale de Coupe d’Allemagne 2021 ?",
     "answers": [
-      "un attaquant norvégien du club de 2020 à 2022",
-      "le championnat allemand",
-      "l'auteur de quatre buts contre le Real Madrid en 2013",
-      "la Coupe d'Allemagne"
+      "Le RB Leipzig",
+      "Le Bayer Leverkusen",
+      "Le Bayern Munich",
+      "Le VfL Wolfsburg"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit Robert Lewandowski ?",
+    "text": "Quel fut le score de la finale de Coupe d’Allemagne 2021 ?",
     "answers": [
-      "un attaquant norvégien du club de 2020 à 2022",
-      "le championnat allemand",
-      "la Coupe d'Allemagne",
-      "l'auteur de quatre buts contre le Real Madrid en 2013"
+      "3-0",
+      "4-1",
+      "3-1",
+      "4-2"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à Erling Haaland ?",
+    "text": "Quels deux joueurs ont chacun inscrit un doublé pour Dortmund en finale 2021 ?",
     "answers": [
-      "un attaquant norvégien du club de 2020 à 2022",
-      "le championnat allemand",
-      "la Coupe d'Allemagne",
-      "l'année de fondation 1909"
+      "Marco Reus et Erling Haaland",
+      "Jadon Sancho et Marco Reus",
+      "Jadon Sancho et Erling Haaland",
+      "Thorgan Hazard et Erling Haaland"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit Erling Haaland ?",
+    "text": "Quel club Dortmund a-t-il battu 4-1 en finale de Coupe d’Allemagne 1989 ?",
     "answers": [
-      "le championnat allemand",
-      "un attaquant norvégien du club de 2020 à 2022",
-      "la Coupe d'Allemagne",
-      "l'année de fondation 1909"
+      "Le Bayern Munich",
+      "Hambourg SV",
+      "Schalke 04",
+      "Le Werder Brême"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à la Bundesliga ?",
+    "text": "Quel joueur a inscrit un doublé pour Dortmund en finale de Coupe d’Allemagne 1989 ?",
     "answers": [
-      "la Coupe d'Allemagne",
-      "l'année de fondation 1909",
-      "le championnat allemand",
-      "Dortmund"
+      "Norbert Dickel",
+      "Frank Mill",
+      "Michael Zorc",
+      "Andreas Möller"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit la Bundesliga ?",
+    "text": "Quel stade Dortmund utilisait-il avant l’ouverture du Westfalenstadion ?",
     "answers": [
-      "la Coupe d'Allemagne",
-      "l'année de fondation 1909",
-      "Dortmund",
-      "le championnat allemand"
+      "Le Glückauf-Kampfbahn",
+      "Le Stadion Rote Erde",
+      "Le Wedaustadion",
+      "Le Parkstadion"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à la DFB-Pokal ?",
+    "text": "En quelle année le Westfalenstadion a-t-il été inauguré ?",
     "answers": [
-      "la Coupe d'Allemagne",
-      "l'année de fondation 1909",
-      "Dortmund",
-      "1909"
+      "1972",
+      "1973",
+      "1974",
+      "1976"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit la DFB-Pokal ?",
+    "text": "Pour quelle compétition internationale le Westfalenstadion a-t-il été construit ?",
     "answers": [
-      "l'année de fondation 1909",
-      "la Coupe d'Allemagne",
-      "Dortmund",
-      "1909"
+      "L’Euro 1972",
+      "La Coupe du monde 1978",
+      "L’Euro 1980",
+      "La Coupe du monde 1974"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond au nombre 09 dans BVB 09 ?",
+    "text": "Quel fut le premier adversaire de Dortmund au Westfalenstadion en avril 1974 ?",
     "answers": [
-      "Dortmund",
-      "1909",
-      "l'année de fondation 1909",
-      "le Signal Iduna Park"
+      "Schalke 04",
+      "Le Bayern Munich",
+      "Le Werder Brême",
+      "Le Borussia Mönchengladbach"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit le nombre 09 dans BVB 09 ?",
+    "text": "Quel joueur détient le record d’apparitions officielles avec Dortmund ?",
     "answers": [
-      "Dortmund",
-      "1909",
-      "le Signal Iduna Park",
-      "l'année de fondation 1909"
+      "Roman Weidenfeller",
+      "Michael Zorc",
+      "Mats Hummels",
+      "Lars Ricken"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Pour Borussia Dortmund, quelle réponse correspond à la ville du club ?",
+    "text": "Quel gardien a disputé plus de 450 matches officiels avec Dortmund entre 2002 et 2018 ?",
     "answers": [
-      "Dortmund",
-      "1909",
-      "le Signal Iduna Park",
-      "le Westfalenstadion"
+      "Stefan Klos",
+      "Roman Bürki",
+      "Roman Weidenfeller",
+      "Eike Immel"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément du Borussia Dortmund décrit la ville du club ?",
+    "text": "Quel joueur tchèque surnommé « Dino » a évolué à Dortmund de 2001 à 2006 ?",
     "answers": [
-      "1909",
-      "Dortmund",
-      "le Signal Iduna Park",
-      "le Westfalenstadion"
+      "Tomáš Rosický",
+      "Patrik Berger",
+      "Pavel Kuka",
+      "Jan Koller"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel milieu tchèque surnommé « le Petit Mozart » a joué à Dortmund ?",
+    "answers": [
+      "Tomáš Rosický",
+      "Jan Koller",
+      "Pavel Nedvěd",
+      "Vladimír Šmicer"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Brésilien a terminé meilleur buteur de Bundesliga avec Dortmund en 2002 ?",
+    "answers": [
+      "Ewerthon",
+      "Márcio Amoroso",
+      "Aílton",
+      "Giovane Élber"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Gabonais a terminé meilleur buteur de Bundesliga avec Dortmund en 2017 ?",
+    "answers": [
+      "Erling Haaland",
+      "Michy Batshuayi",
+      "Pierre-Emerick Aubameyang",
+      "Adrián Ramos"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a rejoint Arsenal après avoir été meilleur buteur de Bundesliga avec Dortmund ?",
+    "answers": [
+      "Robert Lewandowski",
+      "Lucas Barrios",
+      "Alexander Frei",
+      "Pierre-Emerick Aubameyang"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel défenseur brésilien a occupé le flanc gauche du BVB pendant treize saisons ?",
+    "answers": [
+      "Dedê",
+      "Felipe Santana",
+      "Evanílson",
+      "Danilo"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur japonais a rejoint Manchester United après deux titres de Bundesliga avec Dortmund ?",
+    "answers": [
+      "Shinji Okazaki",
+      "Shinji Kagawa",
+      "Makoto Hasebe",
+      "Takumi Minamino"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Américain formé à Dortmund a rejoint Chelsea en 2019 ?",
+    "answers": [
+      "Giovanni Reyna",
+      "Clint Dempsey",
+      "Christian Pulisic",
+      "Weston McKennie"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Français a quitté Dortmund pour Barcelone en 2017 ?",
+    "answers": [
+      "Raphaël Guerreiro",
+      "Dan-Axel Zagadou",
+      "Abdou Diallo",
+      "Ousmane Dembélé"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel défenseur portugais a joué sept saisons à Dortmund avant de rejoindre le Bayern en 2023 ?",
+    "answers": [
+      "Raphaël Guerreiro",
+      "Paulo Sousa",
+      "Ricardo Carvalho",
+      "João Cancelo"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club a battu Dortmund en finale de Ligue des champions 2024 ?",
+    "answers": [
+      "Manchester City",
+      "Le Real Madrid",
+      "Le Bayern Munich",
+      "Le Paris Saint-Germain"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel fut le score de la finale européenne 2024 ?",
+    "answers": [
+      "1-0",
+      "2-1",
+      "2-0",
+      "3-0"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quels joueurs ont marqué contre Dortmund en finale européenne 2024 ?",
+    "answers": [
+      "Jude Bellingham et Vinícius Júnior",
+      "Rodrygo et Dani Carvajal",
+      "Toni Kroos et Vinícius Júnior",
+      "Dani Carvajal et Vinícius Júnior"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
