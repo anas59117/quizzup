@@ -378,6 +378,17 @@ const mangaCityHunter = require('./data/city_hunter.json');
 const mangaDetectiveConan = require('./data/detective_conan.json');
 const mangaOnePunchMan = require('./data/one_punch_man.json');
 const mangaHokutoNoKen = require('./data/hokuto_no_ken.json');
+const mangaDoraemon = require('./data/doraemon.json');
+const mangaGolgo13 = require('./data/golgo_13.json');
+const mangaKochikame = require('./data/kochikame.json');
+const mangaCrayonShinChan = require('./data/crayon_shin_chan.json');
+const mangaOishinbo = require('./data/oishinbo.json');
+const mangaKingdom = require('./data/kingdom.json');
+const mangaAstroBoy = require('./data/astro_boy.json');
+const mangaBaki = require('./data/baki.json');
+const mangaHajimeNoIppo = require('./data/hajime_no_ippo.json');
+const mangaKindaichi = require('./data/kindaichi.json');
+const mangaTouch = require('./data/touch.json');
 const breakingBad = require('./data/breaking_bad.json');
 const theWalkingDead = require('./data/the_walking_dead.json');
 const laCasaDePapel = require('./data/la_casa_de_papel.json');
@@ -1256,6 +1267,17 @@ const CATEGORIES = {
   detective_conan: { label: "Détective Conan", icon: "📖", questions: [...mangaDetectiveConan] },
   one_punch_man: { label: "One-Punch Man", icon: "📖", questions: [...mangaOnePunchMan] },
   hokuto_no_ken: { label: "Ken le Survivant (Hokuto no Ken)", icon: "📖", questions: [...mangaHokutoNoKen] },
+  doraemon: { label: "Doraemon", icon: "📖", questions: [...mangaDoraemon] },
+  golgo_13: { label: "Golgo 13", icon: "📖", questions: [...mangaGolgo13] },
+  kochikame: { label: "KochiKame", icon: "📖", questions: [...mangaKochikame] },
+  crayon_shin_chan: { label: "Crayon Shin-chan", icon: "📖", questions: [...mangaCrayonShinChan] },
+  oishinbo: { label: "Oishinbo", icon: "📖", questions: [...mangaOishinbo] },
+  kingdom: { label: "Kingdom", icon: "📖", questions: [...mangaKingdom] },
+  astro_boy: { label: "Astro Boy", icon: "📖", questions: [...mangaAstroBoy] },
+  baki: { label: "Baki", icon: "📖", questions: [...mangaBaki] },
+  hajime_no_ippo: { label: "Hajime no Ippo", icon: "📖", questions: [...mangaHajimeNoIppo] },
+  kindaichi: { label: "Les Enquêtes de Kindaichi", icon: "📖", questions: [...mangaKindaichi] },
+  touch: { label: "Touch", icon: "📖", questions: [...mangaTouch] },
   breaking_bad: { label: "Breaking Bad", icon: "🎬", questions: [...breakingBad] },
   the_walking_dead: { label: "The Walking Dead", icon: "🎬", questions: [...theWalkingDead] },
   la_casa_de_papel: { label: "La Casa de Papel", icon: "🎬", questions: [...laCasaDePapel] },
