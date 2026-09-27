@@ -1,0 +1,504 @@
+[
+  {
+    "text": "Qui est l'auteur de Saint Seiya ?",
+    "answers": [
+      "Akira Toriyama",
+      "Masami Kurumada",
+      "Tetsuo Hara",
+      "Yōichi Takahashi"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Sous quel titre la série animée Saint Seiya est-elle connue en France ?",
+    "answers": [
+      "Les Chevaliers du Zodiaque",
+      "Les Guerriers du Cosmos",
+      "Les Héros de l'Olympe",
+      "Les Gardiens d'Athéna"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "De quelle constellation Seiya est-il le chevalier ?",
+    "answers": [
+      "Phénix",
+      "Cygne",
+      "Pégase",
+      "Dragon"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "De quelle constellation Shiryū est-il le chevalier ?",
+    "answers": [
+      "Licorne",
+      "Andromède",
+      "Pégase",
+      "Dragon"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "De quelle constellation Hyōga est-il le chevalier ?",
+    "answers": [
+      "Cygne",
+      "Dragon",
+      "Phénix",
+      "Pégase"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "De quelle constellation Shun est-il le chevalier ?",
+    "answers": [
+      "Andromède",
+      "Lionet",
+      "Cygne",
+      "Pégase"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "De quelle constellation Ikki est-il le chevalier ?",
+    "answers": [
+      "Andromède",
+      "Hydre",
+      "Dragon",
+      "Phénix"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel lien unit Ikki et Shun ?",
+    "answers": [
+      "Ils sont père et fils",
+      "Ils sont cousins",
+      "Ils sont frères",
+      "Aucun lien"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle déesse les chevaliers protègent-ils ?",
+    "answers": [
+      "Héra",
+      "Athéna",
+      "Aphrodite",
+      "Artémis"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Sous quel nom Athéna vit-elle parmi les humains ?",
+    "answers": [
+      "Seika",
+      "Saori Kido",
+      "Marin",
+      "Shaina"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Comment s'appelle l'énergie intérieure des chevaliers ?",
+    "answers": [
+      "Le cosmos",
+      "Le ki",
+      "Le nen",
+      "Le chakra"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel est le nom de l'attaque signature de Seiya ?",
+    "answers": [
+      "La Chaîne nébulaire",
+      "La Poussière de diamant",
+      "Les Météores de Pégase",
+      "La Colère du Dragon"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle attaque célèbre utilise Shiryū ?",
+    "answers": [
+      "La Colère du Dragon",
+      "Les Météores de Pégase",
+      "Le Tonnerre de l'Aube",
+      "L'Illusion du Phénix"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle technique glacée utilise Hyōga ?",
+    "answers": [
+      "Le Cercle de feu",
+      "La Colère du Dragon",
+      "La Poussière de diamant",
+      "Les Météores de Pégase"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle arme emblématique utilise Shun ?",
+    "answers": [
+      "Sa chaîne",
+      "Un arc",
+      "Un bouclier géant",
+      "Une épée"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Qui est le maître de Seiya, qui porte un masque ?",
+    "answers": [
+      "Shaina d'Ophiuchus",
+      "Dohko de la Balance",
+      "Camus du Verseau",
+      "Marin de l'Aigle"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui est le maître de Hyōga, chevalier d'or ?",
+    "answers": [
+      "Aiolia du Lion",
+      "Shaka de la Vierge",
+      "Camus du Verseau",
+      "Milo du Scorpion"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Où Shiryū a-t-il été entraîné par son maître ?",
+    "answers": [
+      "En Grèce",
+      "Aux Cinq Pics de Rozan, en Chine",
+      "En Sibérie",
+      "Sur l'île de la Reine Morte"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Où Hyōga a-t-il été entraîné ?",
+    "answers": [
+      "En Chine",
+      "En Sibérie",
+      "Au Japon",
+      "En Grèce"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Comment s'appelle la sœur disparue que Seiya recherche ?",
+    "answers": [
+      "Marin",
+      "Seika",
+      "Saori",
+      "Shunrei"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Comment s'appelle le tournoi organisé par la fondation Graad au début de la série ?",
+    "answers": [
+      "La Guerre galactique",
+      "Les Jeux olympiques du cosmos",
+      "Le Tournoi d'Athéna",
+      "La Bataille des 12 maisons"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Combien de maisons du zodiaque les chevaliers de bronze doivent-ils traverser au Sanctuaire ?",
+    "answers": [
+      "7",
+      "10",
+      "5",
+      "12"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle catégorie d'armure est la plus puissante parmi les chevaliers d'Athéna ?",
+    "answers": [
+      "Les armures de cristal",
+      "Les armures de bronze",
+      "Les armures d'argent",
+      "Les armures d'or"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel chevalier d'or garde la maison du Bélier ?",
+    "answers": [
+      "Shaka",
+      "Mû",
+      "Aldébaran",
+      "Milo"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel chevalier d'or garde la maison du Taureau ?",
+    "answers": [
+      "Mû",
+      "Aldébaran",
+      "Camus",
+      "Aiolia"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel chevalier d'or garde la maison du Lion ?",
+    "answers": [
+      "Aiolos",
+      "Milo",
+      "Aiolia",
+      "Shura"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel chevalier d'or garde la maison de la Vierge, considéré comme le plus proche des dieux ?",
+    "answers": [
+      "Shaka",
+      "Camus",
+      "Mû",
+      "Aphrodite"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel chevalier d'or garde la maison du Scorpion ?",
+    "answers": [
+      "Aldébaran",
+      "Milo",
+      "Shura",
+      "Camus"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel chevalier d'or garde la maison des Poissons ?",
+    "answers": [
+      "Deathmask",
+      "Mû",
+      "Shaka",
+      "Aphrodite"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel chevalier d'or garde la maison du Cancer ?",
+    "answers": [
+      "Milo",
+      "Aiolia",
+      "Shura",
+      "Deathmask"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel chevalier d'or garde la maison du Capricorne ?",
+    "answers": [
+      "Aiolos",
+      "Camus",
+      "Aldébaran",
+      "Shura"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel chevalier d'or du Sagittaire a sauvé Athéna bébé ?",
+    "answers": [
+      "Shura",
+      "Aiolos",
+      "Aiolia",
+      "Saga"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel chevalier d'or des Gémeaux se cache derrière le Grand Pope ?",
+    "answers": [
+      "Saga",
+      "Aiolos",
+      "Shaka",
+      "Kanon"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel chevalier d'or de la Balance est le maître de Shiryū ?",
+    "answers": [
+      "Shion",
+      "Dohko",
+      "Mû",
+      "Aldébaran"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel dieu des mers les chevaliers affrontent-ils après le Sanctuaire ?",
+    "answers": [
+      "Arès",
+      "Hadès",
+      "Zeus",
+      "Poséidon"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel dieu des Enfers est l'ennemi du dernier grand arc ?",
+    "answers": [
+      "Apollon",
+      "Hadès",
+      "Arès",
+      "Poséidon"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quels sont les deux dieux jumeaux au service d'Hadès ?",
+    "answers": [
+      "Apollon et Artémis",
+      "Castor et Pollux",
+      "Phobos et Déimos",
+      "Hypnos et Thanatos"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Comment s'appellent les guerriers d'Hadès ?",
+    "answers": [
+      "Les Spectres",
+      "Les Guerriers divins",
+      "Les Chevaliers noirs",
+      "Les Marinas"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Comment s'appellent les guerriers de Poséidon ?",
+    "answers": [
+      "Les Titans",
+      "Les Anges",
+      "Les Spectres",
+      "Les Marinas"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle prêtresse d'Odin apparaît dans l'arc d'Asgard propre à l'anime ?",
+    "answers": [
+      "Hilda de Polaris",
+      "Saori Kido",
+      "Shunrei",
+      "Freya de Polaris"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans quel magazine Saint Seiya a-t-il été publié ?",
+    "answers": [
+      "Weekly Shōnen Jump",
+      "Weekly Shōnen Sunday",
+      "Weekly Shōnen Magazine",
+      "Monthly Shōnen Gangan"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En quelle année Saint Seiya a-t-il débuté ?",
+    "answers": [
+      "1995",
+      "1980",
+      "1986",
+      "1992"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel studio a produit la série animée de 1986 ?",
+    "answers": [
+      "Studio Pierrot",
+      "Madhouse",
+      "Toei Animation",
+      "Sunrise"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans quelle émission française la série a-t-elle été diffusée à partir de 1988 ?",
+    "answers": [
+      "Le Club Dorothée",
+      "Les Minikeums",
+      "Récré A2",
+      "Téléchat"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Comment appelle-t-on le sens ultime que doivent éveiller les chevaliers d'or ?",
+    "answers": [
+      "Le sixième sens",
+      "Le troisième œil",
+      "Le septième sens",
+      "Le cosmos infini"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel chevalier se crève les yeux pour vaincre Algol de Persée ?",
+    "answers": [
+      "Shun",
+      "Hyōga",
+      "Shiryū",
+      "Seiya"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Qui est la jeune fille qui attend Shiryū aux Cinq Pics ?",
+    "answers": [
+      "Seika",
+      "Marin",
+      "Shunrei",
+      "Saori"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Qui est la chevalière d'argent d'Ophiuchus, rivale puis alliée de Seiya ?",
+    "answers": [
+      "Marin",
+      "Hilda",
+      "Shaina",
+      "June"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel humain sert d'hôte à Poséidon dans l'arc de Poséidon ?",
+    "answers": [
+      "Sorrento",
+      "Ikki",
+      "Kanon",
+      "Julian Solo"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel chevalier d'or était le Grand Pope légitime assassiné par Saga ?",
+    "answers": [
+      "Mû du Bélier",
+      "Shion du Bélier",
+      "Aiolos du Sagittaire",
+      "Dohko de la Balance"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  }
+]

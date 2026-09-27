@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const VALID_STATUSES = new Set(['done', 'pending']);
-const VALID_FAMILIES = new Set(['sport', 'musique', 'divertissement', 'culture', 'gaming', 'entertainment']);
+const VALID_FAMILIES = new Set(['sport', 'musique', 'divertissement', 'culture', 'gaming', 'entertainment', 'manga']);
 
 const normalize = (value) => String(value).trim().toLocaleLowerCase('fr-FR').replace(/\s+/g, ' ');
 const questionKey = (question) => normalize(question.image || question.text || '');

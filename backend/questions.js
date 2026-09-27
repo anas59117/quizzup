@@ -357,6 +357,27 @@ const attaqueDesTitans = require('./data/attaque_des_titans.json');
 const hunterXHunter = require('./data/hunter_x_hunter.json');
 const myHeroAcademia = require('./data/my_hero_academia.json');
 const deathNote = require('./data/death_note.json');
+const mangaBleach = require('./data/bleach.json');
+const mangaFullmetalAlchemist = require('./data/fullmetal_alchemist.json');
+const mangaChainsawMan = require('./data/chainsaw_man.json');
+const mangaSpyXFamily = require('./data/spy_x_family.json');
+const mangaTokyoRevengers = require('./data/tokyo_revengers.json');
+const mangaHaikyu = require('./data/haikyu.json');
+const mangaBlueLock = require('./data/blue_lock.json');
+const mangaJojo = require('./data/jojo.json');
+const mangaSaintSeiya = require('./data/saint_seiya.json');
+const mangaFairyTail = require('./data/fairy_tail.json');
+const mangaCaptainTsubasa = require('./data/captain_tsubasa.json');
+const mangaSlamDunk = require('./data/slam_dunk.json');
+const mangaBerserk = require('./data/berserk.json');
+const mangaVinlandSaga = require('./data/vinland_saga.json');
+const mangaTokyoGhoul = require('./data/tokyo_ghoul.json');
+const mangaBlackClover = require('./data/black_clover.json');
+const mangaDrStone = require('./data/dr_stone.json');
+const mangaCityHunter = require('./data/city_hunter.json');
+const mangaDetectiveConan = require('./data/detective_conan.json');
+const mangaOnePunchMan = require('./data/one_punch_man.json');
+const mangaHokutoNoKen = require('./data/hokuto_no_ken.json');
 const breakingBad = require('./data/breaking_bad.json');
 const theWalkingDead = require('./data/the_walking_dead.json');
 const laCasaDePapel = require('./data/la_casa_de_papel.json');
@@ -1214,6 +1235,27 @@ const CATEGORIES = {
   hunter_x_hunter: { label: "Hunter × Hunter", icon: "📺", questions: [...hunterXHunter] },
   my_hero_academia: { label: "My Hero Academia", icon: "📺", questions: [...myHeroAcademia] },
   death_note: { label: "Death Note", icon: "📺", questions: [...deathNote] },
+  bleach: { label: "Bleach", icon: "📖", questions: [...mangaBleach] },
+  fullmetal_alchemist: { label: "Fullmetal Alchemist", icon: "📖", questions: [...mangaFullmetalAlchemist] },
+  chainsaw_man: { label: "Chainsaw Man", icon: "📖", questions: [...mangaChainsawMan] },
+  spy_x_family: { label: "Spy×Family", icon: "📖", questions: [...mangaSpyXFamily] },
+  tokyo_revengers: { label: "Tokyo Revengers", icon: "📖", questions: [...mangaTokyoRevengers] },
+  haikyu: { label: "Haikyū!!", icon: "📖", questions: [...mangaHaikyu] },
+  blue_lock: { label: "Blue Lock", icon: "📖", questions: [...mangaBlueLock] },
+  jojo: { label: "JoJo's Bizarre Adventure", icon: "📖", questions: [...mangaJojo] },
+  saint_seiya: { label: "Saint Seiya (Chevaliers du Zodiaque)", icon: "📖", questions: [...mangaSaintSeiya] },
+  fairy_tail: { label: "Fairy Tail", icon: "📖", questions: [...mangaFairyTail] },
+  captain_tsubasa: { label: "Captain Tsubasa (Olive et Tom)", icon: "📖", questions: [...mangaCaptainTsubasa] },
+  slam_dunk: { label: "Slam Dunk", icon: "📖", questions: [...mangaSlamDunk] },
+  berserk: { label: "Berserk", icon: "📖", questions: [...mangaBerserk] },
+  vinland_saga: { label: "Vinland Saga", icon: "📖", questions: [...mangaVinlandSaga] },
+  tokyo_ghoul: { label: "Tokyo Ghoul", icon: "📖", questions: [...mangaTokyoGhoul] },
+  black_clover: { label: "Black Clover", icon: "📖", questions: [...mangaBlackClover] },
+  dr_stone: { label: "Dr. Stone", icon: "📖", questions: [...mangaDrStone] },
+  city_hunter: { label: "City Hunter (Nicky Larson)", icon: "📖", questions: [...mangaCityHunter] },
+  detective_conan: { label: "Détective Conan", icon: "📖", questions: [...mangaDetectiveConan] },
+  one_punch_man: { label: "One-Punch Man", icon: "📖", questions: [...mangaOnePunchMan] },
+  hokuto_no_ken: { label: "Ken le Survivant (Hokuto no Ken)", icon: "📖", questions: [...mangaHokutoNoKen] },
   breaking_bad: { label: "Breaking Bad", icon: "🎬", questions: [...breakingBad] },
   the_walking_dead: { label: "The Walking Dead", icon: "🎬", questions: [...theWalkingDead] },
   la_casa_de_papel: { label: "La Casa de Papel", icon: "🎬", questions: [...laCasaDePapel] },
