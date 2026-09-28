@@ -1,1100 +1,510 @@
 [
   {
-    "text": "Quel nom le club adopte-t-il en 1894 ?",
+    "text": "Comment s'appelle le stade de Manchester City ?",
     "answers": [
-      "Manchester City",
-      "Ardwick AFC",
-      "St. Mark’s",
-      "Newton Heath"
+      "Old Trafford",
+      "L'Etihad Stadium",
+      "Anfield",
+      "Maine Road"
     ],
-    "correct": 0,
-    "difficulty": "easy"
+    "correct": 1
   },
   {
-    "text": "Quelle couleur est historiquement associée au maillot de City ?",
+    "text": "Quel est le surnom de Manchester City ?",
     "answers": [
-      "Rouge",
-      "Bleu ciel",
-      "Vert",
-      "Jaune"
+      "Les Citizens",
+      "Les Red Devils",
+      "Les Toffees",
+      "Les Gunners"
     ],
-    "correct": 1,
-    "difficulty": "easy"
+    "correct": 0
   },
   {
-    "text": "Quel club est le rival local de Manchester City ?",
+    "text": "Quelle couleur est associée à Manchester City ?",
+    "answers": [
+      "Le bleu ciel",
+      "Le rouge",
+      "Le jaune",
+      "Le vert"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel est le rival de Manchester City dans la même ville ?",
     "answers": [
       "Liverpool",
-      "Arsenal",
-      "Manchester United",
-      "Chelsea"
+      "Everton",
+      "Leeds United",
+      "Manchester United"
     ],
-    "correct": 2,
-    "difficulty": "easy"
+    "correct": 3
   },
   {
-    "text": "Quel stade accueille City depuis 2003 ?",
+    "text": "Quel entraîneur catalan dirige Manchester City depuis 2016 ?",
     "answers": [
-      "Maine Road",
-      "Old Trafford",
-      "Hillsborough",
-      "City of Manchester Stadium"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel était le stade de City immédiatement avant son déménagement de 2003 ?",
-    "answers": [
-      "Maine Road",
-      "Hyde Road",
-      "Old Trafford",
-      "Bramall Lane"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel Argentin a inscrit le but du titre anglais de 2012 contre QPR ?",
-    "answers": [
-      "Carlos Tévez",
-      "Sergio Agüero",
-      "Pablo Zabaleta",
-      "Julián Álvarez"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel entraîneur espagnol a pris la tête de City à l’été 2016 ?",
-    "answers": [
-      "Manuel Pellegrini",
+      "Xavi",
+      "Luis Enrique",
       "Rafael Benítez",
-      "Pep Guardiola",
-      "Unai Emery"
+      "Pep Guardiola"
     ],
-    "correct": 2,
-    "difficulty": "easy"
+    "correct": 3
   },
   {
-    "text": "Quel club City a-t-il battu en finale de Ligue des champions 2023 ?",
+    "text": "En quelle année Manchester City a-t-il remporté sa première Ligue des champions ?",
     "answers": [
-      "AC Milan",
-      "Napoli",
-      "Juventus",
-      "Inter Milan"
+      "2019",
+      "2021",
+      "2023",
+      "2016"
     ],
-    "correct": 3,
-    "difficulty": "easy"
+    "correct": 2
   },
   {
-    "text": "Quel milieu a inscrit le but de City en finale de Ligue des champions 2023 ?",
+    "text": "Contre quel club City a-t-il gagné la finale de Ligue des champions 2023 ?",
     "answers": [
-      "Rodri",
-      "Kevin De Bruyne",
-      "Bernardo Silva",
-      "İlkay Gündoğan"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quelle compétition européenne City remporte-t-il pour la première fois en 2023 ?",
-    "answers": [
-      "Ligue Europa",
-      "Ligue des champions",
-      "Coupe des Coupes",
-      "Ligue Europa Conférence"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel attaquant norvégien rejoint City en 2022 ?",
-    "answers": [
-      "Alexander Sørloth",
-      "Martin Ødegaard",
-      "Erling Haaland",
-      "Joshua King"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel Belge porte longtemps le numéro 17 de City ?",
-    "answers": [
-      "Vincent Kompany",
-      "Romelu Lukaku",
-      "Eden Hazard",
-      "Kevin De Bruyne"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel défenseur belge est capitaine de City lors du titre de Premier League 2012 ?",
-    "answers": [
-      "Vincent Kompany",
-      "Jan Vertonghen",
-      "Thomas Vermaelen",
-      "Toby Alderweireld"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club City bat-il pour remporter la FA Cup 2011 ?",
-    "answers": [
-      "Bolton Wanderers",
-      "Stoke City",
-      "West Ham United",
-      "Portsmouth"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club City bat-il en finale de Coupe de la Ligue 2018 ?",
-    "answers": [
+      "Le Real Madrid",
+      "L'Inter Milan",
       "Chelsea",
-      "Liverpool",
-      "Arsenal",
-      "Tottenham"
+      "Le PSG"
     ],
-    "correct": 2,
-    "difficulty": "easy"
+    "correct": 1
   },
   {
-    "text": "Combien de points City obtient-il lors de la saison de Premier League 2017-18 ?",
-    "answers": [
-      "96",
-      "98",
-      "102",
-      "100"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel gardien brésilien rejoint City en 2017 et remporte la Ligue des champions 2023 ?",
-    "answers": [
-      "Ederson",
-      "Alisson",
-      "Neto",
-      "Júlio César"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club City bat-il lors du dernier match de la saison 2011-12 ?",
-    "answers": [
-      "Aston Villa",
-      "Queens Park Rangers",
-      "Newcastle United",
-      "Sunderland"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club City bat-il en finale de FA Cup 2023 pour réaliser le doublé national ?",
-    "answers": [
-      "Liverpool",
-      "Chelsea",
-      "Manchester United",
-      "Arsenal"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel gardien anglais est titulaire lors du titre de Premier League de City en 2012 ?",
-    "answers": [
-      "Ben Foster",
-      "Jordan Pickford",
-      "Aaron Ramsdale",
-      "Joe Hart"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "En quelle année City gagne-t-il son premier titre de champion d’Angleterre ?",
-    "answers": [
-      "1937",
-      "1904",
-      "1968",
-      "2012"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel entraîneur dirige City lors du titre de Premier League 2012 ?",
-    "answers": [
-      "Mark Hughes",
-      "Roberto Mancini",
-      "Manuel Pellegrini",
-      "Joe Mercer"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel entraîneur dirige City lors du titre de Premier League 2014 ?",
-    "answers": [
-      "Roberto Mancini",
-      "Pep Guardiola",
-      "Manuel Pellegrini",
-      "Sven-Göran Eriksson"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club bat City en finale de Ligue des champions 2021 ?",
-    "answers": [
-      "Bayern Munich",
-      "Real Madrid",
-      "Liverpool",
-      "Chelsea"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Dans quelle ville se joue la finale de Ligue des champions remportée par City en 2023 ?",
-    "answers": [
-      "Istanbul",
-      "Lisbonne",
-      "Porto",
-      "Munich"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club City bat-il aux tirs au but pour la Supercoupe de l’UEFA 2023 ?",
-    "answers": [
-      "Villarreal",
-      "Séville",
-      "Real Madrid",
-      "Atlético de Madrid"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club brésilien City bat-il en finale de Coupe du monde des clubs 2023 ?",
-    "answers": [
-      "Palmeiras",
-      "Flamengo",
-      "Fluminense",
-      "Santos"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel Allemand inscrit les deux buts de City en finale de FA Cup 2023 ?",
-    "answers": [
-      "Leroy Sané",
-      "Stefan Ortega",
-      "Kevin De Bruyne",
-      "İlkay Gündoğan"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Combien de championnats d’Angleterre City remporte-t-il de 2020-21 à 2023-24 inclus ?",
-    "answers": [
-      "Quatre",
-      "Deux",
-      "Trois",
-      "Cinq"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club City bat-il 3-1 lors de la dernière journée décisive de Premier League 2023-24 ?",
-    "answers": [
-      "Aston Villa",
-      "West Ham United",
-      "Arsenal",
-      "Everton"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel adversaire City bat-il 3-2 après avoir été mené 0-2 pour conserver le titre en 2022 ?",
-    "answers": [
-      "Liverpool",
-      "Newcastle United",
-      "Aston Villa",
-      "Wolverhampton"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club City affronte-t-il lors de la finale européenne de Coupe des Coupes 1970 ?",
-    "answers": [
-      "Legia Varsovie",
-      "Rapid Vienne",
-      "Schalke 04",
-      "Górnik Zabrze"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club City bat-il en finale de FA Cup 1956 ?",
-    "answers": [
-      "Birmingham City",
-      "Newcastle United",
-      "Leicester City",
-      "Portsmouth"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel gardien de City finit la finale de FA Cup 1956 malgré une blessure au cou ?",
-    "answers": [
-      "Frank Swift",
-      "Bert Trautmann",
-      "Joe Corrigan",
-      "Ederson"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club City bat-il pour remporter la FA Cup 1934 ?",
-    "answers": [
-      "Bolton Wanderers",
-      "Leicester City",
-      "Portsmouth",
-      "West Bromwich Albion"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club City bat-il en finale de FA Cup 1969 ?",
-    "answers": [
-      "Southampton",
-      "Portsmouth",
-      "Newcastle United",
-      "Leicester City"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel attaquant bosnien égalise contre QPR en 2012 juste avant le but d’Agüero ?",
-    "answers": [
-      "Edin Džeko",
-      "Mario Balotelli",
-      "David Silva",
-      "James Milner"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel Italien délivre la passe décisive à Agüero contre QPR en 2012 ?",
-    "answers": [
-      "Roberto Mancini",
-      "Mario Balotelli",
-      "Stefano Sensi",
-      "Federico Macheda"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel Argentin surnommé « l’Apache » a joué à City après Manchester United ?",
-    "answers": [
-      "Sergio Agüero",
-      "Pablo Zabaleta",
-      "Carlos Tévez",
-      "Martín Demichelis"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur de City est connu sous le surnom « Merlin » ?",
+    "text": "Quel milieu espagnol a marqué le but de la victoire en finale 2023 ?",
     "answers": [
       "Bernardo Silva",
-      "Riyad Mahrez",
-      "Phil Foden",
-      "David Silva"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "En quelle année le club joue-t-il sous le nom Ardwick AFC ?",
-    "answers": [
-      "1887",
-      "1880",
-      "1894",
-      "1904"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quelle église est à l’origine de l’équipe devenue Manchester City ?",
-    "answers": [
-      "St. Mary’s",
-      "St. Mark’s",
-      "St. James’s",
-      "St. Andrew’s"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel ancien terrain de City a brûlé avant le déménagement de 1923 ?",
-    "answers": [
-      "Maine Road",
-      "The Dell",
-      "Hyde Road",
-      "Burnden Park"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel était l’adversaire de City lors de son dernier match à Maine Road en 2003 ?",
-    "answers": [
-      "West Ham",
-      "Sunderland",
-      "Tottenham",
-      "Southampton"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel adversaire City bat-il en finale de FA Cup 1904 ?",
-    "answers": [
-      "Bolton Wanderers",
-      "Everton",
-      "Portsmouth",
-      "Aston Villa"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club bat City en finale de FA Cup 1926 ?",
-    "answers": [
-      "Arsenal",
-      "Bolton Wanderers",
-      "Newcastle United",
-      "Huddersfield Town"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club bat City en finale de FA Cup 1933 ?",
-    "answers": [
-      "Arsenal",
-      "Portsmouth",
-      "Everton",
-      "Bolton Wanderers"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur de City inscrit les deux buts de la finale de FA Cup 1934 ?",
-    "answers": [
-      "Eric Brook",
-      "Frank Swift",
-      "Peter Doherty",
-      "Fred Tilson"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club City affronte-t-il devant une affluence de 84 569 personnes à Maine Road en 1934 ?",
-    "answers": [
-      "Stoke City",
-      "Everton",
-      "Bolton Wanderers",
-      "Leicester City"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel gardien historique de City figure parmi les victimes de la catastrophe aérienne de Munich en 1958 ?",
-    "answers": [
-      "Bert Trautmann",
-      "Frank Swift",
-      "Joe Corrigan",
-      "Harry Dowd"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club bat City en finale de FA Cup 1955 ?",
-    "answers": [
-      "Birmingham City",
-      "Leicester City",
-      "Newcastle United",
-      "Tottenham"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel entraîneur dirige City lors du titre de championnat 1967-68 ?",
-    "answers": [
-      "Malcolm Allison",
-      "Ron Saunders",
-      "Tony Book",
-      "Joe Mercer"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club City bat-il lors de la dernière journée décisive du championnat 1967-68 ?",
-    "answers": [
-      "Newcastle United",
-      "Manchester United",
-      "Leeds United",
-      "Sunderland"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur a inscrit le but victorieux contre Leicester en finale de FA Cup 1969 ?",
-    "answers": [
-      "Colin Bell",
-      "Neil Young",
-      "Mike Summerbee",
-      "Francis Lee"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club City bat-il en finale de Coupe de la Ligue 1970 ?",
-    "answers": [
-      "Aston Villa",
-      "Newcastle United",
-      "West Bromwich Albion",
-      "Wolverhampton"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club City bat-il en finale de Coupe de la Ligue 1976 ?",
-    "answers": [
-      "Aston Villa",
-      "Wolverhampton",
-      "Arsenal",
-      "Newcastle United"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur signe un retourné acrobatique en finale de Coupe de la Ligue 1976 ?",
-    "answers": [
-      "Dennis Tueart",
-      "Peter Barnes",
-      "Colin Bell",
-      "Mike Summerbee"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel jeune joueur marque l’autre but de City en finale de Coupe de la Ligue 1976 ?",
-    "answers": [
-      "Dennis Tueart",
-      "Peter Barnes",
-      "Francis Lee",
-      "Tony Book"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel adversaire bat City en finale de FA Cup 1981 après un match d’appui ?",
-    "answers": [
-      "Arsenal",
-      "West Ham",
-      "Tottenham",
-      "Ipswich Town"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur de City marque une volée lors du match d’appui de la finale de FA Cup 1981 ?",
-    "answers": [
-      "Paul Power",
-      "Tommy Hutchison",
-      "Kevin Reeves",
-      "Steve MacKenzie"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club City bat-il 10-1 en championnat en 1987 ?",
-    "answers": [
-      "Huddersfield Town",
-      "Bradford City",
-      "Notts County",
-      "Plymouth Argyle"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club City bat-il 5-1 dans le derby de Manchester de 1989 ?",
-    "answers": [
-      "Bolton Wanderers",
-      "Manchester United",
-      "Leeds United",
-      "Liverpool"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel adversaire City bat-il aux tirs au but en barrage de troisième division 1999 ?",
-    "answers": [
-      "Wigan Athletic",
-      "Millwall",
-      "Gillingham",
-      "Walsall"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club City bat-il à Ewood Park pour décrocher la montée en Premier League en 2000 ?",
-    "answers": [
-      "Bolton Wanderers",
-      "Burnley",
-      "Preston North End",
-      "Blackburn Rovers"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur City achète-t-il au Real Madrid en 2008 pour un montant record à l’époque ?",
-    "answers": [
-      "Robinho",
-      "Elano",
-      "Jô",
-      "Roque Santa Cruz"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel groupe rachète Manchester City en 2008 ?",
-    "answers": [
-      "City Football Group",
-      "Abu Dhabi United Group",
-      "Fenway Sports Group",
-      "Red Bull GmbH"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel Suédois entraîne City à partir de 2007 ?",
-    "answers": [
-      "Lars Lagerbäck",
-      "Erik Hamrén",
-      "Sven-Göran Eriksson",
-      "Roy Hodgson"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel attaquant inscrit l’unique but de la finale de FA Cup 2011 contre Stoke ?",
-    "answers": [
-      "Sergio Agüero",
-      "Carlos Tévez",
-      "Mario Balotelli",
-      "Yaya Touré"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur marque le but décisif de City en demi-finale de FA Cup 2011 contre Manchester United ?",
-    "answers": [
-      "Yaya Touré",
-      "David Silva",
-      "James Milner",
-      "Edin Džeko"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel adversaire City bat-il 3-1 en finale de Coupe de la Ligue 2014 ?",
-    "answers": [
-      "Liverpool",
-      "Sunderland",
-      "Chelsea",
-      "Arsenal"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel gardien de City arrête trois tirs au but en finale de Coupe de la Ligue 2016 ?",
-    "answers": [
-      "Joe Hart",
-      "Ederson",
-      "Willy Caballero",
-      "Claudio Bravo"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club City bat-il aux tirs au but en finale de Coupe de la Ligue 2016 ?",
-    "answers": [
-      "Arsenal",
-      "Chelsea",
-      "Southampton",
-      "Liverpool"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel attaquant algérien inscrit un doublé en demi-finale retour de Ligue des champions 2021 contre le PSG ?",
-    "answers": [
-      "Riyad Mahrez",
-      "Ilkay Gündogan",
-      "Gabriel Jesus",
-      "Ferrán Torres"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club City bat-il 4-0 en demi-finale retour de Ligue des champions 2023 ?",
-    "answers": [
-      "Bayern Munich",
-      "Real Madrid",
-      "Inter Milan",
-      "Paris Saint-Germain"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club City élimine-t-il en quart de finale de Ligue des champions 2023 avant le Real Madrid ?",
-    "answers": [
-      "RB Leipzig",
-      "Borussia Dortmund",
-      "Bayern Munich",
-      "Napoli"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur de Chelsea marque l’unique but de la finale de Ligue des champions 2021 contre City ?",
-    "answers": [
-      "Mason Mount",
-      "Timo Werner",
-      "Hakim Ziyech",
-      "Kai Havertz"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur de City marque deux buts lors de la victoire 3-1 contre West Ham en mai 2024 ?",
-    "answers": [
-      "Phil Foden",
-      "Erling Haaland",
-      "Julián Álvarez",
+      "İlkay Gündoğan",
+      "Kevin De Bruyne",
       "Rodri"
     ],
-    "correct": 0,
-    "difficulty": "hard"
+    "correct": 3
   },
   {
-    "text": "Quel joueur inscrit le troisième but de City contre West Ham lors de la dernière journée 2023-24 ?",
+    "text": "Contre quel club City a-t-il perdu la finale de Ligue des champions 2021 ?",
     "answers": [
-      "Phil Foden",
-      "Rodri",
-      "Bernardo Silva",
+      "Liverpool",
+      "Le Real Madrid",
+      "Chelsea",
+      "Le Bayern Munich"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel triplé City a-t-il réalisé en 2023 ?",
+    "answers": [
+      "Premier League, Coupe de la Ligue et Europa League",
+      "Premier League, FA Cup et Ligue des champions",
+      "FA Cup, Supercoupe et Mondial des clubs",
+      "Aucun"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel attaquant norvégien a battu le record de buts sur une saison de Premier League en 2022-2023 ?",
+    "answers": [
+      "Martin Ødegaard",
+      "Erling Haaland",
+      "Joshua King",
+      "Alexander Sørloth"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de buts Haaland a-t-il inscrits en Premier League lors de sa première saison ?",
+    "answers": [
+      "36",
+      "28",
+      "32",
+      "40"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel milieu belge a été le maître à jouer de City de 2015 à 2025 ?",
+    "answers": [
+      "Eden Hazard",
+      "Youri Tielemans",
+      "Axel Witsel",
       "Kevin De Bruyne"
     ],
-    "correct": 1,
-    "difficulty": "hard"
+    "correct": 3
   },
   {
-    "text": "Quel club City bat-il 6-0 en finale de FA Cup 2019 ?",
+    "text": "Quel attaquant argentin est le meilleur buteur de l'histoire de Manchester City ?",
     "answers": [
-      "Crystal Palace",
-      "Wigan Athletic",
-      "Watford",
-      "Stoke City"
+      "Carlos Tévez",
+      "Julián Álvarez",
+      "Gabriel Batistuta",
+      "Sergio Agüero"
     ],
-    "correct": 2,
-    "difficulty": "hard"
+    "correct": 3
   },
   {
-    "text": "Quel gardien chilien de City était titulaire en finale de Coupe de la Ligue 2020 ?",
+    "text": "Quel but mythique Agüero a-t-il marqué en mai 2012 ?",
+    "answers": [
+      "Le but du titre à la 93e minute contre QPR",
+      "Un but de la tête en finale européenne",
+      "Un retourné contre United",
+      "Un but du milieu de terrain"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel pays est lié au propriétaire de City depuis 2008 ?",
+    "answers": [
+      "Le Qatar",
+      "L'Arabie saoudite",
+      "Les Émirats arabes unis",
+      "Les États-Unis"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel dirigeant émirati est propriétaire de Manchester City ?",
+    "answers": [
+      "Nasser Al-Khelaïfi",
+      "Cheikh Mansour",
+      "Mohammed ben Salmane",
+      "Tamim ben Hamad Al Thani"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel capitaine belge a soulevé les titres de City dans les années 2010 ?",
+    "answers": [
+      "Thomas Vermaelen",
+      "Vincent Kompany",
+      "Jan Vertonghen",
+      "Toby Alderweireld"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel gardien brésilien est titulaire à City depuis 2017 ?",
     "answers": [
       "Ederson",
-      "Willy Caballero",
-      "Stefan Ortega",
-      "Claudio Bravo"
+      "Alisson Becker",
+      "Júlio César",
+      "Weverton"
     ],
-    "correct": 3,
-    "difficulty": "hard"
+    "correct": 0
   },
   {
-    "text": "En quelle année Ardwick devient-il membre fondateur de la deuxième division anglaise ?",
+    "text": "Combien de titres de Premier League consécutifs City a-t-il remportés de 2021 à 2024 ?",
     "answers": [
-      "1892",
-      "1887",
-      "1894",
-      "1899"
+      "2",
+      "3",
+      "4",
+      "5"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 2
   },
   {
-    "text": "Quel nom le prédécesseur de City porte-t-il de 1887 à 1894 ?",
-    "answers": [
-      "St. Mark’s FC",
-      "Ardwick AFC",
-      "Newton Heath",
-      "Manchester Central"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Contre quel adversaire City obtient-il son record historique de 11-3 en championnat en 1895 ?",
-    "answers": [
-      "Huddersfield Town",
-      "Stoke City",
-      "Lincoln City",
-      "Everton"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quelle saison correspond à la première victoire du club en deuxième division ?",
-    "answers": [
-      "1902-03",
-      "1909-10",
-      "1927-28",
-      "1898-99"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel adversaire City bat-il 6-1 à Old Trafford en championnat en 1926 ?",
+    "text": "Quel club est le premier à avoir remporté quatre titres de champion d'Angleterre consécutifs ?",
     "answers": [
       "Manchester United",
-      "Bolton Wanderers",
-      "Leeds United",
-      "Birmingham City"
+      "Manchester City",
+      "Liverpool",
+      "Arsenal"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 1
   },
   {
-    "text": "Quelle année City est-il à la fois finaliste de FA Cup et relégué en championnat ?",
+    "text": "Quel milieu portugais surnommé « Bernardo » joue à City depuis 2017 ?",
     "answers": [
-      "1923",
-      "1926",
-      "1934",
-      "1938"
+      "João Cancelo",
+      "Rúben Dias",
+      "Bernardo Silva",
+      "João Félix"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 2
   },
   {
-    "text": "Quelle particularité suit le premier titre de champion de City en 1937 ?",
+    "text": "Quel défenseur portugais a été élu joueur de l'année en Premier League en 2021 ?",
     "answers": [
-      "Un doublé européen",
-      "Une saison sans défaite",
-      "Une relégation la saison suivante",
-      "Une fusion avec United"
+      "João Cancelo",
+      "Pepe",
+      "Bruno Alves",
+      "Rúben Dias"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 3
   },
   {
-    "text": "Quel a été le score de la victoire de City contre Stoke en finale de FA Cup 2011 ?",
+    "text": "Quel milieu anglais formé à City est surnommé « l'Iniesta de Stockport » ?",
     "answers": [
-      "2-0",
-      "2-1",
-      "3-1",
-      "1-0"
+      "Jack Grealish",
+      "Raheem Sterling",
+      "Phil Foden",
+      "Cole Palmer"
     ],
-    "correct": 3,
-    "difficulty": "expert"
+    "correct": 2
   },
   {
-    "text": "Quel joueur de City détient le record du club avec 680 apparitions officielles selon ses archives ?",
+    "text": "Quel ailier anglais a coûté 100 millions de livres à City en 2021 ?",
     "answers": [
-      "Alan Oakes",
-      "Colin Bell",
-      "Mike Summerbee",
-      "Tony Book"
+      "Raheem Sterling",
+      "Jack Grealish",
+      "Jadon Sancho",
+      "Bukayo Saka"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 1
   },
   {
-    "text": "Quel joueur détient le record de 260 buts pour City selon ses archives ?",
+    "text": "Quel entraîneur italien a remporté le titre 2012 avec City ?",
     "answers": [
-      "Eric Brook",
+      "Roberto Mancini",
+      "Carlo Ancelotti",
+      "Claudio Ranieri",
+      "Antonio Conte"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel entraîneur chilien a remporté la Premier League 2014 avec City ?",
+    "answers": [
+      "Manuel Pellegrini",
+      "Marcelo Bielsa",
+      "Jorge Sampaoli",
+      "Ricardo Gareca"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Comment s'appelait l'ancien stade de City jusqu'en 2003 ?",
+    "answers": [
+      "Highbury",
+      "White Hart Lane",
+      "Boundary Park",
+      "Maine Road"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel club est le rival historique de City dans le derby de Manchester ?",
+    "answers": [
+      "Liverpool",
+      "Bolton",
+      "Manchester United",
+      "Oldham"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Combien de points City a-t-il obtenus lors de la saison record 2017-2018 ?",
+    "answers": [
+      "100",
+      "90",
+      "95",
+      "105"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel milieu ivoirien a été une figure de City dans les années 2010 ?",
+    "answers": [
+      "Yaya Touré",
+      "Didier Drogba",
+      "Wilfried Bony",
+      "Gervinho"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel milieu allemand, capitaine du triplé, a marqué deux buts en finale de FA Cup 2023 ?",
+    "answers": [
+      "Toni Kroos",
+      "Leroy Sané",
+      "Joshua Kimmich",
+      "İlkay Gündoğan"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel défenseur français champion du monde 2018 a joué à City ?",
+    "answers": [
+      "Raphaël Varane",
+      "Samuel Umtiti",
+      "Lucas Hernandez",
+      "Benjamin Mendy"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel défenseur croate a rejoint City en 2023 en provenance de Leipzig ?",
+    "answers": [
+      "Dejan Lovren",
+      "Duje Ćaleta-Car",
+      "Domagoj Vida",
+      "Joško Gvardiol"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel attaquant argentin a remporté la Coupe du monde 2022 en étant joueur de City ?",
+    "answers": [
+      "Julián Álvarez",
       "Sergio Agüero",
-      "Tommy Johnson",
-      "Francis Lee"
+      "Lautaro Martínez",
+      "Paulo Dybala"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 0
   },
   {
-    "text": "Quel nombre de buts City inscrit-il en compétitions officielles en 2018-19 selon ses archives ?",
+    "text": "Quel milieu espagnol de City a remporté le Ballon d'or 2024 ?",
     "answers": [
-      "153",
-      "162",
-      "169",
-      "174"
+      "Bernardo Silva",
+      "Rodri",
+      "David Silva",
+      "Pedri"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 1
   },
   {
-    "text": "Quel nombre de buts Erling Haaland marque-t-il en Premier League 2022-23 ?",
+    "text": "Quel meneur espagnol surnommé « El Mago » a joué à City de 2010 à 2020 ?",
     "answers": [
-      "33",
-      "34",
-      "38",
-      "36"
+      "Juan Mata",
+      "David Silva",
+      "Santi Cazorla",
+      "Isco"
     ],
-    "correct": 3,
-    "difficulty": "expert"
+    "correct": 1
   },
   {
-    "text": "Quel nombre de victoires consécutives toutes compétitions confondues City réussit-il de décembre 2020 à mars 2021 ?",
+    "text": "Quel ailier anglais a quitté City pour Chelsea en 2022 ?",
     "answers": [
-      "21",
-      "18",
-      "19",
-      "23"
+      "Cole Palmer",
+      "Jack Grealish",
+      "Raheem Sterling",
+      "Phil Foden"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 2
   },
   {
-    "text": "Quelle affluence record City reçoit-il contre Stoke à Maine Road en mars 1934 ?",
+    "text": "Quel jeune attaquant formé à City a explosé à Chelsea à partir de 2023 ?",
     "answers": [
-      "79 214",
-      "84 569",
-      "82 602",
-      "86 012"
+      "Cole Palmer",
+      "Phil Foden",
+      "Jadon Sancho",
+      "Liam Delap"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 0
   },
   {
-    "text": "Quelle équipe City bat-il 7-0 lors de son record européen de mars 2019 ?",
+    "text": "Quel club City a-t-il battu en finale de la Coupe du monde des clubs 2023 ?",
     "answers": [
-      "RB Leipzig",
-      "Borussia Mönchengladbach",
-      "Schalke 04",
-      "Shakhtar Donetsk"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel nombre de buts City encaisse-t-il lors de la victoire 10-1 contre Huddersfield en 1987 ?",
-    "answers": [
-      "Aucun",
-      "Deux",
-      "Trois",
-      "Un"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel mot latin apparaît sur l’écusson de City dévoilé en 1997 ?",
-    "answers": [
-      "Superbia",
-      "Fortitudo",
-      "Gloria",
-      "Victoria"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel est l’écart de buts de City en Premier League lors de sa saison à 100 points en 2017-18 ?",
-    "answers": [
-      "+72",
-      "+79",
-      "+75",
-      "+83"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Combien de titres consécutifs de Coupe de la Ligue City remporte-t-il de 2018 à 2021 ?",
-    "answers": [
-      "Deux",
-      "Trois",
-      "Quatre",
-      "Cinq"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel club City bat-il 3-0 en demi-finale de Coupe du monde des clubs 2023 ?",
-    "answers": [
-      "Fluminense",
-      "Al Ahly",
+      "Flamengo",
       "Palmeiras",
-      "Urawa Red Diamonds"
+      "Al Ahly",
+      "Fluminense"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "En quelle année le club a-t-il été fondé sous le nom de St. Mark's (West Gorton) ?",
+    "answers": [
+      "1880",
+      "1894",
+      "1902",
+      "1878"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année le club a-t-il pris le nom de Manchester City ?",
+    "answers": [
+      "1880",
+      "1894",
+      "1920",
+      "1903"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année City a-t-il été racheté par l'Abu Dhabi United Group ?",
+    "answers": [
+      "2005",
+      "2011",
+      "2008",
+      "2003"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel était le score final de City - QPR le jour du but d'Agüero en 2012 ?",
+    "answers": [
+      "2-1",
+      "1-0",
+      "4-3",
+      "3-2"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle coupe européenne City avait-il remportée en 1970 ?",
+    "answers": [
+      "La Coupe UEFA",
+      "La Coupe des clubs champions",
+      "La Coupe des coupes",
+      "La Coupe Intertoto"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de points d'avance sur ses poursuivants City avait-il en 2017-2018 ?",
+    "answers": [
+      "1",
+      "5",
+      "30",
+      "19"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quel club City a-t-il perdu la finale de la Ligue des champions 2021 à Porto ?",
+    "answers": [
+      "Liverpool",
+      "Tottenham",
+      "Arsenal",
+      "Chelsea"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a marqué le but de Chelsea en finale 2021 contre City ?",
+    "answers": [
+      "Kai Havertz",
+      "Timo Werner",
+      "Mason Mount",
+      "N'Golo Kanté"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club City a-t-il battu en finale de la Supercoupe d'Europe 2023 ?",
+    "answers": [
+      "Séville",
+      "Le Real Madrid",
+      "Villarreal",
+      "L'Inter Milan"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel latéral anglais a été capitaine de City après le départ de Gündoğan en 2023 ?",
+    "answers": [
+      "John Stones",
+      "Joe Hart",
+      "Micah Richards",
+      "Kyle Walker"
     ],
     "correct": 3,
     "difficulty": "expert"

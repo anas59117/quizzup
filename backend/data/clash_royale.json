@@ -20,7 +20,7 @@
     "correct": 1
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : combattant de mêlée peu coûteux à moustache ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : combattant de mêlée peu coûteux à moustache ?",
     "answers": [
       "Archères",
       "Boule de feu",
@@ -50,7 +50,7 @@
     "correct": 0
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : duo d’unités à distance capables de viser l’air ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : duo d’unités à distance capables de viser l’air ?",
     "answers": [
       "Géant",
       "Archères",
@@ -80,7 +80,7 @@
     "correct": 3
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : unité résistante qui cible uniquement les bâtiments ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : unité résistante qui cible uniquement les bâtiments ?",
     "answers": [
       "Géant",
       "Mousquetaire",
@@ -102,15 +102,15 @@
   {
     "text": "Dans « Clash Royale », à quel type de carte Géant appartient-elle ?",
     "answers": [
-      "Troupe",
+      "Sort",
       "Bâtiment",
-      "Condition de victoire",
+      "Troupe",
       "Champion"
     ],
     "correct": 2
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : tireuse à longue portée utilisant un mousquet ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : tireuse à longue portée utilisant un mousquet ?",
     "answers": [
       "Mini P.E.K.K.A",
       "Chevaucheur de cochon",
@@ -140,7 +140,7 @@
     "correct": 1
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : robot rapide infligeant de lourds dégâts en mêlée ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : robot rapide infligeant de lourds dégâts en mêlée ?",
     "answers": [
       "Boule de feu",
       "Princesse",
@@ -170,7 +170,7 @@
     "correct": 0
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : sort de zone qui repousse légèrement les unités ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : sort de zone qui repousse légèrement les unités ?",
     "answers": [
       "Flèches",
       "Boule de feu",
@@ -200,7 +200,7 @@
     "correct": 3
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : sort couvrant une large zone contre les essaims ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : sort couvrant une large zone contre les essaims ?",
     "answers": [
       "Flèches",
       "Tour de l’enfer",
@@ -230,7 +230,7 @@
     "correct": 2
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : bâtiment dont les dégâts augmentent sur une même cible ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : bâtiment dont les dégâts augmentent sur une même cible ?",
     "answers": [
       "Chevaucheur de cochon",
       "Cimetière",
@@ -260,7 +260,7 @@
     "correct": 1
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : combattant rapide sautant la rivière et visant les bâtiments ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : combattant rapide sautant la rivière et visant les bâtiments ?",
     "answers": [
       "Princesse",
       "Méga chevalier",
@@ -282,15 +282,15 @@
   {
     "text": "Dans « Clash Royale », à quel type de carte Chevaucheur de cochon appartient-elle ?",
     "answers": [
-      "Condition de victoire",
       "Troupe",
+      "Sort",
       "Bâtiment",
       "Champion"
     ],
     "correct": 0
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : unité légendaire tirant de très loin des flèches de zone ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : unité légendaire tirant de très loin des flèches de zone ?",
     "answers": [
       "La Bûche",
       "Princesse",
@@ -320,7 +320,7 @@
     "correct": 3
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : sort légendaire roulant au sol et repoussant les troupes ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : sort légendaire roulant au sol et repoussant les troupes ?",
     "answers": [
       "La Bûche",
       "Mineur",
@@ -350,7 +350,7 @@
     "correct": 2
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : unité légendaire pouvant être déployée presque partout ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : unité légendaire pouvant être déployée presque partout ?",
     "answers": [
       "Cimetière",
       "Chevalier",
@@ -372,15 +372,15 @@
   {
     "text": "Dans « Clash Royale », à quel type de carte Mineur appartient-elle ?",
     "answers": [
+      "Sort",
       "Troupe",
-      "Condition de victoire",
       "Bâtiment",
       "Champion"
     ],
     "correct": 1
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : sort légendaire invoquant des squelettes progressivement ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : sort légendaire invoquant des squelettes progressivement ?",
     "answers": [
       "Méga chevalier",
       "Archères",
@@ -402,7 +402,7 @@
   {
     "text": "Dans « Clash Royale », à quel type de carte Cimetière appartient-elle ?",
     "answers": [
-      "Condition de victoire",
+      "Sort",
       "Troupe",
       "Bâtiment",
       "Champion"
@@ -410,7 +410,7 @@
     "correct": 0
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : unité lourde infligeant des dégâts en arrivant et en sautant ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : unité lourde infligeant des dégâts en arrivant et en sautant ?",
     "answers": [
       "Machine volante",
       "Méga chevalier",
@@ -440,7 +440,7 @@
     "correct": 3
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : unité aérienne à distance construite par le maître bâtisseur ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : unité aérienne à distance construite par le maître bâtisseur ?",
     "answers": [
       "Machine volante",
       "Extracteur d’élixir",
@@ -470,7 +470,7 @@
     "correct": 2
   },
   {
-    "text": "Dans « Clash Royale », Quelle carte correspond à cette description : bâtiment qui produit de l’élixir au fil du temps ?",
+    "text": "Dans « Clash Royale », quelle carte correspond à cette description : bâtiment qui produit de l’élixir au fil du temps ?",
     "answers": [
       "Chevalier",
       "Mini P.E.K.K.A",

@@ -1,1102 +1,502 @@
 [
   {
-    "text": "Dans quelle ville le SSC Napoli évolue-t-il ?",
+    "text": "Dans quelle ville joue le SSC Napoli ?",
     "answers": [
       "Naples",
       "Rome",
-      "Milan",
-      "Turin"
+      "Turin",
+      "Florence"
     ],
-    "correct": 0,
-    "difficulty": "easy"
+    "correct": 0
   },
   {
-    "text": "Quelles sont les couleurs emblématiques de Naples ?",
-    "answers": [
-      "Rouge et noir",
-      "Bleu ciel et blanc",
-      "Noir et blanc",
-      "Bleu et noir"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel stade accueille les matches du Napoli ?",
-    "answers": [
-      "Le stade olympique",
-      "San Siro",
-      "Le stade Diego Armando Maradona",
-      "Le stade Artemio-Franchi"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel était l’ancien nom du stade Diego Armando Maradona ?",
-    "answers": [
-      "Stadio Partenopeo",
-      "Stadio Vesuvio",
-      "Stadio Collana",
-      "Stadio San Paolo"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel surnom du Napoli fait référence aux habitants de l’ancienne Parthénope ?",
-    "answers": [
-      "I Partenopei",
-      "I Rossoneri",
-      "I Bianconeri",
-      "I Giallorossi"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel numéro a été retiré par Naples en hommage à Diego Maradona ?",
+    "text": "Quel numéro a été retiré par Naples en hommage à Maradona ?",
     "answers": [
       "Le 7",
       "Le 10",
       "Le 9",
       "Le 11"
     ],
-    "correct": 1,
-    "difficulty": "easy"
+    "correct": 1
   },
   {
-    "text": "En quelle année Diego Maradona a-t-il rejoint Naples ?",
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : numéro 10 argentin ayant conduit le club à ses deux premiers Scudetti ?",
     "answers": [
-      "1982",
-      "1986",
-      "1984",
-      "1988"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "De quel club Diego Maradona est-il arrivé à Naples ?",
-    "answers": [
-      "Boca Juniors",
-      "Argentinos Juniors",
-      "Le FC Séville",
-      "Le FC Barcelone"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "En quelle saison Naples a-t-il remporté son premier Scudetto ?",
-    "answers": [
-      "1986-1987",
-      "1984-1985",
-      "1987-1988",
-      "1988-1989"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel entraîneur dirigeait Naples lors du premier Scudetto ?",
-    "answers": [
-      "Alberto Bigon",
-      "Ottavio Bianchi",
-      "Marcello Lippi",
-      "Claudio Ranieri"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel trophée européen Naples a-t-il remporté en 1989 ?",
-    "answers": [
-      "La Coupe des vainqueurs de coupe",
-      "La Coupe des clubs champions",
-      "La Coupe UEFA",
-      "La Coupe Intertoto"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club Naples a-t-il battu en finale de Coupe UEFA 1989 ?",
-    "answers": [
-      "Le Bayern Munich",
-      "Le Werder Brême",
-      "Le Bayer Leverkusen",
-      "Le VfB Stuttgart"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel attaquant brésilien formait un trio célèbre avec Maradona et Alemão ?",
-    "answers": [
-      "Careca",
-      "Zico",
-      "Sócrates",
-      "Bebeto"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "En quelle saison Naples a-t-il remporté son deuxième Scudetto ?",
-    "answers": [
-      "1988-1989",
-      "1989-1990",
-      "1990-1991",
-      "1991-1992"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel entraîneur a conduit Naples au deuxième Scudetto ?",
-    "answers": [
-      "Ottavio Bianchi",
-      "Marcello Lippi",
-      "Alberto Bigon",
-      "Luigi Simoni"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel entraîneur a mené Naples au titre de Serie A 2022-2023 ?",
-    "answers": [
-      "Maurizio Sarri",
-      "Carlo Ancelotti",
-      "Rafael Benítez",
-      "Luciano Spalletti"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel attaquant nigérian fut le meilleur buteur de Serie A 2022-2023 ?",
-    "answers": [
-      "Victor Osimhen",
       "Dries Mertens",
-      "Edinson Cavani",
+      "Giuseppe Bruscolotti",
+      "Diego Maradona",
       "Khvicha Kvaratskhelia"
     ],
-    "correct": 0,
-    "difficulty": "easy"
+    "correct": 2
   },
   {
-    "text": "Quel ailier géorgien a brillé lors du titre 2022-2023 ?",
+    "text": "Dans « Napoli », quelle description correspond à Diego Maradona ?",
     "answers": [
-      "Giorgi Chakvetadze",
-      "Khvicha Kvaratskhelia",
-      "Zuriko Davitashvili",
-      "Georges Mikautadze"
+      "milieu slovaque à la crête devenu capitaine",
+      "entraîneur du premier doublé championnat-coupe",
+      "ailier napolitain formé au club et longtemps capitaine",
+      "numéro 10 argentin ayant conduit le club à ses deux premiers Scudetti"
     ],
-    "correct": 1,
-    "difficulty": "easy"
+    "correct": 3
   },
   {
-    "text": "Quel Slovaque a longtemps été capitaine de Naples ?",
+    "text": "Comment s'appelle le stade de Naples depuis 2020 ?",
     "answers": [
-      "Stanislav Lobotka",
-      "Milan Škriniar",
-      "Marek Hamšík",
-      "Martin Škrtel"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel Belge est devenu le meilleur buteur historique du Napoli ?",
-    "answers": [
-      "Romelu Lukaku",
-      "Kevin De Bruyne",
-      "Eden Hazard",
-      "Dries Mertens"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "En quelle année l’Associazione Calcio Napoli a-t-elle été fondée ?",
-    "answers": [
-      "1926",
-      "1904",
-      "1912",
-      "1930"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel entrepreneur fut le premier président de l’Associazione Calcio Napoli ?",
-    "answers": [
-      "Achille Lauro",
-      "Giorgio Ascarelli",
-      "Corrado Ferlaino",
-      "Aurelio De Laurentiis"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Sous quel nom le club adopte-t-il l’appellation SSC Napoli en 1964 ?",
-    "answers": [
-      "Società Sportiva Città Napoli",
-      "Sporting Soccer Club Napoli",
-      "Società Sportiva Calcio Napoli",
-      "Società del Calcio Napoletano"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel animal est devenu la mascotte populaire du Napoli ?",
-    "answers": [
-      "Le loup",
-      "Le taureau",
-      "L’aigle",
-      "L’âne"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "En quelle année Naples a-t-il remporté sa première Coupe d’Italie ?",
-    "answers": [
-      "1962",
-      "1959",
-      "1965",
-      "1976"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Naples a-t-il battu en finale de Coupe d’Italie 1962 ?",
-    "answers": [
-      "La Fiorentina",
-      "La SPAL",
-      "Le Torino",
-      "L’Atalanta"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Pourquoi le succès en Coupe d’Italie 1962 est-il exceptionnel ?",
-    "answers": [
-      "La finale s’est jouée à Naples",
-      "Le club n’a encaissé aucun but du tournoi",
-      "Naples évoluait en Serie B",
-      "Le trophée fut gagné sans prolongation"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel fut le score de la finale de Coupe d’Italie 1962 ?",
-    "answers": [
-      "1-0",
-      "3-1",
-      "2-0",
-      "2-1"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Naples a-t-il battu 4-0 en finale de Coupe d’Italie 1976 ?",
-    "answers": [
-      "L’Hellas Vérone",
-      "La Juventus",
-      "Le Torino",
-      "L’Inter Milan"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Dans quel stade s’est jouée la finale de Coupe d’Italie 1976 ?",
-    "answers": [
-      "San Siro",
-      "Le Stadio Olimpico de Rome",
+      "Le stade Diego-Armando-Maradona",
       "Le San Paolo",
-      "Le Comunale de Turin"
+      "San Siro",
+      "Le Stadio Olimpico"
     ],
-    "correct": 1,
-    "difficulty": "medium"
+    "correct": 0
   },
   {
-    "text": "Quel doublé Naples a-t-il réalisé en 1986-1987 ?",
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : attaquant belge devenu meilleur buteur historique du club ?",
     "answers": [
-      "Serie A et Coupe UEFA",
-      "Coupe d’Italie et Coupe UEFA",
-      "Serie A et Coupe d’Italie",
-      "Serie A et Supercoupe d’Italie"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Naples a-t-il battu en finale de Coupe d’Italie 1987 ?",
-    "answers": [
-      "La Sampdoria",
-      "Le Torino",
-      "L’Inter Milan",
-      "L’Atalanta"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel fut le score cumulé de la finale aller-retour de Coupe d’Italie 1987 ?",
-    "answers": [
-      "4-0",
-      "3-0",
-      "4-1",
-      "5-1"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Combien de matches Naples a-t-il gagnés dans la Coupe d’Italie 1986-1987 ?",
-    "answers": [
-      "12 sur 13",
-      "13 sur 13",
-      "11 sur 13",
-      "10 sur 12"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Naples a-t-il battu en Supercoupe d’Italie 1990 ?",
-    "answers": [
-      "L’AC Milan",
-      "La Sampdoria",
-      "La Juventus",
-      "L’Inter Milan"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel fut le score de la Supercoupe d’Italie 1990 ?",
-    "answers": [
-      "4-0",
-      "3-1",
-      "4-1",
-      "5-1"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur a marqué le but décisif contre la Lazio lors de la dernière journée du Scudetto 1990 ?",
-    "answers": [
-      "Marco Baroni",
-      "Careca",
-      "Diego Maradona",
-      "Andrea Carnevale"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club termina deuxième derrière Naples en Serie A 1989-1990 ?",
-    "answers": [
-      "L’Inter Milan",
-      "L’AC Milan",
-      "La Juventus",
-      "La Sampdoria"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Naples a-t-il battu en finale de Coupe d’Italie 2012 ?",
-    "answers": [
-      "L’Inter Milan",
-      "L’AS Rome",
-      "La Juventus",
-      "La Lazio"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quels joueurs ont marqué pour Naples en finale de Coupe d’Italie 2012 ?",
-    "answers": [
-      "Ezequiel Lavezzi et Edinson Cavani",
-      "Marek Hamšík et Goran Pandev",
-      "Edinson Cavani et Lorenzo Insigne",
-      "Edinson Cavani et Marek Hamšík"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel fut le score du match aller de la finale de Coupe UEFA 1989 ?",
-    "answers": [
-      "Naples 2-1 Stuttgart",
-      "Naples 1-0 Stuttgart",
-      "Naples 3-1 Stuttgart",
-      "Naples 2-0 Stuttgart"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur de Stuttgart a ouvert le score au match aller de la finale 1989 ?",
-    "answers": [
-      "Jürgen Klinsmann",
-      "Maurizio Gaudino",
-      "Karl Allgöwer",
-      "Guido Buchwald"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Qui a égalisé sur penalty pour Naples au match aller de la finale 1989 ?",
-    "answers": [
-      "Careca",
-      "Alemão",
-      "Diego Maradona",
-      "Andrea Carnevale"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Qui a marqué le but victorieux de Naples au match aller de la finale 1989 ?",
-    "answers": [
-      "Diego Maradona",
-      "Ciro Ferrara",
-      "Alemão",
-      "Careca"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel fut le score du match retour Stuttgart-Naples en finale 1989 ?",
-    "answers": [
-      "3-3",
-      "2-2",
-      "3-2 pour Naples",
-      "4-3 pour Stuttgart"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel fut le score cumulé de la finale de Coupe UEFA 1989 ?",
-    "answers": [
-      "4-3 pour Naples",
-      "5-4 pour Naples",
-      "6-4 pour Naples",
-      "5-3 pour Naples"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quels joueurs ont marqué pour Naples au match retour de la finale 1989 ?",
-    "answers": [
-      "Maradona, Careca et Alemão",
-      "Ciro Ferrara, Maradona et Andrea Carnevale",
-      "Alemão, Ciro Ferrara et Careca",
-      "Careca, Andrea Carnevale et Fernando De Napoli"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur de Naples a marqué contre son camp au retour de la finale 1989 ?",
-    "answers": [
-      "Ciro Ferrara",
-      "Giuseppe Bruscolotti",
-      "Alessandro Renica",
-      "Fernando De Napoli"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Naples a-t-il éliminé en demi-finale de Coupe UEFA 1989 ?",
-    "answers": [
-      "Le Bayern Munich",
-      "Le Werder Brême",
-      "Le Bayer Leverkusen",
-      "Le Borussia Dortmund"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel fut le score cumulé de la demi-finale Naples-Bayern en 1989 ?",
-    "answers": [
-      "3-1",
-      "4-2",
-      "5-3",
-      "4-3"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel adversaire Naples a-t-il éliminé aux tirs au but en quart de finale de Coupe UEFA 1989 ?",
-    "answers": [
-      "Le Torino",
-      "L’Inter Milan",
-      "La Juventus",
-      "L’AS Rome"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel déficit Naples a-t-il remonté au retour contre la Juventus en 1989 ?",
-    "answers": [
-      "Un but",
-      "Trois buts",
-      "Quatre buts",
-      "Deux buts"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur a inscrit en prolongation le but de la qualification contre la Juventus en 1989 ?",
-    "answers": [
-      "Alessandro Renica",
-      "Careca",
-      "Diego Maradona",
-      "Andrea Carnevale"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel fut le premier adversaire européen de Naples dans la campagne de Coupe UEFA 1988-1989 ?",
-    "answers": [
-      "Le Lokomotive Leipzig",
-      "Le PAOK Salonique",
-      "Les Girondins de Bordeaux",
-      "Le Sporting Portugal"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club est-allemand Naples a-t-il éliminé pendant la Coupe UEFA 1988-1989 ?",
-    "answers": [
-      "Le Dynamo Dresde",
-      "Le Carl Zeiss Iéna",
-      "Le Lokomotive Leipzig",
-      "Le Magdebourg"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club français Naples a-t-il éliminé en huitièmes de finale de Coupe UEFA 1988-1989 ?",
-    "answers": [
-      "Le Paris Saint-Germain",
-      "L’Olympique de Marseille",
-      "L’AS Monaco",
-      "Les Girondins de Bordeaux"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel fut le score de Naples-Bayern au match aller de la demi-finale 1989 ?",
-    "answers": [
-      "2-0",
-      "1-0",
-      "2-1",
-      "3-1"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel numéro Diego Maradona portait-il à Naples ?",
-    "answers": [
-      "9",
-      "10",
-      "7",
-      "11"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur a dépassé Maradona comme meilleur buteur du Napoli en 2017 ?",
-    "answers": [
-      "Dries Mertens",
-      "Edinson Cavani",
       "Marek Hamšík",
+      "Dries Mertens",
+      "Ottavio Bianchi",
       "Lorenzo Insigne"
     ],
-    "correct": 2,
-    "difficulty": "hard"
+    "correct": 1
   },
   {
-    "text": "Quel joueur a ensuite dépassé Marek Hamšík au classement des buteurs du Napoli ?",
+    "text": "Dans « Napoli », quelle description correspond à Dries Mertens ?",
     "answers": [
-      "Edinson Cavani",
-      "Lorenzo Insigne",
-      "José Callejón",
-      "Dries Mertens"
+      "avant-centre brésilien membre du trio Ma-Gi-Ca",
+      "entraîneur du troisième Scudetto après trente-trois ans",
+      "attaquant belge devenu meilleur buteur historique du club",
+      "défenseur sénégalais cadre pendant huit saisons"
     ],
-    "correct": 3,
-    "difficulty": "hard"
+    "correct": 2
   },
   {
-    "text": "Quel joueur détient le record d’apparitions officielles avec Naples ?",
+    "text": "Comment s'appelait le stade de Naples avant 2020 ?",
+    "answers": [
+      "Le Stadio delle Alpi",
+      "Le Marassi",
+      "Le Franchi",
+      "Le San Paolo"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : milieu slovaque à la crête devenu capitaine ?",
     "answers": [
       "Marek Hamšík",
-      "Giuseppe Bruscolotti",
-      "Lorenzo Insigne",
-      "Dries Mertens"
+      "Antonio Careca",
+      "Luciano Spalletti",
+      "Kalidou Koulibaly"
     ],
-    "correct": 0,
-    "difficulty": "hard"
+    "correct": 0
   },
   {
-    "text": "Combien de matches officiels Marek Hamšík a-t-il disputés pour Naples ?",
+    "text": "Dans « Napoli », quelle description correspond à Marek Hamšík ?",
     "answers": [
-      "511",
-      "520",
-      "502",
-      "535"
+      "défenseur napolitain formé au club et double champion d’Italie",
+      "milieu slovaque à la crête devenu capitaine",
+      "avant-centre nigérian meilleur buteur du championnat du troisième titre",
+      "attaquant uruguayen meilleur buteur de Serie A avec Naples"
     ],
-    "correct": 1,
-    "difficulty": "hard"
+    "correct": 1
   },
   {
-    "text": "Quel défenseur surnommé « Pal e fierr » a longtemps détenu le record d’apparitions du club ?",
+    "text": "Combien de titres de champion d'Italie Naples comptait-il après 2023 ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "5"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : avant-centre brésilien membre du trio Ma-Gi-Ca ?",
     "answers": [
       "Ciro Ferrara",
-      "Moreno Ferrario",
-      "Giuseppe Bruscolotti",
-      "Salvatore Bagni"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel défenseur napolitain a marqué au retour de la finale de Coupe UEFA 1989 ?",
-    "answers": [
-      "Fabio Cannavaro",
-      "Giuseppe Bruscolotti",
-      "Alessandro Renica",
-      "Ciro Ferrara"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel futur Ballon d’Or a commencé sa carrière professionnelle à Naples ?",
-    "answers": [
-      "Fabio Cannavaro",
-      "Gianfranco Zola",
-      "Ciro Ferrara",
-      "Andrea Pirlo"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel attaquant uruguayen a joué à Naples avant de rejoindre le Paris Saint-Germain en 2013 ?",
-    "answers": [
-      "Diego Forlán",
+      "Victor Osimhen",
       "Edinson Cavani",
-      "Luis Suárez",
-      "Darío Silva"
+      "Antonio Careca"
     ],
-    "correct": 1,
-    "difficulty": "hard"
+    "correct": 3
   },
   {
-    "text": "Quel Argentin surnommé « El Pocho » a joué à Naples de 2007 à 2012 ?",
+    "text": "Dans « Napoli », quelle description correspond à Antonio Careca ?",
     "answers": [
-      "Gonzalo Higuaín",
-      "Germán Denis",
-      "Ezequiel Lavezzi",
-      "José Sosa"
+      "avant-centre brésilien membre du trio Ma-Gi-Ca",
+      "défenseur surnommé Pal e fierro et capitaine historique",
+      "ailier géorgien élu meilleur joueur de Serie A lors du troisième titre",
+      "attaquant auteur de trente-six buts en une saison de Serie A"
     ],
-    "correct": 2,
-    "difficulty": "hard"
+    "correct": 0
   },
   {
-    "text": "Quel attaquant argentin a établi un record de 36 buts en Serie A avec Naples en 2015-2016 ?",
+    "text": "En quelle année Naples a-t-il remporté son premier Scudetto ?",
     "answers": [
-      "Diego Milito",
-      "Hernán Crespo",
-      "Mauro Icardi",
+      "1975",
+      "1987",
+      "1990",
+      "2023"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : défenseur napolitain formé au club et double champion d’Italie ?",
+    "answers": [
+      "Giuseppe Bruscolotti",
+      "Khvicha Kvaratskhelia",
+      "Ciro Ferrara",
       "Gonzalo Higuaín"
     ],
-    "correct": 3,
-    "difficulty": "hard"
+    "correct": 2
   },
   {
-    "text": "Quel entraîneur dirigeait Naples lors des 36 buts de Higuaín en 2015-2016 ?",
+    "text": "Dans « Napoli », quelle description correspond à Ciro Ferrara ?",
     "answers": [
-      "Maurizio Sarri",
-      "Rafael Benítez",
-      "Walter Mazzarri",
-      "Carlo Ancelotti"
+      "entraîneur du premier doublé championnat-coupe",
+      "ailier napolitain formé au club et longtemps capitaine",
+      "attaquant argentin membre des Trois Ténors avec Cavani et Hamšík",
+      "défenseur napolitain formé au club et double champion d’Italie"
     ],
-    "correct": 0,
-    "difficulty": "hard"
+    "correct": 3
   },
   {
-    "text": "Quel joueur a remporté la Coupe d’Italie avec Naples en 2014 puis en 2020 ?",
+    "text": "En quelle année Naples a-t-il remporté son deuxième Scudetto ?",
     "answers": [
-      "José Callejón",
+      "1990",
+      "1988",
+      "1987",
+      "1992"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : défenseur surnommé Pal e fierro et capitaine historique ?",
+    "answers": [
+      "Ottavio Bianchi",
+      "Giuseppe Bruscolotti",
       "Lorenzo Insigne",
-      "Dries Mertens",
-      "Marek Hamšík"
+      "Ezequiel Lavezzi"
     ],
-    "correct": 1,
-    "difficulty": "hard"
+    "correct": 1
   },
   {
-    "text": "Quel club Naples a-t-il battu en finale de Coupe d’Italie 2014 ?",
+    "text": "Dans « Napoli », quelle description correspond à Giuseppe Bruscolotti ?",
     "answers": [
-      "La Juventus",
-      "La Lazio",
-      "La Fiorentina",
-      "L’Inter Milan"
+      "entraîneur du troisième Scudetto après trente-trois ans",
+      "défenseur sénégalais cadre pendant huit saisons",
+      "défenseur surnommé Pal e fierro et capitaine historique",
+      "milieu combatif champion d’Italie en 1987"
     ],
-    "correct": 2,
-    "difficulty": "hard"
+    "correct": 2
   },
   {
-    "text": "Quel fut le score de la finale de Coupe d’Italie 2014 ?",
+    "text": "En quelle année Naples a-t-il retrouvé le titre de champion après 33 ans ?",
     "answers": [
-      "2-0",
-      "2-1",
-      "3-2",
-      "3-1"
+      "2020",
+      "2021",
+      "2019",
+      "2023"
     ],
-    "correct": 3,
-    "difficulty": "hard"
+    "correct": 3
   },
   {
-    "text": "Quel joueur a inscrit un doublé pour Naples en finale de Coupe d’Italie 2014 ?",
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : entraîneur du premier doublé championnat-coupe ?",
     "answers": [
-      "Lorenzo Insigne",
-      "Dries Mertens",
-      "José Callejón",
-      "Marek Hamšík"
+      "Ottavio Bianchi",
+      "Luciano Spalletti",
+      "Kalidou Koulibaly",
+      "Salvatore Bagni"
     ],
-    "correct": 0,
-    "difficulty": "hard"
+    "correct": 0
   },
   {
-    "text": "Quel joueur belge a marqué le troisième but de Naples en finale 2014 ?",
+    "text": "Dans « Napoli », quelle description correspond à Ottavio Bianchi ?",
     "answers": [
-      "Radja Nainggolan",
-      "Dries Mertens",
-      "Kevin De Bruyne",
-      "Nacer Chadli"
+      "avant-centre nigérian meilleur buteur du championnat du troisième titre",
+      "entraîneur du premier doublé championnat-coupe",
+      "attaquant uruguayen meilleur buteur de Serie A avec Naples",
+      "numéro 10 argentin ayant conduit le club à ses deux premiers Scudetti"
     ],
-    "correct": 1,
-    "difficulty": "hard"
+    "correct": 1
   },
   {
-    "text": "Quel entraîneur a remporté la Coupe d’Italie 2014 avec Naples ?",
+    "text": "Quelle couleur est associée à Naples ?",
     "answers": [
-      "Walter Mazzarri",
-      "Maurizio Sarri",
-      "Rafael Benítez",
-      "Carlo Ancelotti"
+      "Le rouge",
+      "Le noir et blanc",
+      "Le bleu ciel (azzurro)",
+      "Le vert"
     ],
-    "correct": 2,
-    "difficulty": "hard"
+    "correct": 2
   },
   {
-    "text": "Quel adversaire Naples a-t-il battu aux tirs au but en Supercoupe d’Italie 2014 ?",
-    "answers": [
-      "L’AS Rome",
-      "L’Inter Milan",
-      "La Fiorentina",
-      "La Juventus"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville la Supercoupe d’Italie 2014 s’est-elle jouée ?",
-    "answers": [
-      "Doha",
-      "Riyad",
-      "Pékin",
-      "Abou Dabi"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel fut le score avant les tirs au but lors de la Supercoupe 2014 ?",
-    "answers": [
-      "1-1",
-      "2-2",
-      "0-0",
-      "3-3"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel entraîneur a remporté la Coupe d’Italie 2020 avec Naples ?",
-    "answers": [
-      "Carlo Ancelotti",
-      "Maurizio Sarri",
-      "Gennaro Gattuso",
-      "Luciano Spalletti"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel adversaire Naples a-t-il battu en finale de Coupe d’Italie 2020 ?",
-    "answers": [
-      "L’Inter Milan",
-      "La Lazio",
-      "L’Atalanta",
-      "La Juventus"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel fut le score avant la séance de tirs au but en finale de Coupe d’Italie 2020 ?",
-    "answers": [
-      "0-0",
-      "1-1",
-      "2-2",
-      "1-0 pour Naples"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel gardien de Naples a arrêté le tir au but de Paulo Dybala en finale 2020 ?",
-    "answers": [
-      "David Ospina",
-      "Alex Meret",
-      "Pepe Reina",
-      "Rafael Cabral"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur de la Juventus a tiré au-dessus lors de la séance de 2020 ?",
-    "answers": [
-      "Leonardo Bonucci",
-      "Paulo Dybala",
-      "Danilo",
-      "Federico Bernardeschi"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel score a conclu la séance de tirs au but de la finale 2020 ?",
-    "answers": [
-      "5-4",
-      "4-3",
-      "3-2",
-      "4-2"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel club a éliminé Naples en huitièmes de finale de Ligue des champions 2012 ?",
-    "answers": [
-      "Chelsea",
-      "Le Bayern Munich",
-      "Le FC Barcelone",
-      "Le Real Madrid"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel fut le score du match aller Naples-Chelsea en 2012 ?",
-    "answers": [
-      "2-0",
-      "3-1",
-      "3-2",
-      "2-1"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel club Naples a-t-il éliminé en huitièmes de finale de Ligue des champions 2023 ?",
-    "answers": [
-      "Liverpool",
-      "Le RB Leipzig",
-      "L’Eintracht Francfort",
-      "Le Borussia Dortmund"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "À quel stade Naples est-il arrivé pour la première fois en Ligue des champions en 2023 ?",
-    "answers": [
-      "Les demi-finales",
-      "La finale",
-      "Les huitièmes de finale",
-      "Les quarts de finale"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel club a éliminé Naples en quart de finale de Ligue des champions 2023 ?",
-    "answers": [
-      "L’AC Milan",
-      "L’Inter Milan",
-      "Le Real Madrid",
-      "Manchester City"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Dans quelle ville Naples a-t-il assuré le titre de Serie A 2022-2023 ?",
-    "answers": [
-      "Turin",
-      "Udine",
-      "Milan",
-      "Rome"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel fut le score du match du titre contre l’Udinese en 2023 ?",
-    "answers": [
-      "1-0 pour Naples",
-      "2-1 pour Naples",
-      "1-1",
-      "0-0"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Qui a marqué le but de Naples lors du match du titre 2023 ?",
-    "answers": [
-      "Khvicha Kvaratskhelia",
-      "Piotr Zieliński",
-      "Giovanni Di Lorenzo",
-      "Victor Osimhen"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Combien d’années s’étaient écoulées depuis le précédent Scudetto de Naples ?",
-    "answers": [
-      "33 ans",
-      "30 ans",
-      "31 ans",
-      "32 ans"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Combien de buts Victor Osimhen a-t-il inscrits en Serie A 2022-2023 ?",
-    "answers": [
-      "24",
-      "26",
-      "25",
-      "27"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur fut élu meilleur joueur de Serie A 2022-2023 ?",
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : entraîneur du troisième Scudetto après trente-trois ans ?",
     "answers": [
       "Victor Osimhen",
-      "Kim Min-jae",
+      "Edinson Cavani",
+      "Diego Maradona",
+      "Luciano Spalletti"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Napoli », quelle description correspond à Luciano Spalletti ?",
+    "answers": [
+      "entraîneur du troisième Scudetto après trente-trois ans",
+      "ailier géorgien élu meilleur joueur de Serie A lors du troisième titre",
+      "attaquant auteur de trente-six buts en une saison de Serie A",
+      "attaquant belge devenu meilleur buteur historique du club"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel est le surnom de l'équipe de Naples ?",
+    "answers": [
+      "Les Rossoneri",
+      "Les Partenopei",
+      "Les Bianconeri",
+      "Les Viola"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : avant-centre nigérian meilleur buteur du championnat du troisième titre ?",
+    "answers": [
       "Khvicha Kvaratskhelia",
-      "Giovanni Di Lorenzo"
+      "Gonzalo Higuaín",
+      "Victor Osimhen",
+      "Dries Mertens"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 2
   },
   {
-    "text": "Quel défenseur sud-coréen fut élu meilleur défenseur de Serie A 2022-2023 ?",
+    "text": "Dans « Napoli », quelle description correspond à Victor Osimhen ?",
     "answers": [
-      "Kalidou Koulibaly",
-      "Amir Rrahmani",
-      "Giovanni Di Lorenzo",
-      "Kim Min-jae"
+      "ailier napolitain formé au club et longtemps capitaine",
+      "attaquant argentin membre des Trois Ténors avec Cavani et Hamšík",
+      "milieu slovaque à la crête devenu capitaine",
+      "avant-centre nigérian meilleur buteur du championnat du troisième titre"
     ],
-    "correct": 3,
-    "difficulty": "expert"
+    "correct": 3
   },
   {
-    "text": "Quel capitaine a soulevé le trophée de Serie A 2022-2023 ?",
+    "text": "Quelle coupe européenne Naples a-t-il remportée en 1989 ?",
     "answers": [
-      "Giovanni Di Lorenzo",
+      "La Coupe UEFA",
+      "La Coupe des clubs champions",
+      "La Coupe des coupes",
+      "La Supercoupe"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : ailier géorgien élu meilleur joueur de Serie A lors du troisième titre ?",
+    "answers": [
       "Lorenzo Insigne",
-      "Dries Mertens",
+      "Khvicha Kvaratskhelia",
+      "Ezequiel Lavezzi",
       "Marek Hamšík"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 1
   },
   {
-    "text": "Combien de points Naples a-t-il obtenu en Serie A 2017-2018 ?",
+    "text": "Dans « Napoli », quelle description correspond à Khvicha Kvaratskhelia ?",
     "answers": [
-      "89",
-      "91",
-      "90",
-      "92"
+      "défenseur sénégalais cadre pendant huit saisons",
+      "milieu combatif champion d’Italie en 1987",
+      "ailier géorgien élu meilleur joueur de Serie A lors du troisième titre",
+      "avant-centre brésilien membre du trio Ma-Gi-Ca"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 2
   },
   {
-    "text": "À quelle place Naples a-t-il terminé la Serie A 2017-2018 ?",
+    "text": "Quel producteur de cinéma est président de Naples depuis 2004 ?",
     "answers": [
-      "Premier",
-      "Troisième",
-      "Deuxième",
-      "Quatrième"
+      "Silvio Berlusconi",
+      "Massimo Moratti",
+      "Dan Friedkin",
+      "Aurelio De Laurentiis"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 3
   },
   {
-    "text": "Quel entraîneur dirigeait Naples lors de la saison à 91 points ?",
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : ailier napolitain formé au club et longtemps capitaine ?",
     "answers": [
+      "Lorenzo Insigne",
+      "Kalidou Koulibaly",
+      "Salvatore Bagni",
+      "Antonio Careca"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Napoli », quelle description correspond à Lorenzo Insigne ?",
+    "answers": [
+      "attaquant uruguayen meilleur buteur de Serie A avec Naples",
+      "ailier napolitain formé au club et longtemps capitaine",
+      "numéro 10 argentin ayant conduit le club à ses deux premiers Scudetti",
+      "défenseur napolitain formé au club et double champion d’Italie"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quelle division Naples a-t-il été refondé après sa faillite de 2004 ?",
+    "answers": [
+      "La Serie B",
+      "La Serie D",
+      "La Serie C",
+      "Aucune"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : défenseur sénégalais cadre pendant huit saisons ?",
+    "answers": [
+      "Edinson Cavani",
+      "Diego Maradona",
+      "Ciro Ferrara",
+      "Kalidou Koulibaly"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Napoli », quelle description correspond à Kalidou Koulibaly ?",
+    "answers": [
+      "défenseur sénégalais cadre pendant huit saisons",
+      "attaquant auteur de trente-six buts en une saison de Serie A",
+      "attaquant belge devenu meilleur buteur historique du club",
+      "défenseur surnommé Pal e fierro et capitaine historique"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel entraîneur a mené Naples au Scudetto 2025 ?",
+    "answers": [
+      "Luciano Spalletti",
+      "Antonio Conte",
       "Carlo Ancelotti",
-      "Walter Mazzarri",
-      "Rafael Benítez",
       "Maurizio Sarri"
     ],
-    "correct": 3,
-    "difficulty": "expert"
+    "correct": 1
+  },
+  {
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : attaquant uruguayen meilleur buteur de Serie A avec Naples ?",
+    "answers": [
+      "Gonzalo Higuaín",
+      "Dries Mertens",
+      "Edinson Cavani",
+      "Giuseppe Bruscolotti"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Napoli », quelle description correspond à Edinson Cavani ?",
+    "answers": [
+      "attaquant argentin membre des Trois Ténors avec Cavani et Hamšík",
+      "milieu slovaque à la crête devenu capitaine",
+      "entraîneur du premier doublé championnat-coupe",
+      "attaquant uruguayen meilleur buteur de Serie A avec Naples"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Combien de titres de champion d'Italie Naples compte-t-il après son sacre de 2025 ?",
+    "answers": [
+      "4",
+      "3",
+      "5",
+      "2"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : attaquant auteur de trente-six buts en une saison de Serie A ?",
+    "answers": [
+      "Ezequiel Lavezzi",
+      "Gonzalo Higuaín",
+      "Marek Hamšík",
+      "Ottavio Bianchi"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Napoli », quelle description correspond à Gonzalo Higuaín ?",
+    "answers": [
+      "milieu combatif champion d’Italie en 1987",
+      "avant-centre brésilien membre du trio Ma-Gi-Ca",
+      "attaquant auteur de trente-six buts en une saison de Serie A",
+      "entraîneur du troisième Scudetto après trente-trois ans"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel attaquant uruguayen a été meilleur buteur de Serie A avec Naples en 2013 ?",
+    "answers": [
+      "Luis Suárez",
+      "Diego Forlán",
+      "Darwin Núñez",
+      "Edinson Cavani"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : attaquant argentin membre des Trois Ténors avec Cavani et Hamšík ?",
+    "answers": [
+      "Ezequiel Lavezzi",
+      "Salvatore Bagni",
+      "Antonio Careca",
+      "Luciano Spalletti"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Napoli », quelle description correspond à Ezequiel Lavezzi ?",
+    "answers": [
+      "numéro 10 argentin ayant conduit le club à ses deux premiers Scudetti",
+      "attaquant argentin membre des Trois Ténors avec Cavani et Hamšík",
+      "défenseur napolitain formé au club et double champion d’Italie",
+      "avant-centre nigérian meilleur buteur du championnat du troisième titre"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel entraîneur surnommé « le Comandante » a dirigé Naples de 2015 à 2018 ?",
+    "answers": [
+      "Rafael Benítez",
+      "Walter Mazzarri",
+      "Maurizio Sarri",
+      "Gennaro Gattuso"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Napoli », quelle figure du Napoli correspond à cette description : milieu combatif champion d’Italie en 1987 ?",
+    "answers": [
+      "Diego Maradona",
+      "Ciro Ferrara",
+      "Victor Osimhen",
+      "Salvatore Bagni"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Napoli », quelle description correspond à Salvatore Bagni ?",
+    "answers": [
+      "milieu combatif champion d’Italie en 1987",
+      "attaquant belge devenu meilleur buteur historique du club",
+      "défenseur surnommé Pal e fierro et capitaine historique",
+      "ailier géorgien élu meilleur joueur de Serie A lors du troisième titre"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel milieu belge, ancien de Manchester City, a rejoint Naples en 2025 ?",
+    "answers": [
+      "Axel Witsel",
+      "Kevin De Bruyne",
+      "Youri Tielemans",
+      "Leandro Trossard"
+    ],
+    "correct": 1
   }
 ]

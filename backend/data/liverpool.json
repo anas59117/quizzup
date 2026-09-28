@@ -1,1102 +1,512 @@
 [
   {
-    "text": "En quelle année Liverpool FC est-il fondé ?",
-    "answers": [
-      "1892",
-      "1888",
-      "1896",
-      "1902"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel stade accueille les matches à domicile de Liverpool ?",
+    "text": "Comment s'appelle le stade de Liverpool FC ?",
     "answers": [
       "Goodison Park",
       "Anfield",
       "Old Trafford",
       "Villa Park"
     ],
-    "correct": 1,
-    "difficulty": "easy"
+    "correct": 1
   },
   {
-    "text": "Quel club dispute le derby de la Mersey contre Liverpool ?",
+    "text": "Quel est l'hymne chanté par les supporters de Liverpool ?",
     "answers": [
-      "Manchester United",
-      "Leeds United",
-      "Everton",
-      "Aston Villa"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel est le surnom traditionnel de Liverpool ?",
-    "answers": [
-      "Les Blues",
-      "Les Gunners",
-      "Les Villans",
-      "Les Reds"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel chant est indissociable des supporters de Liverpool ?",
-    "answers": [
-      "You’ll Never Walk Alone",
+      "Glory Glory Man United",
+      "You'll Never Walk Alone",
       "Blue Moon",
-      "I’m Forever Blowing Bubbles",
-      "Marching on Together"
+      "I'm Forever Blowing Bubbles"
     ],
-    "correct": 0,
-    "difficulty": "easy"
+    "correct": 1
   },
   {
-    "text": "Quelle tribune d’Anfield est célèbre pour son ambiance ?",
+    "text": "Quel est le surnom de Liverpool FC ?",
     "answers": [
-      "The Shed End",
-      "The Kop",
-      "The Stretford End",
-      "The Holte End"
+      "Les Reds",
+      "Les Toffees",
+      "Les Magpies",
+      "Les Hammers"
     ],
-    "correct": 1,
-    "difficulty": "easy"
+    "correct": 0
   },
   {
-    "text": "Quel entraîneur écossais arrive à Liverpool en 1959 et transforme le club ?",
+    "text": "Quel est le rival de Liverpool dans la même ville ?",
     "answers": [
-      "Matt Busby",
-      "Jock Stein",
-      "Bill Shankly",
-      "Alex Ferguson"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel entraîneur succède à Bill Shankly en 1974 ?",
-    "answers": [
-      "Joe Fagan",
-      "Kenny Dalglish",
-      "Roy Evans",
-      "Bob Paisley"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel joueur détient le record de buts de Liverpool avec 346 réalisations ?",
-    "answers": [
-      "Ian Rush",
-      "Roger Hunt",
-      "Robbie Fowler",
-      "Kenny Dalglish"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel joueur détient le record d’apparitions de Liverpool avec 857 matches ?",
-    "answers": [
-      "Jamie Carragher",
-      "Ian Callaghan",
-      "Steven Gerrard",
-      "Ray Clemence"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel capitaine soulève la Ligue des champions 2005 pour Liverpool ?",
-    "answers": [
-      "Jamie Carragher",
-      "Sami Hyypiä",
-      "Steven Gerrard",
-      "Xabi Alonso"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club Liverpool affronte-t-il lors de la finale de Ligue des champions 2005 ?",
-    "answers": [
-      "Juventus",
-      "Inter Milan",
-      "Real Madrid",
-      "AC Milan"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Dans quelle ville se déroule la finale européenne remportée par Liverpool en 2005 ?",
-    "answers": [
-      "Istanbul",
-      "Athènes",
-      "Rome",
-      "Madrid"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel entraîneur dirige Liverpool lors de la Ligue des champions 2005 ?",
-    "answers": [
-      "Gérard Houllier",
-      "Rafael Benítez",
-      "Jürgen Klopp",
-      "Roy Evans"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel entraîneur allemand remporte la Ligue des champions 2019 avec Liverpool ?",
-    "answers": [
-      "Thomas Tuchel",
-      "Joachim Löw",
-      "Jürgen Klopp",
-      "Julian Nagelsmann"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club Liverpool bat-il en finale de Ligue des champions 2019 ?",
-    "answers": [
-      "Chelsea",
-      "Arsenal",
       "Manchester City",
-      "Tottenham"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel attaquant égyptien rejoint Liverpool en 2017 ?",
-    "answers": [
-      "Mohamed Salah",
-      "Mido",
-      "Mohamed Elneny",
-      "Omar Marmoush"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel défenseur néerlandais devient capitaine de Liverpool en 2023 ?",
-    "answers": [
-      "Matthijs de Ligt",
-      "Virgil van Dijk",
-      "Nathan Aké",
-      "Stefan de Vrij"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel gardien brésilien rejoint Liverpool en 2018 ?",
-    "answers": [
-      "Ederson",
-      "Júlio César",
-      "Alisson Becker",
-      "Neto"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "En quelle saison Liverpool remporte-t-il son premier titre de l’ère Premier League ?",
-    "answers": [
-      "2017-18",
-      "2018-19",
-      "2020-21",
-      "2019-20"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Qui est le président fondateur de Liverpool FC ?",
-    "answers": [
-      "John Houlding",
-      "David Moores",
-      "Tom Hicks",
-      "Peter Robinson"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club occupait Anfield avant la fondation de Liverpool ?",
-    "answers": [
+      "Everton",
       "Tranmere Rovers",
-      "Everton",
-      "Bootle FC",
-      "Aston Villa"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Liverpool bat-il pour sa première Coupe d’Europe en 1977 ?",
-    "answers": [
-      "Bayern Munich",
-      "Hambourg",
-      "Borussia Mönchengladbach",
-      "Club Bruges"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Liverpool bat-il en finale de Coupe d’Europe 1978 ?",
-    "answers": [
-      "Anderlecht",
-      "Benfica",
-      "PSV Eindhoven",
-      "Club Bruges"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Liverpool bat-il en finale de Coupe d’Europe 1981 ?",
-    "answers": [
-      "Real Madrid",
-      "FC Barcelone",
-      "Bayern Munich",
-      "Juventus"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Liverpool affronte-t-il dans son stade en finale de Coupe d’Europe 1984 ?",
-    "answers": [
-      "Lazio Rome",
-      "AS Rome",
-      "Juventus",
-      "Napoli"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Combien de Coupes d’Europe Bob Paisley remporte-t-il comme entraîneur de Liverpool ?",
-    "answers": [
-      "Une",
-      "Deux",
-      "Trois",
-      "Quatre"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur marque l’unique but de la finale européenne 1978 ?",
-    "answers": [
-      "Kevin Keegan",
-      "Ian Rush",
-      "Graeme Souness",
-      "Kenny Dalglish"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur marque l’unique but de la finale européenne 1981 ?",
-    "answers": [
-      "Alan Kennedy",
-      "Phil Neal",
-      "Sammy Lee",
-      "Terry McDermott"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel gardien devient célèbre pour ses jambes tremblantes lors des tirs au but en 1984 ?",
-    "answers": [
-      "Ray Clemence",
-      "Bruce Grobbelaar",
-      "Jerzy Dudek",
-      "David James"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel gardien imite ce procédé lors de la séance de tirs au but de 2005 ?",
-    "answers": [
-      "Pepe Reina",
-      "Sander Westerveld",
-      "Jerzy Dudek",
-      "Chris Kirkland"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur inscrit le premier but de la remontée de Liverpool à Istanbul ?",
-    "answers": [
-      "Vladimír Šmicer",
-      "Xabi Alonso",
-      "Luis García",
-      "Steven Gerrard"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur marque le deuxième but de Liverpool lors de la finale 2005 ?",
-    "answers": [
-      "Vladimír Šmicer",
-      "Milan Baroš",
-      "John Arne Riise",
-      "Dietmar Hamann"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur égalise à 3-3 en reprenant son penalty repoussé en 2005 ?",
-    "answers": [
-      "Steven Gerrard",
-      "Xabi Alonso",
-      "Luis García",
-      "Djibril Cissé"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur ouvre le score sur penalty lors de la finale européenne 2019 ?",
-    "answers": [
-      "Sadio Mané",
-      "Roberto Firmino",
-      "Mohamed Salah",
-      "James Milner"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur inscrit le deuxième but de Liverpool en finale européenne 2019 ?",
-    "answers": [
-      "Sadio Mané",
-      "Jordan Henderson",
-      "Georginio Wijnaldum",
-      "Divock Origi"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel capitaine soulève la Ligue des champions 2019 ?",
-    "answers": [
-      "Jordan Henderson",
-      "James Milner",
-      "Virgil van Dijk",
-      "Steven Gerrard"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Liverpool bat-il pour gagner la FA Cup 2006 ?",
-    "answers": [
-      "Arsenal",
-      "West Ham United",
-      "Chelsea",
-      "Manchester United"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur inscrit les deux buts de Liverpool en finale de FA Cup 2001 ?",
-    "answers": [
-      "Emile Heskey",
-      "Robbie Fowler",
-      "Michael Owen",
-      "Steven Gerrard"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Liverpool bat-il en finale de FA Cup 1986 pour réussir le doublé ?",
-    "answers": [
-      "Manchester United",
-      "Arsenal",
-      "Tottenham",
-      "Everton"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel est le premier adversaire de Liverpool en Lancashire League en 1892 ?",
-    "answers": [
-      "Higher Walton",
-      "Rotherham Town",
-      "Accrington",
-      "Bootle FC"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle division Liverpool débute-t-il en Football League en 1893 ?",
-    "answers": [
-      "Première division",
-      "Deuxième division",
-      "Troisième division Nord",
-      "Lancashire League"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "En quelle saison Liverpool remporte-t-il son premier championnat d’Angleterre ?",
-    "answers": [
-      "1893-94",
-      "1905-06",
-      "1900-01",
-      "1921-22"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel entraîneur mène Liverpool à ses deux premiers titres de champion ?",
-    "answers": [
-      "Matt McQueen",
-      "George Patterson",
-      "David Ashworth",
-      "Tom Watson"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur marque le premier but de Liverpool en finale de Coupe d’Europe 1977 ?",
-    "answers": [
-      "Terry McDermott",
-      "Tommy Smith",
-      "Phil Neal",
-      "Kevin Keegan"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel défenseur marque de la tête le deuxième but de la finale européenne 1977 ?",
-    "answers": [
-      "Phil Thompson",
-      "Tommy Smith",
-      "Emlyn Hughes",
-      "Alan Kennedy"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur transforme le penalty du troisième but en finale européenne 1977 ?",
-    "answers": [
-      "Kevin Keegan",
-      "Ray Kennedy",
-      "Phil Neal",
-      "Jimmy Case"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quel stade Liverpool remporte-t-il sa première Coupe d’Europe en 1977 ?",
-    "answers": [
-      "Wembley",
-      "Parc des Princes",
-      "Olympiastadion de Munich",
-      "Stadio Olimpico de Rome"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quel stade Liverpool conserve-t-il la Coupe d’Europe en 1978 ?",
-    "answers": [
-      "Wembley",
-      "Hampden Park",
-      "De Kuip",
-      "Stadio Olimpico"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville Liverpool remporte-t-il la Coupe d’Europe 1981 ?",
-    "answers": [
-      "Rome",
-      "Paris",
-      "Athènes",
-      "Vienne"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur marque pour Liverpool en finale européenne 1984 avant l’égalisation romaine ?",
-    "answers": [
-      "Ian Rush",
-      "Graeme Souness",
-      "Phil Neal",
-      "Alan Kennedy"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur transforme le tir au but décisif contre l’AS Rome en 1984 ?",
-    "answers": [
-      "Phil Neal",
-      "Ian Rush",
-      "Kenny Dalglish",
-      "Alan Kennedy"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel entraîneur remporte la Coupe d’Europe 1984 avec Liverpool ?",
-    "answers": [
-      "Joe Fagan",
-      "Bob Paisley",
-      "Kenny Dalglish",
-      "Bill Shankly"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club bat Liverpool en finale de Coupe d’Europe 1985 ?",
-    "answers": [
-      "AC Milan",
-      "Juventus",
-      "Real Madrid",
-      "Bayern Munich"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club bat Liverpool en finale de Ligue des champions 2007 ?",
-    "answers": [
-      "Inter Milan",
-      "FC Barcelone",
-      "AC Milan",
-      "Chelsea"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club bat Liverpool en finale de Ligue des champions 2018 ?",
-    "answers": [
-      "Bayern Munich",
-      "Juventus",
-      "Paris Saint-Germain",
-      "Real Madrid"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club bat Liverpool en finale de Ligue des champions 2022 ?",
-    "answers": [
-      "Real Madrid",
-      "Manchester City",
-      "Chelsea",
-      "Bayern Munich"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur marque le but qualifiant Liverpool contre Chelsea en demi-finale européenne 2005 ?",
-    "answers": [
-      "Steven Gerrard",
-      "Luis García",
-      "Milan Baroš",
-      "John Arne Riise"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur du Milan voit son dernier tir au but arrêté par Dudek en 2005 ?",
-    "answers": [
-      "Andrea Pirlo",
-      "Kaká",
-      "Andriy Shevchenko",
-      "Serginho"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur marque deux buts contre Barcelone lors de la remontée 4-0 de 2019 ?",
-    "answers": [
-      "Mohamed Salah",
-      "Sadio Mané",
-      "Jordan Henderson",
-      "Georginio Wijnaldum"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel autre joueur inscrit un doublé contre Barcelone lors du 4-0 de 2019 ?",
-    "answers": [
-      "Divock Origi",
-      "Roberto Firmino",
-      "Xherdan Shaqiri",
-      "James Milner"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel défenseur joue rapidement le corner décisif pour Origi contre Barcelone en 2019 ?",
-    "answers": [
-      "Andrew Robertson",
-      "Trent Alexander-Arnold",
-      "Virgil van Dijk",
-      "Joe Gomez"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Liverpool bat-il en finale de sa première Coupe UEFA en 1973 ?",
-    "answers": [
-      "Feyenoord",
-      "Juventus",
-      "Borussia Mönchengladbach",
-      "Inter Milan"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Liverpool bat-il en finale de Coupe UEFA 1976 ?",
-    "answers": [
-      "Anderlecht",
-      "Hambourg",
-      "Athletic Bilbao",
-      "Club Bruges"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Liverpool bat-il 5-4 en finale de Coupe UEFA 2001 ?",
-    "answers": [
-      "Alavés",
-      "Valence",
-      "Celta Vigo",
-      "Deportivo La Corogne"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville se joue la finale de Coupe UEFA 2001 ?",
-    "answers": [
-      "Rotterdam",
-      "Dortmund",
-      "Göteborg",
-      "Bâle"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel entraîneur remporte la Coupe UEFA 2001 avec Liverpool ?",
-    "answers": [
-      "Rafael Benítez",
-      "Roy Evans",
-      "Gérard Houllier",
-      "Graeme Souness"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel adversaire Liverpool bat-il pour gagner sa première FA Cup en 1965 ?",
-    "answers": [
-      "Everton",
-      "Manchester United",
-      "Chelsea",
       "Leeds United"
     ],
-    "correct": 3,
-    "difficulty": "hard"
+    "correct": 1
   },
   {
-    "text": "Quel joueur marque le but victorieux de la finale de FA Cup 1965 ?",
+    "text": "Comment s'appelle le derby entre Liverpool et Everton ?",
     "answers": [
-      "Ian St John",
-      "Roger Hunt",
-      "Ian Callaghan",
-      "Tommy Smith"
+      "Le North West derby",
+      "Le Merseyside derby",
+      "Le derby de Manchester",
+      "Le derby de Londres"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de Ligues des champions Liverpool a-t-il remportées ?",
+    "answers": [
+      "3",
+      "6",
+      "5",
+      "7"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel entraîneur allemand a dirigé Liverpool de 2015 à 2024 ?",
+    "answers": [
+      "Thomas Tuchel",
+      "Ralf Rangnick",
+      "Jürgen Klopp",
+      "Joachim Löw"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel attaquant égyptien est une star de Liverpool depuis 2017 ?",
+    "answers": [
+      "Mohamed Salah",
+      "Mohamed Elneny",
+      "Omar Marmoush",
+      "Trézéguet"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En quelle année Liverpool a-t-il remporté son premier titre de Premier League ?",
+    "answers": [
+      "2014",
+      "2019",
+      "2022",
+      "2020"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Contre quel club Liverpool a-t-il remporté la finale de Ligue des champions 2019 ?",
+    "answers": [
+      "Chelsea",
+      "Manchester City",
+      "Tottenham",
+      "Real Madrid"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans quelle ville s'est jouée la finale de Ligue des champions 2019 ?",
+    "answers": [
+      "Kiev",
+      "Paris",
+      "Istanbul",
+      "Madrid"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle finale de 2005 est surnommée « le miracle d'Istanbul » ?",
+    "answers": [
+      "Liverpool - Chelsea",
+      "Liverpool - Juventus",
+      "Liverpool - Bayern",
+      "Liverpool - AC Milan"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel était le score à la mi-temps de la finale 2005 avant le retour de Liverpool ?",
+    "answers": [
+      "0-1",
+      "0-3",
+      "0-2",
+      "1-3"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel capitaine emblématique a mené Liverpool lors du miracle d'Istanbul ?",
+    "answers": [
+      "Jamie Carragher",
+      "Steven Gerrard",
+      "Michael Owen",
+      "Xabi Alonso"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel défenseur néerlandais a été un pilier de Liverpool sous Klopp ?",
+    "answers": [
+      "Matthijs de Ligt",
+      "Stefan de Vrij",
+      "Virgil van Dijk",
+      "Daley Blind"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel attaquant brésilien a joué dans le trio avec Salah et Mané ?",
+    "answers": [
+      "Gabriel Jesus",
+      "Philippe Coutinho",
+      "Richarlison",
+      "Roberto Firmino"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel attaquant sénégalais formait le trio offensif avec Salah et Firmino ?",
+    "answers": [
+      "Ismaïla Sarr",
+      "Diafra Sakho",
+      "Papiss Cissé",
+      "Sadio Mané"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel gardien brésilien a rejoint Liverpool en 2018 ?",
+    "answers": [
+      "Ederson",
+      "Alisson Becker",
+      "Júlio César",
+      "Weverton"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel entraîneur français a remporté la Coupe UEFA 2001 avec Liverpool ?",
+    "answers": [
+      "Arsène Wenger",
+      "Gérard Houllier",
+      "Rafael Benítez",
+      "Claude Puel"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel entraîneur espagnol a gagné la Ligue des champions 2005 avec Liverpool ?",
+    "answers": [
+      "Pep Guardiola",
+      "Unai Emery",
+      "Luis Enrique",
+      "Rafael Benítez"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel entraîneur néerlandais a succédé à Klopp en 2024 ?",
+    "answers": [
+      "Erik ten Hag",
+      "Arne Slot",
+      "Ronald Koeman",
+      "Frank de Boer"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel attaquant uruguayen a brillé à Liverpool avant de partir au Barça en 2014 ?",
+    "answers": [
+      "Edinson Cavani",
+      "Darwin Núñez",
+      "Luis Suárez",
+      "Diego Forlán"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel latéral anglais formé au club est célèbre pour ses centres et ses coups francs ?",
+    "answers": [
+      "Andrew Robertson",
+      "Joe Gomez",
+      "Jordan Henderson",
+      "Trent Alexander-Arnold"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel latéral gauche écossais a été un titulaire de Klopp ?",
+    "answers": [
+      "Kieran Tierney",
+      "Scott McTominay",
+      "Andrew Robertson",
+      "John McGinn"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel capitaine anglais a soulevé la Ligue des champions 2019 ?",
+    "answers": [
+      "Jordan Henderson",
+      "Steven Gerrard",
+      "James Milner",
+      "Trent Alexander-Arnold"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel attaquant légendaire gallois a marqué plus de 300 buts pour Liverpool ?",
+    "answers": [
+      "Ian Rush",
+      "Gareth Bale",
+      "Mark Hughes",
+      "Craig Bellamy"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel entraîneur écossais a bâti la dynastie de Liverpool dans les années 1960 ?",
+    "answers": [
+      "Sir Alex Ferguson",
+      "Kenny Dalglish",
+      "Bill Shankly",
+      "Matt Busby"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel entraîneur a remporté trois Coupes des clubs champions avec Liverpool en 1977, 1978 et 1981 ?",
+    "answers": [
+      "Bill Shankly",
+      "Bob Paisley",
+      "Joe Fagan",
+      "Kenny Dalglish"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel joueur écossais, surnommé « King Kenny », a aussi entraîné le club ?",
+    "answers": [
+      "Kenny Dalglish",
+      "Graeme Souness",
+      "Alan Hansen",
+      "Ian St John"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle tragédie de 1989 a coûté la vie à 97 supporters de Liverpool ?",
+    "answers": [
+      "Le Heysel",
+      "Munich",
+      "Hillsborough",
+      "Ibrox"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle tragédie de 1985 a eu lieu lors de la finale Liverpool - Juventus ?",
+    "answers": [
+      "Hillsborough",
+      "Le drame du Heysel",
+      "La catastrophe de Bradford",
+      "Le drame de Furiani"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel attaquant anglais de Liverpool a remporté le Ballon d'or 2001 ?",
+    "answers": [
+      "Robbie Fowler",
+      "Michael Owen",
+      "Steven Gerrard",
+      "Emile Heskey"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel groupe américain est propriétaire de Liverpool ?",
+    "answers": [
+      "Kroenke Sports",
+      "Fenway Sports Group",
+      "Glazer Family",
+      "Clearlake Capital"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel milieu brésilien a quitté Liverpool pour le Barça en janvier 2018 ?",
+    "answers": [
+      "Fabinho",
+      "Roberto Firmino",
+      "Lucas Leiva",
+      "Philippe Coutinho"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "En quelle année Liverpool a-t-il remporté son 20e titre de champion d'Angleterre ?",
+    "answers": [
+      "2025",
+      "2020",
+      "2019",
+      "2023"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel milieu hongrois a rejoint Liverpool en 2023 ?",
+    "answers": [
+      "Péter Gulácsi",
+      "Roland Sallai",
+      "Zsolt Nagy",
+      "Dominik Szoboszlai"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel attaquant uruguayen a rejoint Liverpool en 2022 en provenance de Benfica ?",
+    "answers": [
+      "Darwin Núñez",
+      "Luis Suárez",
+      "Edinson Cavani",
+      "Maxi Gómez"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Contre quel club Liverpool a-t-il perdu la finale de Ligue des champions 2018 ?",
+    "answers": [
+      "Le Real Madrid",
+      "Tottenham",
+      "Le Bayern Munich",
+      "Chelsea"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Contre quel club Liverpool a-t-il perdu la finale de Ligue des champions 2022 au Stade de France ?",
+    "answers": [
+      "Chelsea",
+      "Manchester City",
+      "Le Real Madrid",
+      "Le PSG"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel milieu espagnol, passé par Liverpool, a gagné le Mondial 2010 avec l'Espagne ?",
+    "answers": [
+      "Xabi Alonso",
+      "Xavi",
+      "Andrés Iniesta",
+      "Cesc Fàbregas"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En quelle année Liverpool FC a-t-il été fondé ?",
+    "answers": [
+      "1892",
+      "1878",
+      "1905",
+      "1880"
     ],
     "correct": 0,
-    "difficulty": "hard"
+    "difficulty": "expert"
   },
   {
-    "text": "Quel club Liverpool bat-il 3-0 en finale de FA Cup 1974 ?",
+    "text": "Quel club occupait Anfield avant la création de Liverpool FC ?",
     "answers": [
-      "Leeds United",
-      "Newcastle United",
-      "Arsenal",
-      "Everton"
+      "Everton",
+      "Tranmere Rovers",
+      "Bolton",
+      "Preston North End"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts d'avance l'AC Milan avait-il à la mi-temps de la finale 2005 ?",
+    "answers": [
+      "1",
+      "3",
+      "2",
+      "4"
     ],
     "correct": 1,
-    "difficulty": "hard"
+    "difficulty": "expert"
   },
   {
-    "text": "Quel club Liverpool bat-il après prolongation en finale de FA Cup 1989 ?",
-    "answers": [
-      "Arsenal",
-      "Manchester United",
-      "Everton",
-      "Nottingham Forest"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Liverpool bat-il en finale de FA Cup 1992 ?",
-    "answers": [
-      "Sheffield Wednesday",
-      "Nottingham Forest",
-      "Southampton",
-      "Sunderland"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur marque à la 91e minute pour égaliser en finale de FA Cup 2006 ?",
-    "answers": [
-      "Steven Gerrard",
-      "Djibril Cissé",
-      "Peter Crouch",
-      "Sami Hyypiä"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel gardien arrête trois tirs au but lors de la finale de FA Cup 2006 ?",
+    "text": "Qui a arrêté le tir au but décisif d'Andriy Chevtchenko en 2005 ?",
     "answers": [
       "Jerzy Dudek",
       "Pepe Reina",
-      "David James",
-      "Sander Westerveld"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Liverpool bat-il aux tirs au but en finale de Coupe de la Ligue 2022 ?",
-    "answers": [
-      "Arsenal",
-      "Manchester City",
-      "Chelsea",
-      "Tottenham"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel gardien remplaçant transforme le onzième tir au but de Liverpool en finale de Coupe de la Ligue 2022 ?",
-    "answers": [
-      "Adrián",
-      "Alisson Becker",
-      "Loris Karius",
-      "Caoimhín Kelleher"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Liverpool bat-il en finale de Coupe de la Ligue 2024 ?",
-    "answers": [
-      "Chelsea",
-      "Manchester United",
-      "Newcastle United",
-      "Arsenal"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur marque en prolongation lors de la finale de Coupe de la Ligue 2024 ?",
-    "answers": [
-      "Cody Gakpo",
-      "Virgil van Dijk",
-      "Darwin Núñez",
-      "Luis Díaz"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur marque le but décisif de la Supercoupe de l’UEFA 2001 contre le Bayern ?",
-    "answers": [
-      "Emile Heskey",
-      "Steven Gerrard",
-      "Michael Owen",
-      "John Arne Riise"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Liverpool bat-il pour remporter la Coupe du monde des clubs 2019 ?",
-    "answers": [
-      "River Plate",
-      "Monterrey",
-      "Al-Hilal",
-      "Flamengo"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quelle est la plus large victoire de Liverpool toutes compétitions confondues ?",
-    "answers": [
-      "11-0 contre Strømsgodset",
-      "10-0 contre Fulham",
-      "9-0 contre Crystal Palace",
-      "8-0 contre Stoke City"
+      "Sander Westerveld",
+      "Chris Kirkland"
     ],
     "correct": 0,
     "difficulty": "expert"
   },
   {
-    "text": "Quel club Liverpool bat-il 10-1 pour signer sa plus large victoire en championnat ?",
+    "text": "Quel club Liverpool a-t-il battu 4-0 en demi-finale retour 2019 après avoir perdu 3-0 à l'aller ?",
     "answers": [
-      "Bury",
-      "Rotherham Town",
-      "Notts County",
-      "Lincoln City"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel adversaire subit la plus large victoire de Liverpool à l’extérieur, 8-0 en 2000 ?",
-    "answers": [
-      "Derby County",
-      "Watford",
-      "Stoke City",
-      "Birmingham City"
+      "L'AS Rome",
+      "Le Real Madrid",
+      "Le FC Barcelone",
+      "Le Bayern Munich"
     ],
     "correct": 2,
     "difficulty": "expert"
   },
   {
-    "text": "Quel joueur détient le record de buts de Liverpool sur une saison avec 47 en 1983-84 ?",
+    "text": "Combien de points Liverpool a-t-il terminé au-dessus de Man City lors du titre 2020 ?",
     "answers": [
-      "Roger Hunt",
+      "18",
+      "1",
+      "5",
+      "30"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a marqué le corner joué rapidement contre le Barça en 2019 ?",
+    "answers": [
+      "Georginio Wijnaldum",
+      "Divock Origi",
       "Mohamed Salah",
-      "John Aldridge",
-      "Ian Rush"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel gardien partage le record de 665 apparitions pour Liverpool avec Emlyn Hughes ?",
-    "answers": [
-      "Ray Clemence",
-      "Bruce Grobbelaar",
-      "Tommy Lawrence",
-      "Elisha Scott"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur a disputé 737 matches officiels avec Liverpool ?",
-    "answers": [
-      "Steven Gerrard",
-      "Jamie Carragher",
-      "Billy Liddell",
-      "Ian Rush"
+      "Xherdan Shaqiri"
     ],
     "correct": 1,
     "difficulty": "expert"
   },
   {
-    "text": "Combien de buts Ian Rush a-t-il inscrits en 660 matches avec Liverpool ?",
+    "text": "Quel entraîneur de Liverpool a été le premier à remporter la Premier League avec le club ?",
     "answers": [
-      "336",
-      "356",
-      "346",
-      "366"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur est le deuxième meilleur buteur historique de Liverpool avec 285 buts ?",
-    "answers": [
-      "Gordon Hodgson",
-      "Billy Liddell",
-      "Robbie Fowler",
-      "Roger Hunt"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur détient le record de buts de Liverpool dans le derby de la Mersey ?",
-    "answers": [
-      "Ian Rush",
+      "Rafael Benítez",
+      "Brendan Rodgers",
       "Kenny Dalglish",
-      "Robbie Fowler",
-      "Steven Gerrard"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur marque cinq buts contre Luton Town en octobre 1983 ?",
-    "answers": [
-      "Kenny Dalglish",
-      "Ian Rush",
-      "John Wark",
-      "Michael Robinson"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur inscrit le premier but européen de l’histoire de Liverpool en 1964 ?",
-    "answers": [
-      "Roger Hunt",
-      "Ian St John",
-      "Gordon Wallace",
-      "Peter Thompson"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel adversaire Liverpool élimine-t-il lors de sa première confrontation européenne en 1964 ?",
-    "answers": [
-      "Rosenborg",
-      "HJK Helsinki",
-      "Djurgårdens IF",
-      "KR Reykjavik"
+      "Jürgen Klopp"
     ],
     "correct": 3,
     "difficulty": "expert"
   },
   {
-    "text": "Quel club bat Liverpool en finale de la Coupe des coupes 1966 ?",
+    "text": "Combien de fois Liverpool a-t-il été champion d'Angleterre avant l'ère Premier League ?",
     "answers": [
-      "Borussia Dortmund",
-      "Bayern Munich",
-      "Inter Milan",
-      "Celtic"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur inscrit le but en or contre son camp qui conclut la finale de Coupe UEFA 2001 ?",
-    "answers": [
-      "Jordi Cruyff",
-      "Delfí Geli",
-      "Cosmin Contra",
-      "Mauricio Pellegrino"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur d’Everton ouvre le score contre Liverpool en finale de FA Cup 1986 ?",
-    "answers": [
-      "Kevin Sheedy",
-      "Graeme Sharp",
-      "Gary Lineker",
-      "Trevor Steven"
+      "13",
+      "10",
+      "18",
+      "20"
     ],
     "correct": 2,
     "difficulty": "expert"
   },
   {
-    "text": "Quel joueur inscrit un doublé pour Liverpool lors de cette finale de FA Cup 1986 ?",
+    "text": "Quel défenseur central français a rejoint Liverpool en 2021 en provenance du RB Leipzig ?",
     "answers": [
-      "Gary Lineker",
-      "Craig Johnston",
-      "Kenny Dalglish",
-      "Ian Rush"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur marque deux fois pour Liverpool en finale de FA Cup 1989 ?",
-    "answers": [
-      "Ian Rush",
-      "John Aldridge",
-      "Peter Beardsley",
-      "Steve McMahon"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur inscrit le penalty décisif lors de la finale de Coupe de la Ligue 2022 ?",
-    "answers": [
-      "Diogo Jota",
-      "Kostas Tsimikas",
-      "Fabinho",
-      "Trent Alexander-Arnold"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel défenseur de Liverpool est élu homme du match de la finale européenne 2019 ?",
-    "answers": [
-      "Trent Alexander-Arnold",
-      "Andrew Robertson",
-      "Virgil van Dijk",
-      "Joël Matip"
+      "Dayot Upamecano",
+      "Jules Koundé",
+      "Ibrahima Konaté",
+      "William Saliba"
     ],
     "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur offre à Liverpool le Mondial des clubs 2019 avec un but en prolongation ?",
-    "answers": [
-      "Mohamed Salah",
-      "Sadio Mané",
-      "Naby Keïta",
-      "Roberto Firmino"
-    ],
-    "correct": 3,
     "difficulty": "expert"
   }
 ]

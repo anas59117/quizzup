@@ -1,11 +1,11 @@
 [
   {
-    "text": "Dans quel conte apparaît Cendrillon ?",
+    "text": "Dans quel conte une pantoufle de verre permet-elle de retrouver l’héroïne ?",
     "answers": [
       "Cendrillon",
       "Le Petit Chaperon rouge",
-      "Blanche-Neige",
-      "Raiponce"
+      "Raiponce",
+      "Le Maître chat ou le Chat botté"
     ],
     "correct": 0
   },
@@ -13,9 +13,9 @@
     "text": "Quel auteur ou collecteur est associé à l’histoire de Cendrillon ?",
     "answers": [
       "Hans Christian Andersen",
-      "Charles Perrault",
       "Charles Perrault et les frères Grimm",
-      "Les frères Grimm"
+      "Lewis Carroll",
+      "Jean de La Fontaine"
     ],
     "correct": 1
   },
@@ -50,27 +50,27 @@
     "correct": 0
   },
   {
-    "text": "Dans quel conte apparaît Le Petit Chaperon rouge ?",
+    "text": "Dans quel conte une fillette porte-t-elle une galette et un petit pot de beurre à sa mère-grand ?",
     "answers": [
-      "La Belle au bois dormant",
+      "Hansel et Gretel",
       "Le Petit Chaperon rouge",
-      "Le Maître chat ou le Chat botté",
-      "Hansel et Gretel"
+      "Le Vilain Petit Canard",
+      "Blanche-Neige"
     ],
     "correct": 1
   },
   {
-    "text": "Quel auteur ou collecteur est associé à l’histoire de Le Petit Chaperon rouge ?",
+    "text": "Quel auteur ou collecteur est associé à l’histoire du Petit Chaperon rouge ?",
     "answers": [
       "Hans Christian Andersen",
-      "Charles Perrault",
+      "Lewis Carroll",
       "Charles Perrault et les frères Grimm",
-      "Les frères Grimm"
+      "Jean de La Fontaine"
     ],
     "correct": 2
   },
   {
-    "text": "Quel objet ou élément est associé à Le Petit Chaperon rouge ?",
+    "text": "Quel objet ou élément est associé au Petit Chaperon rouge ?",
     "answers": [
       "Sa voix donnée en échange de jambes",
       "Un reflet dans l’eau",
@@ -100,12 +100,12 @@
     "correct": 1
   },
   {
-    "text": "Dans quel conte apparaît Blanche-Neige ?",
+    "text": "Dans quel conte une reine interroge-t-elle son miroir magique ?",
     "answers": [
-      "La Petite Sirène",
-      "Le Vilain Petit Canard",
+      "Raiponce",
+      "Le Maître chat ou le Chat botté",
       "Blanche-Neige",
-      "Cendrillon"
+      "La Petite Sirène"
     ],
     "correct": 2
   },
@@ -114,7 +114,7 @@
     "answers": [
       "Hans Christian Andersen",
       "Charles Perrault",
-      "Charles Perrault et les frères Grimm",
+      "Jean de La Fontaine",
       "Les frères Grimm"
     ],
     "correct": 3
@@ -150,10 +150,10 @@
     "correct": 2
   },
   {
-    "text": "Dans quel conte apparaît Raiponce ?",
+    "text": "Dans quel conte une jeune fille laisse-t-elle descendre ses longs cheveux du haut d’une tour ?",
     "answers": [
+      "Le Vilain Petit Canard",
       "Le Petit Chaperon rouge",
-      "Blanche-Neige",
       "La Belle au bois dormant",
       "Raiponce"
     ],
@@ -165,7 +165,7 @@
       "Les frères Grimm",
       "Hans Christian Andersen",
       "Charles Perrault",
-      "Charles Perrault et les frères Grimm"
+      "Jean de La Fontaine"
     ],
     "correct": 0
   },
@@ -200,12 +200,12 @@
     "correct": 3
   },
   {
-    "text": "Dans quel conte apparaît La Belle au bois dormant ?",
+    "text": "Dans quel conte une princesse se pique-t-elle le doigt sur un fuseau ?",
     "answers": [
       "La Belle au bois dormant",
       "Le Maître chat ou le Chat botté",
-      "Hansel et Gretel",
-      "La Petite Sirène"
+      "La Petite Sirène",
+      "Cendrillon"
     ],
     "correct": 0
   },
@@ -213,9 +213,9 @@
     "text": "Quel auteur ou collecteur est associé à l’histoire de La Belle au bois dormant ?",
     "answers": [
       "Hans Christian Andersen",
-      "Charles Perrault",
       "Charles Perrault et les frères Grimm",
-      "Les frères Grimm"
+      "Lewis Carroll",
+      "Jean de La Fontaine"
     ],
     "correct": 1
   },
@@ -260,17 +260,17 @@
     "correct": 1
   },
   {
-    "text": "Quel auteur ou collecteur est associé à l’histoire de Le Chat botté ?",
+    "text": "Quel auteur ou collecteur est associé à l’histoire du Chat botté ?",
     "answers": [
       "Hans Christian Andersen",
-      "Charles Perrault et les frères Grimm",
+      "Lewis Carroll",
       "Charles Perrault",
-      "Les frères Grimm"
+      "Jean de La Fontaine"
     ],
     "correct": 2
   },
   {
-    "text": "Quel objet ou élément est associé à Le Chat botté ?",
+    "text": "Quel objet ou élément est associé au Chat botté ?",
     "answers": [
       "Un panier",
       "Un miroir magique",
@@ -314,7 +314,7 @@
     "answers": [
       "Hans Christian Andersen",
       "Charles Perrault",
-      "Charles Perrault et les frères Grimm",
+      "Jean de La Fontaine",
       "Les frères Grimm"
     ],
     "correct": 3
@@ -365,7 +365,7 @@
       "Les frères Grimm",
       "Hans Christian Andersen",
       "Charles Perrault",
-      "Charles Perrault et les frères Grimm"
+      "Jean de La Fontaine"
     ],
     "correct": 0
   },
@@ -400,12 +400,12 @@
     "correct": 3
   },
   {
-    "text": "Dans quel conte apparaît La Petite Sirène ?",
+    "text": "Dans quel conte une héroïne vit-elle sous la mer avant de rejoindre le monde des humains ?",
     "answers": [
       "La Petite Sirène",
       "Cendrillon",
-      "Le Petit Chaperon rouge",
-      "Blanche-Neige"
+      "Blanche-Neige",
+      "La Belle au bois dormant"
     ],
     "correct": 0
   },
@@ -415,7 +415,7 @@
       "Les frères Grimm",
       "Hans Christian Andersen",
       "Charles Perrault",
-      "Charles Perrault et les frères Grimm"
+      "Jean de La Fontaine"
     ],
     "correct": 1
   },
@@ -450,27 +450,27 @@
     "correct": 0
   },
   {
-    "text": "Dans quel conte apparaît Le Vilain Petit Canard ?",
+    "text": "Dans quel conte un oisillon moqué devient-il un magnifique cygne ?",
     "answers": [
-      "Raiponce",
+      "Le Maître chat ou le Chat botté",
       "Le Vilain Petit Canard",
-      "La Belle au bois dormant",
-      "Le Maître chat ou le Chat botté"
+      "La Petite Sirène",
+      "Le Petit Chaperon rouge"
     ],
     "correct": 1
   },
   {
-    "text": "Quel auteur ou collecteur est associé à l’histoire de Le Vilain Petit Canard ?",
+    "text": "Quel auteur ou collecteur est associé à l’histoire du Vilain Petit Canard ?",
     "answers": [
       "Les frères Grimm",
       "Charles Perrault",
       "Hans Christian Andersen",
-      "Charles Perrault et les frères Grimm"
+      "Jean de La Fontaine"
     ],
     "correct": 2
   },
   {
-    "text": "Quel objet ou élément est associé à Le Vilain Petit Canard ?",
+    "text": "Quel objet ou élément est associé au Vilain Petit Canard ?",
     "answers": [
       "Un fuseau",
       "Des bottes",

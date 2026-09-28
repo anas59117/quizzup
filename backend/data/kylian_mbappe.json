@@ -1,1102 +1,502 @@
 [
   {
-    "text": "Quel est le nom complet de Kylian Mbappé ?",
-    "answers": [
-      "Kylian Mbappé Lottin",
-      "Kylian Mbappé Diallo",
-      "Kylian Mbappé Sanogo",
-      "Kylian Mbappé Touré"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
     "text": "Dans quelle ville Kylian Mbappé est-il né ?",
     "answers": [
-      "Lyon",
       "Paris",
+      "Lyon",
       "Marseille",
       "Monaco"
     ],
-    "correct": 1,
-    "difficulty": "easy"
+    "correct": 0
   },
   {
-    "text": "Dans quelle commune de Seine-Saint-Denis Kylian Mbappé a-t-il grandi ?",
+    "text": "Avec quel club professionnel Mbappé a-t-il débuté ?",
     "answers": [
-      "Montreuil",
-      "Saint-Denis",
-      "Bondy",
-      "Aulnay-sous-Bois"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel est le premier club formateur de Kylian Mbappé ?",
-    "answers": [
-      "INF Vichy",
-      "Red Star",
-      "Paris FC",
-      "AS Bondy"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club a lancé Kylian Mbappé chez les professionnels ?",
-    "answers": [
-      "AS Monaco",
       "Paris Saint-Germain",
+      "AS Monaco",
       "Real Madrid",
       "LOSC"
     ],
-    "correct": 0,
-    "difficulty": "easy"
+    "correct": 1
   },
   {
-    "text": "Quel centre national Kylian Mbappé a-t-il intégré pendant sa formation ?",
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : club où il remporte la Ligue 1 à dix-huit ans ?",
     "answers": [
-      "La Masia",
-      "INF Clairefontaine",
-      "Aspire Academy",
-      "INF Vichy"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "À quelle date Kylian Mbappé est-il né ?",
-    "answers": [
-      "20 novembre 1998",
-      "21 décembre 1997",
-      "20 décembre 1998",
-      "19 décembre 1999"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "À quel poste Kylian Mbappé évolue-t-il principalement ?",
-    "answers": [
-      "Gardien",
-      "Défenseur central",
-      "Milieu défensif",
-      "Attaquant"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel entraîneur fait débuter Kylian Mbappé en Ligue 1 avec Monaco ?",
-    "answers": [
-      "Leonardo Jardim",
-      "Didier Deschamps",
-      "Unai Emery",
-      "Claudio Ranieri"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Contre quel club Kylian Mbappé dispute-t-il son premier match professionnel ?",
-    "answers": [
-      "ESTAC Troyes",
-      "SM Caen",
-      "OGC Nice",
-      "FC Nantes"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "En quel mois Kylian Mbappé effectue-t-il ses débuts professionnels ?",
-    "answers": [
-      "Août 2015",
-      "Février 2016",
-      "Décembre 2015",
-      "Mai 2016"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel record interne de Monaco Kylian Mbappé bat-il en devenant son plus jeune joueur en équipe première ?",
-    "answers": [
-      "Celui de David Trezeguet",
-      "Celui de Lilian Thuram",
-      "Celui de Emmanuel Petit",
-      "Celui de Thierry Henry"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Contre quel club Kylian Mbappé inscrit-il son premier but professionnel ?",
-    "answers": [
-      "ESTAC Troyes",
-      "SM Caen",
-      "FC Metz",
-      "Stade Rennais"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel numéro Kylian Mbappé porte-t-il principalement à Monaco en 2016-2017 ?",
-    "answers": [
-      "7",
-      "29",
-      "10",
-      "14"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel titre national Monaco remporte-t-il avec Kylian Mbappé en 2016-2017 ?",
-    "answers": [
-      "Coupe de France",
-      "Coupe de la Ligue",
-      "Ligue 1",
-      "Trophée des champions"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club élimine Monaco en demi-finale de Ligue des champions 2016-2017 ?",
-    "answers": [
-      "Real Madrid",
-      "Atlético de Madrid",
-      "Bayern Munich",
-      "Juventus"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Contre quel club Kylian Mbappé marque-t-il son premier but en Ligue des champions ?",
-    "answers": [
-      "Manchester City",
-      "Borussia Dortmund",
-      "Juventus",
-      "Tottenham"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quel stade Kylian Mbappé marque-t-il son premier but en Ligue des champions ?",
-    "answers": [
-      "Signal Iduna Park",
-      "Etihad Stadium",
-      "Juventus Stadium",
-      "Wembley"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel club Monaco élimine-t-il en huitièmes de finale de Ligue des champions 2016-2017 ?",
-    "answers": [
-      "Arsenal",
-      "Naples",
-      "Manchester City",
-      "Séville"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Monaco élimine-t-il en quarts de finale de Ligue des champions 2016-2017 ?",
-    "answers": [
-      "Bayern Munich",
-      "Leicester City",
-      "FC Porto",
-      "Borussia Dortmund"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Combien de buts Kylian Mbappé inscrit-il lors de sa première campagne de Ligue des champions, en 2016-2017 ?",
-    "answers": [
-      "6",
-      "4",
-      "5",
-      "8"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Sous quelle forme Kylian Mbappé rejoint-il d’abord le PSG en 2017 ?",
-    "answers": [
-      "Un transfert sec",
-      "Un prêt avec option d’achat",
-      "Un prêt sans option",
-      "Un échange de joueurs"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel numéro Kylian Mbappé porte-t-il lors de sa première saison au PSG ?",
-    "answers": [
-      "7",
-      "10",
-      "29",
-      "14"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel numéro Kylian Mbappé adopte-t-il au PSG à partir de 2018-2019 ?",
-    "answers": [
-      "9",
-      "10",
-      "11",
-      "7"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Contre quel club Kylian Mbappé marque-t-il pour ses débuts avec le PSG ?",
-    "answers": [
-      "FC Metz",
-      "AS Saint-Étienne",
-      "Olympique Lyonnais",
-      "EA Guingamp"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel entraîneur dirige le PSG lors de la première saison parisienne de Kylian Mbappé ?",
-    "answers": [
-      "Thomas Tuchel",
-      "Unai Emery",
-      "Laurent Blanc",
-      "Mauricio Pochettino"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club bat le PSG en finale de la Ligue des champions 2020 ?",
-    "answers": [
-      "Borussia Dortmund",
-      "Real Madrid",
-      "Bayern Munich",
-      "Manchester City"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur marque l’unique but de la finale de Ligue des champions 2020 contre le PSG ?",
-    "answers": [
-      "Robert Lewandowski",
-      "Thomas Müller",
-      "Serge Gnabry",
-      "Kingsley Coman"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Contre quel club Kylian Mbappé inscrit-il un triplé au Camp Nou en février 2021 ?",
-    "answers": [
-      "FC Barcelone",
-      "Real Madrid",
-      "Atlético de Madrid",
-      "Séville FC"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "À quel stade Kylian Mbappé réalise-t-il son triplé européen de février 2021 ?",
-    "answers": [
-      "Santiago-Bernabéu",
-      "Camp Nou",
-      "Wanda Metropolitano",
-      "San Siro"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "À quel tour de Ligue des champions Mbappé inscrit-il un triplé au Camp Nou en 2021 ?",
-    "answers": [
-      "Quart de finale aller",
-      "Demi-finale retour",
-      "Huitième de finale aller",
-      "Phase de groupes"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel est le score de la victoire parisienne au Camp Nou en février 2021 ?",
-    "answers": [
-      "3-1",
-      "4-0",
-      "5-2",
-      "4-1"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Contre quel club Kylian Mbappé marque-t-il à l’aller et au retour des huitièmes de finale 2021-2022 ?",
-    "answers": [
-      "Real Madrid",
-      "Bayern Munich",
-      "Chelsea",
-      "Manchester City"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur inscrit un triplé au retour pour éliminer le PSG en mars 2022 ?",
-    "answers": [
-      "Vinícius Júnior",
-      "Karim Benzema",
-      "Luka Modrić",
-      "Rodrygo"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Kylian Mbappé quitte-t-il libre à l’été 2024 ?",
-    "answers": [
+      "Paris Saint-Germain",
+      "Croatie",
       "AS Monaco",
+      "Numéro 10"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Kylian Mbappé », quelle description correspond à AS Monaco ?",
+    "answers": [
+      "club espagnol rejoint libre après son départ de Paris",
+      "adversaire de son doublé en huitième de finale à Kazan",
+      "commune où il grandit et commence le football",
+      "club où il remporte la Ligue 1 à dix-huit ans"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle ville de Seine-Saint-Denis Mbappé a-t-il grandi ?",
+    "answers": [
+      "Bondy",
+      "Bobigny",
+      "Saint-Denis",
+      "Montreuil"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : club rejoint d’abord sous forme de prêt en 2017 ?",
+    "answers": [
       "Real Madrid",
       "Paris Saint-Germain",
-      "Olympique de Marseille"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club Kylian Mbappé rejoint-il en 2024 ?",
-    "answers": [
-      "FC Barcelone",
-      "Liverpool",
-      "Manchester United",
-      "Real Madrid"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "À quelle date le Real Madrid annonce-t-il officiellement la signature de Kylian Mbappé ?",
-    "answers": [
-      "3 juin 2024",
-      "1er juillet 2024",
-      "16 juillet 2024",
-      "31 août 2024"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel numéro Kylian Mbappé reçoit-il à son arrivée au Real Madrid ?",
-    "answers": [
-      "7",
-      "9",
-      "10",
-      "11"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Dans quel stade Kylian Mbappé est-il présenté comme joueur du Real Madrid ?",
-    "answers": [
-      "Stade de France",
-      "Parc des Princes",
-      "Santiago-Bernabéu",
-      "Wanda Metropolitano"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel ancien joueur français assiste à la présentation madrilène de Mbappé en juillet 2024 ?",
-    "answers": [
-      "Thierry Henry",
-      "Michel Platini",
-      "Didier Deschamps",
-      "Zinédine Zidane"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle compétition Kylian Mbappé dispute-t-il son premier match officiel avec le Real Madrid ?",
-    "answers": [
-      "Super Coupe de l’UEFA",
-      "Liga",
-      "Ligue des champions",
-      "Coupe du Roi"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club affronte le Real Madrid pour les débuts officiels de Mbappé ?",
-    "answers": [
-      "Inter Milan",
-      "Atalanta Bergame",
-      "Bayer Leverkusen",
-      "Manchester City"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville Mbappé dispute-t-il son premier match officiel avec le Real Madrid ?",
-    "answers": [
-      "Madrid",
-      "Londres",
-      "Varsovie",
-      "Istanbul"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Qui inscrit le premier but du Real Madrid lors de la Super Coupe de l’UEFA 2024 ?",
-    "answers": [
-      "Kylian Mbappé",
-      "Vinícius Júnior",
-      "Jude Bellingham",
-      "Federico Valverde"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Qui inscrit le deuxième but du Real Madrid lors de la Super Coupe de l’UEFA 2024 ?",
-    "answers": [
-      "Kylian Mbappé",
-      "Federico Valverde",
-      "Rodrygo",
-      "Luka Modrić"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur délivre la passe décisive sur le premier but officiel de Mbappé au Real Madrid ?",
-    "answers": [
-      "Vinícius Júnior",
-      "Jude Bellingham",
-      "Federico Valverde",
-      "Dani Carvajal"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Combien de buts Mbappé marque-t-il contre le Betis lors de son premier match de Liga avec un but ?",
-    "answers": [
-      "1",
-      "3",
-      "2",
-      "4"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club le Real Madrid bat-il en finale de la Coupe intercontinentale 2024 ?",
-    "answers": [
-      "Al Ahly",
-      "Al-Hilal",
-      "Flamengo",
-      "Pachuca"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quel pays la finale de la Coupe intercontinentale 2024 est-elle disputée ?",
-    "answers": [
-      "Qatar",
-      "Espagne",
-      "Arabie saoudite",
-      "Émirats arabes unis"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel est le score de la finale de la Coupe intercontinentale 2024 remportée par le Real Madrid ?",
-    "answers": [
-      "2-0",
-      "3-0",
-      "3-1",
-      "4-1"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel sélectionneur fait débuter Kylian Mbappé en équipe de France A ?",
-    "answers": [
-      "Laurent Blanc",
-      "Raymond Domenech",
-      "Didier Deschamps",
-      "Zinédine Zidane"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Contre quelle sélection Kylian Mbappé connaît-il sa première cape ?",
-    "answers": [
-      "Pays-Bas",
-      "Espagne",
-      "Bulgarie",
-      "Luxembourg"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur Kylian Mbappé remplace-t-il pour sa première cape contre le Luxembourg ?",
-    "answers": [
-      "Dimitri Payet",
-      "Antoine Griezmann",
-      "Olivier Giroud",
-      "Thomas Lemar"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Contre quelle sélection Kylian Mbappé marque-t-il son premier but avec les Bleus ?",
-    "answers": [
-      "Luxembourg",
-      "Pays-Bas",
-      "Bulgarie",
-      "Angleterre"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel numéro Kylian Mbappé porte-t-il avec la France lors de la Coupe du monde 2018 ?",
-    "answers": [
-      "7",
-      "9",
-      "10",
-      "12"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Dans quel pays Kylian Mbappé devient-il champion du monde en 2018 ?",
-    "answers": [
-      "Qatar",
-      "Brésil",
-      "Afrique du Sud",
-      "Russie"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Contre quelle sélection Kylian Mbappé inscrit-il son premier but en Coupe du monde ?",
-    "answers": [
-      "Pérou",
-      "Australie",
-      "Danemark",
-      "Argentine"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Dans quelle ville Mbappé marque-t-il son premier but en Coupe du monde ?",
-    "answers": [
-      "Moscou",
-      "Iekaterinbourg",
-      "Kazan",
-      "Saint-Pétersbourg"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Contre quelle sélection Mbappé inscrit-il un doublé en huitième de finale du Mondial 2018 ?",
-    "answers": [
-      "Uruguay",
-      "Belgique",
       "Argentine",
-      "Croatie"
+      "Bondy"
     ],
-    "correct": 2,
-    "difficulty": "easy"
+    "correct": 1
   },
   {
-    "text": "Quel est le score de France-Argentine en huitième de finale du Mondial 2018 ?",
+    "text": "Dans « Kylian Mbappé », quelle description correspond à Paris Saint-Germain ?",
     "answers": [
-      "3-2",
-      "4-2",
-      "5-3",
-      "4-3"
+      "tournoi où il devient champion à dix-neuf ans",
+      "trophée international remporté après un but en finale contre l’Espagne",
+      "club rejoint d’abord sous forme de prêt en 2017",
+      "centre fédéral intégré durant sa formation"
     ],
-    "correct": 3,
-    "difficulty": "medium"
+    "correct": 2
   },
   {
-    "text": "Dans quelle ville France-Argentine est-il disputé au Mondial 2018 ?",
+    "text": "Quel club espagnol Mbappé a-t-il rejoint libre en 2024 ?",
     "answers": [
-      "Kazan",
-      "Moscou",
-      "Sotchi",
-      "Samara"
+      "Le FC Barcelone",
+      "L'Atlético de Madrid",
+      "Le Séville FC",
+      "Le Real Madrid"
     ],
-    "correct": 0,
-    "difficulty": "hard"
+    "correct": 3
   },
   {
-    "text": "Quel penalty Mbappé provoque-t-il face à l’Argentine en 2018 ?",
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : club espagnol rejoint libre après son départ de Paris ?",
     "answers": [
-      "Celui transformé par Olivier Giroud",
-      "Celui transformé par Antoine Griezmann",
-      "Celui transformé par Paul Pogba",
-      "Celui transformé par Benjamin Pavard"
+      "Real Madrid",
+      "Coupe du monde 2018",
+      "Ligue des nations 2021",
+      "Clairefontaine"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 0
   },
   {
-    "text": "Contre quelle sélection la France joue-t-elle en finale du Mondial 2018 ?",
+    "text": "Dans « Kylian Mbappé », quelle description correspond à Real Madrid ?",
     "answers": [
-      "Belgique",
-      "Angleterre",
+      "match où il inscrit un triplé contre l’Argentine",
+      "club espagnol rejoint libre après son départ de Paris",
+      "distinction obtenue avec huit buts au Qatar",
+      "président de Monaco lors de son éclosion"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "En quelle année Mbappé a-t-il remporté la Ligue 1 avec Monaco ?",
+    "answers": [
+      "2016",
+      "2018",
+      "2017",
+      "2019"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : tournoi où il devient champion à dix-neuf ans ?",
+    "answers": [
+      "Finale 2022",
+      "Soulier d’or 2022",
+      "Dmitri Rybolovlev",
+      "Coupe du monde 2018"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Kylian Mbappé », quelle description correspond à Coupe du monde 2018 ?",
+    "answers": [
+      "tournoi où il devient champion à dix-neuf ans",
+      "adversaire contre lequel il marque en finale mondiale à Moscou",
+      "numéro généralement porté avec l’équipe de France",
+      "entraîneur lors de sa première saison parisienne"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel montant approximatif le PSG a-t-il payé pour Mbappé ?",
+    "answers": [
+      "222 millions d'euros",
+      "180 millions d'euros",
+      "100 millions d'euros",
+      "50 millions d'euros"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : match où il inscrit un triplé contre l’Argentine ?",
+    "answers": [
       "Croatie",
-      "Brésil"
+      "Numéro 10",
+      "Finale 2022",
+      "Unai Emery"
     ],
-    "correct": 2,
-    "difficulty": "easy"
+    "correct": 2
   },
   {
-    "text": "Quel buteur français marque juste avant Mbappé en finale du Mondial 2018 ?",
+    "text": "Dans « Kylian Mbappé », quelle description correspond à Finale 2022 ?",
     "answers": [
-      "Antoine Griezmann",
-      "Olivier Giroud",
-      "N’Golo Kanté",
-      "Paul Pogba"
+      "adversaire de son doublé en huitième de finale à Kazan",
+      "commune où il grandit et commence le football",
+      "sélectionneur qui le lance chez les Bleus en 2017",
+      "match où il inscrit un triplé contre l’Argentine"
     ],
-    "correct": 3,
-    "difficulty": "hard"
+    "correct": 3
   },
   {
-    "text": "Quel gardien croate est battu par Mbappé en finale du Mondial 2018 ?",
+    "text": "Quel âge avait Mbappé lors du sacre mondial de 2018 ?",
     "answers": [
-      "Danijel Subašić",
-      "Dominik Livaković",
-      "Stipe Pletikosa",
-      "Ivica Ivušić"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quelle distinction individuelle Mbappé reçoit-il au Mondial 2018 ?",
-    "answers": [
-      "Ballon d’or du tournoi",
-      "Meilleur jeune joueur",
-      "Soulier d’or",
-      "Gant d’or"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Depuis quel joueur Mbappé est-il le premier adolescent à marquer en finale de Coupe du monde ?",
-    "answers": [
-      "Diego Maradona",
-      "Ronaldo Nazário",
-      "Pelé",
-      "Michael Owen"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel âge Mbappé a-t-il lors de la finale du Mondial 2018 ?",
-    "answers": [
-      "18 ans",
-      "20 ans",
+      "19 ans",
+      "17 ans",
       "21 ans",
-      "19 ans"
+      "23 ans"
     ],
-    "correct": 3,
-    "difficulty": "hard"
+    "correct": 0
   },
   {
-    "text": "Contre quelle sélection Mbappé inscrit-il quatre buts en novembre 2021 ?",
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : adversaire contre lequel il marque en finale mondiale à Moscou ?",
     "answers": [
-      "Kazakhstan",
-      "Finlande",
-      "Ukraine",
-      "Bosnie-Herzégovine"
+      "Argentine",
+      "Croatie",
+      "Bondy",
+      "Didier Deschamps"
     ],
-    "correct": 0,
-    "difficulty": "medium"
+    "correct": 1
   },
   {
-    "text": "Quel est le score de France-Kazakhstan en novembre 2021 ?",
+    "text": "Dans « Kylian Mbappé », quelle description correspond à Croatie ?",
     "answers": [
-      "7-0",
-      "8-0",
-      "8-1",
-      "9-0"
+      "trophée international remporté après un but en finale contre l’Espagne",
+      "centre fédéral intégré durant sa formation",
+      "adversaire contre lequel il marque en finale mondiale à Moscou",
+      "adversaire contre lequel il inscrit son premier but professionnel"
     ],
-    "correct": 1,
-    "difficulty": "hard"
+    "correct": 2
   },
   {
-    "text": "Quelle compétition la France remporte-t-elle en octobre 2021 ?",
+    "text": "Contre quelle équipe Mbappé a-t-il marqué en finale de la Coupe du monde 2018 ?",
     "answers": [
-      "Euro",
-      "Coupe des confédérations",
-      "Ligue des nations",
-      "Finalissima"
+      "L'Argentine",
+      "La Belgique",
+      "L'Uruguay",
+      "La Croatie"
     ],
-    "correct": 2,
-    "difficulty": "easy"
+    "correct": 3
   },
   {
-    "text": "Quel est le score de la finale de Ligue des nations 2021 ?",
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : adversaire de son doublé en huitième de finale à Kazan ?",
     "answers": [
-      "1-0",
-      "2-0",
-      "3-1",
-      "2-1"
+      "Argentine",
+      "Ligue des nations 2021",
+      "Clairefontaine",
+      "Troyes"
     ],
-    "correct": 3,
-    "difficulty": "hard"
+    "correct": 0
   },
   {
-    "text": "Qui inscrit le but victorieux de la France en finale de Ligue des nations 2021 ?",
+    "text": "Dans « Kylian Mbappé », quelle description correspond à Argentine ?",
     "answers": [
-      "Kylian Mbappé",
-      "Karim Benzema",
-      "Antoine Griezmann",
-      "Paul Pogba"
+      "distinction obtenue avec huit buts au Qatar",
+      "adversaire de son doublé en huitième de finale à Kazan",
+      "président de Monaco lors de son éclosion",
+      "club où il remporte la Ligue 1 à dix-huit ans"
     ],
-    "correct": 0,
-    "difficulty": "hard"
+    "correct": 1
   },
   {
-    "text": "Quel gardien espagnol est battu par Mbappé en finale de Ligue des nations 2021 ?",
+    "text": "Combien de buts Mbappé a-t-il marqués en finale de la Coupe du monde 2022 ?",
     "answers": [
-      "David de Gea",
-      "Unai Simón",
-      "Kepa Arrizabalaga",
-      "Iker Casillas"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Contre quelle sélection Mbappé manque-t-il le tir au but décisif à l’Euro 2020 ?",
-    "answers": [
-      "Portugal",
-      "Allemagne",
-      "Suisse",
-      "Espagne"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel gardien arrête le tir au but de Mbappé contre la Suisse ?",
-    "answers": [
-      "Gregor Kobel",
-      "Roman Bürki",
-      "Yvon Mvogo",
-      "Yann Sommer"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel est le score après prolongation de France-Suisse à l’Euro 2020 ?",
-    "answers": [
-      "3-3",
-      "2-2",
-      "3-2",
-      "4-4"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel est le score de la séance de tirs au but perdue par la France contre la Suisse ?",
-    "answers": [
-      "3-4",
-      "4-5",
-      "4-6",
-      "5-6"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Combien de buts Mbappé inscrit-il pendant la Coupe du monde 2022 ?",
-    "answers": [
-      "6",
-      "7",
-      "8",
-      "9"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quelle récompense Mbappé remporte-t-il au Mondial 2022 ?",
-    "answers": [
-      "Ballon d’or",
-      "Soulier d’argent",
-      "Prix du meilleur jeune",
-      "Soulier d’or"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Combien de buts Mbappé inscrit-il en finale du Mondial 2022 ?",
-    "answers": [
-      "3",
       "1",
       "2",
+      "3",
       "4"
     ],
-    "correct": 0,
-    "difficulty": "easy"
+    "correct": 2
   },
   {
-    "text": "Qui est le premier joueur avant Mbappé à réussir un triplé en finale de Coupe du monde masculine ?",
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : trophée international remporté après un but en finale contre l’Espagne ?",
+    "answers": [
+      "Soulier d’or 2022",
+      "Dmitri Rybolovlev",
+      "AS Monaco",
+      "Ligue des nations 2021"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Kylian Mbappé », quelle description correspond à Ligue des nations 2021 ?",
+    "answers": [
+      "trophée international remporté après un but en finale contre l’Espagne",
+      "numéro généralement porté avec l’équipe de France",
+      "entraîneur lors de sa première saison parisienne",
+      "club rejoint d’abord sous forme de prêt en 2017"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel autre joueur avait marqué un triplé en finale de Coupe du monde avant Mbappé ?",
     "answers": [
       "Pelé",
       "Geoff Hurst",
-      "Ronaldo Nazário",
-      "Gerd Müller"
+      "Zinédine Zidane",
+      "Ronaldo"
     ],
-    "correct": 1,
-    "difficulty": "hard"
+    "correct": 1
   },
   {
-    "text": "En quelle année Geoff Hurst avait-il réussi un triplé en finale mondiale ?",
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : distinction obtenue avec huit buts au Qatar ?",
     "answers": [
-      "1958",
-      "1970",
-      "1966",
-      "1974"
+      "Numéro 10",
+      "Unai Emery",
+      "Soulier d’or 2022",
+      "Paris Saint-Germain"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 2
   },
   {
-    "text": "Quel gardien argentin Mbappé bat-il trois fois en finale du Mondial 2022 ?",
+    "text": "Dans « Kylian Mbappé », quelle description correspond à Soulier d’or 2022 ?",
     "answers": [
-      "Franco Armani",
-      "Gerónimo Rulli",
-      "Sergio Romero",
-      "Emiliano Martínez"
+      "commune où il grandit et commence le football",
+      "sélectionneur qui le lance chez les Bleus en 2017",
+      "club espagnol rejoint libre après son départ de Paris",
+      "distinction obtenue avec huit buts au Qatar"
     ],
-    "correct": 3,
-    "difficulty": "hard"
+    "correct": 3
   },
   {
-    "text": "Combien des trois buts de Mbappé en finale du Mondial 2022 sont inscrits sur penalty ?",
+    "text": "Quel trophée de meilleur jeune joueur Mbappé a-t-il remporté en 2018 ?",
     "answers": [
-      "2",
-      "1",
-      "3",
-      "0"
+      "Le trophée Kopa",
+      "Le Ballon d'or",
+      "Le Soulier d'or",
+      "Le trophée Yachine"
     ],
-    "correct": 0,
-    "difficulty": "hard"
+    "correct": 0
   },
   {
-    "text": "Quelle sélection remporte la finale du Mondial 2022 face à la France ?",
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : numéro généralement porté avec l’équipe de France ?",
     "answers": [
-      "Croatie",
-      "Argentine",
-      "Maroc",
-      "Brésil"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel est le score après prolongation de la finale du Mondial 2022 ?",
-    "answers": [
-      "2-2",
-      "3-2",
-      "3-3",
-      "4-3"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel est le score de la séance de tirs au but de la finale du Mondial 2022 ?",
-    "answers": [
-      "5-4 pour l’Argentine",
-      "4-3 pour la France",
-      "3-2 pour l’Argentine",
-      "4-2 pour l’Argentine"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Combien de buts Mbappé totalise-t-il dans les finales des Coupes du monde 2018 et 2022 ?",
-    "answers": [
-      "4",
-      "3",
-      "5",
-      "6"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Qui remet le brassard de capitaine des Bleus à Mbappé en mars 2023 ?",
-    "answers": [
-      "Hugo Lloris",
+      "Bondy",
+      "Numéro 10",
       "Didier Deschamps",
-      "Antoine Griezmann",
-      "Philippe Diallo"
+      "Real Madrid"
     ],
-    "correct": 1,
-    "difficulty": "hard"
+    "correct": 1
   },
   {
-    "text": "Quel gardien était capitaine des Bleus avant Mbappé ?",
+    "text": "Dans « Kylian Mbappé », quelle description correspond à Numéro 10 ?",
     "answers": [
-      "Steve Mandanda",
-      "Mike Maignan",
-      "Hugo Lloris",
-      "Alphonse Areola"
+      "centre fédéral intégré durant sa formation",
+      "adversaire contre lequel il inscrit son premier but professionnel",
+      "numéro généralement porté avec l’équipe de France",
+      "tournoi où il devient champion à dix-neuf ans"
     ],
-    "correct": 2,
-    "difficulty": "medium"
+    "correct": 2
   },
   {
-    "text": "Contre quelle sélection Mbappé dispute-t-il son premier match comme capitaine titulaire des Bleus ?",
+    "text": "En quelle année Mbappé est-il devenu capitaine de l'équipe de France ?",
     "answers": [
-      "Irlande",
-      "Gibraltar",
-      "Grèce",
-      "Pays-Bas"
+      "2018",
+      "2021",
+      "2025",
+      "2023"
     ],
-    "correct": 3,
-    "difficulty": "hard"
+    "correct": 3
   },
   {
-    "text": "Quel est le score du premier match de Mbappé capitaine contre les Pays-Bas ?",
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : commune où il grandit et commence le football ?",
     "answers": [
-      "4-0",
-      "3-0",
-      "4-1",
-      "5-0"
+      "Bondy",
+      "Clairefontaine",
+      "Troyes",
+      "Coupe du monde 2018"
     ],
-    "correct": 0,
-    "difficulty": "hard"
+    "correct": 0
   },
   {
-    "text": "Combien de buts Mbappé inscrit-il lors de son premier match comme capitaine contre les Pays-Bas ?",
+    "text": "Dans « Kylian Mbappé », quelle description correspond à Bondy ?",
     "answers": [
-      "1",
-      "2",
-      "3",
-      "0"
+      "président de Monaco lors de son éclosion",
+      "commune où il grandit et commence le football",
+      "club où il remporte la Ligue 1 à dix-huit ans",
+      "match où il inscrit un triplé contre l’Argentine"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 1
   },
   {
-    "text": "Contre quelle sélection Mbappé inscrit-il son premier but dans un Championnat d’Europe ?",
+    "text": "Quel est le meilleur buteur de l'histoire du PSG ?",
     "answers": [
-      "Autriche",
-      "Pays-Bas",
-      "Pologne",
-      "Belgique"
+      "Edinson Cavani",
+      "Zlatan Ibrahimović",
+      "Kylian Mbappé",
+      "Neymar"
     ],
-    "correct": 2,
-    "difficulty": "hard"
+    "correct": 2
   },
   {
-    "text": "Comment Mbappé inscrit-il son premier but à l’Euro, contre la Pologne en 2024 ?",
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : centre fédéral intégré durant sa formation ?",
     "answers": [
-      "Sur coup franc",
-      "De la tête",
-      "D’une reprise de volée",
-      "Sur penalty"
+      "Dmitri Rybolovlev",
+      "AS Monaco",
+      "Finale 2022",
+      "Clairefontaine"
     ],
-    "correct": 3,
-    "difficulty": "medium"
+    "correct": 3
   },
   {
-    "text": "Quel gardien polonais Mbappé bat-il pour son premier but à l’Euro ?",
+    "text": "Dans « Kylian Mbappé », quelle description correspond à Clairefontaine ?",
     "answers": [
-      "Łukasz Skorupski",
-      "Wojciech Szczęsny",
-      "Kamil Grabara",
-      "Bartłomiej Drągowski"
+      "centre fédéral intégré durant sa formation",
+      "entraîneur lors de sa première saison parisienne",
+      "club rejoint d’abord sous forme de prêt en 2017",
+      "adversaire contre lequel il marque en finale mondiale à Moscou"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 0
   },
   {
-    "text": "Quel est le score de France-Pologne à l’Euro 2024 ?",
+    "text": "Quel numéro Mbappé porte-t-il au Real Madrid depuis 2025 ?",
     "answers": [
-      "1-0",
-      "1-1",
-      "2-1",
-      "2-2"
+      "Le 9",
+      "Le 10",
+      "Le 7",
+      "Le 29"
     ],
-    "correct": 1,
-    "difficulty": "hard"
+    "correct": 1
   },
   {
-    "text": "Contre quelle sélection Mbappé se fracture-t-il le nez lors de l’Euro 2024 ?",
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : président de Monaco lors de son éclosion ?",
     "answers": [
-      "Pays-Bas",
-      "Belgique",
-      "Autriche",
-      "Espagne"
+      "Unai Emery",
+      "Paris Saint-Germain",
+      "Dmitri Rybolovlev",
+      "Croatie"
     ],
-    "correct": 2,
-    "difficulty": "hard"
+    "correct": 2
   },
   {
-    "text": "Quel défenseur autrichien est impliqué dans le choc où Mbappé se fracture le nez ?",
+    "text": "Dans « Kylian Mbappé », quelle description correspond à Dmitri Rybolovlev ?",
     "answers": [
-      "David Alaba",
-      "Stefan Posch",
-      "Philipp Lienhart",
-      "Kevin Danso"
+      "sélectionneur qui le lance chez les Bleus en 2017",
+      "club espagnol rejoint libre après son départ de Paris",
+      "adversaire de son doublé en huitième de finale à Kazan",
+      "président de Monaco lors de son éclosion"
     ],
-    "correct": 3,
-    "difficulty": "expert"
+    "correct": 3
+  },
+  {
+    "text": "Quel était le numéro de Mbappé lors de sa première saison au Real Madrid ?",
+    "answers": [
+      "Le 9",
+      "Le 10",
+      "Le 7",
+      "Le 11"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : entraîneur lors de sa première saison parisienne ?",
+    "answers": [
+      "Didier Deschamps",
+      "Unai Emery",
+      "Real Madrid",
+      "Argentine"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « Kylian Mbappé », quelle description correspond à Unai Emery ?",
+    "answers": [
+      "adversaire contre lequel il inscrit son premier but professionnel",
+      "tournoi où il devient champion à dix-neuf ans",
+      "entraîneur lors de sa première saison parisienne",
+      "trophée international remporté après un but en finale contre l’Espagne"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel trophée de meilleur buteur européen Mbappé a-t-il remporté en 2025 ?",
+    "answers": [
+      "Le Ballon d'or",
+      "Le Golden Boy",
+      "Le trophée Puskás",
+      "Le Soulier d'or européen"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : sélectionneur qui le lance chez les Bleus en 2017 ?",
+    "answers": [
+      "Didier Deschamps",
+      "Troyes",
+      "Coupe du monde 2018",
+      "Ligue des nations 2021"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « Kylian Mbappé », quelle description correspond à Didier Deschamps ?",
+    "answers": [
+      "club où il remporte la Ligue 1 à dix-huit ans",
+      "sélectionneur qui le lance chez les Bleus en 2017",
+      "match où il inscrit un triplé contre l’Argentine",
+      "distinction obtenue avec huit buts au Qatar"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel club formateur de Bondy a vu débuter Mbappé ?",
+    "answers": [
+      "Le Red Star",
+      "Le Paris FC",
+      "L'AS Bondy",
+      "L'US Créteil"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « Kylian Mbappé », quel repère de la carrière de Mbappé correspond à cette description : adversaire contre lequel il inscrit son premier but professionnel ?",
+    "answers": [
+      "AS Monaco",
+      "Finale 2022",
+      "Soulier d’or 2022",
+      "Troyes"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « Kylian Mbappé », quelle description correspond à Troyes ?",
+    "answers": [
+      "adversaire contre lequel il inscrit son premier but professionnel",
+      "club rejoint d’abord sous forme de prêt en 2017",
+      "adversaire contre lequel il marque en finale mondiale à Moscou",
+      "numéro généralement porté avec l’équipe de France"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Avec quelle équipe Mbappé a-t-il remporté la Ligue des nations en 2021 ?",
+    "answers": [
+      "L'AS Monaco",
+      "L'équipe de France",
+      "Le PSG",
+      "Le Real Madrid"
+    ],
+    "correct": 1
   }
 ]

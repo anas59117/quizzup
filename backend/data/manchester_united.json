@@ -1,1102 +1,512 @@
 [
   {
-    "text": "En quelle année le club devenu Manchester United a-t-il été fondé ?",
+    "text": "Comment s'appelle le stade de Manchester United ?",
     "answers": [
-      "1878",
-      "1888",
-      "1892",
-      "1902"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel était le nom d’origine de Manchester United ?",
-    "answers": [
-      "Manchester Central",
-      "Newton Heath LYR",
-      "Salford United",
-      "Lancashire FC"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "En quelle année le club a-t-il pris le nom Manchester United ?",
-    "answers": [
-      "1892",
-      "1908",
-      "1902",
-      "1910"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel est le stade de Manchester United ?",
-    "answers": [
-      "Etihad Stadium",
       "Anfield",
-      "Goodison Park",
-      "Old Trafford"
+      "Old Trafford",
+      "Etihad Stadium",
+      "Stamford Bridge"
     ],
-    "correct": 3,
-    "difficulty": "easy"
+    "correct": 1
   },
   {
-    "text": "En quelle année Manchester United s’est-il installé à Old Trafford ?",
+    "text": "Quel est le surnom de Manchester United ?",
     "answers": [
-      "1910",
-      "1902",
-      "1908",
-      "1914"
+      "Les Gunners",
+      "Les Red Devils",
+      "Les Citizens",
+      "Les Blues"
     ],
-    "correct": 0,
-    "difficulty": "easy"
+    "correct": 1
   },
   {
-    "text": "Quel surnom est associé à Manchester United ?",
+    "text": "Quel entraîneur écossais a dirigé Manchester United de 1986 à 2013 ?",
     "answers": [
-      "The Citizens",
-      "The Red Devils",
-      "The Gunners",
-      "The Toffees"
+      "Sir Alex Ferguson",
+      "Sir Matt Busby",
+      "Kenny Dalglish",
+      "David Moyes"
     ],
-    "correct": 1,
-    "difficulty": "easy"
+    "correct": 0
   },
   {
-    "text": "Quelles sont les couleurs traditionnelles de Manchester United ?",
-    "answers": [
-      "Bleu ciel et blanc",
-      "Rouge et bleu",
-      "Rouge, blanc et noir",
-      "Grenat et bleu"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club dispute le derby de Manchester contre United ?",
+    "text": "Quel est le grand rival de Manchester United dans la même ville ?",
     "answers": [
       "Liverpool",
-      "Everton",
       "Leeds United",
-      "Manchester City"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel entraîneur écossais a dirigé United de 1986 à 2013 ?",
-    "answers": [
-      "Alex Ferguson",
-      "Matt Busby",
-      "David Moyes",
-      "Tommy Docherty"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel joueur est le meilleur buteur historique de Manchester United ?",
-    "answers": [
-      "Bobby Charlton",
-      "Wayne Rooney",
-      "Denis Law",
-      "George Best"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel joueur détient le record d’apparitions avec Manchester United ?",
-    "answers": [
-      "Bobby Charlton",
-      "Paul Scholes",
-      "Ryan Giggs",
-      "Bill Foulkes"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel attaquant portugais a porté le numéro 7 à United ?",
-    "answers": [
-      "Luís Figo",
-      "Nani",
-      "Bruno Fernandes",
-      "Cristiano Ronaldo"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel Français était surnommé « The King » à Manchester United ?",
-    "answers": [
-      "Eric Cantona",
-      "David Ginola",
-      "Fabien Barthez",
-      "Louis Saha"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel gardien danois a remporté le triplé 1999 avec United ?",
-    "answers": [
-      "Edwin van der Sar",
-      "Peter Schmeichel",
-      "Anders Lindegaard",
-      "Thomas Sørensen"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club United a-t-il battu en finale de Ligue des champions 1999 ?",
-    "answers": [
-      "La Juventus",
-      "Le FC Barcelone",
-      "Le Bayern Munich",
-      "Le Real Madrid"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel joueur a marqué le but victorieux de la finale européenne 1999 ?",
-    "answers": [
-      "Teddy Sheringham",
-      "David Beckham",
-      "Dwight Yorke",
-      "Ole Gunnar Solskjær"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club United a-t-il battu en finale de Ligue des champions 2008 ?",
-    "answers": [
-      "Chelsea",
-      "Arsenal",
-      "Liverpool",
-      "Le FC Barcelone"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel joueur de United a ouvert le score en finale européenne 2008 ?",
-    "answers": [
-      "Wayne Rooney",
-      "Cristiano Ronaldo",
-      "Carlos Tévez",
-      "Ryan Giggs"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel entraîneur a conduit United à sa première Coupe d’Europe en 1968 ?",
-    "answers": [
-      "Alex Ferguson",
-      "Tommy Docherty",
-      "Matt Busby",
-      "Ron Atkinson"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel était l’adversaire de United en finale de Coupe d’Europe 1968 ?",
-    "answers": [
-      "Le Real Madrid",
-      "L’AC Milan",
-      "L’Inter Milan",
-      "Le Benfica"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Que signifiaient les initiales LYR dans Newton Heath LYR ?",
-    "answers": [
-      "Lancashire and Yorkshire Railway",
-      "London and York Regiment",
-      "Lancaster Youth Railway",
-      "League of Yorkshire Rovers"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "En quelle saison Newton Heath a-t-il rejoint la première division anglaise ?",
-    "answers": [
-      "1888-1889",
-      "1892-1893",
-      "1890-1891",
-      "1902-1903"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "En quelle année Manchester United a-t-il remporté son premier championnat ?",
-    "answers": [
-      "1906",
-      "1909",
-      "1908",
-      "1911"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "En quelle année United a-t-il remporté sa première FA Cup ?",
-    "answers": [
-      "1908",
-      "1910",
-      "1948",
-      "1909"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club United a-t-il battu en finale de FA Cup 1909 ?",
-    "answers": [
-      "Bristol City",
-      "Newcastle United",
-      "Aston Villa",
-      "Everton"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel fut le score de la finale de FA Cup 1909 ?",
-    "answers": [
-      "2-0",
-      "1-0",
-      "2-1",
-      "3-1"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur a marqué l’unique but de la finale de FA Cup 1909 ?",
-    "answers": [
-      "Billy Meredith",
-      "Charlie Roberts",
-      "Sandy Turnbull",
-      "George Wall"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club fut le premier adversaire de United à Old Trafford en 1910 ?",
-    "answers": [
       "Manchester City",
-      "Arsenal",
-      "Everton",
-      "Liverpool"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel fut le score du premier match à Old Trafford ?",
-    "answers": [
-      "Liverpool s’imposa 4-3",
-      "United s’imposa 3-0",
-      "Match nul 2-2",
-      "United s’imposa 4-1"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel entraîneur a pris les commandes de United en 1945 ?",
-    "answers": [
-      "Jimmy Murphy",
-      "Matt Busby",
-      "Walter Crickmer",
-      "Ernest Mangnall"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club United a-t-il battu en finale de FA Cup 1948 ?",
-    "answers": [
-      "Liverpool",
-      "Arsenal",
-      "Blackpool",
-      "Portsmouth"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel fut le score de la finale de FA Cup 1948 ?",
-    "answers": [
-      "3-1",
-      "2-0",
-      "4-1",
-      "4-2"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "En quelle année l’équipe de Matt Busby a-t-elle remporté son premier championnat ?",
-    "answers": [
-      "1952",
-      "1948",
-      "1956",
-      "1957"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Comment surnommait-on la jeune équipe de Matt Busby ?",
-    "answers": [
-      "Les Red Stars",
-      "Les Busby Babes",
-      "Les Railway Boys",
-      "Les Manchester Kids"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "À quelle date la catastrophe aérienne de Munich s’est-elle produite ?",
-    "answers": [
-      "5 février 1958",
-      "8 février 1958",
-      "6 février 1958",
-      "6 mars 1958"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "De quelle ville l’équipe revenait-elle avant l’accident de Munich ?",
-    "answers": [
-      "Prague",
-      "Budapest",
-      "Vienne",
-      "Belgrade"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel adversaire United venait-il d’éliminer en Coupe d’Europe en février 1958 ?",
-    "answers": [
-      "L’Étoile rouge de Belgrade",
-      "Le Partizan Belgrade",
-      "Le Real Madrid",
-      "Le Dukla Prague"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Combien de personnes ont perdu la vie à la suite de la catastrophe de Munich ?",
-    "answers": [
-      "20",
-      "23",
-      "21",
-      "25"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Combien de joueurs de Manchester United ont péri dans la catastrophe de Munich ?",
-    "answers": [
-      "7",
-      "9",
-      "8",
-      "10"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel entraîneur adjoint dirigea l’équipe pendant la convalescence de Matt Busby ?",
-    "answers": [
-      "Walter Crickmer",
-      "Jack Crompton",
-      "Bert Whalley",
-      "Jimmy Murphy"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel fut le score de la finale de Coupe d’Europe 1968 après prolongation ?",
-    "answers": [
-      "4-1",
-      "3-1",
-      "2-1",
-      "4-2"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quel stade s’est jouée la finale européenne 1968 ?",
-    "answers": [
-      "Old Trafford",
-      "Wembley",
-      "Hampden Park",
-      "Santiago Bernabéu"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur a ouvert le score pour United en finale 1968 ?",
-    "answers": [
-      "George Best",
-      "Brian Kidd",
-      "Bobby Charlton",
-      "Denis Law"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quels trois joueurs ont marqué pour United pendant la prolongation de la finale 1968 ?",
-    "answers": [
-      "Denis Law, George Best et Brian Kidd",
-      "Bobby Charlton, Denis Law et George Best",
-      "Brian Kidd, Nobby Stiles et Bobby Charlton",
-      "George Best, Brian Kidd et Bobby Charlton"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur de Benfica a égalisé en finale 1968 ?",
-    "answers": [
-      "Jaime Graça",
-      "Eusébio",
-      "José Torres",
-      "Mário Coluna"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel anniversaire Brian Kidd célébrait-il le jour de la finale 1968 ?",
-    "answers": [
-      "Ses 18 ans",
-      "Ses 19 ans",
-      "Ses 20 ans",
-      "Ses 21 ans"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Pourquoi le sacre de 1968 fut-il historique en Angleterre ?",
-    "answers": [
-      "C’était la première finale européenne jouée à Wembley",
-      "United gagna sans encaisser de but",
-      "United devint le premier club anglais champion d’Europe",
-      "C’était le premier trophée décidé aux tirs au but"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club United a-t-il battu en finale de Coupe des vainqueurs de coupe 1991 ?",
-    "answers": [
-      "Le Real Madrid",
-      "La Sampdoria",
-      "Anderlecht",
-      "Le FC Barcelone"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur a inscrit les deux buts de United en finale européenne 1991 ?",
-    "answers": [
-      "Mark Hughes",
-      "Brian McClair",
-      "Steve Bruce",
-      "Bryan Robson"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel fut le score de la finale de Coupe des vainqueurs de coupe 1991 ?",
-    "answers": [
-      "1-0",
-      "2-1",
-      "2-0",
-      "3-1"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville United a-t-il remporté la Coupe des vainqueurs de coupe 1991 ?",
-    "answers": [
-      "Bâle",
-      "Göteborg",
-      "Rotterdam",
-      "Bruxelles"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club United a-t-il battu en Supercoupe de l’UEFA 1991 ?",
-    "answers": [
-      "Le FC Barcelone",
-      "L’AC Milan",
-      "Le Benfica",
-      "L’Étoile rouge de Belgrade"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur a marqué l’unique but de la Supercoupe de l’UEFA 1991 ?",
-    "answers": [
-      "Brian McClair",
-      "Mark Hughes",
-      "Ryan Giggs",
-      "Steve Bruce"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "En quelle saison United a-t-il remporté la première Premier League ?",
-    "answers": [
-      "1993-1994",
-      "1992-1993",
-      "1991-1992",
-      "1994-1995"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Depuis combien d’années United attendait-il alors un titre de champion ?",
-    "answers": [
-      "24 ans",
-      "25 ans",
-      "26 ans",
-      "27 ans"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur français a rejoint United depuis Leeds en novembre 1992 ?",
-    "answers": [
-      "Laurent Blanc",
-      "Louis Saha",
-      "Mikaël Silvestre",
-      "Eric Cantona"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel doublé United a-t-il réalisé pour la première fois en 1993-1994 ?",
-    "answers": [
-      "Championnat et FA Cup",
-      "Championnat et League Cup",
-      "FA Cup et Coupe d’Europe",
-      "Championnat et Coupe des coupes"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club United a-t-il battu 4-0 en finale de FA Cup 1994 ?",
-    "answers": [
-      "Liverpool",
-      "Chelsea",
-      "Everton",
-      "Aston Villa"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club a privé United du titre lors de la dernière journée de 1994-1995 ?",
-    "answers": [
-      "Blackburn Rovers",
-      "Liverpool",
-      "West Ham United",
-      "Leeds United"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quels jeunes joueurs symbolisent la « Class of 92 » ?",
-    "answers": [
-      "Cantona, Keane, Beckham, Scholes, Giggs et Cole",
-      "Giggs, Sharpe, Beckham, Butt, Cole et Yorke",
-      "Beckham, Scholes, Ferdinand, les frères Neville et Butt",
-      "Giggs, Beckham, Scholes, les frères Neville et Butt"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club United a-t-il battu en finale de FA Cup 1996 ?",
-    "answers": [
-      "Liverpool",
-      "Chelsea",
-      "Newcastle United",
       "Everton"
     ],
-    "correct": 0,
-    "difficulty": "hard"
+    "correct": 2
   },
   {
-    "text": "Qui a marqué l’unique but de la finale de FA Cup 1996 ?",
+    "text": "Combien de titres de champion d'Angleterre Manchester United a-t-il remportés ?",
     "answers": [
-      "David Beckham",
-      "Eric Cantona",
-      "Ryan Giggs",
-      "Paul Scholes"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club United a-t-il battu en demi-finale de Ligue des champions 1999 ?",
-    "answers": [
-      "L’Inter Milan",
-      "Le Bayern Munich",
-      "La Juventus",
-      "Le FC Barcelone"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Qui a inscrit le premier but de United lors du retour à Turin en 1999 ?",
-    "answers": [
-      "Dwight Yorke",
-      "Andy Cole",
-      "Ryan Giggs",
-      "Roy Keane"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur était suspendu pour la finale européenne 1999 avec Roy Keane ?",
-    "answers": [
-      "Paul Scholes",
-      "David Beckham",
-      "Nicky Butt",
-      "Ryan Giggs"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "À quelle minute Teddy Sheringham a-t-il égalisé en finale 1999 ?",
-    "answers": [
-      "89e",
-      "90+1e",
-      "90e",
-      "90+3e"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "À quelle minute Ole Gunnar Solskjær a-t-il marqué en finale 1999 ?",
-    "answers": [
-      "90+1e",
-      "90+2e",
-      "90+3e",
-      "90+4e"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur du Bayern avait ouvert le score en finale 1999 ?",
-    "answers": [
-      "Carsten Jancker",
-      "Stefan Effenberg",
-      "Mehmet Scholl",
-      "Mario Basler"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quel stade s’est jouée la finale européenne 1999 ?",
-    "answers": [
-      "Le Camp Nou",
-      "Wembley",
-      "Old Trafford",
-      "Le Stade de France"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quels trois trophées composent le triplé de United en 1999 ?",
-    "answers": [
-      "Premier League, League Cup et Ligue des champions",
-      "Premier League, FA Cup et Ligue des champions",
-      "FA Cup, League Cup et Ligue des champions",
-      "Premier League, FA Cup et Coupe intercontinentale"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club United a-t-il battu en finale de Coupe intercontinentale 1999 ?",
-    "answers": [
-      "Vasco da Gama",
-      "Corinthians",
-      "Palmeiras",
-      "Boca Juniors"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Qui a marqué l’unique but de la finale intercontinentale 1999 ?",
-    "answers": [
-      "David Beckham",
-      "Dwight Yorke",
-      "Andy Cole",
-      "Roy Keane"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel gardien a arrêté le tir au but de Nicolas Anelka en finale de Ligue des champions 2008 ?",
-    "answers": [
-      "Edwin van der Sar",
-      "Peter Schmeichel",
-      "Ben Foster",
-      "Tomasz Kuszczak"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur de Chelsea a glissé avant de manquer son tir au but en finale 2008 ?",
-    "answers": [
-      "Frank Lampard",
-      "John Terry",
-      "Didier Drogba",
-      "Nicolas Anelka"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville s’est jouée la finale de Ligue des champions 2008 ?",
-    "answers": [
-      "Rome",
-      "Athènes",
-      "Moscou",
-      "Istanbul"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel fut le score de la séance de tirs au but en finale 2008 ?",
-    "answers": [
-      "5-4",
-      "7-6",
-      "4-3",
-      "6-5"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club a battu United en finale de Ligue des champions 2009 ?",
-    "answers": [
-      "Le FC Barcelone",
-      "Le Real Madrid",
-      "L’Inter Milan",
-      "Le Bayern Munich"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel fut le score de la finale européenne 2009 ?",
-    "answers": [
-      "1-0",
-      "2-0",
-      "2-1",
-      "3-1"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club a battu United en finale de Ligue des champions 2011 ?",
-    "answers": [
-      "Chelsea",
-      "Le Bayern Munich",
-      "Le FC Barcelone",
-      "Le Real Madrid"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur a égalisé pour United en finale 2011 ?",
-    "answers": [
-      "Javier Hernández",
-      "Ryan Giggs",
-      "Nani",
-      "Wayne Rooney"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club United a-t-il battu en finale de Ligue Europa 2017 ?",
-    "answers": [
-      "L’Ajax",
-      "Le Celta Vigo",
-      "Villarreal",
-      "Le FC Séville"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quels joueurs ont marqué pour United en finale de Ligue Europa 2017 ?",
-    "answers": [
-      "Marcus Rashford et Paul Pogba",
-      "Paul Pogba et Henrikh Mkhitaryan",
-      "Zlatan Ibrahimović et Juan Mata",
-      "Henrikh Mkhitaryan et Jesse Lingard"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Dans quelle ville s’est jouée la finale de Ligue Europa 2017 ?",
-    "answers": [
-      "Stockholm",
-      "Göteborg",
-      "Solna",
-      "Oslo"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel entraîneur a remporté la Ligue Europa 2017 avec United ?",
-    "answers": [
-      "Louis van Gaal",
-      "Ole Gunnar Solskjær",
-      "David Moyes",
-      "José Mourinho"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel adversaire a battu United aux tirs au but en finale de Ligue Europa 2021 ?",
-    "answers": [
-      "Villarreal",
-      "Le FC Séville",
-      "L’Ajax",
-      "L’Atlético de Madrid"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel gardien de Villarreal a marqué avant d’arrêter le tir au but décisif en 2021 ?",
-    "answers": [
-      "Sergio Asenjo",
-      "Gerónimo Rulli",
-      "Pepe Reina",
-      "David Soria"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur de United a manqué le seul tir au but de la séance en 2021 ?",
-    "answers": [
-      "Bruno Fernandes",
-      "Marcus Rashford",
-      "David de Gea",
-      "Victor Lindelöf"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Combien de titres de Premier League Alex Ferguson a-t-il remportés ?",
-    "answers": [
-      "11",
-      "12",
-      "14",
-      "13"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Combien de championnats d’Angleterre United totalisait-il après le titre 2013 ?",
-    "answers": [
+      "13",
       "20",
       "18",
-      "19",
-      "21"
+      "25"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 1
   },
   {
-    "text": "Quel fut le dernier titre de champion remporté par Alex Ferguson ?",
+    "text": "Combien de Ligues des champions Manchester United a-t-il remportées ?",
     "answers": [
-      "2010-2011",
-      "2012-2013",
-      "2011-2012",
-      "2013-2014"
+      "3",
+      "1",
+      "5",
+      "6"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 0
   },
   {
-    "text": "Quel attaquant a marqué un triplé contre Aston Villa pour assurer le titre 2013 ?",
+    "text": "Quel joueur français surnommé « The King » a marqué l'histoire des Red Devils ?",
     "answers": [
+      "Thierry Henry",
+      "Patrice Evra",
+      "Éric Cantona",
+      "Fabien Barthez"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel attaquant portugais a remporté le Ballon d'or 2008 sous le maillot de United ?",
+    "answers": [
+      "Nani",
+      "Cristiano Ronaldo",
+      "Bruno Fernandes",
+      "Luís Figo"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel milieu anglais, célèbre pour ses coups francs, portait le numéro 7 dans les années 1990 ?",
+    "answers": [
+      "Paul Scholes",
+      "David Beckham",
+      "Steven Gerrard",
+      "Frank Lampard"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel attaquant anglais est le meilleur buteur de l'histoire de Manchester United ?",
+    "answers": [
+      "Bobby Charlton",
       "Wayne Rooney",
-      "Javier Hernández",
-      "Robin van Persie",
+      "Ryan Giggs",
+      "Marcus Rashford"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel Gallois détient le record de matchs joués pour Manchester United ?",
+    "answers": [
+      "Gareth Bale",
+      "Mark Hughes",
+      "Ryan Giggs",
+      "Ian Rush"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Contre quel club Manchester United a-t-il remporté la finale de 1999 au Camp Nou ?",
+    "answers": [
+      "La Juventus",
+      "Le Bayern Munich",
+      "Valence",
+      "Le Real Madrid"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Comment Manchester United a-t-il renversé le Bayern en finale 1999 ?",
+    "answers": [
+      "Deux buts dans le temps additionnel",
+      "Aux tirs au but",
+      "En prolongation",
+      "Grâce à un but contre son camp"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quels joueurs ont marqué les deux buts de la finale 1999 ?",
+    "answers": [
+      "Teddy Sheringham et Ole Gunnar Solskjær",
+      "Andy Cole et Dwight Yorke",
+      "David Beckham et Roy Keane",
+      "Paul Scholes et Ryan Giggs"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel triplé historique Manchester United a-t-il réalisé en 1999 ?",
+    "answers": [
+      "Championnat, Coupe de la Ligue et Europa League",
+      "Championnat, FA Cup et Ligue des champions",
+      "FA Cup, Supercoupe et Mondial des clubs",
+      "Aucun"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Contre quel club Manchester United a-t-il gagné la finale de Ligue des champions 2008 à Moscou ?",
+    "answers": [
+      "Arsenal",
+      "Chelsea",
+      "Liverpool",
+      "Barcelone"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Comment s'est terminée la finale 2008 contre Chelsea ?",
+    "answers": [
+      "Par un 3-0",
+      "Par un but en or",
+      "Par un 1-0 en prolongation",
+      "Aux tirs au but"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "En quelle année Manchester United a-t-il remporté sa première Coupe des clubs champions ?",
+    "answers": [
+      "1958",
+      "1977",
+      "1968",
+      "1999"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel drame a frappé l'équipe de Manchester United en 1958 ?",
+    "answers": [
+      "L'incendie d'Old Trafford",
+      "La tragédie du Heysel",
+      "La catastrophe d'Hillsborough",
+      "La catastrophe aérienne de Munich"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Comment surnommait-on les jeunes joueurs de Matt Busby dans les années 1950 ?",
+    "answers": [
+      "La Class of 92",
+      "Les Invincibles",
+      "Les Galácticos",
+      "Les Busby Babes"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle génération dorée de jeunes formés au club comprenait Beckham, Giggs, Scholes et Neville ?",
+    "answers": [
+      "Les Busby Babes",
+      "La Dream Team",
+      "Les Fergie Boys",
+      "La Class of 92"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel Nord-Irlandais, Ballon d'or 1968, était une star de United ?",
+    "answers": [
+      "Bobby Charlton",
+      "Denis Law",
+      "George Best",
+      "Norman Whiteside"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel milieu irlandais, capitaine charismatique, a mené United à la fin des années 1990 ?",
+    "answers": [
+      "Paul McGrath",
+      "Denis Irwin",
+      "Roy Keane",
+      "John O'Shea"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel gardien danois était dans les buts lors du triplé 1999 ?",
+    "answers": [
+      "Kasper Schmeichel",
+      "Edwin van der Sar",
+      "Fabien Barthez",
+      "Peter Schmeichel"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel défenseur français a été capitaine de Manchester United dans les années 2010 ?",
+    "answers": [
+      "Mikaël Silvestre",
+      "Patrice Evra",
+      "Raphaël Varane",
+      "Louis Saha"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel milieu français, champion du monde 2018, a joué deux fois à Manchester United ?",
+    "answers": [
+      "N'Golo Kanté",
+      "Paul Pogba",
+      "Blaise Matuidi",
+      "Anthony Martial"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel attaquant français a été le transfert le plus cher pour un adolescent en 2015 en rejoignant United ?",
+    "answers": [
+      "Kylian Mbappé",
+      "Ousmane Dembélé",
+      "Kingsley Coman",
+      "Anthony Martial"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel entraîneur portugais a dirigé Manchester United de 2016 à 2018 ?",
+    "answers": [
+      "José Mourinho",
+      "Paulo Fonseca",
+      "Rúben Amorim",
+      "André Villas-Boas"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel ancien joueur norvégien a entraîné United de 2018 à 2021 ?",
+    "answers": [
+      "John Arne Riise",
+      "Ole Gunnar Solskjær",
+      "Erling Haaland",
+      "Tore André Flo"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel entraîneur portugais a été nommé à Manchester United en novembre 2024 ?",
+    "answers": [
+      "José Mourinho",
+      "Nuno Espírito Santo",
+      "Rúben Amorim",
+      "Paulo Fonseca"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel homme d'affaires britannique, fondateur d'Ineos, a investi dans le club en 2024 ?",
+    "answers": [
+      "Sir Jim Ratcliffe",
+      "Richard Branson",
+      "Roman Abramovitch",
+      "Mike Ashley"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle famille américaine est propriétaire majoritaire du club depuis 2005 ?",
+    "answers": [
+      "Les Glazer",
+      "Les Kroenke",
+      "Les Henry",
+      "Les Boehly"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel surnom donne-t-on à Old Trafford ?",
+    "answers": [
+      "La Forteresse",
+      "Le Théâtre des rêves",
+      "Le Temple",
+      "Le Chaudron"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel milieu portugais est devenu capitaine de United en 2023 ?",
+    "answers": [
+      "Diogo Dalot",
+      "Cristiano Ronaldo",
+      "Nani",
+      "Bruno Fernandes"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel attaquant anglais formé au club est né à Manchester en 1997 ?",
+    "answers": [
+      "Mason Greenwood",
+      "Jesse Lingard",
+      "Marcus Rashford",
       "Danny Welbeck"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 2
   },
   {
-    "text": "Quel joueur a inscrit 253 buts officiels pour Manchester United ?",
+    "text": "Quel défenseur français champion du monde a rejoint United en 2021 en provenance du Real Madrid ?",
     "answers": [
-      "Bobby Charlton",
-      "Denis Law",
-      "Ryan Giggs",
-      "Wayne Rooney"
+      "Samuel Umtiti",
+      "Raphaël Varane",
+      "Benjamin Pavard",
+      "Presnel Kimpembe"
     ],
-    "correct": 3,
-    "difficulty": "expert"
+    "correct": 1
   },
   {
-    "text": "Quel joueur a disputé 963 matches officiels avec Manchester United ?",
+    "text": "Quelle coupe européenne Manchester United a-t-il remportée en 2017 ?",
     "answers": [
-      "Ryan Giggs",
-      "Bobby Charlton",
-      "Paul Scholes",
-      "Gary Neville"
+      "La Ligue des champions",
+      "La Ligue Europa Conférence",
+      "La Supercoupe d'Europe",
+      "La Ligue Europa"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 3
   },
   {
-    "text": "Quel milieu a marqué 155 buts en 718 matches officiels pour United ?",
+    "text": "Contre quel club United a-t-il remporté la Ligue Europa 2017 ?",
     "answers": [
-      "Ryan Giggs",
-      "Paul Scholes",
-      "Roy Keane",
-      "Bryan Robson"
+      "L'Ajax Amsterdam",
+      "Séville",
+      "Villarreal",
+      "Benfica"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 0
   },
   {
-    "text": "Quel gardien détient le record de clean sheets de Manchester United ?",
+    "text": "Quel néerlandais, gardien de la victoire européenne 2008, a joué à United de 2005 à 2011 ?",
     "answers": [
-      "Peter Schmeichel",
       "Edwin van der Sar",
-      "David de Gea",
-      "Alex Stepney"
+      "Maarten Stekelenburg",
+      "Tim Krul",
+      "Jasper Cillessen"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 0
   },
   {
-    "text": "Quel joueur a remporté le Ballon d’Or 1964 sous les couleurs de United ?",
+    "text": "Quel attaquant néerlandais a été meilleur buteur de Premier League avec United en 2012-2013 ?",
     "answers": [
-      "Bobby Charlton",
-      "George Best",
-      "Duncan Edwards",
-      "Denis Law"
+      "Ruud van Nistelrooy",
+      "Robin van Persie",
+      "Dennis Bergkamp",
+      "Dirk Kuyt"
     ],
-    "correct": 3,
-    "difficulty": "expert"
+    "correct": 1
   },
   {
-    "text": "Quel joueur de United a remporté le Ballon d’Or 1966 ?",
+    "text": "En quelle année le club a-t-il été fondé sous le nom de Newton Heath ?",
     "answers": [
-      "Bobby Charlton",
-      "Denis Law",
-      "George Best",
-      "Nobby Stiles"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur de United a remporté le Ballon d’Or 1968 ?",
-    "answers": [
-      "Bobby Charlton",
-      "George Best",
-      "Denis Law",
-      "Brian Kidd"
+      "1892",
+      "1878",
+      "1902",
+      "1860"
     ],
     "correct": 1,
     "difficulty": "expert"
   },
   {
-    "text": "Quel joueur a remporté le Ballon d’Or 2008 après le doublé Premier League-Ligue des champions ?",
+    "text": "Sous quel nom Manchester United a-t-il été fondé ?",
     "answers": [
-      "Wayne Rooney",
-      "Ryan Giggs",
-      "Cristiano Ronaldo",
-      "Carlos Tévez"
+      "Ardwick",
+      "Newton Heath",
+      "St. Mark's",
+      "Dial Square"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de titres de champion Sir Alex Ferguson a-t-il remportés avec United ?",
+    "answers": [
+      "8",
+      "13",
+      "10",
+      "20"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel adversaire United a-t-il battu en finale de la Coupe des clubs champions 1968 ?",
+    "answers": [
+      "Le Real Madrid",
+      "Benfica",
+      "L'Ajax",
+      "Le Celtic"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel stade a accueilli la finale de 1968 remportée par Manchester United ?",
+    "answers": [
+      "Old Trafford",
+      "Le Camp Nou",
+      "Le Stade de Colombes",
+      "Wembley"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel entraîneur a reconstruit le club après la catastrophe de Munich ?",
+    "answers": [
+      "Sir Matt Busby",
+      "Sir Alex Ferguson",
+      "Tommy Docherty",
+      "Ron Atkinson"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel attaquant néerlandais a marqué 150 buts pour United entre 2001 et 2006 ?",
+    "answers": [
+      "Robin van Persie",
+      "Patrick Kluivert",
+      "Jaap Stam",
+      "Ruud van Nistelrooy"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le dernier titre de champion d'Angleterre remporté par United ?",
+    "answers": [
+      "2011",
+      "2016",
+      "2013",
+      "2021"
     ],
     "correct": 2,
     "difficulty": "expert"
   },
   {
-    "text": "Quel joueur a marqué l’unique but du match rejoué de la finale de FA Cup 1990 ?",
+    "text": "Quel entraîneur a succédé à Sir Alex Ferguson en 2013 ?",
     "answers": [
-      "Mark Hughes",
-      "Brian McClair",
-      "Steve Bruce",
-      "Lee Martin"
+      "David Moyes",
+      "Louis van Gaal",
+      "José Mourinho",
+      "Ryan Giggs"
     ],
-    "correct": 3,
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel défenseur serbe a été un pilier de la défense de United aux côtés de Rio Ferdinand ?",
+    "answers": [
+      "Nemanja Vidić",
+      "Branislav Ivanović",
+      "Aleksandar Kolarov",
+      "Matija Nastasić"
+    ],
+    "correct": 0,
     "difficulty": "expert"
   }
 ]

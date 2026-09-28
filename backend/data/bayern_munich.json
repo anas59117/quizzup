@@ -1,1102 +1,512 @@
 [
   {
-    "text": "En quelle année le FC Bayern Munich a-t-il été fondé ?",
-    "answers": [
-      "1900",
-      "1897",
-      "1904",
-      "1909"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Dans quelle ville le Bayern évolue-t-il ?",
+    "text": "Dans quelle ville joue le Bayern ?",
     "answers": [
       "Berlin",
       "Munich",
-      "Hambourg",
-      "Dortmund"
+      "Dortmund",
+      "Hambourg"
     ],
-    "correct": 1,
-    "difficulty": "easy"
+    "correct": 1
   },
   {
-    "text": "Quel stade accueille les matches à domicile du Bayern depuis 2005 ?",
+    "text": "Comment s'appelle le stade du Bayern Munich ?",
     "answers": [
-      "L’Olympiastadion",
       "Le Signal Iduna Park",
-      "L’Allianz Arena",
+      "L'Olympiastadion",
+      "L'Allianz Arena",
       "La Veltins-Arena"
     ],
-    "correct": 2,
-    "difficulty": "easy"
+    "correct": 2
   },
   {
-    "text": "Quelles sont les couleurs traditionnellement associées au Bayern ?",
+    "text": "Quelle est la devise du Bayern Munich ?",
     "answers": [
+      "Més que un club",
+      "Echte Liebe",
+      "Hala Madrid",
+      "Mia san mia"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelles sont les couleurs du Bayern ?",
+    "answers": [
+      "Jaune et noir",
+      "Rouge et blanc",
       "Bleu et blanc",
-      "Noir et jaune",
-      "Vert et blanc",
-      "Rouge et blanc"
+      "Vert et blanc"
     ],
-    "correct": 3,
-    "difficulty": "easy"
+    "correct": 1
   },
   {
-    "text": "Quel surnom allemand du Bayern signifie « les Rouges » ?",
+    "text": "Comment s'appelle le grand choc entre le Bayern et le Borussia Dortmund ?",
     "answers": [
-      "Die Roten",
-      "Die Wölfe",
-      "Die Fohlen",
-      "Die Knappen"
+      "Der Klassiker",
+      "Le Derby de la Ruhr",
+      "Le Derby du Sud",
+      "Le Nordderby"
     ],
-    "correct": 0,
-    "difficulty": "easy"
+    "correct": 0
   },
   {
-    "text": "Dans quel championnat le Bayern évolue-t-il ?",
+    "text": "Quel est le rival local du Bayern dans la même ville ?",
     "answers": [
-      "La Serie A",
-      "La Bundesliga",
-      "La Liga",
-      "L’Eredivisie"
+      "L'Eintracht Francfort",
+      "Le FC Augsbourg",
+      "Le TSV 1860 Munich",
+      "Le VfB Stuttgart"
     ],
-    "correct": 1,
-    "difficulty": "easy"
+    "correct": 2
   },
   {
-    "text": "Quel club affronte le Bayern dans le Klassiker allemand ?",
+    "text": "Combien de Ligues des champions le Bayern a-t-il remportées ?",
     "answers": [
-      "Le Bayer Leverkusen",
-      "Le RB Leipzig",
-      "Le Borussia Dortmund",
-      "Le Werder Brême"
+      "3",
+      "5",
+      "6",
+      "7"
     ],
-    "correct": 2,
-    "difficulty": "easy"
+    "correct": 2
   },
   {
-    "text": "Quel attaquant du Bayern était surnommé « Der Bomber » ?",
+    "text": "Quel attaquant polonais a marqué 41 buts en Bundesliga lors de la saison 2020-2021 ?",
     "answers": [
-      "Uli Hoeneß",
-      "Paul Breitner",
-      "Sepp Maier",
-      "Gerd Müller"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel défenseur emblématique du Bayern était surnommé « le Kaiser » ?",
-    "answers": [
-      "Franz Beckenbauer",
-      "Hans-Georg Schwarzenbeck",
-      "Philipp Lahm",
-      "Klaus Augenthaler"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel gardien du Bayern était surnommé « le Titan » ?",
-    "answers": [
-      "Sepp Maier",
-      "Oliver Kahn",
-      "Manuel Neuer",
-      "Jean-Marie Pfaff"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel joueur a marqué le but décisif de la finale de Ligue des champions 2013 ?",
-    "answers": [
-      "Franck Ribéry",
-      "Mario Mandžukić",
-      "Arjen Robben",
-      "Thomas Müller"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club le Bayern a-t-il battu en finale de Ligue des champions 2013 ?",
-    "answers": [
-      "Chelsea",
-      "Le Real Madrid",
-      "Le FC Barcelone",
-      "Le Borussia Dortmund"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel joueur a inscrit l’unique but de la finale de Ligue des champions 2020 ?",
-    "answers": [
-      "Kingsley Coman",
       "Robert Lewandowski",
+      "Arkadiusz Milik",
+      "Krzysztof Piątek",
+      "Łukasz Podolski"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel record Lewandowski a-t-il battu en 2021 avec 41 buts ?",
+    "answers": [
+      "Celui de Pelé",
+      "Celui de Gerd Müller",
+      "Celui de Klaus Fischer",
+      "Celui de Miroslav Klose"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel buteur légendaire était surnommé « Der Bomber » ?",
+    "answers": [
+      "Karl-Heinz Rummenigge",
+      "Gerd Müller",
       "Thomas Müller",
-      "Serge Gnabry"
+      "Uwe Seeler"
     ],
-    "correct": 0,
-    "difficulty": "easy"
+    "correct": 1
   },
   {
-    "text": "Quel était l’adversaire du Bayern en finale de Ligue des champions 2020 ?",
+    "text": "Quel libéro surnommé « Der Kaiser » a été capitaine du Bayern ?",
     "answers": [
-      "L’Olympique lyonnais",
-      "Le Paris Saint-Germain",
-      "Chelsea",
-      "Manchester City"
+      "Lothar Matthäus",
+      "Philipp Lahm",
+      "Oliver Kahn",
+      "Franz Beckenbauer"
     ],
-    "correct": 1,
-    "difficulty": "easy"
+    "correct": 3
   },
   {
-    "text": "Quel entraîneur a mené le Bayern au triplé en 2020 ?",
+    "text": "Quel gardien allemand, capitaine, a longtemps défendu les buts du Bayern depuis 2011 ?",
     "answers": [
-      "Pep Guardiola",
-      "Jupp Heynckes",
-      "Hansi Flick",
-      "Carlo Ancelotti"
+      "Oliver Kahn",
+      "Sepp Maier",
+      "Marc-André ter Stegen",
+      "Manuel Neuer"
     ],
-    "correct": 2,
-    "difficulty": "easy"
+    "correct": 3
   },
   {
-    "text": "Quel capitaine a soulevé la Ligue des champions avec le Bayern en 2013 ?",
-    "answers": [
-      "Bastian Schweinsteiger",
-      "Manuel Neuer",
-      "Thomas Müller",
-      "Philipp Lahm"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel Français a formé avec Arjen Robben le duo surnommé « Robbery » ?",
+    "text": "Quel ailier français a formé le duo « Robbéry » avec Arjen Robben ?",
     "answers": [
       "Franck Ribéry",
       "Kingsley Coman",
       "Bixente Lizarazu",
-      "Corentin Tolisso"
+      "Willy Sagnol"
     ],
-    "correct": 0,
-    "difficulty": "easy"
+    "correct": 0
   },
   {
-    "text": "Quel joueur a établi avec le Bayern un record de 41 buts sur une saison de Bundesliga en 2020-2021 ?",
+    "text": "Quel ailier néerlandais a marqué le but de la victoire en finale de Ligue des champions 2013 ?",
     "answers": [
-      "Gerd Müller",
-      "Robert Lewandowski",
-      "Harry Kane",
-      "Mario Gómez"
+      "Robin van Persie",
+      "Rafael van der Vaart",
+      "Arjen Robben",
+      "Wesley Sneijder"
     ],
-    "correct": 1,
-    "difficulty": "easy"
+    "correct": 2
   },
   {
-    "text": "Quel ancien stade munichois le Bayern a-t-il occupé avant l’Allianz Arena ?",
+    "text": "Contre quel club le Bayern a-t-il gagné la finale de Ligue des champions 2013 ?",
     "answers": [
-      "Le Grünwalder Stadion",
-      "Le Westfalenstadion",
-      "L’Olympiastadion",
-      "Le Neckarstadion"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quelle devise bavaroise est étroitement associée au Bayern ?",
-    "answers": [
-      "Echte Liebe",
-      "Nur der HSV",
-      "Wir sind Werder",
-      "Mia san mia"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "En quelle année le Bayern a-t-il remporté son premier championnat d’Allemagne ?",
-    "answers": [
-      "1932",
-      "1927",
-      "1957",
-      "1969"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club le Bayern a-t-il battu en finale du championnat allemand de 1932 ?",
-    "answers": [
-      "Schalke 04",
-      "L’Eintracht Francfort",
-      "Le Hertha Berlin",
-      "Le 1. FC Nuremberg"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "En quelle année le Bayern a-t-il remporté sa première Coupe d’Allemagne ?",
-    "answers": [
-      "1932",
-      "1966",
-      "1957",
-      "1969"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club fut battu par le Bayern en finale de la Coupe d’Allemagne 1957 ?",
-    "answers": [
-      "Borussia Dortmund",
-      "Werder Brême",
-      "Hambourg SV",
-      "Fortuna Düsseldorf"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "En quelle saison le Bayern a-t-il disputé sa première campagne de Bundesliga ?",
-    "answers": [
-      "1965-1966",
-      "1963-1964",
-      "1964-1965",
-      "1966-1967"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel trophée européen le Bayern a-t-il remporté en 1967 ?",
-    "answers": [
-      "La Coupe des clubs champions",
-      "La Coupe des vainqueurs de coupe",
-      "La Coupe UEFA",
-      "La Coupe Intertoto"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club le Bayern a-t-il battu en finale de la Coupe des vainqueurs de coupe 1967 ?",
-    "answers": [
-      "Celtic",
-      "Aberdeen",
-      "Rangers",
-      "Hearts"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Qui a marqué l’unique but de la finale européenne de 1967 ?",
-    "answers": [
-      "Gerd Müller",
-      "Franz Beckenbauer",
-      "Rainer Ohlhauser",
-      "Franz Roth"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "En quelle année le Bayern a-t-il remporté sa première Bundesliga ?",
-    "answers": [
-      "1969",
-      "1966",
-      "1972",
-      "1974"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel entraîneur a conduit le Bayern au triplé de 2013 ?",
-    "answers": [
-      "Ottmar Hitzfeld",
-      "Jupp Heynckes",
-      "Louis van Gaal",
-      "Pep Guardiola"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club le Bayern a-t-il battu aux tirs au but en finale européenne 2001 ?",
-    "answers": [
-      "Manchester United",
+      "Le Borussia Dortmund",
       "Chelsea",
-      "Valence",
-      "Porto"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel gardien a arrêté le tir au but décisif de la finale 2001 ?",
-    "answers": [
-      "Manuel Neuer",
-      "Hans-Jörg Butt",
-      "Raimond Aumann",
-      "Oliver Kahn"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur a transformé le penalty du Bayern pendant le temps réglementaire de la finale 2001 ?",
-    "answers": [
-      "Stefan Effenberg",
-      "Mehmet Scholl",
-      "Giovane Élber",
-      "Hasan Salihamidžić"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel adversaire a battu le Bayern en finale de Ligue des champions 1999 ?",
-    "answers": [
       "Le Real Madrid",
-      "Manchester United",
-      "L’AC Milan",
       "La Juventus"
     ],
-    "correct": 1,
-    "difficulty": "medium"
+    "correct": 0
   },
   {
-    "text": "Quel joueur du Bayern a ouvert le score en finale de 1999 ?",
+    "text": "Quel entraîneur a remporté le triplé 2013 avec le Bayern ?",
     "answers": [
-      "Carsten Jancker",
-      "Stefan Effenberg",
-      "Mario Basler",
-      "Mehmet Scholl"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club a battu le Bayern en finale de Ligue des champions 2012 à Munich ?",
-    "answers": [
-      "Manchester United",
-      "L’Inter Milan",
-      "Le FC Barcelone",
-      "Chelsea"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur du Bayern a ouvert le score en finale de 2012 ?",
-    "answers": [
-      "Thomas Müller",
-      "Mario Gómez",
-      "Arjen Robben",
-      "Bastian Schweinsteiger"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur de Chelsea a égalisé en finale de 2012 ?",
-    "answers": [
-      "Frank Lampard",
-      "Didier Drogba",
-      "Ashley Cole",
-      "Juan Mata"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur a manqué un penalty en prolongation pour le Bayern lors de la finale 2012 ?",
-    "answers": [
-      "Bastian Schweinsteiger",
-      "Thomas Müller",
-      "Arjen Robben",
-      "Mario Gómez"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club le Bayern a-t-il battu en finale de Coupe UEFA 1996 ?",
-    "answers": [
-      "L’Inter Milan",
-      "Le Benfica",
-      "Le FC Séville",
-      "Les Girondins de Bordeaux"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur a égalisé à la dernière minute du premier match de la finale européenne 1974 ?",
-    "answers": [
-      "Hans-Georg Schwarzenbeck",
-      "Gerd Müller",
-      "Uli Hoeneß",
-      "Franz Roth"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel adversaire le Bayern affrontait-il en finale de Coupe d’Europe 1974 ?",
-    "answers": [
-      "Le Real Madrid",
-      "L’Atlético de Madrid",
-      "Le FC Barcelone",
-      "Valence"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel fut le score du match rejoué de la finale européenne 1974 ?",
-    "answers": [
-      "3-0",
-      "4-1",
-      "4-0",
-      "2-0"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quels deux joueurs ont chacun inscrit un doublé lors du match rejoué de la finale 1974 ?",
-    "answers": [
-      "Gerd Müller et Franz Roth",
-      "Uli Hoeneß et Franz Beckenbauer",
-      "Franz Roth et Rainer Zobel",
-      "Uli Hoeneß et Gerd Müller"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club le Bayern a-t-il battu en finale de Coupe d’Europe 1975 ?",
-    "answers": [
-      "Leeds United",
-      "Liverpool",
-      "Nottingham Forest",
-      "Aston Villa"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quels joueurs ont marqué pour le Bayern en finale européenne 1975 ?",
-    "answers": [
-      "Uli Hoeneß et Gerd Müller",
-      "Franz Roth et Gerd Müller",
-      "Franz Beckenbauer et Franz Roth",
-      "Karl-Heinz Rummenigge et Gerd Müller"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club le Bayern a-t-il battu en finale de Coupe d’Europe 1976 ?",
-    "answers": [
-      "Le Real Madrid",
-      "Le PSV Eindhoven",
-      "L’AS Saint-Étienne",
-      "Le Benfica"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Qui a inscrit le seul but de la finale européenne 1976 ?",
-    "answers": [
-      "Gerd Müller",
-      "Uli Hoeneß",
-      "Bernd Dürnberger",
-      "Franz Roth"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville la finale européenne 1976 s’est-elle jouée ?",
-    "answers": [
-      "Glasgow",
-      "Londres",
-      "Paris",
-      "Bruxelles"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel adversaire a battu le Bayern en finale de Coupe d’Europe 1982 ?",
-    "answers": [
-      "Liverpool",
-      "Aston Villa",
-      "Nottingham Forest",
-      "Hambourg SV"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur d’Aston Villa a marqué l’unique but de la finale 1982 ?",
-    "answers": [
-      "Tony Morley",
-      "Gary Shaw",
-      "Peter Withe",
-      "Dennis Mortimer"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club a renversé le Bayern en finale de Coupe d’Europe 1987 ?",
-    "answers": [
-      "Le Benfica",
-      "Le PSV Eindhoven",
-      "Le Steaua Bucarest",
-      "Le FC Porto"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur du FC Porto a égalisé d’une talonnade en finale 1987 ?",
-    "answers": [
-      "Rabah Madjer",
-      "Juary",
-      "Paulo Futre",
-      "Fernando Gomes"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur du FC Porto a marqué le but victorieux en finale 1987 ?",
-    "answers": [
-      "Rabah Madjer",
-      "Juary",
-      "Paulo Futre",
-      "João Pinto"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur du Bayern avait ouvert le score en finale 1987 ?",
-    "answers": [
-      "Lothar Matthäus",
-      "Andreas Brehme",
-      "Ludwig Kögl",
-      "Dieter Hoeneß"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Combien de Coupes d’Europe/Ligues des champions le Bayern avait-il remportées après son sacre de 2020 ?",
-    "answers": [
-      "5",
-      "7",
-      "8",
-      "6"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quelles sont les trois années consécutives des premiers sacres européens du Bayern ?",
-    "answers": [
-      "1974, 1975 et 1976",
-      "1973, 1974 et 1975",
-      "1975, 1976 et 1977",
-      "1972, 1973 et 1974"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club le Bayern a-t-il éliminé 7-0 sur l’ensemble des deux matches en demi-finale de Ligue des champions 2013 ?",
-    "answers": [
-      "Le Real Madrid",
-      "Le FC Barcelone",
-      "La Juventus",
-      "Arsenal"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel fut le score du match aller Bayern-Barcelone en demi-finale 2013 ?",
-    "answers": [
-      "3-0",
-      "4-1",
-      "4-0",
-      "5-0"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur a ouvert le score pour le Bayern en finale 2013 ?",
-    "answers": [
-      "Arjen Robben",
-      "Thomas Müller",
-      "Franck Ribéry",
-      "Mario Mandžukić"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur de Dortmund a égalisé sur penalty en finale 2013 ?",
-    "answers": [
-      "İlkay Gündoğan",
-      "Marco Reus",
-      "Robert Lewandowski",
-      "Mats Hummels"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quel stade la finale de Ligue des champions 2013 s’est-elle déroulée ?",
-    "answers": [
-      "L’Allianz Arena",
-      "Wembley",
-      "L’Olympiastadion de Berlin",
-      "Old Trafford"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club le Bayern a-t-il écrasé 8-2 en quart de finale de Ligue des champions 2020 ?",
-    "answers": [
-      "Chelsea",
-      "L’Atlético de Madrid",
-      "Le FC Barcelone",
-      "Tottenham"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville s’est jouée la finale de Ligue des champions 2020 ?",
-    "answers": [
-      "Madrid",
-      "Porto",
-      "Istanbul",
-      "Lisbonne"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel entraîneur a conduit le Bayern à la Ligue des champions 2001 ?",
-    "answers": [
-      "Ottmar Hitzfeld",
-      "Giovanni Trapattoni",
-      "Felix Magath",
-      "Jürgen Klinsmann"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel capitaine du Bayern a soulevé le trophée européen en 2001 ?",
-    "answers": [
-      "Oliver Kahn",
-      "Stefan Effenberg",
-      "Mehmet Scholl",
-      "Lothar Matthäus"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur de Valence a ouvert le score sur penalty en finale 2001 ?",
-    "answers": [
-      "Santiago Cañizares",
-      "Pablo Aimar",
-      "Gaizka Mendieta",
-      "John Carew"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur du Bayern a vu son penalty arrêté au début de la finale 2001 ?",
-    "answers": [
-      "Stefan Effenberg",
-      "Hasan Salihamidžić",
-      "Carsten Jancker",
-      "Mehmet Scholl"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel défenseur de Valence a manqué le tir au but décisif en finale 2001 ?",
-    "answers": [
-      "Mauricio Pellegrino",
-      "Roberto Ayala",
-      "Amedeo Carboni",
-      "Miroslav Đukić"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel entraîneur néerlandais a mené le Bayern en finale de Ligue des champions 2010 ?",
-    "answers": [
-      "Guus Hiddink",
-      "Louis van Gaal",
-      "Dick Advocaat",
-      "Frank Rijkaard"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club a battu le Bayern en finale de Ligue des champions 2010 ?",
-    "answers": [
-      "Le FC Barcelone",
-      "Manchester United",
-      "L’Inter Milan",
-      "Chelsea"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel ancien joueur du Bayern a entraîné le club lors du doublé Bundesliga-Coupe de 2008 ?",
-    "answers": [
-      "Jürgen Klinsmann",
-      "Felix Magath",
+      "Pep Guardiola",
+      "Jupp Heynckes",
       "Louis van Gaal",
       "Ottmar Hitzfeld"
     ],
-    "correct": 3,
-    "difficulty": "hard"
+    "correct": 1
   },
   {
-    "text": "Quel entraîneur a dirigé le Bayern pendant ses trois saisons complètes de 2013 à 2016 ?",
+    "text": "Contre quel club le Bayern a-t-il gagné la finale de Ligue des champions 2020 ?",
     "answers": [
-      "Pep Guardiola",
-      "Carlo Ancelotti",
-      "Jupp Heynckes",
-      "Niko Kovač"
+      "Lyon",
+      "Le FC Barcelone",
+      "Le PSG",
+      "Chelsea"
     ],
-    "correct": 0,
-    "difficulty": "hard"
+    "correct": 2
   },
   {
-    "text": "Quel joueur a marqué cinq buts en neuf minutes contre Wolfsburg en septembre 2015 ?",
-    "answers": [
-      "Thomas Müller",
-      "Robert Lewandowski",
-      "Arjen Robben",
-      "Mario Götze"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel record de Bundesliga Lewandowski a-t-il établi avec le Bayern en 2020-2021 ?",
-    "answers": [
-      "40 buts en une saison",
-      "42 buts en une saison",
-      "41 buts en une saison",
-      "43 buts en une saison"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Combien de buts Gerd Müller a-t-il inscrits en 607 matches officiels avec le Bayern ?",
-    "answers": [
-      "523",
-      "601",
-      "487",
-      "566"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur est devenu en 2024 le recordman des apparitions officielles du Bayern devant Sepp Maier ?",
-    "answers": [
-      "Thomas Müller",
-      "Manuel Neuer",
-      "Philipp Lahm",
-      "Oliver Kahn"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Combien de matches officiels Thomas Müller totalisait-il à son départ du Bayern en 2025 ?",
-    "answers": [
-      "743",
-      "756",
-      "768",
-      "701"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel est le nombre de buts officiels de Thomas Müller avec le Bayern selon le bilan publié à son départ ?",
-    "answers": [
-      "247",
-      "238",
-      "250",
-      "266"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur occupe la deuxième place des buteurs historiques du Bayern derrière Gerd Müller selon le bilan 2025 du club ?",
-    "answers": [
-      "Thomas Müller",
-      "Karl-Heinz Rummenigge",
-      "Roland Wohlfarth",
-      "Robert Lewandowski"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel ancien joueur du Bayern a remporté deux Ballons d’Or consécutifs en 1980 et 1981 ?",
-    "answers": [
-      "Karl-Heinz Rummenigge",
-      "Franz Beckenbauer",
-      "Gerd Müller",
-      "Lothar Matthäus"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur du Bayern a remporté le Ballon d’Or 1970 ?",
-    "answers": [
-      "Franz Beckenbauer",
-      "Gerd Müller",
-      "Sepp Maier",
-      "Uli Hoeneß"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "En quelles années Franz Beckenbauer a-t-il remporté le Ballon d’Or ?",
-    "answers": [
-      "1970 et 1974",
-      "1974 et 1976",
-      "1972 et 1976",
-      "1972 et 1974"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel ancien capitaine du Bayern a remporté le Ballon d’Or 1990 ?",
-    "answers": [
-      "Klaus Augenthaler",
-      "Stefan Effenberg",
-      "Andreas Brehme",
-      "Lothar Matthäus"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur français du Bayern a remporté le prix UEFA du meilleur joueur d’Europe en 2013 ?",
+    "text": "Quel joueur français a marqué le seul but de la finale 2020 contre le PSG ?",
     "answers": [
       "Franck Ribéry",
-      "Arjen Robben",
-      "Thomas Müller",
-      "Bastian Schweinsteiger"
+      "Kingsley Coman",
+      "Benjamin Pavard",
+      "Corentin Tolisso"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 1
   },
   {
-    "text": "Quel joueur du Bayern a remporté le prix FIFA The Best en 2020 ?",
+    "text": "Quel entraîneur a remporté le sextuplé 2020 avec le Bayern ?",
     "answers": [
-      "Manuel Neuer",
-      "Robert Lewandowski",
-      "Thomas Müller",
-      "Joshua Kimmich"
+      "Julian Nagelsmann",
+      "Niko Kovač",
+      "Thomas Tuchel",
+      "Hansi Flick"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 3
   },
   {
-    "text": "Quel gardien a rejoint le Bayern en 2011 en provenance de Schalke 04 ?",
+    "text": "Quel score historique le Bayern a-t-il infligé au Barça en quart de finale 2020 ?",
     "answers": [
-      "Oliver Kahn",
-      "Sven Ulreich",
-      "Manuel Neuer",
-      "Hans-Jörg Butt"
+      "4-0",
+      "7-1",
+      "8-2",
+      "5-1"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 2
   },
   {
-    "text": "De quel club Robert Lewandowski est-il arrivé gratuitement au Bayern en 2014 ?",
+    "text": "Quel attaquant anglais a rejoint le Bayern en 2023 en provenance de Tottenham ?",
     "answers": [
+      "Harry Kane",
+      "Raheem Sterling",
+      "Marcus Rashford",
+      "Jadon Sancho"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel entraîneur belge a été nommé au Bayern en 2024 ?",
+    "answers": [
+      "Vincent Kompany",
+      "Roberto Martínez",
+      "Michel Preud'homme",
+      "Eden Hazard"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel club a mis fin à la série de 11 titres consécutifs du Bayern en 2024 ?",
+    "answers": [
+      "Le Borussia Dortmund",
+      "Le RB Leipzig",
       "Le Bayer Leverkusen",
-      "Lech Poznań",
-      "Schalke 04",
-      "Le Borussia Dortmund"
+      "Le VfB Stuttgart"
     ],
-    "correct": 3,
-    "difficulty": "expert"
+    "correct": 2
   },
   {
-    "text": "De quel club Arjen Robben a-t-il rejoint le Bayern en 2009 ?",
+    "text": "Combien de titres de champion d'Allemagne consécutifs le Bayern a-t-il remportés de 2013 à 2023 ?",
     "answers": [
-      "Le Real Madrid",
-      "Chelsea",
-      "Le PSV Eindhoven",
-      "Groningue"
+      "7",
+      "11",
+      "9",
+      "13"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 1
   },
   {
-    "text": "De quel club Franck Ribéry a-t-il rejoint le Bayern en 2007 ?",
+    "text": "Quel latéral allemand a été capitaine du Bayern et champion du monde 2014 ?",
     "answers": [
-      "Galatasaray",
-      "L’Olympique de Marseille",
-      "Le FC Metz",
-      "Lille"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur du Bayern a marqué en finale du Mondial 2014 avec l’Allemagne ?",
-    "answers": [
-      "Thomas Müller",
+      "Jérôme Boateng",
       "Bastian Schweinsteiger",
-      "Mario Götze",
-      "Toni Kroos"
+      "Mats Hummels",
+      "Philipp Lahm"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 3
   },
   {
-    "text": "Quel terrain est associé au siège et au centre d’entraînement historique du Bayern ?",
+    "text": "Quel attaquant allemand formé au club, joueur le plus titré de l'histoire allemande, est surnommé « Raumdeuter » ?",
     "answers": [
-      "La Grünwalder Straße",
-      "La Leopoldstraße",
-      "La Maximilianstraße",
-      "La Säbener Straße"
+      "Miroslav Klose",
+      "Mario Gómez",
+      "Lukas Podolski",
+      "Thomas Müller"
     ],
-    "correct": 3,
-    "difficulty": "expert"
+    "correct": 3
   },
   {
-    "text": "Avec quel club le Bayern a-t-il partagé l’Allianz Arena jusqu’en 2017 ?",
+    "text": "Quel défenseur français champion du monde 1998 a joué au Bayern ?",
     "answers": [
-      "Le TSV 1860 Munich",
-      "Le SpVgg Unterhaching",
-      "Le FC Augsbourg",
-      "Le Wacker Munich"
+      "Lilian Thuram",
+      "Bixente Lizarazu",
+      "Laurent Blanc",
+      "Frank Lebœuf"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 1
   },
   {
-    "text": "Quel club le Bayern a-t-il battu 2-0 en finale de la Coupe du monde des clubs 2013 ?",
-    "answers": [
-      "Les Corinthians",
-      "Le Raja Casablanca",
-      "San Lorenzo",
-      "Monterrey"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quels joueurs ont marqué pour le Bayern en finale mondiale 2013 ?",
-    "answers": [
-      "Thomas Müller et Mario Götze",
-      "Franck Ribéry et Dante",
-      "Dante et Thiago Alcántara",
-      "Thiago Alcántara et Philipp Lahm"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel club le Bayern a-t-il battu en finale de la Coupe du monde des clubs disputée en février 2021 ?",
-    "answers": [
-      "Al Ahly",
-      "Palmeiras",
-      "Al-Hilal",
-      "Les Tigres UANL"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Qui a marqué l’unique but de cette finale mondiale contre les Tigres ?",
+    "text": "Quel défenseur français a été le transfert record du Bayern en 2019 ?",
     "answers": [
       "Benjamin Pavard",
-      "Robert Lewandowski",
-      "Joshua Kimmich",
-      "Kingsley Coman"
+      "Lucas Hernandez",
+      "Dayot Upamecano",
+      "Raphaël Varane"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 1
   },
   {
-    "text": "Quel club le Bayern a-t-il battu en Supercoupe de l’UEFA 2013 ?",
+    "text": "Quel club le Bayern a-t-il battu en finale de la Ligue des champions 2001 ?",
     "answers": [
-      "Le FC Séville",
+      "Valence",
+      "Le Real Madrid",
+      "Manchester United",
+      "L'AC Milan"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel gardien a été le héros de la finale 2001 aux tirs au but ?",
+    "answers": [
+      "Sepp Maier",
+      "Oliver Kahn",
+      "Manuel Neuer",
+      "Jens Lehmann"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Contre quel club le Bayern a-t-il perdu la finale de 1999 en encaissant deux buts dans le temps additionnel ?",
+    "answers": [
+      "Liverpool",
       "Chelsea",
       "Manchester United",
-      "Le Real Madrid"
+      "Arsenal"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel ailier allemand a rejoint le Bayern en 2020 en provenance de Manchester City ?",
+    "answers": [
+      "Serge Gnabry",
+      "Kai Havertz",
+      "Leroy Sané",
+      "Julian Draxler"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel attaquant croate a joué au Bayern de 2012 à 2014 avant de rejoindre l'Atlético ?",
+    "answers": [
+      "Andrej Kramarić",
+      "Mario Mandžukić",
+      "Ante Rebić",
+      "Nikola Kalinić"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel ancien joueur du Bayern est devenu président, puis dirigeant emblématique du club ?",
+    "answers": [
+      "Lothar Matthäus",
+      "Jürgen Klinsmann",
+      "Stefan Effenberg",
+      "Uli Hoeneß"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel milieu allemand surnommé « Schweini » a remporté la Coupe du monde 2014 ?",
+    "answers": [
+      "Bastian Schweinsteiger",
+      "Toni Kroos",
+      "Mesut Özil",
+      "Sami Khedira"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel milieu allemand a quitté le Bayern pour le Real Madrid en 2014 ?",
+    "answers": [
+      "Toni Kroos",
+      "Mesut Özil",
+      "Mario Götze",
+      "Leon Goretzka"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel jeune milieu allemand est devenu la star du Bayern et de la Mannschaft dans les années 2020 ?",
+    "answers": [
+      "Leroy Sané",
+      "Kai Havertz",
+      "Florian Wirtz",
+      "Jamal Musiala"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel entraîneur catalan a dirigé le Bayern de 2013 à 2016 ?",
+    "answers": [
+      "Luis Enrique",
+      "Pep Guardiola",
+      "Xavi",
+      "Unai Emery"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle compétition nationale oppose le Bayern en finale à Berlin chaque année ?",
+    "answers": [
+      "La Supercoupe",
+      "La DFB-Pokal",
+      "La Bundesliga",
+      "La Ligue Europa"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel défenseur canadien, latéral gauche, a remporté le sextuplé avec le Bayern ?",
+    "answers": [
+      "Alphonso Davies",
+      "Jonathan David",
+      "Tajon Buchanan",
+      "Alistair Johnston"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En quelle année le Bayern Munich a-t-il été fondé ?",
+    "answers": [
+      "1899",
+      "1900",
+      "1909",
+      "1963"
     ],
     "correct": 1,
     "difficulty": "expert"
   },
   {
-    "text": "Quel gardien du Bayern a arrêté le dernier tir au but de la Supercoupe de l’UEFA 2013 ?",
+    "text": "Combien de Coupes des clubs champions consécutives le Bayern a-t-il gagnées dans les années 1970 ?",
     "answers": [
-      "Tom Starke",
-      "Pepe Reina",
-      "Manuel Neuer",
-      "Sven Ulreich"
+      "3",
+      "2",
+      "4",
+      "5"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de titres le Bayern a-t-il remportés lors de sa saison historique 2020 ?",
+    "answers": [
+      "3",
+      "4",
+      "6",
+      "5"
     ],
     "correct": 2,
     "difficulty": "expert"
   },
   {
-    "text": "Quel club le Bayern a-t-il battu en Supercoupe de l’UEFA 2020 ?",
+    "text": "Combien de buts Gerd Müller avait-il marqués lors de son record de 1971-1972 ?",
+    "answers": [
+      "40",
+      "35",
+      "45",
+      "50"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club a battu le Bayern en finale de la Ligue des champions 2012, à Munich ?",
     "answers": [
       "Chelsea",
-      "Villarreal",
-      "L’Atlético de Madrid",
-      "Le FC Séville"
+      "Le Borussia Dortmund",
+      "Le Real Madrid",
+      "L'Inter Milan"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quel club le Bayern a-t-il gagné la finale 1974, rejouée après un match nul ?",
+    "answers": [
+      "Leeds United",
+      "Saint-Étienne",
+      "L'Atlético de Madrid",
+      "L'Ajax"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club français le Bayern a-t-il battu en finale de la Coupe des clubs champions 1976 ?",
+    "answers": [
+      "L'OM",
+      "Reims",
+      "Nantes",
+      "Saint-Étienne"
     ],
     "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club anglais le Bayern a-t-il battu en finale de la Coupe des clubs champions 1975 ?",
+    "answers": [
+      "Liverpool",
+      "Nottingham Forest",
+      "Leeds United",
+      "Aston Villa"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel entraîneur a remporté la Ligue des champions 2001 avec le Bayern ?",
+    "answers": [
+      "Jupp Heynckes",
+      "Ottmar Hitzfeld",
+      "Felix Magath",
+      "Giovanni Trapattoni"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel était le score de la finale 2013 Bayern - Dortmund à Wembley ?",
+    "answers": [
+      "1-0",
+      "2-1",
+      "3-2",
+      "2-0"
+    ],
+    "correct": 1,
     "difficulty": "expert"
   }
 ]

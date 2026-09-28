@@ -1,1102 +1,502 @@
 [
   {
-    "text": "En quelle année l’AC Milan a-t-il été fondé ?",
+    "text": "Quel surnom porte l’AC Milan en référence à ses couleurs ?",
     "answers": [
-      "1899",
-      "1897",
-      "1901",
-      "1908"
+      "Les Rossoneri",
+      "Les Nerazzurri",
+      "Les Bianconeri",
+      "Les Giallorossi"
     ],
-    "correct": 0,
-    "difficulty": "easy"
+    "correct": 0
   },
   {
-    "text": "Dans quelle ville l’AC Milan est-il basé ?",
-    "answers": [
-      "Turin",
-      "Milan",
-      "Rome",
-      "Gênes"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quelles sont les couleurs traditionnelles de l’AC Milan ?",
-    "answers": [
-      "Bleu et noir",
-      "Noir et blanc",
-      "Rouge et noir",
-      "Rouge et jaune"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel surnom italien désigne l’AC Milan d’après ses couleurs ?",
-    "answers": [
-      "Nerazzurri",
-      "Bianconeri",
-      "Giallorossi",
-      "Rossoneri"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club affronte l’AC Milan dans le Derby della Madonnina ?",
-    "answers": [
-      "Inter Milan",
-      "Juventus",
-      "Atalanta",
-      "Torino"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel stade l’AC Milan partage-t-il traditionnellement avec l’Inter ?",
+    "text": "Dans quel stade l’AC Milan joue-t-il traditionnellement ?",
     "answers": [
       "Stadio Olimpico",
       "San Siro",
       "Allianz Stadium",
-      "Artemio Franchi"
+      "Diego Armando Maradona"
     ],
-    "correct": 1,
-    "difficulty": "easy"
+    "correct": 1
   },
   {
-    "text": "Quel défenseur détient le record de matches officiels avec l’AC Milan ?",
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : défenseur recordman d’apparitions et capitaine historique ?",
     "answers": [
       "Franco Baresi",
-      "Alessandro Costacurta",
+      "Arrigo Sacchi",
       "Paolo Maldini",
-      "Mauro Tassotti"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel numéro l’AC Milan a-t-il retiré en l’honneur de Franco Baresi ?",
-    "answers": [
-      "3",
-      "5",
-      "8",
-      "6"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel numéro est associé à Paolo Maldini et retiré par le club ?",
-    "answers": [
-      "3",
-      "2",
-      "4",
-      "7"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel entraîneur dirige l’AC Milan lors des titres européens de 1989 et 1990 ?",
-    "answers": [
-      "Fabio Capello",
-      "Arrigo Sacchi",
-      "Carlo Ancelotti",
-      "Nereo Rocco"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel entraîneur dirige l’AC Milan lors du sacre européen de 1994 ?",
-    "answers": [
-      "Arrigo Sacchi",
-      "Alberto Zaccheroni",
-      "Fabio Capello",
-      "Massimiliano Allegri"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel entraîneur remporte les Ligues des champions 2003 et 2007 avec Milan ?",
-    "answers": [
-      "Marcello Lippi",
-      "Roberto Mancini",
-      "Antonio Conte",
-      "Carlo Ancelotti"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel Ukrainien remporte le Ballon d’or 2004 comme joueur du Milan ?",
-    "answers": [
-      "Andriy Shevchenko",
-      "Oleh Blokhin",
-      "Igor Belanov",
-      "Serhiy Rebrov"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel Brésilien du Milan remporte le Ballon d’or 2007 ?",
-    "answers": [
-      "Ronaldinho",
-      "Kaká",
-      "Rivaldo",
-      "Cafu"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel Néerlandais du Milan remporte trois Ballons d’or ?",
-    "answers": [
-      "Ruud Gullit",
-      "Frank Rijkaard",
-      "Marco van Basten",
-      "Clarence Seedorf"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club Milan bat-il en finale européenne 2007 ?",
-    "answers": [
-      "Manchester United",
-      "Chelsea",
-      "Arsenal",
-      "Liverpool"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel attaquant marque les deux buts milanais de la finale 2007 ?",
-    "answers": [
-      "Filippo Inzaghi",
-      "Kaká",
-      "Andriy Shevchenko",
-      "Clarence Seedorf"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club Milan bat-il aux tirs au but en finale européenne 2003 ?",
-    "answers": [
-      "Inter Milan",
-      "Juventus",
-      "Real Madrid",
-      "Ajax"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club bat Milan en finale européenne 2005 après une remontée de trois buts ?",
-    "answers": [
-      "Chelsea",
-      "Manchester United",
-      "Liverpool",
-      "Arsenal"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Combien de Coupes d’Europe/Ligues des champions Milan a-t-il remportées ?",
-    "answers": [
-      "5",
-      "6",
-      "8",
-      "7"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel Anglais fonde l’AC Milan en 1899 ?",
-    "answers": [
-      "Herbert Kilpin",
-      "James Richardson Spensley",
-      "Alfred Edwards",
-      "William Garbutt"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel jour précis l’AC Milan est-il fondé ?",
-    "answers": [
-      "1er novembre 1899",
-      "16 décembre 1899",
-      "9 mars 1908",
-      "5 mai 1901"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Milan bat-il pour gagner son premier championnat en 1901 ?",
-    "answers": [
-      "Juventus",
-      "Torino",
-      "Genoa",
-      "Pro Vercelli"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel entraîneur mène Milan à sa première Coupe d’Europe en 1963 ?",
-    "answers": [
-      "Giuseppe Viani",
-      "Gipo Viani",
-      "Helenio Herrera",
-      "Nereo Rocco"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Milan bat-il en finale européenne 1963 ?",
-    "answers": [
-      "Benfica",
-      "Real Madrid",
-      "Ajax",
-      "Inter Milan"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur marque les deux buts de Milan en finale 1963 ?",
-    "answers": [
-      "Gianni Rivera",
-      "José Altafini",
-      "Pierino Prati",
-      "Gunnar Nordahl"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Dans quel stade Milan remporte-t-il la finale européenne 1963 ?",
-    "answers": [
-      "Hampden Park",
-      "San Siro",
-      "Wembley",
-      "Santiago Bernabéu"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Milan bat-il 4-1 en finale européenne 1969 ?",
-    "answers": [
-      "Benfica",
-      "Celtic",
-      "Feyenoord",
-      "Ajax"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur inscrit un triplé pour Milan en finale européenne 1969 ?",
-    "answers": [
-      "Pierino Prati",
-      "Gianni Rivera",
-      "Angelo Sormani",
-      "Kurt Hamrin"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel adversaire Milan bat-il 4-0 en finale européenne 1989 ?",
-    "answers": [
-      "Benfica",
-      "Steaua Bucarest",
-      "Porto",
-      "Étoile rouge de Belgrade"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Dans quel stade se joue la finale européenne 1989 ?",
-    "answers": [
-      "San Siro",
-      "Santiago Bernabéu",
-      "Camp Nou",
-      "Praterstadion"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quels deux joueurs inscrivent chacun un doublé en finale européenne 1989 ?",
-    "answers": [
-      "Rijkaard et Ancelotti",
-      "Donadoni et Virdis",
-      "Baresi et Maldini",
-      "Ruud Gullit et Marco van Basten"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur marque l’unique but de la finale européenne 1990 ?",
-    "answers": [
-      "Frank Rijkaard",
-      "Marco van Basten",
-      "Ruud Gullit",
-      "Carlo Ancelotti"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club Milan bat-il 4-0 en finale européenne 1994 ?",
-    "answers": [
-      "Real Madrid",
-      "FC Barcelone",
-      "Ajax",
-      "Benfica"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel attaquant inscrit un doublé lors de la finale européenne 1994 ?",
-    "answers": [
-      "Dejan Savićević",
-      "Jean-Pierre Papin",
-      "Daniele Massaro",
-      "Marco Simone"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur marque d’un lob le troisième but de la finale 1994 ?",
-    "answers": [
-      "Zvonimir Boban",
-      "Demetrio Albertini",
-      "Marcel Desailly",
-      "Dejan Savićević"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel défenseur français marque le quatrième but de la finale 1994 ?",
-    "answers": [
-      "Marcel Desailly",
-      "Laurent Blanc",
-      "Lilian Thuram",
-      "Christian Karembeu"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Dans quelle ville Milan remporte-t-il la Ligue des champions 2003 ?",
-    "answers": [
-      "Londres",
-      "Manchester",
-      "Glasgow",
-      "Cardiff"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur transforme le tir au but décisif en finale 2003 ?",
-    "answers": [
-      "Andrea Pirlo",
-      "Clarence Seedorf",
-      "Andriy Shevchenko",
       "Filippo Inzaghi"
     ],
-    "correct": 2,
-    "difficulty": "medium"
+    "correct": 2
   },
   {
-    "text": "Quel gardien de Milan se distingue durant la séance de tirs au but de 2003 ?",
+    "text": "Dans « AC Milan », quelle description correspond à Paolo Maldini ?",
     "answers": [
-      "Christian Abbiati",
-      "Sebastiano Rossi",
-      "Zeljko Kalac",
+      "avant-centre néerlandais triple Ballon d’Or",
+      "attaquant ukrainien Ballon d’Or 2004",
+      "milieu néerlandais vainqueur de la Ligue des champions avec trois clubs",
+      "défenseur recordman d’apparitions et capitaine historique"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Combien de Ligues des champions l'AC Milan a-t-il remportées ?",
+    "answers": [
+      "7",
+      "5",
+      "3",
+      "9"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : libéro et capitaine dont le numéro 6 a été retiré ?",
+    "answers": [
+      "Marco van Basten",
+      "Franco Baresi",
+      "Andriy Shevchenko",
+      "Clarence Seedorf"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « AC Milan », quelle description correspond à Franco Baresi ?",
+    "answers": [
+      "milieu néerlandais Ballon d’Or 1987",
+      "meneur brésilien Ballon d’Or après le titre européen",
+      "libéro et capitaine dont le numéro 6 a été retiré",
+      "regista devenu maître du jeu milanais"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelles sont les couleurs de l'AC Milan ?",
+    "answers": [
+      "Noir et bleu",
+      "Blanc et noir",
+      "Jaune et rouge",
+      "Rouge et noir"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : avant-centre néerlandais triple Ballon d’Or ?",
+    "answers": [
+      "Marco van Basten",
+      "Ruud Gullit",
+      "Kaká",
+      "Andrea Pirlo"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « AC Milan », quelle description correspond à Marco van Basten ?",
+    "answers": [
+      "milieu néerlandais buteur en finale européenne 1990",
+      "avant-centre néerlandais triple Ballon d’Or",
+      "ancien milieu devenu entraîneur double champion d’Europe",
+      "meneur italien Ballon d’Or 1969"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel club partage San Siro avec l'AC Milan ?",
+    "answers": [
+      "La Juventus",
+      "L'Atalanta",
+      "L'Inter Milan",
+      "Le Torino"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : milieu néerlandais Ballon d’Or 1987 ?",
+    "answers": [
+      "Frank Rijkaard",
+      "Carlo Ancelotti",
+      "Gianni Rivera",
+      "Ruud Gullit"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « AC Milan », quelle description correspond à Ruud Gullit ?",
+    "answers": [
+      "milieu néerlandais Ballon d’Or 1987",
+      "entraîneur du pressing collectif et des deux Coupes d’Europe consécutives",
+      "attaquant auteur d’un doublé en finale à Athènes",
+      "attaquant italo-brésilien buteur en finale européenne 1963"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Contre quel club Milan a-t-il gagné la finale de Ligue des champions 2003 ?",
+    "answers": [
+      "L'Inter",
+      "La Juventus",
+      "Le Real Madrid",
+      "Monaco"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : milieu néerlandais buteur en finale européenne 1990 ?",
+    "answers": [
+      "Arrigo Sacchi",
+      "Filippo Inzaghi",
+      "Frank Rijkaard",
+      "José Altafini"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « AC Milan », quelle description correspond à Frank Rijkaard ?",
+    "answers": [
+      "attaquant ukrainien Ballon d’Or 2004",
+      "milieu néerlandais vainqueur de la Ligue des champions avec trois clubs",
+      "gardien brésilien décisif aux tirs au but à Manchester",
+      "milieu néerlandais buteur en finale européenne 1990"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Contre quel club Milan a-t-il perdu la finale de 2005 à Istanbul malgré un avantage de 3-0 ?",
+    "answers": [
+      "Liverpool",
+      "Manchester United",
+      "Chelsea",
+      "Le Bayern Munich"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : entraîneur du pressing collectif et des deux Coupes d’Europe consécutives ?",
+    "answers": [
+      "Andriy Shevchenko",
+      "Arrigo Sacchi",
+      "Clarence Seedorf",
       "Dida"
     ],
-    "correct": 3,
-    "difficulty": "medium"
+    "correct": 1
   },
   {
-    "text": "Qui est le capitaine de Milan lors de sa première Coupe d’Europe en 1963 ?",
+    "text": "Dans « AC Milan », quelle description correspond à Arrigo Sacchi ?",
     "answers": [
-      "Cesare Maldini",
-      "Gianni Rivera",
-      "Nils Liedholm",
-      "Giovanni Trapattoni"
+      "meneur brésilien Ballon d’Or après le titre européen",
+      "regista devenu maître du jeu milanais",
+      "entraîneur du pressing collectif et des deux Coupes d’Europe consécutives",
+      "milieu et capitaine de la fin des années 2000"
     ],
-    "correct": 0,
-    "difficulty": "hard"
+    "correct": 2
   },
   {
-    "text": "Quel joueur de Benfica ouvre le score en finale européenne 1963 ?",
+    "text": "Contre quel club Milan a-t-il pris sa revanche en finale 2007 à Athènes ?",
     "answers": [
-      "José Águas",
-      "Eusébio",
-      "Mário Coluna",
-      "António Simões"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel Milanais offre les deux passes décisives à Altafini en finale 1963 ?",
-    "answers": [
-      "Nils Liedholm",
-      "Dino Sani",
-      "Gianni Rivera",
-      "Giovanni Trapattoni"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quel stade se joue la finale européenne 1969 ?",
-    "answers": [
-      "Camp Nou",
-      "Wembley",
-      "San Siro",
-      "Santiago Bernabéu"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel autre Milanais, outre Prati, marque en finale 1969 ?",
-    "answers": [
-      "Angelo Sormani",
-      "Gianni Rivera",
-      "Kurt Hamrin",
-      "Roberto Rosato"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur de Milan remporte le Ballon d’or 1969 ?",
-    "answers": [
-      "Pierino Prati",
-      "Gianni Rivera",
-      "Nereo Rocco",
-      "Angelo Sormani"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Milan bat-il en finale de la Coupe des coupes 1968 ?",
-    "answers": [
-      "Leeds United",
-      "Magdebourg",
-      "Hambourg",
-      "Anderlecht"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Milan bat-il en finale de la Coupe des coupes 1973 ?",
-    "answers": [
-      "Hambourg",
-      "Ajax",
-      "Feyenoord",
-      "Leeds United"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club bat Milan en finale de la Coupe des coupes 1974 ?",
-    "answers": [
-      "Magdebourg",
-      "Dynamo Dresde",
-      "Carl Zeiss Iéna",
-      "Bayern Munich"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel adversaire élimine Milan en demi-finale européenne 1989 après un 5-0 au retour ?",
-    "answers": [
-      "Bayern Munich",
-      "Real Madrid",
-      "FC Barcelone",
-      "PSV Eindhoven"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur ouvre le score pour Milan lors de la finale européenne 1989 ?",
-    "answers": [
-      "Marco van Basten",
-      "Frank Rijkaard",
-      "Ruud Gullit",
-      "Carlo Ancelotti"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville se joue la finale européenne 1990 ?",
-    "answers": [
-      "Munich",
-      "Rome",
-      "Lisbonne",
-      "Vienne"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel entraîneur dirige Benfica face à Milan en finale européenne 1990 ?",
-    "answers": [
-      "Sven-Göran Eriksson",
-      "Artur Jorge",
-      "Béla Guttmann",
-      "Jupp Heynckes"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Milan élimine-t-il en demi-finale européenne 1990 ?",
-    "answers": [
-      "Real Madrid",
-      "Bayern Munich",
-      "Marseille",
-      "Benfica"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quels deux défenseurs milanais sont suspendus pour la finale européenne 1994 ?",
-    "answers": [
-      "Maldini et Tassotti",
-      "Panucci et Galli",
-      "Franco Baresi et Alessandro Costacurta",
-      "Desailly et Nava"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville se joue la finale européenne 1994 ?",
-    "answers": [
-      "Rome",
-      "Munich",
-      "Vienne",
-      "Athènes"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Qui entraîne le FC Barcelone battu par Milan en finale 1994 ?",
-    "answers": [
-      "Johan Cruyff",
-      "Louis van Gaal",
-      "Bobby Robson",
-      "Frank Rijkaard"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur croate ouvre le score lors du retour de Supercoupe UEFA 1994 face à Arsenal ?",
-    "answers": [
-      "Dejan Savićević",
-      "Zvonimir Boban",
-      "Davor Šuker",
-      "Robert Prosinečki"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Milan bat-il pour remporter la Supercoupe UEFA 1994 ?",
-    "answers": [
-      "Parme",
+      "Le FC Barcelone",
       "Manchester United",
-      "Arsenal",
-      "Werder Brême"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Milan bat-il en finale de la Coupe intercontinentale 1969 ?",
-    "answers": [
-      "Independiente",
-      "Racing Club",
-      "Boca Juniors",
-      "Estudiantes"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Milan bat-il en Coupe intercontinentale 1989 ?",
-    "answers": [
-      "Atlético Nacional",
-      "Olimpia",
-      "Peñarol",
-      "River Plate"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Milan bat-il en Coupe intercontinentale 1990 ?",
-    "answers": [
-      "Nacional",
-      "Olimpia",
-      "Colo-Colo",
-      "São Paulo"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club bat Milan en finale de Coupe intercontinentale 1993 ?",
-    "answers": [
-      "Vélez Sarsfield",
-      "Grêmio",
-      "São Paulo",
-      "Cruzeiro"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club bat Milan en finale de Coupe intercontinentale 1994 ?",
-    "answers": [
-      "São Paulo",
-      "Boca Juniors",
-      "River Plate",
-      "Vélez Sarsfield"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club bat Milan 1-0 en finale européenne 1995 ?",
-    "answers": [
-      "Ajax",
-      "Juventus",
-      "Borussia Dortmund",
-      "FC Barcelone"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur marque l’unique but de la finale européenne 1995 ?",
-    "answers": [
-      "Jari Litmanen",
-      "Patrick Kluivert",
-      "Marc Overmars",
-      "Frank de Boer"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur ouvre le score pour Milan en finale européenne 2005 ?",
-    "answers": [
-      "Kaká",
-      "Andrea Pirlo",
-      "Paolo Maldini",
-      "Hernán Crespo"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel attaquant argentin inscrit un doublé pour Milan en finale 2005 ?",
-    "answers": [
-      "Andriy Shevchenko",
-      "Filippo Inzaghi",
-      "Jon Dahl Tomasson",
-      "Hernán Crespo"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel gardien de Liverpool arrête le tir au but de Shevchenko en 2005 ?",
-    "answers": [
-      "Jerzy Dudek",
-      "Pepe Reina",
-      "David James",
-      "Sander Westerveld"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville se joue la finale européenne 2005 ?",
-    "answers": [
-      "Athènes",
-      "Istanbul",
-      "Lisbonne",
-      "Cardiff"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club Milan élimine-t-il en demi-finale de Ligue des champions 2007 ?",
-    "answers": [
       "Chelsea",
-      "Liverpool",
-      "Manchester United",
-      "Arsenal"
+      "Liverpool"
     ],
-    "correct": 2,
-    "difficulty": "hard"
+    "correct": 3
   },
   {
-    "text": "Quel joueur termine meilleur buteur de la Ligue des champions 2006-07 avec Milan ?",
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : attaquant ukrainien Ballon d’Or 2004 ?",
     "answers": [
-      "Filippo Inzaghi",
-      "Clarence Seedorf",
-      "Alberto Gilardino",
-      "Kaká"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur de Liverpool réduit le score en finale 2007 ?",
-    "answers": [
-      "Dirk Kuyt",
-      "Steven Gerrard",
-      "Peter Crouch",
-      "Xabi Alonso"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel adversaire Milan bat-il en finale du Mondial des clubs 2007 ?",
-    "answers": [
-      "São Paulo",
-      "Boca Juniors",
-      "Santos",
-      "River Plate"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel est le score de la finale du Mondial des clubs 2007 ?",
-    "answers": [
-      "3-1",
-      "3-2",
-      "4-2",
-      "4-1"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel entraîneur mène Milan au Scudetto 1998-99 ?",
-    "answers": [
-      "Fabio Capello",
-      "Carlo Ancelotti",
-      "Arrigo Sacchi",
-      "Alberto Zaccheroni"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel entraîneur mène Milan au Scudetto 2010-11 ?",
-    "answers": [
-      "Massimiliano Allegri",
-      "Carlo Ancelotti",
-      "Leonardo",
-      "Clarence Seedorf"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel entraîneur mène Milan au Scudetto 2021-22 ?",
-    "answers": [
-      "Massimiliano Allegri",
-      "Stefano Pioli",
-      "Gennaro Gattuso",
-      "Vincenzo Montella"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur termine meilleur buteur de Serie A avec Milan en 1999-2000 ?",
-    "answers": [
-      "Oliver Bierhoff",
-      "George Weah",
       "Andriy Shevchenko",
-      "Filippo Inzaghi"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel centre d’entraînement du club a ouvert en 1964 ?",
-    "answers": [
-      "Milan Lab",
-      "Casa Milan",
-      "Vismara",
-      "Milanello"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Combien de matches officiels Paolo Maldini a-t-il disputés avec Milan ?",
-    "answers": [
-      "902",
-      "846",
-      "879",
-      "925"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Combien de trophées Paolo Maldini a-t-il remportés en 25 saisons avec Milan ?",
-    "answers": [
-      "22",
-      "26",
-      "24",
-      "28"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel gardien détient le record milanais d’invincibilité en Serie A avec 929 minutes en 1993-94 ?",
-    "answers": [
-      "Dida",
-      "Christian Abbiati",
-      "Sebastiano Rossi",
-      "Lorenzo Buffon"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel Suédois est le meilleur buteur historique de Milan en matches officiels ?",
-    "answers": [
-      "Nils Liedholm",
-      "Kurt Hamrin",
-      "Zlatan Ibrahimović",
-      "Gunnar Nordahl"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel trio suédois de Milan est surnommé « Gre-No-Li » ?",
-    "answers": [
-      "Gren, Nordahl et Liedholm",
-      "Gullit, Rijkaard et Van Basten",
-      "Rivera, Rocco et Prati",
-      "Hamrin, Selmosson et Skoglund"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur marque le but victorieux à la 119e minute de la Coupe intercontinentale 1989 ?",
-    "answers": [
-      "Marco van Basten",
-      "Alberigo Evani",
-      "Frank Rijkaard",
-      "Roberto Donadoni"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur inscrit un doublé pour Milan en finale de la Coupe intercontinentale 1990 ?",
-    "answers": [
-      "Ruud Gullit",
-      "Marco van Basten",
-      "Frank Rijkaard",
-      "Daniele Massaro"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur marque le but décisif de São Paulo contre Milan en finale intercontinentale 1993 ?",
-    "answers": [
-      "Raí",
-      "Cafu",
-      "Palhinha",
-      "Müller"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quels joueurs marquent les deux buts de Vélez contre Milan en finale intercontinentale 1994 ?",
-    "answers": [
-      "Roberto Trotta et Omar Asad",
-      "Chilavert et Flores",
-      "Basile et Pompei",
-      "Bassedas et Camps"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur transforme le premier tir au but de Milan lors de la finale européenne 2003 ?",
-    "answers": [
-      "Andrea Pirlo",
-      "Serginho",
-      "Clarence Seedorf",
-      "Alessandro Nesta"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel gardien de la Juventus arrête deux tirs milanais durant la séance de 2003 ?",
-    "answers": [
-      "Angelo Peruzzi",
-      "Edwin van der Sar",
-      "Gianluigi Buffon",
-      "Michelangelo Rampulla"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur de Milan voit son penalty arrêté en premier lors de la séance de 2003 ?",
-    "answers": [
-      "Andrea Pirlo",
       "Kaká",
-      "Serginho",
-      "Clarence Seedorf"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "À quelle minute Steven Gerrard réduit-il l’écart à 3-1 en finale européenne 2005 ?",
-    "answers": [
-      "54e minute",
-      "48e minute",
-      "60e minute",
-      "67e minute"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur marque le deuxième but de Liverpool en finale européenne 2005 ?",
-    "answers": [
-      "Steven Gerrard",
-      "Vladimír Šmicer",
-      "Xabi Alonso",
-      "Djibril Cissé"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel Italien marque le premier but de Milan en finale du Mondial des clubs 2007 ?",
-    "answers": [
-      "Alberto Gilardino",
       "Andrea Pirlo",
-      "Filippo Inzaghi",
       "Massimo Ambrosini"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 0
   },
   {
-    "text": "Quel Brésilien est élu meilleur joueur de la finale du Mondial des clubs 2007 ?",
+    "text": "Dans « AC Milan », quelle description correspond à Andriy Shevchenko ?",
     "answers": [
-      "Cafu",
-      "Alexandre Pato",
-      "Dida",
+      "ancien milieu devenu entraîneur double champion d’Europe",
+      "attaquant ukrainien Ballon d’Or 2004",
+      "meneur italien Ballon d’Or 1969",
+      "défenseur recordman d’apparitions et capitaine historique"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel score Milan a-t-il infligé au FC Barcelone en finale de la Ligue des champions 1994 ?",
+    "answers": [
+      "2-1",
+      "1-0",
+      "4-0",
+      "3-3"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : meneur brésilien Ballon d’Or après le titre européen ?",
+    "answers": [
+      "Carlo Ancelotti",
+      "Gianni Rivera",
+      "Paolo Maldini",
       "Kaká"
     ],
-    "correct": 3,
-    "difficulty": "expert"
+    "correct": 3
   },
   {
-    "text": "Quel adversaire Milan bat-il lors de sa première Supercoupe d’Italie en 1988 ?",
+    "text": "Dans « AC Milan », quelle description correspond à Kaká ?",
     "answers": [
-      "Sampdoria",
-      "Napoli",
-      "Inter Milan",
-      "Juventus"
+      "meneur brésilien Ballon d’Or après le titre européen",
+      "attaquant auteur d’un doublé en finale à Athènes",
+      "attaquant italo-brésilien buteur en finale européenne 1963",
+      "libéro et capitaine dont le numéro 6 a été retiré"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 0
   },
   {
-    "text": "Quels trois joueurs marquent pour Milan dans cette Supercoupe 1988 ?",
+    "text": "Quel entraîneur a remporté la finale 1994 contre Barcelone ?",
     "answers": [
-      "Gullit, Virdis et Ancelotti",
-      "Rijkaard, Mannari et Van Basten",
-      "Donadoni, Evani et Baresi",
-      "Maldini, Tassotti et Costacurta"
+      "Arrigo Sacchi",
+      "Fabio Capello",
+      "Carlo Ancelotti",
+      "Nereo Rocco"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 1
   },
   {
-    "text": "Quel joueur marque le tir au but décisif de la Supercoupe d’Italie 2016 ?",
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : ancien milieu devenu entraîneur double champion d’Europe ?",
     "answers": [
-      "Suso",
-      "Giacomo Bonaventura",
-      "Mario Pašalić",
-      "Juraj Kucka"
+      "Filippo Inzaghi",
+      "José Altafini",
+      "Carlo Ancelotti",
+      "Franco Baresi"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 2
   },
   {
-    "text": "Quel joueur inscrit le but de la victoire dans le temps additionnel de la Supercoupe 2024 contre l’Inter ?",
+    "text": "Dans « AC Milan », quelle description correspond à Carlo Ancelotti ?",
     "answers": [
-      "Christian Pulisic",
-      "Rafael Leão",
-      "Theo Hernández",
-      "Tammy Abraham"
+      "milieu néerlandais vainqueur de la Ligue des champions avec trois clubs",
+      "gardien brésilien décisif aux tirs au but à Manchester",
+      "avant-centre néerlandais triple Ballon d’Or",
+      "ancien milieu devenu entraîneur double champion d’Europe"
     ],
-    "correct": 3,
-    "difficulty": "expert"
+    "correct": 3
+  },
+  {
+    "text": "Quel homme d'affaires et homme politique a présidé Milan de 1986 à 2017 ?",
+    "answers": [
+      "Silvio Berlusconi",
+      "Massimo Moratti",
+      "Andrea Agnelli",
+      "Aurelio De Laurentiis"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : attaquant auteur d’un doublé en finale à Athènes ?",
+    "answers": [
+      "Clarence Seedorf",
+      "Filippo Inzaghi",
+      "Dida",
+      "Marco van Basten"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « AC Milan », quelle description correspond à Filippo Inzaghi ?",
+    "answers": [
+      "regista devenu maître du jeu milanais",
+      "milieu et capitaine de la fin des années 2000",
+      "attaquant auteur d’un doublé en finale à Athènes",
+      "milieu néerlandais Ballon d’Or 1987"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel trio néerlandais a marqué l'AC Milan de la fin des années 1980 ?",
+    "answers": [
+      "Cruyff, Neeskens, Krol",
+      "Seedorf, Kluivert, Davids",
+      "Bergkamp, Overmars, Stam",
+      "Gullit, Van Basten, Rijkaard"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : milieu néerlandais vainqueur de la Ligue des champions avec trois clubs ?",
+    "answers": [
+      "Clarence Seedorf",
+      "Andrea Pirlo",
+      "Massimo Ambrosini",
+      "Ruud Gullit"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « AC Milan », quelle description correspond à Clarence Seedorf ?",
+    "answers": [
+      "meneur italien Ballon d’Or 1969",
+      "milieu néerlandais vainqueur de la Ligue des champions avec trois clubs",
+      "défenseur recordman d’apparitions et capitaine historique",
+      "milieu néerlandais buteur en finale européenne 1990"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel attaquant suédois a été champion d'Italie avec Milan en 2011 puis en 2022 ?",
+    "answers": [
+      "Henrik Larsson",
+      "Marcus Berg",
+      "Zlatan Ibrahimović",
+      "Alexander Isak"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : regista devenu maître du jeu milanais ?",
+    "answers": [
+      "Gianni Rivera",
+      "Paolo Maldini",
+      "Frank Rijkaard",
+      "Andrea Pirlo"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « AC Milan », quelle description correspond à Andrea Pirlo ?",
+    "answers": [
+      "regista devenu maître du jeu milanais",
+      "attaquant italo-brésilien buteur en finale européenne 1963",
+      "libéro et capitaine dont le numéro 6 a été retiré",
+      "entraîneur du pressing collectif et des deux Coupes d’Europe consécutives"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En quelle année Milan a-t-il remporté son dernier titre de champion d'Italie ?",
+    "answers": [
+      "2011",
+      "2022",
+      "2019",
+      "2004"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : meneur italien Ballon d’Or 1969 ?",
+    "answers": [
+      "José Altafini",
+      "Franco Baresi",
+      "Gianni Rivera",
+      "Arrigo Sacchi"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « AC Milan », quelle description correspond à Gianni Rivera ?",
+    "answers": [
+      "gardien brésilien décisif aux tirs au but à Manchester",
+      "avant-centre néerlandais triple Ballon d’Or",
+      "attaquant ukrainien Ballon d’Or 2004",
+      "meneur italien Ballon d’Or 1969"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel entraîneur a mené Milan au Scudetto 2022 ?",
+    "answers": [
+      "Stefano Pioli",
+      "Gennaro Gattuso",
+      "Massimiliano Allegri",
+      "Paulo Fonseca"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : attaquant italo-brésilien buteur en finale européenne 1963 ?",
+    "answers": [
+      "Dida",
+      "José Altafini",
+      "Marco van Basten",
+      "Andriy Shevchenko"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans « AC Milan », quelle description correspond à José Altafini ?",
+    "answers": [
+      "milieu et capitaine de la fin des années 2000",
+      "milieu néerlandais Ballon d’Or 1987",
+      "attaquant italo-brésilien buteur en finale européenne 1963",
+      "meneur brésilien Ballon d’Or après le titre européen"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel ailier portugais a été une star de Milan au début des années 2020 ?",
+    "answers": [
+      "Cristiano Ronaldo",
+      "João Félix",
+      "Bernardo Silva",
+      "Rafael Leão"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : gardien brésilien décisif aux tirs au but à Manchester ?",
+    "answers": [
+      "Dida",
+      "Massimo Ambrosini",
+      "Ruud Gullit",
+      "Kaká"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans « AC Milan », quelle description correspond à Dida ?",
+    "answers": [
+      "défenseur recordman d’apparitions et capitaine historique",
+      "gardien brésilien décisif aux tirs au but à Manchester",
+      "milieu néerlandais buteur en finale européenne 1990",
+      "ancien milieu devenu entraîneur double champion d’Europe"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel attaquant français champion du monde a joué à Milan de 2021 à 2024 ?",
+    "answers": [
+      "Karim Benzema",
+      "Antoine Griezmann",
+      "Olivier Giroud",
+      "Kylian Mbappé"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans « AC Milan », quelle légende de l’AC Milan correspond à cette description : milieu et capitaine de la fin des années 2000 ?",
+    "answers": [
+      "Paolo Maldini",
+      "Frank Rijkaard",
+      "Carlo Ancelotti",
+      "Massimo Ambrosini"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans « AC Milan », quelle description correspond à Massimo Ambrosini ?",
+    "answers": [
+      "milieu et capitaine de la fin des années 2000",
+      "libéro et capitaine dont le numéro 6 a été retiré",
+      "entraîneur du pressing collectif et des deux Coupes d’Europe consécutives",
+      "attaquant auteur d’un doublé en finale à Athènes"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel défenseur, légende du club, a joué 25 saisons à Milan ?",
+    "answers": [
+      "Franco Baresi",
+      "Paolo Maldini",
+      "Alessandro Costacurta",
+      "Alessandro Nesta"
+    ],
+    "correct": 1
   }
 ]

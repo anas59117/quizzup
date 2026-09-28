@@ -1,502 +1,509 @@
 [
   {
-    "text": "Quel constructeur associe-t-on à l'Atari 2600 ?",
-    "answers": [
-      "Atari",
-      "Nintendo",
-      "Sega",
-      "SNK"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a commercialisé l'Atari 2600 ?",
+    "text": "Quel constructeur a commercialisé l'Atari 2600 ?",
     "answers": [
       "Nintendo",
       "Atari",
       "Sega",
-      "SNK"
+      "Coleco"
     ],
     "correct": 1
   },
   {
-    "text": "Quel constructeur associe-t-on à la NES ?",
+    "text": "En quelle année est sortie la NES au Japon (Famicom) ?",
     "answers": [
-      "Sega",
-      "SNK",
+      "1977",
+      "1983",
+      "1987",
+      "1990"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel constructeur a lancé la Master System ?",
+    "answers": [
       "Nintendo",
-      "Sony"
+      "SNK",
+      "Sega",
+      "NEC"
     ],
     "correct": 2
   },
   {
-    "text": "Qui a commercialisé la NES ?",
+    "text": "Sous quel nom la Mega Drive est-elle sortie en Amérique du Nord ?",
     "answers": [
-      "Sega",
-      "SNK",
-      "Sony",
-      "Nintendo"
+      "Saturn",
+      "Master System II",
+      "Genesis",
+      "Dreamcast"
     ],
-    "correct": 3
+    "correct": 2
   },
   {
-    "text": "Quel constructeur associe-t-on à la Master System ?",
+    "text": "Quel constructeur a commercialisé la Neo Geo AES ?",
     "answers": [
       "Sega",
-      "Nintendo",
       "SNK",
-      "Sony"
+      "Capcom",
+      "Namco"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel jeu était fourni avec la Game Boy lors de son lancement en Occident ?",
+    "answers": [
+      "Tetris",
+      "Super Mario Land",
+      "Pokémon Rouge",
+      "Zelda"
     ],
     "correct": 0
   },
   {
-    "text": "Qui a commercialisé la Master System ?",
+    "text": "En quelle année est sortie la première Game Boy ?",
     "answers": [
-      "Nintendo",
-      "Sega",
-      "SNK",
-      "Sony"
+      "1989",
+      "1985",
+      "1992",
+      "1996"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
-    "text": "Quel constructeur associe-t-on à la Mega Drive ?",
+    "text": "Quelle console portable de Sega avait un écran couleur dès 1990 ?",
     "answers": [
-      "Nintendo",
-      "SNK",
-      "Sega",
-      "Sony"
+      "La Game Gear",
+      "La Nomad",
+      "La Pico",
+      "La Mega Jet"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En quelle année la première PlayStation est-elle sortie au Japon ?",
+    "answers": [
+      "1994",
+      "1991",
+      "1996",
+      "1998"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel support la première PlayStation utilisait-elle pour ses jeux ?",
+    "answers": [
+      "La cartouche",
+      "Le DVD",
+      "Le CD-ROM",
+      "La disquette"
     ],
     "correct": 2
   },
   {
-    "text": "Qui a commercialisé la Mega Drive ?",
+    "text": "Quel support de jeux la Nintendo 64 utilisait-elle ?",
     "answers": [
-      "Nintendo",
-      "SNK",
+      "Le CD-ROM",
+      "La cartouche",
+      "Le DVD",
+      "Le mini-DVD"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle a été la dernière console de salon de Sega ?",
+    "answers": [
+      "La Saturn",
+      "La Mega Drive",
+      "La Master System",
+      "La Dreamcast"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "En quelle année la Dreamcast est-elle sortie en Europe ?",
+    "answers": [
+      "1995",
+      "1999",
+      "2001",
+      "2003"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la console de salon la plus vendue de l'histoire ?",
+    "answers": [
+      "La Wii",
+      "La PlayStation 2",
+      "La Nintendo Switch",
+      "La PlayStation 4"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel lecteur la PlayStation 2 intégrait-elle, ce qui a aidé son succès ?",
+    "answers": [
+      "Un lecteur DVD",
+      "Un lecteur Blu-ray",
+      "Un lecteur VHS",
+      "Un lecteur MiniDisc"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En quelle année la première Xbox est-elle sortie ?",
+    "answers": [
+      "2001",
+      "1998",
+      "2003",
+      "2005"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle est la première console de salon de Microsoft ?",
+    "answers": [
+      "La Xbox 360",
+      "La Xbox One",
+      "La Xbox",
+      "La Zune"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel format de disque la GameCube utilisait-elle ?",
+    "answers": [
+      "Le Blu-ray",
+      "Le mini-DVD",
+      "Le CD-ROM",
+      "La cartouche"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien d'écrans possède la Nintendo DS ?",
+    "answers": [
+      "Un",
+      "Trois",
+      "Quatre",
+      "Deux"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle console portable de Sony utilisait des disques UMD ?",
+    "answers": [
+      "La PS Vita",
+      "La PocketStation",
+      "La PSP",
+      "La Game Gear"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel problème matériel célèbre a touché de nombreuses Xbox 360 ?",
+    "answers": [
+      "L'écran bleu",
+      "Le « cercle rouge de la mort »",
+      "La surchauffe du lecteur Blu-ray",
+      "La batterie gonflée"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel lecteur de disque la PlayStation 3 a-t-elle démocratisé ?",
+    "answers": [
+      "Le HD DVD",
+      "Le DVD",
+      "Le CD-ROM",
+      "Le Blu-ray"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle innovation de contrôle la Wii a-t-elle popularisée ?",
+    "answers": [
+      "L'écran tactile",
+      "La détection de mouvement avec la Wiimote",
+      "La réalité virtuelle",
+      "La commande vocale"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel jeu était fourni avec la Wii dans de nombreux pays ?",
+    "answers": [
+      "Mario Kart Wii",
+      "Wii Fit",
+      "Super Mario Galaxy",
+      "Wii Sports"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle particularité d'affichage la Nintendo 3DS proposait-elle ?",
+    "answers": [
+      "La réalité virtuelle",
+      "La 3D sans lunettes",
+      "L'écran incurvé",
+      "L'écran holographique"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle console de Nintendo avait une manette avec écran tactile appelée GamePad ?",
+    "answers": [
+      "La Wii",
+      "La Switch",
+      "La Wii U",
+      "La GameCube"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "En quelle année la PlayStation 4 est-elle sortie ?",
+    "answers": [
+      "2010",
+      "2013",
+      "2015",
+      "2017"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "En quelle année la Nintendo Switch est-elle sortie ?",
+    "answers": [
+      "2015",
+      "2017",
+      "2019",
+      "2020"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la particularité de la Nintendo Switch ?",
+    "answers": [
+      "Elle n'a pas de manette",
+      "Elle ne lit que des disques",
+      "Elle est à la fois console de salon et portable",
+      "Elle fonctionne uniquement en réalité virtuelle"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Comment s'appellent les manettes détachables de la Switch ?",
+    "answers": [
+      "Les Joy-Con",
+      "Les DualSense",
+      "Les Wiimote",
+      "Les Nunchuk"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle entreprise a lancé la Steam Deck en 2022 ?",
+    "answers": [
+      "Valve",
+      "Sony",
+      "Microsoft",
+      "Nintendo"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En quelle année la PlayStation 5 est-elle sortie ?",
+    "answers": [
+      "2018",
+      "2021",
+      "2020",
+      "2022"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "En quelle année la Nintendo Switch 2 est-elle sortie ?",
+    "answers": [
+      "2025",
+      "2023",
+      "2024",
+      "2026"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Comment s'appellent les deux versions de la console Xbox sortie en 2020 ?",
+    "answers": [
+      "Series X et Series S",
+      "One X et One S",
+      "360 et 360 S",
+      "Pro et Lite"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel personnage était la mascotte de Sega face à Mario ?",
+    "answers": [
+      "Sonic",
+      "Crash Bandicoot",
+      "Spyro",
+      "Alex Kidd"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel personnage était la mascotte de la première PlayStation dans les années 1990 ?",
+    "answers": [
+      "Sonic",
+      "Spyro",
+      "Crash Bandicoot",
+      "Rayman"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel jeu a été vendu avec la Mega Drive pour concurrencer Mario ?",
+    "answers": [
+      "Sonic the Hedgehog",
+      "Altered Beast",
+      "Streets of Rage",
+      "Golden Axe"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel est le nom japonais de la NES ?",
+    "answers": [
+      "Super Famicom",
+      "Famicom",
+      "Mega Drive",
+      "PC Engine"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel est le nom japonais de la Super Nintendo ?",
+    "answers": [
+      "Famicom",
+      "Mega CD",
+      "Super Famicom",
+      "Neo Geo"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel accessoire de Sega ajoutait un lecteur CD à la Mega Drive ?",
+    "answers": [
+      "Le 32X",
+      "Le Mega-CD",
+      "Le Power Base",
+      "Le Sega Channel"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel accessoire Nintendo pour la Nintendo 64 ajoutait de la mémoire vive ?",
+    "answers": [
+      "L'Expansion Pak",
+      "Le Rumble Pak",
+      "Le Transfer Pak",
+      "Le Controller Pak"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle console portable de Nintendo en 1995 affichait des images en rouge et noir ?",
+    "answers": [
+      "La Game Boy Color",
+      "Le Virtual Boy",
+      "La Game Boy Pocket",
+      "La Pokémon Mini"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel accessoire de mouvement Microsoft a sorti pour la Xbox 360 en 2010 ?",
+    "answers": [
+      "EyeToy",
+      "PlayStation Move",
+      "Kinect",
+      "Wii MotionPlus"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle console de 1972 est considérée comme la première console de salon ?",
+    "answers": [
+      "L'Atari 2600",
+      "La Coleco Telstar",
+      "L'Intellivision",
+      "La Magnavox Odyssey"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel ingénieur est considéré comme le « père » de la PlayStation ?",
+    "answers": [
+      "Shigeru Miyamoto",
+      "Gunpei Yokoi",
+      "Ken Kutaragi",
+      "Satoru Iwata"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel concepteur de Nintendo a créé la Game Boy ?",
+    "answers": [
+      "Gunpei Yokoi",
+      "Shigeru Miyamoto",
+      "Hiroshi Yamauchi",
+      "Satoru Iwata"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Avec quelle entreprise Nintendo a-t-il d'abord développé un lecteur CD qui a mené à la PlayStation ?",
+    "answers": [
+      "Philips",
+      "Panasonic",
       "Sony",
       "Sega"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel constructeur associe-t-on à la Super Nintendo ?",
+    "text": "Quelle console de NEC a concurrencé la Mega Drive au Japon ?",
     "answers": [
-      "Nintendo",
-      "SNK",
-      "Sega",
-      "Sony"
+      "La Neo Geo",
+      "La 3DO",
+      "La Jaguar",
+      "La PC Engine"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Qui a commercialisé la Super Nintendo ?",
+    "text": "Quelle console d'Atari de 1993 se vantait d'être « 64 bits » ?",
     "answers": [
-      "SNK",
-      "Nintendo",
-      "Sega",
-      "Sony"
+      "La Lynx",
+      "La Jaguar",
+      "L'Atari 7800",
+      "L'Atari ST"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel constructeur associe-t-on à la Neo Geo AES ?",
+    "text": "Quel est le processeur de la PlayStation 3 développé avec IBM et Toshiba ?",
     "answers": [
-      "Nintendo",
-      "Sega",
-      "SNK",
-      "Sony"
+      "Le Cell",
+      "L'Emotion Engine",
+      "Le Xenon",
+      "Le Gekko"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a commercialisé la Neo Geo AES ?",
-    "answers": [
-      "Nintendo",
-      "Sega",
-      "Sony",
-      "SNK"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la Game Boy ?",
-    "answers": [
-      "Nintendo",
-      "Sega",
-      "Sony",
-      "Microsoft"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a commercialisé la Game Boy ?",
-    "answers": [
-      "Sega",
-      "Nintendo",
-      "Sony",
-      "Microsoft"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la Game Gear ?",
-    "answers": [
-      "Sony",
-      "Nintendo",
-      "Sega",
-      "Microsoft"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a commercialisé la Game Gear ?",
-    "answers": [
-      "Sony",
-      "Nintendo",
-      "Microsoft",
-      "Sega"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la première PlayStation ?",
-    "answers": [
-      "Sony",
-      "Nintendo",
-      "Sega",
-      "Microsoft"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a commercialisé la première PlayStation ?",
-    "answers": [
-      "Nintendo",
-      "Sony",
-      "Sega",
-      "Microsoft"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la Nintendo 64 ?",
-    "answers": [
-      "Sega",
-      "Sony",
-      "Nintendo",
-      "Microsoft"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a commercialisé la Nintendo 64 ?",
-    "answers": [
-      "Sega",
-      "Sony",
-      "Microsoft",
-      "Nintendo"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la Sega Saturn ?",
-    "answers": [
-      "Sega",
-      "Sony",
-      "Microsoft",
-      "Nintendo"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a commercialisé la Sega Saturn ?",
-    "answers": [
-      "Sony",
-      "Sega",
-      "Microsoft",
-      "Nintendo"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la Dreamcast ?",
-    "answers": [
-      "Sony",
-      "Microsoft",
-      "Sega",
-      "Nintendo"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a commercialisé la Dreamcast ?",
-    "answers": [
-      "Sony",
-      "Microsoft",
-      "Nintendo",
-      "Sega"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la PlayStation 2 ?",
-    "answers": [
-      "Sony",
-      "Microsoft",
-      "Nintendo",
-      "Valve"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a commercialisé la PlayStation 2 ?",
-    "answers": [
-      "Microsoft",
-      "Sony",
-      "Nintendo",
-      "Valve"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la première Xbox ?",
-    "answers": [
-      "Nintendo",
-      "Sony",
-      "Microsoft",
-      "Valve"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a commercialisé la première Xbox ?",
-    "answers": [
-      "Nintendo",
-      "Sony",
-      "Valve",
-      "Microsoft"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la GameCube ?",
-    "answers": [
-      "Nintendo",
-      "Sony",
-      "Microsoft",
-      "Valve"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a commercialisé la GameCube ?",
-    "answers": [
-      "Sony",
-      "Nintendo",
-      "Microsoft",
-      "Valve"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la Nintendo DS ?",
-    "answers": [
-      "Sony",
-      "Microsoft",
-      "Nintendo",
-      "Valve"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a commercialisé la Nintendo DS ?",
-    "answers": [
-      "Sony",
-      "Microsoft",
-      "Valve",
-      "Nintendo"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la PlayStation Portable ?",
-    "answers": [
-      "Sony",
-      "Microsoft",
-      "Nintendo",
-      "Valve"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a commercialisé la PlayStation Portable ?",
-    "answers": [
-      "Microsoft",
-      "Sony",
-      "Nintendo",
-      "Valve"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la Xbox 360 ?",
-    "answers": [
-      "Sony",
-      "Nintendo",
-      "Microsoft",
-      "Valve"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a commercialisé la Xbox 360 ?",
-    "answers": [
-      "Sony",
-      "Nintendo",
-      "Valve",
-      "Microsoft"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la PlayStation 3 ?",
-    "answers": [
-      "Sony",
-      "Nintendo",
-      "Microsoft",
-      "Valve"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a commercialisé la PlayStation 3 ?",
-    "answers": [
-      "Nintendo",
-      "Sony",
-      "Microsoft",
-      "Valve"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la Wii ?",
-    "answers": [
-      "Sony",
-      "Microsoft",
-      "Nintendo",
-      "Valve"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a commercialisé la Wii ?",
-    "answers": [
-      "Sony",
-      "Microsoft",
-      "Valve",
-      "Nintendo"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la Nintendo 3DS ?",
-    "answers": [
-      "Nintendo",
-      "Sony",
-      "Microsoft",
-      "Valve"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a commercialisé la Nintendo 3DS ?",
-    "answers": [
-      "Sony",
-      "Nintendo",
-      "Microsoft",
-      "Valve"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la PlayStation 4 ?",
-    "answers": [
-      "Microsoft",
-      "Nintendo",
-      "Sony",
-      "Valve"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a commercialisé la PlayStation 4 ?",
-    "answers": [
-      "Microsoft",
-      "Nintendo",
-      "Valve",
-      "Sony"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la Xbox One ?",
-    "answers": [
-      "Microsoft",
-      "Nintendo",
-      "Valve",
-      "Atari"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a commercialisé la Xbox One ?",
-    "answers": [
-      "Nintendo",
-      "Microsoft",
-      "Valve",
-      "Atari"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la Nintendo Switch ?",
-    "answers": [
-      "Valve",
-      "Atari",
-      "Nintendo",
-      "Sega"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a commercialisé la Nintendo Switch ?",
-    "answers": [
-      "Valve",
-      "Atari",
-      "Sega",
-      "Nintendo"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel constructeur associe-t-on à la Steam Deck ?",
-    "answers": [
-      "Valve",
-      "Atari",
-      "Nintendo",
-      "Sega"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a commercialisé la Steam Deck ?",
-    "answers": [
-      "Atari",
-      "Valve",
-      "Nintendo",
-      "Sega"
-    ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "expert"
   }
 ]

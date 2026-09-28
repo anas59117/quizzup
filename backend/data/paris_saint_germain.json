@@ -10,12 +10,12 @@
     "correct": 1
   },
   {
-    "text": "Quel est le surnom du PSG ?",
+    "text": "Quel est l’un des surnoms du PSG ?",
     "answers": [
+      "Les Canaris",
+      "Les Verts",
       "Les Rouge et Bleu",
-      "Les Parisiens",
-      "Les Rouge et Bleu / Paname",
-      "Les Franciliens"
+      "Les Girondins"
     ],
     "correct": 2
   },
@@ -110,32 +110,32 @@
     "correct": 3
   },
   {
-    "text": "Combien de titres de champion de France le PSG a-t-il remporté avant 2025 ?",
+    "text": "Combien de titres de champion de France le PSG comptait-il après son sacre de 2024 ?",
     "answers": [
-      "Environ 9",
-      "Environ 11",
-      "Environ 12",
-      "Environ 15"
+      "9",
+      "11",
+      "12",
+      "15"
     ],
     "correct": 2
   },
   {
-    "text": "Quel gardien historique a longtemps défendu les cages du PSG dans les années 2010 ?",
+    "text": "Quel gardien italien a défendu les cages du PSG de 2011 à 2016 ?",
     "answers": [
       "Gianluigi Buffon",
-      "Keylor Navas",
-      "Alphonse Areola",
-      "Salvatore Sirigu"
+      "Salvatore Sirigu",
+      "Gianluigi Donnarumma",
+      "Morgan De Sanctis"
     ],
     "correct": 1
   },
   {
-    "text": "Quel joueur français est devenu capitaine emblématique du PSG dans les années 2010 ?",
+    "text": "Quel défenseur brésilien est devenu le capitaine du PSG en 2020 ?",
     "answers": [
-      "Thiago Silva",
+      "Presnel Kimpembe",
       "Marquinhos",
       "Adrien Rabiot",
-      "Presnel Kimpembe"
+      "Achraf Hakimi"
     ],
     "correct": 1
   },
@@ -170,12 +170,12 @@
     "correct": 2
   },
   {
-    "text": "Combien de Coupes de France le PSG a-t-il remportées environ avant 2025 ?",
+    "text": "Quel club détient le record de victoires en Coupe de France ?",
     "answers": [
-      "Environ 10",
-      "Environ 12",
-      "Environ 14",
-      "Environ 16"
+      "L’OM",
+      "L’AS Saint-Étienne",
+      "Le PSG",
+      "Le LOSC"
     ],
     "correct": 2
   },
@@ -260,12 +260,12 @@
     "correct": 1
   },
   {
-    "text": "En quelle année le PSG a-t-il remporté son premier titre de champion d'Europe (C2) ?",
+    "text": "Combien de saisons Lionel Messi a-t-il passées au PSG ?",
     "answers": [
-      "1994",
-      "1995",
-      "1996",
-      "1997"
+      "1",
+      "3",
+      "2",
+      "4"
     ],
     "correct": 2
   },
@@ -290,7 +290,7 @@
     "correct": 1
   },
   {
-    "text": "Quel milieu de terrain italien a rejoint le PSG en 2012 en provenance de l'AC Milan ?",
+    "text": "Quel milieu de terrain italo-brésilien a rejoint le PSG en 2012 en provenance de l’Inter Milan ?",
     "answers": [
       "Andrea Pirlo",
       "Thiago Motta",
@@ -323,19 +323,19 @@
     "text": "Combien de Ballons d'Or Lionel Messi avait-il remportés à son arrivée au PSG ?",
     "answers": [
       "5",
-      "6",
       "7",
+      "6",
       "8"
     ],
     "correct": 2
   },
   {
-    "text": "Quel trio offensif était surnommé la MNM au PSG (Messi, Neymar, Mbappé) ?",
+    "text": "Quel attaquant argentin a été le compagnon d’attaque de Cavani et Zlatan au PSG de 2015 à 2022 ?",
     "answers": [
-      "MNM",
-      "BBC",
-      "Trident magique",
-      "Les Trois Rois"
+      "Ángel Di María",
+      "Ezequiel Lavezzi",
+      "Mauro Icardi",
+      "Javier Pastore"
     ],
     "correct": 0
   },
@@ -360,12 +360,12 @@
     "correct": 2
   },
   {
-    "text": "Quel club le PSG a-t-il battu 6-1 lors d'un match retour historique de Ligue des Champions, avant d'être éliminé ?",
+    "text": "Quel club a battu le PSG 6-1 lors de la « remontada » de 2017 ?",
     "answers": [
-      "Barcelone (score global favorable à Barcelone)",
-      "Bayern Munich",
+      "Le FC Barcelone",
+      "Le Bayern Munich",
       "Manchester City",
-      "Chelsea"
+      "Le Real Madrid"
     ],
     "correct": 0
   },
@@ -380,12 +380,12 @@
     "correct": 1
   },
   {
-    "text": "Quel était le score aller de ce match avant la remontada (PSG-Barça) ?",
+    "text": "Quel était le score du match aller PSG-Barça avant la remontada de 2017 ?",
     "answers": [
       "2-0",
       "3-0",
-      "4-0",
-      "4-1"
+      "4-1",
+      "4-0"
     ],
     "correct": 3
   },
@@ -410,12 +410,12 @@
     "correct": 1
   },
   {
-    "text": "Quel est le nom du centre d'entraînement du PSG ?",
+    "text": "Comment s’appelait le centre d’entraînement historique du PSG à Saint-Germain-en-Laye ?",
     "answers": [
-      "Camp des Loges",
-      "La Clairefontaine",
-      "Le Poteau Rose",
-      "Centre Ooredoo"
+      "Le Camp des Loges",
+      "Clairefontaine",
+      "La Commanderie",
+      "La Castellane"
     ],
     "correct": 0
   },
@@ -430,12 +430,12 @@
     "correct": 0
   },
   {
-    "text": "Quel entraîneur espagnol a dirigé le PSG entre 2023 et 2025 ?",
+    "text": "Quel entraîneur a mené le PSG à sa première victoire en Ligue des champions ?",
     "answers": [
-      "Unai Emery",
+      "Thomas Tuchel",
       "Luis Enrique",
-      "Julen Lopetegui",
-      "Rafael Benítez"
+      "Mauricio Pochettino",
+      "Unai Emery"
     ],
     "correct": 1
   },
@@ -470,12 +470,12 @@
     "correct": 0
   },
   {
-    "text": "Quel ancien joueur du PSG est devenu consultant TV très connu en France ?",
+    "text": "Quel ailier du PSG des années 1990 a ensuite brillé à Newcastle et Tottenham ?",
     "answers": [
       "David Ginola",
       "Jay-Jay Okocha",
       "Youri Djorkaeff",
-      "Rai"
+      "Raí"
     ],
     "correct": 0
   },
@@ -490,563 +490,13 @@
     "correct": 1
   },
   {
-    "text": "Quel est le nombre approximatif de Coupes de la Ligue remportées par le PSG avant sa suppression ?",
+    "text": "Combien de Coupes de la Ligue le PSG a-t-il remportées, un record ?",
     "answers": [
-      "Environ 6",
-      "Environ 9",
-      "Environ 11",
-      "Environ 13"
+      "6",
+      "9",
+      "11",
+      "13"
     ],
     "correct": 1
-  },
-  {
-    "text": "Quelle équipe le PSG bat-il en finale de sa première Coupe de France, en 1982 ?",
-    "answers": [
-      "Nantes",
-      "Monaco",
-      "Saint-Étienne",
-      "Marseille"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel attaquant parisien égalise en prolongation contre Saint-Étienne en finale de la Coupe de France 1982 ?",
-    "answers": [
-      "Safet Sušić",
-      "Mustapha Dahleb",
-      "Toko",
-      "Dominique Rocheteau"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel Parisien ouvre le score contre Saint-Étienne en finale de la Coupe de France 1982 ?",
-    "answers": [
-      "Toko",
-      "Dominique Rocheteau",
-      "Luis Fernandez",
-      "Jean-Marc Pilorget"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel club le PSG bat-il en finale de la Coupe de France 1983 ?",
-    "answers": [
-      "Saint-Étienne",
-      "Nantes",
-      "Monaco",
-      "Bordeaux"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel ancien joueur devient entraîneur du PSG lors de la Coupe des Coupes remportée en 1996 ?",
-    "answers": [
-      "Artur Jorge",
-      "Ricardo Gomes",
-      "Luis Fernandez",
-      "Antoine Kombouaré"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur marque l'unique but de la finale européenne du PSG contre le Rapid Vienne en 1996 ?",
-    "answers": [
-      "Youri Djorkaeff",
-      "Raí",
-      "Patrice Loko",
-      "Bruno Ngotty"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville le PSG remporte-t-il la Coupe des Coupes 1996 ?",
-    "answers": [
-      "Bruxelles",
-      "Paris",
-      "Vienne",
-      "Rotterdam"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel gardien porte le brassard du PSG lors de la finale européenne de 1996 ?",
-    "answers": [
-      "Salvatore Sirigu",
-      "Bernard Lama",
-      "Jérôme Alonzo",
-      "Keylor Navas"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel meneur brésilien sort sur blessure en début de finale de la Coupe des Coupes 1996 ?",
-    "answers": [
-      "Ronaldinho",
-      "Leonardo",
-      "Raí",
-      "Nenê"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel adversaire le PSG élimine-t-il en quart de finale de Ligue des champions 1994-1995 ?",
-    "answers": [
-      "Bayern Munich",
-      "AC Milan",
-      "Ajax Amsterdam",
-      "FC Barcelone"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quels deux Parisiens marquent au retour contre Barcelone en quart de finale de Ligue des champions 1995 ?",
-    "answers": [
-      "Raí et Vincent Guérin",
-      "George Weah et David Ginola",
-      "Luis Fernandez et Safet Sušić",
-      "Youri Djorkaeff et Patrice Loko"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Depuis quelle année le PSG joue-t-il au Parc des Princes ?",
-    "answers": [
-      "1970",
-      "1974",
-      "1982",
-      "1994"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel adversaire élimine le PSG en quart de finale de Ligue des champions 2020 ?",
-    "answers": [
-      "RB Leipzig",
-      "Bayern Munich",
-      "Atalanta",
-      "Borussia Dortmund"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur égalise pour le PSG en fin de match contre l'Atalanta en quart de finale européen 2020 ?",
-    "answers": [
-      "Neymar",
-      "Kylian Mbappé",
-      "Ángel Di María",
-      "Marquinhos"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel remplaçant inscrit le but de la qualification du PSG contre l'Atalanta en 2020 ?",
-    "answers": [
-      "Eric Maxim Choupo-Moting",
-      "Mauro Icardi",
-      "Pablo Sarabia",
-      "Julian Draxler"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel club allemand le PSG bat-il 3-0 en demi-finale européenne en 2020 ?",
-    "answers": [
-      "Bayern Munich",
-      "RB Leipzig",
-      "Borussia Dortmund",
-      "Bayer Leverkusen"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel défenseur ouvre le score contre Leipzig en demi-finale de Ligue des champions 2020 ?",
-    "answers": [
-      "Thiago Silva",
-      "Presnel Kimpembe",
-      "Marquinhos",
-      "Juan Bernat"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel milieu offensif marque et délivre deux passes décisives contre Leipzig en demi-finale européenne 2020 ?",
-    "answers": [
-      "Neymar",
-      "Marco Verratti",
-      "Leandro Paredes",
-      "Ángel Di María"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel latéral inscrit le troisième but parisien contre Leipzig en demi-finale européenne 2020 ?",
-    "answers": [
-      "Juan Bernat",
-      "Layvin Kurzawa",
-      "Thilo Kehrer",
-      "Mitchel Bakker"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel ancien joueur formé au PSG marque l'unique but de la finale européenne 2020 pour le Bayern ?",
-    "answers": [
-      "Eric Maxim Choupo-Moting",
-      "Kingsley Coman",
-      "Lucas Hernandez",
-      "Corentin Tolisso"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville se joue la finale de Ligue des champions 2020 entre le PSG et le Bayern ?",
-    "answers": [
-      "Munich",
-      "Paris",
-      "Lisbonne",
-      "Istanbul"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel club anglais mène 2-0 au Parc avant de perdre 4-2 contre le PSG en janvier 2025 ?",
-    "answers": [
-      "Arsenal",
-      "Liverpool",
-      "Aston Villa",
-      "Manchester City"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel Parisien réduit le score à 1-2 contre Manchester City en janvier 2025 ?",
-    "answers": [
-      "Ousmane Dembélé",
-      "Bradley Barcola",
-      "João Neves",
-      "Gonçalo Ramos"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel Parisien égalise à 2-2 contre Manchester City en janvier 2025 ?",
-    "answers": [
-      "Ousmane Dembélé",
-      "Bradley Barcola",
-      "Désiré Doué",
-      "Vitinha"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel milieu donne l'avantage au PSG contre Manchester City en janvier 2025 ?",
-    "answers": [
-      "Vitinha",
-      "Fabián Ruiz",
-      "João Neves",
-      "Warren Zaïre-Emery"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel attaquant marque le quatrième but parisien contre Manchester City en janvier 2025 ?",
-    "answers": [
-      "Ousmane Dembélé",
-      "Désiré Doué",
-      "Khvicha Kvaratskhelia",
-      "Gonçalo Ramos"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel club français le PSG domine-t-il 10-0 sur deux matches en barrage européen 2025 ?",
-    "answers": [
-      "Brest",
-      "Monaco",
-      "Lille",
-      "Marseille"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club le PSG élimine-t-il aux tirs au but en huitième de finale européen 2025 ?",
-    "answers": [
-      "Arsenal",
-      "Liverpool",
-      "Aston Villa",
-      "Manchester City"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel gardien parisien arrête deux tirs au but à Anfield contre Liverpool en 2025 ?",
-    "answers": [
-      "Keylor Navas",
-      "Matveï Safonov",
-      "Gianluigi Donnarumma",
-      "Sergio Rico"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel Parisien inscrit le tir au but décisif contre Liverpool à Anfield en 2025 ?",
-    "answers": [
-      "Ousmane Dembélé",
-      "Achraf Hakimi",
-      "Vitinha",
-      "Désiré Doué"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel adversaire anglais le PSG élimine-t-il en quart de finale européen 2025 ?",
-    "answers": [
-      "Aston Villa",
-      "Arsenal",
-      "Liverpool",
-      "Manchester City"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel Parisien égalise au match aller du quart de finale 2025 face à Aston Villa ?",
-    "answers": [
-      "Ousmane Dembélé",
-      "Désiré Doué",
-      "Bradley Barcola",
-      "João Neves"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel latéral inscrit le troisième but parisien au match aller contre Aston Villa en 2025 ?",
-    "answers": [
-      "Achraf Hakimi",
-      "Lucas Hernandez",
-      "Nuno Mendes",
-      "Marquinhos"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel est le score cumulé de la qualification du PSG face à Aston Villa en quart de finale européen 2025 ?",
-    "answers": [
-      "4-3",
-      "6-4",
-      "5-3",
-      "5-4"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club londonien le PSG élimine-t-il en demi-finale de Ligue des champions 2025 ?",
-    "answers": [
-      "Arsenal",
-      "Chelsea",
-      "Tottenham",
-      "West Ham"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel Parisien inscrit l'unique but de la demi-finale aller face à Arsenal en 2025 ?",
-    "answers": [
-      "Désiré Doué",
-      "Ousmane Dembélé",
-      "Fabián Ruiz",
-      "Achraf Hakimi"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel milieu ouvre le score au retour contre Arsenal en demi-finale européenne 2025 ?",
-    "answers": [
-      "Vitinha",
-      "João Neves",
-      "Fabián Ruiz",
-      "Warren Zaïre-Emery"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel défenseur marque le second but du PSG au retour contre Arsenal en demi-finale européenne 2025 ?",
-    "answers": [
-      "Marquinhos",
-      "Nuno Mendes",
-      "Willian Pacho",
-      "Achraf Hakimi"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville le PSG gagne-t-il sa première finale de Ligue des champions, en 2025 ?",
-    "answers": [
-      "Munich",
-      "Londres",
-      "Paris",
-      "Madrid"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur ouvre le score pour le PSG face à l'Inter en finale européenne 2025 ?",
-    "answers": [
-      "Désiré Doué",
-      "Achraf Hakimi",
-      "Ousmane Dembélé",
-      "Khvicha Kvaratskhelia"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur parisien inscrit un doublé contre l'Inter en finale de Ligue des champions 2025 ?",
-    "answers": [
-      "Ousmane Dembélé",
-      "Achraf Hakimi",
-      "Désiré Doué",
-      "Senny Mayulu"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur du PSG marque le quatrième but de la finale européenne 2025 ?",
-    "answers": [
-      "Bradley Barcola",
-      "Fabián Ruiz",
-      "João Neves",
-      "Khvicha Kvaratskhelia"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel jeune remplaçant inscrit le cinquième but du PSG en finale européenne 2025 ?",
-    "answers": [
-      "Senny Mayulu",
-      "Warren Zaïre-Emery",
-      "Désiré Doué",
-      "Bradley Barcola"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur parisien délivre la passe décisive à Hakimi sur le premier but de la finale européenne 2025 ?",
-    "answers": [
-      "Ousmane Dembélé",
-      "Désiré Doué",
-      "Vitinha",
-      "Fabián Ruiz"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur est élu homme du match de la finale européenne 2025 par l'UEFA ?",
-    "answers": [
-      "Ousmane Dembélé",
-      "Achraf Hakimi",
-      "Désiré Doué",
-      "Gianluigi Donnarumma"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel entraîneur mène le PSG au sacre européen 2025 après avoir déjà gagné la compétition avec Barcelone ?",
-    "answers": [
-      "Thomas Tuchel",
-      "Unai Emery",
-      "Christophe Galtier",
-      "Luis Enrique"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur termine meilleur buteur du PSG en Ligue des champions 2024-2025 avec huit buts ?",
-    "answers": [
-      "Ousmane Dembélé",
-      "Désiré Doué",
-      "Bradley Barcola",
-      "Gonçalo Ramos"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club bat le PSG 2-0 en phase de ligue européenne 2024-2025 avant d'être éliminé par lui en demi-finale ?",
-    "answers": [
-      "Liverpool",
-      "Arsenal",
-      "Aston Villa",
-      "Manchester City"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel est le score de la finale de la Coupe des Coupes 1996 remportée par le PSG ?",
-    "answers": [
-      "2-1",
-      "3-0",
-      "1-0",
-      "2-0"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel gardien parisien remplace Keylor Navas blessé contre l'Atalanta en quart de finale 2020 ?",
-    "answers": [
-      "Gianluigi Donnarumma",
-      "Salvatore Sirigu",
-      "Alphonse Areola",
-      "Sergio Rico"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
   }
 ]

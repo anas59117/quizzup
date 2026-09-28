@@ -1,1102 +1,512 @@
 [
   {
-    "text": "En quelle année l’Inter Milan est-il fondé ?",
-    "answers": [
-      "1908",
-      "1899",
-      "1910",
-      "1920"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Dans quelle ville joue l’Inter ?",
+    "text": "Dans quelle ville joue l'Inter ?",
     "answers": [
       "Turin",
       "Milan",
       "Rome",
       "Naples"
     ],
-    "correct": 1,
-    "difficulty": "easy"
+    "correct": 1
   },
   {
-    "text": "Quelles sont les couleurs traditionnelles de l’Inter ?",
+    "text": "Dans quel stade l'Inter joue-t-il ses matchs à domicile ?",
     "answers": [
+      "Le Stadio Olimpico",
+      "L'Allianz Stadium",
+      "Le Stadio Diego-Maradona",
+      "San Siro (Giuseppe-Meazza)"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Avec quel club l'Inter partage-t-il son stade ?",
+    "answers": [
+      "La Juventus",
+      "L'AS Rome",
+      "L'AC Milan",
+      "L'Atalanta"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Comment s'appelle le derby entre l'Inter et l'AC Milan ?",
+    "answers": [
+      "Le Derby d'Italia",
+      "Le Derby della Madonnina",
+      "Le Derby della Capitale",
+      "Le Derby della Mole"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelles sont les couleurs de l'Inter ?",
+    "answers": [
+      "Noir et bleu",
       "Rouge et noir",
-      "Bleu et blanc",
-      "Bleu et noir",
-      "Noir et blanc"
+      "Blanc et noir",
+      "Jaune et rouge"
     ],
-    "correct": 2,
-    "difficulty": "easy"
+    "correct": 0
   },
   {
-    "text": "Quel club l’Inter affronte-t-il dans le Derby della Madonnina ?",
+    "text": "Quel est le surnom de l'Inter ?",
     "answers": [
-      "Juventus",
-      "Atalanta",
-      "Torino",
-      "AC Milan"
+      "Les Rossoneri",
+      "Les Bianconeri",
+      "Les Giallorossi",
+      "Les Nerazzurri"
     ],
-    "correct": 3,
-    "difficulty": "easy"
+    "correct": 3
   },
   {
-    "text": "Quel stade l’Inter partage-t-il avec l’AC Milan ?",
+    "text": "Comment s'appelle le match entre l'Inter et la Juventus ?",
     "answers": [
-      "San Siro",
-      "Stadio Olimpico",
-      "Allianz Stadium",
-      "Gewiss Stadium"
+      "Le Derby d'Italia",
+      "Le Derby della Madonnina",
+      "Le Derby del Sole",
+      "Le Classico"
     ],
-    "correct": 0,
-    "difficulty": "easy"
+    "correct": 0
   },
   {
-    "text": "Quel Argentin est devenu le capitaine emblématique de l’Inter dans les années 2000 ?",
+    "text": "Quel entraîneur portugais a remporté le triplé 2010 avec l'Inter ?",
     "answers": [
-      "Esteban Cambiasso",
-      "Javier Zanetti",
-      "Walter Samuel",
-      "Diego Milito"
+      "Paulo Fonseca",
+      "José Mourinho",
+      "Luís Figo",
+      "Fernando Santos"
     ],
-    "correct": 1,
-    "difficulty": "easy"
+    "correct": 1
   },
   {
-    "text": "Quel attaquant argentin inscrit les deux buts de l’Inter en finale européenne 2010 ?",
+    "text": "Contre quel club l'Inter a-t-il gagné la finale de Ligue des champions 2010 ?",
     "answers": [
+      "Le FC Barcelone",
+      "Manchester United",
+      "Le Bayern Munich",
+      "Chelsea"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel attaquant argentin a marqué les deux buts de la finale 2010 ?",
+    "answers": [
+      "Diego Milito",
       "Lautaro Martínez",
       "Hernán Crespo",
-      "Diego Milito",
-      "Mauro Icardi"
+      "Julio Cruz"
     ],
-    "correct": 2,
-    "difficulty": "easy"
+    "correct": 0
   },
   {
-    "text": "Quel club l’Inter bat-il en finale de Ligue des champions 2010 ?",
+    "text": "Quel club l'Inter a-t-il éliminé en demi-finale 2010, célèbre pour la défense à dix ?",
     "answers": [
-      "Real Madrid",
       "Chelsea",
-      "FC Barcelone",
-      "Bayern Munich"
+      "Le CSKA Moscou",
+      "Le FC Barcelone",
+      "Le Real Madrid"
     ],
-    "correct": 3,
-    "difficulty": "easy"
+    "correct": 2
   },
   {
-    "text": "Quel entraîneur portugais réalise le triplé avec l’Inter en 2010 ?",
+    "text": "Quel capitaine argentin a joué plus de 850 matchs pour l'Inter ?",
     "answers": [
-      "José Mourinho",
-      "André Villas-Boas",
-      "Leonardo Jardim",
-      "Paulo Fonseca"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quels trois trophées composent le triplé de l’Inter en 2010 ?",
-    "answers": [
-      "Championnat, Supercoupe et Coupe UEFA",
-      "Championnat, Coupe d’Italie et Ligue des champions",
-      "Coupe d’Italie, Supercoupe et Coupe UEFA",
-      "Championnat, Coupe UEFA et Mondial des clubs"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club espagnol l’Inter bat-il en finale de Coupe d’Europe 1964 ?",
-    "answers": [
-      "FC Barcelone",
-      "Atlético de Madrid",
-      "Real Madrid",
-      "Valence"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club portugais l’Inter bat-il en finale de Coupe d’Europe 1965 ?",
-    "answers": [
-      "Porto",
-      "Sporting CP",
-      "Braga",
-      "Benfica"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel attaquant historique donne son nom au stade officiel de San Siro ?",
-    "answers": [
-      "Giuseppe Meazza",
-      "Sandro Mazzola",
-      "Roberto Baggio",
-      "Christian Vieri"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel Brésilien surnommé « Il Fenomeno » joue à l’Inter de 1997 à 2002 ?",
-    "answers": [
-      "Rivaldo",
-      "Ronaldo",
-      "Ronaldinho",
-      "Romário"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel Suédois rejoint le FC Barcelone après l’Inter en 2009 ?",
-    "answers": [
-      "Henrik Larsson",
-      "Alexander Isak",
-      "Zlatan Ibrahimović",
-      "Dejan Kulusevski"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club anglais bat l’Inter en finale de Ligue des champions 2023 ?",
-    "answers": [
-      "Manchester United",
-      "Liverpool",
-      "Chelsea",
-      "Manchester City"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel entraîneur italien mène l’Inter à sa deuxième étoile en 2024 ?",
-    "answers": [
-      "Simone Inzaghi",
-      "Antonio Conte",
-      "Roberto Mancini",
-      "Claudio Ranieri"
-    ],
-    "correct": 0,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel club l’Inter bat-il lors du derby décisif pour le titre de 2024 ?",
-    "answers": [
-      "Juventus",
-      "AC Milan",
-      "Napoli",
-      "Atalanta"
-    ],
-    "correct": 1,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Combien de titres de Serie A représente la deuxième étoile acquise en 2024 ?",
-    "answers": [
-      "15",
-      "18",
-      "20",
-      "25"
-    ],
-    "correct": 2,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel attaquant argentin porte le brassard de l’Inter lors du titre de 2024 ?",
-    "answers": [
-      "Joaquín Correa",
-      "Mauro Icardi",
-      "Ángel Correa",
-      "Lautaro Martínez"
-    ],
-    "correct": 3,
-    "difficulty": "easy"
-  },
-  {
-    "text": "Quel est le nom complet du club, écrit en italien ?",
-    "answers": [
-      "Football Club Internazionale Milano",
-      "Associazione Calcio Internazionale Milano",
-      "Unione Sportiva Internazionale Milano",
-      "Società Sportiva Internazionale Milano"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel artiste dessine le premier écusson de l’Inter en 1908 ?",
-    "answers": [
-      "Giuseppe Meazza",
-      "Giorgio Muggiani",
-      "Angelo Moratti",
-      "Sandro Mazzola"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel surnom italien désigne l’Inter en référence à ses couleurs ?",
-    "answers": [
-      "Rossoneri",
-      "Bianconeri",
-      "Nerazzurri",
-      "Giallorossi"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "En quelle année l’Inter remporte-t-il son premier championnat d’Italie ?",
-    "answers": [
-      "1908",
-      "1920",
-      "1930",
-      "1910"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel entraîneur franco-argentin dirige la Grande Inter des années 1960 ?",
-    "answers": [
-      "Helenio Herrera",
-      "Luis Carniglia",
-      "Nereo Rocco",
-      "Juan Carlos Lorenzo"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur de l’Inter inscrit un doublé en finale de Coupe d’Europe 1964 ?",
-    "answers": [
-      "Jair",
-      "Sandro Mazzola",
-      "Aurelio Milani",
-      "Luis Suárez"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur marque le seul but de la finale de Coupe d’Europe 1965 ?",
-    "answers": [
-      "Sandro Mazzola",
-      "Giacinto Facchetti",
-      "Jair",
-      "Mario Corso"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel entraîneur remporte le Scudetto record de 1988-89 avec l’Inter ?",
-    "answers": [
-      "Arrigo Sacchi",
-      "Osvaldo Bagnoli",
-      "Sven-Göran Eriksson",
-      "Giovanni Trapattoni"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel milieu allemand marque le coup franc du titre contre Naples en 1989 ?",
-    "answers": [
-      "Lothar Matthäus",
-      "Andreas Brehme",
-      "Jürgen Klinsmann",
-      "Thomas Häßler"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel adversaire italien l’Inter bat-il lors de sa première finale de Coupe UEFA en 1991 ?",
-    "answers": [
-      "Lazio",
-      "AS Rome",
-      "Napoli",
-      "Parme"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club autrichien l’Inter bat-il lors de sa deuxième Coupe UEFA en 1994 ?",
-    "answers": [
-      "Rapid Vienne",
-      "Sturm Graz",
-      "Austria Salzbourg",
-      "Austria Vienne"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club italien l’Inter bat-il 3-0 en finale de Coupe UEFA 1998 ?",
-    "answers": [
-      "AS Rome",
-      "Parme",
-      "Fiorentina",
-      "Lazio"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel Brésilien marque le dernier but de cette finale européenne 1998 ?",
-    "answers": [
-      "Ronaldo",
-      "Roberto Carlos",
-      "Rivaldo",
-      "Romário"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club l’Inter bat-il en finale de Coupe d’Italie 2010 ?",
-    "answers": [
-      "Lazio",
-      "AS Rome",
-      "Juventus",
-      "Fiorentina"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur marque en finale de Coupe d’Italie 2010 ?",
-    "answers": [
-      "Wesley Sneijder",
-      "Samuel Eto’o",
-      "Diego Milito",
-      "Mario Balotelli"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club l’Inter bat-il au dernier match de championnat pour le titre de 2010 ?",
-    "answers": [
-      "Parme",
-      "Chievo",
-      "Atalanta",
-      "Sienne"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Dans quelle ville l’Inter remporte-t-il la Ligue des champions 2010 ?",
-    "answers": [
-      "Madrid",
-      "Munich",
-      "Rome",
-      "Lisbonne"
-    ],
-    "correct": 0,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel défenseur italien ouvre le score dans le derby du titre de 2024 ?",
-    "answers": [
-      "Alessandro Bastoni",
-      "Francesco Acerbi",
-      "Federico Dimarco",
-      "Matteo Darmian"
-    ],
-    "correct": 1,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel joueur français marque le deuxième but de l’Inter lors de ce derby décisif ?",
-    "answers": [
-      "Benjamin Pavard",
-      "Olivier Giroud",
-      "Marcus Thuram",
-      "Adrien Rabiot"
-    ],
-    "correct": 2,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel club français bat l’Inter en finale de Ligue des champions 2025 ?",
-    "answers": [
-      "Olympique de Marseille",
-      "AS Monaco",
-      "LOSC Lille",
-      "Paris Saint-Germain"
-    ],
-    "correct": 3,
-    "difficulty": "medium"
-  },
-  {
-    "text": "Quel est le jour précis de la fondation de l’Inter ?",
-    "answers": [
-      "9 mars 1908",
-      "10 mars 1908",
-      "9 avril 1908",
-      "1er janvier 1908"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel nom adopte l’Inter en 1932, durant la période fasciste italienne ?",
-    "answers": [
-      "Lombardia FC",
-      "Ambrosiana-Inter",
-      "Milanese Calcio",
-      "Sporting Milano"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel adversaire l’Inter bat-il pour son premier titre de champion en avril 1910 ?",
-    "answers": [
-      "Juventus",
-      "Genoa",
-      "Pro Vercelli",
-      "Torino"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel attaquant est le meilleur buteur historique de l’Inter avec 284 buts en championnat ?",
-    "answers": [
-      "Alessandro Altobelli",
-      "Roberto Boninsegna",
-      "Lautaro Martínez",
-      "Giuseppe Meazza"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel défenseur de la Grande Inter est surnommé « Il Gigante Buono » ?",
-    "answers": [
-      "Giacinto Facchetti",
-      "Armando Picchi",
-      "Tarcisio Burgnich",
-      "Giuseppe Bergomi"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel défenseur est capitaine de l’Inter lors du sacre européen de 1964 ?",
-    "answers": [
-      "Giacinto Facchetti",
-      "Armando Picchi",
-      "Tarcisio Burgnich",
-      "Aristide Guarneri"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel attaquant inscrit le troisième but de l’Inter contre le Real Madrid en finale 1964 ?",
-    "answers": [
-      "Aurelio Milani",
-      "Jair",
-      "Sandro Mazzola",
-      "Mario Corso"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel avant-centre inscrit le deuxième but de l’Inter en finale 1964 ?",
-    "answers": [
-      "Sandro Mazzola",
-      "Jair",
-      "Luis Suárez",
-      "Aurelio Milani"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville se joue la finale de Coupe d’Europe 1964 ?",
-    "answers": [
-      "Vienne",
-      "Rome",
-      "Paris",
-      "Madrid"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville l’Inter conserve-t-il la Coupe d’Europe en 1965 ?",
-    "answers": [
-      "Vienne",
-      "Milan",
-      "Lisbonne",
-      "Rotterdam"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club écossais bat l’Inter en finale européenne 1967 ?",
-    "answers": [
-      "Rangers",
-      "Aberdeen",
-      "Celtic",
-      "Heart of Midlothian"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club néerlandais bat l’Inter en finale de Coupe d’Europe 1972 ?",
-    "answers": [
-      "Feyenoord",
-      "PSV Eindhoven",
-      "AZ Alkmaar",
-      "Ajax"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel entraîneur remporte le championnat italien 1970-71 avec l’Inter ?",
-    "answers": [
-      "Giovanni Invernizzi",
-      "Helenio Herrera",
-      "Eugenio Bersellini",
-      "Luigi Simoni"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quelle équipe l’Inter bat-il en finale de Coupe d’Italie 1978 ?",
-    "answers": [
-      "Torino",
-      "Napoli",
-      "AS Rome",
-      "Juventus"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel gardien de l’Inter est surnommé « Uomo Ragno » ?",
-    "answers": [
-      "Julio César",
-      "Francesco Toldo",
-      "Walter Zenga",
-      "Samir Handanovič"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel défenseur italien évolue à l’Inter toute sa carrière de 1979 à 1999 ?",
-    "answers": [
-      "Nicola Berti",
-      "Marco Materazzi",
-      "Andrea Ranocchia",
-      "Giuseppe Bergomi"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Combien de points l’Inter obtient-il en 34 journées au championnat 1988-89, à deux points la victoire ?",
-    "answers": [
-      "58",
-      "54",
-      "56",
-      "60"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Contre quel club l’Inter assure-t-il le titre 1988-89 avec quatre matches encore à jouer ?",
-    "answers": [
-      "Juventus",
-      "Napoli",
-      "AC Milan",
-      "Fiorentina"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club l’Inter bat-il 2-0 à domicile à l’aller de la finale de Coupe UEFA 1991 ?",
-    "answers": [
-      "Torino",
-      "Napoli",
-      "AS Rome",
-      "Parme"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel Néerlandais marque au retour de la finale UEFA contre Salzbourg en 1994 ?",
-    "answers": [
-      "Dennis Bergkamp",
-      "Clarence Seedorf",
-      "Aron Winter",
-      "Wim Jonk"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel Italien marque à l’aller de cette finale UEFA 1994 à Vienne ?",
-    "answers": [
-      "Nicola Berti",
-      "Giuseppe Bergomi",
-      "Roberto Baggio",
-      "Alessandro Altobelli"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Dans quelle ville se joue la finale unique de Coupe UEFA 1998 ?",
-    "answers": [
-      "Milan",
-      "Paris",
-      "Rome",
-      "Munich"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel attaquant chilien ouvre le score de la finale UEFA 1998 contre la Lazio ?",
-    "answers": [
-      "Alexis Sánchez",
-      "Arturo Vidal",
-      "Iván Zamorano",
-      "Marcelo Salas"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel défenseur argentin marque le deuxième but de cette finale UEFA 1998 ?",
-    "answers": [
-      "Walter Samuel",
-      "Nicolás Burdisso",
       "Esteban Cambiasso",
+      "Walter Samuel",
+      "Diego Milito",
       "Javier Zanetti"
     ],
-    "correct": 3,
-    "difficulty": "hard"
+    "correct": 3
   },
   {
-    "text": "Quel entraîneur espagnol bat l’Inter 3-2 en finale de Ligue Europa 2020 avec Séville ?",
+    "text": "Quel attaquant brésilien surnommé « Il Fenomeno » a été Ballon d'or 1997 avec l'Inter ?",
     "answers": [
-      "Julen Lopetegui",
-      "Unai Emery",
-      "José Luis Mendilibar",
-      "Quique Sánchez Flores"
+      "Ronaldo",
+      "Adriano",
+      "Ronaldinho",
+      "Rivaldo"
     ],
-    "correct": 0,
-    "difficulty": "hard"
+    "correct": 0
   },
   {
-    "text": "Quel entraîneur de l’Inter remporte le Scudetto 2005-06 attribué après Calciopoli ?",
+    "text": "Quel attaquant argentin est le capitaine de l'Inter dans les années 2020 ?",
     "answers": [
-      "José Mourinho",
-      "Roberto Mancini",
-      "Antonio Conte",
-      "Marcello Lippi"
+      "Paulo Dybala",
+      "Mauro Icardi",
+      "Joaquín Correa",
+      "Lautaro Martínez"
     ],
-    "correct": 1,
-    "difficulty": "hard"
+    "correct": 3
   },
   {
-    "text": "Quel entraîneur conduit l’Inter au championnat 2020-21 après onze années d’attente ?",
+    "text": "Quel attaquant français a rejoint l'Inter en 2023 ?",
+    "answers": [
+      "Olivier Giroud",
+      "Kylian Mbappé",
+      "Anthony Martial",
+      "Marcus Thuram"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Contre quel club l'Inter a-t-il perdu la finale de Ligue des champions 2023 ?",
+    "answers": [
+      "Manchester City",
+      "Le Real Madrid",
+      "Chelsea",
+      "Liverpool"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Contre quel club l'Inter a-t-il perdu la finale de Ligue des champions 2025 ?",
+    "answers": [
+      "Manchester City",
+      "Le Real Madrid",
+      "Le PSG",
+      "Arsenal"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel était le score de la finale 2025 perdue par l'Inter ?",
+    "answers": [
+      "1-0",
+      "2-1",
+      "5-0",
+      "3-2"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel est le seul club italien à n'avoir jamais été relégué en Serie B ?",
+    "answers": [
+      "L'AC Milan",
+      "L'Inter",
+      "La Juventus",
+      "L'AS Rome"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel entraîneur italien a mené l'Inter au titre de 2021, mettant fin à la série de la Juventus ?",
     "answers": [
       "Simone Inzaghi",
-      "Luciano Spalletti",
+      "Massimiliano Allegri",
       "Antonio Conte",
       "Roberto Mancini"
     ],
-    "correct": 2,
-    "difficulty": "hard"
+    "correct": 2
   },
   {
-    "text": "Quel gardien brésilien garde le but de l’Inter en finale européenne 2010 ?",
+    "text": "Quel entraîneur italien a mené l'Inter en finales de Ligue des champions 2023 et 2025 ?",
     "answers": [
-      "Alisson Becker",
-      "Ederson",
-      "Dida",
-      "Júlio César"
+      "Antonio Conte",
+      "Simone Inzaghi",
+      "Luciano Spalletti",
+      "Stefano Pioli"
     ],
-    "correct": 3,
-    "difficulty": "hard"
+    "correct": 1
   },
   {
-    "text": "Quel milieu néerlandais porte le numéro 10 de l’Inter lors du triplé 2010 ?",
+    "text": "Quel attaquant belge a été champion d'Italie avec l'Inter en 2021 ?",
+    "answers": [
+      "Eden Hazard",
+      "Dries Mertens",
+      "Michy Batshuayi",
+      "Romelu Lukaku"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel attaquant camerounais a remporté le triplé 2010 avec l'Inter ?",
+    "answers": [
+      "Vincent Aboubakar",
+      "Roger Milla",
+      "Samuel Eto'o",
+      "Patrick Mboma"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel meneur néerlandais a brillé lors du triplé de 2010 ?",
     "answers": [
       "Wesley Sneijder",
-      "Arjen Robben",
       "Rafael van der Vaart",
-      "Nigel de Jong"
+      "Clarence Seedorf",
+      "Arjen Robben"
     ],
-    "correct": 0,
-    "difficulty": "hard"
+    "correct": 0
   },
   {
-    "text": "Quel avant-centre camerounais débute la finale européenne 2010 avec l’Inter ?",
+    "text": "Quel défenseur brésilien, capitaine de la Seleção, jouait à l'Inter en 2010 ?",
     "answers": [
-      "Eric Maxim Choupo-Moting",
-      "Samuel Eto’o",
-      "Vincent Aboubakar",
-      "Karl Toko Ekambi"
+      "Thiago Silva",
+      "Marquinhos",
+      "Dani Alves",
+      "Lúcio"
     ],
-    "correct": 1,
-    "difficulty": "hard"
+    "correct": 3
   },
   {
-    "text": "Quel club l’Inter élimine-t-il en demi-finale de Ligue des champions 2010 ?",
+    "text": "Quel gardien brésilien gardait les buts de l'Inter en 2010 ?",
     "answers": [
-      "Bayern Munich",
-      "Chelsea",
-      "FC Barcelone",
-      "CSKA Moscou"
+      "Júlio César",
+      "Dida",
+      "Alisson",
+      "Ederson"
     ],
-    "correct": 2,
-    "difficulty": "hard"
+    "correct": 0
   },
   {
-    "text": "Quel attaquant argentin marque le but décisif contre Sienne pour le Scudetto 2010 ?",
+    "text": "Quel attaquant allemand a été champion du monde 1990 en jouant à l'Inter ?",
     "answers": [
-      "Esteban Cambiasso",
-      "Javier Zanetti",
-      "Thiago Motta",
-      "Diego Milito"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel attaquant marque un doublé en finale de Coupe d’Italie 2022 lors de la prolongation ?",
-    "answers": [
-      "Ivan Perišić",
-      "Lautaro Martínez",
-      "Edin Džeko",
-      "Alexis Sánchez"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel milieu turc égalise sur penalty contre la Juventus en finale de Coupe d’Italie 2022 ?",
-    "answers": [
-      "Nicolo Barella",
-      "Hakan Çalhanoğlu",
-      "Marcelo Brozović",
-      "Henrikh Mkhitaryan"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club l’Inter bat-il en finale de Coupe d’Italie 2023 ?",
-    "answers": [
-      "Juventus",
-      "Lazio",
-      "Fiorentina",
-      "Atalanta"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur inscrit un doublé dans cette finale de Coupe d’Italie 2023 ?",
-    "answers": [
-      "Edin Džeko",
-      "Romelu Lukaku",
-      "Federico Dimarco",
-      "Lautaro Martínez"
-    ],
-    "correct": 3,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club l’Inter élimine-t-il en demi-finale de Ligue des champions 2023 ?",
-    "answers": [
-      "AC Milan",
-      "Napoli",
-      "Juventus",
-      "Benfica"
-    ],
-    "correct": 0,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel club l’Inter élimine-t-il en demi-finale européenne 2025 après un 4-3 au retour ?",
-    "answers": [
-      "Bayern Munich",
-      "FC Barcelone",
-      "Arsenal",
-      "Benfica"
-    ],
-    "correct": 1,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur italien marque le but de la qualification en prolongation contre Barcelone en 2025 ?",
-    "answers": [
-      "Francesco Acerbi",
-      "Nicolo Barella",
-      "Davide Frattesi",
-      "Federico Dimarco"
-    ],
-    "correct": 2,
-    "difficulty": "hard"
-  },
-  {
-    "text": "Quel joueur marque quatre buts pour l’Inter lors du barrage décisif pour le titre de 1910 ?",
-    "answers": [
-      "Virgilio Fossati",
-      "Giuseppe Meazza",
-      "Sandro Mazzola",
-      "Paul Oscar Engler"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur inscrit un doublé dans ce barrage contre Pro Vercelli en 1910 ?",
-    "answers": [
-      "Virgilio Fossati",
-      "Paul Oscar Engler",
-      "Giorgio Muggiani",
-      "Giuseppe Meazza"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "En quelle année le stade partagé par l’Inter reçoit-il officiellement le nom de Giuseppe Meazza ?",
-    "answers": [
-      "1970",
-      "1980",
-      "1985",
-      "1990"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur transforme le penalty de l’Inter en finale européenne 1967 contre Celtic ?",
-    "answers": [
-      "Jair",
-      "Giacinto Facchetti",
-      "Sandro Mazzola",
-      "Mario Corso"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel attaquant marque les deux buts d’Ajax en finale européenne 1972 contre l’Inter ?",
-    "answers": [
-      "Johan Neeskens",
-      "Ruud Krol",
-      "Piet Keizer",
-      "Johan Cruyff"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel club argentin l’Inter bat-il après un match d’appui pour remporter la Coupe intercontinentale 1964 ?",
-    "answers": [
-      "Independiente",
-      "Racing Club",
-      "Boca Juniors",
-      "Estudiantes"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel club sud-américain l’Inter bat-il pour la Coupe intercontinentale 1965 ?",
-    "answers": [
-      "Peñarol",
-      "Independiente",
-      "Nacional",
-      "Racing Club"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur marque pour l’Inter dans le match d’appui de la Coupe intercontinentale 1964 ?",
-    "answers": [
-      "Sandro Mazzola",
-      "Jair",
-      "Mario Corso",
-      "Aurelio Milani"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel défenseur est surnommé « Lo Zio » par les supporters de l’Inter ?",
-    "answers": [
-      "Marco Materazzi",
-      "Alessandro Bastoni",
-      "Andrea Ranocchia",
-      "Giuseppe Bergomi"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur allemand décroche le Ballon d’or 1990 en tant que milieu de l’Inter ?",
-    "answers": [
-      "Lothar Matthäus",
-      "Andreas Brehme",
-      "Jürgen Klinsmann",
-      "Thomas Häßler"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel joueur marque le penalty de l’Inter lors de la finale UEFA aller 1991 contre la Roma ?",
-    "answers": [
-      "Nicola Berti",
-      "Lothar Matthäus",
-      "Giuseppe Bergomi",
+      "Rudi Völler",
+      "Oliver Bierhoff",
+      "Gerd Müller",
       "Jürgen Klinsmann"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 3
   },
   {
-    "text": "Quel joueur marque le deuxième but de l’Inter lors de cette finale aller 1991 ?",
+    "text": "Quel milieu allemand, champion du monde 1990, a été Ballon d'or en jouant à l'Inter ?",
     "answers": [
-      "Lothar Matthäus",
       "Andreas Brehme",
-      "Nicola Berti",
-      "Aldo Serena"
+      "Lothar Matthäus",
+      "Thomas Häßler",
+      "Pierre Littbarski"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 1
   },
   {
-    "text": "Quel est le score cumulé des deux matches de la finale UEFA 1994 contre Salzbourg ?",
+    "text": "Quel défenseur français, champion du monde 2018, a rejoint l'Inter en 2023 ?",
     "answers": [
-      "2-1",
-      "3-0",
-      "3-1",
-      "2-0"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel défenseur marque le but de l’Inter en finale UEFA 2020 contre Séville ?",
-    "answers": [
-      "Diego Godín",
-      "Stefan de Vrij",
-      "Alessandro Bastoni",
-      "Milan Škriniar"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel attaquant belge marque l’autre but de l’Inter dans cette finale 2020 ?",
-    "answers": [
-      "Dries Mertens",
-      "Romelu Lukaku",
-      "Michy Batshuayi",
-      "Divock Origi"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel club élimine l’Inter en huitième de finale de la Coupe du monde des clubs 2025 ?",
-    "answers": [
-      "Al Hilal",
-      "Monterrey",
-      "Fluminense",
-      "Urawa Red Diamonds"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel entraîneur mène l’Inter à sa première Coupe UEFA en 1991 ?",
-    "answers": [
-      "José Mourinho",
-      "Luigi Simoni",
-      "Eugenio Bersellini",
-      "Giovanni Trapattoni"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel défenseur égalise à 3-3 en fin de match contre Barcelone au retour de demi-finale 2025 ?",
-    "answers": [
-      "Francesco Acerbi",
-      "Alessandro Bastoni",
-      "Benjamin Pavard",
-      "Matteo Darmian"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel gardien arrête la frappe de Lamine Yamal en fin de prolongation du 4-3 contre Barcelone en 2025 ?",
-    "answers": [
-      "André Onana",
-      "Yann Sommer",
-      "Samir Handanovič",
-      "Josep Martínez"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel Français inscrit le troisième but de l’Inter en finale du Mondial des clubs 2010 ?",
-    "answers": [
-      "Patrick Vieira",
-      "Olivier Dacourt",
-      "Jonathan Biabiany",
+      "Raphaël Varane",
+      "Samuel Umtiti",
+      "Lucas Hernandez",
       "Benjamin Pavard"
     ],
-    "correct": 2,
+    "correct": 3
+  },
+  {
+    "text": "Quel est le nom officiel du stade San Siro ?",
+    "answers": [
+      "Stadio delle Alpi",
+      "Stadio Olimpico",
+      "Stadio San Paolo",
+      "Stade Giuseppe-Meazza"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel buteur légendaire des années 1930 a donné son nom au stade de l'Inter ?",
+    "answers": [
+      "Giuseppe Meazza",
+      "Silvio Piola",
+      "Luigi Riva",
+      "Giampiero Boniperti"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel entraîneur argentin a mené la « Grande Inter » des années 1960 ?",
+    "answers": [
+      "Carlos Bilardo",
+      "Helenio Herrera",
+      "César Luis Menotti",
+      "Diego Simeone"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de fois l'Inter a-t-il remporté la Coupe des clubs champions / Ligue des champions ?",
+    "answers": [
+      "1",
+      "3",
+      "5",
+      "7"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien d'étoiles l'Inter porte-t-il sur son maillot depuis son 20e titre ?",
+    "answers": [
+      "1",
+      "3",
+      "2",
+      "4"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "En quelle année l'Inter a-t-il remporté son 20e titre de champion d'Italie ?",
+    "answers": [
+      "2021",
+      "2010",
+      "2024",
+      "2006"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel club italien est dans la même ville que l'Inter ?",
+    "answers": [
+      "L'AC Milan",
+      "La Juventus",
+      "L'Atalanta",
+      "Le Torino"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel attaquant argentin, ancien capitaine de l'Inter, a rejoint le PSG en 2019 ?",
+    "answers": [
+      "Mauro Icardi",
+      "Lautaro Martínez",
+      "Diego Milito",
+      "Rodrigo Palacio"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel milieu turc a rejoint l'Inter en 2021 en provenance de l'AC Milan ?",
+    "answers": [
+      "Arda Turan",
+      "Hakan Çalhanoğlu",
+      "Cengiz Ünder",
+      "Kerem Aktürkoğlu"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel milieu croate a joué à l'Inter de 2015 à 2023 ?",
+    "answers": [
+      "Luka Modrić",
+      "Ivan Perišić",
+      "Mateo Kovačić",
+      "Marcelo Brozović"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel défenseur italien, capitaine emblématique des années 1960-70, a joué toute sa carrière à l'Inter ?",
+    "answers": [
+      "Franco Baresi",
+      "Paolo Maldini",
+      "Giacinto Facchetti",
+      "Gaetano Scirea"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "En quelle année l'Inter a-t-il été fondé ?",
+    "answers": [
+      "1899",
+      "1920",
+      "1928",
+      "1908"
+    ],
+    "correct": 3,
     "difficulty": "expert"
   },
   {
-    "text": "Quel est le score cumulé de la demi-finale européenne remportée par l’Inter contre Barcelone en 2025 ?",
+    "text": "De quel club l'Inter est-il issu par scission en 1908 ?",
     "answers": [
-      "6-5",
-      "7-5",
-      "8-7",
-      "7-6"
+      "L'AC Milan",
+      "La Juventus",
+      "Le Genoa",
+      "Le Torino"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le nom complet officiel de l'Inter ?",
+    "answers": [
+      "Football Club Internazionale Milano",
+      "Inter Milan Calcio",
+      "Associazione Calcio Milan",
+      "Unione Sportiva Inter"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelles années l'Inter a-t-il remporté ses deux premières Coupes des clubs champions ?",
+    "answers": [
+      "1964 et 1965",
+      "1963 et 1969",
+      "1989 et 1990",
+      "1972 et 1973"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club l'Inter a-t-il battu en finale de la Coupe des clubs champions 1964 ?",
+    "answers": [
+      "Benfica",
+      "Le Celtic",
+      "Manchester United",
+      "Le Real Madrid"
     ],
     "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club a battu l'Inter en finale de la Coupe des clubs champions 1967 ?",
+    "answers": [
+      "Le Celtic",
+      "Le Real Madrid",
+      "L'Ajax",
+      "Benfica"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel titre l'Inter a-t-il reçu sur tapis vert en 2006 après le Calciopoli ?",
+    "answers": [
+      "La Coupe d'Italie 2006",
+      "Le Scudetto 2005-2006",
+      "La Ligue des champions 2006",
+      "La Supercoupe 2006"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel défenseur italien, champion du monde 2006, jouait à l'Inter lors du triplé 2010 ?",
+    "answers": [
+      "Fabio Cannavaro",
+      "Alessandro Nesta",
+      "Gianluca Zambrotta",
+      "Marco Materazzi"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de titres l'Inter a-t-il remportés en 2010 avec Mourinho ?",
+    "answers": [
+      "2",
+      "3 (championnat, coupe et Ligue des champions)",
+      "1",
+      "5"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel stade s'est jouée la finale 2010 remportée par l'Inter ?",
+    "answers": [
+      "Wembley",
+      "Allianz Arena",
+      "Santiago-Bernabéu",
+      "Stade de France"
+    ],
+    "correct": 2,
     "difficulty": "expert"
   }
 ]
