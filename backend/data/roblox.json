@@ -39,7 +39,7 @@
 {"text":"Quel objet de script s'exécute généralement côté joueur ?","answers":["ModuleScript uniquement","LocalScript","ServerScript","DataStore"],"correct":1},
 {"text":"Quel service sauvegarde des données persistantes entre les sessions ?","answers":["TweenService","PathfindingService","DataStoreService","RunService"],"correct":2},
 {"text":"Quel service aide les personnages à calculer un chemin ?","answers":["ChatService","BadgeService","MarketplaceService","PathfindingService"],"correct":3},
-{"text":"Quelle propriété définit si une Part est affectée par la gravité et les collisions physiques sans bouger ?","answers":["Anchored","Locked","Fixed","Static"],"correct":0},
+{"text":"Quelle propriété empêche une Part de bouger sous l'effet de la gravité et des collisions physiques ?","answers":["Anchored","Locked","Fixed","Static"],"correct":0},
 {"text":"Quelle propriété contrôle principalement la transparence d'une Part ?","answers":["Opacity","Transparency","Visibility","AlphaMode"],"correct":1},
 {"text":"Quel élément permet d'afficher une image sur la surface d'une Part ?","answers":["Beam","ParticleEmitter","Decal","Trail"],"correct":2},
 {"text":"Quel objet produit des particules visuelles ?","answers":["Sound","Highlight","BillboardGui","ParticleEmitter"],"correct":3},
