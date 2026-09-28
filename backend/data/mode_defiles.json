@@ -1,11 +1,11 @@
 [
   {
-    "text": "Dans quelle ville ce rendez-vous de mode est-il principalement organisé : Paris Fashion Week ?",
+    "text": "Quelle fédération organise la Paris Fashion Week ?",
     "answers": [
-      "Paris",
-      "Milan",
-      "Londres",
-      "New York"
+      "La Fédération de la Haute Couture et de la Mode",
+      "Le British Fashion Council",
+      "La Camera Nazionale della Moda Italiana",
+      "Le CFDA"
     ],
     "correct": 0
   },
@@ -50,12 +50,12 @@
     "correct": 0
   },
   {
-    "text": "Dans quelle ville ce rendez-vous de mode est-il principalement organisé : Milan Fashion Week ?",
+    "text": "Quel organisme organise la Milan Fashion Week ?",
     "answers": [
-      "Florence",
-      "Milan",
-      "Hyères",
-      "Copenhague"
+      "La Fédération de la Haute Couture et de la Mode",
+      "La Camera Nazionale della Moda Italiana",
+      "Le British Fashion Council",
+      "Le CFDA"
     ],
     "correct": 1
   },
@@ -95,7 +95,7 @@
       "Elle ouvre généralement le calendrier des Big Four",
       "Elle est organisée notamment par la Camera Nazionale della Moda Italiana",
       "Le salon se tient à Florence",
-      "Il collecte des fonds pour le Costume Institute"
+      "Elle collecte des fonds pour le Costume Institute"
     ],
     "correct": 1
   },
@@ -142,7 +142,7 @@
   {
     "text": "Quel fait concerne London Fashion Week ?",
     "answers": [
-      "Il décerne des prix à de nouveaux talents",
+      "Elle décerne des prix à de nouveaux talents",
       "Elle publie des exigences de durabilité pour les marques participantes",
       "Elle est soutenue par le British Fashion Council",
       "Elle portait auparavant le nom Tokyo Fashion Week"
@@ -150,12 +150,12 @@
     "correct": 2
   },
   {
-    "text": "Dans quelle ville ce rendez-vous de mode est-il principalement organisé : New York Fashion Week ?",
+    "text": "Quel organisme américain est associé à la New York Fashion Week ?",
     "answers": [
-      "Milan",
-      "Londres",
-      "Florence",
-      "New York"
+      "Le British Fashion Council",
+      "La Camera Nazionale della Moda Italiana",
+      "La Fédération de la Haute Couture et de la Mode",
+      "Le CFDA"
     ],
     "correct": 3
   },
@@ -294,18 +294,18 @@
     "answers": [
       "Il décerne des prix à de nouveaux talents",
       "Il collecte des fonds pour le Costume Institute",
-      "Elle publie des exigences de durabilité pour les marques participantes",
-      "Elle portait auparavant le nom Tokyo Fashion Week"
+      "Il publie des exigences de durabilité pour les marques participantes",
+      "Il portait auparavant le nom Tokyo Fashion Week"
     ],
     "correct": 1
   },
   {
-    "text": "Dans quelle ville ce rendez-vous de mode est-il principalement organisé : Festival de Hyères ?",
+    "text": "Quels créateurs le Festival de Hyères met-il en avant ?",
     "answers": [
-      "Londres",
-      "New York",
-      "Hyères",
-      "Florence"
+      "Les maisons de haute couture",
+      "Les joailliers",
+      "Les jeunes créateurs émergents",
+      "Les marques de sport"
     ],
     "correct": 2
   },
@@ -342,10 +342,10 @@
   {
     "text": "Quel fait concerne Festival de Hyères ?",
     "answers": [
-      "Elle compte parmi les grands événements de mode d’Amérique latine",
-      "Elle fait partie des quatre grandes semaines de la mode",
+      "Il compte parmi les grands événements de mode d’Amérique latine",
+      "Il fait partie des quatre grandes semaines de la mode",
       "Il décerne des prix à de nouveaux talents",
-      "Elle est organisée notamment par la Camera Nazionale della Moda Italiana"
+      "Il est organisé notamment par la Camera Nazionale della Moda Italiana"
     ],
     "correct": 2
   },
@@ -400,12 +400,12 @@
     "correct": 3
   },
   {
-    "text": "Dans quelle ville ce rendez-vous de mode est-il principalement organisé : Rakuten Fashion Week Tokyo ?",
+    "text": "Quelle entreprise japonaise d'e-commerce donne son nom à la Fashion Week de Tokyo ?",
     "answers": [
-      "Tokyo",
-      "Paris",
-      "Milan",
-      "Londres"
+      "Rakuten",
+      "Uniqlo",
+      "Sony",
+      "Shiseido"
     ],
     "correct": 0
   },
@@ -443,19 +443,19 @@
     "text": "Quel fait concerne Rakuten Fashion Week Tokyo ?",
     "answers": [
       "Elle portait auparavant le nom Tokyo Fashion Week",
-      "Il collecte des fonds pour le Costume Institute",
-      "Il décerne des prix à de nouveaux talents",
+      "Elle collecte des fonds pour le Costume Institute",
+      "Elle décerne des prix à de nouveaux talents",
       "Elle publie des exigences de durabilité pour les marques participantes"
     ],
     "correct": 0
   },
   {
-    "text": "Dans quelle ville ce rendez-vous de mode est-il principalement organisé : São Paulo Fashion Week ?",
+    "text": "Dans quel pays se tient la São Paulo Fashion Week ?",
     "answers": [
-      "New York",
-      "São Paulo",
-      "Florence",
-      "Hyères"
+      "l'Argentine",
+      "le Brésil",
+      "le Portugal",
+      "le Mexique"
     ],
     "correct": 1
   },

@@ -35,7 +35,7 @@
 {"text":"Quel type de compte doit respecter des paramètres parentaux renforcés ?","answers":["Un compte développeur","Un compte d'enfant","Un compte de groupe","Un compte vérifié uniquement"],"correct":1},
 {"text":"Dans Roblox Studio, quel service contient l'espace 3D visible du jeu ?","answers":["Players","Lighting","Workspace","ReplicatedStorage"],"correct":2},
 {"text":"Dans Roblox Studio, quel service gère principalement l'éclairage ?","answers":["Terrain","SoundService","Teams","Lighting"],"correct":3},
-{"text":"Quel objet de script s'exécute généralement côté serveur ?","answers":["Script","LocalScript","Decal","MeshPart"],"correct":0},
+{"text":"Quel type d'objet Roblox exécute du code côté serveur ?","answers":["Script","LocalScript","Decal","MeshPart"],"correct":0},
 {"text":"Quel objet de script s'exécute généralement côté joueur ?","answers":["ModuleScript uniquement","LocalScript","ServerScript","DataStore"],"correct":1},
 {"text":"Quel service sauvegarde des données persistantes entre les sessions ?","answers":["TweenService","PathfindingService","DataStoreService","RunService"],"correct":2},
 {"text":"Quel service aide les personnages à calculer un chemin ?","answers":["ChatService","BadgeService","MarketplaceService","PathfindingService"],"correct":3},
