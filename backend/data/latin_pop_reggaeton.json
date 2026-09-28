@@ -45,7 +45,7 @@
       "trap latino",
       "flamenco-pop",
       "ballade latino-pop",
-      "reggaeton mélodique"
+      "bachata"
     ],
     "correct": 0
   },
@@ -95,7 +95,7 @@
       "ballade latino-pop",
       "reggaeton",
       "salsa",
-      "pop urbano"
+      "flamenco-pop"
     ],
     "correct": 1
   },
@@ -192,9 +192,9 @@
   {
     "text": "Quel style est associé à Karol G ?",
     "answers": [
-      "pop urbano",
-      "pop chicano-latina",
-      "trap latino",
+      "flamenco-pop",
+      "salsa",
+      "bachata",
       "urbano latino"
     ],
     "correct": 3
@@ -443,9 +443,9 @@
     "text": "Quel style est associé à Maluma ?",
     "answers": [
       "pop urbano",
-      "trap latino",
-      "reggaeton",
-      "reggaeton pionnier"
+      "flamenco-pop",
+      "salsa",
+      "ballade latino-pop"
     ],
     "correct": 0
   },
