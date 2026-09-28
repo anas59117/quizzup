@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Pour Chelsea, quelle réponse correspond à la fondation du club ?",
+    "text": "En quelle année Chelsea FC est-il fondé ?",
     "answers": [
       "1905",
+      "1895",
+      "1901",
+      "1910"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel stade accueille Chelsea depuis sa fondation ?",
+    "answers": [
+      "Craven Cottage",
       "Stamford Bridge",
-      "Fulham à Londres",
-      "les Blues"
+      "Highbury",
+      "White Hart Lane"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de Chelsea décrit la fondation du club ?",
+    "text": "Quel est le surnom traditionnel de Chelsea ?",
     "answers": [
-      "Stamford Bridge",
-      "1905",
-      "Fulham à Londres",
-      "les Blues"
+      "Les Cottagers",
+      "Les Eagles",
+      "Les Blues",
+      "Les Hammers"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Chelsea, quelle réponse correspond au stade du club ?",
+    "text": "Dans quelle ville évolue Chelsea ?",
     "answers": [
-      "Fulham à Londres",
-      "les Blues",
-      "Stamford Bridge",
-      "le bleu royal"
+      "Manchester",
+      "Liverpool",
+      "Birmingham",
+      "Londres"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de Chelsea décrit le stade du club ?",
+    "text": "Quelle couleur domine la tenue de Chelsea ?",
     "answers": [
-      "Fulham à Londres",
-      "les Blues",
-      "le bleu royal",
-      "Stamford Bridge"
+      "Bleu royal",
+      "Rouge",
+      "Bordeaux",
+      "Vert"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Chelsea, quelle réponse correspond au quartier du stade ?",
+    "text": "Quel milieu est le meilleur buteur de l’histoire de Chelsea avec 211 buts ?",
     "answers": [
-      "Fulham à Londres",
-      "les Blues",
-      "le bleu royal",
-      "1955"
+      "Didier Drogba",
+      "Frank Lampard",
+      "Bobby Tambling",
+      "Peter Osgood"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de Chelsea décrit le quartier du stade ?",
+    "text": "Quel défenseur central a longtemps été capitaine de Chelsea ?",
     "answers": [
-      "les Blues",
-      "Fulham à Londres",
-      "le bleu royal",
-      "1955"
+      "Rio Ferdinand",
+      "Sol Campbell",
+      "John Terry",
+      "Ledley King"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Chelsea, quelle réponse correspond au surnom du club ?",
+    "text": "Quel attaquant ivoirien marque le tir au but victorieux en finale européenne 2012 ?",
     "answers": [
-      "le bleu royal",
-      "1955",
-      "les Blues",
-      "le premier grand trophée européen"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément de Chelsea décrit le surnom du club ?",
-    "answers": [
-      "le bleu royal",
-      "1955",
-      "le premier grand trophée européen",
-      "les Blues"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Chelsea, quelle réponse correspond à la couleur traditionnelle ?",
-    "answers": [
-      "le bleu royal",
-      "1955",
-      "le premier grand trophée européen",
-      "un buteur surnommé le Roi de Stamford Bridge"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément de Chelsea décrit la couleur traditionnelle ?",
-    "answers": [
-      "1955",
-      "le bleu royal",
-      "le premier grand trophée européen",
-      "un buteur surnommé le Roi de Stamford Bridge"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Chelsea, quelle réponse correspond au premier titre de champion ?",
-    "answers": [
-      "le premier grand trophée européen",
-      "un buteur surnommé le Roi de Stamford Bridge",
-      "1955",
-      "un meneur italien légendaire"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément de Chelsea décrit le premier titre de champion ?",
-    "answers": [
-      "le premier grand trophée européen",
-      "un buteur surnommé le Roi de Stamford Bridge",
-      "un meneur italien légendaire",
-      "1955"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Chelsea, quelle réponse correspond à la Coupe des vainqueurs de coupe 1971 ?",
-    "answers": [
-      "le premier grand trophée européen",
-      "un buteur surnommé le Roi de Stamford Bridge",
-      "un meneur italien légendaire",
-      "un capitaine défenseur formé au club"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément de Chelsea décrit la Coupe des vainqueurs de coupe 1971 ?",
-    "answers": [
-      "un buteur surnommé le Roi de Stamford Bridge",
-      "le premier grand trophée européen",
-      "un meneur italien légendaire",
-      "un capitaine défenseur formé au club"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Chelsea, quelle réponse correspond à Peter Osgood ?",
-    "answers": [
-      "un meneur italien légendaire",
-      "un capitaine défenseur formé au club",
-      "un buteur surnommé le Roi de Stamford Bridge",
-      "le meilleur buteur historique du club"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément de Chelsea décrit Peter Osgood ?",
-    "answers": [
-      "un meneur italien légendaire",
-      "un capitaine défenseur formé au club",
-      "le meilleur buteur historique du club",
-      "un buteur surnommé le Roi de Stamford Bridge"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Chelsea, quelle réponse correspond à Gianfranco Zola ?",
-    "answers": [
-      "un meneur italien légendaire",
-      "un capitaine défenseur formé au club",
-      "le meilleur buteur historique du club",
-      "un attaquant ivoirien décisif en 2012"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément de Chelsea décrit Gianfranco Zola ?",
-    "answers": [
-      "un capitaine défenseur formé au club",
-      "un meneur italien légendaire",
-      "le meilleur buteur historique du club",
-      "un attaquant ivoirien décisif en 2012"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Chelsea, quelle réponse correspond à John Terry ?",
-    "answers": [
-      "le meilleur buteur historique du club",
-      "un attaquant ivoirien décisif en 2012",
-      "un capitaine défenseur formé au club",
-      "un gardien emblématique"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément de Chelsea décrit John Terry ?",
-    "answers": [
-      "le meilleur buteur historique du club",
-      "un attaquant ivoirien décisif en 2012",
-      "un gardien emblématique",
-      "un capitaine défenseur formé au club"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Chelsea, quelle réponse correspond à Frank Lampard ?",
-    "answers": [
-      "le meilleur buteur historique du club",
-      "un attaquant ivoirien décisif en 2012",
-      "un gardien emblématique",
-      "l'entraîneur des titres 2005 et 2006"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément de Chelsea décrit Frank Lampard ?",
-    "answers": [
-      "un attaquant ivoirien décisif en 2012",
-      "le meilleur buteur historique du club",
-      "un gardien emblématique",
-      "l'entraîneur des titres 2005 et 2006"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Chelsea, quelle réponse correspond à Didier Drogba ?",
-    "answers": [
-      "un gardien emblématique",
-      "l'entraîneur des titres 2005 et 2006",
-      "un attaquant ivoirien décisif en 2012",
-      "le premier depuis cinquante ans"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément de Chelsea décrit Didier Drogba ?",
-    "answers": [
-      "un gardien emblématique",
-      "l'entraîneur des titres 2005 et 2006",
-      "le premier depuis cinquante ans",
-      "un attaquant ivoirien décisif en 2012"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Chelsea, quelle réponse correspond à Petr Čech ?",
-    "answers": [
-      "un gardien emblématique",
-      "l'entraîneur des titres 2005 et 2006",
-      "le premier depuis cinquante ans",
-      "2012"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément de Chelsea décrit Petr Čech ?",
-    "answers": [
-      "l'entraîneur des titres 2005 et 2006",
-      "un gardien emblématique",
-      "le premier depuis cinquante ans",
-      "2012"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Chelsea, quelle réponse correspond à José Mourinho ?",
-    "answers": [
-      "le premier depuis cinquante ans",
-      "2012",
-      "l'entraîneur des titres 2005 et 2006",
-      "le Bayern Munich"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément de Chelsea décrit José Mourinho ?",
-    "answers": [
-      "le premier depuis cinquante ans",
-      "2012",
-      "le Bayern Munich",
-      "l'entraîneur des titres 2005 et 2006"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Chelsea, quelle réponse correspond au titre de Premier League 2004-2005 ?",
-    "answers": [
-      "le premier depuis cinquante ans",
-      "2012",
-      "le Bayern Munich",
-      "Munich"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément de Chelsea décrit le titre de Premier League 2004-2005 ?",
-    "answers": [
-      "2012",
-      "le premier depuis cinquante ans",
-      "le Bayern Munich",
-      "Munich"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Chelsea, quelle réponse correspond à la première Ligue des champions ?",
-    "answers": [
-      "le Bayern Munich",
-      "Munich",
-      "2012",
+      "Salomon Kalou",
+      "Nicolas Anelka",
+      "Aruna Dindane",
       "Didier Drogba"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de Chelsea décrit la première Ligue des champions ?",
+    "text": "Quel entraîneur portugais arrive à Chelsea en 2004 ?",
     "answers": [
-      "le Bayern Munich",
-      "Munich",
-      "Didier Drogba",
-      "2012"
+      "José Mourinho",
+      "André Villas-Boas",
+      "Luiz Felipe Scolari",
+      "Carlos Queiroz"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Chelsea, quelle réponse correspond à l'adversaire en finale 2012 ?",
+    "text": "Quel milliardaire russe rachète Chelsea en 2003 ?",
     "answers": [
-      "le Bayern Munich",
-      "Munich",
-      "Didier Drogba",
-      "2021"
+      "Alisher Usmanov",
+      "Roman Abramovich",
+      "Dmitri Rybolovlev",
+      "Rinat Akhmetov"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de Chelsea décrit l'adversaire en finale 2012 ?",
+    "text": "Quel club Chelsea bat-il en finale de Ligue des champions 2012 ?",
     "answers": [
-      "Munich",
-      "le Bayern Munich",
-      "Didier Drogba",
-      "2021"
+      "Borussia Dortmund",
+      "Real Madrid",
+      "Bayern Munich",
+      "FC Barcelone"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Chelsea, quelle réponse correspond au lieu de la finale 2012 ?",
+    "text": "Dans quelle ville Chelsea remporte-t-il la Ligue des champions 2012 ?",
     "answers": [
-      "Didier Drogba",
-      "2021",
-      "Munich",
-      "Manchester City"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément de Chelsea décrit le lieu de la finale 2012 ?",
-    "answers": [
-      "Didier Drogba",
-      "2021",
-      "Manchester City",
+      "Madrid",
+      "Rome",
+      "Lisbonne",
       "Munich"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Chelsea, quelle réponse correspond au tir au but décisif en 2012 ?",
+    "text": "Quel club Chelsea bat-il en finale de Ligue des champions 2021 ?",
+    "answers": [
+      "Manchester City",
+      "Liverpool",
+      "Manchester United",
+      "Paris Saint-Germain"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel joueur marque l’unique but de la finale européenne 2021 ?",
+    "answers": [
+      "Mason Mount",
+      "Kai Havertz",
+      "Timo Werner",
+      "Christian Pulisic"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel entraîneur allemand remporte la Ligue des champions 2021 avec Chelsea ?",
+    "answers": [
+      "Jürgen Klopp",
+      "Hansi Flick",
+      "Thomas Tuchel",
+      "Julian Nagelsmann"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel gardien tchèque est une légende de Chelsea ?",
+    "answers": [
+      "Jan Oblak",
+      "Jens Lehmann",
+      "Wojciech Szczęsny",
+      "Petr Čech"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel Belge porte le numéro 10 de Chelsea avant son départ au Real Madrid ?",
+    "answers": [
+      "Eden Hazard",
+      "Kevin De Bruyne",
+      "Romelu Lukaku",
+      "Dries Mertens"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel milieu français rejoint Chelsea en 2016 après le titre de Leicester ?",
+    "answers": [
+      "Paul Pogba",
+      "N’Golo Kanté",
+      "Blaise Matuidi",
+      "Moussa Sissoko"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel adversaire Chelsea bat-il en finale de Ligue Europa 2019 ?",
+    "answers": [
+      "Tottenham",
+      "Manchester United",
+      "Arsenal",
+      "Liverpool"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel était l’ancien surnom de Chelsea avant « Blues » ?",
+    "answers": [
+      "The Royals",
+      "The Saints",
+      "The Potters",
+      "The Pensioners"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel homme d’affaires fonde Chelsea avec son frère Joseph ?",
+    "answers": [
+      "Gus Mears",
+      "John Houlding",
+      "Henry Norris",
+      "Jack Walker"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quel établissement est décidée la création de Chelsea en 1905 ?",
+    "answers": [
+      "The Royal Oak",
+      "The Rising Sun",
+      "The Red Lion",
+      "The White Horse"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "En quelle saison Chelsea remporte-t-il son premier championnat d’Angleterre ?",
+    "answers": [
+      "1949-50",
+      "1959-60",
+      "1954-55",
+      "1964-65"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel entraîneur mène Chelsea à son premier titre de champion ?",
+    "answers": [
+      "Tommy Docherty",
+      "Dave Sexton",
+      "Joe Mears",
+      "Ted Drake"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Chelsea bat-il en finale de FA Cup 1970 ?",
+    "answers": [
+      "Leeds United",
+      "Arsenal",
+      "Everton",
+      "Manchester City"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Chelsea bat-il pour gagner la Coupe des coupes 1971 ?",
+    "answers": [
+      "FC Barcelone",
+      "Real Madrid",
+      "Atlético de Madrid",
+      "Valence"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Chelsea bat-il en finale de FA Cup 1997 ?",
+    "answers": [
+      "Sunderland",
+      "Aston Villa",
+      "Middlesbrough",
+      "Newcastle United"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur ouvre le score après moins d’une minute en finale de FA Cup 1997 ?",
+    "answers": [
+      "Gianfranco Zola",
+      "Gianluca Vialli",
+      "Dennis Wise",
+      "Roberto Di Matteo"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Chelsea bat-il en finale de Coupe des coupes 1998 ?",
+    "answers": [
+      "VfB Stuttgart",
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "Schalke 04"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel Italien marque l’unique but de la finale européenne 1998 ?",
+    "answers": [
+      "Roberto Di Matteo",
+      "Gianfranco Zola",
+      "Gianluca Vialli",
+      "Pierluigi Casiraghi"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Chelsea bat-il en finale de FA Cup 2000 ?",
+    "answers": [
+      "Leicester City",
+      "Everton",
+      "Aston Villa",
+      "Southampton"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur marque l’unique but de la finale de FA Cup 2000 ?",
+    "answers": [
+      "Jimmy Floyd Hasselbaink",
+      "Gianfranco Zola",
+      "Dennis Wise",
+      "Roberto Di Matteo"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Combien de points Chelsea obtient-il lors du titre de Premier League 2004-05 ?",
+    "answers": [
+      "95",
+      "91",
+      "93",
+      "97"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Combien de buts Chelsea encaisse-t-il en Premier League 2004-05 ?",
+    "answers": [
+      "18",
+      "15",
+      "20",
+      "22"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel entraîneur réalise le doublé championnat-FA Cup avec Chelsea en 2010 ?",
+    "answers": [
+      "José Mourinho",
+      "Guus Hiddink",
+      "Carlo Ancelotti",
+      "Roberto Di Matteo"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Chelsea bat-il en finale de FA Cup 2010 ?",
+    "answers": [
+      "Everton",
+      "Cardiff City",
+      "Manchester United",
+      "Portsmouth"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur égalise de la tête en finale de Ligue des champions 2012 ?",
     "answers": [
       "Didier Drogba",
-      "2021",
-      "Manchester City",
-      "Kai Havertz"
+      "Frank Lampard",
+      "John Terry",
+      "Branislav Ivanović"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Quel élément de Chelsea décrit le tir au but décisif en 2012 ?",
+    "text": "Quel gardien arrête le penalty d’Arjen Robben en prolongation en 2012 ?",
     "answers": [
-      "2021",
+      "Thibaut Courtois",
+      "Petr Čech",
+      "Carlo Cudicini",
+      "Hilário"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Chelsea bat-il en finale de Ligue Europa 2013 ?",
+    "answers": [
+      "Porto",
+      "Séville",
+      "Benfica",
+      "Valence"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel défenseur marque le but victorieux de la finale de Ligue Europa 2013 ?",
+    "answers": [
+      "John Terry",
+      "David Luiz",
+      "Ashley Cole",
+      "Branislav Ivanović"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle date correspond à la fondation officielle de Chelsea ?",
+    "answers": [
+      "10 mars 1905",
+      "14 février 1905",
+      "1er mai 1905",
+      "15 août 1905"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Chelsea affronte-t-il pour son premier match officiel ?",
+    "answers": [
+      "Liverpool",
+      "Stockport County",
+      "Blackpool",
+      "Bolton Wanderers"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le résultat du premier match officiel de Chelsea en 1905 ?",
+    "answers": [
+      "Victoire 2-0",
+      "Match nul 1-1",
+      "Défaite 1-0",
+      "Défaite 3-1"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Chelsea bat-il 4-0 lors de son premier match à Stamford Bridge ?",
+    "answers": [
+      "Everton",
+      "Arsenal",
+      "Tottenham",
+      "Liverpool"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année Chelsea accède-t-il pour la première fois à la première division ?",
+    "answers": [
+      "1907",
+      "1905",
+      "1909",
+      "1912"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club bat Chelsea lors de sa première finale de FA Cup en 1915 ?",
+    "answers": [
+      "Aston Villa",
+      "Sheffield United",
+      "Everton",
+      "Sunderland"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur est capitaine de Chelsea lors du titre de 1955 ?",
+    "answers": [
+      "John Harris",
+      "Peter Sillett",
+      "Roy Bentley",
+      "Ken Armstrong"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel emblème Ted Drake fait-il adopter en 1953 ?",
+    "answers": [
+      "Un cheval ailé",
+      "Un canon",
+      "Un marteau croisé",
+      "Un lion rampant"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Chelsea bat-il sur deux manches en finale de Coupe de la Ligue 1965 ?",
+    "answers": [
+      "Leicester City",
+      "West Ham United",
+      "Stoke City",
+      "Aston Villa"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur marque l’égalisation de Chelsea lors du replay de FA Cup 1970 ?",
+    "answers": [
+      "Charlie Cooke",
+      "Peter Osgood",
+      "Ian Hutchinson",
+      "Ron Harris"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel défenseur marque le but victorieux du replay de FA Cup 1970 ?",
+    "answers": [
+      "Ron Harris",
+      "John Dempsey",
+      "David Webb",
+      "Eddie McCreadie"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel stade se joue le replay de la finale de FA Cup 1970 ?",
+    "answers": [
+      "Wembley",
+      "Villa Park",
+      "Hillsborough",
+      "Old Trafford"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur marque le premier but de Chelsea lors du replay européen de 1971 ?",
+    "answers": [
+      "John Dempsey",
+      "Peter Osgood",
+      "Charlie Cooke",
+      "Tommy Baldwin"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville Chelsea remporte-t-il la Coupe des coupes 1971 ?",
+    "answers": [
+      "Rome",
+      "Athènes",
+      "Bruxelles",
+      "Vienne"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel milieu est capitaine de Chelsea lors de la victoire en FA Cup 1997 ?",
+    "answers": [
+      "Gianfranco Zola",
+      "Roberto Di Matteo",
+      "Dennis Wise",
+      "Dan Petrescu"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur inscrit le second but de Chelsea en finale de FA Cup 1997 ?",
+    "answers": [
+      "Mark Hughes",
+      "Gianfranco Zola",
+      "Dan Petrescu",
+      "Eddie Newton"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur-joueur mène Chelsea à la Coupe des coupes 1998 ?",
+    "answers": [
+      "Gianluca Vialli",
+      "Ruud Gullit",
+      "Claudio Ranieri",
+      "Glenn Hoddle"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville Chelsea remporte-t-il la Coupe des coupes 1998 ?",
+    "answers": [
+      "Copenhague",
+      "Stockholm",
+      "Oslo",
+      "Helsinki"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Chelsea bat-il en finale de Coupe de la Ligue 1998 ?",
+    "answers": [
+      "Leicester City",
+      "Sunderland",
+      "Middlesbrough",
+      "Bolton Wanderers"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur marque le premier but de cette finale de Coupe de la Ligue 1998 ?",
+    "answers": [
+      "Roberto Di Matteo",
+      "Gianfranco Zola",
+      "Dan Petrescu",
+      "Frank Sinclair"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire élimine Chelsea en quart de finale de Ligue des champions 2004 ?",
+    "answers": [
+      "Arsenal",
+      "Real Madrid",
+      "Valence",
+      "Deportivo La Corogne"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur marque à Highbury le but qualifiant Chelsea contre Arsenal en 2004 ?",
+    "answers": [
+      "Frank Lampard",
+      "Wayne Bridge",
+      "Joe Cole",
+      "Eiður Guðjohnsen"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club élimine Chelsea en demi-finale de Ligue des champions 2004 ?",
+    "answers": [
+      "Porto",
+      "Deportivo La Corogne",
+      "Monaco",
+      "AC Milan"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur marque le but fantôme qui élimine Chelsea en demi-finale européenne 2005 ?",
+    "answers": [
+      "Steven Gerrard",
+      "Xabi Alonso",
+      "Milan Baroš",
+      "Luis García"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire bat Chelsea aux tirs au but en finale de Ligue des champions 2008 ?",
+    "answers": [
+      "Manchester United",
+      "Liverpool",
+      "FC Barcelone",
+      "Arsenal"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville se joue la finale européenne 2008 ?",
+    "answers": [
+      "Athènes",
+      "Moscou",
+      "Istanbul",
+      "Rome"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur de Chelsea manque le tir au but qui aurait pu offrir le titre en 2008 ?",
+    "answers": [
+      "Frank Lampard",
+      "Nicolas Anelka",
+      "John Terry",
+      "Didier Drogba"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur voit son tir au but arrêté pour conclure la finale 2008 ?",
+    "answers": [
+      "Salomon Kalou",
+      "Michael Ballack",
+      "Ashley Cole",
+      "Nicolas Anelka"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur du Bayern touche le poteau lors de la séance de tirs au but 2012 ?",
+    "answers": [
+      "Bastian Schweinsteiger",
+      "Philipp Lahm",
+      "Thomas Müller",
+      "Mario Gómez"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui transforme le tir au but décisif pour Chelsea en 2012 ?",
+    "answers": [
+      "Frank Lampard",
       "Didier Drogba",
-      "Manchester City",
-      "Kai Havertz"
+      "Ashley Cole",
+      "David Luiz"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Chelsea, quelle réponse correspond à la deuxième Ligue des champions ?",
+    "text": "Quel entraîneur intérimaire gagne la Ligue des champions 2012 ?",
     "answers": [
-      "Manchester City",
-      "Kai Havertz",
-      "2021",
-      "Thomas Tuchel"
+      "André Villas-Boas",
+      "Rafael Benítez",
+      "Roberto Di Matteo",
+      "Guus Hiddink"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément de Chelsea décrit la deuxième Ligue des champions ?",
+    "text": "Quel joueur marque le premier but de Chelsea en finale de Ligue Europa 2013 ?",
     "answers": [
-      "Manchester City",
-      "Kai Havertz",
-      "Thomas Tuchel",
-      "2021"
+      "Juan Mata",
+      "Oscar",
+      "Eden Hazard",
+      "Fernando Torres"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Chelsea, quelle réponse correspond à l'adversaire en finale 2021 ?",
+    "text": "Dans quelle ville Chelsea remporte-t-il la Ligue Europa 2013 ?",
     "answers": [
-      "Manchester City",
-      "Kai Havertz",
-      "Thomas Tuchel",
-      "Cobham"
+      "Amsterdam",
+      "Dublin",
+      "Bucarest",
+      "Hambourg"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément de Chelsea décrit l'adversaire en finale 2021 ?",
+    "text": "Quel joueur ouvre le score pour Chelsea en finale de Ligue Europa 2019 ?",
     "answers": [
-      "Kai Havertz",
-      "Manchester City",
-      "Thomas Tuchel",
-      "Cobham"
+      "Eden Hazard",
+      "Olivier Giroud",
+      "Pedro",
+      "Willian"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Chelsea, quelle réponse correspond au buteur de la finale 2021 ?",
+    "text": "Quel joueur inscrit un doublé en finale de Ligue Europa 2019 ?",
     "answers": [
-      "Thomas Tuchel",
-      "Cobham",
-      "Kai Havertz",
-      "Chelsea Women"
+      "Olivier Giroud",
+      "Pedro",
+      "Eden Hazard",
+      "Ruben Loftus-Cheek"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément de Chelsea décrit le buteur de la finale 2021 ?",
+    "text": "Dans quelle ville se joue la finale de Ligue Europa 2019 ?",
     "answers": [
-      "Thomas Tuchel",
-      "Cobham",
-      "Chelsea Women",
-      "Kai Havertz"
+      "Tbilissi",
+      "Istanbul",
+      "Belgrade",
+      "Bakou"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Chelsea, quelle réponse correspond à l'entraîneur du titre 2021 ?",
+    "text": "Quel entraîneur italien gagne la Ligue Europa 2019 avec Chelsea ?",
     "answers": [
-      "Thomas Tuchel",
-      "Cobham",
-      "Chelsea Women",
-      "1905"
+      "Maurizio Sarri",
+      "Antonio Conte",
+      "Carlo Ancelotti",
+      "Roberto Di Matteo"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément de Chelsea décrit l'entraîneur du titre 2021 ?",
+    "text": "Quel joueur délivre la passe décisive à Kai Havertz en finale européenne 2021 ?",
     "answers": [
-      "Cobham",
-      "Thomas Tuchel",
-      "Chelsea Women",
-      "1905"
+      "Timo Werner",
+      "Mason Mount",
+      "N’Golo Kanté",
+      "Ben Chilwell"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Chelsea, quelle réponse correspond au centre de formation ?",
+    "text": "Dans quelle ville Chelsea remporte-t-il la Ligue des champions 2021 ?",
     "answers": [
-      "Chelsea Women",
-      "1905",
-      "Cobham",
-      "Stamford Bridge"
+      "Lisbonne",
+      "Madrid",
+      "Porto",
+      "Istanbul"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément de Chelsea décrit le centre de formation ?",
+    "text": "Quel milieu est élu homme du match de la finale européenne 2021 ?",
     "answers": [
-      "Chelsea Women",
-      "1905",
-      "Stamford Bridge",
-      "Cobham"
+      "Jorginho",
+      "Mason Mount",
+      "Mateo Kovačić",
+      "N’Golo Kanté"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Chelsea, quelle réponse correspond au club féminin ?",
+    "text": "Quel joueur détient le record d’apparitions officielles de Chelsea avec 795 matches ?",
     "answers": [
-      "Chelsea Women",
-      "1905",
-      "Stamford Bridge",
-      "Fulham à Londres"
+      "Ron Harris",
+      "Peter Bonetti",
+      "John Terry",
+      "Frank Lampard"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément de Chelsea décrit le club féminin ?",
+    "text": "Quel gardien a disputé 729 matches officiels avec Chelsea ?",
     "answers": [
-      "1905",
-      "Chelsea Women",
-      "Stamford Bridge",
-      "Fulham à Londres"
+      "Petr Čech",
+      "Peter Bonetti",
+      "Carlo Cudicini",
+      "Ed de Goey"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts Frank Lampard inscrit-il pour Chelsea ?",
+    "answers": [
+      "202",
+      "205",
+      "211",
+      "216"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur précède Frank Lampard comme meilleur buteur historique de Chelsea avec 202 buts ?",
+    "answers": [
+      "Peter Osgood",
+      "Roy Bentley",
+      "Jimmy Greaves",
+      "Bobby Tambling"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le record de buts de Chelsea sur un match officiel ?",
+    "answers": [
+      "13-0",
+      "11-0",
+      "12-0",
+      "14-0"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club luxembourgeois Chelsea bat-il 13-0 en 1971 ?",
+    "answers": [
+      "F91 Dudelange",
+      "Jeunesse Hautcharage",
+      "Avenir Beggen",
+      "Progrès Niederkorn"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le score cumulé de Chelsea contre Jeunesse Hautcharage en 1971 ?",
+    "answers": [
+      "18-0",
+      "19-0",
+      "21-0",
+      "20-0"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel adversaire Chelsea bat-il 8-0 pour assurer le titre de Premier League 2010 ?",
+    "answers": [
+      "Bolton Wanderers",
+      "Blackburn Rovers",
+      "Stoke City",
+      "Wigan Athletic"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel autre club Chelsea bat-il 8-0 en Premier League en décembre 2012 ?",
+    "answers": [
+      "Aston Villa",
+      "Sunderland",
+      "Norwich City",
+      "Fulham"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de matches de championnat à domicile Chelsea reste-t-il invaincu entre 2004 et 2008 ?",
+    "answers": [
+      "74",
+      "86",
+      "80",
+      "92"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club met fin à cette série d’invincibilité à Stamford Bridge en 2008 ?",
+    "answers": [
+      "Arsenal",
+      "Manchester United",
+      "Liverpool",
+      "Tottenham"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle affluence record de championnat est enregistrée à Stamford Bridge contre Arsenal en 1935 ?",
+    "answers": [
+      "78 432",
+      "80 117",
+      "85 006",
+      "82 905"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur marque lors de chacune des quatre finales de FA Cup disputées entre 2007 et 2012 ?",
+    "answers": [
+      "Didier Drogba",
+      "Frank Lampard",
+      "Salomon Kalou",
+      "Florent Malouda"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur marque l’unique but de la finale de FA Cup 2007 ?",
+    "answers": [
+      "Frank Lampard",
+      "Didier Drogba",
+      "Joe Cole",
+      "Arjen Robben"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Chelsea bat-il lors de cette finale de FA Cup 2007 ?",
+    "answers": [
+      "Liverpool",
+      "Arsenal",
+      "Manchester United",
+      "Everton"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel stade Chelsea assure-t-il le titre de Premier League 2004-05 contre Bolton ?",
+    "answers": [
+      "Ewood Park",
+      "Villa Park",
+      "St James’ Park",
+      "Reebok Stadium"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur marque les deux buts de Chelsea ce jour-là à Bolton ?",
+    "answers": [
+      "Frank Lampard",
+      "Eiður Guðjohnsen",
+      "Damien Duff",
+      "Claude Makélélé"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel gardien remporte le Gant d’or de Premier League avec 24 clean sheets en 2004-05 ?",
+    "answers": [
+      "Carlo Cudicini",
+      "Petr Čech",
+      "Edwin van der Sar",
+      "Jens Lehmann"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel défenseur transforme le dernier tir au but de Chelsea avant l’échec de Schweinsteiger en 2012 ?",
+    "answers": [
+      "David Luiz",
+      "Gary Cahill",
+      "Ashley Cole",
+      "José Bosingwa"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel gardien arrête le tir au but décisif de Raúl Albiol en Supercoupe de l’UEFA 2021 ?",
+    "answers": [
+      "Édouard Mendy",
+      "Petr Čech",
+      "Willy Caballero",
+      "Kepa Arrizabalaga"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]

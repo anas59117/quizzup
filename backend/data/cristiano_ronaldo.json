@@ -1,42 +1,1077 @@
 [
-  { "text": "Dans quel pays Cristiano Ronaldo est-il né ?", "answers": ["Espagne", "Portugal", "Brésil", "Italie"], "correct": 1 },
-  { "text": "Sur quelle île portugaise Ronaldo est-il né ?", "answers": ["Madère", "Açores", "Malte", "Sicile"], "correct": 0 },
-  { "text": "Quel club portugais a formé Ronaldo avant son transfert en Angleterre ?", "answers": ["Benfica", "Sporting Portugal", "Porto", "Boavista"], "correct": 1 },
-  { "text": "Quel club anglais Ronaldo a-t-il rejoint en 2003 ?", "answers": ["Liverpool", "Manchester United", "Chelsea", "Arsenal"], "correct": 1 },
-  { "text": "Combien de Ballons d'Or Cristiano Ronaldo a-t-il remportés ?", "answers": ["4", "5", "6", "7"], "correct": 1 },
-  { "text": "En quelle année Ronaldo a-t-il remporté son premier Ballon d'Or ?", "answers": ["2007", "2008", "2009", "2010"], "correct": 1 },
-  { "text": "Quel club Ronaldo a-t-il rejoint en 2009 pour un transfert record de l'époque ?", "answers": ["Real Madrid", "FC Barcelone", "Juventus", "AC Milan"], "correct": 0 },
-  { "text": "Combien de Ligues des Champions Ronaldo a-t-il remportées avec le Real Madrid ?", "answers": ["2", "3", "4", "5"], "correct": 2 },
-  { "text": "Quel club italien Ronaldo a-t-il rejoint en 2018 ?", "answers": ["AC Milan", "Inter Milan", "Juventus", "AS Roma"], "correct": 2 },
-  { "text": "Quel club Ronaldo a-t-il rejoint en 2021, marquant son retour ?", "answers": ["Manchester City", "Manchester United", "Chelsea", "Liverpool"], "correct": 1 },
-  { "text": "Quel club saoudien Ronaldo a-t-il rejoint fin 2022 ?", "answers": ["Al-Hilal", "Al-Nassr", "Al-Ahli", "Al-Ittihad"], "correct": 1 },
-  { "text": "En quelle année le Portugal de Ronaldo a-t-il remporté l'Euro ?", "answers": ["2012", "2014", "2016", "2018"], "correct": 2 },
-  { "text": "Contre quel pays le Portugal a-t-il remporté la finale de l'Euro 2016 ?", "answers": ["France", "Allemagne", "Espagne", "Italie"], "correct": 0 },
-  { "text": "Quel surnom porte souvent Cristiano Ronaldo ?", "answers": ["CR7", "El Fenómeno", "CR9", "El Bicho"], "correct": 0 },
-  { "text": "Quel numéro de maillot Ronaldo porte-t-il le plus souvent en carrière ?", "answers": ["9", "7", "10", "11"], "correct": 1 },
-  { "text": "Combien de fois Ronaldo a-t-il été meilleur buteur de la Ligue des Champions environ ?", "answers": ["5 fois", "6 fois", "7 fois", "8 fois"], "correct": 2 },
-  { "text": "Quel est le record de buts en une saison de Liga établi par Ronaldo en 2014-2015 ?", "answers": ["44 buts", "48 buts", "50 buts", "52 buts"], "correct": 1 },
-  { "text": "Combien de buts environ Ronaldo a-t-il marqué en sélection portugaise (record international) ?", "answers": ["Environ 90", "Environ 110", "Environ 130", "Environ 150"], "correct": 2 },
-  { "text": "Quel prix Ronaldo détient-il pour le nombre de buts marqués en Coupe du Monde toutes éditions confondues (parmi les meilleurs) ?", "answers": ["Il est le meilleur buteur toutes CDM confondues", "Il est parmi les meilleurs buteurs", "Il n'a jamais marqué en CDM", "Il détient le record absolu"], "correct": 1 },
-  { "text": "Quel est le vrai prénom complet de Cristiano Ronaldo ?", "answers": ["Cristiano Ronaldo dos Santos Aveiro", "Cristiano Ronaldo Nazário", "Cristiano Ronaldo Fernandes", "Cristiano Ronaldo da Silva"], "correct": 0 },
-  { "text": "En hommage à qui Ronaldo porte-t-il son deuxième prénom 'Ronaldo' ?", "answers": ["Ronaldo Nazário (Ronaldo le Brésilien)", "Ronald Reagan", "Ronaldinho", "Un oncle"], "correct": 1 },
-  { "text": "Quel entraîneur écossais a fait débuter Ronaldo à Manchester United ?", "answers": ["Alex Ferguson", "David Moyes", "Louis van Gaal", "José Mourinho"], "correct": 0 },
-  { "text": "Quel joueur portugais a longtemps formé un duo offensif légendaire avec Ronaldo en sélection ?", "answers": ["Nani", "Pepe", "Deco", "João Félix"], "correct": 0 },
-  { "text": "Contre quelle équipe Ronaldo a-t-il marqué en finale de la Ligue des Champions 2008 ?", "answers": ["Chelsea", "Liverpool", "Barcelone", "AC Milan"], "correct": 0 },
-  { "text": "Quel club Ronaldo a-t-il affronté en finale de la Ligue des Champions 2008 ?", "answers": ["Chelsea", "Liverpool", "AC Milan", "Bayern Munich"], "correct": 0 },
-  { "text": "Quel geste de célébration emblématique Ronaldo effectue-t-il souvent après un but ?", "answers": ["Le 'Siuuu'", "Le moonwalk", "Le salto arrière", "La Macarena"], "correct": 0 },
-  { "text": "Combien de fois Ronaldo a-t-il été désigné meilleur joueur FIFA / The Best environ ?", "answers": ["2 fois", "3 fois", "4 fois", "5 fois"], "correct": 1 },
-  { "text": "Quel est le nombre approximatif de buts marqués par Ronaldo en carrière professionnelle (l'un des plus hauts de l'histoire) ?", "answers": ["Environ 700", "Environ 850", "Environ 900+", "Environ 950+"], "correct": 3 },
-  { "text": "Quel club anglais Ronaldo a-t-il quitté en 2022 dans des circonstances tendues ?", "answers": ["Chelsea", "Manchester United", "Liverpool", "Arsenal"], "correct": 1 },
-  { "text": "Quel âge avait à peu près Ronaldo lors de son transfert vers Manchester United en 2003 ?", "answers": ["16 ans", "18 ans", "20 ans", "22 ans"], "correct": 1 },
-  { "text": "Combien de titres de champion d'Angleterre Ronaldo a-t-il remportés avec Manchester United (première période) ?", "answers": ["1", "2", "3", "4"], "correct": 2 },
-  { "text": "Quel est le nom de la compagne de Cristiano Ronaldo depuis plusieurs années ?", "answers": ["Georgina Rodríguez", "Irina Shayk", "Nereida Gallardo", "Paris Hilton"], "correct": 0 },
-  { "text": "Quel prix Ronaldo a-t-il reçu comme meilleur joueur du Championnat d'Europe 2016 malgré une sortie prématurée sur blessure en finale ?", "answers": ["Il a été élu dans l'équipe du tournoi", "Meilleur joueur du tournoi (Golden Player)", "Meilleur buteur du tournoi", "Aucun prix individuel"], "correct": 1 },
-  { "text": "Contre quel pays le Portugal de Ronaldo a-t-il été éliminé en 8e de finale du Mondial 2022 ?", "answers": ["Maroc", "Argentine", "France", "Croatie"], "correct": 0 },
-  { "text": "Quel entraîneur portugais a longtemps dirigé la sélection avec Ronaldo comme capitaine ?", "answers": ["Fernando Santos", "José Mourinho", "Carlos Queiroz", "Paulo Bento"], "correct": 0 },
-  { "text": "Quel club Ronaldo a rejoint où il est devenu le joueur le mieux payé du monde selon plusieurs classements ?", "answers": ["Al-Nassr", "Juventus", "PSG", "Inter Miami"], "correct": 0 },
-  { "text": "Quel prix populaire Ronaldo a-t-il reçu à plusieurs reprises, votant pour son plus beau but de la saison en Ligue des Champions ?", "answers": ["Puskás Award", "FIFA Fair Play", "UEFA Best Goal", "Golden Boy"], "correct": 0 },
-  { "text": "En quelle année Ronaldo a-t-il quitté le Sporting Portugal pour Manchester United ?", "answers": ["2001", "2002", "2003", "2004"], "correct": 2 },
-  { "text": "Quel prix de meilleur jeune joueur du Championnat d'Angleterre Ronaldo a-t-il reçu au début de sa carrière ?", "answers": ["PFA Young Player of the Year", "Golden Boy", "FIFA U21 Award", "Premier League Rising Star"], "correct": 0 },
-  { "text": "Combien de coupes nationales anglaises (FA Cup) Ronaldo a-t-il remportées avec Manchester United (première période) ?", "answers": ["0", "1", "2", "3"], "correct": 1 }
+  {
+    "text": "Dans quel pays Cristiano Ronaldo est-il né ?",
+    "answers": [
+      "Espagne",
+      "Portugal",
+      "Brésil",
+      "Italie"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Sur quelle île portugaise Ronaldo est-il né ?",
+    "answers": [
+      "Madère",
+      "Açores",
+      "Malte",
+      "Sicile"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel club portugais a formé Ronaldo avant son transfert en Angleterre ?",
+    "answers": [
+      "Benfica",
+      "Sporting Portugal",
+      "Porto",
+      "Boavista"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel club anglais Ronaldo a-t-il rejoint en 2003 ?",
+    "answers": [
+      "Liverpool",
+      "Manchester United",
+      "Chelsea",
+      "Arsenal"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de Ballons d'Or Cristiano Ronaldo a-t-il remportés ?",
+    "answers": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "En quelle année Ronaldo a-t-il remporté son premier Ballon d'Or ?",
+    "answers": [
+      "2007",
+      "2008",
+      "2009",
+      "2010"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel club Ronaldo a-t-il rejoint en 2009 pour un transfert record de l'époque ?",
+    "answers": [
+      "Real Madrid",
+      "FC Barcelone",
+      "Juventus",
+      "AC Milan"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Combien de Ligues des Champions Ronaldo a-t-il remportées avec le Real Madrid ?",
+    "answers": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel club italien Ronaldo a-t-il rejoint en 2018 ?",
+    "answers": [
+      "AC Milan",
+      "Inter Milan",
+      "Juventus",
+      "AS Roma"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel club Ronaldo a-t-il rejoint en 2021, marquant son retour ?",
+    "answers": [
+      "Manchester City",
+      "Manchester United",
+      "Chelsea",
+      "Liverpool"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel club saoudien Ronaldo a-t-il rejoint après son deuxième passage à Manchester United ?",
+    "answers": [
+      "Al-Hilal",
+      "Al-Nassr",
+      "Al-Ahli",
+      "Al-Ittihad"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "En quelle année le Portugal de Ronaldo a-t-il remporté l'Euro ?",
+    "answers": [
+      "2012",
+      "2014",
+      "2016",
+      "2018"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Contre quel pays le Portugal a-t-il remporté la finale de l'Euro 2016 ?",
+    "answers": [
+      "France",
+      "Allemagne",
+      "Espagne",
+      "Italie"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel surnom porte souvent Cristiano Ronaldo ?",
+    "answers": [
+      "CR7",
+      "El Fenómeno",
+      "CR9",
+      "El Bicho"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel numéro de maillot Ronaldo porte-t-il le plus souvent en carrière ?",
+    "answers": [
+      "9",
+      "7",
+      "10",
+      "11"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de fois Ronaldo a-t-il fini meilleur buteur de la Ligue des champions ?",
+    "answers": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Ronaldo a-t-il marqués en Liga lors de la saison 2014-2015 ?",
+    "answers": [
+      "44",
+      "48",
+      "50",
+      "52"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Ronaldo a-t-il marqués en Ligue des champions 2015-2016 ?",
+    "answers": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quel club Ronaldo a-t-il inscrit le but récompensé par le prix Puskás 2009 ?",
+    "answers": [
+      "Chelsea",
+      "FC Porto",
+      "Arsenal",
+      "Inter Milan"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le nom complet de Cristiano Ronaldo ?",
+    "answers": [
+      "Cristiano Ronaldo dos Santos Aveiro",
+      "Cristiano Ronaldo Nazário",
+      "Cristiano Ronaldo Fernandes",
+      "Cristiano Ronaldo da Silva"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En hommage à qui Ronaldo porte-t-il son deuxième prénom 'Ronaldo' ?",
+    "answers": [
+      "Ronaldo Nazário (Ronaldo le Brésilien)",
+      "Ronald Reagan",
+      "Ronaldinho",
+      "Un oncle"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel entraîneur écossais a fait débuter Ronaldo à Manchester United ?",
+    "answers": [
+      "Alex Ferguson",
+      "David Moyes",
+      "Louis van Gaal",
+      "José Mourinho"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel joueur portugais a marqué le deuxième but contre le pays de Galles en demi-finale de l'Euro 2016 ?",
+    "answers": [
+      "Nani",
+      "Pepe",
+      "Éder",
+      "João Moutinho"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle équipe Ronaldo a-t-il marqué en finale de la Ligue des Champions 2008 ?",
+    "answers": [
+      "Chelsea",
+      "Liverpool",
+      "Barcelone",
+      "AC Milan"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Combien de buts Ronaldo a-t-il marqués lors de la finale européenne 2008 face à Chelsea ?",
+    "answers": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel geste de célébration emblématique Ronaldo effectue-t-il souvent après un but ?",
+    "answers": [
+      "Le 'Siuuu'",
+      "Le moonwalk",
+      "Le salto arrière",
+      "La Macarena"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Contre quel club Ronaldo a-t-il marqué un triplé européen pour la Juventus en 2019 ?",
+    "answers": [
+      "Ajax",
+      "Atlético de Madrid",
+      "Real Madrid",
+      "Manchester United"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle distinction spéciale Ronaldo a-t-il reçue aux prix FIFA The Best 2021 pour son record de buts en sélection ?",
+    "answers": [
+      "Prix spécial The Best",
+      "Prix Puskás",
+      "Golden Boy",
+      "Gant d'or"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club anglais Ronaldo a-t-il quitté en 2022 dans des circonstances tendues ?",
+    "answers": [
+      "Chelsea",
+      "Manchester United",
+      "Liverpool",
+      "Arsenal"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel âge avait à peu près Ronaldo lors de son transfert vers Manchester United en 2003 ?",
+    "answers": [
+      "16 ans",
+      "18 ans",
+      "20 ans",
+      "22 ans"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de titres de champion d'Angleterre Ronaldo a-t-il remportés avec Manchester United (première période) ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coéquipier de Ronaldo au Real Madrid a inscrit deux buts en finale européenne 2018 ?",
+    "answers": [
+      "Isco",
+      "Gareth Bale",
+      "Karim Benzema",
+      "Marco Asensio"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle distinction individuelle de l'UEFA Ronaldo a-t-il obtenue à l'Euro 2016 ?",
+    "answers": [
+      "Membre de l'équipe du tournoi",
+      "Meilleur joueur du tournoi",
+      "Soulier d'or",
+      "Meilleur jeune joueur"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quel tour le Portugal de Ronaldo a-t-il été éliminé par le Maroc au Mondial 2022 ?",
+    "answers": [
+      "Huitième de finale",
+      "Demi-finale",
+      "Quart de finale",
+      "Phase de groupes"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel sélectionneur dirigeait le Portugal lors de son titre à l'Euro 2016 ?",
+    "answers": [
+      "Fernando Santos",
+      "José Mourinho",
+      "Carlos Queiroz",
+      "Paulo Bento"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville saoudienne joue le club Al-Nassr rejoint par Ronaldo ?",
+    "answers": [
+      "Djeddah",
+      "Riyad",
+      "Dammam",
+      "La Mecque"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Ronaldo a-t-il marqués en Ligue des champions 2017-2018 ?",
+    "answers": [
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de saisons Ronaldo a-t-il passées au Real Madrid, de 2009 à 2018 ?",
+    "answers": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel prix de meilleur jeune joueur du Championnat d'Angleterre Ronaldo a-t-il reçu au début de sa carrière ?",
+    "answers": [
+      "PFA Young Player of the Year",
+      "Golden Boy",
+      "FIFA U21 Award",
+      "Premier League Rising Star"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Combien de coupes nationales anglaises (FA Cup) Ronaldo a-t-il remportées avec Manchester United (première période) ?",
+    "answers": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quel stade Cristiano Ronaldo a-t-il été présenté comme joueur du Real Madrid en 2009 ?",
+    "answers": [
+      "Santiago-Bernabéu",
+      "Metropolitano",
+      "San Mamés",
+      "Camp Nou"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel numéro Ronaldo portait-il lors de sa première saison au Real Madrid ?",
+    "answers": [
+      "7",
+      "9",
+      "10",
+      "11"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année Ronaldo a-t-il gagné sa première Ligue des champions avec le Real Madrid ?",
+    "answers": [
+      "2012",
+      "2013",
+      "2014",
+      "2015"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville le Real Madrid de Ronaldo a-t-il gagné la finale européenne 2014 ?",
+    "answers": [
+      "Madrid",
+      "Paris",
+      "Milan",
+      "Lisbonne"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club le Real Madrid de Ronaldo a-t-il battu en finale européenne 2014 ?",
+    "answers": [
+      "Atlético de Madrid",
+      "Juventus",
+      "Liverpool",
+      "Bayern Munich"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel coéquipier de Ronaldo a égalisé dans les arrêts de jeu de la finale européenne 2014 ?",
+    "answers": [
+      "Gareth Bale",
+      "Sergio Ramos",
+      "Karim Benzema",
+      "Luka Modrić"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Comment Ronaldo a-t-il marqué lors de la finale européenne 2014 ?",
+    "answers": [
+      "Coup franc",
+      "Tête",
+      "Penalty",
+      "Reprise de volée"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel adversaire le Real de Ronaldo a-t-il retrouvé en finale européenne 2016 après 2014 ?",
+    "answers": [
+      "Manchester City",
+      "Bayern Munich",
+      "Juventus",
+      "Atlético de Madrid"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville la finale européenne 2016 remportée par le Real Madrid s'est-elle jouée ?",
+    "answers": [
+      "Milan",
+      "Cardiff",
+      "Kiev",
+      "Lisbonne"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment Ronaldo a-t-il inscrit le tir décisif en finale européenne 2016 ?",
+    "answers": [
+      "En prolongation",
+      "Lors des tirs au but",
+      "Sur coup franc",
+      "Sur corner"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club italien Ronaldo a-t-il battu en finale européenne 2017 avec le Real Madrid ?",
+    "answers": [
+      "Napoli",
+      "AC Milan",
+      "Juventus",
+      "Inter Milan"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Ronaldo a-t-il inscrits en finale européenne 2017 ?",
+    "answers": [
+      "0",
+      "1",
+      "3",
+      "2"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville Ronaldo a-t-il gagné la finale européenne 2017 contre la Juventus ?",
+    "answers": [
+      "Cardiff",
+      "Milan",
+      "Kiev",
+      "Berlin"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club anglais Ronaldo a-t-il battu en finale européenne 2018 avec le Real Madrid ?",
+    "answers": [
+      "Chelsea",
+      "Liverpool",
+      "Manchester City",
+      "Arsenal"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville s'est jouée la finale européenne 2018 gagnée par Ronaldo avec le Real ?",
+    "answers": [
+      "Lisbonne",
+      "Paris",
+      "Kiev",
+      "Istanbul"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quel club Ronaldo a-t-il marqué un retourné acrobatique européen en 2018 ?",
+    "answers": [
+      "Bayern Munich",
+      "Napoli",
+      "AS Roma",
+      "Juventus"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "À quel stade de la Ligue des champions 2017-2018 Ronaldo a-t-il marqué ce retourné contre la Juventus ?",
+    "answers": [
+      "Quart de finale",
+      "Demi-finale",
+      "Finale",
+      "Phase de groupes"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Ronaldo a-t-il éliminé grâce à un triplé au retour des quarts européens 2016 ?",
+    "answers": [
+      "Bayern Munich",
+      "Wolfsburg",
+      "Schalke 04",
+      "Borussia Dortmund"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts Ronaldo a-t-il marqués en Ligue des champions 2013-2014 ?",
+    "answers": [
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Ronaldo a-t-il marqués en Ligue des champions avec le Real Madrid ?",
+    "answers": [
+      "99",
+      "101",
+      "103",
+      "105"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts Ronaldo a-t-il marqués en Liga sous le maillot du Real Madrid ?",
+    "answers": [
+      "312",
+      "289",
+      "334",
+      "301"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le record de buts de Ronaldo sur une saison toutes compétitions confondues avec le Real ?",
+    "answers": [
+      "58",
+      "61",
+      "65",
+      "69"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de championnats d'Espagne Ronaldo a-t-il remportés avec le Real Madrid ?",
+    "answers": [
+      "1",
+      "3",
+      "2",
+      "4"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de Coupes du Roi Ronaldo a-t-il remportées avec le Real Madrid ?",
+    "answers": [
+      "1",
+      "3",
+      "4",
+      "2"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de Coupes du monde des clubs Ronaldo a-t-il remportées avec le Real Madrid ?",
+    "answers": [
+      "3",
+      "2",
+      "4",
+      "5"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de Supercoupes de l'UEFA Ronaldo a-t-il gagnées avec le Real Madrid ?",
+    "answers": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de Supercoupes d'Espagne Ronaldo a-t-il gagnées avec le Real Madrid ?",
+    "answers": [
+      "1",
+      "3",
+      "2",
+      "4"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de triplés ou davantage Ronaldo a-t-il signés en Liga avec le Real Madrid ?",
+    "answers": [
+      "25",
+      "29",
+      "32",
+      "34"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel gardien a repoussé le penalty de Ronaldo lors de la séance de tirs au but en finale européenne 2008 ?",
+    "answers": [
+      "Petr Čech",
+      "Edwin van der Sar",
+      "Gianluigi Buffon",
+      "Iker Casillas"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville Manchester United et Chelsea ont-ils disputé la finale européenne 2008 avec Ronaldo ?",
+    "answers": [
+      "Londres",
+      "Moscou",
+      "Rome",
+      "Berlin"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur de Chelsea a raté le dernier tir au but de la finale européenne 2008 face à Manchester United ?",
+    "answers": [
+      "Didier Drogba",
+      "Frank Lampard",
+      "Nicolas Anelka",
+      "Michael Ballack"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club anglais Manchester United a-t-il battu en finale de la FA Cup 2004 avec Ronaldo ?",
+    "answers": [
+      "Arsenal",
+      "Liverpool",
+      "Chelsea",
+      "Millwall"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Ronaldo a-t-il affronté pour ses débuts avec Manchester United en 2003 ?",
+    "answers": [
+      "Bolton Wanderers",
+      "Blackburn Rovers",
+      "Everton",
+      "Aston Villa"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club a battu le Manchester United de Ronaldo en finale européenne 2009 ?",
+    "answers": [
+      "Bayern Munich",
+      "FC Barcelone",
+      "Real Madrid",
+      "AC Milan"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a donné au Portugal le but victorieux en finale de l'Euro 2016 ?",
+    "answers": [
+      "Nani",
+      "Quaresma",
+      "Éder",
+      "Renato Sanches"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle sélection a privé Ronaldo du titre européen en finale de l'Euro 2004 ?",
+    "answers": [
+      "France",
+      "Espagne",
+      "Allemagne",
+      "Grèce"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur grec a marqué l'unique but de la finale de l'Euro 2004 contre le Portugal ?",
+    "answers": [
+      "Angelos Charisteas",
+      "Giorgos Karagounis",
+      "Theodoros Zagorakis",
+      "Kostas Katsouranis"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection a éliminé le Portugal de Ronaldo aux tirs au but en demi-finale de l'Euro 2012 ?",
+    "answers": [
+      "Allemagne",
+      "Espagne",
+      "Italie",
+      "Pays-Bas"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection Ronaldo a-t-il affrontée en demi-finale de l'Euro 2016 ?",
+    "answers": [
+      "Pologne",
+      "Croatie",
+      "Pays de Galles",
+      "Hongrie"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Ronaldo a-t-il inscrits face à la Hongrie à l'Euro 2016 ?",
+    "answers": [
+      "0",
+      "1",
+      "3",
+      "2"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui a remporté le titre de meilleur joueur de l'Euro 2016, remporté collectivement par Ronaldo ?",
+    "answers": [
+      "Antoine Griezmann",
+      "Cristiano Ronaldo",
+      "Gareth Bale",
+      "Nani"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle sélection Ronaldo a-t-il battue en finale de la Ligue des nations 2019 ?",
+    "answers": [
+      "Suisse",
+      "Pays-Bas",
+      "Angleterre",
+      "Italie"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a marqué l'unique but du Portugal en finale de la Ligue des nations 2019 ?",
+    "answers": [
+      "Ronaldo",
+      "João Félix",
+      "Gonçalo Guedes",
+      "Bernardo Silva"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville le Portugal de Ronaldo a-t-il remporté la Ligue des nations 2019 ?",
+    "answers": [
+      "Lisbonne",
+      "Braga",
+      "Guimarães",
+      "Porto"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quelle sélection Ronaldo a-t-il inscrit un triplé en demi-finale de Ligue des nations 2019 ?",
+    "answers": [
+      "Suisse",
+      "Pays-Bas",
+      "Angleterre",
+      "Croatie"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Ronaldo a-t-il marqués face à l'Espagne lors du Mondial 2018 ?",
+    "answers": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel était le score du Portugal-Espagne marqué par le triplé de Ronaldo au Mondial 2018 ?",
+    "answers": [
+      "2-2",
+      "4-4",
+      "3-3",
+      "3-2"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur quelle action Ronaldo a-t-il inscrit son troisième but contre l'Espagne au Mondial 2018 ?",
+    "answers": [
+      "Penalty",
+      "Corner",
+      "Tête",
+      "Coup franc"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle sélection Ronaldo a-t-il marqué sur penalty au Mondial 2022 ?",
+    "answers": [
+      "Ghana",
+      "Uruguay",
+      "Corée du Sud",
+      "Suisse"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de Coupes du monde différentes Ronaldo avait-il marquées après le Mondial 2022 ?",
+    "answers": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection a éliminé le Portugal de Ronaldo en quart de finale du Mondial 2022 ?",
+    "answers": [
+      "Suisse",
+      "France",
+      "Maroc",
+      "Espagne"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a remplacé Ronaldo dans le onze du Portugal contre la Suisse au Mondial 2022 ?",
+    "answers": [
+      "João Félix",
+      "Rafael Leão",
+      "André Silva",
+      "Gonçalo Ramos"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts ce remplaçant de Ronaldo a-t-il inscrits contre la Suisse au Mondial 2022 ?",
+    "answers": [
+      "3",
+      "2",
+      "1",
+      "4"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts le Portugal a-t-il marqués contre la Suisse en huitième de finale du Mondial 2022 ?",
+    "answers": [
+      "5",
+      "6",
+      "4",
+      "7"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle sélection a battu le Portugal de Ronaldo en huitième de finale du Mondial 2018 ?",
+    "answers": [
+      "Espagne",
+      "France",
+      "Uruguay",
+      "Russie"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a marqué le but portugais lors du huitième de finale perdu contre l'Uruguay en 2018 ?",
+    "answers": [
+      "Ronaldo",
+      "Bernardo Silva",
+      "João Mário",
+      "Pepe"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quelle sélection Ronaldo a-t-il inscrit son premier but en Coupe du monde, en 2006 ?",
+    "answers": [
+      "Iran",
+      "Mexique",
+      "Angola",
+      "Pays-Bas"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quelle sélection Ronaldo a-t-il marqué au Mondial 2014 ?",
+    "answers": [
+      "Allemagne",
+      "Ghana",
+      "États-Unis",
+      "Brésil"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Ronaldo a-t-il battu en finale de Coupe d'Italie 2021 avec la Juventus ?",
+    "answers": [
+      "AC Milan",
+      "Napoli",
+      "Atalanta",
+      "Inter Milan"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de titres de champion d'Italie Ronaldo a-t-il remportés avec la Juventus ?",
+    "answers": [
+      "1",
+      "3",
+      "4",
+      "2"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  }
 ]

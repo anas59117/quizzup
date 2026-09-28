@@ -1,52 +1,1053 @@
 [
-  { "text": "En quelle année le Real Madrid a-t-il été fondé ?", "answers": ["1898", "1902", "1905", "1910"], "correct": 1 },
-  { "text": "Dans quel stade le Real Madrid joue-t-il à domicile ?", "answers": ["Camp Nou", "Santiago Bernabéu", "Wanda Metropolitano", "Mestalla"], "correct": 1 },
-  { "text": "Combien de Ligues des Champions le Real Madrid a-t-il remporté avant 2025 (record du monde) ?", "answers": ["12", "13", "14", "15"], "correct": 3 },
-  { "text": "Quel joueur portugais a marqué l'histoire du club dans les années 2010 ?", "answers": ["Cristiano Ronaldo", "Luís Figo", "Nani", "Pepe"], "correct": 0 },
-  { "text": "Quel est le surnom du Real Madrid ?", "answers": ["Les Merengues", "Les Blancos / Merengues", "Los Rojos", "Les Catalans"], "correct": 1 },
-  { "text": "Quel président a marqué l'ère des Galactiques dans les années 2000 ?", "answers": ["Florentino Pérez", "Ramón Calderón", "Lorenzo Sanz", "Vicente Boluda"], "correct": 0 },
-  { "text": "Quel joueur français a rejoint le Real Madrid en 2009 pour un transfert record de l'époque ?", "answers": ["Karim Benzema", "Zinédine Zidane", "Kylian Mbappé", "Nicolas Anelka"], "correct": 0 },
-  { "text": "Quel entraîneur français a mené le Real Madrid à plusieurs Ligues des Champions consécutives ?", "answers": ["Zinédine Zidane", "Didier Deschamps", "Arsène Wenger", "Laurent Blanc"], "correct": 0 },
-  { "text": "En quelle année le Real Madrid a-t-il remporté sa première Coupe d'Europe des clubs champions ?", "answers": ["1954", "1956", "1958", "1960"], "correct": 1 },
-  { "text": "Combien de Coupes d'Europe consécutives le Real Madrid a-t-il remporté entre 1956 et 1960 ?", "answers": ["3", "4", "5", "6"], "correct": 2 },
-  { "text": "Quel joueur argentin emblématique porte le surnom 'La Pulga' au sein du football, rival historique du Real ?", "answers": ["Lionel Messi", "Sergio Agüero", "Diego Maradona", "Ángel Di María"], "correct": 0 },
-  { "text": "Comment s'appelle le derby entre le Real Madrid et le FC Barcelone ?", "answers": ["Le Clásico", "Le Grand Derby", "El Derbi", "La Liga Cup"], "correct": 0 },
-  { "text": "Quel gardien allemand a longtemps défendu les cages du Real Madrid dans les années 2010-2020 ?", "answers": ["Manuel Neuer", "Thibaut Courtois", "Iker Casillas", "Keylor Navas"], "correct": 2 },
-  { "text": "Quel gardien belge a rejoint le Real Madrid en 2018 ?", "answers": ["Thibaut Courtois", "Simon Mignolet", "Koen Casteels", "Jean-François Gillet"], "correct": 0 },
-  { "text": "Quel milieu français emblématique a joué et entraîné le Real Madrid ?", "answers": ["Zinédine Zidane", "Claude Makélélé", "Patrick Vieira", "Youri Djorkaeff"], "correct": 0 },
-  { "text": "En quelle année Zinédine Zidane a-t-il rejoint le Real Madrid comme joueur ?", "answers": ["1999", "2000", "2001", "2002"], "correct": 2 },
-  { "text": "Quel geste technique de Zidane est resté célèbre en finale de Ligue des Champions 2002 ?", "answers": ["Une reprise de volée", "Un coup franc", "Un retourné acrobatique", "Un lob"], "correct": 0 },
-  { "text": "Quel joueur brésilien surnommé 'le Phénomène' a joué au Real Madrid dans les années 2000 ?", "answers": ["Ronaldinho", "Ronaldo Nazário", "Kaká", "Roberto Carlos"], "correct": 1 },
-  { "text": "Quel défenseur brésilien célèbre pour ses coups francs a longtemps joué au Real Madrid ?", "answers": ["Cafu", "Roberto Carlos", "Marcelo", "Dani Alves"], "correct": 1 },
-  { "text": "Quel joueur français, capitaine du Real Madrid, a succédé à Cristiano Ronaldo comme meilleur buteur ?", "answers": ["Antoine Griezmann", "Karim Benzema", "Kylian Mbappé", "Olivier Giroud"], "correct": 1 },
-  { "text": "En quelle année Karim Benzema a-t-il remporté le Ballon d'Or ?", "answers": ["2020", "2021", "2022", "2023"], "correct": 2 },
-  { "text": "Quel milieu brésilien surnommé 'Kaká' a évolué au Real Madrid ?", "answers": ["Ricardo Izecson dos Santos Leite", "Robinho", "Julio Baptista", "Pato"], "correct": 0 },
-  { "text": "Quel joueur a porté le brassard de capitaine du Real Madrid pendant de nombreuses années dans les années 2000-2010 ?", "answers": ["Sergio Ramos", "Iker Casillas", "Raúl", "Marcelo"], "correct": 1 },
-  { "text": "Quel avant-centre espagnol est resté un symbole du club dans les années 1990-2000 ?", "answers": ["Fernando Torres", "Raúl González", "David Villa", "Michu"], "correct": 1 },
-  { "text": "Quel défenseur central espagnol est devenu capitaine du Real Madrid après Casillas ?", "answers": ["Sergio Ramos", "Pepe", "Nacho Fernández", "Álvaro Arbeloa"], "correct": 0 },
-  { "text": "Quel joueur français a rejoint le Real Madrid en 2024 après son passage au PSG ?", "answers": ["Antoine Griezmann", "Kylian Mbappé", "Ousmane Dembélé", "N'Golo Kanté"], "correct": 1 },
-  { "text": "Combien de Ballons d'Or Cristiano Ronaldo a-t-il remporté pendant son passage au Real Madrid ?", "answers": ["2", "3", "4", "5"], "correct": 2 },
-  { "text": "Quel est le nom du centre d'entraînement du Real Madrid ?", "answers": ["Ciudad Real Madrid", "Valdebebas", "Ciudad Real Madrid (Valdebebas)", "La Fábrica"], "correct": 2 },
-  { "text": "Quel joueur gallois a rejoint le Real Madrid en 2013 pour un transfert record de l'époque ?", "answers": ["Gareth Bale", "Aaron Ramsey", "Joe Allen", "Ryan Giggs"], "correct": 0 },
-  { "text": "Quel entraîneur italien a dirigé le Real Madrid à deux reprises, remportant plusieurs titres majeurs ?", "answers": ["Carlo Ancelotti", "Fabio Capello", "Antonio Conte", "Massimiliano Allegri"], "correct": 0 },
-  { "text": "Quel jeune milieu anglais est devenu une pièce maîtresse du Real Madrid dans les années 2020 ?", "answers": ["Jude Bellingham", "Phil Foden", "Declan Rice", "Mason Mount"], "correct": 0 },
-  { "text": "Quel attaquant français formé à Lyon a rejoint le Real Madrid en 2023 avant de repartir ?", "answers": ["Karim Benzema", "Kylian Mbappé", "Antoine Griezmann", "Nabil Fekir"], "correct": 0 },
-  { "text": "Quel milieu croate a été élu meilleur joueur de la Coupe du Monde 2018 tout en jouant au Real Madrid ?", "answers": ["Ivan Rakitić", "Luka Modrić", "Mateo Kovačić", "Marcelo Brozović"], "correct": 1 },
-  { "text": "Quel latéral brésilien, connu pour son style offensif, a longtemps joué au Real Madrid dans les années 2010-2020 ?", "answers": ["Dani Alves", "Marcelo Vieira", "Fabinho", "Alex Sandro"], "correct": 1 },
-  { "text": "Combien de titres de Liga le Real Madrid a-t-il remporté environ avant 2025 (record du monde) ?", "answers": ["Environ 30", "Environ 33", "Environ 36", "Environ 40"], "correct": 2 },
-  { "text": "Quel jeune attaquant vinicius junior est originaire de quel pays ?", "answers": ["Argentine", "Brésil", "Portugal", "Uruguay"], "correct": 1 },
-  { "text": "Quel joueur anglais est passé de Tottenham au Real Madrid en 2019 ?", "answers": ["Harry Kane", "Gareth Bale", "Dele Alli", "Eden Hazard"], "correct": 1 },
-  { "text": "Quel joueur belge a rejoint le Real Madrid en 2019 en provenance de Chelsea ?", "answers": ["Kevin De Bruyne", "Eden Hazard", "Romelu Lukaku", "Thibaut Courtois"], "correct": 1 },
-  { "text": "Quel est le nombre de Coupes du Roi remportées par le Real Madrid environ avant 2025 ?", "answers": ["Environ 15", "Environ 20", "Environ 23", "Environ 27"], "correct": 2 },
-  { "text": "Quel joueur uruguayen a rejoint le Real Madrid en 2022 après son passage à l'Atlético Madrid ?", "answers": ["Luis Suárez", "Edinson Cavani", "Federico Valverde", "Diego Godín"], "correct": 2 },
-  { "text": "Quel gardien slovène a rejoint le Real Madrid en 2021 ?", "answers": ["Jan Oblak", "Andriy Lunin", "Samir Handanović", "Marko Dmitrović"], "correct": 1 },
-  { "text": "Quel joueur français aujourd'hui légende a marqué un triplé lors d'une finale de Ligue des Champions avec le Real Madrid ?", "answers": ["Karim Benzema", "Antoine Griezmann", "Kylian Mbappé", "Zinédine Zidane"], "correct": 0 },
-  { "text": "Contre quelle équipe le Real Madrid a-t-il remporté la finale de Ligue des Champions 2022 ?", "answers": ["Manchester City", "Liverpool", "Chelsea", "Bayern Munich"], "correct": 1 },
-  { "text": "Contre quelle équipe le Real Madrid a-t-il remporté la finale de Ligue des Champions 2018 ?", "answers": ["Liverpool", "Bayern Munich", "Juventus", "Atlético Madrid"], "correct": 0 },
-  { "text": "Quel joueur portait le numéro 7 emblématique du Real Madrid avant Cristiano Ronaldo ?", "answers": ["Raúl González", "David Beckham", "Luís Figo", "Fernando Hierro"], "correct": 1 },
-  { "text": "Quel joueur portugais a précédé Cristiano Ronaldo au poste d'ailier vedette du Real Madrid ?", "answers": ["Nuno Gomes", "Luís Figo", "Rui Costa", "Deco"], "correct": 1 },
-  { "text": "Quel club le Real Madrid a-t-il battu en finale de la première Coupe d'Europe en 1956 ?", "answers": ["Stade de Reims", "AC Milan", "Benfica", "Inter Milan"], "correct": 0 },
-  { "text": "Quel surnom portait Alfredo Di Stéfano, légende historique du club ?", "answers": ["La Saeta Rubia", "El Pelusa", "El Matador", "El Fenómeno"], "correct": 0 },
-  { "text": "De quelle nationalité était Alfredo Di Stéfano, légende du Real des années 1950-60 ?", "answers": ["Espagnole", "Argentine (naturalisé espagnol)", "Uruguayenne", "Brésilienne"], "correct": 1 },
-  { "text": "Quel joueur hongrois a marqué l'histoire du Real dans les années 1950-60 aux côtés de Di Stéfano ?", "answers": ["Ferenc Puskás", "Sándor Kocsis", "Nándor Hidegkuti", "Zoltán Czibor"], "correct": 0 }
+  {
+    "text": "En quelle année le Real Madrid a-t-il été fondé ?",
+    "answers": [
+      "1898",
+      "1902",
+      "1905",
+      "1910"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quel stade le Real Madrid joue-t-il à domicile ?",
+    "answers": [
+      "Camp Nou",
+      "Santiago Bernabéu",
+      "Wanda Metropolitano",
+      "Mestalla"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de Ligues des Champions le Real Madrid a-t-il remporté avant 2025 (record du monde) ?",
+    "answers": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel joueur portugais a marqué l'histoire du club dans les années 2010 ?",
+    "answers": [
+      "Cristiano Ronaldo",
+      "Luís Figo",
+      "Nani",
+      "Pepe"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel est le surnom du Real Madrid ?",
+    "answers": [
+      "Les Merengues",
+      "Les Blancos / Merengues",
+      "Los Rojos",
+      "Les Catalans"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel président a marqué l'ère des Galactiques dans les années 2000 ?",
+    "answers": [
+      "Florentino Pérez",
+      "Ramón Calderón",
+      "Lorenzo Sanz",
+      "Vicente Boluda"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel avant-centre français rejoint le Real Madrid en provenance de Lyon en 2009 ?",
+    "answers": [
+      "Karim Benzema",
+      "Zinédine Zidane",
+      "Kylian Mbappé",
+      "Nicolas Anelka"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel entraîneur français a mené le Real Madrid à plusieurs Ligues des Champions consécutives ?",
+    "answers": [
+      "Zinédine Zidane",
+      "Didier Deschamps",
+      "Arsène Wenger",
+      "Laurent Blanc"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En quelle année le Real Madrid a-t-il remporté sa première Coupe d'Europe des clubs champions ?",
+    "answers": [
+      "1954",
+      "1956",
+      "1958",
+      "1960"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de Coupes d'Europe consécutives le Real Madrid a-t-il remporté entre 1956 et 1960 ?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel joueur argentin emblématique porte le surnom 'La Pulga' au sein du football, rival historique du Real ?",
+    "answers": [
+      "Lionel Messi",
+      "Sergio Agüero",
+      "Diego Maradona",
+      "Ángel Di María"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Comment s'appelle le derby entre le Real Madrid et le FC Barcelone ?",
+    "answers": [
+      "Le Clásico",
+      "Le Grand Derby",
+      "El Derbi",
+      "La Liga Cup"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel gardien espagnol garde les buts du Real Madrid jusqu'en 2015 ?",
+    "answers": [
+      "Manuel Neuer",
+      "Thibaut Courtois",
+      "Iker Casillas",
+      "Keylor Navas"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel gardien belge a rejoint le Real Madrid en 2018 ?",
+    "answers": [
+      "Thibaut Courtois",
+      "Simon Mignolet",
+      "Koen Casteels",
+      "Jean-François Gillet"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel milieu français emblématique a joué et entraîné le Real Madrid ?",
+    "answers": [
+      "Zinédine Zidane",
+      "Claude Makélélé",
+      "Patrick Vieira",
+      "Youri Djorkaeff"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En quelle année Zinédine Zidane a-t-il rejoint le Real Madrid comme joueur ?",
+    "answers": [
+      "1999",
+      "2000",
+      "2001",
+      "2002"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel geste technique de Zidane est resté célèbre en finale de Ligue des Champions 2002 ?",
+    "answers": [
+      "Une reprise de volée",
+      "Un coup franc",
+      "Un retourné acrobatique",
+      "Un lob"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel joueur brésilien surnommé 'le Phénomène' a joué au Real Madrid dans les années 2000 ?",
+    "answers": [
+      "Ronaldinho",
+      "Ronaldo Nazário",
+      "Kaká",
+      "Roberto Carlos"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel défenseur brésilien célèbre pour ses coups francs a longtemps joué au Real Madrid ?",
+    "answers": [
+      "Cafu",
+      "Roberto Carlos",
+      "Marcelo",
+      "Dani Alves"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel Français termine son passage au Real Madrid comme capitaine en 2023 ?",
+    "answers": [
+      "Antoine Griezmann",
+      "Karim Benzema",
+      "Kylian Mbappé",
+      "Olivier Giroud"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "En quelle année Karim Benzema a-t-il remporté le Ballon d'Or ?",
+    "answers": [
+      "2020",
+      "2021",
+      "2022",
+      "2023"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel milieu brésilien surnommé 'Kaká' a évolué au Real Madrid ?",
+    "answers": [
+      "Ricardo Izecson dos Santos Leite",
+      "Robinho",
+      "Julio Baptista",
+      "Pato"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel joueur a porté le brassard de capitaine du Real Madrid pendant de nombreuses années dans les années 2000-2010 ?",
+    "answers": [
+      "Sergio Ramos",
+      "Iker Casillas",
+      "Raúl",
+      "Marcelo"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel avant-centre espagnol est resté un symbole du club dans les années 1990-2000 ?",
+    "answers": [
+      "Fernando Torres",
+      "Raúl González",
+      "David Villa",
+      "Michu"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel défenseur central espagnol est devenu capitaine du Real Madrid après Casillas ?",
+    "answers": [
+      "Sergio Ramos",
+      "Pepe",
+      "Nacho Fernández",
+      "Álvaro Arbeloa"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel joueur français a rejoint le Real Madrid en 2024 après son passage au PSG ?",
+    "answers": [
+      "Antoine Griezmann",
+      "Kylian Mbappé",
+      "Ousmane Dembélé",
+      "N'Golo Kanté"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de Ballons d'Or Cristiano Ronaldo a-t-il remporté pendant son passage au Real Madrid ?",
+    "answers": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel est le nom du centre d'entraînement du Real Madrid ?",
+    "answers": [
+      "Ciudad Real Madrid",
+      "Valdebebas",
+      "Ciudad Real Madrid (Valdebebas)",
+      "La Fábrica"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel joueur gallois a rejoint le Real Madrid en 2013 pour un transfert record de l'époque ?",
+    "answers": [
+      "Gareth Bale",
+      "Aaron Ramsey",
+      "Joe Allen",
+      "Ryan Giggs"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel entraîneur italien a dirigé le Real Madrid à deux reprises, remportant plusieurs titres majeurs ?",
+    "answers": [
+      "Carlo Ancelotti",
+      "Fabio Capello",
+      "Antonio Conte",
+      "Massimiliano Allegri"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel jeune milieu anglais est devenu une pièce maîtresse du Real Madrid dans les années 2020 ?",
+    "answers": [
+      "Jude Bellingham",
+      "Phil Foden",
+      "Declan Rice",
+      "Mason Mount"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel entraîneur espagnol mène le Real Madrid à la victoire en Ligue des champions 2000 ?",
+    "answers": [
+      "Vicente del Bosque",
+      "Zinédine Zidane",
+      "Carlo Ancelotti",
+      "José Mourinho"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel milieu croate a été élu meilleur joueur de la Coupe du Monde 2018 tout en jouant au Real Madrid ?",
+    "answers": [
+      "Ivan Rakitić",
+      "Luka Modrić",
+      "Mateo Kovačić",
+      "Marcelo Brozović"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel latéral brésilien, connu pour son style offensif, a longtemps joué au Real Madrid dans les années 2010-2020 ?",
+    "answers": [
+      "Dani Alves",
+      "Marcelo Vieira",
+      "Fabinho",
+      "Alex Sandro"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de titres de champion d'Espagne le Real Madrid avait-il remportés après la saison 2023-2024 ?",
+    "answers": [
+      "33",
+      "34",
+      "36",
+      "40"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "De quel pays Vinícius Júnior est-il originaire ?",
+    "answers": [
+      "Argentine",
+      "Brésil",
+      "Portugal",
+      "Uruguay"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel joueur gallois rejoint le Real Madrid en provenance de Tottenham en 2013 ?",
+    "answers": [
+      "Harry Kane",
+      "Gareth Bale",
+      "Dele Alli",
+      "Eden Hazard"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel joueur belge a rejoint le Real Madrid en 2019 en provenance de Chelsea ?",
+    "answers": [
+      "Kevin De Bruyne",
+      "Eden Hazard",
+      "Romelu Lukaku",
+      "Thibaut Courtois"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de Coupes du Roi le Real Madrid avait-il remportées à l'issue de la saison 2024-2025 ?",
+    "answers": [
+      "18",
+      "19",
+      "20",
+      "21"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel milieu uruguayen rejoint le Real Madrid en provenance du Peñarol en 2016 ?",
+    "answers": [
+      "Luis Suárez",
+      "Edinson Cavani",
+      "Federico Valverde",
+      "Diego Godín"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel gardien ukrainien rejoint le Real Madrid en 2018 ?",
+    "answers": [
+      "Jan Oblak",
+      "Andriy Lunin",
+      "Samir Handanović",
+      "Marko Dmitrović"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel Français marque un triplé contre le PSG en huitième de finale retour de Ligue des champions 2022 ?",
+    "answers": [
+      "Karim Benzema",
+      "Antoine Griezmann",
+      "Kylian Mbappé",
+      "Zinédine Zidane"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Contre quelle équipe le Real Madrid a-t-il remporté la finale de Ligue des Champions 2022 ?",
+    "answers": [
+      "Manchester City",
+      "Liverpool",
+      "Chelsea",
+      "Bayern Munich"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Contre quelle équipe le Real Madrid a-t-il remporté la finale de Ligue des Champions 2018 ?",
+    "answers": [
+      "Liverpool",
+      "Bayern Munich",
+      "Juventus",
+      "Atlético Madrid"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel joueur portait le numéro 7 emblématique du Real Madrid avant Cristiano Ronaldo ?",
+    "answers": [
+      "Raúl González",
+      "David Beckham",
+      "Luís Figo",
+      "Fernando Hierro"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel joueur portugais a précédé Cristiano Ronaldo au poste d'ailier vedette du Real Madrid ?",
+    "answers": [
+      "Nuno Gomes",
+      "Luís Figo",
+      "Rui Costa",
+      "Deco"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel club le Real Madrid a-t-il battu en finale de la première Coupe d'Europe en 1956 ?",
+    "answers": [
+      "Stade de Reims",
+      "AC Milan",
+      "Benfica",
+      "Inter Milan"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel surnom portait Alfredo Di Stéfano, légende historique du club ?",
+    "answers": [
+      "La Saeta Rubia",
+      "El Pelusa",
+      "El Matador",
+      "El Fenómeno"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "De quelle nationalité était Alfredo Di Stéfano, légende du Real des années 1950-60 ?",
+    "answers": [
+      "Espagnole",
+      "Argentine (naturalisé espagnol)",
+      "Uruguayenne",
+      "Brésilienne"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel joueur hongrois a marqué l'histoire du Real dans les années 1950-60 aux côtés de Di Stéfano ?",
+    "answers": [
+      "Ferenc Puskás",
+      "Sándor Kocsis",
+      "Nándor Hidegkuti",
+      "Zoltán Czibor"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel club italien le Real Madrid bat-il en finale de Coupe d'Europe 1957 ?",
+    "answers": [
+      "AC Milan",
+      "Inter Milan",
+      "Fiorentina",
+      "Juventus"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui ouvre le score sur penalty en finale de Coupe d'Europe 1957 pour le Real Madrid ?",
+    "answers": [
+      "Paco Gento",
+      "Ferenc Puskás",
+      "Raymond Kopa",
+      "Alfredo Di Stéfano"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club italien pousse le Real Madrid en prolongation lors de la finale européenne 1958 ?",
+    "answers": [
+      "AC Milan",
+      "Fiorentina",
+      "Inter Milan",
+      "Juventus"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club français le Real Madrid retrouve-t-il en finale européenne 1959 ?",
+    "answers": [
+      "Saint-Étienne",
+      "Stade de Reims",
+      "OGC Nice",
+      "AS Monaco"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club allemand le Real Madrid bat-il 7-3 en finale européenne 1960 ?",
+    "answers": [
+      "Bayern Munich",
+      "Hambourg",
+      "Eintracht Francfort",
+      "Borussia Dortmund"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Ferenc Puskás inscrit-il en finale de Coupe d'Europe 1960 ?",
+    "answers": [
+      "Deux",
+      "Trois",
+      "Cinq",
+      "Quatre"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts Alfredo Di Stéfano marque-t-il lors de la finale européenne 1960 ?",
+    "answers": [
+      "Trois",
+      "Un",
+      "Deux",
+      "Quatre"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle équipe italienne le Real Madrid bat-il en finale de Ligue des champions 1998 ?",
+    "answers": [
+      "AC Milan",
+      "Juventus",
+      "Inter Milan",
+      "Naples"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel Madrilène inscrit l'unique but de la finale européenne 1998 ?",
+    "answers": [
+      "Raúl González",
+      "Fernando Morientes",
+      "Predrag Mijatović",
+      "Davor Šuker"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club espagnol le Real Madrid bat-il 3-0 en finale de Ligue des champions 2000 ?",
+    "answers": [
+      "FC Barcelone",
+      "Atlético de Madrid",
+      "Deportivo La Corogne",
+      "Valence CF"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur anglais marque pour le Real Madrid en finale européenne 2000 contre Valence ?",
+    "answers": [
+      "Steve McManaman",
+      "David Beckham",
+      "Michael Owen",
+      "Jude Bellingham"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel avant-centre espagnol ouvre le score en finale de Ligue des champions 2000 ?",
+    "answers": [
+      "Raúl González",
+      "Fernando Morientes",
+      "Fernando Torres",
+      "David Villa"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club allemand affronte le Real Madrid en finale européenne 2002 ?",
+    "answers": [
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "Bayer Leverkusen",
+      "Schalke 04"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel Madrilène ouvre le score en finale européenne 2002 avant le but de Zidane ?",
+    "answers": [
+      "Luis Figo",
+      "Roberto Carlos",
+      "Fernando Morientes",
+      "Raúl González"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur adresse le centre repris de volée par Zidane en finale européenne 2002 ?",
+    "answers": [
+      "Roberto Carlos",
+      "Luis Figo",
+      "Raúl González",
+      "Claude Makélélé"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle équipe madrilène le Real bat-il en finale européenne 2014 ?",
+    "answers": [
+      "FC Barcelone",
+      "Atlético de Madrid",
+      "Valence CF",
+      "Getafe CF"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur égalise pour le Real Madrid dans les arrêts de jeu de la finale 2014 ?",
+    "answers": [
+      "Cristiano Ronaldo",
+      "Gareth Bale",
+      "Sergio Ramos",
+      "Karim Benzema"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur donne l'avantage au Real Madrid en prolongation lors de la finale 2014 ?",
+    "answers": [
+      "Sergio Ramos",
+      "Cristiano Ronaldo",
+      "Marcelo",
+      "Gareth Bale"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel latéral brésilien marque le troisième but du Real Madrid en finale européenne 2014 ?",
+    "answers": [
+      "Marcelo",
+      "Danilo",
+      "Casemiro",
+      "Roberto Carlos"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville le Real Madrid remporte-t-il la finale européenne 2014 ?",
+    "answers": [
+      "Madrid",
+      "Lisbonne",
+      "Milan",
+      "Cardiff"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel adversaire dispute au Real Madrid la finale européenne 2016 ?",
+    "answers": [
+      "Juventus",
+      "Liverpool",
+      "Atlético de Madrid",
+      "Manchester City"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel défenseur ouvre le score pour le Real Madrid en finale européenne 2016 ?",
+    "answers": [
+      "Pepe",
+      "Marcelo",
+      "Dani Carvajal",
+      "Sergio Ramos"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur de l'Atlético manque son tir au but lors de la finale européenne 2016 ?",
+    "answers": [
+      "Juanfran",
+      "Antoine Griezmann",
+      "Yannick Carrasco",
+      "Fernando Torres"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Madrilène transforme le tir au but décisif de la finale européenne 2016 ?",
+    "answers": [
+      "Sergio Ramos",
+      "Cristiano Ronaldo",
+      "Karim Benzema",
+      "Gareth Bale"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville le Real Madrid remporte-t-il la finale européenne 2016 ?",
+    "answers": [
+      "Lisbonne",
+      "Cardiff",
+      "Milan",
+      "Kyiv"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club italien le Real Madrid bat-il en finale de Ligue des champions 2017 ?",
+    "answers": [
+      "Naples",
+      "AC Milan",
+      "Inter Milan",
+      "Juventus"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel milieu brésilien marque d'une frappe lointaine en finale européenne 2017 ?",
+    "answers": [
+      "Casemiro",
+      "Kaká",
+      "Marcelo",
+      "Fabinho"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel jeune remplaçant madrilène inscrit le quatrième but en finale européenne 2017 ?",
+    "answers": [
+      "Isco",
+      "Marco Asensio",
+      "Lucas Vázquez",
+      "Álvaro Morata"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel attaquant italien égalise provisoirement pour la Juventus en finale 2017 ?",
+    "answers": [
+      "Paulo Dybala",
+      "Gonzalo Higuaín",
+      "Mario Mandžukić",
+      "Claudio Marchisio"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville le Real Madrid bat-il la Juventus en finale européenne 2017 ?",
+    "answers": [
+      "Milan",
+      "Madrid",
+      "Lisbonne",
+      "Cardiff"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville le Real Madrid bat-il Liverpool en finale européenne 2018 ?",
+    "answers": [
+      "Kyiv",
+      "Paris",
+      "Milan",
+      "Cardiff"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel gardien de Liverpool commet une erreur sur le premier but madrilène en finale 2018 ?",
+    "answers": [
+      "Alisson Becker",
+      "Loris Karius",
+      "Simon Mignolet",
+      "Adrián"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel Français inscrit le premier but madrilène face à Liverpool en finale 2018 ?",
+    "answers": [
+      "Raphaël Varane",
+      "Zinédine Zidane",
+      "Karim Benzema",
+      "Ferland Mendy"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur gallois inscrit un doublé pour le Real Madrid en finale européenne 2018 ?",
+    "answers": [
+      "Aaron Ramsey",
+      "Harry Wilson",
+      "Daniel James",
+      "Gareth Bale"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel attaquant de Liverpool doit sortir blessé en première période de la finale 2018 ?",
+    "answers": [
+      "Mohamed Salah",
+      "Sadio Mané",
+      "Roberto Firmino",
+      "Divock Origi"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel adversaire le Real Madrid élimine-t-il grâce à un triplé de Benzema en huitième de finale européen 2022 ?",
+    "answers": [
+      "Chelsea",
+      "Paris Saint-Germain",
+      "Manchester City",
+      "Liverpool"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club anglais subit un autre triplé de Benzema en quart de finale aller européen 2022 ?",
+    "answers": [
+      "Liverpool",
+      "Arsenal",
+      "Chelsea",
+      "Manchester City"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel attaquant brésilien marque deux fois en fin de demi-finale retour 2022 contre Manchester City ?",
+    "answers": [
+      "Vinícius Júnior",
+      "Casemiro",
+      "Éder Militão",
+      "Rodrygo"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Brésilien marque l'unique but de la finale européenne 2022 contre Liverpool ?",
+    "answers": [
+      "Vinícius Júnior",
+      "Rodrygo",
+      "Casemiro",
+      "Éder Militão"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien est élu homme du match de la finale européenne 2022 par l'UEFA ?",
+    "answers": [
+      "Alisson Becker",
+      "Thibaut Courtois",
+      "Andriy Lunin",
+      "Édouard Mendy"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quel stade parisien le Real Madrid remporte-t-il la finale européenne 2022 ?",
+    "answers": [
+      "Parc des Princes",
+      "Stade Charléty",
+      "Stade de France",
+      "Stade Jean-Bouin"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club allemand affronte le Real Madrid en finale européenne 2024 ?",
+    "answers": [
+      "Bayern Munich",
+      "RB Leipzig",
+      "Bayer Leverkusen",
+      "Borussia Dortmund"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel défenseur ouvre le score pour le Real Madrid en finale européenne 2024 ?",
+    "answers": [
+      "Dani Carvajal",
+      "Antonio Rüdiger",
+      "Nacho Fernández",
+      "Ferland Mendy"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel attaquant brésilien inscrit le deuxième but du Real Madrid en finale européenne 2024 ?",
+    "answers": [
+      "Rodrygo",
+      "Vinícius Júnior",
+      "Endrick",
+      "Éder Militão"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel Madrilène est élu homme du match de la finale européenne 2024 par l'UEFA ?",
+    "answers": [
+      "Vinícius Júnior",
+      "Jude Bellingham",
+      "Dani Carvajal",
+      "Toni Kroos"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel remplaçant inscrit un doublé tardif contre le Bayern en demi-finale retour européenne 2024 ?",
+    "answers": [
+      "Rodrygo",
+      "Brahim Díaz",
+      "Arda Güler",
+      "Joselu"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le score cumulé de la demi-finale 2024 entre le Real Madrid et le Bayern ?",
+    "answers": [
+      "4-3",
+      "3-2",
+      "5-4",
+      "4-2"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel stade londonien se joue la finale européenne 2024 remportée par le Real Madrid ?",
+    "answers": [
+      "Emirates Stadium",
+      "Wembley",
+      "Stamford Bridge",
+      "Craven Cottage"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club anglais le Real Madrid élimine-t-il aux tirs au but en quart de finale européen 2024 ?",
+    "answers": [
+      "Arsenal",
+      "Liverpool",
+      "Manchester City",
+      "Chelsea"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club le Real Madrid bat-il en finale européenne 1966 ?",
+    "answers": [
+      "Benfica",
+      "AC Milan",
+      "Stade de Reims",
+      "Partizan Belgrade"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  }
 ]

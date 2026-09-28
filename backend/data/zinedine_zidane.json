@@ -4,499 +4,1099 @@
     "answers": [
       "Marseille",
       "Paris",
-      "Bordeaux",
-      "Lyon"
+      "Lyon",
+      "Bordeaux"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel numéro Zidane portait-il généralement en équipe de France ?",
+    "text": "Quel numéro Zidane portait-il généralement avec l'équipe de France ?",
     "answers": [
-      "Le 7",
-      "Le 10",
-      "Le 8",
-      "Le 9"
+      "7",
+      "10",
+      "8",
+      "9"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : club où Zidane débute en première division française ?",
+    "text": "Dans quel quartier marseillais Zidane a-t-il grandi ?",
+    "answers": [
+      "Le Panier",
+      "Endoume",
+      "La Castellane",
+      "Mazargues"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club a lancé Zidane en première division française ?",
     "answers": [
       "Girondins de Bordeaux",
-      "Italie",
+      "Olympique de Marseille",
+      "AS Saint-Étienne",
+      "AS Cannes"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quel club Zidane a-t-il disputé son premier match professionnel en 1989 ?",
+    "answers": [
+      "FC Nantes",
+      "AS Monaco",
+      "Paris Saint-Germain",
+      "Montpellier"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel entraîneur a lancé Zidane en première division avec Cannes ?",
+    "answers": [
+      "Jean Tigana",
+      "Jean Fernandez",
+      "Rolland Courbis",
+      "Guy Roux"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quel club Zidane a-t-il inscrit son premier but professionnel ?",
+    "answers": [
+      "Olympique de Marseille",
+      "AS Monaco",
+      "FC Nantes",
+      "AJ Auxerre"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année Zidane a-t-il quitté Cannes pour Bordeaux ?",
+    "answers": [
+      "1990",
+      "1991",
+      "1993",
+      "1992"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Avec quel club Zidane a-t-il atteint la finale de la Coupe UEFA 1996 ?",
+    "answers": [
+      "Girondins de Bordeaux",
       "AS Cannes",
-      "Volée de Glasgow"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à AS Cannes ?",
-    "answers": [
-      "club italien avec lequel il remporte deux championnats",
-      "adversaire contre lequel il marque après une course solitaire en huitième",
-      "adversaire de sa première Ligue des champions comme joueur",
-      "club où Zidane débute en première division française"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition AS Cannes est-il associé ?",
-    "answers": [
-      "Débuts professionnels",
-      "Période 1992-1996",
-      "Euro 2004",
-      "Euro 2000"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : club avec lequel il atteint une finale de Coupe UEFA ?",
-    "answers": [
       "Juventus",
-      "Girondins de Bordeaux",
-      "Espagne",
+      "Real Madrid"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club allemand a battu Bordeaux en finale de la Coupe UEFA 1996 ?",
+    "answers": [
+      "Borussia Dortmund",
+      "Bayern Munich",
+      "Schalke 04",
       "Bayer Leverkusen"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à Girondins de Bordeaux ?",
+    "text": "Quel futur champion du monde jouait avec Zidane à Bordeaux ?",
     "answers": [
-      "club où il marque une volée célèbre en finale européenne",
-      "adversaire renversé par deux buts français dans le temps additionnel",
-      "club avec lequel il atteint une finale de Coupe UEFA",
-      "entraîneur auprès duquel il devient adjoint à Madrid"
+      "Didier Deschamps",
+      "Emmanuel Petit",
+      "Bixente Lizarazu",
+      "Youri Djorkaeff"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition Girondins de Bordeaux est-il associé ?",
+    "text": "Quel autre futur champion du monde formait avec Zidane et Lizarazu le trio bordelais surnommé les « Z » ?",
     "answers": [
-      "Débuts professionnels",
-      "Euro 2004",
-      "Euro 2000",
-      "Période 1992-1996"
+      "Thierry Henry",
+      "Laurent Blanc",
+      "Robert Pirès",
+      "Christophe Dugarry"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : club italien avec lequel il remporte deux championnats ?",
+    "text": "Quel club italien Bordeaux a-t-il éliminé après avoir perdu 2-0 à l'aller en Coupe UEFA 1996 ?",
     "answers": [
+      "AC Milan",
+      "Real Betis",
+      "Valence",
+      "Séville"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club italien Zidane a-t-il rejoint en 1996 ?",
+    "answers": [
+      "AC Milan",
       "Juventus",
-      "Real Madrid",
-      "Angleterre",
-      "Carlo Ancelotti"
+      "Inter Milan",
+      "Parme"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à Juventus ?",
+    "text": "Combien de titres de Serie A Zidane a-t-il remportés avec la Juventus ?",
     "answers": [
-      "adversaire contre lequel il inscrit deux buts de la tête en finale",
-      "club italien avec lequel il remporte deux championnats",
-      "récompense individuelle reçue l’année du titre mondial",
-      "Ligue des champions remportée comme adjoint en 2014"
+      "1",
+      "3",
+      "2",
+      "4"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition Juventus est-il associé ?",
+    "text": "Quelles saisons de Serie A Zidane a-t-il gagnées avec la Juventus ?",
     "answers": [
-      "Débuts professionnels",
-      "Euro 2004",
-      "Période 1996-2001",
-      "Euro 2000"
+      "1995-1996 et 1998-1999",
+      "1996-1997 et 1998-1999",
+      "1997-1998 et 1999-2000",
+      "1996-1997 et 1997-1998"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : club où il marque une volée célèbre en finale européenne ?",
+    "text": "Quel entraîneur dirigeait la Juventus pendant l'essentiel du passage de Zidane ?",
     "answers": [
-      "Brésil",
-      "Ballon d’Or 1998",
-      "La Décima",
+      "Marcello Lippi",
+      "Fabio Capello",
+      "Carlo Ancelotti",
+      "Giovanni Trapattoni"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club la Juventus de Zidane a-t-elle battu en Coupe intercontinentale 1996 ?",
+    "answers": [
+      "Boca Juniors",
+      "River Plate",
+      "Vélez Sarsfield",
+      "São Paulo"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club allemand a battu la Juventus de Zidane en finale européenne 1997 ?",
+    "answers": [
+      "Bayern Munich",
+      "Bayer Leverkusen",
+      "Borussia Dortmund",
+      "Hambourg"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club a battu la Juventus de Zidane en finale européenne 1998 ?",
+    "answers": [
+      "FC Barcelone",
+      "Manchester United",
+      "Ajax",
       "Real Madrid"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à Real Madrid ?",
+    "text": "Dans quelle ville la Juventus de Zidane a-t-elle perdu la finale européenne 1997 ?",
     "answers": [
-      "club où il marque une volée célèbre en finale européenne",
-      "adversaire de son penalty en finale mondiale à Berlin",
-      "but du gauche contre Leverkusen en finale européenne",
-      "série gagnée comme entraîneur principal entre 2016 et 2018"
+      "Munich",
+      "Rome",
+      "Amsterdam",
+      "Vienne"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition Real Madrid est-il associé ?",
+    "text": "Dans quelle ville la Juventus de Zidane a-t-elle perdu la finale européenne 1998 ?",
     "answers": [
-      "Débuts professionnels",
-      "Période 2001-2006",
-      "Euro 2004",
-      "Euro 2000"
+      "Paris",
+      "Amsterdam",
+      "Londres",
+      "Berlin"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : adversaire contre lequel il inscrit deux buts de la tête en finale ?",
+    "text": "Quel trophée individuel Zidane a-t-il remporté en 1998 ?",
     "answers": [
-      "Italie",
-      "Volée de Glasgow",
-      "Brésil",
-      "Trois Ligues des champions"
+      "Soulier d'or",
+      "Prix Puskás",
+      "Ballon d'Or",
+      "Golden Boy"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à Brésil ?",
+    "text": "Combien de fois Zidane a-t-il été élu Joueur mondial de la FIFA ?",
     "answers": [
-      "adversaire contre lequel il marque après une course solitaire en huitième",
-      "adversaire de sa première Ligue des champions comme joueur",
-      "geste utilisé pour tromper Buffon en finale mondiale",
-      "adversaire contre lequel il inscrit deux buts de la tête en finale"
+      "1",
+      "2",
+      "4",
+      "3"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition Brésil est-il associé ?",
+    "text": "En quelles années Zidane a-t-il été élu Joueur mondial de la FIFA ?",
     "answers": [
-      "Coupe du monde 1998",
-      "Débuts professionnels",
-      "Euro 2004",
-      "Euro 2000"
+      "1998, 2000 et 2003",
+      "1996, 1998 et 2000",
+      "1998, 2001 et 2002",
+      "1999, 2002 et 2004"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : adversaire de son penalty en finale mondiale à Berlin ?",
+    "text": "Quel club Zidane a-t-il quitté pour rejoindre le Real Madrid en 2001 ?",
     "answers": [
-      "Espagne",
-      "Italie",
-      "Bayer Leverkusen",
-      "Panenka"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à Italie ?",
-    "answers": [
-      "adversaire renversé par deux buts français dans le temps additionnel",
-      "entraîneur auprès duquel il devient adjoint à Madrid",
-      "adversaire de son penalty en finale mondiale à Berlin",
-      "défenseur italien impliqué dans son expulsion lors de son dernier match"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition Italie est-il associé ?",
-    "answers": [
-      "Débuts professionnels",
-      "Euro 2004",
-      "Euro 2000",
-      "Coupe du monde 2006"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : adversaire contre lequel il marque après une course solitaire en huitième ?",
-    "answers": [
-      "Espagne",
-      "Angleterre",
-      "Carlo Ancelotti",
-      "Materazzi"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à Espagne ?",
-    "answers": [
-      "récompense individuelle reçue l’année du titre mondial",
-      "adversaire contre lequel il marque après une course solitaire en huitième",
-      "Ligue des champions remportée comme adjoint en 2014",
-      "club où Zidane débute en première division française"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition Espagne est-il associé ?",
-    "answers": [
-      "Débuts professionnels",
-      "Euro 2004",
-      "Coupe du monde 2006",
-      "Euro 2000"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : adversaire renversé par deux buts français dans le temps additionnel ?",
-    "answers": [
-      "Ballon d’Or 1998",
-      "La Décima",
+      "Girondins de Bordeaux",
+      "Juventus",
       "AS Cannes",
-      "Angleterre"
+      "Inter Milan"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à Angleterre ?",
+    "text": "Quel numéro Zidane portait-il au Real Madrid ?",
     "answers": [
-      "adversaire renversé par deux buts français dans le temps additionnel",
-      "but du gauche contre Leverkusen en finale européenne",
-      "série gagnée comme entraîneur principal entre 2016 et 2018",
-      "club avec lequel il atteint une finale de Coupe UEFA"
+      "10",
+      "7",
+      "5",
+      "6"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition Angleterre est-il associé ?",
+    "text": "Combien de saisons Zidane a-t-il jouées au Real Madrid ?",
     "answers": [
-      "Débuts professionnels",
-      "Euro 2004",
-      "Coupe du monde 2006",
-      "Euro 2000"
+      "3",
+      "4",
+      "6",
+      "5"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : récompense individuelle reçue l’année du titre mondial ?",
+    "text": "Combien de matches officiels Zidane a-t-il disputés avec le Real Madrid ?",
     "answers": [
-      "Volée de Glasgow",
-      "Trois Ligues des champions",
-      "Ballon d’Or 1998",
-      "Girondins de Bordeaux"
+      "227",
+      "212",
+      "241",
+      "256"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à Ballon d’Or 1998 ?",
+    "text": "Combien de buts Zidane a-t-il inscrits avec le Real Madrid ?",
     "answers": [
-      "adversaire de sa première Ligue des champions comme joueur",
-      "geste utilisé pour tromper Buffon en finale mondiale",
-      "club italien avec lequel il remporte deux championnats",
-      "récompense individuelle reçue l’année du titre mondial"
+      "45",
+      "49",
+      "52",
+      "57"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition Ballon d’Or 1998 est-il associé ?",
+    "text": "Quel club Zidane a-t-il affronté en finale de Ligue des champions 2002 ?",
     "answers": [
-      "Équipe de France",
-      "Débuts professionnels",
-      "Coupe du monde 2006",
-      "Euro 2000"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : but du gauche contre Leverkusen en finale européenne ?",
-    "answers": [
+      "Borussia Dortmund",
+      "Bayern Munich",
       "Bayer Leverkusen",
-      "Volée de Glasgow",
-      "Panenka",
       "Juventus"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à Volée de Glasgow ?",
+    "text": "Dans quelle ville Zidane a-t-il marqué sa célèbre volée en finale européenne 2002 ?",
     "answers": [
-      "entraîneur auprès duquel il devient adjoint à Madrid",
-      "défenseur italien impliqué dans son expulsion lors de son dernier match",
-      "but du gauche contre Leverkusen en finale européenne",
-      "club où il marque une volée célèbre en finale européenne"
+      "Madrid",
+      "Cardiff",
+      "Lisbonne",
+      "Glasgow"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition Volée de Glasgow est-il associé ?",
+    "text": "Dans quel stade Zidane a-t-il marqué sa volée en finale européenne 2002 ?",
     "answers": [
-      "Débuts professionnels",
-      "Coupe du monde 2006",
+      "Hampden Park",
+      "Celtic Park",
+      "Ibrox Park",
+      "Murrayfield"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a adressé le centre repris de volée par Zidane en finale européenne 2002 ?",
+    "answers": [
+      "Luís Figo",
+      "Roberto Carlos",
+      "Raúl",
+      "Claude Makélélé"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "De quel pied Zidane a-t-il marqué sa volée contre Leverkusen en 2002 ?",
+    "answers": [
+      "Droit",
+      "De la tête",
+      "Gauche",
+      "Du genou"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel était le score de la finale européenne 2002 remportée par Zidane ?",
+    "answers": [
+      "1-0",
+      "3-1",
+      "2-0",
+      "2-1"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur du Real Madrid a ouvert le score en finale européenne 2002 ?",
+    "answers": [
+      "Raúl",
+      "Zidane",
+      "Luís Figo",
+      "Fernando Morientes"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel entraîneur dirigeait le Real Madrid de Zidane lors du sacre européen 2002 ?",
+    "answers": [
+      "Fabio Capello",
+      "Vicente del Bosque",
+      "José Mourinho",
+      "Jupp Heynckes"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel championnat Zidane a-t-il remporté avec le Real Madrid en 2002-2003 ?",
+    "answers": [
+      "Serie A",
+      "Premier League",
+      "Liga",
+      "Ligue 1"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club le Real Madrid a-t-il battu en Supercoupe de l'UEFA 2002 avec Zidane ?",
+    "answers": [
+      "Galatasaray",
+      "Porto",
+      "Valence",
+      "Feyenoord"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se jouait la Supercoupe de l'UEFA 2002 remportée par Zidane ?",
+    "answers": [
+      "Monaco",
+      "Glasgow",
+      "Madrid",
+      "Rotterdam"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club paraguayen le Real Madrid de Zidane a-t-il battu en Coupe intercontinentale 2002 ?",
+    "answers": [
+      "Cerro Porteño",
+      "Olimpia",
+      "Libertad",
+      "Guaraní"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année Zidane a-t-il disputé son dernier match comme joueur du Real Madrid ?",
+    "answers": [
+      "2004",
+      "2005",
+      "2007",
+      "2006"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de sélections Zidane compte-t-il avec l'équipe de France ?",
+    "answers": [
+      "98",
+      "108",
+      "112",
+      "118"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Zidane a-t-il inscrits avec l'équipe de France ?",
+    "answers": [
+      "28",
+      "29",
+      "31",
+      "35"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle sélection Zidane a-t-il fait ses débuts avec la France en 1994 ?",
+    "answers": [
+      "Slovaquie",
+      "Roumanie",
+      "Bulgarie",
+      "République tchèque"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Zidane a-t-il inscrits pour ses débuts internationaux ?",
+    "answers": [
+      "2",
+      "1",
+      "3",
+      "0"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville Zidane a-t-il connu sa première sélection avec les Bleus ?",
+    "answers": [
+      "Marseille",
+      "Bordeaux",
+      "Paris",
+      "Lyon"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel était le score de France–République tchèque lors des débuts de Zidane ?",
+    "answers": [
+      "1-1",
+      "3-2",
+      "2-2",
+      "2-0"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quel Euro Zidane a-t-il disputé son premier grand tournoi avec la France ?",
+    "answers": [
+      "Euro 1992",
       "Euro 2000",
-      "Ligue des champions 2002"
+      "Euro 2004",
+      "Euro 1996"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : adversaire de sa première Ligue des champions comme joueur ?",
+    "text": "Quelle sélection a éliminé la France aux tirs au but en demi-finale de l'Euro 1996 ?",
     "answers": [
-      "Bayer Leverkusen",
-      "Carlo Ancelotti",
-      "Materazzi",
-      "Real Madrid"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à Bayer Leverkusen ?",
-    "answers": [
-      "Ligue des champions remportée comme adjoint en 2014",
-      "adversaire de sa première Ligue des champions comme joueur",
-      "club où Zidane débute en première division française",
-      "adversaire contre lequel il inscrit deux buts de la tête en finale"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition Bayer Leverkusen est-il associé ?",
-    "answers": [
-      "Débuts professionnels",
-      "Coupe du monde 2006",
-      "Real Madrid",
-      "Euro 2000"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : entraîneur auprès duquel il devient adjoint à Madrid ?",
-    "answers": [
-      "La Décima",
-      "AS Cannes",
-      "Brésil",
-      "Carlo Ancelotti"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à Carlo Ancelotti ?",
-    "answers": [
-      "entraîneur auprès duquel il devient adjoint à Madrid",
-      "série gagnée comme entraîneur principal entre 2016 et 2018",
-      "club avec lequel il atteint une finale de Coupe UEFA",
-      "adversaire de son penalty en finale mondiale à Berlin"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition Carlo Ancelotti est-il associé ?",
-    "answers": [
-      "Débuts professionnels",
-      "Débuts comme entraîneur",
-      "Coupe du monde 2006",
-      "Euro 2000"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : Ligue des champions remportée comme adjoint en 2014 ?",
-    "answers": [
-      "Trois Ligues des champions",
-      "Girondins de Bordeaux",
-      "La Décima",
+      "République tchèque",
+      "Allemagne",
+      "Pays-Bas",
       "Italie"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à La Décima ?",
+    "text": "Contre quelle sélection Zidane a-t-il été expulsé au Mondial 1998 ?",
     "answers": [
-      "geste utilisé pour tromper Buffon en finale mondiale",
-      "club italien avec lequel il remporte deux championnats",
-      "adversaire contre lequel il marque après une course solitaire en huitième",
-      "Ligue des champions remportée comme adjoint en 2014"
+      "Danemark",
+      "Arabie saoudite",
+      "Paraguay",
+      "Croatie"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition La Décima est-il associé ?",
+    "text": "Combien de matches Zidane a-t-il manqués après son expulsion au Mondial 1998 ?",
     "answers": [
-      "Real Madrid",
-      "Débuts professionnels",
-      "Coupe du monde 2006",
-      "Euro 2000"
+      "1",
+      "3",
+      "2",
+      "4"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : série gagnée comme entraîneur principal entre 2016 et 2018 ?",
+    "text": "Contre quelle sélection Zidane a-t-il inscrit deux buts en finale du Mondial 1998 ?",
     "answers": [
-      "Panenka",
-      "Trois Ligues des champions",
-      "Juventus",
-      "Espagne"
+      "Italie",
+      "Allemagne",
+      "Argentine",
+      "Brésil"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à Trois Ligues des champions ?",
+    "text": "Comment Zidane a-t-il marqué ses deux buts en finale du Mondial 1998 ?",
     "answers": [
-      "défenseur italien impliqué dans son expulsion lors de son dernier match",
-      "club où il marque une volée célèbre en finale européenne",
-      "série gagnée comme entraîneur principal entre 2016 et 2018",
-      "adversaire renversé par deux buts français dans le temps additionnel"
+      "De la tête",
+      "Sur penalty",
+      "Sur coup franc",
+      "Du pied gauche"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition Trois Ligues des champions est-il associé ?",
+    "text": "Quel joueur a tiré le corner du premier but de Zidane en finale du Mondial 1998 ?",
     "answers": [
-      "Débuts professionnels",
-      "Coupe du monde 2006",
+      "Youri Djorkaeff",
+      "Emmanuel Petit",
+      "Bixente Lizarazu",
+      "Didier Deschamps"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a tiré le corner du deuxième but de Zidane en finale du Mondial 1998 ?",
+    "answers": [
+      "Emmanuel Petit",
+      "Robert Pirès",
+      "Youri Djorkaeff",
+      "Thierry Henry"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel stade Zidane est-il devenu champion du monde en 1998 ?",
+    "answers": [
+      "Parc des Princes",
+      "Stade Vélodrome",
+      "Stade Gerland",
+      "Stade de France"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel était le score de la finale du Mondial 1998 ?",
+    "answers": [
+      "3-0",
+      "2-0",
+      "3-1",
+      "2-1"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel titre la France de Zidane a-t-elle remporté deux ans après le Mondial 1998 ?",
+    "answers": [
+      "Coupe des confédérations",
       "Euro 2000",
-      "Real Madrid"
+      "Ligue des nations",
+      "Mondial 2002"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : geste utilisé pour tromper Buffon en finale mondiale ?",
+    "text": "Quelle sélection la France a-t-elle battue en quart de finale de l'Euro 2000 ?",
+    "answers": [
+      "Portugal",
+      "Pays-Bas",
+      "Espagne",
+      "Italie"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle sélection Zidane a-t-il éliminée sur penalty en demi-finale de l'Euro 2000 ?",
+    "answers": [
+      "Espagne",
+      "Italie",
+      "Pays-Bas",
+      "Portugal"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "À quelle minute Zidane a-t-il marqué le but en or contre le Portugal à l'Euro 2000 ?",
+    "answers": [
+      "117e",
+      "107e",
+      "110e",
+      "120e"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a été élu joueur du tournoi à l'Euro 2000 ?",
+    "answers": [
+      "Thierry Henry",
+      "Zinédine Zidane",
+      "Luís Figo",
+      "Francesco Totti"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a marqué le but en or français en finale de l'Euro 2000 ?",
+    "answers": [
+      "Sylvain Wiltord",
+      "Zinédine Zidane",
+      "David Trezeguet",
+      "Thierry Henry"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle sélection a battu la France de Zidane en quart de finale de l'Euro 2004 ?",
+    "answers": [
+      "Angleterre",
+      "Espagne",
+      "Portugal",
+      "Grèce"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle sélection Zidane a-t-il marqué deux fois dans les arrêts de jeu à l'Euro 2004 ?",
+    "answers": [
+      "Angleterre",
+      "Croatie",
+      "Suisse",
+      "Grèce"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Sur quelles actions Zidane a-t-il marqué ses deux buts contre l'Angleterre à l'Euro 2004 ?",
+    "answers": [
+      "Deux penalties",
+      "Coup franc puis penalty",
+      "Deux coups francs",
+      "Penalty puis corner"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Pourquoi Zidane n'a-t-il pas joué le premier match de la France au Mondial 2002 ?",
+    "answers": [
+      "Suspension",
+      "Choix tactique",
+      "Blessure à la cuisse",
+      "Carton rouge"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle sélection Zidane est-il revenu lors du dernier match français au Mondial 2002 ?",
+    "answers": [
+      "Uruguay",
+      "Sénégal",
+      "Arabie saoudite",
+      "Danemark"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quelle sélection Zidane a-t-il marqué en huitième de finale du Mondial 2006 ?",
+    "answers": [
+      "Espagne",
+      "Brésil",
+      "Portugal",
+      "Suisse"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle sélection Zidane a-t-il délivré une passe décisive sur coup franc à Thierry Henry au Mondial 2006 ?",
+    "answers": [
+      "Espagne",
+      "Brésil",
+      "Portugal",
+      "Italie"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui a marqué le but français contre le Brésil en quart de finale du Mondial 2006 ?",
+    "answers": [
+      "Zidane",
+      "Patrick Vieira",
+      "Thierry Henry",
+      "Franck Ribéry"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Contre quelle sélection Zidane a-t-il marqué sur penalty en demi-finale du Mondial 2006 ?",
+    "answers": [
+      "Allemagne",
+      "Brésil",
+      "Italie",
+      "Portugal"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel geste Zidane a-t-il utilisé pour marquer son penalty en finale du Mondial 2006 ?",
     "answers": [
       "Panenka",
-      "Materazzi",
-      "Real Madrid",
-      "Angleterre"
+      "Tir croisé au sol",
+      "Contre-pied classique",
+      "Frappe en force à gauche"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à Panenka ?",
+    "text": "Quel gardien italien a encaissé la Panenka de Zidane en finale du Mondial 2006 ?",
     "answers": [
-      "club où Zidane débute en première division française",
-      "geste utilisé pour tromper Buffon en finale mondiale",
-      "adversaire contre lequel il inscrit deux buts de la tête en finale",
-      "récompense individuelle reçue l’année du titre mondial"
+      "Francesco Toldo",
+      "Gianluigi Buffon",
+      "Angelo Peruzzi",
+      "Walter Zenga"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition Panenka est-il associé ?",
+    "text": "Quel défenseur italien a égalisé après le penalty de Zidane en finale du Mondial 2006 ?",
     "answers": [
-      "Débuts professionnels",
-      "Euro 2004",
-      "Coupe du monde 2006",
-      "Euro 2000"
+      "Fabio Cannavaro",
+      "Fabio Grosso",
+      "Marco Materazzi",
+      "Gianluca Zambrotta"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Zinédine Zidane », Quel repère de la carrière de Zidane correspond à cette description : défenseur italien impliqué dans son expulsion lors de son dernier match ?",
+    "text": "Dans quelle ville Zidane a-t-il joué son dernier match professionnel ?",
     "answers": [
-      "AS Cannes",
-      "Brésil",
-      "Ballon d’Or 1998",
-      "Materazzi"
+      "Munich",
+      "Paris",
+      "Rome",
+      "Berlin"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans « Zinédine Zidane », quelle description correspond à Materazzi ?",
+    "text": "Quel joueur Zidane a-t-il frappé de la tête lors de la finale du Mondial 2006 ?",
     "answers": [
-      "défenseur italien impliqué dans son expulsion lors de son dernier match",
-      "club avec lequel il atteint une finale de Coupe UEFA",
-      "adversaire de son penalty en finale mondiale à Berlin",
-      "but du gauche contre Leverkusen en finale européenne"
+      "Marco Materazzi",
+      "Fabio Cannavaro",
+      "Gennaro Gattuso",
+      "Andrea Pirlo"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Zinédine Zidane », à quelle équipe ou compétition Materazzi est-il associé ?",
+    "text": "Quelle récompense individuelle Zidane a-t-il reçue au Mondial 2006 ?",
     "answers": [
-      "Débuts professionnels",
-      "Coupe du monde 2006",
-      "Euro 2004",
-      "Euro 2000"
+      "Soulier d'or",
+      "Ballon d'or du tournoi",
+      "Prix du fair-play",
+      "Ballon d'argent"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur français a manqué son tir au but lors de la finale mondiale 2006 ?",
+    "answers": [
+      "Thierry Henry",
+      "Franck Ribéry",
+      "David Trezeguet",
+      "Florent Malouda"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel sélectionneur dirigeait la France de Zidane au Mondial 2006 ?",
+    "answers": [
+      "Roger Lemerre",
+      "Aimé Jacquet",
+      "Laurent Blanc",
+      "Raymond Domenech"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Sous quel sélectionneur Zidane a-t-il remporté le Mondial 1998 ?",
+    "answers": [
+      "Aimé Jacquet",
+      "Roger Lemerre",
+      "Raymond Domenech",
+      "Michel Platini"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel rôle Zidane occupait-il au Real Madrid lors de la Ligue des champions 2014 ?",
+    "answers": [
+      "Directeur sportif",
+      "Entraîneur adjoint",
+      "Responsable du recrutement",
+      "Entraîneur des gardiens"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "De quel entraîneur Zidane était-il l'adjoint au Real Madrid en 2013-2014 ?",
+    "answers": [
+      "José Mourinho",
+      "Rafael Benítez",
+      "Carlo Ancelotti",
+      "Manuel Pellegrini"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle équipe réserve Zidane a-t-il entraînée avant l'équipe première du Real ?",
+    "answers": [
+      "Real Madrid C",
+      "Juvenil A",
+      "Real Madrid Femenino",
+      "Real Madrid Castilla"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quel mois Zidane est-il devenu entraîneur principal du Real Madrid ?",
+    "answers": [
+      "Janvier 2016",
+      "Août 2015",
+      "Juin 2016",
+      "Mars 2015"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quel entraîneur Zidane a-t-il succédé au Real Madrid en janvier 2016 ?",
+    "answers": [
+      "Carlo Ancelotti",
+      "Rafael Benítez",
+      "José Mourinho",
+      "Julen Lopetegui"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Zidane a-t-il battu pour gagner sa première Ligue des champions comme entraîneur ?",
+    "answers": [
+      "Juventus",
+      "Liverpool",
+      "Atlético de Madrid",
+      "Manchester City"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quelle ville Zidane a-t-il gagné sa première finale européenne comme entraîneur ?",
+    "answers": [
+      "Cardiff",
+      "Kiev",
+      "Lisbonne",
+      "Milan"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Zidane a-t-il battu en finale européenne 2017 comme entraîneur ?",
+    "answers": [
+      "Juventus",
+      "Atlético de Madrid",
+      "Liverpool",
+      "Bayern Munich"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel était le score de la finale européenne 2017 remportée par le Real de Zidane ?",
+    "answers": [
+      "3-1",
+      "4-1",
+      "2-0",
+      "4-2"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Zidane a-t-il battu en finale européenne 2018 comme entraîneur ?",
+    "answers": [
+      "Juventus",
+      "Atlético de Madrid",
+      "Liverpool",
+      "Borussia Dortmund"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de Ligues des champions consécutives Zidane a-t-il remportées comme entraîneur ?",
+    "answers": [
+      "1",
+      "2",
+      "4",
+      "3"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel record Zidane a-t-il établi en remportant les éditions européennes 2016, 2017 et 2018 ?",
+    "answers": [
+      "Premier entraîneur à en gagner trois de suite",
+      "Premier Français à gagner la compétition",
+      "Plus jeune entraîneur vainqueur",
+      "Premier joueur-entraîneur vainqueur"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de titres Zidane a-t-il remportés au total comme entraîneur du Real Madrid ?",
+    "answers": [
+      "9",
+      "11",
+      "12",
+      "14"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de championnats d'Espagne Zidane a-t-il gagnés comme entraîneur du Real ?",
+    "answers": [
+      "1",
+      "3",
+      "2",
+      "4"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de Coupes du monde des clubs Zidane a-t-il gagnées comme entraîneur du Real ?",
+    "answers": [
+      "1",
+      "3",
+      "4",
+      "2"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de matches Zidane a-t-il dirigés comme entraîneur du Real Madrid ?",
+    "answers": [
+      "263",
+      "227",
+      "250",
+      "276"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de victoires Zidane a-t-il obtenues comme entraîneur du Real Madrid ?",
+    "answers": [
+      "165",
+      "181",
+      "172",
+      "190"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
   }
 ]

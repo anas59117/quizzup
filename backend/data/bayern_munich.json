@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond à la fondation du club ?",
+    "text": "En quelle année le FC Bayern Munich a-t-il été fondé ?",
     "answers": [
       "1900",
-      "l'Allianz Arena",
-      "le rouge et le blanc",
-      "Die Roten"
+      "1897",
+      "1904",
+      "1909"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit la fondation du club ?",
+    "text": "Dans quelle ville le Bayern évolue-t-il ?",
     "answers": [
-      "l'Allianz Arena",
-      "1900",
-      "le rouge et le blanc",
-      "Die Roten"
+      "Berlin",
+      "Munich",
+      "Hambourg",
+      "Dortmund"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond au stade depuis 2005 ?",
+    "text": "Quel stade accueille les matches à domicile du Bayern depuis 2005 ?",
     "answers": [
-      "le rouge et le blanc",
-      "Die Roten",
-      "l'Allianz Arena",
-      "le TSV 1860 Munich"
+      "L’Olympiastadion",
+      "Le Signal Iduna Park",
+      "L’Allianz Arena",
+      "La Veltins-Arena"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit le stade depuis 2005 ?",
+    "text": "Quelles sont les couleurs traditionnellement associées au Bayern ?",
     "answers": [
-      "le rouge et le blanc",
-      "Die Roten",
-      "le TSV 1860 Munich",
-      "l'Allianz Arena"
+      "Bleu et blanc",
+      "Noir et jaune",
+      "Vert et blanc",
+      "Rouge et blanc"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond aux couleurs principales ?",
-    "answers": [
-      "le rouge et le blanc",
-      "Die Roten",
-      "le TSV 1860 Munich",
-      "le défenseur surnommé le Kaiser"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du Bayern Munich décrit les couleurs principales ?",
+    "text": "Quel surnom allemand du Bayern signifie « les Rouges » ?",
     "answers": [
       "Die Roten",
-      "le rouge et le blanc",
-      "le TSV 1860 Munich",
-      "le défenseur surnommé le Kaiser"
+      "Die Wölfe",
+      "Die Fohlen",
+      "Die Knappen"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond au surnom courant ?",
+    "text": "Dans quel championnat le Bayern évolue-t-il ?",
     "answers": [
-      "le TSV 1860 Munich",
-      "le défenseur surnommé le Kaiser",
-      "Die Roten",
-      "le buteur surnommé Der Bomber"
+      "La Serie A",
+      "La Bundesliga",
+      "La Liga",
+      "L’Eredivisie"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit le surnom courant ?",
+    "text": "Quel club affronte le Bayern dans le Klassiker allemand ?",
     "answers": [
-      "le TSV 1860 Munich",
-      "le défenseur surnommé le Kaiser",
-      "le buteur surnommé Der Bomber",
-      "Die Roten"
+      "Le Bayer Leverkusen",
+      "Le RB Leipzig",
+      "Le Borussia Dortmund",
+      "Le Werder Brême"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond au grand rival munichois ?",
+    "text": "Quel attaquant du Bayern était surnommé « Der Bomber » ?",
     "answers": [
-      "le TSV 1860 Munich",
-      "le défenseur surnommé le Kaiser",
-      "le buteur surnommé Der Bomber",
-      "le gardien légendaire des années 1970"
+      "Uli Hoeneß",
+      "Paul Breitner",
+      "Sepp Maier",
+      "Gerd Müller"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit le grand rival munichois ?",
+    "text": "Quel défenseur emblématique du Bayern était surnommé « le Kaiser » ?",
     "answers": [
-      "le défenseur surnommé le Kaiser",
-      "le TSV 1860 Munich",
-      "le buteur surnommé Der Bomber",
-      "le gardien légendaire des années 1970"
+      "Franz Beckenbauer",
+      "Hans-Georg Schwarzenbeck",
+      "Philipp Lahm",
+      "Klaus Augenthaler"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond à Franz Beckenbauer ?",
+    "text": "Quel gardien du Bayern était surnommé « le Titan » ?",
     "answers": [
-      "le buteur surnommé Der Bomber",
-      "le gardien légendaire des années 1970",
-      "le défenseur surnommé le Kaiser",
-      "un joueur puis dirigeant majeur"
+      "Sepp Maier",
+      "Oliver Kahn",
+      "Manuel Neuer",
+      "Jean-Marie Pfaff"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit Franz Beckenbauer ?",
+    "text": "Quel joueur a marqué le but décisif de la finale de Ligue des champions 2013 ?",
     "answers": [
-      "le buteur surnommé Der Bomber",
-      "le gardien légendaire des années 1970",
-      "un joueur puis dirigeant majeur",
-      "le défenseur surnommé le Kaiser"
+      "Franck Ribéry",
+      "Mario Mandžukić",
+      "Arjen Robben",
+      "Thomas Müller"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond à Gerd Müller ?",
+    "text": "Quel club le Bayern a-t-il battu en finale de Ligue des champions 2013 ?",
     "answers": [
-      "le buteur surnommé Der Bomber",
-      "le gardien légendaire des années 1970",
-      "un joueur puis dirigeant majeur",
-      "un double Ballon d'or du club"
+      "Chelsea",
+      "Le Real Madrid",
+      "Le FC Barcelone",
+      "Le Borussia Dortmund"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit Gerd Müller ?",
+    "text": "Quel joueur a inscrit l’unique but de la finale de Ligue des champions 2020 ?",
     "answers": [
-      "le gardien légendaire des années 1970",
-      "le buteur surnommé Der Bomber",
-      "un joueur puis dirigeant majeur",
-      "un double Ballon d'or du club"
+      "Kingsley Coman",
+      "Robert Lewandowski",
+      "Thomas Müller",
+      "Serge Gnabry"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond à Sepp Maier ?",
+    "text": "Quel était l’adversaire du Bayern en finale de Ligue des champions 2020 ?",
     "answers": [
-      "un joueur puis dirigeant majeur",
-      "un double Ballon d'or du club",
-      "le gardien légendaire des années 1970",
-      "le gardien surnommé le Titan"
+      "L’Olympique lyonnais",
+      "Le Paris Saint-Germain",
+      "Chelsea",
+      "Manchester City"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit Sepp Maier ?",
+    "text": "Quel entraîneur a mené le Bayern au triplé en 2020 ?",
     "answers": [
-      "un joueur puis dirigeant majeur",
-      "un double Ballon d'or du club",
-      "le gardien surnommé le Titan",
-      "le gardien légendaire des années 1970"
+      "Pep Guardiola",
+      "Jupp Heynckes",
+      "Hansi Flick",
+      "Carlo Ancelotti"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond à Uli Hoeneß ?",
+    "text": "Quel capitaine a soulevé la Ligue des champions avec le Bayern en 2013 ?",
     "answers": [
-      "un joueur puis dirigeant majeur",
-      "un double Ballon d'or du club",
-      "le gardien surnommé le Titan",
-      "le capitaine du triplé 2013"
+      "Bastian Schweinsteiger",
+      "Manuel Neuer",
+      "Thomas Müller",
+      "Philipp Lahm"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit Uli Hoeneß ?",
+    "text": "Quel Français a formé avec Arjen Robben le duo surnommé « Robbery » ?",
     "answers": [
-      "un double Ballon d'or du club",
-      "un joueur puis dirigeant majeur",
-      "le gardien surnommé le Titan",
-      "le capitaine du triplé 2013"
+      "Franck Ribéry",
+      "Kingsley Coman",
+      "Bixente Lizarazu",
+      "Corentin Tolisso"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond à Karl-Heinz Rummenigge ?",
+    "text": "Quel joueur a établi avec le Bayern un record de 41 buts sur une saison de Bundesliga en 2020-2021 ?",
     "answers": [
-      "le gardien surnommé le Titan",
-      "le capitaine du triplé 2013",
-      "un double Ballon d'or du club",
-      "un milieu formé au club"
+      "Gerd Müller",
+      "Robert Lewandowski",
+      "Harry Kane",
+      "Mario Gómez"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit Karl-Heinz Rummenigge ?",
+    "text": "Quel ancien stade munichois le Bayern a-t-il occupé avant l’Allianz Arena ?",
     "answers": [
-      "le gardien surnommé le Titan",
-      "le capitaine du triplé 2013",
-      "un milieu formé au club",
-      "un double Ballon d'or du club"
+      "Le Grünwalder Stadion",
+      "Le Westfalenstadion",
+      "L’Olympiastadion",
+      "Le Neckarstadion"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond à Oliver Kahn ?",
+    "text": "Quelle devise bavaroise est étroitement associée au Bayern ?",
     "answers": [
-      "le gardien surnommé le Titan",
-      "le capitaine du triplé 2013",
-      "un milieu formé au club",
-      "un attaquant formé au club"
+      "Echte Liebe",
+      "Nur der HSV",
+      "Wir sind Werder",
+      "Mia san mia"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit Oliver Kahn ?",
+    "text": "En quelle année le Bayern a-t-il remporté son premier championnat d’Allemagne ?",
     "answers": [
-      "le capitaine du triplé 2013",
-      "le gardien surnommé le Titan",
-      "un milieu formé au club",
-      "un attaquant formé au club"
+      "1932",
+      "1927",
+      "1957",
+      "1969"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond à Philipp Lahm ?",
+    "text": "Quel club le Bayern a-t-il battu en finale du championnat allemand de 1932 ?",
     "answers": [
-      "un milieu formé au club",
-      "un attaquant formé au club",
-      "le capitaine du triplé 2013",
-      "un gardien arrivé en 2011"
+      "Schalke 04",
+      "L’Eintracht Francfort",
+      "Le Hertha Berlin",
+      "Le 1. FC Nuremberg"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit Philipp Lahm ?",
+    "text": "En quelle année le Bayern a-t-il remporté sa première Coupe d’Allemagne ?",
     "answers": [
-      "un milieu formé au club",
-      "un attaquant formé au club",
-      "un gardien arrivé en 2011",
-      "le capitaine du triplé 2013"
+      "1932",
+      "1966",
+      "1957",
+      "1969"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond à Bastian Schweinsteiger ?",
+    "text": "Quel club fut battu par le Bayern en finale de la Coupe d’Allemagne 1957 ?",
     "answers": [
-      "un milieu formé au club",
-      "un attaquant formé au club",
-      "un gardien arrivé en 2011",
+      "Borussia Dortmund",
+      "Werder Brême",
+      "Hambourg SV",
+      "Fortuna Düsseldorf"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "En quelle saison le Bayern a-t-il disputé sa première campagne de Bundesliga ?",
+    "answers": [
+      "1965-1966",
+      "1963-1964",
+      "1964-1965",
+      "1966-1967"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel trophée européen le Bayern a-t-il remporté en 1967 ?",
+    "answers": [
+      "La Coupe des clubs champions",
+      "La Coupe des vainqueurs de coupe",
+      "La Coupe UEFA",
+      "La Coupe Intertoto"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club le Bayern a-t-il battu en finale de la Coupe des vainqueurs de coupe 1967 ?",
+    "answers": [
+      "Celtic",
+      "Aberdeen",
+      "Rangers",
+      "Hearts"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Qui a marqué l’unique but de la finale européenne de 1967 ?",
+    "answers": [
+      "Gerd Müller",
+      "Franz Beckenbauer",
+      "Rainer Ohlhauser",
+      "Franz Roth"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "En quelle année le Bayern a-t-il remporté sa première Bundesliga ?",
+    "answers": [
+      "1969",
+      "1966",
+      "1972",
       "1974"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit Bastian Schweinsteiger ?",
+    "text": "Quel entraîneur a conduit le Bayern au triplé de 2013 ?",
     "answers": [
-      "un attaquant formé au club",
-      "un milieu formé au club",
-      "un gardien arrivé en 2011",
-      "1974"
+      "Ottmar Hitzfeld",
+      "Jupp Heynckes",
+      "Louis van Gaal",
+      "Pep Guardiola"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond à Thomas Müller ?",
+    "text": "Quel club le Bayern a-t-il battu aux tirs au but en finale européenne 2001 ?",
     "answers": [
-      "un gardien arrivé en 2011",
-      "1974",
-      "un attaquant formé au club",
-      "1974, 1975 et 1976"
+      "Manchester United",
+      "Chelsea",
+      "Valence",
+      "Porto"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit Thomas Müller ?",
+    "text": "Quel gardien a arrêté le tir au but décisif de la finale 2001 ?",
     "answers": [
-      "un gardien arrivé en 2011",
-      "1974",
-      "1974, 1975 et 1976",
-      "un attaquant formé au club"
+      "Manuel Neuer",
+      "Hans-Jörg Butt",
+      "Raimond Aumann",
+      "Oliver Kahn"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "medium"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond à Manuel Neuer ?",
+    "text": "Quel joueur a transformé le penalty du Bayern pendant le temps réglementaire de la finale 2001 ?",
     "answers": [
-      "un gardien arrivé en 2011",
-      "1974",
-      "1974, 1975 et 1976",
+      "Stefan Effenberg",
+      "Mehmet Scholl",
+      "Giovane Élber",
+      "Hasan Salihamidžić"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel adversaire a battu le Bayern en finale de Ligue des champions 1999 ?",
+    "answers": [
+      "Le Real Madrid",
+      "Manchester United",
+      "L’AC Milan",
+      "La Juventus"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur du Bayern a ouvert le score en finale de 1999 ?",
+    "answers": [
+      "Carsten Jancker",
+      "Stefan Effenberg",
+      "Mario Basler",
+      "Mehmet Scholl"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club a battu le Bayern en finale de Ligue des champions 2012 à Munich ?",
+    "answers": [
+      "Manchester United",
+      "L’Inter Milan",
+      "Le FC Barcelone",
+      "Chelsea"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur du Bayern a ouvert le score en finale de 2012 ?",
+    "answers": [
+      "Thomas Müller",
+      "Mario Gómez",
+      "Arjen Robben",
+      "Bastian Schweinsteiger"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur de Chelsea a égalisé en finale de 2012 ?",
+    "answers": [
+      "Frank Lampard",
+      "Didier Drogba",
+      "Ashley Cole",
+      "Juan Mata"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur a manqué un penalty en prolongation pour le Bayern lors de la finale 2012 ?",
+    "answers": [
+      "Bastian Schweinsteiger",
+      "Thomas Müller",
+      "Arjen Robben",
+      "Mario Gómez"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club le Bayern a-t-il battu en finale de Coupe UEFA 1996 ?",
+    "answers": [
+      "L’Inter Milan",
+      "Le Benfica",
+      "Le FC Séville",
+      "Les Girondins de Bordeaux"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur a égalisé à la dernière minute du premier match de la finale européenne 1974 ?",
+    "answers": [
+      "Hans-Georg Schwarzenbeck",
+      "Gerd Müller",
+      "Uli Hoeneß",
+      "Franz Roth"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire le Bayern affrontait-il en finale de Coupe d’Europe 1974 ?",
+    "answers": [
+      "Le Real Madrid",
+      "L’Atlético de Madrid",
+      "Le FC Barcelone",
       "Valence"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit Manuel Neuer ?",
+    "text": "Quel fut le score du match rejoué de la finale européenne 1974 ?",
     "answers": [
-      "1974",
-      "un gardien arrivé en 2011",
+      "3-0",
+      "4-1",
+      "4-0",
+      "2-0"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quels deux joueurs ont chacun inscrit un doublé lors du match rejoué de la finale 1974 ?",
+    "answers": [
+      "Gerd Müller et Franz Roth",
+      "Uli Hoeneß et Franz Beckenbauer",
+      "Franz Roth et Rainer Zobel",
+      "Uli Hoeneß et Gerd Müller"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club le Bayern a-t-il battu en finale de Coupe d’Europe 1975 ?",
+    "answers": [
+      "Leeds United",
+      "Liverpool",
+      "Nottingham Forest",
+      "Aston Villa"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quels joueurs ont marqué pour le Bayern en finale européenne 1975 ?",
+    "answers": [
+      "Uli Hoeneß et Gerd Müller",
+      "Franz Roth et Gerd Müller",
+      "Franz Beckenbauer et Franz Roth",
+      "Karl-Heinz Rummenigge et Gerd Müller"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club le Bayern a-t-il battu en finale de Coupe d’Europe 1976 ?",
+    "answers": [
+      "Le Real Madrid",
+      "Le PSV Eindhoven",
+      "L’AS Saint-Étienne",
+      "Le Benfica"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui a inscrit le seul but de la finale européenne 1976 ?",
+    "answers": [
+      "Gerd Müller",
+      "Uli Hoeneß",
+      "Bernd Dürnberger",
+      "Franz Roth"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville la finale européenne 1976 s’est-elle jouée ?",
+    "answers": [
+      "Glasgow",
+      "Londres",
+      "Paris",
+      "Bruxelles"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire a battu le Bayern en finale de Coupe d’Europe 1982 ?",
+    "answers": [
+      "Liverpool",
+      "Aston Villa",
+      "Nottingham Forest",
+      "Hambourg SV"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur d’Aston Villa a marqué l’unique but de la finale 1982 ?",
+    "answers": [
+      "Tony Morley",
+      "Gary Shaw",
+      "Peter Withe",
+      "Dennis Mortimer"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club a renversé le Bayern en finale de Coupe d’Europe 1987 ?",
+    "answers": [
+      "Le Benfica",
+      "Le PSV Eindhoven",
+      "Le Steaua Bucarest",
+      "Le FC Porto"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur du FC Porto a égalisé d’une talonnade en finale 1987 ?",
+    "answers": [
+      "Rabah Madjer",
+      "Juary",
+      "Paulo Futre",
+      "Fernando Gomes"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur du FC Porto a marqué le but victorieux en finale 1987 ?",
+    "answers": [
+      "Rabah Madjer",
+      "Juary",
+      "Paulo Futre",
+      "João Pinto"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur du Bayern avait ouvert le score en finale 1987 ?",
+    "answers": [
+      "Lothar Matthäus",
+      "Andreas Brehme",
+      "Ludwig Kögl",
+      "Dieter Hoeneß"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de Coupes d’Europe/Ligues des champions le Bayern avait-il remportées après son sacre de 2020 ?",
+    "answers": [
+      "5",
+      "7",
+      "8",
+      "6"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelles sont les trois années consécutives des premiers sacres européens du Bayern ?",
+    "answers": [
       "1974, 1975 et 1976",
-      "Valence"
+      "1973, 1974 et 1975",
+      "1975, 1976 et 1977",
+      "1972, 1973 et 1974"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond à la première Coupe d'Europe ?",
+    "text": "Quel club le Bayern a-t-il éliminé 7-0 sur l’ensemble des deux matches en demi-finale de Ligue des champions 2013 ?",
     "answers": [
-      "1974, 1975 et 1976",
-      "Valence",
-      "1974",
-      "Bundesliga, Coupe d'Allemagne et Ligue des champions"
+      "Le Real Madrid",
+      "Le FC Barcelone",
+      "La Juventus",
+      "Arsenal"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit la première Coupe d'Europe ?",
+    "text": "Quel fut le score du match aller Bayern-Barcelone en demi-finale 2013 ?",
     "answers": [
-      "1974, 1975 et 1976",
-      "Valence",
-      "Bundesliga, Coupe d'Allemagne et Ligue des champions",
-      "1974"
+      "3-0",
+      "4-1",
+      "4-0",
+      "5-0"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond aux trois Coupes d'Europe consécutives ?",
-    "answers": [
-      "1974, 1975 et 1976",
-      "Valence",
-      "Bundesliga, Coupe d'Allemagne et Ligue des champions",
-      "le Borussia Dortmund"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du Bayern Munich décrit les trois Coupes d'Europe consécutives ?",
-    "answers": [
-      "Valence",
-      "1974, 1975 et 1976",
-      "Bundesliga, Coupe d'Allemagne et Ligue des champions",
-      "le Borussia Dortmund"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Bayern Munich, quelle réponse correspond à la finale de Ligue des champions 2001 ?",
-    "answers": [
-      "Bundesliga, Coupe d'Allemagne et Ligue des champions",
-      "le Borussia Dortmund",
-      "Valence",
-      "Arjen Robben"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément du Bayern Munich décrit la finale de Ligue des champions 2001 ?",
-    "answers": [
-      "Bundesliga, Coupe d'Allemagne et Ligue des champions",
-      "le Borussia Dortmund",
-      "Arjen Robben",
-      "Valence"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Bayern Munich, quelle réponse correspond au triplé de 2013 ?",
-    "answers": [
-      "Bundesliga, Coupe d'Allemagne et Ligue des champions",
-      "le Borussia Dortmund",
-      "Arjen Robben",
-      "six trophées remportés"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément du Bayern Munich décrit le triplé de 2013 ?",
-    "answers": [
-      "le Borussia Dortmund",
-      "Bundesliga, Coupe d'Allemagne et Ligue des champions",
-      "Arjen Robben",
-      "six trophées remportés"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Bayern Munich, quelle réponse correspond à l'adversaire en finale 2013 ?",
+    "text": "Quel joueur a ouvert le score pour le Bayern en finale 2013 ?",
     "answers": [
       "Arjen Robben",
-      "six trophées remportés",
-      "le Borussia Dortmund",
-      "Hansi Flick"
+      "Thomas Müller",
+      "Franck Ribéry",
+      "Mario Mandžukić"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit l'adversaire en finale 2013 ?",
+    "text": "Quel joueur de Dortmund a égalisé sur penalty en finale 2013 ?",
     "answers": [
+      "İlkay Gündoğan",
+      "Marco Reus",
+      "Robert Lewandowski",
+      "Mats Hummels"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel stade la finale de Ligue des champions 2013 s’est-elle déroulée ?",
+    "answers": [
+      "L’Allianz Arena",
+      "Wembley",
+      "L’Olympiastadion de Berlin",
+      "Old Trafford"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club le Bayern a-t-il écrasé 8-2 en quart de finale de Ligue des champions 2020 ?",
+    "answers": [
+      "Chelsea",
+      "L’Atlético de Madrid",
+      "Le FC Barcelone",
+      "Tottenham"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville s’est jouée la finale de Ligue des champions 2020 ?",
+    "answers": [
+      "Madrid",
+      "Porto",
+      "Istanbul",
+      "Lisbonne"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur a conduit le Bayern à la Ligue des champions 2001 ?",
+    "answers": [
+      "Ottmar Hitzfeld",
+      "Giovanni Trapattoni",
+      "Felix Magath",
+      "Jürgen Klinsmann"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel capitaine du Bayern a soulevé le trophée européen en 2001 ?",
+    "answers": [
+      "Oliver Kahn",
+      "Stefan Effenberg",
+      "Mehmet Scholl",
+      "Lothar Matthäus"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur de Valence a ouvert le score sur penalty en finale 2001 ?",
+    "answers": [
+      "Santiago Cañizares",
+      "Pablo Aimar",
+      "Gaizka Mendieta",
+      "John Carew"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur du Bayern a vu son penalty arrêté au début de la finale 2001 ?",
+    "answers": [
+      "Stefan Effenberg",
+      "Hasan Salihamidžić",
+      "Carsten Jancker",
+      "Mehmet Scholl"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel défenseur de Valence a manqué le tir au but décisif en finale 2001 ?",
+    "answers": [
+      "Mauricio Pellegrino",
+      "Roberto Ayala",
+      "Amedeo Carboni",
+      "Miroslav Đukić"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur néerlandais a mené le Bayern en finale de Ligue des champions 2010 ?",
+    "answers": [
+      "Guus Hiddink",
+      "Louis van Gaal",
+      "Dick Advocaat",
+      "Frank Rijkaard"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club a battu le Bayern en finale de Ligue des champions 2010 ?",
+    "answers": [
+      "Le FC Barcelone",
+      "Manchester United",
+      "L’Inter Milan",
+      "Chelsea"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel ancien joueur du Bayern a entraîné le club lors du doublé Bundesliga-Coupe de 2008 ?",
+    "answers": [
+      "Jürgen Klinsmann",
+      "Felix Magath",
+      "Louis van Gaal",
+      "Ottmar Hitzfeld"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur a dirigé le Bayern pendant ses trois saisons complètes de 2013 à 2016 ?",
+    "answers": [
+      "Pep Guardiola",
+      "Carlo Ancelotti",
+      "Jupp Heynckes",
+      "Niko Kovač"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a marqué cinq buts en neuf minutes contre Wolfsburg en septembre 2015 ?",
+    "answers": [
+      "Thomas Müller",
+      "Robert Lewandowski",
       "Arjen Robben",
-      "six trophées remportés",
-      "Hansi Flick",
-      "le Borussia Dortmund"
+      "Mario Götze"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond au but victorieux en finale 2013 ?",
+    "text": "Quel record de Bundesliga Lewandowski a-t-il établi avec le Bayern en 2020-2021 ?",
     "answers": [
+      "40 buts en une saison",
+      "42 buts en une saison",
+      "41 buts en une saison",
+      "43 buts en une saison"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Gerd Müller a-t-il inscrits en 607 matches officiels avec le Bayern ?",
+    "answers": [
+      "523",
+      "601",
+      "487",
+      "566"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur est devenu en 2024 le recordman des apparitions officielles du Bayern devant Sepp Maier ?",
+    "answers": [
+      "Thomas Müller",
+      "Manuel Neuer",
+      "Philipp Lahm",
+      "Oliver Kahn"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de matches officiels Thomas Müller totalisait-il à son départ du Bayern en 2025 ?",
+    "answers": [
+      "743",
+      "756",
+      "768",
+      "701"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le nombre de buts officiels de Thomas Müller avec le Bayern selon le bilan publié à son départ ?",
+    "answers": [
+      "247",
+      "238",
+      "250",
+      "266"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur occupe la deuxième place des buteurs historiques du Bayern derrière Gerd Müller selon le bilan 2025 du club ?",
+    "answers": [
+      "Thomas Müller",
+      "Karl-Heinz Rummenigge",
+      "Roland Wohlfarth",
+      "Robert Lewandowski"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel ancien joueur du Bayern a remporté deux Ballons d’Or consécutifs en 1980 et 1981 ?",
+    "answers": [
+      "Karl-Heinz Rummenigge",
+      "Franz Beckenbauer",
+      "Gerd Müller",
+      "Lothar Matthäus"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur du Bayern a remporté le Ballon d’Or 1970 ?",
+    "answers": [
+      "Franz Beckenbauer",
+      "Gerd Müller",
+      "Sepp Maier",
+      "Uli Hoeneß"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelles années Franz Beckenbauer a-t-il remporté le Ballon d’Or ?",
+    "answers": [
+      "1970 et 1974",
+      "1974 et 1976",
+      "1972 et 1976",
+      "1972 et 1974"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel ancien capitaine du Bayern a remporté le Ballon d’Or 1990 ?",
+    "answers": [
+      "Klaus Augenthaler",
+      "Stefan Effenberg",
+      "Andreas Brehme",
+      "Lothar Matthäus"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur français du Bayern a remporté le prix UEFA du meilleur joueur d’Europe en 2013 ?",
+    "answers": [
+      "Franck Ribéry",
       "Arjen Robben",
-      "six trophées remportés",
-      "Hansi Flick",
-      "la Bundesliga"
+      "Thomas Müller",
+      "Bastian Schweinsteiger"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit le but victorieux en finale 2013 ?",
+    "text": "Quel joueur du Bayern a remporté le prix FIFA The Best en 2020 ?",
     "answers": [
-      "six trophées remportés",
-      "Arjen Robben",
-      "Hansi Flick",
-      "la Bundesliga"
+      "Manuel Neuer",
+      "Robert Lewandowski",
+      "Thomas Müller",
+      "Joshua Kimmich"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond au sextuplé de 2020 ?",
+    "text": "Quel gardien a rejoint le Bayern en 2011 en provenance de Schalke 04 ?",
     "answers": [
-      "Hansi Flick",
-      "la Bundesliga",
-      "six trophées remportés",
-      "Munich"
+      "Oliver Kahn",
+      "Sven Ulreich",
+      "Manuel Neuer",
+      "Hans-Jörg Butt"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit le sextuplé de 2020 ?",
+    "text": "De quel club Robert Lewandowski est-il arrivé gratuitement au Bayern en 2014 ?",
     "answers": [
-      "Hansi Flick",
-      "la Bundesliga",
-      "Munich",
-      "six trophées remportés"
+      "Le Bayer Leverkusen",
+      "Lech Poznań",
+      "Schalke 04",
+      "Le Borussia Dortmund"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond à l'entraîneur du triplé 2020 ?",
+    "text": "De quel club Arjen Robben a-t-il rejoint le Bayern en 2009 ?",
     "answers": [
-      "Hansi Flick",
-      "la Bundesliga",
-      "Munich",
-      "1900"
+      "Le Real Madrid",
+      "Chelsea",
+      "Le PSV Eindhoven",
+      "Groningue"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit l'entraîneur du triplé 2020 ?",
+    "text": "De quel club Franck Ribéry a-t-il rejoint le Bayern en 2007 ?",
     "answers": [
-      "la Bundesliga",
-      "Hansi Flick",
-      "Munich",
-      "1900"
+      "Galatasaray",
+      "L’Olympique de Marseille",
+      "Le FC Metz",
+      "Lille"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond au championnat allemand ?",
+    "text": "Quel joueur du Bayern a marqué en finale du Mondial 2014 avec l’Allemagne ?",
     "answers": [
-      "Munich",
-      "1900",
-      "la Bundesliga",
-      "l'Allianz Arena"
+      "Thomas Müller",
+      "Bastian Schweinsteiger",
+      "Mario Götze",
+      "Toni Kroos"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit le championnat allemand ?",
+    "text": "Quel terrain est associé au siège et au centre d’entraînement historique du Bayern ?",
     "answers": [
-      "Munich",
-      "1900",
-      "l'Allianz Arena",
-      "la Bundesliga"
+      "La Grünwalder Straße",
+      "La Leopoldstraße",
+      "La Maximilianstraße",
+      "La Säbener Straße"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Pour Bayern Munich, quelle réponse correspond au siège historique bavarois ?",
+    "text": "Avec quel club le Bayern a-t-il partagé l’Allianz Arena jusqu’en 2017 ?",
     "answers": [
-      "Munich",
-      "1900",
-      "l'Allianz Arena",
-      "le rouge et le blanc"
+      "Le TSV 1860 Munich",
+      "Le SpVgg Unterhaching",
+      "Le FC Augsbourg",
+      "Le Wacker Munich"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément du Bayern Munich décrit le siège historique bavarois ?",
+    "text": "Quel club le Bayern a-t-il battu 2-0 en finale de la Coupe du monde des clubs 2013 ?",
     "answers": [
-      "1900",
-      "Munich",
-      "l'Allianz Arena",
-      "le rouge et le blanc"
+      "Les Corinthians",
+      "Le Raja Casablanca",
+      "San Lorenzo",
+      "Monterrey"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quels joueurs ont marqué pour le Bayern en finale mondiale 2013 ?",
+    "answers": [
+      "Thomas Müller et Mario Götze",
+      "Franck Ribéry et Dante",
+      "Dante et Thiago Alcántara",
+      "Thiago Alcántara et Philipp Lahm"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club le Bayern a-t-il battu en finale de la Coupe du monde des clubs disputée en février 2021 ?",
+    "answers": [
+      "Al Ahly",
+      "Palmeiras",
+      "Al-Hilal",
+      "Les Tigres UANL"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a marqué l’unique but de cette finale mondiale contre les Tigres ?",
+    "answers": [
+      "Benjamin Pavard",
+      "Robert Lewandowski",
+      "Joshua Kimmich",
+      "Kingsley Coman"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club le Bayern a-t-il battu en Supercoupe de l’UEFA 2013 ?",
+    "answers": [
+      "Le FC Séville",
+      "Chelsea",
+      "Manchester United",
+      "Le Real Madrid"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel gardien du Bayern a arrêté le dernier tir au but de la Supercoupe de l’UEFA 2013 ?",
+    "answers": [
+      "Tom Starke",
+      "Pepe Reina",
+      "Manuel Neuer",
+      "Sven Ulreich"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club le Bayern a-t-il battu en Supercoupe de l’UEFA 2020 ?",
+    "answers": [
+      "Chelsea",
+      "Villarreal",
+      "L’Atlético de Madrid",
+      "Le FC Séville"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]

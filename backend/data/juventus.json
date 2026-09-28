@@ -1,502 +1,1102 @@
 [
   {
+    "text": "En quelle année la Juventus est-elle fondée ?",
+    "answers": [
+      "1897",
+      "1899",
+      "1905",
+      "1908"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
     "text": "Dans quelle ville joue la Juventus ?",
     "answers": [
-      "Turin",
       "Milan",
+      "Turin",
       "Rome",
       "Naples"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel surnom italien de la Juventus signifie la Vieille Dame ?",
+    "text": "Quel surnom de la Juventus signifie « la Vieille Dame » ?",
     "answers": [
-      "I Rossoneri",
+      "La Dea",
+      "La Viola",
       "La Vecchia Signora",
-      "I Nerazzurri",
-      "I Partenopei"
+      "La Lupa"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : numéro 10 et meilleur buteur historique du club ?",
+    "text": "Quelles sont les couleurs traditionnelles de la Juventus ?",
     "answers": [
-      "Gianluigi Buffon",
-      "Zinédine Zidane",
+      "Rouge et noir",
+      "Bleu et noir",
+      "Bleu et blanc",
+      "Noir et blanc"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel attaquant est le meilleur buteur historique de la Juventus ?",
+    "answers": [
       "Alessandro Del Piero",
-      "Marcello Lippi"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Juventus », quelle description correspond à Alessandro Del Piero ?",
-    "answers": [
-      "libéro élégant vainqueur de toutes les compétitions UEFA majeures",
-      "attaquant français longtemps meilleur buteur étranger du club",
-      "gardien titulaire de la finale européenne gagnée à Rome",
-      "numéro 10 et meilleur buteur historique du club"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Juventus », à quelle période ou campagne Alessandro Del Piero est-il associé ici ?",
-    "answers": [
-      "Années 1990-2010",
-      "Années 2000-2020",
-      "Années 1990",
-      "Années 2010"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : gardien emblématique revenu au club après une saison à Paris ?",
-    "answers": [
-      "Gaetano Scirea",
-      "Gianluigi Buffon",
+      "Giampiero Boniperti",
       "David Trezeguet",
-      "Angelo Peruzzi"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Juventus », quelle description correspond à Gianluigi Buffon ?",
-    "answers": [
-      "meneur français triple Ballon d’Or sous le maillot turinois",
-      "numéro 10 Ballon d’Or 1993",
-      "gardien emblématique revenu au club après une saison à Paris",
-      "attaquant buteur en finale européenne contre l’Ajax"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Juventus », à quelle période ou campagne Gianluigi Buffon est-il associé ici ?",
-    "answers": [
-      "Années 1990-2010",
-      "Années 1990",
-      "Années 2010",
-      "Années 2000-2020"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : libéro élégant vainqueur de toutes les compétitions UEFA majeures ?",
-    "answers": [
-      "Gaetano Scirea",
-      "Michel Platini",
-      "Roberto Baggio",
-      "Fabrizio Ravanelli"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Juventus », quelle description correspond à Gaetano Scirea ?",
-    "answers": [
-      "milieu tchèque Ballon d’Or 2003",
-      "libéro élégant vainqueur de toutes les compétitions UEFA majeures",
-      "milieu capitaine devenu entraîneur d’un triplé de titres nationaux",
-      "attaquant italo-argentin Ballon d’Or 1961"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Juventus », à quelle période ou campagne Gaetano Scirea est-il associé ici ?",
-    "answers": [
-      "Années 1990-2010",
-      "Années 1990",
-      "Années 1970-1980",
-      "Années 2010"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : meneur français triple Ballon d’Or sous le maillot turinois ?",
-    "answers": [
-      "Pavel Nedvěd",
-      "Antonio Conte",
-      "Omar Sívori",
-      "Michel Platini"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Juventus », quelle description correspond à Michel Platini ?",
-    "answers": [
-      "meneur français triple Ballon d’Or sous le maillot turinois",
-      "meneur français finaliste européen avec la Juventus",
-      "entraîneur vainqueur de la Ligue des champions 1996",
-      "attaquant devenu président historique du club"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Juventus », à quelle période ou campagne Michel Platini est-il associé ici ?",
-    "answers": [
-      "Années 1990-2010",
-      "Années 1980",
-      "Années 1990",
-      "Années 2010"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : milieu tchèque Ballon d’Or 2003 ?",
-    "answers": [
-      "Zinédine Zidane",
-      "Marcello Lippi",
-      "Pavel Nedvěd",
-      "Giampiero Boniperti"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Juventus », quelle description correspond à Pavel Nedvěd ?",
-    "answers": [
-      "attaquant français longtemps meilleur buteur étranger du club",
-      "gardien titulaire de la finale européenne gagnée à Rome",
-      "défenseur rugueux pilier du club et de l’Italie",
-      "milieu tchèque Ballon d’Or 2003"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Juventus », à quelle période ou campagne Pavel Nedvěd est-il associé ici ?",
-    "answers": [
-      "Années 2000",
-      "Années 1990-2010",
-      "Années 1990",
-      "Années 2010"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : meneur français finaliste européen avec la Juventus ?",
-    "answers": [
-      "David Trezeguet",
-      "Zinédine Zidane",
-      "Angelo Peruzzi",
-      "Claudio Gentile"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Juventus », quelle description correspond à Zinédine Zidane ?",
-    "answers": [
-      "numéro 10 Ballon d’Or 1993",
-      "attaquant buteur en finale européenne contre l’Ajax",
-      "meneur français finaliste européen avec la Juventus",
-      "gardien capitaine champion d’Italie à plusieurs reprises"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Juventus », à quelle période ou campagne Zinédine Zidane est-il associé ici ?",
-    "answers": [
-      "Années 1990-2010",
-      "Années 2000",
-      "Années 2010",
-      "Années 1990"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : attaquant français longtemps meilleur buteur étranger du club ?",
-    "answers": [
-      "David Trezeguet",
-      "Roberto Baggio",
-      "Fabrizio Ravanelli",
-      "Dino Zoff"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Juventus », quelle description correspond à David Trezeguet ?",
-    "answers": [
-      "milieu capitaine devenu entraîneur d’un triplé de titres nationaux",
-      "attaquant français longtemps meilleur buteur étranger du club",
-      "attaquant italo-argentin Ballon d’Or 1961",
-      "numéro 10 et meilleur buteur historique du club"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Juventus », à quelle période ou campagne David Trezeguet est-il associé ici ?",
-    "answers": [
-      "Années 1990-2010",
-      "Années 1990",
-      "Années 2000",
-      "Années 2010"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : numéro 10 Ballon d’Or 1993 ?",
-    "answers": [
-      "Antonio Conte",
-      "Omar Sívori",
-      "Alessandro Del Piero",
       "Roberto Baggio"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Juventus », quelle description correspond à Roberto Baggio ?",
+    "text": "Quel joueur détient le record de matches officiels avec la Juventus ?",
     "answers": [
-      "numéro 10 Ballon d’Or 1993",
-      "entraîneur vainqueur de la Ligue des champions 1996",
-      "attaquant devenu président historique du club",
-      "gardien emblématique revenu au club après une saison à Paris"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Juventus », à quelle période ou campagne Roberto Baggio est-il associé ici ?",
-    "answers": [
-      "Années 1990-2010",
-      "Années 1990",
-      "Années 2000",
-      "Années 2010"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : milieu capitaine devenu entraîneur d’un triplé de titres nationaux ?",
-    "answers": [
-      "Marcello Lippi",
-      "Giampiero Boniperti",
-      "Antonio Conte",
-      "Gianluigi Buffon"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Juventus », quelle description correspond à Antonio Conte ?",
-    "answers": [
-      "gardien titulaire de la finale européenne gagnée à Rome",
-      "défenseur rugueux pilier du club et de l’Italie",
-      "libéro élégant vainqueur de toutes les compétitions UEFA majeures",
-      "milieu capitaine devenu entraîneur d’un triplé de titres nationaux"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Juventus », à quelle période ou campagne Antonio Conte est-il associé ici ?",
-    "answers": [
-      "Années 1990-2010",
-      "Années 2000-2020",
-      "Années 1990",
-      "Années 2010"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : entraîneur vainqueur de la Ligue des champions 1996 ?",
-    "answers": [
-      "Angelo Peruzzi",
-      "Marcello Lippi",
-      "Claudio Gentile",
+      "Gianluigi Buffon",
+      "Alessandro Del Piero",
+      "Giorgio Chiellini",
       "Gaetano Scirea"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Juventus », quelle description correspond à Marcello Lippi ?",
-    "answers": [
-      "attaquant buteur en finale européenne contre l’Ajax",
-      "gardien capitaine champion d’Italie à plusieurs reprises",
-      "entraîneur vainqueur de la Ligue des champions 1996",
-      "meneur français triple Ballon d’Or sous le maillot turinois"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Juventus », à quelle période ou campagne Marcello Lippi est-il associé ici ?",
-    "answers": [
-      "Années 1990-2010",
-      "Années 2000",
-      "Années 2010",
-      "Ligue des champions 1996"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : gardien titulaire de la finale européenne gagnée à Rome ?",
+    "text": "Quel gardien italien emblématique rejoint la Juventus en 2001 ?",
     "answers": [
       "Angelo Peruzzi",
-      "Fabrizio Ravanelli",
       "Dino Zoff",
+      "Gianluigi Buffon",
+      "Stefano Tacconi"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel Français remporte trois Ballons d’or consécutifs comme joueur de la Juventus ?",
+    "answers": [
+      "Zinédine Zidane",
+      "David Trezeguet",
+      "Didier Deschamps",
       "Michel Platini"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Juventus », quelle description correspond à Angelo Peruzzi ?",
+    "text": "Quel Tchèque remporte le Ballon d’or 2003 avec la Juventus ?",
     "answers": [
-      "attaquant italo-argentin Ballon d’Or 1961",
-      "gardien titulaire de la finale européenne gagnée à Rome",
-      "numéro 10 et meilleur buteur historique du club",
-      "milieu tchèque Ballon d’Or 2003"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Juventus », à quelle période ou campagne Angelo Peruzzi est-il associé ici ?",
-    "answers": [
-      "Années 1990-2010",
-      "Années 2000",
-      "Ligue des champions 1996",
-      "Années 2010"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : attaquant buteur en finale européenne contre l’Ajax ?",
-    "answers": [
-      "Omar Sívori",
-      "Alessandro Del Piero",
       "Pavel Nedvěd",
-      "Fabrizio Ravanelli"
+      "Tomáš Rosický",
+      "Karel Poborský",
+      "Petr Čech"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Juventus », quelle description correspond à Fabrizio Ravanelli ?",
+    "text": "Quel Italien remporte le Ballon d’or 1993 comme joueur de la Juventus ?",
     "answers": [
-      "attaquant buteur en finale européenne contre l’Ajax",
-      "attaquant devenu président historique du club",
-      "gardien emblématique revenu au club après une saison à Paris",
-      "meneur français finaliste européen avec la Juventus"
+      "Paolo Rossi",
+      "Roberto Baggio",
+      "Alessandro Del Piero",
+      "Gianfranco Zola"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Juventus », à quelle période ou campagne Fabrizio Ravanelli est-il associé ici ?",
+    "text": "Quel entraîneur mène la Juventus au titre européen de 1996 ?",
     "answers": [
-      "Années 1990-2010",
-      "Ligue des champions 1996",
-      "Années 2000",
-      "Années 2010"
+      "Giovanni Trapattoni",
+      "Carlo Ancelotti",
+      "Marcello Lippi",
+      "Antonio Conte"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : attaquant italo-argentin Ballon d’Or 1961 ?",
+    "text": "Quel club la Juventus bat-elle en finale européenne 1996 ?",
     "answers": [
-      "Giampiero Boniperti",
+      "Borussia Dortmund",
+      "Real Madrid",
+      "Liverpool",
+      "Ajax"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel joueur marque pour la Juventus en finale européenne 1996 ?",
+    "answers": [
+      "Fabrizio Ravanelli",
+      "Gianluca Vialli",
+      "Alessandro Del Piero",
+      "Antonio Conte"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel gardien de la Juventus arrête deux tirs au but en finale 1996 ?",
+    "answers": [
       "Gianluigi Buffon",
-      "Omar Sívori",
-      "Zinédine Zidane"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Juventus », quelle description correspond à Omar Sívori ?",
-    "answers": [
-      "défenseur rugueux pilier du club et de l’Italie",
-      "libéro élégant vainqueur de toutes les compétitions UEFA majeures",
-      "attaquant français longtemps meilleur buteur étranger du club",
-      "attaquant italo-argentin Ballon d’Or 1961"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Juventus », à quelle période ou campagne Omar Sívori est-il associé ici ?",
-    "answers": [
-      "Années 1950-1960",
-      "Années 1990-2010",
-      "Années 2000",
-      "Années 2010"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : attaquant devenu président historique du club ?",
-    "answers": [
-      "Claudio Gentile",
-      "Giampiero Boniperti",
-      "Gaetano Scirea",
-      "David Trezeguet"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Juventus », quelle description correspond à Giampiero Boniperti ?",
-    "answers": [
-      "gardien capitaine champion d’Italie à plusieurs reprises",
-      "meneur français triple Ballon d’Or sous le maillot turinois",
-      "attaquant devenu président historique du club",
-      "numéro 10 Ballon d’Or 1993"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Juventus », à quelle période ou campagne Giampiero Boniperti est-il associé ici ?",
-    "answers": [
-      "Années 1990-2010",
-      "Années 2000",
-      "Années 2010",
-      "Années 1940-1960"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : défenseur rugueux pilier du club et de l’Italie ?",
-    "answers": [
-      "Claudio Gentile",
-      "Dino Zoff",
-      "Michel Platini",
-      "Roberto Baggio"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Juventus », quelle description correspond à Claudio Gentile ?",
-    "answers": [
-      "numéro 10 et meilleur buteur historique du club",
-      "défenseur rugueux pilier du club et de l’Italie",
-      "milieu tchèque Ballon d’Or 2003",
-      "milieu capitaine devenu entraîneur d’un triplé de titres nationaux"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Juventus », à quelle période ou campagne Claudio Gentile est-il associé ici ?",
-    "answers": [
-      "Années 1990-2010",
-      "Années 1990",
-      "Années 1970-1980",
-      "Années 2010"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Juventus », Quelle légende de la Juventus correspond à cette description : gardien capitaine champion d’Italie à plusieurs reprises ?",
-    "answers": [
-      "Alessandro Del Piero",
-      "Pavel Nedvěd",
-      "Antonio Conte",
+      "Angelo Peruzzi",
+      "Stefano Tacconi",
       "Dino Zoff"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Juventus », quelle description correspond à Dino Zoff ?",
+    "text": "Quel Français devient entraîneur de la Juventus en 2006 ?",
     "answers": [
-      "gardien capitaine champion d’Italie à plusieurs reprises",
-      "gardien emblématique revenu au club après une saison à Paris",
-      "meneur français finaliste européen avec la Juventus",
-      "entraîneur vainqueur de la Ligue des champions 1996"
+      "Zinédine Zidane",
+      "Laurent Blanc",
+      "Didier Deschamps",
+      "Arsène Wenger"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans « Juventus », à quelle période ou campagne Dino Zoff est-il associé ici ?",
+    "text": "Quel entraîneur lance la série de neuf Scudetti consécutifs en 2011-12 ?",
     "answers": [
-      "Années 1990-2010",
-      "Années 1970-1980",
-      "Années 1990",
-      "Années 2010"
+      "Massimiliano Allegri",
+      "Marcello Lippi",
+      "Fabio Capello",
+      "Antonio Conte"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel Portugais rejoint la Juventus en 2018 ?",
+    "answers": [
+      "Cristiano Ronaldo",
+      "Luís Figo",
+      "Rui Costa",
+      "Nani"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel stade inauguré en 2011 accueille la Juventus ?",
+    "answers": [
+      "Stadio Olimpico",
+      "Juventus Stadium",
+      "San Siro",
+      "Stadio delle Alpi"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel club affronte la Juventus dans le Derby della Mole ?",
+    "answers": [
+      "Inter Milan",
+      "AC Milan",
+      "Torino",
+      "Fiorentina"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel surnom italien désigne les joueurs de la Juventus selon leurs couleurs ?",
+    "answers": [
+      "Rossoneri",
+      "Nerazzurri",
+      "Azzurri",
+      "Bianconeri"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel jour précis la Juventus est-elle fondée ?",
+    "answers": [
+      "1er novembre 1897",
+      "1er janvier 1897",
+      "9 avril 1905",
+      "16 décembre 1899"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel est le premier président de la Juventus ?",
+    "answers": [
+      "Edoardo Agnelli",
+      "Enrico Canfari",
+      "Giampiero Boniperti",
+      "Umberto Agnelli"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle couleur porte initialement la Juventus avant le noir et blanc ?",
+    "answers": [
+      "Bleu",
+      "Vert",
+      "Rose",
+      "Rouge"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "De quelle ville anglaise proviennent les maillots noir et blanc adoptés par la Juventus ?",
+    "answers": [
+      "Londres",
+      "Manchester",
+      "Sheffield",
+      "Nottingham"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "En quelle année la Juventus remporte-t-elle son premier championnat d’Italie ?",
+    "answers": [
+      "1905",
+      "1901",
+      "1910",
+      "1926"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel entraîneur mène la Juventus à sa première Coupe UEFA en 1977 ?",
+    "answers": [
+      "Carlo Parola",
+      "Giovanni Trapattoni",
+      "Čestmír Vycpálek",
+      "Dino Zoff"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club la Juventus bat-elle en finale de Coupe UEFA 1977 ?",
+    "answers": [
+      "FC Barcelone",
+      "Borussia Mönchengladbach",
+      "Athletic Club",
+      "Hambourg"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur marque à l’aller de la finale UEFA 1977 ?",
+    "answers": [
+      "Roberto Bettega",
+      "Franco Causio",
+      "Gaetano Scirea",
+      "Marco Tardelli"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur marque le but extérieur décisif au retour de la finale UEFA 1977 ?",
+    "answers": [
+      "Roberto Bettega",
+      "Marco Tardelli",
+      "Franco Causio",
+      "Claudio Gentile"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club la Juventus bat-elle en finale de Coupe des coupes 1984 ?",
+    "answers": [
+      "Benfica",
+      "Porto",
+      "Sporting CP",
+      "Anderlecht"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club la Juventus bat-elle en finale de Coupe d’Europe 1985 ?",
+    "answers": [
+      "Real Madrid",
+      "Hambourg",
+      "Liverpool",
+      "Ajax"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur marque l’unique but de la finale européenne 1985 ?",
+    "answers": [
+      "Zbigniew Boniek",
+      "Paolo Rossi",
+      "Marco Tardelli",
+      "Michel Platini"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club la Juventus bat-elle en finale de Coupe UEFA 1990 ?",
+    "answers": [
+      "Fiorentina",
+      "Napoli",
+      "Inter Milan",
+      "Parme"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club la Juventus bat-elle en finale de Coupe UEFA 1993 ?",
+    "answers": [
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "Schalke 04",
+      "Bayer Leverkusen"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel est le score cumulé de la finale UEFA 1993 ?",
+    "answers": [
+      "4-1",
+      "5-2",
+      "6-1",
+      "6-2"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur transforme le tir au but décisif en finale européenne 1996 ?",
+    "answers": [
+      "Gianluca Vialli",
+      "Alessandro Del Piero",
+      "Didier Deschamps",
+      "Vladimir Jugović"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club bat la Juventus en finale européenne 1997 ?",
+    "answers": [
+      "Borussia Dortmund",
+      "Ajax",
+      "Real Madrid",
+      "Manchester United"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club bat la Juventus en finale européenne 1998 ?",
+    "answers": [
+      "Borussia Dortmund",
+      "Real Madrid",
+      "Bayern Munich",
+      "FC Barcelone"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club bat la Juventus aux tirs au but en finale européenne 2003 ?",
+    "answers": [
+      "Inter Milan",
+      "Real Madrid",
+      "AC Milan",
+      "Liverpool"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club bat la Juventus en finale européenne 2015 ?",
+    "answers": [
+      "Real Madrid",
+      "Bayern Munich",
+      "Chelsea",
+      "FC Barcelone"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quel lieu turinois se trouvait le premier terrain de la Juventus ?",
+    "answers": [
+      "Piazza d’Armi",
+      "Piazza Castello",
+      "Parco del Valentino",
+      "Piazza San Carlo"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel président de la famille Agnelli prend la tête du club en 1923 ?",
+    "answers": [
+      "Gianni Agnelli",
+      "Edoardo Agnelli",
+      "Umberto Agnelli",
+      "Andrea Agnelli"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de championnats consécutifs la Juventus remporte-t-elle de 1931 à 1935 ?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel trio offensif des années 1950 est surnommé le « Trio Magico » ?",
+    "answers": [
+      "Platini, Boniek et Rossi",
+      "Bettega, Causio et Anastasi",
+      "Del Piero, Vialli et Ravanelli",
+      "Boniperti, Charles et Sívori"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel Gallois compose le Trio Magico avec Boniperti et Sívori ?",
+    "answers": [
+      "John Charles",
+      "Ian Rush",
+      "Ryan Giggs",
+      "Mark Hughes"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur de la Juventus remporte le Ballon d’or 1961 ?",
+    "answers": [
+      "Giampiero Boniperti",
+      "Omar Sívori",
+      "John Charles",
+      "Luis del Sol"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel cap national la Juventus atteint-elle en 1958 pour arborer sa première étoile ?",
+    "answers": [
+      "5 titres",
+      "15 titres",
+      "10 titres de champion",
+      "20 titres"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien reste invaincu pendant 903 minutes en Serie A 1972-73 avec la Juventus ?",
+    "answers": [
+      "Stefano Tacconi",
+      "Gianluigi Buffon",
+      "Roberto Anzolin",
+      "Dino Zoff"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur capitaine la Juventus lors de sa première Coupe UEFA en 1977 ?",
+    "answers": [
+      "Giuseppe Furino",
+      "Gaetano Scirea",
+      "Dino Zoff",
+      "Roberto Bettega"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club bat la Juventus en finale de Coupe des villes de foires 1971 ?",
+    "answers": [
+      "Arsenal",
+      "Leeds United",
+      "Newcastle United",
+      "Tottenham"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club bat la Juventus en finale européenne 1973 ?",
+    "answers": [
+      "Bayern Munich",
+      "Benfica",
+      "Ajax",
+      "Celtic"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club bat la Juventus en finale européenne 1983 ?",
+    "answers": [
+      "Aston Villa",
+      "Liverpool",
+      "Nottingham Forest",
+      "Hambourg"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur marque l’unique but contre la Juventus en finale européenne 1983 ?",
+    "answers": [
+      "Felix Magath",
+      "Horst Hrubesch",
+      "Manfred Kaltz",
+      "Lars Bastrup"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur ouvre le score pour la Juventus en finale de Coupe des coupes 1984 ?",
+    "answers": [
+      "Zbigniew Boniek",
+      "Beniamino Vignola",
+      "Michel Platini",
+      "Paolo Rossi"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel Polonais marque le second but turinois en finale de Coupe des coupes 1984 ?",
+    "answers": [
+      "Włodzimierz Smolarek",
+      "Grzegorz Lato",
+      "Zbigniew Boniek",
+      "Kazimierz Deyna"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel stade se joue la finale européenne 1985 ?",
+    "answers": [
+      "Wembley",
+      "Praterstadion",
+      "Olympiastadion",
+      "Heysel"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur subit la faute entraînant le penalty de la finale 1985 ?",
+    "answers": [
+      "Zbigniew Boniek",
+      "Paolo Rossi",
+      "Marco Tardelli",
+      "Massimo Briaschi"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de personnes meurent lors du drame du Heysel avant la finale 1985 ?",
+    "answers": [
+      "32",
+      "39",
+      "41",
+      "45"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien est titulaire pour la Juventus en finale européenne 1985 ?",
+    "answers": [
+      "Dino Zoff",
+      "Angelo Peruzzi",
+      "Stefano Tacconi",
+      "Gianluigi Buffon"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club la Juventus bat-elle en Coupe intercontinentale 1985 ?",
+    "answers": [
+      "River Plate",
+      "Independiente",
+      "Boca Juniors",
+      "Argentinos Juniors"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur danois égalise à 2-2 pour la Juventus en Coupe intercontinentale 1985 ?",
+    "answers": [
+      "Michael Laudrup",
+      "Preben Elkjær",
+      "Jesper Olsen",
+      "Søren Lerby"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur mène la Juventus à la Coupe UEFA 1990 ?",
+    "answers": [
+      "Giovanni Trapattoni",
+      "Dino Zoff",
+      "Luigi Maifredi",
+      "Marcello Lippi"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur marque le premier but de la finale aller UEFA 1990 contre la Fiorentina ?",
+    "answers": [
+      "Pierluigi Casiraghi",
+      "Luigi De Agostini",
+      "Roberto Galia",
+      "Salvatore Schillaci"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur inscrit un doublé à Dortmund lors de la finale aller UEFA 1993 ?",
+    "answers": [
+      "Dino Baggio",
+      "Andreas Möller",
+      "Fabrizio Ravanelli",
+      "Roberto Baggio"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur marque le premier but de la Juventus à Dortmund lors de la finale aller UEFA 1993 ?",
+    "answers": [
+      "Dino Baggio",
+      "Roberto Baggio",
+      "Andreas Möller",
+      "Fabrizio Ravanelli"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville se joue la finale européenne 1996 ?",
+    "answers": [
+      "Milan",
+      "Rome",
+      "Munich",
+      "Vienne"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur de l’Ajax égalise en finale européenne 1996 ?",
+    "answers": [
+      "Patrick Kluivert",
+      "Marc Overmars",
+      "Jari Litmanen",
+      "Edgar Davids"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quels deux joueurs de l’Ajax voient leur tir au but arrêté en finale 1996 ?",
+    "answers": [
+      "Litmanen et Kluivert",
+      "Overmars et de Boer",
+      "Bogarde et Musampa",
+      "Edgar Davids et Sonny Silooy"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel capitaine soulève la Coupe d’Europe 1996 pour la Juventus ?",
+    "answers": [
+      "Gianluca Vialli",
+      "Antonio Conte",
+      "Ciro Ferrara",
+      "Alessandro Del Piero"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club la Juventus bat-elle en Coupe intercontinentale 1996 ?",
+    "answers": [
+      "Boca Juniors",
+      "River Plate",
+      "Vélez Sarsfield",
+      "Cruzeiro"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur marque l’unique but de cette finale intercontinentale 1996 ?",
+    "answers": [
+      "Zinédine Zidane",
+      "Gianluca Vialli",
+      "Alessandro Del Piero",
+      "Alen Bokšić"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire la Juventus écrase-t-elle 6-1 à l’aller de la Supercoupe UEFA 1996 ?",
+    "answers": [
+      "Borussia Dortmund",
+      "Ajax",
+      "Manchester United",
+      "Paris Saint-Germain"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur inscrit un doublé pour Dortmund en finale européenne 1997 ?",
+    "answers": [
+      "Karl-Heinz Riedle",
+      "Lars Ricken",
+      "Andreas Möller",
+      "Stéphane Chapuisat"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel remplaçant marque presque immédiatement le troisième but de Dortmund en finale 1997 ?",
+    "answers": [
+      "Paulo Sousa",
+      "Lars Ricken",
+      "Andreas Möller",
+      "Jürgen Kohler"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur du Real Madrid marque en finale européenne 1998 contre la Juventus ?",
+    "answers": [
+      "Raúl",
+      "Fernando Morientes",
+      "Predrag Mijatović",
+      "Davor Šuker"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur de la Juventus est suspendu pour la finale européenne 2003 après son carton en demi-finale ?",
+    "answers": [
+      "Edgar Davids",
+      "David Trezeguet",
+      "Gianluca Zambrotta",
+      "Pavel Nedvěd"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien arrête le tir au but de David Trezeguet en finale européenne 2003 ?",
+    "answers": [
+      "Dida",
+      "Christian Abbiati",
+      "Sebastiano Rossi",
+      "Zeljko Kalac"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur égalise pour la Juventus en finale européenne 2015 ?",
+    "answers": [
+      "Carlos Tévez",
+      "Álvaro Morata",
+      "Paul Pogba",
+      "Arturo Vidal"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur marque pour la Juventus en finale européenne 2017 ?",
+    "answers": [
+      "Gonzalo Higuaín",
+      "Paulo Dybala",
+      "Mario Mandžukić",
+      "Dani Alves"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club bat la Juventus 4-1 en finale européenne 2017 ?",
+    "answers": [
+      "FC Barcelone",
+      "Bayern Munich",
+      "Atlético de Madrid",
+      "Real Madrid"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de matches officiels Alessandro Del Piero a-t-il disputés avec la Juventus ?",
+    "answers": [
+      "705",
+      "685",
+      "693",
+      "718"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de buts officiels Del Piero a-t-il inscrits pour la Juventus ?",
+    "answers": [
+      "267",
+      "290",
+      "276",
+      "301"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur détient le record de matches de Serie A avec la Juventus ?",
+    "answers": [
+      "Alessandro Del Piero",
+      "Giorgio Chiellini",
+      "Gianluigi Buffon",
+      "Gaetano Scirea"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de matches officiels Gianluigi Buffon a-t-il disputés avec la Juventus ?",
+    "answers": [
+      "656",
+      "674",
+      "705",
+      "685"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur marque le but extérieur décisif de la finale UEFA 1977 à Bilbao ?",
+    "answers": [
+      "Roberto Bettega",
+      "Marco Tardelli",
+      "Franco Causio",
+      "Romeo Benetti"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le score du retour de la finale UEFA 1977 à Bilbao ?",
+    "answers": [
+      "Athletic 1-0 Juventus",
+      "Athletic 2-1 Juventus",
+      "Athletic 2-0 Juventus",
+      "Athletic 1-1 Juventus"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur marque pour la Juventus lors du nul 2-2 en Coupe intercontinentale 1985 avant les tirs au but ?",
+    "answers": [
+      "Paolo Rossi",
+      "Marco Tardelli",
+      "Michel Platini",
+      "Massimo Briaschi"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel gardien arrête deux penalties pour la Juventus en finale intercontinentale 1985 ?",
+    "answers": [
+      "Angelo Peruzzi",
+      "Dino Zoff",
+      "Gianluigi Buffon",
+      "Stefano Tacconi"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le score cumulé de la finale UEFA 1990 contre la Fiorentina ?",
+    "answers": [
+      "3-1",
+      "4-1",
+      "3-2",
+      "4-2"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur marque le troisième but de la Juventus à l’aller de la finale UEFA 1990 ?",
+    "answers": [
+      "Pierluigi Casiraghi",
+      "Luigi De Agostini",
+      "Roberto Galia",
+      "Salvatore Schillaci"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur marque deux buts au retour de la finale UEFA 1993 contre Dortmund ?",
+    "answers": [
+      "Roberto Baggio",
+      "Andreas Möller",
+      "Dino Baggio",
+      "Fabrizio Ravanelli"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur marque l’autre but turinois au retour de la finale UEFA 1993 ?",
+    "answers": [
+      "Dino Baggio",
+      "Antonio Conte",
+      "Moreno Torricelli",
+      "Andreas Möller"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quels quatre joueurs de la Juventus réussissent leur tir au but en finale 1996 ?",
+    "answers": [
+      "Ferrara, Pessotto, Padovano et Jugović",
+      "Conte, Vialli, Del Piero et Deschamps",
+      "Torricelli, Sousa, Ravanelli et Zidane",
+      "Di Livio, Tacchinardi, Lombardo et Peruzzi"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville la Juventus remporte-t-elle la Coupe intercontinentale 1996 ?",
+    "answers": [
+      "Rome",
+      "Tokyo",
+      "Yokohama",
+      "Doha"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Français tire le premier penalty de la Juventus, repoussé par Dida, en finale 2003 ?",
+    "answers": [
+      "Lilian Thuram",
+      "Zinédine Zidane",
+      "David Trezeguet",
+      "Didier Deschamps"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quels trois joueurs de la Juventus manquent leur tir au but en finale 2003 ?",
+    "answers": [
+      "Nedvěd, Davids et Thuram",
+      "Del Piero, Camoranesi et Tacchinardi",
+      "Ferrara, Birindelli et Di Vaio",
+      "Trezeguet, Zalayeta et Montero"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur inscrit le dernier but de la finale européenne 2015 ?",
+    "answers": [
+      "Neymar",
+      "Luis Suárez",
+      "Lionel Messi",
+      "Ivan Rakitić"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur du Real Madrid inscrit un doublé en finale européenne 2017 ?",
+    "answers": [
+      "Gareth Bale",
+      "Cristiano Ronaldo",
+      "Karim Benzema",
+      "Sergio Ramos"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur marque le but décisif de la Supercoupe d’Italie 2018 contre Milan ?",
+    "answers": [
+      "Paulo Dybala",
+      "Mario Mandžukić",
+      "Cristiano Ronaldo",
+      "Douglas Costa"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel entraîneur remporte cinq Scudetti consécutifs avec la Juventus de 2015 à 2019 ?",
+    "answers": [
+      "Antonio Conte",
+      "Marcello Lippi",
+      "Carlo Ancelotti",
+      "Massimiliano Allegri"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]

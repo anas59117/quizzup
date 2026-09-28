@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond à la fondation officielle du club ?",
+    "text": "En quelle année l’Olympique de Marseille a-t-il été fondé ?",
     "answers": [
       "1899",
-      "le Stade Vélodrome",
-      "l'OM",
-      "le blanc et le bleu ciel"
+      "1901",
+      "1905",
+      "1910"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de l'Olympique de Marseille décrit la fondation officielle du club ?",
+    "text": "Quelle est la devise historique de l’OM ?",
     "answers": [
-      "le Stade Vélodrome",
-      "1899",
-      "l'OM",
-      "le blanc et le bleu ciel"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond au stade ?",
-    "answers": [
-      "l'OM",
-      "le blanc et le bleu ciel",
-      "le Stade Vélodrome",
-      "Droit au but"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément de l'Olympique de Marseille décrit le stade ?",
-    "answers": [
-      "l'OM",
-      "le blanc et le bleu ciel",
+      "Toujours plus haut",
       "Droit au but",
-      "le Stade Vélodrome"
+      "Fiers de nos couleurs",
+      "Unis pour vaincre"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond au surnom ?",
+    "text": "Comment se nomme le stade de l’Olympique de Marseille ?",
     "answers": [
-      "l'OM",
-      "le blanc et le bleu ciel",
-      "Droit au but",
-      "le Paris Saint-Germain"
+      "Stade de Gerland",
+      "Stade Chaban-Delmas",
+      "Stade Vélodrome",
+      "Stade de la Beaujoire"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de l'Olympique de Marseille décrit le surnom ?",
+    "text": "Quelles couleurs sont traditionnellement associées à l’OM ?",
     "answers": [
-      "le blanc et le bleu ciel",
-      "l'OM",
-      "Droit au but",
-      "le Paris Saint-Germain"
+      "Rouge et noir",
+      "Bleu marine et or",
+      "Vert et blanc",
+      "Blanc et bleu ciel"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond aux couleurs traditionnelles ?",
+    "text": "Quel club affronte l’OM lors du Classique ?",
     "answers": [
-      "Droit au but",
-      "le Paris Saint-Germain",
-      "le blanc et le bleu ciel",
-      "1937"
+      "Paris Saint-Germain",
+      "Olympique Lyonnais",
+      "AS Monaco",
+      "Girondins de Bordeaux"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de l'Olympique de Marseille décrit les couleurs traditionnelles ?",
+    "text": "En quelle année l’OM a-t-il remporté la Ligue des champions ?",
     "answers": [
-      "Droit au but",
-      "le Paris Saint-Germain",
-      "1937",
-      "le blanc et le bleu ciel"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond à la devise ?",
-    "answers": [
-      "Droit au but",
-      "le Paris Saint-Germain",
-      "1937",
-      "le buteur surnommé Monsieur Goal"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément de l'Olympique de Marseille décrit la devise ?",
-    "answers": [
-      "le Paris Saint-Germain",
-      "Droit au but",
-      "1937",
-      "le buteur surnommé Monsieur Goal"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond au rival du Classique ?",
-    "answers": [
-      "1937",
-      "le buteur surnommé Monsieur Goal",
-      "le Paris Saint-Germain",
-      "le Ballon d'or 1991"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément de l'Olympique de Marseille décrit le rival du Classique ?",
-    "answers": [
-      "1937",
-      "le buteur surnommé Monsieur Goal",
-      "le Ballon d'or 1991",
-      "le Paris Saint-Germain"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond au premier titre de champion de France professionnel ?",
-    "answers": [
-      "1937",
-      "le buteur surnommé Monsieur Goal",
-      "le Ballon d'or 1991",
-      "un ailier anglais culte"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément de l'Olympique de Marseille décrit le premier titre de champion de France professionnel ?",
-    "answers": [
-      "le buteur surnommé Monsieur Goal",
-      "1937",
-      "le Ballon d'or 1991",
-      "un ailier anglais culte"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond à Josip Skoblar ?",
-    "answers": [
-      "le Ballon d'or 1991",
-      "un ailier anglais culte",
-      "le buteur surnommé Monsieur Goal",
-      "le buteur de la finale européenne 1993"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément de l'Olympique de Marseille décrit Josip Skoblar ?",
-    "answers": [
-      "le Ballon d'or 1991",
-      "un ailier anglais culte",
-      "le buteur de la finale européenne 1993",
-      "le buteur surnommé Monsieur Goal"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond à Jean-Pierre Papin ?",
-    "answers": [
-      "le Ballon d'or 1991",
-      "un ailier anglais culte",
-      "le buteur de la finale européenne 1993",
-      "le capitaine de 1993"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément de l'Olympique de Marseille décrit Jean-Pierre Papin ?",
-    "answers": [
-      "un ailier anglais culte",
-      "le Ballon d'or 1991",
-      "le buteur de la finale européenne 1993",
-      "le capitaine de 1993"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond à Chris Waddle ?",
-    "answers": [
-      "le buteur de la finale européenne 1993",
-      "le capitaine de 1993",
-      "un ailier anglais culte",
-      "le président de l'âge d'or 1986-1994"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément de l'Olympique de Marseille décrit Chris Waddle ?",
-    "answers": [
-      "le buteur de la finale européenne 1993",
-      "le capitaine de 1993",
-      "le président de l'âge d'or 1986-1994",
-      "un ailier anglais culte"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond à Basile Boli ?",
-    "answers": [
-      "le buteur de la finale européenne 1993",
-      "le capitaine de 1993",
-      "le président de l'âge d'or 1986-1994",
-      "l'entraîneur champion d'Europe 1993"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément de l'Olympique de Marseille décrit Basile Boli ?",
-    "answers": [
-      "le capitaine de 1993",
-      "le buteur de la finale européenne 1993",
-      "le président de l'âge d'or 1986-1994",
-      "l'entraîneur champion d'Europe 1993"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond à Didier Deschamps ?",
-    "answers": [
-      "le président de l'âge d'or 1986-1994",
-      "l'entraîneur champion d'Europe 1993",
-      "le capitaine de 1993",
-      "l'Étoile rouge de Belgrade"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément de l'Olympique de Marseille décrit Didier Deschamps ?",
-    "answers": [
-      "le président de l'âge d'or 1986-1994",
-      "l'entraîneur champion d'Europe 1993",
-      "l'Étoile rouge de Belgrade",
-      "le capitaine de 1993"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond à Bernard Tapie ?",
-    "answers": [
-      "le président de l'âge d'or 1986-1994",
-      "l'entraîneur champion d'Europe 1993",
-      "l'Étoile rouge de Belgrade",
-      "1993"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément de l'Olympique de Marseille décrit Bernard Tapie ?",
-    "answers": [
-      "l'entraîneur champion d'Europe 1993",
-      "le président de l'âge d'or 1986-1994",
-      "l'Étoile rouge de Belgrade",
-      "1993"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond à Raymond Goethals ?",
-    "answers": [
-      "l'Étoile rouge de Belgrade",
+      "1991",
       "1993",
-      "l'entraîneur champion d'Europe 1993",
-      "l'AC Milan"
+      "1994",
+      "2004"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de l'Olympique de Marseille décrit Raymond Goethals ?",
+    "text": "Quel club l’OM a-t-il battu en finale européenne en 1993 ?",
     "answers": [
-      "l'Étoile rouge de Belgrade",
-      "1993",
-      "l'AC Milan",
-      "l'entraîneur champion d'Europe 1993"
+      "Juventus",
+      "Inter Milan",
+      "AC Milan",
+      "Bayern Munich"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond à la finale européenne 1991 ?",
+    "text": "Qui a marqué le but de la victoire en finale européenne 1993 ?",
     "answers": [
-      "l'Étoile rouge de Belgrade",
-      "1993",
-      "l'AC Milan",
-      "Munich"
+      "Didier Deschamps",
+      "Rudi Völler",
+      "Abedi Pelé",
+      "Basile Boli"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de l'Olympique de Marseille décrit la finale européenne 1991 ?",
+    "text": "Quel était le score de la finale européenne 1993 ?",
     "answers": [
-      "1993",
-      "l'Étoile rouge de Belgrade",
-      "l'AC Milan",
-      "Munich"
+      "1-0",
+      "2-0",
+      "2-1",
+      "1-1"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond à la Ligue des champions remportée ?",
+    "text": "Dans quelle ville l’OM a-t-il remporté la finale européenne 1993 ?",
     "answers": [
-      "l'AC Milan",
+      "Milan",
       "Munich",
-      "1993",
-      "1-0"
+      "Paris",
+      "Bruxelles"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de l'Olympique de Marseille décrit la Ligue des champions remportée ?",
+    "text": "Qui était le capitaine de l’OM champion d’Europe en 1993 ?",
     "answers": [
-      "l'AC Milan",
-      "Munich",
-      "1-0",
-      "1993"
+      "Basile Boli",
+      "Abedi Pelé",
+      "Didier Deschamps",
+      "Éric Di Meco"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond à l'adversaire en finale 1993 ?",
+    "text": "Quel entraîneur a conduit l’OM au sacre européen de 1993 ?",
     "answers": [
-      "l'AC Milan",
-      "Munich",
-      "1-0",
-      "l'Olympique de Marseille"
+      "Franz Beckenbauer",
+      "Gérard Gili",
+      "Rolland Courbis",
+      "Raymond Goethals"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de l'Olympique de Marseille décrit l'adversaire en finale 1993 ?",
+    "text": "Quel président est associé à l’âge d’or de l’OM de 1986 à 1994 ?",
     "answers": [
-      "Munich",
-      "l'AC Milan",
-      "1-0",
-      "l'Olympique de Marseille"
+      "Bernard Tapie",
+      "Robert Louis-Dreyfus",
+      "Pape Diouf",
+      "Jean-Claude Dassier"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond au lieu de la finale 1993 ?",
+    "text": "Quel attaquant de l’OM a remporté le Ballon d’Or 1991 ?",
     "answers": [
-      "1-0",
-      "l'Olympique de Marseille",
-      "Munich",
-      "un trophée européen partagé"
+      "Chris Waddle",
+      "Jean-Pierre Papin",
+      "Abedi Pelé",
+      "Didier Drogba"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de l'Olympique de Marseille décrit le lieu de la finale 1993 ?",
+    "text": "Quel gardien détient le record de matches avec l’OM ?",
     "answers": [
-      "1-0",
-      "l'Olympique de Marseille",
-      "un trophée européen partagé",
-      "Munich"
+      "Fabien Barthez",
+      "Pascal Olmeta",
+      "Steve Mandanda",
+      "Joseph-Antoine Bell"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond au score de la finale 1993 ?",
+    "text": "Quel attaquant ivoirien est devenu une idole de l’OM en 2003-04 ?",
     "answers": [
-      "1-0",
-      "l'Olympique de Marseille",
-      "un trophée européen partagé",
-      "un sacre sous Didier Deschamps"
+      "Bafétimbi Gomis",
+      "Bakari Koné",
+      "Salomon Kalou",
+      "Didier Drogba"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de l'Olympique de Marseille décrit le score de la finale 1993 ?",
+    "text": "Quel entraîneur a ramené le titre de champion de France à l’OM en 2010 ?",
     "answers": [
-      "l'Olympique de Marseille",
-      "1-0",
-      "un trophée européen partagé",
-      "un sacre sous Didier Deschamps"
+      "Didier Deschamps",
+      "Éric Gerets",
+      "Marcelo Bielsa",
+      "José Anigo"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond au seul club français vainqueur de la Ligue des champions masculine ?",
+    "text": "Quel joueur anglais était surnommé « Magic Chris » à Marseille ?",
     "answers": [
-      "un trophée européen partagé",
-      "un sacre sous Didier Deschamps",
-      "l'Olympique de Marseille",
-      "le début d'une série de trois victoires"
+      "Trevor Steven",
+      "Chris Waddle",
+      "Glenn Hoddle",
+      "David Platt"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de l'Olympique de Marseille décrit le seul club français vainqueur de la Ligue des champions masculine ?",
+    "text": "Quel Croate surnommé « Monsieur Goal » a joué à l’OM ?",
     "answers": [
-      "un trophée européen partagé",
-      "un sacre sous Didier Deschamps",
-      "le début d'une série de trois victoires",
-      "l'Olympique de Marseille"
+      "Alen Bokšić",
+      "Dario Šimić",
+      "Josip Skoblar",
+      "Igor Tudor"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond à la Coupe Intertoto 2005 ?",
+    "text": "Quel est le surnom courant de l’Olympique de Marseille ?",
     "answers": [
-      "un trophée européen partagé",
-      "un sacre sous Didier Deschamps",
-      "le début d'une série de trois victoires",
-      "un espace historique de groupes de supporters"
+      "Les Verts",
+      "Les Canaris",
+      "Les Dogues",
+      "L’OM"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel élément de l'Olympique de Marseille décrit la Coupe Intertoto 2005 ?",
+    "text": "Qui est le fondateur de l’Olympique de Marseille ?",
     "answers": [
-      "un sacre sous Didier Deschamps",
-      "un trophée européen partagé",
-      "le début d'une série de trois victoires",
-      "un espace historique de groupes de supporters"
+      "René Dufaure de Montmirail",
+      "Ernest Roesler",
+      "Marcel Leclerc",
+      "Gabriel Dard"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond au titre de champion 2009-2010 ?",
+    "text": "En quelle année le Stade Vélodrome a-t-il été inauguré ?",
     "answers": [
-      "le début d'une série de trois victoires",
-      "un espace historique de groupes de supporters",
-      "un sacre sous Didier Deschamps",
-      "Marseille"
+      "1929",
+      "1937",
+      "1945",
+      "1952"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
-    "text": "Quel élément de l'Olympique de Marseille décrit le titre de champion 2009-2010 ?",
+    "text": "Quel club a affronté l’OM lors du match inaugural du Vélodrome ?",
     "answers": [
-      "le début d'une série de trois victoires",
-      "un espace historique de groupes de supporters",
-      "Marseille",
-      "un sacre sous Didier Deschamps"
+      "Juventus",
+      "Genoa",
+      "Torino",
+      "AS Roma"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond à la Coupe de la Ligue 2010 ?",
+    "text": "Quel adversaire a battu l’OM aux tirs au but en finale européenne 1991 ?",
     "answers": [
-      "le début d'une série de trois victoires",
-      "un espace historique de groupes de supporters",
-      "Marseille",
-      "1899"
+      "Benfica",
+      "AC Milan",
+      "Bayern Munich",
+      "Étoile rouge de Belgrade"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "medium"
   },
   {
-    "text": "Quel élément de l'Olympique de Marseille décrit la Coupe de la Ligue 2010 ?",
+    "text": "Dans quelle ville s’est jouée la finale européenne perdue par l’OM en 1991 ?",
     "answers": [
-      "un espace historique de groupes de supporters",
-      "le début d'une série de trois victoires",
-      "Marseille",
-      "1899"
+      "Bari",
+      "Rome",
+      "Naples",
+      "Turin"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond au virage Sud ?",
+    "text": "Quel joueur a porté le brassard de l’OM lors de la finale européenne 1991 ?",
     "answers": [
-      "Marseille",
-      "1899",
-      "un espace historique de groupes de supporters",
-      "le Stade Vélodrome"
+      "Chris Waddle",
+      "Jean-Pierre Papin",
+      "Carlos Mozer",
+      "Manuel Amoros"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
-    "text": "Quel élément de l'Olympique de Marseille décrit le virage Sud ?",
+    "text": "Quel milieu ghanéen a remporté trois Ballons d’Or africains consécutifs en jouant à l’OM ?",
     "answers": [
-      "Marseille",
-      "1899",
-      "le Stade Vélodrome",
-      "un espace historique de groupes de supporters"
+      "Anthony Yeboah",
+      "Michael Essien",
+      "Abedi Pelé",
+      "André Ayew"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Pour Olympique de Marseille, quelle réponse correspond à la ville du club ?",
+    "text": "Quel défenseur latéral marseillais a joué la finale européenne 1993 puis gagné le Mondial 1998 ?",
     "answers": [
-      "Marseille",
-      "1899",
-      "le Stade Vélodrome",
-      "l'OM"
+      "Manuel Amoros",
+      "Bernard Casoni",
+      "Franck Sauzée",
+      "Éric Di Meco"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "medium"
   },
   {
-    "text": "Quel élément de l'Olympique de Marseille décrit la ville du club ?",
+    "text": "Quel attaquant allemand faisait partie de l’équipe championne d’Europe 1993 ?",
     "answers": [
-      "1899",
-      "Marseille",
-      "le Stade Vélodrome",
-      "l'OM"
+      "Rudi Völler",
+      "Jürgen Klinsmann",
+      "Karl-Heinz Riedle",
+      "Oliver Bierhoff"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur a remporté le Ballon d’Or africain 1993 après la victoire européenne de l’OM ?",
+    "answers": [
+      "Basile Boli",
+      "Abedi Pelé",
+      "Alen Bokšić",
+      "Rudi Völler"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club a battu l’OM en finale de la Coupe UEFA 1999 ?",
+    "answers": [
+      "Valence",
+      "Inter Milan",
+      "Parme",
+      "Feyenoord"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club a battu l’OM en finale de la Coupe UEFA 2004 ?",
+    "answers": [
+      "Parme",
+      "Séville",
+      "Porto",
+      "Valence"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quelle ville s’est jouée la finale de Coupe UEFA 2004 ?",
+    "answers": [
+      "Göteborg",
+      "Rotterdam",
+      "Hambourg",
+      "Lisbonne"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel gardien de l’OM a été expulsé en finale de Coupe UEFA 2004 ?",
+    "answers": [
+      "Vedran Runje",
+      "Fabien Barthez",
+      "Cédric Carrasso",
+      "Steve Mandanda"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel attaquant de l’OM a marqué deux fois contre Newcastle en demi-finale retour de Coupe UEFA 2004 ?",
+    "answers": [
+      "Steve Marlet",
+      "Mido",
+      "Didier Drogba",
+      "Camel Meriem"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club espagnol a battu l’OM en finale de Ligue Europa 2018 ?",
+    "answers": [
+      "Séville",
+      "Valence",
+      "Villarreal",
+      "Atlético de Madrid"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quelle ville s’est jouée la finale de Ligue Europa 2018 ?",
+    "answers": [
+      "Décines-Charpieu",
+      "Paris",
+      "Saint-Denis",
+      "Bordeaux"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel entraîneur dirigeait l’OM lors de la finale européenne 2018 ?",
+    "answers": [
+      "Marcelo Bielsa",
+      "Rudi Garcia",
+      "Élie Baup",
+      "André Villas-Boas"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel capitaine marseillais est sorti blessé au début de la finale 2018 ?",
+    "answers": [
+      "Steve Mandanda",
+      "Florian Thauvin",
+      "Dimitri Payet",
+      "Adil Rami"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club l’OM a-t-il battu en finale de Coupe de la Ligue 2010 ?",
+    "answers": [
+      "Olympique Lyonnais",
+      "Paris Saint-Germain",
+      "AS Monaco",
+      "Girondins de Bordeaux"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel titre national l’OM a-t-il remporté en 1929, avant l’ère professionnelle ?",
+    "answers": [
+      "Champion de France amateur",
+      "Coupe Charles Drago",
+      "Champion de Division 2",
+      "Coupe de la Ligue"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club l’OM a-t-il battu en finale de Coupe de France 1924 ?",
+    "answers": [
+      "CA Paris",
+      "FC Sète",
+      "Red Star",
+      "Girondins de Bordeaux"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club l’OM a-t-il battu en finale de Coupe de France 1926 ?",
+    "answers": [
+      "FC Sète",
+      "RC France",
+      "AS Valentigney",
+      "Red Star"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club l’OM a-t-il battu en finale de Coupe de France 1927 ?",
+    "answers": [
+      "SO Montpellier",
+      "FC Sète",
+      "CA Paris",
+      "US Quevilly"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire l’OM a-t-il battu en finale de Coupe de France 1935 ?",
+    "answers": [
+      "Stade rennais",
+      "FC Sète",
+      "RC Strasbourg",
+      "Sochaux"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club l’OM a-t-il battu en finale de Coupe de France 1938 ?",
+    "answers": [
+      "RC Lens",
+      "FC Metz",
+      "RC Paris",
+      "AS Cannes"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire l’OM a-t-il battu lors de la finale de Coupe de France 1943 ?",
+    "answers": [
+      "RC Paris",
+      "Red Star",
+      "Girondins ASP",
+      "FC Rouen"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur suédois est le meilleur buteur de l’histoire de l’OM ?",
+    "answers": [
+      "Roger Magnusson",
+      "Dan Ekner",
+      "Kennet Andersson",
+      "Gunnar Andersson"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel record Josip Skoblar a-t-il établi en championnat de France en 1970-71 ?",
+    "answers": [
+      "44 buts en une saison",
+      "40 buts en une saison",
+      "Six buts dans un match",
+      "Dix triplés en une saison"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel ailier suédois formait un duo célèbre avec Josip Skoblar ?",
+    "answers": [
+      "Gunnar Andersson",
+      "Roger Magnusson",
+      "Kurt Hamrin",
+      "Ralf Edström"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel président a relancé l’OM à la fin des années 1960 avant Bernard Tapie ?",
+    "answers": [
+      "Fernand Méric",
+      "Jean Carrieu",
+      "Marcel Leclerc",
+      "Claude Cuny"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur a conduit l’OM au doublé championnat-Coupe de France en 1972 ?",
+    "answers": [
+      "Mario Zatelli",
+      "Jules Zvunka",
+      "Pierre Cahuzac",
+      "Lucien Leduc"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire l’OM a-t-il battu en finale de Coupe de France 1969 ?",
+    "answers": [
+      "Girondins de Bordeaux",
+      "AS Saint-Étienne",
+      "Nantes",
+      "Sochaux"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club l’OM a-t-il battu en finale de Coupe de France 1972 ?",
+    "answers": [
+      "Nantes",
+      "Bastia",
+      "Saint-Étienne",
+      "Nice"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire l’OM a-t-il battu en finale de Coupe de France 1976 ?",
+    "answers": [
+      "Nantes",
+      "Lens",
+      "Olympique Lyonnais",
+      "Monaco"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur allemand a dirigé l’OM au début de la saison 1990-91 ?",
+    "answers": [
+      "Jupp Heynckes",
+      "Otto Rehhagel",
+      "Christoph Daum",
+      "Franz Beckenbauer"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a marqué l’unique but de la demi-finale retour contre Benfica en 1990 avant le but de la main de Vata ?",
+    "answers": [
+      "Magnus Andersson",
+      "Jean-Pierre Papin",
+      "Chris Waddle",
+      "Franck Sauzée"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur de Benfica est associé au but de la main qui élimine l’OM en 1990 ?",
+    "answers": [
+      "Rui Águas",
+      "Vata",
+      "Valdo",
+      "Diamantino"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire l’OM a-t-il éliminé en demi-finale de Coupe d’Europe 1991 ?",
+    "answers": [
+      "Bayern Munich",
+      "Benfica",
+      "Spartak Moscou",
+      "Dynamo Kiev"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur de l’OM a raté le dernier tir au but de la finale européenne 1991 ?",
+    "answers": [
+      "Jean-Pierre Papin",
+      "Chris Waddle",
+      "Bernard Casoni",
+      "Manuel Amoros"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien de l’Étoile rouge a arrêté le tir décisif de Manuel Amoros en 1991 ?",
+    "answers": [
+      "Stevan Stojanović",
+      "Tomislav Ivković",
+      "Dragan Pantelić",
+      "Zoran Simović"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club l’OM a-t-il éliminé en quarts de finale de la Coupe d’Europe 1991 après un succès 3-0 au Vélodrome ?",
+    "answers": [
+      "Spartak Moscou",
+      "AC Milan",
+      "Benfica",
+      "Napoli"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur de l’OM a inscrit un triplé contre le CSKA Moscou lors de la phase de groupes 1992-93 ?",
+    "answers": [
+      "Alen Bokšić",
+      "Rudi Völler",
+      "Franck Sauzée",
+      "Abedi Pelé"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire l’OM a-t-il battu 6-0 lors de la phase de groupes européenne 1992-93 ?",
+    "answers": [
+      "Rangers",
+      "Club Bruges",
+      "IFK Göteborg",
+      "CSKA Moscou"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club écossais a terminé juste derrière l’OM dans le groupe européen de 1992-93 ?",
+    "answers": [
+      "Rangers",
+      "Celtic",
+      "Aberdeen",
+      "Dundee United"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a tiré le corner repris par Basile Boli en finale 1993 ?",
+    "answers": [
+      "Franck Sauzée",
+      "Abedi Pelé",
+      "Éric Di Meco",
+      "Didier Deschamps"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "À quelle minute Basile Boli a-t-il marqué en finale 1993 ?",
+    "answers": [
+      "38e minute",
+      "47e minute",
+      "43e minute",
+      "52e minute"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel gardien gardait les buts de l’OM en finale européenne 1993 ?",
+    "answers": [
+      "Pascal Olmeta",
+      "Gaëtan Huard",
+      "Joseph-Antoine Bell",
+      "Fabien Barthez"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel défenseur central français était titulaire avec l’OM en finale 1993 ?",
+    "answers": [
+      "Marcel Desailly",
+      "Alain Roche",
+      "Frank Lebœuf",
+      "Laurent Blanc"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel attaquant croate a terminé meilleur buteur du championnat 1992-93 avec l’OM ?",
+    "answers": [
+      "Davor Šuker",
+      "Alen Bokšić",
+      "Josip Skoblar",
+      "Zvonimir Boban"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur de l’OM a inscrit cinq buts dans un match de championnat contre Lyon en 1991 ?",
+    "answers": [
+      "Abedi Pelé",
+      "Chris Waddle",
+      "Jean-Pierre Papin",
+      "Franck Sauzée"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur a ramené l’OM en Division 1 en 1996 ?",
+    "answers": [
+      "Rolland Courbis",
+      "Henri Stambouli",
+      "Raymond Goethals",
+      "Gérard Gili"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire a battu l’OM en finale de Coupe de France 2006 ?",
+    "answers": [
+      "Paris Saint-Germain",
+      "Auxerre",
+      "Strasbourg",
+      "Monaco"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur de Parme a ouvert le score en finale de Coupe UEFA 1999 ?",
+    "answers": [
+      "Enrico Chiesa",
+      "Hernán Crespo",
+      "Juan Sebastián Verón",
+      "Dino Baggio"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club anglais l’OM a-t-il éliminé en demi-finale de Coupe UEFA 2004 ?",
+    "answers": [
+      "Liverpool",
+      "Chelsea",
+      "Newcastle United",
+      "Middlesbrough"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur du Valence CF a ouvert le score sur penalty en finale de Coupe UEFA 2004 ?",
+    "answers": [
+      "Mista",
+      "Rufete",
+      "Pablo Aimar",
+      "Vicente"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur marseillais a conduit l’OM en finale de Coupe UEFA 2004 ?",
+    "answers": [
+      "José Anigo",
+      "Albert Emon",
+      "Jean Fernandez",
+      "José Pasqualetti"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire l’OM a-t-il battu en finale de Coupe de la Ligue 2011 ?",
+    "answers": [
+      "Bordeaux",
+      "Montpellier",
+      "Lyon",
+      "Lille"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel adversaire l’OM a-t-il battu en finale de Coupe de la Ligue 2012 ?",
+    "answers": [
+      "Montpellier",
+      "Paris Saint-Germain",
+      "Olympique Lyonnais",
+      "Saint-Étienne"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur a marqué le but de la finale de Coupe de la Ligue 2012 ?",
+    "answers": [
+      "Loïc Rémy",
+      "Mathieu Valbuena",
+      "André Ayew",
+      "Brandão"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel était le nom du club dont la section football a donné naissance à l’OM en 1899 ?",
+    "answers": [
+      "Football Club de Marseille",
+      "Sporting Club de Marseille",
+      "US Phocéenne",
+      "Olympique Phocéen"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel symbole figurait sur les premières armoiries de l’OM autour des lettres entrelacées ?",
+    "answers": [
+      "Une couronne",
+      "Une devise sur un ruban",
+      "Une étoile dorée",
+      "Un lion rampant"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a marqué pour l’OM lors de la finale de Coupe de France 1924 ?",
+    "answers": [
+      "Jean Boyer",
+      "Jules Dewaquez",
+      "Édouard Crut",
+      "Raymond Durand"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel capitaine a inscrit le but décisif de la première Coupe de France de l’OM en 1924 ?",
+    "answers": [
+      "Édouard Crut",
+      "Ernest Clère",
+      "Douglas De Ruymbeke",
+      "Jean Boyer"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel entraîneur hongrois a mené l’OM au titre de champion 1937 ?",
+    "answers": [
+      "József Eisenhoffer",
+      "Vinzenz Dittrich",
+      "Charlie Bell",
+      "Imre Schlosser"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a donné son nom au centre d’entraînement de l’OM inauguré à La Commanderie ?",
+    "answers": [
+      "Jean-Pierre Papin",
+      "Robert Louis-Dreyfus",
+      "Roger Scotti",
+      "Gunnar Andersson"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Marseillais détient longtemps le record de matches du club avant Steve Mandanda ?",
+    "answers": [
+      "François Bracci",
+      "Jean Bastien",
+      "Roger Scotti",
+      "Jean Robin"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur yougoslave a marqué 44 buts en championnat pour l’OM en 1970-71 ?",
+    "answers": [
+      "Dragan Džajić",
+      "Ilija Pantelić",
+      "Vahid Halilhodžić",
+      "Josip Skoblar"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel adversaire néerlandais a éliminé l’OM en huitièmes de Coupe d’Europe 1971-72 ?",
+    "answers": [
+      "Ajax Amsterdam",
+      "Feyenoord",
+      "PSV Eindhoven",
+      "FC Twente"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel attaquant a marqué le but de l’OM lors du nul 1-1 à Milan en Coupe d’Europe 1991 ?",
+    "answers": [
+      "Chris Waddle",
+      "Jean-Pierre Papin",
+      "Abedi Pelé",
+      "Franck Sauzée"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a marqué l’unique but du retour OM–Milan en 1991 avant l’arrêt des projecteurs ?",
+    "answers": [
+      "Jean-Pierre Papin",
+      "Éric Di Meco",
+      "Chris Waddle",
+      "Bernard Pardo"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel arbitre suisse a dirigé la finale de Coupe d’Europe 1991 ?",
+    "answers": [
+      "Kurt Röthlisberger",
+      "Urs Meier",
+      "Serge Muhmenthaler",
+      "Bruno Galler"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur de l’Étoile rouge a transformé le dernier tir au but avant l’échec de Manuel Amoros en 1991 ?",
+    "answers": [
+      "Darko Pančev",
+      "Dejan Savićević",
+      "Robert Prosinečki",
+      "Siniša Mihajlović"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel arbitre suisse a dirigé la finale OM–Milan de 1993 ?",
+    "answers": [
+      "Bruno Galler",
+      "Kurt Röthlisberger",
+      "Urs Meier",
+      "Massimo Busacca"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur allemand a remplacé Alen Bokšić en fin de finale européenne 1993 ?",
+    "answers": [
+      "Rudi Völler",
+      "Jean-Christophe Thomas",
+      "Jean-Philippe Durand",
+      "Jocelyn Angloma"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a inscrit le but qualificatif contre Bologne en demi-finale retour de Coupe UEFA 1999 ?",
+    "answers": [
+      "Fabrizio Ravanelli",
+      "Florian Maurice",
+      "Robert Pirès",
+      "Laurent Blanc"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel adversaire espagnol l’OM a-t-il battu en finale de Coupe Intertoto 2005 ?",
+    "answers": [
+      "Deportivo La Corogne",
+      "Villarreal",
+      "Valence",
+      "Espanyol"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a inscrit le troisième but de l’OM contre Leipzig en quart de finale retour de Ligue Europa 2018 ?",
+    "answers": [
+      "Dimitri Payet",
+      "Florian Thauvin",
+      "Morgan Sanson",
+      "Bouna Sarr"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur de Leipzig a marqué contre son camp au début du OM–Leipzig 2018 ?",
+    "answers": [
+      "Willi Orbán",
+      "Dayot Upamecano",
+      "Stefan Ilsanker",
+      "Lukas Klostermann"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel attaquant a marqué en prolongation pour qualifier l’OM contre Salzbourg en demi-finale 2018 ?",
+    "answers": [
+      "Valère Germain",
+      "Kostas Mitroglou",
+      "Lucas Ocampos",
+      "Rolando"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
