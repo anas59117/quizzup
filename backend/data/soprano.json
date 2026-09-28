@@ -1,8 +1,48 @@
 [
   {
-    "text": "De quel groupe marseillais Soprano est-il membre ?",
+    "text": "De quelle ville Soprano est-il originaire ?",
     "answers": [
-      "Psy 4 de la Rime",
+      "Marseille",
+      "Toulon",
+      "Nice",
+      "Lyon"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel est le vrai prénom de Soprano ?",
+    "answers": [
+      "Saïd",
+      "Kassim",
+      "Iliassa",
+      "Rachid"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel est le vrai nom de Soprano ?",
+    "answers": [
+      "Saïd Djae",
+      "Saïd Issilame",
+      "Saïd Aït Baar",
+      "Saïd M'Roumbaba"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "De quel archipel la famille de Soprano est-elle originaire ?",
+    "answers": [
+      "Le Cap-Vert",
+      "Les Comores",
+      "Les Seychelles",
+      "Madagascar"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Avec quel groupe Soprano s'est-il fait connaître ?",
+    "answers": [
+      "Psy 4 de la rime",
       "IAM",
       "Fonky Family",
       "3e Œil"
@@ -10,493 +50,463 @@
     "correct": 0
   },
   {
-    "text": "Quel est le vrai prénom de Soprano ?",
+    "text": "Quel lien unit Soprano à Alonzo et Vincenzo ?",
     "answers": [
-      "Malik",
-      "Saïd",
-      "Sofiane",
-      "Samir"
+      "Ils sont frères",
+      "Ils sont cousins",
+      "Ils sont voisins de palier",
+      "Aucun"
     ],
     "correct": 1
   },
   {
-    "text": "Sur quel album figure le titre « Le divan » ?",
+    "text": "Dans quelle cité des quartiers nord de Marseille Psy 4 de la rime est-il né ?",
     "answers": [
-      "La Colombe",
-      "Cosmopolitanie",
-      "Puisqu’il faut vivre",
-      "L’Everest"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Mélancolique anonyme » ?",
-    "answers": [
-      "La Colombe et le Corbeau",
-      "Crazy",
-      "Darwa",
-      "Le divan"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Mélancolique anonyme » ?",
-    "answers": [
-      "Puisqu’il faut vivre",
-      "La Colombe",
-      "Cosmopolitanie",
-      "L’Everest"
+      "Le Plan d'Aou",
+      "La Castellane",
+      "Félix-Pyat",
+      "La Busserine"
     ],
     "correct": 0
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Bombe humaine » ?",
+    "text": "Quel est le premier album de Psy 4 de la rime, sorti en 2002 ?",
     "answers": [
-      "Sur la lune",
-      "Mélancolique anonyme",
-      "Hiro",
-      "Châteaux de sable"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Bombe humaine » ?",
-    "answers": [
-      "La Colombe",
-      "Cosmopolitanie",
-      "Puisqu’il faut vivre",
-      "L’Everest"
+      "Enfants de la Lune",
+      "Les Cités d'or",
+      "Block Party",
+      "Quatrième dimension"
     ],
     "correct": 2
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Halla Halla » ?",
+    "text": "Quel est le premier album solo de Soprano, sorti en 2007 ?",
+    "answers": [
+      "La Colombe",
+      "Puisqu'il faut vivre",
+      "Cosmopolitanie",
+      "L'Everest"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel album de Soprano est sorti en 2010 ?",
+    "answers": [
+      "Le Corbeau",
+      "Phœnix",
+      "Cosmopolitanie",
+      "La Colombe"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel album de Soprano, sorti en 2011, fait pendant à La Colombe ?",
+    "answers": [
+      "L'Aigle",
+      "Le Corbeau",
+      "Le Phénix",
+      "Le Hibou"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Sur quel album figure « Cosmo » ?",
+    "answers": [
+      "L'Everest",
+      "La Colombe",
+      "Phœnix",
+      "Cosmopolitanie"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Sur quel album figure « Clown » ?",
+    "answers": [
+      "Le Corbeau",
+      "L'Everest",
+      "Chasseur d'étoiles",
+      "Cosmopolitanie"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Sur quel album figure « Fresh Prince » ?",
+    "answers": [
+      "L'Everest",
+      "Phœnix",
+      "Cosmopolitanie",
+      "La Colombe"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "À quelle série culte des années 90 le titre « Fresh Prince » fait-il référence ?",
+    "answers": [
+      "Friends",
+      "Sauvés par le gong",
+      "Le Prince de Bel-Air",
+      "Seinfeld"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Sur quel album figure « Millionnaire » ?",
+    "answers": [
+      "Cosmopolitanie",
+      "Le Corbeau",
+      "Phœnix",
+      "L'Everest"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Avec quel chanteur Soprano chante-t-il « No me miras más » ?",
+    "answers": [
+      "Vianney",
+      "Slimane",
+      "Amir",
+      "Kendji Girac"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Avec quel groupe d'humoristes marseillais Soprano chante-t-il « Le pain » ?",
+    "answers": [
+      "Les Déguns",
+      "Les Inconnus",
+      "Les Nuls",
+      "Kev Adams et ses potes"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Avec quelle chanteuse Soprano interprète-t-il « Mon Everest » ?",
+    "answers": [
+      "Vitaa",
+      "Marina Kaye",
+      "Louane",
+      "Indila"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Sur quel album figure « Mon Everest » ?",
+    "answers": [
+      "Cosmopolitanie",
+      "L'Everest",
+      "Le Corbeau",
+      "Phœnix"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Sur quel album figure « En feu » ?",
+    "answers": [
+      "Cosmopolitanie",
+      "L'Everest",
+      "Chasseur d'étoiles",
+      "La Colombe"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "À quel ami disparu Soprano rend-il hommage dans « Roule » ?",
+    "answers": [
+      "Alonzo",
+      "Vincenzo",
+      "DJ Sya Styles",
+      "Akhenaton"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel album de Soprano est sorti en 2021 ?",
+    "answers": [
+      "Cosmopolitanie",
+      "La Colombe",
+      "Puisqu'il faut vivre",
+      "Chasseur d'étoiles"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel stade Soprano a-t-il été le premier rappeur français à remplir entièrement, en 2017 ?",
+    "answers": [
+      "Le Vélodrome",
+      "Le Stade de France",
+      "Le Parc des Princes",
+      "Le Groupama Stadium"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans quelle émission de TF1 Soprano a-t-il été coach de 2018 à 2020 ?",
+    "answers": [
+      "Star Academy",
+      "The Voice Kids",
+      "Danse avec les stars",
+      "Nouvelle Star"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle troupe caritative Soprano a-t-il rejointe en 2016 ?",
+    "answers": [
+      "Les Enfoirés",
+      "Les Restos du cœur",
+      "Les Kids United",
+      "Les Prêtres"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "De quel événement caritatif Soprano a-t-il été le parrain en 2021 ?",
+    "answers": [
+      "Le Sidaction",
+      "Le Téléthon",
+      "Les Pièces jaunes",
+      "Les Restos du cœur"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle certification l'album Cosmopolitanie a-t-il obtenue ?",
+    "answers": [
+      "Disque d'or",
+      "Aucune",
+      "Disque de platine uniquement",
+      "Disque de diamant"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Lesquels de ces albums de Soprano ont été certifiés diamant ?",
+    "answers": [
+      "La Colombe et Le Corbeau",
+      "Puisqu'il faut vivre seulement",
+      "Cosmopolitanie, L'Everest et Phœnix",
+      "Aucun"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel rappeur marseillais célèbre dirigeait le label 361 Records, qui a signé Psy 4 de la rime ?",
+    "answers": [
+      "Akhenaton",
+      "Jul",
+      "Kery James",
+      "Shurik'n"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel titre de Cosmopolitanie a été le tout premier extrait, en juin 2014 ?",
     "answers": [
       "Cosmo",
-      "Ils nous connaissent pas",
       "Clown",
-      "Bombe humaine"
+      "Alleluia",
+      "Ils nous connaissent pas"
     ],
     "correct": 3
   },
   {
-    "text": "Sur quel album figure le titre « Halla Halla » ?",
+    "text": "Quel était le premier nom du groupe Psy 4 de la rime ?",
     "answers": [
-      "Puisqu’il faut vivre",
-      "La Colombe",
-      "Cosmopolitanie",
-      "L’Everest"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Dans ma tête » ?",
-    "answers": [
-      "Fresh Prince",
-      "Halla Halla",
-      "Hello",
-      "Le pain"
+      "K2R",
+      "KDB",
+      "FF",
+      "B.O.S.S"
     ],
     "correct": 1
   },
   {
-    "text": "Sur quel album figure le titre « Dans ma tête » ?",
+    "text": "Quel album de Psy 4 de la rime est sorti en 2008 ?",
     "answers": [
-      "La Colombe",
-      "Cosmopolitanie",
-      "Puisqu’il faut vivre",
-      "L’Everest"
+      "Block Party",
+      "Enfants de la Lune",
+      "Les Cités d'or",
+      "Quatrième dimension"
     ],
     "correct": 2
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « La famille » ?",
+    "text": "Quel album de Psy 4 de la rime est sorti en 2013 ?",
     "answers": [
-      "Everest",
-      "Mon Everest",
-      "Le Diable ne s’habille plus en Prada",
-      "Dans ma tête"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « La famille » ?",
-    "answers": [
-      "Puisqu’il faut vivre",
-      "La Colombe",
-      "Cosmopolitanie",
-      "L’Everest"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Le divan » ?",
-    "answers": [
-      "Roule",
-      "La famille",
-      "En feu",
-      "Mon précieux"
+      "Les Cités d'or",
+      "Quatrième dimension",
+      "Block Party",
+      "Enfants de la Lune"
     ],
     "correct": 1
   },
   {
-    "text": "Sur quel album figure le titre « La Colombe et le Corbeau » ?",
+    "text": "Quel album de Psy 4 de la rime est sorti en 2004 ?",
     "answers": [
-      "Puisqu’il faut vivre",
-      "Cosmopolitanie",
-      "La Colombe",
-      "L’Everest"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Crazy » ?",
-    "answers": [
-      "Le divan",
-      "Mélancolique anonyme",
-      "Bombe humaine",
-      "La Colombe et le Corbeau"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Crazy » ?",
-    "answers": [
-      "La Colombe",
-      "Puisqu’il faut vivre",
-      "Cosmopolitanie",
-      "L’Everest"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Darwa » ?",
-    "answers": [
-      "Halla Halla",
-      "Crazy",
-      "Dans ma tête",
-      "La famille"
+      "Block Party",
+      "Enfants de la Lune",
+      "Quatrième dimension",
+      "Les Cités d'or"
     ],
     "correct": 1
   },
   {
-    "text": "Sur quel album figure le titre « Darwa » ?",
-    "answers": [
-      "Puisqu’il faut vivre",
-      "Cosmopolitanie",
-      "La Colombe",
-      "L’Everest"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Sur la lune » ?",
+    "text": "Lequel de ces titres est un single de Psy 4 de la rime ?",
     "answers": [
       "Cosmo",
-      "Ils nous connaissent pas",
-      "Clown",
-      "Darwa"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Sur la lune » ?",
-    "answers": [
-      "La Colombe",
-      "Puisqu’il faut vivre",
-      "Cosmopolitanie",
-      "L’Everest"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Hiro » ?",
-    "answers": [
-      "Fresh Prince",
-      "Sur la lune",
-      "Hello",
-      "Le pain"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Hiro » ?",
-    "answers": [
-      "Puisqu’il faut vivre",
-      "Cosmopolitanie",
-      "La Colombe",
-      "L’Everest"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Châteaux de sable » ?",
-    "answers": [
-      "Everest",
-      "Mon Everest",
-      "Le Diable ne s’habille plus en Prada",
-      "Hiro"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Châteaux de sable » ?",
-    "answers": [
-      "La Colombe",
-      "Puisqu’il faut vivre",
-      "Cosmopolitanie",
-      "L’Everest"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « La Colombe et le Corbeau » ?",
-    "answers": [
-      "Roule",
-      "Châteaux de sable",
+      "Le Son des Bandits",
       "En feu",
-      "Mon précieux"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Cosmo » ?",
-    "answers": [
-      "Puisqu’il faut vivre",
-      "La Colombe",
-      "Cosmopolitanie",
-      "L’Everest"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Ils nous connaissent pas » ?",
-    "answers": [
-      "Le divan",
-      "Mélancolique anonyme",
-      "Bombe humaine",
-      "Cosmo"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Ils nous connaissent pas » ?",
-    "answers": [
-      "Cosmopolitanie",
-      "Puisqu’il faut vivre",
-      "La Colombe",
-      "L’Everest"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Clown » ?",
-    "answers": [
-      "Halla Halla",
-      "Ils nous connaissent pas",
-      "Dans ma tête",
-      "La famille"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Clown » ?",
-    "answers": [
-      "Puisqu’il faut vivre",
-      "La Colombe",
-      "Cosmopolitanie",
-      "L’Everest"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Fresh Prince » ?",
-    "answers": [
-      "La Colombe et le Corbeau",
-      "Crazy",
-      "Darwa",
       "Clown"
     ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Fresh Prince » ?",
-    "answers": [
-      "Cosmopolitanie",
-      "Puisqu’il faut vivre",
-      "La Colombe",
-      "L’Everest"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Hello » ?",
-    "answers": [
-      "Sur la lune",
-      "Fresh Prince",
-      "Hiro",
-      "Châteaux de sable"
-    ],
     "correct": 1
   },
   {
-    "text": "Sur quel album figure le titre « Hello » ?",
+    "text": "Combien d'exemplaires Puisqu'il faut vivre s'est-il vendu ?",
     "answers": [
-      "Puisqu’il faut vivre",
-      "La Colombe",
-      "Cosmopolitanie",
-      "L’Everest"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Le pain » ?",
-    "answers": [
-      "Everest",
-      "Mon Everest",
-      "Le Diable ne s’habille plus en Prada",
-      "Hello"
+      "Environ 2 000",
+      "Environ 20 000",
+      "Plus de 2 millions",
+      "Plus de 200 000"
     ],
     "correct": 3
   },
   {
-    "text": "Sur quel album figure le titre « Le pain » ?",
+    "text": "Combien de spectateurs Soprano a-t-il réunis au Vélodrome en 2017 ?",
     "answers": [
-      "Cosmopolitanie",
-      "Puisqu’il faut vivre",
-      "La Colombe",
-      "L’Everest"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Cosmo » ?",
-    "answers": [
-      "Roule",
-      "Le pain",
-      "En feu",
-      "Mon précieux"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Everest » ?",
-    "answers": [
-      "Puisqu’il faut vivre",
-      "La Colombe",
-      "L’Everest",
-      "Cosmopolitanie"
+      "Environ 5 000",
+      "Environ 150 000",
+      "Environ 53 000",
+      "Environ 500"
     ],
     "correct": 2
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Mon Everest » ?",
+    "text": "Dans quelle émission de chant a cappella Soprano a-t-il été juré en 2011 ?",
     "answers": [
-      "Le divan",
-      "Mélancolique anonyme",
-      "Bombe humaine",
-      "Everest"
+      "The Voice",
+      "Sing-Off",
+      "X Factor",
+      "Nouvelle Star"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "En quelle année Soprano a-t-il été coach dans The Voice (version adultes) ?",
+    "answers": [
+      "2012",
+      "2015",
+      "2023",
+      "2019"
     ],
     "correct": 3
   },
   {
-    "text": "Sur quel album figure le titre « Mon Everest » ?",
+    "text": "De quelle origine était DJ Sya Styles ?",
     "answers": [
-      "L’Everest",
-      "Puisqu’il faut vivre",
-      "La Colombe",
-      "Cosmopolitanie"
+      "Comorienne",
+      "Algérienne",
+      "Sénégalaise",
+      "Marocaine"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Le Diable ne s’habille plus en Prada » ?",
+    "text": "En quelle année DJ Sya Styles est-il décédé ?",
     "answers": [
-      "Halla Halla",
-      "Mon Everest",
-      "Dans ma tête",
-      "La famille"
+      "2005",
+      "2010",
+      "2015",
+      "2020"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Sur quel album figure le titre « Le Diable ne s’habille plus en Prada » ?",
+    "text": "Quel single de Cosmopolitanie est sorti le 20 juillet 2015 ?",
     "answers": [
-      "Puisqu’il faut vivre",
-      "La Colombe",
-      "L’Everest",
-      "Cosmopolitanie"
+      "Millionnaire",
+      "Cosmo",
+      "Clown",
+      "Fresh Prince"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Roule » ?",
+    "text": "Quel est le nom de scène de Kassim Djae ?",
     "answers": [
-      "La Colombe et le Corbeau",
-      "Crazy",
-      "Darwa",
-      "Le Diable ne s’habille plus en Prada"
+      "Alonzo",
+      "Vincenzo",
+      "Soprano",
+      "Sya Styles"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Sur quel album figure le titre « Roule » ?",
+    "text": "Quel est le nom de scène d'Iliassa Issilame ?",
     "answers": [
-      "L’Everest",
-      "Puisqu’il faut vivre",
-      "La Colombe",
-      "Cosmopolitanie"
+      "Alonzo",
+      "Vincenzo",
+      "Soprano",
+      "Sya Styles"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « En feu » ?",
+    "text": "Quand est sorti le single « Cosmo » ?",
     "answers": [
-      "Sur la lune",
-      "Roule",
-      "Hiro",
-      "Châteaux de sable"
+      "16 mars 2015",
+      "1er janvier 2010",
+      "25 juillet 2014",
+      "8 juin 2017"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Sur quel album figure le titre « En feu » ?",
+    "text": "Combien d'exemplaires Cosmopolitanie s'est-il vendu en France ?",
     "answers": [
-      "Puisqu’il faut vivre",
-      "La Colombe",
-      "L’Everest",
-      "Cosmopolitanie"
+      "Environ 55 000",
+      "Environ 5 500",
+      "Plus de 5 millions",
+      "Plus de 550 000"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Mon précieux » ?",
+    "text": "Combien d'albums de Psy 4 de la rime ont été certifiés disque d'or ?",
+    "answers": [
+      "3",
+      "1",
+      "4",
+      "0"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel single de Cosmopolitanie est sorti en décembre 2015 ?",
     "answers": [
       "Cosmo",
-      "Ils nous connaissent pas",
       "Clown",
-      "En feu"
+      "Alleluia",
+      "Préface"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Sur quel album figure le titre « Mon précieux » ?",
+    "text": "Dans quelle cité Soprano a-t-il vécu après le Plan d'Aou ?",
     "answers": [
-      "L’Everest",
-      "Puisqu’il faut vivre",
-      "La Colombe",
-      "Cosmopolitanie"
+      "La Castellane",
+      "Les Balustres",
+      "La Savine",
+      "Frais-Vallon"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Everest » ?",
-    "answers": [
-      "Fresh Prince",
-      "Mon précieux",
-      "Hello",
-      "Le pain"
-    ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   }
 ]

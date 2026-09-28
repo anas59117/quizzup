@@ -2,155 +2,145 @@
   {
     "text": "Quel est le vrai prénom de Ninho ?",
     "answers": [
-      "William",
       "Élie",
       "Julien",
-      "Tarik"
+      "Tarik",
+      "William"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel est le vrai nom de Ninho ?",
+    "answers": [
+      "William Nzobazola",
+      "William Kalubi",
+      "Élie Yaffa",
+      "Julien Mari"
     ],
     "correct": 0
   },
   {
-    "text": "Que signifie l’acronyme M.I.L.S. dans la série de mixtapes de Ninho ?",
+    "text": "Dans quel département Ninho est-il né ?",
     "answers": [
-      "Maîtriser ici la scène",
-      "Maintenant ils le savent",
+      "L'Essonne",
+      "Les Bouches-du-Rhône",
+      "Le Nord",
+      "La Gironde"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelles sont les origines de Ninho ?",
+    "answers": [
+      "Congolaises",
+      "Sénégalaises",
+      "Algériennes",
+      "Ivoiriennes"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Que signifie M.I.L.S, nom de la série de mixtapes de Ninho ?",
+    "answers": [
+      "Mon inspiration, la street",
       "Musique indépendante libre et sauvage",
-      "Mon inspiration, la street"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Comme prévu » ?",
-    "answers": [
-      "Destin",
-      "M.I.L.S 3",
-      "Comme prévu",
-      "Jefe"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Chino » ?",
-    "answers": [
-      "Destin",
-      "M.I.L.S 3",
-      "Jefe",
-      "Comme prévu"
+      "Ma vie, les soucis",
+      "Maintenant ils le savent"
     ],
     "correct": 3
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « Mamacita » ?",
+    "text": "Quel est le premier album studio de Ninho, sorti en 2017 ?",
+    "answers": [
+      "Destin",
+      "Jefe",
+      "Comme prévu",
+      "NI"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel album de Ninho est sorti en 2019 ?",
     "answers": [
       "Comme prévu",
       "Destin",
+      "Jefe",
+      "GOAT"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel album de Ninho est sorti en 2021 ?",
+    "answers": [
+      "Destin",
+      "Jefe",
+      "Comme prévu",
+      "M.I.L.S 3"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Avec quel rappeur Ninho a-t-il sorti l'album commun « GOAT » en 2024 ?",
+    "answers": [
+      "Jul",
+      "Gazo",
+      "Niska",
+      "Damso"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel label est associé à Ninho ?",
+    "answers": [
+      "92i",
+      "QLF Records",
+      "Rec. 118",
+      "D'or et de platine"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Sur quel projet figure « Lettre à une femme » ?",
+    "answers": [
       "M.I.L.S 3",
+      "Destin",
+      "Comme prévu",
       "Jefe"
     ],
     "correct": 0
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « Laisse pas traîner ton fils » ?",
+    "text": "Quel record « Lettre à une femme » a-t-il battu ?",
     "answers": [
-      "Destin",
+      "Le clip le plus long du rap français",
+      "Le plus de featurings sur un titre",
+      "Le titre le plus streamé en 24 h sur Spotify",
+      "Le premier titre rap à la radio"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Sur quel projet figure « Zipette » ?",
+    "answers": [
       "Comme prévu",
       "M.I.L.S 3",
+      "Destin",
       "Jefe"
     ],
     "correct": 1
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « Roro » ?",
+    "text": "Sur quel projet figure « Tout en Gucci » ?",
     "answers": [
-      "Destin",
       "M.I.L.S 3",
       "Comme prévu",
-      "Jefe"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « HLM ou palace » ?",
-    "answers": [
       "Destin",
-      "M.I.L.S 3",
-      "Jefe",
-      "Comme prévu"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Rose » ?",
-    "answers": [
-      "Comme prévu",
-      "Destin",
-      "M.I.L.S 3",
       "Jefe"
     ],
     "correct": 0
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « De l'autre côté » ?",
-    "answers": [
-      "Destin",
-      "Comme prévu",
-      "M.I.L.S 3",
-      "Jefe"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Elle m'a eu » ?",
-    "answers": [
-      "Destin",
-      "M.I.L.S 3",
-      "Comme prévu",
-      "Jefe"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Ce soir » ?",
-    "answers": [
-      "Destin",
-      "M.I.L.S 3",
-      "Jefe",
-      "Comme prévu"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Dita » ?",
-    "answers": [
-      "Comme prévu",
-      "Destin",
-      "M.I.L.S 3",
-      "Jefe"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Carbozo » ?",
-    "answers": [
-      "Destin",
-      "Comme prévu",
-      "M.I.L.S 3",
-      "Jefe"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Sans peine » ?",
-    "answers": [
-      "Comme prévu",
-      "M.I.L.S 3",
-      "Destin",
-      "Jefe"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « La vie qu'on mène » ?",
+    "text": "Sur quel album figure « Goutte d'eau » ?",
     "answers": [
       "Comme prévu",
       "M.I.L.S 3",
@@ -160,17 +150,7 @@
     "correct": 3
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « Goutte d'eau » ?",
-    "answers": [
-      "Destin",
-      "Comme prévu",
-      "M.I.L.S 3",
-      "Jefe"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Paris c'est magique » ?",
+    "text": "Sur quel album figure « Paris c'est magique » ?",
     "answers": [
       "Comme prévu",
       "Destin",
@@ -180,323 +160,351 @@
     "correct": 1
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « Jeune Lossa » ?",
+    "text": "Sur quel album figure « La vie qu'on mène » ?",
     "answers": [
-      "Comme prévu",
       "M.I.L.S 3",
-      "Destin",
-      "Jefe"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Tokarev » ?",
-    "answers": [
       "Comme prévu",
-      "M.I.L.S 3",
       "Jefe",
       "Destin"
     ],
     "correct": 3
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « La vivance » ?",
+    "text": "Avec quel rappeur Ninho chante-t-il « Maman ne le sait pas » ?",
     "answers": [
-      "Destin",
-      "Comme prévu",
-      "M.I.L.S 3",
-      "Jefe"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Big Pac » ?",
-    "answers": [
-      "Comme prévu",
-      "Destin",
-      "M.I.L.S 3",
-      "Jefe"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Maman ne le sait pas » ?",
-    "answers": [
-      "Comme prévu",
-      "M.I.L.S 3",
-      "Destin",
-      "Jefe"
+      "Jul",
+      "Dadju",
+      "Niska",
+      "Koba LaD"
     ],
     "correct": 2
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « L'ancien » ?",
+    "text": "Avec quel artiste Ninho chante-t-il « Jusqu'à minuit » sur Destin ?",
     "answers": [
-      "Comme prévu",
-      "M.I.L.S 3",
-      "Jefe",
-      "Destin"
+      "Niska",
+      "Gims",
+      "Soprano",
+      "Jul"
     ],
     "correct": 3
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « Putana » ?",
+    "text": "Avec quel chanteur Ninho chante-t-il « Jamais » sur Destin ?",
     "answers": [
-      "Destin",
-      "Comme prévu",
-      "M.I.L.S 3",
-      "Jefe"
+      "Dadju",
+      "Gims",
+      "Tayc",
+      "Soolking"
     ],
     "correct": 0
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « Zéro paluche » ?",
+    "text": "Avec quelle star congolaise Ninho chante-t-il « À Kinshasa » ?",
     "answers": [
-      "Comme prévu",
-      "Destin",
-      "M.I.L.S 3",
-      "Jefe"
+      "Koffi Olomidé",
+      "Innoss'B",
+      "Ferre Gola",
+      "Fally Ipupa"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « M.I.L.S 3 » ?",
+    "text": "Avec quel rappeur Ninho chante-t-il « La vivance » ?",
     "answers": [
-      "Comme prévu",
-      "Destin",
-      "M.I.L.S 3",
-      "Jefe"
+      "Niska",
+      "Gradur",
+      "Koba LaD",
+      "Alonzo"
     ],
     "correct": 2
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « Toutes les couleurs » ?",
+    "text": "Avec quel rappeur Ninho chante-t-il « De l'autre côté » ?",
     "answers": [
-      "Comme prévu",
-      "Destin",
-      "Jefe",
-      "M.I.L.S 3"
+      "Nekfeu",
+      "Orelsan",
+      "Lomepal",
+      "Damso"
     ],
-    "correct": 3
+    "correct": 0
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « Zipette » ?",
+    "text": "Sur quel album figure « Mamacita » ?",
     "answers": [
-      "M.I.L.S 3",
       "Comme prévu",
       "Destin",
+      "M.I.L.S 3",
       "Jefe"
     ],
     "correct": 0
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « Gros vendeurs » ?",
+    "text": "Sur quel album figure « Roro » ?",
     "answers": [
-      "Comme prévu",
-      "M.I.L.S 3",
-      "Destin",
-      "Jefe"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Tout en Gucci » ?",
-    "answers": [
-      "Comme prévu",
-      "Destin",
-      "M.I.L.S 3",
-      "Jefe"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Le jeu » ?",
-    "answers": [
-      "Comme prévu",
       "Destin",
       "Jefe",
-      "M.I.L.S 3"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Bali » ?",
-    "answers": [
-      "M.I.L.S 3",
       "Comme prévu",
-      "Destin",
-      "Jefe"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « En chien » ?",
-    "answers": [
-      "Comme prévu",
-      "M.I.L.S 3",
-      "Destin",
-      "Jefe"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « La puerta » ?",
-    "answers": [
-      "Comme prévu",
-      "Destin",
-      "M.I.L.S 3",
-      "Jefe"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « C'était le rap » ?",
-    "answers": [
-      "Comme prévu",
-      "Destin",
-      "Jefe",
-      "M.I.L.S 3"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Lettre à une femme » ?",
-    "answers": [
-      "M.I.L.S 3",
-      "Comme prévu",
-      "Destin",
-      "Jefe"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Filon » ?",
-    "answers": [
-      "Comme prévu",
-      "M.I.L.S 3",
-      "Destin",
-      "Jefe"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Jefe » ?",
-    "answers": [
-      "Comme prévu",
-      "Destin",
-      "Jefe",
       "M.I.L.S 3"
     ],
     "correct": 2
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « VVS » ?",
+    "text": "Sur quel album figure « HLM ou palace » ?",
     "answers": [
       "Comme prévu",
-      "Destin",
       "M.I.L.S 3",
-      "Jefe"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Sky Priority » ?",
-    "answers": [
-      "Jefe",
-      "Comme prévu",
       "Destin",
-      "M.I.L.S 3"
+      "Jefe"
     ],
     "correct": 0
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « OG » ?",
+    "text": "Avec quel rappeur Ninho chante-t-il « Laisse pas traîner ton fils » ?",
     "answers": [
-      "Comme prévu",
-      "Jefe",
-      "Destin",
-      "M.I.L.S 3"
+      "Sofiane",
+      "Gradur",
+      "Alonzo",
+      "Niska"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « Arme de poing » ?",
+    "text": "Avec quel rappeur Ninho chante-t-il « Lové » sur Comme prévu ?",
     "answers": [
-      "Comme prévu",
-      "Destin",
-      "Jefe",
-      "M.I.L.S 3"
+      "Sofiane",
+      "Alonzo",
+      "Gradur",
+      "Niska"
     ],
     "correct": 2
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « Vérité » ?",
+    "text": "Avec quel rappeur marseillais Ninho chante-t-il « Ce soir » ?",
     "answers": [
-      "Comme prévu",
-      "Destin",
-      "M.I.L.S 3",
-      "Jefe"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « No Life » ?",
-    "answers": [
-      "Jefe",
-      "Comme prévu",
-      "Destin",
-      "M.I.L.S 3"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « RER D » ?",
-    "answers": [
-      "Comme prévu",
-      "Jefe",
-      "Destin",
-      "M.I.L.S 3"
+      "Jul",
+      "Alonzo",
+      "Soso Maness",
+      "Naps"
     ],
     "correct": 1
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « YSL » ?",
+    "text": "Avec quel artiste Ninho chante-t-il « Centre commercial » ?",
     "answers": [
-      "Comme prévu",
-      "Destin",
-      "Jefe",
-      "M.I.L.S 3"
+      "Niska",
+      "Jul",
+      "Heuss l'Enfoiré",
+      "Koba LaD"
     ],
     "correct": 2
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « Aïcha » ?",
+    "text": "En quelle année est sortie la mixtape M.I.L.S 3 ?",
+    "answers": [
+      "2016",
+      "2020",
+      "2018",
+      "2023"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle certification l'album Destin a-t-il été le premier de Ninho à obtenir ?",
+    "answers": [
+      "Disque d'or",
+      "Disque de platine",
+      "Disque de diamant",
+      "Victoire de la musique"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Combien de temps M.I.L.S 3 est-il resté n°1 des ventes en France en 2020 ?",
+    "answers": [
+      "Une semaine",
+      "Un an",
+      "Près de trois mois",
+      "Deux jours"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel album de Ninho est sorti en 2023 ?",
+    "answers": [
+      "NI",
+      "Jefe",
+      "Destin",
+      "Comme prévu"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel record Ninho a-t-il établi en France en 2023 ?",
+    "answers": [
+      "10 Victoires de la musique",
+      "100 concerts à Bercy",
+      "300 singles certifiés",
+      "Le plus long album du rap"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans quel stade Ninho a-t-il vendu 80 000 places en 6 heures en 2024 ?",
+    "answers": [
+      "Le Vélodrome",
+      "Le Parc des Princes",
+      "Le Groupama Stadium",
+      "Le Stade de France"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle salle Ninho a-t-il été le plus jeune à remplir, à 26 ans ?",
+    "answers": [
+      "Paris La Défense Arena",
+      "L'Olympia",
+      "La Cigale",
+      "Le Bataclan"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel est le nom de la marque de vêtements lancée par Ninho en 2020 ?",
+    "answers": [
+      "NI",
+      "Ünkut",
+      "QLF",
+      "Sixth June"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Sur quel projet figure « Filon » ?",
+    "answers": [
+      "M.I.L.S 3",
+      "Destin",
+      "Comme prévu",
+      "Jefe"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Sur quel album figure « Tokarev » ?",
+    "answers": [
+      "Destin",
+      "Comme prévu",
+      "M.I.L.S 3",
+      "Jefe"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Sur quel album figure « Carbozo » ?",
     "answers": [
       "Comme prévu",
       "Destin",
       "M.I.L.S 3",
       "Jefe"
     ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel projet de Ninho figure le titre « Mood » ?",
-    "answers": [
-      "Jefe",
-      "Comme prévu",
-      "Destin",
-      "M.I.L.S 3"
-    ],
     "correct": 0
   },
   {
-    "text": "Sur quel projet de Ninho figure le titre « Athéna » ?",
+    "text": "Quel est le premier single extrait de Destin ?",
     "answers": [
-      "Comme prévu",
-      "Jefe",
-      "Destin",
-      "M.I.L.S 3"
+      "Putana",
+      "Paris c'est magique",
+      "Goutte d'eau",
+      "Jeune Lossa"
     ],
-    "correct": 1
+    "correct": 2
+  },
+  {
+    "text": "Dans quelle ville de l'Essonne Ninho est-il né ?",
+    "answers": [
+      "Évry",
+      "Corbeil-Essonnes",
+      "Longjumeau",
+      "Grigny"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel était le métier du père de Ninho ?",
+    "answers": [
+      "Chanteur",
+      "Footballeur",
+      "Boxeur",
+      "Acteur"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle est la première mixtape de Ninho, sortie en 2013 ?",
+    "answers": [
+      "M.I.L.S",
+      "I.S.P.A.C 2",
+      "Comme prévu",
+      "Ils sont pas au courant Vol. 1"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Avec quel rappeur Ninho chante-t-il « Zéro paluche » ?",
+    "answers": [
+      "Koba LaD",
+      "Niska",
+      "Heuss l'Enfoiré",
+      "Tito"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Avec quel artiste Ninho chante-t-il « Dita » sur Comme prévu ?",
+    "answers": [
+      "Sofiane",
+      "Gradur",
+      "Alonzo",
+      "Hös Copperfield"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Avec quelle chanteuse Ninho chante-t-il « Money » sur Destin ?",
+    "answers": [
+      "Aya Nakamura",
+      "Faouzia",
+      "Wejdene",
+      "Vitaa"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En 2023, Ninho est devenu le premier rappeur français à posséder combien de disques de diamant ?",
+    "answers": [
+      "2",
+      "4",
+      "7",
+      "10"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le dernier single extrait de M.I.L.S 3, en décembre 2020 ?",
+    "answers": [
+      "Zipette",
+      "Lettre à une femme",
+      "Tout en Gucci",
+      "Problèmes du matin"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
   }
 ]

@@ -1,502 +1,512 @@
 [
   {
-    "text": "Dans quelle ville normande Orelsan a-t-il grandi ?",
+    "text": "Quel est le vrai prénom d'Orelsan ?",
     "answers": [
-      "Caen",
+      "Aurélien",
+      "Adrien",
+      "Olivier",
+      "Aurélio"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel est le vrai nom d'Orelsan ?",
+    "answers": [
+      "Aurélien Schwarzer",
+      "Aurélien Mari",
+      "Aurélien Cotentin",
+      "Aurélien Andrieu"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans quelle ville normande Orelsan a-t-il fait ses débuts ?",
+    "answers": [
       "Rouen",
       "Le Havre",
+      "Caen",
       "Cherbourg"
     ],
-    "correct": 0
+    "correct": 2
   },
   {
-    "text": "Avec quel producteur Orelsan forme-t-il le duo Casseurs Flowters ?",
+    "text": "Avec quel rappeur Orelsan forme-t-il le duo Casseurs Flowters ?",
     "answers": [
-      "Skread",
       "Gringe",
-      "Ablaye",
-      "Nekfeu"
+      "Nekfeu",
+      "Skread",
+      "Stromae"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
-    "text": "Sur quel album figure le titre « Étoiles invisibles » ?",
+    "text": "Quel producteur est le compagnon musical historique d'Orelsan ?",
+    "answers": [
+      "Pyroman",
+      "Katrina Squad",
+      "Skread",
+      "DJ Kore"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel est le premier album d'Orelsan, sorti en 2009 ?",
     "answers": [
       "Le Chant des sirènes",
       "La fête est finie",
-      "Perdu d’avance",
+      "Perdu d'avance",
       "Civilisation"
     ],
     "correct": 2
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Changement » ?",
+    "text": "Quel album d'Orelsan est sorti en 2011 ?",
     "answers": [
-      "Raelsan",
-      "Le Chant des sirènes",
-      "Plus rien ne m’étonne",
-      "Étoiles invisibles"
+      "Perdu d'avance",
+      "La fête est finie",
+      "Civilisation",
+      "Le Chant des sirènes"
     ],
     "correct": 3
   },
   {
-    "text": "Sur quel album figure le titre « Changement » ?",
+    "text": "Quel album d'Orelsan est sorti en 2017 ?",
     "answers": [
-      "Perdu d’avance",
-      "Le Chant des sirènes",
       "La fête est finie",
-      "Civilisation"
+      "Civilisation",
+      "Le Chant des sirènes",
+      "Perdu d'avance"
     ],
     "correct": 0
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Soirée ratée » ?",
+    "text": "Quel album d'Orelsan est sorti en 2021 ?",
     "answers": [
-      "Mauvaise idée",
+      "La fête est finie",
+      "Civilisation",
+      "Le Chant des sirènes",
+      "Perdu d'avance"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel single de 2008 a lancé la carrière d'Orelsan ?",
+    "answers": [
       "Changement",
-      "Suicide social",
-      "La petite marchande de porte-clefs"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Soirée ratée » ?",
-    "answers": [
-      "Le Chant des sirènes",
-      "La fête est finie",
-      "Perdu d’avance",
-      "Civilisation"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Différent » ?",
-    "answers": [
-      "San",
       "Basique",
-      "Tout va bien",
-      "Soirée ratée"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Différent » ?",
-    "answers": [
-      "Perdu d’avance",
-      "Le Chant des sirènes",
-      "La fête est finie",
-      "Civilisation"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « No Life » ?",
-    "answers": [
-      "Défaite de famille",
-      "Différent",
-      "La pluie",
-      "Paradis"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « No Life » ?",
-    "answers": [
-      "Le Chant des sirènes",
-      "La fête est finie",
-      "Perdu d’avance",
-      "Civilisation"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Perdu d’avance » ?",
-    "answers": [
-      "Shonen",
-      "La quête",
-      "Du propre",
-      "No Life"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Perdu d’avance » ?",
-    "answers": [
-      "Perdu d’avance",
-      "Le Chant des sirènes",
-      "La fête est finie",
-      "Civilisation"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Étoiles invisibles » ?",
-    "answers": [
-      "Bébéboa",
-      "Perdu d’avance",
-      "Manifeste",
-      "Civilisation"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Raelsan » ?",
-    "answers": [
-      "Perdu d’avance",
-      "La fête est finie",
-      "Le Chant des sirènes",
-      "Civilisation"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Le Chant des sirènes » ?",
-    "answers": [
-      "Étoiles invisibles",
-      "Changement",
-      "Soirée ratée",
-      "Raelsan"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Le Chant des sirènes » ?",
-    "answers": [
-      "Le Chant des sirènes",
-      "Perdu d’avance",
-      "La fête est finie",
-      "Civilisation"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Plus rien ne m’étonne » ?",
-    "answers": [
-      "Différent",
-      "Le Chant des sirènes",
-      "No Life",
-      "Perdu d’avance"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Plus rien ne m’étonne » ?",
-    "answers": [
-      "Perdu d’avance",
-      "La fête est finie",
-      "Le Chant des sirènes",
-      "Civilisation"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Mauvaise idée » ?",
-    "answers": [
-      "San",
-      "Basique",
-      "Tout va bien",
-      "Plus rien ne m’étonne"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Mauvaise idée » ?",
-    "answers": [
-      "Le Chant des sirènes",
-      "Perdu d’avance",
-      "La fête est finie",
-      "Civilisation"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Suicide social » ?",
-    "answers": [
-      "Défaite de famille",
-      "Mauvaise idée",
-      "La pluie",
-      "Paradis"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Suicide social » ?",
-    "answers": [
-      "Perdu d’avance",
-      "La fête est finie",
-      "Le Chant des sirènes",
-      "Civilisation"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « La petite marchande de porte-clefs » ?",
-    "answers": [
-      "Shonen",
-      "La quête",
-      "Du propre",
+      "La Terre est ronde",
       "Suicide social"
     ],
-    "correct": 3
+    "correct": 0
   },
   {
-    "text": "Sur quel album figure le titre « La petite marchande de porte-clefs » ?",
+    "text": "Sur quel album figure « Basique » ?",
     "answers": [
-      "Le Chant des sirènes",
-      "Perdu d’avance",
       "La fête est finie",
-      "Civilisation"
+      "Civilisation",
+      "Le Chant des sirènes",
+      "Perdu d'avance"
     ],
     "correct": 0
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Raelsan » ?",
+    "text": "Sur quel album figure « La Terre est ronde » ?",
     "answers": [
-      "Bébéboa",
-      "La petite marchande de porte-clefs",
-      "Manifeste",
-      "Civilisation"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « San » ?",
-    "answers": [
-      "Perdu d’avance",
-      "Le Chant des sirènes",
       "La fête est finie",
+      "Perdu d'avance",
+      "Le Chant des sirènes",
       "Civilisation"
     ],
     "correct": 2
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Basique » ?",
+    "text": "Sur quel album figure « Suicide social » ?",
     "answers": [
-      "Étoiles invisibles",
-      "Changement",
-      "Soirée ratée",
-      "San"
+      "Civilisation",
+      "Perdu d'avance",
+      "La fête est finie",
+      "Le Chant des sirènes"
     ],
     "correct": 3
   },
   {
-    "text": "Sur quel album figure le titre « Basique » ?",
+    "text": "Sur quel album figure « RaelSan » ?",
     "answers": [
+      "Perdu d'avance",
       "La fête est finie",
-      "Perdu d’avance",
       "Le Chant des sirènes",
-      "Civilisation"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Tout va bien » ?",
-    "answers": [
-      "Différent",
-      "Basique",
-      "No Life",
-      "Perdu d’avance"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Tout va bien » ?",
-    "answers": [
-      "Perdu d’avance",
-      "Le Chant des sirènes",
-      "La fête est finie",
       "Civilisation"
     ],
     "correct": 2
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Défaite de famille » ?",
+    "text": "Sur quel album figure « Soirée ratée » ?",
     "answers": [
-      "Raelsan",
       "Le Chant des sirènes",
-      "Plus rien ne m’étonne",
-      "Tout va bien"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Défaite de famille » ?",
-    "answers": [
-      "La fête est finie",
-      "Perdu d’avance",
-      "Le Chant des sirènes",
-      "Civilisation"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « La pluie » ?",
-    "answers": [
-      "Mauvaise idée",
-      "Défaite de famille",
-      "Suicide social",
-      "La petite marchande de porte-clefs"
+      "Perdu d'avance",
+      "Civilisation",
+      "La fête est finie"
     ],
     "correct": 1
   },
   {
-    "text": "Sur quel album figure le titre « La pluie » ?",
+    "text": "Sur quel album figure « No Life » ?",
     "answers": [
-      "Perdu d’avance",
-      "Le Chant des sirènes",
       "La fête est finie",
+      "Le Chant des sirènes",
+      "Perdu d'avance",
       "Civilisation"
     ],
     "correct": 2
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Paradis » ?",
+    "text": "Sur quel album figure « Défaite de famille » ?",
     "answers": [
-      "Shonen",
-      "La quête",
+      "Perdu d'avance",
+      "Civilisation",
+      "Le Chant des sirènes",
+      "La fête est finie"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Sur quel album figure « L'Odeur de l'essence » ?",
+    "answers": [
+      "La fête est finie",
+      "Le Chant des sirènes",
+      "Civilisation",
+      "Perdu d'avance"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Sur quel album figure « La Quête » ?",
+    "answers": [
+      "Perdu d'avance",
+      "La fête est finie",
+      "Le Chant des sirènes",
+      "Civilisation"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Sur quel album figure « Jour meilleur » ?",
+    "answers": [
+      "Le Chant des sirènes",
+      "Perdu d'avance",
+      "La fête est finie",
+      "Civilisation"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Avec quel artiste belge Orelsan chante-t-il « La Pluie » ?",
+    "answers": [
+      "Damso",
+      "Angèle",
+      "Stromae",
+      "Roméo Elvis"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Avec quels rappeurs Orelsan partage-t-il le titre « Zone » ?",
+    "answers": [
+      "Damso et Gringe",
+      "Stromae et Gims",
+      "Nekfeu et Dizzee Rascal",
+      "Skread et Angèle"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Avec quel rappeur belge Orelsan chante-t-il « Rêves bizarres » ?",
+    "answers": [
+      "Hamza",
+      "Roméo Elvis",
+      "Stromae",
+      "Damso"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel film Orelsan a-t-il coréalisé et joué en 2015 ?",
+    "answers": [
+      "Les Kaïra",
+      "Comment c'est loin",
+      "La Haine",
+      "Taxi 5"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle mini-série de Canal+ met en scène Orelsan et Gringe sur un canapé ?",
+    "answers": [
+      "Serge le Mytho",
+      "Bloqués",
+      "Casting(s)",
+      "Burger Quiz"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel documentaire sur Orelsan est sorti sur Amazon Prime Video ?",
+    "answers": [
+      "Comment c'est loin",
+      "Civilisation, le film",
+      "Montre jamais ça à personne",
+      "Orelsan : la tournée"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Qui a réalisé le documentaire « Montre jamais ça à personne » ?",
+    "answers": [
+      "Son frère Clément",
+      "Gringe",
+      "Skread",
+      "Kourtrajmé"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "À quel héros d'anime Orelsan prête-t-il sa voix en VF ?",
+    "answers": [
+      "Saitama (One Punch Man)",
+      "Goku (Dragon Ball)",
+      "Luffy (One Piece)",
+      "Naruto"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle certification l'album La fête est finie a-t-il atteinte en 2023 ?",
+    "answers": [
+      "Disque d'or",
+      "Disque de platine",
+      "Disque de diamant simple",
+      "Double disque de diamant"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Combien de Victoires de la musique La fête est finie a-t-il remportées en 2018 ?",
+    "answers": [
+      "1",
+      "3",
+      "5",
+      "0"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle Victoire le clip de « Basique » a-t-il remportée en 2018 ?",
+    "answers": [
+      "Réalisation audiovisuelle",
+      "Chanson originale",
+      "Album de l'année",
+      "Révélation scène"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En quelle année Orelsan s'est-il installé à Caen ?",
+    "answers": [
+      "1988",
+      "1998",
+      "2008",
+      "2012"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans quelle ville de l'Orne Orelsan est-il né ?",
+    "answers": [
+      "Alençon",
+      "Argentan",
+      "Flers",
+      "L'Aigle"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Sur quel réseau social Orelsan s'est-il fait remarquer vers 2007 ?",
+    "answers": [
+      "Facebook",
+      "YouTube",
+      "MySpace",
+      "Skyblog"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Avec quel producteur Orelsan chante-t-il « Ensemble » sur Civilisation ?",
+    "answers": [
+      "Pharrell Williams",
+      "Kanye West",
+      "Timbaland",
+      "Skread"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Avec quel duo de producteurs américains Orelsan a-t-il fait « Dernier verre » ?",
+    "answers": [
+      "Daft Punk",
+      "The Neptunes",
+      "Justice",
+      "Outkast"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel morceau de Civilisation réunit à nouveau les Casseurs Flowters ?",
+    "answers": [
+      "Bloqués",
+      "Comment c'est loin",
+      "Casseurs Flowters Infinity",
+      "Défaite de famille"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle chanteuse devait figurer sur « Évidemment », finalement retiré de Civilisation ?",
+    "answers": [
+      "Aya Nakamura",
+      "Clara Luciani",
+      "Angèle",
+      "Pomme"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Combien de Victoires de la musique Orelsan avait-il remportées au total en 2023 ?",
+    "answers": [
+      "12",
+      "3",
+      "25",
+      "6"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En quelle année les Casseurs Flowters ont-ils sorti leur album commun ?",
+    "answers": [
+      "2013",
+      "2003",
+      "2017",
+      "2021"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel est le premier extrait de Civilisation, sorti deux jours avant l'album ?",
+    "answers": [
+      "La Quête",
       "Du propre",
-      "La pluie"
+      "Jour meilleur",
+      "L'Odeur de l'essence"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Sur quel album figure le titre « Paradis » ?",
+    "text": "Quand est sorti Civilisation ?",
     "answers": [
-      "La fête est finie",
-      "Perdu d’avance",
-      "Le Chant des sirènes",
-      "Civilisation"
+      "19 novembre 2021",
+      "20 octobre 2017",
+      "1er janvier 2021",
+      "14 février 2022"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « San » ?",
+    "text": "Quand est sorti La fête est finie ?",
     "answers": [
-      "Bébéboa",
-      "Paradis",
-      "Manifeste",
-      "Civilisation"
+      "19 novembre 2021",
+      "8 juillet 2016",
+      "15 juin 2018",
+      "20 octobre 2017"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Sur quel album figure le titre « Shonen » ?",
+    "text": "Sur quel label est sorti Perdu d'avance ?",
     "answers": [
-      "Perdu d’avance",
-      "Le Chant des sirènes",
-      "Civilisation",
-      "La fête est finie"
+      "3e Bureau",
+      "Def Jam France",
+      "92i",
+      "Rec. 118"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « La quête » ?",
+    "text": "Lequel de ces titres est un single de Perdu d'avance ?",
     "answers": [
-      "Étoiles invisibles",
-      "Changement",
-      "Soirée ratée",
-      "Shonen"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « La quête » ?",
-    "answers": [
-      "Civilisation",
-      "Perdu d’avance",
-      "Le Chant des sirènes",
-      "La fête est finie"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Du propre » ?",
-    "answers": [
-      "Différent",
-      "La quête",
-      "No Life",
-      "Perdu d’avance"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Du propre » ?",
-    "answers": [
-      "Perdu d’avance",
-      "Le Chant des sirènes",
-      "Civilisation",
-      "La fête est finie"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Bébéboa » ?",
-    "answers": [
-      "Raelsan",
-      "Le Chant des sirènes",
-      "Plus rien ne m’étonne",
-      "Du propre"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Bébéboa » ?",
-    "answers": [
-      "Civilisation",
-      "Perdu d’avance",
-      "Le Chant des sirènes",
-      "La fête est finie"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Manifeste » ?",
-    "answers": [
-      "Mauvaise idée",
-      "Bébéboa",
-      "Suicide social",
-      "La petite marchande de porte-clefs"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Manifeste » ?",
-    "answers": [
-      "Perdu d’avance",
-      "Le Chant des sirènes",
-      "Civilisation",
-      "La fête est finie"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Civilisation » ?",
-    "answers": [
-      "San",
+      "Peur de l'échec",
       "Basique",
-      "Tout va bien",
-      "Manifeste"
+      "La Quête",
+      "RaelSan"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Sur quel album figure le titre « Civilisation » ?",
+    "text": "Quel album d'Orelsan a été certifié diamant en seulement cinq mois ?",
     "answers": [
       "Civilisation",
-      "Perdu d’avance",
+      "Perdu d'avance",
       "Le Chant des sirènes",
-      "La fête est finie"
+      "Casseurs Flowters"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Shonen » ?",
+    "text": "Quel morceau d'Orelsan de 2011 a été publié comme single promotionnel ?",
     "answers": [
-      "Défaite de famille",
-      "Civilisation",
-      "La pluie",
-      "Paradis"
+      "Double vie",
+      "Basique",
+      "La Quête",
+      "No Life"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Avec quel groupe Orelsan chante-t-il « Notes pour trop tard » ?",
+    "answers": [
+      "Ibeyi",
+      "Brigitte",
+      "Casseurs Flowters",
+      "The Neptunes"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle distinction a obtenu Civilisation dès sa première semaine ?",
+    "answers": [
+      "Disque de diamant",
+      "Victoire de la musique",
+      "Prix Constantin",
+      "Disque de platine"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Pour quel prix Perdu d'avance a-t-il été nommé ?",
+    "answers": [
+      "Prix Constantin",
+      "Prix Goncourt",
+      "César",
+      "Grammy Award"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
   }
 ]

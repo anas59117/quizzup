@@ -1,36 +1,206 @@
 [
   {
-    "text": "De combien de frères se compose le groupe PNL ?",
+    "text": "Quel lien unit les deux membres de PNL ?",
     "answers": [
-      "Deux",
-      "Trois",
-      "Quatre",
-      "Cinq"
+      "Ils sont cousins",
+      "Ils sont amis d'enfance",
+      "Ils sont voisins",
+      "Ils sont frères"
     ],
-    "correct": 0
+    "correct": 3
   },
   {
     "text": "Quels sont les noms de scène des deux membres de PNL ?",
     "answers": [
-      "Booba et Ali",
-      "Ademo et N.O.S",
       "Bigflo et Oli",
-      "Kool Shen et JoeyStarr"
+      "Booba et Ali",
+      "Kool Shen et JoeyStarr",
+      "Ademo et N.O.S"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "De quelle cité de Corbeil-Essonnes PNL est-il originaire ?",
+    "answers": [
+      "Les Tarterêts",
+      "La Grande Borne",
+      "Les Pyramides",
+      "Le Mirail"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans quel département se trouve Corbeil-Essonnes, ville de PNL ?",
+    "answers": [
+      "Les Hauts-de-Seine",
+      "L'Essonne",
+      "La Seine-Saint-Denis",
+      "Le Val-de-Marne"
     ],
     "correct": 1
   },
   {
-    "text": "Sur quel projet de PNL figure le titre « Je vis, je visser » ?",
+    "text": "Que signifie « QLF », expression chère à PNL ?",
     "answers": [
-      "Le Monde Chico",
-      "Dans la légende",
+      "Quartier libre forever",
+      "Quelle loyauté fraternelle",
       "Que la famille",
-      "Deux frères"
+      "Que le fric"
     ],
     "correct": 2
   },
   {
-    "text": "Sur quel projet de PNL figure le titre « Lala » ?",
+    "text": "Comment s'appelle le label de PNL ?",
+    "answers": [
+      "92i",
+      "D'or et de platine",
+      "QLF Records",
+      "Rec. 118"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Que signifie le nom « PNL » ?",
+    "answers": [
+      "Paris Nord Legends",
+      "Peace N' Lovés",
+      "Pour Nos Lossas",
+      "Poids Nouveau Lourd"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel est le premier album studio de PNL, sorti en 2015 ?",
+    "answers": [
+      "Dans la légende",
+      "Le Monde Chico",
+      "Deux frères",
+      "Que la famille"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel album de PNL est sorti en 2016 ?",
+    "answers": [
+      "Le Monde Chico",
+      "Deux frères",
+      "Dans la légende",
+      "Que la famille"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel album de PNL est sorti en 2019 ?",
+    "answers": [
+      "Dans la légende",
+      "Le Monde Chico",
+      "Deux frères",
+      "Que la famille"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel morceau de PNL a été tourné au sommet de la tour Eiffel ?",
+    "answers": [
+      "Naha",
+      "Le monde ou rien",
+      "Onizuka",
+      "Au DD"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Sur quel album figure « Au DD » ?",
+    "answers": [
+      "Dans la légende",
+      "Deux frères",
+      "Le Monde Chico",
+      "Que la famille"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel titre de PNL a marqué leur percée, extrait du Monde Chico ?",
+    "answers": [
+      "Au DD",
+      "DA",
+      "Le monde ou rien",
+      "Simba"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Sur quel projet figure « Le monde ou rien » ?",
+    "answers": [
+      "Le Monde Chico",
+      "Dans la légende",
+      "Deux frères",
+      "Que la famille"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans quel pays a été tourné le clip de « Oh lala » ?",
+    "answers": [
+      "La Norvège",
+      "Le Canada",
+      "L'Islande",
+      "L'Écosse"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Sur quel album figure « Oh lala » ?",
+    "answers": [
+      "Dans la légende",
+      "Le Monde Chico",
+      "Deux frères",
+      "Que la famille"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Sur quel album figure « Naha » ?",
+    "answers": [
+      "Le Monde Chico",
+      "Dans la légende",
+      "Deux frères",
+      "Que la famille"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Sur quel album figure « DA » ?",
+    "answers": [
+      "Le Monde Chico",
+      "Que la famille",
+      "Deux frères",
+      "Dans la légende"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Sur quel album figure « Onizuka » ?",
+    "answers": [
+      "Dans la légende",
+      "Deux frères",
+      "Le Monde Chico",
+      "Que la famille"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Sur quel album figure « La vie est belle » ?",
+    "answers": [
+      "Deux frères",
+      "Le Monde Chico",
+      "Dans la légende",
+      "Que la famille"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Sur quel projet figure « Je vis, je visser » ?",
     "answers": [
       "Le Monde Chico",
       "Dans la légende",
@@ -40,37 +210,197 @@
     "correct": 3
   },
   {
-    "text": "Sur quel projet de PNL figure le titre « Différents » ?",
+    "text": "Sur quel projet figure « Simba » ?",
     "answers": [
+      "Deux frères",
       "Que la famille",
+      "Dans la légende",
+      "Le Monde Chico"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Sur quel projet figure « La petite voix » ?",
+    "answers": [
       "Le Monde Chico",
+      "Que la famille",
+      "Deux frères",
+      "Dans la légende"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Sur quel projet figure « Plus Tony que Sosa » ?",
+    "answers": [
+      "Le Monde Chico",
+      "Que la famille",
       "Dans la légende",
       "Deux frères"
     ],
     "correct": 0
   },
   {
-    "text": "Sur quel projet de PNL figure le titre « Gala Gala » ?",
+    "text": "Sur quel projet figure « J'suis PNL » ?",
     "answers": [
       "Le Monde Chico",
-      "Que la famille",
       "Dans la légende",
+      "Deux frères",
+      "Que la famille"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Sur quel album figure « J'suis QLF » ?",
+    "answers": [
+      "Le Monde Chico",
+      "Dans la légende",
+      "Que la famille",
       "Deux frères"
     ],
     "correct": 1
   },
   {
-    "text": "Sur quel projet de PNL figure le titre « La petite voix » ?",
+    "text": "Sur quel album figure « Bené » ?",
     "answers": [
-      "Le Monde Chico",
+      "Deux frères",
       "Dans la légende",
       "Que la famille",
-      "Deux frères"
+      "Le Monde Chico"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel type de projet est « Que la famille » ?",
+    "answers": [
+      "Un double album",
+      "Une compilation",
+      "Un EP",
+      "Une bande originale"
     ],
     "correct": 2
   },
   {
-    "text": "Sur quel projet de PNL figure le titre « Athéna » ?",
+    "text": "Quelle certification l'album Dans la légende a-t-il obtenue en 2017 ?",
+    "answers": [
+      "Disque d'or",
+      "Disque de platine",
+      "Disque de diamant",
+      "Aucune"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est la particularité de la communication de PNL ?",
+    "answers": [
+      "Ils ont une émission de télé",
+      "Ils publient un livre par an",
+      "Ils animent une radio",
+      "Ils ne donnent quasiment aucune interview"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel prix « Au DD » a-t-il remporté aux Victoires de la musique 2020 ?",
+    "answers": [
+      "Chanson de l'année",
+      "Création audiovisuelle",
+      "Album de musiques urbaines",
+      "Révélation masculine"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel est le vrai prénom d'Ademo ?",
+    "answers": [
+      "Nabil",
+      "Yanis",
+      "Tarik",
+      "Karim"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel est le vrai prénom de N.O.S ?",
+    "answers": [
+      "Tarik",
+      "Nabil",
+      "Yanis",
+      "Samir"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui est l'aîné des deux frères de PNL ?",
+    "answers": [
+      "N.O.S",
+      "Ademo",
+      "Ils sont jumeaux",
+      "Leur frère Yanis"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel est le nom de famille des frères de PNL ?",
+    "answers": [
+      "Andrieu",
+      "Nzobazola",
+      "Yaffa",
+      "Mari"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Sur quel album figure « Jusqu'au dernier gramme » ?",
+    "answers": [
+      "Deux frères",
+      "Le Monde Chico",
+      "Que la famille",
+      "Dans la légende"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel single de Dans la légende est sorti la veille de l'album ?",
+    "answers": [
+      "DA",
+      "Onizuka",
+      "Bené",
+      "Naha"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel est le premier single extrait de Dans la légende ?",
+    "answers": [
+      "Naha",
+      "Onizuka",
+      "J'suis QLF",
+      "La vie est belle"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Lequel de ces titres est un single du Monde Chico ?",
+    "answers": [
+      "Naha",
+      "Au DD",
+      "Simba",
+      "Tempête"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Lequel de ces titres est extrait de Que la famille ?",
+    "answers": [
+      "Onizuka",
+      "Dans ta rue",
+      "Différents",
+      "DA"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Sur quel projet figure « Gala gala » ?",
     "answers": [
       "Le Monde Chico",
       "Dans la légende",
@@ -80,423 +410,102 @@
     "correct": 3
   },
   {
-    "text": "Sur quel projet de PNL figure le titre « Recherche du bonheur » ?",
+    "text": "En quelle année est sorti Dans la légende ?",
     "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Dans la légende",
-      "Deux frères"
+      "2015",
+      "2016",
+      "2017",
+      "2019"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Sur quel projet de PNL figure le titre « Simba » ?",
+    "text": "Quel record Dans la légende a-t-il établi sur Spotify ?",
     "answers": [
-      "Le Monde Chico",
-      "Que la famille",
-      "Dans la légende",
-      "Deux frères"
+      "Premier album rap sur Spotify",
+      "Album le plus long de l'année",
+      "Album français le plus streamé en 24 heures",
+      "Plus de featurings sur un album"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Sur quel projet de PNL figure le titre « J'comprends pas » ?",
+    "text": "Combien de titres de Dans la légende ont été certifiés ?",
     "answers": [
-      "Le Monde Chico",
-      "Dans la légende",
-      "Que la famille",
-      "Deux frères"
+      "La moitié",
+      "Tous les 18 morceaux",
+      "Seulement 3",
+      "Aucun"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Sur quel projet de PNL figure le titre « Abonné » ?",
+    "text": "Quelle est la particularité de la certification diamant de Dans la légende ?",
     "answers": [
-      "Le Monde Chico",
-      "Dans la légende",
-      "Deux frères",
-      "Que la famille"
+      "Obtenue en 24 heures",
+      "Obtenue sans aucun single",
+      "Obtenue en totale indépendance",
+      "Obtenue avec un album instrumental"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Sur quel projet de PNL figure le titre « QLF » ?",
+    "text": "Combien d'exemplaires Dans la légende a-t-il vendus en première semaine ?",
     "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Dans la légende",
-      "Deux frères"
+      "Environ 79 000",
+      "Environ 15 000",
+      "Environ 250 000",
+      "Environ 5 000"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Sur quel projet de PNL figure le titre « La misère au soleil » ?",
+    "text": "Avec quel distributeur PNL a-t-il travaillé de 2015 à 2018 ?",
     "answers": [
-      "Le Monde Chico",
-      "Que la famille",
-      "Dans la légende",
-      "Deux frères"
+      "Musicast",
+      "Universal",
+      "Because Music",
+      "Believe"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Sur quel projet de PNL figure le titre « Le monde ou rien » ?",
+    "text": "Quel est le prénom du petit frère d'Ademo et N.O.S ?",
     "answers": [
-      "Que la famille",
-      "Dans la légende",
-      "Le Monde Chico",
-      "Deux frères"
+      "Samy",
+      "Yanis",
+      "Nabil",
+      "Tarik"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Sur quel projet de PNL figure le titre « Sur Paname » ?",
+    "text": "Quel dernier single a été extrait de Dans la légende en 2017 ?",
     "answers": [
-      "Que la famille",
-      "Dans la légende",
-      "Deux frères",
-      "Le Monde Chico"
+      "Bené",
+      "Jusqu'au dernier gramme",
+      "Onizuka",
+      "La vie est belle"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Sur quel projet de PNL figure le titre « Oh Lala » ?",
+    "text": "Combien d'exemplaires Le Monde Chico a-t-il vendus en première semaine ?",
     "answers": [
-      "Le Monde Chico",
-      "Que la famille",
-      "Dans la légende",
-      "Deux frères"
+      "Plus de 15 000",
+      "Plus de 150 000",
+      "Moins de 1 000",
+      "Plus de 500 000"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « J'suis PNL » ?",
-    "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Dans la légende",
-      "Deux frères"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Mexico » ?",
-    "answers": [
-      "Que la famille",
-      "Dans la légende",
-      "Le Monde Chico",
-      "Deux frères"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Porte de Mesrine » ?",
-    "answers": [
-      "Que la famille",
-      "Dans la légende",
-      "Deux frères",
-      "Le Monde Chico"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Dans ta rue » ?",
-    "answers": [
-      "Le Monde Chico",
-      "Que la famille",
-      "Dans la légende",
-      "Deux frères"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Laisse » ?",
-    "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Dans la légende",
-      "Deux frères"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Loin des hommes » ?",
-    "answers": [
-      "Que la famille",
-      "Dans la légende",
-      "Le Monde Chico",
-      "Deux frères"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Le M » ?",
-    "answers": [
-      "Que la famille",
-      "Dans la légende",
-      "Deux frères",
-      "Le Monde Chico"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Rebenga » ?",
-    "answers": [
-      "Le Monde Chico",
-      "Que la famille",
-      "Dans la légende",
-      "Deux frères"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Plus Tony que Sosa » ?",
-    "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Dans la légende",
-      "Deux frères"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « DA » ?",
-    "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Dans la légende",
-      "Deux frères"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Naha » ?",
-    "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Deux frères",
-      "Dans la légende"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Dans la légende » ?",
-    "answers": [
-      "Dans la légende",
-      "Que la famille",
-      "Le Monde Chico",
-      "Deux frères"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Mira » ?",
-    "answers": [
-      "Que la famille",
-      "Dans la légende",
-      "Le Monde Chico",
-      "Deux frères"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « J'suis QLF » ?",
-    "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Dans la légende",
-      "Deux frères"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « La vie est belle » ?",
-    "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Deux frères",
-      "Dans la légende"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Kratos » ?",
-    "answers": [
-      "Dans la légende",
-      "Que la famille",
-      "Le Monde Chico",
-      "Deux frères"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Luz de Luna » ?",
-    "answers": [
-      "Que la famille",
-      "Dans la légende",
-      "Le Monde Chico",
-      "Deux frères"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Tu sais pas » ?",
-    "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Dans la légende",
-      "Deux frères"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Sheita » ?",
-    "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Deux frères",
-      "Dans la légende"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Béné » ?",
-    "answers": [
-      "Dans la légende",
-      "Que la famille",
-      "Le Monde Chico",
-      "Deux frères"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Onizuka » ?",
-    "answers": [
-      "Que la famille",
-      "Dans la légende",
-      "Le Monde Chico",
-      "Deux frères"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Au DD » ?",
-    "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Deux frères",
-      "Dans la légende"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Autre monde » ?",
-    "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Dans la légende",
-      "Deux frères"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Chang » ?",
-    "answers": [
-      "Deux frères",
-      "Que la famille",
-      "Le Monde Chico",
-      "Dans la légende"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Blanka » ?",
-    "answers": [
-      "Que la famille",
-      "Deux frères",
-      "Le Monde Chico",
-      "Dans la légende"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « 91's » ?",
-    "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Deux frères",
-      "Dans la légende"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « À l'ammoniaque » ?",
-    "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Dans la légende",
-      "Deux frères"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Celsius » ?",
-    "answers": [
-      "Deux frères",
-      "Que la famille",
-      "Le Monde Chico",
-      "Dans la légende"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Deux frères » ?",
-    "answers": [
-      "Que la famille",
-      "Deux frères",
-      "Le Monde Chico",
-      "Dans la légende"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Cœurs » ?",
-    "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Deux frères",
-      "Dans la légende"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Shenmue » ?",
-    "answers": [
-      "Que la famille",
-      "Le Monde Chico",
-      "Dans la légende",
-      "Deux frères"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « Kuta Ubud » ?",
-    "answers": [
-      "Deux frères",
-      "Que la famille",
-      "Le Monde Chico",
-      "Dans la légende"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Sur quel projet de PNL figure le titre « La misère est si belle » ?",
-    "answers": [
-      "Que la famille",
-      "Deux frères",
-      "Le Monde Chico",
-      "Dans la légende"
-    ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "expert"
   }
 ]

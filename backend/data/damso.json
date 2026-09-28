@@ -1,146 +1,76 @@
 [
   {
-    "text": "Quel est le pays d’origine de Damso ?",
+    "text": "Dans quel pays Damso a-t-il grandi et commencé le rap ?",
     "answers": [
-      "Belgique",
-      "France",
-      "Suisse",
-      "Canada"
+      "La Belgique",
+      "La Suisse",
+      "Le Canada",
+      "Le Luxembourg"
     ],
     "correct": 0
+  },
+  {
+    "text": "Dans quelle ville Damso est-il né ?",
+    "answers": [
+      "Bruxelles",
+      "Kinshasa",
+      "Paris",
+      "Lubumbashi"
+    ],
+    "correct": 1
   },
   {
     "text": "Quel est le vrai prénom de Damso ?",
     "answers": [
-      "Georges",
       "William",
-      "Aurélien",
-      "Gandhi"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « BruxellesVie » ?",
-    "answers": [
-      "Ipséité",
-      "Lithopédion",
-      "Batterie faible",
-      "QALF"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Débrouillard » ?",
-    "answers": [
-      "Nwaar Is the New Black",
-      "Dieu ne ment jamais",
-      "Mosaïque solitaire",
-      "BruxellesVie"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Débrouillard » ?",
-    "answers": [
-      "Batterie faible",
-      "Ipséité",
-      "Lithopédion",
-      "QALF"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Amnésie » ?",
-    "answers": [
-      "Macarena",
-      "Débrouillard",
-      "Signaler",
-      "Kietu"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Amnésie » ?",
-    "answers": [
-      "Ipséité",
-      "Lithopédion",
-      "Batterie faible",
-      "QALF"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Quotidien de baisé » ?",
-    "answers": [
-      "Introduction",
-      "Festival de rêves",
-      "Baltringue",
-      "Amnésie"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Quotidien de baisé » ?",
-    "answers": [
-      "Batterie faible",
-      "Ipséité",
-      "Lithopédion",
-      "QALF"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Exutoire » ?",
-    "answers": [
       "Julien",
-      "Quotidien de baisé",
-      "Feu de bois",
-      "Smog"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Exutoire » ?",
-    "answers": [
-      "Ipséité",
-      "Lithopédion",
-      "Batterie faible",
-      "QALF"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Monde » ?",
-    "answers": [
-      "Deux toiles de mer",
-      "Sentimental",
-      "911",
-      "Exutoire"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Monde » ?",
-    "answers": [
-      "Batterie faible",
-      "Ipséité",
-      "Lithopédion",
-      "QALF"
+      "Tarik",
+      "Élie"
     ],
     "correct": 0
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « BruxellesVie » ?",
+    "text": "Quel est le surnom de Damso ?",
     "answers": [
-      "Morose",
-      "Monde",
-      "Cœur en miettes",
-      "Vantablack"
+      "Le Duc",
+      "L'Ovni",
+      "Dems",
+      "Le Jefe"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel rappeur a repéré Damso en 2015 ?",
+    "answers": [
+      "Booba",
+      "Jul",
+      "Orelsan",
+      "Kaaris"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel collectif Damso a-t-il rejoint grâce à Booba ?",
+    "answers": [
+      "QLF",
+      "92i",
+      "Sexion d'Assaut",
+      "L'Entourage"
     ],
     "correct": 1
   },
   {
-    "text": "Sur quel album figure le titre « Nwaar Is the New Black » ?",
+    "text": "Quel est le premier album studio de Damso, sorti en 2016 ?",
+    "answers": [
+      "Ipséité",
+      "Lithopédion",
+      "Batterie faible",
+      "QALF"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel album de Damso est sorti en 2017 ?",
     "answers": [
       "Batterie faible",
       "Lithopédion",
@@ -150,353 +80,434 @@
     "correct": 2
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Dieu ne ment jamais » ?",
+    "text": "Quel album de Damso est sorti en 2018 ?",
+    "answers": [
+      "Ipséité",
+      "Lithopédion",
+      "QALF",
+      "Batterie faible"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel album de Damso est sorti en 2020 ?",
+    "answers": [
+      "Lithopédion",
+      "Ipséité",
+      "Batterie faible",
+      "QALF"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Que signifie « QALF » ?",
+    "answers": [
+      "Quartier à l'abri la famille",
+      "Qui aime like follow",
+      "Que l'amour libère fort",
+      "Quand arrive la fin"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel est le titre le plus célèbre de l'album Ipséité, certifié diamant ?",
     "answers": [
       "BruxellesVie",
-      "Débrouillard",
-      "Amnésie",
-      "Nwaar Is the New Black"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Dieu ne ment jamais » ?",
-    "answers": [
-      "Ipséité",
-      "Batterie faible",
-      "Lithopédion",
-      "QALF"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Mosaïque solitaire » ?",
-    "answers": [
-      "Quotidien de baisé",
-      "Dieu ne ment jamais",
-      "Exutoire",
-      "Monde"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Mosaïque solitaire » ?",
-    "answers": [
-      "Batterie faible",
-      "Lithopédion",
-      "Ipséité",
-      "QALF"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Macarena » ?",
-    "answers": [
-      "Introduction",
-      "Festival de rêves",
-      "Baltringue",
-      "Mosaïque solitaire"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Macarena » ?",
-    "answers": [
-      "Ipséité",
-      "Batterie faible",
-      "Lithopédion",
-      "QALF"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Signaler » ?",
-    "answers": [
-      "Julien",
-      "Macarena",
-      "Feu de bois",
-      "Smog"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Signaler » ?",
-    "answers": [
-      "Batterie faible",
-      "Lithopédion",
-      "Ipséité",
-      "QALF"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Kietu » ?",
-    "answers": [
-      "Deux toiles de mer",
-      "Sentimental",
-      "911",
-      "Signaler"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Kietu » ?",
-    "answers": [
-      "Ipséité",
-      "Batterie faible",
-      "Lithopédion",
-      "QALF"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Nwaar Is the New Black » ?",
-    "answers": [
-      "Morose",
-      "Kietu",
-      "Cœur en miettes",
-      "Vantablack"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Introduction » ?",
-    "answers": [
-      "Batterie faible",
-      "Ipséité",
-      "Lithopédion",
-      "QALF"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Festival de rêves » ?",
-    "answers": [
-      "BruxellesVie",
-      "Débrouillard",
-      "Amnésie",
-      "Introduction"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Festival de rêves » ?",
-    "answers": [
-      "Lithopédion",
-      "Batterie faible",
-      "Ipséité",
-      "QALF"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Baltringue » ?",
-    "answers": [
-      "Quotidien de baisé",
-      "Festival de rêves",
-      "Exutoire",
-      "Monde"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Baltringue » ?",
-    "answers": [
-      "Batterie faible",
-      "Ipséité",
-      "Lithopédion",
-      "QALF"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Julien » ?",
-    "answers": [
-      "Nwaar Is the New Black",
-      "Dieu ne ment jamais",
-      "Mosaïque solitaire",
-      "Baltringue"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Julien » ?",
-    "answers": [
-      "Lithopédion",
-      "Batterie faible",
-      "Ipséité",
-      "QALF"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Feu de bois » ?",
-    "answers": [
       "Macarena",
       "Julien",
-      "Signaler",
-      "Kietu"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Feu de bois » ?",
-    "answers": [
-      "Batterie faible",
-      "Ipséité",
-      "Lithopédion",
-      "QALF"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Smog » ?",
-    "answers": [
-      "Deux toiles de mer",
-      "Sentimental",
-      "911",
-      "Feu de bois"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Smog » ?",
-    "answers": [
-      "Lithopédion",
-      "Batterie faible",
-      "Ipséité",
-      "QALF"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Introduction » ?",
-    "answers": [
-      "Morose",
-      "Smog",
-      "Cœur en miettes",
-      "Vantablack"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « Deux toiles de mer » ?",
-    "answers": [
-      "Batterie faible",
-      "Ipséité",
-      "QALF",
-      "Lithopédion"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Sentimental » ?",
-    "answers": [
-      "BruxellesVie",
-      "Débrouillard",
-      "Amnésie",
-      "Deux toiles de mer"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quel album figure le titre « Sentimental » ?",
-    "answers": [
-      "QALF",
-      "Batterie faible",
-      "Ipséité",
-      "Lithopédion"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « 911 » ?",
-    "answers": [
-      "Quotidien de baisé",
-      "Sentimental",
-      "Exutoire",
-      "Monde"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sur quel album figure le titre « 911 » ?",
-    "answers": [
-      "Batterie faible",
-      "Ipséité",
-      "QALF",
-      "Lithopédion"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Morose » ?",
-    "answers": [
-      "Nwaar Is the New Black",
-      "Dieu ne ment jamais",
-      "Mosaïque solitaire",
       "911"
     ],
+    "correct": 1
+  },
+  {
+    "text": "Sur quel album figure « Macarena » ?",
+    "answers": [
+      "Batterie faible",
+      "Lithopédion",
+      "Ipséité",
+      "QALF"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle particularité ont les titres de l'album Ipséité ?",
+    "answers": [
+      "Ils sont tous en anglais",
+      "Ils portent des noms de villes",
+      "Ils sont numérotés en chiffres romains",
+      "Ils commencent par une lettre grecque"
+    ],
     "correct": 3
   },
   {
-    "text": "Sur quel album figure le titre « Morose » ?",
+    "text": "Sur quel album figure « BruxellesVie » ?",
     "answers": [
-      "QALF",
-      "Batterie faible",
       "Ipséité",
+      "Batterie faible",
+      "QALF",
       "Lithopédion"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Lequel de ces titres figure sur le même album que « Cœur en miettes » ?",
-    "answers": [
-      "Macarena",
-      "Morose",
-      "Signaler",
-      "Kietu"
     ],
     "correct": 1
   },
   {
-    "text": "Sur quel album figure le titre « Cœur en miettes » ?",
+    "text": "Sur quel album figure « Débrouillard » ?",
     "answers": [
+      "Lithopédion",
       "Batterie faible",
       "Ipséité",
+      "QALF"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Sur quel album figure « Mosaïque solitaire » ?",
+    "answers": [
+      "Batterie faible",
       "QALF",
+      "Lithopédion",
+      "Ipséité"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Sur quel album figure « Signaler » ?",
+    "answers": [
+      "Ipséité",
+      "Lithopédion",
+      "Batterie faible",
+      "QALF"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Sur quel album figure « Julien » ?",
+    "answers": [
+      "Ipséité",
+      "Batterie faible",
+      "QALF",
+      "Lithopédion"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Sur quel album figure « Feu de bois » ?",
+    "answers": [
+      "Lithopédion",
+      "QALF",
+      "Ipséité",
+      "Batterie faible"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Avec quelle chanteuse belge Damso chante-t-il « Silence » sur Lithopédion ?",
+    "answers": [
+      "Lous and the Yakuza",
+      "Angèle",
+      "Stromae",
+      "Aya Nakamura"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel titre de Lithopédion porte le nom de l'album précédent de Damso ?",
+    "answers": [
+      "Batterie faible",
+      "QALF",
+      "Salle d'attente",
+      "Ipséité"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel est le seul clip tourné pour l'album Lithopédion ?",
+    "answers": [
+      "Julien",
+      "Smog",
+      "Feu de bois",
+      "Humain"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel album de Damso a remporté une Victoire de la musique en 2019 ?",
+    "answers": [
+      "Lithopédion",
+      "Ipséité",
+      "Batterie faible",
+      "QALF"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel single de QALF est accompagné d'un clip avec Noémie Lenoir ?",
+    "answers": [
+      "911",
+      "Macarena",
+      "Julien",
+      "Smog"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Avec quel rappeur belge Damso chante-t-il « BXL ZOO » sur QALF ?",
+    "answers": [
+      "Hamza",
+      "Roméo Elvis",
+      "Shay",
+      "Krisy"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Avec quelle chanteuse Damso chante-t-il « Cœur en miettes » sur QALF ?",
+    "answers": [
+      "Angèle",
+      "Aya Nakamura",
+      "Lous and the Yakuza",
+      "Shay"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Avec quelle star congolaise Damso chante-t-il « Fais ça bien » sur QALF ?",
+    "answers": [
+      "Koffi Olomidé",
+      "Fally Ipupa",
+      "Innoss'B",
+      "Werrason"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle certification l'album Ipséité a-t-il obtenue ?",
+    "answers": [
+      "Disque d'or",
+      "Disque de diamant",
+      "Disque de platine",
+      "Aucune"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel est le premier projet de Damso, sorti en 2014 ?",
+    "answers": [
+      "Batterie faible",
+      "Salle d'attente",
+      "Ipséité",
+      "Autopsie"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Avec quel morceau Damso s'est-il fait remarquer par Booba ?",
+    "answers": [
+      "Macarena",
+      "Poséidon",
+      "BruxellesVie",
+      "Julien"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle suite de QALF est sortie en 2021 ?",
+    "answers": [
+      "QALF 2.0",
+      "QALF Reloaded",
+      "QALF Infinity",
+      "QALF Deluxe"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel album de Damso est sorti en novembre 2024 ?",
+    "answers": [
+      "Bēyāh",
+      "QALF Infinity",
+      "J'ai menti",
       "Lithopédion"
     ],
     "correct": 2
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Vantablack » ?",
+    "text": "Quel album annoncé pour 2025 est présenté comme le dernier de Damso ?",
     "answers": [
-      "Introduction",
-      "Festival de rêves",
-      "Baltringue",
-      "Cœur en miettes"
+      "J'ai menti",
+      "QALF Infinity",
+      "Ipséité",
+      "Bēyāh"
     ],
     "correct": 3
   },
   {
-    "text": "Sur quel album figure le titre « Vantablack » ?",
+    "text": "En 2018, pour quel événement la fédération belge a-t-elle annulé l'hymne confié à Damso ?",
     "answers": [
-      "QALF",
-      "Batterie faible",
-      "Ipséité",
-      "Lithopédion"
+      "La Coupe du monde de football",
+      "L'Euro de basket",
+      "Les Jeux olympiques",
+      "Le Tour de France"
     ],
     "correct": 0
   },
   {
-    "text": "Lequel de ces titres figure sur le même album que « Deux toiles de mer » ?",
+    "text": "Quelle est la nationalité de Damso ?",
     "answers": [
-      "Julien",
-      "Vantablack",
-      "Feu de bois",
-      "Smog"
+      "Franco-sénégalaise",
+      "Belgo-congolaise",
+      "Franco-algérienne",
+      "Canadienne"
     ],
     "correct": 1
+  },
+  {
+    "text": "Avec quelle chanteuse Damso chante-t-il « Débrouillard » ?",
+    "answers": [
+      "Angèle",
+      "Shay",
+      "Krisy",
+      "Lous and the Yakuza"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Sur quel album figure « Kin la belle » ?",
+    "answers": [
+      "Lithopédion",
+      "Batterie faible",
+      "Ipséité",
+      "QALF"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Sur quel album figure « Graine de sablier » ?",
+    "answers": [
+      "Batterie faible",
+      "Lithopédion",
+      "Ipséité",
+      "QALF"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle lettre grecque ouvre le titre « Macarena » sur Ipséité ?",
+    "answers": [
+      "Α (alpha)",
+      "Θ (thêta)",
+      "Ω (oméga)",
+      "Σ (sigma)"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel titre ouvre l'album Ipséité ?",
+    "answers": [
+      "Macarena",
+      "Kietu",
+      "Nwaar Is The New Black",
+      "Une âme pour deux"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel titre ouvre l'album Batterie faible ?",
+    "answers": [
+      "Périscope",
+      "Débrouillard",
+      "Monde",
+      "Amnésie"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Que désigne le mot « lithopédion » selon Damso ?",
+    "answers": [
+      "Une pierre précieuse africaine",
+      "Un ancien roi du Congo",
+      "Un fœtus mort calcifié dans le corps de sa mère",
+      "Une maladie des cordes vocales"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Avec quel artiste Damso chante-t-il « Peur d'être père » ?",
+    "answers": [
+      "Hamza",
+      "Youri Botterman",
+      "Krisy",
+      "YG Pablo"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quand est sorti l'album Lithopédion ?",
+    "answers": [
+      "8 juillet 2016",
+      "15 juin 2018",
+      "18 septembre 2020",
+      "1er janvier 2018"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quand est sorti l'album Batterie faible ?",
+    "answers": [
+      "15 juin 2018",
+      "18 septembre 2020",
+      "8 juillet 2016",
+      "26 avril 2017"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Avec quel groupe Damso a-t-il commencé à rapper en 2006 ?",
+    "answers": [
+      "L'Or du Commun",
+      "Ultra Vomit",
+      "OPG",
+      "Starflam"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de titres de Lithopédion sont certifiés diamant ?",
+    "answers": [
+      "3",
+      "1",
+      "7",
+      "12"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur quel label est sorti Batterie faible ?",
+    "answers": [
+      "Def Jam France",
+      "Rec. 118",
+      "Musicast",
+      "Capitol Music France"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de titres compte l'édition standard d'Ipséité ?",
+    "answers": [
+      "8",
+      "14",
+      "20",
+      "24"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
   }
 ]
