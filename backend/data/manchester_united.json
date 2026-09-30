@@ -508,5 +508,505 @@
     ],
     "correct": 0,
     "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année Manchester United a-t-il remporté son premier championnat d'Angleterre ?",
+    "answers": [
+      "1911",
+      "1952",
+      "1965",
+      "1908"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "En quelle année Old Trafford a-t-il ouvert ses portes ?",
+    "answers": [
+      "1902",
+      "1923",
+      "1910",
+      "1949"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel club United a-t-il battu en finale de la FA Cup 1909 ?",
+    "answers": [
+      "Blackpool",
+      "Leicester City",
+      "Bristol City",
+      "Southampton"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel club United a-t-il battu en finale de la FA Cup 1948 ?",
+    "answers": [
+      "Bristol City",
+      "Everton",
+      "Blackpool",
+      "Chelsea"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel adversaire United a-t-il battu en finale de la FA Cup 1963 ?",
+    "answers": [
+      "Liverpool",
+      "Arsenal",
+      "Brighton",
+      "Leicester City"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel était le score de la finale européenne 1968 gagnée par United contre Benfica après prolongation ?",
+    "answers": [
+      "4-1",
+      "2-1",
+      "3-0",
+      "1-0"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel joueur de United a inscrit deux buts lors de la finale européenne de 1968 ?",
+    "answers": [
+      "Bobby Charlton",
+      "George Best",
+      "Brian Kidd",
+      "Denis Law"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel gardien de United était titulaire en finale européenne de 1968 ?",
+    "answers": [
+      "Peter Schmeichel",
+      "Ray Clemence",
+      "Edwin van der Sar",
+      "Alex Stepney"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel club United a-t-il éliminé en demi-finale de la Coupe des clubs champions 1968 ?",
+    "answers": [
+      "Le Real Madrid",
+      "Le Celtic",
+      "L'Ajax",
+      "L'Inter Milan"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel club United a-t-il battu en finale de la FA Cup 1977 ?",
+    "answers": [
+      "Arsenal",
+      "Southampton",
+      "Tottenham",
+      "Liverpool"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel joueur a marqué le but décisif de United en finale de la FA Cup 1985 ?",
+    "answers": [
+      "Bryan Robson",
+      "Mark Hughes",
+      "Steve Bruce",
+      "Norman Whiteside"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel club United a-t-il battu après un match d'appui en finale de la FA Cup 1990 ?",
+    "answers": [
+      "Chelsea",
+      "Leeds United",
+      "Crystal Palace",
+      "Everton"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel club United a-t-il battu en finale de la Coupe des vainqueurs de coupe 1991 ?",
+    "answers": [
+      "L'Étoile rouge de Belgrade",
+      "Le Real Madrid",
+      "L'Ajax",
+      "Le FC Barcelone"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle ville United a-t-il remporté la Coupe des vainqueurs de coupe 1991 ?",
+    "answers": [
+      "Munich",
+      "Rome",
+      "Rotterdam",
+      "Lisbonne"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel attaquant a inscrit les deux buts de United en finale européenne contre Barcelone en 1991 ?",
+    "answers": [
+      "Brian McClair",
+      "Éric Cantona",
+      "Mark Hughes",
+      "Andy Cole"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel club United a-t-il battu lors de la Supercoupe de l'UEFA 1991 ?",
+    "answers": [
+      "Le FC Barcelone",
+      "L'AC Milan",
+      "L'Étoile rouge de Belgrade",
+      "Le FC Porto"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel joueur a marqué l'unique but de la Supercoupe de l'UEFA 1991 pour United ?",
+    "answers": [
+      "Brian McClair",
+      "Mark Hughes",
+      "Bryan Robson",
+      "Steve Bruce"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel adversaire United a-t-il battu pour sa première Coupe de la Ligue en 1992 ?",
+    "answers": [
+      "Liverpool",
+      "Nottingham Forest",
+      "Aston Villa",
+      "Tottenham"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle saison a apporté à United son premier titre dans l'ère Premier League ?",
+    "answers": [
+      "1992-1993",
+      "1993-1994",
+      "1995-1996",
+      "1998-1999"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel adversaire United a-t-il battu en finale de la FA Cup 1994 ?",
+    "answers": [
+      "Chelsea",
+      "Liverpool",
+      "Newcastle",
+      "Arsenal"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel adversaire United a-t-il battu en finale de la FA Cup 1996 ?",
+    "answers": [
+      "Chelsea",
+      "Everton",
+      "Liverpool",
+      "Middlesbrough"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel adversaire United a-t-il battu en finale de la FA Cup 1999 ?",
+    "answers": [
+      "Arsenal",
+      "Chelsea",
+      "Aston Villa",
+      "Newcastle"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel club United a-t-il battu en finale de la FA Cup 2004 ?",
+    "answers": [
+      "Southampton",
+      "Cardiff City",
+      "Portsmouth",
+      "Millwall"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel adversaire United a-t-il battu en finale de la Coupe de la Ligue 2006 ?",
+    "answers": [
+      "Tottenham",
+      "Wigan Athletic",
+      "Aston Villa",
+      "Southampton"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel adversaire United a-t-il battu aux tirs au but en finale de la Coupe de la Ligue 2009 ?",
+    "answers": [
+      "Wigan Athletic",
+      "Tottenham",
+      "Chelsea",
+      "Liverpool"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel adversaire United a-t-il battu en finale de la Coupe de la Ligue 2010 ?",
+    "answers": [
+      "Aston Villa",
+      "Newcastle",
+      "Arsenal",
+      "Manchester City"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel adversaire United a-t-il battu en finale de la FA Cup 2016 ?",
+    "answers": [
+      "Chelsea",
+      "Leicester City",
+      "Crystal Palace",
+      "West Ham"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel adversaire United a-t-il battu en finale de la Coupe de la Ligue 2017 ?",
+    "answers": [
+      "Newcastle",
+      "Tottenham",
+      "Brighton",
+      "Southampton"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel attaquant suédois a inscrit le but décisif de la finale de la Coupe de la Ligue 2017 ?",
+    "answers": [
+      "Marcus Rashford",
+      "Wayne Rooney",
+      "Zlatan Ibrahimović",
+      "Anthony Martial"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel adversaire United a-t-il battu en finale de la Coupe de la Ligue 2023 ?",
+    "answers": [
+      "Aston Villa",
+      "Newcastle",
+      "Manchester City",
+      "West Ham"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel adversaire United a-t-il battu en finale de la FA Cup 2024 ?",
+    "answers": [
+      "Manchester City",
+      "Liverpool",
+      "Chelsea",
+      "Arsenal"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel jeune joueur argentin a marqué pour United en finale de la FA Cup 2024 ?",
+    "answers": [
+      "Alejandro Garnacho",
+      "Lisandro Martínez",
+      "Ángel Di María",
+      "Carlos Tévez"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel milieu formé à United a également marqué en finale de la FA Cup 2024 ?",
+    "answers": [
+      "Scott McTominay",
+      "Jesse Lingard",
+      "Paul Scholes",
+      "Kobbie Mainoo"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel club équatorien United a-t-il battu en finale de la Coupe du monde des clubs 2008 ?",
+    "answers": [
+      "Flamengo",
+      "LDU Quito",
+      "Corinthians",
+      "Boca Juniors"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qui a marqué l'unique but de la finale de la Coupe du monde des clubs 2008 pour United ?",
+    "answers": [
+      "Cristiano Ronaldo",
+      "Carlos Tévez",
+      "Dimitar Berbatov",
+      "Wayne Rooney"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel club japonais United a-t-il battu en demi-finale de la Coupe du monde des clubs 2008 ?",
+    "answers": [
+      "Urawa Red Diamonds",
+      "Kashima Antlers",
+      "Sanfrecce Hiroshima",
+      "Gamba Osaka"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel attaquant néerlandais a inscrit un triplé contre Aston Villa lors du titre de United en 2013 ?",
+    "answers": [
+      "Ruud van Nistelrooy",
+      "Memphis Depay",
+      "Arjen Robben",
+      "Robin van Persie"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "En quelle année Matt Busby a-t-il remporté son premier championnat avec United ?",
+    "answers": [
+      "1952",
+      "1948",
+      "1956",
+      "1965"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En quelle année les Busby Babes ont-ils remporté leur premier championnat d'Angleterre ?",
+    "answers": [
+      "1952",
+      "1957",
+      "1956",
+      "1965"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel joueur a inscrit les deux buts de United contre Liverpool lors du Charity Shield 1983 ?",
+    "answers": [
+      "Mark Hughes",
+      "Norman Whiteside",
+      "Bryan Robson",
+      "Steve Coppell"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel adversaire United a-t-il affronté lors du match nul qui lui a assuré le titre de 2011 ?",
+    "answers": [
+      "Chelsea",
+      "Everton",
+      "Blackburn Rovers",
+      "Tottenham"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel défenseur a formé une charnière centrale de United avec Steve Bruce en 1993-1994 ?",
+    "answers": [
+      "Rio Ferdinand",
+      "Nemanja Vidić",
+      "Jaap Stam",
+      "Gary Pallister"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel ailier a participé au doublé championnat-FA Cup de United en 1994 ?",
+    "answers": [
+      "Andrei Kanchelskis",
+      "Nani",
+      "Antonio Valencia",
+      "Park Ji-sung"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel entraîneur a gagné les FA Cups 1983 et 1985 avec United ?",
+    "answers": [
+      "Ron Atkinson",
+      "Tommy Docherty",
+      "Dave Sexton",
+      "Matt Busby"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel entraîneur a guidé United à la victoire en FA Cup 1977 ?",
+    "answers": [
+      "Tommy Docherty",
+      "Ron Atkinson",
+      "Dave Sexton",
+      "Alex Ferguson"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel milieu a porté le brassard de capitaine de United lors de la finale européenne 1991 ?",
+    "answers": [
+      "Roy Keane",
+      "Paul Scholes",
+      "David Beckham",
+      "Bryan Robson"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel arrière irlandais a figuré dans l'équipe de United sacrée en Premier League en 1993-1994 ?",
+    "answers": [
+      "John O'Shea",
+      "Patrice Evra",
+      "Denis Irwin",
+      "Wes Brown"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel défenseur de United fut expulsé en finale de la FA Cup 1985 ?",
+    "answers": [
+      "Gary Pallister",
+      "Kevin Moran",
+      "Steve Bruce",
+      "Rio Ferdinand"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel buteur de United a égalisé en finale de la Coupe de la Ligue 2010 contre Aston Villa ?",
+    "answers": [
+      "Wayne Rooney",
+      "Dimitar Berbatov",
+      "Michael Owen",
+      "Louis Saha"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel attaquant a marqué le but de la victoire de United en finale de la Coupe de la Ligue 2010 ?",
+    "answers": [
+      "Michael Owen",
+      "Carlos Tévez",
+      "Wayne Rooney",
+      "Danny Welbeck"
+    ],
+    "correct": 2
   }
 ]
