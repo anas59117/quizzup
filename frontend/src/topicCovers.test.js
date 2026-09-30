@@ -320,7 +320,7 @@ describe('topic cover catalog', () => {
 
   test('every family fallback remains available for future explicit use', () => {
     expect(Object.keys(FAMILY_TOPIC_COVERS).sort()).toEqual(
-      ['culture', 'entertainment', 'gaming', 'music', 'sport']
+      ['cinema', 'culture', 'football', 'gaming', 'manga', 'music', 'sagas', 'series', 'sport']
     );
   });
 
