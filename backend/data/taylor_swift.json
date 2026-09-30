@@ -619,5 +619,434 @@
     ],
     "correct": 0,
     "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année est sorti l'album « Taylor Swift » ?",
+    "answers": [
+      "2004",
+      "2006",
+      "2005",
+      "2007"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année est sorti l'album « Fearless » ?",
+    "answers": [
+      "2010",
+      "2006",
+      "2008",
+      "2007"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année est sorti l'album « Speak Now » ?",
+    "answers": [
+      "2011",
+      "2012",
+      "2008",
+      "2010"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année est sorti l'album « Red » ?",
+    "answers": [
+      "2012",
+      "2014",
+      "2010",
+      "2011"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année est sorti l'album « 1989 » ?",
+    "answers": [
+      "2016",
+      "2014",
+      "2012",
+      "2013"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année est sorti l'album « reputation » ?",
+    "answers": [
+      "2019",
+      "2015",
+      "2017",
+      "2016"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année est sorti l'album « Lover » ?",
+    "answers": [
+      "2020",
+      "2021",
+      "2017",
+      "2019"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année est sorti l'album « folklore » ?",
+    "answers": [
+      "2020",
+      "2018",
+      "2019",
+      "2021"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année est sorti l'album « evermore » ?",
+    "answers": [
+      "2019",
+      "2020",
+      "2021",
+      "2022"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année est sorti l'album « Midnights » ?",
+    "answers": [
+      "2021",
+      "2023",
+      "2022",
+      "2024"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel titre ouvre l'album « Taylor Swift » ?",
+    "answers": [
+      "Our Song",
+      "Picture To Burn",
+      "Teardrops On My Guitar (Radio Single Remix)",
+      "Tim McGraw"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel titre ouvre l'album « Fearless » ?",
+    "answers": [
+      "Fearless",
+      "You Belong With Me",
+      "Breathe (feat. Colbie Caillat)",
+      "Tell Me Why"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel titre ouvre l'album « Speak Now » ?",
+    "answers": [
+      "Long Live",
+      "Mine (POP Mix)",
+      "Ours",
+      "If This Was A Movie"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel titre ouvre l'album « Red » ?",
+    "answers": [
+      "Stay Stay Stay",
+      "The Last Time (feat. Gary Lightbody)",
+      "State of Grace",
+      "Holy Ground"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel titre ouvre l'album « 1989 » ?",
+    "answers": [
+      "How You Get the Girl",
+      "This Love",
+      "I Know Places",
+      "Welcome To New York"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel titre ouvre l'album « reputation » ?",
+    "answers": [
+      "...Ready For It?",
+      "Call It What You Want",
+      "New Year’s Day",
+      "End Game (feat. Ed Sheeran & Future)"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel titre ouvre l'album « Lover » ?",
+    "answers": [
+      "Miss Americana & The Heartbreak Prince",
+      "I Forgot That You Existed",
+      "Paper Rings",
+      "Cornelia Street"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel titre ouvre l'album « folklore » ?",
+    "answers": [
+      "exile (feat. Bon Iver)",
+      "my tears ricochet",
+      "the 1",
+      "mirrorball"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel titre ouvre l'album « Midnights » ?",
+    "answers": [
+      "Labyrinth",
+      "Karma",
+      "Sweet Nothing",
+      "Lavender Haze"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « Taylor Swift » ?",
+    "answers": [
+      "The Outside",
+      "I Think He Knows",
+      "Miss Americana & The Heartbreak Prince",
+      "Paper Rings"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « Fearless » ?",
+    "answers": [
+      "Dress",
+      "Breathe (feat. Colbie Caillat)",
+      "This Is Why We Can’t Have Nice Things",
+      "Call It What You Want"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « Speak Now » ?",
+    "answers": [
+      "Maroon",
+      "Anti-Hero",
+      "Haunted",
+      "Snow On The Beach (feat. Lana Del Rey)"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « Red » ?",
+    "answers": [
+      "the last great american dynasty",
+      "exile (feat. Bon Iver)",
+      "my tears ricochet",
+      "Stay Stay Stay"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « 1989 » ?",
+    "answers": [
+      "How You Get the Girl",
+      "Dress",
+      "This Is Why We Can’t Have Nice Things",
+      "Call It What You Want"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « reputation » ?",
+    "answers": [
+      "tolerate it",
+      "Dancing With Our Hands Tied",
+      "no body, no crime (feat. HAIM)",
+      "happiness"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « Lover » ?",
+    "answers": [
+      "champagne problems",
+      "gold rush",
+      "Death By A Thousand Cuts",
+      "'tis the damn season"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « folklore » ?",
+    "answers": [
+      "Paper Rings",
+      "Cornelia Street",
+      "Death By A Thousand Cuts",
+      "mad woman"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « evermore » ?",
+    "answers": [
+      "dorothea",
+      "mirrorball",
+      "seven",
+      "august"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « Midnights » ?",
+    "answers": [
+      "Mary's Song (Oh My My My)",
+      "Labyrinth",
+      "Our Song",
+      "Fearless"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur « Taylor Swift », quel titre suit « The Outside » ?",
+    "answers": [
+      "Mary's Song (Oh My My My)",
+      "Our Song",
+      "Tied Together with a Smile",
+      "Tim McGraw"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur « Fearless », quel titre suit « Breathe (feat. Colbie Caillat) » ?",
+    "answers": [
+      "Forever & Always",
+      "The Best Day",
+      "Change",
+      "Tell Me Why"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur « Speak Now », quel titre suit « Innocent » ?",
+    "answers": [
+      "Haunted",
+      "Speak Now",
+      "Dear John",
+      "Mean"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur « Red », quel titre suit « The Last Time (feat. Gary Lightbody) » ?",
+    "answers": [
+      "Stay Stay Stay",
+      "Holy Ground",
+      "Sad Beautiful Tragic",
+      "The Lucky One"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur « 1989 », quel titre suit « I Wish You Would » ?",
+    "answers": [
+      "This Love",
+      "I Know Places",
+      "Bad Blood",
+      "Clean"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur « reputation », quel titre suit « Gorgeous » ?",
+    "answers": [
+      "Delicate",
+      "Look What You Made Me Do",
+      "So It Goes...",
+      "Getaway Car"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur « Lover », quel titre suit « Cornelia Street » ?",
+    "answers": [
+      "Death By A Thousand Cuts",
+      "Paper Rings",
+      "London Boy",
+      "Soon You’ll Get Better (feat. The Chicks)"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur « folklore », quel titre suit « august » ?",
+    "answers": [
+      "the last great american dynasty",
+      "this is me trying",
+      "exile (feat. Bon Iver)",
+      "my tears ricochet"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur « evermore », quel titre suit « happiness » ?",
+    "answers": [
+      "no body, no crime (feat. HAIM)",
+      "coney island (feat. The National)",
+      "dorothea",
+      "cowboy like me"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur « Midnights », quel titre suit « Question...? » ?",
+    "answers": [
+      "Midnight Rain",
+      "Bejeweled",
+      "Labyrinth",
+      "Vigilante Shit"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
