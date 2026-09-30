@@ -467,14 +467,14 @@ export const CATEGORIES = [
 // unlike the quiz-specific CATEGORIES labels above.
 export const FAMILIES = [
   { key: 'sport', mark: 'SP', grad: 'g3' },
-  { key: 'football', mark: 'FO', grad: 'g8' },
+  { key: 'football', mark: 'FB', grad: 'g8' },
   { key: 'cinema', mark: 'CI', grad: 'g13' },
-  { key: 'series', mark: 'TV', grad: 'g22' },
+  { key: 'series', mark: 'SE', grad: 'g22' },
   { key: 'music', mark: 'MU', grad: 'g7' },
-  { key: 'culture', mark: 'IQ', grad: 'g10' },
+  { key: 'sagas', mark: 'SA', grad: 'g15' },
   { key: 'manga', mark: 'MG', grad: 'g9' },
   { key: 'gaming', mark: 'GG', grad: 'g5' },
-  { key: 'sagas', mark: 'SG', grad: 'g15' },
+  { key: 'culture', mark: 'IQ', grad: 'g10' },
 ];
 
 export function categoriesInFamily(familyKey) {
