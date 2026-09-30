@@ -13,11 +13,15 @@ const cover = (file, focal = 'center 35%') => ({
 const remoteCover = (src, source, focal = 'center 30%') => ({ src, source, focal });
 
 export const FAMILY_TOPIC_COVERS = {
-  entertainment: cover('Debrie Parvo 35mm Movie Camera.jpg', 'center 48%'),
+  football: cover("Premier League Trophy at Manchester's National Football Museum (Ank Kumar) 01.jpg", 'center 30%'),
+  cinema: cover('Debrie Parvo 35mm Movie Camera.jpg', 'center 48%'),
+  series: cover('Central Perk set.jpg', 'center 46%'),
+  sagas: cover('NYCC 2023 Cosplay of Darth Vader.jpg', 'center 24%'),
   music: cover('BBC Proms 31.jpg', 'center 46%'),
   sport: cover('4 sports photo.jpg', 'center 42%'),
   culture: cover('OrteliusWorldMap.jpeg', 'center 42%'),
   gaming: cover('ArcadeGames.jpg', 'center 45%'),
+  manga: cover('Bookshelves with manga.jpg', 'center 44%'),
 };
 
 // Every entry is reviewed for immediate topic recognition at thumbnail size.
