@@ -7,11 +7,19 @@ import { TopicLevelList, topicTitleKey, topicLabel } from './players';
 import { useI18n } from './i18n';
 
 const FEATURED_TOPIC_KEYS = [
-  'foot_fr', 'rap_fr', 'premier_league', 'la_liga',
-  'tennis', 'basketball', 'kpop', 'actors',
+  'ligue_champions', 'rap_fr', 'one_piece', 'marvel',
+  'pokemon', 'friends', 'nba', 'drapeaux',
 ];
+const FEATURED_TOPIC_LABELS = { nba: 'NBA', drapeaux: 'Drapeaux du monde' };
 const FEATURED_TOPICS = FEATURED_TOPIC_KEYS
-  .map((key) => CATEGORIES.find((category) => category.key === key))
+  .map((key) => {
+    const category = CATEGORIES.find((item) => item.key === key);
+    return category && {
+      ...category,
+      label: FEATURED_TOPIC_LABELS[key] || category.label,
+      tag: category.tag || '🔥',
+    };
+  })
   .filter(Boolean);
 
 export function HomeContent({ name, avatar, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, pending }) {

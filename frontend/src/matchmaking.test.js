@@ -90,7 +90,7 @@ test('starts solo only after cancellation is acknowledged, retaining the selecte
   const topic = container.querySelector('.topics-scroll button');
   act(() => topic.click());
   const category = socket.connect.mock.calls.find(([action]) => action.type === 'join')[0].category;
-  expect(category).toBe('foot_fr');
+  expect(category).toBe('ligue_champions');
   receive({ type: 'waiting' });
   const topicLabel = container.querySelector('.matchmaking-topic').textContent;
   advance(12000);
