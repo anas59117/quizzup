@@ -652,5 +652,401 @@
     ],
     "correct": 0,
     "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année est sorti l'album « Bad » ?",
+    "answers": [
+      "1989",
+      "1985",
+      "1987",
+      "1986"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année est sorti l'album « Dangerous » ?",
+    "answers": [
+      "1989",
+      "1991",
+      "1990",
+      "1992"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année est sorti l'album « HIStory: Past, Present and Future, Book I » ?",
+    "answers": [
+      "1994",
+      "1996",
+      "1995",
+      "1997"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année est sorti l'album « Invincible » ?",
+    "answers": [
+      "2000",
+      "2002",
+      "2003",
+      "2001"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel titre ouvre l'album « Off the Wall » ?",
+    "answers": [
+      "Don't Stop 'Til You Get Enough",
+      "Burn This Disco Out",
+      "Rock with You (Single Version)",
+      "Workin' Day and Night"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel titre ouvre l'album « Thriller » ?",
+    "answers": [
+      "Beat It",
+      "Wanna Be Startin' Somethin'",
+      "Billie Jean",
+      "Human Nature"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel titre ouvre l'album « HIStory: Past, Present and Future, Book I » ?",
+    "answers": [
+      "Come Together",
+      "You Are Not Alone",
+      "Billie Jean",
+      "Childhood (Theme from \"Free Willy 2\")"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « Off the Wall » ?",
+    "answers": [
+      "Dirty Diana",
+      "Smooth Criminal",
+      "Leave Me Alone",
+      "It's the Falling in Love"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « Thriller » ?",
+    "answers": [
+      "P.Y.T. (Pretty Young Thing)",
+      "Butterflies",
+      "Speechless",
+      "2000 Watts"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « Bad » ?",
+    "answers": [
+      "Invincible",
+      "Dirty Diana",
+      "Break of Dawn",
+      "Heaven Can Wait"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « Dangerous » ?",
+    "answers": [
+      "Invincible",
+      "Break of Dawn",
+      "Will You Be There",
+      "Heaven Can Wait"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « HIStory: Past, Present and Future, Book I » ?",
+    "answers": [
+      "Liberian Girl",
+      "Just Good Friends",
+      "Another Part of Me",
+      "Come Together"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Parmi ces titres, lequel figure sur « Invincible » ?",
+    "answers": [
+      "2000 Watts",
+      "Smile",
+      "Don't Stop 'Til You Get Enough",
+      "Rock with You (Single Version)"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur « Off the Wall », quel titre suit « Off the Wall » ?",
+    "answers": [
+      "Burn This Disco Out",
+      "Girlfriend",
+      "Don't Stop 'Til You Get Enough",
+      "Rock with You (Single Version)"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur « Thriller », quel titre suit « Beat It » ?",
+    "answers": [
+      "Human Nature",
+      "P.Y.T. (Pretty Young Thing)",
+      "Billie Jean",
+      "The Lady in My Life"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur « Bad », quel titre suit « Another Part of Me » ?",
+    "answers": [
+      "Leave Me Alone",
+      "The Way You Make Me Feel",
+      "Speed Demon",
+      "Man in the Mirror"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur « Dangerous », quel titre suit « Black or White » ?",
+    "answers": [
+      "Who Is It",
+      "Will You Be There",
+      "Keep the Faith",
+      "Gone Too Soon"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur « HIStory: Past, Present and Future, Book I », quel titre suit « Scream » ?",
+    "answers": [
+      "D.S.",
+      "They Don't Care About Us",
+      "Money",
+      "Come Together"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur « Invincible », quel titre suit « Butterflies » ?",
+    "answers": [
+      "Break of Dawn",
+      "Heaven Can Wait",
+      "Speechless",
+      "You Rock My World"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur quel album figure « Girlfriend » ?",
+    "answers": [
+      "Bad",
+      "Dangerous",
+      "HIStory: Past, Present and Future, Book I",
+      "Off the Wall"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « Human Nature » ?",
+    "answers": [
+      "Thriller",
+      "Dangerous",
+      "HIStory: Past, Present and Future, Book I",
+      "Invincible"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « Just Good Friends » ?",
+    "answers": [
+      "HIStory: Past, Present and Future, Book I",
+      "Bad",
+      "Invincible",
+      "Off the Wall"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « Can't Let Her Get Away » ?",
+    "answers": [
+      "Off the Wall",
+      "Thriller",
+      "Dangerous",
+      "Bad"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « I Just Can't Stop Loving You » ?",
+    "answers": [
+      "Thriller",
+      "Bad",
+      "Dangerous",
+      "HIStory: Past, Present and Future, Book I"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « Heartbreaker » ?",
+    "answers": [
+      "Invincible",
+      "Dangerous",
+      "HIStory: Past, Present and Future, Book I",
+      "Off the Wall"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « I Just Can't Stop Loving You (feat. Siedah Garrett) » ?",
+    "answers": [
+      "Thriller",
+      "Bad",
+      "Dangerous",
+      "HIStory: Past, Present and Future, Book I"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « Who Is It » ?",
+    "answers": [
+      "Off the Wall",
+      "Thriller",
+      "Dangerous",
+      "Bad"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « Stranger in Moscow » ?",
+    "answers": [
+      "Dangerous",
+      "Invincible",
+      "Off the Wall",
+      "HIStory: Past, Present and Future, Book I"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « Heaven Can Wait » ?",
+    "answers": [
+      "Invincible",
+      "Off the Wall",
+      "Thriller",
+      "Bad"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « I Can't Help It » ?",
+    "answers": [
+      "HIStory: Past, Present and Future, Book I",
+      "Off the Wall",
+      "Invincible",
+      "Thriller"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « P.Y.T. (Pretty Young Thing) » ?",
+    "answers": [
+      "Dangerous",
+      "HIStory: Past, Present and Future, Book I",
+      "Thriller",
+      "Invincible"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « Earth Song » ?",
+    "answers": [
+      "Invincible",
+      "Off the Wall",
+      "Thriller",
+      "HIStory: Past, Present and Future, Book I"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « Butterflies » ?",
+    "answers": [
+      "Invincible",
+      "Bad",
+      "Dangerous",
+      "HIStory: Past, Present and Future, Book I"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « It's the Falling in Love » ?",
+    "answers": [
+      "Bad",
+      "Off the Wall",
+      "Dangerous",
+      "HIStory: Past, Present and Future, Book I"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « Dirty Diana » ?",
+    "answers": [
+      "Off the Wall",
+      "Thriller",
+      "Bad",
+      "Dangerous"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Sur quel album figure « Will You Be There » ?",
+    "answers": [
+      "Bad",
+      "HIStory: Past, Present and Future, Book I",
+      "Invincible",
+      "Dangerous"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
   }
 ]

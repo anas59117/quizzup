@@ -17,6 +17,7 @@ const reports = require('./reports');
 const playersFootFr = require('./data/players-foot-fr.json');
 const footFrExtra = require('./data/foot_fr_extra.json');
 const playersRapFr = require('./data/players-rap-fr.json');
+const rapFrExtra = require('./data/rap_fr_extra.json');
 const playersPremierLeague = require('./data/players-premier-league.json');
 const playersLaLiga = require('./data/players-la-liga.json');
 const playersBundesliga = require('./data/players-bundesliga.json');
@@ -593,6 +594,7 @@ const CATEGORIES = {
       { text: 'Dans quelle ville SCH a-t-il grandi ?', answers: ['Paris', 'Aubagne', 'Aix-en-Provence', 'Toulon'], correct: 1 },
       ...playersRapFr,
       { text: 'Sur quel label indépendant Lunatic a-t-il publié l’album Mauvais Œil ?', answers: ['Secteur Ä', '45 Scientific', 'Time Bomb', 'Hostile Records'], correct: 1, difficulty: 'expert' },
+      ...rapFrExtra,
     ],
   },
   foot_fr: {
