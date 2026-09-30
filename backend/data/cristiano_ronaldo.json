@@ -398,5 +398,605 @@
       "3"
     ],
     "correct": 1
+  },
+  {
+    "text": "Quelle est la date de naissance de Cristiano Ronaldo ?",
+    "answers": [
+      "5 février 1987",
+      "5 mars 1985",
+      "15 février 1984",
+      "5 février 1985"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle ville de Madère Cristiano Ronaldo est-il né ?",
+    "answers": [
+      "Funchal",
+      "Porto",
+      "Braga",
+      "Coimbra"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel est le pied fort de Cristiano Ronaldo ?",
+    "answers": [
+      "Le droit",
+      "Le gauche",
+      "Les deux à égalité",
+      "Aucun, il joue gardien"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel club portugais Ronaldo a-t-il représenté en première division avant Manchester United ?",
+    "answers": [
+      "Benfica",
+      "Le FC Porto",
+      "Le Sporting CP",
+      "Braga"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel club anglais Ronaldo a-t-il impressionné lors d'un match amical en 2003 avec le Sporting ?",
+    "answers": [
+      "Arsenal",
+      "Chelsea",
+      "Manchester United",
+      "Liverpool"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel club équatorien Manchester United a-t-il battu avec Ronaldo en finale du Mondial des clubs 2008 ?",
+    "answers": [
+      "La LDU Quito",
+      "Emelec",
+      "Barcelona SC",
+      "Independiente del Valle"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel club Manchester United a-t-il battu en finale de FA Cup 2004 avec Ronaldo ?",
+    "answers": [
+      "Arsenal",
+      "Chelsea",
+      "Liverpool",
+      "Millwall"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel club Ronaldo a-t-il affronté lors de ses premiers buts en Ligue des champions, en 2007 ?",
+    "answers": [
+      "Le Celtic",
+      "L'AS Roma",
+      "Le FC Porto",
+      "Le Sporting CP"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel fut le score de Manchester United-AS Roma lors du quart retour de Ligue des champions 2007 ?",
+    "answers": [
+      "5-1",
+      "4-0",
+      "7-1",
+      "6-2"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans quelle ville Ronaldo a-t-il remporté la Ligue des champions 2008 avec Manchester United ?",
+    "answers": [
+      "Rome",
+      "Londres",
+      "Lisbonne",
+      "Moscou"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel joueur de Chelsea a égalisé après le but de Ronaldo en finale de Ligue des champions 2008 ?",
+    "answers": [
+      "Didier Drogba",
+      "Nicolas Anelka",
+      "Frank Lampard",
+      "John Terry"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Comment Manchester United a-t-il départagé Chelsea en finale de Ligue des champions 2008 ?",
+    "answers": [
+      "Au but en or",
+      "Aux tirs au but",
+      "Au tirage au sort",
+      "Au match rejoué"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel club a privé Ronaldo et Manchester United du titre en finale de Ligue des champions 2009 ?",
+    "answers": [
+      "Le Bayern Munich",
+      "L'Inter Milan",
+      "Chelsea",
+      "Le FC Barcelone"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel club Ronaldo a-t-il éliminé d'une frappe lointaine en quart de finale de Ligue des champions 2009 ?",
+    "answers": [
+      "Le FC Porto",
+      "Arsenal",
+      "Villarreal",
+      "L'Inter Milan"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Combien de titres de Liga Ronaldo a-t-il remportés avec le Real Madrid ?",
+    "answers": [
+      "Un",
+      "Deux",
+      "Trois",
+      "Quatre"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de Coupes du Roi Ronaldo a-t-il remportées avec le Real Madrid ?",
+    "answers": [
+      "Une",
+      "Trois",
+      "Deux",
+      "Quatre"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel club Ronaldo a-t-il battu de la tête en finale de Coupe du Roi 2011 ?",
+    "answers": [
+      "Le FC Barcelone",
+      "L'Atlético de Madrid",
+      "Séville",
+      "Valence"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En quelle ville le Real Madrid de Ronaldo a-t-il gagné sa dixième Coupe d'Europe en 2014 ?",
+    "answers": [
+      "Madrid",
+      "Lisbonne",
+      "Milan",
+      "Cardiff"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel club le Real Madrid de Ronaldo a-t-il battu en finale de Ligue des champions 2014 ?",
+    "answers": [
+      "Le Bayern Munich",
+      "L'Atlético de Madrid",
+      "La Juventus",
+      "Chelsea"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel défenseur madrilène a égalisé dans le temps additionnel de la finale de Ligue des champions 2014 ?",
+    "answers": [
+      "Pepe",
+      "Raphaël Varane",
+      "Sergio Ramos",
+      "Marcelo"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Combien de buts Ronaldo a-t-il marqués en Ligue des champions 2013-2014 ?",
+    "answers": [
+      "15",
+      "16",
+      "18",
+      "17"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel club le Real Madrid de Ronaldo a-t-il battu aux tirs au but en finale de Ligue des champions 2016 ?",
+    "answers": [
+      "La Juventus",
+      "L'Atlético de Madrid",
+      "Manchester City",
+      "Le Bayern Munich"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel joueur madrilène a converti le tir au but décisif de la finale de Ligue des champions 2016 ?",
+    "answers": [
+      "Sergio Ramos",
+      "Gareth Bale",
+      "Cristiano Ronaldo",
+      "Karim Benzema"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans quelle ville le Real Madrid de Ronaldo a-t-il gagné la finale de Ligue des champions 2017 ?",
+    "answers": [
+      "Lisbonne",
+      "Milan",
+      "Cardiff",
+      "Kyiv"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel était le score de la finale de Ligue des champions 2017 remportée par Ronaldo et le Real ?",
+    "answers": [
+      "4-1",
+      "3-1",
+      "2-1",
+      "4-2"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel Madrilène a marqué deux fois en finale de Ligue des champions 2017 ?",
+    "answers": [
+      "Gareth Bale",
+      "Karim Benzema",
+      "Cristiano Ronaldo",
+      "Isco"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel club le Real Madrid de Ronaldo a-t-il battu en finale de Ligue des champions 2018 ?",
+    "answers": [
+      "La Juventus",
+      "L'Atlético de Madrid",
+      "Liverpool",
+      "Manchester United"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel coéquipier de Ronaldo a réussi un retourné acrobatique en finale de Ligue des champions 2018 ?",
+    "answers": [
+      "Karim Benzema",
+      "Marco Asensio",
+      "Lucas Vázquez",
+      "Gareth Bale"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quelle ville Ronaldo a-t-il marqué d'un retourné acrobatique contre la Juventus en 2018 ?",
+    "answers": [
+      "Madrid",
+      "Lisbonne",
+      "Milan",
+      "Turin"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel club la Juventus de Ronaldo a-t-elle renversé grâce à son triplé en huitièmes de Ligue des champions 2019 ?",
+    "answers": [
+      "L'Ajax",
+      "Manchester United",
+      "Lyon",
+      "L'Atlético de Madrid"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel club a éliminé la Juventus de Ronaldo en quarts de Ligue des champions 2019 ?",
+    "answers": [
+      "L'Atlético de Madrid",
+      "Le FC Barcelone",
+      "Tottenham",
+      "L'Ajax"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans quel championnat Ronaldo a-t-il joué sous le maillot de la Juventus ?",
+    "answers": [
+      "La Liga",
+      "La Premier League",
+      "La Serie A",
+      "La Bundesliga"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel club la Juventus de Ronaldo a-t-elle battu en finale de Coupe d'Italie 2021 ?",
+    "answers": [
+      "Naples",
+      "L'Atalanta",
+      "L'Inter Milan",
+      "La Lazio"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel club la Juventus de Ronaldo a-t-elle battu en Supercoupe d'Italie 2020, disputée en janvier 2021 ?",
+    "answers": [
+      "L'Inter Milan",
+      "L'AC Milan",
+      "Naples",
+      "La Lazio"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel club Ronaldo a-t-il affronté lors de sa première finale de l'Euro, en 2004 ?",
+    "answers": [
+      "La France",
+      "L'Allemagne",
+      "La Grèce",
+      "L'Espagne"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel pays accueillait l'Euro 2004, dont Ronaldo a disputé la finale ?",
+    "answers": [
+      "La Grèce",
+      "L'Autriche",
+      "La Suisse",
+      "Le Portugal"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle sélection le Portugal de Ronaldo a-t-il battue en demi-finale de l'Euro 2004 ?",
+    "answers": [
+      "La Grèce",
+      "L'Espagne",
+      "Les Pays-Bas",
+      "L'Angleterre"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Contre quelle sélection Ronaldo a-t-il marqué de la tête en quart de finale de l'Euro 2012 ?",
+    "answers": [
+      "L'Espagne",
+      "L'Allemagne",
+      "Le Danemark",
+      "La République tchèque"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle sélection a éliminé le Portugal de Ronaldo en demi-finale de l'Euro 2012 ?",
+    "answers": [
+      "L'Allemagne",
+      "L'Italie",
+      "L'Espagne",
+      "Les Pays-Bas"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Combien de buts Ronaldo a-t-il marqués contre la Hongrie lors du 3-3 à l'Euro 2016 ?",
+    "answers": [
+      "Un",
+      "Trois",
+      "Aucun",
+      "Deux"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel pays Ronaldo a-t-il affronté en demi-finale de l'Euro 2016 et contre lequel il a marqué ?",
+    "answers": [
+      "Le pays de Galles",
+      "La Pologne",
+      "La Croatie",
+      "L'Islande"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel Portugais a marqué le seul but de la finale de l'Euro 2016 ?",
+    "answers": [
+      "Cristiano Ronaldo",
+      "Nani",
+      "Éder",
+      "Renato Sanches"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel événement a contraint Ronaldo à sortir en première période de la finale de l'Euro 2016 ?",
+    "answers": [
+      "Une expulsion",
+      "Un remplacement tactique",
+      "Un malaise",
+      "Une blessure"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Combien de matchs de groupe le Portugal de Ronaldo a-t-il gagnés à l'Euro 2016 ?",
+    "answers": [
+      "Aucun",
+      "Un",
+      "Deux",
+      "Trois"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle compétition le Portugal de Ronaldo a-t-il remportée en 2019 ?",
+    "answers": [
+      "La Coupe des confédérations",
+      "L'Euro",
+      "La Coupe du monde",
+      "La Ligue des nations de l'UEFA"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle sélection a encaissé un triplé de Ronaldo en demi-finale de la Ligue des nations 2019 ?",
+    "answers": [
+      "Les Pays-Bas",
+      "L'Angleterre",
+      "La France",
+      "La Suisse"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle sélection le Portugal de Ronaldo a-t-il battue en finale de la Ligue des nations 2019 ?",
+    "answers": [
+      "La Suisse",
+      "L'Espagne",
+      "La Croatie",
+      "Les Pays-Bas"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel joueur portugais a marqué le but de la finale de la Ligue des nations 2019 ?",
+    "answers": [
+      "Gonçalo Guedes",
+      "Cristiano Ronaldo",
+      "Bernardo Silva",
+      "Bruno Fernandes"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Combien de buts Ronaldo a-t-il marqués contre la Hongrie au premier match portugais de l'Euro 2020 ?",
+    "answers": [
+      "Un",
+      "Trois",
+      "Aucun",
+      "Deux"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle sélection a éliminé le Portugal de Ronaldo en huitièmes de l'Euro 2020 ?",
+    "answers": [
+      "La France",
+      "L'Allemagne",
+      "La Belgique",
+      "L'Italie"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle sélection a éliminé le Portugal de Ronaldo en quarts de l'Euro 2024 ?",
+    "answers": [
+      "L'Espagne",
+      "L'Allemagne",
+      "L'Angleterre",
+      "La France"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Contre quelle sélection Ronaldo a-t-il inscrit un triplé lors du Mondial 2018 ?",
+    "answers": [
+      "Le Maroc",
+      "L'Uruguay",
+      "L'Iran",
+      "L'Espagne"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel fut le score du Portugal-Espagne où Ronaldo a marqué trois fois au Mondial 2018 ?",
+    "answers": [
+      "3-2",
+      "4-3",
+      "3-3",
+      "2-2"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Contre quelle sélection Ronaldo a-t-il marqué le but de la victoire 1-0 au Mondial 2018 ?",
+    "answers": [
+      "L'Iran",
+      "L'Uruguay",
+      "L'Espagne",
+      "Le Maroc"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle sélection a éliminé le Portugal de Ronaldo en huitièmes du Mondial 2018 ?",
+    "answers": [
+      "Le Maroc",
+      "La France",
+      "L'Argentine",
+      "L'Uruguay"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Contre quelle sélection Ronaldo a-t-il inscrit son premier but en Coupe du monde, en 2006 ?",
+    "answers": [
+      "L'Angola",
+      "L'Iran",
+      "Le Mexique",
+      "Les Pays-Bas"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Contre quelle sélection Ronaldo a-t-il marqué au Mondial 2010 lors d'un succès portugais 7-0 ?",
+    "answers": [
+      "La Côte d'Ivoire",
+      "Le Brésil",
+      "L'Espagne",
+      "La Corée du Nord"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle sélection a battu le Portugal de Ronaldo lors du match pour la troisième place du Mondial 2006 ?",
+    "answers": [
+      "La France",
+      "Le Brésil",
+      "L'Espagne",
+      "L'Allemagne"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle sélection Ronaldo a-t-il affrontée sur son but du Mondial 2022 ?",
+    "answers": [
+      "L'Uruguay",
+      "La Corée du Sud",
+      "Le Maroc",
+      "Le Ghana"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel attaquant portugais a inscrit un triplé contre la Suisse en huitièmes du Mondial 2022 ?",
+    "answers": [
+      "Rafael Leão",
+      "Gonçalo Ramos",
+      "João Félix",
+      "Cristiano Ronaldo"
+    ],
+    "correct": 1
   }
 ]

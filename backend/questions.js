@@ -15,6 +15,7 @@ const reports = require('./reports');
 // distractors) by scripts/fetch-player-photos.js + a one-off build step.
 // Kept as data files rather than inline literals so this file stays short.
 const playersFootFr = require('./data/players-foot-fr.json');
+const footFrExtra = require('./data/foot_fr_extra.json');
 const playersRapFr = require('./data/players-rap-fr.json');
 const rapFrExtra = require('./data/rap_fr_extra.json');
 const playersPremierLeague = require('./data/players-premier-league.json');
@@ -616,6 +617,7 @@ const CATEGORIES = {
       { text: 'Qui inscrit le troisième but français lors de la finale mondiale 1998 contre le Brésil ?', answers: ['Youri Djorkaeff', 'Emmanuel Petit', 'Christophe Dugarry', 'Lilian Thuram'], correct: 1, difficulty: 'expert' },
       { text: 'Qui égalise pour la France contre l’Italie dans les arrêts de jeu de la finale de l’Euro 2000 ?', answers: ['David Trezeguet', 'Thierry Henry', 'Sylvain Wiltord', 'Robert Pirès'], correct: 2, difficulty: 'expert' },
       { text: 'Quel joueur français reprend le coup franc de Zidane pour marquer contre le Brésil en quart de finale du Mondial 2006 ?', answers: ['Patrick Vieira', 'Franck Ribéry', 'Florent Malouda', 'Thierry Henry'], correct: 3, difficulty: 'expert' },
+      ...footFrExtra,
     ],
   },
   premier_league: {
