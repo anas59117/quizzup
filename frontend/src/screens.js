@@ -8,7 +8,7 @@ import { useI18n } from './i18n';
 
 const FEATURED_TOPIC_KEYS = [
   'ligue_champions', 'rap_fr', 'one_piece', 'marvel',
-  'pokemon', 'friends', 'nba', 'drapeaux',
+  'pokemon', 'euphoria', 'nba', 'drapeaux',
 ];
 const FEATURED_TOPIC_LABELS = { nba: 'NBA', drapeaux: 'Drapeaux du monde' };
 const FEATURED_TOPICS = FEATURED_TOPIC_KEYS
