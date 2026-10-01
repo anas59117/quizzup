@@ -29,6 +29,7 @@ const soloCalls = () => socket.connect.mock.calls.filter(([action]) => action.ty
 beforeEach(async () => {
   jest.useFakeTimers();
   window.IS_REACT_ACT_ENVIRONMENT = true;
+  window.history.replaceState(null, '', '/');
   localStorage.clear();
   sessionStorage.clear();
   localStorage.setItem('quizzup-name', 'Test');
@@ -54,6 +55,50 @@ afterEach(() => {
   container.remove();
   jest.useRealTimers();
   jest.clearAllMocks();
+});
+
+test('browser Back and Forward restore the previous QuizzUp screen', async () => {
+  click('Thèmes');
+  expect(window.history.state?.quizzup?.stage).toBe('categories');
+
+  jest.useRealTimers();
+  await act(async () => {
+    const popped = new Promise((resolve) => window.addEventListener('popstate', resolve, { once: true }));
+    window.history.back();
+    await popped;
+  });
+  expect(container.querySelector('.home-head')).not.toBeNull();
+
+  await act(async () => {
+    const popped = new Promise((resolve) => window.addEventListener('popstate', resolve, { once: true }));
+    window.history.forward();
+    await popped;
+  });
+  expect(container.querySelector('.family-list')).not.toBeNull();
+});
+
+test('browser Back from a quiz family restores the themes overview', () => {
+  click('Thèmes');
+  const themesEntry = window.history.state;
+  act(() => container.querySelector('.family-list button').click());
+  expect(window.history.state?.quizzup?.family).toBe('sport');
+
+  act(() => window.dispatchEvent(new PopStateEvent('popstate', { state: themesEntry })));
+  expect(container.querySelector('.family-list')).not.toBeNull();
+});
+
+test('browser Back from matchmaking leaves the queue and returns home', async () => {
+  waitForOpponent();
+  expect(window.history.state?.quizzup?.stage).toBe('session');
+
+  jest.useRealTimers();
+  await act(async () => {
+    const popped = new Promise((resolve) => window.addEventListener('popstate', resolve, { once: true }));
+    window.history.back();
+    await popped;
+  });
+  expect(socket.closeSocket).toHaveBeenCalledTimes(1);
+  expect(container.querySelector('.home-head')).not.toBeNull();
 });
 
 function waitForOpponent(topic = 'Partie rapide') {

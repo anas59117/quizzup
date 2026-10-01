@@ -81,9 +81,8 @@ export function EnterCodeContent({ joinCode, setJoinCode, joinError, setJoinErro
   );
 }
 
-export function CategoriesContent({ startWithCategory, onBack, initialFamily, pending }) {
+export function CategoriesContent({ startWithCategory, onBack, family, onSelectFamily, pending }) {
   const { t } = useI18n();
-  const [family, setFamily] = useState(initialFamily || null);
   const [query, setQuery] = useState('');
 
   const results = useMemo(() => {
@@ -111,13 +110,13 @@ export function CategoriesContent({ startWithCategory, onBack, initialFamily, pe
         )
       ) : activeFamily ? (
         <>
-          <button className="back-to-topics" onClick={() => setFamily(null)}>{t('backToTopics')}</button>
+          <button className="back-to-topics" onClick={() => onSelectFamily(null)}>{t('backToTopics')}</button>
           <div className="topics-grid full">
             {categoriesInFamily(activeFamily.key).map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}
           </div>
         </>
       ) : (
-        <FamilyGrid onSelect={setFamily} />
+        <FamilyGrid onSelect={onSelectFamily} />
       )}
       <a className="cover-credits-link" href="/image-credits.html" target="_blank" rel="noopener noreferrer">
         Crédits photos

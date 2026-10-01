@@ -14,6 +14,19 @@ import { useI18n } from './i18n';
 import { useGameSocket } from './useGameSocket';
 
 const LIVE_SESSION_KEY = 'quizzup-live-session';
+const HISTORY_KEY = 'quizzup';
+const BROWSABLE_STAGES = new Set(['home', 'feed', 'categories', 'profile', 'leaderboard', 'enter_code']);
+const SESSION_STAGES = new Set(['waiting', 'room_wait', 'playing', 'finished', 'error']);
+
+function browserLocation(stage, family) {
+  if (SESSION_STAGES.has(stage)) return { stage: 'session', family: null };
+  if (BROWSABLE_STAGES.has(stage)) return { stage, family: stage === 'categories' ? family : null };
+  return null; // The brief boot splash is not a page in browser history.
+}
+
+function sameBrowserLocation(a, b) {
+  return a?.stage === b?.stage && a?.family === b?.family;
+}
 
 function readLiveSession() {
   try {
@@ -41,6 +54,9 @@ export default function App() {
   const [fatalReason, setFatalReason] = useState('connection');
   const [fatalCode, setFatalCode] = useState('');
   const [categoryFamily, setCategoryFamily] = useState(null);
+  const lastBrowserLocationRef = useRef(null);
+  const restoringBrowserHistoryRef = useRef(false);
+  const browserBackHandlerRef = useRef(null);
   const [name, setName] = useState(() => {
     // No sign-up screen: first-time visitors get a generated pseudo they can
     // change later in Profile, and go straight to Home.
@@ -728,6 +744,79 @@ export default function App() {
 
   function newMatch() { playAgain(); quickMatch(); }
 
+  // React screens do not change the URL. Mirror meaningful screens in the
+  // browser's history so the device Back button can restore the prior view.
+  useEffect(() => {
+    const next = browserLocation(stage, categoryFamily);
+    if (!next) return;
+    if (restoringBrowserHistoryRef.current) {
+      restoringBrowserHistoryRef.current = false;
+      lastBrowserLocationRef.current = next;
+      return;
+    }
+    const previous = lastBrowserLocationRef.current;
+    if (sameBrowserLocation(previous, next)) return;
+    const state = { ...(window.history.state || {}), [HISTORY_KEY]: next };
+    if (!previous) {
+      if (next.stage === 'session') {
+        window.history.replaceState({ ...state, [HISTORY_KEY]: { stage: 'home', family: null } }, '');
+        window.history.pushState(state, '');
+      } else {
+        window.history.replaceState(state, '');
+      }
+    } else if (previous.stage === 'session' && next.stage !== 'session') {
+      window.history.replaceState(state, '');
+    } else {
+      window.history.pushState(state, '');
+    }
+    lastBrowserLocationRef.current = next;
+  }, [stage, categoryFamily]);
+
+  browserBackHandlerRef.current = (event) => {
+    let target = event.state?.[HISTORY_KEY];
+    if (!target) return;
+    if (target.stage === 'session') {
+      // A completed or abandoned match cannot be resurrected by Forward.
+      target = { stage: 'home', family: null };
+      window.history.replaceState({ ...event.state, [HISTORY_KEY]: target }, '');
+    }
+    if (!BROWSABLE_STAGES.has(target.stage)) return;
+    const current = browserLocation(stage, categoryFamily);
+    if (sameBrowserLocation(current, target)) {
+      lastBrowserLocationRef.current = target;
+      return;
+    }
+    if (current?.stage === 'session') {
+      // Closing the socket also removes the player from a queue or room.
+      closeSocket();
+      bootSessionRef.current = null;
+      writeLiveSession(null);
+      setSkipRoomRecovery(true);
+      matchActionRef.current = null;
+      cancelQueueRef.current = false;
+      afterQueueExitRef.current = null;
+      clearPending();
+      setRematchWaiting(false);
+      setRematchStarting(false);
+      setRoom(null);
+      setResult(null);
+      setQuestion(null);
+      setIntro(null);
+      setReveal(null);
+      setSelected(null);
+      social.clearGameChat();
+    }
+    restoringBrowserHistoryRef.current = true;
+    setCategoryFamily(target.family || null);
+    setStage(target.stage);
+  };
+
+  useEffect(() => {
+    const onPopState = (event) => browserBackHandlerRef.current(event);
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
+  }, []);
+
   // Safety net: never leave someone on the splash if the connection is slow.
   useEffect(() => {
     if (stage !== 'join') return undefined;
@@ -812,7 +901,8 @@ export default function App() {
     return (
       <div className="app app-nav app-top">
         <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
-        <CategoriesContent startWithCategory={startWithCategory} onBack={() => setStage('home')} initialFamily={categoryFamily} pending={pending} />
+        <CategoriesContent startWithCategory={startWithCategory} onBack={() => setStage('home')}
+          family={categoryFamily} onSelectFamily={setCategoryFamily} pending={pending} />
         <NavBar active="categories" onNav={onNav} onQuickMatch={quickMatch} />
       </div>
     );
