@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Quelles années couvrent la décennie dite « années 2000 » ?",
+    "text": "Quel baladeur Apple lancé en 2001 a popularisé la musique numérique portable ?",
     "answers": [
-      "2000 à 2009",
-      "1990 à 1999",
-      "2010 à 2019",
-      "1980 à 1989"
+      "L'iPod",
+      "Le Zune",
+      "Le MiniDisc",
+      "Le Walkman"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel appareil Apple lancé en 2001 a marqué la musique numérique ?",
+    "text": "Quel smartphone Apple Steve Jobs a-t-il présenté en 2007 ?",
     "answers": [
-      "L’iPad",
-      "L’iPod",
-      "L’Apple Watch",
-      "L’AirTag"
+      "Le Newton",
+      "L'iPhone",
+      "L'iPad",
+      "Le PowerBook"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : film de 2001 lançant au cinéma la saga du jeune sorcier ?",
+    "text": "Quel système d'exploitation Apple a été commercialisé pour la première fois en 2001 ?",
     "answers": [
-      "La PlayStation 2",
-      "Wii Sports",
-      "Harry Potter à l’école des sorciers",
-      "Skype"
+      "iOS",
+      "watchOS",
+      "Mac OS X",
+      "System 7"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Années 2000 », quelle description correspond à Harry Potter à l’école des sorciers ?",
+    "text": "Quel magasin de musique numérique Apple a ouvert en 2003 ?",
     "answers": [
-      "smartphone Apple présenté par Steve Jobs en 2007",
-      "film de James Cameron sorti en 2009 sur la planète Pandora",
-      "support optique haute définition commercialisé au milieu de la décennie",
-      "film de 2001 lançant au cinéma la saga du jeune sorcier"
+      "Apple Music",
+      "MobileMe",
+      "Ping",
+      "L'iTunes Store"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Années 2000 », à quel domaine Harry Potter à l’école des sorciers appartient-il ?",
+    "text": "Vers quelle architecture de processeurs Apple a-t-il annoncé la transition des Mac en 2005 ?",
     "answers": [
-      "Cinéma",
-      "Jeux vidéo",
-      "Télévision",
-      "Sport"
+      "Intel x86",
+      "ARM",
+      "PowerPC G5",
+      "SPARC"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : console Sony lancée en 2000 devenue la plus vendue de l’histoire ?",
+    "text": "Quel réseau social créé à Harvard a été lancé en 2004 ?",
     "answers": [
-      "L’iPhone",
-      "La PlayStation 2",
-      "Avatar",
-      "Le format Blu-ray"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Années 2000 », quelle description correspond à La PlayStation 2 ?",
-    "answers": [
-      "réseau social créé en 2004 à Harvard",
-      "chanteuse britannique dont l’album Back to Black sort en 2006",
-      "console Sony lancée en 2000 devenue la plus vendue de l’histoire",
-      "jeu musical de 2005 utilisant une manette en forme de guitare"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Années 2000 », à quel domaine La PlayStation 2 appartient-il ?",
-    "answers": [
-      "Cinéma",
-      "Télévision",
-      "Sport",
-      "Jeux vidéo"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : smartphone Apple présenté par Steve Jobs en 2007 ?",
-    "answers": [
-      "L’iPhone",
+      "Myspace",
       "Facebook",
-      "Amy Winehouse",
-      "Guitar Hero"
+      "LinkedIn",
+      "Orkut"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Années 2000 », quelle description correspond à L’iPhone ?",
+    "text": "Quelle plateforme de vidéos a été créée en 2005 ?",
     "answers": [
-      "plateforme vidéo mise en ligne en 2005 puis rachetée par Google",
-      "smartphone Apple présenté par Steve Jobs en 2007",
-      "film récompensé par onze Oscars en 2004",
-      "série lancée en 2004 après le crash du vol Oceanic 815"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Années 2000 », à quel domaine L’iPhone appartient-il ?",
-    "answers": [
-      "Cinéma",
-      "Télévision",
-      "Technologie",
-      "Sport"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : réseau social créé en 2004 à Harvard ?",
-    "answers": [
+      "Dailymotion",
+      "Vimeo",
       "YouTube",
-      "Le Seigneur des anneaux : Le Retour du roi",
-      "Lost",
-      "Facebook"
+      "Twitch"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Années 2000 », quelle description correspond à Facebook ?",
+    "text": "Quel service de microblogage lancé en 2006 limitait initialement les messages à 140 caractères ?",
     "answers": [
-      "réseau social créé en 2004 à Harvard",
-      "jeu de 2006 fourni avec la Wii dans de nombreux marchés",
-      "logiciel de communication lancé en 2003 par des entrepreneurs européens",
-      "observatoire infrarouge de la NASA lancé en 2003"
+      "Tumblr",
+      "Reddit",
+      "Flickr",
+      "Twitter"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Années 2000 », à quel domaine Facebook appartient-il ?",
+    "text": "Quelle encyclopédie collaborative en ligne a été lancée en janvier 2001 ?",
     "answers": [
-      "Cinéma",
-      "Internet",
-      "Télévision",
-      "Sport"
+      "Wikipédia",
+      "Britannica Online",
+      "Encarta",
+      "Scholarpedia"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : plateforme vidéo mise en ligne en 2005 puis rachetée par Google ?",
+    "text": "Quelle entreprise a racheté YouTube en 2006 ?",
     "answers": [
-      "Wii Sports",
-      "Skype",
-      "YouTube",
-      "Le télescope spatial Spitzer"
+      "Yahoo!",
+      "Google",
+      "Microsoft",
+      "Amazon"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Années 2000 », quelle description correspond à YouTube ?",
+    "text": "Quelle console Sony lancée en 2000 est devenue la plus vendue de l'histoire ?",
     "answers": [
-      "film de James Cameron sorti en 2009 sur la planète Pandora",
-      "support optique haute définition commercialisé au milieu de la décennie",
-      "billets et pièces mis en circulation dans douze pays en 2002",
-      "plateforme vidéo mise en ligne en 2005 puis rachetée par Google"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Années 2000 », à quel domaine YouTube appartient-il ?",
-    "answers": [
-      "Internet",
-      "Cinéma",
-      "Télévision",
-      "Sport"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : jeu de 2006 fourni avec la Wii dans de nombreux marchés ?",
-    "answers": [
-      "Avatar",
-      "Wii Sports",
-      "Le format Blu-ray",
-      "L’euro fiduciaire"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Années 2000 », quelle description correspond à Wii Sports ?",
-    "answers": [
-      "chanteuse britannique dont l’album Back to Black sort en 2006",
-      "jeu musical de 2005 utilisant une manette en forme de guitare",
-      "jeu de 2006 fourni avec la Wii dans de nombreux marchés",
-      "accélérateur du CERN mis en service en 2008"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Années 2000 », à quel domaine Wii Sports appartient-il ?",
-    "answers": [
-      "Cinéma",
-      "Télévision",
-      "Sport",
-      "Jeux vidéo"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : film de James Cameron sorti en 2009 sur la planète Pandora ?",
-    "answers": [
-      "Avatar",
-      "Amy Winehouse",
-      "Guitar Hero",
-      "Le Large Hadron Collider"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Années 2000 », quelle description correspond à Avatar ?",
-    "answers": [
-      "film récompensé par onze Oscars en 2004",
-      "film de James Cameron sorti en 2009 sur la planète Pandora",
-      "série lancée en 2004 après le crash du vol Oceanic 815",
-      "film de 2001 lançant au cinéma la saga du jeune sorcier"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Années 2000 », à quel domaine Avatar appartient-il ?",
-    "answers": [
-      "Jeux vidéo",
-      "Télévision",
-      "Cinéma",
-      "Sport"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : chanteuse britannique dont l’album Back to Black sort en 2006 ?",
-    "answers": [
-      "Le Seigneur des anneaux : Le Retour du roi",
-      "Lost",
-      "Harry Potter à l’école des sorciers",
-      "Amy Winehouse"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Années 2000 », quelle description correspond à Amy Winehouse ?",
-    "answers": [
-      "chanteuse britannique dont l’album Back to Black sort en 2006",
-      "logiciel de communication lancé en 2003 par des entrepreneurs européens",
-      "observatoire infrarouge de la NASA lancé en 2003",
-      "console Sony lancée en 2000 devenue la plus vendue de l’histoire"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Années 2000 », à quel domaine Amy Winehouse appartient-il ?",
-    "answers": [
-      "Cinéma",
-      "Musique",
-      "Télévision",
-      "Sport"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : film récompensé par onze Oscars en 2004 ?",
-    "answers": [
-      "Skype",
-      "Le télescope spatial Spitzer",
-      "Le Seigneur des anneaux : Le Retour du roi",
-      "La PlayStation 2"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Années 2000 », quelle description correspond au Seigneur des anneaux : Le Retour du roi ?",
-    "answers": [
-      "support optique haute définition commercialisé au milieu de la décennie",
-      "billets et pièces mis en circulation dans douze pays en 2002",
-      "smartphone Apple présenté par Steve Jobs en 2007",
-      "film récompensé par onze Oscars en 2004"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Années 2000 », à quel domaine Le Seigneur des anneaux : Le Retour du roi appartient-il ?",
-    "answers": [
-      "Cinéma",
-      "Jeux vidéo",
-      "Télévision",
-      "Sport"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : logiciel de communication lancé en 2003 par des entrepreneurs européens ?",
-    "answers": [
-      "Le format Blu-ray",
-      "Skype",
-      "L’euro fiduciaire",
-      "L’iPhone"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Années 2000 », quelle description correspond à Skype ?",
-    "answers": [
-      "jeu musical de 2005 utilisant une manette en forme de guitare",
-      "accélérateur du CERN mis en service en 2008",
-      "logiciel de communication lancé en 2003 par des entrepreneurs européens",
-      "réseau social créé en 2004 à Harvard"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Années 2000 », à quel domaine Skype appartient-il ?",
-    "answers": [
-      "Cinéma",
-      "Télévision",
-      "Sport",
-      "Internet"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : support optique haute définition commercialisé au milieu de la décennie ?",
-    "answers": [
-      "Le format Blu-ray",
-      "Guitar Hero",
-      "Le Large Hadron Collider",
-      "Facebook"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Années 2000 », quelle description correspond au format Blu-ray ?",
-    "answers": [
-      "série lancée en 2004 après le crash du vol Oceanic 815",
-      "support optique haute définition commercialisé au milieu de la décennie",
-      "film de 2001 lançant au cinéma la saga du jeune sorcier",
-      "plateforme vidéo mise en ligne en 2005 puis rachetée par Google"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Années 2000 », à quel domaine Le format Blu-ray appartient-il ?",
-    "answers": [
-      "Musique",
-      "Télévision",
-      "Technologie",
-      "Sport"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : jeu musical de 2005 utilisant une manette en forme de guitare ?",
-    "answers": [
-      "Lost",
-      "Harry Potter à l’école des sorciers",
-      "YouTube",
-      "Guitar Hero"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Années 2000 », quelle description correspond à Guitar Hero ?",
-    "answers": [
-      "jeu musical de 2005 utilisant une manette en forme de guitare",
-      "observatoire infrarouge de la NASA lancé en 2003",
-      "console Sony lancée en 2000 devenue la plus vendue de l’histoire",
-      "jeu de 2006 fourni avec la Wii dans de nombreux marchés"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Années 2000 », à quel domaine Guitar Hero appartient-il ?",
-    "answers": [
-      "Cinéma",
-      "Jeux vidéo",
-      "Télévision",
-      "Sport"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : série lancée en 2004 après le crash du vol Oceanic 815 ?",
-    "answers": [
-      "Le télescope spatial Spitzer",
+      "La PlayStation 3",
+      "La PSP",
       "La PlayStation 2",
-      "Lost",
-      "Wii Sports"
+      "La Dreamcast"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Années 2000 », quelle description correspond à Lost ?",
+    "text": "Quelle console Nintendo sortie en 2006 utilise principalement une télécommande détectant les mouvements ?",
     "answers": [
-      "billets et pièces mis en circulation dans douze pays en 2002",
-      "smartphone Apple présenté par Steve Jobs en 2007",
-      "film de James Cameron sorti en 2009 sur la planète Pandora",
-      "série lancée en 2004 après le crash du vol Oceanic 815"
+      "La GameCube",
+      "La Nintendo DS",
+      "La Wii U",
+      "La Wii"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Années 2000 », à quel domaine Lost appartient-il ?",
+    "text": "Quelle entreprise a lancé la première Xbox en 2001 ?",
     "answers": [
-      "Télévision",
-      "Cinéma",
-      "Musique",
-      "Sport"
+      "Microsoft",
+      "Sony",
+      "Sega",
+      "Nintendo"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : observatoire infrarouge de la NASA lancé en 2003 ?",
+    "text": "Quelle console portable Nintendo sortie en 2004 possède deux écrans ?",
     "answers": [
-      "L’euro fiduciaire",
-      "Le télescope spatial Spitzer",
-      "L’iPhone",
+      "La Game Boy Advance",
+      "La Nintendo DS",
+      "La PSP",
+      "La Nintendo 3DS"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle console Microsoft, sortie en 2005, a précédé la PlayStation 3 sur le marché ?",
+    "answers": [
+      "La Xbox One",
+      "La Xbox Series X",
+      "La Xbox 360",
+      "La Xbox Elite"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel MMORPG de Blizzard a été lancé en 2004 ?",
+    "answers": [
+      "Guild Wars",
+      "RuneScape",
+      "EverQuest II",
+      "World of Warcraft"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quelle ville fictive commence principalement Grand Theft Auto: San Andreas ?",
+    "answers": [
+      "Los Santos",
+      "Liberty City",
+      "Vice City",
+      "San Fierro"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel supersoldat est le héros principal de la série Halo ?",
+    "answers": [
+      "Marcus Fenix",
+      "Master Chief",
+      "Sam Fisher",
+      "Commander Shepard"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel jeu de sport était fourni avec la Wii dans de nombreux marchés occidentaux ?",
+    "answers": [
+      "Wii Fit",
+      "Mario Strikers Charged",
+      "Wii Sports",
+      "Nintendo Switch Sports"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel jeu de construction de Mojang a connu sa première version publique en 2009 ?",
+    "answers": [
+      "Terraria",
+      "Roblox",
+      "FortressCraft",
+      "Minecraft"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film lancé en 2001 adapte le premier roman de la saga Harry Potter ?",
+    "answers": [
+      "Harry Potter à l'école des sorciers",
+      "Harry Potter et la Chambre des secrets",
+      "Harry Potter et le Prisonnier d'Azkaban",
+      "Harry Potter et la Coupe de feu"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel film a remporté onze Oscars lors de la cérémonie de 2004 ?",
+    "answers": [
+      "Gladiator",
+      "Le Seigneur des anneaux : Le Retour du roi",
+      "Titanic",
       "Avatar"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Années 2000 », quelle description correspond au télescope spatial Spitzer ?",
+    "text": "Quel acteur incarne le Joker dans The Dark Knight ?",
     "answers": [
-      "accélérateur du CERN mis en service en 2008",
-      "réseau social créé en 2004 à Harvard",
-      "observatoire infrarouge de la NASA lancé en 2003",
-      "chanteuse britannique dont l’album Back to Black sort en 2006"
+      "Joaquin Phoenix",
+      "Jack Nicholson",
+      "Heath Ledger",
+      "Jared Leto"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Années 2000 », à quel domaine Le télescope spatial Spitzer appartient-il ?",
+    "text": "Sur quelle lune fictive se déroule principalement Avatar de James Cameron ?",
     "answers": [
-      "Cinéma",
-      "Musique",
-      "Sport",
-      "Science"
+      "Endor",
+      "Titan",
+      "Arrakis",
+      "Pandora"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : billets et pièces mis en circulation dans douze pays en 2002 ?",
+    "text": "Quel film de Hayao Miyazaki a remporté l'Oscar du meilleur film d'animation en 2003 ?",
     "answers": [
-      "L’euro fiduciaire",
-      "Le Large Hadron Collider",
-      "Facebook",
-      "Amy Winehouse"
+      "Le Voyage de Chihiro",
+      "Le Château ambulant",
+      "Princesse Mononoké",
+      "Ponyo"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Années 2000 », quelle description correspond à L’euro fiduciaire ?",
+    "text": "Quel péplum de Ridley Scott a remporté l'Oscar du meilleur film en 2001 ?",
     "answers": [
-      "film de 2001 lançant au cinéma la saga du jeune sorcier",
-      "billets et pièces mis en circulation dans douze pays en 2002",
-      "plateforme vidéo mise en ligne en 2005 puis rachetée par Google",
-      "film récompensé par onze Oscars en 2004"
+      "Troie",
+      "Gladiator",
+      "Alexandre",
+      "Kingdom of Heaven"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Années 2000 », à quel domaine L’euro fiduciaire appartient-il ?",
+    "text": "Quel studio a produit Le Monde de Nemo, sorti en 2003 ?",
     "answers": [
-      "Cinéma",
-      "Musique",
-      "Société",
-      "Sport"
+      "DreamWorks Animation",
+      "Blue Sky Studios",
+      "Pixar",
+      "Aardman"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Années 2000 », quel symbole de la décennie correspond à cette description : accélérateur du CERN mis en service en 2008 ?",
+    "text": "Quel acteur joue Jack Sparrow dans Pirates des Caraïbes ?",
     "answers": [
-      "Harry Potter à l’école des sorciers",
-      "YouTube",
-      "Le Seigneur des anneaux : Le Retour du roi",
-      "Le Large Hadron Collider"
+      "Orlando Bloom",
+      "Geoffrey Rush",
+      "Jude Law",
+      "Johnny Depp"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Années 2000 », quelle description correspond au Large Hadron Collider ?",
+    "text": "Qui a réalisé Slumdog Millionaire ?",
     "answers": [
-      "accélérateur du CERN mis en service en 2008",
-      "console Sony lancée en 2000 devenue la plus vendue de l’histoire",
-      "jeu de 2006 fourni avec la Wii dans de nombreux marchés",
-      "logiciel de communication lancé en 2003 par des entrepreneurs européens"
+      "Danny Boyle",
+      "Sam Mendes",
+      "Stephen Daldry",
+      "Mike Leigh"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Années 2000 », à quel domaine Le Large Hadron Collider appartient-il ?",
+    "text": "Quel duo de réalisateurs a signé No Country for Old Men ?",
     "answers": [
-      "Cinéma",
-      "Science",
-      "Musique",
-      "Sport"
+      "Andy et Larry Wachowski",
+      "Joel et Ethan Coen",
+      "Jean-Pierre et Luc Dardenne",
+      "Peter et Bobby Farrelly"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel numéro porte le vol d'Oceanic Airlines dans Lost ?",
+    "answers": [
+      "828",
+      "447",
+      "815",
+      "316"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel professeur de chimie devient fabricant de méthamphétamine dans Breaking Bad ?",
+    "answers": [
+      "Jesse Pinkman",
+      "Hank Schrader",
+      "Gustavo Fring",
+      "Walter White"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle ville américaine se déroule principalement The Wire ?",
+    "answers": [
+      "Baltimore",
+      "Boston",
+      "Chicago",
+      "Philadelphie"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel acteur britannique incarne le docteur Gregory House ?",
+    "answers": [
+      "David Tennant",
+      "Hugh Laurie",
+      "Benedict Cumberbatch",
+      "James Nesbitt"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle spécialité exerce Dexter Morgan auprès de la police de Miami ?",
+    "answers": [
+      "Médecin légiste",
+      "Inspecteur des homicides",
+      "Expert en traces de sang",
+      "Psychologue criminel"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle entreprise de papier sert de cadre à la version américaine de The Office ?",
+    "answers": [
+      "Wernham Hogg",
+      "Sabre Corp",
+      "Sterling Cooper",
+      "Dunder Mifflin"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "À qui Ted raconte-t-il son histoire dans How I Met Your Mother ?",
+    "answers": [
+      "À ses enfants",
+      "À ses étudiants",
+      "À ses collègues",
+      "À ses parents"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle rue fictive vivent les héroïnes de Desperate Housewives ?",
+    "answers": [
+      "Baker Street",
+      "Wisteria Lane",
+      "Sesame Street",
+      "Ocean Avenue"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel lycée se forme la chorale de Glee ?",
+    "answers": [
+      "West Beverly High",
+      "Liberty High",
+      "William McKinley High School",
+      "Degrassi Community School"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle émission française lancée en 2001 a popularisé la téléréalité d'enfermement ?",
+    "answers": [
+      "Star Academy",
+      "Koh-Lanta",
+      "Secret Story",
+      "Loft Story"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle chanteuse a sorti l'album Back to Black en 2006 ?",
+    "answers": [
+      "Amy Winehouse",
+      "Duffy",
+      "Adele",
+      "Lily Allen"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel titre de Beyoncé avec Jay-Z est devenu un tube en 2003 ?",
+    "answers": [
+      "Single Ladies",
+      "Crazy in Love",
+      "Halo",
+      "Irreplaceable"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel morceau de Rihanna sorti en 2007 répète notamment « ella, ella » ?",
+    "answers": [
+      "Disturbia",
+      "Don't Stop the Music",
+      "Umbrella",
+      "Pon de Replay"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sur quel album de Britney Spears figure Toxic ?",
+    "answers": [
+      "Blackout",
+      "Circus",
+      "Britney",
+      "In the Zone"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel premier album de Lady Gaga contient Just Dance et Poker Face ?",
+    "answers": [
+      "The Fame",
+      "Born This Way",
+      "The Fame Monster",
+      "Artpop"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel rappeur a publié The Marshall Mathers LP en 2000 ?",
+    "answers": [
+      "Jay-Z",
+      "Eminem",
+      "Nas",
+      "50 Cent"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel groupe a sorti l'album Hybrid Theory en 2000 ?",
+    "answers": [
+      "Limp Bizkit",
+      "Green Day",
+      "Linkin Park",
+      "Muse"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel duo d'Atlanta interprète Hey Ya! ?",
+    "answers": [
+      "Gnarls Barkley",
+      "The Black Eyed Peas",
+      "Clipse",
+      "OutKast"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel album de Daft Punk sorti en 2001 contient One More Time ?",
+    "answers": [
+      "Discovery",
+      "Homework",
+      "Human After All",
+      "Random Access Memories"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le titre du premier album studio de Kanye West, sorti en 2004 ?",
+    "answers": [
+      "Late Registration",
+      "The College Dropout",
+      "Graduation",
+      "808s & Heartbreak"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel pays a remporté la Coupe du monde de football 2002 ?",
+    "answers": [
+      "L'Allemagne",
+      "La France",
+      "Le Brésil",
+      "L'Italie"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel pays a remporté la Coupe du monde de football 2006 ?",
+    "answers": [
+      "La France",
+      "Le Brésil",
+      "L'Allemagne",
+      "L'Italie"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle sélection a remporté l'Euro 2000 ?",
+    "answers": [
+      "La France",
+      "L'Italie",
+      "Les Pays-Bas",
+      "Le Portugal"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle équipe a créé la surprise en remportant l'Euro 2004 ?",
+    "answers": [
+      "La République tchèque",
+      "La Grèce",
+      "Le Portugal",
+      "Le Danemark"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a remporté son premier Ballon d'Or en 2009 ?",
+    "answers": [
+      "Cristiano Ronaldo",
+      "Kaká",
+      "Lionel Messi",
+      "Ronaldinho"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle ville australienne a accueilli les Jeux olympiques d'été de 2000 ?",
+    "answers": [
+      "Melbourne",
+      "Brisbane",
+      "Perth",
+      "Sydney"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle ville a accueilli les Jeux olympiques d'été de 2008 ?",
+    "answers": [
+      "Pékin",
+      "Shanghai",
+      "Tokyo",
+      "Séoul"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel sprinteur a établi le record du monde du 100 mètres en 9,58 secondes en 2009 ?",
+    "answers": [
+      "Asafa Powell",
+      "Usain Bolt",
+      "Tyson Gay",
+      "Yohan Blake"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur suisse a remporté son premier titre à Wimbledon en 2003 ?",
+    "answers": [
+      "Stan Wawrinka",
+      "Rafael Nadal",
+      "Roger Federer",
+      "Lleyton Hewitt"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a remporté son premier Roland-Garros dès sa première participation en 2005 ?",
+    "answers": [
+      "Roger Federer",
+      "Novak Djokovic",
+      "Gustavo Kuerten",
+      "Rafael Nadal"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville eurent lieu les attentats contre le World Trade Center le 11 septembre 2001 ?",
+    "answers": [
+      "New York",
+      "Washington",
+      "Boston",
+      "Chicago"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel pays fut envahi par une coalition menée par les États-Unis en mars 2003 ?",
+    "answers": [
+      "L'Afghanistan",
+      "L'Irak",
+      "La Syrie",
+      "La Libye"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle banque d'investissement américaine fit faillite en septembre 2008 ?",
+    "answers": [
+      "Goldman Sachs",
+      "Morgan Stanley",
+      "Lehman Brothers",
+      "JPMorgan Chase"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel candidat remporta l'élection présidentielle américaine de 2008 ?",
+    "answers": [
+      "John McCain",
+      "George W. Bush",
+      "Al Gore",
+      "Barack Obama"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel protocole international de réduction des gaz à effet de serre entra en vigueur en 2005 ?",
+    "answers": [
+      "Le protocole de Kyoto",
+      "L'accord de Paris",
+      "Le protocole de Montréal",
+      "L'accord de Copenhague"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année les billets et pièces en euros ont-ils été mis en circulation ?",
+    "answers": [
+      "2000",
+      "2002",
+      "2001",
+      "2004"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien d'États ont rejoint l'Union européenne lors de l'élargissement du 1er mai 2004 ?",
+    "answers": [
+      "Huit",
+      "Douze",
+      "Dix",
+      "Quinze"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui fut élu président de la République française en 2007 ?",
+    "answers": [
+      "Jacques Chirac",
+      "François Hollande",
+      "Lionel Jospin",
+      "Nicolas Sarkozy"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel projet les électeurs français ont-ils rejeté par référendum en 2005 ?",
+    "answers": [
+      "Le traité établissant une Constitution pour l'Europe",
+      "Le traité de Maastricht",
+      "Le traité de Lisbonne",
+      "L'accord de Schengen"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel traité européen signé en 2007 est entré en vigueur le 1er décembre 2009 ?",
+    "answers": [
+      "Le traité de Nice",
+      "Le traité de Lisbonne",
+      "Le traité d'Amsterdam",
+      "Le traité de Rome"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel télescope spatial infrarouge la NASA a-t-elle lancé en 2003 ?",
+    "answers": [
+      "Kepler",
+      "Chandra",
+      "Spitzer",
+      "Hubble"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quels rovers jumeaux de la NASA se sont posés sur Mars en 2004 ?",
+    "answers": [
+      "Curiosity et Perseverance",
+      "Sojourner et Phoenix",
+      "Viking 1 et Viking 2",
+      "Spirit et Opportunity"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Sur quelle lune de Saturne la sonde Huygens s'est-elle posée en 2005 ?",
+    "answers": [
+      "Titan",
+      "Encelade",
+      "Rhéa",
+      "Japet"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel télescope spatial lancé en 2009 recherchait principalement des exoplanètes par transit ?",
+    "answers": [
+      "Spitzer",
+      "Kepler",
+      "Fermi",
+      "Swift"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle date le premier faisceau a-t-il circulé dans le Large Hadron Collider ?",
+    "answers": [
+      "4 juillet 2008",
+      "1er janvier 2009",
+      "10 septembre 2008",
+      "21 octobre 2007"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel grand projet international a annoncé l'achèvement de la séquence de référence du génome humain en 2003 ?",
+    "answers": [
+      "Le projet ENCODE",
+      "Le projet HapMap",
+      "Le projet 1000 Genomes",
+      "Le Projet génome humain"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel avion supersonique a effectué ses derniers vols commerciaux en 2003 ?",
+    "answers": [
+      "Le Concorde",
+      "Le Tupolev Tu-144",
+      "Le Boeing 747",
+      "L'Airbus A380"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel groupe partagea le prix Nobel de la paix 2007 avec Al Gore ?",
+    "answers": [
+      "Greenpeace",
+      "Le GIEC",
+      "Le WWF",
+      "Le Programme des Nations unies pour l'environnement"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle maladie virale provoqua une pandémie mondiale déclarée en 2009 ?",
+    "answers": [
+      "Le SRAS",
+      "Le MERS",
+      "La grippe A(H1N1)",
+      "La grippe aviaire H5N1"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel objet céleste fut reclassé comme planète naine par l'Union astronomique internationale en 2006 ?",
+    "answers": [
+      "Cérès",
+      "Éris",
+      "Charon",
+      "Pluton"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel lecteur de livres électroniques Amazon a lancé en 2007 ?",
+    "answers": [
+      "Le Kindle",
+      "Le Nook",
+      "Le Kobo",
+      "Le Reader"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle entreprise a commencé à proposer la vidéo en streaming aux États-Unis en 2007 ?",
+    "answers": [
+      "Hulu",
+      "Netflix",
+      "Amazon Prime Video",
+      "YouTube"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel service de courrier électronique Google a lancé sur invitation en 2004 ?",
+    "answers": [
+      "Google Inbox",
+      "Outlook.com",
+      "Gmail",
+      "Proton Mail"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel format de disque haute définition a remporté la concurrence face au HD DVD ?",
+    "answers": [
+      "Le LaserDisc",
+      "Le MiniDisc",
+      "Le DVD-RAM",
+      "Le Blu-ray"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle marque de smartphones était particulièrement associée à un clavier physique complet dans les années 2000 ?",
+    "answers": [
+      "BlackBerry",
+      "Palm",
+      "Nokia N-Gage",
+      "Motorola Razr"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel roman de Dan Brown publié en 2003 met en scène Robert Langdon ?",
+    "answers": [
+      "Anges et Démons",
+      "Da Vinci Code",
+      "Inferno",
+      "Le Symbole perdu"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a écrit le roman Twilight, publié en 2005 ?",
+    "answers": [
+      "Suzanne Collins",
+      "Cassandra Clare",
+      "Stephenie Meyer",
+      "Veronica Roth"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel auteur suédois a écrit la trilogie Millennium publiée à partir de 2005 ?",
+    "answers": [
+      "Henning Mankell",
+      "Jo Nesbø",
+      "Camilla Läckberg",
+      "Stieg Larsson"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel dernier tome principal de Harry Potter est paru en 2007 ?",
+    "answers": [
+      "Harry Potter et les Reliques de la Mort",
+      "Harry Potter et le Prince de sang-mêlé",
+      "Harry Potter et l'Ordre du Phénix",
+      "Harry Potter et la Coupe de feu"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel écrivain français reçut le prix Nobel de littérature en 2008 ?",
+    "answers": [
+      "Patrick Modiano",
+      "J. M. G. Le Clézio",
+      "Jean-Paul Sartre",
+      "Michel Houellebecq"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel logiciel de communication audio et vidéo a été lancé en 2003 ?",
+    "answers": [
+      "Zoom",
+      "Discord",
+      "Skype",
+      "FaceTime"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel navigateur web Google a lancé en 2008 ?",
+    "answers": [
+      "Firefox",
+      "Safari",
+      "Edge",
+      "Chrome"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel téléphone commercialisé en 2008 fut le premier appareil Android largement vendu ?",
+    "answers": [
+      "Le HTC Dream",
+      "Le Nexus One",
+      "Le Samsung Galaxy S",
+      "Le Motorola Droid"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel système d'exploitation Microsoft est sorti en octobre 2009 ?",
+    "answers": [
+      "Windows Vista",
+      "Windows 7",
+      "Windows XP",
+      "Windows 8"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel service suédois de musique en streaming a été lancé en 2008 ?",
+    "answers": [
+      "Deezer",
+      "Tidal",
+      "Spotify",
+      "SoundCloud"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel film d'animation de DreamWorks sorti en 2001 met en scène un ogre vert ?",
+    "answers": [
+      "Madagascar",
+      "Gang de requins",
+      "Kung Fu Panda",
+      "Shrek"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quelle ville française se déroule principalement Ratatouille ?",
+    "answers": [
+      "Paris",
+      "Lyon",
+      "Marseille",
+      "Bordeaux"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle actrice incarne Miranda Priestly dans Le Diable s'habille en Prada ?",
+    "answers": [
+      "Glenn Close",
+      "Meryl Streep",
+      "Helen Mirren",
+      "Sigourney Weaver"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel slogan fut étroitement associé à la campagne présidentielle de Barack Obama en 2008 ?",
+    "answers": [
+      "Make America Great Again",
+      "Stronger Together",
+      "Yes We Can",
+      "Hope Is Not a Strategy"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel concours musical européen fut remporté par le groupe finlandais Lordi en 2006 ?",
+    "answers": [
+      "Les MTV Europe Music Awards",
+      "Le Melodifestivalen",
+      "Les Brit Awards",
+      "L'Eurovision"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
