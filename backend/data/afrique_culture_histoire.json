@@ -1,502 +1,1102 @@
 [
   {
-    "text": "À quel pays ou espace africain associe-t-on les pyramides de Gizeh ?",
+    "text": "Dans quel pays se trouvent les pyramides de Gizeh ?",
     "answers": [
-      "l'Égypte",
-      "la Tunisie",
-      "l'Afrique de l'Ouest",
-      "l'Éthiopie et l'Érythrée"
+      "Égypte",
+      "Soudan",
+      "Libye",
+      "Tunisie"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quel pays ou espace africain situe-t-on les pyramides de Gizeh ?",
-    "answers": [
-      "la Tunisie",
-      "l'Égypte",
-      "l'Afrique de l'Ouest",
-      "l'Éthiopie et l'Érythrée"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "À quel pays ou espace africain associe-t-on la cité de Carthage ?",
-    "answers": [
-      "l'Afrique de l'Ouest",
-      "l'Éthiopie et l'Érythrée",
-      "la Tunisie",
-      "le Mali"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quel pays ou espace africain situe-t-on la cité de Carthage ?",
-    "answers": [
-      "l'Afrique de l'Ouest",
-      "l'Éthiopie et l'Érythrée",
-      "le Mali",
-      "la Tunisie"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "À quel pays ou espace africain associe-t-on l'empire du Mali ?",
-    "answers": [
-      "l'Afrique de l'Ouest",
-      "l'Éthiopie et l'Érythrée",
-      "le Mali",
-      "l'Afrique centrale"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quel pays ou espace africain situe-t-on l'empire du Mali ?",
-    "answers": [
-      "l'Éthiopie et l'Érythrée",
-      "l'Afrique de l'Ouest",
-      "le Mali",
-      "l'Afrique centrale"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "À quel pays ou espace africain associe-t-on le royaume d'Aksoum ?",
-    "answers": [
-      "le Mali",
-      "l'Afrique centrale",
-      "l'Éthiopie et l'Érythrée",
-      "le Zimbabwe"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quel pays ou espace africain situe-t-on le royaume d'Aksoum ?",
-    "answers": [
-      "le Mali",
-      "l'Afrique centrale",
-      "le Zimbabwe",
-      "l'Éthiopie et l'Érythrée"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "À quel pays ou espace africain associe-t-on la ville de Tombouctou ?",
-    "answers": [
-      "le Mali",
-      "l'Afrique centrale",
-      "le Zimbabwe",
-      "le Soudan"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quel pays ou espace africain situe-t-on la ville de Tombouctou ?",
-    "answers": [
-      "l'Afrique centrale",
-      "le Mali",
-      "le Zimbabwe",
-      "le Soudan"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "À quel pays ou espace africain associe-t-on le royaume du Kongo ?",
-    "answers": [
-      "le Zimbabwe",
-      "le Soudan",
-      "l'Afrique centrale",
-      "l'Afrique de l'Ouest"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quel pays ou espace africain situe-t-on le royaume du Kongo ?",
-    "answers": [
-      "le Zimbabwe",
-      "le Soudan",
-      "l'Afrique de l'Ouest",
-      "l'Afrique centrale"
-    ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
     "text": "Dans quel pays se trouvent les pyramides de Méroé ?",
     "answers": [
-      "le Soudan",
-      "l'Égypte",
-      "l'Éthiopie",
-      "la Libye"
+      "Égypte",
+      "Soudan",
+      "Éthiopie",
+      "Libye"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle ville fut le principal centre politique de l'Empire songhaï ?",
+    "answers": [
+      "Djenné",
+      "Kano",
+      "Gao",
+      "Kumasi"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel souverain est traditionnellement considéré comme le fondateur de l'Empire du Mali ?",
+    "answers": [
+      "Mansa Moussa",
+      "Soumaoro Kanté",
+      "Askia Daoud",
+      "Sundiata Keïta"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle cité soudanaise fut la capitale tardive du royaume de Koush ?",
+    "answers": [
+      "Méroé",
+      "Kerma",
+      "Napata",
+      "Dongola"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
     "text": "Dans quel pays se trouve la ville historique de Tombouctou ?",
     "answers": [
-      "le Niger",
-      "le Mali",
-      "le Sénégal",
-      "la Mauritanie"
+      "Niger",
+      "Mali",
+      "Sénégal",
+      "Mauritanie"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "À quel pays ou espace africain associe-t-on la civilisation de Méroé ?",
+    "text": "Quel souverain du Mali est célèbre pour son pèlerinage à La Mecque en 1324 ?",
     "answers": [
-      "l'Afrique de l'Ouest",
-      "le Nigeria actuel",
-      "le Soudan",
-      "le Mali"
+      "Askia Mohammed",
+      "Sonni Ali",
+      "Mansa Moussa",
+      "Sundiata Keïta"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans quel pays ou espace africain situe-t-on la civilisation de Méroé ?",
+    "text": "Quel centre d'enseignement de Tombouctou était lié à une mosquée du même nom ?",
     "answers": [
-      "l'Afrique de l'Ouest",
-      "le Nigeria actuel",
-      "le Mali",
-      "le Soudan"
+      "Al-Azhar",
+      "Al-Qarawiyyin",
+      "Zitouna",
+      "Sankoré"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "À quel pays ou espace africain associe-t-on l'empire Songhaï ?",
+    "text": "Dans quel pays actuel se trouvait le cœur du royaume historique du Bénin ?",
     "answers": [
-      "l'Afrique de l'Ouest",
-      "le Nigeria actuel",
-      "le Mali",
-      "l'Éthiopie"
+      "Nigeria",
+      "Bénin",
+      "Togo",
+      "Ghana"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans quel pays ou espace africain situe-t-on l'empire Songhaï ?",
+    "text": "Quel général carthaginois traversa les Alpes pendant la deuxième guerre punique ?",
     "answers": [
-      "le Nigeria actuel",
-      "l'Afrique de l'Ouest",
-      "le Mali",
-      "l'Éthiopie"
+      "Hamilcar Barca",
+      "Hannibal Barca",
+      "Hasdrubal le Beau",
+      "Massinissa"
     ],
-    "correct": 1
-  },
-  {
-    "text": "À quel pays ou espace africain associe-t-on le royaume du Bénin historique ?",
-    "answers": [
-      "le Mali",
-      "l'Éthiopie",
-      "le Nigeria actuel",
-      "le Maroc"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quel pays ou espace africain situe-t-on le royaume du Bénin historique ?",
-    "answers": [
-      "le Mali",
-      "l'Éthiopie",
-      "le Maroc",
-      "le Nigeria actuel"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "À quel pays ou espace africain associe-t-on la mosquée Djenné ?",
-    "answers": [
-      "le Mali",
-      "l'Éthiopie",
-      "le Maroc",
-      "le Sénégal"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quel pays ou espace africain situe-t-on la mosquée Djenné ?",
-    "answers": [
-      "l'Éthiopie",
-      "le Mali",
-      "le Maroc",
-      "le Sénégal"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "À quel pays ou espace africain associe-t-on les églises rupestres de Lalibela ?",
-    "answers": [
-      "le Maroc",
-      "le Sénégal",
-      "l'Éthiopie",
-      "la Zambie et le Zimbabwe"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quel pays ou espace africain situe-t-on les églises rupestres de Lalibela ?",
-    "answers": [
-      "le Maroc",
-      "le Sénégal",
-      "la Zambie et le Zimbabwe",
-      "l'Éthiopie"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "À quel pays ou espace africain associe-t-on la médina de Fès ?",
-    "answers": [
-      "le Maroc",
-      "le Sénégal",
-      "la Zambie et le Zimbabwe",
-      "le Botswana"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quel pays ou espace africain situe-t-on la médina de Fès ?",
-    "answers": [
-      "le Sénégal",
-      "le Maroc",
-      "la Zambie et le Zimbabwe",
-      "le Botswana"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "À quel pays ou espace africain associe-t-on l'île de Gorée ?",
-    "answers": [
-      "la Zambie et le Zimbabwe",
-      "le Botswana",
-      "le Sénégal",
-      "la Tanzanie"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quel pays ou espace africain situe-t-on l'île de Gorée ?",
-    "answers": [
-      "la Zambie et le Zimbabwe",
-      "le Botswana",
-      "la Tanzanie",
-      "le Sénégal"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "À quel pays ou espace africain associe-t-on les chutes Victoria ?",
-    "answers": [
-      "la Zambie et le Zimbabwe",
-      "le Botswana",
-      "la Tanzanie",
-      "le Kenya"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quel pays ou espace africain situe-t-on les chutes Victoria ?",
-    "answers": [
-      "le Botswana",
-      "la Zambie et le Zimbabwe",
-      "la Tanzanie",
-      "le Kenya"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "À quel pays ou espace africain associe-t-on le delta de l'Okavango ?",
-    "answers": [
-      "la Tanzanie",
-      "le Kenya",
-      "le Botswana",
-      "l'Afrique de l'Est"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quel pays ou espace africain situe-t-on le delta de l'Okavango ?",
-    "answers": [
-      "la Tanzanie",
-      "le Kenya",
-      "l'Afrique de l'Est",
-      "le Botswana"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "À quel pays ou espace africain associe-t-on le parc du Serengeti ?",
-    "answers": [
-      "la Tanzanie",
-      "le Kenya",
-      "l'Afrique de l'Est",
-      "la Namibie"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quel pays ou espace africain situe-t-on le parc du Serengeti ?",
-    "answers": [
-      "le Kenya",
-      "la Tanzanie",
-      "l'Afrique de l'Est",
-      "la Namibie"
-    ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
     "text": "Dans quel pays se trouve le mont Kilimandjaro ?",
     "answers": [
-      "le Kenya",
-      "l'Ouganda",
-      "la Tanzanie",
-      "l'Éthiopie"
+      "Kenya",
+      "Ouganda",
+      "Tanzanie",
+      "Éthiopie"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel peuple a principalement bâti le Grand Zimbabwe médiéval ?",
+    "answers": [
+      "Akan",
+      "Touareg",
+      "Maasaï",
+      "Shona"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel royaume précolonial avait Mbanza Kongo pour capitale ?",
+    "answers": [
+      "Royaume du Kongo",
+      "Royaume du Buganda",
+      "Empire lunda",
+      "Royaume du Dahomey"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle puissance européenne fut vaincue par l'Éthiopie à Adoua en 1896 ?",
+    "answers": [
+      "France",
+      "Italie",
+      "Royaume-Uni",
+      "Portugal"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Entre quels siècles l'UNESCO date-t-elle principalement la construction du Grand Zimbabwe ?",
+    "answers": [
+      "VIIe au IXe siècle",
+      "XVIe au XVIIIe siècle",
+      "XIe au XVe siècle",
+      "Ier au IVe siècle"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le plus grand désert chaud du monde ?",
+    "answers": [
+      "Kalahari",
+      "Namib",
+      "Danakil",
+      "Sahara"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel pays partage les chutes Victoria avec le Zimbabwe ?",
+    "answers": [
+      "Zambie",
+      "Botswana",
+      "Malawi",
+      "Mozambique"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel pays d'Afrique subsaharienne devint indépendant en 1957 sous Kwame Nkrumah ?",
+    "answers": [
+      "Guinée",
+      "Ghana",
+      "Nigeria",
+      "Sénégal"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel dirigeant indépendantiste fut le premier Premier ministre du Congo en 1960 ?",
+    "answers": [
+      "Joseph Kasa-Vubu",
+      "Mobutu Sese Seko",
+      "Patrice Lumumba",
+      "Moïse Tshombe"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel peuple a donné son nom au royaume qui prospéra autour d'Aksoum ?",
+    "answers": [
+      "Nubiens",
+      "Garamantes",
+      "Almoravides",
+      "Aksoumites"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle grande île africaine se situe dans l'océan Indien ?",
+    "answers": [
+      "Madagascar",
+      "Zanzibar",
+      "Bioko",
+      "São Tomé"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quels trois pays bordent le lac Victoria ?",
+    "answers": [
+      "Rwanda, Burundi et Tanzanie",
+      "Tanzanie, Ouganda et Kenya",
+      "Kenya, Éthiopie et Soudan du Sud",
+      "Zambie, Zimbabwe et Botswana"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel dirigeant tanzanien est associé à la politique d'ujamaa ?",
+    "answers": [
+      "Jomo Kenyatta",
+      "Kenneth Kaunda",
+      "Julius Nyerere",
+      "Hastings Banda"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel mouvement sud-africain Nelson Mandela présida-t-il avant son élection à la présidence ?",
+    "answers": [
+      "Congrès panafricain d'Azanie",
+      "Parti national",
+      "Inkatha Freedom Party",
+      "Congrès national africain"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelles sont les trois grandes mosquées historiques de Tombouctou citées par l'UNESCO ?",
+    "answers": [
+      "Djingareyber, Sankoré et Sidi Yahia",
+      "Koutoubia, Qarawiyyin et Tinmel",
+      "Al-Azhar, Ibn Touloun et Al-Hakim",
+      "Larabanga, Agadez et Kong"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel pays Nelson Mandela est-il devenu président en 1994 ?",
+    "answers": [
+      "Namibie",
+      "Afrique du Sud",
+      "Zimbabwe",
+      "Botswana"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel dirigeant fut le premier président du Ghana indépendant ?",
+    "answers": [
+      "Jomo Kenyatta",
+      "Julius Nyerere",
+      "Kwame Nkrumah",
+      "Patrice Lumumba"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quelle ville siège le Parlement panafricain ?",
+    "answers": [
+      "Arusha",
+      "Abuja",
+      "Gaborone",
+      "Midrand"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville se trouve le secrétariat de la Zone de libre-échange continentale africaine ?",
+    "answers": [
+      "Accra",
+      "Addis-Abeba",
+      "Kigali",
+      "Lagos"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel empire ouest-africain fut dirigé par Askia Mohammed Ier ?",
+    "answers": [
+      "Empire du Mali",
+      "Empire songhaï",
+      "Empire du Ghana",
+      "Empire du Kanem-Bornou"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quel pays associe-t-on principalement l'ancien système d'apartheid ?",
+    "answers": [
+      "Kenya",
+      "Ghana",
+      "Afrique du Sud",
+      "Angola"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quelle organisation fondée en 1963 a précédé l'Union africaine ?",
+    "answers": [
+      "Communauté économique africaine",
+      "Ligue des États africains",
+      "Fédération panafricaine",
+      "Organisation de l'unité africaine"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel bloc régional d'Afrique australe a son secrétariat à Gaborone ?",
+    "answers": [
+      "SADC",
+      "CEDEAO",
+      "EAC",
+      "IGAD"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quelle ville tanzanienne se trouve le siège de la Communauté d'Afrique de l'Est ?",
+    "answers": [
+      "Dodoma",
+      "Arusha",
+      "Dar es Salaam",
+      "Mwanza"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel ancien royaume avait Abomey pour capitale ?",
+    "answers": [
+      "Buganda",
+      "Monomotapa",
+      "Dahomey",
+      "Loango"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
     "text": "Dans quel pays se trouve le delta de l'Okavango ?",
     "answers": [
-      "la Namibie",
-      "la Zambie",
-      "l'Angola",
-      "le Botswana"
+      "Namibie",
+      "Zambie",
+      "Angola",
+      "Botswana"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
-    "text": "À quel pays ou espace africain associe-t-on le lac Tanganyika ?",
+    "text": "Dans quelle ville se trouve le siège de l'Union africaine ?",
     "answers": [
-      "l'Afrique de l'Est",
-      "la Namibie",
-      "l'Éthiopie",
-      "l'Algérie"
+      "Addis-Abeba",
+      "Nairobi",
+      "Accra",
+      "Dakar"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans quel pays ou espace africain situe-t-on le lac Tanganyika ?",
+    "text": "Quel grand fleuve africain se jette dans le golfe de Guinée ?",
     "answers": [
-      "la Namibie",
-      "l'Afrique de l'Est",
-      "l'Éthiopie",
-      "l'Algérie"
+      "Nil",
+      "Niger",
+      "Zambèze",
+      "Orange"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
-    "text": "À quel pays ou espace africain associe-t-on le désert du Namib ?",
+    "text": "Quel fleuve africain traverse deux fois l'équateur ?",
     "answers": [
-      "l'Éthiopie",
-      "l'Algérie",
-      "la Namibie",
-      "l'Afrique du Sud"
+      "Niger",
+      "Sénégal",
+      "Congo",
+      "Limpopo"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans quel pays ou espace africain situe-t-on le désert du Namib ?",
+    "text": "Quel site mauritanien regroupe Chinguetti, Ouadane, Tichitt et Oualata ?",
     "answers": [
-      "l'Éthiopie",
-      "l'Algérie",
-      "l'Afrique du Sud",
-      "la Namibie"
+      "Vallée du M'Zab",
+      "Pays dogon",
+      "Cercle mégalithique de Sénégambie",
+      "Anciens ksour de Ouadane, Chinguetti, Tichitt et Oualata"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "À quel pays ou espace africain associe-t-on la bataille d'Adoua ?",
+    "text": "Dans quel pays se trouve l'ancienne cité de Carthage ?",
     "answers": [
-      "l'Éthiopie",
-      "l'Algérie",
-      "l'Afrique du Sud",
-      "le Rwanda"
+      "Tunisie",
+      "Algérie",
+      "Libye",
+      "Maroc"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Dans quel pays ou espace africain situe-t-on la bataille d'Adoua ?",
+    "text": "Quel bloc régional rassemble notamment le Nigeria, le Ghana et le Sénégal ?",
     "answers": [
-      "l'Algérie",
-      "l'Éthiopie",
-      "l'Afrique du Sud",
-      "le Rwanda"
+      "SADC",
+      "CEDEAO",
+      "EAC",
+      "COMESA"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
-    "text": "À quel pays ou espace africain associe-t-on la guerre d'indépendance de 1954-1962 ?",
+    "text": "Quel cap constitue le point le plus méridional du continent africain ?",
     "answers": [
-      "l'Afrique du Sud",
-      "le Rwanda",
-      "l'Algérie",
-      "la Tunisie"
+      "Cap de Bonne-Espérance",
+      "Cap-Vert",
+      "Cap des Aiguilles",
+      "Cap Guardafui"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans quel pays ou espace africain situe-t-on la guerre d'indépendance de 1954-1962 ?",
+    "text": "Quels pays abritent principalement le désert du Kalahari ?",
     "answers": [
-      "l'Afrique du Sud",
-      "le Rwanda",
-      "la Tunisie",
-      "l'Algérie"
+      "Algérie, Tunisie et Libye",
+      "Kenya, Tanzanie et Ouganda",
+      "Angola, RDC et Zambie",
+      "Botswana, Namibie et Afrique du Sud"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "À quel pays ou espace africain associe-t-on l'apartheid ?",
+    "text": "Quel royaume éthiopien médiéval est associé à la dynastie Zagoué et à Lalibela ?",
     "answers": [
-      "l'Afrique du Sud",
-      "le Rwanda",
-      "la Tunisie",
-      "l'Égypte"
+      "Royaume de Zagoué",
+      "Royaume salomonide de Gondar",
+      "Sultanat d'Ifat",
+      "Royaume de Kaffa"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans quel pays ou espace africain situe-t-on l'apartheid ?",
+    "text": "Dans quel pays se trouvent les églises rupestres de Lalibela ?",
     "answers": [
-      "le Rwanda",
-      "l'Afrique du Sud",
-      "la Tunisie",
-      "l'Égypte"
+      "Érythrée",
+      "Éthiopie",
+      "Soudan",
+      "Kenya"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "À quel pays ou espace africain associe-t-on le génocide des Tutsi de 1994 ?",
+    "text": "Quel terme désigne la zone semi-aride au sud du Sahara ?",
     "answers": [
-      "la Tunisie",
-      "l'Égypte",
-      "le Rwanda",
-      "l'Afrique de l'Ouest"
+      "Maghreb",
+      "Mashreq",
+      "Sahel",
+      "Kalahari"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Dans quel pays ou espace africain situe-t-on le génocide des Tutsi de 1994 ?",
+    "text": "Quel ensemble montagneux s'étend principalement au Maroc, en Algérie et en Tunisie ?",
     "answers": [
-      "la Tunisie",
-      "l'Égypte",
-      "l'Afrique de l'Ouest",
-      "le Rwanda"
+      "Drakensberg",
+      "Rwenzori",
+      "Tibesti",
+      "Atlas"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
-    "text": "À quel pays ou espace africain associe-t-on la révolution de 2011 qui renversa Ben Ali ?",
+    "text": "Quel système géologique majeur traverse l'Afrique orientale du nord au sud ?",
     "answers": [
-      "la Tunisie",
-      "l'Égypte",
-      "l'Afrique de l'Ouest",
-      "l'Éthiopie et l'Érythrée"
+      "Rift est-africain",
+      "Bouclier ouest-africain",
+      "Bassin du Congo",
+      "Chaîne du Cap"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "Dans quel pays ou espace africain situe-t-on la révolution de 2011 qui renversa Ben Ali ?",
+    "text": "Quel pharaon fit déplacer la capitale égyptienne à Akhetaton ?",
     "answers": [
-      "l'Égypte",
-      "la Tunisie",
-      "l'Afrique de l'Ouest",
-      "l'Éthiopie et l'Érythrée"
+      "Ramsès II",
+      "Akhenaton",
+      "Thoutmôsis III",
+      "Psammétique Ier"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel pays abrite le monument national du Grand Zimbabwe ?",
+    "answers": [
+      "Zambie",
+      "Mozambique",
+      "Zimbabwe",
+      "Malawi"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quelle langue bantoue sert de lingua franca dans une grande partie de l'Afrique de l'Est ?",
+    "answers": [
+      "Amharique",
+      "Hausa",
+      "Afrikaans",
+      "Swahili"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quel massif transfrontalier vivent une partie des gorilles de montagne ?",
+    "answers": [
+      "Virunga",
+      "Ahaggar",
+      "Simien",
+      "Atlas"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Lequel de ces animaux ne fait pas partie des « Big Five » ?",
+    "answers": [
+      "Lion",
+      "Girafe",
+      "Éléphant",
+      "Rhinocéros"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel document fut signé le 25 mai 1963 pour créer l'OUA ?",
+    "answers": [
+      "Acte constitutif de l'Union africaine",
+      "Déclaration de Syrte",
+      "Charte de l'Organisation de l'unité africaine",
+      "Charte africaine des droits de l'homme"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel fleuve a donné son nom à deux pays d'Afrique centrale ?",
+    "answers": [
+      "Niger",
+      "Sénégal",
+      "Zambèze",
+      "Congo"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "De quelle langue européenne l'afrikaans est-il principalement issu ?",
+    "answers": [
+      "Néerlandais",
+      "Portugais",
+      "Allemand",
+      "Anglais"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle langue liturgique ancienne est encore employée par des Églises d'Éthiopie et d'Érythrée ?",
+    "answers": [
+      "Copte",
+      "Guèze",
+      "Wolof",
+      "Lingala"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle langue est une langue de travail du gouvernement fédéral éthiopien depuis longtemps ?",
+    "answers": [
+      "Oromo uniquement",
+      "Tigrigna uniquement",
+      "Amharique",
+      "Somali uniquement"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "En quelle année l'Union africaine a-t-elle officiellement succédé à l'OUA ?",
+    "answers": [
+      "1994",
+      "1999",
+      "2005",
+      "2002"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel animal est endémique de Madagascar ?",
+    "answers": [
+      "Lémurien",
+      "Gorille des montagnes",
+      "Okapi",
+      "Fennec"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel rôle traditionnel exerce un griot en Afrique de l'Ouest ?",
+    "answers": [
+      "Chef militaire héréditaire",
+      "Conteur, historien oral et musicien",
+      "Prêtre du culte d'Amon",
+      "Architecte de mosquées"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quels trois pays le yoruba est-il historiquement implanté ?",
+    "answers": [
+      "Mali, Niger et Tchad",
+      "Ghana, Liberia et Sierra Leone",
+      "Nigeria, Bénin et Togo",
+      "Kenya, Ouganda et Tanzanie"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel peuple pastoral vit notamment entre le Kenya et la Tanzanie ?",
+    "answers": [
+      "Akan",
+      "Wolof",
+      "Amhara",
+      "Maasaï"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel traité de 1991 a établi la Communauté économique africaine ?",
+    "answers": [
+      "Traité d'Abuja",
+      "Traité de Lagos",
+      "Accord d'Arusha",
+      "Protocole de Maputo"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel arbre au tronc massif est emblématique de nombreuses régions africaines ?",
+    "answers": [
+      "Séquoia",
+      "Baobab",
+      "Érable",
+      "Bouleau"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel instrument à lamelles métalliques est emblématique du Zimbabwe ?",
+    "answers": [
+      "Kora",
+      "Balafon",
+      "Mbira",
+      "Djembe"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel peuple berbère est historiquement associé au Sahara central ?",
+    "answers": [
+      "San",
+      "Shona",
+      "Oromo",
+      "Touareg"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel peuple autochtone d'Afrique australe est connu pour ses langues à clics ?",
+    "answers": [
+      "San",
+      "Akan",
+      "Igbo",
+      "Tigréens"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel sommet de 1999 appela à la création de l'Union africaine ?",
+    "answers": [
+      "Sommet de Monrovia",
+      "Sommet de Syrte",
+      "Sommet de Lusaka",
+      "Sommet de Durban"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel aliment éthiopien et érythréen est une grande galette fermentée ?",
+    "answers": [
+      "Jollof",
+      "Fufu",
+      "Injera",
+      "Couscous"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "À quel pays associe-t-on particulièrement le tissu kente ?",
+    "answers": [
+      "Mali",
+      "Éthiopie",
+      "Maroc",
+      "Ghana"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel textile malien est teint à l'aide de boue fermentée ?",
+    "answers": [
+      "Bogolan",
+      "Kente",
+      "Adire",
+      "Shweshwe"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle technique textile yoruba produit des motifs par teinture à réserve ?",
+    "answers": [
+      "Bogolan",
+      "Adire",
+      "Kente",
+      "Bazin"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel pays abrite le site archéologique de Leptis Magna ?",
+    "answers": [
+      "Tunisie",
+      "Algérie",
+      "Libye",
+      "Égypte"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quelle région associe-t-on le plat de riz appelé jollof ?",
+    "answers": [
+      "Afrique australe",
+      "Corne de l'Afrique",
+      "Vallée du Nil",
+      "Afrique de l'Ouest"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel grain est traditionnellement utilisé pour préparer l'injera ?",
+    "answers": [
+      "Teff",
+      "Sorgho blanc uniquement",
+      "Maïs",
+      "Riz"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel instrument ouest-africain en forme de tambour-gobelet se joue à mains nues ?",
+    "answers": [
+      "Kora",
+      "Djembé",
+      "Mbira",
+      "Algaita"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Pourquoi le « tambour parlant » peut-il imiter certains contours de la parole ?",
+    "answers": [
+      "Il contient des cordes vocales artificielles",
+      "Il joue uniquement des mots enregistrés",
+      "Sa tension permet de faire varier la hauteur du son",
+      "Il est toujours accompagné d'un sifflet"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel royaume nubien chrétien avait Dongola pour capitale ?",
+    "answers": [
+      "Alodie",
+      "Nobatie",
+      "Koush",
+      "Makurie"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel instrument ouest-africain possède généralement 21 cordes et une calebasse ?",
+    "answers": [
+      "Kora",
+      "Mbira",
+      "Oud",
+      "Vuvuzela"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel auteur égyptien a reçu le prix Nobel de littérature en 1988 ?",
+    "answers": [
+      "Taha Hussein",
+      "Naguib Mahfouz",
+      "Tayeb Salih",
+      "Alaa al-Aswany"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quelle préparation inscrite par l'UNESCO réunit des traditions culinaires de plusieurs pays du Maghreb ?",
+    "answers": [
+      "Injera",
+      "Jollof",
+      "Couscous",
+      "Bobotie"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Le rooibos est originaire de quelle région d'Afrique du Sud ?",
+    "answers": [
+      "Karoo oriental",
+      "KwaZulu-Natal",
+      "Lowveld",
+      "Cederberg"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel courant musical ghanéen mêla notamment fanfares, guitares et rythmes locaux au XXe siècle ?",
+    "answers": [
+      "Highlife",
+      "Mbalax",
+      "Rai",
+      "Taarab"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle chanteuse sud-africaine était surnommée « Mama Africa » ?",
+    "answers": [
+      "Angélique Kidjo",
+      "Miriam Makeba",
+      "Oumou Sangaré",
+      "Cesária Évora"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quelle militante kényane a reçu le prix Nobel de la paix en 2004 ?",
+    "answers": [
+      "Ellen Johnson Sirleaf",
+      "Leymah Gbowee",
+      "Wangari Maathai",
+      "Graça Machel"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "À quel pays associe-t-on l'origine sauvage de Coffea arabica ?",
+    "answers": [
+      "Ghana",
+      "Angola",
+      "Tunisie",
+      "Éthiopie"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel écrivain fut le premier Africain à recevoir le prix Nobel de littérature ?",
+    "answers": [
+      "Wole Soyinka",
+      "Naguib Mahfouz",
+      "J. M. Coetzee",
+      "Abdulrazak Gurnah"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel musicien éthiopien est une figure majeure de l'éthio-jazz ?",
+    "answers": [
+      "Mahmoud Ahmed",
+      "Mulatu Astatke",
+      "Alemayehu Eshete",
+      "Tilahun Gessesse"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel écrivain nigérian a écrit « Le Monde s'effondre » ?",
+    "answers": [
+      "Wole Soyinka",
+      "Ngũgĩ wa Thiong'o",
+      "Chinua Achebe",
+      "Ben Okri"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel style musical sénégalais est associé à Youssou N'Dour ?",
+    "answers": [
+      "Highlife",
+      "Rai",
+      "Taarab",
+      "Mbalax"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quelle langue Ngũgĩ wa Thiong'o a-t-il choisi d'écrire plusieurs œuvres après l'anglais ?",
+    "answers": [
+      "Gikuyu",
+      "Swahili",
+      "Amharique",
+      "Yoruba"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle romancière sud-africaine a reçu le prix Nobel de littérature en 1991 ?",
+    "answers": [
+      "Bessie Head",
+      "Nadine Gordimer",
+      "Olive Schreiner",
+      "Zoë Wicomb"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel auteur soudanais a écrit « Saison de la migration vers le Nord » ?",
+    "answers": [
+      "Leopold Sédar Senghor",
+      "Ayi Kwei Armah",
+      "Tayeb Salih",
+      "Nuruddin Farah"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel musicien nigérian est l'une des figures fondatrices de l'afrobeat ?",
+    "answers": [
+      "Youssou N'Dour",
+      "Salif Keïta",
+      "Manu Dibango",
+      "Fela Kuti"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel roman de Chimamanda Ngozi Adichie se déroule pendant la guerre du Biafra ?",
+    "answers": [
+      "L'Autre Moitié du soleil",
+      "Americanah",
+      "Hibiscus pourpre",
+      "Nous sommes tous des féministes"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel archevêque sud-africain reçut le prix Nobel de la paix en 1984 ?",
+    "answers": [
+      "Trevor Huddleston",
+      "Desmond Tutu",
+      "Beyers Naudé",
+      "Allan Boesak"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel saxophoniste camerounais a popularisé « Soul Makossa » ?",
+    "answers": [
+      "Hugh Masekela",
+      "Fela Kuti",
+      "Manu Dibango",
+      "Mulatu Astatke"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel mouvement littéraire francophone fut notamment porté par Senghor, Césaire et Damas ?",
+    "answers": [
+      "Créolité",
+      "Afrofuturisme",
+      "Réalisme magique",
+      "Négritude"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
