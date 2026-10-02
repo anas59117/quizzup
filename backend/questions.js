@@ -693,15 +693,15 @@ const CATEGORIES = {
     icon: '🦸',
     questions: [...require('./data/marvel.json')],
   },
-  batman: {
-    label: 'Batman',
-    icon: '🦇',
-    questions: [...require('./data/batman.json')],
-  },
   spider_man: {
     label: 'Spider-Man',
     icon: '🕷️',
     questions: [...require('./data/spider_man.json')],
+  },
+  batman: {
+    label: 'Batman',
+    icon: '🦇',
+    questions: [...require('./data/batman.json')],
   },
   star_wars: {
     label: 'Star Wars',
