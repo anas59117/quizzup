@@ -1,23 +1,25 @@
 [
   {
-    "text": "Qui a créé le manga Naruto ?",
-    "answers": [
-      "Masashi Kishimoto",
-      "Eiichiro Oda",
-      "Akira Toriyama",
-      "Kōhei Horikoshi"
-    ],
-    "correct": 0
-  },
-  {
     "text": "Quel est le protagoniste principal de Naruto ?",
     "answers": [
-      "Son Goku",
       "Naruto Uzumaki",
+      "Son Goku",
       "Izuku Midoriya",
       "Tanjirō Kamado"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a créé le manga Naruto ?",
+    "answers": [
+      "Eiichiro Oda",
+      "Masashi Kishimoto",
+      "Akira Toriyama",
+      "Kōhei Horikoshi"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel lieu ou groupe appartient à l'univers de Naruto ?",
@@ -27,7 +29,8 @@
       "Konoha",
       "l'école d'exorcisme de Tokyo"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel système de pouvoir ou élément central appartient à Naruto ?",
@@ -37,7 +40,8 @@
       "le Nen",
       "le chakra"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "En quelle année la publication du manga Naruto a-t-elle commencé ?",
@@ -47,27 +51,30 @@
       "1998",
       "2001"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a créé le manga One Piece ?",
-    "answers": [
-      "Akira Toriyama",
-      "Eiichiro Oda",
-      "Kōhei Horikoshi",
-      "Koyoharu Gotouge"
-    ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
     "text": "Quel est le protagoniste principal de One Piece ?",
     "answers": [
       "Izuku Midoriya",
-      "Tanjirō Kamado",
       "Monkey D. Luffy",
+      "Tanjirō Kamado",
       "Yūji Itadori"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a créé le manga One Piece ?",
+    "answers": [
+      "Akira Toriyama",
+      "Kōhei Horikoshi",
+      "Eiichiro Oda",
+      "Koyoharu Gotouge"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel lieu ou groupe appartient à l'univers de One Piece ?",
@@ -77,7 +84,8 @@
       "l'Association des Hunters",
       "Grand Line"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel système de pouvoir ou élément central appartient à One Piece ?",
@@ -87,7 +95,8 @@
       "le Nen",
       "les zanpakutō"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "En quelle année la publication du manga One Piece a-t-elle commencé ?",
@@ -97,27 +106,30 @@
       "2001",
       "2009"
     ],
-    "correct": 1
-  },
-  {
-    "text": "Qui a créé le manga Dragon Ball ?",
-    "answers": [
-      "Kōhei Horikoshi",
-      "Koyoharu Gotouge",
-      "Akira Toriyama",
-      "Gege Akutami"
-    ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
     "text": "Quel est le protagoniste principal de Dragon Ball ?",
     "answers": [
       "Tanjirō Kamado",
       "Yūji Itadori",
-      "Gon Freecss",
-      "Son Goku"
+      "Son Goku",
+      "Gon Freecss"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a créé le manga Dragon Ball ?",
+    "answers": [
+      "Kōhei Horikoshi",
+      "Koyoharu Gotouge",
+      "Gege Akutami",
+      "Akira Toriyama"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel lieu ou groupe appartient à l'univers de Dragon Ball ?",
@@ -127,7 +139,8 @@
       "l'Association des Hunters",
       "la Soul Society"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel système de pouvoir ou élément central appartient à Dragon Ball ?",
@@ -137,7 +150,8 @@
       "les zanpakutō",
       "l'alchimie"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "En quelle année la publication du manga Dragon Ball a-t-elle commencé ?",
@@ -147,27 +161,30 @@
       "1984",
       "1999"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a créé le manga My Hero Academia ?",
-    "answers": [
-      "Koyoharu Gotouge",
-      "Gege Akutami",
-      "Yoshihiro Togashi",
-      "Kōhei Horikoshi"
-    ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
     "text": "Quel est le protagoniste principal de My Hero Academia ?",
     "answers": [
-      "Izuku Midoriya",
       "Yūji Itadori",
       "Gon Freecss",
-      "Ichigo Kurosaki"
+      "Ichigo Kurosaki",
+      "Izuku Midoriya"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a créé le manga My Hero Academia ?",
+    "answers": [
+      "Kōhei Horikoshi",
+      "Koyoharu Gotouge",
+      "Gege Akutami",
+      "Yoshihiro Togashi"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel lieu ou groupe appartient à l'univers de My Hero Academia ?",
@@ -177,7 +194,8 @@
       "la Soul Society",
       "Amestris"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel système de pouvoir ou élément central appartient à My Hero Academia ?",
@@ -187,7 +205,8 @@
       "les Alters",
       "les Titans"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "En quelle année la publication du manga My Hero Academia a-t-elle commencé ?",
@@ -197,27 +216,30 @@
       "1997",
       "2014"
     ],
-    "correct": 3
-  },
-  {
-    "text": "Qui a créé le manga Demon Slayer ?",
-    "answers": [
-      "Koyoharu Gotouge",
-      "Gege Akutami",
-      "Yoshihiro Togashi",
-      "Tite Kubo"
-    ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
     "text": "Quel est le protagoniste principal de Demon Slayer ?",
     "answers": [
-      "Gon Freecss",
       "Tanjirō Kamado",
+      "Gon Freecss",
       "Ichigo Kurosaki",
       "Edward Elric"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a créé le manga Demon Slayer ?",
+    "answers": [
+      "Gege Akutami",
+      "Koyoharu Gotouge",
+      "Yoshihiro Togashi",
+      "Tite Kubo"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel lieu ou groupe appartient à l'univers de Demon Slayer ?",
@@ -227,7 +249,8 @@
       "les Pourfendeurs de démons",
       "l'île du Paradis"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel système de pouvoir ou élément central appartient à Demon Slayer ?",
@@ -237,7 +260,8 @@
       "le chakra",
       "les souffles"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "En quelle année la publication du manga Demon Slayer a-t-elle commencé ?",
@@ -247,27 +271,30 @@
       "1997",
       "1984"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a créé le manga Jujutsu Kaisen ?",
-    "answers": [
-      "Yoshihiro Togashi",
-      "Gege Akutami",
-      "Tite Kubo",
-      "Hiromu Arakawa"
-    ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
     "text": "Quel est le protagoniste principal de Jujutsu Kaisen ?",
     "answers": [
       "Ichigo Kurosaki",
-      "Edward Elric",
       "Yūji Itadori",
+      "Edward Elric",
       "Eren Jäger"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a créé le manga Jujutsu Kaisen ?",
+    "answers": [
+      "Yoshihiro Togashi",
+      "Tite Kubo",
+      "Gege Akutami",
+      "Hiromu Arakawa"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel lieu ou groupe appartient à l'univers de Jujutsu Kaisen ?",
@@ -277,7 +304,8 @@
       "Konoha",
       "l'école d'exorcisme de Tokyo"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel système de pouvoir ou élément central appartient à Jujutsu Kaisen ?",
@@ -287,7 +315,8 @@
       "le chakra",
       "les Fruits du Démon"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "En quelle année la publication du manga Jujutsu Kaisen a-t-elle commencé ?",
@@ -297,27 +326,30 @@
       "1997",
       "1984"
     ],
-    "correct": 1
-  },
-  {
-    "text": "Qui a créé le manga Hunter × Hunter ?",
-    "answers": [
-      "Tite Kubo",
-      "Hiromu Arakawa",
-      "Yoshihiro Togashi",
-      "Hajime Isayama"
-    ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
     "text": "Quel est le protagoniste principal de Hunter × Hunter ?",
     "answers": [
       "Edward Elric",
       "Eren Jäger",
-      "Naruto Uzumaki",
-      "Gon Freecss"
+      "Gon Freecss",
+      "Naruto Uzumaki"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a créé le manga Hunter × Hunter ?",
+    "answers": [
+      "Tite Kubo",
+      "Hiromu Arakawa",
+      "Hajime Isayama",
+      "Yoshihiro Togashi"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel lieu ou groupe appartient à l'univers de Hunter × Hunter ?",
@@ -327,7 +359,8 @@
       "Konoha",
       "Grand Line"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel système de pouvoir ou élément central appartient à Hunter × Hunter ?",
@@ -337,7 +370,8 @@
       "les Fruits du Démon",
       "le ki"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "En quelle année la publication du manga Hunter × Hunter a-t-elle commencé ?",
@@ -347,27 +381,30 @@
       "1998",
       "1984"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a créé le manga Bleach ?",
-    "answers": [
-      "Hiromu Arakawa",
-      "Hajime Isayama",
-      "Masashi Kishimoto",
-      "Tite Kubo"
-    ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
     "text": "Quel est le protagoniste principal de Bleach ?",
     "answers": [
-      "Ichigo Kurosaki",
       "Eren Jäger",
       "Naruto Uzumaki",
-      "Monkey D. Luffy"
+      "Monkey D. Luffy",
+      "Ichigo Kurosaki"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a créé le manga Bleach ?",
+    "answers": [
+      "Tite Kubo",
+      "Hiromu Arakawa",
+      "Hajime Isayama",
+      "Masashi Kishimoto"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel lieu ou groupe appartient à l'univers de Bleach ?",
@@ -377,7 +414,8 @@
       "Grand Line",
       "les Dragon Balls"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel système de pouvoir ou élément central appartient à Bleach ?",
@@ -387,7 +425,8 @@
       "les zanpakutō",
       "le ki"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "En quelle année la publication du manga Bleach a-t-elle commencé ?",
@@ -397,27 +436,30 @@
       "1984",
       "2001"
     ],
-    "correct": 3
-  },
-  {
-    "text": "Qui a créé le manga Fullmetal Alchemist ?",
-    "answers": [
-      "Hiromu Arakawa",
-      "Hajime Isayama",
-      "Masashi Kishimoto",
-      "Eiichiro Oda"
-    ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
     "text": "Quel est le protagoniste principal de Fullmetal Alchemist ?",
     "answers": [
-      "Naruto Uzumaki",
       "Edward Elric",
+      "Naruto Uzumaki",
       "Monkey D. Luffy",
       "Son Goku"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a créé le manga Fullmetal Alchemist ?",
+    "answers": [
+      "Hajime Isayama",
+      "Hiromu Arakawa",
+      "Masashi Kishimoto",
+      "Eiichiro Oda"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel lieu ou groupe appartient à l'univers de Fullmetal Alchemist ?",
@@ -427,7 +469,8 @@
       "Amestris",
       "les Dragon Balls"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel système de pouvoir ou élément central appartient à Fullmetal Alchemist ?",
@@ -437,7 +480,8 @@
       "le ki",
       "l'alchimie"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "En quelle année la publication du manga Fullmetal Alchemist a-t-elle commencé ?",
@@ -447,27 +491,30 @@
       "1997",
       "1984"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a créé le manga L'Attaque des Titans ?",
-    "answers": [
-      "Masashi Kishimoto",
-      "Hajime Isayama",
-      "Eiichiro Oda",
-      "Akira Toriyama"
-    ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
     "text": "Quel est le protagoniste principal de L'Attaque des Titans ?",
     "answers": [
       "Naruto Uzumaki",
-      "Monkey D. Luffy",
       "Eren Jäger",
+      "Monkey D. Luffy",
       "Son Goku"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a créé le manga L'Attaque des Titans ?",
+    "answers": [
+      "Masashi Kishimoto",
+      "Eiichiro Oda",
+      "Hajime Isayama",
+      "Akira Toriyama"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel lieu ou groupe appartient à l'univers de L'Attaque des Titans ?",
@@ -477,7 +524,8 @@
       "les Dragon Balls",
       "l'île du Paradis"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quelle unité militaire explore l'extérieur des murs dans L'Attaque des Titans ?",
@@ -487,7 +535,8 @@
       "les Brigades spéciales",
       "l'Akatsuki"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "En quelle année la publication du manga L'Attaque des Titans a-t-elle commencé ?",
@@ -497,6 +546,557 @@
       "1997",
       "1984"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le rêve de Naruto Uzumaki au début de la série ?",
+    "answers": [
+      "Devenir samouraï",
+      "Fonder un autre village",
+      "Devenir Hokage",
+      "Rejoindre l'Akatsuki"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui dirige initialement l'équipe 7 ?",
+    "answers": [
+      "Might Guy",
+      "Asuma Sarutobi",
+      "Iruka Umino",
+      "Kakashi Hatake"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel clan est associé au Sharingan ?",
+    "answers": [
+      "Le clan Uchiha",
+      "Le clan Hyūga",
+      "Le clan Nara",
+      "Le clan Aburame"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le véritable prénom de Pain, chef apparent de l'Akatsuki ?",
+    "answers": [
+      "Yahiko",
+      "Nagato",
+      "Konan",
+      "Obito"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui devient le sixième Hokage après la quatrième grande guerre ninja ?",
+    "answers": [
+      "Tsunade",
+      "Naruto Uzumaki",
+      "Kakashi Hatake",
+      "Shikamaru Nara"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel membre de l'équipage du Chapeau de paille est la navigatrice ?",
+    "answers": [
+      "Robin",
+      "Vivi",
+      "Perona",
+      "Nami"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle le premier grand navire de l'équipage de Luffy ?",
+    "answers": [
+      "Le Vogue Merry",
+      "Le Thousand Sunny",
+      "Le Red Force",
+      "Le Moby Dick"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel membre de l'équipage peut lire les ponéglyphes ?",
+    "answers": [
+      "Nami",
+      "Nico Robin",
+      "Franky",
+      "Brook"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de grandes formes de Haki sont généralement distinguées ?",
+    "answers": [
+      "Deux",
+      "Quatre",
+      "Trois",
+      "Cinq"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle ville Gol D. Roger a-t-il été exécuté ?",
+    "answers": [
+      "Water Seven",
+      "Marineford",
+      "Sabaody",
+      "Loguetown"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le nom saiyan de Son Goku ?",
+    "answers": [
+      "Kakarot",
+      "Bardock",
+      "Raditz",
+      "Broly"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui invente le Dragon Radar ?",
+    "answers": [
+      "Dr Brief",
+      "Bulma",
+      "Oolong",
+      "Pilaf"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "De quelle planète Piccolo est-il originaire par son peuple ?",
+    "answers": [
+      "Vegeta",
+      "Yardrat",
+      "Namek",
+      "Kanassa"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel guerrier résulte de la fusion de Goku et Vegeta par la danse de la fusion ?",
+    "answers": [
+      "Vegetto",
+      "Gotenks",
+      "Kefla",
+      "Gogeta"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Face à quel adversaire Goku devient-il Super Saiyan pour la première fois ?",
+    "answers": [
+      "Freezer",
+      "Cell",
+      "Majin Boo",
+      "Vegeta"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "De quel héros Izuku Midoriya reçoit-il le One For All ?",
+    "answers": [
+      "Endeavor",
+      "All Might",
+      "Hawks",
+      "Best Jeanist"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel double pouvoir possède Shoto Todoroki ?",
+    "answers": [
+      "L'électricité et le vent",
+      "L'eau et la terre",
+      "La glace et le feu",
+      "La lumière et l'ombre"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de super-héros choisi par Katsuki Bakugo ?",
+    "answers": [
+      "Ground Zero",
+      "Explosion King",
+      "Kacchan",
+      "Dynamight"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Alter permet au proviseur Nezu d'avoir une intelligence exceptionnelle ?",
+    "answers": [
+      "High Spec",
+      "Brain Boost",
+      "Creation",
+      "Erasure"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel rang Izuku occupe-t-il dans la lignée des détenteurs du One For All ?",
+    "answers": [
+      "Le septième",
+      "Le neuvième",
+      "Le huitième",
+      "Le dixième"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel lien unit Nezuko à Tanjirō Kamado ?",
+    "answers": [
+      "C'est sa cousine",
+      "C'est sa maîtresse d'armes",
+      "C'est sa sœur",
+      "C'est sa fille"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "De quel matériau spécial sont forgées les lames des Pourfendeurs de démons ?",
+    "answers": [
+      "De l'acier de Namek",
+      "Du minerai de chakra",
+      "De l'argent maudit",
+      "Du minerai écarlate utilisé pour les sabres Nichirin"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Pilier utilise le Souffle de l'Eau ?",
+    "answers": [
+      "Giyū Tomioka",
+      "Kyōjurō Rengoku",
+      "Sanemi Shinazugawa",
+      "Tengen Uzui"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui occupe le rang de Première Lune Supérieure ?",
+    "answers": [
+      "Dōma",
+      "Kokushibō",
+      "Akaza",
+      "Gyokko"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quel souffle originel la Danse du dieu du feu est-elle liée ?",
+    "answers": [
+      "Au Souffle de la Lune",
+      "Au Souffle de la Flamme",
+      "Au Souffle du Soleil",
+      "Au Souffle de l'Eau"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de doigts de Ryōmen Sukuna existent dans Jujutsu Kaisen ?",
+    "answers": [
+      "Dix",
+      "Douze",
+      "Vingt-quatre",
+      "Vingt"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle technique héréditaire Satoru Gojo combine-t-il avec les Six Yeux ?",
+    "answers": [
+      "L'Infini",
+      "Les Dix Ombres",
+      "La Manipulation des esprits maudits",
+      "La Projection"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle la technique qui matérialise l'espace inné d'un exorciste ?",
+    "answers": [
+      "Le voile absolu",
+      "L'extension du territoire",
+      "La barrière inversée",
+      "Le pacte céleste"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle technique héréditaire utilise Megumi Fushiguro ?",
+    "answers": [
+      "Le Boogie Woogie",
+      "La Manipulation du sang",
+      "La Technique des Dix Ombres",
+      "Le Ratio"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle entité contrôle le corps de Suguru Geto après sa mort ?",
+    "answers": [
+      "Mahito",
+      "Sukuna",
+      "Tengen",
+      "Kenjaku"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "De quelle famille d'assassins Killua est-il issu ?",
+    "answers": [
+      "La famille Zoldik",
+      "La famille Freecss",
+      "La famille Kurta",
+      "La famille Nostrade"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien de grandes catégories de Nen sont enseignées ?",
+    "answers": [
+      "Quatre",
+      "Six",
+      "Cinq",
+      "Sept"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "À quelle catégorie de Nen Gon appartient-il principalement ?",
+    "answers": [
+      "La Matérialisation",
+      "La Manipulation",
+      "Le Renforcement",
+      "La Spécialisation"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui dirige la Brigade Fantôme ?",
+    "answers": [
+      "Hisoka Morow",
+      "Feitan Portor",
+      "Illumi Zoldik",
+      "Kuroro Lucilfer"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle technique emblématique Isaac Netero invoque-t-il contre Meruem ?",
+    "answers": [
+      "Le Hyakushiki Kannon",
+      "Le Jajanken",
+      "Le Skill Hunter",
+      "Le Godspeed"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui transmet initialement des pouvoirs de Shinigami à Ichigo ?",
+    "answers": [
+      "Orihime Inoue",
+      "Rukia Kuchiki",
+      "Yoruichi Shihōin",
+      "Rangiku Matsumoto"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment se nomme la libération avancée d'un zanpakutō ?",
+    "answers": [
+      "Le shikai",
+      "Le kidō",
+      "Le bankai",
+      "Le sonido"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle le zanpakutō d'Ichigo ?",
+    "answers": [
+      "Senbonzakura",
+      "Zabimaru",
+      "Hyōrinmaru",
+      "Zangetsu"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de divisions composent traditionnellement le Gotei 13 ?",
+    "answers": [
+      "Treize",
+      "Dix",
+      "Douze",
+      "Quinze"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "De quelle division Sōsuke Aizen était-il le capitaine avant sa trahison ?",
+    "answers": [
+      "La troisième division",
+      "La cinquième division",
+      "La sixième division",
+      "La douzième division"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel principe régit les transmutations alchimiques dans Fullmetal Alchemist ?",
+    "answers": [
+      "La loi du plus fort",
+      "Le Nen",
+      "L'échange équivalent",
+      "La conservation du chakra"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quel réceptacle l'âme d'Alphonse Elric est-elle fixée ?",
+    "answers": [
+      "Une montre d'État",
+      "Une pierre philosophale",
+      "Un automate",
+      "Une armure"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel titre d'alchimiste d'État porte Edward Elric ?",
+    "answers": [
+      "L'Alchimiste Fullmetal",
+      "L'Alchimiste de Flamme",
+      "L'Alchimiste Écarlate",
+      "L'Alchimiste de Cristal"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ingrédient interdit sert à fabriquer la pierre philosophale dans l'histoire ?",
+    "answers": [
+      "Des métaux précieux",
+      "Des vies humaines",
+      "Du sang de dragon",
+      "Des fragments de météorite"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Homonculus dirige Amestris sous l'identité du Führer King Bradley ?",
+    "answers": [
+      "Pride",
+      "Greed",
+      "Wrath",
+      "Father"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel mur extérieur tombe au début de L'Attaque des Titans ?",
+    "answers": [
+      "Le mur Rose",
+      "Le mur Sina",
+      "Le mur Paradis",
+      "Le mur Maria"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel équipement permet aux soldats de se déplacer rapidement autour des Titans ?",
+    "answers": [
+      "L'équipement de manœuvre tridimensionnelle",
+      "Le harnais de chakra",
+      "Le propulseur alchimique",
+      "L'armure anti-Titan"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "À quelle famille appartient Livaï ?",
+    "answers": [
+      "La famille Reiss",
+      "La famille Ackerman",
+      "La famille Tybur",
+      "La famille Braus"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À qui appartenait la cave contenant les révélations recherchées par Eren ?",
+    "answers": [
+      "Erwin Smith",
+      "Keith Shadis",
+      "Grisha Jäger",
+      "Dot Pixis"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de Titans primordiaux peuvent être transmis entre Eldiens ?",
+    "answers": [
+      "Sept",
+      "Huit",
+      "Douze",
+      "Neuf"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
