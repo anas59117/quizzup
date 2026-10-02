@@ -58,6 +58,7 @@ export const TOPIC_COVERS = {
   harry_potter: cover('Wizarding World of Harry Potter Castle.jpg', 'center 44%'),
   marvel: cover("NYCC 2019 Cosplay of the Avengers 01.jpg", 'center 38%'),
   spider_man: cover('Cosplay of Spider-Man at the 2021 New York Comic Con (51573126766).jpg', 'center 28%'),
+  batman: cover('Cosplay of Batman at Brussels Comic Con 2022 (51969799372).jpg', 'center 28%'),
   star_wars: cover('NYCC 2023 Cosplay of Darth Vader.jpg', 'center 24%'),
   disney: cover('SleepingBeautyCastle.JPG', 'center 42%'),
   pokemon: cover('Pikachu Parade (14905092432).jpg', 'center 34%'),
