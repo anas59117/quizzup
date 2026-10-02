@@ -1,502 +1,1102 @@
 [
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on le Machu Picchu ?",
+    "text": "Dans quel pays se trouve le Machu Picchu ?",
     "answers": [
-      "le Pérou",
-      "l'Argentine et l'Uruguay",
-      "le Panama",
-      "le Guatemala"
+      "Pérou",
+      "Bolivie",
+      "Équateur",
+      "Chili"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Où situe-t-on principalement le Machu Picchu ?",
+    "text": "Quelle ville fut la capitale de l'Empire inca ?",
     "answers": [
-      "l'Argentine et l'Uruguay",
-      "le Pérou",
-      "le Panama",
-      "le Guatemala"
+      "Lima",
+      "Cusco",
+      "Arequipa",
+      "Trujillo"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on le tango ?",
+    "text": "Quel système de cordelettes nouées les Incas utilisaient-ils pour enregistrer des informations ?",
     "answers": [
-      "le Panama",
-      "le Guatemala",
-      "l'Argentine et l'Uruguay",
-      "la Bolivie"
+      "Le codex",
+      "Le kipá",
+      "Le quipu",
+      "Le tocapu"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on principalement le tango ?",
+    "text": "Quel souverain inca régnait lors de l'arrivée de Francisco Pizarro ?",
     "answers": [
-      "le Panama",
-      "le Guatemala",
-      "la Bolivie",
-      "l'Argentine et l'Uruguay"
+      "Pachacútec",
+      "Túpac Yupanqui",
+      "Manco Cápac",
+      "Atahualpa"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel pays a récupéré la pleine souveraineté sur son canal interocéanique le 31 décembre 1999 ?",
+    "text": "À quelle altitude approximative l'UNESCO situe-t-elle le Machu Picchu ?",
     "answers": [
-      "le Panama",
-      "le Guatemala",
-      "le Nicaragua",
-      "la Colombie"
+      "2 430 mètres",
+      "1 430 mètres",
+      "3 430 mètres",
+      "4 430 mètres"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "De quel pays le Panama a-t-il fait sécession en 1903 ?",
+    "text": "Sur le site de quelle ville actuelle se dressait Tenochtitlan ?",
     "answers": [
-      "le Venezuela",
-      "la Colombie",
-      "le Costa Rica",
-      "l'Équateur"
+      "Puebla",
+      "Mexico",
+      "Guadalajara",
+      "Oaxaca"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on la cité maya de Tikal ?",
+    "text": "Quel peuple fonda Tenochtitlan au XIVe siècle ?",
     "answers": [
-      "la Bolivie",
-      "l'Argentine et le Brésil",
-      "le Guatemala",
-      "le Chili"
+      "Les Toltèques",
+      "Les Zapotèques",
+      "Les Mexicas",
+      "Les Tarasques"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Où situe-t-on principalement la cité maya de Tikal ?",
+    "text": "Comment appelle-t-on les parcelles agricoles artificielles aménagées sur les lacs de la vallée de Mexico ?",
     "answers": [
-      "la Bolivie",
-      "l'Argentine et le Brésil",
-      "le Chili",
-      "le Guatemala"
+      "Les terrasses",
+      "Les haciendas",
+      "Les ejidos",
+      "Les chinampas"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on le salar d'Uyuni ?",
+    "text": "Quel dieu tutélaire des Mexicas était associé au soleil et à la guerre ?",
     "answers": [
-      "la Bolivie",
-      "l'Argentine et le Brésil",
-      "le Chili",
-      "le Nicaragua"
+      "Huitzilopochtli",
+      "Quetzalcóatl",
+      "Tlaloc",
+      "Tezcatlipoca"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on principalement le salar d'Uyuni ?",
+    "text": "Quel codex colonial décrit notamment la société mexica dans douze livres sous la direction de Bernardino de Sahagún ?",
     "answers": [
-      "l'Argentine et le Brésil",
-      "la Bolivie",
-      "le Chili",
-      "le Nicaragua"
+      "Le Codex de Dresde",
+      "Le Codex florentin",
+      "Le Codex Borgia",
+      "Le Codex de Madrid"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on les chutes d'Iguazú ?",
+    "text": "Dans quel pays se trouve l'ancienne cité maya de Tikal ?",
     "answers": [
-      "le Chili",
-      "le Nicaragua",
-      "l'Argentine et le Brésil",
-      "Cuba"
+      "Belize",
+      "Mexique",
+      "Guatemala",
+      "Honduras"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Où situe-t-on principalement les chutes d'Iguazú ?",
+    "text": "Quelle péninsule concentre de nombreux sites mayas comme Chichén Itzá et Uxmal ?",
     "answers": [
-      "le Chili",
-      "le Nicaragua",
-      "Cuba",
-      "l'Argentine et le Brésil"
+      "La Basse-Californie",
+      "La Guajira",
+      "Le Paraguaná",
+      "Le Yucatán"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on l'île de Pâques ?",
+    "text": "Sur quelle base numérique reposait principalement le système de numération maya ?",
     "answers": [
-      "le Chili",
-      "le Nicaragua",
-      "Cuba",
-      "le Mexique"
+      "La base 20",
+      "La base 10",
+      "La base 12",
+      "La base 60"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on principalement l'île de Pâques ?",
+    "text": "Quel nom les Mayas donnaient-ils à une période calendaire d'environ 20 ans ?",
     "answers": [
-      "le Nicaragua",
-      "le Chili",
-      "Cuba",
-      "le Mexique"
+      "Le kin",
+      "Le katun",
+      "Le uinal",
+      "Le baktun"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on la révolution sandiniste ?",
+    "text": "Quel livre quiché relate la création du monde et les aventures des jumeaux héros mayas ?",
     "answers": [
-      "Cuba",
-      "le Mexique",
-      "le Nicaragua",
-      "la Colombie"
+      "Le Chilam Balam",
+      "Le Rabinal Achí",
+      "Le Popol Vuh",
+      "Le Codex de Paris"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Où situe-t-on principalement la révolution sandiniste ?",
+    "text": "Quelle langue est la langue officielle du Brésil ?",
     "answers": [
-      "Cuba",
-      "le Mexique",
-      "la Colombie",
-      "le Nicaragua"
+      "L'espagnol",
+      "Le français",
+      "L'anglais",
+      "Le portugais"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on la révolution de 1959 menée par Fidel Castro ?",
+    "text": "Quelle ville est la capitale fédérale du Brésil depuis 1960 ?",
     "answers": [
-      "Cuba",
-      "le Mexique",
-      "la Colombie",
-      "l'Équateur"
+      "Brasília",
+      "Rio de Janeiro",
+      "São Paulo",
+      "Salvador"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Où situe-t-on principalement la révolution de 1959 menée par Fidel Castro ?",
+    "text": "Quel architecte conçut plusieurs bâtiments emblématiques de Brasília avec l'urbaniste Lúcio Costa ?",
     "answers": [
-      "le Mexique",
-      "Cuba",
-      "la Colombie",
-      "l'Équateur"
+      "Paulo Mendes da Rocha",
+      "Oscar Niemeyer",
+      "Lina Bo Bardi",
+      "Roberto Burle Marx"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on le mouvement zapatiste du Chiapas ?",
+    "text": "Quel traité de 1494 partagea les terres nouvellement explorées entre les couronnes portugaise et castillane ?",
     "answers": [
-      "la Colombie",
-      "l'Équateur",
-      "le Mexique",
-      "le Pérou et la Bolivie"
+      "Le traité de Madrid",
+      "Le traité d'Utrecht",
+      "Le traité de Tordesillas",
+      "Le traité de Saragosse"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on principalement le mouvement zapatiste du Chiapas ?",
+    "text": "Quel empereur proclama l'indépendance du Brésil en 1822 avant de devenir Pierre Ier ?",
     "answers": [
-      "la Colombie",
-      "l'Équateur",
-      "le Pérou et la Bolivie",
-      "le Mexique"
+      "Jean VI",
+      "Pierre II",
+      "José Bonifácio",
+      "Pedro de Alcântara"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on la ville de Carthagène des Indes ?",
+    "text": "Quelle danse est historiquement liée aux régions du Río de la Plata ?",
     "answers": [
-      "la Colombie",
-      "l'Équateur",
-      "le Pérou et la Bolivie",
-      "le Mexique"
+      "Le tango",
+      "La cueca",
+      "Le joropo",
+      "La marinera"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Où situe-t-on principalement la ville de Carthagène des Indes ?",
+    "text": "Quel estuaire sépare notamment Buenos Aires de Montevideo ?",
     "answers": [
-      "l'Équateur",
-      "la Colombie",
-      "le Pérou et la Bolivie",
-      "le Mexique"
+      "Le Río Paraná",
+      "Le Río de la Plata",
+      "Le Río Uruguay",
+      "Le Río Negro"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on les îles Galápagos ?",
+    "text": "Quel mouvement artistique argentin des années 1920 regroupait notamment Jorge Luis Borges autour de la revue Martín Fierro ?",
     "answers": [
-      "le Pérou et la Bolivie",
-      "le Mexique",
-      "l'Équateur",
-      "les Andes"
+      "Le groupe de Boedo",
+      "Le muralisme",
+      "Le groupe de Florida",
+      "Le modernisme brésilien"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on principalement les îles Galápagos ?",
+    "text": "Quel dirigeant uruguayen du XIXe siècle est surnommé le « Protecteur des peuples libres » ?",
     "answers": [
-      "le Pérou et la Bolivie",
-      "le Mexique",
-      "les Andes",
-      "l'Équateur"
+      "Fructuoso Rivera",
+      "Juan Antonio Lavalleja",
+      "Manuel Oribe",
+      "José Gervasio Artigas"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on le lac Titicaca ?",
+    "text": "Dans quel quartier de Buenos Aires se trouve la rue-musée colorée Caminito ?",
     "answers": [
-      "le Pérou et la Bolivie",
-      "le Mexique",
-      "les Andes",
-      "la Mésoamérique"
+      "La Boca",
+      "Palermo",
+      "Recoleta",
+      "San Telmo"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Où situe-t-on principalement le lac Titicaca ?",
+    "text": "Quelle île chilienne est célèbre pour ses statues monumentales appelées moaï ?",
     "answers": [
-      "le Mexique",
-      "le Pérou et la Bolivie",
-      "les Andes",
-      "la Mésoamérique"
+      "Chiloé",
+      "Rapa Nui",
+      "Robinson Crusoé",
+      "Tierra del Fuego"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on la civilisation olmèque ?",
+    "text": "Quel désert du nord du Chili compte parmi les régions les plus arides du monde ?",
     "answers": [
-      "les Andes",
-      "l'Amazonie",
-      "le Mexique",
-      "le Pérou"
+      "Le Sechura",
+      "Le Monte",
+      "L'Atacama",
+      "La Guajira"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Où situe-t-on principalement la civilisation olmèque ?",
+    "text": "Quel poète chilien reçut le prix Nobel de littérature en 1971 ?",
     "answers": [
-      "les Andes",
-      "l'Amazonie",
-      "le Pérou",
-      "le Mexique"
+      "Nicanor Parra",
+      "Vicente Huidobro",
+      "Gonzalo Rojas",
+      "Pablo Neruda"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on l'empire inca ?",
+    "text": "Quel peuple autochtone résista durablement à la conquête espagnole dans le centre-sud du Chili ?",
     "answers": [
-      "les Andes",
-      "la Mésoamérique",
-      "le Mexique central",
-      "le Chili, le Pérou et la Bolivie"
+      "Les Mapuches",
+      "Les Aymaras",
+      "Les Diaguitas",
+      "Les Selk'nam"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on principalement l'empire inca ?",
+    "text": "Quel affrontement naval de 1879, célébré au Chili, coûta la vie à Arturo Prat ?",
     "answers": [
-      "la Mésoamérique",
-      "les Andes",
-      "le Mexique central",
-      "le Chili, le Pérou et la Bolivie"
+      "La bataille d'Angamos",
+      "Le combat d'Iquique",
+      "La bataille de Chorrillos",
+      "Le combat de Punta Gruesa"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on la civilisation maya ?",
+    "text": "Quel salar bolivien est le plus vaste désert de sel du monde ?",
     "answers": [
-      "le Mexique central",
-      "le Chili, le Pérou et la Bolivie",
-      "la Mésoamérique",
-      "le Pérou"
+      "Le salar de Coipasa",
+      "Le salar d'Atacama",
+      "Le salar d'Uyuni",
+      "Le salar de Arizaro"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Où situe-t-on principalement la civilisation maya ?",
+    "text": "Quelle ville est la capitale constitutionnelle de la Bolivie ?",
     "answers": [
-      "le Mexique central",
-      "le Chili, le Pérou et la Bolivie",
-      "le Pérou",
-      "la Mésoamérique"
+      "La Paz",
+      "Santa Cruz",
+      "Cochabamba",
+      "Sucre"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on la civilisation aztèque ?",
+    "text": "Quel site précolombien proche du lac Titicaca est célèbre pour la Porte du Soleil ?",
     "answers": [
-      "le Mexique central",
-      "le Chili, le Pérou et la Bolivie",
-      "le Pérou",
-      "le Panama"
+      "Tiwanaku",
+      "Samaipata",
+      "Iskanwaya",
+      "Incallajta"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on principalement la civilisation aztèque ?",
+    "text": "Quel minerai domina l'économie coloniale de Potosí après la découverte du Cerro Rico ?",
     "answers": [
-      "le Chili, le Pérou et la Bolivie",
-      "le Mexique central",
-      "le Pérou",
-      "le Panama"
+      "L'étain",
+      "L'argent",
+      "Le cuivre",
+      "L'or"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on la guerre du Pacifique de 1879-1884 ?",
+    "text": "Quel chef aymara assiégea La Paz en 1781 ?",
     "answers": [
-      "le Paraguay",
-      "le Panama",
-      "le Chili, le Pérou et la Bolivie",
-      "le Brésil"
+      "Túpac Amaru II",
+      "Tomás Katari",
+      "Túpac Katari",
+      "Zárate Willka"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Où situe-t-on principalement la guerre du Pacifique de 1879-1884 ?",
+    "text": "À quel pays appartiennent les îles Galápagos ?",
     "answers": [
-      "le Paraguay",
-      "le Panama",
-      "le Brésil",
-      "le Chili, le Pérou et la Bolivie"
+      "Colombie",
+      "Pérou",
+      "Chili",
+      "Équateur"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on la bataille d'Ayacucho ?",
+    "text": "Quelle ville équatorienne, située près de l'équateur, est la capitale du pays ?",
     "answers": [
-      "le Pérou",
-      "le Panama",
-      "le Brésil",
-      "l'Uruguay"
+      "Quito",
+      "Guayaquil",
+      "Cuenca",
+      "Loja"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Où situe-t-on principalement la bataille d'Ayacucho ?",
+    "text": "Quel scientifique visita les Galápagos en 1835 à bord du HMS Beagle ?",
     "answers": [
-      "le Panama",
-      "le Pérou",
-      "le Brésil",
-      "l'Uruguay"
+      "Alexander von Humboldt",
+      "Charles Darwin",
+      "Alfred Russel Wallace",
+      "Louis Agassiz"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel libérateur a convoqué le congrès de Panamá en 1826 ?",
+    "text": "Quel grand centre cérémoniel précolombien de l'Équateur est associé à la culture cañari puis aux Incas ?",
+    "answers": [
+      "Cochasquí",
+      "La Tolita",
+      "Ingapirca",
+      "Agua Blanca"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel sommet équatorien est le point de la surface terrestre le plus éloigné du centre de la Terre en raison du renflement équatorial ?",
+    "answers": [
+      "Le Cotopaxi",
+      "Le Cayambe",
+      "L'Antisana",
+      "Le Chimborazo"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel écrivain colombien a reçu le prix Nobel de littérature en 1982 ?",
+    "answers": [
+      "Gabriel García Márquez",
+      "Álvaro Mutis",
+      "Jorge Isaacs",
+      "José Eustasio Rivera"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle ville fortifiée de la côte caraïbe colombienne est inscrite au patrimoine mondial ?",
+    "answers": [
+      "Barranquilla",
+      "Cartagena de Indias",
+      "Santa Marta",
+      "Riohacha"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel genre musical colombien est traditionnellement associé à l'accordéon, la caja et la guacharaca ?",
+    "answers": [
+      "La cumbia",
+      "Le bambuco",
+      "Le vallenato",
+      "Le joropo"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle civilisation précolombienne a créé de nombreux objets d'or associés à la légende de l'Eldorado dans la région de Bogotá ?",
+    "answers": [
+      "Les Taironas",
+      "Les Quimbayas",
+      "Les Zenúes",
+      "Les Muiscas"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel roman de García Márquez se déroule dans la ville fictive de Macondo ?",
+    "answers": [
+      "Cent ans de solitude",
+      "L'Amour aux temps du choléra",
+      "Chronique d'une mort annoncée",
+      "Le Général dans son labyrinthe"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel fleuve traverse le Venezuela avant de se jeter dans l'Atlantique par un vaste delta ?",
+    "answers": [
+      "Le Magdalena",
+      "L'Orénoque",
+      "L'Essequibo",
+      "Le Maroni"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel libérateur donne son nom officiel à la République bolivarienne du Venezuela ?",
+    "answers": [
+      "Antonio José de Sucre",
+      "Francisco de Miranda",
+      "Simón Bolívar",
+      "José Antonio Páez"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quel parc national vénézuélien se trouve le Salto Ángel ?",
+    "answers": [
+      "Morrocoy",
+      "Henri Pittier",
+      "Mochima",
+      "Canaima"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel instrument à quatre cordes est emblématique de la musique traditionnelle vénézuélienne ?",
+    "answers": [
+      "Le cuatro",
+      "Le charango",
+      "Le tres",
+      "Le requinto"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel précurseur de l'indépendance conçut un drapeau tricolore à l'origine de ceux du Venezuela, de la Colombie et de l'Équateur ?",
+    "answers": [
+      "Andrés Bello",
+      "Francisco de Miranda",
+      "Rafael Urdaneta",
+      "Santiago Mariño"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel océan le canal de Panama relie-t-il à l'océan Atlantique ?",
+    "answers": [
+      "L'océan Indien",
+      "L'océan Arctique",
+      "L'océan Pacifique",
+      "L'océan Austral"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année le canal de Panama fut-il officiellement inauguré ?",
+    "answers": [
+      "1903",
+      "1921",
+      "1939",
+      "1914"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel lac artificiel constitue une partie essentielle de la voie navigable du canal de Panama ?",
+    "answers": [
+      "Le lac Gatún",
+      "Le lac Bayano",
+      "Le lac Alajuela",
+      "Le lac Miraflores"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel congrès convoqué par Simón Bolívar réunit des représentants américains en 1826 ?",
+    "answers": [
+      "Le congrès d'Angostura",
+      "Le congrès de Panama",
+      "Le congrès de Cúcuta",
+      "Le congrès de Tacubaya"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle date le contrôle intégral du canal fut-il transféré au Panama conformément aux traités Torrijos-Carter ?",
+    "answers": [
+      "Le 1er janvier 1990",
+      "Le 15 août 1914",
+      "Le 31 décembre 1999",
+      "Le 7 septembre 1977"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel pays d'Amérique centrale a aboli son armée en 1948 ?",
+    "answers": [
+      "Le Guatemala",
+      "Le Honduras",
+      "Le Salvador",
+      "Le Costa Rica"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel grand lac du Nicaragua contient l'île d'Ometepe ?",
+    "answers": [
+      "Le lac Nicaragua",
+      "Le lac Managua",
+      "Le lac Atitlán",
+      "Le lac Yojoa"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle monnaie du Guatemala porte le nom de l'oiseau national ?",
+    "answers": [
+      "Le colón",
+      "Le quetzal",
+      "Le lempira",
+      "Le córdoba"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel site maya du Honduras est célèbre pour son escalier hiéroglyphique ?",
+    "answers": [
+      "Quiriguá",
+      "Caracol",
+      "Copán",
+      "Xunantunich"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel accord signé en 1996 mit officiellement fin au conflit armé interne guatémaltèque ?",
+    "answers": [
+      "Les accords d'Esquipulas II",
+      "Les accords de Chapultepec",
+      "Les accords de Contadora",
+      "Les accords de paix du Guatemala"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel général argentin traversa les Andes pour contribuer à l'indépendance du Chili ?",
     "answers": [
       "José de San Martín",
-      "Bernardo O'Higgins",
+      "Manuel Belgrano",
+      "Martín Miguel de Güemes",
+      "Bernardino Rivadavia"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel chef militaire remporta la bataille d'Ayacucho en 1824 ?",
+    "answers": [
       "Simón Bolívar",
-      "Antonio José de Sucre"
+      "Antonio José de Sucre",
+      "José de San Martín",
+      "José María Córdova"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Avec quel pays la Bolivie partage-t-elle le lac Titicaca ?",
+    "text": "Quel dirigeant est considéré comme l'un des principaux pères de l'indépendance du Chili ?",
     "answers": [
-      "le Chili",
-      "l'Équateur",
-      "l'Argentine",
-      "le Pérou"
+      "José Miguel Carrera",
+      "Diego Portales",
+      "Bernardo O'Higgins",
+      "Manuel Rodríguez"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on le carnaval de Rio ?",
+    "text": "Quel prêtre lança en 1810 l'appel connu sous le nom de Grito de Dolores au Mexique ?",
     "answers": [
-      "le Brésil",
-      "l'Uruguay",
-      "la Colombie",
-      "le Guatemala"
+      "José María Morelos",
+      "Vicente Guerrero",
+      "Ignacio Allende",
+      "Miguel Hidalgo"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on principalement le carnaval de Rio ?",
+    "text": "Quel mouvement indépendantiste brésilien de 1789 est associé à Tiradentes ?",
     "answers": [
-      "l'Uruguay",
-      "le Brésil",
-      "la Colombie",
-      "le Guatemala"
+      "L'Inconfidência Mineira",
+      "La révolution Pernambucana",
+      "La Confédération de l'Équateur",
+      "La révolte des Malês"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on le candombe ?",
+    "text": "Quelle civilisation est connue pour ses têtes colossales sculptées sur la côte du golfe du Mexique ?",
     "answers": [
-      "la Colombie",
-      "le Guatemala",
-      "l'Uruguay",
-      "le Paraguay"
+      "Les Toltèques",
+      "Les Olmèques",
+      "Les Mixtèques",
+      "Les Purépechas"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Où situe-t-on principalement le candombe ?",
+    "text": "Dans quel pays se trouvent les géoglyphes de Nazca ?",
     "answers": [
-      "la Colombie",
-      "le Guatemala",
-      "le Paraguay",
-      "l'Uruguay"
+      "Chili",
+      "Bolivie",
+      "Pérou",
+      "Équateur"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on le vallenato ?",
+    "text": "Quelle culture de la côte nord du Pérou construisit les Huacas del Sol et de la Luna ?",
     "answers": [
-      "la Colombie",
-      "le Guatemala",
-      "le Paraguay",
-      "le Pérou"
+      "La culture Nazca",
+      "La culture Chavín",
+      "La culture Paracas",
+      "La culture Moche"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on principalement le vallenato ?",
+    "text": "Quel État andin avait sa capitale à Huari, près de l'actuelle Ayacucho ?",
     "answers": [
-      "le Guatemala",
-      "la Colombie",
-      "le Paraguay",
-      "le Pérou"
+      "L'État Wari",
+      "L'État Chimú",
+      "L'État Chachapoya",
+      "L'État Lambayeque"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on le quetzal comme monnaie ?",
+    "text": "Quel centre cérémoniel péruvien, célèbre pour le Lanzón, donna son nom à une culture de l'Horizon ancien ?",
     "answers": [
-      "le Paraguay",
-      "le Pérou",
-      "le Guatemala",
-      "l'Argentine et l'Uruguay"
+      "Pachacámac",
+      "Chavín de Huántar",
+      "Caral",
+      "Kuelap"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Où situe-t-on principalement le quetzal comme monnaie ?",
+    "text": "Quel genre musical brésilien est associé à João Gilberto et Antônio Carlos Jobim ?",
     "answers": [
-      "le Paraguay",
-      "le Pérou",
-      "l'Argentine et l'Uruguay",
-      "le Guatemala"
+      "Le forró",
+      "Le sertanejo",
+      "La bossa nova",
+      "Le frevo"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "À quel pays ou espace latino-américain associe-t-on la langue guaraní officielle avec l'espagnol ?",
+    "text": "Quel style cubain, ancêtre important de la salsa, associe traditions musicales espagnoles et africaines ?",
     "answers": [
-      "le Paraguay",
-      "le Pérou",
-      "l'Argentine et l'Uruguay",
-      "le Panama"
+      "Le danzón",
+      "La rumba",
+      "Le boléro",
+      "Le son cubain"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Où situe-t-on principalement la langue guaraní officielle avec l'espagnol ?",
+    "text": "Quel genre musical et danse est né sur la côte caraïbe de la Colombie ?",
     "answers": [
-      "le Pérou",
-      "le Paraguay",
-      "l'Argentine et l'Uruguay",
-      "le Panama"
+      "La cumbia",
+      "Le merengue",
+      "La bachata",
+      "Le chachachá"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel rythme afro-uruguayen se joue traditionnellement avec trois tailles de tambours appelés tamboriles ?",
+    "answers": [
+      "La murga",
+      "Le candombe",
+      "La milonga",
+      "Le chamamé"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel compositeur brésilien écrivit les Bachianas brasileiras ?",
+    "answers": [
+      "Carlos Gomes",
+      "Ernesto Nazareth",
+      "Heitor Villa-Lobos",
+      "Camargo Guarnieri"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a écrit « Cent ans de solitude » ?",
+    "answers": [
+      "Mario Vargas Llosa",
+      "Julio Cortázar",
+      "Carlos Fuentes",
+      "Gabriel García Márquez"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel écrivain mexicain reçut le prix Nobel de littérature en 1990 ?",
+    "answers": [
+      "Octavio Paz",
+      "Carlos Fuentes",
+      "Juan Rulfo",
+      "José Emilio Pacheco"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel roman de Juan Rulfo met en scène le village fantôme de Comala ?",
+    "answers": [
+      "La Mort d'Artemio Cruz",
+      "Pedro Páramo",
+      "Marelle",
+      "Moi, le Suprême"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel auteur argentin a publié les recueils « Fictions » et « L'Aleph » ?",
+    "answers": [
+      "Ernesto Sabato",
+      "Adolfo Bioy Casares",
+      "Jorge Luis Borges",
+      "Leopoldo Marechal"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel écrivain guatémaltèque, auteur de « Monsieur le Président », reçut le Nobel de littérature en 1967 ?",
+    "answers": [
+      "Augusto Monterroso",
+      "Luis Cardoza y Aragón",
+      "Rodrigo Rey Rosa",
+      "Miguel Ángel Asturias"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel pays le guaraní est-il langue officielle avec l'espagnol ?",
+    "answers": [
+      "Paraguay",
+      "Uruguay",
+      "Argentine",
+      "Bolivie"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle langue autochtone fut largement utilisée dans l'Empire inca et reste parlée dans les Andes ?",
+    "answers": [
+      "Le nahuatl",
+      "Le quechua",
+      "Le guaraní",
+      "Le mapudungun"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle langue autochtone du Mexique descend de la langue des Mexicas ?",
+    "answers": [
+      "Le maya yucatèque",
+      "Le mixtèque",
+      "Le nahuatl",
+      "Le zapotèque"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment appelle-t-on la langue du peuple mapuche ?",
+    "answers": [
+      "L'aymara",
+      "Le kichwa",
+      "Le wayuunaiki",
+      "Le mapudungun"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle langue créole à base lexicale française est officielle en Haïti avec le français ?",
+    "answers": [
+      "Le créole haïtien",
+      "Le papiamento",
+      "Le garifuna",
+      "Le sranan tongo"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le plus haut sommet des Andes ?",
+    "answers": [
+      "L'Ojos del Salado",
+      "L'Aconcagua",
+      "Le Huascarán",
+      "Le Chimborazo"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Entre quels deux pays se trouvent les chutes d'Iguazú ?",
+    "answers": [
+      "Le Brésil et le Paraguay",
+      "L'Argentine et le Paraguay",
+      "L'Argentine et le Brésil",
+      "La Bolivie et le Brésil"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel vaste milieu humide s'étend surtout au Brésil, mais aussi en Bolivie et au Paraguay ?",
+    "answers": [
+      "Le Gran Chaco",
+      "Les Llanos",
+      "La Pampa",
+      "Le Pantanal"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel lac navigable de haute altitude est partagé par le Pérou et la Bolivie ?",
+    "answers": [
+      "Le lac Titicaca",
+      "Le lac Poopó",
+      "Le lac Junín",
+      "Le lac Maracaibo"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel courant océanique froid longe la côte pacifique du Pérou et du Chili ?",
+    "answers": [
+      "Le courant du Brésil",
+      "Le courant de Humboldt",
+      "Le courant des Malouines",
+      "Le courant des Guyanes"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle infusion, très populaire dans le Cône Sud, se prépare avec les feuilles d'Ilex paraguariensis ?",
+    "answers": [
+      "Le tereré de coca",
+      "Le guaraná",
+      "Le maté",
+      "Le café de olla"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle céréale originaire de Mésoamérique est au cœur de la tortilla traditionnelle ?",
+    "answers": [
+      "Le quinoa",
+      "Le manioc",
+      "L'amarante",
+      "Le maïs"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel tubercule domestiqué dans les Andes a été diffusé mondialement après le XVIe siècle ?",
+    "answers": [
+      "La pomme de terre",
+      "La patate douce",
+      "Le taro",
+      "L'igname"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel produit tiré des graines de Theobroma cacao était consommé en boisson en Mésoamérique précolombienne ?",
+    "answers": [
+      "Le café",
+      "Le cacao",
+      "Le maté",
+      "La vanille"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel plat péruvien associe traditionnellement poisson cru, agrumes, piment et oignon ?",
+    "answers": [
+      "Le tiradito de bœuf",
+      "La causa",
+      "Le ceviche",
+      "L'anticucho"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel pays des Caraïbes devint indépendant en 1804 après une révolution d'esclaves ?",
+    "answers": [
+      "Cuba",
+      "La République dominicaine",
+      "La Jamaïque",
+      "Haïti"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel révolutionnaire est une figure majeure de la révolution haïtienne avant l'indépendance ?",
+    "answers": [
+      "Toussaint Louverture",
+      "Jean-Jacques Dessalines",
+      "Henri Christophe",
+      "Alexandre Pétion"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle île est partagée par Haïti et la République dominicaine ?",
+    "answers": [
+      "Cuba",
+      "Hispaniola",
+      "Porto Rico",
+      "La Jamaïque"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel site brésilien conserve les vestiges d'une mission jésuite-guarani classée par l'UNESCO ?",
+    "answers": [
+      "Ouro Preto",
+      "Olinda",
+      "São Miguel das Missões",
+      "Congonhas"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel vaste réseau routier andin de l'Empire inca est connu sous le nom de Qhapaq Ñan ?",
+    "answers": [
+      "La route royale maya",
+      "La voie de l'Inca côtier uniquement",
+      "Le réseau postal colonial",
+      "Le chemin principal andin"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
