@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Quel architecte associe-t-on à la Sagrada Família ?",
+    "text": "Dans quelle ville se trouve la tour Eiffel ?",
     "answers": [
-      "Antoni Gaudí",
-      "Le Corbusier",
-      "Frank Lloyd Wright",
-      "Frank Gehry"
+      "Paris",
+      "Lyon",
+      "Bruxelles",
+      "Genève"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Qui a principalement conçu la Sagrada Família ?",
-    "answers": [
-      "Le Corbusier",
-      "Antoni Gaudí",
-      "Frank Lloyd Wright",
-      "Frank Gehry"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel architecte associe-t-on à la villa Savoye ?",
-    "answers": [
-      "Frank Lloyd Wright",
-      "Frank Gehry",
-      "Le Corbusier",
-      "Jørn Utzon"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a principalement conçu la villa Savoye ?",
-    "answers": [
-      "Frank Lloyd Wright",
-      "Frank Gehry",
-      "Jørn Utzon",
-      "Le Corbusier"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel architecte associe-t-on à Fallingwater ?",
-    "answers": [
-      "Frank Lloyd Wright",
-      "Frank Gehry",
-      "Jørn Utzon",
-      "Ieoh Ming Pei"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a principalement conçu Fallingwater ?",
-    "answers": [
-      "Frank Gehry",
-      "Frank Lloyd Wright",
-      "Jørn Utzon",
-      "Ieoh Ming Pei"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel architecte associe-t-on au musée Guggenheim de Bilbao ?",
-    "answers": [
-      "Jørn Utzon",
-      "Ieoh Ming Pei",
-      "Frank Gehry",
-      "Renzo Piano et Richard Rogers"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a principalement conçu le musée Guggenheim de Bilbao ?",
-    "answers": [
-      "Jørn Utzon",
-      "Ieoh Ming Pei",
-      "Renzo Piano et Richard Rogers",
-      "Frank Gehry"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel architecte associe-t-on à l'opéra de Sydney ?",
-    "answers": [
-      "Jørn Utzon",
-      "Ieoh Ming Pei",
-      "Renzo Piano et Richard Rogers",
-      "Filippo Brunelleschi"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a principalement conçu l'opéra de Sydney ?",
-    "answers": [
-      "Ieoh Ming Pei",
-      "Jørn Utzon",
-      "Renzo Piano et Richard Rogers",
-      "Filippo Brunelleschi"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel architecte associe-t-on à la pyramide du Louvre ?",
-    "answers": [
-      "Renzo Piano et Richard Rogers",
-      "Filippo Brunelleschi",
-      "Ieoh Ming Pei",
-      "Michel-Ange, Carlo Maderno et Le Bernin"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a principalement conçu la pyramide du Louvre ?",
-    "answers": [
-      "Renzo Piano et Richard Rogers",
-      "Filippo Brunelleschi",
-      "Michel-Ange, Carlo Maderno et Le Bernin",
-      "Ieoh Ming Pei"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel architecte associe-t-on au Centre Pompidou ?",
-    "answers": [
-      "Renzo Piano et Richard Rogers",
-      "Filippo Brunelleschi",
-      "Michel-Ange, Carlo Maderno et Le Bernin",
-      "Charles Barry et Augustus Pugin"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a principalement conçu le Centre Pompidou ?",
-    "answers": [
-      "Filippo Brunelleschi",
-      "Renzo Piano et Richard Rogers",
-      "Michel-Ange, Carlo Maderno et Le Bernin",
-      "Charles Barry et Augustus Pugin"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel architecte associe-t-on à la coupole de Florence ?",
-    "answers": [
-      "Michel-Ange, Carlo Maderno et Le Bernin",
-      "Charles Barry et Augustus Pugin",
-      "Filippo Brunelleschi",
-      "Gustave Eiffel"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a principalement conçu la coupole de Florence ?",
-    "answers": [
-      "Michel-Ange, Carlo Maderno et Le Bernin",
-      "Charles Barry et Augustus Pugin",
-      "Gustave Eiffel",
-      "Filippo Brunelleschi"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel architecte associe-t-on à la basilique Saint-Pierre de Rome ?",
-    "answers": [
-      "Michel-Ange, Carlo Maderno et Le Bernin",
-      "Charles Barry et Augustus Pugin",
-      "Gustave Eiffel",
-      "William Van Alen"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a principalement conçu la basilique Saint-Pierre de Rome ?",
-    "answers": [
-      "Charles Barry et Augustus Pugin",
-      "Michel-Ange, Carlo Maderno et Le Bernin",
-      "Gustave Eiffel",
-      "William Van Alen"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel architecte associe-t-on au palais de Westminster néogothique ?",
-    "answers": [
-      "Gustave Eiffel",
-      "William Van Alen",
-      "Charles Barry et Augustus Pugin",
-      "Ludwig Mies van der Rohe"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a principalement conçu le palais de Westminster néogothique ?",
-    "answers": [
-      "Gustave Eiffel",
-      "William Van Alen",
-      "Ludwig Mies van der Rohe",
-      "Charles Barry et Augustus Pugin"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel architecte associe-t-on à la tour Eiffel ?",
-    "answers": [
-      "Gustave Eiffel",
-      "William Van Alen",
-      "Ludwig Mies van der Rohe",
-      "Antoni Gaudí"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a principalement conçu la tour Eiffel ?",
-    "answers": [
-      "William Van Alen",
-      "Gustave Eiffel",
-      "Ludwig Mies van der Rohe",
-      "Antoni Gaudí"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel architecte associe-t-on au Chrysler Building ?",
-    "answers": [
-      "Ludwig Mies van der Rohe",
-      "Antoni Gaudí",
-      "William Van Alen",
-      "Walter Gropius"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a principalement conçu le Chrysler Building ?",
-    "answers": [
-      "Ludwig Mies van der Rohe",
-      "Antoni Gaudí",
-      "Walter Gropius",
-      "William Van Alen"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel architecte associe-t-on au Seagram Building ?",
-    "answers": [
-      "Ludwig Mies van der Rohe",
-      "Antoni Gaudí",
-      "Walter Gropius",
-      "Jacques-Germain Soufflot"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a principalement conçu le Seagram Building ?",
-    "answers": [
-      "Antoni Gaudí",
-      "Ludwig Mies van der Rohe",
-      "Walter Gropius",
-      "Jacques-Germain Soufflot"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel architecte associe-t-on à la Casa Milà ?",
-    "answers": [
-      "Walter Gropius",
-      "Jacques-Germain Soufflot",
-      "Antoni Gaudí",
-      "Oscar Niemeyer"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a principalement conçu la Casa Milà ?",
-    "answers": [
-      "Walter Gropius",
-      "Jacques-Germain Soufflot",
-      "Oscar Niemeyer",
-      "Antoni Gaudí"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel architecte associe-t-on au Bauhaus de Dessau ?",
-    "answers": [
-      "Walter Gropius",
-      "Jacques-Germain Soufflot",
-      "Oscar Niemeyer",
-      "Jean Nouvel"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a principalement conçu le Bauhaus de Dessau ?",
-    "answers": [
-      "Jacques-Germain Soufflot",
-      "Walter Gropius",
-      "Oscar Niemeyer",
-      "Jean Nouvel"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel architecte associe-t-on au Panthéon de Paris ?",
-    "answers": [
-      "Oscar Niemeyer",
-      "Jean Nouvel",
-      "Jacques-Germain Soufflot",
-      "Adrian Smith"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a principalement conçu le Panthéon de Paris ?",
-    "answers": [
-      "Oscar Niemeyer",
-      "Jean Nouvel",
-      "Adrian Smith",
-      "Jacques-Germain Soufflot"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel architecte associe-t-on à la cathédrale de Brasilia ?",
-    "answers": [
-      "Oscar Niemeyer",
-      "Jean Nouvel",
-      "Adrian Smith",
-      "Herzog & de Meuron"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a principalement conçu la cathédrale de Brasilia ?",
+    "text": "Quel architecte a conçu la pyramide de verre du Louvre ?",
     "answers": [
       "Jean Nouvel",
-      "Oscar Niemeyer",
-      "Adrian Smith",
-      "Herzog & de Meuron"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel architecte associe-t-on au Louvre Abu Dhabi ?",
-    "answers": [
-      "Adrian Smith",
-      "Herzog & de Meuron",
-      "Jean Nouvel",
-      "Ieoh Ming Pei"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a principalement conçu le Louvre Abu Dhabi ?",
-    "answers": [
-      "Adrian Smith",
-      "Herzog & de Meuron",
       "Ieoh Ming Pei",
-      "Jean Nouvel"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel architecte associe-t-on au Burj Khalifa ?",
-    "answers": [
-      "Adrian Smith",
-      "Herzog & de Meuron",
-      "Ieoh Ming Pei",
+      "Renzo Piano",
       "Norman Foster"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Qui a principalement conçu le Burj Khalifa ?",
+    "text": "Quel duo a remporté le concours du Centre Pompidou avec Gianfranco Franchini ?",
     "answers": [
-      "Herzog & de Meuron",
-      "Adrian Smith",
-      "Ieoh Ming Pei",
-      "Norman Foster"
+      "Jacques Herzog et Pierre de Meuron",
+      "Charles et Ray Eames",
+      "Renzo Piano et Richard Rogers",
+      "Anne Lacaton et Jean-Philippe Vassal"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel architecte associe-t-on à la Philharmonie de l'Elbe ?",
+    "text": "Quel architecte a conçu le Panthéon de Paris à l'origine comme église Sainte-Geneviève ?",
     "answers": [
-      "Ieoh Ming Pei",
-      "Norman Foster",
-      "Herzog & de Meuron",
-      "Le Corbusier"
+      "Ange-Jacques Gabriel",
+      "Claude Perrault",
+      "Eugène Viollet-le-Duc",
+      "Jacques-Germain Soufflot"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Qui a principalement conçu la Philharmonie de l'Elbe ?",
+    "text": "Quels ingénieurs de l'entreprise Eiffel ont établi le premier projet de la tour Eiffel ?",
     "answers": [
-      "Ieoh Ming Pei",
-      "Norman Foster",
-      "Le Corbusier",
-      "Herzog & de Meuron"
+      "Maurice Koechlin et Émile Nouguier",
+      "Gustave Eiffel et Eugène Freyssinet",
+      "Armand Considère et Robert Maillart",
+      "Jean Résal et Paul Séjourné"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel architecte associe-t-on à la National Gallery of Art, aile Est ?",
+    "text": "À quel architecte associe-t-on principalement la Sagrada Família ?",
     "answers": [
-      "Ieoh Ming Pei",
-      "Norman Foster",
-      "Le Corbusier",
-      "Daniel Libeskind"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a principalement conçu la National Gallery of Art, aile Est ?",
-    "answers": [
-      "Norman Foster",
-      "Ieoh Ming Pei",
-      "Le Corbusier",
-      "Daniel Libeskind"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel architecte associe-t-on au dôme du Reichstag rénové ?",
-    "answers": [
-      "Le Corbusier",
-      "Daniel Libeskind",
-      "Norman Foster",
-      "Gerrit Rietveld"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a principalement conçu le dôme du Reichstag rénové ?",
-    "answers": [
-      "Le Corbusier",
-      "Daniel Libeskind",
-      "Gerrit Rietveld",
-      "Norman Foster"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel architecte associe-t-on à la chapelle Notre-Dame-du-Haut ?",
-    "answers": [
-      "Le Corbusier",
-      "Daniel Libeskind",
-      "Gerrit Rietveld",
-      "Antoni Gaudí"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a principalement conçu la chapelle Notre-Dame-du-Haut ?",
-    "answers": [
-      "Daniel Libeskind",
-      "Le Corbusier",
-      "Gerrit Rietveld",
-      "Antoni Gaudí"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel architecte associe-t-on au musée juif de Berlin ?",
-    "answers": [
-      "Gerrit Rietveld",
+      "Lluís Domènech i Montaner",
       "Antoni Gaudí",
+      "Santiago Calatrava",
+      "Rafael Moneo"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel édifice barcelonais de Gaudí est surnommé La Pedrera ?",
+    "answers": [
+      "La Casa Batlló",
+      "Le palais Güell",
+      "La Casa Milà",
+      "La Casa Vicens"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel bâtiment de Gaudí possède une façade souvent comparée à des os et des écailles ?",
+    "answers": [
+      "La Casa Calvet",
+      "La Casa Amatller",
+      "La Casa Lleó Morera",
+      "La Casa Batlló"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel parc de Barcelone aménagé par Gaudí devait initialement être une cité-jardin ?",
+    "answers": [
+      "Le parc Güell",
+      "Le parc de la Ciutadella",
+      "Le parc de Montjuïc",
+      "Le parc del Laberint"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel commanditaire industriel a donné son nom à plusieurs œuvres de Gaudí ?",
+    "answers": [
+      "Pere Milà",
+      "Eusebi Güell",
+      "Josep Batlló",
+      "Manuel Vicens"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle villa de Le Corbusier se trouve à Poissy ?",
+    "answers": [
+      "La villa Mairea",
+      "La villa Tugendhat",
+      "La villa Savoye",
+      "La villa E-1027"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle chapelle de Le Corbusier domine la commune de Ronchamp ?",
+    "answers": [
+      "Notre-Dame-de-la-Garde",
+      "Sainte-Marie de La Tourette",
+      "Notre-Dame du Raincy",
+      "Notre-Dame-du-Haut"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel système de proportions Le Corbusier fonda-t-il sur le corps humain et le nombre d'or ?",
+    "answers": [
+      "Le Modulor",
+      "Le Baukasten",
+      "Le Dom-ino",
+      "Le Tracé régulateur gothique"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle ville indienne Le Corbusier conçut-il notamment le complexe du Capitole ?",
+    "answers": [
+      "Jaipur",
+      "Chandigarh",
+      "Ahmedabad",
+      "New Delhi"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel principe de Le Corbusier élève le bâtiment sur des poteaux libérant le sol ?",
+    "answers": [
+      "Le mur-rideau",
+      "La voûte catalane",
+      "Les pilotis",
+      "Le pan de bois"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle maison de Frank Lloyd Wright est construite au-dessus d'une cascade en Pennsylvanie ?",
+    "answers": [
+      "Robie House",
+      "Jacobs House",
+      "Hollyhock House",
+      "Fallingwater"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel musée new-yorkais en spirale fut conçu par Frank Lloyd Wright ?",
+    "answers": [
+      "Le musée Solomon R. Guggenheim",
+      "Le Whitney Museum",
+      "Le New Museum",
+      "Le Museum of Modern Art"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "À quel courant résidentiel Frank Lloyd Wright est-il associé au début du XXe siècle ?",
+    "answers": [
+      "Le style Beaux-Arts",
+      "Le style Prairie",
+      "Le brutalisme",
+      "Le métabolisme"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel était le nom de la résidence-atelier de Frank Lloyd Wright dans le Wisconsin ?",
+    "answers": [
+      "Farnsworth",
+      "Vanna Venturi",
+      "Taliesin",
+      "Kings Road"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle notion décrit le mieux l'ambition de Frank Lloyd Wright d'accorder bâtiment et site ?",
+    "answers": [
+      "L'architecture parlante",
+      "Le rationalisme structurel",
+      "L'éclectisme historiciste",
+      "L'architecture organique"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui fonda l'école du Bauhaus à Weimar en 1919 ?",
+    "answers": [
+      "Walter Gropius",
+      "Ludwig Mies van der Rohe",
+      "Hannes Meyer",
+      "Marcel Breuer"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quelle ville se trouve le célèbre bâtiment du Bauhaus conçu par Walter Gropius ?",
+    "answers": [
+      "Cologne",
+      "Dessau",
+      "Stuttgart",
+      "Munich"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel architecte conçut le pavillon allemand de l'Exposition de Barcelone de 1929 ?",
+    "answers": [
+      "Walter Gropius",
+      "Erich Mendelsohn",
+      "Ludwig Mies van der Rohe",
+      "Hans Scharoun"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle chaise en tubes d'acier Marcel Breuer baptisa-t-il d'après Wassily Kandinsky ?",
+    "answers": [
+      "La chaise Zig-Zag",
+      "La chaise Panton",
+      "La chaise Tulip",
+      "La chaise Wassily"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel directeur du Bauhaus succéda à Hannes Meyer en 1930 ?",
+    "answers": [
+      "Ludwig Mies van der Rohe",
+      "Walter Gropius",
+      "László Moholy-Nagy",
+      "Josef Albers"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se trouve l'opéra aux célèbres coques blanches conçu par Jørn Utzon ?",
+    "answers": [
+      "Melbourne",
+      "Sydney",
+      "Auckland",
+      "Perth"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Sur quel promontoire l'Opéra de Sydney est-il construit ?",
+    "answers": [
+      "Mrs Macquarie's Point",
+      "Barangaroo",
+      "Bennelong Point",
+      "Darling Point"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel ingénieur et sa société collaborèrent à la structure de l'Opéra de Sydney ?",
+    "answers": [
+      "Pier Luigi Nervi",
+      "Félix Candela",
+      "Eduardo Torroja",
+      "Ove Arup"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "De quelle forme géométrique commune furent finalement dérivées les coques de l'Opéra de Sydney ?",
+    "answers": [
+      "Une sphère",
+      "Un paraboloïde hyperbolique",
+      "Un cône",
+      "Un tore"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En quelle année l'Opéra de Sydney a-t-il été inscrit au patrimoine mondial de l'UNESCO ?",
+    "answers": [
+      "1997",
+      "2007",
+      "2012",
+      "1988"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel architecte mit au point la coupole de Santa Maria del Fiore à Florence ?",
+    "answers": [
+      "Leon Battista Alberti",
+      "Donato Bramante",
+      "Filippo Brunelleschi",
+      "Andrea Palladio"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel architecte reprit la conception de la coupole de la basilique Saint-Pierre au XVIe siècle ?",
+    "answers": [
+      "Raphaël",
+      "Gian Lorenzo Bernini",
+      "Carlo Maderno",
+      "Michel-Ange"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui conçut la façade et prolongea la nef de la basilique Saint-Pierre au début du XVIIe siècle ?",
+    "answers": [
+      "Carlo Maderno",
+      "Giacomo della Porta",
+      "Francesco Borromini",
+      "Baldassarre Peruzzi"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel architecte dessina la place Saint-Pierre et ses colonnades ?",
+    "answers": [
+      "Donato Bramante",
+      "Gian Lorenzo Bernini",
+      "Michel-Ange",
+      "Carlo Fontana"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel palais florentin présente une façade de Leon Battista Alberti pour la famille Rucellai ?",
+    "answers": [
+      "Le palais Pitti",
+      "Le palais Vecchio",
+      "Le palais Rucellai",
+      "Le palais Medici Riccardi"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel élément extérieur transmet la poussée d'une voûte gothique vers un contrefort ?",
+    "answers": [
+      "Le linteau",
+      "Le fronton",
+      "La corniche",
+      "L'arc-boutant"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel type d'arc caractérise couramment l'architecture gothique ?",
+    "answers": [
+      "L'arc brisé",
+      "L'arc en plein cintre",
+      "L'arc outrepassé",
+      "L'arc rampant"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel dispositif forme l'ossature d'une voûte gothique ?",
+    "answers": [
+      "La coupole sur pendentifs",
+      "La croisée d'ogives",
+      "La voûte en berceau",
+      "Le plafond à caissons"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle cathédrale française est célèbre pour son vaste ensemble de vitraux médiévaux bleus ?",
+    "answers": [
+      "La cathédrale d'Albi",
+      "La cathédrale d'Ajaccio",
+      "La cathédrale de Chartres",
+      "La cathédrale de Marseille"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle chapelle parisienne fut édifiée par Louis IX pour abriter des reliques de la Passion ?",
+    "answers": [
+      "La chapelle Expiatoire",
+      "La chapelle de la Sorbonne",
+      "La chapelle du Val-de-Grâce",
+      "La Sainte-Chapelle"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur quelle acropole se trouve le Parthénon ?",
+    "answers": [
+      "L'Acropole d'Athènes",
+      "L'Acropole de Lindos",
+      "L'Acropole de Rhodes",
+      "L'Acropole de Pergame"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quels architectes antiques sont traditionnellement associés au Parthénon ?",
+    "answers": [
+      "Anthemios et Isidore",
+      "Ictinos et Callicratès",
+      "Vitruve et Apollodore",
+      "Mnésiclès et Hippodamos"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle ouverture circulaire éclaire le Panthéon de Rome au sommet de sa coupole ?",
+    "answers": [
+      "Le clerestory",
+      "La rosace",
+      "L'oculus",
+      "Le lanternon"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel type d'édifice romain est le Colisée ?",
+    "answers": [
+      "Un cirque",
+      "Une basilique",
+      "Un odéon",
+      "Un amphithéâtre"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quels savants-architectes conçurent Sainte-Sophie de Constantinople pour Justinien ?",
+    "answers": [
+      "Anthémios de Tralles et Isidore de Milet",
+      "Ictinos et Callicratès",
+      "Sénodès et Apollodore",
+      "Vitruve et Frontin"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se trouve le palais de l'Alhambra ?",
+    "answers": [
+      "Séville",
+      "Grenade",
+      "Cordoue",
+      "Tolède"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel édifice de Cordoue conserve une vaste salle de prière à arcs bicolores ?",
+    "answers": [
+      "L'Alcázar de Séville",
+      "La Giralda",
+      "La Grande Mosquée-cathédrale",
+      "Le palais de l'Aljaferia"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment nomme-t-on les décors en alvéoles superposées fréquents dans l'architecture islamique ?",
+    "answers": [
+      "Les modillons",
+      "Les métopes",
+      "Les triglyphes",
+      "Les muqarnas"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle tour sert traditionnellement à l'appel à la prière dans une mosquée ?",
+    "answers": [
+      "Le minaret",
+      "Le campanile",
+      "Le beffroi",
+      "Le donjon"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel jardin clos quadripartite d'origine persane structure notamment le site du Taj Mahal ?",
+    "answers": [
+      "Le cloître",
+      "Le chahar bagh",
+      "Le hortus conclusus",
+      "Le jardin à l'anglaise"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel architecte conçut le Chrysler Building à New York ?",
+    "answers": [
+      "Raymond Hood",
+      "Cass Gilbert",
+      "William Van Alen",
+      "Daniel Burnham"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle agence conçut l'Empire State Building ?",
+    "answers": [
+      "Skidmore, Owings & Merrill",
+      "McKim, Mead & White",
+      "Harrison & Abramovitz",
+      "Shreve, Lamb & Harmon"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quels architectes signèrent le Seagram Building de New York ?",
+    "answers": [
+      "Ludwig Mies van der Rohe et Philip Johnson",
+      "Walter Gropius et Marcel Breuer",
+      "Eero Saarinen et Kevin Roche",
+      "Gordon Bunshaft et Natalie de Blois"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel architecte est associé au Flatiron Building de New York ?",
+    "answers": [
+      "Louis Sullivan",
+      "Daniel Burnham",
+      "Henry Hobson Richardson",
+      "Bertram Goodhue"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel système structurel a permis aux gratte-ciel de s'élever bien au-delà des murs porteurs en maçonnerie ?",
+    "answers": [
+      "La charpente à ferme latine",
+      "La voûte d'arêtes",
+      "L'ossature métallique",
+      "Le mur en pisé"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel architecte a conçu le musée Guggenheim de Bilbao ?",
+    "answers": [
+      "Jean Nouvel",
       "Daniel Libeskind",
-      "Le Corbusier"
+      "Rem Koolhaas",
+      "Frank Gehry"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Qui a principalement conçu le musée juif de Berlin ?",
+    "text": "Quel matériau métallique couvre largement les volumes courbes du Guggenheim Bilbao ?",
     "answers": [
-      "Gerrit Rietveld",
-      "Antoni Gaudí",
-      "Le Corbusier",
-      "Daniel Libeskind"
+      "Le titane",
+      "Le cuivre",
+      "Le zinc",
+      "L'aluminium anodisé"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel architecte associe-t-on à la maison Schröder ?",
+    "text": "Quel architecte a conçu le Musée juif de Berlin ?",
     "answers": [
-      "Gerrit Rietveld",
-      "Antoni Gaudí",
-      "Le Corbusier",
-      "Frank Lloyd Wright"
+      "Peter Eisenman",
+      "Daniel Libeskind",
+      "Bernard Tschumi",
+      "Coop Himmelb(l)au"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Qui a principalement conçu la maison Schröder ?",
+    "text": "Quel architecte a conçu le Louvre Abu Dhabi et sa grande coupole ajourée ?",
     "answers": [
-      "Antoni Gaudí",
-      "Gerrit Rietveld",
-      "Le Corbusier",
-      "Frank Lloyd Wright"
+      "Tadao Ando",
+      "Shigeru Ban",
+      "Jean Nouvel",
+      "David Chipperfield"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel musée romain d'art contemporain a été conçu par Zaha Hadid ?",
+    "answers": [
+      "Le MACRO",
+      "Le MAXXI L'Aquila",
+      "Le Museo dell'Ara Pacis",
+      "Le MAXXI"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel centre culturel de Bakou aux formes fluides a été conçu par Zaha Hadid Architects ?",
+    "answers": [
+      "Le Centre Heydar Aliyev",
+      "Le Centre Pompidou-Metz",
+      "Le Barbican Centre",
+      "Le Harpa"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En 2004, quelle distinction Zaha Hadid fut-elle la première femme à recevoir ?",
+    "answers": [
+      "La médaille d'or de l'AIA",
+      "Le prix Pritzker",
+      "Le prix Aga Khan",
+      "Le prix Stirling"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel équipement des Jeux de Londres 2012 fut conçu par Zaha Hadid Architects ?",
+    "answers": [
+      "Le vélodrome de Londres",
+      "Le stade olympique",
+      "Le Centre aquatique de Londres",
+      "La Copper Box Arena"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel opéra chinois aux volumes de galets fut conçu par Zaha Hadid Architects ?",
+    "answers": [
+      "L'Opéra de Pékin",
+      "L'Opéra de Shanghai",
+      "L'Opéra de Harbin",
+      "L'Opéra de Guangzhou"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel bâtiment de Weil-am-Rhein lança la carrière construite de Zaha Hadid ?",
+    "answers": [
+      "La caserne de pompiers Vitra",
+      "Le musée du design Vitra",
+      "La maison Rietveld",
+      "Le pavillon Serpentine"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel architecte a conçu la coupole vitrée ajoutée au Reichstag de Berlin ?",
+    "answers": [
+      "Richard Rogers",
+      "Norman Foster",
+      "Nicholas Grimshaw",
+      "Michael Hopkins"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel surnom porte le 30 St Mary Axe de Londres conçu par Foster + Partners ?",
+    "answers": [
+      "The Shard",
+      "The Walkie-Talkie",
+      "The Gherkin",
+      "The Cheesegrater"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel ingénieur français conçut la structure du viaduc de Millau avec l'architecte Norman Foster ?",
+    "answers": [
+      "Eugène Freyssinet",
+      "Jean Muller",
+      "Nicolas Esquillan",
+      "Michel Virlogeux"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle tour new-yorkaise de Foster intègre un ancien immeuble de six étages à sa base ?",
+    "answers": [
+      "La Hearst Tower",
+      "La Bank of America Tower",
+      "La Bloomberg Tower",
+      "La One Vanderbilt"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel siège bancaire de Hong Kong, achevé en 1985, rend lisible sa structure extérieure ?",
+    "answers": [
+      "La Bank of China Tower",
+      "Le HSBC Main Building",
+      "Le Jardine House",
+      "Le Lippo Centre"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel architecte brésilien conçut la cathédrale de Brasília ?",
+    "answers": [
+      "Lúcio Costa",
+      "Affonso Eduardo Reidy",
+      "Oscar Niemeyer",
+      "Paulo Mendes da Rocha"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel urbaniste conçut le Plano Piloto de Brasília ?",
+    "answers": [
+      "Oscar Niemeyer",
+      "Roberto Burle Marx",
+      "Joaquim Cardozo",
+      "Lúcio Costa"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle maison-atelier de Mexico conçue par Luis Barragán est inscrite au patrimoine mondial ?",
+    "answers": [
+      "La Casa Estudio Luis Barragán",
+      "La Casa Gilardi",
+      "La Casa Prieto López",
+      "La Casa Pedregal"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle architecte conçut le MASP, musée suspendu sur l'avenue Paulista à São Paulo ?",
+    "answers": [
+      "Carmen Portinho",
+      "Lina Bo Bardi",
+      "Lota de Macedo Soares",
+      "Ruth Verde Zein"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel architecte colombien conçut les tours de logements Torres del Parque à Bogotá ?",
+    "answers": [
+      "Giancarlo Mazzanti",
+      "Simón Vélez",
+      "Rogelio Salmona",
+      "Germán Samper"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se trouve la Cité interdite ?",
+    "answers": [
+      "Nankin",
+      "Xi'an",
+      "Hangzhou",
+      "Pékin"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel architecte japonais conçut la Nakagin Capsule Tower à Tokyo ?",
+    "answers": [
+      "Kishō Kurokawa",
+      "Kenzō Tange",
+      "Tadao Ando",
+      "Fumihiko Maki"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "À quel mouvement japonais des années 1960 appartient la Nakagin Capsule Tower ?",
+    "answers": [
+      "Le sukiya-zukuri",
+      "Le métabolisme",
+      "Le brutalisme tropical",
+      "Le régionalisme critique"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel architecte a conçu le complexe Marina Bay Sands à Singapour ?",
+    "answers": [
+      "César Pelli",
+      "I. M. Pei",
+      "Moshe Safdie",
+      "Kevin Roche"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel architecte a conçu les tours Petronas de Kuala Lumpur ?",
+    "answers": [
+      "Ken Yeang",
+      "Fazlur Rahman Khan",
+      "Minoru Yamasaki",
+      "César Pelli"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment appelle-t-on une poutre ou une dalle fixée à une seule extrémité ?",
+    "answers": [
+      "Un porte-à-faux",
+      "Un tirant",
+      "Un arc-boutant",
+      "Une ferme"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel type de façade légère est suspendu devant l'ossature sans porter les planchers ?",
+    "answers": [
+      "Le mur de refend",
+      "Le mur-rideau",
+      "Le mur gouttereau",
+      "Le mur-bahut"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel matériau associe du béton et des armatures d'acier ?",
+    "answers": [
+      "Le béton cellulaire",
+      "Le pisé",
+      "Le béton armé",
+      "Le béton de chanvre"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel inventeur et architecte popularisa le dôme géodésique au XXe siècle ?",
+    "answers": [
+      "Félix Candela",
+      "Pier Luigi Nervi",
+      "Konrad Wachsmann",
+      "Buckminster Fuller"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle structure travaille principalement en traction grâce à des câbles ou des membranes ?",
+    "answers": [
+      "Une structure tendue",
+      "Une voûte clavée",
+      "Un mur poids",
+      "Une poutre treillis"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel mouvement emploie volontiers des lignes végétales et sinueuses vers 1900 ?",
+    "answers": [
+      "L'Art déco",
+      "L'Art nouveau",
+      "Le constructivisme",
+      "Le néoclassicisme"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel mouvement des années 1920-1930 privilégie géométrie, luxe et motifs stylisés ?",
+    "answers": [
+      "L'Art nouveau",
+      "Le baroque",
+      "L'Art déco",
+      "Le rococo"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel courant tire son nom du béton brut et expose souvent la structure ?",
+    "answers": [
+      "Le purisme",
+      "Le futurisme",
+      "Le néoplasticisme",
+      "Le brutalisme"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel courant réintroduit citations historiques et ironie contre l'austérité moderniste ?",
+    "answers": [
+      "Le postmodernisme",
+      "L'expressionnisme",
+      "Le fonctionnalisme",
+      "Le suprématisme"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel courant associe formes fragmentées et géométries instables chez Gehry, Hadid ou Libeskind ?",
+    "answers": [
+      "Le rationalisme",
+      "Le déconstructivisme",
+      "Le style international",
+      "Le régionalisme"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel architecte conçut la Farnsworth House dans l'Illinois ?",
+    "answers": [
+      "Philip Johnson",
+      "Richard Neutra",
+      "Ludwig Mies van der Rohe",
+      "Rudolf Schindler"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui conçut la Glass House de New Canaan ?",
+    "answers": [
+      "Ludwig Mies van der Rohe",
+      "Eero Saarinen",
+      "Craig Ellwood",
+      "Philip Johnson"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel architecte néerlandais conçut la maison Schröder à Utrecht ?",
+    "answers": [
+      "Gerrit Rietveld",
+      "J. J. P. Oud",
+      "Theo van Doesburg",
+      "Hendrik Berlage"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quel mouvement artistique la maison Schröder est-elle étroitement liée ?",
+    "answers": [
+      "Arts and Crafts",
+      "De Stijl",
+      "Sécession viennoise",
+      "École de Chicago"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel couple de designers conçut la Case Study House n° 8, dite Eames House ?",
+    "answers": [
+      "Alison et Peter Smithson",
+      "Robert Venturi et Denise Scott Brown",
+      "Charles et Ray Eames",
+      "Pierre et Charlotte Perriand"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année le prix Pritzker d'architecture a-t-il été créé ?",
+    "answers": [
+      "1969",
+      "1989",
+      "1999",
+      "1979"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui fut le premier lauréat du prix Pritzker ?",
+    "answers": [
+      "Philip Johnson",
+      "Luis Barragán",
+      "James Stirling",
+      "Kenzo Tange"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel architecte paysagiste dessina le plan de Canberra après un concours international ?",
+    "answers": [
+      "Daniel Burnham",
+      "Walter Burley Griffin",
+      "Ebenezer Howard",
+      "Frederick Law Olmsted"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel architecte dirigea le plan d'ensemble de Chandigarh et conçut son Capitole ?",
+    "answers": [
+      "Louis Kahn",
+      "B. V. Doshi",
+      "Le Corbusier",
+      "Pierre Jeanneret"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel dispositif urbain structure le Plano Piloto de Brasília conçu par Lúcio Costa ?",
+    "answers": [
+      "Une grille orthogonale uniforme",
+      "Cinq anneaux concentriques",
+      "Un réseau de canaux radiaux",
+      "Deux axes principaux qui se croisent"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
