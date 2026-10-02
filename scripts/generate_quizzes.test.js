@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { generateQuiz, createGeminiRequester, saveDraft, loadProjectEnv } = require('./generate_quizzes');
+const { generateQuiz, createGeminiRequester, saveDraft, loadProjectEnv, geminiOptionsFromEnv } = require('./generate_quizzes');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
@@ -48,6 +48,33 @@ test('uses Gemini Interactions API with search and structured JSON', async () =>
   assert.deepEqual(body.tools, [{ type: 'google_search' }]);
   assert.equal(body.response_format.mime_type, 'application/json');
   assert.equal(body.generation_config.thinking_level, 'high');
+});
+
+test('can disable search for a free-tier model', async () => {
+  let body;
+  const fakeFetch = async (_url, options) => {
+    body = JSON.parse(options.body);
+    return { ok: true, json: async () => ({ status: 'completed', steps: [
+      { type: 'model_output', content: [{ type: 'text', text: '{"questions":[]}' }] },
+    ] }) };
+  };
+  const request = createGeminiRequester({ apiKey: 'secret', model: 'gemini-3.8-flash', search: false, fetchImpl: fakeFetch });
+  await request({ theme: 'Matrix', difficulty: 'facile', count: 1, previous: [] });
+  assert.equal(body.model, 'gemini-3.8-flash');
+  assert.equal(body.tools, undefined);
+});
+
+test('reads model and search override from the environment', () => {
+  assert.deepEqual(geminiOptionsFromEnv({ GEMINI_API_KEY: 'secret', GEMINI_MODEL: 'gemini-3.8-flash', GEMINI_SEARCH: '0' }), {
+    apiKey: 'secret', model: 'gemini-3.8-flash', search: false,
+  });
+});
+
+test('explains a Gemini 402 without retrying', async () => {
+  const request = createGeminiRequester({ apiKey: 'secret', fetchImpl: async () => ({
+    ok: false, status: 402, json: async () => ({ error: { message: 'Payment required' } }),
+  }) });
+  await assert.rejects(request({ theme: 'Matrix', difficulty: 'facile', count: 1, previous: [] }), /crédits/);
 });
 
 test('saves a draft without overwriting existing work', () => {

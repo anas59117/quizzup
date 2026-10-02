@@ -63,7 +63,10 @@ function createGeminiRequester({ apiKey, model = 'gemini-3.1-pro-preview', fetch
       signal: AbortSignal.timeout(180000),
     });
     const payload = await response.json();
-    if (!response.ok) throw new Error(`Gemini HTTP ${response.status}: ${payload.error?.message || 'erreur API'}`);
+    if (!response.ok) {
+      if (response.status === 402) throw new Error('Gemini HTTP 402 : crédits prépayés insuffisants ou offre payante indisponible pour ce projet. Vérifie la facturation Google AI Studio ; ne relance pas la même requête.');
+      throw new Error(`Gemini HTTP ${response.status}: ${payload.error?.message || payload.message || 'erreur API'}`);
+    }
     let parsed;
     try { parsed = JSON.parse(outputText(payload)); }
     catch (error) { throw new Error(`Réponse Gemini non exploitable : ${error.message}`); }
@@ -107,6 +110,14 @@ function loadProjectEnv(root = path.join(__dirname, '..')) {
   process.loadEnvFile(envFile);
 }
 
+function geminiOptionsFromEnv(env) {
+  return {
+    apiKey: env.GEMINI_API_KEY,
+    model: env.GEMINI_MODEL || 'gemini-3.1-pro-preview',
+    search: env.GEMINI_SEARCH !== '0',
+  };
+}
+
 async function main(args = process.argv.slice(2)) {
   const [theme, slug] = args;
   if (!theme || !slug || args.length !== 2 || !/^[a-z0-9]+(?:[-_][a-z0-9]+)*$/.test(slug)) {
@@ -118,7 +129,7 @@ async function main(args = process.argv.slice(2)) {
     throw new Error(`Quiz déjà présent dans backend/data : ${slug}`);
   }
   loadProjectEnv();
-  const request = createGeminiRequester({ apiKey: process.env.GEMINI_API_KEY, model: process.env.GEMINI_MODEL || 'gemini-3.1-pro-preview' });
+  const request = createGeminiRequester(geminiOptionsFromEnv(process.env));
   const questions = await generateQuiz({ theme, request });
   saveDraft(destination, questions);
   console.log(`${destination}: 100 questions, cycle 1/1/2/1, réponses 25/25/25/25. Relecture humaine requise avant intégration.`);
@@ -126,4 +137,4 @@ async function main(args = process.argv.slice(2)) {
 
 if (require.main === module) main().catch((error) => { console.error(error.message); process.exitCode = 1; });
 
-module.exports = { createGeminiRequester, generateQuiz, saveDraft, loadProjectEnv, main };
+module.exports = { createGeminiRequester, generateQuiz, saveDraft, loadProjectEnv, geminiOptionsFromEnv, main };
