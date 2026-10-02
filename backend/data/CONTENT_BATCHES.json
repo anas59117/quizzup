@@ -536,9 +536,18 @@
       ]
     },
     {
+      "name": "nouveaux-quiz-100",
+      "minimumQuestions": 100,
+      "categories": [
+        "spider_man"
+      ]
+    },
+    {
       "name": "nouveaux-quiz-batman-100",
       "minimumQuestions": 100,
-      "categories": ["batman"]
+      "categories": [
+        "batman"
+      ]
     }
   ]
 }
