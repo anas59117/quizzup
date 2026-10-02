@@ -2,22 +2,24 @@
   {
     "text": "Dans quelle ville se trouve Arsenal ?",
     "answers": [
-      "Manchester",
       "Londres",
+      "Manchester",
       "Birmingham",
       "Liverpool"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle le stade d'Arsenal depuis 2006 ?",
     "answers": [
-      "L'Emirates Stadium",
       "Highbury",
+      "L'Emirates Stadium",
       "Stamford Bridge",
       "White Hart Lane"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel est le surnom d'Arsenal ?",
@@ -27,177 +29,195 @@
       "Les Gunners",
       "Les Hammers"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel est le grand rival londonien d'Arsenal dans le North London derby ?",
     "answers": [
-      "Tottenham",
       "Chelsea",
       "West Ham",
-      "Fulham"
+      "Fulham",
+      "Tottenham"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel entraîneur français a dirigé Arsenal de 1996 à 2018 ?",
     "answers": [
-      "Gérard Houllier",
       "Arsène Wenger",
+      "Gérard Houllier",
       "Rudi Garcia",
       "Claude Puel"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
     "text": "Comment a-t-on surnommé l'équipe d'Arsenal invaincue en championnat en 2003-2004 ?",
     "answers": [
-      "Les Invincibles",
       "Les Galactiques",
+      "Les Invincibles",
       "La Dream Team",
       "Les Imbattables de Londres"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Combien de matchs de Premier League Arsenal a-t-il joués sans défaite en 2003-2004 ?",
     "answers": [
       "30",
-      "38",
       "34",
+      "38",
       "49"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel attaquant français est le meilleur buteur de l'histoire d'Arsenal ?",
     "answers": [
       "Olivier Giroud",
       "Nicolas Anelka",
-      "Thierry Henry",
-      "Sylvain Wiltord"
+      "Sylvain Wiltord",
+      "Thierry Henry"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel attaquant néerlandais, surnommé « l'Iceman », a marqué l'histoire d'Arsenal ?",
     "answers": [
+      "Dennis Bergkamp",
       "Robin van Persie",
       "Marc Overmars",
-      "Dennis Bergkamp",
       "Patrick Kluivert"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel milieu français, capitaine des Invincibles, était surnommé « le Général » ?",
     "answers": [
-      "Patrick Vieira",
       "Emmanuel Petit",
+      "Patrick Vieira",
       "Robert Pirès",
       "Gilles Grimandi"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
     "text": "Quel milieu français d'Arsenal a marqué en finale de la Coupe du monde 1998 ?",
     "answers": [
-      "Emmanuel Petit",
       "Patrick Vieira",
       "Robert Pirès",
+      "Emmanuel Petit",
       "Christian Karembeu"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel ailier français a été élu joueur de l'année 2002 en Angleterre avec Arsenal ?",
     "answers": [
       "Sylvain Wiltord",
       "Thierry Henry",
-      "Robert Pirès",
-      "Patrick Vieira"
+      "Patrick Vieira",
+      "Robert Pirès"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Contre quel club Arsenal a-t-il perdu la finale de Ligue des champions 2006 ?",
     "answers": [
-      "Le Real Madrid",
       "Le FC Barcelone",
+      "Le Real Madrid",
       "L'AC Milan",
       "Liverpool"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel gardien d'Arsenal a été expulsé en finale de Ligue des champions 2006 ?",
     "answers": [
-      "Jens Lehmann",
       "David Seaman",
+      "Jens Lehmann",
       "Manuel Almunia",
       "Wojciech Szczęsny"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel entraîneur espagnol dirige Arsenal depuis 2019 ?",
+    "text": "Quel entraîneur espagnol a été nommé à la tête d'Arsenal en décembre 2019 ?",
     "answers": [
       "Unai Emery",
       "Rafael Benítez",
-      "Xabi Alonso",
-      "Mikel Arteta"
+      "Mikel Arteta",
+      "Xabi Alonso"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
     "text": "Quel entraîneur espagnol a succédé à Arsène Wenger en 2018 ?",
     "answers": [
       "Mikel Arteta",
-      "Unai Emery",
       "Rafael Benítez",
-      "Julen Lopetegui"
+      "Julen Lopetegui",
+      "Unai Emery"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel ailier anglais formé au club porte le numéro 7 d'Arsenal ?",
+    "text": "Quel ailier anglais formé à Arsenal s'est imposé en équipe première à partir de 2018 ?",
     "answers": [
-      "Raheem Sterling",
       "Bukayo Saka",
+      "Raheem Sterling",
       "Phil Foden",
       "Jack Grealish"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel milieu norvégien est le capitaine d'Arsenal ?",
+    "text": "Quel milieu norvégien a été nommé capitaine d'Arsenal en 2022 ?",
     "answers": [
       "Erling Haaland",
+      "Martin Ødegaard",
       "Sander Berge",
-      "Mohamed Elyounoussi",
-      "Martin Ødegaard"
+      "Mohamed Elyounoussi"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel défenseur français a rejoint l'équipe première d'Arsenal après des prêts en France ?",
     "answers": [
-      "William Saliba",
       "Ibrahima Konaté",
       "Jules Koundé",
+      "William Saliba",
       "Dayot Upamecano"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel milieu anglais a été acheté plus de 100 millions de livres par Arsenal en 2023 ?",
     "answers": [
-      "Declan Rice",
       "Jude Bellingham",
       "Mason Mount",
-      "Kalvin Phillips"
+      "Kalvin Phillips",
+      "Declan Rice"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
     "text": "Combien de FA Cup Arsenal a-t-il remportées, un record ?",
@@ -207,57 +227,63 @@
       "10",
       "20"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Quel attaquant français a rejoint Arsenal en 2012 et a remporté trois FA Cup avec le club ?",
     "answers": [
       "Alexandre Lacazette",
-      "Thierry Henry",
       "Olivier Giroud",
+      "Thierry Henry",
       "Louis Saha"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel attaquant gabonais a été capitaine d'Arsenal ?",
     "answers": [
       "Denis Bouanga",
       "Mario Lemina",
-      "Didier Ndong",
-      "Pierre-Emerick Aubameyang"
+      "Pierre-Emerick Aubameyang",
+      "Didier Ndong"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel attaquant français a rejoint Arsenal en 2017 en provenance de Lyon ?",
     "answers": [
       "Olivier Giroud",
-      "Alexandre Lacazette",
       "Nabil Fekir",
-      "Anthony Martial"
+      "Anthony Martial",
+      "Alexandre Lacazette"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel meneur allemand a joué à Arsenal de 2013 à 2021 ?",
     "answers": [
-      "Toni Kroos",
       "Mesut Özil",
+      "Toni Kroos",
       "Mario Götze",
       "İlkay Gündoğan"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
     "text": "Quel meneur espagnol formé au Barça est devenu capitaine d'Arsenal avant de repartir en Catalogne ?",
     "answers": [
-      "Cesc Fàbregas",
       "Xavi",
+      "Cesc Fàbregas",
       "Santi Cazorla",
       "Mikel Arteta"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quel était le stade d'Arsenal avant l'Emirates ?",
@@ -267,17 +293,19 @@
       "Highbury",
       "The Valley"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel objet figure sur l'écusson d'Arsenal ?",
     "answers": [
       "Un lion",
       "Un coq",
-      "Un canon",
-      "Un bateau"
+      "Un bateau",
+      "Un canon"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "De quel arsenal militaire le club tire-t-il son nom ?",
@@ -287,57 +315,63 @@
       "L'arsenal de Chatham",
       "L'arsenal de Douvres"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel défenseur anglais, capitaine emblématique, surnommé « Mr Arsenal », a joué toute sa carrière au club ?",
     "answers": [
-      "Tony Adams",
       "Sol Campbell",
+      "Tony Adams",
       "Martin Keown",
       "Lee Dixon"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
     "text": "Quel défenseur anglais a quitté Tottenham pour Arsenal en 2001, créant la polémique ?",
     "answers": [
       "Tony Adams",
-      "Sol Campbell",
       "Ashley Cole",
+      "Sol Campbell",
       "Martin Keown"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel gardien anglais a gardé les buts d'Arsenal dans les années 1990 ?",
     "answers": [
       "David James",
-      "David Seaman",
       "Joe Hart",
-      "Peter Shilton"
+      "Peter Shilton",
+      "David Seaman"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel ailier néerlandais a joué à Arsenal de 1997 à 2000 ?",
     "answers": [
+      "Marc Overmars",
       "Arjen Robben",
       "Robin van Persie",
-      "Glenn Helder",
-      "Marc Overmars"
+      "Glenn Helder"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel attaquant néerlandais a quitté Arsenal pour Manchester United en 2012 ?",
     "answers": [
-      "Robin van Persie",
       "Dennis Bergkamp",
+      "Robin van Persie",
       "Marc Overmars",
       "Nwankwo Kanu"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel attaquant nigérian a joué à Arsenal de 1999 à 2004 ?",
@@ -347,17 +381,19 @@
       "Nwankwo Kanu",
       "Victor Osimhen"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
     "text": "Quel attaquant brésilien, passé par Manchester City, a rejoint Arsenal en 2022 ?",
     "answers": [
       "Gabriel Martinelli",
-      "Gabriel Jesus",
       "Roberto Firmino",
-      "Richarlison"
+      "Richarlison",
+      "Gabriel Jesus"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Quel attaquant anglais a été le meilleur buteur du club avant Thierry Henry ?",
@@ -367,17 +403,19 @@
       "Teddy Sheringham",
       "Michael Owen"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel défenseur brésilien a marqué de nombreux buts de la tête pour Arsenal dans les années 2020 ?",
     "answers": [
-      "Gabriel Magalhães",
       "Marquinhos",
+      "Gabriel Magalhães",
       "David Luiz",
       "Thiago Silva"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel milieu ghanéen a joué à Arsenal de 2020 à 2025 ?",
@@ -387,61 +425,63 @@
       "Thomas Partey",
       "Kevin-Prince Boateng"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel gardien espagnol est devenu numéro un d'Arsenal en 2023 ?",
+    "text": "Quel gardien espagnol a rejoint Arsenal en prêt en 2023 avant un transfert définitif ?",
     "answers": [
-      "David Raya",
       "Kepa Arrizabalaga",
       "David de Gea",
-      "Unai Simón"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "En quelle année Arsenal a-t-il été fondé ?",
-    "answers": [
-      "1878",
-      "1899",
-      "1905",
-      "1886"
+      "Unai Simón",
+      "David Raya"
     ],
     "correct": 3,
     "difficulty": "expert"
   },
   {
+    "text": "En quelle année Arsenal a-t-il été fondé ?",
+    "answers": [
+      "1886",
+      "1878",
+      "1899",
+      "1905"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
     "text": "Sous quel nom Arsenal a-t-il été fondé ?",
     "answers": [
-      "Dial Square",
       "Newton Heath",
+      "Dial Square",
       "St. Mark's",
       "Royal Engineers"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Combien de buts Thierry Henry a-t-il marqués pour Arsenal ?",
     "answers": [
       "175",
       "300",
-      "150",
-      "228"
+      "228",
+      "150"
     ],
-    "correct": 3,
-    "difficulty": "expert"
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Combien de matchs consécutifs sans défaite Arsenal a-t-il enchaînés en championnat entre 2003 et 2004 ?",
     "answers": [
       "38",
-      "49",
       "30",
-      "60"
+      "60",
+      "49"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel club a mis fin à la série de 49 matchs sans défaite d'Arsenal ?",
@@ -458,55 +498,605 @@
     "text": "Combien de titres de champion d'Angleterre Arsenal a-t-il remportés ?",
     "answers": [
       "20",
-      "9",
       "13",
+      "9",
       "19"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle est la dernière saison où Arsenal a été champion d'Angleterre ?",
     "answers": [
       "1997-1998",
-      "2003-2004",
       "2001-2002",
+      "2003-2004",
       "2015-2016"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle coupe européenne Arsenal a-t-il remportée en 1994 ?",
     "answers": [
       "La Coupe UEFA",
-      "La Coupe des coupes",
       "La Ligue des champions",
-      "La Coupe Intertoto"
+      "La Coupe Intertoto",
+      "La Coupe des coupes"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Combien de titres Arsène Wenger a-t-il remportés en championnat avec Arsenal ?",
     "answers": [
+      "3",
       "1",
       "5",
-      "3",
       "7"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Contre quel club Arsenal a-t-il perdu la finale de la Coupe UEFA 2000 ?",
     "answers": [
       "Parme",
-      "Valence",
       "Galatasaray",
+      "Valence",
+      "Liverpool"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il affronté lors du tout premier match disputé à Highbury en 1913 ?",
+    "answers": [
+      "Notts County",
+      "Derby County",
+      "Leicester Fosse",
+      "Sheffield United"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel joueur a inscrit le premier but d'Arsenal à Highbury en 1913 ?",
+    "answers": [
+      "Charlie Buchan",
+      "Joe Shaw",
+      "Harry King",
+      "George Jobey"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club a affronté Arsenal lors du dernier match à Highbury en 2006 ?",
+    "answers": [
+      "Wigan Athletic",
+      "Everton",
+      "Aston Villa",
+      "Charlton Athletic"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a réussi un triplé lors du dernier match d'Arsenal à Highbury ?",
+    "answers": [
+      "Dennis Bergkamp",
+      "Thierry Henry",
+      "Robert Pirès",
+      "Robin van Persie"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quel joueur était consacré le match inaugural de l'Emirates Stadium en juillet 2006 ?",
+    "answers": [
+      "Tony Adams",
+      "Ian Wright",
+      "Dennis Bergkamp",
+      "Patrick Vieira"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club a été le premier adversaire d'Arsenal en compétition officielle à l'Emirates Stadium ?",
+    "answers": [
+      "Middlesbrough",
+      "Manchester City",
+      "Blackburn Rovers",
+      "Aston Villa"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel joueur a marqué le premier but d'Arsenal en compétition officielle à l'Emirates Stadium ?",
+    "answers": [
+      "Gilberto Silva",
+      "Thierry Henry",
+      "Cesc Fàbregas",
+      "Emmanuel Adebayor"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quel borough londonien se trouvent Highbury et l'Emirates Stadium ?",
+    "answers": [
+      "Camden",
+      "Islington",
+      "Haringey",
+      "Greenwich"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel secteur du sud-est de Londres Arsenal a-t-il été fondé ?",
+    "answers": [
+      "Fulham",
+      "Brixton",
+      "Woolwich",
+      "Croydon"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel était le principal stade d'Arsenal juste avant son installation à Highbury ?",
+    "answers": [
+      "Plumstead Common",
+      "L'Old Den",
+      "The Valley",
+      "Le Manor Ground"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel entraîneur a conduit Arsenal à son premier titre de champion d'Angleterre en 1931 ?",
+    "answers": [
+      "Herbert Chapman",
+      "George Allison",
+      "Tom Whittaker",
+      "Bertie Mee"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu en finale pour remporter sa première FA Cup en 1930 ?",
+    "answers": [
+      "Sheffield Wednesday",
+      "Huddersfield Town",
+      "Everton",
+      "Blackburn Rovers"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel entraîneur a réalisé le doublé championnat-FA Cup avec Arsenal en 1971 ?",
+    "answers": [
+      "Don Howe",
+      "Terry Neill",
+      "Bertie Mee",
+      "Billy Wright"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sur le terrain de quel rival Arsenal a-t-il assuré le titre de champion 1971 ?",
+    "answers": [
+      "Chelsea",
+      "West Ham",
+      "Queens Park Rangers",
+      "Tottenham"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu après prolongation en finale de la FA Cup 1971 ?",
+    "answers": [
+      "Liverpool",
+      "Leeds United",
+      "Everton",
+      "Manchester City"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a marqué le but décisif d'Arsenal en finale de la FA Cup 1971 ?",
+    "answers": [
+      "George Graham",
+      "Charlie George",
+      "John Radford",
+      "Ray Kennedy"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu 3-2 lors de la finale de la FA Cup 1979 ?",
+    "answers": [
+      "Liverpool",
+      "Ipswich Town",
+      "Manchester United",
+      "Everton"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur a marqué le but victorieux d'Arsenal à la fin de la finale de la FA Cup 1979 ?",
+    "answers": [
+      "Liam Brady",
+      "Frank Stapleton",
+      "Pat Rice",
+      "Alan Sunderland"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a inscrit le but du titre d'Arsenal à Anfield dans le temps additionnel en 1989 ?",
+    "answers": [
+      "Michael Thomas",
+      "Paul Merson",
+      "David Rocastle",
+      "Tony Adams"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur avait ouvert le score pour Arsenal à Anfield lors du match décisif de 1989 ?",
+    "answers": [
+      "Brian Marwood",
+      "Alan Smith",
+      "Kevin Richardson",
+      "Lee Dixon"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club a infligé à Arsenal son unique défaite en championnat lors de la saison 1990-1991 ?",
+    "answers": [
+      "Liverpool",
+      "Tottenham",
+      "Chelsea",
+      "Manchester United"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelles deux coupes nationales Arsenal a-t-il remportées en 1993 ?",
+    "answers": [
+      "La FA Cup et le Charity Shield",
+      "La League Cup et le Charity Shield",
+      "La FA Cup et la Full Members' Cup",
+      "La FA Cup et la League Cup"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel défenseur a marqué de la tête le but décisif d'Arsenal en finale rejouée de la FA Cup 1993 ?",
+    "answers": [
+      "Andy Linighan",
+      "Steve Bould",
+      "Martin Keown",
+      "Nigel Winterburn"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu en finale de la Coupe des coupes 1994 ?",
+    "answers": [
+      "Sampdoria",
+      "Parme",
+      "Benfica",
+      "Real Saragosse"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a inscrit l'unique but de la finale européenne remportée par Arsenal en 1994 ?",
+    "answers": [
+      "Ian Wright",
+      "Paul Merson",
+      "Alan Smith",
+      "Kevin Campbell"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu en finale de la FA Cup 1998 pour compléter le doublé ?",
+    "answers": [
+      "Liverpool",
+      "Everton",
+      "Middlesbrough",
+      "Newcastle United"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel joueur a marqué à Old Trafford en 2002 pour offrir le titre de champion à Arsenal ?",
+    "answers": [
+      "Sylvain Wiltord",
+      "Freddie Ljungberg",
+      "Thierry Henry",
+      "Ray Parlour"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu en finale de la FA Cup 2003 ?",
+    "answers": [
+      "Sunderland",
+      "Southampton",
+      "Portsmouth",
+      "Leicester City"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a marqué l'unique but de la finale de la FA Cup 2003 ?",
+    "answers": [
+      "Thierry Henry",
+      "Freddie Ljungberg",
+      "Robert Pirès",
+      "Dennis Bergkamp"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu aux tirs au but en finale de la FA Cup 2005 ?",
+    "answers": [
+      "Chelsea",
+      "Liverpool",
+      "Newcastle United",
+      "Manchester United"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club menait 2-0 avant de perdre la finale de la FA Cup 2014 contre Arsenal ?",
+    "answers": [
+      "Hull City",
+      "Wigan Athletic",
+      "Aston Villa",
+      "Crystal Palace"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel joueur a marqué le but victorieux d'Arsenal en prolongation lors de la finale de la FA Cup 2014 ?",
+    "answers": [
+      "Santi Cazorla",
+      "Aaron Ramsey",
+      "Olivier Giroud",
+      "Laurent Koscielny"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu en finale de la FA Cup 2017 ?",
+    "answers": [
+      "Manchester City",
+      "Tottenham",
+      "Chelsea",
       "Liverpool"
     ],
     "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il de nouveau battu en finale de la FA Cup 2020 ?",
+    "answers": [
+      "Manchester United",
+      "Leicester City",
+      "Wolverhampton",
+      "Chelsea"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a inscrit les deux buts d'Arsenal en finale de la FA Cup 2020 ?",
+    "answers": [
+      "Pierre-Emerick Aubameyang",
+      "Alexandre Lacazette",
+      "Nicolas Pépé",
+      "Granit Xhaka"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur est devenu en 2003 le plus jeune buteur de l'histoire de l'équipe première d'Arsenal ?",
+    "answers": [
+      "Theo Walcott",
+      "Cesc Fàbregas",
+      "Jack Wilshere",
+      "Jermaine Pennant"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel attaquant a marqué les sept buts d'Arsenal lors d'une victoire 7-1 à Aston Villa en 1935 ?",
+    "answers": [
+      "Cliff Bastin",
+      "David Jack",
+      "Ted Drake",
+      "Alex James"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel ailier détenait le record de buts d'Arsenal avant qu'Ian Wright ne le dépasse en 1997 ?",
+    "answers": [
+      "Joe Hulme",
+      "George Armstrong",
+      "Reg Lewis",
+      "Cliff Bastin"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur détient le record d'apparitions en équipe première d'Arsenal avec 722 matchs ?",
+    "answers": [
+      "David O'Leary",
+      "Tony Adams",
+      "Pat Rice",
+      "Lee Dixon"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel club japonais Arsène Wenger entraînait-il avant de rejoindre Arsenal ?",
+    "answers": [
+      "Kashima Antlers",
+      "Nagoya Grampus Eight",
+      "Yokohama F. Marinos",
+      "Urawa Red Diamonds"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel système tactique popularisé par Herbert Chapman est associé à l'Arsenal des années 1930 ?",
+    "answers": [
+      "Le catenaccio",
+      "Le 4-2-4",
+      "Le WM",
+      "Le verrou suisse"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel club belge Arsenal a-t-il battu en finale de la Coupe des villes de foires 1970 ?",
+    "answers": [
+      "Standard de Liège",
+      "Club Bruges",
+      "Royal Antwerp",
+      "Anderlecht"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il éliminé en demi-finale de la Ligue des champions 2006 ?",
+    "answers": [
+      "Villarreal",
+      "Valence",
+      "Juventus",
+      "Benfica"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel gardien d'Arsenal a arrêté un penalty de Juan Román Riquelme en demi-finale européenne en 2006 ?",
+    "answers": [
+      "Manuel Almunia",
+      "Jens Lehmann",
+      "David Seaman",
+      "Łukasz Fabiański"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel défenseur a marqué le but d'Arsenal en finale de la Ligue des champions 2006 ?",
+    "answers": [
+      "Kolo Touré",
+      "Ashley Cole",
+      "Sol Campbell",
+      "Emmanuel Eboué"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Dial Square, futur Arsenal, a-t-il affronté lors de son premier match en 1886 ?",
+    "answers": [
+      "Royal Engineers",
+      "Old Carthusians",
+      "Clapham Rovers",
+      "Eastern Wanderers"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Sur quel score Dial Square a-t-il gagné son premier match en 1886 ?",
+    "answers": [
+      "6-0",
+      "4-0",
+      "5-1",
+      "7-2"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club affrontait Arsenal lors du premier match de football commenté en direct à la radio britannique en 1927 ?",
+    "answers": [
+      "Everton",
+      "Sheffield United",
+      "Bolton Wanderers",
+      "Sunderland"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel entraîneur a été nommé à la tête d'Arsenal en 1986 avant de gagner deux titres de champion ?",
+    "answers": [
+      "Terry Neill",
+      "Bruce Rioch",
+      "George Graham",
+      "Don Howe"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club Arsenal a-t-il battu en finale de la League Cup 1987, mettant fin à huit ans sans trophée ?",
+    "answers": [
+      "Everton",
+      "Manchester United",
+      "Nottingham Forest",
+      "Liverpool"
+    ],
+    "correct": 3,
     "difficulty": "expert"
   }
 ]
