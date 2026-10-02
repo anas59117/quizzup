@@ -498,5 +498,555 @@
       "Alessandro Nesta"
     ],
     "correct": 1
+  },
+  {
+    "text": "À quelle date l’AC Milan a-t-il été fondé ?",
+    "answers": [
+      "16 décembre 1899",
+      "1er juillet 1908",
+      "5 mai 1901",
+      "12 octobre 1926"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel Britannique est considéré comme le principal fondateur de l’AC Milan ?",
+    "answers": [
+      "Alfred Edwards",
+      "Herbert Kilpin",
+      "Jimmy Hogan",
+      "William Garbutt"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "En quelle année l’AC Milan a-t-il remporté son premier titre de champion d’Italie ?",
+    "answers": [
+      "1899",
+      "1900",
+      "1901",
+      "1903"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Milan a-t-il battu 3-0 pour décrocher son premier titre national en 1901 ?",
+    "answers": [
+      "La Juventus",
+      "Le Torino",
+      "L’Inter",
+      "Le Genoa"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel établissement milanais abritait le premier siège du club en 1899 ?",
+    "answers": [
+      "La Fiaschetteria Toscana",
+      "Le Bar Magenta",
+      "Le Caffè Campari",
+      "La Trattoria Milanese"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment appelle-t-on traditionnellement le derby entre l’AC Milan et l’Inter ?",
+    "answers": [
+      "Le Derby d’Italia",
+      "Le Derby della Madonnina",
+      "Le Derby del Sole",
+      "Le Derby della Mole"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "À quel monument milanais le nom « Derby della Madonnina » fait-il référence ?",
+    "answers": [
+      "Au château des Sforza",
+      "À la galerie Victor-Emmanuel II",
+      "À la statue de la Vierge au sommet du Duomo",
+      "À la basilique Saint-Ambroise"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel est le nom officiel du stade couramment appelé San Siro ?",
+    "answers": [
+      "Stadio Silvio Piola",
+      "Arena Civica",
+      "Stadio Nereo Rocco",
+      "Stadio Giuseppe Meazza"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel exploit européen Milan a-t-il accompli en 1963 ?",
+    "answers": [
+      "Devenir le premier club italien vainqueur de la Coupe d’Europe",
+      "Réaliser le premier triplé italien",
+      "Gagner sans encaisser de but",
+      "Remporter la première Coupe UEFA italienne"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "À quelle date Milan a-t-il remporté sa première Coupe d’Europe ?",
+    "answers": [
+      "10 juin 1962",
+      "22 mai 1963",
+      "28 mai 1964",
+      "1er juin 1965"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Milan a-t-il battu en finale de la Coupe d’Europe 1963 ?",
+    "answers": [
+      "Le Real Madrid",
+      "L’Ajax",
+      "Benfica",
+      "Le Celtic"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel Milanais a inscrit les deux buts de la finale européenne de 1963 ?",
+    "answers": [
+      "Gianni Rivera",
+      "José Altafini",
+      "Bruno Mora",
+      "Dino Sani"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur était capitaine de Milan lors du premier sacre européen de 1963 ?",
+    "answers": [
+      "Cesare Maldini",
+      "Nils Liedholm",
+      "Giovanni Trapattoni",
+      "Gianni Rivera"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur a conduit Milan aux titres européens de 1963 et 1969 ?",
+    "answers": [
+      "Giuseppe Viani",
+      "Arrigo Sacchi",
+      "Fabio Capello",
+      "Nereo Rocco"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts José Altafini a-t-il marqués lors de la campagne européenne 1962-1963 ?",
+    "answers": [
+      "10",
+      "12",
+      "14",
+      "16"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année Milan a-t-il remporté sa deuxième Coupe d’Europe ?",
+    "answers": [
+      "1969",
+      "1971",
+      "1967",
+      "1973"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel adversaire Milan a-t-il battu 4-1 en finale européenne en 1969 ?",
+    "answers": [
+      "Benfica",
+      "L’Ajax",
+      "Le Bayern Munich",
+      "Manchester United"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel attaquant de Milan a réussi un triplé lors de la finale européenne de 1969 ?",
+    "answers": [
+      "Angelo Sormani",
+      "Gianni Rivera",
+      "Pierino Prati",
+      "Kurt Hamrin"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel stade s’est jouée la finale européenne remportée par Milan en 1969 ?",
+    "answers": [
+      "Wembley",
+      "Camp Nou",
+      "San Siro",
+      "Santiago Bernabéu"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui a soulevé la Coupe d’Europe 1969 en tant que capitaine de Milan ?",
+    "answers": [
+      "Gianni Rivera",
+      "Cesare Maldini",
+      "Karl-Heinz Schnellinger",
+      "Giovanni Trapattoni"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Milan a-t-il battu 4-0 en finale de la Coupe d’Europe 1989 ?",
+    "answers": [
+      "Benfica",
+      "Le Steaua Bucarest",
+      "Le Real Madrid",
+      "L’Étoile rouge de Belgrade"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Dans quel stade Milan a-t-il remporté la finale européenne de 1989 ?",
+    "answers": [
+      "Le Parc des Princes",
+      "Le stade olympique de Rome",
+      "Le Camp Nou",
+      "Le Praterstadion"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quels deux joueurs ont chacun inscrit un doublé lors de la finale européenne de 1989 ?",
+    "answers": [
+      "Gullit et Van Basten",
+      "Rijkaard et Ancelotti",
+      "Donadoni et Evani",
+      "Virdis et Massaro"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel score Milan a-t-il infligé au Real Madrid en demi-finale retour de la Coupe d’Europe 1989 ?",
+    "answers": [
+      "3-0",
+      "4-1",
+      "6-1",
+      "5-0"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel phénomène météorologique a provoqué l’interruption du match de Milan à Belgrade en 1988 ?",
+    "answers": [
+      "Une tempête de neige",
+      "Un brouillard très épais",
+      "Un orage de grêle",
+      "Des pluies torrentielles"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Milan a-t-il battu en finale de la Coupe d’Europe 1990 ?",
+    "answers": [
+      "Le Bayern Munich",
+      "L’Olympique de Marseille",
+      "Benfica",
+      "Le PSV Eindhoven"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel joueur a marqué l’unique but de la finale européenne de 1990 ?",
+    "answers": [
+      "Marco van Basten",
+      "Ruud Gullit",
+      "Carlo Ancelotti",
+      "Frank Rijkaard"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans quelle ville Milan a-t-il remporté la Coupe d’Europe 1990 ?",
+    "answers": [
+      "Vienne",
+      "Munich",
+      "Lisbonne",
+      "Bruxelles"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel entraîneur a remporté avec Milan les Coupes d’Europe 1989 et 1990 ?",
+    "answers": [
+      "Fabio Capello",
+      "Arrigo Sacchi",
+      "Nereo Rocco",
+      "Carlo Ancelotti"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel capitaine a soulevé les deux Coupes d’Europe consécutives de 1989 et 1990 ?",
+    "answers": [
+      "Paolo Maldini",
+      "Mauro Tassotti",
+      "Franco Baresi",
+      "Carlo Ancelotti"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur a inscrit un doublé lors de la finale européenne gagnée 4-0 par Milan en 1994 ?",
+    "answers": [
+      "Daniele Massaro",
+      "Dejan Savićević",
+      "Marcel Desailly",
+      "Zvonimir Boban"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel joueur monténégrin a marqué d’un lob lors de la finale européenne de 1994 ?",
+    "answers": [
+      "Zvonimir Boban",
+      "Dejan Savićević",
+      "Demetrio Albertini",
+      "Florin Răducioiu"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel défenseur français a inscrit le quatrième but de Milan contre Barcelone en 1994 ?",
+    "answers": [
+      "Jean-Pierre Papin",
+      "Alain Boghossian",
+      "Marcel Desailly",
+      "Christian Karembeu"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui était le capitaine de Milan lors du sacre européen de 1994 ?",
+    "answers": [
+      "Franco Baresi",
+      "Paolo Maldini",
+      "Demetrio Albertini",
+      "Mauro Tassotti"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de finales consécutives de Ligue des champions Milan a-t-il disputées de 1993 à 1995 ?",
+    "answers": [
+      "Trois",
+      "Deux",
+      "Quatre",
+      "Cinq"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville s’est jouée la finale de Ligue des champions remportée par Milan en 2003 ?",
+    "answers": [
+      "Athènes",
+      "Manchester",
+      "Istanbul",
+      "Vienne"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel joueur a transformé le tir au but décisif de Milan lors de la finale 2003 ?",
+    "answers": [
+      "Andrea Pirlo",
+      "Clarence Seedorf",
+      "Andriy Shevchenko",
+      "Filippo Inzaghi"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Combien de tirs au but de la Juventus Dida a-t-il arrêtés lors de la finale 2003 ?",
+    "answers": [
+      "Un",
+      "Deux",
+      "Quatre",
+      "Trois"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club milanais Milan a-t-il éliminé en demi-finale de la Ligue des champions 2003 ?",
+    "answers": [
+      "L’Inter",
+      "La Juventus",
+      "L’Atalanta",
+      "Monza"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Par quelle règle Milan s’est-il qualifié après deux matchs nuls contre l’Inter en 2003 ?",
+    "answers": [
+      "Au nombre de corners",
+      "À la règle des buts à l’extérieur",
+      "Au classement UEFA",
+      "Après prolongation"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville Milan a-t-il remporté sa septième Ligue des champions en 2007 ?",
+    "answers": [
+      "Manchester",
+      "Paris",
+      "Athènes",
+      "Rome"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel score Milan a-t-il obtenu contre Manchester United en demi-finale retour en 2007 ?",
+    "answers": [
+      "1-0",
+      "2-0",
+      "4-1",
+      "3-0"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur de Milan a remporté le Ballon d’Or 2007 ?",
+    "answers": [
+      "Kaká",
+      "Andrea Pirlo",
+      "Paolo Maldini",
+      "Filippo Inzaghi"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel capitaine a soulevé les Ligues des champions 2003 et 2007 avec Milan ?",
+    "answers": [
+      "Franco Baresi",
+      "Paolo Maldini",
+      "Massimo Ambrosini",
+      "Alessandro Costacurta"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club Milan a-t-il battu 4-2 en finale de la Coupe du monde des clubs 2007 ?",
+    "answers": [
+      "São Paulo",
+      "Nacional de Medellín",
+      "Boca Juniors",
+      "Olimpia"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle saison de Serie A Milan a-t-il terminée sans subir la moindre défaite ?",
+    "answers": [
+      "1991-1992",
+      "1987-1988",
+      "1993-1994",
+      "2003-2004"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Combien de matchs de championnat consécutifs Milan est-il resté invaincu entre 1991 et 1993 ?",
+    "answers": [
+      "42",
+      "58",
+      "49",
+      "63"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club a mis fin à la série de 58 matchs sans défaite de Milan en mars 1993 ?",
+    "answers": [
+      "La Juventus",
+      "L’Inter",
+      "Parma",
+      "La Sampdoria"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de minutes le gardien Sebastiano Rossi est-il resté sans encaisser de but en Serie A en 1993-1994 ?",
+    "answers": [
+      "774",
+      "847",
+      "903",
+      "929"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Lors de quelle saison Milan a-t-il gagné son dixième Scudetto et obtenu l’étoile sur son maillot ?",
+    "answers": [
+      "1978-1979",
+      "1968-1969",
+      "1987-1988",
+      "1981-1982"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
   }
 ]
