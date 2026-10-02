@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { generateQuiz, createGeminiRequester, saveDraft } = require('./generate_quizzes');
+const { generateQuiz, createGeminiRequester, saveDraft, loadProjectEnv } = require('./generate_quizzes');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
@@ -57,6 +57,21 @@ test('saves a draft without overwriting existing work', () => {
     saveDraft(destination, [{ text: 'Q ?', answers: ['A','B','C','D'], correct: 0 }]);
     assert.throws(() => saveDraft(destination, []), /EEXIST/);
   } finally {
+    fs.rmSync(directory, { recursive: true, force: true });
+  }
+});
+
+test('loads GEMINI_API_KEY from the project .env file', () => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'quizzup-env-'));
+  const original = process.env.GEMINI_API_KEY;
+  try {
+    fs.writeFileSync(path.join(directory, '.env'), 'GEMINI_API_KEY=test-only-key\n');
+    delete process.env.GEMINI_API_KEY;
+    loadProjectEnv(directory);
+    assert.equal(process.env.GEMINI_API_KEY, 'test-only-key');
+  } finally {
+    if (original === undefined) delete process.env.GEMINI_API_KEY;
+    else process.env.GEMINI_API_KEY = original;
     fs.rmSync(directory, { recursive: true, force: true });
   }
 });

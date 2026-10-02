@@ -98,6 +98,15 @@ function saveDraft(destination, questions) {
   fs.writeFileSync(destination, `${JSON.stringify(questions, null, 2)}\n`, { flag: 'wx' });
 }
 
+function loadProjectEnv(root = path.join(__dirname, '..')) {
+  const envFile = path.join(root, '.env');
+  if (!fs.existsSync(envFile)) return;
+  if (typeof process.loadEnvFile !== 'function') {
+    throw new Error('Node.js 20.12 ou plus récent est requis pour charger le fichier .env.');
+  }
+  process.loadEnvFile(envFile);
+}
+
 async function main(args = process.argv.slice(2)) {
   const [theme, slug] = args;
   if (!theme || !slug || args.length !== 2 || !/^[a-z0-9]+(?:[-_][a-z0-9]+)*$/.test(slug)) {
@@ -108,6 +117,7 @@ async function main(args = process.argv.slice(2)) {
   if (fs.existsSync(path.join(__dirname, '..', 'backend', 'data', `${slug}.json`))) {
     throw new Error(`Quiz déjà présent dans backend/data : ${slug}`);
   }
+  loadProjectEnv();
   const request = createGeminiRequester({ apiKey: process.env.GEMINI_API_KEY, model: process.env.GEMINI_MODEL || 'gemini-3.1-pro-preview' });
   const questions = await generateQuiz({ theme, request });
   saveDraft(destination, questions);
@@ -116,4 +126,4 @@ async function main(args = process.argv.slice(2)) {
 
 if (require.main === module) main().catch((error) => { console.error(error.message); process.exitCode = 1; });
 
-module.exports = { createGeminiRequester, generateQuiz, saveDraft, main };
+module.exports = { createGeminiRequester, generateQuiz, saveDraft, loadProjectEnv, main };
