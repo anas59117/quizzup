@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Quel animal correspond au plus grand animal vivant ?",
+    "text": "Quel est le plus grand animal vivant ?",
     "answers": [
-      "la baleine bleue",
-      "l'éléphant d'Afrique",
-      "le guépard",
-      "la chauve-souris"
+      "La baleine bleue",
+      "L'éléphant de savane d'Afrique",
+      "Le requin-baleine",
+      "Le rorqual commun"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel animal décrit le plus grand animal vivant ?",
+    "text": "Quel est le plus grand animal terrestre vivant ?",
     "answers": [
-      "l'éléphant d'Afrique",
-      "la baleine bleue",
-      "le guépard",
-      "la chauve-souris"
+      "Le rhinocéros blanc",
+      "L'éléphant de savane d'Afrique",
+      "La girafe",
+      "L'hippopotame"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel animal correspond au plus grand animal terrestre vivant ?",
+    "text": "Quel mammifère terrestre atteint les vitesses de pointe les plus élevées ?",
     "answers": [
-      "le guépard",
-      "la chauve-souris",
-      "l'éléphant d'Afrique",
-      "le tigre"
+      "L'antilope d'Amérique",
+      "Le gnou bleu",
+      "Le guépard",
+      "Le lion"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal décrit le plus grand animal terrestre vivant ?",
+    "text": "Quel est le plus grand félin vivant ?",
     "answers": [
-      "le guépard",
-      "la chauve-souris",
-      "le tigre",
-      "l'éléphant d'Afrique"
+      "Le lion",
+      "Le jaguar",
+      "Le léopard",
+      "Le tigre"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal correspond au mammifère terrestre le plus rapide ?",
+    "text": "À quel ordre appartiennent les baleines, dauphins et marsouins ?",
     "answers": [
-      "le guépard",
-      "la chauve-souris",
-      "le tigre",
-      "l'ornithorynque"
+      "Les cétacés",
+      "Les siréniens",
+      "Les pinnipèdes",
+      "Les carnivores"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel animal décrit le mammifère terrestre le plus rapide ?",
+    "text": "Quel mammifère est capable de vol battu véritable ?",
     "answers": [
-      "la chauve-souris",
-      "le guépard",
-      "le tigre",
-      "l'ornithorynque"
+      "L'écureuil volant",
+      "La chauve-souris",
+      "Le colugo",
+      "Le phalanger volant"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel animal correspond au seul mammifère capable de vol actif ?",
+    "text": "Quel mammifère australien pond des œufs et possède un bec aplati ?",
     "answers": [
-      "le tigre",
-      "l'ornithorynque",
-      "la chauve-souris",
-      "le zèbre"
+      "Le wombat",
+      "Le quokka",
+      "L'ornithorynque",
+      "Le bandicoot"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel animal décrit le seul mammifère capable de vol actif ?",
+    "text": "De quelle substance sont principalement constituées les écailles du pangolin ?",
     "answers": [
-      "le tigre",
-      "l'ornithorynque",
-      "le zèbre",
-      "la chauve-souris"
+      "De chitine",
+      "De calcium",
+      "De collagène",
+      "De kératine"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal correspond au plus grand félin vivant ?",
+    "text": "Quel primate vit naturellement uniquement sur l'île de Madagascar ?",
     "answers": [
-      "le tigre",
-      "l'ornithorynque",
-      "le zèbre",
-      "le koala"
+      "Le lémurien",
+      "Le gibbon",
+      "Le macaque",
+      "Le tarsier"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal décrit le plus grand félin vivant ?",
+    "text": "Comment nomme-t-on les mammifères ovipares comme l'ornithorynque et les échidnés ?",
     "answers": [
-      "l'ornithorynque",
-      "le tigre",
-      "le zèbre",
-      "le koala"
+      "Les marsupiaux",
+      "Les monotrèmes",
+      "Les xénarthres",
+      "Les lagomorphes"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel animal correspond à un mammifère ovipare à bec ?",
+    "text": "Quel est le plus grand oiseau vivant ?",
     "answers": [
-      "le zèbre",
-      "le koala",
-      "l'ornithorynque",
-      "l'autruche"
+      "L'émeu",
+      "Le casoar à casque",
+      "L'autruche",
+      "Le nandou"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel animal décrit un mammifère ovipare à bec ?",
+    "text": "Quel oiseau emblématique de l'Antarctique incube son œuf sur ses pattes pendant l'hiver austral ?",
     "answers": [
-      "le zèbre",
-      "le koala",
-      "l'autruche",
-      "l'ornithorynque"
+      "Le manchot Adélie",
+      "Le gorfou macaroni",
+      "Le manchot papou",
+      "Le manchot empereur"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel animal correspond à l'animal aux rayures noires et blanches ?",
+    "text": "Quel oiseau peut voler sur place et en marche arrière ?",
     "answers": [
-      "le zèbre",
-      "le koala",
-      "l'autruche",
-      "le manchot empereur"
+      "Le colibri",
+      "Le martinet",
+      "Le faucon pèlerin",
+      "L'hirondelle"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal décrit l'animal aux rayures noires et blanches ?",
+    "text": "Quelle partie du corps du pélican forme une grande poche extensible pour capturer les poissons ?",
     "answers": [
-      "le koala",
-      "le zèbre",
-      "l'autruche",
-      "le manchot empereur"
+      "Le jabot",
+      "La mandibule inférieure",
+      "La langue",
+      "Le sternum"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal correspond au marsupial emblématique d'Australie qui mange surtout de l'eucalyptus ?",
+    "text": "Quel pigment, issu de son alimentation, explique surtout le rose du flamant ?",
     "answers": [
-      "l'autruche",
-      "le manchot empereur",
-      "le koala",
-      "le caméléon"
+      "La mélanine",
+      "La chlorophylle",
+      "Les caroténoïdes",
+      "L'hémocyanine"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel animal décrit le marsupial emblématique d'Australie qui mange surtout de l'eucalyptus ?",
+    "text": "Quel oiseau nocturne possède des yeux presque immobiles et compense par une grande mobilité du cou ?",
     "answers": [
-      "l'autruche",
-      "le manchot empereur",
-      "le caméléon",
-      "le koala"
+      "L'engoulevent",
+      "Le kiwi",
+      "Le pétrel",
+      "Le hibou"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel animal correspond au plus grand oiseau vivant ?",
+    "text": "Quel rapace est réputé pour son piqué dépassant largement 300 km/h ?",
     "answers": [
-      "l'autruche",
-      "le manchot empereur",
-      "le caméléon",
-      "le crocodile marin"
+      "Le faucon pèlerin",
+      "L'aigle royal",
+      "Le balbuzard pêcheur",
+      "Le vautour fauve"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel animal décrit le plus grand oiseau vivant ?",
+    "text": "Quel oiseau terrestre de Nouvelle-Zélande porte des narines près de l'extrémité du bec ?",
     "answers": [
-      "le manchot empereur",
-      "l'autruche",
-      "le caméléon",
-      "le crocodile marin"
+      "Le kakapo",
+      "Le kiwi",
+      "Le kéa",
+      "Le takahé"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal correspond à l'oiseau incapable de voler emblématique de l'Antarctique ?",
+    "text": "Quel oiseau marin possède la plus grande envergure moyenne parmi les espèces actuelles ?",
     "answers": [
-      "le caméléon",
-      "le crocodile marin",
-      "le manchot empereur",
-      "l'axolotl"
+      "Le condor des Andes",
+      "Le pélican frisé",
+      "L'albatros hurleur",
+      "Le marabout d'Afrique"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal décrit l'oiseau incapable de voler emblématique de l'Antarctique ?",
+    "text": "Chez les oiseaux, quelle structure musculaire broie mécaniquement la nourriture ?",
     "answers": [
-      "le caméléon",
-      "le crocodile marin",
-      "l'axolotl",
-      "le manchot empereur"
+      "Le jabot",
+      "Le cloaque",
+      "La syrinx",
+      "Le gésier"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel animal correspond au reptile connu pour changer de couleur ?",
+    "text": "Quel reptile est connu pour modifier sa couleur grâce à des cellules spécialisées de sa peau ?",
     "answers": [
-      "le caméléon",
-      "le crocodile marin",
-      "l'axolotl",
-      "le poisson-globe"
+      "Le caméléon",
+      "L'iguane marin",
+      "Le gecko léopard",
+      "Le varan des savanes"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel animal décrit le reptile connu pour changer de couleur ?",
+    "text": "Quel est le plus grand reptile vivant ?",
     "answers": [
-      "le crocodile marin",
-      "le caméléon",
-      "l'axolotl",
-      "le poisson-globe"
+      "Le dragon de Komodo",
+      "Le crocodile marin",
+      "Le crocodile du Nil",
+      "L'anaconda vert"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel animal correspond au plus grand reptile vivant ?",
+    "text": "Quel lézard venimeux géant vit sur plusieurs îles indonésiennes ?",
     "answers": [
-      "l'axolotl",
-      "le poisson-globe",
-      "le crocodile marin",
-      "le poulpe"
+      "Le monstre de Gila",
+      "Le varan du Nil",
+      "Le dragon de Komodo",
+      "Le tégu noir et blanc"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal décrit le plus grand reptile vivant ?",
+    "text": "Quel reptile possède une carapace formée notamment par la fusion de côtes avec des plaques osseuses ?",
     "answers": [
-      "l'axolotl",
-      "le poisson-globe",
-      "le poulpe",
-      "le crocodile marin"
+      "Le crocodile",
+      "Le sphénodon",
+      "Le caméléon",
+      "La tortue"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal correspond à l'amphibien qui conserve souvent ses branchies à l'âge adulte ?",
+    "text": "Quel organe sensoriel permet à de nombreux serpents d'analyser des molécules apportées par leur langue ?",
     "answers": [
-      "l'axolotl",
-      "le poisson-globe",
-      "le poulpe",
-      "l'abeille domestique"
+      "L'organe voméronasal",
+      "L'organe de Corti",
+      "La ligne latérale",
+      "L'ampoule de Lorenzini"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel animal décrit l'amphibien qui conserve souvent ses branchies à l'âge adulte ?",
+    "text": "Quel amphibien mexicain conserve normalement ses branchies externes à l'âge adulte ?",
     "answers": [
-      "le poisson-globe",
-      "l'axolotl",
-      "le poulpe",
-      "l'abeille domestique"
+      "La salamandre tachetée",
+      "L'axolotl",
+      "Le protée anguillard",
+      "Le triton crêté"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel animal correspond au poisson capable de se gonfler ?",
+    "text": "Par quel organe une grenouille adulte respire-t-elle en plus de ses poumons ?",
     "answers": [
-      "le poulpe",
-      "l'abeille domestique",
-      "le poisson-globe",
-      "le scorpion"
+      "Les reins",
+      "Le foie",
+      "La peau",
+      "La rate"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel animal décrit le poisson capable de se gonfler ?",
+    "text": "Comment appelle-t-on la transformation du têtard en grenouille adulte ?",
     "answers": [
-      "le poulpe",
-      "l'abeille domestique",
-      "le scorpion",
-      "le poisson-globe"
+      "La mue imaginale",
+      "La diapause",
+      "La néoténie",
+      "La métamorphose"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal correspond au céphalopode à huit bras ?",
+    "text": "Quel amphibien cavernicole européen, aveugle et dépigmenté, est appelé protée anguillard ?",
     "answers": [
-      "le poulpe",
-      "l'abeille domestique",
-      "le scorpion",
-      "le dauphin"
+      "Proteus anguinus",
+      "Ambystoma mexicanum",
+      "Salamandra salamandra",
+      "Necturus maculosus"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal décrit le céphalopode à huit bras ?",
+    "text": "Quel groupe d'amphibiens adultes conserve une longue queue ?",
     "answers": [
-      "l'abeille domestique",
-      "le poulpe",
-      "le scorpion",
-      "le dauphin"
+      "Les anoures",
+      "Les urodèles",
+      "Les gymnophiones",
+      "Les amniotes"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel animal correspond à l'insecte social producteur de miel ?",
+    "text": "Quel est le plus grand poisson vivant ?",
     "answers": [
-      "le scorpion",
-      "le dauphin",
-      "l'abeille domestique",
-      "le pangolin"
+      "Le requin blanc",
+      "La raie manta océanique",
+      "Le requin-baleine",
+      "Le poisson-lune"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel animal décrit l'insecte social producteur de miel ?",
+    "text": "Quel poisson peut augmenter fortement son volume en avalant de l'eau ?",
     "answers": [
-      "le scorpion",
-      "le dauphin",
-      "le pangolin",
-      "l'abeille domestique"
+      "Le poisson-scie",
+      "Le poisson-pierre",
+      "Le poisson-archer",
+      "Le poisson-globe"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel animal correspond à l'arachnide doté d'un aiguillon caudal ?",
+    "text": "Quel organe aide la plupart des poissons osseux à régler leur flottabilité ?",
     "answers": [
-      "le scorpion",
-      "le dauphin",
-      "le pangolin",
-      "le lémurien"
+      "La vessie natatoire",
+      "La ligne latérale",
+      "L'opercule",
+      "Le cloaque"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal décrit l'arachnide doté d'un aiguillon caudal ?",
+    "text": "Quel système sensoriel détecte les mouvements et vibrations de l'eau chez les poissons ?",
     "answers": [
-      "le dauphin",
-      "le scorpion",
-      "le pangolin",
-      "le lémurien"
+      "Le melon",
+      "La ligne latérale",
+      "La papille de Lorenz",
+      "Le tympan"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal correspond au mammifère marin utilisant l'écholocalisation ?",
+    "text": "Quel poisson produit des décharges électriques puissantes malgré son nom trompeur d'« anguille » ?",
     "answers": [
-      "le pangolin",
-      "le lémurien",
-      "le dauphin",
-      "le castor"
+      "La murène",
+      "Le congre",
+      "L'anguille électrique",
+      "La lamproie"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel animal décrit le mammifère marin utilisant l'écholocalisation ?",
+    "text": "Quel mammifère marin utilise un melon graisseux pour focaliser ses clics d'écholocalisation ?",
     "answers": [
-      "le pangolin",
-      "le lémurien",
-      "le castor",
-      "le dauphin"
+      "Le lamantin",
+      "La loutre de mer",
+      "Le phoque moine",
+      "Le dauphin"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel animal correspond au mammifère couvert d'écailles de kératine ?",
+    "text": "Quel animal marin possède huit bras munis de ventouses ?",
     "answers": [
-      "le pangolin",
-      "le lémurien",
-      "le castor",
-      "la girafe"
+      "Le poulpe",
+      "Le calmar",
+      "La seiche",
+      "Le nautile"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel animal décrit le mammifère couvert d'écailles de kératine ?",
+    "text": "Quel céphalopode possède huit bras et deux tentacules plus longs ?",
     "answers": [
-      "le lémurien",
-      "le pangolin",
-      "le castor",
-      "la girafe"
+      "Le poulpe",
+      "Le calmar",
+      "Le nautile",
+      "L'argonaute"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal correspond au primate vivant naturellement à Madagascar ?",
+    "text": "Quel mammifère marin se nourrit souvent en filtrant l'eau avec des fanons ?",
     "answers": [
-      "le castor",
-      "la girafe",
-      "le lémurien",
-      "le requin-baleine"
+      "L'orque",
+      "Le cachalot",
+      "La baleine à bosse",
+      "Le dauphin commun"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal décrit le primate vivant naturellement à Madagascar ?",
+    "text": "Quel groupe de poissons cartilagineux possède des ampoules de Lorenzini sensibles aux champs électriques ?",
     "answers": [
-      "le castor",
-      "la girafe",
-      "le requin-baleine",
-      "le lémurien"
+      "Les thons et les maquereaux",
+      "Les saumons et les truites",
+      "Les esturgeons et les polyodons",
+      "Les requins et les raies"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel animal correspond au rongeur bâtisseur de barrages ?",
+    "text": "Quel insecte social fabrique du miel à partir de nectar ?",
     "answers": [
-      "le castor",
-      "la girafe",
-      "le requin-baleine",
-      "le hibou"
+      "L'abeille domestique",
+      "La guêpe commune",
+      "Le bourdon terrestre",
+      "Le frelon européen"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel animal décrit le rongeur bâtisseur de barrages ?",
+    "text": "Combien de pattes possède un insecte adulte ?",
     "answers": [
-      "la girafe",
-      "le castor",
-      "le requin-baleine",
-      "le hibou"
+      "Huit",
+      "Six",
+      "Dix",
+      "Douze"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel animal correspond au mammifère au très long cou ?",
+    "text": "Combien de paires de pattes locomotrices possède une araignée ?",
     "answers": [
-      "le requin-baleine",
-      "le hibou",
-      "la girafe",
-      "la tortue géante"
+      "Trois",
+      "Cinq",
+      "Quatre",
+      "Six"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal décrit le mammifère au très long cou ?",
+    "text": "Quel appendice porte l'aiguillon venimeux du scorpion ?",
     "answers": [
-      "le requin-baleine",
-      "le hibou",
-      "la tortue géante",
-      "la girafe"
+      "Le céphalothorax",
+      "Le pédipalpe",
+      "Le chélicère",
+      "Le telson"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal correspond au plus grand poisson vivant ?",
+    "text": "Chez les araignées, quelles structures produisent et émettent la soie ?",
     "answers": [
-      "le requin-baleine",
-      "le hibou",
-      "la tortue géante",
-      "la baleine bleue"
+      "Les filières",
+      "Les trachées",
+      "Les antennes",
+      "Les mandibules"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel animal décrit le plus grand poisson vivant ?",
+    "text": "Quel animal marin forme des récifs grâce au squelette calcaire de ses colonies ?",
     "answers": [
-      "le hibou",
-      "le requin-baleine",
-      "la tortue géante",
-      "la baleine bleue"
+      "L'éponge",
+      "Le corail",
+      "L'anémone de mer",
+      "L'ascidie"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel animal correspond à l'oiseau nocturne capable de tourner fortement la tête ?",
+    "text": "À quel embranchement appartiennent les méduses et les coraux ?",
     "answers": [
-      "la tortue géante",
-      "la baleine bleue",
-      "le hibou",
-      "l'éléphant d'Afrique"
+      "Les mollusques",
+      "Les échinodermes",
+      "Les cnidaires",
+      "Les annélides"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel animal décrit l'oiseau nocturne capable de tourner fortement la tête ?",
+    "text": "Quel échinoderme possède généralement cinq bras rayonnant autour d'un disque central ?",
     "answers": [
-      "la tortue géante",
-      "la baleine bleue",
-      "l'éléphant d'Afrique",
-      "le hibou"
+      "Le nautile",
+      "La méduse lune",
+      "Le ver tubicole",
+      "L'étoile de mer"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal correspond à l'animal terrestre connu pour sa carapace et sa longévité ?",
+    "text": "Quel mollusque bivalve peut produire une perle autour d'un corps étranger ?",
     "answers": [
-      "la tortue géante",
-      "la baleine bleue",
-      "l'éléphant d'Afrique",
-      "le guépard"
+      "L'huître perlière",
+      "Le nautile",
+      "Le bigorneau",
+      "La patelle"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel animal décrit l'animal terrestre connu pour sa carapace et sa longévité ?",
+    "text": "Quel pigment respiratoire donne souvent une couleur bleue au sang de nombreux mollusques et arthropodes ?",
     "answers": [
-      "la baleine bleue",
-      "la tortue géante",
-      "l'éléphant d'Afrique",
-      "le guépard"
+      "L'hémoglobine",
+      "L'hémocyanine",
+      "La myoglobine",
+      "La chlorocruorine"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel rongeur construit des barrages avec des branches et de la boue ?",
+    "answers": [
+      "Le ragondin",
+      "La marmotte",
+      "Le castor",
+      "Le capybara"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel mammifère possède le cou le plus long ?",
+    "answers": [
+      "Le chameau",
+      "L'okapi",
+      "Le lama",
+      "La girafe"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mammifère du désert stocke principalement de la graisse dans ses bosses ?",
+    "answers": [
+      "Le chameau",
+      "Le rhinocéros",
+      "L'oryx",
+      "Le dromadaire"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel mammifère semi-aquatique possède un pelage extrêmement dense et utilise parfois des pierres comme outils ?",
+    "answers": [
+      "Le vison d'Amérique",
+      "La loutre de mer",
+      "Le castor du Canada",
+      "Le rat musqué"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel petit mammifère peut abaisser fortement température et métabolisme pendant une torpeur hivernale prolongée ?",
+    "answers": [
+      "Le renard roux",
+      "Le lièvre variable",
+      "Le hérisson",
+      "La belette"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel mammifère est adapté à manger principalement des feuilles d'eucalyptus ?",
+    "answers": [
+      "Le wombat",
+      "Le kangourou roux",
+      "Le diable de Tasmanie",
+      "Le koala"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel ours se nourrit principalement de bambou ?",
+    "answers": [
+      "Le panda géant",
+      "L'ours malais",
+      "L'ours à lunettes",
+      "L'ours lippu"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mammifère d'Amérique du Sud possède une langue très allongée et se nourrit surtout de fourmis et termites ?",
+    "answers": [
+      "Le tatou à neuf bandes",
+      "Le tamanoir",
+      "Le paresseux à trois doigts",
+      "Le tapir terrestre"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel oiseau utilise un bec spécialisé pour filtrer de petits organismes dans l'eau ?",
+    "answers": [
+      "Le martin-pêcheur",
+      "Le cormoran",
+      "Le flamant rose",
+      "Le fou de Bassan"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Chez les ruminants, quelle première grande poche de l'estomac héberge une fermentation microbienne ?",
+    "answers": [
+      "La caillette",
+      "Le feuillet",
+      "Le duodénum",
+      "Le rumen"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel mammifère porte généralement ses petits dans une poche ventrale ?",
+    "answers": [
+      "Le kangourou",
+      "Le panda roux",
+      "Le tatou",
+      "Le suricate"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment appelle-t-on les animaux dont l'embryon se développe dans un œuf pondu à l'extérieur ?",
+    "answers": [
+      "Les vivipares",
+      "Les ovipares",
+      "Les placentaires",
+      "Les hermaphrodites"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Chez quel animal le mâle porte-t-il les œufs dans une poche incubatrice ?",
+    "answers": [
+      "Le poisson-clown",
+      "Le poisson-globe",
+      "L'hippocampe",
+      "Le rémora"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel insecte passe par les stades œuf, chenille, chrysalide puis adulte ?",
+    "answers": [
+      "La sauterelle",
+      "La libellule",
+      "Le perce-oreille",
+      "Le papillon"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment nomme-t-on une reproduction où un embryon se développe sans fécondation ?",
+    "answers": [
+      "La parthénogenèse",
+      "La conjugaison",
+      "La sporulation",
+      "La fragmentation"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel animal utilise une danse frétillante pour indiquer une source de nourriture à ses congénères ?",
+    "answers": [
+      "La fourmi coupe-feuille",
+      "L'abeille domestique",
+      "Le bourdon",
+      "La termite"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel grand singe produit des tambourinements sur sa poitrine pour communiquer ?",
+    "answers": [
+      "L'orang-outan",
+      "Le bonobo",
+      "Le gorille",
+      "Le gibbon"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel cétacé produit des séquences vocales complexes appelées chants, surtout chez les mâles ?",
+    "answers": [
+      "Le marsouin commun",
+      "Le narval",
+      "Le béluga",
+      "La baleine à bosse"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel organe produit les chants et cris chez les oiseaux ?",
+    "answers": [
+      "La syrinx",
+      "Le larynx",
+      "Le gésier",
+      "Le jabot"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment appelle-t-on les substances chimiques émises pour transmettre un signal entre individus d'une même espèce ?",
+    "answers": [
+      "Les hormones",
+      "Les phéromones",
+      "Les enzymes",
+      "Les anticorps"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel animal change de couleur grâce à des chromatophores contrôlés rapidement par son système nerveux ?",
+    "answers": [
+      "Le caméléon",
+      "Le poisson-clown",
+      "La seiche",
+      "La tortue imbriquée"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel mammifère arctique possède une peau noire sous une fourrure paraissant blanche ?",
+    "answers": [
+      "Le renard arctique",
+      "Le phoque du Groenland",
+      "Le bœuf musqué",
+      "L'ours polaire"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel animal possède des rayures propres à chaque individu, utiles à son identification ?",
+    "answers": [
+      "Le zèbre",
+      "Le gnou",
+      "L'okapi",
+      "Le tapir"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel serpent détecte la chaleur de ses proies grâce à des fossettes faciales spécialisées ?",
+    "answers": [
+      "La couleuvre à collier",
+      "Le crotale",
+      "Le cobra royal",
+      "Le mamba noir"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel mécanisme permet au gecko d'adhérer aux surfaces grâce à des millions de soies microscopiques sur ses doigts ?",
+    "answers": [
+      "La succion pneumatique",
+      "Une colle sécrétée",
+      "Les forces de van der Waals",
+      "L'électricité statique seule"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel animal joue un rôle d'ingénieur d'écosystème en créant des zones humides par ses barrages ?",
+    "answers": [
+      "La loutre",
+      "Le ragondin",
+      "Le rat musqué",
+      "Le castor"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel terme désigne une espèce dont l'effet écologique est disproportionné par rapport à son abondance ?",
+    "answers": [
+      "Une espèce clé de voûte",
+      "Une espèce parapluie",
+      "Une espèce pionnière",
+      "Une espèce domestique"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel animal transporte du pollen entre les fleurs en butinant ?",
+    "answers": [
+      "La mante religieuse",
+      "L'abeille",
+      "Le termite",
+      "Le phasme"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel grand herbivore africain disperse des graines sur de longues distances dans ses excréments ?",
+    "answers": [
+      "Le rhinocéros",
+      "L'hippopotame",
+      "L'éléphant",
+      "Le buffle"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment nomme-t-on une relation durable où deux espèces tirent toutes deux un bénéfice ?",
+    "answers": [
+      "Le parasitisme",
+      "La prédation",
+      "L'amensalisme",
+      "Le mutualisme"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel groupe comprend les animaux dotés d'une colonne vertébrale ?",
+    "answers": [
+      "Les vertébrés",
+      "Les arthropodes",
+      "Les mollusques",
+      "Les annélides"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "À quelle classe appartient le crocodile ?",
+    "answers": [
+      "Les amphibiens",
+      "Les reptiles",
+      "Les mammifères",
+      "Les poissons osseux"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "À quel embranchement appartiennent insectes, araignées et crustacés ?",
+    "answers": [
+      "Les chordés",
+      "Les cnidaires",
+      "Les arthropodes",
+      "Les plathelminthes"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle caractéristique distingue notamment les mammifères ?",
+    "answers": [
+      "La présence de quatre membres",
+      "La respiration pulmonaire",
+      "Le sang chaud uniquement",
+      "La présence de glandes mammaires"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel niveau taxonomique se situe immédiatement sous le genre dans la nomenclature binominale ?",
+    "answers": [
+      "L'espèce",
+      "La famille",
+      "L'ordre",
+      "La classe"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel animal est le seul marsupial vivant naturellement en Amérique du Nord au nord du Mexique ?",
+    "answers": [
+      "Le raton laveur",
+      "L'opossum de Virginie",
+      "Le porc-épic d'Amérique",
+      "Le kinkajou"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel mammifère marin possède une longue défense qui est en réalité une dent ?",
+    "answers": [
+      "Le morse",
+      "Le dugong",
+      "Le narval",
+      "Le cachalot"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel singe est connu pour utiliser des pierres afin d'ouvrir des noix au Brésil ?",
+    "answers": [
+      "Le tamarin",
+      "Le hurleur",
+      "Le ouistiti",
+      "Le capucin"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel mammifère africain se déplace sur ses jointures et partage avec l'humain un ancêtre commun récent ?",
+    "answers": [
+      "Le chimpanzé",
+      "Le babouin",
+      "Le colobe",
+      "Le mandrill"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ordre de mammifères comprend lapins et lièvres, distinct des rongeurs ?",
+    "answers": [
+      "Les périssodactyles",
+      "Les lagomorphes",
+      "Les hyracoïdes",
+      "Les insectivores"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel animal possède trois cœurs et un sang riche en hémocyanine ?",
+    "answers": [
+      "L'étoile de mer",
+      "La méduse",
+      "Le poulpe",
+      "L'oursin"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel oiseau possède des os très denses qui l'aident à plonger ?",
+    "answers": [
+      "L'albatros",
+      "Le vautour",
+      "Le colibri",
+      "Le manchot"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mammifère marin peut dormir en maintenant alternativement un hémisphère cérébral actif ?",
+    "answers": [
+      "Le grand dauphin",
+      "Le lamantin",
+      "La loutre de mer",
+      "Le dugong"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel animal possède des cellules urticantes appelées cnidocytes ?",
+    "answers": [
+      "L'éponge",
+      "La méduse",
+      "L'étoile de mer",
+      "Le concombre de mer"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel groupe animal est caractérisé par un système aquifère et des pieds ambulacraires ?",
+    "answers": [
+      "Les annélides",
+      "Les crustacés",
+      "Les échinodermes",
+      "Les céphalopodes"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel carnivore africain appartient à une famille distincte de celle des chiens malgré son allure ?",
+    "answers": [
+      "Le chacal doré",
+      "Le lycaon",
+      "Le renard à oreilles de chauve-souris",
+      "La hyène tachetée"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel mammifère possède des incisives qui poussent continuellement ?",
+    "answers": [
+      "Le castor",
+      "Le hérisson",
+      "La taupe",
+      "La musaraigne"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel animal possède une trompe issue de la fusion du nez et de la lèvre supérieure ?",
+    "answers": [
+      "Le tapir",
+      "L'éléphant",
+      "Le fourmilier",
+      "Le saïga"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel mammifère cuirassé peut se rouler en boule chez certaines espèces ?",
+    "answers": [
+      "Le pangolin",
+      "Le porc-épic",
+      "Le tatou",
+      "Le tenrec"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel groupe de mammifères comprend les chevaux, rhinocéros et tapirs ?",
+    "answers": [
+      "Les artiodactyles",
+      "Les proboscidiens",
+      "Les xénarthres",
+      "Les périssodactyles"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
