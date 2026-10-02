@@ -280,7 +280,7 @@
     "correct": 3
   },
   {
-    "text": "Quel stade inauguré en 2021 à Baraki, près d'Alger, porte le nom d'un héros sud-africain ?",
+    "text": "Quel stade inauguré en 2023 à Baraki, près d'Alger, porte le nom d'un héros sud-africain ?",
     "answers": [
       "Le stade Nelson-Mandela",
       "Le stade du 5-Juillet",
@@ -498,5 +498,555 @@
       "Le Bayern Munich"
     ],
     "correct": 1
+  },
+  {
+    "text": "Dans quelle ville joue la JS Kabylie ?",
+    "answers": [
+      "Tizi Ouzou",
+      "Alger",
+      "Sétif",
+      "Oran"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "En quelles années la JS Kabylie a-t-elle remporté la principale coupe africaine des clubs ?",
+    "answers": [
+      "1976 et 1988",
+      "1981 et 1990",
+      "1990 et 2014",
+      "1981 et 2000"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club zambien la JS Kabylie a-t-elle battu en finale africaine en 1990 ?",
+    "answers": [
+      "Power Dynamos",
+      "ZESCO United",
+      "Nkana FC",
+      "Green Buffaloes"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel fut le score de la séance de tirs au but gagnée par la JS Kabylie contre Nkana en 1990 ?",
+    "answers": [
+      "4-2",
+      "3-1",
+      "6-5",
+      "5-3"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club algérien a remporté invaincu la Coupe d'Afrique des clubs champions 1981 ?",
+    "answers": [
+      "JS Kabylie",
+      "MC Alger",
+      "ES Sétif",
+      "CR Belouizdad"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quelle ville est rattachée l'Entente de Sétif ?",
+    "answers": [
+      "Constantine",
+      "Sétif",
+      "Annaba",
+      "Blida"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "En quelles années l'ES Sétif a-t-elle été championne d'Afrique ?",
+    "answers": [
+      "1981 et 1990",
+      "1976 et 1988",
+      "1988 et 2014",
+      "1990 et 2014"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club l'ES Sétif a-t-elle affronté en finale de la Ligue des champions CAF 2014 ?",
+    "answers": [
+      "TP Mazembe",
+      "Al Ahly",
+      "Espérance de Tunis",
+      "AS Vita Club"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Par quelle règle l'ES Sétif a-t-elle remporté la finale africaine 2014 après deux matchs nuls ?",
+    "answers": [
+      "Buts marqués à l'extérieur",
+      "Tirs au but",
+      "But en or",
+      "Meilleur classement en phase de groupes"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club a battu l'ES Sétif aux tirs au but en finale de la Coupe de la Confédération 2009 ?",
+    "answers": [
+      "FUS Rabat",
+      "Stade Malien",
+      "CS Sfaxien",
+      "Hearts of Oak"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville est basé le MC Alger ?",
+    "answers": [
+      "Oran",
+      "Tlemcen",
+      "Alger",
+      "Béjaïa"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel club fut le premier représentant algérien sacré champion d'Afrique ?",
+    "answers": [
+      "JS Kabylie",
+      "ES Sétif",
+      "USM Alger",
+      "MC Alger"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "En quelle année le MC Alger a-t-il remporté la Coupe d'Afrique des clubs champions ?",
+    "answers": [
+      "1976",
+      "1978",
+      "1981",
+      "1988"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club guinéen le MC Alger a-t-il affronté en finale continentale en 1976 ?",
+    "answers": [
+      "Horoya AC",
+      "Hafia FC",
+      "AS Kaloum",
+      "CI Kamsar"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de titres continentaux le MC Alger comptait-il après son sacre de 1976 ?",
+    "answers": [
+      "Deux",
+      "Trois",
+      "Un",
+      "Quatre"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club algérien a remporté la Coupe de la Confédération CAF 2023 ?",
+    "answers": [
+      "CR Belouizdad",
+      "JS Kabylie",
+      "MC Alger",
+      "USM Alger"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel adversaire tanzanien l'USM Alger a-t-elle affronté en finale continentale 2023 ?",
+    "answers": [
+      "Young Africans",
+      "Simba SC",
+      "Azam FC",
+      "Coastal Union"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel score cumulé a départagé l'USM Alger et Young Africans en finale 2023 ?",
+    "answers": [
+      "3-1 pour l'USMA",
+      "2-2, avec victoire de l'USMA aux buts à l'extérieur",
+      "1-1, puis tirs au but",
+      "2-0 pour l'USMA"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club égyptien l'USM Alger a-t-elle battu en Super Coupe de la CAF 2023 ?",
+    "answers": [
+      "Zamalek",
+      "Pyramids FC",
+      "Al Ahly",
+      "Al Masry"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui a marqué sur penalty l'unique but de la Super Coupe CAF 2023 remportée par l'USMA ?",
+    "answers": [
+      "Aymen Mahious",
+      "Youcef Belaïli",
+      "Islam Slimani",
+      "Zineddine Belaïd"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de Coupes de la CAF consécutives la JS Kabylie a-t-elle remportées de 2000 à 2002 ?",
+    "answers": [
+      "Trois",
+      "Deux",
+      "Quatre",
+      "Cinq"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel club égyptien la JS Kabylie a-t-elle battu en finale de la Coupe de la CAF 2000 ?",
+    "answers": [
+      "Al Ahly",
+      "Ismaily SC",
+      "Zamalek",
+      "Al Masry"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club tunisien fut l'adversaire de la JS Kabylie en finale de la Coupe de la CAF 2001 ?",
+    "answers": [
+      "Espérance de Tunis",
+      "Club Africain",
+      "Étoile du Sahel",
+      "CS Sfaxien"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club camerounais la JS Kabylie a-t-elle battu en finale de la Coupe de la CAF 2002 ?",
+    "answers": [
+      "Canon Yaoundé",
+      "Coton Sport",
+      "Union Douala",
+      "Tonnerre Yaoundé"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel club marocain a battu la JS Kabylie en finale de la Coupe de la Confédération 2021 ?",
+    "answers": [
+      "Raja Casablanca",
+      "Wydad Casablanca",
+      "RS Berkane",
+      "FAR Rabat"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection l'Algérie a-t-elle battue en finale de la Coupe arabe FIFA 2021 ?",
+    "answers": [
+      "Égypte",
+      "Tunisie",
+      "Maroc",
+      "Qatar"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel fut le score de la finale Algérie-Tunisie à la Coupe arabe 2021 ?",
+    "answers": [
+      "1-0",
+      "2-1",
+      "2-0 après prolongation",
+      "0-0 puis tirs au but"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel sélectionneur a conduit l'Algérie au titre arabe en 2021 ?",
+    "answers": [
+      "Djamel Belmadi",
+      "Rabah Saâdane",
+      "Abdelmadjid Tebboune",
+      "Madjid Bougherra"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel stade qatari s'est jouée la finale de la Coupe arabe 2021 ?",
+    "answers": [
+      "Stade Al-Bayt",
+      "Stade de Lusail",
+      "Stade 974",
+      "Khalifa International Stadium"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quels joueurs ont marqué en prolongation pour l'Algérie en finale de la Coupe arabe 2021 ?",
+    "answers": [
+      "Youcef Belaïli et Baghdad Bounedjah",
+      "Amir Sayoud et Yacine Brahimi",
+      "Riyad Mahrez et Islam Slimani",
+      "Sofiane Feghouli et Saïd Benrahma"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Avec quel club Rabah Madjer a-t-il remporté la Coupe d'Europe des clubs champions 1987 ?",
+    "answers": [
+      "Benfica",
+      "Sporting Portugal",
+      "FC Porto",
+      "Valence CF"
+    ],
+    "correct": 2,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel adversaire le FC Porto de Rabah Madjer a-t-il battu en finale européenne 1987 ?",
+    "answers": [
+      "Real Madrid",
+      "Liverpool",
+      "PSV Eindhoven",
+      "Bayern Munich"
+    ],
+    "correct": 3,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel fut le score de la finale européenne remportée par Porto en 1987 ?",
+    "answers": [
+      "2-1",
+      "1-0",
+      "3-1",
+      "2-2 puis tirs au but"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "À quelle minute Rabah Madjer a-t-il égalisé en finale européenne 1987 ?",
+    "answers": [
+      "63e minute",
+      "77e minute",
+      "81e minute",
+      "89e minute"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel joueur Rabah Madjer a-t-il servi pour le but victorieux de Porto en 1987 ?",
+    "answers": [
+      "Paulo Futre",
+      "Fernando Gomes",
+      "Juary",
+      "Jaime Magalhães"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Avec quel club Riyad Mahrez a-t-il remporté la Premier League 2015-2016 ?",
+    "answers": [
+      "Manchester City",
+      "Arsenal",
+      "Chelsea",
+      "Leicester City"
+    ],
+    "correct": 3,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quel trophée individuel anglais Riyad Mahrez a-t-il reçu en 2016 ?",
+    "answers": [
+      "Joueur de l'année de la PFA",
+      "Soulier d'or",
+      "Golden Boy",
+      "Gant d'or"
+    ],
+    "correct": 0,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel club Riyad Mahrez a-t-il rejoint en 2018 ?",
+    "answers": [
+      "Liverpool",
+      "Manchester City",
+      "Tottenham",
+      "Manchester United"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Avec quel club Riyad Mahrez a-t-il remporté la Ligue des champions 2023 ?",
+    "answers": [
+      "Leicester City",
+      "Al-Ahli",
+      "Manchester City",
+      "Le Havre"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Combien de buts Riyad Mahrez a-t-il inscrits sur l'ensemble de la demi-finale de Ligue des champions 2021 contre le PSG ?",
+    "answers": [
+      "Un",
+      "Deux",
+      "Quatre",
+      "Trois"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année l'équipe de football du FLN a-t-elle été constituée ?",
+    "answers": [
+      "1958",
+      "1954",
+      "1960",
+      "1962"
+    ],
+    "correct": 0,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Dans quelle ville l'équipe du FLN établit-elle sa base principale ?",
+    "answers": [
+      "Alger",
+      "Tunis",
+      "Le Caire",
+      "Rabat"
+    ],
+    "correct": 1,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel attaquant de Saint-Étienne a rejoint l'équipe du FLN en 1958 ?",
+    "answers": [
+      "Rabah Madjer",
+      "Lakhdar Belloumi",
+      "Rachid Mekhloufi",
+      "Hacène Lalmas"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel défenseur de l'AS Monaco et international français a rejoint l'équipe du FLN ?",
+    "answers": [
+      "Madjid Bougherra",
+      "Antar Yahia",
+      "Liassine Cadamuro",
+      "Mustapha Zitouni"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel objectif politique poursuivait l'équipe du FLN lors de ses tournées ?",
+    "answers": [
+      "Faire connaître la cause de l'indépendance algérienne",
+      "Organiser le championnat professionnel français",
+      "Préparer la CAN 1968",
+      "Recruter pour les clubs européens"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année l'Algérie a-t-elle disputé sa première phase finale de CAN ?",
+    "answers": [
+      "1965",
+      "1968",
+      "1970",
+      "1980"
+    ],
+    "correct": 1,
+    "difficulty": "easy"
+  },
+  {
+    "text": "Quelle sélection l'Algérie a-t-elle battue 4-0 lors de la CAN 1968 ?",
+    "answers": [
+      "Éthiopie",
+      "Côte d'Ivoire",
+      "Ouganda",
+      "Sénégal"
+    ],
+    "correct": 2,
+    "difficulty": "medium"
+  },
+  {
+    "text": "Quel joueur algérien a inscrit un triplé contre l'Ouganda à la CAN 1968 ?",
+    "answers": [
+      "Rachid Mekhloufi",
+      "Rabah Madjer",
+      "Lakhdar Belloumi",
+      "Hacène Lalmas"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Contre quelle sélection l'Algérie a-t-elle disputé la finale de la CAN 1980 ?",
+    "answers": [
+      "Nigeria",
+      "Ghana",
+      "Cameroun",
+      "Égypte"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel fut le score de la finale de CAN 1980 perdue par l'Algérie ?",
+    "answers": [
+      "2-0",
+      "3-0",
+      "2-1",
+      "1-0"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
   }
 ]
