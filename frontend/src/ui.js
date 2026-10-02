@@ -70,6 +70,7 @@ export const CATEGORIES = [
   { key: 'got', label: 'Game of Thrones', icon: '\u{1F409}', logo: null, grad: 'g14', desc: 'Le Trône de Fer', family: 'sagas' },
   { key: 'harry_potter', label: 'Harry Potter', icon: '\u{1FA84}', grad: 'g15', desc: 'Poudlard & sorcellerie', family: 'sagas' },
   { key: 'marvel', label: 'Marvel', icon: '\u{1F9B8}', grad: 'g16', desc: 'Avengers & super-héros', family: 'sagas' },
+  { key: 'spider_man', label: 'Spider-Man', icon: '\u{1F577}\u{FE0F}', grad: 'g16', desc: 'Peter Parker, le Spider-Verse & ses ennemis', family: 'sagas' },
   { key: 'star_wars', label: 'Star Wars', icon: '\u{2694}\u{FE0F}', grad: 'g17', desc: 'Jedi, Sith & la Force', family: 'sagas' },
   { key: 'disney', label: 'Disney Classics', icon: '\u{1F3F0}', grad: 'g18', desc: 'Contes animés cultes', family: 'cinema' },
   { key: 'pokemon', label: 'Pokémon', icon: '\u{26A1}', grad: 'g19', desc: 'Dresseurs & Pokéballs', family: 'gaming' },
