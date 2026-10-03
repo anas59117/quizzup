@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Quel surnom porte la sélection argentine ?",
+    "text": "Quel surnom porte la sélection argentine de football ?",
     "answers": [
-      "L’Albiceleste",
-      "La Roja",
+      "L'Albiceleste",
       "La Celeste",
+      "La Roja",
       "La Verde"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel capitaine a soulevé la Coupe du monde 2022 ?",
+    "text": "Quelles couleurs dominent le maillot traditionnel de l'Argentine ?",
     "answers": [
-      "Ángel Di María",
-      "Lionel Messi",
-      "Emiliano Martínez",
-      "Lautaro Martínez"
+      "Rouge et blanc",
+      "Bleu ciel et blanc",
+      "Bleu marine et or",
+      "Vert et blanc"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : capitaine élu meilleur joueur du Mondial qatari ?",
+    "text": "Que signifient les initiales AFA ?",
     "answers": [
-      "Diego Maradona",
-      "Carlos Bilardo",
-      "Lionel Messi",
-      "Lionel Scaloni"
+      "Asamblea Federal Argentina",
+      "Asociación Futbolística Americana",
+      "Asociación del Fútbol Argentino",
+      "Alianza de Fútbol Austral"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à Lionel Messi ?",
+    "text": "En quelle année l'Association du football argentin a-t-elle été fondée ?",
     "answers": [
-      "attaquant meilleur buteur du tournoi remporté à domicile",
-      "milieu auteur du but victorieux en finale contre la RFA",
-      "attaquant auteur d’un doublé en demi-finale contre la Croatie",
-      "capitaine élu meilleur joueur du Mondial qatari"
+      "1901",
+      "1916",
+      "1921",
+      "1893"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Combien de Coupes du monde l'Argentine a-t-elle remportées ?",
+    "text": "Quel pays a battu l'Argentine lors de la finale de la première Coupe du monde, en 1930 ?",
     "answers": [
-      "3",
+      "L'Uruguay",
+      "Le Brésil",
+      "L'Italie",
+      "L'Allemagne"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de Coupes du monde masculines l'Argentine avait-elle remportées après 2022 ?",
+    "answers": [
       "2",
+      "3",
       "4",
       "5"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : capitaine génial auteur de la Main de Dieu ?",
+    "text": "Quelles sont les trois années des titres mondiaux argentins ?",
     "answers": [
-      "Mario Kempes",
-      "Diego Maradona",
-      "Jorge Burruchaga",
-      "Julián Álvarez"
+      "1930, 1978 et 2022",
+      "1978, 1990 et 2022",
+      "1978, 1986 et 2022",
+      "1986, 2014 et 2022"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à Diego Maradona ?",
+    "text": "Quelle sélection l'Argentine a-t-elle battue en finale de la Coupe du monde 1978 ?",
     "answers": [
-      "défenseur capitaine du premier titre mondial argentin",
-      "ailier buteur en finale olympique, continentale et mondiale",
-      "capitaine génial auteur de la Main de Dieu",
-      "attaquant auteur de triplés dans deux Coupes du monde différentes"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Contre quelle équipe l'Argentine a-t-elle gagné la finale de la Coupe du monde 2022 ?",
-    "answers": [
-      "La Croatie",
-      "Le Brésil",
-      "Les Pays-Bas",
-      "La France"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : attaquant meilleur buteur du tournoi remporté à domicile ?",
-    "answers": [
-      "Mario Kempes",
-      "Daniel Passarella",
-      "Ángel Di María",
-      "Gabriel Batistuta"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à Mario Kempes ?",
-    "answers": [
-      "sélectionneur champion du monde à domicile",
-      "attaquant meilleur buteur du tournoi remporté à domicile",
-      "gardien décisif aux tirs au but et élu meilleur gardien",
-      "meneur de jeu portant le numéro 10 au Mondial allemand"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Comment s'est terminée la finale de la Coupe du monde 2022 ?",
-    "answers": [
-      "2-1 en prolongation",
-      "1-0",
-      "3-3 puis victoire aux tirs au but",
-      "4-2"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : défenseur capitaine du premier titre mondial argentin ?",
-    "answers": [
-      "César Luis Menotti",
-      "Emiliano Martínez",
-      "Juan Román Riquelme",
-      "Daniel Passarella"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à Daniel Passarella ?",
-    "answers": [
-      "défenseur capitaine du premier titre mondial argentin",
-      "sélectionneur champion au Mexique",
-      "sélectionneur vainqueur de la Copa América puis du Mondial",
-      "milieu puis défenseur longtemps capitaine et recordman de sélections"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Contre quelle équipe l'Argentine a-t-elle gagné la finale du Mondial 1986 ?",
-    "answers": [
-      "L'Italie",
       "La RFA",
-      "La France",
+      "Le Brésil",
+      "L'Italie",
       "Les Pays-Bas"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : sélectionneur champion du monde à domicile ?",
+    "text": "Quelle sélection l'Argentine a-t-elle battue en finale de la Coupe du monde 1986 ?",
     "answers": [
-      "Carlos Bilardo",
-      "Lionel Scaloni",
-      "César Luis Menotti",
-      "Javier Mascherano"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à César Luis Menotti ?",
-    "answers": [
-      "milieu auteur du but victorieux en finale contre la RFA",
-      "attaquant auteur d’un doublé en demi-finale contre la Croatie",
-      "attaquant champion olympique et ami proche de Messi",
-      "sélectionneur champion du monde à domicile"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Contre quelle équipe l'Argentine a-t-elle gagné la finale du Mondial 1978 ?",
-    "answers": [
-      "Les Pays-Bas",
       "La RFA",
-      "Le Brésil",
-      "L'Italie"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : sélectionneur champion au Mexique ?",
-    "answers": [
-      "Jorge Burruchaga",
-      "Carlos Bilardo",
-      "Julián Álvarez",
-      "Sergio Agüero"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à Carlos Bilardo ?",
-    "answers": [
-      "ailier buteur en finale olympique, continentale et mondiale",
-      "attaquant auteur de triplés dans deux Coupes du monde différentes",
-      "sélectionneur champion au Mexique",
-      "attaquant buteur contre le Brésil en huitième en Italie"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quel pays l'Argentine a-t-elle remporté le Mondial 1986 ?",
-    "answers": [
       "L'Italie",
-      "L'Espagne",
-      "Les États-Unis",
-      "Le Mexique"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : milieu auteur du but victorieux en finale contre la RFA ?",
-    "answers": [
-      "Jorge Burruchaga",
-      "Ángel Di María",
-      "Gabriel Batistuta",
-      "Claudio Caniggia"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à Jorge Burruchaga ?",
-    "answers": [
-      "gardien décisif aux tirs au but et élu meilleur gardien",
-      "milieu auteur du but victorieux en finale contre la RFA",
-      "meneur de jeu portant le numéro 10 au Mondial allemand",
-      "capitaine élu meilleur joueur du Mondial qatari"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Contre quelle équipe Maradona a-t-il marqué la « Main de Dieu » ?",
-    "answers": [
-      "La Belgique",
-      "La RFA",
       "L'Angleterre",
-      "L'Italie"
+      "Les Pays-Bas"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : ailier buteur en finale olympique, continentale et mondiale ?",
+    "text": "Dans quel stade s'est jouée la finale du Mondial 2022 ?",
     "answers": [
-      "Emiliano Martínez",
-      "Juan Román Riquelme",
-      "Lionel Messi",
-      "Ángel Di María"
+      "Le stade Al-Bayt",
+      "Le stade de Lusail",
+      "Le stade 974",
+      "Le stade Khalifa"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à Ángel Di María ?",
+    "text": "Quel attaquant argentin fut le meilleur buteur du Mondial 1978 ?",
     "answers": [
-      "ailier buteur en finale olympique, continentale et mondiale",
-      "sélectionneur vainqueur de la Copa América puis du Mondial",
-      "milieu puis défenseur longtemps capitaine et recordman de sélections",
-      "capitaine génial auteur de la Main de Dieu"
+      "Leopoldo Luque",
+      "Daniel Bertoni",
+      "Mario Kempes",
+      "René Houseman"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Contre quelle équipe l'Argentine a-t-elle perdu la finale du Mondial 2014 ?",
+    "text": "Qui était le capitaine de l'Argentine championne du monde en 1978 ?",
     "answers": [
-      "Les Pays-Bas",
-      "L'Allemagne",
-      "Le Brésil",
-      "L'Espagne"
+      "Osvaldo Ardiles",
+      "Ubaldo Fillol",
+      "Mario Kempes",
+      "Daniel Passarella"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : gardien décisif aux tirs au but et élu meilleur gardien ?",
+    "text": "Quel sélectionneur a conduit l'Argentine au titre mondial de 1978 ?",
     "answers": [
-      "Lionel Scaloni",
-      "Javier Mascherano",
-      "Emiliano Martínez",
+      "César Luis Menotti",
+      "Carlos Bilardo",
+      "Alfio Basile",
+      "Marcelo Bielsa"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel fut le score de la finale du Mondial 1978 après prolongation ?",
+    "answers": [
+      "2-0",
+      "3-1",
+      "2-1",
+      "4-2"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de buts Mario Kempes a-t-il marqués au Mondial 1978 ?",
+    "answers": [
+      "5",
+      "7",
+      "6",
+      "8"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui était le capitaine de l'Argentine championne du monde en 1986 ?",
+    "answers": [
+      "Jorge Valdano",
+      "Oscar Ruggeri",
+      "Jorge Burruchaga",
       "Diego Maradona"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à Emiliano Martínez ?",
+    "text": "Quel sélectionneur a conduit l'Argentine au titre mondial de 1986 ?",
     "answers": [
-      "attaquant auteur d’un doublé en demi-finale contre la Croatie",
-      "attaquant champion olympique et ami proche de Messi",
-      "attaquant meilleur buteur du tournoi remporté à domicile",
-      "gardien décisif aux tirs au but et élu meilleur gardien"
+      "Carlos Bilardo",
+      "César Luis Menotti",
+      "Alfio Basile",
+      "Daniel Passarella"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Qui a marqué le but de l'Allemagne en finale du Mondial 2014 contre l'Argentine ?",
+    "text": "Quel fut le score de la finale du Mondial 1986 ?",
+    "answers": [
+      "2-0",
+      "3-2",
+      "2-1",
+      "4-2"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Argentin a marqué le but décisif de la finale du Mondial 1986 ?",
+    "answers": [
+      "Jorge Valdano",
+      "Diego Maradona",
+      "Jorge Burruchaga",
+      "José Luis Brown"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel stade l'Argentine a-t-elle gagné la finale du Mondial 1986 ?",
+    "answers": [
+      "Le stade Jalisco",
+      "Le stade Monumental",
+      "Le Rose Bowl",
+      "Le stade Azteca"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Contre quelle sélection Maradona a-t-il inscrit la « Main de Dieu » ?",
+    "answers": [
+      "L'Angleterre",
+      "La Belgique",
+      "La RFA",
+      "L'Italie"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment est surnommé le second but de Maradona contre l'Angleterre en 1986 ?",
+    "answers": [
+      "Le But d'or",
+      "Le But du siècle",
+      "Le Miracle de Mexico",
+      "La Main céleste"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel fut le score du quart de finale Argentine-Angleterre en 1986 ?",
+    "answers": [
+      "1-0",
+      "3-1",
+      "2-1",
+      "3-2"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle sélection l'Argentine a-t-elle battue en demi-finale du Mondial 1986 ?",
+    "answers": [
+      "La France",
+      "Le Brésil",
+      "L'Espagne",
+      "La Belgique"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de buts Maradona a-t-il marqués lors de cette demi-finale contre la Belgique ?",
+    "answers": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle équipe a battu l'Argentine en finale du Mondial 1990 ?",
+    "answers": [
+      "L'Italie",
+      "La RFA",
+      "Le Brésil",
+      "Les Pays-Bas"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel fut le score de la finale du Mondial 1990 ?",
+    "answers": [
+      "2-0",
+      "2-1",
+      "1-0",
+      "3-1"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur allemand a marqué le seul but de la finale du Mondial 1990 ?",
+    "answers": [
+      "Lothar Matthäus",
+      "Jürgen Klinsmann",
+      "Rudi Völler",
+      "Andreas Brehme"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle sélection a battu l'Argentine lors du match d'ouverture du Mondial 1990 ?",
+    "answers": [
+      "Le Cameroun",
+      "La Roumanie",
+      "L'Union soviétique",
+      "Le Nigeria"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel attaquant argentin a éliminé le Brésil en huitième de finale du Mondial 1990 ?",
+    "answers": [
+      "Gabriel Batistuta",
+      "Claudio Caniggia",
+      "Jorge Burruchaga",
+      "Abel Balbo"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection a battu l'Argentine en finale du Mondial 2014 ?",
+    "answers": [
+      "Les Pays-Bas",
+      "Le Brésil",
+      "L'Allemagne",
+      "L'Espagne"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quel stade s'est jouée la finale du Mondial 2014 ?",
+    "answers": [
+      "Le Mineirão",
+      "L'Arena Corinthians",
+      "Le stade Mané-Garrincha",
+      "Le Maracanã"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur a marqué l'unique but de la finale du Mondial 2014 ?",
     "answers": [
       "Mario Götze",
       "Thomas Müller",
       "Miroslav Klose",
-      "Toni Kroos"
+      "André Schürrle"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : sélectionneur vainqueur de la Copa América puis du Mondial ?",
+    "text": "Quel sélectionneur dirigeait l'Argentine au Mondial 2014 ?",
+    "answers": [
+      "Gerardo Martino",
+      "Alejandro Sabella",
+      "Diego Maradona",
+      "Lionel Scaloni"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Argentin a reçu le Ballon d'or du Mondial 2014 ?",
+    "answers": [
+      "Javier Mascherano",
+      "Ángel Di María",
+      "Lionel Messi",
+      "Sergio Romero"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection l'Argentine a-t-elle battue en finale du Mondial 2022 ?",
+    "answers": [
+      "La Croatie",
+      "Les Pays-Bas",
+      "Le Brésil",
+      "La France"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'est terminée la finale du Mondial 2022 ?",
+    "answers": [
+      "3-3, puis 4-2 aux tirs au but",
+      "2-2, puis 5-4 aux tirs au but",
+      "3-2 après prolongation",
+      "2-1 dans le temps réglementaire"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel sélectionneur a conduit l'Argentine au titre mondial de 2022 ?",
+    "answers": [
+      "Jorge Sampaoli",
+      "Lionel Scaloni",
+      "Alejandro Sabella",
+      "Marcelo Bielsa"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel gardien argentin a reçu le Gant d'or du Mondial 2022 ?",
+    "answers": [
+      "Franco Armani",
+      "Sergio Romero",
+      "Emiliano Martínez",
+      "Gerónimo Rulli"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a transformé le tir au but décisif de la finale du Mondial 2022 ?",
+    "answers": [
+      "Leandro Paredes",
+      "Paulo Dybala",
+      "Lautaro Martínez",
+      "Gonzalo Montiel"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Argentin a marqué le deuxième but de son équipe en finale du Mondial 2022 ?",
+    "answers": [
+      "Ángel Di María",
+      "Julián Álvarez",
+      "Enzo Fernández",
+      "Alexis Mac Allister"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien de buts Lionel Messi a-t-il marqués pendant la finale du Mondial 2022 ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Français a inscrit un triplé contre l'Argentine en finale du Mondial 2022 ?",
+    "answers": [
+      "Olivier Giroud",
+      "Antoine Griezmann",
+      "Kylian Mbappé",
+      "Randal Kolo Muani"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel attaquant français a vu Emiliano Martínez repousser son tir en fin de prolongation de la finale 2022 ?",
+    "answers": [
+      "Kingsley Coman",
+      "Marcus Thuram",
+      "Ousmane Dembélé",
+      "Randal Kolo Muani"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Argentin a inscrit un doublé contre la Croatie en demi-finale du Mondial 2022 ?",
     "answers": [
       "Julián Álvarez",
-      "Lionel Scaloni",
-      "Sergio Agüero",
-      "Mario Kempes"
+      "Lionel Messi",
+      "Lautaro Martínez",
+      "Ángel Di María"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à Lionel Scaloni ?",
+    "text": "Quelle sélection a infligé à l'Argentine sa seule défaite du Mondial 2022 ?",
     "answers": [
-      "attaquant auteur de triplés dans deux Coupes du monde différentes",
-      "attaquant buteur contre le Brésil en huitième en Italie",
-      "sélectionneur vainqueur de la Copa América puis du Mondial",
-      "défenseur capitaine du premier titre mondial argentin"
+      "Le Mexique",
+      "L'Arabie saoudite",
+      "La Pologne",
+      "Les Pays-Bas"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans quel stade mythique l'Argentine a-t-elle remporté la Copa América 2021 ?",
+    "text": "Quelles sélections l'Argentine a-t-elle battues après sa défaite initiale pour terminer première de son groupe en 2022 ?",
+    "answers": [
+      "Le Mexique et l'Australie",
+      "La Pologne et la Croatie",
+      "Le Mexique et la Pologne",
+      "L'Arabie saoudite et le Mexique"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle sélection l'Argentine a-t-elle éliminée en huitième de finale du Mondial 2022 ?",
+    "answers": [
+      "Le Japon",
+      "La Corée du Sud",
+      "Les États-Unis",
+      "L'Australie"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle sélection l'Argentine a-t-elle éliminée aux tirs au but en quart de finale du Mondial 2022 ?",
+    "answers": [
+      "Les Pays-Bas",
+      "La Croatie",
+      "Le Portugal",
+      "L'Angleterre"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sur quel score l'Argentine a-t-elle battu la Croatie en demi-finale du Mondial 2022 ?",
+    "answers": [
+      "2-0",
+      "3-0",
+      "3-1",
+      "4-1"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de Copa América l'Argentine avait-elle remportées après l'édition 2024 ?",
+    "answers": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle sélection l'Argentine a-t-elle battue en finale de la Copa América 2024 ?",
+    "answers": [
+      "Le Brésil",
+      "L'Uruguay",
+      "Le Chili",
+      "La Colombie"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur a marqué le seul but de la finale de la Copa América 2024 ?",
+    "answers": [
+      "Lautaro Martínez",
+      "Lionel Messi",
+      "Ángel Di María",
+      "Julián Álvarez"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle sélection l'Argentine a-t-elle battue en finale de la Copa América 2021 ?",
+    "answers": [
+      "Le Chili",
+      "Le Brésil",
+      "La Colombie",
+      "L'Uruguay"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a marqué l'unique but de la finale de la Copa América 2021 ?",
+    "answers": [
+      "Lionel Messi",
+      "Lautaro Martínez",
+      "Ángel Di María",
+      "Rodrigo De Paul"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année l'Argentine a-t-elle remporté sa première Copa América ?",
+    "answers": [
+      "1916",
+      "1925",
+      "1930",
+      "1921"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle sélection l'Argentine a-t-elle battue en finale de la Copa América 1993 ?",
+    "answers": [
+      "Le Mexique",
+      "Le Brésil",
+      "La Colombie",
+      "L'Uruguay"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel attaquant a marqué les deux buts argentins en finale de la Copa América 1993 ?",
+    "answers": [
+      "Claudio Caniggia",
+      "Gabriel Batistuta",
+      "Diego Simeone",
+      "Abel Balbo"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelles éditions consécutives de la Copa América l'Argentine a-t-elle perdues aux tirs au but contre le Chili ?",
+    "answers": [
+      "2007 et 2011",
+      "2011 et 2015",
+      "2015 et 2016",
+      "2016 et 2019"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel stade l'Argentine a-t-elle remporté la finale de la Copa América 2021 ?",
     "answers": [
       "Le Monumental",
       "La Bombonera",
-      "L'Azteca",
+      "Le stade Centenario",
       "Le Maracanã"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : attaquant auteur d’un doublé en demi-finale contre la Croatie ?",
+    "text": "Quelle sélection l'Argentine a-t-elle battue lors de la Finalissima 2022 ?",
     "answers": [
-      "Julián Álvarez",
+      "L'Italie",
+      "L'Espagne",
+      "L'Angleterre",
+      "Le Portugal"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel fut le score de la Finalissima 2022 ?",
+    "answers": [
+      "2-0",
+      "3-0",
+      "3-1",
+      "4-1"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quel stade la Finalissima 2022 s'est-elle jouée ?",
+    "answers": [
+      "Le stade olympique de Rome",
+      "Le stade de Lusail",
+      "Wembley",
+      "Le Maracanã"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En quelles années l'Argentine a-t-elle remporté l'or olympique masculin en football ?",
+    "answers": [
+      "1996 et 2004",
+      "2000 et 2008",
+      "2004 et 2012",
+      "2004 et 2008"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a marqué le but de la finale olympique 2008 contre le Nigeria ?",
+    "answers": [
+      "Ángel Di María",
+      "Lionel Messi",
+      "Sergio Agüero",
+      "Ezequiel Lavezzi"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel attaquant argentin a réussi un triplé lors des Mondiaux 1994 et 1998 ?",
+    "answers": [
+      "Hernán Crespo",
       "Gabriel Batistuta",
       "Claudio Caniggia",
-      "Daniel Passarella"
+      "Sergio Agüero"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à Julián Álvarez ?",
+    "text": "Quel meneur portait le numéro 10 argentin au Mondial 2006 ?",
     "answers": [
-      "meneur de jeu portant le numéro 10 au Mondial allemand",
-      "attaquant auteur d’un doublé en demi-finale contre la Croatie",
-      "capitaine élu meilleur joueur du Mondial qatari",
-      "sélectionneur champion du monde à domicile"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Contre quelle équipe l'Argentine a-t-elle gagné la finale de la Copa América 2021 ?",
-    "answers": [
-      "Le Chili",
-      "L'Uruguay",
-      "Le Brésil",
-      "La Colombie"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : attaquant auteur de triplés dans deux Coupes du monde différentes ?",
-    "answers": [
+      "Pablo Aimar",
+      "Lionel Messi",
       "Juan Román Riquelme",
-      "Lionel Messi",
-      "César Luis Menotti",
-      "Gabriel Batistuta"
+      "Javier Saviola"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à Gabriel Batistuta ?",
+    "text": "Combien de matches de Coupe du monde Lionel Messi comptait-il après la finale 2022, un record ?",
     "answers": [
-      "attaquant auteur de triplés dans deux Coupes du monde différentes",
-      "milieu puis défenseur longtemps capitaine et recordman de sélections",
-      "capitaine génial auteur de la Main de Dieu",
-      "sélectionneur champion au Mexique"
+      "24",
+      "25",
+      "27",
+      "26"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Qui a marqué le but de la finale de la Copa América 2021 ?",
-    "answers": [
-      "Lionel Messi",
-      "Ángel Di María",
-      "Lautaro Martínez",
-      "Rodrigo De Paul"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : meneur de jeu portant le numéro 10 au Mondial allemand ?",
+    "text": "Quel ancien capitaine argentin était surnommé « El Jefecito » ?",
     "answers": [
       "Javier Mascherano",
-      "Diego Maradona",
-      "Juan Román Riquelme",
-      "Carlos Bilardo"
+      "Javier Zanetti",
+      "Diego Simeone",
+      "Roberto Ayala"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à Juan Román Riquelme ?",
+    "text": "Quel Argentin fut le meilleur buteur de la première Coupe du monde, en 1930 ?",
     "answers": [
-      "attaquant champion olympique et ami proche de Messi",
-      "attaquant meilleur buteur du tournoi remporté à domicile",
-      "milieu auteur du but victorieux en finale contre la RFA",
-      "meneur de jeu portant le numéro 10 au Mondial allemand"
+      "Luis Monti",
+      "Guillermo Stábile",
+      "Manuel Ferreira",
+      "Carlos Peucelle"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Contre quelle équipe l'Argentine a-t-elle gagné la Copa América 2024 ?",
+    "text": "Quel surnom porte River Plate ?",
     "answers": [
-      "La Colombie",
-      "Le Brésil",
-      "L'Uruguay",
-      "Le Chili"
+      "Los Xeneizes",
+      "La Academia",
+      "Los Millonarios",
+      "El Ciclón"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : milieu puis défenseur longtemps capitaine et recordman de sélections ?",
+    "text": "Comment s'appelle le stade historique de River Plate ?",
     "answers": [
-      "Sergio Agüero",
-      "Javier Mascherano",
-      "Mario Kempes",
-      "Jorge Burruchaga"
+      "La Bombonera",
+      "El Cilindro",
+      "El Nuevo Gasómetro",
+      "Le Monumental"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à Javier Mascherano ?",
+    "text": "Quel motif caractérise le maillot blanc de River Plate ?",
     "answers": [
-      "attaquant buteur contre le Brésil en huitième en Italie",
-      "défenseur capitaine du premier titre mondial argentin",
-      "milieu puis défenseur longtemps capitaine et recordman de sélections",
-      "ailier buteur en finale olympique, continentale et mondiale"
+      "Une bande diagonale rouge",
+      "Deux bandes verticales bleues",
+      "Une croix rouge",
+      "Un chevron noir"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Combien de Copa América l'Argentine compte-t-elle après 2024, un record ?",
+    "text": "Combien de Copa Libertadores River Plate avait-il remportées après 2018 ?",
     "answers": [
-      "12",
-      "15",
-      "9",
-      "16"
+      "3",
+      "4",
+      "5",
+      "6"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : attaquant champion olympique et ami proche de Messi ?",
+    "text": "Dans quel stade européen River Plate a-t-il battu Boca en finale de Libertadores 2018 ?",
     "answers": [
-      "Sergio Agüero",
-      "Claudio Caniggia",
-      "Daniel Passarella",
-      "Ángel Di María"
+      "Wembley",
+      "Le Camp Nou",
+      "Le Santiago-Bernabéu",
+      "Le stade de France"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à Sergio Agüero ?",
+    "text": "Quel surnom porte Boca Juniors ?",
     "answers": [
-      "capitaine élu meilleur joueur du Mondial qatari",
-      "attaquant champion olympique et ami proche de Messi",
-      "sélectionneur champion du monde à domicile",
-      "gardien décisif aux tirs au but et élu meilleur gardien"
+      "Los Millonarios",
+      "Los Cuervos",
+      "Los Leprosos",
+      "Los Xeneizes"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelles sont les couleurs du maillot argentin ?",
+    "text": "Comment s'appelle le stade de Boca Juniors ?",
     "answers": [
-      "Jaune et vert",
+      "La Bombonera",
+      "Le Monumental",
+      "El Cilindro",
+      "La Doble Visera"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelles sont les couleurs traditionnelles de Boca Juniors ?",
+    "answers": [
       "Rouge et blanc",
+      "Bleu et or",
       "Bleu ciel et blanc",
-      "Bleu et rouge"
+      "Noir et rouge"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quel international argentin correspond à cette description : attaquant buteur contre le Brésil en huitième en Italie ?",
+    "text": "Combien de Copa Libertadores Boca Juniors avait-il remportées après son titre de 2007 ?",
     "answers": [
-      "Lionel Messi",
-      "César Luis Menotti",
-      "Emiliano Martínez",
-      "Claudio Caniggia"
+      "5",
+      "7",
+      "6",
+      "8"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Argentine — Albiceleste », quelle description correspond à Claudio Caniggia ?",
+    "text": "Quel attaquant a marqué les deux buts de Boca contre le Real Madrid en Coupe intercontinentale 2000 ?",
     "answers": [
-      "attaquant buteur contre le Brésil en huitième en Italie",
-      "capitaine génial auteur de la Main de Dieu",
-      "sélectionneur champion au Mexique",
-      "sélectionneur vainqueur de la Copa América puis du Mondial"
+      "Juan Román Riquelme",
+      "Guillermo Barros Schelotto",
+      "Marcelo Delgado",
+      "Martín Palermo"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Contre quelle équipe l'Argentine a-t-elle gagné la Finalissima 2022 ?",
+    "text": "Quel surnom continental est associé à Independiente ?",
     "answers": [
-      "L'Espagne",
-      "L'Italie",
-      "La France",
-      "L'Angleterre"
+      "Rey de Copas",
+      "El Fortín",
+      "El Granate",
+      "El Taladro"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quelle ville jouent Independiente et Racing Club ?",
+    "answers": [
+      "Rosario",
+      "Avellaneda",
+      "La Plata",
+      "Córdoba"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien de Copa Libertadores Independiente a-t-il remportées, un record ?",
+    "answers": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelles années couvrent la série record de quatre Libertadores consécutives d'Independiente ?",
+    "answers": [
+      "1964 à 1967",
+      "1971 à 1974",
+      "1973 à 1976",
+      "1972 à 1975"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club européen Independiente a-t-il battu en Coupe intercontinentale 1984 ?",
+    "answers": [
+      "Liverpool",
+      "La Juventus",
+      "Le Bayern Munich",
+      "Le Steaua Bucarest"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel surnom porte Racing Club ?",
+    "answers": [
+      "El Rojo",
+      "La Academia",
+      "El Fortín",
+      "El Lobo"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quelle ville se trouve le stade de Racing Club ?",
+    "answers": [
+      "Buenos Aires",
+      "Rosario",
+      "Avellaneda",
+      "La Plata"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel surnom porte le stade Presidente Perón de Racing ?",
+    "answers": [
+      "La Bombonera",
+      "El Palacio",
+      "El Coloso",
+      "El Cilindro"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En quelle année Racing Club a-t-il remporté sa première Copa Libertadores ?",
+    "answers": [
+      "1967",
+      "1966",
+      "1971",
+      "1988"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club Racing a-t-il battu en Coupe intercontinentale 1967 ?",
+    "answers": [
+      "Manchester United",
+      "Le Celtic",
+      "L'Inter Milan",
+      "Le Benfica"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville joue Estudiantes ?",
+    "answers": [
+      "Rosario",
+      "Córdoba",
+      "La Plata",
+      "Santa Fe"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel club anglais Estudiantes a-t-il battu en Coupe intercontinentale 1968 ?",
+    "answers": [
+      "Leeds United",
+      "Liverpool",
+      "Manchester City",
+      "Manchester United"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club italien Vélez Sarsfield a-t-il battu en Coupe intercontinentale 1994 ?",
+    "answers": [
+      "L'AC Milan",
+      "La Juventus",
+      "L'Inter Milan",
+      "Parme"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En quelle année San Lorenzo a-t-il remporté sa première Copa Libertadores ?",
+    "answers": [
+      "2002",
+      "2014",
+      "2008",
+      "2016"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En quelle année Argentinos Juniors a-t-il remporté la Copa Libertadores ?",
+    "answers": [
+      "1979",
+      "1984",
+      "1985",
+      "1991"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment appelle-t-on le derby entre Boca Juniors et River Plate ?",
+    "answers": [
+      "Le Clásico de Avellaneda",
+      "Le Clásico Rosarino",
+      "Le Clásico Platense",
+      "Le Superclásico"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quels clubs disputent le Clásico de Avellaneda ?",
+    "answers": [
+      "Independiente et Racing",
+      "River Plate et Boca Juniors",
+      "Rosario Central et Newell's",
+      "Estudiantes et Gimnasia"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quels clubs disputent le Clásico Rosarino ?",
+    "answers": [
+      "Colón et Unión",
+      "Rosario Central et Newell's Old Boys",
+      "Belgrano et Talleres",
+      "Lanús et Banfield"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quels clubs disputent le Clásico Platense ?",
+    "answers": [
+      "Huracán et San Lorenzo",
+      "Vélez et Ferro",
+      "Estudiantes et Gimnasia",
+      "Argentinos Juniors et Platense"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club est le grand rival de San Lorenzo dans le Clásico Porteño ?",
+    "answers": [
+      "Vélez Sarsfield",
+      "Argentinos Juniors",
+      "Chacarita Juniors",
+      "Huracán"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
