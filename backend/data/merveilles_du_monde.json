@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Dans quel pays ou espace se trouve la Grande Pyramide de Gizeh ?",
+    "text": "Dans quel pays se trouve la Grande Pyramide de Gizeh ?",
     "answers": [
-      "l'Égypte",
-      "la Mésopotamie selon la tradition",
-      "la Grèce",
-      "la Turquie actuelle"
+      "L’Égypte",
+      "L’Irak",
+      "La Grèce",
+      "La Turquie"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Où situe-t-on la Grande Pyramide de Gizeh ?",
+    "text": "Pour quel pharaon la Grande Pyramide fut-elle construite ?",
     "answers": [
-      "la Mésopotamie selon la tradition",
-      "l'Égypte",
-      "la Grèce",
-      "la Turquie actuelle"
+      "Ramsès II",
+      "Khéops",
+      "Toutânkhamon",
+      "Djéser"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans quel pays ou espace se trouve les jardins suspendus de Babylone ?",
+    "text": "Quelle particularité distingue la Grande Pyramide des six autres Merveilles antiques ?",
     "answers": [
-      "la Grèce",
-      "la Turquie actuelle",
-      "la Mésopotamie selon la tradition",
-      "l'Égypte"
+      "C’est la plus récente",
+      "Elle se trouvait en Grèce",
+      "C’est la seule encore largement debout",
+      "Elle était entièrement en bronze"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on les jardins suspendus de Babylone ?",
+    "text": "Quelle fonction la Grande Pyramide remplissait-elle principalement ?",
     "answers": [
-      "la Grèce",
-      "la Turquie actuelle",
-      "l'Égypte",
-      "la Mésopotamie selon la tradition"
+      "Un observatoire romain",
+      "Un palais administratif",
+      "Un phare maritime",
+      "Un complexe funéraire royal"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel pays ou espace se trouve la statue de Zeus à Olympie ?",
+    "text": "Quels matériaux dominent dans la structure de la Grande Pyramide ?",
     "answers": [
-      "la Grèce",
-      "la Turquie actuelle",
-      "l'Égypte",
-      "la Chine"
+      "Le calcaire et le granite",
+      "La brique cuite et le bois",
+      "Le marbre et le bronze",
+      "Le grès et l’acier"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Où situe-t-on la statue de Zeus à Olympie ?",
+    "text": "À quelle ville antique associe-t-on les Jardins suspendus ?",
     "answers": [
-      "la Turquie actuelle",
-      "la Grèce",
-      "l'Égypte",
-      "la Chine"
+      "Ninive uniquement avec certitude",
+      "Babylone",
+      "Alexandrie",
+      "Éphèse"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans quel pays ou espace se trouve le temple d'Artémis à Éphèse ?",
+    "text": "Dans quel pays actuel se trouvait Babylone ?",
     "answers": [
-      "l'Égypte",
-      "la Chine",
-      "la Turquie actuelle",
-      "l'Italie"
+      "L’Iran",
+      "La Syrie",
+      "L’Irak",
+      "La Jordanie"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Où situe-t-on le temple d'Artémis à Éphèse ?",
+    "text": "Quel roi est traditionnellement associé à la construction des Jardins suspendus ?",
     "answers": [
-      "l'Égypte",
-      "la Chine",
-      "l'Italie",
-      "la Turquie actuelle"
+      "Cyrus le Grand",
+      "Darius Ier",
+      "Hammurabi",
+      "Nabuchodonosor II"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel pays ou espace se trouve le mausolée d'Halicarnasse ?",
+    "text": "Quelle incertitude entoure les Jardins suspendus de Babylone ?",
     "answers": [
-      "la Turquie actuelle",
-      "l'Égypte",
-      "la Chine",
-      "l'Italie"
+      "Leur existence et leur emplacement exacts restent débattus",
+      "Leur destruction en 2007 est filmée",
+      "Leur architecte romain est inconnu",
+      "Ils sont encore ouverts au public"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on le mausolée d'Halicarnasse ?",
+    "text": "Quel défi technique les récits des Jardins suspendus supposent-ils ?",
     "answers": [
-      "l'Égypte",
-      "la Turquie actuelle",
-      "la Chine",
-      "l'Italie"
+      "Faire flotter des blocs de granite",
+      "Élever de l’eau vers des terrasses plantées",
+      "Éclairer une tour par des miroirs",
+      "Déplacer une statue de bronze"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans quel pays ou espace se trouve le colosse de Rhodes ?",
+    "text": "Dans quel sanctuaire grec se trouvait la statue de Zeus ?",
     "answers": [
-      "l'Égypte",
-      "la Chine",
-      "la Grèce",
-      "la Jordanie"
+      "Delphes",
+      "Corinthe",
+      "Olympie",
+      "Sparte"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Où situe-t-on le colosse de Rhodes ?",
+    "text": "Quel sculpteur est traditionnellement crédité de la statue de Zeus à Olympie ?",
     "answers": [
-      "l'Égypte",
-      "la Chine",
-      "la Jordanie",
-      "la Grèce"
+      "Praxitèle",
+      "Myron",
+      "Polyclète",
+      "Phidias"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans quel pays ou espace se trouve le phare d'Alexandrie ?",
+    "text": "Que signifie “chryséléphantine” à propos de la statue de Zeus ?",
     "answers": [
-      "l'Égypte",
-      "la Chine",
-      "la Jordanie",
-      "le Brésil"
+      "Faite notamment d’or et d’ivoire",
+      "Taillée dans un seul marbre",
+      "Coulée entièrement en bronze",
+      "Recouverte de mosaïques de verre"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on le phare d'Alexandrie ?",
+    "text": "Dans quel bâtiment la statue de Zeus était-elle installée ?",
     "answers": [
-      "la Chine",
-      "l'Égypte",
-      "la Jordanie",
-      "le Brésil"
+      "Le Parthénon",
+      "Le temple de Zeus",
+      "Le temple d’Apollon",
+      "L’Érechthéion"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel pays ou espace se trouve la Grande Muraille ?",
+    "text": "Comment Zeus était-il représenté dans cette œuvre monumentale ?",
     "answers": [
-      "la Jordanie",
-      "le Brésil",
-      "la Chine",
-      "le Pérou"
+      "Debout avec un arc",
+      "À cheval",
+      "Assis sur un trône",
+      "Conduisant un char"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Où situe-t-on la Grande Muraille ?",
+    "text": "Dans quelle cité antique se trouvait le temple d’Artémis ?",
     "answers": [
-      "la Jordanie",
-      "le Brésil",
-      "le Pérou",
-      "la Chine"
+      "Pergame",
+      "Milet",
+      "Halicarnasse",
+      "Éphèse"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans quel pays ou espace se trouve Pétra ?",
+    "text": "Dans quel pays actuel se situe le site d’Éphèse ?",
     "answers": [
-      "la Jordanie",
-      "le Brésil",
-      "le Pérou",
-      "le Mexique"
+      "La Turquie",
+      "La Grèce",
+      "L’Égypte",
+      "L’Italie"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Où situe-t-on Pétra ?",
+    "text": "À quelle divinité le grand temple d’Éphèse était-il consacré ?",
     "answers": [
-      "le Brésil",
-      "la Jordanie",
-      "le Pérou",
-      "le Mexique"
+      "Athéna",
+      "Artémis",
+      "Héra",
+      "Aphrodite"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel pays ou espace se trouve le Christ Rédempteur ?",
+    "text": "Qui incendia, selon la tradition, le temple d’Artémis en 356 av. J.-C. ?",
     "answers": [
-      "le Pérou",
-      "le Mexique",
-      "le Brésil",
-      "l'Italie"
+      "Périclès",
+      "Xerxès",
+      "Érostrate",
+      "Alaric"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on le Christ Rédempteur ?",
+    "text": "Quel élément architectural rendait le temple d’Artémis particulièrement monumental ?",
     "answers": [
-      "le Pérou",
-      "le Mexique",
-      "l'Italie",
-      "le Brésil"
+      "Son dôme en béton",
+      "Ses arcs-boutants",
+      "Son minaret hélicoïdal",
+      "Ses nombreuses colonnes de marbre"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans quel pays ou espace se trouve le Machu Picchu ?",
+    "text": "Dans quelle ville antique se trouvait le Mausolée de Mausole ?",
     "answers": [
-      "le Pérou",
-      "le Mexique",
-      "l'Italie",
-      "l'Inde"
+      "Halicarnasse",
+      "Rhodes",
+      "Byzance",
+      "Troie"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Où situe-t-on le Machu Picchu ?",
+    "text": "Quel mot courant vient du nom du souverain Mausole ?",
     "answers": [
-      "le Mexique",
-      "le Pérou",
-      "l'Italie",
-      "l'Inde"
+      "Colosse",
+      "Mausolée",
+      "Phare",
+      "Obélisque"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans quel pays ou espace se trouve Chichén Itzá ?",
+    "text": "Quelle épouse et sœur de Mausole est associée à l’édification de son tombeau monumental ?",
     "answers": [
-      "l'Italie",
-      "l'Inde",
-      "le Mexique",
-      "le Cambodge"
+      "Cléopâtre VII",
+      "Roxane",
+      "Artémise II",
+      "Aspasie"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on Chichén Itzá ?",
+    "text": "Quelle ville turque moderne occupe le site d’Halicarnasse ?",
     "answers": [
-      "l'Italie",
-      "l'Inde",
-      "le Cambodge",
-      "le Mexique"
+      "Izmir",
+      "Antalya",
+      "Bursa",
+      "Bodrum"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel pays ou espace se trouve le Colisée ?",
+    "text": "Quelle était la fonction du Mausolée d’Halicarnasse ?",
     "answers": [
-      "l'Italie",
-      "l'Inde",
-      "le Cambodge",
-      "l'Indonésie"
+      "Tombeau dynastique",
+      "Temple oraculaire",
+      "Stade sportif",
+      "Bibliothèque"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Où situe-t-on le Colisée ?",
+    "text": "Sur quelle île grecque se dressait le Colosse ?",
     "answers": [
-      "l'Inde",
-      "l'Italie",
-      "le Cambodge",
-      "l'Indonésie"
+      "Crète",
+      "Rhodes",
+      "Chypre",
+      "Délos"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans quel pays ou espace se trouve le Taj Mahal ?",
+    "text": "Quel dieu représentait le Colosse de Rhodes ?",
     "answers": [
-      "le Cambodge",
-      "l'Indonésie",
-      "l'Inde",
-      "le Chili"
+      "Poséidon",
+      "Apollon",
+      "Hélios",
+      "Hermès"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Où situe-t-on le Taj Mahal ?",
+    "text": "Quel sculpteur est associé au Colosse de Rhodes ?",
     "answers": [
-      "le Cambodge",
-      "l'Indonésie",
-      "le Chili",
-      "l'Inde"
+      "Phidias",
+      "Lysippe",
+      "Scopas",
+      "Charès de Lindos"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel pays ou espace se trouve Angkor Vat ?",
+    "text": "Quel événement détruisit le Colosse de Rhodes ?",
     "answers": [
-      "le Cambodge",
-      "l'Indonésie",
-      "le Chili",
-      "le Royaume-Uni"
+      "Un tremblement de terre",
+      "Une éruption volcanique",
+      "Un incendie de forêt",
+      "Une invasion perse"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on Angkor Vat ?",
+    "text": "Quel matériau constituait principalement le revêtement du Colosse ?",
     "answers": [
-      "l'Indonésie",
-      "le Cambodge",
-      "le Chili",
-      "le Royaume-Uni"
+      "L’ivoire",
+      "Le bronze",
+      "Le granite",
+      "La brique vernissée"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans quel pays ou espace se trouve Borobudur ?",
+    "text": "Près de quelle ville se trouvait le phare antique de Pharos ?",
     "answers": [
-      "le Chili",
-      "le Royaume-Uni",
-      "l'Indonésie",
-      "le Mexique"
+      "Carthage",
+      "Antioche",
+      "Alexandrie",
+      "Athènes"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Où situe-t-on Borobudur ?",
+    "text": "Dans quel pays actuel se trouvait le phare d’Alexandrie ?",
     "answers": [
-      "le Chili",
-      "le Royaume-Uni",
-      "le Mexique",
-      "l'Indonésie"
+      "La Libye",
+      "La Tunisie",
+      "Le Liban",
+      "L’Égypte"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans quel pays ou espace se trouve les Moaï de Rapa Nui ?",
+    "text": "Sous quelle dynastie le phare d’Alexandrie fut-il édifié ?",
     "answers": [
-      "le Chili",
-      "le Royaume-Uni",
-      "le Mexique",
-      "le Myanmar"
+      "Les Ptolémées",
+      "Les Séleucides",
+      "Les Sassanides",
+      "Les Omeyyades"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on les Moaï de Rapa Nui ?",
+    "text": "À quoi servait principalement le phare d’Alexandrie ?",
     "answers": [
-      "le Royaume-Uni",
-      "le Chili",
-      "le Mexique",
-      "le Myanmar"
+      "Mesurer les crues du Nil",
+      "Guider les navires vers le port",
+      "Abriter un tombeau royal",
+      "Observer les Jeux olympiques"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel pays ou espace se trouve Stonehenge ?",
+    "text": "Quel phénomène contribua fortement à la ruine du phare d’Alexandrie ?",
     "answers": [
-      "le Mexique",
-      "le Myanmar",
-      "le Royaume-Uni",
-      "l'Égypte"
+      "Une glaciation",
+      "Une coulée de lave",
+      "Des séismes répétés",
+      "Une crue du Tigre"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Où situe-t-on Stonehenge ?",
+    "text": "Dans quel pays se trouve la Grande Muraille ?",
     "answers": [
-      "le Mexique",
-      "le Myanmar",
-      "l'Égypte",
-      "le Royaume-Uni"
+      "La Mongolie",
+      "Le Japon",
+      "La Corée du Sud",
+      "La Chine"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans quel pays ou espace se trouve la cité de Teotihuacan ?",
+    "text": "Quelle dynastie a construit une grande partie des sections aujourd’hui les mieux conservées ?",
     "answers": [
-      "le Mexique",
-      "le Myanmar",
-      "l'Égypte",
-      "la France"
+      "La dynastie Ming",
+      "La dynastie Shang",
+      "La dynastie Zhou occidentale",
+      "La dynastie Sui uniquement"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Où situe-t-on la cité de Teotihuacan ?",
+    "text": "Quel était l’un des objectifs majeurs de la Grande Muraille ?",
     "answers": [
-      "le Myanmar",
-      "le Mexique",
-      "l'Égypte",
-      "la France"
+      "Acheminer l’eau du Yangtsé",
+      "Défendre et contrôler les frontières du nord",
+      "Séparer les provinces agricoles du sud",
+      "Servir de route maritime"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel pays ou espace se trouve la vallée de Bagan ?",
+    "text": "Quelle affirmation populaire sur la Grande Muraille est fausse ?",
     "answers": [
-      "l'Égypte",
-      "la France",
-      "le Myanmar",
-      "la Zambie et le Zimbabwe"
+      "Elle comprend des tours de guet",
+      "Elle résulte de plusieurs phases de construction",
+      "Elle est clairement visible depuis la Lune à l’œil nu",
+      "Elle traverse des reliefs variés"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on la vallée de Bagan ?",
+    "text": "Quel matériau fut largement employé dans les sections Ming près de Pékin ?",
     "answers": [
-      "l'Égypte",
-      "la France",
-      "la Zambie et le Zimbabwe",
-      "le Myanmar"
+      "Le marbre blanc uniquement",
+      "Le bronze massif",
+      "Le verre volcanique",
+      "La brique et la pierre"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans quel pays ou espace se trouve les temples d'Abou Simbel ?",
+    "text": "Dans quel pays se trouve Pétra ?",
     "answers": [
-      "l'Égypte",
-      "la France",
-      "la Zambie et le Zimbabwe",
-      "les États-Unis"
+      "La Jordanie",
+      "Le Liban",
+      "Israël",
+      "L’Arabie saoudite"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Où situe-t-on les temples d'Abou Simbel ?",
+    "text": "Quel peuple fit de Pétra une capitale caravanière majeure ?",
     "answers": [
-      "la France",
-      "l'Égypte",
-      "la Zambie et le Zimbabwe",
-      "les États-Unis"
+      "Les Hittites",
+      "Les Nabatéens",
+      "Les Philistins",
+      "Les Minoens"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans quel pays ou espace se trouve le mont-Saint-Michel ?",
+    "text": "Quel célèbre monument de Pétra porte le nom arabe Al-Khazneh ?",
     "answers": [
-      "la Zambie et le Zimbabwe",
-      "les États-Unis",
-      "la France",
-      "le Vietnam"
+      "Le Monastère",
+      "Le Grand Temple",
+      "Le Trésor",
+      "Le Qasr al-Bint"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on le mont-Saint-Michel ?",
+    "text": "Dans quel matériau les façades de Pétra sont-elles principalement taillées ?",
     "answers": [
-      "la Zambie et le Zimbabwe",
-      "les États-Unis",
-      "le Vietnam",
-      "la France"
+      "Le granite noir",
+      "Le marbre de Carrare",
+      "Le basalte uniquement",
+      "Le grès"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel pays ou espace se trouve les chutes Victoria ?",
+    "text": "Quelle maîtrise technique permit à Pétra de prospérer en milieu aride ?",
     "answers": [
-      "la Zambie et le Zimbabwe",
-      "les États-Unis",
-      "le Vietnam",
-      "l'Égypte"
+      "La collecte et le stockage de l’eau",
+      "La fonte du fer sous la pluie",
+      "La culture sur banquise",
+      "La construction de digues maritimes"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Où situe-t-on les chutes Victoria ?",
+    "text": "Dans quelle ville se trouve le Colisée ?",
     "answers": [
-      "les États-Unis",
-      "la Zambie et le Zimbabwe",
-      "le Vietnam",
-      "l'Égypte"
+      "Naples",
+      "Rome",
+      "Milan",
+      "Ravenne"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans quel pays ou espace se trouve le parc de Yellowstone ?",
+    "text": "Quel autre nom porte le Colisée ?",
     "answers": [
-      "le Vietnam",
-      "l'Égypte",
-      "les États-Unis",
-      "la Mésopotamie selon la tradition"
+      "Le cirque Maxime",
+      "Le théâtre de Marcellus",
+      "L’amphithéâtre Flavien",
+      "Le forum de Trajan"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Où situe-t-on le parc de Yellowstone ?",
+    "text": "Quel empereur inaugura le Colisée en 80 apr. J.-C. ?",
     "answers": [
-      "le Vietnam",
-      "l'Égypte",
-      "la Mésopotamie selon la tradition",
-      "les États-Unis"
+      "Auguste",
+      "Néron",
+      "Hadrien",
+      "Titus"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel pays ou espace se trouve la baie d'Ha Long ?",
+    "text": "Comment appelle-t-on le réseau souterrain sous l’arène du Colisée ?",
     "answers": [
-      "le Vietnam",
-      "l'Égypte",
-      "la Mésopotamie selon la tradition",
-      "la Grèce"
+      "L’hypogée",
+      "Le vomitorium",
+      "Le cardo",
+      "Le péristyle"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Où situe-t-on la baie d'Ha Long ?",
+    "text": "Quels spectacles sont emblématiques du Colisée antique ?",
     "answers": [
-      "l'Égypte",
-      "le Vietnam",
-      "la Mésopotamie selon la tradition",
-      "la Grèce"
+      "Les courses de chars olympiques uniquement",
+      "Les combats de gladiateurs",
+      "Les débats du Sénat",
+      "Les couronnements pontificaux"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel pays se trouve Chichén Itzá ?",
+    "answers": [
+      "Le Guatemala",
+      "Le Belize",
+      "Le Mexique",
+      "Le Honduras"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quelle péninsule se situe Chichén Itzá ?",
+    "answers": [
+      "La Basse-Californie",
+      "Le Sinaï",
+      "La Floride",
+      "Le Yucatán"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "À quelle civilisation précolombienne Chichén Itzá est-elle principalement associée ?",
+    "answers": [
+      "La civilisation maya",
+      "La civilisation inca",
+      "La civilisation olmèque uniquement",
+      "La civilisation muisca"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel nom porte la grande pyramide à degrés de Chichén Itzá ?",
+    "answers": [
+      "La pyramide du Soleil",
+      "El Castillo",
+      "Le Templo Mayor",
+      "La Huaca del Sol"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle divinité est associé le temple d’El Castillo ?",
+    "answers": [
+      "Quetzalcóatl exclusivement aztèque",
+      "Inti",
+      "Kukulkán",
+      "Viracocha"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel pays se trouve le Machu Picchu ?",
+    "answers": [
+      "La Bolivie",
+      "L’Équateur",
+      "Le Chili",
+      "Le Pérou"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "À quelle civilisation appartient le Machu Picchu ?",
+    "answers": [
+      "La civilisation inca",
+      "La civilisation maya",
+      "La civilisation aztèque",
+      "La civilisation nazca uniquement"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle chaîne de montagnes se trouve le Machu Picchu ?",
+    "answers": [
+      "Les Rocheuses",
+      "Les Andes",
+      "L’Himalaya",
+      "Les Alpes"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel explorateur américain fit connaître largement le Machu Picchu à l’international en 1911 ?",
+    "answers": [
+      "Percy Fawcett",
+      "Thor Heyerdahl",
+      "Hiram Bingham",
+      "Robert Peary"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle technique agricole marque les pentes du Machu Picchu ?",
+    "answers": [
+      "Les polders",
+      "Les chinampas flottantes",
+      "Les rizières marines",
+      "Les terrasses"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville indienne se trouve le Taj Mahal ?",
+    "answers": [
+      "Agra",
+      "Jaipur",
+      "Delhi",
+      "Varanasi"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel empereur moghol ordonna la construction du Taj Mahal ?",
+    "answers": [
+      "Akbar",
+      "Shah Jahan",
+      "Aurangzeb",
+      "Babur"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En mémoire de qui le Taj Mahal fut-il principalement édifié ?",
+    "answers": [
+      "Nur Jahan",
+      "Jodha Bai",
+      "Mumtaz Mahal",
+      "Razia Sultana"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel matériau donne au Taj Mahal son aspect blanc caractéristique ?",
+    "answers": [
+      "Le grès rouge uniquement",
+      "Le granite gris",
+      "L’albâtre noir",
+      "Le marbre blanc"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel fleuve borde le complexe du Taj Mahal ?",
+    "answers": [
+      "La Yamuna",
+      "Le Gange",
+      "L’Indus",
+      "Le Brahmapoutre"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se trouve le Christ Rédempteur ?",
+    "answers": [
+      "São Paulo",
+      "Rio de Janeiro",
+      "Brasília",
+      "Salvador"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Sur quelle montagne s’élève le Christ Rédempteur ?",
+    "answers": [
+      "Le Pain de Sucre",
+      "Le mont Roraima",
+      "Le Corcovado",
+      "Le Pico da Neblina"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quel pays se trouve le Christ Rédempteur ?",
+    "answers": [
+      "L’Argentine",
+      "Le Portugal",
+      "La Colombie",
+      "Le Brésil"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quel courant artistique rattache-t-on généralement la statue du Christ Rédempteur ?",
+    "answers": [
+      "L’Art déco",
+      "Le baroque churrigueresque",
+      "Le gothique flamboyant",
+      "Le brutalisme"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quels matériaux forment principalement la structure et le revêtement du Christ Rédempteur ?",
+    "answers": [
+      "Bronze et granite",
+      "Béton armé et stéatite",
+      "Bois et cuivre",
+      "Marbre et acier"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel pays se trouve le site d’Angkor ?",
+    "answers": [
+      "La Thaïlande",
+      "Le Laos",
+      "Le Cambodge",
+      "Le Vietnam"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel empire a bâti les grands temples d’Angkor ?",
+    "answers": [
+      "L’Empire moghol",
+      "L’Empire maurya",
+      "L’Empire ottoman",
+      "L’Empire khmer"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel souverain fit construire Angkor Wat au XIIe siècle ?",
+    "answers": [
+      "Suryavarman II",
+      "Jayavarman VII",
+      "Ashoka",
+      "Rama Ier"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle divinité hindoue Angkor Wat était-il initialement consacré ?",
+    "answers": [
+      "Shiva uniquement",
+      "Vishnou",
+      "Brahma",
+      "Indra"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel temple d’Angkor est célèbre pour ses tours ornées de grands visages ?",
+    "answers": [
+      "Ta Prohm",
+      "Banteay Srei",
+      "Le Bayon",
+      "Preah Khan"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se trouve l’Acropole dominée par le Parthénon ?",
+    "answers": [
+      "Sparte",
+      "Thessalonique",
+      "Delphes",
+      "Athènes"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "À quelle déesse le Parthénon était-il consacré ?",
+    "answers": [
+      "Athéna",
+      "Héra",
+      "Déméter",
+      "Artémis"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel homme d’État lança le grand programme monumental de l’Acropole au Ve siècle av. J.-C. ?",
+    "answers": [
+      "Solon",
+      "Périclès",
+      "Léonidas",
+      "Alexandre le Grand"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quels architectes sont traditionnellement associés au Parthénon ?",
+    "answers": [
+      "Mnésiclès et Phidias uniquement",
+      "Vitruve et Apollodore",
+      "Ictinos et Callicratès",
+      "Scopas et Praxitèle"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel marbre fut largement utilisé pour le Parthénon ?",
+    "answers": [
+      "Le marbre de Carrare",
+      "Le porphyre rouge",
+      "Le travertin romain",
+      "Le marbre pentélique"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quel pays appartient Rapa Nui, l’île de Pâques ?",
+    "answers": [
+      "Le Chili",
+      "Le Pérou",
+      "L’Équateur",
+      "La Nouvelle-Zélande"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment appelle-t-on les statues monumentales de Rapa Nui ?",
+    "answers": [
+      "Les tikis maoris uniquement",
+      "Les moaï",
+      "Les totems",
+      "Les kouros"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel peuple polynésien a sculpté les moaï ?",
+    "answers": [
+      "Les Samoans",
+      "Les Maoris de Nouvelle-Zélande",
+      "Le peuple Rapa Nui",
+      "Les Tongiens"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle carrière volcanique furent sculptés la plupart des moaï ?",
+    "answers": [
+      "Orongo",
+      "Anakena",
+      "Rano Kau",
+      "Rano Raraku"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment nomme-t-on les plateformes cérémonielles portant de nombreux moaï ?",
+    "answers": [
+      "Les ahu",
+      "Les marae tahitiens uniquement",
+      "Les stupas",
+      "Les ziggourats"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel État américain se trouve le Grand Canyon ?",
+    "answers": [
+      "Le Nevada",
+      "L’Arizona",
+      "L’Utah",
+      "Le Colorado"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel fleuve a profondément entaillé le Grand Canyon ?",
+    "answers": [
+      "Le Missouri",
+      "Le Rio Grande",
+      "Le Colorado",
+      "Le Columbia"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel type de roches superposées le Grand Canyon expose-t-il spectaculairement ?",
+    "answers": [
+      "Une seule coulée de basalte",
+      "Uniquement du marbre",
+      "Uniquement du granite récent",
+      "Des strates sédimentaires"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel parc protège l’essentiel du paysage emblématique du Grand Canyon ?",
+    "answers": [
+      "Le parc national du Grand Canyon",
+      "Le parc national de Zion",
+      "Le parc national des Arches",
+      "Le parc national de Yosemite"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel plateau entaillé abrite le Grand Canyon ?",
+    "answers": [
+      "Le plateau tibétain",
+      "Le plateau du Colorado",
+      "Le plateau des Guyanes",
+      "Le plateau du Deccan"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Entre quels deux pays s’étendent les chutes d’Iguazú/Iguaçu ?",
+    "answers": [
+      "Le Brésil et le Paraguay",
+      "L’Argentine et le Chili",
+      "L’Argentine et le Brésil",
+      "Le Pérou et la Bolivie"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel cours d’eau forme les chutes d’Iguazú ?",
+    "answers": [
+      "Le Paraná",
+      "L’Orénoque",
+      "L’Uruguay",
+      "La rivière Iguazú"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel nom porte la section la plus célèbre et spectaculaire des chutes d’Iguazú ?",
+    "answers": [
+      "La Gorge du Diable",
+      "Le Fer à cheval",
+      "Le Voile de la Mariée",
+      "La Cataracte Bleue"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel grand fleuve l’Iguazú se jette-t-il en aval des chutes ?",
+    "answers": [
+      "L’Amazone",
+      "Le Paraná",
+      "Le São Francisco",
+      "Le Paraguay"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel grand milieu naturel entoure les chutes d’Iguazú ?",
+    "answers": [
+      "La forêt boréale",
+      "La puna andine",
+      "La forêt atlantique subtropicale",
+      "La pampa sèche"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel fleuve forme les chutes Victoria ?",
+    "answers": [
+      "Le Nil",
+      "Le Congo",
+      "Le Limpopo",
+      "Le Zambèze"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Entre quels deux pays se trouvent les chutes Victoria ?",
+    "answers": [
+      "La Zambie et le Zimbabwe",
+      "Le Zimbabwe et le Botswana",
+      "La Zambie et l’Angola",
+      "Le Malawi et le Mozambique"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel nom local des chutes Victoria signifie “la fumée qui gronde” ?",
+    "answers": [
+      "Uhuru",
+      "Mosi-oa-Tunya",
+      "Kilimanjaro",
+      "Ngorongoro"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel explorateur européen donna aux chutes le nom de la reine Victoria ?",
+    "answers": [
+      "Henry Morton Stanley",
+      "Richard Burton",
+      "David Livingstone",
+      "John Hanning Speke"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel phénomène crée l’apparence de “fumée” au-dessus des chutes Victoria ?",
+    "answers": [
+      "Une activité volcanique",
+      "Des feux de tourbe",
+      "Une brume de sable",
+      "Le vaste nuage d’embruns"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
