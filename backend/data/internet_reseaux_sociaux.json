@@ -1,502 +1,121 @@
 [
-  {
-    "text": "Que signifie l’abréviation URL ?",
-    "answers": [
-      "Uniform Resource Locator",
-      "Universal Radio Link",
-      "User Routing Login",
-      "Unified Resource Language"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel symbole précède traditionnellement un hashtag ?",
-    "answers": [
-      "@",
-      "#",
-      "&",
-      "%"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service ou concept correspond à cette description : moteur de recherche créé par Larry Page et Sergey Brin ?",
-    "answers": [
-      "Facebook",
-      "Reddit",
-      "Google",
-      "Twitch"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à Google ?",
-    "answers": [
-      "application centrée sur le partage de photos lancée en 2010",
-      "réseau social orienté vers les relations professionnelles",
-      "protocole d’échange utilisé pour transférer les ressources du Web",
-      "moteur de recherche créé par Larry Page et Sergey Brin"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction Google est-il principalement associé ?",
-    "answers": [
-      "Recherche web",
-      "Réseaux sociaux",
-      "Protocoles du Web",
-      "Commerce électronique"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service ou concept correspond à cette description : réseau social fondé en 2004 par Mark Zuckerberg et ses camarades ?",
-    "answers": [
-      "Instagram",
-      "Facebook",
-      "LinkedIn",
-      "HTTP"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à Facebook ?",
-    "answers": [
-      "plateforme de partage de vidéos créée en 2005",
-      "messagerie créée par Jan Koum et Brian Acton puis rachetée par Facebook",
-      "réseau social fondé en 2004 par Mark Zuckerberg et ses camarades",
-      "système traduisant les noms de domaine en adresses IP"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction Facebook est-il principalement associé ?",
-    "answers": [
-      "Recherche web",
-      "Protocoles du Web",
-      "Commerce électronique",
-      "Réseaux sociaux"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service ou concept correspond à cette description : application centrée sur le partage de photos lancée en 2010 ?",
-    "answers": [
-      "Instagram",
-      "YouTube",
-      "WhatsApp",
-      "DNS"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à Instagram ?",
-    "answers": [
-      "plateforme de vidéos courtes exploitée par ByteDance",
-      "application centrée sur le partage de photos lancée en 2010",
-      "service de communication organisé en serveurs et salons",
-      "petite donnée enregistrée par le navigateur pour un site web"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction Instagram est-il principalement associé ?",
-    "answers": [
-      "Recherche web",
-      "Protocoles du Web",
-      "Réseaux sociaux",
-      "Commerce électronique"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service ou concept correspond à cette description : plateforme de partage de vidéos créée en 2005 ?",
-    "answers": [
-      "TikTok",
-      "Discord",
-      "Cookie HTTP",
-      "YouTube"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à YouTube ?",
-    "answers": [
-      "plateforme de partage de vidéos créée en 2005",
-      "site organisé en communautés appelées subreddits",
-      "plateforme de diffusion en direct particulièrement associée au jeu vidéo",
-      "ensemble de services sociaux fédérés communiquant avec des protocoles ouverts"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction YouTube est-il principalement associé ?",
-    "answers": [
-      "Recherche web",
-      "Vidéo en ligne",
-      "Protocoles du Web",
-      "Commerce électronique"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service ou concept correspond à cette description : plateforme de vidéos courtes exploitée par ByteDance ?",
-    "answers": [
-      "Reddit",
-      "Twitch",
-      "TikTok",
-      "Fediverse"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à TikTok ?",
-    "answers": [
-      "réseau social orienté vers les relations professionnelles",
-      "protocole d’échange utilisé pour transférer les ressources du Web",
-      "standard du W3C utilisé par des plateformes sociales fédérées",
-      "plateforme de vidéos courtes exploitée par ByteDance"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction TikTok est-il principalement associé ?",
-    "answers": [
-      "Vidéo en ligne",
-      "Recherche web",
-      "Protocoles du Web",
-      "Commerce électronique"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service correspond à cette description : forums thématiques dont la mascotte est un extraterrestre nommé Snoo ?",
-    "answers": [
-      "LinkedIn",
-      "Reddit",
-      "HTTP",
-      "ActivityPub"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à Reddit ?",
-    "answers": [
-      "messagerie créée par Jan Koum et Brian Acton puis rachetée par Facebook",
-      "système traduisant les noms de domaine en adresses IP",
-      "site organisé en communautés appelées subreddits",
-      "réseau expérimental américain considéré comme un précurseur d’Internet"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction Reddit est-il principalement associé ?",
-    "answers": [
-      "Recherche web",
-      "Protocoles du Web",
-      "Commerce électronique",
-      "Forums communautaires"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service ou concept correspond à cette description : réseau social orienté vers les relations professionnelles ?",
-    "answers": [
-      "LinkedIn",
-      "WhatsApp",
-      "DNS",
-      "ARPANET"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à LinkedIn ?",
-    "answers": [
-      "service de communication organisé en serveurs et salons",
-      "réseau social orienté vers les relations professionnelles",
-      "petite donnée enregistrée par le navigateur pour un site web",
-      "moteur de recherche créé par Larry Page et Sergey Brin"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction LinkedIn est-il principalement associé ?",
-    "answers": [
-      "Recherche web",
-      "Protocoles du Web",
-      "Réseaux professionnels",
-      "Commerce électronique"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service ou concept correspond à cette description : messagerie créée par Jan Koum et Brian Acton puis rachetée par Facebook ?",
-    "answers": [
-      "Discord",
-      "Cookie HTTP",
-      "Google",
-      "WhatsApp"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à WhatsApp ?",
-    "answers": [
-      "messagerie créée par Jan Koum et Brian Acton puis rachetée par Facebook",
-      "plateforme de diffusion en direct particulièrement associée au jeu vidéo",
-      "ensemble de services sociaux fédérés communiquant avec des protocoles ouverts",
-      "réseau social fondé en 2004 par Mark Zuckerberg et ses camarades"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction WhatsApp est-il principalement associé ?",
-    "answers": [
-      "Recherche web",
-      "Messagerie",
-      "Protocoles du Web",
-      "Commerce électronique"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service ou concept correspond à cette description : service de communication organisé en serveurs et salons ?",
-    "answers": [
-      "Twitch",
-      "Fediverse",
-      "Discord",
-      "Facebook"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à Discord ?",
-    "answers": [
-      "protocole d’échange utilisé pour transférer les ressources du Web",
-      "standard du W3C utilisé par des plateformes sociales fédérées",
-      "application centrée sur le partage de photos lancée en 2010",
-      "service de communication organisé en serveurs et salons"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction Discord est-il principalement associé ?",
-    "answers": [
-      "Messagerie",
-      "Recherche web",
-      "Protocoles du Web",
-      "Commerce électronique"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service ou concept correspond à cette description : plateforme de diffusion en direct particulièrement associée au jeu vidéo ?",
-    "answers": [
-      "HTTP",
-      "Twitch",
-      "ActivityPub",
-      "Instagram"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à Twitch ?",
-    "answers": [
-      "système traduisant les noms de domaine en adresses IP",
-      "réseau expérimental américain considéré comme un précurseur d’Internet",
-      "plateforme de diffusion en direct particulièrement associée au jeu vidéo",
-      "plateforme de partage de vidéos créée en 2005"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction Twitch est-il principalement associé ?",
-    "answers": [
-      "Recherche web",
-      "Protocoles du Web",
-      "Commerce électronique",
-      "Streaming en direct"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service ou concept correspond à cette description : protocole d’échange utilisé pour transférer les ressources du Web ?",
-    "answers": [
-      "HTTP",
-      "DNS",
-      "ARPANET",
-      "YouTube"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à HTTP ?",
-    "answers": [
-      "petite donnée enregistrée par le navigateur pour un site web",
-      "protocole d’échange utilisé pour transférer les ressources du Web",
-      "moteur de recherche créé par Larry Page et Sergey Brin",
-      "plateforme de vidéos courtes exploitée par ByteDance"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction HTTP est-il principalement associé ?",
-    "answers": [
-      "Recherche web",
-      "Streaming en direct",
-      "Protocoles du Web",
-      "Commerce électronique"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service ou concept correspond à cette description : système traduisant les noms de domaine en adresses IP ?",
-    "answers": [
-      "Cookie HTTP",
-      "Google",
-      "TikTok",
-      "DNS"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à DNS ?",
-    "answers": [
-      "système traduisant les noms de domaine en adresses IP",
-      "ensemble de services sociaux fédérés communiquant avec des protocoles ouverts",
-      "réseau social fondé en 2004 par Mark Zuckerberg et ses camarades",
-      "site organisé en communautés appelées subreddits"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction DNS est-il principalement associé ?",
-    "answers": [
-      "Recherche web",
-      "Infrastructure Internet",
-      "Streaming en direct",
-      "Commerce électronique"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service ou concept correspond à cette description : petite donnée enregistrée par le navigateur pour un site web ?",
-    "answers": [
-      "Fediverse",
-      "Facebook",
-      "Cookie HTTP",
-      "Reddit"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à Cookie HTTP ?",
-    "answers": [
-      "standard du W3C utilisé par des plateformes sociales fédérées",
-      "application centrée sur le partage de photos lancée en 2010",
-      "réseau social orienté vers les relations professionnelles",
-      "petite donnée enregistrée par le navigateur pour un site web"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction Cookie HTTP est-il principalement associé ?",
-    "answers": [
-      "Technologies du Web",
-      "Recherche web",
-      "Streaming en direct",
-      "Commerce électronique"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service ou concept correspond à cette description : ensemble de services sociaux fédérés communiquant avec des protocoles ouverts ?",
-    "answers": [
-      "ActivityPub",
-      "Fediverse",
-      "Instagram",
-      "LinkedIn"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à Fediverse ?",
-    "answers": [
-      "réseau expérimental américain considéré comme un précurseur d’Internet",
-      "plateforme de partage de vidéos créée en 2005",
-      "ensemble de services sociaux fédérés communiquant avec des protocoles ouverts",
-      "messagerie créée par Jan Koum et Brian Acton puis rachetée par Facebook"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction Fediverse est-il principalement associé ?",
-    "answers": [
-      "Recherche web",
-      "Streaming en direct",
-      "Commerce électronique",
-      "Réseaux fédérés"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service ou concept correspond à cette description : standard du W3C utilisé par des plateformes sociales fédérées ?",
-    "answers": [
-      "ActivityPub",
-      "ARPANET",
-      "YouTube",
-      "WhatsApp"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à ActivityPub ?",
-    "answers": [
-      "moteur de recherche créé par Larry Page et Sergey Brin",
-      "standard du W3C utilisé par des plateformes sociales fédérées",
-      "plateforme de vidéos courtes exploitée par ByteDance",
-      "service de communication organisé en serveurs et salons"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction ActivityPub est-il principalement associé ?",
-    "answers": [
-      "Recherche web",
-      "Streaming en direct",
-      "Protocoles du Web",
-      "Commerce électronique"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quel service ou concept correspond à cette description : réseau expérimental américain considéré comme un précurseur d’Internet ?",
-    "answers": [
-      "Google",
-      "TikTok",
-      "Discord",
-      "ARPANET"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », quelle description correspond à ARPANET ?",
-    "answers": [
-      "réseau expérimental américain considéré comme un précurseur d’Internet",
-      "réseau social fondé en 2004 par Mark Zuckerberg et ses camarades",
-      "site organisé en communautés appelées subreddits",
-      "plateforme de diffusion en direct particulièrement associée au jeu vidéo"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Internet et réseaux sociaux », à quelle fonction ARPANET est-il principalement associé ?",
-    "answers": [
-      "Recherche web",
-      "Histoire d’Internet",
-      "Streaming en direct",
-      "Commerce électronique"
-    ],
-    "correct": 1
-  }
+  {"text":"Quel réseau mondial relie des milliards d'appareils entre eux ?","answers":["Internet","Le Bluetooth","Le GPS","Le NFC"],"correct":0,"difficulty":"facile"},
+  {"text":"Qui a inventé le World Wide Web au CERN ?","answers":["Vint Cerf","Tim Berners-Lee","Steve Wozniak","Linus Torvalds"],"correct":1,"difficulty":"moyen"},
+  {"text":"En quelle année Tim Berners-Lee a-t-il proposé le World Wide Web ?","answers":["1979","1984","1989","1995"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quelle affirmation distingue correctement le Web d'Internet ?","answers":["Le Web existait avant Internet","Internet dépend du HTML","Les deux termes désignent exactement la même chose","Le Web est un service fonctionnant sur Internet"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel nom portait le premier navigateur-éditeur créé par Tim Berners-Lee ?","answers":["WorldWideWeb","Mosaic","Netscape Navigator","ViolaWWW"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Que saisit-on généralement dans un navigateur pour atteindre une page précise ?","answers":["Un IMEI","Une URL","Un SSID","Un codec"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel protocole est principalement utilisé pour transférer les pages web ?","answers":["SMTP","Bluetooth","HTTP","NTP"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quelle partie de https://example.com indique que la connexion web utilise TLS ?","answers":["example",".com","Les deux barres obliques","https"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel code HTTP signifie généralement que la ressource demandée est introuvable ?","answers":["404","200","301","500"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel code HTTP signale une redirection permanente ?","answers":["201","301","403","503"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel système traduit les noms de domaine en adresses IP ?","answers":["HTML","SMTP","DNS","JPEG"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel suffixe de domaine national correspond à la France ?","answers":[".de",".es",".be",".fr"],"correct":3,"difficulty":"moyen"},
+  {"text":"Quelle version d'IP utilise des adresses de 128 bits ?","answers":["IPv6","IPv4","HTTP/2","TCPv2"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel type d'enregistrement DNS associe directement un nom à une adresse IPv4 ?","answers":["MX","A","TXT","CNAME"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel enregistrement DNS indique les serveurs chargés de recevoir les courriels d'un domaine ?","answers":["AAAA","PTR","MX","SRV uniquement"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quel symbole sépare le nom d'utilisateur du domaine dans une adresse électronique ?","answers":["#","&","%","@"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel protocole sert principalement à envoyer des courriels entre serveurs ?","answers":["SMTP","IMAP","POP3","FTP"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel protocole permet de synchroniser les dossiers d'une boîte mail avec plusieurs appareils ?","answers":["Telnet","IMAP","SNMP","SSH"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel pionnier a choisi le symbole @ pour séparer utilisateur et machine dans les premières adresses mail ?","answers":["Robert Kahn","Jon Postel","Ray Tomlinson","Douglas Engelbart"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel mécanisme DNS aide les propriétaires de domaines à publier quels serveurs peuvent envoyer des mails en leur nom ?","answers":["DHCP","ARP","NAT","SPF"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quel réseau social lancé en 2004 a d'abord été réservé à Harvard ?","answers":["Facebook","Twitter","LinkedIn","Reddit"],"correct":0,"difficulty":"facile"},
+  {"text":"Quelle plateforme de vidéos a été créée en 2005 puis rachetée par Google ?","answers":["Vimeo","YouTube","Dailymotion","Twitch"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel réseau professionnel a été lancé en 2003 ?","answers":["Pinterest","Tumblr","LinkedIn","Snapchat"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel service de microblogging a utilisé dès ses débuts une limite de 140 caractères ?","answers":["Mastodon","Threads","Tumblr","Twitter"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel site communautaire fondé en 2005 organise ses discussions en subreddits ?","answers":["Reddit","Flickr","Myspace","Orkut"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quelle plateforme est principalement centrée sur le partage de photos et de vidéos et a été rachetée par Facebook en 2012 ?","answers":["Pinterest","Instagram","Vine","Flickr"],"correct":1,"difficulty":"facile"},
+  {"text":"Quelle application popularise les vidéos verticales courtes avec un fil For You ?","answers":["Signal","Discord","TikTok","Telegram"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quelle plateforme acquise par Amazon en 2014 est spécialisée dans le streaming en direct ?","answers":["Kick","YouTube Music","Vimeo","Twitch"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel réseau social a été fondé par Evan Spiegel, Bobby Murphy et Reggie Brown ?","answers":["Snapchat","Pinterest","LinkedIn","Reddit"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel service décentralisé organise ses communautés en serveurs appelés instances ?","answers":["Discord","Mastodon","WhatsApp","Pinterest"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel signe précède un mot-clé servant à regrouper des publications ?","answers":["@","$","#","%"],"correct":2,"difficulty":"facile"},
+  {"text":"Comment appelle-t-on une publication temporaire qui disparaît généralement après 24 heures ?","answers":["Un wiki","Un podcast","Un forum","Une story"],"correct":3,"difficulty":"moyen"},
+  {"text":"Quel terme désigne le repartage d'un message sur l'ancien Twitter ?","answers":["Un retweet","Un pin","Un stitch","Un snap"],"correct":0,"difficulty":"difficile"},
+  {"text":"Sur Reddit, quel mécanisme communautaire fait monter ou descendre la visibilité d'un contenu ?","answers":["Les filtres beauté","Les votes positifs et négatifs","Les accusés de lecture","Les domaines DNS"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel terme désigne sur TikTok une vidéo qui reprend une autre vidéo côte à côte ?","answers":["Un thread","Un repost","Un duet","Un carousel"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quel réglage limite généralement la visibilité d'un compte aux abonnés approuvés ?","answers":["Mode développeur","Mode avion","Compte professionnel","Compte privé"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel principe consiste à ne collecter que les données réellement nécessaires ?","answers":["La minimisation des données","La viralité","Le référencement","La syndication"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel règlement européen encadre notamment le traitement des données personnelles depuis 2018 ?","answers":["DMA uniquement","RGPD","DMCA","COPPA"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel fichier déposé par un site peut mémoriser une session dans le navigateur ?","answers":["Un paquet IP","Un certificat racine","Un cookie","Un pixel physique"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quelle technique remplace un identifiant direct par un pseudonyme tout en permettant une réidentification avec des informations séparées ?","answers":["L'anonymisation irréversible","La compression","Le chiffrement homomorphe","La pseudonymisation"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quel terme désigne une information fausse diffusée volontairement pour tromper ?","answers":["La désinformation","Le référencement","La modération","La compression"],"correct":0,"difficulty":"facile"},
+  {"text":"Quelle vérification simple aide à évaluer une image virale douteuse ?","answers":["Augmenter sa luminosité","Faire une recherche d'image inversée","La convertir en PDF","La republier"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel biais pousse à privilégier les informations qui confortent ses convictions ?","answers":["Biais d'ancrage uniquement","Effet de halo","Biais de confirmation","Biais rétrospectif"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel type de manipulation utilise l'IA pour produire une vidéo truquée réaliste d'une personne ?","answers":["Un pare-feu","Un cookie","Un agrégateur","Un deepfake"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quelle méthode journalistique consiste à remonter à la source originale plutôt qu'à citer une capture secondaire ?","answers":["La vérification de provenance","Le shadow banning","Le doomscrolling","Le scraping"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quel système choisit souvent les publications affichées dans un fil personnalisé ?","answers":["Un codec","Un algorithme de recommandation","Un serveur DNS uniquement","Un câble Ethernet"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel signal indique directement qu'un utilisateur a apprécié une publication ?","answers":["La latence","Le cache","Un like","Le chiffrement"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel terme désigne un environnement informationnel renforçant surtout des opinions similaires ?","answers":["Un CDN","Un bac à sable","Un graphe social","Une chambre d'écho"],"correct":3,"difficulty":"difficile"},
+  {"text":"Dans un système de recommandation, qu'est-ce qu'un test A/B ?","answers":["La comparaison contrôlée de deux variantes","Le blocage de deux comptes","Une double authentification","Un audit DNS"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel problème survient lorsqu'un système manque de données sur un nouvel utilisateur ou un nouveau contenu ?","answers":["Le routage asymétrique","Le démarrage à froid","Le débordement de pile","Le cache poisoning"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Comment appelle-t-on une personne qui publie régulièrement du contenu pour une audience en ligne ?","answers":["Un registrar","Un proxy","Un créateur de contenu","Un administrateur DNS"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel indicateur rapporte les interactions à la taille de l'audience ou au nombre d'impressions ?","answers":["La latence","Le débit","La portée brute","Le taux d'engagement"],"correct":3,"difficulty":"moyen"},
+  {"text":"Quel terme désigne le nombre d'utilisateurs distincts ayant vu un contenu ?","answers":["La portée","La fréquence","Le taux de rebond","Le bitrate"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quelle mesure compte toutes les fois où un contenu est affiché, y compris plusieurs fois à la même personne ?","answers":["Les conversions","Les impressions","Les visiteurs uniques","Les abonnés nets"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel modèle rémunère un créateur pour mille affichages publicitaires ?","answers":["CPC","CPA","CPM","Freemium"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quelle action consiste à retirer un contenu qui enfreint les règles d'une plateforme ?","answers":["L'indexation","Le streaming","Le routage","La modération"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel outil permet à un utilisateur de ne plus voir les publications d'un compte sans nécessairement le signaler ?","answers":["Le blocage","Le ping","Le cache","Le DNSSEC"],"correct":0,"difficulty":"moyen"},
+  {"text":"Comment appelle-t-on l'examen d'une décision de modération demandé par l'utilisateur ?","answers":["Une réplication","Un appel","Une compilation","Une redirection"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel terme désigne un comportement coordonné utilisant de faux comptes pour paraître spontané ?","answers":["Crowdsourcing","Fact-checking","Astroturfing","Livestreaming"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel système combine souvent filtres automatisés et examen humain pour appliquer des règles à grande échelle ?","answers":["Un moteur de rendu","Un registre de domaine","Un CDN","Une modération hybride"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quelle application appartenant à Meta est connue pour la messagerie chiffrée de bout en bout ?","answers":["WhatsApp","Pinterest","Reddit","LinkedIn"],"correct":0,"difficulty":"facile"},
+  {"text":"Quel service de messagerie open source est développé par une fondation à but non lucratif et met l'accent sur la confidentialité ?","answers":["Messenger","Signal","Snapchat","Teams"],"correct":1,"difficulty":"moyen"},
+  {"text":"Dans un chiffrement de bout en bout, qui possède normalement les clés permettant de lire le contenu ?","answers":["Le fournisseur d'accès uniquement","La plateforme publicitaire","Les participants à la conversation","Le registre de domaine"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quelle application organise de nombreuses communautés en serveurs et salons textuels ou vocaux ?","answers":["Pinterest","Medium","Substack","Discord"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel protocole ouvert de messagerie fédérée utilise notamment des homeservers ?","answers":["Matrix","FTP","BGP","WebDAV"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quel langage structure le contenu d'une page web ?","answers":["CSS","HTML","SQL","Bash"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel langage décrit principalement la présentation visuelle d'une page web ?","answers":["Python","C","CSS","SMTP"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel langage s'exécute couramment dans le navigateur pour rendre une page interactive ?","answers":["Java","PHP uniquement","C# uniquement","JavaScript"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel organisme fondé en 1994 coordonne de nombreux standards ouverts du Web ?","answers":["W3C","OPEP","FIFA","Bluetooth SIG"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel mécanisme du navigateur limite par défaut les lectures de ressources provenant d'une autre origine ?","answers":["Le NAT","La politique de même origine","Le DHCP","Le codec AV1"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel réseau précurseur d'Internet a relié quatre ordinateurs dès 1969 ?","answers":["Minitel","BITNET","ARPANET","Usenet"],"correct":2,"difficulty":"facile"},
+  {"text":"En quelle année ARPANET est-il passé officiellement à TCP/IP ?","answers":["1969","1977","1990","1983"],"correct":3,"difficulty":"moyen"},
+  {"text":"Qui a développé le premier courrier électronique en réseau sur ARPANET en 1971 ?","answers":["Ray Tomlinson","Marc Andreessen","Larry Page","Jimmy Wales"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel navigateur lancé en 1993 a contribué à populariser le Web graphique ?","answers":["Lynx","Mosaic","Opera Mini","Safari"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel protocole antérieur à TCP/IP ARPANET utilisait-il principalement ?","answers":["XMPP","Gopher","NCP","QUIC"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Comment appelle-t-on le nom public choisi par un utilisateur sur une plateforme ?","answers":["Un port","Un paquet","Un certificat","Un pseudonyme"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel symbole précède souvent un nom de compte mentionné dans une publication ?","answers":["@","#","%","&"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel terme désigne l'ensemble des traces laissées par une personne en ligne ?","answers":["Son cache navigateur","Son empreinte numérique","Son masque réseau","Son bitrate"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quelle pratique consiste à publier des informations privées permettant d'identifier ou localiser quelqu'un sans son consentement ?","answers":["Le bookmarking","Le podcasting","Le doxxing","Le peering"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel concept décrit la séparation volontaire de plusieurs identités ou contextes sociaux en ligne ?","answers":["La réplication","La fragmentation IP","La compression sans perte","Le cloisonnement identitaire"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quel contenu signale généralement une collaboration commerciale rémunérée ?","answers":["Une publication sponsorisée","Une page 404","Un message chiffré","Un flux RSS"],"correct":0,"difficulty":"facile"},
+  {"text":"Quel modèle donne gratuitement un service de base et facture des fonctions avancées ?","answers":["Open source","Freemium","Pair à pair","Affiliation"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel indicateur mesure la part de personnes ayant effectué l'action souhaitée après une campagne ?","answers":["Le ping","Le nombre de domaines","Le taux de conversion","Le taux de compression"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel système publicitaire vend automatiquement des espaces selon des enchères en temps réel ?","answers":["La syndication RSS","Le publipostage","Le mécénat","La publicité programmatique"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel modèle d'attribution donne tout le crédit publicitaire à la dernière interaction avant conversion ?","answers":["Le dernier clic","Le premier octet","Le graphe social","La portée organique"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quel protocole assure la livraison ordonnée et fiable de données sur Internet ?","answers":["UDP","TCP","ARP","ICMP uniquement"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel appareil achemine les paquets entre plusieurs réseaux IP ?","answers":["Un clavier","Un scanner","Un routeur","Un DAC"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel protocole permet notamment aux routeurs d'échanger des routes entre grands réseaux autonomes ?","answers":["POP3","NFC","HDMI-CEC","BGP"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel réseau distribué de serveurs rapproche les contenus des internautes pour réduire la latence ?","answers":["Un CDN","Un SAN local","Un BIOS","Un VLAN unique"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel protocole de transport moderne, chiffré par défaut, sert de base à HTTP/3 ?","answers":["SCTP","QUIC","Telnet","FTP"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel type d'attaque tente de voler des identifiants avec un faux message ou faux site ?","answers":["Le caching","Le peering","Le phishing","Le streaming"],"correct":2,"difficulty":"facile"},
+  {"text":"Quelle protection ajoute un second élément au mot de passe ?","answers":["Le mode sombre","Le VPN uniquement","Le fil chronologique","L'authentification à deux facteurs"],"correct":3,"difficulty":"moyen"},
+  {"text":"Quel outil crée et mémorise des mots de passe uniques ?","answers":["Un gestionnaire de mots de passe","Un moteur de recherche","Un bloqueur de fenêtres","Un lecteur RSS"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel type de logiciel chiffre les fichiers d'une victime pour demander une rançon ?","answers":["Un adware","Un rançongiciel","Un hyperviseur","Un codec"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quelle technique permet à un pirate de détourner une session en volant un cookie d'authentification ?","answers":["Le port knocking","La stéganographie","Le détournement de session","Le transcodage"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quel format permet de s'abonner aux nouvelles publications d'un site ?","answers":["PDF","PNG","EXIF","RSS"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel principe vise à traiter tous les flux Internet de manière non discriminatoire par les opérateurs ?","answers":["La neutralité du Net","Le droit à l'oubli","Le copyright","Le géoblocage"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel terme désigne des plateformes interconnectées mais administrées indépendamment, comme certaines instances Mastodon ?","answers":["Le métavers","La fédération","Le minage","La conteneurisation"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel protocole fédéré est utilisé par Mastodon pour échanger des activités entre serveurs ?","answers":["BitTorrent","IRC","ActivityPub","SMB"],"correct":2,"difficulty":"difficile"},
+  {"text":"Dans l'architecture du Web, quelle propriété de HTTP signifie que chaque requête peut être traitée sans mémoire obligatoire des précédentes ?","answers":["La persistance","La récursivité","La fédération","L'absence d'état"],"correct":3,"difficulty":"expert"}
 ]
