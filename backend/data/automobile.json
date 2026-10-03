@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Quel inventeur est associé au premier véhicule pratique à moteur à essence ?",
+    "text": "Quel inventeur a breveté le Patent-Motorwagen en 1886 ?",
     "answers": [
-      "Karl Benz",
+      "Carl Benz",
       "Henry Ford",
-      "Enzo Ferrari",
-      "Louis Renault"
+      "André Citroën",
+      "Ferdinand Porsche"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle marque a popularisé la production automobile à la chaîne avec le Model T ?",
+    "text": "Quelle marque a produit le Model T à partir de 1908 ?",
     "answers": [
       "Fiat",
       "Ford",
-      "Peugeot",
+      "Renault",
       "Volvo"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : voiture produite en masse à partir de 1908 et symbole de la motorisation populaire ?",
+    "text": "Quel carburant alimentait le moteur du Benz Patent-Motorwagen ?",
     "answers": [
-      "Volkswagen Coccinelle",
-      "Mini",
-      "Ford Model T",
-      "Toyota Prius"
+      "Du gazole",
+      "De l’hydrogène",
+      "De l’essence",
+      "De l’éthanol pur"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à Ford Model T ?",
+    "text": "Quel voyage de 1888 a démontré l’utilité pratique du Patent-Motorwagen ?",
     "answers": [
-      "petite française conçue pour transporter des ruraux et leurs marchandises",
-      "sportive allemande à moteur arrière produite depuis les années 1960",
-      "berline électrique américaine lancée au début des années 2010",
-      "voiture produite en masse à partir de 1908 et symbole de la motorisation populaire"
+      "La traversée des Alpes par Ettore Bugatti",
+      "Le Paris-Rouen de Louis Renault",
+      "Le tour d’Italie de Giovanni Agnelli",
+      "Le trajet de Bertha Benz de Mannheim à Pforzheim"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur Ford Model T est-il associé ?",
+    "text": "Quel numéro portait le brevet allemand du Patent-Motorwagen ?",
     "answers": [
-      "États-Unis",
-      "Allemagne",
-      "Royaume-Uni",
-      "Corée du Sud"
+      "DRP 37435",
+      "DRP 911",
+      "US 1908-T",
+      "GB 300-SL"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : modèle allemand à moteur arrière connu pour sa silhouette arrondie ?",
+    "text": "Quel modèle est associé à la démocratisation de l’automobile aux États-Unis ?",
     "answers": [
-      "Citroën 2 CV",
-      "Volkswagen Coccinelle",
-      "Porsche 911",
-      "Tesla Model S"
+      "La Ferrari F40",
+      "La Ford Model T",
+      "La Citroën DS",
+      "La Porsche 911"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à Volkswagen Coccinelle ?",
+    "text": "Dans quelle ville Ford a-t-il introduit sa chaîne d’assemblage mobile en 1913 ?",
     "answers": [
-      "berline polyvalente française à hayon lancée en 1961",
-      "supercar rouge créée pour les quarante ans de Ferrari",
-      "modèle allemand à moteur arrière connu pour sa silhouette arrondie",
-      "petit roadster japonais léger aussi appelé Miata"
+      "Detroit Renaissance Center",
+      "Dearborn Rouge",
+      "Highland Park",
+      "Indianapolis"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur Volkswagen Coccinelle est-il associé ?",
+    "text": "Quel effet principal la chaîne mobile a-t-elle eu sur l’assemblage du Model T ?",
     "answers": [
-      "États-Unis",
-      "Royaume-Uni",
-      "Corée du Sud",
-      "Allemagne"
+      "Elle a supprimé le moteur thermique",
+      "Elle a imposé quatre roues motrices",
+      "Elle a remplacé l’acier par l’aluminium",
+      "Elle a fortement réduit le temps d’assemblage"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : petite française conçue pour transporter des ruraux et leurs marchandises ?",
+    "text": "Quel surnom désigne l’usine Ford intégrée ouverte à River Rouge ?",
     "answers": [
-      "Citroën 2 CV",
-      "Renault 4",
-      "Ferrari F40",
-      "Mazda MX-5"
+      "The Rouge",
+      "The Lingotto",
+      "The Mirafiori",
+      "The Motor Valley"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à Citroën 2 CV ?",
+    "text": "Quel constructeur a bâti l’usine du Lingotto, célèbre pour sa piste sur le toit ?",
     "answers": [
-      "petite citadine italienne emblématique de l’après-guerre",
-      "petite française conçue pour transporter des ruraux et leurs marchandises",
-      "sportive italienne à moteur central souvent considérée comme une première supercar",
-      "berline suédoise réputée pour sa robustesse et sa sécurité"
+      "Ford",
+      "Fiat",
+      "Toyota",
+      "Saab"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur Citroën 2 CV est-il associé ?",
+    "text": "Quelle pédale commande généralement le frein principal ?",
     "answers": [
-      "États-Unis",
-      "Royaume-Uni",
-      "France",
-      "Corée du Sud"
+      "La pédale de gauche uniquement",
+      "La pédale d’embrayage",
+      "La pédale centrale",
+      "Le repose-pied"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : berline polyvalente française à hayon lancée en 1961 ?",
+    "text": "Dans une voiture manuelle, à quoi sert l’embrayage ?",
     "answers": [
-      "Fiat 500",
-      "Lamborghini Miura",
-      "Volvo 240",
-      "Renault 4"
+      "À refroidir le moteur",
+      "À amplifier le freinage",
+      "À recharger la batterie",
+      "À désaccoupler temporairement le moteur de la transmission"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à Renault 4 ?",
+    "text": "Quel instrument indique le régime du moteur ?",
     "answers": [
-      "berline polyvalente française à hayon lancée en 1961",
-      "petite britannique à moteur transversal dessinée par Alec Issigonis",
-      "berline japonaise ayant popularisé la motorisation hybride",
-      "véhicule tout-terrain militaire devenu une icône de la Seconde Guerre mondiale"
+      "Le compte-tours",
+      "L’odomètre",
+      "Le manomètre des pneus",
+      "Le compas"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur Renault 4 est-il associé ?",
+    "text": "Que mesure l’odomètre d’une automobile ?",
     "answers": [
-      "États-Unis",
-      "France",
-      "Royaume-Uni",
-      "Corée du Sud"
+      "Le régime moteur",
+      "La distance totale parcourue",
+      "La température extérieure",
+      "La pression d’huile instantanée"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : petite citadine italienne emblématique de l’après-guerre ?",
+    "text": "Quel mécanisme permet aux roues motrices de tourner à des vitesses différentes en virage ?",
     "answers": [
-      "Mini",
-      "Toyota Prius",
-      "Fiat 500",
-      "Jeep Willys"
+      "Le démarreur",
+      "Le servofrein",
+      "Le différentiel",
+      "Le catalyseur"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à Fiat 500 ?",
+    "text": "Dans un moteur à quatre temps, quel temps suit la compression ?",
     "answers": [
-      "sportive allemande à moteur arrière produite depuis les années 1960",
-      "berline électrique américaine lancée au début des années 2010",
-      "coupé allemand célèbre pour ses portes papillon",
-      "petite citadine italienne emblématique de l’après-guerre"
+      "L’admission",
+      "L’échappement",
+      "Le refroidissement",
+      "La combustion-détente"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur Fiat 500 est-il associé ?",
+    "text": "Quel composant transforme le mouvement alternatif des pistons en rotation ?",
     "answers": [
-      "Italie",
-      "États-Unis",
-      "Royaume-Uni",
-      "Corée du Sud"
+      "Le vilebrequin",
+      "L’arbre à cames",
+      "Le radiateur",
+      "L’alternateur"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : petite britannique à moteur transversal dessinée par Alec Issigonis ?",
+    "text": "Quel organe commande l’ouverture des soupapes ?",
     "answers": [
-      "Porsche 911",
-      "Mini",
-      "Tesla Model S",
-      "Mercedes-Benz 300 SL"
+      "Le volant moteur",
+      "L’arbre à cames",
+      "Le différentiel",
+      "Le compresseur de climatisation"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à Mini ?",
+    "text": "Dans un moteur Diesel, qu’est-ce qui provoque normalement l’inflammation du carburant ?",
     "answers": [
-      "supercar rouge créée pour les quarante ans de Ferrari",
-      "petit roadster japonais léger aussi appelé Miata",
-      "petite britannique à moteur transversal dessinée par Alec Issigonis",
-      "supercar britannique à trois places avec conducteur central"
+      "Une bougie d’allumage",
+      "Une résistance dans le réservoir",
+      "La chaleur de l’air fortement comprimé",
+      "Le catalyseur"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur Mini est-il associé ?",
+    "text": "Quel cycle thermodynamique idéalise le moteur essence à allumage commandé ?",
     "answers": [
-      "États-Unis",
-      "Italie",
-      "Corée du Sud",
-      "Royaume-Uni"
+      "Le cycle de Rankine",
+      "Le cycle de Stirling",
+      "Le cycle de Carnot inversé",
+      "Le cycle d’Otto"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : sportive allemande à moteur arrière produite depuis les années 1960 ?",
+    "text": "Quelle configuration envoie la puissance aux roues avant ?",
     "answers": [
-      "Porsche 911",
-      "Ferrari F40",
-      "Mazda MX-5",
-      "McLaren F1"
+      "La traction avant",
+      "La propulsion",
+      "La transmission intégrale",
+      "Le moteur central"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à Porsche 911 ?",
+    "text": "Que signifie l’abréviation 4x4 dans l’usage automobile courant ?",
     "answers": [
-      "sportive italienne à moteur central souvent considérée comme une première supercar",
-      "sportive allemande à moteur arrière produite depuis les années 1960",
-      "berline suédoise réputée pour sa robustesse et sa sécurité",
-      "voiture produite en masse à partir de 1908 et symbole de la motorisation populaire"
+      "Quatre cylindres et quatre soupapes",
+      "Quatre roues motrices",
+      "Quatre portes et quatre places",
+      "Quatre freins à tambour"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur Porsche 911 est-il associé ?",
+    "text": "Quel élément d’une boîte manuelle rapproche progressivement deux pignons avant leur engagement ?",
     "answers": [
-      "États-Unis",
-      "Royaume-Uni",
-      "Allemagne",
-      "Corée du Sud"
+      "Le thermostat",
+      "Le cardan",
+      "Le synchroniseur",
+      "Le piston"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : supercar rouge créée pour les quarante ans de Ferrari ?",
+    "text": "Quel type de boîte utilise couramment un convertisseur de couple ?",
     "answers": [
-      "Lamborghini Miura",
-      "Volvo 240",
-      "Ford Model T",
-      "Ferrari F40"
+      "La boîte manuelle classique",
+      "La transmission par chaîne de vélo",
+      "Le pont rigide",
+      "La boîte automatique hydraulique"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à Ferrari F40 ?",
+    "text": "Dans une boîte à double embrayage, comment les rapports pairs et impairs sont-ils répartis ?",
     "answers": [
-      "supercar rouge créée pour les quarante ans de Ferrari",
-      "berline japonaise ayant popularisé la motorisation hybride",
-      "véhicule tout-terrain militaire devenu une icône de la Seconde Guerre mondiale",
-      "modèle allemand à moteur arrière connu pour sa silhouette arrondie"
+      "Sur deux embrayages distincts",
+      "Sur un unique variateur à courroie",
+      "Entre l’essieu avant et arrière",
+      "Dans le différentiel uniquement"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur Ferrari F40 est-il associé ?",
+    "text": "Quel système empêche les roues de se bloquer lors d’un freinage appuyé ?",
     "answers": [
-      "États-Unis",
-      "Italie",
-      "Royaume-Uni",
-      "Corée du Sud"
+      "L’ESP",
+      "L’ABS",
+      "Le GPS",
+      "Le DAB"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : sportive italienne à moteur central souvent considérée comme une première supercar ?",
+    "text": "Quel élément presse les plaquettes contre un disque de frein ?",
     "answers": [
-      "Toyota Prius",
-      "Jeep Willys",
-      "Lamborghini Miura",
-      "Volkswagen Coccinelle"
+      "Le carburateur",
+      "Le collecteur",
+      "L’étrier",
+      "Le démarreur"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à Lamborghini Miura ?",
+    "text": "À quoi sert principalement l’ESP ou contrôle électronique de stabilité ?",
     "answers": [
-      "berline électrique américaine lancée au début des années 2010",
-      "coupé allemand célèbre pour ses portes papillon",
-      "petite française conçue pour transporter des ruraux et leurs marchandises",
-      "sportive italienne à moteur central souvent considérée comme une première supercar"
+      "À mesurer le niveau de carburant",
+      "À ouvrir les vitres",
+      "À lubrifier la boîte",
+      "À aider à corriger une perte de trajectoire"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur Lamborghini Miura est-il associé ?",
+    "text": "Quel phénomène réduit l’efficacité des freins lorsqu’ils surchauffent ?",
     "answers": [
-      "Italie",
-      "États-Unis",
-      "Royaume-Uni",
-      "Corée du Sud"
+      "Le fading",
+      "L’aquaplanage",
+      "Le cliquetis",
+      "Le sous-virage"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : berline japonaise ayant popularisé la motorisation hybride ?",
+    "text": "Quel capteur fournit à l’ABS la vitesse de rotation de chaque roue ?",
     "answers": [
-      "Tesla Model S",
-      "Toyota Prius",
-      "Mercedes-Benz 300 SL",
-      "Citroën 2 CV"
+      "Une sonde lambda",
+      "Un capteur de roue",
+      "Un débitmètre d’air",
+      "Un capteur de pluie"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à Toyota Prius ?",
+    "text": "Quelle partie du pneu est en contact direct avec la route ?",
     "answers": [
-      "petit roadster japonais léger aussi appelé Miata",
-      "supercar britannique à trois places avec conducteur central",
-      "berline japonaise ayant popularisé la motorisation hybride",
-      "berline polyvalente française à hayon lancée en 1961"
+      "Le flanc intérieur",
+      "La tringle",
+      "La bande de roulement",
+      "La valve"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur Toyota Prius est-il associé ?",
+    "text": "Que peut provoquer une pression de pneu trop faible ?",
     "answers": [
-      "États-Unis",
-      "Italie",
-      "Corée du Sud",
-      "Japon"
+      "Une recharge plus rapide de la batterie",
+      "Une huile plus visqueuse",
+      "Un empattement plus court",
+      "Une surchauffe et une usure accrues"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : berline électrique américaine lancée au début des années 2010 ?",
+    "text": "Quel marquage indique la largeur nominale d’un pneu 205/55 R16 ?",
     "answers": [
-      "Tesla Model S",
-      "Mazda MX-5",
-      "McLaren F1",
-      "Renault 4"
+      "205",
+      "55",
+      "16",
+      "R"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à Tesla Model S ?",
+    "text": "Dans 205/55 R16, que représente 55 ?",
     "answers": [
-      "berline suédoise réputée pour sa robustesse et sa sécurité",
-      "berline électrique américaine lancée au début des années 2010",
-      "voiture produite en masse à partir de 1908 et symbole de la motorisation populaire",
-      "petite citadine italienne emblématique de l’après-guerre"
+      "La pression maximale en bars",
+      "Le rapport hauteur/largeur en pourcentage",
+      "L’année de fabrication",
+      "La charge en kilogrammes"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur Tesla Model S est-il associé ?",
+    "text": "Que signifie la lettre R dans la dimension moderne d’un pneu ?",
     "answers": [
-      "Allemagne",
-      "Royaume-Uni",
-      "États-Unis",
-      "Corée du Sud"
+      "Pneu rechapé",
+      "Usage réservé à la course",
+      "Construction radiale",
+      "Renfort amovible"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : petit roadster japonais léger aussi appelé Miata ?",
+    "text": "Quel dispositif retient l’occupant sur son siège lors d’un choc ?",
     "answers": [
-      "Volvo 240",
-      "Ford Model T",
-      "Fiat 500",
-      "Mazda MX-5"
+      "Le régulateur de vitesse",
+      "Le différentiel",
+      "Le filtre à particules",
+      "La ceinture de sécurité"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à Mazda MX-5 ?",
+    "text": "Quel ingénieur de Volvo a mis au point la ceinture moderne à trois points ?",
     "answers": [
-      "petit roadster japonais léger aussi appelé Miata",
-      "véhicule tout-terrain militaire devenu une icône de la Seconde Guerre mondiale",
-      "modèle allemand à moteur arrière connu pour sa silhouette arrondie",
-      "petite britannique à moteur transversal dessinée par Alec Issigonis"
+      "Nils Bohlin",
+      "Gordon Murray",
+      "Alec Issigonis",
+      "Rudolf Diesel"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur Mazda MX-5 est-il associé ?",
+    "text": "Quel dispositif gonflable complète la ceinture lors de certains chocs ?",
     "answers": [
-      "États-Unis",
-      "Japon",
-      "Italie",
-      "Corée du Sud"
+      "Le turbocompresseur",
+      "L’airbag",
+      "Le silentbloc",
+      "Le thermostat"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : berline suédoise réputée pour sa robustesse et sa sécurité ?",
+    "text": "Pourquoi la carrosserie comporte-t-elle des zones de déformation programmée ?",
     "answers": [
-      "Jeep Willys",
-      "Volkswagen Coccinelle",
-      "Volvo 240",
-      "Mini"
+      "Pour augmenter la vitesse maximale",
+      "Pour réduire le rayon de braquage",
+      "Pour absorber une partie de l’énergie du choc",
+      "Pour refroidir l’habitacle"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à Volvo 240 ?",
+    "text": "Quel organisme européen attribue des étoiles après des essais de sécurité indépendants ?",
     "answers": [
-      "coupé allemand célèbre pour ses portes papillon",
-      "petite française conçue pour transporter des ruraux et leurs marchandises",
-      "sportive allemande à moteur arrière produite depuis les années 1960",
-      "berline suédoise réputée pour sa robustesse et sa sécurité"
+      "Eurostat",
+      "EASA",
+      "UEFA",
+      "Euro NCAP"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur Volvo 240 est-il associé ?",
+    "text": "Quels feux utilise-t-on normalement pour ne pas éblouir les véhicules croisés la nuit ?",
     "answers": [
-      "Suède",
-      "États-Unis",
-      "Italie",
-      "Corée du Sud"
+      "Les feux de croisement",
+      "Les feux de route",
+      "Les feux de détresse",
+      "Les feux de recul"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : véhicule tout-terrain militaire devenu une icône de la Seconde Guerre mondiale ?",
+    "text": "De quelle couleur sont généralement les feux stop à l’arrière ?",
     "answers": [
-      "Mercedes-Benz 300 SL",
-      "Jeep Willys",
-      "Citroën 2 CV",
-      "Porsche 911"
+      "Bleu",
+      "Rouge",
+      "Vert",
+      "Blanc"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à Jeep Willys ?",
+    "text": "Quel feu blanc s’allume normalement lorsque la marche arrière est engagée ?",
     "answers": [
-      "supercar britannique à trois places avec conducteur central",
-      "berline polyvalente française à hayon lancée en 1961",
-      "véhicule tout-terrain militaire devenu une icône de la Seconde Guerre mondiale",
-      "supercar rouge créée pour les quarante ans de Ferrari"
+      "Le feu antibrouillard arrière",
+      "Le feu stop",
+      "Le feu de recul",
+      "Le clignotant"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur Jeep Willys est-il associé ?",
+    "text": "Quel gaz noble a donné son nom à une technologie de phares à décharge ?",
     "answers": [
-      "Allemagne",
-      "Royaume-Uni",
-      "Corée du Sud",
-      "États-Unis"
+      "L’hélium",
+      "Le néon",
+      "L’argon",
+      "Le xénon"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : coupé allemand célèbre pour ses portes papillon ?",
+    "text": "Quelle unité photométrique mesure le flux lumineux d’une lampe ?",
     "answers": [
-      "Mercedes-Benz 300 SL",
-      "McLaren F1",
-      "Renault 4",
-      "Ferrari F40"
+      "Le lumen",
+      "Le pascal",
+      "Le newton",
+      "Le tesla"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à Mercedes-Benz 300 SL ?",
+    "text": "Quel gaz à effet de serre est directement lié à la combustion du carburant fossile ?",
     "answers": [
-      "voiture produite en masse à partir de 1908 et symbole de la motorisation populaire",
-      "coupé allemand célèbre pour ses portes papillon",
-      "petite citadine italienne emblématique de l’après-guerre",
-      "sportive italienne à moteur central souvent considérée comme une première supercar"
+      "L’oxygène",
+      "Le dioxyde de carbone",
+      "L’azote",
+      "L’hélium"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur Mercedes-Benz 300 SL est-il associé ?",
+    "text": "Quel dispositif traite une partie des polluants dans l’échappement ?",
     "answers": [
-      "États-Unis",
-      "Royaume-Uni",
-      "Allemagne",
-      "Corée du Sud"
+      "Le volant moteur",
+      "La crémaillère",
+      "Le pot catalytique",
+      "Le cardan"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Automobile », quel modèle automobile correspond à cette description : supercar britannique à trois places avec conducteur central ?",
+    "text": "Quelle sonde mesure l’oxygène résiduel dans les gaz d’échappement ?",
     "answers": [
-      "Ford Model T",
-      "Fiat 500",
-      "Lamborghini Miura",
-      "McLaren F1"
+      "La sonde Pitot",
+      "Le capteur Hall de roue",
+      "Le thermocouple de siège",
+      "La sonde lambda"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », quelle description correspond à McLaren F1 ?",
+    "text": "Quel polluant un filtre à particules retient-il principalement ?",
     "answers": [
-      "supercar britannique à trois places avec conducteur central",
-      "modèle allemand à moteur arrière connu pour sa silhouette arrondie",
-      "petite britannique à moteur transversal dessinée par Alec Issigonis",
-      "berline japonaise ayant popularisé la motorisation hybride"
+      "Les particules de suie",
+      "Le dioxygène",
+      "La vapeur d’eau",
+      "L’hélium"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Automobile », à quel pays constructeur McLaren F1 est-il associé ?",
+    "text": "Quel fluide à base d’urée est injecté dans certains systèmes SCR Diesel ?",
     "answers": [
-      "États-Unis",
-      "Royaume-Uni",
-      "Italie",
-      "Corée du Sud"
+      "Le liquide de frein DOT 4",
+      "L’AdBlue",
+      "Le GPL",
+      "Le liquide lave-glace"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle énergie alimente directement le moteur d’une voiture électrique à batterie ?",
+    "answers": [
+      "L’essence du réservoir",
+      "La vapeur d’eau",
+      "L’électricité stockée dans la batterie",
+      "L’air comprimé du pneu"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel composant convertit le courant continu de la batterie pour piloter un moteur électrique alternatif ?",
+    "answers": [
+      "Le radiateur",
+      "Le vilebrequin",
+      "Le silencieux",
+      "L’onduleur"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "À quoi sert le freinage régénératif ?",
+    "answers": [
+      "À récupérer de l’énergie lors des ralentissements",
+      "À gonfler automatiquement les pneus",
+      "À refroidir les sièges",
+      "À nettoyer les disques"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle unité exprime couramment la capacité énergétique d’une batterie automobile ?",
+    "answers": [
+      "Le kilomètre-heure",
+      "Le kilowattheure",
+      "Le kilopascal par seconde",
+      "Le lumen"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel type de courant une borne rapide délivre généralement directement à la batterie ?",
+    "answers": [
+      "Du courant alternatif basse fréquence uniquement",
+      "Du courant triphasé mécanique",
+      "Du courant continu",
+      "Du courant pneumatique"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qu’associe un véhicule hybride classique ?",
+    "answers": [
+      "Deux moteurs Diesel identiques",
+      "Un moteur à vapeur et une turbine",
+      "Une pile solaire et des pédales",
+      "Un moteur thermique et un moteur électrique"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle Toyota lancée au Japon en 1997 est devenue une référence de l’hybride ?",
+    "answers": [
+      "La Prius",
+      "La Supra",
+      "La Land Cruiser",
+      "La Celica"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qu’est-ce qui distingue un hybride rechargeable d’un hybride non rechargeable ?",
+    "answers": [
+      "Il n’a jamais de moteur thermique",
+      "Sa batterie peut être chargée sur une prise",
+      "Il roule uniquement à l’hydrogène",
+      "Il ne possède pas de batterie"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans un hybride série, qu’est-ce qui entraîne mécaniquement les roues ?",
+    "answers": [
+      "Le moteur thermique directement en permanence",
+      "L’alternateur seul",
+      "Le moteur électrique",
+      "Le compresseur de climatisation"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel sigle anglais désigne couramment un hybride rechargeable ?",
+    "answers": [
+      "BEV",
+      "ICE",
+      "SUV",
+      "PHEV"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Que rejette localement une pile à combustible à hydrogène en fonctionnement normal ?",
+    "answers": [
+      "Principalement de l’eau",
+      "Du plomb",
+      "De la suie noire",
+      "Du soufre solide"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans une voiture à pile à combustible, quelle énergie fait tourner le moteur de traction ?",
+    "answers": [
+      "La combustion directe d’essence",
+      "L’électricité produite par la pile",
+      "La vapeur sous pression",
+      "L’énergie mécanique du réservoir"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel gaz de l’air réagit avec l’hydrogène dans une pile à combustible ?",
+    "answers": [
+      "L’argon",
+      "Le néon",
+      "L’oxygène",
+      "L’azote uniquement"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel sigle anglais désigne un véhicule électrique à pile à combustible ?",
+    "answers": [
+      "CVT",
+      "ABS",
+      "MPV",
+      "FCEV"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le rôle de la membrane dans une pile PEM ?",
+    "answers": [
+      "Conduire les protons tout en séparant les gaz",
+      "Stocker mécaniquement les roues",
+      "Lubrifier les pistons",
+      "Faire varier le rapport de boîte"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle force aérodynamique s’oppose au déplacement d’une voiture ?",
+    "answers": [
+      "La portance utile uniquement",
+      "La traînée",
+      "La poussée d’Archimède",
+      "La force centrifuge du moteur"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel symbole désigne souvent le coefficient de traînée ?",
+    "answers": [
+      "Ah",
+      "dB",
+      "Cx",
+      "rpm"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "À vitesse élevée, comment évolue approximativement la traînée avec la vitesse ?",
+    "answers": [
+      "Elle reste constante",
+      "Elle diminue linéairement",
+      "Elle devient nulle",
+      "Elle croît avec le carré de la vitesse"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quoi sert un diffuseur sous une voiture sportive ?",
+    "answers": [
+      "À gérer le flux d’air et favoriser l’appui",
+      "À filtrer le carburant",
+      "À synchroniser la boîte",
+      "À régler la radio"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ingénieur est associé à l’effet de sol exploité par la Lotus 79 de Formule 1 ?",
+    "answers": [
+      "Nils Bohlin",
+      "Colin Chapman",
+      "Karl Benz",
+      "Soichiro Honda"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel élément relie la roue au châssis tout en permettant son débattement ?",
+    "answers": [
+      "Le catalyseur",
+      "L’injecteur",
+      "La suspension",
+      "Le démarreur"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel composant limite les oscillations d’un ressort de suspension ?",
+    "answers": [
+      "Le klaxon",
+      "Le compresseur audio",
+      "Le volant moteur",
+      "L’amortisseur"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Que désigne l’empattement d’une automobile ?",
+    "answers": [
+      "La distance entre les axes des essieux avant et arrière",
+      "La largeur d’un pneu",
+      "La garde au sol uniquement",
+      "Le diamètre du volant"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel angle de géométrie décrit l’inclinaison de la roue vue de face ?",
+    "answers": [
+      "La chasse",
+      "Le carrossage",
+      "Le pincement longitudinal",
+      "Le roulis"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel type de suspension arrière relie les roues par une traverse qui se déforme en torsion ?",
+    "answers": [
+      "Le double embrayage",
+      "Le pont à vis sans fin",
+      "L’essieu semi-rigide à traverse déformable",
+      "La direction à crémaillère"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle marque française a lancé la 2 CV ?",
+    "answers": [
+      "Peugeot",
+      "Simca",
+      "Alpine",
+      "Citroën"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel constructeur a présenté la Renault 4 en 1961 ?",
+    "answers": [
+      "Renault",
+      "Panhard",
+      "Talbot",
+      "Bugatti"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel modèle Citroën présenté en 1955 est célèbre pour sa suspension hydropneumatique ?",
+    "answers": [
+      "La Méhari",
+      "La DS",
+      "La Saxo",
+      "L’Ami 6"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel modèle Peugeot a remporté le titre européen de Voiture de l’année 1969 ?",
+    "answers": [
+      "La Peugeot 205",
+      "La Peugeot 106",
+      "La Peugeot 504",
+      "La Peugeot RCZ"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel designer italien a signé la ligne de la Peugeot 406 Coupé ?",
+    "answers": [
+      "Bertone",
+      "Zagato",
+      "Italdesign",
+      "Pininfarina"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle marque produit la 911 ?",
+    "answers": [
+      "Porsche",
+      "Ferrari",
+      "Lotus",
+      "Volvo"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel ingénieur a dessiné la Mini originale ?",
+    "answers": [
+      "Ferdinand Piëch",
+      "Alec Issigonis",
+      "Marcello Gandini",
+      "Giorgetto Giugiaro"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel modèle Volkswagen est connu en français sous le nom de Coccinelle ?",
+    "answers": [
+      "La Golf GTI",
+      "La Passat",
+      "La Type 1",
+      "La Karmann Ghia"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle Lamborghini dessinée par Marcello Gandini est souvent citée parmi les premières supercars à moteur central ?",
+    "answers": [
+      "L’Urus",
+      "La LM002",
+      "La Gallardo",
+      "La Miura"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel code de projet Lamborghini désignait la Miura lors de son développement ?",
+    "answers": [
+      "P400",
+      "LP500",
+      "Tipo 33",
+      "F1"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle marque fabrique la MX-5, aussi appelée Miata ?",
+    "answers": [
+      "Honda",
+      "Mazda",
+      "Subaru",
+      "Nissan"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel modèle Toyota est réputé pour ses capacités tout-terrain depuis les années 1950 ?",
+    "answers": [
+      "La Corolla",
+      "La Camry",
+      "Le Land Cruiser",
+      "Le MR2"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel constructeur a créé la Civic ?",
+    "answers": [
+      "Mitsubishi",
+      "Suzuki",
+      "Isuzu",
+      "Honda"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle génération lancée en 2007 a abandonné le nom Skyline pour s’appeler Nissan GT-R ?",
+    "answers": [
+      "La R35",
+      "La R32",
+      "La R33",
+      "La R34"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel système de transmission intégrale équipait les Nissan Skyline GT-R R32 à R34 ?",
+    "answers": [
+      "quattro ultra",
+      "ATTESA E-TS",
+      "xDrive",
+      "Hydractive"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle course d’endurance française dure traditionnellement 24 heures ?",
+    "answers": [
+      "Le Rallye Monte-Carlo",
+      "Le Grand Prix de Pau",
+      "Les 24 Heures du Mans",
+      "La Course de côte de Pikes Peak"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel drapeau signale la fin d’une course automobile ?",
+    "answers": [
+      "Le drapeau bleu uni",
+      "Le drapeau blanc national",
+      "Le drapeau vert et rouge",
+      "Le drapeau à damier"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle discipline se dispute principalement sur routes fermées avec pilote et copilote ?",
+    "answers": [
+      "Le rallye",
+      "Le karting en salle",
+      "Le dragster uniquement",
+      "L’autocross sur circuit ovale uniquement"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Que signifie une voiture de sécurité en piste en Formule 1 ?",
+    "answers": [
+      "La course est définitivement annulée",
+      "Les concurrents doivent ralentir et ne pas dépasser selon la procédure",
+      "Tous les pilotes changent obligatoirement de moteur",
+      "Les chronos sont multipliés par deux"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel constructeur a remporté la première édition des 24 Heures du Mans en 1923 ?",
+    "answers": [
+      "Ferrari",
+      "Porsche",
+      "Chenard & Walcker",
+      "Audi"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle voiture de cinéma sert de machine à voyager dans le temps dans Retour vers le futur ?",
+    "answers": [
+      "La Ford Mustang",
+      "La Mini Cooper",
+      "La Volkswagen Golf",
+      "La DeLorean DMC-12"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle marque est associée à l’emblème du cheval cabré ?",
+    "answers": [
+      "Ferrari",
+      "Lamborghini",
+      "Maserati",
+      "Alfa Romeo"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel modèle britannique possède trois places avec le conducteur au centre ?",
+    "answers": [
+      "La Jaguar E-Type",
+      "La McLaren F1",
+      "La Lotus Elise",
+      "L’Aston Martin DB5"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel designer a créé la Volkswagen Golf de première génération ?",
+    "answers": [
+      "Alec Issigonis",
+      "Bruno Sacco",
+      "Giorgetto Giugiaro",
+      "Flaminio Bertoni"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel carrossier a dessiné la forme de la Citroën DS sous la direction d’André Lefèbvre ?",
+    "answers": [
+      "Marcello Gandini",
+      "Ian Callum",
+      "Peter Stevens",
+      "Flaminio Bertoni"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
