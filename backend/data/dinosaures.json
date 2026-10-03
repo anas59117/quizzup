@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Quelle description correspond à Tyrannosaurus rex ?",
+    "text": "Quelle science étudie les êtres vivants du passé à partir de leurs fossiles ?",
     "answers": [
-      "un grand théropode carnivore",
-      "un herbivore à trois cornes",
-      "un petit théropode à plumes",
-      "un sauropode aux membres antérieurs très longs"
+      "La paléontologie",
+      "La météorologie",
+      "La cytologie",
+      "La volcanologie"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel portrait paléontologique décrit Tyrannosaurus rex ?",
+    "text": "Dans quelle ère géologique les dinosaures non aviens ont-ils vécu ?",
     "answers": [
-      "un herbivore à trois cornes",
-      "un grand théropode carnivore",
-      "un petit théropode à plumes",
-      "un sauropode aux membres antérieurs très longs"
+      "Le Paléozoïque",
+      "Le Mésozoïque",
+      "Le Cénozoïque",
+      "Le Précambrien"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle description correspond à Triceratops ?",
+    "text": "Quels animaux actuels appartiennent encore au groupe des dinosaures ?",
     "answers": [
-      "un petit théropode à plumes",
-      "un sauropode aux membres antérieurs très longs",
-      "un herbivore à trois cornes",
-      "un herbivore à plaques dorsales"
+      "Les crocodiles",
+      "Les lézards",
+      "Les oiseaux",
+      "Les tortues"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel portrait paléontologique décrit Triceratops ?",
+    "text": "Lequel de ces animaux préhistoriques n’était pas un dinosaure ?",
     "answers": [
-      "un petit théropode à plumes",
-      "un sauropode aux membres antérieurs très longs",
-      "un herbivore à plaques dorsales",
-      "un herbivore à trois cornes"
+      "Triceratops",
+      "Iguanodon",
+      "Allosaurus",
+      "Pteranodon"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle description correspond à Velociraptor ?",
+    "text": "Dans quel ordre se succèdent les trois périodes du Mésozoïque ?",
     "answers": [
-      "un petit théropode à plumes",
-      "un sauropode aux membres antérieurs très longs",
-      "un herbivore à plaques dorsales",
-      "un herbivore cuirassé à massue caudale"
+      "Trias, Jurassique, Crétacé",
+      "Jurassique, Trias, Crétacé",
+      "Crétacé, Jurassique, Trias",
+      "Trias, Crétacé, Jurassique"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel portrait paléontologique décrit Velociraptor ?",
+    "text": "Quel élément est un fossile corporel plutôt qu’une trace fossile ?",
     "answers": [
-      "un sauropode aux membres antérieurs très longs",
-      "un petit théropode à plumes",
-      "un herbivore à plaques dorsales",
-      "un herbivore cuirassé à massue caudale"
+      "Une empreinte de pas",
+      "Un os minéralisé",
+      "Un terrier fossilisé",
+      "Un coprolithe"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle description correspond à Brachiosaurus ?",
+    "text": "Que révèle surtout une piste d’empreintes fossiles ?",
     "answers": [
-      "un herbivore à plaques dorsales",
-      "un herbivore cuirassé à massue caudale",
-      "un sauropode aux membres antérieurs très longs",
-      "un théropode à voile dorsale adapté à un mode de vie semi-aquatique"
+      "La couleur exacte de sa peau",
+      "Son groupe sanguin",
+      "Le déplacement d’un animal",
+      "Le son de son cri"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel portrait paléontologique décrit Brachiosaurus ?",
+    "text": "Qu’est-ce qu’un coprolithe ?",
     "answers": [
-      "un herbivore à plaques dorsales",
-      "un herbivore cuirassé à massue caudale",
-      "un théropode à voile dorsale adapté à un mode de vie semi-aquatique",
-      "un sauropode aux membres antérieurs très longs"
+      "Un œuf non fossilisé",
+      "Une dent de requin",
+      "Un fragment de météorite",
+      "Un excrément fossilisé"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle description correspond à Stegosaurus ?",
+    "text": "Dans une série de couches non renversées, laquelle est généralement la plus ancienne ?",
     "answers": [
-      "un herbivore à plaques dorsales",
-      "un herbivore cuirassé à massue caudale",
-      "un théropode à voile dorsale adapté à un mode de vie semi-aquatique",
-      "un sauropode à très longue queue"
+      "La couche située en bas",
+      "La couche située en haut",
+      "La couche la plus sombre",
+      "La couche la plus épaisse"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel portrait paléontologique décrit Stegosaurus ?",
+    "text": "Quel processus peut conserver la forme d’un os tout en remplaçant sa matière par des minéraux ?",
     "answers": [
-      "un herbivore cuirassé à massue caudale",
-      "un herbivore à plaques dorsales",
-      "un théropode à voile dorsale adapté à un mode de vie semi-aquatique",
-      "un sauropode à très longue queue"
+      "La sublimation",
+      "La minéralisation par remplacement",
+      "La photosynthèse",
+      "La distillation"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle description correspond à Ankylosaurus ?",
+    "text": "Durant quelle période les premiers dinosaures sont-ils apparus ?",
     "answers": [
-      "un théropode à voile dorsale adapté à un mode de vie semi-aquatique",
-      "un sauropode à très longue queue",
-      "un herbivore cuirassé à massue caudale",
-      "un ornithopode au pouce en pointe"
+      "Le Jurassique",
+      "Le Crétacé",
+      "Le Trias",
+      "Le Paléogène"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel portrait paléontologique décrit Ankylosaurus ?",
+    "text": "Quelle période vient immédiatement après le Jurassique ?",
     "answers": [
-      "un théropode à voile dorsale adapté à un mode de vie semi-aquatique",
-      "un sauropode à très longue queue",
-      "un ornithopode au pouce en pointe",
-      "un herbivore cuirassé à massue caudale"
+      "Le Trias",
+      "Le Paléogène",
+      "Le Permien",
+      "Le Crétacé"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle description correspond à Spinosaurus ?",
+    "text": "À quelle date approximative disparaissent les dinosaures non aviens ?",
     "answers": [
-      "un théropode à voile dorsale adapté à un mode de vie semi-aquatique",
-      "un sauropode à très longue queue",
-      "un ornithopode au pouce en pointe",
-      "un hadrosaure à longue crête"
+      "Il y a 66 millions d’années",
+      "Il y a 6 millions d’années",
+      "Il y a 160 millions d’années",
+      "Il y a 540 millions d’années"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel portrait paléontologique décrit Spinosaurus ?",
+    "text": "Où se trouve le cratère de Chicxulub lié à l’extinction de fin du Crétacé ?",
     "answers": [
-      "un sauropode à très longue queue",
-      "un théropode à voile dorsale adapté à un mode de vie semi-aquatique",
-      "un ornithopode au pouce en pointe",
-      "un hadrosaure à longue crête"
+      "Dans le désert du Sahara",
+      "Dans la péninsule du Yucatán",
+      "Sous l’Antarctique oriental",
+      "Dans les Alpes"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle description correspond à Diplodocus ?",
+    "text": "Quel élément, rare dans la croûte terrestre mais abondant dans certaines météorites, marque la limite Crétacé-Paléogène ?",
     "answers": [
-      "un ornithopode au pouce en pointe",
-      "un hadrosaure à longue crête",
-      "un sauropode à très longue queue",
-      "un théropode aux cornes frontales"
+      "Le sodium",
+      "Le calcium",
+      "L’iridium",
+      "L’aluminium"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel portrait paléontologique décrit Diplodocus ?",
+    "text": "Quel groupe réunit notamment Tyrannosaurus et Allosaurus ?",
     "answers": [
-      "un ornithopode au pouce en pointe",
-      "un hadrosaure à longue crête",
-      "un théropode aux cornes frontales",
-      "un sauropode à très longue queue"
+      "Les sauropodes",
+      "Les cératopsiens",
+      "Les ankylosaures",
+      "Les théropodes"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle description correspond à Iguanodon ?",
+    "text": "Quel trait général caractérise les sauropodes comme Diplodocus ?",
     "answers": [
-      "un ornithopode au pouce en pointe",
-      "un hadrosaure à longue crête",
-      "un théropode aux cornes frontales",
-      "un grand prédateur du Jurassique supérieur"
+      "Un long cou et une marche quadrupède",
+      "Trois cornes faciales",
+      "Une cuirasse et une massue caudale",
+      "Un bec sans dents et des ailes"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel portrait paléontologique décrit Iguanodon ?",
+    "text": "À quel groupe appartient Triceratops ?",
     "answers": [
-      "un hadrosaure à longue crête",
-      "un ornithopode au pouce en pointe",
-      "un théropode aux cornes frontales",
-      "un grand prédateur du Jurassique supérieur"
+      "Les hadrosaures",
+      "Les cératopsiens",
+      "Les droméosaures",
+      "Les stégosaures"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle description correspond à Parasaurolophus ?",
+    "text": "Quel surnom morphologique donne-t-on souvent aux hadrosaures ?",
     "answers": [
-      "un théropode aux cornes frontales",
-      "un grand prédateur du Jurassique supérieur",
-      "un hadrosaure à longue crête",
-      "un dinosaure au crâne épaissi"
+      "Les dinosaures à voile",
+      "Les dinosaures cuirassés",
+      "Les dinosaures à bec de canard",
+      "Les dinosaures à dents de sabre"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel portrait paléontologique décrit Parasaurolophus ?",
+    "text": "Quelle grande division classique comprend Stegosaurus et Triceratops ?",
     "answers": [
-      "un théropode aux cornes frontales",
-      "un grand prédateur du Jurassique supérieur",
-      "un dinosaure au crâne épaissi",
-      "un hadrosaure à longue crête"
+      "Les Ptérosaures",
+      "Les Mosasaures",
+      "Les Ichthyosaures",
+      "Les Ornithischiens"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle description correspond à Carnotaurus ?",
+    "text": "Quel régime alimentaire avait Tyrannosaurus rex ?",
     "answers": [
-      "un théropode aux cornes frontales",
-      "un grand prédateur du Jurassique supérieur",
-      "un dinosaure au crâne épaissi",
-      "un petit théropode du Jurassique supérieur"
+      "Carnivore",
+      "Herbivore",
+      "Filtreur de plancton",
+      "Nectarivore"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel portrait paléontologique décrit Carnotaurus ?",
+    "text": "Pendant quelle période vivait Tyrannosaurus rex ?",
     "answers": [
-      "un grand prédateur du Jurassique supérieur",
-      "un théropode aux cornes frontales",
-      "un dinosaure au crâne épaissi",
-      "un petit théropode du Jurassique supérieur"
+      "Le Trias inférieur",
+      "Le Crétacé supérieur",
+      "Le Jurassique moyen",
+      "Le Paléogène"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle description correspond à Allosaurus ?",
+    "text": "Sur quel continent a-t-on découvert des fossiles de Tyrannosaurus rex ?",
     "answers": [
-      "un dinosaure au crâne épaissi",
-      "un petit théropode du Jurassique supérieur",
-      "un grand prédateur du Jurassique supérieur",
-      "un grand théropode d'Amérique du Sud"
+      "En Afrique",
+      "En Australie",
+      "En Amérique du Nord",
+      "En Antarctique"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel portrait paléontologique décrit Allosaurus ?",
+    "text": "Quel paléontologue a découvert les deux premiers squelettes connus de T. rex en 1900 et 1902 ?",
     "answers": [
-      "un dinosaure au crâne épaissi",
-      "un petit théropode du Jurassique supérieur",
-      "un grand théropode d'Amérique du Sud",
-      "un grand prédateur du Jurassique supérieur"
+      "Mary Anning",
+      "Georges Cuvier",
+      "Louis Leakey",
+      "Barnum Brown"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle description correspond à Pachycephalosaurus ?",
+    "text": "Qui a nommé Tyrannosaurus rex en 1905 ?",
     "answers": [
-      "un dinosaure au crâne épaissi",
-      "un petit théropode du Jurassique supérieur",
-      "un grand théropode d'Amérique du Sud",
-      "un immense sauropode d'Argentine"
+      "Henry Fairfield Osborn",
+      "Richard Owen",
+      "Othniel Charles Marsh",
+      "John Ostrom"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel portrait paléontologique décrit Pachycephalosaurus ?",
+    "text": "Combien de cornes faciales le nom Triceratops évoque-t-il ?",
     "answers": [
-      "un petit théropode du Jurassique supérieur",
-      "un dinosaure au crâne épaissi",
-      "un grand théropode d'Amérique du Sud",
-      "un immense sauropode d'Argentine"
+      "Une",
+      "Trois",
+      "Deux",
+      "Cinq"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle description correspond à Compsognathus ?",
+    "text": "Quel était le régime alimentaire de Triceratops ?",
     "answers": [
-      "un grand théropode d'Amérique du Sud",
-      "un immense sauropode d'Argentine",
-      "un petit théropode du Jurassique supérieur",
-      "un droméosaure à griffe en faucille"
+      "Carnivore",
+      "Piscivore",
+      "Herbivore",
+      "Insectivore"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel portrait paléontologique décrit Compsognathus ?",
+    "text": "À la fin de quelle période Triceratops vivait-il ?",
     "answers": [
-      "un grand théropode d'Amérique du Sud",
-      "un immense sauropode d'Argentine",
-      "un droméosaure à griffe en faucille",
-      "un petit théropode du Jurassique supérieur"
+      "Le Trias",
+      "Le Jurassique",
+      "Le Permien",
+      "Le Crétacé"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle description correspond à Giganotosaurus ?",
+    "text": "Quelle structure osseuse se trouvait derrière le crâne de Triceratops ?",
     "answers": [
-      "un grand théropode d'Amérique du Sud",
-      "un immense sauropode d'Argentine",
-      "un droméosaure à griffe en faucille",
-      "un dinosaure avialien à plumes du Jurassique"
+      "Une grande collerette",
+      "Une voile dorsale",
+      "Une massue caudale",
+      "Une rangée de plaques"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel portrait paléontologique décrit Giganotosaurus ?",
+    "text": "Quel type de dents complétait le bec de Triceratops ?",
     "answers": [
-      "un immense sauropode d'Argentine",
-      "un grand théropode d'Amérique du Sud",
-      "un droméosaure à griffe en faucille",
-      "un dinosaure avialien à plumes du Jurassique"
+      "Des crocs creux injectant du venin",
+      "Des dents adaptées à cisailler les végétaux",
+      "Des fanons filtrants",
+      "Des molaires plates de mammifère"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle description correspond à Argentinosaurus ?",
+    "text": "Quel dinosaure était beaucoup plus petit que ses versions dans Jurassic Park ?",
     "answers": [
-      "un droméosaure à griffe en faucille",
-      "un dinosaure avialien à plumes du Jurassique",
-      "un immense sauropode d'Argentine",
-      "un théropode à bec de Mongolie"
+      "Brachiosaurus",
+      "Triceratops",
+      "Velociraptor",
+      "Stegosaurus"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel portrait paléontologique décrit Argentinosaurus ?",
+    "text": "Où les fossiles de Velociraptor ont-ils notamment été trouvés ?",
     "answers": [
-      "un droméosaure à griffe en faucille",
-      "un dinosaure avialien à plumes du Jurassique",
-      "un théropode à bec de Mongolie",
-      "un immense sauropode d'Argentine"
+      "Au Brésil",
+      "En France",
+      "En Nouvelle-Zélande",
+      "En Mongolie"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle description correspond à Deinonychus ?",
+    "text": "À quel groupe de théropodes Velociraptor et Deinonychus appartiennent-ils ?",
     "answers": [
-      "un droméosaure à griffe en faucille",
-      "un dinosaure avialien à plumes du Jurassique",
-      "un théropode à bec de Mongolie",
-      "un ornithomimosaure coureur"
+      "Les droméosauridés",
+      "Les tyrannosauridés",
+      "Les spinosauridés",
+      "Les carcharodontosauridés"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel portrait paléontologique décrit Deinonychus ?",
+    "text": "Sur quel orteil les droméosauridés portaient-ils une grande griffe recourbée ?",
     "answers": [
-      "un dinosaure avialien à plumes du Jurassique",
-      "un droméosaure à griffe en faucille",
-      "un théropode à bec de Mongolie",
-      "un ornithomimosaure coureur"
+      "Le premier orteil",
+      "Le deuxième orteil",
+      "Le troisième orteil",
+      "Le quatrième orteil"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle description correspond à Archaeopteryx ?",
+    "text": "Quel paléontologue a décrit Deinonychus et contribué à la « renaissance des dinosaures » ?",
     "answers": [
-      "un théropode à bec de Mongolie",
-      "un ornithomimosaure coureur",
-      "un dinosaure avialien à plumes du Jurassique",
-      "un hadrosaure associé à des nids coloniaux"
+      "Gideon Mantell",
+      "William Buckland",
+      "John Ostrom",
+      "Roy Chapman Andrews"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel portrait paléontologique décrit Archaeopteryx ?",
+    "text": "Quel dinosaure portait de grandes plaques dressées sur le dos ?",
     "answers": [
-      "un théropode à bec de Mongolie",
-      "un ornithomimosaure coureur",
-      "un hadrosaure associé à des nids coloniaux",
-      "un dinosaure avialien à plumes du Jurassique"
+      "Iguanodon",
+      "Gallimimus",
+      "Carnotaurus",
+      "Stegosaurus"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle description correspond à Oviraptor ?",
+    "text": "Quelle arme se trouvait au bout de la queue de Stegosaurus ?",
     "answers": [
-      "un théropode à bec de Mongolie",
-      "un ornithomimosaure coureur",
-      "un hadrosaure associé à des nids coloniaux",
-      "un théropode aux très longues griffes"
+      "Des pointes osseuses",
+      "Une massue sphérique",
+      "Une pince",
+      "Un aiguillon venimeux"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel portrait paléontologique décrit Oviraptor ?",
+    "text": "Pendant quelle période Stegosaurus vivait-il ?",
     "answers": [
-      "un ornithomimosaure coureur",
-      "un théropode à bec de Mongolie",
-      "un hadrosaure associé à des nids coloniaux",
-      "un théropode aux très longues griffes"
+      "Le Trias inférieur",
+      "Le Jurassique supérieur",
+      "Le Crétacé supérieur",
+      "Le Paléocène"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle description correspond à Gallimimus ?",
+    "text": "Quel grand prédateur partageait l’écosystème de Stegosaurus ?",
     "answers": [
-      "un hadrosaure associé à des nids coloniaux",
-      "un théropode aux très longues griffes",
-      "un ornithomimosaure coureur",
-      "un petit cératopsien de Mongolie"
+      "Tyrannosaurus rex",
+      "Spinosaurus",
+      "Allosaurus",
+      "Carnotaurus"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel portrait paléontologique décrit Gallimimus ?",
+    "text": "Quel nom informel les paléontologues donnent-ils parfois à l’ensemble des quatre pointes caudales de Stegosaurus ?",
     "answers": [
-      "un hadrosaure associé à des nids coloniaux",
-      "un théropode aux très longues griffes",
-      "un petit cératopsien de Mongolie",
-      "un ornithomimosaure coureur"
+      "Le rostre",
+      "Le pygostyle",
+      "Le synsacrum",
+      "Le thagomizer"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle description correspond à Maiasaura ?",
+    "text": "Quel dinosaure était couvert d’une armure osseuse et portait une massue caudale ?",
     "answers": [
-      "un hadrosaure associé à des nids coloniaux",
-      "un théropode aux très longues griffes",
-      "un petit cératopsien de Mongolie",
-      "un sauropode du Jurassique nord-américain"
+      "Ankylosaurus",
+      "Parasaurolophus",
+      "Compsognathus",
+      "Diplodocus"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel portrait paléontologique décrit Maiasaura ?",
+    "text": "Quel était le régime alimentaire d’Ankylosaurus ?",
     "answers": [
-      "un théropode aux très longues griffes",
-      "un hadrosaure associé à des nids coloniaux",
-      "un petit cératopsien de Mongolie",
-      "un sauropode du Jurassique nord-américain"
+      "Carnivore",
+      "Herbivore",
+      "Piscivore",
+      "Omnivore marin"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle description correspond à Therizinosaurus ?",
+    "text": "Dans quelle région du monde Ankylosaurus vivait-il ?",
     "answers": [
-      "un petit cératopsien de Mongolie",
-      "un sauropode du Jurassique nord-américain",
-      "un théropode aux très longues griffes",
-      "un reptile marin, et non un dinosaure"
+      "En Afrique du Nord",
+      "En Europe occidentale",
+      "En Amérique du Nord",
+      "En Inde"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel portrait paléontologique décrit Therizinosaurus ?",
+    "text": "Comment nomme-t-on les plaques osseuses formées dans la peau des dinosaures cuirassés ?",
     "answers": [
-      "un petit cératopsien de Mongolie",
-      "un sauropode du Jurassique nord-américain",
-      "un reptile marin, et non un dinosaure",
-      "un théropode aux très longues griffes"
+      "Des gastralia",
+      "Des phalanges",
+      "Des sclérotiques",
+      "Des ostéodermes"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle description correspond à Protoceratops ?",
+    "text": "Quel ankylosaure célèbre, contrairement à Ankylosaurus, ne possédait pas de massue caudale ?",
     "answers": [
-      "un petit cératopsien de Mongolie",
-      "un sauropode du Jurassique nord-américain",
-      "un reptile marin, et non un dinosaure",
-      "un grand théropode carnivore"
+      "Nodosaurus",
+      "Euoplocephalus",
+      "Anodontosaurus",
+      "Tarchia"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel portrait paléontologique décrit Protoceratops ?",
+    "text": "Quel sauropode avait les membres antérieurs plus longs que les membres postérieurs ?",
     "answers": [
-      "un sauropode du Jurassique nord-américain",
-      "un petit cératopsien de Mongolie",
-      "un reptile marin, et non un dinosaure",
-      "un grand théropode carnivore"
+      "Diplodocus",
+      "Brachiosaurus",
+      "Apatosaurus",
+      "Amargasaurus"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle description correspond à Apatosaurus ?",
+    "text": "Que signifie approximativement le nom Brachiosaurus ?",
     "answers": [
-      "un reptile marin, et non un dinosaure",
-      "un grand théropode carnivore",
-      "un sauropode du Jurassique nord-américain",
-      "un herbivore à trois cornes"
+      "Lézard double poutre",
+      "Lézard trompeur",
+      "Lézard à bras",
+      "Lézard terrible"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel portrait paléontologique décrit Apatosaurus ?",
+    "text": "Dans quelle formation géologique américaine trouve-t-on Diplodocus ?",
     "answers": [
-      "un reptile marin, et non un dinosaure",
-      "un grand théropode carnivore",
-      "un herbivore à trois cornes",
-      "un sauropode du Jurassique nord-américain"
+      "La formation de Hell Creek",
+      "La formation de Yixian",
+      "La formation de Nemegt",
+      "La formation de Morrison"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle description correspond à Mosasaurus ?",
+    "text": "Quelle partie du corps de Diplodocus était particulièrement longue et effilée ?",
     "answers": [
-      "un reptile marin, et non un dinosaure",
-      "un grand théropode carnivore",
-      "un herbivore à trois cornes",
-      "un petit théropode à plumes"
+      "La queue",
+      "Le crâne",
+      "Les doigts",
+      "La cuirasse"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel portrait paléontologique décrit Mosasaurus ?",
+    "text": "À quoi le nom Diplodocus, « double poutre », fait-il référence ?",
     "answers": [
-      "un grand théropode carnivore",
-      "un reptile marin, et non un dinosaure",
-      "un herbivore à trois cornes",
-      "un petit théropode à plumes"
+      "À deux cornes au-dessus des yeux",
+      "À des os particuliers sous sa queue",
+      "À une double rangée de dents",
+      "À deux crêtes sur son crâne"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel grand théropode dominait de nombreux écosystèmes nord-américains du Jurassique supérieur ?",
+    "answers": [
+      "Velociraptor",
+      "Carnotaurus",
+      "Allosaurus",
+      "Tyrannosaurus rex"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien de doigts portaient les mains d’Allosaurus ?",
+    "answers": [
+      "Un",
+      "Deux",
+      "Cinq",
+      "Trois"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle formation fossilifère a livré Allosaurus, Stegosaurus, Diplodocus et Apatosaurus ?",
+    "answers": [
+      "La formation de Morrison",
+      "La formation de Bahariya",
+      "La formation de Horseshoe Canyon",
+      "La formation de Maevarano"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel était le régime alimentaire d’Apatosaurus ?",
+    "answers": [
+      "Carnivore",
+      "Herbivore",
+      "Piscivore",
+      "Insectivore"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Que signifie approximativement le nom Apatosaurus ?",
+    "answers": [
+      "Lézard tyran",
+      "Lézard à trois cornes",
+      "Lézard trompeur",
+      "Lézard voleur"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel dinosaure est célèbre pour sa pointe conique sur chaque pouce ?",
+    "answers": [
+      "Parasaurolophus",
+      "Protoceratops",
+      "Maiasaura",
+      "Iguanodon"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel régime alimentaire avait Iguanodon ?",
+    "answers": [
+      "Herbivore",
+      "Carnivore",
+      "Piscivore",
+      "Insectivore"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle structure remarquable prolongeait le crâne de Parasaurolophus ?",
+    "answers": [
+      "Trois cornes pleines",
+      "Une longue crête creuse",
+      "Une mâchoire inférieure articulée",
+      "Une paire de défenses"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment Parasaurolophus pouvait-il se déplacer ?",
+    "answers": [
+      "Uniquement en rampant",
+      "Uniquement sur quatre pattes",
+      "Sur deux ou quatre pattes",
+      "En volant sur de courtes distances"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle famille de dinosaures à bec de canard appartenait Parasaurolophus ?",
+    "answers": [
+      "Les cératopsidés",
+      "Les diplodocidés",
+      "Les droméosauridés",
+      "Les hadrosauridés"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel théropode portait deux cornes au-dessus des yeux ?",
+    "answers": [
+      "Carnotaurus",
+      "Oviraptor",
+      "Gallimimus",
+      "Compsognathus"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Sur quel continent Carnotaurus vivait-il ?",
+    "answers": [
+      "En Amérique du Nord",
+      "En Amérique du Sud",
+      "En Asie",
+      "En Europe"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Que signifie approximativement le nom Carnotaurus ?",
+    "answers": [
+      "Lézard à voile",
+      "Voleur rapide",
+      "Taureau mangeur de viande",
+      "Oiseau antique"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel trait des membres antérieurs de Carnotaurus était particulièrement marqué ?",
+    "answers": [
+      "Ils portaient des ailes fonctionnelles",
+      "Ils avaient cinq longs doigts",
+      "Ils formaient des nageoires",
+      "Ils étaient très réduits"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel paléontologue argentin a décrit Carnotaurus en 1985 ?",
+    "answers": [
+      "José Bonaparte",
+      "Florentino Ameghino",
+      "Ernst Stromer",
+      "Paul Sereno"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel dinosaure possédait de hautes épines dorsales formant une voile ?",
+    "answers": [
+      "Allosaurus",
+      "Spinosaurus",
+      "Iguanodon",
+      "Pachycephalosaurus"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Sur quel continent Spinosaurus vivait-il ?",
+    "answers": [
+      "En Amérique du Nord",
+      "En Europe",
+      "En Afrique",
+      "En Antarctique"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle forme avaient les dents de Spinosaurus ?",
+    "answers": [
+      "Plates comme des molaires",
+      "En forme de feuilles",
+      "Creuses comme des aiguilles",
+      "Coniques et peu dentelées"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel type de proie est bien compatible avec le museau et les dents de Spinosaurus ?",
+    "answers": [
+      "Des poissons",
+      "Du plancton filtré",
+      "Des graines broyées",
+      "Du nectar"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Pourquoi les premières dépouilles fossiles de Spinosaurus sont-elles difficiles à réétudier ?",
+    "answers": [
+      "Elles ont été dissoutes dans l’acide",
+      "Elles ont été détruites pendant la Seconde Guerre mondiale",
+      "Elles reposent au fond du Pacifique",
+      "Elles n’ont jamais été extraites de la roche"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel animal à plumes du Jurassique est célèbre pour ses traits de dinosaure et d’oiseau ?",
+    "answers": [
+      "Dimetrodon",
+      "Mosasaurus",
+      "Archaeopteryx",
+      "Plesiosaurus"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quel pays les fossiles d’Archaeopteryx ont-ils été découverts ?",
+    "answers": [
+      "En Mongolie",
+      "Au Canada",
+      "En Argentine",
+      "En Allemagne"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel gisement calcaire a livré les fossiles d’Archaeopteryx ?",
+    "answers": [
+      "Solnhofen",
+      "Hell Creek",
+      "La Brea",
+      "Olduvai"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel trait reptilien Archaeopteryx possédait-il dans ses mâchoires ?",
+    "answers": [
+      "Des fanons",
+      "Des dents",
+      "Une trompe",
+      "Des défenses spiralées"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En quelle année le premier squelette connu d’Archaeopteryx a-t-il été découvert ?",
+    "answers": [
+      "1761",
+      "1911",
+      "1861",
+      "1961"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Que signifie le nom Oviraptor ?",
+    "answers": [
+      "Lézard à voile",
+      "Mère lézard",
+      "Main terrible",
+      "Voleur d’œufs"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel type de bouche possédait Oviraptor ?",
+    "answers": [
+      "Un bec sans dents",
+      "Des fanons",
+      "Une trompe dentée",
+      "Des défenses recourbées"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quel pays Oviraptor vivait-il ?",
+    "answers": [
+      "Au Maroc",
+      "En Mongolie",
+      "Aux États-Unis",
+      "En Australie"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Pourquoi l’interprétation initiale d’Oviraptor comme voleur d’œufs a-t-elle été remise en cause ?",
+    "answers": [
+      "Ses dents ne pouvaient pas briser une coquille",
+      "Aucun œuf fossilisé n’existe au Crétacé",
+      "Des oviraptorosaures ont été trouvés couvant leurs propres nids",
+      "Il vivait uniquement dans l’eau"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Que signifie le nom Maiasaura ?",
+    "answers": [
+      "Lézard différent",
+      "Lézard à bras",
+      "Face à trois cornes",
+      "Bonne mère lézard"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel dinosaure est célèbre pour ses griffes antérieures exceptionnellement longues ?",
+    "answers": [
+      "Therizinosaurus",
+      "Protoceratops",
+      "Gallimimus",
+      "Pachycephalosaurus"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel régime alimentaire est jugé le plus probable pour Therizinosaurus malgré son appartenance aux théropodes ?",
+    "answers": [
+      "Strictement piscivore",
+      "Principalement herbivore",
+      "Filtreur de plancton",
+      "Hématophage"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle région a-t-on découvert Therizinosaurus ?",
+    "answers": [
+      "Au Groenland",
+      "À Madagascar",
+      "En Mongolie",
+      "Au Mexique"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quel grand groupe appartenait Protoceratops ?",
+    "answers": [
+      "Les sauropodes",
+      "Les ankylosaures",
+      "Les tyrannosauridés",
+      "Les cératopsiens"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel fossile spectaculaire associe directement Protoceratops à Velociraptor ?",
+    "answers": [
+      "Les « dinosaures combattants »",
+      "La piste de Laetoli",
+      "Le spécimen Sue",
+      "Le nid de Lourinhã"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a créé le terme Dinosauria en 1842 ?",
+    "answers": [
+      "Charles Darwin",
+      "Richard Owen",
+      "Georges Cuvier",
+      "Alfred Wegener"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel savant britannique a nommé Iguanodon ?",
+    "answers": [
+      "Mary Anning",
+      "John Ostrom",
+      "Gideon Mantell",
+      "Barnum Brown"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel paléontologue a nommé Brachiosaurus en 1903 ?",
+    "answers": [
+      "Henry Osborn",
+      "Othniel Marsh",
+      "Robert Bakker",
+      "Elmer Riggs"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel explorateur a dirigé les expéditions du Musée américain en Mongolie dans les années 1920 ?",
+    "answers": [
+      "Roy Chapman Andrews",
+      "Ernest Shackleton",
+      "Thor Heyerdahl",
+      "David Livingstone"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel dinosaure William Buckland a-t-il nommé en 1824, premier dinosaure décrit scientifiquement ?",
+    "answers": [
+      "Diplodocus",
+      "Megalosaurus",
+      "Velociraptor",
+      "Spinosaurus"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel grand théropode a été découvert en Argentine ?",
+    "answers": [
+      "Tyrannosaurus",
+      "Spinosaurus",
+      "Giganotosaurus",
+      "Allosaurus"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel immense sauropode porte un nom faisant référence à l’Argentine ?",
+    "answers": [
+      "Apatosaurus",
+      "Brachiosaurus",
+      "Diplodocus",
+      "Argentinosaurus"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel dinosaure du Crétacé a été découvert à Madagascar ?",
+    "answers": [
+      "Majungasaurus",
+      "Parasaurolophus",
+      "Protoceratops",
+      "Iguanodon"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel site chinois est célèbre pour ses dinosaures à plumes du Crétacé inférieur ?",
+    "answers": [
+      "La formation de Morrison",
+      "La formation de Yixian",
+      "La formation de Hell Creek",
+      "Les schistes de Burgess"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sur quel continent a-t-on trouvé des dinosaures fossiles, y compris en Antarctique ?",
+    "answers": [
+      "Seulement dans l’hémisphère Nord",
+      "Seulement en Eurasie et en Afrique",
+      "Sur tous les continents",
+      "Partout sauf en Antarctique"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Mosasaurus était-il un dinosaure ?",
+    "answers": [
+      "Oui, un hadrosaure",
+      "Oui, un théropode",
+      "Non, c’était un mammifère marin",
+      "Non, c’était un reptile marin"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dimetrodon, qui vivait avant les dinosaures, appartenait à quelle lignée ?",
+    "answers": [
+      "Les synapsides",
+      "Les sauropodes",
+      "Les ptérosaures",
+      "Les oiseaux"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Pteranodon appartenait à quel groupe ?",
+    "answers": [
+      "Les dinosaures théropodes",
+      "Les ptérosaures",
+      "Les mosasaures",
+      "Les plésiosaures"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle affirmation sur Brontosaurus et Apatosaurus reflète le consensus taxonomique moderne ?",
+    "answers": [
+      "Ce sont deux noms d’une même espèce sans débat",
+      "Brontosaurus est un ptérosaure",
+      "Ce sont deux genres distincts mais proches",
+      "Apatosaurus est un théropode"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel indice anatomique relie fortement les oiseaux aux dinosaures théropodes ?",
+    "answers": [
+      "Des branchies et des nageoires",
+      "Une carapace et un plastron",
+      "Des cornes et une collerette",
+      "Des plumes et un furcula"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
