@@ -1,502 +1,121 @@
 [
-  {
-    "text": "Quel créateur britannique a conçu Black Mirror ?",
-    "answers": [
-      "Charlie Brooker",
-      "Jesse Armstrong",
-      "Steven Moffat",
-      "Russell T Davies"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel type de série est Black Mirror ?",
-    "answers": [
-      "Une sitcom",
-      "Une anthologie",
-      "Un feuilleton historique",
-      "Une série policière continue"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : un Premier ministre soumis à un chantage diffusé en direct ?",
-    "answers": [
-      "Fifteen Million Merits",
-      "The Entire History of You",
-      "The National Anthem",
-      "Be Right Back"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à The National Anthem ?",
-    "answers": [
-      "une société où les habitants pédalent pour gagner des crédits",
-      "un implant permettant de revoir tous ses souvenirs",
-      "une femme recrée numériquement son compagnon décédé",
-      "un Premier ministre soumis à un chantage diffusé en direct"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : une société où les habitants pédalent pour gagner des crédits ?",
-    "answers": [
-      "Fifteen Million Merits",
-      "White Christmas",
-      "Nosedive",
-      "Playtest"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Fifteen Million Merits ?",
-    "answers": [
-      "un voyageur teste un jeu d’horreur en réalité augmentée",
-      "une société où les habitants pédalent pour gagner des crédits",
-      "un adolescent est victime d’un chantage après le piratage de sa webcam",
-      "deux femmes se rencontrent dans une ville virtuelle"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : un implant permettant de revoir tous ses souvenirs ?",
-    "answers": [
-      "Men Against Fire",
-      "Hated in the Nation",
-      "The Entire History of You",
-      "USS Callister"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à The Entire History of You ?",
-    "answers": [
-      "un dispositif permet d’extraire les souvenirs de témoins",
-      "un système de rencontres impose des relations à durée limitée",
-      "une femme est poursuivie par un robot quadrupède",
-      "un implant permettant de revoir tous ses souvenirs"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : une femme recrée numériquement son compagnon décédé ?",
-    "answers": [
-      "Be Right Back",
-      "Hang the DJ",
-      "Metalhead",
-      "Black Museum"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Be Right Back ?",
-    "answers": [
-      "une adolescente possède une poupée connectée inspirée d’une chanteuse",
-      "une femme recrée numériquement son compagnon décédé",
-      "une plateforme transforme la vie d’une femme en série presque instantanément",
-      "un Premier ministre soumis à un chantage diffusé en direct"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : une femme pourchassée sous le regard de spectateurs qui filment ?",
-    "answers": [
-      "Smithereens",
-      "Rachel, Jack and Ashley Too",
-      "White Bear",
-      "Joan Is Awful"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à White Bear ?",
-    "answers": [
-      "trois histoires liées à des copies numériques et au blocage social",
-      "une société où chaque interaction reçoit une note",
-      "un voyageur teste un jeu d’horreur en réalité augmentée",
-      "une femme pourchassée sous le regard de spectateurs qui filment"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : un personnage animé vulgaire se lance en politique ?",
-    "answers": [
-      "The Waldo Moment",
-      "The Entire History of You",
-      "Be Right Back",
-      "White Bear"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à The Waldo Moment ?",
-    "answers": [
-      "un programmeur enferme des copies de ses collègues dans un jeu spatial",
-      "un personnage animé vulgaire se lance en politique",
-      "une mère surveille sa fille grâce à un implant",
-      "un dispositif permet d’extraire les souvenirs de témoins"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : trois histoires liées à des copies numériques et au blocage social ?",
-    "answers": [
-      "Playtest",
-      "Shut Up and Dance",
-      "White Christmas",
-      "San Junipero"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à White Christmas ?",
-    "answers": [
-      "deux amis se retrouvent dans un jeu de combat en réalité virtuelle",
-      "un chauffeur retient un employé d’un réseau social en otage",
-      "une adolescente possède une poupée connectée inspirée d’une chanteuse",
-      "trois histoires liées à des copies numériques et au blocage social"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : une société où chaque interaction reçoit une note ?",
-    "answers": [
-      "Nosedive",
-      "USS Callister",
-      "Arkangel",
-      "Crocodile"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Nosedive ?",
-    "answers": [
-      "une femme recrée numériquement son compagnon décédé",
-      "une société où chaque interaction reçoit une note",
-      "une femme pourchassée sous le regard de spectateurs qui filment",
-      "un personnage animé vulgaire se lance en politique"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : un voyageur teste un jeu d’horreur en réalité augmentée ?",
-    "answers": [
-      "Black Museum",
-      "Bandersnatch",
-      "Playtest",
-      "Striking Vipers"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à Playtest ?",
-    "answers": [
-      "des soldats voient leurs ennemis à travers un implant altérant la réalité",
-      "des abeilles-drones sont utilisées dans une série de meurtres",
-      "un programmeur enferme des copies de ses collègues dans un jeu spatial",
-      "un voyageur teste un jeu d’horreur en réalité augmentée"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : un adolescent est victime d’un chantage après le piratage de sa webcam ?",
-    "answers": [
-      "Shut Up and Dance",
-      "Joan Is Awful",
-      "The National Anthem",
-      "Fifteen Million Merits"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Shut Up and Dance ?",
-    "answers": [
-      "un musée expose des technologies liées à plusieurs tragédies",
-      "un adolescent est victime d’un chantage après le piratage de sa webcam",
-      "un programmeur adapte un livre à choix multiples en jeu vidéo",
-      "deux amis se retrouvent dans un jeu de combat en réalité virtuelle"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : deux femmes se rencontrent dans une ville virtuelle ?",
-    "answers": [
-      "White Bear",
-      "The Waldo Moment",
-      "San Junipero",
-      "White Christmas"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à San Junipero ?",
-    "answers": [
-      "une société où les habitants pédalent pour gagner des crédits",
-      "un implant permettant de revoir tous ses souvenirs",
-      "une femme recrée numériquement son compagnon décédé",
-      "deux femmes se rencontrent dans une ville virtuelle"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : des soldats voient leurs ennemis à travers un implant altérant la réalité ?",
-    "answers": [
-      "Men Against Fire",
-      "Shut Up and Dance",
-      "San Junipero",
-      "Hated in the Nation"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Men Against Fire ?",
-    "answers": [
-      "un voyageur teste un jeu d’horreur en réalité augmentée",
-      "des soldats voient leurs ennemis à travers un implant altérant la réalité",
-      "un adolescent est victime d’un chantage après le piratage de sa webcam",
-      "deux femmes se rencontrent dans une ville virtuelle"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : des abeilles-drones sont utilisées dans une série de meurtres ?",
-    "answers": [
-      "Crocodile",
-      "Hang the DJ",
-      "Hated in the Nation",
-      "Metalhead"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à Hated in the Nation ?",
-    "answers": [
-      "un système de rencontres impose des relations à durée limitée",
-      "une femme est poursuivie par un robot quadrupède",
-      "un musée expose des technologies liées à plusieurs tragédies",
-      "des abeilles-drones sont utilisées dans une série de meurtres"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : un programmeur enferme des copies de ses collègues dans un jeu spatial ?",
-    "answers": [
-      "USS Callister",
-      "Striking Vipers",
-      "Smithereens",
-      "Rachel, Jack and Ashley Too"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à USS Callister ?",
-    "answers": [
-      "une plateforme transforme la vie d’une femme en série presque instantanément",
-      "un programmeur enferme des copies de ses collègues dans un jeu spatial",
-      "un Premier ministre soumis à un chantage diffusé en direct",
-      "une société où les habitants pédalent pour gagner des crédits"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : une mère surveille sa fille grâce à un implant ?",
-    "answers": [
-      "Fifteen Million Merits",
-      "The Entire History of You",
-      "Arkangel",
-      "Be Right Back"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à Arkangel ?",
-    "answers": [
-      "trois histoires liées à des copies numériques et au blocage social",
-      "une société où chaque interaction reçoit une note",
-      "un voyageur teste un jeu d’horreur en réalité augmentée",
-      "une mère surveille sa fille grâce à un implant"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : un dispositif permet d’extraire les souvenirs de témoins ?",
-    "answers": [
-      "Crocodile",
-      "White Christmas",
-      "Nosedive",
-      "Playtest"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Crocodile ?",
-    "answers": [
-      "un programmeur enferme des copies de ses collègues dans un jeu spatial",
-      "un dispositif permet d’extraire les souvenirs de témoins",
-      "une mère surveille sa fille grâce à un implant",
-      "un système de rencontres impose des relations à durée limitée"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : un système de rencontres impose des relations à durée limitée ?",
-    "answers": [
-      "Men Against Fire",
-      "Hated in the Nation",
-      "Hang the DJ",
-      "USS Callister"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à Hang the DJ ?",
-    "answers": [
-      "un chauffeur retient un employé d’un réseau social en otage",
-      "une adolescente possède une poupée connectée inspirée d’une chanteuse",
-      "une plateforme transforme la vie d’une femme en série presque instantanément",
-      "un système de rencontres impose des relations à durée limitée"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : une femme est poursuivie par un robot quadrupède ?",
-    "answers": [
-      "Metalhead",
-      "Hang the DJ",
-      "Black Museum",
-      "Bandersnatch"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Metalhead ?",
-    "answers": [
-      "une femme pourchassée sous le regard de spectateurs qui filment",
-      "une femme est poursuivie par un robot quadrupède",
-      "un personnage animé vulgaire se lance en politique",
-      "trois histoires liées à des copies numériques et au blocage social"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : un musée expose des technologies liées à plusieurs tragédies ?",
-    "answers": [
-      "Rachel, Jack and Ashley Too",
-      "Joan Is Awful",
-      "Black Museum",
-      "The National Anthem"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à Black Museum ?",
-    "answers": [
-      "des soldats voient leurs ennemis à travers un implant altérant la réalité",
-      "des abeilles-drones sont utilisées dans une série de meurtres",
-      "un programmeur enferme des copies de ses collègues dans un jeu spatial",
-      "un musée expose des technologies liées à plusieurs tragédies"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : un programmeur adapte un livre à choix multiples en jeu vidéo ?",
-    "answers": [
-      "Bandersnatch",
-      "Be Right Back",
-      "White Bear",
-      "The Waldo Moment"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Bandersnatch ?",
-    "answers": [
-      "un musée expose des technologies liées à plusieurs tragédies",
-      "un programmeur adapte un livre à choix multiples en jeu vidéo",
-      "deux amis se retrouvent dans un jeu de combat en réalité virtuelle",
-      "un chauffeur retient un employé d’un réseau social en otage"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : deux amis se retrouvent dans un jeu de combat en réalité virtuelle ?",
-    "answers": [
-      "Playtest",
-      "Shut Up and Dance",
-      "Striking Vipers",
-      "San Junipero"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à Striking Vipers ?",
-    "answers": [
-      "un implant permettant de revoir tous ses souvenirs",
-      "une femme recrée numériquement son compagnon décédé",
-      "une femme pourchassée sous le regard de spectateurs qui filment",
-      "deux amis se retrouvent dans un jeu de combat en réalité virtuelle"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : un chauffeur retient un employé d’un réseau social en otage ?",
-    "answers": [
-      "Smithereens",
-      "USS Callister",
-      "Arkangel",
-      "Crocodile"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Smithereens ?",
-    "answers": [
-      "un adolescent est victime d’un chantage après le piratage de sa webcam",
-      "un chauffeur retient un employé d’un réseau social en otage",
-      "deux femmes se rencontrent dans une ville virtuelle",
-      "des soldats voient leurs ennemis à travers un implant altérant la réalité"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : une adolescente possède une poupée connectée inspirée d’une chanteuse ?",
-    "answers": [
-      "Black Museum",
-      "Bandersnatch",
-      "Rachel, Jack and Ashley Too",
-      "Striking Vipers"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à Rachel, Jack and Ashley Too ?",
-    "answers": [
-      "un système de rencontres impose des relations à durée limitée",
-      "une femme est poursuivie par un robot quadrupède",
-      "un musée expose des technologies liées à plusieurs tragédies",
-      "une adolescente possède une poupée connectée inspirée d’une chanteuse"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel élément de Black Mirror est décrit ainsi : une plateforme transforme la vie d’une femme en série presque instantanément ?",
-    "answers": [
-      "Joan Is Awful",
-      "The National Anthem",
-      "Fifteen Million Merits",
-      "The Entire History of You"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Joan Is Awful ?",
-    "answers": [
-      "un Premier ministre soumis à un chantage diffusé en direct",
-      "une plateforme transforme la vie d’une femme en série presque instantanément",
-      "une société où les habitants pédalent pour gagner des crédits",
-      "un implant permettant de revoir tous ses souvenirs"
-    ],
-    "correct": 1
-  }
+  {"text":"Quel service diffuse les nouvelles saisons de Black Mirror depuis la troisième ?","answers":["Prime Video","Netflix","Disney+","Apple TV+"],"correct":1,"difficulty":"facile"},
+  {"text":"Dans The National Anthem, quelle personnalité est enlevée ?","answers":["La Première ministre","Le prince héritier","La princesse Susannah","Le maire de Londres"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel acteur interprète le Premier ministre Michael Callow dans The National Anthem ?","answers":["Domhnall Gleeson","Daniel Kaluuya","Toby Kebbell","Rory Kinnear"],"correct":3,"difficulty":"difficile"},
+  {"text":"Dans Fifteen Million Merits, comment Bing gagne-t-il ses crédits au quotidien ?","answers":["En pédalant sur un vélo","En évaluant ses voisins","En conduisant un taxi","En testant des jeux"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel nom porte le concours télévisé auquel Abi participe dans Fifteen Million Merits ?","answers":["Star Chance","Hot Shot","Fame Factory","Talent Sphere"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel acteur de Get Out joue Bing dans Fifteen Million Merits ?","answers":["John Boyega","LaKeith Stanfield","Daniel Kaluuya","Chiwetel Ejiofor"],"correct":2,"difficulty":"facile"},
+  {"text":"Dans The Entire History of You, quel dispositif conserve les souvenirs visuels ?","answers":["Un cookie","Un masque","Une lentille","Un grain"],"correct":3,"difficulty":"moyen"},
+  {"text":"Quel scénariste, futur créateur de Succession, a écrit The Entire History of You ?","answers":["Jesse Armstrong","Armando Iannucci","Sam Bain","Tony Roche"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel acteur incarne Liam Foxwell dans The Entire History of You ?","answers":["Tom Cullen","Toby Kebbell","Jodie Whittaker","Jon Hamm"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel épisode de la première saison n'a pas été écrit par Charlie Brooker ?","answers":["The National Anthem","Fifteen Million Merits","The Entire History of You","Aucun des trois"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Dans Be Right Back, quel être cher Martha tente-t-elle de recréer grâce à un service numérique ?","answers":["Son frère","Son père","Son ami d'enfance","Son compagnon Ash"],"correct":3,"difficulty":"facile"},
+  {"text":"Quelle actrice interprète Martha dans Be Right Back ?","answers":["Hayley Atwell","Bryce Dallas Howard","Gugu Mbatha-Raw","Andrea Riseborough"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel acteur joue Ash dans Be Right Back ?","answers":["Andrew Scott","Domhnall Gleeson","Alex Lawther","Will Poulter"],"correct":1,"difficulty":"difficile"},
+  {"text":"Dans White Bear, quel symbole apparaît sur les écrans et les cagoules ?","answers":["Un œil barré","Une spirale","Un glyphe blanc en forme de Y","Un sablier"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel nom porte le parc où Victoria est punie dans White Bear ?","answers":["Justice World","Black Mirror Park","Hunter's Ground","White Bear Justice Park"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quel personnage animé se présente à une élection dans The Waldo Moment ?","answers":["Waldo","Binky","Mister Blue","Rufus"],"correct":0,"difficulty":"facile"},
+  {"text":"Quel acteur interprète Jamie Salter, la voix de Waldo ?","answers":["Rory Kinnear","Daniel Rigby","Michael Smiley","Jerome Flynn"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel épisode spécial réunit Matt et Joe dans une cabane enneigée ?","answers":["White Bear","Black Museum","White Christmas","Metalhead"],"correct":2,"difficulty":"difficile"},
+  {"text":"Qui incarne Matt Trent dans White Christmas ?","answers":["Rafe Spall","O-T Fagbenle","Benedict Wong","Jon Hamm"],"correct":3,"difficulty":"difficile"},
+  {"text":"Dans White Christmas, quel objet contient la copie numérique de Greta ?","answers":["Un cookie","Un grain","Une ruche","Un disque optique"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Dans Nosedive, que les habitants attribuent-ils constamment les uns aux autres ?","answers":["Des crédits","Des notes","Des amendes","Des badges"],"correct":1,"difficulty":"facile"},
+  {"text":"Quelle actrice joue Lacie Pound dans Nosedive ?","answers":["Mackenzie Davis","Hayley Atwell","Bryce Dallas Howard","Jodie Whittaker"],"correct":2,"difficulty":"moyen"},
+  {"text":"Qui a réalisé Nosedive ?","answers":["David Slade","Toby Haynes","Owen Harris","Joe Wright"],"correct":3,"difficulty":"difficile"},
+  {"text":"Dans Playtest, dans quelle ville Cooper accepte-t-il de tester le jeu de SaitoGemu ?","answers":["Londres","Tokyo","San Francisco","Berlin"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel acteur incarne Cooper Redfield dans Playtest ?","answers":["Alex Lawther","Wyatt Russell","Joe Cole","Anthony Mackie"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Dans Shut Up and Dance, quel appareil de Kenny est piraté ?","answers":["Son téléphone","Sa console","Son ordinateur portable","Sa télévision"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel acteur joue Kenny dans Shut Up and Dance ?","answers":["Fionn Whitehead","Daniel Kaluuya","Will Poulter","Alex Lawther"],"correct":3,"difficulty":"moyen"},
+  {"text":"Dans San Junipero, à quelle décennie renvoie d'abord l'apparence de la ville virtuelle ?","answers":["Les années 1980","Les années 1960","Les années 2000","Les années 2020"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel duo est au cœur de San Junipero ?","answers":["Lacie et Naomi","Yorkie et Kelly","Mia et Shazia","Nish et Rolo"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quelle chanson de Belinda Carlisle accompagne la conclusion de San Junipero ?","answers":["Circle in the Sand","Mad About You","Heaven Is a Place on Earth","Leave a Light On"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Dans Men Against Fire, quel est le surnom du soldat principal ?","answers":["Hunter","Raiman","Medina","Stripe"],"correct":3,"difficulty":"facile"},
+  {"text":"Que modifie l'implant MASS dans Men Against Fire ?","answers":["La perception sensorielle","La force musculaire","La température corporelle","La durée du sommeil"],"correct":0,"difficulty":"moyen"},
+  {"text":"Dans Hated in the Nation, quels robots remplacent les abeilles disparues ?","answers":["Des papillons artificiels","Des insectes-drones autonomes","Des nano-mouches","Des scarabées mécaniques"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel mot-dièse déclenche le vote mortel dans Hated in the Nation ?","answers":["#CancelThem","#FinalVote","#DeathTo","#NoMercy"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quelle actrice incarne la détective Karin Parke dans Hated in the Nation ?","answers":["Letitia Wright","Monica Dolan","Wunmi Mosaku","Kelly Macdonald"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quel épisode se déroule dans une simulation de vaisseau spatial ?","answers":["USS Callister","Metalhead","Crocodile","Arkangel"],"correct":0,"difficulty":"facile"},
+  {"text":"Quel acteur joue Robert Daly dans USS Callister ?","answers":["Jimmi Simpson","Jesse Plemons","Cristin Milioti","Aaron Paul"],"correct":1,"difficulty":"moyen"},
+  {"text":"Comment s'appelle l'entreprise de réalité virtuelle cofondée par Daly et Walton ?","answers":["TCKR Systems","SaitoGemu","Callister Inc.","Smithereen"],"correct":2,"difficulty":"difficile"},
+  {"text":"Qui a réalisé Arkangel ?","answers":["Andrea Arnold","Lynne Ramsay","Susanne Bier","Jodie Foster"],"correct":3,"difficulty":"difficile"},
+  {"text":"Qui est renversé lors de l'accident initial dissimulé par Mia dans Crocodile ?","answers":["Un cycliste","Un policier","Un enfant","Un chauffeur"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Dans Hang the DJ, que fixe le système pour chaque couple ?","answers":["Un classement public","Une durée de relation","Un nombre d'enfants","Un lieu de résidence"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel duo tente d'échapper au système dans Hang the DJ ?","answers":["Danny et Karl","Cooper et Sonja","Frank et Amy","Chris et Jaden"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel choix visuel distingue Metalhead des autres épisodes de la série ?","answers":["Il est muet","Il est animé","Il est tourné en plan-séquence","Il est en noir et blanc"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel objet les survivants recherchent-ils dans l'entrepôt au début de Metalhead ?","answers":["Un ours en peluche","Une batterie","Des médicaments","Une radio"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel réalisateur a signé Metalhead ?","answers":["James Hawes","David Slade","John Hillcoat","Colm McCarthy"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Dans Black Museum, qui visite la collection de Rolo Haynes ?","answers":["Nanette","Carrie","Nish","Shazia"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel acteur incarne le propriétaire du musée, Rolo Haynes ?","answers":["Daniel Kaluuya","Benedict Wong","Michaela Coel","Douglas Hodge"],"correct":3,"difficulty":"moyen"},
+  {"text":"Dans Black Museum, quel objet est lié à l'histoire de Carrie et Jack ?","answers":["Un singe en peluche","Un casque de jeu","Une abeille mécanique","Un grain"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quelle entreprise technologique fictive relie plusieurs inventions de Black Museum ?","answers":["Smithereen","TCKR Systems","Granular","Rivermind"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quelle phrase limitée le singe en peluche peut-il notamment prononcer ?","answers":["Je suis là","Aide-moi","Monkey needs a hug","Réveille-toi"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quel film interactif de Black Mirror suit le programmeur Stefan Butler ?","answers":["Playtest","White Christmas","Loch Henry","Bandersnatch"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel acteur interprète Stefan Butler dans Bandersnatch ?","answers":["Fionn Whitehead","Will Poulter","Craig Parkinson","Asim Chaudhry"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel studio de jeux emploie Colin Ritman dans Bandersnatch ?","answers":["SaitoGemu","Tuckersoft","TCKR Games","Callister"],"correct":1,"difficulty":"difficile"},
+  {"text":"De quel type de livre Stefan adapte-t-il Bandersnatch ?","answers":["Un roman graphique","Un manuel de programmation","Un livre dont vous êtes le héros","Un recueil de nouvelles"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel symbole récurrent de la série est associé à l'auteur fictif Jerome F. Davies ?","answers":["L'ours blanc","Le logo de Waldo","L'abeille ADI","Le glyphe à branches"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Dans Striking Vipers, quel loisir virtuel réunit Danny et Karl ?","answers":["Un jeu de combat","Une course automobile","Un jeu spatial","Un jeu de rôle médiéval"],"correct":0,"difficulty":"facile"},
+  {"text":"Quel acteur joue Danny dans Striking Vipers ?","answers":["Yahya Abdul-Mateen II","Anthony Mackie","Topher Grace","Andrew Scott"],"correct":1,"difficulty":"moyen"},
+  {"text":"Dans le jeu, quels avatars Danny et Karl utilisent-ils respectivement ?","answers":["Roxette et Lance","Ken et Ryu","Lance et Roxette","Falcon et Viper"],"correct":2,"difficulty":"difficile"},
+  {"text":"Dans Smithereens, quel est le métier de Chris Gillhaney ?","answers":["Policier","Journaliste","Développeur","Chauffeur VTC"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel fondateur d'un réseau social fictif est interprété par Topher Grace dans Smithereens ?","answers":["Billy Bauer","Jack Smith","Rolo Haynes","Mike Smart"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quelle chanteuse est au centre de Rachel, Jack and Ashley Too ?","answers":["Mazey Day","Ashley O","Selma Telse","Bette McCardle"],"correct":1,"difficulty":"facile"},
+  {"text":"Quelle artiste interprète Ashley O ?","answers":["Lady Gaga","Demi Lovato","Miley Cyrus","Selena Gomez"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel objet connecté contient une copie limitée de la conscience d'Ashley ?","answers":["Une enceinte","Un bracelet","Un casque","La poupée Ashley Too"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quelle chanson de Nine Inch Nails est réécrite en On a Roll pour Ashley O ?","answers":["Head Like a Hole","Hurt","The Hand That Feeds","Closer"],"correct":0,"difficulty":"difficile"},
+  {"text":"Comment s'appelle la tante et manageuse d'Ashley O ?","answers":["Rachel","Catherine","Susan","Linda"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Dans Joan Is Awful, quel service produit une série inspirée de la vie de Joan ?","answers":["Smithereen","Tuckersoft","Streamberry","Sea of Tranquility"],"correct":2,"difficulty":"facile"},
+  {"text":"Quelle actrice joue la version dramatisée de Joan dans Streamberry ?","answers":["Annie Murphy","Cate Blanchett","Zazie Beetz","Salma Hayek Pinault"],"correct":3,"difficulty":"moyen"},
+  {"text":"Quel terme désigne l'ordinateur quantique qui génère la série dans Joan Is Awful ?","answers":["Le quamputer","Le cookie","Le grain","Le StreamCore"],"correct":0,"difficulty":"difficile"},
+  {"text":"Dans Loch Henry, quel projet Davis et Pia comptaient-ils initialement filmer ?","answers":["Un documentaire sur un tueur","Un film sur un homme protégeant des œufs rares","Une enquête sur Streamberry","Un portrait de la mère de Davis"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel support domestique révèle une preuve cruciale dans Loch Henry ?","answers":["Une cassette audio","Une carte mémoire","Une cassette VHS Bergerac","Une pellicule Super 8"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Dans Beyond the Sea, où Cliff et David travaillent-ils réellement ?","answers":["Dans une base lunaire","Dans un laboratoire sous-marin","Sur Mars","À bord d'un vaisseau spatial"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel acteur joue David Ross dans Beyond the Sea ?","answers":["Josh Hartnett","Aaron Paul","Rory Culkin","Ben Barnes"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel acteur incarne Cliff Stanfield ?","answers":["Josh Hartnett","Aaron Paul","Paapa Essiedu","Zazie Beetz"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quelle technologie permet aux astronautes de vivre sur Terre pendant leur mission ?","answers":["Des cookies","Des grains","Des répliques robotiques","Des clones biologiques"],"correct":2,"difficulty":"difficile"},
+  {"text":"En quelle année alternative se déroule Beyond the Sea ?","answers":["1959","1977","1984","1969"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quel métier exerce Bo dans Mazey Day ?","answers":["Paparazzi","Actrice","Policière","Médecin"],"correct":0,"difficulty":"facile"},
+  {"text":"Quelle créature surnaturelle Mazey devient-elle ?","answers":["Un vampire","Un loup-garou","Un démon","Un zombie"],"correct":1,"difficulty":"moyen"},
+  {"text":"Dans Demon 79, quel objet libère Gaap ?","answers":["Une bague","Un miroir","Un talisman","Une cassette vidéo"],"correct":2,"difficulty":"difficile"},
+  {"text":"Combien de personnes Nida doit-elle tuer pour empêcher l'apocalypse ?","answers":["Deux","Quatre","Six","Trois"],"correct":3,"difficulty":"difficile"},
+  {"text":"Sous quelle étiquette distincte Demon 79 est-il présenté au générique ?","answers":["Red Mirror","Dark Tales","Black Mirror Presents","Mirror Stories"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Dans Common People, quel organe d'Amanda est sauvé par Rivermind ?","answers":["Son cœur","Son cerveau","Son foie","Ses poumons"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel couple est interprété par Rashida Jones et Chris O'Dowd dans Common People ?","answers":["Maria et Kae","Brandy et Dorothy","Amanda et Mike","Gayle et Phillip"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel modèle économique fait grimper les contraintes imposées à Amanda ?","answers":["Des dons publics","Une assurance automobile","Une loterie","Un abonnement à plusieurs niveaux"],"correct":3,"difficulty":"difficile"},
+  {"text":"Dans Bête Noire, quel ancien nom de camarade Maria reconnaît-elle au travail ?","answers":["Verity Greene","Nanette Cole","Pia Koreshi","Nida Huq"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quelle actrice interprète Verity dans Bête Noire ?","answers":["Siena Kelly","Rosy McEwen","Patsy Ferran","Emma Corrin"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Dans Hotel Reverie, quel métier exerce Brandy Friday ?","answers":["Réalisatrice","Scénariste","Actrice","Productrice musicale"],"correct":2,"difficulty":"facile"},
+  {"text":"Quelle actrice joue Brandy Friday ?","answers":["Emma Corrin","Awkwafina","Ayo Edebiri","Issa Rae"],"correct":3,"difficulty":"moyen"},
+  {"text":"Dans quel film classique fictif Brandy est-elle plongée par l'intelligence artificielle ?","answers":["Hotel Reverie","Sea of Tranquility","Silver Eyes","Junipero Nights"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quelle actrice interprète Dorothy Chambers dans Hotel Reverie ?","answers":["Issa Rae","Emma Corrin","Tracee Ellis Ross","Cristin Milioti"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel est le nom de famille de Judith, propriétaire du studio dans Hotel Reverie ?","answers":["Ritman","Callister","Keyworth","Haynes"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quel épisode de la saison 7 retrouve l'univers de Bandersnatch ?","answers":["Bête Noire","Eulogy","Common People","Plaything"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel acteur incarne la version âgée de Cameron Walker dans Plaything ?","answers":["Peter Capaldi","Paul Giamatti","Chris O'Dowd","Jesse Plemons"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel jeu peuplé de créatures numériques obsède Cameron ?","answers":["Metl Hedd","Thronglets","Nohzdyve","Valdack's Revenge"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel personnage de Bandersnatch réapparaît dans Plaything ?","answers":["Stefan Butler","Mohsan","Colin Ritman","Jerome F. Davies"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel acteur reprend le rôle de Colin Ritman ?","answers":["Fionn Whitehead","Asim Chaudhry","Craig Parkinson","Will Poulter"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Dans Eulogy, quel objet permet à Phillip d'explorer ses souvenirs ?","answers":["Des photographies","Des cassettes audio","Un grain","Un jeu vidéo"],"correct":0,"difficulty":"facile"},
+  {"text":"Quel acteur joue Phillip dans Eulogy ?","answers":["Peter Capaldi","Paul Giamatti","Chris O'Dowd","Rory Kinnear"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel événement pousse Phillip à revisiter ses anciennes photos ?","answers":["Un procès","Un anniversaire","Les funérailles d'une ancienne compagne","La vente de sa maison"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel épisode constitue la première suite directe d'un épisode antérieur de Black Mirror ?","answers":["Plaything","Eulogy","Hotel Reverie","USS Callister: Into Infinity"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quelle actrice reprend le rôle de Nanette Cole dans USS Callister: Into Infinity ?","answers":["Cristin Milioti","Michaela Coel","Mackenzie Davis","Letitia Wright"],"correct":0,"difficulty":"expert"}
 ]
