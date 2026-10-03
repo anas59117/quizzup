@@ -1,502 +1,121 @@
 [
-  {
-    "text": "Quel agent est le héros principal de Mission: Impossible ?",
-    "answers": [
-      "Ethan Hunt",
-      "James Bond",
-      "Jason Bourne",
-      "Jack Ryan"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Que signifie le sigle IMF dans la saga ?",
-    "answers": [
-      "International Military Force",
-      "Impossible Mission Force",
-      "Intelligence Mission Front",
-      "Integrated Mission Federation"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : agent de terrain de l’IMF réputé pour ses cascades risquées ?",
-    "answers": [
-      "Luther Stickell",
-      "Franz Krieger",
-      "Ethan Hunt",
-      "Julia Meade"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à Ethan Hunt ?",
-    "answers": [
-      "technicien devenu agent de terrain aux côtés d’Ethan",
-      "ancien agent de l’IMF qui vole le virus Chimera",
-      "terroriste surnommé Cobalt voulant provoquer une guerre nucléaire",
-      "agent de terrain de l’IMF réputé pour ses cascades risquées"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans quel film voit-on Ethan Hunt pour la première fois ?",
-    "answers": [
-      "Mission: Impossible",
-      "Mission: Impossible – Rogue Nation",
-      "Mission: Impossible – Protocole Fantôme",
-      "Mission: Impossible – Dead Reckoning"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : expert informatique fidèle à Ethan depuis la première mission ?",
-    "answers": [
-      "Benji Dunn",
-      "Luther Stickell",
-      "Sean Ambrose",
-      "Kurt Hendricks"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à Luther Stickell ?",
-    "answers": [
-      "ancienne agente du MI6 qui croise plusieurs fois l’équipe",
-      "voleuse recrutée pour infiltrer l’équipe d’Ambrose",
-      "expert informatique fidèle à Ethan depuis la première mission",
-      "analyste du renseignement au passé lié à Ethan"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quel film voit-on Luther Stickell pour la première fois ?",
-    "answers": [
-      "Mission: Impossible – Protocole Fantôme",
-      "Mission: Impossible 3",
-      "Mission: Impossible – Dead Reckoning",
-      "Mission: Impossible"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : technicien devenu agent de terrain aux côtés d’Ethan ?",
-    "answers": [
-      "Benji Dunn",
-      "Ilsa Faust",
-      "Nyah Nordoff-Hall",
-      "William Brandt"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à Benji Dunn ?",
-    "answers": [
-      "chef d’équipe de l’IMF dont la trahison déclenche la première intrigue",
-      "technicien devenu agent de terrain aux côtés d’Ethan",
-      "trafiquant d’armes qui recherche la Patte de lapin",
-      "chef du Syndicat puis des Apôtres"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans quel film voit-on Benji Dunn pour la première fois ?",
-    "answers": [
-      "Mission: Impossible – Rogue Nation",
-      "Mission: Impossible 2",
-      "Mission: Impossible 3",
-      "Mission: Impossible"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : ancienne agente du MI6 qui croise plusieurs fois l’équipe ?",
-    "answers": [
-      "Jim Phelps",
-      "Owen Davian",
-      "Solomon Lane",
-      "Ilsa Faust"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à Ilsa Faust ?",
-    "answers": [
-      "ancienne agente du MI6 qui croise plusieurs fois l’équipe",
-      "ancien agent associé au complot de Phelps",
-      "médecin et épouse d’Ethan Hunt",
-      "agent de la CIA secrètement allié aux Apôtres"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quel film voit-on Ilsa Faust pour la première fois ?",
-    "answers": [
-      "Mission: Impossible – Fallout",
-      "Mission: Impossible – Rogue Nation",
-      "Mission: Impossible – Dead Reckoning",
-      "Mission: Impossible"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : chef d’équipe de l’IMF dont la trahison déclenche la première intrigue ?",
-    "answers": [
-      "Franz Krieger",
-      "Julia Meade",
-      "Jim Phelps",
-      "August Walker"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à Jim Phelps ?",
-    "answers": [
-      "ancien agent de l’IMF qui vole le virus Chimera",
-      "terroriste surnommé Cobalt voulant provoquer une guerre nucléaire",
-      "voleuse recrutée dans la lutte contre l’Entité",
-      "chef d’équipe de l’IMF dont la trahison déclenche la première intrigue"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans quel film voit-on Jim Phelps pour la première fois ?",
-    "answers": [
-      "Mission: Impossible",
-      "Mission: Impossible – Protocole Fantôme",
-      "Mission: Impossible 2",
-      "Mission: Impossible 3"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : ancien agent associé au complot de Phelps ?",
-    "answers": [
-      "Sean Ambrose",
-      "Franz Krieger",
-      "Kurt Hendricks",
-      "Grace"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à Franz Krieger ?",
-    "answers": [
-      "voleuse recrutée pour infiltrer l’équipe d’Ambrose",
-      "analyste du renseignement au passé lié à Ethan",
-      "ancien agent associé au complot de Phelps",
-      "émissaire humain de l’Entité et ennemi du passé d’Ethan"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quel film voit-on Franz Krieger pour la première fois ?",
-    "answers": [
-      "Mission: Impossible – Rogue Nation",
-      "Mission: Impossible 3",
-      "Mission: Impossible 2",
-      "Mission: Impossible"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : ancien agent de l’IMF qui vole le virus Chimera ?",
-    "answers": [
-      "Sean Ambrose",
-      "Nyah Nordoff-Hall",
-      "William Brandt",
-      "Gabriel"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à Sean Ambrose ?",
-    "answers": [
-      "trafiquant d’armes qui recherche la Patte de lapin",
-      "ancien agent de l’IMF qui vole le virus Chimera",
-      "chef du Syndicat puis des Apôtres",
-      "agent de terrain de l’IMF réputé pour ses cascades risquées"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans quel film voit-on Sean Ambrose pour la première fois ?",
-    "answers": [
-      "Mission: Impossible – Fallout",
-      "Mission: Impossible – Dead Reckoning",
-      "Mission: Impossible 2",
-      "Mission: Impossible 3"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : voleuse recrutée pour infiltrer l’équipe d’Ambrose ?",
-    "answers": [
-      "Owen Davian",
-      "Solomon Lane",
-      "Ethan Hunt",
-      "Nyah Nordoff-Hall"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à Nyah Nordoff-Hall ?",
-    "answers": [
-      "voleuse recrutée pour infiltrer l’équipe d’Ambrose",
-      "médecin et épouse d’Ethan Hunt",
-      "agent de la CIA secrètement allié aux Apôtres",
-      "expert informatique fidèle à Ethan depuis la première mission"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quel film voit-on Nyah Nordoff-Hall pour la première fois ?",
-    "answers": [
-      "Mission: Impossible 3",
-      "Mission: Impossible 2",
-      "Mission: Impossible – Dead Reckoning",
-      "Mission: Impossible – Rogue Nation"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : trafiquant d’armes qui recherche la Patte de lapin ?",
-    "answers": [
-      "Julia Meade",
-      "August Walker",
-      "Owen Davian",
-      "Luther Stickell"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à Owen Davian ?",
-    "answers": [
-      "terroriste surnommé Cobalt voulant provoquer une guerre nucléaire",
-      "voleuse recrutée dans la lutte contre l’Entité",
-      "technicien devenu agent de terrain aux côtés d’Ethan",
-      "trafiquant d’armes qui recherche la Patte de lapin"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans quel film voit-on Owen Davian pour la première fois ?",
-    "answers": [
-      "Mission: Impossible 3",
-      "Mission: Impossible 2",
-      "Mission: Impossible – Dead Reckoning",
-      "Mission: Impossible – Protocole Fantôme"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : médecin et épouse d’Ethan Hunt ?",
-    "answers": [
-      "Kurt Hendricks",
-      "Julia Meade",
-      "Grace",
-      "Benji Dunn"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à Julia Meade ?",
-    "answers": [
-      "analyste du renseignement au passé lié à Ethan",
-      "émissaire humain de l’Entité et ennemi du passé d’Ethan",
-      "médecin et épouse d’Ethan Hunt",
-      "ancienne agente du MI6 qui croise plusieurs fois l’équipe"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quel film voit-on Julia Meade pour la première fois ?",
-    "answers": [
-      "Mission: Impossible – Dead Reckoning",
-      "Mission: Impossible – Rogue Nation",
-      "Mission: Impossible – Protocole Fantôme",
-      "Mission: Impossible 3"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : terroriste surnommé Cobalt voulant provoquer une guerre nucléaire ?",
-    "answers": [
-      "Kurt Hendricks",
-      "William Brandt",
-      "Gabriel",
-      "Ilsa Faust"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à Kurt Hendricks ?",
-    "answers": [
-      "chef du Syndicat puis des Apôtres",
-      "terroriste surnommé Cobalt voulant provoquer une guerre nucléaire",
-      "agent de terrain de l’IMF réputé pour ses cascades risquées",
-      "chef d’équipe de l’IMF dont la trahison déclenche la première intrigue"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans quel film voit-on Kurt Hendricks pour la première fois ?",
-    "answers": [
-      "Mission: Impossible 3",
-      "Mission: Impossible – Fallout",
-      "Mission: Impossible – Protocole Fantôme",
-      "Mission: Impossible 2"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : analyste du renseignement au passé lié à Ethan ?",
-    "answers": [
-      "Solomon Lane",
-      "Ethan Hunt",
-      "Jim Phelps",
-      "William Brandt"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à William Brandt ?",
-    "answers": [
-      "analyste du renseignement au passé lié à Ethan",
-      "agent de la CIA secrètement allié aux Apôtres",
-      "expert informatique fidèle à Ethan depuis la première mission",
-      "ancien agent associé au complot de Phelps"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quel film voit-on William Brandt pour la première fois ?",
-    "answers": [
-      "Mission: Impossible – Rogue Nation",
-      "Mission: Impossible – Protocole Fantôme",
-      "Mission: Impossible 3",
-      "Mission: Impossible"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : chef du Syndicat puis des Apôtres ?",
-    "answers": [
-      "August Walker",
-      "Luther Stickell",
-      "Solomon Lane",
-      "Franz Krieger"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à Solomon Lane ?",
-    "answers": [
-      "voleuse recrutée dans la lutte contre l’Entité",
-      "technicien devenu agent de terrain aux côtés d’Ethan",
-      "ancien agent de l’IMF qui vole le virus Chimera",
-      "chef du Syndicat puis des Apôtres"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans quel film voit-on Solomon Lane pour la première fois ?",
-    "answers": [
-      "Mission: Impossible – Rogue Nation",
-      "Mission: Impossible 3",
-      "Mission: Impossible – Fallout",
-      "Mission: Impossible – Protocole Fantôme"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : agent de la CIA secrètement allié aux Apôtres ?",
-    "answers": [
-      "Grace",
-      "August Walker",
-      "Benji Dunn",
-      "Sean Ambrose"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à August Walker ?",
-    "answers": [
-      "émissaire humain de l’Entité et ennemi du passé d’Ethan",
-      "ancienne agente du MI6 qui croise plusieurs fois l’équipe",
-      "agent de la CIA secrètement allié aux Apôtres",
-      "voleuse recrutée pour infiltrer l’équipe d’Ambrose"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quel film voit-on August Walker pour la première fois ?",
-    "answers": [
-      "Mission: Impossible – Dead Reckoning",
-      "Mission: Impossible – Rogue Nation",
-      "Mission: Impossible",
-      "Mission: Impossible – Fallout"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : voleuse recrutée dans la lutte contre l’Entité ?",
-    "answers": [
-      "Grace",
-      "Gabriel",
-      "Ilsa Faust",
-      "Nyah Nordoff-Hall"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à Grace ?",
-    "answers": [
-      "agent de terrain de l’IMF réputé pour ses cascades risquées",
-      "voleuse recrutée dans la lutte contre l’Entité",
-      "chef d’équipe de l’IMF dont la trahison déclenche la première intrigue",
-      "trafiquant d’armes qui recherche la Patte de lapin"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans quel film voit-on Grace pour la première fois ?",
-    "answers": [
-      "Mission: Impossible 3",
-      "Mission: Impossible 2",
-      "Mission: Impossible – Dead Reckoning",
-      "Mission: Impossible – Fallout"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Mission: Impossible », quel personnage correspond à cette description : émissaire humain de l’Entité et ennemi du passé d’Ethan ?",
-    "answers": [
-      "Ethan Hunt",
-      "Jim Phelps",
-      "Owen Davian",
-      "Gabriel"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Mission: Impossible », quelle description correspond à Gabriel ?",
-    "answers": [
-      "émissaire humain de l’Entité et ennemi du passé d’Ethan",
-      "expert informatique fidèle à Ethan depuis la première mission",
-      "ancien agent associé au complot de Phelps",
-      "médecin et épouse d’Ethan Hunt"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quel film voit-on Gabriel pour la première fois ?",
-    "answers": [
-      "Mission: Impossible – Fallout",
-      "Mission: Impossible – Dead Reckoning",
-      "Mission: Impossible 3",
-      "Mission: Impossible 2"
-    ],
-    "correct": 1
-  }
+  {"text":"Quel agent est le héros principal des films Mission: Impossible ?","answers":["Ethan Hunt","James Bond","Jason Bourne","Jack Ryan"],"correct":0,"difficulty":"facile"},
+  {"text":"Quel acteur incarne Ethan Hunt depuis 1996 ?","answers":["Matt Damon","Tom Cruise","Brad Pitt","Keanu Reeves"],"correct":1,"difficulty":"moyen"},
+  {"text":"Qui a créé la série télévisée originale Mission: Impossible ?","answers":["Gene Roddenberry","Glen A. Larson","Bruce Geller","Donald Bellisario"],"correct":2,"difficulty":"difficile"},
+  {"text":"En quelle année la série télévisée Mission: Impossible a-t-elle débuté aux États-Unis ?","answers":["1962","1964","1968","1966"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel compositeur a créé le thème musical emblématique de Mission: Impossible ?","answers":["Lalo Schifrin","John Williams","Jerry Goldsmith","Henry Mancini"],"correct":0,"difficulty":"expert"},
+
+  {"text":"En quelle année est sorti le premier film Mission: Impossible ?","answers":["1994","1996","1998","2000"],"correct":1,"difficulty":"facile"},
+  {"text":"Qui a réalisé le premier Mission: Impossible ?","answers":["John Woo","J. J. Abrams","Brian De Palma","Brad Bird"],"correct":2,"difficulty":"moyen"},
+  {"text":"Dans quelle ville européenne l'équipe d'Ethan est-elle décimée au début du premier film ?","answers":["Budapest","Vienne","Berlin","Prague"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quelle liste secrète Ethan doit-il récupérer dans le premier film ?","answers":["La liste NOC","La liste Chimera","La liste Cobalt","La liste Syndicate"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel complice de Jim Phelps pilote l'hélicoptère dans le tunnel sous la Manche ?","answers":["Jack Harmon","Franz Krieger","William Donloe","Alexander Golitsyn"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Dans quel film Ethan affronte-t-il Sean Ambrose ?","answers":["Mission: Impossible","Mission: Impossible 3","Mission: Impossible 2","Protocole Fantôme"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel réalisateur hongkongais a signé Mission: Impossible 2 ?","answers":["Ringo Lam","Tsui Hark","Johnnie To","John Woo"],"correct":3,"difficulty":"moyen"},
+  {"text":"Comment se nomme le virus convoité dans Mission: Impossible 2 ?","answers":["Chimera","Bellerophon","Rabbit's Foot","Gemini"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel antidote peut neutraliser le virus Chimera ?","answers":["Prometheus","Bellerophon","Icarus","Nemesis"],"correct":1,"difficulty":"difficile"},
+  {"text":"Dans quelle ville australienne se déroule l'essentiel de Mission: Impossible 2 ?","answers":["Melbourne","Perth","Sydney","Brisbane"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Dans quel film Benji Dunn apparaît-il pour la première fois ?","answers":["Mission: Impossible 2","Protocole Fantôme","Rogue Nation","Mission: Impossible 3"],"correct":3,"difficulty":"facile"},
+  {"text":"Qui a réalisé Mission: Impossible 3 ?","answers":["J. J. Abrams","Christopher McQuarrie","Joe Carnahan","Doug Liman"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel trafiquant d'armes enlève Julia dans Mission: Impossible 3 ?","answers":["Solomon Lane","Owen Davian","Kurt Hendricks","Gabriel"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel est le nom de code de l'objet recherché dans Mission: Impossible 3 ?","answers":["Chimera","Cobalt","La Patte de lapin","L'Entité"],"correct":2,"difficulty":"difficile"},
+  {"text":"Dans quelle ville Ethan effectue-t-il un saut spectaculaire entre deux immeubles pour récupérer la Patte de lapin ?","answers":["Hong Kong","Séoul","Pékin","Shanghai"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quel sous-titre porte le quatrième film Mission: Impossible ?","answers":["Protocole Fantôme","Rogue Nation","Fallout","Dead Reckoning"],"correct":0,"difficulty":"facile"},
+  {"text":"Quel réalisateur d'animation a dirigé Protocole Fantôme ?","answers":["Andrew Stanton","Brad Bird","Pete Docter","Chris Sanders"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel bâtiment explose, entraînant le désaveu de l'IMF dans Protocole Fantôme ?","answers":["La Maison-Blanche","Le siège de l'ONU","Le Kremlin","Le Reichstag"],"correct":2,"difficulty":"difficile"},
+  {"text":"Sur quel gratte-ciel Ethan escalade-t-il la façade extérieure à Dubaï ?","answers":["Taipei 101","Shanghai Tower","Petronas Towers","Burj Khalifa"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel est le véritable nom du terroriste surnommé Cobalt dans Protocole Fantôme ?","answers":["Kurt Hendricks","Sabine Moreau","Marius Wistrom","Anatoly Sidorov"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Dans quel film Ilsa Faust apparaît-elle pour la première fois ?","answers":["Fallout","Rogue Nation","Dead Reckoning","Protocole Fantôme"],"correct":1,"difficulty":"facile"},
+  {"text":"Quelle organisation clandestine Ethan poursuit-il dans Rogue Nation ?","answers":["Les Apôtres","Scorpio","Le Syndicat","La Cabale"],"correct":2,"difficulty":"moyen"},
+  {"text":"Pour quel service de renseignement Ilsa Faust travaille-t-elle initialement ?","answers":["La CIA","L'IMF","Le BND","Le MI6"],"correct":3,"difficulty":"difficile"},
+  {"text":"Dans quel opéra Ethan empêche-t-il un assassinat dans Rogue Nation ?","answers":["L'Opéra d'État de Vienne","La Scala de Milan","L'Opéra Garnier","Le Royal Opera House"],"correct":0,"difficulty":"difficile"},
+  {"text":"À l'extérieur de quel avion Ethan s'accroche-t-il au début de Rogue Nation ?","answers":["Boeing C-17","Airbus A400M","Antonov An-124","Lockheed C-130"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel film suit directement Rogue Nation ?","answers":["Dead Reckoning","Protocole Fantôme","Fallout","The Final Reckoning"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel agent de la CIA joué par Henry Cavill accompagne Ethan dans Fallout ?","answers":["Alan Hunley","John Musgrave","Jasper Briggs","August Walker"],"correct":3,"difficulty":"moyen"},
+  {"text":"Comment se nomment les héritiers du Syndicat dans Fallout ?","answers":["Les Apôtres","Les Séraphins","Les Disciples","Les Douze"],"correct":0,"difficulty":"difficile"},
+  {"text":"Combien de cœurs de plutonium l'équipe perd-elle au début de Fallout ?","answers":["Deux","Trois","Quatre","Cinq"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel nom de code August Walker utilise-t-il comme chef secret des Apôtres ?","answers":["Cobalt","Gabriel","John Lark","Janik Vinter"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quel film introduit l'intelligence artificielle appelée l'Entité ?","answers":["Rogue Nation","Fallout","The Final Reckoning","Dead Reckoning"],"correct":3,"difficulty":"facile"},
+  {"text":"Comment se nomme l'intelligence artificielle antagoniste de Dead Reckoning ?","answers":["L'Entité","Le Réseau","Le Système","L'Oracle"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel ennemi du passé d'Ethan sert l'Entité ?","answers":["Solomon Lane","Gabriel","August Walker","Owen Davian"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel objet en deux parties permet d'accéder au secret de l'Entité ?","answers":["Une bague codée","Un disque optique","Une clé cruciforme","Un médaillon"],"correct":2,"difficulty":"difficile"},
+  {"text":"Dans quelle ville Ilsa affronte-t-elle Gabriel sur un pont dans Dead Reckoning ?","answers":["Rome","Prague","Amsterdam","Venise"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quel est le titre du huitième film de la saga ?","answers":["The Final Reckoning","Dead Reckoning Part Two","Endgame Protocol","The Last Mission"],"correct":0,"difficulty":"facile"},
+  {"text":"En quelle année The Final Reckoning est-il sorti au cinéma ?","answers":["2023","2025","2024","2026"],"correct":1,"difficulty":"moyen"},
+  {"text":"Combien de temps après Dead Reckoning l'intrigue de The Final Reckoning commence-t-elle officiellement ?","answers":["Quelques heures","Un an","Deux mois","Cinq ans"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel sous-marin russe contient la source liée à l'Entité ?","answers":["Koursk","Octobre Rouge","Potemkine","Sevastopol"],"correct":3,"difficulty":"difficile"},
+  {"text":"Qui a coécrit et réalisé The Final Reckoning ?","answers":["Christopher McQuarrie","Brad Bird","J. J. Abrams","Brian De Palma"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quel membre fidèle de l'équipe est interprété par Ving Rhames ?","answers":["Benji Dunn","Luther Stickell","William Brandt","Declan Gormley"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel technicien joué par Simon Pegg devient agent de terrain ?","answers":["Billy Baird","Jack Harmon","Benji Dunn","Zhen Lei"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel directeur de la CIA joué par Henry Czerny traque Ethan dans le premier film ?","answers":["Alan Hunley","Eugene Sloane","Theodore Brassel","Eugene Kittridge"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel personnage joué par Rebecca Ferguson est à la fois alliée et rivale d'Ethan ?","answers":["Ilsa Faust","Grace","Jane Carter","Claire Phelps"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quelle voleuse jouée par Hayley Atwell rejoint la lutte contre l'Entité ?","answers":["Alanna Mitsopolis","Grace","Paris","Marie"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel réalisateur a ouvert la saga cinématographique en 1996 ?","answers":["John Woo","J. J. Abrams","Brian De Palma","Christopher McQuarrie"],"correct":2,"difficulty":"facile"},
+  {"text":"Qui a réalisé le deuxième film de la saga ?","answers":["Brad Bird","Brian De Palma","J. J. Abrams","John Woo"],"correct":3,"difficulty":"moyen"},
+  {"text":"Quel réalisateur a fait ses débuts au cinéma avec Mission: Impossible 3 ?","answers":["J. J. Abrams","Christopher McQuarrie","Brad Bird","Joe Carnahan"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel cinéaste a réalisé le quatrième film, Protocole Fantôme ?","answers":["Gore Verbinski","Brad Bird","Sam Mendes","Doug Liman"],"correct":1,"difficulty":"difficile"},
+  {"text":"Combien de films consécutifs Christopher McQuarrie a-t-il réalisés de Rogue Nation à The Final Reckoning ?","answers":["Deux","Trois","Quatre","Cinq"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quel acteur joue Luther Stickell ?","answers":["Laurence Fishburne","Forest Whitaker","Wesley Snipes","Ving Rhames"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel acteur britannique incarne Benji Dunn ?","answers":["Simon Pegg","Martin Freeman","Nick Frost","Benedict Cumberbatch"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quelle actrice interprète Ilsa Faust ?","answers":["Vanessa Kirby","Rebecca Ferguson","Michelle Monaghan","Maggie Q"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel acteur incarne August Walker dans Fallout ?","answers":["Jeremy Renner","Sean Harris","Henry Cavill","Wes Bentley"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quelle actrice joue Grace dans Dead Reckoning et The Final Reckoning ?","answers":["Pom Klementieff","Vanessa Kirby","Angela Bassett","Hayley Atwell"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Qui a composé le thème original de Mission: Impossible ?","answers":["Lalo Schifrin","Michael Giacchino","Hans Zimmer","Danny Elfman"],"correct":0,"difficulty":"facile"},
+  {"text":"Que fait traditionnellement le message de mission après sa lecture ?","answers":["Il appelle la CIA","Il s'autodétruit","Il devient invisible","Il efface la mémoire de l'agent"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel objet enflammé accompagne traditionnellement le générique d'ouverture ?","answers":["Une mèche de dynamite","Une pellicule","Une mèche de fusible","Un câble électrique"],"correct":2,"difficulty":"difficile"},
+  {"text":"Dans quelle mesure asymétrique est écrit le célèbre thème de Lalo Schifrin ?","answers":["3/4","4/4","7/8","5/4"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel compositeur a signé la musique du premier film de 1996 ?","answers":["Danny Elfman","Hans Zimmer","Michael Giacchino","Joe Kraemer"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quel accessoire permet fréquemment aux agents d'imiter le visage d'une autre personne ?","answers":["Des lunettes holographiques","Un masque en latex","Une projection laser","Un maquillage permanent"],"correct":1,"difficulty":"facile"},
+  {"text":"Quelle technique complète souvent les masques pour imiter une cible ?","answers":["La télépathie","Le doublage en direct par radio","La synthèse vocale","L'hypnose"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel appareil reçoit la mission d'Ethan dans l'avion au début de Rogue Nation ?","answers":["Une montre","Un téléphone","Une tablette","Un disque vinyle"],"correct":3,"difficulty":"difficile"},
+  {"text":"Dans le premier film, quelle salle Ethan infiltre-t-il suspendu au plafond ?","answers":["La chambre forte informatique de la CIA","Le bureau ovale","Le coffre de la Banque d'Angleterre","Le centre de contrôle de l'OTAN"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel analyste de la CIA quitte la chambre forte de Langley, pris de nausées après que son café a été trafiqué ?","answers":["Kittridge","William Donloe","Golitsyn","Jack Harmon"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Sur quel gratte-ciel Tom Cruise réalise-t-il une cascade extérieure dans Protocole Fantôme ?","answers":["The Shard","One World Trade Center","Burj Khalifa","Taipei 101"],"correct":2,"difficulty":"facile"},
+  {"text":"À quel avion Tom Cruise reste-t-il accroché au décollage dans Rogue Nation ?","answers":["Boeing 747","Airbus A380","Lockheed C-130","Airbus A400M"],"correct":3,"difficulty":"moyen"},
+  {"text":"Quel type de saut aérien Tom Cruise effectue-t-il au-dessus de Paris dans Fallout ?","answers":["Un saut HALO","Un saut à l'élastique","Un saut BASE depuis un immeuble","Un saut en wingsuit"],"correct":0,"difficulty":"difficile"},
+  {"text":"Dans Dead Reckoning, de quel véhicule Ethan se sert-il pour sauter d'une falaise ?","answers":["Une motoneige","Une moto","Un quad","Une voiture de rallye"],"correct":1,"difficulty":"difficile"},
+  {"text":"Dans quel film Tom Cruise pilote-t-il lui-même un hélicoptère lors de la poursuite finale ?","answers":["Rogue Nation","Dead Reckoning","Fallout","Mission: Impossible 3"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Que signifie le sigle IMF dans la saga ?","answers":["International Mission Federation","Intelligence Management Force","Impossible Military Front","Impossible Mission Force"],"correct":3,"difficulty":"facile"},
+  {"text":"Quelle agence américaine supervise ou poursuit régulièrement l'IMF ?","answers":["La CIA","Le FBI uniquement","La NSA uniquement","La DEA"],"correct":0,"difficulty":"moyen"},
+  {"text":"À quel service britannique Ilsa Faust appartient-elle ?","answers":["Scotland Yard","Le MI6","Le MI5","Le GCHQ"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quelle organisation Solomon Lane dirige-t-il dans Rogue Nation ?","answers":["Les Apôtres","Le Comité","Le Syndicat","L'Entité"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel groupe poursuit l'œuvre du Syndicat dans Fallout ?","answers":["Les Douze","La Fraternité","Les Disciples","Les Apôtres"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Dans quelle ville se déroule la mission qui tourne au désastre dans le premier film ?","answers":["Prague","Paris","Londres","Rome"],"correct":0,"difficulty":"facile"},
+  {"text":"Dans quel pays se déroule la majeure partie de Mission: Impossible 2 ?","answers":["Nouvelle-Zélande","Australie","Afrique du Sud","Espagne"],"correct":1,"difficulty":"moyen"},
+  {"text":"Dans quel État souverain l'équipe enlève-t-elle Owen Davian dans Mission: Impossible 3 ?","answers":["Monaco","Saint-Marin","Le Vatican","Andorre"],"correct":2,"difficulty":"difficile"},
+  {"text":"Dans quelle ville se situe la séquence du Burj Khalifa ?","answers":["Doha","Riyad","Abou Dabi","Dubaï"],"correct":3,"difficulty":"difficile"},
+  {"text":"Dans quelle ville Solomon Lane est-il finalement piégé dans une boîte de verre à la fin de Rogue Nation ?","answers":["Londres","Vienne","Casablanca","Berlin"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quel objet Ethan vole-t-il à Langley dans le premier film ?","answers":["La Patte de lapin","La liste NOC","Une clé cruciforme","Trois cœurs de plutonium"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel agent pathogène est au centre de Mission: Impossible 2 ?","answers":["Bellerophon","Rabbit's Foot","Chimera","Cobalt"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel objet mystérieux Owen Davian cherche-t-il dans Mission: Impossible 3 ?","answers":["La liste NOC","L'Entité","Le Pied de biche","La Patte de lapin"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quelle matière fissile est au cœur du plan des Apôtres dans Fallout ?","answers":["Du plutonium","De l'uranium appauvri","Du tritium","Du polonium"],"correct":0,"difficulty":"difficile"},
+  {"text":"À quel lieu la clé cruciforme donne-t-elle finalement accès ?","answers":["Au bunker de Londres","À la chambre du Sevastopol","Au coffre du Kremlin","Au siège de l'IMF"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel lien unit Claire et Jim Phelps dans le premier film ?","answers":["Ils sont frère et sœur","Ils sont collègues sans lien familial","Ils sont mariés","Ils sont père et fille"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel lien passé unit Nyah Nordoff-Hall et Sean Ambrose ?","answers":["Ils sont cousins","Ils sont anciens collègues de l'IMF","Ils sont frère et sœur","Ils ont été amants"],"correct":3,"difficulty":"moyen"},
+  {"text":"Qui Ethan épouse-t-il dans Mission: Impossible 3 ?","answers":["Julia Meade","Ilsa Faust","Nyah Nordoff-Hall","Grace"],"correct":0,"difficulty":"difficile"},
+  {"text":"Pourquoi William Brandt se sent-il coupable envers Ethan dans Protocole Fantôme ?","answers":["Il a perdu la liste NOC","Il croit avoir échoué à protéger Julia","Il a recruté Solomon Lane","Il a détruit le Kremlin"],"correct":1,"difficulty":"difficile"},
+  {"text":"De quelle trafiquante du premier film Alanna Mitsopolis, la Veuve blanche, est-elle la fille ?","answers":["Claire Phelps","Sabine Moreau","Max","Paris"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Combien de films Mission: Impossible étaient sortis après The Final Reckoning en 2025 ?","answers":["Six","Sept","Neuf","Huit"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel film ouvre chronologiquement la saga au cinéma ?","answers":["Mission: Impossible (1996)","Mission: Impossible 2","Mission: Impossible 3","Protocole Fantôme"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel est le quatrième film de la série ?","answers":["Rogue Nation","Protocole Fantôme","Fallout","Mission: Impossible 3"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel est le sixième film de la série ?","answers":["Rogue Nation","Dead Reckoning","Fallout","The Final Reckoning"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel film marque la première fois qu'un réalisateur revient diriger deux épisodes consécutifs de la saga ?","answers":["Mission: Impossible 3","Protocole Fantôme","Dead Reckoning","Fallout"],"correct":3,"difficulty":"expert"}
 ]
