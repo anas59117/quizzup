@@ -718,6 +718,21 @@ const CATEGORIES = {
     icon: '⚙️',
     questions: [...require('./data/arcane.json')],
   },
+  vampire_diaries: {
+    label: 'Vampire Diaries',
+    icon: '🧛',
+    questions: [...require('./data/vampire_diaries.json')],
+  },
+  werenoi: {
+    label: 'Werenoi',
+    icon: '🎤',
+    questions: [...require('./data/werenoi.json')],
+  },
+  solo_leveling: {
+    label: 'Solo Leveling',
+    icon: '⚔️',
+    questions: [...require('./data/solo_leveling.json')],
+  },
   star_wars: {
     label: 'Star Wars',
     icon: '⚔️',
