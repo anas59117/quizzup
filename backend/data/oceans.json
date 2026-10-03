@@ -1,502 +1,1102 @@
 [
   {
-    "text": "À quel océan ou espace marin associe-t-on le plus vaste océan ?",
+    "text": "Quel est le plus vaste océan de la planète ?",
     "answers": [
-      "le Pacifique",
-      "l'Atlantique",
-      "l'océan Indien",
-      "l'océan Arctique"
+      "L’océan Pacifique",
+      "L’océan Atlantique",
+      "L’océan Indien",
+      "L’océan Austral"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on le plus vaste océan ?",
+    "text": "Quel océan sépare principalement l’Europe des Amériques ?",
     "answers": [
-      "l'Atlantique",
-      "le Pacifique",
-      "l'océan Indien",
-      "l'océan Arctique"
+      "L’océan Indien",
+      "L’océan Atlantique",
+      "L’océan Pacifique",
+      "L’océan Austral"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on l'océan séparant l'Europe des Amériques ?",
+    "text": "Quel est le plus petit des cinq océans reconnus ?",
     "answers": [
-      "l'océan Indien",
-      "l'océan Arctique",
-      "l'Atlantique",
-      "l'océan Austral"
+      "L’océan Austral",
+      "L’océan Indien",
+      "L’océan Arctique",
+      "L’océan Atlantique"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on l'océan séparant l'Europe des Amériques ?",
+    "text": "Quel océan entoure le continent antarctique ?",
     "answers": [
-      "l'océan Indien",
-      "l'océan Arctique",
-      "l'océan Austral",
-      "l'Atlantique"
+      "L’océan Arctique",
+      "L’océan Indien",
+      "L’océan Pacifique Nord",
+      "L’océan Austral"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on l'océan bordant l'Inde au sud ?",
+    "text": "Quelle proportion approximative de la surface terrestre l’océan mondial couvre-t-il ?",
     "answers": [
-      "l'océan Indien",
-      "l'océan Arctique",
-      "l'océan Austral",
-      "le Pacifique"
+      "Environ 71 %",
+      "Environ 29 %",
+      "Environ 50 %",
+      "Environ 90 %"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on l'océan bordant l'Inde au sud ?",
+    "text": "Quel océan borde la côte orientale de l’Afrique ?",
     "answers": [
-      "l'océan Arctique",
-      "l'océan Indien",
-      "l'océan Austral",
-      "le Pacifique"
+      "L’océan Atlantique",
+      "L’océan Indien",
+      "L’océan Arctique",
+      "L’océan Austral uniquement"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on le plus petit des cinq océans ?",
+    "text": "Dans quel océan se trouve l’archipel d’Hawaï ?",
     "answers": [
-      "l'océan Austral",
-      "le Pacifique",
-      "l'océan Arctique",
-      "l'Atlantique"
+      "L’océan Atlantique",
+      "L’océan Indien",
+      "L’océan Pacifique",
+      "L’océan Arctique"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on le plus petit des cinq océans ?",
+    "text": "Dans quel océan se trouvent les Açores ?",
     "answers": [
-      "l'océan Austral",
-      "le Pacifique",
-      "l'Atlantique",
-      "l'océan Arctique"
+      "L’océan Indien",
+      "L’océan Pacifique",
+      "L’océan Austral",
+      "L’océan Atlantique"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on l'océan entourant l'Antarctique ?",
+    "text": "Dans quel océan se trouvent les Maldives ?",
     "answers": [
-      "l'océan Austral",
-      "le Pacifique",
-      "l'Atlantique",
-      "l'Atlantique Nord"
+      "L’océan Indien",
+      "L’océan Atlantique",
+      "L’océan Pacifique",
+      "L’océan Arctique"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on l'océan entourant l'Antarctique ?",
+    "text": "Quelle mer de l’Atlantique Nord est délimitée surtout par des courants plutôt que par des côtes ?",
     "answers": [
-      "le Pacifique",
-      "l'océan Austral",
-      "l'Atlantique",
-      "l'Atlantique Nord"
+      "La mer du Nord",
+      "La mer des Sargasses",
+      "La mer d’Irlande",
+      "La mer de Norvège"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on la fosse des Mariannes ?",
+    "text": "Quel détroit relie l’océan Pacifique à l’océan Arctique ?",
     "answers": [
-      "l'Atlantique",
-      "l'Atlantique Nord",
-      "le Pacifique",
-      "la mer de Corail"
+      "Le détroit de Gibraltar",
+      "Le détroit de Malacca",
+      "Le détroit de Béring",
+      "Le détroit de Magellan"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on la fosse des Mariannes ?",
+    "text": "Quel passage maritime sépare l’Amérique du Sud de la péninsule Antarctique ?",
     "answers": [
-      "l'Atlantique",
-      "l'Atlantique Nord",
-      "la mer de Corail",
-      "le Pacifique"
+      "Le passage du Nord-Ouest",
+      "Le détroit de Davis",
+      "Le canal de Mozambique",
+      "Le passage de Drake"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on la dorsale médio-atlantique ?",
+    "text": "Quel canal naturel sépare Madagascar du continent africain ?",
     "answers": [
-      "l'Atlantique",
-      "l'océan Indien",
-      "la mer de Corail",
-      "le Pacifique oriental"
+      "Le canal de Mozambique",
+      "Le canal du Yucatán",
+      "Le canal de Sicile",
+      "Le canal Saint-Georges"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on la dorsale médio-atlantique ?",
+    "text": "Quelle mer borde la Grande Barrière de corail australienne ?",
     "answers": [
-      "l'océan Indien",
-      "l'Atlantique",
-      "la mer de Corail",
-      "le Pacifique oriental"
+      "La mer de Tasman",
+      "La mer de Corail",
+      "La mer d’Arafura",
+      "La mer de Timor"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on la mer des Sargasses ?",
+    "text": "Quelle mer de l’océan Austral borde la plateforme de glace de Filchner-Ronne ?",
     "answers": [
-      "la mer de Corail",
-      "le Pacifique oriental",
-      "l'Atlantique Nord",
-      "l'océan Indien"
+      "La mer de Ross",
+      "La mer d’Amundsen",
+      "La mer de Weddell",
+      "La mer de Bellingshausen"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on la mer des Sargasses ?",
+    "text": "Quelle mer sépare notamment l’Australie de la Nouvelle-Zélande ?",
     "answers": [
-      "la mer de Corail",
-      "le Pacifique oriental",
-      "l'océan Indien",
-      "l'Atlantique Nord"
+      "La mer de Corail",
+      "La mer d’Arafura",
+      "La mer de Banda",
+      "La mer de Tasman"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on la Grande Barrière de corail ?",
+    "text": "Quel golfe se situe entre la péninsule Arabique et l’Iran ?",
     "answers": [
-      "la mer de Corail",
-      "le Pacifique oriental",
-      "l'Atlantique Nord",
-      "l'océan Indien"
+      "Le golfe Persique",
+      "Le golfe d’Aden",
+      "Le golfe d’Oman",
+      "Le golfe de Suez"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on la Grande Barrière de corail ?",
+    "text": "Quel détroit commande l’entrée occidentale de la mer Méditerranée ?",
     "answers": [
-      "le Pacifique oriental",
-      "la mer de Corail",
-      "l'Atlantique Nord",
-      "l'océan Indien"
+      "Le Bosphore",
+      "Le détroit de Gibraltar",
+      "Le détroit d’Ormuz",
+      "Le détroit de Messine"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on le courant de Humboldt ?",
+    "text": "Quel détroit relie la mer Noire à la mer de Marmara ?",
     "answers": [
-      "l'Atlantique Nord",
-      "l'océan Indien",
-      "le Pacifique oriental",
-      "le Pacifique et l'Arctique"
+      "Les Dardanelles",
+      "Le détroit de Kertch",
+      "Le Bosphore",
+      "Le détroit d’Otrante"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on le courant de Humboldt ?",
+    "text": "Quel détroit sépare Sumatra de la péninsule Malaise ?",
     "answers": [
-      "l'Atlantique Nord",
-      "l'océan Indien",
-      "le Pacifique et l'Arctique",
-      "le Pacifique oriental"
+      "Le détroit de la Sonde",
+      "Le détroit de Makassar",
+      "Le détroit de Lombok",
+      "Le détroit de Malacca"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on le Gulf Stream ?",
+    "text": "Quel cap sud-africain Bartolomeu Dias contourna-t-il en 1488 sur la route maritime vers l’océan Indien ?",
     "answers": [
-      "l'Atlantique Nord",
-      "l'océan Indien",
-      "le Pacifique et l'Arctique",
-      "l'Atlantique et le Pacifique autour du cap Horn"
+      "Le cap de Bonne-Espérance",
+      "Le cap Horn",
+      "Le cap Leeuwin",
+      "Le cap Nord"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on le Gulf Stream ?",
+    "text": "Quel archipel équatorien du Pacifique a inspiré les travaux de Darwin sur l’évolution ?",
     "answers": [
-      "l'océan Indien",
-      "l'Atlantique Nord",
-      "le Pacifique et l'Arctique",
-      "l'Atlantique et le Pacifique autour du cap Horn"
+      "Les Marquises",
+      "Les Galápagos",
+      "Les Aléoutiennes",
+      "Les Kerguelen"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on le courant des Aiguilles ?",
+    "text": "Quel est le nom du point océanique le plus éloigné de toute terre émergée ?",
     "answers": [
-      "le Pacifique et l'Arctique",
-      "l'Atlantique et le Pacifique autour du cap Horn",
-      "l'océan Indien",
-      "l'océan Austral"
+      "Le point Challenger",
+      "Le point Nadir",
+      "Le point Nemo",
+      "Le point Hadal"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on le courant des Aiguilles ?",
+    "text": "Dans quelle partie du Pacifique se situe le point Nemo ?",
     "answers": [
-      "le Pacifique et l'Arctique",
-      "l'Atlantique et le Pacifique autour du cap Horn",
-      "l'océan Austral",
-      "l'océan Indien"
+      "Le Pacifique Nord",
+      "Le Pacifique occidental équatorial",
+      "La mer de Béring",
+      "Le Pacifique Sud"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on le détroit de Béring ?",
+    "text": "Quel archipel volcanique français se trouve dans le sud de l’océan Indien ?",
     "answers": [
-      "le Pacifique et l'Arctique",
-      "l'Atlantique et le Pacifique autour du cap Horn",
-      "l'océan Indien",
-      "l'océan Austral"
+      "Les Kerguelen",
+      "Les Açores",
+      "Les Aléoutiennes",
+      "Les Baléares"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on le détroit de Béring ?",
+    "text": "Quel courant chaud longe la côte est de l’Amérique du Nord avant de traverser l’Atlantique ?",
     "answers": [
-      "l'Atlantique et le Pacifique autour du cap Horn",
-      "le Pacifique et l'Arctique",
-      "l'océan Indien",
-      "l'océan Austral"
+      "Le courant de Humboldt",
+      "Le Gulf Stream",
+      "Le courant de Benguela",
+      "Le courant de Californie"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on le passage de Drake ?",
+    "text": "Quel courant froid longe une grande partie de la côte occidentale de l’Amérique du Sud ?",
     "answers": [
-      "l'océan Indien",
-      "l'océan Austral",
-      "l'Atlantique et le Pacifique autour du cap Horn",
-      "le Pacifique central"
+      "Le courant du Brésil",
+      "Le Kuroshio",
+      "Le courant de Humboldt",
+      "Le courant des Aiguilles"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on le passage de Drake ?",
+    "text": "Quel courant chaud longe la côte orientale du Japon ?",
     "answers": [
-      "l'océan Indien",
-      "l'océan Austral",
-      "le Pacifique central",
-      "l'Atlantique et le Pacifique autour du cap Horn"
+      "L’Oyashio",
+      "Le courant de Californie",
+      "Le courant des Canaries",
+      "Le Kuroshio"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on la fosse de Java ?",
+    "text": "Quel courant froid longe le sud-ouest de l’Afrique ?",
     "answers": [
-      "l'océan Indien",
-      "l'océan Austral",
-      "le Pacifique central",
-      "l'Atlantique Nord"
+      "Le courant de Benguela",
+      "Le courant des Aiguilles",
+      "Le courant du Brésil",
+      "Le courant est-australien"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on la fosse de Java ?",
+    "text": "Quel courant chaud longe le sud-est de l’Afrique avant de rétrofléchir dans l’océan Indien ?",
     "answers": [
-      "l'océan Austral",
-      "l'océan Indien",
-      "le Pacifique central",
-      "l'Atlantique Nord"
+      "Le courant de Benguela",
+      "Le courant des Aiguilles",
+      "Le courant somalien",
+      "Le courant circumpolaire antarctique"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on la mer de Weddell ?",
+    "text": "Quel courant océanique fait le tour de l’Antarctique sans être bloqué par un continent ?",
     "answers": [
-      "le Pacifique central",
-      "l'océan Indien",
-      "l'océan Austral",
-      "l'Atlantique Nord"
+      "Le Gulf Stream",
+      "Le Kuroshio",
+      "Le courant circumpolaire antarctique",
+      "Le courant équatorial nord"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on la mer de Weddell ?",
+    "text": "Quel mécanisme fait remonter vers la surface des eaux profondes, froides et riches en nutriments ?",
     "answers": [
-      "le Pacifique central",
-      "l'océan Indien",
-      "l'Atlantique Nord",
-      "l'océan Austral"
+      "La subduction",
+      "La stratification",
+      "La marée de vive-eau",
+      "L’upwelling"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on l'archipel d'Hawaï ?",
+    "text": "Lors d’El Niño, quelles eaux deviennent anormalement chaudes ?",
     "answers": [
-      "le Pacifique central",
-      "l'océan Indien",
-      "l'Atlantique Nord",
-      "le Pacifique Sud"
+      "Les eaux de surface du Pacifique tropical central et oriental",
+      "Les eaux profondes de l’Atlantique Nord",
+      "Les eaux de surface de l’Arctique canadien",
+      "Les eaux profondes de la mer Rouge"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on l'archipel d'Hawaï ?",
+    "text": "Quel phénomène est la phase froide du cycle ENSO dans le Pacifique tropical ?",
     "answers": [
-      "l'océan Indien",
-      "le Pacifique central",
-      "l'Atlantique Nord",
-      "le Pacifique Sud"
+      "L’oscillation nord-atlantique",
+      "La Niña",
+      "La mousson",
+      "Le dipôle arctique"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on les Maldives ?",
+    "text": "Quel type de circulation profonde dépend des différences de température et de salinité ?",
     "answers": [
-      "l'Atlantique Nord",
-      "le Pacifique Sud",
-      "l'océan Indien",
-      "le Pacifique tropical"
+      "La dérive littorale",
+      "La circulation de Walker",
+      "La circulation thermohaline",
+      "La brise de mer"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on les Maldives ?",
+    "text": "Quel effet dévie les grands courants vers la droite dans l’hémisphère Nord ?",
     "answers": [
-      "l'Atlantique Nord",
-      "le Pacifique Sud",
-      "le Pacifique tropical",
-      "l'océan Indien"
+      "L’effet Doppler",
+      "L’effet Venturi",
+      "L’effet de serre",
+      "L’effet de Coriolis"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on les Açores ?",
+    "text": "Comment nomme-t-on un vaste système circulaire de courants océaniques ?",
     "answers": [
-      "l'Atlantique Nord",
-      "le Pacifique Sud",
-      "le Pacifique tropical",
-      "l'océan Arctique"
+      "Un gyre",
+      "Un estuaire",
+      "Un mascaret",
+      "Un delta"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on les Açores ?",
+    "text": "Dans quel gyre se concentre la grande zone d’accumulation de déchets du Pacifique ?",
     "answers": [
-      "le Pacifique Sud",
-      "l'Atlantique Nord",
-      "le Pacifique tropical",
-      "l'océan Arctique"
+      "Le gyre subtropical de l’Atlantique Sud",
+      "Le gyre subtropical du Pacifique Nord",
+      "Le gyre subpolaire de l’Atlantique Nord",
+      "Le gyre de l’océan Indien Sud"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on la Nouvelle-Zélande ?",
+    "text": "Quel vent régulier pousse normalement les eaux équatoriales du Pacifique vers l’ouest ?",
     "answers": [
-      "le Pacifique tropical",
-      "l'océan Arctique",
-      "le Pacifique Sud",
-      "la fosse des Mariannes"
+      "Les vents catabatiques",
+      "Les vents d’ouest polaires",
+      "Les alizés d’est",
+      "Le mistral"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on la Nouvelle-Zélande ?",
+    "text": "Pourquoi les zones d’upwelling soutiennent-elles souvent des pêcheries productives ?",
     "answers": [
-      "le Pacifique tropical",
-      "l'océan Arctique",
-      "la fosse des Mariannes",
-      "le Pacifique Sud"
+      "Elles suppriment tout le plancton",
+      "Elles rendent l’eau douce",
+      "Elles empêchent les marées",
+      "Elles apportent des nutriments aux eaux éclairées"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on le phénomène El Niño ?",
+    "text": "Dans quelle fosse se trouve Challenger Deep, le point connu le plus profond de l’océan ?",
     "answers": [
-      "le Pacifique tropical",
-      "l'océan Arctique",
-      "la fosse des Mariannes",
-      "le Pacifique Sud"
+      "La fosse des Mariannes",
+      "La fosse de Tonga",
+      "La fosse du Pérou-Chili",
+      "La fosse de Java"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on le phénomène El Niño ?",
+    "text": "Dans quel océan se situe la fosse des Mariannes ?",
     "answers": [
-      "l'océan Arctique",
-      "le Pacifique tropical",
-      "la fosse des Mariannes",
-      "le Pacifique Sud"
+      "L’océan Atlantique",
+      "L’océan Pacifique",
+      "L’océan Indien",
+      "L’océan Austral"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on la banquise permanente historique du pôle Nord ?",
+    "text": "Quelle longue chaîne sous-marine traverse le centre de l’Atlantique ?",
     "answers": [
-      "la fosse des Mariannes",
-      "le Pacifique Sud",
-      "l'océan Arctique",
-      "l'océan Indien"
+      "La fosse des Sandwich du Sud",
+      "Le plateau des Kerguelen",
+      "La dorsale médio-atlantique",
+      "La ride de Walvis"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on la banquise permanente historique du pôle Nord ?",
+    "text": "Quel processus crée de la nouvelle croûte océanique au niveau des dorsales ?",
     "answers": [
-      "la fosse des Mariannes",
-      "le Pacifique Sud",
-      "l'océan Indien",
-      "l'océan Arctique"
+      "L’érosion glaciaire",
+      "La sédimentation éolienne",
+      "La dissolution karstique",
+      "L’expansion des fonds océaniques"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on la zone Challenger Deep ?",
+    "text": "Quelle roche compose principalement la croûte océanique ?",
     "answers": [
-      "la fosse des Mariannes",
-      "le Pacifique Sud",
-      "l'océan Indien",
-      "le Pacifique"
+      "Le basalte",
+      "Le granite",
+      "Le calcaire",
+      "Le gneiss"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on la zone Challenger Deep ?",
+    "text": "Comment nomme-t-on une montagne sous-marine qui ne dépasse pas la surface ?",
     "answers": [
-      "le Pacifique Sud",
-      "la fosse des Mariannes",
-      "l'océan Indien",
-      "le Pacifique"
+      "Un atoll",
+      "Un mont sous-marin",
+      "Un fjord",
+      "Un cordon littoral"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on le point Nemo ?",
+    "text": "Comment appelle-t-on un mont sous-marin au sommet aplati ?",
     "answers": [
-      "l'océan Indien",
-      "l'océan Arctique",
-      "le Pacifique Sud",
-      "l'Atlantique"
+      "Un canyon",
+      "Un horst",
+      "Un guyot",
+      "Un récif frangeant"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on le point Nemo ?",
+    "text": "Quelle zone relativement plate et très profonde s’étend au-delà du talus continental ?",
     "answers": [
-      "l'océan Indien",
-      "l'océan Arctique",
-      "l'Atlantique",
-      "le Pacifique Sud"
+      "Le plateau continental",
+      "L’estran",
+      "La lagune",
+      "La plaine abyssale"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quel océan ou espace marin associe-t-on le canal de Mozambique ?",
+    "text": "Quel relief sous-marin prolonge en pente douce un continent avant le talus ?",
     "answers": [
-      "l'océan Indien",
-      "le Pacifique",
-      "l'Atlantique",
-      "l'océan Arctique"
+      "Le plateau continental",
+      "La fosse océanique",
+      "La dorsale",
+      "Le bassin arrière-arc"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quel océan ou espace marin situe-t-on le canal de Mozambique ?",
+    "text": "Quel mécanisme tectonique forme de nombreuses fosses océaniques ?",
     "answers": [
-      "le Pacifique",
-      "l'océan Indien",
-      "l'Atlantique",
-      "l'océan Arctique"
+      "L’écartement d’un rift continental uniquement",
+      "La subduction d’une plaque",
+      "L’érosion par les vagues",
+      "Le dépôt des deltas"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quel type de limite de plaques les dorsales océaniques correspondent-elles ?",
+    "answers": [
+      "Une limite convergente",
+      "Une faille inverse continentale",
+      "Une limite divergente",
+      "Une limite immobile"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "À quel type de limite la fosse du Pérou-Chili est-elle liée ?",
+    "answers": [
+      "Une dorsale divergente",
+      "Un point chaud intraplaque",
+      "Une marge passive",
+      "Une zone de subduction"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel point chaud a formé la chaîne volcanique d’Hawaï à mesure que la plaque se déplaçait ?",
+    "answers": [
+      "Le point chaud hawaïen",
+      "Le point chaud islandais",
+      "Le point chaud des Açores",
+      "Le point chaud de Yellowstone"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment appelle-t-on les vallées sous-marines entaillant parfois le plateau et le talus continentaux ?",
+    "answers": [
+      "Les moraines",
+      "Les canyons sous-marins",
+      "Les dolines",
+      "Les drumlins"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel phénomène transporte des sédiments rapidement le long des pentes sous-marines ?",
+    "answers": [
+      "Une brise de vallée",
+      "Une onde de Rossby atmosphérique",
+      "Un courant de turbidité",
+      "Une marée rouge"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle est la principale substance dissoute responsable de la salinité de l’eau de mer ?",
+    "answers": [
+      "Le carbonate de calcium",
+      "Le dioxyde de carbone",
+      "La silice",
+      "Le chlorure de sodium"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle salinité moyenne approximative caractérise l’océan ouvert ?",
+    "answers": [
+      "Environ 35 grammes de sels par kilogramme d’eau",
+      "Environ 3,5 grammes par kilogramme",
+      "Environ 100 grammes par kilogramme",
+      "Environ 350 grammes par kilogramme"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment nomme-t-on la couche où la température diminue rapidement avec la profondeur ?",
+    "answers": [
+      "L’halocline",
+      "La thermocline",
+      "La pycnocline",
+      "La lysocline"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment nomme-t-on une couche où la salinité varie rapidement avec la profondeur ?",
+    "answers": [
+      "La thermocline",
+      "La tropopause",
+      "L’halocline",
+      "La chémocline atmosphérique"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle grandeur augmente fortement quand on descend dans l’océan ?",
+    "answers": [
+      "L’éclairement solaire",
+      "La quantité d’oxygène dans tous les cas",
+      "La vitesse du son dans tous les cas",
+      "La pression"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle zone océanique la lumière permet-elle généralement la photosynthèse ?",
+    "answers": [
+      "La zone euphotique",
+      "La zone hadale",
+      "La zone abyssale",
+      "La zone benthique profonde"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment appelle-t-on la zone comprise approximativement entre 200 et 1 000 mètres de profondeur ?",
+    "answers": [
+      "La zone épipélagique",
+      "La zone mésopélagique",
+      "La zone abyssopélagique",
+      "La zone hadopélagique"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle zone pélagique s’étend approximativement de 1 000 à 4 000 mètres ?",
+    "answers": [
+      "La zone épipélagique",
+      "La zone mésopélagique",
+      "La zone bathypélagique",
+      "La zone hadopélagique"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel adjectif désigne les grandes profondeurs des fosses, sous environ 6 000 mètres ?",
+    "answers": [
+      "Néritique",
+      "Pélagique",
+      "Littoral",
+      "Hadal"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Pourquoi l’eau de mer gèle-t-elle à une température plus basse que l’eau douce ?",
+    "answers": [
+      "Les sels dissous abaissent son point de congélation",
+      "Elle contient moins de molécules d’eau",
+      "La pression atmosphérique y est toujours nulle",
+      "Les vagues produisent une chaleur permanente"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel gaz dissous est utilisé par les animaux marins pour respirer ?",
+    "answers": [
+      "Le diazote uniquement",
+      "Le dioxygène",
+      "Le méthane",
+      "L’hélium"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel processus rend l’océan plus acide lorsqu’il absorbe davantage de CO₂ atmosphérique ?",
+    "answers": [
+      "La production de chlorure de sodium",
+      "La photolyse de l’azote",
+      "La formation d’acide carbonique",
+      "La cristallisation du quartz"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel instrument profileur mesure couramment température et salinité en profondeur depuis un navire ?",
+    "answers": [
+      "Un baromètre anéroïde",
+      "Un sismographe terrestre",
+      "Un pluviomètre",
+      "Une sonde CTD"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel réseau mondial de flotteurs autonomes mesure le haut de l’océan ?",
+    "answers": [
+      "Le programme Argo",
+      "Le réseau LIGO",
+      "Le programme Landsat",
+      "Le réseau EUREF"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle propriété de l’eau de mer influence sa densité avec la température ?",
+    "answers": [
+      "Sa couleur apparente uniquement",
+      "La salinité",
+      "La phase de la Lune",
+      "La longitude"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel organisme microscopique réalise une grande part de la photosynthèse marine ?",
+    "answers": [
+      "Le zooplancton",
+      "Les poissons pélagiques",
+      "Le phytoplancton",
+      "Les éponges calcaires"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment nomme-t-on les animaux et organismes qui dérivent avec les courants ?",
+    "answers": [
+      "Le necton",
+      "Le benthos",
+      "Le périphyton terrestre",
+      "Le zooplancton"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel terme regroupe les organismes vivant sur ou dans le fond marin ?",
+    "answers": [
+      "Le benthos",
+      "Le necton",
+      "Le plancton",
+      "Le neuston atmosphérique"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle relation permet aux coraux constructeurs de récifs de recevoir des produits de la photosynthèse ?",
+    "answers": [
+      "Une prédation sur les baleines",
+      "Une symbiose avec des algues microscopiques",
+      "Une association avec des oiseaux",
+      "Une fixation directe de l’azote atmosphérique par le squelette"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel stress provoque souvent l’expulsion des algues symbiotiques et le blanchissement des coraux ?",
+    "answers": [
+      "Une baisse modérée des marées",
+      "Une augmentation de la lumière lunaire",
+      "Une chaleur marine excessive",
+      "Une diminution du vent terrestre"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel écosystème côtier tropical est formé d’arbres tolérant l’eau salée ?",
+    "answers": [
+      "La taïga",
+      "La toundra",
+      "La steppe",
+      "La mangrove"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel habitat marin peu profond est formé par des plantes à fleurs submergées ?",
+    "answers": [
+      "Un herbier marin",
+      "Une forêt de varech",
+      "Un récif d’éponges profond",
+      "Une cheminée hydrothermale"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel grand organisme brun forme des forêts sous-marines dans les eaux tempérées froides ?",
+    "answers": [
+      "Le corail rouge",
+      "Le varech",
+      "Le phytoplancton",
+      "La zostère"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sur quelle source d’énergie reposent les communautés des sources hydrothermales privées de soleil ?",
+    "answers": [
+      "La photosynthèse",
+      "La fermentation alcoolique uniquement",
+      "La chimiosynthèse",
+      "La radioactivité naturelle uniquement"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Que rejettent notamment les cheminées hydrothermales appelées “fumeurs noirs” ?",
+    "answers": [
+      "De l’eau douce glacée",
+      "Du pétrole brut",
+      "Du sable corallien",
+      "Des fluides riches en sulfures minéraux"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle baleine est le plus grand animal connu ?",
+    "answers": [
+      "La baleine bleue",
+      "Le cachalot",
+      "La baleine franche",
+      "L’orque"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel mammifère marin utilise des défenses et vit dans l’Arctique ?",
+    "answers": [
+      "Le dugong",
+      "Le morse",
+      "L’éléphant de mer austral",
+      "Le lamantin des Caraïbes"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel groupe de poissons possède un squelette principalement cartilagineux ?",
+    "answers": [
+      "Les thons et les maquereaux",
+      "Les morues et les merlus",
+      "Les requins et les raies",
+      "Les hippocampes et les syngnathes"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel phénomène correspond à une prolifération rapide de microalgues pouvant produire des toxines ?",
+    "answers": [
+      "Une marée de morte-eau",
+      "Une inversion thermique atmosphérique",
+      "Une dérive continentale",
+      "Une efflorescence algale nuisible"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Pourquoi les estuaires servent-ils souvent de nurseries à de nombreuses espèces ?",
+    "answers": [
+      "Ils offrent nourriture et habitats abrités",
+      "Ils sont dépourvus de prédateurs dans tous les cas",
+      "Ils ne connaissent aucune variation de salinité",
+      "Ils sont toujours plus profonds que l’océan ouvert"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel appareil utilise des ondes sonores pour mesurer la profondeur sous un navire ?",
+    "answers": [
+      "Le radar",
+      "Le sonar",
+      "Le lidar atmosphérique",
+      "Le magnétomètre"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel navire mena l’expédition océanographique mondiale de 1872 à 1876 ?",
+    "answers": [
+      "Le Beagle",
+      "Le Calypso",
+      "Le HMS Challenger",
+      "L’Endeavour"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel submersible emmena Jacques Piccard et Don Walsh au fond de Challenger Deep en 1960 ?",
+    "answers": [
+      "L’Alvin",
+      "Le Nautile",
+      "Le Bathyscaphe Archimède",
+      "Le Trieste"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel engin habité a exploré le site du Titanic et des sources hydrothermales ?",
+    "answers": [
+      "L’Alvin",
+      "Le Trieste",
+      "Le Kaikō",
+      "Le Jason uniquement"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel explorateur a popularisé l’étude et la protection des océans à bord de la Calypso ?",
+    "answers": [
+      "Roald Amundsen",
+      "Jacques-Yves Cousteau",
+      "Thor Heyerdahl",
+      "Ernest Shackleton"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle scientifique a dirigé la première mission entièrement féminine dans l’habitat sous-marin Tektite II ?",
+    "answers": [
+      "Rachel Carson",
+      "Marie Tharp",
+      "Sylvia Earle",
+      "Eugenie Clark"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle cartographe a révélé la vallée axiale de la dorsale médio-atlantique grâce aux profils du fond marin ?",
+    "answers": [
+      "Sylvia Earle",
+      "Anita Conti",
+      "Jeanne Baret",
+      "Marie Tharp"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel satellite franco-américain lancé en 1992 a révolutionné la mesure de la hauteur des océans ?",
+    "answers": [
+      "TOPEX/Poseidon",
+      "Hubble",
+      "Voyager 2",
+      "Landsat 1"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Que mesure un altimètre radar satellitaire au-dessus de l’océan ?",
+    "answers": [
+      "La salinité du fond directement",
+      "La hauteur de la surface de la mer",
+      "L’âge des poissons",
+      "La composition des sédiments par forage"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel type de balise dérivante transmet sa position et des mesures de surface par satellite ?",
+    "answers": [
+      "Un marégraphe terrestre",
+      "Une cloche de plongée",
+      "Une bouée dérivante",
+      "Un bathythermographe jetable fixé au fond"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel instrument côtier enregistre les variations du niveau de la mer ?",
+    "answers": [
+      "Un anémomètre",
+      "Un hygromètre",
+      "Un gravimètre orbital",
+      "Un marégraphe"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle force astronomique est la principale cause des marées terrestres ?",
+    "answers": [
+      "L’attraction gravitationnelle de la Lune",
+      "Le champ magnétique solaire",
+      "La rotation de Mars",
+      "La pression des vents alizés"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quand les marées de vive-eau se produisent-elles ?",
+    "answers": [
+      "Uniquement au premier quartier",
+      "Quand le Soleil, la Terre et la Lune sont approximativement alignés",
+      "Quand la Lune est au-dessus de l’équateur",
+      "Quand les vents cessent complètement"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment se nomme une vague océanique de grande longueur souvent déclenchée par un séisme sous-marin ?",
+    "answers": [
+      "Un mascaret",
+      "Une houle de vent",
+      "Un tsunami",
+      "Une seiche atmosphérique"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Pourquoi un tsunami ralentit-il et gagne-t-il en hauteur près des côtes ?",
+    "answers": [
+      "La salinité disparaît",
+      "Le champ magnétique augmente",
+      "La Lune cesse d’attirer l’eau",
+      "La profondeur diminue"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
