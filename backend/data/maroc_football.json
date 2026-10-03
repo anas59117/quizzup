@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Quel surnom porte la sélection marocaine ?",
+    "text": "Quel surnom porte la sélection masculine du Maroc ?",
     "answers": [
       "Les Lions de l’Atlas",
-      "Les Fennecs",
       "Les Aigles de Carthage",
-      "Les Pharaons"
+      "Les Fennecs",
+      "Les Éléphants"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel exploit mondial le Maroc a-t-il accompli en 2022 ?",
+    "text": "Quelles couleurs dominent le maillot et le drapeau associés à la sélection marocaine ?",
     "answers": [
-      "Remporter la finale",
-      "Atteindre les demi-finales",
-      "Finir meilleur buteur",
-      "Organiser le tournoi"
+      "Le bleu et le blanc",
+      "Le rouge et le vert",
+      "Le jaune et le noir",
+      "L’orange et le bleu"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : latéral qui transforme le tir au but décisif contre l’Espagne en 2022 ?",
+    "text": "Que signifie le sigle FRMF ?",
     "answers": [
-      "Yassine Bounou",
-      "Youssef En-Nesyri",
-      "Achraf Hakimi",
-      "Badou Zaki"
+      "Fédération Régionale du Maghreb de Football",
+      "Fondation Royale des Matches FIFA",
+      "Fédération Royale Marocaine de Football",
+      "Fédération des Rencontres Marocaines de Futsal"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Achraf Hakimi ?",
+    "text": "En quelle année la FRMF a-t-elle été créée après l’indépendance ?",
     "answers": [
-      "sélectionneur du premier pays africain demi-finaliste mondial",
-      "capitaine et défenseur central du parcours historique",
-      "ailier du Maroc premier de son groupe mondial en 1986",
-      "latéral qui transforme le tir au but décisif contre l’Espagne en 2022"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Contre quelle équipe le Maroc a-t-il perdu en demi-finale du Mondial 2022 ?",
-    "answers": [
-      "La France",
-      "L'Argentine",
-      "La Croatie",
-      "Le Portugal"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : gardien surnommé Bono décisif lors du parcours mondial 2022 ?",
-    "answers": [
-      "Walid Regragui",
-      "Yassine Bounou",
-      "Romain Saïss",
-      "Aziz Bouderbala"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Yassine Bounou ?",
-    "answers": [
-      "milieu récupérateur majeur du parcours au Qatar",
-      "défenseur longtemps recordman des sélections marocaines",
-      "gardien surnommé Bono décisif lors du parcours mondial 2022",
-      "défenseur et capitaine lors du retour au Mondial 2018"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle équipe européenne le Maroc a-t-il éliminée aux tirs au but en huitième en 2022 ?",
-    "answers": [
-      "La Belgique",
-      "Le Portugal",
-      "L'Allemagne",
-      "L'Espagne"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : sélectionneur du premier pays africain demi-finaliste mondial ?",
-    "answers": [
-      "Walid Regragui",
-      "Sofyan Amrabat",
-      "Noureddine Naybet",
-      "Mehdi Benatia"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Walid Regragui ?",
-    "answers": [
-      "ailier gaucher revenu en sélection avant le Mondial qatari",
-      "sélectionneur du premier pays africain demi-finaliste mondial",
-      "milieu offensif élu joueur africain de l’année 1998",
-      "sélectionneur ayant qualifié le Maroc pour le Mondial après vingt ans"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quelle équipe le Maroc a-t-il battue en quart de finale du Mondial 2022 ?",
-    "answers": [
-      "L'Espagne",
-      "La Croatie",
-      "Le Portugal",
-      "La France"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : milieu récupérateur majeur du parcours au Qatar ?",
-    "answers": [
-      "Hakim Ziyech",
-      "Mustapha Hadji",
-      "Hervé Renard",
-      "Sofyan Amrabat"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Sofyan Amrabat ?",
-    "answers": [
-      "milieu récupérateur majeur du parcours au Qatar",
-      "buteur de la tête contre le Portugal en quart de finale",
-      "gardien emblématique et Ballon d’or africain 1986",
-      "attaquant capitaine du Maroc champion d’Afrique"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle place le Maroc a-t-il obtenue au Mondial 2022 ?",
-    "answers": [
-      "3e",
-      "4e",
-      "2e",
-      "8e"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : ailier gaucher revenu en sélection avant le Mondial qatari ?",
-    "answers": [
-      "Youssef En-Nesyri",
-      "Badou Zaki",
-      "Hakim Ziyech",
-      "Ahmed Faras"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Hakim Ziyech ?",
-    "answers": [
-      "capitaine et défenseur central du parcours historique",
-      "ailier du Maroc premier de son groupe mondial en 1986",
-      "attaquant auteur d’un doublé lors de la victoire 3-0 contre l’Écosse",
-      "ailier gaucher revenu en sélection avant le Mondial qatari"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "En quelle année le Maroc a-t-il remporté sa seule CAN ?",
-    "answers": [
+      "1949",
+      "1960",
       "1976",
-      "1986",
-      "2004",
-      "2019"
+      "1956"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : buteur de la tête contre le Portugal en quart de finale ?",
+    "text": "En quelle année la FRMF a-t-elle été officiellement affiliée à la FIFA ?",
     "answers": [
-      "Romain Saïss",
-      "Youssef En-Nesyri",
+      "1960",
+      "1956",
+      "1970",
+      "1986"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel pays le Maroc a-t-il disputé sa première Coupe du monde ?",
+    "answers": [
+      "En Espagne",
+      "Au Mexique",
+      "En Allemagne de l’Ouest",
+      "En Argentine"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle sélection le Maroc a-t-il affrontée pour son premier match mondial en 1970 ?",
+    "answers": [
+      "Le Pérou",
+      "La Bulgarie",
+      "L’Allemagne de l’Ouest",
+      "Le Brésil"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel fut le score du premier match mondial du Maroc contre l’Allemagne de l’Ouest ?",
+    "answers": [
+      "Match nul 0-0",
+      "Victoire 2-1",
+      "Défaite 3-0",
+      "Défaite 2-1"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Contre quelle équipe le Maroc a-t-il obtenu son premier point en Coupe du monde ?",
+    "answers": [
+      "La Bulgarie",
+      "Le Pérou",
+      "La Pologne",
+      "L’Angleterre"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui a égalisé pour le Maroc contre la Bulgarie au Mondial 1970 ?",
+    "answers": [
+      "Ahmed Faras",
+      "Maouhoub Ghazouani",
       "Aziz Bouderbala",
       "Salaheddine Bassir"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Youssef En-Nesyri ?",
+    "text": "En quelle année le Maroc a-t-il atteint pour la première fois les huitièmes d’un Mondial ?",
     "answers": [
-      "défenseur longtemps recordman des sélections marocaines",
-      "défenseur et capitaine lors du retour au Mondial 2018",
-      "buteur de la tête contre le Portugal en quart de finale",
-      "milieu élégant du parcours jusqu’aux huitièmes au Mexique"
+      "1970",
+      "1994",
+      "1986",
+      "1998"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel était le premier pays africain à terminer premier de son groupe en Coupe du monde, en 1986 ?",
+    "text": "Quel pays accueillait la Coupe du monde 1986 ?",
     "answers": [
-      "Le Cameroun",
-      "L'Algérie",
-      "Le Nigeria",
-      "Le Maroc"
+      "L’Espagne",
+      "L’Italie",
+      "Les États-Unis",
+      "Le Mexique"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : capitaine et défenseur central du parcours historique ?",
+    "text": "Quelle place le Maroc a-t-il prise dans son groupe en 1986 ?",
     "answers": [
-      "Romain Saïss",
-      "Noureddine Naybet",
-      "Mehdi Benatia",
-      "Abdelmajid Dolmy"
+      "La première",
+      "La deuxième",
+      "La troisième",
+      "La quatrième"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Romain Saïss ?",
+    "text": "Quelle sélection le Maroc a-t-il battue 3-1 lors du Mondial 1986 ?",
     "answers": [
-      "milieu offensif élu joueur africain de l’année 1998",
-      "capitaine et défenseur central du parcours historique",
-      "sélectionneur ayant qualifié le Maroc pour le Mondial après vingt ans",
-      "latéral qui transforme le tir au but décisif contre l’Espagne en 2022"
+      "La Pologne",
+      "Le Portugal",
+      "L’Angleterre",
+      "L’Allemagne de l’Ouest"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel pays co-organisera la Coupe du monde 2030 avec l'Espagne et le Portugal ?",
+    "text": "Quel joueur a inscrit un doublé contre le Portugal en 1986 ?",
     "answers": [
-      "L'Algérie",
-      "La Tunisie",
-      "Le Maroc",
-      "L'Égypte"
+      "Abdelkrim Merry",
+      "Aziz Bouderbala",
+      "Abderrazak Khairi",
+      "Mohamed Timoumi"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : défenseur longtemps recordman des sélections marocaines ?",
+    "text": "Quels furent les deux premiers résultats du Maroc au Mondial 1986 ?",
+    "answers": [
+      "Deux victoires 1-0",
+      "Une victoire et une défaite",
+      "Deux défaites 1-0",
+      "Deux matches nuls 0-0"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Contre quelles équipes le Maroc a-t-il fait 0-0 avant de battre le Portugal en 1986 ?",
+    "answers": [
+      "La Pologne et l’Angleterre",
+      "La France et le Brésil",
+      "L’Italie et l’Espagne",
+      "La Belgique et les Pays-Bas"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a éliminé le Maroc en huitième de finale du Mondial 1986 ?",
+    "answers": [
+      "Le Portugal",
+      "L’Allemagne de l’Ouest",
+      "L’Angleterre",
+      "L’Argentine"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur allemand a marqué l’unique but du huitième Maroc–RFA en 1986 ?",
+    "answers": [
+      "Rudi Völler",
+      "Karl-Heinz Rummenigge",
+      "Lothar Matthäus",
+      "Andreas Brehme"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel sélectionneur a conduit le Maroc au huitième de finale en 1986 ?",
+    "answers": [
+      "Henri Michel",
+      "Hervé Renard",
+      "Walid Regragui",
+      "José Faria"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel pays s’est déroulé le Mondial 1994 disputé par le Maroc ?",
+    "answers": [
+      "Aux États-Unis",
+      "En France",
+      "Au Japon",
+      "En Afrique du Sud"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle équipe européenne figurait dans le groupe du Maroc en 1994 ?",
+    "answers": [
+      "L’Allemagne",
+      "La Belgique",
+      "L’Espagne",
+      "L’Écosse"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle sélection asiatique a battu le Maroc 2-1 au Mondial 1994 ?",
+    "answers": [
+      "La Corée du Sud",
+      "Le Japon",
+      "L’Arabie saoudite",
+      "L’Iran"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur marocain a marqué contre les Pays-Bas au Mondial 1994 ?",
     "answers": [
       "Mustapha Hadji",
-      "Hervé Renard",
-      "Achraf Hakimi",
+      "Noureddine Naybet",
+      "Salaheddine Bassir",
+      "Hassan Nader"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de points le Maroc a-t-il pris durant la phase de groupes de 1994 ?",
+    "answers": [
+      "Aucun",
+      "Un",
+      "Deux",
+      "Trois"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle équipe le Maroc a-t-il battue 3-0 au Mondial 1998 ?",
+    "answers": [
+      "La Norvège",
+      "L’Écosse",
+      "Le Brésil",
+      "La Belgique"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a inscrit un doublé lors du succès 3-0 contre l’Écosse ?",
+    "answers": [
+      "Mustapha Hadji",
+      "Abdeljalil Hadda",
+      "Salaheddine Bassir",
+      "Youssef Chippo"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel fut le score de Maroc–Norvège au Mondial 1998 ?",
+    "answers": [
+      "0-0",
+      "1-0",
+      "3-1",
+      "2-2"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle équipe sud-américaine a battu le Maroc 3-0 en 1998 ?",
+    "answers": [
+      "Le Brésil",
+      "L’Argentine",
+      "Le Chili",
+      "La Colombie"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel sélectionneur français dirigeait le Maroc au Mondial 1998 ?",
+    "answers": [
+      "Roger Lemerre",
+      "Henri Michel",
+      "Philippe Troussier",
+      "Hervé Renard"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel pays a accueilli la Coupe du monde 2018 ?",
+    "answers": [
+      "Le Qatar",
+      "Le Brésil",
+      "La Russie",
+      "L’Afrique du Sud"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel sélectionneur a qualifié le Maroc pour le Mondial 2018 ?",
+    "answers": [
+      "Badou Zaki",
+      "Walid Regragui",
+      "Eric Gerets",
+      "Hervé Renard"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle sélection a battu le Maroc 1-0 lors de son premier match en 2018 ?",
+    "answers": [
+      "L’Iran",
+      "Le Portugal",
+      "L’Espagne",
+      "La Russie"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quels joueurs ont marqué pour le Maroc lors du nul 2-2 contre l’Espagne ?",
+    "answers": [
+      "Hakim Ziyech et Achraf Hakimi",
+      "Khalid Boutaïb et Youssef En-Nesyri",
+      "Sofyan Amrabat et Mbark Boussoufa",
+      "Medhi Benatia et Nordin Amrabat"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel capitaine marocain a disputé le Mondial 2018 en défense centrale ?",
+    "answers": [
+      "Romain Saïss",
+      "Nayef Aguerd",
+      "Medhi Benatia",
       "Noureddine Naybet"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Noureddine Naybet ?",
+    "text": "Quel sélectionneur dirigeait le Maroc au Mondial 2022 ?",
     "answers": [
-      "défenseur longtemps recordman des sélections marocaines",
-      "gardien emblématique et Ballon d’or africain 1986",
-      "attaquant capitaine du Maroc champion d’Afrique",
-      "gardien surnommé Bono décisif lors du parcours mondial 2022"
+      "Hervé Renard",
+      "Vahid Halilhodžić",
+      "Henri Michel",
+      "Walid Regragui"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel pays organise la CAN 2025 ?",
+    "text": "Contre quelle équipe le Maroc a-t-il débuté par un 0-0 au Qatar ?",
     "answers": [
-      "La Côte d'Ivoire",
-      "Le Maroc",
-      "L'Égypte",
-      "Le Sénégal"
+      "La Croatie",
+      "La Belgique",
+      "Le Canada",
+      "L’Espagne"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : milieu offensif élu joueur africain de l’année 1998 ?",
+    "text": "Quel fut le score de Maroc–Belgique au Mondial 2022 ?",
+    "answers": [
+      "1-0",
+      "2-0",
+      "2-1",
+      "0-0"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quels joueurs ont marqué contre la Belgique en 2022 ?",
+    "answers": [
+      "Hakim Ziyech et Youssef En-Nesyri",
+      "Achraf Hakimi et Sofyan Amrabat",
+      "Romain Saïss et Zakaria Aboukhlal",
+      "Nayef Aguerd et Azzedine Ounahi"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui a ouvert le score contre le Canada après une sortie du gardien adverse ?",
+    "answers": [
+      "Youssef En-Nesyri",
+      "Sofiane Boufal",
+      "Achraf Hakimi",
+      "Hakim Ziyech"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle sélection le Maroc a-t-il éliminée aux tirs au but en huitième en 2022 ?",
+    "answers": [
+      "L’Espagne",
+      "Le Portugal",
+      "La Croatie",
+      "La France"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel gardien marocain a été décisif pendant la séance contre l’Espagne ?",
+    "answers": [
+      "Munir Mohamedi",
+      "Yassine Bounou",
+      "Badou Zaki",
+      "Ahmed Reda Tagnaouti"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a transformé le tir au but décisif d’une Panenka contre l’Espagne ?",
+    "answers": [
+      "Hakim Ziyech",
+      "Sofyan Amrabat",
+      "Achraf Hakimi",
+      "Youssef En-Nesyri"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui a marqué l’unique but du quart de finale contre le Portugal ?",
+    "answers": [
+      "Romain Saïss",
+      "Hakim Ziyech",
+      "Sofiane Boufal",
+      "Youssef En-Nesyri"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle équipe a battu le Maroc 2-0 en demi-finale du Mondial 2022 ?",
+    "answers": [
+      "La France",
+      "L’Argentine",
+      "La Croatie",
+      "Le Portugal"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel rang final le Maroc a-t-il obtenu au Mondial 2022 ?",
+    "answers": [
+      "Deuxième",
+      "Quatrième",
+      "Troisième",
+      "Cinquième"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle sélection a battu le Maroc lors du match pour la troisième place en 2022 ?",
+    "answers": [
+      "La Belgique",
+      "Le Portugal",
+      "La Croatie",
+      "L’Espagne"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel record continental le Maroc a-t-il établi au Qatar en 2022 ?",
+    "answers": [
+      "Premier pays africain champion du monde",
+      "Premier pays africain organisateur",
+      "Premier pays africain à gagner aux tirs au but",
+      "Premier pays africain en demi-finale mondiale"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Marocain est devenu en 2022 le premier de son pays à marquer lors de deux éditions du Mondial ?",
+    "answers": [
+      "Youssef En-Nesyri",
+      "Hakim Ziyech",
+      "Achraf Hakimi",
+      "Salaheddine Bassir"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quels deux joueurs détenaient chacun dix apparitions mondiales marocaines après Qatar 2022 ?",
+    "answers": [
+      "Bounou et Saïss",
+      "Achraf Hakimi et Hakim Ziyech",
+      "Amrabat et Ounahi",
+      "En-Nesyri et Boufal"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année le Maroc a-t-il remporté son premier titre de champion d’Afrique ?",
+    "answers": [
+      "1968",
+      "1980",
+      "1976",
+      "2004"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel pays organisait la CAN remportée par le Maroc en 1976 ?",
+    "answers": [
+      "L’Égypte",
+      "Le Ghana",
+      "Le Nigeria",
+      "L’Éthiopie"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui était le capitaine et meilleur buteur marocain de la CAN 1976 ?",
+    "answers": [
+      "Ahmed Faras",
+      "Ahmed Makrouh",
+      "Mohamed Timoumi",
+      "Badou Zaki"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel adversaire le Maroc a-t-il tenu en échec 1-1 pour assurer le titre de 1976 ?",
+    "answers": [
+      "L’Égypte",
+      "La Guinée",
+      "Le Nigeria",
+      "Le Zaïre"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui a marqué le but égalisateur décisif contre la Guinée en 1976 ?",
+    "answers": [
+      "Ahmed Faras",
+      "Larbi Ben Barek",
+      "Ahmed Makrouh, dit Baba",
+      "Abdelmajid Dolmy"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle place le Maroc a-t-il obtenue à la CAN 1980 ?",
+    "answers": [
+      "Premier",
+      "Deuxième",
+      "Quatrième",
+      "Troisième"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel pays a battu le Maroc en finale de la CAN 2004 ?",
+    "answers": [
+      "La Tunisie",
+      "L’Égypte",
+      "Le Cameroun",
+      "Le Nigeria"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel sélectionneur marocain dirigeait les Lions de l’Atlas lors de la finale de CAN 2004 ?",
+    "answers": [
+      "Walid Regragui",
+      "Badou Zaki",
+      "José Faria",
+      "Hervé Renard"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle ville s’est jouée la finale de la CAN 2004 ?",
+    "answers": [
+      "Casablanca",
+      "Le Caire",
+      "Radès",
+      "Lagos"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Avant l’édition 2025, combien de CAN le Maroc avait-il remportées ?",
+    "answers": [
+      "Deux",
+      "Trois",
+      "Quatre",
+      "Une"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur marocain était surnommé la Perle noire ?",
+    "answers": [
+      "Larbi Ben Barek",
+      "Ahmed Faras",
+      "Aziz Bouderbala",
+      "Mohamed Timoumi"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel attaquant marocain a reçu le Ballon d’or africain 1975 ?",
     "answers": [
       "Badou Zaki",
       "Ahmed Faras",
       "Mustapha Hadji",
       "Yassine Bounou"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Mustapha Hadji ?",
+    "text": "Quel gardien marocain a reçu le Ballon d’or africain 1986 ?",
     "answers": [
-      "ailier du Maroc premier de son groupe mondial en 1986",
-      "attaquant auteur d’un doublé lors de la victoire 3-0 contre l’Écosse",
-      "sélectionneur du premier pays africain demi-finaliste mondial",
-      "milieu offensif élu joueur africain de l’année 1998"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Contre quelle équipe le Maroc a-t-il perdu la finale de la CAN 2004 ?",
-    "answers": [
-      "La Tunisie",
-      "L'Égypte",
-      "Le Nigeria",
-      "Le Cameroun"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : gardien emblématique et Ballon d’or africain 1986 ?",
-    "answers": [
-      "Aziz Bouderbala",
-      "Badou Zaki",
-      "Salaheddine Bassir",
-      "Walid Regragui"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Badou Zaki ?",
-    "answers": [
-      "défenseur et capitaine lors du retour au Mondial 2018",
-      "milieu élégant du parcours jusqu’aux huitièmes au Mexique",
-      "gardien emblématique et Ballon d’or africain 1986",
-      "milieu récupérateur majeur du parcours au Qatar"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quel club évolue Achraf Hakimi depuis 2021 ?",
-    "answers": [
-      "Le Real Madrid",
-      "L'Inter Milan",
-      "Le Bayern Munich",
-      "Le PSG"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : ailier du Maroc premier de son groupe mondial en 1986 ?",
-    "answers": [
-      "Aziz Bouderbala",
-      "Mehdi Benatia",
-      "Abdelmajid Dolmy",
-      "Sofyan Amrabat"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Aziz Bouderbala ?",
-    "answers": [
-      "sélectionneur ayant qualifié le Maroc pour le Mondial après vingt ans",
-      "ailier du Maroc premier de son groupe mondial en 1986",
-      "latéral qui transforme le tir au but décisif contre l’Espagne en 2022",
-      "ailier gaucher revenu en sélection avant le Mondial qatari"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel gardien marocain a remporté plusieurs Ligues Europa avec Séville ?",
-    "answers": [
+      "Yassine Bounou",
       "Munir Mohamedi",
       "Badou Zaki",
-      "Yassine Bounou",
-      "Nadir Lamyaghri"
+      "Allal Ben Kassou"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : défenseur et capitaine lors du retour au Mondial 2018 ?",
-    "answers": [
-      "Hervé Renard",
-      "Achraf Hakimi",
-      "Hakim Ziyech",
-      "Mehdi Benatia"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Mehdi Benatia ?",
-    "answers": [
-      "défenseur et capitaine lors du retour au Mondial 2018",
-      "attaquant capitaine du Maroc champion d’Afrique",
-      "gardien surnommé Bono décisif lors du parcours mondial 2022",
-      "buteur de la tête contre le Portugal en quart de finale"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel est l'ancien club londonien de Hakim Ziyech ?",
-    "answers": [
-      "Arsenal",
-      "Chelsea",
-      "Tottenham",
-      "West Ham"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : sélectionneur ayant qualifié le Maroc pour le Mondial après vingt ans ?",
-    "answers": [
-      "Ahmed Faras",
-      "Yassine Bounou",
-      "Hervé Renard",
-      "Youssef En-Nesyri"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Hervé Renard ?",
-    "answers": [
-      "attaquant auteur d’un doublé lors de la victoire 3-0 contre l’Écosse",
-      "sélectionneur du premier pays africain demi-finaliste mondial",
-      "capitaine et défenseur central du parcours historique",
-      "sélectionneur ayant qualifié le Maroc pour le Mondial après vingt ans"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans quel pays européen Hakim Ziyech est-il né ?",
-    "answers": [
-      "Les Pays-Bas",
-      "La Belgique",
-      "La France",
-      "L'Espagne"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : attaquant capitaine du Maroc champion d’Afrique ?",
+    "text": "Quel milieu marocain a été élu Joueur africain de l’année 1998 ?",
     "answers": [
       "Salaheddine Bassir",
-      "Ahmed Faras",
-      "Walid Regragui",
-      "Romain Saïss"
+      "Noureddine Naybet",
+      "Youssef Chippo",
+      "Mustapha Hadji"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Ahmed Faras ?",
+    "text": "Quel meneur de jeu du FAR a remporté le Ballon d’or africain 1985 ?",
     "answers": [
-      "milieu élégant du parcours jusqu’aux huitièmes au Mexique",
-      "milieu récupérateur majeur du parcours au Qatar",
-      "attaquant capitaine du Maroc champion d’Afrique",
-      "défenseur longtemps recordman des sélections marocaines"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle couleur domine le maillot domicile du Maroc ?",
-    "answers": [
-      "Le vert",
-      "Le blanc",
-      "Le jaune",
-      "Le rouge"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : attaquant auteur d’un doublé lors de la victoire 3-0 contre l’Écosse ?",
-    "answers": [
-      "Salaheddine Bassir",
+      "Mohamed Timoumi",
+      "Aziz Bouderbala",
       "Abdelmajid Dolmy",
-      "Sofyan Amrabat",
-      "Noureddine Naybet"
+      "Mohamed Ouaddouch"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Salaheddine Bassir ?",
+    "text": "Dans quelle ville évoluent le Wydad et le Raja ?",
     "answers": [
-      "latéral qui transforme le tir au but décisif contre l’Espagne en 2022",
-      "attaquant auteur d’un doublé lors de la victoire 3-0 contre l’Écosse",
-      "ailier gaucher revenu en sélection avant le Mondial qatari",
-      "milieu offensif élu joueur africain de l’année 1998"
+      "Rabat",
+      "Casablanca",
+      "Fès",
+      "Marrakech"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans quelle ville se trouve le complexe Mohammed VI de football ?",
+    "text": "En quelle année la section football du Wydad a-t-elle vu le jour ?",
     "answers": [
-      "Marrakech",
+      "1922",
+      "1949",
+      "1939",
+      "1956"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En quelle année le Raja de Casablanca a-t-il été fondé ?",
+    "answers": [
+      "1937",
+      "1946",
+      "1958",
+      "1949"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club marocain a été fondé par l’OCP en 1923 ?",
+    "answers": [
+      "L’Olympique Club de Khouribga",
+      "Le FUS de Rabat",
+      "Le Hassania d’Agadir",
+      "Le Moghreb de Tétouan"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club de Fès a été créé en 1946 par Driss Benzakour et des nationalistes ?",
+    "answers": [
+      "Le Wydad de Fès",
+      "Le Maghreb de Fès",
+      "Le Raja de Beni Mellal",
+      "Le CODM de Meknès"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club a remporté le premier championnat national marocain après l’indépendance ?",
+    "answers": [
+      "Le Raja de Casablanca",
+      "L’AS FAR",
+      "Le Wydad de Casablanca",
+      "Le KAC de Kénitra"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année le Wydad a-t-il gagné sa première Coupe d’Afrique des clubs champions ?",
+    "answers": [
+      "1985",
+      "1997",
+      "2002",
+      "1992"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel adversaire le Wydad a-t-il battu en finale de Ligue des champions 2017 ?",
+    "answers": [
+      "Al Ahly",
+      "L’Espérance de Tunis",
+      "Zamalek",
+      "Mamelodi Sundowns"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a inscrit les deux buts du Wydad en finale de Ligue des champions 2022 ?",
+    "answers": [
+      "Walid El Karti",
+      "Zouheir El Moutaraji",
+      "Ayoub El Amloud",
+      "Yahya Jabrane"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel stade le Wydad a-t-il battu Al Ahly 2-0 en finale 2022 ?",
+    "answers": [
+      "Le stade Moulay-Abdallah",
+      "Le stade Ibn-Batouta",
+      "Le stade Mohammed-V",
+      "Le complexe de Fès"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année le Raja a-t-il remporté son premier titre continental majeur ?",
+    "answers": [
+      "1985",
+      "1992",
+      "1997",
+      "1989"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelles sont les trois années de sacre du Raja dans la principale compétition africaine ?",
+    "answers": [
+      "1989, 1997 et 1999",
+      "1992, 2017 et 2022",
+      "1985, 2005 et 2010",
+      "1997, 2002 et 2018"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club ghanéen le Raja a-t-il battu aux tirs au but en finale africaine 1997 ?",
+    "answers": [
+      "Asante Kotoko",
+      "Goldfields, devenu Ashanti Gold",
+      "Hearts of Oak",
+      "Great Olympics"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel entraîneur argentin a conduit le Raja au titre africain 1999 ?",
+    "answers": [
+      "Hector Cúper",
+      "Marcelo Bielsa",
+      "Oscar Fulloné",
+      "Jorge Sampaoli"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle compétition africaine le Raja a-t-il remportée en 2018 ?",
+    "answers": [
+      "La Ligue des champions",
+      "La Coupe des vainqueurs de coupe",
+      "La Coupe afro-asiatique",
+      "La Coupe de la Confédération"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club fut le premier du Maroc à devenir champion d’Afrique des clubs en 1985 ?",
+    "answers": [
+      "L’AS FAR",
+      "Le Wydad",
+      "Le Raja",
+      "La RS Berkane"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "De quelle ville l’AS FAR est-elle le grand club historique ?",
+    "answers": [
+      "Casablanca",
+      "Rabat",
+      "Oujda",
+      "Tanger"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club marocain a remporté la Coupe de la Confédération 2010 ?",
+    "answers": [
+      "Le Hassania d’Agadir",
+      "Le Kawkab de Marrakech",
+      "Le FUS de Rabat",
+      "Le Moghreb de Tétouan"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club a remporté la Coupe de la Confédération 2011 puis la Supercoupe CAF 2012 ?",
+    "answers": [
+      "Le Difaâ d’El Jadida",
+      "L’Olympique de Safi",
+      "Le Chabab Mohammedia",
+      "Le Maghreb de Fès"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club d’Oujda a été fondé en 1946 ?",
+    "answers": [
+      "Le Mouloudia Club d’Oujda",
+      "La Renaissance de Berkane",
+      "L’Union Touarga",
+      "Le KAC de Kénitra"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club marocain a participé à la première Coupe du monde des clubs FIFA en 2000 ?",
+    "answers": [
+      "Le Wydad",
+      "Le Raja de Casablanca",
+      "L’AS FAR",
+      "Le FUS"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quel pays se disputait la Coupe du monde des clubs 2000 ?",
+    "answers": [
+      "Au Japon",
+      "Au Maroc",
+      "Au Brésil",
+      "En Espagne"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club marocain a atteint la finale du Mondial des clubs 2013 ?",
+    "answers": [
+      "Le Wydad",
+      "Le Moghreb de Tétouan",
+      "L’AS FAR",
+      "Le Raja de Casablanca"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club brésilien le Raja a-t-il éliminé en demi-finale du Mondial des clubs 2013 ?",
+    "answers": [
+      "L’Atlético Mineiro",
+      "Corinthians",
+      "Flamengo",
+      "Santos"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel géant européen a battu le Raja en finale du Mondial des clubs 2013 ?",
+    "answers": [
+      "Le Real Madrid",
+      "Le Bayern Munich",
+      "Chelsea",
+      "Le FC Barcelone"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année le Maroc a-t-il disputé sa première Coupe du monde féminine ?",
+    "answers": [
+      "2015",
+      "2019",
+      "2023",
+      "2027"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel exploit les Lionnes de l’Atlas ont-elles réalisé à leur première Coupe du monde ?",
+    "answers": [
+      "Atteindre la finale",
+      "Remporter leur groupe",
+      "Finir troisièmes",
+      "Atteindre les huitièmes de finale"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle équipe le Maroc féminin a-t-il battue pour sa première victoire mondiale ?",
+    "answers": [
+      "La Corée du Sud",
+      "L’Allemagne",
+      "La France",
+      "La Norvège"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui a marqué le premier but marocain de l’histoire de la Coupe du monde féminine ?",
+    "answers": [
+      "Ghizlane Chebbak",
+      "Ibtissam Jraidi",
+      "Rosella Ayane",
+      "Anissa Lahmari"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel stade la sélection U20 masculine avait-elle atteint au Mondial 2005 ?",
+    "answers": [
+      "Les huitièmes",
+      "Les quarts",
+      "Les demi-finales",
+      "La finale"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel nom porte le grand derby entre le Wydad et le Raja ?",
+    "answers": [
+      "Le derby du Bouregreg",
+      "Le derby de l’Oriental",
+      "Le derby du Détroit",
+      "Le derby de Casablanca"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel stade casablancais a longtemps accueilli les grands matches du Wydad et du Raja ?",
+    "answers": [
+      "Le stade Mohammed-V",
+      "Le stade Adrar",
+      "Le stade Ibn-Batouta",
+      "Le stade d’Honneur d’Oujda"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle ville se trouve le stade Ibn-Batouta ?",
+    "answers": [
+      "Agadir",
       "Tanger",
-      "Salé (près de Rabat)",
-      "Agadir"
+      "Fès",
+      "Marrakech"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle figure du football marocain correspond à cette description : milieu élégant du parcours jusqu’aux huitièmes au Mexique ?",
+    "text": "Quel complexe national situé près de Rabat porte le nom de Mohammed VI ?",
     "answers": [
-      "Achraf Hakimi",
-      "Hakim Ziyech",
-      "Mustapha Hadji",
-      "Abdelmajid Dolmy"
+      "Le Complexe Hassan-II de futsal",
+      "Le Centre Ibn-Batouta",
+      "Le Complexe Mohammed-VI de football",
+      "Le Stade Larbi-Ben-Barek"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Maroc — Lions de l’Atlas », quelle description correspond à Abdelmajid Dolmy ?",
+    "text": "Avec quels deux pays européens le Maroc coorganisera-t-il le Mondial 2030 ?",
     "answers": [
-      "milieu élégant du parcours jusqu’aux huitièmes au Mexique",
-      "gardien surnommé Bono décisif lors du parcours mondial 2022",
-      "buteur de la tête contre le Portugal en quart de finale",
-      "gardien emblématique et Ballon d’or africain 1986"
+      "La France et la Belgique",
+      "L’Italie et la Grèce",
+      "L’Angleterre et l’Irlande",
+      "L’Espagne et le Portugal"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel sélectionneur marocain a été surnommé « Rass l'Avocat » ?",
-    "answers": [
-      "Hervé Renard",
-      "Walid Regragui",
-      "Vahid Halilhodžić",
-      "Badou Zaki"
-    ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
