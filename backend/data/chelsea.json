@@ -2,32 +2,35 @@
   {
     "text": "Dans quelle ville se trouve Chelsea FC ?",
     "answers": [
+      "Londres",
       "Manchester",
       "Liverpool",
-      "Londres",
       "Birmingham"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle le stade de Chelsea ?",
     "answers": [
-      "Stamford Bridge",
       "White Hart Lane",
+      "Stamford Bridge",
       "Craven Cottage",
       "Highbury"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel est le surnom de Chelsea ?",
     "answers": [
-      "Les Blues",
       "Les Gunners",
       "Les Spurs",
+      "Les Blues",
       "Les Hammers"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel milliardaire russe a racheté Chelsea en 2003 ?",
@@ -37,127 +40,140 @@
       "Mikhaïl Prokhorov",
       "Roman Abramovitch"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel entraîneur portugais surnommé « The Special One » a mené Chelsea au titre en 2005 ?",
     "answers": [
+      "José Mourinho",
       "André Villas-Boas",
       "Nuno Espírito Santo",
-      "José Mourinho",
       "Paulo Bento"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
     "text": "En quelle année Chelsea a-t-il remporté sa première Ligue des champions ?",
     "answers": [
       "2008",
-      "2005",
       "2012",
+      "2005",
       "2021"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Contre quel club Chelsea a-t-il remporté la finale de Ligue des champions 2012 ?",
     "answers": [
-      "Le Bayern Munich",
       "Le FC Barcelone",
       "Manchester United",
+      "Le Bayern Munich",
       "Le Real Madrid"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Dans quel stade s'est jouée la finale 2012 remportée par Chelsea ?",
     "answers": [
       "Wembley",
       "Le Stade de France",
-      "L'Allianz Arena de Munich",
-      "Le Camp Nou"
+      "Le Camp Nou",
+      "L'Allianz Arena de Munich"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel attaquant ivoirien a marqué l'égalisation et le tir au but décisif en finale 2012 ?",
     "answers": [
-      "Salomon Kalou",
       "Didier Drogba",
+      "Salomon Kalou",
       "Gervinho",
       "Yaya Touré"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Contre quel club Chelsea a-t-il remporté la finale de Ligue des champions 2021 ?",
     "answers": [
-      "Manchester City",
       "Liverpool",
+      "Manchester City",
       "Le PSG",
       "Le Real Madrid"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
     "text": "Quel entraîneur allemand a mené Chelsea au titre européen 2021 ?",
     "answers": [
-      "Thomas Tuchel",
       "Jürgen Klopp",
       "Julian Nagelsmann",
+      "Thomas Tuchel",
       "Hansi Flick"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Contre quel club Chelsea a-t-il perdu la finale de Ligue des champions 2008 à Moscou ?",
     "answers": [
       "Liverpool",
-      "Manchester United",
       "Arsenal",
-      "Le FC Barcelone"
+      "Le FC Barcelone",
+      "Manchester United"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel milieu anglais est le meilleur buteur de l'histoire de Chelsea ?",
     "answers": [
+      "Frank Lampard",
       "John Terry",
       "Steven Gerrard",
-      "Frank Lampard",
       "Joe Cole"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel défenseur anglais a été le capitaine emblématique de Chelsea ?",
     "answers": [
       "Ashley Cole",
-      "Gary Cahill",
       "John Terry",
+      "Gary Cahill",
       "Rio Ferdinand"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel milieu français, champion du monde 2018, a remporté la Premier League et la Ligue des champions avec Chelsea ?",
     "answers": [
       "Paul Pogba",
       "Blaise Matuidi",
-      "Corentin Tolisso",
-      "N'Golo Kanté"
+      "N'Golo Kanté",
+      "Corentin Tolisso"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
     "text": "Quel ailier belge a été élu joueur de l'année en Premier League avec Chelsea en 2015 ?",
     "answers": [
       "Kevin De Bruyne",
-      "Eden Hazard",
       "Romelu Lukaku",
-      "Dries Mertens"
+      "Dries Mertens",
+      "Eden Hazard"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Quel gardien tchèque a été un pilier de Chelsea de 2004 à 2015 ?",
@@ -167,17 +183,19 @@
       "Jan Koller",
       "Pavel Nedvěd"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel défenseur français champion du monde 1998 a été capitaine de Chelsea ?",
     "answers": [
       "Laurent Blanc",
+      "Marcel Desailly",
       "Frank Lebœuf",
-      "Lilian Thuram",
-      "Marcel Desailly"
+      "Lilian Thuram"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Qui a racheté Chelsea en 2022 ?",
@@ -187,17 +205,19 @@
       "Un consortium mené par Todd Boehly et Clearlake",
       "Qatar Sports Investments"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quelle coupe européenne Chelsea a-t-il remportée en 2013 et 2019 ?",
     "answers": [
       "La Ligue des champions",
-      "La Ligue Europa",
       "La Coupe des coupes",
-      "La Ligue Europa Conférence"
+      "La Ligue Europa Conférence",
+      "La Ligue Europa"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
     "text": "Quelle coupe européenne Chelsea a-t-il remportée en 2025 ?",
@@ -207,67 +227,74 @@
       "La Ligue Europa",
       "La Coupe Intertoto"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle compétition mondiale Chelsea a-t-il remportée aux États-Unis en 2025 ?",
     "answers": [
-      "La Coupe du monde des clubs",
       "La Gold Cup",
+      "La Coupe du monde des clubs",
       "La Copa América",
       "L'International Champions Cup"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Contre quel club Chelsea a-t-il gagné la finale de la Coupe du monde des clubs 2025 ?",
     "answers": [
       "Le Real Madrid",
-      "Le PSG",
       "Flamengo",
+      "Le PSG",
       "Al Hilal"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel jeune milieu anglais, formé à Manchester City, a explosé à Chelsea à partir de 2023 ?",
     "answers": [
       "Mason Mount",
       "Conor Gallagher",
-      "Cole Palmer",
-      "Jadon Sancho"
+      "Jadon Sancho",
+      "Cole Palmer"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel attaquant allemand a marqué le but de la victoire en finale 2021 ?",
     "answers": [
-      "Timo Werner",
       "Kai Havertz",
+      "Timo Werner",
       "Thomas Müller",
       "Marco Reus"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
     "text": "Quel entraîneur italien a remporté le doublé Premier League - FA Cup en 2010 ?",
     "answers": [
       "Antonio Conte",
+      "Carlo Ancelotti",
       "Claudio Ranieri",
-      "Gianluca Vialli",
-      "Carlo Ancelotti"
+      "Gianluca Vialli"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quel entraîneur italien a remporté la Premier League 2017 avec Chelsea ?",
     "answers": [
       "Carlo Ancelotti",
-      "Antonio Conte",
       "Maurizio Sarri",
+      "Antonio Conte",
       "Roberto Di Matteo"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel entraîneur italien intérimaire a gagné la Ligue des champions 2012 ?",
@@ -277,17 +304,19 @@
       "Luca Vialli",
       "Roberto Di Matteo"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel attaquant italien surnommé « Magic Box » a été une idole de Chelsea ?",
     "answers": [
+      "Gianfranco Zola",
       "Roberto Baggio",
       "Alessandro Del Piero",
-      "Christian Vieri",
-      "Gianfranco Zola"
+      "Christian Vieri"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel ancien joueur de Chelsea en est devenu l'entraîneur en 2019 ?",
@@ -297,37 +326,41 @@
       "Didier Drogba",
       "Ashley Cole"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
     "text": "Quel attaquant espagnol a marqué pour Chelsea en finale de Ligue Europa 2013 ?",
     "answers": [
       "Diego Costa",
       "Álvaro Morata",
-      "Pedro",
-      "Fernando Torres"
+      "Fernando Torres",
+      "Pedro"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel club londonien est un rival voisin de Chelsea ?",
     "answers": [
       "Liverpool",
-      "Arsenal",
       "Everton",
-      "Leeds"
+      "Leeds",
+      "Arsenal"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel défenseur brésilien a gagné la Ligue des champions 2021 avec Chelsea à 36 ans ?",
     "answers": [
+      "Thiago Silva",
       "David Luiz",
       "Marquinhos",
-      "Thiago Silva",
       "Dani Alves"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel attaquant belge a joué deux fois à Chelsea, en 2011 puis en 2021 ?",
@@ -337,67 +370,74 @@
       "Michy Batshuayi",
       "Christian Benteke"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel défenseur espagnol a soulevé la Ligue des champions 2021 en tant que capitaine de Chelsea ?",
     "answers": [
       "Marcos Alonso",
-      "César Azpilicueta",
       "Sergio Ramos",
+      "César Azpilicueta",
       "Pedro"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
     "text": "Combien de Ligues des champions Chelsea a-t-il remportées ?",
     "answers": [
       "1",
-      "2",
       "3",
-      "5"
+      "5",
+      "2"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Quel attaquant sénégalais a rejoint Chelsea en 2023 en provenance de Villarreal ?",
     "answers": [
+      "Nicolas Jackson",
       "Sadio Mané",
       "Ismaïla Sarr",
-      "Nicolas Jackson",
       "Boulaye Dia"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel milieu argentin est devenu le transfert record du football anglais en 2023 en signant à Chelsea ?",
     "answers": [
       "Alexis Mac Allister",
-      "Rodrigo De Paul",
       "Enzo Fernández",
+      "Rodrigo De Paul",
       "Leandro Paredes"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel milieu équatorien a rejoint Chelsea en 2023 ?",
     "answers": [
-      "Moisés Caicedo",
       "Enner Valencia",
       "Pervis Estupiñán",
+      "Moisés Caicedo",
       "Jeremy Sarmiento"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel est le nom de la tribune historique la plus célèbre de Stamford Bridge ?",
     "answers": [
       "The Kop",
       "The Holte End",
-      "The Shed End",
-      "The Stretford End"
+      "The Stretford End",
+      "The Shed End"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
     "text": "En quelle année Chelsea FC a-t-il été fondé ?",
@@ -408,73 +448,73 @@
       "1920"
     ],
     "correct": 0,
-    "difficulty": "expert"
+    "difficulty": "facile"
   },
   {
     "text": "En quelle année Chelsea a-t-il été champion d'Angleterre pour la première fois ?",
     "answers": [
       "1970",
+      "1955",
       "1998",
-      "2005",
-      "1955"
+      "2005"
     ],
-    "correct": 3,
-    "difficulty": "expert"
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Combien de points Chelsea a-t-il obtenus lors du titre 2004-2005, un record à l'époque ?",
     "answers": [
       "88",
-      "95",
       "100",
+      "95",
       "91"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel club Chelsea a-t-il battu en finale de la Ligue Europa 2019 à Bakou ?",
     "answers": [
       "Tottenham",
-      "Arsenal",
       "Benfica",
-      "Séville"
+      "Séville",
+      "Arsenal"
     ],
-    "correct": 1,
-    "difficulty": "expert"
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel club Chelsea a-t-il battu en finale de la Ligue Europa 2013 ?",
     "answers": [
-      "L'Atlético de Madrid",
       "Benfica",
+      "L'Atlético de Madrid",
       "Séville",
       "L'Inter Milan"
     ],
-    "correct": 1,
+    "correct": 0,
     "difficulty": "expert"
   },
   {
     "text": "Quelle coupe européenne Chelsea a-t-il remportée en 1971 et 1998 ?",
     "answers": [
-      "La Coupe des coupes",
       "La Coupe UEFA",
+      "La Coupe des coupes",
       "La Coupe des clubs champions",
       "La Supercoupe"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quel club Chelsea a-t-il battu en finale de la Ligue Europa Conférence 2025 ?",
     "answers": [
       "La Fiorentina",
       "L'AS Rome",
-      "L'Olympiakos",
-      "Le Betis Séville"
+      "Le Betis Séville",
+      "L'Olympiakos"
     ],
-    "correct": 3,
-    "difficulty": "expert"
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel entraîneur italien a mené Chelsea à la Ligue Europa 2019 ?",
@@ -485,28 +525,578 @@
       "Maurizio Sarri"
     ],
     "correct": 3,
-    "difficulty": "expert"
+    "difficulty": "difficile"
   },
   {
     "text": "Quel entraîneur italien a été le premier du club à remporter la Coupe des coupes 1998 comme joueur-entraîneur ?",
     "answers": [
+      "Gianluca Vialli",
       "Gianfranco Zola",
       "Claudio Ranieri",
-      "Gianluca Vialli",
       "Roberto Di Matteo"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Qui a marqué le but de la victoire en finale de la Coupe des coupes 1998 ?",
     "answers": [
       "Gianluca Vialli",
-      "Dennis Wise",
       "Gianfranco Zola",
+      "Dennis Wise",
       "Tore André Flo"
     ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Pourquoi Chelsea FC a-t-il été créé autour de Stamford Bridge en 1905 ?",
+    "answers": [
+      "Pour remplacer Fulham FC",
+      "Pour fusionner deux clubs londoniens",
+      "Pour fournir une équipe résidente au stade",
+      "Pour participer à une coupe européenne"
+    ],
     "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel homme d'affaires est considéré comme le fondateur de Chelsea FC ?",
+    "answers": [
+      "Henry Norris",
+      "Jack Walker",
+      "Herbert Kilpin",
+      "Gus Mears"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quel établissement proche de Stamford Bridge la fondation de Chelsea a-t-elle été décidée ?",
+    "answers": [
+      "The Rising Sun",
+      "The White Horse",
+      "The Royal Oak",
+      "The King's Arms"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui fut le premier joueur-entraîneur de Chelsea ?",
+    "answers": [
+      "Ted Drake",
+      "John Tait Robertson",
+      "David Calderhead",
+      "Leslie Knighton"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club fut le premier adversaire de Chelsea en Football League en 1905 ?",
+    "answers": [
+      "Hull City",
+      "Blackpool",
+      "Stockport County",
+      "Burnley"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club a battu Chelsea lors de sa première finale de FA Cup, en 1915 ?",
+    "answers": [
+      "Aston Villa",
+      "Everton",
+      "Sunderland",
+      "Sheffield United"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel surnom est donné à la finale de FA Cup 1915 disputée pendant la Première Guerre mondiale ?",
+    "answers": [
+      "La Khaki Cup Final",
+      "La White Horse Final",
+      "La Matthews Final",
+      "La Five-Minute Final"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel entraîneur a conduit Chelsea à son premier titre de champion d'Angleterre ?",
+    "answers": [
+      "Tommy Docherty",
+      "Ted Drake",
+      "Dave Sexton",
+      "David Calderhead"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel attaquant était capitaine de Chelsea lors du premier titre de champion du club ?",
+    "answers": [
+      "Jimmy Greaves",
+      "Peter Osgood",
+      "Roy Bentley",
+      "Bobby Tambling"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Au cours de quelle saison Chelsea a-t-il remporté son premier championnat d'Angleterre ?",
+    "answers": [
+      "1949-1950",
+      "1959-1960",
+      "1964-1965",
+      "1954-1955"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année Chelsea a-t-il remporté sa première League Cup ?",
+    "answers": [
+      "1965",
+      "1960",
+      "1970",
+      "1975"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel club Chelsea a-t-il battu sur deux matchs en finale de la League Cup 1965 ?",
+    "answers": [
+      "West Ham United",
+      "Leicester City",
+      "Stoke City",
+      "Manchester City"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club Chelsea a-t-il battu après un match rejoué en finale de la FA Cup 1970 ?",
+    "answers": [
+      "Everton",
+      "Arsenal",
+      "Leeds United",
+      "Liverpool"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel stade s'est joué le match d'appui de la finale de FA Cup 1970 ?",
+    "answers": [
+      "Highbury",
+      "Villa Park",
+      "Hillsborough",
+      "Old Trafford"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel défenseur a marqué le but victorieux de Chelsea lors du match d'appui de la finale 1970 ?",
+    "answers": [
+      "David Webb",
+      "Ron Harris",
+      "John Dempsey",
+      "Eddie McCreadie"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel attaquant a égalisé de la tête pour Chelsea lors du match d'appui de la finale 1970 ?",
+    "answers": [
+      "Ian Hutchinson",
+      "Peter Osgood",
+      "Bobby Tambling",
+      "Charlie Cooke"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle compétition a offert à Chelsea son premier trophée européen en 1971 ?",
+    "answers": [
+      "La Coupe des villes de foires",
+      "La Coupe d'Europe des clubs champions",
+      "La Coupe des coupes",
+      "La Super Coupe de l'UEFA"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club Chelsea a-t-il battu en finale de la Coupe des coupes 1971 ?",
+    "answers": [
+      "Le Bayern Munich",
+      "L'Atlético de Madrid",
+      "Le FC Barcelone",
+      "Le Real Madrid"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Pourquoi la finale européenne de 1971 entre Chelsea et le Real Madrid a-t-elle nécessité un second match ?",
+    "answers": [
+      "Le premier match s'était terminé sur un nul",
+      "Le premier match avait été interrompu",
+      "Les tirs au but n'avaient pas départagé les équipes",
+      "Le règlement imposait deux manches"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a ouvert le score pour Chelsea lors du match rejoué de la finale européenne 1971 ?",
+    "answers": [
+      "Peter Bonetti",
+      "John Dempsey",
+      "Ron Harris",
+      "Tommy Baldwin"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel attaquant a marqué le deuxième but de Chelsea lors du match rejoué contre le Real Madrid en 1971 ?",
+    "answers": [
+      "Ian Hutchinson",
+      "Charlie Cooke",
+      "Peter Osgood",
+      "Alan Hudson"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel club Chelsea a-t-il battu en finale de la FA Cup 1997 ?",
+    "answers": [
+      "Newcastle United",
+      "Aston Villa",
+      "Sunderland",
+      "Middlesbrough"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur a marqué après seulement 42 secondes en finale de la FA Cup 1997 ?",
+    "answers": [
+      "Roberto Di Matteo",
+      "Gianfranco Zola",
+      "Eddie Newton",
+      "Dennis Wise"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club Chelsea a-t-il battu en finale de la League Cup 1998 ?",
+    "answers": [
+      "Leicester City",
+      "Middlesbrough",
+      "Tottenham",
+      "Liverpool"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle ville Chelsea a-t-il remporté la Coupe des coupes 1998 ?",
+    "answers": [
+      "Rotterdam",
+      "Bruxelles",
+      "Stockholm",
+      "Vienne"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club allemand Chelsea a-t-il battu en finale de la Coupe des coupes 1998 ?",
+    "answers": [
+      "Le Borussia Dortmund",
+      "Le Bayern Munich",
+      "Schalke 04",
+      "Le VfB Stuttgart"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel joueur est entré en jeu avant de marquer l'unique but de la finale européenne 1998 ?",
+    "answers": [
+      "Gianfranco Zola",
+      "Gustavo Poyet",
+      "Tore André Flo",
+      "Dan Petrescu"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club Chelsea a-t-il battu lors de la Super Coupe de l'UEFA 1998 ?",
+    "answers": [
+      "La Juventus",
+      "Le Real Madrid",
+      "L'Inter Milan",
+      "Le FC Barcelone"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel stade monégasque Chelsea a-t-il remporté la Super Coupe de l'UEFA 1998 ?",
+    "answers": [
+      "Le stade de la Beaujoire",
+      "Le stade de Gerland",
+      "Le stade Louis-II",
+      "Le stade Vélodrome"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel milieu uruguayen a marqué le but de Chelsea en Super Coupe de l'UEFA 1998 ?",
+    "answers": [
+      "Gianfranco Zola",
+      "Roberto Di Matteo",
+      "Dennis Wise",
+      "Gustavo Poyet"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Chelsea a-t-il battu en finale de la FA Cup 2000 ?",
+    "answers": [
+      "Aston Villa",
+      "Everton",
+      "Newcastle United",
+      "Leeds United"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel joueur a inscrit l'unique but de la finale de la FA Cup 2000 ?",
+    "answers": [
+      "Frank Lampard",
+      "Roberto Di Matteo",
+      "Gianfranco Zola",
+      "Jimmy Floyd Hasselbaink"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle particularité historique avait la finale de FA Cup 2000 remportée par Chelsea ?",
+    "answers": [
+      "C'était la première finale jouée de nuit",
+      "C'était la première finale décidée aux tirs au but",
+      "C'était la dernière finale dans l'ancien Wembley",
+      "C'était la dernière finale disputée hors de Londres"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club Chelsea a-t-il battu en finale de la League Cup 2005 ?",
+    "answers": [
+      "Manchester United",
+      "Arsenal",
+      "Tottenham",
+      "Liverpool"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sur quel score Chelsea a-t-il remporté la finale de la League Cup 2005 après prolongation ?",
+    "answers": [
+      "3-2",
+      "2-0",
+      "2-1",
+      "4-3"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club Chelsea a-t-il battu en finale de la League Cup 2007 ?",
+    "answers": [
+      "Liverpool",
+      "Arsenal",
+      "Tottenham",
+      "Manchester United"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel attaquant a marqué les deux buts de Chelsea lors de la finale de League Cup 2007 ?",
+    "answers": [
+      "Andriy Shevchenko",
+      "Frank Lampard",
+      "Didier Drogba",
+      "Salomon Kalou"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club Chelsea a-t-il affronté lors de la première finale de FA Cup au nouveau Wembley, en 2007 ?",
+    "answers": [
+      "Arsenal",
+      "Liverpool",
+      "Everton",
+      "Manchester United"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a marqué l'unique but de la finale de la FA Cup 2007 ?",
+    "answers": [
+      "Didier Drogba",
+      "Frank Lampard",
+      "Joe Cole",
+      "Michael Essien"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel stade s'est jouée la finale de Ligue des champions 2008 disputée par Chelsea ?",
+    "answers": [
+      "Le stade olympique d'Athènes",
+      "Le stade Loujniki",
+      "Le stade olympique de Rome",
+      "L'Atatürk d'Istanbul"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel joueur de Chelsea a vu son tir au but décisif arrêté lors de la finale européenne 2008 ?",
+    "answers": [
+      "Michael Ballack",
+      "Salomon Kalou",
+      "Nicolas Anelka",
+      "Ashley Cole"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel club Chelsea a-t-il battu en finale de la FA Cup 2009 ?",
+    "answers": [
+      "Portsmouth",
+      "Manchester City",
+      "Aston Villa",
+      "Everton"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel milieu a marqué le but victorieux de Chelsea en finale de la FA Cup 2009 ?",
+    "answers": [
+      "Frank Lampard",
+      "Michael Essien",
+      "Florent Malouda",
+      "Michael Ballack"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club Chelsea a-t-il battu en finale de la FA Cup 2010 ?",
+    "answers": [
+      "Everton",
+      "Portsmouth",
+      "Cardiff City",
+      "Stoke City"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel gardien de Chelsea a arrêté le penalty de Kevin-Prince Boateng en finale de la FA Cup 2010 ?",
+    "answers": [
+      "Carlo Cudicini",
+      "Hilário",
+      "Petr Čech",
+      "Ross Turnbull"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel attaquant a marqué l'unique but de la finale de la FA Cup 2010 ?",
+    "answers": [
+      "Nicolas Anelka",
+      "Salomon Kalou",
+      "Florent Malouda",
+      "Didier Drogba"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel club Chelsea a-t-il battu en finale de la FA Cup 2012 ?",
+    "answers": [
+      "Liverpool",
+      "Everton",
+      "Tottenham",
+      "Manchester City"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur a ouvert le score pour Chelsea en finale de la FA Cup 2012 ?",
+    "answers": [
+      "Juan Mata",
+      "Ramires",
+      "Frank Lampard",
+      "Didier Drogba"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club Chelsea a-t-il éliminé en demi-finale de la Ligue des champions 2012 ?",
+    "answers": [
+      "Le Real Madrid",
+      "L'AC Milan",
+      "Le FC Barcelone",
+      "Benfica"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a marqué d'une balle piquée au Camp Nou avant la mi-temps de la demi-finale 2012 ?",
+    "answers": [
+      "Fernando Torres",
+      "Didier Drogba",
+      "Juan Mata",
+      "Ramires"
+    ],
+    "correct": 3,
     "difficulty": "expert"
   }
 ]
