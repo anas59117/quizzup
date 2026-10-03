@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Quel inventeur associe-t-on au téléphone breveté en 1876 ?",
+    "text": "Quel inventeur a obtenu en 1876 un brevet américain majeur pour le téléphone ?",
     "answers": [
       "Alexander Graham Bell",
       "Thomas Edison",
-      "Alfred Nobel",
-      "Tim Berners-Lee"
+      "Samuel Morse",
+      "Guglielmo Marconi"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Qui est principalement lié au téléphone breveté en 1876 ?",
+    "text": "Quel système de points et de traits porte le nom de son co-inventeur américain ?",
     "answers": [
-      "Thomas Edison",
-      "Alexander Graham Bell",
-      "Alfred Nobel",
-      "Tim Berners-Lee"
+      "Le code Baudot",
+      "Le code Morse",
+      "Le code ASCII",
+      "Le code binaire"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel inventeur associe-t-on au phonographe ?",
+    "text": "Quel appareil permettait d’envoyer des messages codés sur des fils électriques ?",
     "answers": [
-      "Alfred Nobel",
-      "Tim Berners-Lee",
-      "Thomas Edison",
-      "Johannes Gutenberg"
+      "Le phonographe",
+      "Le cinématographe",
+      "Le télégraphe",
+      "Le baromètre"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Qui est principalement lié au phonographe ?",
+    "text": "Quel inventeur a amélioré la transmission téléphonique grâce au microphone à charbon ?",
     "answers": [
       "Alfred Nobel",
-      "Tim Berners-Lee",
-      "Johannes Gutenberg",
+      "Louis Braille",
+      "John Logie Baird",
       "Thomas Edison"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel inventeur associe-t-on à la dynamite ?",
+    "text": "Quel assistant Alexander Graham Bell appela-t-il lors d’une célèbre démonstration du téléphone ?",
     "answers": [
-      "Alfred Nobel",
-      "Tim Berners-Lee",
-      "Johannes Gutenberg",
-      "James Watt"
+      "Thomas Watson",
+      "Lewis Latimer",
+      "Charles Babbage",
+      "George Eastman"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Qui est principalement lié à la dynamite ?",
+    "text": "Quel artisan est associé à l’imprimerie européenne à caractères mobiles au XVe siècle ?",
     "answers": [
-      "Tim Berners-Lee",
-      "Alfred Nobel",
-      "Johannes Gutenberg",
-      "James Watt"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel inventeur associe-t-on au World Wide Web ?",
-    "answers": [
-      "Johannes Gutenberg",
-      "James Watt",
-      "Tim Berners-Lee",
-      "Edward Jenner"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui est principalement lié au World Wide Web ?",
-    "answers": [
-      "Johannes Gutenberg",
-      "James Watt",
-      "Edward Jenner",
-      "Tim Berners-Lee"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel inventeur associe-t-on à la presse à caractères mobiles en Europe ?",
-    "answers": [
-      "Johannes Gutenberg",
-      "James Watt",
-      "Edward Jenner",
-      "Louis Pasteur"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui est principalement lié à la presse à caractères mobiles en Europe ?",
-    "answers": [
-      "James Watt",
-      "Johannes Gutenberg",
-      "Edward Jenner",
-      "Louis Pasteur"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel inventeur associe-t-on à la machine à vapeur perfectionnée au XVIIIe siècle ?",
-    "answers": [
-      "Edward Jenner",
-      "Louis Pasteur",
-      "James Watt",
-      "Alexander Fleming"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui est principalement lié à la machine à vapeur perfectionnée au XVIIIe siècle ?",
-    "answers": [
-      "Edward Jenner",
-      "Louis Pasteur",
-      "Alexander Fleming",
-      "James Watt"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel inventeur associe-t-on à la vaccination contre la variole ?",
-    "answers": [
-      "Edward Jenner",
-      "Louis Pasteur",
-      "Alexander Fleming",
-      "Alessandro Volta"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui est principalement lié à la vaccination contre la variole ?",
-    "answers": [
-      "Louis Pasteur",
-      "Edward Jenner",
-      "Alexander Fleming",
-      "Alessandro Volta"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel inventeur associe-t-on à la pasteurisation ?",
-    "answers": [
-      "Alexander Fleming",
-      "Alessandro Volta",
-      "Louis Pasteur",
-      "Samuel Morse"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui est principalement lié à la pasteurisation ?",
-    "answers": [
-      "Alexander Fleming",
-      "Alessandro Volta",
-      "Samuel Morse",
-      "Louis Pasteur"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel inventeur associe-t-on à la pénicilline découverte en 1928 ?",
-    "answers": [
-      "Alexander Fleming",
-      "Alessandro Volta",
-      "Samuel Morse",
-      "Henri Becquerel"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui est principalement lié à la pénicilline découverte en 1928 ?",
-    "answers": [
-      "Alessandro Volta",
-      "Alexander Fleming",
-      "Samuel Morse",
-      "Henri Becquerel"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel inventeur associe-t-on à la pile électrique ?",
-    "answers": [
-      "Samuel Morse",
-      "Henri Becquerel",
-      "Alessandro Volta",
-      "Auguste et Louis Lumière"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui est principalement lié à la pile électrique ?",
-    "answers": [
-      "Samuel Morse",
-      "Henri Becquerel",
-      "Auguste et Louis Lumière",
-      "Alessandro Volta"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel inventeur associe-t-on au télégraphe électrique et son code ?",
-    "answers": [
-      "Samuel Morse",
-      "Henri Becquerel",
-      "Auguste et Louis Lumière",
-      "les frères Wright"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui est principalement lié au télégraphe électrique et son code ?",
-    "answers": [
-      "Henri Becquerel",
-      "Samuel Morse",
-      "Auguste et Louis Lumière",
-      "les frères Wright"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel inventeur associe-t-on à la radioactivité naturelle ?",
-    "answers": [
-      "Auguste et Louis Lumière",
-      "les frères Wright",
-      "Henri Becquerel",
-      "Rudolf Diesel"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui est principalement lié à la radioactivité naturelle ?",
-    "answers": [
-      "Auguste et Louis Lumière",
-      "les frères Wright",
-      "Rudolf Diesel",
-      "Henri Becquerel"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel inventeur associe-t-on au cinématographe ?",
-    "answers": [
-      "Auguste et Louis Lumière",
-      "les frères Wright",
-      "Rudolf Diesel",
-      "Louis Daguerre"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui est principalement lié au cinématographe ?",
-    "answers": [
-      "les frères Wright",
-      "Auguste et Louis Lumière",
-      "Rudolf Diesel",
-      "Louis Daguerre"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel inventeur associe-t-on à l'avion motorisé contrôlé de 1903 ?",
-    "answers": [
-      "Rudolf Diesel",
-      "Louis Daguerre",
-      "les frères Wright",
-      "Benjamin Franklin"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui est principalement lié à l'avion motorisé contrôlé de 1903 ?",
-    "answers": [
-      "Rudolf Diesel",
-      "Louis Daguerre",
-      "Benjamin Franklin",
-      "les frères Wright"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel inventeur associe-t-on au moteur Diesel ?",
-    "answers": [
-      "Rudolf Diesel",
-      "Louis Daguerre",
-      "Benjamin Franklin",
-      "Blaise Pascal"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui est principalement lié au moteur Diesel ?",
-    "answers": [
-      "Louis Daguerre",
-      "Rudolf Diesel",
-      "Benjamin Franklin",
-      "Blaise Pascal"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel inventeur associe-t-on au procédé photographique daguerréotype ?",
-    "answers": [
-      "Benjamin Franklin",
       "Blaise Pascal",
-      "Louis Daguerre",
-      "René Laennec"
+      "Johannes Gutenberg",
+      "James Watt",
+      "Michael Faraday"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Qui est principalement lié au procédé photographique daguerréotype ?",
+    "text": "Quel inventeur chinois est associé aux caractères mobiles en terre cuite au XIe siècle ?",
     "answers": [
-      "Benjamin Franklin",
-      "Blaise Pascal",
+      "Cai Lun",
+      "Zhang Heng",
+      "Bi Sheng",
+      "Shen Kuo"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a créé le système d’écriture tactile à six points qui porte son nom ?",
+    "answers": [
+      "Samuel Morse",
       "René Laennec",
-      "Louis Daguerre"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel inventeur associe-t-on au paratonnerre ?",
-    "answers": [
-      "Benjamin Franklin",
-      "Blaise Pascal",
-      "René Laennec",
+      "Denis Papin",
       "Louis Braille"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Qui est principalement lié au paratonnerre ?",
+    "text": "Quel inventeur a contribué au clavier QWERTY de la machine à écrire Sholes and Glidden ?",
     "answers": [
-      "Blaise Pascal",
-      "Benjamin Franklin",
-      "René Laennec",
-      "Louis Braille"
+      "Christopher Latham Sholes",
+      "László Bíró",
+      "Chester Carlson",
+      "Ottmar Mergenthaler"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel inventeur associe-t-on à la calculatrice mécanique Pascaline ?",
+    "text": "Quel procédé de composition inventé par Ottmar Mergenthaler fondait une ligne entière de caractères ?",
     "answers": [
-      "René Laennec",
-      "Louis Braille",
-      "Blaise Pascal",
-      "Evangelista Torricelli"
+      "La lithographie",
+      "La Linotype",
+      "La photogravure",
+      "La sérigraphie"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Qui est principalement lié à la calculatrice mécanique Pascaline ?",
+    "text": "Quel savant italien a donné son nom à la première pile électrique ?",
     "answers": [
-      "René Laennec",
-      "Louis Braille",
-      "Evangelista Torricelli",
-      "Blaise Pascal"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel inventeur associe-t-on au stéthoscope ?",
-    "answers": [
-      "René Laennec",
-      "Louis Braille",
-      "Evangelista Torricelli",
-      "Joseph et Étienne de Montgolfier"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui est principalement lié au stéthoscope ?",
-    "answers": [
-      "Louis Braille",
-      "René Laennec",
-      "Evangelista Torricelli",
-      "Joseph et Étienne de Montgolfier"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel inventeur associe-t-on au braille ?",
-    "answers": [
-      "Evangelista Torricelli",
-      "Joseph et Étienne de Montgolfier",
-      "Louis Braille",
+      "André-Marie Ampère",
+      "Georg Ohm",
+      "Alessandro Volta",
       "Nikola Tesla"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Qui est principalement lié au braille ?",
+    "text": "Quel phénomène Michael Faraday a-t-il mis en évidence en 1831 ?",
     "answers": [
-      "Evangelista Torricelli",
-      "Joseph et Étienne de Montgolfier",
-      "Nikola Tesla",
-      "Louis Braille"
+      "La radioactivité",
+      "La supraconductivité",
+      "L’effet photoélectrique",
+      "L’induction électromagnétique"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel inventeur associe-t-on au baromètre à mercure ?",
+    "text": "Quel inventeur est associé au moteur à induction à courant alternatif ?",
     "answers": [
-      "Evangelista Torricelli",
-      "Joseph et Étienne de Montgolfier",
       "Nikola Tesla",
+      "James Watt",
+      "Robert Fulton",
+      "John Bardeen"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel inventeur a présenté une lampe à incandescence pratique à Menlo Park en 1879 ?",
+    "answers": [
+      "Humphry Davy",
+      "Thomas Edison",
+      "Heinrich Hertz",
+      "Alexander Fleming"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle centrale new-yorkaise d’Edison alimenta un réseau commercial en courant continu dès 1882 ?",
+    "answers": [
+      "Battersea Power Station",
+      "Hoover Dam",
+      "Pearl Street Station",
+      "Wardenclyffe"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a construit au début du XVIIIe siècle une machine à vapeur atmosphérique pour pomper l’eau ?",
+    "answers": [
+      "James Watt",
+      "George Stephenson",
+      "Richard Trevithick",
+      "Thomas Newcomen"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle amélioration majeure James Watt a-t-il apportée à la machine à vapeur ?",
+    "answers": [
+      "Le condenseur séparé",
+      "La turbine à gaz",
+      "Le piston rotatif électrique",
+      "La chaudière nucléaire"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel métier à tisser utilisait des cartes perforées pour commander les motifs ?",
+    "answers": [
+      "Le métier Arkwright",
+      "Le métier Jacquard",
+      "La mule-jenny",
+      "Le métier Gutenberg"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel procédé du XIXe siècle a permis de produire l’acier en masse en soufflant de l’air dans la fonte ?",
+    "answers": [
+      "Le procédé Haber",
+      "Le procédé Hall-Héroult",
+      "Le procédé Bessemer",
+      "Le procédé Solvay"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel dispositif de sécurité pour ascenseurs Elisha Otis a-t-il démontré en 1854 ?",
+    "answers": [
+      "Un moteur Diesel",
+      "Un câble en fibre de carbone",
+      "Une porte automatique optique",
+      "Un frein empêchant la cabine de chuter"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a breveté le Benz Patent-Motorwagen en 1886 ?",
+    "answers": [
+      "Carl Benz",
+      "Henry Ford",
+      "Rudolf Diesel",
+      "Gottlieb Daimler"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel ingénieur a donné son nom au moteur à allumage par compression ?",
+    "answers": [
+      "Nikolaus Otto",
+      "Rudolf Diesel",
+      "Felix Wankel",
+      "Étienne Lenoir"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel constructeur a popularisé la chaîne d’assemblage mobile avec le Model T ?",
+    "answers": [
+      "Renault",
+      "Fiat",
+      "Ford",
+      "Peugeot"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ingénieur britannique est associé à la locomotive Rocket de 1829 ?",
+    "answers": [
+      "Isambard Brunel",
+      "Richard Arkwright",
+      "James Hargreaves",
+      "George Stephenson"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Français construisit le fardier à vapeur présenté en 1769 ?",
+    "answers": [
+      "Nicolas-Joseph Cugnot",
+      "Clément Ader",
+      "Louis Blériot",
+      "Armand Peugeot"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quels frères ont réalisé en 1903 un vol motorisé contrôlé à Kitty Hawk ?",
+    "answers": [
+      "Joseph et Étienne Montgolfier",
+      "Orville et Wilbur Wright",
+      "Auguste et Louis Lumière",
+      "Édouard et André Michelin"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel pionnier français a traversé la Manche en avion en 1909 ?",
+    "answers": [
+      "Clément Ader",
+      "Henri Farman",
+      "Louis Blériot",
+      "Roland Garros"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quels frères ont fait voler un ballon à air chaud habité en 1783 ?",
+    "answers": [
+      "Les frères Wright",
+      "Les frères Lumière",
+      "Les frères Voisin",
+      "Les frères Montgolfier"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ingénieur est associé au développement du premier hélicoptère produit en série, le R-4 ?",
+    "answers": [
+      "Igor Sikorsky",
+      "Frank Whittle",
+      "Juan de la Cierva",
+      "Geoffrey de Havilland"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel inventeur britannique a breveté une architecture de turboréacteur en 1930 ?",
+    "answers": [
+      "Hans Geiger",
+      "Frank Whittle",
+      "Robert Watson-Watt",
+      "Barnes Wallis"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a mis au point la vaccination contre la variole à la fin du XVIIIe siècle ?",
+    "answers": [
+      "Louis Pasteur",
+      "Robert Koch",
+      "Edward Jenner",
+      "Joseph Lister"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel scientifique est associé au vaccin contre la rage administré en 1885 ?",
+    "answers": [
+      "Alexander Fleming",
+      "Paul Ehrlich",
+      "Jonas Salk",
       "Louis Pasteur"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Qui est principalement lié au baromètre à mercure ?",
+    "text": "Qui a observé en 1928 l’effet antibactérien de la moisissure à l’origine de la pénicilline ?",
     "answers": [
-      "Joseph et Étienne de Montgolfier",
+      "Alexander Fleming",
+      "Howard Florey",
+      "Robert Koch",
+      "Frederick Banting"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quels chercheurs ont isolé l’insuline à Toronto avec l’équipe de Macleod ?",
+    "answers": [
+      "Watson et Crick",
+      "Frederick Banting et Charles Best",
+      "Curie et Becquerel",
+      "Florey et Chain"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel médecin a inventé le stéthoscope en 1816 ?",
+    "answers": [
+      "Ambroise Paré",
+      "Claude Bernard",
+      "René Laennec",
+      "Joseph Guillotin"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a découvert les rayons X en 1895 ?",
+    "answers": [
+      "Henri Becquerel",
+      "Ernest Rutherford",
+      "Max Planck",
+      "Wilhelm Röntgen"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel couple de scientifiques a isolé le radium et le polonium ?",
+    "answers": [
+      "Marie et Pierre Curie",
+      "Irène et Frédéric Joliot-Curie",
+      "William et Lawrence Bragg",
+      "Gerty et Carl Cori"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel fabricant néerlandais a perfectionné des microscopes simples très grossissants au XVIIe siècle ?",
+    "answers": [
+      "Robert Hooke",
+      "Antonie van Leeuwenhoek",
+      "Christiaan Huygens",
+      "Evangelista Torricelli"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel instrument médical Godfrey Hounsfield a-t-il contribué à développer ?",
+    "answers": [
+      "L’électrocardiographe",
+      "Le pacemaker",
+      "Le scanner à rayons X",
+      "L’endoscope à fibre optique"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel physicien a inventé le cyclotron en 1930 ?",
+    "answers": [
+      "Niels Bohr",
+      "Enrico Fermi",
+      "J. J. Thomson",
+      "Ernest Lawrence"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a réalisé l’une des premières photographies permanentes, Point de vue du Gras ?",
+    "answers": [
+      "Nicéphore Niépce",
+      "Louis Daguerre",
+      "George Eastman",
+      "Nadar"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel procédé photographique présenté en 1839 porte le nom de Louis Daguerre ?",
+    "answers": [
+      "Le calotype",
+      "Le daguerréotype",
+      "Le collodion humide",
+      "L’autochrome"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel industriel a popularisé la pellicule en rouleau et les appareils Kodak ?",
+    "answers": [
+      "Edwin Land",
+      "Thomas Edison",
+      "George Eastman",
+      "Eadweard Muybridge"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel appareil des frères Lumière servait à filmer et projeter des vues animées ?",
+    "answers": [
+      "Le kinétoscope",
+      "Le zootrope",
+      "Le praxinoscope",
+      "Le cinématographe"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel procédé couleur commercialisé par les Lumière en 1907 utilisait des grains de fécule teints ?",
+    "answers": [
+      "L’autochrome",
+      "Le Technicolor",
+      "Le Kodachrome",
+      "Le Cinémascope"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel appareil Thomas Edison inventa-t-il en 1877 pour enregistrer et restituer le son ?",
+    "answers": [
+      "Le télégraphe",
+      "Le phonographe",
+      "Le gramophone électrique",
+      "Le magnétophone"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel inventeur est associé au gramophone à disque plat breveté en 1887 ?",
+    "answers": [
+      "Thomas Edison",
+      "Alexander Bell",
+      "Emile Berliner",
+      "Lee de Forest"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel support sonore magnétique Fritz Pfleumer a-t-il contribué à développer ?",
+    "answers": [
+      "Le disque compact",
+      "Le cylindre de cire",
+      "Le disque vinyle microsillon",
+      "La bande magnétique"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ingénieur a breveté le système de réduction de bruit Dolby ?",
+    "answers": [
+      "Ray Dolby",
+      "Alan Blumlein",
+      "Peter Goldmark",
+      "Edwin Armstrong"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel synthétiseur modulaire porte le nom de son créateur Robert Moog ?",
+    "answers": [
+      "Le Mellotron",
+      "Le Moog",
+      "Le Theremin",
+      "Le Fairlight"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle machine mécanique Charles Babbage conçut-il sans l’achever au XIXe siècle ?",
+    "answers": [
+      "L’ENIAC",
+      "La Pascaline",
+      "La machine analytique",
+      "Le Colossus"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a publié un algorithme destiné à la machine analytique de Babbage ?",
+    "answers": [
+      "Grace Hopper",
+      "Hedy Lamarr",
+      "Margaret Hamilton",
+      "Ada Lovelace"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mathématicien a décrit en 1936 une machine abstraite universelle ?",
+    "answers": [
+      "Alan Turing",
+      "John von Neumann",
+      "Claude Shannon",
+      "Konrad Zuse"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quels ingénieurs sont principalement associés à la construction de l’ENIAC ?",
+    "answers": [
+      "Jobs et Wozniak",
+      "John Mauchly et Presper Eckert",
+      "Brin et Page",
+      "Kilby et Noyce"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ordinateur de Konrad Zuse, achevé en 1941, était programmable par bandes perforées ?",
+    "answers": [
+      "Le Z80",
+      "Le Mark I",
+      "Le Z3",
+      "Le PDP-1"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel composant inventé aux Bell Labs en 1947 a remplacé de nombreux tubes à vide ?",
+    "answers": [
+      "Le condensateur",
+      "La diode électroluminescente",
+      "Le relais mécanique",
+      "Le transistor"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quels trois chercheurs sont crédités du premier transistor opérationnel ?",
+    "answers": [
+      "Bardeen, Brattain et Shockley",
+      "Kilby, Noyce et Moore",
+      "Turing, Shannon et Wiener",
+      "Hertz, Marconi et Popov"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel ingénieur de Texas Instruments a démontré un circuit intégré en 1958 ?",
+    "answers": [
+      "Gordon Moore",
+      "Jack Kilby",
+      "Ted Hoff",
+      "Seymour Cray"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel cofondateur d’Intel a indépendamment développé un circuit intégré planaire ?",
+    "answers": [
+      "Steve Wozniak",
+      "Dennis Ritchie",
+      "Robert Noyce",
+      "Douglas Engelbart"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel microprocesseur commercial lancé par Intel en 1971 portait un numéro à quatre chiffres ?",
+    "answers": [
+      "Le 8088",
+      "Le Z80",
+      "Le 6502",
+      "Le 4004"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a inventé le World Wide Web au CERN ?",
+    "answers": [
+      "Tim Berners-Lee",
+      "Vint Cerf",
+      "Ray Tomlinson",
+      "Marc Andreessen"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année Tim Berners-Lee a-t-il soumis sa première proposition pour le Web ?",
+    "answers": [
+      "1973",
+      "1989",
+      "1991",
+      "1995"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quels chercheurs sont surnommés les pères d’Internet pour leur travail sur TCP/IP ?",
+    "answers": [
+      "Jobs et Wozniak",
+      "Brin et Page",
+      "Vint Cerf et Bob Kahn",
+      "Thompson et Ritchie"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui a choisi le symbole @ dans les premières adresses de courrier électronique en réseau ?",
+    "answers": [
+      "Douglas Engelbart",
+      "Robert Metcalfe",
+      "Jon Postel",
+      "Ray Tomlinson"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel dispositif de pointage Douglas Engelbart a-t-il présenté lors de sa démonstration de 1968 ?",
+    "answers": [
+      "La souris informatique",
+      "Le pavé tactile",
+      "Le stylet optique",
+      "La boule de commande"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle informaticienne a contribué à COBOL et popularisé le récit du papillon trouvé dans un relais ?",
+    "answers": [
+      "Ada Lovelace",
+      "Grace Hopper",
+      "Margaret Hamilton",
+      "Jean Bartik"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel chercheur a créé le langage C aux Bell Labs ?",
+    "answers": [
+      "Ken Thompson",
+      "John Backus",
+      "Dennis Ritchie",
+      "Niklaus Wirth"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel langage John Backus et son équipe ont-ils développé chez IBM dans les années 1950 ?",
+    "answers": [
+      "Pascal",
+      "Java",
+      "Python",
+      "FORTRAN"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel système d’exploitation a été créé aux Bell Labs par Ken Thompson et Dennis Ritchie ?",
+    "answers": [
+      "Unix",
+      "MS-DOS",
+      "CP/M",
+      "OS/2"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel langage Guido van Rossum a-t-il rendu public en 1991 ?",
+    "answers": [
+      "Ruby",
+      "Python",
+      "Perl",
+      "Lua"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel explosif Alfred Nobel a-t-il breveté en 1867 ?",
+    "answers": [
+      "Le TNT",
+      "La poudre noire",
+      "La dynamite",
+      "La nitroglycérine"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel procédé Charles Goodyear a-t-il associé au caoutchouc chauffé avec du soufre ?",
+    "answers": [
+      "La polymérisation radicalaire",
+      "La galvanisation",
+      "La pasteurisation",
+      "La vulcanisation"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel premier plastique entièrement synthétique Leo Baekeland a-t-il créé ?",
+    "answers": [
+      "La Bakélite",
+      "Le nylon",
+      "Le PVC",
+      "Le Téflon"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel polymère Wallace Carothers et son équipe ont-ils développé chez DuPont ?",
+    "answers": [
+      "Le Kevlar",
+      "Le nylon",
+      "Le polycarbonate",
+      "Le silicone"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel métallurgiste anglais est associé à la découverte de l’acier inoxydable en 1913 ?",
+    "answers": [
+      "Henry Bessemer",
+      "Robert Hadfield",
+      "Harry Brearley",
+      "William Siemens"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a breveté en 1886 un lave-vaisselle mécanique efficace destiné aux hôtels ?",
+    "answers": [
+      "Mary Anderson",
+      "Marion Donovan",
+      "Margaret Knight",
+      "Josephine Cochrane"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel ingénieur a conçu le premier système moderne de climatisation en 1902 ?",
+    "answers": [
+      "Willis Carrier",
+      "James Dyson",
+      "Percy Spencer",
+      "Carl von Linde"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel ingénieur a découvert l’usage des micro-ondes pour cuire des aliments après la fonte d’une confiserie dans sa poche ?",
+    "answers": [
+      "Chester Carlson",
+      "Percy Spencer",
+      "George de Mestral",
+      "Earl Tupper"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel inventeur hongro-argentin a donné son nom courant au stylo à bille ?",
+    "answers": [
+      "Rubik Ernő",
+      "John Loud",
+      "László Bíró",
+      "Marcel Bich"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ingénieur suisse a inventé le Velcro après avoir observé des fruits de bardane ?",
+    "answers": [
+      "Alfred Nobel",
+      "Carl Elsener",
+      "Georges Favre-Jacot",
+      "George de Mestral"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Français a développé au début du XIXe siècle la conservation des aliments par chauffage en récipient fermé ?",
+    "answers": [
+      "Nicolas Appert",
+      "Louis Pasteur",
+      "Denis Papin",
+      "Antoine Parmentier"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel procédé de conservation porte le nom de Louis Pasteur ?",
+    "answers": [
+      "La lyophilisation",
+      "La pasteurisation",
+      "L’appertisation",
+      "La fermentation malolactique"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quels chimistes ont développé la synthèse industrielle de l’ammoniac ?",
+    "answers": [
+      "Curie et Becquerel",
+      "Wöhler et Liebig",
+      "Fritz Haber et Carl Bosch",
+      "Davy et Faraday"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel appareil Denis Papin présenta-t-il au XVIIe siècle pour cuire sous pression ?",
+    "answers": [
+      "Le réfrigérateur à compression",
+      "Le four à micro-ondes",
+      "La cafetière à piston",
+      "Le digesteur à vapeur"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui a obtenu en 1834 un brevet pour une machine frigorifique à compression de vapeur ?",
+    "answers": [
+      "Jacob Perkins",
+      "Carl von Linde",
+      "James Joule",
+      "William Thomson"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel physicien italien a inventé le baromètre à mercure ?",
+    "answers": [
+      "Galilée",
       "Evangelista Torricelli",
-      "Nikola Tesla",
-      "Louis Pasteur"
+      "Alessandro Volta",
+      "Amedeo Avogadro"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel inventeur associe-t-on à la montgolfière ?",
+    "text": "Quel artisan a créé l’échelle de température portant le point de congélation de l’eau à 32 degrés ?",
     "answers": [
-      "Nikola Tesla",
-      "Louis Pasteur",
-      "Joseph et Étienne de Montgolfier",
-      "John Bardeen, Walter Brattain et William Shockley"
+      "Anders Celsius",
+      "William Thomson",
+      "Daniel Fahrenheit",
+      "René Réaumur"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Qui est principalement lié à la montgolfière ?",
+    "text": "Quel savant chinois construisit un ancien sismoscope vers 132 ?",
     "answers": [
-      "Nikola Tesla",
-      "Louis Pasteur",
-      "John Bardeen, Walter Brattain et William Shockley",
-      "Joseph et Étienne de Montgolfier"
+      "Bi Sheng",
+      "Zu Chongzhi",
+      "Shen Kuo",
+      "Zhang Heng"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel inventeur associe-t-on au système de courant alternatif polyphasé ?",
+    "text": "Quel horloger britannique a résolu le problème de la longitude avec ses chronomètres marins ?",
     "answers": [
-      "Nikola Tesla",
-      "Louis Pasteur",
-      "John Bardeen, Walter Brattain et William Shockley",
-      "Alexander Graham Bell"
+      "John Harrison",
+      "John Hadley",
+      "Robert Hooke",
+      "George Graham"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Qui est principalement lié au système de courant alternatif polyphasé ?",
+    "text": "Quelle calculatrice mécanique Blaise Pascal conçut-il au XVIIe siècle ?",
     "answers": [
-      "Louis Pasteur",
-      "Nikola Tesla",
-      "John Bardeen, Walter Brattain et William Shockley",
-      "Alexander Graham Bell"
+      "La machine différentielle",
+      "La Pascaline",
+      "L’arithmomètre",
+      "Le boulier de Napier"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel inventeur associe-t-on au premier vaccin antirabique utilisé avec succès ?",
+    "text": "Quel ingénieur de Volvo a conçu la ceinture moderne à trois points ?",
     "answers": [
-      "John Bardeen, Walter Brattain et William Shockley",
-      "Alexander Graham Bell",
-      "Louis Pasteur",
-      "Thomas Edison"
+      "Garrett Morgan",
+      "John Hetrick",
+      "Nils Bohlin",
+      "George Cayley"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Qui est principalement lié au premier vaccin antirabique utilisé avec succès ?",
+    "text": "Qui a réalisé en 1797 un saut public en parachute depuis un ballon ?",
     "answers": [
-      "John Bardeen, Walter Brattain et William Shockley",
-      "Alexander Graham Bell",
-      "Thomas Edison",
-      "Louis Pasteur"
+      "Louis Blériot",
+      "Otto Lilienthal",
+      "Alberto Santos-Dumont",
+      "André-Jacques Garnerin"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel inventeur associe-t-on au transistor ?",
+    "text": "Quel inventeur britannique a mis au point une lampe de mineur limitant les explosions de grisou ?",
     "answers": [
-      "John Bardeen, Walter Brattain et William Shockley",
-      "Alexander Graham Bell",
-      "Thomas Edison",
-      "Alfred Nobel"
+      "Humphry Davy",
+      "Michael Faraday",
+      "James Clerk Maxwell",
+      "George Stephenson"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Qui est principalement lié au transistor ?",
+    "text": "Quel capitaine britannique a breveté en 1818 un extincteur portatif ?",
     "answers": [
-      "Alexander Graham Bell",
-      "John Bardeen, Walter Brattain et William Shockley",
-      "Thomas Edison",
-      "Alfred Nobel"
+      "Robert Peel",
+      "George William Manby",
+      "Samuel Brown",
+      "William Congreve"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel inventeur a breveté en 1923 un signal routier à trois positions ?",
+    "answers": [
+      "Lewis Latimer",
+      "Granville Woods",
+      "Garrett Morgan",
+      "Elijah McCoy"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel ingénieur a développé la xérographie à l’origine des photocopieurs ?",
+    "answers": [
+      "Edwin Land",
+      "George Eastman",
+      "John Logie Baird",
+      "Chester Carlson"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quels inventeurs ont breveté le concept de code-barres inspiré du Morse ?",
+    "answers": [
+      "Norman Woodland et Bernard Silver",
+      "Kilby et Noyce",
+      "Bardeen et Brattain",
+      "Cerf et Kahn"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel duo de 3M a transformé un adhésif faible en notes Post-it ?",
+    "answers": [
+      "Roy Plunkett et Bill Gore",
+      "Spencer Silver et Art Fry",
+      "Earl Tupper et Brownie Wise",
+      "William Painter et King Gillette"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel inventeur suédo-américain a perfectionné la fermeture à glissière moderne ?",
+    "answers": [
+      "Whitcomb Judson",
+      "Elias Howe",
+      "Gideon Sundback",
+      "Isaac Singer"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel physicien écossais est associé au développement britannique du radar avant la Seconde Guerre mondiale ?",
+    "answers": [
+      "James Clerk Maxwell",
+      "John Logie Baird",
+      "Alexander Fleming",
+      "Robert Watson-Watt"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
