@@ -1,502 +1,121 @@
 [
-  {
-    "text": "Dans quelle ville se trouve la tour Eiffel ?",
-    "answers": [
-      "Paris",
-      "Lyon",
-      "Bordeaux",
-      "Marseille"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel monument normand s’élève sur un îlot rocheux entouré par les marées ?",
-    "answers": [
-      "Le château de Chambord",
-      "Le Mont-Saint-Michel",
-      "Le pont du Gard",
-      "Le palais des Papes"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : tour de fer conçue pour l’Exposition universelle de 1889 ?",
-    "answers": [
-      "L’Arc de triomphe",
-      "Le pont du Gard",
-      "La tour Eiffel",
-      "Le château de Chenonceau"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond à La tour Eiffel ?",
-    "answers": [
-      "abbaye médiévale bâtie sur un îlot rocheux de Normandie",
-      "cathédrale gothique située sur l’île de la Cité",
-      "édifice roman bourguignon associé aux pèlerinages vers Compostelle",
-      "tour de fer conçue pour l’Exposition universelle de 1889"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Monuments de France », dans quelle région ou ville La tour Eiffel se situe-t-il ?",
-    "answers": [
-      "Paris",
-      "Normandie",
-      "Provence-Alpes-Côte d’Azur",
-      "Hauts-de-France"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : monument commandé par Napoléon Ier au sommet des Champs-Élysées ?",
-    "answers": [
-      "Le Mont-Saint-Michel",
-      "L’Arc de triomphe",
-      "Notre-Dame de Paris",
-      "La basilique de Vézelay"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond à L’Arc de triomphe ?",
-    "answers": [
-      "ancienne résidence royale transformée sous Louis XIV",
-      "ensemble fortifié restauré au XIXe siècle par Viollet-le-Duc",
-      "monument commandé par Napoléon Ier au sommet des Champs-Élysées",
-      "manufacture de sel en demi-cercle conçue par Claude-Nicolas Ledoux"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Monuments de France », dans quelle région ou ville L’Arc de triomphe se situe-t-il ?",
-    "answers": [
-      "Normandie",
-      "Provence-Alpes-Côte d’Azur",
-      "Hauts-de-France",
-      "Paris"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : abbaye médiévale bâtie sur un îlot rocheux de Normandie ?",
-    "answers": [
-      "Le Mont-Saint-Michel",
-      "Le château de Versailles",
-      "La cité de Carcassonne",
-      "La saline royale d’Arc-et-Senans"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond au Mont-Saint-Michel ?",
-    "answers": [
-      "château de la Loire célèbre pour son escalier à double révolution",
-      "abbaye médiévale bâtie sur un îlot rocheux de Normandie",
-      "forteresse gothique rappelant le séjour des papes à Avignon",
-      "phare historique situé dans l’estuaire de la Gironde"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Monuments de France », dans quelle région ou ville Le Mont-Saint-Michel se situe-t-il ?",
-    "answers": [
-      "Paris",
-      "Provence-Alpes-Côte d’Azur",
-      "Normandie",
-      "Hauts-de-France"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : ancienne résidence royale transformée sous Louis XIV ?",
-    "answers": [
-      "Le château de Chambord",
-      "Le palais des Papes",
-      "Le phare de Cordouan",
-      "Le château de Versailles"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond au château de Versailles ?",
-    "answers": [
-      "ancienne résidence royale transformée sous Louis XIV",
-      "aqueduc romain à trois niveaux franchissant le Gardon",
-      "château enjambant le Cher surnommé le château des Dames",
-      "forteresse dominant la plaine d’Alsace dans le massif des Vosges"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Monuments de France », dans quelle région ou ville Le château de Versailles se situe-t-il ?",
-    "answers": [
-      "Paris",
-      "Île-de-France",
-      "Provence-Alpes-Côte d’Azur",
-      "Hauts-de-France"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : château de la Loire célèbre pour son escalier à double révolution ?",
-    "answers": [
-      "Le pont du Gard",
-      "Le château de Chenonceau",
-      "Le château de Chambord",
-      "Le château du Haut-Kœnigsbourg"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond au château de Chambord ?",
-    "answers": [
-      "cathédrale gothique située sur l’île de la Cité",
-      "édifice roman bourguignon associé aux pèlerinages vers Compostelle",
-      "abbaye cistercienne fondée au XIIe siècle en Bourgogne",
-      "château de la Loire célèbre pour son escalier à double révolution"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Monuments de France », dans quelle région ou ville Le château de Chambord se situe-t-il ?",
-    "answers": [
-      "Centre-Val de Loire",
-      "Paris",
-      "Provence-Alpes-Côte d’Azur",
-      "Hauts-de-France"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : aqueduc romain à trois niveaux franchissant le Gardon ?",
-    "answers": [
-      "Notre-Dame de Paris",
-      "Le pont du Gard",
-      "La basilique de Vézelay",
-      "L’abbaye de Fontenay"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond au pont du Gard ?",
-    "answers": [
-      "ensemble fortifié restauré au XIXe siècle par Viollet-le-Duc",
-      "manufacture de sel en demi-cercle conçue par Claude-Nicolas Ledoux",
-      "aqueduc romain à trois niveaux franchissant le Gardon",
-      "ensemble classique du XVIIIe siècle au cœur de Nancy"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Monuments de France », dans quelle région ou ville Le pont du Gard se situe-t-il ?",
-    "answers": [
-      "Paris",
-      "Provence-Alpes-Côte d’Azur",
-      "Hauts-de-France",
-      "Occitanie"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : cathédrale gothique située sur l’île de la Cité ?",
-    "answers": [
-      "Notre-Dame de Paris",
-      "La cité de Carcassonne",
-      "La saline royale d’Arc-et-Senans",
-      "La place Stanislas"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond à Notre-Dame de Paris ?",
-    "answers": [
-      "forteresse gothique rappelant le séjour des papes à Avignon",
-      "cathédrale gothique située sur l’île de la Cité",
-      "phare historique situé dans l’estuaire de la Gironde",
-      "tour de fer conçue pour l’Exposition universelle de 1889"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Monuments de France », quel architecte a dirigé la restauration de Notre-Dame de Paris au XIXe siècle ?",
-    "answers": [
-      "Georges-Eugène Haussmann",
-      "Charles Garnier",
-      "Eugène Viollet-le-Duc",
-      "Gustave Eiffel"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : ensemble fortifié restauré au XIXe siècle par Viollet-le-Duc ?",
-    "answers": [
-      "Le palais des Papes",
-      "Le phare de Cordouan",
-      "La tour Eiffel",
-      "La cité de Carcassonne"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond à La cité de Carcassonne ?",
-    "answers": [
-      "ensemble fortifié restauré au XIXe siècle par Viollet-le-Duc",
-      "château enjambant le Cher surnommé le château des Dames",
-      "forteresse dominant la plaine d’Alsace dans le massif des Vosges",
-      "monument commandé par Napoléon Ier au sommet des Champs-Élysées"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Monuments de France », dans quelle région ou ville La cité de Carcassonne se situe-t-il ?",
-    "answers": [
-      "Paris",
-      "Occitanie",
-      "Provence-Alpes-Côte d’Azur",
-      "Hauts-de-France"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : forteresse gothique rappelant le séjour des papes à Avignon ?",
-    "answers": [
-      "Le château de Chenonceau",
-      "Le château du Haut-Kœnigsbourg",
-      "Le palais des Papes",
-      "L’Arc de triomphe"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond au palais des Papes ?",
-    "answers": [
-      "édifice roman bourguignon associé aux pèlerinages vers Compostelle",
-      "abbaye cistercienne fondée au XIIe siècle en Bourgogne",
-      "abbaye médiévale bâtie sur un îlot rocheux de Normandie",
-      "forteresse gothique rappelant le séjour des papes à Avignon"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Monuments de France », dans quelle région ou ville Le palais des Papes se situe-t-il ?",
-    "answers": [
-      "Provence-Alpes-Côte d’Azur",
-      "Paris",
-      "Occitanie",
-      "Hauts-de-France"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : château enjambant le Cher surnommé le château des Dames ?",
-    "answers": [
-      "La basilique de Vézelay",
-      "Le château de Chenonceau",
-      "L’abbaye de Fontenay",
-      "Le Mont-Saint-Michel"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond au château de Chenonceau ?",
-    "answers": [
-      "manufacture de sel en demi-cercle conçue par Claude-Nicolas Ledoux",
-      "ensemble classique du XVIIIe siècle au cœur de Nancy",
-      "château enjambant le Cher surnommé le château des Dames",
-      "ancienne résidence royale transformée sous Louis XIV"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Monuments de France », dans quelle région ou ville Le château de Chenonceau se situe-t-il ?",
-    "answers": [
-      "Paris",
-      "Provence-Alpes-Côte d’Azur",
-      "Hauts-de-France",
-      "Centre-Val de Loire"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : édifice roman bourguignon associé aux pèlerinages vers Compostelle ?",
-    "answers": [
-      "La basilique de Vézelay",
-      "La saline royale d’Arc-et-Senans",
-      "La place Stanislas",
-      "Le château de Versailles"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond à La basilique de Vézelay ?",
-    "answers": [
-      "phare historique situé dans l’estuaire de la Gironde",
-      "édifice roman bourguignon associé aux pèlerinages vers Compostelle",
-      "tour de fer conçue pour l’Exposition universelle de 1889",
-      "château de la Loire célèbre pour son escalier à double révolution"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Monuments de France », dans quelle région ou ville La basilique de Vézelay se situe-t-il ?",
-    "answers": [
-      "Paris",
-      "Occitanie",
-      "Bourgogne-Franche-Comté",
-      "Hauts-de-France"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : manufacture de sel en demi-cercle conçue par Claude-Nicolas Ledoux ?",
-    "answers": [
-      "Le phare de Cordouan",
-      "La tour Eiffel",
-      "Le château de Chambord",
-      "La saline royale d’Arc-et-Senans"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond à La saline royale d’Arc-et-Senans ?",
-    "answers": [
-      "manufacture de sel en demi-cercle conçue par Claude-Nicolas Ledoux",
-      "forteresse dominant la plaine d’Alsace dans le massif des Vosges",
-      "monument commandé par Napoléon Ier au sommet des Champs-Élysées",
-      "aqueduc romain à trois niveaux franchissant le Gardon"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Monuments de France », dans quelle région ou ville La saline royale d’Arc-et-Senans se situe-t-il ?",
-    "answers": [
-      "Paris",
-      "Bourgogne-Franche-Comté",
-      "Occitanie",
-      "Hauts-de-France"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : phare historique situé dans l’estuaire de la Gironde ?",
-    "answers": [
-      "Le château du Haut-Kœnigsbourg",
-      "L’Arc de triomphe",
-      "Le phare de Cordouan",
-      "Le pont du Gard"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond au phare de Cordouan ?",
-    "answers": [
-      "abbaye cistercienne fondée au XIIe siècle en Bourgogne",
-      "abbaye médiévale bâtie sur un îlot rocheux de Normandie",
-      "cathédrale gothique située sur l’île de la Cité",
-      "phare historique situé dans l’estuaire de la Gironde"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Monuments de France », dans quelle région ou ville Le phare de Cordouan se situe-t-il ?",
-    "answers": [
-      "Nouvelle-Aquitaine",
-      "Paris",
-      "Occitanie",
-      "Hauts-de-France"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : forteresse dominant la plaine d’Alsace dans le massif des Vosges ?",
-    "answers": [
-      "L’abbaye de Fontenay",
-      "Le château du Haut-Kœnigsbourg",
-      "Le Mont-Saint-Michel",
-      "Notre-Dame de Paris"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond au château du Haut-Kœnigsbourg ?",
-    "answers": [
-      "ensemble classique du XVIIIe siècle au cœur de Nancy",
-      "ancienne résidence royale transformée sous Louis XIV",
-      "forteresse dominant la plaine d’Alsace dans le massif des Vosges",
-      "ensemble fortifié restauré au XIXe siècle par Viollet-le-Duc"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Monuments de France », dans quelle région ou ville Le château du Haut-Kœnigsbourg se situe-t-il ?",
-    "answers": [
-      "Paris",
-      "Occitanie",
-      "Hauts-de-France",
-      "Grand Est"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : abbaye cistercienne fondée au XIIe siècle en Bourgogne ?",
-    "answers": [
-      "L’abbaye de Fontenay",
-      "La place Stanislas",
-      "Le château de Versailles",
-      "La cité de Carcassonne"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond à L’abbaye de Fontenay ?",
-    "answers": [
-      "tour de fer conçue pour l’Exposition universelle de 1889",
-      "abbaye cistercienne fondée au XIIe siècle en Bourgogne",
-      "château de la Loire célèbre pour son escalier à double révolution",
-      "forteresse gothique rappelant le séjour des papes à Avignon"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Monuments de France », dans quelle région ou ville L’abbaye de Fontenay se situe-t-il ?",
-    "answers": [
-      "Paris",
-      "Occitanie",
-      "Bourgogne-Franche-Comté",
-      "Hauts-de-France"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Monuments de France », quel monument correspond à cette description : ensemble classique du XVIIIe siècle au cœur de Nancy ?",
-    "answers": [
-      "La tour Eiffel",
-      "Le château de Chambord",
-      "Le palais des Papes",
-      "La place Stanislas"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Monuments de France », quelle description correspond à La place Stanislas ?",
-    "answers": [
-      "ensemble classique du XVIIIe siècle au cœur de Nancy",
-      "monument commandé par Napoléon Ier au sommet des Champs-Élysées",
-      "aqueduc romain à trois niveaux franchissant le Gardon",
-      "château enjambant le Cher surnommé le château des Dames"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Monuments de France », dans quelle région ou ville La place Stanislas se situe-t-il ?",
-    "answers": [
-      "Paris",
-      "Grand Est",
-      "Occitanie",
-      "Hauts-de-France"
-    ],
-    "correct": 1
-  }
+  {"text":"Dans quelle ville se trouve la tour Eiffel ?","answers":["Paris","Lyon","Bordeaux","Marseille"],"correct":0,"difficulty":"facile"},
+  {"text":"Pour quelle Exposition universelle la tour Eiffel fut-elle construite ?","answers":["1867","1889","1900","1937"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel matériau constitue principalement la structure de la tour Eiffel ?","answers":["L'acier inoxydable","La fonte moulée","Le fer puddlé","L'aluminium"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel ingénieur donna son nom à la tour Eiffel ?","answers":["Ferdinand de Lesseps","Eugène Freyssinet","Gustave Caillebotte","Gustave Eiffel"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quels ingénieurs de l'entreprise Eiffel conçurent le projet initial de la tour ?","answers":["Maurice Koechlin et Émile Nouguier","Auguste Perret et Tony Garnier","Eugène Viollet-le-Duc et Jean-Baptiste Lassus","Henri Labrouste et Victor Baltard"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Au centre de quelle place parisienne s'élève l'Arc de triomphe ?","answers":["Place de la Concorde","Place Charles-de-Gaulle","Place de la Bastille","Place Vendôme"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel souverain ordonna la construction de l'Arc de triomphe en 1806 ?","answers":["Louis XVIII","Napoléon III","Napoléon Ier","Louis-Philippe"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quelle sépulture se trouve sous l'Arc de triomphe ?","answers":["Le tombeau de Napoléon Ier","Le cénotaphe de Victor Hugo","La tombe de Jean Moulin","La tombe du Soldat inconnu"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel architecte conçut le projet initial de l'Arc de triomphe ?","answers":["Jean-François-Thérèse Chalgrin","Charles Garnier","Jacques-Germain Soufflot","Hector Guimard"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel groupe sculpté de François Rude orne l'Arc de triomphe ?","answers":["Le Triomphe de 1810","Le Départ des volontaires de 1792","La Résistance de 1814","La Paix de 1815"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Sur quelle île parisienne se trouve Notre-Dame de Paris ?","answers":["Île Saint-Louis","Île aux Cygnes","Île de la Cité","Île de la Jatte"],"correct":2,"difficulty":"facile"},
+  {"text":"À quel grand style architectural appartient Notre-Dame de Paris ?","answers":["Roman","Renaissance","Baroque","Gothique"],"correct":3,"difficulty":"moyen"},
+  {"text":"Quel architecte restaura Notre-Dame de Paris au XIXe siècle avec Jean-Baptiste Lassus ?","answers":["Eugène Viollet-le-Duc","Victor Baltard","Henri Labrouste","Paul Abadie"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel élément de Notre-Dame s'est effondré lors de l'incendie de 2019 ?","answers":["La tour nord","La flèche","La façade occidentale","La rosace sud"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel roi posa traditionnellement la première pierre de Notre-Dame en 1163, en présence du pape Alexandre III ?","answers":["Philippe Auguste","Louis VIII","Louis VII","Saint Louis"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quel roi transforma Versailles en grande résidence royale ?","answers":["Louis XIII","Louis XV","Louis XVI","Louis XIV"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel jardinier dessina les grands jardins de Versailles pour Louis XIV ?","answers":["André Le Nôtre","Jean-Baptiste Colbert","Jules Hardouin-Mansart","Charles Le Brun"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quelle salle de Versailles relie les salons de la Guerre et de la Paix ?","answers":["La salle du Sacre","La galerie des Glaces","La galerie des Batailles","Le salon d'Hercule"],"correct":1,"difficulty":"difficile"},
+  {"text":"En quelle année Louis XIV installa-t-il durablement la Cour et le gouvernement à Versailles ?","answers":["1661","1678","1682","1715"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel architecte réalisa la galerie des Glaces ?","answers":["Louis Le Vau","Ange-Jacques Gabriel","Robert de Cotte","Jules Hardouin-Mansart"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Dans quelle région se trouve le Mont-Saint-Michel ?","answers":["Normandie","Bretagne","Pays de la Loire","Hauts-de-France"],"correct":0,"difficulty":"facile"},
+  {"text":"À quel archange le Mont-Saint-Michel est-il dédié ?","answers":["Gabriel","Michel","Raphaël","Uriel"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel ordre religieux occupa principalement l'abbaye du Mont-Saint-Michel au Moyen Âge ?","answers":["Les Templiers","Les Chartreux","Les Bénédictins","Les Dominicains"],"correct":2,"difficulty":"difficile"},
+  {"text":"Comment nomme-t-on la partie gothique spectaculaire de l'abbaye du Mont-Saint-Michel ?","answers":["La Couronne","Le Merveilleux","Le Paradis","La Merveille"],"correct":3,"difficulty":"difficile"},
+  {"text":"En quelle année le Mont-Saint-Michel et sa baie ont-ils été inscrits au patrimoine mondial ?","answers":["1979","1983","1991","1998"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quel roi fit construire le château de Chambord ?","answers":["Henri II","François Ier","Louis XII","Charles VIII"],"correct":1,"difficulty":"facile"},
+  {"text":"Dans quelle région se trouve le château de Chambord ?","answers":["Normandie","Bourgogne-Franche-Comté","Centre-Val de Loire","Nouvelle-Aquitaine"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel dispositif célèbre permet à deux personnes de gravir l'escalier central de Chambord sans se croiser ?","answers":["Un ascenseur hydraulique","Une rampe hélicoïdale unique","Deux escaliers parallèles","Une double révolution"],"correct":3,"difficulty":"difficile"},
+  {"text":"En quelle année débuta la construction du château de Chambord ?","answers":["1519","1498","1539","1560"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel artiste italien est souvent associé à l'inspiration de l'escalier de Chambord, sans preuve qu'il en soit l'architecte ?","answers":["Michel-Ange","Léonard de Vinci","Raphaël","Bramante"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel cours d'eau le pont du Gard franchit-il ?","answers":["Le Rhône","La Durance","Le Gardon","L'Hérault"],"correct":2,"difficulty":"facile"},
+  {"text":"Le pont du Gard faisait partie d'un aqueduc alimentant quelle ville antique ?","answers":["Arles","Orange","Narbonne","Nîmes"],"correct":3,"difficulty":"moyen"},
+  {"text":"Combien de niveaux d'arches compte le pont du Gard ?","answers":["Trois","Deux","Quatre","Cinq"],"correct":0,"difficulty":"difficile"},
+  {"text":"Sous quel empire le pont du Gard fut-il construit ?","answers":["L'Empire carolingien","L'Empire romain","L'Empire byzantin","Le Saint-Empire"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quelle distance approximative parcourait l'aqueduc antique de Nîmes dont le pont du Gard est l'ouvrage majeur ?","answers":["20 km","35 km","50 km","80 km"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Dans quelle région se trouve la cité fortifiée de Carcassonne ?","answers":["Nouvelle-Aquitaine","Provence-Alpes-Côte d'Azur","Auvergne-Rhône-Alpes","Occitanie"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel architecte mena la grande restauration de Carcassonne au XIXe siècle ?","answers":["Eugène Viollet-le-Duc","Georges-Eugène Haussmann","Anatole de Baudot","Charles Garnier"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel château fort occupe le cœur de la cité de Carcassonne ?","answers":["Le château Narbonnais","Le château Comtal","Le château Royal","Le château des Trencavel"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quelle dynastie vicomtale est étroitement liée à la Carcassonne médiévale avant la croisade albigeoise ?","answers":["Les Plantagenêt","Les Capétiens","Les Trencavel","Les Grimaldi"],"correct":2,"difficulty":"difficile"},
+  {"text":"Combien d'enceintes concentriques protègent la cité de Carcassonne ?","answers":["Une","Trois","Quatre","Deux"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Dans quelle ville se trouve le palais des Papes ?","answers":["Avignon","Aix-en-Provence","Arles","Nîmes"],"correct":0,"difficulty":"facile"},
+  {"text":"À quel siècle les papes établirent-ils leur résidence à Avignon ?","answers":["XIIIe siècle","XIVe siècle","XVe siècle","XVIe siècle"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quels deux ensembles composent principalement le palais des Papes ?","answers":["Palais royal et palais communal","Palais roman et palais gothique","Palais Vieux et palais Neuf","Palais haut et palais bas"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel pape fit principalement édifier le palais Vieux d'Avignon ?","answers":["Clément V","Urbain V","Grégoire XI","Benoît XII"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel artiste italien peignit des fresques majeures au palais des Papes ?","answers":["Matteo Giovannetti","Giotto","Fra Angelico","Piero della Francesca"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Dans quelle ville les rois de France furent-ils traditionnellement sacrés ?","answers":["Chartres","Reims","Amiens","Rouen"],"correct":1,"difficulty":"facile"},
+  {"text":"Quelle héroïne assista au sacre de Charles VII dans la cathédrale de Reims ?","answers":["Aliénor d'Aquitaine","Blanche de Castille","Jeanne d'Arc","Anne de Bretagne"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quelle cathédrale est particulièrement célèbre pour son ensemble de vitraux médiévaux, dont le bleu porte son nom ?","answers":["Reims","Amiens","Bourges","Chartres"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quelle cathédrale est la plus vaste de France par son volume intérieur ?","answers":["Amiens","Paris","Strasbourg","Laon"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel ange sculpté de la façade occidentale est devenu l'emblème de la cathédrale de Reims ?","answers":["L'Ange musicien","L'Ange au sourire","L'Ange du jugement","L'Ange gardien"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel roi fit construire la Sainte-Chapelle à Paris ?","answers":["Philippe Auguste","Charles V","Louis IX","Louis XI"],"correct":2,"difficulty":"facile"},
+  {"text":"Sur quelle île se trouvent la Sainte-Chapelle et la Conciergerie ?","answers":["Île Saint-Louis","Île aux Cygnes","Île Louviers","Île de la Cité"],"correct":3,"difficulty":"moyen"},
+  {"text":"Pour abriter quelles reliques la Sainte-Chapelle fut-elle principalement construite ?","answers":["Des reliques de la Passion du Christ","Les ossements de saint Denis","Le tombeau de Charlemagne","Les reliques de sainte Geneviève"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quelle reine fut emprisonnée à la Conciergerie pendant la Révolution française ?","answers":["Joséphine de Beauharnais","Marie-Antoinette","Marie Leszczynska","Eugénie de Montijo"],"correct":1,"difficulty":"difficile"},
+  {"text":"À quel style gothique appartient particulièrement la Sainte-Chapelle ?","answers":["Gothique primitif","Gothique flamboyant","Gothique rayonnant","Gothique angevin"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Dans quel quartier parisien se trouve le Panthéon ?","answers":["Montmartre","Le Marais","Passy","Quartier latin"],"correct":3,"difficulty":"facile"},
+  {"text":"À quelle sainte l'édifice devenu Panthéon était-il initialement consacré ?","answers":["Sainte Geneviève","Sainte Clotilde","Sainte Jeanne","Sainte Radegonde"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel architecte conçut le Panthéon de Paris ?","answers":["Claude-Nicolas Ledoux","Jacques-Germain Soufflot","Étienne-Louis Boullée","Jacques-Ange Gabriel"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quelle expérience de physique Léon Foucault réalisa-t-il au Panthéon en 1851 ?","answers":["La mesure de la vitesse du son","La décomposition de la lumière","La démonstration de la rotation terrestre par un pendule","La mesure de la pression atmosphérique"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quelle scientifique fut la première femme honorée au Panthéon pour ses propres mérites ?","answers":["Sophie Germain","Émilie du Châtelet","Irène Joliot-Curie","Marie Curie"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quel ancien palais royal abrite aujourd'hui le musée du Louvre ?","answers":["Le palais du Louvre","Le palais Bourbon","Le palais du Luxembourg","Le palais-Royal"],"correct":0,"difficulty":"facile"},
+  {"text":"Quel architecte conçut la pyramide de verre du Louvre ?","answers":["Renzo Piano","Ieoh Ming Pei","Jean Nouvel","Norman Foster"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel roi fit édifier la forteresse médiévale à l'origine du Louvre ?","answers":["Saint Louis","Charles V","Philippe Auguste","François Ier"],"correct":2,"difficulty":"difficile"},
+  {"text":"En quelle année le Louvre ouvrit-il comme musée au public pendant la Révolution ?","answers":["1789","1791","1799","1793"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel architecte réalisa la colonnade orientale du Louvre avec Louis Le Vau et Charles Le Brun ?","answers":["Claude Perrault","François Mansart","Libéral Bruant","Germain Boffrand"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Sur quelle butte parisienne se trouve la basilique du Sacré-Cœur ?","answers":["Chaillot","Montmartre","Belleville","Montparnasse"],"correct":1,"difficulty":"facile"},
+  {"text":"De quelle couleur apparaît principalement le Sacré-Cœur ?","answers":["Rouge","Grise","Blanche","Ocre"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel architecte remporta le concours pour la construction du Sacré-Cœur ?","answers":["Charles Garnier","Victor Baltard","Henri Labrouste","Paul Abadie"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quelle pierre, blanchissant au contact de l'eau, fut largement employée au Sacré-Cœur ?","answers":["Le travertin de Château-Landon","Le granit de Bretagne","Le marbre de Carrare","Le grès des Vosges"],"correct":0,"difficulty":"difficile"},
+  {"text":"Comment se nomme la grande cloche du Sacré-Cœur ?","answers":["Emmanuel","La Savoyarde","Marie","Jeanne d'Arc"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel architecte donna son nom au palais Garnier ?","answers":["Hector Guimard","Tony Garnier","Charles Garnier","Jean-Baptiste Carpeaux"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel art du spectacle est principalement associé au palais Garnier ?","answers":["Le cirque","Le cinéma","Le théâtre parlé","L'opéra"],"correct":3,"difficulty":"moyen"},
+  {"text":"Sous quel régime le palais Garnier fut-il commandé ?","answers":["Le Second Empire","La Restauration","La monarchie de Juillet","La Première République"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel artiste peignit le plafond moderne de la salle du palais Garnier en 1964 ?","answers":["Pablo Picasso","Marc Chagall","Henri Matisse","Fernand Léger"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel groupe sculpté de Jean-Baptiste Carpeaux orne la façade du palais Garnier ?","answers":["La Musique","L'Harmonie","La Danse","Le Drame lyrique"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quel empereur repose sous le dôme des Invalides ?","answers":["Charlemagne","Napoléon III","Louis-Napoléon Bonaparte","Napoléon Ier"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel roi fonda l'Hôtel des Invalides pour les soldats blessés ou âgés ?","answers":["Louis XIV","Louis XIII","Louis XV","Henri IV"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel architecte conçut l'église du Dôme des Invalides ?","answers":["Louis Le Vau","Jules Hardouin-Mansart","Robert de Cotte","Libéral Bruant"],"correct":1,"difficulty":"difficile"},
+  {"text":"Depuis quelle île les cendres de Napoléon Ier furent-elles rapportées en France en 1840 ?","answers":["La Corse","L'île d'Elbe","Sainte-Hélène","Malte"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel architecte aménagea le tombeau de Napoléon Ier aux Invalides ?","answers":["Eugène Viollet-le-Duc","Charles Garnier","Jacques Hittorff","Louis Visconti"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quel cours d'eau traverse le château de Chenonceau ?","answers":["Le Cher","La Loire","L'Indre","La Vienne"],"correct":0,"difficulty":"facile"},
+  {"text":"Quel surnom rend hommage aux femmes qui ont marqué l'histoire de Chenonceau ?","answers":["Le château des Reines","Le château des Dames","Le château des Fées","Le château des Veuves"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quelle favorite d'Henri II reçut le château de Chenonceau ?","answers":["Madame de Pompadour","Gabrielle d'Estrées","Diane de Poitiers","Agnès Sorel"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quelle reine fit construire la grande galerie sur le Cher à Chenonceau ?","answers":["Marie de Médicis","Anne de Bretagne","Marguerite de Valois","Catherine de Médicis"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quelle propriétaire transforma Chenonceau en hôpital militaire pendant la Première Guerre mondiale ?","answers":["Simone Menier","Louise Dupin","Marguerite Pelouze","Catherine Briçonnet"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quel château fut une résidence de souverains français de François Ier à Napoléon III ?","answers":["Vaux-le-Vicomte","Fontainebleau","Pierrefonds","Azay-le-Rideau"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel financier fit construire Vaux-le-Vicomte ?","answers":["Jean-Baptiste Colbert","Jacques Cœur","Nicolas Fouquet","Samuel Bernard"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel peintre-décorateur forma avec Le Vau et Le Nôtre l'équipe de Vaux-le-Vicomte ?","answers":["Nicolas Poussin","Hyacinthe Rigaud","Eustache Le Sueur","Charles Le Brun"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel escalier monumental du château de Fontainebleau est associé aux adieux de Napoléon en 1814 ?","answers":["L'escalier en Fer-à-cheval","L'escalier des Ambassadeurs","L'escalier de la Reine","L'escalier Gabriel"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quelle galerie de Fontainebleau est un jalon majeur de la Première École de Fontainebleau ?","answers":["La galerie de Diane","La galerie François Ier","La galerie des Cerfs","La galerie des Fastes"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Dans quelle ville se trouve la Maison Carrée ?","answers":["Arles","Orange","Nîmes","Vienne"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel type de monument antique est la Maison Carrée ?","answers":["Un amphithéâtre","Un aqueduc","Un mausolée","Un temple romain"],"correct":3,"difficulty":"moyen"},
+  {"text":"Dans quelle ville se trouve le théâtre antique célèbre pour son mur de scène conservé ?","answers":["Orange","Nîmes","Arles","Fréjus"],"correct":0,"difficulty":"difficile"},
+  {"text":"À quels spectacles les arènes de Nîmes étaient-elles principalement destinées dans l'Antiquité ?","answers":["Aux courses de chars","Aux combats de gladiateurs et chasses","Aux débats civiques","Aux cérémonies religieuses"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel empereur est représenté par la statue colossale placée dans la niche du mur de scène du théâtre d'Orange ?","answers":["Auguste","Hadrien","Louis XIV","Napoléon Ier"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quelle basilique domine Marseille depuis une colline ?","answers":["Saint-Sernin","Sainte-Anne d'Auray","Notre-Dame de Fourvière","Notre-Dame de la Garde"],"correct":3,"difficulty":"facile"},
+  {"text":"Dans quelle ville se trouve la basilique Notre-Dame de Fourvière ?","answers":["Lyon","Dijon","Grenoble","Clermont-Ferrand"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel matériau colore en rose la cathédrale Notre-Dame de Strasbourg ?","answers":["Le marbre de Caunes","Le grès des Vosges","La brique toulousaine","Le granit rose"],"correct":1,"difficulty":"difficile"},
+  {"text":"Dans quelle ville se trouvent les célèbres Hospices fondés par Nicolas Rolin ?","answers":["Autun","Dijon","Beaune","Cluny"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel polyptyque de Rogier van der Weyden est conservé aux Hospices de Beaune ?","answers":["L'Agneau mystique","La Descente de croix","Le Jardin des délices","Le Jugement dernier"],"correct":3,"difficulty":"expert"}
 ]
