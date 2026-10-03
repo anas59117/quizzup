@@ -1,502 +1,121 @@
 [
-  {
-    "text": "Quelle entreprise commercialise l’iPhone ?",
-    "answers": [
-      "Apple",
-      "Sony",
-      "Nintendo",
-      "Canon"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel connecteur réversible est largement utilisé sur les appareils récents ?",
-    "answers": [
-      "VGA",
-      "USB-C",
-      "PS/2",
-      "Péritel"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : technologie radio de courte portée reliant notamment écouteurs et smartphones ?",
-    "answers": [
-      "Wi‑Fi",
-      "USB-C",
-      "Bluetooth",
-      "LiDAR"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à Bluetooth ?",
-    "answers": [
-      "code matriciel lisible par l’appareil photo d’un téléphone",
-      "système de positionnement reposant sur une constellation de satellites",
-      "interface numérique transportant image et son vers un écran",
-      "technologie radio de courte portée reliant notamment écouteurs et smartphones"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine Bluetooth appartient-il principalement ?",
-    "answers": [
-      "Connectivité sans fil",
-      "Identification optique",
-      "Capteurs",
-      "Stockage magnétique"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : famille de réseaux locaux sans fil fondée sur les normes IEEE 802.11 ?",
-    "answers": [
-      "QR code",
-      "Wi‑Fi",
-      "GPS",
-      "HDMI"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à Wi‑Fi ?",
-    "answers": [
-      "technologie d’écran où chaque pixel produit sa propre lumière",
-      "cinquième génération de réseaux mobiles cellulaires",
-      "famille de réseaux locaux sans fil fondée sur les normes IEEE 802.11",
-      "format audio immersif utilisant des objets sonores"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine Wi‑Fi appartient-il principalement ?",
-    "answers": [
-      "Identification optique",
-      "Capteurs",
-      "Stockage magnétique",
-      "Connectivité sans fil"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : code matriciel lisible par l’appareil photo d’un téléphone ?",
-    "answers": [
-      "QR code",
-      "OLED",
-      "5G",
-      "Dolby Atmos"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à QR code ?",
-    "answers": [
-      "communication à très courte portée utilisée notamment pour le paiement sans contact",
-      "code matriciel lisible par l’appareil photo d’un téléphone",
-      "carte SIM intégrée et programmable sans support plastique amovible",
-      "standard d’interopérabilité destiné aux objets de la maison connectée"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine QR code appartient-il principalement ?",
-    "answers": [
-      "Connectivité sans fil",
-      "Capteurs",
-      "Identification optique",
-      "Stockage magnétique"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : technologie d’écran où chaque pixel produit sa propre lumière ?",
-    "answers": [
-      "NFC",
-      "eSIM",
-      "Matter",
-      "OLED"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à OLED ?",
-    "answers": [
-      "technologie d’écran où chaque pixel produit sa propre lumière",
-      "format de connecteur compact et réversible adopté par de nombreux appareils",
-      "capteur mesurant des distances à l’aide d’impulsions laser",
-      "standard de recharge sans fil par induction du Wireless Power Consortium"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine OLED appartient-il principalement ?",
-    "answers": [
-      "Connectivité sans fil",
-      "Affichage",
-      "Capteurs",
-      "Stockage magnétique"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : communication à très courte portée utilisée notamment pour le paiement sans contact ?",
-    "answers": [
-      "USB-C",
-      "LiDAR",
-      "NFC",
-      "Qi"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à NFC ?",
-    "answers": [
-      "système de positionnement reposant sur une constellation de satellites",
-      "interface numérique transportant image et son vers un écran",
-      "architecture de jeu d’instructions ouverte conçue à l’université de Californie à Berkeley",
-      "communication à très courte portée utilisée notamment pour le paiement sans contact"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine NFC appartient-il principalement ?",
-    "answers": [
-      "Connectivité sans fil",
-      "Identification optique",
-      "Capteurs",
-      "Stockage magnétique"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : format de connecteur compact et réversible adopté par de nombreux appareils ?",
-    "answers": [
-      "GPS",
-      "USB-C",
-      "HDMI",
-      "RISC-V"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à USB-C ?",
-    "answers": [
-      "cinquième génération de réseaux mobiles cellulaires",
-      "format audio immersif utilisant des objets sonores",
-      "format de connecteur compact et réversible adopté par de nombreux appareils",
-      "technologie d’encre électronique bistable courante dans les liseuses"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine USB-C appartient-il principalement ?",
-    "answers": [
-      "Connectivité sans fil",
-      "Capteurs",
-      "Stockage magnétique",
-      "Connectique"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : système de positionnement reposant sur une constellation de satellites ?",
-    "answers": [
-      "GPS",
-      "5G",
-      "Dolby Atmos",
-      "E Ink"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à GPS ?",
-    "answers": [
-      "carte SIM intégrée et programmable sans support plastique amovible",
-      "système de positionnement reposant sur une constellation de satellites",
-      "standard d’interopérabilité destiné aux objets de la maison connectée",
-      "technologie radio de courte portée reliant notamment écouteurs et smartphones"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine GPS appartient-il principalement ?",
-    "answers": [
-      "Connectivité sans fil",
-      "Capteurs",
-      "Géolocalisation",
-      "Stockage magnétique"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : cinquième génération de réseaux mobiles cellulaires ?",
-    "answers": [
-      "eSIM",
-      "Matter",
-      "Bluetooth",
-      "5G"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à 5G ?",
-    "answers": [
-      "cinquième génération de réseaux mobiles cellulaires",
-      "capteur mesurant des distances à l’aide d’impulsions laser",
-      "standard de recharge sans fil par induction du Wireless Power Consortium",
-      "famille de réseaux locaux sans fil fondée sur les normes IEEE 802.11"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine 5G appartient-il principalement ?",
-    "answers": [
-      "Affichage",
-      "Télécommunications",
-      "Capteurs",
-      "Stockage magnétique"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : carte SIM intégrée et programmable sans support plastique amovible ?",
-    "answers": [
-      "LiDAR",
-      "Qi",
-      "eSIM",
-      "Wi‑Fi"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à eSIM ?",
-    "answers": [
-      "interface numérique transportant image et son vers un écran",
-      "architecture de jeu d’instructions ouverte conçue à l’université de Californie à Berkeley",
-      "code matriciel lisible par l’appareil photo d’un téléphone",
-      "carte SIM intégrée et programmable sans support plastique amovible"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine eSIM appartient-il principalement ?",
-    "answers": [
-      "Télécommunications",
-      "Affichage",
-      "Capteurs",
-      "Stockage magnétique"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : capteur mesurant des distances à l’aide d’impulsions laser ?",
-    "answers": [
-      "HDMI",
-      "LiDAR",
-      "RISC-V",
-      "QR code"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à LiDAR ?",
-    "answers": [
-      "format audio immersif utilisant des objets sonores",
-      "technologie d’encre électronique bistable courante dans les liseuses",
-      "capteur mesurant des distances à l’aide d’impulsions laser",
-      "technologie d’écran où chaque pixel produit sa propre lumière"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine LiDAR appartient-il principalement ?",
-    "answers": [
-      "Connectivité sans fil",
-      "Télécommunications",
-      "Stockage magnétique",
-      "Capteurs"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : interface numérique transportant image et son vers un écran ?",
-    "answers": [
-      "HDMI",
-      "Dolby Atmos",
-      "E Ink",
-      "OLED"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à HDMI ?",
-    "answers": [
-      "standard d’interopérabilité destiné aux objets de la maison connectée",
-      "interface numérique transportant image et son vers un écran",
-      "technologie radio de courte portée reliant notamment écouteurs et smartphones",
-      "communication à très courte portée utilisée notamment pour le paiement sans contact"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine HDMI appartient-il principalement ?",
-    "answers": [
-      "Connectivité sans fil",
-      "Capteurs",
-      "Connectique",
-      "Stockage magnétique"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : format audio immersif utilisant des objets sonores ?",
-    "answers": [
-      "Matter",
-      "Bluetooth",
-      "NFC",
-      "Dolby Atmos"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à Dolby Atmos ?",
-    "answers": [
-      "format audio immersif utilisant des objets sonores",
-      "standard de recharge sans fil par induction du Wireless Power Consortium",
-      "famille de réseaux locaux sans fil fondée sur les normes IEEE 802.11",
-      "format de connecteur compact et réversible adopté par de nombreux appareils"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine Dolby Atmos appartient-il principalement ?",
-    "answers": [
-      "Connectivité sans fil",
-      "Audio",
-      "Télécommunications",
-      "Stockage magnétique"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : standard d’interopérabilité destiné aux objets de la maison connectée ?",
-    "answers": [
-      "Qi",
-      "Wi‑Fi",
-      "Matter",
-      "USB-C"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à Matter ?",
-    "answers": [
-      "architecture de jeu d’instructions ouverte conçue à l’université de Californie à Berkeley",
-      "code matriciel lisible par l’appareil photo d’un téléphone",
-      "système de positionnement reposant sur une constellation de satellites",
-      "standard d’interopérabilité destiné aux objets de la maison connectée"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine Matter appartient-il principalement ?",
-    "answers": [
-      "Domotique",
-      "Connectivité sans fil",
-      "Télécommunications",
-      "Stockage magnétique"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : standard de recharge sans fil par induction du Wireless Power Consortium ?",
-    "answers": [
-      "RISC-V",
-      "Qi",
-      "QR code",
-      "GPS"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à Qi ?",
-    "answers": [
-      "technologie d’encre électronique bistable courante dans les liseuses",
-      "technologie d’écran où chaque pixel produit sa propre lumière",
-      "standard de recharge sans fil par induction du Wireless Power Consortium",
-      "cinquième génération de réseaux mobiles cellulaires"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine Qi appartient-il principalement ?",
-    "answers": [
-      "Connectivité sans fil",
-      "Télécommunications",
-      "Stockage magnétique",
-      "Recharge"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : architecture de jeu d’instructions ouverte conçue à l’université de Californie à Berkeley ?",
-    "answers": [
-      "RISC-V",
-      "E Ink",
-      "OLED",
-      "5G"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à RISC-V ?",
-    "answers": [
-      "technologie radio de courte portée reliant notamment écouteurs et smartphones",
-      "architecture de jeu d’instructions ouverte conçue à l’université de Californie à Berkeley",
-      "communication à très courte portée utilisée notamment pour le paiement sans contact",
-      "carte SIM intégrée et programmable sans support plastique amovible"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine RISC-V appartient-il principalement ?",
-    "answers": [
-      "Connectivité sans fil",
-      "Télécommunications",
-      "Informatique",
-      "Stockage magnétique"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle technologie correspond à cette description : technologie d’encre électronique bistable courante dans les liseuses ?",
-    "answers": [
-      "Bluetooth",
-      "NFC",
-      "eSIM",
-      "E Ink"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Technologie grand public », quelle description correspond à E Ink ?",
-    "answers": [
-      "technologie d’encre électronique bistable courante dans les liseuses",
-      "famille de réseaux locaux sans fil fondée sur les normes IEEE 802.11",
-      "format de connecteur compact et réversible adopté par de nombreux appareils",
-      "capteur mesurant des distances à l’aide d’impulsions laser"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Technologie grand public », à quel domaine E Ink appartient-il principalement ?",
-    "answers": [
-      "Connectivité sans fil",
-      "Affichage",
-      "Capteurs",
-      "Stockage magnétique"
-    ],
-    "correct": 1
-  }
+  {"text":"Quelle entreprise commercialise l'iPhone ?","answers":["Apple","Samsung","Sony","Google"],"correct":0,"difficulty":"facile"},
+  {"text":"Quel appareil combine généralement téléphone, appareil photo, GPS et accès à Internet ?","answers":["Une liseuse","Un smartphone","Un routeur","Une enceinte connectée"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel composant d'un smartphone détecte son orientation et ses mouvements de rotation ?","answers":["Le modem","Le microphone","Le gyroscope","Le haut-parleur"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel capteur éteint souvent l'écran quand le téléphone est porté à l'oreille ?","answers":["Le baromètre","Le magnétomètre","Le capteur de lumière","Le capteur de proximité"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel matériau semi-conducteur constitue la base de la plupart des puces électroniques grand public ?","answers":["Le silicium","Le cuivre","Le graphite","Le lithium"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quel système d'exploitation équipe principalement les iPhone ?","answers":["Android","iOS","Windows","ChromeOS"],"correct":1,"difficulty":"facile"},
+  {"text":"Quelle entreprise développe Android ?","answers":["Microsoft","Apple","Google","Mozilla"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel système de bureau est développé par Apple ?","answers":["Ubuntu","Windows","ChromeOS","macOS"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel noyau open source est utilisé par Android ?","answers":["Linux","Darwin","FreeBSD","Solaris"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel langage Google a-t-il désigné comme langage privilégié pour le développement Android en 2019 ?","answers":["Swift","Kotlin","Ruby","Rust"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel connecteur compact et réversible équipe de nombreux appareils récents ?","answers":["VGA","PS/2","USB-C","Péritel"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel ancien connecteur Apple à huit broches a précédé l'USB-C sur les iPhone ?","answers":["FireWire","MagSafe","Thunderbolt","Lightning"],"correct":3,"difficulty":"moyen"},
+  {"text":"Que désigne la lettre U dans USB ?","answers":["Universal","Unified","Utility","User"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel protocole permet à l'USB-C de négocier une puissance de recharge supérieure ?","answers":["DisplayPort Alt Mode","USB Power Delivery","HDCP","MHL"],"correct":1,"difficulty":"difficile"},
+  {"text":"Combien de positions d'insertion physiques offre la fiche USB-C grâce à sa symétrie ?","answers":["Une","Trois","Deux","Quatre"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quel câble transporte couramment image et son numériques vers un téléviseur ?","answers":["Ethernet","VGA","Jack 3,5 mm","HDMI"],"correct":3,"difficulty":"facile"},
+  {"text":"Que signifie le H de HDMI ?","answers":["High","Hybrid","Home","Hyper"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel connecteur vidéo analogique à quinze broches était fréquent sur les anciens moniteurs PC ?","answers":["DVI-D","VGA","DisplayPort","HDMI"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel mécanisme HDMI protège certains contenus numériques contre la copie ?","answers":["HDR","CEC","HDCP","ARC"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quelle fonction HDMI permet de renvoyer le son d'un téléviseur vers une barre de son ?","answers":["VRR","ALLM","CEC","ARC"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quelle technologie d'écran permet à chaque pixel de produire sa propre lumière ?","answers":["OLED","LCD","DLP","E Ink"],"correct":0,"difficulty":"facile"},
+  {"text":"Que désigne le K dans une définition 4K grand public ?","answers":["Kelvin","Environ mille","Kilo-octet","Contraste"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel élément éclaire les pixels d'un écran LCD qui n'émettent pas eux-mêmes de lumière ?","answers":["Un laser de lecture","Une cathode","Un rétroéclairage","Une bobine"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quelle technologie Samsung utilise des nanocristaux pour améliorer les couleurs de certains téléviseurs LCD ?","answers":["MicroLED","Plasma","MiniDisc","Quantum Dot"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel défaut permanent peut toucher un écran OLED affichant longtemps des éléments statiques ?","answers":["Le marquage","Le moiré acoustique","La dérive GPS","Le clipping"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Dans un appareil photo numérique, quel composant reçoit la lumière pour former l'image ?","answers":["Le processeur audio","Le capteur","Le modem","L'antenne"],"correct":1,"difficulty":"facile"},
+  {"text":"Quelle unité sert couramment à exprimer la définition d'un capteur photo ?","answers":["Le gigahertz","Le décibel","Le mégapixel","Le lumen"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel dispositif règle la quantité de lumière traversant un objectif ?","answers":["Le codec","Le stabilisateur","Le flash","Le diaphragme"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel format conserve davantage de données brutes du capteur qu'un JPEG ?","answers":["RAW","GIF","MP3","SVG"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel phénomène optique une ouverture f/1,8 favorise-t-elle par rapport à f/8, toutes choses égales ?","answers":["Une profondeur de champ plus grande","Une profondeur de champ plus faible","Une focale plus longue","Une définition plus élevée"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quelle technologie relie sans fil écouteurs et smartphone à courte portée ?","answers":["GPS","NFC","Bluetooth","HDMI"],"correct":2,"difficulty":"facile"},
+  {"text":"Quelle technologie sert souvent au paiement sans contact avec un téléphone ?","answers":["LiDAR","Wi-Fi Direct","GPS","NFC"],"correct":3,"difficulty":"moyen"},
+  {"text":"Dans quelle bande sans licence le Bluetooth classique fonctionne-t-il principalement ?","answers":["2,4 GHz","700 MHz","5,9 GHz","60 GHz"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel profil Bluetooth sert principalement à diffuser de l'audio stéréo vers un casque ?","answers":["HID","A2DP","PAN","OPP"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel nom porte la variante Bluetooth optimisée pour les faibles consommations ?","answers":["Bluetooth Ultra","Bluetooth Mesh Audio","Bluetooth Low Energy","Bluetooth PowerLink"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quelle technologie permet de connecter sans fil un appareil à un routeur domestique ?","answers":["NFC","GPS","USB","Wi-Fi"],"correct":3,"difficulty":"facile"},
+  {"text":"À quelle famille de normes IEEE le Wi-Fi appartient-il ?","answers":["802.11","802.3","1394","1901"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel équipement partage généralement la connexion Internet avec les appareils d'un logement ?","answers":["Un scanner","Un routeur","Un onduleur","Un DAC"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quelle génération commerciale correspond à IEEE 802.11ax ?","answers":["Wi-Fi 4","Wi-Fi 5","Wi-Fi 6","Wi-Fi 7"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quelle technique permet à un réseau Wi-Fi maillé d'utiliser plusieurs bornes pour couvrir un logement ?","answers":["Le ray tracing","Le transcoding","Le geofencing","Le mesh"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quelle génération de réseau mobile a succédé à la 4G ?","answers":["5G","WiMAX","EDGE","ADSL"],"correct":0,"difficulty":"facile"},
+  {"text":"Quel composant identifie l'abonné auprès du réseau mobile ?","answers":["La carte SD","La carte SIM","Le GPU","Le gyroscope"],"correct":1,"difficulty":"moyen"},
+  {"text":"Que signifie le E dans eSIM ?","answers":["External","Encrypted","Embedded","Enhanced"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel identifiant matériel unique est généralement associé à un téléphone mobile ?","answers":["SSID","IBAN","ISBN","IMEI"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel organisme international attribue les codes pays et réseaux contenus dans l'IMSI ?","answers":["L'UIT","L'UNESCO","L'OMC","L'ISO uniquement"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quel système satellitaire américain est couramment utilisé pour la géolocalisation ?","answers":["Galileo","GPS","BeiDou","GLONASS"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel système mondial de navigation par satellite est exploité par l'Union européenne ?","answers":["GPS","QZSS","Galileo","NavIC"],"correct":2,"difficulty":"moyen"},
+  {"text":"De combien de satellites un récepteur GNSS a-t-il généralement besoin pour calculer une position 3D et corriger son horloge ?","answers":["Un","Deux","Trois","Quatre"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel effet physique impose des corrections aux horloges des satellites GPS ?","answers":["La relativité","La capillarité","La supraconductivité","La photosynthèse"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel terme désigne l'utilisation simultanée de plusieurs constellations comme GPS, Galileo et GLONASS ?","answers":["Triangulation cellulaire","Multi-GNSS","Beamforming","Géorepérage"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel support amovible augmente souvent le stockage d'une caméra ou d'une console portable ?","answers":["Une carte SIM","Une eSIM","Une carte microSD","Une puce NFC"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel type de stockage ne comporte pas de pièces mécaniques mobiles ?","answers":["Un disque dur magnétique","Une cassette DAT","Un disque vinyle","Un SSD"],"correct":3,"difficulty":"moyen"},
+  {"text":"Quelle mémoire non volatile est utilisée dans les SSD grand public ?","answers":["La mémoire flash NAND","La SRAM de cache uniquement","La mémoire à bulles","La bande magnétique"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel format compact accueille couramment des SSD NVMe reliés au bus PCI Express ?","answers":["SATA Express uniquement","M.2","VGA","RJ11"],"correct":1,"difficulty":"difficile"},
+  {"text":"Que signifie l'acronyme NVMe ?","answers":["Non-Volatile Magnetic engine","Network Virtual Memory extension","Non-Volatile Memory Express","Native Video Media encoding"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quel composant exécute l'essentiel des instructions générales d'un ordinateur ?","answers":["Le SSD","Le ventilateur","Le modem","Le processeur"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel composant est spécialisé dans le calcul graphique parallèle ?","answers":["Le GPU","Le BIOS","Le routeur","Le microphone"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quelle unité exprime couramment la fréquence d'horloge d'un processeur ?","answers":["Le lumen","Le gigahertz","Le voltampère","Le dpi"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel jeu d'instructions équipe la majorité des smartphones modernes ?","answers":["x86 uniquement","MIPS uniquement","ARM","SPARC"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quelle architecture ouverte de jeu d'instructions est née à l'université de Californie à Berkeley ?","answers":["PowerPC","Itanium","AVR","RISC-V"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quel appareil convertit un signal audio numérique en son audible dans une pièce ?","answers":["Une enceinte","Un scanner","Un routeur","Un vidéoprojecteur"],"correct":0,"difficulty":"facile"},
+  {"text":"Quelle prise analogique ronde équipe traditionnellement les casques filaires ?","answers":["RJ45","Jack 3,5 mm","HDMI Type A","VGA"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel format audio compresse généralement les fichiers avec perte ?","answers":["FLAC","WAV PCM","MP3","ALAC"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel dispositif convertit un signal numérique en signal analogique pour un casque ?","answers":["Un ADC","Un DSP uniquement","Un amplificateur RF","Un DAC"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel codec Bluetooth a été rendu obligatoire pour l'audio LE par le Bluetooth SIG ?","answers":["LC3","Vorbis","Opus uniquement","ATRAC"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quelle unité indique la capacité électrique d'une batterie de smartphone ?","answers":["Le lumen","Le milliampère-heure","Le hertz","Le pixel"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel standard est largement utilisé pour la recharge sans fil par induction ?","answers":["NFC Forum Type 5","USB-PD","Qi","HDCP"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel ion circule entre les électrodes d'une batterie lithium-ion lors de son fonctionnement ?","answers":["L'ion sodium uniquement","L'ion cuivre","L'ion silicium","L'ion lithium"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel composant protège une batterie rechargeable contre surcharge et décharge excessive ?","answers":["Le BMS","Le DAC","Le codec","Le SoC radio"],"correct":0,"difficulty":"difficile"},
+  {"text":"Pourquoi une batterie lithium-ion vieillit-elle plus vite à température élevée ?","answers":["Sa masse augmente","Les réactions chimiques parasites s'accélèrent","Son écran consomme plus","Le Bluetooth change de fréquence"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel assistant vocal est associé aux enceintes Amazon Echo ?","answers":["Siri","Google Assistant","Alexa","Cortana"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel standard vise l'interopérabilité des appareils de maison connectée entre plusieurs marques ?","answers":["AirDrop","Miracast","DLNA","Matter"],"correct":3,"difficulty":"moyen"},
+  {"text":"Quel protocole radio basse consommation forme un réseau maillé et sert de base à Matter ?","answers":["Thread","ANT+","DECT","LoRaWAN uniquement"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quelle alliance développe le standard Matter ?","answers":["Wi-Fi Alliance","Connectivity Standards Alliance","USB-IF","W3C"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel protocole Matter utilise-t-il comme couche réseau commune ?","answers":["IPX","AppleTalk","IP","Fibre Channel"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quel motif carré peut être scanné par l'appareil photo d'un téléphone pour ouvrir un lien ?","answers":["Un code-barres EAN uniquement","Une puce RFID","Un filigrane","Un QR code"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel système déverrouille un appareil à partir de caractéristiques biologiques ?","answers":["La biométrie","La compression","La virtualisation","Le streaming"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel facteur d'authentification correspond à un mot de passe ?","answers":["Quelque chose que l'on est","Quelque chose que l'on sait","Quelque chose que l'on possède","Un lieu où l'on se trouve"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel protocole sécurise couramment les sites web signalés par HTTPS ?","answers":["FTP","SMTP","TLS","Bluetooth"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quelle propriété des QR codes permet souvent leur lecture malgré une petite zone endommagée ?","answers":["Le chiffrement AES","La triangulation","La modulation OFDM","La correction d'erreurs Reed-Solomon"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quelle technologie d'affichage est couramment utilisée par les liseuses ?","answers":["L'encre électronique","Le plasma","Le tube cathodique","Le DLP"],"correct":0,"difficulty":"facile"},
+  {"text":"Quel avantage principal l'encre électronique offre-t-elle pour un texte statique ?","answers":["Une fréquence de 240 Hz","Une très faible consommation","Une luminosité laser","Un son intégré"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel procédé une imprimante laser utilise-t-elle pour fixer le toner sur le papier ?","answers":["La sublimation froide","La photogravure","La chaleur et la pression","L'immersion"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel modèle colorimétrique est utilisé par les imprimantes couleur grand public ?","answers":["RGB","HSV","YCbCr","CMJN"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel phénomène rend l'encre électronique bistable économe lorsque l'image ne change pas ?","answers":["Elle conserve l'état des pigments sans alimentation continue","Elle coupe Internet","Elle utilise un rétroéclairage permanent","Elle compresse les livres"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quelle entreprise a lancé le premier iPhone en 2007 ?","answers":["Nokia","Apple","BlackBerry","Motorola"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel support vidéo domestique a succédé largement à la cassette VHS ?","answers":["La disquette","Le MiniDisc","Le DVD","La cartouche ROM"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel baladeur numérique Apple lancé en 2001 a popularisé l'écoute de fichiers musicaux portables ?","answers":["Walkman","Zune","Discman","iPod"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel système de télévision couleur français a coexisté avec PAL ?","answers":["SECAM","NTSC-J","ATSC","DVB-T2"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel ordinateur personnel lancé en 1981 a contribué à établir une architecture devenue standard ?","answers":["Apple Lisa","IBM PC","Commodore Amiga","NeXT Computer"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel format d'image prend en charge la transparence et une compression sans perte ?","answers":["JPEG","BMP brut","PNG","MP3"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel format de document a été conçu pour préserver la mise en page entre appareils ?","answers":["TXT","CSV","HTML uniquement","PDF"],"correct":3,"difficulty":"moyen"},
+  {"text":"Quel organisme développe les standards du Web comme HTML et CSS ?","answers":["Le W3C","L'OPEP","La FIFA","L'UIT-R uniquement"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel format d'image moderne développé par Google dérive du codec vidéo VP8 ?","answers":["TIFF","WebP","HEIF","SVG"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel conteneur d'image peut stocker des images codées en HEVC et est souvent associé à l'extension HEIC ?","answers":["BMP","GIF","HEIF","PCX"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quel capteur mesure la pression atmosphérique dans certains smartphones ?","answers":["Un accéléromètre","Un gyroscope","Un magnétomètre","Un baromètre"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel capteur sert de boussole électronique ?","answers":["Le magnétomètre","Le capteur ToF","Le thermocouple","Le microphone"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quelle technologie mesure une distance en chronométrant le trajet aller-retour de la lumière ?","answers":["NFC","Le temps de vol","La compression delta","Le PWM"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel terme désigne une puce réunissant processeur, GPU et autres contrôleurs sur un même circuit ?","answers":["NAS","UPS","SoC","DAC"],"correct":2,"difficulty":"difficile"},
+  {"text":"Pourquoi un capteur photo à obturateur roulant peut-il déformer une hélice rapide ?","answers":["La focale devient nulle","Le flash change de couleur","Le fichier est compressé","Les lignes sont lues à des instants différents"],"correct":3,"difficulty":"expert"}
 ]
