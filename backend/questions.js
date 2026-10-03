@@ -703,6 +703,21 @@ const CATEGORIES = {
     icon: '🦇',
     questions: [...require('./data/batman.json')],
   },
+  kaamelott: {
+    label: 'Kaamelott',
+    icon: '⚔️',
+    questions: [...require('./data/kaamelott.json')],
+  },
+  lupin: {
+    label: 'Lupin',
+    icon: '🕵️',
+    questions: [...require('./data/lupin.json')],
+  },
+  arcane: {
+    label: 'Arcane',
+    icon: '⚙️',
+    questions: [...require('./data/arcane.json')],
+  },
   star_wars: {
     label: 'Star Wars',
     icon: '⚔️',
