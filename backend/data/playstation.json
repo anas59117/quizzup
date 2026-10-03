@@ -1,502 +1,121 @@
 [
-  {
-    "text": "Quelle entreprise commercialise les consoles PlayStation ?",
-    "answers": [
-      "Sony",
-      "Nintendo",
-      "Microsoft",
-      "Sega"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "En quelle année la première PlayStation est-elle sortie au Japon ?",
-    "answers": [
-      "1991",
-      "1994",
-      "1996",
-      "1999"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « PlayStation », en quelle année la toute première PlayStation est-elle sortie au Japon ?",
-    "answers": [
-      "1992",
-      "1996",
-      "1994",
-      "1998"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à PlayStation ?",
-    "answers": [
-      "première PlayStation de salon compatible Blu-ray",
-      "console portable dotée de deux sticks et d’un pavé tactile arrière",
-      "support amovible utilisé pour sauvegarder sur les premières consoles",
-      "première console de la gamme utilisant principalement le CD-ROM"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération PlayStation appartient-il ?",
-    "answers": [
-      "Cinquième génération",
-      "Sixième génération",
-      "Accessoire",
-      "Quatrième génération"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « PlayStation », quel élément PlayStation correspond à cette description : console de salon compatible DVD devenue l’une des plus vendues ?",
-    "answers": [
-      "PlayStation 3",
-      "PlayStation 2",
-      "PlayStation Vita",
-      "Memory Card"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à PlayStation 2 ?",
-    "answers": [
-      "console lancée en 2013 avec une manette dotée d’un pavé tactile",
-      "famille de manettes connue pour ses deux sticks analogiques et ses vibrations",
-      "console de salon compatible DVD devenue l’une des plus vendues",
-      "service en ligne regroupant comptes, multijoueur et boutique"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération PlayStation 2 appartient-il ?",
-    "answers": [
-      "Cinquième génération",
-      "Accessoire",
-      "Quatrième génération",
-      "Sixième génération"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « PlayStation », quel élément PlayStation correspond à cette description : première PlayStation de salon compatible Blu-ray ?",
-    "answers": [
-      "PlayStation 3",
-      "PlayStation 4",
-      "DualShock",
-      "PlayStation Network"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à PlayStation 3 ?",
-    "answers": [
-      "console blanche et noire équipée d’un stockage SSD rapide",
-      "première PlayStation de salon compatible Blu-ray",
-      "manette de la PS5 avec gâchettes adaptatives",
-      "abonnement donnant accès au multijoueur et à un catalogue de jeux"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération PlayStation 3 appartient-il ?",
-    "answers": [
-      "Cinquième génération",
-      "Accessoire",
-      "Septième génération",
-      "Quatrième génération"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « PlayStation », quel élément PlayStation correspond à cette description : console lancée en 2013 avec une manette dotée d’un pavé tactile ?",
-    "answers": [
-      "PlayStation 5",
-      "DualSense",
-      "PlayStation Plus",
-      "PlayStation 4"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à PlayStation 4 ?",
-    "answers": [
-      "console lancée en 2013 avec une manette dotée d’un pavé tactile",
-      "première console portable PlayStation utilisant les disques UMD",
-      "casque de réalité virtuelle conçu à l’origine pour la PS4",
-      "ingénieur souvent surnommé le père de la PlayStation"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération PlayStation 4 appartient-il ?",
-    "answers": [
-      "Cinquième génération",
-      "Huitième génération",
-      "Accessoire",
-      "Quatrième génération"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « PlayStation », quel élément PlayStation correspond à cette description : console blanche et noire équipée d’un stockage SSD rapide ?",
-    "answers": [
-      "PSP",
-      "PlayStation VR",
-      "PlayStation 5",
-      "Ken Kutaragi"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à PlayStation 5 ?",
-    "answers": [
-      "console portable dotée de deux sticks et d’un pavé tactile arrière",
-      "support amovible utilisé pour sauvegarder sur les premières consoles",
-      "petit périphérique à écran lancé surtout au Japon",
-      "console blanche et noire équipée d’un stockage SSD rapide"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération PlayStation 5 appartient-il ?",
-    "answers": [
-      "Neuvième génération",
-      "Cinquième génération",
-      "Accessoire",
-      "Quatrième génération"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « PlayStation », quel élément PlayStation correspond à cette description : première console portable PlayStation utilisant les disques UMD ?",
-    "answers": [
-      "PlayStation Vita",
-      "PSP",
-      "Memory Card",
-      "PocketStation"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à PSP ?",
-    "answers": [
-      "famille de manettes connue pour ses deux sticks analogiques et ses vibrations",
-      "service en ligne regroupant comptes, multijoueur et boutique",
-      "première console portable PlayStation utilisant les disques UMD",
-      "processeur développé avec IBM et Toshiba pour la PS3"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération PSP appartient-il ?",
-    "answers": [
-      "Cinquième génération",
-      "Accessoire",
-      "Quatrième génération",
-      "Console portable"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « PlayStation », quel élément PlayStation correspond à cette description : console portable dotée de deux sticks et d’un pavé tactile arrière ?",
-    "answers": [
-      "PlayStation Vita",
-      "DualShock",
-      "PlayStation Network",
-      "Cell Broadband Engine"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à PlayStation Vita ?",
-    "answers": [
-      "manette de la PS5 avec gâchettes adaptatives",
-      "console portable dotée de deux sticks et d’un pavé tactile arrière",
-      "abonnement donnant accès au multijoueur et à un catalogue de jeux",
-      "première console de la gamme utilisant principalement le CD-ROM"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération PlayStation Vita appartient-il ?",
-    "answers": [
-      "Cinquième génération",
-      "Accessoire",
-      "Console portable",
-      "Quatrième génération"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « PlayStation », quel élément PlayStation correspond à cette description : famille de manettes connue pour ses deux sticks analogiques et ses vibrations ?",
-    "answers": [
-      "PocketStation",
-      "PlayStation Plus",
-      "PlayStation",
-      "DualShock"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à DualShock ?",
-    "answers": [
-      "famille de manettes connue pour ses deux sticks analogiques et ses vibrations",
-      "casque de réalité virtuelle conçu à l’origine pour la PS4",
-      "ingénieur souvent surnommé le père de la PlayStation",
-      "console de salon compatible DVD devenue l’une des plus vendues"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération DualShock appartient-il ?",
-    "answers": [
-      "Cinquième génération",
-      "Accessoire",
-      "Console portable",
-      "Quatrième génération"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « PlayStation », quel élément PlayStation correspond à cette description : manette de la PS5 avec gâchettes adaptatives ?",
-    "answers": [
-      "PlayStation VR",
-      "Ken Kutaragi",
-      "DualSense",
-      "PlayStation 2"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à DualSense ?",
-    "answers": [
-      "support amovible utilisé pour sauvegarder sur les premières consoles",
-      "petit périphérique à écran lancé surtout au Japon",
-      "première PlayStation de salon compatible Blu-ray",
-      "manette de la PS5 avec gâchettes adaptatives"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération DualSense appartient-il ?",
-    "answers": [
-      "Accessoire",
-      "Cinquième génération",
-      "Console portable",
-      "Quatrième génération"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « PlayStation », quel élément PlayStation correspond à cette description : casque de réalité virtuelle conçu à l’origine pour la PS4 ?",
-    "answers": [
-      "Memory Card",
-      "PlayStation VR",
-      "PocketStation",
-      "PlayStation 3"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à PlayStation VR ?",
-    "answers": [
-      "service en ligne regroupant comptes, multijoueur et boutique",
-      "processeur développé avec IBM et Toshiba pour la PS3",
-      "casque de réalité virtuelle conçu à l’origine pour la PS4",
-      "console lancée en 2013 avec une manette dotée d’un pavé tactile"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération PlayStation VR appartient-il ?",
-    "answers": [
-      "Cinquième génération",
-      "Console portable",
-      "Quatrième génération",
-      "Réalité virtuelle"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « PlayStation », quel élément PlayStation correspond à cette description : support amovible utilisé pour sauvegarder sur les premières consoles ?",
-    "answers": [
-      "Memory Card",
-      "PlayStation Network",
-      "Cell Broadband Engine",
-      "PlayStation 4"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à Memory Card ?",
-    "answers": [
-      "abonnement donnant accès au multijoueur et à un catalogue de jeux",
-      "support amovible utilisé pour sauvegarder sur les premières consoles",
-      "première console de la gamme utilisant principalement le CD-ROM",
-      "console blanche et noire équipée d’un stockage SSD rapide"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération Memory Card appartient-il ?",
-    "answers": [
-      "Cinquième génération",
-      "Console portable",
-      "Accessoire",
-      "Quatrième génération"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « PlayStation », quel élément PlayStation correspond à cette description : service en ligne regroupant comptes, multijoueur et boutique ?",
-    "answers": [
-      "PlayStation Plus",
-      "PlayStation",
-      "PlayStation 5",
-      "PlayStation Network"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à PlayStation Network ?",
-    "answers": [
-      "service en ligne regroupant comptes, multijoueur et boutique",
-      "ingénieur souvent surnommé le père de la PlayStation",
-      "console de salon compatible DVD devenue l’une des plus vendues",
-      "première console portable PlayStation utilisant les disques UMD"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération PlayStation Network appartient-il ?",
-    "answers": [
-      "Cinquième génération",
-      "Service en ligne",
-      "Console portable",
-      "Quatrième génération"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « PlayStation », quel élément PlayStation correspond à cette description : abonnement donnant accès au multijoueur et à un catalogue de jeux ?",
-    "answers": [
-      "Ken Kutaragi",
-      "PlayStation 2",
-      "PlayStation Plus",
-      "PSP"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à PlayStation Plus ?",
-    "answers": [
-      "petit périphérique à écran lancé surtout au Japon",
-      "première PlayStation de salon compatible Blu-ray",
-      "console portable dotée de deux sticks et d’un pavé tactile arrière",
-      "abonnement donnant accès au multijoueur et à un catalogue de jeux"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération PlayStation Plus appartient-il ?",
-    "answers": [
-      "Service en ligne",
-      "Cinquième génération",
-      "Console portable",
-      "Quatrième génération"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « PlayStation », quel élément PlayStation correspond à cette description : ingénieur souvent surnommé le père de la PlayStation ?",
-    "answers": [
-      "PocketStation",
-      "Ken Kutaragi",
-      "PlayStation 3",
-      "PlayStation Vita"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à Ken Kutaragi ?",
-    "answers": [
-      "processeur développé avec IBM et Toshiba pour la PS3",
-      "console lancée en 2013 avec une manette dotée d’un pavé tactile",
-      "ingénieur souvent surnommé le père de la PlayStation",
-      "famille de manettes connue pour ses deux sticks analogiques et ses vibrations"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération Ken Kutaragi appartient-il ?",
-    "answers": [
-      "Cinquième génération",
-      "Console portable",
-      "Quatrième génération",
-      "Personnalité"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « PlayStation », quel élément PlayStation correspond à cette description : petit périphérique à écran lancé surtout au Japon ?",
-    "answers": [
-      "PocketStation",
-      "Cell Broadband Engine",
-      "PlayStation 4",
-      "DualShock"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à PocketStation ?",
-    "answers": [
-      "première console de la gamme utilisant principalement le CD-ROM",
-      "petit périphérique à écran lancé surtout au Japon",
-      "console blanche et noire équipée d’un stockage SSD rapide",
-      "manette de la PS5 avec gâchettes adaptatives"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération PocketStation appartient-il ?",
-    "answers": [
-      "Service en ligne",
-      "Personnalité",
-      "Accessoire",
-      "Technologie"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « PlayStation », quel élément PlayStation correspond à cette description : processeur développé avec IBM et Toshiba pour la PS3 ?",
-    "answers": [
-      "PlayStation",
-      "PlayStation 5",
-      "DualSense",
-      "Cell Broadband Engine"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « PlayStation », quelle description correspond à Cell Broadband Engine ?",
-    "answers": [
-      "processeur développé avec IBM et Toshiba pour la PS3",
-      "console de salon compatible DVD devenue l’une des plus vendues",
-      "première console portable PlayStation utilisant les disques UMD",
-      "casque de réalité virtuelle conçu à l’origine pour la PS4"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « PlayStation », à quelle catégorie ou génération Cell Broadband Engine appartient-il ?",
-    "answers": [
-      "Cinquième génération",
-      "Technologie",
-      "Console portable",
-      "Quatrième génération"
-    ],
-    "correct": 1
-  }
+  {"text":"Quelle entreprise a créé la marque PlayStation ?","answers":["Sony","Sega","Nintendo","Microsoft"],"correct":0,"difficulty":"facile"},
+  {"text":"En quelle année la première PlayStation est-elle sortie au Japon ?","answers":["1992","1994","1996","1998"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel support optique était au cœur de la première PlayStation ?","answers":["Le DVD","Le Blu-ray","Le CD-ROM","L'UMD"],"correct":2,"difficulty":"difficile"},
+  {"text":"À quelle génération de consoles appartient la première PlayStation ?","answers":["Quatrième","Sixième","Septième","Cinquième"],"correct":3,"difficulty":"difficile"},
+  {"text":"À quel prix la PlayStation fut-elle lancée au Japon le 3 décembre 1994 ?","answers":["39 800 yens","19 800 yens","59 800 yens","79 800 yens"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quelle console Sony a succédé à la première PlayStation ?","answers":["La PSP","La PlayStation 2","La PlayStation 3","La PS one"],"correct":1,"difficulty":"facile"},
+  {"text":"En quelle année la PlayStation 2 est-elle sortie au Japon ?","answers":["1998","1999","2000","2001"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quel format vidéo la PlayStation 2 pouvait-elle lire dès son lancement ?","answers":["Le LaserDisc","Le HD DVD","Le Blu-ray","Le DVD"],"correct":3,"difficulty":"difficile"},
+  {"text":"Avec les jeux de quelle console la PlayStation 2 était-elle largement rétrocompatible ?","answers":["La première PlayStation","La Dreamcast","La Nintendo 64","La Xbox"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel accessoire à caméra lancé sur PS2 permettait de contrôler certains jeux par les mouvements ?","answers":["PlayStation Eye","EyeToy","Kinect","PlayStation Move"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quelle console PlayStation fut la première à utiliser le Blu-ray pour ses jeux ?","answers":["PlayStation 2","PlayStation 4","PlayStation 3","PlayStation 5"],"correct":2,"difficulty":"facile"},
+  {"text":"En quelle année la PlayStation 3 est-elle sortie au Japon et en Amérique du Nord ?","answers":["2004","2005","2007","2006"],"correct":3,"difficulty":"moyen"},
+  {"text":"Quel processeur développé avec IBM et Toshiba équipait la PlayStation 3 ?","answers":["Cell Broadband Engine","Emotion Engine","AMD Jaguar","MIPS R3000"],"correct":0,"difficulty":"difficile"},
+  {"text":"Comment s'appelait la première manette sans fil livrée avec la PS3, dépourvue de vibration ?","answers":["Dual Analog","Sixaxis","DualShock 2","DualSense"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quelle interface graphique en forme de barre croisée utilisait la PS3 ?","answers":["Metro UI","LiveArea","XrossMediaBar","Blades"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quelle console PlayStation est sortie en Europe en novembre 2013 ?","answers":["PS3 Slim","PS Vita","PS5","PS4"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel bouton de la DualShock 4 permettait de diffuser ou capturer plus directement une partie ?","answers":["Share","Create","Capture","Options"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quel élément tactile occupe le centre de la DualShock 4 ?","answers":["Un écran OLED","Un pavé tactile","Une molette","Un clavier"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quelle architecture de processeur x86-64 la PS4 a-t-elle adoptée ?","answers":["Intel Core","PowerPC","AMD Jaguar","Cell"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quel modèle plus puissant de la PS4 fut commercialisé en 2016 ?","answers":["PS4 Elite","PS4 Ultra","PS4 Max","PS4 Pro"],"correct":3,"difficulty":"expert"},
+
+  {"text":"En quelle année la PlayStation 5 a-t-elle été lancée ?","answers":["2020","2018","2019","2021"],"correct":0,"difficulty":"facile"},
+  {"text":"Comment s'appelle la manette standard de la PS5 ?","answers":["DualShock 5","DualSense","Sixaxis 2","PlayStation Pad"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel type de stockage accélère fortement les chargements de la PS5 ?","answers":["Un disque dur 10 000 tr/min","Une carte mémoire propriétaire","Un SSD personnalisé","Un lecteur hybride DVD"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quelle technologie audio Sony a mise en avant avec la PS5 ?","answers":["Dolby Pro Logic II","Cell Audio","Atrac Surround","Tempest 3D AudioTech"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel format de disque lit le lecteur de la version standard originale de la PS5 ?","answers":["Ultra HD Blu-ray","HD DVD","MiniDisc","UMD"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Comment s'appelle la première console portable de la famille PlayStation ?","answers":["PS Vita","PSP","PocketStation","PS Portal"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel petit disque optique était utilisé par la PSP ?","answers":["MiniDisc","GameDisc","UMD","GD-ROM"],"correct":2,"difficulty":"moyen"},
+  {"text":"En quelle année la PSP est-elle sortie au Japon ?","answers":["2002","2003","2005","2004"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel support amovible servait notamment au stockage sur la PSP originale ?","answers":["Memory Stick Duo","SD Express","CompactFlash","SmartMedia"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel modèle de PSP lancé en 2009 abandonnait le lecteur UMD au profit des téléchargements ?","answers":["PSP Street","PSP Go","PSP Slim","PSP Micro"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quelle console portable a succédé à la PSP ?","answers":["PocketStation","PlayStation Portal","PlayStation Vita","Xperia Play"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel dispositif tactile particulier se trouve à l'arrière de la PS Vita ?","answers":["Une molette","Un clavier coulissant","Un lecteur d'empreintes","Un pavé tactile"],"correct":3,"difficulty":"moyen"},
+  {"text":"Combien de sticks analogiques la PS Vita possède-t-elle ?","answers":["Deux","Un","Trois","Aucun"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel type d'écran équipait le premier modèle de PS Vita ?","answers":["LCD monochrome","OLED","Plasma","E Ink"],"correct":1,"difficulty":"difficile"},
+  {"text":"Comment s'appelait l'interface à bulles de la PS Vita ?","answers":["XMB","Orbis UI","LiveArea","Crossbar Touch"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quelle famille de manettes PlayStation a popularisé deux sticks analogiques et la vibration ?","answers":["Sixaxis","DualSense","PlayStation Move","DualShock"],"correct":3,"difficulty":"facile"},
+  {"text":"Quels symboles figurent sur les quatre boutons principaux PlayStation ?","answers":["Triangle, cercle, croix et carré","A, B, X et Y","Étoile, lune, soleil et cœur","Flèche, point, barre et losange"],"correct":0,"difficulty":"moyen"},
+  {"text":"Quelle manette de PS3 a réintroduit la vibration après la Sixaxis ?","answers":["DualShock 2","DualShock 3","DualShock 4","DualSense"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quelle fonction des gâchettes de la DualSense peut faire varier leur résistance ?","answers":["Le gyroscope","Le pavé capacitif","Les gâchettes adaptatives","Le haut-parleur stéréo"],"correct":2,"difficulty":"difficile"},
+  {"text":"Comment s'appelait la première manette Sony à deux sticks, sortie avant la DualShock ?","answers":["Analog Pro","Twin Stick Pad","Sixaxis","Dual Analog Controller"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Comment se nomme le service en ligne principal de PlayStation ?","answers":["PlayStation Network","Sony Online","PlayStation Connect","PS Live"],"correct":0,"difficulty":"facile"},
+  {"text":"Comment se nomme l'abonnement PlayStation lancé en 2010 ?","answers":["PS Now","PlayStation Plus","PlayStation Gold","PS Premium"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quelle boutique permet d'acheter des jeux dématérialisés sur les consoles PlayStation ?","answers":["Sony Market","Game Hub","PlayStation Store","PS Mall"],"correct":2,"difficulty":"difficile"},
+  {"text":"À partir de quelle génération de console de salon le PlayStation Network a-t-il été intégré dès le lancement ?","answers":["PlayStation","PlayStation 2","PlayStation 4","PlayStation 3"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quels sont les trois niveaux de PlayStation Plus introduits lors de la refonte de 2022 en Europe ?","answers":["Essential, Extra et Premium","Bronze, Silver et Gold","Basic, Game Pass et Ultimate","Core, Deluxe et Max"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quel casque de réalité virtuelle Sony a lancé pour la PS4 en 2016 ?","answers":["PS VR2","PlayStation VR","Sony Visor","Project Morpheus 2"],"correct":1,"difficulty":"facile"},
+  {"text":"À quelle console le PlayStation VR2 se connecte-t-il directement ?","answers":["PS4 Pro","PC uniquement","PS5","PS Vita"],"correct":2,"difficulty":"moyen"},
+  {"text":"Quelle fonction du PS VR2 suit la direction du regard ?","answers":["Le suivi de la voix","Le suivi des mains sans caméra","Le suivi du rythme cardiaque","L'eye tracking"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quelle est la résolution de chaque écran OLED du PS VR2 ?","answers":["2000 × 2040 pixels par œil","1920 × 1080 pixels au total","1440 × 900 pixels par œil","3840 × 2160 pixels par œil"],"correct":0,"difficulty":"difficile"},
+  {"text":"Combien de caméras intégrées assurent principalement le suivi du casque et des manettes PS VR2 ?","answers":["Deux","Quatre","Six","Huit"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quelle série PlayStation est consacrée à la simulation automobile ?","answers":["Wipeout","MotorStorm","Gran Turismo","Driveclub"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel studio développe la série Gran Turismo ?","answers":["Naughty Dog","Guerrilla","Evolution Studios","Polyphony Digital"],"correct":3,"difficulty":"moyen"},
+  {"text":"Qui est le créateur et producteur historique de Gran Turismo ?","answers":["Kazunori Yamauchi","Fumito Ueda","Shuhei Yoshida","Ken Kutaragi"],"correct":0,"difficulty":"difficile"},
+  {"text":"Sur quelle console le premier Gran Turismo est-il sorti ?","answers":["PlayStation 2","PlayStation","PlayStation 3","PSP"],"correct":1,"difficulty":"difficile"},
+  {"text":"En quelle année le premier Gran Turismo est-il sorti au Japon ?","answers":["1995","1996","1997","1998"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quel guerrier spartiate est le héros historique de God of War ?","answers":["Deimos","Atreus","Baldur","Kratos"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel studio PlayStation développe principalement God of War ?","answers":["Santa Monica Studio","Bend Studio","Media Molecule","Sucker Punch"],"correct":0,"difficulty":"moyen"},
+  {"text":"Sur quelle console le premier God of War est-il sorti en 2005 ?","answers":["PlayStation","PlayStation 2","PlayStation 3","PSP"],"correct":1,"difficulty":"difficile"},
+  {"text":"Comment se nomme le fils de Kratos introduit dans God of War (2018) ?","answers":["Mimir","Týr","Atreus","Brok"],"correct":2,"difficulty":"difficile"},
+  {"text":"Quelle arme nordique devient l'arme principale de Kratos dans God of War (2018) ?","answers":["Mjölnir","Draupnir","La lame de l'Olympe","La hache Léviathan"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Quel aventurier est le héros principal de la série Uncharted ?","answers":["Nathan Drake","Joel Miller","Cole MacGrath","Delsin Rowe"],"correct":0,"difficulty":"facile"},
+  {"text":"Quel studio a créé la série Uncharted ?","answers":["Insomniac Games","Naughty Dog","Guerrilla","Housemarque"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel est le titre du premier jeu Uncharted ?","answers":["Among Thieves","Drake's Deception","Drake's Fortune","A Thief's End"],"correct":2,"difficulty":"difficile"},
+  {"text":"Comment se nomme le mentor et ami de Nathan Drake ?","answers":["Sam Drake","Rafe Adler","Charlie Cutter","Victor Sullivan"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quelle aventurière est l'héroïne jouable principale d'Uncharted: The Lost Legacy ?","answers":["Chloe Frazer","Elena Fisher","Nadine Ross","Cassie Drake"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quels sont les deux protagonistes centraux du premier The Last of Us ?","answers":["Abby et Lev","Joel et Ellie","Tommy et Maria","Tess et Bill"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel studio développe The Last of Us ?","answers":["Santa Monica Studio","Bend Studio","Naughty Dog","Bluepoint Games"],"correct":2,"difficulty":"moyen"},
+  {"text":"Sur quelle console le premier The Last of Us est-il initialement sorti en 2013 ?","answers":["PS2","PS4","PS5","PS3"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel organisme est à l'origine de l'infection fictive dans The Last of Us ?","answers":["Un Cordyceps mutant","Une bactérie marine","Un prion","Un parasite extraterrestre"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel groupe militaire rebelle cherche un vaccin dans le premier The Last of Us ?","answers":["Le WLF","Les Lucioles","Les Séraphites","FEDRA"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Comment se nomme l'héroïne de Horizon Zero Dawn ?","answers":["Seyka","Talanah","Aloy","Beta"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel studio néerlandais développe la série Horizon ?","answers":["Housemarque","Media Molecule","Nixxes","Guerrilla"],"correct":3,"difficulty":"moyen"},
+  {"text":"En quelle année Horizon Zero Dawn est-il sorti sur PS4 ?","answers":["2017","2015","2016","2018"],"correct":0,"difficulty":"difficile"},
+  {"text":"Comment se nomme la suite directe de Horizon Zero Dawn sortie en 2022 ?","answers":["Horizon Call of the Mountain","Horizon Forbidden West","Horizon Burning Shores","Horizon Frozen Wilds"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel appareil porté à la tempe permet à Aloy d'analyser son environnement ?","answers":["Un Scanlink","Un Écho","Un Focus","Un Relais"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quelle espèce est Ratchet dans Ratchet & Clank ?","answers":["Un robot","Un marsupial","Un félin","Un Lombax"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel studio développe la série Ratchet & Clank ?","answers":["Insomniac Games","Naughty Dog","Sucker Punch","Guerrilla"],"correct":0,"difficulty":"moyen"},
+  {"text":"Sur quelle console le premier Ratchet & Clank est-il sorti ?","answers":["PlayStation","PlayStation 2","PlayStation 3","PSP"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel objet permet les déplacements entre dimensions dans Rift Apart ?","answers":["Le Dimensionator","Le RYNO","La Grande Horloge","Le Rift Tether"],"correct":2,"difficulty":"difficile"},
+  {"text":"Comment se nomme la Lombax jouable introduite dans Rift Apart ?","answers":["Angela","Talwyn","Kit","Rivet"],"correct":3,"difficulty":"expert"},
+
+  {"text":"Comment s'appelle la mascotte en toile de LittleBigPlanet ?","answers":["Sackboy","Astro","Knack","Pippo"],"correct":0,"difficulty":"facile"},
+  {"text":"Quel studio britannique a créé LittleBigPlanet ?","answers":["London Studio","Media Molecule","Team Asobi","Guerrilla Cambridge"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quel principe résume le cœur communautaire de LittleBigPlanet ?","answers":["Courir, tirer, gagner","Explorer, capturer, combattre","Jouer, créer, partager","Construire, vendre, collectionner"],"correct":2,"difficulty":"difficile"},
+  {"text":"Sur quelle console le premier LittleBigPlanet est-il sorti en 2008 ?","answers":["PSP","PS2","PS Vita","PS3"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel jeu de Media Molecule permet de créer des expériences avec les outils appelés imp et DreamShaping ?","answers":["Dreams","Tearaway","Concrete Genie","ModNation Racers"],"correct":0,"difficulty":"expert"},
+
+  {"text":"Quel samouraï est le héros de Ghost of Tsushima ?","answers":["Kazumasa Sakai","Jin Sakai","Ryuzo","Shimura"],"correct":1,"difficulty":"facile"},
+  {"text":"Quel studio a développé Ghost of Tsushima ?","answers":["Bend Studio","Japan Studio","Sucker Punch Productions","Bluepoint Games"],"correct":2,"difficulty":"moyen"},
+  {"text":"Sur quelle île japonaise se déroule principalement Ghost of Tsushima ?","answers":["Hokkaidō","Iki","Okinawa","Tsushima"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quelle invasion historique sert de cadre au début de Ghost of Tsushima ?","answers":["L'invasion mongole de 1274","L'invasion mongole de 1281 uniquement","La guerre de Boshin","L'invasion de la Corée par Hideyoshi"],"correct":0,"difficulty":"difficile"},
+  {"text":"Quel réalisateur japonais a donné son nom au mode noir et blanc de Ghost of Tsushima ?","answers":["Yasujirō Ozu","Akira Kurosawa","Kenji Mizoguchi","Masaki Kobayashi"],"correct":1,"difficulty":"expert"},
+
+  {"text":"Quel petit robot est devenu une mascotte récente de PlayStation ?","answers":["Clank","Sackboy","Astro Bot","Koro"],"correct":2,"difficulty":"facile"},
+  {"text":"Quel studio japonais développe les jeux Astro Bot ?","answers":["Polyphony Digital","Japan Studio externe","Square Enix","Team Asobi"],"correct":3,"difficulty":"moyen"},
+  {"text":"Quel jeu Astro était préinstallé sur chaque PS5 au lancement ?","answers":["Astro's Playroom","Astro Bot Rescue Mission","The Playroom VR","Astro Bot"],"correct":0,"difficulty":"difficile"},
+  {"text":"Pour quel casque Astro Bot Rescue Mission fut-il conçu ?","answers":["PS VR2","PlayStation VR","Oculus Rift","HTC Vive"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quelle manette Astro's Playroom sert-il particulièrement à présenter ?","answers":["DualShock 4","PlayStation Move","DualSense","DualSense Edge uniquement"],"correct":2,"difficulty":"expert"},
+
+  {"text":"Quel jeu met en scène Wander face à des géants dans une terre interdite ?","answers":["Ico","The Last Guardian","Demon's Souls","Shadow of the Colossus"],"correct":3,"difficulty":"facile"},
+  {"text":"Quel créateur japonais a dirigé Shadow of the Colossus ?","answers":["Fumito Ueda","Hideo Kojima","Kazunori Yamauchi","Keiichiro Toyama"],"correct":0,"difficulty":"moyen"},
+  {"text":"Comment se nomme le cheval de Wander dans Shadow of the Colossus ?","answers":["Trico","Agro","Epona","Yorda"],"correct":1,"difficulty":"difficile"},
+  {"text":"Quel studio a réalisé le remake PS4 de Shadow of the Colossus ?","answers":["Team Asobi","Japan Studio","Bluepoint Games","Media Molecule"],"correct":2,"difficulty":"difficile"},
+  {"text":"Combien de colosses Wander doit-il vaincre dans Shadow of the Colossus ?","answers":["Douze","Quatorze","Dix-huit","Seize"],"correct":3,"difficulty":"expert"}
 ]
