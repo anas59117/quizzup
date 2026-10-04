@@ -72,6 +72,8 @@ if (process.env.NODE_ENV === 'production' && !process.env.DATA_DIR) {
 }
 
 const waitingPlayers = [];
+// How long a quick-match player waits for a human before the robot joins.
+const BOT_MATCH_DELAY_MS = 8000;
 const privateRooms = new Map();
 const connectionsByIp = new Map();
 const roomByClient = new Map();
@@ -651,12 +653,12 @@ function requireAuth(ws, state) {
   return false;
 }
 
-function startGameGuarded(players, categoryKey) {
+function startGameGuarded(players, categoryKey, options = {}) {
   players.forEach((p) => {
     pendingPlayers.add(p.id);
     if (p.clientId) pendingClients.add(p.clientId);
   });
-  return game.startGame(players, categoryKey)
+  return game.startGame(players, categoryKey, options)
     .catch((err) => {
       const code = err && err.message ? err.message : 'GAME_START_FAILED';
       const recoverable = code === 'CLIENT_ALREADY_PLAYING';
@@ -731,8 +733,17 @@ function handleGameplay(ws, data, state) {
       const opp = waitingPlayers.splice(oppIdx, 1)[0];
       startGameGuarded([opp, { ws, id: playerId, clientId: state.clientId, name: state.name, avatar }], categoryKey);
     } else {
-      waitingPlayers.push({ ws, id: playerId, clientId: state.clientId, name: state.name, avatar, categoryKey });
+      const entry = { ws, id: playerId, clientId: state.clientId, name: state.name, avatar, categoryKey };
+      waitingPlayers.push(entry);
       game.send(ws, { type: 'waiting' });
+      // Nobody else online for this theme: after a short wait, play against
+      // the clearly labelled robot instead of leaving the player stuck.
+      setTimeout(() => {
+        const idx = waitingPlayers.indexOf(entry);
+        if (idx === -1 || entry.ws.readyState !== 1 || isBusy(entry.id, entry.clientId)) return;
+        waitingPlayers.splice(idx, 1);
+        startGameGuarded([entry], categoryKey, { withBot: true });
+      }, BOT_MATCH_DELAY_MS);
     }
     return true;
   }
@@ -870,7 +881,7 @@ function handleGameplay(ws, data, state) {
     }
 
     request.players.forEach((p) => game.send(p.ws, { type: 'rematch_starting' }));
-    startGameGuarded(request.players, request.categoryKey);
+    startGameGuarded(request.players, request.categoryKey, { withBot: !!request.withBot });
     return true;
   }
 

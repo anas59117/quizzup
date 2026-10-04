@@ -891,7 +891,7 @@ const CATEGORIES = {
     questions: [...playersTennis],
   },
   basketball: {
-    label: 'Basketball',
+    label: 'Basketteurs en photo',
     icon: '🏀',
     questions: [...playersBasketball],
   },
@@ -901,7 +901,7 @@ const CATEGORIES = {
     questions: [...playersRugby],
   },
   boxe: {
-    label: 'Boxe',
+    label: 'Boxeurs en photo',
     icon: '🥊',
     questions: [...playersBoxe],
   },
@@ -975,7 +975,7 @@ const CATEGORIES = {
   univers_mario: { label: 'Univers Mario', icon: '🍄', questions: [...universMario] },
   rugby_coupe_du_monde: { label: 'Rugby Coupe du Monde', icon: '🏉', questions: [...rugbyCoupeDuMonde] },
   xv_de_france: { label: 'XV de France', icon: '🐓', questions: [...xvDeFrance] },
-  boxe_champions: { label: 'Boxe (champions)', icon: '🥊', questions: [...boxeChampions] },
+  boxe_champions: { label: 'Boxe : champions & combats', icon: '🥊', questions: [...boxeChampions] },
   handball: { label: 'Handball', icon: '🤾', questions: [...handball] },
   nfl: { label: 'NFL', icon: '🏈', questions: [...nfl] },
   gymnastique: { label: 'Gymnastique', icon: '🤸', questions: [...gymnastique] },

@@ -680,3 +680,53 @@ test('pending rematch request is released when finished-game retention expires',
     global.setTimeout = originalSetTimeout;
   }
 });
+
+test('long questions get extra answer time', () => {
+  assert.equal(game.timeLimitFor({ text: 'Court ?' }), 10);
+  assert.equal(game.timeLimitFor({ text: 'x'.repeat(120) }), 13);
+  assert.equal(game.timeLimitFor({ text: 'x'.repeat(180) }), 15);
+});
+
+test('answers are accepted until the per-question limit, not the default one', () => {
+  const g = {
+    status: 'active', phase: 'question', currentRound: 0,
+    questionStart: performance.now() - 12000, timeLimit: 15,
+    questions: [{ correct: 0 }],
+    players: [{ id: 'p1', ws: fakeWs(), connected: true, score: 0 }, { id: 'p2', ws: fakeWs(), connected: true, score: 0 }],
+    roundAnswers: {}, roundTimer: null,
+  };
+  game.recordAnswer(g, 'p1', 0);
+  assert.ok(g.roundAnswers.p1, 'answer after 12 s must count when the limit is 15 s');
+  assert.ok(g.players[0].score > 0);
+});
+
+test('the robot answers on its own and the round is revealed', () => {
+  const human = fakeWs();
+  const g = {
+    status: 'active', phase: 'question', currentRound: 0,
+    questionStart: performance.now(), timeLimit: 10,
+    questions: [{ correct: 2, difficulty: 'easy' }],
+    players: [
+      { id: 'p1', ws: human, connected: true, score: 0 },
+      { id: 'bot_1', ws: null, connected: true, score: 0, isBot: true },
+    ],
+    roundAnswers: {}, roundTimer: null, botTimers: [],
+  };
+  const originalSetTimeout = global.setTimeout;
+  const scheduled = [];
+  global.setTimeout = (fn, ms) => { scheduled.push({ fn, ms }); return scheduled.length; };
+  try {
+    game.scheduleBotAnswers(g, () => 0);
+  } finally {
+    global.setTimeout = originalSetTimeout;
+  }
+  assert.equal(scheduled.length, 1);
+  assert.equal(scheduled[0].ms, 1500);
+  scheduled[0].fn();
+  assert.deepEqual(g.roundAnswers.bot_1 && g.roundAnswers.bot_1.answerIndex, 2);
+  game.recordAnswer(g, 'p1', 1);
+  assert.equal(g.phase, 'revealed');
+  const result = human.messages.find((m) => m.type === 'round_result');
+  assert.equal(result.others[0].correct, true);
+  if (g.roundTimer) clearTimeout(g.roundTimer);
+});

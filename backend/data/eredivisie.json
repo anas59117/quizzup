@@ -100,6 +100,16 @@
     "correct": 0
   },
   {
+    "text": "Combien de clubs disputent l'Eredivisie chaque saison ?",
+    "answers": [
+      "18",
+      "20",
+      "16",
+      "14"
+    ],
+    "correct": 0
+  },
+  {
     "text": "Quel attaquant néerlandais, formé à l'Ajax, devient une star d'Arsenal dans les années 1990-2000, réputé pour sa technique ?",
     "answers": [
       "Dennis Bergkamp",
@@ -198,6 +208,76 @@
       "Dick Advocaat"
     ],
     "correct": 0
+  },
+  {
+    "text": "En quelle année l'Eredivisie, le championnat professionnel néerlandais, est-elle fondée ?",
+    "answers": [
+      "1946",
+      "1956",
+      "1966",
+      "1976"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel club remporte le tout premier titre de l'histoire de l'Eredivisie, lors de la saison inaugurale ?",
+    "answers": [
+      "Feyenoord",
+      "PSV Eindhoven",
+      "Sparta Rotterdam",
+      "Ajax Amsterdam"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel entraîneur anglais mène le FC Twente au premier titre de champion de son histoire, en 2010 ?",
+    "answers": [
+      "Roy Hodgson",
+      "Harry Redknapp",
+      "Sam Allardyce",
+      "Steve McClaren"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel attaquant brésilien du PSV termine meilleur buteur de l'Eredivisie 1994-1995 avec 30 buts ?",
+    "answers": [
+      "Ronaldo",
+      "Romário",
+      "Bebeto",
+      "Rivaldo"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En 2017, quel ex-joueur de Liverpool offre le titre au Feyenoord grâce à un triplé contre Heracles ?",
+    "answers": [
+      "Robin van Persie",
+      "Dirk Kuyt",
+      "Giovanni van Bronckhorst",
+      "Georginio Wijnaldum"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel entraîneur néerlandais conduit le Feyenoord au titre de champion 2022-2023 ?",
+    "answers": [
+      "Ronald Koeman",
+      "Erik ten Hag",
+      "Arne Slot",
+      "Peter Bosz"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "En 1996, quel club bat l'Ajax aux tirs au but en finale de la Ligue des champions, à Rome ?",
+    "answers": [
+      "AC Milan",
+      "Real Madrid",
+      "Juventus",
+      "Bayern Munich"
+    ],
+    "correct": 2
   },
   {
     "text": "En 1988, quel club néerlandais remporte la Coupe d'Europe des clubs champions (ancêtre de la Ligue des Champions) aux tirs au but face au Benfica ?",
@@ -300,6 +380,46 @@
     "correct": 0
   },
   {
+    "text": "Avec 311 buts, quel attaquant du PSV est le meilleur buteur de l'histoire de l'Eredivisie ?",
+    "answers": [
+      "Kees Kist",
+      "Luuk de Jong",
+      "Willy van der Kuijlen",
+      "Ruud Gullit"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "En 2007, quel attaquant brésilien d'Heerenveen marque 7 buts en un seul match face à Heracles Almelo ?",
+    "answers": [
+      "Romário",
+      "Alex",
+      "Afonso Alves",
+      "Mateja Kezman"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "En 1970, contre quel club écossais le Feyenoord remporte-t-il la Coupe des clubs champions ?",
+    "answers": [
+      "Rangers",
+      "Aberdeen",
+      "Hibernian",
+      "Celtic Glasgow"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "En 1971 à Wembley, quel club grec l'Ajax bat-il pour remporter sa première Coupe des clubs champions ?",
+    "answers": [
+      "Panathinaikos",
+      "Olympiakos",
+      "AEK Athènes",
+      "PAOK Salonique"
+    ],
+    "correct": 0
+  },
+  {
     "text": "Quel milieu offensif marocain, formé à l'Ajax dans les années 2010, brille ensuite à Chelsea ?",
     "answers": [
       "Hakim Ziyech",
@@ -398,5 +518,35 @@
       "Antony"
     ],
     "correct": 0
+  },
+  {
+    "text": "Quel joueur détient le record de buts sur une seule saison d'Eredivisie, avec 43 réalisations ?",
+    "answers": [
+      "Ruud Geels",
+      "Coen Dillen",
+      "Marco van Basten",
+      "Luis Suárez"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Avec 265 buts, quel attaquant est le deuxième meilleur buteur de l'histoire de l'Eredivisie ?",
+    "answers": [
+      "Ruud Geels",
+      "Klaas-Jan Huntelaar",
+      "Patrick Kluivert",
+      "Pierre van Hooijdonk"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "En 1992, face à quel club italien l'Ajax remporte-t-il la Coupe UEFA, grâce aux buts à l'extérieur ?",
+    "answers": [
+      "Parme",
+      "Torino",
+      "Naples",
+      "Fiorentina"
+    ],
+    "correct": 1
   }
 ]

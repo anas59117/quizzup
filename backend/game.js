@@ -34,8 +34,16 @@ function pickRandomCategory() {
   return cats.length ? cats[Math.floor(Math.random() * cats.length)].key : null;
 }
 
-function scoreAnswer(elapsedMs, isFinalRound) {
-  const t = GAME_CONFIG.TIME_PER_QUESTION * 1000;
+// Long questions get a few extra seconds so players have time to read them.
+function timeLimitFor(question) {
+  const len = question && typeof question.text === 'string' ? question.text.length : 0;
+  if (len > 150) return GAME_CONFIG.TIME_PER_QUESTION + 5;
+  if (len > 100) return GAME_CONFIG.TIME_PER_QUESTION + 3;
+  return GAME_CONFIG.TIME_PER_QUESTION;
+}
+
+function scoreAnswer(elapsedMs, isFinalRound, timeLimitSec = GAME_CONFIG.TIME_PER_QUESTION) {
+  const t = timeLimitSec * 1000;
   const frac = Math.max(0, Math.min(1, 1 - elapsedMs / t));
   const range = GAME_CONFIG.BASE_POINTS - GAME_CONFIG.MIN_POINTS;
   let pts = Math.round(GAME_CONFIG.MIN_POINTS + range * frac);
@@ -59,7 +67,45 @@ function allPlayersAnswered(game) {
   return game.players.length > 0 && game.players.every((p) => game.roundAnswers[p.id]);
 }
 
-async function startGame(rawPlayers, categoryKey) {
+// A bot fills in when nobody else is in the queue. It is clearly labelled as
+// a robot, never has a clientId and is skipped by every stats/progress path.
+const BOT_NAME = 'Robot QuizzUp';
+const BOT_AVATAR = '\u{1F916}';
+const BOT_ACCURACY = { easy: 0.8, medium: 0.65, hard: 0.5, expert: 0.35 };
+
+function createBot() {
+  return {
+    ws: null, id: rid('bot_'), clientId: null,
+    name: BOT_NAME, avatar: BOT_AVATAR,
+    score: 0, connected: true, reconnectTimer: null, isBot: true,
+  };
+}
+
+function clearBotTimers(game) {
+  (game.botTimers || []).forEach((t) => clearTimeout(t));
+  game.botTimers = [];
+}
+
+function scheduleBotAnswers(game, random = Math.random) {
+  clearBotTimers(game);
+  const q = game.questions[game.currentRound];
+  if (!q) return;
+  const round = game.currentRound;
+  const limitMs = (game.timeLimit || GAME_CONFIG.TIME_PER_QUESTION) * 1000;
+  game.players.filter((p) => p.isBot).forEach((bot) => {
+    const accuracy = BOT_ACCURACY[q.difficulty] ?? 0.6;
+    const correct = random() < accuracy;
+    const wrong = [0, 1, 2, 3].filter((i) => i !== q.correct);
+    const answerIndex = correct ? q.correct : wrong[Math.floor(random() * wrong.length)];
+    const delay = Math.round(1500 + random() * Math.max(0, limitMs - 3000));
+    game.botTimers.push(setTimeout(() => {
+      if (game.status !== 'active' || game.phase !== 'question' || game.currentRound !== round) return;
+      recordAnswer(game, bot.id, answerIndex);
+    }, delay));
+  });
+}
+
+async function startGame(rawPlayers, categoryKey, { withBot = false } = {}) {
   if (!rawPlayers.length) throw new Error('NO_PLAYERS');
 
   // Gameplay and persistent progression require a verified identity.
@@ -102,11 +148,14 @@ async function startGame(rawPlayers, categoryKey) {
 
     const game = {
       id: gameId,
-      players: rawPlayers.map((p) => ({
-        ws: p.ws, id: p.id, clientId: p.clientId,
-        name: p.name, avatar: p.avatar || '\u{1F43A}',
-        score: 0, connected: true, reconnectTimer: null,
-      })),
+      players: [
+        ...rawPlayers.map((p) => ({
+          ws: p.ws, id: p.id, clientId: p.clientId,
+          name: p.name, avatar: p.avatar || '\u{1F43A}',
+          score: 0, connected: true, reconnectTimer: null,
+        })),
+        ...(withBot ? [createBot()] : []),
+      ],
       questions,
       currentRound: -1,
       questionStart: 0,
@@ -115,7 +164,8 @@ async function startGame(rawPlayers, categoryKey) {
       roundTimer: null,
       phase: 'idle',
       status: 'active',
-      mode: rawPlayers.length === 1 ? 'solo' : 'multiplayer',
+      mode: withBot ? 'bot' : rawPlayers.length === 1 ? 'solo' : 'multiplayer',
+      botTimers: [],
       categoryKey: resolvedCategory,
       rematchRequests: new Set(),
     };
@@ -125,9 +175,9 @@ async function startGame(rawPlayers, categoryKey) {
     } catch (err) {
       console.error('category-stats recordStart failed:', err);
     }
-    game.players.forEach((p) => playerSessions.set(p.id, gameId));
+    game.players.filter((p) => !p.isBot).forEach((p) => playerSessions.set(p.id, gameId));
 
-    game.players.forEach((p) => {
+    game.players.filter((p) => !p.isBot).forEach((p) => {
       send(p.ws, {
         type: 'game_start', gameId,
         you: { name: p.name, avatar: p.avatar },
@@ -175,26 +225,29 @@ function nextQuestion(game) {
     if (game.status !== 'active') return;
     game.phase = 'question';
     game.questionStart = performance.now();
+    game.timeLimit = timeLimitFor(q);
     activePlayers(game).forEach((p) => {
       send(p.ws, {
         type: 'question', round: nextRound + 1,
         totalRounds: game.questions.length,
         question: q.text, category: q.category, icon: q.icon, difficulty: q.difficulty,
-        answers: q.answers, timeLimit: GAME_CONFIG.TIME_PER_QUESTION,
+        answers: q.answers, timeLimit: game.timeLimit,
         isBonus: isFinal,
         image: q.image || null, credit: q.credit || null,
       });
     });
     game.roundTimer = setTimeout(
       () => revealRound(game, true),
-      GAME_CONFIG.TIME_PER_QUESTION * 1000 + 500
+      game.timeLimit * 1000 + 500
     );
+    scheduleBotAnswers(game);
   }, GAME_CONFIG.INTRO_MS);
 }
 
 function revealRound(game, timedOut) {
   if (game.status !== 'active' || game.phase !== 'question') return;
   if (game.roundTimer) clearTimeout(game.roundTimer);
+  clearBotTimers(game);
   game.phase = 'revealed';
   const q = game.questions[game.currentRound];
 
@@ -230,12 +283,13 @@ function recordAnswer(game, playerId, answerIndex) {
   if (game.roundAnswers[playerId]) return;
 
   const elapsedMs = performance.now() - game.questionStart;
-  if (elapsedMs < 0 || elapsedMs > GAME_CONFIG.TIME_PER_QUESTION * 1000) return;
+  const limitSec = game.timeLimit || GAME_CONFIG.TIME_PER_QUESTION;
+  if (elapsedMs < 0 || elapsedMs > limitSec * 1000) return;
 
   const q = game.questions[game.currentRound];
   const isCorrect = answerIndex === q.correct;
   const isFinal = game.currentRound === game.questions.length - 1;
-  const points = isCorrect ? scoreAnswer(elapsedMs, isFinal) : 0;
+  const points = isCorrect ? scoreAnswer(elapsedMs, isFinal, limitSec) : 0;
   if (isCorrect) game.players[idx].score += points;
 
   game.roundAnswers[playerId] = { answerIndex, correct: isCorrect, elapsedMs, points };
@@ -260,7 +314,7 @@ function removePlayer(game, playerId) {
   // abandonment must not break a PvP win streak.
   stats.recordResult(left.clientId, false, game.mode === 'solo', 0);
 
-  if (game.players.length < 2) {
+  if (game.players.length < 2 || game.players.every((p) => p.isBot)) {
     endGame(game, 'opponent_disconnected');
     return;
   }
@@ -354,7 +408,7 @@ function sendCurrentState(game, player) {
     });
   } else if (game.phase === 'question') {
     const elapsed = performance.now() - game.questionStart;
-    const remainingMs = Math.max(0, GAME_CONFIG.TIME_PER_QUESTION * 1000 - elapsed);
+    const remainingMs = Math.max(0, (game.timeLimit || GAME_CONFIG.TIME_PER_QUESTION) * 1000 - elapsed);
     const expired = remainingMs <= 0;
     const mine = game.roundAnswers[player.id];
     send(player.ws, {
@@ -473,14 +527,15 @@ function requestRematch(clientId) {
   }
 
   game.rematchRequests.add(clientId);
-  const allRequested = game.players.every((p) => game.rematchRequests.has(p.clientId));
-  const allConnected = game.players.every((p) => p.ws && p.ws.readyState === 1);
+  const humans = game.players.filter((p) => !p.isBot);
+  const allRequested = humans.every((p) => game.rematchRequests.has(p.clientId));
+  const allConnected = humans.every((p) => p.ws && p.ws.readyState === 1);
 
   if (!allRequested || !allConnected) {
     return { status: 'waiting', game };
   }
 
-  const players = game.players.map((p) => ({
+  const players = humans.map((p) => ({
     ws: p.ws,
     id: p.id,
     clientId: p.clientId,
@@ -493,6 +548,7 @@ function requestRematch(clientId) {
     game,
     players,
     categoryKey: game.categoryKey || null,
+    withBot: game.mode === 'bot',
   };
 }
 
@@ -508,6 +564,7 @@ function endGame(game, reason) {
   game.phase = 'finished';
   game.finishedAt = Date.now();
   if (game.roundTimer) clearTimeout(game.roundTimer);
+  clearBotTimers(game);
   try {
     // Real games always have identified players (startGame enforces it);
     // skip anonymous/test sessions so they don't pollute the analytics.
@@ -520,6 +577,9 @@ function endGame(game, reason) {
   game.players.forEach((p) => { if (p.reconnectTimer) clearTimeout(p.reconnectTimer); });
 
   const isSolo = game.mode === 'solo';
+  // Wins against the robot count as games played but never feed the PvP win
+  // streak, and only earn a reduced bonus so bots cannot be farmed.
+  const isBotGame = game.mode === 'bot';
   const topScore = Math.max(...game.players.map((p) => p.score));
   const winners = game.players.filter((p) => p.score === topScore);
   const isTie = !isSolo && winners.length > 1;
@@ -527,15 +587,15 @@ function endGame(game, reason) {
     .map((p) => ({ id: p.id, name: p.name, avatar: p.avatar, score: p.score }))
     .sort((x, y) => y.score - x.score);
 
-  game.players.forEach((p) => {
+  game.players.filter((p) => !p.isBot).forEach((p) => {
     const won = !isSolo && !isTie && p.score === topScore;
     const finishBonus = 40;
-    const winBonus = isSolo ? 0 : won ? 100 : isTie ? 50 : 0;
+    const winBonus = isSolo ? 0 : isBotGame ? (won ? 40 : isTie ? 20 : 0) : won ? 100 : isTie ? 50 : 0;
     const xpTotal = p.score + finishBonus + winBonus;
-    const coinsEarned = isSolo ? 20 : won ? 50 : isTie ? 35 : 20;
-    // Solo sessions count as games played but neither extend nor break a PvP
-    // win streak, and they cannot farm the multiplayer win bonus.
-    stats.recordResult(p.clientId, won, isSolo || isTie, xpTotal, coinsEarned);
+    const coinsEarned = isSolo ? 20 : isBotGame ? (won ? 30 : 20) : won ? 50 : isTie ? 35 : 20;
+    // Solo and bot sessions count as games played but neither extend nor
+    // break a PvP win streak, and they cannot farm the multiplayer win bonus.
+    stats.recordResult(p.clientId, won, isSolo || isTie || isBotGame, xpTotal, coinsEarned);
     let day = { dayStreak: 0, increased: false };
     try {
       day = stats.recordPlayDay(p.clientId);
@@ -557,6 +617,7 @@ function endGame(game, reason) {
     const finalResult = {
       type: 'game_end', finalScore: p.score,
       solo: isSolo,
+      bot: isBotGame,
       won, tie: isTie,
       others: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, score: o.score, clientId: o.clientId })),
       leaderboard: board, reason: reason || 'complete',
@@ -602,4 +663,5 @@ module.exports = {
   disconnectPlayer, reconnectPlayer, reattachFinishedPlayer,
   findActiveSessionByClientId, findFinishedSessionByClientId,
   requestRematch, cancelRematch, setTopicProgressListener,
+  timeLimitFor, scheduleBotAnswers, BOT_NAME,
 };
