@@ -462,6 +462,8 @@ const fastFood = require('./data/fast_food.json');
 const annees_2000 = require('./data/annees_2000.json');
 const internetReseauxSociaux = require('./data/internet_reseaux_sociaux.json');
 const monumentsDeFrance = require('./data/monuments_de_france.json');
+const geographieDeFrance = require('./data/geographie_de_france.json');
+const ballonDOr = require('./data/ballon_d_or.json');
 
 
 
@@ -1294,6 +1296,8 @@ const CATEGORIES = {
   annees_2000: { label: "Années 2000", icon: "✨", questions: [...annees_2000] },
   internet_reseaux_sociaux: { label: "Internet et réseaux sociaux", icon: "✨", questions: [...internetReseauxSociaux] },
   monuments_de_france: { label: "Monuments de France", icon: "✨", questions: [...monumentsDeFrance] },
+  geographie_de_france: { label: "Géographie de France", icon: "🗺️", questions: [...geographieDeFrance] },
+  ballon_d_or: { label: "Ballon d’Or", icon: "⚽", questions: [...ballonDOr] },
 };
 
 function shuffleQuestions(items, random = Math.random) {

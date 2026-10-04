@@ -548,6 +548,25 @@
       "categories": [
         "batman"
       ]
+    },
+    {
+      "name": "geographie-ballon-dor-1",
+      "minimumQuestions": 50,
+      "categories": [
+        "geographie_de_france",
+        "ballon_d_or"
+      ]
+    },
+    {
+      "name": "series-1",
+      "minimumQuestions": 50,
+      "categories": [
+        "kaamelott",
+        "lupin",
+        "arcane",
+        "bridgerton",
+        "gossip_girl"
+      ]
     }
   ]
 }
