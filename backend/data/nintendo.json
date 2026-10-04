@@ -2,501 +2,1101 @@
   {
     "text": "Dans quel pays Nintendo a-t-il été fondé ?",
     "answers": [
-      "Japon",
-      "États-Unis",
-      "France",
-      "Corée du Sud"
+      "Au Japon",
+      "Aux États-Unis",
+      "En Corée du Sud",
+      "En France"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel personnage moustachu est la mascotte de Nintendo ?",
+    "text": "Dans quelle ville se trouve le siège historique de Nintendo ?",
     "answers": [
-      "Link",
+      "Tokyo",
+      "Kyoto",
+      "Osaka",
+      "Nagoya"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel produit Nintendo fabriquait-il à ses débuts en 1889 ?",
+    "answers": [
+      "Des jouets électroniques",
+      "Des bornes d’arcade",
+      "Des cartes hanafuda",
+      "Des consoles portables"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui fonda l’entreprise à l’origine de Nintendo ?",
+    "answers": [
+      "Hiroshi Yamauchi",
+      "Gunpei Yokoi",
+      "Shigeru Miyamoto",
+      "Fusajiro Yamauchi"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sous quel nom l’entreprise fut-elle constituée en société en 1933 ?",
+    "answers": [
+      "Yamauchi Nintendo & Co.",
+      "Nintendo Entertainment Ltd.",
+      "Marufuku Games",
+      "Kyoto Playing Cards Inc."
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel nom japonais porte la NES ?",
+    "answers": [
+      "Super Famicom",
+      "Famicom",
+      "Color TV-Game",
+      "Disk System"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle console 16 bits a succédé à la NES ?",
+    "answers": [
+      "La Nintendo 64",
+      "La GameCube",
+      "La Super Nintendo",
+      "La Wii"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle console Nintendo utilise principalement des cartouches et une manette à trois branches ?",
+    "answers": [
+      "La GameCube",
+      "La Wii U",
+      "La Super Nintendo",
+      "La Nintendo 64"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle console de salon Nintendo emploie de petits disques optiques ?",
+    "answers": [
+      "La GameCube",
+      "La Nintendo 64",
+      "La NES",
+      "La Wii U"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel nom de code la GameCube portait-elle durant son développement ?",
+    "answers": [
+      "Revolution",
+      "Dolphin",
+      "Project Reality",
+      "NX"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle console a popularisé la télécommande Wiimote ?",
+    "answers": [
+      "La Wii U",
+      "La Nintendo DS",
+      "La Wii",
+      "La GameCube"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle console possède un GamePad doté d’un écran ?",
+    "answers": [
+      "La Wii",
+      "La Nintendo 3DS",
+      "La Switch Lite",
+      "La Wii U"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle console hybride est sortie en 2017 ?",
+    "answers": [
+      "La Nintendo Switch",
+      "La Wii U",
+      "La Nintendo 3DS",
+      "La GameCube"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment se nomment les manettes détachables de la Switch ?",
+    "answers": [
+      "Les Wii Remote",
+      "Les Joy-Con",
+      "Les WaveBird",
+      "Les GamePad"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel nom de code la Nintendo Switch portait-elle avant sa présentation ?",
+    "answers": [
+      "Revolution",
+      "Dolphin",
+      "NX",
+      "Project Cafe"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle console portable fut lancée avec Tetris en Amérique du Nord ?",
+    "answers": [
+      "La Game Gear",
+      "La Nintendo DS",
+      "La Game Boy Advance",
+      "La Game Boy"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle portable Nintendo possède deux écrans, dont un tactile ?",
+    "answers": [
+      "La Nintendo DS",
+      "La Game Boy Color",
+      "La Nintendo 3DS",
+      "La Virtual Boy"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle console portable affiche une 3D stéréoscopique sans lunettes ?",
+    "answers": [
+      "La DS Lite",
+      "La Nintendo 3DS",
+      "La Game Boy Advance SP",
+      "La Switch Lite"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel modèle de Game Boy Advance adopte un format à clapet ?",
+    "answers": [
+      "La Game Boy Micro",
+      "La Game Boy Pocket",
+      "La Game Boy Advance SP",
+      "La Game Boy Light"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel créateur de Nintendo conçut notamment la Game Boy et les Game & Watch ?",
+    "answers": [
+      "Masayuki Uemura",
+      "Genyo Takeda",
+      "Takashi Tezuka",
+      "Gunpei Yokoi"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel plombier moustachu est la mascotte de Nintendo ?",
+    "answers": [
       "Mario",
-      "Kirby",
-      "Samus"
+      "Luigi",
+      "Wario",
+      "Toad"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : fondateur de Nintendo comme fabricant de cartes hanafuda ?",
+    "text": "Comment s’appelle le frère de Mario ?",
+    "answers": [
+      "Waluigi",
+      "Luigi",
+      "Yoshi",
+      "Toad"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel ennemi enlève fréquemment la princesse Peach ?",
+    "answers": [
+      "Donkey Kong",
+      "King Boo",
+      "Bowser",
+      "Kamek"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel jeu Mario apparaît-il pour la première fois sous le nom de Jumpman ?",
+    "answers": [
+      "Mario Bros.",
+      "Super Mario Bros.",
+      "Donkey Kong Jr.",
+      "Donkey Kong"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel objet permet à Mario de lancer des boules de feu ?",
+    "answers": [
+      "La Fleur de feu",
+      "La Super Étoile",
+      "Le Champignon 1-Up",
+      "La Feuille Tanuki"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le héros jouable principal de The Legend of Zelda ?",
+    "answers": [
+      "Zelda",
+      "Link",
+      "Ganondorf",
+      "Tingle"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quel royaume se déroule une grande partie de la série Zelda ?",
+    "answers": [
+      "Termina",
+      "Koholint",
+      "Hyrule",
+      "Labrynna"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s’appelle l’épée légendaire de Link ?",
+    "answers": [
+      "La Lame sacrée",
+      "L’Épée des Quatre",
+      "La Lame d’Hylia",
+      "L’Épée de légende"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel instrument donne son titre à un Zelda sorti sur Nintendo 64 ?",
+    "answers": [
+      "Un ocarina",
+      "Une harpe",
+      "Une flûte de pan",
+      "Un tambour"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel peuple aquatique apparaît régulièrement dans Zelda ?",
+    "answers": [
+      "Les Gorons",
+      "Les Zoras",
+      "Les Kokiris",
+      "Les Piafs"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Pokémon jaune est la mascotte la plus célèbre de la licence ?",
+    "answers": [
+      "Évoli",
+      "Miaouss",
+      "Pikachu",
+      "Rondoudou"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel professeur remet le premier Pokémon dans Rouge et Bleu ?",
+    "answers": [
+      "Le professeur Orme",
+      "Le professeur Seko",
+      "Le professeur Sorbier",
+      "Le professeur Chen"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien de Pokémon compte le Pokédex original de Kanto ?",
+    "answers": [
+      "151",
+      "100",
+      "150 sans exception",
+      "251"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle société développe principalement les jeux Pokémon de la série principale ?",
+    "answers": [
+      "HAL Laboratory",
+      "Game Freak",
+      "Intelligent Systems",
+      "Retro Studios"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel duo de versions inaugure la région de Johto au Japon ?",
+    "answers": [
+      "Rubis et Saphir",
+      "Diamant et Perle",
+      "Or et Argent",
+      "Noir et Blanc"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel personnage rose peut aspirer ses ennemis ?",
+    "answers": [
+      "Jigglypuff",
+      "Meta Knight",
+      "Ness",
+      "Kirby"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Sur quelle planète Kirby vit-il principalement ?",
+    "answers": [
+      "Popstar",
+      "Zebes",
+      "Corneria",
+      "Hocotate"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel studio développe la série Kirby ?",
+    "answers": [
+      "Monolith Soft",
+      "HAL Laboratory",
+      "Retro Studios",
+      "Next Level Games"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel roi maniant un marteau est un rival récurrent de Kirby ?",
+    "answers": [
+      "Meta Knight",
+      "Magolor",
+      "Roi Dadidou",
+      "Marx"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel jeu Kirby obtient-il pour la première fois ses pouvoirs de copie ?",
+    "answers": [
+      "Kirby’s Dream Land",
+      "Kirby Super Star",
+      "Kirby 64",
+      "Kirby’s Adventure"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle chasseuse de primes est l’héroïne de Metroid ?",
+    "answers": [
+      "Samus Aran",
+      "Zelda",
+      "Palutena",
+      "Lucina"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle espèce parasite donne son nom à la série Metroid ?",
+    "answers": [
+      "Les X",
+      "Les Métroïdes",
+      "Les Ing",
+      "Les Chozo"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Sur quelle planète se déroule le premier Metroid ?",
+    "answers": [
+      "Tallon IV",
+      "SR388",
+      "Zebes",
+      "Aether"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel studio américain a développé Metroid Prime ?",
+    "answers": [
+      "Rare",
+      "Naughty Dog",
+      "Iguana Entertainment",
+      "Retro Studios"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel peuple ancien a élevé Samus et créé sa combinaison de puissance ?",
+    "answers": [
+      "Les Chozo",
+      "Les Luminoth",
+      "Les Ing",
+      "Les Space Pirates"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel gorille donne son nom à une série Nintendo ?",
+    "answers": [
+      "Funky Kong",
+      "Donkey Kong",
+      "Cranky Kong",
+      "Diddy Kong"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel compagnon porte une casquette rouge marquée Nintendo ?",
+    "answers": [
+      "Dixie Kong",
+      "Lanky Kong",
+      "Diddy Kong",
+      "Tiny Kong"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel studio britannique développa Donkey Kong Country ?",
+    "answers": [
+      "DMA Design",
+      "Bullfrog",
+      "Core Design",
+      "Rare"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel procédé graphique caractérise Donkey Kong Country sur Super Nintendo ?",
+    "answers": [
+      "Des sprites issus de modèles 3D pré-rendus",
+      "Des polygones filaires",
+      "Des cellules dessinées à la main uniquement",
+      "Des vidéos plein écran"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage est présenté comme le Donkey Kong âgé des jeux d’arcade ?",
+    "answers": [
+      "Funky Kong",
+      "Cranky Kong",
+      "Wrinkly Kong",
+      "Swanky Kong"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle série le joueur emménage-t-il dans un village d’animaux ?",
+    "answers": [
+      "Pikmin",
+      "Splatoon",
+      "Animal Crossing",
+      "EarthBound"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel personnage gère la boutique puis l’agence immobilière dans Animal Crossing ?",
+    "answers": [
+      "Kéké Laglisse",
+      "Thibou",
+      "Resetti",
+      "Tom Nook"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel musicien canin se produit le samedi soir ?",
+    "answers": [
+      "Kéké Laglisse",
+      "Rounard",
+      "Amiral",
+      "Robusto"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel hibou dirige le musée ?",
+    "answers": [
+      "Céleste",
+      "Thibou",
+      "Méli",
+      "Marie"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel épisode principal place le joueur sur une île déserte ?",
+    "answers": [
+      "New Leaf",
+      "Wild World",
+      "New Horizons",
+      "City Folk"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle série s’affrontent Inklings et Octalings ?",
+    "answers": [
+      "ARMS",
+      "Pikmin",
+      "F-Zero",
+      "Splatoon"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle substance colorée sert à couvrir le terrain dans Splatoon ?",
+    "answers": [
+      "De l’encre",
+      "De la peinture à l’huile",
+      "Du slime",
+      "De l’eau teintée"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s’appelle la place centrale du premier Splatoon ?",
+    "answers": [
+      "Cité-Clabousse",
+      "Chromapolis",
+      "Inkopolis Square",
+      "Alterna"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel duo présente les actualités dans le premier Splatoon ?",
+    "answers": [
+      "Tenta-Cool",
+      "Tridenfer",
+      "Les Calamazones",
+      "Chirpy Chips"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel mode classé demande de transporter une tour mobile ?",
+    "answers": [
+      "Défense de zone",
+      "Mission Bazookarpe",
+      "Pluie de palourdes",
+      "Expédition risquée"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel capitaine explore des planètes avec les Pikmin ?",
+    "answers": [
+      "Olimar",
+      "Louie",
+      "Alph",
+      "Charlie"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle couleur de Pikmin résiste au feu ?",
+    "answers": [
+      "Bleu",
+      "Rouge",
+      "Jaune",
+      "Blanc"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle couleur de Pikmin peut respirer sous l’eau ?",
+    "answers": [
+      "Rouge",
+      "Jaune",
+      "Bleu",
+      "Violet"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel objet permet aux Pikmin jaunes d’être lancés plus haut dans le premier jeu ?",
+    "answers": [
+      "Une fleur spéciale",
+      "Une armure",
+      "Un jetpack",
+      "Leur légèreté et leurs grandes oreilles"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel nom porte la planète d’origine d’Olimar ?",
+    "answers": [
+      "Hocotate",
+      "Koppai",
+      "PNF-404",
+      "Popstar"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel genre mêle stratégie au tour par tour et jeu de rôle dans Fire Emblem ?",
+    "answers": [
+      "Le jeu de rythme",
+      "Le tactical RPG",
+      "Le roguelike",
+      "Le jeu de course"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel studio développe principalement Fire Emblem ?",
+    "answers": [
+      "HAL Laboratory",
+      "Game Freak",
+      "Intelligent Systems",
+      "Retro Studios"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel prince aux cheveux bleus est le héros du premier Fire Emblem ?",
+    "answers": [
+      "Ike",
+      "Chrom",
+      "Roy",
+      "Marth"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel mécanisme historique de la série rendait définitive la mort d’une unité ?",
+    "answers": [
+      "La mort permanente",
+      "La fatigue",
+      "Le triangle des armes",
+      "Le brouillard de guerre"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans Three Houses, comment s’appelle le continent principal ?",
+    "answers": [
+      "Tellius",
+      "Fódlan",
+      "Ylisse",
+      "Magvel"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle série de combat réunit de nombreux personnages Nintendo ?",
+    "answers": [
+      "Mario Party",
+      "Nintendo Land",
+      "Super Smash Bros.",
+      "ARMS"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel créateur dirige la série Super Smash Bros. ?",
     "answers": [
       "Shigeru Miyamoto",
+      "Eiji Aonuma",
+      "Yoshiaki Koizumi",
+      "Masahiro Sakurai"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Sur quelle console sort le premier Super Smash Bros. ?",
+    "answers": [
       "Nintendo 64",
-      "Fusajirō Yamauchi",
-      "Nintendo Switch"
+      "Super Nintendo",
+      "GameCube",
+      "Dreamcast"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Nintendo », quelle description correspond à Fusajirō Yamauchi ?",
+    "text": "Quel jeu de la série porte le sous-titre Melee ?",
     "answers": [
-      "président qui a transformé Nintendo en géant du jeu vidéo",
-      "console cubique utilisant de petits disques optiques",
-      "console portable monochrome lancée avec Tetris",
-      "fondateur de Nintendo comme fabricant de cartes hanafuda"
+      "L’épisode Nintendo 64",
+      "L’épisode GameCube",
+      "L’épisode Wii",
+      "L’épisode Wii U"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Nintendo », à quelle catégorie appartient Fusajirō Yamauchi ?",
+    "text": "Quel boss gigantesque sert de menace finale dans le mode classique du premier jeu ?",
     "answers": [
-      "Personnalité",
-      "Console de salon",
-      "Accessoire",
-      "Service en ligne"
+      "Tabuu",
+      "Galeem",
+      "Master Hand",
+      "Crazy Hand"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : créateur majeur associé à Mario, Zelda et Donkey Kong ?",
+    "text": "Quelle série de course met Mario et ses amis au volant ?",
     "answers": [
-      "Hiroshi Yamauchi",
+      "F-Zero",
+      "Excitebike",
+      "Wave Race",
+      "Mario Kart"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel objet bleu poursuit généralement le pilote en tête ?",
+    "answers": [
+      "La carapace bleue",
+      "La carapace verte",
+      "Le Bob-omb",
+      "Le Bill Balle"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel premier épisode de Mario Kart sort sur Super Nintendo ?",
+    "answers": [
+      "Mario Kart 64",
+      "Super Mario Kart",
+      "Mario Kart: Super Circuit",
+      "Mario Kart DS"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel épisode introduit les motos dans la série principale ?",
+    "answers": [
+      "Double Dash!!",
+      "Mario Kart DS",
+      "Mario Kart Wii",
+      "Mario Kart 7"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel épisode permet d’associer deux personnages sur un même kart ?",
+    "answers": [
+      "Super Circuit",
+      "Mario Kart 8",
+      "Mario Kart Tour",
+      "Double Dash!!"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel pilote conduit le Blue Falcon dans F-Zero ?",
+    "answers": [
+      "Captain Falcon",
+      "Fox McCloud",
+      "Falco Lombardi",
+      "Samurai Goroh"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel renard dirige l’équipe Star Fox ?",
+    "answers": [
+      "Falco Lombardi",
+      "Fox McCloud",
+      "Peppy Hare",
+      "Wolf O’Donnell"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment se nomme le vaisseau principal piloté dans Star Fox ?",
+    "answers": [
+      "Le Great Fox",
+      "Le Blue Falcon",
+      "L’Arwing",
+      "Le Landmaster"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel jeu de course futuriste Nintendo débute sur Super Nintendo ?",
+    "answers": [
+      "Wave Race",
+      "1080° Snowboarding",
+      "Excitebike",
+      "F-Zero"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel scientifique ennemi menace le système Lylat dans Star Fox ?",
+    "answers": [
+      "Andross",
+      "General Scales",
+      "Pigma",
+      "Aparoid Queen"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel jeu Wii est fourni avec plusieurs sports utilisant les mouvements ?",
+    "answers": [
+      "Wii Play",
+      "Wii Sports",
+      "Wii Fit",
+      "Nintendo Land"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel accessoire d’équilibre accompagne Wii Fit ?",
+    "answers": [
+      "Le Wii Zapper",
+      "Le Power Pad",
+      "La Wii Balance Board",
+      "Le Ring-Con"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel jeu Switch utilise un anneau flexible pour faire de l’exercice ?",
+    "answers": [
+      "Nintendo Switch Sports",
+      "Fitness Boxing",
+      "1-2-Switch",
+      "Ring Fit Adventure"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel accessoire NES robotisé porte un nom en trois lettres ?",
+    "answers": [
+      "R.O.B.",
+      "U-Force",
+      "Power Glove",
+      "Zapper"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel périphérique sans fil officiel de GameCube porte un nom d’oiseau ?",
+    "answers": [
+      "Game Boy Player",
+      "WaveBird",
+      "DK Bongos",
+      "Broadband Adapter"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel créateur est étroitement associé à Mario, Zelda et Donkey Kong ?",
+    "answers": [
+      "Satoru Iwata",
+      "Gunpei Yokoi",
       "Shigeru Miyamoto",
-      "GameCube",
-      "Game Boy"
+      "Masahiro Sakurai"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Nintendo », quelle description correspond à Shigeru Miyamoto ?",
-    "answers": [
-      "console 8 bits connue au Japon sous le nom Famicom",
-      "console popularisant les commandes par mouvement avec la Wiimote",
-      "créateur majeur associé à Mario, Zelda et Donkey Kong",
-      "console portable à deux écrans dont un tactile"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Nintendo », à quelle catégorie appartient Shigeru Miyamoto ?",
-    "answers": [
-      "Console de salon",
-      "Accessoire",
-      "Service en ligne",
-      "Personnalité"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : président qui a transformé Nintendo en géant du jeu vidéo ?",
+    "text": "Quel président de Nintendo était auparavant programmeur chez HAL Laboratory ?",
     "answers": [
       "Hiroshi Yamauchi",
-      "Nintendo Entertainment System",
-      "Wii",
-      "Nintendo DS"
+      "Tatsumi Kimishima",
+      "Shuntaro Furukawa",
+      "Satoru Iwata"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Nintendo », quelle description correspond à Hiroshi Yamauchi ?",
+    "text": "Quel producteur est devenu la figure directrice de la série Zelda ?",
     "answers": [
-      "console 16 bits succédant à la NES",
-      "président qui a transformé Nintendo en géant du jeu vidéo",
-      "console équipée d’une manette GamePad avec écran",
-      "console portable affichant de la 3D sans lunettes"
+      "Eiji Aonuma",
+      "Koji Kondo",
+      "Takashi Tezuka",
+      "Yoshio Sakamoto"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Nintendo », à quelle catégorie appartient Hiroshi Yamauchi ?",
+    "text": "Quel compositeur a créé de nombreux thèmes emblématiques de Mario et Zelda ?",
     "answers": [
-      "Console de salon",
-      "Accessoire",
-      "Personnalité",
-      "Service en ligne"
+      "Nobuo Uematsu",
+      "Koji Kondo",
+      "Yoko Shimomura",
+      "Kenji Yamamoto"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : console 8 bits connue au Japon sous le nom Famicom ?",
+    "text": "Quel concepteur de matériel dirigea notamment le développement de la NES et de la Super Nintendo ?",
     "answers": [
-      "Super Nintendo",
-      "Wii U",
-      "Nintendo 3DS",
-      "Nintendo Entertainment System"
+      "Genyo Takeda",
+      "Gunpei Yokoi",
+      "Masayuki Uemura",
+      "Yoshiaki Koizumi"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans « Nintendo », quelle description correspond à Nintendo Entertainment System ?",
+    "text": "Quel jeu NES permet de tirer sur des canards avec le Zapper ?",
     "answers": [
-      "console 8 bits connue au Japon sous le nom Famicom",
-      "console de salon utilisant des cartouches et une manette à trois branches",
-      "console hybride utilisable sur téléviseur ou en mobilité",
-      "petites manettes détachables de la Nintendo Switch"
+      "Wild Gunman",
+      "Hogan’s Alley",
+      "Gumshoe",
+      "Duck Hunt"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans « Nintendo », à quelle catégorie appartient Nintendo Entertainment System ?",
+    "text": "Quel jeu de boxe NES met en scène Little Mac ?",
     "answers": [
-      "Personnalité",
-      "Console de salon",
-      "Accessoire",
-      "Service en ligne"
+      "Punch-Out!!",
+      "Pro Wrestling",
+      "Urban Champion",
+      "Ring King"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : console 16 bits succédant à la NES ?",
+    "text": "Dans EarthBound, comment s’appelle le jeune héros à casquette ?",
     "answers": [
-      "Nintendo 64",
-      "Nintendo Switch",
-      "Super Nintendo",
-      "Joy-Con"
+      "Lucas",
+      "Ness",
+      "Ninten",
+      "Jeff"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Nintendo », quelle description correspond à Super Nintendo ?",
+    "text": "Quel RPG de Super Nintendo réunit Mario et des personnages créés avec Square ?",
     "answers": [
-      "console cubique utilisant de petits disques optiques",
-      "console portable monochrome lancée avec Tetris",
-      "robot accessoire commercialisé avec la NES",
-      "console 16 bits succédant à la NES"
+      "Paper Mario",
+      "Mario & Luigi",
+      "Super Mario RPG",
+      "EarthBound"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans « Nintendo », à quelle catégorie appartient Super Nintendo ?",
+    "text": "Quel jeu de puzzle Nintendo met en scène le docteur Mario éliminant des virus ?",
     "answers": [
-      "Console de salon",
-      "Personnalité",
-      "Accessoire",
-      "Service en ligne"
+      "Yoshi’s Cookie",
+      "Panel de Pon",
+      "Wario’s Woods",
+      "Dr. Mario"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : console de salon utilisant des cartouches et une manette à trois branches ?",
-    "answers": [
-      "GameCube",
-      "Nintendo 64",
-      "Game Boy",
-      "R.O.B."
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Nintendo », quelle description correspond à Nintendo 64 ?",
-    "answers": [
-      "console popularisant les commandes par mouvement avec la Wiimote",
-      "console portable à deux écrans dont un tactile",
-      "console de salon utilisant des cartouches et une manette à trois branches",
-      "console sur pied à affichage rouge stéréoscopique"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Nintendo », à quelle catégorie appartient Nintendo 64 ?",
-    "answers": [
-      "Personnalité",
-      "Accessoire",
-      "Service en ligne",
-      "Console de salon"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : console cubique utilisant de petits disques optiques ?",
-    "answers": [
-      "GameCube",
-      "Wii",
-      "Nintendo DS",
-      "Virtual Boy"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Nintendo », quelle description correspond à GameCube ?",
-    "answers": [
-      "console équipée d’une manette GamePad avec écran",
-      "console cubique utilisant de petits disques optiques",
-      "console portable affichant de la 3D sans lunettes",
-      "fondateur de Nintendo comme fabricant de cartes hanafuda"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Nintendo », à quelle catégorie appartient GameCube ?",
-    "answers": [
-      "Personnalité",
-      "Accessoire",
-      "Console de salon",
-      "Service en ligne"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : console popularisant les commandes par mouvement avec la Wiimote ?",
-    "answers": [
-      "Wii U",
-      "Nintendo 3DS",
-      "Fusajirō Yamauchi",
-      "Wii"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Nintendo », quelle description correspond à Wii ?",
-    "answers": [
-      "console popularisant les commandes par mouvement avec la Wiimote",
-      "console hybride utilisable sur téléviseur ou en mobilité",
-      "petites manettes détachables de la Nintendo Switch",
-      "créateur majeur associé à Mario, Zelda et Donkey Kong"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Nintendo », à quelle catégorie appartient Wii ?",
-    "answers": [
-      "Personnalité",
-      "Console de salon",
-      "Accessoire",
-      "Service en ligne"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : console équipée d’une manette GamePad avec écran ?",
-    "answers": [
-      "Nintendo Switch",
-      "Joy-Con",
-      "Wii U",
-      "Shigeru Miyamoto"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Nintendo », quelle description correspond à Wii U ?",
-    "answers": [
-      "console portable monochrome lancée avec Tetris",
-      "robot accessoire commercialisé avec la NES",
-      "président qui a transformé Nintendo en géant du jeu vidéo",
-      "console équipée d’une manette GamePad avec écran"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Nintendo », à quelle catégorie appartient Wii U ?",
-    "answers": [
-      "Console de salon",
-      "Personnalité",
-      "Accessoire",
-      "Service en ligne"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : console hybride utilisable sur téléviseur ou en mobilité ?",
-    "answers": [
-      "Game Boy",
-      "Nintendo Switch",
-      "R.O.B.",
-      "Hiroshi Yamauchi"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Nintendo », quelle description correspond à Nintendo Switch ?",
-    "answers": [
-      "console portable à deux écrans dont un tactile",
-      "console sur pied à affichage rouge stéréoscopique",
-      "console hybride utilisable sur téléviseur ou en mobilité",
-      "console 8 bits connue au Japon sous le nom Famicom"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Nintendo », à quelle catégorie appartient Nintendo Switch ?",
-    "answers": [
-      "Personnalité",
-      "Accessoire",
-      "Service en ligne",
-      "Console hybride"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : console portable monochrome lancée avec Tetris ?",
-    "answers": [
-      "Game Boy",
-      "Nintendo DS",
-      "Virtual Boy",
-      "Nintendo Entertainment System"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Nintendo », quelle description correspond à Game Boy ?",
-    "answers": [
-      "console portable affichant de la 3D sans lunettes",
-      "console portable monochrome lancée avec Tetris",
-      "fondateur de Nintendo comme fabricant de cartes hanafuda",
-      "console 16 bits succédant à la NES"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Nintendo », à quelle catégorie appartient Game Boy ?",
-    "answers": [
-      "Personnalité",
-      "Accessoire",
-      "Console portable",
-      "Service en ligne"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : console portable à deux écrans dont un tactile ?",
-    "answers": [
-      "Nintendo 3DS",
-      "Fusajirō Yamauchi",
-      "Super Nintendo",
-      "Nintendo DS"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Nintendo », quelle description correspond à Nintendo DS ?",
-    "answers": [
-      "console portable à deux écrans dont un tactile",
-      "petites manettes détachables de la Nintendo Switch",
-      "créateur majeur associé à Mario, Zelda et Donkey Kong",
-      "console de salon utilisant des cartouches et une manette à trois branches"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Nintendo », à quelle catégorie appartient Nintendo DS ?",
-    "answers": [
-      "Personnalité",
-      "Console portable",
-      "Accessoire",
-      "Service en ligne"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : console portable affichant de la 3D sans lunettes ?",
-    "answers": [
-      "Joy-Con",
-      "Shigeru Miyamoto",
-      "Nintendo 3DS",
-      "Nintendo 64"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Nintendo », quelle description correspond à Nintendo 3DS ?",
-    "answers": [
-      "robot accessoire commercialisé avec la NES",
-      "président qui a transformé Nintendo en géant du jeu vidéo",
-      "console cubique utilisant de petits disques optiques",
-      "console portable affichant de la 3D sans lunettes"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Nintendo », à quelle catégorie appartient Nintendo 3DS ?",
-    "answers": [
-      "Console portable",
-      "Personnalité",
-      "Accessoire",
-      "Service en ligne"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : petites manettes détachables de la Nintendo Switch ?",
-    "answers": [
-      "R.O.B.",
-      "Joy-Con",
-      "Hiroshi Yamauchi",
-      "GameCube"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Nintendo », quelle description correspond à Joy-Con ?",
-    "answers": [
-      "console sur pied à affichage rouge stéréoscopique",
-      "console 8 bits connue au Japon sous le nom Famicom",
-      "petites manettes détachables de la Nintendo Switch",
-      "console popularisant les commandes par mouvement avec la Wiimote"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Nintendo », à quelle catégorie appartient Joy-Con ?",
-    "answers": [
-      "Personnalité",
-      "Console portable",
-      "Service en ligne",
-      "Accessoire"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : robot accessoire commercialisé avec la NES ?",
-    "answers": [
-      "R.O.B.",
-      "Virtual Boy",
-      "Nintendo Entertainment System",
-      "Wii"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Nintendo », quelle description correspond à R.O.B. ?",
-    "answers": [
-      "fondateur de Nintendo comme fabricant de cartes hanafuda",
-      "robot accessoire commercialisé avec la NES",
-      "console 16 bits succédant à la NES",
-      "console équipée d’une manette GamePad avec écran"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans « Nintendo », à quelle catégorie appartient R.O.B. ?",
-    "answers": [
-      "Personnalité",
-      "Console portable",
-      "Accessoire",
-      "Service en ligne"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans « Nintendo », quel élément Nintendo correspond à cette description : console sur pied à affichage rouge stéréoscopique ?",
-    "answers": [
-      "Fusajirō Yamauchi",
-      "Super Nintendo",
-      "Wii U",
-      "Virtual Boy"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans « Nintendo », quelle description correspond à Virtual Boy ?",
-    "answers": [
-      "console sur pied à affichage rouge stéréoscopique",
-      "créateur majeur associé à Mario, Zelda et Donkey Kong",
-      "console de salon utilisant des cartouches et une manette à trois branches",
-      "console hybride utilisable sur téléviseur ou en mobilité"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Dans « Nintendo », à quelle catégorie appartient Virtual Boy ?",
-    "answers": [
-      "Personnalité",
-      "Console atypique",
-      "Accessoire",
-      "Service en ligne"
-    ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
