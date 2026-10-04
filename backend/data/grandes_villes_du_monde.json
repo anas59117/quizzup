@@ -3,500 +3,1100 @@
     "text": "Dans quelle ville se trouve la tour Eiffel ?",
     "answers": [
       "Paris",
-      "Londres",
-      "New York",
-      "Rome"
+      "Lyon",
+      "Bruxelles",
+      "Genève"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle ville associe-t-on à la tour Eiffel ?",
+    "text": "Dans quelle ville la Sagrada Família domine-t-elle le quartier de l'Eixample ?",
     "answers": [
-      "Londres",
-      "Paris",
-      "New York",
-      "Rome"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans quelle ville se trouve Big Ben et le palais de Westminster ?",
-    "answers": [
-      "New York",
-      "Rome",
-      "Londres",
-      "Barcelone"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle ville associe-t-on à Big Ben et le palais de Westminster ?",
-    "answers": [
-      "New York",
-      "Rome",
+      "Madrid",
       "Barcelone",
-      "Londres"
+      "Valence",
+      "Séville"
     ],
-    "correct": 3
-  },
-  {
-    "text": "Dans quelle ville se trouve la statue de la Liberté ?",
-    "answers": [
-      "New York",
-      "Rome",
-      "Barcelone",
-      "Berlin"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle ville associe-t-on à la statue de la Liberté ?",
-    "answers": [
-      "Rome",
-      "New York",
-      "Barcelone",
-      "Berlin"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans quelle ville se trouve le Colisée ?",
-    "answers": [
-      "Barcelone",
-      "Berlin",
-      "Rome",
-      "Moscou"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle ville associe-t-on au Colisée ?",
-    "answers": [
-      "Barcelone",
-      "Berlin",
-      "Moscou",
-      "Rome"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans quelle ville se trouve la Sagrada Família ?",
-    "answers": [
-      "Barcelone",
-      "Berlin",
-      "Moscou",
-      "Pékin"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle ville associe-t-on à la Sagrada Família ?",
-    "answers": [
-      "Berlin",
-      "Barcelone",
-      "Moscou",
-      "Pékin"
-    ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Dans quelle ville se trouve la porte de Brandebourg ?",
     "answers": [
-      "Moscou",
-      "Pékin",
+      "Munich",
+      "Vienne",
       "Berlin",
-      "Tokyo"
+      "Prague"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle ville associe-t-on à la porte de Brandebourg ?",
+    "text": "Dans quelle ville peut-on voir le complexe de temples Wat Arun sur la rive du Chao Phraya ?",
     "answers": [
-      "Moscou",
-      "Pékin",
+      "Hanoï",
+      "Phnom Penh",
+      "Yangon",
+      "Bangkok"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle ville la tour de télévision Žižkov se dresse-t-elle au-dessus du quartier du même nom ?",
+    "answers": [
+      "Prague",
+      "Bratislava",
+      "Varsovie",
+      "Ljubljana"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel fleuve traverse Londres à Westminster ?",
+    "answers": [
+      "La Seine",
+      "La Tamise",
+      "Le Rhin",
+      "La Mersey"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel fleuve sépare Buda de Pest ?",
+    "answers": [
+      "La Vistule",
+      "L'Elbe",
+      "Le Danube",
+      "Le Dniepr"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel cours d'eau borde le quartier historique du Bund à Shanghai ?",
+    "answers": [
+      "Le Mékong",
+      "Le fleuve Rouge",
+      "Le Han",
+      "Le Huangpu"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel fleuve passe sous le Ponte Vecchio à Florence ?",
+    "answers": [
+      "L'Arno",
+      "Le Tibre",
+      "Le Pô",
+      "L'Adige"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel fleuve traverse Tbilissi ?",
+    "answers": [
+      "Le Don",
+      "La Koura",
+      "Le Prout",
+      "Le Nistru"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se trouve Times Square ?",
+    "answers": [
+      "Chicago",
+      "Boston",
+      "New York",
+      "Philadelphie"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle grande place de Marrakech accueille conteurs, musiciens et étals de nourriture ?",
+    "answers": [
+      "Place des Nations",
+      "Place Mohammed-V",
+      "Bab Boujloud",
+      "Jemaa el-Fna"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle ville la place du Dam jouxte-t-elle le palais royal ?",
+    "answers": [
+      "Amsterdam",
+      "Rotterdam",
+      "La Haye",
+      "Utrecht"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel monument se dresse au centre de la Plaza de la República à Buenos Aires ?",
+    "answers": [
+      "La colonne de Mai",
+      "L'Obélisque",
+      "La tour des Anglais",
+      "L'Ange de l'Indépendance"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle ville la place Rynek Główny est-elle dominée par la basilique Sainte-Marie ?",
+    "answers": [
+      "Gdańsk",
+      "Wrocław",
+      "Cracovie",
+      "Poznań"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se trouve l'Empire State Building ?",
+    "answers": [
+      "Toronto",
+      "Chicago",
+      "Seattle",
+      "New York"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a conçu le musée Guggenheim de Bilbao ?",
+    "answers": [
+      "Frank Gehry",
+      "Norman Foster",
+      "Renzo Piano",
+      "Santiago Calatrava"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle ville les tours Petronas encadrent-elles un pont aérien ?",
+    "answers": [
+      "Jakarta",
+      "Kuala Lumpur",
+      "Singapour",
+      "Manille"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel architecte a conçu la Casa da Música de Porto ?",
+    "answers": [
+      "Álvaro Siza",
+      "Eduardo Souto de Moura",
+      "Rem Koolhaas",
+      "Oscar Niemeyer"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel architecte finlandais a dessiné le Finlandia Hall d'Helsinki ?",
+    "answers": [
+      "Eero Saarinen",
+      "Eliel Saarinen",
+      "Jørn Utzon",
+      "Alvar Aalto"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se trouve le quartier de Montmartre ?",
+    "answers": [
+      "Paris",
+      "Bruxelles",
+      "Montréal",
+      "Lyon"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel quartier de La Havane est connu sous le nom espagnol Habana Vieja ?",
+    "answers": [
+      "Le quartier des affaires",
+      "La vieille ville",
+      "Le quartier universitaire",
+      "Le port industriel"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle ville le quartier d'Akihabara est-il associé à l'électronique et à la culture manga ?",
+    "answers": [
+      "Osaka",
+      "Kyoto",
       "Tokyo",
+      "Nagoya"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle ville le quartier coloré de La Boca abrite-t-il la rue Caminito ?",
+    "answers": [
+      "Montevideo",
+      "Santiago",
+      "Lima",
+      "Buenos Aires"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ancien quartier de Séoul est réputé pour ses maisons traditionnelles hanok ?",
+    "answers": [
+      "Bukchon",
+      "Gangnam",
+      "Hongdae",
+      "Itaewon"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle ville moderne a été bâtie sur l'ancienne Tenochtitlan ?",
+    "answers": [
+      "Lima",
+      "Mexico",
+      "Quito",
+      "Guatemala"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel nom Tokyo portait-elle avant 1868 ?",
+    "answers": [
+      "Nara",
+      "Heian",
+      "Edo",
+      "Kamakura"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle ville fut partagée par un mur de 1961 à 1989 ?",
+    "answers": [
+      "Vienne",
+      "Prague",
+      "Varsovie",
       "Berlin"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quelle ville se trouve la place Rouge ?",
+    "text": "Quelle catastrophe détruisit une grande partie de Lisbonne en 1755 ?",
     "answers": [
-      "Moscou",
-      "Pékin",
-      "Tokyo",
-      "Séoul"
+      "Un séisme suivi d'un tsunami et d'incendies",
+      "Une éruption volcanique",
+      "Une crue du Tage",
+      "Un cyclone tropical"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle ville associe-t-on à la place Rouge ?",
+    "text": "Quelle ville de l'Inde s'appelait officiellement Bombay jusqu'en 1995 ?",
     "answers": [
-      "Pékin",
-      "Moscou",
-      "Tokyo",
-      "Séoul"
+      "Chennai",
+      "Mumbai",
+      "Kolkata",
+      "Bengaluru"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle ville australienne est célèbre pour son opéra au bord de la baie ?",
+    "answers": [
+      "Melbourne",
+      "Brisbane",
+      "Sydney",
+      "Perth"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel détroit relie la baie de San Francisco à l'océan Pacifique ?",
+    "answers": [
+      "Le détroit de Juan de Fuca",
+      "Le détroit de Cook",
+      "Le Bosphore",
+      "Le Golden Gate"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel service historique relie Hong Kong Island à Kowloon à travers Victoria Harbour ?",
+    "answers": [
+      "Le Star Ferry",
+      "Le Peak Tram",
+      "Le Airport Express",
+      "Le Ding Ding"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sur quelle mer le port de Casablanca ouvre-t-il ?",
+    "answers": [
+      "La mer Méditerranée",
+      "L'océan Atlantique",
+      "La mer Rouge",
+      "La mer Noire"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle ville sud-africaine le Victoria & Alfred Waterfront occupe-t-il une partie du port historique ?",
+    "answers": [
+      "Durban",
+      "Port Elizabeth",
+      "Le Cap",
+      "East London"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se trouve le musée du Louvre ?",
+    "answers": [
+      "Rome",
+      "Madrid",
+      "Vienne",
+      "Paris"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel musée madrilène conserve notamment Les Ménines de Velázquez ?",
+    "answers": [
+      "Le Prado",
+      "Le Reina Sofía",
+      "Le Thyssen-Bornemisza",
+      "Le Sorolla"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle ville se trouve le Rijksmuseum ?",
+    "answers": [
+      "Bruxelles",
+      "Amsterdam",
+      "Copenhague",
+      "Stockholm"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel musée de Saint-Pétersbourg occupe en partie le palais d'Hiver ?",
+    "answers": [
+      "Le musée Russe",
+      "La Galerie Tretiakov",
+      "L'Ermitage",
+      "Le musée Pouchkine"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle ville le musée d'art moderne Louisiana surplombe-t-il le détroit de l'Øresund ?",
+    "answers": [
+      "Aarhus",
+      "Odense",
+      "Malmö",
+      "Humlebæk"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle ville a ouvert le premier chemin de fer souterrain au monde en 1863 ?",
+    "answers": [
+      "Londres",
+      "Paris",
+      "New York",
+      "Berlin"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle le célèbre funiculaire qui gravit Victoria Peak à Hong Kong ?",
+    "answers": [
+      "Le Star Ferry",
+      "Le Peak Tram",
+      "Le MTR Express",
+      "Le Ngong Ping Tram"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle ville les tramways jaunes de la ligne 28 parcourent-ils les collines du centre historique ?",
+    "answers": [
+      "Porto",
+      "Madrid",
+      "Lisbonne",
+      "Athènes"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel système de transport rapide par bus, inauguré en 1974, est associé à Curitiba ?",
+    "answers": [
+      "Le monorail",
+      "Le métro léger VAL",
+      "Le train à sustentation magnétique",
+      "Le BRT"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel funiculaire d'Istanbul, ouvert en 1875, relie Karaköy à Beyoğlu ?",
+    "answers": [
+      "Le Tünel",
+      "Le Marmaray",
+      "Le Metrobüs",
+      "Le Nostalgic Tram"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se trouve le Colisée ?",
+    "answers": [
+      "Athènes",
+      "Rome",
+      "Naples",
+      "Milan"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle ville brésilienne, inaugurée en 1960, est inscrite au patrimoine mondial pour son urbanisme moderniste ?",
+    "answers": [
+      "Belo Horizonte",
+      "Goiânia",
+      "Brasília",
+      "Curitiba"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle ville marocaine se trouve la porte bleue Bab Boujloud, entrée de la médina ?",
+    "answers": [
+      "Rabat",
+      "Meknès",
+      "Tétouan",
+      "Fès"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle ville croate est entourée de remparts dominant l'Adriatique ?",
+    "answers": [
+      "Dubrovnik",
+      "Split",
+      "Zadar",
+      "Rijeka"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle ville nord-américaine conserve un arrondissement historique fortifié dominé par le château Frontenac ?",
+    "answers": [
+      "Montréal",
+      "Québec",
+      "Boston",
+      "Ottawa"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se dresse la statue du Christ Rédempteur sur le Corcovado ?",
+    "answers": [
+      "São Paulo",
+      "Salvador",
+      "Rio de Janeiro",
+      "Brasília"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel parc new-yorkais s'étend au cœur de Manhattan ?",
+    "answers": [
+      "Prospect Park",
+      "Flushing Meadows",
+      "Battery Park",
+      "Central Park"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle ville canadienne est dominée par le mont Royal ?",
+    "answers": [
+      "Montréal",
+      "Toronto",
+      "Vancouver",
+      "Calgary"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle ville se trouve la Willis Tower, autrefois appelée Sears Tower ?",
+    "answers": [
+      "Detroit",
+      "Chicago",
+      "Cleveland",
+      "Minneapolis"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle grande avenue de Mexico relie le centre historique au parc de Chapultepec ?",
+    "answers": [
+      "L'Avenida de los Insurgentes",
+      "Le Paseo de la Revolución",
+      "Le Paseo de la Reforma",
+      "La Calzada de Tlalpan"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle montagne à sommet plat domine Le Cap ?",
+    "answers": [
+      "Kilimandjaro",
+      "Mont Kenya",
+      "Drakensberg",
+      "Table Mountain"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quelle ville se trouve la mosquée Hassan-II, construite en partie au-dessus de l'Atlantique ?",
+    "answers": [
+      "Casablanca",
+      "Rabat",
+      "Tanger",
+      "Agadir"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle capitale africaine accueille le siège de l'Union africaine ?",
+    "answers": [
+      "Nairobi",
+      "Addis-Abeba",
+      "Accra",
+      "Pretoria"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel cours d'eau traverse Nairobi et donne son nom à la ville ?",
+    "answers": [
+      "Le Nil Bleu",
+      "Le Zambèze",
+      "La rivière Nairobi",
+      "Le Limpopo"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel monument d'Alger, formé de trois palmes stylisées, commémore l'indépendance ?",
+    "answers": [
+      "La Grande Poste",
+      "Notre-Dame d'Afrique",
+      "Le palais du Raïs",
+      "Le Mémorial du Martyr"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
     "text": "Dans quelle ville se trouve la Cité interdite ?",
     "answers": [
-      "Tokyo",
-      "Séoul",
       "Pékin",
+      "Shanghai",
+      "Xi'an",
+      "Nankin"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel carrefour piéton très fréquenté se situe devant la gare de Shibuya ?",
+    "answers": [
+      "Le carrefour de Ginza",
+      "Le carrefour de Shibuya",
+      "Le carrefour d'Asakusa",
+      "Le carrefour de Roppongi"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle ville est desservie par l'aéroport Changi ?",
+    "answers": [
+      "Kuala Lumpur",
+      "Bangkok",
+      "Singapour",
+      "Jakarta"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle ville indienne la Gateway of India fait-elle face à la mer d'Arabie ?",
+    "answers": [
+      "Chennai",
+      "Kochi",
+      "Surate",
       "Mumbai"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle ville associe-t-on à la Cité interdite ?",
+    "text": "Quel palais royal de Séoul est le plus vaste des cinq grands palais de la dynastie Joseon ?",
     "answers": [
-      "Tokyo",
-      "Séoul",
-      "Mumbai",
-      "Pékin"
+      "Gyeongbokgung",
+      "Changdeokgung",
+      "Deoksugung",
+      "Changgyeonggung"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans quelle ville se trouve le quartier de Shibuya ?",
+    "text": "Dans quelle ville australienne le Story Bridge franchit-il le fleuve Brisbane ?",
     "answers": [
-      "Tokyo",
-      "Séoul",
-      "Mumbai",
-      "Singapour"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle ville associe-t-on au quartier de Shibuya ?",
-    "answers": [
-      "Séoul",
-      "Tokyo",
-      "Mumbai",
-      "Singapour"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans quelle ville se trouve le palais de Gyeongbokgung ?",
-    "answers": [
-      "Mumbai",
-      "Singapour",
-      "Séoul",
-      "Kuala Lumpur"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle ville associe-t-on au palais de Gyeongbokgung ?",
-    "answers": [
-      "Mumbai",
-      "Singapour",
-      "Kuala Lumpur",
-      "Séoul"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans quelle ville se trouve le Gateway of India ?",
-    "answers": [
-      "Mumbai",
-      "Singapour",
-      "Kuala Lumpur",
-      "Dubaï"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle ville associe-t-on au Gateway of India ?",
-    "answers": [
-      "Singapour",
-      "Mumbai",
-      "Kuala Lumpur",
-      "Dubaï"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans quelle ville se trouve le Marina Bay Sands ?",
-    "answers": [
-      "Kuala Lumpur",
-      "Dubaï",
-      "Singapour",
-      "Sydney"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle ville associe-t-on au Marina Bay Sands ?",
-    "answers": [
-      "Kuala Lumpur",
-      "Dubaï",
       "Sydney",
-      "Singapour"
+      "Brisbane",
+      "Melbourne",
+      "Adélaïde"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans quelle ville se trouve les tours Petronas ?",
+    "text": "Quel fleuve traverse le centre de Melbourne ?",
     "answers": [
-      "Kuala Lumpur",
-      "Dubaï",
-      "Sydney",
-      "Le Cap"
+      "La Swan",
+      "La Brisbane",
+      "La Yarra",
+      "La Murray"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle ville associe-t-on aux tours Petronas ?",
+    "text": "Quelle ville néo-zélandaise est construite sur un isthme entre deux grands ports naturels ?",
     "answers": [
-      "Dubaï",
-      "Kuala Lumpur",
-      "Sydney",
-      "Le Cap"
+      "Wellington",
+      "Christchurch",
+      "Dunedin",
+      "Auckland"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel fleuve borde le centre de Perth ?",
+    "answers": [
+      "La Swan",
+      "La Yarra",
+      "La Torrens",
+      "La Derwent"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel bâtiment circulaire de Wellington abrite l'aile exécutive du Parlement néo-zélandais ?",
+    "answers": [
+      "Le Town Hall",
+      "Le Beehive",
+      "Le Dominion Museum",
+      "Le Cable Car House"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se trouve le port coloré de Nyhavn ?",
+    "answers": [
+      "Oslo",
+      "Stockholm",
+      "Copenhague",
+      "Helsinki"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Sur combien d'îles principales le centre de Stockholm s'est-il historiquement développé ?",
+    "answers": [
+      "Sept",
+      "Vingt-deux",
+      "Trente",
+      "Quatorze"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle forteresse maritime classée par l'UNESCO se trouve au large d'Helsinki ?",
+    "answers": [
+      "Suomenlinna",
+      "Akershus",
+      "Kronborg",
+      "Vaxholm"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel parc d'Oslo expose plus de 200 sculptures de Gustav Vigeland ?",
+    "answers": [
+      "Le parc Frognerbadet",
+      "Le parc Vigeland",
+      "Le parc Ekeberg",
+      "Le parc Slottsparken"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle ville l'église Hallgrímskirkja domine-t-elle le paysage urbain ?",
+    "answers": [
+      "Tórshavn",
+      "Bergen",
+      "Reykjavik",
+      "Trondheim"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se trouve la fontaine de Trevi ?",
+    "answers": [
+      "Florence",
+      "Venise",
+      "Naples",
+      "Rome"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel fleuve est franchi par le pont du 25-Avril à Lisbonne ?",
+    "answers": [
+      "Le Tage",
+      "Le Douro",
+      "Le Guadiana",
+      "Le Mondego"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle ville la Giralda sert-elle de clocher à une cathédrale ?",
+    "answers": [
+      "Grenade",
+      "Séville",
+      "Cordoue",
+      "Tolède"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel volcan domine la baie de Naples ?",
+    "answers": [
+      "L'Etna",
+      "Le Stromboli",
+      "Le Vésuve",
+      "Le Vulcano"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel édifice turinois, initialement conçu comme synagogue, abrite aujourd'hui le Musée national du cinéma ?",
+    "answers": [
+      "Le palais Carignan",
+      "La basilique de Superga",
+      "La Porta Palatina",
+      "La Mole Antonelliana"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se trouve le pont Charles ?",
+    "answers": [
+      "Prague",
+      "Budapest",
+      "Vienne",
+      "Bratislava"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel palais viennois fut la résidence d'été des Habsbourg ?",
+    "answers": [
+      "Belvédère",
+      "Schönbrunn",
+      "Hofburg",
+      "Albertina"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle ville le château du Wawel domine-t-il la Vistule ?",
+    "answers": [
+      "Varsovie",
+      "Poznań",
+      "Cracovie",
+      "Lublin"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel pont à chaînes relie les deux rives historiques de Budapest ?",
+    "answers": [
+      "Le pont de la Liberté",
+      "Le pont Marguerite",
+      "Le pont Élisabeth",
+      "Le pont Széchenyi"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel architecte a transformé Ljubljana avec le Triple Pont et la Bibliothèque nationale ?",
+    "answers": [
+      "Jože Plečnik",
+      "Otto Wagner",
+      "Josef Hoffmann",
+      "Adolf Loos"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
     "text": "Dans quelle ville se trouve le Burj Khalifa ?",
     "answers": [
-      "Sydney",
-      "Le Cap",
+      "Doha",
       "Dubaï",
-      "Le Caire"
+      "Abou Dabi",
+      "Riyad"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle ville associe-t-on au Burj Khalifa ?",
+    "text": "Quel musée conçu par Jean Nouvel se trouve sur l'île de Saadiyat à Abou Dabi ?",
     "answers": [
-      "Sydney",
-      "Le Cap",
-      "Le Caire",
-      "Dubaï"
+      "Le Guggenheim Doha",
+      "Le musée d'Art islamique",
+      "Le Louvre Abou Dabi",
+      "Le musée national Zayed"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans quelle ville se trouve l'opéra et Harbour Bridge ?",
+    "text": "Dans quelle ville la Corniche longe-t-elle une baie dominée par les gratte-ciel de West Bay ?",
     "answers": [
-      "Sydney",
-      "Le Cap",
-      "Le Caire",
-      "Casablanca"
+      "Mascate",
+      "Koweït",
+      "Manama",
+      "Doha"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle ville associe-t-on à l'opéra et Harbour Bridge ?",
+    "text": "Quel nom gréco-romain portait la ville aujourd'hui appelée Amman ?",
     "answers": [
-      "Le Cap",
-      "Sydney",
-      "Le Caire",
-      "Casablanca"
+      "Philadelphia",
+      "Palmyra",
+      "Petra",
+      "Gerasa"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quelle ville se trouve la montagne de la Table ?",
+    "text": "Quel ensemble rocheux situé au large de Beyrouth est surnommé les Rochers aux Pigeons ?",
     "answers": [
-      "Le Caire",
-      "Casablanca",
-      "Le Cap",
-      "Fès"
+      "Les rochers de Byblos",
+      "Les rochers de Raouché",
+      "Les grottes de Jeita",
+      "Les falaises de Batroun"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle ville associe-t-on à la montagne de la Table ?",
+    "text": "Quel quartier de Barcelone est reconnaissable à sa trame régulière et à ses îlots aux angles coupés ?",
     "answers": [
-      "Le Caire",
-      "Casablanca",
-      "Fès",
-      "Le Cap"
+      "Le Raval",
+      "Barceloneta",
+      "L'Eixample",
+      "Gràcia"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans quelle ville se trouve les pyramides de Gizeh à proximité ?",
+    "text": "Quel urbaniste a conçu le plan de l'Eixample de Barcelone ?",
     "answers": [
-      "Le Caire",
-      "Casablanca",
-      "Fès",
-      "Rio de Janeiro"
+      "Antoni Gaudí",
+      "Lluís Domènech i Montaner",
+      "Josep Puig i Cadafalch",
+      "Ildefons Cerdà"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle ville associe-t-on aux pyramides de Gizeh à proximité ?",
+    "text": "Quels deux concepteurs sont principalement associés au plan pilote de Brasília et à ses bâtiments publics ?",
     "answers": [
-      "Casablanca",
-      "Le Caire",
-      "Fès",
-      "Rio de Janeiro"
+      "Lúcio Costa et Oscar Niemeyer",
+      "Roberto Burle Marx et Lina Bo Bardi",
+      "Le Corbusier et Auguste Perret",
+      "Paulo Mendes da Rocha et Affonso Reidy"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quelle ville se trouve la mosquée Hassan-II ?",
+    "text": "Quel axe monumental parisien relie historiquement le Louvre à l'Arc de Triomphe ?",
     "answers": [
-      "Fès",
-      "Rio de Janeiro",
-      "Casablanca",
-      "Buenos Aires"
+      "L'axe de la rue de Rivoli",
+      "L'axe des Champs-Élysées",
+      "L'axe du boulevard Saint-Germain",
+      "L'axe du canal Saint-Martin"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle ville associe-t-on à la mosquée Hassan-II ?",
+    "text": "Quel organisme a établi le plan en damier de Manhattan adopté en 1811 ?",
     "answers": [
-      "Fès",
-      "Rio de Janeiro",
-      "Buenos Aires",
-      "Casablanca"
+      "Le conseil municipal de Brooklyn",
+      "Le service fédéral des parcs",
+      "Une commission nommée par l'État de New York",
+      "La compagnie du canal Érié"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans quelle ville se trouve la médina classée de Fès ?",
+    "text": "Sur quel détroit Istanbul s'étend-elle entre l'Europe et l'Asie ?",
     "answers": [
-      "Fès",
-      "Rio de Janeiro",
-      "Buenos Aires",
-      "Santiago"
+      "Les Dardanelles",
+      "Le détroit de Gibraltar",
+      "Le détroit de Kertch",
+      "Le Bosphore"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle ville associe-t-on à la médina classée de Fès ?",
+    "text": "Quelle chaîne montagneuse forme l'arrière-plan naturel de Santiago du Chili ?",
     "answers": [
-      "Rio de Janeiro",
-      "Fès",
-      "Buenos Aires",
-      "Santiago"
+      "Les Andes",
+      "Les Rocheuses",
+      "La Sierra Madre",
+      "Les Appalaches"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans quelle ville se trouve le Christ Rédempteur ?",
+    "text": "Quel lac borde directement Chicago ?",
     "answers": [
-      "Buenos Aires",
-      "Santiago",
-      "Rio de Janeiro",
-      "Mexico"
+      "Le lac Érié",
+      "Le lac Michigan",
+      "Le lac Ontario",
+      "Le lac Supérieur"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle ville associe-t-on au Christ Rédempteur ?",
+    "text": "Entre quelles deux mers Istanbul assure-t-elle le passage par le Bosphore ?",
     "answers": [
-      "Buenos Aires",
-      "Santiago",
-      "Mexico",
-      "Rio de Janeiro"
+      "La mer Égée et la mer Adriatique",
+      "La mer Caspienne et la mer Noire",
+      "La mer Noire et la mer de Marmara",
+      "La Méditerranée et la mer Rouge"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans quelle ville se trouve l'obélisque de l'avenue 9 de Julio ?",
+    "text": "Quel bras de mer naturel borde au nord la péninsule historique d'Istanbul ?",
     "answers": [
-      "Buenos Aires",
-      "Santiago",
-      "Mexico",
-      "Toronto"
+      "Le golfe d'Izmit",
+      "La baie de Saros",
+      "Le détroit de Kertch",
+      "La Corne d'Or"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle ville associe-t-on à l'obélisque de l'avenue 9 de Julio ?",
-    "answers": [
-      "Santiago",
-      "Buenos Aires",
-      "Mexico",
-      "Toronto"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans quelle ville se trouve le palais de La Moneda ?",
-    "answers": [
-      "Mexico",
-      "Toronto",
-      "Santiago",
-      "San Francisco"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle ville associe-t-on au palais de La Moneda ?",
-    "answers": [
-      "Mexico",
-      "Toronto",
-      "San Francisco",
-      "Santiago"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans quelle ville se trouve le Zócalo ?",
-    "answers": [
-      "Mexico",
-      "Toronto",
-      "San Francisco",
-      "Paris"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle ville associe-t-on au Zócalo ?",
-    "answers": [
-      "Toronto",
-      "Mexico",
-      "San Francisco",
-      "Paris"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans quelle ville se trouve la CN Tower ?",
-    "answers": [
-      "San Francisco",
-      "Paris",
-      "Toronto",
-      "Londres"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle ville associe-t-on à la CN Tower ?",
-    "answers": [
-      "San Francisco",
-      "Paris",
-      "Londres",
-      "Toronto"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans quelle ville se trouve le Golden Gate Bridge ?",
-    "answers": [
-      "San Francisco",
-      "Paris",
-      "Londres",
-      "New York"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle ville associe-t-on au Golden Gate Bridge ?",
-    "answers": [
-      "Paris",
-      "San Francisco",
-      "Londres",
-      "New York"
-    ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
