@@ -91,3 +91,19 @@ test('every quiz category produces a complete progressive six-round match', () =
     );
   }
 });
+
+test('answers are shuffled at serve time and the correct index follows the right answer', () => {
+  const { shuffleAnswers } = require('./questions');
+  const q = { text: 'Q', answers: ['A', 'B', 'C', 'D'], correct: 1 };
+  const seen = new Set();
+  for (let i = 0; i < 40; i++) {
+    const s = shuffleAnswers(q);
+    assert.equal(s.answers[s.correct], 'B');
+    assert.deepEqual([...s.answers].sort(), ['A', 'B', 'C', 'D']);
+    seen.add(s.correct);
+  }
+  assert.ok(seen.size > 1);
+  assert.deepEqual(q.answers, ['A', 'B', 'C', 'D']);
+  const fixed = { text: 'Q', answers: ['X', 'Y', 'Z', 'Toutes les réponses'], correct: 3 };
+  assert.deepEqual(shuffleAnswers(fixed), fixed);
+});

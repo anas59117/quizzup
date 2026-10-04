@@ -15,7 +15,9 @@ const reports = require('./reports');
 // distractors) by scripts/fetch-player-photos.js + a one-off build step.
 // Kept as data files rather than inline literals so this file stays short.
 const playersFootFr = require('./data/players-foot-fr.json');
+const footFrExtra = require('./data/foot_fr_extra.json');
 const playersRapFr = require('./data/players-rap-fr.json');
+const rapFrExtra = require('./data/rap_fr_extra.json');
 const playersPremierLeague = require('./data/players-premier-league.json');
 const playersLaLiga = require('./data/players-la-liga.json');
 const playersBundesliga = require('./data/players-bundesliga.json');
@@ -599,6 +601,7 @@ const CATEGORIES = {
       { text: 'Dans quelle ville SCH a-t-il grandi ?', answers: ['Paris', 'Aubagne', 'Aix-en-Provence', 'Toulon'], correct: 1 },
       ...playersRapFr,
       { text: 'Sur quel label indépendant Lunatic a-t-il publié l’album Mauvais Œil ?', answers: ['Secteur Ä', '45 Scientific', 'Time Bomb', 'Hostile Records'], correct: 1, difficulty: 'expert' },
+      ...rapFrExtra,
     ],
   },
   foot_fr: {
@@ -621,6 +624,7 @@ const CATEGORIES = {
       { text: 'Qui inscrit le troisième but français lors de la finale mondiale 1998 contre le Brésil ?', answers: ['Youri Djorkaeff', 'Emmanuel Petit', 'Christophe Dugarry', 'Lilian Thuram'], correct: 1, difficulty: 'expert' },
       { text: 'Qui égalise pour la France contre l’Italie dans les arrêts de jeu de la finale de l’Euro 2000 ?', answers: ['David Trezeguet', 'Thierry Henry', 'Sylvain Wiltord', 'Robert Pirès'], correct: 2, difficulty: 'expert' },
       { text: 'Quel joueur français reprend le coup franc de Zidane pour marquer contre le Brésil en quart de finale du Mondial 2006 ?', answers: ['Patrick Vieira', 'Franck Ribéry', 'Florent Malouda', 'Thierry Henry'], correct: 3, difficulty: 'expert' },
+      ...footFrExtra,
     ],
   },
   premier_league: {
@@ -668,18 +672,7 @@ const CATEGORIES = {
   netflix: {
     label: 'Netflix',
     icon: '🎬',
-    questions: [
-      { text: 'En quelle année Netflix a-t-il été fondé ?', answers: ['1995', '1997', '2000', '2004'], correct: 1 },
-      { text: 'À l’origine, comment fonctionnait Netflix ?', answers: ['Streaming direct', 'Location de DVD par correspondance', 'Chaîne câblée', 'Jeu vidéo'], correct: 1 },
-      { text: 'Quelle série met en scène des enfants affrontant des créatures du "Monde à l’Envers" à Hawkins ?', answers: ['Dark', 'Stranger Things', 'The Umbrella Academy', 'Wednesday'], correct: 1 },
-      { text: 'Quelle série sur un casse de la Fabrique Nationale de la Monnaie espagnole a connu un succès mondial ?', answers: ['Elite', 'Vis a vis', 'La Casa de Papel', 'Sky Rojo'], correct: 2 },
-      { text: 'Dans "Squid Game", quel est le premier jeu auquel participent les candidats ?', answers: ['Le tir à la corde', '1, 2, 3 Soleil', 'Les billes', 'Le pont de verre'], correct: 1 },
-      { text: 'Quelle série retrace le règne de la reine Elizabeth II ?', answers: ['The Crown', 'Victoria', 'Downton Abbey', 'Bridgerton'], correct: 0 },
-      { text: 'Dans quelle ville se déroule la série "Emily in Paris" ?', answers: ['Londres', 'Milan', 'Paris', 'New York'], correct: 2 },
-      { text: 'Quel est le nom de famille du "Professeur", cerveau du casse dans "La Casa de Papel" ?', answers: ['Marquina', 'Vargas', 'Serrano', 'Palermo'], correct: 0 },
-      { text: 'Quelle série documentaire sur un propriétaire de zoo américain excentrique a connu un énorme succès en 2020 ?', answers: ['Making a Murderer', 'Tiger King', 'Wild Wild Country', 'The Social Dilemma'], correct: 1 },
-      { text: 'Quelle série d’animation Netflix suit un cheval anthropomorphe, acteur has-been à Hollywood ?', answers: ['BoJack Horseman', 'Big Mouth', 'F is for Family', 'Disenchantment'], correct: 0 },
-    ],
+    questions: [...require('./data/netflix.json')],
   },
   got: {
     label: 'Game of Thrones',
@@ -700,82 +693,37 @@ const CATEGORIES = {
   harry_potter: {
     label: 'Harry Potter',
     icon: '🪄',
-    questions: [
-      { text: 'Comment s’appelle l’école de sorcellerie fréquentée par Harry Potter ?', answers: ['Durmstrang', 'Poudlard', 'Beauxbâtons', 'Ilvermorny'], correct: 1 },
-      { text: 'Quelle maison de Poudlard est associée au courage ?', answers: ['Serpentard', 'Poufsouffle', 'Gryffondor', 'Serdaigle'], correct: 2 },
-      { text: 'Quel est le nom du meilleur ami de Harry Potter ?', answers: ['Neville Londubat', 'Ron Weasley', 'Seamus Finnigan', 'Dean Thomas'], correct: 1 },
-      { text: 'Quel objet rend Harry invisible lorsqu’il s’en couvre ?', answers: ['La Cape d’invisibilité', 'La Baguette de Sureau', 'Le Retourneur de Temps', 'Le Choixpeau'], correct: 0 },
-      { text: 'Qui est le principal antagoniste de la saga ?', answers: ['Drago Malefoy', 'Voldemort', 'Bellatrix Lestrange', 'Lucius Malefoy'], correct: 1 },
-      { text: 'Quel sport se joue sur des balais volants dans l’univers de Harry Potter ?', answers: ['Le Quidditch', 'Le Souaffle', 'Le Vif d’Or', 'Le Cognard'], correct: 0 },
-      { text: 'Quel animal est le symbole de la maison Serpentard ?', answers: ['Un blaireau', 'Un aigle', 'Un serpent', 'Un lion'], correct: 2 },
-      { text: 'Qui enseigne les potions à Poudlard durant la majeure partie de la saga ?', answers: ['Minerva McGonagall', 'Severus Rogue', 'Albus Dumbledore', 'Remus Lupin'], correct: 1 },
-      { text: 'Quelle est la meilleure amie d’Harry, brillante élève de Gryffondor ?', answers: ['Luna Lovegood', 'Cho Chang', 'Hermione Granger', 'Ginny Weasley'], correct: 2 },
-      { text: 'Quel est le nom de l’elfe de maison libéré par Harry ?', answers: ['Kreattur', 'Winky', 'Dobby', 'Krokdur'], correct: 2 },
-    ],
+    questions: [...require('./data/harry_potter.json')],
   },
   marvel: {
     label: 'Marvel',
     icon: '🦸',
-    questions: [
-      { text: 'Quel est le vrai nom d’Iron Man ?', answers: ['Steve Rogers', 'Tony Stark', 'Bruce Banner', 'Peter Parker'], correct: 1 },
-      { text: 'De quel royaume Thor est-il originaire ?', answers: ['Midgard', 'Asgard', 'Jotunheim', 'Vanaheim'], correct: 1 },
-      { text: 'Quel métal recouvre le squelette de Wolverine ?', answers: ['Le vibranium', 'Le titane', 'L’adamantium', 'Le carbonadium'], correct: 2 },
-      { text: 'Qui est le principal antagoniste du film "Avengers: Infinity War" ?', answers: ['Loki', 'Thanos', 'Ultron', 'Le Bouffon Vert'], correct: 1 },
-      { text: 'Quel super-héros se transforme en géant vert sous le coup de la colère ?', answers: ['Hulk', 'Namor', 'Abomination', 'Juggernaut'], correct: 0 },
-      { text: 'Quelle organisation emploie Nick Fury ?', answers: ['Le S.H.I.E.L.D.', 'La CIA', 'Le S.W.O.R.D.', 'Hydra'], correct: 0 },
-      { text: 'En quel métal fictif est fait le bouclier de Captain America ?', answers: ['L’adamantium', 'Le vibranium', 'L’uru', 'Le titane'], correct: 1 },
-      { text: 'Quelle actrice interprète Black Widow au cinéma ?', answers: ['Elizabeth Olsen', 'Brie Larson', 'Scarlett Johansson', 'Zoe Saldana'], correct: 2 },
-      { text: 'Quel est le surnom de Peter Quill dans "Les Gardiens de la Galaxie" ?', answers: ['Star-Lord', 'Nova', 'Rocket', 'Drax'], correct: 0 },
-      { text: 'Quelle maison d’édition a créé les personnages Marvel ?', answers: ['DC Comics', 'Marvel Comics', 'Image Comics', 'Dark Horse'], correct: 1 },
-    ],
+    questions: [...require('./data/marvel.json')],
+  },
+  spider_man: {
+    label: 'Spider-Man',
+    icon: '🕷️',
+    questions: [...require('./data/spider_man.json')],
+  },
+  batman: {
+    label: 'Batman',
+    icon: '🦇',
+    questions: [...require('./data/batman.json')],
   },
   star_wars: {
     label: 'Star Wars',
     icon: '⚔️',
-    questions: [
-      { text: 'Qui est le père de Luke Skywalker ?', answers: ['Obi-Wan Kenobi', 'L’Empereur Palpatine', 'Dark Vador', 'Yoda'], correct: 2 },
-      { text: 'Quel est le nom du vaisseau de Han Solo ?', answers: ['L’Étoile Noire', 'Le Faucon Millenium', 'Le Destroyer Stellaire', 'La Navette Impériale'], correct: 1 },
-      { text: 'À quelle espèce Chewbacca appartient-il ?', answers: ['Wookiee', 'Ewok', 'Rodien', 'Gungan'], correct: 0 },
-      { text: 'Quel petit droïde bleu et blanc accompagne C-3PO ?', answers: ['BB-8', 'R2-D2', 'K-2SO', 'IG-11'], correct: 1 },
-      { text: 'Quelle célèbre réplique résume la philosophie Jedi sur l’énergie universelle ?', answers: ['"Que la Force soit avec toi"', '"Vive la Résistance"', '"Il y a toujours de l’espoir"', '"La galaxie t’appelle"'], correct: 0 },
-      { text: 'Quelle est la planète natale de Luke Skywalker ?', answers: ['Naboo', 'Coruscant', 'Tatooine', 'Hoth'], correct: 2 },
-      { text: 'Qui forme initialement Luke Skywalker au maniement du sabre laser ?', answers: ['Yoda', 'Obi-Wan Kenobi', 'Mace Windu', 'Qui-Gon Jinn'], correct: 1 },
-      { text: 'Quelle organisation Dark Vador sert-il ?', answers: ['La Rébellion', 'L’Empire galactique', 'L’Ordre Jedi', 'Le Sénat'], correct: 1 },
-      { text: 'Quel est le nom de la princesse jouée par Carrie Fisher ?', answers: ['Princesse Padmé', 'Princesse Leia', 'Princesse Amidala', 'Princesse Jyn'], correct: 1 },
-      { text: 'Quel réalisateur a créé la saga Star Wars ?', answers: ['Steven Spielberg', 'James Cameron', 'George Lucas', 'Ridley Scott'], correct: 2 },
-    ],
+    questions: [...require('./data/star_wars.json')],
   },
   disney: {
     label: 'Classiques Disney',
     icon: '🏰',
-    questions: [
-      { text: 'Quel film Disney met en scène une sirène nommée Ariel ?', answers: ['La Petite Sirène', 'Vaiana', 'Pocahontas', 'Raiponce'], correct: 0 },
-      { text: 'Dans "Le Roi Lion", quel est le nom du jeune lionceau héros ?', answers: ['Mufasa', 'Simba', 'Scar', 'Kovu'], correct: 1 },
-      { text: 'Quelle princesse Disney s’endort après avoir touché un rouet ?', answers: ['Blanche-Neige', 'Cendrillon', 'La Belle au Bois Dormant', 'Belle'], correct: 2 },
-      { text: 'Quel personnage Disney a le nez qui s’allonge quand il ment ?', answers: ['Pinocchio', 'Dumbo', 'Bambi', 'Le Roi Lion'], correct: 0 },
-      { text: 'Dans "La Belle et la Bête", quel personnage est un chandelier ?', answers: ['Big Ben', 'Lumière', 'Zip', 'Monsieur Dindon'], correct: 1 },
-      { text: 'À quelle heure précise le charme de Cendrillon se rompt-il ?', answers: ['Minuit', '23h', '1h du matin', 'Minuit et demi'], correct: 0 },
-      { text: 'Quel est le nom du père de Nemo dans "Le Monde de Nemo" ?', answers: ['Bruce', 'Crush', 'Marin', 'Gill'], correct: 2 },
-      { text: 'Quel personnage exauce les vœux dans "Aladdin" ?', answers: ['Le Sultan', 'Le Génie', 'Jafar', 'Le Tapis magique'], correct: 1 },
-      { text: 'En quelle année Walt Disney a-t-il fondé son studio d’animation ?', answers: ['1923', '1937', '1955', '1901'], correct: 0 },
-      { text: 'Dans "Toy Story", quel est le jouet cow-boy, meilleur ami d’Andy ?', answers: ['Buzz l’Éclair', 'Woody', 'Rex', 'Monsieur Patate'], correct: 1 },
-    ],
+    questions: [...require('./data/disney.json')],
   },
   pokemon: {
     label: 'Pokémon',
     icon: '⚡',
-    questions: [
-      { text: 'Quel est le tout premier Pokémon du Pokédex national ?', answers: ['Pikachu', 'Bulbizarre', 'Salamèche', 'Carapuce'], correct: 1 },
-      { text: 'Quel type de Pokémon est Pikachu ?', answers: ['Feu', 'Eau', 'Électrique', 'Plante'], correct: 2 },
-      { text: 'Quel objet permet de capturer un Pokémon sauvage ?', answers: ['Une Poké Ball', 'Un filet', 'Une cage', 'Un piège'], correct: 0 },
-      { text: 'Quelle entreprise a créé les jeux vidéo Pokémon ?', answers: ['Nintendo seul', 'Game Freak', 'Sega', 'Capcom'], correct: 1 },
-      { text: 'Quel Pokémon de type feu orne la boîte de "Pokémon Rouge" ?', answers: ['Dracaufeu', 'Ronflex', 'Mewtwo', 'Léviator'], correct: 0 },
-      { text: 'Quelle ville est le point de départ du voyage de Sacha dans le dessin animé ?', answers: ['Jadielle', 'Bourg Palette', 'Argenta', 'Céladopole'], correct: 1 },
-      { text: 'Combien de badges d’arène faut-il collecter pour défier la Ligue Pokémon dans les jeux classiques ?', answers: ['6', '8', '10', '4'], correct: 1 },
-      { text: 'Quel cri caractéristique pousse Pikachu ?', answers: ['"Rio Rio"', '"Pika Pika"', '"Dracau Dracau"', '"Salamèche"'], correct: 1 },
-      { text: 'Comment se nomme l’organisation criminelle antagoniste des premiers jeux Pokémon ?', answers: ['La Team Rocket', 'La Team Aqua', 'La Team Magma', 'La Team Plasma'], correct: 0 },
-      { text: 'Quel est le nom du rival principal de Sacha dans les premières générations ?', answers: ['Régis', 'Paul', 'Barry', 'Silver'], correct: 0 },
-    ],
+    questions: [...require('./data/pokemon.json')],
   },
   f1: {
     label: 'Formule 1',
@@ -796,18 +744,7 @@ const CATEGORIES = {
   nba: {
     label: 'Basket NBA',
     icon: '🏀',
-    questions: [
-      { text: 'Combien de joueurs sont sur le terrain par équipe au basketball ?', answers: ['4', '5', '6', '7'], correct: 1 },
-      { text: 'Quel joueur surnommé "His Airness" a remporté 6 titres NBA avec Chicago ?', answers: ['Magic Johnson', 'Michael Jordan', 'Larry Bird', 'Kobe Bryant'], correct: 1 },
-      { text: 'Quelle franchise LeBron James a-t-il rejointe en 2018 ?', answers: ['Les Warriors', 'Les Lakers de Los Angeles', 'Les Celtics', 'Les Knicks'], correct: 1 },
-      { text: 'Combien de points vaut un panier marqué derrière la ligne à 3 points ?', answers: ['2', '3', '1', '4'], correct: 1 },
-      { text: 'Quelle franchise NBA est basée à Boston ?', answers: ['Les Nets', 'Les Celtics', 'Les Sixers', 'Les Bulls'], correct: 1 },
-      { text: 'Quel joueur a dépassé Kareem Abdul-Jabbar au classement des meilleurs marqueurs de l’histoire de la NBA en 2023 ?', answers: ['Kevin Durant', 'LeBron James', 'Stephen Curry', 'James Harden'], correct: 1 },
-      { text: 'Combien de quart-temps compte un match de NBA ?', answers: ['2', '3', '4', '5'], correct: 2 },
-      { text: 'Quel pays a remporté la majorité des tournois olympiques de basketball depuis 1992 ?', answers: ['L’Espagne', 'Les États-Unis', 'L’Argentine', 'La Serbie'], correct: 1 },
-      { text: 'Quelle légende du basket est surnommée "The Black Mamba" ?', answers: ['Kobe Bryant', 'Allen Iverson', 'Tim Duncan', 'Vince Carter'], correct: 0 },
-      { text: 'Quelle est la durée réglementaire d’un quart-temps en NBA, en minutes ?', answers: ['10', '12', '15', '8'], correct: 1 },
-    ],
+    questions: [...require('./data/nba.json')],
   },
   tv_shows: {
     label: 'Séries Cultes',
@@ -1371,8 +1308,6 @@ const CATEGORIES = {
   arcane: { label: "Arcane", icon: "⚡", questions: [...arcaneQuiz] },
   bridgerton: { label: "Bridgerton", icon: "👑", questions: [...bridgertonQuiz] },
   gossip_girl: { label: "Gossip Girl", icon: "📱", questions: [...gossipGirlQuiz] },
-  spider_man: { label: "Spider-Man", icon: "🕷️", questions: [...require('./data/spider_man.json')] },
-  batman: { label: "Batman", icon: "🦇", questions: [...require('./data/batman.json')] },
 };
 
 function shuffleQuestions(items, random = Math.random) {
@@ -1493,8 +1428,22 @@ function selectProgressiveQuestions(items, count, random = Math.random) {
 // Return a progressive sequence: two approachable openers, two intermediate
 // rounds, one difficult round and an expert bonus for the standard six-round
 // match.
+// Shuffle the 4 answers at serve time so the correct answer's position in the
+// data file never leaks (some quizzes put most correct answers in slot B).
+// Questions whose options depend on their order ("Toutes les réponses",
+// "Aucune", ...) keep their original order.
+const ORDER_DEPENDENT_ANSWER = /^(toutes?|tous|aucune?|les deux|both|all|none)\b/i;
+function shuffleAnswers(question, random = Math.random) {
+  const answers = question.answers;
+  if (!Array.isArray(answers) || answers.length < 2 || !Number.isInteger(question.correct)) return question;
+  if (answers.some((answer) => ORDER_DEPENDENT_ANSWER.test(String(answer).trim()))) return question;
+  const order = shuffleQuestions(answers.map((_, index) => index), random);
+  return { ...question, answers: order.map((index) => answers[index]), correct: order.indexOf(question.correct) };
+}
+
 function getQuestions(count, categoryKey, random = Math.random) {
-  return selectProgressiveQuestions(categoryPool(categoryKey), count, random);
+  return selectProgressiveQuestions(categoryPool(categoryKey), count, random)
+    .map((question) => shuffleAnswers(question, random));
 }
 
 // Curated French content is authoritative now that every category contains at
@@ -1518,7 +1467,7 @@ async function getMixedQuestions(count, categoryKey) {
     }
   }
 
-  return questions.slice(0, count).map((question, id) => ({ ...question, id }));
+  return questions.slice(0, count).map((question, id) => ({ ...shuffleAnswers(question), id }));
 }
 
 // Warm the API cache for every supported category (best-effort, non-blocking).
@@ -1538,6 +1487,7 @@ function listCategories() {
 }
 
 module.exports = {
+  shuffleAnswers,
   CATEGORIES,
   getQuestions,
   getMixedQuestions,
