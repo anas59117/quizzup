@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Quelle définition correspond à la Bible chrétienne ?",
+    "text": "Comment se nomme la première grande partie de la Bible chrétienne ?",
     "answers": [
-      "l'Ancien et le Nouveau Testament",
-      "Matthieu, Marc, Luc et Jean",
-      "un rite d'entrée dans la vie chrétienne",
-      "la commémoration du dernier repas de Jésus"
+      "L’Ancien Testament",
+      "Le Nouveau Testament",
+      "Le Missel",
+      "Le Lectionnaire"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel élément chrétien décrit la Bible chrétienne ?",
+    "text": "Combien d’Évangiles canoniques compte le Nouveau Testament ?",
     "answers": [
-      "Matthieu, Marc, Luc et Jean",
-      "l'Ancien et le Nouveau Testament",
-      "un rite d'entrée dans la vie chrétienne",
-      "la commémoration du dernier repas de Jésus"
+      "Trois",
+      "Quatre",
+      "Cinq",
+      "Douze"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle définition correspond aux Évangiles canoniques ?",
+    "text": "Quel Évangile ouvre le Nouveau Testament dans l’ordre canonique ?",
     "answers": [
-      "un rite d'entrée dans la vie chrétienne",
-      "la commémoration du dernier repas de Jésus",
-      "Matthieu, Marc, Luc et Jean",
-      "le Père, le Fils et le Saint-Esprit"
+      "Marc",
+      "Luc",
+      "Matthieu",
+      "Jean"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément chrétien décrit les Évangiles canoniques ?",
+    "text": "Quel livre raconte les débuts de l’Église après les Évangiles ?",
     "answers": [
-      "un rite d'entrée dans la vie chrétienne",
-      "la commémoration du dernier repas de Jésus",
-      "le Père, le Fils et le Saint-Esprit",
-      "Matthieu, Marc, Luc et Jean"
+      "La Genèse",
+      "Les Psaumes",
+      "L’Apocalypse",
+      "Les Actes des Apôtres"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle définition correspond au baptême ?",
+    "text": "Quel est le dernier livre du Nouveau Testament ?",
     "answers": [
-      "un rite d'entrée dans la vie chrétienne",
-      "la commémoration du dernier repas de Jésus",
-      "le Père, le Fils et le Saint-Esprit",
-      "la fête de la résurrection de Jésus"
+      "L’Apocalypse",
+      "L’épître aux Romains",
+      "Les Actes des Apôtres",
+      "L’épître de Jude"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément chrétien décrit le baptême ?",
+    "text": "Dans quelle ville Jésus est-il traditionnellement né ?",
     "answers": [
-      "la commémoration du dernier repas de Jésus",
-      "un rite d'entrée dans la vie chrétienne",
-      "le Père, le Fils et le Saint-Esprit",
-      "la fête de la résurrection de Jésus"
+      "Nazareth",
+      "Bethléem",
+      "Jérusalem",
+      "Capharnaüm"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle définition correspond à l'eucharistie ?",
+    "text": "Dans quelle ville Jésus a-t-il grandi selon les Évangiles ?",
     "answers": [
-      "le Père, le Fils et le Saint-Esprit",
-      "la fête de la résurrection de Jésus",
-      "la commémoration du dernier repas de Jésus",
-      "la fête de la naissance de Jésus"
+      "Bethléem",
+      "Jéricho",
+      "Nazareth",
+      "Antioche"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel élément chrétien décrit l'eucharistie ?",
+    "text": "Quel fleuve est associé au baptême de Jésus ?",
     "answers": [
-      "le Père, le Fils et le Saint-Esprit",
-      "la fête de la résurrection de Jésus",
-      "la fête de la naissance de Jésus",
-      "la commémoration du dernier repas de Jésus"
+      "Le Nil",
+      "Le Tigre",
+      "L’Euphrate",
+      "Le Jourdain"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle définition correspond à la Trinité ?",
+    "text": "Quel gouverneur romain ordonna la crucifixion de Jésus selon les Évangiles ?",
     "answers": [
-      "le Père, le Fils et le Saint-Esprit",
-      "la fête de la résurrection de Jésus",
-      "la fête de la naissance de Jésus",
-      "la venue de l'Esprit Saint sur les disciples"
+      "Ponce Pilate",
+      "Hérode Agrippa",
+      "Quirinius",
+      "Gallion"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément chrétien décrit la Trinité ?",
+    "text": "Quel lieu de Jérusalem est traditionnellement associé à la crucifixion de Jésus ?",
     "answers": [
-      "la fête de la résurrection de Jésus",
-      "le Père, le Fils et le Saint-Esprit",
-      "la fête de la naissance de Jésus",
-      "la venue de l'Esprit Saint sur les disciples"
+      "Le mont Carmel",
+      "Le Golgotha",
+      "Le mont Thabor",
+      "Le mont Sinaï"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle définition correspond à Pâques ?",
+    "text": "Quel apôtre est traditionnellement associé aux clés du Royaume ?",
     "answers": [
-      "la fête de la naissance de Jésus",
-      "la venue de l'Esprit Saint sur les disciples",
-      "la fête de la résurrection de Jésus",
-      "une période de préparation à Pâques"
+      "Thomas",
+      "André",
+      "Pierre",
+      "Philippe"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel élément chrétien décrit Pâques ?",
+    "text": "Quel apôtre était frère de Pierre ?",
     "answers": [
-      "la fête de la naissance de Jésus",
-      "la venue de l'Esprit Saint sur les disciples",
-      "une période de préparation à Pâques",
-      "la fête de la résurrection de Jésus"
+      "Matthieu",
+      "Jude",
+      "Barthélemy",
+      "André"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle définition correspond à Noël ?",
+    "text": "Quel apôtre est présenté comme collecteur d’impôts ?",
     "answers": [
-      "la fête de la naissance de Jésus",
-      "la venue de l'Esprit Saint sur les disciples",
-      "une période de préparation à Pâques",
-      "une période de préparation à Noël"
+      "Matthieu",
+      "Jean",
+      "Jacques",
+      "Simon le Zélote"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément chrétien décrit Noël ?",
+    "text": "Quel disciple remplaça Judas Iscariote dans les Actes ?",
     "answers": [
-      "la venue de l'Esprit Saint sur les disciples",
-      "la fête de la naissance de Jésus",
-      "une période de préparation à Pâques",
-      "une période de préparation à Noël"
+      "Barnabé",
+      "Matthias",
+      "Silas",
+      "Timothée"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle définition correspond à la Pentecôte ?",
+    "text": "Quel apôtre est surnommé Didyme, « le Jumeau » ?",
     "answers": [
-      "une période de préparation à Pâques",
-      "une période de préparation à Noël",
-      "la venue de l'Esprit Saint sur les disciples",
-      "un responsable d'un diocèse"
+      "Philippe",
+      "André",
+      "Thomas",
+      "Jacques"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément chrétien décrit la Pentecôte ?",
+    "text": "Quelle fête célèbre la résurrection de Jésus ?",
     "answers": [
-      "une période de préparation à Pâques",
-      "une période de préparation à Noël",
-      "un responsable d'un diocèse",
-      "la venue de l'Esprit Saint sur les disciples"
+      "Noël",
+      "L’Épiphanie",
+      "La Toussaint",
+      "Pâques"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle définition correspond au Carême ?",
+    "text": "Quelle fête célèbre la venue de l’Esprit Saint sur les disciples ?",
     "answers": [
-      "une période de préparation à Pâques",
-      "une période de préparation à Noël",
-      "un responsable d'un diocèse",
-      "l'évêque de Rome dans l'Église catholique"
+      "La Pentecôte",
+      "L’Ascension",
+      "L’Avent",
+      "Le Carême"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel élément chrétien décrit le Carême ?",
+    "text": "Quelle période précède Noël dans le calendrier liturgique occidental ?",
     "answers": [
-      "une période de préparation à Noël",
-      "une période de préparation à Pâques",
-      "un responsable d'un diocèse",
-      "l'évêque de Rome dans l'Église catholique"
+      "Le Carême",
+      "L’Avent",
+      "Le temps pascal",
+      "La Pentecôte"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle définition correspond à l'Avent ?",
+    "text": "Combien de jours le Carême dure-t-il traditionnellement, sans compter les dimanches ?",
     "answers": [
-      "un responsable d'un diocèse",
-      "l'évêque de Rome dans l'Église catholique",
-      "une période de préparation à Noël",
-      "un haut dignitaire de plusieurs Églises orientales"
+      "Trente",
+      "Cinquante",
+      "Quarante",
+      "Soixante"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément chrétien décrit l'Avent ?",
+    "text": "Quel jour ouvre le Carême dans le rite romain ?",
     "answers": [
-      "un responsable d'un diocèse",
-      "l'évêque de Rome dans l'Église catholique",
-      "un haut dignitaire de plusieurs Églises orientales",
-      "une période de préparation à Noël"
+      "Le jeudi saint",
+      "Le dimanche des Rameaux",
+      "Le vendredi saint",
+      "Le mercredi des Cendres"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle définition correspond à un évêque ?",
+    "text": "Quel sacrement utilise l’eau comme signe d’entrée dans la vie chrétienne ?",
     "answers": [
-      "un responsable d'un diocèse",
-      "l'évêque de Rome dans l'Église catholique",
-      "un haut dignitaire de plusieurs Églises orientales",
-      "325"
+      "Le baptême",
+      "La confirmation",
+      "L’ordination",
+      "L’onction des malades"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel élément chrétien décrit un évêque ?",
+    "text": "Quel repas de Jésus l’eucharistie commémore-t-elle ?",
     "answers": [
-      "l'évêque de Rome dans l'Église catholique",
-      "un responsable d'un diocèse",
-      "un haut dignitaire de plusieurs Églises orientales",
-      "325"
+      "Les noces de Cana",
+      "La Cène",
+      "La multiplication des pains",
+      "Le repas à Emmaüs uniquement"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle définition correspond au pape ?",
+    "text": "Dans la tradition catholique, combien compte-t-on de sacrements ?",
     "answers": [
-      "un haut dignitaire de plusieurs Églises orientales",
-      "325",
-      "l'évêque de Rome dans l'Église catholique",
-      "1054"
+      "Deux",
+      "Cinq",
+      "Sept",
+      "Douze"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément chrétien décrit le pape ?",
+    "text": "Quel sacrement confère le ministère d’évêque, de prêtre ou de diacre ?",
     "answers": [
-      "un haut dignitaire de plusieurs Églises orientales",
-      "325",
+      "Le mariage",
+      "La réconciliation",
+      "La confirmation",
+      "L’ordre"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel nom donne-t-on à l’huile consacrée utilisée notamment au baptême et à la confirmation ?",
+    "answers": [
+      "Le saint chrême",
+      "L’encens",
+      "L’eau grégorienne",
+      "La myrrhe funéraire"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel symbole est le plus directement associé à la crucifixion de Jésus ?",
+    "answers": [
+      "Le chandelier à sept branches",
+      "La croix",
+      "Le croissant",
+      "La roue"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Que représentent les lettres grecques alpha et oméga dans l’art chrétien ?",
+    "answers": [
+      "Les deux Testaments",
+      "Pierre et Paul",
+      "Le commencement et la fin",
+      "Le pain et le vin"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel monogramme combine les lettres grecques chi et rhô ?",
+    "answers": [
+      "L’ichthus",
+      "Le titulus",
+      "Le tétragramme",
+      "Le chrisme"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel animal symbolise traditionnellement l’évangéliste Marc ?",
+    "answers": [
+      "Le lion",
+      "L’aigle",
+      "Le taureau",
+      "L’homme ailé"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel évangéliste est traditionnellement symbolisé par un aigle ?",
+    "answers": [
+      "Matthieu",
+      "Jean",
+      "Marc",
+      "Luc"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel responsable dirige normalement un diocèse ?",
+    "answers": [
+      "Un diacre",
+      "Un sacristain",
+      "Un évêque",
+      "Un chantre"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans l’Église catholique, quel titre porte l’évêque de Rome ?",
+    "answers": [
+      "Le catholicos",
+      "Le métropolite",
+      "Le primat anglican",
+      "Le pape"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel ministre ordonné peut notamment assister l’évêque et le prêtre dans la liturgie ?",
+    "answers": [
+      "Le diacre",
+      "Le novice",
+      "Le lecteur laïc uniquement",
+      "Le sacristain"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel collège élit le pape dans l’Église catholique ?",
+    "answers": [
+      "Le synode des diacres",
+      "Le collège des cardinaux",
+      "Le chapitre du Latran",
+      "Le conseil des abbés"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel titre porte le chef du monastère dans de nombreuses traditions occidentales ?",
+    "answers": [
+      "Archidiacre",
+      "Chanoine",
+      "Abbé",
+      "Primat"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel concile se réunit à Nicée en 325 ?",
+    "answers": [
+      "Le concile de Trente",
+      "Le concile de Chalcédoine",
+      "Le premier concile du Vatican",
+      "Le premier concile de Nicée"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année situe-t-on traditionnellement le schisme entre Rome et Constantinople ?",
+    "answers": [
       "1054",
-      "l'évêque de Rome dans l'Église catholique"
+      "451",
+      "1215",
+      "1517"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle définition correspond à un patriarche ?",
+    "text": "Quel réformateur publia les 95 thèses en 1517 ?",
     "answers": [
-      "un haut dignitaire de plusieurs Églises orientales",
-      "325",
-      "1054",
-      "le XVIe siècle"
+      "Jean Calvin",
+      "Martin Luther",
+      "Ulrich Zwingli",
+      "John Knox"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément chrétien décrit un patriarche ?",
+    "text": "Dans quelle ville le concile catholique de 1545 à 1563 s’est-il principalement tenu ?",
     "answers": [
-      "325",
-      "un haut dignitaire de plusieurs Églises orientales",
-      "1054",
-      "le XVIe siècle"
+      "Nicée",
+      "Constance",
+      "Trente",
+      "Avignon"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle définition correspond au concile de Nicée ?",
+    "text": "Quel concile de 451 formula la définition christologique dite chalcédonienne ?",
     "answers": [
-      "1054",
-      "le XVIe siècle",
-      "325",
-      "1545-1563"
+      "Le concile d’Éphèse",
+      "Le concile de Latran IV",
+      "Le concile de Florence",
+      "Le concile de Chalcédoine"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément chrétien décrit le concile de Nicée ?",
+    "text": "Quelle grande tradition chrétienne est liée historiquement à Rome ?",
     "answers": [
-      "1054",
-      "le XVIe siècle",
-      "1545-1563",
-      "325"
+      "Le catholicisme",
+      "Le luthéranisme",
+      "L’orthodoxie orientale seule",
+      "Le méthodisme"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle définition correspond au Grand Schisme entre Orient et Occident ?",
+    "text": "Quelle tradition chrétienne regroupe des Églises autocéphales comme celles de Grèce et de Serbie ?",
     "answers": [
-      "1054",
-      "le XVIe siècle",
-      "1545-1563",
-      "une communion d'Églises autocéphales"
+      "L’anglicanisme",
+      "L’orthodoxie",
+      "Le baptisme",
+      "Le presbytérianisme"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel élément chrétien décrit le Grand Schisme entre Orient et Occident ?",
+    "text": "Quelle tradition est issue de la Réforme anglaise ?",
     "answers": [
-      "le XVIe siècle",
-      "1054",
-      "1545-1563",
-      "une communion d'Églises autocéphales"
+      "Le luthéranisme",
+      "Le calvinisme",
+      "L’anglicanisme",
+      "L’anabaptisme"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle définition correspond à la Réforme protestante de Luther ?",
+    "text": "Quel courant protestant est historiquement associé à Jean Calvin ?",
     "answers": [
-      "1545-1563",
-      "une communion d'Églises autocéphales",
-      "le XVIe siècle",
-      "une tradition issue de la Réforme anglaise"
+      "Le méthodisme",
+      "Le pentecôtisme",
+      "Le moravianisme",
+      "La tradition réformée"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément chrétien décrit la Réforme protestante de Luther ?",
+    "text": "Quel mouvement du XVIIIe siècle est étroitement associé à John Wesley ?",
     "answers": [
-      "1545-1563",
-      "une communion d'Églises autocéphales",
-      "une tradition issue de la Réforme anglaise",
-      "le XVIe siècle"
+      "Le méthodisme",
+      "Le luthéranisme",
+      "L’orthodoxie",
+      "Le vaudoisisme"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle définition correspond au concile de Trente ?",
+    "text": "Quel texte de prière commence par « Notre Père » ?",
     "answers": [
-      "1545-1563",
-      "une communion d'Églises autocéphales",
-      "une tradition issue de la Réforme anglaise",
-      "une tradition protestante liée à Martin Luther"
+      "Le Magnificat",
+      "Le Notre Père",
+      "Le Benedictus",
+      "Le Credo de Nicée"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel élément chrétien décrit le concile de Trente ?",
+    "text": "Quel livre biblique rassemble de nombreux chants et prières ?",
     "answers": [
-      "une communion d'Églises autocéphales",
-      "1545-1563",
-      "une tradition issue de la Réforme anglaise",
-      "une tradition protestante liée à Martin Luther"
+      "Le Lévitique",
+      "Les Nombres",
+      "Les Psaumes",
+      "L’épître à Philémon"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle définition correspond à l'orthodoxie orientale ?",
+    "text": "Quel chant de Marie se trouve au début de l’Évangile selon Luc ?",
     "answers": [
-      "une tradition issue de la Réforme anglaise",
-      "une tradition protestante liée à Martin Luther",
-      "une communion d'Églises autocéphales",
-      "une tradition réformée liée à Jean Calvin"
+      "Le Gloria",
+      "Le Sanctus",
+      "Le Te Deum",
+      "Le Magnificat"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément chrétien décrit l'orthodoxie orientale ?",
+    "text": "Quel mot hébreu signifiant « louez le Seigneur » est fréquent dans la liturgie ?",
     "answers": [
-      "une tradition issue de la Réforme anglaise",
-      "une tradition protestante liée à Martin Luther",
-      "une tradition réformée liée à Jean Calvin",
-      "une communion d'Églises autocéphales"
+      "Alléluia",
+      "Hosanna",
+      "Amen",
+      "Maranatha"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle définition correspond à l'anglicanisme ?",
+    "text": "Quel terme araméen de la liturgie ancienne signifie « Viens, Seigneur » ?",
     "answers": [
-      "une tradition issue de la Réforme anglaise",
-      "une tradition protestante liée à Martin Luther",
-      "une tradition réformée liée à Jean Calvin",
-      "l'église où se trouve la cathèdre de l'évêque"
+      "Kyrie eleison",
+      "Maranatha",
+      "Gloria",
+      "Sursum corda"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément chrétien décrit l'anglicanisme ?",
+    "text": "Quel personnage est présenté comme le premier martyr chrétien dans les Actes ?",
     "answers": [
-      "une tradition protestante liée à Martin Luther",
-      "une tradition issue de la Réforme anglaise",
-      "une tradition réformée liée à Jean Calvin",
-      "l'église où se trouve la cathèdre de l'évêque"
+      "Barnabé",
+      "Timothée",
+      "Étienne",
+      "Tite"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle définition correspond au luthéranisme ?",
+    "text": "Sur le chemin de quelle ville Paul connaît-il sa conversion ?",
     "answers": [
-      "une tradition réformée liée à Jean Calvin",
-      "l'église où se trouve la cathèdre de l'évêque",
-      "une tradition protestante liée à Martin Luther",
-      "un récit bref à portée spirituelle"
+      "Rome",
+      "Éphèse",
+      "Corinthe",
+      "Damas"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel élément chrétien décrit le luthéranisme ?",
+    "text": "Dans quelle ville les disciples furent-ils appelés chrétiens pour la première fois selon les Actes ?",
     "answers": [
-      "une tradition réformée liée à Jean Calvin",
-      "l'église où se trouve la cathèdre de l'évêque",
-      "un récit bref à portée spirituelle",
-      "une tradition protestante liée à Martin Luther"
+      "Antioche",
+      "Jérusalem",
+      "Alexandrie",
+      "Athènes"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle définition correspond au calvinisme ?",
+    "text": "Quel couple accueille Paul à Corinthe et travaille comme fabricants de tentes ?",
     "answers": [
-      "une tradition réformée liée à Jean Calvin",
-      "l'église où se trouve la cathèdre de l'évêque",
-      "un récit bref à portée spirituelle",
-      "un livre du Nouveau Testament sur l'Église primitive"
+      "Marie et Joseph",
+      "Priscille et Aquilas",
+      "Ananie et Saphire",
+      "Philémon et Apphia"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément chrétien décrit le calvinisme ?",
+    "text": "Quel collaborateur de Paul reçoit deux épîtres pastorales ?",
     "answers": [
-      "l'église où se trouve la cathèdre de l'évêque",
-      "une tradition réformée liée à Jean Calvin",
-      "un récit bref à portée spirituelle",
-      "un livre du Nouveau Testament sur l'Église primitive"
+      "Apollos",
+      "Épaphras",
+      "Timothée",
+      "Onésime"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle définition correspond à la cathédrale ?",
+    "text": "Quel empereur est associé à l’édit de Milan de 313 ?",
     "answers": [
-      "un récit bref à portée spirituelle",
-      "un livre du Nouveau Testament sur l'Église primitive",
-      "l'église où se trouve la cathèdre de l'évêque",
-      "le dernier livre du Nouveau Testament"
+      "Néron",
+      "Dioclétien",
+      "Théodose II",
+      "Constantin"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel élément chrétien décrit la cathédrale ?",
+    "text": "Quelle ville fut la capitale de l’Empire romain d’Orient et un grand centre chrétien ?",
     "answers": [
-      "un récit bref à portée spirituelle",
-      "un livre du Nouveau Testament sur l'Église primitive",
-      "le dernier livre du Nouveau Testament",
-      "l'église où se trouve la cathèdre de l'évêque"
+      "Constantinople",
+      "Carthage",
+      "Lyon",
+      "Tolède"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle définition correspond à une parabole ?",
+    "text": "Quel auteur des Confessions fut évêque d’Hippone ?",
     "answers": [
-      "un récit bref à portée spirituelle",
-      "un livre du Nouveau Testament sur l'Église primitive",
-      "le dernier livre du Nouveau Testament",
-      "l'Ancien et le Nouveau Testament"
+      "Jérôme",
+      "Augustin",
+      "Ambroise",
+      "Grégoire de Nysse"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément chrétien décrit une parabole ?",
+    "text": "Quel Père de l’Église traduisit largement la Bible en latin dans la Vulgate ?",
     "answers": [
-      "un livre du Nouveau Testament sur l'Église primitive",
-      "un récit bref à portée spirituelle",
-      "le dernier livre du Nouveau Testament",
-      "l'Ancien et le Nouveau Testament"
+      "Origène",
+      "Basile",
+      "Jérôme",
+      "Irénée"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle définition correspond aux Actes des Apôtres ?",
+    "text": "Quel théologien du IVe siècle est le frère de Basile de Césarée ?",
     "answers": [
-      "le dernier livre du Nouveau Testament",
-      "l'Ancien et le Nouveau Testament",
-      "un livre du Nouveau Testament sur l'Église primitive",
-      "Matthieu, Marc, Luc et Jean"
+      "Jean Chrysostome",
+      "Athanase",
+      "Cyrille d’Alexandrie",
+      "Grégoire de Nysse"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément chrétien décrit les Actes des Apôtres ?",
+    "text": "Quel saint est traditionnellement associé à la fondation de l’ordre franciscain ?",
     "answers": [
-      "le dernier livre du Nouveau Testament",
-      "l'Ancien et le Nouveau Testament",
-      "Matthieu, Marc, Luc et Jean",
-      "un livre du Nouveau Testament sur l'Église primitive"
+      "François d’Assise",
+      "Benoît de Nursie",
+      "Dominique de Guzmán",
+      "Ignace de Loyola"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle définition correspond à l'Apocalypse de Jean ?",
+    "text": "Quelle règle monastique occidentale est liée à Benoît de Nursie ?",
     "answers": [
-      "le dernier livre du Nouveau Testament",
-      "l'Ancien et le Nouveau Testament",
-      "Matthieu, Marc, Luc et Jean",
-      "un rite d'entrée dans la vie chrétienne"
+      "La règle du Carmel",
+      "La règle de saint Benoît",
+      "Les Constitutions apostoliques",
+      "La Didachè"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel élément chrétien décrit l'Apocalypse de Jean ?",
+    "text": "Quel ordre mendiant fut fondé par Dominique de Guzmán ?",
     "answers": [
-      "l'Ancien et le Nouveau Testament",
-      "le dernier livre du Nouveau Testament",
-      "Matthieu, Marc, Luc et Jean",
-      "un rite d'entrée dans la vie chrétienne"
+      "Les bénédictins",
+      "Les jésuites",
+      "Les dominicains",
+      "Les chartreux"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ordre religieux fut fondé par Ignace de Loyola et ses compagnons ?",
+    "answers": [
+      "L’ordre du Temple",
+      "L’ordre de Cluny",
+      "L’ordre des Prêcheurs",
+      "La Compagnie de Jésus"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel monastère français devint le centre d’une importante réforme bénédictine au Xe siècle ?",
+    "answers": [
+      "Cluny",
+      "Cîteaux",
+      "Solesmes",
+      "Lérins"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel artiste peignit le plafond de la chapelle Sixtine ?",
+    "answers": [
+      "Raphaël",
+      "Michel-Ange",
+      "Giotto",
+      "Le Caravage"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel peintre réalisa La Cène conservée à Milan ?",
+    "answers": [
+      "Titien",
+      "Botticelli",
+      "Léonard de Vinci",
+      "Fra Angelico"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle cathédrale française est célèbre pour ses vitraux médiévaux bleus ?",
+    "answers": [
+      "Reims",
+      "Rouen",
+      "Amiens",
+      "Chartres"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel compositeur écrivit la Passion selon saint Matthieu ?",
+    "answers": [
+      "Jean-Sébastien Bach",
+      "Georg Friedrich Haendel",
+      "Antonio Vivaldi",
+      "Wolfgang Amadeus Mozart"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel architecte conçut la basilique de la Sagrada Família ?",
+    "answers": [
+      "Filippo Brunelleschi",
+      "Antoni Gaudí",
+      "Donato Bramante",
+      "Christopher Wren"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville se trouve la basilique Saint-Pierre ?",
+    "answers": [
+      "Assise",
+      "Florence",
+      "La Cité du Vatican",
+      "Milan"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel lieu de Jérusalem abrite traditionnellement le tombeau de Jésus ?",
+    "answers": [
+      "Le Cénacle",
+      "L’église Sainte-Anne",
+      "Le mont des Oliviers",
+      "L’église du Saint-Sépulcre"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle ville se trouve l’église de la Nativité ?",
+    "answers": [
+      "Bethléem",
+      "Nazareth",
+      "Cana",
+      "Jéricho"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel grand sanctuaire espagnol est associé à l’apôtre Jacques ?",
+    "answers": [
+      "Montserrat",
+      "Saint-Jacques-de-Compostelle",
+      "Loyola",
+      "Tolède"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ancien monastère du Sinaï est dédié à sainte Catherine ?",
+    "answers": [
+      "Le monastère de Mar Saba",
+      "Le monastère d’Ostrog",
+      "Le monastère Sainte-Catherine",
+      "Le monastère de Rila"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel évangéliste est traditionnellement considéré comme médecin ?",
+    "answers": [
+      "Marc",
+      "Matthieu",
+      "Jean",
+      "Luc"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "À qui Paul adresse-t-il l’épître la plus longue du Nouveau Testament ?",
+    "answers": [
+      "Aux Romains",
+      "À Philémon",
+      "À Tite",
+      "À Jude"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle épître contient l’image de « l’armure de Dieu » ?",
+    "answers": [
+      "L’épître aux Galates",
+      "L’épître aux Éphésiens",
+      "L’épître de Jacques",
+      "La deuxième épître de Jean"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel livre du Nouveau Testament développe longuement le thème du Christ grand prêtre ?",
+    "answers": [
+      "L’épître aux Philippiens",
+      "L’épître de Jude",
+      "L’épître aux Hébreux",
+      "La troisième épître de Jean"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle épître affirme que « la foi sans les œuvres est morte » ?",
+    "answers": [
+      "L’épître aux Romains",
+      "La première épître aux Thessaloniciens",
+      "L’épître à Tite",
+      "L’épître de Jacques"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel terme désigne un récit bref employé par Jésus pour enseigner ?",
+    "answers": [
+      "Une parabole",
+      "Une généalogie",
+      "Une doxologie",
+      "Une lamentation"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quelle parabole un voyageur blessé est-il secouru par un Samaritain ?",
+    "answers": [
+      "Le fils prodigue",
+      "Le Bon Samaritain",
+      "Le semeur",
+      "Les talents"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle parabole raconte le retour d’un fils ayant dissipé son héritage ?",
+    "answers": [
+      "La brebis perdue",
+      "Les dix vierges",
+      "Le fils prodigue",
+      "Le grain de moutarde"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle parabole différentes terres reçoivent-elles la semence ?",
+    "answers": [
+      "Le riche insensé",
+      "Le figuier stérile",
+      "Le trésor caché",
+      "Le semeur"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle parabole de Matthieu met en scène cinq jeunes femmes prévoyantes et cinq imprévoyantes ?",
+    "answers": [
+      "Les dix vierges",
+      "Les ouvriers de la vigne",
+      "Les talents",
+      "Le filet"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel mot grec signifie « bonne nouvelle » et a donné « évangile » ?",
+    "answers": [
+      "Logos",
+      "Euangelion",
+      "Agapè",
+      "Koinonia"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel terme grec du Nouveau Testament désigne souvent l’assemblée ou l’Église ?",
+    "answers": [
+      "Diakonia",
+      "Parousia",
+      "Ekklesia",
+      "Kenosis"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel terme grec désigne l’amour de charité dans de nombreux textes chrétiens ?",
+    "answers": [
+      "Chronos",
+      "Nomos",
+      "Pneuma",
+      "Agapè"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel terme théologique désigne l’incarnation du Fils de Dieu ?",
+    "answers": [
+      "L’Incarnation",
+      "La transfiguration",
+      "La justification",
+      "La sanctification"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel mot grec de Philippiens 2 décrit l’« abaissement » volontaire du Christ ?",
+    "answers": [
+      "Anamnèse",
+      "Kénose",
+      "Épiclèse",
+      "Parousie"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel credo affirme la foi en un seul Dieu, Père, Fils et Saint-Esprit ?",
+    "answers": [
+      "Le Te Deum",
+      "Le Magnificat",
+      "Le symbole de Nicée-Constantinople",
+      "Le Benedictus"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel terme désigne la doctrine chrétienne d’un Dieu en trois personnes ?",
+    "answers": [
+      "Le millénarisme",
+      "Le monophysisme",
+      "Le donatisme",
+      "La Trinité"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel titre grec signifie « Mère de Dieu » dans la tradition conciliaire ?",
+    "answers": [
+      "Theotokos",
+      "Pantocrator",
+      "Paraclet",
+      "Kyrios"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel concile de 431 confirma l’usage du titre Theotokos pour Marie ?",
+    "answers": [
+      "Le concile de Nicée II",
+      "Le concile d’Éphèse",
+      "Le concile de Trente",
+      "Le concile de Constance"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel terme christologique affirme que le Christ est de même substance que le Père ?",
+    "answers": [
+      "Filioque",
+      "Anathema",
+      "Homoousios",
+      "Kerygma"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel mouvement chrétien met particulièrement l’accent sur les dons de l’Esprit Saint ?",
+    "answers": [
+      "Le jansénisme",
+      "Le nestorianisme",
+      "Le gallicanisme",
+      "Le pentecôtisme"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel organisme fondé en 1948 rassemble de nombreuses Églises dans le dialogue œcuménique ?",
+    "answers": [
+      "Le Conseil œcuménique des Églises",
+      "Le collège des cardinaux",
+      "La Curie romaine",
+      "Le Conseil de Trente"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment nomme-t-on la recherche de l’unité entre chrétiens ?",
+    "answers": [
+      "La scolastique",
+      "L’œcuménisme",
+      "L’hésychasme",
+      "La simonie"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel document de Vatican II porte spécifiquement sur l’œcuménisme ?",
+    "answers": [
+      "Dei Verbum",
+      "Sacrosanctum Concilium",
+      "Unitatis redintegratio",
+      "Gaudium et spes"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle ville siège le Conseil œcuménique des Églises ?",
+    "answers": [
+      "Rome",
+      "Canterbury",
+      "Constantinople",
+      "Genève"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
