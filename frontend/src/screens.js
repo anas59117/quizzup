@@ -376,7 +376,7 @@ export function WaitingContent({ avatar, name, level = 1, categoryKey, onCancel,
       </div>
       <div className="search-meta">{t('searchElapsed', { n: elapsed })}</div>
       <div className="loading-bar"><div className="loading-fill" /></div>
-      {elapsed >= 12 && (
+      {elapsed >= 5 && (
         <div className="matchmaking-alternative">
           <p role="status">{t('searchTakingLonger')}</p>
           <button className="btn" onClick={onPlaySolo} disabled={pending || reconnecting}>
@@ -483,7 +483,7 @@ export function FinishedContent({ result, opponents, myId, social, addFriend, pl
         <div className="xpb-row"><span>{t('winBonus')}</span><span>+{result.xpBreakdown?.winBonus ?? 0}</span></div>
         <div className="xpb-row total"><span>{t('xpTotal')}</span><span>{result.xp}</span></div>
       </div>
-      <Leaderboard leaderboard={result.leaderboard} myId={myId} />
+      {!isSolo && <Leaderboard leaderboard={result.leaderboard} myId={myId} />}
       <div className="rewards-row"><span className="rw">{t('coins', { n: result.coins })}</span></div>
       <button className="share-link" onClick={shareResult}>{t('share')}</button>
       {addableOpponents.map((o) => (
@@ -492,9 +492,11 @@ export function FinishedContent({ result, opponents, myId, social, addFriend, pl
         </button>
       ))}
       <div className="result-actions">
-        <button className="ra-btn rematch" onClick={rematch} disabled={rematchWaiting || rematchStarting}>
-          {rematchWaiting || rematchStarting ? t('waitingDots') : t('rematch')}
-        </button>
+        {!isSolo && (
+          <button className="ra-btn rematch" onClick={rematch} disabled={rematchWaiting || rematchStarting}>
+            {rematchWaiting || rematchStarting ? t('waitingDots') : t('rematch')}
+          </button>
+        )}
         <button className="ra-btn new-opp" onClick={newMatch} disabled={rematchStarting}>
           {isSolo ? t('newGame') : t('newOpponent')}
         </button>

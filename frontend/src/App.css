@@ -950,3 +950,12 @@ button.topic-level-row:hover { border-color:var(--border-strong); }
 /* Boot splash (replaces the pseudo/avatar screen) */
 .boot-splash { min-height:70vh; justify-content:center; }
 .boot-splash .loading-bar { width:min(220px,60vw); margin-top:28px; }
+
+/* Game screens (waiting, question, result) start under the fixed sound/theme/
+   language controls instead of sliding beneath them on narrow viewports. */
+@media (max-width:900px) {
+  .app.game-bg { padding-top:84px; }
+}
+@media (max-width:480px) {
+  .app.game-bg { padding-top:76px; }
+}

@@ -14,19 +14,56 @@ const TRACKS = {
 const VOLUME = 0.35;
 const FADE_MS = 450;
 
+// One <audio> element per track, created on first use and reused for the
+// whole session. Re-creating the element (or clearing its src) on every
+// switch made the browser download the same file again each round.
+const elements = new Map(); // key -> HTMLAudioElement
+const fades = new Map(); // audio -> fade token (latest fade wins)
+const pauseTimers = new Map(); // audio -> pending pause timeout
+
 let current = null; // { key, audio }
 
+function getAudio(key) {
+  let audio = elements.get(key);
+  if (!audio) {
+    audio = new Audio();
+    audio.preload = key === 'menu' ? 'auto' : 'none';
+    audio.src = TRACKS[key];
+    elements.set(key, audio);
+  }
+  return audio;
+}
+
 function fadeTo(audio, target, ms) {
+  const token = {};
+  fades.set(audio, token);
   const start = audio.volume;
   const startTime = performance.now();
   function step(now) {
+    if (fades.get(audio) !== token) return; // a newer fade took over
     const t = Math.min(1, (now - startTime) / ms);
-    // Clamp: overlapping fades on the same element (rapid track switches)
-    // can compound floating-point drift past 0/1, which throws a RangeError.
+    // Clamp: floating-point drift past 0/1 throws a RangeError.
     audio.volume = Math.max(0, Math.min(1, start + (target - start) * t));
     if (t < 1) requestAnimationFrame(step);
   }
   requestAnimationFrame(step);
+}
+
+function cancelPause(audio) {
+  const timer = pauseTimers.get(audio);
+  if (timer) {
+    clearTimeout(timer);
+    pauseTimers.delete(audio);
+  }
+}
+
+function fadeOutAndPause(audio) {
+  fadeTo(audio, 0, FADE_MS);
+  cancelPause(audio);
+  pauseTimers.set(audio, setTimeout(() => {
+    pauseTimers.delete(audio);
+    audio.pause();
+  }, FADE_MS + 50));
 }
 
 // Browsers block audio.play() until a user gesture. The screen-switch that
@@ -35,7 +72,7 @@ function fadeTo(audio, target, ms) {
 // tap/click anywhere on the page instead of staying silent for the session.
 function retryOnNextGesture(audio) {
   const retry = () => {
-    audio.play().catch(() => {});
+    if (current && current.audio === audio) audio.play().catch(() => {});
     document.removeEventListener('pointerdown', retry, true);
   };
   document.addEventListener('pointerdown', retry, { capture: true, once: true });
@@ -46,30 +83,27 @@ function play(key, { loop = true } = {}) {
   if (current && current.key === key) return; // already playing
 
   const prev = current;
-  const audio = new Audio(TRACKS[key]);
+  const audio = getAudio(key);
+  cancelPause(audio);
   audio.loop = loop;
-  audio.volume = 0;
   audio.muted = SFX.muted;
+  audio.volume = 0;
+  try { audio.currentTime = 0; } catch (e) { /* not seekable yet */ }
   current = { key, audio };
   audio.play().catch(() => retryOnNextGesture(audio));
   fadeTo(audio, VOLUME, FADE_MS);
 
-  if (prev) {
-    fadeTo(prev.audio, 0, FADE_MS);
-    setTimeout(() => { prev.audio.pause(); prev.audio.src = ''; }, FADE_MS + 50);
-  }
+  if (prev && prev.audio !== audio) fadeOutAndPause(prev.audio);
 }
 
 function stop() {
   if (!current) return;
-  const { audio } = current;
-  fadeTo(audio, 0, FADE_MS);
-  setTimeout(() => { audio.pause(); audio.src = ''; }, FADE_MS + 50);
+  fadeOutAndPause(current.audio);
   current = null;
 }
 
 function setMuted(muted) {
-  if (current) current.audio.muted = muted;
+  elements.forEach((audio) => { audio.muted = muted; });
 }
 
 export default { play, stop, setMuted };

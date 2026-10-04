@@ -429,6 +429,13 @@ export const TOPIC_COVERS = {
   annees_2000: remoteCover("https://i.blogs.es/5fe444/gadgets-vintage-retro-no-probaste-menos-25-anos-mexico/1200_900.jpeg", "https://www.xataka.com.mx/otros-dispositivos/tienes-25-anos-te-perdiste-posibilidad-probar-estos-espectaculares-gadgets", "center 48%"),
   internet_reseaux_sociaux: remoteCover("https://idsb.tmgrup.com.tr/ly/uploads/images/2026/03/23/432798.jpg", "https://www.dailysabah.com/business/tech/users-scroll-between-reality-reflection-in-changed-social-media", "center 48%"),
   monuments_de_france: remoteCover("https://i.pinimg.com/originals/79/ae/92/79ae92d3616ce864f5707405756907e6.jpg", "https://www.pinterest.com/pin/17-famous-french-landmarks-that-you-shouldnt-miss--125397170863535933/", "center 47%"),
+  geographie_de_france: cover('France relief location map.jpg', 'center 45%'),
+  ballon_d_or: cover("Zinedine Zidane's 1998 Ballon d'Or trophy, Real Madrid Museum, Santiago Bernabéu, Madrid, Spain (Ank Kumar, Infosys Limited) 01.jpg", 'center 40%'),
+  kaamelott: remoteCover("https://static.tvmaze.com/uploads/images/original_untouched/345/863865.jpg", "https://www.tvmaze.com/shows/7092/kaamelott", 'center 28%'),
+  lupin: remoteCover("https://static.tvmaze.com/uploads/images/original_untouched/603/1507749.jpg", "https://www.tvmaze.com/shows/50701/lupin", 'center 28%'),
+  arcane: remoteCover("https://static.tvmaze.com/uploads/images/original_untouched/536/1340287.jpg", "https://www.tvmaze.com/shows/55138/arcane-league-of-legends", 'center 28%'),
+  bridgerton: remoteCover("https://static.tvmaze.com/uploads/images/original_untouched/614/1535959.jpg", "https://www.tvmaze.com/shows/42966/bridgerton", 'center 28%'),
+  gossip_girl: remoteCover("https://static.tvmaze.com/uploads/images/original_untouched/499/1247570.jpg", "https://www.tvmaze.com/shows/567/gossip-girl", 'center 28%'),
 };
 
 export function getTopicCover(category) {

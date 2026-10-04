@@ -47,12 +47,12 @@ export const Icon = memo(function Icon({ name, size = 20, className = '' }) {
 export const AVATARS = ['\u{1F43A}', '\u{1F981}', '\u{1F98A}', '\u{1F43C}', '\u{1F989}', '\u{1F438}', '\u{1F42F}', '\u{1F984}'];
 
 export const CATEGORIES = [
-  { key: 'movies', label: 'Movies', icon: '\u{1F3AC}', grad: 'g1', tag: '\u{1F525}', desc: 'Blockbusters & classics', family: 'cinema' },
-  { key: 'music', label: 'Music', icon: '\u{1F3B5}', grad: 'g2', desc: 'Artists, albums & lyrics', family: 'music' },
-  { key: 'sports', label: 'Sports', icon: '⚽', grad: 'g3', desc: 'Teams & champions', family: 'sport' },
-  { key: 'geography', label: 'Geography', icon: '\u{1F30D}', grad: 'g4', desc: 'Capitals & landmarks', family: 'culture' },
-  { key: 'gaming', label: 'Gaming', icon: '\u{1F3AE}', grad: 'g5', desc: 'Consoles & lore', family: 'gaming' },
-  { key: 'science', label: 'Science', icon: '\u{1F9EC}', grad: 'g6', tag: '✨', desc: 'Space, bio & physics', family: 'culture' },
+  { key: 'movies', label: 'Films', icon: '\u{1F3AC}', grad: 'g1', tag: '\u{1F525}', desc: 'Blockbusters & classiques', family: 'cinema' },
+  { key: 'music', label: 'Musique', icon: '\u{1F3B5}', grad: 'g2', desc: 'Artistes, albums & paroles', family: 'music' },
+  { key: 'sports', label: 'Sports', icon: '⚽', grad: 'g3', desc: 'Équipes & champions', family: 'sport' },
+  { key: 'geography', label: 'Géographie', icon: '\u{1F30D}', grad: 'g4', desc: 'Capitales & monuments', family: 'culture' },
+  { key: 'gaming', label: 'Jeux vidéo', icon: '\u{1F3AE}', grad: 'g5', desc: 'Consoles & univers', family: 'gaming' },
+  { key: 'science', label: 'Sciences', icon: '\u{1F9EC}', grad: 'g6', tag: '✨', desc: 'Espace, biologie & physique', family: 'culture' },
   { key: 'rap_fr', label: 'Rap Français', icon: '\u{1F3A4}', grad: 'g7', tag: '\u{1F525}', desc: 'PNL, Booba, Jul & co.', family: 'music', cover: '/images/players/booba.jpg' },
   { key: 'foot_fr', label: 'Foot Français', icon: '⚽', grad: 'g8', desc: 'Ligue 1, Bleus & légendes', family: 'football', cover: '/images/covers/foot_fr.jpg' },
   { key: 'cinema_fr', label: 'Cinéma Français', icon: '\u{1F3AD}', grad: 'g9', desc: 'Films, séries & acteurs', family: 'cinema' },
