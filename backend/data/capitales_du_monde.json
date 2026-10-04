@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Quelle est la capitale de France ?",
+    "text": "Quelle ville est la capitale de la France ?",
     "answers": [
       "Paris",
-      "Berlin",
-      "Rome",
-      "Madrid"
+      "Lyon",
+      "Marseille",
+      "Bordeaux"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle est la capitale de Allemagne ?",
+    "text": "Berlin est la capitale de quel pays ?",
     "answers": [
+      "Autriche",
+      "Allemagne",
+      "Belgique",
+      "Pologne"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle capitale européenne est traversée par le Manzanares ?",
+    "answers": [
+      "Lisbonne",
       "Rome",
-      "Berlin",
       "Madrid",
+      "Athènes"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Le palais de Belém et la tour du même nom se trouvent dans quelle capitale ?",
+    "answers": [
+      "Madrid",
+      "Porto",
+      "Bruxelles",
       "Lisbonne"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de Italie ?",
-    "answers": [
-      "Madrid",
-      "Lisbonne",
-      "Rome",
-      "Bruxelles"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle est la capitale de Espagne ?",
-    "answers": [
-      "Lisbonne",
-      "Bruxelles",
-      "Amsterdam",
-      "Madrid"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quelle est la capitale de Portugal ?",
-    "answers": [
-      "Lisbonne",
-      "Bruxelles",
-      "Amsterdam",
-      "Berne"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle est la capitale de Belgique ?",
-    "answers": [
-      "Amsterdam",
-      "Bruxelles",
-      "Berne",
-      "Vienne"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quelle est la capitale de Pays-Bas ?",
+    "text": "Quelle ville, appelée ville fédérale, abrite le gouvernement de la Suisse ?",
     "answers": [
       "Berne",
-      "Vienne",
-      "Amsterdam",
-      "Varsovie"
+      "Zurich",
+      "Genève",
+      "Lausanne"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle est la capitale de Suisse ?",
+    "text": "Quelle est la capitale du Royaume-Uni ?",
     "answers": [
-      "Vienne",
-      "Varsovie",
-      "Athènes",
-      "Berne"
+      "Manchester",
+      "Londres",
+      "Édimbourg",
+      "Birmingham"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle est la capitale de Autriche ?",
+    "text": "Dublin est la capitale de quel État ?",
     "answers": [
-      "Vienne",
-      "Varsovie",
-      "Athènes",
-      "Dublin"
+      "Islande",
+      "Malte",
+      "Irlande",
+      "Chypre"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle est la capitale de Pologne ?",
+    "text": "Dans quelle capitale norvégienne siège le Storting ?",
     "answers": [
-      "Athènes",
-      "Varsovie",
-      "Dublin",
+      "Bergen",
+      "Trondheim",
+      "Stavanger",
       "Oslo"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de Grèce ?",
-    "answers": [
-      "Dublin",
-      "Oslo",
-      "Athènes",
-      "Stockholm"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle est la capitale de Irlande ?",
-    "answers": [
-      "Oslo",
-      "Stockholm",
-      "Helsinki",
-      "Dublin"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quelle est la capitale de Norvège ?",
-    "answers": [
-      "Oslo",
-      "Stockholm",
-      "Helsinki",
-      "Copenhague"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle est la capitale de Suède ?",
+    "text": "Quelle capitale se trouve sur le golfe de Finlande ?",
     "answers": [
       "Helsinki",
       "Stockholm",
       "Copenhague",
-      "Reykjavik"
+      "Oslo"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de Finlande ?",
+    "text": "Quelle capitale nationale est la plus septentrionale parmi ces quatre villes ?",
     "answers": [
-      "Copenhague",
-      "Reykjavik",
       "Helsinki",
-      "Ottawa"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle est la capitale de Danemark ?",
-    "answers": [
       "Reykjavik",
-      "Ottawa",
-      "Washington",
-      "Copenhague"
+      "Oslo",
+      "Tallinn"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle est la capitale de Islande ?",
+    "text": "Quelle ville est la capitale de la Pologne ?",
     "answers": [
-      "Reykjavik",
-      "Ottawa",
-      "Washington",
-      "Mexico"
+      "Cracovie",
+      "Gdańsk",
+      "Varsovie",
+      "Wrocław"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle est la capitale de Canada ?",
+    "text": "Prague est la capitale de quel pays ?",
     "answers": [
-      "Washington",
-      "Ottawa",
-      "Mexico",
-      "Brasília"
+      "Slovaquie",
+      "Slovénie",
+      "Croatie",
+      "Tchéquie"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle est la capitale de États-Unis ?",
+    "text": "Quelle capitale réunit Buda et Pest de part et d’autre du Danube ?",
     "answers": [
-      "Mexico",
-      "Brasília",
-      "Washington",
-      "Buenos Aires"
+      "Budapest",
+      "Bratislava",
+      "Belgrade",
+      "Vienne"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de Mexique ?",
+    "text": "Le palais du Parlement, l’un des plus vastes bâtiments administratifs au monde, domine quelle capitale ?",
     "answers": [
-      "Brasília",
-      "Buenos Aires",
-      "Santiago",
-      "Mexico"
+      "Sofia",
+      "Bucarest",
+      "Belgrade",
+      "Budapest"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de Brésil ?",
+    "text": "Quelle capitale moldave s’écrit Chișinău en roumain ?",
     "answers": [
-      "Brasília",
-      "Buenos Aires",
-      "Santiago",
-      "Lima"
+      "Tbilissi",
+      "Tirana",
+      "Chișinău",
+      "Skopje"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle est la capitale de Argentine ?",
+    "text": "Quelle est la capitale de la Grèce ?",
     "answers": [
-      "Santiago",
-      "Buenos Aires",
-      "Lima",
-      "Bogota"
+      "Thessalonique",
+      "Patras",
+      "Héraklion",
+      "Athènes"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle est la capitale de Chili ?",
+    "text": "Zagreb est la capitale de quel pays ?",
     "answers": [
-      "Lima",
-      "Bogota",
-      "Santiago",
-      "Rabat"
+      "Croatie",
+      "Slovénie",
+      "Serbie",
+      "Bosnie-Herzégovine"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle est la capitale de Pérou ?",
+    "text": "Quelle capitale est traversée par la Ljubljanica ?",
     "answers": [
-      "Bogota",
+      "Bratislava",
+      "Ljubljana",
+      "Sarajevo",
+      "Skopje"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle capitale estonienne se trouve la vieille ville de Toompea ?",
+    "answers": [
+      "Riga",
+      "Vilnius",
+      "Tallinn",
+      "Helsinki"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle ville a repris en 1992 le nom de Podgorica après avoir été appelée Titograd ?",
+    "answers": [
+      "Pristina",
+      "Tirana",
+      "Sarajevo",
+      "Podgorica"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle ville est la capitale du Maroc ?",
+    "answers": [
       "Rabat",
-      "Alger",
-      "Lima"
+      "Casablanca",
+      "Marrakech",
+      "Fès"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle est la capitale de Colombie ?",
+    "text": "Alger est la capitale de quel pays ?",
     "answers": [
-      "Bogota",
-      "Rabat",
-      "Alger",
-      "Tunis"
+      "Tunisie",
+      "Algérie",
+      "Libye",
+      "Mauritanie"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle est la capitale de Maroc ?",
+    "text": "Quelle capitale se situe au bord du golfe de Tunis ?",
     "answers": [
+      "Tripoli",
       "Alger",
-      "Rabat",
       "Tunis",
-      "Le Caire"
+      "Alexandrie"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de l'Algérie ?",
+    "text": "Le Caire se trouve principalement près de quel grand fleuve ?",
     "answers": [
-      "Tunis",
-      "Le Caire",
-      "Alger",
-      "Dakar"
+      "Le Niger",
+      "Le Congo",
+      "Le Zambèze",
+      "Le Nil"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de la Tunisie ?",
+    "text": "Quelle capitale mauritanienne a été développée rapidement à l’approche de l’indépendance ?",
     "answers": [
-      "Le Caire",
+      "Nouakchott",
+      "Nouadhibou",
+      "Bamako",
+      "Niamey"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle est la capitale du Sénégal ?",
+    "answers": [
+      "Saint-Louis",
       "Dakar",
-      "Nairobi",
-      "Tunis"
+      "Thiès",
+      "Kaolack"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle est la capitale de Égypte ?",
+    "text": "Accra est la capitale de quel pays ?",
     "answers": [
-      "Le Caire",
-      "Dakar",
-      "Nairobi",
-      "Addis-Abeba"
+      "Togo",
+      "Bénin",
+      "Ghana",
+      "Liberia"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle est la capitale de Sénégal ?",
+    "text": "Quelle est la capitale politique officielle de la Côte d’Ivoire ?",
     "answers": [
-      "Nairobi",
-      "Dakar",
-      "Addis-Abeba",
-      "Abuja"
+      "Abidjan",
+      "Bouaké",
+      "San-Pédro",
+      "Yamoussoukro"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de Kenya ?",
-    "answers": [
-      "Addis-Abeba",
-      "Abuja",
-      "Nairobi",
-      "Accra"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle est la capitale de Éthiopie ?",
-    "answers": [
-      "Abuja",
-      "Accra",
-      "Tokyo",
-      "Addis-Abeba"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quelle est la capitale de Nigeria ?",
+    "text": "Quelle ville planifiée a remplacé Lagos comme capitale du Nigeria en 1991 ?",
     "answers": [
       "Abuja",
-      "Accra",
-      "Tokyo",
-      "Pékin"
+      "Kano",
+      "Ibadan",
+      "Kaduna"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de Ghana ?",
+    "text": "Quelle capitale gambienne est située sur une île à l’embouchure du fleuve Gambie ?",
     "answers": [
-      "Tokyo",
-      "Accra",
-      "Pékin",
-      "Séoul"
+      "Bissau",
+      "Banjul",
+      "Conakry",
+      "Freetown"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle est la capitale de Japon ?",
+    "text": "Quelle est la capitale du Kenya ?",
     "answers": [
-      "Pékin",
-      "Séoul",
-      "Tokyo",
-      "New Delhi"
+      "Mombasa",
+      "Kisumu",
+      "Nairobi",
+      "Nakuru"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle est la capitale de Chine ?",
+    "text": "Addis-Abeba est la capitale de quel pays ?",
     "answers": [
-      "Séoul",
-      "New Delhi",
-      "Bangkok",
-      "Pékin"
+      "Érythrée",
+      "Somalie",
+      "Djibouti",
+      "Éthiopie"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle est la capitale de Corée du Sud ?",
+    "text": "Quelle capitale rwandaise s’étend sur plusieurs collines ?",
     "answers": [
-      "Séoul",
-      "New Delhi",
-      "Bangkok",
-      "Hanoï"
+      "Kigali",
+      "Bujumbura",
+      "Kampala",
+      "Goma"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de Inde ?",
+    "text": "Le siège historique du royaume du Buganda se trouve dans quelle capitale actuelle ?",
     "answers": [
-      "Bangkok",
-      "New Delhi",
-      "Hanoï",
-      "Jakarta"
+      "Nairobi",
+      "Kampala",
+      "Kigali",
+      "Dodoma"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de Thaïlande ?",
+    "text": "Quelle ville est la capitale officielle de la Tanzanie, même si Dar es Salaam reste son grand centre économique ?",
     "answers": [
-      "Hanoï",
-      "Jakarta",
-      "Bangkok",
-      "Manille"
+      "Arusha",
+      "Mwanza",
+      "Dodoma",
+      "Zanzibar"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle est la capitale de Vietnam ?",
+    "text": "Quelle est la capitale de l’Angola ?",
     "answers": [
-      "Jakarta",
-      "Manille",
-      "Canberra",
-      "Hanoï"
+      "Lobito",
+      "Huambo",
+      "Benguela",
+      "Luanda"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle est la capitale de Indonésie ?",
+    "text": "Lusaka est la capitale de quel pays ?",
     "answers": [
-      "Jakarta",
-      "Manille",
-      "Canberra",
-      "Wellington"
+      "Zambie",
+      "Zimbabwe",
+      "Malawi",
+      "Botswana"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle est la capitale de Philippines ?",
+    "text": "Quelle capitale était appelée Salisbury jusqu’en 1982 ?",
     "answers": [
-      "Canberra",
-      "Manille",
-      "Wellington",
-      "Ankara"
+      "Lusaka",
+      "Harare",
+      "Gaborone",
+      "Maputo"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de Australie ?",
+    "text": "Maputo portait quel nom colonial avant 1976 ?",
     "answers": [
-      "Wellington",
+      "Salisbury",
+      "Léopoldville",
+      "Lourenço Marques",
+      "Fort Lamy"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle capitale malgache est souvent abrégée en « Tana » ?",
+    "answers": [
+      "Toamasina",
+      "Mahajanga",
+      "Fianarantsoa",
+      "Antananarivo"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle est la capitale des États-Unis ?",
+    "answers": [
+      "Washington",
+      "New York",
+      "Philadelphie",
+      "Boston"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Ottawa est la capitale de quel pays ?",
+    "answers": [
+      "Australie",
+      "Canada",
+      "Nouvelle-Zélande",
+      "Irlande"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle capitale fédérale nord-américaine a été édifiée sur les vestiges de Tenochtitlan ?",
+    "answers": [
+      "Guatemala",
+      "La Havane",
+      "Mexico",
+      "Panama"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Le Malecón longe le littoral de quelle capitale ?",
+    "answers": [
+      "Santo Domingo",
+      "Kingston",
+      "San Juan",
+      "La Havane"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle capitale jamaïcaine se trouve sur la côte sud-est de l’île ?",
+    "answers": [
+      "Kingston",
+      "Montego Bay",
+      "Spanish Town",
+      "Port Antonio"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle est la capitale du Guatemala ?",
+    "answers": [
+      "Antigua Guatemala",
+      "Guatemala",
+      "Quetzaltenango",
+      "Escuintla"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "San José est la capitale de quel pays d’Amérique centrale ?",
+    "answers": [
+      "Nicaragua",
+      "Honduras",
+      "Costa Rica",
+      "Salvador"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle capitale se trouve à l’entrée pacifique du canal qui porte le nom de son pays ?",
+    "answers": [
+      "Belmopan",
+      "Managua",
+      "Tegucigalpa",
+      "Panama"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Saint-Domingue est la capitale de quel État des Caraïbes ?",
+    "answers": [
+      "République dominicaine",
+      "Haïti",
+      "Cuba",
+      "Jamaïque"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle capitale haïtienne borde le golfe de la Gonâve ?",
+    "answers": [
+      "Cap-Haïtien",
+      "Port-au-Prince",
+      "Jacmel",
+      "Les Cayes"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle est la capitale de l’Argentine ?",
+    "answers": [
+      "Córdoba",
+      "Rosario",
+      "Buenos Aires",
+      "Mendoza"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Brasília est devenue capitale du Brésil en quelle année ?",
+    "answers": [
+      "1945",
+      "1972",
+      "1988",
+      "1960"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle capitale chilienne se situe dans la vallée centrale, entre Andes et cordillère de la Côte ?",
+    "answers": [
+      "Santiago",
+      "Valparaíso",
+      "Concepción",
+      "Antofagasta"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Le centre historique de quelle capitale sud-américaine comprend la Plaza Mayor et le couvent de San Francisco ?",
+    "answers": [
+      "Quito",
+      "Lima",
+      "Bogotá",
+      "La Paz"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle capitale équatorienne, proche de l’équateur, se trouve à environ 2 850 mètres d’altitude ?",
+    "answers": [
+      "Guayaquil",
+      "Cuenca",
+      "Quito",
+      "Loja"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle ville est la capitale de la Colombie ?",
+    "answers": [
+      "Medellín",
+      "Cali",
+      "Cartagena",
+      "Bogotá"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Caracas est la capitale de quel pays ?",
+    "answers": [
+      "Venezuela",
+      "Colombie",
+      "Équateur",
+      "Guyana"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle capitale uruguayenne donne sur le Río de la Plata ?",
+    "answers": [
+      "Asunción",
+      "Montevideo",
+      "Buenos Aires",
+      "Porto Alegre"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle capitale sud-américaine est établie sur la rive gauche du fleuve Paraguay ?",
+    "answers": [
+      "Montevideo",
+      "Lima",
+      "Asunción",
+      "Georgetown"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle capitale du Guyana doit son nom au roi britannique George III ?",
+    "answers": [
+      "Paramaribo",
+      "Cayenne",
+      "Belmopan",
+      "Georgetown"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle ville est la capitale de la Turquie ?",
+    "answers": [
       "Ankara",
-      "Canberra",
-      "Riyad"
+      "Istanbul",
+      "Izmir",
+      "Bursa"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle est la capitale de Nouvelle-Zélande ?",
+    "text": "Riyad est la capitale de quel pays ?",
     "answers": [
-      "Ankara",
-      "Riyad",
-      "Amman",
-      "Wellington"
+      "Jordanie",
+      "Arabie saoudite",
+      "Oman",
+      "Qatar"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle est la capitale de Turquie ?",
+    "text": "Quelle capitale jordanienne était connue dans l’Antiquité sous le nom de Rabbath-Ammon puis Philadelphia ?",
     "answers": [
-      "Ankara",
-      "Riyad",
+      "Aqaba",
+      "Damas",
       "Amman",
       "Beyrouth"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de Arabie saoudite ?",
+    "text": "Beyrouth se trouve sur le littoral de quelle mer ?",
     "answers": [
-      "Amman",
-      "Riyad",
-      "Beyrouth",
-      "Islamabad"
+      "Mer Rouge",
+      "Mer Noire",
+      "Mer d’Arabie",
+      "Méditerranée"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de Jordanie ?",
+    "text": "Quelle capitale omanaise est bâtie entre le golfe d’Oman et les monts Hajar ?",
     "answers": [
-      "Beyrouth",
-      "Islamabad",
-      "Amman",
+      "Mascate",
+      "Salalah",
+      "Sohar",
+      "Nizwa"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle est la capitale de l’Inde ?",
+    "answers": [
+      "Mumbai",
+      "New Delhi",
+      "Kolkata",
+      "Bangalore"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Islamabad est la capitale de quel pays ?",
+    "answers": [
+      "Afghanistan",
+      "Bangladesh",
+      "Pakistan",
+      "Iran"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle capitale bangladaise est située sur la Buriganga ?",
+    "answers": [
+      "Chittagong",
+      "Khulna",
+      "Sylhet",
       "Dacca"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de Liban ?",
+    "text": "La vallée de Katmandou, qui entoure la capitale du Népal, est inscrite au patrimoine mondial de quelle organisation ?",
     "answers": [
-      "Islamabad",
-      "Dacca",
-      "Paris",
-      "Beyrouth"
+      "UNESCO",
+      "OTAN",
+      "OPEP",
+      "OCDE"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la capitale de Pakistan ?",
+    "text": "Quelle capitale du Kazakhstan a porté le nom de Nur-Sultan entre 2019 et 2022 ?",
     "answers": [
-      "Islamabad",
-      "Dacca",
-      "Paris",
-      "Berlin"
+      "Almaty",
+      "Astana",
+      "Bichkek",
+      "Tachkent"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle est la capitale de Bangladesh ?",
+    "text": "Quelle est la capitale de la Chine ?",
     "answers": [
-      "Paris",
-      "Dacca",
-      "Berlin",
-      "Rome"
+      "Shanghai",
+      "Canton",
+      "Pékin",
+      "Shenzhen"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Tokyo est la capitale de quel pays ?",
+    "answers": [
+      "Chine",
+      "Corée du Sud",
+      "Thaïlande",
+      "Japon"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle capitale sud-coréenne est traversée par le fleuve Han ?",
+    "answers": [
+      "Séoul",
+      "Busan",
+      "Incheon",
+      "Daegu"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Oulan-Bator se trouve dans la vallée de quelle rivière ?",
+    "answers": [
+      "Amour",
+      "Tuul",
+      "Mékong",
+      "Salouen"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle capitale nord-coréenne est traversée par le Taedong ?",
+    "answers": [
+      "Hamhung",
+      "Kaesong",
+      "Pyongyang",
+      "Wonsan"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle est la capitale de la Thaïlande ?",
+    "answers": [
+      "Chiang Mai",
+      "Phuket",
+      "Pattaya",
+      "Bangkok"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Hanoï est la capitale de quel pays ?",
+    "answers": [
+      "Vietnam",
+      "Laos",
+      "Cambodge",
+      "Myanmar"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle capitale cambodgienne se trouve au confluent du Mékong, du Tonlé Sap et du Bassac ?",
+    "answers": [
+      "Siem Reap",
+      "Phnom Penh",
+      "Battambang",
+      "Sihanoukville"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Le monument du Patuxai se trouve dans quelle capitale ?",
+    "answers": [
+      "Hanoï",
+      "Phnom Penh",
+      "Vientiane",
+      "Naypyidaw"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle capitale des Philippines est située sur l’île de Luçon ?",
+    "answers": [
+      "Cebu",
+      "Davao",
+      "Iloilo",
+      "Manille"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle est la capitale de l’Australie ?",
+    "answers": [
+      "Canberra",
+      "Sydney",
+      "Melbourne",
+      "Brisbane"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Wellington est la capitale de quel pays ?",
+    "answers": [
+      "Australie",
+      "Nouvelle-Zélande",
+      "Fidji",
+      "Samoa"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle capitale fidjienne se trouve sur l’île de Viti Levu ?",
+    "answers": [
+      "Nadi",
+      "Lautoka",
+      "Suva",
+      "Labasa"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Port Moresby donne sur le golfe de Papouasie : de quel pays est-elle la capitale ?",
+    "answers": [
+      "Îles Salomon",
+      "Vanuatu",
+      "Fidji",
+      "Papouasie-Nouvelle-Guinée"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle capitale du Samoa se trouve sur la côte nord de l’île d’Upolu ?",
+    "answers": [
+      "Apia",
+      "Nuku’alofa",
+      "Suva",
+      "Port-Vila"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle capitale italienne est traversée par le Tibre ?",
+    "answers": [
+      "Milan",
+      "Rome",
+      "Florence",
+      "Naples"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Bagdad s’est développée sur les rives de quel fleuve ?",
+    "answers": [
+      "L’Euphrate",
+      "Le Jourdain",
+      "Le Tigre",
+      "L’Indus"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle capitale européenne est traversée par le Danube et borde directement l’Autriche et la Hongrie ?",
+    "answers": [
+      "Budapest",
+      "Belgrade",
+      "Bucarest",
+      "Bratislava"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Le fleuve Vltava traverse quelle capitale ?",
+    "answers": [
+      "Prague",
+      "Varsovie",
+      "Sofia",
+      "Zagreb"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle capitale balte est traversée par la Daugava ?",
+    "answers": [
+      "Tallinn",
+      "Riga",
+      "Vilnius",
+      "Minsk"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle capitale a été créée comme compromis entre Sydney et Melbourne ?",
+    "answers": [
+      "Adélaïde",
+      "Perth",
+      "Canberra",
+      "Hobart"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Belmopan a remplacé quelle ville comme capitale du Belize après les dégâts causés par l’ouragan Hattie ?",
+    "answers": [
+      "Orange Walk",
+      "San Ignacio",
+      "Punta Gorda",
+      "Belize City"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle capitale du Myanmar a officiellement remplacé Rangoun au milieu des années 2000 ?",
+    "answers": [
+      "Naypyidaw",
+      "Mandalay",
+      "Bago",
+      "Mawlamyine"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Avant Abuja, quelle ville était la capitale du Nigeria ?",
+    "answers": [
+      "Kano",
+      "Lagos",
+      "Kaduna",
+      "Ibadan"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle capitale brésilienne conçue par Lúcio Costa présente un plan souvent comparé à un avion ?",
+    "answers": [
+      "Salvador",
+      "Rio de Janeiro",
+      "Brasília",
+      "Belo Horizonte"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle ville est la capitale du Bhoutan ?",
+    "answers": [
+      "Paro",
+      "Punakha",
+      "Phuntsholing",
+      "Thimphou"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Le palais royal de Nuku’alofa se trouve dans quel pays ?",
+    "answers": [
+      "Tonga",
+      "Samoa",
+      "Fidji",
+      "Vanuatu"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle capitale de Micronésie se situe sur l’île de Pohnpei ?",
+    "answers": [
+      "Majuro",
+      "Palikir",
+      "Tarawa-Sud",
+      "Honiara"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Majuro, capitale des Îles Marshall, est construite sur quel type de formation ?",
+    "answers": [
+      "Un plateau volcanique",
+      "Un delta fluvial",
+      "Un atoll",
+      "Une péninsule calcaire"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle capitale des Palaos se trouve dans l’État de Melekeok ?",
+    "answers": [
+      "Koror",
+      "Palikir",
+      "Port-Vila",
+      "Ngerulmud"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
