@@ -1,502 +1,1102 @@
 [
   {
-    "text": "En quelle année a eu lieu la chute de l'Empire romain d'Occident ?",
+    "text": "Selon la tradition romaine, en quelle année Rome aurait-elle été fondée ?",
     "answers": [
+      "753 av. J.-C.",
+      "776 av. J.-C.",
+      "509 av. J.-C.",
+      "264 av. J.-C."
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "La bataille de Marathon, remportée par les Athéniens sur les Perses, date de quelle année ?",
+    "answers": [
+      "480 av. J.-C.",
+      "490 av. J.-C.",
+      "431 av. J.-C.",
+      "404 av. J.-C."
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En quelle année Alexandre le Grand est-il mort à Babylone ?",
+    "answers": [
+      "336 av. J.-C.",
+      "301 av. J.-C.",
+      "323 av. J.-C.",
+      "280 av. J.-C."
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle année correspond l’assassinat de Jules César aux ides de mars ?",
+    "answers": [
+      "49 av. J.-C.",
+      "31 av. J.-C.",
+      "27 av. J.-C.",
+      "44 av. J.-C."
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En quelle année l’édit de Milan a-t-il instauré la tolérance religieuse dans l’Empire romain ?",
+    "answers": [
+      "313",
+      "284",
+      "325",
+      "380"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle année sert traditionnellement à dater la chute de l’Empire romain d’Occident ?",
+    "answers": [
+      "410",
       "476",
-      "800",
-      "1066",
-      "1215"
+      "493",
+      "527"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "À quelle date associe-t-on la chute de l'Empire romain d'Occident ?",
+    "text": "L’Hégire, point de départ du calendrier musulman, a eu lieu en quelle année ?",
     "answers": [
-      "800",
-      "476",
-      "1066",
-      "1215"
+      "610",
+      "632",
+      "622",
+      "661"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "En quelle année a eu lieu le couronnement impérial de Charlemagne ?",
+    "text": "Quand Charlemagne a-t-il été couronné empereur à Rome ?",
     "answers": [
-      "1066",
-      "1215",
-      "800",
-      "1453"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "À quelle date associe-t-on le couronnement impérial de Charlemagne ?",
-    "answers": [
-      "1066",
-      "1215",
-      "1453",
+      "768",
+      "814",
+      "843",
       "800"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année a eu lieu la bataille de Hastings ?",
+    "text": "Le traité de Verdun, qui partage l’empire carolingien, a été conclu en quelle année ?",
     "answers": [
-      "1066",
+      "843",
+      "814",
+      "870",
+      "962"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle date exacte la bataille de Hastings s’est-elle déroulée ?",
+    "answers": [
+      "25 décembre 1066",
+      "14 octobre 1066",
+      "15 août 1071",
+      "27 septembre 1066"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année le pape Urbain II a-t-il lancé l’appel de Clermont à la première croisade ?",
+    "answers": [
+      "1077",
+      "1099",
+      "1095",
+      "1122"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Le sac de Constantinople par les croisés de la quatrième croisade remonte à quelle année ?",
+    "answers": [
+      "1187",
       "1215",
-      "1453",
+      "1261",
+      "1204"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quand la Magna Carta a-t-elle été scellée par le roi Jean d’Angleterre ?",
+    "answers": [
+      "1215",
+      "1204",
+      "1258",
+      "1295"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "La peste noire a atteint la Sicile et commencé à ravager l’Europe en quelle année ?",
+    "answers": [
+      "1315",
+      "1347",
+      "1378",
+      "1401"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle date les Ottomans ont-ils pris Constantinople ?",
+    "answers": [
+      "7 octobre 1453",
+      "12 avril 1452",
+      "29 mai 1453",
+      "15 août 1454"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année Christophe Colomb a-t-il atteint les Caraïbes lors de son premier voyage ?",
+    "answers": [
+      "1488",
+      "1498",
+      "1502",
       "1492"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "À quelle date associe-t-on la bataille de Hastings ?",
+    "text": "Vasco de Gama est arrivé à Calicut, en Inde, en quelle année ?",
     "answers": [
-      "1215",
-      "1066",
-      "1453",
-      "1492"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "En quelle année a eu lieu la Magna Carta ?",
-    "answers": [
-      "1453",
+      "1498",
       "1492",
-      "1215",
-      "1517"
+      "1500",
+      "1510"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "À quelle date associe-t-on la Magna Carta ?",
+    "text": "Les quatre-vingt-quinze thèses de Martin Luther sont traditionnellement datées de quelle année ?",
     "answers": [
-      "1453",
-      "1492",
+      "1509",
       "1517",
-      "1215"
+      "1521",
+      "1530"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année a eu lieu la prise de Constantinople ?",
+    "text": "La chute de Tenochtitlan face aux forces de Cortés a eu lieu en quelle année ?",
     "answers": [
-      "1453",
-      "1492",
-      "1517",
-      "1648"
+      "1519",
+      "1525",
+      "1521",
+      "1535"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quelle date associe-t-on la prise de Constantinople ?",
+    "text": "La paix d’Augsbourg, fondée sur le principe « tel prince, telle religion », date de quand ?",
     "answers": [
-      "1492",
-      "1453",
-      "1517",
-      "1648"
+      "1529",
+      "1545",
+      "1572",
+      "1555"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "En quelle année a eu lieu le premier voyage de Colomb vers les Caraïbes ?",
+    "text": "La bataille de Sekigahara, décisive pour l’unification du Japon par les Tokugawa, a eu lieu en quelle année ?",
     "answers": [
-      "1517",
+      "1600",
+      "1582",
+      "1615",
+      "1637"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel millésime marque le début de la guerre de Trente Ans ?",
+    "answers": [
+      "1609",
+      "1618",
+      "1625",
+      "1630"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Les traités de Westphalie ont mis fin à la guerre de Trente Ans en quelle année ?",
+    "answers": [
+      "1642",
+      "1659",
       "1648",
-      "1492",
-      "1776"
+      "1668"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quelle date associe-t-on le premier voyage de Colomb vers les Caraïbes ?",
+    "text": "La restauration de la monarchie anglaise avec Charles II s’est produite quand ?",
     "answers": [
-      "1517",
-      "1648",
-      "1776",
-      "1492"
+      "1649",
+      "1668",
+      "1688",
+      "1660"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année a eu lieu les 95 thèses de Luther ?",
+    "text": "En quelle année Isaac Newton a-t-il publié les Principia Mathematica ?",
     "answers": [
-      "1517",
-      "1648",
-      "1776",
-      "1789"
+      "1687",
+      "1665",
+      "1675",
+      "1704"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "À quelle date associe-t-on les 95 thèses de Luther ?",
+    "text": "La Déclaration d’indépendance des États-Unis a été adoptée en quelle année ?",
     "answers": [
-      "1648",
-      "1517",
+      "1763",
       "1776",
-      "1789"
+      "1781",
+      "1787"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "En quelle année a eu lieu la paix de Westphalie ?",
+    "text": "Quelle année marque le début de la Révolution française ?",
     "answers": [
       "1776",
+      "1791",
       "1789",
-      "1648",
-      "1815"
+      "1792"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "À quelle date associe-t-on la paix de Westphalie ?",
+    "text": "L’insurrection d’esclaves qui ouvre la Révolution haïtienne a commencé en quelle année ?",
     "answers": [
-      "1776",
       "1789",
+      "1793",
+      "1802",
+      "1791"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Louis XVI a été exécuté sur la place de la Révolution en quelle année ?",
+    "answers": [
+      "1793",
+      "1791",
+      "1792",
+      "1794"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle date Haïti a-t-elle proclamé son indépendance ?",
+    "answers": [
+      "4 juillet 1804",
+      "1er janvier 1804",
+      "18 novembre 1803",
+      "1er janvier 1806"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Napoléon Ier a été sacré empereur des Français en quelle année ?",
+    "answers": [
+      "1799",
+      "1802",
+      "1804",
+      "1805"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "La bataille d’Austerlitz s’est déroulée quand ?",
+    "answers": [
+      "1804",
+      "1806",
+      "1807",
+      "1805"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "La campagne de Russie menée par Napoléon a débuté en quelle année ?",
+    "answers": [
+      "1812",
+      "1809",
+      "1813",
+      "1814"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En quelle année Napoléon a-t-il subi sa défaite définitive à Waterloo ?",
+    "answers": [
+      "1812",
       "1815",
-      "1648"
+      "1814",
+      "1821"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année a eu lieu la Déclaration d'indépendance américaine ?",
+    "text": "Quelles dates correspondent aux Trois Glorieuses, qui renversent Charles X ?",
     "answers": [
-      "1776",
-      "1789",
-      "1815",
+      "22-24 février 1848",
+      "5-7 juin 1832",
+      "27-29 juillet 1830",
+      "13-15 mai 1831"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Le « printemps des peuples », vague révolutionnaire européenne, appartient à quelle année ?",
+    "answers": [
+      "1830",
+      "1851",
+      "1871",
       "1848"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "À quelle date associe-t-on la Déclaration d'indépendance américaine ?",
+    "text": "En quelle année la guerre de Crimée a-t-elle commencé ?",
     "answers": [
-      "1789",
-      "1776",
-      "1815",
-      "1848"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "En quelle année a eu lieu la prise de la Bastille ?",
-    "answers": [
-      "1815",
+      "1853",
       "1848",
-      "1789",
+      "1856",
       "1861"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "À quelle date associe-t-on la prise de la Bastille ?",
+    "text": "Le royaume d’Italie a été officiellement proclamé en quelle année ?",
     "answers": [
-      "1815",
       "1848",
       "1861",
+      "1866",
+      "1870"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "La proclamation de l’Empire allemand dans la galerie des Glaces de Versailles date de quand ?",
+    "answers": [
+      "1866",
+      "1878",
+      "1871",
+      "1888"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "La conférence de Berlin consacrée au partage colonial de l’Afrique s’est ouverte en quelle année ?",
+    "answers": [
+      "1878",
+      "1889",
+      "1896",
+      "1884"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Le Grito de Dolores, associé au début de l’indépendance mexicaine, date de quelle année ?",
+    "answers": [
+      "1810",
+      "1804",
+      "1816",
+      "1821"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quand le Brésil a-t-il proclamé son indépendance du Portugal ?",
+    "answers": [
+      "1810",
+      "1822",
+      "1825",
+      "1830"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "La guerre de Sécession américaine a commencé en quelle année ?",
+    "answers": [
+      "1857",
+      "1863",
+      "1861",
+      "1865"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Le treizième amendement abolissant l’esclavage aux États-Unis a été ratifié quand ?",
+    "answers": [
+      "1863",
+      "1868",
+      "1870",
+      "1865"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle date la Confédération canadienne est-elle entrée en vigueur ?",
+    "answers": [
+      "1er juillet 1867",
+      "1er juillet 1865",
+      "24 mai 1867",
+      "1er janvier 1870"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Le déclenchement de la première guerre de l’opium remonte à quelle année ?",
+    "answers": [
+      "1834",
+      "1839",
+      "1842",
+      "1856"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "La grande révolte indienne contre la Compagnie britannique des Indes orientales a commencé quand ?",
+    "answers": [
+      "1848",
+      "1869",
+      "1857",
+      "1877"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En quelle année l’Éthiopie a-t-elle vaincu l’armée italienne à Adoua ?",
+    "answers": [
+      "1885",
+      "1898",
+      "1902",
+      "1896"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "La guerre hispano-américaine a eu lieu en quelle année ?",
+    "answers": [
+      "1898",
+      "1895",
+      "1901",
+      "1905"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelles dates la flotte japonaise a-t-elle remporté la bataille de Tsushima ?",
+    "answers": [
+      "8-9 février 1904",
+      "27-28 mai 1905",
+      "5-6 septembre 1905",
+      "14-15 mai 1906"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "L’assassinat de l’archiduc François-Ferdinand à Sarajevo a eu lieu en quelle année ?",
+    "answers": [
+      "1912",
+      "1915",
+      "1914",
+      "1916"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Les débarquements alliés dans la péninsule de Gallipoli ont commencé quand ?",
+    "answers": [
+      "1914",
+      "1916",
+      "1917",
+      "1915"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "La bataille de Verdun appartient à quelle année de la Première Guerre mondiale ?",
+    "answers": [
+      "1916",
+      "1915",
+      "1917",
+      "1918"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "La révolution d’Octobre en Russie, datée de novembre dans le calendrier grégorien, a eu lieu en quelle année ?",
+    "answers": [
+      "1905",
+      "1917",
+      "1916",
+      "1918"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle date l’armistice mettant fin aux combats de la Première Guerre mondiale sur le front occidental a-t-il été signé ?",
+    "answers": [
+      "28 juin 1919",
+      "8 mai 1918",
+      "11 novembre 1918",
+      "3 mars 1918"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Le traité de Versailles a été signé en quelle année ?",
+    "answers": [
+      "1918",
+      "1920",
+      "1923",
+      "1919"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "La marche sur Rome qui porte Mussolini au pouvoir remonte à quand ?",
+    "answers": [
+      "1922",
+      "1919",
+      "1924",
+      "1925"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "La République de Turquie a été proclamée en quelle année ?",
+    "answers": [
+      "1920",
+      "1923",
+      "1922",
+      "1924"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Le krach de Wall Street associé au début de la Grande Dépression s’est produit quand ?",
+    "answers": [
+      "1927",
+      "1931",
+      "1929",
+      "1933"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelles dates le soulèvement militaire qui ouvre la guerre civile espagnole a-t-il commencé ?",
+    "answers": [
+      "14-15 avril 1931",
+      "26-27 avril 1937",
+      "1er-2 octobre 1936",
+      "17-18 juillet 1936"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "L’invasion de la Pologne par l’Allemagne, début de la Seconde Guerre mondiale en Europe, date de quelle année ?",
+    "answers": [
+      "1939",
+      "1938",
+      "1940",
+      "1941"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "L’appel du 18 Juin du général de Gaulle a été prononcé en quelle année ?",
+    "answers": [
+      "1939",
+      "1940",
+      "1941",
+      "1942"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "L’attaque japonaise contre Pearl Harbor a eu lieu quand ?",
+    "answers": [
+      "1940",
+      "1942",
+      "1941",
+      "1944"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "La bataille de Stalingrad a commencé en quelle année ?",
+    "answers": [
+      "1941",
+      "1943",
+      "1944",
+      "1942"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle date est commémorée en France comme la victoire sur l’Allemagne nazie ?",
+    "answers": [
+      "8 mai 1945",
+      "6 juin 1944",
+      "2 septembre 1945",
+      "11 novembre 1945"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "La Charte des Nations unies a été signée à San Francisco en quelle année ?",
+    "answers": [
+      "1944",
+      "1945",
+      "1946",
+      "1948"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Le président Truman a présenté la doctrine d’endiguement qui porte son nom en quelle année ?",
+    "answers": [
+      "1945",
+      "1948",
+      "1947",
+      "1950"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Le blocus de Berlin par l’Union soviétique a commencé quand ?",
+    "answers": [
+      "1947",
+      "1949",
+      "1951",
+      "1948"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Le traité de l’Atlantique nord fondant l’OTAN a été signé en quelle année ?",
+    "answers": [
+      "1949",
+      "1947",
+      "1950",
+      "1955"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En quelle année le pacte de Varsovie a-t-il été créé ?",
+    "answers": [
+      "1949",
+      "1955",
+      "1953",
+      "1956"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "L’Inde est devenue indépendante du Royaume-Uni en quelle année ?",
+    "answers": [
+      "1945",
+      "1948",
+      "1947",
+      "1950"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "La défaite française de Diên Biên Phu a eu lieu quand ?",
+    "answers": [
+      "1952",
+      "1956",
+      "1958",
+      "1954"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Le Ghana, premier pays d’Afrique subsaharienne colonisé à obtenir son indépendance dans cette vague, l’a proclamée en quelle année ?",
+    "answers": [
+      "1957",
+      "1954",
+      "1960",
+      "1963"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle année est surnommée « l’année de l’Afrique » en raison de dix-sept indépendances ?",
+    "answers": [
+      "1957",
+      "1960",
+      "1962",
+      "1965"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle date l’Algérie a-t-elle officiellement proclamé son indépendance ?",
+    "answers": [
+      "19 mars 1962",
+      "1er novembre 1962",
+      "5 juillet 1962",
+      "3 juillet 1962"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Le traité de Paris créant la CECA a été signé en quelle année ?",
+    "answers": [
+      "1948",
+      "1954",
+      "1957",
+      "1951"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Les traités de Rome à l’origine de la CEE datent de quand ?",
+    "answers": [
+      "1957",
+      "1951",
+      "1960",
+      "1963"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Le Royaume-Uni, l’Irlande et le Danemark ont rejoint les Communautés européennes lors de quel premier élargissement ?",
+    "answers": [
+      "1968",
+      "1973",
+      "1979",
+      "1981"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Les premières élections du Parlement européen au suffrage universel direct ont eu lieu en quelle année ?",
+    "answers": [
+      "1973",
+      "1984",
+      "1979",
+      "1986"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle date le traité de Maastricht a-t-il été signé ?",
+    "answers": [
+      "1er novembre 1993",
+      "14 juin 1985",
+      "2 octobre 1992",
+      "7 février 1992"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Le lancement de Spoutnik 1, premier satellite artificiel, a eu lieu en quelle année ?",
+    "answers": [
+      "1957",
+      "1955",
+      "1958",
+      "1961"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Youri Gagarine est devenu le premier humain dans l’espace quand ?",
+    "answers": [
+      "1959",
+      "1961",
+      "1962",
+      "1963"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "La mission Apollo 11 a réalisé le premier alunissage habité en quelle année ?",
+    "answers": [
+      "1967",
+      "1970",
+      "1969",
+      "1972"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Saliout 1, première station spatiale, a été lancée en quelle année ?",
+    "answers": [
+      "1969",
+      "1973",
+      "1975",
+      "1971"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle date Zarya, premier module de la Station spatiale internationale, a-t-il été lancé ?",
+    "answers": [
+      "20 novembre 1998",
+      "4 octobre 1997",
+      "6 décembre 1998",
+      "20 juillet 1999"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Henri IV a promulgué l’édit de Nantes en quelle année ?",
+    "answers": [
+      "1572",
+      "1598",
+      "1601",
+      "1610"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "La révocation de l’édit de Nantes par l’édit de Fontainebleau date de quand ?",
+    "answers": [
+      "1661",
+      "1687",
+      "1685",
+      "1715"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "La prise de la Bastille a eu lieu en quelle année ?",
+    "answers": [
+      "1787",
+      "1791",
+      "1792",
       "1789"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année a eu lieu le congrès de Vienne ?",
-    "answers": [
-      "1815",
-      "1848",
-      "1861",
-      "1871"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "À quelle date associe-t-on le congrès de Vienne ?",
+    "text": "La Deuxième République française a été proclamée quand ?",
     "answers": [
       "1848",
-      "1815",
-      "1861",
-      "1871"
+      "1830",
+      "1851",
+      "1870"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année a eu lieu l'abolition de l'esclavage dans les colonies françaises ?",
+    "text": "À quelle date la loi française de séparation des Églises et de l’État a-t-elle été promulguée ?",
     "answers": [
-      "1861",
-      "1871",
-      "1848",
-      "1914"
+      "14 juillet 1905",
+      "9 décembre 1905",
+      "1er janvier 1906",
+      "11 novembre 1905"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "À quelle date associe-t-on l'abolition de l'esclavage dans les colonies françaises ?",
+    "text": "L’invention du daguerréotype a été rendue publique en quelle année ?",
     "answers": [
-      "1861",
-      "1871",
-      "1914",
-      "1848"
+      "1826",
+      "1844",
+      "1839",
+      "1851"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "En quelle année a eu lieu l'unification de l'Italie proclamée ?",
+    "text": "Alexander Graham Bell a obtenu son brevet américain majeur pour le téléphone en quelle année ?",
     "answers": [
-      "1861",
-      "1871",
-      "1914",
-      "1917"
+      "1869",
+      "1879",
+      "1885",
+      "1876"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "À quelle date associe-t-on l'unification de l'Italie proclamée ?",
+    "text": "La première projection publique payante des frères Lumière à Paris a eu lieu quand ?",
     "answers": [
-      "1871",
-      "1861",
-      "1914",
-      "1917"
+      "1895",
+      "1889",
+      "1896",
+      "1900"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année a eu lieu la proclamation de l'Empire allemand ?",
+    "text": "Alexander Fleming a observé l’effet antibactérien de la pénicilline en quelle année ?",
     "answers": [
-      "1914",
-      "1917",
-      "1871",
-      "1929"
+      "1921",
+      "1928",
+      "1935",
+      "1941"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quelle date associe-t-on la proclamation de l'Empire allemand ?",
+    "text": "Tim Berners-Lee a présenté sa première proposition pour le World Wide Web au CERN en quelle année ?",
     "answers": [
-      "1914",
-      "1917",
-      "1929",
-      "1871"
+      "1987",
+      "1990",
+      "1989",
+      "1991"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "En quelle année a eu lieu le début de la Première Guerre mondiale ?",
+    "text": "Le mur de Berlin est tombé en quelle année ?",
     "answers": [
-      "1914",
-      "1917",
-      "1929",
-      "1939"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "À quelle date associe-t-on le début de la Première Guerre mondiale ?",
-    "answers": [
-      "1917",
-      "1914",
-      "1929",
-      "1939"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "En quelle année a eu lieu la révolution d'Octobre en Russie ?",
-    "answers": [
-      "1929",
-      "1939",
-      "1917",
-      "1945"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "À quelle date associe-t-on la révolution d'Octobre en Russie ?",
-    "answers": [
-      "1929",
-      "1939",
-      "1945",
-      "1917"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "En quelle année a eu lieu le krach de Wall Street ?",
-    "answers": [
-      "1929",
-      "1939",
-      "1945",
-      "1947"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "À quelle date associe-t-on le krach de Wall Street ?",
-    "answers": [
-      "1939",
-      "1929",
-      "1945",
-      "1947"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "En quelle année a eu lieu le début de la Seconde Guerre mondiale en Europe ?",
-    "answers": [
-      "1945",
-      "1947",
-      "1939",
-      "1949"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "À quelle date associe-t-on le début de la Seconde Guerre mondiale en Europe ?",
-    "answers": [
-      "1945",
-      "1947",
-      "1949",
-      "1939"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "En quelle année a eu lieu la création de l'Organisation des Nations unies ?",
-    "answers": [
-      "1945",
-      "1947",
-      "1949",
-      "1969"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "À quelle date associe-t-on la création de l'Organisation des Nations unies ?",
-    "answers": [
-      "1947",
-      "1945",
-      "1949",
-      "1969"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "En quelle année a eu lieu l'indépendance de l'Inde ?",
-    "answers": [
-      "1949",
-      "1969",
-      "1947",
+      "1987",
+      "1990",
+      "1991",
       "1989"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "À quelle date associe-t-on l'indépendance de l'Inde ?",
-    "answers": [
-      "1949",
-      "1969",
-      "1989",
-      "1947"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "En quelle année a eu lieu la proclamation de la République populaire de Chine ?",
-    "answers": [
-      "1949",
-      "1969",
-      "1989",
-      "1991"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "À quelle date associe-t-on la proclamation de la République populaire de Chine ?",
-    "answers": [
-      "1969",
-      "1949",
-      "1989",
-      "1991"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "En quelle année a eu lieu les premiers pas humains sur la Lune ?",
-    "answers": [
-      "1989",
-      "1991",
-      "1969",
-      "2001"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "À quelle date associe-t-on les premiers pas humains sur la Lune ?",
-    "answers": [
-      "1989",
-      "1991",
-      "2001",
-      "1969"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "En quelle année a eu lieu la chute du mur de Berlin ?",
-    "answers": [
-      "1989",
-      "1991",
-      "2001",
-      "476"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "À quelle date associe-t-on la chute du mur de Berlin ?",
+    "text": "La dissolution officielle de l’Union soviétique date de quand ?",
     "answers": [
       "1991",
       "1989",
-      "2001",
-      "476"
+      "1990",
+      "1993"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "En quelle année a eu lieu la dissolution de l'Union soviétique ?",
+    "text": "Nelson Mandela est devenu président de l’Afrique du Sud en quelle année ?",
     "answers": [
-      "2001",
-      "476",
-      "1991",
-      "800"
+      "1990",
+      "1994",
+      "1992",
+      "1996"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "À quelle date associe-t-on la dissolution de l'Union soviétique ?",
+    "text": "Les attentats du 11-Septembre aux États-Unis ont eu lieu en quelle année ?",
     "answers": [
+      "1999",
+      "2002",
       "2001",
-      "476",
-      "800",
-      "1991"
+      "2003"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année a eu lieu les attentats du 11-Septembre ?",
+    "text": "À quelle date les billets et pièces en euros ont-ils été mis en circulation ?",
     "answers": [
-      "2001",
-      "476",
-      "800",
-      "1066"
+      "1er janvier 1999",
+      "1er juillet 2001",
+      "1er janvier 2003",
+      "1er janvier 2002"
     ],
-    "correct": 0
-  },
-  {
-    "text": "À quelle date associe-t-on les attentats du 11-Septembre ?",
-    "answers": [
-      "476",
-      "2001",
-      "800",
-      "1066"
-    ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
