@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Altaïr Ibn-La'Ahad ?",
+    "text": "Quelle confrérie secrète combat les Templiers dans Assassin’s Creed ?",
     "answers": [
-      "le héros du premier Assassin's Creed",
-      "le héros italien de la Renaissance",
-      "le protagoniste d'Assassin's Creed III",
-      "le pirate de Black Flag"
+      "Les Assassins",
+      "Les Mercenaires",
+      "Les Médjays",
+      "Les Sages"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel élément correspond à cette description : « le héros du premier Assassin's Creed » ?",
+    "text": "Quelle machine permet d’explorer les souvenirs génétiques ?",
     "answers": [
-      "Les Caraïbes",
-      "Altaïr Ibn-La'Ahad",
-      "Constantinople",
-      "Kassandra et Alexios"
+      "L’Observatoire",
+      "L’Animus",
+      "Le Nexus",
+      "Le Codex"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Ezio Auditore ?",
+    "text": "Quelle arme escamotable est emblématique des Assassins ?",
     "answers": [
-      "le protagoniste d'Assassin's Creed III",
-      "le pirate de Black Flag",
-      "le héros italien de la Renaissance",
-      "le protagoniste d'Unity"
+      "La lance brisée",
+      "La canne-épée",
+      "La lame secrète",
+      "La lame d’Éden"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément correspond à cette description : « le héros italien de la Renaissance » ?",
+    "text": "Quel geste permet traditionnellement de plonger d’un point élevé dans une meule de foin ?",
+    "answers": [
+      "La vision d’aigle",
+      "La synchronisation",
+      "La frappe héroïque",
+      "Le saut de la foi"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel studio a développé le premier Assassin’s Creed ?",
     "answers": [
       "Ubisoft Montréal",
-      "Basim",
-      "Arno Dorian",
-      "Ezio Auditore"
+      "Ubisoft Québec",
+      "Ubisoft Sofia",
+      "Ubisoft Bordeaux"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Connor Kenway ?",
+    "text": "Qui est le protagoniste historique du premier Assassin’s Creed ?",
     "answers": [
-      "le protagoniste d'Assassin's Creed III",
-      "le pirate de Black Flag",
-      "le protagoniste d'Unity",
-      "les jumeaux de Syndicate"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément correspond à cette description : « le protagoniste d'Assassin's Creed III » ?",
-    "answers": [
-      "La Lame secrète",
-      "Connor Kenway",
-      "Ubisoft Montréal",
-      "Edward Kenway"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Edward Kenway ?",
-    "answers": [
-      "le protagoniste d'Unity",
-      "les jumeaux de Syndicate",
-      "le pirate de Black Flag",
-      "le protagoniste d'Origins"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément correspond à cette description : « le pirate de Black Flag » ?",
-    "answers": [
-      "Ubisoft Montréal",
-      "Bagdad abbasside",
-      "Arno Dorian",
-      "Edward Kenway"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Arno Dorian ?",
-    "answers": [
-      "le protagoniste d'Unity",
-      "les jumeaux de Syndicate",
-      "le protagoniste d'Origins",
-      "les héros jouables d'Odyssey"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément correspond à cette description : « le protagoniste d'Unity » ?",
-    "answers": [
-      "Masyaf",
-      "Arno Dorian",
-      "Jacob et Evie Frye",
-      "Florence et Venise"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Jacob et Evie Frye ?",
-    "answers": [
-      "le protagoniste d'Origins",
-      "les héros jouables d'Odyssey",
-      "les jumeaux de Syndicate",
-      "le protagoniste de Valhalla"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément correspond à cette description : « les jumeaux de Syndicate » ?",
-    "answers": [
-      "L'Égypte ptolémaïque",
-      "Arno Dorian",
-      "Abstergo Industries",
-      "Jacob et Evie Frye"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Bayek ?",
-    "answers": [
-      "le protagoniste d'Origins",
-      "les héros jouables d'Odyssey",
-      "le protagoniste de Valhalla",
-      "le protagoniste de Mirage"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément correspond à cette description : « le protagoniste d'Origins » ?",
-    "answers": [
-      "Paris révolutionnaire",
-      "Bayek",
-      "La Lame secrète",
-      "Florence et Venise"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Kassandra et Alexios ?",
-    "answers": [
-      "le protagoniste de Valhalla",
-      "le protagoniste de Mirage",
-      "les héros jouables d'Odyssey",
-      "la machine explorant des mémoires génétiques"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément correspond à cette description : « les héros jouables d'Odyssey » ?",
-    "answers": [
-      "Basim",
-      "Jacob et Evie Frye",
-      "Ubisoft Montréal",
-      "Kassandra et Alexios"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Eivor ?",
-    "answers": [
-      "le protagoniste de Valhalla",
-      "le protagoniste de Mirage",
-      "la machine explorant des mémoires génétiques",
-      "la façade moderne des Templiers"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément correspond à cette description : « le protagoniste de Valhalla » ?",
-    "answers": [
-      "La Grèce antique",
-      "Eivor",
       "Ezio Auditore",
-      "Paris révolutionnaire"
+      "Altaïr Ibn-La’Ahad",
+      "Desmond Miles",
+      "Malik Al-Sayf"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Basim ?",
+    "text": "Pendant quelle croisade se déroule principalement le premier jeu ?",
     "answers": [
-      "la machine explorant des mémoires génétiques",
-      "la façade moderne des Templiers",
-      "le protagoniste de Mirage",
-      "l'arme emblématique des Assassins"
+      "La première croisade",
+      "La deuxième croisade",
+      "La troisième croisade",
+      "La quatrième croisade"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel élément correspond à cette description : « le protagoniste de Mirage » ?",
+    "text": "Quelle forteresse sert de quartier général aux Assassins d’Altaïr ?",
     "answers": [
-      "Florence et Venise",
-      "Eivor",
-      "Le Credo",
-      "Basim"
+      "Acre",
+      "Damas",
+      "Jérusalem",
+      "Masyaf"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente l'Animus ?",
+    "text": "Quel mentor dirige les Assassins de Masyaf au début du jeu ?",
     "answers": [
-      "la machine explorant des mémoires génétiques",
-      "la façade moderne des Templiers",
-      "l'arme emblématique des Assassins",
-      "un code guidant la confrérie"
+      "Al Mualim",
+      "Abbas Sofian",
+      "Niccolò Polo",
+      "Robert de Sablé"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément correspond à cette description : « la machine explorant des mémoires génétiques » ?",
+    "text": "Quel Artefact d’Éden Al Mualim utilise-t-il contre Altaïr ?",
     "answers": [
-      "Bagdad abbasside",
-      "L'Animus",
-      "La Grèce antique",
-      "Jacob et Evie Frye"
+      "Un Bâton d’Éden",
+      "Une Pomme d’Éden",
+      "Un Suaire d’Éden",
+      "Une Épée d’Éden"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Abstergo Industries ?",
+    "text": "Quel Assassin florentin devient le héros d’Assassin’s Creed II ?",
     "answers": [
-      "l'arme emblématique des Assassins",
-      "un code guidant la confrérie",
-      "la façade moderne des Templiers",
-      "la forteresse des Assassins du premier jeu"
+      "Giovanni Auditore",
+      "Federico Auditore",
+      "Ezio Auditore",
+      "Mario Auditore"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel élément correspond à cette description : « la façade moderne des Templiers » ?",
+    "text": "À quelle période se déroule l’essentiel d’Assassin’s Creed II ?",
     "answers": [
-      "L'Angleterre du IXe siècle",
-      "Florence et Venise",
+      "L’Antiquité romaine",
+      "Le haut Moyen Âge",
+      "Le Risorgimento",
+      "La Renaissance italienne"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle villa toscane devient la base d’Ezio ?",
+    "answers": [
+      "Monteriggioni",
+      "San Gimignano",
+      "Forlì",
+      "Ravenne"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel artiste et inventeur aide Ezio à décoder les pages du Codex ?",
+    "answers": [
+      "Sandro Botticelli",
+      "Léonard de Vinci",
+      "Michel-Ange",
+      "Nicolas Machiavel"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sous quel nom pontifical Rodrigo Borgia règne-t-il dans l’univers du jeu ?",
+    "answers": [
+      "Jules II",
+      "Léon X",
+      "Alexandre VI",
+      "Sixte IV"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle ville est le terrain principal d’Assassin’s Creed Brotherhood ?",
+    "answers": [
+      "Florence",
+      "Venise",
+      "Milan",
+      "Rome"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel fils de Rodrigo Borgia est l’antagoniste principal de Brotherhood ?",
+    "answers": [
+      "Cesare Borgia",
+      "Juan Borgia",
+      "Jofré Borgia",
+      "Giovanni Borgia"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle ville Ezio cherche-t-il les clés de Masyaf dans Revelations ?",
+    "answers": [
+      "Alexandrie",
+      "Constantinople",
+      "Athènes",
+      "Damas"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Assassin ottoman devient l’allié d’Ezio dans Revelations ?",
+    "answers": [
+      "Piri Reis",
+      "Suleiman",
+      "Yusuf Tazim",
+      "Tarik Barleti"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Que renferment les clés de Masyaf conçues par Altaïr ?",
+    "answers": [
+      "Les plans de l’Animus",
+      "La carte des Observatoires",
+      "Le code des Templiers",
+      "Ses souvenirs"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel nom mohawk porte Connor avant de rejoindre les Assassins ?",
+    "answers": [
+      "Ratonhnhaké:ton",
+      "Kanen’tó:kon",
+      "Kaniehtí:io",
+      "Oiá:ner"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel conflit sert de toile de fond à Assassin’s Creed III ?",
+    "answers": [
+      "La guerre de Sécession",
+      "La Révolution américaine",
+      "La guerre de 1812",
+      "La guerre américano-mexicaine"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel lien unit Haytham Kenway à Connor ?",
+    "answers": [
+      "Haytham est son frère",
+      "Haytham est son oncle",
+      "Haytham est son père",
+      "Haytham est son mentor"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel domaine Connor développe-t-il avec de nouveaux habitants ?",
+    "answers": [
+      "Le domaine Auditore",
+      "Le domaine Frye",
+      "Le domaine de Masyaf",
+      "Le domaine Davenport"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ancien Assassin forme Connor ?",
+    "answers": [
+      "Achilles Davenport",
+      "Duncan Walpole",
+      "Liam O’Brien",
+      "Hope Jensen"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel pirate gallois est le héros d’Assassin’s Creed IV Black Flag ?",
+    "answers": [
+      "Haytham Kenway",
+      "Edward Kenway",
+      "Adewale",
+      "Bartholomew Roberts"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quelle région navigue principalement Edward Kenway ?",
+    "answers": [
+      "La mer Égée",
+      "La mer du Nord",
       "Les Caraïbes",
-      "Abstergo Industries"
+      "L’océan Indien"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente la Lame secrète ?",
+    "text": "Comment s’appelle le navire commandé par Edward ?",
     "answers": [
-      "l'arme emblématique des Assassins",
-      "un code guidant la confrérie",
-      "la forteresse des Assassins du premier jeu",
-      "des villes majeures d'Assassin's Creed II"
+      "Le Morrigan",
+      "L’Aquila",
+      "L’Adrestia",
+      "Le Jackdaw"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément correspond à cette description : « l'arme emblématique des Assassins » ?",
+    "text": "Quel ancien esclave devient le quartier-maître d’Edward ?",
     "answers": [
-      "Arno Dorian",
-      "La Lame secrète",
+      "Adewale",
+      "Mary Read",
+      "Benjamin Hornigold",
+      "Stede Bonnet"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel lieu permet de surveiller n’importe quelle personne grâce à son sang ?",
+    "answers": [
+      "Le Grand Temple",
+      "L’Observatoire",
+      "La Bibliothèque de Masyaf",
+      "La Forge d’Héphaïstos"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel ancien Assassin devient Templier dans Assassin’s Creed Rogue ?",
+    "answers": [
+      "Liam O’Brien",
+      "Kesegowaase",
+      "Shay Patrick Cormac",
+      "Haytham Kenway"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Durant quel conflit se déroule une grande partie de Rogue ?",
+    "answers": [
+      "La guerre d’Indépendance américaine",
+      "La guerre de Succession d’Espagne",
+      "Les guerres napoléoniennes",
+      "La guerre de Sept Ans"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment se nomme le navire de Shay ?",
+    "answers": [
+      "Le Morrigan",
+      "Le Jackdaw",
+      "L’Aquila",
+      "L’Experto Crede"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle catastrophe Shay déclenche-t-il involontairement en récupérant un artefact ?",
+    "answers": [
+      "Le grand incendie de Londres",
+      "Le séisme de Lisbonne",
+      "L’éruption du Vésuve",
+      "Le séisme de Messine"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Assassin Shay tue-t-il à Versailles à la fin de Rogue ?",
+    "answers": [
+      "Pierre Bellec",
+      "Honoré Mirabeau",
+      "Charles Dorian",
+      "François de la Serre"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Assassin est jouable dans Assassin’s Creed Unity ?",
+    "answers": [
+      "Pierre Bellec",
+      "Thomas de Carneillon",
+      "Armand Bouchart",
+      "Arno Dorian"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle révolution sert de cadre principal à Unity ?",
+    "answers": [
+      "La Révolution française",
+      "La révolution de Juillet",
+      "La Commune de Paris",
+      "La révolution de 1848"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "À quel ordre Élise de la Serre appartient-elle ?",
+    "answers": [
+      "La Confrérie des Assassins",
+      "L’Ordre des Templiers",
+      "L’Ordre des Anciens",
+      "Les Instruments de la Première Volonté"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle nouveauté majeure Unity introduit-il pour certaines missions ?",
+    "answers": [
+      "Les batailles navales",
+      "Les choix de dialogue",
+      "La coopération à quatre joueurs",
+      "La double protagoniste"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel antagoniste de Unity est aussi un Sage lié à Aita ?",
+    "answers": [
+      "Maximilien de Robespierre",
+      "Louis-Michel Le Peletier",
+      "La Touche",
+      "François-Thomas Germain"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quels jumeaux sont les protagonistes d’Assassin’s Creed Syndicate ?",
+    "answers": [
+      "Jacob et Evie Frye",
+      "Arno et Élise Dorian",
+      "Ezio et Claudia Auditore",
+      "Jacob et Lydia Frye"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quelle ville Syndicate se déroule-t-il principalement ?",
+    "answers": [
+      "Manchester",
+      "Londres",
+      "Liverpool",
+      "Édimbourg"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel nom porte le gang fondé par les Frye ?",
+    "answers": [
+      "Les Blighters",
+      "Les Crows",
+      "Les Rooks",
+      "Les Ravens"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Templier contrôle Londres au début de Syndicate ?",
+    "answers": [
+      "Maxwell Roth",
+      "Rupert Ferris",
+      "Philip Twopenny",
+      "Crawford Starrick"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel outil permet aux Frye de gagner rapidement les hauteurs de Londres ?",
+    "answers": [
+      "Le lance-corde",
+      "Le parachute",
+      "Le grappin naval",
+      "La corde à fléchettes"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Médjay est le protagoniste principal d’Assassin’s Creed Origins ?",
+    "answers": [
+      "Aya d’Alexandrie",
+      "Bayek de Siwa",
+      "Hepzefa de Siwa",
+      "Tahira"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quel royaume antique Origins se déroule-t-il ?",
+    "answers": [
+      "L’Empire perse",
+      "Le Nouvel Empire égyptien",
+      "L’Égypte ptolémaïque",
+      "L’Égypte romaine tardive"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel nom Aya adopte-t-elle comme membre fondatrice de la confrérie ?",
+    "answers": [
+      "Désirée",
+      "Khemu",
+      "Neith",
+      "Amunet"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel groupe Bayek et Aya fondent-ils ?",
+    "answers": [
+      "Ceux qu’on ne voit pas",
+      "Les Instruments de la Première Volonté",
+      "Les Héritiers des Médjays",
+      "Les Enfants de Rê"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ordre secret Bayek affronte-t-il dans Origins ?",
+    "answers": [
+      "Le Culte de Kosmos",
+      "L’Ordre des Anciens",
+      "L’Ordre des Templiers",
+      "Les Disciples d’Aita"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel monde antique se déroule Assassin’s Creed Odyssey ?",
+    "answers": [
+      "L’Égypte antique",
+      "La Perse achéménide",
       "La Grèce antique",
+      "La République romaine"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel conflit oppose Athènes et Sparte dans Odyssey ?",
+    "answers": [
+      "Les guerres médiques",
+      "La guerre de Troie",
+      "La guerre lamiaque",
+      "La guerre du Péloponnèse"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s’appelle le navire du personnage joueur ?",
+    "answers": [
+      "L’Adrestia",
+      "Le Morrigan",
+      "Le Jackdaw",
+      "La Trirème d’Hermès"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel artefact brisé donne des capacités surhumaines au misthios ?",
+    "answers": [
+      "L’épée de Damoclès",
+      "La lance de Léonidas",
+      "Le trident de Poséidon",
+      "Le bâton d’Hermès"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle organisation secrète le misthios traque-t-il ?",
+    "answers": [
+      "L’Ordre des Anciens",
+      "Les Adeptes d’Arès",
+      "Le Culte de Kosmos",
+      "La Ligue de Délos"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Viking est le personnage jouable d’Assassin’s Creed Valhalla ?",
+    "answers": [
+      "Sigurd",
+      "Basim",
+      "Halfdan",
       "Eivor"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente le Credo ?",
+    "text": "De quel pays le clan d’Eivor part-il au début du jeu ?",
     "answers": [
-      "la forteresse des Assassins du premier jeu",
-      "des villes majeures d'Assassin's Creed II",
-      "un code guidant la confrérie",
-      "la ville principale de Revelations"
+      "La Norvège",
+      "Le Danemark",
+      "La Suède",
+      "L’Islande"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel élément correspond à cette description : « un code guidant la confrérie » ?",
+    "text": "Comment se nomme la colonie anglaise du clan du Grand Corbeau ?",
     "answers": [
-      "La Lame secrète",
-      "L'Angleterre du IXe siècle",
-      "Bagdad abbasside",
-      "Le Credo"
+      "Jorvik",
+      "Ravensthorpe",
+      "Grantebridge",
+      "Repton"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Masyaf ?",
+    "text": "Quel lien unit Sigurd à Eivor ?",
     "answers": [
-      "la forteresse des Assassins du premier jeu",
-      "des villes majeures d'Assassin's Creed II",
-      "la ville principale de Revelations",
-      "le cadre de Black Flag"
+      "Ils sont cousins",
+      "Sigurd est son père",
+      "Sigurd est son frère adoptif",
+      "Sigurd est son mentor assassin"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément correspond à cette description : « la forteresse des Assassins du premier jeu » ?",
+    "text": "Quel Isu est réincarné en Basim ?",
     "answers": [
-      "Altaïr Ibn-La'Ahad",
-      "Masyaf",
-      "Arno Dorian",
-      "L'Égypte ptolémaïque"
+      "Tyr",
+      "Odin",
+      "Baldr",
+      "Loki"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Florence et Venise ?",
+    "text": "Quel personnage est au centre d’Assassin’s Creed Mirage ?",
     "answers": [
-      "la ville principale de Revelations",
-      "le cadre de Black Flag",
-      "des villes majeures d'Assassin's Creed II",
-      "le cadre d'Unity"
+      "Basim Ibn Ishaq",
+      "Hytham",
+      "Roshan",
+      "Ali ibn Muhammad"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel élément correspond à cette description : « des villes majeures d'Assassin's Creed II » ?",
+    "text": "Dans quelle ville du IXe siècle se déroule principalement Mirage ?",
     "answers": [
-      "La Lame secrète",
-      "L'Égypte ptolémaïque",
-      "La Grèce antique",
-      "Florence et Venise"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Constantinople ?",
-    "answers": [
-      "la ville principale de Revelations",
-      "le cadre de Black Flag",
-      "le cadre d'Unity",
-      "le cadre de Syndicate"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément correspond à cette description : « la ville principale de Revelations » ?",
-    "answers": [
-      "L'Animus",
-      "Constantinople",
-      "Abstergo Industries",
-      "La Lame secrète"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente les Caraïbes ?",
-    "answers": [
-      "le cadre d'Unity",
-      "le cadre de Syndicate",
-      "le cadre de Black Flag",
-      "le cadre d'Origins"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel élément correspond à cette description : « le cadre de Black Flag » ?",
-    "answers": [
-      "Londres victorienne",
-      "Ezio Auditore",
-      "Edward Kenway",
-      "Les Caraïbes"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Paris révolutionnaire ?",
-    "answers": [
-      "le cadre d'Unity",
-      "le cadre de Syndicate",
-      "le cadre d'Origins",
-      "le cadre d'Odyssey"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel élément correspond à cette description : « le cadre d'Unity » ?",
-    "answers": [
-      "La Grèce antique",
-      "Paris révolutionnaire",
-      "Abstergo Industries",
+      "Damas",
+      "Bagdad",
+      "Le Caire",
       "Constantinople"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Londres victorienne ?",
+    "text": "Quelle maîtresse Assassin forme Basim ?",
     "answers": [
-      "le cadre d'Origins",
-      "le cadre d'Odyssey",
-      "le cadre de Syndicate",
-      "le cadre principal de Valhalla"
+      "Fuladh",
+      "Rebekah",
+      "Roshan",
+      "Nehal"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément correspond à cette description : « le cadre de Syndicate » ?",
+    "text": "Dans quelle forteresse Basim s’entraîne-t-il auprès de Ceux qu’on ne voit pas ?",
     "answers": [
-      "Les Caraïbes",
-      "La Lame secrète",
-      "Constantinople",
-      "Londres victorienne"
+      "Masyaf",
+      "Masada",
+      "Acre",
+      "Alamut"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente l'Égypte ptolémaïque ?",
+    "text": "Sous quel califat Bagdad se trouve-t-elle dans Mirage ?",
     "answers": [
-      "le cadre d'Origins",
-      "le cadre d'Odyssey",
-      "le cadre principal de Valhalla",
-      "le cadre de Mirage"
+      "Le califat abbasside",
+      "Le califat omeyyade",
+      "Le califat fatimide",
+      "Le califat almohade"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel élément correspond à cette description : « le cadre d'Origins » ?",
+    "text": "Quelle shinobi est l’une des deux protagonistes d’Assassin’s Creed Shadows ?",
     "answers": [
-      "Eivor",
-      "L'Égypte ptolémaïque",
-      "Ubisoft Montréal",
-      "Bagdad abbasside"
+      "Aya",
+      "Naoe",
+      "Shao Jun",
+      "Fujibayashi Nagato"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente la Grèce antique ?",
+    "text": "Quel guerrier historique accompagne Naoe comme second protagoniste ?",
     "answers": [
-      "le cadre principal de Valhalla",
-      "le cadre de Mirage",
-      "le cadre d'Odyssey",
-      "le studio créateur de la série"
+      "Hattori Hanzo",
+      "Oda Nobunaga",
+      "Yasuke",
+      "Akechi Mitsuhide"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel élément correspond à cette description : « le cadre d'Odyssey » ?",
+    "text": "À quelle période du Japon se déroule Shadows ?",
     "answers": [
-      "Arno Dorian",
-      "Jacob et Evie Frye",
-      "L'Angleterre du IXe siècle",
-      "La Grèce antique"
+      "L’époque Heian",
+      "L’époque Kamakura",
+      "La restauration de Meiji",
+      "La fin de l’époque Sengoku"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente l'Angleterre du IXe siècle ?",
+    "text": "De quelle région de guerriers shinobi Naoe est-elle originaire ?",
     "answers": [
-      "le cadre principal de Valhalla",
-      "le cadre de Mirage",
-      "le studio créateur de la série",
-      "le héros du premier Assassin's Creed"
+      "Iga",
+      "Satsuma",
+      "Tosa",
+      "Aizu"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément correspond à cette description : « le cadre principal de Valhalla » ?",
+    "text": "Quel parent de Naoe est présenté comme le légendaire shinobi Fujibayashi Nagato ?",
     "answers": [
-      "Edward Kenway",
-      "L'Angleterre du IXe siècle",
-      "Ezio Auditore",
-      "La Grèce antique"
+      "Son frère",
+      "Son père",
+      "Son oncle",
+      "Son grand-père"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Bagdad abbasside ?",
+    "text": "Quel barman moderne revit d’abord les souvenirs d’Altaïr ?",
     "answers": [
-      "le studio créateur de la série",
-      "le héros du premier Assassin's Creed",
-      "le cadre de Mirage",
-      "le héros italien de la Renaissance"
+      "Clay Kaczmarek",
+      "Daniel Cross",
+      "Desmond Miles",
+      "Shaun Hastings"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel élément correspond à cette description : « le cadre de Mirage » ?",
+    "text": "Quelle entreprise sert de façade moderne aux Templiers ?",
     "answers": [
-      "Les Caraïbes",
-      "Arno Dorian",
-      "Ezio Auditore",
-      "Bagdad abbasside"
+      "Blume Corporation",
+      "DedSec",
+      "Erudito Industries",
+      "Abstergo Industries"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans l'univers d'Assassin's Creed, que désigne ou représente Ubisoft Montréal ?",
+    "text": "Quelle Assassin aide Desmond à s’échapper d’Abstergo dans le premier jeu ?",
     "answers": [
-      "le studio créateur de la série",
-      "le héros du premier Assassin's Creed",
-      "le héros italien de la Renaissance",
-      "le protagoniste d'Assassin's Creed III"
+      "Lucy Stillman",
+      "Rebecca Crane",
+      "Layla Hassan",
+      "Galina Voronina"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel élément correspond à cette description : « le studio créateur de la série » ?",
+    "text": "Quel membre de l’équipe moderne est le père de Desmond ?",
     "answers": [
-      "Bayek",
-      "Ubisoft Montréal",
-      "L'Angleterre du IXe siècle",
-      "Basim"
+      "Warren Vidic",
+      "William Miles",
+      "Alan Rikkin",
+      "Clay Kaczmarek"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle ancienne employée d’Abstergo devient la protagoniste moderne d’Origins ?",
+    "answers": [
+      "Victoria Bibeau",
+      "Rebecca Crane",
+      "Layla Hassan",
+      "Melanie Lemay"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel nom la série donne-t-elle à la civilisation antérieure à l’humanité ?",
+    "answers": [
+      "Les Sages",
+      "Les Précurseurs humains",
+      "Les Anciens de Kosmos",
+      "Les Isu"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment appelle-t-on collectivement les puissants objets technologiques des Isu ?",
+    "answers": [
+      "Les Artefacts d’Éden",
+      "Les Reliques du Nexus",
+      "Les Fragments de l’Animus",
+      "Les Clés de Masyaf"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle Isu avertit Desmond d’une catastrophe solaire dans Assassin’s Creed II ?",
+    "answers": [
+      "Junon",
+      "Minerve",
+      "Diane",
+      "Aletheia"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "De quel Isu les Sages sont-ils des réincarnations humaines récurrentes ?",
+    "answers": [
+      "Jupiter",
+      "Hermès",
+      "Aita",
+      "Consus"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Artefact d’Éden contient la conscience d’Aletheia ?",
+    "answers": [
+      "La Pomme d’Altaïr",
+      "Le Suaire de Turin",
+      "L’Épée de Jeanne d’Arc",
+      "Le Bâton d’Hermès Trismégiste"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle capacité met en évidence ennemis et éléments importants ?",
+    "answers": [
+      "La vision d’aigle",
+      "La concentration d’assassin",
+      "La furie spartiate",
+      "La perception d’Odin"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Que faut-il généralement atteindre pour révéler une portion de carte dans les premiers jeux ?",
+    "answers": [
+      "Un bureau d’Assassins",
+      "Un point d’observation",
+      "Une forge",
+      "Un repaire de Templiers"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle pratique consiste à se fondre dans un groupe pour éviter les gardes ?",
+    "answers": [
+      "La synchronisation totale",
+      "L’infiltration navale",
+      "La discrétion sociale",
+      "La vision partagée"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans Assassin’s Creed II, quel personnage peut réduire la notoriété d’Ezio contre de l’argent ?",
+    "answers": [
+      "Un courtisan",
+      "Un condottiere",
+      "Un médecin",
+      "Un héraut"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans Brotherhood, quel système permet d’envoyer des recrues accomplir des contrats hors de Rome ?",
+    "answers": [
+      "Les contrats d’Assassins",
+      "Les expéditions navales",
+      "Les conquêtes de quartier",
+      "Les anomalies de l’Animus"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel ancien quartier-maître est jouable dans Freedom Cry ?",
+    "answers": [
+      "Aveline de Grandpré",
+      "Adewale",
+      "Liam O’Brien",
+      "Duncan Walpole"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle Assassin de La Nouvelle-Orléans est l’héroïne de Liberation ?",
+    "answers": [
+      "Shao Jun",
+      "Élise de la Serre",
+      "Aveline de Grandpré",
+      "Evie Frye"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle Assassin chinoise formée par Ezio est jouable dans Chronicles China ?",
+    "answers": [
+      "Shao Yong",
+      "Lin Guiyu",
+      "Qulan Gal",
+      "Shao Jun"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel royaume mythologique sert de décor principal à Dawn of Ragnarök ?",
+    "answers": [
+      "Svartalfheim",
+      "Asgard",
+      "Jotunheim",
+      "Niflheim"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle région de l’au-delà grec débute l’arc Le Sort de l’Atlantide ?",
+    "answers": [
+      "Le Tartare",
+      "L’Élysée",
+      "Les Champs d’Asphodèle",
+      "L’île des Bienheureux"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année le premier Assassin’s Creed est-il sorti ?",
+    "answers": [
+      "2005",
+      "2009",
+      "2007",
+      "2011"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel épisode numéroté sorti en 2009 introduit Ezio Auditore ?",
+    "answers": [
+      "Assassin’s Creed III",
+      "Assassin’s Creed Brotherhood",
+      "Assassin’s Creed Revelations",
+      "Assassin’s Creed II"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel épisode principal paru en 2013 place la piraterie au premier plan ?",
+    "answers": [
+      "Assassin’s Creed IV Black Flag",
+      "Assassin’s Creed Rogue",
+      "Assassin’s Creed III",
+      "Assassin’s Creed Unity"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel épisode sorti en 2017 a inauguré la formule action-RPG de la trilogie antique ?",
+    "answers": [
+      "Assassin’s Creed Odyssey",
+      "Assassin’s Creed Origins",
+      "Assassin’s Creed Unity",
+      "Assassin’s Creed Valhalla"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel moteur, auparavant nommé AnvilNext 2.0, propulse notamment Origins et Odyssey ?",
+    "answers": [
+      "Snowdrop",
+      "Dunia",
+      "Ubisoft Anvil",
+      "Scimitar Classic"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle maxime complète « Rien n’est vrai » dans le Credo ?",
+    "answers": [
+      "La vérité est une arme",
+      "Nous servons dans l’ombre",
+      "Le savoir libère",
+      "Tout est permis"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "À quelle confrérie autochtone Connor appartient-il par sa mère ?",
+    "answers": [
+      "Les Kanien’kehá:ka",
+      "Les Mi’kmaq",
+      "Les Lenapes",
+      "Les Cherokee"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Sujet de l’Animus laisse des glyphes à Desmond sous le nom de Sujet 16 ?",
+    "answers": [
+      "Daniel Cross",
+      "Clay Kaczmarek",
+      "Warren Vidic",
+      "Otso Berg"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Assassin légendaire rédige le Codex retrouvé par Ezio ?",
+    "answers": [
+      "Darius",
+      "Iltani",
+      "Altaïr Ibn-La’Ahad",
+      "Qulan Gal"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel effet indésirable mélange les souvenirs de l’ancêtre et la perception du sujet de l’Animus ?",
+    "answers": [
+      "La désynchronisation",
+      "L’effet Nexus",
+      "La convergence Isu",
+      "L’effet de transfert"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
