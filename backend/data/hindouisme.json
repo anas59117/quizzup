@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Dans l'hindouisme, quelle définition correspond aux Veda ?",
+    "text": "Comment appelle-t-on les plus anciens grands corpus sacrés de l’hindouisme ?",
     "answers": [
-      "d'anciens textes sacrés en sanskrit",
-      "des textes philosophiques liés aux Veda",
-      "un dialogue entre Krishna et Arjuna",
-      "une grande épopée sanskrite"
+      "Les Veda",
+      "Les Agama",
+      "Les Purana",
+      "Les Sutra du Yoga"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit les Veda ?",
+    "text": "Dans quelle langue ancienne les Veda ont-ils été composés ?",
     "answers": [
-      "des textes philosophiques liés aux Veda",
-      "d'anciens textes sacrés en sanskrit",
-      "un dialogue entre Krishna et Arjuna",
-      "une grande épopée sanskrite"
+      "Le pali",
+      "Le sanskrit védique",
+      "Le tamoul moderne",
+      "Le prakrit magadhi"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond aux Upanishad ?",
+    "text": "Combien de Veda principaux la tradition distingue-t-elle ?",
     "answers": [
-      "un dialogue entre Krishna et Arjuna",
-      "une grande épopée sanskrite",
-      "des textes philosophiques liés aux Veda",
-      "l'épopée de Rama et Sita"
+      "Deux",
+      "Six",
+      "Quatre",
+      "Huit"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit les Upanishad ?",
+    "text": "Quel Veda contient principalement des hymnes aux divinités ?",
     "answers": [
-      "un dialogue entre Krishna et Arjuna",
-      "une grande épopée sanskrite",
-      "l'épopée de Rama et Sita",
-      "des textes philosophiques liés aux Veda"
+      "Le Sama-Veda",
+      "Le Yajur-Veda",
+      "L’Atharva-Veda",
+      "Le Rig-Veda"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond à la Bhagavad-Gita ?",
+    "text": "Quel Veda adapte surtout des versets pour le chant liturgique ?",
     "answers": [
-      "un dialogue entre Krishna et Arjuna",
-      "une grande épopée sanskrite",
-      "l'épopée de Rama et Sita",
-      "une divinité associée à la création"
+      "Le Sama-Veda",
+      "Le Rig-Veda",
+      "Le Yajur-Veda",
+      "L’Atharva-Veda"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit la Bhagavad-Gita ?",
+    "text": "Quel texte met en scène un dialogue entre Krishna et Arjuna ?",
     "answers": [
-      "une grande épopée sanskrite",
-      "un dialogue entre Krishna et Arjuna",
-      "l'épopée de Rama et Sita",
-      "une divinité associée à la création"
+      "Le Yoga-Sutra",
+      "La Bhagavad-Gita",
+      "Le Kama-Sutra",
+      "Le Manusmriti"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond au Mahabharata ?",
+    "text": "À quelle grande épopée appartient la Bhagavad-Gita ?",
     "answers": [
-      "l'épopée de Rama et Sita",
-      "une divinité associée à la création",
-      "une grande épopée sanskrite",
-      "une divinité associée à la préservation"
+      "Le Ramayana",
+      "Le Rig-Veda",
+      "Le Mahabharata",
+      "Le Bhagavata Purana"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit le Mahabharata ?",
+    "text": "Quel héros du Ramayana est présenté comme un avatar de Vishnou ?",
     "answers": [
-      "l'épopée de Rama et Sita",
-      "une divinité associée à la création",
-      "une divinité associée à la préservation",
-      "une grande épopée sanskrite"
+      "Arjuna",
+      "Karna",
+      "Bhishma",
+      "Rama"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond au Ramayana ?",
+    "text": "Quel auteur est traditionnellement associé au Ramayana sanskrit ?",
     "answers": [
-      "l'épopée de Rama et Sita",
-      "une divinité associée à la création",
-      "une divinité associée à la préservation",
-      "une divinité associée à la transformation"
+      "Valmiki",
+      "Vyasa",
+      "Patanjali",
+      "Kalidasa"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit le Ramayana ?",
+    "text": "Quel personnage transmet traditionnellement le Mahabharata ?",
     "answers": [
-      "une divinité associée à la création",
-      "l'épopée de Rama et Sita",
-      "une divinité associée à la préservation",
-      "une divinité associée à la transformation"
+      "Valmiki",
+      "Vyasa",
+      "Panini",
+      "Bharata Muni"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond à Brahma ?",
+    "text": "Quelle divinité est souvent représentée avec une tête d’éléphant ?",
     "answers": [
-      "une divinité associée à la préservation",
-      "une divinité associée à la transformation",
-      "une divinité associée à la création",
-      "une déesse de la prospérité"
+      "Hanuman",
+      "Krishna",
+      "Ganesha",
+      "Skanda"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit Brahma ?",
+    "text": "Dans la Trimurti, qui incarne la fonction de préservation ?",
     "answers": [
-      "une divinité associée à la préservation",
-      "une divinité associée à la transformation",
-      "une déesse de la prospérité",
-      "une divinité associée à la création"
+      "Brahma",
+      "Shiva",
+      "Agni",
+      "Vishnou"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond à Vishnou ?",
+    "text": "À quel membre de la Trimurti attribue-t-on la fonction créatrice ?",
     "answers": [
-      "une divinité associée à la préservation",
-      "une divinité associée à la transformation",
-      "une déesse de la prospérité",
-      "une déesse du savoir et des arts"
+      "Brahma",
+      "Vishnou",
+      "Shiva",
+      "Indra"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit Vishnou ?",
+    "text": "Quelle divinité est représentée comme Nataraja, Seigneur de la danse ?",
     "answers": [
-      "une divinité associée à la transformation",
-      "une divinité associée à la préservation",
-      "une déesse de la prospérité",
-      "une déesse du savoir et des arts"
+      "Surya",
+      "Shiva",
+      "Varuna",
+      "Kubera"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond à Shiva ?",
+    "text": "Quel attribut Vishnou tient-il souvent avec la conque, la masse et le lotus ?",
     "answers": [
-      "une déesse de la prospérité",
-      "une déesse du savoir et des arts",
-      "une divinité associée à la transformation",
-      "une divinité à tête d'éléphant"
+      "Le trident",
+      "Le vajra",
+      "Le disque chakra",
+      "L’arc Pinaka"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit Shiva ?",
+    "text": "Quelle déesse est largement associée à la prospérité ?",
     "answers": [
-      "une déesse de la prospérité",
-      "une déesse du savoir et des arts",
-      "une divinité à tête d'éléphant",
-      "une divinité associée à la transformation"
+      "Sarasvati",
+      "Kali",
+      "Ganga",
+      "Lakshmi"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond à Lakshmi ?",
+    "text": "Quelle déesse est associée au savoir, à la musique et aux arts ?",
     "answers": [
-      "une déesse de la prospérité",
-      "une déesse du savoir et des arts",
-      "une divinité à tête d'éléphant",
-      "un avatar de Vishnou"
+      "Sarasvati",
+      "Lakshmi",
+      "Parvati",
+      "Sita"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit Lakshmi ?",
+    "text": "Quelle déesse guerrière combat le démon-buffle Mahishasura ?",
     "answers": [
-      "une déesse du savoir et des arts",
-      "une déesse de la prospérité",
-      "une divinité à tête d'éléphant",
-      "un avatar de Vishnou"
+      "Radha",
+      "Durga",
+      "Ganga",
+      "Savitri"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond à Sarasvati ?",
+    "text": "Sous quelle forme farouche la Déesse est-elle souvent représentée avec une langue tirée ?",
     "answers": [
-      "une divinité à tête d'éléphant",
-      "un avatar de Vishnou",
-      "une déesse du savoir et des arts",
-      "un avatar de Vishnou et héros du Ramayana"
+      "Lakshmi",
+      "Sarasvati",
+      "Kali",
+      "Ushas"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit Sarasvati ?",
+    "text": "Quel terme désigne la puissance divine féminine ?",
     "answers": [
-      "une divinité à tête d'éléphant",
-      "un avatar de Vishnou",
-      "un avatar de Vishnou et héros du Ramayana",
-      "une déesse du savoir et des arts"
+      "Bhakti",
+      "Shruti",
+      "Smriti",
+      "Shakti"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond à Ganesha ?",
+    "text": "Comment nomme-t-on le principe d’action et de conséquence morale ?",
     "answers": [
-      "une divinité à tête d'éléphant",
-      "un avatar de Vishnou",
-      "un avatar de Vishnou et héros du Ramayana",
-      "le héros simien dévoué à Rama"
+      "Le karma",
+      "Le moksha",
+      "Le mantra",
+      "Le darshan"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit Ganesha ?",
+    "text": "Comment nomme-t-on la succession des naissances et des morts ?",
     "answers": [
-      "un avatar de Vishnou",
-      "une divinité à tête d'éléphant",
-      "un avatar de Vishnou et héros du Ramayana",
-      "le héros simien dévoué à Rama"
+      "Le samadhi",
+      "Le samsara",
+      "Le sanatana",
+      "Le sannyasa"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond à Krishna ?",
+    "text": "Quel idéal spirituel correspond à l’émancipation hors du samsara ?",
     "answers": [
-      "un avatar de Vishnou et héros du Ramayana",
-      "le héros simien dévoué à Rama",
-      "un avatar de Vishnou",
-      "l'ordre, le devoir et la conduite juste"
+      "Le dharma",
+      "Le yajna",
+      "Le moksha",
+      "Le mandala"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit Krishna ?",
+    "text": "Quel terme peut désigner l’ordre, le devoir et la conduite juste ?",
     "answers": [
-      "un avatar de Vishnou et héros du Ramayana",
-      "le héros simien dévoué à Rama",
-      "l'ordre, le devoir et la conduite juste",
-      "un avatar de Vishnou"
+      "L’artha",
+      "Le kama",
+      "La maya",
+      "Le dharma"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond à Rama ?",
+    "text": "Dans les Upanishad, quel terme désigne le soi profond ?",
     "answers": [
-      "un avatar de Vishnou et héros du Ramayana",
-      "le héros simien dévoué à Rama",
-      "l'ordre, le devoir et la conduite juste",
-      "les conséquences des actes"
+      "Atman",
+      "Prakriti",
+      "Ahimsa",
+      "Murti"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit Rama ?",
+    "text": "Quel terme désigne un acte de culte avec offrandes devant une divinité ?",
     "answers": [
-      "le héros simien dévoué à Rama",
-      "un avatar de Vishnou et héros du Ramayana",
-      "l'ordre, le devoir et la conduite juste",
-      "les conséquences des actes"
+      "Le darshan",
+      "La puja",
+      "Le samskara",
+      "Le yuga"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond à Hanuman ?",
+    "text": "Comment appelle-t-on une formule sacrée récitée ou chantée ?",
     "answers": [
-      "l'ordre, le devoir et la conduite juste",
-      "les conséquences des actes",
-      "le héros simien dévoué à Rama",
-      "le cycle des renaissances"
+      "Un mandir",
+      "Un yantra",
+      "Un mantra",
+      "Un avatar"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit Hanuman ?",
+    "text": "Quel terme désigne la vision réciproque entre le fidèle et la divinité ?",
     "answers": [
-      "l'ordre, le devoir et la conduite juste",
-      "les conséquences des actes",
-      "le cycle des renaissances",
-      "le héros simien dévoué à Rama"
+      "Prasad",
+      "Tapas",
+      "Seva",
+      "Darshan"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond au dharma ?",
+    "text": "Comment appelle-t-on la nourriture offerte puis redistribuée comme bénédiction ?",
     "answers": [
-      "l'ordre, le devoir et la conduite juste",
-      "les conséquences des actes",
-      "le cycle des renaissances",
-      "la libération du samsara"
+      "Prasad",
+      "Tilak",
+      "Arati",
+      "Mala"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit le dharma ?",
+    "text": "Quel rite fait circuler une flamme devant une image divine ?",
     "answers": [
-      "les conséquences des actes",
-      "l'ordre, le devoir et la conduite juste",
-      "le cycle des renaissances",
-      "la libération du samsara"
+      "Homa",
+      "Arati",
+      "Upanayana",
+      "Antyeshti"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond au karma ?",
+    "text": "Quelle fête est souvent appelée fête des lumières ?",
     "answers": [
-      "le cycle des renaissances",
-      "la libération du samsara",
-      "les conséquences des actes",
-      "un ensemble de disciplines spirituelles et corporelles"
+      "Holi",
+      "Navaratri",
+      "Diwali",
+      "Raksha Bandhan"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit le karma ?",
+    "text": "Quelle fête printanière est célèbre pour ses poudres colorées ?",
     "answers": [
-      "le cycle des renaissances",
-      "la libération du samsara",
-      "un ensemble de disciplines spirituelles et corporelles",
-      "les conséquences des actes"
+      "Dussehra",
+      "Janmashtami",
+      "Maha Shivaratri",
+      "Holi"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond au samsara ?",
+    "text": "Quelle fête célèbre la naissance de Krishna ?",
     "answers": [
-      "le cycle des renaissances",
-      "la libération du samsara",
-      "un ensemble de disciplines spirituelles et corporelles",
-      "un rite d'offrande et de dévotion"
+      "Janmashtami",
+      "Rama Navami",
+      "Ganesh Chaturthi",
+      "Makar Sankranti"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit le samsara ?",
+    "text": "Quelle fête de neuf nuits honore différentes formes de la Déesse ?",
     "answers": [
-      "la libération du samsara",
-      "le cycle des renaissances",
-      "un ensemble de disciplines spirituelles et corporelles",
-      "un rite d'offrande et de dévotion"
+      "Onam",
+      "Navaratri",
+      "Pongal",
+      "Vasant Panchami"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond au moksha ?",
+    "text": "Quelle fête se conclut souvent par l’immersion d’images de Ganesha ?",
     "answers": [
-      "un ensemble de disciplines spirituelles et corporelles",
-      "un rite d'offrande et de dévotion",
-      "la libération du samsara",
-      "un temple hindou"
+      "Raksha Bandhan",
+      "Akshaya Tritiya",
+      "Ganesh Chaturthi",
+      "Guru Purnima"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit le moksha ?",
+    "text": "Quel fleuve descend sur terre, selon un récit traditionnel, après avoir été retenu dans la chevelure de Shiva ?",
     "answers": [
-      "un ensemble de disciplines spirituelles et corporelles",
-      "un rite d'offrande et de dévotion",
-      "un temple hindou",
-      "la libération du samsara"
+      "L’Indus",
+      "La Narmada",
+      "La Godavari",
+      "Le Gange"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond au yoga ?",
+    "text": "Quelle ville sainte située sur le Gange est aussi appelée Kashi ?",
     "answers": [
-      "un ensemble de disciplines spirituelles et corporelles",
-      "un rite d'offrande et de dévotion",
-      "un temple hindou",
-      "une fête des lumières"
+      "Varanasi",
+      "Mathura",
+      "Ayodhya",
+      "Ujjain"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit le yoga ?",
+    "text": "Quelle ville est traditionnellement associée à la naissance de Krishna ?",
     "answers": [
-      "un rite d'offrande et de dévotion",
-      "un ensemble de disciplines spirituelles et corporelles",
-      "un temple hindou",
-      "une fête des lumières"
+      "Madurai",
+      "Mathura",
+      "Puri",
+      "Rishikesh"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond à la puja ?",
+    "text": "Dans quelle ville se trouve le grand temple de Jagannath ?",
     "answers": [
-      "un temple hindou",
-      "une fête des lumières",
-      "un rite d'offrande et de dévotion",
-      "une fête printanière des couleurs"
+      "Dwarka",
+      "Nashik",
+      "Puri",
+      "Haridwar"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit la puja ?",
+    "text": "Quel site réunit périodiquement le Kumbh Mela avec Prayagraj, Haridwar et Nashik ?",
     "answers": [
-      "un temple hindou",
-      "une fête des lumières",
-      "une fête printanière des couleurs",
-      "un rite d'offrande et de dévotion"
+      "Hampi",
+      "Khajuraho",
+      "Kanchipuram",
+      "Ujjain"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond à un mandir ?",
+    "text": "Comment appelle-t-on couramment un temple hindou ?",
     "answers": [
-      "un temple hindou",
-      "une fête des lumières",
-      "une fête printanière des couleurs",
-      "un fleuve sacré dans l'hindouisme"
+      "Un mandir",
+      "Un vihara",
+      "Une pagode",
+      "Un gurdwara"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit un mandir ?",
+    "text": "Quel espace intérieur abrite l’image principale d’un temple ?",
     "answers": [
-      "une fête des lumières",
-      "un temple hindou",
-      "une fête printanière des couleurs",
-      "un fleuve sacré dans l'hindouisme"
+      "Le gopuram",
+      "Le garbhagriha",
+      "Le mandapa",
+      "Le shikhara"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond à Diwali ?",
+    "text": "Comment appelle-t-on la tour monumentale d’entrée des temples du sud de l’Inde ?",
     "answers": [
-      "une fête printanière des couleurs",
-      "un fleuve sacré dans l'hindouisme",
-      "une fête des lumières",
-      "une grande ville sainte sur le Gange"
+      "Le stupa",
+      "Le torana",
+      "Le gopuram",
+      "Le chhatri"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit Diwali ?",
+    "text": "Quel terme désigne une salle à piliers dans un temple ?",
     "answers": [
-      "une fête printanière des couleurs",
-      "un fleuve sacré dans l'hindouisme",
-      "une grande ville sainte sur le Gange",
-      "une fête des lumières"
+      "Garbhagriha",
+      "Vimana",
+      "Prakara",
+      "Mandapa"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond à Holi ?",
+    "text": "Quel nom porte souvent la haute tour au-dessus du sanctuaire dans le nord de l’Inde ?",
     "answers": [
-      "une fête printanière des couleurs",
-      "un fleuve sacré dans l'hindouisme",
-      "une grande ville sainte sur le Gange",
-      "d'anciens textes sacrés en sanskrit"
+      "Shikhara",
+      "Gopuram",
+      "Torana",
+      "Vedika"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit Holi ?",
+    "text": "Quel animal est la monture de Shiva ?",
     "answers": [
-      "un fleuve sacré dans l'hindouisme",
-      "une fête printanière des couleurs",
-      "une grande ville sainte sur le Gange",
-      "d'anciens textes sacrés en sanskrit"
+      "L’aigle Garuda",
+      "Le taureau Nandi",
+      "Le rat Mushika",
+      "Le paon Paravani"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond au Gange ?",
+    "text": "Quel oiseau mythique sert de monture à Vishnou ?",
     "answers": [
-      "une grande ville sainte sur le Gange",
-      "d'anciens textes sacrés en sanskrit",
-      "un fleuve sacré dans l'hindouisme",
-      "des textes philosophiques liés aux Veda"
+      "Jatayu",
+      "Hamsa",
+      "Garuda",
+      "Mayura"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit le Gange ?",
+    "text": "Quel petit animal est traditionnellement la monture de Ganesha ?",
     "answers": [
-      "une grande ville sainte sur le Gange",
-      "d'anciens textes sacrés en sanskrit",
-      "des textes philosophiques liés aux Veda",
-      "un fleuve sacré dans l'hindouisme"
+      "Un lion",
+      "Un cygne",
+      "Un éléphant",
+      "Une souris ou un rat"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quelle définition correspond à Varanasi ?",
+    "text": "Quel animal sert de monture à Durga dans de nombreuses images ?",
     "answers": [
-      "une grande ville sainte sur le Gange",
-      "d'anciens textes sacrés en sanskrit",
-      "des textes philosophiques liés aux Veda",
-      "un dialogue entre Krishna et Arjuna"
+      "Un lion ou un tigre",
+      "Un buffle",
+      "Une tortue",
+      "Un crocodile"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Dans l'hindouisme, quel élément décrit Varanasi ?",
+    "text": "Quel animal aquatique sert de monture à la déesse Ganga ?",
     "answers": [
-      "d'anciens textes sacrés en sanskrit",
-      "une grande ville sainte sur le Gange",
-      "des textes philosophiques liés aux Veda",
-      "un dialogue entre Krishna et Arjuna"
+      "Le naga",
+      "Le makara",
+      "Le hamsa",
+      "Le varaha"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel nom porte l’avatar-poisson de Vishnou ?",
+    "answers": [
+      "Kurma",
+      "Varaha",
+      "Matsya",
+      "Narasimha"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel avatar-tortue soutient le mont Mandara lors du barattage de l’océan ?",
+    "answers": [
+      "Vamana",
+      "Parashurama",
+      "Kalki",
+      "Kurma"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Sous quelle forme Vishnou soulève-t-il la Terre avec ses défenses ?",
+    "answers": [
+      "Varaha",
+      "Matsya",
+      "Narasimha",
+      "Balarama"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel avatar mi-homme mi-lion protège Prahlada ?",
+    "answers": [
+      "Vamana",
+      "Narasimha",
+      "Rama",
+      "Krishna"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel avatar nain obtient de Bali l’espace couvert en trois pas ?",
+    "answers": [
+      "Kurma",
+      "Kalki",
+      "Vamana",
+      "Parashurama"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel héros simien est le fidèle allié de Rama ?",
+    "answers": [
+      "Garuda",
+      "Bhima",
+      "Arjuna",
+      "Hanuman"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui enlève Sita dans le Ramayana ?",
+    "answers": [
+      "Ravana",
+      "Duryodhana",
+      "Kamsa",
+      "Hiranyakashipu"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel frère accompagne Rama durant son exil ?",
+    "answers": [
+      "Bharata",
+      "Lakshmana",
+      "Shatrughna",
+      "Vibhishana"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel royaume insulaire Ravana gouverne-t-il dans le Ramayana ?",
+    "answers": [
+      "Ayodhya",
+      "Kishkindha",
+      "Lanka",
+      "Hastinapura"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel vautour tente de sauver Sita de Ravana ?",
+    "answers": [
+      "Garuda",
+      "Sampati",
+      "Aruna",
+      "Jatayu"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel guerrier reçoit l’enseignement de Krishna dans la Bhagavad-Gita ?",
+    "answers": [
+      "Arjuna",
+      "Bhima",
+      "Yudhishthira",
+      "Nakula"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s’appelle le champ de bataille du Mahabharata ?",
+    "answers": [
+      "Lanka",
+      "Kurukshetra",
+      "Mathura",
+      "Panchavati"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quels cousins combattent les Pandava dans le Mahabharata ?",
+    "answers": [
+      "Les Yadava",
+      "Les Ikshvaku",
+      "Les Kaurava",
+      "Les Vanara"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Pandava est réputé pour sa force exceptionnelle ?",
+    "answers": [
+      "Sahadeva",
+      "Nakula",
+      "Yudhishthira",
+      "Bhima"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel grand-père guerrier reste couché sur un lit de flèches ?",
+    "answers": [
+      "Bhishma",
+      "Drona",
+      "Karna",
+      "Shakuni"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel mot signifie littéralement « union » et désigne diverses disciplines spirituelles ?",
+    "answers": [
+      "Yajna",
+      "Yoga",
+      "Yuga",
+      "Yantra"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel sage est traditionnellement associé aux Yoga-Sutra ?",
+    "answers": [
+      "Panini",
+      "Kapila",
+      "Patanjali",
+      "Jaimini"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien de membres comporte l’ashtanga yoga décrit par Patanjali ?",
+    "answers": [
+      "Quatre",
+      "Six",
+      "Dix",
+      "Huit"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel membre du yoga de Patanjali désigne les postures ?",
+    "answers": [
+      "Asana",
+      "Pranayama",
+      "Pratyahara",
+      "Dharana"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel membre désigne le retrait des sens ?",
+    "answers": [
+      "Yama",
+      "Pratyahara",
+      "Dhyana",
+      "Samadhi"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel courant met la dévotion personnelle au centre de la pratique ?",
+    "answers": [
+      "Le nyaya",
+      "Le vaisheshika",
+      "La bhakti",
+      "Le mimamsa"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel chemin spirituel privilégie la connaissance libératrice ?",
+    "answers": [
+      "Karma yoga",
+      "Bhakti yoga",
+      "Hatha yoga",
+      "Jnana yoga"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel chemin de la Bhagavad-Gita met l’accent sur l’action sans attachement aux fruits ?",
+    "answers": [
+      "Karma yoga",
+      "Raja yoga",
+      "Laya yoga",
+      "Nada yoga"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel terme désigne le service désintéressé ?",
+    "answers": [
+      "Maya",
+      "Seva",
+      "Rasa",
+      "Lila"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel poète mystique du XVe siècle critiqua les barrières religieuses et sociales ?",
+    "answers": [
+      "Kalidasa",
+      "Tulsidas",
+      "Kabir",
+      "Bharavi"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel grand courant vénère principalement Vishnou et ses avatars ?",
+    "answers": [
+      "Le shivaïsme",
+      "Le shaktisme",
+      "Le smartisme",
+      "Le vaishnavisme"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment appelle-t-on l’ensemble des traditions centrées sur Shiva ?",
+    "answers": [
+      "Le shivaïsme",
+      "Le vaishnavisme",
+      "Le shaktisme",
+      "Le saura"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel courant place la Déesse, ou Shakti, au centre ?",
+    "answers": [
+      "Le ganapatya",
+      "Le shaktisme",
+      "Le vaishnavisme",
+      "Le saura"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle tradition honore plusieurs grandes divinités comme manifestations du divin ?",
+    "answers": [
+      "Le charvaka",
+      "Le jaïnisme",
+      "Le smartisme",
+      "Le bouddhisme"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ensemble de cinq divinités est associé à la puja Panchayatana ?",
+    "answers": [
+      "Brahma, Indra, Agni, Vayu et Varuna",
+      "Rama, Sita, Lakshmana, Bharata et Hanuman",
+      "Krishna, Radha, Arjuna, Bhima et Draupadi",
+      "Shiva, Vishnou, Devi, Surya et Ganesha"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel système philosophique est associé à la non-dualité ?",
+    "answers": [
+      "Advaita Vedanta",
+      "Dvaita Vedanta",
+      "Nyaya",
+      "Vaisheshika"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel penseur est étroitement associé à l’Advaita Vedanta ?",
+    "answers": [
+      "Ramanuja",
+      "Adi Shankara",
+      "Madhva",
+      "Vallabha"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel penseur est associé au Vishishtadvaita, ou non-dualisme qualifié ?",
+    "answers": [
+      "Shankara",
+      "Madhva",
+      "Ramanuja",
+      "Kapila"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel penseur est associé au Dvaita Vedanta dualiste ?",
+    "answers": [
+      "Ramanuja",
+      "Shankara",
+      "Patanjali",
+      "Madhva"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel darshana classique met l’accent sur la logique et l’épistémologie ?",
+    "answers": [
+      "Nyaya",
+      "Samkhya",
+      "Yoga",
+      "Mimamsa"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel terme désigne une image consacrée d’une divinité ?",
+    "answers": [
+      "Mala",
+      "Murti",
+      "Tilak",
+      "Vahana"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel signe est appliqué sur le front lors de nombreux rites ?",
+    "answers": [
+      "Mudra",
+      "Yantra",
+      "Tilak",
+      "Prasad"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel objet à grains sert à compter les récitations ?",
+    "answers": [
+      "Damaru",
+      "Kalasha",
+      "Chakra",
+      "Mala"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel diagramme géométrique sert de support rituel ou méditatif ?",
+    "answers": [
+      "Yantra",
+      "Vahana",
+      "Shastra",
+      "Ashrama"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel symbole formé de trois sons est souvent considéré comme primordial ?",
+    "answers": [
+      "Svaha",
+      "Om ou Aum",
+      "Hrim",
+      "Ram"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel site du Karnataka fut la capitale de l’empire de Vijayanagara ?",
+    "answers": [
+      "Khajuraho",
+      "Konark",
+      "Hampi",
+      "Sanchi"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel site du Madhya Pradesh est célèbre pour ses temples médiévaux sculptés ?",
+    "answers": [
+      "Mahabalipuram",
+      "Pattadakal",
+      "Elephanta",
+      "Khajuraho"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel temple d’Odisha est conçu comme le char du dieu Soleil ?",
+    "answers": [
+      "Le temple du Soleil de Konark",
+      "Le temple de Brihadisvara",
+      "Le temple de Meenakshi",
+      "Le temple de Kailasanatha"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel groupe de monuments côtiers du Tamil Nadu comprend le Temple du Rivage ?",
+    "answers": [
+      "Hampi",
+      "Mahabalipuram",
+      "Ellora",
+      "Badami"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel grand temple Chola de Thanjavur est dédié à Shiva ?",
+    "answers": [
+      "Jagannath",
+      "Lingaraja",
+      "Brihadisvara",
+      "Kandariya Mahadeva"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel principe éthique signifie la non-violence ?",
+    "answers": [
+      "Asteya",
+      "Aparigraha",
+      "Satya",
+      "Ahimsa"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel yama du yoga signifie la véracité ?",
+    "answers": [
+      "Satya",
+      "Saucha",
+      "Santosha",
+      "Tapas"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel yama signifie ne pas voler ?",
+    "answers": [
+      "Brahmacharya",
+      "Asteya",
+      "Ishvara-pranidhana",
+      "Svadhyaya"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel stade traditionnel de la vie correspond au renonçant ?",
+    "answers": [
+      "Brahmacharya",
+      "Grihastha",
+      "Sannyasa",
+      "Vanaprastha"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel terme désigne traditionnellement un renonçant ou ascète ?",
+    "answers": [
+      "Purohita",
+      "Grihastha",
+      "Yajamana",
+      "Sannyasin"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
