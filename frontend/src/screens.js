@@ -376,7 +376,7 @@ export function WaitingContent({ avatar, name, level = 1, categoryKey, onCancel,
       </div>
       <div className="search-meta">{t('searchElapsed', { n: elapsed })}</div>
       <div className="loading-bar"><div className="loading-fill" /></div>
-      {elapsed >= 5 && (
+      {elapsed >= 12 && (
         <div className="matchmaking-alternative">
           <p role="status">{t('searchTakingLonger')}</p>
           <button className="btn" onClick={onPlaySolo} disabled={pending || reconnecting}>

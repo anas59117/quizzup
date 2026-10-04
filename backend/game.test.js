@@ -700,7 +700,7 @@ test('answers are accepted until the per-question limit, not the default one', (
   assert.ok(g.players[0].score > 0);
 });
 
-test('the robot answers on its own and the round is revealed', () => {
+test('the bot opponent answers on its own and the round is revealed', () => {
   const human = fakeWs();
   const g = {
     status: 'active', phase: 'question', currentRound: 0,
@@ -716,12 +716,13 @@ test('the robot answers on its own and the round is revealed', () => {
   const scheduled = [];
   global.setTimeout = (fn, ms) => { scheduled.push({ fn, ms }); return scheduled.length; };
   try {
-    game.scheduleBotAnswers(g, () => 0);
+    const seq = [0.5, 0, 0];
+    game.scheduleBotAnswers(g, () => seq.shift() ?? 0);
   } finally {
     global.setTimeout = originalSetTimeout;
   }
   assert.equal(scheduled.length, 1);
-  assert.equal(scheduled[0].ms, 1500);
+  assert.ok(scheduled[0].ms > 1000 && scheduled[0].ms < 10000);
   scheduled[0].fn();
   assert.deepEqual(g.roundAnswers.bot_1 && g.roundAnswers.bot_1.answerIndex, 2);
   game.recordAnswer(g, 'p1', 1);
@@ -729,4 +730,11 @@ test('the robot answers on its own and the round is revealed', () => {
   const result = human.messages.find((m) => m.type === 'round_result');
   assert.equal(result.others[0].correct, true);
   if (g.roundTimer) clearTimeout(g.roundTimer);
+});
+
+test('the bot opponent looks like an ordinary player', () => {
+  const bot = game.createBot(() => 0.5);
+  assert.match(bot.name, /^[A-Za-z][A-Za-z0-9_]{2,}$/);
+  assert.equal(bot.clientId, null);
+  assert.equal(bot.isBot, true);
 });

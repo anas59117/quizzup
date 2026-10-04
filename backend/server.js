@@ -72,8 +72,9 @@ if (process.env.NODE_ENV === 'production' && !process.env.DATA_DIR) {
 }
 
 const waitingPlayers = [];
-// How long a quick-match player waits for a human before the robot joins.
-const BOT_MATCH_DELAY_MS = 8000;
+// How long a quick-match player waits for a human before a bot opponent joins
+// (random 6-10 s, so it feels like someone else just connected).
+const botMatchDelayMs = () => 6000 + Math.floor(Math.random() * 4000);
 const privateRooms = new Map();
 const connectionsByIp = new Map();
 const roomByClient = new Map();
@@ -736,14 +737,14 @@ function handleGameplay(ws, data, state) {
       const entry = { ws, id: playerId, clientId: state.clientId, name: state.name, avatar, categoryKey };
       waitingPlayers.push(entry);
       game.send(ws, { type: 'waiting' });
-      // Nobody else online for this theme: after a short wait, play against
-      // the clearly labelled robot instead of leaving the player stuck.
+      // Nobody else online for this theme: after a short wait, a bot opponent
+      // joins instead of leaving the player stuck.
       setTimeout(() => {
         const idx = waitingPlayers.indexOf(entry);
         if (idx === -1 || entry.ws.readyState !== 1 || isBusy(entry.id, entry.clientId)) return;
         waitingPlayers.splice(idx, 1);
         startGameGuarded([entry], categoryKey, { withBot: true });
-      }, BOT_MATCH_DELAY_MS);
+      }, botMatchDelayMs());
     }
     return true;
   }
@@ -880,8 +881,19 @@ function handleGameplay(ws, data, state) {
       return true;
     }
 
+    if (request.withBot) {
+      // A bot "thinks" a couple of seconds before accepting, like a person.
+      game.send(ws, { type: 'rematch_waiting' });
+      setTimeout(() => {
+        const live = request.players.filter((p) => p.ws && p.ws.readyState === 1);
+        if (live.length !== request.players.length) return;
+        live.forEach((p) => game.send(p.ws, { type: 'rematch_starting' }));
+        startGameGuarded(request.players, request.categoryKey, { withBot: true });
+      }, 1500 + Math.floor(Math.random() * 2500));
+      return true;
+    }
     request.players.forEach((p) => game.send(p.ws, { type: 'rematch_starting' }));
-    startGameGuarded(request.players, request.categoryKey, { withBot: !!request.withBot });
+    startGameGuarded(request.players, request.categoryKey);
     return true;
   }
 

@@ -67,17 +67,65 @@ function allPlayersAnswered(game) {
   return game.players.length > 0 && game.players.every((p) => game.roundAnswers[p.id]);
 }
 
-// A bot fills in when nobody else is in the queue. It is clearly labelled as
-// a robot, never has a clientId and is skipped by every stats/progress path.
-const BOT_NAME = 'Robot QuizzUp';
-const BOT_AVATAR = '\u{1F916}';
+// A bot fills in when nobody else is in the queue. It looks like an ordinary
+// guest player (same name pattern and avatars as the client), never has a
+// clientId and is skipped by every stats/progress path.
+const BOT_AVATARS = ['\u{1F43A}', '\u{1F981}', '\u{1F98A}', '\u{1F43C}', '\u{1F989}', '\u{1F438}', '\u{1F42F}', '\u{1F984}'];
+// Average success rate per difficulty; each bot gets a skill offset so some
+// opponents are weaker and some stronger, like real players.
 const BOT_ACCURACY = { easy: 0.8, medium: 0.65, hard: 0.5, expert: 0.35 };
+const BOT_PROFILES = [
+  { weight: 0.3, skill: -0.15, speed: 1.25 }, // casual player
+  { weight: 0.5, skill: 0, speed: 1 }, // regular player
+  { weight: 0.2, skill: 0.12, speed: 0.8 }, // strong player
+];
+// Like a person, a bot sometimes lets the timer run out.
+const BOT_NO_ANSWER_RATE = 0.05;
 
-function createBot() {
+// Pseudo pieces in the style of real French players (krimo, juju75, aubam88).
+const PSEUDO_BASES = [
+  'krimo', 'juju', 'aubam', 'nono', 'yanis', 'rayan', 'mehdi', 'sofiane', 'ilyes', 'sami',
+  'kenzo', 'enzo', 'lucas', 'theo', 'hugo', 'noah', 'nathan', 'adam', 'ryan', 'bilal',
+  'lea', 'ines', 'jade', 'manon', 'sarah', 'nina', 'lina', 'emma', 'chloe', 'yasmine',
+  'maxou', 'titi', 'loulou', 'clem', 'lulu', 'momo', 'dodo', 'fafa', 'zizou', 'kiki',
+  'mika', 'tom', 'alex', 'nico', 'seb', 'kev', 'jojo', 'bebou', 'ptitlu', 'bastos',
+  'sniper', 'shadow', 'ghost', 'kaiser', 'neo', 'zed', 'flash', 'tiger', 'wolf', 'panda',
+];
+const PSEUDO_SUFFIXES = [
+  '75', '93', '13', '69', '59', '94', '92', '77', '31', '06', '33', '34', '67', '44',
+  '88', '99', '98', '01', '02', '03', '04', '05', '07', '10', '12', '22', '2k4', '2k6',
+  '_off', '_tv', '_pro', 'du93', 'du13', 'x', '_', '7', '9',
+];
+
+function botPseudo(random) {
+  const pick = (list) => list[Math.floor(random() * list.length)];
+  const base = pick(PSEUDO_BASES);
+  const roll = random();
+  let name;
+  if (roll < 0.15) name = base; // plain "krimo"
+  else if (roll < 0.25) name = base + pick(PSEUDO_BASES).slice(0, 3); // "jujumeh"
+  else name = base + pick(PSEUDO_SUFFIXES); // "juju75", "aubam88"
+  if (random() < 0.12) name = name.charAt(0).toUpperCase() + name.slice(1);
+  return name;
+}
+
+function pickProfile(random) {
+  let r = random();
+  for (const profile of BOT_PROFILES) {
+    if (r < profile.weight) return profile;
+    r -= profile.weight;
+  }
+  return BOT_PROFILES[1];
+}
+
+function createBot(random = Math.random) {
+  const profile = pickProfile(random);
   return {
-    ws: null, id: rid('bot_'), clientId: null,
-    name: BOT_NAME, avatar: BOT_AVATAR,
+    ws: null, id: rid('player_'), clientId: null,
+    name: botPseudo(random),
+    avatar: BOT_AVATARS[Math.floor(random() * BOT_AVATARS.length)],
     score: 0, connected: true, reconnectTimer: null, isBot: true,
+    skill: profile.skill, speed: profile.speed,
   };
 }
 
@@ -93,11 +141,17 @@ function scheduleBotAnswers(game, random = Math.random) {
   const round = game.currentRound;
   const limitMs = (game.timeLimit || GAME_CONFIG.TIME_PER_QUESTION) * 1000;
   game.players.filter((p) => p.isBot).forEach((bot) => {
-    const accuracy = BOT_ACCURACY[q.difficulty] ?? 0.6;
+    if (random() < BOT_NO_ANSWER_RATE) return;
+    const base = BOT_ACCURACY[q.difficulty] ?? 0.6;
+    const accuracy = Math.max(0.15, Math.min(0.95, base + (bot.skill || 0)));
     const correct = random() < accuracy;
     const wrong = [0, 1, 2, 3].filter((i) => i !== q.correct);
     const answerIndex = correct ? q.correct : wrong[Math.floor(random() * wrong.length)];
-    const delay = Math.round(1500 + random() * Math.max(0, limitMs - 3000));
+    // Human-like timing: time to read the question, then think. Sure answers
+    // come faster, doubtful (often wrong) ones later.
+    const readMs = Math.min(4000, 900 + (q.text ? q.text.length : 60) * 18);
+    const thinkMs = (correct ? 600 + random() * 2600 : 1500 + random() * 4000) * (bot.speed || 1);
+    const delay = Math.round(Math.min(limitMs - 400, readMs + thinkMs));
     game.botTimers.push(setTimeout(() => {
       if (game.status !== 'active' || game.phase !== 'question' || game.currentRound !== round) return;
       recordAnswer(game, bot.id, answerIndex);
@@ -577,9 +631,8 @@ function endGame(game, reason) {
   game.players.forEach((p) => { if (p.reconnectTimer) clearTimeout(p.reconnectTimer); });
 
   const isSolo = game.mode === 'solo';
-  // Wins against the robot count as games played but never feed the PvP win
-  // streak, and only earn a reduced bonus so bots cannot be farmed.
-  const isBotGame = game.mode === 'bot';
+  // Bot matches are presented and rewarded exactly like a normal 1v1, so the
+  // result screen never differs from a match against a human.
   const topScore = Math.max(...game.players.map((p) => p.score));
   const winners = game.players.filter((p) => p.score === topScore);
   const isTie = !isSolo && winners.length > 1;
@@ -590,12 +643,12 @@ function endGame(game, reason) {
   game.players.filter((p) => !p.isBot).forEach((p) => {
     const won = !isSolo && !isTie && p.score === topScore;
     const finishBonus = 40;
-    const winBonus = isSolo ? 0 : isBotGame ? (won ? 40 : isTie ? 20 : 0) : won ? 100 : isTie ? 50 : 0;
+    const winBonus = isSolo ? 0 : won ? 100 : isTie ? 50 : 0;
     const xpTotal = p.score + finishBonus + winBonus;
-    const coinsEarned = isSolo ? 20 : isBotGame ? (won ? 30 : 20) : won ? 50 : isTie ? 35 : 20;
-    // Solo and bot sessions count as games played but neither extend nor
-    // break a PvP win streak, and they cannot farm the multiplayer win bonus.
-    stats.recordResult(p.clientId, won, isSolo || isTie || isBotGame, xpTotal, coinsEarned);
+    const coinsEarned = isSolo ? 20 : won ? 50 : isTie ? 35 : 20;
+    // Solo sessions count as games played but neither extend nor break a PvP
+    // win streak, and they cannot farm the multiplayer win bonus.
+    stats.recordResult(p.clientId, won, isSolo || isTie, xpTotal, coinsEarned);
     let day = { dayStreak: 0, increased: false };
     try {
       day = stats.recordPlayDay(p.clientId);
@@ -617,7 +670,6 @@ function endGame(game, reason) {
     const finalResult = {
       type: 'game_end', finalScore: p.score,
       solo: isSolo,
-      bot: isBotGame,
       won, tie: isTie,
       others: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, score: o.score, clientId: o.clientId })),
       leaderboard: board, reason: reason || 'complete',
@@ -663,5 +715,5 @@ module.exports = {
   disconnectPlayer, reconnectPlayer, reattachFinishedPlayer,
   findActiveSessionByClientId, findFinishedSessionByClientId,
   requestRematch, cancelRematch, setTopicProgressListener,
-  timeLimitFor, scheduleBotAnswers, BOT_NAME,
+  timeLimitFor, scheduleBotAnswers, createBot,
 };
