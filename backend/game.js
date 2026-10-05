@@ -641,7 +641,7 @@ function endGame(game, reason) {
   const winners = game.players.filter((p) => p.score === topScore);
   const isTie = !isSolo && winners.length > 1;
   const board = game.players
-    .map((p) => ({ id: p.id, name: p.name, avatar: p.avatar, score: p.score }))
+    .map((p) => ({ id: p.id, name: p.name, avatar: p.avatar, frame: p.frame, score: p.score }))
     .sort((x, y) => y.score - x.score);
 
   game.players.filter((p) => !p.isBot).forEach((p) => {

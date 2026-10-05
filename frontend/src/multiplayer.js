@@ -1,6 +1,7 @@
 import React from 'react';
 import { useI18n } from './i18n';
 import { frameClass } from './frames';
+import { identityFor } from './identity';
 
 // Lobby for a private room (2-4 players). The host sees a Start button once
 // 2+ players have joined; everyone else waits for the host to start.
@@ -56,7 +57,7 @@ export function PlayerHud({ me, others, revealing }) {
   return (
     <div className="hud-strip">
       {all.map((p) => (
-        <div key={p.mine ? 'me' : p.id} className={`hud-chip ${p.mine ? 'mine' : ''}`}>
+        <div key={p.mine ? 'me' : p.id} className={`hud-chip identity-${identityFor(p.frame)} ${p.mine ? 'mine' : ''}`}>
           <div className={`hud-chip-ava${frameClass(p.frame)}`}>{p.avatar}</div>
           <div className="hud-chip-name">{p.mine ? t('you') : p.name}</div>
           <div className="hud-chip-score">{p.score}</div>
@@ -78,7 +79,7 @@ export function Leaderboard({ leaderboard, myId }) {
   return (
     <div className="leaderboard">
       {leaderboard.map((p, i) => (
-        <div key={p.id} className={`leaderboard-row ${p.id === myId ? 'mine' : ''} ${i === 0 ? 'first' : ''}`}>
+        <div key={p.id} className={`leaderboard-row identity-${identityFor(p.frame)} ${p.id === myId ? 'mine' : ''} ${i === 0 ? 'first' : ''}`}>
           <div className="lb-rank">#{i + 1}</div>
           <div className="lb-ava">{p.avatar}</div>
           <div className="lb-name">{p.id === myId ? t('you') : p.name}</div>
