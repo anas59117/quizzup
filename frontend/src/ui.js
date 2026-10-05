@@ -22,6 +22,8 @@ export const Icon = memo(function Icon({ name, size = 20, className = '' }) {
     info: <><circle cx="12" cy="12" r="9"/><path d="M12 10v6"/><circle cx="12" cy="7" r=".8" fill="currentColor" stroke="none"/></>,
     close: <><path d="m7 7 10 10"/><path d="m17 7-10 10"/></>,
     trophy: <><path d="M8 4h8v4c0 4-1.8 6-4 6s-4-2-4-6V4Z"/><path d="M8 6H4v1c0 3 1.5 5 4 5"/><path d="M16 6h4v1c0 3-1.5 5-4 5"/><path d="M12 14v4"/><path d="M8.5 21h7"/><path d="M10 18h4"/></>,
+    shop: <><path d="M4 8.5h16l-1 11H5l-1-11Z"/><path d="M8.5 9V6a3.5 3.5 0 0 1 7 0v3"/><path d="M9 14h6"/></>,
+    coin: <><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="6"/><path d="m10 12 1.4 1.4L14.5 10"/></>,
     edit: <><path d="m4 20 4.2-1 10.7-10.7-3.2-3.2L5 15.8 4 20Z"/><path d="m13.8 7 3.2 3.2"/></>,
     chat: <><path d="M5 5h14v10H9l-4 4V5Z"/><path d="M8 9h8"/><path d="M8 12h5"/></>,
     send: <><path d="m3 11 17-7-7 17-2.6-7.4L3 11Z"/><path d="m10.4 13.6 4.4-4.4"/></>,

@@ -62,6 +62,7 @@ export default function App() {
     afterAd: () => music.setMuted(SFX.muted),
   }), []);
   const [stage, setStage] = useState('join');
+  useEffect(() => { if (stage === 'shop') window.scrollTo(0, 0); }, [stage]);
   const [fatalReason, setFatalReason] = useState('connection');
   const [fatalCode, setFatalCode] = useState('');
   const [categoryFamily, setCategoryFamily] = useState(null);
@@ -1018,8 +1019,8 @@ export default function App() {
     return (
       <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <ShopContent
-          avatar={avatar} stats={statsHook.stats}
-          onBuy={buyFrame} onEquip={equipFrame}
+          avatar={avatar} name={name} stats={statsHook.stats}
+          onBuy={buyFrame} onEquip={equipFrame} onPlay={quickMatch}
           onBack={() => setStage('profile')} pending={pending}
         />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
@@ -1069,7 +1070,7 @@ export default function App() {
   if (stage === 'playing' && intro && !question) {
     return (
       <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
-        <RoundIntroContent intro={intro} totalRounds={totalRounds} />
+        <RoundIntroContent intro={intro} totalRounds={totalRounds} opponents={opponents} avatar={avatar} frame={statsHook.stats.frame} name={name} level={statsHook.stats.level} />
       </div>);
   }
 
@@ -1088,7 +1089,7 @@ export default function App() {
     return (
       <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <FinishedContent
-          result={result} opponents={opponents} myId={myId} social={social}
+          result={result} opponents={opponents} myId={myId} avatar={avatar} name={name} frame={statsHook.stats.frame} social={social}
           addFriend={social.addFriend}
           playAgain={() => interstitialThen(playAgain, adHooks)} rematch={requestRematch}
           rematchWaiting={rematchWaiting} rematchStarting={rematchStarting}
