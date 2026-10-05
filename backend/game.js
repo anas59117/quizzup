@@ -70,6 +70,7 @@ function allPlayersAnswered(game) {
 // A bot fills in when nobody else is in the queue. It looks like an ordinary
 // guest player (same name pattern and avatars as the client), never has a
 // clientId and is skipped by every stats/progress path.
+const BOT_FRAMES = ['bronze', 'bronze', 'argent', 'argent', 'or', 'neon'];
 const BOT_AVATARS = ['\u{1F43A}', '\u{1F981}', '\u{1F98A}', '\u{1F43C}', '\u{1F989}', '\u{1F438}', '\u{1F42F}', '\u{1F984}'];
 // Average success rate per difficulty; each bot gets a skill offset so some
 // opponents are weaker and some stronger, like real players.
@@ -124,6 +125,8 @@ function createBot(random = Math.random) {
     ws: null, id: rid('player_'), clientId: null,
     name: botPseudo(random),
     avatar: BOT_AVATARS[Math.floor(random() * BOT_AVATARS.length)],
+    // Some real players wear a shop frame, so some bots do too.
+    frame: random() < 0.3 ? BOT_FRAMES[Math.floor(random() * BOT_FRAMES.length)] : 'none',
     score: 0, connected: true, reconnectTimer: null, isBot: true,
     skill: profile.skill, speed: profile.speed,
   };
@@ -206,6 +209,7 @@ async function startGame(rawPlayers, categoryKey, { withBot = false } = {}) {
         ...rawPlayers.map((p) => ({
           ws: p.ws, id: p.id, clientId: p.clientId,
           name: p.name, avatar: p.avatar || '\u{1F43A}',
+          frame: stats.getFrame(p.clientId),
           score: 0, connected: true, reconnectTimer: null,
         })),
         ...(withBot ? [createBot()] : []),
@@ -234,8 +238,8 @@ async function startGame(rawPlayers, categoryKey, { withBot = false } = {}) {
     game.players.filter((p) => !p.isBot).forEach((p) => {
       send(p.ws, {
         type: 'game_start', gameId,
-        you: { name: p.name, avatar: p.avatar },
-        opponents: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, clientId: o.clientId })),
+        you: { name: p.name, avatar: p.avatar, frame: p.frame },
+        opponents: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, frame: o.frame, clientId: o.clientId })),
         totalRounds: game.questions.length,
       });
     });
@@ -435,9 +439,9 @@ function sendCurrentState(game, player) {
     totalRounds: game.questions.length,
     phase: game.phase,
     score: player.score,
-    you: { name: player.name, avatar: player.avatar },
+    you: { name: player.name, avatar: player.avatar, frame: player.frame },
     opponents: othersOf(game, player.id, (o) => ({
-      id: o.id, name: o.name, avatar: o.avatar, clientId: o.clientId,
+      id: o.id, name: o.name, avatar: o.avatar, frame: o.frame, clientId: o.clientId,
       score: o.score, answered: !!game.roundAnswers[o.id],
       correct: game.roundAnswers[o.id] ? game.roundAnswers[o.id].correct : false,
       connected: !!o.connected,
@@ -649,6 +653,7 @@ function endGame(game, reason) {
     // Solo sessions count as games played but neither extend nor break a PvP
     // win streak, and they cannot farm the multiplayer win bonus.
     stats.recordResult(p.clientId, won, isSolo || isTie, xpTotal, coinsEarned);
+    stats.setLastReward(p.clientId, game.id, coinsEarned);
     let day = { dayStreak: 0, increased: false };
     try {
       day = stats.recordPlayDay(p.clientId);
@@ -668,10 +673,10 @@ function endGame(game, reason) {
       console.error('topic-stats record failed:', err);
     }
     const finalResult = {
-      type: 'game_end', finalScore: p.score,
+      type: 'game_end', gameId: game.id, finalScore: p.score,
       solo: isSolo,
       won, tie: isTie,
-      others: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, score: o.score, clientId: o.clientId })),
+      others: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, frame: o.frame, score: o.score, clientId: o.clientId })),
       leaderboard: board, reason: reason || 'complete',
       coins: coinsEarned,
       xp: xpTotal,

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useI18n } from './i18n';
+import { frameClass } from './frames';
 
 // Lobby for a private room (2-4 players). The host sees a Start button once
 // 2+ players have joined; everyone else waits for the host to start.
@@ -56,7 +57,7 @@ export function PlayerHud({ me, others, revealing }) {
     <div className="hud-strip">
       {all.map((p) => (
         <div key={p.mine ? 'me' : p.id} className={`hud-chip ${p.mine ? 'mine' : ''}`}>
-          <div className="hud-chip-ava">{p.avatar}</div>
+          <div className={`hud-chip-ava${frameClass(p.frame)}`}>{p.avatar}</div>
           <div className="hud-chip-name">{p.mine ? t('you') : p.name}</div>
           <div className="hud-chip-score">{p.score}</div>
           {revealing && !p.mine && (

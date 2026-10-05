@@ -5,6 +5,7 @@ import { ProfileStats } from './stats';
 import { FriendsScreen } from './social';
 import { TopicLevelList, topicTitleKey, topicLabel } from './players';
 import { useI18n } from './i18n';
+import { FRAMES, frameClass, frameLabelKey } from './frames';
 
 const FEATURED_TOPIC_KEYS = [
   'ligue_champions', 'rap_fr', 'one_piece', 'marvel',
@@ -22,7 +23,7 @@ const FEATURED_TOPICS = FEATURED_TOPIC_KEYS
   })
   .filter(Boolean);
 
-export function HomeContent({ name, avatar, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, pending }) {
+export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, pending }) {
   const { t } = useI18n();
   return (
     <div className="container wide">
@@ -34,7 +35,7 @@ export function HomeContent({ name, avatar, soloMode, setSoloMode, quickMatch, s
             <div className="home-greeting">{t('hey', { name })}</div>
           </div>
         </div>
-        <button className="home-avatar-chip" onClick={onOpenProfile} aria-label="Open profile">{avatar}</button>
+        <button className={`home-avatar-chip${frameClass(frame)}`} onClick={onOpenProfile} aria-label="Open profile">{avatar}</button>
       </div>
       <div className="play-card">
         <div className="play-card-copy">
@@ -127,7 +128,7 @@ export function CategoriesContent({ startWithCategory, onBack, family, onSelectF
 
 export function ProfileContent({
   avatar, name, stats, isGoogleLinked, googleEmail, linkGoogle, linking,
-  clientId, social, onOpenLeaderboard, onSaveProfile, profileSaving, onOpenTopic,
+  clientId, social, onOpenLeaderboard, onOpenShop, onSaveProfile, profileSaving, onOpenTopic,
 }) {
   const { t } = useI18n();
   const [editing, setEditing] = useState(false);
@@ -174,7 +175,7 @@ export function ProfileContent({
   return (
     <div className="container">
       <div className="profile-head">
-        <div className="profile-avatar">{avatar}</div>
+        <div className={`profile-avatar${frameClass(stats.frame)}`}>{avatar}</div>
         <div className="profile-name">{name || 'Player'}</div>
         <div className="profile-sub">
           {t('level')} {stats.level} {'·'} {stats.games ? Math.round((stats.wins / stats.games) * 100) : 0}% {String(t('wins')).toLowerCase()}
@@ -236,6 +237,14 @@ export function ProfileContent({
       <ProfileStats stats={stats} />
       <div className="section-title">{t('myTopics')}</div>
       <TopicLevelList topics={stats.topics} onSelect={onOpenTopic} />
+      <button className="leaderboard-cta shop-cta" onClick={onOpenShop}>
+        <span className="leaderboard-cta-icon shop-cta-icon" aria-hidden="true">🛍️</span>
+        <span className="leaderboard-cta-copy">
+          <strong>{t('shop')}</strong>
+          <small>{t('shopCta', { n: stats.coins || 0 })}</small>
+        </span>
+        <Icon name="arrow" size={18} />
+      </button>
       <button className="leaderboard-cta" onClick={onOpenLeaderboard}>
         <span className="leaderboard-cta-icon"><Icon name="trophy" size={20} /></span>
         <span className="leaderboard-cta-copy">
@@ -343,7 +352,7 @@ export function LeaderboardContent({ board, loading, onBack, category = null, on
   );
 }
 
-export function WaitingContent({ avatar, name, level = 1, categoryKey, onCancel, onPlaySolo, pending, reconnecting }) {
+export function WaitingContent({ avatar, frame, name, level = 1, categoryKey, onCancel, onPlaySolo, pending, reconnecting }) {
   const { t } = useI18n();
   const [elapsed, setElapsed] = useState(0);
   const category = CATEGORIES.find((item) => item.key === categoryKey);
@@ -364,7 +373,7 @@ export function WaitingContent({ avatar, name, level = 1, categoryKey, onCancel,
       <div className="matchmaking-topic">{category?.label || t('randomTopic')}</div>
       <div className="vs-screen">
         <div className="vs-player">
-          <div className="vs-ava me">{avatar}</div>
+          <div className={`vs-ava me${frameClass(frame)}`}>{avatar}</div>
           <div className="vs-name">{name}</div>
           <div className="vs-rank">{t('level')} {level}</div>
         </div>
@@ -407,7 +416,7 @@ export function RoundIntroContent({ intro, totalRounds }) {
   );
 }
 
-export function QuestionContent({ question, timeLeft, reveal, selected, answer, opponents, avatar, name, score, reportQuestion, reported, social, GameChat }) {
+export function QuestionContent({ question, timeLeft, reveal, selected, answer, opponents, avatar, frame, name, score, reportQuestion, reported, social, GameChat }) {
   const { t } = useI18n();
   const sr = !!reveal;
   const pct = Math.max(0, Math.min(100, (timeLeft / question.timeLimit) * 100));
@@ -421,7 +430,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
         <span className="hud-timer-label">{t('time')}</span>
         <span className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr ? '✓' : timeLeft}</span>
       </div>
-      <PlayerHud me={{ avatar, name, score }} others={opponents} revealing={sr} />
+      <PlayerHud me={{ avatar, frame, name, score }} others={opponents} revealing={sr} />
       <PlayerPhoto image={question.image} credit={question.credit} timeLeft={timeLeft} timeLimit={question.timeLimit} revealed={sr} />
       <div className="question-panel">
         <div className="question">{question.question}</div>
@@ -446,7 +455,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
   );
 }
 
-export function FinishedContent({ result, opponents, myId, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch }) {
+export function FinishedContent({ result, opponents, myId, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch, adOffer, onWatchAd, adClaimed }) {
   const { t } = useI18n();
   const { won, tie } = result;
   const left = result.reason === 'opponent_disconnected' || result.reason === 'opponent_left';
@@ -484,7 +493,15 @@ export function FinishedContent({ result, opponents, myId, social, addFriend, pl
         <div className="xpb-row total"><span>{t('xpTotal')}</span><span>{result.xp}</span></div>
       </div>
       {!isSolo && <Leaderboard leaderboard={result.leaderboard} myId={myId} />}
-      <div className="rewards-row"><span className="rw">{t('coins', { n: result.coins })}</span></div>
+      <div className="rewards-row">
+        <span className="rw">{t('coins', { n: adClaimed ? result.coins * 2 : result.coins })}</span>
+        {adClaimed && <span className="rw doubled">{t('coinsDoubled')}</span>}
+      </div>
+      {adOffer && !adClaimed && result.coins > 0 && (
+        <button className="ad-double-btn" onClick={onWatchAd}>
+          <span aria-hidden="true">▶</span> {t('adDouble', { n: result.coins })}
+        </button>
+      )}
       <button className="share-link" onClick={shareResult}>{t('share')}</button>
       {addableOpponents.map((o) => (
         <button key={o.clientId} className="add-friend-link" onClick={() => addFriend(o.clientId)}>
@@ -501,6 +518,63 @@ export function FinishedContent({ result, opponents, myId, social, addFriend, pl
           {isSolo ? t('newGame') : t('newOpponent')}
         </button>
         <button className="ra-btn see-res" onClick={playAgain} disabled={rematchStarting}>{t('backHome')}</button>
+      </div>
+    </div>
+  );
+}
+
+export function ShopContent({ avatar, stats, onBuy, onEquip, onBack, pending }) {
+  const { t } = useI18n();
+  const [confirming, setConfirming] = useState(null);
+  const owned = new Set(stats.ownedFrames || ['none']);
+  const equipped = stats.frame || 'none';
+  const coins = stats.coins || 0;
+  return (
+    <div className="container">
+      <div className="cat-header">
+        <h2>{t('shop')}</h2>
+        <button className="back-link" onClick={onBack}>{t('back')}</button>
+      </div>
+      <div className="shop-balance">
+        <span className="shop-coin" aria-hidden="true">🪙</span>
+        <strong>{coins}</strong>
+        <small>{t('coinBalance')}</small>
+      </div>
+      <p className="shop-intro">{t('shopIntro')}</p>
+      <div className="section-title">{t('shopFrames')}</div>
+      <div className="shop-grid">
+        {FRAMES.map((item) => {
+          const isOwned = owned.has(item.id);
+          const isEquipped = equipped === item.id;
+          const affordable = coins >= item.price;
+          const isConfirming = confirming === item.id;
+          let action;
+          if (isEquipped) {
+            action = <span className="shop-state">{t('equipped')}</span>;
+          } else if (isOwned) {
+            action = <button className="shop-btn ghost" disabled={pending} onClick={() => onEquip(item.id)}>{t('equip')}</button>;
+          } else if (isConfirming) {
+            action = (
+              <button className="shop-btn confirm" disabled={pending} onClick={() => { setConfirming(null); onBuy(item.id); }}>
+                {t('confirmBuy', { n: item.price })}
+              </button>
+            );
+          } else {
+            action = (
+              <button className="shop-btn" disabled={!affordable || pending} onClick={() => setConfirming(item.id)}>
+                🪙 {item.price}
+              </button>
+            );
+          }
+          return (
+            <div key={item.id} className={`shop-item${isEquipped ? ' equipped' : ''}`}>
+              <div className={`shop-preview${frameClass(item.id)}`}>{avatar}</div>
+              <div className="shop-name">{t(frameLabelKey(item.id))}</div>
+              {action}
+              {!isOwned && !affordable && <small className="shop-missing">{t('coinsMissing', { n: item.price - coins })}</small>}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

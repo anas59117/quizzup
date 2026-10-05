@@ -52,6 +52,24 @@ function normalizeStatsStore(value) {
       out[id].dayStreak = asNonNegativeInt(raw.dayStreak, 0, 1_000_000);
       out[id].bestDayStreak = Math.max(out[id].dayStreak, asNonNegativeInt(raw.bestDayStreak, 0, 1_000_000));
     }
+    // Shop: owned cosmetics, equipped frame, rewarded-ad bookkeeping.
+    const owned = uniqueStringList(raw.owned, { limit: 100, maxLength: 32 });
+    if (owned.length) out[id].owned = owned;
+    const frame = cleanId(raw.frame, 32);
+    if (frame) out[id].frame = frame;
+    if (typeof raw.adDay === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(raw.adDay)) {
+      out[id].adDay = raw.adDay;
+      out[id].adCount = asNonNegativeInt(raw.adCount, 0, 1000);
+    }
+    const last = raw.lastReward;
+    const lastGameId = last && typeof last === 'object' ? cleanId(last.gameId, 64) : null;
+    if (lastGameId) {
+      out[id].lastReward = {
+        gameId: lastGameId,
+        coins: asNonNegativeInt(last.coins, 0, 1000),
+        claimed: last.claimed === true,
+      };
+    }
   }
   return out;
 }

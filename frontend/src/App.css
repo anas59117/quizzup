@@ -959,3 +959,42 @@ button.topic-level-row:hover { border-color:var(--border-strong); }
 @media (max-width:480px) {
   .app.game-bg { padding-top:76px; }
 }
+
+/* ---------- Shop: avatar frames ---------- */
+.fr-bronze { box-shadow:0 0 0 3px #b0703c, 0 0 10px rgba(176,112,60,.45); }
+.fr-argent { box-shadow:0 0 0 3px #c9ced6, 0 0 12px rgba(201,206,214,.5); }
+.fr-or { box-shadow:0 0 0 3px #f2c14e, 0 0 14px rgba(242,193,78,.6); }
+.fr-neon { box-shadow:0 0 0 3px #39f3ff, 0 0 16px rgba(57,243,255,.75); animation:frNeon 1.6s ease-in-out infinite alternate; }
+.fr-flamme { box-shadow:0 0 0 3px #ff6a1f, 0 -4px 16px rgba(255,140,40,.8), 0 0 22px rgba(255,60,20,.45); animation:frFlame 1.1s ease-in-out infinite alternate; }
+.fr-glace { box-shadow:0 0 0 3px #a8e6ff, 0 0 0 5px rgba(255,255,255,.55), 0 0 16px rgba(120,210,255,.7); }
+.fr-arcenciel { box-shadow:0 0 0 2px #ff4d6d, 0 0 0 4px #ffb84d, 0 0 0 6px #ffe94d, 0 0 0 8px #4dd68a, 0 0 0 10px #4db8ff, 0 0 0 12px #9d6bff; }
+.fr-diamant { box-shadow:0 0 0 3px #e9f6ff, 0 0 0 6px #7fd3ff, 0 0 22px rgba(160,225,255,.9); animation:frDiamond 2.4s linear infinite; }
+.hud-chip-ava.fr-arcenciel { box-shadow:0 0 0 1px #ff4d6d, 0 0 0 2px #ffe94d, 0 0 0 3px #4dd68a, 0 0 0 4px #4db8ff; }
+.hud-chip-ava[class*='fr-'] { margin:3px; }
+@keyframes frNeon { from { box-shadow:0 0 0 3px #39f3ff, 0 0 8px rgba(57,243,255,.5); } to { box-shadow:0 0 0 3px #ff3df2, 0 0 18px rgba(255,61,242,.75); } }
+@keyframes frFlame { from { box-shadow:0 0 0 3px #ff6a1f, 0 -3px 12px rgba(255,140,40,.7); } to { box-shadow:0 0 0 3px #ffb21f, 0 -6px 20px rgba(255,90,20,.9); } }
+@keyframes frDiamond { 0%,100% { filter:brightness(1); } 50% { filter:brightness(1.18); } }
+@media (prefers-reduced-motion: reduce) { .fr-neon,.fr-flamme,.fr-diamant { animation:none; } }
+
+.shop-cta-icon { font-size:1.1rem; }
+.shop-balance { display:flex; align-items:baseline; gap:8px; margin:4px 0 6px; }
+.shop-balance strong { font-size:1.9rem; font-weight:900; letter-spacing:-.03em; font-variant-numeric:tabular-nums; }
+.shop-balance small { color:var(--text-dim); font-size:.8rem; }
+.shop-coin { font-size:1.4rem; }
+.shop-intro { margin:0 0 18px; color:var(--text-dim); font-size:.85rem; line-height:1.45; }
+.shop-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(132px,1fr)); gap:12px; margin-bottom:28px; }
+.shop-item { display:flex; flex-direction:column; align-items:center; gap:10px; padding:20px 10px 14px; border:1px solid var(--border); border-radius:16px; background:var(--surface); min-width:0; }
+.shop-item.equipped { border-color:var(--accent); }
+.shop-preview { width:58px; height:58px; display:flex; align-items:center; justify-content:center; margin:6px 0 4px; border-radius:15px; background:var(--surface-2); font-size:1.7rem; }
+.shop-name { font-weight:800; font-size:.9rem; }
+.shop-btn { min-width:96px; padding:8px 12px; border:0; border-radius:10px; background:var(--accent); color:#fff; font-weight:800; font-size:.82rem; cursor:pointer; font-variant-numeric:tabular-nums; }
+.shop-btn:disabled { opacity:.45; cursor:not-allowed; }
+.shop-btn.ghost { background:transparent; border:1px solid var(--border-strong); color:var(--text); }
+.shop-btn.confirm { background:var(--success); }
+.shop-state { padding:8px 0; color:var(--accent); font-weight:800; font-size:.82rem; }
+.shop-missing { color:var(--text-faint); font-size:.7rem; }
+
+/* ---------- Rewarded ad on the result screen ---------- */
+.ad-double-btn { display:inline-flex; align-items:center; gap:8px; margin:4px auto 14px; padding:11px 18px; border:1px solid var(--gold); border-radius:12px; background:color-mix(in srgb,var(--gold) 14%,transparent); color:var(--text); font-weight:800; font-size:.9rem; cursor:pointer; }
+.ad-double-btn:hover { background:color-mix(in srgb,var(--gold) 24%,transparent); }
+.rw.doubled { margin-left:8px; color:var(--gold); font-weight:900; }

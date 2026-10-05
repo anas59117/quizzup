@@ -5,6 +5,7 @@
 const { createJsonWriter, readJsonFileSync } = require('./json-writer');
 const { getStorePath } = require('./store-path');
 const { normalizeStatsStore } = require('./store-normalize');
+const shop = require('./shop');
 
 const STORE = getStorePath('stats.json');
 
@@ -134,6 +135,9 @@ function getStats(clientId, now = Date.now()) {
     dayStreak: currentDayStreak(s, now),
     bestDayStreak: s ? s.bestDayStreak || 0 : 0,
     playedToday: !!(s && s.lastPlayDay === dayKey(now)),
+    frame: s && s.frame ? s.frame : 'none',
+    ownedFrames: ['none', ...((s && s.owned) || [])],
+    adRewardsLeft: adRewardsLeft(s, now),
     level,
     xpIntoLevel,
     xpForLevel,
@@ -160,4 +164,71 @@ function recordResult(clientId, won, tie, xpEarned, coinsEarned = 0) {
   persist();
 }
 
-module.exports = { getStats, getLeaderboard, rankLeaderboard, recordResult, recordPlayDay, dayKey, levelFromXp };
+function ensure(clientId) {
+  return stats[clientId] || (stats[clientId] = { games: 0, wins: 0, streak: 0, xp: 0, coins: 0 });
+}
+
+function adRewardsLeft(s, now = Date.now()) {
+  const used = s && s.adDay === dayKey(now) ? s.adCount || 0 : 0;
+  return Math.max(0, shop.MAX_AD_REWARDS_PER_DAY - used);
+}
+
+// Equipped avatar frame, shown to opponents in game.
+function getFrame(clientId) {
+  const s = clientId && stats[clientId];
+  return s && s.frame && shop.getFrame(s.frame) ? s.frame : 'none';
+}
+
+function buyFrame(clientId, frameId) {
+  if (!clientId) return { ok: false, error: 'auth' };
+  const item = shop.getFrame(frameId);
+  if (!item || item.id === 'none') return { ok: false, error: 'unknown' };
+  const s = ensure(clientId);
+  s.owned = Array.isArray(s.owned) ? s.owned : [];
+  if (s.owned.includes(item.id)) return { ok: false, error: 'owned' };
+  if ((s.coins || 0) < item.price) return { ok: false, error: 'coins' };
+  s.coins -= item.price;
+  s.owned.push(item.id);
+  s.frame = item.id; // a new purchase is equipped straight away
+  persist();
+  return { ok: true };
+}
+
+function equipFrame(clientId, frameId) {
+  if (!clientId) return { ok: false, error: 'auth' };
+  const item = shop.getFrame(frameId);
+  if (!item) return { ok: false, error: 'unknown' };
+  const s = ensure(clientId);
+  if (item.id !== 'none' && !(s.owned || []).includes(item.id)) return { ok: false, error: 'not_owned' };
+  s.frame = item.id;
+  persist();
+  return { ok: true };
+}
+
+// Remembers the coins of the player's last finished game so a rewarded ad
+// can double them once.
+function setLastReward(clientId, gameId, coins) {
+  if (!clientId || typeof gameId !== 'string') return;
+  const s = ensure(clientId);
+  s.lastReward = { gameId: gameId.slice(0, 64), coins: Math.max(0, Math.min(1000, Math.floor(Number(coins) || 0))), claimed: false };
+  persist();
+}
+
+function claimAdReward(clientId, gameId, now = Date.now()) {
+  if (!clientId) return { ok: false, error: 'auth' };
+  const s = stats[clientId];
+  const last = s && s.lastReward;
+  if (!last || last.gameId !== gameId || !last.coins) return { ok: false, error: 'no_game' };
+  if (last.claimed) return { ok: false, error: 'claimed' };
+  if (adRewardsLeft(s, now) <= 0) return { ok: false, error: 'limit' };
+  const today = dayKey(now);
+  s.adCount = s.adDay === today ? (s.adCount || 0) + 1 : 1;
+  s.adDay = today;
+  last.claimed = true;
+  s.coins = Math.min(Number.MAX_SAFE_INTEGER, (s.coins || 0) + last.coins);
+  persist();
+  return { ok: true, coins: last.coins };
+}
+
+module.exports = { getStats, getLeaderboard, rankLeaderboard, recordResult, recordPlayDay, dayKey, levelFromXp,
+  getFrame, buyFrame, equipFrame, setLastReward, claimAdReward };

@@ -102,6 +102,7 @@ const actionLimiters = {
   postCreate: new RateLimiter(60 * 1000, 5),
   postReact: new RateLimiter(10 * 1000, 30),
   postReport: new RateLimiter(60 * 1000, 20),
+  shop: new RateLimiter(60 * 1000, 30),
 };
 
 function allowAction(limiterInstance, key, ws, code = 'RATE_LIMITED') {
@@ -261,6 +262,31 @@ function handleLeaderboard(ws, data, state) {
     total: board.total,
     yourRank: board.yourRank,
   });
+  return true;
+}
+
+// Coin shop (frames) and rewarded-ad payouts. Prices and ownership are
+// validated in stats.js; the client only sends intents.
+function handleShop(ws, data, state) {
+  if (data.type !== 'shop_buy' && data.type !== 'shop_equip' && data.type !== 'ad_reward') return false;
+  if (!requireAuth(ws, state)) return true;
+  if (!allowAction(actionLimiters.shop, state.clientId, ws, 'SHOP_RATE_LIMITED')) return true;
+
+  if (data.type === 'ad_reward') {
+    const gameId = typeof data.gameId === 'string' ? data.gameId : '';
+    const result = stats.claimAdReward(state.clientId, gameId);
+    game.send(ws, { type: 'ad_reward_result', ok: result.ok, coins: result.coins || 0, error: result.error || null });
+  } else {
+    const itemId = typeof data.itemId === 'string' ? data.itemId.slice(0, 32) : '';
+    const result = data.type === 'shop_buy'
+      ? stats.buyFrame(state.clientId, itemId)
+      : stats.equipFrame(state.clientId, itemId);
+    game.send(ws, {
+      type: 'shop_result', action: data.type === 'shop_buy' ? 'buy' : 'equip',
+      itemId, ok: result.ok, error: result.error || null,
+    });
+  }
+  game.send(ws, { type: 'stats', stats: fullStats(state.clientId) });
   return true;
 }
 
@@ -974,6 +1000,7 @@ wss.on('connection', (ws, req) => {
     }
     if (handleSocial(ws, data, state)) return;
     if (handleLeaderboard(ws, data, state)) return;
+    if (handleShop(ws, data, state)) return;
     if (handleFeed(ws, data, state)) return;
     handleGameplay(ws, data, state);
   });

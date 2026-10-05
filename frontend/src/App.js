@@ -9,13 +9,14 @@ import { useFeed, FeedScreen } from './feed';
 import { usePlayers, PlayerSheet, topicLabel } from './players';
 import { RoomLobby } from './multiplayer';
 import { AVATARS, useTheme, TopControls, NavBar, ErrorScreen, Toast } from './ui';
-import { HomeContent, EnterCodeContent, CategoriesContent, ProfileContent, LeaderboardContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent } from './screens';
+import { HomeContent, EnterCodeContent, CategoriesContent, ProfileContent, LeaderboardContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent, ShopContent } from './screens';
+import { initAds, adsEnabled, countFinishedGame, interstitialThen, requestRewardOffer } from './ads';
 import { useI18n } from './i18n';
 import { useGameSocket } from './useGameSocket';
 
 const LIVE_SESSION_KEY = 'quizzup-live-session';
 const HISTORY_KEY = 'quizzup';
-const BROWSABLE_STAGES = new Set(['home', 'feed', 'categories', 'profile', 'leaderboard', 'enter_code']);
+const BROWSABLE_STAGES = new Set(['home', 'feed', 'categories', 'profile', 'leaderboard', 'enter_code', 'shop']);
 const SESSION_STAGES = new Set(['waiting', 'room_wait', 'playing', 'finished', 'error']);
 
 function browserLocation(stage, family) {
@@ -50,6 +51,16 @@ export default function App() {
   const [muted, setMuted] = useState(SFX.muted);
   const toggleMute = useCallback(() => setMuted(SFX.toggle()), []);
   useEffect(() => { music.setMuted(muted); }, [muted]);
+  useEffect(() => { initAds(); }, []);
+  // Rewarded ad on the result screen: showAdFn from Google, or null when no
+  // ad is ready. adClaimed flips once the server credited the bonus.
+  const [adOffer, setAdOffer] = useState(null);
+  const [adClaimed, setAdClaimed] = useState(false);
+  const adGameRef = useRef(null);
+  const adHooks = useMemo(() => ({
+    beforeAd: () => music.setMuted(true),
+    afterAd: () => music.setMuted(SFX.muted),
+  }), []);
   const [stage, setStage] = useState('join');
   const [fatalReason, setFatalReason] = useState('connection');
   const [fatalCode, setFatalCode] = useState('');
@@ -248,7 +259,7 @@ export default function App() {
   // switch. During the reveal pause we keep whatever was already playing
   // rather than interrupting it for the ~2.5s pause between rounds.
   useEffect(() => {
-    if (stage === 'home' || stage === 'categories' || stage === 'profile' || stage === 'leaderboard' || stage === 'enter_code') {
+    if (stage === 'home' || stage === 'categories' || stage === 'profile' || stage === 'leaderboard' || stage === 'enter_code' || stage === 'shop') {
       music.play('menu');
     } else if (stage === 'waiting' || stage === 'room_wait') {
       music.play('lobby');
@@ -495,6 +506,9 @@ export default function App() {
         bootSessionRef.current = null;
         writeLiveSession(null);
         if (data.won) SFX.victory(); else if (data.tie) SFX.tie(); else SFX.defeat();
+        if (!data.reconnect) countFinishedGame();
+        setAdOffer(null);
+        setAdClaimed(false);
         setResult(data);
         setScore(data.finalScore);
         setStage('finished');
@@ -518,6 +532,19 @@ export default function App() {
       }
       case 'stats':
         statsHook.handleStatsMessage(data);
+        break;
+      case 'shop_result':
+        clearPending();
+        if (data.ok) showToast(t(data.action === 'buy' ? 'shopBought' : 'shopEquipped'), 'success');
+        else showToast(t(data.error === 'coins' ? 'shopNotEnough' : 'shopError'), 'error');
+        break;
+      case 'ad_reward_result':
+        if (data.ok) {
+          setAdClaimed(true);
+          showToast(t('adRewardOk', { n: data.coins }), 'success');
+        } else {
+          showToast(t(data.error === 'limit' ? 'adRewardLimit' : 'adRewardError'), 'error');
+        }
         break;
       case 'profile_updated':
         clearPending();
@@ -744,6 +771,46 @@ export default function App() {
 
   function newMatch() { playAgain(); quickMatch(); }
 
+  // Ask Google for a rewarded ad each time a result screen appears.
+  const resultGameId = stage === 'finished' ? result?.gameId : null;
+  const sendSocketRef = useRef(sendSocket);
+  sendSocketRef.current = sendSocket;
+  useEffect(() => {
+    adGameRef.current = resultGameId || null;
+    if (!resultGameId || !adsEnabled()) return;
+    requestRewardOffer({
+      onOffer: (showAdFn) => { if (adGameRef.current === resultGameId) setAdOffer(() => showAdFn); },
+      onViewed: () => {
+        setAdOffer(null);
+        sendSocketRef.current({ type: 'ad_reward', gameId: resultGameId });
+      },
+      onDismissed: () => setAdOffer(null),
+      ...adHooks,
+    });
+  }, [resultGameId, adHooks]);
+
+  function watchAd() {
+    if (typeof adOffer === 'function') adOffer();
+  }
+
+  function buyFrame(itemId) {
+    if (pending) return;
+    beginPending();
+    if (!sendSocket({ type: 'shop_buy', itemId })) {
+      clearPending();
+      showToast(t('shopError'), 'error');
+    }
+  }
+
+  function equipFrame(itemId) {
+    if (pending) return;
+    beginPending();
+    if (!sendSocket({ type: 'shop_equip', itemId })) {
+      clearPending();
+      showToast(t('shopError'), 'error');
+    }
+  }
+
   // React screens do not change the URL. Mirror meaningful screens in the
   // browser's history so the device Back button can restore the prior view.
   useEffect(() => {
@@ -847,7 +914,7 @@ export default function App() {
       <div className="app app-nav app-top">
         <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <HomeContent
-          name={name} avatar={avatar} soloMode={soloMode} setSoloMode={setSoloMode}
+          name={name} avatar={avatar} frame={statsHook.stats.frame} soloMode={soloMode} setSoloMode={setSoloMode}
           quickMatch={quickMatch} startWithCategory={startWithCategory}
           onOpenProfile={() => setStage('profile')} onSeeAll={(fam) => { setCategoryFamily(fam || null); setStage('categories'); }}
           createRoom={createRoom} onOpenEnterCode={() => { setJoinError(false); setJoinCode(''); setStage('enter_code'); }}
@@ -938,10 +1005,23 @@ export default function App() {
           isGoogleLinked={!!(firebaseUser && !firebaseUser.isAnonymous)} googleEmail={firebaseUser?.email}
           linkGoogle={linkGoogle} linking={linking} clientId={clientId} social={social}
           onOpenLeaderboard={openLeaderboard}
+          onOpenShop={() => setStage('shop')}
           onSaveProfile={saveProfile} profileSaving={pending}
           onOpenTopic={openTopic}
         />
         <PlayerSheet players={players} social={social} onSelectTopic={openTopic} />
+        <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
+      </div>);
+  }
+
+  if (stage === 'shop') {
+    return (
+      <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+        <ShopContent
+          avatar={avatar} stats={statsHook.stats}
+          onBuy={buyFrame} onEquip={equipFrame}
+          onBack={() => setStage('profile')} pending={pending}
+        />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);
   }
@@ -978,7 +1058,7 @@ export default function App() {
     return (
       <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <WaitingContent
-          avatar={avatar} name={name} level={statsHook.stats.level}
+          avatar={avatar} frame={statsHook.stats.frame} name={name} level={statsHook.stats.level}
           categoryKey={matchCategory}
           onCancel={() => cancelMatchmaking()} onPlaySolo={switchToSolo}
           pending={pending} reconnecting={reconnecting}
@@ -998,7 +1078,7 @@ export default function App() {
       <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <QuestionContent
           question={question} timeLeft={timeLeft} reveal={reveal} selected={selected} answer={answer}
-          opponents={opponents} avatar={avatar} name={name} score={score}
+          opponents={opponents} avatar={avatar} frame={statsHook.stats.frame} name={name} score={score}
           reportQuestion={reportQuestion} reported={reported} social={social} GameChat={GameChat}
         />
       </div>);
@@ -1010,9 +1090,10 @@ export default function App() {
         <FinishedContent
           result={result} opponents={opponents} myId={myId} social={social}
           addFriend={social.addFriend}
-          playAgain={playAgain} rematch={requestRematch}
+          playAgain={() => interstitialThen(playAgain, adHooks)} rematch={requestRematch}
           rematchWaiting={rematchWaiting} rematchStarting={rematchStarting}
-          newMatch={newMatch}
+          newMatch={() => interstitialThen(newMatch, adHooks)}
+          adOffer={adOffer} onWatchAd={watchAd} adClaimed={adClaimed}
         />
       </div>);
   }
