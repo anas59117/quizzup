@@ -1,5 +1,6 @@
 import React from 'react';
 import { useI18n } from './i18n';
+import { IdentityEmblem, hasEmblem } from './IdentityEmblem';
 
 // Direction: editorial player cards, inspired by collectible sports print.
 // Rules: one ink tone and one spot colour per identity; no decorative glow.
@@ -39,7 +40,8 @@ export function IdentityCard({ frame, avatar, name, level, className = '' }) {
   const id = identityFor(frame);
   const item = IDENTITIES[id];
   return (
-    <article className={`identity-card identity-${id} ${className}`.trim()} aria-label={`${name || t('you')} · ${lang === 'en' ? item.en : item.fr}`}>
+    <article className={`identity-card identity-${id} ${hasEmblem(id) ? 'has-emblem' : ''} ${className}`.trim()} aria-label={`${name || t('you')} · ${lang === 'en' ? item.en : item.fr}`}>
+      <IdentityEmblem frame={id} />
       <div className="identity-card-top" aria-hidden="true"><span>QUIZZUP / PLAYER</span><span>{item.number}—08</span></div>
       <div className="identity-card-art" aria-hidden="true">
         <span className="identity-card-number">{item.number}</span>

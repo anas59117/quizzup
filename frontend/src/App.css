@@ -1070,7 +1070,22 @@ button.topic-level-row:hover { border-color:var(--border-strong); }
 .shop-pick > .icon { color:var(--text-faint); }
 @media (max-width:600px) { .shop-feature { grid-template-columns:1fr; } .identity-card-shop { min-height:270px; } .shop-feature-details { display:grid; grid-template-columns:1fr auto; align-items:center; column-gap:12px; } .shop-feature-kicker,.shop-feature-details h3,.shop-feature-details p { grid-column:1; } .shop-feature-details p { margin-bottom:0; } .shop-feature-actions { grid-column:2; grid-row:1/4; width:132px; } .shop-earn { grid-column:1/-1; } }
 @media (max-width:390px) { .shop-picker { grid-template-columns:1fr; } .shop-feature-details { display:flex; align-items:stretch; } .shop-feature-details p { margin-bottom:12px; } .shop-feature-actions { width:auto; } }
-@media (prefers-reduced-motion:reduce) { .identity-card,.shop-pick { animation:none; transition:none; } }
+/* Raised ornaments sit outside the frame; internal artwork remains clipped. */
+.identity-card.has-emblem { overflow:visible; margin-top:54px; }
+.identity-card.has-emblem .identity-card-top { padding-top:34px; }
+.identity-emblem { position:absolute; z-index:5; top:-58px; left:50%; width:120px; height:90px; max-width:none; transform:translateX(-50%); pointer-events:none; user-select:none; filter:drop-shadow(0 7px 4px rgba(0,0,0,.45)); }
+.identity-card-duel.has-emblem { margin-top:32px; }
+.identity-card-duel > .identity-emblem { width:80px; height:60px; top:-38px; }
+.identity-card-duel.has-emblem .identity-card-top { padding-top:26px; }
+.identity-card-vs.has-emblem,.identity-card-result.has-emblem { margin-top:44px; }
+.identity-card-vs > .identity-emblem,.identity-card-result > .identity-emblem { width:104px; height:78px; top:-49px; }
+.hud-strip { padding-top:12px; }
+.hud-chip-ava,.lb-ava { position:relative; flex-shrink:0; }
+.identity-emblem-mini { width:30px; height:23px; top:-14px; filter:drop-shadow(0 2px 1px rgba(0,0,0,.5)); }
+.lb-ava .identity-emblem-mini { width:36px; height:27px; top:-17px; }
+@keyframes emblem-flame-arrival { 0%,100% { transform:translateX(-50%) rotate(0); } 35% { transform:translateX(-50%) rotate(-3deg); } 70% { transform:translateX(-50%) rotate(2deg); } }
+.identity-card > .emblem-flamme { transform-origin:50% 90%; animation:emblem-flame-arrival 1.8s ease-in-out 2; }
+@media (prefers-reduced-motion:reduce) { .identity-card,.shop-pick,.identity-card > .identity-emblem { animation:none; transition:none; } }
 
 /* ---------- Rewarded ad on the result screen ---------- */
 .ad-double-btn { display:inline-flex; align-items:center; gap:8px; margin:4px auto 14px; padding:11px 18px; border:1px solid var(--gold); border-radius:12px; background:color-mix(in srgb,var(--gold) 14%,transparent); color:var(--text); font-weight:800; font-size:.9rem; cursor:pointer; }
