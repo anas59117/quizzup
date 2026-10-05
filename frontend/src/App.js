@@ -62,6 +62,7 @@ export default function App() {
     afterAd: () => music.setMuted(SFX.muted),
   }), []);
   const [stage, setStage] = useState('join');
+  useEffect(() => { if (stage === 'shop') window.scrollTo(0, 0); }, [stage]);
   const [fatalReason, setFatalReason] = useState('connection');
   const [fatalCode, setFatalCode] = useState('');
   const [categoryFamily, setCategoryFamily] = useState(null);

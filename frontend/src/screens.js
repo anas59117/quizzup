@@ -238,7 +238,7 @@ export function ProfileContent({
       <div className="section-title">{t('myTopics')}</div>
       <TopicLevelList topics={stats.topics} onSelect={onOpenTopic} />
       <button className="leaderboard-cta shop-cta" onClick={onOpenShop}>
-        <span className="leaderboard-cta-icon shop-cta-icon" aria-hidden="true">🛍️</span>
+        <span className="leaderboard-cta-icon shop-cta-icon" aria-hidden="true"><Icon name="shop" size={21}/></span>
         <span className="leaderboard-cta-copy">
           <strong>{t('shop')}</strong>
           <small>{t('shopCta', { n: stats.coins || 0 })}</small>
@@ -536,7 +536,7 @@ export function ShopContent({ avatar, stats, onBuy, onEquip, onBack, pending }) 
         <button className="back-link" onClick={onBack}>{t('back')}</button>
       </div>
       <div className="shop-balance">
-        <span className="shop-coin" aria-hidden="true">🪙</span>
+        <span className="shop-coin" aria-hidden="true"><Icon name="coin" size={23}/></span>
         <strong>{coins}</strong>
         <small>{t('coinBalance')}</small>
       </div>
@@ -562,13 +562,13 @@ export function ShopContent({ avatar, stats, onBuy, onEquip, onBack, pending }) 
           } else {
             action = (
               <button className="shop-btn" disabled={!affordable || pending} onClick={() => setConfirming(item.id)}>
-                🪙 {item.price}
+                <Icon name="coin" size={15}/> {item.price}
               </button>
             );
           }
           return (
             <div key={item.id} className={`shop-item${isEquipped ? ' equipped' : ''}`}>
-              <div className={`shop-preview${frameClass(item.id)}`}>{avatar}</div>
+              <div className="shop-stage"><div className={`shop-preview${frameClass(item.id)}`}>{avatar}</div></div>
               <div className="shop-name">{t(frameLabelKey(item.id))}</div>
               {action}
               {!isOwned && !affordable && <small className="shop-missing">{t('coinsMissing', { n: item.price - coins })}</small>}
