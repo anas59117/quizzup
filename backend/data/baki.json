@@ -1,505 +1,1102 @@
 [
   {
-    "text": "Qui est l'auteur de Baki ?",
+    "text": "Qui est l’auteur de la saga Baki ?",
     "answers": [
+      "Keisuke Itagaki",
       "George Morikawa",
       "Buronson",
-      "Tetsuo Hara",
-      "Keisuke Itagaki"
+      "Tetsuo Hara"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel est le thème principal de Baki ?",
-    "answers": [
-      "Le baseball",
-      "La cuisine",
-      "Les arts martiaux",
-      "La police"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Comment s'appelle le héros de la série ?",
-    "answers": [
-      "Yujiro Hanma",
-      "Doppo Orochi",
-      "Baki Hanma",
-      "Jack Hanma"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui est le père de Baki ?",
-    "answers": [
-      "Mitsunari Tokugawa",
-      "Gouki Shibukawa",
-      "Yujiro Hanma",
-      "Doppo Orochi"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Comment Yujiro Hanma est-il décrit ?",
-    "answers": [
-      "« L'homme invisible »",
-      "« La créature la plus forte sur Terre »",
-      "« Le roi des pirates »",
-      "« Le dieu du tonnerre »"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Que représente le tatouage naturel que Yujiro porte dans le dos ?",
-    "answers": [
-      "Un visage de démon",
-      "Un phénix",
-      "Un dragon",
-      "Un tigre"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Où se trouve l'arène clandestine où combat Baki ?",
-    "answers": [
-      "Sous le Tokyo Dome",
-      "Dans une prison d'Osaka",
-      "Sous le mont Fuji",
-      "Dans le port de Yokohama"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui organise les combats de l'arène souterraine ?",
-    "answers": [
-      "Yujiro Hanma",
-      "Retsu Kaioh",
-      "Mitsunari Tokugawa",
-      "Doppo Orochi"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Comment s'appelle la mère de Baki ?",
-    "answers": [
-      "Misae",
-      "Yuko",
-      "Emi Akezawa",
-      "Kozue"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel rôle joue la mère de Baki dans son entraînement ?",
-    "answers": [
-      "Elle est riche et finance son entraînement",
-      "Elle est son entraîneuse de karaté",
-      "Elle ignore tout de ses combats",
-      "Elle est championne de boxe"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Comment s'appelle la petite amie de Baki ?",
-    "answers": [
-      "Reiko",
-      "Minami",
-      "Emi",
-      "Kozue"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Qui est le demi-frère de Baki, lui aussi fils de Yujiro ?",
-    "answers": [
-      "Kaoru Hanayama",
-      "Doppo Orochi",
-      "Retsu Kaioh",
-      "Jack Hammer (Hanma)"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Comment s'appelle le premier grand tournoi de la série ?",
-    "answers": [
-      "Le King of Fighters",
-      "Le Tenkaichi Budōkai",
-      "Le Tournoi des Dieux",
-      "Le Maximum Tournament"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel combattant est un chef yakuza au physique colossal ?",
-    "answers": [
-      "Gouki Shibukawa",
-      "Kaoru Hanayama",
-      "Retsu Kaioh",
-      "Doppo Orochi"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel combattant chinois est un maître du kung-fu ?",
-    "answers": [
-      "Doppo Orochi",
-      "Retsu Kaioh",
-      "Jack Hanma",
-      "Biscuit Oliva"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Qui est surnommé l'homme le plus fort d'Amérique ?",
-    "answers": [
-      "Jack Hanma",
-      "Biscuit Oliva",
-      "Spec",
-      "Dorian"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans quelle prison Biscuit Oliva est-il « enfermé » ?",
-    "answers": [
-      "La prison d'État d'Arizona",
-      "Sing Sing",
-      "Alcatraz",
-      "La prison de Tokyo"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel personnage est un homme préhistorique venu du Jurassique ?",
-    "answers": [
-      "Oliva",
-      "Sikorsky",
-      "Pickle",
-      "Dorian"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Que fait Pickle de ceux qu'il bat au combat ?",
-    "answers": [
-      "Il les mange",
-      "Il les enferme",
-      "Il les entraîne",
-      "Il les libère"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel légendaire samouraï est ressuscité par clonage dans la série ?",
-    "answers": [
-      "Toyotomi Hideyoshi",
-      "Miyamoto Musashi",
-      "Oda Nobunaga",
-      "Sanada Yukimura"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel personnage sumotori porte le nom du fondateur légendaire du sumo ?",
-    "answers": [
-      "Chiyonofuji",
-      "Takanohana",
-      "Nomi no Sukune",
-      "Akebono"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel condamné à mort britannique est un assassin ?",
-    "answers": [
-      "Hector Doyle",
-      "Dorian",
-      "Sikorsky",
-      "Spec"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel condamné à mort russe possède une pince redoutable ?",
-    "answers": [
-      "Doyle",
-      "Spec",
-      "Yanagi",
-      "Sikorsky"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel condamné à mort américain a une capacité pulmonaire phénoménale ?",
-    "answers": [
-      "Dorian",
-      "Sikorsky",
-      "Spec",
-      "Doyle"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel condamné japonais est un expert en poisons ?",
-    "answers": [
-      "Gouki Shibukawa",
-      "Doppo Orochi",
-      "Ryuko Yanagi",
-      "Katsumi Orochi"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quel magazine Baki a-t-il été publié ?",
-    "answers": [
-      "Weekly Shōnen Champion",
-      "Young Animal",
-      "Weekly Shōnen Jump",
-      "Weekly Shōnen Magazine"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle maison d'édition publie Baki ?",
+    "text": "Quelle maison d’édition japonaise publie Baki ?",
     "answers": [
       "Shūeisha",
-      "Shōgakukan",
       "Akita Shoten",
-      "Kōdansha"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "En quelle année la première série a-t-elle débuté ?",
-    "answers": [
-      "1985",
-      "2005",
-      "1999",
-      "1991"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Combien de volumes compte la première série Grappler Baki ?",
-    "answers": [
-      "20",
-      "42",
-      "100",
-      "74"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Combien de séries successives compte la saga Baki ?",
-    "answers": [
-      "10",
-      "6",
-      "3",
-      "2"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Comment s'appelle la troisième série de la saga ?",
-    "answers": [
-      "Baki-Dou",
-      "Hanma Baki",
-      "Baki Rahen",
-      "New Grappler Baki"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Comment s'appelle la série la plus récente, commencée en 2023 ?",
-    "answers": [
-      "Baki Zero",
-      "Baki-Dou",
-      "Hanma Baki",
-      "Baki Rahen"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Combien de volumes compte l'ensemble de la saga ?",
-    "answers": [
-      "Environ 80",
-      "Plus de 150",
-      "Environ 50",
-      "Plus de 500"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Combien d'exemplaires de la saga Baki se sont vendus ?",
-    "answers": [
-      "Environ 10 millions",
-      "Environ 30 millions",
-      "Plus d'un milliard",
-      "Plus de 100 millions"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans quelle école de scénario Keisuke Itagaki a-t-il étudié ?",
-    "answers": [
-      "L'académie Jump",
-      "L'école Tezuka",
-      "L'école des Beaux-Arts de Tokyo",
-      "Le Gekiga Sonjuku de Kazuo Koike"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel studio a produit l'OAV de 1994 ?",
-    "answers": [
-      "Madhouse",
-      "TMS Entertainment",
-      "Toei Animation",
-      "Knack Productions"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quels studios ont produit l'anime télévisé de 2001 ?",
-    "answers": [
-      "Toei et Pierrot",
-      "Sunrise et Bones",
-      "MAPPA et Ufotable",
-      "Group TAC et Free-Will"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sur quelle plateforme l'anime Baki de 2018 est-il diffusé ?",
-    "answers": [
-      "Netflix",
-      "Crunchyroll",
-      "Amazon Prime Video",
-      "Disney+"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel studio a produit l'anime Baki de 2018 ?",
-    "answers": [
-      "Toei Animation",
-      "Madhouse",
-      "Ufotable",
-      "TMS Entertainment"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Avec quelle autre série de combat Baki a-t-il eu un crossover sur Netflix en 2024 ?",
-    "answers": [
-      "Kengan Ashura",
-      "Hajime no Ippo",
-      "Tokyo Revengers",
-      "Street Fighter"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle adaptation animée de Baki-Dou est sortie en 2026 ?",
-    "answers": [
-      "Baki-Dou : Le Samouraï invincible",
-      "Baki-Dou : La Guerre des Hanma",
-      "Baki-Dou Zero",
-      "Baki-Dou : Le Retour de Pickle"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel célèbre jeu de combat accueillera Yujiro Hanma en contenu additionnel ?",
-    "answers": [
-      "Street Fighter 6",
-      "Dragon Ball FighterZ",
-      "Tekken 8",
-      "Mortal Kombat 1"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel jeu de combat Baki est sorti en septembre 2025 ?",
-    "answers": [
-      "Baki Fighting Spirit",
-      "Baki Hanma Blood Arena",
-      "Grappler Baki Ultimate",
-      "Baki Tournament"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Sous quel titre le jeu PS2 Baki est-il sorti au Royaume-Uni ?",
-    "answers": [
-      "Baki Battle",
-      "Iron Fist",
-      "Fighting Fury",
-      "Grappler King"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel maître de karaté est le père adoptif de Katsumi Orochi ?",
-    "answers": [
-      "Retsu Kaioh",
-      "Doppo Orochi",
-      "Jack Hanma",
-      "Kaoru Hanayama"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel vieux maître de jujutsu de petite taille est redoutable ?",
-    "answers": [
-      "Gouki Shibukawa",
-      "Mitsunari Tokugawa",
-      "Retsu Kaioh",
-      "Doppo Orochi"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel combattant défie Baki pour conquérir sa petite amie ?",
-    "answers": [
-      "Mohammad Alai Jr.",
-      "Jack Hanma",
-      "Oliva",
-      "Pickle"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Combien de volumes compte la deuxième série, intitulée simplement « Baki » ?",
-    "answers": [
-      "22",
-      "31",
-      "42",
-      "17"
+      "Kōdansha",
+      "Hakusensha"
     ],
     "correct": 1,
-    "difficulty": "expert"
+    "difficulty": "moyen"
   },
   {
-    "text": "Qui a réalisé l'anime Netflix de 2018 ?",
+    "text": "Dans quel magazine la saga a-t-elle commencé sa publication ?",
     "answers": [
-      "Toshiki Hirano",
-      "Katsuyoshi Yatabe",
-      "Hitoshi Nanba",
-      "Yuji Asada"
+      "Weekly Shōnen Jump",
+      "Weekly Shōnen Magazine",
+      "Weekly Shōnen Champion",
+      "Young Animal"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En quelle année la première série, Grappler Baki, a-t-elle débuté ?",
+    "answers": [
+      "1984",
+      "1998",
+      "2005",
+      "1991"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de volumes compte Grappler Baki ?",
+    "answers": [
+      "42",
+      "31",
+      "37",
+      "63"
     ],
     "correct": 0,
     "difficulty": "expert"
   },
   {
-    "text": "Combien d'épisodes compte la première saison de l'anime Netflix de 2018 ?",
+    "text": "Comment s’appelle le protagoniste de la saga ?",
     "answers": [
-      "13",
-      "26",
-      "50",
-      "12"
+      "Yujiro Hanma",
+      "Baki Hanma",
+      "Kaoru Hanayama",
+      "Katsumi Orochi"
     ],
     "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui est le père de Baki ?",
+    "answers": [
+      "Doppo Orochi",
+      "Mitsunari Tokugawa",
+      "Yujiro Hanma",
+      "Biscuit Oliva"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s’appelle la mère de Baki ?",
+    "answers": [
+      "Kozue Matsumoto",
+      "Maria",
+      "Natsue Orochi",
+      "Emi Akezawa"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment s’appelle la petite amie de Baki ?",
+    "answers": [
+      "Kozue Matsumoto",
+      "Emi Akezawa",
+      "Maria",
+      "Sabuko Tokugawa"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel combattant est le demi-frère aîné de Baki ?",
+    "answers": [
+      "Katsumi Orochi",
+      "Jack Hanma",
+      "Kaoru Hanayama",
+      "Retsu Kaioh"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel titre Baki détient-il dans l’arène souterraine ?",
+    "answers": [
+      "Arbitre principal",
+      "Directeur de l’arène",
+      "Champion de l’arène",
+      "Médecin officiel"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Où se trouve l’arène clandestine dirigée par Tokugawa ?",
+    "answers": [
+      "Sous la tour de Tokyo",
+      "Dans une prison d’Osaka",
+      "Sous le mont Fuji",
+      "Sous le Tokyo Dome"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui dirige l’arène souterraine ?",
+    "answers": [
+      "Mitsunari Tokugawa",
+      "Doppo Orochi",
+      "Kaio Kaku",
+      "Biscuit Oliva"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel surnom Yujiro Hanma porte-t-il ?",
+    "answers": [
+      "Le Dieu de la guerre",
+      "La créature la plus forte sur Terre",
+      "L’Invaincu d’Arizona",
+      "Le Samouraï noir"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle forme apparaît lorsque les muscles du dos de Yujiro se contractent ?",
+    "answers": [
+      "Une tête de tigre",
+      "Un dragon",
+      "Un visage de démon",
+      "Un masque de samouraï"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel combattant est le jeune chef du clan yakuza Hanayama ?",
+    "answers": [
+      "Chiharu Shiba",
+      "Kureha Shinogi",
+      "Izou Motobe",
+      "Kaoru Hanayama"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle aptitude physique caractérise particulièrement Hanayama ?",
+    "answers": [
+      "Sa force de préhension",
+      "Sa vitesse de course",
+      "Son apnée",
+      "Sa souplesse"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a fondé l’école de karaté Shinshinkai ?",
+    "answers": [
+      "Katsumi Orochi",
+      "Doppo Orochi",
+      "Retsu Kaioh",
+      "Goki Shibukawa"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel surnom est associé à Doppo Orochi ?",
+    "answers": [
+      "L’Homme déchaîné",
+      "Le Guerrier noir",
+      "Le Dieu de la guerre",
+      "Le Roi de la mer"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel lien unit Katsumi et Doppo Orochi ?",
+    "answers": [
+      "Ils sont frères",
+      "Katsumi est son père",
+      "Ils sont cousins",
+      "Katsumi est son fils adoptif"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel membre Katsumi perd-il lors de son combat contre Pickle ?",
+    "answers": [
+      "Le bras droit",
+      "Le bras gauche",
+      "La jambe droite",
+      "La jambe gauche"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle discipline Goki Shibukawa maîtrise-t-il ?",
+    "answers": [
+      "Le sumo",
+      "L’aiki-jujutsu",
+      "La boxe anglaise",
+      "Le kenjutsu"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Pourquoi l’œil gauche de Shibukawa est-il artificiel ?",
+    "answers": [
+      "Pickle l’a mordu",
+      "Yujiro l’a blessé",
+      "Il l’a perdu lors d’un combat contre Yanagi",
+      "Dorian l’a empoisonné"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel art martial Retsu Kaioh représente-t-il ?",
+    "answers": [
+      "Le karaté de Shinshinkai",
+      "Le judo",
+      "La lutte gréco-romaine",
+      "Le kenpo chinois"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Que signifie le titre « Kaioh » porté par Retsu ?",
+    "answers": [
+      "Un rang élevé de maître des arts martiaux chinois",
+      "Un grade de sumo",
+      "Un titre de boxe professionnelle",
+      "Un rang militaire japonais"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle jambe Retsu perd-il après son affrontement avec Pickle ?",
+    "answers": [
+      "La jambe gauche",
+      "La jambe droite",
+      "Les deux jambes",
+      "Aucune"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quel sport Retsu se lance-t-il ensuite pour démontrer la valeur du kenpo ?",
+    "answers": [
+      "Le sumo",
+      "Le judo",
+      "La boxe",
+      "Le kick-boxing"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel moyen Jack Hanma utilise-t-il notamment pour accroître sa puissance ?",
+    "answers": [
+      "La méditation zen",
+      "Un exosquelette",
+      "La maîtrise de l’aiki",
+      "Un dopage extrême"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle opération Jack subit-il pour augmenter sa taille ?",
+    "answers": [
+      "Un allongement osseux",
+      "Une greffe musculaire",
+      "Une reconstruction du crâne",
+      "Une transplantation cardiaque"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle partie de son corps Jack transforme-t-il en arme redoutable ?",
+    "answers": [
+      "Ses cheveux",
+      "Sa mâchoire",
+      "Ses coudes",
+      "Ses orteils"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel métier exerce Kureha Shinogi en plus d’être combattant ?",
+    "answers": [
+      "Avocat",
+      "Policier",
+      "Médecin",
+      "Journaliste"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle méthode de combat Gaia privilégie-t-il ?",
+    "answers": [
+      "Le karaté sportif",
+      "Le combat à l’épée",
+      "La boxe sur ring",
+      "L’utilisation de l’environnement"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel combattant est expert dans l’emploi d’armes et le combat réel ?",
+    "answers": [
+      "Izou Motobe",
+      "Baki Hanma",
+      "Mohammad Alai Jr.",
+      "Kozue Matsumoto"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage est chef d’un gang de motards et novice en arts martiaux ?",
+    "answers": [
+      "Kaoru Hanayama",
+      "Chiharu Shiba",
+      "Spec",
+      "Hector Doyle"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle couche géologique Pickle est-il découvert ?",
+    "answers": [
+      "Une calotte glaciaire du Crétacé",
+      "Une mine de charbon",
+      "Une couche de sel du Jurassique",
+      "Une grotte volcanique"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quels adversaires Pickle combattait-il à son époque ?",
+    "answers": [
+      "Des mammouths uniquement",
+      "Des gladiateurs romains",
+      "Des samouraïs",
+      "Des dinosaures"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel guerrier historique est ramené à la vie dans Baki-Dou ?",
+    "answers": [
+      "Miyamoto Musashi",
+      "Sasaki Kojiro",
+      "Oda Nobunaga",
+      "Sanada Yukimura"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui joue un rôle de médium dans le retour de Musashi ?",
+    "answers": [
+      "Kozue Matsumoto",
+      "Sabuko Tokugawa",
+      "Emi Akezawa",
+      "Maria"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel lien unit Sabuko et Mitsunari Tokugawa ?",
+    "answers": [
+      "Elle est sa fille",
+      "Elle est son épouse",
+      "Elle est sa sœur",
+      "Elle est sa mère"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle école d’escrime Musashi est-il réputé avoir fondée ?",
+    "answers": [
+      "Le Shinshinkai",
+      "Le Hokushin Itto-ryu",
+      "Le Shibukawa-ryu",
+      "Le Niten Ichi-ryu"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment s’appelle le grand tournoi de l’arène souterraine ?",
+    "answers": [
+      "Le Maximum Tournament",
+      "Le Raitai Festival",
+      "Le Kengan Tournament",
+      "Le tournoi Tenkaichi"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui affronte Baki en finale du Maximum Tournament ?",
+    "answers": [
+      "Yujiro Hanma",
+      "Jack Hanma",
+      "Retsu Kaioh",
+      "Doppo Orochi"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui remporte le Maximum Tournament ?",
+    "answers": [
+      "Jack Hanma",
+      "Goki Shibukawa",
+      "Baki Hanma",
+      "Kaoru Hanayama"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel principe Hanayama revendique-t-il dans ses combats ?",
+    "answers": [
+      "Ne frapper qu’avec les pieds",
+      "Toujours porter une armure",
+      "Refuser tout adversaire plus grand",
+      "Combattre à mains nues"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage est le frère aîné du combattant Kosho Shinogi ?",
+    "answers": [
+      "Kureha Shinogi",
+      "Katsumi Orochi",
+      "Izou Motobe",
+      "Chiharu Shiba"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel combattant est surnommé « l’homme le plus fort d’Amérique » ?",
+    "answers": [
+      "Spec",
+      "Biscuit Oliva",
+      "Jun Guevaru",
+      "Mohammad Alai Jr."
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quel établissement Oliva vit-il volontairement ?",
+    "answers": [
+      "Alcatraz",
+      "Une prison russe",
+      "Une prison d’État en Arizona",
+      "La prison de Tokyo"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel surnom anglais désigne l’exceptionnelle liberté d’Oliva ?",
+    "answers": [
+      "Mr. Poison",
+      "Mr. Maximum",
+      "Mr. Demon",
+      "Mr. Unchained"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui est l’autre détenu qualifié d’« Unchained » dans la prison d’Arizona ?",
+    "answers": [
+      "Jun Guevaru",
+      "Spec",
+      "Sikorsky",
+      "Dorian"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Pourquoi Baki se fait-il incarcérer volontairement ?",
+    "answers": [
+      "Pour libérer Yujiro",
+      "Pour affronter Biscuit Oliva",
+      "Pour retrouver Kozue",
+      "Pour devenir gardien"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de condamnés à mort convergent vers Tokyo dans l’arc correspondant ?",
+    "answers": [
+      "Trois",
+      "Sept",
+      "Cinq",
+      "Dix"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel condamné à mort utilise l’hypnose contre ses adversaires ?",
+    "answers": [
+      "Spec",
+      "Sikorsky",
+      "Yanagi",
+      "Dorian"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel condamné britannique dissimule des lames et des explosifs dans son corps ?",
+    "answers": [
+      "Hector Doyle",
+      "Dorian",
+      "Spec",
+      "Sikorsky"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel condamné russe peut escalader des surfaces grâce à sa force de doigts ?",
+    "answers": [
+      "Doyle",
+      "Sikorsky",
+      "Yanagi",
+      "Dorian"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel condamné américain possède une capacité pulmonaire exceptionnelle ?",
+    "answers": [
+      "Dorian",
+      "Doyle",
+      "Spec",
+      "Yanagi"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel condamné japonais emploie des techniques de poison ?",
+    "answers": [
+      "Spec",
+      "Sikorsky",
+      "Dorian",
+      "Ryuukou Yanagi"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Que recherchent les cinq condamnés à mort en venant au Japon ?",
+    "answers": [
+      "Connaître la défaite",
+      "Devenir riches",
+      "Libérer Oliva",
+      "Tuer Tokugawa"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel événement provoque le grave empoisonnement de Baki ?",
+    "answers": [
+      "Une morsure de Pickle",
+      "Une attaque de Yanagi",
+      "Un repas préparé par Dorian",
+      "Un coup de Yujiro"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage Sikorsky enlève-t-il pour provoquer Baki ?",
+    "answers": [
+      "Emi",
+      "Maria",
+      "Kozue",
+      "Sabuko"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel condamné est capturé après un combat contre Biscuit Oliva ?",
+    "answers": [
+      "Dorian",
+      "Spec",
+      "Doyle",
+      "Sikorsky"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quelle fréquence le Grand Raitai est-il organisé ?",
+    "answers": [
+      "Tous les cent ans",
+      "Tous les quatre ans",
+      "Tous les dix ans",
+      "Chaque année"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Pourquoi Baki participe-t-il au Grand Raitai ?",
+    "answers": [
+      "Pour gagner de l’argent",
+      "Pour trouver un remède à son empoisonnement",
+      "Pour devenir Kaioh",
+      "Pour affronter Jack"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui porte le titre de Kaio Kaku ?",
+    "answers": [
+      "Le directeur de la prison",
+      "Le chef du Shinshinkai",
+      "Le maître suprême du kenpo chinois",
+      "Le champion de sumo"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quels combattants portent couramment le titre de « Kaioh » ?",
+    "answers": [
+      "Des boxeurs américains",
+      "Des lutteurs de sumo",
+      "Des sabreurs japonais",
+      "Des maîtres reconnus du kenpo chinois"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "De quel célèbre boxeur fictif Mohammad Alai Jr. est-il le fils ?",
+    "answers": [
+      "Mohammad Alai",
+      "Joe Cruiser",
+      "Smoking Joe",
+      "Iron Michael"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle personne Alai Jr. tente-t-il de séduire ?",
+    "answers": [
+      "Maria",
+      "Kozue",
+      "Emi",
+      "Sabuko"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui bat Alai Jr. lors de leur affrontement décisif ?",
+    "answers": [
+      "Yujiro Hanma",
+      "Retsu Kaioh",
+      "Baki Hanma",
+      "Jack Hanma"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel arc de la deuxième série l’anime de 2018 adapte-t-il d’abord ?",
+    "answers": [
+      "L’arc Pickle",
+      "L’arc Musashi",
+      "L’arc de la prison",
+      "L’arc des condamnés à mort"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien d’épisodes compte la série animée Baki diffusée en 2018 ?",
+    "answers": [
+      "26",
+      "12",
+      "13",
+      "39"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel studio anime Baki à partir de 2018 ?",
+    "answers": [
+      "Madhouse",
+      "TMS Entertainment",
+      "MAPPA",
+      "Bones"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui réalise la série animée Baki de 2018 ?",
+    "answers": [
+      "Katsuyoshi Yatabe",
+      "Shin Itagaki",
+      "Toshiki Hirano",
+      "Hitoshi Nanba"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Sur quelle plateforme l’anime de 2018 est-il proposé en avant-première mondiale ?",
+    "answers": [
+      "Crunchyroll",
+      "Disney+",
+      "Prime Video",
+      "Netflix"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel arc constitue la suite animée de 2020 ?",
+    "answers": [
+      "Le Grand Raitai",
+      "Le Maximum Tournament",
+      "L’arc Pickle",
+      "L’arc Musashi"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle partie du manga porte le titre Hanma Baki ?",
+    "answers": [
+      "La première",
+      "La troisième",
+      "La deuxième",
+      "La cinquième"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle partie du manga porte le titre Baki-Dou et introduit Musashi ?",
+    "answers": [
+      "La première",
+      "La deuxième",
+      "La quatrième",
+      "La troisième"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Baki dans les séries récentes ?",
+    "answers": [
+      "Akio Otsuka",
+      "Takuya Eguchi",
+      "Kenta Miyake",
+      "Nobunaga Shimazaki"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Yujiro dans les séries récentes ?",
+    "answers": [
+      "Akio Otsuka",
+      "Nobunaga Shimazaki",
+      "Rikiya Koyama",
+      "Naoya Uchida"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Musashi dans l’anime Baki-Dou ?",
+    "answers": [
+      "Akio Otsuka",
+      "Naoya Uchida",
+      "Kenichi Ogata",
+      "Yusaku Yara"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Mitsunari Tokugawa dans l’anime Baki-Dou ?",
+    "answers": [
+      "Masako Nozawa",
+      "Bin Shimada",
+      "Shinpachi Tsuji",
+      "Takayuki Sugo"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Sabuko Tokugawa ?",
+    "answers": [
+      "Megumi Hayashibara",
+      "Romi Park",
+      "Kotono Mitsuishi",
+      "Masako Nozawa"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Retsu Kaioh dans les séries récentes ?",
+    "answers": [
+      "Rikiya Koyama",
+      "Takuya Eguchi",
+      "Kenta Miyake",
+      "Kenichi Ogata"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Kaoru Hanayama dans les séries récentes ?",
+    "answers": [
+      "Nobunaga Shimazaki",
+      "Takuya Eguchi",
+      "Ayumu Murase",
+      "Yoshihisa Kawahara"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Doppo Orochi dans les séries récentes ?",
+    "answers": [
+      "Bin Shimada",
+      "Akio Otsuka",
+      "Takayuki Sugo",
+      "Yusaku Yara"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Katsumi Orochi dans les séries récentes ?",
+    "answers": [
+      "Takuya Eguchi",
+      "Rikiya Koyama",
+      "Kenta Miyake",
+      "Yoshihisa Kawahara"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Goki Shibukawa dans les séries récentes ?",
+    "answers": [
+      "Bin Shimada",
+      "Takayuki Sugo",
+      "Kenichi Ogata",
+      "Ayumu Murase"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Izou Motobe dans l’anime Baki-Dou ?",
+    "answers": [
+      "Shinpachi Tsuji",
+      "Yusaku Yara",
+      "Naoya Uchida",
+      "Akio Otsuka"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Jack Hanma dans les séries récentes ?",
+    "answers": [
+      "Nobunaga Shimazaki",
+      "Takuya Eguchi",
+      "Kenta Miyake",
+      "Rikiya Koyama"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Kaio Kaku dans les séries récentes ?",
+    "answers": [
+      "Masako Nozawa",
+      "Bin Shimada",
+      "Takayuki Sugo",
+      "Kenichi Ogata"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Gaia dans l’anime Baki-Dou ?",
+    "answers": [
+      "Ayumu Murase",
+      "Kenta Miyake",
+      "Yusaku Yara",
+      "Nobunaga Shimazaki"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Pickle dans l’anime Baki-Dou ?",
+    "answers": [
+      "Akio Otsuka",
+      "Takeshi Kusao",
+      "Rikiya Koyama",
+      "Naoya Uchida"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel crossover animé réunit Baki et une autre saga de combat en 2024 ?",
+    "answers": [
+      "Baki vs Hajime no Ippo",
+      "Baki x Tekken",
+      "Baki Hanma vs Kengan Ashura",
+      "Baki vs Street Fighter"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle adaptation a été officiellement annoncée le 31 mars 2024 ?",
+    "answers": [
+      "Un film sur Oliva",
+      "Une série sur Kozue",
+      "Un remake de Grappler Baki",
+      "L’anime Baki-Dou"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage historique est au centre de Baki-Dou ?",
+    "answers": [
+      "Miyamoto Musashi",
+      "Hattori Hanzo",
+      "Date Masamune",
+      "Sakamoto Ryoma"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel adversaire préhistorique donne son nom à un grand arc de Hanma Baki ?",
+    "answers": [
+      "Spec",
+      "Pickle",
+      "Gaia",
+      "Dorian"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel conflit constitue l’aboutissement de Hanma Baki ?",
+    "answers": [
+      "Le duel Baki-Musashi",
+      "Le tournoi des condamnés",
+      "Le combat entre Baki et Yujiro",
+      "Le combat Oliva-Pickle"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel objectif personnel guide Baki tout au long de la saga ?",
+    "answers": [
+      "Diriger le clan Hanayama",
+      "Devenir directeur de prison",
+      "Fonder une école de karaté",
+      "Dépasser son père Yujiro"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel animal Yujiro abat-il à mains nues selon sa présentation officielle ?",
+    "answers": [
+      "Un éléphant d’Afrique gigantesque",
+      "Un ours polaire",
+      "Un tigre de Sibérie",
+      "Un rhinocéros blanc"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel animal Doppo est-il réputé avoir tué à mains nues ?",
+    "answers": [
+      "Un lion d’Afrique",
+      "Un tigre de Sibérie",
+      "Un grizzly",
+      "Un crocodile"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quel âge Hanayama devient-il le deuxième chef de son clan ?",
+    "answers": [
+      "18 ans",
+      "21 ans",
+      "15 ans",
+      "25 ans"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel exploit de morsure illustre la puissance de Jack selon sa présentation officielle ?",
+    "answers": [
+      "Trancher une barre d’acier",
+      "Mordre une balle en vol",
+      "Casser un diamant",
+      "Briser une noix de coco"
+    ],
+    "correct": 3,
     "difficulty": "expert"
   }
 ]
