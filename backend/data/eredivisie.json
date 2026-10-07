@@ -120,7 +120,7 @@
     "correct": 0
   },
   {
-    "text": "Quel milieu de terrain néerlandais, formé au PSV Eindhoven, devient une légende du Real Madrid dans les années 2000-2010 ?",
+    "text": "Quel milieu de terrain néerlandais, formé à l’Ajax, devient une figure du Real Madrid dans les années 2000 ? ?",
     "answers": [
       "Arjen Robben",
       "Wesley Sneijder",
@@ -130,7 +130,7 @@
     "correct": 1
   },
   {
-    "text": "Quel ailier néerlandais, formé au PSV, brille ensuite au Bayern Munich et au Real Madrid dans les années 2000-2010 ?",
+    "text": "Quel ailier néerlandais, révélé au PSV ?",
     "answers": [
       "Arjen Robben",
       "Robin van Persie",
@@ -150,7 +150,7 @@
     "correct": 0
   },
   {
-    "text": "Quel attaquant néerlandais, star de Manchester United dans les années 2000, est formé notamment au PSV Eindhoven ?",
+    "text": "Quel attaquant néerlandais, star de Manchester United dans les années 2000, s’est auparavant illustré au PSV Eindhoven ?",
     "answers": [
       "Ruud van Nistelrooy",
       "Robin van Persie",
@@ -170,7 +170,7 @@
     "correct": 0
   },
   {
-    "text": "Quel défenseur néerlandais, formé au PSV puis star de Manchester United, remporte le triplé Ligue des Champions-Championnat-Coupe en 1999 ?",
+    "text": "Quel défenseur néerlandais, passé par le PSV puis devenu une star de Manchester United ?",
     "answers": [
       "Jaap Stam",
       "Frank de Boer",
@@ -320,7 +320,7 @@
     "correct": 1
   },
   {
-    "text": "Quel attaquant uruguayen, meilleur buteur de l'Eredivisie lors du parcours européen 2010-2011 de l'Ajax, rejoint Liverpool en janvier 2011 ?",
+    "text": "Quel attaquant uruguayen, capitaine de l’Ajax et meilleur buteur de l’Eredivisie 2009-2010, rejoint Liverpool en janvier 2011 ?",
     "answers": [
       "Edinson Cavani",
       "Luis Suárez",
@@ -420,7 +420,7 @@
     "correct": 0
   },
   {
-    "text": "Quel milieu offensif marocain, formé à l'Ajax dans les années 2010, brille ensuite à Chelsea ?",
+    "text": "Quel milieu offensif marocain, passé par le FC Twente puis devenu une vedette de l’Ajax ?",
     "answers": [
       "Hakim Ziyech",
       "Nordin Amrabat",
@@ -442,25 +442,25 @@
   {
     "text": "Quelles sont les couleurs traditionnelles du maillot du Feyenoord ?",
     "answers": [
-      "Rouge et blanc",
-      "Blanc et rouge à bandes",
+      "Rouge et blanc en deux moitiés verticales",
+      "Rouge et blanc à rayures",
       "Rouge et noir",
       "Vert et blanc"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "Quelles sont les couleurs traditionnelles du maillot du PSV Eindhoven ?",
     "answers": [
-      "Rouge et blanc",
+      "Rouge et blanc à rayures",
       "Bleu et blanc",
-      "Rouge et bleu à bandes",
+      "Rouge et bleu à rayures",
       "Jaune et noir"
     ],
-    "correct": 2
+    "correct": 0
   },
   {
-    "text": "Quel est le surnom donné au stade de l'Ajax, inauguré en 1996 ?",
+    "text": "Quel est le nom actuel du stade de l’Ajax, inauguré en 1996 ?",
     "answers": [
       "Johan Cruyff Arena",
       "De Kuip",
@@ -490,22 +490,22 @@
     "correct": 0
   },
   {
-    "text": "Combien de fois le PSV Eindhoven a-t-il été champion des Pays-Bas (à l'issue de la saison 2025-2026) ?",
+    "text": "En quelle année le PSV remporte-t-il son premier titre de champion des Pays-Bas ?",
     "answers": [
-      "Environ 15 fois",
-      "Environ 26 fois",
-      "Environ 35 fois",
-      "Une seule fois"
+      "1918",
+      "1929",
+      "1938",
+      "1956"
     ],
     "correct": 1
   },
   {
-    "text": "Quel attaquant ivoirien termine meilleur buteur de l’Eredivisie 2021-2022 avec l’Ajax ?",
+    "text": "Quel attaquant danois du Feyenoord termine meilleur buteur de l’Eredivisie 2016-2017 ?",
     "answers": [
-      "Sébastien Haller",
-      "Dušan Tadić",
-      "Brian Brobbey",
-      "Antony"
+      "Nicolai Jørgensen",
+      "Kasper Dolberg",
+      "Lasse Schöne",
+      "Viktor Fischer"
     ],
     "correct": 0,
     "difficulty": "difficile"
