@@ -2,12 +2,13 @@
   {
     "text": "Qui est l'auteur de Black Clover ?",
     "answers": [
+      "Yūki Tabata",
       "Hiro Mashima",
       "Masashi Kishimoto",
-      "Kōhei Horikoshi",
-      "Yūki Tabata"
+      "Kōhei Horikoshi"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle le héros de Black Clover ?",
@@ -17,187 +18,206 @@
       "Yami",
       "Yuno"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle particularité rend Asta unique dans son monde ?",
     "answers": [
       "Il est un elfe",
       "Il a deux grimoires",
-      "Il est immortel",
-      "Il n'a aucun pouvoir magique"
+      "Il n'a aucun pouvoir magique",
+      "Il est immortel"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel est le rêve d'Asta et de Yuno ?",
     "answers": [
       "Devenir roi des pirates",
-      "Devenir Empereur-Mage",
       "Devenir Hokage",
-      "Devenir chevalier d'or"
+      "Devenir chevalier d'or",
+      "Devenir Empereur-Mage"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Dans quel royaume se déroule l'histoire ?",
     "answers": [
+      "Le royaume de Clover",
       "Amestris",
       "Le royaume de Spade",
-      "Le royaume de Clover",
       "Le royaume de Fiore"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Où Asta et Yuno ont-ils grandi ?",
     "answers": [
       "Dans un château",
+      "Dans une église d'Hage",
       "Dans une forêt elfique",
-      "Dans la capitale",
-      "Dans une église d'Hage"
+      "Dans la capitale"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle magie maîtrise Yuno ?",
     "answers": [
       "La magie du feu",
       "La magie de l'ombre",
-      "La magie de l'eau",
-      "La magie du vent"
+      "La magie du vent",
+      "La magie de l'eau"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "À quel âge reçoit-on son grimoire dans Black Clover ?",
     "answers": [
       "18 ans",
-      "15 ans",
       "10 ans",
-      "12 ans"
+      "12 ans",
+      "15 ans"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Combien de feuilles compte le grimoire d'Asta ?",
     "answers": [
-      "1",
       "5",
+      "1",
       "3",
       "4"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Combien de feuilles compte le grimoire de Yuno ?",
     "answers": [
       "2",
-      "5",
       "4",
+      "5",
       "3"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quel type de magie possèdent les épées d'Asta ?",
     "answers": [
-      "L'antimagie",
       "La magie de lumière",
       "La magie de feu",
+      "L'antimagie",
       "La magie du temps"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Dans quel escadron de chevaliers-mages Asta entre-t-il ?",
     "answers": [
       "L'Aube dorée",
-      "Les Taureaux noirs",
       "Les Lions flamboyants",
-      "Les Aigles d'argent"
+      "Les Aigles d'argent",
+      "Les Taureaux noirs"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Qui est le capitaine des Taureaux noirs ?",
     "answers": [
+      "Yami Sukehiro",
       "Julius Novachrono",
       "Fuegoleon Vermillion",
-      "Yami Sukehiro",
       "William Vangeance"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle magie utilise Yami Sukehiro ?",
     "answers": [
       "La magie du vent",
+      "La magie des ténèbres",
       "La magie de glace",
-      "La magie de feu",
-      "La magie des ténèbres"
+      "La magie de feu"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "De quel pays vient Yami ?",
     "answers": [
       "Du royaume de Spade",
       "Du royaume de Diamond",
-      "Du royaume de Heart",
-      "Du Pays du Soleil levant"
+      "Du Pays du Soleil levant",
+      "Du royaume de Heart"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Dans quel escadron Yuno entre-t-il ?",
     "answers": [
       "Les Mantes vertes",
-      "L'Aube dorée",
       "Les Taureaux noirs",
-      "Les Taureaux d'argent"
+      "Les Taureaux d'argent",
+      "L'Aube dorée"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Qui est la princesse royale, membre des Taureaux noirs, qui maîtrise l'eau ?",
     "answers": [
+      "Noelle Silva",
       "Mimosa Vermillion",
       "Charmy Pappitson",
-      "Noelle Silva",
       "Vanessa Enoteca"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Qui est l'Empereur-Mage au début de la série, capable de manipuler le temps ?",
     "answers": [
-      "Julius Novachrono",
       "Yami Sukehiro",
+      "Julius Novachrono",
       "William Vangeance",
       "Fuegoleon Vermillion"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quel esprit du vent accompagne Yuno ?",
     "answers": [
       "Gnome",
-      "Sylph (Bell)",
       "Undine",
+      "Sylph (Bell)",
       "Salamander"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel membre des Taureaux noirs utilise la magie de l'espace pour se téléporter ?",
     "answers": [
       "Luck Voltia",
-      "Finral Roulacase",
       "Magna Swing",
-      "Gordon Agrippa"
+      "Gordon Agrippa",
+      "Finral Roulacase"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Quel membre des Taureaux noirs adore la foudre et le combat ?",
@@ -207,17 +227,19 @@
       "Gauche Adlai",
       "Zora Ideale"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel délinquant des Taureaux noirs utilise une magie de feu et une batte ?",
     "answers": [
       "Luck Voltia",
+      "Magna Swing",
       "Gauche Adlai",
-      "Finral Roulacase",
-      "Magna Swing"
+      "Finral Roulacase"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle sorcière des Taureaux noirs utilise des fils magiques ?",
@@ -227,7 +249,8 @@
       "Vanessa Enoteca",
       "Charmy Pappitson"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel membre des Taureaux noirs est obsédé par sa petite sœur Marie ?",
@@ -237,127 +260,140 @@
       "Henry Legolant",
       "Gauche Adlai"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle petite gourmande des Taureaux noirs maîtrise la magie du coton ?",
     "answers": [
+      "Charmy Pappitson",
       "Vanessa Enoteca",
       "Noelle Silva",
-      "Charmy Pappitson",
       "Grey"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle phrase résume la philosophie d'Asta ?",
     "answers": [
-      "« Ne jamais abandonner, c'est ma magie ! »",
       "« Dattebayo ! »",
+      "« Ne jamais abandonner, c'est ma magie ! »",
       "« Je serai le roi des pirates ! »",
       "« Plus Ultra ! »"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Comment s'appelle le démon qui habite le grimoire d'Asta ?",
     "answers": [
-      "Liebe",
       "Zagred",
       "Lucifero",
+      "Liebe",
       "Megicula"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Comment s'appelle le groupe terroriste qui attaque le royaume dès le début ?",
     "answers": [
       "La Triade noire",
-      "L'Œil du soleil de minuit",
       "L'Aube dorée",
-      "Tartaros"
+      "Tartaros",
+      "L'Œil du soleil de minuit"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Comment s'appelle le trio de dirigeants du royaume de Spade ?",
     "answers": [
+      "La Triade noire",
       "La Main de Dieu",
       "Les Trois Démons",
-      "La Triade noire",
       "Les Espada"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel peuple, massacré il y a 500 ans, se réincarne dans des mages de Clover pour se venger ?",
     "answers": [
-      "Les elfes",
       "Les humains du Soleil levant",
+      "Les elfes",
       "Les démons",
       "Les nains"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel héros légendaire, premier Empereur-Mage, est lié à l'histoire des elfes ?",
     "answers": [
       "Licht",
       "Julius Novachrono",
-      "Lucius Zogratis",
-      "Lumière Silvamillion Clover"
+      "Lumière Silvamillion Clover",
+      "Lucius Zogratis"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui est le véritable chef des elfes, dont Patri a usurpé l'identité ?",
     "answers": [
       "Lumière",
-      "Licht",
       "Zagred",
-      "Dante"
+      "Dante",
+      "Licht"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "De quel royaume Yuno est-il en réalité le prince ?",
     "answers": [
+      "Le royaume de Spade",
       "Le royaume de Clover",
       "Le royaume de Heart",
-      "Le royaume de Spade",
       "Le royaume de Diamond"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui est l'antagoniste ultime de la série, frère de Dante, Zenon et Vanica ?",
     "answers": [
       "Licht",
-      "Zagred",
       "Lucius Zogratis",
+      "Zagred",
       "Yami Sukehiro"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel capitaine de l'Aube dorée porte un masque sur le visage ?",
     "answers": [
       "Charlotte Roselei",
       "Nozel Silva",
-      "Fuegoleon Vermillion",
-      "William Vangeance"
+      "William Vangeance",
+      "Fuegoleon Vermillion"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle capitaine des Roses bleues est secrètement amoureuse de Yami ?",
     "answers": [
-      "Charlotte Roselei",
       "Noelle Silva",
       "Dorothy Unsworth",
-      "Mereoleona Vermillion"
+      "Mereoleona Vermillion",
+      "Charlotte Roselei"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel frère de Noelle est capitaine des Aigles d'argent ?",
@@ -367,37 +403,41 @@
       "Solid Silva",
       "Leopold Vermillion"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle cheffe intérimaire des Lions flamboyants est connue pour sa force brute ?",
     "answers": [
       "Mimosa Vermillion",
-      "Noelle Silva",
       "Mereoleona Vermillion",
+      "Noelle Silva",
       "Charlotte Roselei"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle cousine de Noelle, magicienne des plantes, est amoureuse d'Asta ?",
     "answers": [
       "Sister Lily",
-      "Mimosa Vermillion",
       "Noelle Silva",
+      "Mimosa Vermillion",
       "Charmy Pappitson"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle religieuse d'Hage Asta demande-t-il sans cesse en mariage ?",
     "answers": [
       "Vanessa",
       "Mimosa",
-      "Sœur Lily",
-      "Noelle"
+      "Noelle",
+      "Sœur Lily"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Dans quel magazine Black Clover a-t-il débuté ?",
@@ -407,7 +447,8 @@
       "Weekly Shōnen Magazine",
       "Young Jump"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "En quelle année Black Clover a-t-il débuté ?",
@@ -417,17 +458,19 @@
       "2011",
       "2018"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Vers quel magazine la publication a-t-elle été transférée en 2023 ?",
     "answers": [
-      "Jump GIGA",
       "Young Jump",
       "Shōnen Jump+",
+      "Jump GIGA",
       "Weekly Shōnen Magazine"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel studio a produit l'anime Black Clover ?",
@@ -437,17 +480,19 @@
       "Bones",
       "Studio Pierrot"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel film de 2023 est sorti sur Netflix ?",
     "answers": [
+      "Black Clover : L'Épée de l'Empereur-Mage",
       "Black Clover : La Guerre des démons",
       "Black Clover : L'Œil de minuit",
-      "Black Clover : L'Épée de l'Empereur-Mage",
       "Black Clover : Le Réveil"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel royaume voisin attaque souvent Clover et mène des expériences sur ses mages de guerre ?",
@@ -457,28 +502,30 @@
       "Le Pays du Soleil levant",
       "Le royaume de Fiore"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Comment s'appelle la première grande épée d'Asta ?",
     "answers": [
       "L'Excalibur",
       "La Dragonslayer",
-      "La Zangetsu",
-      "La Pourfendeuse de démons"
+      "La Pourfendeuse de démons",
+      "La Zangetsu"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel membre des Taureaux noirs, fils d'un ancien chevalier-mage, est spécialiste des pièges ?",
     "answers": [
-      "Zora Ideale",
       "Finral Roulacase",
       "Magna Swing",
-      "Gauche Adlai"
+      "Gauche Adlai",
+      "Zora Ideale"
     ],
-    "correct": 0,
-    "difficulty": "expert"
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quelle magie Lucius Zogratis maîtrise-t-il ?",
@@ -489,17 +536,567 @@
       "La magie des ténèbres"
     ],
     "correct": 0,
-    "difficulty": "expert"
+    "difficulty": "difficile"
   },
   {
     "text": "Quelle membre timide des Taureaux noirs utilise la magie de transformation ?",
     "answers": [
-      "Grey",
       "Vanessa Enoteca",
+      "Grey",
       "Nero",
       "Charmy Pappitson"
     ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel poste Nacht Faust occupe-t-il au sein des Taureaux noirs ?",
+    "answers": [
+      "Capitaine",
+      "Trésorier",
+      "Vice-capitaine",
+      "Médecin"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel royaume Nacht a-t-il longtemps infiltré l'ennemi comme espion ?",
+    "answers": [
+      "Le royaume de Diamond",
+      "Le royaume de Heart",
+      "Le royaume de Clover",
+      "Le royaume de Spade"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui est le véritable propriétaire de la demeure servant de repaire aux Taureaux noirs ?",
+    "answers": [
+      "Henry Legolant",
+      "Gordon Agrippa",
+      "Zora Ideale",
+      "Finral Roulacase"
+    ],
     "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel pouvoir Henry Legolant exerce-t-il sur le repaire des Taureaux noirs ?",
+    "answers": [
+      "Il peut le rendre invisible",
+      "Il peut le réorganiser et le déplacer",
+      "Il peut y arrêter le temps",
+      "Il peut le transformer en grimoire"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle date correspond à l'anniversaire attribué à Asta, jour où il fut recueilli par l'église ?",
+    "answers": [
+      "Le 15 novembre",
+      "Le 17 septembre",
+      "Le 4 octobre",
+      "Le 10 janvier"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel jour Yami Sukehiro fête-t-il son anniversaire ?",
+    "answers": [
+      "Le 4 octobre",
+      "Le 6 février",
+      "Le 15 octobre",
+      "Le 17 septembre"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la date d'anniversaire de Noelle Silva ?",
+    "answers": [
+      "Le 15 novembre",
+      "Le 3 juin",
+      "Le 11 octobre",
+      "Le 20 février"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien d'ordres de chevaliers-mages protègent officiellement le royaume de Clover ?",
+    "answers": [
+      "Sept",
+      "Neuf",
+      "Dix",
+      "Treize"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "De quel village rural Magna Swing est-il originaire ?",
+    "answers": [
+      "Hage",
+      "Sosshi",
+      "Rayaka",
+      "Kiten"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel jour Luck Voltia fête-t-il son anniversaire ?",
+    "answers": [
+      "Le 7 avril",
+      "Le 27 juin",
+      "Le 16 mai",
+      "Le 11 octobre"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la date d'anniversaire de Finral Roulacase ?",
+    "answers": [
+      "Le 6 février",
+      "Le 20 février",
+      "Le 3 juin",
+      "Le 4 octobre"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel jour Vanessa Enoteca fête-t-elle son anniversaire ?",
+    "answers": [
+      "Le 15 novembre",
+      "Le 16 mai",
+      "Le 17 septembre",
+      "Le 7 avril"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la date d'anniversaire de Charmy Pappitson ?",
+    "answers": [
+      "Le 27 juin",
+      "Le 11 octobre",
+      "Le 3 juin",
+      "Le 6 février"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel jour Gauche Adlai fête-t-il son anniversaire ?",
+    "answers": [
+      "Le 16 mai",
+      "Le 15 octobre",
+      "Le 20 février",
+      "Le 27 juin"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la date d'anniversaire de Julius Novachrono ?",
+    "answers": [
+      "Le 15 octobre",
+      "Le 4 octobre",
+      "Le 17 septembre",
+      "Le 15 novembre"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle place Noelle occupe-t-elle dans la fratrie de la famille Silva ?",
+    "answers": [
+      "L'aînée",
+      "La benjamine",
+      "La deuxième née",
+      "La sœur adoptive"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle position Finral occupe-t-il à la naissance dans la famille Vaude ?",
+    "answers": [
+      "Le fils cadet",
+      "Le fils adoptif",
+      "Le fils aîné",
+      "Le fils unique"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Que subissent Gauche et Marie après la mort de leurs parents ?",
+    "answers": [
+      "Ils deviennent membres de l'Aube dorée",
+      "Ils sont envoyés au royaume de Heart",
+      "Ils héritent du titre de leur père",
+      "Ils sont chassés de la maison familiale"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "De quel lieu fermé Vanessa s'est-elle enfuie après sa rencontre avec Yami ?",
+    "answers": [
+      "La Forêt des sorcières",
+      "Le Palais royal",
+      "Le temple sous-marin",
+      "Le royaume de Diamond"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel surnom Charmy donne-t-elle à Yuno après qu'il a sauvé sa nourriture ?",
+    "answers": [
+      "Le prince du vent",
+      "Le prince sauveur de nourriture",
+      "Le prince de Clover",
+      "Le prince des moutons"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel membre des Taureaux noirs a choisi le nom « Nero » pour l'oiseau qui suit Asta ?",
+    "answers": [
+      "Magna Swing",
+      "Finral Roulacase",
+      "Luck Voltia",
+      "Gauche Adlai"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel titre porte Loropechika dans le royaume de Heart ?",
+    "answers": [
+      "Capitaine",
+      "Grande prêtresse de Clover",
+      "Impératrice-mage",
+      "Reine"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel attribut magique Loropechika utilise-t-elle ?",
+    "answers": [
+      "L'eau",
+      "Le vent",
+      "La lumière",
+      "La terre"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle souveraine l'esprit de l'eau Undine est-il lié par contrat ?",
+    "answers": [
+      "Noelle Silva",
+      "Loropechika",
+      "Mimosa Vermillion",
+      "Vanica Zogratis"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel lien familial unit Dante, Vanica et Zenon Zogratis ?",
+    "answers": [
+      "Ils sont cousins",
+      "Ils sont père, mère et fils",
+      "Ils sont frères et sœur",
+      "Ils ne sont pas apparentés"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle combinaison de magies Dante Zogratis emploie-t-il ?",
+    "answers": [
+      "Os et espace",
+      "Sang et malédiction",
+      "Temps et lumière",
+      "Corps et gravité"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel démon de haut rang prête son pouvoir à Dante Zogratis ?",
+    "answers": [
+      "Lucifero",
+      "Megicula",
+      "Zagred",
+      "Liebe"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle combinaison de magies Zenon Zogratis utilise-t-il ?",
+    "answers": [
+      "Corps et gravité",
+      "Os et espace",
+      "Sang et malédiction",
+      "Vent et étoiles"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle combinaison de magies Vanica Zogratis manie-t-elle ?",
+    "answers": [
+      "Os et espace",
+      "Corps et gravité",
+      "Sang et malédiction",
+      "Eau et sceaux"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel démon est associé à Vanica Zogratis ?",
+    "answers": [
+      "Lucifero",
+      "Liebe",
+      "Zagred",
+      "Megicula"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelles deux femmes Vanica a-t-elle frappées d'une malédiction mortelle ?",
+    "answers": [
+      "Acier Silva et Loropechika",
+      "Noelle Silva et Mimosa Vermillion",
+      "Mereoleona et Charlotte",
+      "Secre et Vanessa"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle perception Yami combine-t-il à sa magie des ténèbres pour anticiper les attaques ?",
+    "answers": [
+      "Le mana skin",
+      "Le ki",
+      "Le fullbring",
+      "Le reishi"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a invité Yami à rejoindre les chevaliers-mages de Clover ?",
+    "answers": [
+      "William Vangeance",
+      "Fuegoleon Vermillion",
+      "Julius Novachrono",
+      "Nozel Silva"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle identité humaine se cache derrière l'oiseau Nero ?",
+    "answers": [
+      "Liebe",
+      "Grey",
+      "Sally",
+      "Secre Swallowtail"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Selon la légende de Clover, qu'abrite la cinquième feuille d'un grimoire ?",
+    "answers": [
+      "Un démon",
+      "Un esprit élémentaire",
+      "Un elfe",
+      "Un dragon"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quelle date l'anime Black Clover a-t-il commencé sa diffusion japonaise ?",
+    "answers": [
+      "Le 15 février 2015",
+      "Le 3 octobre 2017",
+      "Le 16 juin 2023",
+      "Le 31 mars 2021"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel studio assure l'animation de la série télévisée Black Clover ?",
+    "answers": [
+      "Bones",
+      "Madhouse",
+      "Studio Pierrot",
+      "ufotable"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel comédien japonais prête sa voix à Asta dans l'anime ?",
+    "answers": [
+      "Nobunaga Shimazaki",
+      "Junichi Suwabe",
+      "Natsuki Hanae",
+      "Gakuto Kajiwara"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel comédien japonais interprète Yuno dans l'anime ?",
+    "answers": [
+      "Nobunaga Shimazaki",
+      "Gakuto Kajiwara",
+      "Daisuke Ono",
+      "Ayumu Murase"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel comédien japonais interprète Yami Sukehiro ?",
+    "answers": [
+      "Katsuyuki Konishi",
+      "Junichi Suwabe",
+      "Kōsuke Toriumi",
+      "Toshiyuki Morikawa"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle comédienne japonaise prête sa voix à Noelle Silva ?",
+    "answers": [
+      "Nana Mizuki",
+      "Aoi Yūki",
+      "Kana Yūki",
+      "Yui Ogura"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui est crédité comme directeur général de la série animée Black Clover ?",
+    "answers": [
+      "Ayataka Tanemura",
+      "Kanichi Katō",
+      "Itsuko Takeda",
+      "Tatsuya Yoshihara"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui est crédité comme réalisateur de la série animée sur le site officiel ?",
+    "answers": [
+      "Ayataka Tanemura",
+      "Tatsuya Yoshihara",
+      "Hajime Takakuwa",
+      "Minako Seki"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui signe la composition de la série animée Black Clover ?",
+    "answers": [
+      "Itsuko Takeda",
+      "Kanichi Katō",
+      "Kumi Tokunaga",
+      "Yūki Tabata"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui est créditée au character design principal de l'anime ?",
+    "answers": [
+      "Kumi Tokunaga",
+      "Yuki Maeda",
+      "Itsuko Takeda",
+      "Ai Shinohara"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui compose la musique de la série animée Black Clover ?",
+    "answers": [
+      "Kanichi Katō",
+      "Hajime Takakuwa",
+      "Tatsuya Yoshihara",
+      "Minako Seki"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui assure la direction sonore de l'anime Black Clover ?",
+    "answers": [
+      "Hajime Takakuwa",
+      "Minako Seki",
+      "Ayataka Tanemura",
+      "Hiroshi Okuda"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur quelle chaîne japonaise Black Clover a-t-il été diffusé à partir de 2017 ?",
+    "answers": [
+      "Fuji TV",
+      "TV Tokyo",
+      "TBS",
+      "NHK"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel classement le film L'Épée de l'Empereur-Mage a-t-il atteint dans le Top 10 mondial hebdomadaire de Netflix ?",
+    "answers": [
+      "La 1re place",
+      "La 5e place",
+      "La 2e place",
+      "La 10e place"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quels deux capitaines la Triade noire enlève-t-elle lors de son offensive ?",
+    "answers": [
+      "Nozel Silva et Fuegoleon Vermillion",
+      "Charlotte Roselei et Jack l'Éventreur",
+      "Rill Boismortier et Dorothy Unsworth",
+      "Yami Sukehiro et William Vangeance"
+    ],
+    "correct": 3,
     "difficulty": "expert"
   }
 ]
