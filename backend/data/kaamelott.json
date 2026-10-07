@@ -958,5 +958,49 @@
       "Des serpents"
     ],
     "correct": 3
+  },
+  {
+    "text": "Qui a créé la série télévisée Kaamelott ?",
+    "answers": [
+      "Alexandre Astier",
+      "Alain Chabat",
+      "Bruno Solo",
+      "François Rollin"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "À quel siècle M6 situe-t-elle l'action de Kaamelott ?",
+    "answers": [
+      "Au IVe siècle",
+      "Au Ve siècle",
+      "Au VIe siècle",
+      "Au VIIe siècle"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien d'épisodes la série Kaamelott compte-t-elle au total selon M6 ?",
+    "answers": [
+      "420",
+      "448",
+      "458",
+      "486"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel acteur incarne César dans le Livre VI de Kaamelott ?",
+    "answers": [
+      "Patrick Chesnais",
+      "Tchéky Karyo",
+      "Carlo Brandt",
+      "Pierre Mondy"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
   }
 ]
