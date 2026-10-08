@@ -7,127 +7,140 @@
       "Naoko Takeuchi",
       "Rumiko Takahashi"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle le héros, surnommé « Fullmetal » ?",
     "answers": [
       "Roy Mustang",
-      "Alphonse Elric",
       "Edward Elric",
+      "Alphonse Elric",
       "Van Hohenheim"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle le petit frère d'Edward ?",
     "answers": [
-      "Alphonse",
       "Ling",
       "Winry",
+      "Alphonse",
       "Maes"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Sous quelle forme vit Alphonse après la transmutation ratée ?",
     "answers": [
       "Un chat",
       "Un homonculus",
-      "Une armure vide",
-      "Une chimère"
+      "Une chimère",
+      "Une armure vide"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Qui les frères Elric ont-ils tenté de ressusciter ?",
     "answers": [
-      "Leur chien",
       "Leur mère",
+      "Leur chien",
       "Leur père",
       "Leur professeure"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle le principe fondamental de l'alchimie ?",
     "answers": [
       "Le cercle ultime",
+      "L'échange équivalent",
       "La pierre philosophale",
-      "La transmutation humaine",
-      "L'échange équivalent"
+      "La transmutation humaine"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Qui fabrique les automails d'Edward ?",
     "answers": [
-      "Winry Rockbell",
       "Riza Hawkeye",
       "Izumi Curtis",
+      "Winry Rockbell",
       "Lan Fan"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel alchimiste d'État est surnommé « l'Alchimiste de flamme » ?",
     "answers": [
       "Alex Louis Armstrong",
       "Solf J. Kimblee",
-      "Roy Mustang",
-      "Shou Tucker"
+      "Shou Tucker",
+      "Roy Mustang"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle le pays où se déroule l'histoire ?",
     "answers": [
+      "Amestris",
       "Xing",
       "Drachma",
-      "Creta",
-      "Amestris"
+      "Creta"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appellent les êtres artificiels nommés d'après les péchés capitaux ?",
     "answers": [
-      "Les homonculus",
       "Les golems",
+      "Les homonculus",
       "Les chimères",
       "Les automails"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quel homonculus peut changer d'apparence à volonté ?",
     "answers": [
       "Sloth",
-      "Envy",
       "Lust",
+      "Envy",
       "Gluttony"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel homonculus a une faim insatiable ?",
     "answers": [
       "Wrath",
-      "Gluttony",
       "Greed",
-      "Pride"
+      "Pride",
+      "Gluttony"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Qui est la lieutenante fidèle de Roy Mustang ?",
     "answers": [
+      "Riza Hawkeye",
       "Olivier Armstrong",
       "Maria Ross",
-      "Riza Hawkeye",
       "Winry Rockbell"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Quel ami de Roy Mustang est assassiné, un moment marquant de la série ?",
@@ -137,7 +150,8 @@
       "Kain Fuery",
       "Jean Havoc"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quel personnage traque les alchimistes d'État pour venger le peuple d'Ishbal ?",
@@ -147,27 +161,30 @@
       "Scar",
       "Kimblee"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Qui est la professeure d'alchimie des frères Elric ?",
     "answers": [
-      "Izumi Curtis",
       "Pinako Rockbell",
       "Olivier Armstrong",
-      "Trisha Elric"
+      "Trisha Elric",
+      "Izumi Curtis"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle le père des frères Elric ?",
     "answers": [
+      "Van Hohenheim",
       "Maes Hughes",
       "Sig Curtis",
-      "Van Hohenheim",
       "Tim Marcoh"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle la mère d'Edward et Alphonse ?",
@@ -177,17 +194,19 @@
       "Gracia Elric",
       "Pinako Elric"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quel membre Edward a-t-il sacrifié pour lier l'âme d'Alphonse à l'armure ?",
     "answers": [
-      "Son bras droit",
       "Son bras gauche",
       "Sa jambe droite",
+      "Son bras droit",
       "Sa jambe gauche"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel objet légendaire permet de contourner l'échange équivalent ?",
@@ -197,17 +216,19 @@
       "L'automail",
       "La pierre philosophale"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "De quoi est faite la pierre philosophale ?",
     "answers": [
+      "D'âmes humaines",
       "De sang de chimère",
       "D'or pur",
-      "D'âmes humaines",
       "De mercure rouge"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Dans quel village ont grandi les frères Elric ?",
@@ -217,37 +238,41 @@
       "Rush Valley",
       "Central City"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle ville est célèbre pour ses mécaniciens d'automail ?",
     "answers": [
       "Lior",
       "Resembool",
-      "Central City",
-      "Rush Valley"
+      "Rush Valley",
+      "Central City"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel alchimiste a transformé sa propre fille en chimère ?",
     "answers": [
-      "Shou Tucker",
       "Basque Grand",
       "Tim Marcoh",
-      "Solf J. Kimblee"
+      "Solf J. Kimblee",
+      "Shou Tucker"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Comment s'appelle la fille de Shou Tucker ?",
     "answers": [
+      "Nina",
       "Rose",
       "Elicia",
-      "Paninya",
-      "Nina"
+      "Paninya"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel alchimiste très musclé vient d'une grande lignée militaire ?",
@@ -257,17 +282,19 @@
       "Jean Havoc",
       "Sig Curtis"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui commande la forteresse de Briggs ?",
     "answers": [
       "Maes Hughes",
       "Riza Hawkeye",
-      "Roy Mustang",
-      "Olivier Mira Armstrong"
+      "Olivier Mira Armstrong",
+      "Roy Mustang"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui est le prince de Xing qui devient l'hôte de Greed ?",
@@ -277,37 +304,41 @@
       "Fu",
       "Ling Yao"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle jeune alchimiste de Xing voyage avec un panda miniature ?",
     "answers": [
+      "May Chang",
       "Elicia Hughes",
       "Winry Rockbell",
-      "Lan Fan",
-      "May Chang"
+      "Lan Fan"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Comment s'appelle le chien de Riza Hawkeye ?",
     "answers": [
-      "Black Hayate",
       "Xiao-Mei",
+      "Black Hayate",
       "Den",
       "Alexander"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui a assassiné Maes Hughes ?",
     "answers": [
-      "Envy",
       "Greed",
       "Lust",
+      "Envy",
       "Scar"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel homonculus se cache sous l'identité du généralissime King Bradley ?",
@@ -317,67 +348,74 @@
       "Envy",
       "Wrath"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel homonculus prend l'apparence d'un enfant, Selim Bradley ?",
     "answers": [
-      "Gluttony",
       "Pride",
+      "Gluttony",
       "Lust",
       "Sloth"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel homonculus, paresseux mais surpuissant, creuse un tunnel géant ?",
     "answers": [
-      "Sloth",
       "Wrath",
+      "Sloth",
       "Pride",
       "Greed"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel homonculus possède des ongles tranchants et extensibles ?",
     "answers": [
-      "Lust",
       "Gluttony",
       "Sloth",
+      "Lust",
       "Envy"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel alchimiste est surnommé « l'Alchimiste écarlate » ?",
     "answers": [
       "Roy Mustang",
-      "Solf J. Kimblee",
       "Alex Louis Armstrong",
-      "Shou Tucker"
+      "Shou Tucker",
+      "Solf J. Kimblee"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui est l'antagoniste principal, créateur des homonculus ?",
     "answers": [
+      "Father (le Père)",
       "Van Hohenheim",
       "Envy",
-      "Father (le Père)",
       "King Bradley"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Que doit-on céder à la « Porte de la Vérité » lors d'une transmutation humaine ?",
     "answers": [
-      "Une partie de son corps",
       "Des années de vie",
+      "Une partie de son corps",
       "De l'or",
       "Rien du tout"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Dans quel magazine Fullmetal Alchemist a-t-il été prépublié ?",
@@ -387,27 +425,30 @@
       "Monthly Shōnen Gangan",
       "Weekly Shōnen Jump"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Combien de tomes compte le manga Fullmetal Alchemist ?",
     "answers": [
-      "27",
       "18",
       "34",
-      "42"
+      "42",
+      "27"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "En quelle année le manga s'est-il terminé ?",
     "answers": [
-      "2012",
       "2010",
+      "2012",
       "2006",
       "2008"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quelle série animée de 2009 adapte fidèlement le manga ?",
@@ -417,17 +458,19 @@
       "Fullmetal Alchemist: Next",
       "Fullmetal Alchemist: Revenge"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Dans quelle ville un faux prêtre, Cornello, trompe-t-il la population ?",
     "answers": [
       "Youswell",
       "Dublith",
-      "Resembool",
-      "Lior"
+      "Lior",
+      "Resembool"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel est le grade militaire d'Edward en tant qu'alchimiste d'État ?",
@@ -437,17 +480,19 @@
       "Colonel",
       "Commandant"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Comment s'appelait l'ancienne cité détruite dont Hohenheim est issu ?",
     "answers": [
+      "Xerxès",
       "Creta",
       "Drachma",
-      "Xerxès",
       "Ishbal"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel phénomène céleste marque le « Jour promis » ?",
@@ -457,7 +502,8 @@
       "Une pleine lune rouge",
       "Une comète"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Qui tue l'homonculus Lust ?",
@@ -467,7 +513,8 @@
       "Roy Mustang",
       "Edward Elric"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "À quel âge Edward devient-il alchimiste d'État ?",
@@ -478,18 +525,18 @@
       "12 ans"
     ],
     "correct": 3,
-    "difficulty": "expert"
+    "difficulty": "difficile"
   },
   {
     "text": "Comment s'appelle le panda miniature de May Chang ?",
     "answers": [
+      "Xiao-Mei",
       "Hayate",
       "Mei-Lan",
-      "Xiao-Mei",
       "Den"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel homonculus Roy Mustang brûle-t-il pour venger la mort de Hughes ?",
@@ -500,6 +547,556 @@
       "Lust"
     ],
     "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle jambe Edward perd-il lors de la transmutation humaine ?",
+    "answers": [
+      "La jambe droite",
+      "Les deux jambes",
+      "La jambe gauche",
+      "Aucune jambe"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Que perd entièrement Alphonse lors de la transmutation ratée ?",
+    "answers": [
+      "Sa mémoire",
+      "Son bras gauche",
+      "Sa capacité à transmuter",
+      "Son corps"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quoi l'âme d'Alphonse est-elle fixée dans l'armure ?",
+    "answers": [
+      "À un sceau de sang",
+      "À une pierre philosophale",
+      "À une montre d'argent",
+      "À un cercle gravé dans le casque"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quels membres d'Edward sont remplacés par des automails ?",
+    "answers": [
+      "Le bras gauche et la jambe droite",
+      "Le bras droit et la jambe gauche",
+      "Les deux bras",
+      "Les deux jambes"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Que fait Edward pour transmuter sans tracer de cercle ?",
+    "answers": [
+      "Il claque des doigts",
+      "Il prononce une formule",
+      "Il frappe ses mains l'une contre l'autre",
+      "Il utilise sa montre d'État"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel objet officiel identifie Edward comme alchimiste d'État ?",
+    "answers": [
+      "Une bague en or",
+      "Un insigne de col",
+      "Une plaque militaire",
+      "Une montre de poche en argent"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel accessoire Roy Mustang utilise-t-il pour créer l'étincelle de son alchimie ?",
+    "answers": [
+      "Des gants en tissu d'allumage",
+      "Un briquet militaire",
+      "Une bague de silex",
+      "Une lame d'acier"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Où les recherches sur l'alchimie de flamme sont-elles codées ?",
+    "answers": [
+      "Dans la montre de Mustang",
+      "Dans le tatouage du dos de Riza Hawkeye",
+      "Sur les gants de Mustang",
+      "Dans le journal de Hughes"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel équipement Alex Louis Armstrong emploie-t-il pour transmuter en combat ?",
+    "answers": [
+      "Une lance télescopique",
+      "Des gants d'allumage",
+      "Des gantelets de pierre",
+      "Un automail blindé"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel prix Izumi Curtis a-t-elle payé pour sa transmutation humaine ?",
+    "answers": [
+      "La vue de son œil gauche",
+      "Son bras droit",
+      "Sa mémoire d'alchimiste",
+      "Une partie de ses organes internes"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel métier exerce Sig Curtis, le mari d'Izumi ?",
+    "answers": [
+      "Boucher",
+      "Forgeron",
+      "Médecin",
+      "Mineur"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui est Pinako Rockbell pour Winry ?",
+    "answers": [
+      "Sa tante",
+      "Sa grand-mère",
+      "Sa mère",
+      "Sa sœur aînée"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui tue les parents de Winry pendant la guerre d'Ishval ?",
+    "answers": [
+      "Solf J. Kimblee",
+      "King Bradley",
+      "Scar",
+      "Envy"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel alchimiste d'État fabrique des pierres philosophales incomplètes ?",
+    "answers": [
+      "Basque Grand",
+      "Isaac McDougal",
+      "Giolio Comanche",
+      "Tim Marcoh"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle ville minière Yoki abusait-il de son autorité ?",
+    "answers": [
+      "Youswell",
+      "Resembool",
+      "Lior",
+      "Dublith"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "De quel meurtre Maria Ross est-elle faussement accusée ?",
+    "answers": [
+      "Celui de Nina Tucker",
+      "Celui de Maes Hughes",
+      "Celui de Basque Grand",
+      "Celui du général Raven"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel numéro de laboratoire porte Barry le Boucher sous forme d'armure ?",
+    "answers": [
+      "Numéro 48",
+      "Numéro 23",
+      "Numéro 66",
+      "Numéro 05"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel numéro est attribué aux frères Slicer dans le cinquième laboratoire ?",
+    "answers": [
+      "Numéro 66",
+      "Numéro 13",
+      "Numéro 27",
+      "Numéro 48"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel matériau Greed modifie-t-il pour former son Bouclier ultime ?",
+    "answers": [
+      "Le carbone de son corps",
+      "Le fer de son sang",
+      "Le calcium de ses os",
+      "La silice de sa peau"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Pourquoi Ling Yao recherche-t-il la pierre philosophale ?",
+    "answers": [
+      "Pour ressusciter sa mère",
+      "Pour obtenir l'immortalité et assurer sa succession",
+      "Pour détruire Amestris",
+      "Pour devenir alchimiste d'État"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel membre Lan Fan sacrifie-t-elle pour échapper à King Bradley ?",
+    "answers": [
+      "Sa jambe droite",
+      "Son œil gauche",
+      "Son bras gauche",
+      "Sa main droite"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel lien de parenté unit Fu à Lan Fan ?",
+    "answers": [
+      "Il est son père",
+      "Il est son frère",
+      "Il est son oncle",
+      "Il est son grand-père"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel art alchimique May Chang pratique-t-elle ?",
+    "answers": [
+      "L'alkahestrie",
+      "L'alchimie de flamme",
+      "L'alchimie de cristal",
+      "L'alchimie des ombres"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de clans impériaux composent la lutte de succession à Xing ?",
+    "answers": [
+      "Douze",
+      "Cinquante",
+      "Vingt-sept",
+      "Cent"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "De qui provient le bras droit tatoué de Scar ?",
+    "answers": [
+      "De son père",
+      "D'un alchimiste d'État",
+      "De son frère aîné",
+      "De Van Hohenheim"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle phase alchimique le bras droit de Scar applique-t-il surtout ?",
+    "answers": [
+      "La reconstruction",
+      "La compréhension",
+      "La fusion",
+      "La décomposition"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quels traits physiques sont caractéristiques du peuple ishvalan ?",
+    "answers": [
+      "La peau sombre et les yeux rouges",
+      "Les cheveux blancs et les yeux bleus",
+      "La peau pâle et les yeux dorés",
+      "Les cheveux rouges et les yeux verts"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel membre de Briggs possède des origines ishvalanes par son grand-père ?",
+    "answers": [
+      "Buccaneer",
+      "Miles",
+      "Falman",
+      "Raven"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment se nomme l'automail de combat principal de Buccaneer ?",
+    "answers": [
+      "Basilisk",
+      "Grizzly",
+      "Crocodile",
+      "Manticore"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel pays se trouve au nord de la forteresse de Briggs ?",
+    "answers": [
+      "Creta",
+      "Aerugo",
+      "Xing",
+      "Drachma"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel officier âgé finit par devenir généralissime d'Amestris ?",
+    "answers": [
+      "Grumman",
+      "Hakuro",
+      "Raven",
+      "Basque Grand"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle blessure Jean Havoc subit-il lors de son combat contre Lust ?",
+    "answers": [
+      "Il perd son bras droit",
+      "Il est paralysé des jambes",
+      "Il devient aveugle",
+      "Il perd l'ouïe"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle qualité militaire distingue particulièrement Heymans Breda ?",
+    "answers": [
+      "Son adresse au sabre",
+      "Sa vitesse de tir",
+      "Son intelligence stratégique",
+      "Son alchimie médicale"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle aptitude exceptionnelle Vato Falman possède-t-il ?",
+    "answers": [
+      "Une force surhumaine",
+      "La vision nocturne",
+      "L'alchimie sans cercle",
+      "Une mémoire remarquable"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel domaine Kain Fuery est-il spécialiste ?",
+    "answers": [
+      "Les communications",
+      "La médecine",
+      "L'artillerie",
+      "Le renseignement chimique"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle capacité spéciale possède l'œil gauche de King Bradley ?",
+    "answers": [
+      "La Vision de la Vérité",
+      "L'Œil ultime",
+      "L'Œil de faucon",
+      "Le Regard pétrifiant"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel environnement empêche Pride d'utiliser ses ombres ?",
+    "answers": [
+      "Le froid intense",
+      "Le bruit aigu",
+      "Une obscurité totale",
+      "L'eau courante"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel homonculus est révélé comme le plus rapide malgré son apparence massive ?",
+    "answers": [
+      "Wrath",
+      "Greed",
+      "Pride",
+      "Sloth"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Que représente le faux portail situé dans l'estomac de Gluttony ?",
+    "answers": [
+      "Une tentative ratée de recréer la Porte de la Vérité",
+      "Un cercle de téléportation vers Xing",
+      "Une prison créée par Pride",
+      "L'entrée du repaire de Father"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle est la véritable apparence d'Envy ?",
+    "answers": [
+      "Un dragon noir",
+      "Une petite créature parasite",
+      "Un enfant sans visage",
+      "Une armure vide"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle était la forme originelle de Father à Xerxès ?",
+    "answers": [
+      "Une ombre de la Porte",
+      "Un roi immortel",
+      "Le Nain dans la fiole",
+      "Une pierre philosophale consciente"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel numéro portait Hohenheim lorsqu'il était esclave à Xerxès ?",
+    "answers": [
+      "Numéro 66",
+      "Numéro 48",
+      "Numéro 01",
+      "Numéro 23"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Pourquoi le roi de Xerxès accepte-t-il le plan du Nain dans la fiole ?",
+    "answers": [
+      "Pour devenir immortel",
+      "Pour conquérir Xing",
+      "Pour ressusciter son fils",
+      "Pour créer les homonculus"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quoi servent les guerres provoquées autour d'Amestris dans le plan de Father ?",
+    "answers": [
+      "À fournir du charbon aux laboratoires",
+      "À tracer un cercle de transmutation national avec le sang",
+      "À entraîner l'armée contre Xing",
+      "À attirer les alchimistes étrangers"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel cercle Scar active-t-il pendant le Jour promis ?",
+    "answers": [
+      "Le cercle de pétrification d'Ishval",
+      "Le cercle solaire de Xerxès",
+      "Le cercle de transmutation inverse de son frère",
+      "Le cercle de flammes de Mustang"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel studio a produit l'anime Fullmetal Alchemist: Brotherhood ?",
+    "answers": [
+      "Madhouse",
+      "Production I.G",
+      "A-1 Pictures",
+      "Bones"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a réalisé Fullmetal Alchemist: Brotherhood ?",
+    "answers": [
+      "Yasuhiro Irie",
+      "Seiji Mizushima",
+      "Shinichirō Watanabe",
+      "Tetsurō Araki"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a composé la musique de Fullmetal Alchemist: Brotherhood ?",
+    "answers": [
+      "Michiru Ōshima",
+      "Akira Senju",
+      "Yuki Kajiura",
+      "Hiroyuki Sawano"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle comédienne prête sa voix japonaise à Edward dans Brotherhood ?",
+    "answers": [
+      "Rie Kugimiya",
+      "Megumi Takamoto",
+      "Romi Park",
+      "Fumiko Orikasa"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle comédienne prête sa voix japonaise à Alphonse dans Brotherhood ?",
+    "answers": [
+      "Romi Park",
+      "Nana Mizuki",
+      "Minami Takayama",
+      "Rie Kugimiya"
+    ],
+    "correct": 3,
     "difficulty": "expert"
   }
 ]
