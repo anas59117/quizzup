@@ -15,6 +15,8 @@ import { useI18n } from './i18n';
 import { useGameSocket } from './useGameSocket';
 import { OnboardingOverlay, useOnboarding } from './OnboardingOverlay';
 import { useDailyStreak } from './DailyStreak';
+import TournamentPage from './TournamentPage';
+import { ChallengeReceiver } from './ChallengeLink';
 
 const LIVE_SESSION_KEY = 'quizzup-live-session';
 const HISTORY_KEY = 'quizzup';
@@ -54,6 +56,13 @@ export default function App() {
   const toggleMute = useCallback(() => setMuted(SFX.toggle()), []);
   useEffect(() => { music.setMuted(muted); }, [muted]);
   useEffect(() => { initAds(); }, []);
+
+  // Detect challenge URLs
+  useEffect(() => {
+    const p = window.location.pathname;
+    const m = p.match(/^\/challenge\/(.+)$/);
+    if (m) { setChallengeCode(m[1]); }
+  }, []);
   // Rewarded ad on the result screen: showAdFn from Google, or null when no
   // ad is ready. adClaimed flips once the server credited the bonus.
   const [adOffer, setAdOffer] = useState(null);
@@ -131,6 +140,7 @@ export default function App() {
   const { isFirstTime, markDone } = useOnboarding();
   const [showOnboarding, setShowOnboarding] = useState(false);
   const dailyStreak = useDailyStreak();
+  const [challengeCode, setChallengeCode] = useState(null);
 
   const messageHandlerRef = useRef(null);
 
@@ -947,6 +957,7 @@ export default function App() {
           quickMatch={quickMatch} startWithCategory={startWithCategory}
           onOpenProfile={() => setStage('profile')} onSeeAll={(fam) => { setCategoryFamily(fam || null); setStage('categories'); }}
           createRoom={createRoom} onOpenEnterCode={() => { setJoinError(false); setJoinCode(''); setStage('enter_code'); }}
+          onStartTournament={() => setStage('tournament')}
           pending={pending}
         />
         <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
@@ -1138,3 +1149,14 @@ export default function App() {
 
   return null;
 }
+  if (stage === 'tournament') {
+    return (
+      <div className="app">
+        <TournamentPage topic={currentTopic} myName={name} myAvatar={avatar} onHome={() => setStage('home')} />
+
+        {challengeCode && <ChallengeReceiver code={challengeCode} onAccept={(data) => { setChallengeCode(null); setCurrentTopic(topics.find(t => t.key === data.topicKey) || topics[0]); setStage('waiting'); /* start challenge */ }} onDecline={() => setChallengeCode(null)} />}
+            </div>
+    );
+  }
+
+
