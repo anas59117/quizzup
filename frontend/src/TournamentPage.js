@@ -84,6 +84,7 @@ export default function TournamentPage({ topic, myName, myAvatar, onHome }) {
       });
     }, 1000);
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [view, revealed, selected, currentQ]);
 
   const [tournamentResult, setTournamentResult] = useState(null);
