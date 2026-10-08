@@ -67,7 +67,7 @@ export default function TournamentPage({ topic, myName, myAvatar, onHome }) {
     }
     setBots(b);
     setQuestions(getQuestions(topic?.key || 'general'));
-    SFX.select();
+    // SFX.select();
   }, [topic]);
 
   // Timer
@@ -103,7 +103,7 @@ export default function TournamentPage({ topic, myName, myAvatar, onHome }) {
     setMyScore((s) => s + points);
     setBotScore((s) => s + botPts);
     setRevealed(true);
-    if (isCorrect) SFX.correct(); else SFX.wrong();
+    // if (isCorrect) SFX.correct(); else SFX.wrong();
 
     setTimeout(() => {
       if (currentQ + 1 < 3) {
@@ -129,7 +129,7 @@ export default function TournamentPage({ topic, myName, myAvatar, onHome }) {
           ].sort((a, b) => b.score - a.score);
           setTournamentResult({ won: finalWon, ranking, coins: finalWon ? 500 : totalWins * 100, xp: finalWon ? 200 : totalWins * 50 });
           setView('result');
-          if (finalWon) SFX.victory(); else SFX.defeat();
+          // if (finalWon) SFX.victory(); else SFX.defeat();
         } else {
           // Next round
           setResults(newRes);
@@ -152,6 +152,14 @@ export default function TournamentPage({ topic, myName, myAvatar, onHome }) {
   const currentQuestion = questions[currentQ];
 
   if (view === 'lobby') {
+    if (bots.length === 0) {
+      return (
+        <div className="container center">
+          <div className="spinner" />
+          <p style={{color: 'rgba(255,255,255,0.5)', marginTop: 20}}>Loading...</p>
+        </div>
+      );
+    }
     return (
       <div className="container center">
         <div className="tournament-lobby">
