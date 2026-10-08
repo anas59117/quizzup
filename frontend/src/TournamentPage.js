@@ -86,6 +86,8 @@ export default function TournamentPage({ topic, myName, myAvatar, onHome }) {
     return () => clearInterval(interval);
   }, [view, revealed, selected, currentQ]);
 
+  const [tournamentResult, setTournamentResult] = useState(null);
+
   const handleAnswer = useCallback((idx) => {
     if (selected !== null || revealed || view !== 'match') return;
     setSelected(idx);
@@ -142,7 +144,6 @@ export default function TournamentPage({ topic, myName, myAvatar, onHome }) {
     }, 1200);
   }, [selected, revealed, view, currentQ, timer, questions, myScore, botScore, results, round, bots, myName, myAvatar, topic]);
 
-  const [tournamentResult, setTournamentResult] = useState(null);
 
   const pct = (timer / 10) * 100;
   const roundNames = [t('roundQuarter'), t('roundSemi'), t('roundFinal')];
