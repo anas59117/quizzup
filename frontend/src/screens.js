@@ -429,45 +429,6 @@ export function RoundIntroContent({ intro, totalRounds, opponents, avatar, frame
 
 const QuestionContent = EnhancedQuestionContent;
 
-// export function QuestionContent({ question, timeLeft, reveal, selected, answer, opponents, avatar, frame, name, score, reportQuestion, reported, social, GameChat }) {
-  const { t } = useI18n();
-  const sr = !!reveal;
-  const pct = Math.max(0, Math.min(100, (timeLeft / question.timeLimit) * 100));
-  const ansCls = (idx) => {
-    if (sr) return idx === reveal.correctIndex ? 'answer correct' : idx === selected ? 'answer wrong' : 'answer dim';
-    return idx === selected ? 'answer selected' : 'answer';
-  };
-  return (
-    <div className="container game">
-      <div className="hud-timer-block">
-        <span className="hud-timer-label">{t('time')}</span>
-        <span className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr ? '✓' : timeLeft}</span>
-      </div>
-      <PlayerHud me={{ avatar, frame, name, score }} others={opponents} revealing={sr} />
-      <PlayerPhoto image={question.image} credit={question.credit} timeLeft={timeLeft} timeLimit={question.timeLimit} revealed={sr} />
-      <div className="question-panel">
-        <div className="question">{question.question}</div>
-        <div className={`answers ${question.image ? '' : 'single-col'}`}>
-        {question.answers.map((a, idx) => (
-          <button
-            key={idx}
-            className={ansCls(idx)}
-            onClick={() => answer(idx)}
-            disabled={question.expired || selected !== null || sr}
-          >
-            {a}
-          </button>
-        ))}
-        </div>
-        <div className="timer-bar-bottom"><div className={`timer-bar-fill ${timeLeft <= 3 && !sr ? 'urgent' : ''}`} style={{ width: sr ? '0%' : `${pct}%` }} /></div>
-      </div>
-      {sr && <div className="reveal-note">{reveal.yourCorrect ? t('ptsEarned', { n: reveal.pointsEarned }) : reveal.timedOut && selected === null ? t('timeUp') : t('wrong')}</div>}
-      {sr && <button className="report-btn" onClick={reportQuestion} disabled={reported}>{reported ? t('reported') : t('report')}</button>}
-      <GameChat social={social} />
-    </div>
-  );
-}
-
 export function FinishedContent({ result, opponents, myId, avatar, name, frame, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch, adOffer, onWatchAd, adClaimed, streak, onShowShare }) {
   const { t } = useI18n();
   const [showShare, setShowShare] = useState(false);
