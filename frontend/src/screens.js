@@ -1,3 +1,4 @@
+import { QuestionContent as EnhancedQuestionContent } from './enhanced-QuestionContent';
 import React, { useState, useMemo, useEffect } from 'react';
 import { AVATARS, CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon } from './ui';
 import { PlayerHud, Leaderboard } from './multiplayer';
@@ -416,7 +417,9 @@ export function RoundIntroContent({ intro, totalRounds, opponents, avatar, frame
   );
 }
 
-export function QuestionContent({ question, timeLeft, reveal, selected, answer, opponents, avatar, frame, name, score, reportQuestion, reported, social, GameChat }) {
+const QuestionContent = EnhancedQuestionContent;
+
+// export function QuestionContent({ question, timeLeft, reveal, selected, answer, opponents, avatar, frame, name, score, reportQuestion, reported, social, GameChat }) {
   const { t } = useI18n();
   const sr = !!reveal;
   const pct = Math.max(0, Math.min(100, (timeLeft / question.timeLimit) * 100));

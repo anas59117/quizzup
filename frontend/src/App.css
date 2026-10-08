@@ -1091,3 +1091,231 @@ button.topic-level-row:hover { border-color:var(--border-strong); }
 .ad-double-btn { display:inline-flex; align-items:center; gap:8px; margin:4px auto 14px; padding:11px 18px; border:1px solid var(--gold); border-radius:12px; background:color-mix(in srgb,var(--gold) 14%,transparent); color:var(--text); font-weight:800; font-size:.9rem; cursor:pointer; }
 .ad-double-btn:hover { background:color-mix(in srgb,var(--gold) 24%,transparent); }
 .rw.doubled { margin-left:8px; color:var(--gold); font-weight:900; }
+
+/* ==========================================================================
+   QuizzUp Game Feel Pack — Additions à App.css
+   Copie ce bloc à la fin de ton frontend/src/App.css
+   ========================================================================== */
+
+/* ─── Global layers (fixed overlays) ─── */
+.qu-float-layer,
+.qu-combo-layer,
+.qu-confetti-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* ─── Floating points (+9 pts) ─── */
+.qu-float-point-global {
+  position: absolute;
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: #2ecc71;
+  text-shadow: 0 2px 12px rgba(46, 204, 113, 0.45);
+  animation: qu-float-up 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+.qu-float-point-global.qu-negative {
+  color: #e74c3c;
+  text-shadow: 0 2px 12px rgba(231, 76, 60, 0.45);
+}
+@keyframes qu-float-up {
+  0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.4); }
+  15%  { opacity: 1; transform: translate(-50%, -80%) scale(1.25); }
+  100% { opacity: 0; transform: translate(-50%, -180%) scale(0.85); }
+}
+
+/* ─── Combo badge ─── */
+.qu-combo-badge-global {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 18px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #f1c40f, #f39c12);
+  color: #1a1a1a;
+  font-weight: 900;
+  font-size: 0.95rem;
+  letter-spacing: 0.8px;
+  box-shadow: 0 6px 22px rgba(243, 156, 18, 0.45);
+  animation: qu-combo-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+@keyframes qu-combo-pop {
+  0%   { opacity: 0; transform: translateX(-50%) scale(0) rotate(-12deg); }
+  60%  { opacity: 1; transform: translateX(-50%) scale(1.18) rotate(3deg); }
+  100% { opacity: 1; transform: translateX(-50%) scale(1) rotate(0deg); }
+}
+
+/* ─── Confetti burst ─── */
+.qu-confetti-piece-global {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  animation: qu-confetti-fall 0.85s ease-out forwards;
+}
+@keyframes qu-confetti-fall {
+  0%   { opacity: 1; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+  100% { opacity: 0; transform: translate(var(--tx, -50%), var(--ty, -120px)) rotate(720deg) scale(0.4); }
+}
+
+/* ─── Correct answer glow (answer button) ─── */
+.answer.correct-glow {
+  animation: qu-correct-pulse 0.55s ease-out;
+}
+@keyframes qu-correct-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.55); transform: scale(1); }
+  40%  { box-shadow: 0 0 0 18px rgba(46, 204, 113, 0); transform: scale(1.03); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); transform: scale(1); }
+}
+
+/* ─── Wrong answer shake ─── */
+.answer.shake-wrong {
+  animation: qu-shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+@keyframes qu-shake {
+  10%, 90% { transform: translate3d(-2px, 0, 0); }
+  20%, 80% { transform: translate3d(4px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-6px, 0, 0); }
+  40%, 60% { transform: translate3d(6px, 0, 0); }
+}
+
+/* ─── Timer urgency enhanced ─── */
+.hud-timer.urgent {
+  color: #e74c3c !important;
+  animation: qu-timer-danger 0.35s ease-in-out infinite;
+}
+@keyframes qu-timer-danger {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.15); }
+}
+
+.timer-bar-fill.urgent {
+  background: linear-gradient(90deg, #e74c3c, #c0392b) !important;
+  box-shadow: 0 0 14px rgba(231, 76, 60, 0.5);
+}
+
+/* ─── Opponent avatar pop ─── */
+.hud-chip.opponent-pop {
+  animation: qu-avatar-pop 0.45s ease-out;
+}
+@keyframes qu-avatar-pop {
+  0%   { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.55); }
+  50%  { transform: scale(1.12); box-shadow: 0 0 0 10px rgba(46, 204, 113, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+}
+
+/* ─── Card hover glow (home) ─── */
+.category-tile {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.35s ease;
+}
+.category-tile:hover {
+  transform: translateY(-5px) scale(1.015);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.22);
+}
+
+/* ─── Quick Play breathe ─── */
+.quick-play {
+  animation: qu-breathe 2.8s ease-in-out infinite;
+}
+@keyframes qu-breathe {
+  0%, 100% { transform: scale(1); box-shadow: 0 4px 20px rgba(255, 77, 109, 0.25); }
+  50%      { transform: scale(1.05); box-shadow: 0 8px 28px rgba(255, 77, 109, 0.45); }
+}
+
+/* ─── Button press effect ─── */
+button,
+.answer,
+.ra-btn,
+.shop-pick {
+  transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.1s ease;
+}
+button:active:not(:disabled),
+.answer:active:not(:disabled),
+.ra-btn:active:not(:disabled),
+.shop-pick:active {
+  transform: scale(0.97);
+}
+
+/* ─── Streak flame ─── */
+.result-day-streak {
+  animation: qu-flame-flicker 1.2s ease-in-out infinite alternate;
+}
+@keyframes qu-flame-flicker {
+  0%   { transform: scale(1) rotate(-1deg); filter: brightness(1); }
+  100% { transform: scale(1.06) rotate(1deg); filter: brightness(1.15); }
+}
+
+/* ─── Finished screen enhancements ─── */
+.result-title.win {
+  text-shadow: 0 0 24px rgba(46, 204, 113, 0.35);
+  animation: qu-title-bounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.result-title.loss {
+  text-shadow: 0 0 24px rgba(231, 76, 60, 0.3);
+}
+@keyframes qu-title-bounce {
+  0%   { opacity: 0; transform: scale(0.7) translateY(20px); }
+  60%  { opacity: 1; transform: scale(1.08) translateY(-4px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* XP bar fill animation */
+.xp-breakdown {
+  animation: qu-slide-up 0.4s ease-out 0.2s both;
+}
+@keyframes qu-slide-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Reveal note enhancement ─── */
+.reveal-note {
+  animation: qu-fade-scale 0.35s ease-out;
+  font-weight: 700;
+}
+.reveal-note:empty { display: none; }
+@keyframes qu-fade-scale {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ─── Page transitions ─── */
+.container.game,
+.container.center {
+  animation: qu-page-enter 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes qu-page-enter {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Loading shimmer for skeletons ─── */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.03) 0%,
+    rgba(255,255,255,0.10) 50%,
+    rgba(255,255,255,0.03) 100%
+  );
+  background-size: 200% 100%;
+  animation: qu-shimmer 1.4s infinite;
+  border-radius: 6px;
+}
+@keyframes qu-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
