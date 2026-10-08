@@ -52,6 +52,9 @@ export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickM
           <Icon name="bolt" size={21} />
           <Icon name="arrow" size={20} className="quick-arrow" />
         </button>
+        <button className="tournament-btn" onClick={() => onStartTournament && onStartTournament()} disabled={pending}>
+          <span>🏆</span> {t('tournament')}
+        </button>
       </div>
       <div className="section-title">{t('popularTopics')}</div>
       <div className="topics-scroll">
