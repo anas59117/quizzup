@@ -2,12 +2,13 @@
   {
     "text": "Qui est l'auteur de Détective Conan ?",
     "answers": [
+      "Gōshō Aoyama",
       "Rumiko Takahashi",
       "Tsugumi Ōba",
-      "Eiichirō Oda",
-      "Gōshō Aoyama"
+      "Eiichirō Oda"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Quel est le vrai nom de Conan Edogawa ?",
@@ -17,57 +18,63 @@
       "Kogorō Mōri",
       "Kaitō Kid"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quel poison a fait rajeunir Shin'ichi ?",
     "answers": [
       "Le X-Virus",
-      "L'APTX 4869",
       "Le sérum K-9",
+      "L'APTX 4869",
       "La formule Méduse"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle organisation criminelle a empoisonné Shin'ichi ?",
     "answers": [
       "La Main de Dieu",
       "L'Arbre Aogiri",
-      "Les hommes en noir",
-      "Akatsuki"
+      "Akatsuki",
+      "Les hommes en noir"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Quels sont les deux hommes en noir présents lors de l'empoisonnement ?",
     "answers": [
+      "Gin et Vodka",
       "Sherry et Chianti",
       "Rum et Bourbon",
-      "Gin et Vodka",
       "Vermouth et Kir"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Chez qui Conan vit-il après sa transformation ?",
     "answers": [
       "Chez ses parents",
-      "Chez le professeur Agasa",
       "Chez Ran et Kogorō Mōri",
+      "Chez le professeur Agasa",
       "Chez Heiji Hattori"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quel lien unit Ran Mōri à Shin'ichi ?",
     "answers": [
-      "Amie d'enfance amoureuse de lui",
       "Sa voisine inconnue",
       "Sa cousine",
+      "Amie d'enfance amoureuse de lui",
       "Sa sœur"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel sport Ran pratique-t-elle à haut niveau ?",
@@ -77,27 +84,30 @@
       "Le kendo",
       "Le karaté"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Quel est le métier de Kogorō Mōri ?",
     "answers": [
-      "Policier",
       "Détective privé",
+      "Policier",
       "Avocat",
       "Médecin"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Comment Conan résout-il les enquêtes à la place de Kogorō ?",
     "answers": [
       "Il appelle la police",
-      "Il écrit des lettres anonymes",
       "Il l'endort et parle avec sa voix",
+      "Il écrit des lettres anonymes",
       "Il utilise un robot"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quel surnom donne-t-on à Kogorō pendant ses déductions ?",
@@ -107,27 +117,30 @@
       "Kogorō l'endormi",
       "Le lion endormi"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel inventeur, voisin de Shin'ichi, fabrique les gadgets de Conan ?",
     "answers": [
       "Heiji Hattori",
-      "Le professeur Agasa",
       "Yūsaku Kudō",
-      "Kogorō Mōri"
+      "Kogorō Mōri",
+      "Le professeur Agasa"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Quel gadget permet à Conan d'endormir quelqu'un ?",
     "answers": [
+      "Une montre à fléchettes soporifiques",
       "Une casquette sonore",
       "Un bracelet électrique",
-      "Une montre à fléchettes soporifiques",
       "Un stylo hypnotique"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Quel gadget permet à Conan d'imiter n'importe quelle voix ?",
@@ -137,17 +150,19 @@
       "Une cravate magique",
       "Des lunettes radio"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quel gadget donne à Conan une puissance de frappe énorme dans ses coups de pied ?",
     "answers": [
-      "Des chaussures renforçant la puissance",
       "Une ceinture à ressort",
       "Des genouillères électriques",
+      "Des chaussures renforçant la puissance",
       "Des gants magnétiques"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel moyen de transport solaire utilise Conan ?",
@@ -157,17 +172,19 @@
       "Des rollers",
       "Un skateboard"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "D'où vient le nom « Conan Edogawa » ?",
     "answers": [
+      "D'Arthur Conan Doyle et Edogawa Ranpo",
       "De son grand-père",
       "De Conan le Barbare et d'un fleuve",
-      "D'un livre pour enfants",
-      "D'Arthur Conan Doyle et Edogawa Ranpo"
+      "D'un livre pour enfants"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle phrase célèbre Conan répète-t-il ?",
@@ -177,27 +194,30 @@
       "« Élémentaire, mon cher Watson ! »",
       "« À dix milliards pour cent ! »"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle le groupe d'enfants détectives de l'école de Conan ?",
     "answers": [
       "Les Petits Sherlock",
-      "Les Détectives Boys",
       "Le Club des Cinq",
+      "Les Détectives Boys",
       "La Brigade Beika"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle camarade de Conan est en réalité la scientifique Shiho Miyano ?",
     "answers": [
-      "Ai Haibara",
       "Ayumi Yoshida",
       "Kazuha Tōyama",
-      "Sonoko Suzuki"
+      "Sonoko Suzuki",
+      "Ai Haibara"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Quel nom de code portait Ai Haibara dans l'Organisation ?",
@@ -207,37 +227,41 @@
       "Vermouth",
       "Chianti"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel détective lycéen d'Osaka est le rival et ami de Shin'ichi ?",
     "answers": [
       "Subaru Okiya",
-      "Tōru Amuro",
       "Heiji Hattori",
+      "Tōru Amuro",
       "Kaitō Kuroba"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Comment s'appelle l'amie d'enfance de Heiji ?",
     "answers": [
       "Sonoko Suzuki",
       "Masumi Sera",
-      "Ran Mōri",
-      "Kazuha Tōyama"
+      "Kazuha Tōyama",
+      "Ran Mōri"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel voleur gentleman vêtu de blanc est un rival de Conan ?",
     "answers": [
-      "Kaitō Kid",
       "Vermouth",
       "Gin",
-      "Arsène Lupin"
+      "Arsène Lupin",
+      "Kaitō Kid"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle meilleure amie de Ran est une riche héritière bavarde ?",
@@ -247,7 +271,8 @@
       "Eri Kisaki",
       "Ayumi Yoshida"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel inspecteur de police bedonnant enquête souvent avec Conan ?",
@@ -257,17 +282,19 @@
       "L'inspecteur Takagi",
       "L'inspecteur Nakamori"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel est le métier du père de Shin'ichi, Yūsaku Kudō ?",
     "answers": [
-      "Écrivain de romans policiers",
       "Détective privé",
       "Policier",
+      "Écrivain de romans policiers",
       "Médecin"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel était le métier de la mère de Shin'ichi, Yukiko ?",
@@ -277,27 +304,30 @@
       "Avocate",
       "Actrice"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel agent du FBI traque l'Organisation et se fait passer pour mort ?",
     "answers": [
+      "Shūichi Akai",
       "Tōru Amuro",
       "James Black",
-      "Jodie Starling",
-      "Shūichi Akai"
+      "Jodie Starling"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel serveur de café est à la fois agent secret, membre de l'Organisation (Bourbon) et policier ?",
     "answers": [
-      "Tōru Amuro (Rei Furuya)",
       "Subaru Okiya",
+      "Tōru Amuro (Rei Furuya)",
       "Wataru Takagi",
       "Shūichi Akai"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle actrice de l'Organisation, experte en déguisements, porte le nom de code Vermouth ?",
@@ -307,27 +337,30 @@
       "Chris Vineyard",
       "Rena Mizunashi"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Dans quel quartier de Tokyo vit Conan ?",
     "answers": [
-      "Beika",
       "Shinjuku",
       "Shibuya",
-      "Akihabara"
+      "Akihabara",
+      "Beika"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Comment s'appelle le café situé sous l'agence de Kogorō ?",
     "answers": [
-      "Le Café Leblanc",
       "Le Café Poirot",
+      "Le Café Leblanc",
       "Le Café Cat's Eye",
       "Le Café Anteiku"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Dans quel parc d'attractions Shin'ichi est-il empoisonné ?",
@@ -337,27 +370,30 @@
       "Beika Land",
       "Magic Park"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui est la mère de Ran, avocate célèbre ?",
     "answers": [
       "Jodie Starling",
-      "Eri Kisaki",
       "Kazuha Tōyama",
+      "Eri Kisaki",
       "Yukiko Kudō"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Dans quel magazine Détective Conan est-il publié ?",
     "answers": [
       "Young Jump",
       "Weekly Shōnen Jump",
-      "Weekly Shōnen Sunday",
-      "Weekly Shōnen Magazine"
+      "Weekly Shōnen Magazine",
+      "Weekly Shōnen Sunday"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "En quelle année Détective Conan a-t-il débuté ?",
@@ -367,7 +403,8 @@
       "2000",
       "1990"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel studio produit l'anime Détective Conan ?",
@@ -377,7 +414,8 @@
       "Toei Animation",
       "Sunrise"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Depuis quelle année un film Détective Conan sort-il presque chaque année ?",
@@ -387,7 +425,8 @@
       "1997",
       "1992"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel autre manga de Gōshō Aoyama met en scène Kaitō Kid ?",
@@ -397,17 +436,19 @@
       "Yaiba",
       "Magic Kaito"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Combien de tomes compte Détective Conan (plus de…) ?",
     "answers": [
+      "Plus de 100",
       "Moins de 30",
       "Environ 40",
-      "Environ 60",
-      "Plus de 100"
+      "Environ 60"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quelle est la couleur de la tenue de Kaitō Kid ?",
@@ -417,7 +458,8 @@
       "Noire",
       "Bleue"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Quelle carte de visite Kaitō Kid laisse-t-il avant un vol ?",
@@ -427,7 +469,8 @@
       "Une lettre annonçant le vol",
       "Une carte de tarot"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel policier maladroit est amoureux de l'agente Miwako Satō ?",
@@ -437,7 +480,8 @@
       "Jūzō Megure",
       "Wataru Takagi"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel boss ultime de l'Organisation a été révélé en 2017 ?",
@@ -447,27 +491,30 @@
       "Vermouth",
       "Gin"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel membre de l'Organisation est son numéro deux ?",
     "answers": [
       "Chianti",
-      "Vodka",
       "Rum",
+      "Vodka",
       "Gin"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel ami de Conan, élève de CP, est un garçon rond et gourmand ?",
     "answers": [
-      "Genta Kojima",
       "Tōru Amuro",
       "Mitsuhiko Tsuburaya",
+      "Genta Kojima",
       "Heiji Hattori"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quelle élève des Détectives Boys a le béguin pour Conan ?",
@@ -477,28 +524,579 @@
       "Masumi Sera",
       "Ayumi Yoshida"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel étudiant qui vit chez les Kudō est en réalité Shūichi Akai déguisé ?",
     "answers": [
+      "Subaru Okiya",
       "Kaitō Kuroba",
       "Tōru Amuro",
-      "Makoto Kyōgoku",
-      "Subaru Okiya"
+      "Makoto Kyōgoku"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel alcool chinois permet la première fois à Conan de redevenir temporairement Shin'ichi ?",
+    "answers": [
+      "Le saké",
+      "Le baijiu",
+      "La bière",
+      "Le whisky"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle fonction Sumiko Kobayashi exerce-t-elle à l'école primaire de Teitan ?",
+    "answers": [
+      "Infirmière scolaire",
+      "Directrice de l'école",
+      "Institutrice de la classe 1-B",
+      "Professeure de musique"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel poste Rumi Wakasa occupe-t-elle à l'école primaire de Teitan ?",
+    "answers": [
+      "Bibliothécaire",
+      "Conseillère d'orientation",
+      "Surveillante générale",
+      "Institutrice adjointe de la classe 1-B"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle activité Masumi Sera exerce-t-elle parallèlement à ses études ?",
+    "answers": [
+      "Détective lycéenne",
+      "Journaliste sportive",
+      "Avocate stagiaire",
+      "Policière auxiliaire"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel lien de parenté unit Masumi Sera à Shūichi Akai ?",
+    "answers": [
+      "Elle est sa cousine",
+      "Elle est sa sœur cadette",
+      "Elle est sa nièce",
+      "Elle est sa filleule"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui est Mary Sera pour Masumi ?",
+    "answers": [
+      "Sa tante",
+      "Sa sœur aînée",
+      "Sa mère",
+      "Sa grand-mère"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle discipline Shūkichi Haneda est-il un champion professionnel ?",
+    "answers": [
+      "Le go",
+      "Le mah-jong",
+      "Les échecs occidentaux",
+      "Le shōgi"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle place Shūkichi Haneda occupe-t-il dans la fratrie Akai ?",
+    "answers": [
+      "Le frère du milieu",
+      "L'aîné",
+      "Le benjamin",
+      "Le demi-frère de Mary"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Pour quelle agence Jodie Starling travaille-t-elle ?",
+    "answers": [
+      "La CIA",
+      "Le FBI",
+      "Interpol",
+      "La police métropolitaine de Tokyo"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel rôle James Black joue-t-il auprès des agents américains au Japon ?",
+    "answers": [
+      "Il commande la CIA",
+      "Il représente Interpol",
+      "Il dirige l'équipe du FBI",
+      "Il dirige la police de Boston"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle organisation André Camel appartient-il ?",
+    "answers": [
+      "Le MI6",
+      "La CIA",
+      "La police d'Osaka",
+      "Le FBI"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le vrai nom de Kir ?",
+    "answers": [
+      "Hidemi Hondō",
+      "Akemi Miyano",
+      "Jodie Starling",
+      "Hidemi Uehara"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Pour quelle agence Kir travaille-t-elle secrètement ?",
+    "answers": [
+      "Le FBI",
+      "La CIA",
+      "Le MI6",
+      "La sécurité publique japonaise"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel lien unit Eisuke Hondō à Hidemi Hondō ?",
+    "answers": [
+      "Il est son fils",
+      "Il est son cousin",
+      "Il est son frère cadet",
+      "Il est son oncle"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui est Akemi Miyano pour Shiho Miyano ?",
+    "answers": [
+      "Sa mère",
+      "Sa cousine",
+      "Sa tante",
+      "Sa sœur aînée"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel nom de code Shūichi Akai portait-il dans l'Organisation noire ?",
+    "answers": [
+      "Rye",
+      "Scotch",
+      "Calvados",
+      "Irish"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sous quel faux nom Shūichi Akai a-t-il infiltré l'Organisation noire ?",
+    "answers": [
+      "Subaru Okita",
+      "Dai Moroboshi",
+      "Tōru Kazami",
+      "Ryūsuke Higo"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le véritable nom de Tōru Amuro ?",
+    "answers": [
+      "Hiromitsu Morofushi",
+      "Jinpei Matsuda",
+      "Rei Furuya",
+      "Wataru Date"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quel service de police Rei Furuya appartient-il réellement ?",
+    "answers": [
+      "La police criminelle d'Osaka",
+      "La brigade scientifique de Tokyo",
+      "La police ferroviaire",
+      "La sécurité publique japonaise"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle spécialité Chianti et Korn partagent-ils dans l'Organisation noire ?",
+    "answers": [
+      "Tireurs d'élite",
+      "Chimistes",
+      "Pilotes",
+      "Faussaires"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel membre ancien de l'Organisation noire est exécuté par Gin après l'affaire de l'hôtel Haido ?",
+    "answers": [
+      "Calvados",
+      "Pisco",
+      "Tequila",
+      "Irish"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la véritable identité de Kaitō Kid ?",
+    "answers": [
+      "Hakuba Saguru",
+      "Toichi Kuroba",
+      "Kaito Kuroba",
+      "Konosuke Jii"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui était Toichi Kuroba pour Kaito Kuroba ?",
+    "answers": [
+      "Son oncle",
+      "Son frère aîné",
+      "Son professeur de lycée",
+      "Son père"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel inspecteur consacre l'essentiel de ses enquêtes à capturer Kaitō Kid ?",
+    "answers": [
+      "Ginzo Nakamori",
+      "Jūzō Megure",
+      "Sango Yokomizo",
+      "Ninzaburō Shiratori"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle relation Aoko Nakamori entretient-elle avec Kaito Kuroba ?",
+    "answers": [
+      "Sœur jumelle",
+      "Amie d'enfance",
+      "Cousine",
+      "Professeure"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel poste Heizo Hattori occupe-t-il dans la police d'Osaka ?",
+    "answers": [
+      "Inspecteur de quartier",
+      "Médecin légiste",
+      "Chef de la police préfectorale",
+      "Chef de la police scientifique"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel art martial Shizuka Hattori excelle-t-elle ?",
+    "answers": [
+      "Le karaté",
+      "Le jūdō",
+      "L'aïkido",
+      "Le kendō"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel métier Kogorō Mōri exerçait-il avant de devenir détective privé ?",
+    "answers": [
+      "Inspecteur de police",
+      "Procureur",
+      "Journaliste",
+      "Médecin légiste"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle division travaille Miwako Satō ?",
+    "answers": [
+      "La brigade des stupéfiants",
+      "La première division d'enquête criminelle",
+      "La police scientifique",
+      "La sécurité publique"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le prénom de l'inspecteur Takagi ?",
+    "answers": [
+      "Kazunobu",
+      "Ninzaburō",
+      "Wataru",
+      "Kansuke"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le prénom de l'inspecteur Shiratori ?",
+    "answers": [
+      "Sango",
+      "Wataru",
+      "Jūzō",
+      "Ninzaburō"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle unité Jinpei Matsuda travaillait-il avant la brigade criminelle ?",
+    "answers": [
+      "L'escouade de déminage",
+      "La brigade montée",
+      "La police maritime",
+      "La police scientifique"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment Kenji Hagiwara est-il mort ?",
+    "answers": [
+      "Lors d'une fusillade",
+      "Dans l'explosion d'une bombe",
+      "Dans un accident de train",
+      "Au cours d'un incendie"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel policier a été le mentor de Wataru Takagi ?",
+    "answers": [
+      "Jinpei Matsuda",
+      "Hiromitsu Morofushi",
+      "Wataru Date",
+      "Rei Furuya"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel nom de code Hiromitsu Morofushi portait-il dans l'Organisation noire ?",
+    "answers": [
+      "Rye",
+      "Bourbon",
+      "Kir",
+      "Scotch"
     ],
     "correct": 3,
     "difficulty": "expert"
   },
   {
-    "text": "Quel alcool chinois permet la première fois à Conan de redevenir temporairement Shin'ichi ?",
+    "text": "Quel surnom Rei Furuya porte-t-il depuis l'académie de police ?",
     "answers": [
-      "Le baijiu",
-      "Le saké",
-      "La bière",
-      "Le whisky"
+      "Zero",
+      "Ace",
+      "Silver",
+      "Shadow"
     ],
     "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de policiers forment le groupe central de Wild Police Story ?",
+    "answers": [
+      "Quatre",
+      "Cinq",
+      "Six",
+      "Sept"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle blessure visible Kansuke Yamato porte-t-il au visage ?",
+    "answers": [
+      "Une brûlure sur la joue droite",
+      "Une entaille au menton",
+      "Une cicatrice sur l'œil gauche",
+      "Une cicatrice au front"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle préfecture Yui Uehara est-elle inspectrice ?",
+    "answers": [
+      "Gunma",
+      "Shizuoka",
+      "Kanagawa",
+      "Nagano"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sous quel surnom Takaaki Morofushi est-il connu ?",
+    "answers": [
+      "Kōmei",
+      "Kansuke",
+      "Komei Kid",
+      "Shūmei"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelles préfectures les jumeaux Sango et Jūgo Yokomizo servent-ils respectivement ?",
+    "answers": [
+      "Nagano et Gunma",
+      "Shizuoka et Kanagawa",
+      "Osaka et Kyoto",
+      "Saitama et Chiba"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quelle date le premier épisode de l'anime Détective Conan a-t-il été diffusé au Japon ?",
+    "answers": [
+      "Le 7 janvier 1994",
+      "Le 18 avril 1997",
+      "Le 8 janvier 1996",
+      "Le 4 octobre 1996"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelles chaînes japonaises diffusent historiquement l'anime Détective Conan ?",
+    "answers": [
+      "Fuji TV et Kansai TV",
+      "TV Tokyo et WOWOW",
+      "TBS et MBS",
+      "Yomiuri TV et Nippon TV"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle comédienne prête sa voix japonaise à Conan Edogawa ?",
+    "answers": [
+      "Minami Takayama",
+      "Megumi Hayashibara",
+      "Wakana Yamazaki",
+      "Naoko Matsui"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel comédien double à la fois Shin'ichi Kudō et Kaitō Kid en japonais ?",
+    "answers": [
+      "Rikiya Koyama",
+      "Kappei Yamaguchi",
+      "Kenichi Ogata",
+      "Toshiyuki Morikawa"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle comédienne prête sa voix japonaise à Ai Haibara ?",
+    "answers": [
+      "Minami Takayama",
+      "Yukiko Iwai",
+      "Megumi Hayashibara",
+      "Ikue Ōtani"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui compose la musique de la série animée Détective Conan ?",
+    "answers": [
+      "Yuki Kajiura",
+      "Joe Hisaishi",
+      "Yōko Kanno",
+      "Katsuo Ōno"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui est crédité au character design de la série animée ?",
+    "answers": [
+      "Masatomo Sudō",
+      "Gōshō Aoyama",
+      "Yasuichirō Yamamoto",
+      "Kenji Kodama"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le titre du premier long métrage Détective Conan ?",
+    "answers": [
+      "La Quatorzième Cible",
+      "Le Gratte-Ciel infernal",
+      "Le Magicien de la fin du siècle",
+      "Mémoire assassine"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a réalisé le premier film Détective Conan ?",
+    "answers": [
+      "Yasuichirō Yamamoto",
+      "Kōbun Shizuno",
+      "Kenji Kodama",
+      "Chika Nagaoka"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle catégorie Détective Conan a-t-il reçu le 46e prix Shōgakukan du manga ?",
+    "answers": [
+      "Shōjo",
+      "Kodomo",
+      "Manga général",
+      "Shōnen"
+    ],
+    "correct": 3,
     "difficulty": "expert"
   }
 ]
