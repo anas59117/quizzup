@@ -7,7 +7,8 @@
       "Médecin",
       "Policier"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
     "text": "Quel pseudonyme Walter White utilise-t-il dans le trafic ?",
@@ -17,27 +18,30 @@
       "Saul Goodman",
       "Gustavo"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
-    "text": "Quel personnage correspond à cette description : professeur de chimie devenu fabricant de méthamphétamine ?",
+    "text": "Dans quelle ville du Nouveau-Mexique se déroule principalement la série ?",
     "answers": [
-      "Jesse Pinkman",
-      "Skyler White",
-      "Walter White",
-      "Hank Schrader"
+      "Phoenix",
+      "El Paso",
+      "Albuquerque",
+      "Denver"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Quelle description correspond à Walter White ?",
+    "text": "Quel diagnostic pousse Walter White à bouleverser sa vie au début de la série ?",
     "answers": [
-      "ancien élève et partenaire de Walter",
-      "épouse de Walter et comptable",
-      "agent de la DEA et beau-frère de Walter",
-      "professeur de chimie devenu fabricant de méthamphétamine"
+      "Une leucémie",
+      "Une tumeur cérébrale",
+      "Un cancer du pancréas",
+      "Un cancer du poumon"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
     "text": "Quel personnage correspond à cette description : ancien élève et partenaire de Walter ?",
@@ -47,17 +51,19 @@
       "Gus Fring",
       "Mike Ehrmantraut"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quelle description correspond à Jesse Pinkman ?",
+    "text": "Quel véhicule Walter et Jesse utilisent-ils comme premier laboratoire mobile ?",
     "answers": [
-      "ancien policier devenu homme de main",
-      "ancien élève et partenaire de Walter",
-      "trafiquant impulsif de la famille Salamanca",
-      "ancien chef de cartel communiquant avec une clochette"
+      "Une ambulance",
+      "Un camping-car",
+      "Un bus scolaire",
+      "Une caravane tractée"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
     "text": "Quel personnage correspond à cette description : épouse de Walter et comptable ?",
@@ -67,17 +73,19 @@
       "Skyler White",
       "Jane Margolis"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Quelle description correspond à Skyler White ?",
+    "text": "Dans quelle entreprise Skyler travaille-t-elle pour Ted Beneke ?",
     "answers": [
-      "fils d’Andrea empoisonné au muguet",
-      "ami de Jesse dont le vrai nom est Brandon Mayhew",
-      "ami musicien de Jesse",
-      "épouse de Walter et comptable"
+      "Madrigal Electromotive",
+      "Mesa Verde",
+      "Los Pollos Hermanos",
+      "Beneke Fabricators"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
     "text": "Quel personnage correspond à cette description : agent de la DEA et beau-frère de Walter ?",
@@ -87,17 +95,19 @@
       "Skinny Pete",
       "Gale Boetticher"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quelle description correspond à Hank Schrader ?",
+    "text": "Que collectionne Hank Schrader pendant sa convalescence ?",
     "answers": [
-      "garde du corps employé par Saul Goodman",
-      "agent de la DEA et beau-frère de Walter",
-      "partenaire de Hank à la DEA",
-      "professeur de chimie devenu fabricant de méthamphétamine"
+      "Des timbres",
+      "Des minéraux",
+      "Des pièces de monnaie",
+      "Des fossiles"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
     "text": "Quel personnage correspond à cette description : sœur de Skyler et épouse de Hank ?",
@@ -107,17 +117,19 @@
       "Marie Schrader",
       "Steven Gomez"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Quelle description correspond à Marie Schrader ?",
+    "text": "Quelle couleur domine régulièrement les vêtements et objets associés à Marie Schrader ?",
     "answers": [
-      "avocat pénaliste au slogan Better Call Saul",
-      "trafiquant dissimulé derrière Los Pollos Hermanos",
-      "ancien policier devenu homme de main",
-      "sœur de Skyler et épouse de Hank"
+      "Vert",
+      "Bleu",
+      "Rouge",
+      "Violet"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
     "text": "Quel personnage correspond à cette description : fils adolescent de Walter et Skyler ?",
@@ -127,17 +139,19 @@
       "Hank Schrader",
       "Marie Schrader"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quelle description correspond à Walter White Jr. ?",
+    "text": "Quel prénom Walter White Jr. demande-t-il à utiliser pendant une partie de la série ?",
     "answers": [
-      "voisine et compagne de Jesse, artiste en rétablissement",
-      "fils adolescent de Walter et Skyler",
-      "compagne de Jesse et mère de Brock",
-      "fils d’Andrea empoisonné au muguet"
+      "Louis",
+      "Flynn",
+      "Henry",
+      "Elliott"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
     "text": "Quel personnage correspond à cette description : avocat pénaliste au slogan Better Call Saul ?",
@@ -147,17 +161,19 @@
       "Saul Goodman",
       "Hector Salamanca"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Quelle description correspond à Saul Goodman ?",
+    "text": "Quel est le véritable nom de Saul Goodman ?",
     "answers": [
-      "trafiquant retenu prisonnier par Walter au début de la série",
-      "chef d’un gang néonazi et oncle de Todd",
-      "garde du corps employé par Saul Goodman",
-      "avocat pénaliste au slogan Better Call Saul"
+      "Charles McGill",
+      "Howard Hamlin",
+      "Jeffrey Steele",
+      "Jimmy McGill"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
     "text": "Quel personnage correspond à cette description : trafiquant dissimulé derrière Los Pollos Hermanos ?",
@@ -167,17 +183,19 @@
       "Andrea Cantillo",
       "Brock Cantillo"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "easy"
   },
   {
-    "text": "Quelle description correspond à Gus Fring ?",
+    "text": "Quelle chaîne de restauration sert de façade aux activités de Gus Fring ?",
     "answers": [
-      "agent de la DEA et beau-frère de Walter",
-      "trafiquant dissimulé derrière Los Pollos Hermanos",
-      "sœur de Skyler et épouse de Hank",
-      "fils adolescent de Walter et Skyler"
+      "Madrigal Grill",
+      "Los Pollos Hermanos",
+      "El Michoacano",
+      "Garduno's"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "easy"
   },
   {
     "text": "Quel personnage correspond à cette description : ancien policier devenu homme de main ?",
@@ -187,17 +205,19 @@
       "Mike Ehrmantraut",
       "Krazy-8"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "easy"
   },
   {
-    "text": "Quelle description correspond à Mike Ehrmantraut ?",
+    "text": "Comment s'appelle la petite-fille de Mike Ehrmantraut ?",
     "answers": [
-      "cadre de Madrigal impliquée dans le trafic",
-      "employé de Vamonos Pest lié au gang de son oncle",
-      "voisine et compagne de Jesse, artiste en rétablissement",
-      "ancien policier devenu homme de main"
+      "Holly",
+      "Brock",
+      "Stacey",
+      "Kaylee"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "easy"
   },
   {
     "text": "Quel personnage correspond à cette description : trafiquant impulsif de la famille Salamanca ?",
@@ -207,17 +227,19 @@
       "Walter White",
       "Jesse Pinkman"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Quelle description correspond à Tuco Salamanca ?",
+    "text": "Quel homme de main Tuco Salamanca bat-il mortellement dans une casse automobile ?",
     "answers": [
-      "chimiste recruté par Gus",
-      "trafiquant impulsif de la famille Salamanca",
-      "homme de main de Gus tué au laboratoire",
-      "trafiquant retenu prisonnier par Walter au début de la série"
+      "Gonzo",
+      "No-Doze",
+      "Krazy-8",
+      "Victor"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
     "text": "Quel personnage correspond à cette description : ancien chef de cartel communiquant avec une clochette ?",
@@ -227,17 +249,19 @@
       "Hector Salamanca",
       "Saul Goodman"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Quelle description correspond à Hector Salamanca ?",
+    "text": "Avec quel objet Hector Salamanca communique-t-il principalement ?",
     "answers": [
-      "ancien élève et partenaire de Walter",
-      "épouse de Walter et comptable",
-      "agent de la DEA et beau-frère de Walter",
-      "ancien chef de cartel communiquant avec une clochette"
+      "Un sifflet",
+      "Un téléphone à touches",
+      "Une ardoise",
+      "Une clochette"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "medium"
   },
   {
     "text": "Quel personnage correspond à cette description : cadre de Madrigal impliquée dans le trafic ?",
@@ -247,17 +271,19 @@
       "Hector Salamanca",
       "Todd Alquist"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Quelle description correspond à Lydia Rodarte-Quayle ?",
+    "text": "Quel édulcorant Lydia ajoute-t-elle systématiquement à son thé ?",
     "answers": [
-      "ancien policier devenu homme de main",
-      "cadre de Madrigal impliquée dans le trafic",
-      "trafiquant impulsif de la famille Salamanca",
-      "ancien chef de cartel communiquant avec une clochette"
+      "Aspartame",
+      "Stevia",
+      "Saccharine",
+      "Sucralose"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
     "text": "Quel personnage correspond à cette description : employé de Vamonos Pest lié au gang de son oncle ?",
@@ -267,17 +293,19 @@
       "Todd Alquist",
       "Skinny Pete"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Quelle description correspond à Todd Alquist ?",
+    "text": "Comment s'appelle l'oncle de Todd Alquist ?",
     "answers": [
-      "ami de Jesse dont le vrai nom est Brandon Mayhew",
-      "ami musicien de Jesse",
-      "chimiste recruté par Gus",
-      "employé de Vamonos Pest lié au gang de son oncle"
+      "Hector Salamanca",
+      "Declan",
+      "Don Eladio",
+      "Jack Welker"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "medium"
   },
   {
     "text": "Quel personnage correspond à cette description : voisine et compagne de Jesse, artiste en rétablissement ?",
@@ -287,17 +315,19 @@
       "Jack Welker",
       "Huell Babineaux"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Quelle description correspond à Jane Margolis ?",
+    "text": "Quel métier exerce Donald, le père de Jane Margolis ?",
     "answers": [
-      "partenaire de Hank à la DEA",
-      "voisine et compagne de Jesse, artiste en rétablissement",
-      "professeur de chimie devenu fabricant de méthamphétamine",
-      "ancien élève et partenaire de Walter"
+      "Médecin urgentiste",
+      "Contrôleur aérien",
+      "Avocat",
+      "Pilote de ligne"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
     "text": "Quel personnage correspond à cette description : compagne de Jesse et mère de Brock ?",
@@ -307,17 +337,19 @@
       "Andrea Cantillo",
       "Hank Schrader"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Quelle description correspond à Andrea Cantillo ?",
+    "text": "Comment s'appelle le jeune frère d'Andrea Cantillo ?",
     "answers": [
-      "avocat pénaliste au slogan Better Call Saul",
-      "trafiquant dissimulé derrière Los Pollos Hermanos",
-      "ancien policier devenu homme de main",
-      "compagne de Jesse et mère de Brock"
+      "Brock Cantillo",
+      "Jake Pinkman",
+      "Drew Sharp",
+      "Tomás Cantillo"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "medium"
   },
   {
     "text": "Quel personnage correspond à cette description : fils d’Andrea empoisonné au muguet ?",
@@ -327,17 +359,19 @@
       "Gus Fring",
       "Mike Ehrmantraut"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Quelle description correspond à Brock Cantillo ?",
+    "text": "Dans quel cadre Jesse rencontre-t-il Andrea Cantillo ?",
     "answers": [
-      "voisine et compagne de Jesse, artiste en rétablissement",
-      "fils d’Andrea empoisonné au muguet",
-      "compagne de Jesse et mère de Brock",
-      "ami de Jesse dont le vrai nom est Brandon Mayhew"
+      "À Los Pollos Hermanos",
+      "Dans un groupe de soutien",
+      "Au lycée J. P. Wynne",
+      "Chez Saul Goodman"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
     "text": "Quel personnage correspond à cette description : ami de Jesse dont le vrai nom est Brandon Mayhew ?",
@@ -347,17 +381,19 @@
       "Badger",
       "Jane Margolis"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Quelle description correspond à Badger ?",
+    "text": "Dans quelles circonstances Badger est-il arrêté ?",
     "answers": [
-      "chef d’un gang néonazi et oncle de Todd",
-      "garde du corps employé par Saul Goodman",
-      "partenaire de Hank à la DEA",
-      "ami de Jesse dont le vrai nom est Brandon Mayhew"
+      "Pendant le vol du train",
+      "En cambriolant Vamonos Pest",
+      "À la frontière mexicaine",
+      "En vendant de la méthamphétamine à un policier en civil"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "medium"
   },
   {
     "text": "Quel personnage correspond à cette description : ami musicien de Jesse ?",
@@ -367,17 +403,19 @@
       "Gale Boetticher",
       "Victor"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "medium"
   },
   {
-    "text": "Quelle description correspond à Skinny Pete ?",
+    "text": "De quel instrument Skinny Pete joue-t-il avec talent dans un magasin de musique ?",
     "answers": [
-      "sœur de Skyler et épouse de Hank",
-      "ami musicien de Jesse",
-      "fils adolescent de Walter et Skyler",
-      "avocat pénaliste au slogan Better Call Saul"
+      "De la batterie",
+      "Du piano",
+      "De la trompette",
+      "Du violon"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "medium"
   },
   {
     "text": "Quel personnage correspond à cette description : chimiste recruté par Gus ?",
@@ -387,17 +425,19 @@
       "Gale Boetticher",
       "Walter White"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "medium"
   },
   {
-    "text": "Quelle description correspond à Gale Boetticher ?",
+    "text": "Quelle chanson Gale Boetticher interprète-t-il dans la vidéo de karaoké retrouvée après sa mort ?",
     "answers": [
-      "cadre de Madrigal impliquée dans le trafic",
-      "employé de Vamonos Pest lié au gang de son oncle",
-      "voisine et compagne de Jesse, artiste en rétablissement",
-      "chimiste recruté par Gus"
+      "Space Oddity",
+      "Rocket Man",
+      "Starman",
+      "Major Tom (Coming Home)"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "medium"
   },
   {
     "text": "Quel personnage correspond à cette description : homme de main de Gus tué au laboratoire ?",
@@ -407,17 +447,19 @@
       "Marie Schrader",
       "Walter White Jr."
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "Quelle description correspond à Victor ?",
+    "text": "Quelle arme Gus Fring utilise-t-il pour tuer Victor dans le laboratoire ?",
     "answers": [
-      "chimiste recruté par Gus",
-      "homme de main de Gus tué au laboratoire",
-      "trafiquant retenu prisonnier par Walter au début de la série",
-      "chef d’un gang néonazi et oncle de Todd"
+      "Un pistolet",
+      "Un cutter",
+      "Une seringue",
+      "Un câble"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
     "text": "Quel personnage correspond à cette description : trafiquant retenu prisonnier par Walter au début de la série ?",
@@ -427,17 +469,19 @@
       "Krazy-8",
       "Hector Salamanca"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Quelle description correspond à Krazy-8 ?",
+    "text": "Quel est le véritable nom de Krazy-8 ?",
     "answers": [
-      "épouse de Walter et comptable",
-      "agent de la DEA et beau-frère de Walter",
-      "sœur de Skyler et épouse de Hank",
-      "trafiquant retenu prisonnier par Walter au début de la série"
+      "Emilio Koyama",
+      "Gonzo Salamanca",
+      "Clovis Mayhew",
+      "Domingo Molina"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
     "text": "Quel personnage correspond à cette description : chef d’un gang néonazi et oncle de Todd ?",
@@ -447,17 +491,19 @@
       "Andrea Cantillo",
       "Brock Cantillo"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "Quelle description correspond à Jack Welker ?",
+    "text": "Quel agent de la DEA Jack Welker abat-il dans le désert ?",
     "answers": [
-      "trafiquant impulsif de la famille Salamanca",
-      "chef d’un gang néonazi et oncle de Todd",
-      "ancien chef de cartel communiquant avec une clochette",
-      "cadre de Madrigal impliquée dans le trafic"
+      "Steven Gomez",
+      "Hank Schrader",
+      "Tim Roberts",
+      "George Merkert"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "hard"
   },
   {
     "text": "Quel personnage correspond à cette description : garde du corps employé par Saul Goodman ?",
@@ -467,17 +513,19 @@
       "Huell Babineaux",
       "Krazy-8"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "hard"
   },
   {
-    "text": "Quelle description correspond à Huell Babineaux ?",
+    "text": "Avec quel autre homme Saul associe-t-il souvent Huell pour ses missions discrètes ?",
     "answers": [
-      "ami de Jesse dont le vrai nom est Brandon Mayhew",
-      "ami musicien de Jesse",
-      "chimiste recruté par Gus",
-      "garde du corps employé par Saul Goodman"
+      "Francesca Liddy",
+      "Ted Beneke",
+      "Dan Wachsberger",
+      "Patrick Kuby"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "hard"
   },
   {
     "text": "Quel personnage correspond à cette description : partenaire de Hank à la DEA ?",
@@ -487,16 +535,568 @@
       "Jesse Pinkman",
       "Skyler White"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "hard"
   },
   {
-    "text": "Quelle description correspond à Steven Gomez ?",
+    "text": "Quel surnom Hank donne-t-il fréquemment à Steven Gomez ?",
     "answers": [
-      "professeur de chimie devenu fabricant de méthamphétamine",
-      "partenaire de Hank à la DEA",
-      "ancien élève et partenaire de Walter",
-      "épouse de Walter et comptable"
+      "Stevie",
+      "Gomey",
+      "Gonzo",
+      "G-Man"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel produit chimique Walter utilise-t-il pour dissoudre le corps d'Emilio ?",
+    "answers": [
+      "Acide fluorhydrique",
+      "Acide sulfurique",
+      "Acide nitrique",
+      "Acide chlorhydrique"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel récipient Jesse verse-t-il imprudemment l'acide destiné au corps d'Emilio ?",
+    "answers": [
+      "Un fût en plastique",
+      "Une baignoire",
+      "Un évier en acier",
+      "Une cuve en verre"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel nom porte l'entreprise fondée autrefois par Walter avec Elliott et Gretchen ?",
+    "answers": [
+      "Madrigal Electromotive",
+      "Beneke Fabricators",
+      "Gray Matter Technologies",
+      "Schwartz Laboratories"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel couple dirige Gray Matter Technologies lorsque Walter reprend contact avec l'entreprise ?",
+    "answers": [
+      "Ted et Skyler Beneke",
+      "Hank et Marie Schrader",
+      "Donald et Jane Margolis",
+      "Elliott et Gretchen Schwartz"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel commerce Walter et Skyler achètent-ils pour blanchir de l'argent ?",
+    "answers": [
+      "A1A Car Wash",
+      "Best Quality Vacuum",
+      "Lazer Base",
+      "Beneke Fabricators"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Comment s'appelle l'ancien patron de Walter à la station de lavage ?",
+    "answers": [
+      "George Merkert",
+      "Bogdan Wolynetz",
+      "Clovis Mayhew",
+      "Ted Beneke"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel objet carbonisé revient comme motif visuel après la collision aérienne ?",
+    "answers": [
+      "Un masque à gaz vert",
+      "Un chapeau noir",
+      "Un ours en peluche rose",
+      "Une clochette argentée"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel numéro porte le vol impliqué dans la catastrophe aérienne au-dessus d'Albuquerque ?",
+    "answers": [
+      "Wayfarer 737",
+      "Mesa 308",
+      "Southwest 815",
+      "Wayfarer 515"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui est le contrôleur aérien en service lors de la collision de deux avions ?",
+    "answers": [
+      "Donald Margolis",
+      "George Merkert",
+      "Ted Beneke",
+      "Tim Roberts"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "À la suite de l'arrestation de quel personnage Walter et Jesse rencontrent-ils Saul Goodman ?",
+    "answers": [
+      "Skinny Pete",
+      "Badger",
+      "Combo",
+      "Krazy-8"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel personnage Saul présente-t-il d'abord comme son enquêteur privé et homme de confiance ?",
+    "answers": [
+      "Patrick Kuby",
+      "Huell Babineaux",
+      "Mike Ehrmantraut",
+      "Victor"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Sous quelle installation se trouve le superlaboratoire construit pour Gus Fring ?",
+    "answers": [
+      "Une brasserie",
+      "Un entrepôt frigorifique",
+      "Une station de lavage",
+      "Une blanchisserie industrielle"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel groupe industriel allemand est lié à Gus Fring et à Lydia ?",
+    "answers": [
+      "Madrigal Electromotive",
+      "Gray Matter Technologies",
+      "Beneke Fabricators",
+      "Mesa Verde"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle substance Walter, Jesse et Todd volent-ils dans un train de marchandises ?",
+    "answers": [
+      "Du phosphore rouge",
+      "De la méthylamine",
+      "De l'acide fluorhydrique",
+      "Du mercure fulminé"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel garçon Todd abat-il après le braquage du train ?",
+    "answers": [
+      "Brock Cantillo",
+      "Tomás Cantillo",
+      "Drew Sharp",
+      "Jake Pinkman"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quelle entreprise de désinsectisation sert de couverture au nouveau laboratoire mobile ?",
+    "answers": [
+      "A1A Car Wash",
+      "Best Quality Vacuum",
+      "Lavandería Brillante",
+      "Vamonos Pest"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel moyen improvisé l'équipe utilise-t-elle pour effacer à distance les données d'un ordinateur placé sous scellés ?",
+    "answers": [
+      "Un électroaimant",
+      "Une surtension électrique",
+      "Un virus informatique",
+      "Un brouilleur radio"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "À qui appartient l'ordinateur portable visé par l'opération à l'électroaimant ?",
+    "answers": [
+      "Mike Ehrmantraut",
+      "Gus Fring",
+      "Gale Boetticher",
+      "Lydia Rodarte-Quayle"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Où Walter tue-t-il Mike Ehrmantraut après leur dispute ?",
+    "answers": [
+      "Dans le superlaboratoire",
+      "Dans le désert de To'hajiilee",
+      "Au bord d'une rivière",
+      "Au parking de la DEA"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quoi Walter enterre-t-il l'essentiel de son argent dans le désert ?",
+    "answers": [
+      "Des valises métalliques",
+      "Des caisses à outils",
+      "Des réservoirs de propane",
+      "Des barils"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel objet contient les coordonnées GPS de la cache d'argent de Walter ?",
+    "answers": [
+      "Un billet de loterie",
+      "Une carte de visite",
+      "Une photo de famille",
+      "Une clé USB"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel stratagème Walter utilise-t-il dans une vidéo pour faire pression sur Hank ?",
+    "answers": [
+      "Il simule sa propre mort",
+      "Il accuse faussement Hank d'avoir dirigé son empire",
+      "Il avoue avoir empoisonné Brock",
+      "Il révèle l'identité de Gus"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel poison Walter cache-t-il initialement dans une cigarette destinée à Gus ?",
+    "answers": [
+      "La strychnine",
+      "Le cyanure",
+      "La ricine",
+      "La digitaline"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Par quel aliment Walter administre-t-il finalement la ricine à Lydia ?",
+    "answers": [
+      "Une capsule de café",
+      "Un morceau de sucre",
+      "Un comprimé d'aspirine",
+      "Un sachet de stevia"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Dans quel lieu Gus Fring meurt-il ?",
+    "answers": [
+      "Une maison de retraite",
+      "Le superlaboratoire",
+      "Los Pollos Hermanos",
+      "Un hôpital"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui actionne la bombe qui tue Gus Fring ?",
+    "answers": [
+      "Walter White",
+      "Hector Salamanca",
+      "Jesse Pinkman",
+      "Mike Ehrmantraut"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel objet Walter installe-t-il dans le coffre de sa voiture pour attaquer le gang de Jack ?",
+    "answers": [
+      "Un lance-grenades",
+      "Un fusil de précision",
+      "Une mitrailleuse M60",
+      "Une bombe au mercure"
+    ],
+    "correct": 2,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Qui étrangle Todd Alquist dans le dernier épisode ?",
+    "answers": [
+      "Walter White",
+      "Skyler White",
+      "Huell Babineaux",
+      "Jesse Pinkman"
+    ],
+    "correct": 3,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel personnage Walter sauve-t-il du laboratoire du gang de Jack ?",
+    "answers": [
+      "Jesse Pinkman",
+      "Saul Goodman",
+      "Mike Ehrmantraut",
+      "Ted Beneke"
+    ],
+    "correct": 0,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel personnage refuse que Walter prétende avoir agi uniquement pour sa famille et obtient son aveu final ?",
+    "answers": [
+      "Jesse Pinkman",
+      "Skyler White",
+      "Walter White Jr.",
+      "Marie Schrader"
+    ],
+    "correct": 1,
+    "difficulty": "hard"
+  },
+  {
+    "text": "Quel est le titre du tout premier épisode de la série ?",
+    "answers": [
+      "Seven Thirty-Seven",
+      "Cat's in the Bag...",
+      "Pilot",
+      "Cancer Man"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le titre du dernier épisode de la série ?",
+    "answers": [
+      "Granite State",
+      "Ozymandias",
+      "To'hajiilee",
+      "Felina"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien de saisons compte Breaking Bad ?",
+    "answers": [
+      "Cinq",
+      "Quatre",
+      "Six",
+      "Sept"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien d'épisodes compte la série au total ?",
+    "answers": [
+      "54",
+      "62",
+      "58",
+      "66"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a créé Breaking Bad ?",
+    "answers": [
+      "Peter Gould",
+      "Mark Johnson",
+      "Vince Gilligan",
+      "Thomas Schnauz"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur quelle chaîne américaine Breaking Bad a-t-elle été diffusée à l'origine ?",
+    "answers": [
+      "HBO",
+      "FX",
+      "Showtime",
+      "AMC"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur interprète Walter White ?",
+    "answers": [
+      "Bryan Cranston",
+      "Bob Odenkirk",
+      "Dean Norris",
+      "Jonathan Banks"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur interprète Jesse Pinkman ?",
+    "answers": [
+      "Jesse Plemons",
+      "Aaron Paul",
+      "RJ Mitte",
+      "Charles Baker"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur interprète Gus Fring ?",
+    "answers": [
+      "Raymond Cruz",
+      "Steven Michael Quezada",
+      "Giancarlo Esposito",
+      "Michael McKean"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel acteur interprète Mike Ehrmantraut ?",
+    "answers": [
+      "Dean Norris",
+      "David Costabile",
+      "Christopher Cousins",
+      "Jonathan Banks"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel compositeur a signé la musique originale et le thème principal de la série ?",
+    "answers": [
+      "Dave Porter",
+      "Bear McCreary",
+      "Ramin Djawadi",
+      "Thomas Newman"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel réalisateur a mis en scène l'épisode « Ozymandias » ?",
+    "answers": [
+      "Vince Gilligan",
+      "Rian Johnson",
+      "Michelle MacLaren",
+      "Adam Bernstein"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel épisode Hank découvre-t-il le livre qui relie Walter à Gale ?",
+    "answers": [
+      "Blood Money",
+      "To'hajiilee",
+      "Gliding Over All",
+      "Confessions"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel recueil de Walt Whitman Gale offre-t-il à Walter ?",
+    "answers": [
+      "Song of Myself",
+      "The Waste Land",
+      "Walden",
+      "Leaves of Grass"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle dédicace de Gale permet à Hank de rapprocher « W.W. » de Walter White ?",
+    "answers": [
+      "To my other favorite W.W.",
+      "For the great Heisenberg",
+      "To Walter, my chemistry master",
+      "For the king of Albuquerque"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel nouveau nom Walter utilise-t-il pendant sa fuite dans le New Hampshire ?",
+    "answers": [
+      "M. Driscoll",
+      "M. Lambert",
+      "M. Takavic",
+      "M. Mayhew"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel professionnel organise de nouvelles identités pour Saul, Walter et Jesse ?",
+    "answers": [
+      "Patrick Kuby",
+      "Dan Wachsberger",
+      "Ed Galbraith",
+      "Clovis Mayhew"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel commerce sert de façade à l'activité d'Ed Galbraith ?",
+    "answers": [
+      "A1A Car Wash",
+      "Vamonos Pest",
+      "Lazer Base",
+      "Best Quality Vacuum"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle chanson de Badfinger accompagne les dernières images de la série ?",
+    "answers": [
+      "Crystal Blue Persuasion",
+      "A Horse with No Name",
+      "Baby Blue",
+      "El Paso"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle chanson de Marty Robbins Walter écoute-t-il dans le dernier épisode ?",
+    "answers": [
+      "Big Iron",
+      "They're Hanging Me Tonight",
+      "Running Gun",
+      "El Paso"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
