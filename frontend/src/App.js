@@ -13,6 +13,8 @@ import { HomeContent, EnterCodeContent, CategoriesContent, ProfileContent, Leade
 import { initAds, adsEnabled, countFinishedGame, interstitialThen, requestRewardOffer } from './ads';
 import { useI18n } from './i18n';
 import { useGameSocket } from './useGameSocket';
+import { OnboardingOverlay, useOnboarding } from './OnboardingOverlay';
+import { useDailyStreak } from './DailyStreak';
 
 const LIVE_SESSION_KEY = 'quizzup-live-session';
 const HISTORY_KEY = 'quizzup';
@@ -126,6 +128,10 @@ export default function App() {
   const cancelQueueRef = useRef(false);
   const afterQueueExitRef = useRef(null);
   const [skipRoomRecovery, setSkipRoomRecovery] = useState(false);
+  const { isFirstTime, markDone } = useOnboarding();
+  const [showOnboarding, setShowOnboarding] = useState(false);
+  const dailyStreak = useDailyStreak();
+
   const messageHandlerRef = useRef(null);
 
   const clearPending = useCallback(() => {
@@ -310,6 +316,9 @@ export default function App() {
         ) {
           bootSessionRef.current = null;
           writeLiveSession(null);
+          if (isFirstTime) {
+            setShowOnboarding(true);
+          }
           setStage('home');
           break;
         }
@@ -510,6 +519,7 @@ export default function App() {
         if (!data.reconnect) countFinishedGame();
         setAdOffer(null);
         setAdClaimed(false);
+        dailyStreak.claim();
         setResult(data);
         setScore(data.finalScore);
         setStage('finished');
@@ -1009,6 +1019,7 @@ export default function App() {
           onOpenShop={() => setStage('shop')}
           onSaveProfile={saveProfile} profileSaving={pending}
           onOpenTopic={openTopic}
+          streak={dailyStreak}
         />
         <PlayerSheet players={players} social={social} onSelectTopic={openTopic} />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
@@ -1095,6 +1106,7 @@ export default function App() {
           rematchWaiting={rematchWaiting} rematchStarting={rematchStarting}
           newMatch={() => interstitialThen(newMatch, adHooks)}
           adOffer={adOffer} onWatchAd={watchAd} adClaimed={adClaimed}
+          streak={dailyStreak}
         />
       </div>);
   }
@@ -1104,6 +1116,24 @@ export default function App() {
       <div className="app"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <ErrorScreen reason={fatalReason} code={fatalCode} onRetry={() => window.location.reload()} />
       </div>);
+  }
+
+  if (showOnboarding) {
+    return (
+      <div className="app">
+        <OnboardingOverlay
+          onComplete={(chosenName) => {
+            markDone();
+            setShowOnboarding(false);
+            if (chosenName) {
+              setName(chosenName);
+              try { localStorage.setItem('quizzup-name', chosenName); } catch {}
+            }
+          }}
+          defaultName={name}
+        />
+      </div>
+    );
   }
 
   return null;

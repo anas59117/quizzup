@@ -1,5 +1,7 @@
 import { QuestionContent as EnhancedQuestionContent } from './enhanced-QuestionContent';
 import React, { useState, useMemo, useEffect } from 'react';
+import { StreakBadge, StreakCalendar } from './DailyStreak';
+import { ShareCard } from './ShareCard';
 import { AVATARS, CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon } from './ui';
 import { PlayerHud, Leaderboard } from './multiplayer';
 import { ProfileStats } from './stats';
@@ -130,7 +132,7 @@ export function CategoriesContent({ startWithCategory, onBack, family, onSelectF
 
 export function ProfileContent({
   avatar, name, stats, isGoogleLinked, googleEmail, linkGoogle, linking,
-  clientId, social, onOpenLeaderboard, onOpenShop, onSaveProfile, profileSaving, onOpenTopic,
+  clientId, social, onOpenLeaderboard, onOpenShop, onSaveProfile, profileSaving, onOpenTopic, streak,
 }) {
   const { t } = useI18n();
   const [editing, setEditing] = useState(false);
@@ -233,6 +235,14 @@ export function ProfileContent({
         <div><strong>{stats.following || 0}</strong><small>{t('followingCount')}</small></div>
       </div>
       <ProfileStats stats={stats} />
+      {streak && streak.streak > 0 && (
+        <StreakCalendar
+          streak={streak.streak}
+          calendar={streak.calendar || []}
+          nextMilestone={streak.nextMilestone}
+          milestoneProgress={streak.milestoneProgress}
+        />
+      )}
       <div className="section-title">{t('myTopics')}</div>
       <TopicLevelList topics={stats.topics} onSelect={onOpenTopic} />
       <button className="leaderboard-cta shop-cta" onClick={onOpenShop}>
@@ -458,8 +468,9 @@ const QuestionContent = EnhancedQuestionContent;
   );
 }
 
-export function FinishedContent({ result, opponents, myId, avatar, name, frame, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch, adOffer, onWatchAd, adClaimed }) {
+export function FinishedContent({ result, opponents, myId, avatar, name, frame, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch, adOffer, onWatchAd, adClaimed, streak, onShowShare }) {
   const { t } = useI18n();
+  const [showShare, setShowShare] = useState(false);
   const { won, tie } = result;
   const left = result.reason === 'opponent_disconnected' || result.reason === 'opponent_left';
   const isSolo = !!result.solo;
@@ -506,7 +517,20 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
           <span aria-hidden="true">▶</span> {t('adDouble', { n: result.coins })}
         </button>
       )}
+      <div className="result-streak-row">
+        <StreakBadge streak={streak?.streak || 0} />
+      </div>
       <button className="share-link" onClick={shareResult}>{t('share')}</button>
+      <button className="share-link" onClick={() => setShowShare(true)}>📸 {t('shareImage')}</button>
+      {showShare && (
+        <ShareCard
+          result={result}
+          myName={name}
+          myAvatar={avatar}
+          topicLabel={result.topic ? topicLabel(result.topic.key) : ''}
+          onClose={() => setShowShare(false)}
+        />
+      )}
       {addableOpponents.map((o) => (
         <button key={o.clientId} className="add-friend-link" onClick={() => addFriend(o.clientId)}>
           {t('addFriend', { name: o.name })}
