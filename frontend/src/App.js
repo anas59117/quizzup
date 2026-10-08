@@ -15,7 +15,6 @@ import { useI18n } from './i18n';
 import { useGameSocket } from './useGameSocket';
 import { OnboardingOverlay, useOnboarding } from './OnboardingOverlay';
 import { useDailyStreak } from './DailyStreak';
-import TournamentPage from './TournamentPage';
 import { ChallengeReceiver } from './ChallengeLink';
 
 const LIVE_SESSION_KEY = 'quizzup-live-session';
@@ -1151,7 +1150,37 @@ export default function App() {
   if (stage === 'tournament') {
     return (
       <div className="app">
-        <TournamentPage topic={currentTopic} myName={name} myAvatar={avatar} onHome={() => setStage('home')} />
+        <div className="container center">
+          <div style={{textAlign: 'center', padding: 40}}>
+            <h2 style={{color: '#fff', fontSize: '2rem', marginBottom: 16}}>🏆 Tournament Mode</h2>
+            <p style={{color: 'rgba(255,255,255,0.6)', marginBottom: 32}}>4 players, 3 rounds, 1 winner</p>
+            <div style={{background: 'rgba(255,255,255,0.05)', borderRadius: 20, padding: 24, marginBottom: 32, maxWidth: 320, margin: '0 auto 32px'}}>
+              <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16}}>
+                <span style={{color: '#2ecc71', fontWeight: 800}}>👤 You</span>
+                <span style={{color: 'rgba(255,255,255,0.3)'}}>VS</span>
+                <span style={{color: 'rgba(255,255,255,0.7)'}}>🤖 Bot</span>
+              </div>
+              <div style={{height: 2, background: 'rgba(255,255,255,0.1)', marginBottom: 16}} />
+              <p style={{color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem'}}>Semi-Final & Final after</p>
+            </div>
+            <div style={{display: 'flex', gap: 12, justifyContent: 'center', marginBottom: 32}}>
+              <div style={{background: 'rgba(255,255,255,0.05)', padding: '10px 20px', borderRadius: 12}}>🥇 +500 coins</div>
+              <div style={{background: 'rgba(255,255,255,0.05)', padding: '10px 20px', borderRadius: 12}}>🥈 +200 coins</div>
+            </div>
+            <button 
+              style={{width: '100%', maxWidth: 280, padding: '14px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg, #ff4d6d, #ff8fa3)', color: '#fff', fontWeight: 900, fontSize: '1rem', cursor: 'pointer', marginBottom: 12}}
+              onClick={() => { alert('Tournament mode coming in the next update! 🚀'); setStage('home'); }}
+            >
+              Start Tournament
+            </button>
+            <button 
+              style={{padding: '10px 24px', borderRadius: 12, border: 'none', background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.7)', fontWeight: 700, cursor: 'pointer'}}
+              onClick={() => setStage('home')}
+            >
+              Back
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
