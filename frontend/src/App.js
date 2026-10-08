@@ -920,6 +920,24 @@ export default function App() {
     );
   }
 
+  if (showOnboarding) {
+    return (
+      <div className="app">
+        <OnboardingOverlay
+          onComplete={(chosenName) => {
+            markDone();
+            setShowOnboarding(false);
+            if (chosenName) {
+              setName(chosenName);
+              try { localStorage.setItem('quizzup-name', chosenName); } catch {}
+            }
+          }}
+          defaultName={name}
+        />
+      </div>
+    );
+  }
+
   if (stage === 'home') {
     return (
       <div className="app app-nav app-top">
@@ -1116,24 +1134,6 @@ export default function App() {
       <div className="app"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <ErrorScreen reason={fatalReason} code={fatalCode} onRetry={() => window.location.reload()} />
       </div>);
-  }
-
-  if (showOnboarding) {
-    return (
-      <div className="app">
-        <OnboardingOverlay
-          onComplete={(chosenName) => {
-            markDone();
-            setShowOnboarding(false);
-            if (chosenName) {
-              setName(chosenName);
-              try { localStorage.setItem('quizzup-name', chosenName); } catch {}
-            }
-          }}
-          defaultName={name}
-        />
-      </div>
-    );
   }
 
   return null;
