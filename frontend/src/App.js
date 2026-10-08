@@ -961,6 +961,7 @@ export default function App() {
           pending={pending}
         />
         <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
+        {challengeCode && <ChallengeReceiver code={challengeCode} onAccept={() => { setChallengeCode(null); setStage('categories'); }} onDecline={() => setChallengeCode(null)} />}
       </div>
     );
   }
@@ -1153,9 +1154,7 @@ export default function App() {
     return (
       <div className="app">
         <TournamentPage topic={currentTopic} myName={name} myAvatar={avatar} onHome={() => setStage('home')} />
-
-        {challengeCode && <ChallengeReceiver code={challengeCode} onAccept={(data) => { setChallengeCode(null); setCurrentTopic(topics.find(t => t.key === data.topicKey) || topics[0]); setStage('waiting'); /* start challenge */ }} onDecline={() => setChallengeCode(null)} />}
-            </div>
+      </div>
     );
   }
 
