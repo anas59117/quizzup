@@ -427,7 +427,7 @@ export function RoundIntroContent({ intro, totalRounds, opponents, avatar, frame
   );
 }
 
-const QuestionContent = EnhancedQuestionContent;
+export const QuestionContent = EnhancedQuestionContent;
 
 export function FinishedContent({ result, opponents, myId, avatar, name, frame, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch, adOffer, onWatchAd, adClaimed, streak, onShowShare }) {
   const { t } = useI18n();
