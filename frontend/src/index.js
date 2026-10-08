@@ -36,9 +36,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <I18nProvider>
-      <AppErrorBoundary>
-        <App />
-      </AppErrorBoundary>
+      <GameFeelProvider>
+        <AppErrorBoundary>
+          <App />
+        </AppErrorBoundary>
       </GameFeelProvider>
     </I18nProvider>
   </React.StrictMode>
