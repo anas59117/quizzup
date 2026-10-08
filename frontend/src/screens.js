@@ -2,6 +2,7 @@ import { QuestionContent as EnhancedQuestionContent } from './enhanced-QuestionC
 import React, { useState, useMemo, useEffect } from 'react';
 import { StreakBadge, StreakCalendar } from './DailyStreak';
 import { ShareCard } from './ShareCard';
+import { ChallengeButton } from './ChallengeLink';
 import { AVATARS, CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon } from './ui';
 import { PlayerHud, Leaderboard } from './multiplayer';
 import { ProfileStats } from './stats';
