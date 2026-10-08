@@ -2,7 +2,7 @@
  * TournamentPage — Mode tournoi autonome (4 joueurs, bracket)
  * Gère tout en interne : lobby → matchs → résultat
  */
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useI18n } from './i18n';
 import SFX from './sounds';
 
@@ -71,20 +71,21 @@ export default function TournamentPage({ topic, myName, myAvatar, onHome }) {
   }, [topic]);
 
   // Timer
+  const handleAnswerRef = useRef(handleAnswer);
+  useEffect(() => { handleAnswerRef.current = handleAnswer; }, [handleAnswer]);
   useEffect(() => {
     if (view !== 'match' || revealed || selected !== null) return;
     const interval = setInterval(() => {
       setTimer((t) => {
         if (t <= 1) {
           clearInterval(interval);
-          handleAnswer(-1);
+          handleAnswerRef.current(-1);
           return 0;
         }
         return t - 1;
       });
     }, 1000);
     return () => clearInterval(interval);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [view, revealed, selected, currentQ]);
 
   const [tournamentResult, setTournamentResult] = useState(null);
