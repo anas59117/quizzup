@@ -2,22 +2,24 @@
   {
     "text": "Qui a écrit le scénario de Dr. Stone ?",
     "answers": [
-      "Boichi",
       "Riichirō Inagaki",
+      "Boichi",
       "Hiro Mashima",
       "Yūki Tabata"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Quel artiste coréen dessine Dr. Stone ?",
     "answers": [
       "Yusuke Murata",
-      "Takeshi Obata",
       "Boichi",
+      "Takeshi Obata",
       "Riichirō Inagaki"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle le héros scientifique de Dr. Stone ?",
@@ -27,7 +29,8 @@
       "Senkū Ishigami",
       "Taiju Ōki"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel événement mystérieux frappe l'humanité au début de Dr. Stone ?",
@@ -37,47 +40,52 @@
       "Une guerre nucléaire",
       "Toute l'humanité est pétrifiée"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Combien d'années environ l'humanité reste-t-elle pétrifiée ?",
     "answers": [
+      "3 700 ans",
       "10 000 ans",
       "500 ans",
-      "200 ans",
-      "3 700 ans"
+      "200 ans"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Quel ami très costaud de Senkū se dépétrifie quelques mois après lui ?",
     "answers": [
       "Kaseki",
+      "Taiju Ōki",
       "Chrome",
-      "Ukyō Saionji",
-      "Taiju Ōki"
+      "Ukyō Saionji"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "De quelle camarade Taiju est-il amoureux ?",
     "answers": [
       "Ruri",
       "Kohaku",
-      "Suika",
-      "Yuzuriha Ogawa"
+      "Yuzuriha Ogawa",
+      "Suika"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel talent possède Yuzuriha ?",
     "answers": [
       "La cuisine",
       "Le combat",
-      "L'artisanat et la couture",
-      "La science"
+      "La science",
+      "L'artisanat et la couture"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle phrase fétiche Senkū utilise-t-il pour exprimer sa certitude ?",
@@ -87,7 +95,8 @@
       "« Plus Ultra »",
       "« Yare yare »"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Comment Senkū a-t-il gardé la notion du temps pendant sa pétrification ?",
@@ -97,87 +106,96 @@
       "En regardant le soleil",
       "Grâce à une montre"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle solution permet de dépétrifier les humains ?",
     "answers": [
       "Du lait chaud",
       "De l'eau salée",
-      "Du jus de citron",
-      "Acide nitrique et alcool"
+      "Acide nitrique et alcool",
+      "Du jus de citron"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Qui est l'antagoniste qui veut empêcher la renaissance de la civilisation ?",
     "answers": [
-      "Tsukasa Shishiō",
       "Gen Asagiri",
       "Chrome",
-      "Kohaku"
+      "Kohaku",
+      "Tsukasa Shishiō"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Quel surnom porte Tsukasa ?",
     "answers": [
-      "Le lion des glaces",
       "Le primate lycéen le plus fort",
+      "Le lion des glaces",
       "Le roi de la science",
       "Le guerrier de pierre"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle le royaume fondé par Senkū ?",
     "answers": [
       "Le Royaume de Tsukasa",
-      "L'Empire de pierre",
       "Le Royaume de la science",
+      "L'Empire de pierre",
       "La Cité Ishigami"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle le village où vivent les descendants des survivants ?",
     "answers": [
-      "Le village d'Ishigami",
       "Le village de Konoha",
       "Le village de Kakariko",
+      "Le village d'Ishigami",
       "Le village de Karakura"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle guerrière blonde du village devient une alliée de Senkū ?",
     "answers": [
-      "Kohaku",
       "Ruri",
       "Suika",
-      "Yuzuriha"
+      "Yuzuriha",
+      "Kohaku"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Quel jeune « sorcier » du village se passionne pour les minéraux ?",
     "answers": [
-      "Ginrō",
       "Chrome",
+      "Ginrō",
       "Kaseki",
       "Kinrō"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle prêtresse du village, sœur de Kohaku, est gravement malade ?",
     "answers": [
-      "Ruri",
       "Yuzuriha",
+      "Ruri",
       "Homura",
       "Suika"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quel médicament Senkū fabrique-t-il pour sauver Ruri ?",
@@ -187,17 +205,19 @@
       "Un sulfamide (antibiotique)",
       "De l'insuline"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel mentaliste manipulateur rejoint Senkū après avoir été envoyé par Tsukasa ?",
     "answers": [
-      "Gen Asagiri",
       "Ukyō Saionji",
       "Hyōga",
-      "Chrome"
+      "Chrome",
+      "Gen Asagiri"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle boisson Senkū fabrique-t-il pour gagner la loyauté de Gen ?",
@@ -207,27 +227,30 @@
       "Du café",
       "Du thé glacé"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel vieil artisan aux talents manuels exceptionnels aide Senkū ?",
     "answers": [
       "Kinrō",
-      "Magma",
       "Kaseki",
+      "Magma",
       "Chrome"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle petite fille myope porte une pastèque sur la tête ?",
     "answers": [
-      "Suika",
       "Homura",
       "Ruri",
+      "Suika",
       "Kohaku"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui est le père de Senkū, astronaute ?",
@@ -237,57 +260,63 @@
       "Ryūsui Nanami",
       "Byakuya Ishigami"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel appareil Senkū fabrique-t-il pour parler à ses amis à distance ?",
     "answers": [
-      "Un pigeon voyageur",
       "Un téléphone portable",
+      "Un pigeon voyageur",
       "Une fusée",
       "Un satellite"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel riche héritier passionné par la navigation rejoint le Royaume de la science ?",
     "answers": [
       "Ukyō Saionji",
-      "Taiju Ōki",
       "Ryūsui Nanami",
+      "Taiju Ōki",
       "Gen Asagiri"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Comment s'appelle le navire construit par le Royaume de la science ?",
     "answers": [
       "Le Vogue Merry",
-      "Le Perseus",
       "Le Stone Ark",
+      "Le Perseus",
       "Le Titanic"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Sur quelle île le Royaume de la science affronte-t-il le détenteur de l'arme de pétrification ?",
     "answers": [
       "L'île Galuna",
-      "L'île du Trésor",
       "L'île Ishigami",
-      "L'île Tenrō"
+      "L'île Tenrō",
+      "L'île du Trésor"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Comment se nomme le mystérieux ennemi qui envoie des messages pendant la nuit ?",
     "answers": [
-      "Ibara",
       "Why-man",
+      "Ibara",
       "Xeno",
       "Stanley"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel scientifique américain, ancien mentor de Senkū, devient son rival ?",
@@ -297,57 +326,63 @@
       "Byakuya Ishigami",
       "Ryūsui Nanami"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel tireur d'élite américain est le bras armé de Xeno ?",
     "answers": [
-      "Stanley Snyder",
       "Hyōga",
       "Magma",
+      "Stanley Snyder",
       "Kinrō"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Vers quel astre Senkū veut-il finalement envoyer une fusée ?",
     "answers": [
       "Le Soleil",
-      "La Lune",
       "Vénus",
-      "Mars"
+      "Mars",
+      "La Lune"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle invention Senkū utilise-t-il pour éclairer la nuit du village ?",
     "answers": [
+      "Une ampoule électrique",
       "Une bougie géante",
       "Un néon",
-      "Une torche parfumée",
-      "Une ampoule électrique"
+      "Une torche parfumée"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel véhicule le Royaume de la science construit-il pour transporter ses inventions ?",
     "answers": [
       "Un tank",
+      "Une voiture à vapeur",
       "Un hélicoptère",
-      "Un sous-marin",
-      "Une voiture à vapeur"
+      "Un sous-marin"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel archer à l'ouïe exceptionnelle rejoint le camp de Senkū ?",
     "answers": [
-      "Ukyō Saionji",
       "Homura",
       "Magma",
+      "Ukyō Saionji",
       "Hyōga"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel frère de Ginrō est un garde loyal et honnête ?",
@@ -357,37 +392,41 @@
       "Jasper",
       "Kinrō"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel ingrédient Senkū utilise-t-il pour produire l'alcool du fluide de réveil ?",
     "answers": [
+      "Du raisin",
       "Des pommes de terre",
       "Du riz",
-      "Du raisin",
       "Du miel"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle matière Senkū produit-il pour fabriquer lentilles et flacons de laboratoire ?",
     "answers": [
       "Du plastique",
+      "Du verre",
       "Du caoutchouc",
-      "De la porcelaine",
-      "Du verre"
+      "De la porcelaine"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Dans quel magazine Dr. Stone a-t-il été publié ?",
     "answers": [
       "Weekly Shōnen Magazine",
-      "Weekly Shōnen Jump",
       "Young Jump",
+      "Weekly Shōnen Jump",
       "Monthly Shōnen Gangan"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "En quelle année Dr. Stone a-t-il débuté ?",
@@ -397,7 +436,8 @@
       "2020",
       "2017"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "En quelle année le manga s'est-il terminé ?",
@@ -407,7 +447,8 @@
       "2024",
       "2019"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Combien de tomes compte le manga Dr. Stone ?",
@@ -417,7 +458,8 @@
       "15",
       "60"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel studio a produit l'anime Dr. Stone ?",
@@ -427,7 +469,8 @@
       "TMS Entertainment",
       "Bones"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel autre manga de sport Riichirō Inagaki a-t-il écrit ?",
@@ -437,7 +480,8 @@
       "Blue Lock",
       "Eyeshield 21"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel oiseau pétrifié Senkū étudie-t-il pour comprendre la dépétrification ?",
@@ -447,17 +491,19 @@
       "Des corbeaux",
       "Des aigles"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel type de bâtiment Senkū construit-il pour fabriquer du verre et des outils ?",
     "answers": [
       "Un château",
-      "Un temple",
       "Un laboratoire",
+      "Un temple",
       "Une arène"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Comment s'appelle le chef du village d'Ishigami au début ?",
@@ -467,28 +513,30 @@
       "Kokuyō",
       "Magma"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel combattant brutal du village rêve de devenir chef ?",
     "answers": [
-      "Magma",
       "Kaseki",
       "Chrome",
-      "Kinrō"
+      "Kinrō",
+      "Magma"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel poison Chrome et Senkū doivent-ils éviter en fabriquant de l'acide sulfurique ?",
     "answers": [
+      "Les gaz toxiques d'une source sulfureuse",
       "L'arsenic des champignons",
       "Le venin de serpent",
-      "Les gaz toxiques d'une source sulfureuse",
       "Le mercure des rivières"
     ],
-    "correct": 2,
-    "difficulty": "expert"
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel est le nom de l'arme de pétrification trouvée par les héros ?",
@@ -499,6 +547,556 @@
       "Le masque de pierre"
     ],
     "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel défaut caractérise souvent Ginrō malgré son rôle de garde ?",
+    "answers": [
+      "Son mutisme",
+      "Sa myopie",
+      "Sa lâcheté",
+      "Son amnésie"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel combattant manie une lance selon la technique du kudayari ?",
+    "answers": [
+      "Kinrō",
+      "Magma",
+      "Matsukaze",
+      "Hyōga"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle aptitude physique fait de Homura une excellente éclaireuse ?",
+    "answers": [
+      "La gymnastique",
+      "La natation",
+      "Le tir à l'arc",
+      "L'escrime"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle ancienne admiratrice de Lillian Weinberg rejoint le Royaume de la science ?",
+    "answers": [
+      "Minami Hokutōzai",
+      "Nikki Hanada",
+      "Amaryllis",
+      "Maya Biggs"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel membre du Royaume de la science était policier avant la pétrification ?",
+    "answers": [
+      "Ukyō Saionji",
+      "Ginrō",
+      "Yō Uei",
+      "Carlos Barrios"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel métier Minami Hokutōzai exerçait-elle avant la pétrification ?",
+    "answers": [
+      "Médecin",
+      "Pilote",
+      "Avocate",
+      "Journaliste"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui est Mirai pour Tsukasa Shishiō ?",
+    "answers": [
+      "Sa sœur cadette",
+      "Sa cousine",
+      "Sa mère",
+      "Sa fille adoptive"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel rôle François remplit-il principalement auprès de Ryūsui ?",
+    "answers": [
+      "Garde du corps",
+      "Majordome et cuisinier",
+      "Médecin personnel",
+      "Navigateur militaire"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel guerrier de l'île au Trésor devient le vassal de Ginrō ?",
+    "answers": [
+      "Moz",
+      "Kinrō",
+      "Matsukaze",
+      "Kokuyō"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui est présenté comme le combattant le plus puissant de l'île au Trésor ?",
+    "answers": [
+      "Ibara",
+      "Soyuz",
+      "Kirisame",
+      "Moz"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui lance habituellement l'arme de pétrification pour le royaume insulaire ?",
+    "answers": [
+      "Kirisame",
+      "Amaryllis",
+      "Kohaku",
+      "Homura"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ministre tyrannique contrôle l'île au Trésor ?",
+    "answers": [
+      "Kokuyō",
+      "Ibara",
+      "Moz",
+      "Magma"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle jeune femme de l'île prépare une infiltration du palais d'Ibara ?",
+    "answers": [
+      "Luna",
+      "Nikki",
+      "Amaryllis",
+      "Minami"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "De quel lieu Soyuz est-il originaire ?",
+    "answers": [
+      "Le village d'Ishigami",
+      "San Francisco",
+      "L'île de Matsukaze",
+      "L'île au Trésor"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle capacité mnésique exceptionnelle Soyuz possède-t-il ?",
+    "answers": [
+      "Il se souvient de sa petite enfance",
+      "Il lit les pensées",
+      "Il mémorise seulement les nombres",
+      "Il oublie les visages"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel métier Ukyō exerçait-il dans la Force maritime d'autodéfense japonaise ?",
+    "answers": [
+      "Pilote de chasse",
+      "Opérateur sonar",
+      "Plongeur démineur",
+      "Médecin de bord"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui reconnaît que l'enregistrement imitant Lillian n'est pas une nouvelle chanson authentique ?",
+    "answers": [
+      "Homura",
+      "Yuzuriha",
+      "Nikki Hanada",
+      "Kohaku"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui imite la voix de Lillian Weinberg pour tromper l'empire de Tsukasa ?",
+    "answers": [
+      "Ukyō Saionji",
+      "Ryūsui Nanami",
+      "Taiju Ōki",
+      "Gen Asagiri"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle arme traditionnelle est la spécialité de Hyōga ?",
+    "answers": [
+      "La lance",
+      "Le sabre",
+      "L'arc",
+      "La hache"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment Senkū maintient-il Tsukasa en vie après sa blessure mortelle ?",
+    "answers": [
+      "Par transfusion continue",
+      "Par cryogénisation",
+      "Dans un coma médicamenteux",
+      "Avec un cœur artificiel"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel nom porte le conflit entre le Royaume de la science et l'empire de Tsukasa ?",
+    "answers": [
+      "Science Battle",
+      "Petrification War",
+      "Stone Wars",
+      "Kingdom Clash"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Pourquoi la grotte des miracles est-elle stratégique ?",
+    "answers": [
+      "Elle contient du pétrole",
+      "Elle abrite la Méduse",
+      "Elle sert de base spatiale",
+      "Elle fournit de l'acide nitrique"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle était la profession de Lillian Weinberg ?",
+    "answers": [
+      "Chanteuse",
+      "Astronaute",
+      "Journaliste",
+      "Ingénieure"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien d'astronautes survivent initialement à la pétrification mondiale depuis l'espace ?",
+    "answers": [
+      "Quatre",
+      "Six",
+      "Huit",
+      "Douze"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel héritage oral Byakuya transmet-il aux descendants des astronautes ?",
+    "answers": [
+      "Le Livre de la science",
+      "Les Chroniques du Perseus",
+      "Les Cent Contes",
+      "Le Code Ishigami"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel métal rare Byakuya collecte-t-il pendant des années pour aider Senkū ?",
+    "answers": [
+      "Le tungstène",
+      "Le titane",
+      "L'uranium",
+      "Le platine"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sur quel support la dernière chanson de Lillian est-elle conservée ?",
+    "answers": [
+      "Un disque de verre",
+      "Une bande magnétique",
+      "Un cylindre de cire",
+      "Une carte perforée"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "De qui les habitants du village d'Ishigami descendent-ils ?",
+    "answers": [
+      "Des soldats de Tsukasa",
+      "Des astronautes survivants",
+      "Des habitants dépétrifiés par Senkū",
+      "Des marins du Perseus"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelles deux valeurs faut-il annoncer pour activer la Méduse ?",
+    "answers": [
+      "Une masse et une vitesse",
+      "Une température et une pression",
+      "Une distance et une durée",
+      "Une date et une heure"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel effet médical la dépétrification peut-elle produire ?",
+    "answers": [
+      "Effacer les souvenirs",
+      "Donner une force permanente",
+      "Empêcher le vieillissement",
+      "Réparer de graves blessures"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel métal Senkū recherche-t-il pour fabriquer le filament d'un tube à vide ?",
+    "answers": [
+      "Le tungstène",
+      "L'aluminium",
+      "Le plomb",
+      "L'étain"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle machine de fête est détournée pour étirer un fil d'or très fin ?",
+    "answers": [
+      "Une grande roue",
+      "Une machine à barbe à papa",
+      "Un projecteur de cinéma",
+      "Une machine à pop-corn"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle céréale sauvage sert de base aux premières nouilles préparées par Senkū ?",
+    "answers": [
+      "Le riz",
+      "Le blé dur",
+      "Le millet des oiseaux",
+      "Le sarrasin"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel phénomène naturel permet à Senkū de créer un puissant aimant ?",
+    "answers": [
+      "Une éruption volcanique",
+      "Une aurore polaire",
+      "Un séisme",
+      "La foudre"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel matériau composite renforce le véhicule de combat Steam Gorilla ?",
+    "answers": [
+      "La fibre de carbone",
+      "Le béton armé",
+      "La fibre de verre",
+      "Le kevlar"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle compétence de Chelsea est décisive pour l'exploration mondiale ?",
+    "answers": [
+      "La chirurgie",
+      "La géographie",
+      "La cryptographie",
+      "La botanique"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel métier Joel Gear exerce-t-il avant la pétrification ?",
+    "answers": [
+      "Architecte",
+      "Chimiste",
+      "Horloger",
+      "Radiotélégraphiste"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle spécialité informatique possède Sai Nanami ?",
+    "answers": [
+      "La cybersécurité militaire",
+      "Le design 3D",
+      "La robotique médicale",
+      "La programmation"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel lien de parenté unit Sai à Ryūsui Nanami ?",
+    "answers": [
+      "Il est son frère aîné",
+      "Il est son père",
+      "Il est son cousin",
+      "Il est son fils"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel rôle Brody Dudley occupe-t-il dans l'équipe américaine ?",
+    "answers": [
+      "Médecin",
+      "Mécanicien",
+      "Cartographe",
+      "Linguiste"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelles études Luna Wright suivait-elle avant la pétrification ?",
+    "answers": [
+      "Le droit",
+      "L'astronomie",
+      "La médecine",
+      "La géologie"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle combattante américaine se distingue par une force physique exceptionnelle ?",
+    "answers": [
+      "Charlotte Bony",
+      "Luna Wright",
+      "Chelsea Childe",
+      "Maya Biggs"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel lien personnel ancien unit Stanley Snyder au Dr Xeno ?",
+    "answers": [
+      "Ils sont amis d'enfance",
+      "Ils sont frères",
+      "Ils sont cousins",
+      "Ils sont professeur et élève"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "En quelle année la première saison de l'anime Dr. Stone a-t-elle commencé ?",
+    "answers": [
+      "2017",
+      "2019",
+      "2020",
+      "2021"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui a réalisé les deux premières saisons de l'anime ?",
+    "answers": [
+      "Shūhei Matsushita",
+      "Yūichirō Kido",
+      "Shinya Iino",
+      "Yūko Iwasa"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui réalise la saison New World de Dr. Stone ?",
+    "answers": [
+      "Shinya Iino",
+      "Kenji Kodama",
+      "Tetsurō Araki",
+      "Shūhei Matsushita"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel comédien prête sa voix japonaise à Senkū ?",
+    "answers": [
+      "Yūsuke Kobayashi",
+      "Makoto Furukawa",
+      "Gen Satō",
+      "Kengo Kawanishi"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle comédienne prête sa voix japonaise à Kohaku ?",
+    "answers": [
+      "Kana Ichinose",
+      "Manami Numakura",
+      "Karin Takahashi",
+      "Maaya Sakamoto"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui assure le character design de la saison New World ?",
+    "answers": [
+      "Boichi",
+      "Riichirō Inagaki",
+      "Yūko Iwasa",
+      "Tomoyuki Aoki"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle est la véritable nature de Why-man révélée à la fin du manga ?",
+    "answers": [
+      "Un clone de Senkū",
+      "Un astronaute resté sur la Lune",
+      "Une intelligence artificielle créée par Xeno",
+      "Une intelligence collective de dispositifs Méduse"
+    ],
+    "correct": 3,
     "difficulty": "expert"
   }
 ]
