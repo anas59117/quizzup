@@ -803,12 +803,12 @@
     "difficulty": "hard"
   },
   {
-    "text": "Par quel aliment Walter administre-t-il finalement la ricine à Lydia ?",
+    "text": "Quelle substance explosive Walter fait-il passer pour de la méthamphétamine lors de sa confrontation avec Tuco ?",
     "answers": [
-      "Une capsule de café",
-      "Un morceau de sucre",
-      "Un comprimé d'aspirine",
-      "Un sachet de stevia"
+      "De la nitroglycérine",
+      "Du phosphore rouge",
+      "Du nitrate d'ammonium",
+      "Du mercure fulminé"
     ],
     "correct": 3,
     "difficulty": "hard"
@@ -880,146 +880,179 @@
     "difficulty": "hard"
   },
   {
-    "text": "Quel est le titre du tout premier épisode de la série ?",
+    "text": "Quels quatre titres d'épisodes forment ensemble le message annonçant la catastrophe aérienne ?",
     "answers": [
-      "Seven Thirty-Seven",
-      "Cat's in the Bag...",
-      "Pilot",
-      "Cancer Man"
+      "Pilot, Cat's in the Bag..., Cancer Man, Gray Matter",
+      "Negro y Azul, Better Call Saul, 4 Days Out, Mandala",
+      "Seven Thirty-Seven, Down, Over, ABQ",
+      "No Más, Caballo sin Nombre, I.F.T., Green Light"
     ],
     "correct": 2,
     "difficulty": "expert"
   },
   {
-    "text": "Quel est le titre du dernier épisode de la série ?",
+    "text": "Dans quel lycée Walter White enseigne-t-il la chimie ?",
     "answers": [
-      "Granite State",
+      "Mesa Verde High School",
+      "Albuquerque Central High",
+      "Sandia Preparatory School",
+      "J. P. Wynne High School"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle marque fictive de tequila Gus utilise-t-il pour empoisonner le cartel ?",
+    "answers": [
+      "Zafiro Añejo",
+      "Dos Hombres Reserva",
+      "Eladio Especial",
+      "Casa Tranquila Añejo"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment s'appelle l'associé de Gus tué devant lui par Hector Salamanca ?",
+    "answers": [
+      "Arturo Colon",
+      "Max Arciniega",
+      "Gonzo Salamanca",
+      "Juan Bolsa"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel chef du cartel reçoit Gus dans son hacienda au Mexique ?",
+    "answers": [
+      "Don Hector Salamanca",
+      "Juan Bolsa",
+      "Don Eladio Vuente",
+      "Joaquín Salamanca"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment s'appelle le distributeur basé en Arizona qui reprend une partie du marché après la mort de Gus ?",
+    "answers": [
+      "Dennis Markowski",
+      "Clovis",
+      "Neil Kandy",
+      "Declan"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel avocat organise les versements destinés aux hommes emprisonnés de Mike ?",
+    "answers": [
+      "Dan Wachsberger",
+      "Bill Oakley",
+      "Rich Schweikart",
+      "George Merkert"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment s'appelle le vendeur d'armes qui fournit Walter à plusieurs reprises ?",
+    "answers": [
+      "Ira",
+      "Lawson",
+      "Kuby",
+      "Sobchak"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel personnage dirige Vamonos Pest avant de travailler avec Walter et Jesse ?",
+    "answers": [
+      "Todd Alquist",
+      "Clovis",
+      "Ira",
+      "Dennis Markowski"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment s'appelle la mère de Kaylee et belle-fille de Mike ?",
+    "answers": [
+      "Diane Pinkman",
+      "Pamela Orbic",
+      "Carmen Molina",
+      "Stacey Ehrmantraut"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel épisode presque entièrement centré sur un insecte dans le laboratoire a été réalisé par Rian Johnson ?",
+    "answers": [
+      "Fly",
+      "Kafkaesque",
+      "Open House",
+      "Problem Dog"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel épisode Gus tue-t-il Victor avec un cutter ?",
+    "answers": [
+      "Thirty-Eight Snub",
+      "Box Cutter",
+      "Hermanos",
+      "Cornered"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel épisode Gus Fring meurt-il après l'explosion provoquée par Hector ?",
+    "answers": [
+      "End Times",
+      "Salud",
+      "Face Off",
+      "Crawl Space"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel épisode a lieu le braquage du train de méthylamine ?",
+    "answers": [
+      "Hazard Pay",
+      "Buyout",
+      "Say My Name",
+      "Dead Freight"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel épisode Hank Schrader est-il tué dans le désert ?",
+    "answers": [
       "Ozymandias",
       "To'hajiilee",
-      "Felina"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Combien de saisons compte Breaking Bad ?",
-    "answers": [
-      "Cinq",
-      "Quatre",
-      "Six",
-      "Sept"
+      "Confessions",
+      "Rabid Dog"
     ],
     "correct": 0,
     "difficulty": "expert"
   },
   {
-    "text": "Combien d'épisodes compte la série au total ?",
-    "answers": [
-      "54",
-      "62",
-      "58",
-      "66"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Qui a créé Breaking Bad ?",
-    "answers": [
-      "Peter Gould",
-      "Mark Johnson",
-      "Vince Gilligan",
-      "Thomas Schnauz"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Sur quelle chaîne américaine Breaking Bad a-t-elle été diffusée à l'origine ?",
-    "answers": [
-      "HBO",
-      "FX",
-      "Showtime",
-      "AMC"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel acteur interprète Walter White ?",
-    "answers": [
-      "Bryan Cranston",
-      "Bob Odenkirk",
-      "Dean Norris",
-      "Jonathan Banks"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel acteur interprète Jesse Pinkman ?",
-    "answers": [
-      "Jesse Plemons",
-      "Aaron Paul",
-      "RJ Mitte",
-      "Charles Baker"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel acteur interprète Gus Fring ?",
-    "answers": [
-      "Raymond Cruz",
-      "Steven Michael Quezada",
-      "Giancarlo Esposito",
-      "Michael McKean"
-    ],
-    "correct": 2,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel acteur interprète Mike Ehrmantraut ?",
-    "answers": [
-      "Dean Norris",
-      "David Costabile",
-      "Christopher Cousins",
-      "Jonathan Banks"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel compositeur a signé la musique originale et le thème principal de la série ?",
-    "answers": [
-      "Dave Porter",
-      "Bear McCreary",
-      "Ramin Djawadi",
-      "Thomas Newman"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel réalisateur a mis en scène l'épisode « Ozymandias » ?",
-    "answers": [
-      "Vince Gilligan",
-      "Rian Johnson",
-      "Michelle MacLaren",
-      "Adam Bernstein"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Dans quel épisode Hank découvre-t-il le livre qui relie Walter à Gale ?",
+    "text": "Quel épisode suit la fuite de Walter dans une cabane isolée du New Hampshire ?",
     "answers": [
       "Blood Money",
-      "To'hajiilee",
-      "Gliding Over All",
-      "Confessions"
+      "Granite State",
+      "Buried",
+      "Felina"
     ],
-    "correct": 2,
+    "correct": 1,
     "difficulty": "expert"
   },
   {
@@ -1027,52 +1060,19 @@
     "answers": [
       "Song of Myself",
       "The Waste Land",
-      "Walden",
-      "Leaves of Grass"
-    ],
-    "correct": 3,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quelle dédicace de Gale permet à Hank de rapprocher « W.W. » de Walter White ?",
-    "answers": [
-      "To my other favorite W.W.",
-      "For the great Heisenberg",
-      "To Walter, my chemistry master",
-      "For the king of Albuquerque"
-    ],
-    "correct": 0,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel nouveau nom Walter utilise-t-il pendant sa fuite dans le New Hampshire ?",
-    "answers": [
-      "M. Driscoll",
-      "M. Lambert",
-      "M. Takavic",
-      "M. Mayhew"
-    ],
-    "correct": 1,
-    "difficulty": "expert"
-  },
-  {
-    "text": "Quel professionnel organise de nouvelles identités pour Saul, Walter et Jesse ?",
-    "answers": [
-      "Patrick Kuby",
-      "Dan Wachsberger",
-      "Ed Galbraith",
-      "Clovis Mayhew"
+      "Leaves of Grass",
+      "Walden"
     ],
     "correct": 2,
     "difficulty": "expert"
   },
   {
-    "text": "Quel commerce sert de façade à l'activité d'Ed Galbraith ?",
+    "text": "Quelle dédicace de Gale permet à Hank de rapprocher « W.W. » de Walter White ?",
     "answers": [
-      "A1A Car Wash",
-      "Vamonos Pest",
-      "Lazer Base",
-      "Best Quality Vacuum"
+      "For the great Heisenberg",
+      "To Walter, my chemistry master",
+      "For the king of Albuquerque",
+      "To my other favorite W.W."
     ],
     "correct": 3,
     "difficulty": "expert"
@@ -1089,12 +1089,12 @@
     "difficulty": "expert"
   },
   {
-    "text": "Quelle chanson de Marty Robbins Walter écoute-t-il dans le dernier épisode ?",
+    "text": "Quel modèle précis d'aspirateur sert de mot de passe pour solliciter les services d'Ed Galbraith ?",
     "answers": [
-      "Big Iron",
-      "They're Hanging Me Tonight",
-      "Running Gun",
-      "El Paso"
+      "Hoover WindTunnel T-Series, modèle 55",
+      "Dyson Ball Animal, modèle 70",
+      "Eureka Mighty Mite, modèle 40",
+      "Hoover Max Extract Pressure Pro, modèle 60"
     ],
     "correct": 3,
     "difficulty": "expert"
