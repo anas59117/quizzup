@@ -1148,8 +1148,6 @@ export default function App() {
       </div>);
   }
 
-  return null;
-}
   if (stage === 'tournament') {
     return (
       <div className="app">
@@ -1157,5 +1155,8 @@ export default function App() {
       </div>
     );
   }
+
+  return null;
+}
 
 
