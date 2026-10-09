@@ -83,7 +83,9 @@ export function useLeague() {
   const seasonEnd = new Date('2024-01-01').getTime() + (currentSeason * SEASON_DURATION_DAYS * 24 * 60 * 60 * 1000);
   const daysLeft = Math.ceil((seasonEnd - Date.now()) / (24 * 60 * 60 * 1000));
 
-  return { ...league, tier, next, progress, currentSeason, daysLeft, addResult };
+  const totalGames = (league.wins || 0) + (league.losses || 0);
+  const winRate = totalGames > 0 ? Math.round((league.wins / totalGames) * 100) : 0;
+  return { ...league, tier, next, progress, winRate, currentSeason, daysLeft, addResult };
 }
 
 export function LeagueContent({ league, onBack, t }) {
