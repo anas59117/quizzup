@@ -16,10 +16,12 @@ import { useGameSocket } from './useGameSocket';
 import { OnboardingOverlay, useOnboarding } from './OnboardingOverlay';
 import { useDailyStreak } from './DailyStreak';
 import { ChallengeReceiver } from './ChallengeLink';
+import { FriendsScreen } from './social';
+import { LeagueContent, useLeague } from './LeagueSystem';
 
 const LIVE_SESSION_KEY = 'quizzup-live-session';
 const HISTORY_KEY = 'quizzup';
-const BROWSABLE_STAGES = new Set(['home', 'feed', 'categories', 'profile', 'leaderboard', 'enter_code', 'shop']);
+const BROWSABLE_STAGES = new Set(['home', 'feed', 'categories', 'profile', 'leaderboard', 'enter_code', 'shop', 'friends', 'league']);
 const SESSION_STAGES = new Set(['waiting', 'room_wait', 'playing', 'finished', 'error']);
 
 function browserLocation(stage, family) {
@@ -207,6 +209,7 @@ export default function App() {
   });
 
   const social = useSocial(wsRef);
+  const league = useLeague();
   const statsHook = useStats();
   const feed = useFeed(wsRef);
   const players = usePlayers(wsRef);
@@ -957,6 +960,8 @@ export default function App() {
           onOpenProfile={() => setStage('profile')} onSeeAll={(fam) => { setCategoryFamily(fam || null); setStage('categories'); }}
           createRoom={createRoom} onOpenEnterCode={() => { setJoinError(false); setJoinCode(''); setStage('enter_code'); }}
           onStartTournament={() => setStage('tournament')}
+          onOpenFriends={() => setStage('friends')}
+          onOpenLeague={() => setStage('league')}
           pending={pending}
         />
         <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
@@ -1083,6 +1088,27 @@ export default function App() {
       </div>);
   }
 
+  if (stage === 'friends') {
+    return (
+      <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+        <div className="container friends-page">
+          <div className="friends-header">
+            <button className="friends-back" onClick={() => setStage('home')}>←</button>
+            <h2 className="friends-title">👥 {t('friends')}</h2>
+          </div>
+          <FriendsScreen social={social} />
+        </div>
+        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
+      </div>);
+  }
+
+  if (stage === 'league') {
+    return (
+      <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+        <LeagueContent league={league} onBack={() => setStage('home')} t={t} />
+        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
+      </div>);
+  }
 
   if (stage === 'playing' && reconnecting) {
     return (
