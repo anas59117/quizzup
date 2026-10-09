@@ -99,6 +99,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
         {/* Note: PlayerPhoto omitted for brevity, keep your existing one */}
         <div className="question-panel">
           <div className="question">{question.question}</div>
+            {question.image && <img src={question.image} alt="" className="question-image" style={{maxWidth:'100%',borderRadius:12,marginBottom:16}} />}
           <div className={`answers ${question.image ? '' : 'single-col'}`}>
             {question.answers.map((a, idx) => (
               <button
