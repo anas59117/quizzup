@@ -245,6 +245,14 @@ export function ProfileContent({
         <div><strong>{stats.following || 0}</strong><small>{t('followingCount')}</small></div>
       </div>
       <ProfileStats stats={stats} />
+          {league && (
+            <div className="profile-league-card" onClick={() => onOpenLeague && onOpenLeague()}>
+              <div className="pl-tier">{league.tier.icon} {league.tier.label}</div>
+              <div className="pl-lp">{league.lp} LP</div>
+              <div className="pl-progress"><div className="pl-progress-fill" style={{ width: `${league.progress}%`, background: league.tier.color }} /></div>
+              <div className="pl-stats">{league.wins}W / {league.losses}L • {league.winRate}% WR</div>
+            </div>
+          )}
       {streak && streak.streak > 0 && (
         <StreakCalendar
           streak={streak.streak}
