@@ -5,6 +5,22 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useI18n } from './i18n';
 
+const SEASON_DURATION_DAYS = 30;
+
+function getCurrentSeason() {
+  const start = new Date('2024-01-01').getTime();
+  const now = Date.now();
+  return Math.floor((now - start) / (SEASON_DURATION_DAYS * 24 * 60 * 60 * 1000)) + 1;
+}
+
+function checkSeasonReset(data) {
+  const currentSeason = getCurrentSeason();
+  if (data.season !== currentSeason) {
+    return { lp: 0, wins: 0, losses: 0, streak: 0, season: currentSeason, history: [...(data.history || []), { season: data.season, lp: data.lp, tier: getTier(data.lp).key }] };
+  }
+  return data;
+}
+
 const TIERS = [
   { key: 'bronze', label: 'Bronze', min: 0, color: '#cd7f32', icon: '🥉' },
   { key: 'silver', label: 'Silver', min: 500, color: '#c0c0c0', icon: '🥈' },
@@ -29,14 +45,15 @@ function getNextTier(lp) {
 
 function loadLeague() {
   try {
-    return JSON.parse(localStorage.getItem('quizzup-league') || '{"lp":0,"wins":0,"losses":0,"streak":0,"season":1}');
+    const raw = JSON.parse(localStorage.getItem('quizzup-league') || '{"lp":0,"wins":0,"losses":0,"streak":0,"season":1}');
+    return checkSeasonReset(raw);
   } catch {
-    return { lp: 0, wins: 0, losses: 0, streak: 0, season: 1 };
+    return { lp: 0, wins: 0, losses: 0, streak: 0, season: getCurrentSeason(), history: [] };
   }
 }
 
 function saveLeague(data) {
-  localStorage.setItem('quizzup-league', JSON.stringify(data));
+  localStorage.setItem('quizzup-league', JSON.stringify({ ...data, lastUpdate: Date.now() }));
 }
 
 export function useLeague() {
@@ -62,8 +79,11 @@ export function useLeague() {
   const tier = getTier(league.lp);
   const next = getNextTier(league.lp);
   const progress = next ? ((league.lp - tier.min) / (next.min - tier.min)) * 100 : 100;
+  const currentSeason = getCurrentSeason();
+  const seasonEnd = new Date('2024-01-01').getTime() + (currentSeason * SEASON_DURATION_DAYS * 24 * 60 * 60 * 1000);
+  const daysLeft = Math.ceil((seasonEnd - Date.now()) / (24 * 60 * 60 * 1000));
 
-  return { ...league, tier, next, progress, addResult };
+  return { ...league, tier, next, progress, currentSeason, daysLeft, addResult };
 }
 
 export function LeagueContent({ league, onBack, t }) {
@@ -78,6 +98,7 @@ export function LeagueContent({ league, onBack, t }) {
         <h2 className="league-title">🏆 {t('leagueTitle')}</h2>
       </div>
 
+      <div className="league-season">{t('season')} {league.currentSeason} — {league.daysLeft} {t('daysLeft')}</div>
       <div className="league-card">
         <div className="league-tier-icon" style={{ color: tier.color }}>{tier.icon}</div>
         <div className="league-tier-name" style={{ color: tier.color }}>{tier.label}</div>
