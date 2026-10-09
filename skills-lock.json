@@ -157,6 +157,13 @@
       "skillPath": "skills/events/SKILL.md",
       "computedHash": "f92f21a38255f8e472ef10286036543b53f08501750f01b66236c31a6a357c70"
     },
+    "ffmpeg": {
+      "source": "calesthio/OpenMontage",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/ffmpeg/SKILL.md",
+      "computedHash": "51fa05bc18bb2691e622aefd1d8ec6d4d96a9e9c44cdf599003c9d6003d11a07"
+    },
     "find-skills": {
       "source": "vercel-labs/skills",
       "sourceType": "github",
@@ -175,11 +182,53 @@
       "skillPath": "skills/free-tools/SKILL.md",
       "computedHash": "ab40a39f8b10a0ee423f47005a49defcae4e9b82b4c6e5be1d6c67d7f963973e"
     },
+    "frontend-a11y": {
+      "source": "affaan-m/ECC",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-a11y/SKILL.md",
+      "computedHash": "da9365797c4e5668a8384e271f0398e8241f66c9c18389af11f87890a49c630f"
+    },
     "frontend-patterns": {
       "source": "affaan-m/ECC",
       "sourceType": "github",
       "skillPath": "skills/frontend-patterns/SKILL.md",
       "computedHash": "cda7d74619e78bc6c58e7f7f4fa7a9d831ec71ae4629550e4d7b53876692e4d3"
+    },
+    "game-audio": {
+      "source": "davila7/claude-code-templates",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "cli-tool/components/skills/creative-design/game-development/game-audio/SKILL.md",
+      "computedHash": "d172c859ce24cb51d720cbf491aa58635ad47d6ba159051a253c94c880c5a02e"
+    },
+    "game-design": {
+      "source": "davila7/claude-code-templates",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "cli-tool/components/skills/creative-design/game-development/game-design/SKILL.md",
+      "computedHash": "20889a7b718d3f4cce95261c93d18e38e5ec4fafbbc9162f9b7b7f5f413b05fb"
+    },
+    "game-ui-frontend": {
+      "source": "openai/plugins",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "plugins/game-studio/skills/game-ui-frontend/SKILL.md",
+      "computedHash": "83f21277bfaa8427d7f0e67220885d6c04319c0b6cb1f7196186aaba293e8f88"
+    },
+    "gamification-loops": {
+      "source": "omer-metin/skills-for-antigravity",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/gamification-loops/SKILL.md",
+      "computedHash": "5c6d90890a2bb618ded9387244dd9d146c2d9f56933208875942038601d489b6"
+    },
+    "i18n-localization": {
+      "source": "davila7/claude-code-templates",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "cli-tool/components/skills/development/i18n-localization/SKILL.md",
+      "computedHash": "04021dbf4002e045d1598b482f8ff69dbaac832cce863fc72d23ae28359f7da8"
     },
     "image": {
       "source": "coreyhaines31/marketingskills",
@@ -307,6 +356,20 @@
       "skillPath": "skills/public-relations/SKILL.md",
       "computedHash": "0c7c5c26c158ea752ab7112503931ba0bc0b4a747058b3027c6785dcb3a464fe"
     },
+    "react-testing": {
+      "source": "affaan-m/ECC",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/react-testing/SKILL.md",
+      "computedHash": "59bd15f26f018d6629557108f936ab691af887508ae71b9d339855e49e337012"
+    },
+    "real-time-systems-designer": {
+      "source": "FerroxLabs/wayland",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "src/process/resources/skills-library/bodies/skills/software-engineering/real-time-systems-designer/SKILL.md",
+      "computedHash": "771df0b01a87a9ce96413f06f4ee9a8f5fc7fbce9247713668ef443297c7064a"
+    },
     "redesign-existing-projects": {
       "source": "Leonxlnx/taste-skill",
       "sourceType": "github",
@@ -336,6 +399,13 @@
       "sourceType": "github",
       "skillPath": "skills/schema/SKILL.md",
       "computedHash": "2f4807070c77b5c52af3a7e56d2ca5ee12ae2fd8b749d76ab68d3de40f323e78"
+    },
+    "seo": {
+      "source": "tech-leads-club/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "packages/skills-catalog/skills/(quality)/seo/SKILL.md",
+      "computedHash": "67b8ecd4290d7b93c97793f1442c003cd9019ebdb0c35d7d7737d70da8e3b380"
     },
     "seo-audit": {
       "source": "coreyhaines31/marketingskills",
@@ -445,6 +515,12 @@
       "skillPath": "skills/claude-meta/token-efficiency/SKILL.md",
       "computedHash": "94754a40b57e4099db737663b50ca9e0eeb4244bed4c3caf4ee6727bb81c8f64"
     },
+    "ui-ux-pro-max": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ui-ux-pro-max/SKILL.md",
+      "computedHash": "7ac62d931e52dbc7c309ed8ee067101969db2454709339b02daa583e80e98d5f"
+    },
     "vercel-react-best-practices": {
       "source": "vercel-labs/agent-skills",
       "sourceType": "github",
@@ -504,6 +580,27 @@
       "sourceType": "github",
       "skillPath": "skills/web-audio-api/SKILL.md",
       "computedHash": "d791e113525eafe8c0bc0fb3dbbdef05d470b0cfedd9f1eaa2f00081d3fce1bd"
+    },
+    "web-design-guidelines": {
+      "source": "tech-leads-club/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "packages/skills-catalog/skills/(design)/web-design-guidelines/SKILL.md",
+      "computedHash": "3b8d93ef7fcefb882f7b7cf4657e8a33af8312ec2a90eb70e0fe202e5c191484"
+    },
+    "web-perf": {
+      "source": "openai/plugins",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "plugins/cloudflare/skills/web-perf/SKILL.md",
+      "computedHash": "adf38bb7353ade91068938abd92acb56035480e40b150d3a22890bf8b05b35f0"
+    },
+    "web-quality-audit": {
+      "source": "tech-leads-club/agent-skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "packages/skills-catalog/skills/(quality)/web-quality-audit/SKILL.md",
+      "computedHash": "b6e3a60454e6639980659671d12af04149178d29ebd600a00ba752b7acb7d98f"
     },
     "websocket-engineer": {
       "source": "jeffallan/claude-skills",
