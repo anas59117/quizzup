@@ -96,3 +96,4 @@ The frontend Firebase/WebSocket variables are documented in `frontend/.env.examp
 
 The JSON stores are still intentionally **single-instance MVP storage**. Before horizontal scaling, move durable stats/social/feed/moderation data to a shared database and move matchmaking/session state to Redis or another shared realtime store.
 
+<!-- Build trigger -->
