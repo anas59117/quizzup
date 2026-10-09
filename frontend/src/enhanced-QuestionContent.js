@@ -98,8 +98,18 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
       <div className={`answers-wrapper ${gf.opponentPop ? 'opponent-just-answered' : ''}`}>
         {/* Note: PlayerPhoto omitted for brevity, keep your existing one */}
         <div className="question-panel">
-          <div className="question">{question.question}</div> {question.image && <img src={question.image} alt="" className="question-image" style={{maxWidth:'100%',borderRadius:12,marginBottom:16}} />}
-            {question.image && <img src={question.image} alt="" className="question-image" style={{maxWidth:'100%',borderRadius:12,marginBottom:16}} />}
+          <div className="question">{question.question}</div> {question.image && (
+          <div className="player-photo-wrap">
+            <img src={question.image} alt="Guess the player" className="player-photo" />
+            {reveal && question.credit && <div className="photo-credit">{question.credit}</div>}
+          </div>
+        )}
+            {question.image && (
+          <div className="player-photo-wrap">
+            <img src={question.image} alt="Guess the player" className="player-photo" />
+            {reveal && question.credit && <div className="photo-credit">{question.credit}</div>}
+          </div>
+        )}
           <div className={`answers ${question.image ? '' : 'single-col'}`}>
             {question.answers.map((a, idx) => (
               <button
