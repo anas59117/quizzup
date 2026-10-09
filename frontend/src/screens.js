@@ -565,10 +565,9 @@ export function ShopContent({ avatar, name, stats, onBuy, onEquip, onPlay, onBac
       <div className="section-title">{t('shopFrames')}</div>
       <div className="shop-picker" role="group" aria-label={t('shopFrames')}>
         {FRAMES.map((entry) => (
-          <button key={entry.id} className={`shop-pick identity-${entry.id}${selected === entry.id ? ' selected' : ''}`} aria-pressed={selected === entry.id} onClick={() => { setSelected(entry.id); setConfirming(null); }}>
-            <span className="shop-pick-number" aria-hidden="true">{IDENTITIES[entry.id].number}</span>
-            <span className="shop-pick-copy"><strong>{t(frameLabelKey(entry.id))}</strong><small>{equipped === entry.id ? t('equipped') : owned.has(entry.id) ? t('equip') : entry.price === 0 ? t('shopFree') : `${entry.price} ${t('coinBalance')}`}</small></span>
-            <Icon name="arrow" size={17} />
+          <button key={entry.id} className={`shop-pick${selected === entry.id ? ' selected' : ''}`} aria-pressed={selected === entry.id} onClick={() => { setSelected(entry.id); setConfirming(null); }}>
+            <IdentityCard frame={entry.id} avatar={avatar} name={name} level={stats.level} compact className="identity-card-collection" />
+            <span className="shop-pick-copy"><strong>{t(frameLabelKey(entry.id))}</strong><small>{equipped === entry.id ? t('equipped') : owned.has(entry.id) ? t('equip') : entry.price === 0 ? t('shopFree') : `${entry.price} ${t('coinBalance')}`}</small><Icon name={selected === entry.id ? 'check' : 'arrow'} size={17} /></span>
           </button>
         ))}
       </div>
