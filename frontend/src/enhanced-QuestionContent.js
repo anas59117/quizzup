@@ -96,20 +96,14 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
       />
       {/* Opponent pop class injected via wrapper or css — see note below */}
       <div className={`answers-wrapper ${gf.opponentPop ? 'opponent-just-answered' : ''}`}>
-        {/* Note: PlayerPhoto omitted for brevity, keep your existing one */}
         <div className="question-panel">
-          <div className="question">{question.question}</div> {question.image && (
-          <div className="player-photo-wrap">
-            <img src={question.image} alt="Guess the player" className="player-photo" />
-            {reveal && question.credit && <div className="photo-credit">{question.credit}</div>}
-          </div>
-        )}
-            {question.image && (
-          <div className="player-photo-wrap">
-            <img src={question.image} alt="Guess the player" className="player-photo" />
-            {reveal && question.credit && <div className="photo-credit">{question.credit}</div>}
-          </div>
-        )}
+          <div className="question">{question.question}</div>
+          {question.image && (
+            <div className="player-photo-wrap">
+              <img src={question.image} alt="Guess the player" className="player-photo" />
+              {revealed && question.credit && <div className="photo-credit">{question.credit}</div>}
+            </div>
+          )}
           <div className={`answers ${question.image ? '' : 'single-col'}`}>
             {question.answers.map((a, idx) => (
               <button
