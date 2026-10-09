@@ -143,6 +143,7 @@ export function CategoriesContent({ startWithCategory, onBack, family, onSelectF
 export function ProfileContent({
   avatar, name, stats, isGoogleLinked, googleEmail, linkGoogle, linking,
   clientId, social, onOpenLeaderboard, onOpenShop, onSaveProfile, profileSaving, onOpenTopic, streak,
+  league, onOpenLeague,
 }) {
   const { t } = useI18n();
   const [editing, setEditing] = useState(false);
