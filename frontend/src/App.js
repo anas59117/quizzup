@@ -16,6 +16,7 @@ import { useGameSocket } from './useGameSocket';
 import { OnboardingOverlay, useOnboarding } from './OnboardingOverlay';
 import { useDailyStreak } from './DailyStreak';
 import { ChallengeReceiver } from './ChallengeLink';
+import { useNotifications, NotificationContainer } from './NotificationSystem';
 import { FriendsScreen } from './social';
 import { LeagueContent, useLeague } from './LeagueSystem';
 
@@ -210,6 +211,7 @@ export default function App() {
 
   const social = useSocial(wsRef);
   const league = useLeague();
+  const { notifications, notify, removeNotification } = useNotifications();
   const statsHook = useStats();
   const feed = useFeed(wsRef);
   const players = usePlayers(wsRef);
@@ -954,6 +956,7 @@ export default function App() {
     return (
       <div className="app app-nav app-top">
         <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+        <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
         <HomeContent
           name={name} avatar={avatar} frame={statsHook.stats.frame} soloMode={soloMode} setSoloMode={setSoloMode}
           quickMatch={quickMatch} startWithCategory={startWithCategory}
@@ -1045,6 +1048,7 @@ export default function App() {
   if (stage === 'profile') {
     return (
       <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+        <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
         <ProfileContent
           avatar={avatar} name={name} stats={statsHook.stats}
           isGoogleLinked={!!(firebaseUser && !firebaseUser.isAnonymous)} googleEmail={firebaseUser?.email}
@@ -1054,6 +1058,8 @@ export default function App() {
           onSaveProfile={saveProfile} profileSaving={pending}
           onOpenTopic={openTopic}
           streak={dailyStreak}
+          league={league}
+          onOpenLeague={() => setStage('league')}
         />
         <PlayerSheet players={players} social={social} onSelectTopic={openTopic} />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
@@ -1152,8 +1158,17 @@ export default function App() {
   }
 
   if (stage === 'finished' && result) {
+    const won = result.winner && result.winner.id === myId;
+    const lpChange = won ? (league.streak >= 2 ? 35 : 25) : -20;
+    if (!window.__leagueRecorded) {
+      window.__leagueRecorded = true;
+      league.addResult(won);
+      notify(won ? `+${lpChange} LP! 🔥` : `${lpChange} LP`, won ? 'success' : 'error');
+      setTimeout(() => { window.__leagueRecorded = false; }, 500);
+    }
     return (
       <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+        <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
         <FinishedContent
           result={result} opponents={opponents} myId={myId} avatar={avatar} name={name} frame={statsHook.stats.frame} social={social}
           addFriend={social.addFriend}
