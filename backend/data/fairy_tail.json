@@ -2,22 +2,24 @@
   {
     "text": "Qui est l'auteur de Fairy Tail ?",
     "answers": [
-      "Yūki Tabata",
       "Hiro Mashima",
+      "Yūki Tabata",
       "Tite Kubo",
       "Eiichirō Oda"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle le héros de Fairy Tail ?",
     "answers": [
-      "Natsu Dragneel",
       "Laxus Dreyar",
+      "Natsu Dragneel",
       "Gray Fullbuster",
       "Gajeel Redfox"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quel type de magie Natsu utilise-t-il ?",
@@ -27,27 +29,30 @@
       "La magie du chasseur de dragons de feu",
       "La magie des esprits célestes"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel dragon a élevé Natsu ?",
     "answers": [
       "Acnologia",
       "Grandine",
-      "Igneel",
-      "Metalicana"
+      "Metalicana",
+      "Igneel"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle magicienne utilise des clés pour invoquer des esprits célestes ?",
     "answers": [
+      "Lucy Heartfilia",
       "Levy McGarden",
       "Erza Scarlet",
-      "Juvia Lockser",
-      "Lucy Heartfilia"
+      "Juvia Lockser"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle le chat bleu volant de Natsu ?",
@@ -57,27 +62,30 @@
       "Lily",
       "Carla"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle réplique Happy répète-t-il sans cesse ?",
     "answers": [
       "« Believe it ! »",
       "« Dattebayo ! »",
-      "« Yare yare ! »",
-      "« Aye sir ! »"
+      "« Aye sir ! »",
+      "« Yare yare ! »"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel mage de glace a la manie de se déshabiller ?",
     "answers": [
-      "Gray Fullbuster",
       "Lyon Vastia",
       "Natsu Dragneel",
-      "Laxus Dreyar"
+      "Laxus Dreyar",
+      "Gray Fullbuster"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle mage redoutée est surnommée « Titania » ?",
@@ -87,67 +95,74 @@
       "Wendy Marvell",
       "Lucy Heartfilia"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle magie permet à Erza de changer d'armure en combat ?",
     "answers": [
       "La création de glace",
+      "Le rééquipement",
       "La magie céleste",
-      "La transformation",
-      "Le rééquipement"
+      "La transformation"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Qui est le maître de la guilde Fairy Tail au début de la série ?",
     "answers": [
       "Mavis Vermillion",
-      "Makarov Dreyar",
       "Gildarts Clive",
+      "Makarov Dreyar",
       "Laxus Dreyar"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle la ville où se trouve la guilde Fairy Tail ?",
     "answers": [
       "Crocus",
-      "Magnolia",
       "Oak Town",
-      "Hargeon"
+      "Hargeon",
+      "Magnolia"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Dans quel royaume se déroule l'histoire ?",
     "answers": [
-      "Alvarez",
       "Fiore",
+      "Alvarez",
       "Ishgar",
       "Amestris"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle jeune chasseuse de dragons utilise la magie du ciel ?",
     "answers": [
       "Lucy Heartfilia",
-      "Juvia Lockser",
       "Wendy Marvell",
+      "Juvia Lockser",
       "Levy McGarden"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle la chatte qui accompagne Wendy ?",
     "answers": [
       "Frosch",
       "Happy",
-      "Lector",
-      "Carla"
+      "Carla",
+      "Lector"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quel chasseur de dragons d'acier a rejoint Fairy Tail après Phantom Lord ?",
@@ -157,47 +172,52 @@
       "Rogue Cheney",
       "Gajeel Redfox"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle mage de l'eau est éperdument amoureuse de Gray ?",
     "answers": [
-      "Lucy Heartfilia",
       "Juvia Lockser",
+      "Lucy Heartfilia",
       "Erza Scarlet",
       "Cana Alberona"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
     "text": "Qui est le petit-fils de Makarov, chasseur de dragons de foudre ?",
     "answers": [
       "Freed Justine",
-      "Gildarts Clive",
       "Laxus Dreyar",
+      "Gildarts Clive",
       "Elfman Strauss"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle mage surnommée « la démone » est serveuse de la guilde ?",
     "answers": [
-      "Mirajane Strauss",
       "Lisanna Strauss",
       "Levy McGarden",
+      "Mirajane Strauss",
       "Cana Alberona"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
     "text": "Quelle guilde rivale attaque Fairy Tail lors d'un des premiers grands arcs ?",
     "answers": [
       "Lamia Scale",
       "Blue Pegasus",
-      "Phantom Lord",
-      "Sabertooth"
+      "Sabertooth",
+      "Phantom Lord"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
     "text": "Comment s'appelle le tournoi opposant les guildes dans la capitale ?",
@@ -207,7 +227,8 @@
       "Le Tournoi des Dragons",
       "Les Jeux de Crocus"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Dans quelle ville se déroulent les Grands Jeux Magiques ?",
@@ -217,17 +238,19 @@
       "Hargeon",
       "Era"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle guilde, avec Sting et Rogue, domine les Grands Jeux Magiques ?",
     "answers": [
-      "Sabertooth",
       "Phantom Lord",
       "Lamia Scale",
+      "Sabertooth",
       "Quatro Cerberus"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui est le terrible mage noir immortel de la série ?",
@@ -237,7 +260,8 @@
       "Acnologia",
       "Zeref"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel dragon noir est l'une des plus grandes menaces de la série ?",
@@ -247,7 +271,8 @@
       "Igneel",
       "Atlas Flame"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui est la première maîtresse fondatrice de Fairy Tail ?",
@@ -257,27 +282,30 @@
       "Mirajane Strauss",
       "Erza Scarlet"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Sur quelle île sacrée de la guilde se déroule l'examen de rang S ?",
     "answers": [
       "L'île Galuna",
       "L'île d'Akane",
-      "L'île de Hargeon",
-      "L'île Tenrō"
+      "L'île Tenrō",
+      "L'île de Hargeon"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Combien d'années les membres disparus de Tenrō ont-ils été absents ?",
     "answers": [
       "10 ans",
       "1 an",
-      "7 ans",
-      "3 ans"
+      "3 ans",
+      "7 ans"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel personnage à tatouage facial est lié au passé d'Erza dans la tour du Paradis ?",
@@ -287,27 +315,30 @@
       "Laxus Dreyar",
       "Gray Fullbuster"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle est la vraie identité de Natsu révélée plus tard ?",
     "answers": [
-      "END, le frère de Zeref",
       "Le fils d'Acnologia",
+      "END, le frère de Zeref",
       "Le roi de Fiore",
       "Un esprit céleste"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel esprit céleste lion est très proche de Lucy ?",
     "answers": [
       "Virgo",
-      "Loki (Léo)",
       "Aquarius",
+      "Loki (Léo)",
       "Taurus"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle esprit céleste colérique Lucy invoque-t-elle dans l'eau ?",
@@ -317,47 +348,52 @@
       "Cancer",
       "Aquarius"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel groupe de six mages noirs cherche à activer la magie Nirvana ?",
     "answers": [
+      "L'Oracion Seis",
       "Grimoire Heart",
       "Raven Tail",
-      "L'Oracion Seis",
       "Tartaros"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle guilde noire composée des démons des livres de Zeref s'attaque au Conseil de la magie ?",
     "answers": [
       "Phantom Lord",
+      "Tartaros",
       "Grimoire Heart",
-      "Sabertooth",
-      "Tartaros"
+      "Sabertooth"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel empire, dirigé par Zeref, envahit Fiore dans l'arc final ?",
     "answers": [
       "L'empire de Pergrande",
-      "L'empire d'Alvarez",
       "L'empire d'Edolas",
+      "L'empire d'Alvarez",
       "L'empire de Bosco"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Comment s'appelle le monde parallèle visité dans un arc de la série ?",
     "answers": [
       "Hueco Mundo",
-      "Edolas",
       "Asgard",
-      "Earthland"
+      "Earthland",
+      "Edolas"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel mage rival de Gray a eu le même maître que lui ?",
@@ -367,7 +403,8 @@
       "Laxus Dreyar",
       "Rogue Cheney"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Comment s'appelle la maîtresse de glace de Gray et Lyon ?",
@@ -377,27 +414,30 @@
       "Mavis",
       "Porlyusica"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Quelle mage est une grande buveuse et utilise des cartes magiques ?",
     "answers": [
-      "Cana Alberona",
       "Bisca Connell",
       "Evergreen",
+      "Cana Alberona",
       "Levy McGarden"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Quel mage de Fairy Tail, très puissant, a une magie de désintégration ?",
     "answers": [
       "Macao Conbolt",
-      "Gildarts Clive",
       "Wakaba Mine",
-      "Elfman Strauss"
+      "Elfman Strauss",
+      "Gildarts Clive"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Dans quel magazine Fairy Tail a-t-il été publié ?",
@@ -407,17 +447,19 @@
       "Weekly Shōnen Sunday",
       "Weekly Shōnen Jump"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "En quelle année Fairy Tail a-t-il débuté ?",
     "answers": [
-      "2006",
       "2010",
+      "2006",
       "2003",
       "2001"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "En quelle année le manga s'est-il terminé ?",
@@ -427,7 +469,8 @@
       "2017",
       "2013"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Combien de tomes compte le manga Fairy Tail ?",
@@ -437,27 +480,30 @@
       "45",
       "63"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Comment s'appelle la suite officielle de Fairy Tail ?",
     "answers": [
+      "Fairy Tail: 100 Years Quest",
       "Fairy Tail: Dragon Cry",
       "Fairy Tail Zero",
-      "Fairy Tail: 100 Years Quest",
       "Fairy Tail Next Generation"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel est le symbole de la guilde que porte Natsu sur l'épaule ?",
     "answers": [
       "Un soleil",
-      "Une clé",
       "L'emblème de Fairy Tail",
+      "Une clé",
       "Un dragon rouge"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "Quelle est la couleur du tatouage de guilde de Natsu ?",
@@ -467,7 +513,8 @@
       "Rouge",
       "Noir"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel chat de Gajeel est un Exceed guerrier venu d'Edolas ?",
@@ -477,28 +524,579 @@
       "Happy",
       "Pantherlily"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quels chasseurs de dragons de Sabertooth sont les « dragons jumeaux » ?",
     "answers": [
+      "Sting et Rogue",
       "Wendy et Sting",
       "Natsu et Gajeel",
-      "Laxus et Cobra",
-      "Sting et Rogue"
+      "Laxus et Cobra"
     ],
-    "correct": 3,
-    "difficulty": "expert"
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Qui est la grand-mère guérisseuse de la guilde, venue d'Edolas ?",
     "answers": [
       "Mavis",
-      "Ur",
       "Porlyusica",
+      "Ur",
       "Ooba Babasama"
     ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle magie Levy McGarden utilise-t-elle principalement ?",
+    "answers": [
+      "Memory Make",
+      "Arc of Time",
+      "Solid Script",
+      "Letter Magic"
+    ],
     "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle forme de Take Over Elfman Strauss emploie-t-il ?",
+    "answers": [
+      "Satan Soul",
+      "Animal Soul",
+      "Machina Soul",
+      "Beast Soul"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel lien de parenté unit Lisanna à Mirajane et Elfman ?",
+    "answers": [
+      "Elle est leur sœur cadette",
+      "Elle est leur cousine",
+      "Elle est leur tante",
+      "Elle est leur demi-sœur"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle magie Freed Justine utilise-t-il pour imposer des règles dans une zone ?",
+    "answers": [
+      "Les cartes magiques",
+      "Les runes enchantées",
+      "Les clés célestes",
+      "La magie des ombres"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel pouvoir Bickslow exerce-t-il sur ses poupées ?",
+    "answers": [
+      "Il les transforme en glace",
+      "Il les rend invisibles",
+      "Il y place des âmes",
+      "Il leur donne une magie céleste"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel pouvoir du regard Evergreen utilise-t-elle contre ses adversaires ?",
+    "answers": [
+      "Elle efface leur mémoire",
+      "Elle stoppe le temps",
+      "Elle copie leur magie",
+      "Elle les pétrifie"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment se nomme l'équipe composée de Freed, Bickslow et Evergreen ?",
+    "answers": [
+      "La Tribu du dieu de la foudre",
+      "Les Quatre Cerbères",
+      "Les Chevaliers runiques",
+      "Les Trois Corbeaux"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la véritable identité de Mystogan à Edolas ?",
+    "answers": [
+      "Le roi Faust",
+      "Le prince Jellal",
+      "Le capitaine Pantherlily",
+      "Le mage Byro"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ancien maître de Fairy Tail devient le mage noir Hades ?",
+    "answers": [
+      "Warrod Sequen",
+      "Yuri Dreyar",
+      "Precht Gaebolg",
+      "Macao Conbolt"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui dirige Fairy Tail pendant une partie des sept années d'absence de l'équipe Tenrō ?",
+    "answers": [
+      "Wakaba Mine",
+      "Gildarts Clive",
+      "Laxus Dreyar",
+      "Macao Conbolt"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle magie Wakaba Mine pratique-t-il ?",
+    "answers": [
+      "La magie de fumée",
+      "La magie de sable",
+      "La magie de papier",
+      "La magie de parfum"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle magie Mest Gryder utilise-t-il pour modifier les souvenirs ?",
+    "answers": [
+      "La magie des archives",
+      "La magie de mémoire",
+      "La magie d'illusion",
+      "La magie de copie"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle magie permet à Bisca Connell de changer rapidement d'armes à feu ?",
+    "answers": [
+      "Guns Magic",
+      "Bullet Make",
+      "The Gunner",
+      "Arms Soul"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle magie Romeo Conbolt apprend-il auprès de Totomaru ?",
+    "answers": [
+      "La magie du feu divin",
+      "La magie du feu noir",
+      "La magie du feu céleste",
+      "La magie du feu arc-en-ciel"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment s'appelle l'Exceed qui accompagne Sting Eucliffe ?",
+    "answers": [
+      "Lector",
+      "Frosch",
+      "Samuel",
+      "Nichiya"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment s'appelle l'Exceed qui accompagne Rogue Cheney ?",
+    "answers": [
+      "Lector",
+      "Frosch",
+      "Carla",
+      "Pantherlily"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle membre de Sabertooth est également mage aux esprits célestes ?",
+    "answers": [
+      "Minerva Orland",
+      "Jenny Realight",
+      "Yukino Agria",
+      "Kagura Mikazuchi"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle guilde Kagura Mikazuchi appartient-elle ?",
+    "answers": [
+      "Lamia Scale",
+      "Blue Pegasus",
+      "Quatro Cerberus",
+      "Mermaid Heel"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel mage de Blue Pegasus répète souvent « Men » ?",
+    "answers": [
+      "Ichiya Vandalay Kotobuki",
+      "Hibiki Lates",
+      "Ren Akatsuki",
+      "Eve Tearm"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle guilde Jura Neekis appartient-il ?",
+    "answers": [
+      "Sabertooth",
+      "Lamia Scale",
+      "Blue Pegasus",
+      "Mermaid Heel"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel type de magie Chelia Blendy pratique-t-elle ?",
+    "answers": [
+      "La magie de chasseuse de dragons célestes",
+      "La magie des esprits célestes",
+      "La magie de chasseuse de dieux célestes",
+      "La magie d'ange"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui est le père de Minerva Orland ?",
+    "answers": [
+      "Sting Eucliffe",
+      "Rufus Lore",
+      "Orga Nanagear",
+      "Jiemma Orland"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle magie Rufus Lore utilise-t-il ?",
+    "answers": [
+      "Memory-Make",
+      "Ice-Make",
+      "Arc of Embodiment",
+      "Copy Magic"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel élément Orga Nanagear maîtrise-t-il comme chasseur de dieux ?",
+    "answers": [
+      "Le feu",
+      "La foudre",
+      "La glace",
+      "Le vent"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel élément Cobra maîtrise-t-il comme chasseur de dragons ?",
+    "answers": [
+      "L'acier",
+      "L'ombre",
+      "Le poison",
+      "La lumière"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel effet la magie de Racer produit-elle sur la perception de ses adversaires ?",
+    "answers": [
+      "Elle les rend aveugles",
+      "Elle inverse leur droite et leur gauche",
+      "Elle efface leur perception de la douleur",
+      "Elle les fait percevoir le monde au ralenti"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel membre d'Oracion Seis utilise la magie Reflector ?",
+    "answers": [
+      "Midnight",
+      "Hoteye",
+      "Cobra",
+      "Angel"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle personnalité destructrice se cache dans le corps de Brain ?",
+    "answers": [
+      "Hades",
+      "Zero",
+      "Mard Geer",
+      "Tempester"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle magie temporelle Ultear Milkovich utilise-t-elle ?",
+    "answers": [
+      "Time Stop",
+      "Memory-Make",
+      "Arc of Time",
+      "Lost Ages"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle magie de Meredy relie les sensations de plusieurs personnes ?",
+    "answers": [
+      "Sensory Link",
+      "Human Subordination",
+      "Telepathy",
+      "Maguilty Sense"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui fonde Crime Sorcière avec Jellal Fernandes ?",
+    "answers": [
+      "Ultear et Meredy",
+      "Erza et Kagura",
+      "Laxus et Freed",
+      "Jura et Lyon"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel lien unit Silver Fullbuster à Gray ?",
+    "answers": [
+      "Silver est son frère",
+      "Silver est son père",
+      "Silver est son oncle",
+      "Silver est son fils venu du futur"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel type de magie Silver Fullbuster manie-t-il ?",
+    "answers": [
+      "La magie de chasseur de dragons de glace",
+      "Ice-Make dynamique",
+      "La magie de chasseur de démons de glace",
+      "La magie de dieu des glaces"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle démone de Tartaros commande les Neuf Portes démoniaques ?",
+    "answers": [
+      "Seilah",
+      "Jackal",
+      "Tempester",
+      "Kyôka"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel titre Mard Geer porte-t-il au sein de Tartaros ?",
+    "answers": [
+      "Roi des Enfers",
+      "Empereur du Temps",
+      "Dragon des Abysses",
+      "Maître des Malédictions"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel est l'objectif des armes appelées FACE ?",
+    "answers": [
+      "Pétrifier tous les dragons",
+      "Supprimer la magie du continent",
+      "Ouvrir un portail vers Edolas",
+      "Détruire uniquement le Conseil magique"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qu'est-ce qu'Etherion dans l'univers de Fairy Tail ?",
+    "answers": [
+      "Une guilde noire",
+      "Un dragon mécanique",
+      "Une arme magique satellitaire du Conseil",
+      "Une clé céleste interdite"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quoi devait servir le système R de la Tour du Paradis ?",
+    "answers": [
+      "À créer des chasseurs de dragons",
+      "À voyager vers Edolas",
+      "À annuler toutes les malédictions",
+      "À ressusciter une personne"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui est la mère d'Erza Scarlet ?",
+    "answers": [
+      "Irene Belserion",
+      "Eileen Vermillion",
+      "Anna Heartfilia",
+      "Layla Heartfilia"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel lien de parenté unit August à Zeref et Mavis ?",
+    "answers": [
+      "Il est leur frère",
+      "Il est leur fils",
+      "Il est leur père",
+      "Il est leur petit-fils"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment se nomme le groupe d'élite de l'empire d'Alvarez ?",
+    "answers": [
+      "Les Douze Boucliers de Fiore",
+      "Les Neuf Portes",
+      "Les Spriggan 12",
+      "Les Dix Saints"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle propriété Brandish μ peut-elle modifier grâce à sa magie ?",
+    "answers": [
+      "Les souvenirs",
+      "La gravité temporelle",
+      "La nature d'un élément",
+      "La taille et la masse"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel dieu Dimaria Yesta accueille-t-elle grâce à son God Soul ?",
+    "answers": [
+      "Chronos",
+      "Arès",
+      "Hadès",
+      "Hermès"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Dragon Divin du Feu est le fils d'Igneel ?",
+    "answers": [
+      "Aldoron",
+      "Ignia",
+      "Viernes",
+      "Mercphobia"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Dragon Divin règne sur l'élément de l'eau ?",
+    "answers": [
+      "Selene",
+      "Aldoron",
+      "Mercphobia",
+      "Ignia"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Dragon Divin est associé au bois ?",
+    "answers": [
+      "Viernes",
+      "Mercphobia",
+      "Selene",
+      "Aldoron"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Dragon Divin est associé à la lune ?",
+    "answers": [
+      "Selene",
+      "Ignia",
+      "Aldoron",
+      "Viernes"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Dragon Divin est associé à l'or ?",
+    "answers": [
+      "Mercphobia",
+      "Viernes",
+      "Ignia",
+      "Aldoron"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle magie Elefseria pratique-t-il ?",
+    "answers": [
+      "La magie de chasseur de dieux du temps",
+      "La magie des archives anciennes",
+      "La magie de chasseur de dragons de loi",
+      "La magie de création de guildes"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel type de chasseurs de dragons compose principalement la guilde Diabolos ?",
+    "answers": [
+      "La première génération",
+      "La deuxième génération",
+      "La quatrième génération artificielle",
+      "La cinquième génération, les mangeurs de dragons"
+    ],
+    "correct": 3,
     "difficulty": "expert"
   }
 ]

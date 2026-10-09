@@ -200,7 +200,7 @@
     "correct": 1
   },
   {
-    "text": "En quelle année Astro est-il apparu pour la première fois ?",
+    "text": "Dans quelle année Atom apparaît-il pour la première fois dans « Atom Taishi » ?",
     "answers": [
       "1963",
       "1951",
@@ -230,14 +230,15 @@
     "correct": 3
   },
   {
-    "text": "Combien de volumes compte le manga Astro Boy ?",
+    "text": "Quel titre avait d'abord été annoncé avant que le manga ne devienne « Tetsuwan Atom » ?",
     "answers": [
-      "23",
-      "100",
-      "45",
-      "10"
+      "Tetsujin Atom",
+      "Atom no Bōken",
+      "Robot Atom",
+      "Shōnen Atom"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
     "text": "En quelle année la série animée Astro Boy a-t-elle débuté à la télévision japonaise ?",
@@ -250,14 +251,15 @@
     "correct": 3
   },
   {
-    "text": "Quelle particularité historique a la série animée de 1963 ?",
+    "text": "Quelle place historique le site officiel attribue-t-il à la série de 1963 au Japon ?",
     "answers": [
-      "Premier anime en 3D",
-      "Premier film en couleur",
-      "Premier anime sur Internet",
-      "Premier anime télé à succès"
+      "Première série animée télévisée japonaise de long format",
+      "Premier long métrage d'animation en couleur",
+      "Première série japonaise réalisée en 3D",
+      "Premier anime diffusé uniquement par satellite"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel studio a produit l'anime de 1963 ?",
@@ -280,14 +282,15 @@
     "correct": 3
   },
   {
-    "text": "Quelle part des téléspectateurs japonais regardait Astro Boy à son apogée ?",
+    "text": "Quel record d'audience maximal la série de 1963 a-t-elle atteint au Japon ?",
     "answers": [
-      "15 %",
-      "40 %",
-      "90 %",
-      "5 %"
+      "27,3 %",
+      "40,7 %",
+      "52,1 %",
+      "18,6 %"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
     "text": "En quelle année est sortie une nouvelle série Astro Boy en couleur ?",
@@ -400,24 +403,26 @@
     "correct": 2
   },
   {
-    "text": "Quel nom de code interne portait la première version d'Android chez Google ?",
+    "text": "Sur quel réseau japonais la série en couleur de 1980 a-t-elle été diffusée ?",
     "answers": [
-      "Donut",
-      "Cupcake",
-      "Astro Boy",
-      "Pluto"
+      "Fuji Television",
+      "TV Tokyo",
+      "Nippon Television",
+      "NHK"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Qui est l'éditeur japonais des volumes reliés d'Astro Boy ?",
+    "text": "Quelle durée officielle avait un épisode de la série de 1963 ?",
     "answers": [
-      "Shūeisha",
-      "Akita Shoten",
-      "Square Enix",
-      "Shōgakukan"
+      "12 minutes",
+      "45 minutes",
+      "30 minutes",
+      "24 minutes"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel éditeur américain a publié la traduction anglaise en 2002 ?",
@@ -460,14 +465,15 @@
     "correct": 1
   },
   {
-    "text": "Combien de langues Astro peut-il parler ?",
+    "text": "À quelle puissance Astro est-il porté plus tard selon sa fiche officielle ?",
     "answers": [
-      "Presque toutes",
-      "Une seule",
-      "Deux",
-      "Aucune"
+      "500 000 chevaux",
+      "10 millions de chevaux",
+      "1 million de chevaux",
+      "250 000 chevaux"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
     "text": "Comment s'appelle le propriétaire du cirque de robots ?",
@@ -481,14 +487,14 @@
     "difficulty": "expert"
   },
   {
-    "text": "Combien de chapitres compte le manga original ?",
+    "text": "Quelle particularité familiale apparaît dès le premier épisode du manga « Tetsuwan Atom » ?",
     "answers": [
-      "300",
-      "45",
-      "112",
-      "23"
+      "Astro reçoit des parents robots",
+      "Uran devient ministre",
+      "Tenma adopte Atlas",
+      "Cobalt dirige le cirque"
     ],
-    "correct": 2,
+    "correct": 0,
     "difficulty": "expert"
   },
   {
@@ -500,6 +506,556 @@
       "Uran"
     ],
     "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quand la publication principale de « Tetsuwan Atom » dans Shōnen s'achève-t-elle ?",
+    "answers": [
+      "Mars 1968",
+      "Avril 1959",
+      "Décembre 1966",
+      "Janvier 1971"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "À quel rythme le magazine Shōnen publiait-il le manga principal « Tetsuwan Atom » ?",
+    "answers": [
+      "Mensuellement",
+      "Chaque semaine",
+      "Chaque trimestre",
+      "Une fois par an"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "À quelle époque se déroule principalement le manga original ?",
+    "answers": [
+      "Au XXIe siècle",
+      "Au XIXe siècle",
+      "Durant l'Antiquité",
+      "Au XXIIIe siècle"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Où Astro vit-il avec ses parents robots dans le manga ?",
+    "answers": [
+      "Dans une maison en banlieue",
+      "Dans le laboratoire de Tenma",
+      "Dans le cirque de Hamegg",
+      "Sur une station spatiale"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle école Astro fréquente-t-il dans le manga ?",
+    "answers": [
+      "L'école primaire Ochanomizu",
+      "L'académie Tenma",
+      "Le collège Mushi",
+      "L'institut Atom"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle fonction officielle Ochanomizu exerce-t-il après Tenma ?",
+    "answers": [
+      "Directeur du ministère des Sciences",
+      "Chef de la police de Tokyo",
+      "Directeur du cirque des robots",
+      "Président de Mushi Production"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle cause Ochanomizu défend-il particulièrement ?",
+    "answers": [
+      "Les droits des robots",
+      "L'interdiction des robots",
+      "La conquête de Mars",
+      "La privatisation des écoles"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui construit Uran pour qu'elle devienne la sœur d'Astro ?",
+    "answers": [
+      "Le professeur Ochanomizu",
+      "Hamegg",
+      "Le docteur Abullah",
+      "L'inspecteur Tawashi"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle fonction relie particulièrement Cobalt à Astro ?",
+    "answers": [
+      "Ils peuvent entrer en résonance",
+      "Ils échangent leurs mémoires",
+      "Ils partagent la même batterie",
+      "Ils fusionnent physiquement"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle tâche est difficile pour Cobalt selon la présentation officielle ?",
+    "answers": [
+      "Les travaux minutieux",
+      "Le vol à réaction",
+      "Le calcul mental",
+      "La course à pied"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle attitude l'inspecteur Tawashi adopte-t-il souvent face aux robots ?",
+    "answers": [
+      "Il s'en méfie et les soupçonne",
+      "Il leur accorde toujours raison",
+      "Il refuse d'enquêter sur eux",
+      "Il en construit dans son atelier"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel policier se montre plus favorable aux robots que Tawashi ?",
+    "answers": [
+      "Hamegg",
+      "Nakamura",
+      "Shibugaki",
+      "Skunk"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel rapport hiérarchique unit Nakamura à Tawashi ?",
+    "answers": [
+      "Tawashi est le chauffeur de Nakamura",
+      "Nakamura est le subordonné de Tawashi",
+      "Ils dirigent deux ministères rivaux",
+      "Nakamura est le professeur de Tawashi"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle autre activité Higeoyaji exerce-t-il en plus d'enseigner ?",
+    "answers": [
+      "Ingénieur nucléaire",
+      "Détective privé",
+      "Directeur de télévision",
+      "Chirurgien"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel détail physique caractérise Tamao ?",
+    "answers": [
+      "Une cape rouge et un masque",
+      "De grandes lunettes et un chapeau",
+      "Une moustache et une canne",
+      "Des cheveux bleus et un monocle"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel rôle Kenichi joue-t-il souvent dans la classe d'Astro ?",
+    "answers": [
+      "Celui de professeur remplaçant",
+      "Celui de meneur raisonnable",
+      "Celui de gardien robot",
+      "Celui de rival extraterrestre"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment Shibugaki est-il présenté parmi les camarades d'Astro ?",
+    "answers": [
+      "Timide et silencieux",
+      "Brutal et parfois méchant",
+      "Toujours premier de classe",
+      "Scientifique adulte"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Que représentait la série de 1963 pour Mushi Production ?",
+    "answers": [
+      "Son dernier film de cinéma",
+      "Sa première animation commerciale",
+      "Sa première production en 3D",
+      "Une coproduction avec Disney"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel format visuel la série de 1963 a-t-elle été produite ?",
+    "answers": [
+      "En couleur intégrale",
+      "En noir et blanc",
+      "En stop motion",
+      "En images de synthèse"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle chaîne japonaise diffusait la série de 1963 ?",
+    "answers": [
+      "Nippon Television",
+      "Fuji Television",
+      "TV Asahi",
+      "NHK Educational"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quelle date la diffusion japonaise de la série de 1963 commence-t-elle ?",
+    "answers": [
+      "Le 7 avril 1952",
+      "Le 1er janvier 1963",
+      "Le 6 avril 2003",
+      "Le 1er octobre 1980"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "À quelle date la série animée originale s'achève-t-elle ?",
+    "answers": [
+      "Le 31 mars 1968",
+      "Le 31 décembre 1966",
+      "Le 23 décembre 1981",
+      "Le 7 avril 2003"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel créneau accueillait Astro Boy le mardi pendant sa première année de diffusion ?",
+    "answers": [
+      "19 h–19 h 30",
+      "18 h 15–18 h 45",
+      "17 h–17 h 30",
+      "20 h–20 h 30"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel créneau la série occupe-t-elle le samedi à partir de 1964 ?",
+    "answers": [
+      "18 h 15–18 h 45",
+      "19 h–19 h 30",
+      "20 h 30–21 h",
+      "17 h 45–18 h 15"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle distinction la série reçoit-elle en 1964 ?",
+    "answers": [
+      "Le prix du ministre de la Santé",
+      "Le Galaxy Award",
+      "Le prix spécial de l'Association des reporters de télévision",
+      "Le prix Mainichi du manga"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle distinction officielle la série reçoit-elle en 1965 ?",
+    "answers": [
+      "Le Galaxy Award",
+      "Le prix spécial des reporters de télévision",
+      "Le prix du ministre de la Santé",
+      "Le prix culturel Tezuka"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle récompense la série obtient-elle en 1967 ?",
+    "answers": [
+      "Le prix du ministre de la Santé",
+      "Le prix Kōdansha",
+      "Le Galaxy Award",
+      "Le prix Seiun"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui est crédité comme auteur original et directeur général de la série de 1963 ?",
+    "answers": [
+      "Noboru Ishiguro",
+      "Hayao Miyazaki",
+      "Osamu Tezuka",
+      "Rintarō"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui compose la musique de la série de 1963 ?",
+    "answers": [
+      "Nariaki Saegusa",
+      "Takashi Yoshimatsu",
+      "Tatsuo Takai",
+      "Joe Hisaishi"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui est crédité comme directeur musical de la série de 1963 ?",
+    "answers": [
+      "Tatsuo Takai",
+      "Noboru Ishiguro",
+      "Matsuo Ōno",
+      "Kanji Nakano"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui écrit les paroles du générique japonais « Tetsuwan Atom » ?",
+    "answers": [
+      "Osamu Tezuka",
+      "Akira Yoshikawa",
+      "Shuntarō Tanikawa",
+      "Keiichi Hasegawa"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle formation chante le générique de la série de 1963 ?",
+    "answers": [
+      "Les Atoms",
+      "Les Urans",
+      "La chorale d'enfants de Kamitakada",
+      "Le Tokyo Philharmonic"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui prête principalement sa voix japonaise à Astro dans la série de 1963 ?",
+    "answers": [
+      "Makoto Tsumura",
+      "Masako Sugaya",
+      "Mari Shimizu",
+      "Michiru Hōjō"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui double Ochanomizu dans la série de 1963 ?",
+    "answers": [
+      "Hisashi Yokomori",
+      "Kōsei Tomita",
+      "Hisashi Katsuta",
+      "Tamio Ōki"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui double le docteur Tenma dans la série de 1963 ?",
+    "answers": [
+      "Shinya Ōwada",
+      "Hisashi Katsuta",
+      "Hisashi Yokomori",
+      "Kazuki Yao"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien d'épisodes compte la série en couleur de 1980 ?",
+    "answers": [
+      "50",
+      "193",
+      "52",
+      "26"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle caractéristique visuelle distingue la série de 1980 de celle de 1963 ?",
+    "answers": [
+      "Elle est muette",
+      "Elle est en prises de vues réelles",
+      "Elle est en couleur",
+      "Elle est en relief"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Sur quelle chaîne japonaise la série de 1980 est-elle programmée ?",
+    "answers": [
+      "Fuji Television",
+      "TV Tokyo",
+      "NHK",
+      "Nippon Television"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quand la série de 1980 commence-t-elle au Japon ?",
+    "answers": [
+      "Le 1er janvier 1980",
+      "Le 7 avril 1980",
+      "Le 23 décembre 1980",
+      "Le 1er octobre 1980"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quand la série de 1980 s'achève-t-elle ?",
+    "answers": [
+      "Le 31 décembre 1980",
+      "Le 1er octobre 1982",
+      "Le 6 avril 1981",
+      "Le 23 décembre 1981"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui réalise la série de 1980 ?",
+    "answers": [
+      "Kazuya Konaka",
+      "Osamu Dezaki",
+      "Rintarō",
+      "Noboru Ishiguro"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui en est le directeur en chef ?",
+    "answers": [
+      "Noboru Ishiguro",
+      "Shinji Seya",
+      "Akira Yoshikawa",
+      "Tetsu Dezaki"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien d'épisodes successifs composent le cycle « Atom contre Atlas » de 1980 ?",
+    "answers": [
+      "3",
+      "6",
+      "12",
+      "9"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui compose la musique de la série de 1980 ?",
+    "answers": [
+      "Tatsuo Takai",
+      "Takashi Yoshimatsu",
+      "Matsuo Ōno",
+      "Nariaki Saegusa"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui double Atlas dans la version japonaise de 1980 ?",
+    "answers": [
+      "Mari Shimizu",
+      "Masako Sugaya",
+      "Keiko Yokozawa",
+      "Michiru Hōjō"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle chaîne diffuse la série « ASTROBOY Tetsuwan Atom » de 2003 au Japon ?",
+    "answers": [
+      "Nippon Television",
+      "TV Asahi",
+      "NHK",
+      "Fuji Television"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quand la série de 2003 commence-t-elle au Japon ?",
+    "answers": [
+      "Le 7 avril 2003",
+      "Le 1er janvier 2003",
+      "Le 1er octobre 2003",
+      "Le 6 avril 2003"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui réalise la série animée de 2003 ?",
+    "answers": [
+      "Noboru Ishiguro",
+      "Tetsu Dezaki",
+      "Shinji Aramaki",
+      "Kazuya Konaka"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui compose la musique de la série de 2003 ?",
+    "answers": [
+      "Nariaki Saegusa",
+      "Tatsuo Takai",
+      "Yoko Kanno",
+      "Takashi Yoshimatsu"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel scientifique fabrique Pluto sur l'ordre du sultan déchu ?",
+    "answers": [
+      "Le docteur Tenma",
+      "Le professeur Ochanomizu",
+      "Le docteur Elefun",
+      "Le docteur Abullah"
+    ],
+    "correct": 3,
     "difficulty": "expert"
   }
 ]

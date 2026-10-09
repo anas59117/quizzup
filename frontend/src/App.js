@@ -13,6 +13,9 @@ import { HomeContent, EnterCodeContent, CategoriesContent, ProfileContent, Leade
 import { initAds, adsEnabled, countFinishedGame, interstitialThen, requestRewardOffer } from './ads';
 import { useI18n } from './i18n';
 import { useGameSocket } from './useGameSocket';
+import { OnboardingOverlay, useOnboarding } from './OnboardingOverlay';
+import { useDailyStreak } from './DailyStreak';
+import { ChallengeReceiver } from './ChallengeLink';
 
 const LIVE_SESSION_KEY = 'quizzup-live-session';
 const HISTORY_KEY = 'quizzup';
@@ -52,6 +55,13 @@ export default function App() {
   const toggleMute = useCallback(() => setMuted(SFX.toggle()), []);
   useEffect(() => { music.setMuted(muted); }, [muted]);
   useEffect(() => { initAds(); }, []);
+
+  // Detect challenge URLs
+  useEffect(() => {
+    const p = window.location.pathname;
+    const m = p.match(/^\/challenge\/(.+)$/);
+    if (m) { setChallengeCode(m[1]); }
+  }, []);
   // Rewarded ad on the result screen: showAdFn from Google, or null when no
   // ad is ready. adClaimed flips once the server credited the bonus.
   const [adOffer, setAdOffer] = useState(null);
@@ -62,6 +72,7 @@ export default function App() {
     afterAd: () => music.setMuted(SFX.muted),
   }), []);
   const [stage, setStage] = useState('join');
+  useEffect(() => { if (stage === 'shop') window.scrollTo(0, 0); }, [stage]);
   const [fatalReason, setFatalReason] = useState('connection');
   const [fatalCode, setFatalCode] = useState('');
   const [categoryFamily, setCategoryFamily] = useState(null);
@@ -125,6 +136,11 @@ export default function App() {
   const cancelQueueRef = useRef(false);
   const afterQueueExitRef = useRef(null);
   const [skipRoomRecovery, setSkipRoomRecovery] = useState(false);
+  const { isFirstTime, markDone } = useOnboarding();
+  const [showOnboarding, setShowOnboarding] = useState(false);
+  const dailyStreak = useDailyStreak();
+  const [challengeCode, setChallengeCode] = useState(null);
+
   const messageHandlerRef = useRef(null);
 
   const clearPending = useCallback(() => {
@@ -309,6 +325,9 @@ export default function App() {
         ) {
           bootSessionRef.current = null;
           writeLiveSession(null);
+          if (isFirstTime) {
+            setShowOnboarding(true);
+          }
           setStage('home');
           break;
         }
@@ -509,6 +528,7 @@ export default function App() {
         if (!data.reconnect) countFinishedGame();
         setAdOffer(null);
         setAdClaimed(false);
+        dailyStreak.claim();
         setResult(data);
         setScore(data.finalScore);
         setStage('finished');
@@ -909,6 +929,24 @@ export default function App() {
     );
   }
 
+  if (showOnboarding) {
+    return (
+      <div className="app">
+        <OnboardingOverlay
+          onComplete={(chosenName) => {
+            markDone();
+            setShowOnboarding(false);
+            if (chosenName) {
+              setName(chosenName);
+              try { localStorage.setItem('quizzup-name', chosenName); } catch {}
+            }
+          }}
+          defaultName={name}
+        />
+      </div>
+    );
+  }
+
   if (stage === 'home') {
     return (
       <div className="app app-nav app-top">
@@ -918,9 +956,11 @@ export default function App() {
           quickMatch={quickMatch} startWithCategory={startWithCategory}
           onOpenProfile={() => setStage('profile')} onSeeAll={(fam) => { setCategoryFamily(fam || null); setStage('categories'); }}
           createRoom={createRoom} onOpenEnterCode={() => { setJoinError(false); setJoinCode(''); setStage('enter_code'); }}
+          onStartTournament={() => setStage('tournament')}
           pending={pending}
         />
         <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
+        {challengeCode && <ChallengeReceiver code={challengeCode} onAccept={() => { setChallengeCode(null); setStage('categories'); }} onDecline={() => setChallengeCode(null)} />}
       </div>
     );
   }
@@ -1008,6 +1048,7 @@ export default function App() {
           onOpenShop={() => setStage('shop')}
           onSaveProfile={saveProfile} profileSaving={pending}
           onOpenTopic={openTopic}
+          streak={dailyStreak}
         />
         <PlayerSheet players={players} social={social} onSelectTopic={openTopic} />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
@@ -1018,8 +1059,8 @@ export default function App() {
     return (
       <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <ShopContent
-          avatar={avatar} stats={statsHook.stats}
-          onBuy={buyFrame} onEquip={equipFrame}
+          avatar={avatar} name={name} stats={statsHook.stats}
+          onBuy={buyFrame} onEquip={equipFrame} onPlay={quickMatch}
           onBack={() => setStage('profile')} pending={pending}
         />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
@@ -1069,7 +1110,7 @@ export default function App() {
   if (stage === 'playing' && intro && !question) {
     return (
       <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
-        <RoundIntroContent intro={intro} totalRounds={totalRounds} />
+        <RoundIntroContent intro={intro} totalRounds={totalRounds} opponents={opponents} avatar={avatar} frame={statsHook.stats.frame} name={name} level={statsHook.stats.level} />
       </div>);
   }
 
@@ -1088,12 +1129,13 @@ export default function App() {
     return (
       <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <FinishedContent
-          result={result} opponents={opponents} myId={myId} social={social}
+          result={result} opponents={opponents} myId={myId} avatar={avatar} name={name} frame={statsHook.stats.frame} social={social}
           addFriend={social.addFriend}
           playAgain={() => interstitialThen(playAgain, adHooks)} rematch={requestRematch}
           rematchWaiting={rematchWaiting} rematchStarting={rematchStarting}
           newMatch={() => interstitialThen(newMatch, adHooks)}
           adOffer={adOffer} onWatchAd={watchAd} adClaimed={adClaimed}
+          streak={dailyStreak}
         />
       </div>);
   }
@@ -1105,5 +1147,45 @@ export default function App() {
       </div>);
   }
 
+  if (stage === 'tournament') {
+    return (
+      <div className="app">
+        <div className="container center">
+          <div style={{textAlign: 'center', padding: 40}}>
+            <h2 style={{color: '#fff', fontSize: '2rem', marginBottom: 16}}>🏆 Tournament Mode</h2>
+            <p style={{color: 'rgba(255,255,255,0.6)', marginBottom: 32}}>4 players, 3 rounds, 1 winner</p>
+            <div style={{background: 'rgba(255,255,255,0.05)', borderRadius: 20, padding: 24, marginBottom: 32, maxWidth: 320, margin: '0 auto 32px'}}>
+              <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16}}>
+                <span style={{color: '#2ecc71', fontWeight: 800}}>👤 You</span>
+                <span style={{color: 'rgba(255,255,255,0.3)'}}>VS</span>
+                <span style={{color: 'rgba(255,255,255,0.7)'}}>🤖 Bot</span>
+              </div>
+              <div style={{height: 2, background: 'rgba(255,255,255,0.1)', marginBottom: 16}} />
+              <p style={{color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem'}}>Semi-Final & Final after</p>
+            </div>
+            <div style={{display: 'flex', gap: 12, justifyContent: 'center', marginBottom: 32}}>
+              <div style={{background: 'rgba(255,255,255,0.05)', padding: '10px 20px', borderRadius: 12}}>🥇 +500 coins</div>
+              <div style={{background: 'rgba(255,255,255,0.05)', padding: '10px 20px', borderRadius: 12}}>🥈 +200 coins</div>
+            </div>
+            <button 
+              style={{width: '100%', maxWidth: 280, padding: '14px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg, #ff4d6d, #ff8fa3)', color: '#fff', fontWeight: 900, fontSize: '1rem', cursor: 'pointer', marginBottom: 12}}
+              onClick={() => { alert('Tournament mode coming in the next update! 🚀'); setStage('home'); }}
+            >
+              Start Tournament
+            </button>
+            <button 
+              style={{padding: '10px 24px', borderRadius: 12, border: 'none', background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.7)', fontWeight: 700, cursor: 'pointer'}}
+              onClick={() => setStage('home')}
+            >
+              Back
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return null;
 }
+
+

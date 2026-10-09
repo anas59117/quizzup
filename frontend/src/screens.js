@@ -1,4 +1,8 @@
+import { QuestionContent as EnhancedQuestionContent } from './enhanced-QuestionContent';
 import React, { useState, useMemo, useEffect } from 'react';
+import { StreakBadge, StreakCalendar } from './DailyStreak';
+import { ShareCard } from './ShareCard';
+import { ChallengeButton } from './ChallengeLink';
 import { AVATARS, CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon } from './ui';
 import { PlayerHud, Leaderboard } from './multiplayer';
 import { ProfileStats } from './stats';
@@ -6,6 +10,7 @@ import { FriendsScreen } from './social';
 import { TopicLevelList, topicTitleKey, topicLabel } from './players';
 import { useI18n } from './i18n';
 import { FRAMES, frameClass, frameLabelKey } from './frames';
+import { IdentityCard, IDENTITIES } from './identity';
 
 const FEATURED_TOPIC_KEYS = [
   'ligue_champions', 'rap_fr', 'one_piece', 'marvel',
@@ -23,7 +28,7 @@ const FEATURED_TOPICS = FEATURED_TOPIC_KEYS
   })
   .filter(Boolean);
 
-export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, pending }) {
+export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, onStartTournament, pending }) {
   const { t } = useI18n();
   return (
     <div className="container wide">
@@ -46,6 +51,9 @@ export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickM
         <button className="quick-play" onClick={quickMatch} disabled={pending} aria-busy={pending || undefined} aria-label={t('quickPlay')}>
           <Icon name="bolt" size={21} />
           <Icon name="arrow" size={20} className="quick-arrow" />
+        </button>
+        <button className="tournament-btn" onClick={() => onStartTournament && onStartTournament()} disabled={pending}>
+          <span>🏆</span> {t('tournament')}
         </button>
       </div>
       <div className="section-title">{t('popularTopics')}</div>
@@ -128,7 +136,7 @@ export function CategoriesContent({ startWithCategory, onBack, family, onSelectF
 
 export function ProfileContent({
   avatar, name, stats, isGoogleLinked, googleEmail, linkGoogle, linking,
-  clientId, social, onOpenLeaderboard, onOpenShop, onSaveProfile, profileSaving, onOpenTopic,
+  clientId, social, onOpenLeaderboard, onOpenShop, onSaveProfile, profileSaving, onOpenTopic, streak,
 }) {
   const { t } = useI18n();
   const [editing, setEditing] = useState(false);
@@ -174,12 +182,8 @@ export function ProfileContent({
 
   return (
     <div className="container">
-      <div className="profile-head">
-        <div className={`profile-avatar${frameClass(stats.frame)}`}>{avatar}</div>
-        <div className="profile-name">{name || 'Player'}</div>
-        <div className="profile-sub">
-          {t('level')} {stats.level} {'·'} {stats.games ? Math.round((stats.wins / stats.games) * 100) : 0}% {String(t('wins')).toLowerCase()}
-        </div>
+      <div className="profile-identity-head">
+        <IdentityCard frame={stats.frame} avatar={avatar} name={name} level={stats.level} />
         <button
           className="profile-edit-btn"
           onClick={() => setEditing((value) => !value)}
@@ -235,10 +239,18 @@ export function ProfileContent({
         <div><strong>{stats.following || 0}</strong><small>{t('followingCount')}</small></div>
       </div>
       <ProfileStats stats={stats} />
+      {streak && streak.streak > 0 && (
+        <StreakCalendar
+          streak={streak.streak}
+          calendar={streak.calendar || []}
+          nextMilestone={streak.nextMilestone}
+          milestoneProgress={streak.milestoneProgress}
+        />
+      )}
       <div className="section-title">{t('myTopics')}</div>
       <TopicLevelList topics={stats.topics} onSelect={onOpenTopic} />
       <button className="leaderboard-cta shop-cta" onClick={onOpenShop}>
-        <span className="leaderboard-cta-icon shop-cta-icon" aria-hidden="true">🛍️</span>
+        <span className="leaderboard-cta-icon shop-cta-icon" aria-hidden="true"><Icon name="shop" size={21}/></span>
         <span className="leaderboard-cta-copy">
           <strong>{t('shop')}</strong>
           <small>{t('shopCta', { n: stats.coins || 0 })}</small>
@@ -372,11 +384,7 @@ export function WaitingContent({ avatar, frame, name, level = 1, categoryKey, on
       </div>
       <div className="matchmaking-topic">{category?.label || t('randomTopic')}</div>
       <div className="vs-screen">
-        <div className="vs-player">
-          <div className={`vs-ava me${frameClass(frame)}`}>{avatar}</div>
-          <div className="vs-name">{name}</div>
-          <div className="vs-rank">{t('level')} {level}</div>
-        </div>
+        <div className="vs-player"><IdentityCard frame={frame} avatar={avatar} name={name} level={level} className="identity-card-vs" /></div>
         <div className="vs-bolt-wrap"><div className="vs-bolt"><Icon name="bolt" size={24} /></div></div>
         <div className="vs-player">
           <div className="vs-ava searching">?</div>
@@ -400,7 +408,7 @@ export function WaitingContent({ avatar, frame, name, level = 1, categoryKey, on
   );
 }
 
-export function RoundIntroContent({ intro, totalRounds }) {
+export function RoundIntroContent({ intro, totalRounds, opponents, avatar, frame, name, level }) {
   const { t } = useI18n();
   const difficultyKey = intro.difficulty
     ? `difficulty${intro.difficulty[0].toUpperCase()}${intro.difficulty.slice(1)}`
@@ -412,51 +420,22 @@ export function RoundIntroContent({ intro, totalRounds }) {
       {difficultyKey && <div className={`difficulty-pill ${intro.difficulty}`}>{t(difficultyKey)}</div>}
       <div className="round-intro-round">{intro.isBonus ? t('bonusRound') : t('round', { n: intro.round })}</div>
       <div className="round-intro-sub">{intro.isBonus ? t('doublePoints') : t('roundOf', { n: intro.round, total: totalRounds })}</div>
-    </div>
-  );
-}
-
-export function QuestionContent({ question, timeLeft, reveal, selected, answer, opponents, avatar, frame, name, score, reportQuestion, reported, social, GameChat }) {
-  const { t } = useI18n();
-  const sr = !!reveal;
-  const pct = Math.max(0, Math.min(100, (timeLeft / question.timeLimit) * 100));
-  const ansCls = (idx) => {
-    if (sr) return idx === reveal.correctIndex ? 'answer correct' : idx === selected ? 'answer wrong' : 'answer dim';
-    return idx === selected ? 'answer selected' : 'answer';
-  };
-  return (
-    <div className="container game">
-      <div className="hud-timer-block">
-        <span className="hud-timer-label">{t('time')}</span>
-        <span className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr ? '✓' : timeLeft}</span>
-      </div>
-      <PlayerHud me={{ avatar, frame, name, score }} others={opponents} revealing={sr} />
-      <PlayerPhoto image={question.image} credit={question.credit} timeLeft={timeLeft} timeLimit={question.timeLimit} revealed={sr} />
-      <div className="question-panel">
-        <div className="question">{question.question}</div>
-        <div className={`answers ${question.image ? '' : 'single-col'}`}>
-        {question.answers.map((a, idx) => (
-          <button
-            key={idx}
-            className={ansCls(idx)}
-            onClick={() => answer(idx)}
-            disabled={question.expired || selected !== null || sr}
-          >
-            {a}
-          </button>
-        ))}
+      {intro.round === 1 && opponents.length === 1 && (
+        <div className="identity-duel" aria-label={`${name} ${t('versus')} ${opponents[0].name}`}>
+          <IdentityCard frame={frame} avatar={avatar} name={name} level={level} className="identity-card-duel" />
+          <span className="identity-duel-vs" aria-hidden="true">VS</span>
+          <IdentityCard frame={opponents[0].frame} avatar={opponents[0].avatar} name={opponents[0].name} className="identity-card-duel" />
         </div>
-        <div className="timer-bar-bottom"><div className={`timer-bar-fill ${timeLeft <= 3 && !sr ? 'urgent' : ''}`} style={{ width: sr ? '0%' : `${pct}%` }} /></div>
-      </div>
-      {sr && <div className="reveal-note">{reveal.yourCorrect ? t('ptsEarned', { n: reveal.pointsEarned }) : reveal.timedOut && selected === null ? t('timeUp') : t('wrong')}</div>}
-      {sr && <button className="report-btn" onClick={reportQuestion} disabled={reported}>{reported ? t('reported') : t('report')}</button>}
-      <GameChat social={social} />
+      )}
     </div>
   );
 }
 
-export function FinishedContent({ result, opponents, myId, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch, adOffer, onWatchAd, adClaimed }) {
+export const QuestionContent = EnhancedQuestionContent;
+
+export function FinishedContent({ result, opponents, myId, avatar, name, frame, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch, adOffer, onWatchAd, adClaimed, streak, onShowShare }) {
   const { t } = useI18n();
+  const [showShare, setShowShare] = useState(false);
   const { won, tie } = result;
   const left = result.reason === 'opponent_disconnected' || result.reason === 'opponent_left';
   const isSolo = !!result.solo;
@@ -475,6 +454,7 @@ export function FinishedContent({ result, opponents, myId, social, addFriend, pl
         <div className={`result-title ${isSolo ? 'tie' : won ? 'win' : tie ? 'tie' : 'loss'}`}>{isSolo ? t('finished') : won ? t('victory') : tie ? t('draw') : t('defeat')}</div>
         <div className="result-sub">{left ? t('someoneLeft') : t('finalScore', { n: result.finalScore })}</div>
       </div>
+      <IdentityCard frame={frame} avatar={avatar} name={name} level={result.stats?.level} className="identity-card-result" />
       {result.stats && <LevelRing level={result.stats.level} xpIntoLevel={result.stats.xpIntoLevel} xpForLevel={result.stats.xpForLevel} />}
       {result.topic && (
         <div className="result-topic-level">
@@ -502,7 +482,20 @@ export function FinishedContent({ result, opponents, myId, social, addFriend, pl
           <span aria-hidden="true">▶</span> {t('adDouble', { n: result.coins })}
         </button>
       )}
+      <div className="result-streak-row">
+        <StreakBadge streak={streak?.streak || 0} />
+      </div>
       <button className="share-link" onClick={shareResult}>{t('share')}</button>
+      <button className="share-link" onClick={() => setShowShare(true)}>📸 {t('shareImage')}</button>
+      {showShare && (
+        <ShareCard
+          result={result}
+          myName={name}
+          myAvatar={avatar}
+          topicLabel={result.topic ? topicLabel(result.topic.key) : ''}
+          onClose={() => setShowShare(false)}
+        />
+      )}
       {addableOpponents.map((o) => (
         <button key={o.clientId} className="add-friend-link" onClick={() => addFriend(o.clientId)}>
           {t('addFriend', { name: o.name })}
@@ -523,58 +516,61 @@ export function FinishedContent({ result, opponents, myId, social, addFriend, pl
   );
 }
 
-export function ShopContent({ avatar, stats, onBuy, onEquip, onBack, pending }) {
-  const { t } = useI18n();
+export function ShopContent({ avatar, name, stats, onBuy, onEquip, onPlay, onBack, pending }) {
+  const { t, lang } = useI18n();
+  const [selected, setSelected] = useState(() => stats.frame && stats.frame !== 'none' ? stats.frame : 'neon');
   const [confirming, setConfirming] = useState(null);
   const owned = new Set(stats.ownedFrames || ['none']);
   const equipped = stats.frame || 'none';
   const coins = stats.coins || 0;
+  const item = FRAMES.find((entry) => entry.id === selected) || FRAMES[0];
+  const isOwned = owned.has(item.id);
+  const isEquipped = equipped === item.id;
+  const affordable = coins >= item.price;
+  const identity = IDENTITIES[item.id];
+  let action;
+  if (isEquipped) {
+    action = <span className="shop-feature-equipped"><Icon name="check" size={17} />{t('equipped')}</span>;
+  } else if (isOwned) {
+    action = <button className="shop-feature-action secondary" disabled={pending} onClick={() => onEquip(item.id)}>{t('equip')}</button>;
+  } else if (confirming === item.id) {
+    action = <button className="shop-feature-action" disabled={pending} onClick={() => { setConfirming(null); onBuy(item.id); }}>{t('confirmBuy', { n: item.price })}</button>;
+  } else {
+    action = <button className="shop-feature-action" aria-label={`${item.price} ${t('coinBalance')}`} disabled={!affordable || pending} onClick={() => setConfirming(item.id)}><Icon name="coin" size={18} />{item.price}</button>;
+  }
   return (
-    <div className="container">
+    <div className="container shop-page">
       <div className="cat-header">
         <h2>{t('shop')}</h2>
         <button className="back-link" onClick={onBack}>{t('back')}</button>
       </div>
-      <div className="shop-balance">
-        <span className="shop-coin" aria-hidden="true">🪙</span>
-        <strong>{coins}</strong>
-        <small>{t('coinBalance')}</small>
-      </div>
+      <div className="shop-balance"><span className="shop-coin" aria-hidden="true"><Icon name="coin" size={23}/></span><strong>{coins}</strong><small>{t('coinBalance')}</small></div>
       <p className="shop-intro">{t('shopIntro')}</p>
-      <div className="section-title">{t('shopFrames')}</div>
-      <div className="shop-grid">
-        {FRAMES.map((item) => {
-          const isOwned = owned.has(item.id);
-          const isEquipped = equipped === item.id;
-          const affordable = coins >= item.price;
-          const isConfirming = confirming === item.id;
-          let action;
-          if (isEquipped) {
-            action = <span className="shop-state">{t('equipped')}</span>;
-          } else if (isOwned) {
-            action = <button className="shop-btn ghost" disabled={pending} onClick={() => onEquip(item.id)}>{t('equip')}</button>;
-          } else if (isConfirming) {
-            action = (
-              <button className="shop-btn confirm" disabled={pending} onClick={() => { setConfirming(null); onBuy(item.id); }}>
-                {t('confirmBuy', { n: item.price })}
-              </button>
-            );
-          } else {
-            action = (
-              <button className="shop-btn" disabled={!affordable || pending} onClick={() => setConfirming(item.id)}>
-                🪙 {item.price}
-              </button>
-            );
-          }
-          return (
-            <div key={item.id} className={`shop-item${isEquipped ? ' equipped' : ''}`}>
-              <div className={`shop-preview${frameClass(item.id)}`}>{avatar}</div>
-              <div className="shop-name">{t(frameLabelKey(item.id))}</div>
-              {action}
-              {!isOwned && !affordable && <small className="shop-missing">{t('coinsMissing', { n: item.price - coins })}</small>}
+      <div className="shop-feature">
+        <IdentityCard frame={item.id} avatar={avatar} name={name} level={stats.level} className="identity-card-shop" />
+        <div className="shop-feature-details">
+          <div className="shop-feature-kicker">{t('shopCollection')} / {identity.number}</div>
+          <h3>{lang === 'en' ? identity.en : identity.fr}</h3>
+          <p>{lang === 'en' ? identity.lineEn : identity.lineFr}</p>
+          <div className="shop-feature-actions">{action}</div>
+          {!isOwned && !affordable && (
+            <div className="shop-earn">
+              <div className="shop-earn-track" role="progressbar" aria-label={t('shopProgress')} aria-valuemin={0} aria-valuemax={item.price} aria-valuenow={coins}><span style={{ width: `${Math.min(100, (coins / item.price) * 100)}%` }} /></div>
+              <small className="shop-missing">{t('coinsMissing', { n: item.price - coins })}</small>
+              <button className="shop-play-link" disabled={pending} onClick={onPlay}>{t('shopPlayToEarn')} <Icon name="arrow" size={17} /></button>
             </div>
-          );
-        })}
+          )}
+        </div>
+      </div>
+      <div className="section-title">{t('shopFrames')}</div>
+      <div className="shop-picker" role="group" aria-label={t('shopFrames')}>
+        {FRAMES.map((entry) => (
+          <button key={entry.id} className={`shop-pick identity-${entry.id}${selected === entry.id ? ' selected' : ''}`} aria-pressed={selected === entry.id} onClick={() => { setSelected(entry.id); setConfirming(null); }}>
+            <span className="shop-pick-number" aria-hidden="true">{IDENTITIES[entry.id].number}</span>
+            <span className="shop-pick-copy"><strong>{t(frameLabelKey(entry.id))}</strong><small>{equipped === entry.id ? t('equipped') : owned.has(entry.id) ? t('equip') : entry.price === 0 ? t('shopFree') : `${entry.price} ${t('coinBalance')}`}</small></span>
+            <Icon name="arrow" size={17} />
+          </button>
+        ))}
       </div>
     </div>
   );

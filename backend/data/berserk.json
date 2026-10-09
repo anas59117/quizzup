@@ -1,505 +1,1102 @@
 [
   {
-    "text": "Qui est l'auteur de Berserk ?",
+    "text": "Qui a créé le manga Berserk ?",
     "answers": [
+      "Kentarō Miura",
       "Hirohiko Araki",
       "Makoto Yukimura",
-      "Kentarō Miura",
       "Tetsuo Hara"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Comment s'appelle le héros de Berserk ?",
+    "text": "À quel genre Berserk appartient-il principalement ?",
     "answers": [
-      "Casca",
+      "La comédie romantique",
+      "La dark fantasy",
+      "Le récit sportif",
+      "La science-fiction spatiale"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s’appelle le héros de Berserk ?",
+    "answers": [
+      "Griffith",
+      "Judeau",
       "Guts",
-      "Judeau",
-      "Griffith"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel surnom donne-t-on à Guts au début du manga ?",
-    "answers": [
-      "Le Faucon blanc",
-      "Le Chevalier squelette",
-      "Le Guerrier noir",
-      "Le Roi des pirates"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Comment s'appelle l'épée gigantesque de Guts ?",
-    "answers": [
-      "Frostmourne",
-      "Excalibur",
-      "La Dragonslayer",
-      "Zangetsu"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle partie de son corps Guts a-t-il remplacée par une prothèse de fer ?",
-    "answers": [
-      "Son bras droit",
-      "Son bras gauche",
-      "Sa jambe gauche",
-      "Sa jambe droite"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quelle arme cachée contient la prothèse de Guts ?",
-    "answers": [
-      "Une chaîne",
-      "Un lance-flammes",
-      "Un bouclier",
-      "Un canon"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Comment s'appelle la troupe de mercenaires dirigée par Griffith ?",
-    "answers": [
-      "Les Chevaliers noirs",
-      "Les Loups d'argent",
-      "La Troupe du Faucon",
-      "La Garde de Midland"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel est le rêve de Griffith ?",
-    "answers": [
-      "Posséder son propre royaume",
-      "Retrouver sa famille",
-      "Tuer tous les apôtres",
-      "Devenir forgeron"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle guerrière de la Troupe du Faucon devient la compagne de Guts ?",
-    "answers": [
-      "Schierke",
-      "Casca",
-      "Farnèse",
-      "Charlotte"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel petit elfe accompagne Guts dans ses voyages ?",
-    "answers": [
-      "Isidro",
-      "Puck",
-      "Serpico",
-      "Rickert"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Comment s'appelle l'objet en forme d'œuf qui permet d'invoquer la Main de Dieu ?",
-    "answers": [
-      "Le Béhérit",
-      "Le masque de pierre",
-      "La pierre philosophale",
-      "Le Hōgyoku"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Comment s'appelle le groupe de cinq êtres démoniaques tout-puissants ?",
-    "answers": [
-      "Les Espada",
-      "Les Cavaliers",
-      "Les Apôtres noirs",
-      "La Main de Dieu"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Sous quel nom Griffith renaît-il au sein de la Main de Dieu ?",
-    "answers": [
-      "Void",
-      "Ubik",
-      "Slan",
-      "Femto"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Comment s'appelle le sacrifice terrible au cours duquel la Troupe du Faucon est massacrée ?",
-    "answers": [
-      "La Nuit rouge",
-      "Le Jugement",
-      "L'Apocalypse",
-      "L'Éclipse"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Comment s'appelle la marque qui attire les démons sur Guts ?",
-    "answers": [
-      "Le Sceau du dragon",
-      "La Cicatrice maudite",
-      "La Rune noire",
-      "La Marque du sacrifice"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel œil Guts a-t-il perdu pendant l'Éclipse ?",
-    "answers": [
-      "Son œil gauche",
-      "Aucun",
-      "Son œil droit",
-      "Les deux yeux"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel apôtre redoutable est surnommé « l'Immortel » ?",
-    "answers": [
-      "Zodd",
-      "Wyald",
-      "Ganishka",
-      "Rosine"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel mystérieux chevalier en armure de squelette aide Guts ?",
-    "answers": [
-      "Le Roi Fantôme",
-      "Le Chevalier Noir",
-      "Le Chevalier Squelette",
-      "Le Chevalier Faucon"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel royaume la Troupe du Faucon sert-elle pendant l'Âge d'or ?",
-    "answers": [
-      "Kushan",
-      "Tudor",
-      "Vandimion",
-      "Midland"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quelle princesse de Midland est amoureuse de Griffith ?",
-    "answers": [
-      "Casca",
-      "Luca",
-      "Charlotte",
-      "Farnèse"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qu'arrive-t-il à Griffith après sa liaison avec la princesse ?",
-    "answers": [
-      "Il est emprisonné et torturé",
-      "Il est banni en exil doré",
-      "Il est promu général",
-      "Il devient roi"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Pourquoi Guts quitte-t-il la Troupe du Faucon ?",
-    "answers": [
-      "Parce qu'il est chassé",
-      "Pour rejoindre Midland",
-      "Pour devenir l'égal de Griffith",
-      "Pour épouser Casca"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Comment appelle-t-on l'arc du passé de Guts avec la Troupe du Faucon ?",
-    "answers": [
-      "L'Âge d'or",
-      "L'Arc du Béhérit",
-      "L'Âge sombre",
-      "La Saga du Faucon"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle jeune sorcière aide Guts à partir de l'arc Millennium Falcon ?",
-    "answers": [
-      "Casca",
-      "Schierke",
-      "Farnèse",
-      "Rosine"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quelle noble fanatique devient une alliée de Guts ?",
-    "answers": [
-      "Charlotte",
-      "Schierke",
-      "Luca",
-      "Farnèse"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel épéiste est le demi-frère et serviteur de Farnèse ?",
-    "answers": [
-      "Rickert",
-      "Serpico",
-      "Azan",
-      "Isidro"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel jeune voleur admire Guts et veut apprendre l'épée ?",
-    "answers": [
-      "Judeau",
-      "Isidro",
-      "Corkus",
       "Serpico"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle armure maudite permet à Guts de dépasser ses limites ?",
+    "text": "Quel surnom Guts porte-t-il au début du manga ?",
     "answers": [
-      "L'armure du Faucon",
-      "L'armure du Dragon",
-      "L'armure d'Or",
-      "L'armure du Berserker"
+      "Le Faucon blanc",
+      "Le Chevalier pourpre",
+      "Le Roi squelette",
+      "Le Guerrier noir"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel membre de la Troupe du Faucon, habile lanceur de couteaux, est ami de Guts ?",
+    "text": "Comment s’appelle l’immense épée de Guts ?",
     "answers": [
-      "Judeau",
-      "Corkus",
-      "Pippin",
-      "Rickert"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel membre survivant de la Troupe du Faucon n'était pas présent lors de l'Éclipse ?",
-    "answers": [
-      "Pippin",
-      "Rickert",
-      "Judeau",
-      "Corkus"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Comment s'appelle la cité utopique fondée par Griffith revenu ?",
-    "answers": [
-      "Falconia",
-      "Windham",
-      "Midland",
-      "Elfhelm"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Vers quel royaume elfique Guts emmène-t-il Casca pour la soigner ?",
-    "answers": [
-      "Falconia",
-      "Elfhelm",
-      "Vritannis",
-      "Albion"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Qui est le père adoptif et brutal de Guts, chef de mercenaires ?",
-    "answers": [
-      "Donovan",
-      "Gambino",
-      "Adon",
-      "Griffith"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans quelles circonstances Guts est-il né ?",
-    "answers": [
-      "Pendant l'Éclipse",
-      "Dans un château royal",
-      "Du cadavre de sa mère pendue",
-      "Dans un monastère"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Comment Guts s'illustre-t-il en tuant une centaine d'hommes seul ?",
-    "answers": [
-      "La nuit des Faucons",
-      "Le massacre des cent hommes",
-      "La bataille de Doldrey",
-      "L'Éclipse"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quelle forteresse imprenable la Troupe du Faucon prend-elle à l'empire Tudor ?",
-    "answers": [
-      "Falconia",
-      "Albion",
-      "Windham",
-      "Doldrey"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Dans quel magazine Berserk est-il publié ?",
-    "answers": [
-      "Weekly Shōnen Magazine",
-      "Young Animal",
-      "Monthly Afternoon",
-      "Weekly Shōnen Jump"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "En quelle année Berserk a-t-il débuté ?",
-    "answers": [
-      "1989",
-      "1995",
-      "1982",
-      "2001"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "En quelle année Kentarō Miura est-il décédé ?",
-    "answers": [
-      "2019",
-      "2023",
-      "2021",
-      "2015"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Qui poursuit Berserk après la mort de Kentarō Miura ?",
-    "answers": [
-      "Makoto Yukimura",
-      "Takehiko Inoue",
-      "Hirohiko Araki",
-      "Kōji Mori et le Studio Gaga"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel studio a produit la série animée de 1997 ?",
-    "answers": [
-      "OLM",
-      "MAPPA",
-      "Sunrise",
-      "Madhouse"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle trilogie de films sortie en 2012 adapte l'Âge d'or ?",
-    "answers": [
-      "Berserk: Eclipse",
-      "Berserk: Chronicles",
-      "Berserk: L'Âge d'or",
-      "Berserk: Rebirth"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel membre de la Main de Dieu, au cerveau apparent, en est le chef ?",
-    "answers": [
-      "Slan",
-      "Conrad",
-      "Ubik",
-      "Void"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quelle membre féminine fait partie de la Main de Dieu ?",
-    "answers": [
-      "Slan",
-      "Charlotte",
-      "Casca",
-      "Schierke"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui est l'enfant de Casca, affecté par l'Éclipse ?",
-    "answers": [
-      "Puck",
-      "L'Enfant démon",
-      "Rickert",
-      "Isidro"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Dans quelle forteresse se déroule l'arc de la tour de la Conviction ?",
-    "answers": [
-      "Albion",
-      "Falconia",
-      "Windham",
-      "Doldrey"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel empire de l'Est, dirigé par Ganishka, envahit Midland ?",
-    "answers": [
-      "L'empire Kushan",
-      "L'empire de Xing",
-      "L'empire d'Alvarez",
-      "L'empire Tudor"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quel apôtre, ancien ennemi de Guts, a l'apparence d'un monstre ailé et d'une fée ?",
-    "answers": [
-      "Rosine",
-      "Grunbeld",
-      "Wyald",
-      "Zodd"
+      "La Dragon Slayer",
+      "La God Hand",
+      "La Behelit",
+      "La Durandal"
     ],
     "correct": 0,
     "difficulty": "expert"
   },
   {
-    "text": "Quel apôtre de la nouvelle Troupe du Faucon se transforme en dragon de feu ?",
+    "text": "Quel bras Guts a-t-il remplacé par une prothèse ?",
     "answers": [
-      "Zodd",
-      "Locus",
-      "Irvine",
-      "Grunbeld"
+      "Le bras droit",
+      "Le bras gauche",
+      "Les deux bras",
+      "Aucun"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle arme est dissimulée dans la prothèse de Guts ?",
+    "answers": [
+      "Une lance",
+      "Un fouet",
+      "Un canon",
+      "Une arquebuse"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle autre arme Guts peut-il fixer à sa prothèse ?",
+    "answers": [
+      "Un arc long",
+      "Une masse d’armes",
+      "Un filet",
+      "Une arbalète répétitive"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Où se trouve la Marque du Sacrifice de Guts ?",
+    "answers": [
+      "Sur son cou",
+      "Sur sa main droite",
+      "Sur son front",
+      "Sur sa poitrine"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel œil Guts perd-il pendant l’Éclipse ?",
+    "answers": [
+      "L’œil gauche",
+      "L’œil droit",
+      "Les deux yeux",
+      "Aucun"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelles circonstances Guts vient-il au monde ?",
+    "answers": [
+      "Dans un château royal",
+      "Dans un monastère",
+      "Sous le corps pendu de sa mère",
+      "À bord d’un navire"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui élève Guts comme père adoptif ?",
+    "answers": [
+      "Godot",
+      "Bazuso",
+      "Vargas",
+      "Gambino"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s’appelle la femme qui prend soin de Guts dans la troupe de Gambino ?",
+    "answers": [
+      "Shisu",
+      "Charlotte",
+      "Luca",
+      "Flora"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel métier Guts exerce-t-il dès son enfance ?",
+    "answers": [
+      "Forgeron",
+      "Mercenaire",
+      "Prêtre",
+      "Médecin"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle troupe Guts rejoint-il après son duel contre Griffith ?",
+    "answers": [
+      "Les Chiens noirs",
+      "La Sainte Chaîne d’Acier",
+      "La Troupe du Faucon",
+      "Les Chevaliers du Dragon violet"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui dirige la Troupe du Faucon ?",
+    "answers": [
+      "Casca",
+      "Judeau",
+      "Pippin",
+      "Griffith"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui est la principale commandante de la Troupe du Faucon ?",
+    "answers": [
+      "Casca",
+      "Farnese",
+      "Charlotte",
+      "Luca"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel rêve Griffith poursuit-il ?",
+    "answers": [
+      "Détruire Midland",
+      "Posséder son propre royaume",
+      "Devenir forgeron",
+      "Retrouver Elfhelm"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel animal sert d’emblème à la troupe de Griffith ?",
+    "answers": [
+      "Le loup",
+      "Le dragon",
+      "Le faucon",
+      "Le corbeau"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel objet Griffith porte-t-il autour du cou ?",
+    "answers": [
+      "Une clé royale",
+      "Un médaillon elfique",
+      "Une dent d’apôtre",
+      "Un béhélit cramoisi"
     ],
     "correct": 3,
     "difficulty": "expert"
   },
   {
-    "text": "Quel forgeron a créé la Dragonslayer ?",
+    "text": "Quel surnom donne-t-on au béhélit de Griffith ?",
     "answers": [
-      "Gambino",
-      "Rickert",
-      "Godot",
-      "Puck"
+      "L’Œuf du Roi conquérant",
+      "L’Œil du Faucon",
+      "La Pierre de Midland",
+      "Le Cœur du démon"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel événement surnaturel le béhélit de Griffith déclenche-t-il ?",
+    "answers": [
+      "La Tour de Conviction",
+      "L’Éclipse",
+      "La Fantasia",
+      "La Chute de Doldrey"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel groupe Griffith offre-t-il en sacrifice pendant l’Éclipse ?",
+    "answers": [
+      "La famille royale de Midland",
+      "Les chevaliers de Tudor",
+      "La Troupe du Faucon",
+      "Les habitants d’Elfhelm"
     ],
     "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel membre de la God Hand Griffith devient-il ?",
+    "answers": [
+      "Void",
+      "Ubik",
+      "Conrad",
+      "Femto"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de membres la God Hand compte-t-elle après l’arrivée de Femto ?",
+    "answers": [
+      "Cinq",
+      "Trois",
+      "Sept",
+      "Neuf"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel membre de la God Hand a un visage évoquant un cerveau exposé ?",
+    "answers": [
+      "Slan",
+      "Void",
+      "Ubik",
+      "Conrad"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle membre féminine appartient à la God Hand ?",
+    "answers": [
+      "Casca",
+      "Sonia",
+      "Slan",
+      "Flora"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui sauve Guts et Casca à la fin de l’Éclipse ?",
+    "answers": [
+      "Zodd",
+      "Puck",
+      "Godot",
+      "Le Chevalier squelette"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel effet le traumatisme de l’Éclipse a-t-il d’abord sur Casca ?",
+    "answers": [
+      "Elle régresse mentalement et perd ses souvenirs cohérents",
+      "Elle devient un apôtre",
+      "Elle rejoint la God Hand",
+      "Elle maîtrise la magie"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel membre de la Troupe du Faucon n’assiste pas à l’Éclipse ?",
+    "answers": [
+      "Judeau",
+      "Rickert",
+      "Pippin",
+      "Corkus"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle arme Judeau utilise-t-il avec une grande précision ?",
+    "answers": [
+      "Une hallebarde",
+      "Un marteau",
+      "Des couteaux de lancer",
+      "Une arbalète géante"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel membre massif et taciturne de la Troupe manie une grande masse ?",
+    "answers": [
+      "Gaston",
+      "Corkus",
+      "Rickert",
+      "Pippin"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel membre de la Troupe reste longtemps méfiant envers Guts ?",
+    "answers": [
+      "Corkus",
+      "Judeau",
+      "Rickert",
+      "Pippin"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel rôle Gaston occupe-t-il sous les ordres de Guts ?",
+    "answers": [
+      "Médecin de la troupe",
+      "Vice-capitaine de l’unité d’assaut",
+      "Espion royal",
+      "Porte-étendard de Casca"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel guerrier immortel surnommé « Nosferatu » affronte Guts et Griffith ?",
+    "answers": [
+      "Wyald",
+      "Grunbeld",
+      "Zodd",
+      "Rakshas"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quelle espèce surnaturelle Zodd appartient-il ?",
+    "answers": [
+      "Les elfes",
+      "Les kushans",
+      "La God Hand",
+      "Les apôtres"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel chef des Chiens noirs révèle être un apôtre ?",
+    "answers": [
+      "Wyald",
+      "Bazuso",
+      "Boscogn",
+      "Adon"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel apôtre prend l’apparence d’une limace géante ?",
+    "answers": [
+      "L’Œuf du monde parfait",
+      "Le Comte",
+      "Rosine",
+      "Irvine"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel apôtre tyrannise la première ville visitée dans l’arc du Guerrier noir ?",
+    "answers": [
+      "Le Comte",
+      "Zodd",
+      "Le Baron Serpent",
+      "Ganishka"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel elfe accompagne Guts au début de sa chasse aux apôtres ?",
+    "answers": [
+      "Ivalera",
+      "Rosine",
+      "Chitch",
+      "Puck"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "De quel lieu Puck est-il originaire ?",
+    "answers": [
+      "Elfhelm",
+      "Falconia",
+      "Midland",
+      "Doldrey"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel jeune voleur rejoint le groupe de Guts ?",
+    "answers": [
+      "Mule",
+      "Isidro",
+      "Rickert",
+      "Gaston"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel ordre religieux Farnese commande-t-elle d’abord ?",
+    "answers": [
+      "Les Chiens noirs",
+      "La Troupe du Faucon",
+      "La Sainte Chaîne d’Acier",
+      "Les Chevaliers du Dragon violet"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel lien unit Serpico et Farnese ?",
+    "answers": [
+      "Ils sont mariés",
+      "Ils sont cousins",
+      "Ils sont jumeaux",
+      "Ils sont demi-frère et demi-sœur"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle jeune sorcière rejoint Guts ?",
+    "answers": [
+      "Schierke",
+      "Sonia",
+      "Charlotte",
+      "Nina"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui est la maîtresse de Schierke ?",
+    "answers": [
+      "Slan",
+      "Flora",
+      "Luca",
+      "Casca"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel petit esprit ailé accompagne Schierke ?",
+    "answers": [
+      "Puck",
+      "Chitch",
+      "Ivalera",
+      "Rosine"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel noble et marin devient un allié du groupe de Guts ?",
+    "answers": [
+      "Silat",
+      "Magnifico",
+      "Gaston",
+      "Roderick"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment s’appelle le navire commandé par Roderick ?",
+    "answers": [
+      "Le Sea Horse",
+      "Le White Hawk",
+      "Le Seahawk",
+      "Le Midland"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ancien chevalier de la Sainte Chaîne d’Acier rejoint le voyage ?",
+    "answers": [
+      "Boscogn",
+      "Azan",
+      "Laban",
+      "Owen"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle femme protège les plus faibles dans le quartier pauvre d’Albion ?",
+    "answers": [
+      "Nina",
+      "Farnese",
+      "Luca",
+      "Charlotte"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel inquisiteur fanatique officie à la Tour de Conviction ?",
+    "answers": [
+      "Vargas",
+      "Gennon",
+      "Foss",
+      "Mozgus"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle ville se dresse la Tour de Conviction ?",
+    "answers": [
+      "Albion",
+      "Doldrey",
+      "Windham",
+      "Vritannis"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel apôtre difforme prépare l’incarnation de Griffith ?",
+    "answers": [
+      "Le Baron Serpent",
+      "L’Œuf du monde parfait",
+      "Rosine",
+      "Le Comte"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel événement clôt l’arc de la Tour de Conviction ?",
+    "answers": [
+      "La mort de Guts",
+      "La destruction de Midland",
+      "L’incarnation de Griffith dans le monde physique",
+      "Le retour de Gambino"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui constitue une nouvelle Troupe du Faucon autour de Griffith ?",
+    "answers": [
+      "Seulement des elfes",
+      "Les survivants exacts de l’ancienne troupe",
+      "La God Hand entière",
+      "Des humains et des apôtres"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel apôtre chevalier à l’armure de cristal rejoint Griffith ?",
+    "answers": [
+      "Grunbeld",
+      "Locus",
+      "Irvine",
+      "Rakshas"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel lancier surnommé le Chevalier au Clair de lune sert Griffith ?",
+    "answers": [
+      "Mule",
+      "Locus",
+      "Roderick",
+      "Serpico"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel archer apôtre sert la nouvelle Troupe du Faucon ?",
+    "answers": [
+      "Judeau",
+      "Isidro",
+      "Irvine",
+      "Silat"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel assassin kushan masqué rejoint Griffith ?",
+    "answers": [
+      "Daiba",
+      "Silat",
+      "Tapasa",
+      "Rakshas"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle jeune médium peut communiquer avec Griffith et les démons ?",
+    "answers": [
+      "Sonia",
+      "Schierke",
+      "Farnese",
+      "Charlotte"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel jeune chevalier humain suit Sonia dans la nouvelle troupe ?",
+    "answers": [
+      "Rickert",
+      "Mule Wolflame",
+      "Gaston",
+      "Isidro"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel empereur kushan envahit Midland ?",
+    "answers": [
+      "Daiba",
+      "Silat",
+      "Ganishka",
+      "Boscogn"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel sorcier kushan conseille Ganishka ?",
+    "answers": [
+      "Flora",
+      "Gedfring",
+      "Mozgus",
+      "Daiba"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment appelle-t-on les soldats démoniaques créés par les Kushans ?",
+    "answers": [
+      "Les Daka",
+      "Les Bakiraka",
+      "Les Tapasa",
+      "Les Jotunn"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel dispositif permet à Ganishka de produire les Daka ?",
+    "answers": [
+      "La Dragon Slayer",
+      "Un béhélit artificiel",
+      "L’Œuf du Roi",
+      "L’armure du Berserker"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle forme gigantesque Ganishka adopte-t-il avant sa défaite ?",
+    "answers": [
+      "Femto",
+      "Zodd",
+      "Shiva",
+      "Void"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel bouleversement résulte de l’affrontement entre Griffith et Ganishka ?",
+    "answers": [
+      "L’Éclipse",
+      "La chute d’Albion",
+      "La guerre de Cent Ans",
+      "La Fantasia"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel immense arbre apparaît après la transformation du monde ?",
+    "answers": [
+      "L’Arbre-Monde en spirale",
+      "L’Arbre de l’Esprit",
+      "L’Arbre des pendus",
+      "Le Chêne de Midland"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle cité Griffith fonde-t-il comme refuge pour les humains ?",
+    "answers": [
+      "Elfhelm",
+      "Falconia",
+      "Albion",
+      "Doldrey"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "À quel moment l’Enfant au clair de lune apparaît-il habituellement ?",
+    "answers": [
+      "Pendant une éclipse solaire",
+      "À chaque solstice",
+      "Lors de la pleine lune",
+      "Pendant la nouvelle lune"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Que représente principalement la Bête des Ténèbres pour Guts ?",
+    "answers": [
+      "Un apôtre domestiqué",
+      "L’esprit de Gambino",
+      "Une forme de Puck",
+      "Sa haine et ses pulsions destructrices"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle armure dangereuse Guts porte-t-il ?",
+    "answers": [
+      "L’armure du Berserker",
+      "L’armure du Faucon",
+      "L’armure de Zodd",
+      "L’armure de Doldrey"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel effet l’armure du Berserker produit-elle sur son porteur ?",
+    "answers": [
+      "Elle le rend invisible",
+      "Elle supprime ses limites et masque la douleur au risque de détruire son corps",
+      "Elle guérit instantanément toutes ses blessures",
+      "Elle bloque toute magie"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui a forgé la Dragon Slayer ?",
+    "answers": [
+      "Rickert",
+      "Gambino",
+      "Godot",
+      "Roderick"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Pourquoi la Dragon Slayer a-t-elle été forgée à l’origine ?",
+    "answers": [
+      "Pour couronner Griffith",
+      "Pour défendre Elfhelm",
+      "Pour sceller un béhélit",
+      "Pour répondre au défi de créer une épée capable de tuer un dragon"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s’appelle la jeune fille élevée par Godot ?",
+    "answers": [
+      "Erica",
+      "Jill",
+      "Theresia",
+      "Nina"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Où Guts trouve-t-il refuge après l’Éclipse ?",
+    "answers": [
+      "À la cour de Midland",
+      "Dans la mine de Godot",
+      "Dans le château de Doldrey",
+      "Chez les Kushans"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de temps Griffith reste-t-il emprisonné et torturé ?",
+    "answers": [
+      "Un mois",
+      "Cinq ans",
+      "Environ un an",
+      "Dix ans"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sous quel lieu Griffith est-il détenu ?",
+    "answers": [
+      "La Tour de Conviction",
+      "Le donjon de Doldrey",
+      "La cathédrale de Falconia",
+      "La Tour de la Renaissance"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel arc raconte principalement la jeunesse de Guts avec la Troupe du Faucon ?",
+    "answers": [
+      "Le Guerrier noir",
+      "L’Âge d’or",
+      "La Conviction",
+      "Fantasia"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année Berserk commence-t-il sa publication ?",
+    "answers": [
+      "1984",
+      "1995",
+      "1989",
+      "2001"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quel magazine Berserk paraît-il d’abord ?",
+    "answers": [
+      "Weekly Shōnen Jump",
+      "Morning",
+      "Afternoon",
+      "Monthly Animal House"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel magazine le manga est-il ensuite sérialisé ?",
+    "answers": [
+      "Young Animal",
+      "Weekly Shōnen Champion",
+      "Big Comic Spirits",
+      "Ultra Jump"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle maison d’édition publie Berserk au Japon ?",
+    "answers": [
+      "Kōdansha",
+      "Hakusensha",
+      "Shūeisha",
+      "Shōgakukan"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Combien d’épisodes compte la série télévisée animée de 1997 ?",
+    "answers": [
+      "13",
+      "24",
+      "25",
+      "26"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel arc la série animée de 1997 adapte-t-elle principalement ?",
+    "answers": [
+      "Fantasia",
+      "L’Empire millénaire du Faucon",
+      "L’arc de l’Île des elfes",
+      "L’Âge d’or"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel studio produit la trilogie cinématographique de l’Âge d’or ?",
+    "answers": [
+      "Studio 4°C",
+      "Madhouse",
+      "Bones",
+      "TMS Entertainment"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui réalise la trilogie cinématographique de l’Âge d’or ?",
+    "answers": [
+      "Shin Itagaki",
+      "Toshiyuki Kubooka",
+      "Yuta Sano",
+      "Naohito Takahashi"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de films composent cette trilogie ?",
+    "answers": [
+      "Deux",
+      "Quatre",
+      "Trois",
+      "Cinq"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui réalise la Memorial Edition de l’Âge d’or ?",
+    "answers": [
+      "Toshiyuki Kubooka",
+      "Shin Itagaki",
+      "Ichirō Ōkouchi",
+      "Yuta Sano"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien d’épisodes compte la Memorial Edition ?",
+    "answers": [
+      "13",
+      "10",
+      "24",
+      "25"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui signe le scénario et la supervision générale du scénario de la Memorial Edition ?",
+    "answers": [
+      "Susumu Hirasawa",
+      "Ichirō Ōkouchi",
+      "Shirō Sagisu",
+      "Naoyuki Onda"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Guts dans la Memorial Edition ?",
+    "answers": [
+      "Takahiro Sakurai",
+      "Toa Yukinari",
+      "Hiroaki Iwanaga",
+      "Yūki Kaji"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Griffith dans la Memorial Edition ?",
+    "answers": [
+      "Hiroaki Iwanaga",
+      "Yūki Kaji",
+      "Kazuyuki Okitsu",
+      "Takahiro Sakurai"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Qui prête sa voix japonaise à Casca dans la Memorial Edition ?",
+    "answers": [
+      "Toa Yukinari",
+      "Yōko Hikasa",
+      "Kaoru Mizuhara",
+      "Mika Nakashima"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel compositeur signe la musique orchestrale de la trilogie et de la Memorial Edition ?",
+    "answers": [
+      "Yoko Kanno",
+      "Shirō Sagisu",
+      "Joe Hisaishi",
+      "Kenji Kawai"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel musicien compose notamment « Aria » pour l’Âge d’or ?",
+    "answers": [
+      "Shirō Sagisu",
+      "Hiroyuki Sawano",
+      "Susumu Hirasawa",
+      "Koji Kondo"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui supervise la continuation du manga d’après les souvenirs transmis par Miura ?",
+    "answers": [
+      "Toshiyuki Kubooka",
+      "Shin Itagaki",
+      "Naoyuki Onda",
+      "Kouji Mori"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel collectif dessine la continuation de Berserk après la mort de Miura ?",
+    "answers": [
+      "Studio Gaga",
+      "Studio 4°C",
+      "GEMBA",
+      "Millepensee"
+    ],
+    "correct": 0,
     "difficulty": "expert"
   }
 ]

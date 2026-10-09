@@ -120,7 +120,7 @@
     "correct": 0
   },
   {
-    "text": "Quel milieu de terrain néerlandais, formé au PSV Eindhoven, devient une légende du Real Madrid dans les années 2000-2010 ?",
+    "text": "Quel milieu de terrain néerlandais, formé à l’Ajax, devient une figure du Real Madrid dans les années 2000 ?",
     "answers": [
       "Arjen Robben",
       "Wesley Sneijder",
@@ -130,7 +130,7 @@
     "correct": 1
   },
   {
-    "text": "Quel ailier néerlandais, formé au PSV, brille ensuite au Bayern Munich et au Real Madrid dans les années 2000-2010 ?",
+    "text": "Quel ailier néerlandais, révélé au PSV, brille ensuite au Bayern Munich et au Real Madrid dans les années 2000-2010 ?",
     "answers": [
       "Arjen Robben",
       "Robin van Persie",
@@ -150,7 +150,7 @@
     "correct": 0
   },
   {
-    "text": "Quel attaquant néerlandais, star de Manchester United dans les années 2000, est formé notamment au PSV Eindhoven ?",
+    "text": "Quel attaquant néerlandais, star de Manchester United dans les années 2000, s’est auparavant illustré au PSV Eindhoven ?",
     "answers": [
       "Ruud van Nistelrooy",
       "Robin van Persie",
@@ -170,7 +170,7 @@
     "correct": 0
   },
   {
-    "text": "Quel défenseur néerlandais, formé au PSV puis star de Manchester United, remporte le triplé Ligue des Champions-Championnat-Coupe en 1999 ?",
+    "text": "Quel défenseur néerlandais, passé par le PSV puis devenu une star de Manchester United, remporte le triplé Ligue des champions-championnat-Coupe en 1999 ?",
     "answers": [
       "Jaap Stam",
       "Frank de Boer",
@@ -320,7 +320,7 @@
     "correct": 1
   },
   {
-    "text": "Quel attaquant uruguayen, meilleur buteur de l'Eredivisie lors du parcours européen 2010-2011 de l'Ajax, rejoint Liverpool en janvier 2011 ?",
+    "text": "Quel attaquant uruguayen, capitaine de l’Ajax et meilleur buteur de l’Eredivisie 2009-2010, rejoint Liverpool en janvier 2011 ?",
     "answers": [
       "Edinson Cavani",
       "Luis Suárez",
@@ -420,7 +420,7 @@
     "correct": 0
   },
   {
-    "text": "Quel milieu offensif marocain, formé à l'Ajax dans les années 2010, brille ensuite à Chelsea ?",
+    "text": "Quel milieu offensif marocain, passé par le FC Twente puis devenu une vedette de l’Ajax, brille ensuite à Chelsea ?",
     "answers": [
       "Hakim Ziyech",
       "Nordin Amrabat",
@@ -442,25 +442,25 @@
   {
     "text": "Quelles sont les couleurs traditionnelles du maillot du Feyenoord ?",
     "answers": [
-      "Rouge et blanc",
-      "Blanc et rouge à bandes",
+      "Rouge et blanc en deux moitiés verticales",
+      "Rouge et blanc à rayures",
       "Rouge et noir",
       "Vert et blanc"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "Quelles sont les couleurs traditionnelles du maillot du PSV Eindhoven ?",
     "answers": [
-      "Rouge et blanc",
+      "Rouge et blanc à rayures",
       "Bleu et blanc",
-      "Rouge et bleu à bandes",
+      "Rouge et bleu à rayures",
       "Jaune et noir"
     ],
-    "correct": 2
+    "correct": 0
   },
   {
-    "text": "Quel est le surnom donné au stade de l'Ajax, inauguré en 1996 ?",
+    "text": "Quel est le nom actuel du stade de l’Ajax, inauguré en 1996 ?",
     "answers": [
       "Johan Cruyff Arena",
       "De Kuip",
@@ -490,24 +490,25 @@
     "correct": 0
   },
   {
-    "text": "Combien de fois le PSV Eindhoven a-t-il été champion des Pays-Bas (à l'issue de la saison 2025-2026) ?",
+    "text": "En quelle année le PSV remporte-t-il son premier titre de champion des Pays-Bas ?",
     "answers": [
-      "Environ 15 fois",
-      "Environ 26 fois",
-      "Environ 35 fois",
-      "Une seule fois"
+      "1918",
+      "1929",
+      "1938",
+      "1956"
     ],
     "correct": 1
   },
   {
-    "text": "Quel milieu de terrain espagnol, révélé au FC Barcelone puis star du football néerlandais dans les années 2020 (Ajax), est connu pour ses transferts multiples ?",
+    "text": "Quel attaquant danois du Feyenoord termine meilleur buteur de l’Eredivisie 2016-2017 ?",
     "answers": [
-      "Sergio Gómez",
-      "Steven Bergwijn",
-      "Sébastien Haller",
-      "Dusan Tadic"
+      "Nicolai Jørgensen",
+      "Kasper Dolberg",
+      "Lasse Schöne",
+      "Viktor Fischer"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
     "text": "Quel attaquant serbe devient l'un des meilleurs buteurs de l'histoire récente de l'Ajax, dans les années 2020, portant le brassard de capitaine ?",
@@ -548,5 +549,500 @@
       "Fiorentina"
     ],
     "correct": 1
+  },
+  {
+    "text": "Comment appelle-t-on traditionnellement l’affiche entre l’Ajax et le Feyenoord ?",
+    "answers": [
+      "De Klassieker",
+      "De Topper",
+      "De Derby van het Noorden",
+      "De Lichtstadderby"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel surnom est couramment donné au duel entre l’Ajax et le PSV ?",
+    "answers": [
+      "De Klassieker",
+      "De Topper",
+      "De Gelderse derby",
+      "De Friese derby"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En quelle année le Feyenoord a-t-il été fondé ?",
+    "answers": [
+      "1900",
+      "1905",
+      "1908",
+      "1913"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle date le PSV a-t-il été officiellement fondé ?",
+    "answers": [
+      "18 mars 1900",
+      "19 juillet 1908",
+      "1er juillet 1965",
+      "31 août 1913"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club de Rotterdam, fondé en 1888, est le plus ancien club professionnel des Pays-Bas ?",
+    "answers": [
+      "Sparta Rotterdam",
+      "Excelsior Rotterdam",
+      "Feyenoord",
+      "ADO La Haye"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "De la fusion de quels deux clubs l’AZ est-il né en 1967 ?",
+    "answers": [
+      "DOS et Elinkwijk",
+      "Alkmaar ’54 et FC Zaanstreek",
+      "Sportclub Enschede et Enschedese Boys",
+      "Velox et Blauw-Wit"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quels trois clubs ont fusionné en 1970 pour former le FC Utrecht ?",
+    "answers": [
+      "Sparta, Excelsior et Xerxes",
+      "NAC, NOAD et Willem II",
+      "DOS, Elinkwijk et Velox",
+      "DWS, Blauw-Wit et De Volewijckers"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quels clubs ont fusionné en 1965 pour donner naissance au FC Twente ?",
+    "answers": [
+      "DOS et Velox",
+      "Alkmaar ’54 et FC Zaanstreek",
+      "GVAV et Oosterparkers",
+      "Sportclub Enschede et Enschedese Boys"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Le Willem II de Tilburg porte le nom de quel souverain néerlandais ?",
+    "answers": [
+      "Le roi Guillaume II",
+      "Le roi Guillaume Ier",
+      "Le prince Bernhard",
+      "Le roi Willem-Alexander"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle ville joue le Go Ahead Eagles ?",
+    "answers": [
+      "Zwolle",
+      "Deventer",
+      "Arnhem",
+      "Breda"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quelle ville le NEC est-il basé ?",
+    "answers": [
+      "Groningue",
+      "Tilburg",
+      "Nimègue",
+      "Almelo"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel stade accueille le SC Heerenveen ?",
+    "answers": [
+      "De Grolsch Veste",
+      "GelreDome",
+      "Euroborg",
+      "Abe Lenstra Stadion"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom du stade du FC Groningen ?",
+    "answers": [
+      "Euroborg",
+      "Het Kasteel",
+      "Rat Verlegh Stadion",
+      "Mandemakers Stadion"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel stade le FC Utrecht joue-t-il ses rencontres à domicile ?",
+    "answers": [
+      "GelreDome",
+      "Stadion Galgenwaard",
+      "De Adelaarshorst",
+      "Koning Willem II Stadion"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel stade est le domicile de l’AZ à Alkmaar ?",
+    "answers": [
+      "De Koel",
+      "Mestalla",
+      "AFAS Stadion",
+      "De Vijverberg"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel stade accueille les matches à domicile du FC Twente ?",
+    "answers": [
+      "Euroborg",
+      "Philips Stadion",
+      "De Kuip",
+      "De Grolsch Veste"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s’appelle le complexe où s’entraînent et jouent les équipes de jeunes de l’Ajax ?",
+    "answers": [
+      "De Toekomst",
+      "De Herdgang",
+      "Varkenoord",
+      "Zoudenbalch"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel nom porte le campus d’entraînement et de formation du PSV ?",
+    "answers": [
+      "De Toekomst",
+      "De Herdgang",
+      "De Aftrap",
+      "Papendal"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel nom traditionnel porte le complexe de formation du Feyenoord ?",
+    "answers": [
+      "Zoudenbalch",
+      "De Toekomst",
+      "Varkenoord",
+      "De Herdgang"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel stade de Rotterdam, surnommé « Het Kasteel », est celui du Sparta ?",
+    "answers": [
+      "De Kuip",
+      "Woudestein",
+      "Olympisch Stadion",
+      "Sparta Stadion"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle équipe termine la saison 1994-1995 d’Eredivisie sans subir la moindre défaite ?",
+    "answers": [
+      "Ajax Amsterdam",
+      "PSV Eindhoven",
+      "Feyenoord",
+      "Roda JC"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel jeune attaquant inscrit le but victorieux de l’Ajax en finale de la Ligue des champions 1995 ?",
+    "answers": [
+      "Jari Litmanen",
+      "Patrick Kluivert",
+      "Marc Overmars",
+      "Nwankwo Kanu"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club italien l’Ajax bat-il 1-0 en finale de la Ligue des champions 1995 ?",
+    "answers": [
+      "Juventus",
+      "Inter Milan",
+      "AC Milan",
+      "Parme"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel adversaire l’Ajax bat-il 2-0 en finale de la Coupe d’Europe des clubs champions 1972 ?",
+    "answers": [
+      "Benfica",
+      "Celtic",
+      "Juventus",
+      "Inter Milan"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur marque les deux buts de l’Ajax lors de cette finale européenne de 1972 ?",
+    "answers": [
+      "Johan Cruyff",
+      "Johan Neeskens",
+      "Piet Keizer",
+      "Sjaak Swart"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club l’Ajax domine-t-il 1-0 en finale européenne en 1973 ?",
+    "answers": [
+      "Bayern Munich",
+      "Juventus",
+      "Real Madrid",
+      "Leeds United"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel joueur inscrit l’unique but de la finale européenne remportée par l’Ajax en 1973 ?",
+    "answers": [
+      "Johan Cruyff",
+      "Ruud Krol",
+      "Johnny Rep",
+      "Arie Haan"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "De 1971 à 1973, combien de Coupes d’Europe des clubs champions l’Ajax remporte-t-il consécutivement ?",
+    "answers": [
+      "Une",
+      "Deux",
+      "Quatre",
+      "Trois"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club est battu par l’Ajax en finale de la Coupe des coupes 1987 ?",
+    "answers": [
+      "Lokomotive Leipzig",
+      "Dynamo Kiev",
+      "Malines",
+      "Anderlecht"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel attaquant marque l’unique but de l’Ajax lors de la finale de la Coupe des coupes 1987 ?",
+    "answers": [
+      "Dennis Bergkamp",
+      "Marco van Basten",
+      "John Bosman",
+      "Rob Witschge"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel club anglais le Feyenoord bat-il en finale de la Coupe UEFA 1974 ?",
+    "answers": [
+      "Ipswich Town",
+      "Liverpool",
+      "Tottenham Hotspur",
+      "Arsenal"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel club français le PSV bat-il en finale de la Coupe UEFA 1978 ?",
+    "answers": [
+      "Saint-Étienne",
+      "Nantes",
+      "Bordeaux",
+      "Bastia"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Contre quel club allemand le FC Twente perd-il la finale de la Coupe UEFA 1975 ?",
+    "answers": [
+      "Borussia Mönchengladbach",
+      "Hambourg SV",
+      "Eintracht Francfort",
+      "Bayer Leverkusen"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club anglais prive l’AZ de la Coupe UEFA en finale en 1981 ?",
+    "answers": [
+      "Tottenham Hotspur",
+      "Ipswich Town",
+      "Aston Villa",
+      "Nottingham Forest"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel entraîneur mène le PSV au triplé championnat-Coupe d’Europe-Coupe nationale en 1988 ?",
+    "answers": [
+      "Bobby Robson",
+      "Dick Advocaat",
+      "Guus Hiddink",
+      "Kees Rijvers"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quels trois trophées le PSV remporte-t-il lors de la saison 1987-1988 ?",
+    "answers": [
+      "Eredivisie, Supercoupe et Coupe UEFA",
+      "Eredivisie, Coupe intercontinentale et Coupe UEFA",
+      "Eredivisie, Coupe nationale et Coupe des coupes",
+      "Eredivisie, Coupe nationale et Coupe d’Europe des clubs champions"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Sur quel score le Feyenoord bat-il le Borussia Dortmund en finale de la Coupe UEFA 2002 ?",
+    "answers": [
+      "3-2",
+      "2-0",
+      "4-1",
+      "1-0"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel attaquant inscrit deux buts pour le Feyenoord lors de la finale de la Coupe UEFA 2002 ?",
+    "answers": [
+      "Jon Dahl Tomasson",
+      "Pierre van Hooijdonk",
+      "Paul Bosvelt",
+      "Robin van Persie"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de buts Sébastien Haller marque-t-il pour terminer meilleur buteur de l’Eredivisie 2021-2022 ?",
+    "answers": [
+      "18",
+      "20",
+      "21",
+      "25"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de buts Luis Suárez inscrit-il avec l’Ajax en Eredivisie lors de la saison 2009-2010 ?",
+    "answers": [
+      "28",
+      "30",
+      "34",
+      "35"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel attaquant de l’AZ termine meilleur buteur de l’Eredivisie 2008-2009 ?",
+    "answers": [
+      "Mounir El Hamdaoui",
+      "Mousa Dembélé",
+      "Ari",
+      "Graziano Pellè"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel joueur du PSV termine meilleur buteur de l’Eredivisie 2014-2015 avec 22 buts ?",
+    "answers": [
+      "Luuk de Jong",
+      "Memphis Depay",
+      "Jürgen Locadia",
+      "Georginio Wijnaldum"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel attaquant du Feyenoord finit meilleur buteur de l’Eredivisie 2004-2005 avec 29 buts ?",
+    "answers": [
+      "Salomon Kalou",
+      "Romeo Castelen",
+      "Dirk Kuyt",
+      "Robin van Persie"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel attaquant de l’AZ devient en 1979 le premier Néerlandais à remporter le Soulier d’or européen ?",
+    "answers": [
+      "Willy van der Kuijlen",
+      "Ruud Geels",
+      "Kees Kist",
+      "Coen Dillen"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel gardien du PSV arrête le dernier tir au but de Benfica en finale européenne 1988 ?",
+    "answers": [
+      "Pim Doesburg",
+      "Jan van Beveren",
+      "Edwin van der Sar",
+      "Hans van Breukelen"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]

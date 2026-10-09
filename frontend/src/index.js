@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { I18nProvider } from './i18n';
+import { GameFeelProvider } from './GameFeelProvider';
 
 class AppErrorBoundary extends React.Component {
   constructor(props) {
@@ -35,9 +36,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <I18nProvider>
-      <AppErrorBoundary>
-        <App />
-      </AppErrorBoundary>
+      <GameFeelProvider>
+        <AppErrorBoundary>
+          <App />
+        </AppErrorBoundary>
+      </GameFeelProvider>
     </I18nProvider>
   </React.StrictMode>
 );

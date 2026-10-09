@@ -3,500 +3,1100 @@
     "text": "Quel élément Aang maîtrise-t-il naturellement dès son enfance ?",
     "answers": [
       "L’air",
-      "Le feu",
+      "L’eau",
       "La terre",
+      "Le feu"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel lien unit Katara et Sokka ?",
+    "answers": [
+      "Ils sont cousins",
+      "Ils sont frère et sœur",
+      "Ils sont jumeaux",
+      "Ils sont fiancés"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En combien de « livres » la série animée originale est-elle divisée ?",
+    "answers": [
+      "Deux",
+      "Quatre",
+      "Trois",
+      "Cinq"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui a créé la série animée originale ?",
+    "answers": [
+      "Aaron Ehasz et Dave Filoni",
+      "Joaquim Dos Santos et Lauren Montgomery",
+      "Craig McCracken et Genndy Tartakovsky",
+      "Michael Dante DiMartino et Bryan Konietzko"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle maîtrise le lion-tortue transmet-il à Aang avant son combat contre Ozai ?",
+    "answers": [
+      "La maîtrise de l’énergie",
+      "La maîtrise du métal",
+      "La maîtrise du sang",
+      "La maîtrise de la foudre"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle espèce est Appa ?",
+    "answers": [
+      "Un ours polaire-chien",
+      "Un bison volant",
+      "Un blaireau-taupe",
+      "Un lion-tortue"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Pourquoi Zuko poursuit-il d’abord l’Avatar ?",
+    "answers": [
+      "Pour devenir chef du Dai Li",
+      "Pour libérer Ba Sing Se",
+      "Pour restaurer son honneur auprès de son père",
+      "Pour retrouver sa mère"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel élément donne son titre au premier livre ?",
+    "answers": [
+      "La terre",
+      "Le feu",
+      "L’air",
       "L’eau"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel est le rôle unique d’Aang dans son monde ?",
+    "text": "Pendant environ combien de temps Aang reste-t-il prisonnier de l’iceberg ?",
     "answers": [
-      "Il est le Seigneur du Feu",
+      "Cent ans",
+      "Dix ans",
+      "Cinquante ans",
+      "Mille ans"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel maître du feu accepte d’abord d’enseigner à Aang, avant que celui-ci ne se tourne vers Zuko ?",
+    "answers": [
+      "Piandao",
+      "Jeong Jeong",
+      "Pakku",
+      "Bumi"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel élément Katara maîtrise-t-elle ?",
+    "answers": [
+      "La terre",
+      "Le feu",
+      "L’eau",
+      "L’air"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle particularité distingue Sokka au sein du groupe principal ?",
+    "answers": [
       "Il est l’Avatar",
-      "Il est le roi de Ba Sing Se",
-      "Il est un esprit de l’océan"
+      "Il maîtrise le métal",
+      "Il voit les esprits",
+      "Il ne maîtrise aucun élément"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quel personnage correspond à cette description : dernier maître de l’air et Avatar de son époque ?",
+    "text": "Quel élément Toph enseigne-t-elle à Aang ?",
     "answers": [
-      "Katara",
-      "Sokka",
-      "Aang",
-      "Zuko"
+      "La terre",
+      "L’eau",
+      "Le feu",
+      "L’air"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle description correspond à Aang ?",
+    "text": "De quelle couleur sont généralement les flammes d’Azula ?",
     "answers": [
-      "maîtresse de l’eau originaire de la Tribu de l’Eau du Sud",
-      "guerrier sans maîtrise élémentaire et frère de Katara",
-      "prince de la Nation du Feu cherchant d’abord à capturer l’Avatar",
-      "dernier maître de l’air et Avatar de son époque"
+      "Vertes",
+      "Bleues",
+      "Blanches",
+      "Violettes"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel personnage correspond à cette description : maîtresse de l’eau originaire de la Tribu de l’Eau du Sud ?",
+    "text": "Qui enseigne la maîtrise du sang à Katara ?",
     "answers": [
-      "Katara",
-      "Azula",
-      "Ozai",
-      "Appa"
+      "Yugoda",
+      "Kya",
+      "Hama",
+      "June"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle description correspond à Katara ?",
+    "text": "Quelle espèce est Momo ?",
     "answers": [
-      "bison volant et compagnon d’Aang",
-      "maîtresse de l’eau originaire de la Tribu de l’Eau du Sud",
-      "lémurien ailé adopté par le groupe",
-      "cheffe des Guerrières Kyoshi"
+      "Un bison volant",
+      "Un shirshu",
+      "Un faucon messager",
+      "Un lémurien ailé"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel personnage correspond à cette description : guerrier sans maîtrise élémentaire et frère de Katara ?",
+    "text": "Quel surnom porte Iroh ?",
     "answers": [
-      "Yue",
-      "Roku",
-      "Sokka",
-      "Kyoshi"
+      "Le Dragon de l’Ouest",
+      "Le Tigre de l’Est",
+      "Le Phénix du Nord",
+      "Le Lotus du Sud"
     ],
-    "correct": 2
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle description correspond à Sokka ?",
+    "text": "À quelle société secrète Iroh appartient-il ?",
     "answers": [
-      "maître de l’eau de la Tribu du Nord",
-      "amiral de la Nation du Feu ayant attaqué l’esprit de la Lune",
-      "amie d’Azula spécialisée dans les couteaux de lancer",
-      "guerrier sans maîtrise élémentaire et frère de Katara"
+      "Le Dai Li",
+      "L’Ordre du Lotus Blanc",
+      "Les Guerrières Kyoshi",
+      "Les Combattants de la Liberté"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel personnage correspond à cette description : prince de la Nation du Feu cherchant d’abord à capturer l’Avatar ?",
+    "text": "Quel esprit Zhao tue-t-il lors du siège de la Tribu de l’Eau du Nord ?",
     "answers": [
-      "Zuko",
-      "Zhao",
-      "Mai",
-      "Ty Lee"
+      "La, l’esprit de l’Océan",
+      "Hei Bai, l’esprit de la forêt",
+      "Tui, l’esprit de la Lune",
+      "Koh, le voleur de visages"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle description correspond à Zuko ?",
+    "text": "À qui Kanna, la grand-mère de Katara, avait-elle été fiancée dans sa jeunesse ?",
     "answers": [
-      "chef manipulateur du Dai Li",
-      "prince de la Nation du Feu cherchant d’abord à capturer l’Avatar",
-      "marchand dont la charrette est régulièrement détruite",
-      "dernier maître de l’air et Avatar de son époque"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel personnage correspond à cette description : maîtresse de la terre aveugle ayant inventé la maîtrise du métal ?",
-    "answers": [
-      "Gyatso",
-      "Long Feng",
-      "Toph Beifong",
-      "Le vendeur de choux"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à Toph Beifong ?",
-    "answers": [
-      "princesse de la Nation du Feu maîtrisant les flammes bleues",
-      "Seigneur du Feu et père de Zuko et Azula",
-      "bison volant et compagnon d’Aang",
-      "maîtresse de la terre aveugle ayant inventé la maîtrise du métal"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel personnage correspond à cette description : oncle de Zuko surnommé le Dragon de l’Ouest ?",
-    "answers": [
-      "Iroh",
-      "Sokka",
-      "Zuko",
-      "Toph Beifong"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Iroh ?",
-    "answers": [
-      "Avatar de la Terre ayant fondé les Guerrières Kyoshi",
-      "oncle de Zuko surnommé le Dragon de l’Ouest",
-      "roi excentrique d’Omashu et ami d’enfance d’Aang",
-      "maître de l’eau de la Tribu du Nord"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel personnage correspond à cette description : princesse de la Nation du Feu maîtrisant les flammes bleues ?",
-    "answers": [
-      "Appa",
-      "Momo",
-      "Azula",
-      "Suki"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à Azula ?",
-    "answers": [
-      "père de Katara et Sokka",
-      "moine de l’air qui a élevé Aang",
-      "chef manipulateur du Dai Li",
-      "princesse de la Nation du Feu maîtrisant les flammes bleues"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel personnage correspond à cette description : Seigneur du Feu et père de Zuko et Azula ?",
-    "answers": [
-      "Ozai",
-      "Kyoshi",
+      "Jeong Jeong",
       "Bumi",
+      "Piandao",
       "Pakku"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle description correspond à Ozai ?",
+    "text": "Quelle ville est la capitale du Royaume de la Terre ?",
     "answers": [
-      "prince de la Nation du Feu cherchant d’abord à capturer l’Avatar",
-      "Seigneur du Feu et père de Zuko et Azula",
-      "maîtresse de la terre aveugle ayant inventé la maîtrise du métal",
-      "oncle de Zuko surnommé le Dragon de l’Ouest"
+      "Ba Sing Se",
+      "Omashu",
+      "Yu Dao",
+      "Gaoling"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel personnage correspond à cette description : bison volant et compagnon d’Aang ?",
+    "text": "Qui règne sur Omashu lorsque Aang y retrouve son ami d’enfance ?",
     "answers": [
-      "Ty Lee",
-      "Jet",
-      "Appa",
-      "Hakoda"
+      "Kuei",
+      "Bumi",
+      "Long Feng",
+      "Pakku"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle description correspond à Appa ?",
+    "text": "Sur quelle île Aang rencontre-t-il Suki et les Guerrières Kyoshi ?",
     "answers": [
-      "princesse de la Tribu de l’Eau du Nord devenue esprit de la Lune",
-      "Avatar de la Nation du Feu précédant Aang",
-      "Avatar de la Terre ayant fondé les Guerrières Kyoshi",
-      "bison volant et compagnon d’Aang"
+      "L’île du Croissant",
+      "L’île de Braise",
+      "L’île de Kyoshi",
+      "L’île du Temple de l’Air"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel personnage correspond à cette description : lémurien ailé adopté par le groupe ?",
+    "text": "Qui dirige de fait le Dai Li avant l’arrivée d’Azula ?",
     "answers": [
-      "Momo",
-      "Le vendeur de choux",
-      "Aang",
-      "Katara"
+      "Kuei",
+      "Joo Dee",
+      "Chin le Conquérant",
+      "Long Feng"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle description correspond à Momo ?",
+    "text": "Quel Avatar a fondé le Dai Li ?",
     "answers": [
-      "acrobate capable de bloquer le chi",
-      "lémurien ailé adopté par le groupe",
-      "chef des Combattants de la Liberté",
-      "père de Katara et Sokka"
+      "Kyoshi",
+      "Roku",
+      "Kuruk",
+      "Yangchen"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel personnage correspond à cette description : cheffe des Guerrières Kyoshi ?",
+    "text": "Quel Avatar précède immédiatement Aang dans le cycle ?",
     "answers": [
-      "Toph Beifong",
-      "Iroh",
+      "Kyoshi",
+      "Roku",
+      "Kuruk",
+      "Yangchen"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "De quelle nation Roku est-il originaire ?",
+    "answers": [
+      "Le Royaume de la Terre",
+      "La Tribu de l’Eau",
+      "La Nation du Feu",
+      "Les Nomades de l’Air"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "De quel peuple l’Avatar Kyoshi est-elle issue ?",
+    "answers": [
+      "La Nation du Feu",
+      "La Tribu de l’Eau",
+      "Les Nomades de l’Air",
+      "Le Royaume de la Terre"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle nation appartient l’Avatar Kuruk ?",
+    "answers": [
+      "La Tribu de l’Eau",
+      "La Nation du Feu",
+      "Le Royaume de la Terre",
+      "Les Nomades de l’Air"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle Avatar nomade de l’air précède Kuruk ?",
+    "answers": [
+      "Kyoshi",
+      "Yangchen",
+      "Roku",
+      "Szeto"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Après un Avatar de l’air, quel peuple accueille normalement l’Avatar suivant ?",
+    "answers": [
+      "Le Royaume de la Terre",
+      "La Nation du Feu",
+      "La Tribu de l’Eau",
+      "Les Nomades de l’Air"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel phénomène céleste renforce considérablement la maîtrise du feu ?",
+    "answers": [
+      "La lune de sang",
+      "Une éclipse lunaire",
+      "Une pluie de météores",
+      "La comète de Sozin"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel phénomène prive temporairement les maîtres du feu de leur pouvoir ?",
+    "answers": [
+      "Une éclipse solaire",
+      "Une éclipse lunaire",
+      "Une aurore polaire",
+      "Une pleine lune"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel astre renforce la maîtrise de l’eau ?",
+    "answers": [
+      "Le Soleil",
+      "La Lune",
+      "Vénus",
+      "La comète de Sozin"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quels animaux sont présentés comme les premiers maîtres du feu ?",
+    "answers": [
+      "Les bisons volants",
+      "Les blaireaux-taupes",
+      "Les dragons",
+      "Les serpents de mer"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quels animaux sont les maîtres originels de la terre ?",
+    "answers": [
+      "Les dragons",
+      "Les bisons volants",
+      "Les shirshus",
+      "Les blaireaux-taupes"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quels animaux ont inspiré la maîtrise de l’air ?",
+    "answers": [
+      "Les bisons volants",
+      "Les dragons",
+      "Les blaireaux-taupes",
+      "Les poissons koï"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel astre les premiers maîtres de l’eau ont-ils observé pour apprendre à déplacer l’eau ?",
+    "answers": [
+      "Le Soleil",
+      "La Lune",
+      "La comète de Sozin",
+      "L’étoile polaire"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle technique Iroh enseigne-t-il à Zuko pour contrer la foudre ?",
+    "answers": [
+      "La combustion",
+      "La maîtrise du sang",
+      "La redirection de la foudre",
+      "La maîtrise du métal"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "De quelle autre discipline Iroh s’inspire-t-il pour concevoir la redirection de la foudre ?",
+    "answers": [
+      "La maîtrise de la terre",
+      "La maîtrise de l’air",
+      "La maîtrise du métal",
+      "La maîtrise de l’eau"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sous quelle identité masquée Zuko libère-t-il Aang de la forteresse de Zhao ?",
+    "answers": [
+      "L’Esprit Bleu",
+      "Le Guerrier du Soleil",
+      "Le Dragon Blanc",
+      "Le Renard Rouge"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel personnage se fait passer pour la Dame Peinte afin d’aider un village ?",
+    "answers": [
+      "Toph",
+      "Katara",
       "Suki",
       "Azula"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle description correspond à Suki ?",
+    "text": "Sous quel surnom Toph combat-elle dans l’arène de maîtrise de la terre ?",
     "answers": [
-      "maîtresse de l’eau originaire de la Tribu de l’Eau du Sud",
-      "guerrier sans maîtrise élémentaire et frère de Katara",
-      "prince de la Nation du Feu cherchant d’abord à capturer l’Avatar",
-      "cheffe des Guerrières Kyoshi"
+      "La Vipère Rouge",
+      "Le Marteau de Gaoling",
+      "La Bandit Aveugle",
+      "La Reine de Pierre"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel personnage correspond à cette description : princesse de la Tribu de l’Eau du Nord devenue esprit de la Lune ?",
+    "text": "Qui engage l’homme à la combustion pour traquer Aang ?",
     "answers": [
-      "Yue",
-      "Momo",
-      "Suki",
-      "Roku"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Yue ?",
-    "answers": [
-      "bison volant et compagnon d’Aang",
-      "princesse de la Tribu de l’Eau du Nord devenue esprit de la Lune",
-      "lémurien ailé adopté par le groupe",
-      "cheffe des Guerrières Kyoshi"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel personnage correspond à cette description : Avatar de la Nation du Feu précédant Aang ?",
-    "answers": [
-      "Pakku",
-      "Zhao",
-      "Roku",
-      "Mai"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à Roku ?",
-    "answers": [
-      "amiral de la Nation du Feu ayant attaqué l’esprit de la Lune",
-      "amie d’Azula spécialisée dans les couteaux de lancer",
-      "acrobate capable de bloquer le chi",
-      "Avatar de la Nation du Feu précédant Aang"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quelle Avatar du Royaume de la Terre, prédécesseure de Roku, a donné son nom à une île et à un ordre de guerrières ?",
-    "answers": [
-      "Kyoshi",
-      "Kuruk",
-      "Yangchen",
-      "Korra"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Kyoshi ?",
-    "answers": [
-      "marchand dont la charrette est régulièrement détruite",
-      "Avatar de la Terre ayant fondé les Guerrières Kyoshi",
-      "dernier maître de l’air et Avatar de son époque",
-      "maîtresse de l’eau originaire de la Tribu de l’Eau du Sud"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel personnage correspond à cette description : roi excentrique d’Omashu et ami d’enfance d’Aang ?",
-    "answers": [
-      "Katara",
-      "Sokka",
-      "Bumi",
-      "Zuko"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à Bumi ?",
-    "answers": [
-      "princesse de la Nation du Feu maîtrisant les flammes bleues",
-      "Seigneur du Feu et père de Zuko et Azula",
-      "bison volant et compagnon d’Aang",
-      "roi excentrique d’Omashu et ami d’enfance d’Aang"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel personnage correspond à cette description : maître de l’eau de la Tribu du Nord ?",
-    "answers": [
-      "Pakku",
       "Azula",
       "Ozai",
-      "Appa"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Pakku ?",
-    "answers": [
-      "Avatar de la Terre ayant fondé les Guerrières Kyoshi",
-      "maître de l’eau de la Tribu du Nord",
-      "roi excentrique d’Omashu et ami d’enfance d’Aang",
-      "amiral de la Nation du Feu ayant attaqué l’esprit de la Lune"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel personnage correspond à cette description : amiral de la Nation du Feu ayant attaqué l’esprit de la Lune ?",
-    "answers": [
-      "Yue",
-      "Roku",
       "Zhao",
-      "Kyoshi"
+      "Zuko"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle description correspond à Zhao ?",
+    "text": "Comment s’appelle le shirshu utilisé par June ?",
     "answers": [
-      "moine de l’air qui a élevé Aang",
-      "chef manipulateur du Dai Li",
-      "marchand dont la charrette est régulièrement détruite",
-      "amiral de la Nation du Feu ayant attaqué l’esprit de la Lune"
+      "Nyla",
+      "Fang",
+      "Miyuki",
+      "Flopsie"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel personnage correspond à cette description : amie d’Azula spécialisée dans les couteaux de lancer ?",
+    "text": "Quel marchand récurrent voit souvent son commerce détruit ?",
     "answers": [
-      "Mai",
-      "Zhao",
-      "Ty Lee",
-      "Jet"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Mai ?",
-    "answers": [
-      "maîtresse de la terre aveugle ayant inventé la maîtrise du métal",
-      "amie d’Azula spécialisée dans les couteaux de lancer",
-      "oncle de Zuko surnommé le Dragon de l’Ouest",
-      "princesse de la Nation du Feu maîtrisant les flammes bleues"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel personnage correspond à cette description : acrobate capable de bloquer le chi ?",
-    "answers": [
-      "Long Feng",
+      "Le marchand de masques",
       "Le vendeur de choux",
-      "Ty Lee",
-      "Aang"
+      "Le vendeur de thé",
+      "Le forgeron de Gaoling"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Quelle description correspond à Ty Lee ?",
-    "answers": [
-      "princesse de la Tribu de l’Eau du Nord devenue esprit de la Lune",
-      "Avatar de la Nation du Feu précédant Aang",
-      "Avatar de la Terre ayant fondé les Guerrières Kyoshi",
-      "acrobate capable de bloquer le chi"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel personnage correspond à cette description : chef des Combattants de la Liberté ?",
-    "answers": [
-      "Jet",
-      "Zuko",
-      "Toph Beifong",
-      "Iroh"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Jet ?",
-    "answers": [
-      "acrobate capable de bloquer le chi",
-      "chef des Combattants de la Liberté",
-      "père de Katara et Sokka",
-      "moine de l’air qui a élevé Aang"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel personnage correspond à cette description : père de Katara et Sokka ?",
-    "answers": [
-      "Appa",
-      "Momo",
-      "Hakoda",
-      "Suki"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle description correspond à Hakoda ?",
-    "answers": [
-      "guerrier sans maîtrise élémentaire et frère de Katara",
-      "prince de la Nation du Feu cherchant d’abord à capturer l’Avatar",
-      "maîtresse de la terre aveugle ayant inventé la maîtrise du métal",
-      "père de Katara et Sokka"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel personnage correspond à cette description : moine de l’air qui a élevé Aang ?",
-    "answers": [
-      "Gyatso",
-      "Kyoshi",
-      "Bumi",
-      "Pakku"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle description correspond à Gyatso ?",
-    "answers": [
-      "lémurien ailé adopté par le groupe",
-      "moine de l’air qui a élevé Aang",
-      "cheffe des Guerrières Kyoshi",
-      "princesse de la Tribu de l’Eau du Nord devenue esprit de la Lune"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel personnage correspond à cette description : chef manipulateur du Dai Li ?",
+    "text": "Qui dirige les Guerrières Kyoshi rencontrées par Aang ?",
     "answers": [
       "Ty Lee",
-      "Jet",
-      "Long Feng",
+      "Mai",
+      "Suki",
+      "June"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Que devient Yue après avoir sacrifié sa vie ?",
+    "answers": [
+      "L’esprit de l’Océan",
+      "Une guerrière Kyoshi",
+      "La reine de Ba Sing Se",
+      "Le nouvel esprit de la Lune"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel groupe de jeunes résistants est dirigé par Jet ?",
+    "answers": [
+      "Les Combattants de la Liberté",
+      "Le Dai Li",
+      "Le Lotus Blanc",
+      "Les Guerrières Kyoshi"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quel groupe appartient Smellerbee ?",
+    "answers": [
+      "Le Dai Li",
+      "Les Combattants de la Liberté",
+      "La garde royale du Feu",
+      "Les pirates de la Baie"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Comment s’appelle la mère de Katara et Sokka ?",
+    "answers": [
+      "Kanna",
+      "Ursa",
+      "Kya",
+      "Yue"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s’appelle le père de Katara et Sokka ?",
+    "answers": [
+      "Bato",
+      "Pakku",
+      "Arnook",
       "Hakoda"
     ],
-    "correct": 2
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
-    "text": "Quelle description correspond à Long Feng ?",
+    "text": "Quel surnom Katara et Sokka donnent-ils à leur grand-mère Kanna ?",
     "answers": [
-      "amiral de la Nation du Feu ayant attaqué l’esprit de la Lune",
-      "amie d’Azula spécialisée dans les couteaux de lancer",
-      "acrobate capable de bloquer le chi",
-      "chef manipulateur du Dai Li"
+      "Gran Gran",
+      "Mémé Lune",
+      "Nana Kya",
+      "Grand-Maître"
     ],
-    "correct": 3
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel personnage correspond à cette description : marchand dont la charrette est régulièrement détruite ?",
+    "text": "Comment s’appelle la mère de Zuko et Azula ?",
     "answers": [
-      "Le vendeur de choux",
+      "Kya",
+      "Ursa",
+      "Ilah",
+      "Poppy"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment s’appelle le fils d’Iroh, mort pendant le siège de Ba Sing Se ?",
+    "answers": [
+      "Azulon",
+      "Sozin",
+      "Lu Ten",
+      "Chan"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel Seigneur du Feu est le père d’Ozai et d’Iroh ?",
+    "answers": [
+      "Sozin",
+      "Zoryu",
+      "Roku",
+      "Azulon"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel Seigneur du Feu lance la guerre de Cent Ans ?",
+    "answers": [
+      "Sozin",
+      "Azulon",
+      "Ozai",
+      "Zuko"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle relation unissait Roku et Sozin dans leur jeunesse ?",
+    "answers": [
+      "Ils étaient frères",
+      "Ils étaient amis",
+      "Ils étaient maître et élève",
+      "Ils ne s’étaient jamais rencontrés"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelles sont les deux amies d’enfance qui accompagnent Azula ?",
+    "answers": [
+      "Suki et June",
+      "Katara et Toph",
+      "Mai et Ty Lee",
+      "Yue et Jin"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle technique Ty Lee utilise-t-elle pour neutraliser temporairement un adversaire ?",
+    "answers": [
+      "La maîtrise du sang",
+      "La redirection de la foudre",
+      "La projection astrale",
+      "Le blocage du chi"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle arme Mai utilise-t-elle principalement ?",
+    "answers": [
+      "Des couteaux de lancer",
+      "Un éventail de guerre",
+      "Une masse de pierre",
+      "Un fouet d’eau"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel maître apprend l’art de l’épée à Sokka ?",
+    "answers": [
+      "Pakku",
+      "Piandao",
+      "Jeong Jeong",
+      "Bumi"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Avec quel matériau Sokka forge-t-il son épée ?",
+    "answers": [
+      "De l’acier de la Nation du Feu",
+      "Du cristal du désert",
+      "Un fragment de météorite",
+      "Du métal extrait d’un navire"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle couleur caractérise l’épée météoritique de Sokka ?",
+    "answers": [
+      "Blanche",
+      "Rouge",
+      "Bleue",
+      "Noire"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quelle organisation Piandao appartient-il ?",
+    "answers": [
+      "L’Ordre du Lotus Blanc",
+      "Le Dai Li",
+      "Les Guerrières Kyoshi",
+      "Les Combattants de la Liberté"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel maître de l’eau siège parmi les membres éminents du Lotus Blanc ?",
+    "answers": [
+      "Hama",
+      "Pakku",
+      "Yugoda",
+      "Huu"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel ancien amiral et maître du feu appartient au Lotus Blanc ?",
+    "answers": [
+      "Zhao",
+      "Ozai",
+      "Jeong Jeong",
+      "Azula"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel roi d’Omashu appartient au Lotus Blanc ?",
+    "answers": [
+      "Kuei",
+      "Bosco",
+      "Long Feng",
+      "Bumi"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui dirige les membres du Lotus Blanc lors de la libération de Ba Sing Se ?",
+    "answers": [
+      "Iroh",
+      "Piandao",
+      "Pakku",
+      "Bumi"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle ville le Lotus Blanc libère-t-il pendant la comète de Sozin ?",
+    "answers": [
+      "Omashu",
+      "Ba Sing Se",
+      "Yu Dao",
+      "La Capitale du Feu"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel réseau souterrain relie les environs d’Omashu ?",
+    "answers": [
+      "Les catacombes du Dai Li",
+      "Le tunnel du Serpent",
+      "La grotte des Deux Amoureux",
+      "La galerie du Lotus"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Selon la légende, quels personnages ont fondé Omashu ?",
+    "answers": [
+      "Tui et La",
+      "Roku et Ta Min",
+      "Sozin et Azulon",
+      "Oma et Shu"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel esprit Aang apaise-t-il après la destruction d’une forêt ?",
+    "answers": [
+      "Hei Bai",
+      "Koh",
+      "Wan Shi Tong",
+      "Tui"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel esprit vole le visage de ceux qui montrent leurs émotions ?",
+    "answers": [
+      "Hei Bai",
+      "Koh",
+      "La",
+      "Fang"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle forme animale prend Wan Shi Tong ?",
+    "answers": [
+      "Un dragon",
+      "Un panda géant",
+      "Un hibou",
+      "Un lion-tortue"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Où se trouve la bibliothèque de Wan Shi Tong lorsqu’elle est découverte par le groupe ?",
+    "answers": [
+      "Sous le lac Laogai",
+      "Sur l’île du Croissant",
+      "Dans la forêt de Foggy Swamp",
+      "Dans le désert de Si Wong"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle technique Toph utilise-t-elle pour « voir » grâce aux vibrations du sol ?",
+    "answers": [
+      "Le sens sismique",
+      "La projection astrale",
+      "La redirection du chi",
+      "La combustion"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel don Katara découvre-t-elle en utilisant l’eau sur une brûlure ?",
+    "answers": [
+      "La maîtrise du métal",
+      "La guérison",
+      "La clairvoyance",
+      "La création d’éclairs"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui guide Aang dans l’ouverture de ses chakras ?",
+    "answers": [
+      "Le moine Gyatso",
+      "Le lion-tortue",
+      "Le gourou Pathik",
+      "L’Avatar Roku"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel attachement empêche Aang d’ouvrir complètement son chakra final ?",
+    "answers": [
+      "Son attachement à Appa",
+      "Sa peur de Zuko",
+      "Son désir de retrouver Gyatso",
+      "Son attachement à Katara"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel groupe enlève Appa dans le désert ?",
+    "answers": [
+      "Des maîtres du sable",
+      "Le Dai Li",
+      "Les pirates",
+      "Les Guerrières Kyoshi"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel nom porte l’hôtesse souriante que le pouvoir de Ba Sing Se affecte à plusieurs visiteurs ?",
+    "answers": [
+      "Ursa",
+      "Joo Dee",
+      "Poppy",
+      "Miyuki"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Sous quel lac le Dai Li dissimule-t-il une base ?",
+    "answers": [
+      "Le lac Hu La",
+      "Le lac Miroir",
+      "Le lac Laogai",
+      "Le lac de Kyoshi"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment s’appelle le roi de la Terre durant la série ?",
+    "answers": [
+      "Bumi",
+      "Long Feng",
+      "Chin",
+      "Kuei"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel animal de compagnie inhabituel accompagne le roi Kuei ?",
+    "answers": [
+      "Bosco, un ours",
+      "Nyla, un shirshu",
+      "Flopsie, un gorille-chèvre",
+      "Fang, un dragon"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel événement sert de couverture à l’invasion de la Nation du Feu ?",
+    "answers": [
+      "La comète de Sozin",
+      "Le Jour du Soleil Noir",
+      "Le solstice d’hiver",
+      "La pleine lune"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel moyen de transport permet aux envahisseurs d’approcher la Nation du Feu sous l’eau ?",
+    "answers": [
+      "Des bisons cuirassés",
+      "Des bateaux de glace",
+      "Des sous-marins",
+      "Des tunnels de lave"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle énorme machine de la Nation du Feu menace les murailles de Ba Sing Se ?",
+    "answers": [
+      "Le train blindé",
+      "Le canon à esprit",
+      "Le cuirassé noir",
+      "La foreuse"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel passage dangereux le groupe emprunte-t-il pour atteindre Ba Sing Se ?",
+    "answers": [
+      "Le col du Serpent",
+      "La passe du Dragon",
+      "Le tunnel de Roku",
+      "Le pont de Kyoshi"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle prison Zuko et Sokka s’infiltrent-ils pour libérer des détenus ?",
+    "answers": [
+      "La Forteresse du Nord",
+      "Le Rocher Bouillant",
+      "Le Temple du Feu",
+      "La Citadelle du Dai Li"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel lien de parenté unit le directeur du Rocher Bouillant à Mai ?",
+    "answers": [
+      "C’est son père",
+      "C’est son frère",
+      "C’est son oncle",
+      "C’est son grand-père"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a tué Kya, la mère de Katara, lors d’un raid ?",
+    "answers": [
+      "Zhao",
+      "Long Feng",
+      "Combustion Man",
+      "Yon Rha"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Selon l’enseignement de Hama, quand la maîtrise du sang devient-elle possible pour un maître de l’eau ordinaire ?",
+    "answers": [
+      "Pendant la pleine lune",
+      "Pendant une éclipse solaire",
+      "Pendant la comète de Sozin",
+      "Au solstice d’hiver"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Pourquoi Aang refuse-t-il d’abord de tuer Ozai ?",
+    "answers": [
+      "Il ignore où se trouve Ozai",
+      "Ses convictions de Nomade de l’Air lui interdisent d’ôter une vie",
+      "Il a perdu sa maîtrise du feu",
+      "Roku lui ordonne d’épargner Ozai"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Que retire Aang à Ozai pour mettre fin au combat ?",
+    "answers": [
+      "Sa mémoire",
+      "Son titre royal uniquement",
+      "Sa maîtrise du feu",
+      "Sa capacité à parler"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel titre Zuko reçoit-il après la défaite d’Ozai ?",
+    "answers": [
+      "Roi de la Terre",
+      "Grand Lotus",
+      "Avatar du Feu",
+      "Seigneur du Feu"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel titre Ozai s’attribue-t-il avant l’attaque finale ?",
+    "answers": [
+      "Roi Phénix",
+      "Empereur Dragon",
+      "Seigneur Comète",
+      "Maître du Soleil"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui affronte Azula lors de l’Agni Kai final ?",
+    "answers": [
       "Aang",
-      "Katara",
+      "Zuko",
+      "Iroh",
       "Sokka"
     ],
-    "correct": 0
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quelle description correspond au vendeur de choux ?",
+    "text": "Qui immobilise finalement Azula après que Zuko a été blessé ?",
     "answers": [
-      "dernier maître de l’air et Avatar de son époque",
-      "marchand dont la charrette est régulièrement détruite",
-      "maîtresse de l’eau originaire de la Tribu de l’Eau du Sud",
-      "guerrier sans maîtrise élémentaire et frère de Katara"
+      "Toph",
+      "Suki",
+      "Katara",
+      "Mai"
     ],
-    "correct": 1
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle scène conclut la série animée originale ?",
+    "answers": [
+      "Zuko quitte le trône",
+      "Toph fonde une école",
+      "Appa retourne au Temple de l’Air",
+      "Aang et Katara s’embrassent"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]

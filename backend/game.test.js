@@ -377,7 +377,7 @@ test('solo completion does not count as a PvP win or grant a win bonus', () => {
       phase: 'question',
       players: [{
         id: 'solo-player', clientId: null, ws, connected: true,
-        score: 80, name: 'Solo', avatar: 'S', reconnectTimer: null,
+        score: 80, name: 'Solo', avatar: 'S', frame: 'neon', reconnectTimer: null,
       }],
       roundTimer: null,
     };
@@ -393,6 +393,7 @@ test('solo completion does not count as a PvP win or grant a win bonus', () => {
     assert.equal(result.xpBreakdown.winBonus, 0);
     assert.equal(result.xp, 120);
     assert.equal(result.coins, 20);
+    assert.equal(result.leaderboard[0].frame, 'neon');
 
     scheduled[0]();
   } finally {

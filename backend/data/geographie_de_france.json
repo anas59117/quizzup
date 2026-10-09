@@ -688,5 +688,346 @@
       "Le parc marin de la Côte Bleue"
     ],
     "correct": 1
+  },
+  {
+    "text": "Quelle est la plus vaste région de France métropolitaine ?",
+    "answers": [
+      "La Nouvelle-Aquitaine",
+      "L'Occitanie",
+      "L'Auvergne-Rhône-Alpes",
+      "Le Grand Est"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel fleuve traverse Toulouse ?",
+    "answers": [
+      "Le Tarn",
+      "La Garonne",
+      "L'Adour",
+      "L'Aude"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Sur quel sommet du Massif central la Loire prend-elle sa source ?",
+    "answers": [
+      "Le puy de Sancy",
+      "Le mont Aigoual",
+      "Le mont Gerbier-de-Jonc",
+      "Le puy Mary"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel département se trouvent les sources aménagées de la Seine ?",
+    "answers": [
+      "L'Yonne",
+      "L'Aube",
+      "La Haute-Marne",
+      "La Côte-d'Or"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel seuil constitue le point culminant du canal du Midi ?",
+    "answers": [
+      "Le seuil de Naurouze",
+      "Le seuil du Lauragais",
+      "Le col de Portet",
+      "Le pas de l'Escalette"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Sur quelle île française se trouve le piton de la Fournaise ?",
+    "answers": [
+      "La Martinique",
+      "La Réunion",
+      "La Guadeloupe",
+      "Mayotte"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel volcan actif domine la Basse-Terre en Guadeloupe ?",
+    "answers": [
+      "La montagne Pelée",
+      "Le piton des Neiges",
+      "La Soufrière",
+      "Le mont Orohena"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel sommet est le point culminant de La Réunion ?",
+    "answers": [
+      "Le piton de la Fournaise",
+      "Le Grand Bénare",
+      "Le Maïdo",
+      "Le piton des Neiges"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelle partie de la Martinique se situe la montagne Pelée ?",
+    "answers": [
+      "Dans le nord de l'île",
+      "Dans le sud de l'île",
+      "Sur la presqu'île de la Caravelle",
+      "Au centre de Fort-de-France"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel sommet est le point culminant de Tahiti ?",
+    "answers": [
+      "Le mont Temehani",
+      "Le mont Orohena",
+      "Le mont Rotui",
+      "Le mont Mou'a Puta"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel département se trouve la dune du Pilat ?",
+    "answers": [
+      "Les Landes",
+      "La Charente-Maritime",
+      "La Gironde",
+      "Les Pyrénées-Atlantiques"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quel département breton se situe principalement la Côte de Granit Rose ?",
+    "answers": [
+      "Le Finistère",
+      "Le Morbihan",
+      "L'Ille-et-Vilaine",
+      "Les Côtes-d'Armor"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle région administrative se trouve la Côte d'Opale ?",
+    "answers": [
+      "Les Hauts-de-France",
+      "La Normandie",
+      "La Bretagne",
+      "Les Pays de la Loire"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle petite mer intérieure bretonne est parsemée de nombreuses îles et îlots ?",
+    "answers": [
+      "La baie de Douarnenez",
+      "Le golfe du Morbihan",
+      "La rade de Brest",
+      "La baie de Saint-Brieuc"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel passage marin, réputé pour ses courants, sépare le cap de la Hague de l'île d'Aurigny ?",
+    "answers": [
+      "Le raz de Sein",
+      "Le passage du Fromveur",
+      "Le raz Blanchard",
+      "Le goulet de Brest"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel fleuve traverse Nantes avant de rejoindre l'Atlantique ?",
+    "answers": [
+      "La Vilaine",
+      "La Charente",
+      "La Sèvre Niortaise",
+      "La Loire"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel grand fleuve la Moselle rejoint-elle à Coblence, en Allemagne ?",
+    "answers": [
+      "Le Rhin",
+      "L'Elbe",
+      "Le Danube",
+      "La Meuse"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel cours d'eau est le principal affluent de la Loire par sa longueur ?",
+    "answers": [
+      "Le Cher",
+      "L'Allier",
+      "La Vienne",
+      "La Maine"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle rivière traverse Grenoble avant de rejoindre le Rhône ?",
+    "answers": [
+      "La Drôme",
+      "L'Arve",
+      "L'Isère",
+      "La Durance"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel fleuve côtier traverse le Marais poitevin avant d'atteindre la baie de l'Aiguillon ?",
+    "answers": [
+      "La Sèvre Nantaise",
+      "Le Lay",
+      "La Boutonne",
+      "La Sèvre Niortaise"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Entre quelles deux régions historiques se partage la baie du Mont-Saint-Michel ?",
+    "answers": [
+      "La Normandie et la Bretagne",
+      "La Bretagne et les Pays de la Loire",
+      "La Normandie et la Picardie",
+      "La Bretagne et l'Aquitaine"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quelle chaîne montagneuse se trouve le cirque de Gavarnie ?",
+    "answers": [
+      "Les Alpes",
+      "Les Pyrénées",
+      "Le Jura",
+      "Les Vosges"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Sur quelle île se trouve la réserve naturelle de Scandola ?",
+    "answers": [
+      "La Réunion",
+      "La Guadeloupe",
+      "La Corse",
+      "Porquerolles"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "À quel ensemble montagneux appartient la chaîne des Puys ?",
+    "answers": [
+      "Les Alpes",
+      "Le Jura",
+      "Les Pyrénées",
+      "Le Massif central"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel site corse classé par l'UNESCO réunit les calanques de Piana, le golfe de Girolata et Scandola ?",
+    "answers": [
+      "Le golfe de Porto",
+      "Le golfe d'Ajaccio",
+      "Le désert des Agriates",
+      "Les bouches de Bonifacio"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Dans quel département se trouve le lac d'Annecy ?",
+    "answers": [
+      "La Savoie",
+      "La Haute-Savoie",
+      "L'Isère",
+      "L'Ain"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Sur quelle rivière le barrage de Serre-Ponçon a-t-il créé un grand lac artificiel ?",
+    "answers": [
+      "Le Verdon",
+      "L'Isère",
+      "La Durance",
+      "Le Drac"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel cours d'eau alimente le lac de Sainte-Croix, à l'entrée de ses célèbres gorges ?",
+    "answers": [
+      "Le Var",
+      "La Tinée",
+      "La Siagne",
+      "Le Verdon"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel département se trouve le lac de Grand-Lieu ?",
+    "answers": [
+      "La Loire-Atlantique",
+      "La Vendée",
+      "Le Maine-et-Loire",
+      "Le Morbihan"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel grand lac-réservoir artificiel, créé pour réguler la Marne, s'étend près de Saint-Dizier ?",
+    "answers": [
+      "Le lac d'Orient",
+      "Le lac du Der-Chantecoq",
+      "Le lac de Pannecière",
+      "Le lac des Settons"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel vaste massif forestier de pins maritimes couvre une grande partie du sud-ouest de la France ?",
+    "answers": [
+      "La forêt d'Orléans",
+      "La forêt de Fontainebleau",
+      "La forêt des Landes de Gascogne",
+      "La forêt de Compiègne"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
   }
 ]

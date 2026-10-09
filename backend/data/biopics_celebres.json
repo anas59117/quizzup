@@ -1,502 +1,1102 @@
 [
   {
-    "text": "Quelle personnalité est représentée dans Gandhi ?",
+    "text": "Quelle figure de l'indépendance indienne est au centre du film Gandhi ?",
     "answers": [
       "Mahatma Gandhi",
-      "Malcolm X",
-      "Ray Charles",
-      "Édith Piaf"
+      "Jawaharlal Nehru",
+      "Muhammad Ali Jinnah",
+      "Subhas Chandra Bose"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel interprète joue le rôle principal dans Gandhi ?",
+    "text": "Quel acteur incarne Gandhi dans le film de 1982 ?",
     "answers": [
-      "Marion Cotillard",
+      "Dev Patel",
       "Ben Kingsley",
-      "Jesse Eisenberg",
-      "Daniel Day-Lewis"
+      "Irrfan Khan",
+      "Om Puri"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui a réalisé Gandhi ?",
     "answers": [
-      "Steven Spielberg",
-      "James Marsh",
+      "David Lean",
+      "James Ivory",
       "Richard Attenborough",
-      "Bryan Singer"
+      "Peter Weir"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année est sorti Gandhi ?",
+    "text": "Dans quel pays se déroule l'essentiel du combat politique raconté par Gandhi ?",
     "answers": [
-      "2018",
-      "2022",
-      "2023",
-      "1982"
+      "L'Afrique du Sud",
+      "Le Pakistan",
+      "Le Royaume-Uni",
+      "L'Inde"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel fait concerne Gandhi ?",
+    "text": "Quel Oscar Gandhi a-t-il remporté lors de la cérémonie de 1983 ?",
     "answers": [
-      "Le film remporte l’Oscar du meilleur film",
-      "Le film traite du projet Manhattan et de l’audition de sécurité",
-      "Le scénario s’appuie notamment sur l’autobiographie du militant",
-      "Jamie Foxx remporte l’Oscar du meilleur acteur"
+      "Meilleur film",
+      "Meilleur film étranger",
+      "Meilleure chanson originale",
+      "Meilleurs effets visuels"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quel réalisateur a signé le biopic Malcolm X (1992) ?",
+    "text": "Quel militant américain est raconté dans Malcolm X ?",
     "answers": [
-      "Oliver Stone",
-      "Spike Lee",
-      "John Singleton",
-      "Ava DuVernay"
+      "Martin Luther King Jr.",
+      "Malcolm X",
+      "Medgar Evers",
+      "James Baldwin"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel interprète joue le rôle principal dans Malcolm X ?",
+    "text": "Quel acteur tient le rôle-titre de Malcolm X ?",
     "answers": [
-      "Eddie Redmayne",
-      "Rami Malek",
+      "Forest Whitaker",
+      "Laurence Fishburne",
       "Denzel Washington",
-      "Austin Butler"
+      "Wesley Snipes"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
-    "text": "Qui a réalisé Malcolm X ?",
+    "text": "Quel cinéaste a réalisé Malcolm X en 1992 ?",
     "answers": [
-      "Baz Luhrmann",
-      "Christopher Nolan",
-      "Richard Attenborough",
+      "John Singleton",
+      "Barry Jenkins",
+      "Ava DuVernay",
       "Spike Lee"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année est sorti Malcolm X ?",
+    "text": "Sur quel livre le film Malcolm X s'appuie-t-il notamment ?",
     "answers": [
-      "1992",
-      "1982",
-      "2004",
-      "2007"
+      "L'autobiographie écrite avec Alex Haley",
+      "La biographie de Manning Marable",
+      "Un roman de James Baldwin",
+      "Les mémoires de Louis Farrakhan"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel fait concerne Malcolm X ?",
+    "text": "À quel Oscar Denzel Washington a-t-il été nommé pour Malcolm X ?",
     "answers": [
-      "Marion Cotillard remporte l’Oscar de la meilleure actrice",
-      "Le scénario s’appuie notamment sur l’autobiographie du militant",
-      "Aaron Sorkin signe le scénario",
-      "Le récit se concentre sur l’adoption du treizième amendement"
+      "Meilleur acteur dans un second rôle",
+      "Meilleur acteur",
+      "Meilleur réalisateur",
+      "Meilleur scénario adapté"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle personnalité est représentée dans Ray ?",
+    "text": "Quel musicien est au centre du film Ray ?",
     "answers": [
-      "Freddie Mercury",
-      "Elvis Presley",
+      "Stevie Wonder",
+      "Sam Cooke",
       "Ray Charles",
-      "J. Robert Oppenheimer"
+      "James Brown"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel interprète joue le rôle principal dans Ray ?",
+    "text": "Qui interprète Ray Charles dans Ray ?",
     "answers": [
-      "Cillian Murphy",
-      "Ben Kingsley",
-      "Denzel Washington",
+      "Cuba Gooding Jr.",
+      "Don Cheadle",
+      "Terrence Howard",
       "Jamie Foxx"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui a réalisé Ray ?",
     "answers": [
       "Taylor Hackford",
-      "Spike Lee",
-      "Olivier Dahan",
-      "David Fincher"
+      "Antoine Fuqua",
+      "Lee Daniels",
+      "Bill Condon"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année est sorti Ray ?",
+    "text": "Quel handicap de Ray Charles le film représente-t-il ?",
     "answers": [
-      "2010",
-      "2004",
-      "2012",
-      "2014"
+      "Sa surdité",
+      "Sa cécité",
+      "Son aphasie",
+      "Sa paralysie"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel fait concerne Ray ?",
+    "text": "Quelle récompense Jamie Foxx a-t-il gagnée pour Ray ?",
     "answers": [
-      "Le film adapte les mémoires de Jane Hawking",
-      "Le final reconstitue le concert Live Aid de Queen",
-      "Jamie Foxx remporte l’Oscar du meilleur acteur",
-      "Le récit adopte le point de vue du colonel Tom Parker"
+      "L'Oscar du meilleur second rôle",
+      "La Palme d'or",
+      "L'Oscar du meilleur acteur",
+      "Le César du meilleur acteur"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle personnalité est représentée dans La Môme ?",
+    "text": "Quelle chanteuse française est racontée dans La Môme ?",
     "answers": [
-      "Mahatma Gandhi",
-      "Malcolm X",
-      "Ray Charles",
+      "Dalida",
+      "Barbara",
+      "Juliette Gréco",
       "Édith Piaf"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel interprète joue le rôle principal dans La Môme ?",
+    "text": "Quelle actrice incarne Édith Piaf dans La Môme ?",
     "answers": [
       "Marion Cotillard",
-      "Jamie Foxx",
-      "Jesse Eisenberg",
-      "Daniel Day-Lewis"
+      "Audrey Tautou",
+      "Léa Seydoux",
+      "Cécile de France"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui a réalisé La Môme ?",
     "answers": [
-      "Steven Spielberg",
+      "Jean-Pierre Jeunet",
       "Olivier Dahan",
-      "James Marsh",
-      "Bryan Singer"
+      "Claude Lelouch",
+      "François Ozon"
     ],
-    "correct": 1
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année est sorti La Môme ?",
+    "text": "Sous quel titre international La Môme est-il largement connu ?",
     "answers": [
-      "2018",
-      "2022",
-      "2007",
-      "2023"
+      "Non, je ne regrette rien",
+      "Hymne à l'amour",
+      "La Vie en Rose",
+      "Milord"
     ],
-    "correct": 2
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel fait concerne La Môme ?",
+    "text": "Quel Oscar Marion Cotillard a-t-elle remporté pour La Môme ?",
     "answers": [
-      "Le film traite du projet Manhattan et de l’audition de sécurité",
-      "Le film remporte l’Oscar du meilleur film",
-      "Le scénario s’appuie notamment sur l’autobiographie du militant",
-      "Marion Cotillard remporte l’Oscar de la meilleure actrice"
+      "Meilleure actrice dans un second rôle",
+      "Meilleure chanson originale",
+      "Meilleur maquillage",
+      "Meilleure actrice"
     ],
-    "correct": 3
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle personnalité est représentée dans The Social Network ?",
+    "text": "Quel président américain est au centre de Lincoln ?",
     "answers": [
-      "Mark Zuckerberg",
-      "Édith Piaf",
       "Abraham Lincoln",
-      "Stephen Hawking"
+      "George Washington",
+      "Ulysses S. Grant",
+      "Theodore Roosevelt"
     ],
-    "correct": 0
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel interprète joue le rôle principal dans The Social Network ?",
+    "text": "Qui incarne Abraham Lincoln dans le film de 2012 ?",
     "answers": [
-      "Eddie Redmayne",
-      "Jesse Eisenberg",
-      "Rami Malek",
-      "Austin Butler"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Qui a réalisé The Social Network ?",
-    "answers": [
-      "Baz Luhrmann",
-      "Christopher Nolan",
-      "David Fincher",
-      "Richard Attenborough"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "En quelle année est sorti The Social Network ?",
-    "answers": [
-      "1982",
-      "1992",
-      "2004",
-      "2010"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel fait concerne The Social Network ?",
-    "answers": [
-      "Aaron Sorkin signe le scénario",
-      "Jamie Foxx remporte l’Oscar du meilleur acteur",
-      "Marion Cotillard remporte l’Oscar de la meilleure actrice",
-      "Le récit se concentre sur l’adoption du treizième amendement"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle personnalité est représentée dans Lincoln ?",
-    "answers": [
-      "Freddie Mercury",
-      "Abraham Lincoln",
-      "Elvis Presley",
-      "J. Robert Oppenheimer"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel interprète joue le rôle principal dans Lincoln ?",
-    "answers": [
-      "Cillian Murphy",
-      "Ben Kingsley",
+      "Gary Oldman",
       "Daniel Day-Lewis",
-      "Denzel Washington"
+      "Liam Neeson",
+      "Tommy Lee Jones"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui a réalisé Lincoln ?",
     "answers": [
-      "Spike Lee",
-      "Taylor Hackford",
-      "Olivier Dahan",
-      "Steven Spielberg"
+      "Ron Howard",
+      "Robert Zemeckis",
+      "Steven Spielberg",
+      "Clint Eastwood"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année est sorti Lincoln ?",
+    "text": "Quel amendement abolissant l'esclavage est au cœur de Lincoln ?",
     "answers": [
-      "2012",
-      "2007",
-      "2010",
-      "2014"
+      "Le dixième amendement",
+      "Le quinzième amendement",
+      "Le dix-neuvième amendement",
+      "Le treizième amendement"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel fait concerne Lincoln ?",
+    "text": "Quel record Daniel Day-Lewis a-t-il établi grâce à Lincoln ?",
     "answers": [
-      "Le film adapte les mémoires de Jane Hawking",
-      "Le récit se concentre sur l’adoption du treizième amendement",
-      "Le final reconstitue le concert Live Aid de Queen",
-      "Le récit adopte le point de vue du colonel Tom Parker"
+      "Trois Oscars du meilleur acteur",
+      "Quatre Oscars du meilleur acteur",
+      "Deux Oscars consécutifs",
+      "Cinq nominations sans victoire"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle personnalité est représentée dans Une merveilleuse histoire du temps ?",
+    "text": "Quel physicien est raconté dans Une merveilleuse histoire du temps ?",
     "answers": [
-      "Mahatma Gandhi",
-      "Malcolm X",
+      "Alan Turing",
       "Stephen Hawking",
-      "Ray Charles"
+      "Richard Feynman",
+      "Roger Penrose"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel interprète joue le rôle principal dans Une merveilleuse histoire du temps ?",
+    "text": "Quel acteur interprète Stephen Hawking ?",
     "answers": [
-      "Jamie Foxx",
-      "Marion Cotillard",
-      "Jesse Eisenberg",
-      "Eddie Redmayne"
+      "Benedict Cumberbatch",
+      "Andrew Garfield",
+      "Eddie Redmayne",
+      "Tom Hiddleston"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui a réalisé Une merveilleuse histoire du temps ?",
     "answers": [
-      "James Marsh",
-      "David Fincher",
-      "Steven Spielberg",
-      "Bryan Singer"
+      "Joe Wright",
+      "Tom Hooper",
+      "Stephen Daldry",
+      "James Marsh"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année est sorti Une merveilleuse histoire du temps ?",
+    "text": "De quels mémoires le film est-il adapté ?",
     "answers": [
-      "2018",
-      "2014",
-      "2022",
-      "2023"
+      "Ceux de Jane Hawking",
+      "Ceux de Stephen Hawking",
+      "Ceux de Roger Penrose",
+      "Ceux de Kip Thorne"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel fait concerne Une merveilleuse histoire du temps ?",
+    "text": "Quel Oscar Eddie Redmayne a-t-il gagné pour ce film ?",
     "answers": [
-      "Le film traite du projet Manhattan et de l’audition de sécurité",
-      "Le film remporte l’Oscar du meilleur film",
-      "Le film adapte les mémoires de Jane Hawking",
-      "Le scénario s’appuie notamment sur l’autobiographie du militant"
+      "Meilleur acteur dans un second rôle",
+      "Meilleur acteur",
+      "Meilleur scénario adapté",
+      "Meilleur film"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle personnalité est représentée dans Bohemian Rhapsody ?",
+    "text": "Quel chanteur est au centre de Bohemian Rhapsody ?",
     "answers": [
-      "Édith Piaf",
-      "Mark Zuckerberg",
-      "Abraham Lincoln",
-      "Freddie Mercury"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel interprète joue le rôle principal dans Bohemian Rhapsody ?",
-    "answers": [
-      "Rami Malek",
-      "Daniel Day-Lewis",
-      "Eddie Redmayne",
-      "Austin Butler"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a réalisé Bohemian Rhapsody ?",
-    "answers": [
-      "Baz Luhrmann",
-      "Bryan Singer",
-      "Christopher Nolan",
-      "Richard Attenborough"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "En quelle année est sorti Bohemian Rhapsody ?",
-    "answers": [
-      "1982",
-      "1992",
-      "2018",
-      "2004"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel fait concerne Bohemian Rhapsody ?",
-    "answers": [
-      "Jamie Foxx remporte l’Oscar du meilleur acteur",
-      "Marion Cotillard remporte l’Oscar de la meilleure actrice",
-      "Aaron Sorkin signe le scénario",
-      "Le final reconstitue le concert Live Aid de Queen"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quelle personnalité est représentée dans Elvis ?",
-    "answers": [
-      "Elvis Presley",
-      "Stephen Hawking",
+      "David Bowie",
+      "Elton John",
       "Freddie Mercury",
-      "J. Robert Oppenheimer"
+      "George Michael"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel interprète joue le rôle principal dans Elvis ?",
+    "text": "Qui incarne Freddie Mercury ?",
     "answers": [
-      "Cillian Murphy",
-      "Austin Butler",
-      "Ben Kingsley",
-      "Denzel Washington"
+      "Sacha Baron Cohen",
+      "Taron Egerton",
+      "Adam Driver",
+      "Rami Malek"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel réalisateur est crédité pour Bohemian Rhapsody ?",
+    "answers": [
+      "Bryan Singer",
+      "Dexter Fletcher",
+      "Sam Mendes",
+      "Matthew Vaughn"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel concert de 1985 constitue le grand final du film ?",
+    "answers": [
+      "Woodstock",
+      "Live Aid",
+      "The Concert for Bangladesh",
+      "Farm Aid"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Oscar Rami Malek a-t-il remporté ?",
+    "answers": [
+      "Meilleur second rôle",
+      "Meilleur scénario original",
+      "Meilleur acteur",
+      "Meilleure chanson"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle star du rock est racontée dans Elvis ?",
+    "answers": [
+      "Buddy Holly",
+      "Johnny Cash",
+      "Roy Orbison",
+      "Elvis Presley"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui incarne Elvis Presley dans le film de 2022 ?",
+    "answers": [
+      "Austin Butler",
+      "Jacob Elordi",
+      "Miles Teller",
+      "Aaron Taylor-Johnson"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui a réalisé Elvis ?",
     "answers": [
-      "Spike Lee",
-      "Taylor Hackford",
+      "Dexter Fletcher",
       "Baz Luhrmann",
-      "Olivier Dahan"
+      "Cameron Crowe",
+      "Todd Haynes"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année est sorti Elvis ?",
+    "text": "À travers quel imprésario le récit d'Elvis est-il en partie raconté ?",
     "answers": [
-      "2007",
-      "2010",
-      "2012",
-      "2022"
+      "Sam Phillips",
+      "Brian Epstein",
+      "Le colonel Tom Parker",
+      "Jerry Weintraub"
     ],
-    "correct": 3
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel fait concerne Elvis ?",
+    "text": "Quelle distinction Austin Butler a-t-il reçue aux Oscars pour Elvis ?",
     "answers": [
-      "Le récit adopte le point de vue du colonel Tom Parker",
-      "Le récit se concentre sur l’adoption du treizième amendement",
-      "Le film adapte les mémoires de Jane Hawking",
-      "Le final reconstitue le concert Live Aid de Queen"
+      "L'Oscar du meilleur acteur",
+      "Une nomination au meilleur second rôle",
+      "Aucune nomination",
+      "Une nomination au meilleur acteur"
     ],
-    "correct": 0
+    "correct": 3,
+    "difficulty": "expert"
   },
   {
-    "text": "Quelle personnalité est représentée dans Oppenheimer ?",
+    "text": "Quel scientifique dirige le projet Manhattan dans Oppenheimer ?",
     "answers": [
-      "Mahatma Gandhi",
       "J. Robert Oppenheimer",
-      "Malcolm X",
-      "Ray Charles"
+      "Enrico Fermi",
+      "Niels Bohr",
+      "Edward Teller"
     ],
-    "correct": 1
+    "correct": 0,
+    "difficulty": "facile"
   },
   {
-    "text": "Quel interprète joue le rôle principal dans Oppenheimer ?",
+    "text": "Qui interprète Oppenheimer ?",
     "answers": [
-      "Jamie Foxx",
-      "Marion Cotillard",
+      "Benedict Cumberbatch",
       "Cillian Murphy",
-      "Jesse Eisenberg"
+      "Michael Fassbender",
+      "Christian Bale"
     ],
-    "correct": 2
+    "correct": 1,
+    "difficulty": "moyen"
   },
   {
     "text": "Qui a réalisé Oppenheimer ?",
     "answers": [
-      "David Fincher",
+      "Denis Villeneuve",
+      "Sam Mendes",
+      "Christopher Nolan",
+      "David Fincher"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel livre a servi de base au film Oppenheimer ?",
+    "answers": [
+      "The Making of the Atomic Bomb",
+      "Surely You're Joking, Mr. Feynman!",
+      "Brighter than a Thousand Suns",
+      "American Prometheus"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien d'Oscars Oppenheimer a-t-il remportés en 2024 ?",
+    "answers": [
+      "Sept",
+      "Cinq",
+      "Huit",
+      "Onze"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel compositeur est au centre d'Amadeus ?",
+    "answers": [
+      "Ludwig van Beethoven",
+      "Wolfgang Amadeus Mozart",
+      "Johann Sebastian Bach",
+      "Franz Schubert"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui interprète Mozart dans Amadeus ?",
+    "answers": [
+      "F. Murray Abraham",
+      "Gary Oldman",
+      "Tom Hulce",
+      "Geoffrey Rush"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a réalisé Amadeus ?",
+    "answers": [
+      "Roman Polanski",
+      "Sydney Pollack",
+      "Alan Parker",
+      "Miloš Forman"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "De quelle œuvre Amadeus est-il adapté ?",
+    "answers": [
+      "Une pièce de Peter Shaffer",
+      "Un roman de Stefan Zweig",
+      "Les lettres de Mozart",
+      "Une biographie de Salieri"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage vaut à F. Murray Abraham l'Oscar du meilleur acteur ?",
+    "answers": [
+      "L'empereur Joseph II",
+      "Antonio Salieri",
+      "Leopold Mozart",
+      "Emanuel Schikaneder"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel chanteur de country est raconté dans Walk the Line ?",
+    "answers": [
+      "Willie Nelson",
+      "Hank Williams",
+      "Johnny Cash",
+      "Waylon Jennings"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui incarne Johnny Cash ?",
+    "answers": [
+      "Christian Bale",
+      "Sam Rockwell",
+      "Billy Crudup",
+      "Joaquin Phoenix"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a réalisé Walk the Line ?",
+    "answers": [
+      "James Mangold",
+      "Cameron Crowe",
+      "Scott Cooper",
+      "Jason Reitman"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle chanteuse, compagne de Cash, est jouée par Reese Witherspoon ?",
+    "answers": [
+      "Patsy Cline",
+      "June Carter",
+      "Loretta Lynn",
+      "Tammy Wynette"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Oscar Reese Witherspoon a-t-elle remporté pour ce film ?",
+    "answers": [
+      "Meilleure actrice dans un second rôle",
+      "Meilleure chanson",
+      "Meilleure actrice",
+      "Meilleur scénario"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel boxeur est au centre du film Ali ?",
+    "answers": [
+      "Joe Frazier",
+      "George Foreman",
+      "Sonny Liston",
+      "Muhammad Ali"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui interprète Muhammad Ali ?",
+    "answers": [
+      "Will Smith",
+      "Jamie Foxx",
+      "Michael B. Jordan",
+      "Idris Elba"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a réalisé Ali ?",
+    "answers": [
+      "Antoine Fuqua",
+      "Michael Mann",
+      "Spike Lee",
+      "Norman Jewison"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel combat de 1974 clôt la période principale racontée par Ali ?",
+    "answers": [
+      "Le Thrilla in Manila",
+      "Le Fight of the Century",
+      "Le Rumble in the Jungle",
+      "Le Phantom Punch"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle reconnaissance Will Smith a-t-il reçue aux Oscars pour Ali ?",
+    "answers": [
+      "L'Oscar du meilleur acteur",
+      "Une nomination au second rôle",
+      "Aucune nomination",
+      "Une nomination au meilleur acteur"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle patineuse est au centre de Moi, Tonya ?",
+    "answers": [
+      "Tonya Harding",
+      "Nancy Kerrigan",
+      "Dorothy Hamill",
+      "Michelle Kwan"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui incarne Tonya Harding ?",
+    "answers": [
+      "Emma Stone",
+      "Margot Robbie",
+      "Jennifer Lawrence",
+      "Saoirse Ronan"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a réalisé Moi, Tonya ?",
+    "answers": [
+      "David O. Russell",
+      "Adam McKay",
+      "Craig Gillespie",
+      "Jay Roach"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel procédé narratif distingue le film ?",
+    "answers": [
+      "Une narration entièrement muette",
+      "Un récit en temps réel",
+      "Des images uniquement documentaires",
+      "Des entretiens contradictoires en faux documentaire"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui a gagné l'Oscar du second rôle féminin pour Moi, Tonya ?",
+    "answers": [
+      "Allison Janney",
+      "Margot Robbie",
+      "Julianne Nicholson",
+      "Laurie Metcalf"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel musicien britannique est raconté dans Rocketman ?",
+    "answers": [
+      "Freddie Mercury",
+      "Elton John",
+      "David Bowie",
+      "George Michael"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui incarne Elton John ?",
+    "answers": [
+      "Rami Malek",
+      "Jamie Bell",
+      "Taron Egerton",
+      "Richard Madden"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a réalisé Rocketman ?",
+    "answers": [
+      "Matthew Vaughn",
+      "Bryan Singer",
+      "Sam Taylor-Johnson",
+      "Dexter Fletcher"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel choix de mise en scène caractérise Rocketman ?",
+    "answers": [
+      "Des numéros musicaux fantastiques",
+      "Un style de documentaire sans chansons",
+      "Une animation intégrale",
+      "Un récit sans dialogue"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle chanson créée pour Rocketman a gagné l'Oscar ?",
+    "answers": [
+      "Your Song",
+      "(I'm Gonna) Love Me Again",
+      "Tiny Dancer",
+      "Rocket Man"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle princesse britannique est au centre de Spencer ?",
+    "answers": [
+      "Margaret",
+      "Anne",
+      "Diana",
+      "Alexandra"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui incarne Diana dans Spencer ?",
+    "answers": [
+      "Naomi Watts",
+      "Elizabeth Debicki",
+      "Emma Corrin",
+      "Kristen Stewart"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a réalisé Spencer ?",
+    "answers": [
+      "Pablo Larraín",
+      "Stephen Frears",
+      "Peter Morgan",
+      "Joe Wright"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Pendant quelle période resserrée Spencer se déroule-t-il ?",
+    "answers": [
+      "La semaine du mariage royal",
+      "Un Noël à Sandringham",
+      "Le couronnement d'Élisabeth II",
+      "Un été à Balmoral"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle reconnaissance Kristen Stewart a-t-elle reçue aux Oscars ?",
+    "answers": [
+      "L'Oscar de la meilleure actrice",
+      "Une nomination au second rôle",
+      "Une nomination au meilleur rôle féminin",
+      "Aucune nomination"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle Première dame américaine est au centre de Jackie ?",
+    "answers": [
+      "Eleanor Roosevelt",
+      "Lady Bird Johnson",
+      "Nancy Reagan",
+      "Jacqueline Kennedy"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui interprète Jacqueline Kennedy ?",
+    "answers": [
+      "Natalie Portman",
+      "Jessica Chastain",
+      "Amy Adams",
+      "Rachel Weisz"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a réalisé Jackie ?",
+    "answers": [
       "Steven Spielberg",
-      "James Marsh",
-      "Christopher Nolan"
+      "Pablo Larraín",
+      "Oliver Stone",
+      "Clint Eastwood"
     ],
-    "correct": 3
+    "correct": 1,
+    "difficulty": "difficile"
   },
   {
-    "text": "En quelle année est sorti Oppenheimer ?",
+    "text": "Quel événement structure le récit de Jackie ?",
     "answers": [
-      "2023",
-      "2014",
-      "2018",
-      "2022"
+      "Le scandale du Watergate",
+      "La crise des missiles de Cuba",
+      "L'assassinat de John F. Kennedy",
+      "La guerre du Vietnam"
     ],
-    "correct": 0
+    "correct": 2,
+    "difficulty": "difficile"
   },
   {
-    "text": "Quel fait concerne Oppenheimer ?",
+    "text": "Quel compositeur a été nommé aux Oscars pour la musique de Jackie ?",
     "answers": [
-      "Le récit adopte le point de vue du colonel Tom Parker",
-      "Le film traite du projet Manhattan et de l’audition de sécurité",
-      "Le film remporte l’Oscar du meilleur film",
-      "Le scénario s’appuie notamment sur l’autobiographie du militant"
+      "Alexandre Desplat",
+      "Jonny Greenwood",
+      "Nicholas Britell",
+      "Mica Levi"
     ],
-    "correct": 1
+    "correct": 3,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel mathématicien est au centre d'Imitation Game ?",
+    "answers": [
+      "Alan Turing",
+      "John von Neumann",
+      "Claude Shannon",
+      "Kurt Gödel"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui incarne Alan Turing ?",
+    "answers": [
+      "Eddie Redmayne",
+      "Benedict Cumberbatch",
+      "Matthew Goode",
+      "Andrew Scott"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a réalisé Imitation Game ?",
+    "answers": [
+      "Joe Wright",
+      "Tom Hooper",
+      "Morten Tyldum",
+      "James Marsh"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel code allemand l'équipe de Turing tente-t-elle de décrypter ?",
+    "answers": [
+      "Lorenz uniquement",
+      "Purple",
+      "Navajo",
+      "Enigma"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Oscar Imitation Game a-t-il remporté ?",
+    "answers": [
+      "Meilleur scénario adapté",
+      "Meilleur film",
+      "Meilleur acteur",
+      "Meilleure réalisation"
+    ],
+    "correct": 0,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quelle peintre mexicaine est au centre de Frida ?",
+    "answers": [
+      "Remedios Varo",
+      "Frida Kahlo",
+      "Leonora Carrington",
+      "María Izquierdo"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui incarne Frida Kahlo ?",
+    "answers": [
+      "Penélope Cruz",
+      "Sofía Vergara",
+      "Salma Hayek",
+      "Rosario Dawson"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a réalisé Frida ?",
+    "answers": [
+      "Mira Nair",
+      "Patricia Riggen",
+      "Sally Potter",
+      "Julie Taymor"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel peintre, époux de Frida Kahlo, est joué par Alfred Molina ?",
+    "answers": [
+      "Diego Rivera",
+      "David Alfaro Siqueiros",
+      "José Clemente Orozco",
+      "Rufino Tamayo"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quelles catégories Frida a-t-il gagné ses deux Oscars ?",
+    "answers": [
+      "Actrice et costumes",
+      "Musique et maquillage",
+      "Décors et photographie",
+      "Son et montage"
+    ],
+    "correct": 1,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel boxeur est au centre de Raging Bull ?",
+    "answers": [
+      "Rocky Graziano",
+      "Sugar Ray Robinson",
+      "Jake LaMotta",
+      "Jack Dempsey"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui incarne Jake LaMotta ?",
+    "answers": [
+      "Joe Pesci",
+      "Harvey Keitel",
+      "Al Pacino",
+      "Robert De Niro"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a réalisé Raging Bull ?",
+    "answers": [
+      "Martin Scorsese",
+      "Francis Ford Coppola",
+      "Brian De Palma",
+      "Michael Cimino"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "De quel type d'ouvrage Raging Bull est-il adapté ?",
+    "answers": [
+      "Un roman de Joyce Carol Oates",
+      "Les mémoires de Jake LaMotta",
+      "Une pièce de théâtre",
+      "Une enquête journalistique"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel autre Oscar que celui de Robert De Niro le film a-t-il remporté ?",
+    "answers": [
+      "Meilleur film",
+      "Meilleure photographie",
+      "Meilleur montage",
+      "Meilleur scénario"
+    ],
+    "correct": 2,
+    "difficulty": "expert"
+  },
+  {
+    "text": "Quel écrivain est au centre du film Truman Capote ?",
+    "answers": [
+      "Gore Vidal",
+      "Tennessee Williams",
+      "Norman Mailer",
+      "Truman Capote"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui incarne Truman Capote ?",
+    "answers": [
+      "Philip Seymour Hoffman",
+      "Toby Jones",
+      "Paul Giamatti",
+      "Kevin Spacey"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a réalisé Truman Capote ?",
+    "answers": [
+      "Richard Linklater",
+      "Bennett Miller",
+      "Stephen Daldry",
+      "Todd Field"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel livre Capote écrit-il durant le film ?",
+    "answers": [
+      "Petit Déjeuner chez Tiffany",
+      "La Traversée de l'été",
+      "De sang-froid",
+      "Musique pour caméléons"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Oscar Philip Seymour Hoffman a-t-il remporté ?",
+    "answers": [
+      "Meilleur second rôle",
+      "Meilleur scénario adapté",
+      "Meilleur film",
+      "Meilleur acteur"
+    ],
+    "correct": 3,
+    "difficulty": "expert"
   }
 ]
