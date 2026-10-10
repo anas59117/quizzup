@@ -816,6 +816,12 @@ export default function App() {
   sendSocketRef.current = sendSocket;
   useEffect(() => {
     adGameRef.current = resultGameId || null;
+    if (resultGameId && result && result.winner) {
+      const won = result.winner.id === myId;
+      const lpChange = won ? (league.streak >= 2 ? 35 : 25) : -20;
+      league.addResult(won);
+      notify(won ? `+${lpChange} LP! 🔥` : `${lpChange} LP`, won ? 'success' : 'error');
+    }
     if (!resultGameId || !adsEnabled()) return;
     requestRewardOffer({
       onOffer: (showAdFn) => { if (adGameRef.current === resultGameId) setAdOffer(() => showAdFn); },
@@ -826,7 +832,7 @@ export default function App() {
       onDismissed: () => setAdOffer(null),
       ...adHooks,
     });
-  }, [resultGameId, adHooks]);
+  }, [resultGameId, adHooks, result, myId, league, notify]);
 
   // Record league result once when a finished screen appears.
   const leagueRecordedRef = useRef(null);

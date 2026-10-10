@@ -207,7 +207,7 @@ async function startGame(rawPlayers, categoryKey, { withBot = false } = {}) {
       id: gameId,
       players: [
         ...rawPlayers.map((p) => ({
-          ws: p.ws, id: p.id, clientId: p.clientId,
+          ws: p.ws, id: p.id, 
           name: p.name, avatar: p.avatar || '\u{1F43A}',
           frame: stats.getFrame(p.clientId),
           score: 0, connected: true, reconnectTimer: null,
@@ -596,7 +596,6 @@ function requestRematch(clientId) {
   const players = humans.map((p) => ({
     ws: p.ws,
     id: p.id,
-    clientId: p.clientId,
     name: p.name,
     avatar: p.avatar,
   }));
@@ -666,7 +665,7 @@ function endGame(game, reason) {
       if (topicProgressListener && p.clientId && game.categoryKey) {
         const afterXp = topicStats.getTopic(p.clientId, game.categoryKey).xp;
         if (afterXp > beforeXp) {
-          topicProgressListener({ clientId: p.clientId, categoryKey: game.categoryKey, beforeXp, afterXp });
+          topicProgressListener({  categoryKey: game.categoryKey, beforeXp, afterXp });
         }
       }
     } catch (err) {
