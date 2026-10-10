@@ -217,13 +217,14 @@ export default function App() {
   const adSystem = useAdSystem();
   const seasonPass = useSeasonPass();
 
+  const statsHook = useStats();
+
   const handleAdReward = useCallback((coins, xp) => {
     const newCoins = (statsHook.stats.coins || 0) + coins;
     statsHook.handleStatsMessage({ stats: { coins: newCoins } });
     seasonPass.addPassXP(xp);
     notify(`+${coins} coins +${xp} XP!`, 'success');
   }, [statsHook.stats.coins, statsHook.handleStatsMessage, seasonPass.addPassXP, notify]);
-  const statsHook = useStats();
   const feed = useFeed(wsRef);
   const players = usePlayers(wsRef);
   const clientId = firebaseUser?.uid || null;
