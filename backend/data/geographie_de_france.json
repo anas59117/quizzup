@@ -390,7 +390,7 @@
     "correct": 0
   },
   {
-    "text": "Quel petit fleuve côtier normand, qui se jette dans la Manche à Veules-les-Roses, est considéré comme le plus court de France ?",
+    "text": "Quel fleuve côtier se jette dans la Manche à Veules-les-Roses et passe pour le plus court de France ?",
     "answers": [
       "L’Aa",
       "La Veules",
@@ -472,22 +472,22 @@
   {
     "text": "Quel département, formé de la partie du Haut-Rhin restée française après 1871, porte le numéro 90 ?",
     "answers": [
-      "Le Territoire de Belfort",
+      "Les Yvelines",
       "L’Essonne",
       "Le Val-d’Oise",
-      "Les Yvelines"
+      "Le Territoire de Belfort"
     ],
-    "correct": 0
+    "correct": 3
   },
   {
     "text": "Lequel de ces départements de la région Provence-Alpes-Côte d’Azur ne possède aucune façade maritime ?",
     "answers": [
       "Le Var",
-      "Le Vaucluse",
+      "Les Bouches-du-Rhône",
       "Les Alpes-Maritimes",
-      "Les Bouches-du-Rhône"
+      "Le Vaucluse"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Quel important affluent se jette dans la Seine au niveau de la commune de Conflans-Sainte-Honorine ?",
@@ -503,11 +503,11 @@
     "text": "Dans le département du Lot, quelle célèbre cavité naturelle plonge à plus de 100 mètres de profondeur ?",
     "answers": [
       "L’aven Armand",
-      "Le gouffre de Padirac",
+      "L’abîme de Bramabiau",
       "La grotte de Lascaux",
-      "L’abîme de Bramabiau"
+      "Le gouffre de Padirac"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Quel est le point culminant du massif des Vosges ?",
@@ -522,12 +522,12 @@
   {
     "text": "Dans quel département français le fleuve de la Meuse prend-il sa source sur le plateau de Langres ?",
     "answers": [
-      "La Haute-Marne",
-      "Les Vosges",
       "La Meurthe-et-Moselle",
+      "Les Vosges",
+      "La Haute-Marne",
       "Le Doubs"
     ],
-    "correct": 0
+    "correct": 2
   },
   {
     "text": "Quel est le statut administratif actuel de l’île de Clipperton, atoll du Pacifique ?",
@@ -543,14 +543,14 @@
     "text": "Quelle ville est aujourd’hui le chef-lieu (la préfecture) du département de Mayotte ?",
     "answers": [
       "Dzaoudzi",
-      "Mamoudzou",
+      "Bandrele",
       "Sada",
-      "Bandrele"
+      "Mamoudzou"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
-    "text": "Dans quel espace maritime se situent majoritairement les îles Éparses, rattachées aux Terres australes et antarctiques françaises ?",
+    "text": "Dans quel océan se trouvent la plupart des îles Éparses françaises ?",
     "answers": [
       "La mer des Caraïbes",
       "L’océan Pacifique Sud",
@@ -630,7 +630,7 @@
     "correct": 2
   },
   {
-    "text": "Dans quelle ville de Seine-et-Marne la Seine rencontre-t-elle un affluent plus abondant qu’elle, qui lui cède pourtant son nom ?",
+    "text": "Dans quelle ville de Seine-et-Marne la Seine rejoint-elle l'Yonne ?",
     "answers": [
       "Conflans-Sainte-Honorine",
       "Melun",
