@@ -1,0 +1,349 @@
+/* ═══════════════════════════════════════════
+   QuizzUp Design System Override v1.0
+   Loaded AFTER App.css — wins on specificity
+   ═══════════════════════════════════════════ */
+
+/* ─── Base ─── */
+body {
+  background: var(--bg-primary) !important;
+  font-family: var(--font-body) !important;
+}
+
+.app {
+  background: var(--bg-primary) !important;
+}
+
+/* ─── Typography ─── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-body);
+  letter-spacing: -0.02em;
+}
+
+/* ─── HUD (Game Header) ─── */
+.game-hud,
+.timer-bar,
+.question-header {
+  background: var(--bg-elevated) !important;
+  border-bottom: 1px solid var(--border-subtle);
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+.timer {
+  font-family: var(--font-mono) !important;
+  font-weight: 700 !important;
+  font-size: 36px !important;
+  color: var(--text-primary);
+}
+
+.timer.urgent {
+  color: var(--accent) !important;
+  animation: timerPulse 0.6s ease infinite alternate;
+}
+
+@keyframes timerPulse {
+  from { opacity: 1; }
+  to { opacity: 0.6; }
+}
+
+/* ─── Question Panel ─── */
+.question-panel {
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-lg) !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+.question {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  color: var(--text-primary) !important;
+}
+
+/* ─── Answer Buttons ─── */
+.answer-btn,
+.answers button,
+.answers .answer {
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-md) !important;
+  color: var(--text-primary) !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  padding: 16px 20px !important;
+  transition: all var(--transition-base) !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.answer-btn:hover,
+.answers button:hover {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-focus) !important;
+  transform: translateY(-1px);
+}
+
+.answer-btn:active,
+.answers button:active {
+  transform: translateY(0);
+}
+
+.answer-btn.correct,
+.answers .correct {
+  background: var(--success-dim) !important;
+  border-color: var(--success) !important;
+  color: var(--success) !important;
+}
+
+.answer-btn.wrong,
+.answers .wrong {
+  background: var(--error-dim) !important;
+  border-color: var(--error) !important;
+  color: var(--error) !important;
+}
+
+/* ─── Score / Combo ─── */
+.score-display,
+.combo-badge {
+  font-family: var(--font-mono) !important;
+  font-weight: 700 !important;
+}
+
+/* ─── Home Buttons ─── */
+.quick-match,
+.tournament-btn,
+.friends-btn,
+.league-btn,
+.seasonpass-btn,
+.onb-btn,
+button[class*="btn"],
+.create-room-btn,
+.join-room-btn {
+  border-radius: var(--radius-md) !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  padding: 14px 20px !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transition: all var(--transition-base) !important;
+  backdrop-filter: none !important;
+}
+
+.quick-match {
+  background: var(--accent) !important;
+  color: var(--text-inverse) !important;
+}
+
+.quick-match:hover:not(:disabled) {
+  background: var(--accent-hover) !important;
+  transform: translateY(-1px);
+}
+
+.tournament-btn {
+  background: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-subtle) !important;
+}
+
+.tournament-btn:hover:not(:disabled) {
+  border-color: var(--border-focus) !important;
+  background: var(--bg-surface) !important;
+}
+
+.friends-btn {
+  background: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-subtle) !important;
+}
+
+.league-btn {
+  background: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-subtle) !important;
+}
+
+.seasonpass-btn {
+  background: linear-gradient(135deg, #c9a227, #d4af37) !important;
+  color: var(--text-inverse) !important;
+}
+
+.seasonpass-btn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.4 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+/* ─── Cards ─── */
+.category-card,
+.theme-card,
+.friend-row,
+.league-card,
+.profile-card,
+.league-tier-row,
+.ad-panel,
+.notification-toast {
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.category-card:hover,
+.theme-card:hover {
+  border-color: var(--border-focus) !important;
+  transform: translateY(-2px);
+}
+
+/* ─── Nav Bar ─── */
+.nav-bar,
+.nav-bar-modern {
+  background: var(--bg-elevated) !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.nav-bar button,
+.nav-bar-modern button {
+  background: none !important;
+  border: none !important;
+  color: var(--text-secondary) !important;
+  font-weight: 500 !important;
+  font-size: 11px !important;
+}
+
+.nav-bar button.active,
+.nav-bar-modern button.active {
+  color: var(--accent) !important;
+}
+
+/* ─── Modals / Overlays ─── */
+.modal-overlay,
+.overlay,
+.onboarding-overlay,
+.streak-overlay {
+  background: var(--bg-overlay) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.modal,
+.modal-content,
+.onboarding-step,
+.streak-card {
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-md) !important;
+  backdrop-filter: none !important;
+}
+
+/* ─── Inputs ─── */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-md) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-body) !important;
+  padding: 12px 16px !important;
+  font-size: 15px !important;
+}
+
+input:focus,
+textarea:focus {
+  outline: none !important;
+  border-color: var(--border-accent) !important;
+}
+
+/* ─── Progress Bars ─── */
+.progress-bar,
+.league-progress-bar,
+.ad-bar,
+.sp-progress-bar {
+  background: rgba(255,255,255,0.06) !important;
+  border-radius: var(--radius-full) !important;
+  height: 8px !important;
+}
+
+.progress-fill,
+.league-progress-fill,
+.ad-fill,
+.sp-progress-fill {
+  background: var(--accent) !important;
+  border-radius: var(--radius-full) !important;
+  transition: width var(--transition-slow);
+}
+
+/* ─── Profile League Card ─── */
+.profile-league-card {
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-lg) !important;
+}
+
+.profile-league-card:hover {
+  border-color: var(--border-focus) !important;
+}
+
+/* ─── Season Pass ─── */
+.sp-free-reward,
+.sp-premium-reward,
+.sp-level {
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-md) !important;
+}
+
+.sp-tag.free {
+  background: var(--success) !important;
+  color: var(--text-inverse) !important;
+}
+
+.sp-tag.premium {
+  background: linear-gradient(135deg, #c9a227, #d4af37) !important;
+  color: var(--text-inverse) !important;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* ─── Kill old slop effects ─── */
+[class*="glass"],
+[class*="glow"],
+[class*="shine"],
+[class*="neon"] {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  backdrop-filter: none !important;
+  background-image: none !important;
+}
+
+/* Remove all gradient backgrounds from buttons (except season pass) */
+button:not(.seasonpass-btn):not(.sp-buy):not(.sp-claim.premium) {
+  background-image: none !important;
+}
