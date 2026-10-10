@@ -28,7 +28,7 @@ const FEATURED_TOPICS = FEATURED_TOPIC_KEYS
   })
   .filter(Boolean);
 
-export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, onStartTournament, onOpenFriends, onOpenLeague, pending }) {
+export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, onStartTournament, onOpenFriends, onOpenLeague, onOpenSeasonPass, pending }) {
   const { t } = useI18n();
   return (
     <div className="container wide">
@@ -60,6 +60,9 @@ export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickM
         </button>
         <button className="league-btn" onClick={() => onOpenLeague && onOpenLeague()} disabled={pending}>
           <span>🏆</span> {t('league')}
+        </button>
+        <button className="seasonpass-btn" onClick={() => onOpenSeasonPass && onOpenSeasonPass()} disabled={pending}>
+          <span>🎯</span> {t('seasonPass')}
         </button>
       </div>
       <div className="section-title">{t('popularTopics')}</div>
