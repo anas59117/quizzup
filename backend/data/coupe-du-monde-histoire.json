@@ -354,20 +354,20 @@
     "answers": [
       "Allemagne",
       "Italie",
-      "Brésil",
-      "Argentine"
+      "Argentine",
+      "Brésil"
     ],
-    "correct": 2
+    "correct": 3
   },
   {
     "text": "Combien de Coupes du Monde le Brésil a-t-il remportées au total ?",
     "answers": [
       "3",
       "4",
-      "5",
-      "6"
+      "6",
+      "5"
     ],
-    "correct": 2
+    "correct": 3
   },
   {
     "text": "Quels sont les deux pays à avoir remporté exactement quatre Coupes du monde ?",
@@ -420,7 +420,7 @@
     "correct": 2
   },
   {
-    "text": "Quel attaquant français détient le record du plus grand nombre de buts inscrits lors d'une seule édition de la Coupe du Monde (13 buts en 1958) ?",
+    "text": "Quel Français détient le record de buts marqués en une seule Coupe du monde, avec 13 buts en 1958 ?",
     "answers": [
       "Michel Platini",
       "Just Fontaine",
@@ -430,7 +430,7 @@
     "correct": 1
   },
   {
-    "text": "Lors de quel match Diego Maradona marque-t-il le but de la « main de Dieu » puis le « but du siècle », face à l'Angleterre ?",
+    "text": "À quel stade du Mondial 1986 Maradona marque-t-il la « main de Dieu » contre l'Angleterre ?",
     "answers": [
       "Finale 1986",
       "Quart de finale 1986",
@@ -472,42 +472,42 @@
   {
     "text": "Comment se conclut la finale de la Coupe du Monde 2022 entre l'Argentine et la France (3-3 après prolongations) ?",
     "answers": [
-      "But en or",
       "Séance de tirs au but",
+      "But en or",
       "Rejouée le lendemain",
       "Victoire au nombre de corners"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "Quel joueur remporte le Ballon d'Or de la Coupe du Monde 2022 (meilleur joueur du tournoi) ?",
     "answers": [
-      "Kylian Mbappé",
       "Lionel Messi",
+      "Kylian Mbappé",
       "Luka Modrić",
       "Julián Álvarez"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "En quelle année le Qatar organise-t-il la première Coupe du Monde jouée en hiver (novembre-décembre) ?",
     "answers": [
-      "2018",
       "2022",
+      "2018",
       "2026",
       "2014"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "Quels trois pays coorganisent la Coupe du Monde 2026 ?",
     "answers": [
-      "France, Espagne, Portugal",
       "États-Unis, Canada, Mexique",
+      "France, Espagne, Portugal",
       "Brésil, Argentine, Uruguay",
       "Chine, Japon, Corée du Sud"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "Combien d'équipes participeront à la phase finale de la Coupe du Monde 2026, contre 32 auparavant ?",
@@ -530,57 +530,57 @@
     "correct": 0
   },
   {
-    "text": "En 1994, comment se termine la finale entre le Brésil et l'Italie, une première dans l'histoire des finales de Coupe du Monde ?",
+    "text": "Comment s'achève la finale Brésil-Italie de 1994, la première finale décidée aux tirs au but ?",
     "answers": [
-      "Un match nul 1-1",
       "Un score de 0-0 suivi de tirs au but",
+      "Un match nul 1-1",
       "Une victoire 2-0 après prolongation",
       "Un forfait de l'Italie"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "Quel joueur italien manque le tir au but décisif lors de la finale 1994 face au Brésil ?",
     "answers": [
-      "Franco Baresi",
       "Roberto Baggio",
+      "Franco Baresi",
       "Daniele Massaro",
       "Paolo Maldini"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "En 1998, la France remporte sa première Coupe du Monde à domicile. Quel joueur inscrit un doublé de la tête en finale ?",
     "answers": [
-      "Emmanuel Petit",
       "Zinédine Zidane",
+      "Emmanuel Petit",
       "Thierry Henry",
       "Youri Djorkaeff"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "Contre quelle équipe la France remporte-t-elle la finale 1998, sur le score de 3-0 ?",
     "answers": [
-      "l'Allemagne",
       "le Brésil",
+      "l'Allemagne",
       "l'Italie",
       "les Pays-Bas"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
-    "text": "En 2018, quel très jeune attaquant français devient le 2e adolescent, après Pelé, à marquer en finale de Coupe du Monde ?",
+    "text": "Quel adolescent français marque en finale du Mondial 2018, 60 ans après Pelé ?",
     "answers": [
-      "Ousmane Dembélé",
       "Kylian Mbappé",
+      "Ousmane Dembélé",
       "Kingsley Coman",
       "Thomas Lemar"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
-    "text": "Quel est le nom du trophée original de la Coupe du Monde, remis définitivement au Brésil en 1970 après sa 3e victoire, puis volé et jamais retrouvé ?",
+    "text": "Comment s'appelait le trophée original du Mondial, remis au Brésil après son troisième titre en 1970 ?",
     "answers": [
       "La Coupe Jules Rimet",
       "La Coupe FIFA d'Or",
@@ -592,32 +592,32 @@
   {
     "text": "Depuis 1974, quel est le nom du trophée actuel remis au vainqueur de la Coupe du Monde ?",
     "answers": [
-      "La Coupe Jules Rimet",
       "Le Trophée FIFA de la Coupe du Monde",
+      "La Coupe Jules Rimet",
       "La Coupe d'Or FIFA",
       "Le Ballon d'Or des Nations"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "En 2002, quels deux pays coorganisent pour la première fois la Coupe du Monde, une première en Asie ?",
     "answers": [
       "Chine et Japon",
-      "Corée du Sud et Japon",
+      "Japon et Thaïlande",
       "Corée du Sud et Chine",
-      "Japon et Thaïlande"
+      "Corée du Sud et Japon"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Lors de la Coupe du Monde 1990, quelle sélection africaine atteint pour la première fois les quarts de finale ?",
     "answers": [
       "Le Nigeria",
-      "Le Cameroun",
+      "L'Égypte",
       "Le Sénégal",
-      "L'Égypte"
+      "Le Cameroun"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "En 2022, quelle sélection africaine devient la première à atteindre les demi-finales d'une Coupe du Monde ?",
@@ -630,7 +630,7 @@
     "correct": 2
   },
   {
-    "text": "Lors de la demi-finale de la Coupe du Monde 2014, quel est le score infligé par l'Allemagne au Brésil, sur le sol brésilien ?",
+    "text": "Quel score l'Allemagne inflige-t-elle au Brésil en demi-finale du Mondial 2014 ?",
     "answers": [
       "5-1",
       "6-2",
@@ -643,41 +643,41 @@
     "text": "Combien de titres l'Argentine a-t-elle remportés au total, à fin 2025 ?",
     "answers": [
       "Deux",
-      "Trois",
+      "Un seul",
       "Quatre",
-      "Un seul"
+      "Trois"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "En quelle année l'Argentine remporte-t-elle sa première Coupe du Monde, à domicile ?",
     "answers": [
       "1974",
-      "1978",
+      "1986",
       "1982",
-      "1986"
+      "1978"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Quel joueur argentin porte le brassard de capitaine lors du sacre de 2022 au Qatar ?",
     "answers": [
       "Ángel Di María",
-      "Lionel Messi",
+      "Emiliano Martínez",
       "Rodrigo De Paul",
-      "Emiliano Martínez"
+      "Lionel Messi"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Combien de fois la France a-t-elle été championne du monde, à fin 2025 ?",
     "answers": [
       "Une fois",
-      "Deux fois",
+      "Jamais",
       "Trois fois",
-      "Jamais"
+      "Deux fois"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "En 1930, quel pays organise et remporte la toute première Coupe du Monde de football ?",
@@ -693,21 +693,21 @@
     "text": "Combien d'équipes participent à la toute première Coupe du Monde, en 1930 ?",
     "answers": [
       "8",
-      "13",
+      "24",
       "16",
-      "24"
+      "13"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "En 1982, combien d'équipes participent pour la première fois à la phase finale, contre 16 auparavant ?",
     "answers": [
       "20",
-      "24",
+      "32",
       "28",
-      "32"
+      "24"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Depuis quelle édition la Coupe du Monde passe-t-elle à un format à 32 équipes ?",
@@ -723,31 +723,31 @@
     "text": "Quelle est la seule sélection européenne à avoir remporté une Coupe du Monde disputée sur le continent américain ?",
     "answers": [
       "L'Italie en 1970",
-      "L'Allemagne en 2014",
+      "La France en 1986",
       "L'Espagne en 1994",
-      "La France en 1986"
+      "L'Allemagne en 2014"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Quel pays remporte la Coupe du Monde 2010, sa toute première, en battant les Pays-Bas en finale ?",
     "answers": [
       "Le Portugal",
-      "L'Espagne",
+      "L'Italie",
       "La Belgique",
-      "L'Italie"
+      "L'Espagne"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
-    "text": "Quel est le seul joueur néerlandais à avoir disputé trois finales de Coupe du Monde sans jamais la remporter (1974, 1978, en tant que légende du foot total) ?",
+    "text": "Quel capitaine néerlandais perd la finale du Mondial 1974 contre l'Allemagne de l'Ouest ?",
     "answers": [
       "Marco van Basten",
-      "Johan Cruyff",
+      "Ruud Gullit",
       "Dennis Bergkamp",
-      "Ruud Gullit"
+      "Johan Cruyff"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Comment appelle-t-on le style de jeu néerlandais des années 1970, basé sur la mobilité et la polyvalence collective ?",
@@ -760,54 +760,54 @@
     "correct": 2
   },
   {
-    "text": "Quelle sélection est éliminée dès le premier tour de la Coupe du Monde 2010 alors qu'elle était tenante du titre, une première dans l'histoire moderne ?",
+    "text": "Quel tenant du titre est éliminé dès le premier tour du Mondial 2010 ?",
     "answers": [
       "Le Brésil",
-      "L'Italie",
+      "L'Espagne",
       "La France",
-      "L'Espagne"
+      "L'Italie"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "En 2018, quelle sélection atteint la finale pour la première fois de son histoire avant de s'incliner face à la France ?",
     "answers": [
       "La Belgique",
-      "La Croatie",
+      "Le Danemark",
       "L'Angleterre",
-      "Le Danemark"
+      "La Croatie"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Quel gardien argentin est élu meilleur gardien du tournoi (Gant d'Or) lors de la Coupe du Monde 2022 ?",
     "answers": [
       "Franco Armani",
-      "Emiliano Martínez",
+      "Geronimo Mandragora",
       "Gerónimo Rulli",
-      "Geronimo Mandragora"
+      "Emiliano Martínez"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Quel pays africain atteint les quarts de finale de la Coupe du Monde 2010, organisée sur son propre sol ?",
     "answers": [
       "L'Afrique du Sud",
-      "Le Ghana",
+      "La Côte d'Ivoire",
       "Le Nigeria",
-      "La Côte d'Ivoire"
+      "Le Ghana"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Combien de fois l'Uruguay a-t-il été champion du monde, à fin 2025 ?",
     "answers": [
-      "Une fois",
       "Deux fois",
+      "Une fois",
       "Trois fois",
       "Jamais"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "En quelle année l'Italie remporte-t-elle sa première Coupe du Monde, en tant que pays hôte ?",
@@ -850,7 +850,7 @@
     "correct": 0
   },
   {
-    "text": "Quel joueur néerlandais ouvre le score dès la 2e minute de la finale 1974 sur un penalty, avant que l'Allemagne ne renverse le match ?",
+    "text": "Quel Néerlandais ouvre le score sur penalty contre l'Allemagne de l'Ouest en finale du Mondial 1974 ?",
     "answers": [
       "Johan Cruyff",
       "Johan Neeskens",
@@ -870,7 +870,7 @@
     "correct": 2
   },
   {
-    "text": "Combien de sélections participent aux éliminatoires de la Coupe du Monde à travers le monde, tous continents confondus, à chaque édition récente ?",
+    "text": "Combien de sélections disputent généralement les éliminatoires d'un Mondial masculin ?",
     "answers": [
       "Environ 50",
       "Environ 100",
@@ -980,7 +980,7 @@
     "correct": 1
   },
   {
-    "text": "Quel capitaine brésilien devient l'unique joueur à disputer trois finales de Coupe du Monde consécutives, en 1994, 1998 et 2002 ?",
+    "text": "Quel capitaine brésilien dispute trois finales consécutives de Mondial, de 1994 à 2002 ?",
     "answers": [
       "Ronaldo",
       "Cafu",
@@ -990,7 +990,7 @@
     "correct": 1
   },
   {
-    "text": "Quel attaquant brésilien, surnommé « Le Phénomène », est double champion du monde (1994 comme réserviste, 2002 comme meilleur buteur) ?",
+    "text": "Quel attaquant brésilien surnommé « Le Phénomène » est champion du monde en 1994 et 2002 ?",
     "answers": [
       "Romário",
       "Ronaldinho",
