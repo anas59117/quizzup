@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import './design-tokens.css';
 import './App.css';
 import './design-system.css';
+import './design-v4.css';
 import SFX from './sounds';
 import music from './music';
 import { useSocial, GameChat } from './social';

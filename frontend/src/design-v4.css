@@ -1,0 +1,638 @@
+/* ═══════════════════════════════════════════════════════
+   QuizzUp Design v4 — "Coral QuizUp OG 2026"
+   ───────────────────────────────────────────────────────
+   Loaded LAST — overrides design-tokens.css, App.css, design-system.css
+   To toggle OFF: comment out the import in App.js
+   ═══════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Bungee&family=Cinzel:wght@700;900&family=Archivo+Black&family=Bebas+Neue&family=Press+Start+2P&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Rubik+Mono+One&display=swap');
+
+/* ─── v4 palette (overrides tokens from App.css & design-tokens.css) ─── */
+:root,
+:root[data-theme='dark'],
+:root[data-theme='light'] {
+  /* Signature coral — QuizUp OG */
+  --v4-coral: #E63246;
+  --v4-coral-deep: #D82A3F;
+  --v4-coral-dark: #B81E33;
+
+  /* Supports */
+  --v4-cream: #FDFDFB;
+  --v4-ink: #0A0A0A;
+  --v4-soft-ink: #1a1a1a;
+  --v4-mid-ink: #2A2A2A;
+
+  /* Semantic */
+  --v4-win: #2ECC71;
+  --v4-timer: #F5C542;
+  --v4-cta: #FFD54A;
+
+  /* Override legacy tokens so App.css inherits */
+  --bg: var(--v4-coral);
+  --surface: rgba(0, 0, 0, 0.42);
+  --surface-2: rgba(0, 0, 0, 0.28);
+  --surface-3: rgba(0, 0, 0, 0.18);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --text: #FFFFFF;
+  --text-dim: rgba(255, 255, 255, 0.72);
+  --text-faint: rgba(255, 255, 255, 0.5);
+  --accent: var(--v4-cta);
+  --accent-strong: #F5C542;
+  --link: #FFFFFF;
+  --gold: #FFD54A;
+  --danger: #FF8294;
+  --success: var(--v4-win);
+  --input-bg: rgba(0, 0, 0, 0.3);
+
+  /* Fonts v4 */
+  --v4-font-display: 'Space Grotesk', 'Outfit', system-ui, -apple-system, sans-serif;
+  --v4-font-ui: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ═══════════════════════════════════════════════════════
+   BASE
+   ═══════════════════════════════════════════════════════ */
+
+html,
+body,
+#root {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,0.08), transparent 60%),
+    linear-gradient(180deg, var(--v4-coral) 0%, var(--v4-coral-deep) 100%) !important;
+  color: #FFFFFF !important;
+}
+
+body {
+  font-family: var(--v4-font-ui) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings use Space Grotesk */
+h1, h2, h3, h4, h5, h6,
+.logo, .home-logo-sm, .section-title, .play-title,
+.name, .title {
+  font-family: var(--v4-font-display) !important;
+  letter-spacing: -0.025em;
+}
+
+/* ═══════════════════════════════════════════════════════
+   APP SHELL
+   ═══════════════════════════════════════════════════════ */
+
+.app {
+  background: transparent !important;
+}
+
+.app-top {
+  padding-top: 20px !important;
+}
+
+/* Game screen keeps its dark background */
+.game-bg,
+.app.game-bg {
+  background: #0A0A0A !important;
+  background-image: none !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   HEADER / TOP CONTROLS
+   ═══════════════════════════════════════════════════════ */
+
+.home-head {
+  padding-right: 20px !important;
+}
+
+.home-brandmark,
+.join-brandmark {
+  background: #FFFFFF !important;
+  color: var(--v4-coral) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 14px -2px rgba(0,0,0,0.2) !important;
+}
+
+.home-logo-sm,
+.logo {
+  color: #FFFFFF !important;
+  text-shadow: none !important;
+}
+
+.home-greeting {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+.top-controls {
+  gap: 10px !important;
+}
+
+.ctrl-btn,
+.lang-btn {
+  background: rgba(255,255,255,0.14) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  border-radius: 50% !important;
+  width: 36px !important;
+  height: 36px !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   PLAY CARD (home hero)
+   ═══════════════════════════════════════════════════════ */
+
+.play-card {
+  background: rgba(0, 0, 0, 0.42) !important;
+  border: none !important;
+  border-radius: 22px !important;
+  padding: 20px !important;
+  position: relative;
+  overflow: hidden;
+  box-shadow: none !important;
+}
+
+.play-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 100% 0%, rgba(255,130,148,0.35), transparent 55%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.play-title {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+}
+
+.play-subtitle {
+  color: rgba(255,255,255,0.72) !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   QUICK PLAY / BUTTONS
+   ═══════════════════════════════════════════════════════ */
+
+.quick-play,
+.quick-match {
+  background: var(--v4-cta) !important;
+  color: var(--v4-ink) !important;
+  font-family: var(--v4-font-display) !important;
+  font-weight: 700 !important;
+  border: none !important;
+  border-radius: 16px !important;
+  padding: 16px 20px !important;
+  box-shadow: 0 10px 25px -8px rgba(0,0,0,0.25) !important;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.quick-play:hover:not(:disabled),
+.quick-match:hover:not(:disabled) {
+  background: #FFE085 !important;
+  transform: translateY(-1px);
+}
+
+.quick-play:active,
+.quick-match:active {
+  transform: scale(0.97);
+}
+
+.btn,
+.join-panel .btn {
+  font-family: var(--v4-font-display) !important;
+  font-weight: 600 !important;
+  border-radius: 14px !important;
+  border: none !important;
+  padding: 14px 18px !important;
+  background: rgba(0,0,0,0.3) !important;
+  color: #FFFFFF !important;
+  box-shadow: none !important;
+}
+
+/* Season Pass / Tournament / Friends / League buttons: hide from home,
+   but keep accessible in profile/menu */
+.tournament-btn,
+.friends-btn,
+.league-btn,
+.seasonpass-btn {
+  background: rgba(0,0,0,0.3) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 14px !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   SECTION TITLES
+   ═══════════════════════════════════════════════════════ */
+
+.section-title {
+  color: #FFFFFF !important;
+  font-family: var(--v4-font-display) !important;
+  font-weight: 700 !important;
+  font-size: 22px !important;
+  letter-spacing: -0.025em !important;
+  text-transform: none !important;
+  margin-top: 20px !important;
+}
+
+.see-all,
+.back-link,
+.back-to-topics,
+.home-themes-link,
+.share-link,
+.add-friend-link,
+.privacy-link {
+  color: rgba(255,255,255,0.65) !important;
+  font-weight: 500 !important;
+  font-family: var(--v4-font-ui) !important;
+  text-transform: none !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   TOPICS GRID (categories)
+   ═══════════════════════════════════════════════════════ */
+
+.topics-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.topic-tile {
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  background: rgba(0,0,0,0.2) !important;
+  border: none !important;
+  box-shadow: 0 8px 24px -8px rgba(0,0,0,0.2), 0 2px 6px -1px rgba(0,0,0,0.1) !important;
+  aspect-ratio: 1 / 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  padding: 14px !important;
+  position: relative !important;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.topic-tile:active {
+  transform: scale(0.96);
+}
+
+.tile-icon-sq {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+  z-index: 1 !important;
+  margin: 0 !important;
+}
+
+.tile-cover-img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.tile-monogram {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--v4-font-display) !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,0.95) !important;
+  font-size: 2.2rem !important;
+  letter-spacing: -0.04em !important;
+}
+
+.tile-label {
+  position: relative;
+  z-index: 3;
+  color: #FFFFFF !important;
+  font-family: var(--v4-font-display) !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  letter-spacing: -0.01em !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.35) !important;
+}
+
+.tile-tag-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.5) !important;
+  backdrop-filter: blur(4px);
+  color: #FFFFFF !important;
+  font-family: var(--v4-font-display) !important;
+  font-weight: 700 !important;
+  font-size: 10.5px !important;
+  padding: 3px 8px !important;
+  border-radius: 999px !important;
+  z-index: 4;
+  letter-spacing: 0.01em !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   FAMILY TILES (section familles)
+   ═══════════════════════════════════════════════════════ */
+
+.family-list {
+  grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+  gap: 12px !important;
+}
+
+.family-tile {
+  background: rgba(0,0,0,0.3) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  border-radius: 18px !important;
+  padding: 14px !important;
+  box-shadow: none !important;
+}
+
+.family-icon {
+  background: rgba(255,255,255,0.1) !important;
+  border-radius: 12px !important;
+}
+
+.family-label {
+  color: #FFFFFF !important;
+  font-family: var(--v4-font-display) !important;
+  font-weight: 700 !important;
+}
+
+.family-desc {
+  color: rgba(255,255,255,0.6) !important;
+}
+
+.family-count {
+  color: rgba(255,255,255,0.45) !important;
+  font-family: var(--v4-font-ui) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   AVATAR / PROFILE
+   ═══════════════════════════════════════════════════════ */
+
+.home-avatar-chip,
+.profile-card,
+.profile-league-card,
+.friend-row,
+.league-card {
+  background: rgba(0,0,0,0.42) !important;
+  border: none !important;
+  border-radius: 20px !important;
+  box-shadow: none !important;
+}
+
+.avatar-picker {
+  gap: 10px !important;
+}
+
+.avatar-opt {
+  border: 2px solid rgba(255,255,255,0.1) !important;
+}
+
+.avatar-opt.selected {
+  border-color: var(--v4-cta) !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   NAV BAR
+   ═══════════════════════════════════════════════════════ */
+
+.nav-bar,
+.nav-bar-modern {
+  background: var(--v4-cream) !important;
+  border-top: 1px solid rgba(0,0,0,0.05) !important;
+  box-shadow: 0 -2px 20px -5px rgba(0,0,0,0.1) !important;
+  backdrop-filter: none !important;
+}
+
+.nav-bar button,
+.nav-bar-modern button {
+  color: #999 !important;
+  font-family: var(--v4-font-ui) !important;
+  font-weight: 500 !important;
+  font-size: 10.5px !important;
+}
+
+.nav-bar button.active,
+.nav-bar-modern button.active {
+  color: var(--v4-coral) !important;
+}
+
+/* Central Play button (Quick Play lightning in bottom nav, if present) */
+.nav-bar .play,
+.nav-bar-modern .play,
+.nav-bar button.quick-match-fab,
+.nav-bar-modern button.quick-match-fab {
+  background: radial-gradient(circle at 35% 30%, #FF8294 0%, var(--v4-coral) 55%, var(--v4-coral-dark) 100%) !important;
+  color: #FFFFFF !important;
+  border-radius: 50% !important;
+  width: 62px !important;
+  height: 62px !important;
+  transform: translateY(-20px) !important;
+  box-shadow:
+    0 10px 25px -5px rgba(230,50,70,0.5),
+    0 4px 8px -2px rgba(0,0,0,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.4) !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   GAME SCREEN (fond noir)
+   ═══════════════════════════════════════════════════════ */
+
+.game-bg,
+.app.game-bg {
+  background: #0A0A0A !important;
+}
+
+.game-hud,
+.timer-bar,
+.question-header {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+/* Timer: Space Grotesk tabular-nums instead of JetBrains Mono */
+.timer,
+.hud-timer,
+.score-display,
+.combo-badge {
+  font-family: var(--v4-font-display) !important;
+  font-variant-numeric: tabular-nums !important;
+  font-weight: 700 !important;
+  color: var(--v4-timer) !important;
+}
+
+.timer.urgent,
+.hud-timer.urgent {
+  color: #FF6B6B !important;
+  animation: v4TimerPulse 0.55s ease-in-out infinite !important;
+}
+
+@keyframes v4TimerPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+/* Question panel */
+.question-panel {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.question {
+  font-family: var(--v4-font-display) !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.02em !important;
+  color: #FFFFFF !important;
+}
+
+/* Answer buttons */
+.answer-btn,
+.answers button,
+.answers .answer {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1.5px solid rgba(255,255,255,0.12) !important;
+  border-radius: 18px !important;
+  color: #FFFFFF !important;
+  font-family: var(--v4-font-ui) !important;
+  font-weight: 500 !important;
+  font-size: 15.5px !important;
+  padding: 16px 18px !important;
+  text-align: left !important;
+  box-shadow: none !important;
+  transition: all 0.15s !important;
+}
+
+.answer-btn:hover,
+.answers button:hover {
+  border-color: rgba(255,255,255,0.3) !important;
+  background: rgba(255,255,255,0.08) !important;
+  transform: none !important;
+}
+
+.answer-btn.correct,
+.answers .correct {
+  background: rgba(46,204,113,0.15) !important;
+  border-color: var(--v4-win) !important;
+  color: #FFFFFF !important;
+}
+
+.answer-btn.wrong,
+.answers .wrong {
+  background: rgba(230,50,70,0.15) !important;
+  border-color: var(--v4-coral) !important;
+  color: #FFFFFF !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   PROGRESS BARS
+   ═══════════════════════════════════════════════════════ */
+
+.progress-bar,
+.league-progress-bar,
+.ad-bar,
+.sp-progress-bar {
+  background: rgba(255,255,255,0.15) !important;
+  border-radius: 999px !important;
+  height: 6px !important;
+}
+
+.progress-fill,
+.league-progress-fill,
+.ad-fill,
+.sp-progress-fill {
+  background: linear-gradient(90deg, var(--v4-cta), #FFB199) !important;
+  border-radius: 999px !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   INPUTS
+   ═══════════════════════════════════════════════════════ */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+.input,
+.search-input {
+  background: rgba(0,0,0,0.3) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 14px !important;
+  color: #FFFFFF !important;
+  font-family: var(--v4-font-ui) !important;
+  padding: 14px 16px !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255,255,255,0.5) !important;
+}
+
+input:focus,
+textarea:focus {
+  outline: none !important;
+  border-color: var(--v4-cta) !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   MODALS / OVERLAYS
+   ═══════════════════════════════════════════════════════ */
+
+.modal-overlay,
+.overlay,
+.onboarding-overlay,
+.streak-overlay {
+  background: rgba(10,5,8,0.75) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.modal,
+.modal-content,
+.onboarding-step,
+.streak-card {
+  background: var(--v4-cream) !important;
+  color: var(--v4-ink) !important;
+  border: none !important;
+  border-radius: 24px !important;
+  box-shadow: 0 20px 60px -10px rgba(0,0,0,0.3) !important;
+}
+
+.modal h1, .modal h2, .modal h3,
+.modal-content h1, .modal-content h2, .modal-content h3 {
+  color: var(--v4-ink) !important;
+}
+
+/* ═══════════════════════════════════════════════════════
+   KILL OLD SLOP (glass/glow/neon)
+   ═══════════════════════════════════════════════════════ */
+
+[class*="glass"],
+[class*="glow"],
+[class*="shine"],
+[class*="neon"] {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  backdrop-filter: none !important;
+  background-image: none !important;
+}
+
+/* Scrollbar discreet on coral */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 999px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   END design-v4.css
+   ═══════════════════════════════════════════════════════ */
