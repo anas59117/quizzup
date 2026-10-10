@@ -54,7 +54,7 @@ export function useAdSystem() {
     return true;
   }, [canWatch]);
 
-  return { canWatch, remaining, totalWatched: adData.totalWatched, watchAd };
+  return { canWatch, remaining, count: adData.count, totalWatched: adData.totalWatched, watchAd };
 }
 
 export function AdRewardsPanel({ adSystem, onReward, t }) {
@@ -113,10 +113,10 @@ export function AdRewardsPanel({ adSystem, onReward, t }) {
         <div className="ad-bar">
           <div 
             className="ad-fill" 
-            style={{ width: `${(adData.count / MAX_ADS_PER_DAY) * 100}%` }}
+            style={{ width: `${(adSystem.count / MAX_ADS_PER_DAY) * 100}%` }}
           />
         </div>
-        <div className="ad-count">{adData.count}/{MAX_ADS_PER_DAY} {t('today')}</div>
+        <div className="ad-count">{adSystem.count}/{MAX_ADS_PER_DAY} {t('today')}</div>
       </div>
     </div>
   );
