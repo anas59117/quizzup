@@ -1,105 +1,1032 @@
 [
-  { "text": "Combien de planètes compte notre système solaire aujourd'hui ?", "answers": ["7", "8", "9", "10"], "correct": 1 },
-  { "text": "Quelle est la planète la plus proche du Soleil ?", "answers": ["Vénus", "Mercure", "Mars", "la Terre"], "correct": 1 },
-  { "text": "Quelle est la plus grande planète du système solaire ?", "answers": ["Saturne", "Neptune", "Jupiter", "Uranus"], "correct": 2 },
-  { "text": "Quelle planète est surnommée la « planète rouge » ?", "answers": ["Vénus", "Mars", "Mercure", "Jupiter"], "correct": 1 },
-  { "text": "Quel astre est le plus proche de la Terre ?", "answers": ["Le Soleil", "La Lune", "Mars", "Vénus"], "correct": 1 },
-  { "text": "Qui a été le premier homme à marcher sur la Lune ?", "answers": ["Buzz Aldrin", "Neil Armstrong", "Youri Gagarine", "John Glenn"], "correct": 1 },
-  { "text": "En quelle année l'homme a-t-il marché sur la Lune pour la première fois ?", "answers": ["1965", "1969", "1972", "1975"], "correct": 1 },
-  { "text": "Quelle mission spatiale a permis le premier alunissage habité ?", "answers": ["Apollo 8", "Apollo 11", "Apollo 13", "Gemini 4"], "correct": 1 },
-  { "text": "Qui a été le premier être humain dans l'espace ?", "answers": ["Neil Armstrong", "Alan Shepard", "Youri Gagarine", "John Glenn"], "correct": 2 },
-  { "text": "De quel pays était Youri Gagarine ?", "answers": ["Les États-Unis", "L'URSS", "La Chine", "La France"], "correct": 1 },
-  { "text": "Comment appelle-t-on une étoile qui explose en fin de vie ?", "answers": ["Une nova", "Une supernova", "Une géante rouge", "Une naine blanche"], "correct": 1 },
-  { "text": "Quelle est l'étoile la plus proche de la Terre ?", "answers": ["Proxima du Centaure", "Le Soleil", "Sirius", "Alpha du Centaure"], "correct": 1 },
-  { "text": "Combien de temps la lumière du Soleil met-elle environ pour atteindre la Terre ?", "answers": ["8 secondes", "8 minutes", "8 heures", "8 jours"], "correct": 1 },
-  { "text": "Quelle galaxie abrite notre système solaire ?", "answers": ["Andromède", "La Voie Lactée", "Le Grand Nuage de Magellan", "Le Triangle"], "correct": 1 },
-  { "text": "Quelle est la grande galaxie spirale la plus proche de la Voie Lactée ?", "answers": ["Andromède", "Le Sombrero", "La galaxie du Tourbillon", "NGC 1300"], "correct": 0 },
-  { "text": "Comment appelle-t-on un trou noir extrêmement massif au centre d'une galaxie ?", "answers": ["Trou noir stellaire", "Trou noir supermassif", "Trou blanc", "Micro trou noir"], "correct": 1 },
-  { "text": "Quelle force maintient les planètes en orbite autour du Soleil ?", "answers": ["Le magnétisme", "La gravité", "La friction", "La pression"], "correct": 1 },
-  { "text": "Quel physicien a formulé la théorie de la relativité générale ?", "answers": ["Isaac Newton", "Albert Einstein", "Stephen Hawking", "Niels Bohr"], "correct": 1 },
-  { "text": "Quel astronome a proposé le modèle héliocentrique dans un ouvrage publié en 1543 ?", "answers": ["Ptolémée", "Copernic", "Aristote", "Hipparque"], "correct": 1 },
-  { "text": "Quel astronome italien a perfectionné le télescope et observé les lunes de Jupiter ?", "answers": ["Galilée", "Copernic", "Kepler", "Newton"], "correct": 0 },
-  { "text": "Combien de lunes possède Mars ?", "answers": ["0", "1", "2", "4"], "correct": 2 },
-  { "text": "Quelle planète possède le plus grand nombre de lunes connues ?", "answers": ["Jupiter", "Saturne", "Uranus", "Neptune"], "correct": 1 },
-  { "text": "Comment s'appelle la plus grande lune de Jupiter ?", "answers": ["Europe", "Io", "Ganymède", "Callisto"], "correct": 2 },
-  { "text": "Comment s'appelle la plus grande lune de Saturne ?", "answers": ["Titan", "Encelade", "Rhéa", "Mimas"], "correct": 0 },
-  { "text": "Quelle planète est connue pour ses anneaux spectaculaires ?", "answers": ["Jupiter", "Saturne", "Uranus", "Neptune"], "correct": 1 },
-  { "text": "Quelle est la planète la plus éloignée du Soleil ?", "answers": ["Uranus", "Neptune", "Pluton", "Saturne"], "correct": 1 },
-  { "text": "Quel statut a été retiré à Pluton en 2006 ?", "answers": ["Étoile", "Planète", "Satellite", "Comète"], "correct": 1 },
-  { "text": "Comment appelle-t-on aujourd'hui Pluton, après 2006 ?", "answers": ["Astéroïde", "Planète naine", "Comète", "Exoplanète"], "correct": 1 },
-  { "text": "Quelle ceinture d'astéroïdes se situe entre Mars et Jupiter ?", "answers": ["La ceinture de Kuiper", "La ceinture principale d'astéroïdes", "Le nuage d'Oort", "La ceinture de Van Allen"], "correct": 1 },
-  { "text": "Quelle région glacée se trouve au-delà de l'orbite de Neptune ?", "answers": ["La ceinture principale", "La ceinture de Kuiper", "Le nuage de Magellan", "L'héliosphère"], "correct": 1 },
-  { "text": "Comment appelle-t-on un objet céleste composé de glace et de poussière qui développe une queue près du Soleil ?", "answers": ["Un astéroïde", "Une comète", "Un météore", "Un quasar"], "correct": 1 },
-  { "text": "Comment appelle-t-on une roche spatiale qui traverse l'atmosphère et brûle (« étoile filante ») ?", "answers": ["Une comète", "Un météore", "Un astéroïde", "Une météorite"], "correct": 1 },
-  { "text": "Comment appelle-t-on un fragment de roche spatiale qui atteint le sol terrestre ?", "answers": ["Une météorite", "Un météore", "Un astéroïde", "Une comète"], "correct": 0 },
-  { "text": "Quelle agence spatiale américaine gère les missions Apollo et les programmes spatiaux US ?", "answers": ["ESA", "NASA", "Roscosmos", "SpaceX"], "correct": 1 },
-  { "text": "Quelle agence spatiale européenne coordonne les missions spatiales de l'UE ?", "answers": ["NASA", "ESA", "JAXA", "CNSA"], "correct": 1 },
-  { "text": "Quelle entreprise privée américaine fondée par Elon Musk développe des fusées réutilisables ?", "answers": ["Blue Origin", "SpaceX", "Virgin Galactic", "Boeing"], "correct": 1 },
-  { "text": "Quel télescope spatial, lancé en 1990, a révolutionné l'astronomie ?", "answers": ["Le télescope Kepler", "Le télescope Hubble", "Le télescope James Webb", "Le télescope Spitzer"], "correct": 1 },
-  { "text": "Quel télescope spatial, successeur de Hubble, a été lancé en décembre 2021 ?", "answers": ["Le télescope James Webb", "Le télescope Chandra", "Le télescope Kepler", "Le télescope Gaia"], "correct": 0 },
-  { "text": "Quelle station spatiale, dont le premier module a été lancé en 1998, est habitée en permanence depuis l'an 2000 ?", "answers": ["Mir", "La Station spatiale internationale (ISS)", "Skylab", "Tiangong"], "correct": 1 },
-  { "text": "Quelle était la première station spatiale soviétique, lancée en 1971 ?", "answers": ["Mir", "Saliout 1", "Tiangong", "Skylab"], "correct": 1 },
-  { "text": "Quel est le nom de la station spatiale chinoise en orbite ?", "answers": ["Tiangong", "Shenzhou", "Chang'e", "Tianwen"], "correct": 0 },
-  { "text": "Combien de temps la Terre met-elle pour faire un tour complet sur elle-même ?", "answers": ["12 heures", "24 heures", "48 heures", "365 jours"], "correct": 1 },
-  { "text": "Combien de temps la Terre met-elle pour faire le tour du Soleil ?", "answers": ["1 mois", "6 mois", "1 an", "2 ans"], "correct": 2 },
-  { "text": "Quel phénomène se produit quand la Lune passe exactement entre le Soleil et la Terre et masque le Soleil ?", "answers": ["Une éclipse lunaire", "Une éclipse solaire", "Une pleine lune", "Un équinoxe"], "correct": 1 },
-  { "text": "Quel phénomène se produit quand la Terre passe entre le Soleil et la Lune ?", "answers": ["Une éclipse solaire", "Une éclipse lunaire", "Un équinoxe", "Un solstice"], "correct": 1 },
-  { "text": "Comment appelle-t-on le jour le plus long de l'année dans l'hémisphère nord ?", "answers": ["L'équinoxe de printemps", "Le solstice d'été", "L'équinoxe d'automne", "Le solstice d'hiver"], "correct": 1 },
-  { "text": "Comment appelle-t-on les jours où le jour et la nuit ont la même durée ?", "answers": ["Les solstices", "Les équinoxes", "Les périhélies", "Les aphélies"], "correct": 1 },
-  { "text": "Quelle planète est souvent appelée « l'étoile du berger » car visible à l'aube/au crépuscule ?", "answers": ["Mars", "Vénus", "Mercure", "Jupiter"], "correct": 1 },
-  { "text": "Quel gaz compose principalement le Soleil ?", "answers": ["L'oxygène", "L'hydrogène", "L'azote", "Le carbone"], "correct": 1 },
-  { "text": "Quel type d'étoile deviendra notre Soleil en fin de vie ?", "answers": ["Une supernova", "Une naine blanche", "Un trou noir", "Une étoile à neutrons"], "correct": 1 },
-  { "text": "Quelle mission a envoyé le premier rover sur Mars en 1997 ?", "answers": ["Viking", "Pathfinder (Sojourner)", "Curiosity", "Spirit"], "correct": 1 },
-  { "text": "Quel rover de la NASA explore Mars depuis 2012 ?", "answers": ["Opportunity", "Curiosity", "Perseverance", "Spirit"], "correct": 1 },
-  { "text": "Quel rover de la NASA, arrivé en 2021, cherche des traces de vie passée sur Mars ?", "answers": ["Curiosity", "Perseverance", "Sojourner", "Spirit"], "correct": 1 },
-  { "text": "Quelle sonde a survolé Pluton pour la première fois en 2015 ?", "answers": ["Voyager 1", "New Horizons", "Cassini", "Juno"], "correct": 1 },
-  { "text": "Quelle sonde a exploré Saturne et ses lunes pendant 13 ans jusqu'en 2017 ?", "answers": ["Galileo", "Cassini", "Juno", "Voyager 2"], "correct": 1 },
-  { "text": "Quelle sonde étudie Jupiter depuis 2016 ?", "answers": ["Galileo", "Cassini", "Juno", "New Horizons"], "correct": 2 },
-  { "text": "Quelles sondes jumelles lancées en 1977 ont quitté le système solaire ?", "answers": ["Pioneer 10 et 11", "Voyager 1 et 2", "Mariner 9 et 10", "Viking 1 et 2"], "correct": 1 },
-  { "text": "Comment appelle-t-on une planète qui orbite autour d'une étoile autre que le Soleil ?", "answers": ["Une exoplanète", "Une planète naine", "Un satellite", "Une comète"], "correct": 0 },
-  { "text": "Quel télescope spatial de la NASA a été spécialement conçu pour détecter des exoplanètes ?", "answers": ["Hubble", "Kepler", "Spitzer", "Chandra"], "correct": 1 },
-  { "text": "Comment appelle-t-on la zone autour d'une étoile où l'eau liquide pourrait exister sur une planète ?", "answers": ["La zone d'ombre", "La zone habitable", "La ceinture de radiation", "L'héliopause"], "correct": 1 },
-  { "text": "Quel événement cosmique a donné naissance à l'univers selon la théorie dominante ?", "answers": ["Le Big Crunch", "Le Big Bang", "L'inflation cosmique seule", "La singularité éternelle"], "correct": 1 },
-  { "text": "Quel âge approximatif attribue-t-on à l'univers ?", "answers": ["Environ 4,5 milliards d'années", "Environ 13,8 milliards d'années", "Environ 100 milliards d'années", "Environ 1 milliard d'années"], "correct": 1 },
-  { "text": "Quel âge approximatif attribue-t-on au système solaire ?", "answers": ["Environ 4,6 milliards d'années", "Environ 13,8 milliards d'années", "Environ 1 milliard d'années", "Environ 500 millions d'années"], "correct": 0 },
-  { "text": "Comment appelle-t-on la matière invisible qui représenterait la majorité de la masse de l'univers ?", "answers": ["L'antimatière", "La matière noire", "L'énergie sombre", "Le plasma cosmique"], "correct": 1 },
-  { "text": "Comment appelle-t-on l'énergie responsable de l'expansion accélérée de l'univers ?", "answers": ["L'énergie noire", "L'énergie nucléaire", "L'énergie de fusion", "L'énergie gravitationnelle"], "correct": 0 },
-  { "text": "Quelle est l'unité utilisée pour mesurer les distances astronomiques basée sur la vitesse de la lumière ?", "answers": ["Le kilomètre", "L'année-lumière", "L'unité astronomique", "Le parsec seul"], "correct": 1 },
-  { "text": "Quelle unité de distance correspond à la distance moyenne Terre-Soleil ?", "answers": ["L'année-lumière", "L'unité astronomique (UA)", "Le parsec", "Le mégaparsec"], "correct": 1 },
-  { "text": "Quel astronaute américain a orbité la Terre trois fois en 1962, une première pour les USA ?", "answers": ["Alan Shepard", "John Glenn", "Gus Grissom", "Scott Carpenter"], "correct": 1 },
-  { "text": "Quelle a été la première femme dans l'espace, en 1963 ?", "answers": ["Sally Ride", "Valentina Terechkova", "Mae Jemison", "Svetlana Savitskaïa"], "correct": 1 },
-  { "text": "Quelle a été la première femme américaine dans l'espace ?", "answers": ["Sally Ride", "Valentina Terechkova", "Eileen Collins", "Christa McAuliffe"], "correct": 0 },
-  { "text": "Quelle mission spatiale américaine a connu une explosion à bord mais est revenue saine et sauve en 1970 ?", "answers": ["Apollo 1", "Apollo 11", "Apollo 13", "Apollo 17"], "correct": 2 },
-  { "text": "Quelle navette spatiale américaine a explosé au décollage en 1986 ?", "answers": ["Discovery", "Challenger", "Columbia", "Atlantis"], "correct": 1 },
-  { "text": "Quelle navette spatiale américaine s'est désintégrée lors de sa rentrée atmosphérique en 2003 ?", "answers": ["Challenger", "Columbia", "Endeavour", "Discovery"], "correct": 1 },
-  { "text": "Quel spationaute français a été le premier à voler à bord de la navette américaine en 1985 ?", "answers": ["Jean-Loup Chrétien", "Patrick Baudry", "Claudie Haigneré", "Michel Tognini"], "correct": 1 },
-  { "text": "Quelle astronaute française a été la première femme française dans l'espace ?", "answers": ["Claudie Haigneré", "Sophie Adenot", "Valentina Terechkova", "Anne McClain"], "correct": 0 },
-  { "text": "Quel cosmodrome kazakh est utilisé par la Russie pour lancer ses fusées habitées ?", "answers": ["Baïkonour", "Plessetsk", "Kourou", "Vostotchny"], "correct": 0 },
-  { "text": "Quel port spatial européen, situé en Guyane française, lance les fusées Ariane ?", "answers": ["Cap Canaveral", "Kourou", "Baïkonour", "Wallops Island"], "correct": 1 },
-  { "text": "Quelle base américaine est célèbre pour les lancements de fusées en Floride ?", "answers": ["Vandenberg", "Cap Canaveral", "Edwards", "White Sands"], "correct": 1 },
-  { "text": "Quel programme spatial américain a précédé les missions Apollo, testant le rendez-vous orbital ?", "answers": ["Mercury", "Gemini", "Skylab", "Orion"], "correct": 1 },
-  { "text": "Quel premier programme spatial habité américain a envoyé Alan Shepard dans l'espace en 1961 ?", "answers": ["Mercury", "Gemini", "Apollo", "Skylab"], "correct": 0 },
-  { "text": "Quel programme actuel de la NASA vise à ramener des humains sur la Lune ?", "answers": ["Artemis", "Orion seul", "Constellation", "Ares"], "correct": 0 },
-  { "text": "Quelle capsule spatiale de SpaceX transporte des astronautes vers l'ISS depuis 2020 ?", "answers": ["Starship", "Crew Dragon", "Falcon", "Orion"], "correct": 1 },
-  { "text": "Quel est le nom de la fusée super-lourde développée par SpaceX pour Mars ?", "answers": ["Falcon Heavy", "Starship", "Saturn V", "New Glenn"], "correct": 1 },
-  { "text": "Quelle fusée américaine a propulsé les missions Apollo vers la Lune ?", "answers": ["Falcon 9", "Saturn V", "Atlas V", "Delta IV"], "correct": 1 },
-  { "text": "Quelle constellation contient l'étoile polaire, utilisée pour s'orienter vers le nord ?", "answers": ["La Grande Ourse", "La Petite Ourse", "Orion", "Cassiopée"], "correct": 1 },
-  { "text": "Quelle constellation est facilement reconnaissable grâce à sa « ceinture » de trois étoiles alignées ?", "answers": ["La Grande Ourse", "Orion", "Cassiopée", "Le Cygne"], "correct": 1 },
-  { "text": "Quelle est l'étoile la plus brillante du ciel nocturne (hors Soleil) ?", "answers": ["Polaris", "Sirius", "Bételgeuse", "Véga"], "correct": 1 },
-  { "text": "Quelle géante rouge, dans la constellation d'Orion, pourrait exploser en supernova un jour ?", "answers": ["Rigel", "Bételgeuse", "Aldébaran", "Antarès"], "correct": 1 },
-  { "text": "Comment appelle-t-on une étoile extrêmement dense, résidu d'une supernova ?", "answers": ["Une naine blanche", "Une étoile à neutrons", "Une géante rouge", "Une protoétoile"], "correct": 1 },
-  { "text": "Qu'est-ce qu'un pulsar ?", "answers": ["Une étoile à neutrons en rotation rapide émettant des impulsions", "Une planète gazeuse", "Un type de comète", "Une galaxie naine"], "correct": 0 },
-  { "text": "Comment appelle-t-on une région de l'espace dont rien, pas même la lumière, ne peut s'échapper ?", "answers": ["Une nébuleuse", "Un trou noir", "Un quasar", "Un amas globulaire"], "correct": 1 },
-  { "text": "Comment appelle-t-on un nuage de gaz et de poussière dans l'espace, souvent berceau d'étoiles ?", "answers": ["Une nébuleuse", "Un amas ouvert", "Une galaxie naine", "Une ceinture d'astéroïdes"], "correct": 0 },
-  { "text": "Quel physicien britannique a beaucoup contribué à la vulgarisation des trous noirs ?", "answers": ["Roger Penrose", "Stephen Hawking", "Brian Cox", "Carl Sagan"], "correct": 1 },
-  { "text": "Quel astrophysicien et vulgarisateur américain a présenté la série « Cosmos » dans les années 1980 ?", "answers": ["Neil deGrasse Tyson", "Carl Sagan", "Brian Greene", "Michio Kaku"], "correct": 1 },
-  { "text": "Quel astrophysicien américain contemporain a repris et modernisé la série « Cosmos » ?", "answers": ["Neil deGrasse Tyson", "Carl Sagan", "Bill Nye", "Brian Cox"], "correct": 0 },
-  { "text": "Quelle planète met plus de temps à tourner sur elle-même qu'à faire le tour du Soleil ?", "answers": ["Mars", "Vénus", "Jupiter", "Saturne"], "correct": 1 },
-  { "text": "Quelle planète tourne « sur le côté » avec un axe très incliné ?", "answers": ["Neptune", "Uranus", "Saturne", "Mars"], "correct": 1 },
-  { "text": "Quelle planète possède la fameuse « Grande Tache Rouge », une tempête géante ?", "answers": ["Saturne", "Jupiter", "Neptune", "Mars"], "correct": 1 },
-  { "text": "Quel satellite naturel de Neptune est géologiquement actif et probablement capturé ?", "answers": ["Triton", "Charon", "Titan", "Io"], "correct": 0 },
-  { "text": "Comment s'appelle la plus grande lune de Pluton ?", "answers": ["Charon", "Nix", "Hydre", "Styx"], "correct": 0 },
-  { "text": "Quelle lune de Jupiter est célèbre pour son océan souterrain potentiel sous la glace ?", "answers": ["Io", "Europe", "Amalthée", "Himalia"], "correct": 1 },
-  { "text": "Quelle lune de Saturne possède des geysers de glace émanant de son pôle sud ?", "answers": ["Titan", "Encelade", "Mimas", "Japet"], "correct": 1 },
-  { "text": "Quelle lune de Saturne possède une atmosphère dense et des lacs de méthane liquide ?", "answers": ["Encelade", "Titan", "Rhéa", "Téthys"], "correct": 1 }
+  {
+    "text": "Combien de planètes compte notre système solaire aujourd'hui ?",
+    "answers": [
+      "7",
+      "10",
+      "9",
+      "8"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la planète la plus proche du Soleil ?",
+    "answers": [
+      "Vénus",
+      "la Terre",
+      "Mars",
+      "Mercure"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la plus grande planète du système solaire ?",
+    "answers": [
+      "Saturne",
+      "Neptune",
+      "Jupiter",
+      "Uranus"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle planète est surnommée la « planète rouge » ?",
+    "answers": [
+      "Vénus",
+      "Jupiter",
+      "Mercure",
+      "Mars"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel astre est le plus proche de la Terre ?",
+    "answers": [
+      "Le Soleil",
+      "Vénus",
+      "Mars",
+      "La Lune"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qui a été le premier homme à marcher sur la Lune ?",
+    "answers": [
+      "Buzz Aldrin",
+      "John Glenn",
+      "Youri Gagarine",
+      "Neil Armstrong"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "En quelle année l'homme a-t-il marché sur la Lune pour la première fois ?",
+    "answers": [
+      "1965",
+      "1975",
+      "1972",
+      "1969"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle mission spatiale a permis le premier alunissage habité ?",
+    "answers": [
+      "Apollo 8",
+      "Apollo 13",
+      "Apollo 11",
+      "Gemini 4"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Qui a été le premier être humain dans l'espace ?",
+    "answers": [
+      "Neil Armstrong",
+      "Alan Shepard",
+      "Youri Gagarine",
+      "John Glenn"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "De quel pays était Youri Gagarine ?",
+    "answers": [
+      "Les États-Unis",
+      "La France",
+      "La Chine",
+      "L'URSS"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Comment appelle-t-on une étoile qui explose en fin de vie ?",
+    "answers": [
+      "Une nova",
+      "Une géante rouge",
+      "Une supernova",
+      "Une naine blanche"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle est l'étoile la plus proche de la Terre ?",
+    "answers": [
+      "Proxima du Centaure",
+      "Alpha du Centaure",
+      "Sirius",
+      "Le Soleil"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Combien de temps la lumière du Soleil met-elle environ pour atteindre la Terre ?",
+    "answers": [
+      "8 secondes",
+      "8 heures",
+      "8 minutes",
+      "8 jours"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle galaxie abrite notre système solaire ?",
+    "answers": [
+      "Andromède",
+      "Le Triangle",
+      "Le Grand Nuage de Magellan",
+      "La Voie Lactée"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la grande galaxie spirale la plus proche de la Voie Lactée ?",
+    "answers": [
+      "Andromède",
+      "Le Sombrero",
+      "La galaxie du Tourbillon",
+      "NGC 1300"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Comment appelle-t-on un trou noir extrêmement massif au centre d'une galaxie ?",
+    "answers": [
+      "Trou noir stellaire",
+      "Trou blanc",
+      "Trou noir supermassif",
+      "Micro trou noir"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle force maintient les planètes en orbite autour du Soleil ?",
+    "answers": [
+      "Le magnétisme",
+      "La pression",
+      "La friction",
+      "La gravité"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel physicien a formulé la théorie de la relativité générale ?",
+    "answers": [
+      "Isaac Newton",
+      "Stephen Hawking",
+      "Albert Einstein",
+      "Niels Bohr"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel astronome a proposé le modèle héliocentrique dans un ouvrage publié en 1543 ?",
+    "answers": [
+      "Ptolémée",
+      "Hipparque",
+      "Aristote",
+      "Copernic"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel astronome italien a perfectionné le télescope et observé les lunes de Jupiter ?",
+    "answers": [
+      "Galilée",
+      "Copernic",
+      "Kepler",
+      "Newton"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Combien de lunes possède Mars ?",
+    "answers": [
+      "0",
+      "1",
+      "2",
+      "4"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle planète possède le plus grand nombre de lunes connues ?",
+    "answers": [
+      "Jupiter",
+      "Uranus",
+      "Saturne",
+      "Neptune"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Comment s'appelle la plus grande lune de Jupiter ?",
+    "answers": [
+      "Europe",
+      "Io",
+      "Ganymède",
+      "Callisto"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Comment s'appelle la plus grande lune de Saturne ?",
+    "answers": [
+      "Titan",
+      "Encelade",
+      "Rhéa",
+      "Mimas"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle planète est connue pour ses anneaux spectaculaires ?",
+    "answers": [
+      "Jupiter",
+      "Neptune",
+      "Uranus",
+      "Saturne"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle est la planète la plus éloignée du Soleil ?",
+    "answers": [
+      "Uranus",
+      "Pluton",
+      "Neptune",
+      "Saturne"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel statut a été retiré à Pluton en 2006 ?",
+    "answers": [
+      "Étoile",
+      "Comète",
+      "Satellite",
+      "Planète"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Comment appelle-t-on aujourd'hui Pluton, après 2006 ?",
+    "answers": [
+      "Astéroïde",
+      "Comète",
+      "Planète naine",
+      "Exoplanète"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle ceinture d'astéroïdes se situe entre Mars et Jupiter ?",
+    "answers": [
+      "La ceinture de Kuiper",
+      "La ceinture de Van Allen",
+      "Le nuage d'Oort",
+      "La ceinture principale d'astéroïdes"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle région glacée se trouve au-delà de l'orbite de Neptune ?",
+    "answers": [
+      "La ceinture principale",
+      "Le nuage de Magellan",
+      "La ceinture de Kuiper",
+      "L'héliosphère"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Comment appelle-t-on un objet céleste composé de glace et de poussière qui développe une queue près du Soleil ?",
+    "answers": [
+      "Un astéroïde",
+      "Un quasar",
+      "Un météore",
+      "Une comète"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Comment appelle-t-on une roche spatiale qui traverse l'atmosphère et brûle (« étoile filante ») ?",
+    "answers": [
+      "Une comète",
+      "Un astéroïde",
+      "Un météore",
+      "Une météorite"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Comment appelle-t-on un fragment de roche spatiale qui atteint le sol terrestre ?",
+    "answers": [
+      "Une météorite",
+      "Un météore",
+      "Un astéroïde",
+      "Une comète"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle agence spatiale américaine gère les missions Apollo et les programmes spatiaux US ?",
+    "answers": [
+      "ESA",
+      "SpaceX",
+      "Roscosmos",
+      "NASA"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle agence spatiale européenne coordonne les missions spatiales de l'UE ?",
+    "answers": [
+      "NASA",
+      "JAXA",
+      "ESA",
+      "CNSA"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle entreprise privée américaine fondée par Elon Musk développe des fusées réutilisables ?",
+    "answers": [
+      "Blue Origin",
+      "Boeing",
+      "Virgin Galactic",
+      "SpaceX"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel télescope spatial, lancé en 1990, a révolutionné l'astronomie ?",
+    "answers": [
+      "Le télescope Kepler",
+      "Le télescope James Webb",
+      "Le télescope Hubble",
+      "Le télescope Spitzer"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel télescope spatial, successeur de Hubble, a été lancé en décembre 2021 ?",
+    "answers": [
+      "Le télescope James Webb",
+      "Le télescope Chandra",
+      "Le télescope Kepler",
+      "Le télescope Gaia"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle station spatiale, dont le premier module a été lancé en 1998, est habitée en permanence depuis l'an 2000 ?",
+    "answers": [
+      "Mir",
+      "Tiangong",
+      "Skylab",
+      "La Station spatiale internationale (ISS)"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle était la première station spatiale soviétique, lancée en 1971 ?",
+    "answers": [
+      "Saliout 1",
+      "Mir",
+      "Tiangong",
+      "Skylab"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel est le nom de la station spatiale chinoise en orbite ?",
+    "answers": [
+      "Tiangong",
+      "Shenzhou",
+      "Chang'e",
+      "Tianwen"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Combien de temps la Terre met-elle pour faire un tour complet sur elle-même ?",
+    "answers": [
+      "12 heures",
+      "48 heures",
+      "24 heures",
+      "365 jours"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Combien de temps la Terre met-elle pour faire le tour du Soleil ?",
+    "answers": [
+      "1 mois",
+      "6 mois",
+      "1 an",
+      "2 ans"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel phénomène se produit quand la Lune passe exactement entre le Soleil et la Terre et masque le Soleil ?",
+    "answers": [
+      "Une éclipse lunaire",
+      "Un équinoxe",
+      "Une pleine lune",
+      "Une éclipse solaire"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel phénomène se produit quand la Terre passe entre le Soleil et la Lune ?",
+    "answers": [
+      "Une éclipse lunaire",
+      "Une éclipse solaire",
+      "Un équinoxe",
+      "Un solstice"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Comment appelle-t-on le jour le plus long de l'année dans l'hémisphère nord ?",
+    "answers": [
+      "L'équinoxe de printemps",
+      "L'équinoxe d'automne",
+      "Le solstice d'été",
+      "Le solstice d'hiver"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Comment appelle-t-on les jours où le jour et la nuit ont la même durée ?",
+    "answers": [
+      "Les solstices",
+      "Les aphélies",
+      "Les périhélies",
+      "Les équinoxes"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle planète est souvent appelée « l'étoile du berger » car visible à l'aube/au crépuscule ?",
+    "answers": [
+      "Vénus",
+      "Mars",
+      "Mercure",
+      "Jupiter"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel gaz compose principalement le Soleil ?",
+    "answers": [
+      "L'oxygène",
+      "L'azote",
+      "L'hydrogène",
+      "Le carbone"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel type d'étoile deviendra notre Soleil en fin de vie ?",
+    "answers": [
+      "Une supernova",
+      "Une étoile à neutrons",
+      "Un trou noir",
+      "Une naine blanche"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle mission a envoyé le premier rover sur Mars en 1997 ?",
+    "answers": [
+      "Pathfinder (Sojourner)",
+      "Viking",
+      "Curiosity",
+      "Spirit"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel rover de la NASA explore Mars depuis 2012 ?",
+    "answers": [
+      "Opportunity",
+      "Perseverance",
+      "Curiosity",
+      "Spirit"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel rover de la NASA, arrivé en 2021, cherche des traces de vie passée sur Mars ?",
+    "answers": [
+      "Curiosity",
+      "Spirit",
+      "Sojourner",
+      "Perseverance"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle sonde a survolé Pluton pour la première fois en 2015 ?",
+    "answers": [
+      "New Horizons",
+      "Voyager 1",
+      "Cassini",
+      "Juno"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle sonde a exploré Saturne et ses lunes pendant 13 ans jusqu'en 2017 ?",
+    "answers": [
+      "Galileo",
+      "Juno",
+      "Cassini",
+      "Voyager 2"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle sonde étudie Jupiter depuis 2016 ?",
+    "answers": [
+      "Galileo",
+      "Cassini",
+      "Juno",
+      "New Horizons"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelles sondes jumelles lancées en 1977 ont quitté le système solaire ?",
+    "answers": [
+      "Pioneer 10 et 11",
+      "Viking 1 et 2",
+      "Mariner 9 et 10",
+      "Voyager 1 et 2"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Comment appelle-t-on une planète qui orbite autour d'une étoile autre que le Soleil ?",
+    "answers": [
+      "Une exoplanète",
+      "Une planète naine",
+      "Un satellite",
+      "Une comète"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel télescope spatial de la NASA a été spécialement conçu pour détecter des exoplanètes ?",
+    "answers": [
+      "Kepler",
+      "Hubble",
+      "Spitzer",
+      "Chandra"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Comment appelle-t-on la zone autour d'une étoile où l'eau liquide pourrait exister sur une planète ?",
+    "answers": [
+      "La zone d'ombre",
+      "La ceinture de radiation",
+      "La zone habitable",
+      "L'héliopause"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel événement cosmique a donné naissance à l'univers selon la théorie dominante ?",
+    "answers": [
+      "Le Big Crunch",
+      "La singularité éternelle",
+      "L'inflation cosmique seule",
+      "Le Big Bang"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel âge approximatif attribue-t-on à l'univers ?",
+    "answers": [
+      "Environ 13,8 milliards d'années",
+      "Environ 4,5 milliards d'années",
+      "Environ 100 milliards d'années",
+      "Environ 1 milliard d'années"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel âge approximatif attribue-t-on au système solaire ?",
+    "answers": [
+      "Environ 4,6 milliards d'années",
+      "Environ 13,8 milliards d'années",
+      "Environ 1 milliard d'années",
+      "Environ 500 millions d'années"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Comment appelle-t-on la matière invisible qui représenterait la majorité de la masse de l'univers ?",
+    "answers": [
+      "L'antimatière",
+      "L'énergie sombre",
+      "La matière noire",
+      "Le plasma cosmique"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Comment appelle-t-on l'énergie responsable de l'expansion accélérée de l'univers ?",
+    "answers": [
+      "L'énergie noire",
+      "L'énergie nucléaire",
+      "L'énergie de fusion",
+      "L'énergie gravitationnelle"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle est l'unité utilisée pour mesurer les distances astronomiques basée sur la vitesse de la lumière ?",
+    "answers": [
+      "Le kilomètre",
+      "Le parsec seul",
+      "L'unité astronomique",
+      "L'année-lumière"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle unité de distance correspond à la distance moyenne Terre-Soleil ?",
+    "answers": [
+      "L'année-lumière",
+      "L'unité astronomique (UA)",
+      "Le parsec",
+      "Le mégaparsec"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel astronaute américain a orbité la Terre trois fois en 1962, une première pour les USA ?",
+    "answers": [
+      "Alan Shepard",
+      "John Glenn",
+      "Gus Grissom",
+      "Scott Carpenter"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle a été la première femme dans l'espace, en 1963 ?",
+    "answers": [
+      "Sally Ride",
+      "Valentina Terechkova",
+      "Mae Jemison",
+      "Svetlana Savitskaïa"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle a été la première femme américaine dans l'espace ?",
+    "answers": [
+      "Sally Ride",
+      "Valentina Terechkova",
+      "Eileen Collins",
+      "Christa McAuliffe"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle mission spatiale américaine a connu une explosion à bord mais est revenue saine et sauve en 1970 ?",
+    "answers": [
+      "Apollo 1",
+      "Apollo 11",
+      "Apollo 13",
+      "Apollo 17"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle navette spatiale américaine a explosé au décollage en 1986 ?",
+    "answers": [
+      "Discovery",
+      "Challenger",
+      "Columbia",
+      "Atlantis"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle navette spatiale américaine s'est désintégrée lors de sa rentrée atmosphérique en 2003 ?",
+    "answers": [
+      "Challenger",
+      "Columbia",
+      "Endeavour",
+      "Discovery"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel spationaute français a été le premier à voler à bord de la navette américaine en 1985 ?",
+    "answers": [
+      "Jean-Loup Chrétien",
+      "Patrick Baudry",
+      "Claudie Haigneré",
+      "Michel Tognini"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle astronaute française a été la première femme française dans l'espace ?",
+    "answers": [
+      "Claudie Haigneré",
+      "Sophie Adenot",
+      "Valentina Terechkova",
+      "Anne McClain"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel cosmodrome kazakh est utilisé par la Russie pour lancer ses fusées habitées ?",
+    "answers": [
+      "Baïkonour",
+      "Plessetsk",
+      "Kourou",
+      "Vostotchny"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel port spatial européen, situé en Guyane française, lance les fusées Ariane ?",
+    "answers": [
+      "Cap Canaveral",
+      "Kourou",
+      "Baïkonour",
+      "Wallops Island"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle base américaine est célèbre pour les lancements de fusées en Floride ?",
+    "answers": [
+      "Vandenberg",
+      "Cap Canaveral",
+      "Edwards",
+      "White Sands"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel programme spatial américain a précédé les missions Apollo, testant le rendez-vous orbital ?",
+    "answers": [
+      "Mercury",
+      "Gemini",
+      "Skylab",
+      "Orion"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel premier programme spatial habité américain a envoyé Alan Shepard dans l'espace en 1961 ?",
+    "answers": [
+      "Mercury",
+      "Gemini",
+      "Apollo",
+      "Skylab"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel programme actuel de la NASA vise à ramener des humains sur la Lune ?",
+    "answers": [
+      "Artemis",
+      "Orion seul",
+      "Constellation",
+      "Ares"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle capsule spatiale de SpaceX transporte des astronautes vers l'ISS depuis 2020 ?",
+    "answers": [
+      "Starship",
+      "Crew Dragon",
+      "Falcon",
+      "Orion"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel est le nom de la fusée super-lourde développée par SpaceX pour Mars ?",
+    "answers": [
+      "Falcon Heavy",
+      "Starship",
+      "Saturn V",
+      "New Glenn"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle fusée américaine a propulsé les missions Apollo vers la Lune ?",
+    "answers": [
+      "Falcon 9",
+      "Saturn V",
+      "Atlas V",
+      "Delta IV"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle constellation contient l'étoile polaire, utilisée pour s'orienter vers le nord ?",
+    "answers": [
+      "La Grande Ourse",
+      "La Petite Ourse",
+      "Orion",
+      "Cassiopée"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle constellation est facilement reconnaissable grâce à sa « ceinture » de trois étoiles alignées ?",
+    "answers": [
+      "La Grande Ourse",
+      "Orion",
+      "Cassiopée",
+      "Le Cygne"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est l'étoile la plus brillante du ciel nocturne (hors Soleil) ?",
+    "answers": [
+      "Polaris",
+      "Sirius",
+      "Bételgeuse",
+      "Véga"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle géante rouge, dans la constellation d'Orion, pourrait exploser en supernova un jour ?",
+    "answers": [
+      "Rigel",
+      "Bételgeuse",
+      "Aldébaran",
+      "Antarès"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Comment appelle-t-on une étoile extrêmement dense, résidu d'une supernova ?",
+    "answers": [
+      "Une naine blanche",
+      "Une étoile à neutrons",
+      "Une géante rouge",
+      "Une protoétoile"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Qu'est-ce qu'un pulsar ?",
+    "answers": [
+      "Une étoile à neutrons en rotation rapide émettant des impulsions",
+      "Une planète gazeuse",
+      "Un type de comète",
+      "Une galaxie naine"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Comment appelle-t-on une région de l'espace dont rien, pas même la lumière, ne peut s'échapper ?",
+    "answers": [
+      "Une nébuleuse",
+      "Un trou noir",
+      "Un quasar",
+      "Un amas globulaire"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Comment appelle-t-on un nuage de gaz et de poussière dans l'espace, souvent berceau d'étoiles ?",
+    "answers": [
+      "Une nébuleuse",
+      "Un amas ouvert",
+      "Une galaxie naine",
+      "Une ceinture d'astéroïdes"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel physicien britannique a beaucoup contribué à la vulgarisation des trous noirs ?",
+    "answers": [
+      "Roger Penrose",
+      "Stephen Hawking",
+      "Brian Cox",
+      "Carl Sagan"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel astrophysicien et vulgarisateur américain a présenté la série « Cosmos » dans les années 1980 ?",
+    "answers": [
+      "Neil deGrasse Tyson",
+      "Carl Sagan",
+      "Brian Greene",
+      "Michio Kaku"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel astrophysicien américain contemporain a repris et modernisé la série « Cosmos » ?",
+    "answers": [
+      "Neil deGrasse Tyson",
+      "Carl Sagan",
+      "Bill Nye",
+      "Brian Cox"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle planète met plus de temps à tourner sur elle-même qu'à faire le tour du Soleil ?",
+    "answers": [
+      "Mars",
+      "Vénus",
+      "Jupiter",
+      "Saturne"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle planète tourne « sur le côté » avec un axe très incliné ?",
+    "answers": [
+      "Neptune",
+      "Uranus",
+      "Saturne",
+      "Mars"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle planète possède la fameuse « Grande Tache Rouge », une tempête géante ?",
+    "answers": [
+      "Saturne",
+      "Jupiter",
+      "Neptune",
+      "Mars"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel satellite naturel de Neptune est géologiquement actif et probablement capturé ?",
+    "answers": [
+      "Triton",
+      "Charon",
+      "Titan",
+      "Io"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Comment s'appelle la plus grande lune de Pluton ?",
+    "answers": [
+      "Charon",
+      "Nix",
+      "Hydre",
+      "Styx"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle lune de Jupiter est célèbre pour son océan souterrain potentiel sous la glace ?",
+    "answers": [
+      "Io",
+      "Europe",
+      "Amalthée",
+      "Himalia"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle lune de Saturne possède des geysers de glace émanant de son pôle sud ?",
+    "answers": [
+      "Titan",
+      "Encelade",
+      "Mimas",
+      "Japet"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle lune de Saturne possède une atmosphère dense et des lacs de méthane liquide ?",
+    "answers": [
+      "Encelade",
+      "Titan",
+      "Rhéa",
+      "Téthys"
+    ],
+    "correct": 1
+  }
 ]
