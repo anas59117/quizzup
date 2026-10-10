@@ -1059,17 +1059,31 @@ button.topic-level-row:hover { border-color:var(--border-strong); }
 .shop-earn-track span { display:block; height:100%; background:var(--accent); }
 .shop-play-link { display:flex; align-items:center; justify-content:space-between; width:100%; margin-top:11px; padding:8px 0; border:0; border-bottom:1px solid var(--border-strong); background:transparent; color:var(--text); font-size:.78rem; font-weight:800; cursor:pointer; text-align:left; }
 .shop-play-link:disabled { opacity:.5; cursor:not-allowed; }
-.shop-picker { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:12px 0 28px; }
-.shop-pick { --identity-accent:#e6e2df; display:flex; align-items:center; gap:10px; min-width:0; min-height:67px; padding:8px 12px; border:1px solid var(--border); border-radius:6px; background:var(--surface); color:var(--text); text-align:left; cursor:pointer; }
-.shop-pick.selected { border-color:var(--accent); box-shadow:inset 3px 0 0 var(--accent); }
-.shop-pick:hover { border-color:var(--border-strong); }
-.shop-pick-number { display:grid; flex:0 0 40px; place-items:center; align-self:stretch; border:1px solid var(--identity-accent); background:var(--identity-bg,#1d1d20); color:var(--identity-accent); font-size:1.05rem; font-weight:900; }
-.shop-pick-copy { display:flex; flex:1; flex-direction:column; min-width:0; gap:2px; }
+.shop-picker { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin:12px 0 28px; }
+.shop-pick { display:block; min-width:0; padding:0 3px 6px; border:0; border-radius:6px; background:transparent; color:var(--text); text-align:left; cursor:pointer; }
+.shop-pick .identity-card.identity-card-collection { margin-top:40px; min-height:205px; transition:box-shadow .18s ease; }
+.shop-pick .identity-card-collection > .identity-emblem { top:-43px; width:92px; height:69px; }
+.shop-pick .identity-card-top { padding:28px 14px 0; font-size:.46rem; letter-spacing:.12em; }
+.shop-pick .identity-card-art { min-height:74px; }
+.shop-pick .identity-card-number { left:8px; top:-36px; font-size:8rem; }
+.shop-pick .identity-card-mark { font-size:6rem; top:-6px; }
+.shop-pick .identity-card-avatar { width:54px; height:54px; top:9px; right:28%; }
+.shop-pick .identity-card-avatar svg { width:34px; height:34px; }
+.shop-pick .identity-card-footer { display:block; padding:0 14px 15px; }
+.shop-pick .identity-card-meta { font-size:.48rem; letter-spacing:.1em; gap:4px; }
+.shop-pick .identity-card-name { font-size:clamp(1.05rem,4.5vw,1.8rem); }
+.shop-pick .identity-card-line { display:none; }
+.shop-pick.selected .identity-card { outline:2px solid var(--accent); outline-offset:4px; }
+.shop-pick:hover .identity-card { box-shadow:0 8px 24px rgba(0,0,0,.25); }
+.shop-pick:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+.shop-pick-copy { display:grid; grid-template-columns:1fr auto; align-items:center; gap:2px 8px; padding:12px 2px 0; }
 .shop-pick-copy strong { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:.82rem; }
-.shop-pick-copy small { color:var(--text-dim); font-size:.68rem; }
-.shop-pick > .icon { color:var(--text-faint); }
+.shop-pick-copy small { grid-column:1; color:var(--text-dim); font-size:.72rem; }
+.shop-pick-copy > .icon { grid-column:2; grid-row:1/3; color:var(--text-faint); }
+.shop-pick.selected .shop-pick-copy > .icon { color:var(--accent); }
+@media (max-width:390px) { .shop-picker { gap:14px 10px; } .shop-pick .identity-card-top span:first-child { display:none; } .shop-pick .identity-card-collection { min-height:185px; } .shop-pick .identity-card-meta { font-size:.42rem; } }
 @media (max-width:600px) { .shop-feature { grid-template-columns:1fr; } .identity-card-shop { min-height:270px; } .shop-feature-details { display:grid; grid-template-columns:1fr auto; align-items:center; column-gap:12px; } .shop-feature-kicker,.shop-feature-details h3,.shop-feature-details p { grid-column:1; } .shop-feature-details p { margin-bottom:0; } .shop-feature-actions { grid-column:2; grid-row:1/4; width:132px; } .shop-earn { grid-column:1/-1; } }
-@media (max-width:390px) { .shop-picker { grid-template-columns:1fr; } .shop-feature-details { display:flex; align-items:stretch; } .shop-feature-details p { margin-bottom:12px; } .shop-feature-actions { width:auto; } }
+@media (max-width:390px) { .shop-feature-details { display:flex; align-items:stretch; } .shop-feature-details p { margin-bottom:12px; } .shop-feature-actions { width:auto; } }
 /* Raised ornaments sit outside the frame; internal artwork remains clipped. */
 .identity-card.has-emblem { overflow:visible; margin-top:54px; }
 .identity-card.has-emblem .identity-card-top { padding-top:34px; }

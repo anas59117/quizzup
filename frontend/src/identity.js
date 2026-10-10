@@ -35,24 +35,26 @@ function AvatarGlyph({ avatar }) {
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{shapes[avatar] || <path d="M5 19V5h9a5 5 0 0 1 0 10H5m9 0 5 4"/>}</svg>;
 }
 
-export function IdentityCard({ frame, avatar, name, level, className = '' }) {
+export function IdentityCard({ frame, avatar, name, level, className = '', compact = false }) {
   const { lang, t } = useI18n();
   const id = identityFor(frame);
   const item = IDENTITIES[id];
+  const Card = compact ? 'span' : 'article';
+  const Box = compact ? 'span' : 'div';
   return (
-    <article className={`identity-card identity-${id} ${hasEmblem(id) ? 'has-emblem' : ''} ${className}`.trim()} aria-label={`${name || t('you')} · ${lang === 'en' ? item.en : item.fr}`}>
+    <Card className={`identity-card identity-${id} ${hasEmblem(id) ? 'has-emblem' : ''} ${className}`.trim()} aria-hidden={compact || undefined} aria-label={compact ? undefined : `${name || t('you')} · ${lang === 'en' ? item.en : item.fr}`}>
       <IdentityEmblem frame={id} />
-      <div className="identity-card-top" aria-hidden="true"><span>QUIZZUP / PLAYER</span><span>{item.number}—08</span></div>
-      <div className="identity-card-art" aria-hidden="true">
+      <Box className="identity-card-top" aria-hidden="true"><span>QUIZZUP / PLAYER</span><span>{item.number}—08</span></Box>
+      <Box className="identity-card-art" aria-hidden="true">
         <span className="identity-card-number">{item.number}</span>
         <span className="identity-card-mark">{item.mark}</span>
         <span className="identity-card-avatar"><AvatarGlyph avatar={avatar} /></span>
-      </div>
-      <div className="identity-card-footer">
-        <div className="identity-card-meta"><span>{lang === 'en' ? item.en : item.fr}</span>{level != null && <span>{t('level')} {level}</span>}</div>
+      </Box>
+      <Box className="identity-card-footer">
+        <Box className="identity-card-meta"><span>{lang === 'en' ? item.en : item.fr}</span>{level != null && <span>{t('level')} {level}</span>}</Box>
         <strong className="identity-card-name">{name || t('you')}</strong>
         <small className="identity-card-line">{lang === 'en' ? item.lineEn : item.lineFr}</small>
-      </div>
-    </article>
+      </Box>
+    </Card>
   );
 }
