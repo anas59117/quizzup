@@ -17,12 +17,14 @@ import { OnboardingOverlay, useOnboarding } from './OnboardingOverlay';
 import { useDailyStreak } from './DailyStreak';
 import { ChallengeReceiver } from './ChallengeLink';
 import { useNotifications, NotificationContainer } from './NotificationSystem';
+import { useAdSystem, AdRewardsPanel } from './AdSystem';
+import { useSeasonPass, SeasonPassPanel } from './SeasonPass';
 import { FriendsScreen } from './social';
 import { LeagueContent, useLeague } from './LeagueSystem';
 
 const LIVE_SESSION_KEY = 'quizzup-live-session';
 const HISTORY_KEY = 'quizzup';
-const BROWSABLE_STAGES = new Set(['home', 'feed', 'categories', 'profile', 'leaderboard', 'enter_code', 'shop', 'friends', 'league']);
+const BROWSABLE_STAGES = new Set(['home', 'feed', 'categories', 'profile', 'leaderboard', 'enter_code', 'shop', 'friends', 'league', 'seasonpass']);
 const SESSION_STAGES = new Set(['waiting', 'room_wait', 'playing', 'finished', 'error']);
 
 function browserLocation(stage, family) {
@@ -212,6 +214,15 @@ export default function App() {
   const social = useSocial(wsRef);
   const league = useLeague();
   const { notifications, notify, removeNotification } = useNotifications();
+  const adSystem = useAdSystem();
+  const seasonPass = useSeasonPass();
+
+  const handleAdReward = useCallback((coins, xp) => {
+    const newCoins = (statsHook.stats.coins || 0) + coins;
+    statsHook.handleStatsMessage({ stats: { coins: newCoins } });
+    seasonPass.addPassXP(xp);
+    notify(`+${coins} coins +${xp} XP!`, 'success');
+  }, [statsHook.stats.coins, statsHook.handleStatsMessage, seasonPass.addPassXP, notify]);
   const statsHook = useStats();
   const feed = useFeed(wsRef);
   const players = usePlayers(wsRef);
@@ -965,6 +976,7 @@ export default function App() {
           onStartTournament={() => setStage('tournament')}
           onOpenFriends={() => setStage('friends')}
           onOpenLeague={() => setStage('league')}
+          onOpenSeasonPass={() => setStage('seasonpass')}
           pending={pending}
         />
         <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
@@ -1112,6 +1124,21 @@ export default function App() {
     return (
       <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <LeagueContent league={league} onBack={() => setStage('home')} t={t} />
+        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
+      </div>);
+  }
+
+  if (stage === 'seasonpass') {
+    return (
+      <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+        <div className="container seasonpass-page">
+          <div className="sp-page-header">
+            <button className="sp-back" onClick={() => setStage('home')}>←</button>
+            <h2>🎯 {t('seasonPass')}</h2>
+          </div>
+          <SeasonPassPanel pass={seasonPass} onClaim={(lvl) => { seasonPass.claimReward(lvl); notify(t('rewardClaimed'), 'success'); }} t={t} />
+          <AdRewardsPanel adSystem={adSystem} onReward={handleAdReward} t={t} />
+        </div>
         <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);
   }
