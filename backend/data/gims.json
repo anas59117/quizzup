@@ -42,12 +42,12 @@
   {
     "text": "Quel album de Gims est sorti en 2015 ?",
     "answers": [
-      "Subliminal",
       "Mon cœur avait raison",
+      "Subliminal",
       "Ceinture noire",
       "Le Fléau"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "Quel album de Gims est sorti en 2017 ?",
@@ -72,32 +72,32 @@
   {
     "text": "Quel album de Gims est sorti en 2022 ?",
     "answers": [
-      "Le Fléau",
       "Les dernières volontés de Mozart",
+      "Le Fléau",
       "Ceinture noire",
       "Subliminal"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "Sur quel album figure « Bella » ?",
     "answers": [
       "Mon cœur avait raison",
-      "Subliminal",
       "Ceinture noire",
+      "Subliminal",
       "Le Fléau"
     ],
-    "correct": 1
+    "correct": 2
   },
   {
     "text": "Sur quel album figure « J'me tire » ?",
     "answers": [
       "Ceinture noire",
-      "Subliminal",
+      "Le Fléau",
       "Mon cœur avait raison",
-      "Le Fléau"
+      "Subliminal"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Sur quel album figure « Est-ce que tu m'aimes ? » ?",

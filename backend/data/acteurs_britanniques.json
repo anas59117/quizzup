@@ -2,22 +2,22 @@
   {
     "text": "Dans quelle ville est né Daniel Day-Lewis ?",
     "answers": [
-      "Londres",
-      "Grayshott",
       "Margam au pays de Galles",
+      "Grayshott",
+      "Londres",
       "Los Angeles, puis élevé au Royaume-Uni"
     ],
-    "correct": 0
+    "correct": 2
   },
   {
     "text": "Quel rôle est interprété par Daniel Day-Lewis ?",
     "answers": [
       "Alan Turing",
-      "Daniel Plainview",
+      "Solomon Northup",
       "Max Rockatansky",
-      "Solomon Northup"
+      "Daniel Plainview"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Dans quel film joue Daniel Day-Lewis ?",
@@ -709,7 +709,7 @@
     "difficulty": "hard"
   },
   {
-    "text": "Quel roi shakespearien Patrick Stewart interprète-t-il dans une adaptation télévisée de 2010 située dans un univers contemporain ?",
+    "text": "Quel roi shakespearien Patrick Stewart joue-t-il dans un téléfilm de 2010 ?",
     "answers": [
       "Richard II",
       "Henri V",

@@ -12,12 +12,12 @@
   {
     "text": "Quel est le surnom de Manchester City ?",
     "answers": [
-      "Les Citizens",
       "Les Red Devils",
+      "Les Citizens",
       "Les Toffees",
       "Les Gunners"
     ],
-    "correct": 0
+    "correct": 1
   },
   {
     "text": "Quelle couleur est associée à Manchester City ?",
@@ -34,20 +34,20 @@
     "answers": [
       "Liverpool",
       "Everton",
-      "Leeds United",
-      "Manchester United"
+      "Manchester United",
+      "Leeds United"
     ],
-    "correct": 3
+    "correct": 2
   },
   {
     "text": "Quel entraîneur catalan dirige Manchester City depuis 2016 ?",
     "answers": [
       "Xavi",
       "Luis Enrique",
-      "Rafael Benítez",
-      "Pep Guardiola"
+      "Pep Guardiola",
+      "Rafael Benítez"
     ],
-    "correct": 3
+    "correct": 2
   },
   {
     "text": "En quelle année Manchester City a-t-il remporté sa première Ligue des champions ?",
