@@ -7,7 +7,7 @@
 
   {"text":"Que saisit-on généralement dans un navigateur pour atteindre une page précise ?","answers":["Un IMEI","Une URL","Un SSID","Un codec"],"correct":1,"difficulty":"facile"},
   {"text":"Quel protocole est principalement utilisé pour transférer les pages web ?","answers":["SMTP","Bluetooth","HTTP","NTP"],"correct":2,"difficulty":"moyen"},
-  {"text":"Quelle partie de https://example.com indique que la connexion web utilise TLS ?","answers":["example",".com","Les deux barres obliques","https"],"correct":3,"difficulty":"difficile"},
+  {"text":"Quel préfixe d'URL indique une connexion chiffrée par TLS ?","answers":["example",".com","Les deux barres obliques","https"],"correct":3,"difficulty":"difficile"},
   {"text":"Quel code HTTP signifie généralement que la ressource demandée est introuvable ?","answers":["404","200","301","500"],"correct":0,"difficulty":"difficile"},
   {"text":"Quel code HTTP signale une redirection permanente ?","answers":["201","301","403","503"],"correct":1,"difficulty":"expert"},
 
@@ -27,9 +27,9 @@
   {"text":"Quelle plateforme de vidéos a été créée en 2005 puis rachetée par Google ?","answers":["Vimeo","YouTube","Dailymotion","Twitch"],"correct":1,"difficulty":"moyen"},
   {"text":"Quel réseau professionnel a été lancé en 2003 ?","answers":["Pinterest","Tumblr","LinkedIn","Snapchat"],"correct":2,"difficulty":"difficile"},
   {"text":"Quel service de microblogging a utilisé dès ses débuts une limite de 140 caractères ?","answers":["Mastodon","Threads","Tumblr","Twitter"],"correct":3,"difficulty":"difficile"},
-  {"text":"Quel site communautaire fondé en 2005 organise ses discussions en subreddits ?","answers":["Reddit","Flickr","Myspace","Orkut"],"correct":0,"difficulty":"expert"},
+  {"text":"Quel site lancé en 2005 regroupe des forums thématiques ?","answers":["Reddit","Flickr","Myspace","Orkut"],"correct":0,"difficulty":"expert"},
 
-  {"text":"Quelle plateforme est principalement centrée sur le partage de photos et de vidéos et a été rachetée par Facebook en 2012 ?","answers":["Pinterest","Instagram","Vine","Flickr"],"correct":1,"difficulty":"facile"},
+  {"text":"Quelle plateforme de photos et vidéos Facebook a-t-il rachetée en 2012 ?","answers":["Pinterest","Instagram","Vine","Flickr"],"correct":1,"difficulty":"facile"},
   {"text":"Quelle application popularise les vidéos verticales courtes avec un fil For You ?","answers":["Signal","Discord","TikTok","Telegram"],"correct":2,"difficulty":"moyen"},
   {"text":"Quelle plateforme acquise par Amazon en 2014 est spécialisée dans le streaming en direct ?","answers":["Kick","YouTube Music","Vimeo","Twitch"],"correct":3,"difficulty":"difficile"},
   {"text":"Quel réseau social a été fondé par Evan Spiegel, Bobby Murphy et Reggie Brown ?","answers":["Snapchat","Pinterest","LinkedIn","Reddit"],"correct":0,"difficulty":"difficile"},
@@ -45,7 +45,7 @@
   {"text":"Quel principe consiste à ne collecter que les données réellement nécessaires ?","answers":["La minimisation des données","La viralité","Le référencement","La syndication"],"correct":0,"difficulty":"moyen"},
   {"text":"Quel règlement européen encadre notamment le traitement des données personnelles depuis 2018 ?","answers":["DMA uniquement","RGPD","DMCA","COPPA"],"correct":1,"difficulty":"difficile"},
   {"text":"Quel fichier déposé par un site peut mémoriser une session dans le navigateur ?","answers":["Un paquet IP","Un certificat racine","Un cookie","Un pixel physique"],"correct":2,"difficulty":"difficile"},
-  {"text":"Quelle technique remplace un identifiant direct par un pseudonyme tout en permettant une réidentification avec des informations séparées ?","answers":["L'anonymisation irréversible","La compression","Le chiffrement homomorphe","La pseudonymisation"],"correct":3,"difficulty":"expert"},
+  {"text":"Quelle technique remplace un identifiant par un pseudonyme réversible sous conditions ?","answers":["L'anonymisation irréversible","La compression","Le chiffrement homomorphe","La pseudonymisation"],"correct":3,"difficulty":"expert"},
 
   {"text":"Quel terme désigne une information fausse diffusée volontairement pour tromper ?","answers":["La désinformation","Le référencement","La modération","La compression"],"correct":0,"difficulty":"facile"},
   {"text":"Quelle vérification simple aide à évaluer une image virale douteuse ?","answers":["Augmenter sa luminosité","Faire une recherche d'image inversée","La convertir en PDF","La republier"],"correct":1,"difficulty":"moyen"},
@@ -72,7 +72,7 @@
   {"text":"Quel système combine souvent filtres automatisés et examen humain pour appliquer des règles à grande échelle ?","answers":["Un moteur de rendu","Un registre de domaine","Un CDN","Une modération hybride"],"correct":3,"difficulty":"expert"},
 
   {"text":"Quelle application appartenant à Meta est connue pour la messagerie chiffrée de bout en bout ?","answers":["WhatsApp","Pinterest","Reddit","LinkedIn"],"correct":0,"difficulty":"facile"},
-  {"text":"Quel service de messagerie open source est développé par une fondation à but non lucratif et met l'accent sur la confidentialité ?","answers":["Messenger","Signal","Snapchat","Teams"],"correct":1,"difficulty":"moyen"},
+  {"text":"Quelle messagerie open source, gérée par une fondation, met l'accent sur la confidentialité ?","answers":["Messenger","Signal","Snapchat","Teams"],"correct":1,"difficulty":"moyen"},
   {"text":"Dans un chiffrement de bout en bout, qui possède normalement les clés permettant de lire le contenu ?","answers":["Le fournisseur d'accès uniquement","La plateforme publicitaire","Les participants à la conversation","Le registre de domaine"],"correct":2,"difficulty":"difficile"},
   {"text":"Quelle application organise de nombreuses communautés en serveurs et salons textuels ou vocaux ?","answers":["Pinterest","Medium","Substack","Discord"],"correct":3,"difficulty":"difficile"},
   {"text":"Quel protocole ouvert de messagerie fédérée utilise notamment des homeservers ?","answers":["Matrix","FTP","BGP","WebDAV"],"correct":0,"difficulty":"expert"},
@@ -92,7 +92,7 @@
   {"text":"Comment appelle-t-on le nom public choisi par un utilisateur sur une plateforme ?","answers":["Un port","Un paquet","Un certificat","Un pseudonyme"],"correct":3,"difficulty":"facile"},
   {"text":"Quel symbole précède souvent un nom de compte mentionné dans une publication ?","answers":["@","#","%","&"],"correct":0,"difficulty":"moyen"},
   {"text":"Quel terme désigne l'ensemble des traces laissées par une personne en ligne ?","answers":["Son cache navigateur","Son empreinte numérique","Son masque réseau","Son bitrate"],"correct":1,"difficulty":"difficile"},
-  {"text":"Quelle pratique consiste à publier des informations privées permettant d'identifier ou localiser quelqu'un sans son consentement ?","answers":["Le bookmarking","Le podcasting","Le doxxing","Le peering"],"correct":2,"difficulty":"difficile"},
+  {"text":"Comment s'appelle la publication de données privées d'une personne sans son accord ?","answers":["Le bookmarking","Le podcasting","Le doxxing","Le peering"],"correct":2,"difficulty":"difficile"},
   {"text":"Quel concept décrit la séparation volontaire de plusieurs identités ou contextes sociaux en ligne ?","answers":["La réplication","La fragmentation IP","La compression sans perte","Le cloisonnement identitaire"],"correct":3,"difficulty":"expert"},
 
   {"text":"Quel contenu signale généralement une collaboration commerciale rémunérée ?","answers":["Une publication sponsorisée","Une page 404","Un message chiffré","Un flux RSS"],"correct":0,"difficulty":"facile"},
@@ -115,7 +115,7 @@
 
   {"text":"Quel format permet de s'abonner aux nouvelles publications d'un site ?","answers":["PDF","PNG","EXIF","RSS"],"correct":3,"difficulty":"facile"},
   {"text":"Quel principe vise à traiter tous les flux Internet de manière non discriminatoire par les opérateurs ?","answers":["La neutralité du Net","Le droit à l'oubli","Le copyright","Le géoblocage"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel terme désigne des plateformes interconnectées mais administrées indépendamment, comme certaines instances Mastodon ?","answers":["Le métavers","La fédération","Le minage","La conteneurisation"],"correct":1,"difficulty":"difficile"},
+  {"text":"Comment s'appellent des plateformes interconnectées mais administrées indépendamment ?","answers":["Le métavers","La fédération","Le minage","La conteneurisation"],"correct":1,"difficulty":"difficile"},
   {"text":"Quel protocole fédéré est utilisé par Mastodon pour échanger des activités entre serveurs ?","answers":["BitTorrent","IRC","ActivityPub","SMB"],"correct":2,"difficulty":"difficile"},
-  {"text":"Dans l'architecture du Web, quelle propriété de HTTP signifie que chaque requête peut être traitée sans mémoire obligatoire des précédentes ?","answers":["La persistance","La récursivité","La fédération","L'absence d'état"],"correct":3,"difficulty":"expert"}
+  {"text":"Quelle propriété de HTTP permet de traiter chaque requête indépendamment des précédentes ?","answers":["La persistance","La récursivité","La fédération","L'absence d'état"],"correct":3,"difficulty":"expert"}
 ]

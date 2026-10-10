@@ -55,7 +55,7 @@
 
   {"text":"Quel système satellitaire américain est couramment utilisé pour la géolocalisation ?","answers":["Galileo","GPS","BeiDou","GLONASS"],"correct":1,"difficulty":"facile"},
   {"text":"Quel système mondial de navigation par satellite est exploité par l'Union européenne ?","answers":["GPS","QZSS","Galileo","NavIC"],"correct":2,"difficulty":"moyen"},
-  {"text":"De combien de satellites un récepteur GNSS a-t-il généralement besoin pour calculer une position 3D et corriger son horloge ?","answers":["Un","Deux","Trois","Quatre"],"correct":3,"difficulty":"difficile"},
+  {"text":"Combien de satellites faut-il généralement pour une position GNSS 3D et la correction de l'horloge ?","answers":["Un","Deux","Trois","Quatre"],"correct":3,"difficulty":"difficile"},
   {"text":"Quel effet physique impose des corrections aux horloges des satellites GPS ?","answers":["La relativité","La capillarité","La supraconductivité","La photosynthèse"],"correct":0,"difficulty":"difficile"},
   {"text":"Quel terme désigne l'utilisation simultanée de plusieurs constellations comme GPS, Galileo et GLONASS ?","answers":["Triangulation cellulaire","Multi-GNSS","Beamforming","Géorepérage"],"correct":1,"difficulty":"expert"},
 
