@@ -2,22 +2,22 @@
   {
     "text": "Quel est le nom de héros d’Izuku Midoriya ?",
     "answers": [
-      "Deku",
-      "Dynamight",
       "Shoto",
+      "Dynamight",
+      "Deku",
       "Ingenium"
     ],
-    "correct": 0
+    "correct": 2
   },
   {
     "text": "Quel pouvoir All Might transmet-il à Izuku ?",
     "answers": [
       "All For One",
-      "One For All",
+      "Effacement",
       "Explosion",
-      "Effacement"
+      "One For All"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Quel personnage correspond à cette description : élève autrefois sans Alter devenu héritier du One For All ?",
@@ -73,7 +73,7 @@
     "text": "Quelle description correspond à Katsuki Bakugo ?",
     "answers": [
       "vilain aux flammes bleues lié à la famille Todoroki",
-      "vilaine pouvant prendre l’apparence de personnes dont elle boit le sang",
+      "vilaine imitant les personnes dont elle boit le sang",
       "vilain capable de voler et transmettre des Alters",
       "élève utilisant l’Alter Explosion"
     ],
@@ -272,7 +272,7 @@
   {
     "text": "Quelle description correspond à Endeavor ?",
     "answers": [
-      "vilaine pouvant prendre l’apparence de personnes dont elle boit le sang",
+      "vilaine imitant les personnes dont elle boit le sang",
       "vilain capable de voler et transmettre des Alters",
       "criminel surnommé le Tueur de héros",
       "héros du feu devenu numéro un après All Might"
@@ -335,12 +335,12 @@
       "héros ailé contrôlant ses plumes",
       "vilain aux flammes bleues lié à la famille Todoroki",
       "chef de l’Alliance des super-vilains utilisant la Désintégration",
-      "vilaine pouvant prendre l’apparence de personnes dont elle boit le sang"
+      "vilaine imitant les personnes dont elle boit le sang"
     ],
     "correct": 1
   },
   {
-    "text": "Quel personnage correspond à cette description : vilaine pouvant prendre l’apparence de personnes dont elle boit le sang ?",
+    "text": "Quelle vilaine peut prendre l'apparence des personnes dont elle boit le sang ?",
     "answers": [
       "Shota Aizawa",
       "Endeavor",
@@ -355,7 +355,7 @@
       "élève utilisant le Lavage de cerveau",
       "élève accompagné de Dark Shadow",
       "élève utilisant des boules adhésives détachables de sa tête",
-      "vilaine pouvant prendre l’apparence de personnes dont elle boit le sang"
+      "vilaine imitant les personnes dont elle boit le sang"
     ],
     "correct": 3
   },
@@ -472,7 +472,7 @@
   {
     "text": "Quelle description correspond à Fumikage Tokoyami ?",
     "answers": [
-      "vilaine pouvant prendre l’apparence de personnes dont elle boit le sang",
+      "vilaine imitant les personnes dont elle boit le sang",
       "vilain capable de voler et transmettre des Alters",
       "criminel surnommé le Tueur de héros",
       "élève accompagné de Dark Shadow"
