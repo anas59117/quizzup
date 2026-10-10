@@ -987,46 +987,55 @@ wss.on('connection', (ws, req) => {
     if (!data || typeof data.type !== 'string') return;
     if (!limiter.check(state.playerId) || !ipLimiter.check(ip)) return;
 
-    if (data.type === 'identify') {
-      if (
-        !actionLimiters.identifySocket.check(state.playerId)
-        || !actionLimiters.identifyIp.check(ip)
-      ) {
-        game.send(ws, { type: 'auth_required', code: 'AUTH_RATE_LIMITED' });
+    try {
+      if (data.type === 'identify') {
+        if (
+          !actionLimiters.identifySocket.check(state.playerId)
+          || !actionLimiters.identifyIp.check(ip)
+        ) {
+          game.send(ws, { type: 'auth_required', code: 'AUTH_RATE_LIMITED' });
+          return;
+        }
+        await handleIdentify(ws, data, state);
         return;
       }
-      await handleIdentify(ws, data, state);
-      return;
+      if (handleSocial(ws, data, state)) return;
+      if (handleLeaderboard(ws, data, state)) return;
+      if (handleShop(ws, data, state)) return;
+      if (handleFeed(ws, data, state)) return;
+      handleGameplay(ws, data, state);
+    } catch (err) {
+      console.error(`[ws] handler error for "${data.type}":`, err);
+      game.send(ws, { type: 'error', message: 'Internal error' });
     }
-    if (handleSocial(ws, data, state)) return;
-    if (handleLeaderboard(ws, data, state)) return;
-    if (handleShop(ws, data, state)) return;
-    if (handleFeed(ws, data, state)) return;
-    handleGameplay(ws, data, state);
   });
 
   ws.on('close', () => {
-    const remainingConnections = Math.max(0, (connectionsByIp.get(ip) || 1) - 1);
-    if (remainingConnections === 0) connectionsByIp.delete(ip);
-    else connectionsByIp.set(ip, remainingConnections);
+    try {
+      const remainingConnections = Math.max(0, (connectionsByIp.get(ip) || 1) - 1);
+      if (remainingConnections === 0) connectionsByIp.delete(ip);
+      else connectionsByIp.set(ip, remainingConnections);
 
-    limiter.remove(state.playerId);
-    if (state.clientId) {
-      social.setOffline(state.clientId, ws);
-      if (!social.isOnline(state.clientId)) notifyPresence(state.clientId, false);
-    }
+      limiter.remove(state.playerId);
+      if (state.clientId) {
+        social.setOffline(state.clientId, ws);
+        if (!social.isOnline(state.clientId)) notifyPresence(state.clientId, false);
+      }
 
-    const wi = waitingPlayers.findIndex((w) => w.id === state.playerId);
-    if (wi !== -1) waitingPlayers.splice(wi, 1);
+      const wi = waitingPlayers.findIndex((w) => w.id === state.playerId);
+      if (wi !== -1) waitingPlayers.splice(wi, 1);
 
-    if (state.clientId) disconnectRoomPlayer(state.clientId, ws);
+      if (state.clientId) disconnectRoomPlayer(state.clientId, ws);
 
-    const gameId = game.playerSessions.get(state.playerId);
-    const g = gameId && game.activeGames.get(gameId);
-    if (g && g.status === 'active') {
-      game.disconnectPlayer(g, state.playerId);
-    } else if (g && g.status === 'finished' && state.clientId) {
-      game.cancelRematch(state.clientId);
+      const gameId = game.playerSessions.get(state.playerId);
+      const g = gameId && game.activeGames.get(gameId);
+      if (g && g.status === 'active') {
+        game.disconnectPlayer(g, state.playerId);
+      } else if (g && g.status === 'finished' && state.clientId) {
+        game.cancelRematch(state.clientId);
+      }
+    } catch (err) {
+      console.error('[ws] close handler error:', err);
     }
   });
 });

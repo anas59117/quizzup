@@ -239,7 +239,7 @@ async function startGame(rawPlayers, categoryKey, { withBot = false } = {}) {
       send(p.ws, {
         type: 'game_start', gameId,
         you: { name: p.name, avatar: p.avatar, frame: p.frame },
-        opponents: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, frame: o.frame, clientId: o.clientId })),
+        opponents: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, frame: o.frame })),
         totalRounds: game.questions.length,
       });
     });
@@ -676,7 +676,7 @@ function endGame(game, reason) {
       type: 'game_end', gameId: game.id, finalScore: p.score,
       solo: isSolo,
       won, tie: isTie,
-      others: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, frame: o.frame, score: o.score, clientId: o.clientId })),
+      others: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, frame: o.frame, score: o.score })),
       leaderboard: board, reason: reason || 'complete',
       coins: coinsEarned,
       xp: xpTotal,

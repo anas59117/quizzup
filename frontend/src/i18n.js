@@ -293,7 +293,7 @@ const STRINGS = {
     challengeFrom: 'Défi de',
     general: 'Général',
     challengeReceived: 'Défi reçu !',
-    challengeFromPlayer: '{{name}} t\'a défié !',
+    challengeFromPlayer: '{name} t\'a défié !',
     acceptChallenge: 'Accepter',
     decline: 'Refuser',
 
@@ -634,7 +634,7 @@ const STRINGS = {
     challengeFrom: 'Challenge from',
     general: 'General',
     challengeReceived: 'Challenge Received!',
-    challengeFromPlayer: '{{name}} challenged you!',
+    challengeFromPlayer: '{name} challenged you!',
     acceptChallenge: 'Accept',
     decline: 'Decline',
 

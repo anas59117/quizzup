@@ -828,6 +828,19 @@ export default function App() {
     });
   }, [resultGameId, adHooks]);
 
+  // Record league result once when a finished screen appears.
+  const leagueRecordedRef = useRef(null);
+  useEffect(() => {
+    if (stage !== 'finished' || !result) return;
+    const gameId = result.gameId;
+    if (leagueRecordedRef.current === gameId) return;
+    leagueRecordedRef.current = gameId;
+    const won = result.winner && result.winner.id === myId;
+    const lpChange = won ? (league.streak >= 2 ? 35 : 25) : -20;
+    league.addResult(won);
+    notify(won ? `+${lpChange} LP! 🔥` : `${lpChange} LP`, won ? 'success' : 'error');
+  }, [stage, result, myId, league, notify]);
+
   function watchAd() {
     if (typeof adOffer === 'function') adOffer();
   }
@@ -1188,14 +1201,6 @@ export default function App() {
   }
 
   if (stage === 'finished' && result) {
-    const won = result.winner && result.winner.id === myId;
-    const lpChange = won ? (league.streak >= 2 ? 35 : 25) : -20;
-    if (!window.__leagueRecorded) {
-      window.__leagueRecorded = true;
-      league.addResult(won);
-      notify(won ? `+${lpChange} LP! 🔥` : `${lpChange} LP`, won ? 'success' : 'error');
-      setTimeout(() => { window.__leagueRecorded = false; }, 500);
-    }
     return (
       <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
