@@ -1,73 +1,143 @@
 [
   {
     "text": "En quelle année le tournoi de Roland-Garros a-t-il été créé ?",
-    "answers": ["1877", "1891", "1905", "1925"],
-    "correct": 1
+    "answers": [
+      "1891",
+      "1877",
+      "1905",
+      "1925"
+    ],
+    "correct": 0
   },
   {
     "text": "En quelle année Roland-Garros s'est-il ouvert aux joueurs étrangers ?",
-    "answers": ["1918", "1925", "1928", "1930"],
-    "correct": 1
+    "answers": [
+      "1925",
+      "1918",
+      "1928",
+      "1930"
+    ],
+    "correct": 0
   },
   {
     "text": "En quelle année a débuté l'Ère Open, permettant aux professionnels de disputer Roland-Garros ?",
-    "answers": ["1960", "1965", "1968", "1972"],
-    "correct": 2
+    "answers": [
+      "1968",
+      "1965",
+      "1960",
+      "1972"
+    ],
+    "correct": 0
   },
   {
     "text": "Dans quel arrondissement de Paris se trouve le stade Roland-Garros ?",
-    "answers": ["15ème", "16ème", "7ème", "8ème"],
-    "correct": 1
+    "answers": [
+      "16ème",
+      "15ème",
+      "7ème",
+      "8ème"
+    ],
+    "correct": 0
   },
   {
     "text": "Roland-Garros a donné son nom au tournoi. Quelle était sa profession ?",
-    "answers": ["Joueur de tennis", "Aviateur", "Explorateur", "Politicien"],
-    "correct": 1
+    "answers": [
+      "Aviateur",
+      "Joueur de tennis",
+      "Explorateur",
+      "Politicien"
+    ],
+    "correct": 0
   },
   {
     "text": "Sur quelle surface se dispute le tournoi de Roland-Garros ?",
-    "answers": ["Gazon", "Dur", "Terre battue", "Moquette"],
-    "correct": 2
+    "answers": [
+      "Terre battue",
+      "Dur",
+      "Gazon",
+      "Moquette"
+    ],
+    "correct": 0
   },
   {
     "text": "En quelle année le stade Roland-Garros a-t-il été construit ?",
-    "answers": ["1920", "1925", "1928", "1934"],
-    "correct": 2
+    "answers": [
+      "1928",
+      "1925",
+      "1920",
+      "1934"
+    ],
+    "correct": 0
   },
   {
     "text": "Comment s'appelle le court central de Roland-Garros ?",
-    "answers": ["Court Suzanne-Lenglen", "Court Philippe-Chatrier", "Court Central", "Court des Mousquetaires"],
-    "correct": 1
+    "answers": [
+      "Court Philippe-Chatrier",
+      "Court Suzanne-Lenglen",
+      "Court Central",
+      "Court des Mousquetaires"
+    ],
+    "correct": 0
   },
   {
     "text": "Quel nouveau court a été inauguré à Roland-Garros en 2019 ?",
-    "answers": ["Court Suzanne-Lenglen", "Court Simonne-Mathieu", "Court des Serres", "Court n°1"],
-    "correct": 1
+    "answers": [
+      "Court Simonne-Mathieu",
+      "Court Suzanne-Lenglen",
+      "Court des Serres",
+      "Court n°1"
+    ],
+    "correct": 0
   },
   {
     "text": "Comment s'appelle le trophée remis au vainqueur du simple messieurs à Roland-Garros ?",
-    "answers": ["Coupe Suzanne-Lenglen", "Coupe des Mousquetaires", "Coupe Davis", "Coupe Yannick-Noah"],
-    "correct": 1
+    "answers": [
+      "Coupe des Mousquetaires",
+      "Coupe Suzanne-Lenglen",
+      "Coupe Davis",
+      "Coupe Yannick-Noah"
+    ],
+    "correct": 0
   },
   {
     "text": "Comment s'appelle le trophée remis à la vainqueure du simple dames à Roland-Garros ?",
-    "answers": ["Coupe des Mousquetaires", "Coupe Suzanne-Lenglen", "Coupe Amélie-Mauresmo", "Coupe Fed"],
-    "correct": 1
+    "answers": [
+      "Coupe Suzanne-Lenglen",
+      "Coupe des Mousquetaires",
+      "Coupe Amélie-Mauresmo",
+      "Coupe Fed"
+    ],
+    "correct": 0
   },
   {
     "text": "Combien de titres Rafael Nadal a-t-il remportés en simple à Roland-Garros ?",
-    "answers": ["10", "12", "14", "16"],
-    "correct": 2
+    "answers": [
+      "14",
+      "12",
+      "10",
+      "16"
+    ],
+    "correct": 0
   },
   {
     "text": "En quelle année Rafael Nadal a-t-il remporté son premier titre à Roland-Garros ?",
-    "answers": ["2003", "2004", "2005", "2006"],
-    "correct": 2
+    "answers": [
+      "2005",
+      "2004",
+      "2003",
+      "2006"
+    ],
+    "correct": 0
   },
   {
     "text": "En quelle année Rafael Nadal a-t-il remporté son 14ème et dernier titre à Roland-Garros ?",
-    "answers": ["2020", "2021", "2022", "2023"],
-    "correct": 2
+    "answers": [
+      "2022",
+      "2021",
+      "2020",
+      "2023"
+    ],
+    "correct": 0
   },
   {
     "text": "Contre qui Rafael Nadal a-t-il gagné son premier titre à Roland-Garros en 2005 ?",
@@ -76,28 +146,53 @@
   },
   {
     "text": "En quelle année Rafael Nadal a-t-il battu Casper Ruud en finale à Roland-Garros ?",
-    "answers": ["2020", "2021", "2022", "2019"],
-    "correct": 2
+    "answers": [
+      "2020",
+      "2021",
+      "2019",
+      "2022"
+    ],
+    "correct": 3
   },
   {
     "text": "Combien de titres à Roland-Garros compte Björn Borg en simple messieurs ?",
-    "answers": ["4", "5", "6", "7"],
-    "correct": 2
+    "answers": [
+      "4",
+      "5",
+      "7",
+      "6"
+    ],
+    "correct": 3
   },
   {
     "text": "En quelle année Björn Borg a-t-il remporté son 6ème et dernier titre à Roland-Garros ?",
-    "answers": ["1979", "1980", "1981", "1982"],
-    "correct": 2
+    "answers": [
+      "1979",
+      "1980",
+      "1982",
+      "1981"
+    ],
+    "correct": 3
   },
   {
     "text": "Combien de titres Novak Djokovic a-t-il remportés en simple à Roland-Garros ?",
-    "answers": ["1", "2", "3", "4"],
-    "correct": 2
+    "answers": [
+      "1",
+      "2",
+      "4",
+      "3"
+    ],
+    "correct": 3
   },
   {
     "text": "En quelle année Novak Djokovic a-t-il remporté son premier titre à Roland-Garros ?",
-    "answers": ["2011", "2016", "2018", "2021"],
-    "correct": 1
+    "answers": [
+      "2011",
+      "2021",
+      "2018",
+      "2016"
+    ],
+    "correct": 3
   },
   {
     "text": "Combien de titres Roger Federer a-t-il remportés en simple à Roland-Garros ?",
@@ -106,33 +201,63 @@
   },
   {
     "text": "En quelle année Roger Federer a-t-il remporté son unique titre à Roland-Garros ?",
-    "answers": ["2005", "2007", "2009", "2011"],
-    "correct": 2
+    "answers": [
+      "2005",
+      "2007",
+      "2011",
+      "2009"
+    ],
+    "correct": 3
   },
   {
     "text": "Contre qui Roger Federer a-t-il gagné la finale de Roland-Garros en 2009 ?",
-    "answers": ["Rafael Nadal", "Novak Djokovic", "Robin Söderling", "Andy Murray"],
-    "correct": 2
+    "answers": [
+      "Rafael Nadal",
+      "Novak Djokovic",
+      "Andy Murray",
+      "Robin Söderling"
+    ],
+    "correct": 3
   },
   {
     "text": "Quel joueur suédois a remporté 3 titres à Roland-Garros dans les années 1980 (1982, 1985, 1988) ?",
-    "answers": ["Björn Borg", "Mats Wilander", "Stefan Edberg", "Robin Söderling"],
-    "correct": 1
+    "answers": [
+      "Björn Borg",
+      "Robin Söderling",
+      "Stefan Edberg",
+      "Mats Wilander"
+    ],
+    "correct": 3
   },
   {
     "text": "Combien de titres Ivan Lendl a-t-il remportés à Roland-Garros ?",
-    "answers": ["2", "3", "4", "5"],
-    "correct": 1
+    "answers": [
+      "2",
+      "5",
+      "4",
+      "3"
+    ],
+    "correct": 3
   },
   {
     "text": "Quel joueur français a remporté Roland-Garros en 1983 ?",
-    "answers": ["Henri Leconte", "Yannick Noah", "Cédric Pioline", "Guy Forget"],
-    "correct": 1
+    "answers": [
+      "Henri Leconte",
+      "Guy Forget",
+      "Cédric Pioline",
+      "Yannick Noah"
+    ],
+    "correct": 3
   },
   {
     "text": "Contre qui Yannick Noah a-t-il gagné la finale de Roland-Garros en 1983 ?",
-    "answers": ["Björn Borg", "Ivan Lendl", "Mats Wilander", "John McEnroe"],
-    "correct": 2
+    "answers": [
+      "Björn Borg",
+      "Ivan Lendl",
+      "John McEnroe",
+      "Mats Wilander"
+    ],
+    "correct": 3
   },
   {
     "text": "Depuis quelle année aucun Français n'avait plus remporté Roland-Garros en simple avant Yannick Noah en 1983 ?",
@@ -141,23 +266,43 @@
   },
   {
     "text": "Combien de titres en simple dames à Roland-Garros compte Chris Evert ?",
-    "answers": ["5", "6", "7", "8"],
-    "correct": 2
+    "answers": [
+      "5",
+      "6",
+      "8",
+      "7"
+    ],
+    "correct": 3
   },
   {
     "text": "Combien de titres en simple dames à Roland-Garros compte Steffi Graf ?",
-    "answers": ["4", "5", "6", "7"],
-    "correct": 2
+    "answers": [
+      "4",
+      "5",
+      "7",
+      "6"
+    ],
+    "correct": 3
   },
   {
     "text": "Quelle joueuse belge a remporté 4 fois Roland-Garros entre 2003 et 2007 ?",
-    "answers": ["Kim Clijsters", "Justine Henin", "Dominique Van Roost", "Yanina Wickmayer"],
-    "correct": 1
+    "answers": [
+      "Kim Clijsters",
+      "Yanina Wickmayer",
+      "Dominique Van Roost",
+      "Justine Henin"
+    ],
+    "correct": 3
   },
   {
     "text": "Quelle joueuse française a remporté Roland-Garros en 2000 ?",
-    "answers": ["Amélie Mauresmo", "Mary Pierce", "Marion Bartoli", "Nathalie Tauziat"],
-    "correct": 1
+    "answers": [
+      "Amélie Mauresmo",
+      "Nathalie Tauziat",
+      "Marion Bartoli",
+      "Mary Pierce"
+    ],
+    "correct": 3
   },
   {
     "text": "Contre qui Mary Pierce a-t-elle gagné la finale de Roland-Garros en 2000 ?",
@@ -166,18 +311,33 @@
   },
   {
     "text": "Quelle joueuse polonaise a remporté Roland-Garros en 2020, 2022, 2023 et 2024 ?",
-    "answers": ["Agnieszka Radwanska", "Iga Świątek", "Magda Linette", "Caroline Wozniacki"],
-    "correct": 1
+    "answers": [
+      "Agnieszka Radwanska",
+      "Caroline Wozniacki",
+      "Magda Linette",
+      "Iga Świątek"
+    ],
+    "correct": 3
   },
   {
     "text": "Qui a remporté le simple messieurs à Roland-Garros en 2024 ?",
-    "answers": ["Novak Djokovic", "Carlos Alcaraz", "Jannik Sinner", "Alexander Zverev"],
-    "correct": 1
+    "answers": [
+      "Novak Djokovic",
+      "Alexander Zverev",
+      "Jannik Sinner",
+      "Carlos Alcaraz"
+    ],
+    "correct": 3
   },
   {
     "text": "Qui a remporté le simple messieurs à Roland-Garros en 2025 ?",
-    "answers": ["Jannik Sinner", "Carlos Alcaraz", "Alexander Zverev", "Novak Djokovic"],
-    "correct": 1
+    "answers": [
+      "Jannik Sinner",
+      "Novak Djokovic",
+      "Alexander Zverev",
+      "Carlos Alcaraz"
+    ],
+    "correct": 3
   },
   {
     "text": "Qui a remporté le simple dames à Roland-Garros en 2025 ?",
@@ -186,8 +346,13 @@
   },
   {
     "text": "Contre qui Coco Gauff a-t-elle remporté la finale de Roland-Garros en 2025 ?",
-    "answers": ["Iga Świątek", "Aryna Sabalenka", "Jasmine Paolini", "Elena Rybakina"],
-    "correct": 1
+    "answers": [
+      "Iga Świątek",
+      "Elena Rybakina",
+      "Jasmine Paolini",
+      "Aryna Sabalenka"
+    ],
+    "correct": 3
   },
   {
     "text": "Contre qui Carlos Alcaraz a-t-il gagné la finale de Roland-Garros 2025 ?",
@@ -196,8 +361,13 @@
   },
   {
     "text": "Quel surnom désigne Rafael Nadal en raison de sa domination à Roland-Garros ?",
-    "answers": ["Le Roi du gazon", "Le Roi de la terre battue", "Le Prince de Paris", "Le Maître du filet"],
-    "correct": 1
+    "answers": [
+      "Le Roi du gazon",
+      "Le Maître du filet",
+      "Le Prince de Paris",
+      "Le Roi de la terre battue"
+    ],
+    "correct": 3
   },
   {
     "text": "Quelle couleur caractérise la terre battue de Roland-Garros ?",
@@ -206,8 +376,13 @@
   },
   {
     "text": "De quoi est composée la couche supérieure de la terre battue à Roland-Garros ?",
-    "answers": ["Argile pure", "Briques concassées", "Sable de mer", "Poudre de calcaire"],
-    "correct": 1
+    "answers": [
+      "Argile pure",
+      "Poudre de calcaire",
+      "Sable de mer",
+      "Briques concassées"
+    ],
+    "correct": 3
   },
   {
     "text": "Combien de sets sont disputés au maximum en simple messieurs à Roland-Garros ?",
@@ -216,8 +391,13 @@
   },
   {
     "text": "Combien de sets sont disputés au maximum en simple dames à Roland-Garros ?",
-    "answers": ["2", "3", "4", "5"],
-    "correct": 1
+    "answers": [
+      "2",
+      "5",
+      "4",
+      "3"
+    ],
+    "correct": 3
   },
   {
     "text": "Combien de tours faut-il gagner pour remporter le simple à Roland-Garros ?",
@@ -231,8 +411,13 @@
   },
   {
     "text": "Combien de points sont nécessaires pour remporter le super tie-break décisif du dernier set à Roland-Garros ?",
-    "answers": ["7", "10", "12", "15"],
-    "correct": 1
+    "answers": [
+      "7",
+      "15",
+      "12",
+      "10"
+    ],
+    "correct": 3
   },
   {
     "text": "En quelle année le toit rétractable a-t-il couvert pour la première fois le court Philippe-Chatrier ?",
@@ -340,8 +525,13 @@
     "correct": 1
   },
   {
-    "text": "Qui a été la première femme à remporter Roland-Garros en tant qu'étrangère, en 1925 ?",
-    "answers": ["Helen Wills", "Suzanne Lenglen", "Kitty McKane", "Elizabeth Ryan"],
+    "text": "Quelle Française a remporté le tournoi féminin de 1925, première édition ouverte aux étrangères ?",
+    "answers": [
+      "Helen Wills",
+      "Suzanne Lenglen",
+      "Kitty McKane",
+      "Elizabeth Ryan"
+    ],
     "correct": 1
   },
   {
@@ -360,8 +550,13 @@
     "correct": 1
   },
   {
-    "text": "Quelle Française a atteint la finale de Roland-Garros en 2013 avant de perdre contre Serena Williams ?",
-    "answers": ["Marion Bartoli", "Alizé Cornet", "Amélie Mauresmo", "Aucune"],
+    "text": "Qui a perdu la finale féminine de Roland-Garros 2013 contre Serena Williams ?",
+    "answers": [
+      "Marion Bartoli",
+      "Alizé Cornet",
+      "Amélie Mauresmo",
+      "Maria Sharapova"
+    ],
     "correct": 3
   },
   {
@@ -505,8 +700,13 @@
     "correct": 2
   },
   {
-    "text": "Quel joueur néerlandais a été finaliste malheureux face à Nadal à Roland-Garros ?",
-    "answers": ["Robin Söderling", "Casper Ruud", "Dominic Thiem", "Aucun"],
-    "correct": 3
+    "text": "Quel Norvégien a perdu la finale de Roland-Garros 2022 face à Rafael Nadal ?",
+    "answers": [
+      "Robin Söderling",
+      "Casper Ruud",
+      "Dominic Thiem",
+      "Stan Wawrinka"
+    ],
+    "correct": 1
   }
 ]

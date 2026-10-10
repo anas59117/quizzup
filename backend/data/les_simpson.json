@@ -2,22 +2,22 @@
   {
     "text": "Dans quelle ville vit la famille Simpson ?",
     "answers": [
-      "Springfield",
-      "Shelbyville",
       "Quahog",
+      "Shelbyville",
+      "Springfield",
       "South Park"
     ],
-    "correct": 0
+    "correct": 2
   },
   {
     "text": "Où Homer Simpson travaille-t-il ?",
     "answers": [
       "À la mairie",
-      "À la centrale nucléaire",
+      "À l’école primaire",
       "Dans une brasserie",
-      "À l’école primaire"
+      "À la centrale nucléaire"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Quel personnage correspond à cette description : père de famille travaillant à la centrale nucléaire ?",
@@ -152,7 +152,7 @@
   {
     "text": "Quelle description correspond à Ned Flanders ?",
     "answers": [
-      "pasteur de l’église de Springfield souvent lassé par les problèmes de ses fidèles",
+      "pasteur souvent lassé par ses fidèles",
       "collègue de Homer souvent vu avec Carl",
       "collègue de Homer et ami de Lenny",
       "voisin très religieux de la famille Simpson"
@@ -215,7 +215,7 @@
       "chef incompétent de la police de Springfield",
       "propriétaire de la taverne fréquentée par Homer",
       "gérant du Kwik-E-Mart",
-      "pasteur de l’église de Springfield souvent lassé par les problèmes de ses fidèles"
+      "pasteur souvent lassé par ses fidèles"
     ],
     "correct": 1
   },
@@ -414,13 +414,13 @@
     "answers": [
       "chef incompétent de la police de Springfield",
       "gérant du Kwik-E-Mart",
-      "pasteur de l’église de Springfield souvent lassé par les problèmes de ses fidèles",
+      "pasteur souvent lassé par ses fidèles",
       "collègue de Homer souvent vu avec Carl"
     ],
     "correct": 1
   },
   {
-    "text": "Quel personnage correspond à cette description : pasteur de l’église de Springfield souvent lassé par les problèmes de ses fidèles ?",
+    "text": "Quel pasteur de Springfield se lasse souvent des problèmes de ses fidèles ?",
     "answers": [
       "Waylon Smithers",
       "Moe Szyslak",
@@ -435,7 +435,7 @@
       "fils turbulent amateur de skateboard",
       "fille brillante jouant du saxophone",
       "bébé de la famille gardant souvent une tétine",
-      "pasteur de l’église de Springfield souvent lassé par les problèmes de ses fidèles"
+      "pasteur souvent lassé par ses fidèles"
     ],
     "correct": 3
   },

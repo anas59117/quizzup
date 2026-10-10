@@ -2,22 +2,22 @@
   {
     "text": "En quelle année est sorti le premier jeu FIFA International Soccer ?",
     "answers": [
-      "1993",
-      "1991",
       "1995",
+      "1991",
+      "1993",
       "1998"
     ],
-    "correct": 0
+    "correct": 2
   },
   {
     "text": "Quel jeu de la série est sorti en 1993 ?",
     "answers": [
       "FIFA 96",
-      "FIFA International Soccer",
+      "FIFA 2000",
       "FIFA 98 : En route pour la Coupe du monde",
-      "FIFA 2000"
+      "FIFA International Soccer"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Dans l'univers de FIFA/EA Sports FC, que désigne ou représente l'éditeur historique de la série ?",
@@ -501,13 +501,13 @@
   },
   {"text":"Quelle nouveauté d'Ultimate Team dans EA Sports FC 24 permet d'aligner joueurs et joueuses dans une même équipe ?","answers":["Les équipes mixtes","Les Évolutions","Le mode Draft","Les Moments"],"correct":0},
   {"text":"Dans Ultimate Team d'EA Sports FC 24, à quoi servent les Évolutions ?","answers":["À changer la météo des matchs","À améliorer des cartes éligibles en relevant des défis","À créer des stades","À rejouer les saisons passées"],"correct":1},
-  {"text":"Dans EA Sports FC 24, quelle variante de Style de jeu renforce encore une capacité signature ?","answers":["Style collectif","Vision tactique","Style de jeu+","Forme du jour"],"correct":2},
+  {"text":"Dans FC 24, quel bonus améliore une capacité signature d'un joueur ?","answers":["Style collectif","Vision tactique","Style de jeu+","Forme du jour"],"correct":2},
   {"text":"Quel mode d'Ultimate Team demande de construire puis soumettre un effectif respectant des critères précis ?","answers":["Le mode Clubs","Le mode Carrière","La Vue tactique","Les Défis de création d'équipe"],"correct":3},
   {"text":"Que deviennent les cartes soumises lors d'un Défi de création d'équipe dans Ultimate Team ?","answers":["Elles quittent définitivement le club","Elles reviennent après un match","Elles deviennent échangeables","Elles sont prêtées automatiquement"],"correct":0},
   {"text":"Dans Ultimate Team, où cherche-t-on des cartes de joueurs échangeables par club, nation ou championnat ?","answers":["Dans la Vue tactique","Sur le marché des transferts","Dans l'Académie des jeunes","Dans le mode Volta"],"correct":1},
   {"text":"Quel type de contenu Ultimate Team met en scène de courts défis inspirés de situations de match ?","answers":["Les Coupes nationales","Les Visions tactiques","Les Moments","Les matchs Clubs"],"correct":2},
   {"text":"Dans Ultimate Team, quel mode consiste à bâtir un effectif temporaire à partir de choix de joueurs proposés ?","answers":["Carrière manager","Clubs","Coup d'envoi","Draft"],"correct":3},
-  {"text":"Dans EA Sports FC 24, à quoi une Icône contribue-t-elle pour les championnats représentés dans l'effectif Ultimate Team ?","answers":["Au collectif","À la durée des matchs","Au nombre de remplacements","Aux points de championnat"],"correct":0},
+  {"text":"Dans FC 24 Ultimate Team, à quoi une Icône contribue-t-elle pour les championnats représentés ?","answers":["Au collectif","À la durée des matchs","Au nombre de remplacements","Aux points de championnat"],"correct":0},
   {"text":"Quelle ancienne joueuse figure parmi les premières Icônes féminines d'EA Sports FC 24 ?","answers":["Alex Morgan","Mia Hamm","Sam Kerr","Aitana Bonmatí"],"correct":1},
   {"text":"Quel championnat féminin français rejoint Ultimate Team dans EA Sports FC 24 ?","answers":["La Ligue 2","La National Women's Soccer League","La D1 Arkema","La Liga F"],"correct":2},
   {"text":"Quelle console Nintendo reçoit EA Sports FC 24 avec le moteur Frostbite ?","answers":["La Wii U","La Nintendo 3DS","La Nintendo DS","La Nintendo Switch"],"correct":3},
@@ -516,11 +516,11 @@
   {"text":"Quelle vision tactique d'EA Sports FC 24 cherche à récupérer le ballon très haut sur le terrain ?","answers":["Tiki-taka","Contre-attaque","Contre-pressing","Défense de malade"],"correct":2},
   {"text":"Quelle vision tactique d'EA Sports FC 24 privilégie un bloc défensif très bas ?","answers":["Sur les ailes","Tiki-taka","Contre-pressing","Défense de malade"],"correct":3},
   {"text":"Quelle vision tactique d'EA Sports FC 24 utilise particulièrement la largeur du terrain et les ailiers ?","answers":["Sur les ailes","Défense de malade","Contre-attaque","Loin devant"],"correct":0},
-  {"text":"Dans la carrière manager d'EA Sports FC 24, quel filtre de recrutement repère les joueurs adaptés au style de jeu choisi ?","answers":["La réputation du stade","L'adaptation tactique","Le numéro de maillot","La couleur du club"],"correct":1},
+  {"text":"Dans FC 24, quel filtre de recrutement cible les joueurs adaptés à la tactique choisie ?","answers":["La réputation du stade","L'adaptation tactique","Le numéro de maillot","La couleur du club"],"correct":1},
   {"text":"Dans EA Sports FC 24, quel membre du staff peut améliorer les attributs des joueurs de son département ?","answers":["Un agent","Un arbitre","Un coach","Un commentateur"],"correct":2},
   {"text":"Quel département d'entraînement fait partie du staff en carrière manager d'EA Sports FC 24 ?","answers":["La billetterie","L'arbitrage","Le marketing","Le gardien de but"],"correct":3},
   {"text":"Quel est le niveau de connaissance le plus élevé d'un coach pour une vision tactique dans EA Sports FC 24 ?","answers":["Expert","Novice","Débutant","Remplaçant"],"correct":0},
-  {"text":"Quelle fonction d'EA Sports FC 24 permet d'observer un match de carrière manager depuis plusieurs angles sans diriger les joueurs ?","answers":["Le mode Draft","La Vue tactique","Les Moments","Le marché des transferts"],"correct":1},
+  {"text":"Dans FC 24, quelle fonction permet d'observer un match de carrière manager sans jouer ?","answers":["Le mode Draft","La Vue tactique","Les Moments","Le marché des transferts"],"correct":1},
   {"text":"Dans la carrière joueur d'EA Sports FC 24, qui aide à trouver un club correspondant aux objectifs du footballeur ?","answers":["L'arbitre","Le capitaine adverse","L'agent","Le commentateur"],"correct":2},
   {"text":"Quelles Coupes du monde ont été ajoutées à FIFA 23 par des mises à jour après sa sortie ?","answers":["La Coupe du monde des clubs uniquement","La Coupe du monde de futsal uniquement","La Coupe du monde des moins de 17 ans uniquement","Les Coupes du monde masculine et féminine"],"correct":3},
   {"text":"Dans EA Sports FC 25, quel système renouvelle les tactiques et le placement des joueurs ?","answers":["FC IQ","Mode 7","HyperMotion 2","FUT Draft"],"correct":0},

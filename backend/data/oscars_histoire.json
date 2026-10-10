@@ -2,22 +2,22 @@
   {
     "text": "Quel film a remporté l'Oscar du meilleur film lors de la cérémonie de 1998 ?",
     "answers": [
-      "Titanic",
-      "American Beauty",
       "Le Retour du roi",
+      "American Beauty",
+      "Titanic",
       "Démineurs"
     ],
-    "correct": 0
+    "correct": 2
   },
   {
     "text": "Qui a remporté l'Oscar de la meilleure réalisation lors de la cérémonie de 1998 ?",
     "answers": [
       "Peter Jackson",
-      "James Cameron",
       "Kathryn Bigelow",
+      "James Cameron",
       "Alfonso Cuarón"
     ],
-    "correct": 1
+    "correct": 2
   },
   {
     "text": "Qui a remporté l'Oscar du meilleur acteur lors de la cérémonie de 1998 ?",
@@ -53,11 +53,11 @@
     "text": "Quel film a remporté l'Oscar du meilleur film lors de la cérémonie de 2000 ?",
     "answers": [
       "Le Retour du roi",
-      "American Beauty",
+      "Twelve Years a Slave",
       "Démineurs",
-      "Twelve Years a Slave"
+      "American Beauty"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Qui a remporté l'Oscar de la meilleure réalisation lors de la cérémonie de 2000 ?",
@@ -500,7 +500,7 @@
     "correct": 1
   },
   {
-    "text": "Quel film muet reste le seul à avoir remporté l'Oscar du meilleur film ?",
+    "text": "Quel film muet a remporté le tout premier Oscar du meilleur film ?",
     "answers": [
       "Wings",
       "L'Aurore",
@@ -687,7 +687,7 @@
     "difficulty": "hard"
   },
   {
-    "text": "Quelle actrice a gagné l'Oscar du second rôle pour avoir incarné un personnage masculin dans L'Année de tous les dangers ?",
+    "text": "Qui a gagné un Oscar pour un rôle masculin dans L'Année de tous les dangers ?",
     "answers": [
       "Tilda Swinton",
       "Linda Hunt",
@@ -698,7 +698,7 @@
     "difficulty": "expert"
   },
   {
-    "text": "Quel acteur fut nommé à la fois comme acteur principal et second rôle pour la même prestation dans La Route semée d'étoiles ?",
+    "text": "Qui a reçu deux nominations d'acteur pour le même rôle dans La Route semée d'étoiles ?",
     "answers": [
       "Bing Crosby",
       "Walter Brennan",
@@ -709,7 +709,7 @@
     "difficulty": "expert"
   },
   {
-    "text": "Quel acteur reçut un Oscar du second rôle et un Oscar d'honneur pour la même prestation dans Les Plus Belles Années de notre vie ?",
+    "text": "Qui a reçu deux Oscars pour le même rôle dans Les Plus Belles Années de notre vie ?",
     "answers": [
       "Fredric March",
       "Dana Andrews",
@@ -731,7 +731,7 @@
     "difficulty": "expert"
   },
   {
-    "text": "Quelle artiste a gagné trois Oscars lors de la soirée consacrant Le Retour du roi, pour le film, le scénario adapté et la chanson ?",
+    "text": "Qui a gagné trois Oscars la même soirée pour Le Retour du roi ?",
     "answers": [
       "Philippa Boyens",
       "Fran Walsh",
@@ -852,7 +852,7 @@
     "difficulty": "expert"
   },
   {
-    "text": "Quel couple marié a remporté des Oscars d'interprétation avec Monsieur Verdoux et Les Trois Visages d'Ève parmi leurs films respectifs ?",
+    "text": "Quel couple a gagné des Oscars d'interprétation pour La Couleur de l'argent et Les Trois Visages d'Ève ?",
     "answers": [
       "Paul Newman et Joanne Woodward",
       "Laurence Olivier et Vivien Leigh",
