@@ -32,12 +32,12 @@
   {
     "text": "Dans quel département se trouve Corbeil-Essonnes, ville de PNL ?",
     "answers": [
-      "Les Hauts-de-Seine",
       "L'Essonne",
+      "Les Hauts-de-Seine",
       "La Seine-Saint-Denis",
       "Le Val-de-Marne"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "Que signifie « QLF », expression chère à PNL ?",
@@ -62,22 +62,22 @@
   {
     "text": "Que signifie le nom « PNL » ?",
     "answers": [
-      "Paris Nord Legends",
       "Peace N' Lovés",
+      "Paris Nord Legends",
       "Pour Nos Lossas",
       "Poids Nouveau Lourd"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "Quel est le premier album studio de PNL, sorti en 2015 ?",
     "answers": [
-      "Dans la légende",
       "Le Monde Chico",
+      "Dans la légende",
       "Deux frères",
       "Que la famille"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "Quel album de PNL est sorti en 2016 ?",
@@ -113,11 +113,11 @@
     "text": "Sur quel album figure « Au DD » ?",
     "answers": [
       "Dans la légende",
-      "Deux frères",
+      "Que la famille",
       "Le Monde Chico",
-      "Que la famille"
+      "Deux frères"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Quel titre de PNL a marqué leur percée, extrait du Monde Chico ?",
