@@ -32,12 +32,12 @@
   {
     "text": "Combien de points vaut un panier marqué derrière la ligne à 3 points ?",
     "answers": [
-      "2",
       "3",
+      "2",
       "1",
       "4"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "text": "Quelle franchise NBA est basée à Boston ?",
@@ -73,11 +73,11 @@
     "text": "Quel pays a remporté la majorité des tournois olympiques de basketball depuis 1992 ?",
     "answers": [
       "L’Espagne",
-      "Les États-Unis",
       "L’Argentine",
+      "Les États-Unis",
       "La Serbie"
     ],
-    "correct": 1
+    "correct": 2
   },
   {
     "text": "Quelle légende du basket est surnommée \"The Black Mamba\" ?",
@@ -153,11 +153,11 @@
     "text": "Quelle action donne une passe décisive au basket ?",
     "answers": [
       "Un tir contré",
-      "Une passe menant directement à un panier",
+      "Une remise en jeu après faute",
       "Un rebond offensif",
-      "Une remise en jeu après faute"
+      "Une passe menant directement à un panier"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Quel terme désigne un tir manqué récupéré par un joueur ?",
@@ -633,11 +633,11 @@
     "text": "Quel joueur était surnommé « The Glove » ?",
     "answers": [
       "John Stockton",
-      "Gary Payton",
+      "Isiah Thomas",
       "Chris Paul",
-      "Isiah Thomas"
+      "Gary Payton"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Quel joueur était surnommé « The Admiral » ?",
@@ -713,11 +713,11 @@
     "text": "Quel joueur du Miami Heat était surnommé « Flash » ?",
     "answers": [
       "Allen Iverson",
-      "Dwyane Wade",
+      "Carmelo Anthony",
       "Chris Paul",
-      "Carmelo Anthony"
+      "Dwyane Wade"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Quel Espagnol a été l'un des piliers des titres NBA des Lakers en 2009 et 2010 ?",
@@ -953,11 +953,11 @@
     "text": "Quelle université Stephen Curry a-t-il représentée avant la NBA ?",
     "answers": [
       "Duke",
-      "Davidson",
       "UCLA",
+      "Davidson",
       "Kentucky"
     ],
-    "correct": 1
+    "correct": 2
   },
   {
     "text": "Quel joueur des Chicago Bulls a remporté le titre de meilleur défenseur NBA en 1988 ?",
