@@ -173,11 +173,11 @@
     "text": "Quelle description correspond à Franky ?",
     "answers": [
       "tireur d’élite et inventeur de l’équipage",
-      "charpentier cyborg qui a construit le Thousand Sunny",
+      "médecin renne ayant mangé un Fruit du Démon",
       "cuisinier combattant principalement avec ses jambes",
-      "médecin renne ayant mangé un Fruit du Démon"
+      "charpentier cyborg qui a construit le Thousand Sunny"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Quel personnage correspond à cette description : musicien squelette revenu à la vie ?",
@@ -822,12 +822,12 @@
     {
       "text": "Quel fruit du Démon est le prix du tournoi du Colisée Corrida ?",
       "answers": [
-        "Le Mera Mera no Mi",
-        "Le Ope Ope no Mi",
         "Le Suna Suna no Mi",
+        "Le Ope Ope no Mi",
+        "Le Mera Mera no Mi",
         "Le Hana Hana no Mi"
       ],
-      "correct": 0
+      "correct": 2
     },
     {
       "text": "Quel pouvoir Sugar utilise-t-elle pour transformer des habitants de Dressrosa ?",

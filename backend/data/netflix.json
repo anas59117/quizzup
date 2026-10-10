@@ -60,7 +60,7 @@
     "correct": 0
   },
   {
-    "text": "Dans quelle ville se déroule la série \"Emily in Paris\" ?",
+    "text": "Dans quelle ville Emily Cooper s'installe-t-elle dans sa série Netflix ?",
     "answers": [
       "Londres",
       "Milan",
@@ -313,11 +313,11 @@
     "text": "Dans quelle petite ville allemande se déroule principalement « Dark » ?",
     "answers": [
       "Bonn",
-      "Winden",
+      "Potsdam",
       "Lübeck",
-      "Potsdam"
+      "Winden"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Quel personnage adolescent est au centre de l'intrigue de « Dark » ?",
@@ -433,11 +433,11 @@
     "text": "Qui incarne Monkey D. Luffy dans la série en prises de vues réelles « ONE PIECE » ?",
     "answers": [
       "Mackenyu",
-      "Iñaki Godoy",
+      "Jacob Romero",
       "Taz Skylar",
-      "Jacob Romero"
+      "Iñaki Godoy"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Quel objet Luffy porte-t-il presque toujours dans « ONE PIECE » ?",
@@ -510,7 +510,7 @@
     "correct": 0
   },
   {
-    "text": "Dans quel épisode de « Black Mirror » apparaît la ville virtuelle de San Junipero ?",
+    "text": "Quel épisode de « Black Mirror » suit deux femmes dans une ville virtuelle ?",
     "answers": [
       "Nosedive",
       "San Junipero",
@@ -582,12 +582,12 @@
   {
     "text": "Dans quel pays se déroule la série « Élite » ?",
     "answers": [
-      "L'Espagne",
-      "L'Italie",
       "Le Portugal",
+      "L'Italie",
+      "L'Espagne",
       "La France"
     ],
-    "correct": 0
+    "correct": 2
   },
   {
     "text": "Quel est le nom de l'établissement scolaire de « Élite » ?",
@@ -633,11 +633,11 @@
     "text": "Quel art martial est au cœur de « Cobra Kai » ?",
     "answers": [
       "Le judo",
-      "Le karaté",
+      "La boxe française",
       "Le taekwondo",
-      "La boxe française"
+      "Le karaté"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "De quel jeu vidéo est tirée la série animée « Arcane » ?",
