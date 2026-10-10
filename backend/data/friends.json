@@ -100,7 +100,7 @@
     "correct": 1
   },
   {
-    "text": "Quel personnage correspond à cette description : acteur interprétant le docteur Drake Ramoray dans Des jours et des vies ?",
+    "text": "Quel personnage joue le docteur Drake Ramoray dans le feuilleton « Des jours et des vies » ?",
     "answers": [
       "Judy Geller",
       "Jack Geller",
@@ -113,9 +113,9 @@
     "text": "Quelle description correspond à Joey Tribbiani ?",
     "answers": [
       "gérant amoureux de Rachel au Central Perk",
-      "ancienne compagne de Chandler connue pour son rire et Oh. My. God.",
+      "ex-compagne de Chandler au rire inoubliable",
       "ex-épouse de Ross et mère de Ben",
-      "acteur interprétant le docteur Drake Ramoray dans Des jours et des vies"
+      "acteur jouant le Dr Drake Ramoray dans un soap"
     ],
     "correct": 3
   },
@@ -173,7 +173,7 @@
     "text": "Quelle description correspond à Janice Litman ?",
     "answers": [
       "ami sarcastique travaillant d’abord dans l’analyse statistique",
-      "ancienne compagne de Chandler connue pour son rire et Oh. My. God.",
+      "ex-compagne de Chandler au rire inoubliable",
       "acteur amateur interprétant le docteur Drake Ramoray",
       "musicienne excentrique chantant Smelly Cat"
     ],
@@ -313,7 +313,7 @@
     "text": "Quelle description correspond à David, le scientifique de Friends ?",
     "answers": [
       "gérant amoureux de Rachel au Central Perk",
-      "ancienne compagne de Chandler connue pour son rire et Oh. My. God.",
+      "ex-compagne de Chandler au rire inoubliable",
       "ex-épouse de Ross et mère de Ben",
       "scientifique amoureux de Phoebe parti à Minsk"
     ],
@@ -499,8 +499,8 @@
     ],
     "correct": 1
   },
-  {"text":"Quel homme Rachel abandonne-t-elle devant l'autel au début de la série ?","answers":["Barry Farber","Richard Burke","Pete Becker","Paolo"],"correct":0},
-  {"text":"Quel emploi Rachel occupe-t-elle d'abord au Central Perk ?","answers":["Gérante","Serveuse","Pâtissière","Comptable"],"correct":1},
+  {"text":"Quel homme Rachel abandonne-t-elle devant l'autel au début de la série ?","answers":["Pete Becker","Richard Burke","Barry Farber","Paolo"],"correct":2},
+  {"text":"Quel emploi Rachel occupe-t-elle d'abord au Central Perk ?","answers":["Gérante","Comptable","Pâtissière","Serveuse"],"correct":3},
   {"text":"Dans quel grand magasin Rachel travaille-t-elle avant Ralph Lauren ?","answers":["Macy's","Barneys","Bloomingdale's","Saks Fifth Avenue"],"correct":2},
   {"text":"De quelle couleur est la porte de l'appartement de Monica ?","answers":["Rouge","Verte","Bleue","Violette"],"correct":3},
   {"text":"Quel objet jaune entoure le judas de la porte de Monica ?","answers":["Un cadre","Une horloge","Une couronne","Une plaque"],"correct":0},

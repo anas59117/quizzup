@@ -33,7 +33,7 @@
     "text": "Quelle description correspond à Yuji Itadori ?",
     "answers": [
       "exorciste utilisant la Technique des Dix Ombres",
-      "exorciste combattant avec un marteau, des clous et une poupée de paille",
+      "exorciste maniant marteau, clous et poupée de paille",
       "exorciste maîtrisant l’Infini et les Six Yeux",
       "lycéen devenu réceptacle de Sukuna"
     ],
@@ -60,7 +60,7 @@
     "correct": 1
   },
   {
-    "text": "Quel personnage correspond à cette description : exorciste combattant avec un marteau, des clous et une poupée de paille ?",
+    "text": "Quelle exorciste combat avec un marteau, des clous et une poupée de paille ?",
     "answers": [
       "Kenjaku",
       "Mahito",
@@ -75,7 +75,7 @@
       "exorciste utilisant la technique Boogie Woogie",
       "véritable identité de Mechamaru",
       "sœur jumelle de Maki utilisant la Construction",
-      "exorciste combattant avec un marteau, des clous et une poupée de paille"
+      "exorciste maniant marteau, clous et poupée de paille"
     ],
     "correct": 3
   },
@@ -233,7 +233,7 @@
     "text": "Quelle description correspond à Suguru Geto ?",
     "answers": [
       "exorciste utilisant la Technique des Dix Ombres",
-      "exorciste combattant avec un marteau, des clous et une poupée de paille",
+      "exorciste maniant marteau, clous et poupée de paille",
       "exorciste maîtrisant l’Infini et les Six Yeux",
       "exorciste capable de manipuler les fléaux"
     ],
@@ -432,7 +432,7 @@
   {
     "text": "Quelle description correspond à Shoko Ieiri ?",
     "answers": [
-      "exorciste combattant avec un marteau, des clous et une poupée de paille",
+      "exorciste maniant marteau, clous et poupée de paille",
       "exorciste maîtrisant l’Infini et les Six Yeux",
       "fléau surnommé le Roi des fléaux",
       "médecin utilisant l’énergie occulte inversée"
@@ -495,13 +495,13 @@
       "lycéen devenu réceptacle de Sukuna",
       "élève utilisant un shikigami en forme de méduse",
       "exorciste utilisant la Technique des Dix Ombres",
-      "exorciste combattant avec un marteau, des clous et une poupée de paille"
+      "exorciste maniant marteau, clous et poupée de paille"
     ],
     "correct": 1
   },
-  {"text":"Qui dirige l'école d'exorcisme de Kyoto ?","answers":["Yoshinobu Gakuganji","Masamichi Yaga","Kento Nanami","Kiyotaka Ijichi"],"correct":0},
+  {"text":"Qui dirige l'école d'exorcisme de Kyoto ?","answers":["Kento Nanami","Masamichi Yaga","Yoshinobu Gakuganji","Kiyotaka Ijichi"],"correct":2},
   {"text":"Quelle élève de Kyoto combat principalement au sabre ?","answers":["Momo Nishimiya","Nobara Kugisaki","Kasumi Miwa","Mai Zenin"],"correct":2},
-  {"text":"Quel objet Momo Nishimiya utilise-t-elle pour voler ?","answers":["Un éventail","Un balai","Une lance","Un parapluie"],"correct":1},
+  {"text":"Quel objet Momo Nishimiya utilise-t-elle pour voler ?","answers":["Un éventail","Un parapluie","Une lance","Un balai"],"correct":3},
   {"text":"Quelle technique héréditaire Noritoshi Kamo emploie-t-il ?","answers":["La Construction","La Manipulation du sang","Les Dix Ombres","La Parole maudite"],"correct":1},
   {"text":"Quel assistant accompagne régulièrement les élèves de l'école de Tokyo dans leurs missions ?","answers":["Yu Haibara","Yoshinobu Gakuganji","Kiyotaka Ijichi","Naobito Zenin"],"correct":2},
   {"text":"Quels animaux Mei Mei contrôle-t-elle grâce à sa technique ?","answers":["Des corbeaux","Des grenouilles","Des loups","Des chauves-souris"],"correct":0},
