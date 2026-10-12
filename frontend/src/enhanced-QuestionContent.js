@@ -97,9 +97,10 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
   const round = question.round || 1;
   const total = question.totalRounds || 10;
   const progressPct = Math.max(0, Math.min(100, (round / total) * 100));
+  const correctAnswer = sr && !isInstantAck ? question.answers[reveal.correctIndex] : null;
 
   return (
-    <div className="container game game-v4">
+    <div className={`container game game-v4${opponents.length > 1 ? ' game-v4--group' : ''}${question.image ? ' game-v4--photo' : ''}`}>
       <div className="hud-timer-block">
         <span className="hud-timer-label">{t('time')}</span>
         <span className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr && !isInstantAck ? '\u2713' : timeLeft}</span>
@@ -132,7 +133,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
 
       <div className={`answers-wrapper ${gf.opponentPop ? 'opponent-just-answered' : ''}`}>
         <div className="question-panel">
-          <div className="question">{question.question}</div>
+          <h1 className="question">{question.question}</h1>
           {question.image && (
             <div className="player-photo-wrap">
               <img src={question.image} alt="" className="player-photo" />
@@ -150,6 +151,11 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
               >
                 <span className="letter" aria-hidden="true">{letters[idx] || idx + 1}</span>
                 <span className="answer-text">{a}</span>
+                {sr && ((isInstantAck && idx === selected) || (!isInstantAck && (idx === reveal.correctIndex || idx === selected))) && (
+                  <span className="answer-result-icon" aria-label={(!isInstantAck ? idx === reveal.correctIndex : reveal.yourCorrect) ? t('answerCorrect') : t('answerIncorrect')}>
+                    {(!isInstantAck ? idx === reveal.correctIndex : reveal.yourCorrect) ? '✓' : '✕'}
+                  </span>
+                )}
               </button>
             ))}
           </div>
@@ -161,15 +167,13 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
           </div>
         </div>
       </div>
-      {sr && !isInstantAck && (
-        <div className="reveal-note">
-          {reveal.yourCorrect
-            ? t('ptsEarned', { n: reveal.pointsEarned })
-            : reveal.timedOut && selected === null
-              ? t('timeUp')
-              : t('wrong')}
-        </div>
-      )}
+      <div className={`reveal-note mobile-answer-feedback${sr ? (reveal.yourCorrect ? ' is-correct' : ' is-wrong') : ''}`} role="status" aria-live="polite" aria-atomic="true">
+        {sr ? <>
+          <strong>{reveal.yourCorrect ? t('answerCorrect') : reveal.timedOut && selected === null ? t('timeUp') : t('answerIncorrect')}</strong>
+          {reveal.yourCorrect && <span>{t('ptsEarned', { n: reveal.pointsEarned || 0 })}</span>}
+          {!reveal.yourCorrect && correctAnswer != null && <span>{t('answerWas', { answer: correctAnswer })}</span>}
+        </> : selected !== null ? t('answerWaiting') : null}
+      </div>
       {sr && !isInstantAck && (
         <button className="report-btn" onClick={reportQuestion} disabled={reported}>
           {reported ? t('reported') : t('report')}

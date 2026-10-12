@@ -3,6 +3,7 @@ import './design-tokens.css';
 import './App.css';
 import './design-system.css';
 import './design-v4.css';
+import './mobile-comfort.css';
 import SFX from './sounds';
 import music from './music';
 import { useSocial, GameChat } from './social';
@@ -1234,14 +1235,14 @@ export default function App() {
 
   if (stage === 'playing' && intro && !question) {
     return (
-      <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+      <div className="app game-bg"><TopControls {...topProps} playing /><Toast toast={toast} onDismiss={dismissToast} />
         <RoundIntroContent intro={intro} totalRounds={totalRounds} opponents={opponents} avatar={avatar} frame={statsHook.stats.frame} name={name} level={statsHook.stats.level} />
       </div>);
   }
 
   if (stage === 'playing' && question) {
     return (
-      <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+      <div className="app game-bg app-question"><TopControls {...topProps} playing /><Toast toast={toast} onDismiss={dismissToast} />
         <QuestionContent
           question={question} timeLeft={timeLeft} reveal={reveal} selected={selected} answer={answer}
           opponents={opponents} avatar={avatar} frame={statsHook.stats.frame} name={name} score={score}

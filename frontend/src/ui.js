@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, memo } from 'react';
+import React, { useState, useEffect, useCallback, useRef, useId, memo } from 'react';
 import { useI18n } from './i18n';
 import { getTopicCover } from './topicCovers';
 
@@ -590,19 +590,55 @@ export function useTheme() {
   return [theme, toggle];
 }
 
-export const TopControls = memo(function TopControls({ muted, toggleMute, theme, toggleTheme }) {
+export const TopControls = memo(function TopControls({ muted, toggleMute, theme, toggleTheme, playing = false }) {
   const { lang, toggleLang } = useI18n();
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef(null);
+  const triggerRef = useRef(null);
+  const panelId = useId();
+  const fr = lang === 'fr';
+  useEffect(() => { if (playing) setOpen(false); }, [playing]);
+  useEffect(() => {
+    if (!open) return undefined;
+    const dismiss = (event) => {
+      if (!rootRef.current?.contains(event.target)) setOpen(false);
+    };
+    const escape = (event) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+        triggerRef.current?.focus();
+      }
+    };
+    document.addEventListener('pointerdown', dismiss);
+    document.addEventListener('keydown', escape);
+    return () => {
+      document.removeEventListener('pointerdown', dismiss);
+      document.removeEventListener('keydown', escape);
+    };
+  }, [open]);
   return (
-    <div className="top-controls">
-      <button className="ctrl-btn" onClick={toggleMute} aria-label="Toggle sound" title="Toggle sound">
+    <div ref={rootRef} className={`top-controls mobile-controls${playing ? ' mobile-controls--playing' : ''}`}>
+      <button type="button" className="ctrl-btn" onClick={toggleMute}
+        aria-label={muted ? (fr ? 'Activer le son' : 'Enable sound') : (fr ? 'Couper le son' : 'Mute sound')}>
         <Icon name={muted ? 'mute' : 'volume'} size={18} />
       </button>
-      <button className="ctrl-btn" onClick={toggleTheme} aria-label="Toggle theme" title="Toggle theme">
-        <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={18} />
-      </button>
-      <button className="ctrl-btn lang-btn" onClick={toggleLang} aria-label="Toggle language" title="Toggle language">
-        {lang === 'fr' ? 'FR' : 'EN'}
-      </button>
+      {!playing && <>
+        <button ref={triggerRef} type="button" className="ctrl-btn" aria-expanded={open}
+          aria-controls={panelId} aria-label={fr ? 'Réglages' : 'Settings'} onClick={() => setOpen(!open)}>
+          <svg className="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+            <path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3" fill="currentColor"/><circle cx="15" cy="17" r="3" fill="currentColor"/>
+          </svg>
+        </button>
+        {open && <div id={panelId} className="mobile-controls-panel" role="group" aria-label={fr ? 'Réglages' : 'Settings'}>
+          <button type="button" onClick={toggleTheme}>
+            <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={18} />
+            {fr ? (theme === 'dark' ? 'Mode clair' : 'Mode sombre') : (theme === 'dark' ? 'Light mode' : 'Dark mode')}
+          </button>
+          <button type="button" onClick={toggleLang}>
+            <span aria-hidden="true">{fr ? 'EN' : 'FR'}</span>{fr ? 'Switch to English' : 'Passer en français'}
+          </button>
+        </div>}
+      </>}
     </div>
   );
 });
@@ -746,7 +782,7 @@ export const NavBar = memo(function NavBar({ active, onNav, onQuickMatch }) {
       <button className={`nav-item ${active === 'feed' ? 'active' : ''}`} onClick={() => onNav('feed')}>
         <span className="nav-ic"><Icon name="feed" size={20} /></span><span className="nav-lbl">{t('navFeed')}</span>
       </button>
-      <button className="nav-bolt" onClick={onQuickMatch} aria-label="Quick Play"><Icon name="bolt" size={22} /></button>
+      <button className="nav-bolt" onClick={onQuickMatch} aria-label={t('playNow')}><Icon name="bolt" size={22} /><span className="nav-play-label">{t('play')}</span></button>
       <button className={`nav-item ${active === 'categories' ? 'active' : ''}`} onClick={() => onNav('categories')}>
         <span className="nav-ic"><Icon name="themes" size={20} /></span><span className="nav-lbl">{t('navThemes')}</span>
       </button>
