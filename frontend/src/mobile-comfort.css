@@ -199,3 +199,24 @@
 @media (prefers-reduced-motion: reduce) {
   .game-v4 .hud-timer, .game-v4 .answer { animation: none !important; transition: none !important; }
 }
+
+/* ── Audit mobile : écran de résultat + header accueil ────────────── */
+@media (max-width: 680px), (max-height: 500px) {
+  /* Résultat : le contenu est plus haut que l'écran. Avec le centrage flex
+     de .app, le haut (titre + scores) remontait sous le notch et la barre
+     Safari se superposait. On démarre en haut : le padding-top safe-area de
+     .app (déjà défini plus haut) dégage alors le notch, et la page défile. */
+  .app.results-bg { align-items: flex-start; }
+}
+
+@media (max-width: 680px) {
+  /* Accueil : une seule rangée en haut. On remonte l'en-tête au niveau des
+     contrôles flottants (son/réglages), et on réserve la place du pavé à
+     droite pour que recherche/amis ne passent pas dessous. */
+  .app-home { padding-top: calc(8px + env(safe-area-inset-top)) !important; }
+  .app-home .home-head--v4 {
+    align-items: center;
+    min-height: 48px;
+    padding-right: 108px;
+  }
+}

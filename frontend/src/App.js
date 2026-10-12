@@ -1015,7 +1015,7 @@ export default function App() {
 
   if (stage === 'home') {
     return (
-      <div className="app app-nav app-top">
+      <div className="app app-nav app-top app-home">
         <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
         <HomeContent
