@@ -52,23 +52,42 @@ function normalizeStatsStore(value) {
       out[id].dayStreak = asNonNegativeInt(raw.dayStreak, 0, 1_000_000);
       out[id].bestDayStreak = Math.max(out[id].dayStreak, asNonNegativeInt(raw.bestDayStreak, 0, 1_000_000));
     }
-    // Shop: owned cosmetics, equipped frame, rewarded-ad bookkeeping.
-    const owned = uniqueStringList(raw.owned, { limit: 100, maxLength: 32 });
-    if (owned.length) out[id].owned = owned;
+
+    // Purchased cosmetics must survive a restart, otherwise every coin spent
+    // in the shop is refunded as soon as the server reboots. Ids are validated
+    // against the catalogue by stats.js, so only shape is enforced here.
+    const ownedFrames = uniqueStringList(raw.owned, { limit: 200, maxLength: 32 });
+    if (ownedFrames.length) out[id].owned = ownedFrames;
     const frame = cleanId(raw.frame, 32);
     if (frame) out[id].frame = frame;
+
+    const ownedItems = uniqueStringList(raw.ownedItems, { limit: 500, maxLength: 32 });
+    if (ownedItems.length) out[id].ownedItems = ownedItems;
+    if (raw.equippedItems && typeof raw.equippedItems === 'object' && !Array.isArray(raw.equippedItems)) {
+      const equipped = {};
+      for (const [rawCategory, rawItem] of Object.entries(raw.equippedItems)) {
+        const category = cleanId(rawCategory, 32);
+        const itemId = cleanId(rawItem, 32);
+        if (category && itemId) equipped[category] = itemId;
+      }
+      if (Object.keys(equipped).length) out[id].equippedItems = equipped;
+    }
+
+    // Rewarded-ad budget and the pending double-up, so the daily cap and the
+    // "already claimed" flag are not reset by a restart.
     if (typeof raw.adDay === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(raw.adDay)) {
       out[id].adDay = raw.adDay;
       out[id].adCount = asNonNegativeInt(raw.adCount, 0, 1000);
     }
-    const last = raw.lastReward;
-    const lastGameId = last && typeof last === 'object' ? cleanId(last.gameId, 64) : null;
-    if (lastGameId) {
-      out[id].lastReward = {
-        gameId: lastGameId,
-        coins: asNonNegativeInt(last.coins, 0, 1000),
-        claimed: last.claimed === true,
-      };
+    if (raw.lastReward && typeof raw.lastReward === 'object' && !Array.isArray(raw.lastReward)) {
+      const gameId = cleanId(raw.lastReward.gameId, 64);
+      if (gameId) {
+        out[id].lastReward = {
+          gameId,
+          coins: asNonNegativeInt(raw.lastReward.coins, 0, 1000),
+          claimed: raw.lastReward.claimed === true,
+        };
+      }
     }
   }
   return out;

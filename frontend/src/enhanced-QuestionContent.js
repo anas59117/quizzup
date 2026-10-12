@@ -12,6 +12,8 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
   const gf = useGameFeel();
   const buttonRefs = useRef([]);
   const sr = !!reveal;
+  // answer_ack = instant feedback (no `others` array yet); full round_result has `others`.
+  const isInstantAck = sr && !reveal.others;
   const pct = Math.max(0, Math.min(100, (timeLeft / question.timeLimit) * 100));
 
   // Enhanced answer handler with game feel
@@ -70,7 +72,15 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
 
   const ansCls = (idx) => {
     let base = '';
-    if (sr) {
+    if (sr && isInstantAck) {
+      // Instant ack: only highlight YOUR answer (green/red), others stay neutral
+      if (idx === selected) {
+        base = reveal.yourCorrect ? 'answer correct' : 'answer wrong';
+      } else {
+        base = 'answer';
+      }
+    } else if (sr) {
+      // Full reveal: show correct, wrong, dim as before
       base = idx === reveal.correctIndex ? 'answer correct' : idx === selected ? 'answer wrong' : 'answer dim';
     } else {
       base = idx === selected ? 'answer selected' : 'answer';
@@ -83,25 +93,50 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
     return base;
   };
 
+  const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+  const round = question.round || 1;
+  const total = question.totalRounds || 10;
+  const progressPct = Math.max(0, Math.min(100, (round / total) * 100));
+
   return (
-    <div className="container game">
+    <div className="container game game-v4">
       <div className="hud-timer-block">
         <span className="hud-timer-label">{t('time')}</span>
-        <span className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr ? '✓' : timeLeft}</span>
+        <span className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr && !isInstantAck ? '\u2713' : timeLeft}</span>
       </div>
       <PlayerHud
         me={{ avatar, frame, name, score }}
         others={opponents}
         revealing={sr}
       />
-      {/* Opponent pop class injected via wrapper or css — see note below */}
+
+      {/* Round progress — thin rail + "Question X / Y" (mockup) */}
+      <div className="game-progress">
+        <div className="game-progress-fill" style={{ width: `${progressPct}%` }} />
+      </div>
+      <div className="game-progress-text">
+        {t('questionLabel')} {round} / {total}
+      </div>
+
+      {/* Category tag */}
+      {question.category && (
+        <div className="game-category">
+          <span className="game-cattag">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" />
+            </svg>
+            {question.category}
+          </span>
+        </div>
+      )}
+
       <div className={`answers-wrapper ${gf.opponentPop ? 'opponent-just-answered' : ''}`}>
         <div className="question-panel">
           <div className="question">{question.question}</div>
           {question.image && (
             <div className="player-photo-wrap">
-              <img src={question.image} alt="Guess the player" className="player-photo" />
-              {revealed && question.credit && <div className="photo-credit">{question.credit}</div>}
+              <img src={question.image} alt="" className="player-photo" />
+              {sr && question.credit && <div className="photo-credit">{question.credit}</div>}
             </div>
           )}
           <div className={`answers ${question.image ? '' : 'single-col'}`}>
@@ -113,19 +148,20 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
                 onClick={() => handleAnswer(idx)}
                 disabled={question.expired || selected !== null || sr}
               >
-                {a}
+                <span className="letter" aria-hidden="true">{letters[idx] || idx + 1}</span>
+                <span className="answer-text">{a}</span>
               </button>
             ))}
           </div>
           <div className="timer-bar-bottom">
             <div
               className={`timer-bar-fill ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}
-              style={{ width: sr ? '0%' : `${pct}%` }}
+              style={{ width: (sr && !isInstantAck) ? '0%' : `${pct}%` }}
             />
           </div>
         </div>
       </div>
-      {sr && (
+      {sr && !isInstantAck && (
         <div className="reveal-note">
           {reveal.yourCorrect
             ? t('ptsEarned', { n: reveal.pointsEarned })
@@ -134,7 +170,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
               : t('wrong')}
         </div>
       )}
-      {sr && (
+      {sr && !isInstantAck && (
         <button className="report-btn" onClick={reportQuestion} disabled={reported}>
           {reported ? t('reported') : t('report')}
         </button>

@@ -12,7 +12,8 @@ import { useFeed, FeedScreen } from './feed';
 import { usePlayers, PlayerSheet, topicLabel } from './players';
 import { RoomLobby } from './multiplayer';
 import { AVATARS, useTheme, TopControls, NavBar, ErrorScreen, Toast } from './ui';
-import { HomeContent, EnterCodeContent, CategoriesContent, ProfileContent, LeaderboardContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent, ShopContent } from './screens';
+import { HomeContent, EnterCodeContent, CategoriesContent, CategoryPreviewContent, ProfileContent, LeaderboardContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent, ShopContent } from './screens';
+import { CATEGORIES as CATS_V4 } from './ui';
 import { initAds, adsEnabled, countFinishedGame, interstitialThen, requestRewardOffer } from './ads';
 import { useI18n } from './i18n';
 import { useGameSocket } from './useGameSocket';
@@ -27,7 +28,7 @@ import { LeagueContent, useLeague } from './LeagueSystem';
 
 const LIVE_SESSION_KEY = 'quizzup-live-session';
 const HISTORY_KEY = 'quizzup';
-const BROWSABLE_STAGES = new Set(['home', 'feed', 'categories', 'profile', 'leaderboard', 'enter_code', 'shop', 'friends', 'league', 'seasonpass']);
+const BROWSABLE_STAGES = new Set(['home', 'feed', 'categories', 'profile', 'leaderboard', 'enter_code', 'shop', 'friends', 'league', 'seasonpass', 'category_preview']);
 const SESSION_STAGES = new Set(['waiting', 'room_wait', 'playing', 'finished', 'error']);
 
 function browserLocation(stage, family) {
@@ -108,6 +109,10 @@ export default function App() {
   }, [name, avatar]);
   const [myId, setMyId] = useState(null);
   const [opponents, setOpponents] = useState([]); // [{id,name,avatar,clientId,score,answered,correct}]
+  // Per-match answer tally for the v4 results screen (correct ratio + mean
+  // answer time). The backend doesn't send these, so we count them locally.
+  const matchTallyRef = useRef({ correct: 0, answered: 0, rounds: 0, totalMs: 0 });
+  const questionShownAtRef = useRef(0);
   const [room, setRoom] = useState(null); // { code, players, isHost, canStart }
   const [intro, setIntro] = useState(null);
   const [question, setQuestion] = useState(null);
@@ -518,6 +523,10 @@ export default function App() {
         break;
       case 'question':
         setIntro(null);
+        questionShownAtRef.current = Date.now();
+        if ((data.round || 1) === 1 && !data.reconnect) {
+          matchTallyRef.current = { correct: 0, answered: 0, rounds: 0, totalMs: 0 };
+        }
         setQuestion(data);
         setSelected(data.reconnect && data.answered ? data.yourAnswer : null);
         setReveal(null);
@@ -534,6 +543,16 @@ export default function App() {
           else if (data.timedOut && !data.yourAnswer && data.yourAnswer !== 0) SFX.timeUp();
           else SFX.wrong();
         }
+        if (!data.reconnect) {
+          const tally = matchTallyRef.current;
+          tally.rounds += 1;
+          if (data.yourCorrect) tally.correct += 1;
+          const answered = data.yourAnswer !== null && data.yourAnswer !== undefined;
+          if (answered && questionShownAtRef.current) {
+            tally.answered += 1;
+            tally.totalMs += Math.max(0, Date.now() - questionShownAtRef.current);
+          }
+        }
         setReveal(data);
         setScore(data.yourScore);
         setOpponents((prev) => data.others.map((upd) => ({ ...prev.find((o) => o.id === upd.id), ...upd })));
@@ -549,7 +568,7 @@ export default function App() {
         setAdOffer(null);
         setAdClaimed(false);
         dailyStreak.claim();
-        setResult(data);
+        setResult({ ...data, matchTally: { ...matchTallyRef.current } });
         setScore(data.finalScore);
         setStage('finished');
         setOpponents((prev) => data.others.map((upd) => ({ ...prev.find((o) => o.id === upd.id), ...upd })));
@@ -669,6 +688,13 @@ export default function App() {
     matchActionRef.current = action;
     beginPending();
     connect(action);
+  }
+
+  // v4: show the Category Preview screen first (Spider-Man hero + stats + "Jouer maintenant")
+  function previewCategory(catKey) {
+    if (pending) return;
+    setMatchCategory(catKey);
+    setStage('category_preview');
   }
 
   function quickMatch() {
@@ -992,8 +1018,8 @@ export default function App() {
         <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
         <HomeContent
-          name={name} avatar={avatar} frame={statsHook.stats.frame} soloMode={soloMode} setSoloMode={setSoloMode}
-          quickMatch={quickMatch} startWithCategory={startWithCategory}
+          name={name} avatar={avatar} frame={statsHook.stats.frame} stats={statsHook.stats} soloMode={soloMode} setSoloMode={setSoloMode}
+          quickMatch={quickMatch} startWithCategory={previewCategory}
           onOpenProfile={() => setStage('profile')} onSeeAll={(fam) => { setCategoryFamily(fam || null); setStage('categories'); }}
           createRoom={createRoom} onOpenEnterCode={() => { setJoinError(false); setJoinCode(''); setStage('enter_code'); }}
           onStartTournament={() => setStage('tournament')}
@@ -1051,9 +1077,26 @@ export default function App() {
     return (
       <div className="app app-nav app-top">
         <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
-        <CategoriesContent startWithCategory={startWithCategory} onBack={() => setStage('home')}
+        <CategoriesContent startWithCategory={previewCategory} onBack={() => setStage('home')}
           family={categoryFamily} onSelectFamily={setCategoryFamily} pending={pending} />
         <NavBar active="categories" onNav={onNav} onQuickMatch={quickMatch} />
+      </div>
+    );
+  }
+
+  if (stage === 'category_preview') {
+    const previewCat = CATS_V4.find((cat) => cat.key === matchCategory);
+    return (
+      <div className="app app-nav app-top">
+        <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+        <CategoryPreviewContent
+          category={previewCat}
+          stats={statsHook.stats}
+          onBack={() => setStage('home')}
+          onPlay={() => matchCategory && startWithCategory(matchCategory)}
+          pending={pending}
+        />
+        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
       </div>
     );
   }
@@ -1107,9 +1150,9 @@ export default function App() {
         <ShopContent
           avatar={avatar} name={name} stats={statsHook.stats}
           onBuy={buyFrame} onEquip={equipFrame} onPlay={quickMatch}
-          onBack={() => setStage('profile')} pending={pending}
+          onBack={() => setStage('home')} pending={pending}
         />
-        <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
+        <NavBar active="shop" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);
   }
 
@@ -1209,7 +1252,7 @@ export default function App() {
 
   if (stage === 'finished' && result) {
     return (
-      <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+      <div className="app results-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
         <FinishedContent
           result={result} opponents={opponents} myId={myId} avatar={avatar} name={name} frame={statsHook.stats.frame} social={social}

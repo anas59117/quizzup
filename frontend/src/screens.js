@@ -4,17 +4,18 @@ import { StreakBadge, StreakCalendar } from './DailyStreak';
 import { ShareCard } from './ShareCard';
 import { ChallengeButton } from './ChallengeLink';
 import { AVATARS, CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon } from './ui';
+import { CategoryTileV4 } from './CategoryTileV4';
 import { PlayerHud, Leaderboard } from './multiplayer';
 import { ProfileStats } from './stats';
 import { FriendsScreen } from './social';
 import { TopicLevelList, topicTitleKey, topicLabel } from './players';
 import { useI18n } from './i18n';
-import { FRAMES, frameClass, frameLabelKey } from './frames';
-import { IdentityCard, IDENTITIES } from './identity';
+import { frameClass } from './frames';
+import { IdentityCard } from './identity';
 
 const FEATURED_TOPIC_KEYS = [
-  'ligue_champions', 'rap_fr', 'one_piece', 'marvel',
-  'pokemon', 'euphoria', 'nba', 'drapeaux',
+  'spider_man', 'harry_potter', 'minecraft', 'rap_fr',
+  'ligue_champions', 'marvel', 'one_piece', 'pokemon',
 ];
 const FEATURED_TOPIC_LABELS = { nba: 'NBA', drapeaux: 'Drapeaux du monde' };
 const FEATURED_TOPICS = FEATURED_TOPIC_KEYS
@@ -28,55 +29,210 @@ const FEATURED_TOPICS = FEATURED_TOPIC_KEYS
   })
   .filter(Boolean);
 
-export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, onStartTournament, onOpenFriends, onOpenLeague, onOpenSeasonPass, pending }) {
+export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, onStartTournament, onOpenFriends, onOpenLeague, onOpenSeasonPass, pending, stats }) {
   const { t } = useI18n();
+  const [showMore, setShowMore] = useState(false);
+  // Keep up to 7 featured covers for Mes thèmes; Spider-Man-equivalent card gets the 2:1 "featured" slot.
+  const myThemes = FEATURED_TOPICS.slice(0, 7);
+  const [heroTopic, ...rest] = myThemes;
+  const games = (stats && stats.games) || 0;
+  const followers = (stats && stats.followers) || 0;
+  const following = (stats && stats.following) || 0;
   return (
-    <div className="container wide">
-      <div className="home-head">
+    <div className="container wide home-v4">
+      <div className="home-head home-head--v4">
         <div className="home-brand">
           <div className="home-brandmark">Q</div>
-          <div>
-            <div className="home-logo-sm">Quizz<span>Up</span></div>
-            <div className="home-greeting">{t('hey', { name })}</div>
+          <div className="home-logo-sm">Quizz<span>Up</span></div>
+        </div>
+        <div className="home-actions">
+          <button className="home-action" onClick={() => onSeeAll && onSeeAll()} aria-label={t('searchPlaceholder')}>
+            <Icon name="search" size={18} />
+          </button>
+          <button className="home-action" onClick={() => onOpenFriends && onOpenFriends()} aria-label={t('friends')}>
+            <Icon name="users" size={18} />
+          </button>
+        </div>
+      </div>
+      <button className={`profile-card-v4${frameClass(frame)}`} onClick={onOpenProfile} aria-label="Open profile">
+        <div className="profile-row-v4">
+          <div className="profile-avatar-v4">{avatar}</div>
+          <div className="profile-identity-v4">
+            <div className="profile-name-v4">{name || 'Joueur'}</div>
+            <div className="profile-bio-v4">{t('hey', { name })}</div>
           </div>
         </div>
-        <button className={`home-avatar-chip${frameClass(frame)}`} onClick={onOpenProfile} aria-label="Open profile">{avatar}</button>
-      </div>
-      <div className="play-card">
-        <div className="play-card-copy">
-          <SoloToggle solo={soloMode} onChange={setSoloMode} />
-          <div className="play-title">{t('quickPlay')}</div>
-          <div className="play-subtitle">{t('randomTopic')}</div>
+        <div className="profile-stats-v4">
+          <span><b>{games}</b> parties</span>
+          <span className="dot">·</span>
+          <span><b>{followers}</b> amis</span>
+          <span className="dot">·</span>
+          <span>tu suis <b>{following}</b></span>
         </div>
-        <button className="quick-play" onClick={quickMatch} disabled={pending} aria-busy={pending || undefined} aria-label={t('quickPlay')}>
-          <Icon name="bolt" size={21} />
-          <Icon name="arrow" size={20} className="quick-arrow" />
-        </button>
-        <button className="tournament-btn" onClick={() => onStartTournament && onStartTournament()} disabled={pending}>
-          <span>🏆</span> {t('tournament')}
-        </button>
-        <button className="friends-btn" onClick={() => onOpenFriends && onOpenFriends()} disabled={pending}>
-          <span>👥</span> {t('friends')}
-        </button>
-        <button className="league-btn" onClick={() => onOpenLeague && onOpenLeague()} disabled={pending}>
-          <span>🏆</span> {t('league')}
-        </button>
-        <button className="seasonpass-btn" onClick={() => onOpenSeasonPass && onOpenSeasonPass()} disabled={pending}>
-          <span>🎯</span> {t('seasonPass')}
+      </button>
+      <div className="home-solo-row">
+        <SoloToggle solo={soloMode} onChange={setSoloMode} />
+      </div>
+      <div className="section-head-v4">
+        <h2 className="section-title-v4">Mes thèmes</h2>
+        <button className="section-edit" onClick={() => onSeeAll && onSeeAll()}>
+          {t('seeAll')}
         </button>
       </div>
-      <div className="section-title">{t('popularTopics')}</div>
-      <div className="topics-scroll">
-        {FEATURED_TOPICS.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}
+      <div className="topics-grid-v4">
+        {heroTopic && (
+          <div className="topic-tile-wrap topic-tile-wrap--featured" data-topic={heroTopic.key}>
+            <CategoryTileV4 c={heroTopic} featured onClick={() => startWithCategory(heroTopic.key)} disabled={pending} />
+          </div>
+        )}
+        {rest.map((c) => (
+          <div key={c.key} className="topic-tile-wrap" data-topic={c.key}>
+            <CategoryTileV4 c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />
+          </div>
+        ))}
       </div>
-      <div className="section-title">
-        <span>{t('allTopics')}</span>
-        <button className="see-all" onClick={() => onSeeAll()}>{t('seeAll')}</button>
+      <div className="section-head-v4">
+        <h2 className="section-title-v4">{t('allTopics')}</h2>
+        <button className="section-edit" onClick={() => onSeeAll && onSeeAll()}>{t('seeAll')}</button>
       </div>
       <FamilyGrid onSelect={onSeeAll} />
-      <div className="social-row">
-        <button className="social-btn" onClick={createRoom} disabled={pending}><Icon name="users" size={18} /> {t('party')}</button>
-        <button className="social-btn outline" onClick={onOpenEnterCode}><Icon name="key" size={18} /> {t('joinCode')}</button>
+      <div className="home-social-row-v4">
+        <button className="social-chip" onClick={createRoom} disabled={pending}><Icon name="users" size={16} /> {t('party')}</button>
+        <button className="social-chip" onClick={onOpenEnterCode}><Icon name="key" size={16} /> {t('joinCode')}</button>
+      </div>
+      <button
+        className="more-toggle"
+        type="button"
+        onClick={() => setShowMore((v) => !v)}
+      >
+        {showMore ? t('back') : '•••'}
+      </button>
+      {showMore && (
+        <div className="home-extras-v4">
+          <button className="extra-chip" onClick={() => onStartTournament && onStartTournament()} disabled={pending}>
+            <span>🏆</span> {t('tournament')}
+          </button>
+          <button className="extra-chip" onClick={() => onOpenLeague && onOpenLeague()} disabled={pending}>
+            <span>🏆</span> {t('league')}
+          </button>
+          <button className="extra-chip" onClick={() => onOpenSeasonPass && onOpenSeasonPass()} disabled={pending}>
+            <span>🎯</span> {t('seasonPass')}
+          </button>
+        </div>
+      )}
+      {/* Hidden Quick Play button — triggered from NavBar bolt */}
+      <button
+        className="quick-play quick-play--hidden"
+        onClick={quickMatch}
+        disabled={pending}
+        aria-busy={pending || undefined}
+        aria-label={t('quickPlay')}
+        aria-hidden="true"
+        tabIndex={-1}
+      >
+        <Icon name="bolt" size={21} />
+      </button>
+    </div>
+  );
+}
+
+// Topic preview short descriptions (fallback for featured sub)
+const PREVIEW_SUB = {
+  spider_man: { line1: 'SPIDER', line2: 'MAN', eyebrow: 'POP CULTURE · MARVEL', sub: 'Multiverse', desc: 'Du Peter de Raimi au Miles de Across. 150 questions pour départager les vrais fans des Avengers du dimanche.' },
+  harry_potter: { line1: 'HARRY', line2: 'POTTER', eyebrow: 'POP CULTURE · WIZARDING', sub: 'Wizarding World', desc: 'Poudlard, sortilèges & créatures magiques. Les vrais fans vont se régaler.' },
+  marvel: { line1: 'MARVEL', eyebrow: 'POP CULTURE · MARVEL', sub: 'Avengers', desc: 'Avengers, X-Men, et tout l\'univers Marvel réuni.' },
+  dc_comics: { line1: 'DC', line2: 'COMICS', eyebrow: 'POP CULTURE · DC', sub: 'Multiverse', desc: 'Justice League, Batman, Superman — l\'univers DC Comics.' },
+  batman: { line1: 'BAT', line2: 'MAN', eyebrow: 'POP CULTURE · DC', sub: 'Gotham', desc: 'Gotham, le Chevalier Noir, Joker et toute la Bat-Famille.' },
+  star_wars: { line1: 'STAR', line2: 'WARS', eyebrow: 'POP CULTURE · LUCASFILM', sub: 'Saga', desc: 'La Force, les Jedi, les Sith — toute la saga galactique.' },
+  game_of_thrones: { line1: 'GAME OF', line2: 'THRONES', eyebrow: 'SÉRIE · HBO', sub: 'Westeros', desc: 'Westeros, dragons, trônes et trahisons.' },
+  one_piece: { line1: 'ONE', line2: 'PIECE', eyebrow: 'MANGA · SHONEN', sub: 'Grand Line', desc: 'Luffy et l\'équipage du Chapeau de paille à la recherche du One Piece.' },
+  pokemon: { line1: 'POKÉMON', eyebrow: 'POP CULTURE · GAMING', sub: 'Pokéverse', desc: 'Attrapez-les tous ! Les 1000+ Pokémon depuis la génération 1.' },
+  minecraft: { line1: 'MINE', line2: 'CRAFT', eyebrow: 'GAMING · SANDBOX', sub: 'Overworld', desc: 'Blocs, créatures, biomes & dimensions du jeu culte.' },
+  rap_fr: { line1: 'RAP', line2: 'FR', eyebrow: 'MUSIQUE · RAP', sub: 'France · 2024', desc: 'PNL, Booba, Jul, SCH & tous les grands noms du rap français.' },
+  werenoi: { line1: 'WERE', line2: 'NOI', eyebrow: 'MUSIQUE · RAP FR', sub: 'Rap FR · 2024', desc: 'La discographie et l\'univers de Werenoi.' },
+  ligue_champions: { line1: 'LIGUE DES', line2: 'CHAMPIONS', eyebrow: 'SPORT · FOOTBALL', sub: 'UEFA', desc: 'Finales, légendes & records de la plus grande compétition européenne.' },
+};
+
+export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChallenge, pending, friendsOnTopic = [] }) {
+  const { t } = useI18n();
+  if (!category) return null;
+  const preview = PREVIEW_SUB[category.key] || { eyebrow: category.family || 'QUIZ', desc: category.desc };
+  const topicStats = (stats && stats.topics || []).find((t) => t.key === category.key) || {};
+  const completion = topicStats.completion || 0;
+  const bestStreak = topicStats.bestStreak || 0;
+  const topicLevel = topicStats.level || 1;
+  return (
+    <div className="container wide category-preview-v4" data-topic={category.key} data-family={category.family}>
+      <div className="cp-bg" aria-hidden="true" />
+
+      {/* Decorative overlay for Spider-Man / Marvel */}
+      {(category.key === 'spider_man' || category.key === 'marvel') && (
+        <svg className="cp-web" viewBox="0 0 100 100" aria-hidden="true">
+          <g fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="0.5">
+            <path d="M50 50L0 0M50 50L100 0M50 50L0 100M50 50L100 100M50 50L50 0M50 50L50 100M50 50L0 50M50 50L100 50"/>
+            <path d="M30 30A28 28 0 0 1 70 30M20 50A42 42 0 0 1 80 50M30 70A28 28 0 0 0 70 70M35 35A20 20 0 0 1 65 35M25 50A32 32 0 0 1 75 50" strokeDasharray="2 2"/>
+          </g>
+        </svg>
+      )}
+
+      <div className="cp-head">
+        <button className="cp-back" onClick={onBack} aria-label={t('back')}>
+          <Icon name="arrow" size={18} className="cp-back-ic" />
+        </button>
+        <div className="cp-head-right">
+          <button className="cp-icon-btn" aria-label="Favori">
+            <Icon name="heart" size={18} />
+          </button>
+          <button className="cp-icon-btn" aria-label="Partager">
+            <Icon name="share" size={18} />
+          </button>
+        </div>
+      </div>
+
+      <div className="cp-hero">
+        <div className="cp-eyebrow">{preview.eyebrow}</div>
+        <h1 className="cp-title">
+          {preview.line1 ? (
+            <>
+              <span className="cp-title-l">{preview.line1}</span>
+              {preview.line2 && <span className="cp-title-l">{preview.line2}</span>}
+            </>
+          ) : (
+            <span className="cp-title-l">{category.label}</span>
+          )}
+          {preview.sub && <span className="cp-subtitle">{preview.sub}</span>}
+        </h1>
+        <p className="cp-info">{preview.desc}</p>
+      </div>
+
+      <div className="cp-stats">
+        <div className="cp-stat"><b>{completion}%</b><span>complété</span></div>
+        <div className="cp-stat"><b>{bestStreak}</b><span>meilleure série</span></div>
+        <div className="cp-stat"><b>N{topicLevel}</b><span>niveau actuel</span></div>
+      </div>
+
+      <div className="cp-cta">
+        <button className="cp-play" onClick={onPlay} disabled={pending}>
+          <Icon name="bolt" size={18} />
+          Jouer maintenant
+        </button>
+        <button className="cp-ghost" onClick={onChallenge} disabled={pending} aria-label="Défier un ami">
+          <Icon name="profile" size={18} />
+        </button>
+      </div>
+
+      <div className="cp-friends">
+        <h3>Tes amis sur ce quiz</h3>
+        {friendsOnTopic.length > 0 ? (
+          <div className="cp-friends-row">
+            {friendsOnTopic.slice(0, 4).map((f) => (
+              <div key={f.id} className="cp-friend-ava">{(f.name || '?')[0].toUpperCase()}</div>
+            ))}
+            {friendsOnTopic.length > 4 && <span className="cp-friends-more">+ {friendsOnTopic.length - 4} autres</span>}
+          </div>
+        ) : (
+          <div className="cp-friends-empty">Personne pour l'instant. Sois le premier à défier tes amis.</div>
+        )}
       </div>
     </div>
   );
@@ -120,8 +276,12 @@ export function CategoriesContent({ startWithCategory, onBack, family, onSelectF
       <SearchBar value={query} onChange={setQuery} placeholder={t('searchPlaceholder')} />
       {results ? (
         results.length ? (
-          <div className="topics-grid full">
-            {results.map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}
+          <div className="topics-grid-v4">
+            {results.map((c) => (
+              <div key={c.key} className="topic-tile-wrap" data-topic={c.key}>
+                <CategoryTileV4 c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />
+              </div>
+            ))}
           </div>
         ) : (
           <div className="no-results">{t('noResults', { q: query })}</div>
@@ -129,8 +289,12 @@ export function CategoriesContent({ startWithCategory, onBack, family, onSelectF
       ) : activeFamily ? (
         <>
           <button className="back-to-topics" onClick={() => onSelectFamily(null)}>{t('backToTopics')}</button>
-          <div className="topics-grid full">
-            {categoriesInFamily(activeFamily.key).map((c) => <CategoryTile key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}
+          <div className="topics-grid-v4">
+            {categoriesInFamily(activeFamily.key).map((c) => (
+              <div key={c.key} className="topic-tile-wrap" data-topic={c.key}>
+                <CategoryTileV4 c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />
+              </div>
+            ))}
           </div>
         </>
       ) : (
@@ -190,20 +354,32 @@ export function ProfileContent({
     onSaveProfile(normalizedName, draftAvatar);
   };
 
+  // XP progression
+  const xpPct = stats.xpForLevel ? Math.min(100, Math.round((stats.xpIntoLevel / stats.xpForLevel) * 100)) : 0;
+  const xpRemaining = stats.xpForLevel ? (stats.xpForLevel - (stats.xpIntoLevel || 0)) : 0;
+
+  // Social counts
+  const friendCount = social?.friends?.length || 0;
+  const followingCount = stats.following || 0;
+
   return (
-    <div className="container">
-      <div className="profile-identity-head">
-        <IdentityCard frame={stats.frame} avatar={avatar} name={name} level={stats.level} />
-        <button
-          className="profile-edit-btn"
-          onClick={() => setEditing((value) => !value)}
-          aria-label={t('editProfile')}
-          aria-expanded={editing}
-        >
-          <Icon name="edit" size={17} />
-        </button>
+    <div className="container pf-v4">
+      {/* ── Hero ──────────────────────────────────────────── */}
+      <div className="pf-hero">
+        <div className="pf-avatar-wrap" onClick={() => setEditing((v) => !v)}>
+          <div className="pf-avatar">{avatar}</div>
+          <button className="pf-edit-dot" aria-label={t('editProfile')}>
+            <Icon name="edit" size={11} />
+          </button>
+        </div>
+        <div className="pf-name">{name}</div>
+        <div className="pf-bio">{t('level')} {stats.level}</div>
+        <div className="pf-social">
+          {stats.games || 0} {t('games').toLowerCase()} · {friendCount} {t('friends').toLowerCase()} · suit {followingCount} {t('players').toLowerCase()}
+        </div>
       </div>
 
+      {/* ── Editor (toggle) ───────────────────────────────── */}
       {editing && (
         <div className="profile-editor">
           <label className="profile-editor-label" htmlFor="profile-name-input">{t('displayName')}</label>
@@ -244,19 +420,28 @@ export function ProfileContent({
         </div>
       )}
 
-      <div className="follow-counts">
-        <div><strong>{stats.followers || 0}</strong><small>{t('followers')}</small></div>
-        <div><strong>{stats.following || 0}</strong><small>{t('followingCount')}</small></div>
+      {/* ── Level progression card ────────────────────────── */}
+      <div className="pf-section-title">{t('overallProgress') || 'Progression générale'}</div>
+      <div className="pf-level-card">
+        <div className="pf-level-head">
+          <span className="pf-level-label">{t('level')} {stats.level}</span>
+          <span className="pf-level-pct">{xpPct}%</span>
+        </div>
+        <div className="pf-xp-bar"><div className="pf-xp-fill" style={{ width: `${xpPct}%` }} /></div>
+        <div className="pf-xp-text">{xpRemaining} {t('beforeNextLevel') || 'XP avant le niveau'} {stats.level + 1}</div>
       </div>
-      <ProfileStats stats={stats} />
-          {league && (
-            <div className="profile-league-card" onClick={() => onOpenLeague && onOpenLeague()}>
-              <div className="pl-tier">{league.tier.icon} {league.tier.label}</div>
-              <div className="pl-lp">{league.lp} LP</div>
-              <div className="pl-progress"><div className="pl-progress-fill" style={{ width: `${league.progress}%`, background: league.tier.color }} /></div>
-              <div className="pl-stats">{league.wins}W / {league.losses}L • {league.winRate}% WR</div>
-            </div>
-          )}
+
+      {/* ── League card ───────────────────────────────────── */}
+      {league && (
+        <div className="profile-league-card" onClick={() => onOpenLeague && onOpenLeague()}>
+          <div className="pl-tier">{league.tier.icon} {league.tier.label}</div>
+          <div className="pl-lp">{league.lp} LP</div>
+          <div className="pl-progress"><div className="pl-progress-fill" style={{ width: `${league.progress}%`, background: league.tier.color }} /></div>
+          <div className="pl-stats">{league.wins}W / {league.losses}L · {league.winRate}% WR</div>
+        </div>
+      )}
+
+      {/* ── Streak ────────────────────────────────────────── */}
       {streak && streak.streak > 0 && (
         <StreakCalendar
           streak={streak.streak}
@@ -265,8 +450,35 @@ export function ProfileContent({
           milestoneProgress={streak.milestoneProgress}
         />
       )}
-      <div className="section-title">{t('myTopics')}</div>
-      <TopicLevelList topics={stats.topics} onSelect={onOpenTopic} />
+
+      {/* ── My themes (mini topic grid) ───────────────────── */}
+      {stats.topics && stats.topics.length > 0 && (
+        <>
+          <div className="pf-section-title">{t('myTopics')}</div>
+          <div className="pf-themes">
+            {stats.topics.slice(0, 8).map((topic) => {
+              const cat = CATEGORIES.find((c) => c.key === topic.key);
+              return (
+                <button
+                  key={topic.key}
+                  className="pf-theme-tile"
+                  data-family={cat?.family || ''}
+                  onClick={() => onOpenTopic && onOpenTopic(topic.key)}
+                >
+                  <span className="pf-theme-icon">{cat?.icon || '📚'}</span>
+                  <span className="pf-theme-lvl">N{topic.level}</span>
+                </button>
+              );
+            })}
+          </div>
+        </>
+      )}
+
+      {/* ── Stats grid ────────────────────────────────────── */}
+      <div className="pf-section-title">{t('statistics') || 'Statistiques'}</div>
+      <ProfileStats stats={stats} />
+
+      {/* ── CTAs ──────────────────────────────────────────── */}
       <button className="leaderboard-cta shop-cta" onClick={onOpenShop}>
         <span className="leaderboard-cta-icon shop-cta-icon" aria-hidden="true"><Icon name="shop" size={21}/></span>
         <span className="leaderboard-cta-copy">
@@ -283,6 +495,11 @@ export function ProfileContent({
         </span>
         <Icon name="arrow" size={18} />
       </button>
+
+      {/* ── Friends ───────────────────────────────────────── */}
+      <FriendsScreen social={social} />
+
+      {/* ── Account link + privacy ────────────────────────── */}
       {isGoogleLinked ? (
         <div className="account-linked">{'✓'} {t('connectedGoogle', { email: googleEmail })}</div>
       ) : (
@@ -290,7 +507,6 @@ export function ProfileContent({
           {linking ? t('connecting') : t('connectGoogle')}
         </button>
       )}
-      <FriendsScreen social={social} />
       <a className="privacy-link" href="/privacy.html" target="_blank" rel="noopener noreferrer">
         {t('privacyPolicy')}
       </a>
@@ -454,6 +670,7 @@ export const QuestionContent = EnhancedQuestionContent;
 export function FinishedContent({ result, opponents, myId, avatar, name, frame, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch, adOffer, onWatchAd, adClaimed, streak, onShowShare }) {
   const { t } = useI18n();
   const [showShare, setShowShare] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
   const { won, tie } = result;
   const left = result.reason === 'opponent_disconnected' || result.reason === 'opponent_left';
   const isSolo = !!result.solo;
@@ -466,14 +683,142 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
     if (navigator.share) navigator.share({ text }).catch(() => {});
     else navigator.clipboard?.writeText(text).catch(() => {});
   };
+  // v4 results hero — editorial headline on coral, then the reward signals
+  // inline (score, XP, coins, streak). Only the deep breakdown folds away.
+  const opp = opponents && opponents[0];
+  const myScore = result.finalScore;
+  const oppScore = opp ? (opp.score ?? 0) : null;
+  const topicName = result.topic ? topicLabel(result.topic.key) : '';
+  const tally = result.matchTally || {};
+  const correctPct = tally.rounds ? Math.round((tally.correct / tally.rounds) * 100) : null;
+  const avgSec = tally.answered ? (tally.totalMs / tally.answered / 1000) : null;
+  const initial = (n) => (n || '?').trim().charAt(0).toUpperCase();
+  const coinsEarned = adClaimed ? result.coins * 2 : result.coins;
+
+  // Sentence case, never all-caps — the mockup's voice is "Belle victoire."
+  const headline = isSolo
+    ? { a: 'Partie', b: 'terminée' }
+    : won ? { a: 'Belle', b: 'victoire' }
+      : tie ? { a: 'Match', b: 'nul' }
+        : { a: 'Pas cette', b: 'fois' };
+
   return (
-    <div className="container center">
-      <div className="result-hero">
-        <div className={`result-title ${isSolo ? 'tie' : won ? 'win' : tie ? 'tie' : 'loss'}`}>{isSolo ? t('finished') : won ? t('victory') : tie ? t('draw') : t('defeat')}</div>
-        <div className="result-sub">{left ? t('someoneLeft') : t('finalScore', { n: result.finalScore })}</div>
+    <div className="container center results-v4">
+      <div className="res-content">
+        <div className="res-eyebrow">
+          {topicName}{topicName && !isSolo && oppScore !== null ? ' \u00b7 ' : ''}
+          {isSolo || oppScore === null ? '' : `${myScore} \u00e0 ${oppScore}`}
+        </div>
+        <h1 className={`res-title ${isSolo ? 'tie' : won ? 'win' : tie ? 'tie' : 'loss'}`}>
+          {headline.a}<br />{headline.b}<em>.</em>
+        </h1>
+
+        {left && <div className="res-left-note">{t('someoneLeft')}</div>}
+
+        {!isSolo && opp ? (
+          <div className="res-scoreboard">
+            <div className="res-score me">
+              <div className="av">{initial(name)}</div>
+              <div className="pts">{myScore}</div>
+              <div className="nm">{t('you')}</div>
+            </div>
+            <div className="res-vs">vs</div>
+            <div className="res-score op">
+              <div className="av">{initial(opp.name)}</div>
+              <div className="pts">{oppScore}</div>
+              <div className="nm">{opp.name}</div>
+            </div>
+          </div>
+        ) : (
+          <div className="res-soloboard">
+            <div className="res-solo-score">{myScore}</div>
+            <div className="res-solo-label">{t('matchScore')}</div>
+          </div>
+        )}
+
+        <div className="res-stats">
+          <div className="res-stat">
+            <b>{correctPct === null ? '\u2014' : `${correctPct}%`}</b>
+            <span>bonnes réponses</span>
+          </div>
+          <div className="res-stat">
+            <b>{avgSec === null ? '\u2014' : `${avgSec.toFixed(1)}s`}</b>
+            <span>temps moyen</span>
+          </div>
+          <div className="res-stat">
+            <b>{result.topic ? `N${result.topic.level}` : `+${result.xp}`}</b>
+            <span>{result.topic ? 'niveau du thème' : t('xpTotal')}</span>
+          </div>
+        </div>
+
+        {/* Reward signals stay visible — this is what the old screen got right */}
+        <div className="res-rewards">
+          <div className="res-reward">
+            <b>+{result.xp}</b>
+            <span>{t('xpTotal')}</span>
+          </div>
+          {result.coins > 0 && (
+            <div className="res-reward">
+              <b>+{coinsEarned}</b>
+              <span>{adClaimed ? t('coinsDoubled') : 'pièces'}</span>
+            </div>
+          )}
+          {result.dayStreak > 1 && (
+            <div className="res-reward">
+              <b>{result.dayStreak}j</b>
+              <span>série</span>
+            </div>
+          )}
+        </div>
+
+        {result.stats && (
+          <div className="res-level">
+            <LevelRing
+              level={result.stats.level}
+              xpIntoLevel={result.stats.xpIntoLevel}
+              xpForLevel={result.stats.xpForLevel}
+            />
+            <div className="res-level-text">
+              <b>Niveau {result.stats.level}</b>
+              <span>{result.stats.xpIntoLevel} / {result.stats.xpForLevel} XP</span>
+            </div>
+          </div>
+        )}
+
+        {adOffer && !adClaimed && result.coins > 0 && (
+          <button className="res-btn-ad" onClick={onWatchAd}>
+            <span aria-hidden="true">▶</span> {t('adDouble', { n: result.coins })}
+          </button>
+        )}
+
+        <div className="res-cta">
+          {!isSolo ? (
+            <button className="res-btn-primary" onClick={rematch} disabled={rematchWaiting || rematchStarting}>
+              {rematchWaiting || rematchStarting ? t('waitingDots') : t('rematch')}
+            </button>
+          ) : (
+            <button className="res-btn-primary" onClick={newMatch} disabled={rematchStarting}>
+              {t('newGame')}
+            </button>
+          )}
+          {!isSolo && (
+            <button className="res-btn-outline" onClick={newMatch} disabled={rematchStarting}>
+              {t('newOpponent')}
+            </button>
+          )}
+          <button className="res-btn-outline" onClick={playAgain} disabled={rematchStarting}>
+            {t('backHome')}
+          </button>
+        </div>
+
+        <button className="res-details-toggle" onClick={() => setShowDetails((v) => !v)} aria-expanded={showDetails}>
+          {showDetails ? t('hideDetails') : t('showDetails')}
+        </button>
       </div>
+
+      {showDetails && (
+      <div className="res-details">
       <IdentityCard frame={frame} avatar={avatar} name={name} level={result.stats?.level} className="identity-card-result" />
-      {result.stats && <LevelRing level={result.stats.level} xpIntoLevel={result.stats.xpIntoLevel} xpForLevel={result.stats.xpForLevel} />}
       {result.topic && (
         <div className="result-topic-level">
           <span className="topic-level-badge">{result.topic.level}</span>
@@ -483,7 +828,6 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
           </span>
         </div>
       )}
-      {result.dayStreak > 1 && <div className="result-day-streak">{t('dayStreakLine', { n: result.dayStreak })}</div>}
       <div className="xp-breakdown">
         <div className="xpb-row"><span>{t('matchScore')}</span><span>{result.finalScore}</span></div>
         <div className="xpb-row"><span>{t('finishBonus')}</span><span>+{result.xpBreakdown?.finishBonus ?? 0}</span></div>
@@ -491,15 +835,6 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
         <div className="xpb-row total"><span>{t('xpTotal')}</span><span>{result.xp}</span></div>
       </div>
       {!isSolo && <Leaderboard leaderboard={result.leaderboard} myId={myId} />}
-      <div className="rewards-row">
-        <span className="rw">{t('coins', { n: adClaimed ? result.coins * 2 : result.coins })}</span>
-        {adClaimed && <span className="rw doubled">{t('coinsDoubled')}</span>}
-      </div>
-      {adOffer && !adClaimed && result.coins > 0 && (
-        <button className="ad-double-btn" onClick={onWatchAd}>
-          <span aria-hidden="true">▶</span> {t('adDouble', { n: result.coins })}
-        </button>
-      )}
       <div className="result-streak-row">
         <StreakBadge streak={streak?.streak || 0} />
       </div>
@@ -519,77 +854,219 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
           {t('addFriend', { name: o.name })}
         </button>
       ))}
-      <div className="result-actions">
-        {!isSolo && (
-          <button className="ra-btn rematch" onClick={rematch} disabled={rematchWaiting || rematchStarting}>
-            {rematchWaiting || rematchStarting ? t('waitingDots') : t('rematch')}
-          </button>
-        )}
-        <button className="ra-btn new-opp" onClick={newMatch} disabled={rematchStarting}>
-          {isSolo ? t('newGame') : t('newOpponent')}
-        </button>
-        <button className="ra-btn see-res" onClick={playAgain} disabled={rematchStarting}>{t('backHome')}</button>
       </div>
+      )}
     </div>
   );
 }
 
-export function ShopContent({ avatar, name, stats, onBuy, onEquip, onPlay, onBack, pending }) {
-  const { t, lang } = useI18n();
-  const [selected, setSelected] = useState(() => stats.frame && stats.frame !== 'none' ? stats.frame : 'neon');
-  const [confirming, setConfirming] = useState(null);
-  const owned = new Set(stats.ownedFrames || ['none']);
-  const equipped = stats.frame || 'none';
-  const coins = stats.coins || 0;
-  const item = FRAMES.find((entry) => entry.id === selected) || FRAMES[0];
-  const isOwned = owned.has(item.id);
-  const isEquipped = equipped === item.id;
+// ─── Boutique v4 ────────────────────────────────────────────────
+const QV4SHOP_CATEGORIES = [
+  ['avatars', 'Avatars', 'Du caractère.', 'Trouve le personnage qui te ressemble.'],
+  ['entries', 'Entrées', 'Une entrée qui claque.', 'Le duel commence. Fais ton apparition.'],
+  ['reactions', 'Réactions', 'À toi de réagir.', 'Un petit geste entre deux grandes réponses.'],
+  ['celebrations', 'Célébrations', 'Savoure la victoire.', 'Tu as gagné. Profite de ton moment.'],
+];
+const QV4SHOP_ITEMS = [
+  { id: 'fox', category: 'avatars', name: 'Renard rusé', price: 350, art: 'fox', tone: 'amber', description: 'Malin. Rapide. Toujours une longueur d’avance.', badge: 'POPULAIRE' },
+  { id: 'robot', category: 'avatars', name: 'Petit robot', price: 0, art: 'robot', tone: 'cyan', description: 'Curieux, positif, toujours partant.' },
+  { id: 'brain', category: 'avatars', name: 'Cerveau en feu', price: 500, art: 'brain', tone: 'pink', description: 'Réfléchit vite. Très vite.', badge: 'NOUVEAU' },
+  { id: 'astronaut', category: 'avatars', name: 'Cosmo', price: 450, art: 'astronaut', tone: 'cyan', description: 'La tête dans les étoiles, les réponses sur Terre.' },
+  { id: 'ninja', category: 'avatars', name: 'Ninja furtif', price: 500, art: 'ninja', tone: 'pink', description: 'Discret jusqu’à la réponse décisive.' },
+  { id: 'dragon', category: 'avatars', name: 'Dragon malicieux', price: 600, art: 'dragon', tone: 'green', description: 'Petit dragon. Grandes ambitions.', badge: 'NOUVEAU' },
+  { id: 'cat', category: 'avatars', name: 'Chat de minuit', price: 400, art: 'cat', tone: 'pink', description: 'Neuf vies et un instinct redoutable.' },
+  { id: 'owl', category: 'avatars', name: 'Hibou savant', price: 450, art: 'owl', tone: 'cyan', description: 'Il a lu la question avant tout le monde.' },
+  { id: 'ghost', category: 'avatars', name: 'Fantôme joueur', price: 350, art: 'ghost', tone: 'ice', description: 'Adorable. Un peu imprévisible.' },
+  { id: 'lion', category: 'avatars', name: 'Lion royal', price: 650, art: 'lion', tone: 'amber', description: 'Une crinière, une couronne et du panache.' },
+  { id: 'lightning', category: 'entries', name: 'Éclair', price: 600, tone: 'amber', description: 'Apparais au milieu d’une décharge électrique.', badge: 'ANIMÉ' },
+  { id: 'smoke', category: 'entries', name: 'Fumée', price: 600, tone: 'cyan', description: 'Un nuage bleu se dissipe et te révèle.', badge: 'ANIMÉ' },
+  { id: 'pixels', category: 'entries', name: 'Pixels', price: 750, tone: 'pink', description: 'Ton personnage se matérialise pixel par pixel.', badge: 'ANIMÉ' },
+  { id: 'portal', category: 'entries', name: 'Portail', price: 700, tone: 'pink', description: 'Traverse un passage lumineux venu d’ailleurs.', badge: 'ANIMÉ' },
+  { id: 'flames', category: 'entries', name: 'Flammes', price: 650, tone: 'amber', description: 'Surgis dans une flambée rouge et or.', badge: 'ANIMÉ' },
+  { id: 'glitch', category: 'entries', name: 'Glitch', price: 600, tone: 'cyan', description: 'Un bug dans la matrice. Et te voilà.', badge: 'ANIMÉ' },
+  { id: 'tornado', category: 'entries', name: 'Tornade', price: 750, tone: 'ice', description: 'Un tourbillon te dépose au cœur du duel.', badge: 'ANIMÉ' },
+  { id: 'meteor', category: 'entries', name: 'Météore', price: 850, tone: 'amber', description: 'Une arrivée fulgurante depuis les étoiles.', badge: 'ANIMÉ' },
+  { id: 'clap', category: 'reactions', name: 'Bien joué', price: 200, tone: 'cyan', description: 'Une salve d’applaudissements pour ton adversaire.' },
+  { id: 'sweat', category: 'reactions', name: 'Ça chauffe', price: 250, tone: 'pink', description: 'Une goutte de sueur : cette question était dure.' },
+  { id: 'cool', category: 'reactions', name: 'Trop facile', price: 300, tone: 'amber', description: 'Les lunettes descendent. La confiance monte.' },
+  { id: 'heart', category: 'reactions', name: 'J’adore', price: 200, tone: 'pink', description: 'Un grand cœur pour un beau moment.' },
+  { id: 'angry', category: 'reactions', name: 'Pas content', price: 250, tone: 'amber', description: 'Une petite colère après une réponse ratée.' },
+  { id: 'laugh', category: 'reactions', name: 'Mort de rire', price: 250, tone: 'cyan', description: 'Cette réponse méritait un fou rire.' },
+  { id: 'shock', category: 'reactions', name: 'Incroyable', price: 300, tone: 'ice', description: 'Les yeux grands ouverts. Comment tu savais ça ?' },
+  { id: 'thumbsup', category: 'reactions', name: 'Respect', price: 200, tone: 'green', description: 'Un pouce levé pour saluer le talent.' },
+  { id: 'dance', category: 'celebrations', name: 'Victory dance', price: 700, tone: 'pink', description: 'Quelques pas de danse pour fêter ta victoire.', badge: 'ANIMÉ' },
+  { id: 'throne', category: 'celebrations', name: 'Trône', price: 900, tone: 'amber', description: 'Prends place. Cette partie était la tienne.', badge: 'NOUVEAU' },
+  { id: 'fireworks', category: 'celebrations', name: 'Feu d’artifice', price: 800, tone: 'pink', description: 'Des explosions de couleur pour le dernier mot.', badge: 'ANIMÉ' },
+  { id: 'disco', category: 'celebrations', name: 'Disco fever', price: 750, tone: 'cyan', description: 'Boule à facettes et piste de danse : c’est ta soirée.', badge: 'ANIMÉ' },
+  { id: 'micdrop', category: 'celebrations', name: 'Mic drop', price: 700, tone: 'pink', description: 'Le micro tombe. Tout est dit.', badge: 'ANIMÉ' },
+  { id: 'rocket', category: 'celebrations', name: 'Décollage', price: 850, tone: 'amber', description: 'Direction les étoiles après cette victoire.', badge: 'ANIMÉ' },
+  { id: 'spotlight', category: 'celebrations', name: 'Sous les projecteurs', price: 750, tone: 'ice', description: 'Les lumières s’allument pour ton grand final.', badge: 'ANIMÉ' },
+];
+const QV4shopNumber = (number) => number.toLocaleString('fr-FR');
+const QV4SHOP_AVATAR_ORDER = ['fox', 'robot', 'brain', 'astronaut', 'ninja', 'dragon', 'cat', 'owl', 'ghost', 'lion'];
+
+function QV4ShopIcon({ name, size = 22 }) {
+  const paths = {
+    coin: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm1 3-4 7h4l-2 5',
+    arrow: 'M5 12h14m-6-6 6 6-6 6',
+    close: 'm6 6 12 12M6 18 18 6',
+    play: 'm9 5 11 7-11 7Z',
+    shop: 'M4 9h16l-2-6H6L4 9Zm1 0v12h14V9M9 21v-7h6v7',
+    home: 'm3 10 9-7 9 7M5 9v12h5v-7h4v7h5V9',
+    profile: 'M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM4 21v-2a8 8 0 0 1 16 0v2',
+    feed: 'M5 5h14M5 12h10M5 19h14',
+    bolt: 'm13 2-9 12h7l-1 8 10-12h-7l1-8Z',
+    check: 'm5 12 4 4 10-10',
+  };
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={paths[name] || paths.shop} /></svg>;
+}
+
+function QV4ShopAvatar({ kind = 'robot' }) {
+  if (!QV4SHOP_AVATAR_ORDER.includes(kind)) return <span className="shop-v4-legacy-avatar" aria-hidden="true">{kind || '🤖'}</span>;
+  const index = QV4SHOP_AVATAR_ORDER.indexOf(kind);
+  return <span className="shop-v4-avatar-sprite" data-avatar={kind} aria-hidden="true" style={{ '--sprite-x': `${(index % 5) * 25}%`, '--sprite-y': `${Math.floor(index / 5) * 100}%` }} />;
+}
+
+function QV4ShopReactionArt({ kind }) {
+  const faces = ['angry', 'laugh', 'shock'];
+  return <svg viewBox="0 0 80 80" aria-hidden="true">
+    {faces.includes(kind) && <circle cx="40" cy="40" r="32" fill={kind === 'angry' ? '#f16b68' : '#ffd54a'} stroke="#ab582e" strokeWidth="3" />}
+    {kind === 'heart' && <path d="M40 70 11 43C-7 18 22-3 40 19 58-3 87 18 69 43Z" fill="#fb678e" stroke="#b43364" strokeWidth="4" />}
+    {kind === 'angry' && <><path d="m19 25 14 8m14 0 14-8M28 58q12-14 24 0" fill="none" stroke="#613349" strokeWidth="5" strokeLinecap="round" /><ellipse cx="28" cy="39" rx="4" ry="7" fill="#613349" /><ellipse cx="52" cy="39" rx="4" ry="7" fill="#613349" /></>}
+    {kind === 'laugh' && <><path d="m18 29 12-7-12-6m44 13-12-7 12-6" fill="none" stroke="#613349" strokeWidth="5" strokeLinecap="round" /><path d="M21 40h38q-4 29-19 29T21 40Z" fill="#613349" /><path d="M29 60q11-10 22 0" stroke="#f98bad" strokeWidth="7" /><path d="M11 30Q-2 46 8 49q12-3 3-19m58 0q13 16 3 19-12-3-3-19" fill="#61e4fa" /></>}
+    {kind === 'shock' && <><ellipse cx="27" cy="31" rx="8" ry="11" fill="#fff" /><ellipse cx="53" cy="31" rx="8" ry="11" fill="#fff" /><circle cx="27" cy="34" r="4" fill="#242335" /><circle cx="53" cy="34" r="4" fill="#242335" /><ellipse cx="40" cy="56" rx="9" ry="12" fill="#613349" /></>}
+    {kind === 'thumbsup' && <><path d="M25 63V33l12-22q7-5 11 4l-4 17h19q11 0 8 11l-6 20q-2 5-9 5H34Z" fill="#ffd54a" stroke="#9f6331" strokeWidth="3" /><rect x="10" y="33" width="17" height="36" rx="5" fill="#55d5d8" stroke="#28778e" strokeWidth="3" /></>}
+    {kind === 'clap' && <><path d="m14 51 3-23q1-7 6-2l3 15 5-21q3-5 6 0l-2 24 6-17q4-4 6 2l-6 27q-4 16-18 12Z" fill="#ffd54a" stroke="#7c4529" strokeWidth="3" /><path d="m48 18 7-2m-3 13 8 1M8 21l-5-4" stroke="#fff" strokeWidth="3" /></>}
+    {kind === 'sweat' && <path d="M40 7Q10 42 18 57q22 27 44 0Q70 42 40 7Z" fill="#5ee7f3" stroke="#1489b6" strokeWidth="3" />}
+    {kind === 'cool' && <path d="M3 25h29l8 6 8-6h29l-5 22q-15 10-27-1l-5-10-5 10Q23 57 8 47Z" fill="#171727" stroke="#fff" strokeWidth="3" />}
+  </svg>;
+}
+
+function QV4ShopCelebrationArt({ kind }) {
+  return <div className={`shop-v4-celebration shop-v4-celebration-${kind}`} aria-hidden="true">
+    {kind === 'disco' && <svg viewBox="0 0 100 120"><path d="M50 0v28" stroke="#b9dff4" strokeWidth="4" /><circle cx="50" cy="66" r="36" fill="#77d8eb" stroke="#d5f9ff" strokeWidth="4" /><path d="M14 66h72M22 48h56M22 84h56M50 30v72M35 34q-16 32 0 64m30-64q16 32 0 64" fill="none" stroke="#346b9b" strokeWidth="3" /><path d="m17 12 3 9 9 3-9 3-3 9-3-9-9-3 9-3Z" fill="#fff" /></svg>}
+    {kind === 'micdrop' && <svg viewBox="0 0 80 120"><rect x="24" y="5" width="32" height="50" rx="16" fill="#b7dcf3" stroke="#355875" strokeWidth="4" /><path d="M27 20h26M27 30h26M27 40h26" stroke="#355875" strokeWidth="3" /><path d="M32 53h16v58H32Z" fill="#47465d" stroke="#1c2135" strokeWidth="4" /></svg>}
+    {kind === 'rocket' && <svg viewBox="0 0 90 140"><path d="m34 102 11 34 11-34" fill="#ffd54a" stroke="#f28731" strokeWidth="5" /><path d="M26 80 9 112l21-8m34-24 17 32-21-8" fill="#ed526d" stroke="#7d334f" strokeWidth="3" /><path d="M45 4Q15 37 28 102h34Q75 37 45 4Z" fill="#f7f1e8" stroke="#405069" strokeWidth="4" /><circle cx="45" cy="56" r="12" fill="#55dfee" stroke="#405069" strokeWidth="4" /><path d="m45 4-14 26h28Z" fill="#ed526d" /></svg>}
+    {kind === 'spotlight' && <><i /><i /><i /></>}
+    {kind === 'fireworks' && <><span className="shop-v4-firework-star">{'✦'}</span><span className="shop-v4-firework-star">{'✦'}</span><span className="shop-v4-firework-star">{'✦'}</span></>}
+  </div>;
+}
+
+function QV4ShopArt({ item, avatar = 'robot', animated = false }) {
+  const type = item.category;
+  return <div className={`shop-v4-art shop-v4-tone-${item.tone} ${animated ? 'shop-v4-art-playing' : ''}`} aria-hidden="true">
+    <span className="shop-v4-art-orbit" /><span className="shop-v4-art-star shop-v4-star-one">{'✦'}</span><span className="shop-v4-art-star shop-v4-star-two">{'✦'}</span>
+    {type === 'entries' && <div className={`shop-v4-effect shop-v4-effect-${item.id}`}>
+      {Array.from({ length: 9 }, (_, i) => <span key={i} style={{ '--i': i, '--angle': `${i * 40}deg` }} />)}
+    </div>}
+    {type === 'celebrations' && <>
+      {item.id === 'throne' && <div className="shop-v4-throne" />}
+      <div className="shop-v4-confetti">{Array.from({ length: 12 }, (_, i) => <i key={i} style={{ '--i': i, '--angle': `${i * 30}deg` }} />)}</div>
+    </>}
+    <div className={`shop-v4-character shop-v4-character-${item.id} ${item.id === 'dance' ? 'shop-v4-dancer' : ''}`}><QV4ShopAvatar kind={type === 'avatars' ? item.art : avatar} /></div>
+    {type === 'reactions' && <span className={`shop-v4-reaction shop-v4-reaction-${item.id}`}><QV4ShopReactionArt kind={item.id} /></span>}
+    {type === 'celebrations' && <QV4ShopCelebrationArt kind={item.id} />}
+  </div>;
+}
+
+function QV4ShopPreviewDialog({ item, owned, equipped, coins, avatar, name, onClose, onBuy, onEquip, pending = false, onPlay, canBuy, canEquip, message }) {
+  const ref = React.useRef(null);
+  const titleId = React.useId();
+  const [replay, setReplay] = React.useState(0);
+  React.useEffect(() => {
+    const opener = document.activeElement;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    (ref.current.querySelector('button:not(:disabled)') || ref.current).focus();
+    const onKey = (event) => {
+      if (event.key === 'Escape') { event.preventDefault(); onClose(); }
+      if (event.key !== 'Tab') return;
+      const buttons = [...ref.current.querySelectorAll('button:not(:disabled)')];
+      if (!buttons.length) { event.preventDefault(); ref.current.focus(); return; }
+      const first = buttons[0], last = buttons[buttons.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = previousOverflow; if (opener?.isConnected) opener.focus(); };
+  }, [onClose]);
+  const busy = pending;
+  const canAct = owned ? canEquip : canBuy;
   const affordable = coins >= item.price;
-  const identity = IDENTITIES[item.id];
-  let action;
-  if (isEquipped) {
-    action = <span className="shop-feature-equipped"><Icon name="check" size={17} />{t('equipped')}</span>;
-  } else if (isOwned) {
-    action = <button className="shop-feature-action secondary" disabled={pending} onClick={() => onEquip(item.id)}>{t('equip')}</button>;
-  } else if (confirming === item.id) {
-    action = <button className="shop-feature-action" disabled={pending} onClick={() => { setConfirming(null); onBuy(item.id); }}>{t('confirmBuy', { n: item.price })}</button>;
-  } else {
-    action = <button className="shop-feature-action" aria-label={`${item.price} ${t('coinBalance')}`} disabled={!affordable || pending} onClick={() => setConfirming(item.id)}><Icon name="coin" size={18} />{item.price}</button>;
+  const hasAnimation = !['avatars'].includes(item.category);
+  return <div className="shop-v4-dialog-backdrop" onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
+    <section ref={ref} className="shop-v4-dialog" role="dialog" tabIndex={-1} aria-modal="true" aria-labelledby={titleId}>
+      <button type="button" disabled={busy} className="shop-v4-close" onClick={onClose} aria-label={"Fermer l\u2019aper\u00E7u"}><QV4ShopIcon name="close" /></button>
+      <div className="shop-v4-dialog-art" key={replay}><QV4ShopArt item={item} avatar={avatar} animated /></div>
+      <div className="shop-v4-dialog-body">
+        <p className="shop-v4-eyebrow">APERÇU POUR {name}</p><h2 id={titleId}>{item.name}</h2><p>{item.description}</p>
+        {hasAnimation && <button type="button" disabled={busy} className="shop-v4-replay" onClick={() => setReplay((value) => value + 1)}><QV4ShopIcon name="play" size={16} /> {'Rejouer l\u2019aper\u00E7u'}</button>}
+        <button type="button" className="shop-v4-button shop-v4-dialog-primary" disabled={busy || equipped || !canAct || (!owned && !affordable)} onClick={() => owned ? onEquip(item) : onBuy(item)}>
+          {equipped ? 'Équipé' : !canAct ? 'Indisponible' : owned ? 'Équiper' : !affordable ? `${QV4shopNumber(item.price - coins)} pièces manquantes` : `Acheter · ${QV4shopNumber(item.price)} pièces`}
+        </button>
+        <p className="shop-v4-status" role="status">{message}</p>
+        {!owned && !affordable && typeof onPlay === 'function' && <button type="button" disabled={busy} className="shop-v4-replay" onClick={onPlay}>Jouer pour gagner des pièces</button>}
+      </div>
+    </section>
+  </div>;
+}
+
+export function ShopContent({ avatar = 'robot', name = 'QuizMaster', stats = {}, onBuy, onEquip, onPlay, onBack, pending = false }) {
+  const [category, setCategory] = React.useState('avatars');
+  const [selection, setSelection] = React.useState(null);
+  const [notice, setNotice] = React.useState('');
+  const [submitting, setSubmitting] = React.useState(false);
+  const requestRef = React.useRef(false);
+  const busy = pending || submitting;
+  const closePreview = React.useCallback(() => setSelection(null), []);
+  const serverStats = stats && typeof stats === 'object' ? stats : {};
+  const inventory = Array.isArray(serverStats.ownedItems) ? serverStats.ownedItems.filter(id => typeof id === 'string') : [];
+  const serverEquipment = serverStats.equippedItems && typeof serverStats.equippedItems === 'object' ? serverStats.equippedItems : {};
+  const session = {
+    coins: Number.isFinite(serverStats.coins) ? Math.max(0, Math.floor(serverStats.coins)) : 0,
+    owned: ['robot', ...inventory],
+    equipped: Object.fromEntries(QV4SHOP_CATEGORIES.map(([key]) => [key, QV4SHOP_ITEMS.some(item => item.category === key && item.id === serverEquipment[key]) ? serverEquipment[key] : null])),
+  };
+  const items = QV4SHOP_ITEMS.filter(item => item.category === category);
+  const categoryData = QV4SHOP_CATEGORIES.find(([id]) => id === category);
+  const currentAvatar = session.equipped.avatars || avatar || 'robot';
+  if (QV4SHOP_ITEMS.some(item => item.category === 'avatars' && item.id === currentAvatar)) session.equipped.avatars = currentAvatar;
+  const equippedAvatar = QV4SHOP_ITEMS.find(item => item.category === 'avatars' && item.id === currentAvatar) || { category: 'avatars', art: currentAvatar, name: 'Ton avatar', tone: 'cyan' };
+  const featured = items[0];
+  async function request(item, type) {
+    const owned = session.owned.includes(item.id);
+    const callback = type === 'buy' ? onBuy : onEquip;
+    if (busy || requestRef.current || typeof callback !== 'function') return;
+    if (type === 'buy' && (owned || session.coins < item.price)) return;
+    if (type === 'equip' && (!owned || session.equipped[item.category] === item.id)) return;
+    requestRef.current = true;
+    setSubmitting(true);
+    setNotice(type === 'buy' ? 'Achat demandé. En attente de confirmation.' : 'Équipement demandé. En attente de confirmation.');
+    try { await callback(item.id); }
+    catch { setNotice('Impossible de terminer la demande. Réessaie.'); }
+    finally { requestRef.current = false; setSubmitting(false); }
   }
-  return (
-    <div className="container shop-page">
-      <div className="cat-header">
-        <h2>{t('shop')}</h2>
-        <button className="back-link" onClick={onBack}>{t('back')}</button>
-      </div>
-      <div className="shop-balance"><span className="shop-coin" aria-hidden="true"><Icon name="coin" size={23}/></span><strong>{coins}</strong><small>{t('coinBalance')}</small></div>
-      <p className="shop-intro">{t('shopIntro')}</p>
-      <div className="shop-feature">
-        <IdentityCard frame={item.id} avatar={avatar} name={name} level={stats.level} className="identity-card-shop" />
-        <div className="shop-feature-details">
-          <div className="shop-feature-kicker">{t('shopCollection')} / {identity.number}</div>
-          <h3>{lang === 'en' ? identity.en : identity.fr}</h3>
-          <p>{lang === 'en' ? identity.lineEn : identity.lineFr}</p>
-          <div className="shop-feature-actions">{action}</div>
-          {!isOwned && !affordable && (
-            <div className="shop-earn">
-              <div className="shop-earn-track" role="progressbar" aria-label={t('shopProgress')} aria-valuemin={0} aria-valuemax={item.price} aria-valuenow={coins}><span style={{ width: `${Math.min(100, (coins / item.price) * 100)}%` }} /></div>
-              <small className="shop-missing">{t('coinsMissing', { n: item.price - coins })}</small>
-              <button className="shop-play-link" disabled={pending} onClick={onPlay}>{t('shopPlayToEarn')} <Icon name="arrow" size={17} /></button>
-            </div>
-          )}
-        </div>
-      </div>
-      <div className="section-title">{t('shopFrames')}</div>
-      <div className="shop-picker" role="group" aria-label={t('shopFrames')}>
-        {FRAMES.map((entry) => (
-          <button key={entry.id} className={`shop-pick identity-${entry.id}${selected === entry.id ? ' selected' : ''}`} aria-pressed={selected === entry.id} onClick={() => { setSelected(entry.id); setConfirming(null); }}>
-            <span className="shop-pick-number" aria-hidden="true">{IDENTITIES[entry.id].number}</span>
-            <span className="shop-pick-copy"><strong>{t(frameLabelKey(entry.id))}</strong><small>{equipped === entry.id ? t('equipped') : owned.has(entry.id) ? t('equip') : entry.price === 0 ? t('shopFree') : `${entry.price} ${t('coinBalance')}`}</small></span>
-            <Icon name="arrow" size={17} />
-          </button>
-        ))}
-      </div>
-    </div>
-  );
+  const buy = item => request(item, 'buy');
+  const equip = item => request(item, 'equip');
+  return <section className="shop-v4-root" aria-labelledby="shop-v4-title">
+    <header className="shop-v4-header">{typeof onBack === 'function' && <button type="button" disabled={busy} className="shop-v4-back" onClick={onBack} aria-label="Retour"><QV4ShopIcon name="arrow" /></button>}<span className="shop-v4-brand">QuizzUp<span>{'✦'}</span></span><div className="shop-v4-wallet" aria-label={`${QV4shopNumber(session.coins)} pièces`}><QV4ShopIcon name="coin" /><strong>{QV4shopNumber(session.coins)}</strong></div></header>
+    <div className="shop-v4-heading"><p className="shop-v4-eyebrow">TON STYLE. TES RÈGLES.</p><h1 id="shop-v4-title">La boutique<span>.</span></h1><p>Fais de chaque duel un peu plus le tien.</p></div>
+    <nav className="shop-v4-categories" aria-label="Catégories de la boutique">{QV4SHOP_CATEGORIES.map(([id, label]) => <button type="button" disabled={busy} key={id} aria-pressed={category === id} onClick={() => { setCategory(id); setNotice(''); }}>{label}</button>)}</nav>
+    <section className={`shop-v4-hero shop-v4-tone-${featured.tone}`} aria-label={`À la une : ${featured.name}`}>
+      <div className="shop-v4-hero-copy"><span className="shop-v4-tag">À LA UNE</span><h2>{categoryData[2]}</h2><p>{categoryData[3]}</p><button type="button" disabled={busy} className="shop-v4-button" onClick={() => { setNotice(''); setSelection(featured); }}>Découvrir <QV4ShopIcon name="arrow" size={18} /></button></div>
+      <div className="shop-v4-hero-art"><QV4ShopArt item={featured} avatar={currentAvatar} /></div>
+    </section>
+    <div className="shop-v4-profile-preview"><div className="shop-v4-profile-icon"><QV4ShopArt item={equippedAvatar} avatar={currentAvatar} /></div><div><strong>{name}</strong><span>{equippedAvatar.name} · Ton look actuel</span></div><span className="shop-v4-preview-label">APERÇU</span></div>
+    <div className="shop-v4-section-heading"><h2>{categoryData[1]}</h2><span>{items.length} objets</span></div>
+    <div className="shop-v4-grid">{items.map((item) => {
+      const owned = session.owned.includes(item.id), equipped = session.equipped[item.category] === item.id;
+      return <article key={item.id} className={`shop-v4-card ${equipped ? 'shop-v4-card-equipped' : ''}`}>
+        <button type="button" disabled={busy} className="shop-v4-card-preview" aria-label={`Essayer ${item.name}`} onClick={() => { setNotice(''); setSelection(item); }}><QV4ShopArt item={item} avatar={currentAvatar} />{item.badge && <span className="shop-v4-card-badge">{item.badge}</span>}<span className="shop-v4-card-try">Essayer <QV4ShopIcon name="arrow" size={14} /></span></button>
+        <div className="shop-v4-card-body"><h3>{item.name}</h3><p>{item.description}</p><button type="button" disabled={busy} className={`shop-v4-price ${owned ? 'shop-v4-price-owned' : ''}`} onClick={() => { setNotice(''); setSelection(item); }} aria-label={`${owned ? 'Voir' : 'Acheter'} ${item.name}`}><QV4ShopIcon name={owned ? 'check' : 'coin'} size={17} />{equipped ? 'Équipé' : owned ? 'Possédé' : QV4shopNumber(item.price)}</button></div>
+      </article>;
+    })}</div>
+
+    <p className="shop-v4-footer-note">{'Le style s\u2019ach\u00E8te. Les victoires se gagnent.'}</p>
+    {selection && <QV4ShopPreviewDialog item={selection} owned={session.owned.includes(selection.id)} equipped={session.equipped[selection.category] === selection.id} coins={session.coins} avatar={currentAvatar} name={name} onClose={closePreview} onBuy={buy} onEquip={equip} pending={busy} onPlay={onPlay} canBuy={typeof onBuy === 'function'} canEquip={typeof onEquip === 'function'} message={notice} />}
+  </section>;
 }

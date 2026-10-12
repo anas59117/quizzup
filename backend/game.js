@@ -207,7 +207,7 @@ async function startGame(rawPlayers, categoryKey, { withBot = false } = {}) {
       id: gameId,
       players: [
         ...rawPlayers.map((p) => ({
-          ws: p.ws, id: p.id, 
+          ws: p.ws, id: p.id, clientId: p.clientId,
           name: p.name, avatar: p.avatar || '\u{1F43A}',
           frame: stats.getFrame(p.clientId),
           score: 0, connected: true, reconnectTimer: null,
@@ -351,6 +351,26 @@ function recordAnswer(game, playerId, answerIndex) {
   if (isCorrect) game.players[idx].score += points;
 
   game.roundAnswers[playerId] = { answerIndex, correct: isCorrect, elapsedMs, points };
+
+  // ── Instant feedback (QuizUp 2014 style) ──────────────────────────
+  // Send the answering player their result right away so the UI can
+  // show green / red without waiting for the opponent.
+  send(game.players[idx].ws, {
+    type: 'answer_ack',
+    round: game.currentRound + 1,
+    correctIndex: q.correct,
+    yourAnswer: answerIndex,
+    yourCorrect: isCorrect,
+    pointsEarned: points,
+    yourScore: game.players[idx].score,
+  });
+
+  // Tell every other player that this player answered (no reveal).
+  activePlayers(game).forEach((p) => {
+    if (p.id !== playerId) {
+      send(p.ws, { type: 'opponent_answered', id: playerId });
+    }
+  });
 
   if (allPlayersAnswered(game)) revealRound(game, false);
 }
@@ -596,6 +616,7 @@ function requestRematch(clientId) {
   const players = humans.map((p) => ({
     ws: p.ws,
     id: p.id,
+    clientId: p.clientId,
     name: p.name,
     avatar: p.avatar,
   }));
@@ -665,7 +686,7 @@ function endGame(game, reason) {
       if (topicProgressListener && p.clientId && game.categoryKey) {
         const afterXp = topicStats.getTopic(p.clientId, game.categoryKey).xp;
         if (afterXp > beforeXp) {
-          topicProgressListener({  categoryKey: game.categoryKey, beforeXp, afterXp });
+          topicProgressListener({ clientId: p.clientId, categoryKey: game.categoryKey, beforeXp, afterXp });
         }
       }
     } catch (err) {

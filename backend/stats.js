@@ -122,6 +122,18 @@ function recordPlayDay(clientId, now = Date.now()) {
   return { dayStreak: s.dayStreak, increased: true };
 }
 
+// Only reports items that still exist in the catalogue and sit in the right
+// category, so a stale or hand-edited store cannot equip something unknown.
+function equippedItemsFor(s) {
+  const stored = s && s.equippedItems && typeof s.equippedItems === 'object' ? s.equippedItems : {};
+  const out = {};
+  for (const category of shop.ITEM_CATEGORIES) {
+    const item = shop.getItem(stored[category]);
+    if (item && item.category === category) out[category] = item.id;
+  }
+  return out;
+}
+
 function getStats(clientId, now = Date.now()) {
   const s = clientId && stats[clientId];
   const xp = s ? s.xp || 0 : 0;
@@ -137,6 +149,10 @@ function getStats(clientId, now = Date.now()) {
     playedToday: !!(s && s.lastPlayDay === dayKey(now)),
     frame: s && s.frame ? s.frame : 'none',
     ownedFrames: ['none', ...((s && s.owned) || [])],
+    // Boutique v4 inventory: flat list of owned item ids plus the item
+    // equipped in each category.
+    ownedItems: [...shop.FREE_ITEMS, ...((s && s.ownedItems) || [])],
+    equippedItems: equippedItemsFor(s),
     adRewardsLeft: adRewardsLeft(s, now),
     level,
     xpIntoLevel,
@@ -179,8 +195,41 @@ function getFrame(clientId) {
   return s && s.frame && shop.getFrame(s.frame) ? s.frame : 'none';
 }
 
+// Boutique v4 purchase: coins are deducted here and the item is equipped
+// straight away, same as a frame purchase.
+function buyItem(clientId, itemId) {
+  const item = shop.getItem(itemId);
+  if (!item) return { ok: false, error: 'unknown' };
+  if (shop.isFreeItem(item.id)) return { ok: false, error: 'owned' };
+  const s = ensure(clientId);
+  s.ownedItems = Array.isArray(s.ownedItems) ? s.ownedItems : [];
+  if (s.ownedItems.includes(item.id)) return { ok: false, error: 'owned' };
+  if ((s.coins || 0) < item.price) return { ok: false, error: 'coins' };
+  s.coins -= item.price;
+  s.ownedItems.push(item.id);
+  s.equippedItems = s.equippedItems && typeof s.equippedItems === 'object' ? s.equippedItems : {};
+  s.equippedItems[item.category] = item.id;
+  persist();
+  return { ok: true };
+}
+
+function equipItem(clientId, itemId) {
+  const item = shop.getItem(itemId);
+  if (!item) return { ok: false, error: 'unknown' };
+  const s = ensure(clientId);
+  const owned = shop.isFreeItem(item.id) || (s.ownedItems || []).includes(item.id);
+  if (!owned) return { ok: false, error: 'not_owned' };
+  s.equippedItems = s.equippedItems && typeof s.equippedItems === 'object' ? s.equippedItems : {};
+  s.equippedItems[item.category] = item.id;
+  persist();
+  return { ok: true };
+}
+
+// `shop_buy` carries either a frame id (legacy identity cards) or a
+// boutique-v4 item id; the catalogues share no ids, so dispatch on lookup.
 function buyFrame(clientId, frameId) {
   if (!clientId) return { ok: false, error: 'auth' };
+  if (shop.getItem(frameId)) return buyItem(clientId, frameId);
   const item = shop.getFrame(frameId);
   if (!item || item.id === 'none') return { ok: false, error: 'unknown' };
   const s = ensure(clientId);
@@ -196,6 +245,7 @@ function buyFrame(clientId, frameId) {
 
 function equipFrame(clientId, frameId) {
   if (!clientId) return { ok: false, error: 'auth' };
+  if (shop.getItem(frameId)) return equipItem(clientId, frameId);
   const item = shop.getFrame(frameId);
   if (!item) return { ok: false, error: 'unknown' };
   const s = ensure(clientId);

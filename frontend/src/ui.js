@@ -27,6 +27,8 @@ export const Icon = memo(function Icon({ name, size = 20, className = '' }) {
     edit: <><path d="m4 20 4.2-1 10.7-10.7-3.2-3.2L5 15.8 4 20Z"/><path d="m13.8 7 3.2 3.2"/></>,
     chat: <><path d="M5 5h14v10H9l-4 4V5Z"/><path d="M8 9h8"/><path d="M8 12h5"/></>,
     send: <><path d="m3 11 17-7-7 17-2.6-7.4L3 11Z"/><path d="m10.4 13.6 4.4-4.4"/></>,
+    heart: <path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/>,
+    share: <><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.6l6.8-4M8.6 13.4l6.8 4"/></>,
   };
   return (
     <svg
@@ -747,6 +749,9 @@ export const NavBar = memo(function NavBar({ active, onNav, onQuickMatch }) {
       <button className="nav-bolt" onClick={onQuickMatch} aria-label="Quick Play"><Icon name="bolt" size={22} /></button>
       <button className={`nav-item ${active === 'categories' ? 'active' : ''}`} onClick={() => onNav('categories')}>
         <span className="nav-ic"><Icon name="themes" size={20} /></span><span className="nav-lbl">{t('navThemes')}</span>
+      </button>
+      <button className={`nav-item ${active === 'shop' ? 'active' : ''}`} onClick={() => onNav('shop')}>
+        <span className="nav-ic"><Icon name="shop" size={20} /></span><span className="nav-lbl">{t('navShop')}</span>
       </button>
       <button className={`nav-item ${active === 'profile' ? 'active' : ''}`} onClick={() => onNav('profile')}>
         <span className="nav-ic"><Icon name="profile" size={20} /></span><span className="nav-lbl">{t('navProfile')}</span>
