@@ -59,14 +59,17 @@ export function PlayerHud({ me, others, revealing }) {
     <div className="hud-strip">
       {all.map((p) => (
         <div key={p.mine ? 'me' : p.id} className={`hud-chip identity-${identityFor(p.frame)} ${p.mine ? 'mine' : ''}`}>
-          <div className={`hud-chip-ava${frameClass(p.frame)}`}>{p.avatar}<IdentityEmblem frame={p.frame} className="identity-emblem-mini" /></div>
+          <div className={`hud-chip-ava${frameClass(p.frame)}`}>
+            {p.avatar}<IdentityEmblem frame={p.frame} className="identity-emblem-mini" />
+            {revealing && !p.mine && (
+              <span className={`hud-chip-mark ${p.answered ? (p.correct ? 'correct' : 'wrong') : 'none'}`}
+                aria-label={p.answered ? (p.correct ? t('answerCorrect') : t('answerIncorrect')) : t('timeUp')}>
+                {p.answered ? (p.correct ? '✓' : '✕') : '—'}
+              </span>
+            )}
+          </div>
           <div className="hud-chip-name">{p.mine ? t('you') : p.name}</div>
           <div className="hud-chip-score">{p.score}</div>
-          {revealing && !p.mine && (
-            <div className={`hud-chip-mark ${p.answered ? (p.correct ? 'correct' : 'wrong') : 'none'}`}>
-              {p.answered ? (p.correct ? '✓' : '✕') : '—'}
-            </div>
-          )}
         </div>
       ))}
     </div>

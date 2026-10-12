@@ -5,6 +5,9 @@ const root = path.resolve(__dirname, '../..');
 const out = path.join(root, '.mobile-preview');
 webpack({ mode: 'development', context: root, entry: './scripts/mobile-preview/entry.js',
   output: { path: out, filename: 'preview.js' }, devtool: false,
+  plugins: [new webpack.DefinePlugin({
+    'process.env': JSON.stringify({ NODE_ENV: 'development', REACT_APP_API_URL: 'http://127.0.0.1:3003', REACT_APP_WS_URL: 'ws://127.0.0.1:3003/ws' }),
+  })],
   module: { rules: [{ test: /\.js$/, exclude: /node_modules/, use: {
     loader: require.resolve('babel-loader'), options: { babelrc: false, configFile: false, presets: [[require.resolve('@babel/preset-react'), { runtime: 'automatic' }]] }
   } }, { test: /\.png$/, type: 'asset/resource' }] },

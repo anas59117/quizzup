@@ -3,13 +3,18 @@ import { createRoot } from 'react-dom/client';
 import { I18nProvider } from './i18n';
 import { TopControls, NavBar } from './ui';
 import { QuestionContent } from './enhanced-QuestionContent';
+import { FinishedContent } from './screens';
+import { StreakCalendar } from './DailyStreak';
+import { NotificationContainer } from './NotificationSystem';
 
-jest.mock('./GameFeelProvider', () => ({ useGameFeel: () => ({
+const mockGameFeel = {
   triggerCorrect: jest.fn(), triggerWrong: jest.fn(), triggerOpponentAnswer: jest.fn(),
   resetCombo: jest.fn(), triggerTick: jest.fn(),
-}) }));
+};
+jest.mock('./GameFeelProvider', () => ({ useGameFeel: () => mockGameFeel }));
 let root, container;
 beforeEach(() => {
+  jest.clearAllMocks();
   localStorage.setItem('quizzup-lang', 'fr');
   global.IS_REACT_ACT_ENVIRONMENT = true;
   container = document.createElement('div');
@@ -63,4 +68,45 @@ test('an active answer calls the existing action and expired questions remain di
   expect(props.answer).toHaveBeenCalledWith(0);
   render(<QuestionContent {...props} question={{ ...props.question, expired: true }} />);
   expect([...container.querySelectorAll('.answer')].every(b => b.disabled)).toBe(true);
+});
+
+test('profile labels resolve and a one-day streak uses the singular', () => {
+  function Labels() {
+    const { t } = require('./i18n').useI18n();
+    return <div>{['statistics', 'overallProgress', 'beforeNextLevel'].map(key => <span key={key}>{t(key)}</span>)}</div>;
+  }
+  render(<><Labels /><StreakCalendar streak={1} calendar={[]} /></>);
+  expect(container.textContent).toContain('Statistiques');
+  expect(container.textContent).toContain('Progression générale');
+  expect(container.textContent).toContain('1 jour de suite');
+  expect(container.textContent).not.toContain('1 jours');
+});
+
+test('match results preserve both avatars and the replay actions', () => {
+  const rematch = jest.fn();
+  render(<FinishedContent result={{ won: true, finalScore: 84, xp: 224, coins: 50 }}
+    opponents={[{ id: 'other', name: 'titi12', avatar: '🐼', score: 55 }]}
+    avatar="🦊" name="Sisi" social={{ friends: [], outgoingRequests: new Set() }}
+    rematch={rematch} newMatch={jest.fn()} playAgain={jest.fn()} />);
+  expect(container.querySelector('.res-score.me .av').textContent).toContain('🦊');
+  expect(container.querySelector('.res-score.op .av').textContent).toContain('🐼');
+  act(() => container.querySelector('.res-btn-primary').click());
+  expect(rematch).toHaveBeenCalledTimes(1);
+});
+
+test('an acknowledgment followed by a round result plays answer effects once', () => {
+  const props = { question: { question: 'Test', answers: ['A', 'B', 'C', 'D'], timeLimit: 10, round: 1 },
+    timeLeft: 8, selected: 0, answer: jest.fn(), opponents: [], GameChat: () => null };
+  render(<QuestionContent {...props} reveal={{ yourCorrect: true, pointsEarned: 12 }} />);
+  render(<QuestionContent {...props} reveal={{ yourCorrect: true, pointsEarned: 12, correctIndex: 0, others: [] }} />);
+  expect(mockGameFeel.triggerCorrect).toHaveBeenCalledTimes(1);
+});
+
+test('a notification can be dismissed with its labeled button', () => {
+  const onDismiss = jest.fn();
+  render(<NotificationContainer notifications={[{ id: 1, type: 'success', message: '+20 LP' }]} onDismiss={onDismiss} />);
+  const button = container.querySelector('button');
+  expect(button.getAttribute('aria-label')).toBe('Fermer la notification');
+  act(() => button.click());
+  expect(onDismiss).toHaveBeenCalledWith(1);
 });

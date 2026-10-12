@@ -4,11 +4,13 @@ import App from './App';
 import { I18nProvider } from './i18n';
 import { useGameSocket } from './useGameSocket';
 import { ensureSignedIn } from './firebase';
+import { useLeague } from './LeagueSystem';
 
 jest.mock('./useGameSocket');
 jest.mock('./firebase', () => ({ ensureSignedIn: jest.fn(), linkGoogleAccount: jest.fn() }));
 jest.mock('./music', () => ({ play: jest.fn(), stop: jest.fn(), setMuted: jest.fn() }));
-jest.mock('./sounds', () => ({ muted: true, gameStart: jest.fn(), roundIntro: jest.fn() }));
+jest.mock('./sounds', () => ({ muted: true, gameStart: jest.fn(), roundIntro: jest.fn(), victory: jest.fn(), tie: jest.fn(), defeat: jest.fn() }));
+jest.mock('./LeagueSystem', () => ({ useLeague: jest.fn(), LeagueContent: () => null }));
 
 let root;
 let container;
@@ -34,6 +36,8 @@ beforeEach(async () => {
   sessionStorage.clear();
   localStorage.setItem('quizzup-name', 'Test');
   localStorage.setItem('quizzup-lang', 'fr');
+  localStorage.setItem('quizzup-onboarded', '1');
+  useLeague.mockReturnValue({ streak: 0, addResult: jest.fn() });
   socket = {
     wsRef: { current: null }, connect: jest.fn(() => true), send: jest.fn(() => true),
     closeSocket: jest.fn(), scheduleRecovery: jest.fn(), reconnecting: false,
@@ -132,8 +136,9 @@ test('shows the real level and truthful wait feedback with a delayed solo option
 });
 
 test('starts solo only after cancellation is acknowledged, retaining the selected topic', () => {
-  const topic = container.querySelector('.topics-scroll button');
+  const topic = container.querySelector('[data-topic="ligue_champions"] button');
   act(() => topic.click());
+  click('Jouer maintenant');
   const category = socket.connect.mock.calls.find(([action]) => action.type === 'join')[0].category;
   expect(category).toBe('ligue_champions');
   receive({ type: 'waiting' });
@@ -149,6 +154,15 @@ test('starts solo only after cancellation is acknowledged, retaining the selecte
   expect(soloCalls()).toEqual([[{ type: 'solo', category }]]);
   receive({ type: 'queue_cancelled' });
   expect(soloCalls()).toHaveLength(1);
+});
+
+test('a completed duel records the league reward once, even after a rerender', () => {
+  receive({ type: 'game_start', gameId: 'reward-once', you: { id: 'me' }, opponents: [{ id: 'other', name: 'Other', avatar: '🐼', score: 5 }], totalRounds: 6 });
+  receive({ type: 'game_end', gameId: 'reward-once', won: true, winner: { id: 'me' }, finalScore: 20, xp: 60, coins: 10, others: [{ id: 'other', score: 5 }], leaderboard: [] });
+  expect(useLeague().addResult).toHaveBeenCalledTimes(1);
+  expect(container.querySelectorAll('.notification-toast')).toHaveLength(1);
+  receive({ type: 'stats', stats: { level: 2 } });
+  expect(useLeague().addResult).toHaveBeenCalledTimes(1);
 });
 
 test('normal cancellation returns home without starting another game', () => {

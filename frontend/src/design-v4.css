@@ -3622,3 +3622,77 @@ textarea:focus {
 .shop-v4-back svg { transform: rotate(180deg); }
 .shop-v4-legacy-avatar { display: grid; place-items: center; width: 100%; height: 100%; font-size: clamp(28px, 12vw, 130px); }
 .shop-v4-header .shop-v4-wallet { margin-left: auto; }
+
+/* Notifications share their text colour with the surface; the old white
+   child colour made the LP reward look like an empty rectangle. */
+.notification-toast .notification-msg { color: inherit; line-height: 1.4; overflow-wrap: anywhere; }
+.notification-toast .notification-close {
+  flex: 0 0 44px; width: 44px; height: 44px; color: inherit;
+  display: grid; place-items: center; border-radius: 50%;
+}
+.notification-toast .notification-close:hover { background: #0000000a; }
+.notification-toast .notification-close:focus-visible { outline: 2px solid var(--v4-ink); outline-offset: -3px; }
+.notification-container { top: calc(72px + var(--safe-top, 0px)); }
+.results-bg .notification-container {
+  top: calc(8px + var(--safe-top, 0px)); left: max(12px, var(--safe-left, 0px));
+  right: auto; max-width: calc(100% - 124px);
+}
+.results-bg .notification-toast { min-width: 0; padding: 2px 4px 2px 12px !important; gap: 4px; }
+
+/* A single header row owns the controls, including their settings popover. */
+.home-head--v4 .home-actions { align-items: center; gap: 4px; }
+.home-head--v4 .home-action { width: 44px; height: 44px; flex-shrink: 0; }
+.home-head--v4 .top-controls.mobile-controls {
+  position: relative !important; inset: auto !important; transform: none;
+  padding: 0; border: 0; background: transparent; box-shadow: none; backdrop-filter: none;
+}
+.home-head--v4 .home-action:focus-visible { outline: 3px solid var(--v4-cta); outline-offset: 2px; }
+
+/* Compact result: the score and rematch lead, with the breakdown on demand. */
+.results-v4 .res-title { font-size: clamp(36px, 9vw, 54px) !important; line-height: 1.08 !important; }
+.results-v4 .res-scoreboard { margin-top: 20px !important; padding: 16px !important; }
+.results-v4 .res-score .av { font-size: 30px !important; }
+.results-v4 .res-score .nm { color: #ffe5e9 !important; overflow-wrap: anywhere; }
+.results-v4 .res-scoreboard.loss .me .pts { color: #fff !important; }
+.results-v4 .res-scoreboard.loss .op .pts { color: var(--v4-cta) !important; }
+.results-v4 .res-reward { background: transparent !important; padding: 8px !important; }
+.results-v4 .res-rewards { background: #00000020; border-radius: 16px; }
+.results-v4 .res-reward b { font-size: 20px !important; }
+.results-v4 .res-reward span { color: #ffe5e9 !important; }
+.results-v4 .res-cta { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px !important; margin-top: 20px !important; }
+.results-v4 .res-btn-primary { grid-column: 1 / -1; min-height: 54px; }
+.results-v4 .res-btn-outline { min-height: 48px; padding: 12px 8px !important; font-size: 13px !important; }
+.results-v4 .res-btn-primary:focus-visible,
+.results-v4 .res-btn-outline:focus-visible,
+.results-v4 .res-details-toggle:focus-visible { outline: 3px solid var(--v4-cta); outline-offset: 3px; }
+.results-v4 .res-level { background: transparent !important; margin-top: 16px !important; padding: 8px 0 !important; }
+.results-v4 .res-details-toggle { min-height: 44px; margin-top: 8px !important; }
+.results-v4 .res-details-heading { font-size: 18px; }
+.results-v4 .res-details .res-stats { margin-bottom: 20px !important; }
+.results-v4 .res-group-board { margin-top: 20px; padding: 8px 12px; background: #00000030; border-radius: 20px; }
+.results-v4 .res-group-board .leaderboard { margin: 0; }
+.results-v4 .res-group-board .leaderboard-row { background: transparent; }
+
+/* Broad themes: readable names and a useful count rather than a clipped description. */
+.family-tile { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 8px; text-align: left; border-color: #ffffff40 !important; background: #8f2034 !important; }
+.family-tile .family-icon { grid-row: 1 / 3; width: 36px; height: 36px; align-self: center; }
+.family-tile .family-info { min-width: 0; }
+.family-tile .family-label { white-space: normal; line-height: 1.25; }
+.family-tile .family-desc { display: none; }
+.family-tile .family-count { grid-column: 2; color: #fbdce2 !important; text-align: left; }
+.family-tile:focus-visible { outline: 3px solid var(--v4-cta); outline-offset: 3px; }
+
+.shop-v4-categories { gap: 6px; }
+.shop-v4-categories button { padding-inline: 8px; font-size: 11px; }
+.shop-v4-categories button:active { transform: scale(.97); }
+.shop-v4-dialog-backdrop {
+  padding: calc(16px + var(--safe-top, 0px)) calc(16px + var(--safe-right, 0px)) calc(16px + var(--safe-bottom, 0px)) calc(16px + var(--safe-left, 0px));
+}
+.shop-v4-dialog { max-height: calc(100svh - 32px - var(--safe-top, 0px) - var(--safe-bottom, 0px)); }
+@media (max-width: 360px) {
+  .shop-v4-categories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .results-v4 *, .matchmaking-v4 *, .shop-v4-root *, .notification-container * { animation: none !important; transition: none !important; }
+}

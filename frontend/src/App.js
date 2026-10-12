@@ -844,12 +844,6 @@ export default function App() {
   sendSocketRef.current = sendSocket;
   useEffect(() => {
     adGameRef.current = resultGameId || null;
-    if (resultGameId && result && result.winner) {
-      const won = result.winner.id === myId;
-      const lpChange = won ? (league.streak >= 2 ? 35 : 25) : -20;
-      league.addResult(won);
-      notify(won ? `+${lpChange} LP! 🔥` : `${lpChange} LP`, won ? 'success' : 'error');
-    }
     if (!resultGameId || !adsEnabled()) return;
     requestRewardOffer({
       onOffer: (showAdFn) => { if (adGameRef.current === resultGameId) setAdOffer(() => showAdFn); },
@@ -860,7 +854,7 @@ export default function App() {
       onDismissed: () => setAdOffer(null),
       ...adHooks,
     });
-  }, [resultGameId, adHooks, result, myId, league, notify]);
+  }, [resultGameId, adHooks]);
 
   // Record league result once when a finished screen appears.
   const leagueRecordedRef = useRef(null);
@@ -1016,9 +1010,10 @@ export default function App() {
   if (stage === 'home') {
     return (
       <div className="app app-nav app-top app-home">
-        <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+        <Toast toast={toast} onDismiss={dismissToast} />
         <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
         <HomeContent
+          controls={<TopControls {...topProps} />}
           name={name} avatar={avatar} frame={statsHook.stats.frame} stats={statsHook.stats} soloMode={soloMode} setSoloMode={setSoloMode}
           quickMatch={quickMatch} startWithCategory={previewCategory}
           onOpenProfile={() => setStage('profile')} onSeeAll={(fam) => { setCategoryFamily(fam || null); setStage('categories'); }}
@@ -1223,7 +1218,7 @@ export default function App() {
 
   if (stage === 'waiting') {
     return (
-      <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+      <div className="app game-bg app-matchmaking"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <WaitingContent
           avatar={avatar} frame={statsHook.stats.frame} name={name} level={statsHook.stats.level}
           categoryKey={matchCategory}

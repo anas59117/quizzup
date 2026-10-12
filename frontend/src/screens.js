@@ -29,7 +29,7 @@ const FEATURED_TOPICS = FEATURED_TOPIC_KEYS
   })
   .filter(Boolean);
 
-export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, onStartTournament, onOpenFriends, onOpenLeague, onOpenSeasonPass, pending, stats }) {
+export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, onStartTournament, onOpenFriends, onOpenLeague, onOpenSeasonPass, pending, stats, controls }) {
   const { t } = useI18n();
   const [showMore, setShowMore] = useState(false);
   // Keep up to 7 featured covers for Mes thèmes; Spider-Man-equivalent card gets the 2:1 "featured" slot.
@@ -40,7 +40,7 @@ export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickM
   const following = (stats && stats.following) || 0;
   return (
     <div className="container wide home-v4">
-      <div className="home-head home-head--v4">
+      <header className="home-head home-head--v4">
         <div className="home-brand">
           <div className="home-brandmark">Q</div>
           <div className="home-logo-sm">Quizz<span>Up</span></div>
@@ -52,9 +52,10 @@ export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickM
           <button className="home-action" onClick={() => onOpenFriends && onOpenFriends()} aria-label={t('friends')}>
             <Icon name="users" size={18} />
           </button>
+          {controls}
         </div>
-      </div>
-      <button className={`profile-card-v4${frameClass(frame)}`} onClick={onOpenProfile} aria-label="Open profile">
+      </header>
+      <button className={`profile-card-v4${frameClass(frame)}`} onClick={onOpenProfile} aria-label={t('editProfile')}>
         <div className="profile-row-v4">
           <div className="profile-avatar-v4">{avatar}</div>
           <div className="profile-identity-v4">
@@ -366,9 +367,9 @@ export function ProfileContent({
     <div className="container pf-v4">
       {/* ── Hero ──────────────────────────────────────────── */}
       <div className="pf-hero">
-        <div className="pf-avatar-wrap" onClick={() => setEditing((v) => !v)}>
+        <div className="pf-avatar-wrap">
           <div className="pf-avatar">{avatar}</div>
-          <button className="pf-edit-dot" aria-label={t('editProfile')}>
+          <button className="pf-edit-dot" aria-label={t('editProfile')} onClick={() => setEditing((v) => !v)} aria-expanded={editing}>
             <Icon name="edit" size={11} />
           </button>
         </div>
@@ -421,14 +422,14 @@ export function ProfileContent({
       )}
 
       {/* ── Level progression card ────────────────────────── */}
-      <div className="pf-section-title">{t('overallProgress') || 'Progression générale'}</div>
+      <div className="pf-section-title">{t('overallProgress')}</div>
       <div className="pf-level-card">
         <div className="pf-level-head">
           <span className="pf-level-label">{t('level')} {stats.level}</span>
           <span className="pf-level-pct">{xpPct}%</span>
         </div>
         <div className="pf-xp-bar"><div className="pf-xp-fill" style={{ width: `${xpPct}%` }} /></div>
-        <div className="pf-xp-text">{xpRemaining} {t('beforeNextLevel') || 'XP avant le niveau'} {stats.level + 1}</div>
+        <div className="pf-xp-text">{xpRemaining} {t('beforeNextLevel')} {stats.level + 1}</div>
       </div>
 
       {/* ── League card ───────────────────────────────────── */}
@@ -475,7 +476,7 @@ export function ProfileContent({
       )}
 
       {/* ── Stats grid ────────────────────────────────────── */}
-      <div className="pf-section-title">{t('statistics') || 'Statistiques'}</div>
+      <div className="pf-section-title">{t('statistics')}</div>
       <ProfileStats stats={stats} />
 
       {/* ── CTAs ──────────────────────────────────────────── */}
@@ -612,16 +613,20 @@ export function WaitingContent({ avatar, frame, name, level = 1, categoryKey, on
   }, []);
 
   return (
-    <div className="container center">
-      <div className="status-label" role="status">
+    <div className="container center matchmaking-v4">
+      <div className="status-label" role="status" aria-live="polite">
         {reconnecting ? t('reconnecting') : pending ? t('leavingQueue') : t('matchmaking')}
       </div>
       <div className="matchmaking-topic">{category?.label || t('randomTopic')}</div>
       <div className="vs-screen">
-        <div className="vs-player"><IdentityCard frame={frame} avatar={avatar} name={name} level={level} className="identity-card-vs" /></div>
+        <div className="vs-player">
+          <div className={`vs-ava${frameClass(frame)}`}>{avatar}</div>
+          <div className="vs-name">{name}</div>
+          <div className="vs-level">{t('level')} {level}</div>
+        </div>
         <div className="vs-bolt-wrap"><div className="vs-bolt"><Icon name="bolt" size={24} /></div></div>
         <div className="vs-player">
-          <div className="vs-ava searching">?</div>
+          <div className="vs-ava searching"><Icon name="users" size={30} /></div>
           <div className="vs-name dim">{t('searching')}</div>
         </div>
       </div>
@@ -696,11 +701,7 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
   const coinsEarned = adClaimed ? result.coins * 2 : result.coins;
 
   // Sentence case, never all-caps — the mockup's voice is "Belle victoire."
-  const headline = isSolo
-    ? { a: 'Partie', b: 'terminée' }
-    : won ? { a: 'Belle', b: 'victoire' }
-      : tie ? { a: 'Match', b: 'nul' }
-        : { a: 'Pas cette', b: 'fois' };
+  const headline = t(isSolo ? 'resultSolo' : won ? 'resultWin' : tie ? 'resultTie' : 'resultLoss');
 
   return (
     <div className="container center results-v4">
@@ -710,21 +711,23 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
           {isSolo || oppScore === null ? '' : `${myScore} \u00e0 ${oppScore}`}
         </div>
         <h1 className={`res-title ${isSolo ? 'tie' : won ? 'win' : tie ? 'tie' : 'loss'}`}>
-          {headline.a}<br />{headline.b}<em>.</em>
+          {headline}<em>.</em>
         </h1>
 
         {left && <div className="res-left-note">{t('someoneLeft')}</div>}
 
-        {!isSolo && opp ? (
-          <div className="res-scoreboard">
+        {!isSolo && opponents.length > 1 && result.leaderboard ? (
+          <div className="res-group-board"><Leaderboard leaderboard={result.leaderboard} myId={myId} /></div>
+        ) : !isSolo && opp ? (
+          <div className={`res-scoreboard ${won ? 'win' : tie ? 'tie' : 'loss'}`}>
             <div className="res-score me">
-              <div className="av">{initial(name)}</div>
+              <div className="av" aria-label={name}>{avatar || initial(name)}</div>
               <div className="pts">{myScore}</div>
               <div className="nm">{t('you')}</div>
             </div>
             <div className="res-vs">vs</div>
             <div className="res-score op">
-              <div className="av">{initial(opp.name)}</div>
+              <div className="av" aria-label={opp.name}>{opp.avatar || initial(opp.name)}</div>
               <div className="pts">{oppScore}</div>
               <div className="nm">{opp.name}</div>
             </div>
@@ -736,21 +739,6 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
           </div>
         )}
 
-        <div className="res-stats">
-          <div className="res-stat">
-            <b>{correctPct === null ? '\u2014' : `${correctPct}%`}</b>
-            <span>bonnes réponses</span>
-          </div>
-          <div className="res-stat">
-            <b>{avgSec === null ? '\u2014' : `${avgSec.toFixed(1)}s`}</b>
-            <span>temps moyen</span>
-          </div>
-          <div className="res-stat">
-            <b>{result.topic ? `N${result.topic.level}` : `+${result.xp}`}</b>
-            <span>{result.topic ? 'niveau du thème' : t('xpTotal')}</span>
-          </div>
-        </div>
-
         {/* Reward signals stay visible — this is what the old screen got right */}
         <div className="res-rewards">
           <div className="res-reward">
@@ -760,36 +748,16 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
           {result.coins > 0 && (
             <div className="res-reward">
               <b>+{coinsEarned}</b>
-              <span>{adClaimed ? t('coinsDoubled') : 'pièces'}</span>
+              <span>{adClaimed ? t('coinsDoubled') : t('coinBalance')}</span>
             </div>
           )}
           {result.dayStreak > 1 && (
             <div className="res-reward">
               <b>{result.dayStreak}j</b>
-              <span>série</span>
+              <span>{t('dayStreak')}</span>
             </div>
           )}
         </div>
-
-        {result.stats && (
-          <div className="res-level">
-            <LevelRing
-              level={result.stats.level}
-              xpIntoLevel={result.stats.xpIntoLevel}
-              xpForLevel={result.stats.xpForLevel}
-            />
-            <div className="res-level-text">
-              <b>Niveau {result.stats.level}</b>
-              <span>{result.stats.xpIntoLevel} / {result.stats.xpForLevel} XP</span>
-            </div>
-          </div>
-        )}
-
-        {adOffer && !adClaimed && result.coins > 0 && (
-          <button className="res-btn-ad" onClick={onWatchAd}>
-            <span aria-hidden="true">▶</span> {t('adDouble', { n: result.coins })}
-          </button>
-        )}
 
         <div className="res-cta">
           {!isSolo ? (
@@ -811,13 +779,35 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
           </button>
         </div>
 
-        <button className="res-details-toggle" onClick={() => setShowDetails((v) => !v)} aria-expanded={showDetails}>
+        {result.stats && (
+          <div className="res-level">
+            <LevelRing level={result.stats.level} xpIntoLevel={result.stats.xpIntoLevel} xpForLevel={result.stats.xpForLevel} />
+            <div className="res-level-text">
+              <b>{t('level')} {result.stats.level}</b>
+              <span>{result.stats.xpIntoLevel} / {result.stats.xpForLevel} XP</span>
+            </div>
+          </div>
+        )}
+
+        {adOffer && !adClaimed && result.coins > 0 && (
+          <button className="res-btn-ad" onClick={onWatchAd}>
+            <span aria-hidden="true">▶</span> {t('adDouble', { n: result.coins })}
+          </button>
+        )}
+
+        <button className="res-details-toggle" onClick={() => setShowDetails((v) => !v)} aria-expanded={showDetails} aria-controls="match-result-details">
           {showDetails ? t('hideDetails') : t('showDetails')}
         </button>
       </div>
 
       {showDetails && (
-      <div className="res-details">
+      <div className="res-details" id="match-result-details">
+      <h2 className="res-details-heading">{t('matchStatistics')}</h2>
+      <div className="res-stats">
+        <div className="res-stat"><b>{correctPct === null ? '—' : `${correctPct}%`}</b><span>{t('correctAnswers')}</span></div>
+        <div className="res-stat"><b>{avgSec === null ? '—' : `${avgSec.toFixed(1)}s`}</b><span>{t('averageTime')}</span></div>
+        <div className="res-stat"><b>{result.topic ? `N${result.topic.level}` : `+${result.xp}`}</b><span>{result.topic ? t('topicLevel') : t('xpTotal')}</span></div>
+      </div>
       <IdentityCard frame={frame} avatar={avatar} name={name} level={result.stats?.level} className="identity-card-result" />
       {result.topic && (
         <div className="result-topic-level">
@@ -834,7 +824,7 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
         <div className="xpb-row"><span>{t('winBonus')}</span><span>+{result.xpBreakdown?.winBonus ?? 0}</span></div>
         <div className="xpb-row total"><span>{t('xpTotal')}</span><span>{result.xp}</span></div>
       </div>
-      {!isSolo && <Leaderboard leaderboard={result.leaderboard} myId={myId} />}
+      {!isSolo && <Leaderboard leaderboard={result.leaderboard || []} myId={myId} />}
       <div className="result-streak-row">
         <StreakBadge streak={streak?.streak || 0} />
       </div>

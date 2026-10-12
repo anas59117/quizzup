@@ -20,9 +20,6 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
   const handleAnswer = useCallback((idx) => {
     if (question.expired || selected !== null || sr) return;
 
-    const btn = buttonRefs.current[idx];
-    const rect = btn ? btn.getBoundingClientRect() : null;
-
     // Call the original answer function
     answer(idx);
 
@@ -31,44 +28,42 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
   }, [answer, question.expired, selected, sr]);
 
   // Trigger effects when reveal changes
-  const prevRevealRef = useRef(null);
+  const roundKey = `${question.round || 1}:${question.question}`;
+  const feedbackRoundRef = useRef(null);
+  const { triggerCorrect, triggerWrong, triggerOpponentAnswer, resetCombo, triggerTick } = gf;
   React.useEffect(() => {
-    if (reveal && reveal !== prevRevealRef.current) {
-      prevRevealRef.current = reveal;
+    if (reveal && feedbackRoundRef.current !== roundKey) {
+      feedbackRoundRef.current = roundKey;
 
       if (reveal.yourCorrect) {
         const btn = buttonRefs.current[selected];
         const rect = btn ? btn.getBoundingClientRect() : null;
-        gf.triggerCorrect(reveal.pointsEarned || 0, rect);
+        triggerCorrect(reveal.pointsEarned || 0, rect);
       } else {
         const btn = selected !== null ? buttonRefs.current[selected] : null;
-        gf.triggerWrong(btn ? btn.getBoundingClientRect() : null);
+        triggerWrong(btn ? btn.getBoundingClientRect() : null);
       }
 
       // Opponent "answered" visual pop
       if (opponents.some(o => o.answered)) {
-        gf.triggerOpponentAnswer();
+        triggerOpponentAnswer();
       }
     }
-  }, [reveal, selected, opponents, gf]);
+  }, [reveal, selected, opponents, roundKey, triggerCorrect, triggerWrong, triggerOpponentAnswer]);
 
   // Reset combo when new question starts
-  const prevQuestionRef = useRef(null);
   React.useEffect(() => {
-    if (question && question !== prevQuestionRef.current) {
-      prevQuestionRef.current = question;
-      gf.resetCombo();
-    }
-  }, [question, gf]);
+    resetCombo();
+  }, [roundKey, resetCombo]);
 
   // Enhanced timer tick sound
   const prevTimeRef = useRef(timeLeft);
   React.useEffect(() => {
     if (timeLeft < prevTimeRef.current && timeLeft > 0 && !sr) {
-      gf.triggerTick(timeLeft <= 3);
+      triggerTick(timeLeft <= 3);
     }
     prevTimeRef.current = timeLeft;
-  }, [timeLeft, sr, gf]);
+  }, [timeLeft, sr, triggerTick]);
 
   const ansCls = (idx) => {
     let base = '';
@@ -115,6 +110,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
       <div className="game-progress">
         <div className="game-progress-fill" style={{ width: `${progressPct}%` }} />
       </div>
+      <div className="game-round-meta">
       <div className="game-progress-text">
         {t('questionLabel')} {round} / {total}
       </div>
@@ -130,6 +126,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
           </span>
         </div>
       )}
+      </div>
 
       <div className={`answers-wrapper ${gf.opponentPop ? 'opponent-just-answered' : ''}`}>
         <div className="question-panel">
@@ -167,6 +164,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
           </div>
         </div>
       </div>
+      <div className="game-footer">
       <div className={`reveal-note mobile-answer-feedback${sr ? (reveal.yourCorrect ? ' is-correct' : ' is-wrong') : ''}`} role="status" aria-live="polite" aria-atomic="true">
         {sr ? <>
           <strong>{reveal.yourCorrect ? t('answerCorrect') : reveal.timedOut && selected === null ? t('timeUp') : t('answerIncorrect')}</strong>
@@ -180,6 +178,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
         </button>
       )}
       <GameChat social={social} />
+      </div>
     </div>
   );
 }
