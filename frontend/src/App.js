@@ -1112,8 +1112,9 @@ export default function App() {
     const previewCat = CATS_V4.find((cat) => cat.key === matchCategory);
     return (
       <div className="app app-nav app-top app-category-preview">
-        <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+        <Toast toast={toast} onDismiss={dismissToast} />
         <CategoryPreviewContent
+          controls={<TopControls {...topProps} />}
           category={previewCat}
           stats={statsHook.stats}
           onBack={() => setStage('home')}

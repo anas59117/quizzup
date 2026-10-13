@@ -23,16 +23,73 @@
   min-height: calc(100dvh - 64px - var(--safe-top));
   padding: 8px max(16px, var(--safe-left)) calc(120px + var(--safe-bottom)) max(16px, var(--safe-right));
 }
-.app.app-category-preview { isolation: isolate; }
+.app.app-category-preview.app-nav {
+  isolation: isolate;
+  overflow: visible;
+  overflow-x: clip;
+  min-height: 100dvh;
+  padding-top: var(--safe-top) !important;
+}
 .app-category-preview .category-preview-v4 {
-  min-height: calc(100dvh - 180px - var(--safe-top) - var(--safe-bottom));
+  /* A transformed screen-in wrapper would trap its fixed background. */
+  animation: none !important;
+  transform: none !important;
+  min-height: calc(100dvh - 112px - var(--safe-top) - var(--safe-bottom)) !important;
   height: auto !important;
   overflow: visible !important;
   padding-top: 0 !important;
   padding-bottom: 28px !important;
 }
-.app-category-preview .category-preview-v4 > .cp-head { padding-top: 12px !important; }
-.app-category-preview .category-preview-v4 > .cp-hero { padding-top: 24px !important; }
+.app-category-preview .category-preview-v4 .cp-bg {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  transform: none !important;
+}
+.app-category-preview .category-preview-v4 > .cp-head {
+  position: sticky !important;
+  top: var(--safe-top);
+  z-index: 21 !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  gap: 8px;
+  background: #100c12e8;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #ffffff14;
+}
+.app-category-preview .cp-head::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  height: var(--safe-top);
+  background: #100c12;
+  pointer-events: none;
+}
+.app-category-preview .cp-head-right { gap: 4px !important; }
+.app-category-preview .cp-head .top-controls.mobile-controls {
+  position: static !important;
+  inset: auto;
+  transform: none;
+  flex-shrink: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.app-category-preview .cp-head .mobile-controls-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 16px;
+}
+.app-category-preview .category-preview-v4 > .cp-hero { padding-top: 20px !important; }
+.app-category-preview .category-preview-v4 > .cp-friends { padding-bottom: 0 !important; }
 .app-category-preview .category-preview-v4 .cp-subtitle { color: #ffc6ce !important; }
 .app-category-preview .cp-back, .app-category-preview .cp-icon-btn { min-width: 44px; min-height: 44px; }
 

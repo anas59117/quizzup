@@ -154,7 +154,7 @@ const PREVIEW_SUB = {
   ligue_champions: { line1: 'LIGUE DES', line2: 'CHAMPIONS', eyebrow: 'SPORT · FOOTBALL', sub: 'UEFA', desc: 'Finales, légendes & records de la plus grande compétition européenne.' },
 };
 
-export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChallenge, pending, friendsOnTopic = [] }) {
+export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChallenge, pending, friendsOnTopic = [], controls }) {
   const { t } = useI18n();
   if (!category) return null;
   const preview = PREVIEW_SUB[category.key] || { eyebrow: category.family || 'QUIZ', desc: category.desc };
@@ -187,6 +187,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
           <button className="cp-icon-btn" aria-label="Partager">
             <Icon name="share" size={18} />
           </button>
+          {controls}
         </div>
       </div>
 
