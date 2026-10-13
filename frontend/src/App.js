@@ -4,6 +4,8 @@ import './App.css';
 import './design-system.css';
 import './design-v4.css';
 import './mobile-comfort.css';
+import './shop-art.css';
+import './duel-premium.css';
 import SFX from './sounds';
 import music from './music';
 import { useSocial, GameChat } from './social';
@@ -26,6 +28,7 @@ import { useAdSystem, AdRewardsPanel } from './AdSystem';
 import { useSeasonPass, SeasonPassPanel } from './SeasonPass';
 import { FriendsScreen } from './social';
 import { LeagueContent, useLeague } from './LeagueSystem';
+import { AVATAR_IDS } from './PlayerAvatar';
 
 const LIVE_SESSION_KEY = 'quizzup-live-session';
 const HISTORY_KEY = 'quizzup';
@@ -82,7 +85,7 @@ export default function App() {
     afterAd: () => music.setMuted(SFX.muted),
   }), []);
   const [stage, setStage] = useState('join');
-  useEffect(() => { if (stage === 'shop') window.scrollTo(0, 0); }, [stage]);
+  useEffect(() => { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }, [stage]);
   const [fatalReason, setFatalReason] = useState('connection');
   const [fatalCode, setFatalCode] = useState('');
   const [categoryFamily, setCategoryFamily] = useState(null);
@@ -117,6 +120,7 @@ export default function App() {
   const [room, setRoom] = useState(null); // { code, players, isHost, canStart }
   const [intro, setIntro] = useState(null);
   const [question, setQuestion] = useState(null);
+  const activeRoundRef = useRef(0);
   const [score, setScore] = useState(0);
   const [totalRounds, setTotalRounds] = useState(6);
   const [selected, setSelected] = useState(null);
@@ -283,8 +287,9 @@ export default function App() {
     }
   }, [showToast, t]);
 
+  const roundComplete = Array.isArray(reveal?.others);
   useEffect(() => {
-    if (stage !== 'playing' || !question || reveal) return undefined;
+    if (stage !== 'playing' || !question || roundComplete) return undefined;
     setTimeLeft(question.timeLimit);
     if (tickRef.current) clearInterval(tickRef.current);
     tickRef.current = setInterval(() => {
@@ -295,7 +300,7 @@ export default function App() {
       });
     }, 1000);
     return () => clearInterval(tickRef.current);
-  }, [question, stage, reveal]);
+  }, [question, stage, roundComplete]);
 
   // Background music per screen — one track per context, cross-faded on
   // switch. During the reveal pause we keep whatever was already playing
@@ -504,6 +509,7 @@ export default function App() {
         setStage('playing');
         break;
       case 'round_intro':
+        activeRoundRef.current = 0;
         if (Array.isArray(data.preloadImages)) {
           const cache = preloadedImagesRef.current;
           data.preloadImages.forEach((src) => {
@@ -523,6 +529,7 @@ export default function App() {
         setStage('playing');
         break;
       case 'question':
+        activeRoundRef.current = data.round || 1;
         setIntro(null);
         questionShownAtRef.current = Date.now();
         if ((data.round || 1) === 1 && !data.reconnect) {
@@ -538,12 +545,22 @@ export default function App() {
       case 'report_ack':
         setReported(true);
         break;
+      case 'answer_ack':
+        if (!activeRoundRef.current || data.round !== activeRoundRef.current) break;
+        setReveal(data);
+        setScore(data.yourScore);
+        setSelected(data.yourAnswer);
+        break;
+      case 'opponent_answered':
+        if (!activeRoundRef.current) break;
+        setOpponents((prev) => prev.map((opponent) => opponent.id === data.id
+          ? { ...opponent, answered: true } : opponent));
+        break;
       case 'round_result':
-        if (!data.reconnect) {
-          if (data.yourCorrect) SFX.correct();
-          else if (data.timedOut && !data.yourAnswer && data.yourAnswer !== 0) SFX.timeUp();
-          else SFX.wrong();
-        }
+        activeRoundRef.current = 0;
+        // Outcome sounds belong to QuestionContent/GameFeel: acknowledgment
+        // and final result are two messages for one answer, not two outcomes.
+        if (!data.reconnect && data.timedOut && data.yourAnswer == null) SFX.timeUp();
         if (!data.reconnect) {
           const tally = matchTallyRef.current;
           tally.rounds += 1;
@@ -592,9 +609,18 @@ export default function App() {
       }
       case 'stats':
         statsHook.handleStatsMessage(data);
+        if (AVATAR_IDS.includes(data.stats?.equippedItems?.avatars)) {
+          setAvatar(data.stats.equippedItems.avatars);
+        }
         break;
       case 'shop_result':
         clearPending();
+        if (data.ok && data.action === 'equip' && AVATAR_IDS.includes(data.itemId)) {
+          // Persist the confirmed choice as the public identity too, so future
+          // opponents see the same character as this player's shop/profile.
+          setAvatar(data.itemId);
+          sendSocket({ type: 'profile_update', name, avatar: data.itemId });
+        }
         if (data.ok) showToast(t(data.action === 'buy' ? 'shopBought' : 'shopEquipped'), 'success');
         else showToast(t(data.error === 'coins' ? 'shopNotEnough' : 'shopError'), 'error');
         break;
@@ -759,6 +785,8 @@ export default function App() {
     if (!connect({ type: 'profile_update', name: cleanName, avatar: nextAvatar })) {
       clearPending();
       showToast(t('profileUpdateUnavailable'), 'error');
+    } else if (AVATAR_IDS.includes(nextAvatar) && nextAvatar !== statsHook.stats.equippedItems?.avatars) {
+      sendSocket({ type: 'shop_equip', itemId: nextAvatar });
     }
   }
 
@@ -1083,7 +1111,7 @@ export default function App() {
   if (stage === 'category_preview') {
     const previewCat = CATS_V4.find((cat) => cat.key === matchCategory);
     return (
-      <div className="app app-nav app-top">
+      <div className="app app-nav app-top app-category-preview">
         <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <CategoryPreviewContent
           category={previewCat}
@@ -1121,7 +1149,7 @@ export default function App() {
 
   if (stage === 'profile') {
     return (
-      <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+      <div className="app app-nav app-top app-profile"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
         <ProfileContent
           avatar={avatar} name={name} stats={statsHook.stats}
@@ -1142,7 +1170,7 @@ export default function App() {
 
   if (stage === 'shop') {
     return (
-      <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+      <div className="app app-nav app-top app-shop"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <ShopContent
           avatar={avatar} name={name} stats={statsHook.stats}
           onBuy={buyFrame} onEquip={equipFrame} onPlay={quickMatch}

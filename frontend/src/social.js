@@ -1,6 +1,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { useI18n } from './i18n';
 import { Icon } from './ui';
+import { PlayerAvatar } from './PlayerAvatar';
 
 export function useSocial(wsRef) {
   const [friends, setFriends] = useState([]);
@@ -125,7 +126,7 @@ export function FriendsScreen({ social }) {
           <div className="friends-section-title">{t('friendRequests')}</div>
           {social.requests.map((r) => (
             <div key={r.id} className="friend-row">
-              <div className="friend-ava">{r.avatar}</div>
+              <div className="friend-ava"><PlayerAvatar avatar={r.avatar} /></div>
               <div className="friend-name">{r.name}</div>
               <button className="friend-btn accept" onClick={() => social.acceptFriend(r.id)}>{t('accept')}</button>
               <button
@@ -161,7 +162,7 @@ export function FriendsScreen({ social }) {
               }
             }}
           >
-            <div className={`friend-ava ${f.online ? 'online' : ''}`}>{f.avatar}</div>
+            <div className={`friend-ava ${f.online ? 'online' : ''}`}><PlayerAvatar avatar={f.avatar} /></div>
             <div className="friend-name">{f.name}</div>
             <div className={`friend-status ${f.online ? 'on' : 'off'}`}>{f.online ? t('online') : t('offline')}</div>
           </div>

@@ -1,0 +1,18 @@
+.player-avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  background: url('./assets/avatars-v2.png') var(--avatar-x) var(--avatar-y) / 500% 200% no-repeat;
+}
+
+/* Definite dimensions also work inside legacy auto-sized grid tracks. */
+.profile-avatar-v4 > .player-avatar, .pf-avatar > .player-avatar,
+.avatar-opt > .player-avatar, .podium-avatar > .player-avatar,
+.global-avatar > .player-avatar, .profile-avatar > .player-avatar,
+.friend-ava > .player-avatar, .feed-post-ava > .player-avatar,
+.lobby-ava > .player-avatar, .lb-ava > .player-avatar {
+  width: inherit;
+  height: inherit;
+}
+.challenge-avatar { display: block; width: 44px; height: 44px; }

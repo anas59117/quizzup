@@ -34,7 +34,7 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
     assert(ready, 'Isolated backend did not start: ' + logs.slice(-1800));
     browser = await chromium.launch({ executablePath: process.env.EDGE_PATH || 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', headless: true });
     const pages = [];
-    for (const [name, avatar] of [['MobileQA', '🦁'], ['DuelQA', '🐼']]) {
+    for (const [name, avatar] of [['MobileQA', 'robot'], ['DuelQA', 'fox']]) {
       const context = await browser.newContext({ viewport: { width: 390, height: 664 }, reducedMotion: 'reduce' });
       await context.addInitScript(({ name, avatar }) => {
         localStorage.setItem('quizzup-onboarded', '1');
@@ -56,14 +56,20 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
     }
     for (let round = 1; round <= 6; round++) {
       await Promise.all(pages.map(page => page.locator('.game-progress-text').filter({ hasText: `Question ${round} / 6` }).waitFor({ timeout: 20000 })));
-      await Promise.all(pages.map((page, index) => page.locator('.answer').nth(index).click()));
+      await pages[0].locator('.answer').nth(0).click();
+      await pages[0].locator('.mobile-answer-feedback strong').waitFor();
+      await pages[1].locator('.hud-chip:not(.mine)[data-state="answered"]').waitFor();
+      assert.equal(await pages[0].locator('.hud-chip:not(.mine)').getAttribute('data-state'), 'waiting');
+      assert.equal(await pages[1].locator('.answer:disabled').count(), 0, 'Opponent reply disabled too soon');
+      if (round === 1) await pages[0].screenshot({path:path.join(out,'live-ack-waiting.png'),fullPage:true});
+      await pages[1].locator('.answer').nth(1).click();
       await Promise.all(pages.map(page => page.locator('.mobile-answer-feedback strong').waitFor()));
     }
     await Promise.all(pages.map(page => page.locator('.res-cta').waitFor({ timeout: 20000 })));
     console.log('PASS real app matchmaking → six questions → results');
     for (const page of pages) {
-      const glyphs = await page.locator('.res-score .av').allTextContents();
-      assert(glyphs.includes('🦁') && glyphs.includes('🐼'), `Lost player identity: ${glyphs}`);
+      const identities = await page.locator('.res-score .player-avatar').evaluateAll(elements=>elements.map(el=>el.dataset.avatar));
+      assert(identities.includes('robot') && identities.includes('fox'), `Lost player identity: ${identities}`);
       await page.getByRole('button', { name: 'Voir le détail', exact: true }).click();
       assert(await page.locator('#match-result-details').isVisible());
       await page.getByRole('button', { name: 'Masquer le détail', exact: true }).click();

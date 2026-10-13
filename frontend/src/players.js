@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { CATEGORIES } from './ui';
 import { useI18n } from './i18n';
+import { PlayerAvatar } from './PlayerAvatar';
 
 // ---- Theme levels & titles (QuizUp-style "Expert en Harry Potter") --------
 
@@ -126,7 +127,7 @@ export function PlayerSheet({ players, social, onSelectTopic }) {
         {p && (
           <>
             <div className="player-sheet-head">
-              <div className="profile-avatar">{p.avatar}</div>
+              <div className="profile-avatar"><PlayerAvatar avatar={p.avatar} /></div>
               <div className="profile-name">{p.name}</div>
               <div className="profile-sub">
                 {t('level')} {p.level} · {p.online ? t('online') : t('offline')}

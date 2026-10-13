@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef, useId, memo } from 'react';
 import { useI18n } from './i18n';
 import { getTopicCover } from './topicCovers';
+import { PlayerAvatar } from './PlayerAvatar';
 
 
 export const Icon = memo(function Icon({ name, size = 20, className = '' }) {
@@ -48,7 +49,7 @@ export const Icon = memo(function Icon({ name, size = 20, className = '' }) {
   );
 });
 
-export const AVATARS = ['\u{1F43A}', '\u{1F981}', '\u{1F98A}', '\u{1F43C}', '\u{1F989}', '\u{1F438}', '\u{1F42F}', '\u{1F984}'];
+export const AVATARS = ['robot'];
 
 export const CATEGORIES = [
   { key: 'movies', label: 'Films', icon: '\u{1F3AC}', grad: 'g1', tag: '\u{1F525}', desc: 'Blockbusters & classiques', family: 'cinema' },
@@ -547,7 +548,7 @@ export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setA
             aria-label={`Avatar ${index + 1}`}
             aria-pressed={avatar === a}
           >
-            {a}
+            <PlayerAvatar avatar={a} />
           </button>
         ))}
         </div>

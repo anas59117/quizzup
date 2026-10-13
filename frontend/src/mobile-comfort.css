@@ -9,6 +9,104 @@
   --safe-right: env(safe-area-inset-right, 0px);
 }
 
+/* One continuous mobile canvas; the content scrolls, never a fixed-height panel. */
+.app.app-shop.app-nav {
+  --red-primary: #d8243c;
+  background: var(--red-primary, var(--v4-coral)) !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-bottom: 0 !important;
+}
+.app.app-profile { background: #ce2339 !important; }
+.app-shop .shop-v4-root {
+  background: transparent;
+  min-height: calc(100dvh - 64px - var(--safe-top));
+  padding: 8px max(16px, var(--safe-left)) calc(120px + var(--safe-bottom)) max(16px, var(--safe-right));
+}
+.app.app-category-preview { isolation: isolate; }
+.app-category-preview .category-preview-v4 {
+  min-height: calc(100dvh - 180px - var(--safe-top) - var(--safe-bottom));
+  height: auto !important;
+  overflow: visible !important;
+  padding-top: 0 !important;
+  padding-bottom: 28px !important;
+}
+.app-category-preview .category-preview-v4 > .cp-head { padding-top: 12px !important; }
+.app-category-preview .category-preview-v4 > .cp-hero { padding-top: 24px !important; }
+.app-category-preview .category-preview-v4 .cp-subtitle { color: #ffc6ce !important; }
+.app-category-preview .cp-back, .app-category-preview .cp-icon-btn { min-width: 44px; min-height: 44px; }
+
+/* Profile: opaque surfaces make every text color predictable in both themes. */
+.pf-v4 {
+  --profile-surface: #351b29;
+  --profile-muted: #e5dce2;
+  color: #fff;
+}
+.pf-v4 .pf-avatar { background: #241a29 !important; border: 0 !important; border-radius: 22px !important; }
+.pf-v4 .pf-edit-dot { width: 44px !important; height: 44px !important; bottom: -10px !important; right: -16px !important; }
+.pf-v4 .pf-bio, .pf-v4 .pf-social { color: #fff !important; }
+.pf-v4 .pf-level-card, .pf-v4 .profile-league-card, .pf-v4 .pstat, .pf-v4 .profile-editor {
+  background: var(--profile-surface) !important;
+  border: 1px solid #ffffff1f !important;
+  border-radius: 20px !important;
+}
+.pf-v4 .pf-level-pct, .pf-v4 .pf-xp-text, .pf-v4 .pl-stats, .pf-v4 .pstat-lbl,
+.pf-v4 .profile-editor-label, .pf-v4 .profile-editor-cancel { color: var(--profile-muted) !important; }
+.pf-v4 .pf-level-label, .pf-v4 .pstat-val, .pf-v4 .pl-tier { color: #fff !important; }
+.pf-v4 .profile-league-card { margin: 12px 0 !important; }
+.pf-v4 .streak-card { background: #191923 !important; border: 1px solid #ffffff1f !important; }
+.pf-v4 .streak-title, .pf-v4 .streak-count { color: #fff !important; }
+.pf-v4 .streak-sub, .pf-v4 .streak-milestone-label, .pf-v4 .streak-day-label,
+.pf-v4 .streak-reward .sr-text, .pf-v4 .streak-reward .sr-bonus { color: #e5dce2 !important; }
+.pf-v4 .streak-day { background: #30303c !important; }
+.pf-v4 .streak-day-label { opacity: 1 !important; }
+.pf-v4 .streak-reward { opacity: 1 !important; }
+.pf-v4 .streak-reward.unlocked .sr-bonus { color: #87f0ae !important; }
+.pf-v4 .leaderboard-cta { background: #fff9ed !important; color: #351b29 !important; }
+.pf-v4 .leaderboard-cta strong, .pf-v4 .leaderboard-cta small { color: #351b29 !important; opacity: 1 !important; }
+.pf-v4 .privacy-link { color: #fff !important; text-decoration: underline; }
+.pf-v4 .friends-empty, .pf-v4 .friends-section-title { color: #fff !important; }
+.profile-avatar-grid .avatar-opt, .avatar-grid .avatar-opt { width: 64px; height: 64px; padding: 3px; }
+.profile-avatar-v4 .player-avatar { border-radius: 12px; }
+.results-v4 .av .player-avatar { width: 46px; height: 46px; }
+.res-player-identity { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.res-player-identity .player-avatar { width: 44px; height: 44px; }
+
+/* Match presentation uses the actual characters, with no legacy rank frames. */
+.matchmaking-v4 .vs-ava { border: 0 !important; border-radius: 20px !important; background: #1c1a22 !important; padding: 4px; }
+.matchmaking-v4 .vs-ava.searching { border: 1px dashed #79707e !important; border-radius: 50% !important; color: #e5dce2; }
+.matchmaking-v4 .vs-name.dim { color: #d4ced9 !important; }
+.match-intro { width: 100%; max-width: 600px; padding: 0 !important; }
+.match-intro-topic { font: 700 14px var(--v4-font-ui); color: #e5dce2; text-align: center; margin-bottom: 24px; }
+.match-intro-arena { display: grid; grid-template-columns: minmax(0, 1fr) 50px minmax(0, 1fr); align-items: center; position: relative; }
+.match-intro-player {
+  background: #252033; border: 1px solid #ffffff21; border-radius: 24px;
+  padding: 20px 10px; text-align: center; min-width: 0;
+  animation: matchPlayerEnter 460ms cubic-bezier(.22, 1, .36, 1) both;
+}
+.match-intro-player-me { background: radial-gradient(ellipse at 50% 20%, #533124, #211e28 75%); }
+.match-intro-player-other { background: radial-gradient(ellipse at 50% 20%, #253b50, #211e28 75%); animation-delay: 100ms; }
+.match-intro-avatar { width: 100%; max-width: 190px; aspect-ratio: 1; margin: 0 auto 12px; }
+.match-intro-player h2 { margin: 0 0 6px; font: 800 clamp(16px, 4vw, 24px) var(--v4-font-ui); color: #fff; overflow-wrap: anywhere; }
+.match-intro-player > span { font: 500 12px var(--v4-font-ui); color: #e5dce2; }
+.match-intro-vs { display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--v4-cta); z-index: 1; }
+.match-intro-vs b { font: 900 17px var(--v4-font-ui); font-style: italic; }
+.match-intro-caption { margin-top: 24px; text-align: center; color: #e5dce2; font: 500 13px var(--v4-font-ui); }
+@keyframes matchPlayerEnter { from { opacity: 0; transform: translateY(18px) scale(.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@media (max-width: 680px) {
+  .app.app-category-preview { padding-left: 0 !important; padding-right: 0 !important; }
+  .app-category-preview .category-preview-v4 { width: 100% !important; max-width: none !important; margin: 0 !important; }
+  .app-category-preview .cp-title { font-size: clamp(38px, 10vw, 54px) !important; }
+  .app-category-preview .cp-info { font-size: 15px !important; }
+  .app-category-preview .cp-stats { margin-top: 24px !important; }
+  .app-category-preview .cp-cta { margin-top: 20px !important; }
+  .app-category-preview .cp-friends { margin-top: 20px !important; }
+  .app.app-shop { padding-left: 0 !important; padding-right: 0 !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .match-intro *, .round-intro-screen * { animation: none !important; transition: none !important; }
+}
+
 .top-controls.mobile-controls {
   top: calc(8px + var(--safe-top));
   right: max(12px, env(safe-area-inset-right));

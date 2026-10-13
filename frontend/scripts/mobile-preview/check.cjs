@@ -13,16 +13,29 @@ const server = require('./serve.cjs');
       const page = await browser.newPage({ viewport: { width, height }, reducedMotion: 'reduce' });
       page.on('pageerror', e => { errors.push(e.message); console.error('PAGE ERROR', e.message); });
       page.on('console', message => { if (message.type() === 'error' && message.text().includes('[QuizzUp')) errors.push(message.text()); });
-      for (const mode of ['', '?long', '?photo', '?group', '?home', '?profile', '?waiting', '?shop', '?themes', '?result', '?result&loss', '?result&tie', '?result&solo', '?result&group', '?result&en']) {
+      for (const mode of ['', '?long', '?photo', '?group', '?gameSolo', '?home', '?profile', '?waiting', '?shop', '?themes', '?quiz', '?intro', '?result', '?result&loss', '?result&tie', '?result&solo', '?result&group', '?result&en']) {
         await page.goto('http://127.0.0.1:4322/' + mode);
-        const game = ['', '?long', '?photo', '?group'].includes(mode);
-        await page.locator(game ? '.answers' : mode.includes('result') ? '.res-cta' : mode === '?home' ? '.tile-v4' : mode === '?profile' ? '.pf-name' : mode === '?waiting' ? '.matchmaking-topic' : mode === '?themes' ? '.family-tile' : '.shop-v4-root').first().waitFor();
+        const game = ['', '?long', '?photo', '?group', '?gameSolo'].includes(mode);
+        await page.locator(game ? '.answers' : mode.includes('result') ? '.res-cta' : mode === '?home' ? '.tile-v4' : mode === '?profile' ? '.pf-name' : mode === '?waiting' ? '.matchmaking-topic' : mode === '?themes' ? '.family-tile' : mode === '?quiz' ? '.cp-head' : mode === '?intro' ? '.match-intro' : '.shop-v4-root').first().waitFor();
         await page.evaluate(() => document.fonts.ready);
         const metrics = await page.evaluate(() => ({
           width: document.documentElement.scrollWidth, viewport: innerWidth,
           buttons: [...document.querySelectorAll('.answer')].map(el => { const r=el.getBoundingClientRect(); return {bottom:r.bottom,height:r.height} }),
         }));
         assert(metrics.width <= width, `Overflow ${width} ${mode}`);
+        const avatars = await page.locator('.player-avatar').evaluateAll(async elements => {
+          const images = new Map();
+          for (const el of elements) {
+            const rect = el.getBoundingClientRect();
+            if (rect.width < 1 || rect.height < 1) throw new Error(`Invisible avatar: ${el.parentElement.className}`);
+            const url = getComputedStyle(el).backgroundImage.match(/url\("?([^"\)]+)/)?.[1];
+            if (!url) throw new Error('Missing avatar image');
+            if (!images.has(url)) { const image = new Image(); image.src = url; images.set(url,image.decode()); }
+          }
+          await Promise.all(images.values());
+          return elements.length;
+        });
+        if (game) assert(avatars>0, 'No game identity rendered');
         if (game) {
           assert(metrics.buttons.every(r => r.height >= 44), `Small answer ${width} ${mode}`);
           if (width <= 680 && mode !== '?group') assert(metrics.buttons.every(r => r.bottom <= height), `Answer below fold ${width}x${height} ${mode}: ${JSON.stringify(metrics.buttons)}`);
@@ -52,8 +65,8 @@ const server = require('./serve.cjs');
             assert.notEqual(colours.text, colours.bg, 'LP notification invisible');
           }
           if (!mode.includes('solo') && !mode.includes('group')) {
-            assert((await page.locator('.res-score.me .av').textContent()).includes('🦁'));
-            assert((await page.locator('.res-score.op .av').textContent()).includes('🐼'));
+            assert.equal(await page.locator('.res-score.me .player-avatar').getAttribute('data-avatar'), 'fox');
+            assert.equal(await page.locator('.res-score.op .player-avatar').getAttribute('data-avatar'), 'owl');
           }
           await page.getByRole('button', { name: mode.includes('en') ? 'Show details' : 'Voir le détail', exact: true }).click();
           assert(await page.locator('#match-result-details').isVisible());
@@ -66,7 +79,35 @@ const server = require('./serve.cjs');
           assert((await page.locator('.pf-v4').textContent()).includes('1 jour de suite'));
           await page.getByRole('button', { name: 'Modifier le profil', exact: true }).click();
           assert(await page.getByRole('textbox', { name: 'Pseudo' }).isVisible());
+          const choices = await page.locator('.avatar-opt .player-avatar').evaluateAll(elements=>elements.map(el=>({id:el.dataset.avatar,width:el.getBoundingClientRect().width,height:el.getBoundingClientRect().height})));
+          assert.deepEqual(choices.map(item=>item.id),['fox','robot']);
+          assert(choices.every(item=>item.width>=44 && item.height>=44),'Profile editor sprites collapsed');
+          const contrast = await page.evaluate(() => {
+            const rgba = value => value.match(/[\d.]+/g)?.map(Number) || [0,0,0,0];
+            const over = (fg,bg) => fg.slice(0,3).map((v,i)=>v*(fg[3] ?? 1)+bg[i]*(1-(fg[3] ?? 1)));
+            const luminance = rgb => rgb.map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0);
+            return [...document.querySelectorAll('.pf-bio,.pf-social,.pf-xp-text,.pf-level-pct,.streak-sub,.streak-day-label,.sr-text,.pstat-lbl')].filter(el=>el.textContent.trim()).map(el=>{
+              const chain=[]; for(let n=el;n;n=n.parentElement) chain.unshift(n);
+              let bg=[255,255,255]; for(const n of chain) bg=over(rgba(getComputedStyle(n).backgroundColor),bg);
+              const fg=over(rgba(getComputedStyle(el).color),bg), a=luminance(fg),b=luminance(bg);
+              return {className:el.className,ratio:(Math.max(a,b)+.05)/(Math.min(a,b)+.05)};
+            });
+          });
+          assert(contrast.every(item=>item.ratio>=4.5),`Profile contrast ${width}: ${JSON.stringify(contrast)}`);
+        } else if (mode === '?quiz') {
+          const header = await page.locator('.cp-head').boundingBox();
+          assert(header.y>=0, `Quiz header clipped ${width}`);
+          const back = await page.locator('.cp-back').boundingBox();
+          assert(back.height>=44 && back.width>=44, 'Quiz back target too small');
+          await page.evaluate(()=>window.scrollTo(0,document.documentElement.scrollHeight));
+          const bottom = await page.locator('.cp-friends').boundingBox();
+          const nav = await page.locator('.navbar').boundingBox();
+          assert(bottom.y+bottom.height<=nav.y, `Quiz last section behind navigation ${width}`);
+        } else if (mode === '?intro') {
+          assert.equal(await page.locator('.match-intro-avatar .player-avatar').count(),2);
+          assert.equal(await page.locator('.identity-card').count(),0);
         } else if (mode === '?shop') {
+          assert(await page.locator('.app-shop').evaluate(el=>el.offsetHeight>=innerHeight),'Shop canvas below viewport height');
           for (const label of ['Avatars','Entrées','Réactions','Célébrations']) {
             const tab = page.getByRole('button', { name: label, exact: true });
             const visibleText = await tab.evaluate(el => el.scrollWidth <= el.clientWidth);

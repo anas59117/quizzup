@@ -94,8 +94,8 @@ test('match results preserve both avatars and the replay actions', () => {
     opponents={[{ id: 'other', name: 'titi12', avatar: '🐼', score: 55 }]}
     avatar="🦊" name="Sisi" social={{ friends: [], outgoingRequests: new Set() }}
     rematch={rematch} newMatch={jest.fn()} playAgain={jest.fn()} />);
-  expect(container.querySelector('.res-score.me .av').textContent).toContain('🦊');
-  expect(container.querySelector('.res-score.op .av').textContent).toContain('🐼');
+  expect(container.querySelector('.res-score.me .player-avatar').dataset.avatar).toBe('fox');
+  expect(container.querySelector('.res-score.op .player-avatar').dataset.avatar).toBe('robot');
   act(() => container.querySelector('.res-btn-primary').click());
   expect(rematch).toHaveBeenCalledTimes(1);
 });

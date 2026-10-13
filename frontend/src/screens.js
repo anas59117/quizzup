@@ -10,8 +10,8 @@ import { ProfileStats } from './stats';
 import { FriendsScreen } from './social';
 import { TopicLevelList, topicTitleKey, topicLabel } from './players';
 import { useI18n } from './i18n';
-import { frameClass } from './frames';
-import { IdentityCard } from './identity';
+import { PlayerAvatar, AVATAR_IDS, avatarId } from './PlayerAvatar';
+import { ShopArt as QV4ShopArt } from './shop-art';
 
 const FEATURED_TOPIC_KEYS = [
   'spider_man', 'harry_potter', 'minecraft', 'rap_fr',
@@ -55,9 +55,9 @@ export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickM
           {controls}
         </div>
       </header>
-      <button className={`profile-card-v4${frameClass(frame)}`} onClick={onOpenProfile} aria-label={t('editProfile')}>
+      <button className="profile-card-v4" onClick={onOpenProfile} aria-label={t('editProfile')}>
         <div className="profile-row-v4">
-          <div className="profile-avatar-v4">{avatar}</div>
+          <div className="profile-avatar-v4"><PlayerAvatar avatar={avatar} /></div>
           <div className="profile-identity-v4">
             <div className="profile-name-v4">{name || 'Joueur'}</div>
             <div className="profile-bio-v4">{t('hey', { name })}</div>
@@ -368,7 +368,7 @@ export function ProfileContent({
       {/* ── Hero ──────────────────────────────────────────── */}
       <div className="pf-hero">
         <div className="pf-avatar-wrap">
-          <div className="pf-avatar">{avatar}</div>
+          <div className="pf-avatar"><PlayerAvatar avatar={avatar} /></div>
           <button className="pf-edit-dot" aria-label={t('editProfile')} onClick={() => setEditing((v) => !v)} aria-expanded={editing}>
             <Icon name="edit" size={11} />
           </button>
@@ -394,7 +394,7 @@ export function ProfileContent({
           />
           <div className="profile-editor-label">{t('chooseAvatar')}</div>
           <div className="profile-avatar-grid" role="group" aria-label={t('chooseAvatar')}>
-            {AVATARS.map((option, index) => (
+            {AVATAR_IDS.filter((id) => id === 'robot' || stats.ownedItems?.includes(id)).map((option, index) => (
               <button
                 key={option}
                 className={`avatar-opt ${draftAvatar === option ? 'active' : ''}`}
@@ -402,7 +402,7 @@ export function ProfileContent({
                 aria-label={`${t('avatar')} ${index + 1}`}
                 aria-pressed={draftAvatar === option}
               >
-                {option}
+                <PlayerAvatar avatar={option} />
               </button>
             ))}
           </div>
@@ -557,7 +557,7 @@ export function LeaderboardContent({ board, loading, onBack, category = null, on
                 role={entry.id && !entry.isYou ? 'button' : undefined} tabIndex={entry.id && !entry.isYou ? 0 : undefined}
                 onClick={() => openRow(entry)} onKeyDown={(e) => { if (e.key === 'Enter') openRow(entry); }}>
                 <div className="podium-rank">#{entry.rank}</div>
-                <div className="podium-avatar">{entry.avatar}</div>
+                <div className="podium-avatar"><PlayerAvatar avatar={entry.avatar} /></div>
                 <div className="podium-name">{entry.name}</div>
                 <div className="podium-level">{t('level')} {entry.level}</div>
                 <div className="podium-xp">{entry.xp.toLocaleString()} XP</div>
@@ -577,7 +577,7 @@ export function LeaderboardContent({ board, loading, onBack, category = null, on
                   role={entry.id && !entry.isYou ? 'button' : undefined} tabIndex={entry.id && !entry.isYou ? 0 : undefined}
                   onClick={() => openRow(entry)} onKeyDown={(e) => { if (e.key === 'Enter') openRow(entry); }}>
                   <span className="global-rank">{entry.rank}</span>
-                  <span className="global-avatar">{entry.avatar}</span>
+                  <span className="global-avatar"><PlayerAvatar avatar={entry.avatar} /></span>
                   <span className="global-player">
                     <strong>{entry.name}{entry.isYou ? ` · ${t('you')}` : ''}</strong>
                     <small>{t('level')} {entry.level} · {entry.winRate}% {String(t('wins')).toLowerCase()}</small>
@@ -620,7 +620,7 @@ export function WaitingContent({ avatar, frame, name, level = 1, categoryKey, on
       <div className="matchmaking-topic">{category?.label || t('randomTopic')}</div>
       <div className="vs-screen">
         <div className="vs-player">
-          <div className={`vs-ava${frameClass(frame)}`}>{avatar}</div>
+          <div className="vs-ava"><PlayerAvatar avatar={avatar} /></div>
           <div className="vs-name">{name}</div>
           <div className="vs-level">{t('level')} {level}</div>
         </div>
@@ -652,20 +652,31 @@ export function RoundIntroContent({ intro, totalRounds, opponents, avatar, frame
   const difficultyKey = intro.difficulty
     ? `difficulty${intro.difficulty[0].toUpperCase()}${intro.difficulty.slice(1)}`
     : null;
+  if (intro.round === 1 && opponents.length === 1) {
+    const opponent = opponents[0];
+    return <section className="container match-intro" aria-label={`${name} ${t('versus')} ${opponent.name}`}>
+      <div className="match-intro-topic">{intro.category}</div>
+      <div className="match-intro-arena">
+        <div className="match-intro-player match-intro-player-me">
+          <div className="match-intro-avatar"><PlayerAvatar avatar={avatar} /></div>
+          <h2>{name}</h2><span>{t('level')} {level || 1}</span>
+        </div>
+        <div className="match-intro-vs" aria-hidden="true"><Icon name="bolt" size={32} /><b>VS</b></div>
+        <div className="match-intro-player match-intro-player-other">
+          <div className="match-intro-avatar"><PlayerAvatar avatar={opponent.avatar} /></div>
+          <h2>{opponent.name}</h2><span>{t('opponent')}</span>
+        </div>
+      </div>
+      <div className="match-intro-caption">{t('roundOf', { n: 1, total: totalRounds })}</div>
+    </section>;
+  }
   return (
-    <div className="container center">
+    <div className="container center round-intro-screen">
       <div className={`round-intro-icon ${intro.isBonus ? 'bonus' : ''}`}>{intro.icon}</div>
       <div className="round-intro-cat">{intro.category}</div>
       {difficultyKey && <div className={`difficulty-pill ${intro.difficulty}`}>{t(difficultyKey)}</div>}
       <div className="round-intro-round">{intro.isBonus ? t('bonusRound') : t('round', { n: intro.round })}</div>
       <div className="round-intro-sub">{intro.isBonus ? t('doublePoints') : t('roundOf', { n: intro.round, total: totalRounds })}</div>
-      {intro.round === 1 && opponents.length === 1 && (
-        <div className="identity-duel" aria-label={`${name} ${t('versus')} ${opponents[0].name}`}>
-          <IdentityCard frame={frame} avatar={avatar} name={name} level={level} className="identity-card-duel" />
-          <span className="identity-duel-vs" aria-hidden="true">VS</span>
-          <IdentityCard frame={opponents[0].frame} avatar={opponents[0].avatar} name={opponents[0].name} className="identity-card-duel" />
-        </div>
-      )}
     </div>
   );
 }
@@ -697,7 +708,6 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
   const tally = result.matchTally || {};
   const correctPct = tally.rounds ? Math.round((tally.correct / tally.rounds) * 100) : null;
   const avgSec = tally.answered ? (tally.totalMs / tally.answered / 1000) : null;
-  const initial = (n) => (n || '?').trim().charAt(0).toUpperCase();
   const coinsEarned = adClaimed ? result.coins * 2 : result.coins;
 
   // Sentence case, never all-caps — the mockup's voice is "Belle victoire."
@@ -721,13 +731,13 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
         ) : !isSolo && opp ? (
           <div className={`res-scoreboard ${won ? 'win' : tie ? 'tie' : 'loss'}`}>
             <div className="res-score me">
-              <div className="av" aria-label={name}>{avatar || initial(name)}</div>
+              <div className="av" aria-label={name}><PlayerAvatar avatar={avatar} /></div>
               <div className="pts">{myScore}</div>
               <div className="nm">{t('you')}</div>
             </div>
             <div className="res-vs">vs</div>
             <div className="res-score op">
-              <div className="av" aria-label={opp.name}>{opp.avatar || initial(opp.name)}</div>
+              <div className="av" aria-label={opp.name}><PlayerAvatar avatar={opp.avatar} /></div>
               <div className="pts">{oppScore}</div>
               <div className="nm">{opp.name}</div>
             </div>
@@ -808,7 +818,7 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
         <div className="res-stat"><b>{avgSec === null ? '—' : `${avgSec.toFixed(1)}s`}</b><span>{t('averageTime')}</span></div>
         <div className="res-stat"><b>{result.topic ? `N${result.topic.level}` : `+${result.xp}`}</b><span>{result.topic ? t('topicLevel') : t('xpTotal')}</span></div>
       </div>
-      <IdentityCard frame={frame} avatar={avatar} name={name} level={result.stats?.level} className="identity-card-result" />
+      <div className="res-player-identity"><PlayerAvatar avatar={avatar} /><span>{name}</span></div>
       {result.topic && (
         <div className="result-topic-level">
           <span className="topic-level-badge">{result.topic.level}</span>
@@ -893,7 +903,6 @@ const QV4SHOP_ITEMS = [
   { id: 'spotlight', category: 'celebrations', name: 'Sous les projecteurs', price: 750, tone: 'ice', description: 'Les lumières s’allument pour ton grand final.', badge: 'ANIMÉ' },
 ];
 const QV4shopNumber = (number) => number.toLocaleString('fr-FR');
-const QV4SHOP_AVATAR_ORDER = ['fox', 'robot', 'brain', 'astronaut', 'ninja', 'dragon', 'cat', 'owl', 'ghost', 'lion'];
 
 function QV4ShopIcon({ name, size = 22 }) {
   const paths = {
@@ -911,57 +920,13 @@ function QV4ShopIcon({ name, size = 22 }) {
   return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={paths[name] || paths.shop} /></svg>;
 }
 
-function QV4ShopAvatar({ kind = 'robot' }) {
-  if (!QV4SHOP_AVATAR_ORDER.includes(kind)) return <span className="shop-v4-legacy-avatar" aria-hidden="true">{kind || '🤖'}</span>;
-  const index = QV4SHOP_AVATAR_ORDER.indexOf(kind);
-  return <span className="shop-v4-avatar-sprite" data-avatar={kind} aria-hidden="true" style={{ '--sprite-x': `${(index % 5) * 25}%`, '--sprite-y': `${Math.floor(index / 5) * 100}%` }} />;
-}
-
-function QV4ShopReactionArt({ kind }) {
-  const faces = ['angry', 'laugh', 'shock'];
-  return <svg viewBox="0 0 80 80" aria-hidden="true">
-    {faces.includes(kind) && <circle cx="40" cy="40" r="32" fill={kind === 'angry' ? '#f16b68' : '#ffd54a'} stroke="#ab582e" strokeWidth="3" />}
-    {kind === 'heart' && <path d="M40 70 11 43C-7 18 22-3 40 19 58-3 87 18 69 43Z" fill="#fb678e" stroke="#b43364" strokeWidth="4" />}
-    {kind === 'angry' && <><path d="m19 25 14 8m14 0 14-8M28 58q12-14 24 0" fill="none" stroke="#613349" strokeWidth="5" strokeLinecap="round" /><ellipse cx="28" cy="39" rx="4" ry="7" fill="#613349" /><ellipse cx="52" cy="39" rx="4" ry="7" fill="#613349" /></>}
-    {kind === 'laugh' && <><path d="m18 29 12-7-12-6m44 13-12-7 12-6" fill="none" stroke="#613349" strokeWidth="5" strokeLinecap="round" /><path d="M21 40h38q-4 29-19 29T21 40Z" fill="#613349" /><path d="M29 60q11-10 22 0" stroke="#f98bad" strokeWidth="7" /><path d="M11 30Q-2 46 8 49q12-3 3-19m58 0q13 16 3 19-12-3-3-19" fill="#61e4fa" /></>}
-    {kind === 'shock' && <><ellipse cx="27" cy="31" rx="8" ry="11" fill="#fff" /><ellipse cx="53" cy="31" rx="8" ry="11" fill="#fff" /><circle cx="27" cy="34" r="4" fill="#242335" /><circle cx="53" cy="34" r="4" fill="#242335" /><ellipse cx="40" cy="56" rx="9" ry="12" fill="#613349" /></>}
-    {kind === 'thumbsup' && <><path d="M25 63V33l12-22q7-5 11 4l-4 17h19q11 0 8 11l-6 20q-2 5-9 5H34Z" fill="#ffd54a" stroke="#9f6331" strokeWidth="3" /><rect x="10" y="33" width="17" height="36" rx="5" fill="#55d5d8" stroke="#28778e" strokeWidth="3" /></>}
-    {kind === 'clap' && <><path d="m14 51 3-23q1-7 6-2l3 15 5-21q3-5 6 0l-2 24 6-17q4-4 6 2l-6 27q-4 16-18 12Z" fill="#ffd54a" stroke="#7c4529" strokeWidth="3" /><path d="m48 18 7-2m-3 13 8 1M8 21l-5-4" stroke="#fff" strokeWidth="3" /></>}
-    {kind === 'sweat' && <path d="M40 7Q10 42 18 57q22 27 44 0Q70 42 40 7Z" fill="#5ee7f3" stroke="#1489b6" strokeWidth="3" />}
-    {kind === 'cool' && <path d="M3 25h29l8 6 8-6h29l-5 22q-15 10-27-1l-5-10-5 10Q23 57 8 47Z" fill="#171727" stroke="#fff" strokeWidth="3" />}
-  </svg>;
-}
-
-function QV4ShopCelebrationArt({ kind }) {
-  return <div className={`shop-v4-celebration shop-v4-celebration-${kind}`} aria-hidden="true">
-    {kind === 'disco' && <svg viewBox="0 0 100 120"><path d="M50 0v28" stroke="#b9dff4" strokeWidth="4" /><circle cx="50" cy="66" r="36" fill="#77d8eb" stroke="#d5f9ff" strokeWidth="4" /><path d="M14 66h72M22 48h56M22 84h56M50 30v72M35 34q-16 32 0 64m30-64q16 32 0 64" fill="none" stroke="#346b9b" strokeWidth="3" /><path d="m17 12 3 9 9 3-9 3-3 9-3-9-9-3 9-3Z" fill="#fff" /></svg>}
-    {kind === 'micdrop' && <svg viewBox="0 0 80 120"><rect x="24" y="5" width="32" height="50" rx="16" fill="#b7dcf3" stroke="#355875" strokeWidth="4" /><path d="M27 20h26M27 30h26M27 40h26" stroke="#355875" strokeWidth="3" /><path d="M32 53h16v58H32Z" fill="#47465d" stroke="#1c2135" strokeWidth="4" /></svg>}
-    {kind === 'rocket' && <svg viewBox="0 0 90 140"><path d="m34 102 11 34 11-34" fill="#ffd54a" stroke="#f28731" strokeWidth="5" /><path d="M26 80 9 112l21-8m34-24 17 32-21-8" fill="#ed526d" stroke="#7d334f" strokeWidth="3" /><path d="M45 4Q15 37 28 102h34Q75 37 45 4Z" fill="#f7f1e8" stroke="#405069" strokeWidth="4" /><circle cx="45" cy="56" r="12" fill="#55dfee" stroke="#405069" strokeWidth="4" /><path d="m45 4-14 26h28Z" fill="#ed526d" /></svg>}
-    {kind === 'spotlight' && <><i /><i /><i /></>}
-    {kind === 'fireworks' && <><span className="shop-v4-firework-star">{'✦'}</span><span className="shop-v4-firework-star">{'✦'}</span><span className="shop-v4-firework-star">{'✦'}</span></>}
-  </div>;
-}
-
-function QV4ShopArt({ item, avatar = 'robot', animated = false }) {
-  const type = item.category;
-  return <div className={`shop-v4-art shop-v4-tone-${item.tone} ${animated ? 'shop-v4-art-playing' : ''}`} aria-hidden="true">
-    <span className="shop-v4-art-orbit" /><span className="shop-v4-art-star shop-v4-star-one">{'✦'}</span><span className="shop-v4-art-star shop-v4-star-two">{'✦'}</span>
-    {type === 'entries' && <div className={`shop-v4-effect shop-v4-effect-${item.id}`}>
-      {Array.from({ length: 9 }, (_, i) => <span key={i} style={{ '--i': i, '--angle': `${i * 40}deg` }} />)}
-    </div>}
-    {type === 'celebrations' && <>
-      {item.id === 'throne' && <div className="shop-v4-throne" />}
-      <div className="shop-v4-confetti">{Array.from({ length: 12 }, (_, i) => <i key={i} style={{ '--i': i, '--angle': `${i * 30}deg` }} />)}</div>
-    </>}
-    <div className={`shop-v4-character shop-v4-character-${item.id} ${item.id === 'dance' ? 'shop-v4-dancer' : ''}`}><QV4ShopAvatar kind={type === 'avatars' ? item.art : avatar} /></div>
-    {type === 'reactions' && <span className={`shop-v4-reaction shop-v4-reaction-${item.id}`}><QV4ShopReactionArt kind={item.id} /></span>}
-    {type === 'celebrations' && <QV4ShopCelebrationArt kind={item.id} />}
-  </div>;
-}
 
 function QV4ShopPreviewDialog({ item, owned, equipped, coins, avatar, name, onClose, onBuy, onEquip, pending = false, onPlay, canBuy, canEquip, message }) {
   const ref = React.useRef(null);
   const titleId = React.useId();
+  const descriptionId = React.useId();
+  const pendingRef = React.useRef(pending);
+  pendingRef.current = pending;
   const [replay, setReplay] = React.useState(0);
   React.useEffect(() => {
     const opener = document.activeElement;
@@ -969,12 +934,13 @@ function QV4ShopPreviewDialog({ item, owned, equipped, coins, avatar, name, onCl
     document.body.style.overflow = 'hidden';
     (ref.current.querySelector('button:not(:disabled)') || ref.current).focus();
     const onKey = (event) => {
-      if (event.key === 'Escape') { event.preventDefault(); onClose(); }
+      if (event.key === 'Escape') { event.preventDefault(); if (!pendingRef.current) onClose(); }
       if (event.key !== 'Tab') return;
       const buttons = [...ref.current.querySelectorAll('button:not(:disabled)')];
       if (!buttons.length) { event.preventDefault(); ref.current.focus(); return; }
       const first = buttons[0], last = buttons[buttons.length - 1];
-      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      if (!buttons.includes(document.activeElement)) { event.preventDefault(); (event.shiftKey ? last : first).focus(); }
+      else if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     };
     document.addEventListener('keydown', onKey);
@@ -984,15 +950,26 @@ function QV4ShopPreviewDialog({ item, owned, equipped, coins, avatar, name, onCl
   const canAct = owned ? canEquip : canBuy;
   const affordable = coins >= item.price;
   const hasAnimation = !['avatars'].includes(item.category);
-  return <div className="shop-v4-dialog-backdrop" onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
-    <section ref={ref} className="shop-v4-dialog" role="dialog" tabIndex={-1} aria-modal="true" aria-labelledby={titleId}>
+  const previewAvatar = item.category === 'avatars' ? item.art : avatar;
+  const previewCaption = { avatars: 'Ton personnage, prêt pour le prochain duel.', entries: 'Ton apparition au début du duel.', reactions: 'Ta réaction entre deux questions.', celebrations: 'Ton moment après la victoire.' }[item.category];
+  return <div className="shop-v4-dialog-backdrop" onClick={(event) => { if (!busy && event.target === event.currentTarget) onClose(); }}>
+    <section ref={ref} className="shop-v4-dialog" role="dialog" tabIndex={-1} aria-modal="true" aria-labelledby={titleId} aria-describedby={descriptionId} aria-busy={busy}>
       <button type="button" disabled={busy} className="shop-v4-close" onClick={onClose} aria-label={"Fermer l\u2019aper\u00E7u"}><QV4ShopIcon name="close" /></button>
-      <div className="shop-v4-dialog-art" key={replay}><QV4ShopArt item={item} avatar={avatar} animated /></div>
+      <div className="shop-v4-dialog-art">
+        <div className="qa-preview-head"><span>Dans le duel</span><span>Simulation visuelle</span></div>
+        <div className="qa-preview-players">
+          <div className="qa-preview-player"><PlayerAvatar avatar={previewAvatar} /><div><strong>{name}</strong><small>Toi</small></div></div>
+          <span className="qa-preview-versus">VS</span>
+          <div className="qa-preview-player"><PlayerAvatar avatar="fox" /><div><strong>Camille</strong><small>Adversaire</small></div></div>
+        </div>
+        <div className="qa-preview-stage" key={replay}><QV4ShopArt item={item} avatar={avatar} animated /></div>
+        <p className="qa-preview-caption">{previewCaption}</p>
+      </div>
       <div className="shop-v4-dialog-body">
-        <p className="shop-v4-eyebrow">APERÇU POUR {name}</p><h2 id={titleId}>{item.name}</h2><p>{item.description}</p>
+        <p className="shop-v4-eyebrow">APERÇU POUR {name}</p><h2 id={titleId}>{item.name}</h2><p id={descriptionId}>{item.description}</p>
         {hasAnimation && <button type="button" disabled={busy} className="shop-v4-replay" onClick={() => setReplay((value) => value + 1)}><QV4ShopIcon name="play" size={16} /> {'Rejouer l\u2019aper\u00E7u'}</button>}
         <button type="button" className="shop-v4-button shop-v4-dialog-primary" disabled={busy || equipped || !canAct || (!owned && !affordable)} onClick={() => owned ? onEquip(item) : onBuy(item)}>
-          {equipped ? 'Équipé' : !canAct ? 'Indisponible' : owned ? 'Équiper' : !affordable ? `${QV4shopNumber(item.price - coins)} pièces manquantes` : `Acheter · ${QV4shopNumber(item.price)} pièces`}
+          {busy ? 'Demande en cours…' : equipped ? 'Équipé' : !canAct ? 'Indisponible' : owned ? 'Équiper' : !affordable ? `${QV4shopNumber(item.price - coins)} pièces manquantes` : `Acheter · ${QV4shopNumber(item.price)} pièces`}
         </button>
         <p className="shop-v4-status" role="status">{message}</p>
         {!owned && !affordable && typeof onPlay === 'function' && <button type="button" disabled={busy} className="shop-v4-replay" onClick={onPlay}>Jouer pour gagner des pièces</button>}
@@ -1019,7 +996,7 @@ export function ShopContent({ avatar = 'robot', name = 'QuizMaster', stats = {},
   };
   const items = QV4SHOP_ITEMS.filter(item => item.category === category);
   const categoryData = QV4SHOP_CATEGORIES.find(([id]) => id === category);
-  const currentAvatar = session.equipped.avatars || avatar || 'robot';
+  const currentAvatar = avatarId(session.equipped.avatars || avatar);
   if (QV4SHOP_ITEMS.some(item => item.category === 'avatars' && item.id === currentAvatar)) session.equipped.avatars = currentAvatar;
   const equippedAvatar = QV4SHOP_ITEMS.find(item => item.category === 'avatars' && item.id === currentAvatar) || { category: 'avatars', art: currentAvatar, name: 'Ton avatar', tone: 'cyan' };
   const featured = items[0];
@@ -1044,7 +1021,7 @@ export function ShopContent({ avatar = 'robot', name = 'QuizMaster', stats = {},
     <nav className="shop-v4-categories" aria-label="Catégories de la boutique">{QV4SHOP_CATEGORIES.map(([id, label]) => <button type="button" disabled={busy} key={id} aria-pressed={category === id} onClick={() => { setCategory(id); setNotice(''); }}>{label}</button>)}</nav>
     <section className={`shop-v4-hero shop-v4-tone-${featured.tone}`} aria-label={`À la une : ${featured.name}`}>
       <div className="shop-v4-hero-copy"><span className="shop-v4-tag">À LA UNE</span><h2>{categoryData[2]}</h2><p>{categoryData[3]}</p><button type="button" disabled={busy} className="shop-v4-button" onClick={() => { setNotice(''); setSelection(featured); }}>Découvrir <QV4ShopIcon name="arrow" size={18} /></button></div>
-      <div className="shop-v4-hero-art"><QV4ShopArt item={featured} avatar={currentAvatar} /></div>
+      <div className="shop-v4-hero-art" key={category}><QV4ShopArt item={featured} avatar={currentAvatar} animated /></div>
     </section>
     <div className="shop-v4-profile-preview"><div className="shop-v4-profile-icon"><QV4ShopArt item={equippedAvatar} avatar={currentAvatar} /></div><div><strong>{name}</strong><span>{equippedAvatar.name} · Ton look actuel</span></div><span className="shop-v4-preview-label">APERÇU</span></div>
     <div className="shop-v4-section-heading"><h2>{categoryData[1]}</h2><span>{items.length} objets</span></div>
