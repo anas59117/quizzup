@@ -55,20 +55,21 @@
   padding-top: 12px !important;
   padding-bottom: 12px !important;
   gap: 8px;
-  background: #100c12e8;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid #ffffff14;
+  background: transparent;
+  border: 0;
 }
-.app-category-preview .cp-head::before {
-  content: '';
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  height: var(--safe-top);
-  background: #100c12;
+.app-category-preview .category-preview-v4 .cp-header-bg {
+  /* Paint the SAME viewport-aligned theme behind the sticky controls. The
+     clipped copy hides scrolling text without introducing a separate bar. */
+  z-index: -1 !important;
+  clip-path: inset(0 0 calc(100% - 68px - var(--safe-top)) 0);
   pointer-events: none;
+}
+.app-category-preview .cp-head .cp-back,
+.app-category-preview .cp-head .cp-icon-btn,
+.app-category-preview .cp-head .ctrl-btn {
+  background: #0c0c108c !important;
+  color: #fff !important;
 }
 .app-category-preview .cp-head-right { gap: 4px !important; }
 .app-category-preview .cp-head .top-controls.mobile-controls {

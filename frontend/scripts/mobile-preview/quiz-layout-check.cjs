@@ -9,12 +9,32 @@ const server = require('./serve.cjs');
   const errors = [];
   try {
     for (const topic of ['rap_fr','harry_potter','minecraft','marvel']) {
-      for (const [width,height] of [[320,568],[390,664],[390,844],[430,932],[844,390],[1440,900]]) {
+      for (const [width,height] of (process.env.QUIZ_QA_FAST === '1' ? [[390,844]] : [[320,568],[390,664],[390,844],[430,932],[844,390],[1440,900]])) {
         const page = await browser.newPage({ viewport: { width,height }, reducedMotion: 'reduce' });
+        if (process.env.QUIZ_QA_FAST === '1') await page.route(/https:\/\/fonts\.(googleapis|gstatic)\.com\//,route=>route.abort());
         page.on('pageerror', error => errors.push(error.message));
         await page.goto(`http://127.0.0.1:4327/?quiz&topic=${topic}`);
         await page.locator('.cp-head').waitFor();
         await page.evaluate(() => document.fonts.ready);
+        assert.equal(await page.locator('.cp-head .cp-header-bg').count(),1,'The themed background does not continue behind the quiz header');
+        const headerTheme=await page.evaluate(()=>({
+          page:getComputedStyle(document.querySelector('.category-preview-v4 > .cp-bg')).backgroundImage,
+          header:getComputedStyle(document.querySelector('.cp-header-bg')).backgroundImage,
+        }));
+        assert.equal(headerTheme.header,headerTheme.page,'Quiz header uses a different background from its theme');
+        const buttonContrast=await page.locator('.cp-head button').evaluateAll(buttons=>{
+          const rgba=value=>value.match(/[\d.]+/g).map(Number);
+          const luminance=rgb=>rgb.map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0);
+          return buttons.map(button=>{
+            const css=getComputedStyle(button),bg=rgba(css.backgroundColor),fg=rgba(css.color);
+            // White is the brightest possible underlying theme; an icon that
+            // passes here stays legible on the darker gradients too.
+            const background=bg.slice(0,3).map(v=>v*(bg[3]??1)+255*(1-(bg[3]??1)));
+            const a=luminance(fg.slice(0,3)),b=luminance(background);
+            return (Math.max(a,b)+.05)/(Math.min(a,b)+.05);
+          });
+        });
+        assert(buttonContrast.every(ratio=>ratio>=3),'Quiz header icons lack contrast against the themed background');
         for (const [safeTop,safeBottom] of [[0,0],[47,34]]) {
           await page.evaluate(({safeTop,safeBottom}) => {
             document.documentElement.style.setProperty('--safe-top',`${safeTop}px`);
@@ -55,7 +75,7 @@ const server = require('./serve.cjs');
           await page.keyboard.press('Escape');
           assert.equal(await page.locator('.mobile-controls-panel').count(),0);
           await page.setViewportSize({width,height:height+90});
-          const background=await page.locator('.cp-bg').boundingBox();
+          const background=await page.locator('.category-preview-v4 > .cp-bg').boundingBox();
           assert(background.y<=0 && background.y+background.height>=height+90,'Background does not follow browser-toolbar resizing');
           await page.setViewportSize({width,height});
         }

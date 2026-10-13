@@ -177,6 +177,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
       )}
 
       <div className="cp-head">
+        <div className="cp-bg cp-header-bg" aria-hidden="true" />
         <button className="cp-back" onClick={onBack} aria-label={t('back')}>
           <Icon name="arrow" size={18} className="cp-back-ic" />
         </button>
