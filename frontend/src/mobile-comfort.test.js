@@ -38,9 +38,15 @@ test('settings are collapsed, keyboard dismissible, and hidden during play', () 
   act(() => container.querySelector('button').click());
   expect(props.toggleMute).toHaveBeenCalledTimes(1);
 });
-test('play has a visible label and preserves quick match action', () => {
+test('four destinations surround a central play action and preserve navigation', () => {
   const onQuickMatch = jest.fn();
-  render(<NavBar active="home" onNav={jest.fn()} onQuickMatch={onQuickMatch} />);
+  const onNav = jest.fn();
+  render(<NavBar active="categories" onNav={onNav} onQuickMatch={onQuickMatch} />);
+  const buttons = [...container.querySelectorAll('nav button')];
+  expect(buttons.map(button => button.textContent)).toEqual(['Accueil', 'Thèmes', 'Jouer', 'Boutique', 'Profil']);
+  expect(container.querySelector('.nav-item.active').textContent).toBe('Thèmes');
+  for (const index of [0, 1, 3, 4]) act(() => buttons[index].click());
+  expect(onNav.mock.calls).toEqual([['home'], ['categories'], ['shop'], ['profile']]);
   expect(container.querySelector('.nav-play-label').textContent).toBe('Jouer');
   act(() => container.querySelector('.nav-bolt').click());
   expect(onQuickMatch).toHaveBeenCalledTimes(1);

@@ -133,12 +133,12 @@
   .navbar {
     bottom: max(8px, env(safe-area-inset-bottom));
     width: calc(100% - 16px);
-    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
     padding: 6px 4px 8px !important;
     gap: 0 !important;
   }
   .navbar .nav-bolt { width: 48px !important; height: 54px !important; justify-self: center; border-radius: 18px !important; }
-  .navbar .nav-item .nav-lbl { font-size: 10px !important; }
+  .navbar .nav-item .nav-lbl { font-size: 11px !important; }
 
   .app.app-question {
     align-items: flex-start;

@@ -779,13 +779,10 @@ export const NavBar = memo(function NavBar({ active, onNav, onQuickMatch }) {
       <button className={`nav-item ${active === 'home' ? 'active' : ''}`} onClick={() => onNav('home')}>
         <span className="nav-ic"><Icon name="home" size={20} /></span><span className="nav-lbl">{t('navHome')}</span>
       </button>
-      <button className={`nav-item ${active === 'feed' ? 'active' : ''}`} onClick={() => onNav('feed')}>
-        <span className="nav-ic"><Icon name="feed" size={20} /></span><span className="nav-lbl">{t('navFeed')}</span>
-      </button>
-      <button className="nav-bolt" onClick={onQuickMatch} aria-label={t('playNow')}><Icon name="bolt" size={22} /><span className="nav-play-label">{t('play')}</span></button>
       <button className={`nav-item ${active === 'categories' ? 'active' : ''}`} onClick={() => onNav('categories')}>
         <span className="nav-ic"><Icon name="themes" size={20} /></span><span className="nav-lbl">{t('navThemes')}</span>
       </button>
+      <button className="nav-bolt" onClick={onQuickMatch} aria-label={t('playNow')}><Icon name="bolt" size={22} /><span className="nav-play-label">{t('play')}</span></button>
       <button className={`nav-item ${active === 'shop' ? 'active' : ''}`} onClick={() => onNav('shop')}>
         <span className="nav-ic"><Icon name="shop" size={20} /></span><span className="nav-lbl">{t('navShop')}</span>
       </button>
