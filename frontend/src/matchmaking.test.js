@@ -33,6 +33,17 @@ const receive = (data) => act(() => messageRef.current(data));
 const advance = (ms) => act(() => jest.advanceTimersByTime(ms));
 const soloCalls = () => socket.connect.mock.calls.filter(([action]) => action.type === 'solo');
 
+test('game start already displays the selected opponent while round intro is in transit', () => {
+  receive({ type: 'game_start', totalRounds: 6, opponents: [{ id: 'other', name: 'Alex', avatar: 'owl' }] });
+  expect(container.querySelector('.app.game-bg')).not.toBeNull();
+  expect(container.querySelector('.df-faceoff').textContent).toContain('Alex');
+  expect(jest.requireMock('./music').play).not.toHaveBeenCalled();
+  receive({ type: 'question', round: 1, totalRounds: 6, timeLimit: 10, question: 'Ancienne question', answers: ['A','B','C','D'] });
+  receive({ type: 'game_start', totalRounds: 6, opponents: [{ id: 'other', name: 'Alex', avatar: 'owl' }] });
+  expect(container.querySelector('.question')).toBeNull();
+  expect(container.querySelector('.df-faceoff').textContent).toContain('Alex');
+});
+
 beforeEach(async () => {
   window.scrollTo = jest.fn();
   jest.useFakeTimers();

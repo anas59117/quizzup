@@ -136,4 +136,6 @@ test('side gauges use cumulative confirmed score and conceal opponent outcome un
   expect(container.querySelector('.duel-score-rail.mine').getAttribute('aria-valuenow')).toBe('40');
   expect(container.querySelector('.duel-score-rail.other').getAttribute('aria-valuenow')).toBe('15');
   expect(container.querySelector('.hud-chip:not(.mine)').getAttribute('data-state')).toBe('waiting');
+  expect(container.querySelector('.game-progress')).toBeNull();
+  expect(container.querySelector('.game-progress-text').textContent).toContain('1 / 6');
 });

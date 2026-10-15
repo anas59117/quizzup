@@ -7,7 +7,6 @@ import './mobile-comfort.css';
 import './shop-art.css';
 import './duel-premium.css';
 import SFX from './sounds';
-import music from './music';
 import { useSocial, GameChat } from './social';
 import { ensureSignedIn, linkGoogleAccount, preloadFirebase } from './firebase';
 import { useStats } from './stats';
@@ -67,7 +66,6 @@ export default function App() {
   const [theme, toggleTheme] = useTheme();
   const [muted, setMuted] = useState(SFX.muted);
   const toggleMute = useCallback(() => setMuted(SFX.toggle()), []);
-  useEffect(() => { music.setMuted(muted); }, [muted]);
   useEffect(() => { initAds(); }, []);
 
   // Detect challenge URLs
@@ -81,10 +79,7 @@ export default function App() {
   const [adOffer, setAdOffer] = useState(null);
   const [adClaimed, setAdClaimed] = useState(false);
   const adGameRef = useRef(null);
-  const adHooks = useMemo(() => ({
-    beforeAd: () => music.setMuted(true),
-    afterAd: () => music.setMuted(SFX.muted),
-  }), []);
+  const adHooks = useMemo(() => ({}), []);
   const [stage, setStage] = useState('join');
   useEffect(() => { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }, [stage]);
   const [fatalReason, setFatalReason] = useState('connection');
@@ -298,23 +293,6 @@ export default function App() {
     return () => clearInterval(tickRef.current);
   }, [question, stage, roundComplete]);
 
-  // Background music per screen — one track per context, cross-faded on
-  // switch. During the reveal pause we keep whatever was already playing
-  // rather than interrupting it for the ~2.5s pause between rounds.
-  useEffect(() => {
-    if (stage === 'home' || stage === 'categories' || stage === 'profile' || stage === 'leaderboard' || stage === 'enter_code' || stage === 'shop') {
-      music.play('menu');
-    } else if (stage === 'waiting' || stage === 'room_wait') {
-      music.play('lobby');
-    } else if (stage === 'playing' && intro && !question) {
-      music.play('transition', { loop: false });
-    } else if (stage === 'playing' && question && !reveal) {
-      music.play(timeLeft <= 3 ? 'urgent' : 'thinking');
-    } else if (stage === 'join' || stage === 'finished' || stage === 'error') {
-      music.stop();
-    }
-  }, [stage, intro, question, reveal, timeLeft]);
-
   messageHandlerRef.current = (data) => {
     switch (data.type) {
       case 'session':
@@ -502,6 +480,10 @@ export default function App() {
         setTotalRounds(data.totalRounds);
         setScore(0);
         setRoom(null);
+        setQuestion(null);
+        setIntro(null);
+        setReveal(null);
+        setSelected(null);
         setStage('playing');
         break;
       case 'round_intro':
@@ -1247,10 +1229,10 @@ export default function App() {
       </div>);
   }
 
-  if (stage === 'playing' && intro && !question) {
+  if (stage === 'playing' && !question) {
     return (
       <div className="app game-bg"><TopControls {...topProps} playing /><Toast toast={toast} onDismiss={dismissToast} />
-        <RoundIntroContent intro={intro} totalRounds={totalRounds} opponents={opponents} avatar={avatar} frame={statsHook.stats.frame} name={name} level={statsHook.stats.level} />
+        <RoundIntroContent intro={intro || { round: 1, category: CATS_V4.find(cat => cat.key === matchCategory)?.label || t('randomTopic') }} totalRounds={totalRounds} opponents={opponents} avatar={avatar} frame={statsHook.stats.frame} name={name} level={statsHook.stats.level} />
       </div>);
   }
 

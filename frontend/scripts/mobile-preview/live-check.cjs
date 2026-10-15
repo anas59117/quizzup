@@ -23,6 +23,7 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
   backend.stderr.on('data', chunk => { logs += chunk; });
   let browser;
   const errors = [];
+  const musicRequests = [];
   try {
     await new Promise(resolve => server.listen(4324, '127.0.0.1', resolve));
     let ready = false;
@@ -43,6 +44,7 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
         localStorage.setItem('quizzup-lang', 'fr');
       }, { name, avatar });
       const page = await context.newPage();
+      page.on('request', request => { if (new URL(request.url()).pathname.startsWith('/audio/')) musicRequests.push(request.url()); });
       page.on('pageerror', error => errors.push(error.message));
       page.on('console', message => { if (message.type() === 'error' && message.text().includes('[QuizzUp')) errors.push(message.text()); });
       await page.goto('http://127.0.0.1:4324/?app');
@@ -65,9 +67,10 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
       assert.equal(staged.hidden, 4, 'Answers exposed before reading ends');
       assert.equal(staged.disabled, 4, 'Input accepted during reading');
       assert(Number(staged.timer) >= 10, 'Reading consumed answer time');
-      await pages[0].locator('.answer').nth(0).click();
+      await pages[0].waitForFunction(() => document.querySelectorAll('.answer:enabled').length === 4);
       const stableY = await pages[0].locator('.question').evaluate(el => el.getBoundingClientRect().y);
-      assert(Math.abs(stableY - staged.questionY) < 1, 'Question moved when answers arrived');
+      assert(Math.abs(stableY - staged.questionY) < 1, `Question moved when answers arrived in round ${round}: ${staged.questionY} → ${stableY}`);
+      await pages[0].locator('.answer').nth(0).click();
       await pages[0].locator('.mobile-answer-feedback strong').waitFor();
       await pages[1].locator('.hud-chip:not(.mine)[data-state="answered"]').waitFor();
       assert.equal(await pages[0].locator('.hud-chip:not(.mine)').getAttribute('data-state'), 'waiting');
@@ -97,6 +100,7 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
     await Promise.all(pages.map(page => page.locator('.game-progress-text').filter({ hasText: 'Question 1 / 6' }).waitFor({ timeout: 20000 })));
     console.log('PASS real app rematch request → waiting → new duel');
     assert.deepEqual(errors, []);
+    assert.deepEqual(musicRequests, [], 'Background music was requested during navigation or duel');
     console.log('All live UI checks passed');
   } catch (error) {
     if (browser) {

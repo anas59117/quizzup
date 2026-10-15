@@ -106,7 +106,6 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
 
   const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
   const total = question.totalRounds || 10;
-  const progressPct = Math.max(0, Math.min(100, (round / total) * 100));
   const correctAnswer = sr && !isInstantAck ? question.answers[reveal.correctIndex] : null;
   const maxScore = (Math.max(1, total) + 1) * 20;
   const confirmedScore = Number.isFinite(reveal?.yourScore) ? reveal.yourScore : score;
@@ -116,6 +115,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
     <div data-round-phase={timing.phase} className={`container game game-v4 duel-premium${opponents.length > 1 ? ' game-v4--group' : ''}${!opponents.length ? ' duel-premium--solo' : ''}${question.image ? ' game-v4--photo' : ''}`}>
       <div className="duel-score-rails">
         {railPlayers.map((player, index) => <div key={player.id} className={`duel-score-rail ${player.mine ? 'mine' : 'other'}`}
+          data-gained={player.mine && sr && reveal.yourCorrect ? 'true' : undefined}
           style={{ '--rail-index': player.mine ? 0 : index - 1 }} role="progressbar"
           aria-label={`${player.name} · ${t('matchScore')}`} aria-valuemin={0} aria-valuemax={maxScore} aria-valuenow={player.score || 0}>
           <span style={{ height: `${Math.min(100, Math.max(0, (player.score || 0) / maxScore * 100))}%` }} />
@@ -133,10 +133,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
         revealing={sr && !isInstantAck}
       />
 
-      {/* Round progress — thin rail + "Question X / Y" (mockup) */}
-      <div className="game-progress">
-        <div className="game-progress-fill" style={{ width: `${progressPct}%` }} />
-      </div>
+      {/* The round count carries progression; side rails carry the scores. */}
       <div className="game-round-meta">
       <div className="game-progress-text">
         {t('questionLabel')} {round} / {total}

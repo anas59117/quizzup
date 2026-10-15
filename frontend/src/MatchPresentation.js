@@ -116,12 +116,11 @@ export function DuelRoundIntro({ intro, totalRounds, opponents = [], avatar, fra
       <p className="df-caption">{t('round', { n: 1 })}<span aria-hidden="true"> · </span>{t('roundOf', { n: 1, total: totalRounds })}</p>
     </section>;
   }
-  return <section className={`container df-round${intro.isBonus ? ' df-round-bonus' : ''}`} aria-label={t('round', { n: intro.round })}>
-    <span className="df-eyebrow">{intro.isBonus ? t('bonusRound') : t('roundOf', { n: intro.round, total: totalRounds })}</span>
-    <div className="df-round-number" aria-hidden="true">{String(intro.round).padStart(2, '0')}</div>
-    <h1>{intro.category}</h1>
-    {difficultyKey && <span className="df-difficulty">{t(difficultyKey)}</span>}
-    <p>{intro.isBonus ? t('doublePoints') : t('round', { n: intro.round })}</p>
-    <div className="df-round-rule" aria-hidden="true"><Icon name="bolt" size={20} /></div>
+  return <section className="container center round-intro-screen" aria-label={t('round', { n: intro.round })}>
+    <div className={`round-intro-icon${intro.isBonus ? ' bonus' : ''}`} aria-hidden="true">{intro.icon || '🏆'}</div>
+    <div className="round-intro-cat">{intro.category}</div>
+    {difficultyKey && <div className={`difficulty-pill ${intro.difficulty}`}>{t(difficultyKey)}</div>}
+    <h1 className="round-intro-round">{intro.isBonus ? t('bonusRound') : t('round', { n: intro.round })}</h1>
+    <div className="round-intro-sub">{intro.isBonus ? t('doublePoints') : t('roundOf', { n: intro.round, total: totalRounds })}</div>
   </section>;
 }

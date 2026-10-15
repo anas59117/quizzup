@@ -186,18 +186,22 @@
 .duel-score-rails { pointer-events: none; }
 .duel-score-rail {
   position: fixed; z-index: 4; top: calc(130px + var(--safe-top));
-  bottom: calc(75px + var(--safe-bottom)); width: 3px; border-radius: 6px;
-  background: #ffffff12; display: flex; align-items: flex-end; overflow: hidden;
+  bottom: calc(75px + var(--safe-bottom)); width: 8px; border-radius: 6px;
+  background: #ffffff1c; display: flex; align-items: flex-end; overflow: hidden;
+  box-shadow: 0 0 0 1px #ffffff0a;
 }
 .duel-score-rail.mine { left: max(3px, calc((100vw - 550px) / 2)); }
-.duel-score-rail.other { right: max(calc(3px + var(--rail-index) * 5px), calc((100vw - 550px) / 2 + var(--rail-index) * 5px)); }
-.duel-score-rail span { width: 100%; background: #ffd45b; border-radius: inherit; transition: height 650ms cubic-bezier(.22, 1, .36, 1); }
-.duel-score-rail.other span { background: #ff788b; }
+.duel-score-rail.other { right: max(calc(3px + var(--rail-index) * 10px), calc((100vw - 550px) / 2 + var(--rail-index) * 10px)); }
+.duel-score-rail span { width: 100%; background: linear-gradient(0deg, #ffb522, #ffe88c); border-radius: inherit; transition: height 650ms cubic-bezier(.22, 1, .36, 1); box-shadow: 0 -3px 15px #ffd45b80; }
+.duel-score-rail.other span { background: linear-gradient(0deg, #ed4266, #ff9bb1); box-shadow: 0 -3px 15px #ff788b80; }
+.duel-score-rail[data-gained="true"] span { animation: duelRailGain 650ms ease-out; }
+@keyframes duelRailGain { 35% { filter: brightness(1.65); } }
 .res-league-award { display: flex; gap: 9px; align-items: baseline; margin: 0 0 14px; color: #ffe488; font-size: 14px; }
 .res-league-award b { font-size: 20px; }
 .res-league-award span { color: #fff; font-size: 12px; }
 .res-inline-message { margin: 0 0 14px; padding: 12px 14px; background: #541021; color: #fff; border-radius: 14px; font-size: 13px; line-height: 1.45; text-align: left; }
 @media (max-width: 680px) {
+  .app-question .duel-premium.game-v4--group { padding-right: 24px !important; }
   .app-question .duel-premium .duel-hud { min-height: 86px; margin-bottom: 4px !important; }
   .app-question .duel-premium .hud-chip-portrait { width: 42px; height: 42px; }
   .app-question .duel-premium .duel-hud .hud-chip-ava { width: 34px !important; height: 34px !important; }
@@ -229,5 +233,5 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .duel-premium .answers .answer.duel-answer-enter { animation: none !important; }
-  .duel-score-rail span { transition: none; }
+  .duel-score-rail span { transition: none; animation: none !important; }
 }

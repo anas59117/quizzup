@@ -325,7 +325,7 @@ function nextQuestion(game) {
       presentationDelayMs + game.timeLimit * 1000 + 500
     );
     scheduleBotAnswers(game);
-  }, GAME_CONFIG.INTRO_MS);
+  }, nextRound === 0 && game.players.length === 2 ? GAME_CONFIG.FIRST_DUEL_INTRO_MS : GAME_CONFIG.INTRO_MS);
 }
 
 function revealRound(game, timedOut) {

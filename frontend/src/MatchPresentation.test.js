@@ -105,3 +105,10 @@ test('later bonus round keeps its round and double-points meaning', () => {
   expect(container.textContent).toContain('MANCHE BONUS');
   expect(container.textContent).toContain('Points doublés');
 });
+
+test('between rounds restores the topic emoji and explicit Manche heading', () => {
+  render(<DuelRoundIntro intro={{ ...intro, round: 2, icon: '🏆' }} totalRounds={6} opponents={[{ name: 'Alex', avatar: 'owl' }]} {...waiting} />);
+  expect(container.querySelector('.round-intro-icon').textContent).toBe('🏆');
+  expect(container.querySelector('.round-intro-round').textContent).toBe('Manche 2');
+  expect(container.querySelector('.df-round-number')).toBeNull();
+});

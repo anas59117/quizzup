@@ -65,6 +65,16 @@ test('reading and every answer entrance finish before the full scoring window op
   assert.equal(g.roundAnswers.p1.points, 20);
 });
 
+test('the selected opponent stays on screen at least one extra second before question one', async (t) => {
+  const { timers } = await round(t);
+  assert.equal(timers[0].delay, 3000);
+});
+
+test('solo starts retain the short round introduction', async (t) => {
+  const { timers } = await round(t, { versions: [1] });
+  assert.equal(timers[0].delay, 1600);
+});
+
 for (const versions of [[1, undefined], [undefined, undefined]]) {
   test(`legacy humans keep every participant on immediate timing (${versions.join(',')})`, async (t) => {
     const { g, question, timers } = await round(t, { versions });

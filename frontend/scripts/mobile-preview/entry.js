@@ -51,7 +51,7 @@ function Preview() {
     {screen === 'shop' && <ShopContent name="Sisi" avatar="fox" stats={stats} onBuy={() => {}} onEquip={() => {}} onPlay={play} onBack={() => setScreen('home')} />}
     {screen === 'themes' && <div className="container"><FamilyGrid onSelect={play} /></div>}
     {screen === 'quiz' && <CategoryPreviewContent controls={controls} category={CATEGORIES.find(cat => cat.key === (params.get('topic') || 'rap_fr'))} stats={stats} onBack={() => setScreen('home')} onPlay={play} />}
-    {screen === 'intro' && <RoundIntroContent intro={{ round: 1, category: 'Rap Français' }} opponents={opponents} avatar="fox" name="Sisi" level={6} totalRounds={6} />}
+    {screen === 'intro' && <RoundIntroContent intro={{ round: Number(params.get('round')) || 1, category: 'Rap Français', icon: '🏆' }} opponents={opponents} avatar="fox" name="Sisi" level={6} totalRounds={6} />}
     {screen === 'result' && <>
 
       <FinishedContent result={result} opponents={opponents} myId="1" name="Sisi" avatar="fox" social={social}
