@@ -145,6 +145,8 @@ async function handleIdentify(ws, data, state) {
     game.send(ws, { type: 'auth_required', code: 'INVALID_TOKEN' });
     return;
   }
+  // Recovery runs during identify, before a gameplay join can arrive.
+  ws.presentationVersion = data.presentationVersion === 1 ? 1 : 0;
 
   // A live WebSocket is bound to one verified QuizzUp identity. Account
   // switching on the same transport creates ambiguous game/social ownership
@@ -190,6 +192,13 @@ async function handleIdentify(ws, data, state) {
   const recoverySession = activeSession || (
     data.recoverGame === false ? null : finishedSession
   );
+  if (activeSession?.game.presentationVersion === 1 && ws.presentationVersion !== 1) {
+    game.send(ws, {
+      type: 'error', code: 'CLIENT_UPDATE_REQUIRED',
+      message: 'Reload the app to rejoin this match.',
+    });
+    return;
+  }
   const reconnected = !!(
     recoverySession
     && game.reconnectPlayer(uid, ws, state.playerId)
@@ -708,6 +717,9 @@ function handleGameplay(ws, data, state) {
     'start_room', 'leave_room', 'rematch', 'cancel_rematch', 'report', 'leave',
   ]);
   if (gameplayTypes.has(data.type) && !requireAuth(ws, state)) return true;
+  if (['join', 'solo', 'create_room', 'join_room'].includes(data.type) && data.presentationVersion === 1) {
+    ws.presentationVersion = 1;
+  }
 
   if (data.type === 'game_chat') {
     if (!allowAction(actionLimiters.gameChat, state.clientId, ws, 'CHAT_RATE_LIMITED')) return true;

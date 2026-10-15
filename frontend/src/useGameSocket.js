@@ -89,6 +89,7 @@ export function useGameSocket({
       if (wsRef.current !== ws || ws.readyState !== 1) return;
       ws.send(JSON.stringify({
         type: 'identify',
+        presentationVersion: 1,
         name: identity.name,
         avatar: identity.avatar,
         clientId: user.uid,

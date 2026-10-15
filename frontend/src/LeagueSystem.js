@@ -4,6 +4,7 @@
  */
 import React, { useState, useEffect, useCallback } from 'react';
 import { useI18n } from './i18n';
+import { applyLeagueOutcome } from './league-results';
 
 const SEASON_DURATION_DAYS = 30;
 
@@ -59,19 +60,10 @@ function saveLeague(data) {
 export function useLeague() {
   const [league, setLeague] = useState(loadLeague);
 
-  const addResult = useCallback((won) => {
+  const addResult = useCallback((result) => {
     setLeague(prev => {
-      const lpChange = won ? (prev.streak >= 2 ? 35 : 25) : -20;
-      const newLp = Math.max(0, prev.lp + lpChange);
-      const newStreak = won ? prev.streak + 1 : 0;
-      const updated = {
-        ...prev,
-        lp: newLp,
-        wins: prev.wins + (won ? 1 : 0),
-        losses: prev.losses + (won ? 0 : 1),
-        streak: newStreak,
-      };
-      saveLeague(updated);
+      const updated = applyLeagueOutcome(prev, result);
+      if (updated !== prev) saveLeague(updated);
       return updated;
     });
   }, []);

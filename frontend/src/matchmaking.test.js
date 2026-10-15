@@ -212,7 +212,8 @@ test('a completed duel records the league reward once, even after a rerender', (
   receive({ type: 'game_start', gameId: 'reward-once', you: { id: 'me' }, opponents: [{ id: 'other', name: 'Other', avatar: '🐼', score: 5 }], totalRounds: 6 });
   receive({ type: 'game_end', gameId: 'reward-once', won: true, winner: { id: 'me' }, finalScore: 20, xp: 60, coins: 10, others: [{ id: 'other', score: 5 }], leaderboard: [] });
   expect(useLeague().addResult).toHaveBeenCalledTimes(1);
-  expect(container.querySelectorAll('.notification-toast')).toHaveLength(1);
+  expect(useLeague().addResult).toHaveBeenCalledWith(expect.objectContaining({ won: true, gameId: 'reward-once' }));
+  expect(container.querySelectorAll('.notification-toast')).toHaveLength(0);
   receive({ type: 'stats', stats: { level: 2 } });
   expect(useLeague().addResult).toHaveBeenCalledTimes(1);
 });

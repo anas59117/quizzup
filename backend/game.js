@@ -42,6 +42,19 @@ function timeLimitFor(question) {
   return GAME_CONFIG.TIME_PER_QUESTION;
 }
 
+function questionTiming(game, now = performance.now()) {
+  const limitMs = (game.timeLimit || GAME_CONFIG.TIME_PER_QUESTION) * 1000;
+  const timed = game.presentationVersion === 1;
+  return {
+    readingMs: timed ? GAME_CONFIG.READING_MS : 0,
+    answerStaggerMs: timed ? GAME_CONFIG.ANSWER_STAGGER_MS : 0,
+    answerEnterMs: timed ? GAME_CONFIG.ANSWER_ENTER_MS : 0,
+    presentationElapsedMs: Math.max(0, now - (game.presentationStart ?? game.questionStart)),
+    answerOpensInMs: Math.max(0, game.questionStart - now),
+    remainingMs: Math.max(0, Math.min(limitMs, game.questionStart + limitMs - now)),
+  };
+}
+
 function scoreAnswer(elapsedMs, isFinalRound, timeLimitSec = GAME_CONFIG.TIME_PER_QUESTION) {
   const t = timeLimitSec * 1000;
   const frac = Math.max(0, Math.min(1, 1 - elapsedMs / t));
@@ -143,6 +156,7 @@ function scheduleBotAnswers(game, random = Math.random) {
   if (!q) return;
   const round = game.currentRound;
   const limitMs = (game.timeLimit || GAME_CONFIG.TIME_PER_QUESTION) * 1000;
+  const opensInMs = Math.max(0, game.questionStart - performance.now());
   game.players.filter((p) => p.isBot).forEach((bot) => {
     if (random() < BOT_NO_ANSWER_RATE) return;
     const base = BOT_ACCURACY[q.difficulty] ?? 0.6;
@@ -154,7 +168,7 @@ function scheduleBotAnswers(game, random = Math.random) {
     // come faster, doubtful (often wrong) ones later.
     const readMs = Math.min(4000, 900 + (q.text ? q.text.length : 60) * 18);
     const thinkMs = (correct ? 600 + random() * 2600 : 1500 + random() * 4000) * (bot.speed || 1);
-    const delay = Math.round(Math.min(limitMs - 400, readMs + thinkMs));
+    const delay = opensInMs + Math.round(Math.min(limitMs - 400, readMs + thinkMs));
     game.botTimers.push(setTimeout(() => {
       if (game.status !== 'active' || game.phase !== 'question' || game.currentRound !== round) return;
       recordAnswer(game, bot.id, answerIndex);
@@ -215,6 +229,9 @@ async function startGame(rawPlayers, categoryKey, { withBot = false } = {}) {
         ...(withBot ? [createBot()] : []),
       ],
       questions,
+      // A match uses one schedule for every human. Already-open older
+      // bundles must still be able to submit their immediately visible choices.
+      presentationVersion: rawPlayers.every((p) => p.ws.presentationVersion === 1) ? 1 : 0,
       currentRound: -1,
       questionStart: 0,
       roundAnswers: {},
@@ -280,9 +297,15 @@ function nextQuestion(game) {
   });
 
   game.roundTimer = setTimeout(() => {
-    if (game.status !== 'active') return;
+    if (game.status !== 'active' || game.currentRound !== nextRound || game.phase !== 'intro') return;
     game.phase = 'question';
-    game.questionStart = performance.now();
+    const presentationDelayMs = game.presentationVersion === 1
+      ? GAME_CONFIG.READING_MS
+        + Math.max(0, q.answers.length - 1) * GAME_CONFIG.ANSWER_STAGGER_MS
+        + GAME_CONFIG.ANSWER_ENTER_MS
+      : 0;
+    game.presentationStart = performance.now();
+    game.questionStart = game.presentationStart + presentationDelayMs;
     game.timeLimit = timeLimitFor(q);
     activePlayers(game).forEach((p) => {
       send(p.ws, {
@@ -290,13 +313,16 @@ function nextQuestion(game) {
         totalRounds: game.questions.length,
         question: q.text, category: q.category, icon: q.icon, difficulty: q.difficulty,
         answers: q.answers, timeLimit: game.timeLimit,
+        ...questionTiming(game),
         isBonus: isFinal,
         image: q.image || null, credit: q.credit || null,
       });
     });
     game.roundTimer = setTimeout(
-      () => revealRound(game, true),
-      game.timeLimit * 1000 + 500
+      () => {
+        if (game.currentRound === nextRound) revealRound(game, true);
+      },
+      presentationDelayMs + game.timeLimit * 1000 + 500
     );
     scheduleBotAnswers(game);
   }, GAME_CONFIG.INTRO_MS);
@@ -485,15 +511,20 @@ function sendCurrentState(game, player) {
       preloadImages: upcomingImages(game, game.currentRound),
     });
   } else if (game.phase === 'question') {
-    const elapsed = performance.now() - game.questionStart;
-    const remainingMs = Math.max(0, (game.timeLimit || GAME_CONFIG.TIME_PER_QUESTION) * 1000 - elapsed);
-    const expired = remainingMs <= 0;
+    const timing = questionTiming(game);
+    const expired = timing.remainingMs <= 0;
     const mine = game.roundAnswers[player.id];
+    // Older bundles only understand timeLimit as a fresh countdown. Keep
+    // their recovered display within the original server deadline.
+    const timeLimit = game.presentationVersion !== 1 && player.ws.presentationVersion !== 1
+      ? Math.max(1, Math.ceil(timing.remainingMs / 1000))
+      : game.timeLimit || timeLimitFor(q);
     send(player.ws, {
       type: 'question', round: game.currentRound + 1,
       totalRounds: game.questions.length,
       question: q.text, category: q.category, icon: q.icon, difficulty: q.difficulty,
-      answers: q.answers, timeLimit: Math.max(1, Math.ceil(remainingMs / 1000)),
+      answers: q.answers, timeLimit,
+      ...timing,
       isBonus: game.currentRound === game.questions.length - 1,
       image: q.image || null, credit: q.credit || null,
       reconnect: true,
@@ -509,7 +540,9 @@ function sendCurrentState(game, player) {
       type: 'question', round: game.currentRound + 1,
       totalRounds: game.questions.length,
       question: q.text, category: q.category, icon: q.icon, difficulty: q.difficulty,
-      answers: q.answers, timeLimit: 1,
+      answers: q.answers, timeLimit: game.timeLimit || timeLimitFor(q),
+      ...questionTiming(game),
+      answerOpensInMs: 0, remainingMs: 0,
       isBonus: game.currentRound === game.questions.length - 1,
       image: q.image || null, credit: q.credit || null,
       reconnect: true,
@@ -566,6 +599,10 @@ function reconnectPlayer(clientId, ws, newPlayerId) {
   const { game, player } = found;
   if (game.status === 'active' && player.connected) return false;
   if (game.status === 'finished' && player.ws && player.ws.readyState === 1) return false;
+  if (game.status === 'active' && game.presentationVersion === 1 && ws.presentationVersion !== 1) {
+    send(ws, { type: 'error', code: 'CLIENT_UPDATE_REQUIRED', message: 'Reload the app to rejoin this match.' });
+    return false;
+  }
   // The transport-level playerId changes with every WebSocket connection.
   // Move per-round/final-result state to the new key before resyncing.
   movePlayerTransport(game, player, ws, newPlayerId);

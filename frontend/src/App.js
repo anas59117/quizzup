@@ -29,6 +29,7 @@ import { useSeasonPass, SeasonPassPanel } from './SeasonPass';
 import { FriendsScreen } from './social';
 import { LeagueContent, useLeague } from './LeagueSystem';
 import { AVATAR_IDS } from './PlayerAvatar';
+import { anchorQuestion, roundTiming } from './round-timing';
 
 const LIVE_SESSION_KEY = 'quizzup-live-session';
 const HISTORY_KEY = 'quizzup';
@@ -290,15 +291,10 @@ export default function App() {
   const roundComplete = Array.isArray(reveal?.others);
   useEffect(() => {
     if (stage !== 'playing' || !question || roundComplete) return undefined;
-    setTimeLeft(question.timeLimit);
     if (tickRef.current) clearInterval(tickRef.current);
-    tickRef.current = setInterval(() => {
-      setTimeLeft((t) => {
-        const next = t > 0 ? t - 1 : 0;
-        if (next > 0 && next <= 3) SFX.countdownBeep(); else if (next > 3) SFX.tick(next <= 5);
-        return next;
-      });
-    }, 1000);
+    const update = () => setTimeLeft(roundTiming(question).timeLeft);
+    update();
+    tickRef.current = setInterval(update, 50);
     return () => clearInterval(tickRef.current);
   }, [question, stage, roundComplete]);
 
@@ -531,11 +527,11 @@ export default function App() {
       case 'question':
         activeRoundRef.current = data.round || 1;
         setIntro(null);
-        questionShownAtRef.current = Date.now();
+        questionShownAtRef.current = Date.now() + (data.answerOpensInMs || 0);
         if ((data.round || 1) === 1 && !data.reconnect) {
           matchTallyRef.current = { correct: 0, answered: 0, rounds: 0, totalMs: 0 };
         }
-        setQuestion(data);
+        setQuestion(anchorQuestion(data));
         setSelected(data.reconnect && data.answered ? data.yourAnswer : null);
         setReveal(null);
         if (!data.reconnect) {
@@ -591,7 +587,7 @@ export default function App() {
         setStage('finished');
         setOpponents((prev) => data.others.map((upd) => ({ ...prev.find((o) => o.id === upd.id), ...upd })));
         statsHook.handleStatsMessage(data);
-        if (data.dayStreakUp && data.dayStreak > 1) showToast(t('dayStreakUp', { n: data.dayStreak }), 'success', 4500);
+        dismissToast(); // Result rewards are rendered inline below the headline.
         break;
       case 'notification':
         if (data.notification?.type === 'friend_overtook') {
@@ -815,7 +811,7 @@ export default function App() {
   const onNav = useCallback((s) => { if (s === 'categories') setCategoryFamily(null); setStage(s); }, []);
 
   function answer(index) {
-    if (selected !== null || reveal || reconnecting || question?.expired) return;
+    if (selected !== null || reveal || reconnecting || !question || !roundTiming(question).canAnswer) return;
     // Only mark the answer as "selected" once it's actually been sent — the
     // old code called setSelected unconditionally before checking the
     // socket, so if the connection had silently dropped the button would
@@ -885,17 +881,11 @@ export default function App() {
   }, [resultGameId, adHooks]);
 
   // Record league result once when a finished screen appears.
-  const leagueRecordedRef = useRef(null);
+  const addLeagueResult = league.addResult;
   useEffect(() => {
     if (stage !== 'finished' || !result) return;
-    const gameId = result.gameId;
-    if (leagueRecordedRef.current === gameId) return;
-    leagueRecordedRef.current = gameId;
-    const won = result.winner && result.winner.id === myId;
-    const lpChange = won ? (league.streak >= 2 ? 35 : 25) : -20;
-    league.addResult(won);
-    notify(won ? `+${lpChange} LP! 🔥` : `${lpChange} LP`, won ? 'success' : 'error');
-  }, [stage, result, myId, league, notify]);
+    addLeagueResult(result);
+  }, [stage, result, addLeagueResult]);
 
   function watchAd() {
     if (typeof adOffer === 'function') adOffer();
@@ -1277,10 +1267,11 @@ export default function App() {
 
   if (stage === 'finished' && result) {
     return (
-      <div className="app results-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
-        <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
+      <div className="app results-bg"><TopControls {...topProps} />
         <FinishedContent
           result={result} opponents={opponents} myId={myId} avatar={avatar} name={name} frame={statsHook.stats.frame} social={social}
+          leagueAward={(league.recentResults || []).find(entry => entry.gameId === result.gameId)}
+          notices={[...(toast ? [toast] : []), ...notifications]}
           addFriend={social.addFriend}
           playAgain={() => interstitialThen(playAgain, adHooks)} rematch={requestRematch}
           rematchWaiting={rematchWaiting} rematchStarting={rematchStarting}

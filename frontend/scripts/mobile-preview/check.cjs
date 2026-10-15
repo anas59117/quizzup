@@ -16,7 +16,7 @@ const server = require('./serve.cjs');
       for (const mode of ['', '?long', '?photo', '?group', '?gameSolo', '?home', '?profile', '?waiting', '?shop', '?themes', '?quiz', '?intro', '?result', '?result&loss', '?result&tie', '?result&solo', '?result&group', '?result&en']) {
         await page.goto('http://127.0.0.1:4322/' + mode);
         const game = ['', '?long', '?photo', '?group', '?gameSolo'].includes(mode);
-        await page.locator(game ? '.answers' : mode.includes('result') ? '.res-cta' : mode === '?home' ? '.tile-v4' : mode === '?profile' ? '.pf-name' : mode === '?waiting' ? '.matchmaking-topic' : mode === '?themes' ? '.family-tile' : mode === '?quiz' ? '.cp-head' : mode === '?intro' ? '.match-intro' : '.shop-v4-root').first().waitFor();
+        await page.locator(game ? '.answers' : mode.includes('result') ? '.res-cta' : mode === '?home' ? '.tile-v4' : mode === '?profile' ? '.pf-name' : mode === '?waiting' ? '.matchmaking-topic' : mode === '?themes' ? '.family-tile' : mode === '?quiz' ? '.cp-head' : mode === '?intro' ? '.df-intro' : '.shop-v4-root').first().waitFor();
         await page.evaluate(() => document.fonts.ready);
         const metrics = await page.evaluate(() => ({
           width: document.documentElement.scrollWidth, viewport: innerWidth,
@@ -42,7 +42,7 @@ const server = require('./serve.cjs');
           const collision = await page.evaluate(() => {
             const counter = document.querySelector('.game-progress-text').getBoundingClientRect();
             const tag = document.querySelector('.game-cattag').getBoundingClientRect();
-            return counter.bottom > tag.top;
+            return counter.bottom > tag.top && counter.top < tag.bottom && counter.right > tag.left && counter.left < tag.right;
           });
           assert(!collision, `Round/tag collision ${width}`);
         } else if (mode === '?home') {
@@ -60,10 +60,10 @@ const server = require('./serve.cjs');
           assert(header.every(r => r.width >= 44 && r.height >= 44), `Small header target ${width}`);
           assert(Math.max(...header.map(r=>r.y)) - Math.min(...header.map(r=>r.y)) < 5, `Header wraps ${width}`);
         } else if (mode.includes('result')) {
-          if (!mode.includes('solo')) {
-            const colours = await page.locator('.notification-msg').evaluate(el => ({ text: getComputedStyle(el).color, bg: getComputedStyle(el.parentElement).backgroundColor }));
-            assert.notEqual(colours.text, colours.bg, 'LP notification invisible');
-          }
+          assert.equal(await page.locator('.notification-toast').count(), 0, 'Result has floating awards');
+          const heading = await page.locator('.res-title').boundingBox();
+          const notice = await page.locator('.res-inline-message').boundingBox();
+          assert(notice.y >= heading.y + heading.height, 'Result notice covers headline');
           if (!mode.includes('solo') && !mode.includes('group')) {
             assert.equal(await page.locator('.res-score.me .player-avatar').getAttribute('data-avatar'), 'fox');
             assert.equal(await page.locator('.res-score.op .player-avatar').getAttribute('data-avatar'), 'owl');
@@ -104,7 +104,7 @@ const server = require('./serve.cjs');
           const nav = await page.locator('.navbar').boundingBox();
           assert(bottom.y+bottom.height<=nav.y, `Quiz last section behind navigation ${width}`);
         } else if (mode === '?intro') {
-          assert.equal(await page.locator('.match-intro-avatar .player-avatar').count(),2);
+          assert.equal(await page.locator('.df-avatar .player-avatar').count(),2);
           assert.equal(await page.locator('.identity-card').count(),0);
         } else if (mode === '?shop') {
           assert(await page.locator('.app-shop').evaluate(el=>el.offsetHeight>=innerHeight),'Shop canvas below viewport height');

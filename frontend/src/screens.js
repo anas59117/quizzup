@@ -5,7 +5,7 @@ import { ShareCard } from './ShareCard';
 import { ChallengeButton } from './ChallengeLink';
 import { AVATARS, CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon } from './ui';
 import { CategoryTileV4 } from './CategoryTileV4';
-import { PlayerHud, Leaderboard } from './multiplayer';
+import { Leaderboard } from './multiplayer';
 import { ProfileStats } from './stats';
 import { FriendsScreen } from './social';
 import { TopicLevelList, topicTitleKey, topicLabel } from './players';
@@ -601,91 +601,11 @@ export function LeaderboardContent({ board, loading, onBack, category = null, on
   );
 }
 
-export function WaitingContent({ avatar, frame, name, level = 1, categoryKey, onCancel, onPlaySolo, pending, reconnecting }) {
-  const { t } = useI18n();
-  const [elapsed, setElapsed] = useState(0);
-  const category = CATEGORIES.find((item) => item.key === categoryKey);
-
-  useEffect(() => {
-    const startedAt = Date.now();
-    const timer = setInterval(() => {
-      setElapsed(Math.floor((Date.now() - startedAt) / 1000));
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  return (
-    <div className="container center matchmaking-v4">
-      <div className="status-label" role="status" aria-live="polite">
-        {reconnecting ? t('reconnecting') : pending ? t('leavingQueue') : t('matchmaking')}
-      </div>
-      <div className="matchmaking-topic">{category?.label || t('randomTopic')}</div>
-      <div className="vs-screen">
-        <div className="vs-player">
-          <div className="vs-ava"><PlayerAvatar avatar={avatar} /></div>
-          <div className="vs-name">{name}</div>
-          <div className="vs-level">{t('level')} {level}</div>
-        </div>
-        <div className="vs-bolt-wrap"><div className="vs-bolt"><Icon name="bolt" size={24} /></div></div>
-        <div className="vs-player">
-          <div className="vs-ava searching"><Icon name="users" size={30} /></div>
-          <div className="vs-name dim">{t('searching')}</div>
-        </div>
-      </div>
-      <div className="search-meta">{t('searchElapsed', { n: elapsed })}</div>
-      <div className="loading-bar"><div className="loading-fill" /></div>
-      {elapsed >= 12 && (
-        <div className="matchmaking-alternative">
-          <p role="status">{t('searchTakingLonger')}</p>
-          <button className="btn" onClick={onPlaySolo} disabled={pending || reconnecting}>
-            {t('playSoloInstead')}
-          </button>
-        </div>
-      )}
-      <button className="home-themes-link" onClick={onCancel} disabled={pending}>
-        {pending ? t('leavingQueue') : t('cancel')}
-      </button>
-    </div>
-  );
-}
-
-export function RoundIntroContent({ intro, totalRounds, opponents, avatar, frame, name, level }) {
-  const { t } = useI18n();
-  const difficultyKey = intro.difficulty
-    ? `difficulty${intro.difficulty[0].toUpperCase()}${intro.difficulty.slice(1)}`
-    : null;
-  if (intro.round === 1 && opponents.length === 1) {
-    const opponent = opponents[0];
-    return <section className="container match-intro" aria-label={`${name} ${t('versus')} ${opponent.name}`}>
-      <div className="match-intro-topic">{intro.category}</div>
-      <div className="match-intro-arena">
-        <div className="match-intro-player match-intro-player-me">
-          <div className="match-intro-avatar"><PlayerAvatar avatar={avatar} /></div>
-          <h2>{name}</h2><span>{t('level')} {level || 1}</span>
-        </div>
-        <div className="match-intro-vs" aria-hidden="true"><Icon name="bolt" size={32} /><b>VS</b></div>
-        <div className="match-intro-player match-intro-player-other">
-          <div className="match-intro-avatar"><PlayerAvatar avatar={opponent.avatar} /></div>
-          <h2>{opponent.name}</h2><span>{t('opponent')}</span>
-        </div>
-      </div>
-      <div className="match-intro-caption">{t('roundOf', { n: 1, total: totalRounds })}</div>
-    </section>;
-  }
-  return (
-    <div className="container center round-intro-screen">
-      <div className={`round-intro-icon ${intro.isBonus ? 'bonus' : ''}`}>{intro.icon}</div>
-      <div className="round-intro-cat">{intro.category}</div>
-      {difficultyKey && <div className={`difficulty-pill ${intro.difficulty}`}>{t(difficultyKey)}</div>}
-      <div className="round-intro-round">{intro.isBonus ? t('bonusRound') : t('round', { n: intro.round })}</div>
-      <div className="round-intro-sub">{intro.isBonus ? t('doublePoints') : t('roundOf', { n: intro.round, total: totalRounds })}</div>
-    </div>
-  );
-}
+export { WorldMatchSearch as WaitingContent, DuelRoundIntro as RoundIntroContent } from './MatchPresentation';
 
 export const QuestionContent = EnhancedQuestionContent;
 
-export function FinishedContent({ result, opponents, myId, avatar, name, frame, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch, adOffer, onWatchAd, adClaimed, streak, onShowShare }) {
+export function FinishedContent({ result, opponents, myId, avatar, name, frame, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch, adOffer, onWatchAd, adClaimed, streak, onShowShare, leagueAward, notices = [] }) {
   const { t } = useI18n();
   const [showShare, setShowShare] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
@@ -726,6 +646,16 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
           {headline}<em>.</em>
         </h1>
 
+        {leagueAward && <div className="res-league-award" role="status">
+          <b>{leagueAward.lpChange > 0 ? '+' : ''}{leagueAward.lpChange} LP</b>
+          <span>{t('leagueTitle')}</span>
+        </div>}
+        {result.dayStreakUp && result.dayStreak > 1 && <div className="res-inline-message" role="status">
+          {t('dayStreakUp', { n: result.dayStreak })}
+        </div>}
+        {notices.map((notice, index) => <div className="res-inline-message" role="status" key={notice.id || index}>
+          {notice.message || notice.text}
+        </div>)}
         {left && <div className="res-left-note">{t('someoneLeft')}</div>}
 
         {!isSolo && opponents.length > 1 && result.leaderboard ? (

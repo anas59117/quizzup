@@ -56,7 +56,18 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
     }
     for (let round = 1; round <= 6; round++) {
       await Promise.all(pages.map(page => page.locator('.game-progress-text').filter({ hasText: `Question ${round} / 6` }).waitFor({ timeout: 20000 })));
+      const staged = await pages[0].evaluate(() => ({ phase: document.querySelector('.duel-premium').dataset.roundPhase,
+        hidden: [...document.querySelectorAll('.answer')].filter(el => getComputedStyle(el).visibility === 'hidden').length,
+        disabled: document.querySelectorAll('.answer:disabled').length,
+        timer: document.querySelector('.hud-timer').textContent,
+        questionY: document.querySelector('.question').getBoundingClientRect().y }));
+      assert.equal(staged.phase, 'reading', 'No question-only reading stage');
+      assert.equal(staged.hidden, 4, 'Answers exposed before reading ends');
+      assert.equal(staged.disabled, 4, 'Input accepted during reading');
+      assert(Number(staged.timer) >= 10, 'Reading consumed answer time');
       await pages[0].locator('.answer').nth(0).click();
+      const stableY = await pages[0].locator('.question').evaluate(el => el.getBoundingClientRect().y);
+      assert(Math.abs(stableY - staged.questionY) < 1, 'Question moved when answers arrived');
       await pages[0].locator('.mobile-answer-feedback strong').waitFor();
       await pages[1].locator('.hud-chip:not(.mine)[data-state="answered"]').waitFor();
       assert.equal(await pages[0].locator('.hud-chip:not(.mine)').getAttribute('data-state'), 'waiting');
@@ -68,6 +79,11 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
     await Promise.all(pages.map(page => page.locator('.res-cta').waitFor({ timeout: 20000 })));
     console.log('PASS real app matchmaking → six questions → results');
     for (const page of pages) {
+      assert.equal(await page.locator('.notification-toast, .toast').count(), 0, 'Floating message masks result');
+      const outcome = await page.locator('.res-title').getAttribute('class');
+      const league = await page.evaluate(() => JSON.parse(localStorage.getItem('quizzup-league')));
+      if (outcome.includes('win')) assert.equal(league.wins, 1, 'Victory was recorded as loss');
+      if (outcome.includes('loss')) assert.equal(league.losses, 1, 'Loss was not recorded');
       const identities = await page.locator('.res-score .player-avatar').evaluateAll(elements=>elements.map(el=>el.dataset.avatar));
       assert(identities.includes('robot') && identities.includes('fox'), `Lost player identity: ${identities}`);
       await page.getByRole('button', { name: 'Voir le détail', exact: true }).click();

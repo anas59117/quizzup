@@ -6,6 +6,7 @@ import React, { useRef, useCallback } from 'react';
 import { useI18n } from './i18n';
 import { PlayerHud } from './multiplayer';
 import { useGameFeel } from './GameFeelProvider';
+import { useRoundTiming } from './round-timing';
 
 export function QuestionContent({ question, timeLeft, reveal, selected, answer, opponents = [], avatar, frame, name, score, reportQuestion, reported, social, GameChat }) {
   const { t } = useI18n();
@@ -17,19 +18,20 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
   const sr = !!reveal;
   // answer_ack = instant feedback (no `others` array yet); full round_result has `others`.
   const isInstantAck = sr && !Array.isArray(reveal.others);
+  const timing = useRoundTiming(question, !sr || isInstantAck);
   const ownAnswer = sr && Object.prototype.hasOwnProperty.call(reveal, 'yourAnswer') ? reveal.yourAnswer : selected;
   const pct = Math.max(0, Math.min(100, (timeLeft / question.timeLimit) * 100));
 
   // Enhanced answer handler with game feel
   const handleAnswer = useCallback((idx) => {
-    if (question.expired || selected !== null || sr) return;
+    if (!timing.canAnswer || question.expired || selected !== null || sr) return;
 
     // Call the original answer function
     answer(idx);
 
     // We don't know yet if it's correct — the reveal comes from parent.
     // The effect is handled in useEffect below when `reveal` changes.
-  }, [answer, question.expired, selected, sr]);
+  }, [answer, timing.canAnswer, question.expired, selected, sr]);
 
   // Trigger effects when reveal changes
   const roundKey = `${question.round || 1}:${question.question}`;
@@ -106,9 +108,19 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
   const total = question.totalRounds || 10;
   const progressPct = Math.max(0, Math.min(100, (round / total) * 100));
   const correctAnswer = sr && !isInstantAck ? question.answers[reveal.correctIndex] : null;
+  const maxScore = (Math.max(1, total) + 1) * 20;
+  const confirmedScore = Number.isFinite(reveal?.yourScore) ? reveal.yourScore : score;
+  const railPlayers = [{ id: 'me', name: t('you'), score: confirmedScore, mine: true }, ...opponents];
 
   return (
-    <div className={`container game game-v4 duel-premium${opponents.length > 1 ? ' game-v4--group' : ''}${!opponents.length ? ' duel-premium--solo' : ''}${question.image ? ' game-v4--photo' : ''}`}>
+    <div data-round-phase={timing.phase} className={`container game game-v4 duel-premium${opponents.length > 1 ? ' game-v4--group' : ''}${!opponents.length ? ' duel-premium--solo' : ''}${question.image ? ' game-v4--photo' : ''}`}>
+      <div className="duel-score-rails">
+        {railPlayers.map((player, index) => <div key={player.id} className={`duel-score-rail ${player.mine ? 'mine' : 'other'}`}
+          style={{ '--rail-index': player.mine ? 0 : index - 1 }} role="progressbar"
+          aria-label={`${player.name} · ${t('matchScore')}`} aria-valuemin={0} aria-valuemax={maxScore} aria-valuenow={player.score || 0}>
+          <span style={{ height: `${Math.min(100, Math.max(0, (player.score || 0) / maxScore * 100))}%` }} />
+        </div>)}
+      </div>
       <div className="hud-timer-block">
         <span className="hud-timer-label">{t('time')}</span>
         <span className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr && !isInstantAck ? '\u2713' : timeLeft}</span>
@@ -144,7 +156,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
       </div>
 
       <div className={`answers-wrapper ${gf.opponentPop ? 'opponent-just-answered' : ''}`}>
-        <div className="question-panel duel-round-panel" key={roundKey}>
+        <div className={`question-panel duel-round-panel${sr && !isInstantAck ? ' is-round-revealed' : ''}`} key={roundKey}>
           <h1 className="question">{question.question}</h1>
           {question.image && (
             <div className="player-photo-wrap">
@@ -153,14 +165,18 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
             </div>
           )}
           <div className={`answers ${question.image ? '' : 'single-col'}`}>
-            {question.answers.map((a, idx) => (
+            {question.answers.map((a, idx) => {
+              const visible = sr || timing.presentationElapsed >= (question.readingMs || 0) + idx * (question.answerStaggerMs || 0);
+              const entering = visible && !timing.canAnswer && !sr;
+              return (
               <button
                 key={idx}
                 ref={(el) => { buttonRefs.current[idx] = el; }}
-                className={ansCls(idx)}
-                style={{ '--answer-order': idx }}
+                className={`${ansCls(idx)}${entering ? ' duel-answer-enter' : ''}`}
+                style={{ '--answer-order': idx, '--answer-duration': `${question.answerEnterMs || 250}ms`, visibility: visible ? 'visible' : 'hidden' }}
+                aria-hidden={!visible}
                 onClick={() => handleAnswer(idx)}
-                disabled={question.expired || selected !== null || sr}
+                disabled={!timing.canAnswer || question.expired || selected !== null || sr}
               >
                 <span className="letter" aria-hidden="true">{letters[idx] || idx + 1}</span>
                 <span className="answer-text">{a}</span>
@@ -170,7 +186,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
                   </span>
                 )}
               </button>
-            ))}
+            ); })}
           </div>
           <div className="timer-bar-bottom">
             <div

@@ -6,7 +6,7 @@ import { GameFeelProvider } from '../../src/GameFeelProvider';
 import { QuestionContent } from '../../src/enhanced-QuestionContent';
 import { HomeContent, FinishedContent, WaitingContent, ProfileContent, ShopContent, CategoryPreviewContent, RoundIntroContent } from '../../src/screens';
 import { NavBar, TopControls, FamilyGrid, CATEGORIES } from '../../src/ui';
-import { NotificationContainer } from '../../src/NotificationSystem';
+
 import { GameChat } from '../../src/social';
 import SFX from '../../src/sounds';
 import App from '../../src/App';
@@ -18,6 +18,7 @@ const question = {
   answers: ['Généticien', 'Policier', 'Avocat', 'Photographe'],
   category: 'Spider-Man', timeLimit: 10, round: 3, totalRounds: 6,
 };
+if (params.has('timed')) Object.assign(question, { readingMs: 1500, answerStaggerMs: 100, answerEnterMs: 250, presentationElapsedMs: 0, answerOpensInMs: 2050, remainingMs: 10000 });
 if (params.has('long')) question.question = 'Quel dessinateur a illustré « Kraven’s Last Hunt » avec le scénariste J. M. DeMatteis dans les aventures de Spider-Man ?';
 if (params.has('photo')) {
   question.question = 'Quel joueur se trouve sur cette photo ?';
@@ -52,9 +53,9 @@ function Preview() {
     {screen === 'quiz' && <CategoryPreviewContent controls={controls} category={CATEGORIES.find(cat => cat.key === (params.get('topic') || 'rap_fr'))} stats={stats} onBack={() => setScreen('home')} onPlay={play} />}
     {screen === 'intro' && <RoundIntroContent intro={{ round: 1, category: 'Rap Français' }} opponents={opponents} avatar="fox" name="Sisi" level={6} totalRounds={6} />}
     {screen === 'result' && <>
-      {!params.has('solo') && <NotificationContainer notifications={[{ id: 1, message: '+20 LP', type: 'success' }]} onDismiss={() => {}} />}
+
       <FinishedContent result={result} opponents={opponents} myId="1" name="Sisi" avatar="fox" social={social}
-        rematch={play} newMatch={play} playAgain={() => setScreen('home')} />
+        leagueAward={params.has('solo') || params.has('tie') ? null : { lpChange: params.has('loss') ? -20 : 25 }} notices={[{id: 1, message: '4 jours de suite ! Reviens demain pour continuer.'}]} rematch={play} newMatch={play} playAgain={() => setScreen('home')} />
     </>}
     {screen === 'game' && <QuestionContent question={question} timeLeft={9} selected={selected} reveal={reveal}
       answer={idx => { setSelected(idx); setReveal({ yourCorrect: idx === 0, correctIndex: 0, pointsEarned: idx === 0 ? 17 : 0, others: [] }); }}

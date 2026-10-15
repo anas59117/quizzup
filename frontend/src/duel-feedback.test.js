@@ -49,7 +49,7 @@ function question(props = {}) { render(<GameFeelProvider><QuestionContent {...qu
 
 test('acknowledgment shows confirmed score and points without exposing other choices', () => {
   question();
-  expect(container.querySelector('[role="progressbar"]').getAttribute('aria-valuenow')).toBe('0');
+  expect(container.querySelector('.duel-points-ring').getAttribute('aria-valuenow')).toBe('0');
   expect(container.querySelector('.hud-chip.mine .hud-chip-score').textContent).toBe('28');
   question({ reveal: { round: 1, yourCorrect: false, pointsEarned: 0, yourScore: 28, yourAnswer: 0, correctIndex: 3 } });
   expect(container.querySelectorAll('.answer.correct')).toHaveLength(0);
@@ -57,7 +57,7 @@ test('acknowledgment shows confirmed score and points without exposing other cho
   expect(container.querySelector('.hud-chip:not(.mine)').textContent).toContain('Waiting');
   question({ reveal: { round: 1, yourCorrect: true, pointsEarned: 12, yourScore: 40, yourAnswer: 0, correctIndex: 0 } });
   expect(container.querySelector('.hud-chip.mine .hud-chip-score').textContent).toBe('40');
-  expect(container.querySelector('[role="progressbar"]').getAttribute('aria-valuenow')).toBe('12');
+  expect(container.querySelector('.duel-points-ring').getAttribute('aria-valuenow')).toBe('12');
   expect(container.querySelectorAll('.answer.correct')).toHaveLength(1);
 });
 
@@ -83,7 +83,7 @@ test('a previous-round ack cannot disable a new round or replace its score', () 
     reveal: { round: 1, yourCorrect: true, pointsEarned: 12, yourScore: 99, yourAnswer: 0, correctIndex: 0 } });
   expect([...container.querySelectorAll('.answer')].every(button => !button.disabled)).toBe(true);
   expect(container.querySelector('.hud-chip.mine .hud-chip-score').textContent).toBe('28');
-  expect(container.querySelector('[role="progressbar"]').getAttribute('aria-valuenow')).toBe('0');
+  expect(container.querySelector('.duel-points-ring').getAttribute('aria-valuenow')).toBe('0');
   expect(container.querySelectorAll('.qu-float-point-global')).toHaveLength(0);
 });
 
@@ -105,4 +105,35 @@ test('duel, lobby and results display illustrated avatars and preserve custom id
   expect(container.querySelector('.lb-ava .player-avatar').getAttribute('data-avatar')).toBe('lion');
   expect(container.querySelector('.hud-chip').getAttribute('data-identity')).toBe('neon');
   expect(container.querySelector('.identity-emblem-mini')).toBeNull();
+});
+
+
+test('reading stage reserves answer positions and blocks input until all choices arrive', () => {
+  jest.useFakeTimers();
+  const answer = jest.fn();
+  const q = { ...questionProps.question, answers: ['A','B','C','D'], receivedAt: performance.now(),
+    readingMs: 1500, answerStaggerMs: 100, answerEnterMs: 250, presentationElapsedMs: 0,
+    answerOpensInMs: 2050, remainingMs: 10000 };
+  question({ question: q, selected: null, answer });
+  expect([...container.querySelectorAll('.answer')].every(el => el.style.visibility === 'hidden' && el.disabled)).toBe(true);
+  act(() => container.querySelector('.answer').click());
+  expect(answer).not.toHaveBeenCalled();
+  act(() => jest.advanceTimersByTime(1500));
+  expect(container.querySelector('.answer').style.visibility).toBe('visible');
+  expect(container.querySelectorAll('.answer')[3].style.visibility).toBe('hidden');
+  expect(container.querySelectorAll('.answer:disabled')).toHaveLength(4);
+  act(() => jest.advanceTimersByTime(550));
+  expect(container.querySelectorAll('.answer:disabled')).toHaveLength(0);
+  act(() => container.querySelectorAll('.answer')[2].click());
+  expect(answer).toHaveBeenCalledWith(2);
+  act(() => root.unmount());
+  root = createRoot(container);
+  jest.useRealTimers();
+});
+
+test('side gauges use cumulative confirmed score and conceal opponent outcome until reveal', () => {
+  question({ reveal: { round: 1, yourCorrect: true, yourAnswer: 0, yourScore: 40, pointsEarned: 12 } });
+  expect(container.querySelector('.duel-score-rail.mine').getAttribute('aria-valuenow')).toBe('40');
+  expect(container.querySelector('.duel-score-rail.other').getAttribute('aria-valuenow')).toBe('15');
+  expect(container.querySelector('.hud-chip:not(.mine)').getAttribute('data-state')).toBe('waiting');
 });
