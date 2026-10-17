@@ -6,6 +6,8 @@ const { createJsonWriter, readJsonFileSync } = require('./json-writer');
 const { getStorePath } = require('./store-path');
 const { normalizePostsStore } = require('./store-normalize');
 const { randomId } = require('./ids');
+const { cleanAvatar } = require('./sanitize');
+const { profileOf } = require('./social');
 
 const STORE = getStorePath('posts.json');
 const MAX_POSTS = 3000; // oldest posts drop off once this cap is hit (per-theme feeds need depth)
@@ -34,8 +36,9 @@ if (posts.length === 0) {
 const persist = createJsonWriter(STORE, () => ({ posts }));
 
 function toClientShape(p) {
+  const author = p.authorId && profileOf(p.authorId);
   return {
-    id: p.id, authorId: p.authorId || null, authorName: p.authorName, authorAvatar: p.authorAvatar,
+    id: p.id, authorId: p.authorId || null, authorName: author?.name || p.authorName, authorAvatar: author?.avatar || p.authorAvatar,
     category: p.category, text: p.text, reactions: p.reactedBy.length, createdAt: p.createdAt,
   };
 }
@@ -68,7 +71,7 @@ function addPost(clientId, authorName, authorAvatar, category, text) {
     id: randomId('p_'),
     authorId: clientId,
     authorName: String(authorName || 'Player').slice(0, 20),
-    authorAvatar: String(authorAvatar || '\u{1F43A}').slice(0, 4),
+    authorAvatar: cleanAvatar(authorAvatar),
     category: typeof category === 'string' ? category.slice(0, 40) : null,
     text: clean,
     reactedBy: [],

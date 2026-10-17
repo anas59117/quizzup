@@ -4,6 +4,7 @@ import { I18nProvider } from './i18n';
 import { LeaderboardContent, ProfileContent } from './screens';
 import { FriendsScreen } from './social';
 import { PlayerSheet } from './players';
+import { PlayerAvatar } from './PlayerAvatar';
 
 let root, container;
 beforeEach(() => {
@@ -36,4 +37,38 @@ test('profile editor offers the free starter and server-owned avatars only', () 
   render(<ProfileContent avatar="fox" name="Sisi" stats={{level:1,ownedItems:['fox']}} social={social} />);
   act(()=>container.querySelector('.pf-edit-dot').click());
   expect([...container.querySelectorAll('.avatar-opt .player-avatar')].map(el=>el.dataset.avatar)).toEqual(['fox','robot']);
+});
+
+const photo = `/profile-photos/${'a'.repeat(24)}-${'b'.repeat(32)}.jpg`;
+test('personal photos render in ranking, friends and profile while unsafe URLs fall back', () => {
+  render(<><LeaderboardContent board={{entries:[{avatar:photo,id:'a',name:'Alex',rank:1,level:1,xp:10,winRate:50}],total:1}} />
+    <FriendsScreen social={{...social,friends:[{id:'b',name:'Sam',avatar:photo}]}} />
+    <ProfileContent avatar={photo} name="Alex" stats={{level:1}} social={social} />
+    <PlayerAvatar avatar="https://evil.test/photo.svg" /></>);
+  expect(container.querySelectorAll('img.player-avatar-photo')).toHaveLength(3);
+  expect(container.querySelectorAll('.player-avatar--photo')).toHaveLength(3);
+  expect(container.querySelector('.pf-avatar img').getAttribute('src')).toContain(photo);
+  expect(container.querySelectorAll('img[src*="evil"]')).toHaveLength(0);
+});
+test('photo editor can select a fallback and cancel without changing public identity', () => {
+  const save = jest.fn();
+  render(<ProfileContent avatar={photo} name="Alex" stats={{level:1,equippedItems:{avatars:'fox'},ownedItems:['fox']}} social={social} onSaveProfile={save} />);
+  act(()=>container.querySelector('.pf-edit-dot').click());
+  expect(container.querySelector('input[type=file]').accept).toBe('image/jpeg,image/png,image/webp');
+  act(()=>container.querySelector('.avatar-opt').click());
+  expect(container.querySelector('.pf-avatar img')).not.toBeNull();
+  act(()=>container.querySelector('.profile-editor-cancel').click());
+  expect(container.querySelector('.pf-avatar img')).not.toBeNull();
+  expect(save).not.toHaveBeenCalled();
+});
+test('failed profile save retains the old personal identity and shows an accessible error', async () => {
+  const save = jest.fn().mockRejectedValue(new Error('Envoi indisponible'));
+  render(<ProfileContent avatar={photo} name="Alex" stats={{level:1,ownedItems:['fox']}} social={social} onSaveProfile={save} />);
+  act(()=>container.querySelector('.pf-edit-dot').click());
+  act(()=>container.querySelector('.avatar-opt').click());
+  await act(async () => container.querySelector('.profile-editor-save').click());
+  expect(save).toHaveBeenCalled();
+  expect(container.querySelector('.pf-avatar img').getAttribute('src')).toContain(photo);
+  expect(container.querySelector('[role=alert]').textContent).toBe('Envoi indisponible');
+  expect(container.querySelector('.profile-editor-save').disabled).toBe(false);
 });

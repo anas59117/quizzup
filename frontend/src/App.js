@@ -7,6 +7,7 @@ import './mobile-comfort.css';
 import './shop-art.css';
 import './duel-premium.css';
 import SFX from './sounds';
+import DuelMusic from './duel-music';
 import { useSocial, GameChat } from './social';
 import { ensureSignedIn, linkGoogleAccount, preloadFirebase } from './firebase';
 import { useStats } from './stats';
@@ -28,6 +29,7 @@ import { useSeasonPass, SeasonPassPanel } from './SeasonPass';
 import { FriendsScreen } from './social';
 import { LeagueContent, useLeague } from './LeagueSystem';
 import { AVATAR_IDS } from './PlayerAvatar';
+import { isProfilePhoto, uploadProfilePhoto } from './profile-photo';
 import { anchorQuestion, roundTiming } from './round-timing';
 
 const LIVE_SESSION_KEY = 'quizzup-live-session';
@@ -79,8 +81,16 @@ export default function App() {
   const [adOffer, setAdOffer] = useState(null);
   const [adClaimed, setAdClaimed] = useState(false);
   const adGameRef = useRef(null);
-  const adHooks = useMemo(() => ({}), []);
+  const adHooks = useMemo(() => ({
+    beforeAd: () => DuelMusic.setPaused(true),
+    afterAd: () => DuelMusic.setPaused(false),
+  }), []);
   const [stage, setStage] = useState('join');
+  useEffect(() => { DuelMusic.setMuted(muted); }, [muted]);
+  useEffect(() => {
+    DuelMusic.setActive(stage === 'playing');
+    return () => DuelMusic.setActive(false);
+  }, [stage]);
   useEffect(() => { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }, [stage]);
   const [fatalReason, setFatalReason] = useState('connection');
   const [fatalCode, setFatalCode] = useState('');
@@ -299,6 +309,8 @@ export default function App() {
         setMyId(data.playerId);
         break;
       case 'identified':
+        if (data.profile?.name) setName(data.profile.name);
+        if (data.profile?.avatar) setAvatar(data.profile.avatar);
         if (stage === 'feed') feed.refresh();
         if (stage === 'leaderboard' && !data.queuedActionFlushed) {
           setLeaderboardLoading(true);
@@ -588,12 +600,12 @@ export default function App() {
       case 'stats':
         statsHook.handleStatsMessage(data);
         if (AVATAR_IDS.includes(data.stats?.equippedItems?.avatars)) {
-          setAvatar(data.stats.equippedItems.avatars);
+          setAvatar(current => isProfilePhoto(current) ? current : data.stats.equippedItems.avatars);
         }
         break;
       case 'shop_result':
         clearPending();
-        if (data.ok && data.action === 'equip' && AVATAR_IDS.includes(data.itemId)) {
+        if (data.ok && data.action === 'equip' && AVATAR_IDS.includes(data.itemId) && !isProfilePhoto(avatar)) {
           // Persist the confirmed choice as the public identity too, so future
           // opponents see the same character as this player's shop/profile.
           setAvatar(data.itemId);
@@ -617,6 +629,10 @@ export default function App() {
           if (data.profile.avatar) setAvatar(data.profile.avatar);
         }
         showToast(t('profileUpdated'), 'success');
+        break;
+      case 'profile_update_failed':
+        clearPending();
+        showToast(t('profileUpdateUnavailable'), 'error');
         break;
       case 'follow_updated':
         players.handleMessage(data);
@@ -755,16 +771,24 @@ export default function App() {
     setStage('feed');
   }
 
-  function saveProfile(nextName, nextAvatar) {
+  async function saveProfile(nextName, nextAvatar, photoDraft = null) {
     if (pending) return;
     const cleanName = String(nextName || '').replace(/\s+/g, ' ').trim().slice(0, 20);
     if (!cleanName) return;
     beginPending();
-    if (!connect({ type: 'profile_update', name: cleanName, avatar: nextAvatar })) {
+    try {
+      const confirmedAvatar = photoDraft ? await uploadProfilePhoto(photoDraft) : nextAvatar;
+      if (!connect({ type: 'profile_update', name: cleanName, avatar: confirmedAvatar })) {
+        throw new Error(t('profileUpdateUnavailable'));
+      }
+      if (AVATAR_IDS.includes(confirmedAvatar) && confirmedAvatar !== statsHook.stats.equippedItems?.avatars) {
+        sendSocket({ type: 'shop_equip', itemId: confirmedAvatar });
+      }
+      return confirmedAvatar;
+    } catch (error) {
       clearPending();
       showToast(t('profileUpdateUnavailable'), 'error');
-    } else if (AVATAR_IDS.includes(nextAvatar) && nextAvatar !== statsHook.stats.equippedItems?.avatars) {
-      sendSocket({ type: 'shop_equip', itemId: nextAvatar });
+      throw error;
     }
   }
 

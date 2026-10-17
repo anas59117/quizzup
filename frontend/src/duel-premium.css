@@ -213,14 +213,17 @@
   .app-question .duel-premium .game-progress-text { font-size: 10px !important; }
   .app-question .duel-premium .game-cattag { font-size: 10px !important; padding: 2px 7px !important; }
   .app-question .duel-premium .answers-wrapper { flex: 1; align-items: stretch; padding-top: 0; }
-  .app-question .duel-premium .question-panel { flex: 1; justify-content: flex-start; }
+  /* The question and choices form one centered stack. Auto margin on the
+     choices used to expand into a large empty strip on taller phones. Hidden
+     choices still reserve their rows during the question's reading phase. */
+  .app-question .duel-premium .question-panel { display: flex; flex-direction: column; width: 100%; flex: 1; justify-content: center; }
   .app-question .duel-premium .question { margin: 0 !important; padding: clamp(14px, 3dvh, 26px) 2px 0 !important; }
-  .app-question .duel-premium .answers { margin-top: auto; padding: clamp(18px, 4dvh, 34px) 0 6px !important; gap: 10px !important; }
-  .app-question .duel-premium .answers .answer { min-height: clamp(54px, 8.5dvh, 76px); }
+  .app-question .duel-premium .answers { margin-top: 0; padding: clamp(18px, 3dvh, 28px) 0 6px !important; gap: 10px !important; flex-shrink: 0; }
+  .app-question .duel-premium .answers .answer { min-height: clamp(54px, 8.5dvh, 76px); text-align: left; }
   .app-question .duel-premium .game-footer { min-height: 44px; margin-top: 6px; }
   .app-question .duel-premium .timer-bar-bottom { display: none; }
   .app-question .duel-premium .player-photo { max-height: clamp(80px, 18dvh, 160px); }
-  .app-question .duel-premium.game-v4--photo .answers { margin-top: auto; }
+  .app-question .duel-premium.game-v4--photo .answers { margin-top: 0; }
 }
 @media (max-width: 680px) and (max-height: 550px) {
   .app-question .duel-premium .duel-hud { min-height: 66px; }

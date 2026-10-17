@@ -12,6 +12,7 @@ import { TopicLevelList, topicTitleKey, topicLabel } from './players';
 import { useI18n } from './i18n';
 import { PlayerAvatar, AVATAR_IDS, avatarId } from './PlayerAvatar';
 import { ShopArt as QV4ShopArt } from './shop-art';
+import { ProfilePhotoEditor } from './ProfilePhotoEditor';
 
 const FEATURED_TOPIC_KEYS = [
   'spider_man', 'harry_potter', 'minecraft', 'rap_fr',
@@ -320,41 +321,59 @@ export function ProfileContent({
   const [draftName, setDraftName] = useState(name || '');
   const [draftAvatar, setDraftAvatar] = useState(avatar || AVATARS[0]);
   const [submitted, setSubmitted] = useState(false);
+  const [draftPhoto, setDraftPhoto] = useState(null);
+  const [photoError, setPhotoError] = useState('');
+  const [uploading, setUploading] = useState(false);
+  const saving = profileSaving || uploading;
+  const fallbackAvatar = stats.equippedItems?.avatars || 'robot';
 
   const normalizedName = draftName.replace(/\s+/g, ' ').trim().slice(0, 20);
-  const unchanged = normalizedName === (name || '') && draftAvatar === avatar;
+  const unchanged = normalizedName === (name || '') && draftAvatar === avatar && !draftPhoto;
 
   useEffect(() => {
     if (!editing) {
       setDraftName(name || '');
       setDraftAvatar(avatar || AVATARS[0]);
+      setDraftPhoto(null);
+      setPhotoError('');
     }
   }, [name, avatar, editing]);
 
   useEffect(() => {
     if (
       submitted
-      && !profileSaving
+      && !saving
+      && !draftPhoto
       && normalizedName === (name || '')
       && draftAvatar === avatar
     ) {
       setSubmitted(false);
       setEditing(false);
     }
-  }, [submitted, profileSaving, normalizedName, draftAvatar, name, avatar]);
+  }, [submitted, saving, draftPhoto, normalizedName, draftAvatar, name, avatar]);
 
   const cancelEdit = () => {
-    if (profileSaving) return;
+    if (saving) return;
     setDraftName(name || '');
     setDraftAvatar(avatar || AVATARS[0]);
     setSubmitted(false);
+    setDraftPhoto(null);
+    setPhotoError('');
     setEditing(false);
   };
 
-  const saveEdit = () => {
-    if (!normalizedName || unchanged || profileSaving) return;
+  const saveEdit = async () => {
+    if (!normalizedName || unchanged || saving) return;
+    setPhotoError('');
     setSubmitted(true);
-    onSaveProfile(normalizedName, draftAvatar);
+    setUploading(true);
+    try {
+      const savedAvatar = await onSaveProfile(normalizedName, draftAvatar, draftPhoto);
+      if (savedAvatar) { setDraftAvatar(savedAvatar); setDraftPhoto(null); }
+    } catch (err) {
+      setSubmitted(false);
+      setPhotoError(err.message || 'Le profil n’a pas pu être enregistré. Réessaie.');
+    } finally { setUploading(false); }
   };
 
   // XP progression
@@ -370,8 +389,8 @@ export function ProfileContent({
       {/* ── Hero ──────────────────────────────────────────── */}
       <div className="pf-hero">
         <div className="pf-avatar-wrap">
-          <div className="pf-avatar"><PlayerAvatar avatar={avatar} /></div>
-          <button className="pf-edit-dot" aria-label={t('editProfile')} onClick={() => setEditing((v) => !v)} aria-expanded={editing}>
+          <div className="pf-avatar"><PlayerAvatar avatar={avatar} fallbackAvatar={fallbackAvatar} /></div>
+          <button className="pf-edit-dot" aria-label={t('editProfile')} onClick={() => editing ? cancelEdit() : setEditing(true)} aria-expanded={editing} disabled={saving}>
             <Icon name="edit" size={11} />
           </button>
         </div>
@@ -392,15 +411,20 @@ export function ProfileContent({
             value={draftName}
             maxLength={20}
             autoComplete="nickname"
+            disabled={saving}
             onChange={(event) => setDraftName(event.target.value)}
           />
+          <ProfilePhotoEditor avatar={draftAvatar} fallbackAvatar={fallbackAvatar} draft={draftPhoto}
+            onChange={draft => { setDraftPhoto(draft); setSubmitted(false); setPhotoError(''); }}
+            onRemove={() => { setDraftPhoto(null); setDraftAvatar(fallbackAvatar); setSubmitted(false); }} busy={saving} />
           <div className="profile-editor-label">{t('chooseAvatar')}</div>
           <div className="profile-avatar-grid" role="group" aria-label={t('chooseAvatar')}>
             {AVATAR_IDS.filter((id) => id === 'robot' || stats.ownedItems?.includes(id)).map((option, index) => (
               <button
                 key={option}
                 className={`avatar-opt ${draftAvatar === option ? 'active' : ''}`}
-                onClick={() => setDraftAvatar(option)}
+                onClick={() => { setDraftAvatar(option); setDraftPhoto(null); setSubmitted(false); }}
+                disabled={saving}
                 aria-label={`${t('avatar')} ${index + 1}`}
                 aria-pressed={draftAvatar === option}
               >
@@ -408,16 +432,18 @@ export function ProfileContent({
               </button>
             ))}
           </div>
+          {photoError && <p className="profile-photo-error" role="alert">{photoError}</p>}
+          {submitted && !saving && !unchanged && <p className="profile-photo-error" role="status">Le profil attend la confirmation. Si la connexion a été coupée, réessaie.</p>}
           <div className="profile-editor-actions">
-            <button className="profile-editor-cancel" onClick={cancelEdit} disabled={profileSaving}>
+            <button className="profile-editor-cancel" onClick={cancelEdit} disabled={saving}>
               {t('cancelEdit')}
             </button>
             <button
               className="profile-editor-save"
               onClick={saveEdit}
-              disabled={!normalizedName || unchanged || profileSaving}
+              disabled={!normalizedName || unchanged || saving}
             >
-              {profileSaving ? t('saving') : t('saveChanges')}
+              {saving ? t('saving') : t('saveChanges')}
             </button>
           </div>
         </div>

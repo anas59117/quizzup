@@ -17,6 +17,9 @@ const ctx = () => {
   return _ctx;
 };
 
+// The duel score shares the gesture-unlocked SFX context on mobile browsers.
+export { ctx as getAudioContext };
+
 // Unlock AudioContext on the first user interaction (tap/click/key). Mobile
 // browsers block audio until a gesture-driven resume — this one-time handler
 // ensures it fires even if the player taps before any SFX function runs.

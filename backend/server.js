@@ -22,7 +22,8 @@ const notifications = require('./notifications');
 const crypto = require('crypto');
 const { ROOM_TTL_MS, CODE_ALPHABET, MAX_ROOM_PLAYERS } = require('./config');
 const { randomRoomCode } = require('./ids');
-const { cleanDisplayName, cleanAvatar } = require('./sanitize');
+const { cleanDisplayName, cleanAvatar, isPhotoPath } = require('./sanitize');
+const { mountPhotoRoutes } = require('./profile-photos');
 
 const app = express();
 const server = http.createServer(app);
@@ -84,6 +85,19 @@ const limiter = new RateLimiter();
 const ipLimiter = new RateLimiter(2000, 40);
 const guestAuthLimiter = new RateLimiter(60 * 1000, 30);
 const accountLinkLimiter = new RateLimiter(60 * 1000, 10);
+const photoLimiter = new RateLimiter(60 * 1000, 8);
+const photoStore = mountPhotoRoutes(app, { verifyIdToken, social, getClientIp, limiter: photoLimiter });
+
+function ownedAvatar(value, uid, fallback = 'robot') {
+  const avatar = cleanAvatar(value, fallback);
+  return isPhotoPath(avatar) && !photoStore.owns(uid, avatar) ? fallback : avatar;
+}
+
+function gameplayAvatar(data, state) {
+  // An already authenticated personal photo takes precedence over stale join
+  // payloads queued before the persisted profile was restored.
+  return isPhotoPath(state.avatar) ? state.avatar : ownedAvatar(data.avatar, state.clientId, state.avatar);
+}
 
 const actionLimiters = {
   identifySocket: new RateLimiter(60 * 1000, 6),
@@ -138,7 +152,6 @@ function notifyPresence(clientId, isOnline) {
 
 async function handleIdentify(ws, data, state) {
   const requestedName = cleanDisplayName(data.name, state.name);
-  const requestedAvatar = cleanAvatar(data.avatar, state.avatar);
 
   const uid = await verifyIdToken(data.idToken);
   if (!uid) {
@@ -157,8 +170,9 @@ async function handleIdentify(ws, data, state) {
     return;
   }
 
-  state.name = requestedName;
-  state.avatar = requestedAvatar;
+  const persistedProfile = social.profileOf(uid);
+  state.name = persistedProfile?.name || requestedName;
+  state.avatar = ownedAvatar(persistedProfile?.avatar || data.avatar, uid, state.avatar);
 
   // Check the target identity before attaching it to this socket. This
   // prevents a rejected duplicate socket from marking the legitimate one
@@ -227,7 +241,7 @@ async function handleIdentify(ws, data, state) {
   }
 
   social.setOnline(state.clientId, ws, state.name, state.avatar);
-  game.send(ws, { type: 'identified', reconnected, roomReconnected });
+  game.send(ws, { type: 'identified', reconnected, roomReconnected, profile: social.profileOf(uid) });
   game.send(ws, { type: 'friends_list', friends: social.getFriendsList(state.clientId) });
   game.send(ws, { type: 'friend_requests', requests: social.getPendingRequests(state.clientId) });
   game.send(ws, { type: 'stats', stats: fullStats(state.clientId) });
@@ -448,7 +462,11 @@ function handleSocial(ws, data, state) {
     }
 
     const name = cleanDisplayName(data.name, state.name);
-    const avatar = cleanAvatar(data.avatar, state.avatar);
+    if (isPhotoPath(data.avatar) && !photoStore.owns(clientId, data.avatar)) {
+      game.send(ws, { type: 'profile_update_failed', code: 'INVALID_PHOTO' });
+      return true;
+    }
+    const avatar = ownedAvatar(data.avatar, clientId, state.avatar);
     state.name = name;
     state.avatar = avatar;
     const profile = social.updateProfile(clientId, name, avatar);
@@ -742,7 +760,7 @@ function handleGameplay(ws, data, state) {
       return true;
     }
     state.name = cleanDisplayName(data.name, state.name);
-    const avatar = cleanAvatar(data.avatar, state.avatar || '\u{1F43A}');
+    const avatar = gameplayAvatar(data, state);
     const categoryKey = validCategoryKey(data.category);
     game.send(ws, { type: 'joined', playerId, name: state.name });
     startGameGuarded([{ ws, id: playerId, clientId: state.clientId, name: state.name, avatar }], categoryKey);
@@ -759,7 +777,7 @@ function handleGameplay(ws, data, state) {
       return true;
     }
     state.name = cleanDisplayName(data.name, state.name);
-    const avatar = cleanAvatar(data.avatar, state.avatar || '\u{1F43A}');
+    const avatar = gameplayAvatar(data, state);
     const categoryKey = validCategoryKey(data.category);
     game.send(ws, { type: 'joined', playerId, name: state.name });
     const oppIdx = waitingPlayers.findIndex((w) =>
@@ -835,7 +853,7 @@ function handleGameplay(ws, data, state) {
       return true;
     }
     state.name = cleanDisplayName(data.name, state.name);
-    const avatar = cleanAvatar(data.avatar, state.avatar || '\u{1F43A}');
+    const avatar = gameplayAvatar(data, state);
     const categoryKey = validCategoryKey(data.category);
     const code = newRoomCode();
     const room = {
@@ -877,7 +895,7 @@ function handleGameplay(ws, data, state) {
     }
     if (room.players.length >= MAX_ROOM_PLAYERS) { game.send(ws, { type: 'room_full' }); return true; }
     state.name = cleanDisplayName(data.name, state.name);
-    const avatar = cleanAvatar(data.avatar, state.avatar || '\u{1F981}');
+    const avatar = gameplayAvatar(data, state);
     room.players.push({
       ws, id: playerId, clientId: state.clientId, name: state.name, avatar,
       connected: true, reconnectTimer: null,
@@ -1169,6 +1187,7 @@ setInterval(() => {
   Object.values(actionLimiters).forEach((rl) => rl.sweep());
   guestAuthLimiter.sweep();
   accountLinkLimiter.sweep();
+  photoLimiter.sweep();
   sweepCache();
 }, 60 * 1000);
 

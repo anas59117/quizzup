@@ -65,10 +65,13 @@ export function useGameSocket({
   function sendAction(ws, action) {
     if (!ws || ws.readyState !== 1 || !action) return false;
     const identity = identityRef.current;
+    // Profile edits carry the next identity; gameplay actions use the current
+    // one. This also preserves a pending edit across transport recovery.
+    const editingProfile = action.type === 'profile_update';
     ws.send(JSON.stringify({
       ...action,
-      name: identity.name,
-      avatar: identity.avatar,
+      name: editingProfile && typeof action.name === 'string' ? action.name : identity.name,
+      avatar: editingProfile && typeof action.avatar === 'string' ? action.avatar : identity.avatar,
       clientId: identity.firebaseUser?.uid || null,
     }));
     return true;
