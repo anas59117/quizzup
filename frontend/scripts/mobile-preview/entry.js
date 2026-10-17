@@ -42,13 +42,13 @@ function Preview() {
   const play = () => { setSelected(null); setReveal(null); setScreen('game'); };
   const browse = ['home', 'profile', 'shop', 'themes', 'quiz'].includes(screen);
   return <div className={screen === 'home' ? 'app app-top app-nav app-home' : screen === 'game' ? 'app game-bg app-question' : screen === 'result' ? 'app results-bg' : screen === 'waiting' ? 'app game-bg app-matchmaking' : screen === 'intro' ? 'app game-bg' : `app app-top app-nav ${screen === 'quiz' ? 'app-category-preview' : screen === 'shop' ? 'app-shop' : screen === 'profile' ? 'app-profile' : ''}`}>
-    {screen !== 'home' && screen !== 'quiz' && controls}
+    {screen !== 'home' && screen !== 'quiz' && screen !== 'profile' && screen !== 'shop' && controls}
     {screen === 'home' && <HomeContent controls={controls} name="Sisi" avatar="fox" stats={stats} soloMode={solo} setSoloMode={setSolo}
       quickMatch={play} startWithCategory={play} onOpenProfile={() => setScreen('profile')} onSeeAll={() => setScreen('themes')} />}
-    {screen === 'profile' && <ProfileContent name="Sisi" avatar="fox" stats={stats} social={social}
+    {screen === 'profile' && <ProfileContent controls={controls} name="Sisi" avatar="fox" stats={stats} social={social}
       streak={{ streak: 1, calendar: [] }} onSaveProfile={() => {}} onOpenLeaderboard={() => {}} onOpenShop={() => setScreen('shop')} />}
     {screen === 'waiting' && <WaitingContent name="Sisi" avatar="fox" level={6} categoryKey="ligue_champions" onCancel={() => setScreen('home')} onPlaySolo={play} />}
-    {screen === 'shop' && <ShopContent name="Sisi" avatar="fox" stats={stats} onBuy={() => {}} onEquip={() => {}} onPlay={play} onBack={() => setScreen('home')} />}
+    {screen === 'shop' && <ShopContent controls={controls} name="Sisi" avatar="fox" stats={stats} onBuy={() => {}} onEquip={() => {}} onPlay={play} onBack={() => setScreen('home')} />}
     {screen === 'themes' && <div className="container"><FamilyGrid onSelect={play} /></div>}
     {screen === 'quiz' && <CategoryPreviewContent controls={controls} category={CATEGORIES.find(cat => cat.key === (params.get('topic') || 'rap_fr'))} stats={stats} onBack={() => setScreen('home')} onPlay={play} />}
     {screen === 'intro' && <RoundIntroContent intro={{ round: Number(params.get('round')) || 1, category: 'Rap Français', icon: '🏆' }} opponents={opponents} avatar="fox" name="Sisi" level={6} totalRounds={6} />}

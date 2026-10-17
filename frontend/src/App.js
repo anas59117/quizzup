@@ -5,6 +5,7 @@ import './design-system.css';
 import './design-v4.css';
 import './mobile-comfort.css';
 import './shop-art.css';
+import './audit-polish.css';
 import './duel-premium.css';
 import SFX from './sounds';
 import DuelMusic from './duel-music';
@@ -14,7 +15,7 @@ import { useStats } from './stats';
 import { useFeed, FeedScreen } from './feed';
 import { usePlayers, PlayerSheet, topicLabel } from './players';
 import { RoomLobby } from './multiplayer';
-import { AVATARS, useTheme, TopControls, NavBar, ErrorScreen, Toast } from './ui';
+import { AVATARS, useTheme, TopControls, BrowseHeader, NavBar, ErrorScreen, Toast } from './ui';
 import { HomeContent, EnterCodeContent, CategoriesContent, CategoryPreviewContent, ProfileContent, LeaderboardContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent, ShopContent } from './screens';
 import { CATEGORIES as CATS_V4 } from './ui';
 import { initAds, adsEnabled, countFinishedGame, interstitialThen, requestRewardOffer } from './ads';
@@ -798,6 +799,12 @@ export default function App() {
     connect({ type: 'create_room', category: null });
   }
 
+  function openFriendCode() {
+    setJoinError(false);
+    setJoinCode('');
+    setStage('enter_code');
+  }
+
   function joinRoom(code) {
     if (!code || code.trim().length < 4 || pending) return;
     setJoinError(false);
@@ -1039,9 +1046,10 @@ export default function App() {
         <HomeContent
           controls={<TopControls {...topProps} />}
           name={name} avatar={avatar} frame={statsHook.stats.frame} stats={statsHook.stats} soloMode={soloMode} setSoloMode={setSoloMode}
+          friendCount={social.friends.length}
           quickMatch={quickMatch} startWithCategory={previewCategory}
           onOpenProfile={() => setStage('profile')} onSeeAll={(fam) => { setCategoryFamily(fam || null); setStage('categories'); }}
-          createRoom={createRoom} onOpenEnterCode={() => { setJoinError(false); setJoinCode(''); setStage('enter_code'); }}
+          createRoom={createRoom} onOpenEnterCode={openFriendCode}
           onStartTournament={() => setStage('tournament')}
           onOpenFriends={() => setStage('friends')}
           onOpenLeague={() => setStage('league')}
@@ -1055,13 +1063,21 @@ export default function App() {
   }
 
   if (stage === 'room_wait' && room) {
-    const copyCode = () => {
+    const copyCode = async () => {
       try {
-        navigator.clipboard.writeText(room.code);
+        await navigator.clipboard.writeText(room.code);
         setCopied(true);
         if (copyTimerRef.current) clearTimeout(copyTimerRef.current);
         copyTimerRef.current = setTimeout(() => { setCopied(false); copyTimerRef.current = null; }, 1500);
-      } catch {}
+      } catch { showToast(t('roomCopyUnavailable'), 'error'); }
+    };
+    const shareCode = async () => {
+      if (!navigator.share) { await copyCode(); return; }
+      try {
+        await navigator.share({ title: 'QuizzUp', text: t('roomInviteMessage', { code: room.code }), url: window.location.origin });
+      } catch (error) {
+        if (error?.name !== 'AbortError') await copyCode();
+      }
     };
     const cancel = () => {
       // If the socket is alive, leave explicitly and keep the authenticated
@@ -1078,7 +1094,7 @@ export default function App() {
       <div className="app"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <RoomLobby
           code={room.code} players={room.players} isHost={room.isHost} canStart={room.canStart}
-          onStart={startRoomMatch} onCancel={cancel} copied={copied} onCopyCode={copyCode}
+          onStart={startRoomMatch} onCancel={cancel} copied={copied} onCopyCode={copyCode} onShareCode={shareCode}
         />
       </div>);
   }
@@ -1146,9 +1162,11 @@ export default function App() {
 
   if (stage === 'profile') {
     return (
-      <div className="app app-nav app-top app-profile"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+      <div className="app app-nav app-top app-profile"><Toast toast={toast} onDismiss={dismissToast} />
         <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
         <ProfileContent
+          controls={<TopControls {...topProps} />}
+          onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending}
           avatar={avatar} name={name} stats={statsHook.stats}
           isGoogleLinked={!!(firebaseUser && !firebaseUser.isAnonymous)} googleEmail={firebaseUser?.email}
           linkGoogle={linkGoogle} linking={linking} clientId={clientId} social={social}
@@ -1167,8 +1185,9 @@ export default function App() {
 
   if (stage === 'shop') {
     return (
-      <div className="app app-nav app-top app-shop"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+      <div className="app app-nav app-top app-shop"><Toast toast={toast} onDismiss={dismissToast} />
         <ShopContent
+          controls={<TopControls {...topProps} />}
           avatar={avatar} name={name} stats={statsHook.stats}
           onBuy={buyFrame} onEquip={equipFrame} onPlay={quickMatch}
           onBack={() => setStage('home')} pending={pending}
@@ -1195,13 +1214,14 @@ export default function App() {
 
   if (stage === 'friends') {
     return (
-      <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+      <div className="app app-nav app-top app-friends"><Toast toast={toast} onDismiss={dismissToast} />
         <div className="container friends-page">
+          <BrowseHeader controls={<TopControls {...topProps} />} />
           <div className="friends-header">
             <button className="friends-back" onClick={() => setStage('home')}>←</button>
             <h2 className="friends-title">👥 {t('friends')}</h2>
           </div>
-          <FriendsScreen social={social} />
+          <FriendsScreen social={social} onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending} />
         </div>
         <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);

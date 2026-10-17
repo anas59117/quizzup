@@ -1,0 +1,72 @@
+/* QuizzUp audit: retain the red identity with readable copy and usable targets.
+   Header controls stay in the document flow on browsing screens.
+   The duel's independent visual system is imported after this file. */
+:root, :root[data-theme='dark'], :root[data-theme='light'] {
+  --v4-coral: #c81e3a;
+  --v4-coral-deep: #b51b33;
+  --v4-coral-dark: #9e182e;
+}
+.home-v4 .section-edit, .home-v4 .more-toggle,
+.home-v4 .profile-bio-v4, .home-v4 .profile-stats-v4 {
+  color: #fff !important;
+  opacity: 1;
+}
+.home-v4 .solo-toggle button {
+  min-height: 44px;
+  padding: 10px 16px !important;
+  color: #fff !important;
+}
+.home-v4 .solo-toggle button.active { color: #0a0a0a !important; }
+.home-v4 .section-edit, .home-v4 .more-toggle {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 10px 8px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-v4 .more-toggle { display: flex; }
+.friends-screen .friends-empty { color: #fff !important; }
+.room-share-button { min-height: 44px; margin: 0 0 16px; padding: 10px 18px; border: 1px solid #ffffff80; border-radius: 12px; background: #ffffff12; color: #fff; font: 600 14px var(--v4-font-ui); cursor: pointer; }
+.room-share-button:focus-visible { outline: 3px solid var(--v4-cta); outline-offset: 3px; }
+.browse-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  margin: 0 0 20px;
+  text-align: left;
+}
+.browse-header .home-brand { display: flex; align-items: center; gap: 7px; }
+.browse-header .home-brandmark { width: 28px !important; height: 28px !important; font-size: 16px !important; }
+.browse-header .home-logo-sm { font-size: 20px !important; }
+.home-head .top-controls.mobile-controls,
+.browse-header .top-controls.mobile-controls,
+.shop-v4-header .top-controls.mobile-controls {
+  position: relative !important;
+  inset: auto;
+  transform: none;
+  display: flex;
+  flex: 0 0 88px;
+  gap: 0;
+  padding: 0;
+  background: transparent !important;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.browse-header .mobile-controls-panel, .shop-v4-header .mobile-controls-panel { z-index: 110; }
+.app.app-shop, .app.app-profile, .app.app-friends { padding-top: calc(8px + var(--safe-top)) !important; }
+.app-profile .pf-v4 { padding-top: 0 !important; }
+.shop-v4-header { gap: 8px; flex-wrap: nowrap; }
+.shop-v4-header .shop-v4-brand { font-size: 20px; letter-spacing: -.9px; white-space: nowrap; }
+.shop-v4-header .shop-v4-wallet { flex-shrink: 0; gap: 5px; padding: 8px; min-height: 44px; font-size: 13px; }
+.shop-v4-header .shop-v4-back { flex: 0 0 44px; }
+.shop-v4-header .shop-v4-wallet svg { width: 18px; }
+@media(max-width: 400px) {
+  .shop-v4-header { gap: 5px; }
+  .shop-v4-header .shop-v4-brand { font-size: 18px; }
+  .shop-v4-header .shop-v4-brand > span { display: none; }
+  .shop-v4-header .shop-v4-wallet { padding-inline: 7px; }
+}

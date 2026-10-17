@@ -591,6 +591,16 @@ export function useTheme() {
   return [theme, toggle];
 }
 
+export function BrowseHeader({ controls }) {
+  return <header className="browse-header">
+    <div className="home-brand">
+      <div className="home-brandmark" aria-hidden="true">Q</div>
+      <div className="home-logo-sm">Quizz<span>Up</span></div>
+    </div>
+    {controls}
+  </header>;
+}
+
 export const TopControls = memo(function TopControls({ muted, toggleMute, theme, toggleTheme, playing = false }) {
   const { lang, toggleLang } = useI18n();
   const [open, setOpen] = useState(false);

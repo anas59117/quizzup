@@ -5,7 +5,7 @@ import { PlayerAvatar } from './PlayerAvatar';
 
 // Lobby for a private room (2-4 players). The host sees a Start button once
 // 2+ players have joined; everyone else waits for the host to start.
-export function RoomLobby({ code, players, isHost, canStart, onStart, onCancel, copied, onCopyCode }) {
+export function RoomLobby({ code, players, isHost, canStart, onStart, onCancel, copied, onCopyCode, onShareCode }) {
   const { t } = useI18n();
   return (
     <div className="container center duel-lobby">
@@ -15,6 +15,7 @@ export function RoomLobby({ code, players, isHost, canStart, onStart, onCancel, 
       {/* aria-live so a screen reader announces "Copied!" — previously this
           status change was silent to anyone not looking at the screen. */}
       <div className="room-copy-hint" aria-live="polite">{copied ? t('copied') : t('tapToCopy')}</div>
+      {onShareCode && <button type="button" className="room-share-button" onClick={onShareCode}>{t('shareRoomCode')}</button>}
       <div className="lobby-players">
         {players.map((p) => {
           const disconnected = p.connected === false;
@@ -84,7 +85,7 @@ export function PlayerHud({ me, others = [], revealing = false }) {
                 {known ? (p.correct ? '✓' : '✕') : timedOut || state === 'disconnected' ? '—' : '•'}
               </span>}
             </div>
-            <div className="hud-chip-name" title={p.name}>{p.mine ? t('you') : p.name}</div>
+            <div className="hud-chip-name" title={p.name}>{p.name || t('you')}</div>
             <div className="hud-chip-score"><span key={p.score}>{p.score ?? 0}</span></div>
             <div className={`hud-chip-status ${state}`} title={status}>
               {p.mine && known && p.correct ? <><span className="duel-visually-hidden">{status} · </span>{t('ptsEarned', { n: points })}</> : status}

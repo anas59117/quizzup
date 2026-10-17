@@ -3,11 +3,12 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { StreakBadge, StreakCalendar } from './DailyStreak';
 import { ShareCard } from './ShareCard';
 import { ChallengeButton } from './ChallengeLink';
-import { AVATARS, CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon } from './ui';
+import { AVATARS, CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon, BrowseHeader } from './ui';
 import { CategoryTileV4 } from './CategoryTileV4';
 import { Leaderboard } from './multiplayer';
 import { ProfileStats } from './stats';
 import { FriendsScreen } from './social';
+import { FriendInviteActions } from './FriendInviteActions';
 import { TopicLevelList, topicTitleKey, topicLabel } from './players';
 import { useI18n } from './i18n';
 import { PlayerAvatar, AVATAR_IDS, avatarId } from './PlayerAvatar';
@@ -30,14 +31,13 @@ const FEATURED_TOPICS = FEATURED_TOPIC_KEYS
   })
   .filter(Boolean);
 
-export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, onStartTournament, onOpenFriends, onOpenLeague, onOpenSeasonPass, pending, stats, controls }) {
+export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, onStartTournament, onOpenFriends, onOpenLeague, onOpenSeasonPass, pending, stats, friendCount = 0, controls }) {
   const { t } = useI18n();
   const [showMore, setShowMore] = useState(false);
   // Keep up to 7 featured covers for Mes thèmes; Spider-Man-equivalent card gets the 2:1 "featured" slot.
   const myThemes = FEATURED_TOPICS.slice(0, 7);
   const [heroTopic, ...rest] = myThemes;
   const games = (stats && stats.games) || 0;
-  const followers = (stats && stats.followers) || 0;
   const following = (stats && stats.following) || 0;
   return (
     <div className="container wide home-v4">
@@ -61,20 +61,21 @@ export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickM
           <div className="profile-avatar-v4"><PlayerAvatar avatar={avatar} /></div>
           <div className="profile-identity-v4">
             <div className="profile-name-v4">{name || 'Joueur'}</div>
-            <div className="profile-bio-v4">{t('hey', { name })}</div>
+            <div className="profile-bio-v4">{t('level')} {stats?.level || 1}</div>
           </div>
         </div>
         <div className="profile-stats-v4">
-          <span><b>{games}</b> parties</span>
+          <span>{t('playedGames', { n: games })}</span>
           <span className="dot">·</span>
-          <span><b>{followers}</b> amis</span>
+          <span>{t('socialFriends', { n: friendCount })}</span>
           <span className="dot">·</span>
-          <span>tu suis <b>{following}</b></span>
+          <span>{t('followedPlayers', { n: following })}</span>
         </div>
       </button>
       <div className="home-solo-row">
         <SoloToggle solo={soloMode} onChange={setSoloMode} />
       </div>
+      <FriendInviteActions onInviteFriend={createRoom} onJoinFriend={onOpenEnterCode} pending={pending} />
       <div className="section-head-v4">
         <h2 className="section-title-v4">Mes thèmes</h2>
         <button className="section-edit" onClick={() => onSeeAll && onSeeAll()}>
@@ -98,10 +99,6 @@ export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickM
         <button className="section-edit" onClick={() => onSeeAll && onSeeAll()}>{t('seeAll')}</button>
       </div>
       <FamilyGrid onSelect={onSeeAll} />
-      <div className="home-social-row-v4">
-        <button className="social-chip" onClick={createRoom} disabled={pending}><Icon name="users" size={16} /> {t('party')}</button>
-        <button className="social-chip" onClick={onOpenEnterCode}><Icon name="key" size={16} /> {t('joinCode')}</button>
-      </div>
       <button
         className="more-toggle"
         type="button"
@@ -314,7 +311,7 @@ export function CategoriesContent({ startWithCategory, onBack, family, onSelectF
 export function ProfileContent({
   avatar, name, stats, isGoogleLinked, googleEmail, linkGoogle, linking,
   clientId, social, onOpenLeaderboard, onOpenShop, onSaveProfile, profileSaving, onOpenTopic, streak,
-  league, onOpenLeague,
+  league, onOpenLeague, onInviteFriend, onJoinFriend, pending, controls,
 }) {
   const { t } = useI18n();
   const [editing, setEditing] = useState(false);
@@ -386,6 +383,7 @@ export function ProfileContent({
 
   return (
     <div className="container pf-v4">
+      {controls && <BrowseHeader controls={controls} />}
       {/* ── Hero ──────────────────────────────────────────── */}
       <div className="pf-hero">
         <div className="pf-avatar-wrap">
@@ -397,7 +395,7 @@ export function ProfileContent({
         <div className="pf-name">{name}</div>
         <div className="pf-bio">{t('level')} {stats.level}</div>
         <div className="pf-social">
-          {stats.games || 0} {t('games').toLowerCase()} · {friendCount} {t('friends').toLowerCase()} · suit {followingCount} {t('players').toLowerCase()}
+          {t('playedGames', { n: stats.games || 0 })} · {t('socialFriends', { n: friendCount })} · {t('followedPlayers', { n: followingCount })}
         </div>
       </div>
 
@@ -526,7 +524,7 @@ export function ProfileContent({
       </button>
 
       {/* ── Friends ───────────────────────────────────────── */}
-      <FriendsScreen social={social} />
+      <FriendsScreen social={social} onInviteFriend={onInviteFriend} onJoinFriend={onJoinFriend} pending={pending} />
 
       {/* ── Account link + privacy ────────────────────────── */}
       {isGoogleLinked ? (
@@ -936,7 +934,7 @@ function QV4ShopPreviewDialog({ item, owned, equipped, coins, avatar, name, onCl
   </div>;
 }
 
-export function ShopContent({ avatar = 'robot', name = 'QuizMaster', stats = {}, onBuy, onEquip, onPlay, onBack, pending = false }) {
+export function ShopContent({ avatar = 'robot', name = 'QuizMaster', stats = {}, onBuy, onEquip, onPlay, onBack, pending = false, controls }) {
   const [category, setCategory] = React.useState('avatars');
   const [selection, setSelection] = React.useState(null);
   const [notice, setNotice] = React.useState('');
@@ -974,7 +972,7 @@ export function ShopContent({ avatar = 'robot', name = 'QuizMaster', stats = {},
   const buy = item => request(item, 'buy');
   const equip = item => request(item, 'equip');
   return <section className="shop-v4-root" aria-labelledby="shop-v4-title">
-    <header className="shop-v4-header">{typeof onBack === 'function' && <button type="button" disabled={busy} className="shop-v4-back" onClick={onBack} aria-label="Retour"><QV4ShopIcon name="arrow" /></button>}<span className="shop-v4-brand">QuizzUp<span>{'✦'}</span></span><div className="shop-v4-wallet" aria-label={`${QV4shopNumber(session.coins)} pièces`}><QV4ShopIcon name="coin" /><strong>{QV4shopNumber(session.coins)}</strong></div></header>
+    <header className="shop-v4-header">{typeof onBack === 'function' && <button type="button" disabled={busy} className="shop-v4-back" onClick={onBack} aria-label="Retour"><QV4ShopIcon name="arrow" /></button>}<span className="shop-v4-brand">QuizzUp<span>{'✦'}</span></span><div className="shop-v4-wallet" aria-label={`${QV4shopNumber(session.coins)} pièces`}><QV4ShopIcon name="coin" /><strong>{QV4shopNumber(session.coins)}</strong></div>{controls}</header>
     <div className="shop-v4-heading"><p className="shop-v4-eyebrow">TON STYLE. TES RÈGLES.</p><h1 id="shop-v4-title">La boutique<span>.</span></h1><p>Fais de chaque duel un peu plus le tien.</p></div>
     <nav className="shop-v4-categories" aria-label="Catégories de la boutique">{QV4SHOP_CATEGORIES.map(([id, label]) => <button type="button" disabled={busy} key={id} aria-pressed={category === id} onClick={() => { setCategory(id); setNotice(''); }}>{label}</button>)}</nav>
     <section className={`shop-v4-hero shop-v4-tone-${featured.tone}`} aria-label={`À la une : ${featured.name}`}>

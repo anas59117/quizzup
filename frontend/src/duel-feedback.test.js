@@ -139,3 +139,18 @@ test('side gauges use cumulative confirmed score and conceal opponent outcome un
   expect(container.querySelector('.game-progress')).toBeNull();
   expect(container.querySelector('.game-progress-text').textContent).toContain('1 / 6');
 });
+
+test('ivory answer controls use the answer itself without decorative letter badges', () => {
+  question({ selected: null });
+  expect(container.querySelectorAll('.answer .letter')).toHaveLength(0);
+  expect([...container.querySelectorAll('.answer')].map(button => button.textContent)).toEqual(questionProps.question.answers);
+  expect(container.querySelector('.duel-arena-stage .duel-score-rails')).not.toBeNull();
+  expect(container.querySelector('.duel-arena-stage .game-footer')).toBeNull();
+});
+
+test('photographic identities take priority in both sides of the compact HUD', () => {
+  render(<PlayerHud me={{ name: 'Alice', avatar: '/profile-photos/aaaaaaaaaaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb.jpg', score: 51 }}
+    others={[{ id: 'bob', name: 'Bob', avatar: '/profile-photos/bbbbbbbbbbbbbbbbbbbbbbbb-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.jpg', score: 42 }]} />);
+  expect(container.querySelectorAll('.hud-chip .player-avatar-photo')).toHaveLength(2);
+  expect(container.querySelector('.hud-chip.mine .hud-chip-name').textContent).toBe('Alice');
+});

@@ -104,7 +104,6 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
     return base;
   };
 
-  const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
   const total = question.totalRounds || 10;
   const correctAnswer = sr && !isInstantAck ? question.answers[reveal.correctIndex] : null;
   const maxScore = (Math.max(1, total) + 1) * 20;
@@ -113,17 +112,9 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
 
   return (
     <div data-round-phase={timing.phase} className={`container game game-v4 duel-premium${opponents.length > 1 ? ' game-v4--group' : ''}${!opponents.length ? ' duel-premium--solo' : ''}${question.image ? ' game-v4--photo' : ''}`}>
-      <div className="duel-score-rails">
-        {railPlayers.map((player, index) => <div key={player.id} className={`duel-score-rail ${player.mine ? 'mine' : 'other'}`}
-          data-gained={player.mine && sr && reveal.yourCorrect ? 'true' : undefined}
-          style={{ '--rail-index': player.mine ? 0 : index - 1 }} role="progressbar"
-          aria-label={`${player.name} · ${t('matchScore')}`} aria-valuemin={0} aria-valuemax={maxScore} aria-valuenow={player.score || 0}>
-          <span style={{ height: `${Math.min(100, Math.max(0, (player.score || 0) / maxScore * 100))}%` }} />
-        </div>)}
-      </div>
       <div className="hud-timer-block">
         <span className="hud-timer-label">{t('time')}</span>
-        <span className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr && !isInstantAck ? '\u2713' : timeLeft}</span>
+        <span style={{ '--timer-progress': `${pct}%` }} className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr && !isInstantAck ? '\u2713' : timeLeft}</span>
       </div>
       <PlayerHud
         me={{ avatar, frame, name, score: Number.isFinite(reveal?.yourScore) ? reveal.yourScore : score,
@@ -133,6 +124,15 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
         revealing={sr && !isInstantAck}
       />
 
+      <div className="duel-arena-stage">
+      <div className="duel-score-rails">
+        {railPlayers.map((player, index) => <div key={player.id} className={`duel-score-rail ${player.mine ? 'mine' : 'other'}`}
+          data-gained={player.mine && sr && reveal.yourCorrect ? 'true' : undefined}
+          style={{ '--rail-index': player.mine ? 0 : index - 1 }} role="progressbar"
+          aria-label={`${player.name} · ${t('matchScore')}`} aria-valuemin={0} aria-valuemax={maxScore} aria-valuenow={player.score || 0}>
+          <span style={{ height: `${Math.min(100, Math.max(0, (player.score || 0) / maxScore * 100))}%` }} />
+        </div>)}
+      </div>
       {/* The round count carries progression; side rails carry the scores. */}
       <div className="game-round-meta">
       <div className="game-progress-text">
@@ -175,7 +175,6 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
                 onClick={() => handleAnswer(idx)}
                 disabled={!timing.canAnswer || question.expired || selected !== null || sr}
               >
-                <span className="letter" aria-hidden="true">{letters[idx] || idx + 1}</span>
                 <span className="answer-text">{a}</span>
                 {sr && ((isInstantAck && idx === ownAnswer) || (!isInstantAck && (idx === reveal.correctIndex || idx === ownAnswer))) && (
                   <span className="answer-result-icon" aria-label={(!isInstantAck ? idx === reveal.correctIndex : reveal.yourCorrect) ? t('answerCorrect') : t('answerIncorrect')}>
@@ -192,6 +191,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
             />
           </div>
         </div>
+      </div>
       </div>
       <div className="game-footer">
       <div className={`reveal-note mobile-answer-feedback${sr ? (reveal.yourCorrect ? ' is-correct' : ' is-wrong') : ''}`} role="status" aria-live="polite" aria-atomic="true">
