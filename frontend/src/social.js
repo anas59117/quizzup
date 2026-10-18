@@ -13,6 +13,10 @@ export function useSocial(wsRef, clientId) {
   const [dataState, dispatch] = useReducer(socialDataReducer, initialSocialData);
   const [activeConversationId, setActiveConversationId] = useState(null);
   const activeRef = useRef(null);
+  const activeAsyncRef = useRef(null);
+  const asyncRequests = useRef({});
+  const asyncSequence = useRef(0);
+  const [activeAsyncChallengeId, setActiveAsyncChallengeId] = useState(null);
   const [connected, setConnected] = useState(false);
   const [gameChat, setGameChat] = useState([]);
   const gameChatSeenRef = useRef(0);
@@ -27,12 +31,18 @@ export function useSocial(wsRef, clientId) {
   );
 
   const handleMessage = useCallback((data) => {
+    if (data.type === 'async_challenge_state' || (data.type === 'social_error' && data.challengeId)) {
+      const expected = asyncRequests.current[data.challengeId];
+      if (data.requestId && expected && data.requestId !== expected) return;
+      delete asyncRequests.current[data.challengeId];
+    }
     dispatch({ ...data, clientId });
     if (['dm', 'dm_sent', 'challenge_updated'].includes(data.type)) {
       send({ type: 'conversations_list' });
-      if (activeRef.current && typeof document !== 'undefined' && document.visibilityState === 'visible') send({ type: 'dm_read', targetId: activeRef.current });
+      if (activeRef.current && !activeAsyncRef.current && (!data.message || [data.message.fromId, data.message.toId].includes(activeRef.current)) && typeof document !== 'undefined' && document.visibilityState === 'visible') send({ type: 'dm_read', targetId: activeRef.current });
     }
     if (data.type === 'identified') {
+      if (activeAsyncRef.current) { delete asyncRequests.current[activeAsyncRef.current]; send({ type: 'async_challenge_play', challengeId: activeAsyncRef.current }); }
       send({ type: 'conversations_list' });
       if (activeRef.current) send({ type: 'dm_history', targetId: activeRef.current });
     }
@@ -119,7 +129,7 @@ export function useSocial(wsRef, clientId) {
     return sent;
   }, [send]);
   const markRead = useCallback(targetId => {
-    if (activeRef.current !== targetId || document.visibilityState !== 'visible') return false;
+    if (activeRef.current !== targetId || activeAsyncRef.current || document.visibilityState !== 'visible') return false;
     return send({ type: 'dm_read', targetId });
   }, [send]);
   const openConversation = useCallback(targetId => {
@@ -129,11 +139,29 @@ export function useSocial(wsRef, clientId) {
     markRead(targetId);
   }, [requestHistory, markRead]);
   const closeConversation = useCallback(() => { activeRef.current = null; setActiveConversationId(null); }, []);
-  const createChallenge = (targetId, category) => {
-    const sent = send({ type: 'challenge_create', targetId, category });
+  const createChallenge = (targetId, category, mode = 'live') => {
+    const sent = send({ type: 'challenge_create', targetId, category, mode });
     if (sent) dispatch({ type: 'pending', key: `challenge:${targetId}` });
     return sent;
   };
+  const playAsyncChallenge = challengeId => {
+    activeAsyncRef.current = challengeId;
+    setActiveAsyncChallengeId(challengeId);
+    const requestId = `async-${++asyncSequence.current}`;
+    const sent = send({ type: 'async_challenge_play', challengeId, requestId });
+    if (sent) asyncRequests.current[challengeId] = requestId;
+    if (sent) dispatch({ type: 'async_pending', challengeId });
+    return sent;
+  };
+  const answerAsyncChallenge = (challengeId, round, answerIndex) => {
+    if (asyncRequests.current[challengeId] || dataState.asyncPending[challengeId]) return false;
+    const requestId = `async-${++asyncSequence.current}`;
+    const sent = send({ type: 'async_challenge_answer', challengeId, round, answerIndex, requestId });
+    if (sent) asyncRequests.current[challengeId] = requestId;
+    if (sent) dispatch({ type: 'async_pending', challengeId });
+    return sent;
+  };
+  const closeAsyncChallenge = () => { activeAsyncRef.current = null; setActiveAsyncChallengeId(null); if (activeRef.current) markRead(activeRef.current); };
   const respondChallenge = (challengeId, accept) => {
     const sent = send({ type: 'challenge_respond', challengeId, accept });
     if (sent) dispatch({ type: 'pending', key: challengeId });
@@ -148,6 +176,7 @@ export function useSocial(wsRef, clientId) {
       if (online && socket !== previous) {
         previous = socket;
         requestConversations();
+        if (activeAsyncRef.current) { delete asyncRequests.current[activeAsyncRef.current]; send({ type: 'async_challenge_play', challengeId: activeAsyncRef.current }); }
         if (activeRef.current) requestHistory(activeRef.current);
       }
       if (!online) previous = null;
@@ -157,15 +186,15 @@ export function useSocial(wsRef, clientId) {
     const visible = () => { if (activeRef.current) markRead(activeRef.current); };
     document.addEventListener('visibilitychange', visible);
     return () => { clearInterval(timer); document.removeEventListener('visibilitychange', visible); };
-  }, [wsRef, requestConversations, requestHistory, markRead]);
+  }, [wsRef, requestConversations, requestHistory, markRead, send]);
   useEffect(() => {
-    if (!Object.values(dataState.pendingActions).some(Boolean) && !Object.values(dataState.loading).some(Boolean)) return undefined;
-    const timer = setTimeout(() => dispatch({ type: 'social_error', action: 'timeout', code: 'timeout' }), 12000);
+    if (!Object.values(dataState.pendingActions).some(Boolean) && !Object.values(dataState.loading).some(Boolean) && !Object.values(dataState.asyncPending).some(Boolean)) return undefined;
+    const timer = setTimeout(() => { asyncRequests.current = {}; dispatch({ type: 'social_error', action: 'timeout', code: 'timeout' }); }, 12000);
     return () => clearTimeout(timer);
-  }, [dataState.pendingActions, dataState.loading]);
+  }, [dataState.pendingActions, dataState.loading, dataState.asyncPending]);
   const dms = { ...legacyDms, ...Object.fromEntries(Object.entries(dataState.messages).map(([id, list]) => [id, list.map(m => ({ ...m, from: m.fromId === clientId ? 'me' : 'them' }))])) };
   return {
-    ...dataState, clientId, connected, activeConversationId, requestConversations, requestHistory,
+    ...dataState, clientId, connected, activeAsyncChallengeId, playAsyncChallenge, answerAsyncChallenge, closeAsyncChallenge, activeConversationId, requestConversations, requestHistory,
     openConversation, closeConversation, markRead, createChallenge, respondChallenge,
     friends, requests, outgoingRequests, dms, gameChat, gameChatSeenRef,
     handleMessage, addFriend, acceptFriend, declineFriend, removeFriend,
@@ -173,7 +202,7 @@ export function useSocial(wsRef, clientId) {
   };
 }
 
-export function FriendsScreen({ social, onInviteFriend, onJoinFriend, pending }) {
+export function FriendsScreen({ social, onInviteFriend, onJoinFriend, pending, onOpenMessages }) {
   const { t } = useI18n();
   const [openChat, setOpenChat] = useState(null);
   const [draft, setDraft] = useState('');
@@ -228,13 +257,13 @@ export function FriendsScreen({ social, onInviteFriend, onJoinFriend, pending })
             aria-expanded={openChat === f.id}
             onClick={() => {
               setConfirmRemove(null);
-              setOpenChat(openChat === f.id ? null : f.id);
+              if (onOpenMessages) onOpenMessages(f.id); else setOpenChat(openChat === f.id ? null : f.id);
             }}
             onKeyDown={(event) => {
               if (event.key === 'Enter' || event.key === ' ') {
                 event.preventDefault();
                 setConfirmRemove(null);
-                setOpenChat(openChat === f.id ? null : f.id);
+                if (onOpenMessages) onOpenMessages(f.id); else setOpenChat(openChat === f.id ? null : f.id);
               }
             }}
           >
@@ -372,6 +401,7 @@ export function GameChat({ social }) {
     </div>
   );
 }
+
 
 
 

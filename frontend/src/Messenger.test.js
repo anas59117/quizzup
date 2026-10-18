@@ -17,7 +17,7 @@ test('thread actions send selected theme; Escape closes chooser then thread', ()
  const social={...base(),activeConversationId:'peer'};render(social);
  act(() => container.querySelector('.messenger-challenge').click());
  expect(container.querySelector('[role="dialog"]')).not.toBeNull();
- act(() => container.querySelector('.messenger-themes button').click()); expect(social.createChallenge).toHaveBeenCalledWith('peer','movies');
+ act(() => container.querySelector('.messenger-themes button').click()); expect(social.createChallenge).toHaveBeenCalledWith('peer','movies','live');
  act(() => window.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape'}))); expect(social.closeConversation).toHaveBeenCalled();
 });
 test('challenge acceptance uses canonical recipient identity and disables duplicate pending actions', () => {
@@ -36,4 +36,10 @@ test('draft survives a failed send and clears only after a canonical acknowledge
  expect(textarea.value).toBe('Hello');
  render({...social,messages:{peer:[{id:'ack',fromId:'me',toId:'peer',kind:'text',text:'Hello',createdAt:'2026-10-18'}]}});
  expect(textarea.value).toBe('');
+});
+test('take turns chooser sends async mode while recipient cannot play before accepting', () => {
+ const social={...base(),activeConversationId:'peer',playAsyncChallenge:jest.fn(),messages:{peer:[{id:'async',fromId:'peer',toId:'me',kind:'challenge',createdAt:'2026-10-18',challenge:{id:'c',mode:'async',fromId:'peer',toId:'me',category:'music',status:'pending',expiresAt:'2099-01-01'}}]}};
+ render(social);expect(container.querySelector('.messenger-duel').textContent).not.toContain('Play my');
+ act(()=>container.querySelector('.messenger-challenge').click());expect(container.querySelector('.messenger-modes button').getAttribute('aria-pressed')).toBe('true');
+ act(()=>container.querySelectorAll('.messenger-modes button')[1].click());act(()=>container.querySelector('.messenger-themes button').click());expect(social.createChallenge).toHaveBeenCalledWith('peer','movies','async');
 });

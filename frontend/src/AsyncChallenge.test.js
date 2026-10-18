@@ -1,0 +1,12 @@
+import React, {act} from 'react';
+import { createRoot } from 'react-dom/client';
+import { AsyncChallenge } from './AsyncChallenge';
+import { I18nProvider } from './i18n';
+global.IS_REACT_ACT_ENVIRONMENT=true;
+let root,container;
+beforeEach(()=>{jest.useFakeTimers();jest.setSystemTime(1000);localStorage.setItem('quizzup-lang','en');container=document.createElement('div');document.body.append(container);root=createRoot(container);});
+afterEach(()=>{act(()=>root.unmount());container.remove();jest.useRealTimers();});
+const base=()=>({connected:true,clientId:'me',asyncRuns:{a:{status:'playing',score:0,opensAt:3050,deadline:13050,question:{round:0,totalRounds:6,question:'Which city?',answers:['Paris','Rome','Oslo','Lima']}}},answerAsyncChallenge:jest.fn(()=>true)});
+const render=s=>act(()=>root.render(<I18nProvider><AsyncChallenge social={s} challengeId="a" onClose={()=>{}}/></I18nProvider>));
+test('reading and entrances precede enabled answers; timeout only follows complete deadline',()=>{const s=base();render(s);expect(container.querySelectorAll('.async-answers button')).toHaveLength(0);act(()=>jest.advanceTimersByTime(1520));expect(container.querySelectorAll('.async-answers button')).toHaveLength(4);expect(container.querySelector('.async-answers button').disabled).toBe(true);act(()=>jest.advanceTimersByTime(600));expect(container.querySelector('.async-answers button').disabled).toBe(false);expect(s.answerAsyncChallenge).not.toHaveBeenCalled();act(()=>jest.advanceTimersByTime(10000));expect(s.answerAsyncChallenge).toHaveBeenCalledTimes(1);expect(s.answerAsyncChallenge).toHaveBeenCalledWith('a',0,-1);});
+test('offline answers stay disabled and never send timeout; photo question uses two columns',()=>{const s=base();s.connected=false;s.asyncRuns.a.question.image='/city.jpg';render(s);act(()=>jest.advanceTimersByTime(15000));expect(container.querySelector('.async-answers.with-images')).not.toBeNull();expect(container.querySelector('.async-answers button').disabled).toBe(true);expect(s.answerAsyncChallenge).not.toHaveBeenCalled();});

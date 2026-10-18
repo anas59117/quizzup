@@ -8,6 +8,7 @@ import { PlayerAvatar } from './PlayerAvatar';
 import { FriendInviteActions } from './FriendInviteActions';
 import { SOCIAL_COPY } from './social-copy';
 import './messenger.css';
+import { AsyncChallenge } from './AsyncChallenge';
 
 export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoinFriend, pending, initialPeerId }) {
   const { lang } = useI18n();
@@ -15,6 +16,8 @@ export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoin
   const [query, setQuery] = useState('');
   const [drafts, setDrafts] = useState({});
   const [chooser, setChooser] = useState(false);
+  const [mode, setMode] = useState('live');
+  const asyncId = social.activeAsyncChallengeId;
   const [sendError, setSendError] = useState(false);
   const endRef = useRef(null);
   const submitted = useRef({});
@@ -25,13 +28,13 @@ export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoin
   const peers = [...new Map([...conversations.map(item => item.peer), ...social.friends].filter(Boolean).map(peer => [peer.id, peer])).values()];
   const peer = peers.find(item => item.id === id);
   const draft = drafts[id] || '';
-  const back = () => { if (chooser) setChooser(false); else if (id) social.closeConversation(); else onBack?.(); };
+  const back = () => { if (asyncId) social.closeAsyncChallenge(); else if (chooser) setChooser(false); else if (id) social.closeConversation(); else onBack?.(); };
   useEffect(() => {
     social.requestConversations();
     if (initialPeerId) social.openConversation(initialPeerId);
-    return () => social.closeConversation();
+    return () => { social.closeAsyncChallenge?.(); social.closeConversation(); };
     // A mounted messenger owns the visible thread; initial peer is consumed once.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, []);
   useEffect(() => { setChooser(false); setSendError(false); }, [id]);
   useEffect(() => {
@@ -42,10 +45,10 @@ export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoin
     }
   }, [id, messages, social.clientId]);
   useEffect(() => {
-    const children = [...(shellRef.current?.children || [])].filter(child => !child.classList.contains('messenger-sheet'));
-    children.forEach(child => { child.inert = chooser; });
+    const children = [...(shellRef.current?.children || [])].filter(child => !child.classList.contains('messenger-sheet') && !child.classList.contains('async-duel'));
+    children.forEach(child => { child.inert = chooser || !!asyncId; });
     return () => children.forEach(child => { child.inert = false; });
-  }, [chooser]);
+  }, [chooser, asyncId]);
   useEffect(() => {
     const viewport = window.visualViewport;
     const update = () => shellRef.current?.style.setProperty('--ms-viewport', `${viewport?.height || window.innerHeight}px`);
@@ -81,13 +84,14 @@ export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoin
     const status = challenge.status === 'pending' && !waiting ? 'expired' : challenge.status;
     return <section className="messenger-duel" aria-label={c.invite}>
       <span className="messenger-kicker"><Icon name="bolt" size={16} /> {c.invite}</span>
-      <h3>{theme(challenge.category)}</h3>
+      <h3>{theme(challenge.category)}</h3>{challenge.mode === 'async' && <small>{c.asyncMode}</small>}
       <p>{c[status] || status}</p>
       {waiting && challenge.toId === social.clientId && <div className="messenger-actions">
         <button disabled={social.pendingActions?.[challenge.id] || !social.connected} onClick={() => social.respondChallenge(challenge.id, true)}>{c.accept}</button>
         <button className="quiet" disabled={social.pendingActions?.[challenge.id] || !social.connected} onClick={() => social.respondChallenge(challenge.id, false)}>{c.decline}</button>
       </div>}
-      {['completed', 'declined', 'expired'].includes(status) && <button disabled={!social.connected || social.pendingActions?.[`challenge:${id}`]} onClick={() => social.createChallenge(id, challenge.category)}>{c.rematch}</button>}
+      {challenge.mode === 'async' && (status === 'accepted' || (waiting && challenge.fromId === social.clientId) || status === 'completed') && <button disabled={!social.connected || social.asyncPending?.[challenge.id]} onClick={() => social.playAsyncChallenge(challenge.id)}>{status === 'completed' ? c.result : social.asyncRuns?.[challenge.id]?.status === 'waiting' ? c.asyncWaiting : c.asyncPlay}</button>}
+      {['completed', 'declined', 'expired'].includes(status) && <button disabled={!social.connected || social.pendingActions?.[`challenge:${id}`]} onClick={() => social.createChallenge(id, challenge.category, challenge.mode || 'live')}>{c.rematch}</button>}
     </section>;
   };
   const resultCard = message => {
@@ -105,7 +109,7 @@ export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoin
       {id ? <button className="messenger-peer" disabled={!onOpenPlayer} onClick={() => onOpenPlayer?.(id)} aria-label={`${c.profile} · ${peer?.name || ''}`}>
         <span className="messenger-avatar"><PlayerAvatar avatar={peer?.avatar} /></span><span><strong>{peer?.name || c.title}</strong><small>{peer?.online ? c.online : c.offline}</small></span>
       </button> : <div><span className="messenger-kicker">{c.eyebrow}</span><h1>{c.title}{social.unreadCount > 0 && <span className="messenger-total">{social.unreadCount}</span>}</h1></div>}
-      {id && <button className="messenger-challenge" onClick={() => setChooser(true)} aria-label={c.challenge}><Icon name="bolt" size={19} /><span>{c.challenge}</span></button>}
+      {id && <button className="messenger-challenge" onClick={() => { setMode('live'); setChooser(true); }} aria-label={c.challenge}><Icon name="bolt" size={19} /><span>{c.challenge}</span></button>}
     </header>
     {!social.connected && <p className="messenger-notice" role="status">{c.disconnected}</p>}
     {(social.error || sendError) && <div className="messenger-notice error" role="alert">{sendError ? c.failed : c.error}<button onClick={() => { setSendError(false); id ? social.requestHistory(id) : social.requestConversations(); }}>{c.retry}</button></div>}
@@ -144,9 +148,11 @@ export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoin
       const first = buttons[0], last = buttons[buttons.length - 1];
       if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
-    }}><header><h2 id="messenger-choose">{c.choose}</h2><button autoFocus className="messenger-icon" aria-label={c.cancel} onClick={() => setChooser(false)}><Icon name="close" size={20} /></button></header><p>{c.chooseHelp}</p><div className="messenger-themes">{CATEGORIES.map(category => <button disabled={!social.connected || social.pendingActions?.[`challenge:${id}`]} key={category.key} onClick={() => { if (social.createChallenge(id, category.key)) setChooser(false); }}><span>{category.label}</span><Icon name="arrow" size={18} /></button>)}</div></div>}
+    }}><header><h2 id="messenger-choose">{c.choose}</h2><button autoFocus className="messenger-icon" aria-label={c.cancel} onClick={() => setChooser(false)}><Icon name="close" size={20} /></button></header><div className="messenger-modes" role="group" aria-label={c.mode}><button aria-pressed={mode === 'live'} onClick={() => setMode('live')}>{c.liveMode}</button><button aria-pressed={mode === 'async'} onClick={() => setMode('async')}>{c.asyncMode}</button></div><p>{mode === 'async' ? c.asyncHelp : c.chooseHelp}</p><div className="messenger-themes">{CATEGORIES.map(category => <button disabled={!social.connected || social.pendingActions?.[`challenge:${id}`]} key={category.key} onClick={() => { if (social.createChallenge(id, category.key, mode)) setChooser(false); }}><span>{category.label}</span><Icon name="arrow" size={18} /></button>)}</div></div>}
+    {asyncId && <AsyncChallenge social={social} challengeId={asyncId} onClose={() => { social.closeAsyncChallenge(); shellRef.current?.querySelector('.messenger-challenge')?.focus(); }} />}
   </section>;
 }
+
 
 
 

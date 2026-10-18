@@ -1,3 +1,4 @@
+import { receiveAsyncState } from './async-challenge-data';
 export function mergeMessages(previous = [], incoming = []) {
   const byId = new Map(previous.filter(Boolean).map(message => [message.id, message]));
   incoming.filter(Boolean).forEach(message => { if (message.id) byId.set(message.id, { ...byId.get(message.id), ...message }); });
@@ -6,10 +7,17 @@ export function mergeMessages(previous = [], incoming = []) {
 export function messagePeer(message, clientId, fallback) {
   return message.fromId === clientId ? message.toId : message.fromId || fallback;
 }
-export const initialSocialData = { messages: {}, conversations: [], unreadCount: 0, loading: {}, error: null, pendingActions: {}, hasMore: {} };
+export const initialSocialData = { messages: {}, conversations: [], unreadCount: 0, loading: {}, error: null, pendingActions: {}, hasMore: {}, asyncRuns: {}, asyncPending: {} };
 export function socialDataReducer(state, action) {
+  if (action.type === 'async_pending') return { ...state, error: null, asyncPending: { ...state.asyncPending, [action.challengeId]: true } };
+  if (action.type === 'async_challenge_state') {
+    const previous = state.asyncRuns[action.challengeId];
+    const next = receiveAsyncState(previous, action);
+    if (next === previous) return state;
+    return { ...state, asyncRuns: { ...state.asyncRuns, [action.challengeId]: next }, asyncPending: { ...state.asyncPending, [action.challengeId]: false }, error: null };
+  }
   if (action.type === 'loading') return { ...state, error: null, loading: { ...state.loading, [action.key]: true } };
-  if (action.type === 'social_error' || action.type === 'dm_unavailable') return { ...state, loading: {}, pendingActions: {}, error: action };
+  if (action.type === 'social_error' || action.type === 'dm_unavailable') return { ...state, loading: {}, pendingActions: {}, asyncPending: {}, error: action };
   if (action.type === 'pending') return { ...state, error: null, pendingActions: { ...state.pendingActions, [action.key]: true } };
   if (action.type === 'conversations_list') return { ...state, conversations: action.conversations || [], unreadCount: action.unreadCount || 0, loading: { ...state.loading, conversations: false }, error: null };
   if (action.type === 'dm_read') {
@@ -27,4 +35,5 @@ export function socialDataReducer(state, action) {
   }
   return state;
 }
+
 

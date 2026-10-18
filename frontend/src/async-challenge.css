@@ -1,0 +1,59 @@
+.async-duel {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  background: #101d2c;
+  color: #f5f2e9;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding-bottom: max(16px, env(safe-area-inset-bottom));
+}
+.async-duel button { min-height: 44px; font: inherit; cursor: pointer; }
+.async-duel button:focus-visible { outline: 3px solid #9edbf4; outline-offset: 3px; }
+.async-header { display: flex; gap: 12px; align-items: center; padding: 18px 16px; border-bottom: 1px solid #344354; }
+.async-header > button { min-width: 44px; border: 0; background: transparent; color: #f5f2e9; font-size: 25px; }
+.async-header > div:nth-child(2) { flex: 1; }
+.async-header span { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #add9ea; }
+.async-header h2 { font-size: 18px; margin: 6px 0 0; }
+.async-score { text-align: right; }
+.async-score small { font-size: 10px; display: block; color: #add9ea; }
+.async-score strong { font-size: 26px; color: #f0c4a4; }
+.async-playfield { padding: 24px 20px; }
+.async-timing { display: flex; align-items: center; gap: 14px; color: #e6b58d; font-size: 12px; min-height: 24px; }
+.async-timing > span { min-width: 70px; }
+.async-timing > div { height: 4px; flex: 1; background: #344354; border-radius: 4px; overflow: hidden; }
+.async-timing i { display: block; height: 100%; background: #dfae86; transition: width 80ms linear; }
+.async-question { font-size: clamp(23px, 5vw, 31px); line-height: 1.3; letter-spacing: -.5px; margin: 28px 0; }
+.async-question-image { display: block; max-width: 100%; max-height: 180px; object-fit: contain; border-radius: 16px; margin: 0 auto 20px; }
+.async-answers { display: grid; gap: 10px; min-height: 208px; }
+.async-answers button { display: flex; align-items: center; gap: 12px; text-align: left; border: 1px solid #56768c; background: #1c3448; color: #f5f2e9; border-radius: 16px; padding: 16px; min-height: 58px; font-size: 14px; line-height: 1.4; animation: async-answer-in var(--answer-enter) ease-out both; animation-delay: calc(var(--answer-index) * var(--answer-stagger)); }
+.async-answers button:disabled { opacity: .7; cursor: default; }
+.async-answers button:hover:enabled { border-color: #a7dced; background: #25465e; }
+.async-letter { display: grid; place-items: center; flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: #112434; color: #b6deed; font-size: 11px; }
+.async-answers.with-images { grid-template-columns: 1fr 1fr; }
+.async-answers.with-images button { position: relative; flex-direction: column; align-items: stretch; padding: 8px; text-align: center; }
+.async-answers.with-images img { width: 100%; height: 100px; object-fit: cover; border-radius: 10px; }
+.async-answers.with-images .async-letter { position: absolute; top: 12px; left: 12px; }
+.async-notice { padding: 12px 20px; margin: 0; background: #55402f; color: #ffe1c4; font-size: 12px; line-height: 1.5; }
+.async-notice button { background: transparent; border: 0; color: #fff2df; text-decoration: underline; }
+.async-feedback { display: flex; align-items: center; gap: 8px; padding: 12px 20px; background: #42372e; color: #f6d5b6; font-size: 12px; }
+.async-feedback.correct { background: #1d3a39; color: #c2eddf; }
+.async-state { text-align: center; padding: 48px 24px; margin: auto; max-width: 400px; line-height: 1.6; }
+.async-state > svg { color: #e7b48c; }
+.async-state h3 { font-size: 28px; line-height: 1.2; margin: 20px 0 14px; }
+.async-state p { color: #c0d2df; font-size: 14px; }
+.async-state button { border: 1px solid #9c6a46; background: #d7a57e; color: #231d1b; border-radius: 24px; padding: 12px 20px; margin-top: 16px; font-weight: 700; }
+.async-rewards { font-size: 11px!important; color: #9db3c5!important; margin-top: 26px; }
+.async-final-scores { display: flex; justify-content: center; gap: 36px; margin-top: 24px; }
+.async-final-scores span { display: block; font-size: 12px; color: #b4d8e6; }
+.async-final-scores strong { font-size: 40px; }
+@keyframes async-answer-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 350px) { .async-playfield { padding: 18px 14px; } .async-header { gap: 6px; padding: 14px 10px; } }
+@media (prefers-reduced-motion: reduce) { .async-duel * { animation: none!important; transition: none!important; } }
+
+.async-answers button.is-correct { background:#264b43; border-color:#b2e6d4; opacity:1; }
+.async-answers.with-images button { min-height:76px; justify-content:center; }
+.async-feedback { transition:background-color 200ms ease; }
+
+.async-mute { background:transparent; border:0; color:#c2dfeb; min-width:44px; }
