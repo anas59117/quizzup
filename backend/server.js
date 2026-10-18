@@ -9,6 +9,7 @@ const social = require('./social');
 const posts = require('./posts');
 const messaging = require('./messaging');
 const challenges = require('./challenges');
+const asyncChallenges = require('./async-challenges');
 const matchHistory = require('./match-history');
 const { mountMediaRoutes } = require('./community-media');
 const game = require('./game');
@@ -253,7 +254,7 @@ async function handleIdentify(ws, data, state) {
   game.send(ws, { type: 'friends_list', friends: social.getFriendsList(state.clientId) });
   game.send(ws, { type: 'friend_requests', requests: social.getPendingRequests(state.clientId) });
   game.send(ws, { type: 'stats', stats: fullStats(state.clientId) });
-  game.send(ws, { type: 'feed_list', posts: posts.getFeed() });
+  game.send(ws, { type: 'feed_list', posts: posts.getFeed({ viewerId: state.clientId }) });
   const pending = notifications.take(state.clientId);
   if (pending.length) game.send(ws, { type: 'notifications', notifications: pending });
   notifyPresence(state.clientId, true);
@@ -331,6 +332,7 @@ function handleFeed(ws, data, state) {
     const scope = data.scope === 'following' && clientId ? 'following' : 'all';
     const feedPosts = posts.getFeed({
       limit: 40,
+      viewerId: clientId,
       category,
       authorIds:
         scope === 'following' ? follows.getFollowing(clientId) : undefined,
@@ -581,6 +583,8 @@ async function handleMessaging(ws, data, state) {
       'conversations_list',
       'challenge_create',
       'challenge_respond',
+      'async_challenge_play',
+      'async_challenge_answer',
       'theme_follow',
       'match_history',
     ].includes(data.type)
@@ -627,22 +631,49 @@ async function handleMessaging(ws, data, state) {
     if (data.type === 'challenge_create') {
       const category = validCategoryKey(data.category);
       if (!category) throw Error('INVALID_CATEGORY');
-      const challenge = challenges.create(uid, targetId, category);
+      if (data.mode && !['live', 'async'].includes(data.mode))
+        throw Error('INVALID_MODE');
+      const fixedQuestions = data.mode === 'async'
+        ? require('./questions').getQuestions(6, category)
+        : null;
+      if (fixedQuestions && fixedQuestions.length !== 6)
+        throw Error('INSUFFICIENT_QUESTIONS');
+      const challenge = challenges.create(uid, targetId, category, data.mode);
+      if (fixedQuestions) asyncChallenges.create(challenge, fixedQuestions);
       const message = messaging.send(uid, targetId, '', {
         kind: 'challenge',
         challenge,
       });
-      await Promise.all([messaging.flush(), challenges.flush()]);
+      await Promise.all([
+        messaging.flush(), challenges.flush(), asyncChallenges.flush(),
+      ]);
       game.send(ws, { type: 'dm_sent', message });
       game.send(social.getWs(targetId), { type: 'dm', message });
       for (const id of [uid, targetId])
         game.send(social.getWs(id), { type: 'challenge_updated', challenge });
     }
+    if (
+      data.type === 'async_challenge_play' ||
+      data.type === 'async_challenge_answer'
+    ) {
+      if (isBusy(state.playerId, uid) || isWaiting(uid))
+        throw Error('PLAYERS_UNAVAILABLE');
+      const result = data.type === 'async_challenge_play'
+        ? asyncChallenges.play(uid, data.challengeId)
+        : asyncChallenges.answer(uid, data.challengeId, data.round, data.answerIndex);
+      await flushAllJsonWriters();
+      game.send(ws, {
+        type: 'async_challenge_state',
+        ...result,
+        requestId: typeof data.requestId === 'string'
+          ? data.requestId.slice(0, 80) : undefined,
+      });
+    }
     if (data.type === 'challenge_respond') {
       if (typeof data.accept !== 'boolean') throw Error('INVALID_RESPONSE');
       await challenges.respond(uid, data.challengeId, data.accept, {
         available: (c) =>
-          [c.fromId, c.toId].every((id) => {
+          (c.mode === 'async' ? [c.toId] : [c.fromId, c.toId]).every((id) => {
             const peer = social.getWs(id),
               st = peer?.socialState;
             return (
@@ -678,6 +709,9 @@ async function handleMessaging(ws, data, state) {
       type: 'social_error',
       action: data.type,
       code: err.message || 'SOCIAL_FAILED',
+      challengeId: data.challengeId,
+      requestId: typeof data.requestId === 'string'
+        ? data.requestId.slice(0, 80) : undefined,
       targetId,
     });
   }

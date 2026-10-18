@@ -23,11 +23,15 @@ function createChallenges({
   }
   function get(id) {
     const c = items.get(id);
-    if (c?.status === 'pending' && c.expiresAt <= Date.now())
+    if (
+      (c?.status === 'pending' ||
+        (c?.mode === 'async' && c.status === 'accepted')) &&
+      c.expiresAt <= Date.now()
+    )
       update(c, 'expired');
     return c;
   }
-  function create(fromId, toId, category) {
+  function create(fromId, toId, category, mode = 'live') {
     if (!friends(fromId, toId)) throw Error('NOT_FRIENDS');
     for (const id of items.keys()) {
       const c = get(id);
@@ -43,6 +47,7 @@ function createChallenges({
       fromId,
       toId,
       category,
+      mode: mode === 'async' ? 'async' : 'live',
       status: 'pending',
       createdAt: Date.now(),
       expiresAt: Date.now() + 86400000,
@@ -60,6 +65,7 @@ function createChallenges({
     if (!friends(c.fromId, c.toId)) throw Error('NOT_FRIENDS');
     if (!accept) return update(c, 'declined');
     if (!available(c)) throw Error('PLAYERS_UNAVAILABLE');
+    if (c.mode === 'async') return update(c, 'accepted');
     reserved.add(id);
     try {
       const g = await start(c);
@@ -70,6 +76,10 @@ function createChallenges({
     } finally {
       reserved.delete(id);
     }
+  }
+  // Live matches cannot survive a process restart; async runs persist separately.
+  for (const c of items.values()) {
+    if (c.status === 'accepted' && c.mode !== 'async') update(c, 'expired');
   }
   return {
     expire() {

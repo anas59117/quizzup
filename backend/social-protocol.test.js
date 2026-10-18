@@ -13,7 +13,7 @@ const jpeg = Buffer.from(
 
 test(
   'offline DM, friend-only privacy, community answers/media and live challenge work over authenticated WS',
-  { timeout: 30000 },
+  { timeout: 90000 },
   async () => {
     const dir = fs.mkdtempSync(
       path.join(os.tmpdir(), 'quizzup-photo-identity-'),
@@ -169,12 +169,72 @@ test(
       });
       const post = (await first.wait('post_created')).post;
       assert.equal(post.question.correctIndex, undefined);
+      send(first, { type: 'post_react', postId: post.id });
+      const reaction = await first.wait('post_reacted');
+      assert.equal(reaction.actorId, identity.uid);
+      assert.equal(reaction.reacted, true);
+      send(first, { type: 'feed_list' });
+      // Discard the identify-time feed, then inspect the explicit refresh.
+      await first.wait('feed_list');
+      assert.equal((await first.wait('feed_list')).posts.find(p => p.id === post.id).reacted, true);
+      send(second, { type: 'feed_list' });
+      await second.wait('feed_list');
+      assert.equal((await second.wait('feed_list')).posts.find(p => p.id === post.id).reacted, false);
       send(first, {
         type: 'post_question_answer',
         postId: post.id,
         answerIndex: 3,
       });
       assert.equal((await first.wait('post_question_result')).correct, true);
+      // Sequential async play: the recipient is offline for the entire first run.
+      second.ws.close();
+      await new Promise((r) => second.ws.once('close', r));
+      send(first, { type: 'challenge_create', targetId: other.uid, category: 'nba', mode: 'async' });
+      const asyncCard = (await first.wait('challenge_updated')).challenge;
+      assert.equal(asyncCard.mode, 'async');
+      await first.wait('dm_sent');
+      send(first, { type: 'async_challenge_play', challengeId: asyncCard.id, requestId: 'begin' });
+      let asyncState = await first.wait('async_challenge_state');
+      assert.equal(asyncState.requestId, 'begin');
+      const fixedFirstQuestion = asyncState.question.question;
+      send(first, { type: 'async_challenge_answer', challengeId: asyncCard.id, round: 0, answerIndex: 0, requestId: 'early' });
+      const early = await first.wait('social_error');
+      assert.equal(early.code, 'ANSWER_NOT_OPEN');
+      assert.equal(early.requestId, 'early');
+      const finishAsync = async (peer, state) => {
+        for (let round = 0; round < 6; round++) {
+          await new Promise(r => setTimeout(r, state.question.opensInMs + 30));
+          send(peer, { type: 'async_challenge_answer', challengeId: asyncCard.id, round, answerIndex: 0 });
+          state = await peer.wait('async_challenge_state');
+        }
+        return state;
+      };
+      asyncState = await finishAsync(first, asyncState);
+      assert.equal(asyncState.status, 'waiting');
+      assert.equal(asyncState.result, undefined);
+      await stop();
+      await start();
+      second = await socket(other.token);
+      send(second, { type: 'async_challenge_play', challengeId: asyncCard.id });
+      assert.equal((await second.wait('social_error')).code, 'CHALLENGE_NOT_ACCEPTED');
+      send(second, { type: 'challenge_respond', challengeId: asyncCard.id, accept: true });
+      assert.equal((await second.wait('challenge_updated')).challenge.status, 'accepted');
+      send(second, { type: 'async_challenge_play', challengeId: asyncCard.id });
+      asyncState = await second.wait('async_challenge_state');
+      assert.equal(asyncState.question.question, fixedFirstQuestion);
+      assert.equal(asyncState.result, undefined);
+      asyncState = await finishAsync(second, asyncState);
+      assert.equal(asyncState.status, 'completed');
+      assert.equal((await second.wait('challenge_updated')).challenge.status, 'completed');
+      const resultMessage = (await second.wait('dm')).message;
+      assert.deepEqual(resultMessage.result.scores, asyncState.result.scores);
+      send(second, { type: 'async_challenge_answer', challengeId: asyncCard.id, round: 5, answerIndex: 0 });
+      assert.equal((await second.wait('async_challenge_state')).status, 'completed');
+      send(second, { type: 'match_history' });
+      const completedMatches = (await second.wait('match_history')).matches;
+      assert.equal(completedMatches.filter(m => m.id === asyncCard.id).length, 1);
+      assert.equal(completedMatches[0].score, asyncState.score);
+      first = await socket(identity.token);
       send(first, {
         type: 'challenge_create',
         targetId: other.uid,
@@ -187,8 +247,8 @@ test(
         challengeId: challenge.id,
         accept: true,
       });
-      await first.wait('game_start');
-      await second.wait('game_start');
+      assert.equal((await first.wait('game_start')).opponents[0].clientId, other.uid);
+      assert.equal((await second.wait('game_start')).opponents[0].clientId, identity.uid);
       assert.equal(
         (await second.wait('challenge_updated')).challenge.status,
         'accepted',

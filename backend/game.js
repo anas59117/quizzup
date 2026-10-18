@@ -257,7 +257,7 @@ async function startGame(rawPlayers, categoryKey, { withBot = false } = {}) {
       send(p.ws, {
         type: 'game_start', gameId,
         you: { name: p.name, avatar: p.avatar, frame: p.frame },
-        opponents: othersOf(game, p.id, (o) => ({ id: o.id, name: o.name, avatar: o.avatar, frame: o.frame })),
+        opponents: othersOf(game, p.id, (o) => ({ id: o.id, clientId: o.isBot ? undefined : o.clientId, name: o.name, avatar: o.avatar, frame: o.frame })),
         totalRounds: game.questions.length,
       });
     });
@@ -425,6 +425,24 @@ function removePlayer(game, playerId) {
   // disappear from endGame() without an outcome ever being persisted. Solo
   // abandonment must not break a PvP win streak.
   stats.recordResult(left.clientId, false, game.mode === 'solo', 0);
+  // Leaving cannot erase observed wrong answers and preserve a theme streak.
+  // Removed players do not enter endGame's reward loop, so record these once here.
+  if (left.clientId && !left.isBot && game.categoryKey) {
+    const answers = (game.roundResults || []).flatMap((round) =>
+      (round || []).filter((answer) => answer.clientId === left.clientId),
+    );
+    const current = game.roundAnswers?.[left.id];
+    const revealed = (game.roundResults?.[game.currentRound] || [])
+      .some((answer) => answer.clientId === left.clientId);
+    if (current && !revealed && game.questions?.[game.currentRound]) {
+      answers.push({
+        question: game.questions[game.currentRound],
+        correct: current.correct === true,
+      });
+    }
+    topicStats.record(left.clientId, game.categoryKey, { won: false, xp: 0, answers });
+  }
+
 
   if (game.players.length < 2 || game.players.every((p) => p.isBot)) {
     endGame(game, 'opponent_disconnected');

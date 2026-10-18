@@ -169,6 +169,9 @@ function recordMatchResults(g, results) {
       const result = {
         gameId: g.id,
         category: g.categoryKey,
+        outcomes: (results || [])
+          .filter((r) => [a.clientId, b.clientId].includes(r.clientId))
+          .map((r) => ({ id: r.clientId, outcome: r.outcome })),
         scores: [
           { id: a.clientId, score: score(a) },
           { id: b.clientId, score: score(b) },
