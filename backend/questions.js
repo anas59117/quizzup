@@ -486,6 +486,11 @@ const playersMode = require('./data/mode.json');
 const playersKpop = require('./data/kpop.json');
 const playersSeriesAdoRomance = require('./data/series_ado_romance.json');
 const playersDrapeaux = require('./data/drapeaux.json');
+const soloLeveling = require('./data/solo_leveling.json');
+const lamineYamal = require('./data/lamine_yamal.json');
+const piratesDesCaraibes = require('./data/pirates_des_caraibes.json');
+const stromae = require('./data/stromae.json');
+const frieren = require('./data/frieren.json');
 
 const CATEGORIES = {
   movies: {
@@ -1189,6 +1194,7 @@ const CATEGORIES = {
   michael_jackson: { label: "Michael Jackson", icon: "🎤", questions: [...michaelJackson] },
   dua_lipa: { label: "Dua Lipa", icon: "🎤", questions: [...duaLipa] },
   billie_eilish: { label: "Billie Eilish", icon: "🎤", questions: [...billieEilish] },
+  stromae: { label: "Stromae", icon: "🎤", questions: [...stromae] },
   one_piece: { label: "One Piece", icon: "📺", questions: [...onePiece] },
   naruto: { label: "Naruto", icon: "📺", questions: [...naruto] },
   dragon_ball: { label: "Dragon Ball", icon: "📺", questions: [...dragonBall] },
@@ -1230,6 +1236,8 @@ const CATEGORIES = {
   hajime_no_ippo: { label: "Hajime no Ippo", icon: "📖", questions: [...mangaHajimeNoIppo] },
   kindaichi: { label: "Les Enquêtes de Kindaichi", icon: "📖", questions: [...mangaKindaichi] },
   touch: { label: "Touch", icon: "📖", questions: [...mangaTouch] },
+  solo_leveling: { label: "Solo Leveling", icon: "📖", questions: [...soloLeveling] },
+  frieren: { label: "Frieren", icon: "📖", questions: [...frieren] },
   breaking_bad: { label: "Breaking Bad", icon: "🎬", questions: [...breakingBad] },
   the_walking_dead: { label: "The Walking Dead", icon: "🎬", questions: [...theWalkingDead] },
   la_casa_de_papel: { label: "La Casa de Papel", icon: "🎬", questions: [...laCasaDePapel] },
@@ -1251,6 +1259,7 @@ const CATEGORIES = {
   indiana_jones: { label: "Indiana Jones", icon: "🎬", questions: [...indianaJones] },
   le_seigneur_des_anneaux: { label: "Le Seigneur des anneaux", icon: "🎬", questions: [...leSeigneurDesAnneaux] },
   mission_impossible: { label: "Mission: Impossible", icon: "🎬", questions: [...missionImpossible] },
+  pirates_des_caraibes: { label: "Pirates des Caraïbes", icon: "🎬", questions: [...piratesDesCaraibes] },
   gta_v: { label: "GTA V", icon: "🎮", questions: [...gtaV] },
   gta_san_andreas: { label: "GTA: San Andreas", icon: "🎮", questions: [...gtaSanAndreas] },
   red_dead_redemption: { label: "Red Dead Redemption", icon: "🎮", questions: [...redDeadRedemption] },
@@ -1291,6 +1300,7 @@ const CATEGORIES = {
   mohamed_salah: { label: "Mohamed Salah", icon: "⚽", questions: [...mohamedSalah] },
   lebron_james: { label: "LeBron James", icon: "⚽", questions: [...lebronJames] },
   michael_jordan: { label: "Michael Jordan", icon: "⚽", questions: [...michaelJordan] },
+  lamine_yamal: { label: "Lamine Yamal", icon: "⚽", questions: [...lamineYamal] },
   automobile: { label: "Automobile", icon: "✨", questions: [...automobile] },
   logos_grandes_marques: { label: "Logos et grandes marques", icon: "✨", questions: [...logosGrandesMarques] },
   sneakers: { label: "Sneakers", icon: "✨", questions: [...sneakers] },
