@@ -1,0 +1,30 @@
+.friend-invite-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
+}
+.friend-invite-actions button {
+  flex: 1 1 140px;
+  min-height: 44px;
+  padding: 12px 16px;
+  border: 1px solid #fff3db;
+  border-radius: 14px;
+  background: #fff3db;
+  color: #422216;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.friend-invite-actions button + button {
+  background: #422216;
+  color: #fff3db;
+}
+.friend-invite-actions button:focus-visible {
+  outline: 3px solid #55c4ef;
+  outline-offset: 3px;
+}
+.friend-invite-actions button:disabled {
+  cursor: default;
+  opacity: .65;
+}

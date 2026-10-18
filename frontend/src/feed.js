@@ -2,6 +2,7 @@ import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import { CATEGORIES, Icon } from './ui';
 import { useI18n } from './i18n';
 import { topicTitleKey, topicLabel } from './players';
+import { PlayerAvatar } from './PlayerAvatar';
 
 // The "Accueil" topic feed from the original QuizUp: short posts tagged with
 // a topic, with a lightning-bolt reaction. The feed can be narrowed to one
@@ -172,7 +173,7 @@ export function FeedScreen({ feed, myTopics = [], onPlayTopic, onOpenTopicLeader
       {feed.posts.length === 0 && <div className="friends-empty">{emptyText}</div>}
       {feed.posts.map((p) => (
         <div key={p.id} className="feed-post">
-          <div className="feed-post-ava">{p.authorAvatar}</div>
+          <div className="feed-post-ava"><PlayerAvatar avatar={p.authorAvatar} /></div>
           <div className="feed-post-body">
             <div className="feed-post-head">
               {p.authorId && onOpenPlayer ? (

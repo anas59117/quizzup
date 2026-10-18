@@ -4,15 +4,18 @@ import './App.css';
 import './design-system.css';
 import './design-v4.css';
 import './mobile-comfort.css';
+import './shop-art.css';
+import './audit-polish.css';
+import './duel-premium.css';
 import SFX from './sounds';
-import music from './music';
+import DuelMusic from './duel-music';
 import { useSocial, GameChat } from './social';
 import { ensureSignedIn, linkGoogleAccount, preloadFirebase } from './firebase';
 import { useStats } from './stats';
 import { useFeed, FeedScreen } from './feed';
 import { usePlayers, PlayerSheet, topicLabel } from './players';
 import { RoomLobby } from './multiplayer';
-import { AVATARS, useTheme, TopControls, NavBar, ErrorScreen, Toast } from './ui';
+import { AVATARS, useTheme, TopControls, BrowseHeader, NavBar, ErrorScreen, Toast } from './ui';
 import { HomeContent, EnterCodeContent, CategoriesContent, CategoryPreviewContent, ProfileContent, LeaderboardContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent, ShopContent } from './screens';
 import { CATEGORIES as CATS_V4 } from './ui';
 import { initAds, adsEnabled, countFinishedGame, interstitialThen, requestRewardOffer } from './ads';
@@ -26,6 +29,9 @@ import { useAdSystem, AdRewardsPanel } from './AdSystem';
 import { useSeasonPass, SeasonPassPanel } from './SeasonPass';
 import { FriendsScreen } from './social';
 import { LeagueContent, useLeague } from './LeagueSystem';
+import { AVATAR_IDS } from './PlayerAvatar';
+import { isProfilePhoto, uploadProfilePhoto } from './profile-photo';
+import { anchorQuestion, roundTiming } from './round-timing';
 
 const LIVE_SESSION_KEY = 'quizzup-live-session';
 const HISTORY_KEY = 'quizzup';
@@ -63,7 +69,6 @@ export default function App() {
   const [theme, toggleTheme] = useTheme();
   const [muted, setMuted] = useState(SFX.muted);
   const toggleMute = useCallback(() => setMuted(SFX.toggle()), []);
-  useEffect(() => { music.setMuted(muted); }, [muted]);
   useEffect(() => { initAds(); }, []);
 
   // Detect challenge URLs
@@ -78,11 +83,16 @@ export default function App() {
   const [adClaimed, setAdClaimed] = useState(false);
   const adGameRef = useRef(null);
   const adHooks = useMemo(() => ({
-    beforeAd: () => music.setMuted(true),
-    afterAd: () => music.setMuted(SFX.muted),
+    beforeAd: () => DuelMusic.setPaused(true),
+    afterAd: () => DuelMusic.setPaused(false),
   }), []);
   const [stage, setStage] = useState('join');
-  useEffect(() => { if (stage === 'shop') window.scrollTo(0, 0); }, [stage]);
+  useEffect(() => { DuelMusic.setMuted(muted); }, [muted]);
+  useEffect(() => {
+    DuelMusic.setActive(stage === 'playing');
+    return () => DuelMusic.setActive(false);
+  }, [stage]);
+  useEffect(() => { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }, [stage]);
   const [fatalReason, setFatalReason] = useState('connection');
   const [fatalCode, setFatalCode] = useState('');
   const [categoryFamily, setCategoryFamily] = useState(null);
@@ -117,6 +127,7 @@ export default function App() {
   const [room, setRoom] = useState(null); // { code, players, isHost, canStart }
   const [intro, setIntro] = useState(null);
   const [question, setQuestion] = useState(null);
+  const activeRoundRef = useRef(0);
   const [score, setScore] = useState(0);
   const [totalRounds, setTotalRounds] = useState(6);
   const [selected, setSelected] = useState(null);
@@ -283,36 +294,15 @@ export default function App() {
     }
   }, [showToast, t]);
 
+  const roundComplete = Array.isArray(reveal?.others);
   useEffect(() => {
-    if (stage !== 'playing' || !question || reveal) return undefined;
-    setTimeLeft(question.timeLimit);
+    if (stage !== 'playing' || !question || roundComplete) return undefined;
     if (tickRef.current) clearInterval(tickRef.current);
-    tickRef.current = setInterval(() => {
-      setTimeLeft((t) => {
-        const next = t > 0 ? t - 1 : 0;
-        if (next > 0 && next <= 3) SFX.countdownBeep(); else if (next > 3) SFX.tick(next <= 5);
-        return next;
-      });
-    }, 1000);
+    const update = () => setTimeLeft(roundTiming(question).timeLeft);
+    update();
+    tickRef.current = setInterval(update, 50);
     return () => clearInterval(tickRef.current);
-  }, [question, stage, reveal]);
-
-  // Background music per screen — one track per context, cross-faded on
-  // switch. During the reveal pause we keep whatever was already playing
-  // rather than interrupting it for the ~2.5s pause between rounds.
-  useEffect(() => {
-    if (stage === 'home' || stage === 'categories' || stage === 'profile' || stage === 'leaderboard' || stage === 'enter_code' || stage === 'shop') {
-      music.play('menu');
-    } else if (stage === 'waiting' || stage === 'room_wait') {
-      music.play('lobby');
-    } else if (stage === 'playing' && intro && !question) {
-      music.play('transition', { loop: false });
-    } else if (stage === 'playing' && question && !reveal) {
-      music.play(timeLeft <= 3 ? 'urgent' : 'thinking');
-    } else if (stage === 'join' || stage === 'finished' || stage === 'error') {
-      music.stop();
-    }
-  }, [stage, intro, question, reveal, timeLeft]);
+  }, [question, stage, roundComplete]);
 
   messageHandlerRef.current = (data) => {
     switch (data.type) {
@@ -320,6 +310,8 @@ export default function App() {
         setMyId(data.playerId);
         break;
       case 'identified':
+        if (data.profile?.name) setName(data.profile.name);
+        if (data.profile?.avatar) setAvatar(data.profile.avatar);
         if (stage === 'feed') feed.refresh();
         if (stage === 'leaderboard' && !data.queuedActionFlushed) {
           setLeaderboardLoading(true);
@@ -501,9 +493,14 @@ export default function App() {
         setTotalRounds(data.totalRounds);
         setScore(0);
         setRoom(null);
+        setQuestion(null);
+        setIntro(null);
+        setReveal(null);
+        setSelected(null);
         setStage('playing');
         break;
       case 'round_intro':
+        activeRoundRef.current = 0;
         if (Array.isArray(data.preloadImages)) {
           const cache = preloadedImagesRef.current;
           data.preloadImages.forEach((src) => {
@@ -523,12 +520,13 @@ export default function App() {
         setStage('playing');
         break;
       case 'question':
+        activeRoundRef.current = data.round || 1;
         setIntro(null);
-        questionShownAtRef.current = Date.now();
+        questionShownAtRef.current = Date.now() + (data.answerOpensInMs || 0);
         if ((data.round || 1) === 1 && !data.reconnect) {
           matchTallyRef.current = { correct: 0, answered: 0, rounds: 0, totalMs: 0 };
         }
-        setQuestion(data);
+        setQuestion(anchorQuestion(data));
         setSelected(data.reconnect && data.answered ? data.yourAnswer : null);
         setReveal(null);
         if (!data.reconnect) {
@@ -538,12 +536,22 @@ export default function App() {
       case 'report_ack':
         setReported(true);
         break;
+      case 'answer_ack':
+        if (!activeRoundRef.current || data.round !== activeRoundRef.current) break;
+        setReveal(data);
+        setScore(data.yourScore);
+        setSelected(data.yourAnswer);
+        break;
+      case 'opponent_answered':
+        if (!activeRoundRef.current) break;
+        setOpponents((prev) => prev.map((opponent) => opponent.id === data.id
+          ? { ...opponent, answered: true } : opponent));
+        break;
       case 'round_result':
-        if (!data.reconnect) {
-          if (data.yourCorrect) SFX.correct();
-          else if (data.timedOut && !data.yourAnswer && data.yourAnswer !== 0) SFX.timeUp();
-          else SFX.wrong();
-        }
+        activeRoundRef.current = 0;
+        // Outcome sounds belong to QuestionContent/GameFeel: acknowledgment
+        // and final result are two messages for one answer, not two outcomes.
+        if (!data.reconnect && data.timedOut && data.yourAnswer == null) SFX.timeUp();
         if (!data.reconnect) {
           const tally = matchTallyRef.current;
           tally.rounds += 1;
@@ -574,7 +582,7 @@ export default function App() {
         setStage('finished');
         setOpponents((prev) => data.others.map((upd) => ({ ...prev.find((o) => o.id === upd.id), ...upd })));
         statsHook.handleStatsMessage(data);
-        if (data.dayStreakUp && data.dayStreak > 1) showToast(t('dayStreakUp', { n: data.dayStreak }), 'success', 4500);
+        dismissToast(); // Result rewards are rendered inline below the headline.
         break;
       case 'notification':
         if (data.notification?.type === 'friend_overtook') {
@@ -592,9 +600,18 @@ export default function App() {
       }
       case 'stats':
         statsHook.handleStatsMessage(data);
+        if (AVATAR_IDS.includes(data.stats?.equippedItems?.avatars)) {
+          setAvatar(current => isProfilePhoto(current) ? current : data.stats.equippedItems.avatars);
+        }
         break;
       case 'shop_result':
         clearPending();
+        if (data.ok && data.action === 'equip' && AVATAR_IDS.includes(data.itemId) && !isProfilePhoto(avatar)) {
+          // Persist the confirmed choice as the public identity too, so future
+          // opponents see the same character as this player's shop/profile.
+          setAvatar(data.itemId);
+          sendSocket({ type: 'profile_update', name, avatar: data.itemId });
+        }
         if (data.ok) showToast(t(data.action === 'buy' ? 'shopBought' : 'shopEquipped'), 'success');
         else showToast(t(data.error === 'coins' ? 'shopNotEnough' : 'shopError'), 'error');
         break;
@@ -613,6 +630,10 @@ export default function App() {
           if (data.profile.avatar) setAvatar(data.profile.avatar);
         }
         showToast(t('profileUpdated'), 'success');
+        break;
+      case 'profile_update_failed':
+        clearPending();
+        showToast(t('profileUpdateUnavailable'), 'error');
         break;
       case 'follow_updated':
         players.handleMessage(data);
@@ -751,14 +772,24 @@ export default function App() {
     setStage('feed');
   }
 
-  function saveProfile(nextName, nextAvatar) {
+  async function saveProfile(nextName, nextAvatar, photoDraft = null) {
     if (pending) return;
     const cleanName = String(nextName || '').replace(/\s+/g, ' ').trim().slice(0, 20);
     if (!cleanName) return;
     beginPending();
-    if (!connect({ type: 'profile_update', name: cleanName, avatar: nextAvatar })) {
+    try {
+      const confirmedAvatar = photoDraft ? await uploadProfilePhoto(photoDraft) : nextAvatar;
+      if (!connect({ type: 'profile_update', name: cleanName, avatar: confirmedAvatar })) {
+        throw new Error(t('profileUpdateUnavailable'));
+      }
+      if (AVATAR_IDS.includes(confirmedAvatar) && confirmedAvatar !== statsHook.stats.equippedItems?.avatars) {
+        sendSocket({ type: 'shop_equip', itemId: confirmedAvatar });
+      }
+      return confirmedAvatar;
+    } catch (error) {
       clearPending();
       showToast(t('profileUpdateUnavailable'), 'error');
+      throw error;
     }
   }
 
@@ -766,6 +797,12 @@ export default function App() {
     if (pending) return;
     beginPending();
     connect({ type: 'create_room', category: null });
+  }
+
+  function openFriendCode() {
+    setJoinError(false);
+    setJoinCode('');
+    setStage('enter_code');
   }
 
   function joinRoom(code) {
@@ -787,7 +824,7 @@ export default function App() {
   const onNav = useCallback((s) => { if (s === 'categories') setCategoryFamily(null); setStage(s); }, []);
 
   function answer(index) {
-    if (selected !== null || reveal || reconnecting || question?.expired) return;
+    if (selected !== null || reveal || reconnecting || !question || !roundTiming(question).canAnswer) return;
     // Only mark the answer as "selected" once it's actually been sent — the
     // old code called setSelected unconditionally before checking the
     // socket, so if the connection had silently dropped the button would
@@ -844,12 +881,6 @@ export default function App() {
   sendSocketRef.current = sendSocket;
   useEffect(() => {
     adGameRef.current = resultGameId || null;
-    if (resultGameId && result && result.winner) {
-      const won = result.winner.id === myId;
-      const lpChange = won ? (league.streak >= 2 ? 35 : 25) : -20;
-      league.addResult(won);
-      notify(won ? `+${lpChange} LP! 🔥` : `${lpChange} LP`, won ? 'success' : 'error');
-    }
     if (!resultGameId || !adsEnabled()) return;
     requestRewardOffer({
       onOffer: (showAdFn) => { if (adGameRef.current === resultGameId) setAdOffer(() => showAdFn); },
@@ -860,20 +891,14 @@ export default function App() {
       onDismissed: () => setAdOffer(null),
       ...adHooks,
     });
-  }, [resultGameId, adHooks, result, myId, league, notify]);
+  }, [resultGameId, adHooks]);
 
   // Record league result once when a finished screen appears.
-  const leagueRecordedRef = useRef(null);
+  const addLeagueResult = league.addResult;
   useEffect(() => {
     if (stage !== 'finished' || !result) return;
-    const gameId = result.gameId;
-    if (leagueRecordedRef.current === gameId) return;
-    leagueRecordedRef.current = gameId;
-    const won = result.winner && result.winner.id === myId;
-    const lpChange = won ? (league.streak >= 2 ? 35 : 25) : -20;
-    league.addResult(won);
-    notify(won ? `+${lpChange} LP! 🔥` : `${lpChange} LP`, won ? 'success' : 'error');
-  }, [stage, result, myId, league, notify]);
+    addLeagueResult(result);
+  }, [stage, result, addLeagueResult]);
 
   function watchAd() {
     if (typeof adOffer === 'function') adOffer();
@@ -1016,13 +1041,15 @@ export default function App() {
   if (stage === 'home') {
     return (
       <div className="app app-nav app-top app-home">
-        <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+        <Toast toast={toast} onDismiss={dismissToast} />
         <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
         <HomeContent
+          controls={<TopControls {...topProps} />}
           name={name} avatar={avatar} frame={statsHook.stats.frame} stats={statsHook.stats} soloMode={soloMode} setSoloMode={setSoloMode}
+          friendCount={social.friends.length}
           quickMatch={quickMatch} startWithCategory={previewCategory}
           onOpenProfile={() => setStage('profile')} onSeeAll={(fam) => { setCategoryFamily(fam || null); setStage('categories'); }}
-          createRoom={createRoom} onOpenEnterCode={() => { setJoinError(false); setJoinCode(''); setStage('enter_code'); }}
+          createRoom={createRoom} onOpenEnterCode={openFriendCode}
           onStartTournament={() => setStage('tournament')}
           onOpenFriends={() => setStage('friends')}
           onOpenLeague={() => setStage('league')}
@@ -1036,13 +1063,21 @@ export default function App() {
   }
 
   if (stage === 'room_wait' && room) {
-    const copyCode = () => {
+    const copyCode = async () => {
       try {
-        navigator.clipboard.writeText(room.code);
+        await navigator.clipboard.writeText(room.code);
         setCopied(true);
         if (copyTimerRef.current) clearTimeout(copyTimerRef.current);
         copyTimerRef.current = setTimeout(() => { setCopied(false); copyTimerRef.current = null; }, 1500);
-      } catch {}
+      } catch { showToast(t('roomCopyUnavailable'), 'error'); }
+    };
+    const shareCode = async () => {
+      if (!navigator.share) { await copyCode(); return; }
+      try {
+        await navigator.share({ title: 'QuizzUp', text: t('roomInviteMessage', { code: room.code }), url: window.location.origin });
+      } catch (error) {
+        if (error?.name !== 'AbortError') await copyCode();
+      }
     };
     const cancel = () => {
       // If the socket is alive, leave explicitly and keep the authenticated
@@ -1059,7 +1094,7 @@ export default function App() {
       <div className="app"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <RoomLobby
           code={room.code} players={room.players} isHost={room.isHost} canStart={room.canStart}
-          onStart={startRoomMatch} onCancel={cancel} copied={copied} onCopyCode={copyCode}
+          onStart={startRoomMatch} onCancel={cancel} copied={copied} onCopyCode={copyCode} onShareCode={shareCode}
         />
       </div>);
   }
@@ -1088,9 +1123,10 @@ export default function App() {
   if (stage === 'category_preview') {
     const previewCat = CATS_V4.find((cat) => cat.key === matchCategory);
     return (
-      <div className="app app-nav app-top">
-        <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+      <div className="app app-nav app-top app-category-preview">
+        <Toast toast={toast} onDismiss={dismissToast} />
         <CategoryPreviewContent
+          controls={<TopControls {...topProps} />}
           category={previewCat}
           stats={statsHook.stats}
           onBack={() => setStage('home')}
@@ -1126,9 +1162,11 @@ export default function App() {
 
   if (stage === 'profile') {
     return (
-      <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+      <div className="app app-nav app-top app-profile"><Toast toast={toast} onDismiss={dismissToast} />
         <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
         <ProfileContent
+          controls={<TopControls {...topProps} />}
+          onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending}
           avatar={avatar} name={name} stats={statsHook.stats}
           isGoogleLinked={!!(firebaseUser && !firebaseUser.isAnonymous)} googleEmail={firebaseUser?.email}
           linkGoogle={linkGoogle} linking={linking} clientId={clientId} social={social}
@@ -1147,8 +1185,9 @@ export default function App() {
 
   if (stage === 'shop') {
     return (
-      <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+      <div className="app app-nav app-top app-shop"><Toast toast={toast} onDismiss={dismissToast} />
         <ShopContent
+          controls={<TopControls {...topProps} />}
           avatar={avatar} name={name} stats={statsHook.stats}
           onBuy={buyFrame} onEquip={equipFrame} onPlay={quickMatch}
           onBack={() => setStage('home')} pending={pending}
@@ -1175,13 +1214,14 @@ export default function App() {
 
   if (stage === 'friends') {
     return (
-      <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+      <div className="app app-nav app-top app-friends"><Toast toast={toast} onDismiss={dismissToast} />
         <div className="container friends-page">
+          <BrowseHeader controls={<TopControls {...topProps} />} />
           <div className="friends-header">
             <button className="friends-back" onClick={() => setStage('home')}>←</button>
             <h2 className="friends-title">👥 {t('friends')}</h2>
           </div>
-          <FriendsScreen social={social} />
+          <FriendsScreen social={social} onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending} />
         </div>
         <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);
@@ -1223,7 +1263,7 @@ export default function App() {
 
   if (stage === 'waiting') {
     return (
-      <div className="app game-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
+      <div className="app game-bg app-matchmaking"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <WaitingContent
           avatar={avatar} frame={statsHook.stats.frame} name={name} level={statsHook.stats.level}
           categoryKey={matchCategory}
@@ -1233,10 +1273,10 @@ export default function App() {
       </div>);
   }
 
-  if (stage === 'playing' && intro && !question) {
+  if (stage === 'playing' && !question) {
     return (
       <div className="app game-bg"><TopControls {...topProps} playing /><Toast toast={toast} onDismiss={dismissToast} />
-        <RoundIntroContent intro={intro} totalRounds={totalRounds} opponents={opponents} avatar={avatar} frame={statsHook.stats.frame} name={name} level={statsHook.stats.level} />
+        <RoundIntroContent intro={intro || { round: 1, category: CATS_V4.find(cat => cat.key === matchCategory)?.label || t('randomTopic') }} totalRounds={totalRounds} opponents={opponents} avatar={avatar} frame={statsHook.stats.frame} name={name} level={statsHook.stats.level} />
       </div>);
   }
 
@@ -1253,10 +1293,11 @@ export default function App() {
 
   if (stage === 'finished' && result) {
     return (
-      <div className="app results-bg"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
-        <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
+      <div className="app results-bg"><TopControls {...topProps} />
         <FinishedContent
           result={result} opponents={opponents} myId={myId} avatar={avatar} name={name} frame={statsHook.stats.frame} social={social}
+          leagueAward={(league.recentResults || []).find(entry => entry.gameId === result.gameId)}
+          notices={[...(toast ? [toast] : []), ...notifications]}
           addFriend={social.addFriend}
           playAgain={() => interstitialThen(playAgain, adHooks)} rematch={requestRematch}
           rematchWaiting={rematchWaiting} rematchStarting={rematchStarting}

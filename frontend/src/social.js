@@ -1,6 +1,8 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { useI18n } from './i18n';
 import { Icon } from './ui';
+import { PlayerAvatar } from './PlayerAvatar';
+import { FriendInviteActions } from './FriendInviteActions';
 
 export function useSocial(wsRef) {
   const [friends, setFriends] = useState([]);
@@ -97,7 +99,7 @@ export function useSocial(wsRef) {
   };
 }
 
-export function FriendsScreen({ social }) {
+export function FriendsScreen({ social, onInviteFriend, onJoinFriend, pending }) {
   const { t } = useI18n();
   const [openChat, setOpenChat] = useState(null);
   const [draft, setDraft] = useState('');
@@ -125,7 +127,7 @@ export function FriendsScreen({ social }) {
           <div className="friends-section-title">{t('friendRequests')}</div>
           {social.requests.map((r) => (
             <div key={r.id} className="friend-row">
-              <div className="friend-ava">{r.avatar}</div>
+              <div className="friend-ava"><PlayerAvatar avatar={r.avatar} /></div>
               <div className="friend-name">{r.name}</div>
               <button className="friend-btn accept" onClick={() => social.acceptFriend(r.id)}>{t('accept')}</button>
               <button
@@ -141,7 +143,8 @@ export function FriendsScreen({ social }) {
         </div>
       )}
       <div className="friends-section-title">{t('friendsCount', { count: social.friends.length })}</div>
-      {social.friends.length === 0 && <div className="friends-empty">{t('friendsEmpty')}</div>}
+      {social.friends.length === 0 && <div className="friends-empty"><strong>{t('friendsEmptyTitle')}</strong><p>{t('friendsInviteHelp')}</p></div>}
+      <FriendInviteActions onInviteFriend={onInviteFriend} onJoinFriend={onJoinFriend} pending={pending} />
       {social.friends.map((f) => (
         <div key={f.id} className="friends-block">
           <div
@@ -161,7 +164,7 @@ export function FriendsScreen({ social }) {
               }
             }}
           >
-            <div className={`friend-ava ${f.online ? 'online' : ''}`}>{f.avatar}</div>
+            <div className={`friend-ava ${f.online ? 'online' : ''}`}><PlayerAvatar avatar={f.avatar} /></div>
             <div className="friend-name">{f.name}</div>
             <div className={`friend-status ${f.online ? 'on' : 'off'}`}>{f.online ? t('online') : t('offline')}</div>
           </div>

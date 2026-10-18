@@ -1,3 +1,5 @@
+const { cleanAvatar } = require('./sanitize');
+
 function nullDict() {
   return Object.create(null);
 }
@@ -108,7 +110,7 @@ function normalizeSocialStore(value, { maxFriends = 200, maxRequests = 100 } = {
       if (!id || !raw || typeof raw !== 'object' || Array.isArray(raw)) continue;
       profiles[id] = {
         name: String(raw.name || 'Player').trim().slice(0, 20) || 'Player',
-        avatar: String(raw.avatar || '\u{1F43A}').slice(0, 16),
+        avatar: cleanAvatar(raw.avatar),
       };
     }
   }
@@ -171,7 +173,7 @@ function normalizePostsStore(value, { maxPosts = 500, maxTextLen = 240 } = {}) {
       id,
       authorId: cleanId(raw.authorId) || null,
       authorName: String(raw.authorName || 'Player').trim().slice(0, 20) || 'Player',
-      authorAvatar: String(raw.authorAvatar || '\u{1F43A}').slice(0, 16),
+      authorAvatar: cleanAvatar(raw.authorAvatar),
       category: typeof raw.category === 'string' ? raw.category.slice(0, 40) : null,
       text,
       reactedBy: uniqueStringList(raw.reactedBy, { limit: 10_000 }),

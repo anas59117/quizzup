@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef, useId, memo } from 'react';
 import { useI18n } from './i18n';
 import { getTopicCover } from './topicCovers';
+import { PlayerAvatar } from './PlayerAvatar';
 
 
 export const Icon = memo(function Icon({ name, size = 20, className = '' }) {
@@ -48,7 +49,7 @@ export const Icon = memo(function Icon({ name, size = 20, className = '' }) {
   );
 });
 
-export const AVATARS = ['\u{1F43A}', '\u{1F981}', '\u{1F98A}', '\u{1F43C}', '\u{1F989}', '\u{1F438}', '\u{1F42F}', '\u{1F984}'];
+export const AVATARS = ['robot'];
 
 export const CATEGORIES = [
   { key: 'movies', label: 'Films', icon: '\u{1F3AC}', grad: 'g1', tag: '\u{1F525}', desc: 'Blockbusters & classiques', family: 'cinema' },
@@ -547,7 +548,7 @@ export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setA
             aria-label={`Avatar ${index + 1}`}
             aria-pressed={avatar === a}
           >
-            {a}
+            <PlayerAvatar avatar={a} />
           </button>
         ))}
         </div>
@@ -588,6 +589,16 @@ export function useTheme() {
   }, [theme]);
   const toggle = useCallback(() => setTheme((t) => (t === 'dark' ? 'light' : 'dark')), []);
   return [theme, toggle];
+}
+
+export function BrowseHeader({ controls }) {
+  return <header className="browse-header">
+    <div className="home-brand">
+      <div className="home-brandmark" aria-hidden="true">Q</div>
+      <div className="home-logo-sm">Quizz<span>Up</span></div>
+    </div>
+    {controls}
+  </header>;
 }
 
 export const TopControls = memo(function TopControls({ muted, toggleMute, theme, toggleTheme, playing = false }) {
@@ -779,13 +790,10 @@ export const NavBar = memo(function NavBar({ active, onNav, onQuickMatch }) {
       <button className={`nav-item ${active === 'home' ? 'active' : ''}`} onClick={() => onNav('home')}>
         <span className="nav-ic"><Icon name="home" size={20} /></span><span className="nav-lbl">{t('navHome')}</span>
       </button>
-      <button className={`nav-item ${active === 'feed' ? 'active' : ''}`} onClick={() => onNav('feed')}>
-        <span className="nav-ic"><Icon name="feed" size={20} /></span><span className="nav-lbl">{t('navFeed')}</span>
-      </button>
-      <button className="nav-bolt" onClick={onQuickMatch} aria-label={t('playNow')}><Icon name="bolt" size={22} /><span className="nav-play-label">{t('play')}</span></button>
       <button className={`nav-item ${active === 'categories' ? 'active' : ''}`} onClick={() => onNav('categories')}>
         <span className="nav-ic"><Icon name="themes" size={20} /></span><span className="nav-lbl">{t('navThemes')}</span>
       </button>
+      <button className="nav-bolt" onClick={onQuickMatch} aria-label={t('playNow')}><Icon name="bolt" size={22} /><span className="nav-play-label">{t('play')}</span></button>
       <button className={`nav-item ${active === 'shop' ? 'active' : ''}`} onClick={() => onNav('shop')}>
         <span className="nav-ic"><Icon name="shop" size={20} /></span><span className="nav-lbl">{t('navShop')}</span>
       </button>

@@ -4,13 +4,27 @@ import React, { createContext, useContext, useState, useCallback, useMemo } from
 // translated here. French-specific categories (Foot FR, Rap FR...) stay in
 // French regardless of UI language, same as how a French Wikipedia article
 // title doesn't change when you switch your OS language.
-const STRINGS = {
+export const STRINGS = {
   fr: {
     legendBack: 'LA LÉGENDE EST DE RETOUR',
     tagline: 'Duels de culture générale en temps réel',
     usernamePlaceholder: 'Choisis ton pseudo',
     continue: 'Continuer →',
     hey: 'Salut {name}',
+    inviteFriend: 'Inviter un ami',
+    shareRoomCode: 'Partager le code',
+    roomInviteMessage: 'Rejoins mon salon QuizzUp avec le code {code} !',
+    roomCopyUnavailable: 'Copie indisponible. Sélectionne le code pour le partager.',
+    haveFriendCode: 'J’ai un code',
+    friendInviteActions: 'Jouer avec des amis',
+    friendsEmptyTitle: 'Tes amis apparaîtront ici',
+    friendsInviteHelp: 'Crée un salon privé et partage son code avec un ami, ou rejoins le sien. Après votre partie, ajoutez-vous pour vous retrouver ici.',
+    playedGames: '{n} parties',
+    playedGamesOne: '{n} partie',
+    socialFriends: '{n} amis',
+    socialFriendsOne: '{n} ami',
+    followedPlayers: '{n} joueurs suivis',
+    followedPlayersOne: '{n} joueur suivi',
     quickPlay: 'Partie rapide',
     randomTopic: 'Thème aléatoire',
     popularTopics: 'Thèmes populaires',
@@ -25,6 +39,20 @@ const STRINGS = {
     back: '← Retour',
     accueil: 'Accueil',
     level: 'Niveau',
+    statistics: 'Statistiques',
+    players: 'Joueurs',
+    opponent: 'Adversaire',
+    overallProgress: 'Progression générale',
+    beforeNextLevel: 'XP avant le niveau',
+    dismissNotification: 'Fermer la notification',
+    resultWin: 'Belle victoire',
+    resultTie: 'Match nul',
+    resultLoss: 'Pas cette fois',
+    resultSolo: 'Partie terminée',
+    correctAnswers: 'Bonnes réponses',
+    averageTime: 'Temps moyen',
+    topicLevel: 'Niveau du thème',
+    matchStatistics: 'Cette partie',
     rookie: 'Débutant',
     connectedGoogle: 'Connecté avec Google ({email})',
     connectGoogle: 'Se connecter avec Google',
@@ -140,7 +168,9 @@ const STRINGS = {
     streak: 'Victoires de suite',
     dayStreak: 'Jours de suite',
     dayStreakUp: '🔥 {n} jours de suite ! Reviens demain pour continuer.',
+    dayStreakUpOne: '🔥 {n} jour de suite ! Reviens demain pour continuer.',
     dayStreakLine: '🔥 {n} jours de suite',
+    dayStreakLineOne: '🔥 {n} jour de suite',
     friendOvertook: '{name} t\'a dépassé en {topic} !',
     friendsOvertookMany: '{n} amis t\'ont dépassé pendant ton absence.',
     coinBalance: 'Pièces',
@@ -272,6 +302,7 @@ const STRINGS = {
     // Streak
     streakTitle: 'Série quotidienne',
     streakActive: '{n} jours de suite 🔥',
+    streakActiveOne: '{n} jour de suite 🔥',
     streakNone: 'Joue aujourd\'hui pour commencer ta série !',
     streakNext: 'Prochain palier : {n} jours',
     streakReward2: 'Série x2',
@@ -351,6 +382,20 @@ const STRINGS = {
     favoriteTopic: 'Thème préféré',
 },
   en: {
+    inviteFriend: 'Invite a friend',
+    shareRoomCode: 'Share the code',
+    roomInviteMessage: 'Join my QuizzUp room with code {code}!',
+    roomCopyUnavailable: 'Copy unavailable. Select the code to share it.',
+    haveFriendCode: 'I have a code',
+    friendInviteActions: 'Play with friends',
+    friendsEmptyTitle: 'Your friends will appear here',
+    friendsInviteHelp: 'Create a private room and share its code with a friend, or join theirs. After your match, add each other to find them here.',
+    playedGames: '{n} games',
+    playedGamesOne: '{n} game',
+    socialFriends: '{n} friends',
+    socialFriendsOne: '{n} friend',
+    followedPlayers: '{n} players followed',
+    followedPlayersOne: '{n} player followed',
     legendBack: 'THE LEGEND IS BACK',
     tagline: 'Real-time trivia battles',
     usernamePlaceholder: 'Choose your username',
@@ -370,6 +415,20 @@ const STRINGS = {
     back: '← Back',
     accueil: 'Home',
     level: 'Level',
+    statistics: 'Statistics',
+    players: 'Players',
+    opponent: 'Opponent',
+    overallProgress: 'Overall progress',
+    beforeNextLevel: 'XP until level',
+    dismissNotification: 'Dismiss notification',
+    resultWin: 'Great victory',
+    resultTie: 'A draw',
+    resultLoss: 'Next time',
+    resultSolo: 'Game complete',
+    correctAnswers: 'Correct answers',
+    averageTime: 'Average time',
+    topicLevel: 'Topic level',
+    matchStatistics: 'This match',
     rookie: 'Rookie',
     connectedGoogle: 'Connected with Google ({email})',
     connectGoogle: 'Sign in with Google',
@@ -483,7 +542,9 @@ const STRINGS = {
     streak: 'Win streak',
     dayStreak: 'Day streak',
     dayStreakUp: '🔥 {n}-day streak! Come back tomorrow to keep it going.',
+    dayStreakUpOne: '🔥 {n}-day streak! Come back tomorrow to keep it going.',
     dayStreakLine: '🔥 {n}-day streak',
+    dayStreakLineOne: '🔥 {n}-day streak',
     friendOvertook: '{name} passed you in {topic}!',
     friendsOvertookMany: '{n} friends passed you while you were away.',
     coinBalance: 'Coins',
@@ -615,6 +676,7 @@ const STRINGS = {
     // Streak
     streakTitle: 'Daily Streak',
     streakActive: '{n} days in a row 🔥',
+    streakActiveOne: '{n} day in a row 🔥',
     streakNone: 'Play today to start your streak!',
     streakNext: 'Next milestone: {n} days',
     streakReward2: 'Streak x2',
@@ -696,6 +758,7 @@ const STRINGS = {
 };
 
 const LANG_KEY = 'quizzup-lang';
+const missingTranslations = new Set();
 
 function detectDefaultLang() {
   try {
@@ -722,7 +785,18 @@ export function I18nProvider({ children }) {
 
   const toggleLang = useCallback(() => setLang(lang === 'fr' ? 'en' : 'fr'), [lang, setLang]);
 
-  const t = useCallback((key, vars) => interpolate(STRINGS[lang][key] || STRINGS.fr[key] || key, vars), [lang]);
+  const t = useCallback((key, vars) => {
+    const pluralKey = Number(vars?.n) === 1 && STRINGS[lang][`${key}One`] ? `${key}One` : key;
+    const template = STRINGS[lang][pluralKey] ?? STRINGS.fr[pluralKey];
+    if (template === undefined) {
+      if (!missingTranslations.has(key)) {
+        missingTranslations.add(key);
+        console.error(`[QuizzUp i18n] Missing translation: ${key}`);
+      }
+      return '…';
+    }
+    return interpolate(template, vars);
+  }, [lang]);
 
   const value = useMemo(() => ({ lang, setLang, toggleLang, t }), [lang, setLang, toggleLang, t]);
 

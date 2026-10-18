@@ -3,15 +3,17 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { StreakBadge, StreakCalendar } from './DailyStreak';
 import { ShareCard } from './ShareCard';
 import { ChallengeButton } from './ChallengeLink';
-import { AVATARS, CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon } from './ui';
+import { AVATARS, CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon, BrowseHeader } from './ui';
 import { CategoryTileV4 } from './CategoryTileV4';
-import { PlayerHud, Leaderboard } from './multiplayer';
+import { Leaderboard } from './multiplayer';
 import { ProfileStats } from './stats';
 import { FriendsScreen } from './social';
+import { FriendInviteActions } from './FriendInviteActions';
 import { TopicLevelList, topicTitleKey, topicLabel } from './players';
 import { useI18n } from './i18n';
-import { frameClass } from './frames';
-import { IdentityCard } from './identity';
+import { PlayerAvatar, AVATAR_IDS, avatarId } from './PlayerAvatar';
+import { ShopArt as QV4ShopArt } from './shop-art';
+import { ProfilePhotoEditor } from './ProfilePhotoEditor';
 
 const FEATURED_TOPIC_KEYS = [
   'spider_man', 'harry_potter', 'minecraft', 'rap_fr',
@@ -29,18 +31,17 @@ const FEATURED_TOPICS = FEATURED_TOPIC_KEYS
   })
   .filter(Boolean);
 
-export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, onStartTournament, onOpenFriends, onOpenLeague, onOpenSeasonPass, pending, stats }) {
+export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, onStartTournament, onOpenFriends, onOpenLeague, onOpenSeasonPass, pending, stats, friendCount = 0, controls }) {
   const { t } = useI18n();
   const [showMore, setShowMore] = useState(false);
   // Keep up to 7 featured covers for Mes thèmes; Spider-Man-equivalent card gets the 2:1 "featured" slot.
   const myThemes = FEATURED_TOPICS.slice(0, 7);
   const [heroTopic, ...rest] = myThemes;
   const games = (stats && stats.games) || 0;
-  const followers = (stats && stats.followers) || 0;
   const following = (stats && stats.following) || 0;
   return (
     <div className="container wide home-v4">
-      <div className="home-head home-head--v4">
+      <header className="home-head home-head--v4">
         <div className="home-brand">
           <div className="home-brandmark">Q</div>
           <div className="home-logo-sm">Quizz<span>Up</span></div>
@@ -52,27 +53,29 @@ export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickM
           <button className="home-action" onClick={() => onOpenFriends && onOpenFriends()} aria-label={t('friends')}>
             <Icon name="users" size={18} />
           </button>
+          {controls}
         </div>
-      </div>
-      <button className={`profile-card-v4${frameClass(frame)}`} onClick={onOpenProfile} aria-label="Open profile">
+      </header>
+      <button className="profile-card-v4" onClick={onOpenProfile} aria-label={t('editProfile')}>
         <div className="profile-row-v4">
-          <div className="profile-avatar-v4">{avatar}</div>
+          <div className="profile-avatar-v4"><PlayerAvatar avatar={avatar} /></div>
           <div className="profile-identity-v4">
             <div className="profile-name-v4">{name || 'Joueur'}</div>
-            <div className="profile-bio-v4">{t('hey', { name })}</div>
+            <div className="profile-bio-v4">{t('level')} {stats?.level || 1}</div>
           </div>
         </div>
         <div className="profile-stats-v4">
-          <span><b>{games}</b> parties</span>
+          <span>{t('playedGames', { n: games })}</span>
           <span className="dot">·</span>
-          <span><b>{followers}</b> amis</span>
+          <span>{t('socialFriends', { n: friendCount })}</span>
           <span className="dot">·</span>
-          <span>tu suis <b>{following}</b></span>
+          <span>{t('followedPlayers', { n: following })}</span>
         </div>
       </button>
       <div className="home-solo-row">
         <SoloToggle solo={soloMode} onChange={setSoloMode} />
       </div>
+      <FriendInviteActions onInviteFriend={createRoom} onJoinFriend={onOpenEnterCode} pending={pending} />
       <div className="section-head-v4">
         <h2 className="section-title-v4">Mes thèmes</h2>
         <button className="section-edit" onClick={() => onSeeAll && onSeeAll()}>
@@ -96,10 +99,6 @@ export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickM
         <button className="section-edit" onClick={() => onSeeAll && onSeeAll()}>{t('seeAll')}</button>
       </div>
       <FamilyGrid onSelect={onSeeAll} />
-      <div className="home-social-row-v4">
-        <button className="social-chip" onClick={createRoom} disabled={pending}><Icon name="users" size={16} /> {t('party')}</button>
-        <button className="social-chip" onClick={onOpenEnterCode}><Icon name="key" size={16} /> {t('joinCode')}</button>
-      </div>
       <button
         className="more-toggle"
         type="button"
@@ -153,7 +152,7 @@ const PREVIEW_SUB = {
   ligue_champions: { line1: 'LIGUE DES', line2: 'CHAMPIONS', eyebrow: 'SPORT · FOOTBALL', sub: 'UEFA', desc: 'Finales, légendes & records de la plus grande compétition européenne.' },
 };
 
-export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChallenge, pending, friendsOnTopic = [] }) {
+export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChallenge, pending, friendsOnTopic = [], controls }) {
   const { t } = useI18n();
   if (!category) return null;
   const preview = PREVIEW_SUB[category.key] || { eyebrow: category.family || 'QUIZ', desc: category.desc };
@@ -176,6 +175,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
       )}
 
       <div className="cp-head">
+        <div className="cp-bg cp-header-bg" aria-hidden="true" />
         <button className="cp-back" onClick={onBack} aria-label={t('back')}>
           <Icon name="arrow" size={18} className="cp-back-ic" />
         </button>
@@ -186,6 +186,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
           <button className="cp-icon-btn" aria-label="Partager">
             <Icon name="share" size={18} />
           </button>
+          {controls}
         </div>
       </div>
 
@@ -310,48 +311,66 @@ export function CategoriesContent({ startWithCategory, onBack, family, onSelectF
 export function ProfileContent({
   avatar, name, stats, isGoogleLinked, googleEmail, linkGoogle, linking,
   clientId, social, onOpenLeaderboard, onOpenShop, onSaveProfile, profileSaving, onOpenTopic, streak,
-  league, onOpenLeague,
+  league, onOpenLeague, onInviteFriend, onJoinFriend, pending, controls,
 }) {
   const { t } = useI18n();
   const [editing, setEditing] = useState(false);
   const [draftName, setDraftName] = useState(name || '');
   const [draftAvatar, setDraftAvatar] = useState(avatar || AVATARS[0]);
   const [submitted, setSubmitted] = useState(false);
+  const [draftPhoto, setDraftPhoto] = useState(null);
+  const [photoError, setPhotoError] = useState('');
+  const [uploading, setUploading] = useState(false);
+  const saving = profileSaving || uploading;
+  const fallbackAvatar = stats.equippedItems?.avatars || 'robot';
 
   const normalizedName = draftName.replace(/\s+/g, ' ').trim().slice(0, 20);
-  const unchanged = normalizedName === (name || '') && draftAvatar === avatar;
+  const unchanged = normalizedName === (name || '') && draftAvatar === avatar && !draftPhoto;
 
   useEffect(() => {
     if (!editing) {
       setDraftName(name || '');
       setDraftAvatar(avatar || AVATARS[0]);
+      setDraftPhoto(null);
+      setPhotoError('');
     }
   }, [name, avatar, editing]);
 
   useEffect(() => {
     if (
       submitted
-      && !profileSaving
+      && !saving
+      && !draftPhoto
       && normalizedName === (name || '')
       && draftAvatar === avatar
     ) {
       setSubmitted(false);
       setEditing(false);
     }
-  }, [submitted, profileSaving, normalizedName, draftAvatar, name, avatar]);
+  }, [submitted, saving, draftPhoto, normalizedName, draftAvatar, name, avatar]);
 
   const cancelEdit = () => {
-    if (profileSaving) return;
+    if (saving) return;
     setDraftName(name || '');
     setDraftAvatar(avatar || AVATARS[0]);
     setSubmitted(false);
+    setDraftPhoto(null);
+    setPhotoError('');
     setEditing(false);
   };
 
-  const saveEdit = () => {
-    if (!normalizedName || unchanged || profileSaving) return;
+  const saveEdit = async () => {
+    if (!normalizedName || unchanged || saving) return;
+    setPhotoError('');
     setSubmitted(true);
-    onSaveProfile(normalizedName, draftAvatar);
+    setUploading(true);
+    try {
+      const savedAvatar = await onSaveProfile(normalizedName, draftAvatar, draftPhoto);
+      if (savedAvatar) { setDraftAvatar(savedAvatar); setDraftPhoto(null); }
+    } catch (err) {
+      setSubmitted(false);
+      setPhotoError(err.message || 'Le profil n’a pas pu être enregistré. Réessaie.');
+    } finally { setUploading(false); }
   };
 
   // XP progression
@@ -364,18 +383,19 @@ export function ProfileContent({
 
   return (
     <div className="container pf-v4">
+      {controls && <BrowseHeader controls={controls} />}
       {/* ── Hero ──────────────────────────────────────────── */}
       <div className="pf-hero">
-        <div className="pf-avatar-wrap" onClick={() => setEditing((v) => !v)}>
-          <div className="pf-avatar">{avatar}</div>
-          <button className="pf-edit-dot" aria-label={t('editProfile')}>
+        <div className="pf-avatar-wrap">
+          <div className="pf-avatar"><PlayerAvatar avatar={avatar} fallbackAvatar={fallbackAvatar} /></div>
+          <button className="pf-edit-dot" aria-label={t('editProfile')} onClick={() => editing ? cancelEdit() : setEditing(true)} aria-expanded={editing} disabled={saving}>
             <Icon name="edit" size={11} />
           </button>
         </div>
         <div className="pf-name">{name}</div>
         <div className="pf-bio">{t('level')} {stats.level}</div>
         <div className="pf-social">
-          {stats.games || 0} {t('games').toLowerCase()} · {friendCount} {t('friends').toLowerCase()} · suit {followingCount} {t('players').toLowerCase()}
+          {t('playedGames', { n: stats.games || 0 })} · {t('socialFriends', { n: friendCount })} · {t('followedPlayers', { n: followingCount })}
         </div>
       </div>
 
@@ -389,46 +409,53 @@ export function ProfileContent({
             value={draftName}
             maxLength={20}
             autoComplete="nickname"
+            disabled={saving}
             onChange={(event) => setDraftName(event.target.value)}
           />
+          <ProfilePhotoEditor avatar={draftAvatar} fallbackAvatar={fallbackAvatar} draft={draftPhoto}
+            onChange={draft => { setDraftPhoto(draft); setSubmitted(false); setPhotoError(''); }}
+            onRemove={() => { setDraftPhoto(null); setDraftAvatar(fallbackAvatar); setSubmitted(false); }} busy={saving} />
           <div className="profile-editor-label">{t('chooseAvatar')}</div>
           <div className="profile-avatar-grid" role="group" aria-label={t('chooseAvatar')}>
-            {AVATARS.map((option, index) => (
+            {AVATAR_IDS.filter((id) => id === 'robot' || stats.ownedItems?.includes(id)).map((option, index) => (
               <button
                 key={option}
                 className={`avatar-opt ${draftAvatar === option ? 'active' : ''}`}
-                onClick={() => setDraftAvatar(option)}
+                onClick={() => { setDraftAvatar(option); setDraftPhoto(null); setSubmitted(false); }}
+                disabled={saving}
                 aria-label={`${t('avatar')} ${index + 1}`}
                 aria-pressed={draftAvatar === option}
               >
-                {option}
+                <PlayerAvatar avatar={option} />
               </button>
             ))}
           </div>
+          {photoError && <p className="profile-photo-error" role="alert">{photoError}</p>}
+          {submitted && !saving && !unchanged && <p className="profile-photo-error" role="status">Le profil attend la confirmation. Si la connexion a été coupée, réessaie.</p>}
           <div className="profile-editor-actions">
-            <button className="profile-editor-cancel" onClick={cancelEdit} disabled={profileSaving}>
+            <button className="profile-editor-cancel" onClick={cancelEdit} disabled={saving}>
               {t('cancelEdit')}
             </button>
             <button
               className="profile-editor-save"
               onClick={saveEdit}
-              disabled={!normalizedName || unchanged || profileSaving}
+              disabled={!normalizedName || unchanged || saving}
             >
-              {profileSaving ? t('saving') : t('saveChanges')}
+              {saving ? t('saving') : t('saveChanges')}
             </button>
           </div>
         </div>
       )}
 
       {/* ── Level progression card ────────────────────────── */}
-      <div className="pf-section-title">{t('overallProgress') || 'Progression générale'}</div>
+      <div className="pf-section-title">{t('overallProgress')}</div>
       <div className="pf-level-card">
         <div className="pf-level-head">
           <span className="pf-level-label">{t('level')} {stats.level}</span>
           <span className="pf-level-pct">{xpPct}%</span>
         </div>
         <div className="pf-xp-bar"><div className="pf-xp-fill" style={{ width: `${xpPct}%` }} /></div>
-        <div className="pf-xp-text">{xpRemaining} {t('beforeNextLevel') || 'XP avant le niveau'} {stats.level + 1}</div>
+        <div className="pf-xp-text">{xpRemaining} {t('beforeNextLevel')} {stats.level + 1}</div>
       </div>
 
       {/* ── League card ───────────────────────────────────── */}
@@ -475,7 +502,7 @@ export function ProfileContent({
       )}
 
       {/* ── Stats grid ────────────────────────────────────── */}
-      <div className="pf-section-title">{t('statistics') || 'Statistiques'}</div>
+      <div className="pf-section-title">{t('statistics')}</div>
       <ProfileStats stats={stats} />
 
       {/* ── CTAs ──────────────────────────────────────────── */}
@@ -497,7 +524,7 @@ export function ProfileContent({
       </button>
 
       {/* ── Friends ───────────────────────────────────────── */}
-      <FriendsScreen social={social} />
+      <FriendsScreen social={social} onInviteFriend={onInviteFriend} onJoinFriend={onJoinFriend} pending={pending} />
 
       {/* ── Account link + privacy ────────────────────────── */}
       {isGoogleLinked ? (
@@ -556,7 +583,7 @@ export function LeaderboardContent({ board, loading, onBack, category = null, on
                 role={entry.id && !entry.isYou ? 'button' : undefined} tabIndex={entry.id && !entry.isYou ? 0 : undefined}
                 onClick={() => openRow(entry)} onKeyDown={(e) => { if (e.key === 'Enter') openRow(entry); }}>
                 <div className="podium-rank">#{entry.rank}</div>
-                <div className="podium-avatar">{entry.avatar}</div>
+                <div className="podium-avatar"><PlayerAvatar avatar={entry.avatar} /></div>
                 <div className="podium-name">{entry.name}</div>
                 <div className="podium-level">{t('level')} {entry.level}</div>
                 <div className="podium-xp">{entry.xp.toLocaleString()} XP</div>
@@ -576,7 +603,7 @@ export function LeaderboardContent({ board, loading, onBack, category = null, on
                   role={entry.id && !entry.isYou ? 'button' : undefined} tabIndex={entry.id && !entry.isYou ? 0 : undefined}
                   onClick={() => openRow(entry)} onKeyDown={(e) => { if (e.key === 'Enter') openRow(entry); }}>
                   <span className="global-rank">{entry.rank}</span>
-                  <span className="global-avatar">{entry.avatar}</span>
+                  <span className="global-avatar"><PlayerAvatar avatar={entry.avatar} /></span>
                   <span className="global-player">
                     <strong>{entry.name}{entry.isYou ? ` · ${t('you')}` : ''}</strong>
                     <small>{t('level')} {entry.level} · {entry.winRate}% {String(t('wins')).toLowerCase()}</small>
@@ -598,76 +625,11 @@ export function LeaderboardContent({ board, loading, onBack, category = null, on
   );
 }
 
-export function WaitingContent({ avatar, frame, name, level = 1, categoryKey, onCancel, onPlaySolo, pending, reconnecting }) {
-  const { t } = useI18n();
-  const [elapsed, setElapsed] = useState(0);
-  const category = CATEGORIES.find((item) => item.key === categoryKey);
-
-  useEffect(() => {
-    const startedAt = Date.now();
-    const timer = setInterval(() => {
-      setElapsed(Math.floor((Date.now() - startedAt) / 1000));
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  return (
-    <div className="container center">
-      <div className="status-label" role="status">
-        {reconnecting ? t('reconnecting') : pending ? t('leavingQueue') : t('matchmaking')}
-      </div>
-      <div className="matchmaking-topic">{category?.label || t('randomTopic')}</div>
-      <div className="vs-screen">
-        <div className="vs-player"><IdentityCard frame={frame} avatar={avatar} name={name} level={level} className="identity-card-vs" /></div>
-        <div className="vs-bolt-wrap"><div className="vs-bolt"><Icon name="bolt" size={24} /></div></div>
-        <div className="vs-player">
-          <div className="vs-ava searching">?</div>
-          <div className="vs-name dim">{t('searching')}</div>
-        </div>
-      </div>
-      <div className="search-meta">{t('searchElapsed', { n: elapsed })}</div>
-      <div className="loading-bar"><div className="loading-fill" /></div>
-      {elapsed >= 12 && (
-        <div className="matchmaking-alternative">
-          <p role="status">{t('searchTakingLonger')}</p>
-          <button className="btn" onClick={onPlaySolo} disabled={pending || reconnecting}>
-            {t('playSoloInstead')}
-          </button>
-        </div>
-      )}
-      <button className="home-themes-link" onClick={onCancel} disabled={pending}>
-        {pending ? t('leavingQueue') : t('cancel')}
-      </button>
-    </div>
-  );
-}
-
-export function RoundIntroContent({ intro, totalRounds, opponents, avatar, frame, name, level }) {
-  const { t } = useI18n();
-  const difficultyKey = intro.difficulty
-    ? `difficulty${intro.difficulty[0].toUpperCase()}${intro.difficulty.slice(1)}`
-    : null;
-  return (
-    <div className="container center">
-      <div className={`round-intro-icon ${intro.isBonus ? 'bonus' : ''}`}>{intro.icon}</div>
-      <div className="round-intro-cat">{intro.category}</div>
-      {difficultyKey && <div className={`difficulty-pill ${intro.difficulty}`}>{t(difficultyKey)}</div>}
-      <div className="round-intro-round">{intro.isBonus ? t('bonusRound') : t('round', { n: intro.round })}</div>
-      <div className="round-intro-sub">{intro.isBonus ? t('doublePoints') : t('roundOf', { n: intro.round, total: totalRounds })}</div>
-      {intro.round === 1 && opponents.length === 1 && (
-        <div className="identity-duel" aria-label={`${name} ${t('versus')} ${opponents[0].name}`}>
-          <IdentityCard frame={frame} avatar={avatar} name={name} level={level} className="identity-card-duel" />
-          <span className="identity-duel-vs" aria-hidden="true">VS</span>
-          <IdentityCard frame={opponents[0].frame} avatar={opponents[0].avatar} name={opponents[0].name} className="identity-card-duel" />
-        </div>
-      )}
-    </div>
-  );
-}
+export { WorldMatchSearch as WaitingContent, DuelRoundIntro as RoundIntroContent } from './MatchPresentation';
 
 export const QuestionContent = EnhancedQuestionContent;
 
-export function FinishedContent({ result, opponents, myId, avatar, name, frame, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch, adOffer, onWatchAd, adClaimed, streak, onShowShare }) {
+export function FinishedContent({ result, opponents, myId, avatar, name, frame, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch, adOffer, onWatchAd, adClaimed, streak, onShowShare, leagueAward, notices = [] }) {
   const { t } = useI18n();
   const [showShare, setShowShare] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
@@ -692,15 +654,10 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
   const tally = result.matchTally || {};
   const correctPct = tally.rounds ? Math.round((tally.correct / tally.rounds) * 100) : null;
   const avgSec = tally.answered ? (tally.totalMs / tally.answered / 1000) : null;
-  const initial = (n) => (n || '?').trim().charAt(0).toUpperCase();
   const coinsEarned = adClaimed ? result.coins * 2 : result.coins;
 
   // Sentence case, never all-caps — the mockup's voice is "Belle victoire."
-  const headline = isSolo
-    ? { a: 'Partie', b: 'terminée' }
-    : won ? { a: 'Belle', b: 'victoire' }
-      : tie ? { a: 'Match', b: 'nul' }
-        : { a: 'Pas cette', b: 'fois' };
+  const headline = t(isSolo ? 'resultSolo' : won ? 'resultWin' : tie ? 'resultTie' : 'resultLoss');
 
   return (
     <div className="container center results-v4">
@@ -710,21 +667,33 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
           {isSolo || oppScore === null ? '' : `${myScore} \u00e0 ${oppScore}`}
         </div>
         <h1 className={`res-title ${isSolo ? 'tie' : won ? 'win' : tie ? 'tie' : 'loss'}`}>
-          {headline.a}<br />{headline.b}<em>.</em>
+          {headline}<em>.</em>
         </h1>
 
+        {leagueAward && <div className="res-league-award" role="status">
+          <b>{leagueAward.lpChange > 0 ? '+' : ''}{leagueAward.lpChange} LP</b>
+          <span>{t('leagueTitle')}</span>
+        </div>}
+        {result.dayStreakUp && result.dayStreak > 1 && <div className="res-inline-message" role="status">
+          {t('dayStreakUp', { n: result.dayStreak })}
+        </div>}
+        {notices.map((notice, index) => <div className="res-inline-message" role="status" key={notice.id || index}>
+          {notice.message || notice.text}
+        </div>)}
         {left && <div className="res-left-note">{t('someoneLeft')}</div>}
 
-        {!isSolo && opp ? (
-          <div className="res-scoreboard">
+        {!isSolo && opponents.length > 1 && result.leaderboard ? (
+          <div className="res-group-board"><Leaderboard leaderboard={result.leaderboard} myId={myId} /></div>
+        ) : !isSolo && opp ? (
+          <div className={`res-scoreboard ${won ? 'win' : tie ? 'tie' : 'loss'}`}>
             <div className="res-score me">
-              <div className="av">{initial(name)}</div>
+              <div className="av" aria-label={name}><PlayerAvatar avatar={avatar} /></div>
               <div className="pts">{myScore}</div>
               <div className="nm">{t('you')}</div>
             </div>
             <div className="res-vs">vs</div>
             <div className="res-score op">
-              <div className="av">{initial(opp.name)}</div>
+              <div className="av" aria-label={opp.name}><PlayerAvatar avatar={opp.avatar} /></div>
               <div className="pts">{oppScore}</div>
               <div className="nm">{opp.name}</div>
             </div>
@@ -736,21 +705,6 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
           </div>
         )}
 
-        <div className="res-stats">
-          <div className="res-stat">
-            <b>{correctPct === null ? '\u2014' : `${correctPct}%`}</b>
-            <span>bonnes réponses</span>
-          </div>
-          <div className="res-stat">
-            <b>{avgSec === null ? '\u2014' : `${avgSec.toFixed(1)}s`}</b>
-            <span>temps moyen</span>
-          </div>
-          <div className="res-stat">
-            <b>{result.topic ? `N${result.topic.level}` : `+${result.xp}`}</b>
-            <span>{result.topic ? 'niveau du thème' : t('xpTotal')}</span>
-          </div>
-        </div>
-
         {/* Reward signals stay visible — this is what the old screen got right */}
         <div className="res-rewards">
           <div className="res-reward">
@@ -760,36 +714,16 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
           {result.coins > 0 && (
             <div className="res-reward">
               <b>+{coinsEarned}</b>
-              <span>{adClaimed ? t('coinsDoubled') : 'pièces'}</span>
+              <span>{adClaimed ? t('coinsDoubled') : t('coinBalance')}</span>
             </div>
           )}
           {result.dayStreak > 1 && (
             <div className="res-reward">
               <b>{result.dayStreak}j</b>
-              <span>série</span>
+              <span>{t('dayStreak')}</span>
             </div>
           )}
         </div>
-
-        {result.stats && (
-          <div className="res-level">
-            <LevelRing
-              level={result.stats.level}
-              xpIntoLevel={result.stats.xpIntoLevel}
-              xpForLevel={result.stats.xpForLevel}
-            />
-            <div className="res-level-text">
-              <b>Niveau {result.stats.level}</b>
-              <span>{result.stats.xpIntoLevel} / {result.stats.xpForLevel} XP</span>
-            </div>
-          </div>
-        )}
-
-        {adOffer && !adClaimed && result.coins > 0 && (
-          <button className="res-btn-ad" onClick={onWatchAd}>
-            <span aria-hidden="true">▶</span> {t('adDouble', { n: result.coins })}
-          </button>
-        )}
 
         <div className="res-cta">
           {!isSolo ? (
@@ -811,14 +745,36 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
           </button>
         </div>
 
-        <button className="res-details-toggle" onClick={() => setShowDetails((v) => !v)} aria-expanded={showDetails}>
+        {result.stats && (
+          <div className="res-level">
+            <LevelRing level={result.stats.level} xpIntoLevel={result.stats.xpIntoLevel} xpForLevel={result.stats.xpForLevel} />
+            <div className="res-level-text">
+              <b>{t('level')} {result.stats.level}</b>
+              <span>{result.stats.xpIntoLevel} / {result.stats.xpForLevel} XP</span>
+            </div>
+          </div>
+        )}
+
+        {adOffer && !adClaimed && result.coins > 0 && (
+          <button className="res-btn-ad" onClick={onWatchAd}>
+            <span aria-hidden="true">▶</span> {t('adDouble', { n: result.coins })}
+          </button>
+        )}
+
+        <button className="res-details-toggle" onClick={() => setShowDetails((v) => !v)} aria-expanded={showDetails} aria-controls="match-result-details">
           {showDetails ? t('hideDetails') : t('showDetails')}
         </button>
       </div>
 
       {showDetails && (
-      <div className="res-details">
-      <IdentityCard frame={frame} avatar={avatar} name={name} level={result.stats?.level} className="identity-card-result" />
+      <div className="res-details" id="match-result-details">
+      <h2 className="res-details-heading">{t('matchStatistics')}</h2>
+      <div className="res-stats">
+        <div className="res-stat"><b>{correctPct === null ? '—' : `${correctPct}%`}</b><span>{t('correctAnswers')}</span></div>
+        <div className="res-stat"><b>{avgSec === null ? '—' : `${avgSec.toFixed(1)}s`}</b><span>{t('averageTime')}</span></div>
+        <div className="res-stat"><b>{result.topic ? `N${result.topic.level}` : `+${result.xp}`}</b><span>{result.topic ? t('topicLevel') : t('xpTotal')}</span></div>
+      </div>
+      <div className="res-player-identity"><PlayerAvatar avatar={avatar} /><span>{name}</span></div>
       {result.topic && (
         <div className="result-topic-level">
           <span className="topic-level-badge">{result.topic.level}</span>
@@ -834,7 +790,7 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
         <div className="xpb-row"><span>{t('winBonus')}</span><span>+{result.xpBreakdown?.winBonus ?? 0}</span></div>
         <div className="xpb-row total"><span>{t('xpTotal')}</span><span>{result.xp}</span></div>
       </div>
-      {!isSolo && <Leaderboard leaderboard={result.leaderboard} myId={myId} />}
+      {!isSolo && <Leaderboard leaderboard={result.leaderboard || []} myId={myId} />}
       <div className="result-streak-row">
         <StreakBadge streak={streak?.streak || 0} />
       </div>
@@ -903,7 +859,6 @@ const QV4SHOP_ITEMS = [
   { id: 'spotlight', category: 'celebrations', name: 'Sous les projecteurs', price: 750, tone: 'ice', description: 'Les lumières s’allument pour ton grand final.', badge: 'ANIMÉ' },
 ];
 const QV4shopNumber = (number) => number.toLocaleString('fr-FR');
-const QV4SHOP_AVATAR_ORDER = ['fox', 'robot', 'brain', 'astronaut', 'ninja', 'dragon', 'cat', 'owl', 'ghost', 'lion'];
 
 function QV4ShopIcon({ name, size = 22 }) {
   const paths = {
@@ -921,57 +876,13 @@ function QV4ShopIcon({ name, size = 22 }) {
   return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={paths[name] || paths.shop} /></svg>;
 }
 
-function QV4ShopAvatar({ kind = 'robot' }) {
-  if (!QV4SHOP_AVATAR_ORDER.includes(kind)) return <span className="shop-v4-legacy-avatar" aria-hidden="true">{kind || '🤖'}</span>;
-  const index = QV4SHOP_AVATAR_ORDER.indexOf(kind);
-  return <span className="shop-v4-avatar-sprite" data-avatar={kind} aria-hidden="true" style={{ '--sprite-x': `${(index % 5) * 25}%`, '--sprite-y': `${Math.floor(index / 5) * 100}%` }} />;
-}
-
-function QV4ShopReactionArt({ kind }) {
-  const faces = ['angry', 'laugh', 'shock'];
-  return <svg viewBox="0 0 80 80" aria-hidden="true">
-    {faces.includes(kind) && <circle cx="40" cy="40" r="32" fill={kind === 'angry' ? '#f16b68' : '#ffd54a'} stroke="#ab582e" strokeWidth="3" />}
-    {kind === 'heart' && <path d="M40 70 11 43C-7 18 22-3 40 19 58-3 87 18 69 43Z" fill="#fb678e" stroke="#b43364" strokeWidth="4" />}
-    {kind === 'angry' && <><path d="m19 25 14 8m14 0 14-8M28 58q12-14 24 0" fill="none" stroke="#613349" strokeWidth="5" strokeLinecap="round" /><ellipse cx="28" cy="39" rx="4" ry="7" fill="#613349" /><ellipse cx="52" cy="39" rx="4" ry="7" fill="#613349" /></>}
-    {kind === 'laugh' && <><path d="m18 29 12-7-12-6m44 13-12-7 12-6" fill="none" stroke="#613349" strokeWidth="5" strokeLinecap="round" /><path d="M21 40h38q-4 29-19 29T21 40Z" fill="#613349" /><path d="M29 60q11-10 22 0" stroke="#f98bad" strokeWidth="7" /><path d="M11 30Q-2 46 8 49q12-3 3-19m58 0q13 16 3 19-12-3-3-19" fill="#61e4fa" /></>}
-    {kind === 'shock' && <><ellipse cx="27" cy="31" rx="8" ry="11" fill="#fff" /><ellipse cx="53" cy="31" rx="8" ry="11" fill="#fff" /><circle cx="27" cy="34" r="4" fill="#242335" /><circle cx="53" cy="34" r="4" fill="#242335" /><ellipse cx="40" cy="56" rx="9" ry="12" fill="#613349" /></>}
-    {kind === 'thumbsup' && <><path d="M25 63V33l12-22q7-5 11 4l-4 17h19q11 0 8 11l-6 20q-2 5-9 5H34Z" fill="#ffd54a" stroke="#9f6331" strokeWidth="3" /><rect x="10" y="33" width="17" height="36" rx="5" fill="#55d5d8" stroke="#28778e" strokeWidth="3" /></>}
-    {kind === 'clap' && <><path d="m14 51 3-23q1-7 6-2l3 15 5-21q3-5 6 0l-2 24 6-17q4-4 6 2l-6 27q-4 16-18 12Z" fill="#ffd54a" stroke="#7c4529" strokeWidth="3" /><path d="m48 18 7-2m-3 13 8 1M8 21l-5-4" stroke="#fff" strokeWidth="3" /></>}
-    {kind === 'sweat' && <path d="M40 7Q10 42 18 57q22 27 44 0Q70 42 40 7Z" fill="#5ee7f3" stroke="#1489b6" strokeWidth="3" />}
-    {kind === 'cool' && <path d="M3 25h29l8 6 8-6h29l-5 22q-15 10-27-1l-5-10-5 10Q23 57 8 47Z" fill="#171727" stroke="#fff" strokeWidth="3" />}
-  </svg>;
-}
-
-function QV4ShopCelebrationArt({ kind }) {
-  return <div className={`shop-v4-celebration shop-v4-celebration-${kind}`} aria-hidden="true">
-    {kind === 'disco' && <svg viewBox="0 0 100 120"><path d="M50 0v28" stroke="#b9dff4" strokeWidth="4" /><circle cx="50" cy="66" r="36" fill="#77d8eb" stroke="#d5f9ff" strokeWidth="4" /><path d="M14 66h72M22 48h56M22 84h56M50 30v72M35 34q-16 32 0 64m30-64q16 32 0 64" fill="none" stroke="#346b9b" strokeWidth="3" /><path d="m17 12 3 9 9 3-9 3-3 9-3-9-9-3 9-3Z" fill="#fff" /></svg>}
-    {kind === 'micdrop' && <svg viewBox="0 0 80 120"><rect x="24" y="5" width="32" height="50" rx="16" fill="#b7dcf3" stroke="#355875" strokeWidth="4" /><path d="M27 20h26M27 30h26M27 40h26" stroke="#355875" strokeWidth="3" /><path d="M32 53h16v58H32Z" fill="#47465d" stroke="#1c2135" strokeWidth="4" /></svg>}
-    {kind === 'rocket' && <svg viewBox="0 0 90 140"><path d="m34 102 11 34 11-34" fill="#ffd54a" stroke="#f28731" strokeWidth="5" /><path d="M26 80 9 112l21-8m34-24 17 32-21-8" fill="#ed526d" stroke="#7d334f" strokeWidth="3" /><path d="M45 4Q15 37 28 102h34Q75 37 45 4Z" fill="#f7f1e8" stroke="#405069" strokeWidth="4" /><circle cx="45" cy="56" r="12" fill="#55dfee" stroke="#405069" strokeWidth="4" /><path d="m45 4-14 26h28Z" fill="#ed526d" /></svg>}
-    {kind === 'spotlight' && <><i /><i /><i /></>}
-    {kind === 'fireworks' && <><span className="shop-v4-firework-star">{'✦'}</span><span className="shop-v4-firework-star">{'✦'}</span><span className="shop-v4-firework-star">{'✦'}</span></>}
-  </div>;
-}
-
-function QV4ShopArt({ item, avatar = 'robot', animated = false }) {
-  const type = item.category;
-  return <div className={`shop-v4-art shop-v4-tone-${item.tone} ${animated ? 'shop-v4-art-playing' : ''}`} aria-hidden="true">
-    <span className="shop-v4-art-orbit" /><span className="shop-v4-art-star shop-v4-star-one">{'✦'}</span><span className="shop-v4-art-star shop-v4-star-two">{'✦'}</span>
-    {type === 'entries' && <div className={`shop-v4-effect shop-v4-effect-${item.id}`}>
-      {Array.from({ length: 9 }, (_, i) => <span key={i} style={{ '--i': i, '--angle': `${i * 40}deg` }} />)}
-    </div>}
-    {type === 'celebrations' && <>
-      {item.id === 'throne' && <div className="shop-v4-throne" />}
-      <div className="shop-v4-confetti">{Array.from({ length: 12 }, (_, i) => <i key={i} style={{ '--i': i, '--angle': `${i * 30}deg` }} />)}</div>
-    </>}
-    <div className={`shop-v4-character shop-v4-character-${item.id} ${item.id === 'dance' ? 'shop-v4-dancer' : ''}`}><QV4ShopAvatar kind={type === 'avatars' ? item.art : avatar} /></div>
-    {type === 'reactions' && <span className={`shop-v4-reaction shop-v4-reaction-${item.id}`}><QV4ShopReactionArt kind={item.id} /></span>}
-    {type === 'celebrations' && <QV4ShopCelebrationArt kind={item.id} />}
-  </div>;
-}
 
 function QV4ShopPreviewDialog({ item, owned, equipped, coins, avatar, name, onClose, onBuy, onEquip, pending = false, onPlay, canBuy, canEquip, message }) {
   const ref = React.useRef(null);
   const titleId = React.useId();
+  const descriptionId = React.useId();
+  const pendingRef = React.useRef(pending);
+  pendingRef.current = pending;
   const [replay, setReplay] = React.useState(0);
   React.useEffect(() => {
     const opener = document.activeElement;
@@ -979,12 +890,13 @@ function QV4ShopPreviewDialog({ item, owned, equipped, coins, avatar, name, onCl
     document.body.style.overflow = 'hidden';
     (ref.current.querySelector('button:not(:disabled)') || ref.current).focus();
     const onKey = (event) => {
-      if (event.key === 'Escape') { event.preventDefault(); onClose(); }
+      if (event.key === 'Escape') { event.preventDefault(); if (!pendingRef.current) onClose(); }
       if (event.key !== 'Tab') return;
       const buttons = [...ref.current.querySelectorAll('button:not(:disabled)')];
       if (!buttons.length) { event.preventDefault(); ref.current.focus(); return; }
       const first = buttons[0], last = buttons[buttons.length - 1];
-      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      if (!buttons.includes(document.activeElement)) { event.preventDefault(); (event.shiftKey ? last : first).focus(); }
+      else if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     };
     document.addEventListener('keydown', onKey);
@@ -994,15 +906,26 @@ function QV4ShopPreviewDialog({ item, owned, equipped, coins, avatar, name, onCl
   const canAct = owned ? canEquip : canBuy;
   const affordable = coins >= item.price;
   const hasAnimation = !['avatars'].includes(item.category);
-  return <div className="shop-v4-dialog-backdrop" onClick={(event) => { if (event.target === event.currentTarget) onClose(); }}>
-    <section ref={ref} className="shop-v4-dialog" role="dialog" tabIndex={-1} aria-modal="true" aria-labelledby={titleId}>
+  const previewAvatar = item.category === 'avatars' ? item.art : avatar;
+  const previewCaption = { avatars: 'Ton personnage, prêt pour le prochain duel.', entries: 'Ton apparition au début du duel.', reactions: 'Ta réaction entre deux questions.', celebrations: 'Ton moment après la victoire.' }[item.category];
+  return <div className="shop-v4-dialog-backdrop" onClick={(event) => { if (!busy && event.target === event.currentTarget) onClose(); }}>
+    <section ref={ref} className="shop-v4-dialog" role="dialog" tabIndex={-1} aria-modal="true" aria-labelledby={titleId} aria-describedby={descriptionId} aria-busy={busy}>
       <button type="button" disabled={busy} className="shop-v4-close" onClick={onClose} aria-label={"Fermer l\u2019aper\u00E7u"}><QV4ShopIcon name="close" /></button>
-      <div className="shop-v4-dialog-art" key={replay}><QV4ShopArt item={item} avatar={avatar} animated /></div>
+      <div className="shop-v4-dialog-art">
+        <div className="qa-preview-head"><span>Dans le duel</span><span>Simulation visuelle</span></div>
+        <div className="qa-preview-players">
+          <div className="qa-preview-player"><PlayerAvatar avatar={previewAvatar} /><div><strong>{name}</strong><small>Toi</small></div></div>
+          <span className="qa-preview-versus">VS</span>
+          <div className="qa-preview-player"><PlayerAvatar avatar="fox" /><div><strong>Camille</strong><small>Adversaire</small></div></div>
+        </div>
+        <div className="qa-preview-stage" key={replay}><QV4ShopArt item={item} avatar={avatar} animated /></div>
+        <p className="qa-preview-caption">{previewCaption}</p>
+      </div>
       <div className="shop-v4-dialog-body">
-        <p className="shop-v4-eyebrow">APERÇU POUR {name}</p><h2 id={titleId}>{item.name}</h2><p>{item.description}</p>
+        <p className="shop-v4-eyebrow">APERÇU POUR {name}</p><h2 id={titleId}>{item.name}</h2><p id={descriptionId}>{item.description}</p>
         {hasAnimation && <button type="button" disabled={busy} className="shop-v4-replay" onClick={() => setReplay((value) => value + 1)}><QV4ShopIcon name="play" size={16} /> {'Rejouer l\u2019aper\u00E7u'}</button>}
         <button type="button" className="shop-v4-button shop-v4-dialog-primary" disabled={busy || equipped || !canAct || (!owned && !affordable)} onClick={() => owned ? onEquip(item) : onBuy(item)}>
-          {equipped ? 'Équipé' : !canAct ? 'Indisponible' : owned ? 'Équiper' : !affordable ? `${QV4shopNumber(item.price - coins)} pièces manquantes` : `Acheter · ${QV4shopNumber(item.price)} pièces`}
+          {busy ? 'Demande en cours…' : equipped ? 'Équipé' : !canAct ? 'Indisponible' : owned ? 'Équiper' : !affordable ? `${QV4shopNumber(item.price - coins)} pièces manquantes` : `Acheter · ${QV4shopNumber(item.price)} pièces`}
         </button>
         <p className="shop-v4-status" role="status">{message}</p>
         {!owned && !affordable && typeof onPlay === 'function' && <button type="button" disabled={busy} className="shop-v4-replay" onClick={onPlay}>Jouer pour gagner des pièces</button>}
@@ -1011,7 +934,7 @@ function QV4ShopPreviewDialog({ item, owned, equipped, coins, avatar, name, onCl
   </div>;
 }
 
-export function ShopContent({ avatar = 'robot', name = 'QuizMaster', stats = {}, onBuy, onEquip, onPlay, onBack, pending = false }) {
+export function ShopContent({ avatar = 'robot', name = 'QuizMaster', stats = {}, onBuy, onEquip, onPlay, onBack, pending = false, controls }) {
   const [category, setCategory] = React.useState('avatars');
   const [selection, setSelection] = React.useState(null);
   const [notice, setNotice] = React.useState('');
@@ -1029,7 +952,7 @@ export function ShopContent({ avatar = 'robot', name = 'QuizMaster', stats = {},
   };
   const items = QV4SHOP_ITEMS.filter(item => item.category === category);
   const categoryData = QV4SHOP_CATEGORIES.find(([id]) => id === category);
-  const currentAvatar = session.equipped.avatars || avatar || 'robot';
+  const currentAvatar = avatarId(session.equipped.avatars || avatar);
   if (QV4SHOP_ITEMS.some(item => item.category === 'avatars' && item.id === currentAvatar)) session.equipped.avatars = currentAvatar;
   const equippedAvatar = QV4SHOP_ITEMS.find(item => item.category === 'avatars' && item.id === currentAvatar) || { category: 'avatars', art: currentAvatar, name: 'Ton avatar', tone: 'cyan' };
   const featured = items[0];
@@ -1049,12 +972,12 @@ export function ShopContent({ avatar = 'robot', name = 'QuizMaster', stats = {},
   const buy = item => request(item, 'buy');
   const equip = item => request(item, 'equip');
   return <section className="shop-v4-root" aria-labelledby="shop-v4-title">
-    <header className="shop-v4-header">{typeof onBack === 'function' && <button type="button" disabled={busy} className="shop-v4-back" onClick={onBack} aria-label="Retour"><QV4ShopIcon name="arrow" /></button>}<span className="shop-v4-brand">QuizzUp<span>{'✦'}</span></span><div className="shop-v4-wallet" aria-label={`${QV4shopNumber(session.coins)} pièces`}><QV4ShopIcon name="coin" /><strong>{QV4shopNumber(session.coins)}</strong></div></header>
+    <header className="shop-v4-header">{typeof onBack === 'function' && <button type="button" disabled={busy} className="shop-v4-back" onClick={onBack} aria-label="Retour"><QV4ShopIcon name="arrow" /></button>}<span className="shop-v4-brand">QuizzUp<span>{'✦'}</span></span><div className="shop-v4-wallet" aria-label={`${QV4shopNumber(session.coins)} pièces`}><QV4ShopIcon name="coin" /><strong>{QV4shopNumber(session.coins)}</strong></div>{controls}</header>
     <div className="shop-v4-heading"><p className="shop-v4-eyebrow">TON STYLE. TES RÈGLES.</p><h1 id="shop-v4-title">La boutique<span>.</span></h1><p>Fais de chaque duel un peu plus le tien.</p></div>
     <nav className="shop-v4-categories" aria-label="Catégories de la boutique">{QV4SHOP_CATEGORIES.map(([id, label]) => <button type="button" disabled={busy} key={id} aria-pressed={category === id} onClick={() => { setCategory(id); setNotice(''); }}>{label}</button>)}</nav>
     <section className={`shop-v4-hero shop-v4-tone-${featured.tone}`} aria-label={`À la une : ${featured.name}`}>
       <div className="shop-v4-hero-copy"><span className="shop-v4-tag">À LA UNE</span><h2>{categoryData[2]}</h2><p>{categoryData[3]}</p><button type="button" disabled={busy} className="shop-v4-button" onClick={() => { setNotice(''); setSelection(featured); }}>Découvrir <QV4ShopIcon name="arrow" size={18} /></button></div>
-      <div className="shop-v4-hero-art"><QV4ShopArt item={featured} avatar={currentAvatar} /></div>
+      <div className="shop-v4-hero-art" key={category}><QV4ShopArt item={featured} avatar={currentAvatar} animated /></div>
     </section>
     <div className="shop-v4-profile-preview"><div className="shop-v4-profile-icon"><QV4ShopArt item={equippedAvatar} avatar={currentAvatar} /></div><div><strong>{name}</strong><span>{equippedAvatar.name} · Ton look actuel</span></div><span className="shop-v4-preview-label">APERÇU</span></div>
     <div className="shop-v4-section-heading"><h2>{categoryData[1]}</h2><span>{items.length} objets</span></div>

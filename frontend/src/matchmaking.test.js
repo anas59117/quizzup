@@ -4,11 +4,18 @@ import App from './App';
 import { I18nProvider } from './i18n';
 import { useGameSocket } from './useGameSocket';
 import { ensureSignedIn } from './firebase';
+import { useLeague } from './LeagueSystem';
+import SFX from './sounds';
 
 jest.mock('./useGameSocket');
 jest.mock('./firebase', () => ({ ensureSignedIn: jest.fn(), linkGoogleAccount: jest.fn() }));
 jest.mock('./music', () => ({ play: jest.fn(), stop: jest.fn(), setMuted: jest.fn() }));
-jest.mock('./sounds', () => ({ muted: true, gameStart: jest.fn(), roundIntro: jest.fn() }));
+jest.mock('./sounds', () => ({ muted: true, gameStart: jest.fn(), roundIntro: jest.fn(), victory: jest.fn(), tie: jest.fn(), defeat: jest.fn(), correct: jest.fn(), wrong: jest.fn(), tick: jest.fn(), countdownBeep: jest.fn(), select: jest.fn() }));
+jest.mock('./LeagueSystem', () => ({ useLeague: jest.fn(), LeagueContent: () => null }));
+jest.mock('./GameFeelProvider', () => {
+  const effects = { triggerCorrect: () => jest.requireMock('./sounds').correct(), triggerWrong: () => jest.requireMock('./sounds').wrong(), triggerOpponentAnswer: jest.fn(), resetCombo: jest.fn(), triggerTick: jest.fn() };
+  return { useGameFeel: () => effects };
+});
 
 let root;
 let container;
@@ -26,7 +33,19 @@ const receive = (data) => act(() => messageRef.current(data));
 const advance = (ms) => act(() => jest.advanceTimersByTime(ms));
 const soloCalls = () => socket.connect.mock.calls.filter(([action]) => action.type === 'solo');
 
+test('game start already displays the selected opponent while round intro is in transit', () => {
+  receive({ type: 'game_start', totalRounds: 6, opponents: [{ id: 'other', name: 'Alex', avatar: 'owl' }] });
+  expect(container.querySelector('.app.game-bg')).not.toBeNull();
+  expect(container.querySelector('.df-faceoff').textContent).toContain('Alex');
+  expect(jest.requireMock('./music').play).not.toHaveBeenCalled();
+  receive({ type: 'question', round: 1, totalRounds: 6, timeLimit: 10, question: 'Ancienne question', answers: ['A','B','C','D'] });
+  receive({ type: 'game_start', totalRounds: 6, opponents: [{ id: 'other', name: 'Alex', avatar: 'owl' }] });
+  expect(container.querySelector('.question')).toBeNull();
+  expect(container.querySelector('.df-faceoff').textContent).toContain('Alex');
+});
+
 beforeEach(async () => {
+  window.scrollTo = jest.fn();
   jest.useFakeTimers();
   window.IS_REACT_ACT_ENVIRONMENT = true;
   window.history.replaceState(null, '', '/');
@@ -34,6 +53,8 @@ beforeEach(async () => {
   sessionStorage.clear();
   localStorage.setItem('quizzup-name', 'Test');
   localStorage.setItem('quizzup-lang', 'fr');
+  localStorage.setItem('quizzup-onboarded', '1');
+  useLeague.mockReturnValue({ streak: 0, addResult: jest.fn() });
   socket = {
     wsRef: { current: null }, connect: jest.fn(() => true), send: jest.fn(() => true),
     closeSocket: jest.fn(), scheduleRecovery: jest.fn(), reconnecting: false,
@@ -48,6 +69,52 @@ beforeEach(async () => {
   root = createRoot(container);
   await act(async () => root.render(<I18nProvider><App /></I18nProvider>));
   receive({ type: 'identified', reconnected: false, roomReconnected: false });
+});
+
+function startQuestion(round = 1) {
+  receive({ type: 'game_start', opponents: [{ id: 'other', name: 'Alex', avatar: 'fox' }], totalRounds: 6 });
+  receive({ type: 'question', round, totalRounds: 6, question: 'Quel personnage ?', answers: ['A', 'B', 'C', 'D'], timeLimit: 10 });
+}
+
+test('a server acknowledgment updates confirmed points while the opponent remains waiting and the timer continues', () => {
+  startQuestion();
+  act(() => container.querySelector('.answer').click());
+  receive({ type: 'answer_ack', round: 1, yourAnswer: 0, yourCorrect: true, pointsEarned: 17, yourScore: 17, correctIndex: 0 });
+  expect(container.querySelector('.hud-chip.mine .hud-chip-score').textContent).toBe('17');
+  expect(container.querySelector('.duel-points-ring').getAttribute('aria-valuenow')).toBe('17');
+  expect(container.querySelector('.hud-chip:not(.mine)').dataset.state).toBe('waiting');
+  advance(1000);
+  expect(container.querySelector('.hud-timer').textContent).toBe('9');
+  receive({ type: 'opponent_answered', id: 'other' });
+  expect(container.querySelector('.hud-chip:not(.mine)').dataset.state).toBe('answered');
+  expect(container.querySelector('.hud-chip:not(.mine)').textContent).not.toContain('Mauvaise réponse');
+});
+
+test('old acknowledgments cannot overwrite a completed round or a new question', () => {
+  startQuestion();
+  receive({ type: 'round_result', round: 1, yourAnswer: 0, yourCorrect: true, pointsEarned: 17, yourScore: 17,
+    correctIndex: 0, others: [{ id: 'other', score: 12, answered: true, correct: true }] });
+  receive({ type: 'answer_ack', round: 1, yourScore: 999 });
+  expect(container.querySelector('.hud-chip.mine .hud-chip-score').textContent).toBe('17');
+  receive({ type: 'question', round: 2, totalRounds: 6, question: 'Deuxième ?', answers: ['A', 'B', 'C', 'D'], timeLimit: 10 });
+  receive({ type: 'answer_ack', round: 1, yourScore: 999 });
+  expect(container.querySelectorAll('.answer:disabled')).toHaveLength(0);
+});
+
+test.each([true,false])('answer outcome sound plays once across acknowledgment and final result (correct=%s)', (correct) => {
+  startQuestion();
+  const answer = { round: 1, yourAnswer: 0, yourCorrect: correct, pointsEarned: correct ? 17 : 0, yourScore: correct ? 17 : 0, correctIndex: correct ? 0 : 1 };
+  receive({ ...answer, type: 'answer_ack' });
+  receive({ ...answer, type: 'round_result', others: [{ id: 'other', score: 12, answered: true, correct: true }] });
+  expect(correct ? SFX.correct : SFX.wrong).toHaveBeenCalledTimes(1);
+});
+
+test('only a successful avatar equipment response changes the visible public identity', () => {
+  receive({ type: 'shop_result', action: 'equip', itemId: 'fox', ok: false });
+  expect(container.querySelector('.profile-avatar-v4 .player-avatar').dataset.avatar).toBe('robot');
+  receive({ type: 'shop_result', action: 'equip', itemId: 'fox', ok: true });
+  expect(container.querySelector('.profile-avatar-v4 .player-avatar').dataset.avatar).toBe('fox');
+  expect(socket.send).toHaveBeenCalledWith({ type: 'profile_update', name: 'Test', avatar: 'fox' });
 });
 
 afterEach(() => {
@@ -132,8 +199,9 @@ test('shows the real level and truthful wait feedback with a delayed solo option
 });
 
 test('starts solo only after cancellation is acknowledged, retaining the selected topic', () => {
-  const topic = container.querySelector('.topics-scroll button');
+  const topic = container.querySelector('[data-topic="ligue_champions"] button');
   act(() => topic.click());
+  click('Jouer maintenant');
   const category = socket.connect.mock.calls.find(([action]) => action.type === 'join')[0].category;
   expect(category).toBe('ligue_champions');
   receive({ type: 'waiting' });
@@ -149,6 +217,16 @@ test('starts solo only after cancellation is acknowledged, retaining the selecte
   expect(soloCalls()).toEqual([[{ type: 'solo', category }]]);
   receive({ type: 'queue_cancelled' });
   expect(soloCalls()).toHaveLength(1);
+});
+
+test('a completed duel records the league reward once, even after a rerender', () => {
+  receive({ type: 'game_start', gameId: 'reward-once', you: { id: 'me' }, opponents: [{ id: 'other', name: 'Other', avatar: '🐼', score: 5 }], totalRounds: 6 });
+  receive({ type: 'game_end', gameId: 'reward-once', won: true, winner: { id: 'me' }, finalScore: 20, xp: 60, coins: 10, others: [{ id: 'other', score: 5 }], leaderboard: [] });
+  expect(useLeague().addResult).toHaveBeenCalledTimes(1);
+  expect(useLeague().addResult).toHaveBeenCalledWith(expect.objectContaining({ won: true, gameId: 'reward-once' }));
+  expect(container.querySelectorAll('.notification-toast')).toHaveLength(0);
+  receive({ type: 'stats', stats: { level: 2 } });
+  expect(useLeague().addResult).toHaveBeenCalledTimes(1);
 });
 
 test('normal cancellation returns home without starting another game', () => {

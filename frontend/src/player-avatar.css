@@ -1,0 +1,34 @@
+.player-avatar {
+  overflow: hidden;
+  border-radius: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  background: url('./assets/avatars-v2.png') var(--avatar-x) var(--avatar-y) / 500% 200% no-repeat;
+}
+.player-avatar--photo { border-radius: 50%; overflow: hidden; }
+.player-avatar-photo { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
+.profile-photo-editor { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin: 16px 0 24px; }
+.profile-photo-preview { width: 96px; height: 96px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: var(--surface, #eee); }
+.profile-photo-preview > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.profile-photo-controls { flex: 1; min-width: 150px; }
+.profile-photo-controls p { font-size: 12px; line-height: 1.5; opacity: .75; margin: 8px 0; }
+.profile-photo-upload { display: block; position: relative; padding: 12px; border: 1px solid currentColor; border-radius: 8px; font-size: 14px; font-weight: 700; text-align: center; cursor: pointer; }
+.profile-photo-upload input { position: absolute; opacity: 0; inset: 0; width: 100%; cursor: pointer; }
+.profile-photo-upload:focus-within, .profile-photo-controls button:focus-visible { outline: 3px solid #e85d75; outline-offset: 3px; }
+.profile-photo-controls button { min-height: 44px; border: 0; padding: 8px; background: transparent; color: inherit; text-decoration: underline; cursor: pointer; }
+.profile-photo-zoom { width: 100%; display: grid; gap: 8px; font-size: 12px; }
+.profile-photo-zoom input { width: 100%; min-height: 44px; accent-color: #e85d75; }
+.profile-photo-error { width: 100%; color: #ba2240; font-size: 13px; line-height: 1.5; }
+
+/* Definite dimensions also work inside legacy auto-sized grid tracks. */
+.profile-avatar-v4 > .player-avatar, .pf-avatar > .player-avatar,
+.avatar-opt > .player-avatar, .podium-avatar > .player-avatar,
+.global-avatar > .player-avatar, .profile-avatar > .player-avatar,
+.friend-ava > .player-avatar, .feed-post-ava > .player-avatar,
+.lobby-ava > .player-avatar, .lb-ava > .player-avatar {
+  width: inherit;
+  height: inherit;
+}
+.challenge-avatar { display: block; width: 44px; height: 44px; }

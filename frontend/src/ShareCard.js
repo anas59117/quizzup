@@ -5,6 +5,9 @@
 import React, { useRef, useCallback, useState, useEffect } from 'react';
 import { useI18n } from './i18n';
 import SFX from './sounds';
+import avatarAtlas from './assets/avatars-v2.png';
+import { AVATAR_IDS, avatarId } from './PlayerAvatar';
+import { profilePhotoUrl } from './profile-photo';
 
 export function ShareCard({ result, myName, myAvatar, topicLabel, onClose }) {
   const { t, lang } = useI18n();
@@ -17,7 +20,7 @@ export function ShareCard({ result, myName, myAvatar, topicLabel, onClose }) {
   const score = result.finalScore || 0;
   const opponentScore = result.leaderboard?.find(p => p.id !== result.myId)?.score || 0;
 
-  const generate = useCallback(() => {
+  const generate = useCallback((atlas, personalPhoto = false) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -119,7 +122,21 @@ export function ShareCard({ result, myName, myAvatar, topicLabel, onClose }) {
     ctx.stroke();
     ctx.font = '80px serif';
     ctx.fillStyle = '#fff';
-    ctx.fillText(myAvatar || '👤', W / 2, 950);
+    if (atlas?.naturalWidth) {
+      if (personalPhoto) {
+        ctx.save(); ctx.beginPath(); ctx.arc(W / 2, 920, 78, 0, Math.PI * 2); ctx.clip();
+        ctx.drawImage(atlas, W / 2 - 80, 840, 160, 160);
+        ctx.restore();
+      } else {
+      const index = AVATAR_IDS.indexOf(avatarId(myAvatar));
+      const cellWidth = atlas.naturalWidth / 5;
+      const cellHeight = atlas.naturalHeight / 2;
+      ctx.drawImage(atlas, (index % 5) * cellWidth, Math.floor(index / 5) * cellHeight,
+        cellWidth, cellHeight, W / 2 - 65, 840, 130, 130);
+      }
+    } else {
+      ctx.fillText((myName || 'Q').charAt(0).toUpperCase(), W / 2, 950);
+    }
 
     // ─── CTA ───
     ctx.font = 'bold 44px sans-serif';
@@ -139,10 +156,18 @@ export function ShareCard({ result, myName, myAvatar, topicLabel, onClose }) {
   }, [isWin, isTie, score, opponentScore, myName, myAvatar, topicLabel, lang, t]);
 
   useEffect(() => {
-    // Auto-generate on mount
-    const t = setTimeout(generate, 300);
-    return () => clearTimeout(t);
-  }, [generate]);
+    const image = new Image();
+    const photo = profilePhotoUrl(myAvatar);
+    let personalPhoto = !!photo;
+    image.crossOrigin = 'anonymous';
+    image.onload = () => generate(image, personalPhoto);
+    image.onerror = () => {
+      if (personalPhoto) { personalPhoto = false; image.src = avatarAtlas; }
+      else generate(null);
+    };
+    image.src = photo || avatarAtlas;
+    return () => { image.onload = null; image.onerror = null; };
+  }, [generate, myAvatar]);
 
   const handleShare = async () => {
     if (!dataUrl) return;

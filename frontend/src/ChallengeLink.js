@@ -5,6 +5,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { useI18n } from './i18n';
 import SFX from './sounds';
+import { PlayerAvatar } from './PlayerAvatar';
 
 function generateChallengeCode(topicKey, fromName) {
   const rand = Math.random().toString(36).substring(2, 8).toUpperCase();
@@ -126,7 +127,7 @@ function ChallengeModal({ topic, myName, myAvatar, onClose }) {
 
         <div className="challenge-player">
           <span className="challenge-from">{t('challengeFrom')}</span>
-          <span className="challenge-avatar">{myAvatar}</span>
+          <span className="challenge-avatar"><PlayerAvatar avatar={myAvatar} /></span>
           <span className="challenge-name">{myName}</span>
         </div>
 
