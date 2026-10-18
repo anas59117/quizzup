@@ -36,7 +36,7 @@ test('ignores invalid input', () => {
 
 test('normalize drops garbage', () => {
   const n = topicStats.normalize({ a: { psg: { games: 2, wins: 9, xp: -1 }, 'bad key!': { games: 1 } }, b: 7 });
-  assert.deepStrictEqual({ ...n.a.psg }, { games: 2, wins: 2, xp: 0 });
+  assert.deepStrictEqual({ ...n.a.psg }, { games: 2, wins: 2, xp: 0, updatedAt: 0, bestStreak: null, currentStreak: 0, correctlyAnswered: null });
   assert.ok(!n.a['bad key!']);
   assert.ok(!n.b);
 });

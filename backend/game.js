@@ -9,6 +9,7 @@ const { GAME_CONFIG } = require('./config');
 const stats = require('./stats');
 const categoryStats = require('./category-stats');
 const topicStats = require('./topic-stats');
+const matchHistory = require('./match-history');
 const { randomId } = require('./ids');
 
 // Optional hook (set by server.js) told when a player gains XP in a theme,
@@ -334,6 +335,11 @@ function revealRound(game, timedOut) {
   clearBotTimers(game);
   game.phase = 'revealed';
   const q = game.questions[game.currentRound];
+  game.roundResults = game.roundResults || [];
+  game.roundResults[game.currentRound] = game.players.map(p => ({
+    clientId:p.clientId, playerId:p.id, question:q,
+    correct:game.roundAnswers[p.id]?.correct === true,
+  }));
 
   activePlayers(game).forEach((p) => {
     const mine = game.roundAnswers[p.id];
@@ -409,6 +415,8 @@ function removePlayer(game, playerId) {
   if (idx === -1) return;
 
   const [left] = game.players.splice(idx, 1);
+  game.departedPlayers = game.departedPlayers || [];
+  game.departedPlayers.push(left);
   if (left.reconnectTimer) clearTimeout(left.reconnectTimer);
   playerSessions.delete(playerId);
 
@@ -719,7 +727,7 @@ function endGame(game, reason) {
     }
     try {
       const beforeXp = p.clientId && game.categoryKey ? topicStats.getTopic(p.clientId, game.categoryKey).xp : 0;
-      topicStats.record(p.clientId, game.categoryKey, { won, xp: xpTotal });
+      topicStats.record(p.clientId, game.categoryKey, { won, xp: xpTotal, answers: (game.roundResults || []).flatMap(round => (round || []).filter(answer => answer.clientId === p.clientId)) });
       if (topicProgressListener && p.clientId && game.categoryKey) {
         const afterXp = topicStats.getTopic(p.clientId, game.categoryKey).xp;
         if (afterXp > beforeXp) {
@@ -746,6 +754,15 @@ function endGame(game, reason) {
     p.finalResult = finalResult;
     send(p.ws, finalResult);
   });
+
+  const results = matchHistory.resultsFor(game);
+  try {
+    matchHistory.recordMatch(game, results);
+  } catch (err) { console.error('match-history record failed:', err); }
+  try {
+    const messaging = require('./messaging');
+    if (typeof messaging.recordMatchResults === 'function') messaging.recordMatchResults(game, results);
+  } catch (err) { console.error('match conversation result failed:', err); }
 
   setTimeout(() => {
     // Wake any result screen still waiting for a rematch before dropping the

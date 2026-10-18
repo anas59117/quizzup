@@ -9,6 +9,14 @@ const { levelFromXp } = require('./stats');
 
 const STORE = getStorePath('topic-stats.json');
 const MAX_TOPICS_PER_PLAYER = 400;
+const MAX_QUESTION_KEYS = 10000;
+function bankKeys(key) {
+  const { CATEGORIES, questionKey } = require('./questions');
+  return new Set((CATEGORIES[key]?.questions || []).map(questionKey).filter(k => typeof k === 'string'));
+}
+function progress(t = {}) {
+  return { updatedAt: toCount(t.updatedAt), bestStreak: t.bestStreak == null ? null : toCount(t.bestStreak, 1e9), currentStreak: toCount(t.currentStreak, 1e9), correctlyAnswered: Array.isArray(t.correctlyAnswered) ? [...new Set(t.correctlyAnswered.filter(k => typeof k === 'string' && k.length <= 4096))].slice(0,MAX_QUESTION_KEYS) : null };
+}
 const KEY_RE = /^[A-Za-z0-9_-]{1,64}$/;
 
 const isPlainObject = (v) => !!v && typeof v === 'object' && !Array.isArray(v);
@@ -27,7 +35,7 @@ function normalize(raw) {
     for (const [key, t] of Object.entries(topics)) {
       if (!KEY_RE.test(key) || !isPlainObject(t) || n >= MAX_TOPICS_PER_PLAYER) continue;
       const games = toCount(t.games, 1e9);
-      clean[key] = { games, wins: Math.min(games, toCount(t.wins, 1e9)), xp: toCount(t.xp) };
+      clean[key] = { games, wins: Math.min(games, toCount(t.wins, 1e9)), xp: toCount(t.xp), ...progress(t) };
       n += 1;
     }
     out[clientId] = clean;
@@ -38,20 +46,38 @@ function normalize(raw) {
 const store = normalize(readJsonFileSync(STORE, {}, isPlainObject));
 const persist = createJsonWriter(STORE, () => store);
 
-function record(clientId, categoryKey, { won = false, xp = 0 } = {}) {
+function record(clientId, categoryKey, { won = false, xp = 0, answers, updatedAt = Date.now() } = {}) {
   if (!clientId || typeof categoryKey !== 'string' || !KEY_RE.test(categoryKey)) return;
   const topics = store[clientId] || (store[clientId] = Object.create(null));
   if (!topics[categoryKey] && Object.keys(topics).length >= MAX_TOPICS_PER_PLAYER) return;
-  const t = topics[categoryKey] || (topics[categoryKey] = { games: 0, wins: 0, xp: 0 });
+  const t = topics[categoryKey] || (topics[categoryKey] = { games: 0, wins: 0, xp: 0, ...progress() });
   t.games += 1;
   if (won) t.wins += 1;
   t.xp = Math.min(Number.MAX_SAFE_INTEGER, t.xp + toCount(xp));
+  t.updatedAt = toCount(updatedAt);
+  if (Array.isArray(answers)) {
+    const { questionKey } = require('./questions');
+    const bank = bankKeys(categoryKey);
+    const known = new Set(t.correctlyAnswered || []);
+    t.bestStreak = t.bestStreak ?? 0;
+    for (const answer of answers.slice(0,1000)) {
+      t.currentStreak = answer?.correct === true ? Math.min(1e9,t.currentStreak + 1) : 0;
+      t.bestStreak = Math.max(t.bestStreak,t.currentStreak);
+      const key = answer?.question && questionKey(answer.question);
+      if (answer?.correct === true && bank.has(key) && known.size < MAX_QUESTION_KEYS) known.add(key);
+    }
+    t.correctlyAnswered = [...known];
+  }
   persist();
 }
 
 function withLevel(key, t) {
   const { level, xpIntoLevel, xpForLevel } = levelFromXp(t.xp);
-  return { key, games: t.games, wins: t.wins, xp: t.xp, level, xpIntoLevel, xpForLevel };
+  const p = progress(t);
+  const bank = bankKeys(key);
+  const correctCount = p.correctlyAnswered === null ? null : p.correctlyAnswered.filter(k => bank.has(k)).length;
+  const questionCount = bank.size && bank.size <= MAX_QUESTION_KEYS ? bank.size : null;
+  return { key, games: t.games, wins: t.wins, xp: t.xp, level, xpIntoLevel, xpForLevel, updatedAt:p.updatedAt || null, bestStreak:p.bestStreak, correctCount, questionCount, completion:correctCount === null || !questionCount ? null : Math.round(correctCount / questionCount * 100) };
 }
 
 // A player's themes, best first.
@@ -84,4 +110,8 @@ function getTopicLeaderboard(categoryKey, limit = 50, clientId = null) {
   return { total: rows.length, yourRank, entries: rows.slice(0, safeLimit) };
 }
 
-module.exports = { record, getPlayerTopics, getTopic, getTopicLeaderboard, normalize };
+function getRecentTopics(clientId, limit = 12) {
+ return Object.entries((clientId && store[clientId]) || {}).map(([key,t]) => withLevel(key,t)).filter(t => t.updatedAt).sort((a,b) => b.updatedAt-a.updatedAt || a.key.localeCompare(b.key)).slice(0,Math.max(1,Math.min(50,Number(limit)||12)));
+}
+
+module.exports = { getRecentTopics, record, getPlayerTopics, getTopic, getTopicLeaderboard, normalize };
