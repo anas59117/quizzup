@@ -1,27 +1,41 @@
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { initialSocialData, socialDataReducer } from './social-data';
+import { useState, useCallback, useRef, useEffect, useReducer } from 'react';
 import { useI18n } from './i18n';
 import { Icon } from './ui';
 import { PlayerAvatar } from './PlayerAvatar';
 import { FriendInviteActions } from './FriendInviteActions';
 
-export function useSocial(wsRef) {
+export function useSocial(wsRef, clientId) {
   const [friends, setFriends] = useState([]);
   const [requests, setRequests] = useState([]);
   const [outgoingRequests, setOutgoingRequests] = useState(() => new Set());
-  const [dms, setDms] = useState({}); // targetId -> [{from,text}]
+  const [legacyDms, setDms] = useState({});
+  const [dataState, dispatch] = useReducer(socialDataReducer, initialSocialData);
+  const [activeConversationId, setActiveConversationId] = useState(null);
+  const activeRef = useRef(null);
+  const [connected, setConnected] = useState(false);
   const [gameChat, setGameChat] = useState([]);
   const gameChatSeenRef = useRef(0);
 
   const send = useCallback(
     (obj) => {
       if (!wsRef.current || wsRef.current.readyState !== 1) return false;
-      wsRef.current.send(JSON.stringify(obj));
+      try { wsRef.current.send(JSON.stringify(obj)); } catch { return false; }
       return true;
     },
     [wsRef]
   );
 
   const handleMessage = useCallback((data) => {
+    dispatch({ ...data, clientId });
+    if (['dm', 'dm_sent', 'challenge_updated'].includes(data.type)) {
+      send({ type: 'conversations_list' });
+      if (activeRef.current && typeof document !== 'undefined' && document.visibilityState === 'visible') send({ type: 'dm_read', targetId: activeRef.current });
+    }
+    if (data.type === 'identified') {
+      send({ type: 'conversations_list' });
+      if (activeRef.current) send({ type: 'dm_history', targetId: activeRef.current });
+    }
     switch (data.type) {
       case 'friends_list': setFriends(data.friends); break;
       case 'friend_requests': setRequests(data.requests); break;
@@ -58,8 +72,8 @@ export function useSocial(wsRef) {
         }
         break;
       case 'presence': setFriends((f) => f.map((x) => (x.id === data.id ? { ...x, online: data.online } : x))); break;
-      case 'dm': setDms((c) => ({ ...c, [data.from]: [...(c[data.from] || []), { from: 'them', text: data.text }] })); break;
-      case 'dm_sent': setDms((c) => ({ ...c, [data.targetId]: [...(c[data.targetId] || []), { from: 'me', text: data.text }] })); break;
+      case 'dm': if (data.message) break; setDms((c) => ({ ...c, [data.from]: [...(c[data.from] || []), { from: 'them', text: data.text }] })); break;
+      case 'dm_sent': if (data.message) break; setDms((c) => ({ ...c, [data.targetId]: [...(c[data.targetId] || []), { from: 'me', text: data.text }] })); break;
       case 'dm_unavailable':
         setDms((c) => ({
           ...c,
@@ -73,7 +87,7 @@ export function useSocial(wsRef) {
       case 'player_reconnected': setGameChat((m) => [...m, { from: 'system', kind: 'reconnected', name: data.name }]); break;
       default: break;
     }
-  }, []);
+  }, [clientId, send]);
 
   const addFriend = (targetId) => send({ type: 'friend_request', targetId });
   const acceptFriend = (id) => send({ type: 'friend_accept', requesterId: id });
@@ -81,7 +95,9 @@ export function useSocial(wsRef) {
   const removeFriend = (id) => send({ type: 'friend_remove', targetId: id });
   const sendDM = (targetId, text) => {
     if (!text.trim()) return false;
-    return send({ type: 'dm', targetId, text: text.trim() });
+    const sent = send({ type: 'dm', targetId, text: text.trim(), clientMessageId: globalThis.crypto?.randomUUID?.() || String(Date.now()) });
+    if (sent) dispatch({ type: 'pending', key: targetId });
+    return sent;
   };
   const sendGameChat = (text) => {
     if (!text.trim()) return false;
@@ -92,7 +108,65 @@ export function useSocial(wsRef) {
     setGameChat([]);
   };
 
+  const requestConversations = useCallback(() => {
+    const sent = send({ type: 'conversations_list' });
+    if (sent) dispatch({ type: 'loading', key: 'conversations' });
+    return sent;
+  }, [send]);
+  const requestHistory = useCallback((targetId, before) => {
+    const sent = send({ type: 'dm_history', targetId, ...(before ? { before } : {}) });
+    if (sent) dispatch({ type: 'loading', key: targetId });
+    return sent;
+  }, [send]);
+  const markRead = useCallback(targetId => {
+    if (activeRef.current !== targetId || document.visibilityState !== 'visible') return false;
+    return send({ type: 'dm_read', targetId });
+  }, [send]);
+  const openConversation = useCallback(targetId => {
+    activeRef.current = targetId;
+    setActiveConversationId(targetId);
+    requestHistory(targetId);
+    markRead(targetId);
+  }, [requestHistory, markRead]);
+  const closeConversation = useCallback(() => { activeRef.current = null; setActiveConversationId(null); }, []);
+  const createChallenge = (targetId, category) => {
+    const sent = send({ type: 'challenge_create', targetId, category });
+    if (sent) dispatch({ type: 'pending', key: `challenge:${targetId}` });
+    return sent;
+  };
+  const respondChallenge = (challengeId, accept) => {
+    const sent = send({ type: 'challenge_respond', challengeId, accept });
+    if (sent) dispatch({ type: 'pending', key: challengeId });
+    return sent;
+  };
+  useEffect(() => {
+    let previous;
+    const refresh = () => {
+      const socket = wsRef.current;
+      const online = socket?.readyState === 1;
+      setConnected(online);
+      if (online && socket !== previous) {
+        previous = socket;
+        requestConversations();
+        if (activeRef.current) requestHistory(activeRef.current);
+      }
+      if (!online) previous = null;
+    };
+    refresh();
+    const timer = setInterval(refresh, 1000);
+    const visible = () => { if (activeRef.current) markRead(activeRef.current); };
+    document.addEventListener('visibilitychange', visible);
+    return () => { clearInterval(timer); document.removeEventListener('visibilitychange', visible); };
+  }, [wsRef, requestConversations, requestHistory, markRead]);
+  useEffect(() => {
+    if (!Object.values(dataState.pendingActions).some(Boolean) && !Object.values(dataState.loading).some(Boolean)) return undefined;
+    const timer = setTimeout(() => dispatch({ type: 'social_error', action: 'timeout', code: 'timeout' }), 12000);
+    return () => clearTimeout(timer);
+  }, [dataState.pendingActions, dataState.loading]);
+  const dms = { ...legacyDms, ...Object.fromEntries(Object.entries(dataState.messages).map(([id, list]) => [id, list.map(m => ({ ...m, from: m.fromId === clientId ? 'me' : 'them' }))])) };
   return {
+    ...dataState, clientId, connected, activeConversationId, requestConversations, requestHistory,
+    openConversation, closeConversation, markRead, createChallenge, respondChallenge,
     friends, requests, outgoingRequests, dms, gameChat, gameChatSeenRef,
     handleMessage, addFriend, acceptFriend, declineFriend, removeFriend,
     sendDM, sendGameChat, clearGameChat,
@@ -298,3 +372,6 @@ export function GameChat({ social }) {
     </div>
   );
 }
+
+
+
