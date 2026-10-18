@@ -118,7 +118,7 @@ export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoin
           {(index === 0 || date(message.createdAt) !== date(messages[index - 1].createdAt)) && <p className="messenger-date">{date(message.createdAt)}</p>}
           <article className={`messenger-message ${message.fromId === social.clientId ? 'own' : ''}`}>
             {message.kind === 'challenge' ? challengeCard(message) : message.kind === 'result' ? resultCard(message) : <p className="messenger-bubble">{message.text}</p>}
-            <time dateTime={message.createdAt}>{time(message.createdAt)}</time>
+            <time dateTime={new Date(message.createdAt).toISOString()}>{time(message.createdAt)}</time>
           </article></React.Fragment>)}<div ref={endRef} />
       </div>
       <form className="messenger-composer" onSubmit={send}>
@@ -147,6 +147,7 @@ export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoin
     }}><header><h2 id="messenger-choose">{c.choose}</h2><button autoFocus className="messenger-icon" aria-label={c.cancel} onClick={() => setChooser(false)}><Icon name="close" size={20} /></button></header><p>{c.chooseHelp}</p><div className="messenger-themes">{CATEGORIES.map(category => <button disabled={!social.connected || social.pendingActions?.[`challenge:${id}`]} key={category.key} onClick={() => { if (social.createChallenge(id, category.key)) setChooser(false); }}><span>{category.label}</span><Icon name="arrow" size={18} /></button>)}</div></div>}
   </section>;
 }
+
 
 
 
