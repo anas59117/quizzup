@@ -491,6 +491,21 @@ const lamineYamal = require('./data/lamine_yamal.json');
 const piratesDesCaraibes = require('./data/pirates_des_caraibes.json');
 const stromae = require('./data/stromae.json');
 const frieren = require('./data/frieren.json');
+const oshiNoKo = require('./data/oshi_no_ko.json');
+const dandadan = require('./data/dandadan.json');
+const kaijuNo8 = require('./data/kaiju_no_8.json');
+const mashle = require('./data/mashle.json');
+const sakamotoDays = require('./data/sakamoto_days.json');
+const falloutSerie = require('./data/fallout_serie.json');
+const duneFilm = require('./data/dune_film.json');
+const inoxtag = require('./data/inoxtag.json');
+const squeezie = require('./data/squeezie.json');
+const michou = require('./data/michou.json');
+const freezeCorleone = require('./data/freeze_corleone.json');
+const werenoi = require('./data/werenoi.json');
+const sdm = require('./data/sdm.json');
+const niska = require('./data/niska.json');
+const aminematue = require('./data/aminematue.json');
 
 const CATEGORIES = {
   movies: {
@@ -1063,6 +1078,10 @@ const CATEGORIES = {
   stand_up_us: { label: 'Stand-up US', icon: '🎙️', questions: [...standUpUs] },
   youtubeurs_francais: { label: 'YouTubeurs français', icon: '▶️', questions: [...youtubeursFrancais] },
   streamers_twitch_fr: { label: 'Streamers Twitch FR', icon: '🟣', questions: [...streamersTwitchFr] },
+  inoxtag: { label: "Inoxtag", icon: "▶️", questions: [...inoxtag] },
+  squeezie: { label: "Squeezie", icon: "▶️", questions: [...squeezie] },
+  michou: { label: "Michou", icon: "▶️", questions: [...michou] },
+  aminematue: { label: "AmineMaTue", icon: "▶️", questions: [...aminematue] },
   streamers_internationaux: { label: 'Streamers internationaux', icon: '🌍', questions: [...streamersInternationaux] },
   tiktokeurs_celebres: { label: 'TikTokeurs célèbres', icon: '📱', questions: [...tiktokeursCelebres] },
   influenceurs_beaute: { label: 'Influenceurs beauté', icon: '💄', questions: [...influenceursBeaute] },
@@ -1195,6 +1214,10 @@ const CATEGORIES = {
   dua_lipa: { label: "Dua Lipa", icon: "🎤", questions: [...duaLipa] },
   billie_eilish: { label: "Billie Eilish", icon: "🎤", questions: [...billieEilish] },
   stromae: { label: "Stromae", icon: "🎤", questions: [...stromae] },
+  freeze_corleone: { label: "Freeze Corleone", icon: "🎤", questions: [...freezeCorleone] },
+  werenoi: { label: "Werenoi", icon: "🎤", questions: [...werenoi] },
+  sdm: { label: "SDM", icon: "🎤", questions: [...sdm] },
+  niska: { label: "Niska", icon: "🎤", questions: [...niska] },
   one_piece: { label: "One Piece", icon: "📺", questions: [...onePiece] },
   naruto: { label: "Naruto", icon: "📺", questions: [...naruto] },
   dragon_ball: { label: "Dragon Ball", icon: "📺", questions: [...dragonBall] },
@@ -1238,6 +1261,11 @@ const CATEGORIES = {
   touch: { label: "Touch", icon: "📖", questions: [...mangaTouch] },
   solo_leveling: { label: "Solo Leveling", icon: "📖", questions: [...soloLeveling] },
   frieren: { label: "Frieren", icon: "📖", questions: [...frieren] },
+  oshi_no_ko: { label: "Oshi no Ko", icon: "📖", questions: [...oshiNoKo] },
+  dandadan: { label: "Dandadan", icon: "📖", questions: [...dandadan] },
+  kaiju_no_8: { label: "Kaiju No. 8", icon: "📖", questions: [...kaijuNo8] },
+  mashle: { label: "Mashle", icon: "📖", questions: [...mashle] },
+  sakamoto_days: { label: "Sakamoto Days", icon: "📖", questions: [...sakamotoDays] },
   breaking_bad: { label: "Breaking Bad", icon: "🎬", questions: [...breakingBad] },
   the_walking_dead: { label: "The Walking Dead", icon: "🎬", questions: [...theWalkingDead] },
   la_casa_de_papel: { label: "La Casa de Papel", icon: "🎬", questions: [...laCasaDePapel] },
@@ -1260,6 +1288,8 @@ const CATEGORIES = {
   le_seigneur_des_anneaux: { label: "Le Seigneur des anneaux", icon: "🎬", questions: [...leSeigneurDesAnneaux] },
   mission_impossible: { label: "Mission: Impossible", icon: "🎬", questions: [...missionImpossible] },
   pirates_des_caraibes: { label: "Pirates des Caraïbes", icon: "🎬", questions: [...piratesDesCaraibes] },
+  fallout_serie: { label: "Fallout", icon: "🎬", questions: [...falloutSerie] },
+  dune_film: { label: "Dune", icon: "🎬", questions: [...duneFilm] },
   gta_v: { label: "GTA V", icon: "🎮", questions: [...gtaV] },
   gta_san_andreas: { label: "GTA: San Andreas", icon: "🎮", questions: [...gtaSanAndreas] },
   red_dead_redemption: { label: "Red Dead Redemption", icon: "🎮", questions: [...redDeadRedemption] },
