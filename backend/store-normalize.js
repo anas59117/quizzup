@@ -155,7 +155,8 @@ function normalizeSocialStore(value, { maxFriends = 200, maxRequests = 100 } = {
 }
 
 function normalizePostsStore(value, { maxPosts = 500, maxTextLen = 240 } = {}) {
-  if (!value || typeof value !== 'object' || !Array.isArray(value.posts)) return [];
+  if (!value || typeof value !== 'object' || !Array.isArray(value.posts))
+    return [];
 
   const out = [];
   const seenIds = new Set();
@@ -165,17 +166,63 @@ function normalizePostsStore(value, { maxPosts = 500, maxTextLen = 240 } = {}) {
     const id = cleanId(raw.id, 200);
     if (!id || seenIds.has(id)) continue;
 
-    const text = String(raw.text || '').trim().slice(0, maxTextLen);
+    const text = String(raw.text || '')
+      .trim()
+      .slice(0, maxTextLen);
     if (!text) continue;
 
     seenIds.add(id);
     out.push({
       id,
       authorId: cleanId(raw.authorId) || null,
-      authorName: String(raw.authorName || 'Player').trim().slice(0, 20) || 'Player',
+      authorName:
+        String(raw.authorName || 'Player')
+          .trim()
+          .slice(0, 20) || 'Player',
       authorAvatar: cleanAvatar(raw.authorAvatar),
-      category: typeof raw.category === 'string' ? raw.category.slice(0, 40) : null,
+      category:
+        typeof raw.category === 'string' ? raw.category.slice(0, 40) : null,
       text,
+      mediaUrl:
+        typeof raw.mediaUrl === 'string' &&
+        /^\/community-media\/[a-f0-9]{24}-[a-f0-9]{32}\.jpg$/.test(raw.mediaUrl)
+          ? raw.mediaUrl
+          : null,
+      question:
+        raw.question &&
+        typeof raw.question.prompt === 'string' &&
+        Array.isArray(raw.question.answers) &&
+        raw.question.answers.length === 4 &&
+        raw.question.answers.every(
+          (a) => typeof a === 'string' && a.trim() && a.length <= 120,
+        ) &&
+        Number.isInteger(raw.question.correctIndex) &&
+        raw.question.correctIndex >= 0 &&
+        raw.question.correctIndex < 4
+          ? {
+              prompt: raw.question.prompt.slice(0, 240),
+              answers: raw.question.answers,
+              correctIndex: raw.question.correctIndex,
+            }
+          : null,
+      comments: (Array.isArray(raw.comments) ? raw.comments : [])
+        .filter(
+          (c) =>
+            c &&
+            cleanId(c.id) &&
+            cleanId(c.authorId) &&
+            typeof c.text === 'string' &&
+            c.text.trim(),
+        )
+        .slice(-100)
+        .map((c) => ({
+          id: c.id,
+          authorId: c.authorId,
+          authorName: String(c.authorName || 'Player').slice(0, 20),
+          authorAvatar: cleanAvatar(c.authorAvatar),
+          text: c.text.slice(0, 300),
+          createdAt: asNonNegativeInt(c.createdAt),
+        })),
       reactedBy: uniqueStringList(raw.reactedBy, { limit: 10_000 }),
       reportedBy: uniqueStringList(raw.reportedBy, { limit: 10_000 }),
       createdAt: asNonNegativeInt(raw.createdAt, 0, Number.MAX_SAFE_INTEGER),

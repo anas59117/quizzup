@@ -7,6 +7,10 @@ const { listCategories, warmCache, questionKey, CATEGORIES } = require('./questi
 const reports = require('./reports');
 const social = require('./social');
 const posts = require('./posts');
+const messaging = require('./messaging');
+const challenges = require('./challenges');
+const matchHistory = require('./match-history');
+const { mountMediaRoutes } = require('./community-media');
 const game = require('./game');
 const RateLimiter = require('./rate-limit');
 const { getClientIp } = require('./client-ip');
@@ -87,6 +91,8 @@ const guestAuthLimiter = new RateLimiter(60 * 1000, 30);
 const accountLinkLimiter = new RateLimiter(60 * 1000, 10);
 const photoLimiter = new RateLimiter(60 * 1000, 8);
 const photoStore = mountPhotoRoutes(app, { verifyIdToken, social, getClientIp, limiter: photoLimiter });
+
+const mediaStore = mountMediaRoutes(app, { verifyIdToken, limiter: photoLimiter, getClientIp });
 
 function ownedAvatar(value, uid, fallback = 'robot') {
   const avatar = cleanAvatar(value, fallback);
@@ -242,6 +248,8 @@ async function handleIdentify(ws, data, state) {
 
   social.setOnline(state.clientId, ws, state.name, state.avatar);
   game.send(ws, { type: 'identified', reconnected, roomReconnected, profile: social.profileOf(uid) });
+  challenges.expire();
+  game.send(ws, { type: 'conversations_list', ...messaging.summaries(state.clientId) });
   game.send(ws, { type: 'friends_list', friends: social.getFriendsList(state.clientId) });
   game.send(ws, { type: 'friend_requests', requests: social.getPendingRequests(state.clientId) });
   game.send(ws, { type: 'stats', stats: fullStats(state.clientId) });
@@ -317,39 +325,152 @@ function handleFeed(ws, data, state) {
   const { clientId } = state;
   if (data.type === 'feed_list') {
     const feedKey = clientId || state.ip;
-    if (!allowAction(actionLimiters.feedList, feedKey, ws, 'FEED_RATE_LIMITED')) return true;
+    if (!allowAction(actionLimiters.feedList, feedKey, ws, 'FEED_RATE_LIMITED'))
+      return true;
     const category = validCategoryKey(data.category);
     const scope = data.scope === 'following' && clientId ? 'following' : 'all';
     const feedPosts = posts.getFeed({
       limit: 40,
       category,
-      authorIds: scope === 'following' ? follows.getFollowing(clientId) : undefined,
+      authorIds:
+        scope === 'following' ? follows.getFollowing(clientId) : undefined,
     });
     game.send(ws, { type: 'feed_list', posts: feedPosts, category, scope });
     return true;
   }
   if (data.type === 'post_create') {
-    if (!clientId) { game.send(ws, { type: 'auth_required' }); return true; }
-    if (!allowAction(actionLimiters.postCreate, clientId, ws, 'POST_RATE_LIMITED')) return true;
-    const category = typeof data.category === 'string' && Object.prototype.hasOwnProperty.call(CATEGORIES, data.category) ? data.category : null;
-    const post = posts.addPost(clientId, state.name, state.avatar, category, data.text);
-    if (post) social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_created', post }));
+    if (!clientId) {
+      game.send(ws, { type: 'auth_required' });
+      return true;
+    }
+    if (
+      !allowAction(actionLimiters.postCreate, clientId, ws, 'POST_RATE_LIMITED')
+    )
+      return true;
+    const category =
+      typeof data.category === 'string' &&
+      Object.prototype.hasOwnProperty.call(CATEGORIES, data.category)
+        ? data.category
+        : null;
+    if (data.mediaUrl && !mediaStore.owns(clientId, data.mediaUrl)) {
+      game.send(ws, {
+        type: 'community_error',
+        action: data.type,
+        code: 'INVALID_MEDIA',
+      });
+      return true;
+    }
+    const post = posts.addPost(
+      clientId,
+      state.name,
+      state.avatar,
+      category,
+      data.text,
+      { mediaUrl: data.mediaUrl, question: data.question },
+    );
+    if (!post)
+      game.send(ws, {
+        type: 'community_error',
+        action: data.type,
+        code: 'INVALID_POST',
+      });
+    if (post)
+      social
+        .getAllOnline()
+        .forEach((peer) => game.send(peer, { type: 'post_created', post }));
+    return true;
+  }
+  if (
+    ['post_comments', 'post_comment', 'post_question_answer'].includes(
+      data.type,
+    )
+  ) {
+    if (!clientId) {
+      game.send(ws, {
+        type: 'community_error',
+        action: data.type,
+        code: 'AUTH_REQUIRED',
+      });
+      return true;
+    }
+    if (!actionLimiters.postReact.check(clientId)) {
+      game.send(ws, {
+        type: 'community_error',
+        action: data.type,
+        code: 'COMMUNITY_RATE_LIMITED',
+      });
+      return true;
+    }
+    const postId = String(data.postId || '');
+    const result =
+      data.type === 'post_comments'
+        ? posts.getComments(postId)
+        : data.type === 'post_comment'
+          ? posts.addComment(
+              postId,
+              clientId,
+              state.name,
+              state.avatar,
+              data.text,
+            )
+          : posts.answerQuestion(postId, data.answerIndex);
+    if (!result)
+      game.send(ws, {
+        type: 'community_error',
+        action: data.type,
+        code: 'INVALID_POST_ACTION',
+      });
+    else if (data.type === 'post_comments')
+      game.send(ws, { type: 'post_comments', postId, comments: result });
+    else if (data.type === 'post_comment')
+      social
+        .getAllOnline()
+        .forEach((peer) =>
+          game.send(peer, { type: 'post_commented', ...result }),
+        );
+    else game.send(ws, { type: 'post_question_result', ...result });
     return true;
   }
   if (data.type === 'post_react') {
     if (!clientId) return true;
-    if (!allowAction(actionLimiters.postReact, clientId, ws, 'REACTION_RATE_LIMITED')) return true;
+    if (
+      !allowAction(
+        actionLimiters.postReact,
+        clientId,
+        ws,
+        'REACTION_RATE_LIMITED',
+      )
+    )
+      return true;
     const result = posts.toggleReaction(String(data.postId || ''), clientId);
-    if (result) social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_reacted', ...result }));
+    if (result)
+      social
+        .getAllOnline()
+        .forEach((peer) =>
+          game.send(peer, { type: 'post_reacted', ...result }),
+        );
     return true;
   }
   if (data.type === 'post_report') {
     if (!clientId) return true;
-    if (!allowAction(actionLimiters.postReport, clientId, ws, 'REPORT_RATE_LIMITED')) return true;
+    if (
+      !allowAction(
+        actionLimiters.postReport,
+        clientId,
+        ws,
+        'REPORT_RATE_LIMITED',
+      )
+    )
+      return true;
     const result = posts.reportPost(String(data.postId || ''), clientId);
-    if (result?.accepted) game.send(ws, { type: 'post_report_ack', id: result.id });
+    if (result?.accepted)
+      game.send(ws, { type: 'post_report_ack', id: result.id });
     if (result?.hidden) {
-      social.getAllOnline().forEach((peer) => game.send(peer, { type: 'post_hidden', id: result.id }));
+      social
+        .getAllOnline()
+        .forEach((peer) =>
+          game.send(peer, { type: 'post_hidden', id: result.id }),
+        );
     }
     return true;
   }
@@ -358,6 +479,7 @@ function handleFeed(ws, data, state) {
 
 // "Ton ami X t'a dépassé en NBA": when a player's theme XP passes a friend's,
 // tell that friend now if online, otherwise on their next visit.
+
 function notifyOvertakenFriends({ clientId, categoryKey, beforeXp, afterXp }) {
   const me = social.profileOf(clientId);
   if (!me) return;
@@ -389,6 +511,8 @@ function fullStats(clientId) {
   return {
     ...stats.getStats(clientId),
     topics: topicStats.getPlayerTopics(clientId, 12),
+    followedThemes: messaging.getFollowedThemes(clientId),
+    recentThemes: topicStats.getRecentTopics(clientId),
     ...follows.counts(clientId),
   };
 }
@@ -446,6 +570,118 @@ function handleFollow(ws, data, state) {
     return true;
   }
   return false;
+}
+
+async function handleMessaging(ws, data, state) {
+  if (
+    ![
+      'dm',
+      'dm_history',
+      'dm_read',
+      'conversations_list',
+      'challenge_create',
+      'challenge_respond',
+      'theme_follow',
+      'match_history',
+    ].includes(data.type)
+  )
+    return false;
+  const uid = state.clientId,
+    targetId = typeof data.targetId === 'string' ? data.targetId : '';
+  try {
+    if (!uid) throw Error('AUTH_REQUIRED');
+    challenges.expire();
+    if (!actionLimiters.dm.check(uid)) throw Error('SOCIAL_RATE_LIMITED');
+    if (data.type === 'conversations_list')
+      game.send(ws, { type: data.type, ...messaging.summaries(uid) });
+    if (data.type === 'dm_history')
+      game.send(ws, {
+        type: data.type,
+        ...messaging.history(uid, targetId, data.before),
+      });
+    if (data.type === 'dm_read') {
+      messaging.read(uid, targetId);
+      game.send(ws, { type: data.type, targetId });
+      game.send(ws, {
+        type: 'conversations_list',
+        ...messaging.summaries(uid),
+      });
+    }
+    if (data.type === 'dm') {
+      const message = messaging.send(uid, targetId, data.text, {
+        clientMessageId: data.clientMessageId,
+      });
+      await messaging.flush();
+      game.send(ws, { type: 'dm_sent', message });
+      game.send(social.getWs(targetId), { type: 'dm', message });
+    }
+    if (data.type === 'theme_follow') {
+      const category = validCategoryKey(data.category);
+      if (!category || typeof data.following !== 'boolean')
+        throw Error('INVALID_CATEGORY');
+      messaging.setThemeFollowing(uid, category, data.following);
+      game.send(ws, { type: 'stats', stats: fullStats(uid) });
+    }
+    if (data.type === 'match_history')
+      game.send(ws, { type: 'match_history', matches: matchHistory.list(uid) });
+    if (data.type === 'challenge_create') {
+      const category = validCategoryKey(data.category);
+      if (!category) throw Error('INVALID_CATEGORY');
+      const challenge = challenges.create(uid, targetId, category);
+      const message = messaging.send(uid, targetId, '', {
+        kind: 'challenge',
+        challenge,
+      });
+      await Promise.all([messaging.flush(), challenges.flush()]);
+      game.send(ws, { type: 'dm_sent', message });
+      game.send(social.getWs(targetId), { type: 'dm', message });
+      for (const id of [uid, targetId])
+        game.send(social.getWs(id), { type: 'challenge_updated', challenge });
+    }
+    if (data.type === 'challenge_respond') {
+      if (typeof data.accept !== 'boolean') throw Error('INVALID_RESPONSE');
+      await challenges.respond(uid, data.challengeId, data.accept, {
+        available: (c) =>
+          [c.fromId, c.toId].every((id) => {
+            const peer = social.getWs(id),
+              st = peer?.socialState;
+            return (
+              peer?.readyState === 1 &&
+              st &&
+              !isBusy(st.playerId, id) &&
+              !isWaiting(id)
+            );
+          }),
+        start: (c) => {
+          const players = [c.fromId, c.toId].map((id) => {
+            const peer = social.getWs(id),
+              st = peer.socialState;
+            return {
+              ws: peer,
+              id: st.playerId,
+              clientId: id,
+              name: st.name,
+              avatar: st.avatar,
+            };
+          });
+          players.forEach((p) =>
+            game.send(p.ws, { type: 'joined', playerId: p.id, name: p.name }),
+          );
+          return startGameGuarded(players, c.category, {
+            socialChallenge: true,
+          }).then(() => game.findActiveSessionByClientId(c.fromId)?.game);
+        },
+      });
+    }
+  } catch (err) {
+    game.send(ws, {
+      type: 'social_error',
+      action: data.type,
+      code: err.message || 'SOCIAL_FAILED',
+      targetId,
+    });
+  }
+  return true;
 }
 
 function handleSocial(ws, data, state) {
@@ -528,21 +764,6 @@ function handleSocial(ws, data, state) {
       game.send(ws, { type: 'friend_removed', id: targetId });
       const targetWs = social.getWs(targetId);
       if (targetWs) game.send(targetWs, { type: 'friend_removed', id: clientId });
-    }
-    return true;
-  }
-  if (data.type === 'dm') {
-    const targetId = String(data.targetId || '');
-    const text = typeof data.text === 'string' ? data.text.trim().slice(0, 300) : '';
-    if (clientId && targetId && text && social.areFriends(clientId, targetId)) {
-      if (!allowAction(actionLimiters.dm, clientId, ws, 'DM_RATE_LIMITED')) return true;
-      const targetWs = social.getWs(targetId);
-      if (targetWs) {
-        game.send(targetWs, { type: 'dm', from: clientId, text });
-        game.send(ws, { type: 'dm_sent', targetId, text });
-      } else {
-        game.send(ws, { type: 'dm_unavailable', targetId });
-      }
     }
     return true;
   }
@@ -715,6 +936,7 @@ function startGameGuarded(players, categoryKey, options = {}) {
   return game.startGame(players, categoryKey, options)
     .catch((err) => {
       const code = err && err.message ? err.message : 'GAME_START_FAILED';
+      if (options.socialChallenge) throw err;
       const recoverable = code === 'CLIENT_ALREADY_PLAYING';
       players.forEach((p) => game.send(
         p.ws,
@@ -1009,6 +1231,7 @@ wss.on('connection', (ws, req) => {
     ip,
   };
 
+  ws.socialState = state;
   game.send(ws, { type: 'session', playerId: state.playerId });
 
   ws.on('message', async (raw) => {
@@ -1029,6 +1252,7 @@ wss.on('connection', (ws, req) => {
         await handleIdentify(ws, data, state);
         return;
       }
+      if (await handleMessaging(ws, data, state)) return;
       if (handleSocial(ws, data, state)) return;
       if (handleLeaderboard(ws, data, state)) return;
       if (handleShop(ws, data, state)) return;

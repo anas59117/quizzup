@@ -22,16 +22,8 @@ let posts = normalizePostsStore(
   ),
   { maxPosts: MAX_POSTS, maxTextLen: MAX_TEXT_LEN }
 ); // newest first
-
-if (posts.length === 0) {
-  posts = [
-    { id: 'seed1', authorId: null, authorName: 'bnrt', authorAvatar: '\u{1F9D9}', category: 'harry_potter', text: "Dimanche soir il y a Harry Potter et l'école des sorciers ⚡⚡", reactedBy: [], reportedBy: [], createdAt: Date.now() - 1000 * 60 * 27 },
-    { id: 'seed2', authorId: null, authorName: 'Romane Clarke', authorAvatar: '\u{1F409}', category: 'got', text: "Alllleez Jorah il pèse dans l'game \u{1F62D}", reactedBy: [], reportedBy: [], createdAt: Date.now() - 1000 * 60 * 26 },
-    { id: 'seed3', authorId: null, authorName: 'Mehdi', authorAvatar: '⚽', category: 'foot_fr', text: 'Qui savait que Zidane avait fait ses débuts pro à Cannes ? \u{1F440}', reactedBy: [], reportedBy: [], createdAt: Date.now() - 1000 * 60 * 55 },
-    { id: 'seed4', authorId: null, authorName: 'Sarah', authorAvatar: '\u{1F3AC}', category: 'netflix', text: 'La nouvelle saison est incroyable, personne ne me spoil svp \u{1F64F}', reactedBy: [], reportedBy: [], createdAt: Date.now() - 1000 * 60 * 90 },
-    { id: 'seed5', authorId: null, authorName: 'Yanis', authorAvatar: '\u{1F3A4}', category: 'rap_fr', text: 'Débat: meilleur album de Booba ?', reactedBy: [], reportedBy: [], createdAt: Date.now() - 1000 * 60 * 140 },
-  ];
-}
+// Remove only the five historical fabricated demo rows, preserving real posts.
+posts = posts.filter(p => p.authorId || !/^seed[1-5]$/.test(p.id));
 
 const persist = createJsonWriter(STORE, () => ({ posts }));
 
@@ -39,7 +31,7 @@ function toClientShape(p) {
   const author = p.authorId && profileOf(p.authorId);
   return {
     id: p.id, authorId: p.authorId || null, authorName: author?.name || p.authorName, authorAvatar: author?.avatar || p.authorAvatar,
-    category: p.category, text: p.text, reactions: p.reactedBy.length, createdAt: p.createdAt,
+    category: p.category, text: p.text, mediaUrl: p.mediaUrl || null, commentsCount: (p.comments || []).length, question: p.question ? {prompt:p.question.prompt,answers:p.question.answers} : null, reactions: p.reactedBy.length, createdAt: p.createdAt,
   };
 }
 
@@ -63,10 +55,13 @@ function getFeed(options = 30) {
 // clientId is required — an identified poster (see server.js's handleFeed)
 // keeps the public feed from being a free-for-all for anonymous connections,
 // same bar as reacting to a post.
-function addPost(clientId, authorName, authorAvatar, category, text) {
+function addPost(clientId, authorName, authorAvatar, category, text, options = {}) {
   if (!clientId) return null;
   const clean = String(text || '').trim().slice(0, MAX_TEXT_LEN);
   if (!clean) return null;
+  const question = normalizeQuestion(options.question);
+  if (options.question && !question) return null;
+  const mediaUrl = require('./community-media').isMediaPath(options.mediaUrl) ? options.mediaUrl : null;
   const post = {
     id: randomId('p_'),
     authorId: clientId,
@@ -74,6 +69,7 @@ function addPost(clientId, authorName, authorAvatar, category, text) {
     authorAvatar: cleanAvatar(authorAvatar),
     category: typeof category === 'string' ? category.slice(0, 40) : null,
     text: clean,
+    mediaUrl, question, comments: [],
     reactedBy: [],
     reportedBy: [],
     createdAt: Date.now(),
@@ -123,4 +119,61 @@ function reportPost(postId, clientId) {
   };
 }
 
-module.exports = { getFeed, addPost, toggleReaction, reportPost };
+function normalizeQuestion(q) {
+  if (
+    !q ||
+    typeof q.prompt !== 'string' ||
+    !q.prompt.trim() ||
+    !Array.isArray(q.answers) ||
+    q.answers.length !== 4 ||
+    !q.answers.every(
+      (a) => typeof a === 'string' && a.trim() && a.length <= 120,
+    ) ||
+    !Number.isInteger(q.correctIndex) ||
+    q.correctIndex < 0 ||
+    q.correctIndex > 3
+  )
+    return null;
+  return {
+    prompt: q.prompt.trim().slice(0, 240),
+    answers: q.answers.map((a) => a.trim()),
+    correctIndex: q.correctIndex,
+  };
+}
+
+function visible(id) { return posts.find(p=>p.id===id && p.reportedBy.length<REPORT_THRESHOLD); }
+function getComments(id) {
+  const p = visible(id);
+  return p ? p.comments || [] : null;
+}
+
+function addComment(id, uid, name, avatar, text) {
+  const p = visible(id);
+  const clean = typeof text === 'string' ? text.trim().slice(0, 300) : '';
+  if (!p || !uid || !clean) return null;
+  const comment = {
+    id: randomId('c_'),
+    authorId: uid,
+    authorName: String(name || 'Player').slice(0, 20),
+    authorAvatar: cleanAvatar(avatar),
+    text: clean,
+    createdAt: Date.now(),
+  };
+  p.comments = [...(p.comments || []), comment].slice(-100);
+  persist();
+  return { postId: id, comment, commentsCount: p.comments.length };
+}
+
+function answerQuestion(id, index) {
+  const p = visible(id);
+  if (!p?.question || !Number.isInteger(index) || index < 0 || index > 3)
+    return null;
+  return {
+    postId: id,
+    answerIndex: index,
+    correct: index === p.question.correctIndex,
+    correctIndex: p.question.correctIndex,
+  };
+}
+
+module.exports = { getFeed, addPost, toggleReaction, reportPost, getComments, addComment, answerQuestion, normalizeQuestion };
