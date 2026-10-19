@@ -18,6 +18,7 @@ const luminance=rgb=>rgb.map(n=>n/255).map(n=>n<=.04045?n/12.92:((n+.055)/1.055)
  await page.waitForFunction(key=>{const i=document.querySelector(`.tile-v4[data-topic=${key}] img`);return i?.complete&&i.naturalWidth===1;},key);
  const cardBox=await card.boundingBox(),label=await card.locator('.tile-v4__label').boundingBox();const png=await card.screenshot({path:path.join(out,`audit-photo-white-${key}-${width}.png`)});
  const {data,info}=await sharp(png).ensureAlpha().raw().toBuffer({resolveWithObject:true});let min=Infinity;
+ for(const fraction of [.25,.5]) {const offset=(Math.floor(info.height*fraction)*info.width+10)*4;assert([...data.subarray(offset,offset+3)].every(value=>value>=245),`${key} artwork is darkened above its caption at ${fraction}`);}
  for(let y=Math.ceil(label.y-cardBox.y);y<Math.floor(label.y+label.height-cardBox.y);y++) {const offset=(y*info.width+10)*4;const ratio=1.05/(luminance([...data.subarray(offset,offset+3)])+.05);min=Math.min(min,ratio);}
  assert(min>=4.5,`${key} caption on white image contrast ${min}`);console.log(`PASS ${key} white-photo caption floor ${min.toFixed(2)}:1 at ${width}px`);
  }
