@@ -1,7 +1,7 @@
 import React, { act } from 'react';
 import { createRoot } from 'react-dom/client';
 import { I18nProvider } from './i18n';
-import { HomeContent } from './screens';
+import { HomeContent, CategoriesContent } from './screens';
 import { Messenger } from './Messenger';
 import { NavBar, TopControls } from './ui';
 let root, container;
@@ -9,6 +9,24 @@ beforeEach(() => { global.IS_REACT_ACT_ENVIRONMENT = true; localStorage.setItem(
 afterEach(() => { act(() => root.unmount()); container.remove(); });
 const render = element => act(() => root.render(<I18nProvider>{element}</I18nProvider>));
 const click = text => act(() => [...document.querySelectorAll('button')].find(b => b.textContent.includes(text)).click());
+
+test('first home covers load eagerly, with high priority limited to the first row', () => {
+  render(<HomeContent stats={{ followedThemes: ['kaamelott', 'bts', 'harry_potter', 'marvel'] }} />);
+  const images = [...container.querySelectorAll('.topics-grid-v4 img')];
+  expect(images).toHaveLength(4);
+  expect(images.map(img => img.getAttribute('loading'))).toEqual(['eager', 'eager', 'eager', 'eager']);
+  expect(images.map(img => img.getAttribute('fetchpriority'))).toEqual(['high', 'high', null, null]);
+});
+
+test('theme grids defer covers beyond their first four cards', () => {
+  render(<CategoriesContent family="football" />);
+  const cards = [...container.querySelectorAll('.tile-v4')];
+  for (const [index, card] of cards.entries()) {
+    const image = card.querySelector('img');
+    if (!image) continue;
+    expect(image.getAttribute('loading')).toBe(index < 4 ? 'eager' : 'lazy');
+  }
+});
 test('personal topics precede distinct discovery and expose only known topic levels', () => {
   render(<HomeContent stats={{followedThemes:['rap_fr','minecraft'],recentThemes:[{key:'harry_potter',level:3}],topics:[{key:'rap_fr',level:5}]}} />);
   expect([...container.querySelectorAll('.topics-grid-v4 .tile-v4')].map(el=>el.dataset.topic)).toEqual(['rap_fr','minecraft','harry_potter','spider_man']);

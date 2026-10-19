@@ -100,8 +100,9 @@ function topicMark(label) {
  *  - c: category object { key, label, icon, grad, tag, desc, family }
  *  - onClick, disabled: same as original CategoryTile
  *  - featured: when true, render as 2:1 hero with subtitle
+ *  - priority: high for the first row, eager for the next, lazy elsewhere
  */
-export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disabled, featured }) {
+export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disabled, featured, priority = 'lazy' }) {
   const typo = TOPIC_TYPO[c.key];
   const candidate = getTopicCover(c);
   const cover = candidate?.approved || !typo ? candidate : null;
@@ -143,7 +144,8 @@ export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disable
           sizes={featured ? '(max-width: 700px) 100vw, 700px' : '(max-width: 600px) 50vw, 320px'}
           alt=""
           className="tile-v4__cover"
-          loading="lazy"
+          loading={priority === 'lazy' ? 'lazy' : 'eager'}
+          fetchpriority={priority === 'high' ? 'high' : undefined}
           decoding="async"
           referrerPolicy="no-referrer"
           onError={() => setFailedSrc(cover.src)}

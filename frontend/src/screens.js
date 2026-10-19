@@ -51,9 +51,9 @@ export function HomeContent({ startWithCategory, onSeeAll, pending, stats, contr
     <section aria-labelledby="home-my-themes">
       <div className="section-head-v4"><h2 id="home-my-themes" className="section-title-v4">{fr ? 'Mes thèmes' : 'My themes'}</h2><button className="section-edit" onClick={() => onSeeAll?.()}>{t('seeAll')} <Icon name="arrow" size={16} /></button></div>
       {!personalThemes.length && <p className="home-starter-label">{fr ? 'Quelques idées pour commencer' : 'Suggestions to get started'}</p>}
-      <div className="topics-grid-v4">{myThemes.map(c => {
+      <div className="topics-grid-v4">{myThemes.map((c, index) => {
         const level = [...(stats?.topics || []), ...(stats?.recentThemes || [])].find(topic => topic.key === c.key)?.level;
-        return <div key={c.key} className="topic-tile-wrap" data-topic={c.key}><CategoryTileV4 c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />{personalThemes.length > 0 && !personalThemes.some(mine => mine.key === c.key) && <span className="home-theme-suggestion">{fr ? 'Suggestion' : 'Suggested'}</span>}{Number.isFinite(level) && <span className="personal-theme-level">{t('level')} {level}</span>}</div>;
+        return <div key={c.key} className="topic-tile-wrap" data-topic={c.key}><CategoryTileV4 c={c} priority={index < 2 ? 'high' : 'eager'} onClick={() => startWithCategory(c.key)} disabled={pending} />{personalThemes.length > 0 && !personalThemes.some(mine => mine.key === c.key) && <span className="home-theme-suggestion">{fr ? 'Suggestion' : 'Suggested'}</span>}{Number.isFinite(level) && <span className="personal-theme-level">{t('level')} {level}</span>}</div>;
       })}</div>
     </section>
     <section aria-labelledby="home-discover"><div className="section-head-v4"><h2 id="home-discover" className="section-title-v4">{fr ? 'À découvrir' : 'Discover'}</h2></div><div className="home-discovery">{discovery.map(c => <CategoryTileV4 key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}</div></section>
@@ -138,7 +138,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
           )}
           {!artwork && preview.sub && <span className="cp-subtitle">{preview.sub}</span>}
         </h1>
-        {artwork && <img className="cp-artwork" src={artwork.src} srcSet={artwork.srcSet} sizes="(max-width: 480px) calc(100vw - 48px), 320px" alt="" decoding="async" onError={() => setFailedCover(artwork.src)} />}
+        {artwork && <img className="cp-artwork" src={artwork.src} srcSet={artwork.srcSet} sizes="(max-width: 480px) calc(100vw - 48px), 320px" alt="" fetchpriority="high" decoding="async" onError={() => setFailedCover(artwork.src)} />}
         <p className="cp-info">{preview.desc}</p>
       </div>
 
@@ -217,9 +217,9 @@ export function CategoriesContent({ startWithCategory, family, onSelectFamily, p
       {results ? (
         results.length ? (
           <div className="topics-grid-v4">
-            {results.map((c) => (
+            {results.map((c, index) => (
               <div key={c.key} className="topic-tile-wrap" data-topic={c.key}>
-                <CategoryTileV4 c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />
+                <CategoryTileV4 c={c} priority={index < 2 ? 'high' : index < 4 ? 'eager' : 'lazy'} onClick={() => startWithCategory(c.key)} disabled={pending} />
               </div>
             ))}
           </div>
@@ -229,9 +229,9 @@ export function CategoriesContent({ startWithCategory, family, onSelectFamily, p
       ) : activeFamily ? (
         <>
           <div className="topics-grid-v4">
-            {categoriesInFamily(activeFamily.key).map((c) => (
+            {categoriesInFamily(activeFamily.key).map((c, index) => (
               <div key={c.key} className="topic-tile-wrap" data-topic={c.key}>
-                <CategoryTileV4 c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />
+                <CategoryTileV4 c={c} priority={index < 2 ? 'high' : index < 4 ? 'eager' : 'lazy'} onClick={() => startWithCategory(c.key)} disabled={pending} />
               </div>
             ))}
           </div>
