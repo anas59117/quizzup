@@ -1,0 +1,1092 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QuizzUp — Autres écrans v4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Bungee&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --coral:#E63246;
+    --coral-deep:#D82A3F;
+    --coral-dark:#B81E33;
+    --off-white:#FDFDFB;
+    --cream:#F7F3EC;
+    --ink:#0A0A0A;
+    --soft-ink:#2A2A2A;
+    --mid-ink:#555;
+    --mute:#999;
+    --win:#2ECC71;
+    --lose:#E63246;
+    --timer:#F5C542;
+
+    --font-display:'Space Grotesk', system-ui, sans-serif;
+    --font-ui:'Inter', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{
+    font-family:var(--font-ui);
+    background:#eceae4;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  .page{
+    padding:48px 24px;
+    min-height:100vh;
+  }
+  .intro{
+    max-width:900px;
+    margin:0 auto 40px;
+  }
+  .intro h1{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:32px;
+    letter-spacing:-0.025em;
+    margin-bottom:10px;
+  }
+  .intro p{color:#555;max-width:620px;line-height:1.5;font-size:15px;}
+
+  .screens{
+    display:flex;
+    gap:40px;
+    justify-content:center;
+    flex-wrap:wrap;
+    align-items:flex-start;
+  }
+
+  /* Phone frame */
+  .phone{
+    width:392px;
+    flex-shrink:0;
+    background:#111;
+    border-radius:48px;
+    padding:12px;
+    box-shadow:
+      0 50px 100px -20px rgba(0,0,0,0.2),
+      0 30px 60px -30px rgba(0,0,0,0.25),
+      inset 0 0 0 2px #1a1a1a;
+  }
+  .screen{
+    width:368px;
+    height:800px;
+    border-radius:38px;
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    background:var(--coral);
+  }
+  .label{
+    text-align:center;
+    margin-top:14px;
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:14px;
+    color:#444;
+    letter-spacing:-0.01em;
+  }
+  .wrap{display:flex;flex-direction:column;align-items:center;}
+
+  .statusbar{
+    height:44px;
+    padding:14px 24px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-family:var(--font-ui);
+    font-weight:600;
+    font-size:14px;
+    color:#fff;
+    flex-shrink:0;
+    position:relative;
+    z-index:10;
+  }
+  .statusbar.dark{color:#fff;}
+  .statusbar .right{display:flex;gap:6px;}
+  .statusbar svg{display:block;}
+
+  .scrollarea{
+    flex:1;
+    overflow-y:auto;
+    overflow-x:hidden;
+    scrollbar-width:none;
+    position:relative;
+  }
+  .scrollarea::-webkit-scrollbar{display:none;}
+
+  .appheader{
+    padding:4px 20px 2px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    color:#fff;
+  }
+  .iconbtn{
+    width:36px;height:36px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.14);
+    border:none;color:#fff;
+    display:grid;place-items:center;
+    cursor:pointer;
+  }
+
+  /* =================================================
+     SCREEN 1 — CATEGORY (Spider-Man)
+  ================================================== */
+  .screen--category{
+    background:#160505;
+  }
+  .cat-bg{
+    position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse at 30% 20%, #E52521 0%, #B01818 50%, #1a0505 100%);
+    z-index:0;
+  }
+  .cat-bg::after{
+    content:"";
+    position:absolute;inset:0;
+    background-image:radial-gradient(circle at 1px 1px, rgba(0,0,0,0.4) 1px, transparent 1.5px);
+    background-size:7px 7px;
+    opacity:0.25;
+    mix-blend-mode:multiply;
+  }
+  .cat-web{
+    position:absolute;
+    top:0;right:-40px;
+    width:260px;height:260px;
+    opacity:0.3;
+    z-index:1;
+  }
+  .cat-content{
+    position:relative;
+    z-index:2;
+    padding:0 20px 24px;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+  }
+  .cat-hero{
+    padding:14px 0 20px;
+  }
+  .cat-badge{
+    display:inline-block;
+    font-size:11px;
+    font-weight:600;
+    padding:4px 10px;
+    border-radius:999px;
+    background:#FFD54A;
+    color:#000;
+    font-family:var(--font-display);
+    margin-bottom:14px;
+    letter-spacing:0.02em;
+  }
+  .cat-title{
+    font-family:'Bungee', 'Impact', sans-serif;
+    font-size:52px;
+    line-height:0.85;
+    letter-spacing:-0.01em;
+    color:#fff;
+    text-shadow:
+      3px 3px 0 #000,
+      -1px -1px 0 #000;
+  }
+  .cat-title span{display:block;color:#FFD54A;font-size:22px;margin-top:8px;}
+  .cat-info{
+    margin-top:18px;
+    font-size:14px;
+    color:rgba(255,255,255,0.8);
+    line-height:1.55;
+    max-width:280px;
+  }
+
+  .cat-stats{
+    margin-top:22px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+  }
+  .cat-stat{
+    background:rgba(0,0,0,0.35);
+    border-radius:14px;
+    padding:12px;
+  }
+  .cat-stat b{
+    display:block;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:22px;
+    letter-spacing:-0.01em;
+  }
+  .cat-stat span{
+    font-size:11.5px;
+    color:rgba(255,255,255,0.65);
+    margin-top:1px;
+    display:block;
+  }
+
+  .cat-cta{
+    margin-top:22px;
+    display:flex;
+    gap:10px;
+    align-items:center;
+  }
+  .btn{
+    flex:1;
+    padding:16px 20px;
+    border-radius:16px;
+    border:none;
+    cursor:pointer;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:16px;
+    letter-spacing:-0.01em;
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    transition:transform .2s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  .btn:active{transform:scale(0.97);}
+  .btn--primary{
+    background:#FFD54A;
+    color:#000;
+    box-shadow:0 8px 20px -5px rgba(255,213,74,0.4);
+  }
+  .btn--ghost{
+    flex:0 0 auto;
+    width:52px;height:52px;
+    background:rgba(0,0,0,0.4);
+    color:#fff;
+    padding:0;
+    border-radius:16px;
+  }
+
+  .cat-friends{
+    margin-top:26px;
+  }
+  .cat-friends h3{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:16px;
+    margin-bottom:10px;
+  }
+  .friend-row{
+    display:flex;
+    gap:-8px;
+    align-items:center;
+  }
+  .friend-avatar{
+    width:36px;height:36px;
+    border-radius:50%;
+    border:2px solid #1a0505;
+    margin-right:-10px;
+    background:linear-gradient(135deg,#FFB199,#E63246);
+    display:grid;place-items:center;
+    font-family:var(--font-display);
+    font-weight:700;font-size:13px;color:#fff;
+  }
+  .friend-avatar + .friend-avatar{z-index:0;}
+  .friend-more{
+    margin-left:14px;
+    font-size:13px;
+    color:rgba(255,255,255,0.7);
+  }
+
+  /* =================================================
+     SCREEN 2 — GAME ACTIVE
+  ================================================== */
+  .screen--game{
+    background:#0A0A0A;
+  }
+  .game-header{
+    padding:12px 18px 10px;
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    gap:12px;
+    color:#fff;
+    position:relative;
+    z-index:2;
+  }
+  .game-player{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .game-player.right{flex-direction:row-reverse;}
+  .game-avatar{
+    width:40px;height:40px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#FFB199,#E63246);
+    display:grid;place-items:center;
+    font-family:var(--font-display);
+    font-weight:700;font-size:16px;color:#fff;
+    border:2px solid rgba(255,255,255,0.1);
+    flex-shrink:0;
+  }
+  .game-player.right .game-avatar{
+    background:linear-gradient(135deg,#AAD3FF,#3E6FB8);
+  }
+  .game-pscore{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:22px;
+    letter-spacing:-0.01em;
+    line-height:1;
+    font-variant-numeric:tabular-nums;
+  }
+  .game-pname{
+    font-size:11px;
+    color:rgba(255,255,255,0.5);
+    margin-top:2px;
+  }
+  .game-player.right{text-align:right;}
+
+  .game-timer{
+    width:72px;height:72px;
+    border-radius:50%;
+    background:#111;
+    border:3px solid var(--timer);
+    display:grid;place-items:center;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:32px;
+    color:var(--timer);
+    letter-spacing:-0.03em;
+    font-variant-numeric:tabular-nums;
+    position:relative;
+    box-shadow:0 0 30px rgba(245,197,66,0.3);
+  }
+  .game-timer::before{
+    content:"";
+    position:absolute;
+    top:-3px;left:-3px;right:-3px;bottom:-3px;
+    border-radius:50%;
+    border:3px solid transparent;
+    border-top-color:var(--timer);
+    border-right-color:var(--timer);
+    transform:rotate(45deg);
+  }
+
+  .game-progress{
+    height:3px;
+    background:rgba(255,255,255,0.1);
+    margin:4px 20px 0;
+    border-radius:2px;
+    overflow:hidden;
+    position:relative;
+    z-index:2;
+  }
+  .game-progress-fill{
+    width:70%;
+    height:100%;
+    background:#fff;
+    border-radius:2px;
+  }
+  .game-progress-text{
+    text-align:center;
+    font-size:11px;
+    color:rgba(255,255,255,0.4);
+    margin-top:6px;
+    font-family:var(--font-display);
+    font-weight:500;
+    letter-spacing:0.05em;
+  }
+
+  .game-category{
+    text-align:center;
+    margin-top:28px;
+    display:flex;flex-direction:column;align-items:center;gap:6px;
+  }
+  .game-cattag{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:rgba(230,50,70,0.15);
+    color:#FF8294;
+    padding:5px 12px;
+    border-radius:999px;
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:12px;
+  }
+
+  .game-question{
+    padding:28px 24px 0;
+    text-align:center;
+  }
+  .game-question h2{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:26px;
+    line-height:1.2;
+    letter-spacing:-0.02em;
+    color:#fff;
+  }
+
+  .game-answers{
+    padding:28px 20px 20px;
+    display:grid;
+    gap:12px;
+    margin-top:auto;
+  }
+  .game-answer{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:16px 18px;
+    border-radius:18px;
+    border:1.5px solid rgba(255,255,255,0.12);
+    background:rgba(255,255,255,0.04);
+    color:#fff;
+    font-family:var(--font-ui);
+    font-weight:500;
+    font-size:15.5px;
+    cursor:pointer;
+    text-align:left;
+    transition:transform .15s, border-color .15s, background .15s;
+  }
+  .game-answer:hover{border-color:rgba(255,255,255,0.3);}
+  .game-answer:active{transform:scale(0.98);}
+  .game-answer .letter{
+    width:28px;height:28px;
+    border-radius:8px;
+    background:rgba(255,255,255,0.1);
+    display:grid;place-items:center;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:13px;
+    flex-shrink:0;
+  }
+  .game-answer.correct{
+    border-color:var(--win);
+    background:rgba(46,204,113,0.12);
+  }
+  .game-answer.correct .letter{
+    background:var(--win);color:#002b11;
+  }
+
+  /* =================================================
+     SCREEN 3 — RESULTS (WIN)
+  ================================================== */
+  .screen--results{
+    background:var(--coral);
+    background-image:
+      radial-gradient(circle at 50% 0%, rgba(255,255,255,0.1), transparent 60%),
+      linear-gradient(180deg, var(--coral) 0%, var(--coral-deep) 100%);
+  }
+  .res-content{
+    padding:30px 24px 24px;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+  }
+  .res-eyebrow{
+    font-size:13px;
+    color:rgba(255,255,255,0.7);
+  }
+  .res-title{
+    font-family:'Playfair Display', serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:68px;
+    line-height:0.9;
+    letter-spacing:-0.03em;
+    margin-top:4px;
+  }
+  .res-title em{color:#FFD54A;font-style:italic;}
+
+  .res-scoreboard{
+    margin-top:30px;
+    background:rgba(0,0,0,0.4);
+    border-radius:22px;
+    padding:22px 20px;
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    gap:14px;
+  }
+  .res-score{text-align:center;}
+  .res-score .av{
+    width:52px;height:52px;
+    border-radius:50%;
+    margin:0 auto 10px;
+    background:linear-gradient(135deg,#FFB199,#E63246);
+    display:grid;place-items:center;
+    font-family:var(--font-display);font-weight:700;font-size:20px;color:#fff;
+    border:2px solid rgba(255,255,255,0.3);
+  }
+  .res-score.op .av{
+    background:linear-gradient(135deg,#AAD3FF,#3E6FB8);
+  }
+  .res-score .pts{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:38px;
+    letter-spacing:-0.02em;
+    line-height:1;
+    font-variant-numeric:tabular-nums;
+  }
+  .res-score .nm{
+    font-size:12px;
+    color:rgba(255,255,255,0.65);
+    margin-top:4px;
+  }
+  .res-score.me .pts{color:#FFD54A;}
+  .res-vs{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:14px;
+    color:rgba(255,255,255,0.5);
+  }
+
+  .res-stats{
+    margin-top:18px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+  }
+  .res-stat{
+    text-align:center;
+    padding:12px 8px;
+    background:rgba(0,0,0,0.2);
+    border-radius:12px;
+  }
+  .res-stat b{
+    display:block;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:17px;
+    letter-spacing:-0.01em;
+  }
+  .res-stat span{
+    font-size:10.5px;
+    color:rgba(255,255,255,0.65);
+    margin-top:1px;
+    display:block;
+  }
+
+  .res-cta{
+    margin-top:auto;
+    display:flex;flex-direction:column;gap:10px;
+    padding-top:24px;
+  }
+  .res-cta .btn--primary{
+    background:#fff;
+    color:var(--coral);
+    width:100%;
+    padding:18px;
+    font-size:17px;
+    box-shadow:0 10px 25px -8px rgba(0,0,0,0.25);
+  }
+  .res-cta .btn--outline{
+    background:transparent;
+    color:#fff;
+    border:1.5px solid rgba(255,255,255,0.3);
+    padding:16px;
+    font-size:15px;
+    border-radius:16px;
+    cursor:pointer;
+    font-family:var(--font-display);
+    font-weight:600;
+  }
+
+  /* =================================================
+     SCREEN 4 — PROFILE
+  ================================================== */
+  .screen--profile{
+    background:var(--coral);
+    background-image:
+      radial-gradient(circle at 50% 0%, rgba(255,255,255,0.08), transparent 60%),
+      linear-gradient(180deg, var(--coral) 0%, var(--coral-deep) 100%);
+  }
+  .pf-head{
+    padding:4px 20px 2px;
+    display:flex;align-items:center;justify-content:space-between;
+    color:#fff;
+  }
+  .pf-hero{
+    padding:20px 24px 10px;
+    color:#fff;
+    text-align:center;
+  }
+  .pf-avatar{
+    width:88px;height:88px;
+    margin:0 auto 14px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#FFB199,#E63246);
+    display:grid;place-items:center;
+    font-family:var(--font-display);
+    font-weight:700;font-size:36px;color:#fff;
+    border:3px solid rgba(255,255,255,0.3);
+    box-shadow:0 12px 30px -8px rgba(0,0,0,0.3);
+  }
+  .pf-name{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:28px;
+    letter-spacing:-0.025em;
+  }
+  .pf-bio{
+    font-size:14px;
+    color:rgba(255,255,255,0.75);
+    margin-top:4px;
+  }
+  .pf-social{
+    margin-top:16px;
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    font-size:13.5px;
+    color:rgba(255,255,255,0.85);
+  }
+  .pf-social b{
+    font-family:var(--font-display);
+    font-weight:700;
+    color:#fff;
+  }
+  .pf-social .dot{color:rgba(255,255,255,0.3);align-self:center;}
+
+  .pf-section{
+    padding:24px 20px 0;
+    color:#fff;
+  }
+  .pf-section h3{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:17px;
+    margin-bottom:12px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .pf-section h3 a{
+    font-family:var(--font-ui);
+    font-weight:500;font-size:13px;
+    color:rgba(255,255,255,0.65);
+    text-decoration:none;
+  }
+
+  .pf-level{
+    background:rgba(0,0,0,0.35);
+    border-radius:18px;
+    padding:16px 18px;
+  }
+  .pf-level-head{
+    display:flex;justify-content:space-between;align-items:baseline;
+  }
+  .pf-level-head b{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:30px;
+    letter-spacing:-0.02em;
+  }
+  .pf-level-head span{
+    font-size:12px;color:rgba(255,255,255,0.6);
+  }
+  .pf-xp{
+    margin-top:10px;
+    height:6px;
+    background:rgba(255,255,255,0.15);
+    border-radius:3px;
+    overflow:hidden;
+  }
+  .pf-xp-fill{
+    width:72%;height:100%;
+    background:linear-gradient(90deg,#FFD54A,#FFB199);
+    border-radius:3px;
+  }
+  .pf-level-text{
+    margin-top:8px;
+    font-size:12px;
+    color:rgba(255,255,255,0.6);
+  }
+
+  .pf-themes{
+    margin-top:12px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+  }
+  .pf-mini{
+    aspect-ratio:1/1;
+    border-radius:12px;
+    position:relative;
+    overflow:hidden;
+    display:flex;align-items:flex-end;
+    padding:6px;
+  }
+  .pf-mini .n{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:10px;
+    color:#fff;
+    text-shadow:0 1px 2px rgba(0,0,0,0.5);
+  }
+  .mini-sp{background:radial-gradient(ellipse at 30% 30%, #E52521 0%, #B01818 70%);}
+  .mini-hp{background:radial-gradient(ellipse at 70% 30%, #4a2b0f 0%, #2b1708 70%);}
+  .mini-mc{background:linear-gradient(135deg, #6ba943 0%, #4a7a2a 100%);}
+  .mini-wr{background:linear-gradient(180deg, #0a0a0a 0%, #1a0404 100%);}
+
+  .pf-match{
+    background:rgba(0,0,0,0.3);
+    border-radius:14px;
+    padding:14px 16px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .pf-match + .pf-match{margin-top:8px;}
+  .pf-match-ic{
+    width:38px;height:38px;
+    border-radius:10px;
+    background:radial-gradient(ellipse at 30% 30%, #E52521 0%, #B01818 70%);
+    flex-shrink:0;
+  }
+  .pf-match-title{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:14px;
+    letter-spacing:-0.01em;
+  }
+  .pf-match-sub{
+    font-size:11.5px;
+    color:rgba(255,255,255,0.6);
+    margin-top:1px;
+  }
+  .pf-match-res{
+    margin-left:auto;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:14px;
+    color:var(--win);
+  }
+  .pf-match-res.lose{color:#FFB199;}
+
+  @media (max-width:900px){
+    .screens{gap:30px;}
+  }
+
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="intro">
+    <h1>QuizzUp — v4, autres écrans</h1>
+    <p>Même direction que la Home v4 : coral assumé, zéro tells IA, boldness concentrée. Chaque écran est pensé pour son job : <strong>catégorie</strong> montre que chaque quiz a son monde, <strong>jeu</strong> est dépouillé pour la concentration, <strong>résultats</strong> célèbre sans infantiliser, <strong>profil</strong> est social-first.</p>
+  </div>
+
+  <div class="screens">
+
+  <!-- ============================================
+       1. CATÉGORIE (Spider-Man)
+  ============================================= -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="screen screen--category">
+        <div class="cat-bg"></div>
+        <svg class="cat-web" viewBox="0 0 100 100" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.5">
+          <path d="M50 50L0 0M50 50L100 0M50 50L0 100M50 50L100 100M50 50L50 0M50 50L50 100M50 50L0 50M50 50L100 50"/>
+          <path d="M30 30A28 28 0 0 1 70 30M20 50A42 42 0 0 1 80 50M30 70A28 28 0 0 0 70 70M35 35A20 20 0 0 1 65 35M25 50A32 32 0 0 1 75 50" stroke-dasharray="2 2"/>
+        </svg>
+
+        <div class="statusbar dark">
+          <span>9:41</span>
+          <div class="right">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><path d="M1 7V5c0-.3.2-.5.5-.5h2c.3 0 .5.2.5.5v2c0 .3-.2.5-.5.5h-2C1.2 7.5 1 7.3 1 7zM6 5V3c0-.3.2-.5.5-.5h2c.3 0 .5.2.5.5v4c0 .3-.2.5-.5.5h-2C6.2 7.5 6 7.3 6 7zM11 3V1c0-.3.2-.5.5-.5h2c.3 0 .5.2.5.5v6c0 .3-.2.5-.5.5h-2c-.3 0-.5-.2-.5-.5z" fill="#fff"/></svg>
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><rect x="1" y="2" width="14" height="8" rx="2" stroke="#fff" fill="none"/><rect x="2.5" y="3.5" width="11" height="5" rx="1" fill="#fff"/></svg>
+          </div>
+        </div>
+
+        <div class="scrollarea">
+          <header class="appheader">
+            <button class="iconbtn" aria-label="Retour">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div style="display:flex;gap:10px;">
+              <button class="iconbtn" aria-label="Favori">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
+              </button>
+              <button class="iconbtn" aria-label="Partager">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.6l6.8-4M8.6 13.4l6.8 4"/></svg>
+              </button>
+            </div>
+          </header>
+
+          <div class="cat-content">
+            <div class="cat-hero">
+              <span class="cat-badge">POP CULTURE · MARVEL</span>
+              <h1 class="cat-title">SPIDER<br>MAN<span>Multiverse</span></h1>
+              <p class="cat-info">Du Peter de Raimi au Miles de Across. 150 questions pour départager les vrais fans des Avengers du dimanche.</p>
+            </div>
+
+            <div class="cat-stats">
+              <div class="cat-stat"><b>73%</b><span>complété</span></div>
+              <div class="cat-stat"><b>12</b><span>meilleure série</span></div>
+              <div class="cat-stat"><b>N8</b><span>niveau actuel</span></div>
+            </div>
+
+            <div class="cat-cta">
+              <button class="btn btn--primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+                Jouer maintenant
+              </button>
+              <button class="btn btn--ghost" aria-label="Défier un ami">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg>
+              </button>
+            </div>
+
+            <div class="cat-friends">
+              <h3>Tes amis sur ce quiz</h3>
+              <div class="friend-row">
+                <div class="friend-avatar">K</div>
+                <div class="friend-avatar" style="background:linear-gradient(135deg,#AAD3FF,#3E6FB8);">J</div>
+                <div class="friend-avatar" style="background:linear-gradient(135deg,#B8F1C8,#2ECC71);">M</div>
+                <div class="friend-avatar" style="background:linear-gradient(135deg,#FFE085,#D49500);">S</div>
+                <span class="friend-more">+ 7 autres</span>
+              </div>
+            </div>
+
+            <div style="height:30px;"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="label">Écran catégorie</div>
+  </div>
+
+  <!-- ============================================
+       2. JEU ACTIF
+  ============================================= -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="screen screen--game">
+
+        <div class="statusbar dark">
+          <span>9:41</span>
+          <div class="right">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><path d="M1 7V5c0-.3.2-.5.5-.5h2c.3 0 .5.2.5.5v2c0 .3-.2.5-.5.5h-2C1.2 7.5 1 7.3 1 7zM6 5V3c0-.3.2-.5.5-.5h2c.3 0 .5.2.5.5v4c0 .3-.2.5-.5.5h-2C6.2 7.5 6 7.3 6 7zM11 3V1c0-.3.2-.5.5-.5h2c.3 0 .5.2.5.5v6c0 .3-.2.5-.5.5h-2c-.3 0-.5-.2-.5-.5z" fill="#fff"/></svg>
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><rect x="1" y="2" width="14" height="8" rx="2" stroke="#fff" fill="none"/><rect x="2.5" y="3.5" width="11" height="5" rx="1" fill="#fff"/></svg>
+          </div>
+        </div>
+
+        <div class="game-header">
+          <div class="game-player">
+            <div class="game-avatar">A</div>
+            <div>
+              <div class="game-pscore">4</div>
+              <div class="game-pname">toi</div>
+            </div>
+          </div>
+          <div class="game-timer">8</div>
+          <div class="game-player right">
+            <div class="game-avatar">K</div>
+            <div>
+              <div class="game-pscore">3</div>
+              <div class="game-pname">krimo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-progress"><div class="game-progress-fill"></div></div>
+        <div class="game-progress-text">Question 7 / 10</div>
+
+        <div class="game-category">
+          <span class="game-cattag">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+            Spider-Man
+          </span>
+        </div>
+
+        <div class="game-question">
+          <h2>Qui joue Miles Morales dans <em>Into the Spider-Verse</em> ?</h2>
+        </div>
+
+        <div class="game-answers">
+          <button class="game-answer">
+            <span class="letter">A</span>
+            Jake Johnson
+          </button>
+          <button class="game-answer correct">
+            <span class="letter">B</span>
+            Shameik Moore
+          </button>
+          <button class="game-answer">
+            <span class="letter">C</span>
+            Jharrel Jerome
+          </button>
+          <button class="game-answer">
+            <span class="letter">D</span>
+            Nicholas Cage
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <div class="label">Jeu actif</div>
+  </div>
+
+  <!-- ============================================
+       3. RÉSULTATS (VICTOIRE)
+  ============================================= -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="screen screen--results">
+        <div class="statusbar">
+          <span>9:41</span>
+          <div class="right">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><path d="M1 7V5c0-.3.2-.5.5-.5h2c.3 0 .5.2.5.5v2c0 .3-.2.5-.5.5h-2C1.2 7.5 1 7.3 1 7zM6 5V3c0-.3.2-.5.5-.5h2c.3 0 .5.2.5.5v4c0 .3-.2.5-.5.5h-2C6.2 7.5 6 7.3 6 7zM11 3V1c0-.3.2-.5.5-.5h2c.3 0 .5.2.5.5v6c0 .3-.2.5-.5.5h-2c-.3 0-.5-.2-.5-.5z" fill="#fff"/></svg>
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><rect x="1" y="2" width="14" height="8" rx="2" stroke="#fff" fill="none"/><rect x="2.5" y="3.5" width="11" height="5" rx="1" fill="#fff"/></svg>
+          </div>
+        </div>
+
+        <div class="res-content">
+          <div class="res-eyebrow">Spider-Man · 7 à 5</div>
+          <h1 class="res-title">Belle<br>victoire<em>.</em></h1>
+
+          <div class="res-scoreboard">
+            <div class="res-score me">
+              <div class="av">A</div>
+              <div class="pts">7</div>
+              <div class="nm">toi</div>
+            </div>
+            <div class="res-vs">vs</div>
+            <div class="res-score op">
+              <div class="av">K</div>
+              <div class="pts">5</div>
+              <div class="nm">krimo</div>
+            </div>
+          </div>
+
+          <div class="res-stats">
+            <div class="res-stat"><b>70%</b><span>bonnes réponses</span></div>
+            <div class="res-stat"><b>4.2s</b><span>temps moyen</span></div>
+            <div class="res-stat"><b>+1</b><span>niveau Spider-Man</span></div>
+          </div>
+
+          <div class="res-cta">
+            <button class="btn btn--primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></svg>
+              Revanche
+            </button>
+            <button class="btn--outline">
+              Choisir un autre thème
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="label">Résultats — victoire</div>
+  </div>
+
+  <!-- ============================================
+       4. PROFIL
+  ============================================= -->
+  <div class="wrap">
+    <div class="phone">
+      <div class="screen screen--profile">
+
+        <div class="statusbar">
+          <span>9:41</span>
+          <div class="right">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><path d="M1 7V5c0-.3.2-.5.5-.5h2c.3 0 .5.2.5.5v2c0 .3-.2.5-.5.5h-2C1.2 7.5 1 7.3 1 7zM6 5V3c0-.3.2-.5.5-.5h2c.3 0 .5.2.5.5v4c0 .3-.2.5-.5.5h-2C6.2 7.5 6 7.3 6 7zM11 3V1c0-.3.2-.5.5-.5h2c.3 0 .5.2.5.5v6c0 .3-.2.5-.5.5h-2c-.3 0-.5-.2-.5-.5z" fill="#fff"/></svg>
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><rect x="1" y="2" width="14" height="8" rx="2" stroke="#fff" fill="none"/><rect x="2.5" y="3.5" width="11" height="5" rx="1" fill="#fff"/></svg>
+          </div>
+        </div>
+
+        <div class="scrollarea">
+
+          <header class="pf-head">
+            <button class="iconbtn" aria-label="Retour">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="iconbtn" aria-label="Paramètres">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </button>
+          </header>
+
+          <div class="pf-hero">
+            <div class="pf-avatar">A</div>
+            <div class="pf-name">Ans</div>
+            <div class="pf-bio">La mouche dans la soupe · Paris</div>
+            <div class="pf-social">
+              <span><b>56</b> parties</span>
+              <span class="dot">·</span>
+              <span><b>5</b> amis</span>
+              <span class="dot">·</span>
+              <span>suit <b>9</b> joueurs</span>
+            </div>
+          </div>
+
+          <div class="pf-section">
+            <h3>Progression générale</h3>
+            <div class="pf-level">
+              <div class="pf-level-head">
+                <b>Niveau 12</b>
+                <span>720 / 1 000 XP</span>
+              </div>
+              <div class="pf-xp"><div class="pf-xp-fill"></div></div>
+              <div class="pf-level-text">280 XP avant le niveau 13</div>
+            </div>
+          </div>
+
+          <div class="pf-section">
+            <h3>Mes thèmes <a href="#">voir tout</a></h3>
+            <div class="pf-themes">
+              <div class="pf-mini mini-sp"><span class="n">N8</span></div>
+              <div class="pf-mini mini-hp"><span class="n">N3</span></div>
+              <div class="pf-mini mini-mc"><span class="n">N3</span></div>
+              <div class="pf-mini mini-wr"><span class="n">N1</span></div>
+            </div>
+          </div>
+
+          <div class="pf-section">
+            <h3>Dernières parties</h3>
+            <div class="pf-match">
+              <div class="pf-match-ic" style="background:radial-gradient(ellipse at 30% 30%, #E52521 0%, #B01818 70%);"></div>
+              <div>
+                <div class="pf-match-title">Spider-Man</div>
+                <div class="pf-match-sub">contre krimo · il y a 5 min</div>
+              </div>
+              <div class="pf-match-res">+7</div>
+            </div>
+            <div class="pf-match">
+              <div class="pf-match-ic" style="background:linear-gradient(180deg, #0a0a0a 0%, #1a0404 100%);"></div>
+              <div>
+                <div class="pf-match-title">Werenoi</div>
+                <div class="pf-match-sub">contre juju75 · hier</div>
+              </div>
+              <div class="pf-match-res lose">−3</div>
+            </div>
+            <div class="pf-match">
+              <div class="pf-match-ic" style="background:linear-gradient(135deg, #6ba943 0%, #4a7a2a 100%);"></div>
+              <div>
+                <div class="pf-match-title">Minecraft</div>
+                <div class="pf-match-sub">contre aubam88 · hier</div>
+              </div>
+              <div class="pf-match-res">+9</div>
+            </div>
+          </div>
+
+          <div style="height:30px;"></div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="label">Profil</div>
+  </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
