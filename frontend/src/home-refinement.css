@@ -176,6 +176,42 @@ body:has(.app-home),body:has(.app-themes),body:has(.app-profile) { background: #
 .app-profile .profile-photo-upload:focus-within,.app-profile .profile-editor button:focus-visible { outline: 3px solid #ae1536; outline-offset: 3px; }
 .app-profile .profile-editor-cancel { background: #f0e7e3 !important; }
 .app-profile .profile-editor-save { background: #ae1536 !important; color: #fff !important; }
+
+/* Audit follow-up: useful topic names and an explicit account-saving action. */
+.themes-refined .themes-search-scope { margin: -12px 0 22px; color: #fff; font-size: 12px; line-height: 1.4; }
+.profile-account { margin: 0 0 20px; }
+.profile-account-action,.profile-account-linked { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 60px; padding: 14px 16px; border: 0; border-radius: 16px; background: #fffaf2; color: #30272d; text-align: left; font: 600 14px var(--v4-font-ui); line-height: 1.4; }
+.profile-account-action { cursor: pointer; }
+.profile-account-action > svg { flex-shrink: 0; color: #ae1536; }
+.profile-account-action:disabled { cursor: default; opacity: .65; }
+.profile-account-action:focus-visible { outline: 3px solid #ffdd55; outline-offset: 3px; }
+.profile-account-linked > svg { flex-shrink: 0; color: #245a3d; }
+.profile-account-linked > span { min-width: 0; }
+.profile-account-linked strong,.profile-account-linked small { display: block; }
+.profile-account-linked small { margin-top: 2px; font-weight: 400; color: #6b5961; overflow-wrap: anywhere; }
+.app-profile .pf-themes { grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 10px !important; }
+.app-profile .pf-v4 .pf-themes button.pf-theme-tile.pf-theme-tile { aspect-ratio: auto !important; min-height: 88px; padding: 14px !important; flex-direction: row !important; align-items: center !important; justify-content: space-between !important; gap: 8px !important; background-image: none !important; background-color: #fffaf2 !important; color: #30272d !important; text-align: left; }
+.pf-theme-copy { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.pf-theme-name { font-size: 14px; line-height: 1.3; font-weight: 700; overflow-wrap: anywhere; }
+.pf-theme-level { font-size: 12px; line-height: 1.4; color: #6b5961; }
+.app-profile .pf-theme-tile > svg { flex-shrink: 0; color: #ae1536; }
+.app-profile .pf-theme-tile:focus-visible { outline: 3px solid #ffdd55; outline-offset: 3px; }
+/* Photo captions get a consistent dark floor, including Playfair overrides. */
+.tile-v4.tile-v4--has-cover .tile-v4__shade { background: linear-gradient(180deg,transparent 20%,rgba(8,9,13,.55) 48%,rgba(8,9,13,.9) 100%); }
+.tile-v4.tile-v4--has-cover .tile-v4__label { color: #fff !important; }
+
+.home-loading-status { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); }
+.home-loading-controls { display: flex; gap: 16px; padding-right: 10px; }
+.home-loading-controls i { width: 22px; height: 22px; border-radius: 50%; background: #ffffff24; }
+.home-loading-heading { width: 128px; height: 26px; margin: 8px 0 16px; border-radius: 8px; background: #ffffff24; }
+.home-loading-heading.is-short { width: 110px; margin-top: 24px; }
+.home-loading-grid,.home-loading-discovery { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+.home-loading-card { aspect-ratio: 1; border-radius: 19px; background: #ffffff18; }
+.home-loading-discovery > div { aspect-ratio: 1.65; border-radius: 19px; background: #ffffff18; }
+.home-loading-community { height: 80px; border-radius: 19px; margin-top: 24px; background: #ffffff18; }
+.home-loading-content { animation: home-loading-breathe 1.6s ease-in-out infinite alternate; }
+@keyframes home-loading-breathe { to { opacity: .55; } }
+@media(prefers-reduced-motion:reduce) { .home-loading-content { animation: none; } }
 @media(max-width:350px) {
   .home-refined .topics-grid-v4,.home-refined .home-discovery { gap: 10px !important; }
   .home-refined .tile-v4__label { font-size: 13px !important; }

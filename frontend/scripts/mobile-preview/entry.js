@@ -34,6 +34,7 @@ function Preview() {
   const [solo, setSolo] = useState(false);
   const [family, setFamily] = useState(null);
   const [peer, setPeer] = useState(null);
+  const [googleLinked, setGoogleLinked] = useState(params.has('linked'));
   const social = React.useMemo(() => ({ friends: [], requests: [], dms: {}, outgoingRequests: new Set(), gameChat: [], gameChatSeenRef: { current: 0 }, sendGameChat: () => false }), []);
   const opponents = params.has('gameSolo') ? [] : [{ id: '2', name: 'clem10', avatar: 'owl', score: 55, answered: !!reveal?.others, correct: false }];
   if (params.has('group')) opponents.push({ id: '3', name: 'Alex', avatar: '🦊', score: 12 }, { id: '4', name: 'Sam', avatar: '🐼', score: 10 });
@@ -50,7 +51,7 @@ function Preview() {
     {!['home','quiz','profile','shop','themes','messages'].includes(screen) && controls}
     {screen === 'home' && <HomeContent controls={controls} name="Sisi" avatar="fox" stats={stats} soloMode={solo} setSoloMode={setSolo}
       quickMatch={play} startWithCategory={play} onOpenProfile={() => setScreen('profile')} onSeeAll={() => setScreen('themes')} />}
-    {screen === 'profile' && <ProfileContent controls={controls} name="Sisi" avatar="fox" stats={stats} social={social}
+    {screen === 'profile' && <ProfileContent controls={controls} name="Sisi" avatar="fox" stats={stats} social={social} clientId="preview-self" isGoogleLinked={googleLinked} googleEmail="sisi@example.test" linkGoogle={()=>setGoogleLinked(true)}
       streak={{ streak: 1, calendar: [] }} onSaveProfile={() => {}} onOpenLeaderboard={() => {}} onOpenShop={() => setScreen('shop')} />}
     {screen === 'waiting' && <WaitingContent name="Sisi" avatar="fox" level={6} categoryKey="ligue_champions" onCancel={() => setScreen('home')} onPlaySolo={play} />}
     {screen === 'shop' && <ShopContent controls={controls} name="Sisi" avatar="fox" stats={stats} onBuy={() => {}} onEquip={() => {}} onPlay={play} onBack={() => setScreen('home')} />}

@@ -189,9 +189,6 @@ export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disable
       {/* Dark gradient for text readability */}
       <div className="tile-v4__shade" aria-hidden="true" />
 
-      {/* Level badge */}
-      {c.tag && <div className="tile-v4__badge">{c.tag === '📸' ? 'PHOTO' : 'TOP'}</div>}
-
       {/* Label + featured meta */}
       <div className="tile-v4__caption">
         <div className="tile-v4__label">{c.label}</div>

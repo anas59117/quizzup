@@ -12,7 +12,13 @@ const server=require('./serve.cjs'),out=path.resolve(__dirname,'../../.mobile-pr
  const ctx=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});
  await ctx.addInitScript(()=>{localStorage.setItem('quizzup-onboarded','1');localStorage.setItem('quizzup-name','HomeQA');localStorage.setItem('quizzup-lang','fr');});
  const page=await ctx.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('requestfailed',r=>network.push({url:r.url(),error:r.failure()}));page.on('websocket',ws=>ws.on('framesent',f=>{try{payloads.push(JSON.parse(f.payload));}catch{}}));
- await page.goto('http://127.0.0.1:4335/?app');await page.locator('.home-refined').waitFor();
+ let releaseIdentity;
+ await page.route('**/auth/guest',async route=>{await new Promise(resolve=>{releaseIdentity=resolve;});await route.continue();});
+ await page.goto('http://127.0.0.1:4335/?app',{waitUntil:'domcontentloaded'});
+ await page.locator('.home-loading').waitFor();assert.equal(await page.locator('.home-loading button,.home-loading a').count(),0);
+ await page.screenshot({path:path.join(out,'audit-session-loading.png')});
+ while(!releaseIdentity)await new Promise(resolve=>setTimeout(resolve,20));
+ releaseIdentity();await page.locator('.home-refined:not(.home-loading)').waitFor();await page.unroute('**/auth/guest');
  for(const width of [320,375,390,430]){
  await page.setViewportSize({width,height:844});
  await page.screenshot({path:path.join(out,`home-app-${width}.png`),fullPage:true});

@@ -188,7 +188,7 @@ export function EnterCodeContent({ joinCode, setJoinCode, joinError, setJoinErro
   );
 }
 
-export function CategoriesContent({ startWithCategory, onBack, family, onSelectFamily, pending, controls }) {
+export function CategoriesContent({ startWithCategory, family, onSelectFamily, pending, controls }) {
   const { t } = useI18n();
   const [query, setQuery] = useState('');
 
@@ -205,9 +205,10 @@ export function CategoriesContent({ startWithCategory, onBack, family, onSelectF
       {controls && <BrowseHeader controls={controls} />}
       <div className="cat-header">
         <h2>{activeFamily && !results ? famLabel(t, activeFamily.key) : t('allTopics')}</h2>
-        <button className="back-link" onClick={onBack}>{t('back')}</button>
+        {activeFamily && <button className="back-link" onClick={() => { setQuery(''); onSelectFamily(null); }}>{t('backToTopics')}</button>}
       </div>
-      <SearchBar value={query} onChange={setQuery} placeholder={t('searchPlaceholder')} />
+      <SearchBar value={query} onChange={setQuery} placeholder={t('searchPlaceholder')} describedBy="themes-search-scope" />
+      <p className="themes-search-scope" id="themes-search-scope">{t('searchAllTopicsHint')}</p>
       {results ? (
         results.length ? (
           <div className="topics-grid-v4">
@@ -222,7 +223,6 @@ export function CategoriesContent({ startWithCategory, onBack, family, onSelectF
         )
       ) : activeFamily ? (
         <>
-          <button className="back-to-topics" onClick={() => onSelectFamily(null)}>{t('backToTopics')}</button>
           <div className="topics-grid-v4">
             {categoriesInFamily(activeFamily.key).map((c) => (
               <div key={c.key} className="topic-tile-wrap" data-topic={c.key}>
@@ -332,6 +332,16 @@ export function ProfileContent({
         </div>
       </div>
 
+      <section className="profile-account" aria-label={t('saveProgressGoogle')}>
+        {isGoogleLinked ? (
+          <div className="profile-account-linked"><Icon name="check" size={20} /><span><strong>{t('googleAccountLinked')}</strong>{googleEmail && <small>{googleEmail}</small>}</span></div>
+        ) : (
+          <button className="profile-account-action" onClick={linkGoogle} disabled={linking || !clientId} aria-busy={!!linking}>
+            <Icon name="key" size={20} /><span>{linking ? t('connecting') : t('saveProgressGoogle')}</span>
+          </button>
+        )}
+      </section>
+
       <div className="social-entry-row"><button onClick={onOpenHistory}>{lang === 'fr' ? 'Historique' : 'Match history'}</button><button onClick={onOpenMessages}>Messages</button></div>
 
       {/* ── Editor (toggle) ───────────────────────────────── */}
@@ -427,8 +437,8 @@ export function ProfileContent({
                   data-family={cat?.family || ''}
                   onClick={() => onOpenTopic && onOpenTopic(topic.key)}
                 >
-                  <span className="pf-theme-icon">{cat?.icon || '📚'}</span>
-                  <span className="pf-theme-lvl">N{topic.level}</span>
+                  <span className="pf-theme-copy"><strong className="pf-theme-name">{cat?.label || topicLabel(topic.key)}</strong><span className="pf-theme-level">{t('level')} {topic.level}</span></span>
+                  <Icon name="arrow" size={16} />
                 </button>
               );
             })}
@@ -454,14 +464,7 @@ export function ProfileContent({
       {/* ── Friends ───────────────────────────────────────── */}
       <FriendsScreen social={social} onInviteFriend={onInviteFriend} onJoinFriend={onJoinFriend} pending={pending} />
 
-      {/* ── Account link + privacy ────────────────────────── */}
-      {isGoogleLinked ? (
-        <div className="account-linked">{'✓'} {t('connectedGoogle', { email: googleEmail })}</div>
-      ) : (
-        <button className="social-btn outline account-link-btn" onClick={linkGoogle} disabled={linking || !clientId}>
-          {linking ? t('connecting') : t('connectGoogle')}
-        </button>
-      )}
+      {/* ── Privacy ───────────────────────────────────────── */}
       <a className="privacy-link" href="/privacy.html" target="_blank" rel="noopener noreferrer">
         {t('privacyPolicy')}
       </a>

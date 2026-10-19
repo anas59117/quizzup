@@ -737,7 +737,6 @@ export const CategoryTile = memo(function CategoryTile({ c, onClick, disabled })
         ) : c.logo ? (
           <img src={c.logo} alt={c.label} className="tile-logo-img" />
         ) : null}
-        {c.tag && <span className="tile-tag-badge">{String(c.tag).includes('📸') ? 'PHOTO' : 'TOP'}</span>}
       </span>
       <span className="tile-label">{c.label}</span>
     </button>
@@ -776,7 +775,7 @@ export const FamilyGrid = memo(function FamilyGrid({ onSelect }) {
   );
 });
 
-export const SearchBar = memo(function SearchBar({ value, onChange, placeholder }) {
+export const SearchBar = memo(function SearchBar({ value, onChange, placeholder, describedBy }) {
   return (
     <div className="search-bar">
       <span className="search-icon" aria-hidden="true"><Icon name="search" size={17} /></span>
@@ -787,6 +786,7 @@ export const SearchBar = memo(function SearchBar({ value, onChange, placeholder 
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         aria-label={placeholder}
+        aria-describedby={describedBy}
       />
     </div>
   );

@@ -17,7 +17,7 @@ import { Messenger } from './Messenger';
 import { useMatchHistory, MatchHistory } from './MatchHistory';
 import './community.css';
 import './home-refinement.css';
-import { BrandMark } from './Brand';
+import { HomeLoading } from './HomeLoading';
 import { usePlayers, PlayerSheet, topicLabel } from './players';
 import { RoomLobby } from './multiplayer';
 import { AVATARS, useTheme, TopControls, BrowseHeader, NavBar, ErrorScreen, Toast } from './ui';
@@ -1063,13 +1063,9 @@ export default function App() {
     // Brief splash while the saved/generated identity connects and any
     // unfinished game is recovered; then Home (or the recovered match).
     return (
-      <div className="app">
-        <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
-        <div className="container center boot-splash" aria-busy="true">
-          <BrandMark className="join-brandmark" />
-          <h1 className="logo">QuizzUp</h1>
-          <div className="loading-bar"><div className="loading-fill" /></div>
-        </div>
+      <div className="app app-nav app-top app-home app-boot">
+        <Toast toast={toast} onDismiss={dismissToast} />
+        <HomeLoading />
       </div>
     );
   }

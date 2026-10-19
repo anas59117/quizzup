@@ -13,7 +13,7 @@ const out = path.resolve(__dirname, '../../.mobile-preview');
     for (const screen of ['home&personal','themes','profile','messages','messages&populated']) {
       for (const width of [320,375,390,430,1440]) {
         await page.setViewportSize({width,height:width===1440?900:844});
-        await page.goto(`http://127.0.0.1:4336/?${screen}`);
+        await page.goto(`http://127.0.0.1:4336/?${screen}${screen==='profile'?'&personal':''}`);
         await page.locator('.navbar').waitFor();
         if (['home&personal','themes','profile'].includes(screen)) {
           await page.waitForFunction(()=>{const mark=document.querySelector('.brand-lockup img');return mark?.complete&&mark.naturalWidth>0;});
@@ -26,7 +26,7 @@ const out = path.resolve(__dirname, '../../.mobile-preview');
           const symbols=await page.locator('.family-icon svg').count();assert.equal(symbols,9);
           await page.locator('.family-tile[data-family=music]').click();
           assert(await page.locator('.topics-grid-v4 .tile-v4').count()>0);
-          await page.locator('.back-to-topics').click();
+          await page.locator('.cat-header .back-link').click();
         }
         if (screen==='profile') {
           await page.locator('.pf-edit-dot').click();
