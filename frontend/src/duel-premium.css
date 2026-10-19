@@ -106,3 +106,8 @@
   .duel-premium .question,.duel-premium .answers .answer,.duel-premium .answers .answer.duel-answer-enter,.duel-premium .hud-timer,.duel-premium .opponent-just-answered { animation:none !important; transition:none !important; }
   .duel-score-rail span { transition:none; }
 }
+
+/* Begin only on canonical full round_result; preserve each answer's box. */
+.duel-premium .answer.duel-answer-exit{animation:duel-choice-exit 260ms ease 450ms forwards}
+@keyframes duel-choice-exit{to{opacity:0;transform:translateY(5px)}}
+@media(prefers-reduced-motion:reduce){.duel-premium .answer.duel-answer-exit{animation:none;opacity:.35}}

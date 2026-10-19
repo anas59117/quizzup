@@ -31,11 +31,14 @@ const FEATURED_TOPICS = FEATURED_TOPIC_KEYS
   })
   .filter(Boolean);
 
-export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, onStartTournament, onOpenFriends, onOpenLeague, onOpenSeasonPass, pending, stats, friendCount = 0, controls }) {
-  const { t } = useI18n();
+export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, onStartTournament, onOpenFriends, onOpenLeague, onOpenSeasonPass, pending, stats, friendCount = 0, controls, onOpenMessages, unreadCount = 0, onOpenCommunity, onOpenHistory }) {
+  const { t, lang } = useI18n();
+  const fr = lang === 'fr';
   const [showMore, setShowMore] = useState(false);
   // Keep up to 7 featured covers for Mes thèmes; Spider-Man-equivalent card gets the 2:1 "featured" slot.
-  const myThemes = FEATURED_TOPICS.slice(0, 7);
+  const personalKeys = [...new Set([...(stats?.followedThemes || []), ...(stats?.recentThemes || []).map(topic=>topic.key), ...[...(stats?.topics || [])].sort((a,b) => (b.updatedAt || 0) - (a.updatedAt || 0)).map(topic => topic.key)])];
+  const personalThemes = personalKeys.map(key => CATEGORIES.find(c => c.key === key)).filter(Boolean);
+  const myThemes = (personalThemes.length ? personalThemes : FEATURED_TOPICS).slice(0, 7);
   const [heroTopic, ...rest] = myThemes;
   const games = (stats && stats.games) || 0;
   const following = (stats && stats.following) || 0;
@@ -72,12 +75,13 @@ export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickM
           <span>{t('followedPlayers', { n: following })}</span>
         </div>
       </button>
+      <div className="social-entry-row"><button onClick={onOpenMessages}>Messages {unreadCount > 0 && <b>{unreadCount}</b>}</button><button onClick={onOpenCommunity}>{fr ? 'Communauté' : 'Community'}</button><button onClick={onOpenHistory}>{fr ? 'Historique' : 'Match history'}</button></div>
       <div className="home-solo-row">
         <SoloToggle solo={soloMode} onChange={setSoloMode} />
       </div>
       <FriendInviteActions onInviteFriend={createRoom} onJoinFriend={onOpenEnterCode} pending={pending} />
       <div className="section-head-v4">
-        <h2 className="section-title-v4">Mes thèmes</h2>
+        <h2 className="section-title-v4">{personalThemes.length ? (fr ? 'Mes thèmes' : 'My themes') : (fr ? 'À découvrir' : 'Discover')}</h2>
         <button className="section-edit" onClick={() => onSeeAll && onSeeAll()}>
           {t('seeAll')}
         </button>
@@ -86,11 +90,12 @@ export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickM
         {heroTopic && (
           <div className="topic-tile-wrap topic-tile-wrap--featured" data-topic={heroTopic.key}>
             <CategoryTileV4 c={heroTopic} featured onClick={() => startWithCategory(heroTopic.key)} disabled={pending} />
-          </div>
+          {personalThemes.length > 0 && <span className="personal-theme-level">{t('level')} {[...(stats?.topics||[]),...(stats?.recentThemes||[])].find(topic => topic.key === heroTopic.key)?.level ?? '—'}</span>}</div>
         )}
         {rest.map((c) => (
           <div key={c.key} className="topic-tile-wrap" data-topic={c.key}>
             <CategoryTileV4 c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />
+            {personalThemes.length > 0 && <span className="personal-theme-level">{t('level')} {[...(stats?.topics||[]),...(stats?.recentThemes||[])].find(topic => topic.key === c.key)?.level ?? '—'}</span>}
           </div>
         ))}
       </div>
@@ -152,13 +157,14 @@ const PREVIEW_SUB = {
   ligue_champions: { line1: 'LIGUE DES', line2: 'CHAMPIONS', eyebrow: 'SPORT · FOOTBALL', sub: 'UEFA', desc: 'Finales, légendes & records de la plus grande compétition européenne.' },
 };
 
-export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChallenge, pending, friendsOnTopic = [], controls }) {
-  const { t } = useI18n();
+export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChallenge, pending, friendsOnTopic = [], controls, onCommunity, onLeaderboard, following, onToggleFollow }) {
+  const { t, lang } = useI18n();
+  const fr = lang === 'fr';
   if (!category) return null;
   const preview = PREVIEW_SUB[category.key] || { eyebrow: category.family || 'QUIZ', desc: category.desc };
   const topicStats = (stats && stats.topics || []).find((t) => t.key === category.key) || {};
-  const completion = topicStats.completion || 0;
-  const bestStreak = topicStats.bestStreak || 0;
+  const completion = Number.isFinite(topicStats.completion) ? `${topicStats.completion}%` : '—';
+  const bestStreak = Number.isFinite(topicStats.bestStreak) ? topicStats.bestStreak : '—';
   const topicLevel = topicStats.level || 1;
   return (
     <div className="container wide category-preview-v4" data-topic={category.key} data-family={category.family}>
@@ -180,7 +186,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
           <Icon name="arrow" size={18} className="cp-back-ic" />
         </button>
         <div className="cp-head-right">
-          <button className="cp-icon-btn" aria-label="Favori">
+          <button className="cp-icon-btn" aria-label={following ? (fr ? 'Ne plus suivre ce thème' : 'Unfollow theme') : (fr ? 'Suivre ce thème' : 'Follow theme')} aria-pressed={!!following} onClick={onToggleFollow}>
             <Icon name="heart" size={18} />
           </button>
           <button className="cp-icon-btn" aria-label="Partager">
@@ -207,7 +213,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
       </div>
 
       <div className="cp-stats">
-        <div className="cp-stat"><b>{completion}%</b><span>complété</span></div>
+        <div className="cp-stat"><b>{completion}</b><span>{completion === '—' ? (fr ? 'Progression à découvrir' : 'Progress unavailable') : (fr ? 'complété' : 'completed')}</span></div>
         <div className="cp-stat"><b>{bestStreak}</b><span>meilleure série</span></div>
         <div className="cp-stat"><b>N{topicLevel}</b><span>niveau actuel</span></div>
       </div>
@@ -222,6 +228,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
         </button>
       </div>
 
+<div className="social-entry-row"><button onClick={onCommunity}>{fr ? 'Communauté' : 'Community'}</button><button onClick={onLeaderboard}>{fr ? 'Classement' : 'Ranking'}</button></div>
       <div className="cp-friends">
         <h3>Tes amis sur ce quiz</h3>
         {friendsOnTopic.length > 0 ? (
@@ -311,9 +318,9 @@ export function CategoriesContent({ startWithCategory, onBack, family, onSelectF
 export function ProfileContent({
   avatar, name, stats, isGoogleLinked, googleEmail, linkGoogle, linking,
   clientId, social, onOpenLeaderboard, onOpenShop, onSaveProfile, profileSaving, onOpenTopic, streak,
-  league, onOpenLeague, onInviteFriend, onJoinFriend, pending, controls,
+  league, onOpenLeague, onInviteFriend, onJoinFriend, pending, controls, onOpenHistory, onOpenMessages,
 }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [editing, setEditing] = useState(false);
   const [draftName, setDraftName] = useState(name || '');
   const [draftAvatar, setDraftAvatar] = useState(avatar || AVATARS[0]);
@@ -398,6 +405,8 @@ export function ProfileContent({
           {t('playedGames', { n: stats.games || 0 })} · {t('socialFriends', { n: friendCount })} · {t('followedPlayers', { n: followingCount })}
         </div>
       </div>
+
+      <div className="social-entry-row"><button onClick={onOpenHistory}>{lang === 'fr' ? 'Historique' : 'Match history'}</button><button onClick={onOpenMessages}>Messages</button></div>
 
       {/* ── Editor (toggle) ───────────────────────────────── */}
       {editing && (
@@ -629,7 +638,7 @@ export { WorldMatchSearch as WaitingContent, DuelRoundIntro as RoundIntroContent
 
 export const QuestionContent = EnhancedQuestionContent;
 
-export function FinishedContent({ result, opponents, myId, avatar, name, frame, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch, adOffer, onWatchAd, adClaimed, streak, onShowShare, leagueAward, notices = [] }) {
+export function FinishedContent({ result, opponents, myId, avatar, name, frame, social, addFriend, playAgain, rematch, rematchWaiting, rematchStarting, newMatch, adOffer, onWatchAd, adClaimed, streak, onShowShare, leagueAward, notices = [], onOpenMessages }) {
   const { t } = useI18n();
   const [showShare, setShowShare] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
@@ -705,6 +714,7 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
           </div>
         )}
 
+        {!isSolo && opp?.clientId && social.friends.some(f => f.id === opp.clientId) && <button className="social-btn" onClick={() => onOpenMessages?.(opp.clientId)}>Messages · {opp.name}</button>}
         {/* Reward signals stay visible — this is what the old screen got right */}
         <div className="res-rewards">
           <div className="res-reward">

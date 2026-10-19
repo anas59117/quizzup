@@ -324,6 +324,19 @@ function handleShop(ws, data, state) {
 
 function handleFeed(ws, data, state) {
   const { clientId } = state;
+  if (data.type === 'post_get') {
+    if (!clientId) {
+      game.send(ws, { type: 'community_error', action: data.type, code: 'AUTH_REQUIRED' });
+      return true;
+    }
+    if (!actionLimiters.feedList.check(clientId)) {
+      game.send(ws, { type: 'community_error', action: data.type, code: 'FEED_RATE_LIMITED' });
+      return true;
+    }
+    const postId = typeof data.postId === 'string' ? data.postId.slice(0, 100) : '';
+    game.send(ws, { type: 'post_detail', postId, post: posts.getPost(postId, clientId) });
+    return true;
+  }
   if (data.type === 'feed_list') {
     const feedKey = clientId || state.ip;
     if (!allowAction(actionLimiters.feedList, feedKey, ws, 'FEED_RATE_LIMITED'))

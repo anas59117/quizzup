@@ -1,0 +1,265 @@
+.social-entry-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+.social-entry-row button,
+.community-screen button,
+.community-history button {
+  min-height: 44px;
+  border: 1px solid #dfd5c8;
+  border-radius: 12px;
+  padding: 8px 12px;
+  background: #fff9ef;
+  color: #513c31;
+  font: inherit;
+}
+.social-entry-row button {
+  flex: 1;
+}
+.social-entry-row b {
+  background: #a62c35;
+  color: white;
+  border-radius: 20px;
+  padding: 2px 6px;
+}
+.community-screen {
+  padding-bottom: 24px;
+}
+.community-composer,
+.community-screen .feed-post,
+.history-card {
+  background: #fffaf2;
+  border: 1px solid #e4d8c8;
+  border-radius: 20px;
+  padding: 16px;
+  margin: 14px 0;
+  color: #48382d;
+}
+.community-composer {
+  display: grid;
+  gap: 12px;
+}
+.community-composer textarea,
+.community-screen input,
+.community-screen select {
+  box-sizing: border-box;
+  min-height: 44px;
+  width: 100%;
+  border: 1px solid #d8cbb9;
+  border-radius: 10px;
+  padding: 10px;
+  background: #fff;
+  color: #382a22;
+  font: inherit;
+}
+.community-composer textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+.community-modes,
+.feed-post-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.community-screen [aria-pressed="true"],
+.community-screen .feed-post-btn {
+  background: #d6ad61;
+  color: #352418;
+}
+.community-photo {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.community-screen .feed-post {
+  display: flex;
+  gap: 10px;
+}
+.community-screen .feed-post-body {
+  min-width: 0;
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+.community-screen .feed-post-ava {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+.community-screen .feed-post-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+}
+.community-question {
+  border: 0;
+  padding: 12px 0;
+  display: grid;
+  gap: 8px;
+}
+.community-question .correct {
+  border: 2px solid #368154;
+  background: #e6f5e8;
+}
+.community-question-editor {
+  display: grid;
+  gap: 8px;
+}
+.community-question-editor label {
+  display: flex;
+  gap: 8px;
+}
+.community-question-editor input[type="radio"] {
+  width: 24px;
+}
+.community-comments {
+  border-top: 1px solid #dfd5c8;
+  margin-top: 12px;
+  padding-top: 12px;
+}
+.community-comments form {
+  display: flex;
+  gap: 6px;
+}
+.community-history header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.history-card {
+  display: grid;
+  gap: 10px;
+}
+.history-card time {
+  float: right;
+}
+.history-peer,
+.history-peer button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.history-peer .player-avatar {
+  width: 36px;
+  height: 36px;
+}
+.community-screen button:focus-visible,
+.social-entry-row button:focus-visible {
+  outline: 3px solid #348aa0;
+  outline-offset: 2px;
+}
+.community-screen button:disabled {
+  opacity: 0.55;
+}
+.community-screen .feed-filters {
+  flex-wrap: wrap;
+}
+.community-screen .feed-filters select {
+  max-width: 100%;
+}
+@media (max-width: 350px) {
+  .home-head .home-actions {
+    gap: 2px;
+  }
+  .home-brand {
+    gap: 6px;
+  }
+  .home-logo-sm {
+    font-size: 22px;
+  }
+  .community-screen .feed-post {
+    padding: 12px;
+  }
+  .social-entry-row button {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+/* Soft-depth: warm paper surfaces, compact action rails, real player portraits. */
+.personal-theme-level {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #fff9ef;
+  color: #49362b;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 750;
+  pointer-events: none;
+}
+.topic-tile-wrap {
+  position: relative;
+}
+.community-history button:focus-visible,
+.community-screen input:focus-visible,
+.community-screen textarea:focus-visible,
+.community-screen select:focus-visible {
+  outline: 3px solid #348aa0;
+  outline-offset: 2px;
+}
+.community-comments input {
+  min-width: 0;
+}
+.community-screen ::selection {
+  background: #e8ce98;
+  color: #352418;
+}
+
+.community-composer textarea {
+  background: #fff !important;
+  color: #382a22 !important;
+  border: 1px solid #d8cbb9 !important;
+}
+.community-composer textarea::placeholder {
+  color: #786a5e !important;
+}
+.community-composer textarea:focus,
+.community-screen input:focus {
+  outline: 3px solid #348aa0 !important;
+  outline-offset: 2px;
+}
+.community-comments form button {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.community-screen .feed-post-actions button {
+  font-size: 12px;
+  padding: 8px 10px;
+}
+
+.community-screen button.as-link {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  min-height: 44px;
+  font-weight: 750;
+  text-align: left;
+}
+.community-comments form input {
+  flex: 1;
+  min-width: 0;
+}
+.community-comments form button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  min-width: 72px;
+}
+.community-question button.correct:disabled {
+  opacity: 1;
+  color: #235a38;
+}
+.community-screen input {
+  background: #fff !important;
+  color: #382a22 !important;
+}
+.community-screen input::placeholder {
+  color: #786a5e !important;
+}

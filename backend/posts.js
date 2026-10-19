@@ -52,6 +52,11 @@ function getFeed(options = 30) {
   return out;
 }
 
+function getPost(postId, viewerId) {
+  const post = posts.find(post => post.id === postId);
+  return post && post.reportedBy.length < REPORT_THRESHOLD ? toClientShape(post, viewerId) : null;
+}
+
 // clientId is required — an identified poster (see server.js's handleFeed)
 // keeps the public feed from being a free-for-all for anonymous connections,
 // same bar as reacting to a post.
@@ -176,4 +181,4 @@ function answerQuestion(id, index) {
   };
 }
 
-module.exports = { getFeed, addPost, toggleReaction, reportPost, getComments, addComment, answerQuestion, normalizeQuestion };
+module.exports = { getPost, getFeed, addPost, toggleReaction, reportPost, getComments, addComment, answerQuestion, normalizeQuestion };

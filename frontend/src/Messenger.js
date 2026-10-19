@@ -58,8 +58,15 @@ export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoin
   useEffect(() => { endRef.current?.scrollIntoView?.({ block: 'nearest' }); }, [id, messages.length]);
   useEffect(() => {
     const escape = event => { if (event.key === 'Escape') { event.preventDefault(); back(); } };
+    const browserBack = event => {
+      if (asyncId || chooser || id) { event.preventDefault(); back(); }
+    };
+    window.addEventListener('quizzup-messenger-back',browserBack);
     window.addEventListener('keydown', escape);
-    return () => window.removeEventListener('keydown', escape);
+    return () => {
+      window.removeEventListener('keydown', escape);
+      window.removeEventListener('quizzup-messenger-back', browserBack);
+    };
   });
   const date = value => {
     const parsed = new Date(value);

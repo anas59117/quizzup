@@ -581,3 +581,5 @@
 .messenger-modes button { flex:1; min-height:44px; border:1px solid #796842; background:#fffaf0; color:#44391f; border-radius:22px; font:inherit; }
 .messenger-modes button[aria-pressed="true"] { background:#51411f; color:#fff9e8; }
 .messenger-modes button:focus-visible { outline:3px solid #b94638; outline-offset:3px; }
+
+.messenger .messenger-composer textarea,.messenger input{background:#fffaf2!important;color:#332c27!important;border-color:#d9ccbb!important}.messenger .messenger-composer textarea::placeholder,.messenger input::placeholder{color:#786b60!important}

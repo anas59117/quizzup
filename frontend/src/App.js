@@ -13,6 +13,9 @@ import { useSocial, GameChat } from './social';
 import { ensureSignedIn, linkGoogleAccount, preloadFirebase } from './firebase';
 import { useStats } from './stats';
 import { useFeed, FeedScreen } from './feed';
+import { Messenger } from './Messenger';
+import { useMatchHistory, MatchHistory } from './MatchHistory';
+import './community.css';
 import { usePlayers, PlayerSheet, topicLabel } from './players';
 import { RoomLobby } from './multiplayer';
 import { AVATARS, useTheme, TopControls, BrowseHeader, NavBar, ErrorScreen, Toast } from './ui';
@@ -35,7 +38,7 @@ import { anchorQuestion, roundTiming } from './round-timing';
 
 const LIVE_SESSION_KEY = 'quizzup-live-session';
 const HISTORY_KEY = 'quizzup';
-const BROWSABLE_STAGES = new Set(['home', 'feed', 'categories', 'profile', 'leaderboard', 'enter_code', 'shop', 'friends', 'league', 'seasonpass', 'category_preview']);
+const BROWSABLE_STAGES = new Set(['home', 'feed', 'categories', 'profile', 'leaderboard', 'enter_code', 'shop', 'friends', 'league', 'seasonpass', 'category_preview', 'messages', 'history']);
 const SESSION_STAGES = new Set(['waiting', 'room_wait', 'playing', 'finished', 'error']);
 
 function browserLocation(stage, family) {
@@ -65,7 +68,7 @@ function writeLiveSession(value) {
 }
 
 export default function App() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [theme, toggleTheme] = useTheme();
   const [muted, setMuted] = useState(SFX.muted);
   const toggleMute = useCallback(() => setMuted(SFX.toggle()), []);
@@ -231,7 +234,11 @@ export default function App() {
     onPendingClear: clearPending,
   });
 
-  const social = useSocial(wsRef);
+  const clientId = firebaseUser?.uid || null;
+  const social = useSocial(wsRef, clientId);
+  const history = useMatchHistory(wsRef);
+  const [messagePeer, setMessagePeer] = useState(null);
+  const openMessages = (peerId = null) => { players.close(); setMessagePeer(peerId); setStage('messages'); };
   const league = useLeague();
   const { notifications, notify, removeNotification } = useNotifications();
   const adSystem = useAdSystem();
@@ -245,9 +252,38 @@ export default function App() {
     seasonPass.addPassXP(xp);
     notify(`+${coins} coins +${xp} XP!`, 'success');
   }, [statsHook.stats.coins, statsHook.handleStatsMessage, seasonPass.addPassXP, notify]);
-  const feed = useFeed(wsRef);
+  const feed = useFeed(wsRef, clientId);
   const players = usePlayers(wsRef);
-  const clientId = firebaseUser?.uid || null;
+
+  const [sharedPostId, setSharedPostId] = useState(() =>
+    /^#post-[a-zA-Z0-9_-]+$/.test(window.location.hash) ? window.location.hash.slice(6) : null
+  );
+  const shareOpened = useRef(false);
+  useEffect(() => {
+    const update = () => {
+      const hash = window.location.hash;
+      if (/^#post-[a-zA-Z0-9_-]+$/.test(hash)) {
+        setSharedPostId(hash.slice(6));
+        setStage('feed');
+      }
+    };
+    window.addEventListener('hashchange', update);
+    return () => window.removeEventListener('hashchange', update);
+  }, []);
+  useEffect(() => {
+    if (social.connected && sharedPostId && !shareOpened.current && stage === 'home') {
+      shareOpened.current = true;
+      setStage('feed');
+    }
+  }, [social.connected, sharedPostId, stage]);
+  useEffect(() => {
+    if (!social.connected) return;
+    if (stage === 'feed') {
+      feed.refresh();
+      if (sharedPostId) feed.openPost(sharedPostId);
+    }
+    if (stage === 'history') history.refresh();
+  }, [stage, social.connected, sharedPostId, feed.refresh, feed.openPost, history.refresh]);
 
   useEffect(() => () => {
     if (tickRef.current) clearInterval(tickRef.current);
@@ -312,7 +348,9 @@ export default function App() {
       case 'identified':
         if (data.profile?.name) setName(data.profile.name);
         if (data.profile?.avatar) setAvatar(data.profile.avatar);
-        if (stage === 'feed') feed.refresh();
+        social.handleMessage(data);
+        if (stage === 'history') history.refresh();
+        if (stage === 'feed') {feed.refresh();if(sharedPostId)feed.openPost(sharedPostId);}
         if (stage === 'leaderboard' && !data.queuedActionFlushed) {
           setLeaderboardLoading(true);
           if (!sendSocket({ type: 'leaderboard_list', category: leaderboardCategoryRef.current || undefined })) setLeaderboardLoading(false);
@@ -664,6 +702,7 @@ export default function App() {
         setStage('error');
         break;
       default:
+        history.handleMessage(data);
         social.handleMessage(data);
         feed.handleMessage(data);
         players.handleMessage(data);
@@ -682,9 +721,7 @@ export default function App() {
     }
   }, [stage, clientId, firebaseUser]);
 
-  useEffect(() => {
-    if (stage === 'feed') feed.refresh();
-  }, [stage, feed.refresh]);
+
 
   const [soloMode, setSoloMode] = useState(false);
   const [matchCategory, setMatchCategory] = useState(null);
@@ -951,6 +988,14 @@ export default function App() {
   }, [stage, categoryFamily]);
 
   browserBackHandlerRef.current = (event) => {
+    if (stage === 'messages') {
+      const messengerBack = new Event('quizzup-messenger-back', { cancelable: true });
+      if (!window.dispatchEvent(messengerBack)) {
+        window.history.pushState({ ...window.history.state, [HISTORY_KEY]: { stage: 'messages', family: null } }, '');
+        return;
+      }
+    }
+
     let target = event.state?.[HISTORY_KEY];
     if (!target) return;
     if (target.stage === 'session') {
@@ -1047,6 +1092,8 @@ export default function App() {
           controls={<TopControls {...topProps} />}
           name={name} avatar={avatar} frame={statsHook.stats.frame} stats={statsHook.stats} soloMode={soloMode} setSoloMode={setSoloMode}
           friendCount={social.friends.length}
+          onOpenMessages={() => openMessages()} unreadCount={social.unreadCount}
+          onOpenCommunity={() => setStage('feed')} onOpenHistory={() => setStage('history')}
           quickMatch={quickMatch} startWithCategory={previewCategory}
           onOpenProfile={() => setStage('profile')} onSeeAll={(fam) => { setCategoryFamily(fam || null); setStage('categories'); }}
           createRoom={createRoom} onOpenEnterCode={openFriendCode}
@@ -1131,6 +1178,11 @@ export default function App() {
           stats={statsHook.stats}
           onBack={() => setStage('home')}
           onPlay={() => matchCategory && startWithCategory(matchCategory)}
+          onChallenge={() => openMessages()}
+          onCommunity={() => { feed.setFilter({ scope: 'all', category: matchCategory }); setStage('feed'); }}
+          onLeaderboard={() => openLeaderboard(matchCategory, 'category_preview')}
+          following={(statsHook.stats.followedThemes || []).includes(matchCategory)}
+          onToggleFollow={() => sendSocket({ type: 'theme_follow', category: matchCategory, following: !(statsHook.stats.followedThemes || []).includes(matchCategory) })}
           pending={pending}
         />
         <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
@@ -1138,13 +1190,16 @@ export default function App() {
     );
   }
 
+  if (stage === 'messages') return <div className="app app-top app-messenger"><Toast toast={toast} onDismiss={dismissToast} /><Messenger social={social} onBack={() => setStage('home')} onOpenPlayer={players.open} onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending} initialPeerId={messagePeer} /><PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} /></div>;
+  if (stage === 'history') return <div className="app app-nav app-top"><MatchHistory history={history} onBack={() => setStage('profile')} onOpenPlayer={players.open} onMessage={openMessages} friends={social.friends} /><PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} /><NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} /></div>;
+
   if (stage === 'feed') {
     return (
       <div className="app app-nav app-top">
         <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <div className="container wide">
           <div className="cat-header">
-            <h2>{t('accueil')}</h2>
+            <h2>{lang === 'fr' ? 'Communauté' : 'Community'}</h2>
           </div>
           <FeedScreen
             feed={feed}
@@ -1154,7 +1209,7 @@ export default function App() {
             onOpenPlayer={players.open}
           />
         </div>
-        <PlayerSheet players={players} social={social} onSelectTopic={openTopic} />
+        <PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} />
         <NavBar active="feed" onNav={onNav} onQuickMatch={quickMatch} />
       </div>
     );
@@ -1173,12 +1228,13 @@ export default function App() {
           onOpenLeaderboard={openLeaderboard}
           onOpenShop={() => setStage('shop')}
           onSaveProfile={saveProfile} profileSaving={pending}
+          onOpenHistory={() => setStage('history')} onOpenMessages={() => openMessages()}
           onOpenTopic={openTopic}
           streak={dailyStreak}
           league={league}
           onOpenLeague={() => setStage('league')}
         />
-        <PlayerSheet players={players} social={social} onSelectTopic={openTopic} />
+        <PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);
   }
@@ -1207,7 +1263,7 @@ export default function App() {
           onOpenPlayer={players.open}
           onBack={() => setStage(leaderboardReturn)}
         />
-        <PlayerSheet players={players} social={social} onSelectTopic={openTopic} />
+        <PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);
   }
@@ -1221,7 +1277,8 @@ export default function App() {
             <button className="friends-back" onClick={() => setStage('home')}>←</button>
             <h2 className="friends-title">👥 {t('friends')}</h2>
           </div>
-          <FriendsScreen social={social} onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending} />
+          <button className="social-btn" onClick={() => openMessages()}>Messages {social.unreadCount || ''}</button>
+          <FriendsScreen onOpenMessages={openMessages} onOpenPlayer={players.open} social={social} onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending} />
         </div>
         <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
       </div>);
@@ -1298,6 +1355,7 @@ export default function App() {
           result={result} opponents={opponents} myId={myId} avatar={avatar} name={name} frame={statsHook.stats.frame} social={social}
           leagueAward={(league.recentResults || []).find(entry => entry.gameId === result.gameId)}
           notices={[...(toast ? [toast] : []), ...notifications]}
+          onOpenMessages={openMessages}
           addFriend={social.addFriend}
           playAgain={() => interstitialThen(playAgain, adHooks)} rematch={requestRematch}
           rematchWaiting={rematchWaiting} rematchStarting={rematchStarting}

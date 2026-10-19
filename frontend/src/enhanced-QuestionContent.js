@@ -96,6 +96,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
     } else {
       base = idx === selected ? 'answer selected' : 'answer';
     }
+    if (sr && !isInstantAck && idx !== reveal.correctIndex) base += ' duel-answer-exit';
     // Add animation classes
     if (sr && idx === ownAnswer) {
       if (reveal.yourCorrect) base += ' duel-answer-confirmed';
