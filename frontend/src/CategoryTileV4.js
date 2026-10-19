@@ -1,7 +1,7 @@
 /**
  * CategoryTileV4 — Each category has its own typographic world.
  * Fallback hierarchy:
- *   1. Topic-specific typo world (Spider-Man Bungee, HP Cinzel, etc.)
+ *   1. Approved cover, then topic-specific typographic world
  *   2. Cover image from topicCovers.js (Rap FR photo, Ligue Champions, etc.)
  *   3. Family-level gradient + emoji icon
  */
@@ -103,7 +103,8 @@ function topicMark(label) {
  */
 export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disabled, featured }) {
   const typo = TOPIC_TYPO[c.key];
-  const cover = !typo ? getTopicCover(c) : null;
+  const candidate = getTopicCover(c);
+  const cover = candidate?.approved || !typo ? candidate : null;
   const [failedSrc, setFailedSrc] = useState(null);
   const familyFont = FAMILY_TYPO[c.family]?.font || 'display';
   const fontClass = typo ? typo.font : familyFont;
@@ -113,10 +114,11 @@ export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disable
     'tile-v4',
     `tile-v4--${fontClass}`,
     hasCover ? 'tile-v4--has-cover' : '',
+    hasCover && cover.embeddedTitle ? 'tile-v4--poster' : '',
     featured ? 'tile-v4--featured' : '',
   ].filter(Boolean).join(' ');
 
-  const coverStyle = cover ? { '--cover-focal': cover.focal } : undefined;
+  const coverStyle = cover ? { '--cover-focal': cover.focal, '--cover-fit': cover.fit || 'cover' } : undefined;
 
   return (
     <button
@@ -137,6 +139,8 @@ export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disable
       {hasCover && (
         <img
           src={cover.src}
+          srcSet={cover.srcSet}
+          sizes={featured ? '(max-width: 700px) 100vw, 700px' : '(max-width: 600px) 50vw, 320px'}
           alt=""
           className="tile-v4__cover"
           loading="lazy"
@@ -147,7 +151,7 @@ export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disable
       )}
 
       {/* Decorative overlay by topic */}
-      {c.key === 'spider_man' || c.key === 'marvel' ? (
+      {!hasCover && (c.key === 'spider_man' || c.key === 'marvel') ? (
         <svg className="tile-v4__web" viewBox="0 0 100 100" aria-hidden="true">
           <g fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="0.5">
             <path d="M50 50L0 0M50 50L100 0M50 50L0 100M50 50L100 100M50 50L50 0M50 50L50 100M50 50L0 50M50 50L100 50"/>
@@ -156,18 +160,18 @@ export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disable
         </svg>
       ) : null}
 
-      {c.key === 'rap_fr' || c.key === 'werenoi' ? (
+      {!hasCover && (c.key === 'rap_fr' || c.key === 'werenoi') ? (
         <div className="tile-v4__noise" aria-hidden="true" />
       ) : null}
 
-      {c.key === 'fnaf' ? (
+      {!hasCover && c.key === 'fnaf' ? (
         <div className="tile-v4__eyes" aria-hidden="true">
           <div className="eye" />
           <div className="eye" />
         </div>
       ) : null}
 
-      {c.key === 'ligue_champions' ? (
+      {!hasCover && c.key === 'ligue_champions' ? (
         <div className="tile-v4__sunburst" aria-hidden="true" />
       ) : null}
 
@@ -176,7 +180,7 @@ export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disable
       ) : null}
 
       {/* Big typographic monogram OR emoji fallback */}
-      {typo && typo.line1 ? (
+      {!hasCover && typo && typo.line1 ? (
         <div className="tile-v4__big" aria-hidden="true">
           <div className="tile-v4__big-line">{typo.line1}</div>
           {typo.line2 && <div className="tile-v4__big-line">{typo.line2}</div>}

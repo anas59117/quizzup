@@ -34,6 +34,8 @@ function Preview() {
   const [theme, toggleTheme] = useTheme();
   const [solo, setSolo] = useState(false);
   const [family, setFamily] = useState(null);
+  const [topic, setTopic] = useState(params.get('topic') || 'rap_fr');
+  const openTopic = key => { setTopic(key); setScreen('quiz'); };
   useBrowseMotion(screen === 'themes' ? 'categories' : screen === 'quiz' ? 'category_preview' : screen, family);
   const [peer, setPeer] = useState(null);
   const [googleLinked, setGoogleLinked] = useState(params.has('linked'));
@@ -52,14 +54,14 @@ function Preview() {
   return <div className={screen === 'home' ? 'app app-top app-nav app-home' : screen === 'messages' ? `app app-messenger${!peer?' app-nav messenger-inbox-nav':''}` : screen === 'game' ? 'app game-bg app-question' : screen === 'result' ? 'app results-bg' : screen === 'waiting' ? 'app game-bg app-matchmaking' : screen === 'intro' ? 'app game-bg' : `app app-top app-nav ${screen === 'quiz' ? 'app-category-preview' : screen === 'shop' ? 'app-shop' : screen === 'profile' ? 'app-profile' : screen === 'themes' ? 'app-themes' : ''}`}>
     {!['home','quiz','profile','shop','themes','messages'].includes(screen) && controls}
     {screen === 'home' && <HomeContent controls={controls} name="Sisi" avatar="fox" stats={stats} soloMode={solo} setSoloMode={setSolo}
-      quickMatch={play} startWithCategory={play} onOpenProfile={() => setScreen('profile')} onSeeAll={() => setScreen('themes')} />}
+      quickMatch={play} startWithCategory={openTopic} onOpenProfile={() => setScreen('profile')} onSeeAll={() => setScreen('themes')} />}
     {screen === 'profile' && <ProfileContent controls={controls} name="Sisi" avatar="fox" stats={stats} social={social} clientId="preview-self" isGoogleLinked={googleLinked} googleEmail="sisi@example.test" linkGoogle={()=>setGoogleLinked(true)}
       streak={{ streak: 1, calendar: [] }} onSaveProfile={() => {}} onOpenLeaderboard={() => {}} onOpenShop={() => setScreen('shop')} />}
     {screen === 'waiting' && <WaitingContent name="Sisi" avatar="fox" level={6} categoryKey="ligue_champions" onCancel={() => setScreen('home')} onPlaySolo={play} />}
     {screen === 'shop' && <ShopContent controls={controls} name="Sisi" avatar="fox" stats={stats} onBuy={() => {}} onEquip={() => {}} onPlay={play} onBack={() => setScreen('home')} />}
-    {screen === 'themes' && <CategoriesContent controls={controls} family={family} onSelectFamily={setFamily} onBack={()=>setScreen('home')} startWithCategory={()=>setScreen('quiz')} />}
+    {screen === 'themes' && <CategoriesContent controls={controls} family={family} onSelectFamily={setFamily} onBack={()=>setScreen('home')} startWithCategory={openTopic} />}
     {screen === 'messages' && <Messenger social={{...previewMessages,activeConversationId:peer,activeAsyncChallengeId:params.has('async')?'preview-async':null,asyncRuns:{'preview-async':{status:'waiting',score:84}},playAsyncChallenge:()=>{},closeAsyncChallenge:()=>{},connected:true,clientId:'me',requestConversations:()=>{},closeConversation:()=>setPeer(null),openConversation:setPeer,requestHistory:()=>{},sendDM:()=>false}} onBack={()=>setScreen('home')} onInviteFriend={play} onJoinFriend={play} />}
-    {screen === 'quiz' && <CategoryPreviewContent controls={controls} category={CATEGORIES.find(cat => cat.key === (params.get('topic') || 'rap_fr'))} stats={stats} onBack={() => setScreen('home')} onPlay={play} />}
+    {screen === 'quiz' && <CategoryPreviewContent controls={controls} category={CATEGORIES.find(cat => cat.key === topic)} stats={stats} onBack={() => setScreen('home')} onPlay={play} />}
     {screen === 'intro' && <RoundIntroContent intro={{ round: Number(params.get('round')) || 1, category: 'Rap Français', icon: '🏆' }} opponents={opponents} avatar="fox" name="Sisi" level={6} totalRounds={6} />}
     {screen === 'result' && <>
 

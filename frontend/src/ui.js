@@ -732,12 +732,14 @@ export const CategoryTile = memo(function CategoryTile({ c, onClick, disabled })
     <button className="topic-tile" onClick={onClick} disabled={disabled}>
       <span
         className={`tile-icon-sq ${c.grad} ${cover ? 'has-cover' : ''}`}
-        style={cover ? { '--cover-focal': cover.focal } : undefined}
+        style={cover ? { '--cover-focal': cover.focal, '--cover-fit': cover.fit || 'cover' } : undefined}
       >
         <span className="tile-monogram tile-cover-fallback">{topicMark(c.label)}</span>
         {cover ? (
           <img
             src={cover.src}
+            srcSet={cover.srcSet}
+            sizes="(max-width: 600px) 50vw, 320px"
             alt=""
             className="tile-cover-img"
             loading="lazy"

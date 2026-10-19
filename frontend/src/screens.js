@@ -15,6 +15,7 @@ import { PlayerAvatar, AVATAR_IDS, avatarId } from './PlayerAvatar';
 import { ShopArt as QV4ShopArt } from './shop-art';
 import { ProfilePhotoEditor } from './ProfilePhotoEditor';
 import { BrandLogo } from './Brand';
+import { getTopicCover } from './topicCovers';
 
 const FEATURED_TOPIC_KEYS = [
   'spider_man', 'harry_potter', 'minecraft', 'rap_fr',
@@ -84,19 +85,22 @@ const PREVIEW_SUB = {
 
 export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChallenge, pending, friendsOnTopic = [], controls, onCommunity, onLeaderboard, following, onToggleFollow }) {
   const { t, lang } = useI18n();
+  const [failedCover, setFailedCover] = useState(null);
   const fr = lang === 'fr';
   if (!category) return null;
+  const cover = getTopicCover(category);
+  const artwork = cover?.approved && failedCover !== cover.src ? cover : null;
   const preview = PREVIEW_SUB[category.key] || { eyebrow: category.family || 'QUIZ', desc: category.desc };
   const topicStats = (stats && stats.topics || []).find((t) => t.key === category.key) || {};
   const completion = Number.isFinite(topicStats.completion) ? `${topicStats.completion}%` : '—';
   const bestStreak = Number.isFinite(topicStats.bestStreak) ? topicStats.bestStreak : '—';
   const topicLevel = topicStats.level || 1;
   return (
-    <div className="container wide category-preview-v4" data-topic={category.key} data-family={category.family}>
+    <div className={`container wide category-preview-v4${artwork ? ' cp-has-artwork' : ''}`} data-topic={category.key} data-family={category.family}>
       <div className="cp-bg" aria-hidden="true" />
 
       {/* Decorative overlay for Spider-Man / Marvel */}
-      {(category.key === 'spider_man' || category.key === 'marvel') && (
+      {!artwork && (category.key === 'spider_man' || category.key === 'marvel') && (
         <svg className="cp-web" viewBox="0 0 100 100" aria-hidden="true">
           <g fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="0.5">
             <path d="M50 50L0 0M50 50L100 0M50 50L0 100M50 50L100 100M50 50L50 0M50 50L50 100M50 50L0 50M50 50L100 50"/>
@@ -124,7 +128,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
       <div className="cp-hero">
         <div className="cp-eyebrow">{preview.eyebrow}</div>
         <h1 className="cp-title">
-          {preview.line1 ? (
+          {artwork ? category.label : preview.line1 ? (
             <>
               <span className="cp-title-l">{preview.line1}</span>
               {preview.line2 && <span className="cp-title-l">{preview.line2}</span>}
@@ -132,8 +136,9 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
           ) : (
             <span className="cp-title-l">{category.label}</span>
           )}
-          {preview.sub && <span className="cp-subtitle">{preview.sub}</span>}
+          {!artwork && preview.sub && <span className="cp-subtitle">{preview.sub}</span>}
         </h1>
+        {artwork && <img className="cp-artwork" src={artwork.src} srcSet={artwork.srcSet} sizes="(max-width: 480px) calc(100vw - 48px), 320px" alt="" decoding="async" onError={() => setFailedCover(artwork.src)} />}
         <p className="cp-info">{preview.desc}</p>
       </div>
 

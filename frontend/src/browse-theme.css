@@ -38,7 +38,32 @@
   background: linear-gradient(145deg,#ffffff10,transparent 60%);
   pointer-events: none;
 }
-.tile-v4__cover { z-index: 3; }
+.tile-v4__cover { z-index: 3; object-fit: var(--cover-fit, cover); background: #141217; }
+.tile-cover-img { object-fit: var(--cover-fit, cover) !important; }
+/* Approved posters already carry their title: preserve their full artwork. */
+.tile-v4.tile-v4--poster .tile-v4__caption::before { display: none; }
+.tile-v4--poster .tile-v4__label {
+  position: absolute; width: 1px; height: 1px; padding: 0;
+  margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+/* A landscape crop would cut off a title baked into a square poster. */
+.home-refined .home-discovery:has(.tile-v4--poster) .tile-v4 {
+  aspect-ratio: 1 / 1 !important;
+}
+.home-refined .topic-tile-wrap:has(.tile-v4--poster) .personal-theme-level {
+  left: 8px; bottom: 8px; padding: 4px 7px; border-radius: 8px;
+  background: #141217d9; color: #fff; text-shadow: none;
+}
+.category-preview-v4.cp-has-artwork .cp-title {
+  font: 750 24px/1.2 var(--v4-font-ui) !important;
+  color: #fff !important; text-shadow: none !important;
+  letter-spacing: -.02em !important; margin-bottom: 16px;
+}
+.cp-artwork {
+  display: block; width: min(100%, 320px, 32svh); max-height: 360px;
+  object-fit: contain; margin: 0 auto 20px; border-radius: 20px;
+}
+.category-preview-v4.cp-has-artwork .cp-info { margin-top: 0; }
 .tile-v4__shade { z-index: 5; }
 .tile-v4__caption { z-index: 6; }
 .tile-v4:focus-visible { outline: 3px solid #ffdd55; outline-offset: 3px; }

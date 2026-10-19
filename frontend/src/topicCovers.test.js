@@ -26,11 +26,11 @@ describe('topic cover catalog', () => {
     expect(getTopicCover(premierLeague).src).toContain('Premier%20League%20Trophy');
   });
 
-  test('league cards display their reviewed trophy images', () => {
+  test('league cards display their approved artwork while other leagues keep their existing covers', () => {
     const ligue1 = CATEGORIES.find((category) => category.key === 'ligue_1');
     const serieA = CATEGORIES.find((category) => category.key === 'serie_a');
 
-    expect(getTopicCover(ligue1).src).toContain('Paris%20Saint-Germain%20-%20Olympique%20de%20Marseille');
+    expect(getTopicCover(ligue1).src).toContain('/approved-v2/ligue_1-');
     expect(getTopicCover(serieA).src).toContain('Derby-%20AC%20Milan%20vs%20Inter');
   });
 
