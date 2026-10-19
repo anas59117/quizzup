@@ -17,6 +17,7 @@ import { Messenger } from './Messenger';
 import { useMatchHistory, MatchHistory } from './MatchHistory';
 import './community.css';
 import './home-refinement.css';
+import { BrandMark } from './Brand';
 import { usePlayers, PlayerSheet, topicLabel } from './players';
 import { RoomLobby } from './multiplayer';
 import { AVATARS, useTheme, TopControls, BrowseHeader, NavBar, ErrorScreen, Toast } from './ui';
@@ -1065,8 +1066,8 @@ export default function App() {
       <div className="app">
         <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <div className="container center boot-splash" aria-busy="true">
-          <div className="join-brandmark">Q</div>
-          <h1 className="logo">Quizz<span>Up</span></h1>
+          <BrandMark className="join-brandmark" />
+          <h1 className="logo">QuizzUp</h1>
           <div className="loading-bar"><div className="loading-fill" /></div>
         </div>
       </div>

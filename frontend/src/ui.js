@@ -3,6 +3,7 @@ import React, { useState, useEffect, useCallback, useRef, useId, memo } from 're
 import { useI18n } from './i18n';
 import { getTopicCover } from './topicCovers';
 import { PlayerAvatar } from './PlayerAvatar';
+import { BrandLogo, BrandMark } from './Brand';
 
 
 export const Icon = memo(function Icon({ name, size = 20, className = '' }) {
@@ -541,9 +542,9 @@ export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setA
   const { t } = useI18n();
   return (
     <div className="container center">
-      <div className="join-brandmark">Q</div>
+      <BrandMark className="join-brandmark" />
       <div className="badge">{t('legendBack')}</div>
-      <h1 className="logo">Quizz<span>Up</span></h1>
+      <h1 className="logo">QuizzUp</h1>
       <p className="tagline">{t('tagline')}</p>
       <div className="join-panel">
         <input className="input" placeholder={t('usernamePlaceholder')} value={name} maxLength={20}
@@ -602,10 +603,7 @@ export function useTheme() {
 
 export function BrowseHeader({ controls }) {
   return <header className="browse-header">
-    <div className="home-brand">
-      <div className="home-brandmark" aria-hidden="true">Q</div>
-      <div className="home-logo-sm">Quizz<span>Up</span></div>
-    </div>
+    <BrandLogo />
     {controls}
   </header>;
 }

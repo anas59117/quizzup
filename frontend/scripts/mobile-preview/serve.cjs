@@ -5,7 +5,7 @@ const root = path.resolve(__dirname, '../..');
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, 'http://localhost');
   const route = decodeURIComponent(url.pathname);
-  const base = route.startsWith('/src/') ? root : route.startsWith('/images/') ? path.join(root,'public') : path.join(root,'.mobile-preview');
+  const base = route.startsWith('/src/') ? root : route.startsWith('/images/') || route === '/brand-symbol.svg' ? path.join(root,'public') : path.join(root,'.mobile-preview');
   const file = path.resolve(base, '.' + (route === '/' ? '/index.html' : route));
   if (!file.startsWith(base + path.sep)) { res.writeHead(403).end(); return; }
   fs.readFile(file, (err, data) => {

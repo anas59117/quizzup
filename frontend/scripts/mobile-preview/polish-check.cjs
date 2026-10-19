@@ -15,6 +15,11 @@ const out = path.resolve(__dirname, '../../.mobile-preview');
         await page.setViewportSize({width,height:width===1440?900:844});
         await page.goto(`http://127.0.0.1:4336/?${screen}`);
         await page.locator('.navbar').waitFor();
+        if (['home&personal','themes','profile'].includes(screen)) {
+          await page.waitForFunction(()=>{const mark=document.querySelector('.brand-lockup img');return mark?.complete&&mark.naturalWidth>0;});
+          assert.equal(await page.locator('.brand-lockup').getAttribute('aria-label'),'QuizzUp');
+          assert.equal(await page.locator('.brand-wordmark').evaluate(el=>getComputedStyle(el).color),'rgb(255, 255, 255)');
+        }
         assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${screen} overflows ${width}`);
         if (screen==='themes') {
           assert.equal(await page.locator('.family-tile').count(),9);

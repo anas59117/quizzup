@@ -57,12 +57,17 @@ export function ShareCard({ result, myName, myAvatar, topicLabel, onClose }) {
     ctx.fill();
 
     // ─── Logo ───
-    ctx.font = 'bold 64px sans-serif';
+    ctx.font = '800 64px Inter, sans-serif';
     ctx.fillStyle = '#fff';
-    ctx.textAlign = 'center';
-    ctx.fillText('Quizz', W / 2 - 40, 140);
-    ctx.fillStyle = '#ff4d6d';
-    ctx.fillText('Up', W / 2 + 110, 140);
+    const logoStart = (W - ctx.measureText('QuizzUp').width - 88) / 2;
+    ctx.save();
+    ctx.translate(logoStart, 80); ctx.scale(1.5, 1.5);
+    ctx.strokeStyle = '#fff'; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.arc(24, 24, 20, 0, Math.PI * 2); ctx.stroke();
+    ctx.fill(new Path2D('M25 9 12 27h12v12l13-18H25Z'));
+    ctx.restore();
+    ctx.textAlign = 'left';
+    ctx.fillText('QuizzUp', logoStart + 88, 140);
 
     // ─── Result emoji & text ───
     const emoji = isWin ? '🏆' : isTie ? '🤝' : '💥';

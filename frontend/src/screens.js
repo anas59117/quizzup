@@ -14,6 +14,7 @@ import { useI18n } from './i18n';
 import { PlayerAvatar, AVATAR_IDS, avatarId } from './PlayerAvatar';
 import { ShopArt as QV4ShopArt } from './shop-art';
 import { ProfilePhotoEditor } from './ProfilePhotoEditor';
+import { BrandLogo } from './Brand';
 
 const FEATURED_TOPIC_KEYS = [
   'spider_man', 'harry_potter', 'minecraft', 'rap_fr',
@@ -43,7 +44,7 @@ export function HomeContent({ startWithCategory, onSeeAll, pending, stats, contr
   const discovery = [...FEATURED_TOPICS, ...CATEGORIES].filter(c => !myThemes.some(mine => mine.key === c.key)).slice(0, 2);
   return <main className="container wide home-v4 home-refined">
     <header className="home-head home-head--v4">
-      <div className="home-brand"><div className="home-brandmark">Q</div><div className="home-logo-sm">Quizz<span>Up</span></div></div>
+      <BrandLogo />
       <div className="home-actions"><button type="button" className="home-action" onClick={() => onSeeAll?.(null, true)} aria-label={t('searchPlaceholder')}><Icon name="search" size={24} /></button>{controls}</div>
     </header>
     <section aria-labelledby="home-my-themes">

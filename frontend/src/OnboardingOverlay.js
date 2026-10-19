@@ -6,6 +6,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useI18n } from './i18n';
 import SFX from './sounds';
+import { BrandLogo } from './Brand';
 
 const ONBOARDING_KEY = 'quizzup-onboarded';
 const ONBOARDING_NAME_KEY = 'quizzup-name';
@@ -93,8 +94,7 @@ export function OnboardingOverlay({ onComplete, defaultName }) {
         {step === 0 && (
           <>
             <div className="onb-brand">
-              <div className="onb-brandmark">Q</div>
-              <h2 className="onb-title">QuizzUp</h2>
+              <h2 className="onb-title"><BrandLogo /></h2>
             </div>
             <p className="onb-desc">{t('onbWelcome')}</p>
             <div className="onb-input-wrap">
