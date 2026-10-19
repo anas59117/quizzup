@@ -11,14 +11,12 @@ afterEach(() => { act(() => root.unmount()); container.remove(); });
 const render = (element) => act(() => root.render(<I18nProvider>{element}</I18nProvider>));
 const social = { friends: [], requests: [], dms: {} };
 
-test('home shows actual friends, level and singular following without using follower count', () => {
-  render(<HomeContent name="Alex" friendCount={2} stats={{ games: 3, followers: 99, following: 1, level: 7 }} />);
-  const card = container.querySelector('.profile-card-v4');
-  expect(card.textContent).toContain('2 amis');
-  expect(card.textContent).not.toContain('99');
-  expect(card.textContent).toContain('Niveau 7');
-  expect(card.textContent).toContain('1 joueur suivi');
-  expect(card.textContent).not.toContain('Salut Alex');
+test('home leads with four starter suggestions without profile card or fabricated levels', () => {
+  render(<HomeContent name="Alex" stats={{ level: 7 }} />);
+  expect(container.querySelector('.profile-card-v4')).toBeNull();
+  expect(container.querySelectorAll('.topics-grid-v4 .tile-v4')).toHaveLength(4);
+  expect(container.querySelectorAll('.personal-theme-level')).toHaveLength(0);
+  expect(container.textContent).toContain('Quelques idées pour commencer');
 });
 
 test('empty friends explains the real room invitation and calls actions only on click', () => {
@@ -41,12 +39,9 @@ test('populated list retains real friends and pending invitation actions are dis
   expect(buttons.every(b => b.disabled)).toBe(true);
 });
 
-test('home invitation uses existing create and enter-code callbacks', () => {
-  const create = jest.fn(), join = jest.fn();
-  render(<HomeContent name="Alex" stats={{}} createRoom={create} onOpenEnterCode={join} />);
-  const buttons = container.querySelectorAll('.friend-invite-actions button');
-  act(() => buttons[0].click()); act(() => buttons[1].click());
-  expect(create).toHaveBeenCalledTimes(1); expect(join).toHaveBeenCalledTimes(1);
+test('home has no invitation toolbar; profile retains the real invitation actions', () => {
+  render(<HomeContent stats={{}} />);
+  expect(container.querySelector('.friend-invite-actions')).toBeNull();
 });
 
 test('profile forwards room actions and localizes social counts in English', () => {

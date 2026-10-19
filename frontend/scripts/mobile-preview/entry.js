@@ -34,8 +34,8 @@ function Preview() {
   const social = React.useMemo(() => ({ friends: [], requests: [], dms: {}, outgoingRequests: new Set(), gameChat: [], gameChatSeenRef: { current: 0 }, sendGameChat: () => false }), []);
   const opponents = params.has('gameSolo') ? [] : [{ id: '2', name: 'clem10', avatar: 'owl', score: 55, answered: !!reveal?.others, correct: false }];
   if (params.has('group')) opponents.push({ id: '3', name: 'Alex', avatar: '🦊', score: 12 }, { id: '4', name: 'Sam', avatar: '🐼', score: 10 });
-  const controls = <TopControls muted={muted} toggleMute={() => setMuted(!muted)} theme={theme} toggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')} playing={screen === 'game'} />;
-  const stats = { games: 27, wins: 12, level: 6, xpIntoLevel: 121, xpForLevel: 1200, xp: 2400, coins: 420, topics: [], ownedItems: ['robot','fox'], equippedItems: { avatars: 'fox' } };
+  const controls = <TopControls muted={muted} toggleMute={() => setMuted(!muted)} theme={theme} toggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')} playing={screen === 'game'} home={screen === 'home'} />;
+  const stats = { games: 27, wins: 12, level: 6, xpIntoLevel: 121, xpForLevel: 1200, xp: 2400, coins: 420, topics: params.has('personal') ? [{key:'ligue_champions',level:8},{key:'rap_fr',level:5},{key:'harry_potter',level:3},{key:'minecraft',level:2}] : [], followedThemes: params.has('personal') ? ['ligue_champions','rap_fr','harry_potter','minecraft'] : [], ownedItems: ['robot','fox'], equippedItems: { avatars: 'fox' } };
   const result = { won: !params.has('loss') && !params.has('tie'), tie: params.has('tie'), solo: params.has('solo'), finalScore: 84, xp: 224, coins: 50, stats,
     topic: { key: 'ligue_champions', level: 3 }, matchTally: { rounds: 6, correct: 5, answered: 6, totalMs: 36000 },
     leaderboard: [{ id: '1', name: 'Sisi', avatar: 'fox', score: 84 }, ...opponents] };

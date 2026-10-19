@@ -222,6 +222,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
     await a.locator("#messenger-draft").fill("");
     await a.setViewportSize({ width: 320, height: 500 });
     await a.locator("#messenger-draft").focus();
+    await a.waitForFunction(() => document.querySelector(".messenger-composer").getBoundingClientRect().bottom <= innerHeight + 1);
     assert(
       await a
         .locator(".messenger-composer")
@@ -284,6 +285,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
       waitUntil: "commit",
     });
     await a.locator(".home-head").waitFor();
+    await a.getByRole("button", { name: "Profil", exact: true }).click();
     await a
       .getByRole("button", {
         name: "Historique",
@@ -307,12 +309,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
         exact: true,
       })
       .click();
-    await a
-      .getByRole("button", {
-        name: "Communauté",
-        exact: true,
-      })
-      .click();
+    await a.locator(".home-community-teaser").click();
     const post = async (text) => {
       await a
         .getByLabel("Ta publication", {

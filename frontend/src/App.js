@@ -16,6 +16,7 @@ import { useFeed, FeedScreen } from './feed';
 import { Messenger } from './Messenger';
 import { useMatchHistory, MatchHistory } from './MatchHistory';
 import './community.css';
+import './home-refinement.css';
 import { usePlayers, PlayerSheet, topicLabel } from './players';
 import { RoomLobby } from './multiplayer';
 import { AVATARS, useTheme, TopControls, BrowseHeader, NavBar, ErrorScreen, Toast } from './ui';
@@ -278,7 +279,7 @@ export default function App() {
   }, [social.connected, sharedPostId, stage]);
   useEffect(() => {
     if (!social.connected) return;
-    if (stage === 'feed') {
+    if (stage === 'feed' || stage === 'home') {
       feed.refresh();
       if (sharedPostId) feed.openPost(sharedPostId);
     }
@@ -756,10 +757,12 @@ export default function App() {
     setStage('category_preview');
   }
 
-  function quickMatch() {
+  function quickMatch(mode) {
     if (pending) return;
     setMatchCategory(null);
-    const action = { type: soloMode ? 'solo' : 'join', category: null };
+    const solo = mode === 'solo' || (mode !== 'duel' && soloMode);
+    setSoloMode(solo);
+    const action = { type: solo ? 'solo' : 'join', category: null };
     matchActionRef.current = action;
     beginPending();
     connect(action);
@@ -858,7 +861,7 @@ export default function App() {
   // Tapping the "Themes" nav tab directly (not via a family tile on Home)
   // should land on the family overview, not silently reuse whichever family
   // was last opened.
-  const onNav = useCallback((s) => { if (s === 'categories') setCategoryFamily(null); setStage(s); }, []);
+  const onNav = useCallback((s) => { if (s === 'categories') setCategoryFamily(null); if (s === 'messages') setMessagePeer(null); setStage(s === 'shop' ? 'home' : s); }, []);
 
   function answer(index) {
     if (selected !== null || reveal || reconnecting || !question || !roundTiming(question).canAnswer) return;
@@ -988,6 +991,11 @@ export default function App() {
   }, [stage, categoryFamily]);
 
   browserBackHandlerRef.current = (event) => {
+    const sheetBack = new Event('quizzup-play-back', { cancelable: true });
+    if (!window.dispatchEvent(sheetBack)) {
+      window.history.pushState({ ...window.history.state, [HISTORY_KEY]: browserLocation(stage, categoryFamily) }, '');
+      return;
+    }
     if (stage === 'messages') {
       const messengerBack = new Event('quizzup-messenger-back', { cancelable: true });
       if (!window.dispatchEvent(messengerBack)) {
@@ -998,7 +1006,7 @@ export default function App() {
 
     let target = event.state?.[HISTORY_KEY];
     if (!target) return;
-    if (target.stage === 'session') {
+    if (target.stage === 'session' || target.stage === 'shop') {
       // A completed or abandoned match cannot be resurrected by Forward.
       target = { stage: 'home', family: null };
       window.history.replaceState({ ...event.state, [HISTORY_KEY]: target }, '');
@@ -1083,19 +1091,20 @@ export default function App() {
     );
   }
 
-  if (stage === 'home') {
+  if (stage === 'home' || stage === 'shop') {
     return (
       <div className="app app-nav app-top app-home">
         <Toast toast={toast} onDismiss={dismissToast} />
         <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
         <HomeContent
-          controls={<TopControls {...topProps} />}
+          controls={<TopControls {...topProps} home />}
+          communityPost={feed.posts[0]}
           name={name} avatar={avatar} frame={statsHook.stats.frame} stats={statsHook.stats} soloMode={soloMode} setSoloMode={setSoloMode}
           friendCount={social.friends.length}
           onOpenMessages={() => openMessages()} unreadCount={social.unreadCount}
-          onOpenCommunity={() => setStage('feed')} onOpenHistory={() => setStage('history')}
+          onOpenCommunity={(postId) => { setStage('feed'); if (postId) feed.openPost(postId); }} onOpenHistory={() => setStage('history')}
           quickMatch={quickMatch} startWithCategory={previewCategory}
-          onOpenProfile={() => setStage('profile')} onSeeAll={(fam) => { setCategoryFamily(fam || null); setStage('categories'); }}
+          onOpenProfile={() => setStage('profile')} onSeeAll={(fam, focusSearch) => { setCategoryFamily(fam || null); setStage('categories'); if (focusSearch) requestAnimationFrame(() => document.querySelector('.cat-search input, input[type=search]')?.focus()); }}
           createRoom={createRoom} onOpenEnterCode={openFriendCode}
           onStartTournament={() => setStage('tournament')}
           onOpenFriends={() => setStage('friends')}
@@ -1103,7 +1112,7 @@ export default function App() {
           onOpenSeasonPass={() => setStage('seasonpass')}
           pending={pending}
         />
-        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
+        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
         {challengeCode && <ChallengeReceiver code={challengeCode} onAccept={() => { setChallengeCode(null); setStage('categories'); }} onDecline={() => setChallengeCode(null)} />}
       </div>
     );
@@ -1162,7 +1171,7 @@ export default function App() {
         <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <CategoriesContent startWithCategory={previewCategory} onBack={() => setStage('home')}
           family={categoryFamily} onSelectFamily={setCategoryFamily} pending={pending} />
-        <NavBar active="categories" onNav={onNav} onQuickMatch={quickMatch} />
+        <NavBar active="categories" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>
     );
   }
@@ -1185,13 +1194,13 @@ export default function App() {
           onToggleFollow={() => sendSocket({ type: 'theme_follow', category: matchCategory, following: !(statsHook.stats.followedThemes || []).includes(matchCategory) })}
           pending={pending}
         />
-        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
+        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>
     );
   }
 
-  if (stage === 'messages') return <div className="app app-top app-messenger"><Toast toast={toast} onDismiss={dismissToast} /><Messenger social={social} onBack={() => setStage('home')} onOpenPlayer={players.open} onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending} initialPeerId={messagePeer} /><PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} /></div>;
-  if (stage === 'history') return <div className="app app-nav app-top"><MatchHistory history={history} onBack={() => setStage('profile')} onOpenPlayer={players.open} onMessage={openMessages} friends={social.friends} /><PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} /><NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} /></div>;
+  if (stage === 'messages') return <div className={`app app-top app-messenger${!social.activeConversationId && !social.activeAsyncChallengeId ? ' app-nav messenger-inbox-nav' : ''}`}><Toast toast={toast} onDismiss={dismissToast} /><Messenger social={social} onBack={() => setStage('home')} onOpenPlayer={players.open} onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending} initialPeerId={messagePeer} />{!social.activeConversationId && !social.activeAsyncChallengeId && <NavBar active="messages" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />}<PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} /></div>;
+  if (stage === 'history') return <div className="app app-nav app-top"><MatchHistory history={history} onBack={() => setStage('profile')} onOpenPlayer={players.open} onMessage={openMessages} friends={social.friends} /><PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} /><NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} /></div>;
 
   if (stage === 'feed') {
     return (
@@ -1210,7 +1219,7 @@ export default function App() {
           />
         </div>
         <PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} />
-        <NavBar active="feed" onNav={onNav} onQuickMatch={quickMatch} />
+        <NavBar active="feed" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>
     );
   }
@@ -1226,7 +1235,7 @@ export default function App() {
           isGoogleLinked={!!(firebaseUser && !firebaseUser.isAnonymous)} googleEmail={firebaseUser?.email}
           linkGoogle={linkGoogle} linking={linking} clientId={clientId} social={social}
           onOpenLeaderboard={openLeaderboard}
-          onOpenShop={() => setStage('shop')}
+          onStartTournament={() => setStage('tournament')} onOpenSeasonPass={() => setStage('seasonpass')}
           onSaveProfile={saveProfile} profileSaving={pending}
           onOpenHistory={() => setStage('history')} onOpenMessages={() => openMessages()}
           onOpenTopic={openTopic}
@@ -1235,7 +1244,7 @@ export default function App() {
           onOpenLeague={() => setStage('league')}
         />
         <PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} />
-        <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
+        <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>);
   }
 
@@ -1248,7 +1257,7 @@ export default function App() {
           onBuy={buyFrame} onEquip={equipFrame} onPlay={quickMatch}
           onBack={() => setStage('home')} pending={pending}
         />
-        <NavBar active="shop" onNav={onNav} onQuickMatch={quickMatch} />
+        <NavBar active="shop" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>);
   }
 
@@ -1264,7 +1273,7 @@ export default function App() {
           onBack={() => setStage(leaderboardReturn)}
         />
         <PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} />
-        <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} />
+        <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>);
   }
 
@@ -1280,7 +1289,7 @@ export default function App() {
           <button className="social-btn" onClick={() => openMessages()}>Messages {social.unreadCount || ''}</button>
           <FriendsScreen onOpenMessages={openMessages} onOpenPlayer={players.open} social={social} onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending} />
         </div>
-        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
+        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>);
   }
 
@@ -1288,7 +1297,7 @@ export default function App() {
     return (
       <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
         <LeagueContent league={league} onBack={() => setStage('home')} t={t} />
-        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
+        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>);
   }
 
@@ -1303,7 +1312,7 @@ export default function App() {
           <SeasonPassPanel pass={seasonPass} onClaim={(lvl) => { seasonPass.claimReward(lvl); notify(t('rewardClaimed'), 'success'); }} t={t} />
           <AdRewardsPanel adSystem={adSystem} onReward={handleAdReward} t={t} />
         </div>
-        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} />
+        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>);
   }
 

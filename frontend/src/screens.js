@@ -31,113 +31,36 @@ const FEATURED_TOPICS = FEATURED_TOPIC_KEYS
   })
   .filter(Boolean);
 
-export function HomeContent({ name, avatar, frame, soloMode, setSoloMode, quickMatch, startWithCategory, onOpenProfile, onSeeAll, createRoom, onOpenEnterCode, onStartTournament, onOpenFriends, onOpenLeague, onOpenSeasonPass, pending, stats, friendCount = 0, controls, onOpenMessages, unreadCount = 0, onOpenCommunity, onOpenHistory }) {
+// Direction: warm editorial — red ground, ivory navigation and existing topic worlds.
+// Rules: quiet controls, equal covers, real personal and community content.
+// Signature: four equal topic covers lead directly into a compact discovery shelf.
+export function HomeContent({ startWithCategory, onSeeAll, pending, stats, controls, onOpenCommunity, communityPost }) {
   const { t, lang } = useI18n();
   const fr = lang === 'fr';
-  const [showMore, setShowMore] = useState(false);
-  // Keep up to 7 featured covers for Mes thèmes; Spider-Man-equivalent card gets the 2:1 "featured" slot.
-  const personalKeys = [...new Set([...(stats?.followedThemes || []), ...(stats?.recentThemes || []).map(topic=>topic.key), ...[...(stats?.topics || [])].sort((a,b) => (b.updatedAt || 0) - (a.updatedAt || 0)).map(topic => topic.key)])];
+  const personalKeys = [...new Set([...(stats?.followedThemes || []), ...(stats?.recentThemes || []).map(topic => topic.key), ...[...(stats?.topics || [])].sort((a,b) => (b.updatedAt || 0) - (a.updatedAt || 0)).map(topic => topic.key)])];
   const personalThemes = personalKeys.map(key => CATEGORIES.find(c => c.key === key)).filter(Boolean);
-  const myThemes = (personalThemes.length ? personalThemes : FEATURED_TOPICS).slice(0, 7);
-  const [heroTopic, ...rest] = myThemes;
-  const games = (stats && stats.games) || 0;
-  const following = (stats && stats.following) || 0;
-  return (
-    <div className="container wide home-v4">
-      <header className="home-head home-head--v4">
-        <div className="home-brand">
-          <div className="home-brandmark">Q</div>
-          <div className="home-logo-sm">Quizz<span>Up</span></div>
-        </div>
-        <div className="home-actions">
-          <button className="home-action" onClick={() => onSeeAll && onSeeAll()} aria-label={t('searchPlaceholder')}>
-            <Icon name="search" size={18} />
-          </button>
-          <button className="home-action" onClick={() => onOpenFriends && onOpenFriends()} aria-label={t('friends')}>
-            <Icon name="users" size={18} />
-          </button>
-          {controls}
-        </div>
-      </header>
-      <button className="profile-card-v4" onClick={onOpenProfile} aria-label={t('editProfile')}>
-        <div className="profile-row-v4">
-          <div className="profile-avatar-v4"><PlayerAvatar avatar={avatar} /></div>
-          <div className="profile-identity-v4">
-            <div className="profile-name-v4">{name || 'Joueur'}</div>
-            <div className="profile-bio-v4">{t('level')} {stats?.level || 1}</div>
-          </div>
-        </div>
-        <div className="profile-stats-v4">
-          <span>{t('playedGames', { n: games })}</span>
-          <span className="dot">·</span>
-          <span>{t('socialFriends', { n: friendCount })}</span>
-          <span className="dot">·</span>
-          <span>{t('followedPlayers', { n: following })}</span>
-        </div>
+  const myThemes = [...personalThemes, ...FEATURED_TOPICS.filter(c => !personalThemes.some(mine => mine.key === c.key))].slice(0, 4);
+  const discovery = [...FEATURED_TOPICS, ...CATEGORIES].filter(c => !myThemes.some(mine => mine.key === c.key)).slice(0, 2);
+  return <main className="container wide home-v4 home-refined">
+    <header className="home-head home-head--v4">
+      <div className="home-brand"><div className="home-brandmark">Q</div><div className="home-logo-sm">Quizz<span>Up</span></div></div>
+      <div className="home-actions"><button type="button" className="home-action" onClick={() => onSeeAll?.(null, true)} aria-label={t('searchPlaceholder')}><Icon name="search" size={24} /></button>{controls}</div>
+    </header>
+    <section aria-labelledby="home-my-themes">
+      <div className="section-head-v4"><h2 id="home-my-themes" className="section-title-v4">{fr ? 'Mes thèmes' : 'My themes'}</h2><button className="section-edit" onClick={() => onSeeAll?.()}>{t('seeAll')} <Icon name="arrow" size={16} /></button></div>
+      {!personalThemes.length && <p className="home-starter-label">{fr ? 'Quelques idées pour commencer' : 'Suggestions to get started'}</p>}
+      <div className="topics-grid-v4">{myThemes.map(c => {
+        const level = [...(stats?.topics || []), ...(stats?.recentThemes || [])].find(topic => topic.key === c.key)?.level;
+        return <div key={c.key} className="topic-tile-wrap" data-topic={c.key}><CategoryTileV4 c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />{personalThemes.length > 0 && !personalThemes.some(mine => mine.key === c.key) && <span className="home-theme-suggestion">{fr ? 'Suggestion' : 'Suggested'}</span>}{Number.isFinite(level) && <span className="personal-theme-level">{t('level')} {level}</span>}</div>;
+      })}</div>
+    </section>
+    <section aria-labelledby="home-discover"><div className="section-head-v4"><h2 id="home-discover" className="section-title-v4">{fr ? 'À découvrir' : 'Discover'}</h2></div><div className="home-discovery">{discovery.map(c => <CategoryTileV4 key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}</div></section>
+    <section aria-labelledby="home-community"><div className="section-head-v4"><h2 id="home-community" className="section-title-v4">{fr ? 'Communauté' : 'Community'}</h2></div>
+      <button className={`home-community-teaser${communityPost ? '' : ' is-empty'}`} onClick={() => onOpenCommunity?.(communityPost?.id)}>
+        {communityPost ? <><span className="home-community-avatar"><PlayerAvatar avatar={communityPost.authorAvatar} /></span><span className="home-community-copy"><strong>{communityPost.authorName}</strong><small>{topicLabel(communityPost.category)}</small><span>{communityPost.text}</span><small>{communityPost.commentsCount || 0} {fr ? 'réponses' : 'replies'}</small></span></> : <span>{fr ? 'Rejoindre les discussions' : 'Join the discussions'}</span>}<Icon name="arrow" size={20} />
       </button>
-      <div className="social-entry-row"><button onClick={onOpenMessages}>Messages {unreadCount > 0 && <b>{unreadCount}</b>}</button><button onClick={onOpenCommunity}>{fr ? 'Communauté' : 'Community'}</button><button onClick={onOpenHistory}>{fr ? 'Historique' : 'Match history'}</button></div>
-      <div className="home-solo-row">
-        <SoloToggle solo={soloMode} onChange={setSoloMode} />
-      </div>
-      <FriendInviteActions onInviteFriend={createRoom} onJoinFriend={onOpenEnterCode} pending={pending} />
-      <div className="section-head-v4">
-        <h2 className="section-title-v4">{personalThemes.length ? (fr ? 'Mes thèmes' : 'My themes') : (fr ? 'À découvrir' : 'Discover')}</h2>
-        <button className="section-edit" onClick={() => onSeeAll && onSeeAll()}>
-          {t('seeAll')}
-        </button>
-      </div>
-      <div className="topics-grid-v4">
-        {heroTopic && (
-          <div className="topic-tile-wrap topic-tile-wrap--featured" data-topic={heroTopic.key}>
-            <CategoryTileV4 c={heroTopic} featured onClick={() => startWithCategory(heroTopic.key)} disabled={pending} />
-          {personalThemes.length > 0 && <span className="personal-theme-level">{t('level')} {[...(stats?.topics||[]),...(stats?.recentThemes||[])].find(topic => topic.key === heroTopic.key)?.level ?? '—'}</span>}</div>
-        )}
-        {rest.map((c) => (
-          <div key={c.key} className="topic-tile-wrap" data-topic={c.key}>
-            <CategoryTileV4 c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />
-            {personalThemes.length > 0 && <span className="personal-theme-level">{t('level')} {[...(stats?.topics||[]),...(stats?.recentThemes||[])].find(topic => topic.key === c.key)?.level ?? '—'}</span>}
-          </div>
-        ))}
-      </div>
-      <div className="section-head-v4">
-        <h2 className="section-title-v4">{t('allTopics')}</h2>
-        <button className="section-edit" onClick={() => onSeeAll && onSeeAll()}>{t('seeAll')}</button>
-      </div>
-      <FamilyGrid onSelect={onSeeAll} />
-      <button
-        className="more-toggle"
-        type="button"
-        onClick={() => setShowMore((v) => !v)}
-      >
-        {showMore ? t('back') : '•••'}
-      </button>
-      {showMore && (
-        <div className="home-extras-v4">
-          <button className="extra-chip" onClick={() => onStartTournament && onStartTournament()} disabled={pending}>
-            <span>🏆</span> {t('tournament')}
-          </button>
-          <button className="extra-chip" onClick={() => onOpenLeague && onOpenLeague()} disabled={pending}>
-            <span>🏆</span> {t('league')}
-          </button>
-          <button className="extra-chip" onClick={() => onOpenSeasonPass && onOpenSeasonPass()} disabled={pending}>
-            <span>🎯</span> {t('seasonPass')}
-          </button>
-        </div>
-      )}
-      {/* Hidden Quick Play button — triggered from NavBar bolt */}
-      <button
-        className="quick-play quick-play--hidden"
-        onClick={quickMatch}
-        disabled={pending}
-        aria-busy={pending || undefined}
-        aria-label={t('quickPlay')}
-        aria-hidden="true"
-        tabIndex={-1}
-      >
-        <Icon name="bolt" size={21} />
-      </button>
-    </div>
-  );
+    </section>
+  </main>;
 }
 
 // Topic preview short descriptions (fallback for featured sub)
@@ -318,7 +241,7 @@ export function CategoriesContent({ startWithCategory, onBack, family, onSelectF
 export function ProfileContent({
   avatar, name, stats, isGoogleLinked, googleEmail, linkGoogle, linking,
   clientId, social, onOpenLeaderboard, onOpenShop, onSaveProfile, profileSaving, onOpenTopic, streak,
-  league, onOpenLeague, onInviteFriend, onJoinFriend, pending, controls, onOpenHistory, onOpenMessages,
+  league, onOpenLeague, onStartTournament, onOpenSeasonPass, onInviteFriend, onJoinFriend, pending, controls, onOpenHistory, onOpenMessages,
 }) {
   const { t, lang } = useI18n();
   const [editing, setEditing] = useState(false);
@@ -515,14 +438,7 @@ export function ProfileContent({
       <ProfileStats stats={stats} />
 
       {/* ── CTAs ──────────────────────────────────────────── */}
-      <button className="leaderboard-cta shop-cta" onClick={onOpenShop}>
-        <span className="leaderboard-cta-icon shop-cta-icon" aria-hidden="true"><Icon name="shop" size={21}/></span>
-        <span className="leaderboard-cta-copy">
-          <strong>{t('shop')}</strong>
-          <small>{t('shopCta', { n: stats.coins || 0 })}</small>
-        </span>
-        <Icon name="arrow" size={18} />
-      </button>
+      <div className="profile-secondary-links"><button onClick={onStartTournament}>{t('tournament')}</button><button onClick={onOpenLeague}>{t('league')}</button><button onClick={onOpenSeasonPass}>{t('seasonPass')}</button></div>
       <button className="leaderboard-cta" onClick={onOpenLeaderboard}>
         <span className="leaderboard-cta-icon"><Icon name="trophy" size={20} /></span>
         <span className="leaderboard-cta-copy">

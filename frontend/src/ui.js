@@ -1,3 +1,4 @@
+import { PlaySheet } from './PlaySheet';
 import React, { useState, useEffect, useCallback, useRef, useId, memo } from 'react';
 import { useI18n } from './i18n';
 import { getTopicCover } from './topicCovers';
@@ -601,7 +602,7 @@ export function BrowseHeader({ controls }) {
   </header>;
 }
 
-export const TopControls = memo(function TopControls({ muted, toggleMute, theme, toggleTheme, playing = false }) {
+export const TopControls = memo(function TopControls({ muted, toggleMute, theme, toggleTheme, playing = false, home = false }) {
   const { lang, toggleLang } = useI18n();
   const [open, setOpen] = useState(false);
   const rootRef = useRef(null);
@@ -629,18 +630,19 @@ export const TopControls = memo(function TopControls({ muted, toggleMute, theme,
   }, [open]);
   return (
     <div ref={rootRef} className={`top-controls mobile-controls${playing ? ' mobile-controls--playing' : ''}`}>
-      <button type="button" className="ctrl-btn" onClick={toggleMute}
+      {!home && <button type="button" className="ctrl-btn" onClick={toggleMute}
         aria-label={muted ? (fr ? 'Activer le son' : 'Enable sound') : (fr ? 'Couper le son' : 'Mute sound')}>
         <Icon name={muted ? 'mute' : 'volume'} size={18} />
-      </button>
+      </button>}
       {!playing && <>
         <button ref={triggerRef} type="button" className="ctrl-btn" aria-expanded={open}
           aria-controls={panelId} aria-label={fr ? 'Réglages' : 'Settings'} onClick={() => setOpen(!open)}>
           <svg className="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-            <path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3" fill="currentColor"/><circle cx="15" cy="17" r="3" fill="currentColor"/>
+            {home ? <><path d="m9 3-1 3-3 1 1 3-2 2 2 2-1 3 3 1 1 3h6l1-3 3-1-1-3 2-2-2-2 1-3-3-1-1-3z"/><circle cx="12" cy="12" r="3"/></> : <><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3" fill="currentColor"/><circle cx="15" cy="17" r="3" fill="currentColor"/></>}
           </svg>
         </button>
         {open && <div id={panelId} className="mobile-controls-panel" role="group" aria-label={fr ? 'Réglages' : 'Settings'}>
+          {home && <button type="button" onClick={toggleMute}><Icon name={muted ? 'mute' : 'volume'} size={18} />{muted ? (fr ? 'Activer le son' : 'Enable sound') : (fr ? 'Couper le son' : 'Mute sound')}</button>}
           <button type="button" onClick={toggleTheme}>
             <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={18} />
             {fr ? (theme === 'dark' ? 'Mode clair' : 'Mode sombre') : (theme === 'dark' ? 'Light mode' : 'Dark mode')}
@@ -783,25 +785,27 @@ export const SearchBar = memo(function SearchBar({ value, onChange, placeholder 
   );
 });
 
-export const NavBar = memo(function NavBar({ active, onNav, onQuickMatch }) {
+export const NavBar = memo(function NavBar({ active, onNav, onQuickMatch, onInviteFriend, onJoinFriend, unreadCount = 0, pending = false }) {
   const { t } = useI18n();
-  return (
-    <nav className="navbar">
-      <button className={`nav-item ${active === 'home' ? 'active' : ''}`} onClick={() => onNav('home')}>
+  const [playOpen, setPlayOpen] = useState(false);
+  return (<>
+    <nav className="navbar" aria-label={t('navHome')}>
+      <button aria-current={active === 'home' ? 'page' : undefined} className={`nav-item ${active === 'home' ? 'active' : ''}`} onClick={() => onNav('home')}>
         <span className="nav-ic"><Icon name="home" size={20} /></span><span className="nav-lbl">{t('navHome')}</span>
       </button>
-      <button className={`nav-item ${active === 'categories' ? 'active' : ''}`} onClick={() => onNav('categories')}>
+      <button aria-current={active === 'categories' ? 'page' : undefined} className={`nav-item ${active === 'categories' ? 'active' : ''}`} onClick={() => onNav('categories')}>
         <span className="nav-ic"><Icon name="themes" size={20} /></span><span className="nav-lbl">{t('navThemes')}</span>
       </button>
-      <button className="nav-bolt" onClick={onQuickMatch} aria-label={t('playNow')}><Icon name="bolt" size={22} /><span className="nav-play-label">{t('play')}</span></button>
-      <button className={`nav-item ${active === 'shop' ? 'active' : ''}`} onClick={() => onNav('shop')}>
-        <span className="nav-ic"><Icon name="shop" size={20} /></span><span className="nav-lbl">{t('navShop')}</span>
+      <button className="nav-bolt" onClick={() => setPlayOpen(true)} aria-haspopup="dialog" aria-expanded={playOpen} disabled={pending} aria-label={t('playNow')}><Icon name="bolt" size={22} /><span className="nav-play-label">{t('play')}</span></button>
+      <button aria-current={active === 'messages' ? 'page' : undefined} className={`nav-item ${active === 'messages' ? 'active' : ''}`} onClick={() => onNav('messages')}>
+        <span className="nav-ic"><Icon name="chat" size={20} />{unreadCount > 0 && <b className="nav-unread" aria-label={`${unreadCount} messages non lus`}>{unreadCount > 99 ? '99+' : unreadCount}</b>}</span><span className="nav-lbl">Messages</span>
       </button>
-      <button className={`nav-item ${active === 'profile' ? 'active' : ''}`} onClick={() => onNav('profile')}>
+      <button aria-current={active === 'profile' ? 'page' : undefined} className={`nav-item ${active === 'profile' ? 'active' : ''}`} onClick={() => onNav('profile')}>
         <span className="nav-ic"><Icon name="profile" size={20} /></span><span className="nav-lbl">{t('navProfile')}</span>
       </button>
     </nav>
-  );
+    {playOpen && <PlaySheet pending={pending} onClose={() => setPlayOpen(false)} onDuel={() => { setPlayOpen(false); onQuickMatch('duel'); }} onSolo={() => { setPlayOpen(false); onQuickMatch('solo'); }} onInvite={() => { setPlayOpen(false); onInviteFriend?.(); }} onJoin={() => { setPlayOpen(false); onJoinFriend?.(); }} />}
+  </>);
 });
 
 

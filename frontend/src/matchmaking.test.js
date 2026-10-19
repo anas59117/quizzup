@@ -23,8 +23,8 @@ let messageRef;
 let socket;
 
 const click = (label) => {
-  const button = [...container.querySelectorAll('button')].find(
-    (el) => el.textContent === label || el.getAttribute('aria-label') === label
+  const button = [...document.querySelectorAll('button')].find(
+    (el) => el.textContent === label || el.querySelector('strong')?.textContent === label || el.getAttribute('aria-label') === label
   );
   expect(button).toBeDefined();
   act(() => button.click());
@@ -54,7 +54,7 @@ beforeEach(async () => {
   localStorage.setItem('quizzup-name', 'Test');
   localStorage.setItem('quizzup-lang', 'fr');
   localStorage.setItem('quizzup-onboarded', '1');
-  useLeague.mockReturnValue({ streak: 0, addResult: jest.fn() });
+  useLeague.mockReturnValue({ streak: 0, tier:{icon:'',label:'Bronze',color:'#765'}, addResult: jest.fn() });
   socket = {
     wsRef: { current: null }, connect: jest.fn(() => true), send: jest.fn(() => true),
     closeSocket: jest.fn(), scheduleRecovery: jest.fn(), reconnecting: false,
@@ -110,10 +110,11 @@ test.each([true,false])('answer outcome sound plays once across acknowledgment a
 });
 
 test('only a successful avatar equipment response changes the visible public identity', () => {
+  click('Profil');
   receive({ type: 'shop_result', action: 'equip', itemId: 'fox', ok: false });
-  expect(container.querySelector('.profile-avatar-v4 .player-avatar').dataset.avatar).toBe('robot');
+  expect(container.querySelector('.pf-avatar .player-avatar').dataset.avatar).toBe('robot');
   receive({ type: 'shop_result', action: 'equip', itemId: 'fox', ok: true });
-  expect(container.querySelector('.profile-avatar-v4 .player-avatar').dataset.avatar).toBe('fox');
+  expect(container.querySelector('.pf-avatar .player-avatar').dataset.avatar).toBe('fox');
   expect(socket.send).toHaveBeenCalledWith({ type: 'profile_update', name: 'Test', avatar: 'fox' });
 });
 
@@ -169,21 +170,20 @@ test('browser Back from matchmaking leaves the queue and returns home', async ()
 });
 
 function waitForOpponent(topic = 'Partie rapide') {
-  click(topic);
+  if (topic === 'Partie rapide') { click('Jouer maintenant'); click('Duel rapide'); } else click(topic);
   receive({ type: 'waiting' });
 }
 
-test('shows both game modes and starts solo directly when selected', () => {
-  const multiplayer = [...container.querySelectorAll('button')].find((el) => el.textContent === 'Multijoueur');
-  const solo = [...container.querySelectorAll('button')].find((el) => el.textContent === 'Solo');
-  expect(multiplayer.getAttribute('aria-pressed')).toBe('true');
-  expect(solo.getAttribute('aria-pressed')).toBe('false');
-
-  click('Solo');
-  expect(multiplayer.getAttribute('aria-pressed')).toBe('false');
-  expect(solo.getAttribute('aria-pressed')).toBe('true');
-  click('Partie rapide');
+test('play sheet starts solo with an explicit mode before React state has committed', () => {
+  click('Jouer maintenant'); click('Solo');
   expect(soloCalls()).toEqual([[{ type: 'solo', category: null }]]);
+});
+
+test('play sheet duel request explicitly clears an earlier solo choice', () => {
+  click('Jouer maintenant'); click('Solo');
+  receive({ type:'queue_cancel_failed' });
+  click('Jouer maintenant'); click('Duel rapide');
+  expect(socket.connect).toHaveBeenLastCalledWith({ type:'join', category:null });
 });
 
 test('shows the real level and truthful wait feedback with a delayed solo option', () => {
@@ -199,6 +199,7 @@ test('shows the real level and truthful wait feedback with a delayed solo option
 });
 
 test('starts solo only after cancellation is acknowledged, retaining the selected topic', () => {
+  receive({ type:'stats', stats:{followedThemes:['ligue_champions']} });
   const topic = container.querySelector('[data-topic="ligue_champions"] button');
   act(() => topic.click());
   click('Jouer maintenant');
@@ -234,7 +235,7 @@ test('normal cancellation returns home without starting another game', () => {
   click('← Annuler');
   expect(container.textContent).toContain('Sortie de la recherche');
   receive({ type: 'queue_cancelled' });
-  expect(container.querySelector('.quick-play')).not.toBeNull();
+  expect(container.querySelector('.home-head')).not.toBeNull();
   expect(soloCalls()).toHaveLength(0);
 });
 

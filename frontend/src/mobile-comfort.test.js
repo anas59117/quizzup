@@ -43,13 +43,15 @@ test('four destinations surround a central play action and preserve navigation',
   const onNav = jest.fn();
   render(<NavBar active="categories" onNav={onNav} onQuickMatch={onQuickMatch} />);
   const buttons = [...container.querySelectorAll('nav button')];
-  expect(buttons.map(button => button.textContent)).toEqual(['Accueil', 'Thèmes', 'Jouer', 'Boutique', 'Profil']);
+  expect(buttons.map(button => button.textContent)).toEqual(['Accueil', 'Thèmes', 'Jouer', 'Messages', 'Profil']);
   expect(container.querySelector('.nav-item.active').textContent).toBe('Thèmes');
   for (const index of [0, 1, 3, 4]) act(() => buttons[index].click());
-  expect(onNav.mock.calls).toEqual([['home'], ['categories'], ['shop'], ['profile']]);
+  expect(onNav.mock.calls).toEqual([['home'], ['categories'], ['messages'], ['profile']]);
   expect(container.querySelector('.nav-play-label').textContent).toBe('Jouer');
   act(() => container.querySelector('.nav-bolt').click());
-  expect(onQuickMatch).toHaveBeenCalledTimes(1);
+  expect(onQuickMatch).not.toHaveBeenCalled();
+  act(() => [...document.querySelectorAll('[role=dialog] button')].find(b => b.textContent.includes('Duel rapide')).click());
+  expect(onQuickMatch).toHaveBeenCalledWith('duel');
 });
 test('answer acknowledgments never leak the correct answer before full reveal', () => {
   const props = {
