@@ -17,7 +17,9 @@ import { Messenger } from './Messenger';
 import { useMatchHistory, MatchHistory } from './MatchHistory';
 import './community.css';
 import './home-refinement.css';
+import './browse-theme.css';
 import { HomeLoading } from './HomeLoading';
+import { useBrowseMotion } from './useBrowseMotion';
 import { usePlayers, PlayerSheet, topicLabel } from './players';
 import { RoomLobby } from './multiplayer';
 import { AVATARS, useTheme, TopControls, BrowseHeader, NavBar, ErrorScreen, Toast } from './ui';
@@ -101,6 +103,8 @@ export default function App() {
   const [fatalReason, setFatalReason] = useState('connection');
   const [fatalCode, setFatalCode] = useState('');
   const [categoryFamily, setCategoryFamily] = useState(null);
+  useBrowseMotion(stage, categoryFamily);
+  const previewOriginRef = useRef('home');
   const lastBrowserLocationRef = useRef(null);
   const restoringBrowserHistoryRef = useRef(false);
   const browserBackHandlerRef = useRef(null);
@@ -754,6 +758,7 @@ export default function App() {
   // v4: show the Category Preview screen first (Spider-Man hero + stats + "Jouer maintenant")
   function previewCategory(catKey) {
     if (pending) return;
+    previewOriginRef.current = stage;
     setMatchCategory(catKey);
     setStage('category_preview');
   }
@@ -1182,7 +1187,7 @@ export default function App() {
           controls={<TopControls {...topProps} home />}
           category={previewCat}
           stats={statsHook.stats}
-          onBack={() => setStage('home')}
+          onBack={() => setStage(previewOriginRef.current)}
           onPlay={() => matchCategory && startWithCategory(matchCategory)}
           onChallenge={() => openMessages()}
           onCommunity={() => { feed.setFilter({ scope: 'all', category: matchCategory }); setStage('feed'); }}

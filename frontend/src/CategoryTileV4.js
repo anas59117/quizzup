@@ -5,7 +5,7 @@
  *   2. Cover image from topicCovers.js (Rap FR photo, Ligue Champions, etc.)
  *   3. Family-level gradient + emoji icon
  */
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 import { getTopicCover } from './topicCovers';
 
 // Monogram text per topic — short label for the big typographic hero
@@ -104,10 +104,11 @@ function topicMark(label) {
 export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disabled, featured }) {
   const typo = TOPIC_TYPO[c.key];
   const cover = !typo ? getTopicCover(c) : null;
+  const [failedSrc, setFailedSrc] = useState(null);
   const familyFont = FAMILY_TYPO[c.family]?.font || 'display';
   const fontClass = typo ? typo.font : familyFont;
 
-  const hasCover = !!cover;
+  const hasCover = !!cover && failedSrc !== cover.src;
   const className = [
     'tile-v4',
     `tile-v4--${fontClass}`,
@@ -130,6 +131,8 @@ export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disable
       {/* Background world (gradient per topic or family) */}
       <div className="tile-v4__bg" aria-hidden="true" />
 
+      {!typo && <div className="tile-v4__cover-placeholder" aria-hidden="true">{topicMark(c.label)}</div>}
+
       {/* Cover image fallback (when no typo custom) */}
       {hasCover && (
         <img
@@ -139,7 +142,7 @@ export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disable
           loading="lazy"
           decoding="async"
           referrerPolicy="no-referrer"
-          onError={(e) => { e.currentTarget.hidden = true; }}
+          onError={() => setFailedSrc(cover.src)}
         />
       )}
 
@@ -179,11 +182,6 @@ export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disable
           {typo.line2 && <div className="tile-v4__big-line">{typo.line2}</div>}
           {featured && typo.sub && <div className="tile-v4__big-sub">{typo.sub}</div>}
         </div>
-      ) : !hasCover ? (
-        /* No typo + no cover → big emoji icon or monogram centered */
-        <div className="tile-v4__emoji" aria-hidden="true">
-          {c.icon || topicMark(c.label)}
-        </div>
       ) : null}
 
       {/* Dark gradient for text readability */}
@@ -191,7 +189,7 @@ export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disable
 
       {/* Label + featured meta */}
       <div className="tile-v4__caption">
-        <div className="tile-v4__label">{c.label}</div>
+        <div className="tile-v4__label">{cover?.displayTitle || c.label}</div>
         {featured && (
           <div className="tile-v4__meta">
             <span className="tile-v4__pill">{c.descShort || c.desc || c.label}</span>

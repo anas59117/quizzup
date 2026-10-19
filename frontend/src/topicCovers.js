@@ -12,6 +12,18 @@ const cover = (file, focal = 'center 35%') => ({
 
 const remoteCover = (src, source, focal = 'center 30%') => ({ src, source, focal });
 
+// Five original illustrated pilots; shipped locally so the artwork does not
+// depend on a third-party image host. Existing explicit category covers win.
+export const PILOT_TOPIC_COVERS = Object.fromEntries(
+  ['blue_lock', 'jojo', 'saint_seiya', 'fairy_tail', 'haikyu'].map(key => [key, {
+    src: `/images/covers/editorial-v1/${key}.webp`,
+    focal: 'center 28%',
+    source: null,
+    kind: 'illustration',
+    ...(key === 'saint_seiya' ? { displayTitle: 'Saint Seiya' } : {}),
+  }])
+);
+
 export const FAMILY_TOPIC_COVERS = {
   football: cover("Premier League Trophy at Manchester's National Football Museum (Ank Kumar) 01.jpg", 'center 30%'),
   cinema: cover('Debrie Parvo 35mm Movie Camera.jpg', 'center 48%'),
@@ -450,6 +462,7 @@ export function getTopicCover(category) {
     };
   }
 
+  if (PILOT_TOPIC_COVERS[category.key]) return PILOT_TOPIC_COVERS[category.key];
   if (TOPIC_COVERS[category.key]) return TOPIC_COVERS[category.key];
 
   // Never pretend a generic family photo represents a specific quiz.

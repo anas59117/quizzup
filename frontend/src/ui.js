@@ -586,18 +586,29 @@ export const ErrorScreen = memo(function ErrorScreen({ reason = 'connection', co
 });
 
 export function useTheme() {
-  const [theme, setTheme] = useState(() => {
+  const [preference, setPreference] = useState(() => {
     try {
       const saved = localStorage.getItem('quizzup-theme');
-      if (saved) return saved;
-      return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    } catch { return 'light'; }
+      return saved === 'dark' || saved === 'light' ? saved : 'system';
+    } catch { return 'system'; }
   });
+  const [systemTheme, setSystemTheme] = useState(() => window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  useEffect(() => {
+    const media = window.matchMedia?.('(prefers-color-scheme: dark)');
+    if (!media) return undefined;
+    const update = event => setSystemTheme(event.matches ? 'dark' : 'light');
+    media.addEventListener?.('change', update);
+    return () => media.removeEventListener?.('change', update);
+  }, []);
+  const theme = preference === 'system' ? systemTheme : preference;
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    try { localStorage.setItem('quizzup-theme', theme); } catch {}
   }, [theme]);
-  const toggle = useCallback(() => setTheme((t) => (t === 'dark' ? 'light' : 'dark')), []);
+  const toggle = useCallback(() => {
+    const next = theme === 'dark' ? 'light' : 'dark';
+    setPreference(next);
+    try { localStorage.setItem('quizzup-theme', next); } catch {}
+  }, [theme]);
   return [theme, toggle];
 }
 
