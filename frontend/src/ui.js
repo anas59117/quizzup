@@ -645,8 +645,8 @@ export const TopControls = memo(function TopControls({ muted, toggleMute, theme,
       {!playing && <>
         <button ref={triggerRef} type="button" className="ctrl-btn" aria-expanded={open}
           aria-controls={panelId} aria-label={fr ? 'Réglages' : 'Settings'} onClick={() => setOpen(!open)}>
-          <svg className="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-            {home ? <><path d="m9 3-1 3-3 1 1 3-2 2 2 2-1 3 3 1 1 3h6l1-3 3-1-1-3 2-2-2-2 1-3-3-1-1-3z"/><circle cx="12" cy="12" r="3"/></> : <><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3" fill="currentColor"/><circle cx="15" cy="17" r="3" fill="currentColor"/></>}
+          <svg className="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            {home ? <><path d="m10.14 5.05-.12-2.34h3.96l-.12 2.34a7.2 7.2 0 0 1 3.23 1.86l1.97-1.27 1.98 3.42-2.09 1.08a7.2 7.2 0 0 1 0 3.72l2.09 1.08-1.98 3.42-1.97-1.27a7.2 7.2 0 0 1-3.23 1.86l.12 2.34h-3.96l.12-2.34a7.2 7.2 0 0 1-3.23-1.86l-1.97 1.27-1.98-3.42 2.09-1.08a7.2 7.2 0 0 1 0-3.72L2.96 9.06l1.98-3.42 1.97 1.27a7.2 7.2 0 0 1 3.23-1.86Z"/><circle cx="12" cy="12" r="3"/></> : <><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3" fill="currentColor"/><circle cx="15" cy="17" r="3" fill="currentColor"/></>}
           </svg>
         </button>
         {open && <div id={panelId} className="mobile-controls-panel" role="group" aria-label={fr ? 'Réglages' : 'Settings'}>
