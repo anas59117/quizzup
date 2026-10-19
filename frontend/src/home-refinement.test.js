@@ -2,6 +2,7 @@ import React, { act } from 'react';
 import { createRoot } from 'react-dom/client';
 import { I18nProvider } from './i18n';
 import { HomeContent } from './screens';
+import { Messenger } from './Messenger';
 import { NavBar, TopControls } from './ui';
 let root, container;
 beforeEach(() => { global.IS_REACT_ACT_ENVIRONMENT = true; localStorage.setItem('quizzup-lang','fr'); container = document.createElement('div'); document.body.append(container); root = createRoot(container); });
@@ -50,4 +51,23 @@ test('pending play action is disabled and sheet Back dismisses before navigation
   act(()=>container.querySelector('.nav-bolt').click());
   act(()=>document.querySelector('.play-sheet-backdrop').click());
   expect(document.querySelector('[role=dialog]')).toBeNull();
+});
+
+
+test('Escape closes Play over the real Messages inbox without navigating Home', () => {
+  const social = { friends: [], requests: [], conversations: [], messages: {}, connected: true,
+    requestConversations: jest.fn(), closeConversation: jest.fn(), closeAsyncChallenge: jest.fn() };
+  function InboxWithNavigation() {
+    const [stage, setStage] = React.useState('messages');
+    return <>{stage === 'messages' && <Messenger social={social} onBack={() => setStage('home')} />}<NavBar active={stage} onNav={setStage} onQuickMatch={jest.fn()} /></>;
+  }
+  render(<InboxWithNavigation />);
+  const trigger = container.querySelector('.nav-bolt');
+  trigger.focus(); act(() => trigger.click());
+  expect(document.querySelector('[role=dialog]')).not.toBeNull();
+  act(() => document.activeElement.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true, cancelable: true })));
+  expect(document.querySelector('[role=dialog]')).toBeNull();
+  expect(container.querySelector('.messenger-inbox')).not.toBeNull();
+  expect(container.querySelector('[aria-current=page]').textContent).toBe('Messages');
+  expect(document.activeElement).toBe(trigger);
 });

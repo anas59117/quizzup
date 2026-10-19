@@ -29,7 +29,7 @@ export function PlaySheet({ onClose, onDuel, onSolo, onInvite, onJoin, pending }
     };
   }, []);
   const keydown = event => {
-    if (event.key === 'Escape') { event.preventDefault(); onClose(); }
+    if (event.key === 'Escape') { event.preventDefault(); event.stopPropagation(); onClose(); }
     if (event.key !== 'Tab') return;
     const buttons = [...panel.current.querySelectorAll('button:not(:disabled)')];
     const first = buttons[0], last = buttons[buttons.length - 1];
