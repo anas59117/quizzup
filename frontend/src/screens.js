@@ -55,9 +55,10 @@ export function HomeContent({ startWithCategory, onSeeAll, pending, stats, contr
       })}</div>
     </section>
     <section aria-labelledby="home-discover"><div className="section-head-v4"><h2 id="home-discover" className="section-title-v4">{fr ? 'À découvrir' : 'Discover'}</h2></div><div className="home-discovery">{discovery.map(c => <CategoryTileV4 key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}</div></section>
-    <section aria-labelledby="home-community"><div className="section-head-v4"><h2 id="home-community" className="section-title-v4">{fr ? 'Communauté' : 'Community'}</h2></div>
+    <section aria-labelledby="home-community" className="home-community-section">
       <button className={`home-community-teaser${communityPost ? '' : ' is-empty'}`} onClick={() => onOpenCommunity?.(communityPost?.id)}>
-        {communityPost ? <><span className="home-community-avatar"><PlayerAvatar avatar={communityPost.authorAvatar} /></span><span className="home-community-copy"><strong>{communityPost.authorName}</strong><small>{topicLabel(communityPost.category)}</small><span>{communityPost.text}</span><small>{communityPost.commentsCount || 0} {fr ? 'réponses' : 'replies'}</small></span></> : <span>{fr ? 'Rejoindre les discussions' : 'Join the discussions'}</span>}<Icon name="arrow" size={20} />
+        <span className="home-community-content"><strong id="home-community" className="home-community-heading">{fr ? 'Communauté' : 'Community'}</strong>
+        {communityPost ? <span className="home-community-post"><span className="home-community-avatar"><PlayerAvatar avatar={communityPost.authorAvatar} /></span><span className="home-community-copy"><strong>{communityPost.authorName}</strong><small>{topicLabel(communityPost.category)}</small><span>{communityPost.text}</span><small>{communityPost.commentsCount || 0} {fr ? 'réponses' : 'replies'}</small></span></span> : <span className="home-community-invitation">{fr ? 'Rejoindre les discussions' : 'Join the discussions'}</span>}</span><Icon name="arrow" size={20} />
       </button>
     </section>
   </main>;
@@ -186,7 +187,7 @@ export function EnterCodeContent({ joinCode, setJoinCode, joinError, setJoinErro
   );
 }
 
-export function CategoriesContent({ startWithCategory, onBack, family, onSelectFamily, pending }) {
+export function CategoriesContent({ startWithCategory, onBack, family, onSelectFamily, pending, controls }) {
   const { t } = useI18n();
   const [query, setQuery] = useState('');
 
@@ -199,7 +200,8 @@ export function CategoriesContent({ startWithCategory, onBack, family, onSelectF
   const activeFamily = FAMILIES.find((f) => f.key === family);
 
   return (
-    <div className="container wide">
+    <main className="container wide themes-refined">
+      {controls && <BrowseHeader controls={controls} />}
       <div className="cat-header">
         <h2>{activeFamily && !results ? famLabel(t, activeFamily.key) : t('allTopics')}</h2>
         <button className="back-link" onClick={onBack}>{t('back')}</button>
@@ -234,7 +236,7 @@ export function CategoriesContent({ startWithCategory, onBack, family, onSelectF
       <a className="cover-credits-link" href="/image-credits.html" target="_blank" rel="noopener noreferrer">
         Crédits photos
       </a>
-    </div>
+    </main>
   );
 }
 

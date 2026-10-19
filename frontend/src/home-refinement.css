@@ -53,7 +53,6 @@
 .play-sheet > button > span { grid-column: 2; grid-row: 1 / 3; align-self: center; color: #a71938; }
 .play-sheet button:focus-visible,.profile-secondary-links button:focus-visible { outline: 3px solid #a71938; outline-offset: 3px; }
 .play-sheet button:disabled { opacity: .5; cursor: wait; }
-.messenger-inbox-nav .messenger { height: calc(var(--ms-viewport,100dvh) - 185px - env(safe-area-inset-bottom,0px)); min-height: 230px; }
 @media (prefers-reduced-motion: reduce) { .home-refined *,.play-sheet * { animation: none !important; transition: none !important; } }
 .home-refined .tile-v4__badge { display: none; }
 /* Override the older v4 important declarations only within this home. */
@@ -72,3 +71,115 @@
 .home-refined .home-discovery .tile-v4__big { inset: 6px 10px auto; height: 35%; justify-content: flex-start; transform: scale(.52); transform-origin: top center; }
 .home-refined .home-discovery .tile-v4__caption { left: 10px; right: 10px; bottom: 9px; }
 .home-refined .home-discovery .tile-v4__label { font-size: 13px !important; line-height: 1.15; }
+
+/* Shared browsing rhythm. Controls stay quiet; the topics provide the colour. */
+.app.app-home,.app.app-themes,.app.app-profile { --browse-red: #bd1235; background: var(--browse-red) !important; padding-top: var(--safe-top,0px) !important; padding-inline: 0 !important; }
+body:has(.app-home),body:has(.app-themes),body:has(.app-profile) { background: #bd1235 !important; }
+.app-home::before,.app-themes::before,.app-profile::before,.app-messenger::before { display: none; }
+/* Safari can expose the top safe area while scrolling under its status bar. */
+.app-home::after,.app-themes::after,.app-profile::after { content: ''; position: fixed; inset: 0 0 auto; height: var(--safe-top,0px); background: #bd1235; pointer-events: none; z-index: 120; }
+.app-home .home-refined,.app-themes .themes-refined,.app-profile .pf-v4 { max-width: 560px !important; width: 100%; padding: 14px max(16px,var(--safe-left)) 24px max(16px,var(--safe-right)) !important; }
+.app-home .home-refined .home-head,.app-themes .browse-header,.app-profile .browse-header { min-height: 48px; margin: 0 0 20px !important; }
+.app-themes .browse-header .home-brandmark,.app-profile .browse-header .home-brandmark { width: 36px !important; height: 36px !important; font-size: 27px !important; border: 0; border-radius: 50%; background: #fff; color: #bd1235; }
+.app-themes .browse-header .home-logo-sm,.app-profile .browse-header .home-logo-sm { font-size: 27px !important; letter-spacing: -1.2px; }
+.app-themes .browse-header .home-logo-sm span,.app-profile .browse-header .home-logo-sm span { color: #ffe15b; }
+.app-themes .browse-header .top-controls,.app-profile .browse-header .top-controls { flex: 0 0 44px; }
+.app-themes .browse-header .ctrl-btn,.app-profile .browse-header .ctrl-btn { width: 44px; height: 44px; padding: 9px; border: 0 !important; background: transparent !important; color: #fff !important; box-shadow: none !important; }
+.app-themes .browse-header .ctrl-btn svg,.app-profile .browse-header .ctrl-btn svg { width: 24px; height: 24px; }
+.app-themes .mobile-controls-panel,.app-profile .mobile-controls-panel { background: #fffaf2; color: #30272d; border-color: #dfd4d4; }
+.app-themes .mobile-controls-panel button,.app-profile .mobile-controls-panel button { color: #30272d; }
+.home-refined .section-title-v4 { font-size: clamp(23px,6vw,28px) !important; letter-spacing: -.7px; }
+.home-refined section + section { margin-top: 24px; }
+.home-refined .topics-grid-v4,.home-refined .home-discovery { gap: 12px !important; }
+.home-refined .tile-v4 { border-radius: 19px !important; }
+.home-refined .tile-v4__label { line-height: 1.2; font-size: 15px !important; }
+.home-refined .topic-tile-wrap:has(.personal-theme-level) .tile-v4__caption { padding-bottom: 20px; }
+.home-refined .personal-theme-level { left: 12px; bottom: 12px; font-size: 12px; font-weight: 500; }
+.home-refined .topic-tile-wrap[data-topic='ligue_champions'] .personal-theme-level { color: #30200e; text-shadow: none; }
+.home-refined .home-discovery .tile-v4 { aspect-ratio: 1.65 !important; }
+.home-refined .home-discovery .tile-v4__label { font-size: 13px !important; }
+.home-community-teaser { padding: 16px; gap: 16px; border-radius: 19px; color: #30272d; min-height: 80px; }
+.home-community-content { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.home-community-heading { font-size: 16px; line-height: 1.25; letter-spacing: -.25px; }
+.home-community-invitation { font-size: 13px; color: #65585f; line-height: 1.4; }
+.home-community-post { display: flex; gap: 10px; align-items: center; }
+.home-community-heading + .home-community-post { padding-top: 8px; }
+.home-community-teaser > svg { color: #a01535; }
+.home-community-teaser.is-empty { min-height: 80px; }
+.home-refined .home-community-section { margin-top: 24px; }
+
+/* A category is recognisable by symbol, label and content count, never colour alone. */
+.themes-refined .cat-header { margin: 0 0 16px; align-items: center; }
+.themes-refined .cat-header h2 { margin: 0; font-size: 28px; letter-spacing: -.8px; color: #fff; }
+.themes-refined .back-link { min-height: 44px; color: #fff; }
+.themes-refined .search-bar { display: flex; align-items: center; gap: 10px; min-height: 50px; padding: 0 14px !important; background: #fffaf2 !important; border: 1px solid #fffaf2 !important; border-radius: 16px !important; margin-bottom: 22px !important; color: #685b62; }
+.themes-refined .search-bar .search-icon { position: static; display: flex; color: #685b62 !important; }
+.themes-refined .search-bar input { min-width: 0; width: 100%; padding: 0 !important; border: 0 !important; background: transparent !important; color: #30272d !important; font-size: 16px !important; }
+.themes-refined .search-bar input::placeholder { color: #685b62 !important; opacity: 1; }
+.themes-refined .family-list { gap: 12px !important; }
+.themes-refined .family-tile { --family-accent: #a82543; --family-wash: #fae8ed; grid-template-columns: 1fr; gap: 0; min-height: 160px; padding: 16px !important; border: 0 !important; border-radius: 20px !important; background: #fffaf2 !important; color: #30272d !important; }
+.themes-refined .family-tile[data-family='sport'] { --family-accent: #8b540b; --family-wash: #f7edcb; }
+.themes-refined .family-tile[data-family='football'] { --family-accent: #28684d; --family-wash: #e0eee4; }
+.themes-refined .family-tile[data-family='cinema'] { --family-accent: #6f466e; --family-wash: #f1e3ee; }
+.themes-refined .family-tile[data-family='series'] { --family-accent: #894328; --family-wash: #f4e4d7; }
+.themes-refined .family-tile[data-family='music'] { --family-accent: #8c325b; --family-wash: #f7e0eb; }
+.themes-refined .family-tile[data-family='sagas'] { --family-accent: #5d4a85; --family-wash: #ece5f5; }
+.themes-refined .family-tile[data-family='manga'] { --family-accent: #94412c; --family-wash: #f8e4db; }
+.themes-refined .family-tile[data-family='gaming'] { --family-accent: #305e89; --family-wash: #e0ebf5; }
+.themes-refined .family-tile[data-family='culture'] { --family-accent: #276a70; --family-wash: #dfeef0; }
+.themes-refined .family-tile .family-icon { grid-row: auto; width: 46px; height: 46px; display: grid; place-items: center; margin-bottom: 14px; background: var(--family-wash) !important; color: var(--family-accent) !important; border-radius: 14px !important; }
+.themes-refined .family-tile .family-label { display: block; color: #30272d !important; font-size: 16px !important; line-height: 1.2; }
+.themes-refined .family-tile .family-count { grid-column: 1; color: #6b5961 !important; font-size: 12px !important; margin-top: 6px; }
+.themes-refined .topics-grid-v4 { gap: 12px !important; }
+.themes-refined .tile-v4 { border-radius: 19px !important; }
+.themes-refined .back-to-topics { min-height: 44px; margin-bottom: 12px; color: #fff !important; }
+.themes-refined .cover-credits-link { display: inline-flex; align-items: center; min-height: 44px; color: #fff !important; opacity: 1; }
+.themes-refined button:focus-visible,.themes-refined input:focus-visible { outline: 3px solid #ffdd55 !important; outline-offset: 3px; }
+
+/* Profile uses the same ivory surfaces, with one readable ink palette. */
+.app-profile .pf-v4 { --profile-surface: #fffaf2; --profile-muted: #6b5961; }
+.app-profile .pf-hero { padding: 6px 0 24px !important; }
+.app-profile .pf-avatar { box-shadow: none !important; }
+.app-profile .pf-edit-dot { border: 3px solid #bd1235 !important; color: #a01535 !important; box-shadow: none !important; }
+.app-profile .pf-edit-dot svg { width: 18px; height: 18px; }
+.app-profile .pf-v4 .pf-level-label,.app-profile .pf-v4 .pstat-val,.app-profile .pf-v4 .pl-tier,.app-profile .pf-v4 .pl-lp { color: #30272d !important; }
+.app-profile .pf-v4 .pf-level-card,.app-profile .pf-v4 .profile-league-card,.app-profile .pf-v4 .pstat,.app-profile .pf-v4 .profile-editor { border: 0 !important; border-radius: 20px !important; box-shadow: none !important; }
+.app-profile .pf-xp-bar,.app-profile .pl-progress { background: #e8ddd9 !important; }
+.app-profile .pf-xp-fill { background: #ae1536 !important; }
+.app-profile .pf-v4 .pf-level-pct,.app-profile .pf-v4 .pf-xp-text,.app-profile .pf-v4 .pl-stats,.app-profile .pf-v4 .pstat-lbl,.app-profile .pf-v4 .profile-editor-label,.app-profile .pf-v4 .profile-editor-cancel { color: #6b5961 !important; }
+.app-profile .social-entry-row { gap: 10px; margin-bottom: 20px; }
+.app-profile .social-entry-row button { min-height: 48px; border: 1px solid #ffffff66; background: transparent; color: #fff; border-radius: 14px; font-size: 14px; font-weight: 600; }
+.app-profile .profile-stats { gap: 10px; }
+.app-profile .pstat { padding: 16px 8px !important; }
+.app-profile .pstat-val { font-size: 26px !important; }
+.app-profile .pstat-lbl { font-size: 12px !important; line-height: 1.4; }
+.app-profile .profile-secondary-links button { background: transparent; border-color: #ffffff66; color: #fff; }
+.app-profile .pf-v4 .streak-card { background: #fffaf2 !important; color: #30272d !important; border: 0 !important; box-shadow: none !important; }
+.app-profile .pf-v4 .streak-title,.app-profile .pf-v4 .streak-count { color: #30272d !important; }
+.app-profile .pf-v4 .streak-sub,.app-profile .pf-v4 .streak-milestone-label,.app-profile .pf-v4 .streak-day-label,.app-profile .pf-v4 .streak-reward .sr-text,.app-profile .pf-v4 .streak-reward .sr-bonus { color: #6b5961 !important; }
+.app-profile .pf-v4 .streak-day,.app-profile .pf-v4 .streak-reward { background: #f0e7e3 !important; }
+.app-profile .pf-v4 .streak-day.played,.app-profile .pf-v4 .streak-reward.unlocked { background: #e4ede3 !important; }
+.app-profile .pf-v4 .streak-reward.unlocked .sr-bonus { color: #245a3d !important; background: #d4e5d3; }
+.app-profile .streak-milestone-bar { background: #e8ddd9; }
+.app-profile .streak-milestone-fill { background: #ae1536; }
+.app-profile .streak-flame-lg { animation: none; font-size: 28px; }
+.app-profile .pf-v4 .friends-empty { margin: 12px 0 20px; padding: 20px 0; text-align: left; font-size: 14px; line-height: 1.6; }
+.app-profile .friends-empty strong { display: block; margin-bottom: 6px; }
+.app-profile .friends-empty p { margin: 0; color: #fff; font-weight: 400; }
+.app-profile .friend-invite-actions button { border-color: #fffaf2; background: #fffaf2; color: #30272d; }
+.app-profile .friend-invite-actions button + button { background: transparent; color: #fff; }
+.app-profile .account-link-btn { min-height: 48px; margin-top: 20px; border: 1px solid #fffaf2 !important; border-radius: 14px; background: transparent !important; color: #fff !important; }
+.app-profile .pf-v4 .profile-editor { color: #30272d; }
+.app-profile .profile-editor .profile-name-input { background: #f0e7e3 !important; color: #30272d !important; border: 1px solid #d8c8ce !important; font-size: 16px; }
+.app-profile .profile-photo-controls p { color: #6b5961; opacity: 1; }
+.app-profile .profile-photo-upload { border-color: #ae1536; color: #ae1536; border-radius: 12px; }
+.app-profile .profile-photo-upload:focus-within,.app-profile .profile-editor button:focus-visible { outline: 3px solid #ae1536; outline-offset: 3px; }
+.app-profile .profile-editor-cancel { background: #f0e7e3 !important; }
+.app-profile .profile-editor-save { background: #ae1536 !important; color: #fff !important; }
+@media(max-width:350px) {
+  .home-refined .topics-grid-v4,.home-refined .home-discovery { gap: 10px !important; }
+  .home-refined .tile-v4__label { font-size: 13px !important; }
+  .home-refined .personal-theme-level { font-size: 11px; }
+  .themes-refined .family-tile { padding: 14px !important; min-height: 150px; }
+  .themes-refined .family-tile .family-label { font-size: 15px !important; }
+}

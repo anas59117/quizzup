@@ -1167,9 +1167,9 @@ export default function App() {
 
   if (stage === 'categories') {
     return (
-      <div className="app app-nav app-top">
-        <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
-        <CategoriesContent startWithCategory={previewCategory} onBack={() => setStage('home')}
+      <div className="app app-nav app-top app-themes">
+        <Toast toast={toast} onDismiss={dismissToast} />
+        <CategoriesContent controls={<TopControls {...topProps} home />} startWithCategory={previewCategory} onBack={() => setStage('home')}
           family={categoryFamily} onSelectFamily={setCategoryFamily} pending={pending} />
         <NavBar active="categories" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>
@@ -1182,7 +1182,7 @@ export default function App() {
       <div className="app app-nav app-top app-category-preview">
         <Toast toast={toast} onDismiss={dismissToast} />
         <CategoryPreviewContent
-          controls={<TopControls {...topProps} />}
+          controls={<TopControls {...topProps} home />}
           category={previewCat}
           stats={statsHook.stats}
           onBack={() => setStage('home')}
@@ -1229,7 +1229,7 @@ export default function App() {
       <div className="app app-nav app-top app-profile"><Toast toast={toast} onDismiss={dismissToast} />
         <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
         <ProfileContent
-          controls={<TopControls {...topProps} />}
+          controls={<TopControls {...topProps} home />}
           onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending}
           avatar={avatar} name={name} stats={statsHook.stats}
           isGoogleLinked={!!(firebaseUser && !firebaseUser.isAnonymous)} googleEmail={firebaseUser?.email}

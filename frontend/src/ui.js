@@ -29,6 +29,14 @@ export const Icon = memo(function Icon({ name, size = 20, className = '' }) {
     edit: <><path d="m4 20 4.2-1 10.7-10.7-3.2-3.2L5 15.8 4 20Z"/><path d="m13.8 7 3.2 3.2"/></>,
     chat: <><path d="M5 5h14v10H9l-4 4V5Z"/><path d="M8 9h8"/><path d="M8 12h5"/></>,
     send: <><path d="m3 11 17-7-7 17-2.6-7.4L3 11Z"/><path d="m10.4 13.6 4.4-4.4"/></>,
+    football: <><circle cx="12" cy="12" r="9"/><path d="m12 7 4.8 3.5-1.8 5.6H9l-1.8-5.6L12 7Zm0 0V3m4.8 7.5 3.7-1.2M15 16l2.4 3.3M9 16l-2.4 3.3m.6-8.8L3.5 9.3"/></>,
+    cinema: <><rect x="3" y="7" width="18" height="14" rx="2"/><path d="m3 7 17-4 1 4M7 4l3 3m4-5 3 4M3 12h18"/></>,
+    television: <><rect x="3" y="7" width="18" height="13" rx="3"/><path d="m8 3 4 4 4-4m-6 7 5 3-5 3v-6Z"/></>,
+    music: <><path d="M9 17V5l11-2v12M9 9l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2.5"/><ellipse cx="17" cy="16" rx="3" ry="2.5"/></>,
+    orbit: <><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="11" ry="5" transform="rotate(-35 12 12)"/><path d="m16 3 .5 2 2 .5-2 .5-.5 2-.5-2-2-.5 2-.5.5-2Z"/></>,
+    book: <><path d="M12 5C9 3 5 3 2 4v16c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1v16"/><path d="M5 8h3M5 12h3m8-4h3m-3 4h3"/></>,
+    gamepad: <><path d="M7 7h10c3 0 4 3 5 10 .2 2-2 3-3 1l-3-3H8l-3 3c-1 2-3.2 1-3-1C3 10 4 7 7 7Z"/><path d="M7 9v5m-2.5-2.5h5"/><circle cx="16" cy="10" r=".8"/><circle cx="19" cy="13" r=".8"/></>,
+    globe: <><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 6.5h14M5 17.5h14"/></>,
     heart: <path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/>,
     share: <><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.6l6.8-4M8.6 13.4l6.8 4"/></>,
   };
@@ -742,9 +750,10 @@ export const CategoryTile = memo(function CategoryTile({ c, onClick, disabled })
 // opens onto every specific quiz inside it, rather than listing all quizzes
 // flat on one screen.
 export const FamilyTile = memo(function FamilyTile({ fam, label, desc, count, onClick }) {
+  const symbols = { sport: 'trophy', football: 'football', cinema: 'cinema', series: 'television', music: 'music', sagas: 'orbit', manga: 'book', gaming: 'gamepad', culture: 'globe' };
   return (
-    <button className="family-tile" onClick={onClick}>
-      <span className={`family-icon ${fam.grad}`}>{fam.mark}</span>
+    <button className="family-tile" data-family={fam.key} onClick={onClick}>
+      <span className={`family-icon ${fam.grad}`}><Icon name={symbols[fam.key]} size={28} /></span>
       <span className="family-info">
         <span className="family-label">{label}</span>
         <span className="family-desc">{desc}</span>

@@ -13,6 +13,15 @@ test('inbox uses real peers and server unread then opens a thread', () => {
  render(social); expect(container.querySelector('.messenger-row').textContent).toContain('Hello'); expect(container.querySelector('.messenger-row-meta b').textContent).toBe('3');
  act(() => container.querySelector('.messenger-row').click()); expect(social.openConversation).toHaveBeenCalledWith('peer');
 });
+
+test('an empty inbox shows one useful state while loading and searching', () => {
+ const social={...base(),friends:[],loading:{conversations:true}};render(social);
+ expect(container.querySelector('.messenger-empty')).toBeNull();
+ render({...social,loading:{}});expect(container.querySelector('.messenger-empty')).not.toBeNull();
+ const input=container.querySelector('.messenger-search input');
+ act(()=>{Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set.call(input,'Camille');input.dispatchEvent(new Event('input',{bubbles:true}));});
+ expect(container.querySelector('.messenger-empty')).toBeNull();expect(container.textContent).toContain('No friends match');
+});
 test('thread actions send selected theme; Escape closes chooser then thread', () => {
  const social={...base(),activeConversationId:'peer'};render(social);
  act(() => container.querySelector('.messenger-challenge').click());

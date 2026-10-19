@@ -4,8 +4,9 @@ import { createRoot } from 'react-dom/client';
 import { I18nProvider } from '../../src/i18n';
 import { GameFeelProvider } from '../../src/GameFeelProvider';
 import { QuestionContent } from '../../src/enhanced-QuestionContent';
-import { HomeContent, FinishedContent, WaitingContent, ProfileContent, ShopContent, CategoryPreviewContent, RoundIntroContent } from '../../src/screens';
-import { NavBar, TopControls, FamilyGrid, CATEGORIES } from '../../src/ui';
+import { HomeContent, FinishedContent, WaitingContent, ProfileContent, ShopContent, CategoryPreviewContent, RoundIntroContent, CategoriesContent } from '../../src/screens';
+import { Messenger } from '../../src/Messenger';
+import { NavBar, TopControls, CATEGORIES } from '../../src/ui';
 
 import { GameChat } from '../../src/social';
 import SFX from '../../src/sounds';
@@ -25,31 +26,36 @@ if (params.has('photo')) {
   question.image = '/images/players/booba.jpg';
 }
 function Preview() {
-  const [screen, setScreen] = useState(['home', 'profile', 'waiting', 'result', 'shop', 'themes', 'quiz', 'intro'].find(key => params.has(key)) || 'game');
+  const [screen, setScreen] = useState(['home', 'profile', 'waiting', 'result', 'shop', 'themes', 'quiz', 'intro', 'messages'].find(key => params.has(key)) || 'game');
   const [selected, setSelected] = useState(null);
   const [reveal, setReveal] = useState(null);
   const [muted, setMuted] = useState(true);
   const [theme, setTheme] = useState('dark');
   const [solo, setSolo] = useState(false);
+  const [family, setFamily] = useState(null);
+  const [peer, setPeer] = useState(null);
   const social = React.useMemo(() => ({ friends: [], requests: [], dms: {}, outgoingRequests: new Set(), gameChat: [], gameChatSeenRef: { current: 0 }, sendGameChat: () => false }), []);
   const opponents = params.has('gameSolo') ? [] : [{ id: '2', name: 'clem10', avatar: 'owl', score: 55, answered: !!reveal?.others, correct: false }];
   if (params.has('group')) opponents.push({ id: '3', name: 'Alex', avatar: '🦊', score: 12 }, { id: '4', name: 'Sam', avatar: '🐼', score: 10 });
-  const controls = <TopControls muted={muted} toggleMute={() => setMuted(!muted)} theme={theme} toggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')} playing={screen === 'game'} home={screen === 'home'} />;
+  const controls = <TopControls muted={muted} toggleMute={() => setMuted(!muted)} theme={theme} toggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')} playing={screen === 'game'} home={['home','themes','profile'].includes(screen)} />;
   const stats = { games: 27, wins: 12, level: 6, xpIntoLevel: 121, xpForLevel: 1200, xp: 2400, coins: 420, topics: params.has('personal') ? [{key:'ligue_champions',level:8},{key:'rap_fr',level:5},{key:'harry_potter',level:3},{key:'minecraft',level:2}] : [], followedThemes: params.has('personal') ? ['ligue_champions','rap_fr','harry_potter','minecraft'] : [], ownedItems: ['robot','fox'], equippedItems: { avatars: 'fox' } };
   const result = { won: !params.has('loss') && !params.has('tie'), tie: params.has('tie'), solo: params.has('solo'), finalScore: 84, xp: 224, coins: 50, stats,
     topic: { key: 'ligue_champions', level: 3 }, matchTally: { rounds: 6, correct: 5, answered: 6, totalMs: 36000 },
     leaderboard: [{ id: '1', name: 'Sisi', avatar: 'fox', score: 84 }, ...opponents] };
   const play = () => { setSelected(null); setReveal(null); setScreen('game'); };
-  const browse = ['home', 'profile', 'shop', 'themes', 'quiz'].includes(screen);
-  return <div className={screen === 'home' ? 'app app-top app-nav app-home' : screen === 'game' ? 'app game-bg app-question' : screen === 'result' ? 'app results-bg' : screen === 'waiting' ? 'app game-bg app-matchmaking' : screen === 'intro' ? 'app game-bg' : `app app-top app-nav ${screen === 'quiz' ? 'app-category-preview' : screen === 'shop' ? 'app-shop' : screen === 'profile' ? 'app-profile' : ''}`}>
-    {screen !== 'home' && screen !== 'quiz' && screen !== 'profile' && screen !== 'shop' && controls}
+  const browse = ['home', 'profile', 'shop', 'themes', 'quiz', 'messages'].includes(screen) && !peer;
+  const previewFriends = params.has('populated') ? [{id:'friend-1',name:'Camille',avatar:'fox',online:true},{id:'friend-2',name:'Nadia',avatar:'owl',online:false},{id:'friend-3',name:'Alex',avatar:'robot',online:false}] : [];
+  const previewMessages = previewFriends.length ? { ...social, friends: previewFriends, conversations: previewFriends.map((person,index)=>({peer:person,unread:index===0?2:0,lastMessage:{kind:'text',text:['Une revanche sur le ciné ?','On joue ce soir ?','Bien joué pour le dernier duel !'][index],createdAt:'2026-10-19T11:30:00Z'}})),messages:{'friend-1':[{id:'sample',fromId:'friend-1',kind:'text',text:'Une revanche sur le ciné ?',createdAt:'2026-10-19T11:30:00Z'}]}} : {...social,messages:{},conversations:[]};
+  return <div className={screen === 'home' ? 'app app-top app-nav app-home' : screen === 'messages' ? `app app-messenger${!peer?' app-nav messenger-inbox-nav':''}` : screen === 'game' ? 'app game-bg app-question' : screen === 'result' ? 'app results-bg' : screen === 'waiting' ? 'app game-bg app-matchmaking' : screen === 'intro' ? 'app game-bg' : `app app-top app-nav ${screen === 'quiz' ? 'app-category-preview' : screen === 'shop' ? 'app-shop' : screen === 'profile' ? 'app-profile' : screen === 'themes' ? 'app-themes' : ''}`}>
+    {!['home','quiz','profile','shop','themes','messages'].includes(screen) && controls}
     {screen === 'home' && <HomeContent controls={controls} name="Sisi" avatar="fox" stats={stats} soloMode={solo} setSoloMode={setSolo}
       quickMatch={play} startWithCategory={play} onOpenProfile={() => setScreen('profile')} onSeeAll={() => setScreen('themes')} />}
     {screen === 'profile' && <ProfileContent controls={controls} name="Sisi" avatar="fox" stats={stats} social={social}
       streak={{ streak: 1, calendar: [] }} onSaveProfile={() => {}} onOpenLeaderboard={() => {}} onOpenShop={() => setScreen('shop')} />}
     {screen === 'waiting' && <WaitingContent name="Sisi" avatar="fox" level={6} categoryKey="ligue_champions" onCancel={() => setScreen('home')} onPlaySolo={play} />}
     {screen === 'shop' && <ShopContent controls={controls} name="Sisi" avatar="fox" stats={stats} onBuy={() => {}} onEquip={() => {}} onPlay={play} onBack={() => setScreen('home')} />}
-    {screen === 'themes' && <div className="container"><FamilyGrid onSelect={play} /></div>}
+    {screen === 'themes' && <CategoriesContent controls={controls} family={family} onSelectFamily={setFamily} onBack={()=>setScreen('home')} startWithCategory={()=>setScreen('quiz')} />}
+    {screen === 'messages' && <Messenger social={{...previewMessages,activeConversationId:peer,activeAsyncChallengeId:params.has('async')?'preview-async':null,asyncRuns:{'preview-async':{status:'waiting',score:84}},playAsyncChallenge:()=>{},closeAsyncChallenge:()=>{},connected:true,clientId:'me',requestConversations:()=>{},closeConversation:()=>setPeer(null),openConversation:setPeer,requestHistory:()=>{},sendDM:()=>false}} onBack={()=>setScreen('home')} onInviteFriend={play} onJoinFriend={play} />}
     {screen === 'quiz' && <CategoryPreviewContent controls={controls} category={CATEGORIES.find(cat => cat.key === (params.get('topic') || 'rap_fr'))} stats={stats} onBack={() => setScreen('home')} onPlay={play} />}
     {screen === 'intro' && <RoundIntroContent intro={{ round: Number(params.get('round')) || 1, category: 'Rap Français', icon: '🏆' }} opponents={opponents} avatar="fox" name="Sisi" level={6} totalRounds={6} />}
     {screen === 'result' && <>

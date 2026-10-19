@@ -137,11 +137,11 @@ export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoin
         <textarea id="messenger-draft" rows={1} maxLength={200} value={draft} placeholder={c.placeholder} onChange={event => setDrafts(previous => ({ ...previous, [id]: event.target.value }))} onKeyDown={event => { if (event.key === 'Enter' && !event.shiftKey && !event.nativeEvent.isComposing) send(event); }} />
         <button type="submit" disabled={!draft.trim() || !social.connected || social.pendingActions?.[id]} aria-label={social.pendingActions?.[id] ? c.sending : c.send}><Icon name="send" size={20} /></button>
       </form>
-    </> : <div className="messenger-inbox">
-      <label className="messenger-search"><Icon name="search" size={18} /><input value={query} onChange={event => setQuery(event.target.value)} placeholder={c.search} aria-label={c.search} /></label>
+    </> : <div className={`messenger-inbox${peers.length === 0 ? ' is-empty' : ''}`}>
+      <label className="messenger-search"><Icon name="search" size={20} /><input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder={c.search} aria-label={c.search} /></label>
       {social.requests.length > 0 && <details className="messenger-requests"><summary>{c.requests}<span>{social.requests.length}</span></summary>{social.requests.map(request => <div className="messenger-request" key={request.id}><span className="messenger-avatar"><PlayerAvatar avatar={request.avatar} /></span><strong>{request.name}</strong><button onClick={() => social.acceptFriend(request.id)}>{c.accept}</button><button aria-label={`${c.decline} ${request.name}`} onClick={() => social.declineFriend(request.id)}><Icon name="close" size={16} /></button></div>)}</details>}
       {social.loading?.conversations && <p className="messenger-state" role="status">{c.loading}</p>}
-      {peers.length === 0 && <div className="messenger-empty"><Icon name="users" size={38} /><h2>{c.empty}</h2><p>{c.emptyHelp}</p></div>}
+      {!social.loading?.conversations && peers.length === 0 && !query && <div className="messenger-empty"><span className="messenger-empty-symbol"><Icon name="chat" size={36} /></span><h2>{c.empty}</h2><p>{c.emptyHelp}</p></div>}
       {query && !peers.some(item => item.name?.toLocaleLowerCase().includes(query.toLocaleLowerCase())) && <p className="messenger-state">{c.noResults}</p>}
       <div className="messenger-conversations">{peers.filter(item => item.name?.toLocaleLowerCase().includes(query.toLocaleLowerCase())).map(item => {
         const conversation = conversations.find(row => row.peer.id === item.id);
