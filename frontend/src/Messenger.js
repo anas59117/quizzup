@@ -159,8 +159,3 @@ export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoin
     {asyncId && <AsyncChallenge social={social} challengeId={asyncId} onClose={() => { social.closeAsyncChallenge(); shellRef.current?.querySelector('.messenger-challenge')?.focus(); }} />}
   </section>;
 }
-
-
-
-
-

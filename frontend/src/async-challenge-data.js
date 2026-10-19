@@ -8,4 +8,3 @@ export function receiveAsyncState(previous, incoming, now = Date.now()) {
   const feedbackQuestion = incoming.feedback ? (previous?.question?.round === incoming.feedback.round ? previous.question : previous?.feedbackQuestion) : null;
   return { ...incoming, feedbackQuestion, feedbackUntil: incoming.feedback && incoming.feedback.round !== previous?.feedback?.round ? now + 900 : previous?.feedbackUntil || 0, receivedAt: now, opensAt: previous?.question?.round === question?.round && previous.opensAt ? Math.min(previous.opensAt, opensAt) : opensAt, deadline: previous?.question?.round === question?.round && previous.deadline ? Math.min(previous.deadline, deadline) : deadline };
 }
-

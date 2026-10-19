@@ -401,7 +401,3 @@ export function GameChat({ social }) {
     </div>
   );
 }
-
-
-
-

@@ -35,5 +35,3 @@ export function socialDataReducer(state, action) {
   }
   return state;
 }
-
-
