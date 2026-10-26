@@ -52,7 +52,7 @@
   {
     "text": "Quelle description correspond à Killua Zoldik ?",
     "answers": [
-      "président de l’Association Hunter lors de l’arc des Fourmis-Chimères",
+      "président des Hunters durant l’arc des Fourmis-Chimères",
       "héritier d’une famille d’assassins et meilleur ami de Gon",
       "roi des Fourmis-Chimères",
       "championne aveugle du jeu de gungi"
@@ -114,7 +114,7 @@
     "answers": [
       "Hunter professionnelle ayant entraîné Gon et Killua",
       "disciple de Ging utilisant l’arme Crazy Slots",
-      "président de l’Association Hunter lors de l’arc des Fourmis-Chimères",
+      "président des Hunters durant l’arc des Fourmis-Chimères",
       "combattant imprévisible utilisant le Bungee Gum"
     ],
     "correct": 3
@@ -195,7 +195,7 @@
       "chef de la Brigade Fantôme",
       "membre de la Brigade Fantôme utilisant Pain Packer",
       "membre de la Brigade Fantôme utilisant des fils de Nen",
-      "président de l’Association Hunter lors de l’arc des Fourmis-Chimères"
+      "président des Hunters durant l’arc des Fourmis-Chimères"
     ],
     "correct": 3
   },
@@ -252,7 +252,7 @@
   {
     "text": "Quelle description correspond à Chrollo Lucilfer ?",
     "answers": [
-      "président de l’Association Hunter lors de l’arc des Fourmis-Chimères",
+      "président des Hunters durant l’arc des Fourmis-Chimères",
       "chef de la Brigade Fantôme",
       "roi des Fourmis-Chimères",
       "championne aveugle du jeu de gungi"
@@ -314,7 +314,7 @@
     "answers": [
       "Hunter professionnelle ayant entraîné Gon et Killua",
       "disciple de Ging utilisant l’arme Crazy Slots",
-      "président de l’Association Hunter lors de l’arc des Fourmis-Chimères",
+      "président des Hunters durant l’arc des Fourmis-Chimères",
       "épéiste de la Brigade Fantôme"
     ],
     "correct": 3
@@ -502,22 +502,22 @@
   {
     "text": "Qui a élevé Gon sur l'île de la Baleine ?",
     "answers": [
-      "Mito",
-      "Menchi",
       "Neon",
+      "Menchi",
+      "Mito",
       "Palm"
     ],
-    "correct": 0
+    "correct": 2
   },
   {
     "text": "Quel examinateur les candidats suivent-ils lors de la première épreuve Hunter ?",
     "answers": [
       "Wing",
-      "Satotz",
+      "Tsezguerra",
       "Razor",
-      "Tsezguerra"
+      "Satotz"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Sur quelle activité porte la deuxième épreuve de l'examen Hunter ?",
@@ -800,7 +800,7 @@
     "correct": 1
   },
   {
-    "text": "Après sa création, combien de temps une carte de Greed Island peut-elle rester hors du classeur avant de redevenir un objet ?",
+    "text": "Combien de temps une carte de Greed Island peut-elle rester hors du classeur avant de redevenir un objet ?",
     "answers": [
       "10 secondes",
       "5 minutes",

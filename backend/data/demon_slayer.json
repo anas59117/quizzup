@@ -20,7 +20,7 @@
     "correct": 1
   },
   {
-    "text": "Quel personnage correspond à cette description : pourfendeur utilisant d’abord le Souffle de l’Eau et cherchant à sauver sa sœur ?",
+    "text": "Quel pourfendeur utilise le Souffle de l'Eau pour sauver sa sœur ?",
     "answers": [
       "Nezuko Kamado",
       "Zenitsu Agatsuma",
@@ -35,7 +35,7 @@
       "sœur de Tanjiro transformée en démon",
       "pourfendeur utilisant le Souffle de la Foudre",
       "combattant portant un masque de sanglier",
-      "pourfendeur utilisant d’abord le Souffle de l’Eau et cherchant à sauver sa sœur"
+      "pourfendeur maîtrisant le Souffle de l’Eau pour sauver sa sœur"
     ],
     "correct": 3
   },
@@ -95,7 +95,7 @@
       "démon partageant le rang de Lune supérieure Six avec Daki",
       "combattant portant un masque de sanglier",
       "forgeron chargé du sabre de Tanjiro",
-      "pourfendeur utilisant d’abord le Souffle de l’Eau et cherchant à sauver sa sœur"
+      "pourfendeur maîtrisant le Souffle de l’Eau pour sauver sa sœur"
     ],
     "correct": 1
   },
@@ -212,7 +212,7 @@
   {
     "text": "Quelle description correspond à Muichiro Tokito ?",
     "answers": [
-      "pourfendeur capable d’acquérir temporairement des pouvoirs démoniaques",
+      "pourfendeur pouvant absorber des pouvoirs démoniaques",
       "Pilier de la Brume",
       "Lune supérieure Trois",
       "Lune supérieure Deux"
@@ -274,7 +274,7 @@
     "answers": [
       "assistant dévoué de Tamayo",
       "disciple de Shinobu utilisant le Souffle de la Fleur",
-      "pourfendeur capable d’acquérir temporairement des pouvoirs démoniaques",
+      "pourfendeur pouvant absorber des pouvoirs démoniaques",
       "Pilier du Serpent"
     ],
     "correct": 3
@@ -294,7 +294,7 @@
     "answers": [
       "forgeron chargé du sabre de Tanjiro",
       "chef du Corps des pourfendeurs de démons",
-      "pourfendeur utilisant d’abord le Souffle de l’Eau et cherchant à sauver sa sœur",
+      "pourfendeur maîtrisant le Souffle de l’Eau pour sauver sa sœur",
       "sœur de Tanjiro transformée en démon"
     ],
     "correct": 1
@@ -380,7 +380,7 @@
     "correct": 1
   },
   {
-    "text": "Quel personnage correspond à cette description : pourfendeur capable d’acquérir temporairement des pouvoirs démoniaques ?",
+    "text": "Quel pourfendeur peut acquérir temporairement des pouvoirs démoniaques ?",
     "answers": [
       "Gyutaro",
       "Hotaru Haganezuka",
@@ -395,7 +395,7 @@
       "Pilier du Vent",
       "Pilier du Serpent",
       "chef du Corps des pourfendeurs de démons",
-      "pourfendeur capable d’acquérir temporairement des pouvoirs démoniaques"
+      "pourfendeur pouvant absorber des pouvoirs démoniaques"
     ],
     "correct": 3
   },
@@ -412,7 +412,7 @@
   {
     "text": "Quelle description correspond à Akaza ?",
     "answers": [
-      "pourfendeur capable d’acquérir temporairement des pouvoirs démoniaques",
+      "pourfendeur pouvant absorber des pouvoirs démoniaques",
       "Lune supérieure Trois",
       "Lune supérieure Deux",
       "Lune supérieure Une"
@@ -474,7 +474,7 @@
     "answers": [
       "assistant dévoué de Tamayo",
       "disciple de Shinobu utilisant le Souffle de la Fleur",
-      "pourfendeur capable d’acquérir temporairement des pouvoirs démoniaques",
+      "pourfendeur pouvant absorber des pouvoirs démoniaques",
       "démon partageant le rang de Lune supérieure Six avec Daki"
     ],
     "correct": 3
@@ -492,7 +492,7 @@
   {
     "text": "Quelle description correspond à Hotaru Haganezuka ?",
     "answers": [
-      "pourfendeur utilisant d’abord le Souffle de l’Eau et cherchant à sauver sa sœur",
+      "pourfendeur maîtrisant le Souffle de l’Eau pour sauver sa sœur",
       "forgeron chargé du sabre de Tanjiro",
       "sœur de Tanjiro transformée en démon",
       "pourfendeur utilisant le Souffle de la Foudre"
@@ -513,11 +513,11 @@
     "text": "Quel masque Tanjiro porte-t-il pendant la sélection finale ?",
     "answers": [
       "Un masque de tengu",
-      "Un masque de renard",
+      "Un masque de sanglier",
       "Un masque de démon",
-      "Un masque de sanglier"
+      "Un masque de renard"
     ],
-    "correct": 1
+    "correct": 3
   },
   {
     "text": "Sur quelle montagne se déroule la sélection finale des pourfendeurs ?",
@@ -542,12 +542,12 @@
   {
     "text": "Quel démon du mont Fujikasane avait dévoré les élèves d'Urokodaki ?",
     "answers": [
-      "Le démon aux mains",
-      "Rui",
       "Enmu",
+      "Rui",
+      "Le démon aux mains",
       "Le démon du marais"
     ],
-    "correct": 0
+    "correct": 2
   },
   {
     "text": "Quel ancien élève d'Urokodaki aide Tanjiro à s'entraîner sur le mont Sagiri ?",
