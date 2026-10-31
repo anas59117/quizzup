@@ -9,9 +9,10 @@ const { chromium } = require(
 );
 const server = require("./serve.cjs"),
   out = path.resolve(__dirname, "../../.mobile-preview");
+const { createQaData } = require('./test-data.cjs');
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 (async () => {
-  const data = fs.mkdtempSync(path.join(out, "social-qa-"));
+  const data = createQaData(out, 'social-qa-');
   const backend = spawn(
     process.execPath,
     [path.resolve(__dirname, "../../../backend/server.js")],
@@ -57,7 +58,6 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
         reducedMotion: "reduce",
       });
       await ctx.addInitScript((name) => {
-        localStorage.setItem("quizzup-onboarded", "1");
         localStorage.setItem("quizzup-name", name);
         localStorage.setItem("quizzup-avatar", "robot");
         localStorage.setItem("quizzup-lang", "fr");
@@ -84,6 +84,8 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
       await p.goto("http://127.0.0.1:4330/?app", {
         waitUntil: "commit",
       });
+      await p.locator('.onb-input').fill(name);
+      for (let step = 0; step < 3; step++) await p.locator('.onb-btn.primary').click();
       await p.locator(".home-head").waitFor({timeout:60000});
       await p.waitForFunction(() =>
         window.__events.some((e) => e.type === "identified"),
@@ -107,26 +109,21 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
       }
     };
     await capture(a, "home");
-    const uid = await b.evaluate(
-      () =>
-        JSON.parse(
-          atob(localStorage.getItem("quizzup-guest-token-v1").split(".")[1]),
-        ).sub,
-    );
-    // Create the request through the live authenticated app socket; accept in the real UI.
-    await a.evaluate(
-      (id) =>
-        window.__sockets.at(-1).send(
-          JSON.stringify({
-            type: "friend_request",
-            targetId: id,
-          }),
-        ),
-      uid,
-    );
+    // Find a real player through their community post and send the request in UI.
+    await b.locator('.home-community-teaser').click();
+    await b.getByLabel('Ta publication', { exact: true }).fill('Retrouve Bob pour le test entre amis');
+    await b.getByRole('button', { name: 'Publier', exact: true }).click();
+    await b.locator('.feed-post-text').filter({ hasText: 'Retrouve Bob' }).waitFor();
+    await a.locator('.home-community-teaser').click();
+    await a.getByRole('button', { name: 'BobSocial', exact: true }).click();
+    const bobProfile = a.getByRole('dialog', { name: 'BobSocial', exact: true });
+    await bobProfile.getByRole('button', { name: 'Ajouter en ami', exact: true }).click();
+    await bobProfile.getByRole('button', { name: 'Demande envoyée', exact: true }).waitFor();
+    await bobProfile.getByRole('button', { name: 'Fermer', exact: true }).click();
+    console.log('PASS both onboarding flows → community player profile → friend request through UI');
     await b
       .getByRole("button", {
-        name: /^Messages/,
+        name: /Messages/,
       })
       .click();
     await b.locator(".messenger-requests summary").click();
@@ -144,7 +141,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
       .waitFor();
     await a
       .getByRole("button", {
-        name: /^Messages/,
+        name: /Messages/,
       })
       .click();
     await a
@@ -193,7 +190,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
     await b.locator(".home-head").waitFor();
     await b
       .getByRole("button", {
-        name: /^Messages/,
+        name: /Messages/,
       })
       .click();
     await b
@@ -246,7 +243,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
         exact: true,
       })
       .click();
-    for (let round = 1; round <= 6; round++) {
+    const playDuel = async () => { for (let round = 1; round <= 6; round++) {
       await Promise.all(
         pages.map((p) =>
           p
@@ -269,9 +266,9 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
       await a.locator(".answer").first().click();
       await b.locator(".answer").nth(1).click();
     }
-    await a.locator(".res-cta").waitFor({
-      timeout: 20000,
-    });
+    await Promise.all(pages.map(p => p.locator('.res-cta').waitFor({ timeout: 20000 })));
+    };
+    await playDuel();
     console.log(
       "PASS friend challenge starts existing live duel; six rounds finish",
     );
@@ -281,6 +278,11 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
       })
       .click();
     await a.locator(".messenger-result").waitFor();
+    await a.locator('.messenger-result').getByRole('button', { name: /revanche/i }).click();
+    await b.getByRole('button', { name: /Messages · AliceSocial/ }).click();
+    await b.locator('.messenger-actions').getByRole('button', { name: 'Accepter', exact: true }).click();
+    await playDuel();
+    console.log('PASS result in chat → rematch invitation → second complete six-round duel');
     await a.goto("http://127.0.0.1:4330/?app", {
       waitUntil: "commit",
     });
@@ -292,10 +294,10 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
         exact: true,
       })
       .click();
-    await a.locator(".history-card").waitFor();
+    await a.locator(".history-card").first().waitFor();
     await capture(a, "history");
     assert(
-      (await a.locator(".history-card").innerText()).includes("BobSocial"),
+      (await a.locator(".history-card").allTextContents()).join(' ').includes("BobSocial"),
     );
     await a
       .getByRole("button", {

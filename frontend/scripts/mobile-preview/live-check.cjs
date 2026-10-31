@@ -6,14 +6,15 @@ const { randomBytes } = require('crypto');
 const { spawn } = require('child_process');
 const { chromium } = require(process.env.PLAYWRIGHT_PATH || 'C:/Users/User/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const server = require('./serve.cjs');
+const { createQaData } = require('./test-data.cjs');
 const out = path.resolve(__dirname, '../../.mobile-preview');
 const backendFile = path.resolve(__dirname, '../../../backend/server.js');
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 (async () => {
-  fs.mkdirSync(path.join(out, 'live-data'), { recursive: true });
+  const data = createQaData(out, 'live-qa-');
   const backend = spawn(process.execPath, [backendFile], {
     cwd: out, windowsHide: true,
-    env: { ...process.env, NODE_ENV: 'test', PORT: '3003', DATA_DIR: path.join(out, 'live-data'),
+    env: { ...process.env, NODE_ENV: 'test', PORT: '3003', DATA_DIR: data,
       CORS_ORIGIN: 'http://127.0.0.1:4324', GUEST_AUTH_SECRET: randomBytes(32).toString('hex'),
       NODE_PATH: process.env.BACKEND_NODE_MODULES || path.resolve(__dirname, '../../../backend/node_modules') },
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -42,6 +43,17 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
         localStorage.setItem('quizzup-name', name);
         localStorage.setItem('quizzup-avatar', avatar);
         localStorage.setItem('quizzup-lang', 'fr');
+        const Native = window.WebSocket;
+        window.__qaSockets = []; window.__qaEvents = [];
+        window.WebSocket = class extends Native {
+          constructor(...args) {
+            super(...args); window.__qaSockets.push(this);
+            this.addEventListener('message', e => { try {
+              const d = JSON.parse(e.data);
+              window.__qaEvents.push({ type: d.type, round: d.round, reconnect: d.reconnect, answered: d.answered, yourAnswer: d.yourAnswer });
+            } catch {} });
+          }
+        };
       }, { name, avatar });
       const page = await context.newPage();
       page.on('request', request => { if (new URL(request.url()).pathname.startsWith('/audio/')) musicRequests.push(request.url()); });
@@ -76,6 +88,13 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
       assert.equal(await pages[0].locator('.hud-chip:not(.mine)').getAttribute('data-state'), 'waiting');
       assert.equal(await pages[1].locator('.answer:disabled').count(), 0, 'Opponent reply disabled too soon');
       if (round === 1) await pages[0].screenshot({path:path.join(out,'live-ack-waiting.png'),fullPage:true});
+      if (round === 2) {
+        await pages[0].evaluate(() => window.__qaSockets.at(-1).close());
+        await pages[0].waitForFunction(() => window.__qaEvents.some(e => e.type === 'question' && e.round === 2 && e.reconnect && e.answered && e.yourAnswer === 0));
+        await pages[0].waitForFunction(() => document.querySelectorAll('.answer:disabled').length === 4 && document.querySelectorAll('.answer')[0].classList.contains('selected'));
+        assert.equal(await pages[0].locator('.answer:disabled').count(), 4, 'Reconnect allowed a second answer');
+        console.log('PASS transport reconnect during a round preserves the submitted answer');
+      }
       await pages[1].locator('.answer').nth(1).click();
       await Promise.all(pages.map(page => page.locator('.mobile-answer-feedback strong').waitFor()));
     }

@@ -5,6 +5,7 @@ const path = require('path');
 const fs = require('fs');
 
 process.env.DATA_DIR = fs.mkdtempSync(path.join(os.tmpdir(), 'catstats-'));
+fs.writeFileSync(path.join(process.env.DATA_DIR, 'category-stats.json'), '{}');
 const categoryStats = require('./category-stats');
 
 test('counts starts, chosen vs random, completion', () => {
