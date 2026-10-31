@@ -2708,6 +2708,7 @@ textarea:focus {
 }
 
 .pf-name {
+  margin-top: 0;
   font-family: var(--v4-font-display) !important;
   font-weight: 700 !important;
   font-size: 28px !important;
@@ -2731,6 +2732,7 @@ textarea:focus {
 
 /* ── Section title ─────────────────────────────────────── */
 .pf-section-title {
+  letter-spacing: normal;
   font-family: var(--v4-font-display) !important;
   font-weight: 700 !important;
   font-size: 16px !important;
@@ -2871,7 +2873,7 @@ textarea:focus {
   justify-content: space-between !important;
 }
 
-.cat-header h2 {
+.cat-header :is(h1, h2) {
   font-family: var(--v4-font-display) !important;
   font-weight: 700 !important;
   font-size: 24px !important;

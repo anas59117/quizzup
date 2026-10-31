@@ -110,14 +110,15 @@ export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoin
       {own != null && other != null && <p className="messenger-score"><span>{c.you}<strong>{own}</strong></span><span aria-hidden="true">:</span><span>{peer?.name}<strong>{other}</strong></span></p>}
       <button disabled={!result.category || !social.connected || social.pendingActions?.[`challenge:${id}`]} onClick={() => social.createChallenge(id, result.category)}>{c.rematch}</button></section>;
   };
-  return <section ref={shellRef} className={`messenger ${id ? 'is-thread' : ''}`} aria-label={c.title}>
+  return <main id="main-content" tabIndex={-1} ref={shellRef} className={`messenger ${id ? 'is-thread' : ''}`} aria-labelledby="messages-title">
     <header className="messenger-header">
       <button className="messenger-icon" aria-label={c.back} onClick={back}><span aria-hidden="true">←</span></button>
       {id ? <button className="messenger-peer" disabled={!onOpenPlayer} onClick={() => onOpenPlayer?.(id)} aria-label={`${c.profile} · ${peer?.name || ''}`}>
         <span className="messenger-avatar"><PlayerAvatar avatar={peer?.avatar} /></span><span><strong>{peer?.name || c.title}</strong><small>{peer?.online ? c.online : c.offline}</small></span>
-      </button> : <div><span className="messenger-kicker">{c.eyebrow}</span><h1>{c.title}{social.unreadCount > 0 && <span className="messenger-total">{social.unreadCount}</span>}</h1></div>}
+      </button> : <div><span className="messenger-kicker">{c.eyebrow}</span><h1 id="messages-title" tabIndex={-1}>{c.title}{social.unreadCount > 0 && <span className="messenger-total">{social.unreadCount}</span>}</h1></div>}
       {id && <button className="messenger-challenge" onClick={() => { setMode('live'); setChooser(true); }} aria-label={c.challenge}><Icon name="bolt" size={19} /><span>{c.challenge}</span></button>}
     </header>
+    {id && <h1 id="messages-title" tabIndex={-1} className="screen-reader-only">{c.title} · {peer?.name || c.title}</h1>}
     {!social.connected && <p className="messenger-notice" role="status">{c.disconnected}</p>}
     {(social.error || sendError) && <div className="messenger-notice error" role="alert">{sendError ? c.failed : c.error}<button onClick={() => { setSendError(false); id ? social.requestHistory(id) : social.requestConversations(); }}>{c.retry}</button></div>}
     {id ? <>
@@ -157,5 +158,5 @@ export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoin
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
     }}><header><h2 id="messenger-choose">{c.choose}</h2><button autoFocus className="messenger-icon" aria-label={c.cancel} onClick={() => setChooser(false)}><Icon name="close" size={20} /></button></header><div className="messenger-modes" role="group" aria-label={c.mode}><button aria-pressed={mode === 'live'} onClick={() => setMode('live')}>{c.liveMode}</button><button aria-pressed={mode === 'async'} onClick={() => setMode('async')}>{c.asyncMode}</button></div><p>{mode === 'async' ? c.asyncHelp : c.chooseHelp}</p><div className="messenger-themes">{CATEGORIES.map(category => <button disabled={!social.connected || social.pendingActions?.[`challenge:${id}`]} key={category.key} onClick={() => { if (social.createChallenge(id, category.key, mode)) setChooser(false); }}><span>{category.label}</span><Icon name="arrow" size={18} /></button>)}</div></div>}
     {asyncId && <AsyncChallenge social={social} challengeId={asyncId} onClose={() => { social.closeAsyncChallenge(); shellRef.current?.querySelector('.messenger-challenge')?.focus(); }} />}
-  </section>;
+  </main>;
 }

@@ -18,6 +18,8 @@ import { useMatchHistory, MatchHistory } from './MatchHistory';
 import './community.css';
 import './home-refinement.css';
 import './browse-theme.css';
+import './accessibility.css';
+import { SkipLink } from './SkipLink';
 import { HomeLoading } from './HomeLoading';
 import { useBrowseMotion } from './useBrowseMotion';
 import { usePlayers, PlayerSheet, topicLabel } from './players';
@@ -71,7 +73,7 @@ function writeLiveSession(value) {
   } catch {}
 }
 
-export default function App() {
+function AppContent() {
   const { t, lang } = useI18n();
   const [theme, toggleTheme] = useTheme();
   const [muted, setMuted] = useState(SFX.muted);
@@ -1208,9 +1210,9 @@ export default function App() {
     return (
       <div className="app app-nav app-top">
         <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
-        <div className="container wide">
+        <main id="main-content" tabIndex={-1} aria-labelledby="community-title" className="container wide">
           <div className="cat-header">
-            <h2>{lang === 'fr' ? 'Communauté' : 'Community'}</h2>
+            <h1 id="community-title" tabIndex={-1}>{lang === 'fr' ? 'Communauté' : 'Community'}</h1>
           </div>
           <FeedScreen
             feed={feed}
@@ -1219,7 +1221,7 @@ export default function App() {
             onOpenTopicLeaderboard={(key) => openLeaderboard(key, 'feed')}
             onOpenPlayer={players.open}
           />
-        </div>
+        </main>
         <PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} />
         <NavBar active="feed" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>
@@ -1423,6 +1425,10 @@ export default function App() {
   }
 
   return null;
+}
+
+export default function App() {
+  return <><SkipLink /><AppContent /></>;
 }
 
 

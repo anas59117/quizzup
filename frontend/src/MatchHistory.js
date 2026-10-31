@@ -66,12 +66,12 @@ export function MatchHistory({
   const { lang } = useI18n();
   const fr = lang === "fr";
   return (
-    <main className="container community-history">
+    <main id="main-content" tabIndex={-1} aria-labelledby="history-title" className="container community-history">
       <header>
         <button onClick={onBack} aria-label={fr ? "Retour" : "Back"}>
           ←
         </button>
-        <h1>{fr ? "Historique" : "Match history"}</h1>
+        <h1 id="history-title" tabIndex={-1}>{fr ? "Historique" : "Match history"}</h1>
       </header>
       {history.loading && (
         <p role="status">{fr ? "Chargement…" : "Loading…"}</p>

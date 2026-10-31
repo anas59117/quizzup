@@ -1,0 +1,38 @@
+.screen-reader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 10000;
+  top: calc(env(safe-area-inset-top, 0px) + 8px);
+  left: 12px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: #ffe05d;
+  color: #17171c;
+  font-weight: 700;
+  transform: translateY(calc(-100% - env(safe-area-inset-top, 0px) - 16px));
+}
+
+.skip-link:focus {
+  transform: none;
+  outline: 3px solid #17171c;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px #fff;
+}
+
+/* Keep the link out of timed screens and out of modal focus traps. */
+body:not(:has(main#main-content)) .skip-link,
+body:has([aria-modal="true"]) .skip-link { display: none; }

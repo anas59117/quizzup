@@ -110,7 +110,7 @@ body:has(.app-home),body:has(.app-themes),body:has(.app-profile) { background: v
 
 /* A category is recognisable by symbol, label and content count, never colour alone. */
 .themes-refined .cat-header { margin: 0 0 16px; align-items: center; }
-.themes-refined .cat-header h2 { margin: 0; font-size: 28px; letter-spacing: -.8px; color: #fff; }
+.themes-refined .cat-header :is(h1, h2) { margin: 0; font-size: 28px; letter-spacing: -.8px; color: #fff; }
 .themes-refined .back-link { min-height: 44px; color: #fff; }
 .themes-refined .search-bar { display: flex; align-items: center; gap: 10px; min-height: 50px; padding: 0 14px !important; background: var(--browse-paper) !important; border: 1px solid var(--browse-paper) !important; border-radius: 16px !important; margin-bottom: 22px !important; color: var(--browse-muted); }
 .themes-refined .search-bar .search-icon { position: static; display: flex; color: var(--browse-muted) !important; }

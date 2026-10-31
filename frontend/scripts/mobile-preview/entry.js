@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { I18nProvider } from '../../src/i18n';
+import { SkipLink } from '../../src/SkipLink';
 import { GameFeelProvider } from '../../src/GameFeelProvider';
 import { QuestionContent } from '../../src/enhanced-QuestionContent';
 import { HomeContent, FinishedContent, WaitingContent, ProfileContent, ShopContent, CategoryPreviewContent, RoundIntroContent, CategoriesContent } from '../../src/screens';
@@ -75,4 +76,4 @@ function Preview() {
     {browse && <NavBar active={screen === 'themes' ? 'categories' : screen} onQuickMatch={play} onNav={next=>setScreen(next === 'categories' ? 'themes' : next)} />}
   </div>;
 }
-createRoot(document.getElementById('root')).render(<I18nProvider><GameFeelProvider>{params.has('app') ? <App /> : <Preview />}</GameFeelProvider></I18nProvider>);
+createRoot(document.getElementById('root')).render(<I18nProvider><GameFeelProvider>{params.has('app') ? <App /> : <><SkipLink /><Preview /></>}</GameFeelProvider></I18nProvider>);

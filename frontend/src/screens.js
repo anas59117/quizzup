@@ -43,11 +43,12 @@ export function HomeContent({ startWithCategory, onSeeAll, pending, stats, contr
   const personalThemes = personalKeys.map(key => CATEGORIES.find(c => c.key === key)).filter(Boolean);
   const myThemes = [...personalThemes, ...FEATURED_TOPICS.filter(c => !personalThemes.some(mine => mine.key === c.key))].slice(0, 4);
   const discovery = [...FEATURED_TOPICS, ...CATEGORIES].filter(c => !myThemes.some(mine => mine.key === c.key)).slice(0, 2);
-  return <main className="container wide home-v4 home-refined">
+  return <main id="main-content" tabIndex={-1} aria-labelledby="home-title" className="container wide home-v4 home-refined">
     <header className="home-head home-head--v4">
       <BrandLogo />
       <div className="home-actions"><button type="button" className="home-action" onClick={() => onSeeAll?.(null, true)} aria-label={t('searchPlaceholder')}><Icon name="search" size={24} /></button>{controls}</div>
     </header>
+    <h1 id="home-title" tabIndex={-1} className="screen-reader-only">{fr ? 'Accueil' : 'Home'}</h1>
     <section aria-labelledby="home-my-themes">
       <div className="section-head-v4"><h2 id="home-my-themes" className="section-title-v4">{fr ? 'Mes thèmes' : 'My themes'}</h2><button className="section-edit" onClick={() => onSeeAll?.()}>{t('seeAll')} <Icon name="arrow" size={16} /></button></div>
       {!personalThemes.length && <p className="home-starter-label">{fr ? 'Quelques idées pour commencer' : 'Suggestions to get started'}</p>}
@@ -96,7 +97,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
   const bestStreak = Number.isFinite(topicStats.bestStreak) ? topicStats.bestStreak : '—';
   const topicLevel = topicStats.level || 1;
   return (
-    <div className={`container wide category-preview-v4${artwork ? ' cp-has-artwork' : ''}`} data-topic={category.key} data-family={category.family}>
+    <main id="main-content" tabIndex={-1} aria-labelledby="quiz-title" className={`container wide category-preview-v4${artwork ? ' cp-has-artwork' : ''}`} data-topic={category.key} data-family={category.family}>
       <div className="cp-bg" aria-hidden="true" />
 
       {/* Decorative overlay for Spider-Man / Marvel */}
@@ -127,7 +128,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
 
       <div className="cp-hero">
         <div className="cp-eyebrow">{preview.eyebrow}</div>
-        <h1 className="cp-title">
+        <h1 id="quiz-title" tabIndex={-1} className="cp-title">
           {artwork ? category.label : preview.line1 ? (
             <>
               <span className="cp-title-l">{preview.line1}</span>
@@ -172,14 +173,15 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
           <div className="cp-friends-empty">Personne pour l'instant. Sois le premier à défier tes amis.</div>
         )}
       </div>
-    </div>
+    </main>
   );
 }
 
 export function EnterCodeContent({ joinCode, setJoinCode, joinError, setJoinError, joinRoom, onBack, pending }) {
   const { t } = useI18n();
   return (
-    <div className="container center">
+    <main id="main-content" tabIndex={-1} aria-labelledby="join-title" className="container center">
+      <h1 id="join-title" tabIndex={-1} className="screen-reader-only">{t('joinFriend')}</h1>
       <div className="status-label">{t('joinFriend')}</div>
       <div className="room-code-label">{t('enterCode')}</div>
       <input className={`input code-input ${joinError ? 'err' : ''}`} placeholder="ABC12" value={joinCode} maxLength={5}
@@ -189,7 +191,7 @@ export function EnterCodeContent({ joinCode, setJoinCode, joinError, setJoinErro
       {joinError && <div className="code-err-msg" role="alert">{t('codeError')}</div>}
       <button className="btn" disabled={joinCode.trim().length < 4 || pending} onClick={() => joinRoom(joinCode)}>{t('joinMatch')}</button>
       <button className="home-themes-link" onClick={onBack}>{t('back')}</button>
-    </div>
+    </main>
   );
 }
 
@@ -206,10 +208,10 @@ export function CategoriesContent({ startWithCategory, family, onSelectFamily, p
   const activeFamily = FAMILIES.find((f) => f.key === family);
 
   return (
-    <main className="container wide themes-refined">
+    <main id="main-content" tabIndex={-1} aria-labelledby="themes-title" className="container wide themes-refined">
       {controls && <BrowseHeader controls={controls} />}
       <div className="cat-header">
-        <h2>{activeFamily && !results ? famLabel(t, activeFamily.key) : t('allTopics')}</h2>
+        <h1 id="themes-title" tabIndex={-1}>{activeFamily && !results ? famLabel(t, activeFamily.key) : t('allTopics')}</h1>
         {activeFamily && <button className="back-link" onClick={() => { setQuery(''); onSelectFamily(null); }}>{t('backToTopics')}</button>}
       </div>
       <SearchBar value={query} onChange={setQuery} placeholder={t('searchPlaceholder')} describedBy="themes-search-scope" />
@@ -320,7 +322,7 @@ export function ProfileContent({
   const followingCount = stats.following || 0;
 
   return (
-    <div className="container pf-v4">
+    <main id="main-content" tabIndex={-1} aria-labelledby="profile-title" className="container pf-v4">
       {controls && <BrowseHeader controls={controls} />}
       {/* ── Hero ──────────────────────────────────────────── */}
       <div className="pf-hero">
@@ -330,7 +332,7 @@ export function ProfileContent({
             <Icon name="edit" size={11} />
           </button>
         </div>
-        <div className="pf-name">{name}</div>
+        <h1 id="profile-title" tabIndex={-1} className="pf-name">{name}</h1>
         <div className="pf-bio">{t('level')} {stats.level}</div>
         <div className="pf-social">
           {t('playedGames', { n: stats.games || 0 })} · {t('socialFriends', { n: friendCount })} · {t('followedPlayers', { n: followingCount })}
@@ -398,7 +400,7 @@ export function ProfileContent({
       )}
 
       {/* ── Level progression card ────────────────────────── */}
-      <div className="pf-section-title">{t('overallProgress')}</div>
+      <h2 className="pf-section-title">{t('overallProgress')}</h2>
       <div className="pf-level-card">
         <div className="pf-level-head">
           <span className="pf-level-label">{t('level')} {stats.level}</span>
@@ -431,7 +433,7 @@ export function ProfileContent({
       {/* ── My themes (mini topic grid) ───────────────────── */}
       {stats.topics && stats.topics.length > 0 && (
         <>
-          <div className="pf-section-title">{t('myTopics')}</div>
+          <h2 className="pf-section-title">{t('myTopics')}</h2>
           <div className="pf-themes">
             {stats.topics.slice(0, 8).map((topic) => {
               const cat = CATEGORIES.find((c) => c.key === topic.key);
@@ -452,7 +454,7 @@ export function ProfileContent({
       )}
 
       {/* ── Stats grid ────────────────────────────────────── */}
-      <div className="pf-section-title">{t('statistics')}</div>
+      <h2 className="pf-section-title">{t('statistics')}</h2>
       <ProfileStats stats={stats} />
 
       {/* ── CTAs ──────────────────────────────────────────── */}
@@ -473,7 +475,7 @@ export function ProfileContent({
       <a className="privacy-link" href="/privacy.html" target="_blank" rel="noopener noreferrer">
         {t('privacyPolicy')}
       </a>
-    </div>
+    </main>
   );
 }
 
@@ -490,11 +492,11 @@ export function LeaderboardContent({ board, loading, onBack, category = null, on
   const remaining = entries.slice(3);
 
   return (
-    <div className="container wide">
+    <main id="main-content" tabIndex={-1} aria-labelledby="ranking-title" className="container wide">
       <div className="cat-header">
         <div>
           <div className="status-label">{category ? t('topicLeaderboard') : t('seasonAllTime')}</div>
-          <h2>{category ? topicLabel(category) : t('globalLeaderboard')}</h2>
+          <h1 id="ranking-title" tabIndex={-1}>{category ? topicLabel(category) : t('globalLeaderboard')}</h1>
         </div>
         <button className="back-link" onClick={onBack}>{t('back')}</button>
       </div>
@@ -557,7 +559,7 @@ export function LeaderboardContent({ board, loading, onBack, category = null, on
           <span>{t('rankingEmptyHint')}</span>
         </div>
       )}
-    </div>
+    </main>
   );
 }
 
