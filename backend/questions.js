@@ -507,6 +507,63 @@ const sdm = require('./data/sdm.json');
 const niska = require('./data/niska.json');
 const aminematue = require('./data/aminematue.json');
 
+// Batch 34 — catalogue expansion: 55 new quizzes (football, music, series, gaming, culture).
+const footballFeminin = require('./data/football_feminin.json');
+const tottenham = require('./data/tottenham.json');
+const asRoma = require('./data/as_roma.json');
+const benfica = require('./data/benfica.json');
+const galatasaray = require('./data/galatasaray.json');
+const espagneFootball = require('./data/espagne_football.json');
+const gardiensLegendaires = require('./data/gardiens_legendaires.json');
+const cricket = require('./data/cricket.json');
+const judo = require('./data/judo.json');
+const surf = require('./data/surf.json');
+const skateboard = require('./data/skateboard.json');
+const escalade = require('./data/escalade.json');
+const countryMusic = require('./data/country_music.json');
+const punkGrunge = require('./data/punk_grunge.json');
+const musiqueArabeRai = require('./data/musique_arabe_rai.json');
+const arianaGrande = require('./data/ariana_grande.json');
+const badBunny = require('./data/bad_bunny.json');
+const brunoMars = require('./data/bruno_mars.json');
+const apexLegends = require('./data/apex_legends.json');
+const darkSouls = require('./data/dark_souls.json');
+const diablo = require('./data/diablo.json');
+const halo = require('./data/halo.json');
+const tekkenMortalKombat = require('./data/tekken_mortal_kombat.json');
+const vald = require('./data/vald.json');
+const laylow = require('./data/laylow.json');
+const plk = require('./data/plk.json');
+const hamza = require('./data/hamza.json');
+const rickAndMorty = require('./data/rick_and_morty.json');
+const narcos = require('./data/narcos.json');
+const mathematiquesLogique = require('./data/mathematiques_logique.json');
+const informatiqueTechnologie = require('./data/informatique_technologie.json');
+const economieFinance = require('./data/economie_finance.json');
+const psychologie = require('./data/psychologie.json');
+const droitJustice = require('./data/droit_justice.json');
+const allemagneFootball = require('./data/allemagne_football.json');
+const angleterreFootball = require('./data/angleterre_football.json');
+const senegalFootball = require('./data/senegal_football.json');
+const transfertsMercato = require('./data/transferts_mercato.json');
+const congoRdc = require('./data/congo_rdc.json');
+const entrepreneursTech = require('./data/entrepreneurs_tech.json');
+const rappeursUk = require('./data/rappeurs_uk.json');
+const edSheeran = require('./data/ed_sheeran.json');
+const postMalone = require('./data/post_malone.json');
+const kendrickLamar = require('./data/kendrick_lamar.json');
+const jCole = require('./data/j_cole.json');
+const betterCallSaul = require('./data/better_call_saul.json');
+const suits = require('./data/suits.json');
+const greySAnatomy = require('./data/grey_s_anatomy.json');
+const theMandalorian = require('./data/the_mandalorian.json');
+const familyGuy = require('./data/family_guy.json');
+const stardewValley = require('./data/stardew_valley.json');
+const recordsDuMonde = require('./data/records_du_monde.json');
+const phenomenesNaturels = require('./data/phenomenes_naturels.json');
+const monnaiesDuMonde = require('./data/monnaies_du_monde.json');
+const ilesDuMonde = require('./data/iles_du_monde.json');
+
 const CATEGORIES = {
   movies: {
     label: 'Cinéma',
@@ -1348,6 +1405,73 @@ const CATEGORIES = {
   arcane: { label: "Arcane", icon: "⚡", questions: [...arcaneQuiz] },
   bridgerton: { label: "Bridgerton", icon: "👑", questions: [...bridgertonQuiz] },
   gossip_girl: { label: "Gossip Girl", icon: "📱", questions: [...gossipGirlQuiz] },
+
+  // ── New quizzes: Football ──
+  football_feminin: { label: "Football Féminin", icon: "⚽", questions: [...footballFeminin] },
+  tottenham: { label: "Tottenham Hotspur", icon: "⚽", questions: [...tottenham] },
+  as_roma: { label: "AS Roma", icon: "⚽", questions: [...asRoma] },
+  benfica: { label: "SL Benfica", icon: "⚽", questions: [...benfica] },
+  galatasaray: { label: "Galatasaray", icon: "⚽", questions: [...galatasaray] },
+  espagne_football: { label: "Espagne (Football)", icon: "⚽", questions: [...espagneFootball] },
+  gardiens_legendaires: { label: "Gardiens Légendaires", icon: "🧤", questions: [...gardiensLegendaires] },
+  allemagne_football: { label: "Allemagne (Football)", icon: "⚽", questions: [...allemagneFootball] },
+  angleterre_football: { label: "Angleterre (Football)", icon: "⚽", questions: [...angleterreFootball] },
+  senegal_football: { label: "Sénégal (Football)", icon: "⚽", questions: [...senegalFootball] },
+  transferts_mercato: { label: "Transferts & Mercato", icon: "💰", questions: [...transfertsMercato] },
+
+  // ── New quizzes: Sports ──
+  cricket: { label: "Cricket", icon: "🏏", questions: [...cricket] },
+  judo: { label: "Judo", icon: "🥋", questions: [...judo] },
+  surf: { label: "Surf", icon: "🏄", questions: [...surf] },
+  skateboard: { label: "Skateboard", icon: "🛹", questions: [...skateboard] },
+  escalade: { label: "Escalade", icon: "🧗", questions: [...escalade] },
+
+  // ── New quizzes: Musique ──
+  country_music: { label: "Country Music", icon: "🤠", questions: [...countryMusic] },
+  punk_grunge: { label: "Punk & Grunge", icon: "🎸", questions: [...punkGrunge] },
+  musique_arabe_rai: { label: "Musique Arabe & Raï", icon: "🎵", questions: [...musiqueArabeRai] },
+  ariana_grande: { label: "Ariana Grande", icon: "🎤", questions: [...arianaGrande] },
+  bad_bunny: { label: "Bad Bunny", icon: "🐰", questions: [...badBunny] },
+  bruno_mars: { label: "Bruno Mars", icon: "🎤", questions: [...brunoMars] },
+  rappeurs_uk: { label: "Rappeurs UK", icon: "🇬🇧", questions: [...rappeursUk] },
+  ed_sheeran: { label: "Ed Sheeran", icon: "🎸", questions: [...edSheeran] },
+  post_malone: { label: "Post Malone", icon: "🎤", questions: [...postMalone] },
+  kendrick_lamar: { label: "Kendrick Lamar", icon: "🎤", questions: [...kendrickLamar] },
+  j_cole: { label: "J. Cole", icon: "🎤", questions: [...jCole] },
+  vald: { label: "Vald", icon: "🎤", questions: [...vald] },
+  laylow: { label: "Laylow", icon: "🎤", questions: [...laylow] },
+  plk: { label: "PLK", icon: "🎤", questions: [...plk] },
+  hamza: { label: "Hamza", icon: "🎤", questions: [...hamza] },
+
+  // ── New quizzes: Jeux Vidéo ──
+  apex_legends: { label: "Apex Legends", icon: "🎮", questions: [...apexLegends] },
+  dark_souls: { label: "Dark Souls", icon: "⚔️", questions: [...darkSouls] },
+  diablo: { label: "Diablo", icon: "😈", questions: [...diablo] },
+  halo: { label: "Halo", icon: "🎮", questions: [...halo] },
+  tekken_mortal_kombat: { label: "Tekken & Mortal Kombat", icon: "👊", questions: [...tekkenMortalKombat] },
+  stardew_valley: { label: "Stardew Valley", icon: "🌾", questions: [...stardewValley] },
+
+  // ── New quizzes: Séries & Films ──
+  rick_and_morty: { label: "Rick and Morty", icon: "🧪", questions: [...rickAndMorty] },
+  narcos: { label: "Narcos", icon: "📺", questions: [...narcos] },
+  better_call_saul: { label: "Better Call Saul", icon: "⚖️", questions: [...betterCallSaul] },
+  suits: { label: "Suits", icon: "👔", questions: [...suits] },
+  grey_s_anatomy: { label: "Grey's Anatomy", icon: "🏥", questions: [...greySAnatomy] },
+  the_mandalorian: { label: "The Mandalorian", icon: "🪖", questions: [...theMandalorian] },
+  family_guy: { label: "Family Guy", icon: "📺", questions: [...familyGuy] },
+
+  // ── New quizzes: Culture Générale ──
+  mathematiques_logique: { label: "Mathématiques & Logique", icon: "🔢", questions: [...mathematiquesLogique] },
+  informatique_technologie: { label: "Informatique & Technologie", icon: "💻", questions: [...informatiqueTechnologie] },
+  economie_finance: { label: "Économie & Finance", icon: "📊", questions: [...economieFinance] },
+  psychologie: { label: "Psychologie", icon: "🧠", questions: [...psychologie] },
+  droit_justice: { label: "Droit & Justice", icon: "⚖️", questions: [...droitJustice] },
+  congo_rdc: { label: "Congo RDC", icon: "🇨🇩", questions: [...congoRdc] },
+  entrepreneurs_tech: { label: "Entrepreneurs Tech", icon: "💡", questions: [...entrepreneursTech] },
+  records_du_monde: { label: "Records du Monde", icon: "🏆", questions: [...recordsDuMonde] },
+  phenomenes_naturels: { label: "Phénomènes Naturels", icon: "🌋", questions: [...phenomenesNaturels] },
+  monnaies_du_monde: { label: "Monnaies du Monde", icon: "💱", questions: [...monnaiesDuMonde] },
+  iles_du_monde: { label: "Îles du Monde", icon: "🏝️", questions: [...ilesDuMonde] },
 };
 
 function shuffleQuestions(items, random = Math.random) {

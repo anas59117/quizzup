@@ -1,0 +1,506 @@
+[
+  {
+    "text": "En quelle année l'escalade sportive est-elle devenue sport olympique ?",
+    "answers": ["2020 (Tokyo 2021)", "2016", "2024", "2012"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelles sont les trois disciplines de l'escalade sportive olympique à Tokyo 2020 ?",
+    "answers": ["Vitesse, bloc, difficulté", "Vitesse, endurance, bloc", "Bloc, difficulté, freestyle", "Vitesse, difficulté, via ferrata"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment appelle-t-on l'escalade sur de petites parois sans corde avec des tapis de réception ?",
+    "answers": ["Le bloc (bouldering)", "La difficulté (lead)", "La vitesse (speed)", "Le solo intégral"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment appelle-t-on l'escalade en tête avec corde sur une longue voie ?",
+    "answers": ["La difficulté (lead climbing)", "Le bloc", "La vitesse", "Le top-rope"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la hauteur standard du mur de vitesse en compétition ?",
+    "answers": ["15 mètres", "10 mètres", "20 mètres", "12 mètres"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel grimpeur tchèque est considéré comme le meilleur de tous les temps ?",
+    "answers": ["Adam Ondra", "Tomáš Mrázek", "Martin Straník", "Jan Hojer"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la cotation la plus élevée jamais grimpée en escalade sportive (2024) ?",
+    "answers": ["9c (5.15d)", "9b+ (5.15c)", "9a+ (5.15a)", "10a"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui a réalisé la première ascension d'une voie cotée 9c ?",
+    "answers": ["Adam Ondra (Silence, 2017)", "Alex Megos", "Stefano Ghisolfi", "Chris Sharma"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle la voie d'Adam Ondra cotée 9c en Norvège ?",
+    "answers": ["Silence", "Change", "Perfecto Mundo", "La Dura Dura"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel grimpeur espagnol a dominé l'escalade sportive dans les années 2000 ?",
+    "answers": ["Chris Sharma", "Dani Andrada", "Ramón Julián Puigblanqué", "Patxi Usobiaga"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel grimpeur américain a réalisé le premier free solo d'El Capitan en 2017 ?",
+    "answers": ["Alex Honnold", "Tommy Caldwell", "Chris Sharma", "Dean Potter"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle le documentaire sur le free solo d'Alex Honnold ?",
+    "answers": ["Free Solo", "The Dawn Wall", "Valley Uprising", "Silence"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qu'est-ce que le free solo en escalade ?",
+    "answers": ["Grimper sans corde ni protection", "Grimper en premier de cordée", "Grimper en vitesse", "Grimper en bloc"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle la grande paroi verticale du Yosemite grimpée en free solo par Honnold ?",
+    "answers": ["El Capitan", "Half Dome", "Dawn Wall", "The Nose"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel grimpeur a réalisé la première ascension libre du Dawn Wall sur El Capitan ?",
+    "answers": ["Tommy Caldwell et Kevin Jorgeson", "Alex Honnold", "Lynn Hill", "Chris Sharma"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle grimpeuse américaine est la première femme à avoir grimpé El Capitan en libre ?",
+    "answers": ["Lynn Hill", "Ashima Shiraishi", "Sasha DiGiulian", "Beth Rodden"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle le système de cotation français en escalade ?",
+    "answers": ["Système français (6a, 7a, 8a, etc.)", "Système Yosemite (5.10, 5.11, etc.)", "Système UIAA", "Système Ewbank"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel type de prise est le plus difficile à tenir en escalade ?",
+    "answers": ["Arquée (crimp)", "Bac (jug)", "Plat (sloper)", "Pincée (pinch)"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on une grosse prise facile à saisir en escalade ?",
+    "answers": ["Un bac (jug)", "Une réglette (crimp)", "Un plat (sloper)", "Une pincée (pinch)"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel outil les grimpeurs utilisent-ils pour assurer un grimpeur en tête ?",
+    "answers": ["Un système d'assurage (grigri, tube, etc.)", "Un mousqueton seul", "Une corde sans assureur", "Un harnais uniquement"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment appelle-t-on la poudre blanche que les grimpeurs mettent sur leurs mains ?",
+    "answers": ["La magnésie (chalk)", "Le talc", "La craie d'école", "La résine"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel type de chaussure les grimpeurs utilisent-ils ?",
+    "answers": ["Des chaussons d'escalade", "Des baskets", "Des chaussures de randonnée", "Des sandales spéciales"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel grimpeur français a remporté de multiples médailles mondiales en bloc et difficulté ?",
+    "answers": ["Mickael Mawem", "Romain Desgranges", "Sébastien Bouin", "Bassa Mawem"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle grimpeuse slovène a dominé l'escalade de compétition dans les années 2010-2020 ?",
+    "answers": ["Janja Garnbret", "Mina Markovič", "Petra Klingler", "Jessica Pilz"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien de titres mondiaux Janja Garnbret a-t-elle remportés (approximativement) ?",
+    "answers": ["Plus de 10", "5", "3", "20"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle grimpeuse a remporté l'or olympique en escalade à Tokyo 2021 ?",
+    "answers": ["Janja Garnbret", "Akiyo Noguchi", "Brooke Raboutou", "Miho Nonaka"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel grimpeur espagnol a remporté l'or olympique en escalade à Tokyo 2021 ?",
+    "answers": ["Alberto Ginés López", "Adam Ondra", "Tomoa Narasaki", "Jakob Schubert"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle le bloc en plein air, souvent sur des rochers naturels ?",
+    "answers": ["Le bouldering outdoor", "Le free solo", "Le deep water soloing", "Le trad climbing"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel site français est le plus célèbre au monde pour le bloc en extérieur ?",
+    "answers": ["Fontainebleau", "Chamonix", "Les Calanques", "Céüse"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel site espagnol est une Mecque de l'escalade sportive en falaise ?",
+    "answers": ["Siurana", "Margalef", "Oliana", "Tous ces sites catalans"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on l'escalade traditionnelle avec placement de protections amovibles ?",
+    "answers": ["Trad climbing", "Sport climbing", "Aid climbing", "Free climbing"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qu'est-ce que l'escalade artificielle (aid climbing) ?",
+    "answers": ["Utiliser du matériel pour progresser (étriers, etc.)", "Grimper sur un mur artificiel", "Grimper en salle", "Grimper avec une corde fixe"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle le deep water soloing ?",
+    "answers": ["L'escalade sans corde au-dessus de l'eau", "La plongée en escalade", "Le bloc sur des rochers côtiers", "L'escalade sous-marine"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel grimpeur autrichien est multiple champion du monde de difficulté ?",
+    "answers": ["Jakob Schubert", "Kilian Fischhuber", "David Lama", "Angela Eiter"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle grimpeuse autrichienne est la première femme à avoir grimpé du 9b ?",
+    "answers": ["Angela Eiter", "Janja Garnbret", "Petra Klingler", "Jessica Pilz"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel type de mouvement consiste à sauter d'une prise à une autre en escalade ?",
+    "answers": ["Un dyno (mouvement dynamique)", "Un deadpoint", "Un lock-off", "Un jeté"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on le fait de grimper une voie sans tomber dès la première tentative ?",
+    "answers": ["Un flash", "Un on-sight", "Un redpoint", "Un send"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on le fait de grimper une voie sans tomber et sans information préalable ?",
+    "answers": ["Un on-sight (à vue)", "Un flash", "Un redpoint", "Un pinkpoint"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on le fait de grimper une voie sans tomber après l'avoir travaillée ?",
+    "answers": ["Un redpoint", "Un flash", "Un on-sight", "Un toprope"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel grimpeur japonais est connu pour ses victoires en bloc en compétition ?",
+    "answers": ["Tomoa Narasaki", "Kokoro Fujii", "Kai Harada", "Meichi Narasaki"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel site américain est un haut lieu de l'escalade traditionnelle ?",
+    "answers": ["Yosemite Valley", "Red River Gorge", "Smith Rock", "Joshua Tree"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le record de vitesse sur le mur standard de 15 m (hommes, approximatif) ?",
+    "answers": ["Moins de 5 secondes", "Moins de 7 secondes", "Moins de 10 secondes", "Moins de 3 secondes"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel grimpeur indonésien a battu des records du monde en escalade de vitesse ?",
+    "answers": ["Veddriq Leonardo", "Alfian M. Fajri", "Aspar Jaelolo", "Katibin"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel pays domine l'escalade de vitesse en compétition ?",
+    "answers": ["Indonésie", "France", "Russie", "Chine"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on la surface d'escalade artificiellement construite ?",
+    "answers": ["Un mur d'escalade (SAE)", "Un rocher artificiel", "Une structure de bloc", "Un module grimpable"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel terme désigne le fait de poser ses pieds sur la paroi sans prise définie ?",
+    "answers": ["Le smearing (adhérence)", "Le edging", "Le hooking", "Le flagging"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on la technique de pied qui utilise le bord intérieur du chausson ?",
+    "answers": ["Carre interne (inside edge)", "Pointe (toe)", "Talon (heel hook)", "Plat (smear)"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mouvement consiste à coincer le talon du pied sur une prise pour tirer ?",
+    "answers": ["Heel hook (crochetage de talon)", "Toe hook", "Knee bar", "Flag"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle le mouvement qui utilise le genou coincé contre la paroi ?",
+    "answers": ["Knee bar (verrou de genou)", "Heel hook", "Drop knee", "Bicycle"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on le fait de tomber en escalade de bloc ?",
+    "answers": ["Un fall (chute sur le crash pad)", "Un vol", "Un plomb", "Un échec"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle le tapis de protection utilisé en bloc extérieur ?",
+    "answers": ["Un crash pad", "Un tatami", "Un matelas", "Un tapis de gym"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel grimpeur français est spécialisé dans les voies extrêmement dures en falaise ?",
+    "answers": ["Sébastien Bouin", "Romain Desgranges", "Enzo Oddo", "Mickael Mawem"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle grimpeuse américaine prodige a grimpé du V15 (8C) à seulement 14 ans ?",
+    "answers": ["Ashima Shiraishi", "Brooke Raboutou", "Natalia Grossman", "Sasha DiGiulian"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel système de cotation est utilisé pour le bloc ?",
+    "answers": ["Le système Fontainebleau (6A, 7A, 8A, etc.) et le V-scale", "Le système français (6a, 7a, etc.)", "Le système UIAA uniquement", "Le système Yosemite"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle organisation internationale gouverne l'escalade sportive ?",
+    "answers": ["IFSC (International Federation of Sport Climbing)", "IOC", "UIAA", "CAF"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel site italien est célèbre pour son escalade sportive en calcaire ?",
+    "answers": ["Arco (Trentin)", "Finale Ligure", "Dolomites", "Les trois"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle compétition annuelle se tient à Arco en Italie et est prestigieuse ?",
+    "answers": ["Rock Master", "Lead World Cup", "Bloc Masters", "Arco Grand Slam"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment appelle-t-on un passage très difficile au milieu d'une voie ?",
+    "answers": ["Un crux", "Un repos", "Une section", "Un nœud"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel type de corde les grimpeurs utilisent-ils pour l'escalade sportive ?",
+    "answers": ["Corde dynamique", "Corde statique", "Corde semi-statique", "Sangle"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel dispositif d'assurage auto-bloquant est le plus populaire en escalade ?",
+    "answers": ["Le Grigri (Petzl)", "Le tube ATC", "Le huit", "Le nœud de demi-cabestan"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle marque française est leader mondial en équipement d'escalade ?",
+    "answers": ["Petzl", "Beal", "Simond", "Mammut"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle la technique de grimpe en fissure (crack climbing) ?",
+    "answers": ["Coincement (jamming)", "Ramonage", "Layback", "Stemming"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel grimpeur britannique est un spécialiste du crack climbing et du trad ?",
+    "answers": ["Tom Randall et Pete Whittaker", "Steve McClure", "Dave MacLeod", "James McHaffie"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle grimpeuse française a été championne du monde de bloc ?",
+    "answers": ["Fanny Gibert", "Anouck Jaubert", "Julia Chanourdie", "Oriane Bertone"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel sommet est le plus haut du monde et a été gravi pour la première fois en 1953 ?",
+    "answers": ["L'Everest", "Le K2", "Le Kangchenjunga", "L'Annapurna"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a été le premier à atteindre le sommet de l'Everest ?",
+    "answers": ["Edmund Hillary et Tenzing Norgay", "Reinhold Messner", "George Mallory", "Junko Tabei"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel alpiniste est le premier à avoir gravi les 14 sommets de plus de 8000 m ?",
+    "answers": ["Reinhold Messner", "Jerzy Kukuczka", "Ed Viesturs", "Nirmal Purja"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel grimpeur népalais a gravi les 14 sommets de plus de 8000 m en 6 mois ?",
+    "answers": ["Nirmal 'Nims' Purja", "Mingma David Sherpa", "Kami Rita Sherpa", "Tenzing Norgay"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle l'escalade de blocs de glace ou de cascades gelées ?",
+    "answers": ["L'escalade de glace (ice climbing)", "Le dry-tooling", "Le mixed climbing", "Le crampon climbing"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel outil est utilisé pour l'escalade de glace ?",
+    "answers": ["Le piolet", "Le marteau", "La pioche", "Le burin"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel terme désigne le fait de chuter en étant encordé en escalade sportive ?",
+    "answers": ["Un vol (whipper)", "Un fall", "Un plomb", "Un swing"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on la personne qui tient la corde pour le grimpeur ?",
+    "answers": ["L'assureur (belayer)", "Le pareur", "Le second", "Le relayeur"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel problème de bloc est considéré comme le plus dur du monde (2024) ?",
+    "answers": ["Burden of Dreams (9A/V17)", "Nalle Hukkataival", "Creature from the Black Lagoon", "Dreamtime"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel grimpeur finlandais a réalisé le premier bloc coté 9A (V17) ?",
+    "answers": ["Nalle Hukkataival", "Alex Megos", "Daniel Woods", "Shawn Raboutou"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment appelle-t-on la technique où on pousse avec les deux pieds sur des parois opposées ?",
+    "answers": ["Le stemming (opposition)", "Le layback", "Le chimney", "Le bridging"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel pays organise les plus grandes compétitions d'escalade en Asie ?",
+    "answers": ["Japon", "Chine", "Corée du Sud", "Indonésie"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle falaise française est considérée comme l'une des plus belles du monde pour l'escalade sportive ?",
+    "answers": ["Céüse", "Buoux", "Les Calanques", "Verdon"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel grimpeur américain a repoussé les limites du bloc avec des ascensions de V16 et V17 ?",
+    "answers": ["Daniel Woods", "Chris Sharma", "Alex Honnold", "Jimmy Webb"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment s'appelle le fait de grimper en intérieur dans une salle commerciale ?",
+    "answers": ["L'escalade en salle (indoor climbing)", "Le bloc indoor", "Le mur d'escalade", "Le gym climbing"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel terme anglais désigne le fait d'enchaîner une voie sans chute ?",
+    "answers": ["Send (ou to send)", "Crush", "Climb clean", "Top out"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle grimpeuse française a remporté une médaille aux JO de Paris 2024 en escalade ?",
+    "answers": ["Oriane Bertone", "Fanny Gibert", "Julia Chanourdie", "Anouck Jaubert"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel type de roche est le plus courant pour l'escalade sportive en falaise ?",
+    "answers": ["Le calcaire", "Le granite", "Le grès", "Le basalte"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle la technique de grimpe qui utilise le corps entier contre la roche en cheminée ?",
+    "answers": ["Le ramonage (chimney climbing)", "Le stemming", "Le layback", "Le mantling"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel noeud les grimpeurs utilisent-ils pour s'encorder ?",
+    "answers": ["Le noeud de huit", "Le noeud de chaise", "Le noeud de cabestan", "Le noeud de pêcheur"],
+    "correct": 0,
+    "difficulty": "facile"
+  }
+]

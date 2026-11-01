@@ -1,0 +1,614 @@
+[
+  {
+    "text": "Combien vaut le nombre π (pi) arrondi à deux décimales ?",
+    "answers": ["3,14", "3,16", "3,12", "3,18"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le résultat de 7 × 8 ?",
+    "answers": ["56", "54", "58", "48"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment appelle-t-on un triangle dont les trois côtés sont égaux ?",
+    "answers": ["Équilatéral", "Isocèle", "Rectangle", "Scalène"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le plus petit nombre premier ?",
+    "answers": ["2", "1", "3", "0"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien de faces possède un cube ?",
+    "answers": ["6", "4", "8", "12"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le carré de 12 ?",
+    "answers": ["144", "124", "132", "148"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment appelle-t-on le résultat d'une multiplication ?",
+    "answers": ["Un produit", "Un quotient", "Une somme", "Une différence"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien vaut la racine carrée de 81 ?",
+    "answers": ["9", "8", "7", "11"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel mathématicien grec est célèbre pour son théorème sur les triangles rectangles ?",
+    "answers": ["Pythagore", "Euclide", "Archimède", "Thalès"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En géométrie, combien de degrés mesure un angle droit ?",
+    "answers": ["90°", "45°", "180°", "60°"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la somme des angles d'un triangle ?",
+    "answers": ["180°", "360°", "90°", "270°"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment appelle-t-on un nombre divisible uniquement par 1 et lui-même ?",
+    "answers": ["Un nombre premier", "Un nombre parfait", "Un nombre composé", "Un nombre rationnel"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le périmètre d'un cercle de rayon 5 cm (en termes de π) ?",
+    "answers": ["10π cm", "5π cm", "25π cm", "20π cm"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Que signifie le symbole '∞' en mathématiques ?",
+    "answers": ["L'infini", "La somme", "L'intégrale", "La proportion"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment appelle-t-on un polygone à 5 côtés ?",
+    "answers": ["Pentagone", "Hexagone", "Octogone", "Heptagone"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien vaut 2 puissance 10 ?",
+    "answers": ["1024", "512", "2048", "256"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le PGCD de 12 et 18 ?",
+    "answers": ["6", "3", "9", "12"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle la droite qui coupe un cercle en deux parties égales ?",
+    "answers": ["Le diamètre", "La corde", "La sécante", "La tangente"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le résultat de la factorielle de 5 (5!) ?",
+    "answers": ["120", "60", "24", "720"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle suite commence par 0, 1, 1, 2, 3, 5, 8, 13… ?",
+    "answers": ["La suite de Fibonacci", "La suite de Syracuse", "La suite arithmétique", "La suite géométrique"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En probabilités, quelle est la probabilité d'obtenir face en lançant une pièce équilibrée ?",
+    "answers": ["1/2", "1/3", "1/4", "1/6"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel mathématicien a inventé la géométrie analytique ?",
+    "answers": ["René Descartes", "Blaise Pascal", "Pierre de Fermat", "Isaac Newton"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on le nombre d'or, souvent noté φ (phi) ?",
+    "answers": ["Environ 1,618", "Environ 2,718", "Environ 3,142", "Environ 1,414"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom du dernier théorème de Fermat ?",
+    "answers": ["Il n'existe pas d'entiers positifs a, b, c tels que aⁿ + bⁿ = cⁿ pour n > 2", "Tout nombre pair est la somme de deux premiers", "Il existe une infinité de nombres premiers", "Tout entier supérieur à 1 a une décomposition en facteurs premiers unique"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui a démontré le dernier théorème de Fermat en 1995 ?",
+    "answers": ["Andrew Wiles", "Grigori Perelman", "Terence Tao", "Jean-Pierre Serre"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment appelle-t-on la constante mathématique e, d'une valeur d'environ 2,718 ?",
+    "answers": ["Le nombre d'Euler", "Le nombre de Napier", "Le nombre d'Euler et de Napier sont les deux acceptés", "Le nombre de Gauss"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel mathématicien indien autodidacte a envoyé ses travaux à Cambridge en 1913 ?",
+    "answers": ["Srinivasa Ramanujan", "Brahmagupta", "Aryabhata", "C.V. Raman"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle le système de numération utilisé couramment, basé sur 10 chiffres ?",
+    "answers": ["Le système décimal", "Le système binaire", "Le système hexadécimal", "Le système octal"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le théorème fondamental de l'algèbre ?",
+    "answers": ["Tout polynôme non constant a au moins une racine complexe", "La somme de deux nombres pairs est paire", "Tout nombre entier est premier ou composé", "La diagonale d'un carré est irrationnelle"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui est considéré comme le père de la géométrie avec ses 'Éléments' ?",
+    "answers": ["Euclide", "Pythagore", "Archimède", "Aristote"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Que vaut i² en mathématiques (où i est l'unité imaginaire) ?",
+    "answers": ["-1", "1", "0", "i"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mathématicien a formulé les lois du calcul infinitésimal en même temps que Newton ?",
+    "answers": ["Gottfried Wilhelm Leibniz", "Leonhard Euler", "Carl Friedrich Gauss", "Joseph-Louis Lagrange"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on un nombre qui peut s'écrire sous forme de fraction a/b ?",
+    "answers": ["Un nombre rationnel", "Un nombre irrationnel", "Un nombre transcendant", "Un nombre algébrique"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de la conjecture affirmant que tout nombre pair supérieur à 2 est somme de deux nombres premiers ?",
+    "answers": ["La conjecture de Goldbach", "La conjecture de Riemann", "La conjecture de Poincaré", "La conjecture de Collatz"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En statistiques, comment appelle-t-on la valeur qui apparaît le plus souvent dans un ensemble de données ?",
+    "answers": ["Le mode", "La médiane", "La moyenne", "L'écart-type"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mathématicien a développé la théorie des ensembles ?",
+    "answers": ["Georg Cantor", "David Hilbert", "Kurt Gödel", "Bertrand Russell"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien vaut la somme des 100 premiers entiers naturels (1+2+3+...+100) ?",
+    "answers": ["5050", "5000", "4950", "5100"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le volume d'une sphère de rayon r ?",
+    "answers": ["4/3 × π × r³", "4 × π × r²", "π × r²", "2 × π × r³"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a prouvé qu'il existe une infinité de nombres premiers ?",
+    "answers": ["Euclide", "Pythagore", "Archimède", "Ératosthène"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on la méthode d'Ératosthène pour trouver les nombres premiers ?",
+    "answers": ["Le crible d'Ératosthène", "Le tamis d'Ératosthène", "La table d'Ératosthène", "Le filtre d'Ératosthène"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mathématicien russe a résolu la conjecture de Poincaré en 2003 ?",
+    "answers": ["Grigori Perelman", "Andreï Kolmogorov", "Andreï Markov", "Nikolaï Lobatchevski"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le théorème de Thalès ?",
+    "answers": ["Si deux droites parallèles coupent deux sécantes, les rapports des segments sont égaux", "La somme des carrés des cathètes égale le carré de l'hypoténuse", "La somme des angles d'un triangle vaut 180°", "Tout diamètre d'un cercle sous-tend un angle droit"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle le problème des sept ponts de Königsberg, résolu par Euler ?",
+    "answers": ["Un problème de théorie des graphes", "Un problème de géométrie", "Un problème d'arithmétique", "Un problème d'algèbre"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel symbole représente la sommation en mathématiques ?",
+    "answers": ["Σ (sigma majuscule)", "Π (pi majuscule)", "Δ (delta majuscule)", "Ω (oméga majuscule)"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on un nombre qui n'est pas rationnel, comme √2 ?",
+    "answers": ["Un nombre irrationnel", "Un nombre transcendant", "Un nombre complexe", "Un nombre imaginaire"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mathématicien est célèbre pour ses théorèmes d'incomplétude ?",
+    "answers": ["Kurt Gödel", "Alan Turing", "David Hilbert", "Alfred Tarski"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de sommets possède un icosaèdre ?",
+    "answers": ["12", "20", "8", "6"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de la courbe en forme de cloche utilisée en statistiques ?",
+    "answers": ["La courbe de Gauss", "La courbe de Laplace", "La courbe de Poisson", "La courbe de Bernoulli"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mathématicien français a inventé le triangle arithmétique portant son nom ?",
+    "answers": ["Blaise Pascal", "Pierre de Fermat", "René Descartes", "Joseph Fourier"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on la branche des mathématiques qui étudie les formes et les déformations continues ?",
+    "answers": ["La topologie", "La géométrie algébrique", "L'analyse fonctionnelle", "La géométrie différentielle"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nombre de faces d'un dodécaèdre régulier ?",
+    "answers": ["12", "10", "20", "8"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans le plan cartésien, quelle est l'équation d'un cercle centré à l'origine de rayon r ?",
+    "answers": ["x² + y² = r²", "x + y = r", "x² − y² = r²", "x² + y² = r"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mathématicien a introduit la notation f(x) pour les fonctions ?",
+    "answers": ["Leonhard Euler", "Isaac Newton", "Gottfried Leibniz", "Joseph-Louis Lagrange"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment appelle-t-on les nombres 1, 4, 9, 16, 25… ?",
+    "answers": ["Les carrés parfaits", "Les nombres premiers", "Les nombres de Fibonacci", "Les nombres triangulaires"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le PPCM de 6 et 8 ?",
+    "answers": ["24", "48", "12", "16"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En logique, comment appelle-t-on une proposition qui est toujours vraie ?",
+    "answers": ["Une tautologie", "Un axiome", "Un postulat", "Un théorème"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle branche des mathématiques étudie le hasard et les événements aléatoires ?",
+    "answers": ["Les probabilités", "La statistique descriptive", "L'algèbre linéaire", "La combinatoire"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a formulé les 23 problèmes mathématiques au Congrès de 1900 ?",
+    "answers": ["David Hilbert", "Henri Poincaré", "Georg Cantor", "Felix Klein"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment appelle-t-on un ensemble qui contient ses propres points limites ?",
+    "answers": ["Un ensemble fermé", "Un ensemble ouvert", "Un ensemble borné", "Un ensemble compact"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le résultat de log₁₀(1000) ?",
+    "answers": ["3", "4", "2", "10"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mathématicien a donné son nom aux coordonnées polaires et à l'identité e^(iπ) + 1 = 0 ?",
+    "answers": ["Leonhard Euler", "Carl Friedrich Gauss", "Augustin-Louis Cauchy", "Bernhard Riemann"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien y a-t-il de solides de Platon ?",
+    "answers": ["5", "4", "6", "7"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de la propriété qui dit que a × (b + c) = a × b + a × c ?",
+    "answers": ["La distributivité", "La commutativité", "L'associativité", "La transitivité"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment appelle-t-on le rapport entre la diagonale et le côté d'un carré ?",
+    "answers": ["√2", "φ (nombre d'or)", "π", "e"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel prix récompense les mathématiciens de moins de 40 ans tous les 4 ans ?",
+    "answers": ["La médaille Fields", "Le prix Abel", "Le prix Wolf", "Le prix Turing"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Français a reçu la médaille Fields en 2010 pour ses travaux sur les équations de Navier-Stokes ?",
+    "answers": ["Cédric Villani", "Laurent Lafforgue", "Wendelin Werner", "Jean-Pierre Serre"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de côtés possède un octogone ?",
+    "answers": ["8", "6", "10", "7"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le 10e nombre premier ?",
+    "answers": ["29", "23", "31", "27"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En logique, quel connecteur est représenté par le symbole '∧' ?",
+    "answers": ["ET (conjonction)", "OU (disjonction)", "NON (négation)", "IMPLIQUE"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est l'aire d'un triangle de base 10 et de hauteur 6 ?",
+    "answers": ["30", "60", "16", "20"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle la suite dont chaque terme est obtenu en divisant le terme précédent par 2 ?",
+    "answers": ["Une suite géométrique de raison 1/2", "Une suite arithmétique", "Une suite harmonique", "Une suite de Fibonacci"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mathématicien a inventé la théorie des fractales ?",
+    "answers": ["Benoît Mandelbrot", "Leonhard Euler", "Henri Poincaré", "John von Neumann"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on la plus longue droite reliant deux points d'un cercle ?",
+    "answers": ["Le diamètre", "Le rayon", "La corde", "La sécante"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le résultat de 0! (factorielle de zéro) ?",
+    "answers": ["1", "0", "Indéfini", "Infini"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a développé la théorie des jeux avec Oskar Morgenstern ?",
+    "answers": ["John von Neumann", "John Nash", "Alan Turing", "Claude Shannon"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment s'appelle l'hypothèse non prouvée concernant la distribution des zéros de la fonction zêta ?",
+    "answers": ["L'hypothèse de Riemann", "La conjecture de Goldbach", "La conjecture de Poincaré", "Le théorème de Fermat"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel type de nombre est π ?",
+    "answers": ["Transcendant", "Rationnel", "Algébrique", "Entier"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la formule de l'aire d'un disque ?",
+    "answers": ["π × r²", "2 × π × r", "π × d", "π × r"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En théorie des ensembles, quel symbole signifie 'appartient à' ?",
+    "answers": ["∈", "⊂", "∪", "∩"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mathématicien persan a donné son nom à l'algèbre ?",
+    "answers": ["Al-Khwarizmi", "Omar Khayyam", "Al-Biruni", "Avicenne"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le déterminant de la matrice identité 2×2 ?",
+    "answers": ["1", "0", "2", "-1"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel concept mathématique Alan Turing a-t-il formalisé avec sa 'machine' ?",
+    "answers": ["La calculabilité", "Les nombres premiers", "Les fractales", "La topologie"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de diagonales possède un hexagone ?",
+    "answers": ["9", "6", "12", "8"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom du paradoxe où Achille ne rattrape jamais la tortue ?",
+    "answers": ["Le paradoxe de Zénon", "Le paradoxe de Russell", "Le paradoxe du barbier", "Le paradoxe de Banach-Tarski"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment appelle-t-on un nombre dont la somme de ses diviseurs propres est égale à lui-même ?",
+    "answers": ["Un nombre parfait", "Un nombre premier", "Un nombre amical", "Un nombre abondant"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le premier nombre parfait ?",
+    "answers": ["6", "28", "12", "8"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle transformation géométrique conserve les distances et les angles ?",
+    "answers": ["Une isométrie", "Une homothétie", "Une projection", "Une affinité"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mathématicien a développé la géométrie non euclidienne hyperbolique ?",
+    "answers": ["Nikolaï Lobatchevski", "Bernhard Riemann", "Georg Cantor", "Évariste Galois"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment s'appelle le paradoxe logique 'cette phrase est fausse' ?",
+    "answers": ["Le paradoxe du menteur", "Le paradoxe de Russell", "Le paradoxe de Zénon", "Le paradoxe de Cantor"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mathématicien français mort à 20 ans en duel a fondé la théorie des groupes ?",
+    "answers": ["Évariste Galois", "Blaise Pascal", "Henri Poincaré", "Joseph Fourier"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En base 2 (binaire), combien vaut le nombre décimal 10 ?",
+    "answers": ["1010", "1100", "1001", "1110"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de la transformation qui associe à chaque nombre son opposé ?",
+    "answers": ["La symétrie par rapport à l'origine", "La translation", "L'homothétie", "La rotation"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien vaut la somme 1/2 + 1/4 + 1/8 + 1/16 + … à l'infini ?",
+    "answers": ["1", "2", "1/2", "∞"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel mathématicien a introduit le concept de 'différents ordres d'infini' ?",
+    "answers": ["Georg Cantor", "David Hilbert", "Kurt Gödel", "Bertrand Russell"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment appelle-t-on la propriété a + b = b + a ?",
+    "answers": ["La commutativité", "L'associativité", "La distributivité", "L'idempotence"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la dérivée de x² ?",
+    "answers": ["2x", "x", "x²", "2"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nombre de combinaisons de 2 éléments parmi 5 (C(5,2)) ?",
+    "answers": ["10", "20", "5", "25"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mathématicien a inventé les logarithmes ?",
+    "answers": ["John Napier", "Leonhard Euler", "Isaac Newton", "Henry Briggs"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En géométrie, comment appelle-t-on un angle supérieur à 180° ?",
+    "answers": ["Un angle rentrant", "Un angle obtus", "Un angle plat", "Un angle saillant"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel outil permet de construire des figures géométriques avec uniquement une règle non graduée et un compas ?",
+    "answers": ["Les constructions à la règle et au compas", "Le rapporteur", "L'équerre", "Le pantographe"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est l'intégrale de 1/x ?",
+    "answers": ["ln|x| + C", "x + C", "1/x² + C", "e^x + C"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel concept Blaise Pascal et Pierre de Fermat ont-ils fondé par correspondance en 1654 ?",
+    "answers": ["Le calcul des probabilités", "La géométrie analytique", "Le calcul différentiel", "La théorie des nombres"],
+    "correct": 0,
+    "difficulty": "difficile"
+  }
+]

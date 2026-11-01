@@ -1,0 +1,536 @@
+[
+  {
+    "text": "Quel studio a créé la série Halo ?",
+    "answers": ["Bungie", "343 Industries", "Epic Games", "Respawn Entertainment"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom du protagoniste principal de la série Halo ?",
+    "answers": ["Master Chief (John-117)", "Marcus Fenix", "Commander Shepard", "Noble Six"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle l'intelligence artificielle qui accompagne Master Chief ?",
+    "answers": ["Cortana", "ARIA", "Athena", "Siri"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom de la race extraterrestre principale ennemie dans Halo ?",
+    "answers": ["Les Covenants", "Les Locustes", "Les Chimères", "Les Krogans"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année le premier Halo: Combat Evolved est-il sorti ?",
+    "answers": ["2001", "2000", "2002", "2003"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Sur quelle console Halo: Combat Evolved était-il un titre de lancement ?",
+    "answers": ["Xbox", "PlayStation 2", "GameCube", "Dreamcast"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom de la structure annulaire géante qui donne son nom au jeu ?",
+    "answers": ["Un Halo (Installation)", "Un Anneau de Dyson", "Une Sphère de Dyson", "Un Vaisseau-Monde"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle race parasite est une menace majeure dans la trilogie Halo ?",
+    "answers": ["Le Parasite (The Flood)", "Les Prométhéens", "Les Grunts", "Les Brutes"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel programme militaire a créé les Spartans dans l'univers Halo ?",
+    "answers": ["Le programme SPARTAN-II", "Le projet MJOLNIR", "Le programme ORION", "Le projet ODST"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de l'armure que porte Master Chief ?",
+    "answers": ["L'armure MJOLNIR", "L'armure SPARTAN", "L'armure ONYX", "L'armure HELIOS"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le numéro de désignation de Master Chief ?",
+    "answers": ["117", "007", "343", "001"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel ennemi Covenant est le plus petit et sert souvent de chair à canon ?",
+    "answers": ["Les Grognards (Grunts / Unggoy)", "Les Élites", "Les Drones", "Les Jackals"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle le vaisseau humain principal dans Halo: Combat Evolved ?",
+    "answers": ["Le Pillar of Autumn", "L'Infinity", "Le Spirit of Fire", "Le Forward Unto Dawn"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui est le commandant du Pillar of Autumn dans Halo: CE ?",
+    "answers": ["Le Capitaine Jacob Keyes", "L'Amiral Hood", "Le Commandant Palmer", "Le Sergent Johnson"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel soldat emblématique avec un cigare apparaît dans plusieurs jeux Halo ?",
+    "answers": ["Le Sergent Avery Johnson", "Le Caporal Jenkins", "L'ODST Rookie", "Noble Six"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de l'ancien ennemi Covenant devenu allié, l'Arbiter ?",
+    "answers": ["Thel 'Vadam", "Rtas 'Vadum", "Atriox", "Jul 'Mdama"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le but principal des installations Halo ?",
+    "answers": ["Détruire toute vie sensible pour affamer le Parasite", "Servir de colonies spatiales", "Générer de l'énergie", "Servir de prisons pour les Forerunners"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle race ancienne a construit les Halos ?",
+    "answers": ["Les Forerunners (Précurseurs)", "Les Covenants", "Les Prométhéens", "Les Anciens"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage IA flottant et irritant guide le joueur dans Halo: CE ?",
+    "answers": ["343 Guilty Spark", "Cortana", "Offensive Bias", "Mendicant Bias"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle le mode multijoueur emblématique de Halo ?",
+    "answers": ["War Games / Matchmaking", "Battle Royale", "Conquest", "Warzone"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel véhicule emblématique de Halo est un buggy militaire tout-terrain ?",
+    "answers": ["Le Warthog", "Le Mongoose", "Le Scorpion", "Le Ghost"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel véhicule Covenant est un hovertank monoplace rapide ?",
+    "answers": ["Le Ghost", "Le Banshee", "Le Wraith", "Le Spectre"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle arme emblématique de Halo est un pistolet surpuissant dans le premier jeu ?",
+    "answers": ["Le M6D Pistol (Magnum)", "Le Battle Rifle", "Le DMR", "Le SMG"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle arme énergétique Covenant ressemble à une épée et est très puissante en mêlée ?",
+    "answers": ["L'Épée à Énergie (Energy Sword)", "Le Marteau Gravity", "Le Needler", "Le Carbine"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel Halo introduit le personnage jouable de l'Arbiter ?",
+    "answers": ["Halo 2", "Halo 3", "Halo Reach", "Halo 4"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En quelle année Halo 2 est-il sorti ?",
+    "answers": ["2004", "2003", "2005", "2006"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le sous-titre de Halo 3 ?",
+    "answers": ["Il n'a pas de sous-titre, c'est simplement Halo 3", "ODST", "Reach", "Guardians"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel jeu Halo se déroule avant les événements de Halo: CE et suit l'équipe Noble ?",
+    "answers": ["Halo Reach", "Halo Wars", "Halo 3: ODST", "Halo 4"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage jouable de Halo Reach est le dernier Spartan à mourir sur la planète ?",
+    "answers": ["Noble Six", "Emile", "Carter", "Jorge"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel jeu Halo est un spin-off de stratégie en temps réel (RTS) ?",
+    "answers": ["Halo Wars", "Halo 3: ODST", "Halo Spartan Assault", "Halo 5"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel studio a repris le développement de Halo après le départ de Bungie ?",
+    "answers": ["343 Industries", "Epic Games", "Respawn", "Turn 10"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel jeu Halo développé par 343 Industries est sorti en 2012 ?",
+    "answers": ["Halo 4", "Halo 5: Guardians", "Halo Infinite", "Halo Wars 2"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel ennemi est introduit dans Halo 4 en remplacement partiel des Covenants ?",
+    "answers": ["Les Prométhéens", "Les Flood", "Les Brutes", "Les Forerunners"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de l'antagoniste Forerunner de Halo 4 ?",
+    "answers": ["Le Didacte", "Le Prophète de la Vérité", "Atriox", "343 Guilty Spark"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Halo est sorti en free-to-play pour son mode multijoueur en 2021 ?",
+    "answers": ["Halo Infinite", "Halo 5: Guardians", "Halo: The Master Chief Collection", "Halo Wars 2"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom du chef des Brutes dans Halo Wars 2 et Halo Infinite ?",
+    "answers": ["Atriox", "Tartarus", "Escharum", "Decimus"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de la faction Brute dans Halo Infinite ?",
+    "answers": ["Les Bannis (The Banished)", "Les Covenants", "Les Prométhéens", "L'Alliance"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel véhicule volant Covenant ressemble à un avion de chasse alien ?",
+    "answers": ["Le Banshee", "Le Phantom", "Le Seraph", "Le Spirit"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel tank humain lourd est utilisable dans plusieurs jeux Halo ?",
+    "answers": ["Le Scorpion", "Le Grizzly", "Le Mammoth", "Le Mantis"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel mode de jeu Halo oppose deux équipes dans des matchs objectifs comme Capture du Drapeau ?",
+    "answers": ["Big Team Battle", "Slayer", "SWAT", "Infection"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mode de jeu Halo transforme un joueur en zombie qui doit infecter les autres ?",
+    "answers": ["Infection", "Grifball", "Firefight", "Oddball"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mode créatif de Halo permet aux joueurs de construire leurs propres cartes ?",
+    "answers": ["Forge", "Theater", "Foundry", "Sandbox"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom de la collection remasterisée regroupant Halo 1 à 4 ?",
+    "answers": ["Halo: The Master Chief Collection", "Halo Legacy", "Halo Complete", "Halo Anthology"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel prophète Covenant est l'antagoniste principal de Halo 2 et 3 ?",
+    "answers": ["Le Prophète de la Vérité (Truth)", "Le Prophète du Regret", "Le Prophète de la Pitié", "Le Prophète du Pardon"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel leader Brute utilise le Marteau de Fist of Rukt dans Halo 2 ?",
+    "answers": ["Tartarus", "Atriox", "Escharum", "Decimus"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel arme Covenant tire des aiguilles qui explosent quand suffisamment sont plantées ?",
+    "answers": ["Le Needler", "Le Carbine", "Le Beam Rifle", "Le Plasma Pistol"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom de la planète humaine principale dans l'univers Halo ?",
+    "answers": ["Reach", "Earth", "Harvest", "Onyx"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle planète humaine est la première à être attaquée par les Covenants ?",
+    "answers": ["Harvest", "Reach", "Earth", "Arcadia"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de la scientifique qui a créé les Spartans-II ?",
+    "answers": ["Docteur Catherine Halsey", "Docteur Sarah Palmer", "Miranda Keyes", "Cortana"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel véhicule est un quad rapide utilisé pour la reconnaissance dans Halo ?",
+    "answers": ["Le Mongoose", "Le Warthog", "Le Gungoose", "Le Chopper"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel éditeur publie la franchise Halo ?",
+    "answers": ["Xbox Game Studios (Microsoft)", "Electronic Arts", "Activision", "Ubisoft"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel jeu Halo suit des soldats ODSTs largués sur la ville de New Mombasa ?",
+    "answers": ["Halo 3: ODST", "Halo Reach", "Halo Wars", "Halo 4"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Que signifie l'acronyme ODST dans l'univers Halo ?",
+    "answers": ["Orbital Drop Shock Troopers", "Offensive Defense Special Team", "Outer Defense Strike Team", "Orbital Division Strike Troopers"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Spartan femme est un personnage jouable dans Halo 5: Guardians ?",
+    "answers": ["Spartan Locke (Jameson Locke)", "Kelly-087", "Linda-058", "Sarah Palmer"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de l'équipe de Master Chief dans Halo 5 ?",
+    "answers": ["Blue Team", "Fireteam Osiris", "Noble Team", "Red Team"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Halo introduit le grappin comme nouvel équipement ?",
+    "answers": ["Halo Infinite", "Halo 5", "Halo 4", "Halo Reach"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel anneau Halo est le décor de Halo Infinite ?",
+    "answers": ["Zeta Halo (Installation 07)", "Alpha Halo (Installation 04)", "Delta Halo (Installation 05)", "Installation 03"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle nouvelle IA accompagne Master Chief dans Halo Infinite ?",
+    "answers": ["L'Arme (The Weapon)", "Cortana 2.0", "Roland", "Isabel"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel véhicule Covenant est un char d'assaut tirant des boules de plasma ?",
+    "answers": ["Le Wraith", "Le Ghost", "Le Scarab", "Le Phantom"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel énorme véhicule Covenant à quatre pattes est un boss récurrent ?",
+    "answers": ["Le Scarab", "Le Phantom", "Le Wraith", "Le Lich"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel mode PvE coopératif introduit dans Halo 3: ODST permet de survivre à des vagues d'ennemis ?",
+    "answers": ["Firefight", "Spartan Ops", "Warzone", "Invasion"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle grenade signature de Halo colle aux ennemis et aux surfaces ?",
+    "answers": ["La grenade à plasma", "La grenade fragmentation", "La grenade spike", "La grenade incendiaire"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel terme désigne la capacité de Master Chief à régénérer son bouclier énergétique ?",
+    "answers": ["Le bouclier régénérant (rechargeable shield)", "Le surcharge", "L'armure adaptive", "Le nanoshield"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel membre de l'équipe Noble dans Halo Reach porte une armure EVA et un kukri ?",
+    "answers": ["Emile", "Jorge", "Carter", "Jun"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel membre de l'équipe Noble est le sniper qui survit aux événements de Reach ?",
+    "answers": ["Jun", "Emile", "Kat", "Carter"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel vaisseau humain géant est le plus grand jamais construit dans l'univers Halo ?",
+    "answers": ["L'UNSC Infinity", "Le Pillar of Autumn", "Le Spirit of Fire", "Le Forward Unto Dawn"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom complet de l'armée humaine dans l'univers Halo ?",
+    "answers": ["UNSC (United Nations Space Command)", "UNSF (United Nations Space Force)", "EDF (Earth Defense Force)", "USNC (United States Naval Command)"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel niveau de Halo: CE est célèbre pour son ambiance horrifique et l'apparition du Flood ?",
+    "answers": ["343 Guilty Spark", "The Silent Cartographer", "Assault on the Control Room", "The Library"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel fusil humain est une arme à tir en rafale de 3 coups, iconique depuis Halo 2 ?",
+    "answers": ["Le Battle Rifle (BR)", "Le DMR", "L'Assault Rifle", "Le Carbine"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Spartan est la meilleure amie d'enfance de Master Chief dans le lore ?",
+    "answers": ["Kelly-087", "Linda-058", "Fred-104", "Sam-034"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de la fille du Capitaine Keyes, qui apparaît dans Halo 2 et 3 ?",
+    "answers": ["Miranda Keyes", "Sarah Palmer", "Catherine Halsey", "Dare"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel terme Covenant désigne leur croisade religieuse pour activer les Halos ?",
+    "answers": ["Le Grand Voyage (The Great Journey)", "La Purification", "L'Ascension", "Le Jugement"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien d'installations Halo existent dans l'univers du jeu ?",
+    "answers": ["7", "5", "9", "12"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Halo se termine avec Master Chief à la dérive dans l'espace dans un vaisseau coupé en deux ?",
+    "answers": ["Halo 3", "Halo 2", "Halo 4", "Halo: CE"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Halo a une série TV adaptée sortie en 2022 sur Paramount+ ?",
+    "answers": ["Halo (la série, 2022)", "Halo: Forward Unto Dawn", "Halo Legends", "Halo: Nightfall"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel roman Halo écrit par Eric Nylund raconte l'histoire de la chute de Reach ?",
+    "answers": ["Halo: The Fall of Reach", "Halo: First Strike", "Halo: Ghosts of Onyx", "Halo: Contact Harvest"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel type d'Élite Covenant est connu pour son camouflage actif et sa couleur dorée indiquant un rang élevé ?",
+    "answers": ["L'Élite Zealot (doré)", "L'Élite Minor (bleu)", "L'Élite Major (rouge)", "L'Élite Ultra (blanc)"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel mode de jeu en équipe de Halo consiste simplement à éliminer l'équipe adverse ?",
+    "answers": ["Team Slayer", "CTF", "Oddball", "Strongholds"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel Spartan porte le numéro 034 et est le premier Spartan-II à mourir au combat ?",
+    "answers": ["Sam-034", "Kurt-051", "Jorge-052", "Emile-A239"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle difficulté maximale de Halo est connue sous le nom de « Legendary » ?",
+    "answers": ["Legendary", "Heroic", "Mythic", "Impossible"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel crâne (skull) dans Halo rend les ennemis plus agressifs et dangereux ?",
+    "answers": ["Mythic / Thunderstorm", "IWHBYD", "Grunt Birthday Party", "Blind"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel mode Theater permet de revoir et de filmer ses parties dans Halo ?",
+    "answers": ["Le mode Cinéma (Theater)", "Le mode Replay", "Le mode Spectateur", "Le mode Archive"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel arme de poing Covenant tire un tir chargé qui désactive les boucliers ?",
+    "answers": ["Le Plasma Pistol (tir chargé)", "Le Needler", "Le Mauler", "Le Plasma Rifle"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel sport fictif de Halo utilise un marteau et une balle dans une arène ?",
+    "answers": ["Grifball", "Ricochet", "Oddball", "Headhunter"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En quelle année Halo 3 est-il sorti ?",
+    "answers": ["2007", "2006", "2008", "2009"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel jeu Halo sorti en 2015 a reçu des critiques pour sa campagne centrée sur Locke ?",
+    "answers": ["Halo 5: Guardians", "Halo 4", "Halo Wars 2", "Halo Infinite"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel véhicule aérien humain est un avion de transport/combat polyvalent ?",
+    "answers": ["Le Pelican", "Le Falcon", "Le Hornet", "Le Broadsword"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Spartan massif de l'équipe Noble se sacrifie dans l'espace dans Halo Reach ?",
+    "answers": ["Jorge-052", "Carter", "Emile", "Kat"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le vrai prénom de Master Chief ?",
+    "answers": ["John", "James", "Jack", "Jacob"],
+    "correct": 0,
+    "difficulty": "moyen"
+  }
+]
