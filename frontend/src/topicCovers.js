@@ -457,7 +457,7 @@ export const TOPIC_COVERS = {
 export function getTopicCover(category) {
   if (internationalCoverSources[category.key]) {
     const original = approvedTopicCovers[category.key] || expandedTopicCovers[category.key];
-    const base = `/images/covers/international-v1/${category.key}`;
+    const base = `/images/covers/international-v1/${internationalCoverSources[category.key].asset || category.key}`;
     return { ...original, ...internationalCoverSources[category.key], src: `${base}-1024.webp`, srcSet: `${base}-320.webp 320w, ${base}-640.webp 640w, ${base}-1024.webp 1024w`, embeddedTitle: false, localizedTitle: true, focal: 'center' };
   }
   // Explicitly approved artwork supersedes older photographs and monograms.

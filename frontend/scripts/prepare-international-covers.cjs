@@ -14,6 +14,7 @@ const titles = require('../src/internationalTopicTitles.json');
   fs.mkdirSync(directory, {recursive:true}); fs.mkdirSync(originals, {recursive:true});
   const credits = [], report = [];
   for (const item of manifest) {
+    if (item.asset && !/^[a-z0-9_-]+$/.test(item.asset)) throw Error(`Invalid asset filename: ${item.key}`);
     let input;
     if (item.path) input = fs.readFileSync(item.path);
     else {
@@ -29,7 +30,7 @@ const titles = require('../src/internationalTopicTitles.json');
     const meta = await sharp(input).metadata();
     if (meta.width < 1024 || meta.height < 320) throw Error(`Original too small: ${item.key} (${meta.width}x${meta.height})`);
     for (const width of [320,640,1024]) {
-      const file = path.join(directory, `${item.key}-${width}.webp`);
+      const file = path.join(directory, `${item.asset || item.key}-${width}.webp`);
       await sharp(input).rotate().resize({width,withoutEnlargement:true}).webp({quality:83,effort:5}).toFile(file);
       report.push({key:item.key,width,bytes:fs.statSync(file).size});
     }
@@ -37,7 +38,7 @@ const titles = require('../src/internationalTopicTitles.json');
     console.log('PREPARED',item.key,item.kind);
   }
   fs.writeFileSync(path.join(directory,'credits.json'),JSON.stringify(credits,null,2)+'\n');
-  fs.writeFileSync(path.join(root,'src/internationalCoverSources.json'),JSON.stringify(Object.fromEntries(manifest.map(item=>[item.key,{kind:item.kind,source:item.source||null,credit:item.credit,focal:item.focal||'center'}])),null,2)+'\n');
+  fs.writeFileSync(path.join(root,'src/internationalCoverSources.json'),JSON.stringify(Object.fromEntries(manifest.map(item=>[item.key,{kind:item.kind,source:item.source||null,credit:item.credit,focal:item.focal||'center',...(item.asset?{asset:item.asset}:{})}])),null,2)+'\n');
   fs.writeFileSync(path.resolve(root,'../.mobile-preview/international-assets-report.json'),JSON.stringify(report,null,2));
   const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const file=path.join(root,'public/image-credits.html');
