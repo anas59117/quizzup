@@ -13,6 +13,8 @@ import { useBrowseMotion } from '../../src/useBrowseMotion';
 import { GameChat } from '../../src/social';
 import SFX from '../../src/sounds';
 import App from '../../src/App';
+import { CategoryTileV4 } from '../../src/CategoryTileV4';
+import catalogueExpansion from '../../src/catalogueExpansion.json';
 if (!SFX.muted) SFX.toggle();
 const params = new URLSearchParams(location.search);
 localStorage.setItem('quizzup-lang', params.has('en') ? 'en' : 'fr');
@@ -28,7 +30,7 @@ if (params.has('photo')) {
   question.image = '/images/players/booba.jpg';
 }
 function Preview() {
-  const [screen, setScreen] = useState(['home', 'profile', 'waiting', 'result', 'shop', 'themes', 'quiz', 'intro', 'messages'].find(key => params.has(key)) || 'game');
+  const [screen, setScreen] = useState(params.has('new-covers') ? 'covers' : ['home', 'profile', 'waiting', 'result', 'shop', 'themes', 'quiz', 'intro', 'messages'].find(key => params.has(key)) || 'game');
   const [selected, setSelected] = useState(null);
   const [reveal, setReveal] = useState(null);
   const [muted, setMuted] = useState(true);
@@ -49,11 +51,12 @@ function Preview() {
     topic: { key: 'ligue_champions', level: 3 }, matchTally: { rounds: 6, correct: 5, answered: 6, totalMs: 36000 },
     leaderboard: [{ id: '1', name: 'Sisi', avatar: 'fox', score: 84 }, ...opponents] };
   const play = () => { setSelected(null); setReveal(null); setScreen('game'); };
-  const browse = ['home', 'profile', 'shop', 'themes', 'quiz', 'messages'].includes(screen) && !peer;
+  const browse = ['home', 'profile', 'shop', 'themes', 'quiz', 'messages', 'covers'].includes(screen) && !peer;
   const previewFriends = params.has('populated') ? [{id:'friend-1',name:'Camille',avatar:'fox',online:true},{id:'friend-2',name:'Nadia',avatar:'owl',online:false},{id:'friend-3',name:'Alex',avatar:'robot',online:false}] : [];
   const previewMessages = previewFriends.length ? { ...social, friends: previewFriends, conversations: previewFriends.map((person,index)=>({peer:person,unread:index===0?2:0,lastMessage:{kind:'text',text:['Une revanche sur le ciné ?','On joue ce soir ?','Bien joué pour le dernier duel !'][index],createdAt:'2026-10-19T11:30:00Z'}})),messages:{'friend-1':[{id:'sample',fromId:'friend-1',kind:'text',text:'Une revanche sur le ciné ?',createdAt:'2026-10-19T11:30:00Z'}]}} : {...social,messages:{},conversations:[]};
   return <div className={screen === 'home' ? 'app app-top app-nav app-home' : screen === 'messages' ? `app app-messenger${!peer?' app-nav messenger-inbox-nav':''}` : screen === 'game' ? 'app game-bg app-question' : screen === 'result' ? 'app results-bg' : screen === 'waiting' ? 'app game-bg app-matchmaking' : screen === 'intro' ? 'app game-bg' : `app app-top app-nav ${screen === 'quiz' ? 'app-category-preview' : screen === 'shop' ? 'app-shop' : screen === 'profile' ? 'app-profile' : screen === 'themes' ? 'app-themes' : ''}`}>
     {!['home','quiz','profile','shop','themes','messages'].includes(screen) && controls}
+    {screen === 'covers' && <main className="container wide themes-refined"><h1>Les 55 nouveaux quiz</h1>{[['football','Football'],['sport','Sports'],['music','Musique'],['gaming','Jeux vidéo'],['series','Séries'],['culture','Culture']].map(([key,label]) => <section className="expanded-cover-group" data-family={key} key={key}><h2>{label}</h2><div className="topics-grid-v4">{catalogueExpansion.filter(c=>c.family===key).map(c=><CategoryTileV4 key={c.key} c={c} onClick={()=>openTopic(c.key)} />)}</div></section>)}</main>}
     {screen === 'home' && <HomeContent controls={controls} name="Sisi" avatar="fox" stats={stats} soloMode={solo} setSoloMode={setSolo}
       quickMatch={play} startWithCategory={openTopic} onOpenProfile={() => setScreen('profile')} onSeeAll={() => setScreen('themes')} />}
     {screen === 'profile' && <ProfileContent controls={controls} name="Sisi" avatar="fox" stats={stats} social={social} clientId="preview-self" isGoogleLinked={googleLinked} googleEmail="sisi@example.test" linkGoogle={()=>setGoogleLinked(true)}

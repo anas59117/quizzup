@@ -1,0 +1,442 @@
+[
+  {
+    "key": "football_feminin",
+    "label": "Football Féminin",
+    "icon": "⚽",
+    "grad": "g8",
+    "desc": "Sélections, clubs, pionnières et grandes compétitions",
+    "family": "football"
+  },
+  {
+    "key": "tottenham",
+    "label": "Tottenham Hotspur",
+    "icon": "⚽",
+    "grad": "g8",
+    "desc": "Spurs, White Hart Lane et légendes londoniennes",
+    "family": "football"
+  },
+  {
+    "key": "as_roma",
+    "label": "AS Roma",
+    "icon": "⚽",
+    "grad": "g8",
+    "desc": "Totti, le Stadio Olimpico et les Giallorossi",
+    "family": "football"
+  },
+  {
+    "key": "benfica",
+    "label": "SL Benfica",
+    "icon": "⚽",
+    "grad": "g8",
+    "desc": "Aigles, Estádio da Luz et légendes portugaises",
+    "family": "football"
+  },
+  {
+    "key": "galatasaray",
+    "label": "Galatasaray",
+    "icon": "⚽",
+    "grad": "g8",
+    "desc": "Lions d'Istanbul, derbies et soirées européennes",
+    "family": "football"
+  },
+  {
+    "key": "espagne_football",
+    "label": "Espagne (Football)",
+    "icon": "⚽",
+    "grad": "g8",
+    "desc": "La Roja, générations dorées et grands tournois",
+    "family": "football"
+  },
+  {
+    "key": "gardiens_legendaires",
+    "label": "Gardiens Légendaires",
+    "icon": "⚽",
+    "grad": "g8",
+    "desc": "Arrêts décisifs et derniers remparts du football",
+    "family": "football"
+  },
+  {
+    "key": "allemagne_football",
+    "label": "Allemagne (Football)",
+    "icon": "⚽",
+    "grad": "g8",
+    "desc": "La Mannschaft, champions et grandes finales",
+    "family": "football"
+  },
+  {
+    "key": "angleterre_football",
+    "label": "Angleterre (Football)",
+    "icon": "⚽",
+    "grad": "g8",
+    "desc": "Three Lions, Wembley et légendes anglaises",
+    "family": "football"
+  },
+  {
+    "key": "senegal_football",
+    "label": "Sénégal (Football)",
+    "icon": "⚽",
+    "grad": "g8",
+    "desc": "Lions de la Teranga et exploits des sélections",
+    "family": "football"
+  },
+  {
+    "key": "transferts_mercato",
+    "label": "Transferts & Mercato",
+    "icon": "⚽",
+    "grad": "g8",
+    "desc": "Signatures, records et transferts mémorables",
+    "family": "football"
+  },
+  {
+    "key": "cricket",
+    "label": "Cricket",
+    "icon": "🏆",
+    "grad": "g3",
+    "desc": "Batters, wickets et grandes compétitions",
+    "family": "sport"
+  },
+  {
+    "key": "judo",
+    "label": "Judo",
+    "icon": "🏆",
+    "grad": "g3",
+    "desc": "Ippons, tatamis et légendes du judo",
+    "family": "sport"
+  },
+  {
+    "key": "surf",
+    "label": "Surf",
+    "icon": "🏆",
+    "grad": "g3",
+    "desc": "Vagues mythiques, riders et culture de l'océan",
+    "family": "sport"
+  },
+  {
+    "key": "skateboard",
+    "label": "Skateboard",
+    "icon": "🏆",
+    "grad": "g3",
+    "desc": "Figures, spots et pionniers de la planche",
+    "family": "sport"
+  },
+  {
+    "key": "escalade",
+    "label": "Escalade",
+    "icon": "🏆",
+    "grad": "g3",
+    "desc": "Bloc, difficulté et sommets de la discipline",
+    "family": "sport"
+  },
+  {
+    "key": "country_music",
+    "label": "Country Music",
+    "icon": "🎵",
+    "grad": "g7",
+    "desc": "Nashville, guitares et voix légendaires",
+    "family": "music"
+  },
+  {
+    "key": "punk_grunge",
+    "label": "Punk & Grunge",
+    "icon": "🎵",
+    "grad": "g7",
+    "desc": "Riffs, scènes alternatives et albums cultes",
+    "family": "music"
+  },
+  {
+    "key": "musique_arabe_rai",
+    "label": "Musique Arabe & Raï",
+    "icon": "🎵",
+    "grad": "g7",
+    "desc": "Grandes voix, classiques et rythmes du Maghreb",
+    "family": "music"
+  },
+  {
+    "key": "ariana_grande",
+    "label": "Ariana Grande",
+    "icon": "🎵",
+    "grad": "g7",
+    "desc": "Albums, performances et tubes incontournables",
+    "family": "music"
+  },
+  {
+    "key": "bad_bunny",
+    "label": "Bad Bunny",
+    "icon": "🎵",
+    "grad": "g7",
+    "desc": "Porto Rico, reggaeton et albums marquants",
+    "family": "music"
+  },
+  {
+    "key": "bruno_mars",
+    "label": "Bruno Mars",
+    "icon": "🎵",
+    "grad": "g7",
+    "desc": "Funk, pop et performances électrisantes",
+    "family": "music"
+  },
+  {
+    "key": "rappeurs_uk",
+    "label": "Rappeurs UK",
+    "icon": "🎵",
+    "grad": "g7",
+    "desc": "Grime, drill et grandes voix britanniques",
+    "family": "music"
+  },
+  {
+    "key": "ed_sheeran",
+    "label": "Ed Sheeran",
+    "icon": "🎵",
+    "grad": "g7",
+    "desc": "Guitare, mélodies et succès planétaires",
+    "family": "music"
+  },
+  {
+    "key": "post_malone",
+    "label": "Post Malone",
+    "icon": "🎵",
+    "grad": "g7",
+    "desc": "Albums, collaborations et titres emblématiques",
+    "family": "music"
+  },
+  {
+    "key": "kendrick_lamar",
+    "label": "Kendrick Lamar",
+    "icon": "🎵",
+    "grad": "g7",
+    "desc": "Textes, albums et moments majeurs du rap",
+    "family": "music"
+  },
+  {
+    "key": "j_cole",
+    "label": "J. Cole",
+    "icon": "🎵",
+    "grad": "g7",
+    "desc": "Dreamville, récits et discographie",
+    "family": "music"
+  },
+  {
+    "key": "vald",
+    "label": "Vald",
+    "icon": "🎵",
+    "grad": "g7",
+    "desc": "Textes, albums et univers décalé",
+    "family": "music"
+  },
+  {
+    "key": "laylow",
+    "label": "Laylow",
+    "icon": "🎵",
+    "grad": "g7",
+    "desc": "Univers digitaux, récits et albums conceptuels",
+    "family": "music"
+  },
+  {
+    "key": "plk",
+    "label": "PLK",
+    "icon": "🎵",
+    "grad": "g7",
+    "desc": "Mixtapes, collaborations et refrains marquants",
+    "family": "music"
+  },
+  {
+    "key": "hamza",
+    "label": "Hamza",
+    "icon": "🎵",
+    "grad": "g7",
+    "desc": "Mélodies, projets et collaborations",
+    "family": "music"
+  },
+  {
+    "key": "apex_legends",
+    "label": "Apex Legends",
+    "icon": "🎮",
+    "grad": "g5",
+    "desc": "Légendes, arènes et escouades de l'Outlands",
+    "family": "gaming"
+  },
+  {
+    "key": "dark_souls",
+    "label": "Dark Souls",
+    "icon": "🎮",
+    "grad": "g5",
+    "desc": "Feux de camp, boss et royaumes déchus",
+    "family": "gaming"
+  },
+  {
+    "key": "diablo",
+    "label": "Diablo",
+    "icon": "🎮",
+    "grad": "g5",
+    "desc": "Sanctuaire, classes et seigneurs des Enfers",
+    "family": "gaming"
+  },
+  {
+    "key": "halo",
+    "label": "Halo",
+    "icon": "🎮",
+    "grad": "g5",
+    "desc": "Spartans, anneaux et épopées du Major",
+    "family": "gaming"
+  },
+  {
+    "key": "tekken_mortal_kombat",
+    "label": "Tekken & Mortal Kombat",
+    "icon": "🎮",
+    "grad": "g5",
+    "desc": "Combattants, rivalités et duels cultes",
+    "family": "gaming"
+  },
+  {
+    "key": "stardew_valley",
+    "label": "Stardew Valley",
+    "icon": "🎮",
+    "grad": "g5",
+    "desc": "Pelican Town, récoltes et secrets de la vallée",
+    "family": "gaming"
+  },
+  {
+    "key": "rick_and_morty",
+    "label": "Rick and Morty",
+    "icon": "📺",
+    "grad": "g13",
+    "desc": "Portails, multivers et aventures improbables",
+    "family": "series"
+  },
+  {
+    "key": "narcos",
+    "label": "Narcos",
+    "icon": "📺",
+    "grad": "g13",
+    "desc": "Personnages, enquêtes et saisons de la série",
+    "family": "series"
+  },
+  {
+    "key": "better_call_saul",
+    "label": "Better Call Saul",
+    "icon": "📺",
+    "grad": "g13",
+    "desc": "Jimmy, Kim et les affaires d'Albuquerque",
+    "family": "series"
+  },
+  {
+    "key": "suits",
+    "label": "Suits",
+    "icon": "📺",
+    "grad": "g13",
+    "desc": "Harvey, Mike et les coulisses du cabinet",
+    "family": "series"
+  },
+  {
+    "key": "grey_s_anatomy",
+    "label": "Grey's Anatomy",
+    "icon": "📺",
+    "grad": "g13",
+    "desc": "Chirurgiens, histoires et moments marquants",
+    "family": "series"
+  },
+  {
+    "key": "the_mandalorian",
+    "label": "The Mandalorian",
+    "icon": "📺",
+    "grad": "g13",
+    "desc": "Din Djarin, Grogu et les confins de la galaxie",
+    "family": "series"
+  },
+  {
+    "key": "family_guy",
+    "label": "Family Guy",
+    "icon": "📺",
+    "grad": "g13",
+    "desc": "Les Griffin, Quahog et scènes cultes",
+    "family": "series"
+  },
+  {
+    "key": "mathematiques_logique",
+    "label": "Mathématiques & Logique",
+    "icon": "🌍",
+    "grad": "g10",
+    "desc": "Nombres, formes et défis de raisonnement",
+    "family": "culture"
+  },
+  {
+    "key": "informatique_technologie",
+    "label": "Informatique & Technologie",
+    "icon": "🌍",
+    "grad": "g10",
+    "desc": "Code, composants et révolutions numériques",
+    "family": "culture"
+  },
+  {
+    "key": "economie_finance",
+    "label": "Économie & Finance",
+    "icon": "🌍",
+    "grad": "g10",
+    "desc": "Marchés, entreprises et grands mécanismes",
+    "family": "culture"
+  },
+  {
+    "key": "psychologie",
+    "label": "Psychologie",
+    "icon": "🌍",
+    "grad": "g10",
+    "desc": "Mémoire, émotions et comportements humains",
+    "family": "culture"
+  },
+  {
+    "key": "droit_justice",
+    "label": "Droit & Justice",
+    "icon": "🌍",
+    "grad": "g10",
+    "desc": "Institutions, principes et grandes notions",
+    "family": "culture"
+  },
+  {
+    "key": "congo_rdc",
+    "label": "Congo RDC",
+    "icon": "🌍",
+    "grad": "g10",
+    "desc": "Histoire, cultures et géographie du pays",
+    "family": "culture"
+  },
+  {
+    "key": "entrepreneurs_tech",
+    "label": "Entrepreneurs Tech",
+    "icon": "🌍",
+    "grad": "g10",
+    "desc": "Innovations, entreprises et grandes trajectoires",
+    "family": "culture"
+  },
+  {
+    "key": "records_du_monde",
+    "label": "Records du Monde",
+    "icon": "🌍",
+    "grad": "g10",
+    "desc": "Exploits, performances et chiffres étonnants",
+    "family": "culture"
+  },
+  {
+    "key": "phenomenes_naturels",
+    "label": "Phénomènes Naturels",
+    "icon": "🌍",
+    "grad": "g10",
+    "desc": "Volcans, aurores et forces de la planète",
+    "family": "culture"
+  },
+  {
+    "key": "monnaies_du_monde",
+    "label": "Monnaies du Monde",
+    "icon": "🌍",
+    "grad": "g10",
+    "desc": "Devises, billets et histoires monétaires",
+    "family": "culture"
+  },
+  {
+    "key": "iles_du_monde",
+    "label": "Îles du Monde",
+    "icon": "🌍",
+    "grad": "g10",
+    "desc": "Archipels, cultures et géographie insulaire",
+    "family": "culture"
+  }
+]

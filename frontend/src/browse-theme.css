@@ -60,7 +60,8 @@
   letter-spacing: -.02em !important; margin-bottom: 16px;
 }
 .cp-artwork {
-  display: block; width: min(100%, 320px, 32svh); max-height: 360px;
+  /* Portrait photographs must respect the same height budget as square art. */
+  display: block; width: min(100%, 320px, 32svh); max-height: min(320px, 32svh);
   object-fit: contain; margin: 0 auto 20px; border-radius: 20px;
 }
 .category-preview-v4.cp-has-artwork .cp-info { margin-top: 0; }

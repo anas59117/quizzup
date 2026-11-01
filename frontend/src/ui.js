@@ -2,6 +2,7 @@ import { PlaySheet } from './PlaySheet';
 import React, { useState, useEffect, useCallback, useRef, useId, memo } from 'react';
 import { useI18n } from './i18n';
 import { getTopicCover } from './topicCovers';
+import catalogueExpansion from './catalogueExpansion.json';
 import { PlayerAvatar } from './PlayerAvatar';
 import { BrandLogo, BrandMark } from './Brand';
 
@@ -484,6 +485,7 @@ export const CATEGORIES = [
   { key: "arcane", label: "Arcane", icon: "⚡", grad: 'g201', desc: "Piltover, Zaun & héros de League of Legends", family: 'series' },
   { key: "bridgerton", label: "Bridgerton", icon: "👑", grad: 'g206', desc: "Bals, familles & intrigues de la Régence", family: 'series' },
   { key: "gossip_girl", label: "Gossip Girl", icon: "📱", grad: 'g209', desc: "Upper East Side, Constance & secrets", family: 'series' },
+  ...catalogueExpansion,
 ];
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see

@@ -91,7 +91,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
   if (!category) return null;
   const cover = getTopicCover(category);
   const artwork = cover?.approved && failedCover !== cover.src ? cover : null;
-  const preview = PREVIEW_SUB[category.key] || { eyebrow: category.family || 'QUIZ', desc: category.desc };
+  const preview = PREVIEW_SUB[category.key] || { eyebrow: category.family ? famLabel(t, category.family) : 'QUIZ', desc: category.desc };
   const topicStats = (stats && stats.topics || []).find((t) => t.key === category.key) || {};
   const completion = Number.isFinite(topicStats.completion) ? `${topicStats.completion}%` : '—';
   const bestStreak = Number.isFinite(topicStats.bestStreak) ? topicStats.bestStreak : '—';

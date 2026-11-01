@@ -1,4 +1,5 @@
 import approvedTopicCovers from './approvedTopicCovers.json';
+import expandedTopicCovers from './expandedTopicCovers.json';
 
 const commonsFile = (name) =>
   `https://commons.wikimedia.org/wiki/Special:Redirect/file/${encodeURIComponent(name)}?width=960`;
@@ -455,6 +456,7 @@ export const TOPIC_COVERS = {
 export function getTopicCover(category) {
   // Explicitly approved artwork supersedes older photographs and monograms.
   if (approvedTopicCovers[category.key]) return approvedTopicCovers[category.key];
+  if (expandedTopicCovers[category.key]) return expandedTopicCovers[category.key];
 
   // Existing covers were already selected for the exact quiz and validated
   // in production. A new editorial candidate must never silently replace
