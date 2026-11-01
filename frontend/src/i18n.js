@@ -1,9 +1,7 @@
 import React, { createContext, useContext, useState, useCallback, useMemo } from 'react';
 
-// UI chrome only — category labels and quiz question content are NOT
-// translated here. French-specific categories (Foot FR, Rap FR...) stay in
-// French regardless of UI language, same as how a French Wikipedia article
-// title doesn't change when you switch your OS language.
+// UI chrome lives here. Editorial cover titles use topicTitles.js;
+// quiz question content is handled separately from the UI language.
 export const STRINGS = {
   fr: {
     legendBack: 'LA LÉGENDE EST DE RETOUR',
@@ -813,4 +811,10 @@ export function useI18n() {
   const ctx = useContext(I18nContext);
   if (!ctx) throw new Error('useI18n must be used within I18nProvider');
   return ctx;
+}
+
+// Reusable catalogue cards also render outside the application provider in
+// static previews. Inside the app they follow the same live language state.
+export function useOptionalI18n() {
+  return useContext(I18nContext);
 }

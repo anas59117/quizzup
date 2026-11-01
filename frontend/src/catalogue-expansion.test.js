@@ -15,7 +15,7 @@ test.each(added)('%s is browsable once, with a local responsive cover and workin
   expect(categoriesInFamily(category.family)).toContain(category);
   const cover = getTopicCover(category);
   expect(cover).toEqual(expect.objectContaining({ approved: true }));
-  expect(cover.src).toMatch(/^\/images\/covers\/expanded-v1\//);
+  expect(cover.src).toMatch(/^\/images\/covers\/(expanded-v1|international-v1)\//);
   for (const candidate of cover.srcSet.split(', ')) {
     const [src] = candidate.split(' ');
     expect(fs.existsSync(path.join(__dirname, '../public', src))).toBe(true);

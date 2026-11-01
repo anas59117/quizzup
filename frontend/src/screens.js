@@ -16,6 +16,7 @@ import { ShopArt as QV4ShopArt } from './shop-art';
 import { ProfilePhotoEditor } from './ProfilePhotoEditor';
 import { BrandLogo } from './Brand';
 import { getTopicCover } from './topicCovers';
+import { localizedTopicTitle } from './topicTitles';
 
 const FEATURED_TOPIC_KEYS = [
   'spider_man', 'harry_potter', 'minecraft', 'rap_fr',
@@ -129,7 +130,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
       <div className="cp-hero">
         <div className="cp-eyebrow">{preview.eyebrow}</div>
         <h1 id="quiz-title" tabIndex={-1} className="cp-title">
-          {artwork ? category.label : preview.line1 ? (
+          {artwork || cover?.localizedTitle ? localizedTopicTitle(category, lang) : preview.line1 ? (
             <>
               <span className="cp-title-l">{preview.line1}</span>
               {preview.line2 && <span className="cp-title-l">{preview.line2}</span>}
@@ -196,14 +197,14 @@ export function EnterCodeContent({ joinCode, setJoinCode, joinError, setJoinErro
 }
 
 export function CategoriesContent({ startWithCategory, family, onSelectFamily, pending, controls }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [query, setQuery] = useState('');
 
   const results = useMemo(() => {
     const q = normalizeForSearch(query.trim());
     if (!q) return null;
-    return CATEGORIES.filter((c) => normalizeForSearch(c.label).includes(q));
-  }, [query]);
+    return CATEGORIES.filter((c) => normalizeForSearch(`${c.label} ${localizedTopicTitle(c, lang)}`).includes(q));
+  }, [query, lang]);
 
   const activeFamily = FAMILIES.find((f) => f.key === family);
 

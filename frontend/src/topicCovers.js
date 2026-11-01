@@ -1,5 +1,6 @@
 import approvedTopicCovers from './approvedTopicCovers.json';
 import expandedTopicCovers from './expandedTopicCovers.json';
+import internationalCoverSources from './internationalCoverSources.json';
 
 const commonsFile = (name) =>
   `https://commons.wikimedia.org/wiki/Special:Redirect/file/${encodeURIComponent(name)}?width=960`;
@@ -454,6 +455,11 @@ export const TOPIC_COVERS = {
 };
 
 export function getTopicCover(category) {
+  if (internationalCoverSources[category.key]) {
+    const original = approvedTopicCovers[category.key] || expandedTopicCovers[category.key];
+    const base = `/images/covers/international-v1/${category.key}`;
+    return { ...original, ...internationalCoverSources[category.key], src: `${base}-1024.webp`, srcSet: `${base}-320.webp 320w, ${base}-640.webp 640w, ${base}-1024.webp 1024w`, embeddedTitle: false, localizedTitle: true, focal: 'center' };
+  }
   // Explicitly approved artwork supersedes older photographs and monograms.
   if (approvedTopicCovers[category.key]) return approvedTopicCovers[category.key];
   if (expandedTopicCovers[category.key]) return expandedTopicCovers[category.key];

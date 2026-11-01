@@ -10,7 +10,7 @@ test.each(approvedKeys)('%s uses its approved local artwork even with legacy typ
   const category = CATEGORIES.find(c => c.key === key);
   expect(category).toBeDefined();
   const cover = getTopicCover(category);
-  expect(cover.src).toMatch(/^\/images\/covers\/approved-v2\//);
+  expect(cover.src).toMatch(/^\/images\/covers\/(approved-v2|international-v1)\//);
   expect(cover.srcSet).toContain('320w');
   const markup = renderToStaticMarkup(<CategoryTileV4 c={category} />);
   expect(markup).toContain(cover.src);
