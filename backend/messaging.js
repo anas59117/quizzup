@@ -2,6 +2,7 @@ const { createJsonWriter, readJsonFileSync } = require('./json-writer');
 const { getStorePath } = require('./store-path');
 const { randomId } = require('./ids');
 const social = require('./social');
+const { send } = require('./transport');
 function createMessaging({
   file = getStorePath('messages.json'),
   friends = social.areFriends,
@@ -184,8 +185,7 @@ function recordMatchResults(g, results) {
       });
       for (const p of [a, b]) {
         const ws = social.getWs(p.clientId);
-        if (ws?.readyState === 1)
-          ws.send(JSON.stringify({ type: 'dm', message }));
+        send(ws, { type: 'dm', message });
       }
     }
   if (g.challengeId) require('./challenges').complete(g.challengeId);

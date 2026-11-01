@@ -26,9 +26,7 @@ const startingClients = new Set();
 const RECONNECT_GRACE_MS = 15000;
 const FINISHED_RETENTION_MS = 60 * 1000;
 const rid = (prefix) => randomId(prefix);
-const send = (ws, obj) => {
-  if (ws && ws.readyState === 1) ws.send(JSON.stringify(obj));
-};
+const { send } = require('./transport');
 
 function pickRandomCategory() {
   const cats = listCategories();
