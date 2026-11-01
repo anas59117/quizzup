@@ -1098,5 +1098,555 @@
     ],
     "correct": 3,
     "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le numéro de la plaque d'immatriculation du camping-car dans la scène d'ouverture ?",
+    "answers": [
+      "THE COOK",
+      "HEISENBG",
+      "TO ALL",
+      "8R3 4K1NG"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de saisons compte Breaking Bad ?",
+    "answers": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel acteur incarne Walter White ?",
+    "answers": [
+      "Aaron Paul",
+      "Bryan Cranston",
+      "Bob Odenkirk",
+      "Dean Norris"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel acteur joue le rôle de Jesse Pinkman ?",
+    "answers": [
+      "Aaron Paul",
+      "RJ Mitte",
+      "Giancarlo Esposito",
+      "Jonathan Banks"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel acteur interprète Gus Fring ?",
+    "answers": [
+      "Dean Norris",
+      "Jonathan Banks",
+      "Giancarlo Esposito",
+      "Bob Odenkirk"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "De quelle couleur est la méthamphétamine produite par Walter ?",
+    "answers": [
+      "Jaune",
+      "Rouge",
+      "Verte",
+      "Bleue"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel pourcentage de pureté atteint la méthamphétamine de Walter ?",
+    "answers": [
+      "85%",
+      "92%",
+      "96%",
+      "99,1%"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la date de naissance de Walter White ?",
+    "answers": [
+      "7 septembre 1958",
+      "12 mars 1960",
+      "15 juin 1955",
+      "1er janvier 1962"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel État américain la série se déroule-t-elle ?",
+    "answers": [
+      "Arizona",
+      "Texas",
+      "Nouveau-Mexique",
+      "Nevada"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel prénom porte la fille de Walter et Skyler ?",
+    "answers": [
+      "Kaylee",
+      "Marie",
+      "Jane",
+      "Holly"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel métier exerçait Mike Ehrmantraut avant de travailler pour Gus ?",
+    "answers": [
+      "Pompier",
+      "Policier à Philadelphie",
+      "Militaire",
+      "Agent du FBI"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel surnom Walter utilise-t-il quand il contacte un vendeur d'armes ?",
+    "answers": [
+      "Lambert",
+      "Heisenberg",
+      "Mr. White",
+      "Ozymandias"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment s'appelle le poème que Walter récite à Walter Jr. ?",
+    "answers": [
+      "The Raven",
+      "Invictus",
+      "Ozymandias",
+      "If"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle récompense Emmy Bryan Cranston a-t-il remportée pour Walter White ?",
+    "answers": [
+      "Deux",
+      "Trois",
+      "Quatre",
+      "Cinq"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel créateur a développé Breaking Bad ?",
+    "answers": [
+      "David Chase",
+      "Vince Gilligan",
+      "Matthew Weiner",
+      "Shawn Ryan"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle chaîne de télévision a diffusé Breaking Bad ?",
+    "answers": [
+      "HBO",
+      "Showtime",
+      "AMC",
+      "FX"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le titre du dernier épisode de la série ?",
+    "answers": [
+      "Granite State",
+      "Ozymandias",
+      "Face Off",
+      "Felina"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage tue Combo en le tirant depuis un vélo ?",
+    "answers": [
+      "Tomás Cantillo",
+      "Drew Sharp",
+      "Jake Pinkman",
+      "Brock Cantillo"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel livre Hank lit-il aux toilettes quand il fait le lien avec Heisenberg ?",
+    "answers": [
+      "Un roman policier",
+      "Leaves of Grass",
+      "La Bible",
+      "Un magazine de minéraux"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle substance Walter utilise-t-il pour empoisonner Brock ?",
+    "answers": [
+      "Ricine",
+      "Arsenic",
+      "Muguet (Lily of the Valley)",
+      "Strychnine"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En quelle année le premier épisode de Breaking Bad a-t-il été diffusé ?",
+    "answers": [
+      "2006",
+      "2007",
+      "2008",
+      "2009"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel type de pizza Walter lance-t-il sur le toit de sa maison ?",
+    "answers": [
+      "Margherita",
+      "Pepperoni",
+      "Hawaïenne",
+      "Entière non coupée"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel nom porte le film dérivé de Breaking Bad centré sur Jesse ?",
+    "answers": [
+      "Better Call Saul",
+      "El Camino",
+      "Metástasis",
+      "Slippin' Jimmy"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel véhicule Walter conduit-il principalement au début de la série ?",
+    "answers": [
+      "Une Pontiac Aztek",
+      "Un Dodge Challenger",
+      "Une Chrysler 300",
+      "Un Jeep Wrangler"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle voiture Walter achète-t-il pour lui-même en plein milieu de la série ?",
+    "answers": [
+      "Une Pontiac Aztek",
+      "Une Chrysler 300 SRT-8",
+      "Un Dodge Challenger",
+      "Un Cadillac Escalade"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle voiture Walter achète-t-il pour Walter Jr. ?",
+    "answers": [
+      "Un Ford Mustang",
+      "Un Dodge Challenger",
+      "Un Chrysler 300",
+      "Un Chevrolet Camaro"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage prononce la célèbre réplique « Say my name » ?",
+    "answers": [
+      "Gus Fring",
+      "Jesse Pinkman",
+      "Hank Schrader",
+      "Walter White"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel personnage dit « I am the danger » ?",
+    "answers": [
+      "Walter White",
+      "Tuco Salamanca",
+      "Gus Fring",
+      "Mike Ehrmantraut"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Que porte Walter sur la tête quand il adopte son personnage d'Heisenberg ?",
+    "answers": [
+      "Une casquette",
+      "Un chapeau pork pie",
+      "Des lunettes de soleil",
+      "Un bandana"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel cousin de Tuco tente d'assassiner Hank sur un parking ?",
+    "answers": [
+      "Hector Salamanca",
+      "Lalo Salamanca",
+      "Les cousins Salamanca (Leonel et Marco)",
+      "Juan Bolsa"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment Leonel Salamanca meurt-il à l'hôpital ?",
+    "answers": [
+      "D'une hémorragie",
+      "Empoisonné par Mike",
+      "Empoisonné par Gus",
+      "D'un arrêt cardiaque naturel"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel membre du cartel Gus empoisonne-t-il lors de la fête au Mexique ?",
+    "answers": [
+      "Juan Bolsa",
+      "Don Eladio et ses lieutenants",
+      "Les cousins Salamanca",
+      "Hector Salamanca"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle spécialité culinaire Gus Fring prépare-t-il lui-même pour Walter ?",
+    "answers": [
+      "Un steak",
+      "Un poulet rôti",
+      "Un stew chilien",
+      "Un paella"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel numéro d'élément chimique correspond au brome et au baryum dans le logo de la série ?",
+    "answers": [
+      "Br (35) et Ba (56)",
+      "Br (35) et Be (4)",
+      "B (5) et Ba (56)",
+      "Bi (83) et Ba (56)"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel code Walter utilise-t-il pour les coordonnées GPS de son argent ?",
+    "answers": [
+      "Un numéro de téléphone",
+      "Un numéro de billet de loterie",
+      "Un code postal",
+      "Un numéro de série de billet de banque"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de famille de Combo, l'ami de Jesse ?",
+    "answers": [
+      "Ortega",
+      "Mayhew",
+      "Molina",
+      "Christian Ortega"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage aide Walter à disparaître en lui fournissant une nouvelle identité ?",
+    "answers": [
+      "Saul Goodman",
+      "Ed Galbraith (le réparateur d'aspirateurs)",
+      "Mike Ehrmantraut",
+      "Huell Babineaux"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quel État Walter se cache-t-il après avoir fui Albuquerque ?",
+    "answers": [
+      "Montana",
+      "Vermont",
+      "New Hampshire",
+      "Maine"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel montant approximatif Walter accumule-t-il au total grâce à son empire ?",
+    "answers": [
+      "30 millions de dollars",
+      "50 millions de dollars",
+      "80 millions de dollars",
+      "100 millions de dollars"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle émission de télévision Walter regarde-t-il quand il décide de retourner à Albuquerque ?",
+    "answers": [
+      "Un reportage sur le cartel",
+      "Charlie Rose, avec Elliott et Gretchen",
+      "Les actualités locales d'Albuquerque",
+      "Un documentaire sur la DEA"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel professeur de chimie remplace Walter au lycée ?",
+    "answers": [
+      "Hugo Archilleya",
+      "Carmen Molina",
+      "Un remplaçant jamais nommé",
+      "Gale Boetticher"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui est Carmen Molina dans Breaking Bad ?",
+    "answers": [
+      "La mère de Jesse",
+      "La principale adjointe du lycée",
+      "La sœur de Skyler",
+      "La femme de Gus"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien d'épisodes compte Breaking Bad au total ?",
+    "answers": [
+      "52",
+      "58",
+      "62",
+      "64"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage Walter tue-t-il le premier dans la série ?",
+    "answers": [
+      "Emilio Koyama",
+      "Krazy-8",
+      "Tuco Salamanca",
+      "Jane Margolis"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "De quoi Jane Margolis meurt-elle ?",
+    "answers": [
+      "D'une overdose en s'étouffant dans son vomissement",
+      "D'un empoisonnement",
+      "D'un accident de voiture",
+      "D'une balle perdue"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le vrai nom complet de Walter White Jr. ?",
+    "answers": [
+      "Walter Hartwell White Jr.",
+      "Walter Henry White Jr.",
+      "Walter James White Jr.",
+      "Walter Scott White Jr."
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle ligne de dialogue célèbre Jesse répète-t-il souvent comme ponctuation ?",
+    "answers": [
+      "Yo, Mr. White!",
+      "Yeah, science!",
+      "Bitch",
+      "Magnets!"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quelle saison Walter prononce-t-il « I am the one who knocks » ?",
+    "answers": [
+      "Saison 2",
+      "Saison 3",
+      "Saison 4",
+      "Saison 5"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel type de plante Walter utilise-t-il pour empoisonner Brock ?",
+    "answers": [
+      "De la digitale",
+      "De la belladone",
+      "Du muguet (Lily of the Valley)",
+      "De l'aconit"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage meurt en dernier dans le final de la série ?",
+    "answers": [
+      "Jack Welker",
+      "Todd Alquist",
+      "Lydia Rodarte-Quayle",
+      "Walter White"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
   }
 ]

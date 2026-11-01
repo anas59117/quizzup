@@ -1,102 +1,1502 @@
 [
-  {"text":"Quel studio développe Minecraft ?","answers":["Mojang Studios","Valve","Epic Games","Bungie"],"correct":0},
-  {"text":"Quel créateur est à l'origine de Minecraft ?","answers":["Gabe Newell","Markus Persson","Tim Sweeney","John Carmack"],"correct":1},
-  {"text":"Quel matériau faut-il généralement extraire avec une pioche en fer ou meilleure ?","answers":["Charbon","Cuivre","Diamant","Pierre"],"correct":2},
-  {"text":"Quel monstre vert explose près du joueur ?","answers":["Zombie","Squelette","Slime","Creeper"],"correct":3},
-  {"text":"Comment s'appelle la dimension accessible avec un portail d'obsidienne ?","answers":["Le Nether","L'End","L'Overworld","Le Deep Dark"],"correct":0},
-  {"text":"Quel boss attend le joueur dans l'End ?","answers":["Le Wither","L'Ender Dragon","Le Warden","L'Evocateur"],"correct":1},
-  {"text":"Quel objet permet de dormir et de définir son point de réapparition dans l'Overworld ?","answers":["Une boussole","Une horloge","Un lit","Une lanterne"],"correct":2},
-  {"text":"Combien de lingots de fer faut-il pour fabriquer un seau ?","answers":["Un","Deux","Quatre","Trois"],"correct":3},
-  {"text":"Quel minerai permet de fabriquer des circuits et mécanismes ?","answers":["La redstone","Le lapis-lazuli","L'émeraude","Le quartz"],"correct":0},
-  {"text":"Avec quelle ressource apprivoise-t-on principalement un loup ?","answers":["Du poisson","Des os","Du blé","Des carottes"],"correct":1},
-  {"text":"Quel outil sert à labourer la terre ?","answers":["La pelle","La hache","La houe","La pioche"],"correct":2},
-  {"text":"Quel bloc est indispensable pour fabriquer la plupart des objets ?","answers":["Le four","L'enclume","Le coffre","L'établi"],"correct":3},
-  {"text":"Quel combustible transforme le sable en verre dans un four ?","answers":["Le charbon","L'argile","La poudre à canon","Le silex"],"correct":0},
-  {"text":"Quel villageois échange notamment des livres enchantés ?","answers":["Le forgeron","Le bibliothécaire","Le fermier","Le cartographe"],"correct":1},
-  {"text":"Quel animal fournit de la laine lorsqu'on le tond ?","answers":["La vache","Le cochon","Le mouton","La chèvre"],"correct":2},
-  {"text":"Quelle créature se téléporte et devient hostile si on la regarde dans les yeux ?","answers":["Le Blaze","Le Ghast","Le Piglin","L'Enderman"],"correct":3},
-  {"text":"Quel bloc permet d'enchanter armes, outils et armures ?","answers":["La table d'enchantement","La table de forge","Le tailleur de pierre","Le pupitre"],"correct":0},
-  {"text":"Quelle ressource sert de monnaie principale avec les villageois ?","answers":["Le diamant","L'émeraude","L'or","Le fer"],"correct":1},
-  {"text":"Quel objet indique le point d'apparition mondial ?","answers":["La carte","L'horloge","La boussole","La longue-vue"],"correct":2},
-  {"text":"Quel monstre du Nether lance des boules de feu en volant ?","answers":["Le Hoglin","Le Piglin","Le Strider","Le Ghast"],"correct":3},
-  {"text":"Quelle structure sous-marine est gardée par des Gardiens ?","answers":["Le monument océanique","L'épave","La ruine océanique","Le portail en ruine"],"correct":0},
-  {"text":"Quel effet obtient-on généralement en mangeant une pomme dorée ?","answers":["Invisibilité","Absorption","Respiration aquatique","Vision nocturne"],"correct":1},
-  {"text":"Quel matériau améliore un équipement en diamant vers son niveau supérieur ?","answers":["L'améthyste","L'émeraude","La netherite","Le cuivre"],"correct":2},
-  {"text":"Quelle créature peut être invoquée avec quatre blocs de sable des âmes et trois crânes spécifiques ?","answers":["L'Ender Dragon","Le Golem de fer","Le Warden","Le Wither"],"correct":3},
-  {"text":"Quel mode donne accès à des ressources illimitées et permet de voler ?","answers":["Créatif","Survie","Aventure","Spectateur"],"correct":0},
-  {"text":"Dans quel mode faut-il gérer sa faim et ses points de vie ?","answers":["Créatif","Survie","Spectateur","Paisible"],"correct":1},
-  {"text":"Quel coffre donne accès au même inventaire personnel depuis tous ses exemplaires placés dans le monde ?","answers":["Le coffre piégé","Le tonneau","Le coffre de l'Ender","La boîte de Shulker"],"correct":2},
-  {"text":"Quelle plante permet de fabriquer du papier ?","answers":["Le bambou","Le cactus","Le varech","La canne à sucre"],"correct":3},
-  {"text":"Quel animal peut être monté avec une selle après avoir été apprivoisé ?","answers":["Le cheval","Le renard","Le panda","L'axolotl"],"correct":0},
-  {"text":"Quel objet faut-il lancer pour localiser une forteresse souterraine ?","answers":["Une boule de neige","Un œil de l'Ender","Une perle de l'Ender","Une charge de feu"],"correct":1},
-  {"text":"Quel bloc lumineux se trouve couramment dans le Nether ?","answers":["La lanterne marine","La citrouille-lanterne","La pierre lumineuse","La lampe à redstone"],"correct":2},
-  {"text":"Quel animal produit du miel dans une ruche ?","answers":["La chauve-souris","Le perroquet","La luciole","L'abeille"],"correct":3},
-  {"text":"Qu'est-ce qui répare un équipement doté de l'enchantement Raccommodage ?","answers":["Les orbes d'expérience","Les lingots de fer","La poudre de redstone","Les éclats d'améthyste"],"correct":0},
-  {"text":"Quel biome est principalement composé de sable rouge et de terre cuite ?","answers":["La taïga","Les badlands","Le marais","La savane"],"correct":1},
-  {"text":"Quel bloc permet de cuire les aliments plus rapidement qu'un four classique ?","answers":["Le haut fourneau","Le feu de camp","Le fumoir","Le chaudron"],"correct":2},
-  {"text":"Quelle créature protège naturellement certains villages ?","answers":["Le Golem de neige","Le Ravageur","L'Allay","Le Golem de fer"],"correct":3},
-  {"text":"Quel enchantement augmente la vitesse de minage ?","answers":["Efficacité","Solidité","Fortune","Puissance"],"correct":0},
-  {"text":"Quel objet permet de planer dans les airs ?","answers":["Le trident","Les élytres","Le bouclier","La laisse"],"correct":1},
-  {"text":"Quelle créature du Nether laisse tomber les bâtons nécessaires à l'alambic ?","answers":["Le Ghast","Le cube de magma","Le Blaze","Le Strider"],"correct":2},
-  {"text":"Quel bloc permet de réapparaître dans le Nether lorsqu'il est chargé ?","answers":["L'ancre de l'End","Le noyau antique","La balise","L'ancre de réapparition"],"correct":3},
-  {"text":"Quelle ressource faut-il combiner avec un bâton pour fabriquer une torche classique ?","answers":["Du charbon","Du cuivre","Du silex","De la poudre à canon"],"correct":0},
-  {"text":"Quel animal est attiré et reproduit avec du blé ?","answers":["Le loup","La vache","Le chat","La poule"],"correct":1},
-  {"text":"Quel composant alchimique transforme une potion maladroite en potion de force ?","answers":["Une larme de Ghast","Du sucre","De la poudre de Blaze","Un œil d'araignée"],"correct":2},
-  {"text":"Quelle structure contient le portail menant à l'End ?","answers":["Le bastion","Le manoir des bois","La forteresse du Nether","La forteresse souterraine"],"correct":3},
-  {"text":"Quel objet protège des attaques lorsqu'on le lève ?","answers":["Le bouclier","La cisaille","La canne à pêche","Le briquet"],"correct":0},
-  {"text":"Quelle commande change le mode de jeu lorsqu'on dispose des permissions ?","answers":["/weather","/gamemode","/locate","/spawnpoint"],"correct":1},
-  {"text":"Quel matériau est utilisé avec une boussole pour fabriquer une carte de localisation ?","answers":["Un fragment d'écho","Une pépite d'or","Du papier","Une membrane de Phantom"],"correct":2},
-  {"text":"Quel bloc attire la foudre lorsqu'il est placé en hauteur ?","answers":["Le paratonnerre en fer","La balise","La chaîne","Le paratonnerre en cuivre"],"correct":3},
-  {"text":"Quel mob apparaît lorsque des villageois dorment et travaillent dans un village suffisamment peuplé ?","answers":["Le Golem de fer","Le Golem de cuivre","Le Ravageur","Le Vex"],"correct":0},
-  {"text":"Quel objet est nécessaire pour activer un portail de l'End déjà rempli de ses cadres ?","answers":["Une étoile du Nether","Un œil de l'Ender","Une perle de l'Ender","Un cristal de l'End"],"correct":1},
-  {"text":"Quel bloc détecte des changements devant lui et émet une impulsion de redstone ?","answers":["L'observateur","Le composteur","Le pupitre","Le haut fourneau"],"correct":0},
-  {"text":"Quel bloc transfère automatiquement des objets entre des conteneurs ?","answers":["Le piston","L'entonnoir","La balise","Le métier à tisser"],"correct":1},
-  {"text":"Que provoque un signal de redstone appliqué à un entonnoir ?","answers":["Il accélère le transfert","Il détruit les objets","Il bloque temporairement le transfert","Il double les objets"],"correct":2},
-  {"text":"Quel bloc détecte les vibrations dans le Deep Dark ?","answers":["Le bloc de quartz","La roche mère","Le bloc de miel","Le capteur sculk"],"correct":3},
-  {"text":"Quelle créature du Deep Dark se repère principalement grâce aux vibrations ?","answers":["Le Warden","Le Blaze","Le Noyé","Le Ravageur"],"correct":0},
-  {"text":"Quelle créature bleue ramasse des objets identiques à celui qu'on lui confie ?","answers":["Le Vex","L'Allay","Le Phantom","Le Strider"],"correct":1},
-  {"text":"Quel objet permet de dupliquer un Allay qui danse près d'un jukebox ?","answers":["Un lingot de cuivre","Une plume","Un éclat d'améthyste","Une larme de Ghast"],"correct":2},
-  {"text":"Quel bloc musical attire un Allay qui y dépose ensuite les objets ramassés ?","answers":["Le pupitre","La cloche","Le capteur solaire","Le bloc musical"],"correct":3},
-  {"text":"Quel outil utilise-t-on sur du sable suspect pour révéler un objet enfoui ?","answers":["Le pinceau","La hache","La houe","Le briquet"],"correct":0},
-  {"text":"Quel biome abrite des cerisiers aux feuilles roses ?","answers":["La taïga","La cerisaie","Le désert","Les badlands"],"correct":1},
-  {"text":"Combien de tessons faut-il pour fabriquer un pot décoré sans brique ?","answers":["Deux","Trois","Quatre","Six"],"correct":2},
-  {"text":"Dans quelle structure sous-marine chaude peut-on trouver un œuf de Sniffer en brossant ?","answers":["Une épave","Un monument océanique","Une forteresse","Une ruine océanique chaude"],"correct":3},
-  {"text":"Quelle créature déterre des graines de plantes anciennes ?","answers":["Le Sniffer","La chèvre","Le renard","Le gardien"],"correct":0},
-  {"text":"Quelle plante ancienne sert à reproduire deux Sniffers ?","answers":["Le bambou","La fleur-torche","Le varech","Le cactus"],"correct":1},
-  {"text":"Quel objet sert à personnaliser visuellement une pièce d'armure à la table de forge ?","answers":["Une carte","Une boussole","Un modèle de forge","Une pomme dorée"],"correct":2},
-  {"text":"Quel bloc permet d'appliquer un motif de garniture à une armure ?","answers":["Le fumoir","L'enclume","Le métier à tisser","La table de forge"],"correct":3},
-  {"text":"Quel objet ouvre un coffre-fort ordinaire dans une chambre des épreuves ?","answers":["Une clé d'épreuve","Une perle de l'End","Un disque musical","Un fragment d'écho"],"correct":0},
-  {"text":"Quel bloc fait apparaître des vagues d'ennemis dans les chambres des épreuves ?","answers":["Le générateur de fer","Le générateur d'épreuve","Le pupitre","La balise"],"correct":1},
-  {"text":"Quelle créature des chambres des épreuves attaque avec des charges de vent ?","answers":["Le Ghast","Le Slime","Le Breeze","Le Blaze"],"correct":2},
-  {"text":"Quel objet faut-il boire pour recevoir l'effet Mauvais Présage ?","answers":["Une fiole d'eau","Une potion de soin","Une soupe suspecte","Une fiole funeste"],"correct":3},
-  {"text":"Quelle arme inflige davantage de dégâts lorsque son porteur frappe après une chute ?","answers":["La masse","L'arc","La houe","Le bouclier"],"correct":0},
-  {"text":"Quelle créature du Nether échange des objets contre des lingots d'or ?","answers":["Le Hoglin","Le Piglin","Le Blaze","Le Strider"],"correct":1},
-  {"text":"Quel animal se transforme en grenouille en grandissant ?","answers":["Le poisson d'argent","L'axolotl","Le têtard","La chauve-souris"],"correct":2},
-  {"text":"Quel bloc lumineux une grenouille peut-elle produire en mangeant un petit cube de magma ?","answers":["Une lanterne marine","Une torche de redstone","Une pierre lumineuse","Une grenouilampe"],"correct":3},
-  {"text":"Quel animal amphibie peut être transporté dans un seau d'eau ?","answers":["L'axolotl","La chèvre","Le cheval","Le panda"],"correct":0},
-  {"text":"Quel mob du Nether permet de traverser un lac de lave une fois sellé ?","answers":["Le Hoglin","Le Strider","Le Piglin","Le Ghast"],"correct":1},
-  {"text":"Quel champignon sur bâton sert à diriger un Strider ?","answers":["Le champignon rouge","Le champignon brun","Le champignon biscornu","Le champignon géant"],"correct":2},
-  {"text":"Quel bloc ralentit les déplacements et forme des colonnes de bulles dans l'eau ?","answers":["Le granit","Le verre","Le cuivre","Le sable des âmes"],"correct":3},
-  {"text":"Quel bloc crée une colonne de bulles descendante sous l'eau ?","answers":["Le bloc de magma","La pierre lumineuse","La glace bleue","Le bloc d'argile"],"correct":0},
-  {"text":"Quel bloc transforme des blocs voisins en sculk après la mort d'une créature proche ?","answers":["La laine","Le catalyseur sculk","La terre","Le bloc de cuivre"],"correct":1},
-  {"text":"Dans l'édition Java, quelle touche ouvre l'écran de débogage affichant les coordonnées ?","answers":["F1","F2","F3","F4"],"correct":2},
-  {"text":"Quel bloc peut être façonné en escalier ou en dalle avec un tailleur de pierre ?","answers":["La laine","Le sable","La terre","La pierre"],"correct":3},
-  {"text":"Quel appareil permet de copier ou d'agrandir une carte ?","answers":["La table de cartographie","Le fumoir","Le pupitre","Le composteur"],"correct":0},
-  {"text":"Quel métier de villageois est associé à la table de cartographie ?","answers":["L'armurier","Le cartographe","Le boucher","Le berger"],"correct":1},
-  {"text":"Quel bloc de travail transforme un villageois sans métier en forgeron d'outils ?","answers":["Le pupitre","Le métier à tisser","La table de forge","Le fumoir"],"correct":2},
-  {"text":"Quel bloc permet de fabriquer et modifier des bannières avec des motifs ?","answers":["Le haut fourneau","La table de cartographie","Le chaudron","Le métier à tisser"],"correct":3},
-  {"text":"Quel objet permet de nommer une créature dans le monde ?","answers":["Une étiquette","Une carte","Un livre vierge","Une selle"],"correct":0},
-  {"text":"Quel bloc répare et renomme des objets en échange de niveaux d'expérience ?","answers":["Le coffre","L'enclume","La meule","Le composteur"],"correct":1},
-  {"text":"Quel bloc retire les enchantements non maudits d'un objet ?","answers":["Le pupitre","La balise","La meule","Le tonneau"],"correct":2},
-  {"text":"Quel bloc transforme les déchets végétaux en poudre d'os ?","answers":["Le distributeur","Le haut fourneau","Le piston","Le composteur"],"correct":3},
-  {"text":"Quel objet permet de jouer un disque de musique ?","answers":["Le jukebox","Le pupitre","L'établi","Le fumoir"],"correct":0},
-  {"text":"Quelle créature volante apparaît après plusieurs nuits sans sommeil ?","answers":["Le Vex","Le Phantom","Le Blaze","Le Ghast"],"correct":1},
-  {"text":"Quel objet lâché par un Phantom sert à réparer les élytres ?","answers":["Une plume","Une aile","Une membrane de Phantom","Une écaille"],"correct":2},
-  {"text":"Quel objet permet de respirer sous l'eau plus longtemps lorsqu'il est porté sur la tête ?","answers":["Une citrouille sculptée","Un casque en cuir","Une carapace de shulker","Une carapace de tortue"],"correct":3},
-  {"text":"Quelle créature de l'End tire des projectiles qui font léviter le joueur ?","answers":["Le Shulker","L'Enderman","Le Blaze","Le Warden"],"correct":0},
-  {"text":"Quel objet permet de stocker des objets dans un inventaire transportable issu des Shulkers ?","answers":["Le coffre piégé","La boîte de Shulker","Le tonneau","Le chaudron"],"correct":1},
-  {"text":"Quelle structure de l'End peut contenir des élytres à bord d'un navire volant ?","answers":["La forteresse du Nether","Le monument océanique","La cité de l'End","Le temple du désert"],"correct":2},
-  {"text":"Quel bloc s'allume lorsqu'il reçoit un signal de redstone ?","answers":["Le composteur","Le fumoir","Le pupitre","La lampe de redstone"],"correct":3},
-  {"text":"Quel objet sauve le joueur d'un coup fatal lorsqu'il le tient en main ?","answers":["Le totem d'immortalité","Le bouclier","La pomme dorée","La perle de l'Ender"],"correct":0},
-  {"text":"Quel ennemi des raids laisse tomber un totem d'immortalité ?","answers":["Le Vindicateur","L'Évocateur","Le Pillard","Le Ravageur"],"correct":1}
+  {
+    "text": "Quel studio développe Minecraft ?",
+    "answers": [
+      "Mojang Studios",
+      "Valve",
+      "Epic Games",
+      "Bungie"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel créateur est à l'origine de Minecraft ?",
+    "answers": [
+      "Gabe Newell",
+      "Markus Persson",
+      "Tim Sweeney",
+      "John Carmack"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel matériau faut-il généralement extraire avec une pioche en fer ou meilleure ?",
+    "answers": [
+      "Charbon",
+      "Cuivre",
+      "Diamant",
+      "Pierre"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel monstre vert explose près du joueur ?",
+    "answers": [
+      "Zombie",
+      "Squelette",
+      "Slime",
+      "Creeper"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Comment s'appelle la dimension accessible avec un portail d'obsidienne ?",
+    "answers": [
+      "Le Nether",
+      "L'End",
+      "L'Overworld",
+      "Le Deep Dark"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel boss attend le joueur dans l'End ?",
+    "answers": [
+      "Le Wither",
+      "L'Ender Dragon",
+      "Le Warden",
+      "L'Evocateur"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel objet permet de dormir et de définir son point de réapparition dans l'Overworld ?",
+    "answers": [
+      "Une boussole",
+      "Une horloge",
+      "Un lit",
+      "Une lanterne"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Combien de lingots de fer faut-il pour fabriquer un seau ?",
+    "answers": [
+      "Un",
+      "Deux",
+      "Quatre",
+      "Trois"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel minerai permet de fabriquer des circuits et mécanismes ?",
+    "answers": [
+      "La redstone",
+      "Le lapis-lazuli",
+      "L'émeraude",
+      "Le quartz"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Avec quelle ressource apprivoise-t-on principalement un loup ?",
+    "answers": [
+      "Du poisson",
+      "Des os",
+      "Du blé",
+      "Des carottes"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel outil sert à labourer la terre ?",
+    "answers": [
+      "La pelle",
+      "La hache",
+      "La houe",
+      "La pioche"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel bloc est indispensable pour fabriquer la plupart des objets ?",
+    "answers": [
+      "Le four",
+      "L'enclume",
+      "Le coffre",
+      "L'établi"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel combustible transforme le sable en verre dans un four ?",
+    "answers": [
+      "Le charbon",
+      "L'argile",
+      "La poudre à canon",
+      "Le silex"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel villageois échange notamment des livres enchantés ?",
+    "answers": [
+      "Le forgeron",
+      "Le bibliothécaire",
+      "Le fermier",
+      "Le cartographe"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel animal fournit de la laine lorsqu'on le tond ?",
+    "answers": [
+      "La vache",
+      "Le cochon",
+      "Le mouton",
+      "La chèvre"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle créature se téléporte et devient hostile si on la regarde dans les yeux ?",
+    "answers": [
+      "Le Blaze",
+      "Le Ghast",
+      "Le Piglin",
+      "L'Enderman"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel bloc permet d'enchanter armes, outils et armures ?",
+    "answers": [
+      "La table d'enchantement",
+      "La table de forge",
+      "Le tailleur de pierre",
+      "Le pupitre"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle ressource sert de monnaie principale avec les villageois ?",
+    "answers": [
+      "Le diamant",
+      "L'émeraude",
+      "L'or",
+      "Le fer"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel objet indique le point d'apparition mondial ?",
+    "answers": [
+      "La carte",
+      "L'horloge",
+      "La boussole",
+      "La longue-vue"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel monstre du Nether lance des boules de feu en volant ?",
+    "answers": [
+      "Le Hoglin",
+      "Le Piglin",
+      "Le Strider",
+      "Le Ghast"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle structure sous-marine est gardée par des Gardiens ?",
+    "answers": [
+      "Le monument océanique",
+      "L'épave",
+      "La ruine océanique",
+      "Le portail en ruine"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel effet obtient-on généralement en mangeant une pomme dorée ?",
+    "answers": [
+      "Invisibilité",
+      "Absorption",
+      "Respiration aquatique",
+      "Vision nocturne"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel matériau améliore un équipement en diamant vers son niveau supérieur ?",
+    "answers": [
+      "L'améthyste",
+      "L'émeraude",
+      "La netherite",
+      "Le cuivre"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle créature peut être invoquée avec quatre blocs de sable des âmes et trois crânes spécifiques ?",
+    "answers": [
+      "L'Ender Dragon",
+      "Le Golem de fer",
+      "Le Warden",
+      "Le Wither"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel mode donne accès à des ressources illimitées et permet de voler ?",
+    "answers": [
+      "Créatif",
+      "Survie",
+      "Aventure",
+      "Spectateur"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans quel mode faut-il gérer sa faim et ses points de vie ?",
+    "answers": [
+      "Créatif",
+      "Survie",
+      "Spectateur",
+      "Paisible"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel coffre donne accès au même inventaire personnel depuis tous ses exemplaires placés dans le monde ?",
+    "answers": [
+      "Le coffre piégé",
+      "Le tonneau",
+      "Le coffre de l'Ender",
+      "La boîte de Shulker"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle plante permet de fabriquer du papier ?",
+    "answers": [
+      "Le bambou",
+      "Le cactus",
+      "Le varech",
+      "La canne à sucre"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel animal peut être monté avec une selle après avoir été apprivoisé ?",
+    "answers": [
+      "Le cheval",
+      "Le renard",
+      "Le panda",
+      "L'axolotl"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel objet faut-il lancer pour localiser une forteresse souterraine ?",
+    "answers": [
+      "Une boule de neige",
+      "Un œil de l'Ender",
+      "Une perle de l'Ender",
+      "Une charge de feu"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel bloc lumineux se trouve couramment dans le Nether ?",
+    "answers": [
+      "La lanterne marine",
+      "La citrouille-lanterne",
+      "La pierre lumineuse",
+      "La lampe à redstone"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel animal produit du miel dans une ruche ?",
+    "answers": [
+      "La chauve-souris",
+      "Le perroquet",
+      "La luciole",
+      "L'abeille"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Qu'est-ce qui répare un équipement doté de l'enchantement Raccommodage ?",
+    "answers": [
+      "Les orbes d'expérience",
+      "Les lingots de fer",
+      "La poudre de redstone",
+      "Les éclats d'améthyste"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel biome est principalement composé de sable rouge et de terre cuite ?",
+    "answers": [
+      "La taïga",
+      "Les badlands",
+      "Le marais",
+      "La savane"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel bloc permet de cuire les aliments plus rapidement qu'un four classique ?",
+    "answers": [
+      "Le haut fourneau",
+      "Le feu de camp",
+      "Le fumoir",
+      "Le chaudron"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle créature protège naturellement certains villages ?",
+    "answers": [
+      "Le Golem de neige",
+      "Le Ravageur",
+      "L'Allay",
+      "Le Golem de fer"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel enchantement augmente la vitesse de minage ?",
+    "answers": [
+      "Efficacité",
+      "Solidité",
+      "Fortune",
+      "Puissance"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel objet permet de planer dans les airs ?",
+    "answers": [
+      "Le trident",
+      "Les élytres",
+      "Le bouclier",
+      "La laisse"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle créature du Nether laisse tomber les bâtons nécessaires à l'alambic ?",
+    "answers": [
+      "Le Ghast",
+      "Le cube de magma",
+      "Le Blaze",
+      "Le Strider"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel bloc permet de réapparaître dans le Nether lorsqu'il est chargé ?",
+    "answers": [
+      "L'ancre de l'End",
+      "Le noyau antique",
+      "La balise",
+      "L'ancre de réapparition"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle ressource faut-il combiner avec un bâton pour fabriquer une torche classique ?",
+    "answers": [
+      "Du charbon",
+      "Du cuivre",
+      "Du silex",
+      "De la poudre à canon"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel animal est attiré et reproduit avec du blé ?",
+    "answers": [
+      "Le loup",
+      "La vache",
+      "Le chat",
+      "La poule"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel composant alchimique transforme une potion maladroite en potion de force ?",
+    "answers": [
+      "Une larme de Ghast",
+      "Du sucre",
+      "De la poudre de Blaze",
+      "Un œil d'araignée"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle structure contient le portail menant à l'End ?",
+    "answers": [
+      "Le bastion",
+      "Le manoir des bois",
+      "La forteresse du Nether",
+      "La forteresse souterraine"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel objet protège des attaques lorsqu'on le lève ?",
+    "answers": [
+      "Le bouclier",
+      "La cisaille",
+      "La canne à pêche",
+      "Le briquet"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle commande change le mode de jeu lorsqu'on dispose des permissions ?",
+    "answers": [
+      "/weather",
+      "/gamemode",
+      "/locate",
+      "/spawnpoint"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel matériau est utilisé avec une boussole pour fabriquer une carte de localisation ?",
+    "answers": [
+      "Un fragment d'écho",
+      "Une pépite d'or",
+      "Du papier",
+      "Une membrane de Phantom"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel bloc attire la foudre lorsqu'il est placé en hauteur ?",
+    "answers": [
+      "Le paratonnerre en fer",
+      "La balise",
+      "La chaîne",
+      "Le paratonnerre en cuivre"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel mob apparaît lorsque des villageois dorment et travaillent dans un village suffisamment peuplé ?",
+    "answers": [
+      "Le Golem de fer",
+      "Le Golem de cuivre",
+      "Le Ravageur",
+      "Le Vex"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel objet est nécessaire pour activer un portail de l'End déjà rempli de ses cadres ?",
+    "answers": [
+      "Une étoile du Nether",
+      "Un œil de l'Ender",
+      "Une perle de l'Ender",
+      "Un cristal de l'End"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel bloc détecte des changements devant lui et émet une impulsion de redstone ?",
+    "answers": [
+      "L'observateur",
+      "Le composteur",
+      "Le pupitre",
+      "Le haut fourneau"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel bloc transfère automatiquement des objets entre des conteneurs ?",
+    "answers": [
+      "Le piston",
+      "L'entonnoir",
+      "La balise",
+      "Le métier à tisser"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Que provoque un signal de redstone appliqué à un entonnoir ?",
+    "answers": [
+      "Il accélère le transfert",
+      "Il détruit les objets",
+      "Il bloque temporairement le transfert",
+      "Il double les objets"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel bloc détecte les vibrations dans le Deep Dark ?",
+    "answers": [
+      "Le bloc de quartz",
+      "La roche mère",
+      "Le bloc de miel",
+      "Le capteur sculk"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle créature du Deep Dark se repère principalement grâce aux vibrations ?",
+    "answers": [
+      "Le Warden",
+      "Le Blaze",
+      "Le Noyé",
+      "Le Ravageur"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle créature bleue ramasse des objets identiques à celui qu'on lui confie ?",
+    "answers": [
+      "Le Vex",
+      "L'Allay",
+      "Le Phantom",
+      "Le Strider"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel objet permet de dupliquer un Allay qui danse près d'un jukebox ?",
+    "answers": [
+      "Un lingot de cuivre",
+      "Une plume",
+      "Un éclat d'améthyste",
+      "Une larme de Ghast"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel bloc musical attire un Allay qui y dépose ensuite les objets ramassés ?",
+    "answers": [
+      "Le pupitre",
+      "La cloche",
+      "Le capteur solaire",
+      "Le bloc musical"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel outil utilise-t-on sur du sable suspect pour révéler un objet enfoui ?",
+    "answers": [
+      "Le pinceau",
+      "La hache",
+      "La houe",
+      "Le briquet"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel biome abrite des cerisiers aux feuilles roses ?",
+    "answers": [
+      "La taïga",
+      "La cerisaie",
+      "Le désert",
+      "Les badlands"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de tessons faut-il pour fabriquer un pot décoré sans brique ?",
+    "answers": [
+      "Deux",
+      "Trois",
+      "Quatre",
+      "Six"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans quelle structure sous-marine chaude peut-on trouver un œuf de Sniffer en brossant ?",
+    "answers": [
+      "Une épave",
+      "Un monument océanique",
+      "Une forteresse",
+      "Une ruine océanique chaude"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle créature déterre des graines de plantes anciennes ?",
+    "answers": [
+      "Le Sniffer",
+      "La chèvre",
+      "Le renard",
+      "Le gardien"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle plante ancienne sert à reproduire deux Sniffers ?",
+    "answers": [
+      "Le bambou",
+      "La fleur-torche",
+      "Le varech",
+      "Le cactus"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel objet sert à personnaliser visuellement une pièce d'armure à la table de forge ?",
+    "answers": [
+      "Une carte",
+      "Une boussole",
+      "Un modèle de forge",
+      "Une pomme dorée"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel bloc permet d'appliquer un motif de garniture à une armure ?",
+    "answers": [
+      "Le fumoir",
+      "L'enclume",
+      "Le métier à tisser",
+      "La table de forge"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel objet ouvre un coffre-fort ordinaire dans une chambre des épreuves ?",
+    "answers": [
+      "Une clé d'épreuve",
+      "Une perle de l'End",
+      "Un disque musical",
+      "Un fragment d'écho"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel bloc fait apparaître des vagues d'ennemis dans les chambres des épreuves ?",
+    "answers": [
+      "Le générateur de fer",
+      "Le générateur d'épreuve",
+      "Le pupitre",
+      "La balise"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle créature des chambres des épreuves attaque avec des charges de vent ?",
+    "answers": [
+      "Le Ghast",
+      "Le Slime",
+      "Le Breeze",
+      "Le Blaze"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel objet faut-il boire pour recevoir l'effet Mauvais Présage ?",
+    "answers": [
+      "Une fiole d'eau",
+      "Une potion de soin",
+      "Une soupe suspecte",
+      "Une fiole funeste"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle arme inflige davantage de dégâts lorsque son porteur frappe après une chute ?",
+    "answers": [
+      "La masse",
+      "L'arc",
+      "La houe",
+      "Le bouclier"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle créature du Nether échange des objets contre des lingots d'or ?",
+    "answers": [
+      "Le Hoglin",
+      "Le Piglin",
+      "Le Blaze",
+      "Le Strider"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel animal se transforme en grenouille en grandissant ?",
+    "answers": [
+      "Le poisson d'argent",
+      "L'axolotl",
+      "Le têtard",
+      "La chauve-souris"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel bloc lumineux une grenouille peut-elle produire en mangeant un petit cube de magma ?",
+    "answers": [
+      "Une lanterne marine",
+      "Une torche de redstone",
+      "Une pierre lumineuse",
+      "Une grenouilampe"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel animal amphibie peut être transporté dans un seau d'eau ?",
+    "answers": [
+      "L'axolotl",
+      "La chèvre",
+      "Le cheval",
+      "Le panda"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel mob du Nether permet de traverser un lac de lave une fois sellé ?",
+    "answers": [
+      "Le Hoglin",
+      "Le Strider",
+      "Le Piglin",
+      "Le Ghast"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel champignon sur bâton sert à diriger un Strider ?",
+    "answers": [
+      "Le champignon rouge",
+      "Le champignon brun",
+      "Le champignon biscornu",
+      "Le champignon géant"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel bloc ralentit les déplacements et forme des colonnes de bulles dans l'eau ?",
+    "answers": [
+      "Le granit",
+      "Le verre",
+      "Le cuivre",
+      "Le sable des âmes"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel bloc crée une colonne de bulles descendante sous l'eau ?",
+    "answers": [
+      "Le bloc de magma",
+      "La pierre lumineuse",
+      "La glace bleue",
+      "Le bloc d'argile"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel bloc transforme des blocs voisins en sculk après la mort d'une créature proche ?",
+    "answers": [
+      "La laine",
+      "Le catalyseur sculk",
+      "La terre",
+      "Le bloc de cuivre"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans l'édition Java, quelle touche ouvre l'écran de débogage affichant les coordonnées ?",
+    "answers": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel bloc peut être façonné en escalier ou en dalle avec un tailleur de pierre ?",
+    "answers": [
+      "La laine",
+      "Le sable",
+      "La terre",
+      "La pierre"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel appareil permet de copier ou d'agrandir une carte ?",
+    "answers": [
+      "La table de cartographie",
+      "Le fumoir",
+      "Le pupitre",
+      "Le composteur"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel métier de villageois est associé à la table de cartographie ?",
+    "answers": [
+      "L'armurier",
+      "Le cartographe",
+      "Le boucher",
+      "Le berger"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel bloc de travail transforme un villageois sans métier en forgeron d'outils ?",
+    "answers": [
+      "Le pupitre",
+      "Le métier à tisser",
+      "La table de forge",
+      "Le fumoir"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel bloc permet de fabriquer et modifier des bannières avec des motifs ?",
+    "answers": [
+      "Le haut fourneau",
+      "La table de cartographie",
+      "Le chaudron",
+      "Le métier à tisser"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel objet permet de nommer une créature dans le monde ?",
+    "answers": [
+      "Une étiquette",
+      "Une carte",
+      "Un livre vierge",
+      "Une selle"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel bloc répare et renomme des objets en échange de niveaux d'expérience ?",
+    "answers": [
+      "Le coffre",
+      "L'enclume",
+      "La meule",
+      "Le composteur"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel bloc retire les enchantements non maudits d'un objet ?",
+    "answers": [
+      "Le pupitre",
+      "La balise",
+      "La meule",
+      "Le tonneau"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel bloc transforme les déchets végétaux en poudre d'os ?",
+    "answers": [
+      "Le distributeur",
+      "Le haut fourneau",
+      "Le piston",
+      "Le composteur"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel objet permet de jouer un disque de musique ?",
+    "answers": [
+      "Le jukebox",
+      "Le pupitre",
+      "L'établi",
+      "Le fumoir"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle créature volante apparaît après plusieurs nuits sans sommeil ?",
+    "answers": [
+      "Le Vex",
+      "Le Phantom",
+      "Le Blaze",
+      "Le Ghast"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel objet lâché par un Phantom sert à réparer les élytres ?",
+    "answers": [
+      "Une plume",
+      "Une aile",
+      "Une membrane de Phantom",
+      "Une écaille"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel objet permet de respirer sous l'eau plus longtemps lorsqu'il est porté sur la tête ?",
+    "answers": [
+      "Une citrouille sculptée",
+      "Un casque en cuir",
+      "Une carapace de shulker",
+      "Une carapace de tortue"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle créature de l'End tire des projectiles qui font léviter le joueur ?",
+    "answers": [
+      "Le Shulker",
+      "L'Enderman",
+      "Le Blaze",
+      "Le Warden"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel objet permet de stocker des objets dans un inventaire transportable issu des Shulkers ?",
+    "answers": [
+      "Le coffre piégé",
+      "La boîte de Shulker",
+      "Le tonneau",
+      "Le chaudron"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle structure de l'End peut contenir des élytres à bord d'un navire volant ?",
+    "answers": [
+      "La forteresse du Nether",
+      "Le monument océanique",
+      "La cité de l'End",
+      "Le temple du désert"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel bloc s'allume lorsqu'il reçoit un signal de redstone ?",
+    "answers": [
+      "Le composteur",
+      "Le fumoir",
+      "Le pupitre",
+      "La lampe de redstone"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel objet sauve le joueur d'un coup fatal lorsqu'il le tient en main ?",
+    "answers": [
+      "Le totem d'immortalité",
+      "Le bouclier",
+      "La pomme dorée",
+      "La perle de l'Ender"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel ennemi des raids laisse tomber un totem d'immortalité ?",
+    "answers": [
+      "Le Vindicateur",
+      "L'Évocateur",
+      "Le Pillard",
+      "Le Ravageur"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel bloc est nécessaire pour créer un Golem de neige ?",
+    "answers": [
+      "Citrouille sculptée",
+      "Bloc de fer",
+      "Bloc de diamant",
+      "Bloc d'or"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Combien de blocs de fer faut-il pour invoquer un Golem de fer ?",
+    "answers": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel enchantement permet de marcher sur l'eau gelée ?",
+    "answers": [
+      "Agilité aquatique",
+      "Semelles givrantes",
+      "Affinité aquatique",
+      "Pas gelés"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel bloc faut-il casser pour obtenir de la poudre de redstone ?",
+    "answers": [
+      "Minerai de redstone",
+      "Bloc de redstone",
+      "Pierre rouge",
+      "Minerai de cuivre"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel animal peut-on apprivoiser avec du poisson cru ?",
+    "answers": [
+      "Le renard",
+      "Le loup",
+      "Le chat (ocelot)",
+      "Le perroquet"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Combien de planches de bois faut-il pour fabriquer un établi ?",
+    "answers": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel enchantement augmente les dégâts contre les morts-vivants ?",
+    "answers": [
+      "Tranchant",
+      "Châtiment",
+      "Fléau des arthropodes",
+      "Aspect de feu"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel biome contient des colonnes de basalte dans le Nether ?",
+    "answers": [
+      "Vallée de sable des âmes",
+      "Deltas de basalte",
+      "Forêt cramoisie",
+      "Forêt biscornue"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle créature hostile apparaît uniquement dans les biomes de montagne ?",
+    "answers": [
+      "La chèvre",
+      "Le pillard",
+      "Le Stray",
+      "Le Zombie"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel objet permet de collecter du miel dans une ruche sans énerver les abeilles ?",
+    "answers": [
+      "Cisailles",
+      "Seau",
+      "Bouteille en verre avec feu de camp en dessous",
+      "Entonnoir"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "En quelle année la première version complète de Minecraft est-elle sortie ?",
+    "answers": [
+      "2009",
+      "2010",
+      "2011",
+      "2012"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel mob lance des potions de poison et de faiblesse ?",
+    "answers": [
+      "La sorcière",
+      "L'évocateur",
+      "Le zombie",
+      "Le pillard"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Combien d'yeux de l'Ender faut-il au maximum pour remplir un portail de l'End ?",
+    "answers": [
+      "8",
+      "10",
+      "12",
+      "16"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel bloc est immunisé à toutes les explosions sauf la Wither ?",
+    "answers": [
+      "L'obsidienne",
+      "Le bedrock",
+      "Les blocs de nétherite",
+      "Le bloc de commande"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel enchantement d'arc permet de tirer des flèches enflammées ?",
+    "answers": [
+      "Puissance",
+      "Infinité",
+      "Flamme",
+      "Perforation"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel animal du Nether peut être reproduit avec de la crimson fungus ?",
+    "answers": [
+      "Le Strider",
+      "Le Hoglin",
+      "Le Piglin",
+      "Le Magma Cube"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la hauteur maximale de construction dans l'Overworld depuis la 1.18 ?",
+    "answers": [
+      "256",
+      "320",
+      "384",
+      "512"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle est la profondeur minimale (Y) dans l'Overworld depuis la 1.18 ?",
+    "answers": [
+      "-32",
+      "-48",
+      "-64",
+      "-128"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel minerai apparaît exclusivement dans le Nether ?",
+    "answers": [
+      "Débris antiques",
+      "Minerai de quartz",
+      "Les deux",
+      "Aucun des deux"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel bloc permet de stocker neuf lingots de cuivre ?",
+    "answers": [
+      "Bloc de cuivre",
+      "Cuivre brut",
+      "Bloc de cuivre ciré",
+      "Dalle de cuivre"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Combien de blocs d'obsidienne faut-il au minimum pour construire un portail du Nether ?",
+    "answers": [
+      "8",
+      "10",
+      "12",
+      "14"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle potion rend le joueur invisible ?",
+    "answers": [
+      "Potion de force",
+      "Potion d'invisibilité",
+      "Potion de vitesse",
+      "Potion de saut"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel objet est nécessaire pour fabriquer un œil de l'Ender ?",
+    "answers": [
+      "Perle de l'Ender et poudre de Blaze",
+      "Lingot d'or et diamant",
+      "Perle de l'Ender et poudre de redstone",
+      "Bâton de Blaze et diamant"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel bloc change de couleur au fil du temps à cause de l'oxydation ?",
+    "answers": [
+      "Bloc de fer",
+      "Bloc de cuivre",
+      "Bloc d'or",
+      "Bloc de diamant"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel animal peut-on apprivoiser avec des graines dans Minecraft ?",
+    "answers": [
+      "Le perroquet",
+      "Le loup",
+      "Le chat",
+      "Le renard"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel effet négatif subit le joueur dans le biome Deep Dark en présence d'un Warden ?",
+    "answers": [
+      "Obscurité",
+      "Poison",
+      "Lenteur",
+      "Nausée"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel outil est indispensable pour récolter de la pierre sans la transformer en pavé ?",
+    "answers": [
+      "Pioche avec Toucher de soie",
+      "Pioche en diamant",
+      "Pioche en nétherite",
+      "N'importe quelle pioche"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel bloc peut pousser d'autres blocs grâce à la redstone ?",
+    "answers": [
+      "Le piston",
+      "L'observateur",
+      "Le répéteur",
+      "Le comparateur"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel est le nom du boss secondaire invoqué par le joueur dans le Nether ?",
+    "answers": [
+      "L'Ender Dragon",
+      "Le Wither",
+      "L'Elder Guardian",
+      "Le Warden"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Combien de têtes de Wither Squelette faut-il pour invoquer le Wither ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel est le matériau le plus résistant du jeu obtenu en survivant ?",
+    "answers": [
+      "Le diamant",
+      "La nétherite",
+      "L'obsidienne",
+      "Le bedrock"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel enchantement permet de ne pas perdre ses niveaux d'expérience en réparant un objet ?",
+    "answers": [
+      "Raccommodage",
+      "Solidité",
+      "Efficacité",
+      "Fortune"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel mob passif vit exclusivement dans les grottes luxuriantes ?",
+    "answers": [
+      "L'Axolotl",
+      "Le Glow Squid",
+      "La grenouille",
+      "Le poisson-globe"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle plante pousse uniquement dans les grottes luxuriantes ?",
+    "answers": [
+      "Les vignes lumineuses (Glow Berries)",
+      "Le bambou",
+      "Le cactus",
+      "La canne à sucre"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel biome terrestre contient naturellement de la neige poudreuse ?",
+    "answers": [
+      "Taïga",
+      "Pics enneigés",
+      "Plaines",
+      "Forêt de bouleaux"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Que se passe-t-il si un joueur tombe dans de la neige poudreuse ?",
+    "answers": [
+      "Il prend des dégâts de gel",
+      "Il meurt instantanément",
+      "Il rebondit",
+      "Rien de spécial"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel bloc émet de la lumière sous l'eau et peut être récolté avec des cisailles ?",
+    "answers": [
+      "Le lichen lumineux (Glow Lichen)",
+      "La lanterne",
+      "La torche",
+      "Le bloc de glowstone"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel enchantement de pioche augmente le nombre de minerais récoltés ?",
+    "answers": [
+      "Fortune",
+      "Efficacité",
+      "Solidité",
+      "Toucher de soie"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel animal peut-on reproduire en lui donnant du bambou ?",
+    "answers": [
+      "Le panda",
+      "Le perroquet",
+      "Le cheval",
+      "La tortue"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel objet permet de respirer sous l'eau de façon permanente ?",
+    "answers": [
+      "Le conduit (Conduit)",
+      "Le casque en diamant",
+      "La potion de respiration",
+      "L'enchantement Affinité"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Combien de diamants faut-il pour fabriquer une table d'enchantement ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel bloc ralentit les mouvements du joueur lorsqu'il marche dessus ?",
+    "answers": [
+      "Le sable des âmes",
+      "Le gravier",
+      "Le sable",
+      "La terre"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel type de bois est de couleur bleu-vert et se trouve dans le Nether ?",
+    "answers": [
+      "Bois biscornu (Warped)",
+      "Bois cramoisi",
+      "Bois de chêne",
+      "Bois de sapin"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel enchantement d'armure réduit les dégâts de feu ?",
+    "answers": [
+      "Protection contre le feu",
+      "Protection",
+      "Épines",
+      "Solidité"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel est le seul bloc que le Wither ne peut pas détruire ?",
+    "answers": [
+      "Le bedrock",
+      "L'obsidienne",
+      "Le bloc de nétherite",
+      "Le bloc de commande"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel aliment restaure le plus de points de faim dans Minecraft ?",
+    "answers": [
+      "Steak doré",
+      "Ragoût suspect",
+      "Côtelette de porc cuite",
+      "Steak cuit"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel objet faut-il pour fabriquer un télescope (spyglass) ?",
+    "answers": [
+      "Lingots de cuivre et éclat d'améthyste",
+      "Lingots d'or et verre",
+      "Diamants et redstone",
+      "Lingots de fer et émeraude"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel cristal pousse naturellement dans les géodes souterraines ?",
+    "answers": [
+      "L'améthyste",
+      "Le quartz",
+      "Le diamant",
+      "L'émeraude"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel mob neutre attaque uniquement si on le frappe ou si on le regarde dans les yeux ?",
+    "answers": [
+      "L'Enderman",
+      "Le Zombie Piglin",
+      "L'araignée",
+      "Le loup"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel enchantement empêche un arc de consommer des flèches ?",
+    "answers": [
+      "Infinité",
+      "Flamme",
+      "Puissance",
+      "Recul"
+    ],
+    "correct": 0
+  }
 ]

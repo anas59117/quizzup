@@ -998,5 +998,305 @@
         "Toneri Ôtsutsuki"
       ],
       "correct": 1
-    }
+    },
+  {
+    "text": "Quel est le nom du village caché où vit Naruto ?",
+    "answers": ["Konoha", "Suna", "Kiri", "Kumo"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel numéro d'équipe forment Naruto, Sasuke et Sakura ?",
+    "answers": ["Équipe 8", "Équipe 7", "Équipe 10", "Équipe 3"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le plat préféré de Naruto ?",
+    "answers": ["Les sushis", "Le takoyaki", "Les ramen", "Le riz au curry"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom du restaurant de ramen préféré de Naruto ?",
+    "answers": ["Yakiniku Q", "Dango Shop", "Amaguriama", "Ichiraku"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle technique de base Naruto ne parvient pas à maîtriser à l'Académie ?",
+    "answers": ["Le clone", "Le Rasengan", "La substitution", "La métamorphose"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel rang ninja Naruto atteint-il à la fin de la première partie ?",
+    "answers": ["Chûnin", "Genin", "Jônin", "ANBU"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel nom porte l'organisation criminelle composée de déserteurs de rang S ?",
+    "answers": ["La Racine", "Les ANBU", "L'Akatsuki", "Le Son d'Oto"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel vêtement distinctif les membres de l'Akatsuki portent-ils ?",
+    "answers": ["Des gilets verts", "Des armures noires", "Des masques blancs", "Des manteaux noirs à nuages rouges"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le surnom de Minato Namikaze en raison de sa vitesse ?",
+    "answers": ["L'Éclair Jaune de Konoha", "Le Faucon Blanc", "La Foudre de Kumo", "L'Ombre Rapide"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle technique Sasuke utilise-t-il pour la première fois contre Haku ?",
+    "answers": ["L'Amaterasu", "Le Chidori", "Le Kirin", "Le Susanoo"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel dojutsu Sasuke éveille-t-il après avoir tué Itachi ?",
+    "answers": ["Le Byakugan", "Le Rinnegan", "Le Mangekyô Sharingan", "Le Tenseigan"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage contrôle les marionnettes au sein de l'Akatsuki ?",
+    "answers": ["Deidara", "Kakuzu", "Hidan", "Sasori"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel rang ninja est le plus élevé sous le Kage ?",
+    "answers": ["Jônin", "Chûnin", "Genin", "ANBU"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel personnage possède le Rinnegan dans l'Akatsuki ?",
+    "answers": ["Itachi", "Nagato", "Obito", "Kisame"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel animal Naruto peut-il invoquer ?",
+    "answers": ["Des serpents", "Des limaces", "Des crapauds", "Des chiens"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel animal Sasuke peut-il invoquer grâce à l'enseignement d'Orochimaru ?",
+    "answers": ["Des crapauds", "Des faucons", "Des limaces", "Des serpents"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle technique permet à Kakashi de copier les jutsu de ses adversaires ?",
+    "answers": ["Le Sharingan", "Le Byakugan", "Le Rinnegan", "La marque maudite"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom de la technique de Naruto qui crée une sphère de chakra tournoyante ?",
+    "answers": ["Le Chidori", "Le Rasengan", "Le Kirin", "L'Amaterasu"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel village caché est situé dans le désert ?",
+    "answers": ["Konoha", "Kiri", "Suna", "Kumo"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien de queues possède le démon-renard scellé en Naruto ?",
+    "answers": ["Huit", "Sept", "Une", "Neuf"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom du fils de Naruto et Hinata ?",
+    "answers": ["Boruto", "Konohamaru", "Kawaki", "Mitsuki"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel membre de l'Akatsuki est un adepte du jashinisme et est pratiquement immortel ?",
+    "answers": ["Kakuzu", "Hidan", "Kisame", "Zetsu"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle technique secrète Itachi utilise-t-il pour créer des flammes noires inextinguibles ?",
+    "answers": ["Le Tsukuyomi", "Le Susanoo", "L'Amaterasu", "L'Izanagi"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel genjutsu suprême Itachi lance-t-il avec son Mangekyô Sharingan pour torturer sa cible mentalement ?",
+    "answers": ["L'Izanami", "Le Kotoamatsukami", "L'Amaterasu", "Le Tsukuyomi"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom du plan d'Obito et Madara pour plonger le monde entier dans un genjutsu ?",
+    "answers": ["Le projet Tsuki no Me", "L'Opération Akatsuki", "Le plan Rinne Tensei", "Le jutsu de l'Edo Tensei"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage ressuscite les morts avec la technique Edo Tensei pendant la Quatrième Guerre ?",
+    "answers": ["Orochimaru", "Kabuto Yakushi", "Madara Uchiwa", "Obito Uchiwa"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de la technique que Sasuke développe en combinant le Chidori avec la foudre naturelle ?",
+    "answers": ["Le Chidori Nagashi", "L'Amaterasu", "Le Kirin", "Le Susanoo"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage possède le pouvoir de se transformer en créature mi-humaine grâce à des enzymes ?",
+    "answers": ["Suigetsu", "Karin", "Kabuto", "Jûgo"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de l'organisation secrète de Danzô au sein de Konoha ?",
+    "answers": ["La Racine", "Les ANBU", "L'Akatsuki", "La Section Spéciale"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de la technique de téléportation de Minato ?",
+    "answers": ["Le Shunshin", "Le Hiraishin no Jutsu", "Le Kawarimi", "Le Kamui"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel membre de l'Akatsuki se bat en duo avec Itachi et possède l'épée Samehada ?",
+    "answers": ["Deidara", "Kakuzu", "Kisame Hoshigaki", "Pain"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage est le chef de l'ANBU Racine et possède un Sharingan volé ?",
+    "answers": ["Hiruzen Sarutobi", "Homura Mitokado", "Koharu Utatane", "Danzô Shimura"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de la technique ultime du Rinnegan qui permet de contrôler la gravité ?",
+    "answers": ["Shinra Tensei", "Chibaku Tensei", "Bansho Tenin", "Gedô Mazô"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage est le jinchûriki du démon à deux queues, Matatabi ?",
+    "answers": ["Killer B", "Yugito Nii", "Yagura", "Rôshi"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de la statue démoniaque que l'Akatsuki utilise pour sceller les démons à queues ?",
+    "answers": ["Le Susanoo", "Le Kyûbi", "Le Gedô Mazô", "Le Jûbi"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui est le fondateur originel de l'Akatsuki ?",
+    "answers": ["Obito Uchiwa", "Madara Uchiwa", "Pain", "Yahiko"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de la camarade de Kakashi morte pendant la Troisième Guerre Ninja ?",
+    "answers": ["Rin Nohara", "Kurenai Yûhi", "Anko Mitarashi", "Shizune"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le dernier gardien des cinq Kage que Naruto convainc pendant la Quatrième Guerre ?",
+    "answers": ["Gaara", "Le Raikage", "Le Tsuchikage", "La Mizukage"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de la fille de Sasuke et Sakura ?",
+    "answers": ["Himawari", "Sumire", "Sarada Uchiwa", "Chôchô"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Hokage Naruto devient-il à la fin du manga ?",
+    "answers": ["Le Cinquième", "Le Sixième", "Le Huitième", "Le Septième"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel type de chakra Naruto possède-t-il naturellement ?",
+    "answers": ["Le Fûton (Vent)", "Le Katon (Feu)", "Le Raiton (Foudre)", "Le Suiton (Eau)"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de la coéquipière de Shikamaru et Chôji dans l'équipe 10 ?",
+    "answers": ["Hinata", "Ino Yamanaka", "Tenten", "Temari"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom du maître de l'équipe 10, fils du Troisième Hokage ?",
+    "answers": ["Kakashi Hatake", "Kurenai Yûhi", "Asuma Sarutobi", "Might Guy"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage maîtrise les os et fait partie du clan Kaguya ?",
+    "answers": ["Kabuto", "Jûgo", "Suigetsu", "Kimimaro"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment s'appelle le fils du Troisième Hokage qui entraîne Naruto au début de la série ?",
+    "answers": ["Konohamaru", "Asuma Sarutobi", "Ebisu", "Iruka"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel membre de l'équipe de Gaara utilise un éventail géant comme arme ?",
+    "answers": ["Kankurô", "Temari", "Baki", "Chiyo"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel clan possède la capacité héréditaire de manipuler les insectes ?",
+    "answers": ["Le clan Inuzuka", "Le clan Nara", "Le clan Aburame", "Le clan Yamanaka"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de la technique ultime de Might Guy qui ouvre toutes les Huit Portes ?",
+    "answers": ["Le Lotus primaire", "Le Lotus funeste", "Le Morning Peacock", "Le Sekizô (Soir Éléphant)"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui devient le Sixième Hokage après la Quatrième Grande Guerre Ninja ?",
+    "answers": ["Kakashi Hatake", "Naruto Uzumaki", "Tsunade", "Danzô Shimura"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de la dimension personnelle accessible grâce au Mangekyô Sharingan d'Obito ?",
+    "answers": ["Le Tsukuyomi", "Le Kamui", "Le Susanoo", "Le Kotoamatsukami"],
+    "correct": 1,
+    "difficulty": "difficile"
+  }
 ]

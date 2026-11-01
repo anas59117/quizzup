@@ -998,5 +998,305 @@
       "Gryffondor"
     ],
     "correct": 0
+  },
+  {
+    "text": "Quel est le Patronus de Harry Potter ?",
+    "answers": ["Un cerf", "Un chien", "Un loup", "Un phénix"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le Patronus d'Hermione Granger ?",
+    "answers": ["Un chat", "Une loutre", "Un lièvre", "Un cerf"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le Patronus de Ron Weasley ?",
+    "answers": ["Un chien", "Un renard", "Un Jack Russell terrier", "Un blaireau"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le Patronus de Severus Rogue ?",
+    "answers": ["Un serpent", "Un corbeau", "Un cerf", "Une biche"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle matière Hermione utilise-t-elle le Retourneur de Temps pour suivre ?",
+    "answers": ["Toutes ses matières supplémentaires", "Seulement les potions", "La divination uniquement", "Le Quidditch"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le premier Horcruxe détruit dans la saga ?",
+    "answers": ["Le Médaillon de Serpentard", "Le journal de Tom Jedusor", "La bague des Gaunt", "Le diadème de Serdaigle"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien d'Horcruxes Voldemort a-t-il créés intentionnellement ?",
+    "answers": ["5", "7", "6", "8"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Horcruxe se révèle être Harry Potter lui-même ?",
+    "answers": ["Le premier", "Le dernier créé intentionnellement", "Le diadème", "Le septième, créé involontairement"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Avec quoi Harry détruit-il le journal de Tom Jedusor ?",
+    "answers": ["Un croc de basilic", "L'épée de Gryffondor", "Le sortilège Feudeymon", "La Baguette de Sureau"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui détruit la bague des Gaunt (Horcruxe) ?",
+    "answers": ["Harry Potter", "Albus Dumbledore", "Ron Weasley", "Neville Londubat"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui détruit le médaillon de Serpentard ?",
+    "answers": ["Hermione Granger", "Harry Potter", "Ron Weasley", "Neville Londubat"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui détruit la coupe de Poufsouffle (Horcruxe) ?",
+    "answers": ["Ron Weasley", "Neville Londubat", "Harry Potter", "Hermione Granger"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de la prison des sorciers ?",
+    "answers": ["Azkaban", "Nurmengard", "Poudlard", "Le Ministère"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le numéro de la maison des Dursley sur Privet Drive ?",
+    "answers": ["2", "4", "7", "12"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Où Harry dormait-il chez les Dursley avant de recevoir sa lettre de Poudlard ?",
+    "answers": ["Dans la cave", "Dans le jardin", "Dans le placard sous l'escalier", "Dans le grenier"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la forme de la cicatrice de Harry Potter ?",
+    "answers": ["Un cercle", "Une étoile", "Un croissant", "Un éclair"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le cœur de la baguette de Harry Potter ?",
+    "answers": ["Une plume de phénix", "Un crin de licorne", "Un ventricule de dragon", "Un poil de Fléreur"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "De quel bois est faite la baguette de Harry Potter ?",
+    "answers": ["Saule", "Houx", "Chêne", "If"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle particularité la baguette de Harry partage-t-elle avec celle de Voldemort ?",
+    "answers": ["Le même bois", "La même longueur", "Le même cœur (plume du même phénix)", "Le même fabricant"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel fantôme hante les toilettes des filles à Poudlard ?",
+    "answers": ["Le Baron Sanglant", "Nick Quasi-Sans-Tête", "Peeves", "Mimi Geignarde"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel fantôme est le fantôme de la maison Gryffondor ?",
+    "answers": ["Nick Quasi-Sans-Tête", "Le Baron Sanglant", "Le Moine Gras", "La Dame Grise"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le fantôme de la maison Serpentard ?",
+    "answers": ["Nick Quasi-Sans-Tête", "Le Baron Sanglant", "Le Moine Gras", "La Dame Grise"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel professeur de défense contre les forces du Mal est un imposteur dans le quatrième tome ?",
+    "answers": ["Gilderoy Lockhart", "Quirinus Quirrell", "Bartemius Croupton Junior (déguisé en Maugrey)", "Dolores Ombrage"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel professeur de défense contre les forces du Mal est possédé par Voldemort ?",
+    "answers": ["Remus Lupin", "Gilderoy Lockhart", "Severus Rogue", "Quirinus Quirrell"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle le concierge de Poudlard ?",
+    "answers": ["Argus Rusard", "Rubeus Hagrid", "Filius Flitwick", "Horace Slughorn"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom de la chatte du concierge de Poudlard ?",
+    "answers": ["Pattenrond", "Miss Teigne", "Hedwige", "Nagini"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle créature est Nagini dans la saga Harry Potter ?",
+    "answers": ["Un basilic", "Un dragon", "Un serpent (et un Horcruxe)", "Un acromantule"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le dernier mot de la saga Harry Potter dans les livres ?",
+    "answers": ["Potter", "Poudlard", "magie", "bien"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Weasley meurt durant la bataille de Poudlard ?",
+    "answers": ["Fred Weasley", "George Weasley", "Percy Weasley", "Ron Weasley"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel acteur joue Harry Potter dans les films ?",
+    "answers": ["Rupert Grint", "Daniel Radcliffe", "Tom Felton", "Matthew Lewis"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle actrice joue Hermione Granger dans les films ?",
+    "answers": ["Bonnie Wright", "Evanna Lynch", "Emma Watson", "Katie Leung"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel acteur joue Ron Weasley dans les films ?",
+    "answers": ["Daniel Radcliffe", "Tom Felton", "Matthew Lewis", "Rupert Grint"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle l'auteure de la saga Harry Potter ?",
+    "answers": ["J.K. Rowling", "J.R.R. Tolkien", "C.S. Lewis", "Suzanne Collins"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année le premier livre Harry Potter a-t-il été publié ?",
+    "answers": ["1995", "1997", "1999", "2001"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien de tomes compte la saga Harry Potter ?",
+    "answers": ["5", "6", "7", "8"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le titre du septième et dernier tome de la saga ?",
+    "answers": ["Harry Potter et le Prince de Sang-Mêlé", "Harry Potter et l'Ordre du Phénix", "Harry Potter et la Coupe de Feu", "Harry Potter et les Reliques de la Mort"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la devise de Poudlard ?",
+    "answers": ["Draco dormiens nunquam titillandus", "Toujours pur", "In Nocte Consilium", "Nitwit, Blubber, Oddment, Tweak"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Que signifie la devise de Poudlard en français ?",
+    "answers": ["Le savoir est pouvoir", "Il ne faut jamais chatouiller un dragon qui dort", "La magie vaincra", "L'union fait la force"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom du frère de Dumbledore ?",
+    "answers": ["Alastor", "Gellert", "Abelforth", "Percival"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel sorcier noir Dumbledore a-t-il vaincu en 1945 ?",
+    "answers": ["Voldemort", "Salazar Serpentard", "Bartemius Croupton", "Gellert Grindelwald"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel sort Molly Weasley utilise-t-elle pour vaincre Bellatrix Lestrange ?",
+    "answers": ["Avada Kedavra", "Stupéfix", "Un sortilège inconnu mais mortel", "Expelliarmus"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel elfe de maison sert la famille Black avant de servir Harry ?",
+    "answers": ["Dobby", "Kreattur", "Winky", "Hokey"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle boisson les élèves de Poudlard apprécient-ils particulièrement à Pré-au-Lard ?",
+    "answers": ["Le jus de citrouille", "Le whisky Pur-Feu", "La Bièraubeurre", "L'hydromel"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel professeur remplace Rogue comme professeur de potions dans le sixième tome ?",
+    "answers": ["Minerva McGonagall", "Pomona Chourave", "Filius Flitwick", "Horace Slughorn"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appellent les trois frères dans le conte des Reliques de la Mort ?",
+    "answers": ["Les frères Peverell", "Les frères Gaunt", "Les frères Dumbledore", "Les frères Jedusor"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le deuxième prénom de Harry Potter ?",
+    "answers": ["Albus", "James", "Sirius", "Remus"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom complet du fils aîné de Harry Potter ?",
+    "answers": ["James Sirius Potter", "Albus Severus Potter", "Hugo Weasley", "Teddy Lupin"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom complet du deuxième fils de Harry Potter ?",
+    "answers": ["James Sirius Potter", "Albus Severus Potter", "Scorpius Malefoy", "Teddy Lupin"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle la fille de Harry et Ginny Potter ?",
+    "answers": ["Rose", "Molly", "Lily Luna Potter", "Victoire"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel sort Voldemort utilise-t-il pour tenter de tuer Harry bébé ?",
+    "answers": ["Endoloris", "Stupéfix", "Expelliarmus", "Avada Kedavra"],
+    "correct": 3,
+    "difficulty": "facile"
   }
 ]

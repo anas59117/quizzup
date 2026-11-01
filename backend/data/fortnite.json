@@ -1,102 +1,1552 @@
 [
-  {"text":"Quel studio édite Fortnite ?","answers":["Epic Games","Riot Games","Valve","Ubisoft"],"correct":0},
-  {"text":"Dans Fortnite Battle Royale, depuis quel véhicule les joueurs sautent-ils au début ?","answers":["Un hélicoptère","Le Battle Bus","Un train","Un dirigeable"],"correct":1},
-  {"text":"Quel objectif permet de remporter une partie de Battle Royale ?","answers":["Construire la plus haute tour","Ouvrir dix coffres","Être le dernier joueur ou la dernière équipe en vie","Collecter le plus d'or"],"correct":2},
-  {"text":"Comment s'appelle une victoire dans Fortnite ?","answers":["Epic Win","Royal Finish","Last Crown","Victory Royale"],"correct":3},
-  {"text":"Quel phénomène réduit progressivement la zone sûre ?","answers":["La Tempête","Le Brouillard","Le Néant","L'Éclipse"],"correct":0},
-  {"text":"Quel outil possède chaque joueur pour récolter des matériaux ?","answers":["Une pelle","Une pioche","Une scie","Un marteau"],"correct":1},
-  {"text":"Lequel est un matériau de construction classique dans Fortnite ?","answers":["Verre","Cuivre","Bois","Tissu"],"correct":2},
-  {"text":"Quel mode retire les mécaniques de construction du Battle Royale ?","answers":["Mode Arène","Mode Créatif","Sauver le monde","Zéro construction"],"correct":3},
-  {"text":"Combien de joueurs compte traditionnellement une partie complète de Battle Royale ?","answers":["100","64","50","128"],"correct":0},
-  {"text":"Quel mode de Fortnite est une campagne coopérative contre des monstres ?","answers":["Party Royale","Sauver le monde","Rocket Racing","Festival"],"correct":1},
-  {"text":"Quel mode permet principalement de créer ses propres îles et expériences ?","answers":["Classé","Recharge","Créatif","Solo"],"correct":2},
-  {"text":"Quelle ressource restaure la protection bleue du joueur ?","answers":["L'endurance","L'armure métallique","La magie","Le bouclier"],"correct":3},
-  {"text":"Quel objet permet de ramener un coéquipier éliminé dans certains modes en équipe ?","answers":["La carte de rétablissement","La couronne royale","Le médaillon","Le ticket de bus"],"correct":0},
-  {"text":"Où utilise-t-on une carte de rétablissement ?","answers":["À un coffre rare","À une camionnette de rétablissement","Au Battle Bus","À un distributeur"],"correct":1},
-  {"text":"Quel terme désigne une apparence de personnage dans Fortnite ?","answers":["Rune","Classe","Tenue","Faction"],"correct":2},
-  {"text":"Quelle monnaie virtuelle sert principalement aux achats cosmétiques ?","answers":["Epic Coins","Battle Gold","Fort-Bucks","V-bucks"],"correct":3},
-  {"text":"Quel système propose des récompenses à débloquer au fil d'une saison ?","answers":["Le Passe de combat","Le Codex","Le Tableau royal","La Route des héros"],"correct":0},
-  {"text":"Quel type d'objet permet au joueur de descendre après le saut initial ?","answers":["Un parachute militaire","Un planeur","Une aile rigide","Un jetpack"],"correct":1},
-  {"text":"Quel personnage est une mascotte banane de Fortnite ?","answers":["Fishstick","Midas","Peely","Jonesy"],"correct":2},
-  {"text":"Quel personnage est souvent représenté comme un agent blond ?","answers":["Brutus","Meowscles","The Foundation","Jonesy"],"correct":3},
-  {"text":"Quel personnage possède une tête de poisson orange ?","answers":["Fishstick","Peely","Raven","Drift"],"correct":0},
-  {"text":"Quel personnage musclé possède une tête de chat ?","answers":["Midas","Meowscles","Omega","Peely"],"correct":1},
-  {"text":"Quel personnage est connu pour transformer ce qu'il touche en or dans son histoire ?","answers":["Jonesy","Drift","Midas","Raven"],"correct":2},
-  {"text":"Quelle entreprise a créé l'Unreal Engine utilisé par Fortnite ?","answers":["Nintendo","Rockstar Games","Electronic Arts","Epic Games"],"correct":3},
-  {"text":"Sur quelle île les joueurs cherchent-ils armes et ressources en Battle Royale ?","answers":["Une île évolutive","Un continent fixe","Une station spatiale","Un archipel sans tempête"],"correct":0},
-  {"text":"Quel contenant offre généralement des armes et objets avec un son caractéristique ?","answers":["Une caisse à outils","Un coffre","Une urne","Un sac de voyage"],"correct":1},
-  {"text":"Quelle couleur est traditionnellement associée à la rareté légendaire ?","answers":["Verte","Bleue","Orange","Grise"],"correct":2},
-  {"text":"Quelle couleur correspond traditionnellement à la rareté épique ?","answers":["Rouge","Jaune","Cyan","Violette"],"correct":3},
-  {"text":"Quel format d'équipe réunit deux joueurs ?","answers":["Duo","Solo","Trio","Section"],"correct":0},
-  {"text":"Quel format permet de jouer sans coéquipier ?","answers":["Escouade","Solo","Duo","Trio"],"correct":1},
-  {"text":"Quelle action consomme généralement des munitions ?","answers":["Récolter du bois","Construire un mur","Tirer avec une arme à feu","Ouvrir la carte"],"correct":2},
-  {"text":"Que subit un joueur restant trop longtemps dans la Tempête ?","answers":["Une perte de matériaux","Une baisse de précision","Un ralentissement définitif","Des dégâts réguliers"],"correct":3},
-  {"text":"Quel élément de construction sert de surface horizontale ?","answers":["Le sol","Le mur","L'escalier","Le cône"],"correct":0},
-  {"text":"Quel élément de construction permet principalement de prendre de la hauteur ?","answers":["Le mur","L'escalier","Le sol","La porte"],"correct":1},
-  {"text":"Quelle mécanique permet de modifier la forme d'une construction déjà placée ?","answers":["Recycler","Fusionner","Éditer","Enchanter"],"correct":2},
-  {"text":"Quelle catégorie d'arme est particulièrement adaptée au combat très rapproché ?","answers":["Fusil de précision","Fusil d'assaut","Arc","Fusil à pompe"],"correct":3},
-  {"text":"Quelle catégorie d'arme est conçue pour viser à très longue distance ?","answers":["Fusil de précision","Pistolet-mitrailleur","Fusil à pompe","Pioche"],"correct":0},
-  {"text":"Quel objet cosmétique est visible dans le dos du personnage ?","answers":["Une traînée","Un accessoire de dos","Un aérosol","Une bannière"],"correct":1},
-  {"text":"Comment appelle-t-on les animations et danses utilisables par les joueurs ?","answers":["Poses","Gestes tactiques","Emotes","Signaux"],"correct":2},
-  {"text":"Quel mode social de Fortnite a accueilli des événements et concerts virtuels ?","answers":["Sauver le monde","Mode Arène","Recharge","Party Royale"],"correct":3},
-  {"text":"Que signifie PvE dans le contexte de Sauver le monde ?","answers":["Joueur contre environnement","Joueur contre équipe","Progression virtuelle épique","Partie versus élite"],"correct":0},
-  {"text":"Que signifie PvP dans le contexte du Battle Royale ?","answers":["Progression versus partie","Joueur contre joueur","Pouvoir versus protection","Partie virtuelle privée"],"correct":1},
-  {"text":"Quel matériau classique résiste généralement mieux que le bois ?","answers":["Le papier","Le tissu","La pierre","La glace"],"correct":2},
-  {"text":"Quel matériau de construction classique est généralement le plus résistant ?","answers":["Le bois","La pierre","Le verre","Le métal"],"correct":3},
-  {"text":"Quel appareil de création avancée est abrégé UEFN ?","answers":["Unreal Editor for Fortnite","Universal Engine for Networks","User Edition Fortnite Nexus","Unreal Event Framework Node"],"correct":0},
-  {"text":"Quel service conserve la progression Fortnite entre plusieurs plateformes liées ?","answers":["Le compte Steam","Le compte Epic Games","Le compte Mojang","Le compte Battle.net"],"correct":1},
-  {"text":"Quel type de récompense change l'apparence sans améliorer les dégâts ?","answers":["Une munition","Un matériau","Un cosmétique","Un soin"],"correct":2},
-  {"text":"Que faut-il généralement faire avant de tirer à nouveau avec une arme vide ?","answers":["Construire","S'accroupir","Récolter","Recharger"],"correct":3},
-  {"text":"Quel indicateur montre l'orientation et les points cardinaux en haut de l'écran ?","answers":["La boussole","La barre de vie","L'inventaire","Le fil de quête"],"correct":0},
-  {"text":"Quelle fonction du mode classé mesure la progression compétitive ?","answers":["Le niveau cosmétique","Le rang","Le nombre de V-bucks","La taille de l'île"],"correct":1},
-  {"text":"Quelle action permet de franchir un rebord trop haut pour un saut normal ?","answers":["L'escalade de rebord","La glissade","Le rechargement","Le marquage"],"correct":0},
-  {"text":"Que consomme la course tactique dans Fortnite ?","answers":["Des munitions","De l'énergie","Des V-bucks","Du bouclier"],"correct":1},
-  {"text":"Quelle action permet de se déplacer accroupi sur une pente en prenant de la vitesse ?","answers":["La nage","L'escalade","La glissade","Le vol"],"correct":2},
-  {"text":"Dans Zéro construction, quelle protection se recharge automatiquement après un délai ?","answers":["Le métal","La santé","Le camouflage","Le surbouclier"],"correct":3},
-  {"text":"Quel objet à pulvériser soigne la santé du joueur ou d'un allié ?","answers":["La brume médicinale","Le bidon de bouclier","La grenade répulsive","Le piège à feu"],"correct":0},
-  {"text":"Quel objet posé au sol restaure le bouclier des joueurs proches ?","answers":["Le feu de camp","Le bidon de bouclier","La balise de rétablissement","Le tremplin"],"correct":1},
-  {"text":"Quelle monnaie gagnée en partie peut servir à acheter des objets auprès de personnages ?","answers":["Les étoiles","Les gemmes","Les lingots","Les jetons de Festival"],"correct":2},
-  {"text":"Quel accessoire permet de relancer un saut aérien depuis le sol dans les modes où il est disponible ?","answers":["Le coffre","Le distributeur","La tourelle","Le tremplin"],"correct":3},
-  {"text":"Quel type de munition utilise généralement un fusil à pompe ?","answers":["Des cartouches","Des roquettes","Des flèches","Des balles lourdes"],"correct":0},
-  {"text":"Quel type de munition est associé aux lance-roquettes classiques ?","answers":["Des cartouches","Des roquettes","Des balles légères","Des cellules d'énergie"],"correct":1},
-  {"text":"Quelle action permet de signaler un lieu à ses coéquipiers sans parler ?","answers":["Recharger","Inspecter","Placer un marqueur","Changer de tenue"],"correct":2},
-  {"text":"Dans une partie en équipe, que peut-on faire à un allié à terre avant son élimination ?","answers":["Le téléporter","L'échanger","Le recruter","Le ranimer"],"correct":3},
-  {"text":"Quel objet cosmétique modifie l'apparence d'une arme ou d'un véhicule compatible ?","answers":["Un revêtement","Une munition","Un médaillon","Un contrat"],"correct":0},
-  {"text":"Quel cosmétique laisse un effet visuel pendant la chute libre ?","answers":["Une bannière","Une traînée","Une pioche","Une tenue"],"correct":1},
-  {"text":"Quel objet du casier personnalise l'outil de récolte ?","answers":["Un aérosol","Une musique","Une pioche cosmétique","Une icône de bannière"],"correct":2},
-  {"text":"Quel cosmétique permet de peindre une image sur une surface du jeu ?","answers":["Une aura","Un planeur","Une emote de parcours","Un aérosol"],"correct":3},
-  {"text":"Dans Fortnite Festival, quel rôle joue des notes avec un instrument à cordes graves ?","answers":["La basse","La batterie","Le chant","Le clavier"],"correct":0},
-  {"text":"Dans Fortnite Festival, quel rôle correspond aux percussions ?","answers":["Le chant","La batterie","La basse","La guitare solo"],"correct":1},
-  {"text":"Comment s'appellent les chansons jouables dans Fortnite Festival ?","answers":["Les pistes de combat","Les signaux de scène","Les pistes musicales","Les messages du casier"],"correct":2},
-  {"text":"Sur quelle scène de Fortnite Festival peut-on mélanger des boucles musicales entre joueurs ?","answers":["La scène finale","La scène de combat","La scène de départ","La scène d'improvisation"],"correct":3},
-  {"text":"Quel studio a créé le jeu de rythme Fortnite Festival ?","answers":["Harmonix","Mojang","Psyonix","Respawn"],"correct":0},
-  {"text":"Dans Rocket Racing, quelle manœuvre recharge une accélération après un virage ?","answers":["Le freinage complet","Le dérapage","Le klaxon","La marche arrière"],"correct":1},
-  {"text":"Quel véhicule pilote-t-on dans Rocket Racing ?","answers":["Un bateau","Un avion","Une voiture propulsée par fusée","Une moto de cross"],"correct":2},
-  {"text":"Quel jeu d'Epic partage certains éléments de personnalisation automobile avec Rocket Racing ?","answers":["Fall Guys","Alan Wake","Fortnite Festival","Rocket League"],"correct":3},
-  {"text":"Quel mode de Fortnite met l'accent sur la construction de villages avec des briques LEGO ?","answers":["LEGO Fortnite Odyssey","Fortnite Festival","Rocket Racing","Party Royale"],"correct":0},
-  {"text":"Dans le mode Créatif, quel outil sert à déplacer et placer des éléments de décor ?","answers":["La boussole","Le téléphone","La carte de rétablissement","Le bouclier"],"correct":1},
-  {"text":"Dans le mode Créatif, comment appelle-t-on un objet configurable qui crée une mécanique de jeu ?","answers":["Un revêtement","Un badge","Un appareil","Un lingot"],"correct":2},
-  {"text":"Quel appareil du mode Créatif fait apparaître les joueurs à un emplacement défini ?","answers":["Le contrôleur de tempête","Le distributeur","La zone de pêche","Le point d'apparition de joueur"],"correct":3},
-  {"text":"Quel appareil du mode Créatif peut placer directement un objet dans l'inventaire d'un joueur ?","answers":["Le fournisseur d'objets","Le contrôleur de caméra","Le modificateur de décor","Le chronomètre"],"correct":0},
-  {"text":"Quel appareil du mode Créatif suit la progression d'un objectif personnalisé ?","answers":["La balise","Le traqueur","Le tremplin","Le planeur"],"correct":1},
-  {"text":"Quel appareil du mode Créatif crée une zone appliquant des effets aux joueurs qui y entrent ?","answers":["Le tableau d'affichage","Le générateur de coffre","La zone de mutation","Le téléphone"],"correct":2},
-  {"text":"Quel appareil du mode Créatif peut déplacer un élément de décor ?","answers":["Le générateur de gardes","Le poste radio","Le générateur de poissons","Le déplaceur d'accessoire"],"correct":3},
-  {"text":"Quel appareil du mode Créatif sert à créer une tempête à plusieurs phases ?","answers":["Le contrôleur de tempête avancé","Le générateur de véhicules","Le projecteur","Le tableau des scores"],"correct":0},
-  {"text":"Quel appareil du mode Créatif permet d'afficher du texte aux joueurs pendant une partie ?","answers":["Le générateur de munitions","L'appareil de message d'ATH","Le canon","La barrière"],"correct":1},
-  {"text":"Quel appareil du mode Créatif peut empêcher les joueurs de traverser une zone ?","answers":["Le traqueur","Le distributeur d'objets","La barrière","La zone de pêche"],"correct":2},
-  {"text":"Quel appareil du mode Créatif sert à lancer une manche ou une partie vers sa fin ?","answers":["Le poste de changement","Le tableau de bord","Le point d'apparition","L'appareil de fin de partie"],"correct":3},
-  {"text":"Dans Sauver le monde, comment s'appellent les ennemis courants issus de la Tempête ?","answers":["Les Carcasses","Les Creepers","Les Gardiens","Les Maraudeurs"],"correct":0},
-  {"text":"Dans Sauver le monde, quel élément de la base les joueurs défendent-ils lors de missions dédiées ?","answers":["Le studio musical","Le bouclier anti-tempête","La ligne d'arrivée","Le portail de l'End"],"correct":1},
-  {"text":"Quel type d'allié peut aider à défendre un objectif dans Sauver le monde ?","answers":["Un arbitre","Un spectateur","Un défenseur","Un pilote de bus"],"correct":2},
-  {"text":"Dans Sauver le monde, quelle catégorie regroupe les personnages jouables dotés de capacités ?","answers":["Les revêtements","Les véhicules","Les coffres","Les héros"],"correct":3},
-  {"text":"Quel objet du casier sert à personnaliser l'image affichée sur le profil du joueur ?","answers":["La bannière","Le fusil d'assaut","Le lingot","La carte de rétablissement"],"correct":0},
-  {"text":"À quoi sert le code d'une île publiée dans Fortnite ?","answers":["À modifier le rang d'un joueur","À retrouver l'île pour y jouer","À recharger une arme","À débloquer tous les cosmétiques"],"correct":1},
-  {"text":"Quel langage de programmation est utilisé pour créer des mécaniques dans UEFN ?","answers":["Ruby","Scratch","Verse","Lua"],"correct":2},
-  {"text":"Dans UEFN, quel système sert à lier la fonction d'un appareil à l'événement d'un autre ?","answers":["Le matchmaking","Le rétablissement","La rareté","La liaison directe d'événements"],"correct":3},
-  {"text":"Quel type d'objet cosmétique modifie l'apparence d'une voiture dans les expériences compatibles ?","answers":["Une carrosserie","Un piège","Une potion","Une bannière"],"correct":0},
-  {"text":"Quel terme désigne une zone nommée sur la carte de Battle Royale où l'on peut atterrir ?","answers":["Une emote","Un lieu notable","Un réglage graphique","Une réserve de munitions"],"correct":1},
-  {"text":"Quel écran permet de choisir ses cosmétiques avant de jouer ?","answers":["La carte","Le tableau de combat","Le casier","Le carnet de quêtes"],"correct":2},
-  {"text":"Quel type de défi attribue de l'expérience lorsqu'on remplit son objectif ?","answers":["Un revêtement","Une tenue","Un planeur","Une quête"],"correct":3},
-  {"text":"Quel indicateur permet de suivre les points de vie restants du personnage ?","answers":["La barre de santé","Le compteur de lingots","La liste d'amis","La boussole"],"correct":0},
-  {"text":"Quel conteneur fournit principalement des munitions lorsqu'on l'ouvre ?","answers":["Une caisse de pêche","Une boîte de munitions","Une fontaine de bouclier","Un établi"],"correct":1}
+  {
+    "text": "Quel studio édite Fortnite ?",
+    "answers": [
+      "Epic Games",
+      "Riot Games",
+      "Valve",
+      "Ubisoft"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans Fortnite Battle Royale, depuis quel véhicule les joueurs sautent-ils au début ?",
+    "answers": [
+      "Un hélicoptère",
+      "Le Battle Bus",
+      "Un train",
+      "Un dirigeable"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel objectif permet de remporter une partie de Battle Royale ?",
+    "answers": [
+      "Construire la plus haute tour",
+      "Ouvrir dix coffres",
+      "Être le dernier joueur ou la dernière équipe en vie",
+      "Collecter le plus d'or"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Comment s'appelle une victoire dans Fortnite ?",
+    "answers": [
+      "Epic Win",
+      "Royal Finish",
+      "Last Crown",
+      "Victory Royale"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel phénomène réduit progressivement la zone sûre ?",
+    "answers": [
+      "La Tempête",
+      "Le Brouillard",
+      "Le Néant",
+      "L'Éclipse"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel outil possède chaque joueur pour récolter des matériaux ?",
+    "answers": [
+      "Une pelle",
+      "Une pioche",
+      "Une scie",
+      "Un marteau"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Lequel est un matériau de construction classique dans Fortnite ?",
+    "answers": [
+      "Verre",
+      "Cuivre",
+      "Bois",
+      "Tissu"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel mode retire les mécaniques de construction du Battle Royale ?",
+    "answers": [
+      "Mode Arène",
+      "Mode Créatif",
+      "Sauver le monde",
+      "Zéro construction"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Combien de joueurs compte traditionnellement une partie complète de Battle Royale ?",
+    "answers": [
+      "100",
+      "64",
+      "50",
+      "128"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel mode de Fortnite est une campagne coopérative contre des monstres ?",
+    "answers": [
+      "Party Royale",
+      "Sauver le monde",
+      "Rocket Racing",
+      "Festival"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel mode permet principalement de créer ses propres îles et expériences ?",
+    "answers": [
+      "Classé",
+      "Recharge",
+      "Créatif",
+      "Solo"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle ressource restaure la protection bleue du joueur ?",
+    "answers": [
+      "L'endurance",
+      "L'armure métallique",
+      "La magie",
+      "Le bouclier"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel objet permet de ramener un coéquipier éliminé dans certains modes en équipe ?",
+    "answers": [
+      "La carte de rétablissement",
+      "La couronne royale",
+      "Le médaillon",
+      "Le ticket de bus"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Où utilise-t-on une carte de rétablissement ?",
+    "answers": [
+      "À un coffre rare",
+      "À une camionnette de rétablissement",
+      "Au Battle Bus",
+      "À un distributeur"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel terme désigne une apparence de personnage dans Fortnite ?",
+    "answers": [
+      "Rune",
+      "Classe",
+      "Tenue",
+      "Faction"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle monnaie virtuelle sert principalement aux achats cosmétiques ?",
+    "answers": [
+      "Epic Coins",
+      "Battle Gold",
+      "Fort-Bucks",
+      "V-bucks"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel système propose des récompenses à débloquer au fil d'une saison ?",
+    "answers": [
+      "Le Passe de combat",
+      "Le Codex",
+      "Le Tableau royal",
+      "La Route des héros"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel type d'objet permet au joueur de descendre après le saut initial ?",
+    "answers": [
+      "Un parachute militaire",
+      "Un planeur",
+      "Une aile rigide",
+      "Un jetpack"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel personnage est une mascotte banane de Fortnite ?",
+    "answers": [
+      "Fishstick",
+      "Midas",
+      "Peely",
+      "Jonesy"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel personnage est souvent représenté comme un agent blond ?",
+    "answers": [
+      "Brutus",
+      "Meowscles",
+      "The Foundation",
+      "Jonesy"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel personnage possède une tête de poisson orange ?",
+    "answers": [
+      "Fishstick",
+      "Peely",
+      "Raven",
+      "Drift"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel personnage musclé possède une tête de chat ?",
+    "answers": [
+      "Midas",
+      "Meowscles",
+      "Omega",
+      "Peely"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel personnage est connu pour transformer ce qu'il touche en or dans son histoire ?",
+    "answers": [
+      "Jonesy",
+      "Drift",
+      "Midas",
+      "Raven"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle entreprise a créé l'Unreal Engine utilisé par Fortnite ?",
+    "answers": [
+      "Nintendo",
+      "Rockstar Games",
+      "Electronic Arts",
+      "Epic Games"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Sur quelle île les joueurs cherchent-ils armes et ressources en Battle Royale ?",
+    "answers": [
+      "Une île évolutive",
+      "Un continent fixe",
+      "Une station spatiale",
+      "Un archipel sans tempête"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel contenant offre généralement des armes et objets avec un son caractéristique ?",
+    "answers": [
+      "Une caisse à outils",
+      "Un coffre",
+      "Une urne",
+      "Un sac de voyage"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle couleur est traditionnellement associée à la rareté légendaire ?",
+    "answers": [
+      "Verte",
+      "Bleue",
+      "Orange",
+      "Grise"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle couleur correspond traditionnellement à la rareté épique ?",
+    "answers": [
+      "Rouge",
+      "Jaune",
+      "Cyan",
+      "Violette"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel format d'équipe réunit deux joueurs ?",
+    "answers": [
+      "Duo",
+      "Solo",
+      "Trio",
+      "Section"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel format permet de jouer sans coéquipier ?",
+    "answers": [
+      "Escouade",
+      "Solo",
+      "Duo",
+      "Trio"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle action consomme généralement des munitions ?",
+    "answers": [
+      "Récolter du bois",
+      "Construire un mur",
+      "Tirer avec une arme à feu",
+      "Ouvrir la carte"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Que subit un joueur restant trop longtemps dans la Tempête ?",
+    "answers": [
+      "Une perte de matériaux",
+      "Une baisse de précision",
+      "Un ralentissement définitif",
+      "Des dégâts réguliers"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel élément de construction sert de surface horizontale ?",
+    "answers": [
+      "Le sol",
+      "Le mur",
+      "L'escalier",
+      "Le cône"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel élément de construction permet principalement de prendre de la hauteur ?",
+    "answers": [
+      "Le mur",
+      "L'escalier",
+      "Le sol",
+      "La porte"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle mécanique permet de modifier la forme d'une construction déjà placée ?",
+    "answers": [
+      "Recycler",
+      "Fusionner",
+      "Éditer",
+      "Enchanter"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quelle catégorie d'arme est particulièrement adaptée au combat très rapproché ?",
+    "answers": [
+      "Fusil de précision",
+      "Fusil d'assaut",
+      "Arc",
+      "Fusil à pompe"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quelle catégorie d'arme est conçue pour viser à très longue distance ?",
+    "answers": [
+      "Fusil de précision",
+      "Pistolet-mitrailleur",
+      "Fusil à pompe",
+      "Pioche"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel objet cosmétique est visible dans le dos du personnage ?",
+    "answers": [
+      "Une traînée",
+      "Un accessoire de dos",
+      "Un aérosol",
+      "Une bannière"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Comment appelle-t-on les animations et danses utilisables par les joueurs ?",
+    "answers": [
+      "Poses",
+      "Gestes tactiques",
+      "Emotes",
+      "Signaux"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel mode social de Fortnite a accueilli des événements et concerts virtuels ?",
+    "answers": [
+      "Sauver le monde",
+      "Mode Arène",
+      "Recharge",
+      "Party Royale"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Que signifie PvE dans le contexte de Sauver le monde ?",
+    "answers": [
+      "Joueur contre environnement",
+      "Joueur contre équipe",
+      "Progression virtuelle épique",
+      "Partie versus élite"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Que signifie PvP dans le contexte du Battle Royale ?",
+    "answers": [
+      "Progression versus partie",
+      "Joueur contre joueur",
+      "Pouvoir versus protection",
+      "Partie virtuelle privée"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel matériau classique résiste généralement mieux que le bois ?",
+    "answers": [
+      "Le papier",
+      "Le tissu",
+      "La pierre",
+      "La glace"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel matériau de construction classique est généralement le plus résistant ?",
+    "answers": [
+      "Le bois",
+      "La pierre",
+      "Le verre",
+      "Le métal"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel appareil de création avancée est abrégé UEFN ?",
+    "answers": [
+      "Unreal Editor for Fortnite",
+      "Universal Engine for Networks",
+      "User Edition Fortnite Nexus",
+      "Unreal Event Framework Node"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel service conserve la progression Fortnite entre plusieurs plateformes liées ?",
+    "answers": [
+      "Le compte Steam",
+      "Le compte Epic Games",
+      "Le compte Mojang",
+      "Le compte Battle.net"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel type de récompense change l'apparence sans améliorer les dégâts ?",
+    "answers": [
+      "Une munition",
+      "Un matériau",
+      "Un cosmétique",
+      "Un soin"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Que faut-il généralement faire avant de tirer à nouveau avec une arme vide ?",
+    "answers": [
+      "Construire",
+      "S'accroupir",
+      "Récolter",
+      "Recharger"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel indicateur montre l'orientation et les points cardinaux en haut de l'écran ?",
+    "answers": [
+      "La boussole",
+      "La barre de vie",
+      "L'inventaire",
+      "Le fil de quête"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quelle fonction du mode classé mesure la progression compétitive ?",
+    "answers": [
+      "Le niveau cosmétique",
+      "Le rang",
+      "Le nombre de V-bucks",
+      "La taille de l'île"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle action permet de franchir un rebord trop haut pour un saut normal ?",
+    "answers": [
+      "L'escalade de rebord",
+      "La glissade",
+      "Le rechargement",
+      "Le marquage"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Que consomme la course tactique dans Fortnite ?",
+    "answers": [
+      "Des munitions",
+      "De l'énergie",
+      "Des V-bucks",
+      "Du bouclier"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle action permet de se déplacer accroupi sur une pente en prenant de la vitesse ?",
+    "answers": [
+      "La nage",
+      "L'escalade",
+      "La glissade",
+      "Le vol"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans Zéro construction, quelle protection se recharge automatiquement après un délai ?",
+    "answers": [
+      "Le métal",
+      "La santé",
+      "Le camouflage",
+      "Le surbouclier"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel objet à pulvériser soigne la santé du joueur ou d'un allié ?",
+    "answers": [
+      "La brume médicinale",
+      "Le bidon de bouclier",
+      "La grenade répulsive",
+      "Le piège à feu"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel objet posé au sol restaure le bouclier des joueurs proches ?",
+    "answers": [
+      "Le feu de camp",
+      "Le bidon de bouclier",
+      "La balise de rétablissement",
+      "Le tremplin"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle monnaie gagnée en partie peut servir à acheter des objets auprès de personnages ?",
+    "answers": [
+      "Les étoiles",
+      "Les gemmes",
+      "Les lingots",
+      "Les jetons de Festival"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel accessoire permet de relancer un saut aérien depuis le sol dans les modes où il est disponible ?",
+    "answers": [
+      "Le coffre",
+      "Le distributeur",
+      "La tourelle",
+      "Le tremplin"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel type de munition utilise généralement un fusil à pompe ?",
+    "answers": [
+      "Des cartouches",
+      "Des roquettes",
+      "Des flèches",
+      "Des balles lourdes"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel type de munition est associé aux lance-roquettes classiques ?",
+    "answers": [
+      "Des cartouches",
+      "Des roquettes",
+      "Des balles légères",
+      "Des cellules d'énergie"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quelle action permet de signaler un lieu à ses coéquipiers sans parler ?",
+    "answers": [
+      "Recharger",
+      "Inspecter",
+      "Placer un marqueur",
+      "Changer de tenue"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans une partie en équipe, que peut-on faire à un allié à terre avant son élimination ?",
+    "answers": [
+      "Le téléporter",
+      "L'échanger",
+      "Le recruter",
+      "Le ranimer"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel objet cosmétique modifie l'apparence d'une arme ou d'un véhicule compatible ?",
+    "answers": [
+      "Un revêtement",
+      "Une munition",
+      "Un médaillon",
+      "Un contrat"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel cosmétique laisse un effet visuel pendant la chute libre ?",
+    "answers": [
+      "Une bannière",
+      "Une traînée",
+      "Une pioche",
+      "Une tenue"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel objet du casier personnalise l'outil de récolte ?",
+    "answers": [
+      "Un aérosol",
+      "Une musique",
+      "Une pioche cosmétique",
+      "Une icône de bannière"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel cosmétique permet de peindre une image sur une surface du jeu ?",
+    "answers": [
+      "Une aura",
+      "Un planeur",
+      "Une emote de parcours",
+      "Un aérosol"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans Fortnite Festival, quel rôle joue des notes avec un instrument à cordes graves ?",
+    "answers": [
+      "La basse",
+      "La batterie",
+      "Le chant",
+      "Le clavier"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans Fortnite Festival, quel rôle correspond aux percussions ?",
+    "answers": [
+      "Le chant",
+      "La batterie",
+      "La basse",
+      "La guitare solo"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Comment s'appellent les chansons jouables dans Fortnite Festival ?",
+    "answers": [
+      "Les pistes de combat",
+      "Les signaux de scène",
+      "Les pistes musicales",
+      "Les messages du casier"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Sur quelle scène de Fortnite Festival peut-on mélanger des boucles musicales entre joueurs ?",
+    "answers": [
+      "La scène finale",
+      "La scène de combat",
+      "La scène de départ",
+      "La scène d'improvisation"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel studio a créé le jeu de rythme Fortnite Festival ?",
+    "answers": [
+      "Harmonix",
+      "Mojang",
+      "Psyonix",
+      "Respawn"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans Rocket Racing, quelle manœuvre recharge une accélération après un virage ?",
+    "answers": [
+      "Le freinage complet",
+      "Le dérapage",
+      "Le klaxon",
+      "La marche arrière"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel véhicule pilote-t-on dans Rocket Racing ?",
+    "answers": [
+      "Un bateau",
+      "Un avion",
+      "Une voiture propulsée par fusée",
+      "Une moto de cross"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel jeu d'Epic partage certains éléments de personnalisation automobile avec Rocket Racing ?",
+    "answers": [
+      "Fall Guys",
+      "Alan Wake",
+      "Fortnite Festival",
+      "Rocket League"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel mode de Fortnite met l'accent sur la construction de villages avec des briques LEGO ?",
+    "answers": [
+      "LEGO Fortnite Odyssey",
+      "Fortnite Festival",
+      "Rocket Racing",
+      "Party Royale"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans le mode Créatif, quel outil sert à déplacer et placer des éléments de décor ?",
+    "answers": [
+      "La boussole",
+      "Le téléphone",
+      "La carte de rétablissement",
+      "Le bouclier"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Dans le mode Créatif, comment appelle-t-on un objet configurable qui crée une mécanique de jeu ?",
+    "answers": [
+      "Un revêtement",
+      "Un badge",
+      "Un appareil",
+      "Un lingot"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel appareil du mode Créatif fait apparaître les joueurs à un emplacement défini ?",
+    "answers": [
+      "Le contrôleur de tempête",
+      "Le distributeur",
+      "La zone de pêche",
+      "Le point d'apparition de joueur"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel appareil du mode Créatif peut placer directement un objet dans l'inventaire d'un joueur ?",
+    "answers": [
+      "Le fournisseur d'objets",
+      "Le contrôleur de caméra",
+      "Le modificateur de décor",
+      "Le chronomètre"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel appareil du mode Créatif suit la progression d'un objectif personnalisé ?",
+    "answers": [
+      "La balise",
+      "Le traqueur",
+      "Le tremplin",
+      "Le planeur"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel appareil du mode Créatif crée une zone appliquant des effets aux joueurs qui y entrent ?",
+    "answers": [
+      "Le tableau d'affichage",
+      "Le générateur de coffre",
+      "La zone de mutation",
+      "Le téléphone"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel appareil du mode Créatif peut déplacer un élément de décor ?",
+    "answers": [
+      "Le générateur de gardes",
+      "Le poste radio",
+      "Le générateur de poissons",
+      "Le déplaceur d'accessoire"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel appareil du mode Créatif sert à créer une tempête à plusieurs phases ?",
+    "answers": [
+      "Le contrôleur de tempête avancé",
+      "Le générateur de véhicules",
+      "Le projecteur",
+      "Le tableau des scores"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel appareil du mode Créatif permet d'afficher du texte aux joueurs pendant une partie ?",
+    "answers": [
+      "Le générateur de munitions",
+      "L'appareil de message d'ATH",
+      "Le canon",
+      "La barrière"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel appareil du mode Créatif peut empêcher les joueurs de traverser une zone ?",
+    "answers": [
+      "Le traqueur",
+      "Le distributeur d'objets",
+      "La barrière",
+      "La zone de pêche"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel appareil du mode Créatif sert à lancer une manche ou une partie vers sa fin ?",
+    "answers": [
+      "Le poste de changement",
+      "Le tableau de bord",
+      "Le point d'apparition",
+      "L'appareil de fin de partie"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Dans Sauver le monde, comment s'appellent les ennemis courants issus de la Tempête ?",
+    "answers": [
+      "Les Carcasses",
+      "Les Creepers",
+      "Les Gardiens",
+      "Les Maraudeurs"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Dans Sauver le monde, quel élément de la base les joueurs défendent-ils lors de missions dédiées ?",
+    "answers": [
+      "Le studio musical",
+      "Le bouclier anti-tempête",
+      "La ligne d'arrivée",
+      "Le portail de l'End"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel type d'allié peut aider à défendre un objectif dans Sauver le monde ?",
+    "answers": [
+      "Un arbitre",
+      "Un spectateur",
+      "Un défenseur",
+      "Un pilote de bus"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans Sauver le monde, quelle catégorie regroupe les personnages jouables dotés de capacités ?",
+    "answers": [
+      "Les revêtements",
+      "Les véhicules",
+      "Les coffres",
+      "Les héros"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel objet du casier sert à personnaliser l'image affichée sur le profil du joueur ?",
+    "answers": [
+      "La bannière",
+      "Le fusil d'assaut",
+      "Le lingot",
+      "La carte de rétablissement"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "À quoi sert le code d'une île publiée dans Fortnite ?",
+    "answers": [
+      "À modifier le rang d'un joueur",
+      "À retrouver l'île pour y jouer",
+      "À recharger une arme",
+      "À débloquer tous les cosmétiques"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel langage de programmation est utilisé pour créer des mécaniques dans UEFN ?",
+    "answers": [
+      "Ruby",
+      "Scratch",
+      "Verse",
+      "Lua"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Dans UEFN, quel système sert à lier la fonction d'un appareil à l'événement d'un autre ?",
+    "answers": [
+      "Le matchmaking",
+      "Le rétablissement",
+      "La rareté",
+      "La liaison directe d'événements"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel type d'objet cosmétique modifie l'apparence d'une voiture dans les expériences compatibles ?",
+    "answers": [
+      "Une carrosserie",
+      "Un piège",
+      "Une potion",
+      "Une bannière"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel terme désigne une zone nommée sur la carte de Battle Royale où l'on peut atterrir ?",
+    "answers": [
+      "Une emote",
+      "Un lieu notable",
+      "Un réglage graphique",
+      "Une réserve de munitions"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Quel écran permet de choisir ses cosmétiques avant de jouer ?",
+    "answers": [
+      "La carte",
+      "Le tableau de combat",
+      "Le casier",
+      "Le carnet de quêtes"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Quel type de défi attribue de l'expérience lorsqu'on remplit son objectif ?",
+    "answers": [
+      "Un revêtement",
+      "Une tenue",
+      "Un planeur",
+      "Une quête"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Quel indicateur permet de suivre les points de vie restants du personnage ?",
+    "answers": [
+      "La barre de santé",
+      "Le compteur de lingots",
+      "La liste d'amis",
+      "La boussole"
+    ],
+    "correct": 0
+  },
+  {
+    "text": "Quel conteneur fournit principalement des munitions lorsqu'on l'ouvre ?",
+    "answers": [
+      "Une caisse de pêche",
+      "Une boîte de munitions",
+      "Une fontaine de bouclier",
+      "Un établi"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "En quelle année Fortnite Battle Royale a-t-il été lancé ?",
+    "answers": [
+      "2017",
+      "2016",
+      "2015",
+      "2018"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel moteur graphique est utilisé par Fortnite ?",
+    "answers": [
+      "Unity",
+      "Unreal Engine",
+      "CryEngine",
+      "Source"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Sur quelle plateforme Fortnite n'est-il PAS disponible ?",
+    "answers": [
+      "PlayStation",
+      "Xbox",
+      "Steam Deck nativement",
+      "Nintendo Switch"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nombre maximum de joueurs dans un mode Escouade classique ?",
+    "answers": [
+      "2",
+      "3",
+      "5",
+      "4"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel personnage légendaire porte un masque doré et dirige l'Agence ?",
+    "answers": [
+      "Brutus",
+      "Midas",
+      "Skye",
+      "TNTina"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel événement en jeu a détruit la carte originale en 2019 ?",
+    "answers": [
+      "L'Éruption volcanique",
+      "L'Invasion extraterrestre",
+      "Le Trou Noir",
+      "La Fracture"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle saison du Chapitre 1 a introduit les véhicules tout-terrain (ATK) ?",
+    "answers": [
+      "Saison 3",
+      "Saison 9",
+      "Saison 7",
+      "Saison 5"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage Marvel a été un skin jouable lors du Chapitre 2 Saison 4 ?",
+    "answers": [
+      "Iron Man",
+      "Spider-Man",
+      "Batman",
+      "Superman"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel rappeur a donné un concert virtuel emblématique dans Fortnite en avril 2020 ?",
+    "answers": [
+      "Drake",
+      "Eminem",
+      "Travis Scott",
+      "Marshmello"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel DJ a été le premier à donner un concert dans Fortnite en février 2019 ?",
+    "answers": [
+      "Calvin Harris",
+      "Deadmau5",
+      "Skrillex",
+      "Marshmello"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel objet légendaire permettait de se téléporter dans une faille dimensionnelle ?",
+    "answers": [
+      "La faille portative",
+      "Le grappin",
+      "Le tremplin de choc",
+      "La grenade boogie"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel objet forçait les joueurs touchés à danser ?",
+    "answers": [
+      "La grenade impulsive",
+      "La grenade boogie",
+      "La bombe puante",
+      "Le piège à feu"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel lieu emblématique se trouvait au centre de la carte du Chapitre 1 ?",
+    "answers": [
+      "Pleasant Park",
+      "Tilted Towers",
+      "Dusty Depot",
+      "Loot Lake"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel lieu nommé « Tilted Towers » était l'un des plus populaires de la carte originale ?",
+    "answers": [
+      "Un quartier urbain avec des immeubles",
+      "Un village de pêche",
+      "Une base militaire",
+      "Une forêt enchantée"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel véhicule volant a été introduit dans la Saison 7 du Chapitre 1 ?",
+    "answers": [
+      "L'hélicoptère Choppa",
+      "L'avion biplan X-4",
+      "Le B.R.U.T.E.",
+      "Le quad crasher"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel robot géant contrôlable par deux joueurs a été ajouté en Saison X ?",
+    "answers": [
+      "Le Titan",
+      "Le Sentinel",
+      "Le B.R.U.T.E.",
+      "Le Destroyer"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle franchise de jeux vidéo a fait un crossover avec Fortnite incluant Master Chief ?",
+    "answers": [
+      "Halo",
+      "Call of Duty",
+      "Destiny",
+      "Gears of War"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage de Street Fighter est apparu comme skin dans Fortnite ?",
+    "answers": [
+      "Ken",
+      "Chun-Li",
+      "Ryu",
+      "Akuma"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel type de buisson permettait aux joueurs de se cacher en Chapitre 1 ?",
+    "answers": [
+      "L'abri blindé",
+      "La tente de camouflage",
+      "Le buisson consumable",
+      "La cape d'invisibilité"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel objet de soin restaure à la fois santé et bouclier au maximum ?",
+    "answers": [
+      "Le grand bidon de bouclier",
+      "Les champignons",
+      "Les bandages",
+      "Le chug jug"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien de points de bouclier restaure une petite potion de bouclier ?",
+    "answers": [
+      "15",
+      "25",
+      "50",
+      "75"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Jusqu'à combien de points le bouclier peut-il être rechargé avec des petites potions ?",
+    "answers": [
+      "25",
+      "75",
+      "50",
+      "100"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel objet mythique permettait d'invoquer un bombardement aérien ?",
+    "answers": [
+      "Le fusil à infrarouge",
+      "Le lance-roquettes guidé",
+      "Le canon à rail",
+      "La frappe aérienne"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage de The Walking Dead est devenu un skin dans Fortnite ?",
+    "answers": [
+      "Les deux premiers",
+      "Daryl Dixon",
+      "Negan",
+      "Rick Grimes"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel mode compétitif classe les joueurs par divisions dans Fortnite ?",
+    "answers": [
+      "Le mode Classé",
+      "Le mode Tournoi",
+      "Le mode Arène",
+      "Le mode Élite"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel système de points est utilisé dans le mode Arène ?",
+    "answers": [
+      "Les étoiles",
+      "Les médailles",
+      "Les trophées",
+      "Les hypes"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la rareté la plus basse d'une arme dans Fortnite ?",
+    "answers": [
+      "Commune (grise)",
+      "Peu commune (verte)",
+      "Rare (bleue)",
+      "Épique (violette)"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel personnage de DC Comics est apparu dans Fortnite Chapitre 2 Saison 6 ?",
+    "answers": [
+      "Superman",
+      "Batman",
+      "The Flash",
+      "Aquaman"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel super-héros Aquaman a été un skin de la Saison 3 du Chapitre 2 ?",
+    "answers": [
+      "Faux, c'était Deadpool",
+      "Faux, c'était Thor",
+      "Faux, c'était Superman",
+      "Vrai"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage de Fortnite est un agent secret avec un masque de chat ?",
+    "answers": [
+      "Lynx",
+      "Meowscles",
+      "Kit",
+      "Drift"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel skin Fortnite est inspiré de John Wick ?",
+    "answers": [
+      "Le Rédempteur",
+      "Le Faucheur",
+      "L'Infiltrateur",
+      "Le Vengeur"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel chapitre de Fortnite a introduit la mécanique de nage ?",
+    "answers": [
+      "Chapitre 1",
+      "Chapitre 3",
+      "Chapitre 2",
+      "Chapitre 4"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage de la série Naruto est disponible comme skin ?",
+    "answers": [
+      "Naruto Uzumaki",
+      "Goku",
+      "Luffy",
+      "Ichigo"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel personnage de Dragon Ball Z est apparu dans Fortnite ?",
+    "answers": [
+      "Vegeta",
+      "Les deux",
+      "Son Goku",
+      "Freezer"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle arme mythique appartenait à Thanos lors de l'événement Avengers ?",
+    "answers": [
+      "Le Mjolnir",
+      "Le Stormbreaker",
+      "Le Gant de l'Infini",
+      "Le Bouclier de Captain America"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel objet permettait de transformer un ennemi éliminé en or pendant la Saison 2 du Chapitre 2 ?",
+    "answers": [
+      "Le scanner doré",
+      "Le lingot magique",
+      "La bombe dorée",
+      "Le toucher de Midas"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel événement en jeu a marqué la fin du Chapitre 2 de Fortnite ?",
+    "answers": [
+      "L'Inversion",
+      "La Fracture",
+      "Le Big Bang",
+      "Le Trou Noir"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel événement a marqué le lancement du Chapitre 4 ?",
+    "answers": [
+      "La Collision",
+      "L'Éruption",
+      "La Fracture",
+      "Le Big Bang"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel objet de mobilité s'accroche aux surfaces et attire le joueur ?",
+    "answers": [
+      "Le ballon",
+      "La faille portative",
+      "Les ailes de poulet",
+      "Le grappin"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle le mode où les joueurs réapparaissent après élimination pendant un temps limité ?",
+    "answers": [
+      "Le mode Recharge",
+      "Le mode Solo",
+      "Le mode Classé",
+      "Le mode Aventure"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel matériau est récolté en frappant des arbres ?",
+    "answers": [
+      "La pierre",
+      "Le métal",
+      "Le bois",
+      "Le plastique"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel matériau est récolté en frappant des voitures ou des structures métalliques ?",
+    "answers": [
+      "Le bois",
+      "La pierre",
+      "Le cristal",
+      "Le métal"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle saison a introduit le premier Passe de combat dans Fortnite Battle Royale ?",
+    "answers": [
+      "Saison 2",
+      "Saison 1",
+      "Saison 3",
+      "Saison 4"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage iconique de Fortnite est une tomate géante ?",
+    "answers": [
+      "Durr Burger",
+      "Tomatohead",
+      "Peely",
+      "Fishstick"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel restaurant fictif est représenté par une mascotte burger dans Fortnite ?",
+    "answers": [
+      "Pizza Pit",
+      "Taco Time",
+      "Steak Shack",
+      "Durr Burger"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel objet explosif rebondit sur les surfaces avant d'exploser ?",
+    "answers": [
+      "La grenade classique",
+      "La grenade collante",
+      "La C4",
+      "La dynamite"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle arme lance des projectiles explosifs guidés par le joueur ?",
+    "answers": [
+      "Le lance-roquettes",
+      "Le lance-roquettes guidé",
+      "Le lance-grenades",
+      "Le canon à rail"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel objet cosmétique modifie la musique du menu principal ?",
+    "answers": [
+      "Un aérosol",
+      "Un écran de chargement",
+      "Une musique de casier",
+      "Un planeur"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quel mode les joueurs peuvent-ils pêcher pour obtenir des objets ?",
+    "answers": [
+      "En Battle Royale et LEGO Fortnite",
+      "Uniquement en mode Sauver le monde",
+      "Uniquement en mode Créatif",
+      "Uniquement en Party Royale"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel outil de pêche peut être utilisé pour attraper des poissons et des objets ?",
+    "answers": [
+      "Le harpon uniquement",
+      "La canne à pêche",
+      "Le filet de pêche",
+      "La dynamite aquatique"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  }
 ]

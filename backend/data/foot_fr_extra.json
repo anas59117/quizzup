@@ -238,5 +238,305 @@
       "Le Real Madrid"
     ],
     "correct": 0
+  },
+  {
+    "text": "Quel club français a remporté le plus de titres de champion de France ?",
+    "answers": ["Olympique de Marseille", "AS Saint-Étienne", "Paris Saint-Germain", "Olympique Lyonnais"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien de titres consécutifs l'Olympique Lyonnais a-t-il remportés entre 2002 et 2008 ?",
+    "answers": ["5", "6", "7", "8"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur est le meilleur buteur de l'histoire de la Ligue 1 ?",
+    "answers": ["Jean-Pierre Papin", "Delio Onnis", "Hervé Revelli", "Bernard Lacombe"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En quelle année le RC Lens a-t-il remporté son unique titre de champion de France ?",
+    "answers": ["1996", "1998", "2000", "2002"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club de Ligue 1 joue au stade de la Beaujoire ?",
+    "answers": ["Stade Rennais", "FC Nantes", "Girondins de Bordeaux", "Montpellier HSC"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel entraîneur a mené Montpellier au titre de champion de France en 2012 ?",
+    "answers": ["René Girard", "Rolland Courbis", "Louis Nicollin", "René Bölöni"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel gardien français a remporté la Coupe du monde 2018 avec les Bleus ?",
+    "answers": ["Steve Mandanda", "Alphonse Areola", "Hugo Lloris", "Mike Maignan"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel club français a été relégué administrativement en Ligue 2 en 2022 ?",
+    "answers": ["AS Saint-Étienne", "Girondins de Bordeaux", "FC Metz", "RC Strasbourg"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur français a inscrit un doublé en finale de la Coupe du monde 2022 ?",
+    "answers": ["Antoine Griezmann", "Olivier Giroud", "Kylian Mbappé", "Ousmane Dembélé"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel stade accueille les matchs du Racing Club de Strasbourg ?",
+    "answers": ["Stade Bollaert-Delelis", "Stade de la Meinau", "Stade Marcel-Picot", "Stade Auguste-Delaune"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur a marqué le but en or pour la France en finale de l'Euro 2000 ?",
+    "answers": ["Zinedine Zidane", "David Trezeguet", "Thierry Henry", "Robert Pirès"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club a remporté la première édition de la Ligue 1 en 1932-1933 ?",
+    "answers": ["Olympique Lillois", "FC Sochaux", "Racing Club de Paris", "Olympique de Marseille"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de buts Kylian Mbappé a-t-il inscrits en finale de la Coupe du monde 2022 ?",
+    "answers": ["1", "2", "3", "4"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel club de Ligue 1 est surnommé 'Les Dogues' ?",
+    "answers": ["RC Lens", "LOSC Lille", "Stade de Reims", "FC Metz"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui est le meilleur buteur de l'histoire de l'équipe de France ?",
+    "answers": ["Thierry Henry", "Michel Platini", "Olivier Giroud", "Antoine Griezmann"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année l'AS Monaco a-t-elle atteint la finale de la Ligue des champions ?",
+    "answers": ["2000", "2002", "2004", "2006"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur français a été Ballon d'Or en 2022 ?",
+    "answers": ["Kylian Mbappé", "Karim Benzema", "Antoine Griezmann", "N'Golo Kanté"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel club français joue au stade Bollaert-Delelis ?",
+    "answers": ["LOSC Lille", "RC Lens", "Valenciennes FC", "Stade de Reims"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien de fois l'AS Saint-Étienne a-t-elle été championne de France ?",
+    "answers": ["8", "10", "7", "12"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur a inscrit le but de la victoire pour Lille lors de la dernière journée du championnat 2011 ?",
+    "answers": ["Moussa Sow", "Eden Hazard", "Gervinho", "Ludovic Obraniak"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel entraîneur a remporté la Ligue 1 avec le LOSC en 2021 ?",
+    "answers": ["Marcelo Bielsa", "Christophe Galtier", "Jocelyn Gourvennec", "Rudi Garcia"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club a été le premier promu à remporter la Ligue 1 la même saison ?",
+    "answers": ["Stade de Reims", "RC Strasbourg", "FC Nantes", "Aucun club n'a réalisé cet exploit"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a reçu le plus de cartons rouges dans l'histoire de la Ligue 1 ?",
+    "answers": ["Cyril Rool", "Jérémy Morel", "Franck Ribéry", "Loïc Rémy"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel stade accueille les matchs du Stade Rennais ?",
+    "answers": ["Stade de la Beaujoire", "Roazhon Park", "Stade Francis-Le Blé", "Stade de la Route de Lorient"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur français a remporté trois Ballons d'Or consécutifs de 1983 à 1985 ?",
+    "answers": ["Zinedine Zidane", "Michel Platini", "Jean-Pierre Papin", "Raymond Kopa"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année le FC Nantes a-t-il remporté son dernier titre de champion de France ?",
+    "answers": ["1995", "2000", "2001", "2003"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club de Ligue 1 est surnommé 'Les Canaris' ?",
+    "answers": ["FC Nantes", "AS Monaco", "AJ Auxerre", "RC Lens"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel joueur français a inscrit 41 buts en une saison de Ligue 1 (2015-2016) ?",
+    "answers": ["Edinson Cavani", "Zlatan Ibrahimović", "Alexandre Lacazette", "Pierre-Emerick Aubameyang"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club a remporté la Coupe de France le plus souvent ?",
+    "answers": ["Olympique de Marseille", "Paris Saint-Germain", "AS Saint-Étienne", "Olympique Lyonnais"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel gardien français a le record de sélections en équipe de France ?",
+    "answers": ["Fabien Barthez", "Hugo Lloris", "Bernard Lama", "Steve Mandanda"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club joue au stade Geoffroy-Guichard ?",
+    "answers": ["Olympique Lyonnais", "AS Saint-Étienne", "Clermont Foot", "Grenoble Foot"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel entraîneur français a dirigé le Real Madrid de 2016 à 2018 puis de 2019 à 2021 ?",
+    "answers": ["Didier Deschamps", "Arsène Wenger", "Zinedine Zidane", "Laurent Blanc"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année l'AJ Auxerre a-t-elle remporté le doublé Coupe-Championnat ?",
+    "answers": ["1994", "1996", "1998", "2000"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a inscrit un quadruplé lors de France-Ukraine en barrage du Mondial 2014 ?",
+    "answers": ["Olivier Giroud", "Karim Benzema", "Franck Ribéry", "Mathieu Valbuena"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club de Ligue 1 joue au stade Pierre-Mauroy ?",
+    "answers": ["RC Lens", "LOSC Lille", "Valenciennes FC", "US Boulogne"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel attaquant français a été meilleur buteur de la Premier League en 2004 avec Arsenal ?",
+    "answers": ["Sylvain Wiltord", "Robert Pirès", "Thierry Henry", "Patrick Vieira"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel défenseur français a été capitaine de l'équipe championne du monde en 2018 ?",
+    "answers": ["Raphaël Varane", "Samuel Umtiti", "Hugo Lloris", "Laurent Koscielny"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel club de Corse a joué en Ligue 1 pendant plusieurs saisons dans les années 2010 ?",
+    "answers": ["SC Bastia", "AC Ajaccio", "Gazélec Ajaccio", "Les trois"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur français a remporté le Ballon d'Or en 1991 ?",
+    "answers": ["Eric Cantona", "Jean-Pierre Papin", "Laurent Blanc", "Didier Deschamps"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En quelle année la Ligue 1 est-elle passée de 20 à 18 clubs ?",
+    "answers": ["2021", "2022", "2023", "2024"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel entraîneur a mené l'OGC Nice en Ligue des champions en 2017 ?",
+    "answers": ["Patrick Vieira", "Claude Puel", "Lucien Favre", "Christophe Galtier"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel buteur a inscrit 4 buts lors d'un match de Ligue 1 pour le PSG contre Lyon en 2018 ?",
+    "answers": ["Neymar", "Kylian Mbappé", "Edinson Cavani", "Angel Di Maria"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club de Ligue 1 est surnommé 'Les Phoceens' ?",
+    "answers": ["OGC Nice", "Olympique de Marseille", "SC Bastia", "AC Ajaccio"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel joueur français a été élu meilleur joueur de l'Euro 2000 ?",
+    "answers": ["Thierry Henry", "Zinedine Zidane", "Patrick Vieira", "Fabien Barthez"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel club a formé Zinedine Zidane avant son transfert aux Girondins de Bordeaux ?",
+    "answers": ["OGC Nice", "AS Cannes", "AS Monaco", "Toulouse FC"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de Coupes du monde la France a-t-elle remportées (jusqu'en 2024) ?",
+    "answers": ["1", "2", "3", "4"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel joueur français détient le record de passes décisives en Ligue 1 ?",
+    "answers": ["Franck Ribéry", "Ángel Di María", "Neymar", "Mickaël Landreau"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club a été champion de France pour la dernière fois en 2010 avant le règne du PSG ?",
+    "answers": ["Olympique Lyonnais", "Olympique de Marseille", "Montpellier HSC", "LOSC Lille"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur français a marqué contre le Brésil en quarts de finale de la Coupe du monde 1986 ?",
+    "answers": ["Michel Platini", "Jean Tigana", "Jean-Pierre Papin", "Dominique Rocheteau"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel club de Ligue 1 porte les couleurs rouge et noir ?",
+    "answers": ["Stade Rennais", "OGC Nice", "FC Lorient", "Clermont Foot"],
+    "correct": 0,
+    "difficulty": "facile"
   }
 ]

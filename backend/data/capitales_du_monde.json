@@ -1098,5 +1098,555 @@
     ],
     "correct": 3,
     "difficulty": "expert"
+  },
+  {
+    "text": "Quelle est la capitale de l'Espagne ?",
+    "answers": [
+      "Barcelone",
+      "Séville",
+      "Madrid",
+      "Valence"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la capitale de l'Autriche ?",
+    "answers": [
+      "Vienne",
+      "Salzbourg",
+      "Graz",
+      "Innsbruck"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la capitale de la Belgique ?",
+    "answers": [
+      "Anvers",
+      "Bruxelles",
+      "Gand",
+      "Liège"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Copenhague est la capitale de quel pays ?",
+    "answers": [
+      "Norvège",
+      "Suède",
+      "Danemark",
+      "Finlande"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la capitale de la Suède ?",
+    "answers": [
+      "Göteborg",
+      "Malmö",
+      "Uppsala",
+      "Stockholm"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle ville est la capitale de l'Irak ?",
+    "answers": [
+      "Bagdad",
+      "Bassora",
+      "Mossoul",
+      "Erbil"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la capitale du Pérou ?",
+    "answers": [
+      "Cusco",
+      "Lima",
+      "Arequipa",
+      "Trujillo"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la capitale de la Bolivie (siège du gouvernement) ?",
+    "answers": [
+      "Cochabamba",
+      "Santa Cruz",
+      "La Paz",
+      "Sucre"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle ville est la capitale constitutionnelle de la Bolivie ?",
+    "answers": [
+      "La Paz",
+      "Cochabamba",
+      "Oruro",
+      "Sucre"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la capitale du Sri Lanka (siège du gouvernement) ?",
+    "answers": [
+      "Sri Jayawardenapura Kotte",
+      "Colombo",
+      "Kandy",
+      "Galle"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Colombo est souvent considérée comme la capitale commerciale de quel pays ?",
+    "answers": [
+      "Maldives",
+      "Sri Lanka",
+      "Bangladesh",
+      "Myanmar"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale de l'Iran ?",
+    "answers": [
+      "Ispahan",
+      "Chiraz",
+      "Téhéran",
+      "Tabriz"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la capitale de l'Afghanistan ?",
+    "answers": [
+      "Hérat",
+      "Kandahar",
+      "Mazar-i-Charif",
+      "Kaboul"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale de la Malaisie ?",
+    "answers": [
+      "Kuala Lumpur",
+      "George Town",
+      "Johor Bahru",
+      "Kota Kinabalu"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la capitale de l'Indonésie depuis 2024 ?",
+    "answers": [
+      "Jakarta",
+      "Nusantara",
+      "Surabaya",
+      "Bandung"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la capitale de Singapour ?",
+    "answers": [
+      "Johor",
+      "Sentosa",
+      "Singapour",
+      "Changi"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle capitale africaine est surnommée « la ville aux mille collines » ?",
+    "answers": [
+      "Addis-Abeba",
+      "Kampala",
+      "Nairobi",
+      "Kigali"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale du Cameroun ?",
+    "answers": [
+      "Yaoundé",
+      "Douala",
+      "Garoua",
+      "Bamenda"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale de la République démocratique du Congo ?",
+    "answers": [
+      "Lubumbashi",
+      "Kinshasa",
+      "Brazzaville",
+      "Kisangani"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Brazzaville est la capitale de quel pays ?",
+    "answers": [
+      "RD Congo",
+      "Gabon",
+      "République du Congo",
+      "Cameroun"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale du Gabon ?",
+    "answers": [
+      "Port-Gentil",
+      "Franceville",
+      "Oyem",
+      "Libreville"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale du Niger ?",
+    "answers": [
+      "Niamey",
+      "Zinder",
+      "Maradi",
+      "Agadez"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale du Mali ?",
+    "answers": [
+      "Tombouctou",
+      "Bamako",
+      "Sikasso",
+      "Ségou"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale du Burkina Faso ?",
+    "answers": [
+      "Bobo-Dioulasso",
+      "Koudougou",
+      "Ouagadougou",
+      "Banfora"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale du Tchad ?",
+    "answers": [
+      "Moundou",
+      "Abéché",
+      "Sarh",
+      "N'Djamena"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la capitale de la Libye ?",
+    "answers": [
+      "Tripoli",
+      "Benghazi",
+      "Misrata",
+      "Sabha"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale du Soudan ?",
+    "answers": [
+      "Omdourman",
+      "Khartoum",
+      "Port-Soudan",
+      "Kassala"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la capitale de l'Érythrée ?",
+    "answers": [
+      "Massaoua",
+      "Keren",
+      "Asmara",
+      "Assab"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la capitale de Djibouti ?",
+    "answers": [
+      "Ali Sabieh",
+      "Tadjoura",
+      "Obock",
+      "Djibouti"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale de la Somalie ?",
+    "answers": [
+      "Mogadiscio",
+      "Hargeisa",
+      "Berbera",
+      "Kismayo"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la capitale de l'Ouzbékistan ?",
+    "answers": [
+      "Samarcande",
+      "Tachkent",
+      "Boukhara",
+      "Namangan"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la capitale du Kirghizistan ?",
+    "answers": [
+      "Och",
+      "Jalal-Abad",
+      "Bichkek",
+      "Karakol"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la capitale du Turkménistan ?",
+    "answers": [
+      "Mary",
+      "Türkmenabat",
+      "Daşoguz",
+      "Achgabat"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la capitale du Tadjikistan ?",
+    "answers": [
+      "Douchanbé",
+      "Khodjent",
+      "Koulob",
+      "Istaravshan"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la capitale de l'Azerbaïdjan ?",
+    "answers": [
+      "Gandja",
+      "Bakou",
+      "Soumgaït",
+      "Mingatchevir"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale de la Géorgie (pays) ?",
+    "answers": [
+      "Batoumi",
+      "Koutaïssi",
+      "Tbilissi",
+      "Roustavi"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale de l'Arménie ?",
+    "answers": [
+      "Gyumri",
+      "Vanadzor",
+      "Kapan",
+      "Erevan"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale de la Lettonie ?",
+    "answers": [
+      "Riga",
+      "Daugavpils",
+      "Liepaja",
+      "Jelgava"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale de la Lituanie ?",
+    "answers": [
+      "Kaunas",
+      "Vilnius",
+      "Klaipėda",
+      "Šiauliai"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale de l'Albanie ?",
+    "answers": [
+      "Durrës",
+      "Vlorë",
+      "Tirana",
+      "Shkodër"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale de la Macédoine du Nord ?",
+    "answers": [
+      "Bitola",
+      "Ohrid",
+      "Kumanovo",
+      "Skopje"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la capitale de la Serbie ?",
+    "answers": [
+      "Belgrade",
+      "Novi Sad",
+      "Niš",
+      "Kragujevac"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la capitale de la Bosnie-Herzégovine ?",
+    "answers": [
+      "Mostar",
+      "Sarajevo",
+      "Banja Luka",
+      "Tuzla"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale du Kosovo ?",
+    "answers": [
+      "Prizren",
+      "Mitrovica",
+      "Pristina",
+      "Peć"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la capitale du Suriname ?",
+    "answers": [
+      "Nieuw Nickerie",
+      "Lelydorp",
+      "Brokopondo",
+      "Paramaribo"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la capitale de l'Équateur ?",
+    "answers": [
+      "Quito",
+      "Guayaquil",
+      "Cuenca",
+      "Ambato"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la capitale de la Mongolie ?",
+    "answers": [
+      "Darkhan",
+      "Oulan-Bator",
+      "Erdenet",
+      "Choibalsan"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la capitale du Laos ?",
+    "answers": [
+      "Savannakhet",
+      "Luang Prabang",
+      "Vientiane",
+      "Paksé"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la capitale du Honduras ?",
+    "answers": [
+      "San Pedro Sula",
+      "La Ceiba",
+      "Choloma",
+      "Tegucigalpa"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la capitale du Nicaragua ?",
+    "answers": [
+      "Managua",
+      "León",
+      "Granada",
+      "Masaya"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
   }
 ]

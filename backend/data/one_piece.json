@@ -998,5 +998,305 @@
         "Gonbe"
       ],
       "correct": 1
-    }
+    },
+  {
+    "text": "Quel est le nom du premier navire de l'équipage du Chapeau de paille ?",
+    "answers": ["Le Going Merry", "Le Thousand Sunny", "Le Red Force", "Le Polar Tang"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel fruit du Démon Luffy a-t-il mangé ?",
+    "answers": ["Le Mera Mera no Mi", "Le Gomu Gomu no Mi", "Le Bara Bara no Mi", "Le Hana Hana no Mi"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel pirate a donné son chapeau de paille à Luffy ?",
+    "answers": ["Gol D. Roger", "Barbe Blanche", "Shanks", "Rayleigh"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le rêve de Zoro ?",
+    "answers": ["Trouver le One Piece", "Dessiner la carte du monde", "Trouver All Blue", "Devenir le meilleur épéiste du monde"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le rêve de Sanji ?",
+    "answers": ["Trouver All Blue", "Devenir Roi des Pirates", "Devenir le meilleur cuisinier", "Trouver le One Piece"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le rêve de Nami ?",
+    "answers": ["Devenir la plus forte", "Dessiner la carte complète du monde", "Trouver le One Piece", "Devenir reine des pirates"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle le père de Luffy ?",
+    "answers": ["Gol D. Roger", "Shanks", "Monkey D. Dragon", "Monkey D. Garp"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien de membres compte l'équipage du Chapeau de paille (y compris Luffy) ?",
+    "answers": ["Huit", "Neuf", "Onze", "Dix"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel océan faut-il traverser pour atteindre Grand Line ?",
+    "answers": ["Red Line", "Calm Belt", "East Blue", "New World"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel type de Haki permet d'entendre la voix de toute chose ?",
+    "answers": ["Le Haki de l'Observation", "Le Haki de l'Armement", "Le Haki des Rois", "Aucun de ces Hakis"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Haki permet de mettre K.O. des adversaires faibles par la seule volonté ?",
+    "answers": ["Le Haki de l'Observation", "Le Haki des Rois", "Le Haki de l'Armement", "Le Haki du Conquérant"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel type de fruit du Démon Kaido possède-t-il ?",
+    "answers": ["Paramecia", "Logia", "Zoan mythique", "Zoan ancien"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de l'organisation secrète du Gouvernement Mondial qui opère dans l'ombre ?",
+    "answers": ["La Marine", "Le Baroque Works", "Le Germa 66", "Le Cipher Pol"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de l'île où se trouve le One Piece selon la légende ?",
+    "answers": ["Laugh Tale", "Raftel", "Marie Geoise", "God Valley"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel titre porte le gouvernement suprême du monde de One Piece ?",
+    "answers": ["L'Empire", "Le Gouvernement Mondial", "La Marine Royale", "Le Conseil des Rois"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le vrai nom du fruit du Démon de Luffy révélé dans l'arc de Wano ?",
+    "answers": ["Gomu Gomu no Mi", "Mera Mera no Mi", "Hito Hito no Mi modèle Nika", "Gura Gura no Mi"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel pirate légendaire fut le second de Gol D. Roger ?",
+    "answers": ["Shanks", "Scopper Gaban", "Crocus", "Silvers Rayleigh"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le surnom de Luffy dans le monde des pirates ?",
+    "answers": ["Chapeau de paille", "Poing de feu", "Le Chirurgien de la Mort", "Barbe Noire"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom de la technique signature de Luffy où il gonfle son bras ?",
+    "answers": ["Gomu Gomu no Bazooka", "Gomu Gomu no Gatling", "Gomu Gomu no Pistol", "Gomu Gomu no Rocket"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel amiral de la Marine possède le pouvoir du magma ?",
+    "answers": ["Aokiji", "Kizaru", "Fujitora", "Akainu"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel amiral de la Marine possède le pouvoir de la glace ?",
+    "answers": ["Aokiji", "Akainu", "Kizaru", "Ryokugyu"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de la prison sous-marine la plus sécurisée du monde de One Piece ?",
+    "answers": ["Marineford", "Impel Down", "Enies Lobby", "Marie Geoise"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel membre de l'équipage de Barbe Blanche est le commandant de la première division ?",
+    "answers": ["Ace", "Jozu", "Marco", "Vista"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel pouvoir Marco le Phénix utilise-t-il ?",
+    "answers": ["Le Mera Mera no Mi", "Le Gura Gura no Mi", "Le Suna Suna no Mi", "Le Tori Tori no Mi modèle Phénix"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ancien Grand Corsaire peut transformer les gens en pierre avec son pouvoir ?",
+    "answers": ["Boa Hancock", "Doflamingo", "Mihawk", "Jinbe"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quel arc Luffy apprend-il le Gear Second pour la première fois ?",
+    "answers": ["Alabasta", "Enies Lobby", "Thriller Bark", "Sabaody"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage apprend à Luffy les bases du Haki pendant le time skip de deux ans ?",
+    "answers": ["Shanks", "Garp", "Silvers Rayleigh", "Jinbe"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien d'années durent le time skip entre la première et la seconde partie de One Piece ?",
+    "answers": ["Un an", "Six mois", "Trois ans", "Deux ans"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le surnom de Trafalgar Law ?",
+    "answers": ["Le Chirurgien de la Mort", "Le Roi des Flammes", "L'Empereur des Ténèbres", "Le Démon de l'Ouest"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel pouvoir permet au fruit Ope Ope no Mi de créer une sphère spatiale ?",
+    "answers": ["Shambles", "Room", "Counter Shock", "Gamma Knife"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Qui est le premier ennemi majeur que Luffy affronte dans East Blue ?",
+    "answers": ["Don Krieg", "Arlong", "Buggy le Clown", "Captain Morgan"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel pirate possède le pouvoir de se séparer en morceaux grâce au Bara Bara no Mi ?",
+    "answers": ["Alvida", "Don Krieg", "Captain Kuro", "Buggy le Clown"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel Empereur a deux fruits du Démon dans le manga One Piece ?",
+    "answers": ["Marshall D. Teach", "Kaido", "Big Mom", "Shanks"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom du sabre légendaire que Zoro reçoit au pays des Wa en remplacement de Shusui ?",
+    "answers": ["Wado Ichimonji", "Enma", "Sandai Kitetsu", "Yubashiri"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel membre de l'équipage du Chapeau de paille a le fruit Hana Hana no Mi ?",
+    "answers": ["Nami", "Chopper", "Nico Robin", "Brook"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel fruit du Démon permet à Brook de revenir à la vie après sa mort ?",
+    "answers": ["Le Kage Kage no Mi", "Le Soru Soru no Mi", "Le Horo Horo no Mi", "Le Yomi Yomi no Mi"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel système de primes permet au Gouvernement Mondial de classer la dangerosité des pirates ?",
+    "answers": ["Les avis de recherche (Wanted)", "Les grades de la Marine", "Le système des Corsaires", "Les Ponéglyphes"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel personnage possède le pouvoir des tremblements de terre grâce au Gura Gura no Mi ?",
+    "answers": ["Kaido", "Barbe Blanche", "Akainu", "Big Mom"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel île est le siège du quartier général de la Marine ?",
+    "answers": ["Enies Lobby", "Impel Down", "Marineford", "Marie Geoise"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel peuple miniature vit sur l'île de Green Bit près de Dressrosa ?",
+    "answers": ["Les Minks", "Les géants", "Les Hommes-Poissons", "Les Tontattas"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de la technique ultime de Luffy appelée « Gear Fifth » ?",
+    "answers": ["L'éveil du Hito Hito no Mi modèle Nika", "Le Gomu Gomu no King Kong Gun", "Le Gear Fourth Bounceman", "Le Gear Third"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ancien membre du CP9 rejoint plus tard le CP0 ?",
+    "answers": ["Kalifa", "Rob Lucci", "Franky", "Blueno"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel navigateur aveugle est devenu amiral de la Marine sous le nom de Fujitora ?",
+    "answers": ["Borsalino", "Sakazuki", "Issho", "Aramaki"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage emblématique a dit « Un homme ne meurt que lorsqu'il est oublié » ?",
+    "answers": ["Gol D. Roger", "Barbe Blanche", "Shanks", "Dr. Hiluluk"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ancien Roi des Pirates a été exécuté à Loguetown ?",
+    "answers": ["Gol D. Roger", "Barbe Blanche", "Shanks", "Rocks D. Xebec"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom de la mer la plus dangereuse de Grand Line ?",
+    "answers": ["East Blue", "Le Nouveau Monde", "Calm Belt", "Paradise"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel fruit du Démon de type Logia permet de contrôler le sable ?",
+    "answers": ["Le Mera Mera no Mi", "Le Hie Hie no Mi", "Le Pika Pika no Mi", "Le Suna Suna no Mi"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de la dernière île de Grand Line avant le Nouveau Monde ?",
+    "answers": ["Sabaody Archipelago", "Water Seven", "Thriller Bark", "Punk Hazard"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le véritable objectif de Robin tout au long de l'aventure ?",
+    "answers": ["Devenir la Reine des Pirates", "Découvrir la vraie histoire du Siècle Perdu", "Venger son île natale", "Trouver All Blue"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de l'île natale de Robin, détruite par un Buster Call ?",
+    "answers": ["Drum", "Alabasta", "Ohara", "Skypiea"],
+    "correct": 2,
+    "difficulty": "difficile"
+  }
 ]

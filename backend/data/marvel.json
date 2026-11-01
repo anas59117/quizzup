@@ -998,5 +998,305 @@
       "Frank Castle"
     ],
     "correct": 1
+  },
+  {
+    "text": "Combien de Pierres d'Infinité existe-t-il dans le MCU ?",
+    "answers": ["6", "4", "8", "5"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle Pierre d'Infinité est contenue dans le Tesseract ?",
+    "answers": ["La Pierre du Pouvoir", "La Pierre de l'Espace", "La Pierre du Temps", "La Pierre de la Réalité"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle Pierre d'Infinité se trouve dans le sceptre de Loki ?",
+    "answers": ["La Pierre du Pouvoir", "La Pierre de l'Espace", "La Pierre de l'Esprit", "La Pierre de l'Âme"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle Pierre d'Infinité Thanos doit-il sacrifier un être cher pour obtenir ?",
+    "answers": ["La Pierre du Temps", "La Pierre de la Réalité", "La Pierre de l'Espace", "La Pierre de l'Âme"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage prononce « I am Iron Man » à la fin d'Avengers: Endgame ?",
+    "answers": ["Tony Stark", "Steve Rogers", "Pepper Potts", "Peter Parker"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le premier film du Marvel Cinematic Universe sorti au cinéma ?",
+    "answers": ["Captain America: First Avenger", "Iron Man", "Thor", "L'Incroyable Hulk"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année le premier film Iron Man est-il sorti ?",
+    "answers": ["2006", "2007", "2008", "2010"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel acteur interprète Thor dans le MCU ?",
+    "answers": ["Chris Evans", "Robert Downey Jr.", "Mark Ruffalo", "Chris Hemsworth"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel acteur interprète Captain America dans le MCU ?",
+    "answers": ["Chris Evans", "Chris Hemsworth", "Chris Pratt", "Sebastian Stan"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel acteur interprète Iron Man dans le MCU ?",
+    "answers": ["Mark Ruffalo", "Robert Downey Jr.", "Chris Evans", "Tom Holland"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel acteur interprète Spider-Man dans le MCU ?",
+    "answers": ["Andrew Garfield", "Tobey Maguire", "Tom Holland", "Jake Gyllenhaal"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel acteur interprète Black Panther dans le premier film éponyme ?",
+    "answers": ["Michael B. Jordan", "Daniel Kaluuya", "Winston Duke", "Chadwick Boseman"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel personnage du MCU dit « We have a Hulk » ?",
+    "answers": ["Tony Stark", "Nick Fury", "Natasha Romanoff", "Steve Rogers"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Avenger se sacrifie à Vormir dans Avengers: Endgame ?",
+    "answers": ["Tony Stark", "Natasha Romanoff", "Steve Rogers", "Clint Barton"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel événement élimine la moitié de la vie dans l'univers à la fin d'Infinity War ?",
+    "answers": ["Le Blip", "L'Éclipse", "Le Snap (le Claquement de doigts)", "La Convergence"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel personnage voyage dans le temps pour rendre les Pierres d'Infinité à la fin d'Endgame ?",
+    "answers": ["Tony Stark", "Thor", "Bruce Banner", "Steve Rogers"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel film du MCU introduit le personnage de Shang-Chi ?",
+    "answers": ["Shang-Chi et la Légende des Dix Anneaux", "Les Éternels", "Doctor Strange 2", "Black Widow"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle organisation criminelle est dirigée par le Mandarin dans le MCU ?",
+    "answers": ["Hydra", "Les Dix Anneaux", "Le S.H.I.E.L.D.", "La Main"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel groupe de héros immortels est apparu dans le film « Les Éternels » ?",
+    "answers": ["Les Inhumains", "Les Célestes", "Les Éternels", "Les Déviants"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel ennemi des Avengers est un robot créé par Tony Stark et Bruce Banner ?",
+    "answers": ["Vision", "Jarvis", "Red Skull", "Ultron"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Avenger est surnommé « le Dieu du Tonnerre » ?",
+    "answers": ["Thor", "Odin", "Loki", "Heimdall"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle organisation secrète a infiltré le S.H.I.E.L.D. dans Captain America : Le Soldat de l'hiver ?",
+    "answers": ["Les Dix Anneaux", "Hydra", "A.I.M.", "La Chambre rouge"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel créateur légendaire faisait des apparitions caméo dans presque tous les films Marvel ?",
+    "answers": ["Jack Kirby", "Steve Ditko", "Stan Lee", "Joe Simon"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel personnage devient le nouveau Captain America dans la série « Falcon et le Soldat de l'hiver » ?",
+    "answers": ["Bucky Barnes", "John Walker", "Eli Bradley", "Sam Wilson"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de l'intelligence artificielle de Tony Stark avant Vision ?",
+    "answers": ["J.A.R.V.I.S.", "F.R.I.D.A.Y.", "Karen", "Edith"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle intelligence artificielle remplace J.A.R.V.I.S. dans l'armure d'Iron Man ?",
+    "answers": ["Karen", "F.R.I.D.A.Y.", "Edith", "Ultron"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel royaume sous-marin Namor dirige-t-il dans Black Panther: Wakanda Forever ?",
+    "answers": ["Atlantis", "Lemuria", "Talokan", "K'un-Lun"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel héros de l'univers Marvel est aveugle mais possède des sens surhumains ?",
+    "answers": ["Hawkeye", "Moon Knight", "Luke Cage", "Daredevil"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle nouvelle arme Thor forge-t-il dans Avengers: Infinity War ?",
+    "answers": ["Stormbreaker", "Mjolnir", "Gungnir", "Jarnbjorn"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage dit « I can do this all day » dans le MCU ?",
+    "answers": ["Thor", "Steve Rogers", "Tony Stark", "Peter Parker"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel film du MCU se déroule principalement dans les années 1990 ?",
+    "answers": ["Captain America: First Avenger", "Iron Man", "Captain Marvel", "Thor"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom du vaisseau spatial des Gardiens de la Galaxie dans le premier film ?",
+    "answers": ["Le Benatar", "Le Quinjet", "L'Héliporteur", "Le Milano"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel ennemi de Spider-Man est joué par Jake Gyllenhaal dans « Far From Home » ?",
+    "answers": ["Mysterio", "Le Vautour", "Électro", "Le Bouffon Vert"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel adversaire de Spider-Man est interprété par Michael Keaton dans « Homecoming » ?",
+    "answers": ["Mysterio", "Le Vautour", "Le Lézard", "Docteur Octopus"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel vilain est le père de Gamora et Nebula dans le MCU ?",
+    "answers": ["Ego", "Ronan", "Thanos", "Kang"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel objet Thanos cherche-t-il à compléter dans Infinity War ?",
+    "answers": ["Le Tesseract", "Mjolnir", "L'Œil d'Agamotto", "Le Gantelet de l'Infini"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel personnage Marvel est un roi d'un pays africain fictif très avancé technologiquement ?",
+    "answers": ["Black Panther", "Falcon", "War Machine", "Luke Cage"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle la planète de Thanos dans les comics Marvel ?",
+    "answers": ["Xandar", "Titan", "Sakaar", "Hala"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sur quelle planète Thor est-il retenu comme gladiateur dans Thor: Ragnarok ?",
+    "answers": ["Asgard", "Jotunheim", "Sakaar", "Nidavellir"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage est le Grand Maître de Sakaar dans Thor: Ragnarok ?",
+    "answers": ["Le Collectionneur", "Ego", "En Dwi Gast", "Le Grand Maître (joué par Jeff Goldblum)"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage prononce « Avengers, assemble! » dans Endgame ?",
+    "answers": ["Steve Rogers", "Tony Stark", "Thor", "Nick Fury"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle série Disney+ met en scène Wanda Maximoff dans un univers de sitcom ?",
+    "answers": ["Loki", "WandaVision", "Moon Knight", "She-Hulk"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle série Disney+ se concentre sur le dieu de la malice ?",
+    "answers": ["WandaVision", "Hawkeye", "Loki", "Moon Knight"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel vilain est le principal antagoniste de la série Loki ?",
+    "answers": ["Thanos", "Ultron", "Dormammu", "Celui Qui Demeure (He Who Remains)"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage Miles Morales est-il dans l'univers Marvel ?",
+    "answers": ["Un Spider-Man alternatif", "Le fils de Tony Stark", "Un agent du S.H.I.E.L.D.", "Un Gardien de la Galaxie"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle série animée met en scène différentes réalités du MCU ?",
+    "answers": ["X-Men '97", "What If...?", "Spider-Man: Freshman Year", "Avengers Assemble"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom du programme qui a créé Natasha Romanoff dans le MCU ?",
+    "answers": ["Le Projet Renaissance", "Le Programme Soldat de l'hiver", "Le Projet Insight", "La Chambre rouge"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage du MCU possède le pouvoir de rétrécir et de grandir grâce aux particules Pym ?",
+    "answers": ["Ant-Man", "Spider-Man", "Iron Man", "Hawkeye"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel métal rare alimente la technologie du Wakanda ?",
+    "answers": ["L'adamantium", "Le vibranium", "L'uru", "Le carbonadium"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel personnage du MCU porte le surnom de « Sorcier Suprême » ?",
+    "answers": ["Wanda Maximoff", "Loki", "Doctor Strange", "L'Ancien"],
+    "correct": 2,
+    "difficulty": "facile"
   }
 ]

@@ -1,96 +1,1586 @@
 [
-  {"text":"Quel est le vrai nom de Kendrick Lamar ?","answers":["Kendrick Lamar Duckworth","Kendrick Lamar Johnson","Kendrick Lamar Williams","Kendrick Lamar Davis"],"correct":0,"difficulty":"moyen"},
-  {"text":"Dans quelle ville Kendrick Lamar est-il né et a-t-il grandi ?","answers":["Compton, Californie","Los Angeles, Californie","Long Beach, Californie","Oakland, Californie"],"correct":0,"difficulty":"facile"},
-  {"text":"En quelle année Kendrick Lamar est-il né ?","answers":["1987","1985","1989","1991"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel est le nom du label cofondé par Kendrick Lamar avec Top Dawg Entertainment ?","answers":["pgLang","Aftermath","Dreamville","GOOD Music"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel est le titre du premier album studio officiel de Kendrick Lamar ?","answers":["Section.80","good kid, m.A.A.d city","To Pimp a Butterfly","Overly Dedicated"],"correct":0,"difficulty":"moyen"},
-  {"text":"En quelle année 'Section.80' est-il sorti ?","answers":["2011","2010","2012","2009"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel album de Kendrick Lamar est sous-titré 'A Short Film by Kendrick Lamar' ?","answers":["good kid, m.A.A.d city","Section.80","To Pimp a Butterfly","DAMN."],"correct":0,"difficulty":"moyen"},
-  {"text":"En quelle année 'good kid, m.A.A.d city' est-il sorti ?","answers":["2012","2011","2013","2014"],"correct":0,"difficulty":"facile"},
-  {"text":"Quel single de 'good kid, m.A.A.d city' raconte une histoire de conduite dans Compton ?","answers":["Swimming Pools (Drank)","Backseat Freestyle","Poetic Justice","m.A.A.d city"],"correct":0,"difficulty":"moyen"},
-  {"text":"'Poetic Justice' de Kendrick Lamar est un featuring avec quel artiste ?","answers":["Drake","J. Cole","ScHoolboy Q","Jay-Z"],"correct":0,"difficulty":"facile"},
-  {"text":"Quel album de Kendrick est considéré comme un chef-d'œuvre mêlant jazz, funk et rap ?","answers":["To Pimp a Butterfly","good kid, m.A.A.d city","DAMN.","Mr. Morale & The Big Steppers"],"correct":0,"difficulty":"facile"},
-  {"text":"En quelle année 'To Pimp a Butterfly' est-il sorti ?","answers":["2015","2014","2016","2013"],"correct":0,"difficulty":"facile"},
-  {"text":"Quel single de 'To Pimp a Butterfly' est devenu un hymne du mouvement Black Lives Matter ?","answers":["Alright","King Kunta","i","The Blacker the Berry"],"correct":0,"difficulty":"facile"},
-  {"text":"Quel musicien de jazz a fortement influencé 'To Pimp a Butterfly' ?","answers":["Thundercat et Kamasi Washington","Miles Davis","John Coltrane","Herbie Hancock"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel est le titre de l'album de Kendrick sorti en 2017 ?","answers":["DAMN.","HUMBLE.","LOYALTY.","DNA."],"correct":0,"difficulty":"facile"},
-  {"text":"Quel single de 'DAMN.' a atteint le numéro 1 du Billboard Hot 100 ?","answers":["HUMBLE.","DNA.","LOYALTY.","LOVE."],"correct":0,"difficulty":"facile"},
-  {"text":"'DAMN.' a remporté quel prix historique en 2018 ?","answers":["Le prix Pulitzer de la musique","Le Grammy du meilleur album","L'Oscar de la meilleure chanson","Le Mercury Prize"],"correct":0,"difficulty":"facile"},
-  {"text":"Kendrick Lamar est le premier artiste de quel genre à remporter le Pulitzer de la musique ?","answers":["Hip-hop / Rap","Jazz","R&B","Pop"],"correct":0,"difficulty":"facile"},
-  {"text":"Quel single de 'DAMN.' avec Rihanna a été un hit ?","answers":["LOYALTY.","LOVE.","HUMBLE.","DNA."],"correct":0,"difficulty":"moyen"},
-  {"text":"'DNA.' de Kendrick Lamar parle de quoi ?","answers":["Son héritage, sa fierté et sa détermination","Son ADN génétique","Une enquête criminelle","Un voyage spirituel"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel est le titre du cinquième album studio de Kendrick Lamar sorti en 2022 ?","answers":["Mr. Morale & The Big Steppers","DAMN. 2","Nation","The Heart Part 5"],"correct":0,"difficulty":"moyen"},
-  {"text":"'Mr. Morale & The Big Steppers' est un double album de combien de titres ?","answers":["18","14","20","16"],"correct":0,"difficulty":"difficile"},
-  {"text":"Quel thème principal explore 'Mr. Morale & The Big Steppers' ?","answers":["La thérapie, les traumatismes et la guérison personnelle","La fête et le succès","La politique américaine","L'amour romantique"],"correct":0,"difficulty":"moyen"},
-  {"text":"Kendrick Lamar a contribué à la bande originale de quel film Marvel ?","answers":["Black Panther","Spider-Man: Into the Spider-Verse","Avengers: Endgame","Thor: Ragnarok"],"correct":0,"difficulty":"facile"},
-  {"text":"Quel titre de la BO de Black Panther avec SZA a été nommé aux Oscars ?","answers":["All the Stars","Pray for Me","Black Panther","King's Dead"],"correct":0,"difficulty":"moyen"},
-  {"text":"Kendrick Lamar est signé sur quel label majeur ?","answers":["Aftermath / Interscope","Def Jam","Roc Nation","Columbia"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel rappeur légendaire a signé Kendrick Lamar sur son label ?","answers":["Dr. Dre","Jay-Z","Kanye West","Eminem"],"correct":0,"difficulty":"facile"},
-  {"text":"Quel collectif hip-hop Kendrick Lamar a-t-il cofondé avec ScHoolboy Q, Ab-Soul et Jay Rock ?","answers":["Black Hippy","TDE Crew","West Coast Legends","Compton Kings"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel est le nom du label indépendant qui a lancé Kendrick Lamar ?","answers":["Top Dawg Entertainment (TDE)","pgLang","Dreamville","Quality Control"],"correct":0,"difficulty":"moyen"},
-  {"text":"Kendrick Lamar a quitté TDE pour cofonder quel label en 2020 ?","answers":["pgLang","Aftermath","Interscope West","Pulse Records"],"correct":0,"difficulty":"moyen"},
-  {"text":"pgLang est cofondé avec quel collaborateur de longue date ?","answers":["Dave Free","Top Dawg","ScHoolboy Q","Jay Rock"],"correct":0,"difficulty":"difficile"},
-  {"text":"Quel vers de Kendrick sur un titre de Big Sean en 2013 a déclenché un 'beef' avec Drake ?","answers":["Son couplet sur 'Control'","Son couplet sur 'Holy Key'","Un diss track direct","Un tweet polémique"],"correct":0,"difficulty":"moyen"},
-  {"text":"Sur 'Control', Kendrick a nommé et défié combien de rappeurs ?","answers":["Environ 11 rappeurs","5","3","20"],"correct":0,"difficulty":"difficile"},
-  {"text":"Quel mixtape de Kendrick sorti en 2009 l'a fait remarquer ?","answers":["Kendrick Lamar EP / The Kendrick Lamar EP","Overly Dedicated","C4","Training Day"],"correct":0,"difficulty":"difficile"},
-  {"text":"Sous quel nom de scène Kendrick rappait-il au début de sa carrière ?","answers":["K-Dot","Lil Kendrick","KDuck","K.Lamar"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel rappeur a dit que Kendrick Lamar était le 'nouveau roi de la côte Ouest' ?","answers":["Dr. Dre et Snoop Dogg","Jay-Z","Nas","Ice Cube"],"correct":0,"difficulty":"moyen"},
-  {"text":"Kendrick Lamar a remporté combien de Grammy Awards au total (approximativement) ?","answers":["17","10","22","5"],"correct":0,"difficulty":"difficile"},
-  {"text":"Quel est le titre de la série de singles 'The Heart' de Kendrick ?","answers":["The Heart Part 1 à 5","The Soul Part 1 à 3","The Mind Series","Heart of Compton"],"correct":0,"difficulty":"moyen"},
-  {"text":"'The Heart Part 5' est sorti juste avant quel album ?","answers":["Mr. Morale & The Big Steppers","DAMN.","To Pimp a Butterfly","GNX"],"correct":0,"difficulty":"moyen"},
-  {"text":"Le clip de 'The Heart Part 5' utilise quelle technologie ?","answers":["Le deepfake (son visage se transforme en d'autres célébrités)","La réalité virtuelle","L'animation 3D","Des hologrammes"],"correct":0,"difficulty":"moyen"},
-  {"text":"Kendrick Lamar a performé au show de la mi-temps du Super Bowl en quelle année ?","answers":["2022 et 2025","2020","2018","2023"],"correct":0,"difficulty":"moyen"},
-  {"text":"Au Super Bowl 2022, Kendrick a performé aux côtés de quels artistes ?","answers":["Dr. Dre, Snoop Dogg, Eminem, Mary J. Blige, 50 Cent","Jay-Z et Beyoncé","Drake et Future","Kanye West"],"correct":0,"difficulty":"moyen"},
-  {"text":"Comment s'appelle la compagne de Kendrick Lamar ?","answers":["Whitney Alford","Whitney Houston","Whitney Johnson","Whitney Davis"],"correct":0,"difficulty":"difficile"},
-  {"text":"Combien d'enfants Kendrick Lamar a-t-il ?","answers":["2","1","3","0"],"correct":0,"difficulty":"difficile"},
-  {"text":"Quel titre de 'DAMN.' peut se lire comme un acronyme ?","answers":["DAMN. = Duckworth, A, M, N (pas officiellement confirmé)","HUMBLE.","DNA.","LOVE."],"correct":0,"difficulty":"difficile"},
-  {"text":"'Duckworth' est le dernier titre de 'DAMN.' et raconte quelle histoire ?","answers":["Comment le père de Kendrick a croisé Top Dawg dans sa jeunesse","L'histoire de Compton","Un braquage fictif","La rencontre avec Dr. Dre"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel est le premier titre de 'DAMN.' qui parle d'une femme aveugle ?","answers":["BLOOD.","DNA.","YAH.","ELEMENT."],"correct":0,"difficulty":"difficile"},
-  {"text":"Kendrick Lamar a-t-il un couplet sur 'Nosetalgia' de Pusha T ?","answers":["Oui","Non","Il a produit le beat","Il a fait le refrain"],"correct":0,"difficulty":"difficile"},
-  {"text":"Quel producteur a réalisé le beat de 'HUMBLE.' ?","answers":["Mike WiLL Made-It","Metro Boomin","DJ Mustard","Sounwave"],"correct":0,"difficulty":"moyen"},
-  {"text":"Sounwave est principalement connu comme quoi pour Kendrick ?","answers":["Son producteur principal et collaborateur de longue date","Son DJ","Son manager","Son ingénieur du son"],"correct":0,"difficulty":"moyen"},
-  {"text":"Kendrick Lamar est le premier rappeur à figurer sur la couverture de quel magazine en 2016 ?","answers":["Time (parmi les 100 personnes les plus influentes)","Vogue","Forbes","National Geographic"],"correct":0,"difficulty":"difficile"},
-  {"text":"Quel est le titre complet du sous-titre de 'good kid, m.A.A.d city' ?","answers":["A Short Film by Kendrick Lamar","A Compton Story","A West Coast Classic","Tales from the Hood"],"correct":0,"difficulty":"moyen"},
-  {"text":"Le clip de 'HUMBLE.' a été réalisé par quel réalisateur ?","answers":["Dave Meyers et The Little Homies","Spike Jonze","Hype Williams","Director X"],"correct":0,"difficulty":"difficile"},
-  {"text":"Quel single de Kendrick sorti en 2024 a relancé son beef avec Drake ?","answers":["Like That (avec Future et Metro Boomin)","Not Like Us","Euphoria","Meet the Grahams"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel diss track de Kendrick contre Drake est devenu viral en 2024 ?","answers":["Not Like Us","Euphoria","6:16 in LA","Meet the Grahams"],"correct":0,"difficulty":"facile"},
-  {"text":"'Not Like Us' a atteint quelle position dans les charts ?","answers":["Numéro 1 du Billboard Hot 100","Numéro 2","Numéro 5","Numéro 3"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel album surprise Kendrick a-t-il sorti en novembre 2024 ?","answers":["GNX","Nation","The Heart Part 6","Compton 2"],"correct":0,"difficulty":"facile"},
-  {"text":"'GNX' fait référence à quoi ?","answers":["La Buick GNX (voiture classique)","Un acronyme musical","Le nom d'un quartier","Grand National Xpress"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel rappeur Drake a-t-il répondu à Kendrick avec le diss track 'Push Ups' ?","answers":["Drake lui-même","Lil Wayne","Future","21 Savage"],"correct":0,"difficulty":"facile"},
-  {"text":"Kendrick Lamar a performé 'Not Like Us' combien de fois lors d'un concert spécial ?","answers":["5 fois de suite (concert au Kia Forum)","3 fois","2 fois","1 fois"],"correct":0,"difficulty":"difficile"},
-  {"text":"Le concert 'The Pop Out' de Kendrick en 2024 a réuni des artistes de quelle côte ?","answers":["La côte Ouest","La côte Est","Le Sud","Le Midwest"],"correct":0,"difficulty":"moyen"},
-  {"text":"Kendrick Lamar sera la tête d'affiche du Super Bowl en quelle année ?","answers":["2025","2024","2026","2023"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel titre de 'Section.80' parle de la génération née dans les années 80 ?","answers":["HiiiPoWeR","A.D.H.D.","Rigamortus","Fuck Your Ethnicity"],"correct":1,"difficulty":"difficile"},
-  {"text":"'HiiiPoWeR' de Kendrick fait référence à quel mouvement ?","answers":["Le mouvement Black Power / conscience sociale","Le pouvoir de la musique","Un groupe politique fictif","Le hip-hop underground"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel titre de 'To Pimp a Butterfly' est une conversation fictive avec Tupac ?","answers":["Mortal Man","i","Complexion","Institutionalized"],"correct":0,"difficulty":"difficile"},
-  {"text":"L'interview fictive avec Tupac dans 'Mortal Man' utilise des extraits de quelle vraie interview ?","answers":["Une interview de Tupac de 1994","Un podcast de 2005","Une émission de radio","Un documentaire"],"correct":0,"difficulty":"difficile"},
-  {"text":"Quel artiste a produit 'King Kunta' de Kendrick ?","answers":["Terrace Martin et Sounwave","Dr. Dre","Pharrell Williams","Kanye West"],"correct":0,"difficulty":"difficile"},
-  {"text":"'King Kunta' fait référence à quel personnage historique ?","answers":["Kunta Kinte (de 'Roots')","Un roi africain","Un personnage de film","Un héros de bande dessinée"],"correct":0,"difficulty":"moyen"},
-  {"text":"Kendrick Lamar apparaît sur quel titre de l'album 'Compton' de Dr. Dre ?","answers":["Plusieurs titres dont 'Genocide' et 'Deep Water'","Aucun","Un seul titre","Il a produit l'album"],"correct":0,"difficulty":"difficile"},
-  {"text":"Quelle est la particularité vocale de Kendrick Lamar dans ses albums ?","answers":["Il utilise plusieurs voix et personnages différents","Il chante en autotune","Il rappe toujours au même débit","Il utilise un vocodeur"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel album de Kendrick Lamar a été enregistré après un voyage en Afrique du Sud ?","answers":["To Pimp a Butterfly","DAMN.","Mr. Morale & The Big Steppers","Section.80"],"correct":0,"difficulty":"moyen"},
-  {"text":"'i' de Kendrick Lamar a quel message ?","answers":["L'amour de soi et la positivité","La violence des rues","La politique","La fête"],"correct":0,"difficulty":"facile"},
-  {"text":"La version album de 'i' diffère de la version single comment ?","answers":["Elle inclut un discours en live et une ambiance différente","Elle est plus courte","Elle a un beat différent","Il n'y a aucune différence"],"correct":0,"difficulty":"difficile"},
-  {"text":"Kendrick Lamar a collaboré avec Beyoncé sur quel titre ?","answers":["Freedom (sur Lemonade)","Drunk in Love","Formation","Halo"],"correct":0,"difficulty":"moyen"},
-  {"text":"Sur quel titre de Taylor Swift Kendrick Lamar apparaît-il en remix ?","answers":["Bad Blood","Shake It Off","Blank Space","Style"],"correct":0,"difficulty":"moyen"},
-  {"text":"Kendrick Lamar a grandi dans quel type de logement social ?","answers":["Les Section 8 housing projects","Un quartier de classe moyenne","Une maison individuelle","Un appartement en centre-ville"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel rappeur de Compton Kendrick cite-t-il souvent comme influence ?","answers":["Tupac Shakur","Notorious B.I.G.","Nas","Jay-Z"],"correct":0,"difficulty":"facile"},
-  {"text":"D'après Kendrick, qui d'autre l'a fortement influencé musicalement ?","answers":["Lil Wayne et Jay-Z","Eminem uniquement","50 Cent","Kanye West uniquement"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel est le nom de la mixtape de Kendrick sortie en 2010 ?","answers":["Overly Dedicated","Section.80","C4","The Kendrick Lamar EP"],"correct":0,"difficulty":"moyen"},
-  {"text":"'Backseat Freestyle' parle de quoi selon Kendrick ?","answers":["Les pensées d'un adolescent de 16 ans, pas ses vraies opinions","Sa vie de rappeur","Un freestyle improvisé","Une course en voiture"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel est le thème central de 'good kid, m.A.A.d city' ?","answers":["Grandir à Compton et résister aux tentations de la rue","La célébrité à Hollywood","L'amour perdu","La politique américaine"],"correct":0,"difficulty":"facile"},
-  {"text":"Que signifie 'm.A.A.d' dans le titre de l'album ?","answers":["My Angry Adolescence Divided / My Angels on Angel Dust","Mad About A Dream","Music And Art Define","Making A Artistic Decision"],"correct":0,"difficulty":"difficile"},
-  {"text":"Quel prix MTV Kendrick Lamar a-t-il remporté pour le clip de 'HUMBLE.' ?","answers":["Vidéo de l'année","Meilleur nouvel artiste","Meilleure collaboration","Meilleur clip hip-hop"],"correct":0,"difficulty":"moyen"},
-  {"text":"Kendrick Lamar est-il connu pour faire beaucoup d'interviews ?","answers":["Non, il est très discret et fait peu d'interviews","Oui, il est très médiatique","Il fait un podcast régulier","Il est actif sur les réseaux sociaux"],"correct":0,"difficulty":"moyen"},
-  {"text":"Sur quel réseau social Kendrick Lamar est-il le moins actif ?","answers":["Tous — il est très peu actif sur les réseaux","Instagram","Twitter","TikTok"],"correct":0,"difficulty":"facile"},
-  {"text":"Quel producteur français a samplé du Kendrick Lamar ?","answers":["Plusieurs producteurs, pas un seul emblématique","DJ Snake","David Guetta","Madeon"],"correct":0,"difficulty":"difficile"},
-  {"text":"'Euphoria' de Kendrick (2024) est un diss track de combien de minutes ?","answers":["Environ 6 minutes","3 minutes","10 minutes","4 minutes"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel est le titre de l'album collectif de la BO Black Panther produit par Kendrick ?","answers":["Black Panther: The Album","Wakanda Forever Soundtrack","Marvel Music Collection","King of Wakanda"],"correct":0,"difficulty":"moyen"},
-  {"text":"Kendrick Lamar a remporté le Grammy du meilleur album rap combien de fois ?","answers":["Au moins 4 fois","2 fois","1 fois","6 fois"],"correct":0,"difficulty":"difficile"},
-  {"text":"'ELEMENT.' de 'DAMN.' s'inspire visuellement de quel photographe ?","answers":["Gordon Parks","Ansel Adams","Steve McCurry","Annie Leibovitz"],"correct":0,"difficulty":"difficile"},
-  {"text":"Kendrick Lamar considère-t-il 'DAMN.' comme pouvant être écouté dans l'ordre inverse ?","answers":["Oui, il a confirmé que l'album fonctionne dans les deux sens","Non","Seulement les 3 premiers titres","C'est une rumeur non confirmée"],"correct":0,"difficulty":"moyen"},
-  {"text":"Quel est le message final de 'DAMN.' selon les interprétations courantes ?","answers":["La dualité entre la damnation et la rédemption","La victoire sur ses ennemis","Un message politique","Une déclaration d'amour"],"correct":0,"difficulty":"moyen"},
-  {"text":"Kendrick Lamar a été nommé sur la liste Time 100 en quelle année ?","answers":["2016","2018","2015","2020"],"correct":0,"difficulty":"difficile"},
-  {"text":"Quel est le titre du premier single officiel de Kendrick en tant que K-Dot ?","answers":["Hub City Threat: Minor of the Year","The Kendrick Lamar EP","Training Day","C4"],"correct":0,"difficulty":"difficile"}
+  {
+    "text": "Quel est le vrai nom de Kendrick Lamar ?",
+    "answers": [
+      "Kendrick Lamar Duckworth",
+      "Kendrick Lamar Johnson",
+      "Kendrick Lamar Williams",
+      "Kendrick Lamar Davis"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quelle ville Kendrick Lamar est-il né et a-t-il grandi ?",
+    "answers": [
+      "Compton, Californie",
+      "Los Angeles, Californie",
+      "Long Beach, Californie",
+      "Oakland, Californie"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année Kendrick Lamar est-il né ?",
+    "answers": [
+      "1987",
+      "1985",
+      "1989",
+      "1991"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom du label cofondé par Kendrick Lamar avec Top Dawg Entertainment ?",
+    "answers": [
+      "pgLang",
+      "Aftermath",
+      "Dreamville",
+      "GOOD Music"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le titre du premier album studio officiel de Kendrick Lamar ?",
+    "answers": [
+      "Section.80",
+      "good kid, m.A.A.d city",
+      "To Pimp a Butterfly",
+      "Overly Dedicated"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En quelle année 'Section.80' est-il sorti ?",
+    "answers": [
+      "2011",
+      "2010",
+      "2012",
+      "2009"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel album de Kendrick Lamar est sous-titré 'A Short Film by Kendrick Lamar' ?",
+    "answers": [
+      "good kid, m.A.A.d city",
+      "Section.80",
+      "To Pimp a Butterfly",
+      "DAMN."
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En quelle année 'good kid, m.A.A.d city' est-il sorti ?",
+    "answers": [
+      "2012",
+      "2011",
+      "2013",
+      "2014"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel single de 'good kid, m.A.A.d city' raconte une histoire de conduite dans Compton ?",
+    "answers": [
+      "Swimming Pools (Drank)",
+      "Backseat Freestyle",
+      "Poetic Justice",
+      "m.A.A.d city"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "'Poetic Justice' de Kendrick Lamar est un featuring avec quel artiste ?",
+    "answers": [
+      "Drake",
+      "J. Cole",
+      "ScHoolboy Q",
+      "Jay-Z"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel album de Kendrick est considéré comme un chef-d'œuvre mêlant jazz, funk et rap ?",
+    "answers": [
+      "To Pimp a Butterfly",
+      "good kid, m.A.A.d city",
+      "DAMN.",
+      "Mr. Morale & The Big Steppers"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année 'To Pimp a Butterfly' est-il sorti ?",
+    "answers": [
+      "2015",
+      "2014",
+      "2016",
+      "2013"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel single de 'To Pimp a Butterfly' est devenu un hymne du mouvement Black Lives Matter ?",
+    "answers": [
+      "Alright",
+      "King Kunta",
+      "i",
+      "The Blacker the Berry"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel musicien de jazz a fortement influencé 'To Pimp a Butterfly' ?",
+    "answers": [
+      "Thundercat et Kamasi Washington",
+      "Miles Davis",
+      "John Coltrane",
+      "Herbie Hancock"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le titre de l'album de Kendrick sorti en 2017 ?",
+    "answers": [
+      "DAMN.",
+      "HUMBLE.",
+      "LOYALTY.",
+      "DNA."
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel single de 'DAMN.' a atteint le numéro 1 du Billboard Hot 100 ?",
+    "answers": [
+      "HUMBLE.",
+      "DNA.",
+      "LOYALTY.",
+      "LOVE."
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "'DAMN.' a remporté quel prix historique en 2018 ?",
+    "answers": [
+      "Le prix Pulitzer de la musique",
+      "Le Grammy du meilleur album",
+      "L'Oscar de la meilleure chanson",
+      "Le Mercury Prize"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Kendrick Lamar est le premier artiste de quel genre à remporter le Pulitzer de la musique ?",
+    "answers": [
+      "Hip-hop / Rap",
+      "Jazz",
+      "R&B",
+      "Pop"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel single de 'DAMN.' avec Rihanna a été un hit ?",
+    "answers": [
+      "LOYALTY.",
+      "LOVE.",
+      "HUMBLE.",
+      "DNA."
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "'DNA.' de Kendrick Lamar parle de quoi ?",
+    "answers": [
+      "Son héritage, sa fierté et sa détermination",
+      "Son ADN génétique",
+      "Une enquête criminelle",
+      "Un voyage spirituel"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le titre du cinquième album studio de Kendrick Lamar sorti en 2022 ?",
+    "answers": [
+      "Mr. Morale & The Big Steppers",
+      "DAMN. 2",
+      "Nation",
+      "The Heart Part 5"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "'Mr. Morale & The Big Steppers' est un double album de combien de titres ?",
+    "answers": [
+      "18",
+      "14",
+      "20",
+      "16"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel thème principal explore 'Mr. Morale & The Big Steppers' ?",
+    "answers": [
+      "La thérapie, les traumatismes et la guérison personnelle",
+      "La fête et le succès",
+      "La politique américaine",
+      "L'amour romantique"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Kendrick Lamar a contribué à la bande originale de quel film Marvel ?",
+    "answers": [
+      "Black Panther",
+      "Spider-Man: Into the Spider-Verse",
+      "Avengers: Endgame",
+      "Thor: Ragnarok"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel titre de la BO de Black Panther avec SZA a été nommé aux Oscars ?",
+    "answers": [
+      "All the Stars",
+      "Pray for Me",
+      "Black Panther",
+      "King's Dead"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Kendrick Lamar est signé sur quel label majeur ?",
+    "answers": [
+      "Aftermath / Interscope",
+      "Def Jam",
+      "Roc Nation",
+      "Columbia"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel rappeur légendaire a signé Kendrick Lamar sur son label ?",
+    "answers": [
+      "Dr. Dre",
+      "Jay-Z",
+      "Kanye West",
+      "Eminem"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel collectif hip-hop Kendrick Lamar a-t-il cofondé avec ScHoolboy Q, Ab-Soul et Jay Rock ?",
+    "answers": [
+      "Black Hippy",
+      "TDE Crew",
+      "West Coast Legends",
+      "Compton Kings"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom du label indépendant qui a lancé Kendrick Lamar ?",
+    "answers": [
+      "Top Dawg Entertainment (TDE)",
+      "pgLang",
+      "Dreamville",
+      "Quality Control"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Kendrick Lamar a quitté TDE pour cofonder quel label en 2020 ?",
+    "answers": [
+      "pgLang",
+      "Aftermath",
+      "Interscope West",
+      "Pulse Records"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "pgLang est cofondé avec quel collaborateur de longue date ?",
+    "answers": [
+      "Dave Free",
+      "Top Dawg",
+      "ScHoolboy Q",
+      "Jay Rock"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel vers de Kendrick sur un titre de Big Sean en 2013 a déclenché un 'beef' avec Drake ?",
+    "answers": [
+      "Son couplet sur 'Control'",
+      "Son couplet sur 'Holy Key'",
+      "Un diss track direct",
+      "Un tweet polémique"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Sur 'Control', Kendrick a nommé et défié combien de rappeurs ?",
+    "answers": [
+      "Environ 11 rappeurs",
+      "5",
+      "3",
+      "20"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel mixtape de Kendrick sorti en 2009 l'a fait remarquer ?",
+    "answers": [
+      "Kendrick Lamar EP / The Kendrick Lamar EP",
+      "Overly Dedicated",
+      "C4",
+      "Training Day"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sous quel nom de scène Kendrick rappait-il au début de sa carrière ?",
+    "answers": [
+      "K-Dot",
+      "Lil Kendrick",
+      "KDuck",
+      "K.Lamar"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel rappeur a dit que Kendrick Lamar était le 'nouveau roi de la côte Ouest' ?",
+    "answers": [
+      "Dr. Dre et Snoop Dogg",
+      "Jay-Z",
+      "Nas",
+      "Ice Cube"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Kendrick Lamar a remporté combien de Grammy Awards au total (approximativement) ?",
+    "answers": [
+      "17",
+      "10",
+      "22",
+      "5"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le titre de la série de singles 'The Heart' de Kendrick ?",
+    "answers": [
+      "The Heart Part 1 à 5",
+      "The Soul Part 1 à 3",
+      "The Mind Series",
+      "Heart of Compton"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "'The Heart Part 5' est sorti juste avant quel album ?",
+    "answers": [
+      "Mr. Morale & The Big Steppers",
+      "DAMN.",
+      "To Pimp a Butterfly",
+      "GNX"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Le clip de 'The Heart Part 5' utilise quelle technologie ?",
+    "answers": [
+      "Le deepfake (son visage se transforme en d'autres célébrités)",
+      "La réalité virtuelle",
+      "L'animation 3D",
+      "Des hologrammes"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Kendrick Lamar a performé au show de la mi-temps du Super Bowl en quelle année ?",
+    "answers": [
+      "2022 et 2025",
+      "2020",
+      "2018",
+      "2023"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Au Super Bowl 2022, Kendrick a performé aux côtés de quels artistes ?",
+    "answers": [
+      "Dr. Dre, Snoop Dogg, Eminem, Mary J. Blige, 50 Cent",
+      "Jay-Z et Beyoncé",
+      "Drake et Future",
+      "Kanye West"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle la compagne de Kendrick Lamar ?",
+    "answers": [
+      "Whitney Alford",
+      "Whitney Houston",
+      "Whitney Johnson",
+      "Whitney Davis"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien d'enfants Kendrick Lamar a-t-il ?",
+    "answers": [
+      "2",
+      "1",
+      "3",
+      "0"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel titre de 'DAMN.' peut se lire comme un acronyme ?",
+    "answers": [
+      "DAMN. = Duckworth, A, M, N (pas officiellement confirmé)",
+      "HUMBLE.",
+      "DNA.",
+      "LOVE."
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "'Duckworth' est le dernier titre de 'DAMN.' et raconte quelle histoire ?",
+    "answers": [
+      "Comment le père de Kendrick a croisé Top Dawg dans sa jeunesse",
+      "L'histoire de Compton",
+      "Un braquage fictif",
+      "La rencontre avec Dr. Dre"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le premier titre de 'DAMN.' qui parle d'une femme aveugle ?",
+    "answers": [
+      "BLOOD.",
+      "DNA.",
+      "YAH.",
+      "ELEMENT."
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Kendrick Lamar a-t-il un couplet sur 'Nosetalgia' de Pusha T ?",
+    "answers": [
+      "Oui",
+      "Non",
+      "Il a produit le beat",
+      "Il a fait le refrain"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel producteur a réalisé le beat de 'HUMBLE.' ?",
+    "answers": [
+      "Mike WiLL Made-It",
+      "Metro Boomin",
+      "DJ Mustard",
+      "Sounwave"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Sounwave est principalement connu comme quoi pour Kendrick ?",
+    "answers": [
+      "Son producteur principal et collaborateur de longue date",
+      "Son DJ",
+      "Son manager",
+      "Son ingénieur du son"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Kendrick Lamar est le premier rappeur à figurer sur la couverture de quel magazine en 2016 ?",
+    "answers": [
+      "Time (parmi les 100 personnes les plus influentes)",
+      "Vogue",
+      "Forbes",
+      "National Geographic"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le titre complet du sous-titre de 'good kid, m.A.A.d city' ?",
+    "answers": [
+      "A Short Film by Kendrick Lamar",
+      "A Compton Story",
+      "A West Coast Classic",
+      "Tales from the Hood"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Le clip de 'HUMBLE.' a été réalisé par quel réalisateur ?",
+    "answers": [
+      "Dave Meyers et The Little Homies",
+      "Spike Jonze",
+      "Hype Williams",
+      "Director X"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel single de Kendrick sorti en 2024 a relancé son beef avec Drake ?",
+    "answers": [
+      "Like That (avec Future et Metro Boomin)",
+      "Not Like Us",
+      "Euphoria",
+      "Meet the Grahams"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel diss track de Kendrick contre Drake est devenu viral en 2024 ?",
+    "answers": [
+      "Not Like Us",
+      "Euphoria",
+      "6:16 in LA",
+      "Meet the Grahams"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "'Not Like Us' a atteint quelle position dans les charts ?",
+    "answers": [
+      "Numéro 1 du Billboard Hot 100",
+      "Numéro 2",
+      "Numéro 5",
+      "Numéro 3"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel album surprise Kendrick a-t-il sorti en novembre 2024 ?",
+    "answers": [
+      "GNX",
+      "Nation",
+      "The Heart Part 6",
+      "Compton 2"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "'GNX' fait référence à quoi ?",
+    "answers": [
+      "La Buick GNX (voiture classique)",
+      "Un acronyme musical",
+      "Le nom d'un quartier",
+      "Grand National Xpress"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel rappeur Drake a-t-il répondu à Kendrick avec le diss track 'Push Ups' ?",
+    "answers": [
+      "Drake lui-même",
+      "Lil Wayne",
+      "Future",
+      "21 Savage"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Kendrick Lamar a performé 'Not Like Us' combien de fois lors d'un concert spécial ?",
+    "answers": [
+      "5 fois de suite (concert au Kia Forum)",
+      "3 fois",
+      "2 fois",
+      "1 fois"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Le concert 'The Pop Out' de Kendrick en 2024 a réuni des artistes de quelle côte ?",
+    "answers": [
+      "La côte Ouest",
+      "La côte Est",
+      "Le Sud",
+      "Le Midwest"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Kendrick Lamar sera la tête d'affiche du Super Bowl en quelle année ?",
+    "answers": [
+      "2025",
+      "2024",
+      "2026",
+      "2023"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel titre de 'Section.80' parle de la génération née dans les années 80 ?",
+    "answers": [
+      "HiiiPoWeR",
+      "A.D.H.D.",
+      "Rigamortus",
+      "Fuck Your Ethnicity"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "'HiiiPoWeR' de Kendrick fait référence à quel mouvement ?",
+    "answers": [
+      "Le mouvement Black Power / conscience sociale",
+      "Le pouvoir de la musique",
+      "Un groupe politique fictif",
+      "Le hip-hop underground"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel titre de 'To Pimp a Butterfly' est une conversation fictive avec Tupac ?",
+    "answers": [
+      "Mortal Man",
+      "i",
+      "Complexion",
+      "Institutionalized"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "L'interview fictive avec Tupac dans 'Mortal Man' utilise des extraits de quelle vraie interview ?",
+    "answers": [
+      "Une interview de Tupac de 1994",
+      "Un podcast de 2005",
+      "Une émission de radio",
+      "Un documentaire"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel artiste a produit 'King Kunta' de Kendrick ?",
+    "answers": [
+      "Terrace Martin et Sounwave",
+      "Dr. Dre",
+      "Pharrell Williams",
+      "Kanye West"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "'King Kunta' fait référence à quel personnage historique ?",
+    "answers": [
+      "Kunta Kinte (de 'Roots')",
+      "Un roi africain",
+      "Un personnage de film",
+      "Un héros de bande dessinée"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Kendrick Lamar apparaît sur quel titre de l'album 'Compton' de Dr. Dre ?",
+    "answers": [
+      "Plusieurs titres dont 'Genocide' et 'Deep Water'",
+      "Aucun",
+      "Un seul titre",
+      "Il a produit l'album"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle est la particularité vocale de Kendrick Lamar dans ses albums ?",
+    "answers": [
+      "Il utilise plusieurs voix et personnages différents",
+      "Il chante en autotune",
+      "Il rappe toujours au même débit",
+      "Il utilise un vocodeur"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel album de Kendrick Lamar a été enregistré après un voyage en Afrique du Sud ?",
+    "answers": [
+      "To Pimp a Butterfly",
+      "DAMN.",
+      "Mr. Morale & The Big Steppers",
+      "Section.80"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "'i' de Kendrick Lamar a quel message ?",
+    "answers": [
+      "L'amour de soi et la positivité",
+      "La violence des rues",
+      "La politique",
+      "La fête"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "La version album de 'i' diffère de la version single comment ?",
+    "answers": [
+      "Elle inclut un discours en live et une ambiance différente",
+      "Elle est plus courte",
+      "Elle a un beat différent",
+      "Il n'y a aucune différence"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Kendrick Lamar a collaboré avec Beyoncé sur quel titre ?",
+    "answers": [
+      "Freedom (sur Lemonade)",
+      "Drunk in Love",
+      "Formation",
+      "Halo"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Sur quel titre de Taylor Swift Kendrick Lamar apparaît-il en remix ?",
+    "answers": [
+      "Bad Blood",
+      "Shake It Off",
+      "Blank Space",
+      "Style"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Kendrick Lamar a grandi dans quel type de logement social ?",
+    "answers": [
+      "Les Section 8 housing projects",
+      "Un quartier de classe moyenne",
+      "Une maison individuelle",
+      "Un appartement en centre-ville"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel rappeur de Compton Kendrick cite-t-il souvent comme influence ?",
+    "answers": [
+      "Tupac Shakur",
+      "Notorious B.I.G.",
+      "Nas",
+      "Jay-Z"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "D'après Kendrick, qui d'autre l'a fortement influencé musicalement ?",
+    "answers": [
+      "Lil Wayne et Jay-Z",
+      "Eminem uniquement",
+      "50 Cent",
+      "Kanye West uniquement"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom de la mixtape de Kendrick sortie en 2010 ?",
+    "answers": [
+      "Overly Dedicated",
+      "Section.80",
+      "C4",
+      "The Kendrick Lamar EP"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "'Backseat Freestyle' parle de quoi selon Kendrick ?",
+    "answers": [
+      "Les pensées d'un adolescent de 16 ans, pas ses vraies opinions",
+      "Sa vie de rappeur",
+      "Un freestyle improvisé",
+      "Une course en voiture"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le thème central de 'good kid, m.A.A.d city' ?",
+    "answers": [
+      "Grandir à Compton et résister aux tentations de la rue",
+      "La célébrité à Hollywood",
+      "L'amour perdu",
+      "La politique américaine"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Que signifie 'm.A.A.d' dans le titre de l'album ?",
+    "answers": [
+      "My Angry Adolescence Divided / My Angels on Angel Dust",
+      "Mad About A Dream",
+      "Music And Art Define",
+      "Making A Artistic Decision"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel prix MTV Kendrick Lamar a-t-il remporté pour le clip de 'HUMBLE.' ?",
+    "answers": [
+      "Vidéo de l'année",
+      "Meilleur nouvel artiste",
+      "Meilleure collaboration",
+      "Meilleur clip hip-hop"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Kendrick Lamar est-il connu pour faire beaucoup d'interviews ?",
+    "answers": [
+      "Non, il est très discret et fait peu d'interviews",
+      "Oui, il est très médiatique",
+      "Il fait un podcast régulier",
+      "Il est actif sur les réseaux sociaux"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Sur quel réseau social Kendrick Lamar est-il le moins actif ?",
+    "answers": [
+      "Tous — il est très peu actif sur les réseaux",
+      "Instagram",
+      "Twitter",
+      "TikTok"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel producteur français a samplé du Kendrick Lamar ?",
+    "answers": [
+      "Plusieurs producteurs, pas un seul emblématique",
+      "DJ Snake",
+      "David Guetta",
+      "Madeon"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "'Euphoria' de Kendrick (2024) est un diss track de combien de minutes ?",
+    "answers": [
+      "Environ 6 minutes",
+      "3 minutes",
+      "10 minutes",
+      "4 minutes"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le titre de l'album collectif de la BO Black Panther produit par Kendrick ?",
+    "answers": [
+      "Black Panther: The Album",
+      "Wakanda Forever Soundtrack",
+      "Marvel Music Collection",
+      "King of Wakanda"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Kendrick Lamar a remporté le Grammy du meilleur album rap combien de fois ?",
+    "answers": [
+      "Au moins 4 fois",
+      "2 fois",
+      "1 fois",
+      "6 fois"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "'ELEMENT.' de 'DAMN.' s'inspire visuellement de quel photographe ?",
+    "answers": [
+      "Gordon Parks",
+      "Ansel Adams",
+      "Steve McCurry",
+      "Annie Leibovitz"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Kendrick Lamar considère-t-il 'DAMN.' comme pouvant être écouté dans l'ordre inverse ?",
+    "answers": [
+      "Oui, il a confirmé que l'album fonctionne dans les deux sens",
+      "Non",
+      "Seulement les 3 premiers titres",
+      "C'est une rumeur non confirmée"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le message final de 'DAMN.' selon les interprétations courantes ?",
+    "answers": [
+      "La dualité entre la damnation et la rédemption",
+      "La victoire sur ses ennemis",
+      "Un message politique",
+      "Une déclaration d'amour"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Kendrick Lamar a été nommé sur la liste Time 100 en quelle année ?",
+    "answers": [
+      "2016",
+      "2018",
+      "2015",
+      "2020"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le titre du premier single officiel de Kendrick en tant que K-Dot ?",
+    "answers": [
+      "Hub City Threat: Minor of the Year",
+      "The Kendrick Lamar EP",
+      "Training Day",
+      "C4"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel quartier de Compton Kendrick Lamar a-t-il grandi ?",
+    "answers": [
+      "Section 80 (Rosecrans)",
+      "Watts",
+      "Inglewood",
+      "South Central"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le titre de la première mixtape de Kendrick sortie sous le nom K-Dot en 2003 ?",
+    "answers": [
+      "Hub City Threat: Minor of the Year",
+      "Training Day",
+      "Y.H.N.I.C.",
+      "No Sleep Till NYC"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel rappeur légendaire a vu Kendrick freestyler jeune et l'a encouragé ?",
+    "answers": [
+      "Dr. Dre",
+      "Snoop Dogg",
+      "Jay-Z",
+      "Ice Cube"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sur quel label indépendant Kendrick a-t-il été signé avant Aftermath/Interscope ?",
+    "answers": [
+      "Top Dawg Entertainment",
+      "Strange Music",
+      "Rhymesayers",
+      "Stones Throw"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui est le fondateur de Top Dawg Entertainment ?",
+    "answers": [
+      "Anthony 'Top Dawg' Tiffith",
+      "Dave Free",
+      "Punch TDE",
+      "Sounwave"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En quelle année Kendrick Lamar a-t-il signé chez Aftermath de Dr. Dre ?",
+    "answers": [
+      "2012",
+      "2010",
+      "2014",
+      "2011"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel rappeur a proclamé Kendrick 'le nouveau roi de la West Coast' ?",
+    "answers": [
+      "Dr. Dre",
+      "Snoop Dogg",
+      "Game",
+      "Ice Cube"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel vers controversé de Kendrick sur 'Control' a provoqué des réactions massives en 2013 ?",
+    "answers": [
+      "Il a nommé et défié plusieurs rappeurs contemporains",
+      "Il a critiqué le président",
+      "Il a insulté New York",
+      "Il a annoncé sa retraite"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Sur quel single de Big Sean figure le célèbre couplet de Kendrick dans 'Control' ?",
+    "answers": [
+      "Control",
+      "Blessings",
+      "Bounce Back",
+      "I Don't F*** with You"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle récompense Kendrick a-t-il reçue du prix Pulitzer en 2018 ?",
+    "answers": [
+      "Prix Pulitzer de la musique",
+      "Prix Pulitzer spécial",
+      "Prix Pulitzer de la poésie",
+      "Prix Pulitzer honorifique"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Pour quel album Kendrick a-t-il reçu le prix Pulitzer ?",
+    "answers": [
+      "DAMN.",
+      "To Pimp a Butterfly",
+      "good kid, m.A.A.d city",
+      "Section.80"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Kendrick est le premier artiste non classique et non jazz à recevoir le Pulitzer de la musique. Vrai ou faux ?",
+    "answers": [
+      "Vrai",
+      "Faux",
+      "C'est le deuxième",
+      "Le prix n'existait pas avant"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien de Grammy Awards Kendrick a-t-il remportés au total (environ, avant 2025) ?",
+    "answers": [
+      "17",
+      "10",
+      "7",
+      "23"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel titre de 'DAMN.' a été le single le plus commercial de l'album ?",
+    "answers": [
+      "HUMBLE.",
+      "DNA.",
+      "LOYALTY.",
+      "LOVE."
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle chanteuse apparaît sur 'LOYALTY.' de DAMN. ?",
+    "answers": [
+      "Rihanna",
+      "SZA",
+      "Beyoncé",
+      "Jhené Aiko"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle artiste apparaît sur 'All The Stars' de la BO de Black Panther ?",
+    "answers": [
+      "SZA",
+      "Rihanna",
+      "Jorja Smith",
+      "H.E.R."
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Le film Black Panther se déroule dans quel pays fictif ?",
+    "answers": [
+      "Le Wakanda",
+      "Le Zamunda",
+      "La Genosha",
+      "Le Latveria"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom de la fiancée (puis épouse) de Kendrick Lamar ?",
+    "answers": [
+      "Whitney Alford",
+      "Lauren London",
+      "Jhené Aiko",
+      "Kehlani"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Comment s'appelle la fille de Kendrick Lamar ?",
+    "answers": [
+      "Uzi",
+      "Dream",
+      "Blue",
+      "North"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans 'Swimming Pools (Drank)', quel thème Kendrick aborde-t-il ?",
+    "answers": [
+      "L'alcoolisme et la pression sociale",
+      "Les piscines de LA",
+      "La fête",
+      "Le luxe"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel album de Kendrick est sorti directement sans annonce préalable en 2022 ?",
+    "answers": [
+      "Mr. Morale & The Big Steppers",
+      "Aucun, il a été annoncé",
+      "DAMN.",
+      "GNX"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "'Mr. Morale & The Big Steppers' est sorti en quelle année ?",
+    "answers": [
+      "2022",
+      "2021",
+      "2023",
+      "2020"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien de disques comporte 'Mr. Morale & The Big Steppers' ?",
+    "answers": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel thème principal Kendrick aborde-t-il dans 'Mr. Morale & The Big Steppers' ?",
+    "answers": [
+      "La thérapie et la guérison intérieure",
+      "La politique américaine",
+      "La rue de Compton",
+      "La compétition rap"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel artiste de TDE est connu pour le titre 'Man of the Year' et est proche de Kendrick ?",
+    "answers": [
+      "ScHoolboy Q",
+      "Jay Rock",
+      "Ab-Soul",
+      "SZA"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel membre de TDE a collaboré avec Kendrick sur 'Money Trees' ?",
+    "answers": [
+      "Jay Rock",
+      "ScHoolboy Q",
+      "Ab-Soul",
+      "Isaiah Rashad"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Le beat de 'Money Trees' sample quelle chanteuse ?",
+    "answers": [
+      "Beach House",
+      "Lana Del Rey",
+      "Billie Eilish",
+      "Amy Winehouse"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le premier mot prononcé sur l'album 'DAMN.' ?",
+    "answers": [
+      "So",
+      "Is",
+      "Wickedness",
+      "I"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Le clip de 'HUMBLE.' se passe dans quel type de décor principal ?",
+    "answers": [
+      "Une église / scènes Renaissance",
+      "Un studio d'enregistrement",
+      "Les rues de Compton",
+      "Un stade"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel concept unique 'To Pimp a Butterfly' utilise-t-il entre les morceaux ?",
+    "answers": [
+      "Un poème récurrent qui se construit progressivement",
+      "Des interludes radio",
+      "Des conversations téléphoniques",
+      "Des samples de discours de Martin Luther King"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel saxophoniste est un collaborateur clé de 'To Pimp a Butterfly' ?",
+    "answers": [
+      "Terrace Martin",
+      "Kamasi Washington",
+      "Robert Glasper",
+      "Thundercat"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel bassiste et producteur a beaucoup contribué à 'To Pimp a Butterfly' ?",
+    "answers": [
+      "Thundercat",
+      "Flying Lotus",
+      "Terrace Martin",
+      "Sounwave"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel titre Kendrick crie-t-il 'We gon' be alright' ?",
+    "answers": [
+      "Alright",
+      "i",
+      "HUMBLE.",
+      "DNA."
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "'Alright' est devenu un hymne pour quel mouvement social ?",
+    "answers": [
+      "Black Lives Matter",
+      "Occupy Wall Street",
+      "Me Too",
+      "March for Our Lives"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel titre de 'Section.80' parle des ravages du crack dans les communautés noires ?",
+    "answers": [
+      "Keisha's Song",
+      "A.D.H.D",
+      "Rigamortus",
+      "Blow My High"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom du concert événement de Kendrick à Los Angeles en 2024 ?",
+    "answers": [
+      "The Pop Out – Ken & Friends",
+      "The Big Steppers Tour",
+      "DAMN. Tour",
+      "Compton Homecoming"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans 'DNA.', quelles qualités Kendrick dit-il avoir dans son ADN ?",
+    "answers": [
+      "Loyauté, royauté, hustle",
+      "Force, sagesse, pouvoir",
+      "Amour, paix, humilité",
+      "Rage, talent, génie"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel acteur apparaît dans le clip de 'DNA.' ?",
+    "answers": [
+      "Don Cheadle",
+      "Samuel L. Jackson",
+      "Idris Elba",
+      "Michael B. Jordan"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le thème principal de 'FEAR.' sur DAMN. ?",
+    "answers": [
+      "Les différentes peurs à chaque âge de sa vie",
+      "La peur de la mort",
+      "La peur de l'échec musical",
+      "La peur de Dieu"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Kendrick a quitté TDE pour créer quel nouveau label en 2022 ?",
+    "answers": [
+      "pgLang",
+      "Aftermath 2.0",
+      "Compton Records",
+      "K-Dot Entertainment"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui co-dirige pgLang avec Kendrick ?",
+    "answers": [
+      "Dave Free",
+      "Sounwave",
+      "Baby Keem",
+      "Top Dawg"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel rappeur, cousin de Kendrick, est signé chez pgLang ?",
+    "answers": [
+      "Baby Keem",
+      "Tanna Leone",
+      "Brent Faiyaz",
+      "Vince Staples"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel hit de Baby Keem featuring Kendrick a été un succès en 2021 ?",
+    "answers": [
+      "family ties",
+      "HUMBLE. remix",
+      "range brothers",
+      "durag activity"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Super Bowl Kendrick doit-il animer en tant que performer principal ?",
+    "answers": [
+      "Super Bowl LIX (2025)",
+      "Super Bowl LVIII (2024)",
+      "Super Bowl LX (2026)",
+      "Super Bowl LVII (2023)"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel rappeur Kendrick mentionne-t-il dans 'Euphoria' en disant qu'il n'est pas un vrai artiste ?",
+    "answers": [
+      "Drake",
+      "J. Cole",
+      "Future",
+      "Lil Wayne"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "'6:16 in LA' de Kendrick fait référence à quelle ville ?",
+    "answers": [
+      "Los Angeles",
+      "Las Vegas",
+      "Long Beach",
+      "Louisiana"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel modèle de voiture donne son nom à l'album 'GNX' ?",
+    "answers": [
+      "Buick Grand National GNX",
+      "Pontiac GNX",
+      "Chevrolet GNX",
+      "Cadillac GNX"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle chanson de 'GNX' a été la plus streamée lors de sa première semaine ?",
+    "answers": [
+      "squabble up",
+      "tv off",
+      "luther",
+      "wacced out murals"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Kendrick est considéré par beaucoup comme le meilleur rappeur de quelle génération ?",
+    "answers": [
+      "Sa génération (années 2010-2020)",
+      "Les années 90",
+      "Les années 2000",
+      "Toutes les générations confondues"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel surnom les fans donnent-ils parfois à Kendrick ?",
+    "answers": [
+      "Kung Fu Kenny",
+      "King K",
+      "K-Dot le Roi",
+      "Compton Kid"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  }
 ]

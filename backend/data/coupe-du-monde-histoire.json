@@ -998,5 +998,555 @@
       "Adriano"
     ],
     "correct": 2
+  },
+  {
+    "text": "Quel joueur détient le record du nombre de Coupes du Monde disputées en tant que joueur (5 éditions) ?",
+    "answers": [
+      "Lionel Messi",
+      "Cristiano Ronaldo",
+      "Antonio Carbajal",
+      "Lothar Matthäus"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel pays organise la Coupe du Monde 1934 ?",
+    "answers": [
+      "Italie",
+      "France",
+      "Uruguay",
+      "Allemagne"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel pays organise la Coupe du Monde 1962 ?",
+    "answers": [
+      "Argentine",
+      "Mexique",
+      "Chili",
+      "Colombie"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur brésilien est élu meilleur joueur de la Coupe du Monde 1998 malgré la défaite en finale ?",
+    "answers": [
+      "Rivaldo",
+      "Cafu",
+      "Roberto Carlos",
+      "Ronaldo"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En 2014, quel gardien allemand est élu meilleur gardien du tournoi (Gant d'Or) ?",
+    "answers": [
+      "Manuel Neuer",
+      "Keylor Navas",
+      "Sergio Romero",
+      "Hugo Lloris"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur inscrit le « but du siècle » en quart de finale 1986 contre l'Angleterre ?",
+    "answers": [
+      "Diego Maradona",
+      "Zinédine Zidane",
+      "Pelé",
+      "Ronaldo"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien de buts Just Fontaine inscrit-il lors de la Coupe du Monde 1958, un record toujours inégalé ?",
+    "answers": [
+      "11",
+      "13",
+      "10",
+      "15"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur italien est meilleur buteur de la Coupe du Monde 2006 avec 5 buts ?",
+    "answers": [
+      "Alessandro Del Piero",
+      "Francesco Totti",
+      "Miroslav Klose",
+      "Luca Toni"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En quelle année la Coupe du Monde féminine est-elle organisée pour la première fois ?",
+    "answers": [
+      "1995",
+      "1991",
+      "1999",
+      "1987"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel pays remporte la première Coupe du Monde féminine en 1991 ?",
+    "answers": [
+      "Allemagne",
+      "Norvège",
+      "Brésil",
+      "États-Unis"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur camerounais inscrit le but de la victoire contre l'Argentine, tenante du titre, lors du match d'ouverture de la Coupe du Monde 1990 ?",
+    "answers": [
+      "Roger Milla",
+      "François Omam-Biyik",
+      "Thomas N'Kono",
+      "Cyrille Makanaky"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur est le plus jeune buteur de l'histoire de la Coupe du Monde ?",
+    "answers": [
+      "Pelé",
+      "Michael Owen",
+      "Kylian Mbappé",
+      "Manuel Rosas"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel pays est éliminé au premier tour de la Coupe du Monde 2002 alors qu'il en est le tenant du titre ?",
+    "answers": [
+      "Brésil",
+      "Allemagne",
+      "France",
+      "Italie"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En quelle année le carton rouge est-il utilisé pour la première fois en Coupe du Monde ?",
+    "answers": [
+      "1966",
+      "1970",
+      "1974",
+      "1978"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur anglais inscrit un hat-trick en finale de la Coupe du Monde 1966 ?",
+    "answers": [
+      "Bobby Charlton",
+      "Geoff Hurst",
+      "Jimmy Greaves",
+      "Gordon Banks"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel pays accueille la toute première Coupe du Monde jouée en Asie (avec le Japon) en 2002 ?",
+    "answers": [
+      "Chine",
+      "Thaïlande",
+      "Inde",
+      "Corée du Sud"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel joueur argentin est le meilleur buteur de la Coupe du Monde 1978 avec 6 buts ?",
+    "answers": [
+      "Diego Maradona",
+      "Daniel Passarella",
+      "Mario Kempes",
+      "Leopoldo Luque"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le plus grand nombre de spectateurs jamais enregistré pour un match de Coupe du Monde ?",
+    "answers": [
+      "173 850",
+      "199 854",
+      "150 000",
+      "100 000"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En quelle année la technologie de la ligne de but (GLT) est-elle utilisée pour la première fois en Coupe du Monde ?",
+    "answers": [
+      "2010",
+      "2014",
+      "2018",
+      "2006"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel pays remporte la Coupe du Monde 1954 en battant la Hongrie en finale, connu comme le « Miracle de Berne » ?",
+    "answers": [
+      "Brésil",
+      "Uruguay",
+      "Italie",
+      "Allemagne de l'Ouest"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En 2010, quel céphalopode devient célèbre pour ses prédictions correctes lors de la Coupe du Monde ?",
+    "answers": [
+      "Le poulpe Paul",
+      "La tortue Léon",
+      "Le perroquet Mani",
+      "Le chat Achille"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel joueur brésilien est nommé meilleur joueur de la Coupe du Monde 1970 ?",
+    "answers": [
+      "Jairzinho",
+      "Carlos Alberto",
+      "Tostão",
+      "Pelé"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nombre record de buts inscrits lors d'un seul match de Coupe du Monde ?",
+    "answers": [
+      "9",
+      "10",
+      "12",
+      "11"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel gardien légendaire anglais réalise l'arrêt surnommé « l'arrêt du siècle » face à Pelé en 1970 ?",
+    "answers": [
+      "Gordon Banks",
+      "Peter Shilton",
+      "David Seaman",
+      "Ray Clemence"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel entraîneur remporte la Coupe du Monde 2014 avec l'Allemagne ?",
+    "answers": [
+      "Jürgen Klinsmann",
+      "Joachim Löw",
+      "Hansi Flick",
+      "Jupp Heynckes"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur allemand inscrit le but de la victoire en prolongation de la finale 2014 contre l'Argentine ?",
+    "answers": [
+      "Thomas Müller",
+      "Toni Kroos",
+      "Mario Götze",
+      "Miroslav Klose"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel joueur est le capitaine de l'équipe de France lors de la victoire en Coupe du Monde 2018 ?",
+    "answers": [
+      "Antoine Griezmann",
+      "Hugo Lloris",
+      "Paul Pogba",
+      "Raphaël Varane"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien de buts la France inscrit-elle en finale 2018 contre la Croatie ?",
+    "answers": [
+      "2",
+      "3",
+      "5",
+      "4"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel pays d'Océanie a disputé la Coupe du Monde en 2006 et 2010 ?",
+    "answers": [
+      "Fidji",
+      "Australie",
+      "Nouvelle-Zélande",
+      "Samoa"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur a reçu le plus de cartons rouges dans l'histoire de la Coupe du Monde ?",
+    "answers": [
+      "Rigobert Song",
+      "Zinédine Zidane",
+      "Pablo Mastroeni",
+      "Diego Maradona"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel stade accueille la finale de la Coupe du Monde 2022 ?",
+    "answers": [
+      "Stade Ahmad Ben Ali",
+      "Stade Lusail",
+      "Stade Al Bayt",
+      "Stade 974"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le premier joueur à avoir marqué dans deux finales de Coupe du Monde différentes ?",
+    "answers": [
+      "Pelé",
+      "Vavá",
+      "Ronaldo",
+      "Zinédine Zidane"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de buts Kylian Mbappé inscrit-il en finale 2022 contre l'Argentine ?",
+    "answers": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle mascotte officielle représente la Coupe du Monde 1998 en France ?",
+    "answers": [
+      "Willie",
+      "Fuleco",
+      "Zakumi",
+      "Footix"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel pays est le seul à avoir participé à toutes les éditions de la Coupe du Monde sans exception ?",
+    "answers": [
+      "Allemagne",
+      "Argentine",
+      "Italie",
+      "Brésil"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le plus petit pays (en population) à avoir participé à une phase finale de Coupe du Monde ?",
+    "answers": [
+      "Islande",
+      "Trinité-et-Tobago",
+      "Curaçao",
+      "Haïti"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En 1950, quel joueur américain inscrit le but de la victoire surprise des États-Unis contre l'Angleterre ?",
+    "answers": [
+      "Walter Bahr",
+      "Joe Gaetjens",
+      "Harry Keough",
+      "Frank Borghi"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de Coupes du Monde l'Italie a-t-elle remportées au total ?",
+    "answers": [
+      "3",
+      "5",
+      "4",
+      "2"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En 2022, quelle est la première sélection asiatique à battre l'Allemagne en phase de groupes de Coupe du Monde ?",
+    "answers": [
+      "Corée du Sud",
+      "Japon",
+      "Iran",
+      "Arabie saoudite"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur détient le record du nombre de sélections en Coupe du Monde (25 matchs) ?",
+    "answers": [
+      "Miroslav Klose",
+      "Cafu",
+      "Paolo Maldini",
+      "Lothar Matthäus"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel entraîneur français mène le Brésil au titre en 1970 ?",
+    "answers": [
+      "Carlos Alberto Parreira",
+      "Mário Zagallo",
+      "Telê Santana",
+      "Didier Deschamps"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur italien est expulsé pour un coup de tête en finale 2006 ?",
+    "answers": [
+      "Aucun Italien n'est expulsé",
+      "Gennaro Gattuso",
+      "Personne",
+      "Marco Materazzi"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle sélection d'Amérique centrale atteint les quarts de finale de la Coupe du Monde 2014 ?",
+    "answers": [
+      "Honduras",
+      "Costa Rica",
+      "Mexique",
+      "Panama"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le surnom de la Coupe du Monde 2006 organisée en Allemagne ?",
+    "answers": [
+      "Le Mondial des surprises",
+      "Le Mondial du fair-play",
+      "Un conte de fées d'été",
+      "La fête du football"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel joueur brésilien inscrit les deux buts de la finale 2002 contre l'Allemagne ?",
+    "answers": [
+      "Rivaldo",
+      "Ronaldinho",
+      "Ronaldo",
+      "Kaká"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année l'arbitrage vidéo (VAR) est-il utilisé pour la première fois en Coupe du Monde ?",
+    "answers": [
+      "2014",
+      "2022",
+      "2010",
+      "2018"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le pays hôte de la Coupe du Monde 1986, initialement prévue en Colombie ?",
+    "answers": [
+      "Argentine",
+      "Brésil",
+      "Mexique",
+      "États-Unis"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien de buts au total sont inscrits en finale 2022 (Argentine vs France, temps réglementaire + prolongation) ?",
+    "answers": [
+      "6",
+      "5",
+      "4",
+      "7"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur nord-coréen marque un but célèbre contre l'Italie en 1966, éliminant les tenants du titre ?",
+    "answers": [
+      "Pak Doo-ik",
+      "Pak Seung-zin",
+      "Lim Zoong-sun",
+      "Han Bong-zin"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel pays africain participe pour la première fois à une Coupe du Monde en 1934 ?",
+    "answers": [
+      "Afrique du Sud",
+      "Cameroun",
+      "Égypte",
+      "Maroc"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
   }
 ]

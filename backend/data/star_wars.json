@@ -998,5 +998,305 @@
       "Hux"
     ],
     "correct": 1
+  },
+  {
+    "text": "Quel est le vrai prénom d'Anakin Skywalker une fois devenu Sith ?",
+    "answers": ["Dark Maul", "Dark Sidious", "Dark Vador", "Dark Tyranus"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien de films composent la trilogie originale de Star Wars ?",
+    "answers": ["Deux", "Trois", "Quatre", "Six"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "De quelle couleur est le sabre laser de Luke Skywalker dans l'épisode VI ?",
+    "answers": ["Bleu", "Rouge", "Vert", "Violet"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel personnage dit « Je suis ton père » à Luke ?",
+    "answers": ["Obi-Wan Kenobi", "Yoda", "L'Empereur", "Dark Vador"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom de la monnaie utilisée dans la galaxie Star Wars ?",
+    "answers": ["Les crédits", "Les ducats", "Les sesterces", "Les pièces impériales"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui est le meilleur ami de Han Solo ?",
+    "answers": ["Luke Skywalker", "Chewbacca", "Lando Calrissian", "Boba Fett"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le lien de parenté entre Luke et Leia ?",
+    "answers": ["Cousins", "Amis d'enfance", "Frère et sœur jumeaux", "Aucun lien"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle est la couleur habituelle d'un sabre laser Sith ?",
+    "answers": ["Bleu", "Vert", "Violet", "Rouge"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel petit personnage vert est un grand maître Jedi ?",
+    "answers": ["Yoda", "Grogu", "Yaddle", "Kit Fisto"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année le premier film Star Wars est-il sorti au cinéma ?",
+    "answers": ["1975", "1977", "1980", "1983"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le sous-titre de l'épisode IV ?",
+    "answers": ["L'Empire contre-attaque", "La Revanche des Sith", "Un nouvel espoir", "Le Retour du Jedi"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel type de troupes constitue l'armée principale de l'Empire ?",
+    "answers": ["Les droïdes de combat", "Les clones", "Les Wookiees", "Les stormtroopers"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans l'épisode I, quel sport extrême Anakin pratique-t-il sur Tatooine ?",
+    "answers": ["La course de pods", "Le sabre laser", "Le blaster ball", "Le speeder polo"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien de soleils Tatooine possède-t-elle ?",
+    "answers": ["Un", "Deux", "Trois", "Aucun"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel personnage Jar Jar Binks est-il ?",
+    "answers": ["Un Ewok", "Un Wookiee", "Un Gungan", "Un Jawa"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel acteur incarne Han Solo dans la trilogie originale ?",
+    "answers": ["Mark Hamill", "Alec Guinness", "Billy Dee Williams", "Harrison Ford"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le numéro de l'épisode « La Menace fantôme » ?",
+    "answers": ["Épisode I", "Épisode II", "Épisode III", "Épisode IV"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel système d'arme la base Starkiller remplace-t-elle dans la trilogie des suites ?",
+    "answers": ["Le Destroyer Stellaire", "L'Étoile de la Mort", "Le Super Destroyer", "Le Rayon tracteur"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage féminin est la cheffe de la Résistance dans la trilogie des suites ?",
+    "answers": ["Padmé Amidala", "Mon Mothma", "Leia Organa", "Ahsoka Tano"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle technique de combat Jedi repose sur des mouvements rapides et acrobatiques, appelée Forme IV ?",
+    "answers": ["Soresu", "Makashi", "Shien", "Ataru"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans « L'Empire contre-attaque », quel membre du corps Luke perd-il ?",
+    "answers": ["Sa main droite", "Sa main gauche", "Sa jambe droite", "Son bras gauche"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le vrai nom civil de l'Empereur ?",
+    "answers": ["Valorum", "Sheev Palpatine", "Dooku", "Sifo-Dyas"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel navigateur vit dans le ventre du Faucon Millenium pour calculer les sauts en hyperespace dans « Solo » ?",
+    "answers": ["R2-D2", "BB-8", "L3-37", "K-2SO"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel titre honorifique Leia porte-t-elle dans la Résistance ?",
+    "answers": ["Amiral", "Commandante", "Chancelière", "Générale"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage de la prélogie dit « C'est fini, Anakin ! J'ai l'avantage du terrain ! » ?",
+    "answers": ["Obi-Wan Kenobi", "Mace Windu", "Yoda", "Palpatine"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans « Le Réveil de la Force », comment s'appelle la planète où se trouve le temple de Maz Kanata ?",
+    "answers": ["Jakku", "Takodana", "D'Qar", "Crait"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Jedi est tué par Palpatine juste avant qu'Anakin ne bascule du côté obscur ?",
+    "answers": ["Kit Fisto", "Agen Kolar", "Mace Windu", "Saesee Tiin"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel nom de code porte le soldat rebelle Andor dans la série éponyme ?",
+    "answers": ["Spectre 1", "Fulcrum", "Gold Leader", "Cassian"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle série animée raconte la Guerre des Clones entre les épisodes II et III ?",
+    "answers": ["Star Wars: The Clone Wars", "Star Wars Rebels", "Star Wars Resistance", "The Bad Batch"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage utilise le pseudonyme « Fulcrum » dans « Rebels » ?",
+    "answers": ["Hera Syndulla", "Ahsoka Tano", "Sabine Wren", "Kanan Jarrus"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom du destroyer stellaire de Dark Vador dans la trilogie originale ?",
+    "answers": ["Le Finalizer", "Le Chimaera", "L'Executor", "Le Devastator"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel compositeur a créé la musique emblématique de Star Wars ?",
+    "answers": ["Hans Zimmer", "Howard Shore", "Danny Elfman", "John Williams"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage dit « Aide-moi, Obi-Wan Kenobi, vous êtes mon seul espoir » ?",
+    "answers": ["Leia Organa", "Padmé Amidala", "Rey", "Jyn Erso"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel chasseur de primes notoire porte une armure verte dans la trilogie originale ?",
+    "answers": ["Jango Fett", "Boba Fett", "Cad Bane", "Bossk"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel Jedi siège au Conseil mais n'obtient pas le rang de Maître dans l'épisode III ?",
+    "answers": ["Obi-Wan Kenobi", "Plo Koon", "Anakin Skywalker", "Ki-Adi-Mundi"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel acteur incarne Obi-Wan Kenobi dans la trilogie des préquelles ?",
+    "answers": ["Liam Neeson", "Alec Guinness", "Hayden Christensen", "Ewan McGregor"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le nom du vaisseau de Boba Fett ?",
+    "answers": ["Le Slave I", "Le Razor Crest", "Le Ghost", "Le Gauntlet"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "De quelle planète Dark Maul est-il originaire ?",
+    "answers": ["Mandalore", "Dathomir", "Mustafar", "Malachor"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel vaisseau Din Djarin pilote-t-il dans la première saison de « The Mandalorian » ?",
+    "answers": ["Le Gauntlet", "Le Ghost", "Le Razor Crest", "Le N-1 Starfighter"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage est révélé comme le grand-père de Rey dans « L'Ascension de Skywalker » ?",
+    "answers": ["Snoke", "Luke Skywalker", "Dooku", "Palpatine"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de formes classiques de combat au sabre laser la tradition Jedi reconnaît-elle ?",
+    "answers": ["Sept", "Cinq", "Dix", "Trois"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Inquisiteur poursuit Cal Kestis dans le jeu « Jedi: Fallen Order » ?",
+    "answers": ["Le Grand Inquisiteur", "La Deuxième Sœur", "La Septième Sœur", "Le Cinquième Frère"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle créature marine géante attaque le sous-marin gungan dans l'épisode I ?",
+    "answers": ["Le sarlacc", "Le rancor", "Un opee sea killer", "Un colo claw fish"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel style de combat au sabre laser est spécialisé dans la défense, utilisé par Obi-Wan ?",
+    "answers": ["Ataru", "Djem So", "Makashi", "Soresu"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel Jedi a découvert la planète Kamino et commandé l'armée des clones sous un faux nom ?",
+    "answers": ["Sifo-Dyas", "Dooku", "Qui-Gon Jinn", "Mace Windu"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans la série « Andor », quel personnage dirige le réseau d'espions rebelles depuis Coruscant ?",
+    "answers": ["Mon Mothma", "Luthen Rael", "Saw Gerrera", "Bail Organa"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel supercarburant hyperspatial est au centre de l'intrigue du film « Solo » ?",
+    "answers": ["Le tibanna", "Le beskar", "Le coaxium", "Le kyber"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel ancien Sith aurait découvert le secret de l'immortalité selon Palpatine ?",
+    "answers": ["Dark Bane", "Dark Revan", "Dark Malgus", "Dark Plagueis"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de la manœuvre de Holdo dans « Les Derniers Jedi » ?",
+    "answers": ["Le saut en hyperespace à travers un vaisseau ennemi", "Le bombardement orbital", "La feinte de Kessel", "Le virage de Tallon"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle planète océanique sans terre ferme sert de base à la flotte Sith dans « L'Ascension de Skywalker » ?",
+    "answers": ["Kamino", "Exegol", "Mon Cala", "Scarif"],
+    "correct": 1,
+    "difficulty": "difficile"
   }
 ]

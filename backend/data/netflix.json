@@ -998,5 +998,305 @@
       "L'Espagne"
     ],
     "correct": 1
+  },
+  {
+    "text": "Dans quelle série Netflix un professeur de chimie se met-il à fabriquer de la drogue ?",
+    "answers": ["Breaking Bad", "Ozark", "Narcos", "Better Call Saul"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom du personnage principal de « You » ?",
+    "answers": ["Will Bettelheim", "Joe Goldberg", "Peach Salinger", "Love Quinn"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quelle ville se déroule principalement la série « Lupin » ?",
+    "answers": ["Lyon", "Marseille", "Paris", "Bordeaux"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle série Netflix met en scène une famille de super-héros dysfonctionnels ?",
+    "answers": ["Stranger Things", "Dark", "Ozark", "The Umbrella Academy"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel animal donne son nom à la série documentaire « Tiger King » ?",
+    "answers": ["Le tigre", "Le lion", "L'ours", "Le loup"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel acteur principal de « The Witcher » a quitté le rôle de Geralt après la saison 3 ?",
+    "answers": ["Liam Hemsworth", "Henry Cavill", "Chris Hemsworth", "Jason Momoa"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle la créature principale du « Monde à l'Envers » dans « Stranger Things » ?",
+    "answers": ["Le Mindflayer", "Le Demagorgon", "Le Demogorgon", "Le Vecna"],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle série sud-coréenne met en scène des jeux mortels pour de l'argent ?",
+    "answers": ["Alice in Borderland", "All of Us Are Dead", "Sweet Home", "Squid Game"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans « Emily in Paris », pour quelle agence de marketing Emily travaille-t-elle à Paris ?",
+    "answers": ["Savoir", "Grateau", "Madeline Corp", "Pierre Cadault"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel acteur joue le rôle de Geralt de Riv à partir de la saison 4 de « The Witcher » ?",
+    "answers": ["Henry Cavill", "Liam Hemsworth", "Chris Pine", "Tom Hardy"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans « Stranger Things », quel personnage est le grand méchant de la saison 4 ?",
+    "answers": ["Le Demogorgon", "Billy Hargrove", "Vecna", "Le Mind Flayer"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle série Netflix adapte les romans de Julia Quinn ?",
+    "answers": ["The Crown", "Élite", "Wednesday", "La Chronique des Bridgerton"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le nom de la prison dans « Orange Is the New Black » ?",
+    "answers": ["Litchfield", "Shawshank", "Alcatraz", "Fox River"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel studio d'animation a produit « Arcane » ?",
+    "answers": ["Pixar", "Fortiche Production", "Studio Mir", "Toei Animation"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel personnage de « La Casa de Papel » porte le nom de code « Berlin » ?",
+    "answers": ["Sergio Marquina", "Raquel Murillo", "Andrés de Fonollosa", "Ágata Jiménez"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans « Squid Game », quelle forme géométrique est dessinée sur la carte de visite des recruteurs ?",
+    "answers": ["Un losange et un pentagone", "Un hexagone et un cœur", "Un carré, un triangle et un losange", "Un cercle, un triangle et un carré"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel est le métier d'Otis dans « Sex Education » qu'il exerce clandestinement au lycée ?",
+    "answers": ["Thérapeute sexuel", "Coach sportif", "Dealer", "Tuteur scolaire"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans « Dark », combien d'années séparent chaque cycle temporel ?",
+    "answers": ["3 ans", "33 ans", "66 ans", "99 ans"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans « Cobra Kai », quel est le nom du dojo fondé par Johnny Lawrence ?",
+    "answers": ["Miyagi-Do", "Eagle Fang", "Cobra Kai", "Silver Serpent"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans quel pays se déroule la série « Alice in Borderland » ?",
+    "answers": ["La Corée du Sud", "La Chine", "La Thaïlande", "Le Japon"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel film Netflix avec Sandra Bullock met en scène un monde où regarder à l'extérieur est mortel ?",
+    "answers": ["Bird Box", "The Platform", "Extinction", "I Am Mother"],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans « Squid Game », quel jeu se joue sur un pont de panneaux de verre ?",
+    "answers": ["Les billes", "Le pont de verre", "Le tir à la corde", "Le jeu du calamar"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Qui a réalisé le film « Don't Look Up » sorti sur Netflix ?",
+    "answers": ["Martin Scorsese", "Spike Lee", "Adam McKay", "David Fincher"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel film Netflix de science-fiction avec Ryan Reynolds met en scène un voyageur temporel ?",
+    "answers": ["Red Notice", "6 Underground", "Army of the Dead", "The Adam Project"],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle série Netflix suit un serial killer qui se prend pour un « nice guy » obsessionnel ?",
+    "answers": ["You", "Mindhunter", "Dexter", "The Sinner"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel ancien agent du FBI interviewe des tueurs en série dans « Mindhunter » ?",
+    "answers": ["Bill Tench", "Holden Ford", "Wendy Carr", "Jim Barney"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel créateur de séries est derrière « Mindhunter » et « House of Cards » version Netflix ?",
+    "answers": ["Shonda Rhimes", "Ryan Murphy", "David Fincher", "Vince Gilligan"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle série espagnole Netflix se déroule dans un club de nuit tenu par des femmes en fuite ?",
+    "answers": ["Élite", "Vis a vis", "La Casa de Papel", "Sky Rojo"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage incarné par Millie Bobby Brown possède des pouvoirs télékinésiques dans « Stranger Things » ?",
+    "answers": ["Eleven", "Max", "Nancy", "Robin"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle chanson de Kate Bush est devenue virale grâce à la saison 4 de « Stranger Things » ?",
+    "answers": ["Wuthering Heights", "Running Up That Hill", "Hounds of Love", "Babooshka"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Dans « The Crown », quel événement tragique de 1997 est représenté dans la série ?",
+    "answers": ["L'incendie de Windsor", "Le Brexit", "La mort de la princesse Diana", "Le jubilé d'or"],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle série documentaire Netflix explore les techniques de manipulation mentale de sectes ?",
+    "answers": ["Making a Murderer", "The Keepers", "Tiger King", "Wild Wild Country"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel film d'horreur Netflix de Mike Flanagan se passe dans une maison hantée ?",
+    "answers": ["The Haunting of Hill House", "Midnight Mass", "The Midnight Club", "Gerald's Game"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans « Ozark », quel est le nom de la fille de Marty et Wendy Byrde ?",
+    "answers": ["Ruth", "Charlotte", "Rachel", "Darlene"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel acteur joue le rôle de Joe Exotic dans la série dramatique « Tiger King » (le documentaire original) ?",
+    "answers": ["Nicolas Cage", "John Cameron Mitchell", "Joe Exotic lui-même", "Jared Leto"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage de « BoJack Horseman » est un labrador anthropomorphe toujours optimiste ?",
+    "answers": ["Todd Chavez", "Princess Carolyn", "Diane Nguyen", "Mr. Peanutbutter"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle mini-série Netflix raconte l'histoire vraie d'une joueuse d'échecs prodige ?",
+    "answers": ["Le Jeu de la dame", "Inventing Anna", "Unbelievable", "Maid"],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans « La Casa de Papel », quel costume et quel masque les braqueurs portent-ils ?",
+    "answers": ["Costume noir et masque de Guy Fawkes", "Combinaison rouge et masque de Dalí", "Tenue blanche et masque de clown", "Bleu de travail et masque de loup"],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel film Netflix met en scène Chris Hemsworth dans un rôle de mercenaire sauvant un enfant kidnappé ?",
+    "answers": ["Red Notice", "The Old Guard", "Extraction", "Spenser Confidential"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel réalisateur sud-coréen a créé « Squid Game » ?",
+    "answers": ["Bong Joon-ho", "Park Chan-wook", "Kim Jee-woon", "Hwang Dong-hyuk"],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel film d'animation Netflix raconte l'histoire d'un garçon mexicain dans le monde des morts ?",
+    "answers": ["Klaus", "Maya et les Trois", "Le Monstre des mers", "Over the Moon"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans « Wednesday », quelle créature surnaturelle Wednesday découvre-t-elle dans les bois de Nevermore ?",
+    "answers": ["Un vampire", "Un Hyde", "Un loup-garou", "Un fantôme"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage de « Bridgerton » est interprété par Regé-Jean Page ?",
+    "answers": ["Anthony Bridgerton", "Colin Bridgerton", "Simon Basset", "Benedict Bridgerton"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle série Netflix met en scène des adolescents dans un lycée privé espagnol après un meurtre ?",
+    "answers": ["Sky Rojo", "La Casa de Papel", "Vis a vis", "Élite"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle série d'anthologie horrifique de Mike Flanagan se déroule dans une communauté insulaire ?",
+    "answers": ["Midnight Mass", "The Haunting of Bly Manor", "Archive 81", "Brand New Cherry Flavor"],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans « Heartstopper », quel sport Nick pratique-t-il au lycée ?",
+    "answers": ["Le football", "Le rugby", "Le cricket", "Le basketball"],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage de « Stranger Things » travaille dans un salon de glaces appelé Scoops Ahoy ?",
+    "answers": ["Dustin Henderson", "Steve Harrington et Robin Buckley", "Lucas Sinclair", "Jonathan Byers"],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel film Netflix avec Adam Driver raconte une invasion extraterrestre vue par un soldat ?",
+    "answers": ["The Cloverfield Paradox", "Extinction", "65", "Don't Look Up"],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle série Netflix suit la vie de la famille royale britannique de 1947 à nos jours ?",
+    "answers": ["Downton Abbey", "Victoria", "Bridgerton", "The Crown"],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel acteur joue le rôle du Professeur dans « La Casa de Papel » ?",
+    "answers": ["Álvaro Morte", "Pedro Alonso", "Jaime Lorente", "Miguel Herrán"],
+    "correct": 0,
+    "difficulty": "moyen"
   }
 ]
