@@ -1048,5 +1048,665 @@
     ],
     "correct": 3,
     "difficulty": "expert"
+  },
+  {
+    "text": "Quel est le prénom complet de Taylor Swift ?",
+    "answers": [
+      "Taylor Alison Swift",
+      "Taylor Marie Swift",
+      "Taylor Rose Swift",
+      "Taylor Ann Swift"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année Taylor Swift est-elle née ?",
+    "answers": [
+      "1990",
+      "1988",
+      "1991",
+      "1989"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quel État américain Taylor Swift a-t-elle grandi ?",
+    "answers": [
+      "Californie",
+      "Pennsylvanie",
+      "New York",
+      "Tennessee"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel titre de Taylor Swift contient le mot 'Love' et parle d'une histoire de lycée ?",
+    "answers": [
+      "Love Story",
+      "Blank Space",
+      "Bad Blood",
+      "Style"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel album de Taylor Swift porte le nom de son année de naissance ?",
+    "answers": [
+      "Fearless",
+      "Red",
+      "1989",
+      "Lover"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel single de Taylor Swift est devenu un hymne de danse en 2014 ?",
+    "answers": [
+      "Style",
+      "Shake It Off",
+      "Blank Space",
+      "Bad Blood"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle chanson de Taylor Swift commence par 'Nice to meet you, where you been?' ?",
+    "answers": [
+      "Shake It Off",
+      "Style",
+      "Blank Space",
+      "22"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel album Taylor Swift a-t-elle sorti pendant le confinement de 2020 ?",
+    "answers": [
+      "Folklore",
+      "Evermore",
+      "Midnights",
+      "Lover"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel titre de Taylor Swift parle d'un personnage qui ne vieillit jamais ?",
+    "answers": [
+      "Anti-Hero",
+      "22",
+      "Cardigan",
+      "Willow"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle tournée mondiale de Taylor Swift a battu des records en 2023-2024 ?",
+    "answers": [
+      "1989 World Tour",
+      "Reputation Stadium Tour",
+      "The Eras Tour",
+      "Lover Fest"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel instrument Taylor Swift jouait-elle principalement à ses débuts ?",
+    "answers": [
+      "Piano",
+      "Batterie",
+      "Violon",
+      "Guitare"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel titre de Midnights est devenu le plus grand succès de l'album ?",
+    "answers": [
+      "Anti-Hero",
+      "Lavender Haze",
+      "Bejeweled",
+      "Karma"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle chanson de Taylor Swift mentionne les 'haters gonna hate' ?",
+    "answers": [
+      "Bad Blood",
+      "Shake It Off",
+      "Look What You Made Me Do",
+      "ME!"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel album de Taylor Swift contient la chanson 'You Belong with Me' ?",
+    "answers": [
+      "Taylor Swift",
+      "Speak Now",
+      "Fearless",
+      "Red"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel animal de compagnie Taylor Swift possède-t-elle en plusieurs exemplaires ?",
+    "answers": [
+      "Des chiens",
+      "Des lapins",
+      "Des poissons",
+      "Des chats"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien d'albums 'Taylor's Version' Taylor Swift a-t-elle réenregistrés à ce jour (fin 2024) ?",
+    "answers": [
+      "4",
+      "3",
+      "5",
+      "2"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel single de l'album Lover est sorti en duo avec Brendon Urie ?",
+    "answers": [
+      "Cruel Summer",
+      "ME!",
+      "Lover",
+      "The Man"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Taylor Swift a déménagé dans quel État pour poursuivre la musique country à 14 ans ?",
+    "answers": [
+      "Géorgie",
+      "Texas",
+      "Tennessee",
+      "Virginie"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel album de Taylor Swift est sorti en novembre 2017 ?",
+    "answers": [
+      "1989",
+      "Lover",
+      "Folklore",
+      "Reputation"
+    ],
+    "correct": 3,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel est le titre le plus long de l'album Red (Taylor's Version) ?",
+    "answers": [
+      "All Too Well (10 Minute Version)",
+      "I Knew You Were Trouble",
+      "We Are Never Getting Back Together",
+      "22"
+    ],
+    "correct": 0,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel label a signé Taylor Swift à l'âge de 15 ans ?",
+    "answers": [
+      "Republic Records",
+      "Big Machine Records",
+      "Universal Music",
+      "Sony Music"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel prix Taylor Swift a-t-elle remporté aux Grammy Awards 2010 pour Fearless ?",
+    "answers": [
+      "Meilleur clip",
+      "Révélation de l'année",
+      "Album de l'année",
+      "Chanson de l'année"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle artiste apparaît sur le remix de 'Bad Blood' ?",
+    "answers": [
+      "Selena Gomez",
+      "Rihanna",
+      "Nicki Minaj",
+      "Kendrick Lamar"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Comment s'appelle le documentaire Netflix de Taylor Swift sorti en 2020 ?",
+    "answers": [
+      "Miss Americana",
+      "The Eras",
+      "Reputation Tour",
+      "Taylor's Version"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel album a marqué la transition de Taylor Swift vers la pop ?",
+    "answers": [
+      "Red",
+      "1989",
+      "Reputation",
+      "Lover"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel rappeur a interrompu Taylor Swift aux MTV VMAs 2009 ?",
+    "answers": [
+      "Drake",
+      "Jay-Z",
+      "Kanye West",
+      "Lil Wayne"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel producteur est crédité sur la majorité de Folklore et Evermore ?",
+    "answers": [
+      "Max Martin",
+      "Shellback",
+      "Jack Antonoff",
+      "Aaron Dessner"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel titre de Red est une chanson de plus de 5 minutes devenue virale des années après sa sortie ?",
+    "answers": [
+      "All Too Well",
+      "I Knew You Were Trouble",
+      "22",
+      "State of Grace"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle chanteuse apparaît sur 'Snow on the Beach' de Midnights ?",
+    "answers": [
+      "Billie Eilish",
+      "Lana Del Rey",
+      "Olivia Rodrigo",
+      "Phoebe Bridgers"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel titre de Reputation sample le son d'un serpent dans son clip ?",
+    "answers": [
+      "End Game",
+      "Delicate",
+      "Look What You Made Me Do",
+      "Gorgeous"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel joueur de football américain est le compagnon de Taylor Swift depuis 2023 ?",
+    "answers": [
+      "Patrick Mahomes",
+      "Josh Allen",
+      "Joe Burrow",
+      "Travis Kelce"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien de Grammy Awards 'Album de l'année' Taylor Swift a-t-elle remportés (fin 2024) ?",
+    "answers": [
+      "4",
+      "3",
+      "2",
+      "5"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel single de Folklore raconte une histoire fictive de triangle amoureux ?",
+    "answers": [
+      "Exile",
+      "Cardigan",
+      "The 1",
+      "My Tears Ricochet"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel album contient le titre 'The Man' ?",
+    "answers": [
+      "Midnights",
+      "Reputation",
+      "Lover",
+      "1989"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel rappeur figure sur 'End Game' avec Ed Sheeran et Taylor Swift ?",
+    "answers": [
+      "Drake",
+      "Kendrick Lamar",
+      "Travis Scott",
+      "Future"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel premier single country de Taylor Swift est sorti en 2006 ?",
+    "answers": [
+      "Tim McGraw",
+      "Teardrops on My Guitar",
+      "Our Song",
+      "Picture to Burn"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel titre de l'album Speak Now Taylor Swift a-t-elle entièrement écrit seule ?",
+    "answers": [
+      "Mine",
+      "Tous les titres de l'album",
+      "Mean",
+      "Back to December"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel album de Taylor Swift a été le premier à recevoir la certification diamant aux États-Unis ?",
+    "answers": [
+      "Red",
+      "Speak Now",
+      "Fearless",
+      "1989"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la particularité de l'album 'The Tortured Poets Department' sorti en 2024 ?",
+    "answers": [
+      "C'est un album live",
+      "Il contient uniquement des reprises",
+      "C'est un album acoustique",
+      "Il est sorti en double album surprise"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel titre de Lover est devenu un succès viral sur TikTok des années après sa sortie ?",
+    "answers": [
+      "Cruel Summer",
+      "Lover",
+      "The Archer",
+      "ME!"
+    ],
+    "correct": 0,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel producteur suédois a co-écrit 'Shake It Off' et 'Blank Space' ?",
+    "answers": [
+      "Benny Blanco",
+      "Max Martin",
+      "Dr. Luke",
+      "Shellback"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom du chat de Taylor Swift qui porte le nom d'un personnage de Grey's Anatomy ?",
+    "answers": [
+      "Olivia Benson",
+      "Benjamin Button",
+      "Meredith Grey",
+      "Dixie"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel court-métrage Taylor Swift a-t-elle réalisé pour 'All Too Well' ?",
+    "answers": [
+      "The Man",
+      "Cardigan",
+      "Bad Blood",
+      "All Too Well: The Short Film"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel album de Taylor Swift a été le premier réenregistré sous le label Republic Records ?",
+    "answers": [
+      "Fearless (Taylor's Version)",
+      "Red (Taylor's Version)",
+      "Speak Now (Taylor's Version)",
+      "1989 (Taylor's Version)"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Sur quel titre de Evermore Bon Iver apparaît-il ?",
+    "answers": [
+      "Dorothea",
+      "Evermore",
+      "Coney Island",
+      "Willow"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de l'alter ego de Taylor Swift sur l'album Reputation ?",
+    "answers": [
+      "Nils Sjöberg",
+      "The Old Taylor",
+      "Karma",
+      "Aucun alter ego officiel"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel titre de '1989' Taylor Swift décrit-elle comme étant inspiré par le film de Ryan Gosling ?",
+    "answers": [
+      "Out of the Woods",
+      "Wildest Dreams",
+      "New Romantics",
+      "Clean"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel titre de Speak Now est une lettre d'excuses à un ex ?",
+    "answers": [
+      "Enchanted",
+      "Back to December",
+      "Last Kiss",
+      "Dear John"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel artiste chante sur 'exile' de Folklore ?",
+    "answers": [
+      "Aaron Dessner",
+      "Jack Antonoff",
+      "Bon Iver",
+      "The National"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel titre de Reputation contient un featuring avec Ed Sheeran et Future ?",
+    "answers": [
+      "Gorgeous",
+      "Delicate",
+      "Getaway Car",
+      "End Game"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle ville est mentionnée dans le titre d'une chanson de l'album Lover ?",
+    "answers": [
+      "London Boy",
+      "New York",
+      "Paris",
+      "Nashville"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle chanson de Midnights Taylor Swift décrit-elle comme autobiographique sur ses insécurités ?",
+    "answers": [
+      "Lavender Haze",
+      "Anti-Hero",
+      "Midnight Rain",
+      "Maroon"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel pseudonyme Taylor Swift a-t-elle utilisé pour écrire des chansons pour d'autres artistes ?",
+    "answers": [
+      "Anna Swift",
+      "Taylor Alison",
+      "Nils Sjöberg",
+      "T. West"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel producteur a principalement travaillé avec Taylor Swift sur Midnights ?",
+    "answers": [
+      "Aaron Dessner",
+      "Max Martin",
+      "Shellback",
+      "Jack Antonoff"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel titre de Fearless a remporté le Grammy de la Chanson Country de l'année 2010 ?",
+    "answers": [
+      "White Horse",
+      "You Belong with Me",
+      "Love Story",
+      "Fearless"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel personnage fictif Taylor Swift a-t-elle créé pour le triangle amoureux de Folklore ?",
+    "answers": [
+      "Dorothea",
+      "Betty",
+      "Marjorie",
+      "Augusta"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de titres 'vault tracks' figurent sur 1989 (Taylor's Version) ?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "7"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle chanteuse est créditée sur 'Gasoline' du Tortured Poets Department ?",
+    "answers": [
+      "Billie Eilish",
+      "Lana Del Rey",
+      "Florence Welch",
+      "Gracie Abrams"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel est le nom de l'un des chats de Taylor Swift nommé d'après un personnage de Law & Order ?",
+    "answers": [
+      "Benjamin Button",
+      "Meredith Grey",
+      "Dixie D'Amelio",
+      "Olivia Benson"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel titre bonus figure sur la version deluxe de Red (Taylor's Version) en version 10 minutes ?",
+    "answers": [
+      "All Too Well (10 Minute Version)",
+      "I Bet You Think About Me",
+      "Nothing New",
+      "Message in a Bottle"
+    ],
+    "correct": 0,
+    "difficulty": "difficile"
   }
 ]

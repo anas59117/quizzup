@@ -1048,5 +1048,665 @@
     ],
     "correct": 3,
     "difficulty": "medium"
+  },
+  {
+    "text": "En quelle année Michael Jackson est-il né ?",
+    "answers": [
+      "1956",
+      "1958",
+      "1960",
+      "1962"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "En quelle année Michael Jackson est-il décédé ?",
+    "answers": [
+      "2007",
+      "2008",
+      "2009",
+      "2010"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quelle ville Michael Jackson est-il décédé ?",
+    "answers": [
+      "New York",
+      "Las Vegas",
+      "Los Angeles",
+      "Chicago"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien d'exemplaires l'album Thriller s'est-il vendu dans le monde ?",
+    "answers": [
+      "30 millions",
+      "50 millions",
+      "70 millions",
+      "100 millions"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel pas de danse Michael Jackson a-t-il popularisé ?",
+    "answers": [
+      "Le robot",
+      "Le moonwalk",
+      "Le running man",
+      "Le worm"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Lors de quelle émission télévisée Michael Jackson a-t-il exécuté le moonwalk pour la première fois en public ?",
+    "answers": [
+      "American Bandstand",
+      "Soul Train",
+      "Motown 25",
+      "The Ed Sullivan Show"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel titre chantait Michael Jackson lorsqu'il a présenté le moonwalk pour la première fois ?",
+    "answers": [
+      "Thriller",
+      "Beat It",
+      "Billie Jean",
+      "Bad"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelait le ranch de Michael Jackson en Californie ?",
+    "answers": [
+      "Graceland",
+      "Neverland",
+      "Xanadu",
+      "Dreamland"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien de Grammy Awards Michael Jackson a-t-il remportés au cours de sa carrière ?",
+    "answers": [
+      "8",
+      "10",
+      "13",
+      "15"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien de Grammy Awards Michael Jackson a-t-il remportés en une seule soirée en 1984 ?",
+    "answers": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correct": 3,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel guitariste célèbre joue le solo de « Beat It » ?",
+    "answers": [
+      "Jimmy Page",
+      "Eric Clapton",
+      "Eddie Van Halen",
+      "Slash"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle chanson de Thriller met en scène des zombies dans son clip ?",
+    "answers": [
+      "Billie Jean",
+      "Beat It",
+      "Thriller",
+      "Wanna Be Startin' Somethin'"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Qui a réalisé le clip de « Thriller » ?",
+    "answers": [
+      "Steven Spielberg",
+      "Martin Scorsese",
+      "John Landis",
+      "Spike Lee"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle est la durée approximative du clip complet de « Thriller » ?",
+    "answers": [
+      "7 minutes",
+      "10 minutes",
+      "14 minutes",
+      "20 minutes"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Avec quel artiste Michael Jackson chante-t-il « The Girl Is Mine » ?",
+    "answers": [
+      "Stevie Wonder",
+      "Paul McCartney",
+      "Lionel Richie",
+      "Prince"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel album de Michael Jackson contient la chanson « Smooth Criminal » ?",
+    "answers": [
+      "Thriller",
+      "Dangerous",
+      "Bad",
+      "HIStory"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quelle figure acrobatique célèbre Michael Jackson exécutait-il dans les performances de « Smooth Criminal » ?",
+    "answers": [
+      "Le grand écart",
+      "Le salto arrière",
+      "L'anti-gravity lean",
+      "La roue"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien de singles de l'album Bad ont atteint le numéro 1 aux États-Unis ?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "7"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel producteur a travaillé sur l'album Dangerous avec Michael Jackson ?",
+    "answers": [
+      "Quincy Jones",
+      "Teddy Riley",
+      "Babyface",
+      "L.A. Reid"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle chanson de l'album Dangerous a un message humanitaire fort ?",
+    "answers": [
+      "Jam",
+      "Remember the Time",
+      "Heal the World",
+      "Dangerous"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel super-héros Michael Jackson a-t-il voulu incarner dans un film jamais réalisé ?",
+    "answers": [
+      "Batman",
+      "Superman",
+      "Spider-Man",
+      "Wonder Man"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Dans quel film Michael Jackson a-t-il joué le rôle d'un épouvantail ?",
+    "answers": [
+      "Moonwalker",
+      "The Wiz",
+      "Captain EO",
+      "Ghosts"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel court-métrage musical de 1988, mêlant fiction et clips, met en scène Michael Jackson ?",
+    "answers": [
+      "Ghosts",
+      "Captain EO",
+      "Moonwalker",
+      "This Is It"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel film 3D réalisé par Francis Ford Coppola met en vedette Michael Jackson pour les parcs Disney ?",
+    "answers": [
+      "Moonwalker",
+      "Captain EO",
+      "Ghosts",
+      "This Is It"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel spectacle de concerts répétés a été filmé pour devenir un documentaire après la mort de Michael Jackson ?",
+    "answers": [
+      "Moonwalker",
+      "Ghosts",
+      "This Is It",
+      "Bad Tour Live"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Combien de concerts « This Is It » étaient prévus à l'O2 Arena de Londres ?",
+    "answers": [
+      "10",
+      "25",
+      "50",
+      "100"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel album posthume est sorti en 2010 ?",
+    "answers": [
+      "Xscape",
+      "Michael",
+      "Immortal",
+      "Scream"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel album posthume est sorti en 2014 ?",
+    "answers": [
+      "Michael",
+      "Scream",
+      "Xscape",
+      "Immortal"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien d'enfants Michael Jackson a-t-il eus ?",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Comment s'appelle la fille de Michael Jackson ?",
+    "answers": [
+      "Janet",
+      "La Toya",
+      "Paris",
+      "Rebbie"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel label Michael Jackson a-t-il quitté après l'album Invincible ?",
+    "answers": [
+      "Motown",
+      "Epic Records / Sony Music",
+      "Atlantic Records",
+      "Warner Bros."
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Avec quel label The Jackson 5 ont-ils d'abord signé ?",
+    "answers": [
+      "Epic Records",
+      "Atlantic Records",
+      "Motown",
+      "Columbia Records"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel titre des Jackson 5 a été leur premier numéro 1 ?",
+    "answers": [
+      "ABC",
+      "I Want You Back",
+      "The Love You Save",
+      "I'll Be There"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien de frères composent le groupe The Jackson 5 ?",
+    "answers": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel frère de Michael est le plus âgé des Jackson 5 ?",
+    "answers": [
+      "Tito",
+      "Jermaine",
+      "Jackie",
+      "Marlon"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel titre de l'album HIStory est un hymne écologiste et humanitaire ?",
+    "answers": [
+      "Scream",
+      "They Don't Care About Us",
+      "Earth Song",
+      "Stranger in Moscow"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Dans quel pays le clip controversé de « They Don't Care About Us » a-t-il été partiellement tourné ?",
+    "answers": [
+      "L'Inde",
+      "Le Mexique",
+      "Le Brésil",
+      "L'Afrique du Sud"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel titre est le premier numéro 1 de Michael Jackson en solo ?",
+    "answers": [
+      "Rock with You",
+      "Billie Jean",
+      "Don't Stop 'Til You Get Enough",
+      "Ben"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "En quelle année « Ben » est-il sorti, premier numéro 1 solo de Michael Jackson ?",
+    "answers": [
+      "1970",
+      "1972",
+      "1975",
+      "1979"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel titre de Michael Jackson a été le premier clip d'un artiste noir diffusé sur MTV ?",
+    "answers": [
+      "Beat It",
+      "Billie Jean",
+      "Thriller",
+      "Don't Stop 'Til You Get Enough"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quel célèbre acteur apparaît dans le clip de « Remember the Time » ?",
+    "answers": [
+      "Will Smith",
+      "Denzel Washington",
+      "Samuel L. Jackson",
+      "Eddie Murphy"
+    ],
+    "correct": 3,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel mannequin est la partenaire de Michael Jackson dans le clip de « In the Closet » ?",
+    "answers": [
+      "Cindy Crawford",
+      "Naomi Campbell",
+      "Tyra Banks",
+      "Claudia Schiffer"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel basketteur apparaît dans le clip de « Jam » ?",
+    "answers": [
+      "Magic Johnson",
+      "Kobe Bryant",
+      "Michael Jordan",
+      "Shaquille O'Neal"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle chanson de Michael Jackson a été le thème du spectacle du Super Bowl 1993 ?",
+    "answers": [
+      "Black or White",
+      "Heal the World",
+      "Jam",
+      "Will You Be There"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel catalogue musical Michael Jackson a-t-il acheté en 1985 pour 47,5 millions de dollars ?",
+    "answers": [
+      "Le catalogue Motown",
+      "Le catalogue Elvis",
+      "Le catalogue ATV des Beatles",
+      "Le catalogue Rolling Stones"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En quelle année Michael Jackson a-t-il été intronisé au Rock and Roll Hall of Fame en tant qu'artiste solo ?",
+    "answers": [
+      "1997",
+      "2001",
+      "2005",
+      "2009"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel titre de l'album Invincible a été le principal single ?",
+    "answers": [
+      "Unbreakable",
+      "Butterflies",
+      "You Rock My World",
+      "Cry"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "En quelle année est sorti le premier album solo de Michael Jackson, « Got to Be There » ?",
+    "answers": [
+      "1969",
+      "1971",
+      "1972",
+      "1975"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle chanson Michael Jackson a-t-il co-écrite pour la charité en 1985, avec Lionel Richie ?",
+    "answers": [
+      "Heal the World",
+      "We Are the World",
+      "Earth Song",
+      "Man in the Mirror"
+    ],
+    "correct": 1,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel collectif d'artistes a enregistré « We Are the World » ?",
+    "answers": [
+      "Band Aid",
+      "USA for Africa",
+      "Live Aid Artists",
+      "Artists United Against Apartheid"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle tournée mondiale de Michael Jackson en 1987-1989 a été sa première en solo ?",
+    "answers": [
+      "Dangerous World Tour",
+      "Bad World Tour",
+      "HIStory World Tour",
+      "Victory Tour"
+    ],
+    "correct": 1,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Combien de spectateurs la tournée Dangerous World Tour a-t-elle attirés ?",
+    "answers": [
+      "1,5 million",
+      "2 millions",
+      "3,5 millions",
+      "5 millions"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle maladie de peau Michael Jackson a-t-il déclaré avoir ?",
+    "answers": [
+      "Le psoriasis",
+      "L'eczéma",
+      "Le vitiligo",
+      "La dermatite"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel producteur a composé les chansons « Rock with You » et « Thriller » ?",
+    "answers": [
+      "Quincy Jones",
+      "Rod Temperton",
+      "Teddy Riley",
+      "Jimmy Jam"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Combien de numéros 1 au Billboard Hot 100 Michael Jackson a-t-il obtenus en solo ?",
+    "answers": [
+      "8",
+      "10",
+      "13",
+      "17"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel premier album solo pour enfant Michael Jackson a-t-il sorti avec Motown ?",
+    "answers": [
+      "Ben",
+      "Got to Be There",
+      "Music & Me",
+      "Forever, Michael"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quelle chanson de Michael Jackson est devenue virale sur Internet avec la question « Annie, are you OK? » ?",
+    "answers": [
+      "Beat It",
+      "Bad",
+      "Smooth Criminal",
+      "Thriller"
+    ],
+    "correct": 2,
+    "difficulty": "facile"
+  },
+  {
+    "text": "Quel album de Michael Jackson a été le plus vendu après Thriller ?",
+    "answers": [
+      "Off the Wall",
+      "Dangerous",
+      "Bad",
+      "HIStory"
+    ],
+    "correct": 2,
+    "difficulty": "moyen"
+  },
+  {
+    "text": "Quelle chanson Michael Jackson a-t-il chantée lors de la cérémonie des Grammy Awards 1988 ?",
+    "answers": [
+      "Bad",
+      "Man in the Mirror",
+      "The Way You Make Me Feel",
+      "Smooth Criminal"
+    ],
+    "correct": 1,
+    "difficulty": "difficile"
+  },
+  {
+    "text": "Quel chanteur de rock est le parrain de deux des enfants de Michael Jackson ?",
+    "answers": [
+      "Mick Jagger",
+      "Bono",
+      "Macaulay Culkin",
+      "Elton John"
+    ],
+    "correct": 2,
+    "difficulty": "difficile"
   }
 ]
