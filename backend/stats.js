@@ -6,6 +6,7 @@ const { createJsonWriter, readJsonFileSync } = require('./json-writer');
 const { getStorePath } = require('./store-path');
 const { normalizeStatsStore } = require('./store-normalize');
 const shop = require('./shop');
+const { createLeaderboardCache } = require('./leaderboard-cache');
 
 const STORE = getStorePath('stats.json');
 
@@ -15,7 +16,12 @@ const stats = normalizeStatsStore(readJsonFileSync(
   (value) => !!value && typeof value === 'object' && !Array.isArray(value)
 )); // clientId -> { games, wins, streak, xp }
 
-const persist = createJsonWriter(STORE, () => stats);
+const schedulePersist = createJsonWriter(STORE, () => stats);
+const leaderboardCache = createLeaderboardCache(() => rankLeaderboardRows(stats), 1);
+function persist() {
+  leaderboardCache.invalidate();
+  schedulePersist();
+}
 
 // Linear per-level cost (level N costs N*200 XP) has a triangular
 // cumulative curve: completing n levels costs 100*n*(n+1). Solve the
@@ -38,9 +44,8 @@ function levelFromXp(rawXp) {
   };
 }
 
-function rankLeaderboard(source, limit = 50, clientId = null) {
-  const safeLimit = Math.max(1, Math.min(100, Math.floor(Number(limit) || 50)));
-  const rows = Object.entries(source || {})
+function rankLeaderboardRows(source) {
+  return Object.entries(source || {})
     .map(([id, value]) => {
       const games = Math.max(0, Math.floor(Number(value?.games) || 0));
       const wins = Math.max(0, Math.min(games, Math.floor(Number(value?.wins) || 0)));
@@ -68,7 +73,11 @@ function rankLeaderboard(source, limit = 50, clientId = null) {
       || a.clientId.localeCompare(b.clientId)
     ))
     .map((row, index) => ({ ...row, rank: index + 1 }));
+}
 
+function rankLeaderboard(source, limit = 50, clientId = null) {
+  const safeLimit = Math.max(1, Math.min(100, Math.floor(Number(limit) || 50)));
+  const rows = rankLeaderboardRows(source);
   const yourRank = clientId
     ? (rows.find((row) => row.clientId === clientId)?.rank || null)
     : null;
@@ -81,7 +90,7 @@ function rankLeaderboard(source, limit = 50, clientId = null) {
 }
 
 function getLeaderboard(limit = 50, clientId = null) {
-  return rankLeaderboard(stats, limit, clientId);
+  return leaderboardCache.get('global', limit, clientId);
 }
 
 // Days are counted on French time: the launch market is francophone, and a

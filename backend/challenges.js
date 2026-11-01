@@ -96,13 +96,13 @@ function createChallenges({
   };
 }
 const social = require('./social');
+const { send } = require('./transport');
 const instance = createChallenges({
   notify(challenge) {
     require('./messaging').updateChallenge(challenge);
     for (const id of [challenge.fromId, challenge.toId]) {
       const ws = social.getWs(id);
-      if (ws?.readyState === 1)
-        ws.send(JSON.stringify({ type: 'challenge_updated', challenge }));
+      send(ws, { type: 'challenge_updated', challenge });
     }
   },
 });

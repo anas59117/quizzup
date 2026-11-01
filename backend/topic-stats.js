@@ -45,6 +45,8 @@ function normalize(raw) {
 
 const store = normalize(readJsonFileSync(STORE, {}, isPlainObject));
 const persist = createJsonWriter(STORE, () => store);
+const { createLeaderboardCache } = require('./leaderboard-cache');
+const leaderboardCache = createLeaderboardCache(rankTopicRows);
 
 function record(clientId, categoryKey, { won = false, xp = 0, answers, updatedAt = Date.now() } = {}) {
   if (!clientId || typeof categoryKey !== 'string' || !KEY_RE.test(categoryKey)) return;
@@ -55,6 +57,7 @@ function record(clientId, categoryKey, { won = false, xp = 0, answers, updatedAt
   if (won) t.wins += 1;
   t.xp = Math.min(Number.MAX_SAFE_INTEGER, t.xp + toCount(xp));
   t.updatedAt = toCount(updatedAt);
+  leaderboardCache.invalidate(categoryKey);
   if (Array.isArray(answers)) {
     const { questionKey } = require('./questions');
     const bank = bankKeys(categoryKey);
@@ -94,8 +97,7 @@ function getTopic(clientId, categoryKey) {
   return withLevel(categoryKey, t || { games: 0, wins: 0, xp: 0 });
 }
 
-function getTopicLeaderboard(categoryKey, limit = 50, clientId = null) {
-  const safeLimit = Math.max(1, Math.min(100, Math.floor(Number(limit) || 50)));
+function rankTopicRows(categoryKey) {
   const rows = [];
   for (const [id, topics] of Object.entries(store)) {
     const t = topics[categoryKey];
@@ -106,8 +108,11 @@ function getTopicLeaderboard(categoryKey, limit = 50, clientId = null) {
     r.rank = i + 1;
     r.winRate = r.games ? Math.round((r.wins / r.games) * 100) : 0;
   });
-  const yourRank = clientId ? (rows.find((r) => r.clientId === clientId)?.rank || null) : null;
-  return { total: rows.length, yourRank, entries: rows.slice(0, safeLimit) };
+  return rows;
+}
+
+function getTopicLeaderboard(categoryKey, limit = 50, clientId = null) {
+  return leaderboardCache.get(categoryKey, limit, clientId);
 }
 
 function getRecentTopics(clientId, limit = 12) {

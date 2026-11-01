@@ -25,10 +25,20 @@ const topicStats = require('./topic-stats');
 const follows = require('./follows');
 const notifications = require('./notifications');
 const crypto = require('crypto');
+const { monitorEventLoopDelay } = require('node:perf_hooks');
 const { ROOM_TTL_MS, CODE_ALPHABET, MAX_ROOM_PLAYERS } = require('./config');
 const { randomRoomCode } = require('./ids');
 const { cleanDisplayName, cleanAvatar, isPhotoPath } = require('./sanitize');
 const { mountPhotoRoutes } = require('./profile-photos');
+
+function boundedSetting(name, fallback, min, max) {
+  const raw = String(process.env[name] || '').trim();
+  const value = raw ? Number(raw) : NaN;
+  return Number.isFinite(value) ? Math.max(min, Math.min(max, Math.floor(value))) : fallback;
+}
+// A configurable admission bound, not a claim about a host's measured capacity.
+const MAX_WS_CONNECTIONS = boundedSetting('MAX_WS_CONNECTIONS', 1000, 2, 100000);
+const WS_IDENTIFY_TIMEOUT_MS = boundedSetting('WS_IDENTIFY_TIMEOUT_MS', 15000, 250, 60000);
 
 const app = express();
 const server = http.createServer(app);
@@ -53,8 +63,23 @@ const wss = new WebSocketServer({
   server,
   path: '/ws',
   maxPayload: 16 * 1024,
-  verifyClient: ({ origin }) => isAllowedOrigin(origin),
+  verifyClient: ({ origin }, done) => {
+    if (!isAllowedOrigin(origin)) return done(false, 403, 'Forbidden');
+    if (shuttingDown || wss.clients.size >= MAX_WS_CONNECTIONS) {
+      return done(false, 503, 'Server busy', { 'Retry-After': '5' });
+    }
+    done(true);
+  },
 });
+
+const loopDelay = monitorEventLoopDelay({ resolution: 20 });
+loopDelay.enable();
+let loopSnapshot = { p99Ms: 0, maxMs: 0 };
+const metricsTimer = setInterval(() => {
+  loopSnapshot = { p99Ms: loopDelay.percentile(99) / 1e6, maxMs: loopDelay.max / 1e6 };
+  loopDelay.reset();
+}, 5000);
+metricsTimer.unref();
 
 app.use(cors(
   !allowedOrigins.length || allowAnyOrigin
@@ -161,6 +186,9 @@ async function handleIdentify(ws, data, state) {
   const requestedName = cleanDisplayName(data.name, state.name);
 
   const uid = await verifyIdToken(data.idToken);
+  // Verification can outlive the identification deadline or a network close.
+  // Never register presence or recover a game onto an unusable transport.
+  if (ws.readyState !== 1) return;
   if (!uid) {
     game.send(ws, { type: 'auth_required', code: 'INVALID_TOKEN' });
     return;
@@ -1259,6 +1287,9 @@ function handleGameplay(ws, data, state) {
 }
 
 wss.on('connection', (ws, req) => {
+  // Protocol errors (including maxPayload) belong to this connection, not
+  // the Node process. ws already initiates the protocol close itself.
+  ws.on('error', () => {});
   const ip = getClientIp(req);
   const currentConnections = connectionsByIp.get(ip) || 0;
   if (MAX_WS_CONNECTIONS_PER_IP > 0 && currentConnections >= MAX_WS_CONNECTIONS_PER_IP) {
@@ -1279,13 +1310,18 @@ wss.on('connection', (ws, req) => {
   };
 
   ws.socialState = state;
+  const identifyDeadline = setTimeout(() => {
+    if (!state.clientId) ws.close(1008, 'Identification timeout');
+  }, WS_IDENTIFY_TIMEOUT_MS);
+  identifyDeadline.unref();
+  ws.once('close', () => clearTimeout(identifyDeadline));
   game.send(ws, { type: 'session', playerId: state.playerId });
 
   ws.on('message', async (raw) => {
+    if (!limiter.check(state.playerId) || !ipLimiter.check(ip)) return;
     let data;
     try { data = JSON.parse(raw); } catch { return; }
     if (!data || typeof data.type !== 'string') return;
-    if (!limiter.check(state.playerId) || !ipLimiter.check(ip)) return;
 
     try {
       if (data.type === 'identify') {
@@ -1297,6 +1333,7 @@ wss.on('connection', (ws, req) => {
           return;
         }
         await handleIdentify(ws, data, state);
+        if (state.clientId) clearTimeout(identifyDeadline);
         return;
       }
       if (await handleMessaging(ws, data, state)) return;
@@ -1404,6 +1441,7 @@ app.get('/health', (req, res) =>
     activeGames: game.activeGames.size,
     waiting: waitingPlayers.length,
     connections: wss.clients.size,
+    acceptingConnections: !shuttingDown && wss.clients.size < MAX_WS_CONNECTIONS,
     persistentStorageConfigured: !!process.env.DATA_DIR,
     guestAuthConfigured: !!process.env.GUEST_AUTH_SECRET,
   })
@@ -1434,6 +1472,24 @@ app.get('/admin/category-stats', (req, res) => {
   res.json(categoryStats.getReport({ days: req.query.days, labels }));
 });
 
+app.get('/admin/runtime', (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  if (!process.env.ADMIN_STATS_TOKEN) return res.status(404).json({ error: 'not_found' });
+  if (!adminTokenOk(req)) return res.status(401).json({ error: 'unauthorized' });
+  const memory = process.memoryUsage();
+  res.json({
+    uptimeSeconds: Math.floor(process.uptime()),
+    revision: process.env.RAILWAY_GIT_COMMIT_SHA?.slice(0, 12) || null,
+    connections: wss.clients.size, connectionLimit: MAX_WS_CONNECTIONS,
+    activeMatches: [...game.activeGames.values()].filter(g => g.status === 'active').length,
+    waitingPlayers: waitingPlayers.length, privateRooms: privateRooms.size,
+    memory: { rssMB: memory.rss / 1048576, heapUsedMB: memory.heapUsed / 1048576 },
+    eventLoopDelay: { windowSeconds: 5, ...loopSnapshot },
+    trustProxy: process.env.TRUST_PROXY === 'true',
+    acceptingConnections: !shuttingDown && wss.clients.size < MAX_WS_CONNECTIONS,
+  });
+});
+
 
 const heartbeatTimer = setInterval(() => {
   wss.clients.forEach((ws) => {
@@ -1462,7 +1518,7 @@ setInterval(() => {
   sweepCache();
 }, 60 * 1000);
 
-server.on('close', () => clearInterval(heartbeatTimer));
+server.on('close', () => { clearInterval(heartbeatTimer); clearInterval(metricsTimer); loopDelay.disable(); });
 
 let shuttingDown = false;
 async function gracefulShutdown(signal) {
