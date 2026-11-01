@@ -4,6 +4,11 @@ const delay = monitorEventLoopDelay({ resolution: 10 });
 delay.enable();
 let lastCpu = process.cpuUsage();
 let lastTime = performance.now();
+process.on('message', message => {
+  if (message?.type !== 'load_ready') return;
+  delay.reset(); lastCpu = process.cpuUsage(); lastTime = performance.now();
+  if (process.connected) process.send({ type: 'load_ready' });
+});
 setInterval(() => {
   const now = performance.now();
   const cpu = process.cpuUsage();

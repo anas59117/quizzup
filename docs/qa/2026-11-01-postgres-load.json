@@ -1,0 +1,22 @@
+{
+  "localOnly": true,
+  "storageBackend": "postgres",
+  "node": "v24.19.0",
+  "players": 200,
+  "concurrentDuels": 100,
+  "historicalAccounts": 10000,
+  "completed": 200,
+  "answers": 1200,
+  "acknowledgements": 1200,
+  "durationSeconds": 43,
+  "identifyP95Ms": 211.25,
+  "leaderboardP95Ms": 374.14,
+  "answerAckP95Ms": 6.01,
+  "answerAckP99Ms": 19.15,
+  "healthP95Ms": 24.91,
+  "peakRssMB": 239,
+  "eventLoopP99PeakMs": 681.57,
+  "eventLoopMaxMs": 681.57,
+  "peakCpuCores": 1.28,
+  "errors": []
+}

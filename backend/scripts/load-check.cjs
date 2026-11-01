@@ -24,14 +24,30 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
     profiles[`historical_${i}`] = { name: `History ${i}`, avatar: 'robot' };
     topics[`historical_${i}`] = { harry_potter: { games: 10, wins: 5, xp: i * 10 } };
   }
-  const server = await isolatedServer({ TRUST_PROXY: 'true', MAX_WS_CONNECTIONS_PER_IP: '0' },
-    { stats, social: { profiles, friends: {}, requests: {} }, 'topic-stats': topics }, true);
+  const seed = { stats, social: { profiles, friends: {}, requests: {} }, 'topic-stats': topics };
+  const postgresUrl = process.env.LOAD_POSTGRES_URL;
+  if (postgresUrl) {
+    const url = new URL(postgresUrl);
+    assert.equal(url.hostname, '127.0.0.1'); assert.match(url.pathname, /^\/quizzup_test/);
+    const { STORE_NAMES, emptyStore } = require('../storage/catalog');
+    const db = await require('../storage/postgres-store').PostgresStore.open({ connectionString: postgresUrl, create: true });
+    try { await db.importDataset({ ...Object.fromEntries(STORE_NAMES.map(name => [name, emptyStore(name)])), ...seed }); }
+    finally { await db.close(); }
+  }
+  const server = await isolatedServer({ TRUST_PROXY: 'true', MAX_WS_CONNECTIONS_PER_IP: '0',
+    STORAGE_BACKEND: postgresUrl ? 'postgres' : 'json', ...(postgresUrl ? { DATABASE_URL: postgresUrl } : {}) }, seed, true);
   const previousSecret = process.env.GUEST_AUTH_SECRET;
   process.env.GUEST_AUTH_SECRET = server.secret;
   const sockets = [], errors = [], runtime = [], identificationMs = [], leaderboardMs = [], ackMs = [], healthMs = [];
   let completed = 0, answers = 0, healthy = true;
   const start = performance.now();
   server.child.on('message', message => { if (message.type === 'load_sample') runtime.push(message); });
+  // Measure the running service, separately from pre-listen database hydration.
+  await new Promise((resolve, reject) => {
+    const timeout = setTimeout(() => reject(Error('Runtime probe did not reset')), 5000);
+    const ready = message => { if (message.type === 'load_ready') { clearTimeout(timeout); server.child.off('message', ready); runtime.length = 0; resolve(); } };
+    server.child.on('message', ready); server.child.send({ type: 'load_ready' });
+  });
   let probing = false;
   const health = setInterval(async () => {
     if (probing) return;
@@ -92,7 +108,7 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
     sockets.forEach(ws => ws.close());
     await sleep(1500);
     clearInterval(health);
-    const report = { localOnly: true, node: process.version, players, concurrentDuels: players / 2, historicalAccounts: historySize,
+    const report = { localOnly: true, storageBackend: postgresUrl ? 'postgres' : 'json', node: process.version, players, concurrentDuels: players / 2, historicalAccounts: historySize,
       completed, answers, acknowledgements: ackMs.length, durationSeconds: Math.round((performance.now() - start) / 1000),
       identifyP95Ms: percentile(identificationMs, .95), leaderboardP95Ms: percentile(leaderboardMs, .95),
       answerAckP95Ms: percentile(ackMs, .95), answerAckP99Ms: percentile(ackMs, .99), healthP95Ms: percentile(healthMs, .95),
@@ -100,7 +116,11 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
       eventLoopMaxMs: percentile(runtime.map(s => s.loopMaxMs), 1), peakCpuCores: percentile(runtime.map(s => s.cpuCores), 1), errors };
     await server.close();
     assert.equal(server.child.exitCode, 0, 'Graceful shutdown flushes all stores successfully');
-    const persisted = JSON.parse(fs.readFileSync(path.join(server.dir, 'stats.json'), 'utf8'));
+    let persisted;
+    if (postgresUrl) {
+      const db = await require('../storage/postgres-store').PostgresStore.open({ connectionString: postgresUrl, readOnly: true });
+      try { persisted = (await db.load()).stats; } finally { await db.close(); }
+    } else persisted = JSON.parse(fs.readFileSync(path.join(server.dir, 'stats.json'), 'utf8'));
     assert.equal(Object.keys(persisted).filter(id => id.startsWith('guest_') && persisted[id].games === 1).length, players, 'Every finished game is persisted exactly once');
     const out = path.resolve(__dirname, '../../.mobile-preview');
     fs.mkdirSync(out, { recursive: true });

@@ -1,4 +1,6 @@
 require('dotenv').config();
+const storage = require('./storage/runtime');
+storage.assertReady();
 const express = require('express');
 const { WebSocketServer } = require('ws');
 const cors = require('cors');
@@ -42,6 +44,16 @@ const WS_IDENTIFY_TIMEOUT_MS = boundedSetting('WS_IDENTIFY_TIMEOUT_MS', 15000, 2
 
 const app = express();
 const server = http.createServer(app);
+let shuttingDown = false;
+let activeHttpRequests = 0;
+app.use((req, res, next) => {
+  if (shuttingDown) return res.status(503).set('Retry-After', '5').json({ code: 'SERVER_RESTARTING' });
+  activeHttpRequests++;
+  let finished = false;
+  const done = () => { if (!finished) { finished = true; activeHttpRequests--; } };
+  res.once('finish', done); res.once('close', done);
+  next();
+});
 
 function normalizeOrigin(origin) {
   if (!origin) return '';
@@ -111,6 +123,7 @@ const connectionsByIp = new Map();
 const roomByClient = new Map();
 const pendingPlayers = new Set();
 const pendingClients = new Set();
+let activeMessageHandlers = 0;
 const limiter = new RateLimiter();
 const ipLimiter = new RateLimiter(2000, 40);
 const guestAuthLimiter = new RateLimiter(60 * 1000, 30);
@@ -1318,11 +1331,13 @@ wss.on('connection', (ws, req) => {
   game.send(ws, { type: 'session', playerId: state.playerId });
 
   ws.on('message', async (raw) => {
+    if (shuttingDown) return;
     if (!limiter.check(state.playerId) || !ipLimiter.check(ip)) return;
     let data;
     try { data = JSON.parse(raw); } catch { return; }
     if (!data || typeof data.type !== 'string') return;
 
+    activeMessageHandlers++;
     try {
       if (data.type === 'identify') {
         if (
@@ -1345,6 +1360,8 @@ wss.on('connection', (ws, req) => {
     } catch (err) {
       console.error(`[ws] handler error for "${data.type}":`, err);
       game.send(ws, { type: 'error', message: 'Internal error' });
+    } finally {
+      activeMessageHandlers--;
     }
   });
 
@@ -1355,6 +1372,7 @@ wss.on('connection', (ws, req) => {
       else connectionsByIp.set(ip, remainingConnections);
 
       limiter.remove(state.playerId);
+      if (shuttingDown) return;
       if (state.clientId) {
         social.setOffline(state.clientId, ws);
         if (!social.isOnline(state.clientId)) notifyPresence(state.clientId, false);
@@ -1420,6 +1438,10 @@ app.post('/auth/link-google', async (req, res) => {
   }
 
   const firebaseUid = await verifyFirebaseIdToken(firebaseToken);
+  if (shuttingDown || res.destroyed) {
+    if (!res.destroyed) res.status(503).json({ code: 'SERVER_RESTARTING' });
+    return;
+  }
   if (!firebaseUid) {
     res.status(401).json({ code: 'INVALID_FIREBASE_TOKEN' });
     return;
@@ -1444,6 +1466,7 @@ app.get('/health', (req, res) =>
     acceptingConnections: !shuttingDown && wss.clients.size < MAX_WS_CONNECTIONS,
     persistentStorageConfigured: !!process.env.DATA_DIR,
     guestAuthConfigured: !!process.env.GUEST_AUTH_SECRET,
+    storage: storage.info(),
   })
 );
 app.get('/categories', (req, res) => res.json(listCategories()));
@@ -1520,7 +1543,6 @@ setInterval(() => {
 
 server.on('close', () => { clearInterval(heartbeatTimer); clearInterval(metricsTimer); loopDelay.disable(); });
 
-let shuttingDown = false;
 async function gracefulShutdown(signal) {
   if (shuttingDown) return;
   shuttingDown = true;
@@ -1532,20 +1554,32 @@ async function gracefulShutdown(signal) {
     try { ws.close(1012, 'Server restart'); } catch {}
   });
 
+  // Stop round/recovery timers before taking the final durable snapshot.
+  for (const g of game.activeGames.values()) {
+    clearTimeout(g.roundTimer);
+    (g.botTimers || []).forEach(clearTimeout);
+    (g.players || []).forEach(p => clearTimeout(p.reconnectTimer));
+  }
+
   const forceExit = setTimeout(() => {
     console.error('Graceful shutdown timed out.');
     process.exit(1);
-  }, 5000);
+  }, 25000);
   forceExit.unref();
 
   try {
+    const networkClosed = new Promise(resolve => server.close(resolve));
+    server.closeIdleConnections?.();
+    while (activeMessageHandlers || activeHttpRequests) await new Promise(resolve => setTimeout(resolve, 10));
     await flushAllJsonWriters();
-    server.close(() => {
-      clearTimeout(forceExit);
-      process.exit(0);
-    });
+    await storage.close();
+    wss.clients.forEach(ws => ws.terminate());
+    server.closeAllConnections?.();
+    await networkClosed;
+    clearTimeout(forceExit);
+    process.exit(0);
   } catch (err) {
-    console.error('Failed to flush persistent state during shutdown:', err);
+    console.error('Failed to flush persistent state during shutdown:', storage.postgres() ? (err.code || 'STORAGE_FLUSH_FAILED') : err);
     clearTimeout(forceExit);
     process.exit(1);
   }

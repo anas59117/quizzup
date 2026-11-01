@@ -14,6 +14,7 @@ function ensureDataDir(dir) {
 }
 
 function getStorePath(filename) {
+  if (require('./storage/runtime').postgres()) return path.join(resolveDataDir(), filename);
   const dataDir = ensureDataDir(resolveDataDir());
   const target = path.join(dataDir, filename);
 

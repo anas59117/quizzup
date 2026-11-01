@@ -5,6 +5,7 @@
 // cannot silently turn a partially-written JSON file into a total data reset.
 
 const fs = require('fs');
+const storage = require('./storage/runtime');
 
 const writerControllers = new Set();
 
@@ -70,6 +71,7 @@ function atomicWriteFile(filePath, payload, callback) {
 }
 
 function readJsonFileSync(filePath, fallback, validate = () => true) {
+  if (storage.postgres()) return storage.read(filePath, validate);
   const candidates = [filePath, `${filePath}.bak`];
 
   for (const candidate of candidates) {
@@ -86,7 +88,7 @@ function readJsonFileSync(filePath, fallback, validate = () => true) {
   return fallback;
 }
 
-function createJsonWriter(filePath, getSnapshot, delayMs = 1000, writeFile = atomicWriteFile) {
+function createJsonWriter(filePath, getSnapshot, delayMs = 1000, writeFile = storage.postgres() ? storage.write : atomicWriteFile) {
   let timer = null;
   let writing = false;
   let dirty = false;
@@ -137,7 +139,7 @@ function createJsonWriter(filePath, getSnapshot, delayMs = 1000, writeFile = ato
         // flush callers so shutdown can detect that durability failed.
         dirty = true;
         rejectWaiters(err);
-        console.error(`Failed to persist JSON store ${filePath}:`, err);
+        console.error(`Failed to persist store ${filePath}:`, storage.postgres() ? (err.code || 'STORAGE_WRITE_FAILED') : err);
         return;
       }
       if (dirty) {

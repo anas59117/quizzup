@@ -12,6 +12,29 @@ function connect(port, sockets) {
   });
 }
 
+test('shutdown drains HTTP authentication and refuses late account mutations', { timeout: 15000 }, async () => {
+  const server = await isolatedServer({}, {}, false, [path.join(__dirname, 'test-support/slow-firebase.cjs')]);
+  const previous = process.env.GUEST_AUTH_SECRET;
+  try {
+    process.env.GUEST_AUTH_SECRET = server.secret;
+    const auth = require('./guest-auth').issueGuestToken();
+    const started = new Promise(resolve => server.child.on('message', message => { if (message.type === 'test-firebase-started') resolve(); }));
+    const request = fetch(`http://127.0.0.1:${server.port}/auth/link-google`, {
+      method: 'POST', headers: { authorization: `Bearer ${auth.token}`, 'x-firebase-id-token': 'isolated-test-token' },
+    });
+    await started;
+    const stopping = server.close();
+    assert.equal((await request).status, 503);
+    await stopping;
+    assert.equal(server.child.exitCode, 0, server.logs());
+    const links = JSON.parse(fs.readFileSync(path.join(server.dir, 'account-links.json'), 'utf8'));
+    assert.equal(links.firebaseToCanonical?.['shutdown-test-firebase'], undefined);
+  } finally {
+    await server.close();
+    if (previous === undefined) delete process.env.GUEST_AUTH_SECRET; else process.env.GUEST_AUTH_SECRET = previous;
+  }
+});
+
 test('a late authentication result cannot register a closed socket or recover its game', { timeout: 15000 }, async () => {
   const server = await isolatedServer({ WS_IDENTIFY_TIMEOUT_MS: '250' }, {}, false, [path.join(__dirname, 'test-support/slow-auth.cjs')]);
   const sockets = [];

@@ -13,8 +13,8 @@ async function isolatedServer(env = {}, seed = {}, probe = false, preloads = [])
   await new Promise(resolve => portProbe.listen(0, '127.0.0.1', resolve));
   const port = portProbe.address().port;
   await new Promise(resolve => portProbe.close(resolve));
-  const secret = require('node:crypto').randomBytes(32).toString('hex');
-  const child = fork(path.resolve(__dirname, '../server.js'), [], {
+  const secret = env.GUEST_AUTH_SECRET || require('node:crypto').randomBytes(32).toString('hex');
+  const child = fork(path.resolve(__dirname, env.STORAGE_BACKEND === 'postgres' ? '../start.js' : '../server.js'), [], {
     cwd: path.resolve(__dirname, '..'), windowsHide: true, silent: true,
     execArgv: [path.join(__dirname, 'shutdown.cjs'), ...(probe ? [path.join(__dirname, 'runtime-probe.cjs')] : []), ...preloads].flatMap(file => ['--require', file]),
     env: { ...process.env, NODE_ENV: 'test', DATA_DIR: dir, PORT: String(port), CORS_ORIGIN: '*', GUEST_AUTH_SECRET: secret, ...env },
@@ -25,7 +25,7 @@ async function isolatedServer(env = {}, seed = {}, probe = false, preloads = [])
   const close = async () => {
     if (child.exitCode !== null || child.signalCode !== null) return;
     await new Promise(resolve => {
-      const timeout = setTimeout(() => child.kill('SIGKILL'), 7000);
+      const timeout = setTimeout(() => child.kill('SIGKILL'), 28000);
       child.once('exit', () => { clearTimeout(timeout); resolve(); });
       if (child.connected) child.send({ type: 'test_shutdown' });
       else child.kill('SIGTERM');
