@@ -1,6 +1,6 @@
 # Catalogue expansion: 55 covers
 
-This collection contains 23 real photographs, 13 sourced game/series promotional artworks, and 19 illustrations generated for QuizzUp. Generated images are not official posters. The previous approved cover collection is unchanged.
+This collection originally shipped with 23 real photographs, 13 sourced game/series promotional artworks, and 19 illustrations generated for QuizzUp. The Congo RDC cover now uses the national flag SVG instead of the river photograph: 22 active photographs and one flag. The SVG is displayed in full, preserving the star and proportions. Generated images are not official posters. The previous approved cover collection is unchanged.
 
 See `credits.json` and `/image-credits.html` for each image's original source, author, stated license, and preparation information. Promotional artwork credits describe its source rather than claiming a free-content license.
 
