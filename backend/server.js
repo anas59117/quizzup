@@ -7,6 +7,7 @@ const cors = require('cors');
 const http = require('http');
 const { listCategories, warmCache, questionKey, CATEGORIES } = require('./questions');
 const reports = require('./reports');
+const userReports = require('./user-reports');
 const social = require('./social');
 const posts = require('./posts');
 const messaging = require('./messaging');
@@ -1497,6 +1498,50 @@ app.post('/auth/delete-account', async (req, res) => {
 
   res.set('Cache-Control', 'no-store');
   res.json({ ok: true });
+});
+
+// --- User report & block (Guideline 1.2) ---
+
+app.post('/users/report', express.json(), async (req, res) => {
+  const token = authorizationBearer(req);
+  if (!token) return res.status(401).json({ code: 'UNAUTHORIZED' });
+
+  let uid;
+  try {
+    const decoded = await verifyFirebaseIdToken(token);
+    uid = decoded.uid;
+  } catch {
+    const guest = verifyGuestToken(token);
+    if (!guest) return res.status(401).json({ code: 'INVALID_TOKEN' });
+    uid = guest;
+  }
+
+  const { targetId, targetName, reason } = req.body || {};
+  if (!targetId) return res.status(400).json({ code: 'MISSING_TARGET' });
+
+  const ok = userReports.reportUser(uid, targetId, targetName, reason);
+  res.json({ ok });
+});
+
+app.post('/users/block', express.json(), async (req, res) => {
+  const token = authorizationBearer(req);
+  if (!token) return res.status(401).json({ code: 'UNAUTHORIZED' });
+
+  let uid;
+  try {
+    const decoded = await verifyFirebaseIdToken(token);
+    uid = decoded.uid;
+  } catch {
+    const guest = verifyGuestToken(token);
+    if (!guest) return res.status(401).json({ code: 'INVALID_TOKEN' });
+    uid = guest;
+  }
+
+  const { targetId } = req.body || {};
+  if (!targetId) return res.status(400).json({ code: 'MISSING_TARGET' });
+
+  const ok = userReports.blockUser(uid, targetId);
+  res.json({ ok });
 });
 
 app.get('/health', (req, res) =>

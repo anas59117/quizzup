@@ -55,6 +55,13 @@ enum L10n {
             "deleteAccountConfirm": "Supprimer",
             "deleteAccountFailed": "Impossible de supprimer le compte. Réessaie.",
             "cancel": "Annuler",
+            "reportPlayer": "Signaler",
+            "blockPlayer": "Bloquer",
+            "reportReason": "Pseudo ou comportement inapproprié",
+            "reportSent": "Signalement envoyé",
+            "playerBlocked": "Joueur bloqué",
+            "reportBlockTitle": "Signaler ce joueur ?",
+            "reportBlockMessage": "Tu peux signaler un pseudo ou comportement inapproprié, ou bloquer ce joueur.",
         ],
         "en": [
             "legendBack": "THE LEGEND IS BACK",
@@ -105,6 +112,13 @@ enum L10n {
             "deleteAccountConfirm": "Delete",
             "deleteAccountFailed": "Couldn't delete account. Please try again.",
             "cancel": "Cancel",
+            "reportPlayer": "Report",
+            "blockPlayer": "Block",
+            "reportReason": "Inappropriate username or behavior",
+            "reportSent": "Report sent",
+            "playerBlocked": "Player blocked",
+            "reportBlockTitle": "Report this player?",
+            "reportBlockMessage": "You can report inappropriate usernames or behavior, or block this player.",
         ],
     ]
 

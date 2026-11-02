@@ -38,6 +38,9 @@ struct ResultView: View {
                                 HStack {
                                     Text(row.avatar)
                                     Text(row.name)
+                                    if row.id != game.myId {
+                                        ReportBlockButton(targetId: row.id, targetName: row.name)
+                                    }
                                     Spacer()
                                     Text("\(row.score)").bold()
                                 }

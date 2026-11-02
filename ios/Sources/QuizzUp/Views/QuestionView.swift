@@ -20,7 +20,10 @@ struct QuestionView: View {
                 if !game.opponents.isEmpty {
                     HStack {
                         ForEach(game.opponents) { o in
-                            Text("\(o.avatar) \(o.name)").font(.caption2).foregroundColor(Theme.textDim)
+                            HStack(spacing: 4) {
+                                Text("\(o.avatar) \(o.name)").font(.caption2).foregroundColor(Theme.textDim)
+                                ReportBlockButton(targetId: o.id, targetName: o.name)
+                            }
                         }
                     }
                 }

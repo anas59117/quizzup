@@ -258,6 +258,40 @@ final class GameSocket: ObservableObject {
         stage = .home
     }
 
+    // MARK: - Report / Block (Guideline 1.2)
+
+    func reportUser(targetId: String, targetName: String, reason: String = "offensive") {
+        guard let idToken else { return }
+        var comps = URLComponents()
+        comps.scheme = "https"
+        comps.host = Self.backendHost
+        comps.path = "/users/report"
+        guard let url = comps.url else { return }
+        var req = URLRequest(url: url)
+        req.httpMethod = "POST"
+        req.setValue("Bearer \(idToken)", forHTTPHeaderField: "Authorization")
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        req.httpBody = try? JSONSerialization.data(withJSONObject: [
+            "targetId": targetId, "targetName": targetName, "reason": reason
+        ])
+        URLSession.shared.dataTask(with: req) { _, _, _ in }.resume()
+    }
+
+    func blockUser(targetId: String) {
+        guard let idToken else { return }
+        var comps = URLComponents()
+        comps.scheme = "https"
+        comps.host = Self.backendHost
+        comps.path = "/users/block"
+        guard let url = comps.url else { return }
+        var req = URLRequest(url: url)
+        req.httpMethod = "POST"
+        req.setValue("Bearer \(idToken)", forHTTPHeaderField: "Authorization")
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        req.httpBody = try? JSONSerialization.data(withJSONObject: ["targetId": targetId])
+        URLSession.shared.dataTask(with: req) { _, _, _ in }.resume()
+    }
+
     func disconnect() {
         stopTimer()
         task?.cancel(with: .goingAway, reason: nil)
