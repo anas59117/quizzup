@@ -19,6 +19,8 @@ targets:
     platform: iOS
     sources:
       - Sources/QuizzUp
+    resources:
+      - path: Sources/QuizzUp/Resources/PrivacyInfo.xcprivacy
     dependencies:
       - package: FirebaseSDK
         product: FirebaseAuth
@@ -36,7 +38,7 @@ targets:
         # it's added. Google Sign-In will fail silently without this.
         CFBundleURLTypes:
           - CFBundleURLSchemes:
-              - REPLACE_WITH_REVERSED_CLIENT_ID
+              - com.googleusercontent.apps.825347964948-bslauj5e58lf5fqkd72kfu3mm46jvngs
     entitlements:
       path: Sources/QuizzUp/Resources/QuizzUp.entitlements
       properties:

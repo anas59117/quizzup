@@ -289,5 +289,11 @@ function claimAdReward(clientId, gameId, now = Date.now()) {
   return { ok: true, coins: last.coins };
 }
 
+function deleteUser(clientId) {
+  if (!clientId || !stats[clientId]) return;
+  delete stats[clientId];
+  persist();
+}
+
 module.exports = { getStats, getLeaderboard, rankLeaderboard, recordResult, recordPlayDay, dayKey, levelFromXp,
-  getFrame, buyFrame, equipFrame, setLastReward, claimAdReward };
+  getFrame, buyFrame, equipFrame, setLastReward, claimAdReward, deleteUser };

@@ -49,6 +49,12 @@ enum L10n {
             "signInApple": "Continuer avec Apple",
             "signInGoogle": "Continuer avec Google",
             "signInFailed": "Connexion impossible. Réessaie.",
+            "deleteAccount": "Supprimer mon compte",
+            "deleteAccountConfirmTitle": "Supprimer ton compte ?",
+            "deleteAccountConfirmMessage": "Toutes tes données seront supprimées définitivement. Cette action est irréversible.",
+            "deleteAccountConfirm": "Supprimer",
+            "deleteAccountFailed": "Impossible de supprimer le compte. Réessaie.",
+            "cancel": "Annuler",
         ],
         "en": [
             "legendBack": "THE LEGEND IS BACK",
@@ -93,6 +99,12 @@ enum L10n {
             "signInApple": "Continue with Apple",
             "signInGoogle": "Continue with Google",
             "signInFailed": "Couldn't sign in. Please try again.",
+            "deleteAccount": "Delete my account",
+            "deleteAccountConfirmTitle": "Delete your account?",
+            "deleteAccountConfirmMessage": "All your data will be permanently deleted. This action cannot be undone.",
+            "deleteAccountConfirm": "Delete",
+            "deleteAccountFailed": "Couldn't delete account. Please try again.",
+            "cancel": "Cancel",
         ],
     ]
 

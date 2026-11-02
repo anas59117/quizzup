@@ -65,4 +65,10 @@ function take(clientId, now = Date.now()) {
   return list.filter((n) => now - n.at <= MAX_AGE_MS);
 }
 
-module.exports = { push, take, normalize };
+function deleteUser(clientId) {
+  if (!clientId) return;
+  delete inbox[clientId];
+  persist();
+}
+
+module.exports = { push, take, normalize, deleteUser };

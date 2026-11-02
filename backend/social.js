@@ -135,8 +135,31 @@ function getPendingRequests(clientId) {
   return (requests[clientId] || []).map((id) => profileOf(id)).filter(Boolean);
 }
 
+function deleteUser(clientId) {
+  if (!clientId) return;
+  // Remove profile
+  delete profiles[clientId];
+  // Remove from all friends lists (both directions)
+  const myFriends = friends[clientId] || [];
+  for (const fid of myFriends) {
+    if (friends[fid]) friends[fid] = friends[fid].filter((f) => f !== clientId);
+  }
+  delete friends[clientId];
+  // Remove from all pending requests (both sent and received)
+  delete requests[clientId];
+  for (const [id, list] of Object.entries(requests)) {
+    if (list.includes(clientId)) {
+      requests[id] = list.filter((r) => r !== clientId);
+      if (!requests[id].length) delete requests[id];
+    }
+  }
+  // Remove online presence
+  online.delete(clientId);
+  persist();
+}
+
 module.exports = {
   setOnline, updateProfile, setOffline, isOnline, getWs, getAllOnline, areFriends,
   sendRequest, acceptRequest, declineRequest, removeFriend,
-  getFriendsList, getPendingRequests, profileOf,
+  getFriendsList, getPendingRequests, profileOf, deleteUser,
 };

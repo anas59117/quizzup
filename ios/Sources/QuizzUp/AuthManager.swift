@@ -35,6 +35,69 @@ final class AuthManager: NSObject, ObservableObject {
         user = nil
     }
 
+    // MARK: - Account deletion (App Store Guideline 5.1.1(v))
+
+    @Published var isDeletingAccount = false
+    @Published var deleteError: String?
+
+    func deleteAccount() async {
+        guard let firebaseUser = user else { return }
+        isDeletingAccount = true
+        deleteError = nil
+
+        // 1. Get a fresh token to authenticate with backend
+        guard let idToken = try? await firebaseUser.getIDToken() else {
+            deleteError = L10n.t("deleteAccountFailed", lang: L10n.detectDefaultLang())
+            isDeletingAccount = false
+            return
+        }
+
+        // 2. Call backend to wipe server-side data
+        let backendOk = await deleteBackendData(token: idToken)
+        if !backendOk {
+            deleteError = L10n.t("deleteAccountFailed", lang: L10n.detectDefaultLang())
+            isDeletingAccount = false
+            return
+        }
+
+        // 3. Delete Firebase Auth account
+        do {
+            try await firebaseUser.delete()
+        } catch {
+            deleteError = error.localizedDescription
+            isDeletingAccount = false
+            return
+        }
+
+        // 4. Clear local state
+        UserDefaults.standard.removeObject(forKey: "quizzup.clientId")
+        UserDefaults.standard.removeObject(forKey: "quizzup.name")
+        UserDefaults.standard.removeObject(forKey: "quizzup.avatar")
+        UserDefaults.standard.removeObject(forKey: "quizzup.lang")
+        user = nil
+        isDeletingAccount = false
+    }
+
+    private func deleteBackendData(token: String) async -> Bool {
+        let urlString = "https://\(GameSocket.backendHost)/auth/delete-account"
+        guard let url = URL(string: urlString) else { return false }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        do {
+            let (data, response) = try await URLSession.shared.data(for: request)
+            guard let http = response as? HTTPURLResponse, http.statusCode == 200 else { return false }
+            if let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+               json["ok"] as? Bool == true {
+                return true
+            }
+            return false
+        } catch {
+            return false
+        }
+    }
+
     // MARK: - Sign in with Apple
 
     private var currentAppleNonce: String?

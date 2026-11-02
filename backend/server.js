@@ -20,7 +20,7 @@ const { getClientIp } = require('./client-ip');
 const { flushAllJsonWriters } = require('./json-writer');
 const { verifyIdToken, verifyFirebaseIdToken, sweepCache } = require('./auth');
 const { issueOrRefreshGuestToken, verifyGuestToken } = require('./guest-auth');
-const { linkFirebaseIdentity } = require('./account-links');
+const { linkFirebaseIdentity, unlinkByCanonical } = require('./account-links');
 const stats = require('./stats');
 const categoryStats = require('./category-stats');
 const topicStats = require('./topic-stats');
@@ -1455,6 +1455,48 @@ app.post('/auth/link-google', async (req, res) => {
 
   res.set('Cache-Control', 'no-store');
   res.json({ ok: true, uid: guestUid });
+});
+
+// Account deletion — Apple App Store Review Guideline 5.1.1(v).
+// Authenticates via Firebase ID token, resolves the canonical clientId,
+// then wipes every persisted data store that holds per-user data.
+app.post('/auth/delete-account', async (req, res) => {
+  const ip = getClientIp(req);
+  if (!accountLinkLimiter.check(ip)) {
+    res.status(429).json({ code: 'RATE_LIMITED' });
+    return;
+  }
+
+  const token = authorizationBearer(req);
+  if (!token) {
+    res.status(401).json({ code: 'MISSING_TOKEN' });
+    return;
+  }
+
+  const firebaseUid = await verifyFirebaseIdToken(token);
+  if (shuttingDown || res.destroyed) {
+    if (!res.destroyed) res.status(503).json({ code: 'SERVER_RESTARTING' });
+    return;
+  }
+  if (!firebaseUid) {
+    res.status(401).json({ code: 'INVALID_TOKEN' });
+    return;
+  }
+
+  // Resolve the canonical clientId (may be the firebaseUid itself or a linked guest uid)
+  const { canonicalForFirebase } = require('./account-links');
+  const clientId = canonicalForFirebase(firebaseUid);
+
+  // Wipe all per-user data stores
+  social.deleteUser(clientId);
+  stats.deleteUser(clientId);
+  notifications.deleteUser(clientId);
+  follows.deleteUser(clientId);
+  matchHistory.deleteUser(clientId);
+  unlinkByCanonical(clientId);
+
+  res.set('Cache-Control', 'no-store');
+  res.json({ ok: true });
 });
 
 app.get('/health', (req, res) =>

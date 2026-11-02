@@ -67,9 +67,20 @@ function isFirebaseLinkedTo(firebaseUid, canonicalUid) {
   return !!firebaseUid && firebaseToCanonical[firebaseUid] === canonicalUid;
 }
 
+function unlinkByCanonical(canonicalUid) {
+  if (!canonicalUid) return;
+  for (const [firebaseUid, cid] of Object.entries(firebaseToCanonical)) {
+    if (cid === canonicalUid) {
+      delete firebaseToCanonical[firebaseUid];
+    }
+  }
+  persist();
+}
+
 module.exports = {
   canonicalForFirebase,
   linkFirebaseIdentity,
   isFirebaseLinkedTo,
   normalizeLinks,
+  unlinkByCanonical,
 };

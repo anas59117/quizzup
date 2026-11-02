@@ -44,4 +44,5 @@ function list(clientId,limit=30) {
  const n=Math.max(1,Math.min(MAX_MATCHES,Math.floor(Number(limit)||30)));
  return validId(clientId)?JSON.parse(JSON.stringify((store[clientId]||[]).slice(0,n))):[];
 }
-module.exports={list,recordMatch,resultsFor,normalize,MAX_MATCHES};
+function deleteUser(clientId){if(!clientId)return;delete store[clientId];persist();}
+module.exports={list,recordMatch,resultsFor,normalize,MAX_MATCHES,deleteUser};

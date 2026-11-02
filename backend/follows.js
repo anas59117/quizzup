@@ -71,4 +71,23 @@ function counts(id) {
   return { followers: followers.get(id)?.size || 0, following: following[id]?.length || 0 };
 }
 
-module.exports = { follow, unfollow, isFollowing, getFollowing, counts, normalize };
+function deleteUser(clientId) {
+  if (!clientId) return;
+  // Remove from followers reverse index for everyone this user follows
+  const myFollowing = following[clientId] || [];
+  for (const other of myFollowing) {
+    followers.get(other)?.delete(clientId);
+  }
+  delete following[clientId];
+  // Remove this user from everyone else's following lists
+  for (const [id, list] of Object.entries(following)) {
+    if (list.includes(clientId)) {
+      following[id] = list.filter((x) => x !== clientId);
+      if (!following[id].length) delete following[id];
+    }
+  }
+  followers.delete(clientId);
+  persist();
+}
+
+module.exports = { follow, unfollow, isFollowing, getFollowing, counts, normalize, deleteUser };

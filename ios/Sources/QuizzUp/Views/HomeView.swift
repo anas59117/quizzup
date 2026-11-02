@@ -3,6 +3,7 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var game: GameSocket
     @EnvironmentObject var auth: AuthManager
+    @State private var showDeleteConfirm = false
     private let columns = Array(repeating: GridItem(.flexible(), spacing: 12), count: 3)
 
     var body: some View {
@@ -80,8 +81,48 @@ struct HomeView: View {
                 .disabled(game.isStarting)
                 .opacity(game.isStarting ? 0.6 : 1)
             }
+                // Account deletion — App Store Guideline 5.1.1(v)
+                Button {
+                    showDeleteConfirm = true
+                } label: {
+                    Text(game.t("deleteAccount"))
+                        .font(.caption)
+                        .foregroundColor(.red.opacity(0.8))
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding(.top, 16)
+                .disabled(auth.isDeletingAccount)
+
+                if let error = auth.deleteError {
+                    Text(error)
+                        .font(.caption2)
+                        .foregroundColor(.red)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }
+            }
             .padding(20)
         }
         .onAppear { if game.categories.isEmpty { game.loadCategories() } }
+        .alert(
+            game.t("deleteAccountConfirmTitle"),
+            isPresented: $showDeleteConfirm
+        ) {
+            Button(game.t("cancel"), role: .cancel) {}
+            Button(game.t("deleteAccountConfirm"), role: .destructive) {
+                Task {
+                    await auth.deleteAccount()
+                    if auth.user == nil { game.resetForSignOut() }
+                }
+            }
+        } message: {
+            Text(game.t("deleteAccountConfirmMessage"))
+        }
+        .overlay {
+            if auth.isDeletingAccount {
+                Color.black.opacity(0.5)
+                    .ignoresSafeArea()
+                    .overlay(ProgressView().tint(.white))
+            }
+        }
     }
 }
