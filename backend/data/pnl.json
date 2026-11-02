@@ -598,12 +598,7 @@
   },
   {
     "text": "Combien de titres contient l'album Le Monde Chico ?",
-    "answers": [
-      "10",
-      "12",
-      "14",
-      "16"
-    ],
+    "answers": ["10","12","17","16"],
     "correct": 2,
     "difficulty": "moyen"
   },
@@ -664,12 +659,7 @@
   },
   {
     "text": "Dans quel pays le clip de « DA » a-t-il été tourné ?",
-    "answers": [
-      "L'Italie",
-      "La Grèce",
-      "La Corée du Sud",
-      "Les Émirats arabes unis"
-    ],
+    "answers": ["La France","La Grèce","La Corée du Sud","Les Émirats arabes unis"],
     "correct": 0,
     "difficulty": "moyen"
   },
@@ -718,13 +708,8 @@
     "difficulty": "facile"
   },
   {
-    "text": "Combien de featurings PNL a-t-il réalisés sur ses albums studio ?",
-    "answers": [
-      "Aucun",
-      "2",
-      "5",
-      "10"
-    ],
+    "text": "Quel titre de Le Monde Chico accueille RKM en featuring ?",
+    "answers": ["Rebenga","Le monde ou rien","J'suis PNL","Tempête"],
     "correct": 0,
     "difficulty": "moyen"
   },
@@ -740,13 +725,8 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quelle est la signification de « DD » dans le titre « Au DD » ?",
-    "answers": [
-      "Disque de diamant",
-      "Dernier dollar",
-      "Dans le dur",
-      "Dieu le sait"
-    ],
+    "text": "Que signifie le titre « Au DD » de PNL ?",
+    "answers": ["Au détail","Dernier dollar","Dans le dur","Dieu le sait"],
     "correct": 0,
     "difficulty": "moyen"
   },
@@ -780,7 +760,7 @@
       "2016",
       "2013"
     ],
-    "correct": 0,
+    "correct": 1,
     "difficulty": "moyen"
   },
   {
@@ -989,11 +969,11 @@
       "Deux frères",
       "Dans la légende"
     ],
-    "correct": 2,
+    "correct": 3,
     "difficulty": "difficile"
   },
   {
-    "text": "Quel titre de Deux frères évoque une planète ?",
+    "text": "Quel titre de Dans la légende évoque une planète ?",
     "answers": [
       "Naha",
       "Uranus",
@@ -1037,14 +1017,14 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Quelle est la durée approximative de l'album Deux frères ?",
+    "text": "Quelle est la durée approximative de l'édition standard de Deux frères, composée de 16 titres ?",
     "answers": [
       "40 minutes",
       "55 minutes",
       "70 minutes",
       "85 minutes"
     ],
-    "correct": 1,
+    "correct": 2,
     "difficulty": "difficile"
   },
   {
@@ -1081,14 +1061,14 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quel titre de Dans la légende fait référence à un film d'animation Disney ?",
+    "text": "Quel titre de Que la famille porte le nom du héros du Roi Lion ?",
     "answers": [
       "Onizuka",
       "Simba",
       "Naha",
       "Bené"
     ],
-    "correct": 0,
+    "correct": 1,
     "difficulty": "difficile"
   },
   {
@@ -1137,12 +1117,7 @@
   },
   {
     "text": "Combien de titres contient l'EP Que la famille ?",
-    "answers": [
-      "5",
-      "7",
-      "9",
-      "11"
-    ],
+    "answers": ["5","12","9","11"],
     "correct": 1,
     "difficulty": "difficile"
   },

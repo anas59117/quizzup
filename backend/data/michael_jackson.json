@@ -1392,12 +1392,7 @@
   },
   {
     "text": "Avec quel label The Jackson 5 ont-ils d'abord signé ?",
-    "answers": [
-      "Epic Records",
-      "Atlantic Records",
-      "Motown",
-      "Columbia Records"
-    ],
+    "answers": ["Epic Records","Atlantic Records","Steeltown Records","Columbia Records"],
     "correct": 2,
     "difficulty": "facile"
   },
@@ -1479,13 +1474,8 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Quel titre de Michael Jackson a été le premier clip d'un artiste noir diffusé sur MTV ?",
-    "answers": [
-      "Beat It",
-      "Billie Jean",
-      "Thriller",
-      "Don't Stop 'Til You Get Enough"
-    ],
+    "text": "Quel clip de Michael Jackson a bénéficié d’une forte rotation sur MTV en 1983 ?",
+    "answers": ["Scream","Billie Jean","They Don’t Care About Us","You Rock My World"],
     "correct": 1,
     "difficulty": "moyen"
   },
@@ -1688,13 +1678,8 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quelle chanson Michael Jackson a-t-il chantée lors de la cérémonie des Grammy Awards 1988 ?",
-    "answers": [
-      "Bad",
-      "Man in the Mirror",
-      "The Way You Make Me Feel",
-      "Smooth Criminal"
-    ],
+    "text": "Quel duo de chansons Michael Jackson a-t-il interprété aux Grammy Awards 1988 ?",
+    "answers": ["Bad et Billie Jean","The Way You Make Me Feel et Man in the Mirror","The Way You Make Me Feel et Thriller","Smooth Criminal et Beat It"],
     "correct": 1,
     "difficulty": "difficile"
   },

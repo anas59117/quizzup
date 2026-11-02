@@ -1385,14 +1385,14 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quel est le niveau de puissance de Goku quand il arrive sur Namek d'après le scouter ?",
+    "text": "Quelle valeur le scouter de Ginyu affiche-t-il initialement pour la puissance de Goku sur Namek ?",
     "answers": [
       "5 000",
       "90 000",
       "150 000",
       "180 000"
     ],
-    "correct": 1,
+    "correct": 0,
     "difficulty": "moyen"
   },
   {
@@ -1414,7 +1414,7 @@
       "Satan",
       "Videl"
     ],
-    "correct": 1,
+    "correct": 0,
     "difficulty": "moyen"
   },
   {
@@ -1440,13 +1440,8 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quel est le pouvoir spécial du scouter utilisé par les soldats de Freezer ?",
-    "answers": [
-      "Détecter les Dragon Balls",
-      "Mesurer les niveaux de puissance",
-      "Communiquer avec Freezer",
-      "Scanner les planètes"
-    ],
+    "text": "Quelle grandeur le scouter permet-il de mesurer chez un adversaire ?",
+    "answers": ["La température du corps","Le niveau de puissance","La vitesse maximale de course","L’âge de l’adversaire"],
     "correct": 1,
     "difficulty": "difficile"
   },

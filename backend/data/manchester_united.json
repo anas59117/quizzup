@@ -1351,17 +1351,6 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Quel défenseur central brésilien a rejoint United en 2022 ?",
-    "answers": [
-      "Marquinhos",
-      "Thiago Silva",
-      "Casemiro",
-      "Lisandro Martínez"
-    ],
-    "correct": 3,
-    "difficulty": "difficile"
-  },
-  {
     "text": "Quel milieu brésilien a rejoint United en 2022 en provenance du Real Madrid ?",
     "answers": [
       "Fred",
@@ -1439,14 +1428,14 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quel milieu anglais a été capitaine de United après Wayne Rooney ?",
+    "text": "Quel milieu anglais a succédé immédiatement à Wayne Rooney comme capitaine de Manchester United en 2017 ?",
     "answers": [
       "Michael Carrick",
       "Ashley Young",
       "Harry Maguire",
       "Phil Jones"
     ],
-    "correct": 2,
+    "correct": 0,
     "difficulty": "moyen"
   },
   {
@@ -1461,17 +1450,6 @@
     "difficulty": "facile"
   },
   {
-    "text": "Quel gardien camerounais a défendu les buts de United dans les années 2000 ?",
-    "answers": [
-      "Fabien Barthez",
-      "Carlos Kameni",
-      "Thomas N'Kono",
-      "André Onana"
-    ],
-    "correct": 3,
-    "difficulty": "difficile"
-  },
-  {
     "text": "Quel gardien camerounais a rejoint Manchester United en 2023 ?",
     "answers": [
       "André Onana",
@@ -1483,7 +1461,7 @@
     "difficulty": "facile"
   },
   {
-    "text": "Quel attaquant danois a rejoint United en janvier 2022 ?",
+    "text": "Quel milieu danois a rejoint United en juillet 2022 ?",
     "answers": [
       "Kasper Dolberg",
       "Martin Braithwaite",
@@ -1582,13 +1560,8 @@
     "difficulty": "facile"
   },
   {
-    "text": "Quel joueur détient le record du but le plus rapide de l'histoire de la Premier League (7,69 secondes) sous le maillot de United ?",
-    "answers": [
-      "Wayne Rooney",
-      "Ryan Giggs",
-      "Dwight Yorke",
-      "Cristiano Ronaldo"
-    ],
+    "text": "Quel joueur a marqué pour Southampton après 7,69 secondes contre Watford en avril 2019 ?",
+    "answers": ["Wayne Rooney","Shane Long","Dwight Yorke","Cristiano Ronaldo"],
     "correct": 1,
     "difficulty": "difficile"
   },
@@ -1615,7 +1588,7 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Quel entraîneur allemand a dirigé brièvement United en 2022-2023 ?",
+    "text": "Quel entraîneur allemand a dirigé United par intérim pendant la saison 2021-2022 ?",
     "answers": [
       "Thomas Tuchel",
       "Julian Nagelsmann",
@@ -1626,13 +1599,8 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quel joueur de United a marqué le 1000e but de Premier League du club en 2023 ?",
-    "answers": [
-      "Marcus Rashford",
-      "Bruno Fernandes",
-      "Scott McTominay",
-      "Anthony Martial"
-    ],
+    "text": "Quel joueur de United a inscrit le 1000e but du club en Premier League en octobre 2005 ?",
+    "answers": ["Cristiano Ronaldo","Bruno Fernandes","Scott McTominay","Anthony Martial"],
     "correct": 0,
     "difficulty": "difficile"
   },
@@ -1648,13 +1616,8 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Quel joueur jamaïcain a été le premier noir à porter le maillot de Manchester United en match officiel ?",
-    "answers": [
-      "Viv Anderson",
-      "Paul Ince",
-      "Andrew Cole",
-      "Danny Wallace"
-    ],
+    "text": "Quel joueur est devenu le premier footballeur noir à disputer un match officiel avec Manchester United en 1963 ?",
+    "answers": ["Dennis Walker","Paul Ince","Andrew Cole","Danny Wallace"],
     "correct": 0,
     "difficulty": "difficile"
   },

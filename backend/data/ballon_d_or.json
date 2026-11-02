@@ -1352,24 +1352,14 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quel club a fourni le plus de lauréats du Ballon d'Or masculin ?",
-    "answers": [
-      "Le Real Madrid",
-      "Le FC Barcelone",
-      "L'AC Milan",
-      "La Juventus"
-    ],
+    "text": "À la fin de l'édition 2025, quels clubs comptent chacun douze Ballons d'Or masculins remportés par leurs joueurs ?",
+    "answers": ["Le Real Madrid","Le FC Barcelone et le Real Madrid","L'AC Milan","La Juventus"],
     "correct": 1,
     "difficulty": "moyen"
   },
   {
-    "text": "Combien de joueurs différents du FC Barcelone ont remporté le Ballon d'Or ?",
-    "answers": [
-      "5",
-      "7",
-      "9",
-      "11"
-    ],
+    "text": "À la fin de l'édition 2025, combien de joueurs masculins différents ont remporté le Ballon d'Or alors qu'ils évoluaient au FC Barcelone ?",
+    "answers": ["5","6","9","11"],
     "correct": 1,
     "difficulty": "moyen"
   },
@@ -1407,24 +1397,8 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quel Brésilien a remporté deux Ballons d'Or consécutifs en 1997 et 1998 ?",
-    "answers": [
-      "Ronaldo puis Zidane",
-      "Ronaldo seul (une fois)",
-      "Rivaldo les deux fois",
-      "Ronaldo en 1997, Zidane en 1998"
-    ],
-    "correct": 3,
-    "difficulty": "moyen"
-  },
-  {
-    "text": "Quel joueur néerlandais a terminé deuxième du Ballon d'Or 2010 ?",
-    "answers": [
-      "Arjen Robben",
-      "Wesley Sneijder",
-      "Robin van Persie",
-      "Rafael van der Vaart"
-    ],
+    "text": "Quel joueur espagnol a terminé deuxième du Ballon d'Or 2010 ?",
+    "answers": ["Arjen Robben","Andrés Iniesta","Robin van Persie","Rafael van der Vaart"],
     "correct": 1,
     "difficulty": "moyen"
   },
@@ -1440,7 +1414,7 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quel attaquant argentin de la Fiorentina a remporté le Ballon d'Or en 1957 ?",
+    "text": "Quel attaquant du Real Madrid a remporté le Ballon d'Or en 1957 ?",
     "answers": [
       "Alfredo Di Stéfano",
       "Omar Sívori",
@@ -1539,7 +1513,7 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Quel joueur italien de l'Inter Milan a remporté le Ballon d'Or en 1961 ?",
+    "text": "Quel joueur de la Juventus a remporté le Ballon d'Or en 1961 ?",
     "answers": [
       "Giacinto Facchetti",
       "Sandro Mazzola",
@@ -1561,7 +1535,7 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Quel joueur néerlandais de l'AC Milan a remporté trois Ballons d'Or consécutifs de 1988 à 1990 ?",
+    "text": "Quel joueur néerlandais de l'AC Milan a remporté le Ballon d'Or en 1988, 1989 et 1992 ?",
     "answers": [
       "Ruud Gullit",
       "Frank Rijkaard",
@@ -1601,7 +1575,7 @@
       "Luis Suárez",
       "Manuel Neuer"
     ],
-    "correct": 1,
+    "correct": 0,
     "difficulty": "difficile"
   },
   {

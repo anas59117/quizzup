@@ -1074,13 +1074,8 @@
     "difficulty": "facile"
   },
   {
-    "text": "L'OM a-t-il déjà été relégué en deuxième division ?",
-    "answers": [
-      "Oui, une fois",
-      "Oui, deux fois",
-      "Oui, trois fois",
-      "Non, jamais"
-    ],
+    "text": "Combien de fois l'OM a-t-il été relégué de la première à la deuxième division entre 1959 et 1994 inclus ?",
+    "answers": ["Une fois","Quatre fois","Trois fois","Jamais"],
     "correct": 1,
     "difficulty": "facile"
   },
@@ -1129,7 +1124,7 @@
     "difficulty": "facile"
   },
   {
-    "text": "Quel ancien international français a été président de l'OM de 2005 à 2009 ?",
+    "text": "Quel ancien journaliste et agent de joueurs a été président de l'OM de 2005 à 2009 ?",
     "answers": [
       "Basile Boli",
       "Jean-Pierre Papin",
@@ -1162,14 +1157,9 @@
     "difficulty": "facile"
   },
   {
-    "text": "Le virage Nord du Vélodrome est associé à quel groupe de supporters ?",
-    "answers": [
-      "Les South Winners",
-      "Les Dodgers",
-      "Le Commando Ultra",
-      "Les Yankees"
-    ],
-    "correct": 2,
+    "text": "En novembre 2026, lequel de ces groupes de supporters de l'OM occupe le virage Nord du Vélodrome ?",
+    "answers": ["Les South Winners","Les Dodgers","Le Commando Ultra","Les Green Angels"],
+    "correct": 1,
     "difficulty": "facile"
   },
   {
@@ -1239,13 +1229,8 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quel attaquant camerounais a joué à l'OM au début des années 2010 ?",
-    "answers": [
-      "Samuel Eto'o",
-      "André Ayew",
-      "André-Pierre Gignac",
-      "Jordan Ayew"
-    ],
+    "text": "Quel attaquant ghanéen a joué à l'OM au début des années 2010 ?",
+    "answers": ["Samuel Eto'o","André Ayew","André-Pierre Gignac","Didier Drogba"],
     "correct": 1,
     "difficulty": "moyen"
   },
@@ -1272,7 +1257,7 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quel joueur brésilien a été élu meilleur joueur de Ligue 1 avec l'OM en 2007 ?",
+    "text": "Quel milieu argentin a rejoint l'OM en provenance de Porto en 2009 ?",
     "answers": [
       "Kaká",
       "Brandão",
@@ -1356,7 +1341,7 @@
       "1993",
       "1994"
     ],
-    "correct": 3,
+    "correct": 0,
     "difficulty": "moyen"
   },
   {
@@ -1382,7 +1367,7 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quel défenseur central français a été formé à l'OM avant de rejoindre le Bayern Munich ?",
+    "text": "Quel joueur formé à l'OM a quitté le club pour Aston Villa en mai 2022 ?",
     "answers": [
       "William Saliba",
       "Benjamin Pavard",
@@ -1459,7 +1444,7 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Quel club écossais l'OM a-t-il affronté au premier tour de la Coupe des clubs champions 1993-1994 ?",
+    "text": "Quel club écossais l'OM a-t-il affronté en phase de groupes de la Ligue des champions 1992-1993 ?",
     "answers": [
       "Le Celtic",
       "Les Rangers",
@@ -1470,7 +1455,7 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Quel buteur brésilien a porté le maillot de l'OM lors de la saison 2014-2015 ?",
+    "text": "Quel buteur brésilien a porté le maillot de l'OM lors de la saison 2011-2012 ?",
     "answers": [
       "Luiz Gustavo",
       "Brandão",
@@ -1481,7 +1466,7 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Quel défenseur argentin champion du monde 2022 a joué à l'OM ?",
+    "text": "Quel défenseur argentin a joué à l'OM ?",
     "answers": [
       "Lisandro Martínez",
       "Leonardo Balerdi",
@@ -1602,13 +1587,8 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Quel club allemand a éliminé l'OM en phase de poules de la Ligue des champions 2020-2021 ?",
-    "answers": [
-      "Le Bayern Munich",
-      "Le Borussia Dortmund",
-      "Le RB Leipzig",
-      "Le Bayer Leverkusen"
-    ],
+    "text": "Quel club anglais figurait dans le groupe de l'OM en Ligue des champions 2020-2021 ?",
+    "answers": ["Manchester City","Le Borussia Dortmund","Le RB Leipzig","Le Bayer Leverkusen"],
     "correct": 0,
     "difficulty": "difficile"
   },
@@ -1635,14 +1615,14 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Quel international français, passé par l'OM, a ensuite entraîné le club en 2004-2005 ?",
+    "text": "Quel entraîneur a succédé à José Anigo sur le banc de l'OM en novembre 2004 ?",
     "answers": [
       "Éric Cantona",
       "Philippe Troussier",
       "Jean Tigana",
       "Marcel Desailly"
     ],
-    "correct": 2,
+    "correct": 1,
     "difficulty": "difficile"
   },
   {
@@ -1664,7 +1644,7 @@
       "Raymond Goethals",
       "Jules Dewaquez"
     ],
-    "correct": 0,
+    "correct": 1,
     "difficulty": "difficile"
   }
 ]

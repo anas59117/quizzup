@@ -1099,14 +1099,14 @@
     "difficulty": "facile"
   },
   {
-    "text": "Quel numéro Messi portait-il initialement au Barça avant le 10 ?",
+    "text": "Quel numéro Messi portait-il lors de ses débuts officiels avec le Barça en 2004 ?",
     "answers": [
       "30",
       "19",
       "7",
       "14"
     ],
-    "correct": 1,
+    "correct": 0,
     "difficulty": "facile"
   },
   {
@@ -1242,25 +1242,25 @@
     "difficulty": "moyen"
   },
   {
-    "text": "En quelle année Messi a-t-il remporté son premier titre de Liga avec le Barça ?",
+    "text": "Lors de quelle saison Messi a-t-il remporté son premier titre de Liga avec le Barça ?",
     "answers": [
       "2004-2005",
       "2005-2006",
       "2006-2007",
       "2008-2009"
     ],
-    "correct": 1,
+    "correct": 0,
     "difficulty": "moyen"
   },
   {
-    "text": "Quel entraîneur argentin a fait de Messi le capitaine de la sélection ?",
+    "text": "Quel sélectionneur a nommé Messi capitaine de l'Argentine en août 2011 ?",
     "answers": [
       "Diego Maradona",
       "Jorge Sampaoli",
       "Lionel Scaloni",
       "Alejandro Sabella"
     ],
-    "correct": 2,
+    "correct": 3,
     "difficulty": "moyen"
   },
   {
@@ -1326,7 +1326,7 @@
       "Deux",
       "Trois"
     ],
-    "correct": 2,
+    "correct": 1,
     "difficulty": "moyen"
   },
   {
@@ -1352,7 +1352,7 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quel club japonais le Barça de Messi a-t-il battu en finale du Mondial des clubs 2009 ?",
+    "text": "Quel club argentin le Barça de Messi a-t-il battu en finale du Mondial des clubs 2009 ?",
     "answers": [
       "Kashima Antlers",
       "Urawa Red Diamonds",
@@ -1385,13 +1385,8 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quel joueur a remplacé Messi comme numéro 10 au PSG après son départ ?",
-    "answers": [
-      "Neymar",
-      "Ousmane Dembélé",
-      "Marco Asensio",
-      "Personne, le numéro a été retiré temporairement"
-    ],
+    "text": "Quel joueur arrivé au PSG à l'été 2023 porte le numéro 10 dans l'effectif masculin en novembre 2026 ?",
+    "answers": ["Neymar","Ousmane Dembélé","Marco Asensio","Lionel Messi"],
     "correct": 1,
     "difficulty": "moyen"
   },
@@ -1418,13 +1413,8 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quel joueur formait le duo 'M&S' ou 'SuárezMessi' au Barça avant l'arrivée de Neymar ?",
-    "answers": [
-      "Cesc Fàbregas",
-      "Pedro",
-      "David Villa",
-      "Luis Suárez"
-    ],
+    "text": "En quelle année Luis Suárez a-t-il rejoint Messi au FC Barcelone ?",
+    "answers": ["2011","2012","2013","2014"],
     "correct": 3,
     "difficulty": "moyen"
   },
@@ -1441,13 +1431,8 @@
   },
   {
     "text": "Quel était le score du match où Messi a battu le record de buts de Gerd Müller en 2012 ?",
-    "answers": [
-      "Barça 2-1 Betis",
-      "Barça 3-1 Rayo",
-      "Barça 2-0 Valladolid",
-      "Barça 4-0 Mallorca"
-    ],
-    "correct": 2,
+    "answers": ["Betis 1-2 Barça","Barça 3-1 Rayo","Barça 2-0 Valladolid","Barça 4-0 Mallorca"],
+    "correct": 0,
     "difficulty": "difficile"
   },
   {
@@ -1573,12 +1558,7 @@
   },
   {
     "text": "Quel joueur a inscrit le premier but de l'Inter Miami lors de la Leagues Cup 2023 remportée par Messi ?",
-    "answers": [
-      "Lionel Messi",
-      "Sergio Busquets",
-      "Josef Martínez",
-      "Jordi Alba"
-    ],
+    "answers": ["Robert Taylor","Sergio Busquets","Josef Martínez","Jordi Alba"],
     "correct": 0,
     "difficulty": "difficile"
   },

@@ -1,0 +1,5683 @@
+{
+  "date": "2026-11-02",
+  "baseCommit": "dd08394defc680a1cda2e434afe4a8d2e5bc9b97",
+  "auditedCommit": "6fa761bc3cec905e0a70170e3492321e81fba2b1",
+  "counts": {
+    "categories": 494,
+    "questions": 38679,
+    "corrected": 145,
+    "redundantQuestionsRemoved": 5
+  },
+  "restoration": {
+    "overwritingCommit": "dd08394defc680a1cda2e434afe4a8d2e5bc9b97",
+    "restoredFrom": "6fa761b",
+    "files": [
+      "backend/data/fc_barcelone.json",
+      "backend/data/football_feminin.json",
+      "backend/data/judo.json",
+      "backend/data/la_casa_de_papel.json",
+      "backend/data/mathematiques_logique.json",
+      "backend/data/mma_ufc.json",
+      "backend/data/ninho.json",
+      "backend/data/plk.json",
+      "backend/data/records_du_monde.json"
+    ],
+    "reason": "These nine files exactly matched 2be7f66 and had lost the already verified corrections from 6fa761b.",
+    "interventionsRestored": 40,
+    "corrected": 35,
+    "duplicateCopiesRemoved": 5
+  },
+  "findings": [
+    {
+      "id": "N001",
+      "category": "animaux",
+      "file": "backend/data/animaux.json",
+      "originalIndex": 115,
+      "originalHash": "684d0140798d35fa97a0d8d363c62103e6bca10562bbf9416ebbd4877d77b3ba",
+      "action": "corrected",
+      "before": {
+        "text": "Quel animal marin peut régénérer ses bras s'ils sont coupés ?",
+        "answers": [
+          "Le poulpe",
+          "L'étoile de mer",
+          "Le requin",
+          "La méduse"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel échinoderme marin peut régénérer ses bras après leur perte ?",
+        "answers": [
+          "Le poulpe",
+          "L'étoile de mer",
+          "Le requin",
+          "La méduse"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "reason": "Préciser un échinoderme à symétrie radiale ou remplacer le distracteur poulpe.",
+      "sources": [
+        {
+          "title": "Marine Biological Laboratory — régénération des bras de poulpe",
+          "url": "https://www.mbl.edu/news/limb-how-octopus-regrows-its-arms-mental-floss"
+        }
+      ]
+    },
+    {
+      "id": "N002",
+      "category": "animaux",
+      "file": "backend/data/animaux.json",
+      "originalIndex": 116,
+      "originalHash": "0912505161db3e4d0fc4c76ca090e2fe4995fa917e7d479077ed651f7f721fb0",
+      "action": "corrected",
+      "before": {
+        "text": "Quel est le plus petit mammifère du monde par le poids ?",
+        "answers": [
+          "La musaraigne étrusque",
+          "Le colibri-abeille",
+          "Le bourdon pygmée",
+          "La chauve-souris bourdon"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel est le plus petit mammifère du monde par le poids ?",
+        "answers": [
+          "La musaraigne étrusque",
+          "Le colibri-abeille",
+          "Le bourdon pygmée",
+          "La chauve-souris bourdon"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "Conserver le critère du poids et accepter la musaraigne étrusque (index 0).",
+      "sources": [
+        {
+          "title": "Guinness — distinction du plus petit mammifère par longueur et par masse",
+          "url": "https://www.guinnessworldrecords.com/world-records/70467-smallest-mammal"
+        }
+      ]
+    },
+    {
+      "id": "N003",
+      "category": "animaux",
+      "file": "backend/data/animaux.json",
+      "originalIndex": 118,
+      "originalHash": "c570225a0eac96573220febe6bb86e3efcda21d6f4d19b6d1ff9c2a1d0a70552",
+      "action": "corrected",
+      "before": {
+        "text": "Combien d'estomacs fonctionnels possède une vache ?",
+        "answers": [
+          "Un",
+          "Deux",
+          "Trois",
+          "Quatre"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Combien de compartiments possède l’estomac d’une vache ?",
+        "answers": [
+          "Un",
+          "Deux",
+          "Trois",
+          "Quatre"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "reason": "Demander le nombre de compartiments gastriques (quatre), ou accepter Un si l’on conserve estomac.",
+      "sources": [
+        {
+          "title": "Mississippi State University — un estomac, quatre compartiments",
+          "url": "https://extension.msstate.edu/publications/understanding-the-ruminant-animal-digestive-system"
+        }
+      ]
+    },
+    {
+      "id": "N004",
+      "category": "animaux",
+      "file": "backend/data/animaux.json",
+      "originalIndex": 135,
+      "originalHash": "5be864f30260d7dddd05bcaa1cd319a89eda6e71239c647447a677dd3a17cc2d",
+      "action": "corrected",
+      "before": {
+        "text": "Quel animal possède des dents qui poussent tout au long de sa vie, y compris les défenses ?",
+        "answers": [
+          "Le cheval",
+          "L'éléphant",
+          "Le rhinocéros",
+          "L'hippopotame"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel animal possède une trompe et des défenses qui sont des incisives supérieures allongées ?",
+        "answers": [
+          "Le cheval",
+          "L'éléphant",
+          "Le rhinocéros",
+          "L'hippopotame"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Demander explicitement chez quel animal les défenses sont des incisives supérieures allongées, ou changer les distracteurs.",
+      "sources": [
+        {
+          "title": "San Diego Zoo — croissance continue des canines et incisives de l’hippopotame",
+          "url": "https://animals.sandiegozoo.org/animals/hippo"
+        },
+        {
+          "title": "Smithsonian National Zoo — défenses et renouvellement des molaires",
+          "url": "https://nationalzoo.si.edu/animals/asian-elephant"
+        }
+      ]
+    },
+    {
+      "id": "N005",
+      "category": "animaux",
+      "file": "backend/data/animaux.json",
+      "originalIndex": 140,
+      "originalHash": "008d27c45bc8d46aea957039188f5483cf12d7f662ad2aa77e37a104d6018849",
+      "action": "corrected",
+      "before": {
+        "text": "Quel primate est le plus proche génétiquement de l'humain ?",
+        "answers": [
+          "Le gorille",
+          "L'orang-outan",
+          "Le chimpanzé",
+          "Le bonobo"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quels primates sont les deux plus proches parents vivants de l’humain ?",
+        "answers": [
+          "Le gorille et l’orang-outan",
+          "Le macaque et le babouin",
+          "Le gibbon et le siamang",
+          "Le chimpanzé et le bonobo"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "reason": "Proposer une réponse groupée chimpanzé et bonobo, ou poser un critère distinctif.",
+      "sources": [
+        {
+          "title": "Smithsonian Human Origins — chimpanzé et bonobo également proches de l’humain",
+          "url": "https://humanorigins.si.edu/evidence/genetics"
+        }
+      ]
+    },
+    {
+      "id": "N006",
+      "category": "animaux",
+      "file": "backend/data/animaux.json",
+      "originalIndex": 151,
+      "originalHash": "c7c8bd1d040920f77dbf408667f05ce9528e34deab05bcd72278ae24255cfbc1",
+      "action": "corrected",
+      "before": {
+        "text": "Quel animal sécrète un liquide nauséabond quand il se sent menacé ?",
+        "answers": [
+          "Le blaireau",
+          "Le putois",
+          "La mouffette",
+          "Le furet"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel mammifère nord-américain est connu pour projeter une sécrétion défensive malodorante ?",
+        "answers": [
+          "Le chevreuil",
+          "Le castor",
+          "La mouffette",
+          "Le lièvre"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "reason": "Remplacer les distracteurs putois, blaireau et furet, qui empêchent d’identifier exclusivement la mouffette à partir de ce comportement ; ne pas se limiter à un pelage noir et blanc.",
+      "sources": [
+        {
+          "title": "Animal Diversity Web — sécrétion défensive du putois",
+          "url": "https://animaldiversity.org/accounts/Mustela_putorius/"
+        }
+      ]
+    },
+    {
+      "id": "N007",
+      "category": "animaux",
+      "file": "backend/data/animaux.json",
+      "originalIndex": 152,
+      "originalHash": "24e2e93aaebf73e850935564ef7af50ee9eeaec808620afe7dc8cd0f2207e689",
+      "action": "corrected",
+      "before": {
+        "text": "Quel mammifère marin possède une corne torsadée pouvant mesurer 3 mètres ?",
+        "answers": [
+          "Le morse",
+          "Le narval",
+          "Le béluga",
+          "Le dugong"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel mammifère marin possède une longue défense torsadée pouvant mesurer trois mètres ?",
+        "answers": [
+          "Le morse",
+          "Le narval",
+          "Le béluga",
+          "Le dugong"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Remplacer corne par longue défense torsadée.",
+      "sources": [
+        {
+          "title": "NOAA — la défense du narval est une dent",
+          "url": "https://www.fisheries.noaa.gov/species/narwhal"
+        }
+      ]
+    },
+    {
+      "id": "N008",
+      "category": "architecture_celebre",
+      "file": "backend/data/architecture_celebre.json",
+      "originalIndex": 124,
+      "originalHash": "77e447b8720821ac0e2c41eb154071bf9e4a3a62e77b5a332c6c4a6ea8c61a0b",
+      "action": "corrected",
+      "before": {
+        "text": "Quel architecte danois a conçu le terminal TWA à l'aéroport JFK de New York ?",
+        "answers": [
+          "Arne Jacobsen",
+          "Jørn Utzon",
+          "Eero Saarinen",
+          "Alvar Aalto"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel architecte finno-américain a conçu le terminal TWA à l’aéroport JFK de New York ?",
+        "answers": [
+          "Arne Jacobsen",
+          "Jørn Utzon",
+          "Eero Saarinen",
+          "Alvar Aalto"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "Remplacer danois par finno-américain, en gardant Eero Saarinen.",
+      "sources": [
+        {
+          "title": "National Park Service — Eero Saarinen, architecte finno-américain",
+          "url": "https://www.nps.gov/people/eero-saarinen.htm"
+        }
+      ]
+    },
+    {
+      "id": "N009",
+      "category": "attaque_des_titans",
+      "file": "backend/data/attaque_des_titans.json",
+      "originalIndex": 138,
+      "originalHash": "a67c149865cb57c0633c89d088e2c98069ac8a0a310a2993d830cf3db359b431",
+      "action": "corrected",
+      "before": {
+        "text": "Quel personnage Mikasa décapite-t-elle dans le dernier chapitre du manga ?",
+        "answers": [
+          "Reiner Braun",
+          "Sieg Jäger",
+          "Eren Jäger",
+          "Floch Forster"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel personnage Mikasa décapite-t-elle au chapitre 138 du manga ?",
+        "answers": [
+          "Reiner Braun",
+          "Sieg Jäger",
+          "Eren Jäger",
+          "Floch Forster"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "La mort d'Eren se situe au chapitre 138, avant le dernier chapitre 139.",
+      "sources": [
+        {
+          "title": "Attack on Titan Wiki — A Long Dream, chapitre 138",
+          "url": "https://attackontitan.fandom.com/wiki/A_Long_Dream_%28Chapter%29"
+        },
+        {
+          "title": "Attack on Titan Wiki — Toward the Tree on That Hill, chapitre final 139",
+          "url": "https://attackontitan.fandom.com/wiki/Toward_the_Tree_on_That_Hill_%28Chapter%29"
+        }
+      ]
+    },
+    {
+      "id": "N010",
+      "category": "attaque_des_titans",
+      "file": "backend/data/attaque_des_titans.json",
+      "originalIndex": 148,
+      "originalHash": "1e5f8f28d5e5334c065c97429d6cf74ac1e9c160731cb7e749cebd459724cac0",
+      "action": "corrected",
+      "before": {
+        "text": "Quel personnage perd un bras lors de la bataille de Shiganshina contre le Titan Bestial ?",
+        "answers": [
+          "Livai Ackerman",
+          "Erwin Smith",
+          "Hansi Zoe",
+          "Jean Kirschtein"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel personnage perd un bras pendant le sauvetage d'Eren enlevé par Reiner et Bertolt ?",
+        "answers": [
+          "Livai Ackerman",
+          "Erwin Smith",
+          "Hansi Zoe",
+          "Jean Kirschtein"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Situer la perte du bras d'Erwin pendant le sauvetage, et non à Shiganshina.",
+      "sources": [
+        {
+          "title": "Attack on Titan Wiki — Charge, épisode 36, scène de la perte du bras",
+          "url": "https://attackontitan.fandom.com/wiki/Charge_%28Episode%29"
+        },
+        {
+          "title": "Crunchyroll — épisode 36, Charge : affrontement avec le Titan Cuirassé",
+          "url": "https://www.crunchyroll.com/it/watch/G65VZWK36/charge"
+        }
+      ]
+    },
+    {
+      "id": "N011",
+      "category": "ballon_d_or",
+      "file": "backend/data/ballon_d_or.json",
+      "originalIndex": 129,
+      "originalHash": "a91568580a2cc46505ee87f8c74924bbb040efebf5e1491ed78927e29ada38e9",
+      "action": "corrected",
+      "before": {
+        "text": "Quel club a fourni le plus de lauréats du Ballon d'Or masculin ?",
+        "answers": [
+          "Le Real Madrid",
+          "Le FC Barcelone",
+          "L'AC Milan",
+          "La Juventus"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "À la fin de l'édition 2025, quels clubs comptent chacun douze Ballons d'Or masculins remportés par leurs joueurs ?",
+        "answers": [
+          "Le Real Madrid",
+          "Le FC Barcelone et le Real Madrid",
+          "L'AC Milan",
+          "La Juventus"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Relevé daté de 2025 : les deux clubs sont à égalité ; la réponse réunit les deux.",
+      "sources": [
+        {
+          "title": "FC Barcelona - FC Barcelona d'Or",
+          "url": "https://foundation.fcbarcelona.com/en/news/4367951/fc-barcelona-dor"
+        }
+      ]
+    },
+    {
+      "id": "N012",
+      "category": "ballon_d_or",
+      "file": "backend/data/ballon_d_or.json",
+      "originalIndex": 130,
+      "originalHash": "26fa56fa91ccdb4ff2573ed25131e8c8634c285b210883495882412457bb03fc",
+      "action": "corrected",
+      "before": {
+        "text": "Combien de joueurs différents du FC Barcelone ont remporté le Ballon d'Or ?",
+        "answers": [
+          "5",
+          "7",
+          "9",
+          "11"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "À la fin de l'édition 2025, combien de joueurs masculins différents ont remporté le Ballon d'Or alors qu'ils évoluaient au FC Barcelone ?",
+        "answers": [
+          "5",
+          "6",
+          "9",
+          "11"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Périmètre explicite : six personnes récompensées pendant leur passage au Barça ; anciens joueurs et trophée féminin exclus.",
+      "sources": [
+        {
+          "title": "FC Barcelona - Barça d'Or",
+          "url": "https://www.fcbarcelona.com/en/football/first-team/news/1513626"
+        },
+        {
+          "title": "FC Barcelona - 2025 men's and women's honours",
+          "url": "https://foundation.fcbarcelona.com/en/news/4367951/fc-barcelona-dor"
+        }
+      ]
+    },
+    {
+      "id": "N013",
+      "category": "ballon_d_or",
+      "file": "backend/data/ballon_d_or.json",
+      "originalIndex": 134,
+      "originalHash": "816f15ad33409ce72e335a572c002cb479fd604f8f8507519135782f5a28fa24",
+      "action": "removed_duplicate",
+      "before": {
+        "text": "Quel Brésilien a remporté deux Ballons d'Or consécutifs en 1997 et 1998 ?",
+        "answers": [
+          "Ronaldo puis Zidane",
+          "Ronaldo seul (une fois)",
+          "Rivaldo les deux fois",
+          "Ronaldo en 1997, Zidane en 1998"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "after": null,
+      "reason": "Faux présupposé et deux réponses identiques ; la reformulation sur Zidane en 1998 répéterait la question existante à l'index 105.",
+      "sources": [
+        {
+          "title": "UEFA - Ballon d'Or laureates",
+          "url": "https://www.uefa.com/ballondor/news/0292-1c27056169a7-bc88d1fdba43-1000--ballon-d-or-laureates-who-has-won-football-s-most-prestig/"
+        }
+      ]
+    },
+    {
+      "id": "N014",
+      "category": "ballon_d_or",
+      "file": "backend/data/ballon_d_or.json",
+      "originalIndex": 135,
+      "originalHash": "2962a64fa0a962d7fe19e2a05131c19b949cede499855f60c2c4614028ab9fcb",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur néerlandais a terminé deuxième du Ballon d'Or 2010 ?",
+        "answers": [
+          "Arjen Robben",
+          "Wesley Sneijder",
+          "Robin van Persie",
+          "Rafael van der Vaart"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel joueur espagnol a terminé deuxième du Ballon d'Or 2010 ?",
+        "answers": [
+          "Arjen Robben",
+          "Andrés Iniesta",
+          "Robin van Persie",
+          "Rafael van der Vaart"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Remplacer le libellé par 'Quel joueur a terminé deuxième en 2010 ?' et proposer/marquer Iniesta.",
+      "sources": [
+        {
+          "title": "FC Barcelona - 10 years since a unique Ballon d'Or podium",
+          "url": "https://www.fcbarcelona.com/en/football/first-team/news/1924303/10/featured"
+        }
+      ]
+    },
+    {
+      "id": "N015",
+      "category": "ballon_d_or",
+      "file": "backend/data/ballon_d_or.json",
+      "originalIndex": 137,
+      "originalHash": "41802a52fc2f981ea859097d7c56802dea6a147e5dff31fc75afbfadcef0b9ed",
+      "action": "corrected",
+      "before": {
+        "text": "Quel attaquant argentin de la Fiorentina a remporté le Ballon d'Or en 1957 ?",
+        "answers": [
+          "Alfredo Di Stéfano",
+          "Omar Sívori",
+          "Adolfo Pedernera",
+          "Humberto Maschio"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel attaquant du Real Madrid a remporté le Ballon d'Or en 1957 ?",
+        "answers": [
+          "Alfredo Di Stéfano",
+          "Omar Sívori",
+          "Adolfo Pedernera",
+          "Humberto Maschio"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "reason": "Club corrigé ; l'origine argentine est omise pour ne pas brouiller sa nationalité sportive espagnole lors du prix.",
+      "sources": [
+        {
+          "title": "UEFA - Ballon d'Or laureates",
+          "url": "https://www.uefa.com/ballondor/news/0292-1c27056169a7-bc88d1fdba43-1000--ballon-d-or-laureates-who-has-won-football-s-most-prestig/"
+        }
+      ]
+    },
+    {
+      "id": "N016",
+      "category": "ballon_d_or",
+      "file": "backend/data/ballon_d_or.json",
+      "originalIndex": 146,
+      "originalHash": "06600079ffc067298c5c037cf9a87335af793ff8bef567e82c2157562f6dcd96",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur italien de l'Inter Milan a remporté le Ballon d'Or en 1961 ?",
+        "answers": [
+          "Giacinto Facchetti",
+          "Sandro Mazzola",
+          "Omar Sívori",
+          "Luis Suárez (l'Espagnol)"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel joueur de la Juventus a remporté le Ballon d'Or en 1961 ?",
+        "answers": [
+          "Giacinto Facchetti",
+          "Sandro Mazzola",
+          "Omar Sívori",
+          "Luis Suárez (l'Espagnol)"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "Remplacer Inter Milan par Juventus.",
+      "sources": [
+        {
+          "title": "UEFA - Ballon d'Or laureates",
+          "url": "https://www.uefa.com/ballondor/news/0292-1c27056169a7-bc88d1fdba43-1000--ballon-d-or-laureates-who-has-won-football-s-most-prestig/"
+        }
+      ]
+    },
+    {
+      "id": "N017",
+      "category": "ballon_d_or",
+      "file": "backend/data/ballon_d_or.json",
+      "originalIndex": 148,
+      "originalHash": "4e974513ac1c1ead2a8e6fabbd512564478298d2ea814793a03cfbb700f5ae82",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur néerlandais de l'AC Milan a remporté trois Ballons d'Or consécutifs de 1988 à 1990 ?",
+        "answers": [
+          "Ruud Gullit",
+          "Frank Rijkaard",
+          "Marco van Basten",
+          "Dennis Bergkamp"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel joueur néerlandais de l'AC Milan a remporté le Ballon d'Or en 1988, 1989 et 1992 ?",
+        "answers": [
+          "Ruud Gullit",
+          "Frank Rijkaard",
+          "Marco van Basten",
+          "Dennis Bergkamp"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "Remplacer 'trois ... consécutifs de 1988 à 1990' par 'en 1988, 1989 et 1992'.",
+      "sources": [
+        {
+          "title": "UEFA - Ballon d'Or laureates",
+          "url": "https://www.uefa.com/ballondor/news/0292-1c27056169a7-bc88d1fdba43-1000--ballon-d-or-laureates-who-has-won-football-s-most-prestig/"
+        }
+      ]
+    },
+    {
+      "id": "N018",
+      "category": "ballon_d_or",
+      "file": "backend/data/ballon_d_or.json",
+      "originalIndex": 151,
+      "originalHash": "7ad83a3efd6f804595b1121f0502b911d3dc383ffde70412db95a3b8515988fd",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur a terminé deuxième du Ballon d'Or 2015 derrière Messi ?",
+        "answers": [
+          "Cristiano Ronaldo",
+          "Neymar",
+          "Luis Suárez",
+          "Manuel Neuer"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel joueur a terminé deuxième du Ballon d'Or 2015 derrière Messi ?",
+        "answers": [
+          "Cristiano Ronaldo",
+          "Neymar",
+          "Luis Suárez",
+          "Manuel Neuer"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "Marquer Cristiano Ronaldo (choix 0).",
+      "sources": [
+        {
+          "title": "FIFA - Ballon d'Or 2015 voting results",
+          "url": "https://img.fifa.com/image/upload/fvj8uf4ekirhc2bg0o2x.pdf"
+        }
+      ]
+    },
+    {
+      "id": "N019",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 104,
+      "originalHash": "43b28f682cc46c7200cee76f3b4448ab0a46f1390ee115fe843089ba9bff5005",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu autrichien a joué pour le Bayern de 2016 à 2022 ?",
+        "answers": [
+          "Marko Arnautović",
+          "David Alaba",
+          "Marcel Sabitzer",
+          "Konrad Laimer"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel joueur autrichien a quitté le Bayern en 2021 après treize ans au club ?",
+        "answers": [
+          "Marko Arnautović",
+          "David Alaba",
+          "Marcel Sabitzer",
+          "Konrad Laimer"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "reason": "Demander quel Autrichien quitte le Bayern en 2021 après treize ans au club.",
+      "sources": [
+        {
+          "title": "FC Bayern - Farewell to club legends",
+          "url": "https://fcbayern.com/de/news/2021/05/meister-2021/fc-bayern-verabschiedet-vereins-legenden"
+        }
+      ]
+    },
+    {
+      "id": "N020",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 106,
+      "originalHash": "9fae5f67d36a6858368aea925e9063ad6c759f65ed1f50622ef40726825ea74d",
+      "action": "corrected",
+      "before": {
+        "text": "Quel attaquant ivoirien a joué un rôle clé au Bayern en 2024-2025 ?",
+        "answers": [
+          "Didier Drogba",
+          "Wilfried Zaha",
+          "Sébastien Haller",
+          "Mathys Tel"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel attaquant français le Bayern a-t-il prêté à Tottenham en février 2025 ?",
+        "answers": [
+          "Didier Drogba",
+          "Wilfried Zaha",
+          "Sébastien Haller",
+          "Mathys Tel"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "reason": "Demander quel attaquant français a été prêté à Tottenham en février 2025.",
+      "sources": [
+        {
+          "title": "FC Bayern - Mathys Tel joins Tottenham on loan",
+          "url": "https://fcbayern.com/en/news/2025/02/mathys-tel-joins-tottenham-hotspur-on-loan"
+        }
+      ]
+    },
+    {
+      "id": "N021",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 112,
+      "originalHash": "514aa0d0e33f6513590369ec811975433c727b366ac3dc4fe265677132684be0",
+      "action": "corrected",
+      "before": {
+        "text": "Quel défenseur français a joué pour le Bayern de 2019 à 2024 ?",
+        "answers": [
+          "Raphaël Varane",
+          "Benjamin Pavard",
+          "Samuel Umtiti",
+          "Presnel Kimpembe"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel défenseur français a joué pour le Bayern de 2019 à 2023 ?",
+        "answers": [
+          "Raphaël Varane",
+          "Benjamin Pavard",
+          "Samuel Umtiti",
+          "Presnel Kimpembe"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "reason": "Remplacer 2024 par 2023.",
+      "sources": [
+        {
+          "title": "FC Bayern - Benjamin Pavard joins Inter",
+          "url": "https://fcbayern.com/de/news/2023/08/benjamin-pavard-vom-fc-bayern-zu-inter-mailand"
+        }
+      ]
+    },
+    {
+      "id": "N022",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 118,
+      "originalHash": "d0fdab8122b0d2fac1e598701b63de97a3eac5958aa18b4275cf507de7e21303",
+      "action": "corrected",
+      "before": {
+        "text": "Quel club le Bayern a-t-il battu 8-0 en quart de finale de Ligue des champions 2020 ?",
+        "answers": [
+          "Lyon",
+          "Chelsea",
+          "Tottenham",
+          "Le FC Barcelone"
+        ],
+        "correct": 3,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel club le Bayern a-t-il battu 8-2 en quart de finale de Ligue des champions 2020 ?",
+        "answers": [
+          "Lyon",
+          "Chelsea",
+          "Tottenham",
+          "Le FC Barcelone"
+        ],
+        "correct": 3,
+        "difficulty": "facile"
+      },
+      "reason": "Remplacer 8-0 par 8-2.",
+      "sources": [
+        {
+          "title": "FC Bayern - Barcelona 2:8 Bayern",
+          "url": "https://fcbayern.com/de/news/spielberichte/2020/08/spielbericht-champions-league-fc-barcelona---fc-bayern"
+        }
+      ]
+    },
+    {
+      "id": "N023",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 119,
+      "originalHash": "14c871bf360d9e6e48e2957f4904470c9e3a9c7fd51032a7f4e093b45c89d346",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur du Bayern a marqué quatre buts contre le Barça lors du 8-2 en 2020 ?",
+        "answers": [
+          "Robert Lewandowski",
+          "Serge Gnabry",
+          "Thomas Müller",
+          "Philippe Coutinho"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel joueur du Bayern a inscrit les premier et quatrième buts de son équipe lors du 8-2 contre le Barça en 2020 ?",
+        "answers": [
+          "Robert Lewandowski",
+          "Serge Gnabry",
+          "Thomas Müller",
+          "Philippe Coutinho"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "Müller et Coutinho ont chacun marqué deux fois ; le rang des buts identifie uniquement Müller.",
+      "sources": [
+        {
+          "title": "FC Bayern - Barcelona 2:8 Bayern",
+          "url": "https://fcbayern.com/de/news/spielberichte/2020/08/spielbericht-champions-league-fc-barcelona---fc-bayern"
+        }
+      ]
+    },
+    {
+      "id": "N024",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 132,
+      "originalHash": "f86522e02053349761159d11088c5931fadf8d51cf58a2d54222e503a5cee8b3",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu espagnol a joué pour le Bayern de 2013 à 2015 ?",
+        "answers": [
+          "Xavi",
+          "Andrés Iniesta",
+          "Xabi Alonso",
+          "Cesc Fàbregas"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel milieu espagnol a joué pour le Bayern de 2014 à 2017 ?",
+        "answers": [
+          "Xavi",
+          "Andrés Iniesta",
+          "Xabi Alonso",
+          "Cesc Fàbregas"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Écrire 2014 à 2017.",
+      "sources": [
+        {
+          "title": "FC Bayern - Contract extensions",
+          "url": "https://fcbayern.com/de/news/2015/12/fcb-verlangert-vertrage-mit-muller-boateng-martinez-und-alonso"
+        }
+      ]
+    },
+    {
+      "id": "N025",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 138,
+      "originalHash": "3360271110a77648246c0d47a4cc57f50ba7334d1bdd6437eed726be1ed8216e",
+      "action": "corrected",
+      "before": {
+        "text": "Quel attaquant du Bayern a été meilleur buteur de Bundesliga sept saisons consécutives ?",
+        "answers": [
+          "Gerd Müller",
+          "Robert Lewandowski",
+          "Karl-Heinz Rummenigge",
+          "Mario Gómez"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel attaquant du Bayern a été meilleur buteur de Bundesliga cinq saisons consécutives, de 2017-2018 à 2021-2022 ?",
+        "answers": [
+          "Gerd Müller",
+          "Robert Lewandowski",
+          "Karl-Heinz Rummenigge",
+          "Mario Gómez"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Remplacer sept saisons consécutives par cinq saisons consécutives.",
+      "sources": [
+        {
+          "title": "Bundesliga - Robert Lewandowski legend",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/robert-lewandowski-bayern-munich-transfer-to-barcelona-legend-20569"
+        }
+      ]
+    },
+    {
+      "id": "N026",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 141,
+      "originalHash": "bde99c681ddf3d1232f595766244276550c95c878acb276882908aab8d2fff1a",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu de terrain français a joué au Bayern de 2015 à 2019 ?",
+        "answers": [
+          "Franck Ribéry",
+          "Arturo Vidal",
+          "Kingsley Coman",
+          "Blaise Matuidi"
+        ],
+        "correct": 0,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel joueur français a effectué un passage de douze saisons au Bayern, de 2007 à 2019 ?",
+        "answers": [
+          "Franck Ribéry",
+          "Arturo Vidal",
+          "Kingsley Coman",
+          "Blaise Matuidi"
+        ],
+        "correct": 0,
+        "difficulty": "facile"
+      },
+      "reason": "Précision du passage complet de Ribéry ; la sous-période initiale n'était pas présentée comme une erreur de présence.",
+      "sources": [
+        {
+          "title": "DFB - Franck Ribery player history",
+          "url": "https://datencenter.dfb.de/en/people/franck-ribery/player"
+        }
+      ]
+    },
+    {
+      "id": "N027",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 146,
+      "originalHash": "549aefa7a06b3677de705e6b847e9a567061d61fc9b01df372f8f9295fd9b74d",
+      "action": "corrected",
+      "before": {
+        "text": "Quel club marocain le Bayern a-t-il battu en demi-finale du Mondial des clubs 2013 ?",
+        "answers": [
+          "Wydad Casablanca",
+          "Raja Casablanca",
+          "FAR Rabat",
+          "RS Berkane"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel club chinois le Bayern a-t-il battu en demi-finale du Mondial des clubs 2013 ?",
+        "answers": [
+          "Wydad Casablanca",
+          "Guangzhou Evergrande",
+          "FAR Rabat",
+          "RS Berkane"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Guangzhou est l'adversaire de la demi-finale ; conserver le Raja en finale répéterait l'index 147.",
+      "sources": [
+        {
+          "title": "FC Bayern - Classy Bayern move step closer to fifth trophy",
+          "url": "https://fcbayern.com/en/news/matchreports/2013/12/match-report-guangzhou---bayern"
+        },
+        {
+          "title": "FC Bayern - 2013 Club World Cup semi-final against Guangzhou",
+          "url": "https://fcbayern.com/en/news/matchreports/2013/12/match-report-guangzhou---bayern"
+        }
+      ]
+    },
+    {
+      "id": "N028",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 148,
+      "originalHash": "ceefd6f3be0b93a4044e5138acd1586af117c0aa67f15c501a5d0136c41e10a6",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu allemand formé au Bayern a rejoint Leipzig puis le Bayern de nouveau ?",
+        "answers": [
+          "Joshua Kimmich",
+          "Marcel Sabitzer",
+          "Konrad Laimer",
+          "Leon Goretzka"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel milieu autrichien formé à Salzbourg a rejoint le Bayern depuis Leipzig en 2023 ?",
+        "answers": [
+          "Joshua Kimmich",
+          "Marcel Sabitzer",
+          "Konrad Laimer",
+          "Leon Goretzka"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "Nationalité, formation et date du transfert précisées pour identifier Laimer.",
+      "sources": [
+        {
+          "title": "FC Bayern - Konrad Laimer quiz with answers",
+          "url": "https://fcbayern.com/kidsclub/de/gaudi/2023/raetsel-2324/raetselspass-konrad-laimer"
+        }
+      ]
+    },
+    {
+      "id": "N029",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 149,
+      "originalHash": "2ac17c3b69202bec647dda2d74f738ce9ebd068630690ed2b5b3376efae7f455",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur du Bayern a inscrit 365 buts en Bundesliga, record qui a tenu jusqu'en 2021 ?",
+        "answers": [
+          "Karl-Heinz Rummenigge",
+          "Klaus Fischer",
+          "Gerd Müller",
+          "Lothar Matthäus"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel joueur du Bayern a inscrit 365 buts en Bundesliga au cours de sa carrière ?",
+        "answers": [
+          "Karl-Heinz Rummenigge",
+          "Klaus Fischer",
+          "Gerd Müller",
+          "Lothar Matthäus"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Retrait de la confusion avec le record de buts sur une saison battu en 2021 ; total de carrière historique inchangé.",
+      "sources": [
+        {
+          "title": "Bundesliga - records (31 August 2026)",
+          "url": "https://www.bundesliga.com/en/faq/10-things-on-the-bundesliga/bundesliga-records-goals-titles-attendances-for-players-and-clubs-10555"
+        }
+      ]
+    },
+    {
+      "id": "N030",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 151,
+      "originalHash": "f6b879c014623666882770db5c359df4bcd84350d4ae60887e9c10684ef9cdea",
+      "action": "corrected",
+      "before": {
+        "text": "Quel attaquant espagnol a joué au Bayern de 2010 à 2013 ?",
+        "answers": [
+          "Fernando Torres",
+          "David Villa",
+          "Mario Gómez",
+          "Fernando Llorente"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel attaquant allemand a rejoint le Bayern en 2009 en provenance de Stuttgart ?",
+        "answers": [
+          "Fernando Torres",
+          "David Villa",
+          "Mario Gómez",
+          "Fernando Llorente"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Écrire 'Quel attaquant allemand a rejoint le Bayern en 2009 depuis Stuttgart ?'.",
+      "sources": [
+        {
+          "title": "FC Bayern - The historic treble",
+          "url": "https://fcbayern.com/en/club/history/mile-stones/2010-to-2013-the-historic-treble"
+        }
+      ]
+    },
+    {
+      "id": "N031",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 152,
+      "originalHash": "3a9ce5cb9f7deb8286476c7635348cfe1fda2a60baa6ea6fc56c4c4145db82fa",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur néerlandais a joué pour le Bayern et Arsenal ?",
+        "answers": [
+          "Dennis Bergkamp",
+          "Marc Overmars",
+          "Arjen Robben",
+          "Robin van Persie"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel joueur néerlandais a joué pour le Bayern et Chelsea ?",
+        "answers": [
+          "Dennis Bergkamp",
+          "Marc Overmars",
+          "Arjen Robben",
+          "Robin van Persie"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "reason": "Remplacer Arsenal par Chelsea.",
+      "sources": [
+        {
+          "title": "Eredivisie - Arjen Robben career",
+          "url": "https://eredivisie.nl/nieuws/arjen-robben-zet-punt-achter-imposante-carriere/"
+        }
+      ]
+    },
+    {
+      "id": "N032",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 155,
+      "originalHash": "8a1f6d48966415e4c5510af19245cef610efa11cf503cd972d0dc9a9a84a4024",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur du Bayern a marqué lors de la Supercoupe d'Europe 2020 contre Séville ?",
+        "answers": [
+          "Robert Lewandowski",
+          "Thomas Müller",
+          "Javi Martínez",
+          "Leon Goretzka"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel joueur du Bayern a marqué le but de la victoire en prolongation lors de la Supercoupe d'Europe 2020 contre Séville ?",
+        "answers": [
+          "Robert Lewandowski",
+          "Thomas Müller",
+          "Javi Martínez",
+          "Leon Goretzka"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "Préciser 'a marqué le but de la victoire en prolongation' (Javi Martínez).",
+      "sources": [
+        {
+          "title": "UEFA - Super Cup 2020",
+          "url": "https://de.uefa.com/uefasupercup/history/2020/"
+        }
+      ]
+    },
+    {
+      "id": "N033",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 157,
+      "originalHash": "b6ed28fc92a376df0daab7b70544a0ec004a4ae4eeb4bce5ebeb010bbcc30984",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur du Bayern a été élu meilleur joueur de la Coupe du monde 2010 ?",
+        "answers": [
+          "Manuel Neuer",
+          "Thomas Müller",
+          "Bastian Schweinsteiger",
+          "Philipp Lahm"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel joueur du Bayern a été élu meilleur jeune joueur de la Coupe du monde 2010 ?",
+        "answers": [
+          "Manuel Neuer",
+          "Thomas Müller",
+          "Bastian Schweinsteiger",
+          "Philipp Lahm"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Écrire 'meilleur jeune joueur de la Coupe du monde 2010'.",
+      "sources": [
+        {
+          "title": "FIFA - Pride for Africa as Spain strike gold",
+          "url": "https://inside.fifa.com/en/tournaments/mens/worldcup/2010south-africa/news/pride-for-africa-spain-strike-gold-2247372"
+        }
+      ]
+    },
+    {
+      "id": "N034",
+      "category": "beyonce",
+      "file": "backend/data/beyonce.json",
+      "originalIndex": 141,
+      "originalHash": "66bbd2752ffddb11380f26344cb66560e4bedae25e52889a3eac75800567ccc8",
+      "action": "corrected",
+      "before": {
+        "text": "Quel producteur nigérian a travaillé sur plusieurs titres de Renaissance ?",
+        "answers": [
+          "Burna Boy",
+          "P2J",
+          "Wizkid",
+          "Davido"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel producteur nigérian a coproduit 'MOVE' avec Beyoncé sur Renaissance ?",
+        "answers": [
+          "Burna Boy",
+          "P2J",
+          "Wizkid",
+          "Davido"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Limiter le crédit attesté de P2J à MOVE, au lieu de lui attribuer plusieurs titres.",
+      "sources": [
+        {
+          "title": "Renaissance : crédits complets",
+          "url": "https://pitchfork.com/news/beyonce-releases-new-album-renaissance-listen/"
+        }
+      ]
+    },
+    {
+      "id": "N035",
+      "category": "beyonce",
+      "file": "backend/data/beyonce.json",
+      "originalIndex": 145,
+      "originalHash": "316f7291283f6eb191cd224c667dfbe912db19419a350159a646ac6ce63bc70c",
+      "action": "corrected",
+      "before": {
+        "text": "Quelle chanteuse de gospel apparaît sur 'Daddy Lessons' en version live aux CMA Awards ?",
+        "answers": [
+          "Dolly Parton",
+          "The Chicks (Dixie Chicks)",
+          "Carrie Underwood",
+          "Miranda Lambert"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel groupe de country accompagne Beyoncé sur 'Daddy Lessons' aux CMA Awards 2016 ?",
+        "answers": [
+          "Dolly Parton",
+          "The Chicks (Dixie Chicks)",
+          "Carrie Underwood",
+          "Miranda Lambert"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "The Chicks est un groupe de country ; préciser aussi la cérémonie concernée.",
+      "sources": [
+        {
+          "title": "Beyoncé et The Chicks aux CMA",
+          "url": "https://ca.billboard.com/music/music-news/beyonce-cmas-cowboy-carter-1235636304/"
+        }
+      ]
+    },
+    {
+      "id": "N036",
+      "category": "beyonce",
+      "file": "backend/data/beyonce.json",
+      "originalIndex": 146,
+      "originalHash": "31657e1cccc3745a01e04151a18886ba4c58a99610459066a7c3f56455c108ad",
+      "action": "corrected",
+      "before": {
+        "text": "Quel producteur français a co-produit 'Crazy in Love' ?",
+        "answers": [
+          "David Guetta",
+          "DJ Snake",
+          "Rich Harrison",
+          "Aucun producteur français"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel producteur français a co-produit 'Crazy in Love' ?",
+        "answers": [
+          "David Guetta",
+          "DJ Snake",
+          "Rich Harrison",
+          "Aucun producteur français"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "reason": "Rich Harrison est américain. La réponse existante Aucun producteur français résout la prémisse sans ajouter de fait.",
+      "sources": [
+        {
+          "title": "Rich Harrison, producteur américain",
+          "url": "https://en.wikipedia.org/wiki/Rich_Harrison"
+        }
+      ]
+    },
+    {
+      "id": "N037",
+      "category": "beyonce",
+      "file": "backend/data/beyonce.json",
+      "originalIndex": 159,
+      "originalHash": "55bfa5525091771b590c99063e1cb88b99957b31ceab9614d522ea9714d713a2",
+      "action": "corrected",
+      "before": {
+        "text": "Quel sample classique de house music est utilisé sur 'ENERGY' de Renaissance ?",
+        "answers": [
+          "'Show Me Love' de Robin S",
+          "'Finally' de CeCe Peniston",
+          "'Gonna Make You Sweat'",
+          "'Miss Elliott - Get Ur Freak On' via BEAM"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel titre de Teena Marie est interpolé dans 'ENERGY' sur Renaissance ?",
+        "answers": [
+          "'Show Me Love' de Robin S",
+          "'Finally' de CeCe Peniston",
+          "'Gonna Make You Sweat'",
+          "Ooo La La La"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "reason": "Utiliser une interpolation attestée et son titre dans les crédits ; retirer le faux crédit Get Ur Freak On, sans ambiguïté avec une reprise ou la version initiale contenant Kelis.",
+      "sources": [
+        {
+          "title": "Pitchfork — crédits complets Renaissance, 05 Energy",
+          "url": "https://pitchfork.com/news/beyonce-releases-new-album-renaissance-listen/"
+        }
+      ]
+    },
+    {
+      "id": "N038",
+      "category": "cristiano_ronaldo",
+      "file": "backend/data/cristiano_ronaldo.json",
+      "originalIndex": 129,
+      "originalHash": "ca3dab2835227e08994b7448b10c2b4bcc7276ca4fc431e96c17e30349ae506c",
+      "action": "corrected",
+      "before": {
+        "text": "En quelle année Ronaldo a-t-il marqué 69 buts toutes compétitions confondues avec le Real Madrid ?",
+        "answers": [
+          "2010-2011",
+          "2011-2012",
+          "2013-2014",
+          "2014-2015"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Lors de quelle saison Ronaldo a-t-il inscrit 61 buts toutes compétitions confondues avec le Real Madrid ?",
+        "answers": [
+          "2010-2011",
+          "2011-2012",
+          "2013-2014",
+          "2014-2015"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "reason": "Demander l'exercice de ses 61 buts : 2014-2015.",
+      "sources": [
+        {
+          "title": "UEFA - Cristiano Ronaldo adds to record collection",
+          "url": "https://www.uefa.com/uefachampionsleague/news/0253-0d7f1c7af7b5-61da696c8990-1000--cristiano-ronaldo-adds-to-record-collection/"
+        }
+      ]
+    },
+    {
+      "id": "N039",
+      "category": "cristiano_ronaldo",
+      "file": "backend/data/cristiano_ronaldo.json",
+      "originalIndex": 130,
+      "originalHash": "15694e21eb18117f8d66531fbee08010e7a29abd6f777197115b258802e609f9",
+      "action": "corrected",
+      "before": {
+        "text": "Quel club allemand Ronaldo a-t-il affronté lors d'un triplé en demi-finale de Ligue des champions 2017 ?",
+        "answers": [
+          "Le Bayern Munich",
+          "Le Borussia Dortmund",
+          "Le RB Leipzig",
+          "L'Atlético de Madrid"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel club espagnol Ronaldo a-t-il affronté lors de son triplé en demi-finale de Ligue des champions 2017 ?",
+        "answers": [
+          "Le Bayern Munich",
+          "Le Borussia Dortmund",
+          "Le RB Leipzig",
+          "L'Atlético de Madrid"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "reason": "Remplacer allemand par espagnol.",
+      "sources": [
+        {
+          "title": "UEFA - Ronaldo hat-trick leaves Real Madrid on brink",
+          "url": "https://www.uefa.com/uefachampionsleague/news/0239-0e96d80bccab-59a3cd0ec78a-1000/"
+        }
+      ]
+    },
+    {
+      "id": "N040",
+      "category": "cristiano_ronaldo",
+      "file": "backend/data/cristiano_ronaldo.json",
+      "originalIndex": 134,
+      "originalHash": "e9dacad775b39661d295265f07597cfb89f8c25c8b0d47b8b6514eadc5ebdc8c",
+      "action": "corrected",
+      "before": {
+        "text": "Quel club Ronaldo a-t-il éliminé d'un triplé en quarts de Ligue des champions 2018 ?",
+        "answers": [
+          "Liverpool",
+          "La Juventus",
+          "Le Bayern Munich",
+          "Le PSG"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Contre quel club Ronaldo a-t-il inscrit trois buts sur l'ensemble des deux matchs de quarts de finale de Ligue des champions 2018 ?",
+        "answers": [
+          "Liverpool",
+          "La Juventus",
+          "Le Bayern Munich",
+          "Le PSG"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Trois buts cumulés (deux à l'aller et un au retour), sans prétendre à un triplé dans un seul match.",
+      "sources": [
+        {
+          "title": "UEFA - How Madrid and Liverpool reached the final",
+          "url": "https://www.uefa.com/uefachampionsleague/news/0245-0e98d19961a0-948d8f745d6c-1000--how-madrid-and-liverpool-reached-the-final/"
+        }
+      ]
+    },
+    {
+      "id": "N041",
+      "category": "cristiano_ronaldo",
+      "file": "backend/data/cristiano_ronaldo.json",
+      "originalIndex": 140,
+      "originalHash": "f38b6fc71893178750ea716a101753e21d2d43e6b7d050d18608b6a3b8ccf654",
+      "action": "corrected",
+      "before": {
+        "text": "Quel record Ronaldo a-t-il établi en marquant lors de 11 matchs consécutifs en Liga ?",
+        "answers": [
+          "Le plus de buts en un mois",
+          "La plus longue série de matchs consécutifs en marquant en Liga",
+          "Le plus de doublés consécutifs",
+          "Le plus de hat-tricks en une saison"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel joueur a marqué lors de 21 matchs consécutifs de Liga pendant la saison 2012-2013 ?",
+        "answers": [
+          "Cristiano Ronaldo",
+          "Lionel Messi",
+          "Karim Benzema",
+          "Luis Suárez"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Le record documenté appartient à Messi ; reformulation historique datée et quatre joueurs distincts.",
+      "sources": [
+        {
+          "title": "Guinness World Records - Most consecutive games scored in La Liga",
+          "url": "https://www.guinnessworldrecords.com/world-records/725235-most-consecutive-games-scored-in-la-liga-by-an-individual"
+        }
+      ]
+    },
+    {
+      "id": "N042",
+      "category": "cristiano_ronaldo",
+      "file": "backend/data/cristiano_ronaldo.json",
+      "originalIndex": 154,
+      "originalHash": "bbe62c63a549d622f6ffab9961becd66a26cb1e9f699484d8404e58ac4d1c510",
+      "action": "corrected",
+      "before": {
+        "text": "Combien de buts Ronaldo a-t-il marqués lors de sa deuxième saison à la Juventus (2019-2020) ?",
+        "answers": [
+          "25",
+          "29",
+          "31",
+          "37"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Combien de buts Ronaldo a-t-il marqués toutes compétitions confondues lors de sa deuxième saison à la Juventus (2019-2020) ?",
+        "answers": [
+          "25",
+          "29",
+          "31",
+          "37"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "reason": "Préciser toutes compétitions et marquer 37 (choix 3), ou ajouter 'en Serie A'.",
+      "sources": [
+        {
+          "title": "Juventus official - All 37 Ronaldo goals 2019/20",
+          "url": "https://www.youtube.com/watch?v=DhU9bMMaLYw"
+        }
+      ]
+    },
+    {
+      "id": "N043",
+      "category": "demon_slayer",
+      "file": "backend/data/demon_slayer.json",
+      "originalIndex": 127,
+      "originalHash": "affb2b500b0b6818ec8019cb75f296fb43631b7801d2f78d329e68cbe08ebf7a",
+      "action": "corrected",
+      "before": {
+        "text": "Quel Pilier possède une force musculaire huit fois supérieure à la normale ?",
+        "answers": [
+          "Gyomei Himejima",
+          "Mitsuri Kanroji",
+          "Sanemi Shinazugawa",
+          "Tengen Uzui"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel Pilier possède une densité musculaire huit fois supérieure à la normale ?",
+        "answers": [
+          "Gyomei Himejima",
+          "Mitsuri Kanroji",
+          "Sanemi Shinazugawa",
+          "Tengen Uzui"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Le facteur huit porte sur la densité musculaire de Mitsuri, pas sur une mesure de force.",
+      "sources": [
+        {
+          "title": "Kimetsu no Yaiba Wiki — Mitsuri Kanroji, Abnormal Muscular Constitution",
+          "url": "https://kimetsu-no-yaiba.fandom.com/wiki/Mitsuri_Kanroji"
+        },
+        {
+          "title": "Anime Explained — How Strong Is Mitsuri Kanroji, densité des fibres et chapitre 123",
+          "url": "https://www.animeexplained.com/explained/how-strong-is-mitsuri-kanroji-in-demon-slayer-analyzing-the-love-hashiras-power/"
+        }
+      ]
+    },
+    {
+      "id": "N044",
+      "category": "dinosaures",
+      "file": "backend/data/dinosaures.json",
+      "originalIndex": 113,
+      "originalHash": "f4248d461eb1e7035e097045235694bffb69b5afaf383d35d8fdfb988c27c5f1",
+      "action": "corrected",
+      "before": {
+        "text": "Quel dinosaure du Crétacé supérieur possédait un bec de perroquet et une collerette ?",
+        "answers": [
+          "Triceratops",
+          "Protoceratops",
+          "Psittacosaurus",
+          "Styracosaurus"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel dinosaure du Crétacé inférieur possédait un bec de perroquet ?",
+        "answers": [
+          "Triceratops",
+          "Protoceratops",
+          "Psittacosaurus",
+          "Styracosaurus"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "Réécrire l’énoncé sur Psittacosaurus au Crétacé inférieur et son bec de perroquet, sans lui attribuer une grande collerette typique d’autres cératopsiens.",
+      "sources": [
+        {
+          "title": "Natural History Museum — Psittacosaurus, Crétacé inférieur",
+          "url": "https://www.nhm.ac.uk/discover/dino-directory/psittacosaurus.html"
+        }
+      ]
+    },
+    {
+      "id": "N045",
+      "category": "dinosaures",
+      "file": "backend/data/dinosaures.json",
+      "originalIndex": 126,
+      "originalHash": "d83a1ab4f3b7c223b0d2da609a13be39827b73f99a6a513e7cd3b45a58a3629b",
+      "action": "corrected",
+      "before": {
+        "text": "Quel dinosaure herbivore du Jurassique possédait de longues épines sur le cou ?",
+        "answers": [
+          "Diplodocus",
+          "Amargasaurus",
+          "Nigersaurus",
+          "Saltasaurus"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel dinosaure herbivore du Crétacé inférieur possédait de longues épines sur le cou ?",
+        "answers": [
+          "Diplodocus",
+          "Amargasaurus",
+          "Nigersaurus",
+          "Saltasaurus"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Remplacer Jurassique par Crétacé inférieur.",
+      "sources": [
+        {
+          "title": "Natural History Museum — Amargasaurus, Crétacé inférieur",
+          "url": "https://www.nhm.ac.uk/discover/dino-directory/amargasaurus.html"
+        }
+      ]
+    },
+    {
+      "id": "N046",
+      "category": "dinosaures",
+      "file": "backend/data/dinosaures.json",
+      "originalIndex": 145,
+      "originalHash": "3e97d8f0bcf68a61eedd2eec96935b3148f3e2b9b6c174ca1ec678bc9d815a52",
+      "action": "corrected",
+      "before": {
+        "text": "Quel dinosaure a été le premier à être découvert en Antarctique ?",
+        "answers": [
+          "Cryolophosaurus",
+          "Antarctopelta",
+          "Glacialisaurus",
+          "Trinisaura"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel dinosaure non avien découvert en Antarctique a été le premier officiellement nommé, en 1994 ?",
+        "answers": [
+          "Cryolophosaurus",
+          "Antarctopelta",
+          "Glacialisaurus",
+          "Trinisaura"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "Demander quel dinosaure non avien découvert en Antarctique a été le premier officiellement nommé (Cryolophosaurus, en 1994), au lieu de confondre date de découverte et de description.",
+      "sources": [
+        {
+          "title": "British Antarctic Survey — premier fossile trouvé en 1985, confirmé en 2026",
+          "url": "https://www.bas.ac.uk/news/antarcticas-first-dinosaur-fossil-confirmed-from-1985-antarctic-expedition/"
+        },
+        {
+          "title": "CONICET — découverte d’Antarctopelta en 1986",
+          "url": "https://www.conicet.gov.ar/homenaje-al-cientifico-del-cadic-que-encontro-el-primer-dinosaurio-de-antartida/"
+        },
+        {
+          "title": "Natural History Museum — Cryolophosaurus",
+          "url": "https://www.nhm.ac.uk/discover/dino-directory/cryolophosaurus.html"
+        },
+        {
+          "title": "United States Antarctic Program — découverte et premier dinosaure nommé",
+          "url": "https://www.usap.gov/news/4583/"
+        }
+      ]
+    },
+    {
+      "id": "N047",
+      "category": "dinosaures",
+      "file": "backend/data/dinosaures.json",
+      "originalIndex": 152,
+      "originalHash": "7d19de6ce0f306f7343e51a53ce29b0e50a579cbf846ca452bda38169c17768b",
+      "action": "corrected",
+      "before": {
+        "text": "Quel dinosaure carnivore du Crétacé supérieur d'Amérique du Nord avait une corne nasale ?",
+        "answers": [
+          "Allosaurus",
+          "Ceratosaurus",
+          "Carnotaurus",
+          "Dilophosaurus"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel dinosaure carnivore du Jurassique supérieur d’Amérique du Nord avait une corne nasale ?",
+        "answers": [
+          "Allosaurus",
+          "Ceratosaurus",
+          "Carnotaurus",
+          "Dilophosaurus"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Remplacer Crétacé supérieur par Jurassique supérieur.",
+      "sources": [
+        {
+          "title": "Natural History Museum — Ceratosaurus, Jurassique supérieur",
+          "url": "https://www.nhm.ac.uk/discover/dino-directory/ceratosaurus.html"
+        }
+      ]
+    },
+    {
+      "id": "N048",
+      "category": "dragon_ball",
+      "file": "backend/data/dragon_ball.json",
+      "originalIndex": 135,
+      "originalHash": "b64ebb802ee158685f0f53e32dd51563e08ad14f69859313b4d02e08552de948",
+      "action": "corrected",
+      "before": {
+        "text": "Quel est le niveau de puissance de Goku quand il arrive sur Namek d'après le scouter ?",
+        "answers": [
+          "5 000",
+          "90 000",
+          "150 000",
+          "180 000"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quelle valeur le scouter de Ginyu affiche-t-il initialement pour la puissance de Goku sur Namek ?",
+        "answers": [
+          "5 000",
+          "90 000",
+          "150 000",
+          "180 000"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "reason": "La lecture initiale est de 5 000 ; distinguer cette lecture des 90 000 de base et des 180 000 avec Kaioken.",
+      "sources": [
+        {
+          "title": "Dragon Ball Official — Character Showcase #117: Ginyu, Tale 285",
+          "url": "https://en.dragon-ball-official.com/news/01_2068.html"
+        }
+      ]
+    },
+    {
+      "id": "N049",
+      "category": "dragon_ball",
+      "file": "backend/data/dragon_ball.json",
+      "originalIndex": 137,
+      "originalHash": "091d316db055c41dc42c31e701d0f4dff52c6ff690824c75ff9669833f922eee",
+      "action": "corrected",
+      "before": {
+        "text": "Quel est le vrai nom de Mr Satan ?",
+        "answers": [
+          "Mark",
+          "Hercule",
+          "Satan",
+          "Videl"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel est le vrai nom de Mr Satan ?",
+        "answers": [
+          "Mark",
+          "Hercule",
+          "Satan",
+          "Videl"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "reason": "Le véritable nom révélé par Toriyama est Mark ; Hercule est un nom de localisation.",
+      "sources": [
+        {
+          "title": "Dragon Ball Official — Character Showcase #64: Mr. Satan, Trivia",
+          "url": "https://en.dragon-ball-official.com/news/01_1268.html"
+        }
+      ]
+    },
+    {
+      "id": "N050",
+      "category": "dragon_ball",
+      "file": "backend/data/dragon_ball.json",
+      "originalIndex": 140,
+      "originalHash": "a791b17de781b20329bdf3ea9ab778df79f9ef8007cab341f40dd58b1b1979f5",
+      "action": "corrected",
+      "before": {
+        "text": "Quel est le pouvoir spécial du scouter utilisé par les soldats de Freezer ?",
+        "answers": [
+          "Détecter les Dragon Balls",
+          "Mesurer les niveaux de puissance",
+          "Communiquer avec Freezer",
+          "Scanner les planètes"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quelle grandeur le scouter permet-il de mesurer chez un adversaire ?",
+        "answers": [
+          "La température du corps",
+          "Le niveau de puissance",
+          "La vitesse maximale de course",
+          "L’âge de l’adversaire"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Les quatre réponses sont désormais des grandeurs, en accord avec la question ; seule la mesure du niveau de puissance correspond au scouter.",
+      "sources": [
+        {
+          "title": "Dragon Ball Official — Why Do Scouters Explode, appareil de calcul et communication",
+          "url": "https://en.dragon-ball-official.com/news/01_1666.html"
+        },
+        {
+          "title": "Dragon Ball Official — Character Showcase #21: Raditz, communication via scouter",
+          "url": "https://dragon-ball-official.com/news/01_504.html"
+        },
+        {
+          "title": "Dragon Ball Wiki — Scouter, communication des soldats de Freezer",
+          "url": "https://dragonball.fandom.com/wiki/Scouter"
+        }
+      ]
+    },
+    {
+      "id": "N051",
+      "category": "equipe_de_france_football",
+      "file": "backend/data/equipe_de_france_football.json",
+      "originalIndex": 109,
+      "originalHash": "18de5ed68906136ff0a2408cbf3b22c206225a883815dd19479483a4e49d27b6",
+      "action": "corrected",
+      "before": {
+        "text": "Quel attaquant français a inscrit quatre buts contre l'Argentine en huitièmes du Mondial 2018 ?",
+        "answers": [
+          "Antoine Griezmann",
+          "Olivier Giroud",
+          "Kylian Mbappé",
+          "Paul Pogba"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel attaquant français a inscrit deux buts contre l'Argentine en huitièmes du Mondial 2018 ?",
+        "answers": [
+          "Antoine Griezmann",
+          "Olivier Giroud",
+          "Kylian Mbappé",
+          "Paul Pogba"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "reason": "Remplacer quatre buts par deux buts.",
+      "sources": [
+        {
+          "title": "FIFA - France v Argentina classic 2018",
+          "url": "https://www.fifa.com/en/articles/france-argentina-fifa-world-cup-2018"
+        }
+      ]
+    },
+    {
+      "id": "N052",
+      "category": "equipe_de_france_football",
+      "file": "backend/data/equipe_de_france_football.json",
+      "originalIndex": 111,
+      "originalHash": "aa7db92719bca1db1a8c28fc5ada7621d7da56b0194bea6a081a7135c5cab515",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur français a inscrit le premier but de la finale du Mondial 2018 ?",
+        "answers": [
+          "Kylian Mbappé",
+          "Antoine Griezmann",
+          "Paul Pogba",
+          "Mario Mandžukić (csc)"
+        ],
+        "correct": 3,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "À quel joueur est attribué le premier but de la finale du Mondial 2018, marqué contre son camp ?",
+        "answers": [
+          "Kylian Mbappé",
+          "Antoine Griezmann",
+          "Paul Pogba",
+          "Mario Mandžukić (csc)"
+        ],
+        "correct": 3,
+        "difficulty": "facile"
+      },
+      "reason": "Demander 'À quel joueur est attribué le premier but de la finale 2018 ?' en conservant le CSC de Mandžukić.",
+      "sources": []
+    },
+    {
+      "id": "N053",
+      "category": "equipe_de_france_football",
+      "file": "backend/data/equipe_de_france_football.json",
+      "originalIndex": 135,
+      "originalHash": "c695fc285e068f970903d7c970472b4db1bff588bfe4b485a919302739abec44",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu de terrain français a été élu meilleur joueur de la Coupe des Confédérations 2003 ?",
+        "answers": [
+          "Patrick Vieira",
+          "Zinédine Zidane",
+          "Thierry Henry",
+          "Robert Pirès"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel attaquant français a été élu meilleur joueur de la Coupe des Confédérations 2003 ?",
+        "answers": [
+          "Patrick Vieira",
+          "Zinédine Zidane",
+          "Thierry Henry",
+          "Robert Pirès"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Remplacer milieu de terrain par attaquant.",
+      "sources": [
+        {
+          "title": "FIFA - Henry secures France title defence",
+          "url": "https://inside.fifa.com/tournaments/mens/confederationscup/france2003/news/the-decisive-goal-henry-secures-france-title-defence-2884187"
+        }
+      ]
+    },
+    {
+      "id": "N054",
+      "category": "equipe_de_france_football",
+      "file": "backend/data/equipe_de_france_football.json",
+      "originalIndex": 149,
+      "originalHash": "72fd4d4ef2b52d203c18b8e435f6c5012e8c450a38ac1252c2c97164ec4d2714",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur a inscrit le centième but de la France en Coupe du monde ?",
+        "answers": [
+          "Antoine Griezmann",
+          "Kylian Mbappé",
+          "Olivier Giroud",
+          "Paul Pogba"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel joueur a inscrit le centième but de la France en Coupe du monde ?",
+        "answers": [
+          "Antoine Griezmann",
+          "Kylian Mbappé",
+          "Olivier Giroud",
+          "Paul Pogba"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "Marquer Olivier Giroud (choix 2).",
+      "sources": [
+        {
+          "title": "FFF - Suisse France 20 juin 2014",
+          "url": "https://www.fff.fr/selection/matchs/1639-suisse-france.html"
+        }
+      ]
+    },
+    {
+      "id": "N055",
+      "category": "equipe_de_france_football",
+      "file": "backend/data/equipe_de_france_football.json",
+      "originalIndex": 157,
+      "originalHash": "a51abeae1e27a3516125fe07e36aae523d4b885b901725c5426f432f5bb069fe",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur a été élu homme du match de la finale du Mondial 2022 ?",
+        "answers": [
+          "Lionel Messi",
+          "Kylian Mbappé",
+          "Emiliano Martínez",
+          "Antoine Griezmann"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel joueur a reçu le prix officiel d'homme du match de la finale du Mondial 2022 ?",
+        "answers": [
+          "Lionel Messi",
+          "Kylian Mbappé",
+          "Emiliano Martínez",
+          "Antoine Griezmann"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "Marquer Lionel Messi (choix 0).",
+      "sources": [
+        {
+          "title": "FIFA official - Lionel Messi Player of the Match Argentina vs France",
+          "url": "https://www.youtube.com/watch?v=DTXVOJkb-y8"
+        }
+      ]
+    },
+    {
+      "id": "N056",
+      "category": "hunter_x_hunter",
+      "file": "backend/data/hunter_x_hunter.json",
+      "originalIndex": 103,
+      "originalHash": "b3dc75e862c158d5df538868587548e693239b8b24530ab5abb7f75d6c556caf",
+      "action": "corrected",
+      "before": {
+        "text": "Quel est le numéro de candidat de Gon à l'examen Hunter ?",
+        "answers": [
+          "44",
+          "99",
+          "301",
+          "405"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel est le numéro de candidat de Gon à l'examen Hunter ?",
+        "answers": [
+          "44",
+          "99",
+          "301",
+          "405"
+        ],
+        "correct": 3,
+        "difficulty": "facile"
+      },
+      "reason": "Le numéro de candidat de Gon est 405 ; 99 est celui de Killua.",
+      "sources": [
+        {
+          "title": "Hunterpedia — 287th Hunter Exam, tableau des candidats",
+          "url": "https://hunterxhunter.fandom.com/wiki/287th_Hunter_Exam"
+        },
+        {
+          "title": "Game8 — Nen Survivor, explication des numéros 44, 99 et 405",
+          "url": "https://game8.jp/hunterhunter-nensaba/781674"
+        }
+      ]
+    },
+    {
+      "id": "N057",
+      "category": "hunter_x_hunter",
+      "file": "backend/data/hunter_x_hunter.json",
+      "originalIndex": 128,
+      "originalHash": "e0131c3bda65f6f3e1197134eb6ece5cfd24b38cd09a94150d069e41c04e54cd",
+      "action": "corrected",
+      "before": {
+        "text": "Quel pays fictif est envahi par les Fourmis-Chimères ?",
+        "answers": [
+          "Padokea",
+          "Yorknew",
+          "République de Gorteau de l'Est",
+          "NGL"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Dans quel pays la reine des Fourmis-Chimères s'installe-t-elle au début de l'arc ?",
+        "answers": [
+          "Padokea",
+          "Yorknew",
+          "République de Gorteau de l'Est",
+          "NGL"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "reason": "Cibler la première implantation à NGL, avant la conquête de Gorteau de l'Est.",
+      "sources": [
+        {
+          "title": "NTV — Hunter x Hunter, épisode 79, Fourmis-Chimères à NGL",
+          "url": "https://www.ntv.co.jp/hunterhunter/story/079.html"
+        },
+        {
+          "title": "VIZ — Manga Spotlight: HUNTER x HUNTER 27, NGL puis conquête de Gorteau de l'Est",
+          "url": "https://www.viz.com/blog/posts/manga-spotlight-hunter-x-hunter-27-41"
+        }
+      ]
+    },
+    {
+      "id": "N058",
+      "category": "hunter_x_hunter",
+      "file": "backend/data/hunter_x_hunter.json",
+      "originalIndex": 134,
+      "originalHash": "13fc5ec1e443f559eeca11cecc8e7d832bb2eaf4d6ce2cd23796034e7a3fb0f5",
+      "action": "corrected",
+      "before": {
+        "text": "Quel Fourmi-Chimère devient gouverneur de la République de Gorteau de l'Est ?",
+        "answers": [
+          "Meruem sous l'identité de Ming Jol-ik",
+          "Neferpitou",
+          "Colt",
+          "Welfin"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quelle Fourmi-Chimère manipule le cadavre du sosie de Ming Jol-ik pour diffuser des ordres à Gorteau de l'Est ?",
+        "answers": [
+          "Meruem",
+          "Neferpitou",
+          "Colt",
+          "Welfin"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Neferpitou manipule le cadavre du sosie ; Meruem ne prend pas lui-même l'identité de Ming Jol-ik.",
+      "sources": [
+        {
+          "title": "Hunterpedia — Ming Jol-ik's Double, mort et manipulation du cadavre",
+          "url": "https://hunterxhunter.fandom.com/wiki/Ming_Jol-ik%27s_Double"
+        },
+        {
+          "title": "Hunterpedia — Neferpitou, contrôle public de Gorteau",
+          "url": "https://hunterxhunter.fandom.com/wiki/Neferpitou"
+        }
+      ]
+    },
+    {
+      "id": "N059",
+      "category": "hunter_x_hunter",
+      "file": "backend/data/hunter_x_hunter.json",
+      "originalIndex": 141,
+      "originalHash": "c4453c8553e1782f7f9d582b84a3b113cd47629713989b46cab682c321a4e67d",
+      "action": "removed_duplicate",
+      "before": {
+        "text": "Quel membre de la Brigade Fantôme possède la capacité de téléporter des objets ?",
+        "answers": [
+          "Kortopi",
+          "Shalnark",
+          "Bonolenov",
+          "Phinks"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": null,
+      "reason": "La capacité de Kortopi est la copie, déjà interrogée à l'index original 151 ; retirer la répétition fautive sur la téléportation.",
+      "sources": [
+        {
+          "title": "Hunterpedia — Kortopi, Gallery Fake : copie main gauche/main droite",
+          "url": "https://hunterxhunter.fandom.com/wiki/Kortopi"
+        }
+      ]
+    },
+    {
+      "id": "N060",
+      "category": "hunter_x_hunter",
+      "file": "backend/data/hunter_x_hunter.json",
+      "originalIndex": 158,
+      "originalHash": "857e612d50be2b4d93b4ce0a3f36c33043d3e5b0c3b797b83f31d6bff6de0660",
+      "action": "corrected",
+      "before": {
+        "text": "Quel examinateur de l'examen Hunter possède la capacité de lancer des épingles ?",
+        "answers": [
+          "Satotz",
+          "Buhara",
+          "Togari",
+          "Gittarackur"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel candidat de l'examen Hunter possède la capacité de lancer des épingles ?",
+        "answers": [
+          "Satotz",
+          "Buhara",
+          "Togari",
+          "Gittarackur"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "reason": "Gittarackur est candidat et non examinateur.",
+      "sources": [
+        {
+          "title": "Hunterpedia — Illumi Zoldyck, Hunter Exam arc",
+          "url": "https://hunterxhunter.fandom.com/wiki/Illumi_Zoldyck"
+        },
+        {
+          "title": "Hunterpedia — 287th Hunter Exam, tableau des candidats",
+          "url": "https://hunterxhunter.fandom.com/wiki/287th_Hunter_Exam"
+        }
+      ]
+    },
+    {
+      "id": "N061",
+      "category": "jujutsu_kaisen",
+      "file": "backend/data/jujutsu_kaisen.json",
+      "originalIndex": 117,
+      "originalHash": "52c9072153cdd3f111c34b49ab09e525285abd5f8f9096e739dd4d04443f0c7e",
+      "action": "corrected",
+      "before": {
+        "text": "Quelle est la technique héréditaire de la famille Fushiguro ?",
+        "answers": [
+          "L'Infini",
+          "La Technique des Dix Ombres",
+          "La Manipulation du sang",
+          "Le Boogie Woogie"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quelle technique héréditaire du clan Zenin Megumi Fushiguro utilise-t-il ?",
+        "answers": [
+          "L'Infini",
+          "La Technique des Dix Ombres",
+          "La Manipulation du sang",
+          "Le Boogie Woogie"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "reason": "Rattacher les Dix Ombres au clan Zenin, comme sur la fiche officielle de Megumi.",
+      "sources": [
+        {
+          "title": "Site officiel Jujutsu Kaisen — Megumi Fushiguro, 禪院家相伝の術式",
+          "url": "https://jujutsukaisen.jp/character/"
+        }
+      ]
+    },
+    {
+      "id": "N062",
+      "category": "jujutsu_kaisen",
+      "file": "backend/data/jujutsu_kaisen.json",
+      "originalIndex": 122,
+      "originalHash": "b9186e74fec642baa3549d438d5cb3dc70bf2d323405fa933f9e994485f2e272",
+      "action": "corrected",
+      "before": {
+        "text": "Quel événement marque la fin de l'arc de Shibuya ?",
+        "answers": [
+          "La mort de Gojo",
+          "Le scellement de Gojo",
+          "La destruction de Tokyo",
+          "La mort de Sukuna"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel événement frappe Gojo au début de l'incident de Shibuya ?",
+        "answers": [
+          "La mort de Gojo",
+          "Le scellement de Gojo",
+          "La destruction de Tokyo",
+          "La mort de Sukuna"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Le scellement précède la majeure partie de l'arc et ne constitue pas sa conclusion.",
+      "sources": [
+        {
+          "title": "Site officiel Jujutsu Kaisen — épisode 34, annonce du scellement",
+          "url": "https://jujutsukaisen.jp/episodes/34.php"
+        },
+        {
+          "title": "Site officiel Jujutsu Kaisen — épisode 47, phase finale de Shibuya",
+          "url": "https://jujutsukaisen.jp/episodes/47.php"
+        }
+      ]
+    },
+    {
+      "id": "N063",
+      "category": "jujutsu_kaisen",
+      "file": "backend/data/jujutsu_kaisen.json",
+      "originalIndex": 135,
+      "originalHash": "364677f55742d5d6fb9f34124cfd4a7327331032168a7ba10e3fa6b08aa902c2",
+      "action": "corrected",
+      "before": {
+        "text": "Quel exorciste ancien de l'ère Heian utilise la foudre comme arme dans le Jeu de l'extermination ?",
+        "answers": [
+          "Ryu Ishigori",
+          "Reggie Star",
+          "Hajime Kashimo",
+          "Fumihiko Takaba"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel exorciste ayant vécu environ 400 ans auparavant utilise la foudre dans le Jeu de l'extermination ?",
+        "answers": [
+          "Ryu Ishigori",
+          "Reggie Star",
+          "Hajime Kashimo",
+          "Fumihiko Takaba"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Kashimo vient d'environ 400 ans dans le passé, pas de l'ère Heian.",
+      "sources": [
+        {
+          "title": "Crunchyroll — Season 3 Casts Ryohei Kimura as Hajime Kashimo, origine il y a 400 ans",
+          "url": "https://www.crunchyroll.com/id/news/latest/2026/2/5/jujutsu-kaisen-season-3-anime-casts-ryohei-kimura-as-hajime-kashimo"
+        }
+      ]
+    },
+    {
+      "id": "N064",
+      "category": "jujutsu_kaisen",
+      "file": "backend/data/jujutsu_kaisen.json",
+      "originalIndex": 138,
+      "originalHash": "54b3a1074f2d030d16be040a74dcff24adb89900688fe2a1d5cccde1500639cc",
+      "action": "corrected",
+      "before": {
+        "text": "Combien de frères Choso compte-t-il parmi les peintures de la mort ?",
+        "answers": [
+          "Trois",
+          "Six",
+          "Neuf",
+          "Douze"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Combien de frères Choso compte-t-il parmi les peintures de la mort ?",
+        "answers": [
+          "Trois",
+          "Six",
+          "Huit",
+          "Douze"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Les neuf Peintures de la mort incluent Choso ; il a donc huit frères parmi celles-ci.",
+      "sources": [
+        {
+          "title": "ABEMA — Choso, section sur les neuf Peintures de la mort, Choso inclus",
+          "url": "https://times.abema.tv/articles/-/10002406"
+        },
+        {
+          "title": "Jujutsu Kaisen Wiki — Choso, liste de ses huit frères",
+          "url": "https://jujutsu-kaisen.fandom.com/wiki/Choso"
+        }
+      ]
+    },
+    {
+      "id": "N065",
+      "category": "jujutsu_kaisen",
+      "file": "backend/data/jujutsu_kaisen.json",
+      "originalIndex": 140,
+      "originalHash": "e0067897a6b9943205a3958dc63cc50375859a485e7adc50f8a8c6f59d1c7cf6",
+      "action": "corrected",
+      "before": {
+        "text": "Quel est le concept de restriction céleste dans Jujutsu Kaisen ?",
+        "answers": [
+          "Un serment entre exorcistes",
+          "Un échange où le corps est renforcé au prix de l'énergie occulte",
+          "Une technique de scellement",
+          "Un pacte avec un fléau"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel est le concept de restriction céleste dans Jujutsu Kaisen ?",
+        "answers": [
+          "Un serment entre exorcistes",
+          "Une contrainte innée échangeant des capacités physiques contre des capacités occultes, ou l'inverse",
+          "Une technique de scellement",
+          "Un pacte avec un fléau"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Inclure les deux sens de l'échange, notamment le handicap physique de Kokichi Muta contre une portée et une puissance occultes accrues.",
+      "sources": [
+        {
+          "title": "Site officiel Jujutsu Kaisen — Kokichi Muta / Ultimate Mechamaru, échange corps contre portée et puissance",
+          "url": "https://jujutsukaisen.jp/character/category2.php"
+        }
+      ]
+    },
+    {
+      "id": "N066",
+      "category": "jujutsu_kaisen",
+      "file": "backend/data/jujutsu_kaisen.json",
+      "originalIndex": 143,
+      "originalHash": "635a57ba4014ebc28f1554a59b673813e6b0c3c86d7571d63dce4b718714c1db",
+      "action": "corrected",
+      "before": {
+        "text": "Quel est le nom de la technique de territoire de Mahito ?",
+        "answers": [
+          "Le Vide infini",
+          "L'Autel démoniaque",
+          "Le Jardin des ombres chimériques",
+          "Le Cercueil de fer de la transmutation"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel est le nom de la technique de territoire de Mahito ?",
+        "answers": [
+          "Le Vide infini",
+          "L'Autel démoniaque",
+          "Le Jardin des ombres chimériques",
+          "Jihei Endonka"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "reason": "Employer le nom japonais attesté du territoire de Mahito sans inventer une traduction française.",
+      "sources": [
+        {
+          "title": "Jujutsu Kaisen Wiki — Self-Embodiment of Perfection, Mahito, chapitre 29 / épisode 13",
+          "url": "https://jujutsu-kaisen.fandom.com/wiki/Self-Embodiment_of_Perfection"
+        },
+        {
+          "title": "Animate Times — liste des domaines, 自閉円頓裹／真人",
+          "url": "https://www.animatetimes.com/news/details.php?id=1716442730"
+        }
+      ]
+    },
+    {
+      "id": "N067",
+      "category": "jujutsu_kaisen",
+      "file": "backend/data/jujutsu_kaisen.json",
+      "originalIndex": 148,
+      "originalHash": "0bcabd20702c872d71c33f0677d7d004b9ca86bf8e6b4171ec19baeb90fceb3f",
+      "action": "corrected",
+      "before": {
+        "text": "Quel est le vrai nom du corps que Kenjaku occupe dans la série ?",
+        "answers": [
+          "Noritoshi Kamo",
+          "Suguru Geto",
+          "Itadori Jin",
+          "Les trois à différentes époques"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel corps Kenjaku occupe-t-il pendant l'incident de Shibuya ?",
+        "answers": [
+          "Noritoshi Kamo",
+          "Suguru Geto",
+          "Itadori Jin",
+          "Satoru Gojo"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Cibler le corps de Suguru Geto à Shibuya et supprimer la réponse groupée qui incluait Jin Itadori.",
+      "sources": [
+        {
+          "title": "Site officiel Jujutsu Kaisen — Kenjaku, ancien Kamo et corps actuel de Geto",
+          "url": "https://jujutsukaisen.jp/character/"
+        },
+        {
+          "title": "Anime Explained — Yuji's Real Parents, révélation du chapitre 143",
+          "url": "https://www.animeexplained.com/explained/jujutsu-kaisen-who-are-yujis-real-parents-explained/"
+        }
+      ]
+    },
+    {
+      "id": "N068",
+      "category": "jujutsu_kaisen",
+      "file": "backend/data/jujutsu_kaisen.json",
+      "originalIndex": 156,
+      "originalHash": "1bb5b4ef8d83f34a9f11deb26f659968a83f68a00ad8bd8fc2fc197ac021b207",
+      "action": "corrected",
+      "before": {
+        "text": "Quel personnage se sacrifie pour créer une balle unique que Maki utilise ensuite ?",
+        "answers": [
+          "Nobara Kugisaki",
+          "Mai Zenin",
+          "Kasumi Miwa",
+          "Momo Nishimiya"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel personnage se sacrifie pour créer un sabre que Maki utilise ensuite ?",
+        "answers": [
+          "Nobara Kugisaki",
+          "Mai Zenin",
+          "Kasumi Miwa",
+          "Momo Nishimiya"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "La création finale de Mai est un sabre, pas sa balle habituelle.",
+      "sources": [
+        {
+          "title": "Animate Times — Mai Zenin, limite d'une balle quotidienne et sabre créé au prix de sa vie",
+          "url": "https://www.animatetimes.com/news/details.php?id=1649904925"
+        },
+        {
+          "title": "Animate Times — Maki Zenin, réplique de Split Soul Katana laissée par Mai",
+          "url": "https://www.animatetimes.com/news/details.php?id=1641435348"
+        }
+      ]
+    },
+    {
+      "id": "N069",
+      "category": "lionel_messi",
+      "file": "backend/data/lionel_messi.json",
+      "originalIndex": 109,
+      "originalHash": "48987c0609349d4b4a08b2e5576f0775df0d64817f8d0c0260c9ad35d02c3905",
+      "action": "corrected",
+      "before": {
+        "text": "Quel numéro Messi portait-il initialement au Barça avant le 10 ?",
+        "answers": [
+          "30",
+          "19",
+          "7",
+          "14"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel numéro Messi portait-il lors de ses débuts officiels avec le Barça en 2004 ?",
+        "answers": [
+          "30",
+          "19",
+          "7",
+          "14"
+        ],
+        "correct": 0,
+        "difficulty": "facile"
+      },
+      "reason": "Le numéro de ses débuts est le 30 ; la question ne confond plus premier numéro et numéro immédiatement antérieur au 10.",
+      "sources": [
+        {
+          "title": "FC Barcelona - Anniversary of official debut",
+          "url": "https://www.fcbarcelona.com/en/football/first-team/news/886918/the-14-year-anniversary-of-leo-messis-official-barca-debut"
+        }
+      ]
+    },
+    {
+      "id": "N070",
+      "category": "lionel_messi",
+      "file": "backend/data/lionel_messi.json",
+      "originalIndex": 122,
+      "originalHash": "7c4479004680dffc3b11c01d0d0f0bf8afd744e4dc047324ad4a026836c114ae",
+      "action": "corrected",
+      "before": {
+        "text": "En quelle année Messi a-t-il remporté son premier titre de Liga avec le Barça ?",
+        "answers": [
+          "2004-2005",
+          "2005-2006",
+          "2006-2007",
+          "2008-2009"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Lors de quelle saison Messi a-t-il remporté son premier titre de Liga avec le Barça ?",
+        "answers": [
+          "2004-2005",
+          "2005-2006",
+          "2006-2007",
+          "2008-2009"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "reason": "Marquer 2004-2005 (choix 0).",
+      "sources": [
+        {
+          "title": "FC Barcelona - Most decorated player",
+          "url": "https://www.fcbarcelona.com/en/football/first-team/noticies/2208549/el-jugador-mes-llorejat-de-la-historia-culer"
+        }
+      ]
+    },
+    {
+      "id": "N071",
+      "category": "lionel_messi",
+      "file": "backend/data/lionel_messi.json",
+      "originalIndex": 123,
+      "originalHash": "38db412868df70012267e998c82c6493d580dad26968a9ec31edb0a968b33be3",
+      "action": "corrected",
+      "before": {
+        "text": "Quel entraîneur argentin a fait de Messi le capitaine de la sélection ?",
+        "answers": [
+          "Diego Maradona",
+          "Jorge Sampaoli",
+          "Lionel Scaloni",
+          "Alejandro Sabella"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel sélectionneur a nommé Messi capitaine de l'Argentine en août 2011 ?",
+        "answers": [
+          "Diego Maradona",
+          "Jorge Sampaoli",
+          "Lionel Scaloni",
+          "Alejandro Sabella"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "reason": "Marquer Alejandro Sabella (choix 3).",
+      "sources": [
+        {
+          "title": "FIFA - Immortal Messi reaches century",
+          "url": "https://www.fifa.com/en/articles/immortal-messi-reaches-century-of-international-goals"
+        }
+      ]
+    },
+    {
+      "id": "N072",
+      "category": "lionel_messi",
+      "file": "backend/data/lionel_messi.json",
+      "originalIndex": 129,
+      "originalHash": "6aa75b42e47d501f57901215a338b26234cc4db548c552d36edac784d9190a16",
+      "action": "corrected",
+      "before": {
+        "text": "Combien de buts Messi a-t-il marqués lors de la remontada du Barça contre le PSG (6-1) ?",
+        "answers": [
+          "Aucun",
+          "Un",
+          "Deux",
+          "Trois"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Combien de buts Messi a-t-il marqués lors de la remontada du Barça contre le PSG (6-1) ?",
+        "answers": [
+          "Aucun",
+          "Un",
+          "Deux",
+          "Trois"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Marquer Un (choix 1).",
+      "sources": [
+        {
+          "title": "LaLiga - Barcelona complete historic comeback",
+          "url": "https://www.laliga.com/en-GB/news/barcelona-complete-historic-comeback-in-the-champions-league"
+        }
+      ]
+    },
+    {
+      "id": "N073",
+      "category": "lionel_messi",
+      "file": "backend/data/lionel_messi.json",
+      "originalIndex": 132,
+      "originalHash": "b18b021348614647915798dd28016ee7d3e03dad4eb26b644a145d45a6140075",
+      "action": "corrected",
+      "before": {
+        "text": "Quel club japonais le Barça de Messi a-t-il battu en finale du Mondial des clubs 2009 ?",
+        "answers": [
+          "Kashima Antlers",
+          "Urawa Red Diamonds",
+          "Gamba Osaka",
+          "Estudiantes (Argentine)"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel club argentin le Barça de Messi a-t-il battu en finale du Mondial des clubs 2009 ?",
+        "answers": [
+          "Kashima Antlers",
+          "Urawa Red Diamonds",
+          "Gamba Osaka",
+          "Estudiantes (Argentine)"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "reason": "Remplacer 'japonais' par 'argentin'.",
+      "sources": []
+    },
+    {
+      "id": "N074",
+      "category": "lionel_messi",
+      "file": "backend/data/lionel_messi.json",
+      "originalIndex": 135,
+      "originalHash": "a1859353c20d1e267da5a774e17772b021710f96720eaea10dbb646aaf3a3ff0",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur a remplacé Messi comme numéro 10 au PSG après son départ ?",
+        "answers": [
+          "Neymar",
+          "Ousmane Dembélé",
+          "Marco Asensio",
+          "Personne, le numéro a été retiré temporairement"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel joueur arrivé au PSG à l'été 2023 porte le numéro 10 dans l'effectif masculin en novembre 2026 ?",
+        "answers": [
+          "Neymar",
+          "Ousmane Dembélé",
+          "Marco Asensio",
+          "Lionel Messi"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Retrait de la fausse succession à Messi, qui portait le 30 ; le profil officiel du PSG confirme Dembélé, son arrivée en 2023 et son numéro actuel. Date explicite.",
+      "sources": [
+        {
+          "title": "PSG - Ousmane Dembele official profile (arrival 2023, shirt 10)",
+          "url": "https://www.psg.fr/joueurs/ousmane-dembele"
+        }
+      ]
+    },
+    {
+      "id": "N075",
+      "category": "lionel_messi",
+      "file": "backend/data/lionel_messi.json",
+      "originalIndex": 138,
+      "originalHash": "f24345d8f217d894ab7beddb1e5fe0e1b3bcf65e776e3040a5584ed9ed6eb153",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur formait le duo 'M&S' ou 'SuárezMessi' au Barça avant l'arrivée de Neymar ?",
+        "answers": [
+          "Cesc Fàbregas",
+          "Pedro",
+          "David Villa",
+          "Luis Suárez"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "En quelle année Luis Suárez a-t-il rejoint Messi au FC Barcelone ?",
+        "answers": [
+          "2011",
+          "2012",
+          "2013",
+          "2014"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "reason": "La date d'arrivée de Suárez est documentée ; le surnom de duo non sourcé et la chronologie inversée avec Neymar sont supprimés.",
+      "sources": [
+        {
+          "title": "FC Barcelona - Five years since Suarez arrival",
+          "url": "https://www.fcbarcelona.com/en/football/first-team/news/1276278/five-years-since-the-arrival-of-luis-suarez-to-barca"
+        },
+        {
+          "title": "FC Barcelona - Changes in first team 2013/14",
+          "url": "https://www.fcbarcelona.com/en/football/first-team/actualites/1138507/changes-in-barca-first-team-squad"
+        },
+        {
+          "title": "FC Barcelona - Suarez arrival on 11 July 2014",
+          "url": "https://www.fcbarcelona.com/en/football/first-team/news/1276278/five-years-since-the-arrival-of-luis-suarez-to-barca"
+        }
+      ]
+    },
+    {
+      "id": "N076",
+      "category": "lionel_messi",
+      "file": "backend/data/lionel_messi.json",
+      "originalIndex": 140,
+      "originalHash": "affa29d491496c842377be596ebe56915e0ed9a16575be52580db87310de4394",
+      "action": "corrected",
+      "before": {
+        "text": "Quel était le score du match où Messi a battu le record de buts de Gerd Müller en 2012 ?",
+        "answers": [
+          "Barça 2-1 Betis",
+          "Barça 3-1 Rayo",
+          "Barça 2-0 Valladolid",
+          "Barça 4-0 Mallorca"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel était le score du match où Messi a battu le record de buts de Gerd Müller en 2012 ?",
+        "answers": [
+          "Betis 1-2 Barça",
+          "Barça 3-1 Rayo",
+          "Barça 2-0 Valladolid",
+          "Barça 4-0 Mallorca"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "Bonne rencontre et score corrigés ; ordre domicile/extérieur respecté.",
+      "sources": [
+        {
+          "title": "FC Barcelona - Messi after Betis record",
+          "url": "https://www.fcbarcelona.com/en/news/1147104/messi-the-record-is-great-but-whats-truly-important-is-that-the-team-won"
+        }
+      ]
+    },
+    {
+      "id": "N077",
+      "category": "lionel_messi",
+      "file": "backend/data/lionel_messi.json",
+      "originalIndex": 152,
+      "originalHash": "a0405f69e64405a8a493c1a5481b4770fb79c2a2cfce4c16d77b94da3c5f4680",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur a inscrit le premier but de l'Inter Miami lors de la Leagues Cup 2023 remportée par Messi ?",
+        "answers": [
+          "Lionel Messi",
+          "Sergio Busquets",
+          "Josef Martínez",
+          "Jordi Alba"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel joueur a inscrit le premier but de l'Inter Miami lors de la Leagues Cup 2023 remportée par Messi ?",
+        "answers": [
+          "Robert Taylor",
+          "Sergio Busquets",
+          "Josef Martínez",
+          "Jordi Alba"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "Taylor inscrit le premier but de Miami en Leagues Cup 2023, avant le but vainqueur de Messi contre Cruz Azul.",
+      "sources": [
+        {
+          "title": "Inter Miami - Messi debut match recap",
+          "url": "https://www.intermiamicf.com/news/match-recap-lionel-messi-scores-late-free-kick-winner-in-inter-miami-cf-debut"
+        }
+      ]
+    },
+    {
+      "id": "N078",
+      "category": "liverpool",
+      "file": "backend/data/liverpool.json",
+      "originalIndex": 109,
+      "originalHash": "4590a4077319f6f034417b83450105e03c209304027ec1801cf87be29338277a",
+      "action": "corrected",
+      "before": {
+        "text": "Quel attaquant néerlandais a joué pour Liverpool de 2007 à 2010 ?",
+        "answers": [
+          "Robin van Persie",
+          "Ruud van Nistelrooy",
+          "Dirk Kuyt",
+          "Arjen Robben"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel attaquant néerlandais a effectué un passage de six saisons à Liverpool, de 2006 à 2012 ?",
+        "answers": [
+          "Robin van Persie",
+          "Ruud van Nistelrooy",
+          "Dirk Kuyt",
+          "Arjen Robben"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Précision du passage complet de Kuyt, sans qualifier de fausse sa présence pendant la sous-période initiale.",
+      "sources": [
+        {
+          "title": "Liverpool FC - Dirk Kuyt",
+          "url": "https://bootroom.liverpoolfc.com/history/past-players/dirk-kuyt"
+        }
+      ]
+    },
+    {
+      "id": "N079",
+      "category": "liverpool",
+      "file": "backend/data/liverpool.json",
+      "originalIndex": 111,
+      "originalHash": "4b600dfc288d78eae738f61b1972975059735ff401014b42b8cf60d38f345ee2",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur japonais a rejoint Liverpool en 2024 ?",
+        "answers": [
+          "Takumi Minamino",
+          "Wataru Endō",
+          "Takehiro Tomiyasu",
+          "Daichi Kamada"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel joueur japonais a rejoint Liverpool en 2023 ?",
+        "answers": [
+          "Takumi Minamino",
+          "Wataru Endō",
+          "Takehiro Tomiyasu",
+          "Daichi Kamada"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Remplacer 2024 par 2023.",
+      "sources": [
+        {
+          "title": "Liverpool FC - Endo signing day 18 August 2023",
+          "url": "https://www.youtube.com/watch?v=O7m0-wRxOE4"
+        }
+      ]
+    },
+    {
+      "id": "N080",
+      "category": "liverpool",
+      "file": "backend/data/liverpool.json",
+      "originalIndex": 113,
+      "originalHash": "3514ecbf9293f9579d3514dc66c05ccd75b4c756f0e2905f7483794771ce485e",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur colombien a joué pour Liverpool de 2020 à 2024 ?",
+        "answers": [
+          "James Rodríguez",
+          "Radamel Falcao",
+          "Luis Díaz",
+          "Juan Cuadrado"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel joueur colombien a joué pour Liverpool de 2022 à 2025 ?",
+        "answers": [
+          "James Rodríguez",
+          "Radamel Falcao",
+          "Luis Díaz",
+          "Juan Cuadrado"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "reason": "Écrire 2022 à 2025.",
+      "sources": [
+        {
+          "title": "FC Bayern - Luis Diaz career profile",
+          "url": "https://fcbayern.com/en/teams/first-team/luis-diaz"
+        }
+      ]
+    },
+    {
+      "id": "N081",
+      "category": "liverpool",
+      "file": "backend/data/liverpool.json",
+      "originalIndex": 117,
+      "originalHash": "5529ab3114d5e01f6192d1edd75bd6e328ee58f03fbf6adaa78388e5e38b662f",
+      "action": "corrected",
+      "before": {
+        "text": "Quel défenseur slovaque a joué pour Liverpool de 2016 à 2018 ?",
+        "answers": [
+          "Milan Škriniar",
+          "Martin Škrtel",
+          "Denis Vavro",
+          "Tomáš Hubočan"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel défenseur slovaque a joué pour Liverpool de 2008 à 2016 ?",
+        "answers": [
+          "Milan Škriniar",
+          "Martin Škrtel",
+          "Denis Vavro",
+          "Tomáš Hubočan"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Écrire 2008 à 2016.",
+      "sources": [
+        {
+          "title": "Liverpool FC - Martin Skrtel",
+          "url": "https://www.liverpoolfc.com/info/martin-skrtel"
+        }
+      ]
+    },
+    {
+      "id": "N082",
+      "category": "liverpool",
+      "file": "backend/data/liverpool.json",
+      "originalIndex": 120,
+      "originalHash": "79f81f3c5bd9574f62fea91b1539cc733f80bbb6cd2b8cabc4a0a86d9c7c018e",
+      "action": "corrected",
+      "before": {
+        "text": "Quel attaquant belge a joué pour Liverpool de 2014 à 2019 ?",
+        "answers": [
+          "Eden Hazard",
+          "Romelu Lukaku",
+          "Divock Origi",
+          "Christian Benteke"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel attaquant belge a signé à Liverpool en 2014 puis quitté le club en 2022 ?",
+        "answers": [
+          "Eden Hazard",
+          "Romelu Lukaku",
+          "Divock Origi",
+          "Christian Benteke"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Signature, période de prêt et départ ne sont plus confondus avec une présence continue sur le terrain.",
+      "sources": [
+        {
+          "title": "Liverpool FC - Divock Origi",
+          "url": "https://www.liverpoolfc.com/info/divock-origi"
+        }
+      ]
+    },
+    {
+      "id": "N083",
+      "category": "liverpool",
+      "file": "backend/data/liverpool.json",
+      "originalIndex": 121,
+      "originalHash": "1fbb5b1d166f75e21e1fe3b4358cdbd7893a6a7a5f0d0fa6b14702a47366b35c",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu anglais a joué pour Liverpool de 2015 à 2023 avant de partir en Arabie Saoudite ?",
+        "answers": [
+          "Adam Lallana",
+          "James Milner",
+          "Alex Oxlade-Chamberlain",
+          "Jordan Henderson"
+        ],
+        "correct": 3,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel milieu anglais a joué pour Liverpool de 2011 à 2023 avant de partir en Arabie saoudite ?",
+        "answers": [
+          "Adam Lallana",
+          "James Milner",
+          "Alex Oxlade-Chamberlain",
+          "Jordan Henderson"
+        ],
+        "correct": 3,
+        "difficulty": "facile"
+      },
+      "reason": "Précision de l'intégralité du passage de Henderson, arrivé en 2011 et devenu capitaine en 2015.",
+      "sources": [
+        {
+          "title": "Liverpool FC - Jordan Henderson",
+          "url": "https://www.liverpoolfc.com/info/jordan-henderson"
+        }
+      ]
+    },
+    {
+      "id": "N084",
+      "category": "liverpool",
+      "file": "backend/data/liverpool.json",
+      "originalIndex": 122,
+      "originalHash": "638a9b87e04081333f34081ad0d92d40d9d4fc836a81abe3cb14ba41ad0f74df",
+      "action": "removed_duplicate",
+      "before": {
+        "text": "Quel club Liverpool a-t-il battu 4-0 en demi-finale retour de Ligue des champions 2018 ?",
+        "answers": [
+          "Le FC Barcelone",
+          "L'AS Roma",
+          "Le Real Madrid",
+          "Manchester City"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "after": null,
+      "reason": "La correction (Barcelone, demi-finale retour 2019, 4-0) répéterait la question existante à l'index 44.",
+      "sources": [
+        {
+          "title": "Liverpool FC - Divock Origi (2019 comeback)",
+          "url": "https://www.liverpoolfc.com/info/divock-origi"
+        }
+      ]
+    },
+    {
+      "id": "N085",
+      "category": "liverpool",
+      "file": "backend/data/liverpool.json",
+      "originalIndex": 124,
+      "originalHash": "cdf0d8ca61fc8e4f9aac8328a5ceb3379faa2eb0bf87150a3a104cc650436fc5",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur de Liverpool a remporté le Soulier d'or européen en 2018 et 2019 ?",
+        "answers": [
+          "Sadio Mané",
+          "Roberto Firmino",
+          "Mohamed Salah",
+          "Diogo Jota"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel joueur de Liverpool a remporté le Soulier d'or de Premier League en 2018 et 2019 ?",
+        "answers": [
+          "Sadio Mané",
+          "Roberto Firmino",
+          "Mohamed Salah",
+          "Diogo Jota"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "reason": "Remplacer 'Soulier d'or européen' par 'Soulier d'or de Premier League'.",
+      "sources": [
+        {
+          "title": "Liverpool FC - Salah record Premier League scorer",
+          "url": "https://www.liverpoolfc.com/news/first-team/458836-mohamed-salah-becomes-liverpool-s-record-premier-league-scorer"
+        },
+        {
+          "title": "FC Barcelona - Messi European Golden Shoe seasons",
+          "url": "https://www.fcbarcelona.com/fcbarcelona/document/2022/10/10/84ba2af9-a6c4-447e-94e2-dc90f718b1a3/Memoria_club_CAST.pdf"
+        }
+      ]
+    },
+    {
+      "id": "N086",
+      "category": "liverpool",
+      "file": "backend/data/liverpool.json",
+      "originalIndex": 126,
+      "originalHash": "8121ffa239af136e01f251e3911b2aa2e5bac9f9558fc3919e3975ade67fb59e",
+      "action": "corrected",
+      "before": {
+        "text": "Quel défenseur croate a joué pour Liverpool de 2018 à 2023 ?",
+        "answers": [
+          "Ivan Rakitić",
+          "Dejan Lovren",
+          "Domagoj Vida",
+          "Šime Vrsaljko"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel défenseur croate a joué pour Liverpool de 2014 à 2020 ?",
+        "answers": [
+          "Ivan Rakitić",
+          "Dejan Lovren",
+          "Domagoj Vida",
+          "Šime Vrsaljko"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Écrire 2014 à 2020.",
+      "sources": [
+        {
+          "title": "Liverpool FC - Dejan Lovren",
+          "url": "https://www.liverpoolfc.com/info/dejan-lovren"
+        }
+      ]
+    },
+    {
+      "id": "N087",
+      "category": "liverpool",
+      "file": "backend/data/liverpool.json",
+      "originalIndex": 147,
+      "originalHash": "28eb54aaca9cf81f5bf797a7fce9a4d691933e326af3cea1f3ea0fd686d4ce0d",
+      "action": "corrected",
+      "before": {
+        "text": "Quel entraîneur intérimaire a pris la suite de Kenny Dalglish après Hillsborough en 1989 pour le reste de la saison ?",
+        "answers": [
+          "Ronnie Moran",
+          "Roy Evans",
+          "Phil Thompson",
+          "Graeme Souness"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel entraîneur a assuré l'intérim à Liverpool après la démission de Kenny Dalglish en février 1991 ?",
+        "answers": [
+          "Ronnie Moran",
+          "Roy Evans",
+          "Phil Thompson",
+          "Graeme Souness"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "Remplacer le contexte par 'après la démission de Dalglish en février 1991'.",
+      "sources": [
+        {
+          "title": "Liverpool FC - Ronnie Moran",
+          "url": "https://www.liverpoolfc.com/info/ronnie-moran-0"
+        }
+      ]
+    },
+    {
+      "id": "N088",
+      "category": "liverpool",
+      "file": "backend/data/liverpool.json",
+      "originalIndex": 151,
+      "originalHash": "91ec08b70e6b39be638f8ea734b287ae2936d123778b588b9a986cc5730695fd",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur de Liverpool a reçu le prix Puskás du plus beau but en 2006 ?",
+        "answers": [
+          "Steven Gerrard",
+          "Fernando Torres",
+          "Peter Crouch",
+          "John Arne Riise"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel joueur de Liverpool a remporté le prix Puskás de la FIFA en 2018 ?",
+        "answers": [
+          "Mohamed Salah",
+          "Fernando Torres",
+          "Peter Crouch",
+          "John Arne Riise"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "Le prix n'existait pas en 2006. Reformulation sur le lauréat 2018 de Liverpool, confirmé par la FIFA et le club.",
+      "sources": [
+        {
+          "title": "FIFA - Eleven Puskas Award winning golazos",
+          "url": "https://inside.fifa.com/en/news/eleven-puskas-award-winning-golazos"
+        },
+        {
+          "title": "FIFA - Salah wins 2018 Puskas Award",
+          "url": "https://inside.fifa.com/media-releases/luka-modric-and-marta-crowned-at-the-best-fifa-football-awardstm-2018"
+        },
+        {
+          "title": "Liverpool FC - Salah wins Puskas Award",
+          "url": "https://www.liverpoolfc.com/amp/news/first-team/318067-salah-goal-fifa-puskas-award"
+        }
+      ]
+    },
+    {
+      "id": "N089",
+      "category": "liverpool",
+      "file": "backend/data/liverpool.json",
+      "originalIndex": 159,
+      "originalHash": "6941ac2f61f58ea567d1d3015bbeb4e931253c5c7c057b58df99f229668b7ed9",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu de terrain anglais a rejoint Liverpool en provenance d'Aston Villa en 2015 ?",
+        "answers": [
+          "Fabian Delph",
+          "James Milner",
+          "Jack Grealish",
+          "Gabby Agbonlahor"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel milieu de terrain anglais a rejoint Liverpool en provenance de Manchester City en 2015 ?",
+        "answers": [
+          "Fabian Delph",
+          "James Milner",
+          "Jack Grealish",
+          "Gabby Agbonlahor"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Remplacer Aston Villa par Manchester City.",
+      "sources": [
+        {
+          "title": "Liverpool FC - James Milner",
+          "url": "https://www.liverpoolfc.com/info/james-milner"
+        }
+      ]
+    },
+    {
+      "id": "N090",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 131,
+      "originalHash": "600e7090c98fa6ceb864060791a3a2a1d840a1b0b1a60c3180a65f5064f0cf5b",
+      "action": "removed_duplicate",
+      "before": {
+        "text": "Quel défenseur central brésilien a rejoint United en 2022 ?",
+        "answers": [
+          "Marquinhos",
+          "Thiago Silva",
+          "Casemiro",
+          "Lisandro Martínez"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "after": null,
+      "reason": "Remplacer brésilien par argentin répéterait l'arrivée de Lisandro Martínez en 2022, déjà demandée à l'index 146.",
+      "sources": []
+    },
+    {
+      "id": "N091",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 139,
+      "originalHash": "f9977484b1ee01807f06e5d3bf6a1e559cc475c43bfa054f3697221a92ea2fd1",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu anglais a été capitaine de United après Wayne Rooney ?",
+        "answers": [
+          "Michael Carrick",
+          "Ashley Young",
+          "Harry Maguire",
+          "Phil Jones"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel milieu anglais a succédé immédiatement à Wayne Rooney comme capitaine de Manchester United en 2017 ?",
+        "answers": [
+          "Michael Carrick",
+          "Ashley Young",
+          "Harry Maguire",
+          "Phil Jones"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "reason": "Demander le successeur immédiat et marquer Michael Carrick (choix 0).",
+      "sources": [
+        {
+          "title": "Manchester United - 15 memorable Michael Carrick moments",
+          "url": "https://www.manutd.com/en/news/15-great-michael-carrick-man-utd-moments-3-december-2021"
+        }
+      ]
+    },
+    {
+      "id": "N092",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 141,
+      "originalHash": "5e69f09a2eef5615cd1bd37f4cbd41c3bfed71a5e440fa41804c2514fe94a29f",
+      "action": "removed_duplicate",
+      "before": {
+        "text": "Quel gardien camerounais a défendu les buts de United dans les années 2000 ?",
+        "answers": [
+          "Fabien Barthez",
+          "Carlos Kameni",
+          "Thomas N'Kono",
+          "André Onana"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "after": null,
+      "reason": "La correction sur l'arrivée d'André Onana en 2023 répéterait la question existante à l'index 142.",
+      "sources": []
+    },
+    {
+      "id": "N093",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 143,
+      "originalHash": "6f64ae28e7d3169835e50d1eb38f5c91a1b72566e20b5b10530429a7263057c0",
+      "action": "corrected",
+      "before": {
+        "text": "Quel attaquant danois a rejoint United en janvier 2022 ?",
+        "answers": [
+          "Kasper Dolberg",
+          "Martin Braithwaite",
+          "Christian Eriksen",
+          "Rasmus Højlund"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel milieu danois a rejoint United en juillet 2022 ?",
+        "answers": [
+          "Kasper Dolberg",
+          "Martin Braithwaite",
+          "Christian Eriksen",
+          "Rasmus Højlund"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Remplacer attaquant par milieu et janvier par juillet.",
+      "sources": [
+        {
+          "title": "Sky Sports - Manchester United sign Christian Eriksen",
+          "url": "https://www.skysports.com/football/news/12652535/christian-eriksen-manchester-united-sign-former-tottenham-midfielder-on-three-year-deal"
+        }
+      ]
+    },
+    {
+      "id": "N094",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 152,
+      "originalHash": "ac2cb8a826d2aed6c472eb60784bbd3cea49fedf7ce0868f5a9b5ab810cdc285",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur détient le record du but le plus rapide de l'histoire de la Premier League (7,69 secondes) sous le maillot de United ?",
+        "answers": [
+          "Wayne Rooney",
+          "Ryan Giggs",
+          "Dwight Yorke",
+          "Cristiano Ronaldo"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel joueur a marqué pour Southampton après 7,69 secondes contre Watford en avril 2019 ?",
+        "answers": [
+          "Wayne Rooney",
+          "Shane Long",
+          "Dwight Yorke",
+          "Cristiano Ronaldo"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Joueur, club et contexte historique corrigés ; la question ne dépend plus du maintien d'un record actuel.",
+      "sources": [
+        {
+          "title": "Premier League - Long scores fastest goal",
+          "url": "https://www.premierleague.com/en/news/1195500?sf211480096=1"
+        }
+      ]
+    },
+    {
+      "id": "N095",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 155,
+      "originalHash": "cd71c13ac177a4cb035903d255764376c6952656ba3600f84e1e07758005fca0",
+      "action": "corrected",
+      "before": {
+        "text": "Quel entraîneur allemand a dirigé brièvement United en 2022-2023 ?",
+        "answers": [
+          "Thomas Tuchel",
+          "Julian Nagelsmann",
+          "Ralf Rangnick",
+          "Hansi Flick"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel entraîneur allemand a dirigé United par intérim pendant la saison 2021-2022 ?",
+        "answers": [
+          "Thomas Tuchel",
+          "Julian Nagelsmann",
+          "Ralf Rangnick",
+          "Hansi Flick"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Écrire 2021-2022.",
+      "sources": [
+        {
+          "title": "Manchester United 2021-22 season - managerial chronology",
+          "url": "https://en.wikipedia.org/wiki/2021%E2%80%9322_Manchester_United_F.C._season"
+        }
+      ]
+    },
+    {
+      "id": "N096",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 156,
+      "originalHash": "2e18a1a5bcaa2288d2df2cbcbdd495d758f3dcf7eac8965e6f0996c08d00a67a",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur de United a marqué le 1000e but de Premier League du club en 2023 ?",
+        "answers": [
+          "Marcus Rashford",
+          "Bruno Fernandes",
+          "Scott McTominay",
+          "Anthony Martial"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel joueur de United a inscrit le 1000e but du club en Premier League en octobre 2005 ?",
+        "answers": [
+          "Cristiano Ronaldo",
+          "Bruno Fernandes",
+          "Scott McTominay",
+          "Anthony Martial"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "Proposer/marquer Cristiano Ronaldo et dater 2005.",
+      "sources": [
+        {
+          "title": "Manchester United 2005-06 season - Middlesbrough match",
+          "url": "https://en.wikipedia.org/wiki/2005%E2%80%9306_Manchester_United_F.C._season"
+        }
+      ]
+    },
+    {
+      "id": "N097",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 158,
+      "originalHash": "8ea7aa556dd9c883140f7ef2b5e5224ec97c6db7d5bb0ea128a7224448d450c5",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur jamaïcain a été le premier noir à porter le maillot de Manchester United en match officiel ?",
+        "answers": [
+          "Viv Anderson",
+          "Paul Ince",
+          "Andrew Cole",
+          "Danny Wallace"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel joueur est devenu le premier footballeur noir à disputer un match officiel avec Manchester United en 1963 ?",
+        "answers": [
+          "Dennis Walker",
+          "Paul Ince",
+          "Andrew Cole",
+          "Danny Wallace"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "La question porte uniquement sur le premier joueur noir de United ; la nationalité jamaïcaine est retirée sans introduire une affirmation distincte sur Viv Anderson.",
+      "sources": [
+        {
+          "title": "The Guardian (2020)",
+          "url": "https://www.theguardian.com/football/2020/oct/30/dennis-walker-manchester-united-first-and-only-black-busby-babe"
+        }
+      ]
+    },
+    {
+      "id": "N098",
+      "category": "michael_jackson",
+      "file": "backend/data/michael_jackson.json",
+      "originalIndex": 131,
+      "originalHash": "ec5252560ff0481c6aea076558f7cac5106706a1a930a71c540feb42cf554d6a",
+      "action": "corrected",
+      "before": {
+        "text": "Avec quel label The Jackson 5 ont-ils d'abord signé ?",
+        "answers": [
+          "Epic Records",
+          "Atlantic Records",
+          "Motown",
+          "Columbia Records"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Avec quel label The Jackson 5 ont-ils d'abord signé ?",
+        "answers": [
+          "Epic Records",
+          "Atlantic Records",
+          "Steeltown Records",
+          "Columbia Records"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "reason": "Le premier contrat des Jackson 5 précède Motown et concerne Steeltown Records.",
+      "sources": [
+        {
+          "title": "Premier contrat des Jackson Five",
+          "url": "https://guernseys.com/v2/jackson_contract.html"
+        },
+        {
+          "title": "Jackson 5 — Detroit Historical Society",
+          "url": "https://www.detroithistorical.org/learn/online-research/encyclopedia-of-detroit/jackson-5"
+        }
+      ]
+    },
+    {
+      "id": "N099",
+      "category": "michael_jackson",
+      "file": "backend/data/michael_jackson.json",
+      "originalIndex": 139,
+      "originalHash": "445a4a4778ed6010c6f0f8a9bc40e60bcba3c4118acf7fc878fb60ff2bf73f59",
+      "action": "corrected",
+      "before": {
+        "text": "Quel titre de Michael Jackson a été le premier clip d'un artiste noir diffusé sur MTV ?",
+        "answers": [
+          "Beat It",
+          "Billie Jean",
+          "Thriller",
+          "Don't Stop 'Til You Get Enough"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel clip de Michael Jackson a bénéficié d’une forte rotation sur MTV en 1983 ?",
+        "answers": [
+          "Scream",
+          "Billie Jean",
+          "They Don’t Care About Us",
+          "You Rock My World"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Retirer tout superlatif premier de l’historique MTV ; les autres clips proposés sont postérieurs à 1983 et ne peuvent pas répondre à la question datée.",
+      "sources": [
+        {
+          "title": "Michael Jackson World Network / Thriller40 — chronologie de fan-club, corroborée par Rolling Stone",
+          "url": "https://www.thriller40.com/timeline/billie-jean-airs-on-mtv/"
+        },
+        {
+          "title": "Billie Jean et les précédents artistes noirs de MTV",
+          "url": "https://au.rollingstone.com/music/music-lists/best-music-videos-28407/michael-jackson-billie-jean-28499/"
+        },
+        {
+          "title": "Michael Jackson — HIStory (1995), Scream et They Don’t Care About Us",
+          "url": "https://www.michaeljackson.com/albums/history-past-present-and-future-book-i/"
+        },
+        {
+          "title": "Michael Jackson — Invincible (2001), You Rock My World",
+          "url": "https://www.michaeljackson.com/albums/invincible/"
+        }
+      ]
+    },
+    {
+      "id": "N100",
+      "category": "michael_jackson",
+      "file": "backend/data/michael_jackson.json",
+      "originalIndex": 158,
+      "originalHash": "c300173f8dfa03011da0559c1bf06145aecb4e34041c7e840ff68896d200345a",
+      "action": "corrected",
+      "before": {
+        "text": "Quelle chanson Michael Jackson a-t-il chantée lors de la cérémonie des Grammy Awards 1988 ?",
+        "answers": [
+          "Bad",
+          "Man in the Mirror",
+          "The Way You Make Me Feel",
+          "Smooth Criminal"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel duo de chansons Michael Jackson a-t-il interprété aux Grammy Awards 1988 ?",
+        "answers": [
+          "Bad et Billie Jean",
+          "The Way You Make Me Feel et Man in the Mirror",
+          "The Way You Make Me Feel et Thriller",
+          "Smooth Criminal et Beat It"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Regrouper les deux titres réellement interprétés dans une seule réponse ; les autres choix associent des chansons existantes.",
+      "sources": [
+        {
+          "title": "Michael Jackson — Recording Academy",
+          "url": "https://www.grammy.com/artists/michael-jackson/13202/"
+        }
+      ]
+    },
+    {
+      "id": "N101",
+      "category": "mythologie_grecque",
+      "file": "backend/data/mythologie_grecque.json",
+      "originalIndex": 50,
+      "originalHash": "b54d6a4d1ff3843ef13f1f20a0ba61b0a0af53ea78f17a287cf5b3a44bd2fda5",
+      "action": "corrected",
+      "before": {
+        "text": "Quel Titan porte le monde sur ses épaules ?",
+        "answers": [
+          "Cronos",
+          "Atlas",
+          "Prométhée",
+          "Hypérion"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel Titan porte la voûte céleste sur ses épaules ?",
+        "answers": [
+          "Cronos",
+          "Atlas",
+          "Prométhée",
+          "Hypérion"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "reason": "Remplacer le monde par la voûte céleste.",
+      "sources": [
+        {
+          "title": "Hésiode, Théogonie — Atlas soutient le ciel",
+          "url": "https://www.theoi.com/Text/HesiodTheogony.html"
+        }
+      ]
+    },
+    {
+      "id": "N102",
+      "category": "ninho",
+      "file": "backend/data/ninho.json",
+      "originalIndex": 100,
+      "originalHash": "ca690da42c58af841e9c37eeebfd41a1c32fa9b13dec8ec0f00bffd76175b019",
+      "action": "corrected",
+      "before": {
+        "text": "Dans quelle ville de banlieue parisienne Ninho a-t-il grandi ?",
+        "answers": [
+          "Grigny",
+          "Corbeil-Essonnes",
+          "Évry",
+          "Massy"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Dans quelle ville de l'Essonne Ninho a-t-il grandi, en partie, avant sa carrière musicale ?",
+        "answers": [
+          "Grigny",
+          "Yerres",
+          "Évry",
+          "Massy"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "reason": "Yerres est attestée dans son entretien sur son enfance entre le 91 et le 77 ; conserver un choix unique parmi des villes de l’Essonne sans exclure sa vie à Nemours.",
+      "sources": [
+        {
+          "title": "Entretien avec Ninho sur son enfance",
+          "url": "https://yard.media/interview-ninho/"
+        }
+      ]
+    },
+    {
+      "id": "N103",
+      "category": "ninho",
+      "file": "backend/data/ninho.json",
+      "originalIndex": 114,
+      "originalHash": "6cc054be392d9d0ba3090bb570d5ea268284f87fe6f8c517c9bee4fa183dda4b",
+      "action": "corrected",
+      "before": {
+        "text": "Quel stade Ninho a-t-il rempli en 2024 ?",
+        "answers": [
+          "Parc des Princes",
+          "Vélodrome",
+          "Groupama Stadium",
+          "Stade de France"
+        ],
+        "correct": 3,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Dans quel stade Ninho s'est-il produit les 2 et 3 mai 2025 ?",
+        "answers": [
+          "Parc des Princes",
+          "Vélodrome",
+          "Groupama Stadium",
+          "Stade de France"
+        ],
+        "correct": 3,
+        "difficulty": "facile"
+      },
+      "reason": "Distinguer explicitement les concerts de mai 2025 des ventes de billets en 2024.",
+      "sources": [
+        {
+          "title": "Programme officiel Ninho au Stade de France",
+          "url": "https://www.stadefrance.com/medias/docs/bdc_gce/SITE%20%20BDC_NINHO_02052025.pdf"
+        },
+        {
+          "title": "Stade de France — newsletter mars 2024 annonçant les concerts déjà remplis de 2025",
+          "url": "https://www.stadefrance.com/medias/nl/cta/nl_mars2024_web_CTA.html"
+        }
+      ]
+    },
+    {
+      "id": "N104",
+      "category": "ninho",
+      "file": "backend/data/ninho.json",
+      "originalIndex": 129,
+      "originalHash": "ffc945ccce9d00364e493432cf4df056aacb4e2aa2aab985a972e6229b4543b0",
+      "action": "corrected",
+      "before": {
+        "text": "Quel titre de M.I.L.S 2.0 est devenu un classique du rap français ?",
+        "answers": [
+          "Toutes options",
+          "Bavard",
+          "Un Poco",
+          "Maman ne le sait pas"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel titre de Destin réunit Ninho et Niska ?",
+        "answers": [
+          "Toutes options",
+          "Bavard",
+          "Un Poco",
+          "Maman ne le sait pas"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "reason": "Maman ne le sait pas figure sur Destin, avec Niska ; remplacer aussi le jugement subjectif classique par un crédit vérifiable.",
+      "sources": [
+        {
+          "title": "Maman ne le sait pas — catalogue Apple Music",
+          "url": "https://music.apple.com/us/song/1453399195"
+        },
+        {
+          "title": "M.I.L.S 2.0 — liste officielle",
+          "url": "https://ninho.lnk.to/MILS_20"
+        }
+      ]
+    },
+    {
+      "id": "N105",
+      "category": "ninho",
+      "file": "backend/data/ninho.json",
+      "originalIndex": 132,
+      "originalHash": "035f6a60d9ae8ee919a6fd7e5eb5e2c0b8185f424297b5778f3a7f6435377c75",
+      "action": "corrected",
+      "before": {
+        "text": "Quel rappeur français du 92 Ninho a-t-il en featuring sur Comme prévu ?",
+        "answers": [
+          "Booba",
+          "La Fouine",
+          "Sofiane",
+          "Rohff"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel rappeur français du 93 Ninho a-t-il en featuring sur Comme prévu ?",
+        "answers": [
+          "Booba",
+          "La Fouine",
+          "Sofiane",
+          "Rohff"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Sofiane est originaire de Seine-Saint-Denis, et non des Hauts-de-Seine.",
+      "sources": [
+        {
+          "title": "Sofiane — biographie Universal Music",
+          "url": "https://universalmusic.fr/artistes/31777110114"
+        }
+      ]
+    },
+    {
+      "id": "N106",
+      "category": "ninho",
+      "file": "backend/data/ninho.json",
+      "originalIndex": 143,
+      "originalHash": "b3a6a3f7e1f9bbfd85ca8abb21bac5a3333778adec2e1d7471ede1b9f1cde359",
+      "action": "corrected",
+      "before": {
+        "text": "Combien de places Ninho a-t-il vendues en 6 heures pour son concert au Stade de France en 2024 ?",
+        "answers": [
+          "60 000",
+          "80 000",
+          "50 000",
+          "100 000"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Selon le Stade de France, en combien de temps la première date de Ninho, prévue le 3 mai 2025, a-t-elle affiché complet ?",
+        "answers": [
+          "Entre 6 et 12 heures",
+          "Moins de 6 heures",
+          "Entre 12 et 24 heures",
+          "Plus de 24 heures"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Le stade atteste un sold out en moins de six heures ; remplacer le nombre de billets non certifié par ce délai, avec des intervalles de réponse distincts.",
+      "sources": [
+        {
+          "title": "Stade de France — Ninho les 2 et 3 mai 2025, première date vendue en moins de six heures",
+          "url": "https://www.stadefrance.com/fr/le-stade/ninho-au-stade-de-france"
+        }
+      ]
+    },
+    {
+      "id": "N107",
+      "category": "ninho",
+      "file": "backend/data/ninho.json",
+      "originalIndex": 145,
+      "originalHash": "4869794a52fe371dfd9c7cebf14e7133d45202bda6f316a9501d983f8a6541d9",
+      "action": "corrected",
+      "before": {
+        "text": "Quel artiste international apparaît sur un titre de l'album NI ?",
+        "answers": [
+          "Central Cee",
+          "Pop Smoke",
+          "J. Cole",
+          "Lil Baby"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel artiste international apparaît sur un titre de l'album NI ?",
+        "answers": [
+          "Travis Scott",
+          "Pop Smoke",
+          "J. Cole",
+          "Lil Baby"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "reason": "Retirer Central Cee des distracteurs car il participe aussi à NI ; Lil Baby devient la seule collaboration de cet album parmi les choix.",
+      "sources": [
+        {
+          "title": "Ninho — biographie et NI chez Universal Music",
+          "url": "https://www.universalmusic.fr/artistes/32399163728"
+        }
+      ]
+    },
+    {
+      "id": "N108",
+      "category": "ninho",
+      "file": "backend/data/ninho.json",
+      "originalIndex": 155,
+      "originalHash": "8e75bb8ee16116b9b81f75aebf30ecb238e9a0b94b5207bd8e95ef3dce2f3e4c",
+      "action": "corrected",
+      "before": {
+        "text": "Quel rappeur belge Ninho a-t-il en featuring sur 'De l'autre côté' ?",
+        "answers": [
+          "Damso",
+          "Nekfeu",
+          "Stromae",
+          "Hamza"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel rappeur français Ninho a-t-il en featuring sur 'De l'autre côté' ?",
+        "answers": [
+          "Damso",
+          "Nekfeu",
+          "Stromae",
+          "Hamza"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Nekfeu est français ; conserver le titre et la collaboration exacts.",
+      "sources": [
+        {
+          "title": "Nekfeu — biographie AllMusic",
+          "url": "https://www.allmusic.com/artist/nekfeu-mn0003001875"
+        },
+        {
+          "title": "Comme prévu — crédits et titres",
+          "url": "https://lescharts.com/album/ninho/comme-prevu-340887"
+        }
+      ]
+    },
+    {
+      "id": "N109",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 106,
+      "originalHash": "bb22d5bc198e8eb2499b76dff49d07c4989a85a5470e0bb18eff2312e714e699",
+      "action": "corrected",
+      "before": {
+        "text": "L'OM a-t-il déjà été relégué en deuxième division ?",
+        "answers": [
+          "Oui, une fois",
+          "Oui, deux fois",
+          "Oui, trois fois",
+          "Non, jamais"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Combien de fois l'OM a-t-il été relégué de la première à la deuxième division entre 1959 et 1994 inclus ?",
+        "answers": [
+          "Une fois",
+          "Quatre fois",
+          "Trois fois",
+          "Jamais"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "reason": "Proposer/marquer quatre fois, en précisant le périmètre des descentes.",
+      "sources": [
+        {
+          "title": "Olympique de Marseille - History of league participation",
+          "url": "https://fr.wikipedia.org/wiki/Olympique_de_Marseille"
+        }
+      ]
+    },
+    {
+      "id": "N110",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 111,
+      "originalHash": "7b92d11c6f7952a95904d9614dac5130640b7239a3d2aeb5d016faaa0307e5dc",
+      "action": "corrected",
+      "before": {
+        "text": "Quel ancien international français a été président de l'OM de 2005 à 2009 ?",
+        "answers": [
+          "Basile Boli",
+          "Jean-Pierre Papin",
+          "Pape Diouf",
+          "Marcel Desailly"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel ancien journaliste et agent de joueurs a été président de l'OM de 2005 à 2009 ?",
+        "answers": [
+          "Basile Boli",
+          "Jean-Pierre Papin",
+          "Pape Diouf",
+          "Marcel Desailly"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "reason": "Remplacer 'ancien international français' par 'ancien journaliste et agent de joueurs'.",
+      "sources": [
+        {
+          "title": "LFP - Disparition de Pape Diouf",
+          "url": "https://www.lfp.fr/article/disparition-de-pape-diouf"
+        }
+      ]
+    },
+    {
+      "id": "N111",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 114,
+      "originalHash": "2501f104413fb59702790d816387a3146116eee2b50c0862818e96e940891cd8",
+      "action": "corrected",
+      "before": {
+        "text": "Le virage Nord du Vélodrome est associé à quel groupe de supporters ?",
+        "answers": [
+          "Les South Winners",
+          "Les Dodgers",
+          "Le Commando Ultra",
+          "Les Yankees"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "En novembre 2026, lequel de ces groupes de supporters de l'OM occupe le virage Nord du Vélodrome ?",
+        "answers": [
+          "Les South Winners",
+          "Les Dodgers",
+          "Le Commando Ultra",
+          "Les Green Angels"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "reason": "Les Dodgers sont au Nord ; Commando Ultra et South Winners sont au Sud. Les Yankees, ancien groupe du Nord, sont retirés des choix pour éviter une autre réponse historiquement valable.",
+      "sources": [
+        {
+          "title": "OM - Official supporters groups",
+          "url": "https://www.om.fr/en/supporters"
+        }
+      ]
+    },
+    {
+      "id": "N112",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 121,
+      "originalHash": "73d85358dfeada63a918287995d7b64e9b67505a851feffba5db46a91ff06368",
+      "action": "corrected",
+      "before": {
+        "text": "Quel attaquant camerounais a joué à l'OM au début des années 2010 ?",
+        "answers": [
+          "Samuel Eto'o",
+          "André Ayew",
+          "André-Pierre Gignac",
+          "Jordan Ayew"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel attaquant ghanéen a joué à l'OM au début des années 2010 ?",
+        "answers": [
+          "Samuel Eto'o",
+          "André Ayew",
+          "André-Pierre Gignac",
+          "Didier Drogba"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Nationalité corrigée ; Jordan Ayew, également ghanéen et présent à cette époque, est retiré des choix pour garantir une seule bonne réponse.",
+      "sources": [
+        {
+          "title": "France Football - Andre Ayew profile",
+          "url": "https://app.francefootball.fr//fiche/joueur/andre-ayew/27501"
+        }
+      ]
+    },
+    {
+      "id": "N113",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 124,
+      "originalHash": "124d2e04df1cac2b52f3bef7fed423c3c994b5ab58e02d0c5673f4e6dc384385",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur brésilien a été élu meilleur joueur de Ligue 1 avec l'OM en 2007 ?",
+        "answers": [
+          "Kaká",
+          "Brandão",
+          "Lucho González",
+          "Nene"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel milieu argentin a rejoint l'OM en provenance de Porto en 2009 ?",
+        "answers": [
+          "Kaká",
+          "Brandão",
+          "Lucho González",
+          "Nene"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Remplacer par 'Quel milieu argentin a rejoint l'OM depuis Porto en 2009 ?'.",
+      "sources": [
+        {
+          "title": "UEFA - Lucho laid low for Marseille",
+          "url": "https://www.uefa.com/uefachampionsleague/news/01db-0e7285a7dd72-ba67b74b79ed-1000--lucho-laid-low-for-marseille/"
+        }
+      ]
+    },
+    {
+      "id": "N114",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 131,
+      "originalHash": "4d6da22a0070295b17fadb244a15591a223218246d7770bad17ee09e62b7be7f",
+      "action": "corrected",
+      "before": {
+        "text": "En quelle année l'OM a-t-il été relégué en D2 pour la première fois ?",
+        "answers": [
+          "1959",
+          "1980",
+          "1993",
+          "1994"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "En quelle année l'OM a-t-il été relégué en D2 pour la première fois ?",
+        "answers": [
+          "1959",
+          "1980",
+          "1993",
+          "1994"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "reason": "Marquer 1959 (choix 0).",
+      "sources": [
+        {
+          "title": "Olympique de Marseille - History of league participation",
+          "url": "https://fr.wikipedia.org/wiki/Olympique_de_Marseille"
+        }
+      ]
+    },
+    {
+      "id": "N115",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 134,
+      "originalHash": "6e269ebb4fdbaaf462f93db10747fb014a0e79c7a8fc52ecb8c1c78a2dc49a82",
+      "action": "corrected",
+      "before": {
+        "text": "Quel défenseur central français a été formé à l'OM avant de rejoindre le Bayern Munich ?",
+        "answers": [
+          "William Saliba",
+          "Benjamin Pavard",
+          "Boubacar Kamara",
+          "Lucas Hernandez"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel joueur formé à l'OM a quitté le club pour Aston Villa en mai 2022 ?",
+        "answers": [
+          "William Saliba",
+          "Benjamin Pavard",
+          "Boubacar Kamara",
+          "Lucas Hernandez"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Remplacer Bayern Munich par Aston Villa.",
+      "sources": [
+        {
+          "title": "Aston Villa - Boubacar Kamara profile",
+          "url": "https://next.avfc.co.uk/teams/mens/boubacarkamara"
+        }
+      ]
+    },
+    {
+      "id": "N116",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 141,
+      "originalHash": "949da46edf3f0095ac80a9b8e6220000fc77fb871c0c8b3c154355ffb8a4658f",
+      "action": "corrected",
+      "before": {
+        "text": "Quel club écossais l'OM a-t-il affronté au premier tour de la Coupe des clubs champions 1993-1994 ?",
+        "answers": [
+          "Le Celtic",
+          "Les Rangers",
+          "Aberdeen",
+          "Dundee United"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel club écossais l'OM a-t-il affronté en phase de groupes de la Ligue des champions 1992-1993 ?",
+        "answers": [
+          "Le Celtic",
+          "Les Rangers",
+          "Aberdeen",
+          "Dundee United"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Écrire 'Quel club écossais l'OM a-t-il affronté en phase de groupes en 1992-1993 ?'.",
+      "sources": [
+        {
+          "title": "UEFA - French first for Marseille",
+          "url": "https://www.uefa.com/uefachampionsleague/news/0119-0e6a0ed00b00-432257e362a9-1000/"
+        }
+      ]
+    },
+    {
+      "id": "N117",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 142,
+      "originalHash": "8ec94252c60f71f8741ca77ff182bdbef2337e59dea81ef32a7490ea36462bb7",
+      "action": "corrected",
+      "before": {
+        "text": "Quel buteur brésilien a porté le maillot de l'OM lors de la saison 2014-2015 ?",
+        "answers": [
+          "Luiz Gustavo",
+          "Brandão",
+          "Lucas Ocampos",
+          "Carlos Bacca"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel buteur brésilien a porté le maillot de l'OM lors de la saison 2011-2012 ?",
+        "answers": [
+          "Luiz Gustavo",
+          "Brandão",
+          "Lucas Ocampos",
+          "Carlos Bacca"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Dater son passage correctement (2009-2012, avec prêts) ou demander son but face à l'Inter en 2012.",
+      "sources": [
+        {
+          "title": "L'Equipe - La carriere de Brandao en Ligue 1",
+          "url": "https://www.lequipe.fr/Football/Actualites/La-carriere-de-brandao-en-l1-toute-une-histoire/622330"
+        }
+      ]
+    },
+    {
+      "id": "N118",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 143,
+      "originalHash": "a5a4a2663ade6e43b91756210b3c280b24a71e38b42e64410bdeba91df91e2a6",
+      "action": "corrected",
+      "before": {
+        "text": "Quel défenseur argentin champion du monde 2022 a joué à l'OM ?",
+        "answers": [
+          "Lisandro Martínez",
+          "Leonardo Balerdi",
+          "Cristian Romero",
+          "Nicolás Otamendi"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel défenseur argentin a joué à l'OM ?",
+        "answers": [
+          "Lisandro Martínez",
+          "Leonardo Balerdi",
+          "Cristian Romero",
+          "Nicolás Otamendi"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Retirer 'champion du monde 2022'.",
+      "sources": [
+        {
+          "title": "FIFA - Argentina 26-man squad for Qatar 2022",
+          "url": "https://www.fifa.com/en/articles/messi-makes-fifth-world-cup-as-garnacho-simeone-omitted"
+        }
+      ]
+    },
+    {
+      "id": "N119",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 154,
+      "originalHash": "4c0dde701879cd40af3808beacd4d1625b47d4cc71ffd1536679ba7a01be4904",
+      "action": "corrected",
+      "before": {
+        "text": "Quel club allemand a éliminé l'OM en phase de poules de la Ligue des champions 2020-2021 ?",
+        "answers": [
+          "Le Bayern Munich",
+          "Le Borussia Dortmund",
+          "Le RB Leipzig",
+          "Le Bayer Leverkusen"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel club anglais figurait dans le groupe de l'OM en Ligue des champions 2020-2021 ?",
+        "answers": [
+          "Manchester City",
+          "Le Borussia Dortmund",
+          "Le RB Leipzig",
+          "Le Bayer Leverkusen"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "Les adversaires de l'OM étaient City, Porto et Olympiacos ; seul City est anglais. Pas de qualification d'un club allemand comme responsable de l'élimination.",
+      "sources": [
+        {
+          "title": "UEFA - All 2020/21 Champions League results",
+          "url": "https://www.uefa.com/uefachampionsleague/news/0262-10842df9b0ba-783a15c1aa93-1000--group-stage-fixtures/"
+        }
+      ]
+    },
+    {
+      "id": "N120",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 157,
+      "originalHash": "8625c685334966e5b5171a47d1234f97dd15cd9397acfd2846deb858cc85ffea",
+      "action": "corrected",
+      "before": {
+        "text": "Quel international français, passé par l'OM, a ensuite entraîné le club en 2004-2005 ?",
+        "answers": [
+          "Éric Cantona",
+          "Philippe Troussier",
+          "Jean Tigana",
+          "Marcel Desailly"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel entraîneur a succédé à José Anigo sur le banc de l'OM en novembre 2004 ?",
+        "answers": [
+          "Éric Cantona",
+          "Philippe Troussier",
+          "Jean Tigana",
+          "Marcel Desailly"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Demander simplement quel entraîneur a succédé à Anigo en novembre 2004 et marquer Troussier.",
+      "sources": [
+        {
+          "title": "UEFA - Marseille se separe de Troussier",
+          "url": "https://fr.uefa.com/news-media/news/01aa-0f84749a6073-2e5b19dd0b66-1000--marseille-se-separe-de-troussier/"
+        }
+      ]
+    },
+    {
+      "id": "N121",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 159,
+      "originalHash": "60597354ae1e56e062393fa11688b9a93d4e984daa0fd06cfa7456fc6174c97e",
+      "action": "corrected",
+      "before": {
+        "text": "Quel entraîneur a conduit l'OM au titre de champion de France 1971 ?",
+        "answers": [
+          "Mario Zatelli",
+          "Lucien Leduc",
+          "Raymond Goethals",
+          "Jules Dewaquez"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel entraîneur a conduit l'OM au titre de champion de France 1971 ?",
+        "answers": [
+          "Mario Zatelli",
+          "Lucien Leduc",
+          "Raymond Goethals",
+          "Jules Dewaquez"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Marquer Lucien Leduc (choix 1).",
+      "sources": [
+        {
+          "title": "UEFA - France says farewell to Leduc",
+          "url": "https://www.uefa.com/news-media/news/019f-0f84591e7cc0-590ac5a3381e-1000--france-says-farewell-to-leduc/"
+        }
+      ]
+    },
+    {
+      "id": "N122",
+      "category": "pnl",
+      "file": "backend/data/pnl.json",
+      "originalIndex": 58,
+      "originalHash": "37654a8e0791cde9d4c97ebbd1fe103cc63b0c29d737af9a15a749c8dbafc338",
+      "action": "corrected",
+      "before": {
+        "text": "Combien de titres contient l'album Le Monde Chico ?",
+        "answers": [
+          "10",
+          "12",
+          "14",
+          "16"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Combien de titres contient l'album Le Monde Chico ?",
+        "answers": [
+          "10",
+          "12",
+          "17",
+          "16"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Le Monde Chico contient 17 titres.",
+      "sources": [
+        {
+          "title": "Le monde Chico — catalogue Apple Music",
+          "url": "https://music.apple.com/us/album/le-monde-chico/1048964879"
+        }
+      ]
+    },
+    {
+      "id": "N123",
+      "category": "pnl",
+      "file": "backend/data/pnl.json",
+      "originalIndex": 64,
+      "originalHash": "e54481f513c6b3b06faa184caaf78ea73f47e710f7f607a51356478659e32085",
+      "action": "corrected",
+      "before": {
+        "text": "Dans quel pays le clip de « DA » a-t-il été tourné ?",
+        "answers": [
+          "L'Italie",
+          "La Grèce",
+          "La Corée du Sud",
+          "Les Émirats arabes unis"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Dans quel pays le clip de « DA » a-t-il été tourné ?",
+        "answers": [
+          "La France",
+          "La Grèce",
+          "La Corée du Sud",
+          "Les Émirats arabes unis"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "reason": "Le clip DA est tourné dans leur quartier des Tarterêts, en France.",
+      "sources": [
+        {
+          "title": "DA — présentation et tournage au quartier",
+          "url": "https://www.booska-p.com/musique/actualites/decouvrez-da-le-nouveau-pnl/"
+        }
+      ]
+    },
+    {
+      "id": "N124",
+      "category": "pnl",
+      "file": "backend/data/pnl.json",
+      "originalIndex": 69,
+      "originalHash": "10e3a4fbf37b56c3443ee9c3fa7d4ab3a812e8764354cf519e94f19315197ff1",
+      "action": "corrected",
+      "before": {
+        "text": "Combien de featurings PNL a-t-il réalisés sur ses albums studio ?",
+        "answers": [
+          "Aucun",
+          "2",
+          "5",
+          "10"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel titre de Le Monde Chico accueille RKM en featuring ?",
+        "answers": [
+          "Rebenga",
+          "Le monde ou rien",
+          "J'suis PNL",
+          "Tempête"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "reason": "Remplacer le total non certifié de tous les albums par le crédit précis de RKM sur Rebenga ; les distracteurs sont des titres existants du même album.",
+      "sources": [
+        {
+          "title": "Le monde Chico — catalogue de la médiathèque",
+          "url": "https://mediatheques.agglo-larochelle.fr/doc/SYRACUSE/2227910/le-monde-chico-pnl-duo-voc-et-instr"
+        },
+        {
+          "title": "Booska-P — S-Pion, invité sur Que la mif",
+          "url": "https://www.booska-p.com/musique/actualites/le-clip-hurricane-carter-de-s-pion/"
+        }
+      ]
+    },
+    {
+      "id": "N125",
+      "category": "pnl",
+      "file": "backend/data/pnl.json",
+      "originalIndex": 71,
+      "originalHash": "8cdb409918465dd8761816361165a5780e70257460b7b1ff321770fc36704f5f",
+      "action": "corrected",
+      "before": {
+        "text": "Quelle est la signification de « DD » dans le titre « Au DD » ?",
+        "answers": [
+          "Disque de diamant",
+          "Dernier dollar",
+          "Dans le dur",
+          "Dieu le sait"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Que signifie le titre « Au DD » de PNL ?",
+        "answers": [
+          "Au détail",
+          "Dernier dollar",
+          "Dans le dur",
+          "Dieu le sait"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "reason": "Au DD renvoie à Au détail, et non au disque de diamant.",
+      "sources": [
+        {
+          "title": "Au DD — explication du titre",
+          "url": "https://www.leprogres.fr/sortir/2019/03/22/rap-pnl-a-lache-son-dernier-clip-au-dd"
+        }
+      ]
+    },
+    {
+      "id": "N126",
+      "category": "pnl",
+      "file": "backend/data/pnl.json",
+      "originalIndex": 74,
+      "originalHash": "89fa34c1eb73aa7999b5356172abf4b2c8a256358842a124b84f8bf145b069f2",
+      "action": "corrected",
+      "before": {
+        "text": "En quelle année est sorti l'EP Que la famille ?",
+        "answers": [
+          "2014",
+          "2015",
+          "2016",
+          "2013"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "En quelle année est sorti l'EP Que la famille ?",
+        "answers": [
+          "2014",
+          "2015",
+          "2016",
+          "2013"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Que la famille est sorti le 2 mars 2015.",
+      "sources": [
+        {
+          "title": "Que la famille — catalogue Apple Music",
+          "url": "https://music.apple.com/us/album/que-la-famille/968338156"
+        }
+      ]
+    },
+    {
+      "id": "N127",
+      "category": "pnl",
+      "file": "backend/data/pnl.json",
+      "originalIndex": 93,
+      "originalHash": "fb51a10b5a665ac7e04167f3c51617afc612b140a65a1adce0dce1a2b28e9170",
+      "action": "corrected",
+      "before": {
+        "text": "Sur quel album figure « Uranus » ?",
+        "answers": [
+          "Le Monde Chico",
+          "Que la famille",
+          "Deux frères",
+          "Dans la légende"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Sur quel album figure « Uranus » ?",
+        "answers": [
+          "Le Monde Chico",
+          "Que la famille",
+          "Deux frères",
+          "Dans la légende"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "reason": "Uranus appartient à Dans la légende.",
+      "sources": [
+        {
+          "title": "Dans la légende — liste Apple Music",
+          "url": "https://music.apple.com/us/album/dans-la-l%C3%A9gende/1663880916"
+        }
+      ]
+    },
+    {
+      "id": "N128",
+      "category": "pnl",
+      "file": "backend/data/pnl.json",
+      "originalIndex": 94,
+      "originalHash": "663c54802bbfc5bab0dffba422e01e12da5f8033c4ccf7e9d61f4e4aae8e1f38",
+      "action": "corrected",
+      "before": {
+        "text": "Quel titre de Deux frères évoque une planète ?",
+        "answers": [
+          "Naha",
+          "Uranus",
+          "Blanka",
+          "91's"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel titre de Dans la légende évoque une planète ?",
+        "answers": [
+          "Naha",
+          "Uranus",
+          "Blanka",
+          "91's"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Rattacher Uranus à son album réel au lieu de Deux frères.",
+      "sources": [
+        {
+          "title": "Dans la légende — liste Apple Music",
+          "url": "https://music.apple.com/us/album/dans-la-l%C3%A9gende/1663880916"
+        }
+      ]
+    },
+    {
+      "id": "N129",
+      "category": "pnl",
+      "file": "backend/data/pnl.json",
+      "originalIndex": 98,
+      "originalHash": "1a26b33b0d5ed6b1f1dee9fe8c386c2631f60338c00c02da17278e476286a429",
+      "action": "corrected",
+      "before": {
+        "text": "Quelle est la durée approximative de l'album Deux frères ?",
+        "answers": [
+          "40 minutes",
+          "55 minutes",
+          "70 minutes",
+          "85 minutes"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quelle est la durée approximative de l'édition standard de Deux frères, composée de 16 titres ?",
+        "answers": [
+          "40 minutes",
+          "55 minutes",
+          "70 minutes",
+          "85 minutes"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "Préciser le périmètre de l’édition : environ 73 minutes, donc 70 minutes parmi les choix.",
+      "sources": [
+        {
+          "title": "Deux frères — durée Apple Music",
+          "url": "https://music.apple.com/us/album/deux-fr%C3%A8res/1663879853"
+        }
+      ]
+    },
+    {
+      "id": "N130",
+      "category": "pnl",
+      "file": "backend/data/pnl.json",
+      "originalIndex": 102,
+      "originalHash": "845a0e90bf83e4fa3cc0c494d0789388181adfb2e709d9fcdfca43d1d8a1d106",
+      "action": "corrected",
+      "before": {
+        "text": "Quel titre de Dans la légende fait référence à un film d'animation Disney ?",
+        "answers": [
+          "Onizuka",
+          "Simba",
+          "Naha",
+          "Bené"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel titre de Que la famille porte le nom du héros du Roi Lion ?",
+        "answers": [
+          "Onizuka",
+          "Simba",
+          "Naha",
+          "Bené"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Simba, sur Que la famille, renvoie au Roi Lion ; Onizuka renvoie à GTO. Formulation distincte des questions existantes sur l’album de Simba et sur le film qui l’inspire.",
+      "sources": [
+        {
+          "title": "Dans la légende — présentation Apple Music",
+          "url": "https://music.apple.com/us/album/dans-la-l%C3%A9gende/1663880916"
+        },
+        {
+          "title": "Que la famille — liste Spotify",
+          "url": "https://open.spotify.com/intl-es/album/2LOyzVRA6BJgfgGxQj21O1"
+        }
+      ]
+    },
+    {
+      "id": "N131",
+      "category": "pnl",
+      "file": "backend/data/pnl.json",
+      "originalIndex": 107,
+      "originalHash": "7e81ea6c87976b02a76443f0d4c876fed00448e69f32588f3182d6fd8e5aa5f9",
+      "action": "corrected",
+      "before": {
+        "text": "Combien de titres contient l'EP Que la famille ?",
+        "answers": [
+          "5",
+          "7",
+          "9",
+          "11"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Combien de titres contient l'EP Que la famille ?",
+        "answers": [
+          "5",
+          "12",
+          "9",
+          "11"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Que la famille contient 12 titres.",
+      "sources": [
+        {
+          "title": "Que la famille — catalogue Apple Music",
+          "url": "https://music.apple.com/us/album/que-la-famille/968338156"
+        }
+      ]
+    },
+    {
+      "id": "N132",
+      "category": "rihanna",
+      "file": "backend/data/rihanna.json",
+      "originalIndex": 121,
+      "originalHash": "02a7bffce2315a4417b6e88ce28f9fdb37bf2881cd1146dfeebaf47707577ecc",
+      "action": "corrected",
+      "before": {
+        "text": "Quel titre de Good Girl Gone Bad a été remixé avec une version featuring Ne-Yo ?",
+        "answers": [
+          "Umbrella",
+          "Hate That I Love You",
+          "Don't Stop the Music",
+          "Shut Up and Drive"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel titre de Good Girl Gone Bad est en duo avec Ne-Yo dans sa version originale ?",
+        "answers": [
+          "Umbrella",
+          "Hate That I Love You",
+          "Don't Stop the Music",
+          "Shut Up and Drive"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Hate That I Love You accueille Ne-Yo dès sa version originale, sans ajout par remix.",
+      "sources": [
+        {
+          "title": "Good Girl Gone Bad — catalogue Apple Music",
+          "url": "https://music.apple.com/us/album/good-girl-gone-bad/1472503760"
+        }
+      ]
+    },
+    {
+      "id": "N133",
+      "category": "rihanna",
+      "file": "backend/data/rihanna.json",
+      "originalIndex": 127,
+      "originalHash": "83731d16d398a8073f658ee2e0263f9061d88d21b77686e28571c85d9b6953fe",
+      "action": "corrected",
+      "before": {
+        "text": "Quel titre de A Girl Like Me est une reprise de Soft Cell ?",
+        "answers": [
+          "Unfaithful",
+          "We Ride",
+          "Kisses Don't Lie",
+          "SOS"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel titre de A Girl Like Me sample « Tainted Love » de Soft Cell ?",
+        "answers": [
+          "Unfaithful",
+          "We Ride",
+          "Kisses Don't Lie",
+          "SOS"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "reason": "SOS utilise un sample de Tainted Love ; ce n’est pas une reprise.",
+      "sources": [
+        {
+          "title": "Rihanna — Recording Academy",
+          "url": "https://www.grammy.com/artists/rihanna/5943/"
+        }
+      ]
+    },
+    {
+      "id": "N134",
+      "category": "rihanna",
+      "file": "backend/data/rihanna.json",
+      "originalIndex": 141,
+      "originalHash": "aebd3da55709151030d7e4550d5335081e6dbb2071a20e63e573593552e79b2f",
+      "action": "corrected",
+      "before": {
+        "text": "Quel producteur norvégien a co-écrit 'Umbrella' ?",
+        "answers": [
+          "Max Martin",
+          "Tor Erik Hermansen (StarGate)",
+          "Alan Walker",
+          "Kygo"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Lequel de ces producteurs est crédité comme coauteur du titre 'Umbrella' ?",
+        "answers": [
+          "Max Martin",
+          "Tricky Stewart",
+          "Alan Walker",
+          "Kygo"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Substituer un coauteur attesté, Tricky Stewart, au crédit erroné de Tor Erik Hermansen ; retirer la fausse prémisse de nationalité.",
+      "sources": [
+        {
+          "title": "Umbrella — crédits Apple/Shazam",
+          "url": "https://www.shazam.com/song/1472503762/umbrella-feat-jac3bf-z"
+        }
+      ]
+    },
+    {
+      "id": "N135",
+      "category": "rihanna",
+      "file": "backend/data/rihanna.json",
+      "originalIndex": 142,
+      "originalHash": "3aca7ba5776b63a54df61642613843b7efdfef5835ea8a0e11e7c2186d551ae6",
+      "action": "corrected",
+      "before": {
+        "text": "Quel rappeur apparaît sur 'Lemon' avec Rihanna en remix ?",
+        "answers": [
+          "Drake",
+          "Pharrell",
+          "N.E.R.D (feat. Rihanna)",
+          "Future"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel rappeur a été ajouté sur le remix de 'Lemon' avec N.E.R.D et Rihanna ?",
+        "answers": [
+          "Drake",
+          "Pharrell",
+          "N.E.R.D (feat. Rihanna)",
+          "Future"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "Le remix identifié par son titre ajoute Drake ; il ne transforme pas N.E.R.D en un rappeur invité.",
+      "sources": [
+        {
+          "title": "Lemon (Drake Remix) — catalogue Qobuz",
+          "url": "https://www.qobuz.com/us-en/album/lemon-nerd-rihanna-feat-drake/owkzxdq27m29a"
+        }
+      ]
+    },
+    {
+      "id": "N136",
+      "category": "rihanna",
+      "file": "backend/data/rihanna.json",
+      "originalIndex": 156,
+      "originalHash": "59c984e06b458154d8b86cff52a21a14e7c7dd1fe20b444f306ddc3328b3c7e4",
+      "action": "corrected",
+      "before": {
+        "text": "Quel titre Rihanna a-t-elle chanté pour le film Black Panther: Wakanda Forever ?",
+        "answers": [
+          "Born Again",
+          "Diamonds",
+          "Towards the Sun",
+          "Lift Me Up"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel titre de Rihanna pour Black Panther: Wakanda Forever est sorti en premier, en octobre 2022 ?",
+        "answers": [
+          "Born Again",
+          "Diamonds",
+          "Towards the Sun",
+          "Lift Me Up"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "reason": "Le critère de date distingue Lift Me Up de Born Again, également présent sur la bande originale.",
+      "sources": [
+        {
+          "title": "Rihanna et les chansons de Wakanda Forever — Disney",
+          "url": "https://www.disney.com.br/novidades/as-5-cancoes-iconicas-da-trilha-sonora-de-pantera-negra-wakanda-para-sempre"
+        },
+        {
+          "title": "Les deux chansons de Rihanna dans Wakanda Forever",
+          "url": "https://www.spinmagazine.com/2022/11/rihanna-new-song-black-panther/"
+        }
+      ]
+    },
+    {
+      "id": "N137",
+      "category": "rihanna",
+      "file": "backend/data/rihanna.json",
+      "originalIndex": 159,
+      "originalHash": "0ef98026b9c9e94c6874d4e3381d07dc900a684703ca2a7132602824a744e56d",
+      "action": "corrected",
+      "before": {
+        "text": "Quel titre de Rihanna a été produit par Calvin Harris et co-écrit sous le pseudonyme de Tom Petty ?",
+        "answers": [
+          "Where Have You Been",
+          "Pour It Up",
+          "This Is What You Came For",
+          "Bitch Better Have My Money"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel titre avec Rihanna a été produit par Calvin Harris et coécrit par Taylor Swift sous le pseudonyme de Nils Sjöberg ?",
+        "answers": [
+          "Where Have You Been",
+          "Pour It Up",
+          "This Is What You Came For",
+          "Bitch Better Have My Money"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "Le pseudonyme est Nils Sjöberg, et non Tom Petty ; préciser le rôle de Taylor Swift.",
+      "sources": [
+        {
+          "title": "Entertainment Tonight — confirmation de la représentante de Taylor Swift, Nils Sjoberg",
+          "url": "https://www.etonline.com/music/193133_taylor_swift_secretly_wrote_calvin_harris_this_is_what_you_came_for_hit_featuring_rihanna"
+        }
+      ]
+    },
+    {
+      "id": "N138",
+      "category": "seconde_guerre_mondiale",
+      "file": "backend/data/seconde-guerre-mondiale.json",
+      "originalIndex": 107,
+      "originalHash": "9b70bb6c33197d3b6d3b39a6e6b9b6fff1deba37702e625c6d481d51156ebbee",
+      "action": "corrected",
+      "before": {
+        "text": "Quel général allemand a tenté d'assassiner Hitler le 20 juillet 1944 ?",
+        "answers": [
+          "Erwin Rommel",
+          "Claus von Stauffenberg",
+          "Friedrich Paulus",
+          "Heinz Guderian"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel colonel allemand a tenté d’assassiner Hitler le 20 juillet 1944 ?",
+        "answers": [
+          "Erwin Rommel",
+          "Claus von Stauffenberg",
+          "Friedrich Paulus",
+          "Heinz Guderian"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Remplacer général par officier ou colonel.",
+      "sources": [
+        {
+          "title": "USHMM — attentat du colonel Stauffenberg du 20 juillet 1944",
+          "url": "https://encyclopedia.ushmm.org/content/en/timeline-event/holocaust/1942-1945/attempt-to-assassinate-hitler"
+        }
+      ]
+    },
+    {
+      "id": "N139",
+      "category": "seconde_guerre_mondiale",
+      "file": "backend/data/seconde-guerre-mondiale.json",
+      "originalIndex": 118,
+      "originalHash": "976d2894668afa59b9cf7a7eb14df1d8abbddebf26e2c1e23780117a896b1bab",
+      "action": "corrected",
+      "before": {
+        "text": "Quel pays neutre a accueilli de nombreux réfugiés juifs pendant la guerre ?",
+        "answers": [
+          "L'Espagne",
+          "Le Portugal",
+          "La Suisse",
+          "L'Irlande"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quelle confédération neutre, dont Berne est la ville fédérale, a accueilli des réfugiés juifs pendant la Seconde Guerre mondiale ?",
+        "answers": [
+          "L'Espagne",
+          "Le Portugal",
+          "La Suisse",
+          "L'Irlande"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Ajout d’un caractère propre à la Suisse pour la distinguer de l’Espagne et du Portugal, qui ont également accueilli des réfugiés.",
+      "sources": [
+        {
+          "title": "USHMM — réfugiés en Espagne et au Portugal",
+          "url": "https://encyclopedia.ushmm.org/content/en/article/escape-from-german-occupied-europe"
+        },
+        {
+          "title": "Confédération suisse — Berne, ville fédérale",
+          "url": "https://www.aboutswitzerland.eda.admin.ch/fr/systeme-politique"
+        }
+      ]
+    },
+    {
+      "id": "N140",
+      "category": "seconde_guerre_mondiale",
+      "file": "backend/data/seconde-guerre-mondiale.json",
+      "originalIndex": 134,
+      "originalHash": "5f8424f32aca3c2d935a340b1edac424a899f37f2bb8c2bc39dc0c78d7f51285",
+      "action": "corrected",
+      "before": {
+        "text": "Quel maréchal allemand commanda le groupe d'armées encerclé à Stalingrad ?",
+        "answers": [
+          "Erwin Rommel",
+          "Friedrich Paulus",
+          "Erich von Manstein",
+          "Walter Model"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel maréchal allemand commandait la Sixième Armée encerclée à Stalingrad ?",
+        "answers": [
+          "Erwin Rommel",
+          "Friedrich Paulus",
+          "Erich von Manstein",
+          "Walter Model"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Remplacer groupe d’armées par Sixième Armée.",
+      "sources": [
+        {
+          "title": "National Army Museum — Paulus et la Sixième Armée à Stalingrad",
+          "url": "https://collection.nam.ac.uk/detail.php?acc=2007-03-1-5"
+        }
+      ]
+    },
+    {
+      "id": "N141",
+      "category": "seconde_guerre_mondiale",
+      "file": "backend/data/seconde-guerre-mondiale.json",
+      "originalIndex": 144,
+      "originalHash": "fee3eb1c8df433a5cc884f2f60c6d1ab5be3c9fae2555182bf8614bbefc76701",
+      "action": "corrected",
+      "before": {
+        "text": "Quel pays a été divisé en deux zones d'occupation (soviétique et alliée) après la guerre ?",
+        "answers": [
+          "La Pologne",
+          "L'Italie",
+          "L'Allemagne",
+          "L'Autriche"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Dans quel pays ont été créées la RFA et la RDA en 1949 ?",
+        "answers": [
+          "La Pologne",
+          "L'Italie",
+          "L'Allemagne",
+          "L'Autriche"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "reason": "Distinguer la création de deux États en 1949 des quatre zones d’occupation de 1945 ; demander simplement quatre zones laisserait aussi l’Autriche correcte parmi les options.",
+      "sources": [
+        {
+          "title": "Deutsches Historisches Museum — quatre zones d’occupation",
+          "url": "https://www.dhm.de/en/exhibitions/permanent-exhibition/germany-under-allied-occupation/"
+        },
+        {
+          "title": "Deutsches Historisches Museum — deux États allemands depuis 1949",
+          "url": "https://www.dhm.de/ausstellungen/dauerausstellung/geteiltes-deutschland-und-wiedervereinigung/"
+        }
+      ]
+    },
+    {
+      "id": "N142",
+      "category": "seconde_guerre_mondiale",
+      "file": "backend/data/seconde-guerre-mondiale.json",
+      "originalIndex": 150,
+      "originalHash": "cb46ad2643798fabf5ab3cfb9bc60b72f752094fb699b6806c63aa35bf91825b",
+      "action": "corrected",
+      "before": {
+        "text": "Quel général britannique a vaincu Rommel à El-Alamein en 1942 ?",
+        "answers": [
+          "Harold Alexander",
+          "Bernard Montgomery",
+          "Archibald Wavell",
+          "Claude Auchinleck"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel général britannique a remporté la seconde bataille d’El-Alamein, en octobre-novembre 1942 ?",
+        "answers": [
+          "Harold Alexander",
+          "Bernard Montgomery",
+          "Archibald Wavell",
+          "Claude Auchinleck"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Préciser seconde bataille d’El-Alamein en octobre-novembre 1942 pour conserver Montgomery.",
+      "sources": [
+        {
+          "title": "National Army Museum — Auchinleck à la première bataille, Montgomery à la seconde",
+          "url": "https://www.nam.ac.uk/explore/struggle-north-africa-1940-43"
+        }
+      ]
+    },
+    {
+      "id": "N143",
+      "category": "seconde_guerre_mondiale",
+      "file": "backend/data/seconde-guerre-mondiale.json",
+      "originalIndex": 152,
+      "originalHash": "fef52c1574e49388971da34138510979b620e0762d0aa5d8d66bf6f4d4c2b53e",
+      "action": "corrected",
+      "before": {
+        "text": "Quel pays a signé l'armistice avec le Japon à bord du USS Missouri ?",
+        "answers": [
+          "La Chine",
+          "Le Royaume-Uni",
+          "Les États-Unis",
+          "L'URSS"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel amiral a signé la capitulation du Japon pour les États-Unis à bord de l’USS Missouri le 2 septembre 1945 ?",
+        "answers": [
+          "Isoroku Yamamoto",
+          "Chester W. Nimitz",
+          "William F. Halsey",
+          "Ernest J. King"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Demander quel amiral signe pour les États-Unis (Nimitz), ou nommer les Alliés comme partie bénéficiaire en modifiant les options.",
+      "sources": [
+        {
+          "title": "National Archives — capitulation du Japon devant les Alliés",
+          "url": "https://www.archives.gov/milestone-documents/surrender-of-japan"
+        }
+      ]
+    },
+    {
+      "id": "N144",
+      "category": "taylor_swift",
+      "file": "backend/data/taylor_swift.json",
+      "originalIndex": 140,
+      "originalHash": "820c98b2d251e0e631cfe73e11bc7e62442f0c1111400b42c81dc79e4121fbe1",
+      "action": "corrected",
+      "before": {
+        "text": "Quel producteur suédois a co-écrit 'Shake It Off' et 'Blank Space' ?",
+        "answers": [
+          "Benny Blanco",
+          "Max Martin",
+          "Dr. Luke",
+          "Shellback"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel producteur suédois a co-écrit 'Shake It Off' et 'Blank Space' ?",
+        "answers": [
+          "Benny Blanco",
+          "Max Martin",
+          "Dr. Luke",
+          "Pharrell Williams"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Retirer Shellback, également coauteur suédois de Shake It Off et Blank Space, pour conserver Max Martin comme réponse unique.",
+      "sources": [
+        {
+          "title": "Apple Music — The Life of a Showgirl, introduction sur Martin et Shellback et les titres de 1989",
+          "url": "https://music.apple.com/us/album/the-life-of-a-showgirl/1842897453"
+        }
+      ]
+    },
+    {
+      "id": "N145",
+      "category": "taylor_swift",
+      "file": "backend/data/taylor_swift.json",
+      "originalIndex": 157,
+      "originalHash": "6c0c85d864433cf8dbaa671112c98f7bd9cfd614bf2cbc01ba259a5c07e339c9",
+      "action": "corrected",
+      "before": {
+        "text": "Quelle chanteuse est créditée sur 'Gasoline' du Tortured Poets Department ?",
+        "answers": [
+          "Billie Eilish",
+          "Lana Del Rey",
+          "Florence Welch",
+          "Gracie Abrams"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quelle chanteuse apparaît sur 'Florida!!!' de The Tortured Poets Department ?",
+        "answers": [
+          "Billie Eilish",
+          "Lana Del Rey",
+          "Florence Welch",
+          "Gracie Abrams"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "Le duo avec Florence Welch porte sur Florida!!! ; Gasoline est un titre de HAIM auquel Taylor Swift a participé.",
+      "sources": [
+        {
+          "title": "Gasoline — publication officielle HAIM",
+          "url": "https://www.youtube.com/watch?v=kQ15Nq1XjRA"
+        },
+        {
+          "title": "Florida!!! — catalogue Apple Music",
+          "url": "https://music.apple.com/us/song/1742058094"
+        }
+      ]
+    },
+    {
+      "id": "N146",
+      "category": "the_weeknd",
+      "file": "backend/data/the_weeknd.json",
+      "originalIndex": 125,
+      "originalHash": "0665b35629d762739fea8de9fda7becaed0ec67febcfdb104d49e568e598ae15",
+      "action": "corrected",
+      "before": {
+        "text": "Quel artiste éthiopien-canadien est signé sur XO Records ?",
+        "answers": [
+          "Belly",
+          "NAV",
+          "88Glam",
+          "Tous ces artistes"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel collaborateur de The Weeknd est d'origine punjabi ?",
+        "answers": [
+          "Belly",
+          "NAV",
+          "88Glam",
+          "Tous ces artistes"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "La biographie de NAV atteste son origine punjabi et sa collaboration avec The Weeknd. Retirer le faux attribut éthiopien partagé ainsi que l’assertion sur la liste actuelle de XO.",
+      "sources": [
+        {
+          "title": "NAV — biographie Universal Music",
+          "url": "https://universalmusic.fr/artistes/32062221619"
+        },
+        {
+          "title": "Entretien avec Belly — International Rescue Committee",
+          "url": "https://www.rescue.org/eu/article/my-past-my-music-meet-rapper-songwriter-and-record-producer-belly"
+        }
+      ]
+    },
+    {
+      "id": "N147",
+      "category": "the_weeknd",
+      "file": "backend/data/the_weeknd.json",
+      "originalIndex": 128,
+      "originalHash": "6ad09b2203bc290d9b838d26ceaa4841ed770df14d648dab8298a49fef4c3a8c",
+      "action": "corrected",
+      "before": {
+        "text": "Quel single de Beauty Behind the Madness a un clip où The Weeknd joue aux côtés de l'actrice Madalina Ghenea ?",
+        "answers": [
+          "In the Night",
+          "Can't Feel My Face",
+          "The Hills",
+          "Often"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel single de Beauty Behind the Madness a un clip où The Weeknd joue aux côtés du mannequin Bella Hadid ?",
+        "answers": [
+          "In the Night",
+          "Can't Feel My Face",
+          "The Hills",
+          "Often"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "reason": "Bella Hadid apparaît dans In the Night ; remplacer aussi actrice par mannequin pour éviter une nouvelle prémisse erronée.",
+      "sources": [
+        {
+          "title": "In the Night avec Bella Hadid",
+          "url": "https://www.upi.com/Entertainment_News/2015/12/09/The-Weeknd-enlists-girlfriend-Bella-Hadid-for-In-The-Night-video/7981449678208/"
+        }
+      ]
+    },
+    {
+      "id": "N148",
+      "category": "the_weeknd",
+      "file": "backend/data/the_weeknd.json",
+      "originalIndex": 141,
+      "originalHash": "54fddeb3b2751e8ec0e1873f17a456351a73d143c8152b1bb28fa02c95ccb9d9",
+      "action": "corrected",
+      "before": {
+        "text": "Quel réalisateur canadien a réalisé plusieurs clips de The Weeknd ?",
+        "answers": [
+          "Denis Villeneuve",
+          "Anton Tammi",
+          "Xavier Dolan",
+          "David Cronenberg"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel réalisateur finlandais a réalisé plusieurs clips de The Weeknd ?",
+        "answers": [
+          "Denis Villeneuve",
+          "Anton Tammi",
+          "Xavier Dolan",
+          "David Cronenberg"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Anton Tammi est finlandais, et non canadien.",
+      "sources": [
+        {
+          "title": "Anton Tammi — biographie de sa société de production",
+          "url": "https://fela.tv/artists/live-action/anton-tammi/"
+        }
+      ]
+    },
+    {
+      "id": "N149",
+      "category": "the_weeknd",
+      "file": "backend/data/the_weeknd.json",
+      "originalIndex": 145,
+      "originalHash": "ab5154cfb87ae29f2a826c3f2ab519b51073be24c80161935ad9924781485418",
+      "action": "corrected",
+      "before": {
+        "text": "Quel titre de Thursday sample 'Dirty Diana' de Michael Jackson ?",
+        "answers": [
+          "The Birds Pt. 1",
+          "D.D.",
+          "Thursday",
+          "The Zone"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quelle chanson de Michael Jackson The Weeknd reprend-il sous le titre 'D.D.' sur Echoes of Silence ?",
+        "answers": [
+          "Billie Jean",
+          "Dirty Diana",
+          "Thriller",
+          "Beat It"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Corriger simultanément l’album et reprise/sample. Poser la question sur l’original de Michael Jackson évite de répéter exactement la question existante sur le titre D.D.",
+      "sources": [
+        {
+          "title": "Echoes of Silence — boutique officielle Republic",
+          "url": "https://www.republicrecords.com/collections/buy-more-save-more/products/the-weeknd-echoes-of-silence-lp"
+        },
+        {
+          "title": "D.D. est une reprise de Dirty Diana",
+          "url": "https://news.twentyfourbit.com/2011/12/the-weeknd-echoes-of-silence-download/"
+        }
+      ]
+    },
+    {
+      "id": "N150",
+      "category": "the_weeknd",
+      "file": "backend/data/the_weeknd.json",
+      "originalIndex": 159,
+      "originalHash": "a55df51f3207eb2bdc34eb0d3f8fc96b5e1fa876b3254b5913f2c76ee867c563",
+      "action": "corrected",
+      "before": {
+        "text": "En quelle année The Weeknd a-t-il été nommé ambassadeur de bonne volonté du Programme alimentaire mondial des Nations Unies ?",
+        "answers": [
+          "2017",
+          "2019",
+          "2021",
+          "2023"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "En quelle année The Weeknd a-t-il été nommé ambassadeur de bonne volonté du Programme alimentaire mondial des Nations Unies ?",
+        "answers": [
+          "2017",
+          "2019",
+          "2021",
+          "2023"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "La nomination au Programme alimentaire mondial date du 7 octobre 2021.",
+      "sources": [
+        {
+          "title": "Nomination officielle au PAM",
+          "url": "https://www.wfp.org/news/un-world-food-programme-announces-weeknd-global-goodwill-ambassador"
+        }
+      ]
+    }
+  ],
+  "scope": {
+    "all150AuditFindingsResolved": true,
+    "unconfirmedLeadsChanged": false,
+    "inactiveGotFileChanged": false
+  },
+  "verification": {
+    "allOriginalHashesChecked": true,
+    "allMetadataPreserved": true,
+    "allUnauditedQuestionsPreserved": true,
+    "independentReview": "Knowledge, manga, music and sport reviewed; no outstanding actionable findings."
+  }
+}
