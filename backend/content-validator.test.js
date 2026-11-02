@@ -1,6 +1,21 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { validateQuestions, validateContent } = require('./content-validator');
+const { CATEGORIES } = require('./questions');
+
+test('every shipped quiz has valid questions and distinct answer choices', () => {
+  const errors = [];
+  for (const [key, category] of Object.entries(CATEGORIES)) {
+    errors.push(...validateQuestions(category.questions, { key, minimum: 6 }));
+    category.questions.forEach((question, index) => {
+      // Keep mathematical signs and punctuation: only accents and case are folded.
+      const identities = question.answers.map((answer) => answer.normalize('NFD')
+        .replace(/\p{M}/gu, '').trim().toLocaleLowerCase('fr-FR'));
+      if (new Set(identities).size !== 4) errors.push(`${key}[${index}]: equivalent answer choices`);
+    });
+  }
+  assert.deepEqual(errors, []);
+});
 
 const validQuestion = (correct = 0) => ({
   text: `Question ${correct} ?`,

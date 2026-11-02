@@ -1,0 +1,1255 @@
+{
+  "date": "2026-11-01",
+  "commit": "e51b6a1f0c75d3e031ca0f1d6b824d93b1b3a9e7",
+  "scope": {
+    "categories": 494,
+    "questions": 37189,
+    "localQuestionImagesChecked": 1419,
+    "missingLocalQuestionImages": 0,
+    "allQuestionsStructurallyScanned": true,
+    "allQuestionsFactChecked": false
+  },
+  "counts": {
+    "factuel": 28,
+    "ambiguite": 4,
+    "precision": 3,
+    "doublon_reponses": 2,
+    "doublon_question": 3
+  },
+  "findings": [
+    {
+      "id": "Q001",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "judo",
+      "questionNumber": 10,
+      "arrayIndex": 9,
+      "question": "Quel judoka français est le plus titré de l'histoire avec 2 titres olympiques ?",
+      "answers": [
+        "Teddy Riner",
+        "David Douillet",
+        "Thierry Rey",
+        "Angelo Parisi"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Teddy Riner",
+      "location": {
+        "file": "backend/data/judo.json",
+        "index": 9,
+        "line": 57
+      },
+      "questionHash": "8f1c3380fd14a39551bf23d63e4a8f746ee96d72f15f2592a60a363f9a4e8768",
+      "issue": "L’énoncé attribue deux titres olympiques à Teddy Riner, alors qu’il a obtenu son troisième titre individuel à Paris 2024.",
+      "correction": "Dater la question sur Paris 2024 et indiquer trois titres individuels (Londres 2012, Rio 2016, Paris 2024). Ne pas confondre titres individuels et épreuves par équipes.",
+      "sources": [
+        {
+          "title": "IJF — troisième titre individuel à Paris 2024",
+          "url": "https://www.ijf.org/news/show/teddy-riner-s-historic-win-at-the-paris-2024-olympic-games"
+        }
+      ]
+    },
+    {
+      "id": "Q002",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "judo",
+      "questionNumber": 41,
+      "arrayIndex": 40,
+      "question": "Quel judoka géorgien est devenu légendaire en remportant l'or olympique en 2004 et 2008 ?",
+      "answers": [
+        "Zurab Zviadauri",
+        "Lasha Bekauri",
+        "Varlam Liparteliani",
+        "Avtandil Tchrikishvili"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Zurab Zviadauri",
+      "location": {
+        "file": "backend/data/judo.json",
+        "index": 40,
+        "line": 243
+      },
+      "questionHash": "b5a7cffd8c00eaf020b2c430ae845803bbf0db9a5e2f19effc957c3c6370cf88",
+      "issue": "Zurab Zviadauri n’a pas gagné les JO en 2004 ET en 2008. Son titre olympique est celui d’Athènes 2004.",
+      "correction": "Demander quel Géorgien a remporté les -90 kg à Athènes 2004 ; conserver Zviadauri comme réponse.",
+      "sources": [
+        {
+          "title": "IJF — résultats de Zurab Zviadauri",
+          "url": "https://www.ijf.org/index.php/athlete/4162/results?results_rank_group=all"
+        }
+      ]
+    },
+    {
+      "id": "Q003",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "judo",
+      "questionNumber": 48,
+      "arrayIndex": 47,
+      "question": "Quelle judoka française a remporté l'or olympique à Rio 2016 en -78 kg ?",
+      "answers": [
+        "Audrey Tcheuméo",
+        "Émilie Andéol",
+        "Clarisse Agbegnenou",
+        "Lucie Décosse"
+      ],
+      "correctIndex": 1,
+      "markedAnswer": "Émilie Andéol",
+      "location": {
+        "file": "backend/data/judo.json",
+        "index": 47,
+        "line": 285
+      },
+      "questionHash": "7d695d312aa1658f1a7e854c83fd80ae5b3fa62a80fbf844eb1f295e398404d0",
+      "issue": "Émilie Andéol est championne olympique de Rio en +78 kg, pas en -78 kg.",
+      "correction": "Remplacer -78 kg par +78 kg dans la question.",
+      "sources": [
+        {
+          "title": "IJF — Émilie Andéol, championne olympique en +78 kg",
+          "url": "https://www.ijf.org/history/olympic-champions/4825"
+        }
+      ]
+    },
+    {
+      "id": "Q004",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "judo",
+      "questionNumber": 49,
+      "arrayIndex": 48,
+      "question": "Quelle judoka française est quintuple championne du monde ?",
+      "answers": [
+        "Clarisse Agbegnenou",
+        "Lucie Décosse",
+        "Gévrise Émane",
+        "Audrey Tcheuméo"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Clarisse Agbegnenou",
+      "location": {
+        "file": "backend/data/judo.json",
+        "index": 48,
+        "line": 291
+      },
+      "questionHash": "054648da59a0524815a3fe27373fdb379a9eb2bcf86f90dd6634e5639b9b100b",
+      "issue": "La qualification de quintuple championne du monde est périmée : Agbegnenou a gagné son sixième titre en 2023.",
+      "correction": "Ancrer la question : quelle Française a remporté son sixième titre mondial à Doha en 2023 ?",
+      "sources": [
+        {
+          "title": "IJF — sixième titre de Clarisse Agbegnenou à Doha 2023",
+          "url": "https://www.ijf.org/news/show/clarisse-just-changed-the-world"
+        }
+      ]
+    },
+    {
+      "id": "Q005",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "judo",
+      "questionNumber": 51,
+      "arrayIndex": 50,
+      "question": "Quel judoka japonais a remporté 3 titres olympiques consécutifs (2004-2012) ?",
+      "answers": [
+        "Tadahiro Nomura",
+        "Shohei Ono",
+        "Kosei Inoue",
+        "Naohisa Takato"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Tadahiro Nomura",
+      "location": {
+        "file": "backend/data/judo.json",
+        "index": 50,
+        "line": 303
+      },
+      "questionHash": "2b2c3d0a7db0109782fb7f6d49d33a3042129c407ed7d6835e45aff40a23a315",
+      "issue": "Les trois titres olympiques de Tadahiro Nomura ne correspondent pas à 2004–2012.",
+      "correction": "Remplacer la période par 1996–2004 : Atlanta 1996, Sydney 2000, Athènes 2004.",
+      "sources": [
+        {
+          "title": "IJF — palmarès de Tadahiro Nomura",
+          "url": "https://www.ijf.org/judoka/5156/results?results_rank_group=all"
+        }
+      ]
+    },
+    {
+      "id": "Q006",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "judo",
+      "questionNumber": 67,
+      "arrayIndex": 66,
+      "question": "Quel judoka français a remporté l'or aux JO de Paris 2024 en -66 kg ?",
+      "answers": [
+        "Joan-Benjamin Gaba",
+        "Walide Khyar",
+        "Luka Mkheidze",
+        "Alpha Oumar Djalo"
+      ],
+      "correctIndex": 2,
+      "markedAnswer": "Luka Mkheidze",
+      "location": {
+        "file": "backend/data/judo.json",
+        "index": 66,
+        "line": 399
+      },
+      "questionHash": "042a045dbcf32ca24fe4a45fb095628e9e89c2784b3bff7d9ee11e58e7031d29",
+      "issue": "Luka Mkheidze n’a pas gagné l’or en -66 kg à Paris 2024 : il est médaillé d’argent en -60 kg. Hifumi Abe a remporté les -66 kg.",
+      "correction": "Soit demander qui a obtenu l’argent en -60 kg (Mkheidze), soit demander le champion en -66 kg (Hifumi Abe, à ajouter aux choix).",
+      "sources": [
+        {
+          "title": "IJF — résultats des JO Paris 2024",
+          "url": "https://www.ijf.org/competition/2653/results"
+        }
+      ]
+    },
+    {
+      "id": "Q007",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "judo",
+      "questionNumber": 72,
+      "arrayIndex": 71,
+      "question": "Quel judoka sud-coréen est triple médaillé olympique ?",
+      "answers": [
+        "Choi Min-ho",
+        "Kim Jae-bum",
+        "An Chang-rim",
+        "Song Dae-nam"
+      ],
+      "correctIndex": 1,
+      "markedAnswer": "Kim Jae-bum",
+      "location": {
+        "file": "backend/data/judo.json",
+        "index": 71,
+        "line": 429
+      },
+      "questionHash": "3717662723351d5f187fda84f0992f1529520f190b6f4f0f2d68b347572d8678",
+      "issue": "Kim Jae-bum a deux médailles olympiques, pas trois : argent en 2008, or en 2012.",
+      "correction": "Remplacer triple médaillé par double médaillé et préciser ces deux éditions.",
+      "sources": [
+        {
+          "title": "IJF — palmarès de Kim Jae-bum",
+          "url": "https://www.ijf.org/athlete/64/results?results_rank_group=all"
+        }
+      ]
+    },
+    {
+      "id": "Q008",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "judo",
+      "questionNumber": 74,
+      "arrayIndex": 73,
+      "question": "Quel judoka français a été champion olympique et du monde en -100 kg ?",
+      "answers": [
+        "Djamel Bouras",
+        "Stéphane Traineau",
+        "Benjamin Axus",
+        "Cyrille Maret"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Djamel Bouras",
+      "location": {
+        "file": "backend/data/judo.json",
+        "index": 73,
+        "line": 441
+      },
+      "questionHash": "25550d776087d5e386cdfd0d30cb41e564661c78c640d1523e3618d502dad70e",
+      "issue": "Djamel Bouras n’est pas champion olympique et du monde en -100 kg. Son titre olympique d’Atlanta 1996 est en -78 kg.",
+      "correction": "Recentrer la question sur le titre olympique -78 kg d’Atlanta 1996, sans lui attribuer un titre mondial -100 kg.",
+      "sources": [
+        {
+          "title": "IJF — résultats des JO Atlanta 1996",
+          "url": "https://www.ijf.org/competition/1862/results"
+        }
+      ]
+    },
+    {
+      "id": "Q009",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "judo",
+      "questionNumber": 78,
+      "arrayIndex": 77,
+      "question": "Quel Français a dirigé la Fédération internationale de judo pendant de nombreuses années ?",
+      "answers": [
+        "Marius Vizer",
+        "Jean-Luc Rougé",
+        "Angelo Parisi",
+        "Thierry Rey"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Marius Vizer",
+      "location": {
+        "file": "backend/data/judo.json",
+        "index": 77,
+        "line": 465
+      },
+      "questionHash": "889cc79b0624eb654f0103d15a006de8f79ca53f7d14586f78c346eacc21142d",
+      "issue": "Marius Vizer est présenté comme Français. L’annuaire officiel de l’IJF le rattache à l’Autriche.",
+      "correction": "Retirer le qualificatif Français de l’énoncé ou reformuler autour de sa fonction.",
+      "sources": [
+        {
+          "title": "IJF — organisation, Marius Vizer représente l’Autriche",
+          "url": "https://www.ijf.org/ijf/organisation/17"
+        }
+      ]
+    },
+    {
+      "id": "Q010",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "football_feminin",
+      "questionNumber": 45,
+      "arrayIndex": 44,
+      "question": "Quelle gardienne française a évolué au PSG et en équipe de France ?",
+      "answers": [
+        "Sarah Bouhaddi",
+        "Pauline Peyraud-Magnin",
+        "Méline Gérard",
+        "Solène Durand"
+      ],
+      "correctIndex": 1,
+      "markedAnswer": "Pauline Peyraud-Magnin",
+      "location": {
+        "file": "backend/data/football_feminin.json",
+        "index": 44,
+        "line": 267
+      },
+      "questionHash": "6291f1c2596c4b3b7858f4ef26724e6a8d108253ea048584c2550bf3e9010e09",
+      "issue": "La réponse marquée est Pauline Peyraud-Magnin, mais son historique officiel de clubs ne comprend pas le PSG.",
+      "correction": "Conserver Peyraud-Magnin avec une question sur son passage à Arsenal puis à la Juventus, ou vérifier et sélectionner une gardienne réellement passée au PSG.",
+      "sources": [
+        {
+          "title": "FFF — clubs successifs de Pauline Peyraud-Magnin",
+          "url": "https://www.fff.fr/equipe-nationale/joueur/8414-peyraud-magnin-pauline/fiche.html"
+        }
+      ]
+    },
+    {
+      "id": "Q011",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "football_feminin",
+      "questionNumber": 55,
+      "arrayIndex": 54,
+      "question": "Quelle joueuse française a évolué au Real Madrid féminin ?",
+      "answers": [
+        "Kadidiatou Diani",
+        "Marie-Antoinette Katoto",
+        "Delphine Cascarino",
+        "Sakina Karchaoui"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Kadidiatou Diani",
+      "location": {
+        "file": "backend/data/football_feminin.json",
+        "index": 54,
+        "line": 327
+      },
+      "questionHash": "a12638179375986e2f10451c05199fb436962cff86c06a27604579ae0c9e35d7",
+      "issue": "Kadidiatou Diani n’a pas évolué au Real Madrid. La FFF recense notamment Juvisy, le PSG puis Lyon.",
+      "correction": "Remplacer l’énoncé par une question sur la succession Juvisy → PSG → Lyon, pour conserver Diani comme réponse.",
+      "sources": [
+        {
+          "title": "FFF — clubs successifs de Kadidiatou Diani",
+          "url": "https://www.fff.fr/equipe-nationale/joueur/8417-diani-kadidiatou/fiche.html"
+        }
+      ]
+    },
+    {
+      "id": "Q012",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "football_feminin",
+      "questionNumber": 60,
+      "arrayIndex": 59,
+      "question": "Quelle Néerlandaise a remporté le titre de meilleure joueuse FIFA en 2019 ?",
+      "answers": [
+        "Lieke Martens",
+        "Vivianne Miedema",
+        "Sari van Veenendaal",
+        "Daniëlle van de Donk"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Lieke Martens",
+      "location": {
+        "file": "backend/data/football_feminin.json",
+        "index": 59,
+        "line": 357
+      },
+      "questionHash": "7ccd7a51ea86ca7b8572835012d382b2e23b1732f07b3a703bb672ade927d1e7",
+      "issue": "The Best FIFA 2019 a récompensé Megan Rapinoe, pas Lieke Martens. Toutes les options proposées sont néerlandaises.",
+      "correction": "Reformuler en supprimant Néerlandaise et proposer Megan Rapinoe parmi les réponses, ou vérifier une question explicitement datée de 2017 sur Lieke Martens.",
+      "sources": [
+        {
+          "title": "FIFA — The Best 2019, Megan Rapinoe",
+          "url": "https://inside.fifa.com/en/news/the-best-fifa-women-s-player-x1589"
+        }
+      ]
+    },
+    {
+      "id": "Q013",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "football_feminin",
+      "questionNumber": 62,
+      "arrayIndex": 61,
+      "question": "Quelle Anglaise a été meilleure buteuse de la Women's Super League à plusieurs reprises avec Arsenal ?",
+      "answers": [
+        "Vivianne Miedema",
+        "Beth Mead",
+        "Kim Little",
+        "Katie McCabe"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Vivianne Miedema",
+      "location": {
+        "file": "backend/data/football_feminin.json",
+        "index": 61,
+        "line": 369
+      },
+      "questionHash": "46b5e01bd50323edaf5784c9b8715449cd866f34e2dd476eaf0116f4729cdbc8",
+      "issue": "Vivianne Miedema est néerlandaise, pas anglaise.",
+      "correction": "Remplacer Anglaise par Néerlandaise.",
+      "sources": [
+        {
+          "title": "Arsenal — Vivianne Miedema, internationale néerlandaise",
+          "url": "https://www.arsenal.com/news/vivianne-miedema-signs-new-deal-aOKzt9W1PQVy"
+        }
+      ]
+    },
+    {
+      "id": "Q014",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "football_feminin",
+      "questionNumber": 66,
+      "arrayIndex": 65,
+      "question": "Comment s'appelle le championnat féminin de France de première division ?",
+      "answers": [
+        "D1 Arkema",
+        "Ligue 1 Féminine",
+        "Division Féminine",
+        "National Féminin"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "D1 Arkema",
+      "location": {
+        "file": "backend/data/football_feminin.json",
+        "index": 65,
+        "line": 393
+      },
+      "questionHash": "89eb91f64e98f8e4a4683be1a07e55624de76b00c7b4bbf577924079ed65a3c2",
+      "issue": "Le nom D1 Arkema est périmé pour une question au présent : la compétition est devenue Arkema Première Ligue en 2024.",
+      "correction": "Proposer Arkema Première Ligue comme réponse ou dater une question historique antérieure à 2024.",
+      "sources": [
+        {
+          "title": "FFF — la D1 Arkema devient Arkema Première Ligue",
+          "url": "https://www.fff.fr/article/12423-la-d1-arkema-devient-l-arkema-premiere-ligue.html"
+        }
+      ]
+    },
+    {
+      "id": "Q015",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "football_feminin",
+      "questionNumber": 88,
+      "arrayIndex": 87,
+      "question": "Quelle joueuse française a rejoint le FC Barcelone Femení en 2022 ?",
+      "answers": [
+        "Delphine Cascarino",
+        "Kadidiatou Diani",
+        "Sakina Karchaoui",
+        "Selma Bacha"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Delphine Cascarino",
+      "location": {
+        "file": "backend/data/football_feminin.json",
+        "index": 87,
+        "line": 525
+      },
+      "questionHash": "51219d60b25d1814d24789c48da53b175fdd8fb7d998ed7923257747761e6f38",
+      "issue": "Delphine Cascarino n’a pas rejoint le FC Barcelone en 2022 : elle jouait à Lyon puis a rejoint San Diego en juillet 2024.",
+      "correction": "Demander quelle Française a rejoint San Diego en 2024 après sa carrière lyonnaise, pour conserver Cascarino comme réponse.",
+      "sources": [
+        {
+          "title": "FFF — clubs successifs de Delphine Cascarino",
+          "url": "https://www.fff.fr/equipe-nationale/joueur/7462-cascarino-delphine/fiche.html"
+        }
+      ]
+    },
+    {
+      "id": "Q016",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "football_feminin",
+      "questionNumber": 89,
+      "arrayIndex": 88,
+      "question": "Quelle équipe a remporté la première édition de la Women's Champions League sous ce nom en 2009 ?",
+      "answers": [
+        "FFC Duisburg",
+        "FFC Frankfurt",
+        "Olympique Lyonnais",
+        "Umeå IK"
+      ],
+      "correctIndex": 1,
+      "markedAnswer": "FFC Frankfurt",
+      "location": {
+        "file": "backend/data/football_feminin.json",
+        "index": 88,
+        "line": 531
+      },
+      "questionHash": "c4b3097c2ee6a563e47a4881dc069a35ce7e1e49aecd6bbb5cfa59a7cf3f4a7d",
+      "issue": "La première finale sous l’appellation Women’s Champions League a été gagnée par Turbine Potsdam en mai 2010, saison 2009–2010 ; pas par Francfort en 2009.",
+      "correction": "Préciser saison 2009–2010 et ajouter Turbine Potsdam aux choix ; aucune des quatre réponses actuelles ne donne ce vainqueur.",
+      "sources": [
+        {
+          "title": "UEFA — première finale de Women’s Champions League, 2010",
+          "url": "https://www.uefa.com/womenschampionsleague/news/0252-0cdfeb843bc4-93e8d419e10c-1000--potsdam-hold-nerve-to-claim-european-crown/"
+        }
+      ]
+    },
+    {
+      "id": "Q017",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "records_du_monde",
+      "questionNumber": 13,
+      "arrayIndex": 12,
+      "question": "Quel est le désert le plus grand du monde ?",
+      "answers": [
+        "Le Sahara (hors Antarctique)",
+        "Le désert de Gobi",
+        "Le désert d'Arabie",
+        "Le Kalahari"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Le Sahara (hors Antarctique)",
+      "location": {
+        "file": "backend/data/records_du_monde.json",
+        "index": 12,
+        "line": 14
+      },
+      "questionHash": "4f8de63770fc28e78de0270bf36fc0e5befcd901cbba2ca0c795425200fecbfb",
+      "issue": "Le Sahara est le plus grand désert CHAUD. La question ne dit pas chaud ; l’exclusion de l’Antarctique seulement dans la réponse ne définit pas correctement la question.",
+      "correction": "Demander explicitement le plus grand désert chaud, en conservant Sahara ; sinon proposer l’Antarctique pour le plus grand désert.",
+      "sources": [
+        {
+          "title": "Guinness — le Sahara est le plus grand désert chaud",
+          "url": "https://www.guinnessworldrecords.com/world-records/largest-desert"
+        }
+      ]
+    },
+    {
+      "id": "Q018",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "records_du_monde",
+      "questionNumber": 25,
+      "arrayIndex": 24,
+      "question": "Quel est le record du monde de plongée en apnée (profondeur) ?",
+      "answers": [
+        "Plus de 300 mètres (No Limit)",
+        "200 mètres",
+        "150 mètres",
+        "400 mètres"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Plus de 300 mètres (No Limit)",
+      "location": {
+        "file": "backend/data/records_du_monde.json",
+        "index": 24,
+        "line": 26
+      },
+      "questionHash": "aceee1e4f4fd208e03d848026b430aa82237434959f36374addf001d9849b277",
+      "issue": "La réponse « plus de 300 mètres » en apnée no-limit n’est pas le record recensé par Guinness : Herbert Nitsch y est à 253 m en 2012.",
+      "correction": "Nommer l’organisme et l’année : profondeur de la descente no-limit de Herbert Nitsch recensée par Guinness en 2012, 253 m. Ne pas confondre avec les 214 m certifiés AIDA.",
+      "sources": [
+        {
+          "title": "Guinness — descente no-limit de Herbert Nitsch, 253 m en 2012",
+          "url": "https://www.guinnessworldrecords.com/world-records/673884-deepest-no-limit-freedive-male"
+        }
+      ]
+    },
+    {
+      "id": "Q019",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "records_du_monde",
+      "questionNumber": 29,
+      "arrayIndex": 28,
+      "question": "Quel est le record du monde du saut à la perche masculin ?",
+      "answers": [
+        "6,26 m (Armand Duplantis)",
+        "6,15 m",
+        "6,30 m",
+        "6,05 m"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "6,26 m (Armand Duplantis)",
+      "location": {
+        "file": "backend/data/records_du_monde.json",
+        "index": 28,
+        "line": 30
+      },
+      "questionHash": "cf1236768fd04f547bc874c646886c676e04b1640ec769ceaf42f954636b4a83",
+      "issue": "6,26 m n’est plus le record masculin de la perche. World Athletics rapporte notamment 6,31 m à Uppsala en mars 2026.",
+      "correction": "Dater la performance demandée, par exemple Uppsala 2026 → 6,31 m, au lieu d’un record actuel non daté.",
+      "sources": [
+        {
+          "title": "World Athletics — Duplantis franchit 6,31 m à Uppsala",
+          "url": "https://worldathletics.org/news/report/duplantis-breaks-world-pole-vault-record-in-uppsala"
+        }
+      ]
+    },
+    {
+      "id": "Q020",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "records_du_monde",
+      "questionNumber": 33,
+      "arrayIndex": 32,
+      "question": "Quel est le plus grand stade du monde par capacité ?",
+      "answers": [
+        "Le stade du Premier-Mai (Pyongyang, 114 000)",
+        "Le Camp Nou",
+        "Le stade Maracanã",
+        "Le stade de Wembley"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Le stade du Premier-Mai (Pyongyang, 114 000)",
+      "location": {
+        "file": "backend/data/records_du_monde.json",
+        "index": 32,
+        "line": 34
+      },
+      "questionHash": "040e70ea7f990ed9a8c1223a6f8b39598d27b5ff3e17232405b52f0795d51378",
+      "issue": "Le stade du Premier-Mai, donné pour 114 000 places, n’est pas le plus grand : le Narendra Modi Stadium est annoncé à 132 000 places.",
+      "correction": "Ajouter Narendra Modi Stadium aux options et préciser capacité en places assises ainsi que la date de référence.",
+      "sources": [
+        {
+          "title": "BCCI — Narendra Modi Stadium, 132 000 places",
+          "url": "https://www.bcci.tv/venues?map=1"
+        }
+      ]
+    },
+    {
+      "id": "Q021",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "records_du_monde",
+      "questionNumber": 56,
+      "arrayIndex": 55,
+      "question": "Quel est le record de durée sans dormir ?",
+      "answers": [
+        "11 jours (264 heures, Randy Gardner)",
+        "7 jours",
+        "15 jours",
+        "9 jours"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "11 jours (264 heures, Randy Gardner)",
+      "location": {
+        "file": "backend/data/records_du_monde.json",
+        "index": 55,
+        "line": 57
+      },
+      "questionHash": "f96bc8c55de2ed1b9bfc80218be8bb2cc20ef4a0a7cd847fb0d17bd542be0049",
+      "issue": "Les 264 heures de Randy Gardner en 1964 ne constituent pas le dernier record historique recensé par Guinness ; d’autres durées l’ont dépassé et Guinness a cessé de suivre cette catégorie.",
+      "correction": "Transformer en question historique explicitement sur l’expérience de Randy Gardner en 1964, ou retirer cette question sur un record actuel non suivi.",
+      "sources": [
+        {
+          "title": "Guinness — historique des records de veille et arrêt de leur suivi",
+          "url": "https://www.guinnessworldrecords.com/news/2023/1/whats-the-limit-to-how-long-a-human-can-stay-awake-733188"
+        }
+      ]
+    },
+    {
+      "id": "Q022",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "records_du_monde",
+      "questionNumber": 64,
+      "arrayIndex": 63,
+      "question": "Quel est le plus grand aquarium du monde ?",
+      "answers": [
+        "Chimelong Ocean Kingdom (Chine)",
+        "Georgia Aquarium (USA)",
+        "S.E.A. Aquarium (Singapour)",
+        "Aquarium de Dubai"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Chimelong Ocean Kingdom (Chine)",
+      "location": {
+        "file": "backend/data/records_du_monde.json",
+        "index": 63,
+        "line": 65
+      },
+      "questionHash": "0dff23fb6f6b3ec34954142a586987a84ec5064a9c295fcf5cf5723fcba45aa3",
+      "issue": "Chimelong Ocean Kingdom a été dépassé par Chimelong Spaceship pour le plus grand aquarium selon Guinness depuis 2023.",
+      "correction": "Remplacer par Chimelong Spaceship et préciser le classement Guinness, avec année de référence.",
+      "sources": [
+        {
+          "title": "Guinness — plus grand aquarium, Chimelong Spaceship",
+          "url": "https://www.guinnessworldrecords.com/world-records/69445-largest-aquarium"
+        }
+      ]
+    },
+    {
+      "id": "Q023",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "records_du_monde",
+      "questionNumber": 86,
+      "arrayIndex": 85,
+      "question": "Quel est le record du monde du lancer de disque masculin ?",
+      "answers": [
+        "74,08 m (Mykolas Alekna)",
+        "73,88 m",
+        "71 m",
+        "76 m"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "74,08 m (Mykolas Alekna)",
+      "location": {
+        "file": "backend/data/records_du_monde.json",
+        "index": 85,
+        "line": 87
+      },
+      "questionHash": "d4a3f00665d6363871a6619ef3c56f544e759e54472654b052a5809049e41926",
+      "issue": "La combinaison Mykolas Alekna / 74,08 m est erronée : World Athletics a ratifié son record de 75,56 m établi en avril 2025.",
+      "correction": "Dater le record : performance ratifiée de Mykolas Alekna à Ramona en avril 2025 → 75,56 m.",
+      "sources": [
+        {
+          "title": "World Athletics — record ratifié de 75,56 m pour Alekna",
+          "url": "https://worldathletics.org/news/press-releases/ratified-world-records-alekna-chebet-duplantis"
+        }
+      ]
+    },
+    {
+      "id": "Q024",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "records_du_monde",
+      "questionNumber": 89,
+      "arrayIndex": 88,
+      "question": "Quel est le record du monde de Rubik's Cube (3x3) ?",
+      "answers": [
+        "3,13 secondes (Max Park)",
+        "4,22 secondes",
+        "5,55 secondes",
+        "2,90 secondes"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "3,13 secondes (Max Park)",
+      "location": {
+        "file": "backend/data/records_du_monde.json",
+        "index": 88,
+        "line": 90
+      },
+      "questionHash": "0ddc60999d479f4e3c15fbe0640dc6e1768654d60c57628eef34fd0f37676f4e",
+      "issue": "Le single 3×3 de Max Park en 3,13 s est un ancien record. La WCA liste notamment le record de Teodor Zajder en 2,76 s en 2026.",
+      "correction": "Préciser résolution unique et dater la performance demandée ; soit Max Park en 2023 → 3,13 s, soit Zajder à Gdańsk en 2026 → 2,76 s.",
+      "sources": [
+        {
+          "title": "WCA — Teodor Zajder, record single de 2,76 s en 2026",
+          "url": "https://www.worldcubeassociation.org/persons/2021ZAJD03"
+        }
+      ]
+    },
+    {
+      "id": "Q025",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "natation_olympique",
+      "questionNumber": 40,
+      "arrayIndex": 39,
+      "question": "De quel pays est originaire Cesar Cielo, recordman du 100m nage libre ?",
+      "answers": [
+        "Etats-Unis",
+        "Italie",
+        "Bresil",
+        "Argentine"
+      ],
+      "correctIndex": 2,
+      "markedAnswer": "Bresil",
+      "location": {
+        "file": "backend/data/natation_olympique.json",
+        "index": 39,
+        "line": 393
+      },
+      "questionHash": "1d2106984d5fbce11d18b233ef5a9b85500f29fa56f494d43006c92eaa16b277",
+      "issue": "Brésil est bien la nationalité de César Cielo, mais l’apposition recordman du 100 m nage libre est périmée : Pan Zhanle a établi 46,40 s en 2024.",
+      "correction": "Retirer recordman ou préciser ancien recordman. Conserver Brésil comme bonne réponse à la question de nationalité.",
+      "sources": [
+        {
+          "title": "World Aquatics — Pan Zhanle, 46,40 s en 2024",
+          "url": "https://www.worldaquatics.com/news/4072542/pan-"
+        }
+      ]
+    },
+    {
+      "id": "Q026",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "sakamoto_days",
+      "questionNumber": 11,
+      "arrayIndex": 10,
+      "question": "En quelle année le manga a-t-il commencé ?",
+      "answers": [
+        "2022",
+        "2019",
+        "2020",
+        "2021"
+      ],
+      "correctIndex": 3,
+      "markedAnswer": "2021",
+      "location": {
+        "file": "backend/data/sakamoto_days.json",
+        "index": 10,
+        "line": 103
+      },
+      "questionHash": "47d18eed34a42cce44fea040c8af0bd2e0447101bc73e9511720b4202e07821a",
+      "issue": "Le début de la série est marqué 2021. La prépublication de Sakamoto Days a débuté en novembre 2020 ; 2021 correspond au premier volume japonais.",
+      "correction": "Demander explicitement l’année de début de prépublication : 2020.",
+      "sources": [
+        {
+          "title": "VIZ — annonce de la nouvelle série Sakamoto Days en novembre 2020",
+          "url": "https://www.viz.com/blog/posts/shonen-jump-new-chapters-11-20-2020"
+        }
+      ]
+    },
+    {
+      "id": "Q027",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "mathematiques_logique",
+      "questionNumber": 66,
+      "arrayIndex": 65,
+      "question": "Quel Français a reçu la médaille Fields en 2010 pour ses travaux sur les équations de Navier-Stokes ?",
+      "answers": [
+        "Cédric Villani",
+        "Laurent Lafforgue",
+        "Wendelin Werner",
+        "Jean-Pierre Serre"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Cédric Villani",
+      "location": {
+        "file": "backend/data/mathematiques_logique.json",
+        "index": 65,
+        "line": 393
+      },
+      "questionHash": "2af61b1b3e48a9857834f696b8cae4f7840b55fefa52158a51e19961ca06b1eb",
+      "issue": "La citation officielle de la médaille Fields de Cédric Villani en 2010 porte sur l’amortissement de Landau non linéaire et l’équation de Boltzmann, pas sur Navier–Stokes.",
+      "correction": "Remplacer le motif de récompense dans l’énoncé par les travaux sur Boltzmann / l’amortissement de Landau.",
+      "sources": [
+        {
+          "title": "IMU — citation officielle de la médaille Fields 2010",
+          "url": "https://www.mathunion.org/fileadmin/IMU/Publications/Bulletins/2007_2010/59_October2010.pdf"
+        }
+      ]
+    },
+    {
+      "id": "Q028",
+      "type": "factuel",
+      "priority": "haute",
+      "category": "mathematiques_logique",
+      "questionNumber": 80,
+      "arrayIndex": 79,
+      "question": "Quel mathématicien persan a donné son nom à l'algèbre ?",
+      "answers": [
+        "Al-Khwarizmi",
+        "Omar Khayyam",
+        "Al-Biruni",
+        "Avicenne"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Al-Khwarizmi",
+      "location": {
+        "file": "backend/data/mathematiques_logique.json",
+        "index": 79,
+        "line": 477
+      },
+      "questionHash": "882bc5e6f402cd252d8d73c3f8a2cd876fe7bc4af13a816576d96689218fc391",
+      "issue": "Le nom d’Al-Khwarizmi est à l’origine du mot algorithme. Algèbre vient du titre al-jabr de son traité, pas de son nom.",
+      "correction": "Remplacer algèbre par algorithme dans l’énoncé pour conserver Al-Khwarizmi comme réponse.",
+      "sources": [
+        {
+          "title": "Université de St Andrews — origine des mots algorithme et algèbre",
+          "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/"
+        }
+      ]
+    },
+    {
+      "id": "Q029",
+      "type": "ambiguite",
+      "priority": "haute",
+      "category": "football_feminin",
+      "questionNumber": 77,
+      "arrayIndex": 76,
+      "question": "Combien de spectateurs ont assisté au match du Barça Femení au Camp Nou en 2022 (record) ?",
+      "answers": [
+        "91 553",
+        "85 000",
+        "75 000",
+        "99 000"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "91 553",
+      "location": {
+        "file": "backend/data/football_feminin.json",
+        "index": 76,
+        "line": 459
+      },
+      "questionHash": "4b1dc73f589df41fc0004420a5d61e96eec8dbd4fdd390ae2521582c489b0522",
+      "issue": "Deux records différents ont été établis au Camp Nou en 2022 : 91 553 contre le Real en mars, puis 91 648 contre Wolfsburg en avril. Le match n’est pas identifié.",
+      "correction": "Préciser Barça–Real Madrid du 30 mars 2022 pour garder 91 553 ; ou Barça–Wolfsburg du 22 avril 2022 et répondre 91 648.",
+      "sources": [
+        {
+          "title": "FC Barcelone — 91 648 spectateurs le 22 avril 2022",
+          "url": "https://www.fcbarcelona.com/en/football/womens-football/news/2585994/camp-nou-does-it-again-and-beats-the-world-record-for-attendance-with-91648-fans"
+        }
+      ]
+    },
+    {
+      "id": "Q030",
+      "type": "ambiguite",
+      "priority": "haute",
+      "category": "football_feminin",
+      "questionNumber": 90,
+      "arrayIndex": 89,
+      "question": "Quelle joueuse australienne a été nommée Young Player of the Year FIFA en 2023 ?",
+      "answers": [
+        "Mary Fowler",
+        "Sam Kerr",
+        "Caitlin Foord",
+        "Ellie Carpenter"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Mary Fowler",
+      "location": {
+        "file": "backend/data/football_feminin.json",
+        "index": 89,
+        "line": 537
+      },
+      "questionHash": "ead22eedf7721e64c074e235f5480155be4ff37abe44031d7c313989a63f8289",
+      "issue": "Le libellé Young Player of the Year FIFA 2023 ne désigne pas clairement une récompense officielle. Si la question vise le trophée de meilleure jeune du Mondial, il revient à Salma Paralluelo, pas à Mary Fowler.",
+      "correction": "Nommer précisément la récompense. Pour le Mondial 2023, demander la meilleure jeune joueuse, enlever australienne et ajouter Salma Paralluelo aux options.",
+      "sources": [
+        {
+          "title": "FIFA — bilan officiel du Mondial féminin 2023",
+          "url": "https://inside.fifa.com/official-documents/annual-report/2023/2023-at-a-glance/fifa-womens-world-cup-summary"
+        }
+      ]
+    },
+    {
+      "id": "Q031",
+      "type": "ambiguite",
+      "priority": "haute",
+      "category": "football_feminin",
+      "questionNumber": 91,
+      "arrayIndex": 90,
+      "question": "Quel pays a remporté la Coupe du Monde féminine U-20 le plus souvent ?",
+      "answers": [
+        "Allemagne",
+        "États-Unis",
+        "Corée du Nord",
+        "Brésil"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Allemagne",
+      "location": {
+        "file": "backend/data/football_feminin.json",
+        "index": 90,
+        "line": 543
+      },
+      "questionHash": "686d748685d63f02d8288942070f4d4adf5ecab2a0b9c2e71885948985cc7e0f",
+      "issue": "L’Allemagne n’est pas seule en tête : Allemagne, États-Unis et Corée du Nord ont trois titres U20 féminins chacun. Ces trois pays sont tous proposés, mais seul Allemagne est accepté.",
+      "correction": "Construire une question datée avec une seule réponse possible ; par exemple demander quels trois pays partagent le record après Pologne 2026 dans une réponse groupée.",
+      "sources": [
+        {
+          "title": "FIFA — historique des finales U20 jusqu’à Pologne 2026",
+          "url": "https://www.fifa.com/en/tournaments/womens/u20womensworldcup/poland-2026/articles/look-back-all-finals-u20-women-world-cup"
+        }
+      ]
+    },
+    {
+      "id": "Q032",
+      "type": "ambiguite",
+      "priority": "haute",
+      "category": "records_du_monde",
+      "questionNumber": 82,
+      "arrayIndex": 81,
+      "question": "Quel sportif a remporté le plus de Tours de France ?",
+      "answers": [
+        "Il n'y a plus de détenteur officiel après les déchéances",
+        "Lance Armstrong (déchu)",
+        "Bernard Hinault",
+        "Eddy Merckx"
+      ],
+      "correctIndex": 3,
+      "markedAnswer": "Eddy Merckx",
+      "location": {
+        "file": "backend/data/records_du_monde.json",
+        "index": 81,
+        "line": 83
+      },
+      "questionHash": "b521e2223559b39fd642a75552cc35c69b15ceb583521973636f27485b2eefc5",
+      "issue": "Eddy Merckx et Bernard Hinault, tous deux proposés, ont chacun cinq Tours de France. Accepter uniquement Merckx pénalise une réponse correcte.",
+      "correction": "Reformuler sur un critère unique, par exemple quel Belge a remporté cinq Tours de France, ou proposer un choix regroupant les détenteurs du record.",
+      "sources": [
+        {
+          "title": "Guinness — détenteurs du record de victoires au Tour de France",
+          "url": "https://www.guinnessworldrecords.com/world-records/64397-most-tour-de-france-wins"
+        }
+      ]
+    },
+    {
+      "id": "Q033",
+      "type": "precision",
+      "priority": "basse",
+      "category": "mathematiques_logique",
+      "questionNumber": 18,
+      "arrayIndex": 17,
+      "question": "Comment s'appelle la droite qui coupe un cercle en deux parties égales ?",
+      "answers": [
+        "Le diamètre",
+        "La corde",
+        "La sécante",
+        "La tangente"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Le diamètre",
+      "location": {
+        "file": "backend/data/mathematiques_logique.json",
+        "index": 17,
+        "line": 105
+      },
+      "questionHash": "910b1406bb93730fcaf6570c334f4ad8d4e1f6435679de84f454915433c36892",
+      "issue": "Un diamètre est un segment, tandis qu’une droite passant par le centre est un axe de symétrie du cercle. Le vocabulaire de l’énoncé est imprécis.",
+      "correction": "Demander le nom d’une corde passant par le centre : le diamètre.",
+      "sources": [
+        {
+          "title": "OpenStax — définition du diamètre comme segment passant par le centre",
+          "url": "https://openstax.org/books/prealgebra-2e/pages/5-key-terms"
+        }
+      ]
+    },
+    {
+      "id": "Q034",
+      "type": "precision",
+      "priority": "basse",
+      "category": "mathematiques_logique",
+      "questionNumber": 73,
+      "arrayIndex": 72,
+      "question": "Comment appelle-t-on la plus longue droite reliant deux points d'un cercle ?",
+      "answers": [
+        "Le diamètre",
+        "Le rayon",
+        "La corde",
+        "La sécante"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "Le diamètre",
+      "location": {
+        "file": "backend/data/mathematiques_logique.json",
+        "index": 72,
+        "line": 435
+      },
+      "questionHash": "3ab8d816cd5bac322d8eba503e21887be5bef995e0ad25dbfa3896b6f58fbdf9",
+      "issue": "La formulation plus longue droite est impropre : une droite est illimitée. Le diamètre est la plus longue corde d’un cercle.",
+      "correction": "Remplacer droite par corde.",
+      "sources": [
+        {
+          "title": "OpenStax — définition du diamètre comme segment passant par le centre",
+          "url": "https://openstax.org/books/prealgebra-2e/pages/5-key-terms"
+        }
+      ]
+    },
+    {
+      "id": "Q035",
+      "type": "precision",
+      "priority": "basse",
+      "category": "football_feminin",
+      "questionNumber": 69,
+      "arrayIndex": 68,
+      "question": "Combien de titres de champion de France féminin l'OL a-t-il remportés consécutivement entre 2007 et 2021 ?",
+      "answers": [
+        "14",
+        "12",
+        "10",
+        "16"
+      ],
+      "correctIndex": 0,
+      "markedAnswer": "14",
+      "location": {
+        "file": "backend/data/football_feminin.json",
+        "index": 68,
+        "line": 411
+      },
+      "questionHash": "134a9e6bb5eda785c46edf8af7de6d3b3d82155fcc82468ea765a9d4b94c4a5c",
+      "issue": "Le nombre de titres consécutifs, 14, est correct. La période gagnerait à se terminer explicitement en 2020 plutôt qu’en 2021, année du titre du PSG.",
+      "correction": "Préciser de 2007 à 2020 inclus, ou les saisons 2006–2007 à 2019–2020.",
+      "sources": [
+        {
+          "title": "FFF — palmarès annuel du championnat de France féminin",
+          "url": "https://www.fff.fr/263-palmares-d1-feminine.html"
+        }
+      ]
+    },
+    {
+      "id": "Q036",
+      "type": "doublon_reponses",
+      "priority": "moyenne",
+      "category": "plk",
+      "questionNumber": 1,
+      "arrayIndex": 0,
+      "question": "Quel est le vrai nom de PLK ?",
+      "answers": [
+        "Mathieu music",
+        "Mathieu Music",
+        "Mathieu Pruski",
+        "Maxime Pruski"
+      ],
+      "correctIndex": 2,
+      "markedAnswer": "Mathieu Pruski",
+      "location": {
+        "file": "backend/data/plk.json",
+        "index": 0,
+        "line": 2
+      },
+      "questionHash": "16f79f95c35f32e2894168e661c14533384a3602f1fed76888be0b05048ac8f3",
+      "issue": "Les options Mathieu music et Mathieu Music sont la même réponse à la casse près. Le validateur existant le signale.",
+      "correction": "Remplacer l’un des deux distracteurs par une proposition distincte ; Mathieu Pruski reste la réponse marquée.",
+      "sources": []
+    },
+    {
+      "id": "Q037",
+      "type": "doublon_reponses",
+      "priority": "moyenne",
+      "category": "mma_ufc",
+      "questionNumber": 109,
+      "arrayIndex": 108,
+      "question": "Quel combattant a vaincu Alex Pereira à l'UFC 300 ?",
+      "answers": [
+        "Jamahal Hill",
+        "Jiri Prochazka",
+        "Jiří Procházka",
+        "Personne, il a gagné"
+      ],
+      "correctIndex": 3,
+      "markedAnswer": "Personne, il a gagné",
+      "location": {
+        "file": "backend/data/mma_ufc.json",
+        "index": 108,
+        "line": 1089
+      },
+      "questionHash": "dd85dd632222159e67bb331f91cca14c72b314757ddcf2662e1fb70dd4254a14",
+      "issue": "Jiri Prochazka et Jiří Procházka sont le même combattant ; les quatre options ne sont donc pas distinctes.",
+      "correction": "Remplacer un des deux distracteurs. La réponse marquée Personne, il a gagné ne change pas.",
+      "sources": []
+    },
+    {
+      "id": "Q038",
+      "type": "doublon_question",
+      "priority": "moyenne",
+      "category": "fc_barcelone",
+      "questionNumber": 102,
+      "arrayIndex": 101,
+      "question": "En quelle année le FC Barcelone a-t-il été fondé ?",
+      "answers": [
+        "1897",
+        "1899",
+        "1902",
+        "1905"
+      ],
+      "correctIndex": 1,
+      "markedAnswer": "1899",
+      "location": {
+        "file": "backend/data/fc_barcelone.json",
+        "index": 101,
+        "line": 1024
+      },
+      "questionHash": "f8cce833a3512a0334b548eac4bc52b56b54cee4e349523ed2d03b929c4720af",
+      "issue": "Question répétée dans le même quiz : même énoncé que la question nº 1.",
+      "correction": "Conserver une version et remplacer ou retirer celle-ci ; ne pas modifier automatiquement les index sans recontrôler les fichiers.",
+      "sources": []
+    },
+    {
+      "id": "Q039",
+      "type": "doublon_question",
+      "priority": "moyenne",
+      "category": "fc_barcelone",
+      "questionNumber": 140,
+      "arrayIndex": 139,
+      "question": "En quelle année le Camp Nou a-t-il été inauguré ?",
+      "answers": [
+        "1951",
+        "1954",
+        "1957",
+        "1960"
+      ],
+      "correctIndex": 2,
+      "markedAnswer": "1957",
+      "location": {
+        "file": "backend/data/fc_barcelone.json",
+        "index": 139,
+        "line": 1442
+      },
+      "questionHash": "29de6527a1cba85b5a1f748668f81100bbb1eb004c67559590d228230aacff0e",
+      "issue": "Question répétée dans le même quiz : même énoncé que la question nº 51.",
+      "correction": "Conserver une version et remplacer ou retirer celle-ci ; ne pas modifier automatiquement les index sans recontrôler les fichiers.",
+      "sources": []
+    },
+    {
+      "id": "Q040",
+      "type": "doublon_question",
+      "priority": "moyenne",
+      "category": "la_casa_de_papel",
+      "questionNumber": 133,
+      "arrayIndex": 132,
+      "question": "Comment Tokyo meurt-elle dans la partie 5 ?",
+      "answers": [
+        "D'une balle de Gandía",
+        "En activant des grenades sur elle",
+        "Empoisonnée",
+        "Elle ne meurt pas"
+      ],
+      "correctIndex": 1,
+      "markedAnswer": "En activant des grenades sur elle",
+      "location": {
+        "file": "backend/data/la_casa_de_papel.json",
+        "index": 132,
+        "line": 1405
+      },
+      "questionHash": "575f57e293a86aded50a531cd78c779d674c610b35ff8f413f09038f2d70c09d",
+      "issue": "Question répétée dans le même quiz : même énoncé que la question nº 84.",
+      "correction": "Conserver une version et remplacer ou retirer celle-ci ; ne pas modifier automatiquement les index sans recontrôler les fichiers.",
+      "sources": []
+    }
+  ],
+  "unverifiedSignals": {
+    "timeSensitiveCandidates": 45,
+    "subjectiveWordingCandidates": 419,
+    "answerNormalizationCandidates": 17,
+    "crossCategoryQuestionConflicts": 20
+  },
+  "notes": [
+    "Les 17 alertes de normalisation des réponses ne sont pas 17 erreurs : seuls PLK et UFC sont retenus. Les signes mathématiques, monnaies, emoji et +100/-100 restent distincts.",
+    "Les 20 groupes inter-quiz avec réponses différentes ne sont pas confirmés comme contradictions : contexte de la catégorie, noms courts/longs et descriptions équivalentes expliquent la majorité.",
+    "Les 45 formulations temporelles et 419 formulations à analyser sont des pistes, pas des erreurs confirmées.",
+    "La position des bonnes réponses dans les fichiers n’est pas un défaut de gameplay : shuffleAnswers mélange les réponses à l’envoi.",
+    "Aucune question ni réponse de production n’a été modifiée."
+  ],
+  "questionHashFormat": {
+    "algorithm": "SHA-256",
+    "encoding": "UTF-8",
+    "payload": "JSON.stringify([question.text, question.answers, question.correct])",
+    "output": "lowercase hexadecimal"
+  }
+}
