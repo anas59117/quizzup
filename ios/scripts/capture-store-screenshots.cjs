@@ -21,8 +21,9 @@ for(const profile of profiles){
  assert.ok(type,`Simulator type not installed: ${profile.type}`);
  const udid=run('xcrun',['simctl','create',`QuizzUp-${profile.key}`,type.identifier,runtime.identifier]);
  try{
+  console.log(`Booting ${profile.key} on ${runtime.identifier}; first-boot migration may take several minutes.`);
   run('xcrun',['simctl','boot',udid]);
-  run('xcrun',['simctl','bootstatus',udid,'-b']);
+  run('xcrun',['simctl','bootstatus',udid,'-b'],600000);
   run('xcrun',['simctl','status_bar',udid,'override','--time','09:41','--dataNetwork','wifi','--wifiMode','active','--wifiBars','3','--batteryState','charged','--batteryLevel','100']);
   run('xcrun',['simctl','install',udid,app]);
   const data=run('xcrun',['simctl','get_app_container',udid,'com.quizzup.app','data']);
