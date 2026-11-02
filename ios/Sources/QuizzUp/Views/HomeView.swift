@@ -80,7 +80,6 @@ struct HomeView: View {
                 }
                 .disabled(game.isStarting)
                 .opacity(game.isStarting ? 0.6 : 1)
-            }
                 // Account deletion — App Store Guideline 5.1.1(v)
                 Button {
                     showDeleteConfirm = true

@@ -1,0 +1,106 @@
+import Foundation
+
+// Capture support is enabled only in a separately compiled simulator build.
+// The Release application does not parse capture arguments or contain fixtures.
+enum StoreCaptureConfiguration {
+    static var enabled: Bool {
+        #if DEBUG && STORE_CAPTURE
+        return options != nil
+        #else
+        return false
+        #endif
+    }
+
+    #if DEBUG && STORE_CAPTURE
+    struct Options {
+        let screen: String
+        let language: String
+    }
+
+    static let options: Options? = {
+        let args = ProcessInfo.processInfo.arguments
+        guard let index = args.firstIndex(of: "--store-capture-screen") else { return nil }
+        guard index + 1 < args.count,
+              ["home", "question", "result"].contains(args[index + 1]),
+              let languageIndex = args.firstIndex(of: "--store-capture-language"),
+              languageIndex + 1 < args.count,
+              ["fr", "en"].contains(args[languageIndex + 1]) else {
+            preconditionFailure("Invalid store capture arguments")
+        }
+        return Options(screen: args[index + 1], language: args[languageIndex + 1])
+    }()
+
+    @MainActor
+    static func prepare(_ game: GameSocket) {
+        guard let options else { return }
+        game.disconnect()
+        game.lang = options.language
+        game.name = "Alex"
+        game.avatar = "🦊"
+        game.myId = "store-demo-alex"
+        game.soloMode = false
+        // Original /categories order and labels: UI language does not translate
+        // the current server question bank or category labels.
+        game.categories = [
+            Category(key: "movies", label: "Cinéma", icon: "🎬", count: 10),
+            Category(key: "music", label: "Musique", icon: "🎵", count: 10),
+            Category(key: "sports", label: "Sports", icon: "⚽", count: 10),
+            Category(key: "geography", label: "Géographie", icon: "🌍", count: 11),
+            Category(key: "gaming", label: "Gaming", icon: "🎮", count: 10),
+            Category(key: "science", label: "Science", icon: "🧬", count: 10),
+            Category(key: "rap_fr", label: "Rap Français", icon: "🎤", count: 150),
+            Category(key: "foot_fr", label: "Foot Français", icon: "⚽", count: 150),
+            Category(key: "premier_league", label: "Premier League", icon: "🦁", count: 150),
+            Category(key: "la_liga", label: "La Liga", icon: "🐂", count: 100),
+            Category(key: "bundesliga", label: "Bundesliga", icon: "🦅", count: 100),
+            Category(key: "serie_a", label: "Serie A", icon: "👢", count: 100),
+            Category(key: "ligue_1", label: "Ligue 1", icon: "🐓", count: 105),
+            Category(key: "bollywood", label: "Bollywood", icon: "🇮🇳", count: 13),
+            Category(key: "actors", label: "Acteurs", icon: "⭐", count: 201)
+        ]
+        game.opponents = [Opponent(id: "store-demo-camille", name: "Camille", avatar: "🐼", score: 96)]
+        game.score = options.screen == "result" ? 118 : 34
+        game.totalRounds = 6
+        game.timeLeft = 8
+        // Verbatim existing science question and options, in both UI locales.
+        game.question = Question(
+            round: 3, totalRounds: 6,
+            question: "Combien de planètes compte le système solaire ?",
+            category: "Science", icon: "🧬", answers: ["7", "8", "9", "10"],
+            timeLimit: 10, isBonus: false, image: nil, credit: nil
+        )
+        game.result = GameEnd(
+            finalScore: 118, won: true, tie: false,
+            others: [OpponentFinal(id: "store-demo-camille", name: "Camille", avatar: "🐼", score: 96)],
+            leaderboard: [
+                LeaderboardRow(id: "store-demo-alex", name: "Alex", avatar: "🦊", score: 118),
+                LeaderboardRow(id: "store-demo-camille", name: "Camille", avatar: "🐼", score: 96)
+            ],
+            reason: "complete", coins: 50, xp: 258,
+            xpBreakdown: XpBreakdown(matchScore: 118, finishBonus: 40, winBonus: 100, xpTotal: 258),
+            stats: PlayerStats(games: 27, wins: 16, streak: 2, xp: 1620, level: 4, xpIntoLevel: 420, xpForLevel: 800)
+        )
+        switch options.screen {
+        case "question": game.stage = .question
+        case "result": game.stage = .finished
+        default: game.stage = .home
+        }
+    }
+
+    @MainActor
+    static func markReady() {
+        guard let options else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            let receipt: [String: String] = ["screen": options.screen, "language": options.language]
+            do {
+                try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+                let data = try JSONSerialization.data(withJSONObject: receipt)
+                try data.write(to: directory.appendingPathComponent("store-capture-ready.json"), options: .atomic)
+            } catch {
+                preconditionFailure("Cannot write store capture readiness receipt")
+            }
+        }
+    }
+    #endif
+}

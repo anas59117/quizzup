@@ -71,6 +71,7 @@ final class GameSocket: ObservableObject {
     // MARK: - Connection
 
     private func ensureConnected() {
+        guard !StoreCaptureConfiguration.enabled else { return }
         guard task == nil else { return }
         var comps = URLComponents()
         comps.scheme = "wss"
@@ -88,6 +89,7 @@ final class GameSocket: ObservableObject {
     /// `payload` — used for join/solo requests so identify always rides on
     /// a fresh token instead of one that may have expired since sign-in.
     private func connect(_ payload: [String: Any]) {
+        guard !StoreCaptureConfiguration.enabled else { return }
         guard task == nil, let authManager else {
             ensureConnected()
             send(payload)
@@ -111,6 +113,7 @@ final class GameSocket: ObservableObject {
     }
 
     private func send(_ payload: [String: Any]) {
+        guard !StoreCaptureConfiguration.enabled else { return }
         guard let task, let data = try? JSONSerialization.data(withJSONObject: payload) else { return }
         task.send(.data(data)) { _ in }
     }
@@ -211,6 +214,7 @@ final class GameSocket: ObservableObject {
     // MARK: - Categories (REST, same data the web app's /categories exposes)
 
     func loadCategories() {
+        guard !StoreCaptureConfiguration.enabled else { return }
         var comps = URLComponents()
         comps.scheme = "https"
         comps.host = Self.backendHost
@@ -261,6 +265,7 @@ final class GameSocket: ObservableObject {
     // MARK: - Report / Block (Guideline 1.2)
 
     func reportUser(targetId: String, targetName: String, reason: String = "offensive") {
+        guard !StoreCaptureConfiguration.enabled else { return }
         guard let idToken else { return }
         var comps = URLComponents()
         comps.scheme = "https"
@@ -278,6 +283,7 @@ final class GameSocket: ObservableObject {
     }
 
     func blockUser(targetId: String) {
+        guard !StoreCaptureConfiguration.enabled else { return }
         guard let idToken else { return }
         var comps = URLComponents()
         comps.scheme = "https"

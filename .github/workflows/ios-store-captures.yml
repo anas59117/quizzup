@@ -1,0 +1,82 @@
+name: QuizzUp App Store captures
+
+on:
+  push:
+    branches: ['codex/ios-store-assets-*']
+    paths:
+      - 'ios/Sources/**'
+      - 'ios/scripts/**'
+      - 'ios/project.yml'
+      - '.github/workflows/ios-store-captures.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quizzup-store-captures-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  screenshots:
+    runs-on: macos-26
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: ios
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Check image validators
+        run: node --test scripts/store-assets.test.cjs
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Generate simulator project
+        run: xcodegen generate
+      - name: Compile dedicated capture build without credentials
+        run: |
+          xcodebuild build \
+            -project QuizzUp.xcodeproj -scheme QuizzUp \
+            -destination 'generic/platform=iOS Simulator' \
+            -configuration Debug -derivedDataPath "$RUNNER_TEMP/ios-capture-build" \
+            CODE_SIGNING_ALLOWED=NO \
+            'SWIFT_ACTIVE_COMPILATION_CONDITIONS=DEBUG STORE_CAPTURE' \
+            > "$RUNNER_TEMP/ios-capture-build.log" 2>&1 || {
+              tail -100 "$RUNNER_TEMP/ios-capture-build.log"
+              exit 1
+            }
+      - name: Compile Release and verify capture arguments are absent
+        run: |
+          xcodebuild build \
+            -project QuizzUp.xcodeproj -scheme QuizzUp \
+            -destination 'generic/platform=iOS Simulator' \
+            -configuration Release -derivedDataPath "$RUNNER_TEMP/ios-capture-build" \
+            CODE_SIGNING_ALLOWED=NO \
+            > "$RUNNER_TEMP/ios-release-build.log" 2>&1 || {
+              tail -100 "$RUNNER_TEMP/ios-release-build.log"
+              exit 1
+            }
+          node -e 'const fs=require("fs");const p=process.env.RUNNER_TEMP+"/ios-capture-build/Build/Products/Release-iphonesimulator/QuizzUp.app/QuizzUp";if(fs.readFileSync(p).includes(Buffer.from("--store-capture-screen")))throw Error("Capture mode leaked into Release");'
+      - name: Capture three screens in French and English on native devices
+        run: |
+          node scripts/capture-store-screenshots.cjs \
+            "$RUNNER_TEMP/ios-capture-build/Build/Products/Debug-iphonesimulator/QuizzUp.app" \
+            "$GITHUB_WORKSPACE/ios/AppStoreMetadata/screenshots"
+      - name: Upload screenshots ready for App Store Connect
+        uses: actions/upload-artifact@v4
+        with:
+          name: quizzup-app-store-screenshots-${{ github.sha }}
+          path: ios/AppStoreMetadata/screenshots/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Upload compiler logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: quizzup-ios-capture-diagnostics-${{ github.sha }}
+          path: ${{ runner.temp }}/ios-*-build.log
+          if-no-files-found: ignore
+          retention-days: 7

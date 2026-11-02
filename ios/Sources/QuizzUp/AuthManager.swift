@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 import UIKit
 import CryptoKit
 import AuthenticationServices
@@ -18,6 +19,7 @@ final class AuthManager: NSObject, ObservableObject {
 
     override init() {
         super.init()
+        guard !StoreCaptureConfiguration.enabled else { return }
         if FirebaseApp.app() == nil { FirebaseApp.configure() }
         user = Auth.auth().currentUser
     }
@@ -30,6 +32,7 @@ final class AuthManager: NSObject, ObservableObject {
     }
 
     func signOut() {
+        guard !StoreCaptureConfiguration.enabled else { return }
         try? Auth.auth().signOut()
         try? GIDSignIn.sharedInstance.signOut()
         user = nil
@@ -103,6 +106,7 @@ final class AuthManager: NSObject, ObservableObject {
     private var currentAppleNonce: String?
 
     func signInWithApple() {
+        guard !StoreCaptureConfiguration.enabled else { return }
         let nonce = Self.randomNonceString()
         currentAppleNonce = nonce
         let request = ASAuthorizationAppleIDProvider().createRequest()
@@ -120,6 +124,7 @@ final class AuthManager: NSObject, ObservableObject {
     // MARK: - Google Sign-In
 
     func signInWithGoogle() {
+        guard !StoreCaptureConfiguration.enabled else { return }
         guard let clientID = FirebaseApp.app()?.options.clientID else {
             authError = "Missing GoogleService-Info.plist"
             return
