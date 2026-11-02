@@ -1,24 +1,20 @@
 App Review Notes — QuizzUp
 
-DEMO ACCOUNT
-A Firebase demo account is available for testing:
-- Email: review@quizzup.app
-- Password: AppReview2026!
-
-Alternatively, sign in with Apple or Google (both are supported).
+SIGN-IN
+Sign-in is required. Use Continue with Apple or Continue with Google. The app does not offer an email/password sign-in form. Review access through a working supported provider must be verified before submission.
 
 TESTING THE APP
-1. Sign in using the demo account or your Apple/Google credentials.
+1. Sign in using Continue with Apple or Continue with Google.
 2. Choose a username and tap "Continue".
 3. Tap "Quick Play" to find a real-time opponent, or toggle "Solo" to play alone.
 4. During a match, you can tap the ⋯ icon next to an opponent's name to report or block them.
 5. After the match, the results screen shows scores and XP earned.
 
 MULTIPLAYER NOTE
-Real-time 1v1 requires two connected players. If no opponent is found within 30 seconds, the match times out. For reliable testing, use Solo mode or coordinate two devices.
+Real-time 1v1 requires two connected players. For reliable testing, use Solo mode or coordinate two devices.
 
 NETWORK
 The app connects to wss://quizzup-production.up.railway.app/ws for real-time gameplay and HTTPS to the same host for REST endpoints (categories, auth, reports).
 
 PRIVACY
-The app collects only the minimum data needed: Firebase Auth UID, display name, and avatar emoji. No tracking, no ads, no third-party analytics. Full privacy policy: https://quizzup-ten.vercel.app/privacy
+Firebase authentication may provide an email address and name in addition to the user ID. A display name, avatar and game history are used for gameplay, scores and progression. No ads or third-party analytics are integrated into the native app. Full privacy policy: https://quizzup-ten.vercel.app/privacy.html
