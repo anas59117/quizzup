@@ -43,7 +43,7 @@ jobs:
             -destination 'generic/platform=iOS Simulator' \
             -configuration Debug -derivedDataPath "$RUNNER_TEMP/ios-capture-build" \
             CODE_SIGNING_ALLOWED=NO \
-            'SWIFT_ACTIVE_COMPILATION_CONDITIONS=DEBUG STORE_CAPTURE' \
+            QUIZZUP_CAPTURE_CONDITION=STORE_CAPTURE \
             > "$RUNNER_TEMP/ios-capture-build.log" 2>&1 || {
               tail -100 "$RUNNER_TEMP/ios-capture-build.log"
               exit 1
