@@ -1348,7 +1348,7 @@
       "Deux",
       "Trois"
     ],
-    "correct": 1,
+    "correct": 2,
     "difficulty": "moyen"
   },
   {
@@ -1392,12 +1392,7 @@
   },
   {
     "text": "Combien de buts Messi a-t-il inscrits avec le PSG en Ligue 1 sur ses deux saisons ?",
-    "answers": [
-      "11",
-      "16",
-      "21",
-      "26"
-    ],
+    "answers": ["11","16","22","26"],
     "correct": 2,
     "difficulty": "moyen"
   },
@@ -1480,14 +1475,14 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Quel joueur détient le record de passes décisives pour Messi en Liga ?",
+    "text": "En 2018, quel joueur a dépassé Dani Alves au nombre de passes décisives pour Messi en Liga ?",
     "answers": [
       "Xavi",
       "Dani Alves",
       "Andrés Iniesta",
       "Luis Suárez"
     ],
-    "correct": 1,
+    "correct": 3,
     "difficulty": "difficile"
   },
   {
@@ -1535,14 +1530,14 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Quel club Messi a-t-il affronté lors de sa dernière apparition avec le Barça en août 2021 ?",
+    "text": "Quel club Messi a-t-il affronté avec le Barça en Liga le 16 mai 2021 ?",
     "answers": [
       "Le Real Madrid",
       "La Real Sociedad",
       "L'Eibar",
       "Le Celta Vigo"
     ],
-    "correct": 2,
+    "correct": 3,
     "difficulty": "difficile"
   },
   {

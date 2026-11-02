@@ -1,5 +1,7 @@
 # Vérification des 195 pistes restantes — 2 novembre 2026
 
+**Mise à jour : les 54 erreurs confirmées actives ont été corrigées.** Voir [le journal de correction](2026-11-02-remaining-question-corrections.md). Les constats ci-dessous décrivent l’état initial de l’audit.
+
 Référence locale : `cac6335c4593aefa64e55ed028eb5096516bf4a3`. **Aucune question modifiée, aucune publication.**
 
 Ce rapport porte sur les 195 pistes du précédent audit, dont 189 questions actives et 6 questions d’un fichier GOT inutilisé. Il ne certifie pas toutes les questions du site.

@@ -1146,14 +1146,14 @@
     "difficulty": "facile"
   },
   {
-    "text": "Quel attaquant français détient le record de buts en équipe de France ?",
+    "text": "Au 2 novembre 2026, quel attaquant détient le record de buts avec l'équipe de France masculine ?",
     "answers": [
       "Michel Platini",
       "Thierry Henry",
       "Olivier Giroud",
       "Kylian Mbappé"
     ],
-    "correct": 2,
+    "correct": 3,
     "difficulty": "facile"
   },
   {
@@ -1432,13 +1432,8 @@
     "difficulty": "moyen"
   },
   {
-    "text": "Quel joueur français était surnommé le 'Président' lors de son passage comme dirigeant de l'OM ?",
-    "answers": [
-      "Basile Boli",
-      "Didier Deschamps",
-      "Marcel Desailly",
-      "Pape Diouf"
-    ],
+    "text": "Quel international français était surnommé « Le Président » ?",
+    "answers": ["Basile Boli","Laurent Blanc","Marcel Desailly","Pape Diouf"],
     "correct": 1,
     "difficulty": "moyen"
   },
@@ -1619,7 +1614,7 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Combien de buts Olivier Giroud a-t-il inscrits en équipe de France au total (record) ?",
+    "text": "Combien de buts Olivier Giroud a-t-il inscrits au total en équipe de France masculine, selon le bilan FFF au 2 novembre 2026 ?",
     "answers": [
       "47",
       "51",
@@ -1630,7 +1625,7 @@
     "difficulty": "difficile"
   },
   {
-    "text": "Quel milieu de terrain français a marqué le premier but contre l'Australie au Mondial 2018 ?",
+    "text": "Quel attaquant français a marqué le premier but contre l'Australie au Mondial 2018 ?",
     "answers": [
       "Paul Pogba",
       "Antoine Griezmann",

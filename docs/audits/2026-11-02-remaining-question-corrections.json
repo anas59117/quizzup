@@ -1,0 +1,2143 @@
+{
+  "date": "2026-11-02",
+  "baseCommit": "48e3449f56ca06e2452dab3b172c1a6e3578e208",
+  "audit": "docs/audits/2026-11-02-remaining-leads-review.json",
+  "counts": {
+    "corrected": 54,
+    "removed": 0,
+    "files": 14,
+    "categories": 494,
+    "questions": 38679
+  },
+  "scope": {
+    "activeConfirmedErrorsCorrected": 54,
+    "remainingActiveConfirmedErrors": 0,
+    "activeEditorialCasesDeferred": 86,
+    "activeUnresolvedCasesDeferred": 31,
+    "inactiveGotErrorsUnchanged": 3
+  },
+  "verification": {
+    "all54OriginalHashesMatched": true,
+    "allMetadataPreserved": true,
+    "allUnassignedQuestionsPreserved": true,
+    "structuralTestsPassed": 13,
+    "frontendBuild": "CI=true npm run build: Compiled successfully",
+    "independentReview": "Sports, manga and music cross-reviewed; traceability and quiz-topic amendments incorporated."
+  },
+  "findings": [
+    {
+      "id": "P001",
+      "category": "ballon_d_or",
+      "file": "backend/data/ballon_d_or.json",
+      "originalIndex": 100,
+      "originalHash": "ec2977c9a31c5f380134e43cd7d14e531e7699392ba4177204b6c6d3a7e60fbf",
+      "action": "corrected",
+      "before": {
+        "text": "Dans quel pays se déroule la cérémonie du Ballon d'Or ?",
+        "answers": [
+          "Suisse",
+          "Angleterre",
+          "France",
+          "Espagne"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Dans quel pays s'est tenue la cérémonie du Ballon d'Or 2026 ?",
+        "answers": [
+          "Suisse",
+          "Angleterre",
+          "France",
+          "Espagne"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "reason": "L'édition du 26 octobre 2026 est située à Londres par France Football ; le pays est daté.",
+      "sources": [
+        {
+          "title": "France Football - Cérémonie 2026 à Londres",
+          "url": "https://ballondor.com/news/posts/the-ballon-dor-ceremony-in-london-on-26-october"
+        }
+      ]
+    },
+    {
+      "id": "P002",
+      "category": "ballon_d_or",
+      "file": "backend/data/ballon_d_or.json",
+      "originalIndex": 110,
+      "originalHash": "7c28409eb56169d4fd53d99cdc435596e432775cdabdd9664d5cf03307511e79",
+      "action": "corrected",
+      "before": {
+        "text": "Quel pays a produit le plus de lauréats du Ballon d'Or masculin ?",
+        "answers": [
+          "Le Brésil",
+          "L'Argentine",
+          "L'Allemagne",
+          "La France"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Au terme de l'édition 2026, quel pays compte le plus de lauréats distincts du Ballon d'Or masculin ?",
+        "answers": [
+          "Le Brésil",
+          "L'Argentine",
+          "L'Allemagne",
+          "La France"
+        ],
+        "correct": 3,
+        "difficulty": "facile"
+      },
+      "reason": "Le palmarès UEFA donne six lauréats français distincts, contre cinq Allemands ; distinction personnes/trophées et date explicites.",
+      "sources": [
+        {
+          "title": "UEFA - Ballon d'Or laureates",
+          "url": "https://www.uefa.com/ballondor/news/0292-1c27056169a7-bc88d1fdba43-1000--ballon-d-or-laureates-who-has-won-football-s-most-prestig/"
+        }
+      ]
+    },
+    {
+      "id": "P008",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 102,
+      "originalHash": "caa8b95f9d9a525e0aa265bf9c564a96f3c9d17c11d1b051419e7696817d979d",
+      "action": "corrected",
+      "before": {
+        "text": "Combien de titres de Bundesliga le Bayern a-t-il remportés au total ?",
+        "answers": [
+          "25",
+          "28",
+          "33",
+          "30"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "À la fin de la saison 2025-2026, combien de titres de Bundesliga le Bayern a-t-il remportés ?",
+        "answers": [
+          "25",
+          "28",
+          "34",
+          "30"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Le relevé officiel de Bundesliga donne 34 titres après 2025-2026 ; le titre allemand de 1932 n'est pas inclus.",
+      "sources": [
+        {
+          "title": "Bundesliga - Records au 26 octobre 2026",
+          "url": "https://www.bundesliga.com/de/bundesliga/news/rekorde-tore-meisterschaft-historie-bestmarken-spieler-meiste-3235"
+        }
+      ]
+    },
+    {
+      "id": "P009",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 120,
+      "originalHash": "80d71efc1d130372debc7ab0b5a41faeb8f3d9ea4f8889aa4a301b96b62bcaf7",
+      "action": "corrected",
+      "before": {
+        "text": "Quel ancien latéral du Bayern a été sélectionneur de l'Allemagne de 2006 à 2014 ?",
+        "answers": [
+          "Lothar Matthäus",
+          "Andreas Brehme",
+          "Jürgen Klinsmann",
+          "Joachim Löw"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel entraîneur a succédé à Ottmar Hitzfeld au Bayern pour la saison 2008-2009 ?",
+        "answers": [
+          "Lothar Matthäus",
+          "Andreas Brehme",
+          "Jürgen Klinsmann",
+          "Joachim Löw"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "L'histoire officielle du Bayern identifie Klinsmann comme successeur de Hitzfeld pour 2008-2009 ; le passé inventé de Löw au Bayern est supprimé et la question reste dans le thème du club.",
+      "sources": [
+        {
+          "title": "FC Bayern - Histoire 2002-2009, Klinsmann succède à Hitzfeld pour 2008-2009",
+          "url": "https://fcbayern.com/de/club/historie/meilensteine-seit-1900/2002-bis-2009-umzug-in-die-neue-arena"
+        },
+        {
+          "title": "DFB - Joachim Low, carrière de joueur",
+          "url": "https://datencenter.dfb.de/en/people/joachim-low/player"
+        },
+        {
+          "title": "DFB - Dossier Euro 2016, carrière complète",
+          "url": "https://www.dfb.de/fileadmin/_dfbdam/105866-FCN-Broschuere_EM_2016_-_final.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P011",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 124,
+      "originalHash": "a24d07a29544bab6a963080188de9b8f22c4ee627d845088dab09fb4c0cc204b",
+      "action": "corrected",
+      "before": {
+        "text": "Quel défenseur brésilien a joué au Bayern de 2007 à 2012 ?",
+        "answers": [
+          "Lúcio",
+          "Dani Alves",
+          "David Luiz",
+          "Marcelo"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel défenseur brésilien a joué au Bayern de 2004 à 2009 ?",
+        "answers": [
+          "Lúcio",
+          "Dani Alves",
+          "David Luiz",
+          "Marcelo"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "Le profil Bayern situe le passage de Lúcio de 2004 à 2009.",
+      "sources": [
+        {
+          "title": "FC Bayern - Joueurs ayant représenté Bayern et Leverkusen",
+          "url": "https://fcbayern.com/de/news/2023/09/diese-elf-spielte-fuer-den-fc-bayern-und-bayer-04-leverkusen"
+        }
+      ]
+    },
+    {
+      "id": "P012",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 125,
+      "originalHash": "85c7d1675b7ecbc20b9bb4e8d2aa51b5a40bd05300fd04074a547271e5bbfd26",
+      "action": "corrected",
+      "before": {
+        "text": "Combien de DFB-Pokal le Bayern a-t-il remportées au total ?",
+        "answers": [
+          "15",
+          "18",
+          "20",
+          "22"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "À l'issue de la finale de 2026, combien de Coupes d'Allemagne (DFB-Pokal) le Bayern a-t-il remportées ?",
+        "answers": [
+          "15",
+          "18",
+          "21",
+          "22"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "La DFB confirme le 21e sacre le 23 mai 2026 ; le total est daté.",
+      "sources": [
+        {
+          "title": "DFB - Bayern win 21st DFB Pokal",
+          "url": "https://www.dfb.de/news/fc-bayern-dethrone-vfb-to-win-21st-dfb-pokal"
+        }
+      ]
+    },
+    {
+      "id": "P015",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 137,
+      "originalHash": "1c2f52be96330fcfc1a1f4b9cbb072aede5785d6fea7c9ac33b104bcb46952bd",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur togolais a joué au Bayern avant d'aller à Dortmund ?",
+        "answers": [
+          "Emmanuel Adebayor",
+          "Sheyi Ojo",
+          "Eric Maxim Choupo-Moting",
+          "Massimilian Beier"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel international camerounais, passé par le Bayern, a rejoint les New York Red Bulls en décembre 2024 ?",
+        "answers": [
+          "Emmanuel Adebayor",
+          "Sheyi Ojo",
+          "Eric Maxim Choupo-Moting",
+          "Massimilian Beier"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "Le profil des Red Bulls confirme le Cameroun, les quatre saisons au Bayern et l'arrivée en décembre 2024 ; le passage non établi à Dortmund est supprimé.",
+      "sources": [
+        {
+          "title": "New York Red Bulls - Eric Maxim Choupo-Moting",
+          "url": "https://www.newyorkredbulls.com/players/eric-maxim-choupo-moting/"
+        }
+      ]
+    },
+    {
+      "id": "P016",
+      "category": "bayern_munich",
+      "file": "backend/data/bayern_munich.json",
+      "originalIndex": 159,
+      "originalHash": "2c4cce901f3d94cbe6f02da4d2bb852b1f10c42379d8a091ff8978c6371676e4",
+      "action": "corrected",
+      "before": {
+        "text": "Quel attaquant sénégalais a joué pour le Bayern de 2023 à 2024 ?",
+        "answers": [
+          "Sadio Mané",
+          "Ismaïla Sarr",
+          "Boulaye Dia",
+          "Habib Diallo"
+        ],
+        "correct": 0,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel attaquant sénégalais a joué pour le Bayern de 2022 à 2023 ?",
+        "answers": [
+          "Sadio Mané",
+          "Ismaïla Sarr",
+          "Boulaye Dia",
+          "Habib Diallo"
+        ],
+        "correct": 0,
+        "difficulty": "facile"
+      },
+      "reason": "L'annonce Bayern du départ de Mané en août 2023 confirme son unique saison 2022-2023.",
+      "sources": [
+        {
+          "title": "FC Bayern - Sadio Mane to Al Nassr",
+          "url": "https://fcbayern.com/de/news/2023/08/sadio-mane-wechselt-vom-fc-bayern-zu-al-nassr"
+        }
+      ]
+    },
+    {
+      "id": "P019",
+      "category": "cristiano_ronaldo",
+      "file": "backend/data/cristiano_ronaldo.json",
+      "originalIndex": 122,
+      "originalHash": "a11cffef21cdaa51bf1fff54ebb5694d224ad900c62f2005e942337c874ddfe4",
+      "action": "corrected",
+      "before": {
+        "text": "Quel numéro de maillot Ronaldo portait-il initialement à Manchester United en 2003 ?",
+        "answers": [
+          "7",
+          "9",
+          "28",
+          "11"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel numéro de maillot Ronaldo portait-il initialement à Manchester United en 2003 ?",
+        "answers": [
+          "7",
+          "9",
+          "28",
+          "11"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "reason": "Le témoignage de Ronaldo à UEFA distingue le 28 demandé du 7 attribué et porté à Manchester United.",
+      "sources": [
+        {
+          "title": "UEFA - Ronaldo ready to face his United past",
+          "url": "https://www.uefa.com/uefachampionsleague/news/025a-0ea959409b48-2ed479925c63-1000--ronaldo-ready-to-face-up-to-his-united-past/"
+        }
+      ]
+    },
+    {
+      "id": "P023",
+      "category": "cristiano_ronaldo",
+      "file": "backend/data/cristiano_ronaldo.json",
+      "originalIndex": 135,
+      "originalHash": "5773c2ce6692f45e28da7f55890efabc6f42116f5bfe50e04f1052262cbbc91d",
+      "action": "corrected",
+      "before": {
+        "text": "Combien de Supercoupe d'Europe Ronaldo a-t-il remportées avec le Real Madrid ?",
+        "answers": [
+          "Une",
+          "Deux",
+          "Trois",
+          "Quatre"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Combien de Supercoupe d'Europe Ronaldo a-t-il remportées avec le Real Madrid ?",
+        "answers": [
+          "Une",
+          "Deux",
+          "Trois",
+          "Quatre"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Le palmarès officiel du Real attribue trois Supercoupes d'Europe à Ronaldo ; ce total ne compte pas seulement ses finales disputées.",
+      "sources": [
+        {
+          "title": "Real Madrid - Cristiano Ronaldo, palmares",
+          "url": "https://www.realmadrid.com/es-ES/el-club/historia/leyendas-futbol/cristiano-ronaldo-dos-santos-aveiro"
+        }
+      ]
+    },
+    {
+      "id": "P027",
+      "category": "cristiano_ronaldo",
+      "file": "backend/data/cristiano_ronaldo.json",
+      "originalIndex": 159,
+      "originalHash": "3a444761bf57fa7c87ff0d9234d32933391d37bfc9d750848f1760781fa7bff5",
+      "action": "corrected",
+      "before": {
+        "text": "Quel club Ronaldo a-t-il affronté lors de son 700e but en carrière ?",
+        "answers": [
+          "L'Ukraine",
+          "Le Luxembourg",
+          "L'Everton",
+          "La Lituanie"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quelle sélection Ronaldo a-t-il affrontée en octobre 2019 lors de son 700e but en carrière, clubs et sélection confondus ?",
+        "answers": [
+          "L'Ukraine",
+          "Le Luxembourg",
+          "L'Everton",
+          "La Lituanie"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "La FIFA situe le 700e but contre l'Ukraine, sélection nationale, en octobre 2019 ; le périmètre est explicite.",
+      "sources": [
+        {
+          "title": "FIFA - Fans favourites, 700 goals",
+          "url": "https://inside.fifa.com/news/fans-favourites-x5691"
+        }
+      ]
+    },
+    {
+      "id": "P030",
+      "category": "equipe_de_france_football",
+      "file": "backend/data/equipe_de_france_football.json",
+      "originalIndex": 112,
+      "originalHash": "c90bca7e012957b38301b1e074a1934eac918560e4e04c5451789b5a5284f7e9",
+      "action": "corrected",
+      "before": {
+        "text": "Quel attaquant français détient le record de buts en équipe de France ?",
+        "answers": [
+          "Michel Platini",
+          "Thierry Henry",
+          "Olivier Giroud",
+          "Kylian Mbappé"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Au 2 novembre 2026, quel attaquant détient le record de buts avec l'équipe de France masculine ?",
+        "answers": [
+          "Michel Platini",
+          "Thierry Henry",
+          "Olivier Giroud",
+          "Kylian Mbappé"
+        ],
+        "correct": 3,
+        "difficulty": "facile"
+      },
+      "reason": "Le classement FFF consulté le 2 novembre 2026 donne Mbappé à 67 buts devant Giroud à 57 ; le record est daté et masculin.",
+      "sources": [
+        {
+          "title": "FFF - Statistiques des Bleus",
+          "url": "https://www.fff.fr/selection/2-equipe-de-france/palmares-et-histoire-des-bleus.html"
+        }
+      ]
+    },
+    {
+      "id": "P032",
+      "category": "equipe_de_france_football",
+      "file": "backend/data/equipe_de_france_football.json",
+      "originalIndex": 138,
+      "originalHash": "3c94520cd2badd746ddb4167a9b48b072c8eb93d49f63e2491d2365bc3108005",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur français était surnommé le 'Président' lors de son passage comme dirigeant de l'OM ?",
+        "answers": [
+          "Basile Boli",
+          "Didier Deschamps",
+          "Marcel Desailly",
+          "Pape Diouf"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel international français était surnommé « Le Président » ?",
+        "answers": [
+          "Basile Boli",
+          "Laurent Blanc",
+          "Marcel Desailly",
+          "Pape Diouf"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Le dossier UEFA attribue le surnom à Laurent Blanc ; le contexte non étayé de dirigeant de l'OM est supprimé.",
+      "sources": [
+        {
+          "title": "UEFA - Euro 2012 press kit, Laurent Blanc",
+          "url": "https://www.uefa.com/MultimediaFiles/Download/competitions/Draws/01/72/52/41/1725241_DOWNLOAD.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P034",
+      "category": "equipe_de_france_football",
+      "file": "backend/data/equipe_de_france_football.json",
+      "originalIndex": 155,
+      "originalHash": "227db496ac8449af9d479b28c780689418860f4137265f8444bd1ae9e9f95523",
+      "action": "corrected",
+      "before": {
+        "text": "Combien de buts Olivier Giroud a-t-il inscrits en équipe de France au total (record) ?",
+        "answers": [
+          "47",
+          "51",
+          "53",
+          "57"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Combien de buts Olivier Giroud a-t-il inscrits au total en équipe de France masculine, selon le bilan FFF au 2 novembre 2026 ?",
+        "answers": [
+          "47",
+          "51",
+          "53",
+          "57"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "reason": "La FFF maintient le total de Giroud à 57 ; le qualificatif de record désormais périmé est supprimé.",
+      "sources": [
+        {
+          "title": "FFF - Statistiques des Bleus",
+          "url": "https://www.fff.fr/selection/2-equipe-de-france/palmares-et-histoire-des-bleus.html"
+        }
+      ]
+    },
+    {
+      "id": "P035",
+      "category": "equipe_de_france_football",
+      "file": "backend/data/equipe_de_france_football.json",
+      "originalIndex": 156,
+      "originalHash": "b86b66d9d110b62dcf569bfadc56ef6308d3b3e63026f01dc4ccec5d3111e449",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu de terrain français a marqué le premier but contre l'Australie au Mondial 2018 ?",
+        "answers": [
+          "Paul Pogba",
+          "Antoine Griezmann",
+          "N'Golo Kanté",
+          "Blaise Matuidi"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel attaquant français a marqué le premier but contre l'Australie au Mondial 2018 ?",
+        "answers": [
+          "Paul Pogba",
+          "Antoine Griezmann",
+          "N'Golo Kanté",
+          "Blaise Matuidi"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "La FFF présente Griezmann comme attaquant dans ce contexte ; le buteur reste exact.",
+      "sources": [
+        {
+          "title": "FFF - France Australie 2018",
+          "url": "https://www.fff.fr/selection/matchs/1135-france-australie.html"
+        },
+        {
+          "title": "FFF - Griezmann, poste attaquant",
+          "url": "https://www.fff.fr/equipe-nationale/joueur/8656-griezmann-antoine/fiche.html"
+        }
+      ]
+    },
+    {
+      "id": "P038",
+      "category": "lionel_messi",
+      "file": "backend/data/lionel_messi.json",
+      "originalIndex": 131,
+      "originalHash": "b9a65852cb62ddfaedcb616b2ce46ca4f9f1f8970d5fb7a88884b05b0782ae18",
+      "action": "corrected",
+      "before": {
+        "text": "Combien de titres de Ligue 1 Messi a-t-il remportés avec le PSG ?",
+        "answers": [
+          "Zéro",
+          "Un",
+          "Deux",
+          "Trois"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Combien de titres de Ligue 1 Messi a-t-il remportés avec le PSG ?",
+        "answers": [
+          "Zéro",
+          "Un",
+          "Deux",
+          "Trois"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "La Ligue 1 confirme deux titres de Messi au PSG, en 2021-2022 et 2022-2023.",
+      "sources": [
+        {
+          "title": "Ligue 1 - Tous les buts de Messi, deux titres",
+          "url": "https://ligue1.com/fr/articles/l1_article_5340-video-tous-les-buts-de-messi-en-ligue-1-mc-donald-s"
+        }
+      ]
+    },
+    {
+      "id": "P039",
+      "category": "lionel_messi",
+      "file": "backend/data/lionel_messi.json",
+      "originalIndex": 136,
+      "originalHash": "935feb88cdbaa802306edd5b627619506d936f5b70d192541c3da1d2b8dc15e2",
+      "action": "corrected",
+      "before": {
+        "text": "Combien de buts Messi a-t-il inscrits avec le PSG en Ligue 1 sur ses deux saisons ?",
+        "answers": [
+          "11",
+          "16",
+          "21",
+          "26"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Combien de buts Messi a-t-il inscrits avec le PSG en Ligue 1 sur ses deux saisons ?",
+        "answers": [
+          "11",
+          "16",
+          "22",
+          "26"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "La Ligue 1 publie le total de 22 buts de Messi sur ses deux saisons au PSG.",
+      "sources": [
+        {
+          "title": "Ligue 1 - Les 22 buts de Messi au PSG",
+          "url": "https://ligue1.com/fr/articles/l1_article_5340-video-tous-les-buts-de-messi-en-ligue-1-mc-donald-s"
+        }
+      ]
+    },
+    {
+      "id": "P041",
+      "category": "lionel_messi",
+      "file": "backend/data/lionel_messi.json",
+      "originalIndex": 145,
+      "originalHash": "6fa93302752328a0230282fd5a0297f84351f13f2cc33910e44b7003064864cd",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur détient le record de passes décisives pour Messi en Liga ?",
+        "answers": [
+          "Xavi",
+          "Dani Alves",
+          "Andrés Iniesta",
+          "Luis Suárez"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "En 2018, quel joueur a dépassé Dani Alves au nombre de passes décisives pour Messi en Liga ?",
+        "answers": [
+          "Xavi",
+          "Dani Alves",
+          "Andrés Iniesta",
+          "Luis Suárez"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "reason": "L'annonce officielle du Barça de novembre 2018 constate le dépassement par Suárez ; le fait historique remplace le record actuel non daté.",
+      "sources": [
+        {
+          "title": "FC Barcelona - Suarez surpasses Dani Alves",
+          "url": "https://www.fcbarcelona.com/en/news/879326/luis-suarez-surpasses-dani-alves-as-number-one-assist-provider-to-lionel-messi-in-la-liga"
+        }
+      ]
+    },
+    {
+      "id": "P042",
+      "category": "lionel_messi",
+      "file": "backend/data/lionel_messi.json",
+      "originalIndex": 150,
+      "originalHash": "0ff4f528b74c4e7bd62923e91a531bc8abf6ce1682493a35e8027498a22b3b60",
+      "action": "corrected",
+      "before": {
+        "text": "Quel club Messi a-t-il affronté lors de sa dernière apparition avec le Barça en août 2021 ?",
+        "answers": [
+          "Le Real Madrid",
+          "La Real Sociedad",
+          "L'Eibar",
+          "Le Celta Vigo"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel club Messi a-t-il affronté avec le Barça en Liga le 16 mai 2021 ?",
+        "answers": [
+          "Le Real Madrid",
+          "La Real Sociedad",
+          "L'Eibar",
+          "Le Celta Vigo"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "reason": "La feuille officielle Barça-Celta du 16 mai 2021 atteste l'adversaire et la présence de Messi ; aucun nouveau superlatif de dernière apparition n'est inféré.",
+      "sources": [
+        {
+          "title": "FC Barcelona - Messi will miss Eibar",
+          "url": "https://www.fcbarcelona.com/en/football/first-team/news/2152626"
+        },
+        {
+          "title": "FC Barcelona - Celta 16 mai 2021",
+          "url": "https://www.fcbarcelona.com/en/matches/61321/fc-barcelona-celta-de-vigo-la-liga-2020-2021"
+        }
+      ]
+    },
+    {
+      "id": "P045",
+      "category": "liverpool",
+      "file": "backend/data/liverpool.json",
+      "originalIndex": 126,
+      "originalHash": "bff36e1ca5cfaf65b8e86cf2195a679fb32ce1d6605531a0b6b5efd514dbfa11",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu anglais formé à Arsenal a rejoint Liverpool en 2017 ?",
+        "answers": [
+          "Jack Wilshere",
+          "Theo Walcott",
+          "Alex Oxlade-Chamberlain",
+          "Kieran Gibbs"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel milieu anglais formé à Southampton a rejoint Liverpool en 2017 ?",
+        "answers": [
+          "Jack Wilshere",
+          "Theo Walcott",
+          "Alex Oxlade-Chamberlain",
+          "Kieran Gibbs"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Le profil Liverpool confirme sa formation à Southampton ; Arsenal était son club précédent.",
+      "sources": [
+        {
+          "title": "Liverpool FC - Oxlade Chamberlain career profile",
+          "url": "https://www.liverpoolfc.com/news/first-team/273794-in-profile-alex-oxlade-chamberlain-s-career-so-far"
+        }
+      ]
+    },
+    {
+      "id": "P050",
+      "category": "liverpool",
+      "file": "backend/data/liverpool.json",
+      "originalIndex": 145,
+      "originalHash": "9ae8fba5541a3c36de99559d3ae25ba6b08d09c79df479513a22f1f0abc84636",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu de terrain turc a joué pour Liverpool en 2005, participant à la victoire d'Istanbul ?",
+        "answers": [
+          "Emre Belözoğlu",
+          "Nuri Şahin",
+          "Arda Turan",
+          "Hakan Şükür"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel joueur portait le numéro 14 de Liverpool lors de la finale de Ligue des champions 2005 à Istanbul ?",
+        "answers": [
+          "Xabi Alonso",
+          "Nuri Şahin",
+          "Arda Turan",
+          "Hakan Şükür"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "La feuille officielle UEFA de la finale donne le numéro 14 à Xabi Alonso ; le faux récit d'Emre à Liverpool est remplacé par ce fait documenté et unique.",
+      "sources": [
+        {
+          "title": "UEFA - Newcastle sign Emre in 2005",
+          "url": "https://www.uefa.com/news-media/news/0254-0d7b89e8eabe-c6e7069c78fa-1000--newcastle-tie-up-emre-transfer/"
+        },
+        {
+          "title": "UEFA - Finale 2005, compositions",
+          "url": "https://www.uefa.com/newsfiles/UCL/2004/1086988_LU.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P051",
+      "category": "liverpool",
+      "file": "backend/data/liverpool.json",
+      "originalIndex": 152,
+      "originalHash": "13a3d1f88f1fe4cd877e316c6a41f0922b3ee3bf5362b01b21b640b36fffee6a",
+      "action": "corrected",
+      "before": {
+        "text": "Quel gardien irlandais de Liverpool est souvent titulaire en coupes nationales ?",
+        "answers": [
+          "Adrián",
+          "Caoimhín Kelleher",
+          "Danny Ward",
+          "Vitezslav Jaros"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel gardien irlandais a quitté Liverpool pour Brentford en juin 2025 ?",
+        "answers": [
+          "Adrián",
+          "Caoimhín Kelleher",
+          "Danny Ward",
+          "Vitezslav Jaros"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "L'annonce de Brentford du 3 juin 2025 documente exactement ce transfert, sans dépendre d'un rôle actuel ni d'une fréquence de titularisation.",
+      "sources": [
+        {
+          "title": "Brentford - Signature de Caoimhin Kelleher, 3 juin 2025",
+          "url": "https://www.brentfordfc.com/en/news/first-team-brentford-sign-caoimhin-kelleher-liverpool"
+        }
+      ]
+    },
+    {
+      "id": "P054",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 107,
+      "originalHash": "f35feb4d4265d8f69a5157885893bd23dcde4db306cc9d451f8e89893e90f685",
+      "action": "corrected",
+      "before": {
+        "text": "Combien de FA Cups Manchester United a-t-il remportées au total (record en Angleterre) ?",
+        "answers": [
+          "10",
+          "13",
+          "8",
+          "15"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Combien de FA Cups Manchester United comptait-il après son sacre de 2024 ?",
+        "answers": [
+          "10",
+          "13",
+          "8",
+          "15"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Le total de 13 est conservé et daté après la finale 2024 ; le faux record anglais est supprimé.",
+      "sources": [
+        {
+          "title": "Manchester United - Trophy room",
+          "url": "https://www.manutd.com/en/club/history/trophy-room"
+        },
+        {
+          "title": "Arsenal - History, 14 FA Cups",
+          "url": "https://www.arsenal.com/history"
+        }
+      ]
+    },
+    {
+      "id": "P055",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 108,
+      "originalHash": "0f4c88fefa2c6caf5144ec9a039d7bab4924688eb6d7469d1ad8f28e58a38b0c",
+      "action": "corrected",
+      "before": {
+        "text": "Quel ancien attaquant de United est devenu consultant emblématique sur Sky Sports ?",
+        "answers": [
+          "Andy Cole",
+          "Gary Neville",
+          "Teddy Sheringham",
+          "Dwight Yorke"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel ancien défenseur de United est devenu consultant sur Sky Sports ?",
+        "answers": [
+          "Andy Cole",
+          "Gary Neville",
+          "Teddy Sheringham",
+          "Dwight Yorke"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "reason": "Gary Neville est un ancien défenseur, pas un attaquant.",
+      "sources": [
+        {
+          "title": "Manchester United - Neville, défenseur",
+          "url": "https://www.manutd.com/ar/news/jose-mourinho-on-the-potential-of-diogo-dalot"
+        },
+        {
+          "title": "Manchester United - Gary Neville, carrière après le centre",
+          "url": "https://www.manutd.com/en/academy/life-after-the-academy"
+        }
+      ]
+    },
+    {
+      "id": "P056",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 109,
+      "originalHash": "cab35dec47346dca4e4980403e40ac04399b362b1524b0bebd2f58ac854bef9d",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu anglais a joué plus de 700 matchs pour United entre 1993 et 2011 ?",
+        "answers": [
+          "David Beckham",
+          "Nicky Butt",
+          "Paul Scholes",
+          "Ryan Giggs"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel milieu anglais a joué plus de 700 matchs pour United entre 1993 et 2013 ?",
+        "answers": [
+          "David Beckham",
+          "Nicky Butt",
+          "Paul Scholes",
+          "Ryan Giggs"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "reason": "La période inclut le retour de Scholes en 2012 et sa retraite définitive en 2013.",
+      "sources": [
+        {
+          "title": "UEFA - Scholes sort de sa retraite, 676 matchs en 2011",
+          "url": "https://www.uefa.com/uefaeuropaleague/news/0254-0d7dc0945674-d1ffa068c24e-1000--scholes-out-of-retirement-for-manchester-united/"
+        },
+        {
+          "title": "UEFA - Retraite définitive de Scholes en 2013",
+          "url": "https://www.uefa.com/news/0209-0e84b1919758-7150e50481ad-1000--united-midfielder-scholes-confirms-retirement/"
+        }
+      ]
+    },
+    {
+      "id": "P057",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 112,
+      "originalHash": "5a70d6b8b568518255e777e75ffe502e566c11c80e0e10692ad90d48b4202e01",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu serbe a joué pour United de 2017 à 2024 ?",
+        "answers": [
+          "Dušan Tadić",
+          "Nemanja Matić",
+          "Sergej Milinković-Savić",
+          "Luka Jović"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel milieu serbe a joué pour United de 2017 à 2022 ?",
+        "answers": [
+          "Dušan Tadić",
+          "Nemanja Matić",
+          "Sergej Milinković-Savić",
+          "Luka Jović"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Matić quitte United pour la Roma en 2022.",
+      "sources": [
+        {
+          "title": "AS Roma - Nemanja Matic signs for Roma",
+          "url": "https://www.asroma.com/en/news/64401/nemanja-matic-signs-for-roma"
+        }
+      ]
+    },
+    {
+      "id": "P059",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 115,
+      "originalHash": "b0629ac37b6daa73a3f5a43bd4eb33e2e88e56b55a273ead2eabe1e741fde9b7",
+      "action": "corrected",
+      "before": {
+        "text": "Quel défenseur néerlandais, transféré de l'Ajax en 1998, a fait partie du triplé 1999 ?",
+        "answers": [
+          "Edwin van der Sar",
+          "Jaap Stam",
+          "Daley Blind",
+          "Alexander Büttner"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel défenseur néerlandais, transféré du PSV Eindhoven en 1998, a fait partie du triplé 1999 ?",
+        "answers": [
+          "Edwin van der Sar",
+          "Jaap Stam",
+          "Daley Blind",
+          "Alexander Büttner"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Jaap Stam arrive du PSV Eindhoven ; son passage à l’Ajax est ultérieur.",
+      "sources": [
+        {
+          "title": "UEFA - Ajax secure Stam signature, parcours antérieur",
+          "url": "https://www.uefa.com/uefachampionsleague/news/01b1-0e6d5df41aef-ffa507cb1936-1000--ajax-secure-stam-signature/"
+        }
+      ]
+    },
+    {
+      "id": "P060",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 118,
+      "originalHash": "e9e1d674029af4245929546b91cdc24e8f93cd0dc7bda89050e758a071be7b42",
+      "action": "corrected",
+      "before": {
+        "text": "Quel défenseur central anglais formé au club a marqué deux buts décisifs contre Sheffield Wednesday en 1993 ?",
+        "answers": [
+          "Gary Pallister",
+          "Steve Bruce",
+          "Rio Ferdinand",
+          "Phil Neville"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel défenseur central anglais a marqué deux buts décisifs contre Sheffield Wednesday en 1993 ?",
+        "answers": [
+          "Gary Pallister",
+          "Steve Bruce",
+          "Rio Ferdinand",
+          "Phil Neville"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Suppression du faux passage de Steve Bruce par la formation de United.",
+      "sources": [
+        {
+          "title": "Gillingham - Steve Bruce, carrière commencée au club",
+          "url": "https://www.gillinghamfootballclub.com/news/steve-bruce-be-special-guest-upcoming-sportsmans-dinner-event"
+        },
+        {
+          "title": "Manchester United - Arrivée de Bruce le 17 décembre 1987",
+          "url": "https://www.manutd.com/en/mutv/videos/detail/goal-of-the-day-bruce-v-oldham-17-december"
+        }
+      ]
+    },
+    {
+      "id": "P063",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 133,
+      "originalHash": "18940b8f7d301d24a7c744c327746bb4a83b83020fa5f3c4419b5019f2aeb292",
+      "action": "corrected",
+      "before": {
+        "text": "Quel buteur écossais, surnommé « The King », a marqué 237 buts pour United dans les années 1960 ?",
+        "answers": [
+          "George Best",
+          "Bobby Charlton",
+          "Denis Law",
+          "Pat Crerand"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel buteur écossais, surnommé « The King », a marqué 237 buts pour United au cours de ses onze années au club ?",
+        "answers": [
+          "George Best",
+          "Bobby Charlton",
+          "Denis Law",
+          "Pat Crerand"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "Les 237 buts couvrent l’ensemble de ses onze saisons, dont des saisons après 1969.",
+      "sources": [
+        {
+          "title": "Manchester United - Denis Law, 237 buts en onze ans",
+          "url": "https://www.manutd.com/en/news/manchester-united-honour-legendary-former-striker-denis-law-with-series-of-tributes"
+        },
+        {
+          "title": "Manchester United - But de Law contre Palace en 1971",
+          "url": "https://www.manutd.com/en/mutv/videos/detail/goal-of-the-day-denis-law-v-crystal-palace-24-february-2020"
+        }
+      ]
+    },
+    {
+      "id": "P064",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 137,
+      "originalHash": "893fe0cd5955612216069a1104545098d25853695b4d16c324079caf0212a6ad",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur chilien a joué pour United de 2018 à 2022, prêté plusieurs fois ?",
+        "answers": [
+          "Arturo Vidal",
+          "Alexis Sánchez",
+          "Eduardo Vargas",
+          "Gary Medel"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel joueur chilien a rejoint United en 2018 avant d’être prêté à l’Inter en 2019, puis transféré définitivement en 2020 ?",
+        "answers": [
+          "Arturo Vidal",
+          "Alexis Sánchez",
+          "Eduardo Vargas",
+          "Gary Medel"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "La chronologie du prêt de 2019 et du transfert définitif de 2020 remplace la fausse présence jusqu’en 2022 et les multiples prêts allégués.",
+      "sources": [
+        {
+          "title": "Inter - Prêt de Sanchez, août 2019",
+          "url": "https://www.inter.it/en/news/2019-08-29-alexis-sanchez-is-an-inter-player"
+        },
+        {
+          "title": "Inter - Transfert définitif, août 2020",
+          "url": "https://www.inter.it/en/news/2020-08-06-transfer-inter-alexis-sanchez"
+        }
+      ]
+    },
+    {
+      "id": "P065",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 139,
+      "originalHash": "1980f6f1fc103228b9b4275e8b3da78ae90cd60afedeef3587ec6254d9856327",
+      "action": "corrected",
+      "before": {
+        "text": "Quel défenseur central anglais est devenu le joueur le plus cher de l'histoire en rejoignant United en 2019 ?",
+        "answers": [
+          "Phil Jones",
+          "Harry Maguire",
+          "Chris Smalling",
+          "Eric Bailly"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel défenseur central anglais est devenu le défenseur le plus cher de l’histoire en rejoignant United en 2019 ?",
+        "answers": [
+          "Phil Jones",
+          "Harry Maguire",
+          "Chris Smalling",
+          "Eric Bailly"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "reason": "Le record de Maguire concerne les défenseurs, pas tous les joueurs.",
+      "sources": [
+        {
+          "title": "Guinness World Records - Transfert le plus cher d'un défenseur",
+          "url": "https://www.guinnessworldrecords.com/world-records/most-expensive-football-player-%28soccer-player%29-defender"
+        },
+        {
+          "title": "FC Barcelona - Neymar, paiement de 222 millions",
+          "url": "https://www.fcbarcelona.com/en/football/first-team/actualites/748497/communique-sur-neymar-du-fc-barcelone"
+        }
+      ]
+    },
+    {
+      "id": "P067",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 148,
+      "originalHash": "0605fd924e6e8e2f252e4dd8c8e1e8864aab701cea26d6523a0c7c4f74b094ff",
+      "action": "corrected",
+      "before": {
+        "text": "Quel attaquant anglais a marqué un but sur son premier ballon touché en Premier League face à Arsenal en 2004 ?",
+        "answers": [
+          "Wayne Rooney",
+          "Danny Welbeck",
+          "Alan Smith",
+          "Fraizer Campbell"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel joueur d’Everton a inscrit son premier but de Premier League contre Arsenal le 19 octobre 2002 ?",
+        "answers": [
+          "Wayne Rooney",
+          "Danny Welbeck",
+          "Alan Smith",
+          "Fraizer Campbell"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "L’événement daté et documenté remplace le faux premier ballon en 2004.",
+      "sources": [
+        {
+          "title": "Premier League - Rooney, débuts et premier but en 2002",
+          "url": "https://www.premierleague.com/en/news/758950"
+        },
+        {
+          "title": "Premier League - Les 200 buts de Rooney, premier le 19 octobre 2002",
+          "url": "https://www.premierleague.com/ar/news/458472/how-rooney-reached-200-goals"
+        }
+      ]
+    },
+    {
+      "id": "P068",
+      "category": "manchester_united",
+      "file": "backend/data/manchester_united.json",
+      "originalIndex": 151,
+      "originalHash": "6465e78d024559f46ea6bbfa31ddd829a4d638b7c665df7afc76b188667d48fe",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu de terrain anglais a fait la transition de joueur à entraîneur de United en 2021-2022 ?",
+        "answers": [
+          "Paul Scholes",
+          "Michael Carrick",
+          "Phil Neville",
+          "Darren Fletcher"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel ancien milieu de United a assuré l’intérim comme entraîneur principal en novembre 2021 ?",
+        "answers": [
+          "Paul Scholes",
+          "Michael Carrick",
+          "Phil Neville",
+          "Darren Fletcher"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "L’intérim de 2021 est distingué de l’entrée de Carrick dans le staff en 2018.",
+      "sources": [
+        {
+          "title": "Manchester United - Quinze moments de la carrière de Carrick",
+          "url": "https://www.manutd.com/en/news/15-great-michael-carrick-man-utd-moments-3-december-2021"
+        }
+      ]
+    },
+    {
+      "id": "P070",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 103,
+      "originalHash": "b470f1854852f89e21e9c5c01d3d047246f800be4d1e99625d6d057567dbdb68",
+      "action": "corrected",
+      "before": {
+        "text": "Quelle lettre grecque figure dans le logo de l'OM ?",
+        "answers": [
+          "Alpha",
+          "Oméga",
+          "Delta",
+          "Sigma"
+        ],
+        "correct": 0,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quelles lettres entrelacées composent le monogramme du logo de l’OM ?",
+        "answers": [
+          "O et M",
+          "O et L",
+          "P et S",
+          "A et S"
+        ],
+        "correct": 0,
+        "difficulty": "facile"
+      },
+      "reason": "Le logo représente les initiales O et M, pas une lettre grecque alpha.",
+      "sources": [
+        {
+          "title": "Boutique officielle OM - Pendentif logo, lettres O et M entrelacées",
+          "url": "https://boutique.om.fr/products/pendentif-om-logo-et-chaine-argent-oml23-pen-ajou"
+        }
+      ]
+    },
+    {
+      "id": "P071",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 117,
+      "originalHash": "9822369e1dc32936c0b6c5c7299049e3e718d33067df5e949572348cd2ac4c6b",
+      "action": "corrected",
+      "before": {
+        "text": "Quel attaquant sénégalais a joué à l'OM entre 2007 et 2011 ?",
+        "answers": [
+          "El Hadji Diouf",
+          "Mamadou Niang",
+          "Demba Ba",
+          "Papiss Cissé"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quel attaquant sénégalais a joué à l’OM de 2005 à 2010 ?",
+        "answers": [
+          "El Hadji Diouf",
+          "Mamadou Niang",
+          "Demba Ba",
+          "Papiss Cissé"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "reason": "Niang arrive en 2005 et rejoint Fenerbahçe en 2010.",
+      "sources": [
+        {
+          "title": "UEFA - Arrivée de Niang à Marseille en 2005",
+          "url": "https://www.uefa.com/news-media/news/01ab-0f84774e9fad-e32a5e2972d8-1000--marseille-move-for-niang/"
+        },
+        {
+          "title": "UEFA - Départ de Niang à Fenerbahce en 2010",
+          "url": "https://www.uefa.com/uefaeuropaleague/news/01e8-0e751bd6b54e-7f28cbe80bb8-1000--niang-leaves-om-for-fenerbahce/"
+        }
+      ]
+    },
+    {
+      "id": "P072",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 118,
+      "originalHash": "6ccf545f66d5e07d94c04cece44c15be21885c551286760ec0a58ab52082134b",
+      "action": "corrected",
+      "before": {
+        "text": "Quelle est la capacité approximative du virage Sud du Vélodrome ?",
+        "answers": [
+          "5 000",
+          "8 000",
+          "12 000",
+          "15 000"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Quelle capacité du virage Sud du Vélodrome est indiquée dans le recueil municipal de janvier 2022 ?",
+        "answers": [
+          "5 000",
+          "12 935 places",
+          "12 000",
+          "15 000"
+        ],
+        "correct": 1,
+        "difficulty": "facile"
+      },
+      "reason": "Le chiffre municipal daté de 12 935 places remplace la fausse approximation de 8 000.",
+      "sources": [
+        {
+          "title": "Ville de Marseille - Recueil des actes administratifs 647, capacité du stade",
+          "url": "https://www.marseille.fr/sites/default/files/contenu/mairie/RAA/raa-647-20220101.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P076",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 125,
+      "originalHash": "1fc3784076befc5668d8dbe2147833430b806d2e3f3de7696d1fa4e697de369b",
+      "action": "corrected",
+      "before": {
+        "text": "Quel défenseur central sénégalais a été un pilier de l'OM au début des années 2020 ?",
+        "answers": [
+          "Kalidou Koulibaly",
+          "Boubacar Kamara",
+          "Pape Gueye",
+          "Lamine Gassama"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel milieu international français a été formé à l’OM ?",
+        "answers": [
+          "Kalidou Koulibaly",
+          "Boubacar Kamara",
+          "Pape Gueye",
+          "Lamine Gassama"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Kamara est international français et milieu ; l’ascendance est distinguée de la nationalité sportive et le jugement « pilier » est supprimé.",
+      "sources": [
+        {
+          "title": "FFF - Boubacar Kamara, équipe de France",
+          "url": "https://www.fff.fr/equipe-nationale/joueur/8941-kamara-boubacar/fiche.html"
+        }
+      ]
+    },
+    {
+      "id": "P079",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 135,
+      "originalHash": "e29ae2f28ba02b742dd836ef755b98550c06472dd3d0e2f757ad45bcd6d3a0ef",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu de terrain argentin a été recruté par l'OM en 2022 en provenance du Bétis Séville ?",
+        "answers": [
+          "Leandro Paredes",
+          "Guido Rodríguez",
+          "Giovani Lo Celso",
+          "Érik Lamela"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel milieu international français a rejoint l’OM en août 2022 en provenance de l’AS Roma ?",
+        "answers": [
+          "Valentin Rongier",
+          "Jordan Veretout",
+          "Geoffrey Kondogbia",
+          "Pierre-Emile Højbjerg"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Le faux transfert de Guido Rodríguez à Marseille est remplacé par l’arrivée de Jordan Veretout à l’OM depuis l’AS Roma, annoncée officiellement le 5 août 2022 ; le sujet reste dans le quiz OM.",
+      "sources": [
+        {
+          "title": "Premier League - West Ham signe Guido Rodriguez, 6 août 2024",
+          "url": "https://www.premierleague.com/en/news/4076099"
+        },
+        {
+          "title": "AS Roma — Veretout completes Marseille transfer, 5 août 2022",
+          "url": "https://www.asroma.com/en/news/64838/veretout-completes-marseille-transfer"
+        },
+        {
+          "title": "AS Roma — Veretout ceduto a titolo definitivo all’Olympique Marsiglia, 5 août 2022",
+          "url": "https://www.asroma.com/it/notizie/64836/veretout-ceduto-a-titolo-definitivo-allolympique-marsiglia"
+        }
+      ]
+    },
+    {
+      "id": "P080",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 137,
+      "originalHash": "5d6d26e41338c8f362fd8c2f992a37a78c5eab056e7040148c7c49e3f4570f76",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu offensif chilien a joué à l'OM sous Jorge Sampaoli ?",
+        "answers": [
+          "Arturo Vidal",
+          "Alexis Sánchez",
+          "Cengiz Ünder",
+          "Gerson"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel attaquant chilien a joué à l’OM sous Igor Tudor ?",
+        "answers": [
+          "Arturo Vidal",
+          "Alexis Sánchez",
+          "Cengiz Ünder",
+          "Gerson"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Sánchez arrive en août 2022, après le départ de Sampaoli et la nomination de Tudor.",
+      "sources": [
+        {
+          "title": "OM - Annonce officielle de la signature de Sanchez, 10 août 2022, publication reproduite dans la presse",
+          "url": "https://twitter.com/OM_Officiel/status/1557341611226304512"
+        },
+        {
+          "title": "Ligue 1 - Historique des entraîneurs de l'OM",
+          "url": "https://ligue1.com/fr/articles/l1_article_146-historique-les-entraineurs-de-l-om-en-ligue-1"
+        },
+        {
+          "title": "Inter - Départ de Sanchez à l'été 2022, rapport financier",
+          "url": "https://www.inter.it/media/downloads/2023/2023_05_29_12_47_01Financial%20Results%20of%20Inter%20Media%20and%20Communication%20S.p.A%20for%20the%20nine%20months%20ended%20March%2031%202023.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P081",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 138,
+      "originalHash": "9eb14c08916f2836877b85674bf79cbbdec5249daff58342135a9b0978c9ca1c",
+      "action": "corrected",
+      "before": {
+        "text": "Quel joueur est devenu le plus jeune buteur de l'histoire de l'OM en Ligue 1 en 2023 ?",
+        "answers": [
+          "Bilal Nadir",
+          "Amine Harit",
+          "Azzedine Ounahi",
+          "Darryl Musik"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel joueur de l’OM a inscrit son premier but professionnel contre Le Havre le 5 janvier 2025 ?",
+        "answers": [
+          "Bilal Nadir",
+          "Amine Harit",
+          "Azzedine Ounahi",
+          "Darryl Musik"
+        ],
+        "correct": 0,
+        "difficulty": "moyen"
+      },
+      "reason": "Le premier but de Nadir daté remplace un record de précocité inventé en 2023.",
+      "sources": [
+        {
+          "title": "Ligue 1 - Bilal Nadir après son premier but professionnel",
+          "url": "https://ligue1.com/en/articles/l1_article_1626-bilal-nadir-om-midfielder-targets-success-after-injury-setback"
+        },
+        {
+          "title": "Ligue 1 - Marseille-Le Havre, 5 janvier 2025",
+          "url": "https://ligue1.com/en/articles/l1_article_1592-recap-om-start-2025-with-five-goal-performance-vs-le-havre"
+        }
+      ]
+    },
+    {
+      "id": "P082",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 139,
+      "originalHash": "09f975077626b2446750e064b05fe48dfc4eec201c43bd07141f9ae8e4eae5c9",
+      "action": "corrected",
+      "before": {
+        "text": "Quel entraîneur italien a dirigé l'OM lors de la saison 2023-2024 ?",
+        "answers": [
+          "Claudio Ranieri",
+          "Gennaro Gattuso",
+          "Jean-Louis Gasset",
+          "Roberto De Zerbi"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel entraîneur italien a dirigé l'OM lors de la saison 2023-2024 ?",
+        "answers": [
+          "Claudio Ranieri",
+          "Gennaro Gattuso",
+          "Jean-Louis Gasset",
+          "Roberto De Zerbi"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Gennaro Gattuso est l’entraîneur italien de l’OM en 2023-2024 ; Jean-Louis Gasset est français.",
+      "sources": [
+        {
+          "title": "CAF - Départ de Jean-Louis Gasset, entraîneur français",
+          "url": "https://www.cafonline.com/caf-africa-cup-of-nations/news/jean-louis-gasset-no-longer-cote-d-ivoire-head-coach/"
+        },
+        {
+          "title": "Ligue 1 - Historique des entraîneurs de l'OM",
+          "url": "https://ligue1.com/fr/articles/l1_article_146-historique-les-entraineurs-de-l-om-en-ligue-1"
+        }
+      ]
+    },
+    {
+      "id": "P085",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 147,
+      "originalHash": "5ebf4448a38d5434c4303639fd2128c567c5ad7c6c8b414a5edc844b25c9761c",
+      "action": "corrected",
+      "before": {
+        "text": "Quel milieu brésilien a joué à l'OM de 2019 à 2023 ?",
+        "answers": [
+          "Gerson",
+          "Claudinho",
+          "Paquetá",
+          "Luiz Gustavo"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quel milieu brésilien a joué à l’OM de 2017 à 2019 ?",
+        "answers": [
+          "Gerson",
+          "Claudinho",
+          "Paquetá",
+          "Luiz Gustavo"
+        ],
+        "correct": 3,
+        "difficulty": "difficile"
+      },
+      "reason": "La chronologie officielle de Luiz Gustavo donne Marseille 2017-2019 puis Fenerbahçe 2019-2022.",
+      "sources": [
+        {
+          "title": "Sao Paulo - Recrutement de Luiz Gustavo et chronologie de carrière",
+          "url": "https://www.saopaulofc.net/sao-paulo-acerta-a-contratacao-de-luiz-gustavo/"
+        }
+      ]
+    },
+    {
+      "id": "P086",
+      "category": "olympique_de_marseille",
+      "file": "backend/data/olympique_de_marseille.json",
+      "originalIndex": 148,
+      "originalHash": "9c584e21d24fc92b1526020692adfc641166c3129b9fae98dd92d2c1d9d0a3bc",
+      "action": "corrected",
+      "before": {
+        "text": "Quel est le record d'affluence au Stade Vélodrome pour un match de l'OM ?",
+        "answers": [
+          "55 000",
+          "60 000",
+          "65 000",
+          "67 000"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quelle affluence la Ligue 1 a-t-elle recensée pour OM–Saint-Étienne au Vélodrome en 2024-2025 ?",
+        "answers": [
+          "55 000",
+          "60 000",
+          "66 199",
+          "67 000"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "L’affluence documentée d’un match nommé remplace un record général faux et non daté.",
+      "sources": [
+        {
+          "title": "Ligue 1 - Records d'affluence 2024-2025, 66 199 pour OM-ASSE",
+          "url": "https://ligue1.com/fr/articles/l1_article_2073-affluences-du-jamais-vu-l1"
+        }
+      ]
+    },
+    {
+      "id": "P101",
+      "category": "michael_jackson",
+      "file": "backend/data/michael_jackson.json",
+      "originalIndex": 122,
+      "originalHash": "c174637fe67d9bd5e1689fd2aea8fc9405c04ad336d1bc6d99998dd55eb92a1a",
+      "action": "corrected",
+      "before": {
+        "text": "Quel court-métrage musical de 1988, mêlant fiction et clips, met en scène Michael Jackson ?",
+        "answers": [
+          "Ghosts",
+          "Captain EO",
+          "Moonwalker",
+          "This Is It"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel film musical de 1988, mêlant fiction et clips, met en scène Michael Jackson ?",
+        "answers": [
+          "Ghosts",
+          "Captain EO",
+          "Moonwalker",
+          "This Is It"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Remplacer « court-métrage musical » par « film musical ».",
+      "sources": [
+        {
+          "title": "Australian Classification — Moonwalker, 93 minutes, classification du 10 novembre 1988",
+          "url": "https://www.classification.gov.au/titles/moonwalker-2"
+        },
+        {
+          "title": "American Film Institute — Moonwalker, durée 93 minutes",
+          "url": "https://watch.afi.com/movie/moonwalker"
+        }
+      ]
+    },
+    {
+      "id": "P115",
+      "category": "pnl",
+      "file": "backend/data/pnl.json",
+      "originalIndex": 50,
+      "originalHash": "2c3ef807da9b94672a9569acb630e1498407efa4b2e85354310827338a0e632b",
+      "action": "corrected",
+      "before": {
+        "text": "Quelle est l'origine des parents d'Ademo et N.O.S ?",
+        "answers": [
+          "Marocaine",
+          "Algérienne",
+          "Comorienne",
+          "Algérienne et comorienne"
+        ],
+        "correct": 3,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "De quelle origine est la mère d'Ademo et N.O.S ?",
+        "answers": [
+          "Marocaine",
+          "Algérienne",
+          "Comorienne",
+          "Tunisienne"
+        ],
+        "correct": 1,
+        "difficulty": "moyen"
+      },
+      "reason": "Question recentrée sur l’origine algérienne de la mère, attestée par le portrait Fader ; retrait de l’ascendance comorienne erronée sans ambiguïté sur les deux parents.",
+      "sources": [
+        {
+          "title": "The Fader — PNL cover story, entretien avec les frères",
+          "url": "https://www.thefader.com/2016/06/14/pnl-cover-story-french-rap"
+        }
+      ]
+    },
+    {
+      "id": "P117",
+      "category": "pnl",
+      "file": "backend/data/pnl.json",
+      "originalIndex": 54,
+      "originalHash": "03e6ff94b4dedea9282a25482f4b5df5c58a27d28b7cb14130cbd07e8f102734",
+      "action": "corrected",
+      "before": {
+        "text": "Dans quel pays le clip de « Naha » a-t-il été tourné ?",
+        "answers": [
+          "Le Maroc",
+          "La Namibie",
+          "Le Japon",
+          "La Thaïlande"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "Dans quel pays le clip de « Naha » a-t-il été tourné ?",
+        "answers": [
+          "Le Maroc",
+          "La Namibie",
+          "La France",
+          "La Thaïlande"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "reason": "Ajouter « La France » comme réponse correcte.",
+      "sources": [
+        {
+          "title": "Le Parisien — Les lieux de tournage de PNL à Corbeil-Essonnes",
+          "url": "https://www.leparisien.fr/essonne-91/corbeil-essonnes-pnl-tourne-un-clip-aux-tarterets-24-03-2019-8038647.php"
+        },
+        {
+          "title": "Générations — Retour aux sources pour PNL dans Naha",
+          "url": "https://generations.fr/video/clip/37838/retour-aux-sources-pour-pnl-dans-naha"
+        }
+      ]
+    },
+    {
+      "id": "P118",
+      "category": "pnl",
+      "file": "backend/data/pnl.json",
+      "originalIndex": 55,
+      "originalHash": "60690a498e47515db949e6a57fab99dab01dd9fd96470f636b4cc91172300324",
+      "action": "corrected",
+      "before": {
+        "text": "Quel festival PNL a-t-il headliné en 2019, surprenant le public ?",
+        "answers": [
+          "Les Vieilles Charrues",
+          "Rock en Seine",
+          "Coachella",
+          "Lollapalooza"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "after": {
+        "text": "À quel festival PNL devait-il participer en 2017 avant une annulation liée aux visas ?",
+        "answers": [
+          "Les Vieilles Charrues",
+          "Rock en Seine",
+          "Coachella",
+          "Lollapalooza"
+        ],
+        "correct": 2,
+        "difficulty": "facile"
+      },
+      "reason": "Demander à quel festival PNL devait participer en 2017 avant une annulation liée aux visas, avec Coachella comme réponse.",
+      "sources": [
+        {
+          "title": "AEG — Coachella 2019, annonce officielle des têtes d'affiche",
+          "url": "https://aegworldwide.com/press-center/press-releases/coachella-valley-music-and-arts-festival-announces-2019-lineup-childish"
+        },
+        {
+          "title": "The Fader — PNL cancel Coachella performance, 16 avril 2017",
+          "url": "https://www.thefader.com/2017/04/16/pnl-to-cancel-their-coachella-performance-immigration-issues"
+        }
+      ]
+    },
+    {
+      "id": "P124",
+      "category": "pnl",
+      "file": "backend/data/pnl.json",
+      "originalIndex": 82,
+      "originalHash": "0a01ff434e6966d7cbfaa5eac614b238c9b2a5dcf7d03650fce108349c990db4",
+      "action": "corrected",
+      "before": {
+        "text": "En quelle année le concert au Parc des Princes de PNL a-t-il eu lieu ?",
+        "answers": [
+          "2017",
+          "2019",
+          "2020",
+          "2023"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "En quelle année les frères Andrieu ont-ils formé le groupe PNL ?",
+        "answers": [
+          "2012",
+          "2013",
+          "2014",
+          "2016"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "Remplacement de la prémisse non fondée du concert par la formation du groupe en 2014, attestée par le portrait Fader auprès de son entourage.",
+      "sources": [
+        {
+          "title": "The Fader — Entretien avec les frères et leur entourage, formation de PNL en 2014",
+          "url": "https://www.thefader.com/2016/06/14/pnl-cover-story-french-rap"
+        }
+      ]
+    },
+    {
+      "id": "P128",
+      "category": "pnl",
+      "file": "backend/data/pnl.json",
+      "originalIndex": 100,
+      "originalHash": "2bbe0e04145474841b3b4c7d302dbe042835ab2b3e40a2201aeda41b98b83795",
+      "action": "corrected",
+      "before": {
+        "text": "En quelle année PNL a-t-il sorti son premier clip ?",
+        "answers": [
+          "2012",
+          "2013",
+          "2014",
+          "2015"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "En quelle année le clip officiel de « Différents » de PNL a-t-il été publié ?",
+        "answers": [
+          "2012",
+          "2013",
+          "2014",
+          "2015"
+        ],
+        "correct": 2,
+        "difficulty": "difficile"
+      },
+      "reason": "Demander en quelle année le clip officiel Différents a été publié : 2014.",
+      "sources": [
+        {
+          "title": "PNL, chaîne officielle — Différents, publié le 10 avril 2014",
+          "url": "https://www.youtube.com/watch?v=3ljLkkFzczE"
+        },
+        {
+          "title": "The Fader — PNL cover story, entretien avec les frères",
+          "url": "https://www.thefader.com/2016/06/14/pnl-cover-story-french-rap"
+        }
+      ]
+    },
+    {
+      "id": "P134",
+      "category": "rihanna",
+      "file": "backend/data/rihanna.json",
+      "originalIndex": 140,
+      "originalHash": "e06617f7ed4a8cfd9f488b321bbc16b81a49a2ac885b2edfa7a91d53d3c18ad0",
+      "action": "corrected",
+      "before": {
+        "text": "Quel est le nom de la ville natale de Rihanna à la Barbade ?",
+        "answers": [
+          "Saint Michael",
+          "Bridgetown",
+          "Christ Church",
+          "Saint James"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Dans quelle paroisse de la Barbade Rihanna est-elle née ?",
+        "answers": [
+          "Saint Michael",
+          "Bridgetown",
+          "Christ Church",
+          "Saint James"
+        ],
+        "correct": 0,
+        "difficulty": "difficile"
+      },
+      "reason": "Remplacer « ville natale » par « paroisse de naissance » et conserver Saint Michael.",
+      "sources": [
+        {
+          "title": "Barbados.org — Rihanna, née dans la paroisse de Saint Michael",
+          "url": "https://barbados.org/people/rihanna.htm"
+        },
+        {
+          "title": "Barbados Today — Anniversaire de Robyn Rihanna Fenty",
+          "url": "https://barbadostoday.bb/2024/02/20/celebrating-national-hero-robyn-rihanna-fenty-on-her-birthday/"
+        }
+      ]
+    },
+    {
+      "id": "P154",
+      "category": "attaque_des_titans",
+      "file": "backend/data/attaque_des_titans.json",
+      "originalIndex": 126,
+      "originalHash": "3868658e4f08e9cfe427a0a0555f83c64268e9af961a871bcfb69861ad1f1c07",
+      "action": "corrected",
+      "before": {
+        "text": "Quel personnage infiltre l'armée de Mahr sous une fausse identité pendant des années ?",
+        "answers": [
+          "Sieg Jäger",
+          "Armin Arlert",
+          "Eren Jäger",
+          "Livai Ackerman"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Quel personnage infiltre l'armée de Mahr sous le nom de Kruger ?",
+        "answers": [
+          "Sieg Jäger",
+          "Armin Arlert",
+          "Eren Jäger",
+          "Livai Ackerman"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Retirer la durée erronée de plusieurs années, sans inventer un nombre exact de mois.",
+      "sources": [
+        {
+          "title": "Attack on Titan Wiki — Timeline, infiltration et raid de Liberio en 854",
+          "url": "https://attackontitan.fandom.com/wiki/Timeline"
+        },
+        {
+          "title": "Attack on Titan Wiki — Raid on Liberio, Infiltration et correspondance pendant le mois précédant le festival",
+          "url": "https://attackontitan.fandom.com/wiki/Raid_on_Liberio"
+        },
+        {
+          "title": "Attack on Titan Wiki — Night of The End, chapitre 127, séjour des Scouts de quelques mois",
+          "url": "https://attackontitan.fandom.com/wiki/Night_of_The_End_%28Chapter%29"
+        }
+      ]
+    },
+    {
+      "id": "P167",
+      "category": "hunter_x_hunter",
+      "file": "backend/data/hunter_x_hunter.json",
+      "originalIndex": 138,
+      "originalHash": "b8ae555d7f6c1384941890af0ea04c2a879ba931fce8d0add8ab692323691dc1",
+      "action": "corrected",
+      "before": {
+        "text": "Quelle contrepartie exige Nanika en échange de vœux importants ?",
+        "answers": [
+          "De l'argent",
+          "Des années de vie",
+          "Des demandes de plus en plus dangereuses aux proches",
+          "Du Nen"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "after": {
+        "text": "Après un vœu important exaucé par Nanika, comment évoluent normalement les demandes suivantes d'Alluka ?",
+        "answers": [
+          "Elles deviennent plus faciles à satisfaire",
+          "Elles disparaissent définitivement",
+          "Elles deviennent plus difficiles à satisfaire",
+          "Elles restent identiques, quel que soit le vœu"
+        ],
+        "correct": 2,
+        "difficulty": "moyen"
+      },
+      "reason": "Distinguer la difficulté des demandes suivantes des victimes de la sanction en cas de refus ; les proches ne sont pas leurs destinataires obligatoires.",
+      "sources": [
+        {
+          "title": "Hunterpedia — chapitre 322 / épisode 138, expériences sur les demandes et conséquences",
+          "url": "https://hunterxhunter.fandom.com/wiki/Chapter_322"
+        },
+        {
+          "title": "Hunterpedia — Nanika, destinataire des demandes suivantes et victimes de la sanction",
+          "url": "https://hunterxhunter.fandom.com/wiki/Nanika"
+        }
+      ]
+    },
+    {
+      "id": "P170",
+      "category": "jujutsu_kaisen",
+      "file": "backend/data/jujutsu_kaisen.json",
+      "originalIndex": 142,
+      "originalHash": "399d1a191a33f34e36cc01e096c79bbb5144611e29ed96c009b53cd65b41b742",
+      "action": "corrected",
+      "before": {
+        "text": "Quelle technique Sukuna utilise-t-il pour trancher l'espace lui-même ?",
+        "answers": [
+          "Malevolent Shrine",
+          "Cleave et Dismantle",
+          "Black Flash",
+          "Hollow Purple"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Quelle technique Sukuna utilise-t-il pour trancher l'espace lui-même ?",
+        "answers": [
+          "Malevolent Shrine",
+          "Dismantle, en élargissant sa cible au monde lui-même",
+          "Black Flash",
+          "Hollow Purple"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "Le coup qui tranche le monde étend la cible de Dismantle, sans combiner Cleave et Dismantle ; conserver la terminologie déjà utilisée.",
+      "sources": [
+        {
+          "title": "Jujutsu Kaisen Wiki — chapitre 236, Dismantle ciblant le monde",
+          "url": "https://jujutsu-kaisen.fandom.com/wiki/Chapter_236"
+        },
+        {
+          "title": "Jujutsu Kaisen Wiki — Shrine, Slash That Cuts The World",
+          "url": "https://jujutsu-kaisen.fandom.com/wiki/Shrine"
+        }
+      ]
+    },
+    {
+      "id": "P171",
+      "category": "jujutsu_kaisen",
+      "file": "backend/data/jujutsu_kaisen.json",
+      "originalIndex": 151,
+      "originalHash": "69974ad3cbe9db9aa34b7efdfccd1319a16c8bdb359e635586d7aaaecb3531ce",
+      "action": "corrected",
+      "before": {
+        "text": "Quelle règle du Jeu de l'extermination permet de gagner des points ?",
+        "answers": [
+          "Tuer des civils",
+          "Exorciser des joueurs ou des fléaux dans les colonies",
+          "Détruire des bâtiments",
+          "Trouver des objets maudits"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "after": {
+        "text": "Selon la règle 4 du Jeu de l'extermination, quelle action rapporte des points ?",
+        "answers": [
+          "Entrer dans une colonie",
+          "Tuer d'autres joueurs du Jeu de l'extermination",
+          "Détruire des bâtiments",
+          "Trouver des objets maudits"
+        ],
+        "correct": 1,
+        "difficulty": "difficile"
+      },
+      "reason": "La règle 4 porte sur les autres joueurs, pas sur tous les fléaux ; retirer aussi le choix des civils, qui peuvent eux-mêmes être joueurs.",
+      "sources": [
+        {
+          "title": "Site officiel Jujutsu Kaisen — règles 3, 4 et 5 du Jeu de l'extermination",
+          "url": "https://jujutsukaisen.jp/shimetsukaiyu/"
+        }
+      ]
+    }
+  ]
+}

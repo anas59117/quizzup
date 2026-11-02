@@ -509,14 +509,9 @@
     "difficulty": "expert"
   },
   {
-    "text": "Quelle est l'origine des parents d'Ademo et N.O.S ?",
-    "answers": [
-      "Marocaine",
-      "Algérienne",
-      "Comorienne",
-      "Algérienne et comorienne"
-    ],
-    "correct": 3,
+    "text": "De quelle origine est la mère d'Ademo et N.O.S ?",
+    "answers": ["Marocaine","Algérienne","Comorienne","Tunisienne"],
+    "correct": 1,
     "difficulty": "moyen"
   },
   {
@@ -554,17 +549,12 @@
   },
   {
     "text": "Dans quel pays le clip de « Naha » a-t-il été tourné ?",
-    "answers": [
-      "Le Maroc",
-      "La Namibie",
-      "Le Japon",
-      "La Thaïlande"
-    ],
+    "answers": ["Le Maroc","La Namibie","La France","La Thaïlande"],
     "correct": 2,
     "difficulty": "facile"
   },
   {
-    "text": "Quel festival PNL a-t-il headliné en 2019, surprenant le public ?",
+    "text": "À quel festival PNL devait-il participer en 2017 avant une annulation liée aux visas ?",
     "answers": [
       "Les Vieilles Charrues",
       "Rock en Seine",
@@ -841,14 +831,9 @@
     "difficulty": "facile"
   },
   {
-    "text": "En quelle année le concert au Parc des Princes de PNL a-t-il eu lieu ?",
-    "answers": [
-      "2017",
-      "2019",
-      "2020",
-      "2023"
-    ],
-    "correct": 1,
+    "text": "En quelle année les frères Andrieu ont-ils formé le groupe PNL ?",
+    "answers": ["2012","2013","2014","2016"],
+    "correct": 2,
     "difficulty": "difficile"
   },
   {
@@ -1039,14 +1024,14 @@
     "difficulty": "moyen"
   },
   {
-    "text": "En quelle année PNL a-t-il sorti son premier clip ?",
+    "text": "En quelle année le clip officiel de « Différents » de PNL a-t-il été publié ?",
     "answers": [
       "2012",
       "2013",
       "2014",
       "2015"
     ],
-    "correct": 1,
+    "correct": 2,
     "difficulty": "difficile"
   },
   {
