@@ -25,10 +25,11 @@ const output=path.resolve(__dirname,'../../../.mobile-preview/international-qa')
      const img=card.locator('img');await img.evaluate(x=>x.decode());
      assert((await img.getAttribute('src')).includes('/international-v1/'));
      assert.equal(await card.getAttribute('aria-label'),value[lang]);
-     assert.equal(await card.locator('.tile-v4__poster-title').textContent(),value[lang]);
-     const fit=await card.evaluate(c=>{const a=c.getBoundingClientRect(),b=c.querySelector('.tile-v4__poster-title').getBoundingClientRect();return b.top>=a.top-1&&b.bottom<=a.bottom+1&&b.left>=a.left-1&&b.right<=a.right+1;});
+     assert.equal(await card.locator('.tile-v4__poster-title').count(),0);
+     assert.equal(await card.locator('.tile-v4__label').textContent(),value[lang]);
+     const fit=await card.evaluate(c=>{const a=c.getBoundingClientRect(),label=c.querySelector('.tile-v4__label'),b=label.getBoundingClientRect(),s=getComputedStyle(label);return s.visibility==='visible'&&s.clipPath==='none'&&b.width>1&&b.height>1&&b.top>=a.top+a.height*.6&&b.bottom<=a.bottom+1&&b.left>=a.left-1&&b.right<=a.right+1;});
      assert(fit,`Title overflows: ${key}/${lang}/${width}`);
-     assert(await card.locator('.tile-v4__poster-title').evaluate(x=>x.scrollWidth<=x.clientWidth+1),`Title word is clipped: ${key}/${lang}/${width}`);
+     assert(await card.locator('.tile-v4__label').evaluate(x=>x.scrollWidth<=x.clientWidth+1),`Title word is clipped: ${key}/${lang}/${width}`);
      if(width===390&&engine==='Chromium')await card.screenshot({path:path.join(output,`${key}-${lang}.png`)});
     }
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Page overflow: ${lang}/${width}`);

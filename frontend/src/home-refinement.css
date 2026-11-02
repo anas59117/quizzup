@@ -95,7 +95,6 @@ body:has(.app-home),body:has(.app-themes),body:has(.app-profile) { background: v
 .home-refined .tile-v4__label { line-height: 1.2; font-size: 15px !important; }
 .home-refined .topic-tile-wrap:has(.personal-theme-level) .tile-v4__caption { padding-bottom: 20px; }
 .home-refined .personal-theme-level { left: 12px; bottom: 12px; font-size: 12px; font-weight: 500; }
-.home-refined .topic-tile-wrap[data-topic='ligue_champions'] .personal-theme-level { color: #30200e; text-shadow: none; }
 .home-refined .home-discovery .tile-v4 { aspect-ratio: 1.65 !important; }
 .home-refined .home-discovery .tile-v4__label { font-size: 13px !important; }
 .home-community-teaser { padding: 16px; gap: 16px; border-radius: 19px; color: var(--browse-ink); min-height: 80px; }

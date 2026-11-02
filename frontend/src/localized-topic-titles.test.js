@@ -11,11 +11,15 @@ function render(lang, node) {
   return renderToStaticMarkup(<I18nProvider>{node}</I18nProvider>);
 }
 const pending = ['disney','films_d_horreur','science_fiction','disney_renaissance','films_cultes_2000s'];
-test.each(topics.filter(key=>!pending.includes(key)))('%s uses a text-free artwork and an independently rendered poster title', key => {
+test.each(topics.filter(key=>!pending.includes(key)))('%s keeps its text-free artwork and uses the standard bottom caption', key => {
   const category = CATEGORIES.find(c => c.key === key);
   const html = render('en', <CategoryTileV4 c={category} />);
   expect(html).toContain('/images/covers/international-v1/');
-  expect(html).toContain('tile-v4__poster-title');
+  expect(html).not.toContain('tile-v4__poster-title');
+  const card = document.createElement('div');
+  card.innerHTML = html;
+  expect(card.querySelector('.tile-v4__caption .tile-v4__label').textContent)
+    .toBe(card.querySelector('button').getAttribute('aria-label'));
   expect(html).not.toContain('tile-v4--poster ');
 });
 test.each(pending)('%s keeps its original poster as requested while its image edit is deferred', key => {

@@ -8,7 +8,7 @@
 import React, { memo, useState } from 'react';
 import { getTopicCover } from './topicCovers';
 import { useOptionalI18n } from './i18n';
-import { INTERNATIONAL_TOPIC_TITLES, localizedTopicTitle } from './topicTitles';
+import { localizedTopicTitle } from './topicTitles';
 
 // Monogram text per topic — short label for the big typographic hero
 const TOPIC_TYPO = {
@@ -107,8 +107,6 @@ function topicMark(label) {
 export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disabled, featured, priority = 'lazy' }) {
   const i18n = useOptionalI18n();
   const title = localizedTopicTitle(c, i18n?.lang || 'fr');
-  const posterTitle = INTERNATIONAL_TOPIC_TITLES[c.key];
-  const longestTitleWord = Math.max(...title.split(/[\s&-]+/).map(word => word.length));
   const typo = TOPIC_TYPO[c.key];
   const candidate = getTopicCover(c);
   const cover = candidate?.approved || !typo ? candidate : null;
@@ -126,7 +124,7 @@ export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disable
     featured ? 'tile-v4--featured' : '',
   ].filter(Boolean).join(' ');
 
-  const coverStyle = cover ? { '--cover-focal': cover.focal, '--cover-fit': cover.fit || 'cover', '--poster-title-top': posterTitle ? `${posterTitle.top}%` : undefined, '--poster-title-size': longestTitleWord > 11 ? '8cqw' : undefined } : undefined;
+  const coverStyle = cover ? { '--cover-focal': cover.focal, '--cover-fit': cover.fit || 'cover' } : undefined;
 
   return (
     <button
@@ -199,10 +197,6 @@ export const CategoryTileV4 = memo(function CategoryTileV4({ c, onClick, disable
 
       {/* Dark gradient for text readability */}
       <div className="tile-v4__shade" aria-hidden="true" />
-
-      {hasCover && cover.localizedTitle && (
-        <span className={`tile-v4__poster-title tile-v4__poster-title--${posterTitle.theme || 'gold'}`} aria-hidden="true">{title}</span>
-      )}
 
       {/* Label + featured meta */}
       <div className="tile-v4__caption">
