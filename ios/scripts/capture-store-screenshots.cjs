@@ -1,6 +1,6 @@
 const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_process'),crypto=require('node:crypto'),assert=require('node:assert/strict');
 const {profiles,scenarios,validatePng,jpegInfo}=require('./store-assets.cjs');
-const run=(command,args,timeout=180000)=>cp.execFileSync(command,args,{encoding:'utf8',timeout,stdio:['ignore','pipe','pipe']}).trim();
+const run=(command,args,timeout=180000)=>cp.execFileSync(command,args,{encoding:'utf8',timeout,killSignal:'SIGKILL',stdio:['ignore','pipe','pipe']}).trim();
 const pause=ms=>Atomics.wait(new Int32Array(new SharedArrayBuffer(4)),0,0,ms);
 const root=path.resolve(__dirname,'../..');
 if(process.platform!=='darwin')throw Error('Native captures require macOS with Xcode and an iOS Simulator');
@@ -24,6 +24,7 @@ for(const profile of profiles){
   console.log(`Booting ${profile.key} on ${runtime.identifier}; first-boot migration may take several minutes.`);
   run('xcrun',['simctl','boot',udid]);
   run('xcrun',['simctl','bootstatus',udid,'-b'],600000);
+  console.log(`Ready: ${profile.key}`);
   run('xcrun',['simctl','status_bar',udid,'override','--time','09:41','--dataNetwork','wifi','--wifiMode','active','--wifiBars','3','--batteryState','charged','--batteryLevel','100']);
   run('xcrun',['simctl','install',udid,app]);
   const data=run('xcrun',['simctl','get_app_container',udid,'com.quizzup.app','data']);
@@ -51,8 +52,11 @@ for(const profile of profiles){
    console.log(`CAPTURED ${relative} ${info.width}x${info.height}`);
   }
  }finally{
-  try{run('xcrun',['simctl','shutdown',udid]);}catch{}
-  run('xcrun',['simctl','delete',udid]);
+  // Cleanup must not mask a failed capture or stall the ephemeral CI runner.
+  for(const action of ['shutdown','delete']){
+   try{run('xcrun',['simctl',action,udid],15000);}
+   catch{console.warn(`Simulator cleanup warning: ${action} ${udid}`);}
+  }
  }
 }
 assert.equal(captures.length,18);
