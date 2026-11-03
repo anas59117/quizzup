@@ -40,13 +40,7 @@
 }
 .tile-v4__cover { z-index: 3; object-fit: var(--cover-fit, cover); background: #141217; }
 .tile-cover-img { object-fit: var(--cover-fit, cover) !important; }
-/* Approved posters already carry their title: preserve their full artwork. */
-.tile-v4.tile-v4--poster .tile-v4__caption::before { display: none; }
-.tile-v4--poster .tile-v4__label {
-  position: absolute; width: 1px; height: 1px; padding: 0;
-  margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
-}
-/* Text-free artwork shares the standard bottom caption and home-card layout. */
+/* Every cover keeps the standard bottom title and its local contrast fade. */
 /* A landscape crop would cut off a title baked into a square poster. */
 .home-refined .home-discovery:has(.tile-v4--poster) .tile-v4 {
   aspect-ratio: 1 / 1 !important;
