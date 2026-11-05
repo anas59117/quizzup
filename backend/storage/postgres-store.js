@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
 const { Client } = require('pg');
-const { STORE_NAMES, definition } = require('./catalog');
+const { STORE_NAMES, ADDITIVE_STORES, definition, emptyStore, normalizeDataset } = require('./catalog');
 const { encodeSnapshot, decodeSnapshot, canonicalHash, canonical } = require('./codec');
 const error = code => Object.assign(new Error(code), { code });
 const keyHash = key => crypto.createHash('sha256').update(key).digest('hex');
@@ -71,11 +71,13 @@ class PostgresStore {
     if (!metadata.rowCount) throw error('DATASET_NOT_IMPORTED');
     if (metadata.rows[0].value.version !== 1) throw error('UNSUPPORTED_STORAGE_VERSION');
     const heads = (await this.client.query('SELECT * FROM public.quizzup_storage_stores ORDER BY name')).rows;
-    if (heads.length !== STORE_NAMES.length || heads.some(h => !STORE_NAMES.includes(h.name))) throw error('INCOMPLETE_DATASET');
+    const existingNames = new Set(heads.map(head => head.name));
+    if (heads.some(h => !STORE_NAMES.includes(h.name))
+      || STORE_NAMES.some(name => !existingNames.has(name) && !ADDITIVE_STORES.includes(name))) throw error('INCOMPLETE_DATASET');
     const rows = (await this.client.query('SELECT * FROM public.quizzup_storage_entities ORDER BY store_name, key_hash')).rows;
     const byStore = new Map(STORE_NAMES.map(name => [name, []]));
     for (const row of rows) {
-      if (!byStore.has(row.store_name) || row.key_hash !== keyHash(row.entity_key)) throw error('CORRUPT_STORE');
+      if (!existingNames.has(row.store_name) || row.key_hash !== keyHash(row.entity_key)) throw error('CORRUPT_STORE');
       const payload = row.encoded ? JSON.parse(row.payload.json) : row.payload;
       byStore.get(row.store_name).push({ key: row.entity_key, payload, digest: row.digest });
     }
@@ -87,11 +89,21 @@ class PostgresStore {
       data[head.name] = value;
       versions.set(head.name, { revision: String(head.revision), hash: head.hash, digests: new Map(records.map(r => [r.key, r.digest])) });
     }
+    for (const name of ADDITIVE_STORES) if (!existingNames.has(name)) data[name] = emptyStore(name);
     return { data, versions };
   }
 
   async load() {
-    const loaded = await this.transaction(() => this.readDataset(), true, value => {
+    const loaded = await this.transaction(async () => {
+      const value = await this.readDataset();
+      if (!this.readOnly) for (const name of ADDITIVE_STORES) {
+        if (value.versions.has(name)) continue;
+        const snapshot = encodeSnapshot(name, value.data[name]);
+        await this.client.query('INSERT INTO public.quizzup_storage_stores (name,layout,hash) VALUES ($1,$2,$3)', [name, JSON.stringify(snapshot.layout), snapshot.hash]);
+        value.versions.set(name, { revision: '1', hash: snapshot.hash, digests: new Map() });
+      }
+      return value;
+    }, this.readOnly, value => {
       this.heads = value.versions;
       this.snapshots = new Map(STORE_NAMES.map(name => [name, JSON.stringify(value.data[name])]));
     });
@@ -124,8 +136,7 @@ class PostgresStore {
 
   async importDataset(data) {
     this.writable();
-    if (Object.keys(data).length !== STORE_NAMES.length || STORE_NAMES.some(name => !Object.hasOwn(data, name))) throw error('INCOMPLETE_DATASET');
-    const captured = JSON.parse(JSON.stringify(data));
+    const captured = JSON.parse(JSON.stringify(normalizeDataset(data)));
     const encoded = new Map(STORE_NAMES.map(name => [name, encodeSnapshot(name, captured[name])]));
     return this.transaction(async () => {
       const existing = await this.client.query("SELECT value FROM public.quizzup_storage_meta WHERE key='dataset'");

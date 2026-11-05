@@ -6,7 +6,7 @@ const { fork } = require('node:child_process');
 
 async function isolatedServer(env = {}, seed = {}, probe = false, preloads = []) {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'quizzup-capacity-'));
-  for (const name of ['account-links', 'async-challenges', 'category-stats', 'challenges', 'follows', 'match-history', 'messages', 'notifications', 'posts', 'reports', 'social', 'stats', 'topic-stats']) {
+  for (const name of ['account-links', 'async-challenges', 'category-stats', 'challenges', 'follows', 'match-history', 'messages', 'notifications', 'posts', 'reports', 'social', 'stats', 'topic-stats', 'user-reports']) {
     fs.writeFileSync(path.join(dir, `${name}.json`), JSON.stringify(seed[name] || (name === 'posts' ? { posts: [] } : {})));
   }
   const portProbe = net.createServer();

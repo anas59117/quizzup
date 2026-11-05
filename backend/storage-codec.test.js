@@ -17,6 +17,7 @@ const samples = {
   social: { profiles: { alice: { name: 'Élodie 漢', avatar: 'robot' } }, friends: { alice: ['bob'] }, requests: {} },
   stats: { alice: { xp: 200, coins: 50 } },
   'topic-stats': { alice: { psg: { xp: 10 } } },
+  'user-reports': { reports: [{ reporterId: 'alice', targetId: 'bob', reason: 'insultes 🦊' }], blocks: { alice: ['bob'] }, flaggedNames: { bob: 1 }, future: { keep: true } },
 };
 
 for (const name of Object.keys(samples)) test(`${name} survives an exact entity round trip including order and unknown fields`, () => {
@@ -26,7 +27,7 @@ for (const name of Object.keys(samples)) test(`${name} survives an exact entity 
 });
 
 test('every supported store has a valid empty default', () => {
-  assert.equal(STORE_NAMES.length, 13);
+  assert.equal(STORE_NAMES.length, 14);
   for (const name of STORE_NAMES) {
     const value = emptyStore(name), encoded = encodeSnapshot(name, value);
     assert.deepEqual(decodeSnapshot(name, encoded.layout, encoded.records), value);

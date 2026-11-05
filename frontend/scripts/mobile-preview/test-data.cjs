@@ -6,7 +6,7 @@ const path = require('node:path');
 function createQaData(root, prefix) {
   fs.mkdirSync(root, { recursive: true });
   const dir = fs.mkdtempSync(path.join(root, prefix));
-  for (const name of ['account-links', 'async-challenges', 'category-stats', 'challenges', 'follows', 'match-history', 'messages', 'notifications', 'posts', 'reports', 'social', 'stats', 'topic-stats']) {
+  for (const name of ['account-links', 'async-challenges', 'category-stats', 'challenges', 'follows', 'match-history', 'messages', 'notifications', 'posts', 'reports', 'social', 'stats', 'topic-stats', 'user-reports']) {
     fs.writeFileSync(path.join(dir, `${name}.json`), '{}');
   }
   return dir;

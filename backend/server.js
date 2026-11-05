@@ -159,6 +159,8 @@ const actionLimiters = {
   leaderboardList: new RateLimiter(10 * 1000, 8),
   playerProfile: new RateLimiter(10 * 1000, 15),
   follow: new RateLimiter(60 * 1000, 30),
+  moderation: new RateLimiter(60 * 1000, 30),
+  moderationIp: new RateLimiter(60 * 1000, 120),
   postCreate: new RateLimiter(60 * 1000, 5),
   postReact: new RateLimiter(10 * 1000, 30),
   postReport: new RateLimiter(60 * 1000, 20),
@@ -610,6 +612,10 @@ function handleFollow(ws, data, state) {
     if (!allowAction(actionLimiters.follow, clientId, ws, 'FOLLOW_RATE_LIMITED')) return true;
     const targetId = String(data.targetId || '');
     if (!social.profileOf(targetId)) return true;
+    if (data.type === 'follow' && userReports.blockedPair(clientId, targetId)) {
+      game.send(ws, { type: 'follow_updated', targetId, isFollowing: false, ...follows.counts(targetId), mine: follows.counts(clientId), reason: 'blocked' });
+      return true;
+    }
     const result = data.type === 'follow' ? follows.follow(clientId, targetId) : follows.unfollow(clientId, targetId);
     game.send(ws, {
       type: 'follow_updated',
@@ -1018,6 +1024,11 @@ function requireAuth(ws, state) {
 }
 
 function startGameGuarded(players, categoryKey, options = {}) {
+  if (players.some((player, index) => players.slice(index + 1).some(peer => userReports.blockedPair(player.clientId, peer.clientId)))) {
+    if (options.socialChallenge) return Promise.reject(Error('PLAYERS_UNAVAILABLE'));
+    players.forEach(player => game.send(player.ws, { type: 'match_aborted', code: 'PLAYERS_UNAVAILABLE' }));
+    return Promise.resolve(null);
+  }
   players.forEach((p) => {
     pendingPlayers.add(p.id);
     if (p.clientId) pendingClients.add(p.clientId);
@@ -1057,7 +1068,7 @@ function handleGameplay(ws, data, state) {
     const text = typeof data.text === 'string' ? data.text.trim().slice(0, 200) : '';
     if (g && g.status === 'active' && text) {
       const sender = g.players.find((p) => p.id === playerId);
-      g.players.filter((p) => p.id !== playerId).forEach((p) => game.send(p.ws, {
+      g.players.filter((p) => p.id !== playerId && !userReports.blockedPair(state.clientId, p.clientId)).forEach((p) => game.send(p.ws, {
         type: 'game_chat', text, from: sender ? sender.name : 'Player',
       }));
       game.send(ws, { type: 'game_chat_sent', text });
@@ -1094,6 +1105,7 @@ function handleGameplay(ws, data, state) {
     const oppIdx = waitingPlayers.findIndex((w) =>
       w.categoryKey === categoryKey
       && w.clientId !== state.clientId
+      && !userReports.blockedPair(w.clientId, state.clientId)
       && w.ws.readyState === 1
       && !isBusy(w.id, w.clientId)
     );
@@ -1205,6 +1217,9 @@ function handleGameplay(ws, data, state) {
       return true;
     }
     if (room.players.length >= MAX_ROOM_PLAYERS) { game.send(ws, { type: 'room_full' }); return true; }
+    if (room.players.some(player => userReports.blockedPair(player.clientId, state.clientId))) {
+      game.send(ws, { type: 'room_unavailable' }); return true;
+    }
     state.name = cleanDisplayName(data.name, state.name);
     const avatar = gameplayAvatar(data, state);
     room.players.push({
@@ -1502,47 +1517,46 @@ app.post('/auth/delete-account', async (req, res) => {
 
 // --- User report & block (Guideline 1.2) ---
 
-app.post('/users/report', express.json(), async (req, res) => {
+async function moderateUser(req, res, action) {
+  if (!actionLimiters.moderationIp.check(getClientIp(req))) return res.status(429).set('Retry-After', '60').json({ code: 'MODERATION_RATE_LIMITED' });
   const token = authorizationBearer(req);
   if (!token) return res.status(401).json({ code: 'UNAUTHORIZED' });
-
-  let uid;
   try {
-    const decoded = await verifyFirebaseIdToken(token);
-    uid = decoded.uid;
+    const uid = await verifyIdToken(token);
+    if (shuttingDown || res.destroyed) {
+      if (!res.destroyed) res.status(503).json({ code: 'SERVER_RESTARTING' });
+      return;
+    }
+    if (!uid) return res.status(401).json({ code: 'INVALID_TOKEN' });
+    if (!actionLimiters.moderation.check(uid)) return res.status(429).set('Retry-After', '60').json({ code: 'MODERATION_RATE_LIMITED' });
+    let { targetId } = req.body || {};
+    const { targetName, reason } = req.body || {};
+    // Older clients send the opponent's transport ID instead of their account ID.
+    if (typeof targetId === 'string' && targetId.startsWith('player_') && !social.profileOf(targetId)) {
+      const session = game.findActiveSessionByClientId(uid) || game.findFinishedSessionByClientId(uid);
+      targetId = session?.game.players.find(player => player.id === targetId)?.clientId;
+    }
+    if (typeof targetId !== 'string' || !targetId.trim() || targetId.length > 200 || targetId === uid)
+      return res.status(400).json({ code: 'INVALID_TARGET' });
+    if (action === 'block') {
+      social.removeFriend(uid, targetId);
+      social.declineRequest(uid, targetId); social.declineRequest(targetId, uid);
+      follows.unfollow(uid, targetId); follows.unfollow(targetId, uid);
+    }
+    const ok = action === 'block' ? userReports.blockUser(uid, targetId)
+      : userReports.reportUser(uid, targetId, targetName, reason);
+    await flushAllJsonWriters();
+    if (action === 'block') {
+      game.send(social.getWs(uid), { type: 'friend_removed', id: targetId });
+      game.send(social.getWs(targetId), { type: 'friend_removed', id: uid });
+    }
+    res.set('Cache-Control', 'no-store').json({ ok });
   } catch {
-    const guest = verifyGuestToken(token);
-    if (!guest) return res.status(401).json({ code: 'INVALID_TOKEN' });
-    uid = guest;
+    if (!res.destroyed) res.status(503).json({ code: 'STORAGE_UNAVAILABLE' });
   }
-
-  const { targetId, targetName, reason } = req.body || {};
-  if (!targetId) return res.status(400).json({ code: 'MISSING_TARGET' });
-
-  const ok = userReports.reportUser(uid, targetId, targetName, reason);
-  res.json({ ok });
-});
-
-app.post('/users/block', express.json(), async (req, res) => {
-  const token = authorizationBearer(req);
-  if (!token) return res.status(401).json({ code: 'UNAUTHORIZED' });
-
-  let uid;
-  try {
-    const decoded = await verifyFirebaseIdToken(token);
-    uid = decoded.uid;
-  } catch {
-    const guest = verifyGuestToken(token);
-    if (!guest) return res.status(401).json({ code: 'INVALID_TOKEN' });
-    uid = guest;
-  }
-
-  const { targetId } = req.body || {};
-  if (!targetId) return res.status(400).json({ code: 'MISSING_TARGET' });
-
-  const ok = userReports.blockUser(uid, targetId);
-  res.json({ ok });
-});
+}
+app.post('/users/report', express.json(), (req, res) => moderateUser(req, res, 'report'));
+app.post('/users/block', express.json(), (req, res) => moderateUser(req, res, 'block'));
 
 app.get('/health', (req, res) =>
   res.json({
