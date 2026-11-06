@@ -116,7 +116,7 @@ body:has(.app-home),body:has(.app-themes),body:has(.app-profile) { background: v
 .themes-refined .search-bar input { min-width: 0; width: 100%; padding: 0 !important; border: 0 !important; background: transparent !important; color: var(--browse-ink) !important; font-size: 16px !important; }
 .themes-refined .search-bar input::placeholder { color: var(--browse-muted) !important; opacity: 1; }
 .themes-refined .family-list { gap: 12px !important; }
-.themes-refined .family-tile { --family-accent: #a82543; --family-wash: #fae8ed; grid-template-columns: 1fr; gap: 0; min-height: 160px; padding: 16px !important; border: 0 !important; border-radius: 20px !important; background: var(--browse-paper) !important; color: var(--browse-ink) !important; }
+.themes-refined .family-tile { --family-accent: #a82543; --family-wash: #fae8ed; grid-template-columns: 1fr; align-content: start; gap: 0; min-height: 120px; padding: 14px !important; border: 0 !important; border-radius: 20px !important; background: var(--browse-paper) !important; color: var(--browse-ink) !important; }
 .themes-refined .family-tile[data-family='sport'] { --family-accent: #8b540b; --family-wash: #f7edcb; }
 .themes-refined .family-tile[data-family='football'] { --family-accent: #28684d; --family-wash: #e0eee4; }
 .themes-refined .family-tile[data-family='cinema'] { --family-accent: #6f466e; --family-wash: #f1e3ee; }
@@ -126,9 +126,9 @@ body:has(.app-home),body:has(.app-themes),body:has(.app-profile) { background: v
 .themes-refined .family-tile[data-family='manga'] { --family-accent: #94412c; --family-wash: #f8e4db; }
 .themes-refined .family-tile[data-family='gaming'] { --family-accent: #305e89; --family-wash: #e0ebf5; }
 .themes-refined .family-tile[data-family='culture'] { --family-accent: #276a70; --family-wash: #dfeef0; }
-.themes-refined .family-tile .family-icon { grid-row: auto; width: 46px; height: 46px; display: grid; place-items: center; margin-bottom: 14px; background: var(--family-wash) !important; color: var(--family-accent) !important; border-radius: 14px !important; }
+.themes-refined .family-tile .family-icon { grid-row: auto; width: 40px; height: 40px; display: grid; place-items: center; margin-bottom: 8px; background: var(--family-wash) !important; color: var(--family-accent) !important; border-radius: 12px !important; }
 .themes-refined .family-tile .family-label { display: block; color: var(--browse-ink) !important; font-size: 16px !important; line-height: 1.2; }
-.themes-refined .family-tile .family-count { grid-column: 1; color: var(--browse-muted) !important; font-size: 12px !important; margin-top: 6px; }
+.themes-refined .family-tile .family-count { grid-column: 1; color: var(--browse-muted) !important; font-size: 12px !important; margin-top: 4px; }
 .themes-refined .topics-grid-v4 { gap: 12px !important; }
 .themes-refined .tile-v4 { border-radius: 19px !important; }
 .themes-refined .back-to-topics { min-height: 44px; margin-bottom: 12px; color: #fff !important; }
@@ -218,6 +218,46 @@ body:has(.app-home),body:has(.app-themes),body:has(.app-profile) { background: v
   .home-refined .topics-grid-v4,.home-refined .home-discovery { gap: 10px !important; }
   .home-refined .tile-v4__label { font-size: 13px !important; }
   .home-refined .personal-theme-level { font-size: 11px; }
-  .themes-refined .family-tile { padding: 14px !important; min-height: 150px; }
   .themes-refined .family-tile .family-label { font-size: 15px !important; }
+}
+
+/* On a wide screen the library has two distinct reading zones, while the
+   floating play dock keeps the same position and familiar destinations. */
+.profile-overview,.profile-activity { min-width: 0; }
+@media (min-width: 1000px) {
+  .app-home .home-refined,.app-themes .themes-refined,.app-profile .pf-v4 {
+    max-width: 1120px !important;
+    padding: 28px max(24px,var(--safe-left)) 32px max(24px,var(--safe-right)) !important;
+  }
+  .app-home .home-refined {
+    display: grid;
+    grid-template-columns: minmax(0,1.65fr) minmax(0,1fr);
+    grid-template-areas: 'header header' 'personal discovery' 'personal community';
+    gap: 28px 32px;
+    align-items: start;
+    align-content: start;
+  }
+  .app-home .home-refined .home-head { grid-area: header; margin: 0 !important; }
+  .home-refined section + section { margin-top: 0; }
+  .home-refined [aria-labelledby='home-my-themes'] { grid-area: personal; min-width: 0; }
+  .home-refined [aria-labelledby='home-discover'] { grid-area: discovery; min-width: 0; }
+  .home-refined .home-community-section { grid-area: community; margin-top: 0; min-width: 0; }
+  .home-refined .home-discovery { grid-template-columns: minmax(0,1fr); }
+  .app.app-home .home-refined .home-discovery .tile-v4 { aspect-ratio: 1.65 !important; }
+  .home-refined .home-discovery .tile-v4__cover { object-position: center 15%; }
+  .home-refined .home-discovery .tile-v4__label { font-size: 16px !important; }
+  .home-refined .tile-v4__label { font-size: 18px !important; }
+  .home-refined .home-discovery .tile-v4__big { transform: scale(.8); }
+  .home-refined .section-head-v4 { margin-bottom: 16px !important; }
+  .home-refined .topic-tile-wrap:has(.personal-theme-level) .tile-v4__caption { padding-bottom: 24px; }
+  .home-refined .personal-theme-level { font-size: 13px; }
+  .home-refined .home-community-teaser { min-height: 112px; }
+  .app-themes .themes-refined .family-list,
+  .app-themes .themes-refined .topics-grid-v4 { grid-template-columns: repeat(4,minmax(0,1fr)) !important; gap: 16px !important; }
+  .themes-refined .search-bar { max-width: 560px; }
+  .app-profile .profile-layout { display: grid; grid-template-columns: 320px minmax(0,1fr); gap: 32px; align-items: start; }
+  .app-profile .profile-overview { padding-top: 14px; }
+  .app-profile .profile-activity > .pf-section-title:first-child { margin-top: 0 !important; }
+  .app-profile .profile-activity .profile-stats { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .app-home .navbar,.app-themes .navbar,.app-profile .navbar { width: min(680px,calc(100% - 48px)); }
 }

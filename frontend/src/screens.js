@@ -325,6 +325,8 @@ export function ProfileContent({
   return (
     <main id="main-content" tabIndex={-1} aria-labelledby="profile-title" className="container pf-v4">
       {controls && <BrowseHeader controls={controls} />}
+      <div className="profile-layout">
+      <div className="profile-overview">
       {/* ── Hero ──────────────────────────────────────────── */}
       <div className="pf-hero">
         <div className="pf-avatar-wrap">
@@ -400,6 +402,8 @@ export function ProfileContent({
         </div>
       )}
 
+      </div>
+      <div className="profile-activity">
       {/* ── Level progression card ────────────────────────── */}
       <h2 className="pf-section-title">{t('overallProgress')}</h2>
       <div className="pf-level-card">
@@ -476,6 +480,8 @@ export function ProfileContent({
       <a className="privacy-link" href="/privacy.html" target="_blank" rel="noopener noreferrer">
         {t('privacyPolicy')}
       </a>
+      </div>
+      </div>
     </main>
   );
 }

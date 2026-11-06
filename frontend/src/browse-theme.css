@@ -75,6 +75,8 @@
 :root[data-theme='dark'] .navbar .nav-item { color: var(--browse-muted) !important; }
 :root[data-theme='dark'] .navbar .nav-item.active { color: var(--browse-accent) !important; }
 :root[data-theme='dark'] .navbar .nav-bolt { color: #30200b !important; }
+:root[data-theme='dark'] .navbar button:focus-visible { outline-color: #ffdd55; }
+:root[data-theme='dark'] .messenger :is(button,input,textarea,summary):focus-visible { outline-color: #ffdd55; }
 :root[data-theme='dark'] .mobile-controls-panel { background: var(--browse-paper) !important; border-color: var(--browse-line) !important; color: var(--browse-ink) !important; }
 :root[data-theme='dark'] .mobile-controls-panel button { color: var(--browse-ink) !important; }
 :root[data-theme='dark'] .themes-refined .family-tile .family-icon { background: var(--browse-soft) !important; color: var(--browse-accent) !important; }
