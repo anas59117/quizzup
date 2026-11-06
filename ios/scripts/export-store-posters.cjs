@@ -28,10 +28,14 @@ const english = [
   const files = [];
   try {
     for (const language of ['fr', 'en']) {
+      for (const profile of profiles) {
       let html = template;
-      if (language === 'en') for (const [before, after] of english) html = html.replaceAll(before, after);
+      if (language === 'en') {
+        html = html.replace('lang="fr"', 'lang="en"');
+        for (const [before, after] of english) html = html.replaceAll(before, after);
+      }
       for (const screen of ['faceoff', 'question', 'answer', 'result']) {
-        const capture = manifest.captures.find(c => c.language === language && c.profile === profiles[0].key && c.screen === screen);
+        const capture = manifest.captures.find(c => c.language === language && c.profile === profile.key && c.screen === screen);
         if (!capture) throw Error(`Missing native capture ${language}/${screen}`);
         const image = fs.readFileSync(path.join(source, capture.path));
         if (crypto.createHash('sha256').update(image).digest('hex') !== capture.sha256) throw Error(`Changed capture ${capture.path}`);
@@ -42,8 +46,7 @@ const english = [
       await page.evaluate(() => document.fonts.ready);
       const panorama = await page.screenshot();
       await page.close();
-      await sharp(panorama).resize(2150, 932).png().toFile(path.join(output, `${language}-preview.png`));
-      for (const profile of profiles.slice(0, 2)) {
+      if (profile.key === profiles[0].key) await sharp(panorama).resize(2150, 932).png().toFile(path.join(output, `${language}-preview.png`));
         for (let index = 0; index < 5; index++) {
           const relative = `${language}/${profile.width}x${profile.height}/${String(index + 1).padStart(2, '0')}.png`;
           const filename = path.join(output, relative);
@@ -52,11 +55,11 @@ const english = [
             .resize(profile.width, profile.height).flatten({ background: '#bd1235' }).removeAlpha().png().toFile(filename);
           const meta = await sharp(filename).metadata();
           if (meta.width !== profile.width || meta.height !== profile.height || meta.hasAlpha) throw Error('Invalid export ' + relative);
-          files.push({ path: relative, width: meta.width, height: meta.height, alpha: meta.hasAlpha });
+          files.push({ path: relative, nativeProfile: profile.key, width: meta.width, height: meta.height, alpha: meta.hasAlpha });
         }
       }
     }
   } finally { await browser.close(); }
-  fs.writeFileSync(path.join(output, 'verification.json'), JSON.stringify({ nativeCommit: manifest.commit, nativeCaptureDate: manifest.capturedAt, marketingFraming: true, submittedToApple: false, files }, null, 2));
+  fs.writeFileSync(path.join(output, 'verification.json'), JSON.stringify({ nativeCommit: manifest.commit, nativeCaptureDate: manifest.capturedAt, contentLanguage: manifest.contentLanguage, marketingFraming: true, submittedToApple: false, files }, null, 2));
   console.log(`Verified ${files.length} French/English posters from genuine native captures: ${output}`);
 })().catch(error => { console.error(error.message); process.exitCode = 1; });
