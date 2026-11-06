@@ -85,95 +85,68 @@ const PREVIEW_SUB = {
   ligue_champions: { line1: 'LIGUE DES', line2: 'CHAMPIONS', eyebrow: 'SPORT · FOOTBALL', sub: 'UEFA', desc: 'Finales, légendes & records de la plus grande compétition européenne.' },
 };
 
+// Direction: cinematic artwork above a stable editorial reading surface.
+// Rules: preserve cover framing, lead with play, keep statistics secondary.
 export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChallenge, pending, friendsOnTopic = [], controls, onCommunity, onLeaderboard, following, onToggleFollow }) {
   const { t, lang } = useI18n();
   const [failedCover, setFailedCover] = useState(null);
+  const [loadedCover, setLoadedCover] = useState(null);
   const fr = lang === 'fr';
   if (!category) return null;
   const cover = getTopicCover(category);
-  const artwork = cover?.approved && failedCover !== cover.src ? cover : null;
-  const preview = PREVIEW_SUB[category.key] || { eyebrow: category.family ? famLabel(t, category.family) : 'QUIZ', desc: category.desc };
-  const topicStats = (stats && stats.topics || []).find((t) => t.key === category.key) || {};
+  const artwork = cover?.src && failedCover !== cover.src ? cover : null;
+  const preview = PREVIEW_SUB[category.key] || { desc: category.desc };
+  const title = localizedTopicTitle(category, lang);
+  const family = category.family ? famLabel(t, category.family) : 'Quiz';
+  const description = preview.desc || category.desc || '';
+  const topicStats = (stats?.topics || []).find(topic => topic.key === category.key) || {};
   const completion = Number.isFinite(topicStats.completion) ? `${topicStats.completion}%` : '—';
   const bestStreak = Number.isFinite(topicStats.bestStreak) ? topicStats.bestStreak : '—';
   const topicLevel = topicStats.level || 1;
+  const tint = ({ spider_man: '#651a2a', marvel: '#651a2a', foot_fr: '#142e55', harry_potter: '#58401e', minecraft: '#294d36', rap_fr: '#4d192c', ligue_champions: '#142e55', liga_portugal: '#194c3c' })[category.key]
+    || ({ football: '#142e55', sport: '#183c49', music: '#4d192c', gaming: '#273c42', cinema: '#42302f', sagas: '#493326', series: '#483049', manga: '#423241', culture: '#263f54' })[category.family] || '#4b2436';
+  const resolvedImage = artwork && loadedCover?.src === artwork.src ? loadedCover.url : null;
   return (
-    <main id="main-content" tabIndex={-1} aria-labelledby="quiz-title" className={`container wide category-preview-v4${artwork ? ' cp-has-artwork' : ''}`} data-topic={category.key} data-family={category.family}>
+    <main id="main-content" tabIndex={-1} aria-labelledby="quiz-title" className={`container wide category-preview-v4 cp-detail${artwork ? ' cp-has-artwork' : ''}`} data-topic={category.key} data-family={category.family}
+      style={{ '--cp-tint': tint, '--cp-image': resolvedImage ? `url(${JSON.stringify(resolvedImage)})` : 'none', '--cp-fit': category.key === 'foot_fr' || artwork?.embeddedTitle || artwork?.fit === 'contain' ? 'contain' : 'cover', '--cp-focal': category.key === 'spider_man' ? 'center 20%' : artwork?.focal || 'center' }}>
       <div className="cp-bg" aria-hidden="true" />
-
-      {/* Decorative overlay for Spider-Man / Marvel */}
-      {!artwork && (category.key === 'spider_man' || category.key === 'marvel') && (
-        <svg className="cp-web" viewBox="0 0 100 100" aria-hidden="true">
-          <g fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="0.5">
-            <path d="M50 50L0 0M50 50L100 0M50 50L0 100M50 50L100 100M50 50L50 0M50 50L50 100M50 50L0 50M50 50L100 50"/>
-            <path d="M30 30A28 28 0 0 1 70 30M20 50A42 42 0 0 1 80 50M30 70A28 28 0 0 0 70 70M35 35A20 20 0 0 1 65 35M25 50A32 32 0 0 1 75 50" strokeDasharray="2 2"/>
-          </g>
-        </svg>
-      )}
-
-      <div className="cp-head">
+      <header className="cp-head">
         <div className="cp-bg cp-header-bg" aria-hidden="true" />
-        <button className="cp-back" onClick={onBack} aria-label={t('back')}>
-          <Icon name="arrow" size={18} className="cp-back-ic" />
-        </button>
+        <button className="cp-back" onClick={onBack} aria-label={t('back')}><Icon name="arrow" size={18} className="cp-back-ic" /></button>
         <div className="cp-head-right">
-          <button className="cp-icon-btn" aria-label={following ? (fr ? 'Ne plus suivre ce thème' : 'Unfollow theme') : (fr ? 'Suivre ce thème' : 'Follow theme')} aria-pressed={!!following} onClick={onToggleFollow}>
-            <Icon name="heart" size={18} />
-          </button>
-          <button className="cp-icon-btn" aria-label="Partager">
-            <Icon name="share" size={18} />
-          </button>
+          <button className="cp-icon-btn" aria-label={following ? (fr ? 'Ne plus suivre ce thème' : 'Unfollow theme') : (fr ? 'Suivre ce thème' : 'Follow theme')} aria-pressed={!!following} onClick={onToggleFollow}><Icon name="heart" size={18} /></button>
           {controls}
         </div>
+      </header>
+      <div className="cp-visual" aria-hidden="true">
+        <div className="cp-visual-ambience" />
+        {artwork ? <img className="cp-artwork" src={artwork.src} srcSet={artwork.srcSet} sizes="(min-width: 900px) 600px, calc(100vw - 32px)" alt="" fetchpriority="high" decoding="async"
+          onLoad={event => setLoadedCover({ src: artwork.src, url: event.currentTarget.currentSrc || artwork.src })} onError={() => setFailedCover(artwork.src)} />
+          : <div className="cp-cover-fallback"><span>{title.split(/\s+/).slice(0, 2).map(word => word[0]).join('')}</span><Icon name="bolt" size={36} /></div>}
       </div>
-
       <div className="cp-hero">
-        <div className="cp-eyebrow">{preview.eyebrow}</div>
-        <h1 id="quiz-title" tabIndex={-1} className="cp-title">
-          {artwork || cover?.localizedTitle ? localizedTopicTitle(category, lang) : preview.line1 ? (
-            <>
-              <span className="cp-title-l">{preview.line1}</span>
-              {preview.line2 && <span className="cp-title-l">{preview.line2}</span>}
-            </>
-          ) : (
-            <span className="cp-title-l">{category.label}</span>
-          )}
-          {!artwork && preview.sub && <span className="cp-subtitle">{preview.sub}</span>}
-        </h1>
-        {artwork && <img className="cp-artwork" src={artwork.src} srcSet={artwork.srcSet} sizes="(max-width: 480px) calc(100vw - 48px), 320px" alt="" fetchpriority="high" decoding="async" onError={() => setFailedCover(artwork.src)} />}
-        <p className="cp-info">{preview.desc}</p>
+        <div className="cp-eyebrow">{family}</div>
+        <h1 id="quiz-title" tabIndex={-1} className="cp-title">{title}</h1>
+        {description && <p className="cp-info">{description}</p>}
       </div>
-
-      <div className="cp-stats">
-        <div className="cp-stat"><b>{completion}</b><span>{completion === '—' ? (fr ? 'Progression à découvrir' : 'Progress unavailable') : (fr ? 'complété' : 'completed')}</span></div>
-        <div className="cp-stat"><b>{bestStreak}</b><span>meilleure série</span></div>
-        <div className="cp-stat"><b>N{topicLevel}</b><span>niveau actuel</span></div>
-      </div>
-
       <div className="cp-cta">
-        <button className="cp-play" onClick={onPlay} disabled={pending}>
-          <Icon name="bolt" size={18} />
-          Jouer maintenant
-        </button>
-        <button className="cp-ghost" onClick={onChallenge} disabled={pending} aria-label="Défier un ami">
-          <Icon name="profile" size={18} />
-        </button>
+        <button className="cp-play" onClick={onPlay} disabled={pending}><Icon name="bolt" size={20} />{fr ? 'Jouer maintenant' : 'Play now'}</button>
+        <button className="cp-ghost" onClick={onChallenge} disabled={pending} aria-label={fr ? 'Défier un ami' : 'Challenge a friend'}><Icon name="users" size={22} /></button>
       </div>
-
-<div className="social-entry-row"><button onClick={onCommunity}>{fr ? 'Communauté' : 'Community'}</button><button onClick={onLeaderboard}>{fr ? 'Classement' : 'Ranking'}</button></div>
-      <div className="cp-friends">
-        <h3>Tes amis sur ce quiz</h3>
-        {friendsOnTopic.length > 0 ? (
-          <div className="cp-friends-row">
-            {friendsOnTopic.slice(0, 4).map((f) => (
-              <div key={f.id} className="cp-friend-ava">{(f.name || '?')[0].toUpperCase()}</div>
-            ))}
-            {friendsOnTopic.length > 4 && <span className="cp-friends-more">+ {friendsOnTopic.length - 4} autres</span>}
-          </div>
-        ) : (
-          <div className="cp-friends-empty">Personne pour l'instant. Sois le premier à défier tes amis.</div>
-        )}
+      <div className="cp-stats" aria-label={fr ? 'Ta progression' : 'Your progress'}>
+        <div className="cp-stat"><b>{completion}</b><span>{fr ? 'Progression' : 'Progress'}</span></div>
+        <div className="cp-stat"><b>{bestStreak}</b><span>{fr ? 'Meilleure série' : 'Best streak'}</span></div>
+        <div className="cp-stat"><b>N{topicLevel}</b><span>{fr ? 'Niveau actuel' : 'Current level'}</span></div>
       </div>
+      {description && <details className="cp-about"><summary>{fr ? 'À propos de ce quiz' : 'About this quiz'}<Icon name="info" size={18} /></summary><p>{description}</p></details>}
+      <div className="social-entry-row"><button onClick={onCommunity}><Icon name="chat" size={18} />{fr ? 'Communauté' : 'Community'}</button><button onClick={onLeaderboard}><Icon name="trophy" size={18} />{fr ? 'Classement' : 'Ranking'}</button></div>
+      <section className="cp-friends" aria-labelledby="quiz-friends-title">
+        <h2 id="quiz-friends-title">{fr ? 'Tes amis sur ce quiz' : 'Your friends on this quiz'}</h2>
+        {friendsOnTopic.length > 0 ? <div className="cp-friends-row">
+          {friendsOnTopic.slice(0, 4).map(friend => <div key={friend.id} className="cp-friend-ava" title={friend.name}>{(friend.name || '?')[0].toUpperCase()}</div>)}
+          {friendsOnTopic.length > 4 && <span className="cp-friends-more">+ {friendsOnTopic.length - 4} {fr ? 'autres' : 'more'}</span>}
+        </div> : <p className="cp-friends-empty">{fr ? 'Invite un ami pour lancer votre premier duel sur ce thème.' : 'Invite a friend to start your first duel on this topic.'}</p>}
+      </section>
     </main>
   );
 }

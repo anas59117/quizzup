@@ -1,27 +1,29 @@
 const assert = require('assert/strict');
 const path = require('path');
-const { chromium } = require(process.env.PLAYWRIGHT_PATH || 'C:/Users/User/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const { chromium, webkit } = require(process.env.PLAYWRIGHT_PATH || 'C:/Users/User/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const server = require('./serve.cjs');
 
 (async () => {
   await new Promise(resolve => server.listen(4327, '127.0.0.1', resolve));
-  const browser = await chromium.launch({ executablePath: process.env.EDGE_PATH || 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', headless: true });
+  const browser = process.env.QUIZ_WEBKIT === '1' ? await webkit.launch({headless:true}) : await chromium.launch({ executablePath: process.env.EDGE_PATH || 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', headless: true });
   const errors = [];
   try {
-    for (const topic of ['rap_fr','harry_potter','minecraft','marvel']) {
+    for (const topic of ['spider_man','foot_fr','harry_potter','booba']) {
       for (const [width,height] of (process.env.QUIZ_QA_FAST === '1' ? [[390,844]] : [[320,568],[390,664],[390,844],[430,932],[844,390],[1440,900]])) {
         const page = await browser.newPage({ viewport: { width,height }, reducedMotion: 'reduce' });
+        await page.addInitScript(theme=>localStorage.setItem('quizzup-theme',theme),process.env.QUIZ_DARK==='1'?'dark':'light');
         if (process.env.QUIZ_QA_FAST === '1') await page.route(/https:\/\/fonts\.(googleapis|gstatic)\.com\//,route=>route.abort());
         page.on('pageerror', error => errors.push(error.message));
         await page.goto(`http://127.0.0.1:4327/?quiz&topic=${topic}`);
         await page.locator('.cp-head').waitFor();
+        await page.locator('.cp-artwork').evaluate(image => image.complete ? Promise.resolve() : new Promise(resolve=>{image.onload=resolve;image.onerror=resolve;}));
         await page.evaluate(() => document.fonts.ready);
         assert.equal(await page.locator('.cp-head .cp-header-bg').count(),1,'The themed background does not continue behind the quiz header');
         const headerTheme=await page.evaluate(()=>({
           page:getComputedStyle(document.querySelector('.category-preview-v4 > .cp-bg')).backgroundImage,
           header:getComputedStyle(document.querySelector('.cp-header-bg')).backgroundImage,
         }));
-        assert.equal(headerTheme.header,headerTheme.page,'Quiz header uses a different background from its theme');
+        assert.equal(headerTheme.page,'none','The shared reading surface must not use a themed image');
         const buttonContrast=await page.locator('.cp-head button').evaluateAll(buttons=>{
           const rgba=value=>value.match(/[\d.]+/g).map(Number);
           const luminance=rgb=>rgb.map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0);
@@ -42,6 +44,10 @@ const server = require('./serve.cjs');
             window.scrollTo(0,0);
           },{safeTop,safeBottom});
           await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+          if (width < 900 && height >= 664) {
+            const play = await page.locator('.cp-play').boundingBox(), nav = await page.locator('.navbar').boundingBox();
+            assert(play.y + play.height <= nav.y, `Primary action hidden on first view: ${topic} ${width}x${height}`);
+          }
           for (const scrolled of [false,true]) {
             if (scrolled) await page.evaluate(()=>window.scrollTo(0,document.documentElement.scrollHeight));
             await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
@@ -53,12 +59,12 @@ const server = require('./serve.cjs');
                 return {x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height};
               });
               const ancestors=[]; for(let el=document.querySelector('.cp-head');el;el=el.parentElement){const css=getComputedStyle(el);ancestors.push({name:el.className||el.tagName,overflow:css.overflow,transform:css.transform,position:css.position,top:css.top});}
-              return {bg:{top:bg.top,bottom:bg.bottom,left:bg.left,right:bg.right},header:{top:header.top,bottom:header.bottom},controls,width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,ancestors,rootStyle:document.documentElement.style.cssText,safe:getComputedStyle(document.querySelector('.cp-head')).getPropertyValue('--safe-top')};
+              return {bg:{top:bg.top,bottom:bg.bottom,left:bg.left,right:bg.right},header:{top:header.top,bottom:header.bottom},controls,width:document.documentElement.clientWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,ancestors,rootStyle:document.documentElement.style.cssText,safe:getComputedStyle(document.querySelector('.cp-head')).getPropertyValue('--safe-top')};
             });
-            assert(geometry.bg.top<=0 && geometry.bg.bottom>=height && geometry.bg.left<=0 && geometry.bg.right>=width,
+            assert(geometry.bg.top<=0 && geometry.bg.bottom>=height && geometry.bg.left<=0 && geometry.bg.right>=geometry.width,
               `Broken quiz background ${topic} ${width}x${height} scrolled=${scrolled}: ${JSON.stringify(geometry.bg)}`);
             assert(geometry.header.top>=safeTop-1,`Quiz header under safe area: ${topic} ${width}x${height} safe=${safeTop} scrolled=${scrolled}: ${JSON.stringify(geometry)}`);
-            assert(geometry.controls.length>=5,`Quiz global controls outside its header: ${topic}`);
+            assert(geometry.controls.length>=4,`Quiz global controls outside its header: ${topic}`);
             assert(geometry.controls.every(r=>r.y>=safeTop && r.width>=44 && r.height>=44 && r.x>=0 && r.right<=width && r.bottom<=height),
               `Clipped quiz controls ${topic} ${width}x${height}: ${JSON.stringify(geometry.controls)}`);
             assert(geometry.scrollWidth<=width,`Horizontal overflow ${topic}`);
@@ -81,7 +87,7 @@ const server = require('./serve.cjs');
         }
         if (width===390 && height===844) {
           await page.evaluate(()=>window.scrollTo(0,0));
-          await page.screenshot({path:path.resolve(__dirname,`../../.mobile-preview/quiz-fixed-${topic}.png`),fullPage:true});
+          await page.screenshot({path:path.resolve(__dirname,`../../.mobile-preview/quiz-detail-${topic}-${process.env.QUIZ_DARK==='1'?'dark':'light'}.png`),fullPage:true});
         }
         console.log(`PASS ${topic} ${width}x${height} · scroll, safe insets, toolbar resize`);
         await page.close();
