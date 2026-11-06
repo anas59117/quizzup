@@ -6,6 +6,7 @@ import SwiftUI
 struct NativeProfileView: View {
     @EnvironmentObject var game: GameSocket
     @EnvironmentObject var auth: AuthManager
+    @State private var showSettings = false
     var onOpenMessages: () -> Void = {}
     private var fr: Bool { game.lang == "fr" }
     private var level: Int { game.stats?.level ?? 1 }
@@ -34,6 +35,7 @@ struct NativeProfileView: View {
             .frame(maxWidth: 600).frame(maxWidth: .infinity)
         }
         .refreshable { game.requestProfile() }
+        .sheet(isPresented: $showSettings) { NativeSettingsView() }
     }
 
     private var identity: some View {
@@ -157,8 +159,15 @@ struct NativeProfileView: View {
                     Text(email).font(.system(size: 14)).foregroundColor(Theme.muted)
                         .textSelection(.enabled)
                 }
-                Text(fr ? "Langue, déconnexion et suppression du compte dans les réglages." : "Find language, sign out and account deletion in Settings.")
-                    .font(.system(size: 13)).foregroundColor(Theme.muted)
+                Button { showSettings = true } label: {
+                    HStack {
+                        Label(fr ? "Réglages du compte" : "Account settings", systemImage: "gearshape")
+                        Spacer()
+                        Image(systemName: "chevron.right").font(.system(size: 12))
+                    }
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundColor(Theme.brand).frame(minHeight: 44)
+                }
             }
             .padding(18).frame(maxWidth: .infinity, alignment: .leading)
             .foregroundColor(Theme.ink)

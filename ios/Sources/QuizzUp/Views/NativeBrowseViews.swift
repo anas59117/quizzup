@@ -244,6 +244,7 @@ struct NativeTopicDetail: View {
             .padding(24).frame(maxWidth: 550).frame(maxWidth: .infinity)
         }
         .background(Theme.brand.ignoresSafeArea())
+        .tint(.white)
         .toolbar(.visible, for: .navigationBar)
         .toolbarBackground(Theme.brand, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
