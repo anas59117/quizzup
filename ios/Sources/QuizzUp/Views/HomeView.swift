@@ -1,127 +1,214 @@
+// Direction: warm editorial, matching the website's red browse canvas.
+// Rules: ivory controls, outlined symbols, true account data.
+// Signature: four equal cinematic covers with readable bottom captions.
 import SwiftUI
+
+private enum BrowseTab: String {
+    case home, themes, messages, profile
+    var symbol: String {
+        switch self {
+        case .home: return "house"
+        case .themes: return "square.grid.2x2"
+        case .messages: return "bubble.left.and.bubble.right"
+        case .profile: return "person.crop.circle"
+        }
+    }
+    func title(fr: Bool) -> String {
+        switch self {
+        case .home: return fr ? "Accueil" : "Home"
+        case .themes: return fr ? "Thèmes" : "Themes"
+        case .messages: return "Messages"
+        case .profile: return fr ? "Profil" : "Profile"
+        }
+    }
+}
 
 struct HomeView: View {
     @EnvironmentObject var game: GameSocket
-    @EnvironmentObject var auth: AuthManager
-    @State private var showDeleteConfirm = false
-    private let columns = Array(repeating: GridItem(.flexible(), spacing: 12), count: 3)
+    @State private var tab: BrowseTab = .home
+    @State private var path = NavigationPath()
+    @State private var showSettings = false
+    @State private var showPlay = false
+    @State private var focusSearch = false
+    private var fr: Bool { game.lang == "fr" }
+
+    var body: some View {
+        NavigationStack(path: $path) {
+            VStack(spacing: 0) {
+                header
+                Group {
+                    switch tab {
+                    case .home: NativeHomeContent(onSeeAll: { select(.themes) })
+                    case .themes: NativeThemesView(focusSearch: $focusSearch)
+                    case .messages: NativeMessagesView()
+                    case .profile: NativeProfileView(onOpenMessages: { select(.messages) })
+                    }
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
+            .background(Theme.brand.ignoresSafeArea())
+            .toolbar(.hidden, for: .navigationBar)
+            .navigationDestination(for: Category.self) { category in
+                NativeTopicDetail(category: category)
+            }
+        }
+        .tint(Theme.brand)
+        .safeAreaInset(edge: .bottom, spacing: 0) { dock }
+        .sheet(isPresented: $showSettings) { NativeSettingsView() }
+        .sheet(isPresented: $showPlay) { NativePlaySheet(category: nil) }
+        .onAppear {
+            if game.categories.isEmpty { game.loadCategories() }
+            game.requestProfile()
+        }
+    }
+
+    private var header: some View {
+        HStack(spacing: 0) {
+            NativeBrandLogo()
+            Spacer(minLength: 12)
+            Button {
+                select(.themes)
+                focusSearch = true
+            } label: {
+                Image(systemName: "magnifyingglass")
+                    .font(.system(size: 22)).frame(width: 44, height: 44)
+            }
+            .accessibilityLabel(fr ? "Rechercher un thème" : "Search themes")
+            Button { showSettings = true } label: {
+                Image(systemName: "gearshape")
+                    .font(.system(size: 22)).frame(width: 44, height: 44)
+            }
+            .accessibilityLabel(fr ? "Réglages" : "Settings")
+        }
+        .foregroundColor(.white)
+        .padding(.horizontal, 16).padding(.top, 8).padding(.bottom, 16)
+        .frame(maxWidth: 600).frame(maxWidth: .infinity)
+        .background(Theme.brand)
+    }
+
+    private var dock: some View {
+        HStack(spacing: 0) {
+            dockItem(.home)
+            dockItem(.themes)
+            Button { showPlay = true } label: {
+                VStack(spacing: 3) {
+                    Image(systemName: "bolt.fill")
+                        .font(.system(size: 23, weight: .bold))
+                        .frame(width: 48, height: 44)
+                        .background(Theme.gold, in: RoundedRectangle(cornerRadius: 15))
+                    Text(fr ? "Jouer" : "Play").font(.system(size: 11, weight: .bold))
+                }
+                .foregroundColor(Theme.ink)
+                .frame(maxWidth: .infinity, minHeight: 62)
+                .contentShape(Rectangle())
+            }
+            .disabled(game.isStarting)
+            dockItem(.messages)
+            dockItem(.profile)
+        }
+        .buttonStyle(.plain)
+        .padding(.horizontal, 6).padding(.top, 8).padding(.bottom, 2)
+        .frame(maxWidth: 600).frame(maxWidth: .infinity)
+        .background(Theme.paper.ignoresSafeArea(edges: .bottom))
+        .overlay(alignment: .top) { Theme.ink.opacity(0.12).frame(height: 1) }
+    }
+
+    private func dockItem(_ item: BrowseTab) -> some View {
+        Button { select(item) } label: {
+            VStack(spacing: 6) {
+                Image(systemName: item.symbol)
+                    .font(.system(size: 22, weight: tab == item ? .semibold : .regular))
+                Text(item.title(fr: fr))
+                    .font(.system(size: 10, weight: tab == item ? .bold : .medium))
+            }
+            .foregroundColor(tab == item ? Theme.brand : Theme.muted)
+            .frame(maxWidth: .infinity, minHeight: 62).contentShape(Rectangle())
+        }
+        .accessibilityAddTraits(tab == item ? .isSelected : [])
+    }
+
+    private func select(_ destination: BrowseTab) {
+        path = NavigationPath()
+        tab = destination
+        if destination == .profile || destination == .messages { game.requestProfile() }
+    }
+}
+
+private struct NativeHomeContent: View {
+    @EnvironmentObject var game: GameSocket
+    let onSeeAll: () -> Void
+    private let columns = [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)]
+    private var fr: Bool { game.lang == "fr" }
+    private var personalKeys: [String] {
+        var seen = Set<String>()
+        return (game.followedThemes + game.topicProgress.map(\.key)).filter { seen.insert($0).inserted }
+    }
+    private var ordered: [Category] {
+        let keys = personalKeys + NativeCatalog.featuredKeys
+        var seen = Set<String>()
+        let preferred = keys.compactMap { key in game.categories.first { $0.key == key } }
+        return (preferred + game.categories).filter { seen.insert($0.key).inserted }
+    }
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text("\(game.t("hey", ["name": game.name])) 👋").font(.caption).foregroundColor(Theme.textDim)
-                        (Text("Quizz").font(.title2.bold()) + Text("Up").font(.title2.bold()).foregroundColor(Theme.accent))
-                    }
-                    Spacer()
-                    Button {
-                        auth.signOut()
-                        game.resetForSignOut()
-                    } label: {
-                        Image(systemName: "rectangle.portrait.and.arrow.right")
-                    }
-                    .font(.system(size: 16))
-                    .foregroundColor(Theme.textDim)
-                    Button(game.lang == "fr" ? "🇫🇷" : "🇬🇧") { game.toggleLang() }
-                        .font(.system(size: 18))
-                    Text(game.avatar).font(.system(size: 20))
-                        .frame(width: 40, height: 40)
-                        .background(Theme.accent)
-                        .clipShape(Circle())
-                }
-
-                Button {
-                    game.soloMode.toggle()
-                } label: {
-                    Text(game.soloMode ? "🧍 \(game.t("solo"))" : "👥 \(game.t("multiplayer"))")
-                        .font(.caption.bold())
-                        .padding(.horizontal, 14).padding(.vertical, 6)
-                        .background(game.soloMode ? Theme.accent : Theme.surface)
-                        .foregroundColor(game.soloMode ? .white : Theme.textDim)
-                        .cornerRadius(20)
-                        .overlay(RoundedRectangle(cornerRadius: 20).stroke(Theme.border, lineWidth: game.soloMode ? 0 : 1))
-                }
-                .frame(maxWidth: .infinity, alignment: .trailing)
-
-                Button { game.quickMatch() } label: {
+            VStack(alignment: .leading, spacing: 24) {
+                VStack(alignment: .leading, spacing: 12) {
                     HStack {
-                        VStack(alignment: .leading) {
-                            Text("⚡ \(game.t("quickPlay"))").font(.headline.bold())
-                            Text(game.t("randomTopic")).font(.caption).opacity(0.8)
-                        }
-                        Spacer()
+                        NativeSectionTitle(title: fr ? "Mes thèmes" : "My themes")
+                        Spacer(minLength: 6)
+                        Button(action: onSeeAll) {
+                            HStack(spacing: 5) {
+                                Text(fr ? "Tout voir" : "See all").font(.system(size: 14, weight: .medium))
+                                Image(systemName: "arrow.right").font(.system(size: 13))
+                            }.frame(minHeight: 44)
+                        }.foregroundColor(.white)
                     }
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Theme.accent)
-                    .cornerRadius(14)
-                    .opacity(game.isStarting ? 0.6 : 1)
-                }
-                .disabled(game.isStarting)
-
-                Text("🔥 \(game.t("allThemes"))").font(.caption.bold()).foregroundColor(Theme.textDim)
-
-                LazyVGrid(columns: columns, spacing: 16) {
-                    ForEach(game.categories) { c in
-                        Button { game.startWithCategory(c.key) } label: {
-                            VStack(spacing: 6) {
-                                Text(c.icon).font(.system(size: 26))
-                                    .frame(width: 56, height: 56)
-                                    .background(Theme.surface2)
-                                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                                Text(c.label).font(.caption2.bold())
-                                    .foregroundColor(Theme.text)
-                                    .multilineTextAlignment(.center)
-                                    .lineLimit(2)
+                    if personalKeys.isEmpty {
+                        Text(fr ? "Quelques idées pour commencer" : "Suggestions to get started")
+                            .font(.system(size: 13)).foregroundColor(.white.opacity(0.9))
+                    }
+                    if ordered.isEmpty {
+                        NativeCatalogEmptyView()
+                    } else {
+                        LazyVGrid(columns: columns, spacing: 12) {
+                            ForEach(Array(ordered.prefix(4))) { category in
+                                NavigationLink(value: category) {
+                                    NativeTopicTile(category: category, level: game.topicProgress.first { $0.key == category.key }?.level)
+                                }.buttonStyle(.plain)
                             }
                         }
                     }
                 }
-                .disabled(game.isStarting)
-                .opacity(game.isStarting ? 0.6 : 1)
-                // Account deletion — App Store Guideline 5.1.1(v)
-                Button {
-                    showDeleteConfirm = true
-                } label: {
-                    Text(game.t("deleteAccount"))
-                        .font(.caption)
-                        .foregroundColor(.red.opacity(0.8))
+                if ordered.count > 4 {
+                    VStack(alignment: .leading, spacing: 12) {
+                        NativeSectionTitle(title: fr ? "À découvrir" : "Discover")
+                        LazyVGrid(columns: columns, spacing: 12) {
+                            ForEach(Array(ordered.dropFirst(4).prefix(2))) { category in
+                                NavigationLink(value: category) { NativeTopicTile(category: category) }
+                                    .buttonStyle(.plain)
+                            }
+                        }
+                    }
                 }
-                .frame(maxWidth: .infinity, alignment: .center)
-                .padding(.top, 16)
-                .disabled(auth.isDeletingAccount)
-
-                if let error = auth.deleteError {
-                    Text(error)
-                        .font(.caption2)
-                        .foregroundColor(.red)
-                        .frame(maxWidth: .infinity, alignment: .center)
-                }
-            }
-            .padding(20)
-        }
-        .onAppear { if game.categories.isEmpty { game.loadCategories() } }
-        .alert(
-            game.t("deleteAccountConfirmTitle"),
-            isPresented: $showDeleteConfirm
-        ) {
-            Button(game.t("cancel"), role: .cancel) {}
-            Button(game.t("deleteAccountConfirm"), role: .destructive) {
-                Task {
-                    await auth.deleteAccount()
-                    if auth.user == nil { game.resetForSignOut() }
+                Link(destination: URL(string: "https://\(GameSocket.frontendHost)/")!) {
+                    HStack(spacing: 16) {
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text(fr ? "Communauté" : "Community").font(.system(size: 17, weight: .bold))
+                            Text(fr ? "Rejoindre les discussions sur le site" : "Join the discussions on the website")
+                                .font(.system(size: 13)).foregroundColor(Theme.muted)
+                        }
+                        Spacer(minLength: 0)
+                        Image(systemName: "arrow.up.right").foregroundColor(Theme.brand)
+                    }
+                    .foregroundColor(Theme.ink).padding(18)
+                    .frame(maxWidth: .infinity, minHeight: 84, alignment: .leading)
+                    .background(Theme.paper, in: RoundedRectangle(cornerRadius: 19))
                 }
             }
-        } message: {
-            Text(game.t("deleteAccountConfirmMessage"))
+            .padding(.horizontal, 16).padding(.bottom, 24)
+            .frame(maxWidth: 600).frame(maxWidth: .infinity)
         }
-        .overlay {
-            if auth.isDeletingAccount {
-                Color.black.opacity(0.5)
-                    .ignoresSafeArea()
-                    .overlay(ProgressView().tint(.white))
-            }
-        }
+        .refreshable { game.loadCategories(); game.requestProfile() }
     }
 }
