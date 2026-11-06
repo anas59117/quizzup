@@ -21,6 +21,7 @@ struct JoinView: View {
                 TextField(game.t("usernamePlaceholder"), text: $game.name)
                     .textFieldStyle(.plain).textContentType(.nickname).autocorrectionDisabled()
                     .padding(18).background(Theme.paper).foregroundColor(Theme.ink).cornerRadius(16)
+                    .tint(Theme.brand)
                     .onChange(of: game.name) { value in if value.count > 20 { game.name = String(value.prefix(20)) } }
                 if let error = game.socialError { Text(error).font(.subheadline).multilineTextAlignment(.center) }
                 Button {

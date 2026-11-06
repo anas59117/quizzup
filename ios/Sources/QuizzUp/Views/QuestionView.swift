@@ -194,7 +194,7 @@ struct AnswerButton: View {
                 }
                 .opacity(style == .dim ? 0.32 : 1)
         }
-        .buttonStyle(.plain).disabled(disabled)
+        .buttonStyle(NativeAnswerPressStyle()).disabled(disabled)
         .accessibilityAddTraits(style == .selected ? .isSelected : [])
         .accessibilityValue(style == .correct ? "✓" : style == .wrong ? "✕" : "")
     }
@@ -213,5 +213,11 @@ struct AnswerButton: View {
         case .wrong: return Color(hex: 0xFFA1AC)
         default: return Theme.paper.opacity(0.7)
         }
+    }
+}
+
+private struct NativeAnswerPressStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label.opacity(configuration.isPressed ? 0.9 : 1)
     }
 }

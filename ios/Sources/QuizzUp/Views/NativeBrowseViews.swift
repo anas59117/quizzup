@@ -283,6 +283,7 @@ struct NativePlaySheet: View {
             }
         }
         .presentationDetents([.medium, .large]).presentationDragIndicator(.visible)
+        .preferredColorScheme(.light)
     }
     private func modeButton(solo: Bool, symbol: String, title: String, subtitle: String) -> some View {
         Button {

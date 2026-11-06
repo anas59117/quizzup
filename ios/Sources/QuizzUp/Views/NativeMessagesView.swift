@@ -73,7 +73,7 @@ struct NativeMessagesView: View {
         .frame(maxWidth: .infinity).background(Theme.paper).foregroundColor(Theme.ink)
         .navigationDestination(for: NativeFriend.self) { friend in NativeMessageThread(friend: friend) }
         .onAppear { game.requestInbox() }
-        .sheet(isPresented: $showAdd) { addFriendSheet }
+        .sheet(isPresented: $showAdd) { addFriendSheet.preferredColorScheme(.light) }
     }
 
     private func preview(for friend: NativeFriend) -> String {
@@ -136,6 +136,7 @@ struct NativeMessageThread: View {
         .navigationTitle(friend.name).navigationBarTitleDisplayMode(.inline)
         .toolbar(.visible, for: .navigationBar)
         .toolbarBackground(Theme.paper, for: .navigationBar).toolbarBackground(.visible, for: .navigationBar)
+        .toolbarColorScheme(.light, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 HStack(spacing: 0) {

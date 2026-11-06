@@ -8,6 +8,7 @@ struct NativeBrandLogo: View {
                 NativeLightning().fill(Color.white)
             }.frame(width: 36, height: 36)
             Text("QuizzUp").font(.system(size: 27, weight: .heavy)).tracking(-1.1)
+                .lineLimit(1).fixedSize(horizontal: true, vertical: false)
         }.foregroundColor(.white).accessibilityElement(children: .ignore).accessibilityLabel("QuizzUp")
     }
 }

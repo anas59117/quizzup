@@ -26,6 +26,8 @@ enum StoreCaptureConfiguration { static let enabled = true }
         let question: [String: Any] = ["type":"question", "round":3, "totalRounds":6, "question":"Question", "category":"Science", "icon":"", "answers":["A","B","C","D"], "timeLimit":10, "isBonus":false, "readingMs":1500, "answerOpensInMs":2050, "remainingMs":10000]
         try receive(question)
         check(!game.answersVisible && !game.answerInputOpen && game.timeLeft == 10, "Question appears before answers without spending answer time")
+        check(!game.opponents[0].answered, "A new round resets the previous opponent answer")
+        try receive(["type":"opponent_answered", "id":"new"])
         var recovered = question
         recovered.merge(["reconnect":true, "answered":true, "yourAnswer":1, "yourCorrect":true, "pointsEarned":18, "readingMs":0, "answerOpensInMs":0, "remainingMs":4300]) { _, new in new }
         try receive(recovered)
@@ -52,6 +54,6 @@ enum StoreCaptureConfiguration { static let enabled = true }
         game.conversationOpen = true; game.activeConversation = "bob"
         game.resetForSignOut()
         check(game.stage == .authGate && game.clientId == nil && game.messages.isEmpty && game.activeConversation == nil && !game.conversationOpen, "Sign out clears account and conversation state")
-        print("Verified 13 native receiver contracts with no live network or identity provider")
+        print("Verified 14 native receiver contracts with no live network or identity provider")
     }
 }

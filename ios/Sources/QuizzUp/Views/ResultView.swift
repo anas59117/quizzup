@@ -10,7 +10,7 @@ struct ResultView: View {
             if let result = game.result {
                 ScrollView {
                     VStack(spacing: 20) {
-                        NativeBrandLogo().frame(maxWidth: 130)
+                        NativeBrandLogo()
                         Image(systemName: result.won ? "trophy.fill" : result.tie ? "equal.circle.fill" : "flag.checkered")
                             .font(.system(size: 58)).foregroundColor(Theme.gold).accessibilityHidden(true)
                         Text(title(result))
