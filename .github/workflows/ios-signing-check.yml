@@ -1,0 +1,38 @@
+name: Verify iOS signing inputs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  certificate:
+    runs-on: macos-26
+    timeout-minutes: 5
+    steps:
+      - name: Validate encrypted certificate without exporting keys
+        env:
+          P12_B64: ${{ secrets.P12_B64 }}
+          P12_PASSWORD: ${{ secrets.P12_PASSWORD }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          test -n "$P12_B64" && test -n "$P12_PASSWORD" || {
+            echo '::error::Missing P12_B64 or P12_PASSWORD'
+            exit 1
+          }
+          printf '%s' "$P12_B64" | base64 --decode > "$RUNNER_TEMP/signing-check.p12"
+          openssl version
+          if openssl pkcs12 -info -noout -in "$RUNNER_TEMP/signing-check.p12" -passin env:P12_PASSWORD 2> "$RUNNER_TEMP/p12-diagnostic.txt"; then
+            echo 'RESULT: certificate password validated; inspect macOS import compatibility next.'
+            cat "$RUNNER_TEMP/p12-diagnostic.txt"
+          elif openssl pkcs12 -legacy -info -noout -in "$RUNNER_TEMP/signing-check.p12" -passin env:P12_PASSWORD 2> "$RUNNER_TEMP/p12-legacy-diagnostic.txt"; then
+            echo 'RESULT: certificate password validated with the legacy provider.'
+            cat "$RUNNER_TEMP/p12-legacy-diagnostic.txt"
+          else
+            echo '::error::P12_B64 cannot be opened with P12_PASSWORD. No signing key was exported.'
+            grep -Ei 'Mac verify|unsupported|asn1|passphrase|password|unknown option' "$RUNNER_TEMP/p12-diagnostic.txt" "$RUNNER_TEMP/p12-legacy-diagnostic.txt" || true
+            exit 1
+          fi
