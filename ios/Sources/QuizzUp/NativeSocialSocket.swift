@@ -42,6 +42,7 @@ extension GameSocket {
         case "dm_history":
             if let target = object["targetId"] as? String {
                 mergeMessages(decode(object["messages"], as: [NativeMessage].self) ?? [], peer: target)
+                historyHasMore[target] = object["hasMore"] as? Bool ?? false
                 _ = send(["type": "dm_read", "targetId": target])
             }
             historyLoading = false
@@ -93,6 +94,10 @@ extension GameSocket {
         socialError = nil
         historyLoading = send(["type": "dm_history", "targetId": peer])
         if !connected { requestProfile() }
+    }
+    func loadEarlierMessages(_ peer: String) {
+        guard !historyLoading, historyHasMore[peer] == true, let first = messages[peer]?.first else { return }
+        historyLoading = send(["type": "dm_history", "targetId": peer, "before": first.id])
     }
     @discardableResult
     func sendMessage(to peer: String, text: String, clientMessageID: String? = nil) -> String? {

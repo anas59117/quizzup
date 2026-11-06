@@ -46,9 +46,12 @@ enum StoreCaptureConfiguration { static let enabled = true }
         check(game.messages["bob"]?.count == 1, "Repeated message acknowledgement is idempotent")
         try receive(["type":"dm", "message":["id":"broken"]])
         check(game.messages["bob"]?.count == 1, "Malformed message cannot erase a conversation")
+        let earlier: [String: Any] = ["id":"m0", "fromId":"bob", "toId":"alice", "kind":"text", "text":"Salut", "createdAt":1793919999000]
+        try receive(["type":"dm_history", "targetId":"bob", "messages":[earlier], "hasMore":true])
+        check(game.messages["bob"]?.map(\.id) == ["m0", "m1"] && game.historyHasMore["bob"] == true, "Earlier history merges without discarding newer confirmed messages")
         game.conversationOpen = true; game.activeConversation = "bob"
         game.resetForSignOut()
         check(game.stage == .authGate && game.clientId == nil && game.messages.isEmpty && game.activeConversation == nil && !game.conversationOpen, "Sign out clears account and conversation state")
-        print("Verified 12 native receiver contracts with no live network or identity provider")
+        print("Verified 13 native receiver contracts with no live network or identity provider")
     }
 }

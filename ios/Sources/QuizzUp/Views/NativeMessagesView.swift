@@ -118,12 +118,16 @@ struct NativeMessageThread: View {
         ScrollViewReader { proxy in
             ScrollView {
                 LazyVStack(spacing: 14) {
+                    if game.historyHasMore[friend.id] == true {
+                        Button(fr ? "Messages précédents" : "Earlier messages") { game.loadEarlierMessages(friend.id) }
+                            .frame(minHeight: 44).disabled(game.historyLoading)
+                    }
                     if game.historyLoading { ProgressView() }
                     if let error = game.socialError { Text(error).font(.subheadline).foregroundColor(Theme.brand) }
                     ForEach(messages) { message in messageRow(message).id(message.id) }
                 }.padding(16)
             }
-            .onChange(of: messages.map(\.id)) { _ in if let last = messages.last { proxy.scrollTo(last.id, anchor: .bottom) } }
+            .onChange(of: messages.last?.id) { id in if let id { proxy.scrollTo(id, anchor: .bottom) } }
             .onChange(of: game.lastSentMessageID) { id in
                 if id == pendingDraftID { if draft == submittedDraft { draft = "" }; pendingDraftID = nil }
             }

@@ -77,6 +77,7 @@ final class GameSocket: ObservableObject {
     @Published var lastSentMessageID: String?
     @Published var inboxLoading = false
     @Published var historyLoading = false
+    @Published var historyHasMore: [String: Bool] = [:]
     @Published var answersVisible = false
     @Published var answerInputOpen = false
     @Published var answerAccepted = false
@@ -454,6 +455,7 @@ final class GameSocket: ObservableObject {
         pendingAction = nil; clientId = nil; stats = nil
         activeConversation = nil; conversationOpen = false; lastSentMessageID = nil
         friends = []; friendRequests = []; conversations = []; messages = [:]
+        historyHasMore = [:]
         topicProgress = []; followedThemes = []
         stage = .authGate
     }
