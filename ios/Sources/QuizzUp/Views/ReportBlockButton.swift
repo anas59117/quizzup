@@ -50,6 +50,7 @@ struct ReportBlockButton: View {
                 .padding(.horizontal, 8)
                 .padding(.vertical, 4)
                 .background(Theme.surface)
+                .foregroundColor(.white)
                 .cornerRadius(6)
                 .transition(.opacity)
                 .offset(y: -24)

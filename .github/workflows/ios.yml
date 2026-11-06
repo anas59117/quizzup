@@ -37,6 +37,14 @@ jobs:
       - name: Install XcodeGen
         run: brew install xcodegen
 
+      - name: Verify native timing and receiver contracts
+        run: |
+          swift test
+          swiftc -parse-as-library \
+            Sources/QuizzUp/{Models,NativeRoundTimeline,NativeSocialModels,Localization,GameSocket,NativeSocialSocket}.swift \
+            Tests/SocketPlayback/SocketPlayback.swift -o "$RUNNER_TEMP/native-socket-playback"
+          "$RUNNER_TEMP/native-socket-playback"
+
       - name: Decode GoogleService-Info.plist
         env:
           GOOGLE_SERVICE_PLIST_B64: ${{ secrets.GOOGLE_SERVICE_PLIST_B64 }}

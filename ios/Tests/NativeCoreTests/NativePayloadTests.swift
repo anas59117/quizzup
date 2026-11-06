@@ -78,6 +78,13 @@ final class NativePayloadTests: XCTestCase {
         XCTAssertEqual(result.leaderboard.first?.id, "me")
     }
 
+    func testRoundRevealPreservesOpponentScoreWithoutRequiringItOnLegacyPayloads() throws {
+        let scored = try decode(OtherRoundUpdate.self, #"{"id":"peer_1","answered":true,"correct":true,"score":72}"#)
+        let legacy = try decode(OtherRoundUpdate.self, #"{"id":"peer_1","answered":false,"correct":false}"#)
+        XCTAssertEqual(scored.score, 72)
+        XCTAssertNil(legacy.score)
+    }
+
     func testCategoryIdentityUsesStableBackendKey() throws {
         let category = try decode(Category.self, #"{"key":"harry_potter","label":"Harry Potter","icon":"","count":150}"#)
         XCTAssertEqual(category.id, "harry_potter")

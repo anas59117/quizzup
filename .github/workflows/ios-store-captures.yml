@@ -34,6 +34,12 @@ jobs:
         run: node --test scripts/store-assets.test.cjs
       - name: Test native timing and server payloads
         run: swift test
+      - name: Replay native receiver and reconnect contracts
+        run: |
+          swiftc -parse-as-library \
+            Sources/QuizzUp/{Models,NativeRoundTimeline,NativeSocialModels,Localization,GameSocket,NativeSocialSocket}.swift \
+            Tests/SocketPlayback/SocketPlayback.swift -o "$RUNNER_TEMP/native-socket-playback"
+          "$RUNNER_TEMP/native-socket-playback"
       - name: Install XcodeGen
         run: brew install xcodegen
       - name: Generate simulator project

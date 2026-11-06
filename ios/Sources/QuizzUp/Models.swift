@@ -75,6 +75,7 @@ struct OtherRoundUpdate: Codable, Hashable {
     let id: String
     let answered: Bool
     let correct: Bool
+    var score: Int? = nil
 }
 
 struct RoundResult: Codable {

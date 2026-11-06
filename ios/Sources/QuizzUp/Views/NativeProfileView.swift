@@ -215,6 +215,10 @@ struct NativeSettingsView: View {
                             .accessibilityLabel("\(fr ? "Erreur" : "Error"): \(error)")
                     }
                 }
+                Section(fr ? "À propos" : "About") {
+                    Link(game.t("privacyPolicy"), destination: URL(string: "https://\(GameSocket.frontendHost)/privacy.html")!)
+                    Link(fr ? "Crédits des images" : "Image credits", destination: URL(string: "https://\(GameSocket.frontendHost)/image-credits.html")!)
+                }
             }
             .scrollContentBackground(.hidden)
             .background(Theme.paper.ignoresSafeArea()).foregroundColor(Theme.ink)

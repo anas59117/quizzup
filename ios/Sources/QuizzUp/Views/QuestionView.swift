@@ -144,6 +144,8 @@ struct QuestionView: View {
             }
         } else if game.selectedAnswer != nil {
             Text(copy("Envoi de la réponse…", "Sending your answer…")).foregroundColor(NativeDuelColors.secondary)
+        } else if game.timeLeft <= 0 {
+            Text(game.t("timeUp")).foregroundColor(NativeDuelColors.secondary)
         } else if !game.answerInputOpen {
             Text(copy("Lis la question…", "Read the question…")).foregroundColor(NativeDuelColors.secondary)
         } else {

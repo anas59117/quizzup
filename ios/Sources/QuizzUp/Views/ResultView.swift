@@ -17,7 +17,7 @@ struct ResultView: View {
                             .font(.largeTitle.weight(.heavy)).foregroundColor(Theme.paper)
                             .multilineTextAlignment(.center).accessibilityAddTraits(.isHeader)
                         Text(left(result) ? game.t("someoneLeft") : game.t("finalScore", ["n": "\(result.finalScore)"]))
-                            .font(.subheadline).foregroundColor(Theme.muted)
+                            .font(.subheadline).foregroundColor(NativeDuelColors.secondary)
                         resultPlayers(result)
                         rewards(result)
                         VStack(spacing: 10) {
@@ -29,7 +29,7 @@ struct ResultView: View {
                             }.buttonStyle(NativeDuelActionStyle(prominent: false))
                                 .disabled(game.isStarting)
                             Button(game.t("backHome")) { game.playAgain() }
-                                .font(.subheadline.weight(.semibold)).foregroundColor(Theme.muted)
+                                .font(.subheadline.weight(.semibold)).foregroundColor(NativeDuelColors.secondary)
                                 .frame(maxWidth: .infinity, minHeight: 44)
                         }
                     }
@@ -79,7 +79,7 @@ struct ResultView: View {
             Spacer(minLength: 0)
             Text("\(score)").font(.title2.weight(.heavy)).monospacedDigit().foregroundColor(Theme.ink)
             if id != game.myId {
-                ReportBlockButton(targetId: targetId, targetName: name)
+                ReportBlockButton(targetId: targetId, targetName: name, foreground: Theme.muted)
                     .frame(minWidth: 44, minHeight: 44).tint(Theme.ink)
             }
         }
@@ -116,7 +116,7 @@ struct ResultView: View {
 
     private func xpRow(_ label: String, _ value: String, bold: Bool = false) -> some View {
         HStack {
-            Text(label).foregroundColor(bold ? Theme.paper : Theme.muted)
+            Text(label).foregroundColor(bold ? Theme.paper : NativeDuelColors.secondary)
             Spacer()
             Text(value).fontWeight(bold ? .bold : .regular).foregroundColor(bold ? Theme.gold : Theme.paper)
         }.font(.subheadline)

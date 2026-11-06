@@ -177,7 +177,7 @@ final class GameSocket: ObservableObject {
         }
     }
 
-    private func handle(_ data: Data) {
+    func handle(_ data: Data) {
         guard let obj = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
               let type = obj["type"] as? String else { return }
         let decoder = JSONDecoder()
@@ -193,6 +193,10 @@ final class GameSocket: ObservableObject {
                 if let value = profile["name"] as? String { name = value }
                 if let value = profile["avatar"] as? String { avatar = value }
                 persistIdentity()
+            }
+            if obj["reconnected"] as? Bool == true {
+                isStarting = false
+                if ["join", "solo"].contains(pendingAction?["type"] as? String ?? "") { pendingAction = nil }
             }
             if let action = pendingAction { pendingAction = nil; send(action) }
             if let peer = activeConversation { openConversation(peer) }
@@ -217,6 +221,7 @@ final class GameSocket: ObservableObject {
             // No stage change here — the server always sends round_intro
             // immediately after game_start, which drives the transition.
         case "game_reconnected":
+            isStarting = false
             if let restored = decode(obj["opponents"], as: [Opponent].self) { opponents = restored }
             score = obj["score"] as? Int ?? score
             totalRounds = obj["totalRounds"] as? Int ?? totalRounds
@@ -268,11 +273,13 @@ final class GameSocket: ObservableObject {
         case "round_result":
             if let r = try? decoder.decode(RoundResult.self, from: data) {
                 reveal = r
+                selectedAnswer = r.yourAnswer
                 score = r.yourScore
                 answersVisible = true; answerInputOpen = false
                 for other in r.others {
                     if let index = opponents.firstIndex(where: { $0.id == other.id }) {
                         opponents[index].answered = other.answered; opponents[index].correct = other.correct
+                        if let points = other.score { opponents[index].score = points }
                     }
                 }
                 stopTimer()
@@ -284,8 +291,10 @@ final class GameSocket: ObservableObject {
                 stats = end.stats ?? stats
                 if let raw = obj["stats"] as? [String: Any] { updateStats(raw) }
                 stage = .finished
+                isStarting = false
                 stopTimer()
             }
+        case "already_playing": isStarting = false
         case "auth_required", "already_connected":
             disconnect()
             socialError = t("serverUnreachable")
@@ -360,6 +369,7 @@ final class GameSocket: ObservableObject {
     }
 
     func playAgain() {
+        isStarting = false
         result = nil
         question = nil
         roundIntro = nil

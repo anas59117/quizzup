@@ -68,6 +68,7 @@ struct NativeDuelTimer: View {
 }
 
 struct NativeScoreRail: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     let score: Int
     let maximum: Int
     let color: Color
@@ -81,6 +82,7 @@ struct NativeScoreRail: View {
                 }
         }
         .frame(width: 6).accessibilityHidden(true)
+        .animation(reduceMotion ? nil : .easeOut(duration: 0.45), value: score)
     }
 }
 
