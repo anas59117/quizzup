@@ -39,25 +39,7 @@ enum StoreCaptureConfiguration {
         game.avatar = "fox"
         game.myId = "store-demo-alex"
         game.soloMode = false
-        // Original /categories order and labels: UI language does not translate
-        // the current server question bank or category labels.
-        game.categories = [
-            Category(key: "movies", label: "Cinéma", icon: "🎬", count: 10),
-            Category(key: "music", label: "Musique", icon: "🎵", count: 10),
-            Category(key: "sports", label: "Sports", icon: "⚽", count: 10),
-            Category(key: "geography", label: "Géographie", icon: "🌍", count: 11),
-            Category(key: "gaming", label: "Gaming", icon: "🎮", count: 10),
-            Category(key: "science", label: "Science", icon: "🧬", count: 10),
-            Category(key: "rap_fr", label: "Rap Français", icon: "🎤", count: 150),
-            Category(key: "foot_fr", label: "Foot Français", icon: "⚽", count: 150),
-            Category(key: "premier_league", label: "Premier League", icon: "🦁", count: 150),
-            Category(key: "la_liga", label: "La Liga", icon: "🐂", count: 100),
-            Category(key: "bundesliga", label: "Bundesliga", icon: "🦅", count: 100),
-            Category(key: "serie_a", label: "Serie A", icon: "👢", count: 100),
-            Category(key: "ligue_1", label: "Ligue 1", icon: "🐓", count: 105),
-            Category(key: "bollywood", label: "Bollywood", icon: "🇮🇳", count: 13),
-            Category(key: "actors", label: "Acteurs", icon: "⭐", count: 201)
-        ]
+        // Reuse the bundled real catalogue; only account/score values are fixtures.
         game.categories = NativeCatalog.entries.keys.sorted().map { key in
             let entry = NativeCatalog.entries[key]!
             return Category(key: key, label: entry.label, icon: entry.icon ?? "", count: 0)
@@ -84,10 +66,10 @@ enum StoreCaptureConfiguration {
         )
         game.result = GameEnd(
             finalScore: 118, won: true, tie: false,
-            others: [OpponentFinal(id: "store-demo-camille", name: "Camille", avatar: "🐼", score: 96)],
+            others: [OpponentFinal(id: "store-demo-camille", name: "Camille", avatar: "owl", score: 96)],
             leaderboard: [
-                LeaderboardRow(id: "store-demo-alex", name: "Alex", avatar: "🦊", score: 118),
-                LeaderboardRow(id: "store-demo-camille", name: "Camille", avatar: "🐼", score: 96)
+                LeaderboardRow(id: "store-demo-alex", name: "Alex", avatar: "fox", score: 118),
+                LeaderboardRow(id: "store-demo-camille", name: "Camille", avatar: "owl", score: 96)
             ],
             reason: "complete", coins: 50, xp: 258,
             xpBreakdown: XpBreakdown(matchScore: 118, finishBonus: 40, winBonus: 100, xpTotal: 258),
