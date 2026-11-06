@@ -53,7 +53,7 @@ struct HomeView: View {
             }
         }
         .tint(Theme.brand)
-        .safeAreaInset(edge: .bottom, spacing: 0) { dock }
+        .safeAreaInset(edge: .bottom, spacing: 0) { if !game.conversationOpen { dock } }
         .sheet(isPresented: $showSettings) { NativeSettingsView() }
         .sheet(isPresented: $showPlay) { NativePlaySheet(category: nil) }
         .onAppear {

@@ -17,9 +17,13 @@
 | Email Address | Yes | Yes | No |
 | User ID (Firebase UID) | Yes | Yes | No |
 | Game History | Yes | Yes | No |
+| Messages (sender, recipient, content, timestamp) | Yes | Yes | No |
+| Friends / in-app social graph | Yes | Yes | No |
 
 ### Data NOT collected:
-- Location, contacts, health, financial, browsing history, search history, diagnostics, advertising data, photos, messages, phone number.
+- Location, device address book, health, financial, browsing history, search history, advertising data, phone number. The app does not request the device's contacts or photo library. Account profile images may be displayed from an existing account; there is no native photo upload in this version.
+
+The privacy manifest also declares gameplay content, messages and the in-app social graph for app functionality, linked to the account and without tracking. These source declarations must be reconciled with the final App Store Connect privacy answers and third-party SDK privacy reports before submission.
 
 ## Age Rating
 **Rating:** To be determined from the current App Store Connect questionnaire and the full quiz catalog. Do not assume a 4+ rating without reviewing the content.

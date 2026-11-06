@@ -21,7 +21,7 @@ enum StoreCaptureConfiguration {
         let args = ProcessInfo.processInfo.arguments
         guard let index = args.firstIndex(of: "--store-capture-screen") else { return nil }
         guard index + 1 < args.count,
-              ["home", "question", "result"].contains(args[index + 1]),
+              ["home", "faceoff", "question", "answer", "result"].contains(args[index + 1]),
               let languageIndex = args.firstIndex(of: "--store-capture-language"),
               languageIndex + 1 < args.count,
               ["fr", "en"].contains(args[languageIndex + 1]) else {
@@ -36,7 +36,7 @@ enum StoreCaptureConfiguration {
         game.disconnect()
         game.lang = options.language
         game.name = "Alex"
-        game.avatar = "🦊"
+        game.avatar = "fox"
         game.myId = "store-demo-alex"
         game.soloMode = false
         // Original /categories order and labels: UI language does not translate
@@ -58,10 +58,23 @@ enum StoreCaptureConfiguration {
             Category(key: "bollywood", label: "Bollywood", icon: "🇮🇳", count: 13),
             Category(key: "actors", label: "Acteurs", icon: "⭐", count: 201)
         ]
-        game.opponents = [Opponent(id: "store-demo-camille", name: "Camille", avatar: "🐼", score: 96)]
+        game.categories = NativeCatalog.entries.keys.sorted().map { key in
+            let entry = NativeCatalog.entries[key]!
+            return Category(key: key, label: entry.label, icon: entry.icon ?? "", count: 0)
+        }
+        game.followedThemes = ["ligue_champions", "rap_fr", "harry_potter", "minecraft"]
+        game.topicProgress = [.init(key: "ligue_champions", level: 8), .init(key: "rap_fr", level: 5), .init(key: "harry_potter", level: 3), .init(key: "minecraft", level: 2)]
+        game.stats = PlayerStats(games: 27, wins: 16, streak: 2, xp: 1620, level: 4, xpIntoLevel: 420, xpForLevel: 800)
+        game.opponents = [Opponent(id: "store-demo-camille", name: "Camille", avatar: "owl", score: 28)]
         game.score = options.screen == "result" ? 118 : 34
         game.totalRounds = 6
         game.timeLeft = 8
+        game.answersVisible = true
+        game.answerInputOpen = options.screen != "answer"
+        if options.screen == "answer" {
+            game.selectedAnswer = 1; game.answerAccepted = true; game.answerCorrect = true; game.answerPoints = 18; game.score = 52
+        }
+        game.roundIntro = RoundIntro(round: 1, totalRounds: 6, category: "Science", icon: "", isBonus: false)
         // Verbatim existing science question and options, in both UI locales.
         game.question = Question(
             round: 3, totalRounds: 6,
@@ -81,7 +94,8 @@ enum StoreCaptureConfiguration {
             stats: PlayerStats(games: 27, wins: 16, streak: 2, xp: 1620, level: 4, xpIntoLevel: 420, xpForLevel: 800)
         )
         switch options.screen {
-        case "question": game.stage = .question
+        case "faceoff": game.stage = .roundIntro
+        case "question", "answer": game.stage = .question
         case "result": game.stage = .finished
         default: game.stage = .home
         }

@@ -5,7 +5,7 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            Theme.bg.ignoresSafeArea()
+            Theme.brand.ignoresSafeArea()
             switch game.stage {
             case .authGate: AuthGateView()
             case .join: JoinView()
@@ -28,7 +28,7 @@ struct ErrorView: View {
         VStack(spacing: 16) {
             Text(game.t("connectionLost")).font(.title2.bold())
             Text(game.t("serverUnreachable")).foregroundColor(Theme.textDim)
-            Button(game.t("retry")) { game.stage = .home }
+            Button(game.t("retry")) { game.retryConnection() }
                 .buttonStyle(PrimaryButtonStyle())
         }
         .padding()

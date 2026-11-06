@@ -1,62 +1,41 @@
 import SwiftUI
 
-private let avatars = ["🐺", "🦁", "🦊", "🐼", "🦉", "🐈", "🐯", "🦄"]
-
 struct JoinView: View {
     @EnvironmentObject var game: GameSocket
-
+    private var fr: Bool { game.lang == "fr" }
     var body: some View {
-        VStack(spacing: 20) {
-            HStack {
-                Spacer()
-                Button(game.lang == "fr" ? "🇫🇷" : "🇬🇧") { game.toggleLang() }
-                    .font(.system(size: 20))
-            }
-            Spacer()
-            Text("⚡ \(game.t("legendBack"))")
-                .font(.caption.bold())
-                .padding(.horizontal, 14).padding(.vertical, 6)
-                .background(Theme.accent)
-                .foregroundColor(.white)
-                .cornerRadius(20)
-            Text("Quizz").font(.system(size: 40, weight: .heavy)) +
-            Text("Up").font(.system(size: 40, weight: .heavy)).foregroundColor(Theme.accent)
-            Text(game.t("tagline")).foregroundColor(Theme.textDim)
-
-            TextField(game.t("usernamePlaceholder"), text: $game.name)
-                .textFieldStyle(.plain)
-                .padding()
-                .background(Theme.surface)
-                .cornerRadius(12)
-                .onChange(of: game.name) { new in
-                    if new.count > 20 { game.name = String(new.prefix(20)) }
-                }
-
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 4), spacing: 10) {
-                ForEach(avatars, id: \.self) { a in
-                    Button(a) { game.avatar = a }
-                        .font(.system(size: 22))
-                        .frame(width: 48, height: 48)
-                        .background(game.avatar == a ? Theme.accent.opacity(0.2) : Theme.surface)
-                        .overlay(Circle().stroke(game.avatar == a ? Theme.accent : Theme.border, lineWidth: 2))
-                        .clipShape(Circle())
-                }
-            }
-
-            Button(game.t("continue")) {
-                game.persistIdentity()
-                game.stage = .home
-            }
-            .buttonStyle(PrimaryButtonStyle())
-            .disabled(game.name.trimmingCharacters(in: .whitespaces).isEmpty)
-
-            if let url = URL(string: "https://\(GameSocket.frontendHost)/privacy.html") {
-                Link(game.t("privacyPolicy"), destination: url)
-                    .font(.caption)
-                    .foregroundColor(Theme.textDim)
-            }
-            Spacer()
-        }
-        .padding(24)
+        ScrollView {
+            VStack(spacing: 24) {
+                HStack {
+                    NativeBrandLogo()
+                    Spacer()
+                    Button(game.lang.uppercased()) { game.toggleLang() }
+                        .font(.subheadline.bold()).frame(minWidth: 44, minHeight: 44)
+                        .accessibilityLabel(fr ? "Changer la langue" : "Change language")
+                }.padding(.bottom, 32)
+                NativePlayerPortrait(avatar: "robot", size: 88)
+                Text(fr ? "Prêt à faire ton retour ?" : "Ready for your comeback?")
+                    .font(.system(size: 30, weight: .bold)).multilineTextAlignment(.center)
+                Text(fr ? "Choisis le nom que tes adversaires verront." : "Choose the name your opponents will see.")
+                    .font(.body).multilineTextAlignment(.center)
+                TextField(game.t("usernamePlaceholder"), text: $game.name)
+                    .textFieldStyle(.plain).textContentType(.nickname).autocorrectionDisabled()
+                    .padding(18).background(Theme.paper).foregroundColor(Theme.ink).cornerRadius(16)
+                    .onChange(of: game.name) { value in if value.count > 20 { game.name = String(value.prefix(20)) } }
+                if let error = game.socialError { Text(error).font(.subheadline).multilineTextAlignment(.center) }
+                Button {
+                    game.avatar = "robot"
+                    game.completeProfile()
+                } label: {
+                    HStack {
+                        if game.profileSaving { ProgressView().tint(Theme.ink) }
+                        Text(game.t("continue")).font(.headline)
+                    }.frame(maxWidth: .infinity, minHeight: 56)
+                }.background(Theme.gold).foregroundColor(Theme.ink).cornerRadius(16)
+                    .disabled(game.profileSaving || game.name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                Link(game.t("privacyPolicy"), destination: URL(string: "https://\(GameSocket.frontendHost)/privacy.html")!)
+                    .font(.footnote).padding(.top, 12)
+            }.foregroundColor(.white).padding(24).frame(maxWidth: 520).frame(maxWidth: .infinity)
+        }.background(Theme.brand.ignoresSafeArea()).tint(.white)
     }
 }

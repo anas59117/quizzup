@@ -24,7 +24,10 @@ struct NativeTopicArt: View {
                     .font(.system(size: 54, weight: .black, design: .rounded))
                     .foregroundColor(.white.opacity(0.85)).minimumScaleFactor(0.5)
                     .padding(16)
-                if let src = entry?.src, let url = GameSocket.absoluteImageURL(src) {
+                if let assetName = entry?.assetName {
+                    Image(assetName).resizable().scaledToFill()
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                } else if let src = entry?.src, let url = GameSocket.absoluteImageURL(src) {
                     AsyncImage(url: url) { phase in
                         if let image = phase.image {
                             image.resizable()

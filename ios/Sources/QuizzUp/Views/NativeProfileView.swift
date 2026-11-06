@@ -141,7 +141,7 @@ struct NativeProfileView: View {
                             NativePlayerPortrait(avatar: friend.avatar, size: 42)
                             Text(friend.name).font(.system(size: 15, weight: .semibold)).foregroundColor(Theme.ink)
                             Spacer(minLength: 0)
-                            Text(friend.online ? (fr ? "En ligne" : "Online") : (fr ? "Hors ligne" : "Offline"))
+                            Text(friend.online == true ? (fr ? "En ligne" : "Online") : (fr ? "Hors ligne" : "Offline"))
                                 .font(.system(size: 12)).foregroundColor(Theme.muted)
                         }
                     }

@@ -21,6 +21,7 @@ targets:
       - Sources/QuizzUp
     resources:
       - path: Sources/QuizzUp/Resources/PrivacyInfo.xcprivacy
+      - path: Sources/QuizzUp/Resources/topic-catalog.json
     dependencies:
       - package: FirebaseSDK
         product: FirebaseAuth

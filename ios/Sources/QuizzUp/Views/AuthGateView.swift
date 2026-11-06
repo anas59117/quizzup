@@ -18,13 +18,13 @@ struct AuthGateView: View {
         VStack(spacing: 20) {
             HStack {
                 Spacer()
-                Button(game.lang == "fr" ? "🇫🇷" : "🇬🇧") { game.toggleLang() }
-                    .font(.system(size: 20))
+                Button(game.lang.uppercased()) { game.toggleLang() }
+                    .font(.subheadline.bold()).frame(minWidth: 44, minHeight: 44)
+                    .accessibilityLabel(game.lang == "fr" ? "Changer la langue" : "Change language")
             }
             Spacer()
-            Text("Quizz").font(.system(size: 40, weight: .heavy)) +
-            Text("Up").font(.system(size: 40, weight: .heavy)).foregroundColor(Theme.accent)
-            Text(game.t("tagline")).foregroundColor(Theme.textDim)
+            NativeBrandLogo().scaleEffect(1.3).padding(.vertical, 16)
+            Text(game.t("tagline")).foregroundColor(.white).multilineTextAlignment(.center)
 
             Spacer()
 
@@ -33,7 +33,7 @@ struct AuthGateView: View {
             }
 
             if let error = auth.authError {
-                Text(error).font(.caption).foregroundColor(Theme.red).multilineTextAlignment(.center)
+                Text(error).font(.subheadline).foregroundColor(.white).multilineTextAlignment(.center)
                 // Covers the already-signed-in-at-launch case: if the one-shot
                 // onAppear token fetch fails, onChange(of: uid) never fires
                 // again (the uid isn't changing), so this is the only way
@@ -41,7 +41,7 @@ struct AuthGateView: View {
                 if showAutoRetry {
                     Button(game.t("retry")) { completeSignInIfNeeded() }
                         .font(.caption.bold())
-                        .foregroundColor(Theme.accent)
+                        .foregroundColor(Theme.gold).frame(minHeight: 44)
                 }
             }
 
@@ -71,11 +71,10 @@ struct AuthGateView: View {
                     Text(game.t("signInGoogle"))
                 }
                 .font(.headline)
-                .foregroundColor(Theme.text)
+                .foregroundColor(Theme.ink)
                 .frame(maxWidth: .infinity)
                 .padding()
-                .background(Theme.surface)
-                .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.border, lineWidth: 1))
+                .background(Theme.paper)
                 .cornerRadius(12)
             }
             .disabled(auth.isAuthenticating)
@@ -83,11 +82,12 @@ struct AuthGateView: View {
             if let url = URL(string: "https://\(GameSocket.frontendHost)/privacy.html") {
                 Link(game.t("privacyPolicy"), destination: url)
                     .font(.caption)
-                    .foregroundColor(Theme.textDim)
+                    .foregroundColor(.white)
             }
             Spacer()
         }
-        .padding(24)
+        .foregroundColor(.white).padding(24).frame(maxWidth: 520).frame(maxWidth: .infinity)
+        .background(Theme.brand.ignoresSafeArea())
         // onAppear covers a user whose Firebase session is already
         // persisted at launch (AuthManager.init() sets `user` synchronously,
         // so onChange below never fires for them); onChange covers a fresh
@@ -100,9 +100,11 @@ struct AuthGateView: View {
     }
 
     private func completeSignInIfNeeded() {
-        guard auth.user != nil else { return }
+        guard let uid = auth.user?.uid else { return }
         Task {
-            guard let idToken = await auth.getIdToken() else {
+            let token = await auth.getIdToken()
+            guard auth.user?.uid == uid else { return }
+            guard let idToken = token else {
                 auth.authError = game.t("serverUnreachable")
                 showAutoRetry = true
                 return

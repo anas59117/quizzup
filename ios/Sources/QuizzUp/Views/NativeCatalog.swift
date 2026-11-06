@@ -7,6 +7,8 @@ struct NativeCatalogEntry: Decodable {
     let src: String?
     let fit: String?
     let description: String?
+    let assetName: String?
+    let icon: String?
 }
 
 struct NativeTopicFamily: Identifiable {

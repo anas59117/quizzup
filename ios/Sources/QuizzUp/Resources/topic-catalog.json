@@ -1,0 +1,4275 @@
+{
+  "movies": {
+    "label": "Films",
+    "englishLabel": "Films",
+    "icon": "🎬",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Debrie%20Parvo%2035mm%20Movie%20Camera.jpg?width=960",
+    "fit": "cover",
+    "description": "Blockbusters & classiques"
+  },
+  "music": {
+    "label": "Musique",
+    "englishLabel": "Musique",
+    "icon": "🎵",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/BBC%20Proms%2031.jpg?width=960",
+    "fit": "cover",
+    "description": "Artistes, albums & paroles"
+  },
+  "sports": {
+    "label": "Sports",
+    "englishLabel": "Sports",
+    "icon": "⚽",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/4%20sports%20photo.jpg?width=960",
+    "fit": "cover",
+    "description": "Équipes & champions"
+  },
+  "geography": {
+    "label": "Géographie",
+    "englishLabel": "Géographie",
+    "icon": "🌍",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/OrteliusWorldMap.jpeg?width=960",
+    "fit": "cover",
+    "description": "Capitales & monuments"
+  },
+  "gaming": {
+    "label": "Jeux vidéo",
+    "englishLabel": "Jeux vidéo",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/ArcadeGames.jpg?width=960",
+    "fit": "cover",
+    "description": "Consoles & univers"
+  },
+  "science": {
+    "label": "Sciences",
+    "englishLabel": "Sciences",
+    "icon": "🧬",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Laboratory.jpg?width=960",
+    "fit": "cover",
+    "description": "Espace, biologie & physique"
+  },
+  "rap_fr": {
+    "label": "Rap Français",
+    "englishLabel": "Rap Français",
+    "icon": "🎤",
+    "family": "music",
+    "src": "/images/covers/approved-v2/rap_fr-640.webp",
+    "fit": "cover",
+    "description": "PNL, Booba, Jul & co.",
+    "assetName": "topic-rap_fr"
+  },
+  "foot_fr": {
+    "label": "Foot français",
+    "englishLabel": "French Football",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/international-v1/foot_fr-two-stars-640.webp",
+    "fit": "cover",
+    "description": "Ligue 1, Bleus & légendes"
+  },
+  "cinema_fr": {
+    "label": "Cinéma Français",
+    "englishLabel": "Cinéma Français",
+    "icon": "🎭",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Famous%20French%20Actors.jpg?width=960",
+    "fit": "cover",
+    "description": "Films, séries & acteurs"
+  },
+  "culture_fr": {
+    "label": "Culture Générale FR",
+    "englishLabel": "Culture Générale FR",
+    "icon": "🇫🇷",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mont%20Saint-Michel%20France.jpg?width=960",
+    "fit": "cover",
+    "description": "Histoire, géo & traditions"
+  },
+  "premier_league": {
+    "label": "Premier League",
+    "englishLabel": "Premier League",
+    "icon": "🦁",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Premier%20League%20Trophy%20at%20Manchester's%20National%20Football%20Museum%20(Ank%20Kumar)%2001.jpg?width=960",
+    "fit": "cover",
+    "description": "Devine le joueur anglais"
+  },
+  "la_liga": {
+    "label": "La Liga",
+    "englishLabel": "La Liga",
+    "icon": "🐂",
+    "family": "football",
+    "src": "/images/covers/approved-v2/la_liga-640.webp",
+    "fit": "cover",
+    "description": "Devine le joueur espagnol"
+  },
+  "bundesliga": {
+    "label": "Bundesliga",
+    "englishLabel": "Bundesliga",
+    "icon": "🦅",
+    "family": "football",
+    "src": "/images/covers/approved-v2/bundesliga-640.webp",
+    "fit": "cover",
+    "description": "Devine le joueur allemand"
+  },
+  "serie_a": {
+    "label": "Serie A",
+    "englishLabel": "Serie A",
+    "icon": "👢",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/2009-08%20Derby-%20AC%20Milan%20vs%20Inter%20at%20San%20Siro.jpg?width=960",
+    "fit": "cover",
+    "description": "Devine le joueur italien"
+  },
+  "ligue_1": {
+    "label": "Ligue 1",
+    "englishLabel": "Ligue 1",
+    "icon": "🐓",
+    "family": "football",
+    "src": "/images/covers/approved-v2/ligue_1-640.webp",
+    "fit": "cover",
+    "description": "Devine le joueur français"
+  },
+  "bollywood": {
+    "label": "Bollywood",
+    "englishLabel": "Bollywood",
+    "icon": "🇮🇳",
+    "family": "cinema",
+    "src": "/images/players/shahrukh_khan.jpg",
+    "fit": "cover",
+    "description": "Devine la star indienne"
+  },
+  "actors": {
+    "label": "Acteurs",
+    "englishLabel": "Acteurs",
+    "icon": "⭐",
+    "family": "cinema",
+    "src": "/images/players/brad_pitt.jpg",
+    "fit": "cover",
+    "description": "Devine les stars du cinéma"
+  },
+  "netflix": {
+    "label": "Netflix",
+    "englishLabel": "Netflix",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Netflix%202016%20N%20logo.svg?width=960",
+    "fit": "cover",
+    "description": "Séries & films Netflix"
+  },
+  "got": {
+    "label": "Game of Thrones",
+    "englishLabel": "Game of Thrones",
+    "icon": "🐉",
+    "family": "sagas",
+    "src": "/images/covers/approved-v2/got-640.webp",
+    "fit": "cover",
+    "description": "Le Trône de Fer"
+  },
+  "harry_potter": {
+    "label": "Harry Potter",
+    "englishLabel": "Harry Potter",
+    "icon": "🪄",
+    "family": "sagas",
+    "src": "/images/covers/approved-v2/harry_potter-640.webp",
+    "fit": "cover",
+    "description": "Poudlard & sorcellerie",
+    "assetName": "topic-harry_potter"
+  },
+  "marvel": {
+    "label": "Marvel",
+    "englishLabel": "Marvel",
+    "icon": "🦸",
+    "family": "sagas",
+    "src": "/images/covers/approved-v2/marvel-640.webp",
+    "fit": "cover",
+    "description": "Avengers & super-héros",
+    "assetName": "topic-marvel"
+  },
+  "spider_man": {
+    "label": "Spider-Man",
+    "englishLabel": "Spider-Man",
+    "icon": "🕷️",
+    "family": "sagas",
+    "src": "/images/covers/approved-v2/spider_man-640.webp",
+    "fit": "cover",
+    "description": "Peter Parker, le Spider-Verse & ses ennemis",
+    "assetName": "topic-spider_man"
+  },
+  "batman": {
+    "label": "Batman",
+    "englishLabel": "Batman",
+    "icon": "🦇",
+    "family": "sagas",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cosplay%20of%20Batman%20at%20Brussels%20Comic%20Con%202022%20(51969799372).jpg?width=960",
+    "fit": "cover",
+    "description": "Gotham, alliés & ennemis"
+  },
+  "star_wars": {
+    "label": "Star Wars",
+    "englishLabel": "Star Wars",
+    "icon": "⚔️",
+    "family": "sagas",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/NYCC%202023%20Cosplay%20of%20Darth%20Vader.jpg?width=960",
+    "fit": "cover",
+    "description": "Jedi, Sith & la Force"
+  },
+  "disney": {
+    "label": "Classiques Disney",
+    "englishLabel": "Disney Classics",
+    "icon": "🏰",
+    "family": "cinema",
+    "src": "/images/covers/approved-v2/disney-640.webp",
+    "fit": "cover",
+    "description": "Contes animés cultes"
+  },
+  "pokemon": {
+    "label": "Pokémon",
+    "englishLabel": "Pokémon",
+    "icon": "⚡",
+    "family": "gaming",
+    "src": "/images/covers/approved-v2/pokemon-640.webp",
+    "fit": "cover",
+    "description": "Dresseurs & Pokéballs",
+    "assetName": "topic-pokemon"
+  },
+  "f1": {
+    "label": "Formule 1",
+    "englishLabel": "Formule 1",
+    "icon": "🏎️",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lewis%20Hamilton%20during%20Hungarian%20Formula%201%20GP.jpg?width=960",
+    "fit": "cover",
+    "description": "Écuries & champions"
+  },
+  "nba": {
+    "label": "Basket NBA",
+    "englishLabel": "Basket NBA",
+    "icon": "🏀",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/LeBron%20James%20(31944491583).jpg?width=960",
+    "fit": "cover",
+    "description": "Légendes du parquet"
+  },
+  "tv_shows": {
+    "label": "Séries Cultes",
+    "englishLabel": "Séries Cultes",
+    "icon": "📺",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20Perk%20set.jpg?width=960",
+    "fit": "cover",
+    "description": "Friends, House & co."
+  },
+  "histoire_fr": {
+    "label": "Histoire de France",
+    "englishLabel": "Histoire de France",
+    "icon": "⚜️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Eug%C3%A8ne%20Delacroix%20-%20La%20libert%C3%A9%20guidant%20le%20peuple%20-%20apr%C3%A8s%20restauration%202024.jpg?width=960",
+    "fit": "cover",
+    "description": "Rois, guerres & dates"
+  },
+  "retro_games": {
+    "label": "Jeux Vidéo Rétro",
+    "englishLabel": "Jeux Vidéo Rétro",
+    "icon": "👾",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/NES-Console-Set.jpg?width=960",
+    "fit": "cover",
+    "description": "Mario, Sonic & arcade"
+  },
+  "seconde_guerre_mondiale": {
+    "label": "Seconde Guerre Mondiale",
+    "englishLabel": "Seconde Guerre Mondiale",
+    "icon": "⚔️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/WW2Montage.PNG?width=960",
+    "fit": "cover",
+    "description": "Dates, batailles & figures clés"
+  },
+  "espace_astronomie": {
+    "label": "Espace & Astronomie",
+    "englishLabel": "Espace & Astronomie",
+    "icon": "🚀",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Pillars%20of%20Creation.jpeg?width=960",
+    "fit": "cover",
+    "description": "Planètes, missions & étoiles"
+  },
+  "corps_humain": {
+    "label": "Corps Humain",
+    "englishLabel": "Corps Humain",
+    "icon": "🫀",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Human%20Anatomy%20(NIH%20BioArt%20519%20-%20657946).png?width=960",
+    "fit": "cover",
+    "description": "Anatomie & physiologie"
+  },
+  "ligue_champions": {
+    "label": "Ligue des champions",
+    "englishLabel": "Champions League",
+    "icon": "🏆",
+    "family": "football",
+    "src": "/images/covers/international-v1/ligue_champions-640.webp",
+    "fit": "cover",
+    "description": "Finales, légendes & records",
+    "assetName": "topic-ligue_champions"
+  },
+  "coupe_du_monde_histoire": {
+    "label": "Coupe du Monde (Histoire)",
+    "englishLabel": "Coupe du Monde (Histoire)",
+    "icon": "🌍",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kylian%20Mbapp%C3%A9%20World%20Cup%20Trophy.jpg?width=960",
+    "fit": "cover",
+    "description": "Vainqueurs & moments cultes"
+  },
+  "tour_de_france": {
+    "label": "Tour de France",
+    "englishLabel": "Tour de France",
+    "icon": "🚴",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/UAE%20Team%2C%20Tadej%20Poga%C4%8Dar%20-%20Yellow%20jersey%20peloton%20with%20crowd%20in%20Peyresourdes%20during%20stage%2014%20of%20Tour%20de%20France%202025%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Maillots, cols & champions"
+  },
+  "jo_ete_histoire": {
+    "label": "JO d'Été (Histoire)",
+    "englishLabel": "JO d'Été (Histoire)",
+    "icon": "🥇",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Olympic%20rings%20on%20the%20Eiffel%20Tower%202024%20(11).jpg?width=960",
+    "fit": "cover",
+    "description": "Villes hôtes & exploits"
+  },
+  "can_foot_africain": {
+    "label": "CAN (Foot Africain)",
+    "englishLabel": "CAN (Foot Africain)",
+    "icon": "🌍",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Troph%C3%A9e%20CAN%20(1).jpg?width=960",
+    "fit": "cover",
+    "description": "Palmarès & légendes africaines"
+  },
+  "copa_america": {
+    "label": "Copa América",
+    "englishLabel": "Copa América",
+    "icon": "🏆",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Copa%20america%20trofeo.jpg?width=960",
+    "fit": "cover",
+    "description": "Argentine, Brésil & Uruguay"
+  },
+  "legendes_foot_allemand_anglais_italien": {
+    "label": "Légendes Foot ALL/ANG/ITA",
+    "englishLabel": "Légendes Foot ALL/ANG/ITA",
+    "icon": "⭐",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cristiano%20Ronaldo%202018%20(4x5%20cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Beckenbauer, Best & Baggio"
+  },
+  "eredivisie": {
+    "label": "Eredivisie",
+    "englishLabel": "Eredivisie",
+    "icon": "🇳🇱",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Eredivisie%20Trophy.png?width=960",
+    "fit": "cover",
+    "description": "Ajax, PSV & Feyenoord"
+  },
+  "tennis": {
+    "label": "Tennis",
+    "englishLabel": "Tennis",
+    "icon": "🎾",
+    "family": "sport",
+    "src": "/images/quizphotos/tennis/rafael_nadal.jpg",
+    "fit": "cover",
+    "description": "Devine la légende du tennis"
+  },
+  "basketball": {
+    "label": "Basketteurs en photo",
+    "englishLabel": "Basketteurs en photo",
+    "icon": "🏀",
+    "family": "sport",
+    "src": "/images/quizphotos/basketball/michael_jordan.jpg",
+    "fit": "cover",
+    "description": "Devine la légende du basket"
+  },
+  "rugby": {
+    "label": "Rugby",
+    "englishLabel": "Rugby",
+    "icon": "🏉",
+    "family": "sport",
+    "src": "/images/quizphotos/rugby/antoine_dupont.jpg",
+    "fit": "cover",
+    "description": "Devine la légende du rugby"
+  },
+  "boxe": {
+    "label": "Boxeurs en photo",
+    "englishLabel": "Boxeurs en photo",
+    "icon": "🥊",
+    "family": "sport",
+    "src": "/images/quizphotos/boxe/mohamed_ali.jpg",
+    "fit": "cover",
+    "description": "Devine le champion de boxe"
+  },
+  "athletisme": {
+    "label": "Athlétisme",
+    "englishLabel": "Athlétisme",
+    "icon": "🏃",
+    "family": "sport",
+    "src": "/images/quizphotos/athletisme/usain_bolt.jpg",
+    "fit": "cover",
+    "description": "Devine la légende de l'athlé"
+  },
+  "science_stars": {
+    "label": "Savants Célèbres",
+    "englishLabel": "Savants Célèbres",
+    "icon": "🔬",
+    "family": "culture",
+    "src": "/images/quizphotos/science/leonard_de_vinci.webp",
+    "fit": "cover",
+    "description": "Devine le grand scientifique"
+  },
+  "humour": {
+    "label": "Humour",
+    "englishLabel": "Humour",
+    "icon": "😂",
+    "family": "culture",
+    "src": "/images/quizphotos/humour/charlie_chaplin.jpg",
+    "fit": "cover",
+    "description": "Devine la légende comique"
+  },
+  "mode": {
+    "label": "Mode",
+    "englishLabel": "Mode",
+    "icon": "💃",
+    "family": "culture",
+    "src": "/images/quizphotos/mode/marilyn_monroe.jpg",
+    "fit": "cover",
+    "description": "Devine l'icône de mode"
+  },
+  "kpop": {
+    "label": "K-pop",
+    "englishLabel": "K-pop",
+    "icon": "🇰🇷",
+    "family": "music",
+    "src": "/images/quizphotos/kpop/rm.jpg",
+    "fit": "cover",
+    "description": "Devine la star ou le groupe K-pop"
+  },
+  "series_ado_romance": {
+    "label": "Séries Ado & Romance",
+    "englishLabel": "Séries Ado & Romance",
+    "icon": "💕",
+    "family": "series",
+    "src": "/images/quizphotos/series_ado_romance/zendaya.jpg",
+    "fit": "cover",
+    "description": "Devine l'acteur de ta série préférée"
+  },
+  "drapeaux": {
+    "label": "Drapeaux du monde",
+    "englishLabel": "Flags of the World",
+    "icon": "🚩",
+    "family": "culture",
+    "src": "/images/covers/international-v1/drapeaux-640.webp",
+    "fit": "cover",
+    "description": "Devine le pays"
+  },
+  "liga_portugal": {
+    "label": "Liga Portugal",
+    "englishLabel": "Liga Portugal",
+    "icon": "🇵🇹",
+    "family": "football",
+    "src": "/images/covers/approved-v2/liga_portugal-640.webp",
+    "fit": "cover",
+    "description": "Benfica, Porto & Sporting"
+  },
+  "mls": {
+    "label": "MLS",
+    "englishLabel": "MLS",
+    "icon": "🇺🇸",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lionel%20Messi%20NE%20Revolution%20Inter%20Miami%207.9.25-165.jpg?width=960",
+    "fit": "cover",
+    "description": "Foot US, expansion & stars"
+  },
+  "tennis_atp": {
+    "label": "Tennis ATP",
+    "englishLabel": "Tennis ATP",
+    "icon": "🎾",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Carlos%20Alcaraz%20Argentina%20Open%202024.jpg?width=960",
+    "fit": "cover",
+    "description": "Grand Chelem & légendes"
+  },
+  "tennis_wta": {
+    "label": "Tennis WTA",
+    "englishLabel": "Tennis WTA",
+    "icon": "🎾",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Iga%20Swiatek%202023%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Championnes & records"
+  },
+  "roland_garros": {
+    "label": "Roland-Garros",
+    "englishLabel": "Roland-Garros",
+    "icon": "🎾",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rafael%20Nadal%20Roland%20Garros.jpg?width=960",
+    "fit": "cover",
+    "description": "Terre battue & finales cultes"
+  },
+  "wimbledon": {
+    "label": "Wimbledon",
+    "englishLabel": "Wimbledon",
+    "icon": "🎾",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wimbledon%20Centre%20Court%20(52205402762).jpg?width=960",
+    "fit": "cover",
+    "description": "Gazon, tradition & champions"
+  },
+  "rugby_top_14": {
+    "label": "Rugby Top 14",
+    "englishLabel": "Rugby Top 14",
+    "icon": "🏉",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/ST%20vs%20RCT%202012%2012%20Thierry%20Dusautoir%202.jpg?width=960",
+    "fit": "cover",
+    "description": "Clubs & champions de France"
+  },
+  "mma_ufc": {
+    "label": "MMA/UFC",
+    "englishLabel": "MMA/UFC",
+    "icon": "🥋",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Conor%20McGregor%202015.jpg?width=960",
+    "fit": "cover",
+    "description": "Octogone & champions"
+  },
+  "legendes_du_cyclisme": {
+    "label": "Légendes du cyclisme",
+    "englishLabel": "Légendes du cyclisme",
+    "icon": "🚴",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Eddy%20Merckx-1973.jpg?width=960",
+    "fit": "cover",
+    "description": "Merckx, Hinault & co."
+  },
+  "natation_olympique": {
+    "label": "Natation olympique",
+    "englishLabel": "Natation olympique",
+    "icon": "🏊",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Michael%20Phelps%20conquista%2020%C2%AA%20medalha%20de%20ouro%20e%20%C3%A9%20ovacionado%201036417-09082016-%20mg%206661%2001.jpg?width=960",
+    "fit": "cover",
+    "description": "Records & champions du bassin"
+  },
+  "jo_d_hiver_histoire": {
+    "label": "JO d'hiver (histoire)",
+    "englishLabel": "JO d'hiver (histoire)",
+    "icon": "☃️",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cortina%20d%E2%80%99Ampezzo%20Olympic%20Rings%202025%20-%20XXV%20Giochi%20olimpici%20invernali.jpg?width=960",
+    "fit": "cover",
+    "description": "Villes hôtes & légendes de la neige"
+  },
+  "volleyball": {
+    "label": "Volleyball",
+    "englishLabel": "Volleyball",
+    "icon": "🏐",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Brasil%20vence%20a%20Fran%C3%A7a%20no%20v%C3%B4lei%20masculino%201037983-15.08.2016%20ffz-5559.jpg?width=960",
+    "fit": "cover",
+    "description": "Filet, smashs & champions"
+  },
+  "ski_alpin": {
+    "label": "Ski alpin",
+    "englishLabel": "Ski alpin",
+    "icon": "⛷️",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lindsey%20Vonn%20in%20Courchevel%2C%2020%20december%202015%2009.JPG?width=960",
+    "fit": "cover",
+    "description": "Slalom, descente & légendes"
+  },
+  "sports_d_hiver": {
+    "label": "Sports d'hiver",
+    "englishLabel": "Sports d'hiver",
+    "icon": "🥌",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Martin%20Fourcade%20au%20tir%20lors%20des%20Jeux%20Mondiaux%20Militaires%202013.JPG?width=960",
+    "fit": "cover",
+    "description": "Biathlon, bobsleigh & patinage"
+  },
+  "golf": {
+    "label": "Golf",
+    "englishLabel": "Golf",
+    "icon": "⛳",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tiger%20Woods%2020180927.jpg?width=960",
+    "fit": "cover",
+    "description": "Majeurs & légendes du green"
+  },
+  "nhl": {
+    "label": "NHL",
+    "englishLabel": "NHL",
+    "icon": "🏒",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wgretz%20edit2.jpg?width=960",
+    "fit": "cover",
+    "description": "Coupe Stanley & légendes"
+  },
+  "baseball_mlb": {
+    "label": "Baseball MLB",
+    "englishLabel": "Baseball MLB",
+    "icon": "⚾",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Shohei%20Ohtani%20on%20April%2023%2C%202024%20(2)%2053677192000.jpg?width=960",
+    "fit": "cover",
+    "description": "World Series & légendes"
+  },
+  "motogp": {
+    "label": "MotoGP",
+    "englishLabel": "MotoGP",
+    "icon": "🏍️",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Valentino%20Rossi%20(15131915515).jpg?width=960",
+    "fit": "cover",
+    "description": "Champions & circuits mythiques"
+  },
+  "rallye_wrc": {
+    "label": "Rallye WRC",
+    "englishLabel": "Rallye WRC",
+    "icon": "🏎️",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/S%C3%A9bastien%20Loeb%20-%202007%20Rally%20Portugal.jpg?width=960",
+    "fit": "cover",
+    "description": "Monte-Carlo, Safari & champions"
+  },
+  "paris_saint_germain": {
+    "label": "Paris Saint-Germain",
+    "englishLabel": "Paris Saint-Germain",
+    "icon": "🔴",
+    "family": "football",
+    "src": "/images/covers/approved-v2/paris_saint_germain-640.webp",
+    "fit": "cover",
+    "description": "Parc des Princes & légendes"
+  },
+  "real_madrid": {
+    "label": "Real Madrid",
+    "englishLabel": "Real Madrid",
+    "icon": "⚪",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kylian%20Mbappe%20at%20Real%20Madrid's%20game%20versus%20Juventus%20Turin%20on%2022%20October%202025.jpeg?width=960",
+    "fit": "cover",
+    "description": "Bernabéu & Ligue des Champions"
+  },
+  "lionel_messi": {
+    "label": "Lionel Messi",
+    "englishLabel": "Lionel Messi",
+    "icon": "🐐",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lionel%20Messi%20WC2022.jpg?width=960",
+    "fit": "cover",
+    "description": "La Pulga, Ballons d’Or & Mondial"
+  },
+  "cristiano_ronaldo": {
+    "label": "Cristiano Ronaldo",
+    "englishLabel": "Cristiano Ronaldo",
+    "icon": "🐐",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cristiano%20Ronaldo%200876.jpg?width=960",
+    "fit": "cover",
+    "description": "CR7, buts & records"
+  },
+  "fortnite": {
+    "label": "Fortnite",
+    "englishLabel": "Fortnite",
+    "icon": "🪂",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Fortnite%20cosplay%20at%20E3%202018.jpg?width=960",
+    "fit": "cover",
+    "description": "Battle Royale, objets & personnages"
+  },
+  "minecraft": {
+    "label": "Minecraft",
+    "englishLabel": "Minecraft",
+    "icon": "⛏️",
+    "family": "gaming",
+    "src": "/images/covers/approved-v2/minecraft-640.webp",
+    "fit": "cover",
+    "description": "Blocs, créatures & dimensions",
+    "assetName": "topic-minecraft"
+  },
+  "gta": {
+    "label": "GTA",
+    "englishLabel": "GTA",
+    "icon": "🚘",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Grand-Theft-Auto.png?width=960",
+    "fit": "cover",
+    "description": "Villes, personnages & missions"
+  },
+  "league_of_legends": {
+    "label": "League of Legends",
+    "englishLabel": "League of Legends",
+    "icon": "⚔️",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Faker%20at%20Worlds%202024.jpg?width=960",
+    "fit": "cover",
+    "description": "Champions, rôles & Runeterra"
+  },
+  "valorant": {
+    "label": "VALORANT",
+    "englishLabel": "VALORANT",
+    "icon": "🎯",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Valorant%20Champions%20Tour%20logo.png?width=960",
+    "fit": "cover",
+    "description": "Agents, armes & cartes"
+  },
+  "roblox": {
+    "label": "Roblox",
+    "englishLabel": "Roblox",
+    "icon": "🧱",
+    "family": "gaming",
+    "src": "/images/covers/approved-v2/roblox-640.webp",
+    "fit": "cover",
+    "description": "Expériences, création & avatars"
+  },
+  "call_of_duty": {
+    "label": "Call of Duty",
+    "englishLabel": "Call of Duty",
+    "icon": "🎖️",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Call%20of%20Duty%20Modern%20Warfare%20Gamescom%202019%20(48605842367).jpg?width=960",
+    "fit": "cover",
+    "description": "Campagnes, Zombies & Warzone"
+  },
+  "genshin_impact": {
+    "label": "Genshin Impact",
+    "englishLabel": "Genshin Impact",
+    "icon": "✨",
+    "family": "gaming",
+    "src": "/images/covers/approved-v2/genshin_impact-640.webp",
+    "fit": "cover",
+    "description": "Teyvat, personnages & éléments"
+  },
+  "zelda": {
+    "label": "Zelda",
+    "englishLabel": "Zelda",
+    "icon": "🛡️",
+    "family": "gaming",
+    "src": "/images/covers/approved-v2/zelda-640.webp",
+    "fit": "cover",
+    "description": "Hyrule, donjons & légendes"
+  },
+  "univers_mario": {
+    "label": "Univers Mario",
+    "englishLabel": "Univers Mario",
+    "icon": "🍄",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mario%20and%20Luigi%20at%20Super%20Nintendo%20World.jpg?width=960",
+    "fit": "cover",
+    "description": "Royaumes, bonus & personnages"
+  },
+  "rugby_coupe_du_monde": {
+    "label": "Rugby Coupe du Monde",
+    "englishLabel": "Rugby Coupe du Monde",
+    "icon": "🏉",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/RWC%202011%20final%20FRA%20-%20NZL%20McCaw%20with%20Ellis%20Cup.jpg?width=960",
+    "fit": "cover",
+    "description": "Trophée Webb Ellis & grandes finales"
+  },
+  "xv_de_france": {
+    "label": "XV de France",
+    "englishLabel": "XV de France",
+    "icon": "🐓",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Antoine%20Dupont%20February%202023.jpg?width=960",
+    "fit": "cover",
+    "description": "Les Bleus, Tournoi & légendes"
+  },
+  "boxe_champions": {
+    "label": "Boxe : champions & combats",
+    "englishLabel": "Boxe : champions & combats",
+    "icon": "🥊",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Muhammad%20Ali%20fights%20Brian%20London%20on%20August%206%2C%201966%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Ceintures, combats & champions"
+  },
+  "handball": {
+    "label": "Handball",
+    "englishLabel": "Handball",
+    "icon": "🤾",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nikola%20Karabatic%20Team%20France%20Handball%20World%20Championship%202019%20IHF%20(32931666457).jpg?width=960",
+    "fit": "cover",
+    "description": "Règles, sélections & grands titres"
+  },
+  "nfl": {
+    "label": "NFL",
+    "englishLabel": "NFL",
+    "icon": "🏈",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tom%20Brady%20Super%20Bowl%20LII%2085F9D5D.jpg?width=960",
+    "fit": "cover",
+    "description": "Super Bowl, franchises & légendes"
+  },
+  "gymnastique": {
+    "label": "Gymnastique",
+    "englishLabel": "Gymnastique",
+    "icon": "🤸",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Simone%20biles%202024%20Olympics.jpg?width=960",
+    "fit": "cover",
+    "description": "Agrès, figures & champions"
+  },
+  "patinage_artistique": {
+    "label": "Patinage artistique",
+    "englishLabel": "Patinage artistique",
+    "icon": "⛸️",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/2019%20Skate%20Canada%20International%20-%20Yuzuru%20Hanyu%20FS.jpg?width=960",
+    "fit": "cover",
+    "description": "Sauts, glace & champions"
+  },
+  "sports_extremes": {
+    "label": "Sports extrêmes",
+    "englishLabel": "Sports extrêmes",
+    "icon": "🪂",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tony%20Hawk%20skating%20the%20Ann%20Arbor%20skatepark%20at%20Veteran's%20Memorial%20Park%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Glisse, hauteur & adrénaline"
+  },
+  "femmes_du_sport": {
+    "label": "Femmes du sport",
+    "englishLabel": "Femmes du sport",
+    "icon": "🏅",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/SERENA%20WILLIAMS%20(3247978825).jpg?width=960",
+    "fit": "cover",
+    "description": "Championnes & exploits historiques"
+  },
+  "jeunes_talents_du_sport": {
+    "label": "Jeunes talents du sport",
+    "englishLabel": "Jeunes talents du sport",
+    "icon": "🌟",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lamine%20Yamal%20in%202025%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Records précoces & révélations"
+  },
+  "legendes_du_sport_francais": {
+    "label": "Légendes du sport français",
+    "englishLabel": "Légendes du sport français",
+    "icon": "🇫🇷",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Zinedine%20zidane%20wcf%202006.jpg?width=960",
+    "fit": "cover",
+    "description": "Champions, records & exploits"
+  },
+  "padel": {
+    "label": "Padel",
+    "englishLabel": "Padel",
+    "icon": "🎾",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Vigo%20Open%202019%20de%20World%20Padel%20Tour%20-%2038.jpg?width=960",
+    "fit": "cover",
+    "description": "Règles, coups & champions"
+  },
+  "beach_volley": {
+    "label": "Beach-volley",
+    "englishLabel": "Beach-volley",
+    "icon": "🏐",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Woman%20beach%20volley%20at%20Paris%202024%20olympics%20France%20vs%20Germany%2028%2007%202024%20group%20stage%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Sable, règles & légendes"
+  },
+  "k_pop_groupes_feminins": {
+    "label": "K-pop groupes féminins",
+    "englishLabel": "K-pop groupes féminins",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Blackpink%20Pink%20Carpet%20Event%201.jpg?width=960",
+    "fit": "cover",
+    "description": "Groupes, débuts & fandoms"
+  },
+  "k_pop_groupes_masculins": {
+    "label": "K-pop groupes masculins",
+    "englishLabel": "K-pop groupes masculins",
+    "icon": "🎶",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/190115%20BTS%20at%20the%202019%20Seoul%20Music%20Awards.jpg?width=960",
+    "fit": "cover",
+    "description": "Groupes, débuts & fandoms"
+  },
+  "bts": {
+    "label": "BTS",
+    "englishLabel": "BTS",
+    "icon": "💜",
+    "family": "music",
+    "src": "/images/covers/approved-v2/bts-640.webp",
+    "fit": "contain",
+    "description": "Membres, albums & chansons"
+  },
+  "blackpink": {
+    "label": "BLACKPINK",
+    "englishLabel": "BLACKPINK",
+    "icon": "🖤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Blackpink%20Pink%20Carpet%20Event%203.jpg?width=960",
+    "fit": "cover",
+    "description": "Membres, albums & performances"
+  },
+  "afrobeats": {
+    "label": "Afrobeats",
+    "englishLabel": "Afrobeats",
+    "icon": "🌍",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Untold%202024%20-Burna%20Boy%20(53926047977)%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Artistes, albums & grands titres"
+  },
+  "latin_pop_reggaeton": {
+    "label": "Latin pop & reggaeton",
+    "englishLabel": "Latin pop & reggaeton",
+    "icon": "🔥",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bad%20Bunny%20Performs.jpg?width=960",
+    "fit": "cover",
+    "description": "Hits, artistes & rythmes latinos"
+  },
+  "rap_us_legendes": {
+    "label": "Rap US légendes",
+    "englishLabel": "Rap US légendes",
+    "icon": "🎙️",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Eminem%20performing%20in%202014%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Albums, labels & classiques"
+  },
+  "r_b": {
+    "label": "R&B",
+    "englishLabel": "R&B",
+    "icon": "🎙️",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Beyonce%2C%20I%20Am...%20Tour%2C%20Bercy%202009.jpg?width=960",
+    "fit": "cover",
+    "description": "Voix, albums & grands classiques"
+  },
+  "variete_francaise": {
+    "label": "Variété française",
+    "englishLabel": "Variété française",
+    "icon": "🇫🇷",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Jean-Jacques%20Goldman%20-%20may%202002.jpg?width=960",
+    "fit": "cover",
+    "description": "Interprètes, albums & chansons"
+  },
+  "chanson_francaise_classique": {
+    "label": "Chanson française classique",
+    "englishLabel": "Chanson française classique",
+    "icon": "🎼",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Edith%20Piaf%20Harcourt%201950%202.jpg?width=960",
+    "fit": "cover",
+    "description": "Piaf, Brel, Brassens & légendes"
+  },
+  "rock_francais": {
+    "label": "Rock français",
+    "englishLabel": "Rock français",
+    "icon": "🎸",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Concert%20Indochine%20Arena%20Tour%20LDLC%20Arena%20-%20D%C3%A9cines-Charpieu%20(FR69)%20-%202025-02-07%20-%2079.jpg?width=960",
+    "fit": "cover",
+    "description": "Groupes, albums & hymnes"
+  },
+  "rock_legendes_anglo_us": {
+    "label": "Rock légendes anglo-US",
+    "englishLabel": "Rock légendes anglo-US",
+    "icon": "🤘",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/FreddieMercuryNov1977.jpg?width=960",
+    "fit": "cover",
+    "description": "Groupes cultes, albums & riffs"
+  },
+  "metal": {
+    "label": "Metal",
+    "englishLabel": "Metal",
+    "icon": "🤘",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Metallica%20Warsaw%202024.jpg?width=960",
+    "fit": "cover",
+    "description": "Groupes, albums & hymnes puissants"
+  },
+  "pop_rock_2000s": {
+    "label": "Pop rock 2000s",
+    "englishLabel": "Pop rock 2000s",
+    "icon": "🎸",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Avril%20Lavigne%20Stage%20Greatest%20Hits%20Tour%202025.jpg?width=960",
+    "fit": "cover",
+    "description": "Groupes, albums & tubes des années 2000"
+  },
+  "electro_edm": {
+    "label": "Electro/EDM",
+    "englishLabel": "Electro/EDM",
+    "icon": "🎛️",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/David%20Guetta%20DJing%20at%20Ushua%C3%AFa%20Ibiza%202023-07-03%20hq.jpg?width=960",
+    "fit": "cover",
+    "description": "DJs, albums & classiques électroniques"
+  },
+  "house_techno": {
+    "label": "House & techno",
+    "englishLabel": "House & techno",
+    "icon": "🎚️",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Daft%20Punk%2C%2014-6-2007%2C%20Bercy%2C%20Paris.jpg?width=960",
+    "fit": "cover",
+    "description": "Pionniers, clubs, labels & titres"
+  },
+  "reggae_dancehall": {
+    "label": "Reggae & dancehall",
+    "englishLabel": "Reggae & dancehall",
+    "icon": "🇯🇲",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bob-Marley.jpg?width=960",
+    "fit": "cover",
+    "description": "Artistes, albums & classiques jamaïcains"
+  },
+  "jazz_legendes": {
+    "label": "Jazz légendes",
+    "englishLabel": "Jazz légendes",
+    "icon": "🎷",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Miles%20Davis%20Strasbourg%20profil%20bis.jpg?width=960",
+    "fit": "cover",
+    "description": "Artistes, instruments & standards"
+  },
+  "compositeurs_classiques": {
+    "label": "Compositeurs classiques",
+    "englishLabel": "Compositeurs classiques",
+    "icon": "🎼",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Beethoven.jpg?width=960",
+    "fit": "cover",
+    "description": "Époques, œuvres & grands maîtres"
+  },
+  "eurovision": {
+    "label": "Eurovision",
+    "englishLabel": "Eurovision",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Eurovision%202024%20winner%20Nemo%20with%20trophy.jpg?width=960",
+    "fit": "cover",
+    "description": "Vainqueurs, chansons & villes hôtes"
+  },
+  "festivals_de_musique": {
+    "label": "Festivals de musique",
+    "englishLabel": "Festivals de musique",
+    "icon": "🎪",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Coachella%20main%20stage%20at%20sunset%202004.jpg?width=960",
+    "fit": "cover",
+    "description": "Scènes, lieux & rendez-vous cultes"
+  },
+  "clips_iconiques": {
+    "label": "Clips iconiques",
+    "englishLabel": "Clips iconiques",
+    "icon": "🎬",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Michael%20Jackson%20in%201988%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Réalisateurs, images & chansons cultes"
+  },
+  "duos_collabs_celebres": {
+    "label": "Duos & collabs célèbres",
+    "englishLabel": "Duos & collabs célèbres",
+    "icon": "🤝",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Beyonc%C3%A9%20and%20Jay-Z%20On%20The%20Run%20II.jpg?width=960",
+    "fit": "cover",
+    "description": "Artistes, albums & collaborations cultes"
+  },
+  "bandes_originales_de_films": {
+    "label": "Bandes originales de films",
+    "englishLabel": "Bandes originales de films",
+    "icon": "🎞️",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hans%20Zimmer%20live.jpg?width=960",
+    "fit": "cover",
+    "description": "Compositeurs, chansons & cinéma"
+  },
+  "comedies_musicales": {
+    "label": "Comédies musicales",
+    "englishLabel": "Comédies musicales",
+    "icon": "🎭",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Stage%20of%20the%20Walter%20Kerr%20Theatre%20with%20the%20set%20of%20Hadestown.jpg?width=960",
+    "fit": "cover",
+    "description": "Scènes, auteurs & chansons"
+  },
+  "girl_groups_boys_bands_2000s_2010s": {
+    "label": "Girl groups & boys bands",
+    "englishLabel": "Girl groups & boys bands",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Spice%20Girls.jpg?width=960",
+    "fit": "cover",
+    "description": "Groupes, membres & tubes 2000s-2010s"
+  },
+  "musique_annees_80": {
+    "label": "Musique années 80",
+    "englishLabel": "Musique années 80",
+    "icon": "📼",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Madonna%20in%20concert%20wearing%20fishnets%201987%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Albums, tubes & productions cultes"
+  },
+  "anime_shonen": {
+    "label": "Anime shōnen",
+    "englishLabel": "Anime shōnen",
+    "icon": "⚔️",
+    "family": "manga",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Japan%20Expo%202006%20-%202006-07-07%20-%20Cosplay%20Naruto%20Luffy.jpg?width=960",
+    "fit": "cover",
+    "description": "Héros, pouvoirs & univers cultes"
+  },
+  "studio_ghibli": {
+    "label": "Studio Ghibli",
+    "englishLabel": "Studio Ghibli",
+    "icon": "🌱",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ghibli%20Museum%20Totoro%20Stained%20Glass.jpg?width=960",
+    "fit": "cover",
+    "description": "Films, personnages & musiques"
+  },
+  "anime_cultes": {
+    "label": "Anime cultes",
+    "englishLabel": "Anime cultes",
+    "icon": "📺",
+    "family": "manga",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Group%20Portrait%20of%20Sailor%20Moon%20Cosplayers%20at%20CWT41%2020151212.jpg?width=960",
+    "fit": "cover",
+    "description": "Classiques, studios & personnages"
+  },
+  "culture_manga": {
+    "label": "Culture manga",
+    "englishLabel": "Culture manga",
+    "icon": "📚",
+    "family": "manga",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bookshelves%20with%20manga.jpg?width=960",
+    "fit": "cover",
+    "description": "Auteurs, magazines & personnages"
+  },
+  "dc_comics": {
+    "label": "DC Comics",
+    "englishLabel": "DC Comics",
+    "icon": "🦸",
+    "family": "sagas",
+    "src": "/images/covers/approved-v2/dc_comics-640.webp",
+    "fit": "cover",
+    "description": "Héros, identités & villes mythiques"
+  },
+  "films_pixar": {
+    "label": "Films Pixar",
+    "englishLabel": "Films Pixar",
+    "icon": "💡",
+    "family": "cinema",
+    "src": "/images/covers/approved-v2/films_pixar-640.webp",
+    "fit": "cover",
+    "description": "Films, personnages & univers animés"
+  },
+  "films_dreamworks": {
+    "label": "Films DreamWorks",
+    "englishLabel": "Films DreamWorks",
+    "icon": "🌙",
+    "family": "cinema",
+    "src": "/images/covers/approved-v2/films_dreamworks-640.webp",
+    "fit": "cover",
+    "description": "Héros, réalisateurs & mondes animés"
+  },
+  "comedies_francaises": {
+    "label": "Comédies françaises",
+    "englishLabel": "Comédies françaises",
+    "icon": "🇫🇷",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Louis%20de%20Fun%C3%A8s%201970.jpg?width=960",
+    "fit": "cover",
+    "description": "Films, acteurs & répliques cultes"
+  },
+  "comedies_us_cultes": {
+    "label": "Comédies US cultes",
+    "englishLabel": "Comédies US cultes",
+    "icon": "😂",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Montreal%20Comiccon%202016%20-%20The%20Mask%20(27999721470).jpg?width=960",
+    "fit": "cover",
+    "description": "Classiques, personnages & réalisateurs"
+  },
+  "films_d_horreur": {
+    "label": "Horreur",
+    "englishLabel": "Horror",
+    "icon": "👻",
+    "family": "cinema",
+    "src": "/images/covers/approved-v2/films_d_horreur-640.webp",
+    "fit": "cover",
+    "description": "Monstres, lieux & classiques du genre"
+  },
+  "science_fiction": {
+    "label": "Science-fiction",
+    "englishLabel": "Science Fiction",
+    "icon": "🚀",
+    "family": "cinema",
+    "src": "/images/covers/approved-v2/science_fiction-640.webp",
+    "fit": "cover",
+    "description": "Futurs, vaisseaux & mondes imaginaires"
+  },
+  "films_cultes_90s": {
+    "label": "Films cultes 90s",
+    "englishLabel": "Films cultes 90s",
+    "icon": "📼",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Quentin%20Tarantino%20Uma%20Thurman%20John%20Travolta%20Cannes%202014.jpg?width=960",
+    "fit": "cover",
+    "description": "Classiques, personnages & réalisateurs"
+  },
+  "films_cultes_2000s": {
+    "label": "Films cultes 2000s",
+    "englishLabel": "2000s Cult Movies",
+    "icon": "💿",
+    "family": "cinema",
+    "src": "/images/covers/approved-v2/films_cultes_2000s-640.webp",
+    "fit": "cover",
+    "description": "Cinéma marquant des années 2000"
+  },
+  "oscars_histoire": {
+    "label": "Oscars — histoire",
+    "englishLabel": "Oscars — histoire",
+    "icon": "🏆",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ingrid%20Bergman%20Holding%20Oscar.jpg?width=960",
+    "fit": "cover",
+    "description": "Palmarès, acteurs & réalisateurs"
+  },
+  "cesars": {
+    "label": "Césars",
+    "englishLabel": "Césars",
+    "icon": "🎬",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Quentin%20Tarantino%20C%C3%A9sars%202011.jpg?width=960",
+    "fit": "cover",
+    "description": "Films, cinéastes & interprètes français"
+  },
+  "k_pop_rookies_2025_26": {
+    "label": "K-pop rookies 2025-26",
+    "englishLabel": "K-pop rookies 2025-26",
+    "icon": "🌟",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Babymonster%20at%20Incheon%20Airport.jpg?width=960",
+    "fit": "cover",
+    "description": "Débuts, groupes & nouvelles générations"
+  },
+  "pop_us_montante": {
+    "label": "Pop US montante",
+    "englishLabel": "Pop US montante",
+    "icon": "🎙️",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sabrina%20Carpenter%20-%20O2%20Arena%202025%20-%20070%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Nouvelles voix, albums & succès"
+  },
+  "chappell_roan_pop_alternative": {
+    "label": "Chappell Roan & pop alternative",
+    "englishLabel": "Chappell Roan & pop alternative",
+    "icon": "💖",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chappell%20Roan%20Sziget%202025.jpg?width=960",
+    "fit": "cover",
+    "description": "Artistes, identités & titres alternatifs"
+  },
+  "rap_us_nouvelle_generation": {
+    "label": "Rap US nouvelle génération",
+    "englishLabel": "Rap US nouvelle génération",
+    "icon": "🔥",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Travis%20Scott%20Circus%20Maximus%20Tour%20Orlando%2C%20FL.jpg?width=960",
+    "fit": "cover",
+    "description": "Flows, projets & nouveaux talents"
+  },
+  "drill_fr_uk": {
+    "label": "Drill FR/UK",
+    "englishLabel": "Drill FR/UK",
+    "icon": "🎧",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Central%20cee-5.jpg?width=960",
+    "fit": "cover",
+    "description": "Scènes, artistes & projets majeurs"
+  },
+  "musique_annees_90": {
+    "label": "Musique années 90",
+    "englishLabel": "Musique années 90",
+    "icon": "💿",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Britney%20Spears%201999.jpg?width=960",
+    "fit": "cover",
+    "description": "Groupes, tubes & albums emblématiques"
+  },
+  "musique_annees_2010": {
+    "label": "Musique années 2010",
+    "englishLabel": "Musique années 2010",
+    "icon": "🎵",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Taylor%20Swift%20The%20Eras%20Tour%201989%20Era%20Set%20(53109939870)%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Succès, artistes & albums de la décennie"
+  },
+  "sons_viraux_tiktok": {
+    "label": "Sons viraux TikTok",
+    "englishLabel": "Sons viraux TikTok",
+    "icon": "📱",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Charli%20D'Amelio.jpg?width=960",
+    "fit": "cover",
+    "description": "Titres, tendances & percées virales"
+  },
+  "nouvelle_scene_rap_fr": {
+    "label": "Nouvelle scène rap FR",
+    "englishLabel": "Nouvelle scène rap FR",
+    "icon": "🚀",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TiakolaConcert.jpg?width=960",
+    "fit": "cover",
+    "description": "Nouveaux flows, projets & révélations"
+  },
+  "wednesday": {
+    "label": "Wednesday",
+    "englishLabel": "Wednesday",
+    "icon": "🖤",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Jenna%20Ortega%20and%20Catherine%20Zeta-Jones%202025%20promoting%20Wednesday.jpg?width=960",
+    "fit": "cover",
+    "description": "Nevermore, mystères & famille Addams"
+  },
+  "stranger_things": {
+    "label": "Stranger Things",
+    "englishLabel": "Stranger Things",
+    "icon": "🚲",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Stranger%20Things%20cast%20by%20Gage%20Skidmore.jpg?width=960",
+    "fit": "cover",
+    "description": "Hawkins, personnages & Monde à l’envers"
+  },
+  "euphoria": {
+    "label": "Euphoria",
+    "englishLabel": "Euphoria",
+    "icon": "✨",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Zendaya%202024%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Personnages, relations & East Highland"
+  },
+  "heartbreak_high": {
+    "label": "Heartbreak High",
+    "englishLabel": "Heartbreak High",
+    "icon": "💔",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ayesha%20Madon%20for%20Maybelline%20Australia%20%26%20New%20Zealand%2002.jpg?width=960",
+    "fit": "cover",
+    "description": "Hartley High, amitiés & relations"
+  },
+  "xo_kitty": {
+    "label": "XO, Kitty",
+    "englishLabel": "XO, Kitty",
+    "icon": "💌",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Anna%20Cathcart%20at%20WWD%20Style%20Awards%202026%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Séoul, KISS & histoires de cœur"
+  },
+  "sex_education": {
+    "label": "Sex Education",
+    "englishLabel": "Sex Education",
+    "icon": "🌼",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Aimee%20Lou%20Wood.jpg?width=960",
+    "fit": "cover",
+    "description": "Moordale, relations & passage à l’âge adulte"
+  },
+  "k_dramas": {
+    "label": "K-dramas",
+    "englishLabel": "K-dramas",
+    "icon": "🇰🇷",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Crash%20Landing%20on%20You%20cast.jpg?width=960",
+    "fit": "cover",
+    "description": "Séries coréennes, personnages & intrigues"
+  },
+  "squid_game": {
+    "label": "Squid Game",
+    "englishLabel": "Squid Game",
+    "icon": "🔺",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/20210923%E2%80%94Lee%20Jung-jae%20%EC%9D%B4%EC%A0%95%EC%9E%AC%2C%20interview%2C%20ELLE%20Taiwan%20screenshot%20(02m06s).jpg?width=960",
+    "fit": "cover",
+    "description": "Joueurs, épreuves & secrets du jeu"
+  },
+  "james_bond": {
+    "label": "James Bond",
+    "englishLabel": "James Bond",
+    "icon": "🍸",
+    "family": "sagas",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Daniel%20Craig%20-%20James%20Bond%20(48707836782)%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Agents, adversaires & missions 007"
+  },
+  "fast_furious": {
+    "label": "Fast & Furious",
+    "englishLabel": "Fast & Furious",
+    "icon": "🏎️",
+    "family": "sagas",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Fast%20Five%20Cast.jpg?width=960",
+    "fit": "cover",
+    "description": "Pilotes, bolides & famille"
+  },
+  "films_de_braquage": {
+    "label": "Films de braquage",
+    "englishLabel": "Films de braquage",
+    "icon": "💰",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Affleck09The%20Town.jpg?width=960",
+    "fit": "cover",
+    "description": "Casses, équipes & plans mémorables"
+  },
+  "realisateurs_cultes": {
+    "label": "Réalisateurs cultes",
+    "englishLabel": "Réalisateurs cultes",
+    "icon": "🎥",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Steven%20Spielberg%20at%20Berlinale%202023%20Ausschnitt.jpg?width=960",
+    "fit": "cover",
+    "description": "Films, styles & collaborations majeures"
+  },
+  "acteurs_hollywoodiens_actuels": {
+    "label": "Acteurs hollywoodiens actuels",
+    "englishLabel": "Acteurs hollywoodiens actuels",
+    "icon": "🎭",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Timoth%C3%A9e%20Chalamet-63815b.jpg?width=960",
+    "fit": "cover",
+    "description": "Rôles, films & récompenses"
+  },
+  "actrices_hollywoodiennes_actuelles": {
+    "label": "Actrices hollywoodiennes actuelles",
+    "englishLabel": "Actrices hollywoodiennes actuelles",
+    "icon": "🌟",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Margot%20Robbie%20at%2029th%20Critics'%20Choice%20Awards.jpg?width=960",
+    "fit": "cover",
+    "description": "Rôles, films & récompenses"
+  },
+  "stars_du_cinema_coreen": {
+    "label": "Stars du cinéma coréen",
+    "englishLabel": "Stars du cinéma coréen",
+    "icon": "🎬",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lee%20Byung-hun%202025%20Toronto%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Interprètes, cinéastes & films coréens"
+  },
+  "sitcoms_cultes": {
+    "label": "Sitcoms cultes",
+    "englishLabel": "Sitcoms cultes",
+    "icon": "📺",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Friends%20actors%20montage.jpg?width=960",
+    "fit": "cover",
+    "description": "Personnages, décors & séries comiques"
+  },
+  "tele_realite_fr": {
+    "label": "Télé-réalité FR",
+    "englishLabel": "Télé-réalité FR",
+    "icon": "🎦",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nabilla%20Benattia%202023%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Émissions, concepts & moments marquants"
+  },
+  "humoristes_francais": {
+    "label": "Humoristes français",
+    "englishLabel": "Humoristes français",
+    "icon": "😂",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Gad%20Elmaleh%20-%20D'ailleurs.jpg?width=960",
+    "fit": "cover",
+    "description": "Sketches, spectacles & cinéma"
+  },
+  "stand_up_us": {
+    "label": "Stand-up US",
+    "englishLabel": "Stand-up US",
+    "icon": "🎙️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kevin%20Hart%20(15789082350).jpg?width=960",
+    "fit": "cover",
+    "description": "Comiques, spectacles & styles"
+  },
+  "youtubeurs_francais": {
+    "label": "YouTubeurs français",
+    "englishLabel": "YouTubeurs français",
+    "icon": "▶️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Squeezie%20Zack%20en%20Roue%20Libre%202025%20(cropped).png?width=960",
+    "fit": "cover",
+    "description": "Chaînes, formats & projets web"
+  },
+  "streamers_twitch_fr": {
+    "label": "Streamers Twitch FR",
+    "englishLabel": "Streamers Twitch FR",
+    "icon": "🟣",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Inoxtag-2023.jpg?width=960",
+    "fit": "cover",
+    "description": "Lives, événements & scènes françaises"
+  },
+  "streamers_internationaux": {
+    "label": "Streamers internationaux",
+    "englishLabel": "Streamers internationaux",
+    "icon": "🌍",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kai%20Cenat%202023%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Créateurs, jeux & collectifs mondiaux"
+  },
+  "tiktokeurs_celebres": {
+    "label": "TikTokeurs célèbres",
+    "englishLabel": "TikTokeurs célèbres",
+    "icon": "📱",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Khaby%20Lame%2C%20Jake%20from%20State%20Farm%2C%20and%20Mat%20during%20Tik%20Tok%20video%20shoots%20(Khaby%20Lame%20cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Vidéos courtes, danses & humour"
+  },
+  "influenceurs_beaute": {
+    "label": "Influenceurs beauté",
+    "englishLabel": "Influenceurs beauté",
+    "icon": "💄",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/James%20Charles%20-%20GLAAD%20Media%20Awards%202024%20(cropped).png?width=960",
+    "fit": "cover",
+    "description": "Maquillage, marques & tutoriels"
+  },
+  "createurs_gaming": {
+    "label": "Créateurs gaming",
+    "englishLabel": "Créateurs gaming",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/PewDiePie%20at%20PAX%202015.jpg?width=960",
+    "fit": "cover",
+    "description": "Jeux, critiques & formats vidéo"
+  },
+  "celebrites_reseaux_sociaux": {
+    "label": "Célébrités réseaux sociaux",
+    "englishLabel": "Célébrités réseaux sociaux",
+    "icon": "📲",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/MrBeast%20in%202026%20(3x4%20cropped).png?width=960",
+    "fit": "cover",
+    "description": "Plateformes, contenus & projets viraux"
+  },
+  "mode_defiles": {
+    "label": "Mode & défilés",
+    "englishLabel": "Mode & défilés",
+    "icon": "👗",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Paris%20Fashion%20Week.jpg?width=960",
+    "fit": "cover",
+    "description": "Fashion Weeks, podiums & événements"
+  },
+  "icones_de_la_mode": {
+    "label": "Icônes de la mode",
+    "englishLabel": "Icônes de la mode",
+    "icon": "✨",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Diane%20von%20F%C3%BCrstenberg%20Spring-Summer%202014%2007.jpg?width=960",
+    "fit": "cover",
+    "description": "Créateurs, mannequins & signatures"
+  },
+  "emissions_jeunesse_cultes": {
+    "label": "Émissions jeunesse cultes",
+    "englishLabel": "Émissions jeunesse cultes",
+    "icon": "📺",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Doroth%C3%A9e%201992.jpg?width=960",
+    "fit": "cover",
+    "description": "Animateurs, chaînes & souvenirs télé"
+  },
+  "dessins_animes_90s_2000s": {
+    "label": "Dessins animés 90s-2000s",
+    "englishLabel": "Dessins animés 90s-2000s",
+    "icon": "🖍️",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/SpongeBob%20SquarePants%20character%20montage.png?width=960",
+    "fit": "cover",
+    "description": "Héros, univers & classiques animés"
+  },
+  "disney_renaissance": {
+    "label": "Renaissance Disney",
+    "englishLabel": "Disney Renaissance",
+    "icon": "🏰",
+    "family": "cinema",
+    "src": "/images/covers/approved-v2/disney_renaissance-640.webp",
+    "fit": "cover",
+    "description": "Films, héros & chansons de 1989 à 1999"
+  },
+  "sagas_fantastiques": {
+    "label": "Sagas fantastiques",
+    "englishLabel": "Sagas fantastiques",
+    "icon": "🐉",
+    "family": "sagas",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bag%20End%2C%20Bilbo%20Baggins%20House%2C%20Hobbiton%20Movie%20Set%2C%20Matamata%2C%20New%20Zealand%202016%20(50797462102).jpg?width=960",
+    "fit": "cover",
+    "description": "Mondes, héros & objets légendaires"
+  },
+  "sherlock_holmes_enquetes": {
+    "label": "Sherlock Holmes & enquêtes",
+    "englishLabel": "Sherlock Holmes & enquêtes",
+    "icon": "🔎",
+    "family": "sagas",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Statue%20of%20Sherlock%20Holmes%2C%20London%2C%202015-04-13.jpg?width=960",
+    "fit": "cover",
+    "description": "Affaires, indices & Baker Street"
+  },
+  "series_policieres": {
+    "label": "Séries policières",
+    "englishLabel": "Séries policières",
+    "icon": "🚔",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/NCIS%20cast%20members%20at%20Miramar%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Enquêteurs, villes & affaires"
+  },
+  "series_medicales": {
+    "label": "Séries médicales",
+    "englishLabel": "Séries médicales",
+    "icon": "🩺",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ellen%20Pompeo%20LF.JPG?width=960",
+    "fit": "cover",
+    "description": "Médecins, hôpitaux & diagnostics"
+  },
+  "stars_bollywood": {
+    "label": "Stars Bollywood",
+    "englishLabel": "Stars Bollywood",
+    "icon": "🎞️",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Shah%20Rukh%20Khan%20in%202023%20(1).jpg?width=960",
+    "fit": "cover",
+    "description": "Interprètes, rôles & cinéma hindi"
+  },
+  "cinema_d_auteur_francais": {
+    "label": "Cinéma d’auteur français",
+    "englishLabel": "Cinéma d’auteur français",
+    "icon": "🇫🇷",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Agn%C3%A8s%20Varda%20(Berlinale%202019)%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Cinéastes, films & Nouvelle Vague"
+  },
+  "palme_d_or_cannes": {
+    "label": "Palme d’Or Cannes",
+    "englishLabel": "Palme d’Or Cannes",
+    "icon": "🌿",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Palme%20d'or.jpg?width=960",
+    "fit": "cover",
+    "description": "Lauréats, réalisateurs & palmarès"
+  },
+  "acteurs_britanniques": {
+    "label": "Acteurs britanniques",
+    "englishLabel": "Acteurs britanniques",
+    "icon": "🇬🇧",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Benedict%20Cumberbatch-67228.jpg?width=960",
+    "fit": "cover",
+    "description": "Rôles, films & récompenses"
+  },
+  "comediens_cultes": {
+    "label": "Comédiens cultes",
+    "englishLabel": "Comédiens cultes",
+    "icon": "🎭",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Robert%20De%20Niro%20Cannes%202016.jpg?width=960",
+    "fit": "cover",
+    "description": "Personnages, duos & classiques comiques"
+  },
+  "personnages_de_contes_de_fees": {
+    "label": "Personnages de contes de fées",
+    "englishLabel": "Personnages de contes de fées",
+    "icon": "🧚",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cinderella%20-%20Project%20Gutenberg%20etext%2019993.jpg?width=960",
+    "fit": "cover",
+    "description": "Héros, objets magiques & récits classiques"
+  },
+  "sagas_young_adult": {
+    "label": "Sagas young adult",
+    "englishLabel": "Sagas young adult",
+    "icon": "📚",
+    "family": "sagas",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Jennifer%20Lawrence%20as%20Katniss%20Everdeen%20(33694624814).jpg?width=960",
+    "fit": "cover",
+    "description": "Héros, mondes & symboles littéraires"
+  },
+  "emissions_de_cuisine": {
+    "label": "Émissions de cuisine",
+    "englishLabel": "Émissions de cuisine",
+    "icon": "📺",
+    "family": "series",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cooking%20Show.jpg?width=960",
+    "fit": "cover",
+    "description": "Concours, animateurs & concepts culinaires"
+  },
+  "chefs_celebres": {
+    "label": "Chefs célèbres",
+    "englishLabel": "Chefs célèbres",
+    "icon": "👨‍🍳",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chef%20Gordon%20Ramsay.jpg?width=960",
+    "fit": "cover",
+    "description": "Restaurants, styles & parcours"
+  },
+  "top_models": {
+    "label": "Top models",
+    "englishLabel": "Top models",
+    "icon": "📸",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Gigi%20Hadid%20in%202019.jpg?width=960",
+    "fit": "cover",
+    "description": "Podiums, campagnes & supermodels"
+  },
+  "miss_france": {
+    "label": "Miss France",
+    "englishLabel": "Miss France",
+    "icon": "👑",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Iris%20Mittenaere%202016.05.07%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Lauréates, régions & parcours"
+  },
+  "culture_meme_internet": {
+    "label": "Culture mème & Internet",
+    "englishLabel": "Culture mème & Internet",
+    "icon": "🧠",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kabosu%20and%20Atsuko%20Sato%202023-11-02%20(1).jpg?width=960",
+    "fit": "cover",
+    "description": "Images virales, formats & origines"
+  },
+  "comedies_romantiques": {
+    "label": "Comédies romantiques",
+    "englishLabel": "Comédies romantiques",
+    "icon": "💞",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Julia%20Roberts%20Cannes%202016.jpg?width=960",
+    "fit": "cover",
+    "description": "Couples, villes & classiques du genre"
+  },
+  "films_musicaux": {
+    "label": "Films musicaux",
+    "englishLabel": "Films musicaux",
+    "icon": "🎶",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Gentlemen%20Prefer%20Blondes%20Movie%20Trailer%20Screenshot%20(34).jpg?width=960",
+    "fit": "cover",
+    "description": "Chansons, interprètes & mise en scène"
+  },
+  "biopics_celebres": {
+    "label": "Biopics célèbres",
+    "englishLabel": "Biopics célèbres",
+    "icon": "🎬",
+    "family": "cinema",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cillian%20Murphy%20at%20Berlinale%202024-1.jpg?width=960",
+    "fit": "cover",
+    "description": "Personnalités, acteurs & histoires vraies"
+  },
+  "capitales_du_monde": {
+    "label": "Capitales du monde",
+    "englishLabel": "Capitales du monde",
+    "icon": "🌍",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Paris%20Eiffel%20Tower%20from%20Trocadero.jpg?width=960",
+    "fit": "cover",
+    "description": "Capitales, pays & repères mondiaux"
+  },
+  "fleuves_montagnes": {
+    "label": "Fleuves & montagnes",
+    "englishLabel": "Fleuves & montagnes",
+    "icon": "🏔️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Everest%2C%20Himalayas.jpg?width=960",
+    "fit": "cover",
+    "description": "Sommets, fleuves & grands reliefs"
+  },
+  "europe_culture_histoire": {
+    "label": "Europe (culture/histoire)",
+    "englishLabel": "Europe (culture/histoire)",
+    "icon": "🏰",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Berlaymont%20EU%20flags.jpg?width=960",
+    "fit": "cover",
+    "description": "Événements, lieux & héritages européens"
+  },
+  "afrique_culture_histoire": {
+    "label": "Afrique (culture/histoire)",
+    "englishLabel": "Afrique (culture/histoire)",
+    "icon": "🌍",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Maasai%20Culture.jpg?width=960",
+    "fit": "cover",
+    "description": "Royaumes, sites & histoire africaine"
+  },
+  "asie_culture_histoire": {
+    "label": "Asie (culture/histoire)",
+    "englishLabel": "Asie (culture/histoire)",
+    "icon": "🏯",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20Great%20Wall%20of%20China%20at%20Jinshanling.jpg?width=960",
+    "fit": "cover",
+    "description": "Civilisations, sites & histoire asiatique"
+  },
+  "amerique_latine": {
+    "label": "Amérique latine",
+    "englishLabel": "Amérique latine",
+    "icon": "🌎",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Historic%20Sanctuary%20of%20Machu%20Picchu-109690.jpg?width=960",
+    "fit": "cover",
+    "description": "Cultures, sites & histoire latino-américaine"
+  },
+  "etats_unis_culture_generale": {
+    "label": "États-Unis (culture générale)",
+    "englishLabel": "États-Unis (culture générale)",
+    "icon": "🗽",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Statue%20of%20Liberty%2C%20NY%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Histoire, institutions & symboles américains"
+  },
+  "histoire_antique": {
+    "label": "Histoire antique",
+    "englishLabel": "Histoire antique",
+    "icon": "🏛️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Athen's%20Acropolis%20at%20sunset.jpg?width=960",
+    "fit": "cover",
+    "description": "Civilisations, dates & mondes antiques"
+  },
+  "mythologie_grecque": {
+    "label": "Mythologie grecque",
+    "englishLabel": "Mythologie grecque",
+    "icon": "⚡",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Zeus%20Otricoli%20Pio-Clementino%20Inv257.jpg?width=960",
+    "fit": "cover",
+    "description": "Dieux, héros & récits helléniques"
+  },
+  "mythologie_nordique": {
+    "label": "Mythologie nordique",
+    "englishLabel": "Mythologie nordique",
+    "icon": "🔨",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Claes%20Kurck%20Sk%C3%A5ne%20hammer%20-%20HST%20DIG55488%20original%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Ases, créatures & neuf mondes"
+  },
+  "mythologie_egyptienne": {
+    "label": "Mythologie égyptienne",
+    "englishLabel": "Mythologie égyptienne",
+    "icon": "𓂀",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Egypt%20Abou%20Simbel3.jpg?width=960",
+    "fit": "cover",
+    "description": "Divinités, symboles & rites antiques"
+  },
+  "moyen_age": {
+    "label": "Moyen Âge",
+    "englishLabel": "Moyen Âge",
+    "icon": "⚔️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Knights%20engage%20in%20sword%20fight%20during%20a%20historical%20reenactment%20event%20in%20a%20medieval%20setting%20with%20an%20audience%20watching%20closely.jpg?width=960",
+    "fit": "cover",
+    "description": "Dates, institutions & culture médiévale"
+  },
+  "premiere_guerre_mondiale": {
+    "label": "Première Guerre mondiale",
+    "englishLabel": "Première Guerre mondiale",
+    "icon": "🪖",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Soldiers%20in%20trench.jpg?width=960",
+    "fit": "cover",
+    "description": "Fronts, dates & diplomatie de 1914-1918"
+  },
+  "revolutions_dans_le_monde": {
+    "label": "Révolutions dans le monde",
+    "englishLabel": "Révolutions dans le monde",
+    "icon": "✊",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Anonymous%20-%20Prise%20de%20la%20Bastille.jpg?width=960",
+    "fit": "cover",
+    "description": "Soulèvements, figures & tournants historiques"
+  },
+  "grandes_explorations": {
+    "label": "Grandes explorations",
+    "englishLabel": "Grandes explorations",
+    "icon": "🧭",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Landing%20of%20Columbus%20(2).jpg?width=960",
+    "fit": "cover",
+    "description": "Voyages, navigateurs & découvertes"
+  },
+  "litterature_francaise_classique": {
+    "label": "Littérature française classique",
+    "englishLabel": "Littérature française classique",
+    "icon": "📖",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Victor%20Hugo%20by%20%C3%89tienne%20Carjat%201876%20-%20full.jpg?width=960",
+    "fit": "cover",
+    "description": "Œuvres majeures & auteurs français"
+  },
+  "litterature_mondiale": {
+    "label": "Littérature mondiale",
+    "englishLabel": "Littérature mondiale",
+    "icon": "📚",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Shakespeare.jpg?width=960",
+    "fit": "cover",
+    "description": "Romans, pièces & écrivains du monde"
+  },
+  "philosophes_celebres": {
+    "label": "Philosophes célèbres",
+    "englishLabel": "Philosophes célèbres",
+    "icon": "💭",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Socrates%20Louvre.jpg?width=960",
+    "fit": "cover",
+    "description": "Concepts, écoles & grands penseurs"
+  },
+  "peintres_oeuvres_d_art": {
+    "label": "Peintres & œuvres d'art",
+    "englishLabel": "Peintres & œuvres d'art",
+    "icon": "🎨",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mona%20Lisa%2C%20by%20Leonardo%20da%20Vinci%2C%20from%20C2RMF%20retouched.jpg?width=960",
+    "fit": "cover",
+    "description": "Tableaux, artistes & mouvements"
+  },
+  "sculpteurs_monuments": {
+    "label": "Sculpteurs & monuments",
+    "englishLabel": "Sculpteurs & monuments",
+    "icon": "🗿",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Michelangelo's%20David%202015.jpg?width=960",
+    "fit": "cover",
+    "description": "Sculptures, architecture & monuments"
+  },
+  "architecture_celebre": {
+    "label": "Architecture célèbre",
+    "englishLabel": "Architecture célèbre",
+    "icon": "🏛️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sagrada%20Familia%2001.jpg?width=960",
+    "fit": "cover",
+    "description": "Bâtiments, architectes & styles"
+  },
+  "merveilles_du_monde": {
+    "label": "Merveilles du monde",
+    "englishLabel": "Merveilles du monde",
+    "icon": "🌐",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/All%20Gizah%20Pyramids.jpg?width=960",
+    "fit": "cover",
+    "description": "Sites antiques, modernes & naturels"
+  },
+  "animaux": {
+    "label": "Animaux",
+    "englishLabel": "Animaux",
+    "icon": "🐾",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lion%20waiting%20in%20Namibia.jpg?width=960",
+    "fit": "cover",
+    "description": "Espèces, records & caractéristiques"
+  },
+  "oceans": {
+    "label": "Océans",
+    "englishLabel": "Océans",
+    "icon": "🌊",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Coral%20reef%20at%20palmyra.jpg?width=960",
+    "fit": "cover",
+    "description": "Courants, fosses & espaces marins"
+  },
+  "dinosaures": {
+    "label": "Dinosaures",
+    "englishLabel": "Dinosaures",
+    "icon": "🦖",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/FMNH%20Tyrannosaurus%20rex%20Sue.jpg?width=960",
+    "fit": "cover",
+    "description": "Espèces, fossiles & paléontologie"
+  },
+  "environnement_ecologie": {
+    "label": "Environnement & écologie",
+    "englishLabel": "Environnement & écologie",
+    "icon": "🌱",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20Earth%20seen%20from%20Apollo%2017.jpg?width=960",
+    "fit": "cover",
+    "description": "Climat, écosystèmes & solutions"
+  },
+  "inventions_inventeurs": {
+    "label": "Inventions & inventeurs",
+    "englishLabel": "Inventions & inventeurs",
+    "icon": "💡",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Thomas%20Edison2.jpg?width=960",
+    "fit": "cover",
+    "description": "Découvertes, techniques & pionniers"
+  },
+  "prix_nobel": {
+    "label": "Prix Nobel",
+    "englishLabel": "Prix Nobel",
+    "icon": "🏅",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nobel%20prize%20medal%20awarded%20to%20Alexander%20Fleming%2C%201945.%20(9660573705).jpg?width=960",
+    "fit": "cover",
+    "description": "Lauréats, disciplines & années"
+  },
+  "langues_du_monde": {
+    "label": "Langues du monde",
+    "englishLabel": "Langues du monde",
+    "icon": "🗣️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rosetta%20Stone.JPG?width=960",
+    "fit": "cover",
+    "description": "Langues, écritures & pays"
+  },
+  "traditions_fetes_du_monde": {
+    "label": "Traditions & fêtes du monde",
+    "englishLabel": "Traditions & fêtes du monde",
+    "icon": "🎊",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Holi%20Festival%20of%20Colors%20Utah%2C%20United%20States%202013.jpg?width=960",
+    "fit": "cover",
+    "description": "Célébrations, rites & cultures"
+  },
+  "gastronomie_francaise": {
+    "label": "Gastronomie française",
+    "englishLabel": "Gastronomie française",
+    "icon": "🥐",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Collage%20French%20Cuisine%20by%20User-EME.png?width=960",
+    "fit": "cover",
+    "description": "Plats, régions & spécialités"
+  },
+  "gastronomie_du_monde": {
+    "label": "Gastronomie du monde",
+    "englishLabel": "Gastronomie du monde",
+    "icon": "🍜",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Gastronomiasdelmundo.jpg?width=960",
+    "fit": "cover",
+    "description": "Plats emblématiques & origines"
+  },
+  "vins_terroirs": {
+    "label": "Vins & terroirs",
+    "englishLabel": "Vins & terroirs",
+    "icon": "🍇",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Vineyard%20in%20Bordeaux.jpg?width=960",
+    "fit": "cover",
+    "description": "Appellations, cépages & régions"
+  },
+  "hymnes_nationaux": {
+    "label": "Hymnes nationaux",
+    "englishLabel": "Hymnes nationaux",
+    "icon": "🎼",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/John%20Carlos%2C%20Tommie%20Smith%2C%20Peter%20Norman%201968cr.jpg?width=960",
+    "fit": "cover",
+    "description": "Titres, pays & symboles"
+  },
+  "femmes_celebres_de_l_histoire": {
+    "label": "Femmes célèbres de l'histoire",
+    "englishLabel": "Femmes célèbres de l'histoire",
+    "icon": "👩‍🏫",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Marie%20Curie%20c1920.jpg?width=960",
+    "fit": "cover",
+    "description": "Pionnières, dirigeantes & militantes"
+  },
+  "dates_cles_de_l_histoire": {
+    "label": "Dates clés de l'histoire",
+    "englishLabel": "Dates clés de l'histoire",
+    "icon": "📅",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/History%20collage.png?width=960",
+    "fit": "cover",
+    "description": "Événements & grands repères"
+  },
+  "rois_reines_d_europe": {
+    "label": "Rois & reines d'Europe",
+    "englishLabel": "Rois & reines d'Europe",
+    "icon": "👑",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Queen%20Elizabeth%20II%20on%20her%20Coronation%20Day%20(cropped%207-9).jpg?width=960",
+    "fit": "cover",
+    "description": "Dynasties, règnes & souverains"
+  },
+  "presidents_francais": {
+    "label": "Présidents français",
+    "englishLabel": "Présidents français",
+    "icon": "🇫🇷",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Emmanuel%20Macron%20portrait%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Républiques, mandats & événements"
+  },
+  "presidents_americains": {
+    "label": "Présidents américains",
+    "englishLabel": "Présidents américains",
+    "icon": "🇺🇸",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Rushmore%20National%20Memorial%204%20Presidents.jpg?width=960",
+    "fit": "cover",
+    "description": "Présidents, doctrines & mandats"
+  },
+  "grandes_villes_du_monde": {
+    "label": "Grandes villes du monde",
+    "englishLabel": "Grandes villes du monde",
+    "icon": "🏙️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/New%20York%20City%20Skyline.jpg?width=960",
+    "fit": "cover",
+    "description": "Monuments, quartiers & métropoles"
+  },
+  "especes_en_voie_de_disparition": {
+    "label": "Espèces en voie de disparition",
+    "englishLabel": "Espèces en voie de disparition",
+    "icon": "🐼",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Amur%20Leopard.jpg?width=960",
+    "fit": "cover",
+    "description": "Faune menacée & habitats"
+  },
+  "histoire_du_maroc": {
+    "label": "Histoire du Maroc",
+    "englishLabel": "History of Morocco",
+    "icon": "🇲🇦",
+    "family": "culture",
+    "src": "/images/covers/international-v1/histoire_du_maroc-640.webp",
+    "fit": "cover",
+    "description": "Dynasties, indépendance & repères"
+  },
+  "histoire_de_l_algerie": {
+    "label": "Histoire de l’Algérie",
+    "englishLabel": "History of Algeria",
+    "icon": "🇩🇿",
+    "family": "culture",
+    "src": "/images/covers/international-v1/histoire_de_l_algerie-640.webp",
+    "fit": "cover",
+    "description": "Antiquité, colonisation & indépendance"
+  },
+  "histoire_de_la_tunisie": {
+    "label": "Histoire de la Tunisie",
+    "englishLabel": "History of Tunisia",
+    "icon": "🇹🇳",
+    "family": "culture",
+    "src": "/images/covers/international-v1/histoire_de_la_tunisie-640.webp",
+    "fit": "cover",
+    "description": "Carthage, indépendance & République"
+  },
+  "islam": {
+    "label": "Islam",
+    "englishLabel": "Islam",
+    "icon": "☪️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20Kaaba%20during%20Hajj%20-%20edited.jpg?width=960",
+    "fit": "cover",
+    "description": "Textes, pratiques & histoire"
+  },
+  "christianisme": {
+    "label": "Christianisme",
+    "englishLabel": "Christianisme",
+    "icon": "✝️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Saint%20Peter's%20Basilica%20facade%2C%20Rome%2C%20Italy.jpg?width=960",
+    "fit": "cover",
+    "description": "Textes, fêtes & traditions"
+  },
+  "judaisme": {
+    "label": "Judaïsme",
+    "englishLabel": "Judaïsme",
+    "icon": "✡️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20prayer%20to%20God%20in%20the%20Western%20Wall%20in%20Jerusalem.jpg?width=960",
+    "fit": "cover",
+    "description": "Textes, fêtes & pratiques"
+  },
+  "bouddhisme": {
+    "label": "Bouddhisme",
+    "englishLabel": "Bouddhisme",
+    "icon": "☸️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/80%20Feet%20Budhdha%20of%20Bodh%20Gaya%2C%20Bihar.jpg?width=960",
+    "fit": "cover",
+    "description": "Enseignements, traditions & lieux"
+  },
+  "hindouisme": {
+    "label": "Hindouisme",
+    "englishLabel": "Hindouisme",
+    "icon": "🕉️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Diwali%20worship.jpg?width=960",
+    "fit": "cover",
+    "description": "Textes, divinités & pratiques"
+  },
+  "sonic": {
+    "label": "Sonic",
+    "englishLabel": "Sonic",
+    "icon": "💨",
+    "family": "gaming",
+    "src": "/images/covers/approved-v2/sonic-640.webp",
+    "fit": "cover",
+    "description": "Personnages, objets & jeux"
+  },
+  "fifa_ea_sports_fc": {
+    "label": "FIFA/EA Sports FC",
+    "englishLabel": "FIFA/EA Sports FC",
+    "icon": "⚽",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Jude%20Bellingham%20during%20an%20EA%20Sports%20event%20in%20September%202024.jpg?width=960",
+    "fit": "cover",
+    "description": "Modes, cartes & histoire de la série"
+  },
+  "assassin_s_creed": {
+    "label": "Assassin's Creed",
+    "englishLabel": "Assassin's Creed",
+    "icon": "🗡️",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ezio%20Auditore%20Cosplay.jpg?width=960",
+    "fit": "cover",
+    "description": "Assassins, époques & personnages"
+  },
+  "the_witcher": {
+    "label": "The Witcher",
+    "englishLabel": "The Witcher",
+    "icon": "🐺",
+    "family": "gaming",
+    "src": "/images/covers/approved-v2/the_witcher-640.webp",
+    "fit": "cover",
+    "description": "Sorceleurs, signes & Continents"
+  },
+  "elden_ring": {
+    "label": "Elden Ring",
+    "englishLabel": "Elden Ring",
+    "icon": "💍",
+    "family": "gaming",
+    "src": "/images/covers/approved-v2/elden_ring-640.webp",
+    "fit": "cover",
+    "description": "Boss, runes & Entre-terre"
+  },
+  "animal_crossing": {
+    "label": "Animal Crossing",
+    "englishLabel": "Animal Crossing",
+    "icon": "🏝️",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/WonderCon%202017%20-%20Isabelle%20(Animal%20Crossing)%20cosplay.jpg?width=960",
+    "fit": "cover",
+    "description": "Habitants, objets & villages"
+  },
+  "the_sims": {
+    "label": "The Sims",
+    "englishLabel": "The Sims",
+    "icon": "💚",
+    "family": "gaming",
+    "src": "/images/covers/approved-v2/the_sims-640.webp",
+    "fit": "cover",
+    "description": "Sims, construction & simulation"
+  },
+  "overwatch": {
+    "label": "Overwatch",
+    "englishLabel": "Overwatch",
+    "icon": "🦸",
+    "family": "gaming",
+    "src": "/images/covers/approved-v2/overwatch-640.webp",
+    "fit": "cover",
+    "description": "Héros, cartes & organisations"
+  },
+  "counter_strike": {
+    "label": "Counter-Strike",
+    "englishLabel": "Counter-Strike",
+    "icon": "🎯",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dreamhack%20Masters%20Malm%C3%B6%202017%20Stage.jpg?width=960",
+    "fit": "cover",
+    "description": "Armes, cartes & compétition"
+  },
+  "world_of_warcraft": {
+    "label": "World of Warcraft",
+    "englishLabel": "World of Warcraft",
+    "icon": "⚔️",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/World%20of%20Warcraft%20cosplayers%20(16018033652).jpg?width=960",
+    "fit": "cover",
+    "description": "Azeroth, héros & extensions"
+  },
+  "legendes_de_l_esport": {
+    "label": "Légendes de l'esport",
+    "englishLabel": "Légendes de l'esport",
+    "icon": "🏆",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Caps%202025.jpg?width=960",
+    "fit": "cover",
+    "description": "Champions, jeux & scènes esport"
+  },
+  "streamers_gaming_fr": {
+    "label": "Streamers gaming FR",
+    "englishLabel": "Streamers gaming FR",
+    "icon": "🎙️",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Gotaga%202026.jpg?width=960",
+    "fit": "cover",
+    "description": "Créateurs, jeux & événements"
+  },
+  "jeux_mobile_populaires": {
+    "label": "Jeux mobile populaires",
+    "englishLabel": "Jeux mobile populaires",
+    "icon": "📱",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/People%20playing%20Pok%C3%A9mon%20go.jpg?width=960",
+    "fit": "cover",
+    "description": "Studios, hits & jeux nomades"
+  },
+  "histoire_des_consoles": {
+    "label": "Histoire des consoles",
+    "englishLabel": "Histoire des consoles",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20Nostalgia%20Box%20-%20Museum%20Space.jpg?width=960",
+    "fit": "cover",
+    "description": "Machines, constructeurs & générations"
+  },
+  "fc_barcelone": {
+    "label": "FC Barcelone",
+    "englishLabel": "FC Barcelone",
+    "icon": "🔵",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Messi%20Barcelona%20-%20Valladolid%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Camp Nou, légendes & trophées"
+  },
+  "manchester_united": {
+    "label": "Manchester United",
+    "englishLabel": "Manchester United",
+    "icon": "🔴",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Manchester%20United%20Old%20Trafford.jpg?width=960",
+    "fit": "cover",
+    "description": "Old Trafford, Busby & Ferguson"
+  },
+  "liverpool": {
+    "label": "Liverpool",
+    "englishLabel": "Liverpool",
+    "icon": "🔴",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mo%20Salah%202018%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Anfield, légendes & Europe"
+  },
+  "bayern_munich": {
+    "label": "Bayern Munich",
+    "englishLabel": "Bayern Munich",
+    "icon": "🔴",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Allianz%20Arena%20at%20night%2C%20lit%20in%20red.JPG?width=960",
+    "fit": "cover",
+    "description": "Allianz Arena, légendes & titres"
+  },
+  "manchester_city": {
+    "label": "Manchester City",
+    "englishLabel": "Manchester City",
+    "icon": "🔵",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Erling%20Haaland%202023%20(cropped-v2).jpg?width=960",
+    "fit": "cover",
+    "description": "Citizens, records & trophées"
+  },
+  "chelsea": {
+    "label": "Chelsea",
+    "englishLabel": "Chelsea",
+    "icon": "🔵",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Didier%20Drogba%20Champions%20League%20Winner%202012.jpg?width=960",
+    "fit": "cover",
+    "description": "Stamford Bridge, Blues & Europe"
+  },
+  "arsenal": {
+    "label": "Arsenal",
+    "englishLabel": "Arsenal",
+    "icon": "🔴",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Arsenal%20logo%20at%20the%20Emirates%20Stadium.jpg?width=960",
+    "fit": "cover",
+    "description": "Gunners, Highbury & Invincibles"
+  },
+  "inter_milan": {
+    "label": "Inter Milan",
+    "englishLabel": "Inter Milan",
+    "icon": "🔵",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Il%20biscione%20e%20l'fc%20Internazionale%20III.jpg?width=960",
+    "fit": "cover",
+    "description": "Nerazzurri, derbys & triplé"
+  },
+  "borussia_dortmund": {
+    "label": "Borussia Dortmund",
+    "englishLabel": "Borussia Dortmund",
+    "icon": "🟡",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Suedtribuene.jpg?width=960",
+    "fit": "cover",
+    "description": "Mur jaune, BVB & Europe"
+  },
+  "olympique_de_marseille": {
+    "label": "Olympique de Marseille",
+    "englishLabel": "Olympique de Marseille",
+    "icon": "⚪",
+    "family": "football",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tifo%20Virage%20Sud%20OM%20Lille.jpg?width=960",
+    "fit": "cover",
+    "description": "Vélodrome, légendes & 1993"
+  },
+  "cyclisme_stars": {
+    "label": "Cyclisme (Stars)",
+    "englishLabel": "Cyclisme (Stars)",
+    "icon": "🚴",
+    "family": "sport",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tadej%20Pogacar%20wearing%20yellow%20jersey%20of%20Tour%20de%20France%202025%20in%20stage%2014.jpg?width=960",
+    "fit": "cover",
+    "description": "Champions, Grands Tours & classiques"
+  },
+  "musique_stars": {
+    "label": "Musique (Stars)",
+    "englishLabel": "Musique (Stars)",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Concert%20The%20Weeknd%20Paris%2011.jpg?width=960",
+    "fit": "cover",
+    "description": "Icônes, chansons & albums"
+  },
+  "booba": {
+    "label": "Booba",
+    "englishLabel": "Booba",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Festival%20des%20Vieilles%20Charrues%202019%20-%20Booba%20-%20038.jpg?width=960",
+    "fit": "cover",
+    "description": "Lunatic, albums & classiques"
+  },
+  "jul": {
+    "label": "JUL",
+    "englishLabel": "JUL",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/JUL%20-%20Julien%20Mari%202018.jpg?width=960",
+    "fit": "cover",
+    "description": "Marseille, albums & hits"
+  },
+  "pnl": {
+    "label": "PNL",
+    "englishLabel": "PNL",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/PNL%20(Peace%20N%E2%80%99%20Lov%C3%A9s)%20'16%20concert.jpg?width=960",
+    "fit": "cover",
+    "description": "QLF, albums & titres"
+  },
+  "ninho": {
+    "label": "Ninho",
+    "englishLabel": "Ninho",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Festival%20des%20Vieilles%20Charrues%202022%20-%20Ninho%20-%20041.jpg?width=960",
+    "fit": "cover",
+    "description": "M.I.L.S, albums & collaborations"
+  },
+  "sch": {
+    "label": "SCH",
+    "englishLabel": "SCH",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Festival%20des%20Vieilles%20Charrues%202022%20-%20SCH%20-%20038%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "JVLIVS, Marseille & classiques"
+  },
+  "damso": {
+    "label": "Damso",
+    "englishLabel": "Damso",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Festival%20des%20Vieilles%20Charrues%202018%20-%20Damso%20-%20053.jpg?width=960",
+    "fit": "cover",
+    "description": "Albums, morceaux & univers"
+  },
+  "orelsan": {
+    "label": "Orelsan",
+    "englishLabel": "Orelsan",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelsan%20Deauville%202019.jpg?width=960",
+    "fit": "cover",
+    "description": "Albums, Casseurs Flowters & textes"
+  },
+  "gims": {
+    "label": "Gims",
+    "englishLabel": "Gims",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/NDLE2025Gims%201.jpg?width=960",
+    "fit": "cover",
+    "description": "Sexion d’Assaut, albums & hits"
+  },
+  "aya_nakamura": {
+    "label": "Aya Nakamura",
+    "englishLabel": "Aya Nakamura",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Aya%20Nakamura%20IMG%204756%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Albums, tubes & collaborations"
+  },
+  "nekfeu": {
+    "label": "Nekfeu",
+    "englishLabel": "Nekfeu",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nekfeu%20avp.jpg?width=960",
+    "fit": "cover",
+    "description": "1995, albums & morceaux"
+  },
+  "gazo": {
+    "label": "Gazo",
+    "englishLabel": "Gazo",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/P2N2023Gazo%202.jpg?width=960",
+    "fit": "cover",
+    "description": "Drill, projets & collaborations"
+  },
+  "tiakola": {
+    "label": "Tiakola",
+    "englishLabel": "Tiakola",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TiakolaConcert.jpg?width=960",
+    "fit": "cover",
+    "description": "4Keus, albums & morceaux"
+  },
+  "lomepal": {
+    "label": "Lomepal",
+    "englishLabel": "Lomepal",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Festival%20des%20Vieilles%20Charrues%202019%20-%20Lomepal%20-%20038.jpg?width=960",
+    "fit": "cover",
+    "description": "Albums, textes & influences"
+  },
+  "soprano": {
+    "label": "Soprano",
+    "englishLabel": "Soprano",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Portrait%20de%20Soprano%20lors%20du%20festival%20des%20Alpagas%20bleus%20%C3%A0%20Saverne%20en%202026.jpg?width=960",
+    "fit": "cover",
+    "description": "Psy 4, albums & tubes"
+  },
+  "drake": {
+    "label": "Drake",
+    "englishLabel": "Drake",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Drake%20July%202016.jpg?width=960",
+    "fit": "cover",
+    "description": "Toronto, albums & classiques"
+  },
+  "eminem": {
+    "label": "Eminem",
+    "englishLabel": "Eminem",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Eminem%202021%20Color%20Corrected.jpg?width=960",
+    "fit": "cover",
+    "description": "Detroit, albums & morceaux"
+  },
+  "kanye_west": {
+    "label": "Kanye West",
+    "englishLabel": "Kanye West",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kanye%20West%20at%20the%20Met%20Gala%20in%202019.png?width=960",
+    "fit": "cover",
+    "description": "Chicago, albums & productions"
+  },
+  "travis_scott": {
+    "label": "Travis Scott",
+    "englishLabel": "Travis Scott",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TravisScott-byPhilipRomano.jpg?width=960",
+    "fit": "cover",
+    "description": "Houston, albums & morceaux"
+  },
+  "the_weeknd": {
+    "label": "The Weeknd",
+    "englishLabel": "The Weeknd",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/The%20Weeknd%20Portrait%20by%20Brian%20Ziff.jpg?width=960",
+    "fit": "cover",
+    "description": "Albums, univers & hits"
+  },
+  "rihanna": {
+    "label": "Rihanna",
+    "englishLabel": "Rihanna",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rihanna%20Fenty%202018.png?width=960",
+    "fit": "cover",
+    "description": "Barbade, albums & tubes"
+  },
+  "beyonce": {
+    "label": "Beyoncé",
+    "englishLabel": "Beyoncé",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Beyonc%C3%A9%20-%20Tottenham%20Hotspur%20Stadium%20-%201st%20June%202023%20(10%20of%20118)%20(52946364598)%20(best%20crop).jpg?width=960",
+    "fit": "cover",
+    "description": "Destiny’s Child, albums & titres"
+  },
+  "taylor_swift": {
+    "label": "Taylor Swift",
+    "englishLabel": "Taylor Swift",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Taylor%20Swift%20at%20the%20Golden%20Globes%202024%20(Enhanced%2C%20cropped)%202.jpg?width=960",
+    "fit": "cover",
+    "description": "Ères, albums & chansons"
+  },
+  "michael_jackson": {
+    "label": "Michael Jackson",
+    "englishLabel": "Michael Jackson",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Michael%20Jackson%20with%20Grammy%20Awards%20in%201984.jpg?width=960",
+    "fit": "cover",
+    "description": "Jackson 5, albums & classiques"
+  },
+  "dua_lipa": {
+    "label": "Dua Lipa",
+    "englishLabel": "Dua Lipa",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dua%20Lipa-69798%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Albums, tubes & influences"
+  },
+  "billie_eilish": {
+    "label": "Billie Eilish",
+    "englishLabel": "Billie Eilish",
+    "icon": "🎤",
+    "family": "music",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/BillieEilishO2140725-39%20-%2054665577407%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Albums, Finneas & chansons"
+  },
+  "one_piece": {
+    "label": "One Piece",
+    "englishLabel": "One Piece",
+    "icon": "📺",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/504/1262497.jpg",
+    "fit": "cover",
+    "description": "Équipage, Grand Line & mystères"
+  },
+  "naruto": {
+    "label": "Naruto",
+    "englishLabel": "Naruto",
+    "icon": "📺",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/3/9744.jpg",
+    "fit": "cover",
+    "description": "Ninjas, villages & techniques"
+  },
+  "dragon_ball": {
+    "label": "Dragon Ball",
+    "englishLabel": "Dragon Ball",
+    "icon": "📺",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/11/29190.jpg",
+    "fit": "cover",
+    "description": "Saiyans, combats & Dragon Balls"
+  },
+  "demon_slayer": {
+    "label": "Demon Slayer",
+    "englishLabel": "Demon Slayer",
+    "icon": "📺",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/456/1140750.jpg",
+    "fit": "cover",
+    "description": "Pourfendeurs, lunes & souffles"
+  },
+  "jujutsu_kaisen": {
+    "label": "Jujutsu Kaisen",
+    "englishLabel": "Jujutsu Kaisen",
+    "icon": "📺",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/608/1521905.jpg",
+    "fit": "cover",
+    "description": "Exorcistes, fléaux & techniques"
+  },
+  "attaque_des_titans": {
+    "label": "L’Attaque des Titans",
+    "englishLabel": "L’Attaque des Titans",
+    "icon": "📺",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/632/1582290.jpg",
+    "fit": "cover",
+    "description": "Titans, bataillons & secrets"
+  },
+  "hunter_x_hunter": {
+    "label": "Hunter × Hunter",
+    "englishLabel": "Hunter × Hunter",
+    "icon": "📺",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/223/559165.jpg",
+    "fit": "cover",
+    "description": "Hunters, Nen & aventures"
+  },
+  "my_hero_academia": {
+    "label": "My Hero Academia",
+    "englishLabel": "My Hero Academia",
+    "icon": "📺",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/599/1499141.jpg",
+    "fit": "cover",
+    "description": "Héros, alters & académies"
+  },
+  "death_note": {
+    "label": "Death Note",
+    "englishLabel": "Death Note",
+    "icon": "📺",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/499/1249019.jpg",
+    "fit": "cover",
+    "description": "Kira, enquête & shinigamis"
+  },
+  "bleach": {
+    "label": "Bleach",
+    "englishLabel": "Bleach",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/459/1148800.jpg",
+    "fit": "cover",
+    "description": "Shinigami, hollows & zanpakutō"
+  },
+  "fullmetal_alchemist": {
+    "label": "Fullmetal Alchemist",
+    "englishLabel": "Fullmetal Alchemist",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/485/1214095.jpg",
+    "fit": "cover",
+    "description": "Frères Elric, alchimie & homonculus"
+  },
+  "chainsaw_man": {
+    "label": "Chainsaw Man",
+    "englishLabel": "Chainsaw Man",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/422/1056726.jpg",
+    "fit": "cover",
+    "description": "Denji, démons & Sécurité publique"
+  },
+  "spy_x_family": {
+    "label": "Spy×Family",
+    "englishLabel": "Spy×Family",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/590/1477119.jpg",
+    "fit": "cover",
+    "description": "Espion, tueuse & petite télépathe"
+  },
+  "tokyo_revengers": {
+    "label": "Tokyo Revengers",
+    "englishLabel": "Tokyo Revengers",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/546/1366123.jpg",
+    "fit": "cover",
+    "description": "Toman, gangs & voyages dans le temps"
+  },
+  "haikyu": {
+    "label": "Haikyū!!",
+    "englishLabel": "Haikyū!!",
+    "icon": "📖",
+    "family": "manga",
+    "src": "/images/covers/editorial-v1/haikyu.webp",
+    "fit": "cover",
+    "description": "Karasuno, volley & rivalités"
+  },
+  "blue_lock": {
+    "label": "Blue Lock",
+    "englishLabel": "Blue Lock",
+    "icon": "📖",
+    "family": "manga",
+    "src": "/images/covers/editorial-v1/blue_lock.webp",
+    "fit": "cover",
+    "description": "Égoïstes, attaquants & Neo Egoist League"
+  },
+  "jojo": {
+    "label": "JoJo's Bizarre Adventure",
+    "englishLabel": "JoJo's Bizarre Adventure",
+    "icon": "📖",
+    "family": "manga",
+    "src": "/images/covers/editorial-v1/jojo.webp",
+    "fit": "cover",
+    "description": "Joestar, Stands & poses iconiques"
+  },
+  "saint_seiya": {
+    "label": "Saint Seiya (Chevaliers du Zodiaque)",
+    "englishLabel": "Saint Seiya (Chevaliers du Zodiaque)",
+    "icon": "📖",
+    "family": "manga",
+    "src": "/images/covers/editorial-v1/saint_seiya.webp",
+    "fit": "cover",
+    "description": "Chevaliers, armures & Athéna"
+  },
+  "fairy_tail": {
+    "label": "Fairy Tail",
+    "englishLabel": "Fairy Tail",
+    "icon": "📖",
+    "family": "manga",
+    "src": "/images/covers/editorial-v1/fairy_tail.webp",
+    "fit": "cover",
+    "description": "Natsu, guildes & chasseurs de dragons"
+  },
+  "captain_tsubasa": {
+    "label": "Captain Tsubasa (Olive et Tom)",
+    "englishLabel": "Captain Tsubasa (Olive et Tom)",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/485/1213495.jpg",
+    "fit": "cover",
+    "description": "Tsubasa, Genzō & tirs légendaires"
+  },
+  "slam_dunk": {
+    "label": "Slam Dunk",
+    "englishLabel": "Slam Dunk",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/20/50928.jpg",
+    "fit": "cover",
+    "description": "Sakuragi, Shōhoku & basket"
+  },
+  "berserk": {
+    "label": "Berserk",
+    "englishLabel": "Berserk",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/396/991619.jpg",
+    "fit": "cover",
+    "description": "Guts, Griffith & Troupe du Faucon"
+  },
+  "vinland_saga": {
+    "label": "Vinland Saga",
+    "englishLabel": "Vinland Saga",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/508/1270295.jpg",
+    "fit": "cover",
+    "description": "Thorfinn, Vikings & quête du Vinland"
+  },
+  "tokyo_ghoul": {
+    "label": "Tokyo Ghoul",
+    "englishLabel": "Tokyo Ghoul",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/604/1510953.jpg",
+    "fit": "cover",
+    "description": "Kaneki, goules & CCG"
+  },
+  "black_clover": {
+    "label": "Black Clover",
+    "englishLabel": "Black Clover",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/564/1411801.jpg",
+    "fit": "cover",
+    "description": "Asta, grimoires & Empereur-Mage"
+  },
+  "dr_stone": {
+    "label": "Dr. Stone",
+    "englishLabel": "Dr. Stone",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/620/1550756.jpg",
+    "fit": "cover",
+    "description": "Senkū, science & pétrification"
+  },
+  "city_hunter": {
+    "label": "City Hunter (Nicky Larson)",
+    "englishLabel": "City Hunter (Nicky Larson)",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/26/66121.jpg",
+    "fit": "cover",
+    "description": "Ryō Saeba, Shinjuku & XYZ"
+  },
+  "detective_conan": {
+    "label": "Détective Conan",
+    "englishLabel": "Détective Conan",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/170/425395.jpg",
+    "fit": "cover",
+    "description": "Conan, enquêtes & hommes en noir"
+  },
+  "one_punch_man": {
+    "label": "One-Punch Man",
+    "englishLabel": "One-Punch Man",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/598/1496471.jpg",
+    "fit": "cover",
+    "description": "Saitama, héros & un seul coup"
+  },
+  "hokuto_no_ken": {
+    "label": "Ken le Survivant (Hokuto no Ken)",
+    "englishLabel": "Ken le Survivant (Hokuto no Ken)",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/86/215309.jpg",
+    "fit": "cover",
+    "description": "Kenshirō, Hokuto Shinken & Raoh"
+  },
+  "doraemon": {
+    "label": "Doraemon",
+    "englishLabel": "Doraemon",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/321/803650.jpg",
+    "fit": "cover",
+    "description": "Nobita, gadgets & chat-robot du futur"
+  },
+  "golgo_13": {
+    "label": "Golgo 13",
+    "englishLabel": "Golgo 13",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/32/81364.jpg",
+    "fit": "cover",
+    "description": "Duke Tōgō, sniper légendaire"
+  },
+  "kochikame": {
+    "label": "KochiKame",
+    "englishLabel": "KochiKame",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/295/737880.jpg",
+    "fit": "cover",
+    "description": "Ryō-san & le poste de police de Kameari"
+  },
+  "crayon_shin_chan": {
+    "label": "Crayon Shin-chan",
+    "englishLabel": "Crayon Shin-chan",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/116/291841.jpg",
+    "fit": "cover",
+    "description": "Shinnosuke, Kasukabe & famille Nohara"
+  },
+  "oishinbo": {
+    "label": "Oishinbo",
+    "englishLabel": "Oishinbo",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Gastronomiasdelmundo.jpg?width=960",
+    "fit": "cover",
+    "description": "Gastronomie, Menu ultime & Yamaoka"
+  },
+  "kingdom": {
+    "label": "Kingdom",
+    "englishLabel": "Kingdom",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/47/119009.jpg",
+    "fit": "cover",
+    "description": "Xin, Qin & Royaumes combattants"
+  },
+  "astro_boy": {
+    "label": "Astro Boy",
+    "englishLabel": "Astro Boy",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/79/197961.jpg",
+    "fit": "cover",
+    "description": "Le petit robot d'Osamu Tezuka"
+  },
+  "baki": {
+    "label": "Baki",
+    "englishLabel": "Baki",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/160/401566.jpg",
+    "fit": "cover",
+    "description": "Hanma, arène souterraine & combats"
+  },
+  "hajime_no_ippo": {
+    "label": "Hajime no Ippo",
+    "englishLabel": "Hajime no Ippo",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/34/87260.jpg",
+    "fit": "cover",
+    "description": "Ippo, boxe & salle Kamogawa"
+  },
+  "kindaichi": {
+    "label": "Les Enquêtes de Kindaichi",
+    "englishLabel": "Les Enquêtes de Kindaichi",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/490/1226187.jpg",
+    "fit": "cover",
+    "description": "Meurtres en chambre close & déductions"
+  },
+  "touch": {
+    "label": "Touch",
+    "englishLabel": "Touch",
+    "icon": "📖",
+    "family": "manga",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/70/175945.jpg",
+    "fit": "cover",
+    "description": "Jumeaux Uesugi, Minami & Kōshien"
+  },
+  "breaking_bad": {
+    "label": "Breaking Bad",
+    "englishLabel": "Breaking Bad",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/501/1253519.jpg",
+    "fit": "cover",
+    "description": "Albuquerque, cartel & personnages"
+  },
+  "the_walking_dead": {
+    "label": "The Walking Dead",
+    "englishLabel": "The Walking Dead",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/424/1061900.jpg",
+    "fit": "cover",
+    "description": "Survivants, factions & rôdeurs"
+  },
+  "la_casa_de_papel": {
+    "label": "La Casa de Papel",
+    "englishLabel": "La Casa de Papel",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/376/940830.jpg",
+    "fit": "cover",
+    "description": "Braquages, masques & plans"
+  },
+  "peaky_blinders": {
+    "label": "Peaky Blinders",
+    "englishLabel": "Peaky Blinders",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/48/122213.jpg",
+    "fit": "cover",
+    "description": "Shelby, Birmingham & rivalités"
+  },
+  "the_boys": {
+    "label": "The Boys",
+    "englishLabel": "The Boys",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/169/424458.jpg",
+    "fit": "cover",
+    "description": "Supes, Vought & résistance"
+  },
+  "the_last_of_us_serie": {
+    "label": "The Last of Us (série)",
+    "englishLabel": "The Last of Us (série)",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/563/1409008.jpg",
+    "fit": "cover",
+    "description": "Infection, survivants & personnages"
+  },
+  "house_of_the_dragon": {
+    "label": "House of the Dragon",
+    "englishLabel": "House of the Dragon",
+    "icon": "🎬",
+    "family": "sagas",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/627/1568449.jpg",
+    "fit": "cover",
+    "description": "Targaryen, dragons & succession"
+  },
+  "friends": {
+    "label": "Friends",
+    "englishLabel": "Friends",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/41/104565.jpg",
+    "fit": "cover",
+    "description": "Central Perk, amis & répliques"
+  },
+  "the_office": {
+    "label": "The Office",
+    "englishLabel": "The Office",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/481/1204342.jpg",
+    "fit": "cover",
+    "description": "Dunder Mifflin, collègues & humour"
+  },
+  "vikings": {
+    "label": "Vikings",
+    "englishLabel": "Vikings",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/286/715906.jpg",
+    "fit": "cover",
+    "description": "Ragnar, conquêtes & légendes"
+  },
+  "prison_break": {
+    "label": "Prison Break",
+    "englishLabel": "Prison Break",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/104/261034.jpg",
+    "fit": "cover",
+    "description": "Fox River, évasion & complots"
+  },
+  "black_mirror": {
+    "label": "Black Mirror",
+    "englishLabel": "Black Mirror",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/564/1411764.jpg",
+    "fit": "cover",
+    "description": "Technologies, dystopies & épisodes"
+  },
+  "les_simpson": {
+    "label": "Les Simpson",
+    "englishLabel": "Les Simpson",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/637/1594614.jpg",
+    "fit": "cover",
+    "description": "Springfield, famille & satire"
+  },
+  "south_park": {
+    "label": "South Park",
+    "englishLabel": "South Park",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/43/108946.jpg",
+    "fit": "cover",
+    "description": "Colorado, satire & personnages"
+  },
+  "avatar_le_dernier_maitre_de_l_air": {
+    "label": "Avatar : le dernier maître de l’air",
+    "englishLabel": "Avatar : le dernier maître de l’air",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/79/199224.jpg",
+    "fit": "cover",
+    "description": "Éléments, nations & aventures"
+  },
+  "bob_l_eponge": {
+    "label": "Bob l’éponge",
+    "englishLabel": "Bob l’éponge",
+    "icon": "🎬",
+    "family": "series",
+    "src": "https://static.tvmaze.com/uploads/images/original_untouched/594/1486607.jpg",
+    "fit": "cover",
+    "description": "Bikini Bottom, personnages & aventures"
+  },
+  "shrek": {
+    "label": "Shrek",
+    "englishLabel": "Shrek",
+    "icon": "🎬",
+    "family": "sagas",
+    "src": "https://media.themoviedb.org/t/p/w500/rJIju4i2sENrfTbAXwL9OKv2e1i.jpg",
+    "fit": "cover",
+    "description": "Personnages, scènes & secrets de la saga"
+  },
+  "jurassic_park": {
+    "label": "Jurassic Park",
+    "englishLabel": "Jurassic Park",
+    "icon": "🎬",
+    "family": "sagas",
+    "src": "https://media.themoviedb.org/t/p/w500/2E2dKGPTWoyiaSzgNaer9zpP49n.jpg",
+    "fit": "cover",
+    "description": "Personnages, scènes & secrets de la saga"
+  },
+  "indiana_jones": {
+    "label": "Indiana Jones",
+    "englishLabel": "Indiana Jones",
+    "icon": "🎬",
+    "family": "sagas",
+    "src": "https://media.themoviedb.org/t/p/w500/64TyGedJPmfwfO0dIQWFDLIw1U7.jpg",
+    "fit": "cover",
+    "description": "Personnages, scènes & secrets de la saga"
+  },
+  "le_seigneur_des_anneaux": {
+    "label": "Le Seigneur des anneaux",
+    "englishLabel": "Le Seigneur des anneaux",
+    "icon": "🎬",
+    "family": "sagas",
+    "src": "https://media.themoviedb.org/t/p/w500/5OPg6M0yHr21Ovs1fni2H1xpKuF.jpg",
+    "fit": "cover",
+    "description": "Personnages, scènes & secrets de la saga"
+  },
+  "mission_impossible": {
+    "label": "Mission: Impossible",
+    "englishLabel": "Mission: Impossible",
+    "icon": "🎬",
+    "family": "sagas",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tom%20Cruise%20Sydney%20Premiere%20Mission%20Impossible%20part%20one%20(53019353900)%20(cropped).jpg?width=960",
+    "fit": "cover",
+    "description": "Personnages, scènes & secrets de la saga"
+  },
+  "gta_v": {
+    "label": "GTA V",
+    "englishLabel": "GTA V",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "gta_san_andreas": {
+    "label": "GTA: San Andreas",
+    "englishLabel": "GTA: San Andreas",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://cdn.akamai.steamstatic.com/steam/apps/12120/header.jpg",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "red_dead_redemption": {
+    "label": "Red Dead Redemption",
+    "englishLabel": "Red Dead Redemption",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "god_of_war": {
+    "label": "God of War",
+    "englishLabel": "God of War",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://cdn.akamai.steamstatic.com/steam/apps/1593500/header.jpg",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "resident_evil": {
+    "label": "Resident Evil",
+    "englishLabel": "Resident Evil",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://cdn.akamai.steamstatic.com/steam/apps/2050650/header.jpg",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "final_fantasy": {
+    "label": "Final Fantasy",
+    "englishLabel": "Final Fantasy",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://cdn.akamai.steamstatic.com/steam/apps/1462040/header.jpg",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "brawl_stars": {
+    "label": "Brawl Stars",
+    "englishLabel": "Brawl Stars",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://supercell.com/images/b524ca49e8549e5d3f5485452da7f26c/cropped.png",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "clash_royale": {
+    "label": "Clash Royale",
+    "englishLabel": "Clash Royale",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://supercell.com/images/8654bffbaa77efb91243d3706b739c25/og_clashroyale.d235f90b.jpg",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "rocket_league": {
+    "label": "Rocket League",
+    "englishLabel": "Rocket League",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://cdn.akamai.steamstatic.com/steam/apps/252950/header.jpg",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "playstation": {
+    "label": "PlayStation",
+    "englishLabel": "PlayStation",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21?$facebook$",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "nintendo": {
+    "label": "Nintendo",
+    "englishLabel": "Nintendo",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Nintendo_Switch_Console.png/960px-Nintendo_Switch_Console.png",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "xbox": {
+    "label": "Xbox",
+    "englishLabel": "Xbox",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Xbox_Series_X_and_S_with_controllers_%28transparent_background%29.png/960px-Xbox_Series_X_and_S_with_controllers_%28transparent_background%29.png",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "super_smash_bros": {
+    "label": "Super Smash Bros.",
+    "englishLabel": "Super Smash Bros.",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://www.smashbros.com/assets_v2/img/sns/en.png?180613",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "mario_kart": {
+    "label": "Mario Kart",
+    "englishLabel": "Mario Kart",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000000153/de697f487a36d802dd9a5ff0341f717c8486221f2f1219b675af37aca63bc453",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "cyberpunk_2077": {
+    "label": "Cyberpunk 2077",
+    "englishLabel": "Cyberpunk 2077",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://cdn.akamai.steamstatic.com/steam/apps/1091500/header.jpg",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "the_last_of_us_jeux": {
+    "label": "The Last of Us (jeux)",
+    "englishLabel": "The Last of Us (jeux)",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://cdn.akamai.steamstatic.com/steam/apps/1888930/header.jpg",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "uncharted": {
+    "label": "Uncharted",
+    "englishLabel": "Uncharted",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://cdn.akamai.steamstatic.com/steam/apps/1659420/header.jpg",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "metal_gear": {
+    "label": "Metal Gear",
+    "englishLabel": "Metal Gear",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://cdn.akamai.steamstatic.com/steam/apps/2131630/header.jpg",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "tomb_raider": {
+    "label": "Tomb Raider",
+    "englishLabel": "Tomb Raider",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://cdn.akamai.steamstatic.com/steam/apps/203160/header.jpg",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "street_fighter": {
+    "label": "Street Fighter",
+    "englishLabel": "Street Fighter",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "https://cdn.akamai.steamstatic.com/steam/apps/1364780/header.jpg",
+    "fit": "cover",
+    "description": "Univers, personnages & mécaniques de jeu"
+  },
+  "equipe_de_france_football": {
+    "label": "Équipe de France de football",
+    "englishLabel": "Équipe de France de football",
+    "icon": "⚽",
+    "family": "football",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Kylian_Mbappe_-_France_v_Norway_-_26_June_2026_%28cropped%29.jpg/960px-Kylian_Mbappe_-_France_v_Norway_-_26_June_2026_%28cropped%29.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "maroc_football": {
+    "label": "Maroc — Lions de l’Atlas",
+    "englishLabel": "Maroc — Lions de l’Atlas",
+    "icon": "⚽",
+    "family": "football",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Achraf_Hakimi_vs_Niger_%28cropped%29.jpg/960px-Achraf_Hakimi_vs_Niger_%28cropped%29.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "algerie_football": {
+    "label": "Algérie — Fennecs",
+    "englishLabel": "Algérie — Fennecs",
+    "icon": "⚽",
+    "family": "football",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Riyad_Mahez_2021.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "portugal_football": {
+    "label": "Portugal — Seleção",
+    "englishLabel": "Portugal — Seleção",
+    "icon": "⚽",
+    "family": "football",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Cristiano_Ronaldo_Croatia_v_Portugal_2_July_2026-075_%28cropped%29.jpg/960px-Cristiano_Ronaldo_Croatia_v_Portugal_2_July_2026-075_%28cropped%29.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "bresil_football": {
+    "label": "Brésil — Seleção",
+    "englishLabel": "Brésil — Seleção",
+    "icon": "⚽",
+    "family": "football",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Neymar_Junior_Brazil_V_Morocco_13_June_2026-40.jpg/960px-Neymar_Junior_Brazil_V_Morocco_13_June_2026-40.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "argentine_football": {
+    "label": "Argentine — Albiceleste",
+    "englishLabel": "Argentine — Albiceleste",
+    "icon": "⚽",
+    "family": "football",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg/960px-Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "juventus": {
+    "label": "Juventus",
+    "englishLabel": "Juventus",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/approved-v2/juventus-640.webp",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "ac_milan": {
+    "label": "AC Milan",
+    "englishLabel": "AC Milan",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/approved-v2/ac_milan-640.webp",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "atletico_de_madrid": {
+    "label": "Atlético de Madrid",
+    "englishLabel": "Atlético de Madrid",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/approved-v2/atletico_de_madrid-640.webp",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "napoli": {
+    "label": "Napoli",
+    "englishLabel": "Napoli",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/approved-v2/napoli-640.webp",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "kylian_mbappe": {
+    "label": "Kylian Mbappé",
+    "englishLabel": "Kylian Mbappé",
+    "icon": "⚽",
+    "family": "football",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Kylian_Mbappe_-_France_v_Norway_-_26_June_2026_%28cropped%29.jpg/960px-Kylian_Mbappe_-_France_v_Norway_-_26_June_2026_%28cropped%29.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "zinedine_zidane": {
+    "label": "Zinédine Zidane",
+    "englishLabel": "Zinédine Zidane",
+    "icon": "⚽",
+    "family": "football",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Zinedine_Zidane_by_Tasnim_03.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "neymar": {
+    "label": "Neymar",
+    "englishLabel": "Neymar",
+    "icon": "⚽",
+    "family": "football",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Neymar_Junior_Brazil_V_Morocco_13_June_2026-40.jpg/960px-Neymar_Junior_Brazil_V_Morocco_13_June_2026-40.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "ronaldinho": {
+    "label": "Ronaldinho",
+    "englishLabel": "Ronaldinho",
+    "icon": "⚽",
+    "family": "football",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Ronaldinho_in_2019.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "karim_benzema": {
+    "label": "Karim Benzema",
+    "englishLabel": "Karim Benzema",
+    "icon": "⚽",
+    "family": "football",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Karim_Benzema_wearing_Real_Madrid_home_kit_2021-2022.jpg/960px-Karim_Benzema_wearing_Real_Madrid_home_kit_2021-2022.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "thierry_henry": {
+    "label": "Thierry Henry",
+    "englishLabel": "Thierry Henry",
+    "icon": "⚽",
+    "family": "football",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Thierry_Henry_%2851649035951%29_%28cropped%29.jpg/960px-Thierry_Henry_%2851649035951%29_%28cropped%29.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "erling_haaland": {
+    "label": "Erling Haaland",
+    "englishLabel": "Erling Haaland",
+    "icon": "⚽",
+    "family": "football",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Erling_Haaland_France_v_Norway_26_June_26-008.jpg/960px-Erling_Haaland_France_v_Norway_26_June_26-008.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "mohamed_salah": {
+    "label": "Mohamed Salah",
+    "englishLabel": "Mohamed Salah",
+    "icon": "⚽",
+    "family": "football",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Mohamed_Salah_Argentina_v_Egypt_7_July_2026-163_%28cropped%29.jpg/960px-Mohamed_Salah_Argentina_v_Egypt_7_July_2026-163_%28cropped%29.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "lebron_james": {
+    "label": "LeBron James",
+    "englishLabel": "LeBron James",
+    "icon": "⚽",
+    "family": "sport",
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Lebron_James_2022small.jpg/960px-Lebron_James_2022small.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "michael_jordan": {
+    "label": "Michael Jordan",
+    "englishLabel": "Michael Jordan",
+    "icon": "⚽",
+    "family": "sport",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Michael_Jordan_in_2014.jpg",
+    "fit": "cover",
+    "description": "Histoire, légendes & grands moments"
+  },
+  "automobile": {
+    "label": "Automobile",
+    "englishLabel": "Automobile",
+    "icon": "✨",
+    "family": "culture",
+    "src": "https://images.unsplash.com/photo-1743039980096-7a1232bd0cc2?auto=format&fit=crop&fm=jpg&q=80&w=1200",
+    "fit": "cover",
+    "description": "Icônes, marques & culture populaire"
+  },
+  "logos_grandes_marques": {
+    "label": "Logos et grandes marques",
+    "englishLabel": "Logos et grandes marques",
+    "icon": "✨",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Times%20Square%20Billboards.jpg?width=960",
+    "fit": "cover",
+    "description": "Icônes, marques & culture populaire"
+  },
+  "sneakers": {
+    "label": "Sneakers",
+    "englishLabel": "Sneakers",
+    "icon": "✨",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Paar%20sneakers%2C%20Onitsuka%2C%20Tiger%2C%20objectnr%2091283-1-2.JPG?width=960",
+    "fit": "cover",
+    "description": "Icônes, marques & culture populaire"
+  },
+  "marques_de_luxe": {
+    "label": "Marques de luxe",
+    "englishLabel": "Marques de luxe",
+    "icon": "✨",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Louis%20Vuitton%20flagship%20store%20at%20Avenue%20des%20Champs-%C3%89lys%C3%A9es%20(22288053650).jpg?width=960",
+    "fit": "cover",
+    "description": "Icônes, marques & culture populaire"
+  },
+  "smartphones": {
+    "label": "Smartphones",
+    "englishLabel": "Smartphones",
+    "icon": "✨",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Top%20view%20image%20of%20two%20smartphone%20on%20a%20wooden%20table%2C%20space%20for%20text%2C%20ready%20for%20mockup.%20Empty%20space.%20(47955056488).jpg?width=960",
+    "fit": "cover",
+    "description": "Icônes, marques & culture populaire"
+  },
+  "technologie_grand_public": {
+    "label": "Technologie grand public",
+    "englishLabel": "Technologie grand public",
+    "icon": "✨",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Consumer%20Electronics%20Association%20(CEA)%20booth%2C%20CES2013.jpg?width=960",
+    "fit": "cover",
+    "description": "Appareils, standards & innovations du quotidien"
+  },
+  "fast_food": {
+    "label": "Fast-food",
+    "englishLabel": "Fast-food",
+    "icon": "✨",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Burger%20King%20Double%20Cheeseburger%20Meal%20(25074117756).jpg?width=960",
+    "fit": "cover",
+    "description": "Enseignes, spécialités & culture populaire"
+  },
+  "annees_2000": {
+    "label": "Années 2000",
+    "englishLabel": "Années 2000",
+    "icon": "✨",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nokia%203310%20blue.jpg?width=960",
+    "fit": "cover",
+    "description": "Technologie, musique, cinéma & souvenirs"
+  },
+  "internet_reseaux_sociaux": {
+    "label": "Internet et réseaux sociaux",
+    "englishLabel": "Internet et réseaux sociaux",
+    "icon": "✨",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Social%20Media%20App%20Icons%20On%20The%20Screen%20of%20A%20Smartphone.jpg?width=960",
+    "fit": "cover",
+    "description": "Plateformes, protocoles & culture numérique"
+  },
+  "monuments_de_france": {
+    "label": "Monuments de France",
+    "englishLabel": "Monuments de France",
+    "icon": "✨",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mont%20Saint%20Michel%20at%20sunset%2C%20April%202025.jpg?width=960",
+    "fit": "cover",
+    "description": "Patrimoine, architecture & lieux emblématiques"
+  },
+  "geographie_de_france": {
+    "label": "Géographie de France",
+    "englishLabel": "Géographie de France",
+    "icon": "🗺️",
+    "family": "culture",
+    "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/France%20relief%20location%20map.jpg?width=960",
+    "fit": "cover",
+    "description": "Fleuves, reliefs, départements & outre-mer"
+  },
+  "ballon_d_or": {
+    "label": "Ballon d’Or",
+    "englishLabel": "Ballon d’Or",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/approved-v2/ballon_d_or-640.webp",
+    "fit": "cover",
+    "description": "Lauréats, podiums & records"
+  },
+  "kaamelott": {
+    "label": "Kaamelott",
+    "englishLabel": "Kaamelott",
+    "icon": "🛡️",
+    "family": "series",
+    "src": "/images/covers/approved-v2/kaamelott-640.webp",
+    "fit": "cover",
+    "description": "Répliques, personnages & quêtes du Graal"
+  },
+  "lupin": {
+    "label": "Lupin",
+    "englishLabel": "Lupin",
+    "icon": "🎩",
+    "family": "series",
+    "src": "/images/covers/approved-v2/lupin-640.webp",
+    "fit": "cover",
+    "description": "Assane Diop, cambriolages & Parties 1 à 3"
+  },
+  "arcane": {
+    "label": "Arcane",
+    "englishLabel": "Arcane",
+    "icon": "⚡",
+    "family": "series",
+    "src": "/images/covers/approved-v2/arcane-640.webp",
+    "fit": "cover",
+    "description": "Piltover, Zaun & héros de League of Legends"
+  },
+  "bridgerton": {
+    "label": "Bridgerton",
+    "englishLabel": "Bridgerton",
+    "icon": "👑",
+    "family": "series",
+    "src": "/images/covers/approved-v2/bridgerton-640.webp",
+    "fit": "cover",
+    "description": "Bals, familles & intrigues de la Régence"
+  },
+  "gossip_girl": {
+    "label": "Gossip Girl",
+    "englishLabel": "Gossip Girl",
+    "icon": "📱",
+    "family": "series",
+    "src": "/images/covers/approved-v2/gossip_girl-640.webp",
+    "fit": "cover",
+    "description": "Upper East Side, Constance & secrets"
+  },
+  "football_feminin": {
+    "label": "Football féminin",
+    "englishLabel": "Women’s Football",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/international-v1/football_feminin-640.webp",
+    "fit": "cover",
+    "description": "Sélections, clubs, pionnières et grandes compétitions"
+  },
+  "tottenham": {
+    "label": "Tottenham Hotspur",
+    "englishLabel": "Tottenham Hotspur",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/expanded-v1/tottenham-640.webp",
+    "fit": "cover",
+    "description": "Spurs, White Hart Lane et légendes londoniennes"
+  },
+  "as_roma": {
+    "label": "AS Roma",
+    "englishLabel": "AS Roma",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/expanded-v1/as_roma-640.webp",
+    "fit": "cover",
+    "description": "Totti, le Stadio Olimpico et les Giallorossi"
+  },
+  "benfica": {
+    "label": "SL Benfica",
+    "englishLabel": "SL Benfica",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/expanded-v1/benfica-640.webp",
+    "fit": "cover",
+    "description": "Aigles, Estádio da Luz et légendes portugaises"
+  },
+  "galatasaray": {
+    "label": "Galatasaray",
+    "englishLabel": "Galatasaray",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/expanded-v1/galatasaray-640.webp",
+    "fit": "cover",
+    "description": "Lions d'Istanbul, derbies et soirées européennes"
+  },
+  "espagne_football": {
+    "label": "Espagne",
+    "englishLabel": "Spain",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/international-v1/espagne_football-640.webp",
+    "fit": "cover",
+    "description": "La Roja, générations dorées et grands tournois"
+  },
+  "gardiens_legendaires": {
+    "label": "Gardiens légendaires",
+    "englishLabel": "Legendary Goalkeepers",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/international-v1/gardiens_legendaires-640.webp",
+    "fit": "cover",
+    "description": "Arrêts décisifs et derniers remparts du football"
+  },
+  "allemagne_football": {
+    "label": "Allemagne",
+    "englishLabel": "Germany",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/international-v1/allemagne_football-640.webp",
+    "fit": "cover",
+    "description": "La Mannschaft, champions et grandes finales"
+  },
+  "angleterre_football": {
+    "label": "Angleterre",
+    "englishLabel": "England",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/international-v1/angleterre_football-640.webp",
+    "fit": "cover",
+    "description": "Three Lions, Wembley et légendes anglaises"
+  },
+  "senegal_football": {
+    "label": "Sénégal",
+    "englishLabel": "Senegal",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/international-v1/senegal_football-640.webp",
+    "fit": "cover",
+    "description": "Lions de la Teranga et exploits des sélections"
+  },
+  "transferts_mercato": {
+    "label": "Transferts & mercato",
+    "englishLabel": "Football Transfers",
+    "icon": "⚽",
+    "family": "football",
+    "src": "/images/covers/international-v1/transferts_mercato-640.webp",
+    "fit": "cover",
+    "description": "Signatures, records et transferts mémorables"
+  },
+  "cricket": {
+    "label": "Cricket",
+    "englishLabel": "Cricket",
+    "icon": "🏆",
+    "family": "sport",
+    "src": "/images/covers/expanded-v1/cricket-640.webp",
+    "fit": "cover",
+    "description": "Batters, wickets et grandes compétitions"
+  },
+  "judo": {
+    "label": "Judo",
+    "englishLabel": "Judo",
+    "icon": "🏆",
+    "family": "sport",
+    "src": "/images/covers/expanded-v1/judo-640.webp",
+    "fit": "cover",
+    "description": "Ippons, tatamis et légendes du judo"
+  },
+  "surf": {
+    "label": "Surf",
+    "englishLabel": "Surf",
+    "icon": "🏆",
+    "family": "sport",
+    "src": "/images/covers/expanded-v1/surf-640.webp",
+    "fit": "cover",
+    "description": "Vagues mythiques, riders et culture de l'océan"
+  },
+  "skateboard": {
+    "label": "Skateboard",
+    "englishLabel": "Skateboard",
+    "icon": "🏆",
+    "family": "sport",
+    "src": "/images/covers/expanded-v1/skateboard-512.webp",
+    "fit": "cover",
+    "description": "Figures, spots et pionniers de la planche"
+  },
+  "escalade": {
+    "label": "Escalade",
+    "englishLabel": "Escalade",
+    "icon": "🏆",
+    "family": "sport",
+    "src": "/images/covers/expanded-v1/escalade-640.webp",
+    "fit": "cover",
+    "description": "Bloc, difficulté et sommets de la discipline"
+  },
+  "country_music": {
+    "label": "Country Music",
+    "englishLabel": "Country Music",
+    "icon": "🎵",
+    "family": "music",
+    "src": "/images/covers/expanded-v1/country_music-640.webp",
+    "fit": "cover",
+    "description": "Nashville, guitares et voix légendaires"
+  },
+  "punk_grunge": {
+    "label": "Punk & Grunge",
+    "englishLabel": "Punk & Grunge",
+    "icon": "🎵",
+    "family": "music",
+    "src": "/images/covers/expanded-v1/punk_grunge-640.webp",
+    "fit": "cover",
+    "description": "Riffs, scènes alternatives et albums cultes"
+  },
+  "musique_arabe_rai": {
+    "label": "Musique Arabe & Raï",
+    "englishLabel": "Musique Arabe & Raï",
+    "icon": "🎵",
+    "family": "music",
+    "src": "/images/covers/expanded-v1/musique_arabe_rai-464.webp",
+    "fit": "cover",
+    "description": "Grandes voix, classiques et rythmes du Maghreb"
+  },
+  "ariana_grande": {
+    "label": "Ariana Grande",
+    "englishLabel": "Ariana Grande",
+    "icon": "🎵",
+    "family": "music",
+    "src": "/images/covers/expanded-v1/ariana_grande-517.webp",
+    "fit": "cover",
+    "description": "Albums, performances et tubes incontournables"
+  },
+  "bad_bunny": {
+    "label": "Bad Bunny",
+    "englishLabel": "Bad Bunny",
+    "icon": "🎵",
+    "family": "music",
+    "src": "/images/covers/expanded-v1/bad_bunny-640.webp",
+    "fit": "cover",
+    "description": "Porto Rico, reggaeton et albums marquants"
+  },
+  "bruno_mars": {
+    "label": "Bruno Mars",
+    "englishLabel": "Bruno Mars",
+    "icon": "🎵",
+    "family": "music",
+    "src": "/images/covers/expanded-v1/bruno_mars-640.webp",
+    "fit": "cover",
+    "description": "Funk, pop et performances électrisantes"
+  },
+  "rappeurs_uk": {
+    "label": "Rappeurs UK",
+    "englishLabel": "Rappeurs UK",
+    "icon": "🎵",
+    "family": "music",
+    "src": "/images/covers/expanded-v1/rappeurs_uk-640.webp",
+    "fit": "cover",
+    "description": "Grime, drill et grandes voix britanniques"
+  },
+  "ed_sheeran": {
+    "label": "Ed Sheeran",
+    "englishLabel": "Ed Sheeran",
+    "icon": "🎵",
+    "family": "music",
+    "src": "/images/covers/expanded-v1/ed_sheeran-640.webp",
+    "fit": "cover",
+    "description": "Guitare, mélodies et succès planétaires"
+  },
+  "post_malone": {
+    "label": "Post Malone",
+    "englishLabel": "Post Malone",
+    "icon": "🎵",
+    "family": "music",
+    "src": "/images/covers/expanded-v1/post_malone-640.webp",
+    "fit": "cover",
+    "description": "Albums, collaborations et titres emblématiques"
+  },
+  "kendrick_lamar": {
+    "label": "Kendrick Lamar",
+    "englishLabel": "Kendrick Lamar",
+    "icon": "🎵",
+    "family": "music",
+    "src": "/images/covers/expanded-v1/kendrick_lamar-640.webp",
+    "fit": "cover",
+    "description": "Textes, albums et moments majeurs du rap"
+  },
+  "j_cole": {
+    "label": "J. Cole",
+    "englishLabel": "J. Cole",
+    "icon": "🎵",
+    "family": "music",
+    "src": "/images/covers/expanded-v1/j_cole-640.webp",
+    "fit": "cover",
+    "description": "Dreamville, récits et discographie"
+  },
+  "vald": {
+    "label": "Vald",
+    "englishLabel": "Vald",
+    "icon": "🎵",
+    "family": "music",
+    "src": "/images/covers/expanded-v1/vald-640.webp",
+    "fit": "cover",
+    "description": "Textes, albums et univers décalé"
+  },
+  "laylow": {
+    "label": "Laylow",
+    "englishLabel": "Laylow",
+    "icon": "🎵",
+    "family": "music",
+    "src": "/images/covers/expanded-v1/laylow-640.webp",
+    "fit": "cover",
+    "description": "Univers digitaux, récits et albums conceptuels"
+  },
+  "plk": {
+    "label": "PLK",
+    "englishLabel": "PLK",
+    "icon": "🎵",
+    "family": "music",
+    "src": "/images/covers/expanded-v1/plk-640.webp",
+    "fit": "cover",
+    "description": "Mixtapes, collaborations et refrains marquants"
+  },
+  "hamza": {
+    "label": "Hamza",
+    "englishLabel": "Hamza",
+    "icon": "🎵",
+    "family": "music",
+    "src": "/images/covers/expanded-v1/hamza-640.webp",
+    "fit": "cover",
+    "description": "Mélodies, projets et collaborations"
+  },
+  "apex_legends": {
+    "label": "Apex Legends",
+    "englishLabel": "Apex Legends",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "/images/covers/expanded-v1/apex_legends-640.webp",
+    "fit": "cover",
+    "description": "Légendes, arènes et escouades de l'Outlands"
+  },
+  "dark_souls": {
+    "label": "Dark Souls",
+    "englishLabel": "Dark Souls",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "/images/covers/expanded-v1/dark_souls-640.webp",
+    "fit": "cover",
+    "description": "Feux de camp, boss et royaumes déchus"
+  },
+  "diablo": {
+    "label": "Diablo",
+    "englishLabel": "Diablo",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "/images/covers/expanded-v1/diablo-640.webp",
+    "fit": "cover",
+    "description": "Sanctuaire, classes et seigneurs des Enfers"
+  },
+  "halo": {
+    "label": "Halo",
+    "englishLabel": "Halo",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "/images/covers/expanded-v1/halo-640.webp",
+    "fit": "cover",
+    "description": "Spartans, anneaux et épopées du Major"
+  },
+  "tekken_mortal_kombat": {
+    "label": "Tekken & Mortal Kombat",
+    "englishLabel": "Tekken & Mortal Kombat",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "/images/covers/expanded-v1/tekken_mortal_kombat-640.webp",
+    "fit": "cover",
+    "description": "Combattants, rivalités et duels cultes"
+  },
+  "stardew_valley": {
+    "label": "Stardew Valley",
+    "englishLabel": "Stardew Valley",
+    "icon": "🎮",
+    "family": "gaming",
+    "src": "/images/covers/expanded-v1/stardew_valley-600.webp",
+    "fit": "cover",
+    "description": "Pelican Town, récoltes et secrets de la vallée"
+  },
+  "rick_and_morty": {
+    "label": "Rick and Morty",
+    "englishLabel": "Rick and Morty",
+    "icon": "📺",
+    "family": "series",
+    "src": "/images/covers/expanded-v1/rick_and_morty-640.webp",
+    "fit": "contain",
+    "description": "Portails, multivers et aventures improbables"
+  },
+  "narcos": {
+    "label": "Narcos",
+    "englishLabel": "Narcos",
+    "icon": "📺",
+    "family": "series",
+    "src": "/images/covers/expanded-v1/narcos-640.webp",
+    "fit": "contain",
+    "description": "Personnages, enquêtes et saisons de la série"
+  },
+  "better_call_saul": {
+    "label": "Better Call Saul",
+    "englishLabel": "Better Call Saul",
+    "icon": "📺",
+    "family": "series",
+    "src": "/images/covers/expanded-v1/better_call_saul-640.webp",
+    "fit": "contain",
+    "description": "Jimmy, Kim et les affaires d'Albuquerque"
+  },
+  "suits": {
+    "label": "Suits",
+    "englishLabel": "Suits",
+    "icon": "📺",
+    "family": "series",
+    "src": "/images/covers/expanded-v1/suits-640.webp",
+    "fit": "contain",
+    "description": "Harvey, Mike et les coulisses du cabinet"
+  },
+  "grey_s_anatomy": {
+    "label": "Grey's Anatomy",
+    "englishLabel": "Grey's Anatomy",
+    "icon": "📺",
+    "family": "series",
+    "src": "/images/covers/expanded-v1/grey_s_anatomy-640.webp",
+    "fit": "contain",
+    "description": "Chirurgiens, histoires et moments marquants"
+  },
+  "the_mandalorian": {
+    "label": "The Mandalorian",
+    "englishLabel": "The Mandalorian",
+    "icon": "📺",
+    "family": "series",
+    "src": "/images/covers/expanded-v1/the_mandalorian-640.webp",
+    "fit": "contain",
+    "description": "Din Djarin, Grogu et les confins de la galaxie"
+  },
+  "family_guy": {
+    "label": "Family Guy",
+    "englishLabel": "Family Guy",
+    "icon": "📺",
+    "family": "series",
+    "src": "/images/covers/expanded-v1/family_guy-640.webp",
+    "fit": "contain",
+    "description": "Les Griffin, Quahog et scènes cultes"
+  },
+  "mathematiques_logique": {
+    "label": "Mathématiques & logique",
+    "englishLabel": "Mathematics & Logic",
+    "icon": "🌍",
+    "family": "culture",
+    "src": "/images/covers/international-v1/mathematiques_logique-640.webp",
+    "fit": "cover",
+    "description": "Nombres, formes et défis de raisonnement"
+  },
+  "informatique_technologie": {
+    "label": "Informatique & technologie",
+    "englishLabel": "Computing & Technology",
+    "icon": "🌍",
+    "family": "culture",
+    "src": "/images/covers/international-v1/informatique_technologie-640.webp",
+    "fit": "cover",
+    "description": "Code, composants et révolutions numériques"
+  },
+  "economie_finance": {
+    "label": "Économie & finance",
+    "englishLabel": "Economics & Finance",
+    "icon": "🌍",
+    "family": "culture",
+    "src": "/images/covers/international-v1/economie_finance-640.webp",
+    "fit": "cover",
+    "description": "Marchés, entreprises et grands mécanismes"
+  },
+  "psychologie": {
+    "label": "Psychologie",
+    "englishLabel": "Psychology",
+    "icon": "🌍",
+    "family": "culture",
+    "src": "/images/covers/international-v1/psychologie-640.webp",
+    "fit": "cover",
+    "description": "Mémoire, émotions et comportements humains"
+  },
+  "droit_justice": {
+    "label": "Droit & justice",
+    "englishLabel": "Law & Justice",
+    "icon": "🌍",
+    "family": "culture",
+    "src": "/images/covers/international-v1/droit_justice-640.webp",
+    "fit": "cover",
+    "description": "Institutions, principes et grandes notions"
+  },
+  "congo_rdc": {
+    "label": "Congo RDC",
+    "englishLabel": "Congo RDC",
+    "icon": "🌍",
+    "family": "culture",
+    "src": "/images/covers/expanded-v1/congo_rdc-flag.svg",
+    "fit": "contain",
+    "description": "Histoire, cultures et géographie du pays"
+  },
+  "entrepreneurs_tech": {
+    "label": "Entrepreneurs tech",
+    "englishLabel": "Tech Entrepreneurs",
+    "icon": "🌍",
+    "family": "culture",
+    "src": "/images/covers/international-v1/entrepreneurs_tech-640.webp",
+    "fit": "cover",
+    "description": "Innovations, entreprises et grandes trajectoires"
+  },
+  "records_du_monde": {
+    "label": "Records du monde",
+    "englishLabel": "World Records",
+    "icon": "🌍",
+    "family": "culture",
+    "src": "/images/covers/international-v1/records_du_monde-640.webp",
+    "fit": "cover",
+    "description": "Exploits, performances et chiffres étonnants"
+  },
+  "phenomenes_naturels": {
+    "label": "Phénomènes Naturels",
+    "englishLabel": "Phénomènes Naturels",
+    "icon": "🌍",
+    "family": "culture",
+    "src": "/images/covers/expanded-v1/phenomenes_naturels-640.webp",
+    "fit": "cover",
+    "description": "Volcans, aurores et forces de la planète"
+  },
+  "monnaies_du_monde": {
+    "label": "Monnaies du monde",
+    "englishLabel": "World Currencies",
+    "icon": "🌍",
+    "family": "culture",
+    "src": "/images/covers/international-v1/monnaies_du_monde-640.webp",
+    "fit": "cover",
+    "description": "Devises, billets et histoires monétaires"
+  },
+  "iles_du_monde": {
+    "label": "Îles du Monde",
+    "englishLabel": "Îles du Monde",
+    "icon": "🌍",
+    "family": "culture",
+    "src": "/images/covers/expanded-v1/iles_du_monde-640.webp",
+    "fit": "cover",
+    "description": "Archipels, cultures et géographie insulaire"
+  }
+}

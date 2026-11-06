@@ -32,6 +32,8 @@ jobs:
           node-version: 24
       - name: Check image validators
         run: node --test scripts/store-assets.test.cjs
+      - name: Test native timing and server payloads
+        run: swift test
       - name: Install XcodeGen
         run: brew install xcodegen
       - name: Generate simulator project
@@ -60,7 +62,7 @@ jobs:
               exit 1
             }
           node -e 'const fs=require("fs");const p=process.env.RUNNER_TEMP+"/ios-capture-build/Build/Products/Release-iphonesimulator/QuizzUp.app/QuizzUp";if(fs.readFileSync(p).includes(Buffer.from("--store-capture-screen")))throw Error("Capture mode leaked into Release");'
-      - name: Capture three screens in French and English on native devices
+      - name: Capture five screens in French and English on native devices
         run: |
           node scripts/capture-store-screenshots.cjs \
             "$RUNNER_TEMP/ios-capture-build/Build/Products/Debug-iphonesimulator/QuizzUp.app" \
