@@ -16,5 +16,8 @@ Real-time 1v1 requires two connected players. For reliable testing, use Solo mod
 NETWORK
 The app connects to wss://quizzup-production.up.railway.app/ws for real-time gameplay and HTTPS to the same host for REST endpoints (categories, auth, reports).
 
+LANGUAGES
+Change the interface language in Settings. The current question bank is in French; the English option translates the interface, not the quiz questions. The capture fixtures follow the same rule.
+
 PRIVACY
 Firebase authentication may provide an email address and name in addition to the user ID. A display name, avatar and game history are used for gameplay, scores and progression. No ads or third-party analytics are integrated into the native app. Private messages and the in-app friends list are stored for account functionality. There is no device address-book access. Full privacy policy: https://quizzup-ten.vercel.app/privacy.html
