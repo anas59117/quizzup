@@ -47,7 +47,7 @@ function Preview() {
   const social = React.useMemo(() => ({ friends: [], requests: [], dms: {}, outgoingRequests: new Set(), gameChat: [], gameChatSeenRef: { current: 0 }, sendGameChat: () => false }), []);
   const opponents = params.has('gameSolo') ? [] : [{ id: '2', name: 'clem10', avatar: 'owl', score: 55, answered: !!reveal?.others, correct: false }];
   if (params.has('group')) opponents.push({ id: '3', name: 'Alex', avatar: '🦊', score: 12 }, { id: '4', name: 'Sam', avatar: '🐼', score: 10 });
-  const controls = <TopControls muted={muted} toggleMute={() => setMuted(!muted)} theme={theme} toggleTheme={toggleTheme} playing={screen === 'game'} home={['home','themes','profile'].includes(screen)} />;
+  const controls = <TopControls muted={muted} toggleMute={() => setMuted(!muted)} theme={theme} toggleTheme={toggleTheme} playing={screen === 'game'} home={['home','themes','profile','quiz'].includes(screen)} />;
   const stats = { games: 27, wins: 12, level: 6, xpIntoLevel: 121, xpForLevel: 1200, xp: 2400, coins: 420, topics: params.has('personal') ? [{key:'ligue_champions',level:8},{key:'rap_fr',level:5},{key:'harry_potter',level:3},{key:'minecraft',level:2}] : [], followedThemes: params.has('personal') ? ['ligue_champions','rap_fr','harry_potter','minecraft'] : [], ownedItems: ['robot','fox'], equippedItems: { avatars: 'fox' } };
   const result = { won: !params.has('loss') && !params.has('tie'), tie: params.has('tie'), solo: params.has('solo'), finalScore: 84, xp: 224, coins: 50, stats,
     topic: { key: 'ligue_champions', level: 3 }, matchTally: { rounds: 6, correct: 5, answered: 6, totalMs: 36000 },
@@ -78,7 +78,7 @@ function Preview() {
       answer={idx => { setSelected(idx); setReveal({ yourCorrect: idx === 0, correctIndex: 0, pointsEarned: idx === 0 ? 17 : 0, others: [] }); }}
       opponents={opponents} avatar="fox" name="Sisi" score={reveal?.yourCorrect ? 17 : 0} reportQuestion={() => {}}
       social={social} GameChat={GameChat} />}
-    {browse && <NavBar active={screen === 'themes' ? 'categories' : screen} onQuickMatch={play} onNav={next=>setScreen(next === 'categories' ? 'themes' : next)} />}
+    {browse && <NavBar active={screen === 'themes' ? 'categories' : screen === 'quiz' ? 'home' : screen} onQuickMatch={play} onNav={next=>setScreen(next === 'categories' ? 'themes' : next)} />}
   </div>;
 }
 createRoot(document.getElementById('root')).render(<I18nProvider><GameFeelProvider>{params.has('app') ? <App /> : <><SkipLink /><Preview /></>}</GameFeelProvider></I18nProvider>);

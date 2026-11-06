@@ -68,50 +68,65 @@ export function HomeContent({ startWithCategory, onSeeAll, pending, stats, contr
   </main>;
 }
 
-// Topic preview short descriptions (fallback for featured sub)
+// Short, complete pitches keep the entry into a duel concise in both languages.
 const PREVIEW_SUB = {
-  spider_man: { line1: 'SPIDER', line2: 'MAN', eyebrow: 'POP CULTURE · MARVEL', sub: 'Multiverse', desc: 'Du Peter de Raimi au Miles de Across. 150 questions pour départager les vrais fans des Avengers du dimanche.' },
-  harry_potter: { line1: 'HARRY', line2: 'POTTER', eyebrow: 'POP CULTURE · WIZARDING', sub: 'Wizarding World', desc: 'Poudlard, sortilèges & créatures magiques. Les vrais fans vont se régaler.' },
-  marvel: { line1: 'MARVEL', eyebrow: 'POP CULTURE · MARVEL', sub: 'Avengers', desc: 'Avengers, X-Men, et tout l\'univers Marvel réuni.' },
-  dc_comics: { line1: 'DC', line2: 'COMICS', eyebrow: 'POP CULTURE · DC', sub: 'Multiverse', desc: 'Justice League, Batman, Superman — l\'univers DC Comics.' },
-  batman: { line1: 'BAT', line2: 'MAN', eyebrow: 'POP CULTURE · DC', sub: 'Gotham', desc: 'Gotham, le Chevalier Noir, Joker et toute la Bat-Famille.' },
-  star_wars: { line1: 'STAR', line2: 'WARS', eyebrow: 'POP CULTURE · LUCASFILM', sub: 'Saga', desc: 'La Force, les Jedi, les Sith — toute la saga galactique.' },
-  game_of_thrones: { line1: 'GAME OF', line2: 'THRONES', eyebrow: 'SÉRIE · HBO', sub: 'Westeros', desc: 'Westeros, dragons, trônes et trahisons.' },
-  one_piece: { line1: 'ONE', line2: 'PIECE', eyebrow: 'MANGA · SHONEN', sub: 'Grand Line', desc: 'Luffy et l\'équipage du Chapeau de paille à la recherche du One Piece.' },
-  pokemon: { line1: 'POKÉMON', eyebrow: 'POP CULTURE · GAMING', sub: 'Pokéverse', desc: 'Attrapez-les tous ! Les 1000+ Pokémon depuis la génération 1.' },
-  minecraft: { line1: 'MINE', line2: 'CRAFT', eyebrow: 'GAMING · SANDBOX', sub: 'Overworld', desc: 'Blocs, créatures, biomes & dimensions du jeu culte.' },
-  rap_fr: { line1: 'RAP', line2: 'FR', eyebrow: 'MUSIQUE · RAP', sub: 'France · 2024', desc: 'PNL, Booba, Jul, SCH & tous les grands noms du rap français.' },
-  werenoi: { line1: 'WERE', line2: 'NOI', eyebrow: 'MUSIQUE · RAP FR', sub: 'Rap FR · 2024', desc: 'La discographie et l\'univers de Werenoi.' },
-  ligue_champions: { line1: 'LIGUE DES', line2: 'CHAMPIONS', eyebrow: 'SPORT · FOOTBALL', sub: 'UEFA', desc: 'Finales, légendes & records de la plus grande compétition européenne.' },
+  spider_man: { eyebrow: 'POP CULTURE · MARVEL', desc: 'De Peter Parker à Miles Morales. Le multivers n’aura plus de secrets pour toi.', en: 'From Peter Parker to Miles Morales. Discover every corner of the multiverse.' },
+  harry_potter: { eyebrow: 'POP CULTURE · WIZARDING', desc: 'Poudlard, sortilèges et créatures magiques. Mets tes connaissances à l’épreuve.', en: 'Hogwarts, spells and magical creatures. Put your knowledge to the test.' },
+  marvel: { eyebrow: 'POP CULTURE · MARVEL', desc: 'Avengers, X-Men et tout l’univers Marvel réuni.', en: 'Avengers, X-Men and the entire Marvel universe.' },
+  dc_comics: { eyebrow: 'POP CULTURE · DC', desc: 'Justice League, Batman, Superman : explore l’univers DC Comics.', en: 'Justice League, Batman, Superman: explore the DC Comics universe.' },
+  batman: { eyebrow: 'POP CULTURE · DC', desc: 'Gotham, le Chevalier Noir, Joker et toute la Bat-Famille.', en: 'Gotham, the Dark Knight, the Joker and the whole Bat-Family.' },
+  star_wars: { eyebrow: 'POP CULTURE · LUCASFILM', desc: 'La Force, les Jedi et les Sith. Explore toute la saga galactique.', en: 'The Force, the Jedi and the Sith. Explore the entire galactic saga.' },
+  game_of_thrones: { desc: 'Westeros, dragons, trônes et trahisons.', en: 'Westeros, dragons, thrones and betrayals.' },
+  one_piece: { eyebrow: 'MANGA · SHŌNEN', desc: 'Luffy et son équipage à la recherche du One Piece.', en: 'Join Luffy and his crew on the quest for the One Piece.' },
+  pokemon: { eyebrow: 'POP CULTURE · GAMING', desc: 'Pokémon, régions et évolutions : à toi de tous les reconnaître.', en: 'Pokémon, regions and evolutions: how many can you recognize?' },
+  minecraft: { eyebrow: 'GAMING · SANDBOX', desc: 'Blocs, créatures, biomes et dimensions du jeu culte.', en: 'Blocks, creatures, biomes and dimensions of the iconic game.' },
+  rap_fr: { desc: 'PNL, Booba, Jul, SCH et les grands noms du rap français.', en: 'PNL, Booba, Jul, SCH and the biggest names in French rap.' },
+  werenoi: { desc: 'La discographie et l’univers de Werenoi.', en: 'Explore Werenoi’s discography and musical world.' },
+  ligue_champions: { desc: 'Finales, légendes et records de la compétition européenne.', en: 'Finals, legends and records of European club football.' },
+  foot_fr: { desc: 'Ligue 1, les Bleus et les légendes du football français.', en: 'Ligue 1, Les Bleus and the legends of French football.' },
 };
 
-// Direction: cinematic artwork above a stable editorial reading surface.
-// Rules: preserve cover framing, lead with play, keep statistics secondary.
+// Direction: full-width artwork dissolves into one continuous themed canvas.
+// Rules: preserve faces, keep the pitch complete, lead with play and compact progress.
 export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChallenge, pending, friendsOnTopic = [], controls, onCommunity, onLeaderboard, following, onToggleFollow }) {
   const { t, lang } = useI18n();
   const [failedCover, setFailedCover] = useState(null);
   const [loadedCover, setLoadedCover] = useState(null);
   const fr = lang === 'fr';
+  const tint = ({ spider_man: '#721027', marvel: '#721027', foot_fr: '#142e55', harry_potter: '#58401e', minecraft: '#294d36', rap_fr: '#4d192c', ligue_champions: '#142e55', liga_portugal: '#194c3c' })[category?.key]
+    || ({ football: '#142e55', sport: '#183c49', music: '#4d192c', gaming: '#273c42', cinema: '#42302f', sagas: '#493326', series: '#483049', manga: '#423241', culture: '#263f54' })[category?.family] || '#4b2436';
+  useEffect(() => {
+    if (!category) return undefined;
+    const app = document.querySelector('.app-category-preview');
+    const previousCanvas = app?.style.getPropertyValue('--cp-canvas');
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    const previousTheme = themeColor?.getAttribute('content');
+    app?.style.setProperty('--cp-canvas', tint);
+    themeColor?.setAttribute('content', tint);
+    return () => {
+      if (previousCanvas) app?.style.setProperty('--cp-canvas', previousCanvas);
+      else app?.style.removeProperty('--cp-canvas');
+      if (previousTheme !== null && previousTheme !== undefined) themeColor?.setAttribute('content', previousTheme);
+    };
+  }, [category, tint]);
   if (!category) return null;
   const cover = getTopicCover(category);
   const artwork = cover?.src && failedCover !== cover.src ? cover : null;
   const preview = PREVIEW_SUB[category.key] || { desc: category.desc };
   const title = localizedTopicTitle(category, lang);
   const family = category.family ? famLabel(t, category.family) : 'Quiz';
-  const description = preview.desc || category.desc || '';
+  const description = (fr ? preview.desc : preview.en) || category.desc || '';
+  const eyebrow = preview.eyebrow || family;
   const topicStats = (stats?.topics || []).find(topic => topic.key === category.key) || {};
   const completion = Number.isFinite(topicStats.completion) ? `${topicStats.completion}%` : '—';
   const bestStreak = Number.isFinite(topicStats.bestStreak) ? topicStats.bestStreak : '—';
   const topicLevel = topicStats.level || 1;
-  const tint = ({ spider_man: '#651a2a', marvel: '#651a2a', foot_fr: '#142e55', harry_potter: '#58401e', minecraft: '#294d36', rap_fr: '#4d192c', ligue_champions: '#142e55', liga_portugal: '#194c3c' })[category.key]
-    || ({ football: '#142e55', sport: '#183c49', music: '#4d192c', gaming: '#273c42', cinema: '#42302f', sagas: '#493326', series: '#483049', manga: '#423241', culture: '#263f54' })[category.family] || '#4b2436';
   const resolvedImage = artwork && loadedCover?.src === artwork.src ? loadedCover.url : null;
   return (
     <main id="main-content" tabIndex={-1} aria-labelledby="quiz-title" className={`container wide category-preview-v4 cp-detail${artwork ? ' cp-has-artwork' : ''}`} data-topic={category.key} data-family={category.family}
       style={{ '--cp-tint': tint, '--cp-image': resolvedImage ? `url(${JSON.stringify(resolvedImage)})` : 'none', '--cp-fit': category.key === 'foot_fr' || artwork?.embeddedTitle || artwork?.fit === 'contain' ? 'contain' : 'cover', '--cp-focal': category.key === 'spider_man' ? 'center 20%' : artwork?.focal || 'center' }}>
       <div className="cp-bg" aria-hidden="true" />
       <header className="cp-head">
-        <div className="cp-bg cp-header-bg" aria-hidden="true" />
         <button className="cp-back" onClick={onBack} aria-label={t('back')}><Icon name="arrow" size={18} className="cp-back-ic" /></button>
         <div className="cp-head-right">
           <button className="cp-icon-btn" aria-label={following ? (fr ? 'Ne plus suivre ce thème' : 'Unfollow theme') : (fr ? 'Suivre ce thème' : 'Follow theme')} aria-pressed={!!following} onClick={onToggleFollow}><Icon name="heart" size={18} /></button>
@@ -120,12 +135,13 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
       </header>
       <div className="cp-visual" aria-hidden="true">
         <div className="cp-visual-ambience" />
-        {artwork ? <img className="cp-artwork" src={artwork.src} srcSet={artwork.srcSet} sizes="(min-width: 900px) 600px, calc(100vw - 32px)" alt="" fetchpriority="high" decoding="async"
+        {artwork ? <img className="cp-artwork" src={artwork.src} srcSet={artwork.srcSet} sizes="(min-width: 900px) 600px, 100vw" alt="" fetchpriority="high" decoding="async"
           onLoad={event => setLoadedCover({ src: artwork.src, url: event.currentTarget.currentSrc || artwork.src })} onError={() => setFailedCover(artwork.src)} />
           : <div className="cp-cover-fallback"><span>{title.split(/\s+/).slice(0, 2).map(word => word[0]).join('')}</span><Icon name="bolt" size={36} /></div>}
       </div>
+      <div className="cp-content">
       <div className="cp-hero">
-        <div className="cp-eyebrow">{family}</div>
+        <div className="cp-eyebrow">{eyebrow}</div>
         <h1 id="quiz-title" tabIndex={-1} className="cp-title">{title}</h1>
         {description && <p className="cp-info">{description}</p>}
       </div>
@@ -134,19 +150,23 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
         <button className="cp-ghost" onClick={onChallenge} disabled={pending} aria-label={fr ? 'Défier un ami' : 'Challenge a friend'}><Icon name="users" size={22} /></button>
       </div>
       <div className="cp-stats" aria-label={fr ? 'Ta progression' : 'Your progress'}>
-        <div className="cp-stat"><b>{completion}</b><span>{fr ? 'Progression' : 'Progress'}</span></div>
-        <div className="cp-stat"><b>{bestStreak}</b><span>{fr ? 'Meilleure série' : 'Best streak'}</span></div>
-        <div className="cp-stat"><b>N{topicLevel}</b><span>{fr ? 'Niveau actuel' : 'Current level'}</span></div>
+        <div className="cp-stat cp-stat-level"><Icon name="trophy" size={16} /><b>{fr ? 'Niveau' : 'Level'} {topicLevel}</b></div>
+        <div className="cp-stat"><span>{fr ? 'Progression' : 'Progress'}</span><b>{completion}</b></div>
+        <div className="cp-stat" title={fr ? 'Meilleure série' : 'Best streak'}><span>{fr ? 'Série' : 'Streak'}</span><b>{bestStreak}</b></div>
       </div>
-      {description && <details className="cp-about"><summary>{fr ? 'À propos de ce quiz' : 'About this quiz'}<Icon name="info" size={18} /></summary><p>{description}</p></details>}
-      <div className="social-entry-row"><button onClick={onCommunity}><Icon name="chat" size={18} />{fr ? 'Communauté' : 'Community'}</button><button onClick={onLeaderboard}><Icon name="trophy" size={18} />{fr ? 'Classement' : 'Ranking'}</button></div>
       <section className="cp-friends" aria-labelledby="quiz-friends-title">
-        <h2 id="quiz-friends-title">{fr ? 'Tes amis sur ce quiz' : 'Your friends on this quiz'}</h2>
-        {friendsOnTopic.length > 0 ? <div className="cp-friends-row">
+        <div className="cp-friends-symbol" aria-hidden="true"><Icon name="users" size={23} /></div>
+        <button className="cp-friend-invite" onClick={onChallenge} disabled={pending}>
+          <span id="quiz-friends-title" className="cp-friends-title">{fr ? 'Défie tes amis' : 'Challenge your friends'}</span>
+          <span className="cp-friends-empty">{fr ? 'Invite un ami à jouer sur ce thème.' : 'Invite a friend to play this topic.'}</span>
+        </button>
+        {friendsOnTopic.length > 0 && <div className="cp-friends-row">
           {friendsOnTopic.slice(0, 4).map(friend => <div key={friend.id} className="cp-friend-ava" title={friend.name}>{(friend.name || '?')[0].toUpperCase()}</div>)}
           {friendsOnTopic.length > 4 && <span className="cp-friends-more">+ {friendsOnTopic.length - 4} {fr ? 'autres' : 'more'}</span>}
-        </div> : <p className="cp-friends-empty">{fr ? 'Invite un ami pour lancer votre premier duel sur ce thème.' : 'Invite a friend to start your first duel on this topic.'}</p>}
+        </div>}
       </section>
+      <div className="social-entry-row"><button onClick={onCommunity}><Icon name="chat" size={18} />{fr ? 'Communauté' : 'Community'}</button><button onClick={onLeaderboard}><Icon name="trophy" size={18} />{fr ? 'Classement' : 'Ranking'}</button></div>
+      </div>
     </main>
   );
 }

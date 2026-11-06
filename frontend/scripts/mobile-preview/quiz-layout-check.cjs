@@ -8,7 +8,7 @@ const server = require('./serve.cjs');
   const browser = process.env.QUIZ_WEBKIT === '1' ? await webkit.launch({headless:true}) : await chromium.launch({ executablePath: process.env.EDGE_PATH || 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', headless: true });
   const errors = [];
   try {
-    for (const topic of ['spider_man','foot_fr','harry_potter','booba']) {
+    for (const topic of ['spider_man','foot_fr','harry_potter','booba','minecraft','pokemon']) {
       for (const [width,height] of (process.env.QUIZ_QA_FAST === '1' ? [[390,844]] : [[320,568],[390,664],[390,844],[430,932],[844,390],[1440,900]])) {
         const page = await browser.newPage({ viewport: { width,height }, reducedMotion: 'reduce' });
         await page.addInitScript(theme=>localStorage.setItem('quizzup-theme',theme),process.env.QUIZ_DARK==='1'?'dark':'light');
@@ -18,12 +18,12 @@ const server = require('./serve.cjs');
         await page.locator('.cp-head').waitFor();
         await page.locator('.cp-artwork').evaluate(image => image.complete ? Promise.resolve() : new Promise(resolve=>{image.onload=resolve;image.onerror=resolve;}));
         await page.evaluate(() => document.fonts.ready);
-        assert.equal(await page.locator('.cp-head .cp-header-bg').count(),1,'The themed background does not continue behind the quiz header');
-        const headerTheme=await page.evaluate(()=>({
-          page:getComputedStyle(document.querySelector('.category-preview-v4 > .cp-bg')).backgroundImage,
-          header:getComputedStyle(document.querySelector('.cp-header-bg')).backgroundImage,
-        }));
-        assert.equal(headerTheme.page,'none','The shared reading surface must not use a themed image');
+        assert.equal(await page.locator('.cp-header-bg').count(),0,'A separate header strip obscures the artwork');
+        assert.equal(await page.locator('.cp-about').count(),0,'The duplicate description returned');
+        const pitchStyle=await page.locator('.cp-info').evaluate(el=>({clamp:getComputedStyle(el).webkitLineClamp,overflow:getComputedStyle(el).overflow}));
+        assert(['none',''].includes(pitchStyle.clamp) && pitchStyle.overflow==='visible','The pitch is truncated');
+        const stats=await page.locator('.cp-stats').boundingBox();
+        assert(stats.height<65,'Progress must remain a single compact row');
         const buttonContrast=await page.locator('.cp-head button').evaluateAll(buttons=>{
           const rgba=value=>value.match(/[\d.]+/g).map(Number);
           const luminance=rgb=>rgb.map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0);
@@ -63,17 +63,18 @@ const server = require('./serve.cjs');
             });
             assert(geometry.bg.top<=0 && geometry.bg.bottom>=height && geometry.bg.left<=0 && geometry.bg.right>=geometry.width,
               `Broken quiz background ${topic} ${width}x${height} scrolled=${scrolled}: ${JSON.stringify(geometry.bg)}`);
-            assert(geometry.header.top>=safeTop-1,`Quiz header under safe area: ${topic} ${width}x${height} safe=${safeTop} scrolled=${scrolled}: ${JSON.stringify(geometry)}`);
-            assert(geometry.controls.length>=4,`Quiz global controls outside its header: ${topic}`);
-            assert(geometry.controls.every(r=>r.y>=safeTop && r.width>=44 && r.height>=44 && r.x>=0 && r.right<=width && r.bottom<=height),
+            if (!scrolled) assert(geometry.header.top>=safeTop-1,`Quiz header under safe area: ${topic} ${width}x${height} safe=${safeTop} scrolled=${scrolled}: ${JSON.stringify(geometry)}`);
+            assert(geometry.controls.length>=3,`Quiz global controls outside its header: ${topic}`);
+            if (!scrolled) assert(geometry.controls.every(r=>r.y>=safeTop && r.width>=44 && r.height>=44 && r.x>=0 && r.right<=width && r.bottom<=height),
               `Clipped quiz controls ${topic} ${width}x${height}: ${JSON.stringify(geometry.controls)}`);
             assert(geometry.scrollWidth<=width,`Horizontal overflow ${topic}`);
             if (scrolled) {
-              const friends=await page.locator('.cp-friends').boundingBox();
+              const friends=await page.locator('.social-entry-row').boundingBox();
               const nav=await page.locator('.navbar').boundingBox();
               assert(friends.y+friends.height<=nav.y,`Quiz bottom obscured ${topic} ${width}x${height}`);
             }
           }
+          await page.evaluate(()=>window.scrollTo(0,0));
           await page.getByRole('button',{name:'Réglages',exact:true}).click();
           const settings=await page.locator('.mobile-controls-panel').boundingBox();
           assert(settings && settings.x>=0 && settings.x+settings.width<=width && settings.y>=safeTop && settings.y+settings.height<=height,
@@ -85,9 +86,10 @@ const server = require('./serve.cjs');
           assert(background.y<=0 && background.y+background.height>=height+90,'Background does not follow browser-toolbar resizing');
           await page.setViewportSize({width,height});
         }
-        if (width===390 && height===844) {
-          await page.evaluate(()=>window.scrollTo(0,0));
-          await page.screenshot({path:path.resolve(__dirname,`../../.mobile-preview/quiz-detail-${topic}-${process.env.QUIZ_DARK==='1'?'dark':'light'}.png`),fullPage:true});
+        if ((width===390 && height===844) || width===1440) {
+          await page.evaluate(()=>{window.scrollTo(0,0);document.activeElement?.blur();});
+          await page.waitForTimeout(100);
+          await page.screenshot({path:path.resolve(__dirname,`../../.mobile-preview/quiz-immersive-${topic}-${width}-${process.env.QUIZ_DARK==='1'?'dark':'light'}.png`),fullPage:true});
         }
         console.log(`PASS ${topic} ${width}x${height} · scroll, safe insets, toolbar resize`);
         await page.close();
