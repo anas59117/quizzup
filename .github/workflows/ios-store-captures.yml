@@ -72,12 +72,12 @@ jobs:
         run: |
           node scripts/capture-store-screenshots.cjs \
             "$RUNNER_TEMP/ios-capture-build/Build/Products/Debug-iphonesimulator/QuizzUp.app" \
-            "$GITHUB_WORKSPACE/ios/AppStoreMetadata/screenshots"
+            "$RUNNER_TEMP/quizzup-native-screenshots"
       - name: Upload screenshots ready for App Store Connect
         uses: actions/upload-artifact@v4
         with:
           name: quizzup-app-store-screenshots-${{ github.sha }}
-          path: ios/AppStoreMetadata/screenshots/
+          path: ${{ runner.temp }}/quizzup-native-screenshots/
           if-no-files-found: error
           retention-days: 30
       - name: Upload compiler logs on failure
