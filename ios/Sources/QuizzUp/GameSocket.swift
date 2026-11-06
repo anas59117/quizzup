@@ -88,6 +88,8 @@ final class GameSocket: ObservableObject {
 
     private var task: URLSessionWebSocketTask?
     private var timer: Timer?
+    private var timelineGeneration = UUID()
+    var messageAttempt = UUID()
     private var generation = UUID()
     private var pendingAction: [String: Any]?
     // Set once by identify(idToken:authManager:) after sign-in. Kept only as
@@ -309,9 +311,10 @@ final class GameSocket: ObservableObject {
 
     private func startTimer(question: Question) {
         stopTimer()
+        let key = timelineGeneration
         let timeline = NativeRoundTimeline(question: question)
         let update = { [weak self] in
-            guard let self else { return }
+            guard let self, self.timelineGeneration == key else { return }
             let phase = timeline.state(at: Date())
             self.answersVisible = phase.visible
             self.answerInputOpen = phase.open && self.selectedAnswer == nil && !self.answerAccepted && self.reveal == nil
@@ -322,6 +325,7 @@ final class GameSocket: ObservableObject {
     }
 
     private func stopTimer() {
+        timelineGeneration = UUID()
         timer?.invalidate()
         timer = nil
     }
@@ -414,7 +418,9 @@ final class GameSocket: ObservableObject {
     }
 
     private func moderate(path: String, payload: [String: String]) async throws {
+        let key = generation
         guard !StoreCaptureConfiguration.enabled, let token = await authManager?.getIdToken(),
+              generation == key,
               let url = URL(string: "https://\(Self.backendHost)\(path)") else { throw URLError(.userAuthenticationRequired) }
         var req = URLRequest(url: url)
         req.httpMethod = "POST"
@@ -422,12 +428,14 @@ final class GameSocket: ObservableObject {
         req.setValue("application/json", forHTTPHeaderField: "Content-Type")
         req.httpBody = try JSONSerialization.data(withJSONObject: payload)
         let (data, response) = try await URLSession.shared.data(for: req)
+        guard generation == key else { throw URLError(.cancelled) }
         guard let response = response as? HTTPURLResponse, (200..<300).contains(response.statusCode),
               let body = try JSONSerialization.jsonObject(with: data) as? [String: Any], body["ok"] as? Bool == true else { throw URLError(.badServerResponse) }
     }
 
     func disconnect() {
         generation = UUID()
+        messageAttempt = UUID()
         stopTimer()
         task?.cancel(with: .goingAway, reason: nil)
         task = nil

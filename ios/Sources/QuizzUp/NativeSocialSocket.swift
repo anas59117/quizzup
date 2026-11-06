@@ -101,9 +101,11 @@ extension GameSocket {
         let id = clientMessageID ?? UUID().uuidString
         guard send(["type": "dm", "targetId": peer, "text": clean, "clientMessageId": id]) else { return nil }
         pendingMessageID = id; socialError = nil
+        let attempt = UUID()
+        messageAttempt = attempt
         Task {
             try? await Task.sleep(nanoseconds: 15_000_000_000)
-            if pendingMessageID == id {
+            if messageAttempt == attempt, pendingMessageID == id {
                 pendingMessageID = nil
                 socialError = lang == "fr" ? "L’envoi n’est pas encore confirmé. Ton message est conservé ; tu peux réessayer." : "Delivery is not confirmed yet. Your draft is preserved; you can retry."
             }
