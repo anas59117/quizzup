@@ -57,6 +57,14 @@ struct HomeView: View {
         .sheet(isPresented: $showSettings) { NativeSettingsView() }
         .sheet(isPresented: $showPlay) { NativePlaySheet(category: nil) }
         .onAppear {
+            #if DEBUG && STORE_CAPTURE
+            switch StoreCaptureConfiguration.options?.screen {
+            case "themes": tab = .themes
+            case "messages": tab = .messages
+            case "profile": tab = .profile
+            default: break
+            }
+            #endif
             if game.categories.isEmpty { game.loadCategories() }
             game.requestProfile()
         }

@@ -71,6 +71,7 @@ struct NativeMessagesView: View {
             }.padding(20).frame(maxWidth: 600)
         }
         .frame(maxWidth: .infinity).background(Theme.paper).foregroundColor(Theme.ink)
+        .environment(\.colorScheme, .light)
         .navigationDestination(for: NativeFriend.self) { friend in NativeMessageThread(friend: friend) }
         .onAppear { game.requestInbox() }
         .sheet(isPresented: $showAdd) { addFriendSheet.preferredColorScheme(.light) }
@@ -196,6 +197,6 @@ struct NativeMessageThread: View {
             }.background(Theme.gold).foregroundColor(Theme.ink).clipShape(Circle())
                 .disabled(!game.connected || game.pendingMessageID != nil || draft.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 .accessibilityLabel(fr ? "Envoyer le message" : "Send message")
-        }.padding(12).background(Theme.paper)
+        }.padding(12).background(Theme.paper).environment(\.colorScheme, .light)
     }
 }

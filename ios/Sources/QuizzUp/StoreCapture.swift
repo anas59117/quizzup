@@ -21,7 +21,7 @@ enum StoreCaptureConfiguration {
         let args = ProcessInfo.processInfo.arguments
         guard let index = args.firstIndex(of: "--store-capture-screen") else { return nil }
         guard index + 1 < args.count,
-              ["home", "faceoff", "question", "answer", "result"].contains(args[index + 1]),
+              ["home", "faceoff", "question", "answer", "result", "themes", "messages", "profile"].contains(args[index + 1]),
               let languageIndex = args.firstIndex(of: "--store-capture-language"),
               languageIndex + 1 < args.count,
               ["fr", "en"].contains(args[languageIndex + 1]) else {
@@ -38,6 +38,7 @@ enum StoreCaptureConfiguration {
         game.name = "Alex"
         game.avatar = "fox"
         game.myId = "store-demo-alex"
+        game.clientId = "store-demo-alex"
         game.soloMode = false
         // Reuse the bundled real catalogue; only account/score values are fixtures.
         game.categories = NativeCatalog.entries.keys.sorted().map { key in
@@ -47,6 +48,9 @@ enum StoreCaptureConfiguration {
         game.followedThemes = ["ligue_champions", "rap_fr", "harry_potter", "minecraft"]
         game.topicProgress = [.init(key: "ligue_champions", level: 8), .init(key: "rap_fr", level: 5), .init(key: "harry_potter", level: 3), .init(key: "minecraft", level: 2)]
         game.stats = PlayerStats(games: 27, wins: 16, streak: 2, xp: 1620, level: 4, xpIntoLevel: 420, xpForLevel: 800)
+        game.friends = [NativeFriend(id: "store-demo-camille", name: "Camille", avatar: "owl", online: true), NativeFriend(id: "store-demo-sam", name: "Sam", avatar: "astronaut", online: false)]
+        let message = NativeMessage(id: "store-message", fromId: "store-demo-camille", toId: "store-demo-alex", kind: "text", text: options.language == "fr" ? "On se fait une revanche ?" : "Ready for a rematch?", createdAt: 1793920000000)
+        game.conversations = [NativeConversation(peer: game.friends[0], lastMessage: message, unread: 1)]
         game.opponents = [Opponent(id: "store-demo-camille", name: "Camille", avatar: "owl", score: 28)]
         game.score = options.screen == "result" ? 118 : 34
         game.totalRounds = 6

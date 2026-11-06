@@ -68,7 +68,7 @@ jobs:
               exit 1
             }
           node -e 'const fs=require("fs");const p=process.env.RUNNER_TEMP+"/ios-capture-build/Build/Products/Release-iphonesimulator/QuizzUp.app/QuizzUp";if(fs.readFileSync(p).includes(Buffer.from("--store-capture-screen")))throw Error("Capture mode leaked into Release");'
-      - name: Capture five screens in French and English on native devices
+      - name: Capture eight screens in French and English on native devices
         run: |
           node scripts/capture-store-screenshots.cjs \
             "$RUNNER_TEMP/ios-capture-build/Build/Products/Debug-iphonesimulator/QuizzUp.app" \

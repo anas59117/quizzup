@@ -4,7 +4,7 @@ const profiles = [
   {key:'iphone-large-face-id', type:'iPhone-14-Plus', width:1284, height:2778},
   {key:'iphone-medium-dynamic-island', type:'iPhone-15', width:1179, height:2556},
 ];
-const scenarios = ['home', 'faceoff', 'question', 'answer', 'result'];
+const scenarios = ['home', 'faceoff', 'question', 'answer', 'result', 'themes', 'messages', 'profile'];
 function pngInfo(buffer) {
   assert.ok(buffer.length >= 45 && buffer.subarray(0,8).equals(Buffer.from('89504e470d0a1a0a','hex')), 'Invalid or truncated PNG');
   assert.equal(buffer.toString('ascii',12,16), 'IHDR', 'Missing PNG IHDR');

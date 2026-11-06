@@ -11,10 +11,10 @@ function png(width, height, colorType = 2, transparent = false) {
   ihdr.writeUInt32BE(width); ihdr.writeUInt32BE(height, 4); ihdr[8] = 8; ihdr[9] = colorType;
   return Buffer.concat([signature, chunk('IHDR', ihdr), ...(transparent ? [chunk('tRNS', Buffer.alloc(6))] : []), chunk('IEND', Buffer.alloc(0))]);
 }
-test('capture matrix has thirty distinct native captures', () => {
+test('capture matrix has forty-eight distinct native captures', () => {
   assert.equal(profiles.length, 3);
   const keys = profiles.flatMap(p => ['fr', 'en'].flatMap(lang => scenarios.map(s => `${p.key}/${lang}/${s}`)));
-  assert.equal(new Set(keys).size, 30);
+  assert.equal(new Set(keys).size, 48);
   assert.deepEqual(profiles.map(p => [p.width, p.height]), [[1290, 2796], [1284, 2778], [1179, 2556]]);
 });
 test('accepts an opaque RGB icon without requiring rounded corners', () => {

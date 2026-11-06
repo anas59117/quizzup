@@ -120,6 +120,7 @@ struct NativeThemesView: View {
                 }
                 .padding(.horizontal, 14).frame(minHeight: 52)
                 .background(Theme.paper, in: RoundedRectangle(cornerRadius: 16))
+                .environment(\.colorScheme, .light).tint(Theme.brand)
                 if game.categories.isEmpty {
                     NativeCatalogEmptyView()
                 } else if family == nil && query.isEmpty {
