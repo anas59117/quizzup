@@ -6,7 +6,7 @@ Sign-in is required. Use Continue with Apple or Continue with Google. The app do
 TESTING THE APP
 1. Sign in using Continue with Apple or Continue with Google.
 2. Choose a username and tap "Continue".
-3. Tap "Quick Play" to find a real-time opponent, or toggle "Solo" to play alone.
+3. Tap the central yellow Play button, then select Quick duel or Solo. You can also open a topic and choose a mode.
 4. During a match, you can tap the ⋯ icon next to an opponent's name to report or block them.
 5. After the match, the results screen shows scores and XP earned.
 
@@ -17,4 +17,4 @@ NETWORK
 The app connects to wss://quizzup-production.up.railway.app/ws for real-time gameplay and HTTPS to the same host for REST endpoints (categories, auth, reports).
 
 PRIVACY
-Firebase authentication may provide an email address and name in addition to the user ID. A display name, avatar and game history are used for gameplay, scores and progression. No ads or third-party analytics are integrated into the native app. Full privacy policy: https://quizzup-ten.vercel.app/privacy.html
+Firebase authentication may provide an email address and name in addition to the user ID. A display name, avatar and game history are used for gameplay, scores and progression. No ads or third-party analytics are integrated into the native app. Private messages and the in-app friends list are stored for account functionality. There is no device address-book access. Full privacy policy: https://quizzup-ten.vercel.app/privacy.html

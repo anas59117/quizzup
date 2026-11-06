@@ -20,7 +20,7 @@ struct RoundIntroView: View {
                                 .font(.largeTitle.weight(.heavy)).foregroundColor(Theme.paper)
                                 .accessibilityAddTraits(.isHeader)
                             Text(intro.isBonus ? game.t("doublePoints") : game.t("roundOf", ["n": "\(intro.round)", "total": "\(intro.totalRounds)"]))
-                                .font(.subheadline).foregroundColor(Theme.muted)
+                                .font(.subheadline).foregroundColor(NativeDuelColors.secondary)
                             HStack(spacing: 8) {
                                 ForEach(1...max(1, intro.totalRounds), id: \.self) { round in
                                     Capsule().fill(round <= intro.round ? Theme.gold : Theme.paper.opacity(0.15))
@@ -57,7 +57,7 @@ struct RoundIntroView: View {
                 Text(game.t("round", ["n": "1"]))
                 Text("·")
                 Text(game.t("roundOf", ["n": "1", "total": "\(intro.totalRounds)"]))
-            }.font(.caption).foregroundColor(Theme.muted)
+            }.font(.caption).foregroundColor(NativeDuelColors.secondary)
             ReportBlockButton(targetId: opponent.clientId ?? opponent.id, targetName: opponent.name)
                 .frame(minWidth: 44, minHeight: 44)
         }

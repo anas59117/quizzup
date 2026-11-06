@@ -25,7 +25,7 @@ struct QuestionView: View {
         VStack(spacing: 18) {
             VStack(spacing: 9) {
                 Text(game.t("roundOf", ["n": "\(question.round)", "total": "\(question.totalRounds)"]))
-                    .font(.caption).foregroundColor(Theme.muted)
+                    .font(.caption).foregroundColor(NativeDuelColors.secondary)
                 Text(question.category.uppercased())
                     .font(.caption2.weight(.bold)).tracking(1.1)
                     .padding(.horizontal, 16).padding(.vertical, 7)
@@ -100,7 +100,7 @@ struct QuestionView: View {
                     if let image = phase.image {
                         image.resizable().scaledToFit()
                     } else if phase.error != nil {
-                        Image(systemName: "photo").font(.largeTitle).foregroundColor(Theme.muted)
+                        Image(systemName: "photo").font(.largeTitle).foregroundColor(NativeDuelColors.secondary)
                     } else { ProgressView().tint(Theme.paper) }
                 }
             }
@@ -140,14 +140,14 @@ struct QuestionView: View {
                 if game.answerPoints > 0 {
                     Text(game.t("ptsEarned", ["n": "\(game.answerPoints)"])).foregroundColor(Theme.gold)
                 }
-                Text(copy("En attente de l’adversaire…", "Waiting for your opponent…")).foregroundColor(Theme.muted)
+                Text(copy("En attente de l’adversaire…", "Waiting for your opponent…")).foregroundColor(NativeDuelColors.secondary)
             }
         } else if game.selectedAnswer != nil {
-            Text(copy("Envoi de la réponse…", "Sending your answer…")).foregroundColor(Theme.muted)
+            Text(copy("Envoi de la réponse…", "Sending your answer…")).foregroundColor(NativeDuelColors.secondary)
         } else if !game.answerInputOpen {
-            Text(copy("Lis la question…", "Read the question…")).foregroundColor(Theme.muted)
+            Text(copy("Lis la question…", "Read the question…")).foregroundColor(NativeDuelColors.secondary)
         } else {
-            Text(copy("Choisis ta réponse", "Choose your answer")).foregroundColor(Theme.muted)
+            Text(copy("Choisis ta réponse", "Choose your answer")).foregroundColor(NativeDuelColors.secondary)
         }
     }
 

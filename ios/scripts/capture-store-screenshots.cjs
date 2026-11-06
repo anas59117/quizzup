@@ -59,7 +59,7 @@ for(const profile of profiles){
   }
  }
 }
-assert.equal(captures.length,18);
+assert.equal(captures.length,profiles.length * scenarios.length * 2);
 const commit=process.env.GITHUB_SHA||run('git',['-C',root,'rev-parse','HEAD']);
 fs.writeFileSync(path.join(output,'manifest.json'),JSON.stringify({commit,runtime:runtime.identifier,capturedAt:new Date().toISOString(),nativeViews:true,contentLanguage:'Original French question bank; FR/EN interface chrome only',captures},null,2)+'\n');
-console.log('Verified 18 native, opaque App Store captures; no resizing.');
+console.log(`Verified ${captures.length} native, opaque App Store captures; no resizing.`);

@@ -38,9 +38,9 @@ struct WaitingView: View {
                     HStack(spacing: 9) {
                         Circle().fill(Theme.gold).frame(width: 6, height: 6)
                         Text(game.t("searching")).font(.subheadline)
-                    }.foregroundColor(Theme.muted)
+                    }.foregroundColor(NativeDuelColors.secondary)
                     Text(game.lang == "fr" ? "Le prochain duel commence ici." : "Your next duel starts here.")
-                        .font(.subheadline).foregroundColor(Theme.muted).multilineTextAlignment(.center)
+                        .font(.subheadline).foregroundColor(NativeDuelColors.secondary).multilineTextAlignment(.center)
                     Button(game.cancelPending ? (game.lang == "fr" ? "Annulation…" : "Cancelling…") : game.t("cancel")) {
                         game.cancelQueue()
                     }

@@ -167,7 +167,7 @@ struct NativeMessageThread: View {
                             }.buttonStyle(.bordered).controlSize(.large)
                         }
                     } else { Text(challenge.status == "pending" ? (fr ? "En attente de réponse" : "Waiting for a reply") : (fr ? "Défi terminé ou accepté" : "Challenge accepted or finished")).font(.caption) }
-                }.padding(14).background(Theme.gold.opacity(.35)).cornerRadius(16)
+                }.padding(14).background(Theme.gold.opacity(0.35)).cornerRadius(16)
             } else {
                 Text(message.text.isEmpty ? (fr ? "Résultat du duel" : "Duel result") : message.text)
                     .padding(14).background(own ? Theme.brand : Color(hex: 0xEEE5E1)).foregroundColor(own ? .white : Theme.ink).cornerRadius(16)

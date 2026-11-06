@@ -286,6 +286,10 @@ final class GameSocket: ObservableObject {
                 stage = .finished
                 stopTimer()
             }
+        case "auth_required", "already_connected":
+            disconnect()
+            socialError = t("serverUnreachable")
+            stage = .error
         case "error":
             isStarting = false
             stage = .error
@@ -305,7 +309,7 @@ final class GameSocket: ObservableObject {
             self.timeLeft = phase.seconds
         }
         update()
-        timer = Timer.scheduledTimer(withTimeInterval: .1, repeats: true) { _ in Task { @MainActor in update() } }
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in Task { @MainActor in update() } }
     }
 
     private func stopTimer() {

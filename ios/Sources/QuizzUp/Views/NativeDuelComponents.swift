@@ -1,6 +1,7 @@
 import SwiftUI
 
 enum NativeDuelColors {
+    static let secondary = Color(hex: 0xADB7B3)
     static let mine = Color(hex: 0x4BC4EC)
     static let other = Color(hex: 0xF19150)
 }
@@ -26,7 +27,7 @@ struct NativeDuelPlayer: View {
                 if trailing { portrait }
             }
             Label(status, systemImage: answered ? "checkmark.circle.fill" : "circle")
-                .font(.caption2).foregroundColor(answered ? color : Theme.muted)
+                .font(.caption2).foregroundColor(answered ? color : NativeDuelColors.secondary)
         }
         .frame(maxWidth: .infinity, alignment: trailing ? .trailing : .leading)
         .accessibilityElement(children: .combine)
