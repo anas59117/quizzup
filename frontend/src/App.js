@@ -261,6 +261,7 @@ function AppContent() {
     notify(`+${coins} coins +${xp} XP!`, 'success');
   }, [statsHook.stats.coins, statsHook.handleStatsMessage, seasonPass.addPassXP, notify]);
   const feed = useFeed(wsRef, clientId);
+  const [communityInThread, setCommunityInThread] = useState(false);
   const players = usePlayers(wsRef);
 
   const [sharedPostId, setSharedPostId] = useState(() =>
@@ -683,6 +684,7 @@ function AppContent() {
         break;
       case 'follow_updated':
         players.handleMessage(data);
+        feed.handleMessage(data);
         if (data.mine) statsHook.handleStatsMessage({ stats: data.mine });
         if (data.reason === 'limit') showToast(t('followLimit'), 'error');
         break;
@@ -1208,14 +1210,13 @@ function AppContent() {
 
   if (stage === 'feed') {
     return (
-      <div className="app app-nav app-top">
-        <TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
-        <main id="main-content" tabIndex={-1} aria-labelledby="community-title" className="container wide">
-          <div className="cat-header">
-            <h1 id="community-title" tabIndex={-1}>{lang === 'fr' ? 'Communauté' : 'Community'}</h1>
-          </div>
+      <div className={`app app-nav app-community${communityInThread ? " community-in-thread" : ""}`}>
+        <Toast toast={toast} onDismiss={dismissToast} />
+        <main id="main-content" tabIndex={-1} aria-labelledby="community-title" className="community-main">
           <FeedScreen
             feed={feed}
+            onThreadChange={setCommunityInThread}
+            controls={<TopControls {...topProps} home />}
             myTopics={statsHook.stats.topics || []}
             onPlayTopic={startWithCategory}
             onOpenTopicLeaderboard={(key) => openLeaderboard(key, 'feed')}
@@ -1223,7 +1224,7 @@ function AppContent() {
           />
         </main>
         <PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} />
-        <NavBar active="feed" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
+        {!communityInThread && <NavBar active="feed" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />}
       </div>
     );
   }
