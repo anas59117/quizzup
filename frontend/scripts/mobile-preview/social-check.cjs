@@ -237,12 +237,9 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
     console.log(
       "PASS real friend accept, persistent DM, unread, offline recipient/reconnect",
     );
-    await a
-      .getByRole("button", {
-        name: "Défier",
-        exact: true,
-      })
-      .click();
+    await a.getByRole("button", { name: "Voir le profil · BobSocial", exact: true }).click();
+    const friendSheet = a.getByRole("dialog", { name: "BobSocial", exact: true });
+    await friendSheet.getByRole("button", { name: "Défier", exact: true }).click();
     await a.locator(".messenger-themes button").first().click();
     await b
       .getByRole("button", {
@@ -460,9 +457,9 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
       waitUntil: "commit",
     });
     await a.locator(".home-head").waitFor();
-    await a.getByRole("button", { name: /^Messages/ }).click();
-    await a.locator(".messenger-row").filter({ hasText: "BobSocial" }).click();
-    await a.getByRole("button", { name: "Défier", exact: true }).click();
+    await a.locator(".home-community-teaser").click();
+    await a.locator(".community-post").filter({ hasText: "Retrouve Bob" }).locator(".community-author").click();
+    await a.getByRole("dialog", { name: "BobSocial", exact: true }).getByRole("button", { name: "Défier", exact: true }).click();
     await a
       .getByRole("button", { name: "Chacun son tour", exact: true })
       .click();

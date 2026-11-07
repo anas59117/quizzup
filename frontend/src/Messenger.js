@@ -10,7 +10,7 @@ import { SOCIAL_COPY } from './social-copy';
 import './messenger.css';
 import { AsyncChallenge } from './AsyncChallenge';
 
-export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoinFriend, pending, initialPeerId }) {
+export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoinFriend, pending, initialPeerId, initialChallengePeer, onChallengeOpened }) {
   const { lang } = useI18n();
   const c = SOCIAL_COPY[lang] || SOCIAL_COPY.fr;
   const [query, setQuery] = useState('');
@@ -37,6 +37,12 @@ export function Messenger({ social, onBack, onOpenPlayer, onInviteFriend, onJoin
     // eslint-disable-next-line
   }, []);
   useEffect(() => { setChooser(false); setSendError(false); }, [id]);
+  useEffect(() => {
+    if (!id || initialChallengePeer !== id) return;
+    setMode('live');
+    setChooser(true);
+    onChallengeOpened?.();
+  }, [id, initialChallengePeer, onChallengeOpened]);
   useEffect(() => {
     const pending = submitted.current[id];
     if (pending && messages.some(message => message.fromId === social.clientId && message.text === pending.text && !pending.ids.has(message.id))) {

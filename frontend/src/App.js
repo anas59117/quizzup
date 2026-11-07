@@ -246,7 +246,19 @@ function AppContent() {
   const social = useSocial(wsRef, clientId);
   const history = useMatchHistory(wsRef);
   const [messagePeer, setMessagePeer] = useState(null);
-  const openMessages = (peerId = null) => { players.close(); setMessagePeer(peerId); setStage('messages'); };
+  const [messageChallengePeer, setMessageChallengePeer] = useState(null);
+  const clearMessageChallenge = useCallback(() => setMessageChallengePeer(null), []);
+  const openMessages = (peerId = null) => {
+    players.close();
+    setMessagePeer(peerId);
+    clearMessageChallenge();
+    if (stage === 'messages' && peerId && peerId !== social.activeConversationId) social.openConversation(peerId);
+    setStage('messages');
+  };
+  const openPlayerChallenge = (peerId) => {
+    openMessages(peerId);
+    setMessageChallengePeer(peerId);
+  };
   const league = useLeague();
   const { notifications, notify, removeNotification } = useNotifications();
   const adSystem = useAdSystem();
@@ -871,7 +883,7 @@ function AppContent() {
   // Tapping the "Themes" nav tab directly (not via a family tile on Home)
   // should land on the family overview, not silently reuse whichever family
   // was last opened.
-  const onNav = useCallback((s) => { if (s === 'categories') setCategoryFamily(null); if (s === 'messages') setMessagePeer(null); setStage(s === 'shop' ? 'home' : s); }, []);
+  const onNav = useCallback((s) => { if (s === 'categories') setCategoryFamily(null); if (s === 'messages') { setMessagePeer(null); clearMessageChallenge(); } setStage(s === 'shop' ? 'home' : s); }, [clearMessageChallenge]);
 
   function answer(index) {
     if (selected !== null || reveal || reconnecting || !question || !roundTiming(question).canAnswer) return;
@@ -1205,8 +1217,8 @@ function AppContent() {
     );
   }
 
-  if (stage === 'messages') return <div className={`app app-top app-messenger${!social.activeConversationId && !social.activeAsyncChallengeId ? ' app-nav messenger-inbox-nav' : ''}`}><Toast toast={toast} onDismiss={dismissToast} /><Messenger social={social} onBack={() => setStage('home')} onOpenPlayer={players.open} onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending} initialPeerId={messagePeer} />{!social.activeConversationId && !social.activeAsyncChallengeId && <NavBar active="messages" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />}<PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} /></div>;
-  if (stage === 'history') return <div className="app app-nav app-top"><MatchHistory history={history} onBack={() => setStage('profile')} onOpenPlayer={players.open} onMessage={openMessages} friends={social.friends} /><PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} /><NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} /></div>;
+  if (stage === 'messages') return <div className={`app app-top app-messenger${!social.activeConversationId && !social.activeAsyncChallengeId ? ' app-nav messenger-inbox-nav' : ''}`}><Toast toast={toast} onDismiss={dismissToast} /><Messenger social={social} onBack={() => setStage('home')} onOpenPlayer={players.open} onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending} initialPeerId={messagePeer} initialChallengePeer={messageChallengePeer} onChallengeOpened={clearMessageChallenge} />{!social.activeConversationId && !social.activeAsyncChallengeId && <NavBar active="messages" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />}<PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} onChallenge={openPlayerChallenge} /></div>;
+  if (stage === 'history') return <div className="app app-nav app-top"><MatchHistory history={history} onBack={() => setStage('profile')} onOpenPlayer={players.open} onMessage={openMessages} friends={social.friends} /><PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} onChallenge={openPlayerChallenge} /><NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} /></div>;
 
   if (stage === 'feed') {
     return (
@@ -1223,7 +1235,7 @@ function AppContent() {
             onOpenPlayer={players.open}
           />
         </main>
-        <PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} />
+        <PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} onChallenge={openPlayerChallenge} />
         {!communityInThread && <NavBar active="feed" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />}
       </div>
     );
@@ -1242,13 +1254,13 @@ function AppContent() {
           onOpenLeaderboard={openLeaderboard}
           onStartTournament={() => setStage('tournament')} onOpenSeasonPass={() => setStage('seasonpass')}
           onSaveProfile={saveProfile} profileSaving={pending}
-          onOpenHistory={() => setStage('history')} onOpenMessages={() => openMessages()}
+          onOpenHistory={() => setStage('history')} onDiscoverTopics={() => onNav('categories')}
           onOpenTopic={openTopic}
           streak={dailyStreak}
           league={league}
           onOpenLeague={() => setStage('league')}
         />
-        <PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} />
+        <PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} onChallenge={openPlayerChallenge} />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>);
   }
@@ -1277,7 +1289,7 @@ function AppContent() {
           onOpenPlayer={players.open}
           onBack={() => setStage(leaderboardReturn)}
         />
-        <PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} />
+        <PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} onChallenge={openPlayerChallenge} />
         <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>);
   }
