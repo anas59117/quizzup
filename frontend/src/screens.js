@@ -93,7 +93,8 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
   const [failedCover, setFailedCover] = useState(null);
   const [loadedCover, setLoadedCover] = useState(null);
   const fr = lang === 'fr';
-  const tint = ({ spider_man: '#721027', marvel: '#721027', foot_fr: '#142e55', harry_potter: '#58401e', minecraft: '#294d36', rap_fr: '#4d192c', ligue_champions: '#142e55', liga_portugal: '#194c3c' })[category?.key]
+  const cover = category ? getTopicCover(category) : null;
+  const tint = cover?.detailTint || ({ spider_man: '#721027', marvel: '#721027', foot_fr: '#142e55', harry_potter: '#58401e', minecraft: '#294d36', rap_fr: '#4d192c', ligue_champions: '#142e55', liga_portugal: '#194c3c' })[category?.key]
     || ({ football: '#142e55', sport: '#183c49', music: '#4d192c', gaming: '#273c42', cinema: '#42302f', sagas: '#493326', series: '#483049', manga: '#423241', culture: '#263f54' })[category?.family] || '#4b2436';
   useEffect(() => {
     if (!category) return undefined;
@@ -110,7 +111,6 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
     };
   }, [category, tint]);
   if (!category) return null;
-  const cover = getTopicCover(category);
   const artwork = cover?.src && failedCover !== cover.src ? cover : null;
   const preview = PREVIEW_SUB[category.key] || { desc: category.desc };
   const title = localizedTopicTitle(category, lang);
