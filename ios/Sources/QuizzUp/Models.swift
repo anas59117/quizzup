@@ -17,7 +17,7 @@ struct Category: Codable, Identifiable, Hashable {
 // Optional properties tolerate an absent key), so without this the whole
 // array would fail to decode and silently become empty for every match.
 struct Opponent: Codable, Identifiable, Hashable {
-    let id: String
+    var id: String
     let name: String
     let avatar: String
     var clientId: String?
@@ -65,12 +65,17 @@ struct Question: Codable {
     let isBonus: Bool
     let image: String?
     let credit: String?
+    var readingMs: Double? = nil
+    var presentationElapsedMs: Double? = nil
+    var answerOpensInMs: Double? = nil
+    var remainingMs: Double? = nil
 }
 
 struct OtherRoundUpdate: Codable, Hashable {
     let id: String
     let answered: Bool
     let correct: Bool
+    var score: Int? = nil
 }
 
 struct RoundResult: Codable {

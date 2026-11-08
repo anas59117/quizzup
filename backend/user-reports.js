@@ -18,15 +18,15 @@ const saved = readJsonFileSync(
 // reports: [{ reporterId, targetId, targetName, reason, ts }]
 const reports = Array.isArray(saved.reports) ? saved.reports : [];
 // blocks: { playerId: Set<blockedId> }
-const blocks = {};
+const blocks = Object.create(null);
 if (saved.blocks && typeof saved.blocks === 'object') {
   for (const [k, v] of Object.entries(saved.blocks)) {
     blocks[k] = new Set(Array.isArray(v) ? v : []);
   }
 }
 // flaggedNames: { name_lower: count }
-const flaggedNames = (saved.flaggedNames && typeof saved.flaggedNames === 'object')
-  ? { ...saved.flaggedNames } : {};
+const flaggedNames = Object.assign(Object.create(null),
+  saved.flaggedNames && typeof saved.flaggedNames === 'object' ? saved.flaggedNames : {});
 
 const persist = createJsonWriter(STORE, () => ({
   reports: reports.slice(-MAX_REPORTS),
@@ -83,6 +83,9 @@ function unblockUser(playerId, blockedId) {
 function isBlocked(playerId, otherId) {
   return !!(blocks[playerId] && blocks[playerId].has(otherId));
 }
+function blockedPair(playerId, otherId) {
+  return isBlocked(playerId, otherId) || isBlocked(otherId, playerId);
+}
 
 function getBlockList(playerId) {
   return blocks[playerId] ? [...blocks[playerId]] : [];
@@ -109,6 +112,7 @@ module.exports = {
   blockUser,
   unblockUser,
   isBlocked,
+  blockedPair,
   getBlockList,
   isNameFlagged,
   stats,

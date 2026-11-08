@@ -7,17 +7,8 @@
       "James Madison",
       "James Monroe"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui correspond au premier président des États-Unis ?",
-    "answers": [
-      "Thomas Jefferson",
-      "George Washington",
-      "James Madison",
-      "James Monroe"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel président américain associe-t-on au principal auteur de la Déclaration d'indépendance devenu président ?",
@@ -27,7 +18,8 @@
       "Thomas Jefferson",
       "Andrew Jackson"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Qui correspond au principal auteur de la Déclaration d'indépendance devenu président ?",
@@ -37,7 +29,8 @@
       "Andrew Jackson",
       "Thomas Jefferson"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel président américain associe-t-on à la guerre de 1812 ?",
@@ -47,7 +40,8 @@
       "Andrew Jackson",
       "Abraham Lincoln"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Qui correspond à la guerre de 1812 ?",
@@ -57,7 +51,8 @@
       "Andrew Jackson",
       "Abraham Lincoln"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel président américain associe-t-on à la doctrine portant son nom en 1823 ?",
@@ -67,17 +62,8 @@
       "James Monroe",
       "Andrew Johnson"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui correspond à la doctrine portant son nom en 1823 ?",
-    "answers": [
-      "Andrew Jackson",
-      "Abraham Lincoln",
-      "Andrew Johnson",
-      "James Monroe"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quel président américain associe-t-on à la démocratie jacksonienne ?",
@@ -87,7 +73,8 @@
       "Andrew Johnson",
       "William McKinley"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Qui correspond à la démocratie jacksonienne ?",
@@ -97,7 +84,8 @@
       "Andrew Johnson",
       "William McKinley"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel président américain associe-t-on à la guerre de Sécession ?",
@@ -107,7 +95,8 @@
       "Abraham Lincoln",
       "Theodore Roosevelt"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Qui correspond à la guerre de Sécession ?",
@@ -117,7 +106,8 @@
       "Theodore Roosevelt",
       "Abraham Lincoln"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel président américain associe-t-on à la Reconstruction après l'assassinat de Lincoln ?",
@@ -127,17 +117,8 @@
       "Theodore Roosevelt",
       "Woodrow Wilson"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui correspond à la Reconstruction après l'assassinat de Lincoln ?",
-    "answers": [
-      "William McKinley",
-      "Andrew Johnson",
-      "Theodore Roosevelt",
-      "Woodrow Wilson"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quel président américain associe-t-on à la guerre hispano-américaine ?",
@@ -147,7 +128,8 @@
       "William McKinley",
       "Franklin D. Roosevelt"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Qui correspond à la guerre hispano-américaine ?",
@@ -157,7 +139,8 @@
       "Franklin D. Roosevelt",
       "William McKinley"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel président américain associe-t-on au Square Deal ?",
@@ -167,7 +150,8 @@
       "Franklin D. Roosevelt",
       "Harry S. Truman"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Qui correspond au Square Deal ?",
@@ -177,7 +161,8 @@
       "Franklin D. Roosevelt",
       "Harry S. Truman"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel président américain associe-t-on aux Quatorze Points ?",
@@ -187,17 +172,8 @@
       "Woodrow Wilson",
       "Dwight D. Eisenhower"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui correspond aux Quatorze Points ?",
-    "answers": [
-      "Franklin D. Roosevelt",
-      "Harry S. Truman",
-      "Dwight D. Eisenhower",
-      "Woodrow Wilson"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quel président américain associe-t-on au New Deal ?",
@@ -207,7 +183,8 @@
       "Dwight D. Eisenhower",
       "John F. Kennedy"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Qui correspond au New Deal ?",
@@ -217,7 +194,8 @@
       "Dwight D. Eisenhower",
       "John F. Kennedy"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel président américain associe-t-on à la décision d'utiliser l'arme atomique contre le Japon ?",
@@ -227,7 +205,8 @@
       "Harry S. Truman",
       "Lyndon B. Johnson"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Qui correspond à la décision d'utiliser l'arme atomique contre le Japon ?",
@@ -237,7 +216,8 @@
       "Lyndon B. Johnson",
       "Harry S. Truman"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel président américain associe-t-on à la doctrine des représailles massives durant les années 1950 ?",
@@ -247,17 +227,8 @@
       "Lyndon B. Johnson",
       "Richard Nixon"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui correspond à la doctrine des représailles massives durant les années 1950 ?",
-    "answers": [
-      "John F. Kennedy",
-      "Dwight D. Eisenhower",
-      "Lyndon B. Johnson",
-      "Richard Nixon"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quel président américain associe-t-on à la crise des missiles de Cuba ?",
@@ -267,7 +238,8 @@
       "John F. Kennedy",
       "Jimmy Carter"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Qui correspond à la crise des missiles de Cuba ?",
@@ -277,7 +249,8 @@
       "Jimmy Carter",
       "John F. Kennedy"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel président américain associe-t-on à la Great Society ?",
@@ -287,7 +260,8 @@
       "Jimmy Carter",
       "Ronald Reagan"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Qui correspond à la Great Society ?",
@@ -297,7 +271,8 @@
       "Jimmy Carter",
       "Ronald Reagan"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel président américain associe-t-on au scandale du Watergate ?",
@@ -307,17 +282,8 @@
       "Richard Nixon",
       "George H. W. Bush"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui correspond au scandale du Watergate ?",
-    "answers": [
-      "Jimmy Carter",
-      "Ronald Reagan",
-      "George H. W. Bush",
-      "Richard Nixon"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quel président américain associe-t-on aux accords de Camp David de 1978 ?",
@@ -327,7 +293,8 @@
       "George H. W. Bush",
       "Bill Clinton"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Qui correspond aux accords de Camp David de 1978 ?",
@@ -337,7 +304,8 @@
       "George H. W. Bush",
       "Bill Clinton"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel président américain associe-t-on à la politique économique dite Reaganomics ?",
@@ -347,7 +315,8 @@
       "Ronald Reagan",
       "George W. Bush"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Qui correspond à la politique économique dite Reaganomics ?",
@@ -357,7 +326,8 @@
       "George W. Bush",
       "Ronald Reagan"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel président américain associe-t-on à la fin de la guerre froide en 1989-1991 ?",
@@ -367,17 +337,8 @@
       "George W. Bush",
       "Barack Obama"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui correspond à la fin de la guerre froide en 1989-1991 ?",
-    "answers": [
-      "Bill Clinton",
-      "George H. W. Bush",
-      "George W. Bush",
-      "Barack Obama"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quel président américain associe-t-on aux deux mandats de 1993 à 2001 ?",
@@ -387,7 +348,8 @@
       "Bill Clinton",
       "Donald Trump"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Qui correspond aux deux mandats de 1993 à 2001 ?",
@@ -397,7 +359,8 @@
       "Donald Trump",
       "Bill Clinton"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel président américain associe-t-on aux attentats du 11-Septembre au début de son mandat ?",
@@ -407,7 +370,8 @@
       "Donald Trump",
       "Joe Biden"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Qui correspond aux attentats du 11-Septembre au début de son mandat ?",
@@ -417,7 +381,8 @@
       "Donald Trump",
       "Joe Biden"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel président américain associe-t-on au premier président afro-américain ?",
@@ -427,17 +392,8 @@
       "Barack Obama",
       "Thomas Jefferson"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui correspond au premier président afro-américain ?",
-    "answers": [
-      "Donald Trump",
-      "Joe Biden",
-      "Thomas Jefferson",
-      "Barack Obama"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quel président américain associe-t-on au président élu en 2016 ?",
@@ -447,7 +403,8 @@
       "Thomas Jefferson",
       "George Washington"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Qui correspond au président élu en 2016 ?",
@@ -457,7 +414,8 @@
       "Thomas Jefferson",
       "George Washington"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel président américain associe-t-on au président élu en 2020 ?",
@@ -467,7 +425,8 @@
       "Joe Biden",
       "James Madison"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Qui correspond au président élu en 2020 ?",
@@ -477,7 +436,8 @@
       "James Madison",
       "Joe Biden"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel président américain associe-t-on à l'achat de la Louisiane en 1803 ?",
@@ -487,7 +447,8 @@
       "James Madison",
       "James Monroe"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Qui correspond à l'achat de la Louisiane en 1803 ?",
@@ -497,6 +458,119 @@
       "James Madison",
       "James Monroe"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quel président figure sur le billet américain de cinq dollars du modèle actuel ?",
+    "answers": [
+      "George Washington",
+      "Andrew Jackson",
+      "Abraham Lincoln",
+      "Ulysses S. Grant"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "symboles",
+    "fact": "billet-cinq-dollars-lincoln",
+    "source": "https://www.uscurrency.gov/denominations/5"
+  },
+  {
+    "text": "Quelle loi de réforme de l’assurance santé Barack Obama signe-t-il ?",
+    "answers": [
+      "L’Affordable Care Act",
+      "Le Patriot Act",
+      "Le Social Security Act",
+      "Le Civil Rights Act"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "politiques",
+    "fact": "obama-affordable-care-act",
+    "source": "https://www.obamalibrary.gov/timeline"
+  },
+  {
+    "text": "Quel organe fédéral juge un président mis en accusation par la Chambre des représentants ?",
+    "answers": [
+      "La Chambre des représentants",
+      "La Cour suprême",
+      "Le collège électoral",
+      "Le Sénat"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "institutions",
+    "fact": "senat-jugement-destitution",
+    "source": "https://www.senate.gov/artandhistory/history/common/briefing/Senate_Impeachment_Role.htm"
+  },
+  {
+    "text": "Quel président demande au Congrès de fixer l’objectif d’un alunissage habité avant la fin des années 1960 ?",
+    "answers": [
+      "Lyndon B. Johnson",
+      "John F. Kennedy",
+      "Dwight D. Eisenhower",
+      "Richard Nixon"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "sciences",
+    "fact": "kennedy-objectif-lune",
+    "source": "https://www.nasa.gov/history/the-decision-to-go-to-the-moon/"
+  },
+  {
+    "text": "Quel président accorde une grâce à Richard Nixon après sa démission ?",
+    "answers": [
+      "Jimmy Carter",
+      "Gerald Ford",
+      "Lyndon B. Johnson",
+      "Ronald Reagan"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "justice",
+    "fact": "ford-grace-nixon",
+    "source": "https://ford.blogs.archives.gov/2024/09/06/the-pardon/"
+  },
+  {
+    "text": "Quel ancien président devient juge en chef de la Cour suprême ?",
+    "answers": [
+      "Herbert Hoover",
+      "William McKinley",
+      "Woodrow Wilson",
+      "William Howard Taft"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "parcours",
+    "fact": "taft-president-cour-supreme",
+    "source": "https://www.supremecourt.gov/about/faq_justices.aspx"
+  },
+  {
+    "text": "Quel président du XIXe siècle exerce deux mandats non consécutifs ?",
+    "answers": [
+      "Grover Cleveland",
+      "Benjamin Harrison",
+      "Chester A. Arthur",
+      "Rutherford B. Hayes"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "mandats",
+    "fact": "cleveland-deux-mandats-non-consecutifs",
+    "source": "https://trumpwhitehouse.archives.gov/about-the-white-house/presidents/grover-cleveland/"
+  },
+  {
+    "text": "Quel amendement prévoit de nommer un vice-président si le poste devient vacant ?",
+    "answers": [
+      "Le 12e amendement",
+      "Le 20e amendement",
+      "Le 25e amendement",
+      "Le 22e amendement"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "succession",
+    "fact": "amendement-vice-presidence-vacante",
+    "source": "https://constitution.congress.gov/constitution/amendment-25/"
   }
 ]

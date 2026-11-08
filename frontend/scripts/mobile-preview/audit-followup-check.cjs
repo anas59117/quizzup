@@ -8,8 +8,8 @@ const luminance=rgb=>rgb.map(n=>n/255).map(n=>n<=.04045?n/12.92:((n+.055)/1.055)
  const white=await sharp({create:{width:1,height:1,channels:3,background:'#fff'}}).png().toBuffer();
  for(const width of [320,390]){
  await page.setViewportSize({width,height:844});await page.goto('http://127.0.0.1:4338/?profile&personal');
- assert.equal(await page.locator('.pf-theme-name').count(),4);assert((await page.locator('.pf-theme-name').allTextContents()).includes('Rap Français'));
- const backup=page.locator('.profile-account-action');assert(await backup.isEnabled());const b=await backup.boundingBox();assert(b.y+b.height<600);
+ assert.equal(await page.locator('.profile-specialty-grid .pf-theme-name').count(),3);await page.locator('.profile-more-topics summary').click();assert(await page.locator('.profile-specialty-row').filter({hasText:'Minecraft'}).isVisible());await page.locator('.profile-more-topics summary').click();assert((await page.locator('.pf-theme-name').allTextContents()).includes('Rap Français'));
+ const backup=page.locator('.profile-account-action');assert(await backup.isEnabled());const b=await backup.boundingBox();assert(b.y+b.height<600);const xp=await page.locator('.profile-player-progress').boundingBox();assert(xp.y+xp.height<=b.y);
  await page.screenshot({path:path.join(out,`audit-profile-${width}.png`),fullPage:true});await backup.click();await page.locator('.profile-account-linked').waitFor();assert.equal(await backup.count(),0);
  await page.goto('http://127.0.0.1:4338/?themes');await page.locator('.family-tile[data-family=music]').click();assert.equal(await page.locator('.cat-header .back-link').count(),1);assert.equal(await page.locator('.back-to-topics').count(),0);
  for(const [query,key] of [['Booba','booba'],['Géographie','geography']]){

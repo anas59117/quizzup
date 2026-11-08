@@ -1,19 +1,16 @@
 import { QuestionContent as EnhancedQuestionContent } from './enhanced-QuestionContent';
 import React, { useState, useMemo, useEffect } from 'react';
-import { StreakBadge, StreakCalendar } from './DailyStreak';
+import { StreakBadge } from './DailyStreak';
 import { ShareCard } from './ShareCard';
 import { ChallengeButton } from './ChallengeLink';
-import { AVATARS, CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon, BrowseHeader } from './ui';
+import { CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon, BrowseHeader } from './ui';
 import { CategoryTileV4 } from './CategoryTileV4';
 import { Leaderboard } from './multiplayer';
-import { ProfileStats } from './stats';
-import { FriendsScreen } from './social';
 import { FriendInviteActions } from './FriendInviteActions';
 import { TopicLevelList, topicTitleKey, topicLabel } from './players';
 import { useI18n } from './i18n';
-import { PlayerAvatar, AVATAR_IDS, avatarId } from './PlayerAvatar';
+import { PlayerAvatar, avatarId } from './PlayerAvatar';
 import { ShopArt as QV4ShopArt } from './shop-art';
-import { ProfilePhotoEditor } from './ProfilePhotoEditor';
 import { BrandLogo } from './Brand';
 import { getTopicCover } from './topicCovers';
 import { localizedTopicTitle } from './topicTitles';
@@ -68,111 +65,104 @@ export function HomeContent({ startWithCategory, onSeeAll, pending, stats, contr
   </main>;
 }
 
-// Topic preview short descriptions (fallback for featured sub)
+// Short, complete pitches keep the entry into a duel concise in both languages.
 const PREVIEW_SUB = {
-  spider_man: { line1: 'SPIDER', line2: 'MAN', eyebrow: 'POP CULTURE · MARVEL', sub: 'Multiverse', desc: 'Du Peter de Raimi au Miles de Across. 150 questions pour départager les vrais fans des Avengers du dimanche.' },
-  harry_potter: { line1: 'HARRY', line2: 'POTTER', eyebrow: 'POP CULTURE · WIZARDING', sub: 'Wizarding World', desc: 'Poudlard, sortilèges & créatures magiques. Les vrais fans vont se régaler.' },
-  marvel: { line1: 'MARVEL', eyebrow: 'POP CULTURE · MARVEL', sub: 'Avengers', desc: 'Avengers, X-Men, et tout l\'univers Marvel réuni.' },
-  dc_comics: { line1: 'DC', line2: 'COMICS', eyebrow: 'POP CULTURE · DC', sub: 'Multiverse', desc: 'Justice League, Batman, Superman — l\'univers DC Comics.' },
-  batman: { line1: 'BAT', line2: 'MAN', eyebrow: 'POP CULTURE · DC', sub: 'Gotham', desc: 'Gotham, le Chevalier Noir, Joker et toute la Bat-Famille.' },
-  star_wars: { line1: 'STAR', line2: 'WARS', eyebrow: 'POP CULTURE · LUCASFILM', sub: 'Saga', desc: 'La Force, les Jedi, les Sith — toute la saga galactique.' },
-  game_of_thrones: { line1: 'GAME OF', line2: 'THRONES', eyebrow: 'SÉRIE · HBO', sub: 'Westeros', desc: 'Westeros, dragons, trônes et trahisons.' },
-  one_piece: { line1: 'ONE', line2: 'PIECE', eyebrow: 'MANGA · SHONEN', sub: 'Grand Line', desc: 'Luffy et l\'équipage du Chapeau de paille à la recherche du One Piece.' },
-  pokemon: { line1: 'POKÉMON', eyebrow: 'POP CULTURE · GAMING', sub: 'Pokéverse', desc: 'Attrapez-les tous ! Les 1000+ Pokémon depuis la génération 1.' },
-  minecraft: { line1: 'MINE', line2: 'CRAFT', eyebrow: 'GAMING · SANDBOX', sub: 'Overworld', desc: 'Blocs, créatures, biomes & dimensions du jeu culte.' },
-  rap_fr: { line1: 'RAP', line2: 'FR', eyebrow: 'MUSIQUE · RAP', sub: 'France · 2024', desc: 'PNL, Booba, Jul, SCH & tous les grands noms du rap français.' },
-  werenoi: { line1: 'WERE', line2: 'NOI', eyebrow: 'MUSIQUE · RAP FR', sub: 'Rap FR · 2024', desc: 'La discographie et l\'univers de Werenoi.' },
-  ligue_champions: { line1: 'LIGUE DES', line2: 'CHAMPIONS', eyebrow: 'SPORT · FOOTBALL', sub: 'UEFA', desc: 'Finales, légendes & records de la plus grande compétition européenne.' },
+  spider_man: { eyebrow: 'POP CULTURE · MARVEL', desc: 'De Peter Parker à Miles Morales. Le multivers n’aura plus de secrets pour toi.', en: 'From Peter Parker to Miles Morales. Discover every corner of the multiverse.' },
+  harry_potter: { eyebrow: 'POP CULTURE · WIZARDING', desc: 'Poudlard, sortilèges et créatures magiques. Mets tes connaissances à l’épreuve.', en: 'Hogwarts, spells and magical creatures. Put your knowledge to the test.' },
+  marvel: { eyebrow: 'POP CULTURE · MARVEL', desc: 'Avengers, X-Men et tout l’univers Marvel réuni.', en: 'Avengers, X-Men and the entire Marvel universe.' },
+  dc_comics: { eyebrow: 'POP CULTURE · DC', desc: 'Justice League, Batman, Superman : explore l’univers DC Comics.', en: 'Justice League, Batman, Superman: explore the DC Comics universe.' },
+  batman: { eyebrow: 'POP CULTURE · DC', desc: 'Gotham, le Chevalier Noir, Joker et toute la Bat-Famille.', en: 'Gotham, the Dark Knight, the Joker and the whole Bat-Family.' },
+  star_wars: { eyebrow: 'POP CULTURE · LUCASFILM', desc: 'La Force, les Jedi et les Sith. Explore toute la saga galactique.', en: 'The Force, the Jedi and the Sith. Explore the entire galactic saga.' },
+  game_of_thrones: { desc: 'Westeros, dragons, trônes et trahisons.', en: 'Westeros, dragons, thrones and betrayals.' },
+  one_piece: { eyebrow: 'MANGA · SHŌNEN', desc: 'Luffy et son équipage à la recherche du One Piece.', en: 'Join Luffy and his crew on the quest for the One Piece.' },
+  pokemon: { eyebrow: 'POP CULTURE · GAMING', desc: 'Pokémon, régions et évolutions : à toi de tous les reconnaître.', en: 'Pokémon, regions and evolutions: how many can you recognize?' },
+  minecraft: { eyebrow: 'GAMING · SANDBOX', desc: 'Blocs, créatures, biomes et dimensions du jeu culte.', en: 'Blocks, creatures, biomes and dimensions of the iconic game.' },
+  rap_fr: { desc: 'PNL, Booba, Jul, SCH et les grands noms du rap français.', en: 'PNL, Booba, Jul, SCH and the biggest names in French rap.' },
+  werenoi: { desc: 'La discographie et l’univers de Werenoi.', en: 'Explore Werenoi’s discography and musical world.' },
+  ligue_champions: { desc: 'Finales, légendes et records de la compétition européenne.', en: 'Finals, legends and records of European club football.' },
+  foot_fr: { desc: 'Ligue 1, les Bleus et les légendes du football français.', en: 'Ligue 1, Les Bleus and the legends of French football.' },
 };
 
+// Direction: full-width artwork dissolves into one continuous themed canvas.
+// Rules: preserve faces, keep the pitch complete, lead with play and compact progress.
 export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChallenge, pending, friendsOnTopic = [], controls, onCommunity, onLeaderboard, following, onToggleFollow }) {
   const { t, lang } = useI18n();
   const [failedCover, setFailedCover] = useState(null);
+  const [loadedCover, setLoadedCover] = useState(null);
   const fr = lang === 'fr';
+  const cover = category ? getTopicCover(category) : null;
+  const tint = cover?.detailTint || ({ spider_man: '#721027', marvel: '#721027', foot_fr: '#142e55', harry_potter: '#58401e', minecraft: '#294d36', rap_fr: '#4d192c', ligue_champions: '#142e55', liga_portugal: '#194c3c' })[category?.key]
+    || ({ football: '#142e55', sport: '#183c49', music: '#4d192c', gaming: '#273c42', cinema: '#42302f', sagas: '#493326', series: '#483049', manga: '#423241', culture: '#263f54' })[category?.family] || '#4b2436';
+  useEffect(() => {
+    if (!category) return undefined;
+    const app = document.querySelector('.app-category-preview');
+    const previousCanvas = app?.style.getPropertyValue('--cp-canvas');
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    const previousTheme = themeColor?.getAttribute('content');
+    app?.style.setProperty('--cp-canvas', tint);
+    themeColor?.setAttribute('content', tint);
+    return () => {
+      if (previousCanvas) app?.style.setProperty('--cp-canvas', previousCanvas);
+      else app?.style.removeProperty('--cp-canvas');
+      if (previousTheme !== null && previousTheme !== undefined) themeColor?.setAttribute('content', previousTheme);
+    };
+  }, [category, tint]);
   if (!category) return null;
-  const cover = getTopicCover(category);
-  const artwork = cover?.approved && failedCover !== cover.src ? cover : null;
-  const preview = PREVIEW_SUB[category.key] || { eyebrow: category.family ? famLabel(t, category.family) : 'QUIZ', desc: category.desc };
-  const topicStats = (stats && stats.topics || []).find((t) => t.key === category.key) || {};
+  const artwork = cover?.src && failedCover !== cover.src ? cover : null;
+  const preview = PREVIEW_SUB[category.key] || { desc: category.desc };
+  const title = localizedTopicTitle(category, lang);
+  const family = category.family ? famLabel(t, category.family) : 'Quiz';
+  const description = (fr ? preview.desc : preview.en) || category.desc || '';
+  const eyebrow = preview.eyebrow || family;
+  const topicStats = (stats?.topics || []).find(topic => topic.key === category.key) || {};
   const completion = Number.isFinite(topicStats.completion) ? `${topicStats.completion}%` : '—';
   const bestStreak = Number.isFinite(topicStats.bestStreak) ? topicStats.bestStreak : '—';
   const topicLevel = topicStats.level || 1;
+  const resolvedImage = artwork && loadedCover?.src === artwork.src ? loadedCover.url : null;
   return (
-    <main id="main-content" tabIndex={-1} aria-labelledby="quiz-title" className={`container wide category-preview-v4${artwork ? ' cp-has-artwork' : ''}`} data-topic={category.key} data-family={category.family}>
+    <main id="main-content" tabIndex={-1} aria-labelledby="quiz-title" className={`container wide category-preview-v4 cp-detail${artwork ? ' cp-has-artwork' : ''}`} data-topic={category.key} data-family={category.family}
+      style={{ '--cp-tint': tint, '--cp-image': resolvedImage ? `url(${JSON.stringify(resolvedImage)})` : 'none', '--cp-fit': category.key === 'foot_fr' || artwork?.embeddedTitle || artwork?.fit === 'contain' ? 'contain' : 'cover', '--cp-focal': category.key === 'spider_man' ? 'center 20%' : artwork?.focal || 'center' }}>
       <div className="cp-bg" aria-hidden="true" />
-
-      {/* Decorative overlay for Spider-Man / Marvel */}
-      {!artwork && (category.key === 'spider_man' || category.key === 'marvel') && (
-        <svg className="cp-web" viewBox="0 0 100 100" aria-hidden="true">
-          <g fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="0.5">
-            <path d="M50 50L0 0M50 50L100 0M50 50L0 100M50 50L100 100M50 50L50 0M50 50L50 100M50 50L0 50M50 50L100 50"/>
-            <path d="M30 30A28 28 0 0 1 70 30M20 50A42 42 0 0 1 80 50M30 70A28 28 0 0 0 70 70M35 35A20 20 0 0 1 65 35M25 50A32 32 0 0 1 75 50" strokeDasharray="2 2"/>
-          </g>
-        </svg>
-      )}
-
-      <div className="cp-head">
-        <div className="cp-bg cp-header-bg" aria-hidden="true" />
-        <button className="cp-back" onClick={onBack} aria-label={t('back')}>
-          <Icon name="arrow" size={18} className="cp-back-ic" />
-        </button>
+      <header className="cp-head">
+        <button className="cp-back" onClick={onBack} aria-label={t('back')}><Icon name="arrow" size={18} className="cp-back-ic" /></button>
         <div className="cp-head-right">
-          <button className="cp-icon-btn" aria-label={following ? (fr ? 'Ne plus suivre ce thème' : 'Unfollow theme') : (fr ? 'Suivre ce thème' : 'Follow theme')} aria-pressed={!!following} onClick={onToggleFollow}>
-            <Icon name="heart" size={18} />
-          </button>
-          <button className="cp-icon-btn" aria-label="Partager">
-            <Icon name="share" size={18} />
-          </button>
+          <button className="cp-icon-btn" aria-label={following ? (fr ? 'Ne plus suivre ce thème' : 'Unfollow theme') : (fr ? 'Suivre ce thème' : 'Follow theme')} aria-pressed={!!following} onClick={onToggleFollow}><Icon name="heart" size={18} /></button>
           {controls}
         </div>
+      </header>
+      <div className="cp-visual" aria-hidden="true">
+        <div className="cp-visual-ambience" />
+        {artwork ? <img className="cp-artwork" src={artwork.src} srcSet={artwork.srcSet} sizes="(min-width: 900px) 600px, 100vw" alt="" fetchpriority="high" decoding="async"
+          onLoad={event => setLoadedCover({ src: artwork.src, url: event.currentTarget.currentSrc || artwork.src })} onError={() => setFailedCover(artwork.src)} />
+          : <div className="cp-cover-fallback"><span>{title.split(/\s+/).slice(0, 2).map(word => word[0]).join('')}</span><Icon name="bolt" size={36} /></div>}
       </div>
-
+      <div className="cp-content">
       <div className="cp-hero">
-        <div className="cp-eyebrow">{preview.eyebrow}</div>
-        <h1 id="quiz-title" tabIndex={-1} className="cp-title">
-          {artwork || cover?.localizedTitle ? localizedTopicTitle(category, lang) : preview.line1 ? (
-            <>
-              <span className="cp-title-l">{preview.line1}</span>
-              {preview.line2 && <span className="cp-title-l">{preview.line2}</span>}
-            </>
-          ) : (
-            <span className="cp-title-l">{category.label}</span>
-          )}
-          {!artwork && preview.sub && <span className="cp-subtitle">{preview.sub}</span>}
-        </h1>
-        {artwork && <img className="cp-artwork" src={artwork.src} srcSet={artwork.srcSet} sizes="(max-width: 480px) calc(100vw - 48px), 320px" alt="" fetchpriority="high" decoding="async" onError={() => setFailedCover(artwork.src)} />}
-        <p className="cp-info">{preview.desc}</p>
+        <div className="cp-eyebrow">{eyebrow}</div>
+        <h1 id="quiz-title" tabIndex={-1} className="cp-title">{title}</h1>
+        {description && <p className="cp-info">{description}</p>}
       </div>
-
-      <div className="cp-stats">
-        <div className="cp-stat"><b>{completion}</b><span>{completion === '—' ? (fr ? 'Progression à découvrir' : 'Progress unavailable') : (fr ? 'complété' : 'completed')}</span></div>
-        <div className="cp-stat"><b>{bestStreak}</b><span>meilleure série</span></div>
-        <div className="cp-stat"><b>N{topicLevel}</b><span>niveau actuel</span></div>
-      </div>
-
       <div className="cp-cta">
-        <button className="cp-play" onClick={onPlay} disabled={pending}>
-          <Icon name="bolt" size={18} />
-          Jouer maintenant
-        </button>
-        <button className="cp-ghost" onClick={onChallenge} disabled={pending} aria-label="Défier un ami">
-          <Icon name="profile" size={18} />
-        </button>
+        <button className="cp-play" onClick={onPlay} disabled={pending}><Icon name="bolt" size={20} />{fr ? 'Jouer maintenant' : 'Play now'}</button>
+        <button className="cp-ghost" onClick={onChallenge} disabled={pending} aria-label={fr ? 'Défier un ami' : 'Challenge a friend'}><Icon name="users" size={22} /></button>
       </div>
-
-<div className="social-entry-row"><button onClick={onCommunity}>{fr ? 'Communauté' : 'Community'}</button><button onClick={onLeaderboard}>{fr ? 'Classement' : 'Ranking'}</button></div>
-      <div className="cp-friends">
-        <h3>Tes amis sur ce quiz</h3>
-        {friendsOnTopic.length > 0 ? (
-          <div className="cp-friends-row">
-            {friendsOnTopic.slice(0, 4).map((f) => (
-              <div key={f.id} className="cp-friend-ava">{(f.name || '?')[0].toUpperCase()}</div>
-            ))}
-            {friendsOnTopic.length > 4 && <span className="cp-friends-more">+ {friendsOnTopic.length - 4} autres</span>}
-          </div>
-        ) : (
-          <div className="cp-friends-empty">Personne pour l'instant. Sois le premier à défier tes amis.</div>
-        )}
+      <div className="cp-stats" aria-label={fr ? 'Ta progression' : 'Your progress'}>
+        <div className="cp-stat cp-stat-level"><Icon name="trophy" size={16} /><b>{fr ? 'Niveau' : 'Level'} {topicLevel}</b></div>
+        <div className="cp-stat"><span>{fr ? 'Progression' : 'Progress'}</span><b>{completion}</b></div>
+        <div className="cp-stat" title={fr ? 'Meilleure série' : 'Best streak'}><span>{fr ? 'Série' : 'Streak'}</span><b>{bestStreak}</b></div>
+      </div>
+      <section className="cp-friends" aria-labelledby="quiz-friends-title">
+        <div className="cp-friends-symbol" aria-hidden="true"><Icon name="users" size={23} /></div>
+        <button className="cp-friend-invite" onClick={onChallenge} disabled={pending}>
+          <span id="quiz-friends-title" className="cp-friends-title">{fr ? 'Défie tes amis' : 'Challenge your friends'}</span>
+          <span className="cp-friends-empty">{fr ? 'Invite un ami à jouer sur ce thème.' : 'Invite a friend to play this topic.'}</span>
+        </button>
+        {friendsOnTopic.length > 0 && <div className="cp-friends-row">
+          {friendsOnTopic.slice(0, 4).map(friend => <div key={friend.id} className="cp-friend-ava" title={friend.name}>{(friend.name || '?')[0].toUpperCase()}</div>)}
+          {friendsOnTopic.length > 4 && <span className="cp-friends-more">+ {friendsOnTopic.length - 4} {fr ? 'autres' : 'more'}</span>}
+        </div>}
+      </section>
+      <div className="social-entry-row"><button onClick={onCommunity}><Icon name="chat" size={18} />{fr ? 'Communauté' : 'Community'}</button><button onClick={onLeaderboard}><Icon name="trophy" size={18} />{fr ? 'Classement' : 'Ranking'}</button></div>
       </div>
     </main>
   );
@@ -249,237 +239,7 @@ export function CategoriesContent({ startWithCategory, family, onSelectFamily, p
   );
 }
 
-export function ProfileContent({
-  avatar, name, stats, isGoogleLinked, googleEmail, linkGoogle, linking,
-  clientId, social, onOpenLeaderboard, onOpenShop, onSaveProfile, profileSaving, onOpenTopic, streak,
-  league, onOpenLeague, onStartTournament, onOpenSeasonPass, onInviteFriend, onJoinFriend, pending, controls, onOpenHistory, onOpenMessages,
-}) {
-  const { t, lang } = useI18n();
-  const [editing, setEditing] = useState(false);
-  const [draftName, setDraftName] = useState(name || '');
-  const [draftAvatar, setDraftAvatar] = useState(avatar || AVATARS[0]);
-  const [submitted, setSubmitted] = useState(false);
-  const [draftPhoto, setDraftPhoto] = useState(null);
-  const [photoError, setPhotoError] = useState('');
-  const [uploading, setUploading] = useState(false);
-  const saving = profileSaving || uploading;
-  const fallbackAvatar = stats.equippedItems?.avatars || 'robot';
-
-  const normalizedName = draftName.replace(/\s+/g, ' ').trim().slice(0, 20);
-  const unchanged = normalizedName === (name || '') && draftAvatar === avatar && !draftPhoto;
-
-  useEffect(() => {
-    if (!editing) {
-      setDraftName(name || '');
-      setDraftAvatar(avatar || AVATARS[0]);
-      setDraftPhoto(null);
-      setPhotoError('');
-    }
-  }, [name, avatar, editing]);
-
-  useEffect(() => {
-    if (
-      submitted
-      && !saving
-      && !draftPhoto
-      && normalizedName === (name || '')
-      && draftAvatar === avatar
-    ) {
-      setSubmitted(false);
-      setEditing(false);
-    }
-  }, [submitted, saving, draftPhoto, normalizedName, draftAvatar, name, avatar]);
-
-  const cancelEdit = () => {
-    if (saving) return;
-    setDraftName(name || '');
-    setDraftAvatar(avatar || AVATARS[0]);
-    setSubmitted(false);
-    setDraftPhoto(null);
-    setPhotoError('');
-    setEditing(false);
-  };
-
-  const saveEdit = async () => {
-    if (!normalizedName || unchanged || saving) return;
-    setPhotoError('');
-    setSubmitted(true);
-    setUploading(true);
-    try {
-      const savedAvatar = await onSaveProfile(normalizedName, draftAvatar, draftPhoto);
-      if (savedAvatar) { setDraftAvatar(savedAvatar); setDraftPhoto(null); }
-    } catch (err) {
-      setSubmitted(false);
-      setPhotoError(err.message || 'Le profil n’a pas pu être enregistré. Réessaie.');
-    } finally { setUploading(false); }
-  };
-
-  // XP progression
-  const xpPct = stats.xpForLevel ? Math.min(100, Math.round((stats.xpIntoLevel / stats.xpForLevel) * 100)) : 0;
-  const xpRemaining = stats.xpForLevel ? (stats.xpForLevel - (stats.xpIntoLevel || 0)) : 0;
-
-  // Social counts
-  const friendCount = social?.friends?.length || 0;
-  const followingCount = stats.following || 0;
-
-  return (
-    <main id="main-content" tabIndex={-1} aria-labelledby="profile-title" className="container pf-v4">
-      {controls && <BrowseHeader controls={controls} />}
-      {/* ── Hero ──────────────────────────────────────────── */}
-      <div className="pf-hero">
-        <div className="pf-avatar-wrap">
-          <div className="pf-avatar"><PlayerAvatar avatar={avatar} fallbackAvatar={fallbackAvatar} /></div>
-          <button className="pf-edit-dot" aria-label={t('editProfile')} onClick={() => editing ? cancelEdit() : setEditing(true)} aria-expanded={editing} disabled={saving}>
-            <Icon name="edit" size={11} />
-          </button>
-        </div>
-        <h1 id="profile-title" tabIndex={-1} className="pf-name">{name}</h1>
-        <div className="pf-bio">{t('level')} {stats.level}</div>
-        <div className="pf-social">
-          {t('playedGames', { n: stats.games || 0 })} · {t('socialFriends', { n: friendCount })} · {t('followedPlayers', { n: followingCount })}
-        </div>
-      </div>
-
-      <section className="profile-account" aria-label={t('saveProgressGoogle')}>
-        {isGoogleLinked ? (
-          <div className="profile-account-linked"><Icon name="check" size={20} /><span><strong>{t('googleAccountLinked')}</strong>{googleEmail && <small>{googleEmail}</small>}</span></div>
-        ) : (
-          <button className="profile-account-action" onClick={linkGoogle} disabled={linking || !clientId} aria-busy={!!linking}>
-            <Icon name="key" size={20} /><span>{linking ? t('connecting') : t('saveProgressGoogle')}</span>
-          </button>
-        )}
-      </section>
-
-      <div className="social-entry-row"><button onClick={onOpenHistory}>{lang === 'fr' ? 'Historique' : 'Match history'}</button><button onClick={onOpenMessages}>Messages</button></div>
-
-      {/* ── Editor (toggle) ───────────────────────────────── */}
-      {editing && (
-        <div className="profile-editor">
-          <label className="profile-editor-label" htmlFor="profile-name-input">{t('displayName')}</label>
-          <input
-            id="profile-name-input"
-            className="input profile-name-input"
-            value={draftName}
-            maxLength={20}
-            autoComplete="nickname"
-            disabled={saving}
-            onChange={(event) => setDraftName(event.target.value)}
-          />
-          <ProfilePhotoEditor avatar={draftAvatar} fallbackAvatar={fallbackAvatar} draft={draftPhoto}
-            onChange={draft => { setDraftPhoto(draft); setSubmitted(false); setPhotoError(''); }}
-            onRemove={() => { setDraftPhoto(null); setDraftAvatar(fallbackAvatar); setSubmitted(false); }} busy={saving} />
-          <div className="profile-editor-label">{t('chooseAvatar')}</div>
-          <div className="profile-avatar-grid" role="group" aria-label={t('chooseAvatar')}>
-            {AVATAR_IDS.filter((id) => id === 'robot' || stats.ownedItems?.includes(id)).map((option, index) => (
-              <button
-                key={option}
-                className={`avatar-opt ${draftAvatar === option ? 'active' : ''}`}
-                onClick={() => { setDraftAvatar(option); setDraftPhoto(null); setSubmitted(false); }}
-                disabled={saving}
-                aria-label={`${t('avatar')} ${index + 1}`}
-                aria-pressed={draftAvatar === option}
-              >
-                <PlayerAvatar avatar={option} />
-              </button>
-            ))}
-          </div>
-          {photoError && <p className="profile-photo-error" role="alert">{photoError}</p>}
-          {submitted && !saving && !unchanged && <p className="profile-photo-error" role="status">Le profil attend la confirmation. Si la connexion a été coupée, réessaie.</p>}
-          <div className="profile-editor-actions">
-            <button className="profile-editor-cancel" onClick={cancelEdit} disabled={saving}>
-              {t('cancelEdit')}
-            </button>
-            <button
-              className="profile-editor-save"
-              onClick={saveEdit}
-              disabled={!normalizedName || unchanged || saving}
-            >
-              {saving ? t('saving') : t('saveChanges')}
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* ── Level progression card ────────────────────────── */}
-      <h2 className="pf-section-title">{t('overallProgress')}</h2>
-      <div className="pf-level-card">
-        <div className="pf-level-head">
-          <span className="pf-level-label">{t('level')} {stats.level}</span>
-          <span className="pf-level-pct">{xpPct}%</span>
-        </div>
-        <div className="pf-xp-bar"><div className="pf-xp-fill" style={{ width: `${xpPct}%` }} /></div>
-        <div className="pf-xp-text">{xpRemaining} {t('beforeNextLevel')} {stats.level + 1}</div>
-      </div>
-
-      {/* ── League card ───────────────────────────────────── */}
-      {league && (
-        <div className="profile-league-card" onClick={() => onOpenLeague && onOpenLeague()}>
-          <div className="pl-tier">{league.tier.icon} {league.tier.label}</div>
-          <div className="pl-lp">{league.lp} LP</div>
-          <div className="pl-progress"><div className="pl-progress-fill" style={{ width: `${league.progress}%`, background: league.tier.color }} /></div>
-          <div className="pl-stats">{league.wins}W / {league.losses}L · {league.winRate}% WR</div>
-        </div>
-      )}
-
-      {/* ── Streak ────────────────────────────────────────── */}
-      {streak && streak.streak > 0 && (
-        <StreakCalendar
-          streak={streak.streak}
-          calendar={streak.calendar || []}
-          nextMilestone={streak.nextMilestone}
-          milestoneProgress={streak.milestoneProgress}
-        />
-      )}
-
-      {/* ── My themes (mini topic grid) ───────────────────── */}
-      {stats.topics && stats.topics.length > 0 && (
-        <>
-          <h2 className="pf-section-title">{t('myTopics')}</h2>
-          <div className="pf-themes">
-            {stats.topics.slice(0, 8).map((topic) => {
-              const cat = CATEGORIES.find((c) => c.key === topic.key);
-              return (
-                <button
-                  key={topic.key}
-                  className="pf-theme-tile"
-                  data-family={cat?.family || ''}
-                  onClick={() => onOpenTopic && onOpenTopic(topic.key)}
-                >
-                  <span className="pf-theme-copy"><strong className="pf-theme-name">{cat?.label || topicLabel(topic.key)}</strong><span className="pf-theme-level">{t('level')} {topic.level}</span></span>
-                  <Icon name="arrow" size={16} />
-                </button>
-              );
-            })}
-          </div>
-        </>
-      )}
-
-      {/* ── Stats grid ────────────────────────────────────── */}
-      <h2 className="pf-section-title">{t('statistics')}</h2>
-      <ProfileStats stats={stats} />
-
-      {/* ── CTAs ──────────────────────────────────────────── */}
-      <div className="profile-secondary-links"><button onClick={onStartTournament}>{t('tournament')}</button><button onClick={onOpenLeague}>{t('league')}</button><button onClick={onOpenSeasonPass}>{t('seasonPass')}</button></div>
-      <button className="leaderboard-cta" onClick={onOpenLeaderboard}>
-        <span className="leaderboard-cta-icon"><Icon name="trophy" size={20} /></span>
-        <span className="leaderboard-cta-copy">
-          <strong>{t('globalLeaderboard')}</strong>
-          <small>{t('leaderboardCta')}</small>
-        </span>
-        <Icon name="arrow" size={18} />
-      </button>
-
-      {/* ── Friends ───────────────────────────────────────── */}
-      <FriendsScreen social={social} onInviteFriend={onInviteFriend} onJoinFriend={onJoinFriend} pending={pending} />
-
-      {/* ── Privacy ───────────────────────────────────────── */}
-      <a className="privacy-link" href="/privacy.html" target="_blank" rel="noopener noreferrer">
-        {t('privacyPolicy')}
-      </a>
-    </main>
-  );
-}
-
+export { ProfileContent } from './ProfileContent';
 
 export function LeaderboardContent({ board, loading, onBack, category = null, onChangeCategory, onOpenPlayer }) {
   const { t, lang } = useI18n();

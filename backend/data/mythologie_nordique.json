@@ -7,17 +7,8 @@
       "la ruse et la métamorphose",
       "l'épouse d'Odin"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans la mythologie nordique, quel élément caractérise Odin ?",
-    "answers": [
-      "le tonnerre",
-      "la souveraineté, la sagesse et la poésie",
-      "la ruse et la métamorphose",
-      "l'épouse d'Odin"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Thor ?",
@@ -27,7 +18,8 @@
       "le tonnerre",
       "l'amour et le seiðr"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Thor ?",
@@ -37,7 +29,8 @@
       "l'amour et le seiðr",
       "le tonnerre"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Loki ?",
@@ -47,7 +40,8 @@
       "l'amour et le seiðr",
       "la fertilité et la prospérité"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Loki ?",
@@ -57,7 +51,8 @@
       "l'amour et le seiðr",
       "la fertilité et la prospérité"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Frigg ?",
@@ -67,17 +62,8 @@
       "l'épouse d'Odin",
       "le dieu qui sacrifie sa main à Fenrir"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans la mythologie nordique, quel élément caractérise Frigg ?",
-    "answers": [
-      "l'amour et le seiðr",
-      "la fertilité et la prospérité",
-      "le dieu qui sacrifie sa main à Fenrir",
-      "l'épouse d'Odin"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Freyja ?",
@@ -87,7 +73,8 @@
       "le gardien du Bifröst",
       "le tonnerre"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Freyja ?",
@@ -97,7 +84,8 @@
       "le gardien du Bifröst",
       "le tonnerre"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Freyr ?",
@@ -107,7 +95,8 @@
       "la fertilité et la prospérité",
       "le dieu tué par un projectile de gui"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Freyr ?",
@@ -117,7 +106,8 @@
       "le dieu tué par un projectile de gui",
       "la fertilité et la prospérité"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Týr ?",
@@ -127,17 +117,8 @@
       "le dieu tué par un projectile de gui",
       "le royaume des morts portant son nom"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans la mythologie nordique, quel élément caractérise Týr ?",
-    "answers": [
-      "le gardien du Bifröst",
-      "le dieu qui sacrifie sa main à Fenrir",
-      "le dieu tué par un projectile de gui",
-      "le royaume des morts portant son nom"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Heimdall ?",
@@ -147,7 +128,8 @@
       "le gardien du Bifröst",
       "le loup monstrueux"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Heimdall ?",
@@ -157,7 +139,8 @@
       "le loup monstrueux",
       "le gardien du Bifröst"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Baldr ?",
@@ -167,7 +150,8 @@
       "le loup monstrueux",
       "le serpent de Midgard"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Baldr ?",
@@ -177,7 +161,8 @@
       "le loup monstrueux",
       "le serpent de Midgard"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Hel ?",
@@ -187,17 +172,8 @@
       "le royaume des morts portant son nom",
       "le cheval à huit jambes d'Odin"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans la mythologie nordique, quel élément caractérise Hel ?",
-    "answers": [
-      "le loup monstrueux",
-      "le serpent de Midgard",
-      "le cheval à huit jambes d'Odin",
-      "le royaume des morts portant son nom"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Fenrir ?",
@@ -207,7 +183,8 @@
       "le cheval à huit jambes d'Odin",
       "l'arbre-monde"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Fenrir ?",
@@ -217,7 +194,8 @@
       "le cheval à huit jambes d'Odin",
       "l'arbre-monde"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Jörmungandr ?",
@@ -227,7 +205,8 @@
       "le serpent de Midgard",
       "le pont reliant Midgard et Asgard"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Jörmungandr ?",
@@ -237,7 +216,8 @@
       "le pont reliant Midgard et Asgard",
       "le serpent de Midgard"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Sleipnir ?",
@@ -247,17 +227,8 @@
       "le pont reliant Midgard et Asgard",
       "le marteau de Thor"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans la mythologie nordique, quel élément caractérise Sleipnir ?",
-    "answers": [
-      "l'arbre-monde",
-      "le cheval à huit jambes d'Odin",
-      "le pont reliant Midgard et Asgard",
-      "le marteau de Thor"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Yggdrasil ?",
@@ -267,7 +238,8 @@
       "l'arbre-monde",
       "la lance d'Odin"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Yggdrasil ?",
@@ -277,7 +249,8 @@
       "la lance d'Odin",
       "l'arbre-monde"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Bifröst ?",
@@ -287,7 +260,8 @@
       "la lance d'Odin",
       "la salle des guerriers morts d'Odin"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Bifröst ?",
@@ -297,7 +271,8 @@
       "la lance d'Odin",
       "la salle des guerriers morts d'Odin"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Mjölnir ?",
@@ -307,17 +282,8 @@
       "le marteau de Thor",
       "les figures qui choisissent des morts au combat"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans la mythologie nordique, quel élément caractérise Mjölnir ?",
-    "answers": [
-      "la lance d'Odin",
-      "la salle des guerriers morts d'Odin",
-      "les figures qui choisissent des morts au combat",
-      "le marteau de Thor"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Gungnir ?",
@@ -327,7 +293,8 @@
       "les figures qui choisissent des morts au combat",
       "la bataille eschatologique"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Gungnir ?",
@@ -337,7 +304,8 @@
       "les figures qui choisissent des morts au combat",
       "la bataille eschatologique"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Valhalla ?",
@@ -347,7 +315,8 @@
       "la salle des guerriers morts d'Odin",
       "le domaine des Ases"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Valhalla ?",
@@ -357,7 +326,8 @@
       "le domaine des Ases",
       "la salle des guerriers morts d'Odin"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Valkyries ?",
@@ -367,17 +337,8 @@
       "le domaine des Ases",
       "le monde des humains"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans la mythologie nordique, quel élément caractérise Valkyries ?",
-    "answers": [
-      "la bataille eschatologique",
-      "les figures qui choisissent des morts au combat",
-      "le domaine des Ases",
-      "le monde des humains"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Ragnarök ?",
@@ -387,7 +348,8 @@
       "la bataille eschatologique",
       "le monde des géants"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Ragnarök ?",
@@ -397,7 +359,8 @@
       "le monde des géants",
       "la bataille eschatologique"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Asgard ?",
@@ -407,7 +370,8 @@
       "le monde des géants",
       "un monde de brume et de froid"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Asgard ?",
@@ -417,7 +381,8 @@
       "le monde des géants",
       "un monde de brume et de froid"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Midgard ?",
@@ -427,17 +392,8 @@
       "le monde des humains",
       "un monde de feu"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans la mythologie nordique, quel élément caractérise Midgard ?",
-    "answers": [
-      "le monde des géants",
-      "un monde de brume et de froid",
-      "un monde de feu",
-      "le monde des humains"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Jötunheim ?",
@@ -447,7 +403,8 @@
       "un monde de feu",
       "la souveraineté, la sagesse et la poésie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Jötunheim ?",
@@ -457,7 +414,8 @@
       "un monde de feu",
       "la souveraineté, la sagesse et la poésie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Niflheim ?",
@@ -467,7 +425,8 @@
       "un monde de brume et de froid",
       "le tonnerre"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Niflheim ?",
@@ -477,7 +436,8 @@
       "le tonnerre",
       "un monde de brume et de froid"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "À quel domaine, objet ou récit associe-t-on Muspelheim ?",
@@ -487,7 +447,8 @@
       "le tonnerre",
       "la ruse et la métamorphose"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Dans la mythologie nordique, quel élément caractérise Muspelheim ?",
@@ -497,6 +458,119 @@
       "le tonnerre",
       "la ruse et la métamorphose"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quels oiseaux parcourent le monde et rapportent leurs observations à Odin ?",
+    "answers": [
+      "Des cygnes",
+      "Des grues",
+      "Des corbeaux",
+      "Des aigles"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "animaux",
+    "fact": "nordique-odin-corbeaux-messagers",
+    "source": "https://historiska.se/en/explore-history/history-hub/odin-leader-of-the-gods/"
+  },
+  {
+    "text": "Dans la « Þrymskviða », quel dieu se déguise en mariée pour récupérer Mjölnir ?",
+    "answers": [
+      "Thor",
+      "Odin",
+      "Freyr",
+      "Týr"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "ruses",
+    "fact": "nordique-thor-deguise-mariee",
+    "source": "https://sacred-texts.com/neu/poe/poe11.htm"
+  },
+  {
+    "text": "Quels fruits gardés par Iðunn permettent aux dieux de retrouver leur jeunesse ?",
+    "answers": [
+      "Des poires",
+      "Des prunes",
+      "Des cerises",
+      "Des pommes"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "divinites",
+    "fact": "nordique-idunn-pommes-jeunesse",
+    "source": "https://historiska.se/en/explore-history/history-hub/idunn-goddess-of-youth-and-vitality/"
+  },
+  {
+    "text": "Quelles figures déterminent le destin des êtres humains dans l’Edda de Snorri ?",
+    "answers": [
+      "Les Valkyries",
+      "Les Nornes",
+      "Les Elfes noirs",
+      "Les Géantes du givre"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "destin",
+    "fact": "nordique-nornes-destin-humains",
+    "source": "https://www.gutenberg.org/files/18947/18947-h/18947-h.htm"
+  },
+  {
+    "text": "Quel animal transporte des paroles hostiles entre le sommet et les racines d’Yggdrasil ?",
+    "answers": [
+      "Un loup",
+      "Un écureuil",
+      "Un sanglier",
+      "Un bouc"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "animaux",
+    "fact": "nordique-ratatosk-yggdrasil-messager",
+    "source": "https://www.gutenberg.org/files/18947/18947-h/18947-h.htm"
+  },
+  {
+    "text": "Quel lien magique retient le loup Fenrir dans l’Edda de Snorri ?",
+    "answers": [
+      "Draupnir",
+      "Gungnir",
+      "Gjallarhorn",
+      "Gleipnir"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "objets",
+    "fact": "nordique-gleipnir-lien-fenrir",
+    "source": "https://www.gutenberg.org/files/18947/18947-h/18947-h.htm"
+  },
+  {
+    "text": "En ne voyant que les pieds des dieux, quel époux Skaði choisit-elle dans l’Edda de Snorri ?",
+    "answers": [
+      "Njörd",
+      "Baldr",
+      "Freyr",
+      "Bragi"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "ruses",
+    "fact": "nordique-skadi-njord-pieds",
+    "source": "https://sacred-texts.com/neu/pre/pre05.htm"
+  },
+  {
+    "text": "De quel être les nains mêlent-ils le sang au miel pour fabriquer l’hydromel de la poésie ?",
+    "answers": [
+      "Mímir",
+      "Búri",
+      "Kvasir",
+      "Hœnir"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "poesie",
+    "fact": "nordique-kvasir-sang-hydromel",
+    "source": "https://sacred-texts.com/neu/pre/pre05.htm"
   }
 ]

@@ -88,3 +88,30 @@ test('community hides correct answer until play; comments persist and are bounde
   delete require.cache[require.resolve('./posts')];
   assert.equal(require('./posts').getComments(p.id).length, 100);
 });
+test('community previews respect the viewing player and preserve comment counts', async () => {
+  const posts = require('./posts');
+  const follows = require('./follows');
+  const userReports = require('./user-reports');
+  const post = posts.addPost('author', 'Author', 'A', 'nba', 'Community post');
+  assert.equal(post.authorFollowed, false);
+  assert.equal(post.lastComment, null);
+
+  follows.follow('viewer', 'author');
+  posts.addComment(post.id, 'author', 'Author', 'A', 'First comment');
+  const { comment } = posts.addComment(post.id, 'commenter', 'Commenter', 'C', 'Last comment');
+
+  const feedPost = posts.getFeed({ viewerId: 'viewer' }).find(({ id }) => id === post.id);
+  assert.equal(feedPost.authorFollowed, true);
+  assert.equal(feedPost.commentsCount, 2);
+  assert.deepEqual(feedPost.lastComment, comment);
+  assert.equal(posts.getPost(post.id, 'commenter').authorFollowed, false);
+  assert.equal(posts.getPost(post.id).lastComment, null);
+
+  userReports.blockUser('commenter', 'viewer');
+  assert.equal(posts.getPost(post.id, 'viewer').lastComment, null);
+  assert.equal(posts.getPost(post.id, 'viewer').commentsCount, 2);
+  userReports.unblockUser('commenter', 'viewer');
+  userReports.blockUser('viewer', 'author');
+  assert.equal(posts.getPost(post.id, 'viewer').lastComment, null);
+  await require('./json-writer').flushAllJsonWriters();
+});

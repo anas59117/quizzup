@@ -138,6 +138,11 @@ test('real PostgreSQL CLI backup/rollback and app friends, messages, six rounds,
     const results = await Promise.all([a.wait('game_end'), b.wait('game_end')]);
     assert(results.every(m => m.stats.games === 1));
     assert.equal(a.messages.filter(m => m.type === 'answer_ack').length, 6);
+    const moderation = await fetch(`http://127.0.0.1:${server.port}/users/report`, {
+      method: 'POST', headers: { Authorization: `Bearer ${alice.token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ targetId: bob.uid, targetName: 'Bob', reason: 'test de persistance' }),
+    });
+    assert.deepEqual(await moderation.json(), { ok: true });
     // A peer that ignores the close handshake must not block the final flush.
     a.ws._socket.pause();
     await server.close();
@@ -148,6 +153,7 @@ test('real PostgreSQL CLI backup/rollback and app friends, messages, six rounds,
     assert.equal(persisted.stats[alice.uid].games, 1);
     assert.equal(persisted.stats[bob.uid].games, 1);
     assert.equal(persisted['match-history'][alice.uid].length, 1);
+    assert.equal(persisted['user-reports'].reports[0].reporterId, alice.uid);
     await reader.close(); reader = null;
     restarted = await isolatedServer({ STORAGE_BACKEND: 'postgres', DATABASE_URL: databaseUrl, GUEST_AUTH_SECRET: server.secret });
     const recovered = await connect(restarted.port, alice.token, 'Alice');
@@ -155,7 +161,13 @@ test('real PostgreSQL CLI backup/rollback and app friends, messages, six rounds,
     recovered.send({ type: 'dm_history', targetId: bob.uid });
     assert.equal((await recovered.wait('dm_history')).messages[0].text, text);
     assert.equal((await recovered.wait('friends_list')).friends[0].id, bob.uid);
+    const block = await fetch(`http://127.0.0.1:${restarted.port}/users/block`, {
+      method: 'POST', headers: { Authorization: `Bearer ${bob.token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ targetId: alice.uid }),
+    });
+    assert.deepEqual(await block.json(), { ok: true });
     reader = await PostgresStore.open({ connectionString: databaseUrl, readOnly: true });
+    assert.deepEqual((await reader.load())['user-reports'].blocks[bob.uid], [alice.uid]);
     const owners = await reader.client.query("SELECT pid FROM pg_stat_activity WHERE datname=current_database() AND application_name='quizzup-storage-v1' AND pid<>pg_backend_pid()");
     assert.equal(owners.rowCount, 1);
     const exited = new Promise((resolve, reject) => {

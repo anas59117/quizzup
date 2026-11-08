@@ -7,17 +7,9 @@
       "146 av. J.-C.",
       "l'Antiquité romaine"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère de l'histoire tunisienne correspond à la fondation traditionnelle de Carthage ?",
-    "answers": [
-      "la deuxième guerre punique",
-      "814 av. J.-C.",
-      "146 av. J.-C.",
-      "l'Antiquité romaine"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on Hannibal Barca ?",
@@ -27,7 +19,8 @@
       "la deuxième guerre punique",
       "le VIIe siècle"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond à Hannibal Barca ?",
@@ -37,7 +30,8 @@
       "le VIIe siècle",
       "la deuxième guerre punique"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on la destruction de Carthage par Rome ?",
@@ -47,7 +41,9 @@
       "le VIIe siècle",
       "les IXe et Xe siècles"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond à la destruction de Carthage par Rome ?",
@@ -57,7 +53,9 @@
       "le VIIe siècle",
       "les IXe et Xe siècles"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on la province romaine d'Africa ?",
@@ -67,17 +65,8 @@
       "l'Antiquité romaine",
       "les XIIIe-XVIe siècles"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère de l'histoire tunisienne correspond à la province romaine d'Africa ?",
-    "answers": [
-      "le VIIe siècle",
-      "les IXe et Xe siècles",
-      "les XIIIe-XVIe siècles",
-      "l'Antiquité romaine"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on la fondation de Kairouan ?",
@@ -87,7 +76,9 @@
       "les XIIIe-XVIe siècles",
       "1574"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond à la fondation de Kairouan ?",
@@ -97,7 +88,9 @@
       "les XIIIe-XVIe siècles",
       "1574"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on la dynastie aghlabide ?",
@@ -107,7 +100,9 @@
       "les IXe et Xe siècles",
       "1705-1957"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond à la dynastie aghlabide ?",
@@ -117,7 +112,9 @@
       "1705-1957",
       "les IXe et Xe siècles"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on la dynastie hafside ?",
@@ -127,17 +124,9 @@
       "1705-1957",
       "1881"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère de l'histoire tunisienne correspond à la dynastie hafside ?",
-    "answers": [
-      "1574",
-      "les XIIIe-XVIe siècles",
-      "1705-1957",
-      "1881"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on l'intégration de Tunis à l'Empire ottoman ?",
@@ -147,7 +136,9 @@
       "1574",
       "le début du XXe siècle"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond à l'intégration de Tunis à l'Empire ottoman ?",
@@ -157,7 +148,9 @@
       "le début du XXe siècle",
       "1574"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on la dynastie husseinite ?",
@@ -167,7 +160,9 @@
       "le début du XXe siècle",
       "1934"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond à la dynastie husseinite ?",
@@ -177,7 +172,9 @@
       "le début du XXe siècle",
       "1934"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on le traité du Bardo ?",
@@ -187,17 +184,9 @@
       "1881",
       "le mouvement indépendantiste"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère de l'histoire tunisienne correspond au traité du Bardo ?",
-    "answers": [
-      "le début du XXe siècle",
-      "1934",
-      "le mouvement indépendantiste",
-      "1881"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on le mouvement nationaliste du Destour ?",
@@ -207,7 +196,9 @@
       "le mouvement indépendantiste",
       "20 mars 1956"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond au mouvement nationaliste du Destour ?",
@@ -217,7 +208,9 @@
       "le mouvement indépendantiste",
       "20 mars 1956"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on la fondation du Néo-Destour ?",
@@ -227,7 +220,9 @@
       "1934",
       "25 juillet 1957"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond à la fondation du Néo-Destour ?",
@@ -237,7 +232,9 @@
       "25 juillet 1957",
       "1934"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on le leader Habib Bourguiba ?",
@@ -247,17 +244,8 @@
       "25 juillet 1957",
       "1956"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère de l'histoire tunisienne correspond au leader Habib Bourguiba ?",
-    "answers": [
-      "20 mars 1956",
-      "le mouvement indépendantiste",
-      "25 juillet 1957",
-      "1956"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on l'indépendance de la Tunisie ?",
@@ -267,7 +255,9 @@
       "20 mars 1956",
       "1957-1987"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond à l'indépendance de la Tunisie ?",
@@ -277,7 +267,9 @@
       "1957-1987",
       "20 mars 1956"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on la proclamation de la République ?",
@@ -287,7 +279,9 @@
       "1957-1987",
       "7 novembre 1987"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond à la proclamation de la République ?",
@@ -297,7 +291,9 @@
       "1957-1987",
       "7 novembre 1987"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on le Code du statut personnel ?",
@@ -307,17 +303,9 @@
       "1956",
       "2010-2011"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère de l'histoire tunisienne correspond au Code du statut personnel ?",
-    "answers": [
-      "1957-1987",
-      "7 novembre 1987",
-      "2010-2011",
-      "1956"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on la présidence de Habib Bourguiba ?",
@@ -327,7 +315,9 @@
       "2010-2011",
       "14 janvier 2011"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond à la présidence de Habib Bourguiba ?",
@@ -337,7 +327,9 @@
       "2010-2011",
       "14 janvier 2011"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on l'arrivée au pouvoir de Zine el-Abidine Ben Ali ?",
@@ -347,7 +339,9 @@
       "7 novembre 1987",
       "2011"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond à l'arrivée au pouvoir de Zine el-Abidine Ben Ali ?",
@@ -357,7 +351,9 @@
       "2011",
       "7 novembre 1987"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on la révolution tunisienne ?",
@@ -367,17 +363,9 @@
       "2014",
       "2015"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère de l'histoire tunisienne correspond à la révolution tunisienne ?",
-    "answers": [
-      "7 novembre 1987",
-      "2010-2011",
-      "2014",
-      "2015"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on le départ de Ben Ali ?",
@@ -387,7 +375,9 @@
       "14 janvier 2011",
       "2015"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond au départ de Ben Ali ?",
@@ -397,7 +387,9 @@
       "2015",
       "14 janvier 2011"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on l'élection de l'Assemblée constituante ?",
@@ -407,7 +399,9 @@
       "2015",
       "Tunis"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond à l'élection de l'Assemblée constituante ?",
@@ -417,7 +411,9 @@
       "2015",
       "Tunis"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on la Constitution post-révolutionnaire ?",
@@ -427,17 +423,9 @@
       "2014",
       "l'époque romaine"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère de l'histoire tunisienne correspond à la Constitution post-révolutionnaire ?",
-    "answers": [
-      "2015",
-      "Tunis",
-      "l'époque romaine",
-      "2014"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on le prix Nobel de la paix au Quartet du dialogue national ?",
@@ -447,7 +435,9 @@
       "l'époque romaine",
       "814 av. J.-C."
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond au prix Nobel de la paix au Quartet du dialogue national ?",
@@ -457,7 +447,9 @@
       "l'époque romaine",
       "814 av. J.-C."
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45",
+    "format": "date"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on le musée national du Bardo ?",
@@ -467,7 +459,8 @@
       "Tunis",
       "la deuxième guerre punique"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Dans quelle ville se trouve le musée national du Bardo ?",
@@ -477,7 +470,8 @@
       "Sfax",
       "Tunis"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "À quelle date, période ou notion associe-t-on l'amphithéâtre d'El Jem ?",
@@ -487,7 +481,8 @@
       "la deuxième guerre punique",
       "146 av. J.-C."
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quel repère de l'histoire tunisienne correspond à l'amphithéâtre d'El Jem ?",
@@ -497,6 +492,229 @@
       "la deuxième guerre punique",
       "146 av. J.-C."
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quelle chaîne Hannibal franchit-il avec son armée pour entrer en Italie ?",
+    "answers": [
+      "Les Alpes",
+      "Les Pyrénées",
+      "Les Carpates",
+      "Les Apennins"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "conflits",
+    "fact": "carthage-hannibal-alpes"
+  },
+  {
+    "text": "Quel nom portait la cité romaine dont les vestiges se trouvent à Dougga ?",
+    "answers": [
+      "Thysdrus",
+      "Thugga",
+      "Utique",
+      "Hadrumète"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "archeologie",
+    "fact": "dougga-thugga",
+    "source": "https://whc.unesco.org/en/list/794/"
+  },
+  {
+    "text": "Quel type d’édifice romain domine le site historique d’El Jem ?",
+    "answers": [
+      "Un aqueduc",
+      "Une villa",
+      "Un amphithéâtre",
+      "Un arc de triomphe"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "architecture",
+    "fact": "el-jem-spectacles",
+    "source": "https://whc.unesco.org/en/list/38/"
+  },
+  {
+    "text": "Quel chef militaire est associé à la fondation de Kairouan ?",
+    "answers": [
+      "Ibn Khaldoun",
+      "Hassan ibn Numan",
+      "Tariq ibn Ziyad",
+      "Oqba ibn Nafi"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "personnages",
+    "fact": "kairouan-oqba",
+    "source": "https://whc.unesco.org/en/list/499/"
+  },
+  {
+    "text": "Sur le cap Bon, de quelle civilisation Kerkouane conserve-t-elle une ville qui n’a pas été reconstruite par Rome ?",
+    "answers": [
+      "La civilisation punique",
+      "La civilisation byzantine",
+      "La civilisation vandale",
+      "La civilisation numide"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "archeologie",
+    "fact": "kerkouane-punique",
+    "source": "https://whc.unesco.org/en/list/332/"
+  },
+  {
+    "text": "Quel édifice fortifié de Sousse servait à la fois à la défense et à la vie religieuse ?",
+    "answers": [
+      "Une médersa",
+      "Un ribat",
+      "Un fondouk",
+      "Un hammam"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "architecture",
+    "fact": "sousse-ribat",
+    "source": "https://whc.unesco.org/en/list/498/"
+  },
+  {
+    "text": "Dans quelle ville tunisienne Habib Bourguiba est-il né ?",
+    "answers": [
+      "Sfax",
+      "Bizerte",
+      "Monastir",
+      "Kairouan"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "monastir-bourguiba"
+  },
+  {
+    "text": "Quel type d’organisation représente l’UGTT, membre du Quartet du dialogue national ?",
+    "answers": [
+      "Un ordre d’avocats",
+      "Un parti politique",
+      "Une fédération patronale",
+      "Une centrale syndicale"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "institutions",
+    "fact": "quartet-ugtt",
+    "source": "https://www.nobelprize.org/prizes/peace/2015/press-release/"
+  },
+  {
+    "text": "Quel site archéologique tunisien conserve les bassins de ports puniques ?",
+    "answers": [
+      "Carthage",
+      "Dougga",
+      "El Jem",
+      "Sbeïtla"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "ports",
+    "fact": "tunisie-profondeur-carthage-ports-puniques",
+    "source": "https://whc.unesco.org/fr/list/37/"
+  },
+  {
+    "text": "Quelle grande mosquée se trouve au cœur de la médina de Tunis ?",
+    "answers": [
+      "La mosquée Oqba ibn Nafi",
+      "La mosquée des Trois Portes",
+      "La grande mosquée de Sfax",
+      "La mosquée Zitouna"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "religion",
+    "fact": "tunisie-profondeur-zitouna-medina-tunis",
+    "source": "https://www.discovertunisia.com/tunisie-culture/sites-incontournables"
+  },
+  {
+    "text": "Quelles couleurs caractérisent les façades et les menuiseries de Sidi Bou Saïd ?",
+    "answers": [
+      "L’ocre et le vert",
+      "Le rouge et le blanc",
+      "Le blanc et le bleu",
+      "Le noir et le jaune"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "architecture",
+    "fact": "tunisie-profondeur-sidi-bou-said-bleu-blanc",
+    "source": "https://www.discovertunisia.com/decouvrir/carthage-et-sidi-bou-said"
+  },
+  {
+    "text": "Quel historien né à Tunis a écrit la « Muqaddima » ?",
+    "answers": [
+      "Ibn Battûta",
+      "Ibn Khaldoun",
+      "Al-Idrissi",
+      "Ibn Rochd"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "lettres",
+    "fact": "tunisie-profondeur-ibn-khaldoun-muqaddima",
+    "source": "https://www.britannica.com/biography/Ibn-Khaldun"
+  },
+  {
+    "text": "Quelle ville l’aqueduc romain de Zaghouan alimentait-il en eau ?",
+    "answers": [
+      "Thugga",
+      "Hadrumète",
+      "Carthage",
+      "Thysdrus"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "ingenierie",
+    "fact": "tunisie-profondeur-zaghouan-aqueduc-carthage",
+    "source": "https://whc.unesco.org/en/tentativelists/5685/"
+  },
+  {
+    "text": "Sur quelle île tunisienne la synagogue de la Ghriba est-elle un lieu de pèlerinage ?",
+    "answers": [
+      "Djerba",
+      "Kerkennah",
+      "La Galite",
+      "Zembra"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "religion",
+    "fact": "tunisie-profondeur-ghriba-djerba",
+    "source": "https://www.discovertunisia.com/en/discover/around-djerba-and-zarzis"
+  },
+  {
+    "text": "Quel bey de Tunis a promulgué le décret abolissant l’esclavage dans la Régence ?",
+    "answers": [
+      "Hussein II Bey",
+      "Sadok Bey",
+      "Lamine Bey",
+      "Ahmed Ier Bey"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "reformes",
+    "fact": "tunisie-profondeur-ahmed-bey-abolition-esclavage",
+    "source": "https://media.unesco.org/sites/default/files/webform/mow001/abolition-of-slavery-in-tunesia_nom_fr.pdf"
+  },
+  {
+    "text": "Quelle langue ancienne les inscriptions bilingues de Dougga ont-elles aidé à déchiffrer ?",
+    "answers": [
+      "Le grec ancien",
+      "Le libyque",
+      "Le latin",
+      "L’étrusque"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "epigraphie",
+    "fact": "tunisie-profondeur-dougga-dechiffrement-libyque",
+    "source": "https://whc.unesco.org/en/list/794"
   }
 ]

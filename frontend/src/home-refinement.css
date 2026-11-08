@@ -116,7 +116,7 @@ body:has(.app-home),body:has(.app-themes),body:has(.app-profile) { background: v
 .themes-refined .search-bar input { min-width: 0; width: 100%; padding: 0 !important; border: 0 !important; background: transparent !important; color: var(--browse-ink) !important; font-size: 16px !important; }
 .themes-refined .search-bar input::placeholder { color: var(--browse-muted) !important; opacity: 1; }
 .themes-refined .family-list { gap: 12px !important; }
-.themes-refined .family-tile { --family-accent: #a82543; --family-wash: #fae8ed; grid-template-columns: 1fr; gap: 0; min-height: 160px; padding: 16px !important; border: 0 !important; border-radius: 20px !important; background: var(--browse-paper) !important; color: var(--browse-ink) !important; }
+.themes-refined .family-tile { --family-accent: #a82543; --family-wash: #fae8ed; grid-template-columns: 1fr; align-content: start; gap: 0; min-height: 120px; padding: 14px !important; border: 0 !important; border-radius: 20px !important; background: var(--browse-paper) !important; color: var(--browse-ink) !important; }
 .themes-refined .family-tile[data-family='sport'] { --family-accent: #8b540b; --family-wash: #f7edcb; }
 .themes-refined .family-tile[data-family='football'] { --family-accent: #28684d; --family-wash: #e0eee4; }
 .themes-refined .family-tile[data-family='cinema'] { --family-accent: #6f466e; --family-wash: #f1e3ee; }
@@ -126,9 +126,9 @@ body:has(.app-home),body:has(.app-themes),body:has(.app-profile) { background: v
 .themes-refined .family-tile[data-family='manga'] { --family-accent: #94412c; --family-wash: #f8e4db; }
 .themes-refined .family-tile[data-family='gaming'] { --family-accent: #305e89; --family-wash: #e0ebf5; }
 .themes-refined .family-tile[data-family='culture'] { --family-accent: #276a70; --family-wash: #dfeef0; }
-.themes-refined .family-tile .family-icon { grid-row: auto; width: 46px; height: 46px; display: grid; place-items: center; margin-bottom: 14px; background: var(--family-wash) !important; color: var(--family-accent) !important; border-radius: 14px !important; }
+.themes-refined .family-tile .family-icon { grid-row: auto; width: 40px; height: 40px; display: grid; place-items: center; margin-bottom: 8px; background: var(--family-wash) !important; color: var(--family-accent) !important; border-radius: 12px !important; }
 .themes-refined .family-tile .family-label { display: block; color: var(--browse-ink) !important; font-size: 16px !important; line-height: 1.2; }
-.themes-refined .family-tile .family-count { grid-column: 1; color: var(--browse-muted) !important; font-size: 12px !important; margin-top: 6px; }
+.themes-refined .family-tile .family-count { grid-column: 1; color: var(--browse-muted) !important; font-size: 12px !important; margin-top: 4px; }
 .themes-refined .topics-grid-v4 { gap: 12px !important; }
 .themes-refined .tile-v4 { border-radius: 19px !important; }
 .themes-refined .back-to-topics { min-height: 44px; margin-bottom: 12px; color: #fff !important; }
@@ -137,7 +137,6 @@ body:has(.app-home),body:has(.app-themes),body:has(.app-profile) { background: v
 
 /* Profile uses the same ivory surfaces, with one readable ink palette. */
 .app-profile .pf-v4 { --profile-surface: var(--browse-paper); --profile-muted: var(--browse-muted); }
-.app-profile .pf-hero { padding: 6px 0 24px !important; }
 .app-profile .pf-avatar { box-shadow: none !important; }
 .app-profile .pf-edit-dot { border: 3px solid var(--browse-bg) !important; color: var(--browse-accent) !important; box-shadow: none !important; }
 .app-profile .pf-edit-dot svg { width: 18px; height: 18px; }
@@ -188,13 +187,108 @@ body:has(.app-home),body:has(.app-themes),body:has(.app-profile) { background: v
 .profile-account-linked > span { min-width: 0; }
 .profile-account-linked strong,.profile-account-linked small { display: block; }
 .profile-account-linked small { margin-top: 2px; font-weight: 400; color: var(--browse-muted); overflow-wrap: anywhere; }
-.app-profile .pf-themes { grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 10px !important; }
-.app-profile .pf-v4 .pf-themes button.pf-theme-tile.pf-theme-tile { aspect-ratio: auto !important; min-height: 88px; padding: 14px !important; flex-direction: row !important; align-items: center !important; justify-content: space-between !important; gap: 8px !important; background-image: none !important; background-color: var(--browse-paper) !important; color: var(--browse-ink) !important; text-align: left; }
-.pf-theme-copy { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
-.pf-theme-name { font-size: 14px; line-height: 1.3; font-weight: 700; overflow-wrap: anywhere; }
-.pf-theme-level { font-size: 12px; line-height: 1.4; color: var(--browse-muted); }
-.app-profile .pf-theme-tile > svg { flex-shrink: 0; color: var(--browse-accent); }
-.app-profile .pf-theme-tile:focus-visible { outline: 3px solid #ffdd55; outline-offset: 3px; }
+/* Editorial profile: identity and XP first, followed by earned quiz art. */
+.profile-player { --profile-section-gap: 20px; }
+.profile-player .profile-player-card {
+  padding: 17px;
+  border-radius: 21px;
+  background: var(--browse-paper);
+  color: var(--browse-ink);
+  text-align: left;
+}
+.profile-player-identity { display: grid; grid-template-columns: auto minmax(0,1fr); align-items: center; gap: 16px; }
+.app-profile .profile-player .pf-avatar-wrap { width: 74px; margin: 0 !important; cursor: default !important; }
+.app-profile .profile-player .pf-avatar { width: 68px !important; height: 68px !important; border-radius: 17px !important; }
+.app-profile .profile-player .pf-edit-dot { right: -6px !important; bottom: -7px !important; border-color: var(--browse-paper) !important; background: var(--browse-soft) !important; }
+.profile-player-kicker { display: block; color: var(--browse-muted); font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.app-profile .profile-player .pf-name { margin: 3px 0 0 !important; color: var(--browse-ink) !important; font-size: clamp(25px,7vw,34px) !important; line-height: 1.05; overflow-wrap: anywhere; }
+.app-profile .profile-player .profile-player-progress { padding: 13px 0 0 !important; margin: 16px 0 0 !important; border-radius: 0 !important; background: transparent !important; border-top: 1px solid var(--browse-line) !important; }
+.profile-player-progress-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 3px 12px; }
+.profile-player-progress-head strong { font-size: 18px; }
+.profile-player-progress-head span { color: var(--browse-muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.profile-player-progress progress { display: block; appearance: none; width: 100%; height: 8px; margin: 8px 0 0; border: 0; border-radius: 10px; overflow: hidden; background: var(--browse-soft); color: var(--browse-accent); }
+.profile-player-progress progress::-webkit-progress-bar { background: var(--browse-soft); }
+.profile-player-progress progress::-webkit-progress-value { background: var(--browse-accent); border-radius: 10px; }
+.profile-player-progress progress::-moz-progress-bar { background: var(--browse-accent); border-radius: 10px; }
+.profile-player-progress p { margin: 6px 0 0; color: var(--browse-muted); font-size: 12px; }
+.profile-player-social { display: flex; flex-wrap: wrap; align-items: center; gap: 0 14px; margin: 7px 0 -8px; color: var(--browse-muted); font-size: 12px; }
+.profile-player-social button { display: inline-flex; align-items: center; gap: 5px; min-height: 44px; padding: 0; border: 0; background: transparent; color: var(--browse-accent); font-size: inherit; font-weight: 750; text-decoration: underline; text-underline-offset: 3px; }
+.profile-player .profile-account { margin: 7px 0 13px; }
+.profile-player .profile-account-action,.profile-player .profile-account-linked { gap: 8px; min-height: 44px; padding: 6px 4px; background: transparent; color: #fff; font-size: 12px; }
+.profile-player .profile-account-action span,.profile-player .profile-account-linked span { flex: 1; }
+.profile-player .profile-account-action svg,.profile-player .profile-account-linked svg,.profile-player .profile-account-linked small { color: currentColor; }
+.profile-player .profile-editor { margin-top: 14px; }
+
+.profile-player .profile-player-section { margin: 0 0 var(--profile-section-gap); }
+.profile-player .profile-player-section .pf-section-title { margin: 0 0 10px !important; font-size: 18px !important; }
+.app-profile .profile-player .profile-specialty-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)) !important; gap: 8px; margin: 0 !important; }
+.app-profile .profile-player .profile-specialty-grid button.profile-specialty.pf-theme-tile {
+  display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: stretch !important;
+  aspect-ratio: auto !important; height: auto !important; min-height: 0 !important; min-width: 0; gap: 0;
+  padding: 0 !important; border: 0 !important; border-radius: 12px !important; overflow: hidden;
+  background: var(--browse-paper) !important; color: var(--browse-ink) !important; text-align: left;
+}
+.profile-specialty-art { display: grid; place-items: center; position: relative; aspect-ratio: 1.65; overflow: hidden; background: var(--browse-soft); color: var(--browse-accent); }
+.profile-specialty-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.pf-theme-copy { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.profile-specialty .pf-theme-copy { flex: 1; padding: 8px; }
+.pf-theme-name { color: var(--browse-ink); font-size: 13px; line-height: 1.22; font-weight: 750; overflow-wrap: anywhere; }
+.pf-theme-level { color: var(--browse-muted); font-size: 11px; line-height: 1.35; }
+.profile-more-topics { margin-top: 5px; }
+.profile-more-topics summary { display: flex; align-items: center; gap: 7px; min-height: 44px; width: fit-content; cursor: pointer; color: #fff; font-size: 13px; font-weight: 700; }
+.profile-more-topics summary::before { content: '+'; width: 1em; }
+.profile-more-topics[open] summary::before { content: '−'; }
+.profile-more-topics summary span { color: #fff; font-size: 11px; }
+.profile-more-topics > div { display: grid; gap: 6px; }
+.profile-player .profile-specialty-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 48px; padding: 7px 12px; border: 0; border-radius: 10px; background: var(--browse-paper); color: var(--browse-ink); text-align: left; }
+.profile-specialty-row svg { flex: 0 0 auto; color: var(--browse-accent); }
+.profile-player .profile-overview .profile-first-quiz { margin: 14px 0 0; }
+.profile-player .profile-first-quiz { padding: 15px; border-radius: 16px; background: var(--browse-paper); color: var(--browse-ink); }
+.profile-first-quiz h2 { margin: 0 0 4px; font-size: 19px; }
+.profile-first-quiz p,.profile-results-empty { margin: 0; font-size: 13px; line-height: 1.45; }
+.profile-first-quiz p { color: var(--browse-muted); }
+.profile-player .profile-first-quiz button { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; margin-top: 11px; padding: 0 11px; border: 0; border-radius: 10px; background: var(--browse-action); color: #fff; font-size: 13px; font-weight: 750; }
+
+.profile-player .profile-friends { padding: 13px; border-radius: 16px; scroll-margin-top: 20px; background: var(--browse-paper); color: var(--browse-ink); }
+.app-profile .profile-player .profile-friends :is(.friends-empty,.friends-section-title) { color: var(--browse-ink) !important; }
+.app-profile .profile-player .profile-friends .friends-section-title { margin: 0 0 4px; }
+.app-profile .profile-player .profile-friends .friends-empty { margin: 0; padding: 5px 0 12px; font-size: 13px; line-height: 1.4; }
+.app-profile .profile-player .profile-friends .friends-empty p { color: var(--browse-muted); }
+.profile-player .profile-friends .friend-invite-actions { margin: 0; }
+.profile-player .profile-friends .friends-block + .friend-invite-actions { margin-top: 10px; }
+.app-profile .profile-player .profile-friends .friend-invite-actions button { border: 1px solid var(--browse-line); background: var(--browse-soft); color: var(--browse-ink); }
+.app-profile .profile-player .profile-friends .friend-invite-actions button + button { background: transparent; color: var(--browse-ink); }
+.profile-player .profile-friends .friend-row { margin-top: 6px; border: 0 !important; border-radius: 10px !important; background: var(--browse-soft) !important; color: var(--browse-ink); }
+.profile-friends .friend-status.off { color: var(--browse-muted); }
+.profile-friends .friend-status.on { color: #236747; }
+:root[data-theme='dark'] .profile-friends .friend-status.on { color: #a7e1b4; }
+
+.profile-player-section-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 10px; }
+.profile-player .profile-player-section-head .pf-section-title { margin-bottom: 0 !important; }
+.profile-player .profile-history-action { display: inline-flex; align-items: center; gap: 5px; min-height: 44px; padding: 0 3px; border: 0; background: transparent; color: #fff; font-size: 13px; font-weight: 700; }
+.profile-player .profile-stats { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0; margin: 0; border-radius: 14px; overflow: hidden; background: var(--browse-paper); }
+.app-profile .profile-player .profile-stats .pstat { display: flex; flex-direction: column-reverse; gap: 2px; margin: 0; border-radius: 0 !important; background: var(--browse-paper) !important; }
+.app-profile .profile-player .profile-stats .pstat + .pstat { border-left: 1px solid var(--browse-line) !important; }
+.profile-player .pstat-val { margin: 0; }
+.profile-results-empty,.profile-win-streak { color: #fff; }
+.profile-win-streak { margin: 7px 0 0; font-size: 12px; }
+.app-profile .profile-player button.profile-league-card { display: block; width: 100%; background: var(--browse-paper) !important; color: var(--browse-ink) !important; text-align: left; }
+.profile-player .profile-league-card span { display: block; }
+.profile-player :is(button,a,summary):focus-visible,.player-sheet button:focus-visible { outline: 3px solid #f4bd35; outline-offset: 3px; }
+.profile-player .profile-overview,.profile-player .profile-activity { min-width: 0; }
+
+.player-sheet { padding-bottom: max(24px,var(--safe-bottom)); background: var(--browse-paper); color: var(--browse-ink); }
+.player-sheet :is(.profile-name,.player-sheet-close,.section-title) { color: var(--browse-ink); }
+.player-sheet .profile-sub { color: var(--browse-muted); }
+.player-sheet .follow-counts > div { border-color: var(--browse-line); background: var(--browse-soft); }
+.player-sheet .follow-counts small { color: var(--browse-muted); }
+.player-sheet .player-sheet-primary { display: grid; grid-template-columns: repeat(auto-fit,minmax(78px,1fr)); gap: 6px; margin-bottom: 12px; }
+.player-sheet .player-sheet-primary button { min-width: 0; min-height: 44px; padding: 5px 6px; border-radius: 10px; font-size: 13px; line-height: 1.25; }
+.player-sheet .player-sheet-primary .follow-btn,.player-sheet .player-sheet-primary .social-btn.outline { border: 1px solid var(--browse-line); background: transparent; color: var(--browse-ink); }
+.player-sheet .player-sheet-primary .follow-btn.is-following { background: var(--browse-soft); }
+.player-sheet .player-sheet-primary .player-challenge-action { display: inline-flex; align-items: center; justify-content: center; gap: 3px; border: 0; background: var(--browse-action); color: #fff; font-weight: 800; }
+.player-sheet .player-sheet-friend-tools { flex-wrap: wrap; margin: 0 0 10px; }
+.player-sheet .player-sheet-friend-tools .social-btn { flex: 0 1 auto; padding: 5px 8px; border: 0; background: transparent; color: var(--browse-muted); font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
 /* Keep artwork clear; the short fade follows the caption's actual height. */
 .tile-v4.tile-v4--has-cover .tile-v4__shade { background: none; }
 .tile-v4.tile-v4--has-cover .tile-v4__caption { isolation: isolate; }
@@ -218,6 +312,46 @@ body:has(.app-home),body:has(.app-themes),body:has(.app-profile) { background: v
   .home-refined .topics-grid-v4,.home-refined .home-discovery { gap: 10px !important; }
   .home-refined .tile-v4__label { font-size: 13px !important; }
   .home-refined .personal-theme-level { font-size: 11px; }
-  .themes-refined .family-tile { padding: 14px !important; min-height: 150px; }
   .themes-refined .family-tile .family-label { font-size: 15px !important; }
+}
+
+/* On a wide screen the library has two distinct reading zones, while the
+   floating play dock keeps the same position and familiar destinations. */
+.profile-overview,.profile-activity { min-width: 0; }
+@media (min-width: 1000px) {
+  .app-home .home-refined,.app-themes .themes-refined,.app-profile .pf-v4 {
+    max-width: 1120px !important;
+    padding: 28px max(24px,var(--safe-left)) 32px max(24px,var(--safe-right)) !important;
+  }
+  .app-home .home-refined {
+    display: grid;
+    grid-template-columns: minmax(0,1.65fr) minmax(0,1fr);
+    grid-template-areas: 'header header' 'personal discovery' 'personal community';
+    gap: 28px 32px;
+    align-items: start;
+    align-content: start;
+  }
+  .app-home .home-refined .home-head { grid-area: header; margin: 0 !important; }
+  .home-refined section + section { margin-top: 0; }
+  .home-refined [aria-labelledby='home-my-themes'] { grid-area: personal; min-width: 0; }
+  .home-refined [aria-labelledby='home-discover'] { grid-area: discovery; min-width: 0; }
+  .home-refined .home-community-section { grid-area: community; margin-top: 0; min-width: 0; }
+  .home-refined .home-discovery { grid-template-columns: minmax(0,1fr); }
+  .app.app-home .home-refined .home-discovery .tile-v4 { aspect-ratio: 1.65 !important; }
+  .home-refined .home-discovery .tile-v4__cover { object-position: center 15%; }
+  .home-refined .home-discovery .tile-v4__label { font-size: 16px !important; }
+  .home-refined .tile-v4__label { font-size: 18px !important; }
+  .home-refined .home-discovery .tile-v4__big { transform: scale(.8); }
+  .home-refined .section-head-v4 { margin-bottom: 16px !important; }
+  .home-refined .topic-tile-wrap:has(.personal-theme-level) .tile-v4__caption { padding-bottom: 24px; }
+  .home-refined .personal-theme-level { font-size: 13px; }
+  .home-refined .home-community-teaser { min-height: 112px; }
+  .app-themes .themes-refined .family-list,
+  .app-themes .themes-refined .topics-grid-v4 { grid-template-columns: repeat(4,minmax(0,1fr)) !important; gap: 16px !important; }
+  .themes-refined .search-bar { max-width: 560px; }
+  .app-profile .profile-layout { display: grid; grid-template-columns: 320px minmax(0,1fr); gap: 32px; align-items: start; }
+  .app-profile .profile-overview { padding-top: 0; }
+  .app-profile .profile-activity > .pf-section-title:first-child { margin-top: 0 !important; }
+  .app-profile .profile-activity .profile-stats { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .app-home .navbar,.app-themes .navbar,.app-profile .navbar { width: min(680px,calc(100% - 48px)); }
 }

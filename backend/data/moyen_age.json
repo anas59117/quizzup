@@ -7,17 +7,9 @@
       "1066",
       "1095"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère médiéval correspond à la chute de l'Empire romain d'Occident ?",
-    "answers": [
-      "800",
-      "476",
-      "1066",
-      "1095"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01",
+    "format": "date"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on le couronnement impérial de Charlemagne ?",
@@ -27,17 +19,21 @@
       "800",
       "1099"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03",
+    "format": "date"
   },
   {
-    "text": "Quel repère médiéval correspond à le couronnement impérial de Charlemagne ?",
+    "text": "Quel repère médiéval correspond au couronnement impérial de Charlemagne ?",
     "answers": [
       "1066",
       "1095",
       "1099",
       "800"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03",
+    "format": "date"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on la bataille de Hastings ?",
@@ -47,7 +43,9 @@
       "1099",
       "1215"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05",
+    "format": "date"
   },
   {
     "text": "Quel repère médiéval correspond à la bataille de Hastings ?",
@@ -57,7 +55,9 @@
       "1099",
       "1215"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05",
+    "format": "date"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on l'appel à la première croisade ?",
@@ -67,17 +67,9 @@
       "1095",
       "1214"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère médiéval correspond à l'appel à la première croisade ?",
-    "answers": [
-      "1099",
-      "1215",
-      "1214",
-      "1095"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07",
+    "format": "date"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on la prise de Jérusalem par les croisés ?",
@@ -87,7 +79,9 @@
       "1214",
       "1088"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09",
+    "format": "date"
   },
   {
     "text": "Quel repère médiéval correspond à la prise de Jérusalem par les croisés ?",
@@ -97,7 +91,9 @@
       "1214",
       "1088"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09",
+    "format": "date"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on la Magna Carta ?",
@@ -107,7 +103,9 @@
       "1215",
       "le milieu du XIVe siècle"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11",
+    "format": "date"
   },
   {
     "text": "Quel repère médiéval correspond à la Magna Carta ?",
@@ -117,7 +115,9 @@
       "le milieu du XIVe siècle",
       "1215"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11",
+    "format": "date"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on la bataille de Bouvines ?",
@@ -127,17 +127,9 @@
       "le milieu du XIVe siècle",
       "1346"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère médiéval correspond à la bataille de Bouvines ?",
-    "answers": [
-      "1088",
-      "1214",
-      "le milieu du XIVe siècle",
-      "1346"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13",
+    "format": "date"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on la fondation traditionnelle de l'université de Bologne ?",
@@ -147,7 +139,9 @@
       "1088",
       "1356"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15",
+    "format": "date"
   },
   {
     "text": "Quel repère médiéval correspond à la fondation traditionnelle de l'université de Bologne ?",
@@ -157,7 +151,9 @@
       "1356",
       "1088"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15",
+    "format": "date"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on la peste noire en Europe ?",
@@ -167,7 +163,9 @@
       "le XIIe siècle",
       "le début du XVIe siècle"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17",
+    "format": "date"
   },
   {
     "text": "Quel repère médiéval correspond à la peste noire en Europe ?",
@@ -177,7 +175,9 @@
       "le XIIe siècle",
       "le début du XVIe siècle"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17",
+    "format": "date"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on la bataille de Crécy ?",
@@ -187,17 +187,9 @@
       "1346",
       "1453"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère médiéval correspond à la bataille de Crécy ?",
-    "answers": [
-      "1356",
-      "1415",
-      "1453",
-      "1346"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19",
+    "format": "date"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on la bataille de Poitiers de la guerre de Cent Ans ?",
@@ -207,7 +199,9 @@
       "1453",
       "1492"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21",
+    "format": "date"
   },
   {
     "text": "Quel repère médiéval correspond à la bataille de Poitiers de la guerre de Cent Ans ?",
@@ -217,7 +211,9 @@
       "1453",
       "1492"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21",
+    "format": "date"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on la bataille d'Azincourt ?",
@@ -227,7 +223,9 @@
       "1415",
       "les liens entre seigneurs et vassaux"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23",
+    "format": "date"
   },
   {
     "text": "Quel repère médiéval correspond à la bataille d'Azincourt ?",
@@ -237,7 +235,9 @@
       "les liens entre seigneurs et vassaux",
       "1415"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23",
+    "format": "date"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on la fin de la guerre de Cent Ans ?",
@@ -247,17 +247,9 @@
       "les liens entre seigneurs et vassaux",
       "un prélèvement destiné à l'Église"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère médiéval correspond à la fin de la guerre de Cent Ans ?",
-    "answers": [
-      "1492",
-      "1453",
-      "les liens entre seigneurs et vassaux",
-      "un prélèvement destiné à l'Église"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25",
+    "format": "date"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on la prise de Constantinople par les Ottomans ?",
@@ -267,7 +259,9 @@
       "1453",
       "un prélèvement destiné à l'Église"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27",
+    "format": "date"
   },
   {
     "text": "Quel repère médiéval correspond à la prise de Constantinople par les Ottomans ?",
@@ -277,7 +271,9 @@
       "un prélèvement destiné à l'Église",
       "1453"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27",
+    "format": "date"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on la Reconquista achevée par la prise de Grenade ?",
@@ -287,7 +283,9 @@
       "un prélèvement destiné à l'Église",
       "une décoration de manuscrit"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29",
+    "format": "date"
   },
   {
     "text": "Quel repère médiéval correspond à la Reconquista achevée par la prise de Grenade ?",
@@ -297,7 +295,9 @@
       "un prélèvement destiné à l'Église",
       "une décoration de manuscrit"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29",
+    "format": "date"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on la féodalité ?",
@@ -307,17 +307,8 @@
       "les liens entre seigneurs et vassaux",
       "une tour communale"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère médiéval correspond à la féodalité ?",
-    "answers": [
-      "un prélèvement destiné à l'Église",
-      "une décoration de manuscrit",
-      "une tour communale",
-      "les liens entre seigneurs et vassaux"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on la dîme ?",
@@ -327,7 +318,8 @@
       "une tour communale",
       "un tertre fortifié"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel repère médiéval correspond à la dîme ?",
@@ -337,7 +329,8 @@
       "une tour communale",
       "un tertre fortifié"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on une enluminure ?",
@@ -347,7 +340,8 @@
       "une décoration de manuscrit",
       "la réforme monastique issue de Cîteaux"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel repère médiéval correspond à une enluminure ?",
@@ -357,7 +351,8 @@
       "la réforme monastique issue de Cîteaux",
       "une décoration de manuscrit"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on un beffroi ?",
@@ -367,17 +362,8 @@
       "la réforme monastique issue de Cîteaux",
       "une ligue de villes marchandes"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère médiéval correspond à un beffroi ?",
-    "answers": [
-      "un tertre fortifié",
-      "une tour communale",
-      "la réforme monastique issue de Cîteaux",
-      "une ligue de villes marchandes"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on une motte castrale ?",
@@ -387,7 +373,8 @@
       "un tertre fortifié",
       "des territoires gouvernés par le pape"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel repère médiéval correspond à une motte castrale ?",
@@ -397,7 +384,8 @@
       "des territoires gouvernés par le pape",
       "un tertre fortifié"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on l'ordre cistercien ?",
@@ -407,7 +395,8 @@
       "des territoires gouvernés par le pape",
       "l'arc brisé et la voûte sur croisée d'ogives"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel repère médiéval correspond à l'ordre cistercien ?",
@@ -417,7 +406,8 @@
       "des territoires gouvernés par le pape",
       "l'arc brisé et la voûte sur croisée d'ogives"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on la Hanse ?",
@@ -427,17 +417,8 @@
       "une ligue de villes marchandes",
       "la poésie lyrique en langue d'oc"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère médiéval correspond à la Hanse ?",
-    "answers": [
-      "des territoires gouvernés par le pape",
-      "l'arc brisé et la voûte sur croisée d'ogives",
-      "la poésie lyrique en langue d'oc",
-      "une ligue de villes marchandes"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on les États pontificaux ?",
@@ -447,17 +428,19 @@
       "la poésie lyrique en langue d'oc",
       "476"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
-    "text": "Quel repère médiéval correspond à les États pontificaux ?",
+    "text": "Quel repère médiéval correspond aux États pontificaux ?",
     "answers": [
       "l'arc brisé et la voûte sur croisée d'ogives",
       "des territoires gouvernés par le pape",
       "la poésie lyrique en langue d'oc",
       "476"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on l'art gothique ?",
@@ -467,7 +450,8 @@
       "l'arc brisé et la voûte sur croisée d'ogives",
       "800"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel repère médiéval correspond à l'art gothique ?",
@@ -477,7 +461,8 @@
       "800",
       "l'arc brisé et la voûte sur croisée d'ogives"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "À quelle date, institution ou notion associe-t-on les troubadours ?",
@@ -487,16 +472,128 @@
       "800",
       "1066"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
-    "text": "Quel repère médiéval correspond à les troubadours ?",
+    "text": "Quel repère médiéval correspond aux troubadours ?",
     "answers": [
       "476",
       "la poésie lyrique en langue d'oc",
       "800",
       "1066"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Qu’est-ce qui entraînait la roue d’un moulin à eau médiéval ?",
+    "answers": [
+      "Le vent",
+      "La vapeur",
+      "Un contrepoids suspendu",
+      "Le courant"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "techniques",
+    "fact": "medieval-moulin-eau-energie"
+  },
+  {
+    "text": "Dans un monastère, à quoi servait le scriptorium ?",
+    "answers": [
+      "À presser le raisin",
+      "À copier des manuscrits",
+      "À fondre les cloches",
+      "À stocker les récoltes"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "manuscrits",
+    "fact": "medieval-scriptorium-copie"
+  },
+  {
+    "text": "Malgré son nom, par quelle technique la tapisserie de Bayeux a-t-elle été réalisée ?",
+    "answers": [
+      "La broderie",
+      "Le tissage des motifs au métier",
+      "La peinture sur soie",
+      "L’impression à la planche"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "artisanat",
+    "fact": "medieval-bayeux-broderie-technique",
+    "source": "https://www.bayeuxmuseum.com/la-tapisserie-de-bayeux/decouvrir-la-tapisserie-de-bayeux/analyse-tapisserie-ou-broderie/"
+  },
+  {
+    "text": "Quelle dynastie musulmane a fait aménager les palais de l’Alhambra de Grenade ?",
+    "answers": [
+      "Les Omeyyades",
+      "Les Almoravides",
+      "Les Nasrides",
+      "Les Abbassides"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "architecture",
+    "fact": "medieval-alhambra-dynastie-nasride",
+    "source": "https://whc.unesco.org/en/list/314"
+  },
+  {
+    "text": "À quoi servait le palais des Papes d’Avignon au XIVe siècle ?",
+    "answers": [
+      "De résidence à la cour pontificale",
+      "De siège aux Cortes castillanes",
+      "De siège à une université de médecine",
+      "De résidence aux rois d’Angleterre"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "religion",
+    "fact": "medieval-avignon-residence-pontificale",
+    "source": "https://whc.unesco.org/en/list/228"
+  },
+  {
+    "text": "Qu’a principalement recensé le « Domesday Book » dans l’Angleterre de Guillaume le Conquérant ?",
+    "answers": [
+      "Les manuscrits des monastères",
+      "Les péages des ports méditerranéens",
+      "Les terres et leurs ressources",
+      "Les victoires des chevaliers en tournoi"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "administration",
+    "fact": "medieval-domesday-terres-ressources",
+    "source": "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/medieval/domesday/"
+  },
+  {
+    "text": "Que réunissait en général un cartulaire médiéval ?",
+    "answers": [
+      "Des cartes de navigation",
+      "Des copies d’actes et de chartes",
+      "Des recettes médicales",
+      "Des calendriers de fêtes"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "archives",
+    "fact": "medieval-cartulaire-copies-actes",
+    "source": "https://telma.irht.cnrs.fr/cartulR/glossaire/"
+  },
+  {
+    "text": "Quel genre occupe une place centrale dans le « Codex Manesse » conservé à Heidelberg ?",
+    "answers": [
+      "Le récit de croisade en latin",
+      "Le théâtre religieux en ancien français",
+      "Le roman de chevalerie en castillan",
+      "La poésie lyrique en allemand médiéval"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "litterature",
+    "fact": "medieval-codex-manesse-minnesang",
+    "source": "https://digi.ub.uni-heidelberg.de/en/bpd/glanzlichter/codex_manesse.html"
   }
 ]

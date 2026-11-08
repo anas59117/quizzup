@@ -7,17 +7,8 @@
       "Edgar Degas",
       "Constantin Brâncuși"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui est principalement associé à David en marbre conservé à Florence ?",
-    "answers": [
-      "Auguste Rodin",
-      "Michel-Ange",
-      "Edgar Degas",
-      "Constantin Brâncuși"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on au Penseur ?",
@@ -27,7 +18,8 @@
       "Auguste Rodin",
       "Umberto Boccioni"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Qui est principalement associé au Penseur ?",
@@ -37,7 +29,8 @@
       "Umberto Boccioni",
       "Auguste Rodin"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on au Baiser en marbre de Rodin ?",
@@ -47,7 +40,8 @@
       "Constantin Brâncuși",
       "Umberto Boccioni"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Qui est principalement associé au Baiser en marbre de Rodin ?",
@@ -57,7 +51,8 @@
       "Constantin Brâncuși",
       "Umberto Boccioni"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on à La Petite Danseuse de quatorze ans ?",
@@ -67,17 +62,8 @@
       "Edgar Degas",
       "Louise Bourgeois"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui est principalement associé à La Petite Danseuse de quatorze ans ?",
-    "answers": [
-      "Constantin Brâncuși",
-      "Umberto Boccioni",
-      "Louise Bourgeois",
-      "Edgar Degas"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on à L'Oiseau dans l'espace ?",
@@ -87,7 +73,8 @@
       "Louise Bourgeois",
       "Jeff Koons"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Qui est principalement associé à L'Oiseau dans l'espace ?",
@@ -97,7 +84,8 @@
       "Louise Bourgeois",
       "Jeff Koons"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on à Unique Forms of Continuity in Space ?",
@@ -107,7 +95,8 @@
       "Umberto Boccioni",
       "Anish Kapoor"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Qui est principalement associé à Unique Forms of Continuity in Space ?",
@@ -117,7 +106,8 @@
       "Anish Kapoor",
       "Umberto Boccioni"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on à Maman, araignée monumentale ?",
@@ -127,17 +117,8 @@
       "Anish Kapoor",
       "Paul Landowski"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui est principalement associé à Maman, araignée monumentale ?",
-    "answers": [
-      "Jeff Koons",
-      "Louise Bourgeois",
-      "Anish Kapoor",
-      "Paul Landowski"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on à Balloon Dog ?",
@@ -147,7 +128,8 @@
       "Jeff Koons",
       "Frédéric Auguste Bartholdi"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Qui est principalement associé à Balloon Dog ?",
@@ -157,7 +139,8 @@
       "Frédéric Auguste Bartholdi",
       "Jeff Koons"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on à Cloud Gate à Chicago ?",
@@ -167,7 +150,8 @@
       "Frédéric Auguste Bartholdi",
       "Gutzon Borglum"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Qui est principalement associé à Cloud Gate à Chicago ?",
@@ -177,27 +161,19 @@
       "Frédéric Auguste Bartholdi",
       "Gutzon Borglum"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
-    "text": "Quel artiste, architecte ou commanditaire associe-t-on à le Christ Rédempteur de Rio ?",
+    "text": "Quel artiste, architecte ou commanditaire associe-t-on au Christ Rédempteur de Rio ?",
     "answers": [
       "Frédéric Auguste Bartholdi",
       "Gutzon Borglum",
       "Paul Landowski",
       "Korczak Ziolkowski"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui est principalement associé à le Christ Rédempteur de Rio ?",
-    "answers": [
-      "Frédéric Auguste Bartholdi",
-      "Gutzon Borglum",
-      "Korczak Ziolkowski",
-      "Paul Landowski"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on à la Statue de la Liberté ?",
@@ -207,7 +183,8 @@
       "Korczak Ziolkowski",
       "Gustave Eiffel"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Qui est principalement associé à la Statue de la Liberté ?",
@@ -217,47 +194,41 @@
       "Korczak Ziolkowski",
       "Gustave Eiffel"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
-    "text": "Quel artiste, architecte ou commanditaire associe-t-on à le mont Rushmore ?",
+    "text": "Quel artiste, architecte ou commanditaire associe-t-on au mont Rushmore ?",
     "answers": [
       "Korczak Ziolkowski",
       "Gustave Eiffel",
       "Gutzon Borglum",
       "Jean-François-Thérèse Chalgrin"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
-    "text": "Qui est principalement associé à le mont Rushmore ?",
+    "text": "Qui est principalement associé au mont Rushmore ?",
     "answers": [
       "Korczak Ziolkowski",
       "Gustave Eiffel",
       "Jean-François-Thérèse Chalgrin",
       "Gutzon Borglum"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
-    "text": "Quel artiste, architecte ou commanditaire associe-t-on à le mémorial du Crazy Horse ?",
+    "text": "Quel artiste, architecte ou commanditaire associe-t-on au mémorial du Crazy Horse ?",
     "answers": [
       "Korczak Ziolkowski",
       "Gustave Eiffel",
       "Jean-François-Thérèse Chalgrin",
       "Antoni Gaudí"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui est principalement associé à le mémorial du Crazy Horse ?",
-    "answers": [
-      "Gustave Eiffel",
-      "Korczak Ziolkowski",
-      "Jean-François-Thérèse Chalgrin",
-      "Antoni Gaudí"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on à la tour Eiffel ?",
@@ -267,7 +238,8 @@
       "Gustave Eiffel",
       "Jørn Utzon"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Qui est principalement associé à la tour Eiffel ?",
@@ -277,7 +249,8 @@
       "Jørn Utzon",
       "Gustave Eiffel"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on à l'Arc de triomphe de l'Étoile ?",
@@ -287,7 +260,8 @@
       "Jørn Utzon",
       "Frank Gehry"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Qui est principalement associé à l'Arc de triomphe de l'Étoile ?",
@@ -297,7 +271,8 @@
       "Jørn Utzon",
       "Frank Gehry"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on à la Sagrada Família ?",
@@ -307,17 +282,8 @@
       "Antoni Gaudí",
       "Renzo Piano et Richard Rogers"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui est principalement associé à la Sagrada Família ?",
-    "answers": [
-      "Jørn Utzon",
-      "Frank Gehry",
-      "Renzo Piano et Richard Rogers",
-      "Antoni Gaudí"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on à l'opéra de Sydney ?",
@@ -327,7 +293,8 @@
       "Renzo Piano et Richard Rogers",
       "Ieoh Ming Pei"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Qui est principalement associé à l'opéra de Sydney ?",
@@ -337,47 +304,41 @@
       "Renzo Piano et Richard Rogers",
       "Ieoh Ming Pei"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
-    "text": "Quel artiste, architecte ou commanditaire associe-t-on à le musée Guggenheim de Bilbao ?",
+    "text": "Quel artiste, architecte ou commanditaire associe-t-on au musée Guggenheim de Bilbao ?",
     "answers": [
       "Renzo Piano et Richard Rogers",
       "Ieoh Ming Pei",
       "Frank Gehry",
       "Carl Gotthard Langhans"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
-    "text": "Qui est principalement associé à le musée Guggenheim de Bilbao ?",
+    "text": "Qui est principalement associé au musée Guggenheim de Bilbao ?",
     "answers": [
       "Renzo Piano et Richard Rogers",
       "Ieoh Ming Pei",
       "Carl Gotthard Langhans",
       "Frank Gehry"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
-    "text": "Quel artiste, architecte ou commanditaire associe-t-on à le Centre Pompidou ?",
+    "text": "Quel artiste, architecte ou commanditaire associe-t-on au Centre Pompidou ?",
     "answers": [
       "Renzo Piano et Richard Rogers",
       "Ieoh Ming Pei",
       "Carl Gotthard Langhans",
       "l'empereur moghol Shah Jahan"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui est principalement associé à le Centre Pompidou ?",
-    "answers": [
-      "Ieoh Ming Pei",
-      "Renzo Piano et Richard Rogers",
-      "Carl Gotthard Langhans",
-      "l'empereur moghol Shah Jahan"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on à la pyramide du Louvre ?",
@@ -387,7 +348,8 @@
       "Ieoh Ming Pei",
       "Athènes"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Qui est principalement associé à la pyramide du Louvre ?",
@@ -397,7 +359,8 @@
       "Athènes",
       "Ieoh Ming Pei"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on à la Porte de Brandebourg ?",
@@ -407,7 +370,8 @@
       "Athènes",
       "Rome"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Qui est principalement associé à la Porte de Brandebourg ?",
@@ -417,67 +381,63 @@
       "Athènes",
       "Rome"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
-    "text": "Quel artiste, architecte ou commanditaire associe-t-on à le Taj Mahal ?",
+    "text": "Quel artiste, architecte ou commanditaire associe-t-on au Taj Mahal ?",
     "answers": [
       "Athènes",
       "Rome",
       "l'empereur moghol Shah Jahan",
       "le Néolithique et l'âge du bronze"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
-    "text": "Qui est principalement associé à le Taj Mahal ?",
-    "answers": [
-      "Athènes",
-      "Rome",
-      "le Néolithique et l'âge du bronze",
-      "l'empereur moghol Shah Jahan"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel artiste, architecte ou commanditaire associe-t-on à le Parthénon ?",
+    "text": "Quel artiste, architecte ou commanditaire associe-t-on au Parthénon ?",
     "answers": [
       "Athènes",
       "Rome",
       "le Néolithique et l'âge du bronze",
       "Michel-Ange"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
-    "text": "Qui est principalement associé à le Parthénon ?",
+    "text": "Qui est principalement associé au Parthénon ?",
     "answers": [
       "Rome",
       "Athènes",
       "le Néolithique et l'âge du bronze",
       "Michel-Ange"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
-    "text": "Quel artiste, architecte ou commanditaire associe-t-on à le Panthéon romain ?",
+    "text": "Quel artiste, architecte ou commanditaire associe-t-on au Panthéon romain ?",
     "answers": [
       "le Néolithique et l'âge du bronze",
       "Michel-Ange",
       "Rome",
       "Auguste Rodin"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
-    "text": "Qui est principalement associé à le Panthéon romain ?",
+    "text": "Qui est principalement associé au Panthéon romain ?",
     "answers": [
       "le Néolithique et l'âge du bronze",
       "Michel-Ange",
       "Auguste Rodin",
       "Rome"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel artiste, architecte ou commanditaire associe-t-on à Stonehenge ?",
@@ -487,7 +447,8 @@
       "Auguste Rodin",
       "Edgar Degas"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Qui est principalement associé à Stonehenge ?",
@@ -497,6 +458,119 @@
       "Auguste Rodin",
       "Edgar Degas"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quel objet la statue de la Liberté brandit-elle au-dessus de sa tête ?",
+    "answers": [
+      "Une couronne",
+      "Une épée",
+      "Un flambeau",
+      "Une tablette"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "symboles",
+    "fact": "statue-liberte-flambeau-main-droite",
+    "source": "https://www.nps.gov/stli/learn/statue-of-liberty-facts.htm"
+  },
+  {
+    "text": "Pour quel événement de 1889 la tour Eiffel a-t-elle été construite ?",
+    "answers": [
+      "L’Exposition universelle",
+      "Les Jeux olympiques",
+      "Le Salon des indépendants",
+      "Une exposition coloniale"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "contexte",
+    "fact": "tour-eiffel-exposition-universelle-1889",
+    "source": "https://www.toureiffel.paris/fr/le-monument/exposition-universelle"
+  },
+  {
+    "text": "Quel matériau poli donne à « Cloud Gate », à Chicago, sa surface réfléchissante ?",
+    "answers": [
+      "Du marbre noir",
+      "De l’aluminium brut",
+      "Du bronze patiné",
+      "De l’acier inoxydable"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "materiaux",
+    "fact": "cloud-gate-acier-inoxydable",
+    "source": "https://chicago.gov/city/en/depts/dca/supp_info/chicago_s_publicartcloudgateinmillenniumpark.html"
+  },
+  {
+    "text": "Pour quel ensemble sculpté Rodin a-t-il d’abord conçu la figure du « Penseur » ?",
+    "answers": [
+      "Les Bourgeois de Calais",
+      "La Porte de l’Enfer",
+      "Le Monument à Balzac",
+      "Le Monument à Victor Hugo"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "composition",
+    "fact": "penseur-rodin-porte-enfer",
+    "source": "https://www.musee-rodin.fr/musee/collections/oeuvres/penseur"
+  },
+  {
+    "text": "Quel événement solaire l’axe de Stonehenge indique-t-il du côté nord-est ?",
+    "answers": [
+      "Le coucher du Soleil à l’équinoxe",
+      "Le lever du Soleil au solstice d’hiver",
+      "Le lever du Soleil au solstice d’été",
+      "Le coucher du Soleil au solstice d’été"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "orientation",
+    "fact": "stonehenge-lever-soleil-solstice-ete",
+    "source": "https://www.english-heritage.org.uk/visit/places/stonehenge/things-to-do/solstice"
+  },
+  {
+    "text": "Dans « Maman » de Louise Bourgeois à Bilbao, en quoi sont faits les œufs sous l’araignée ?",
+    "answers": [
+      "En verre",
+      "En terre cuite",
+      "En ivoire",
+      "En marbre"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "materiaux",
+    "fact": "maman-bourgeois-oeufs-marbre",
+    "source": "https://www.guggenheim-bilbao.eus/en/the-collection/works/maman"
+  },
+  {
+    "text": "À quel ordre appartiennent les colonnes qui entourent le Parthénon, à l’extérieur du temple ?",
+    "answers": [
+      "Ionique",
+      "Dorique",
+      "Corinthien",
+      "Composite"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "architecture",
+    "fact": "parthenon-colonnade-exterieure-dorique",
+    "source": "https://www.ysma.gr/en/monuments/parthenon/"
+  },
+  {
+    "text": "Que reprochent certains critiques à Rodin devant le réalisme de « L’Âge d’airain » ?",
+    "answers": [
+      "D’avoir moulé directement un corps vivant",
+      "D’avoir retaillé une statue romaine",
+      "D’avoir repris une sculpture funéraire",
+      "D’avoir copié une gravure de Michel-Ange"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "contexte",
+    "fact": "rodin-age-airain-moulage-nature",
+    "source": "https://www.musee-rodin.fr/musee/collections/oeuvres/lage-dairain"
   }
 ]

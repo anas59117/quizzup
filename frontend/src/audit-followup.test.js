@@ -20,14 +20,24 @@ test('profile themes identify the quiz and level and open the chosen quiz',()=>{
  expect(topics[1].textContent).toContain('Minecraft');act(()=>topics[1].click());expect(open).toHaveBeenCalledWith('minecraft');
 });
 
-test('account saving is visible before the progress sections and uses the existing callback',()=>{
+test('player progression comes before Google backup and the account callback still works',()=>{
  const link=jest.fn();render(<ProfileContent {...profileProps} linkGoogle={link} />);
  const button=container.querySelector('.profile-account-action');expect(button.disabled).toBe(false);expect(button.textContent).toContain('Sauvegarder ma progression avec Google');
- expect(button.compareDocumentPosition(container.querySelector('.pf-level-card')) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+ expect(container.querySelector('.pf-level-card').compareDocumentPosition(button) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
  act(()=>button.click());expect(link).toHaveBeenCalledTimes(1);
  render(<ProfileContent {...profileProps} linkGoogle={link} linking />);expect(container.querySelector('.profile-account-action').disabled).toBe(true);
  render(<ProfileContent {...profileProps} linkGoogle={link} isGoogleLinked googleEmail="alex@example.test" />);
  expect(container.querySelector('.profile-account-action')).toBeNull();expect(container.querySelector('.profile-account-linked').textContent).toContain('alex@example.test');
+});
+
+test('a new player can start their first quiz before the Google backup action', () => {
+  const discover = jest.fn();
+  render(<ProfileContent {...profileProps} stats={{ level: 1, games: 0, topics: [] }} onDiscoverTopics={discover} />);
+  const firstQuiz = container.querySelector('.profile-first-quiz');
+  const backup = container.querySelector('.profile-account-action');
+  expect(firstQuiz.compareDocumentPosition(backup) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  act(() => firstQuiz.querySelector('button').click());
+  expect(discover).toHaveBeenCalledTimes(1);
 });
 
 test('one category Back clears a global search and returns to all categories',()=>{

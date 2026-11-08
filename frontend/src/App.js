@@ -1219,14 +1219,20 @@ function AppContent() {
     );
   }
 
+<<<<<<< HEAD
   if (stage === 'messages') return <div className={`app app-top app-messenger${!social.activeConversationId && !social.activeAsyncChallengeId ? ' app-nav messenger-inbox-nav' : ''}`}><Toast toast={toast} onDismiss={dismissToast} /><Suspense fallback={<HomeLoading />}><LazyMessenger social={social} onBack={() => setStage('home')} onOpenPlayer={players.open} onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending} initialPeerId={messagePeer} initialChallengePeer={messageChallengePeer} onChallengeOpened={clearMessageChallenge} /></Suspense>{!social.activeConversationId && !social.activeAsyncChallengeId && <NavBar active="messages" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />}<PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} onChallenge={openPlayerChallenge} /></div>;
   if (stage === 'history') return <div className="app app-nav app-top"><Suspense fallback={<HomeLoading />}><LazyMatchHistory history={history} onBack={() => setStage('profile')} onOpenPlayer={players.open} onMessage={openMessages} friends={social.friends} /></Suspense><PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} onChallenge={openPlayerChallenge} /><NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} /></div>;
+=======
+  if (stage === 'messages') return <div className={`app app-top app-messenger${!social.activeConversationId && !social.activeAsyncChallengeId ? ' app-nav messenger-inbox-nav' : ''}`}><Toast toast={toast} onDismiss={dismissToast} /><Messenger social={social} onBack={() => setStage('home')} onOpenPlayer={players.open} onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending} initialPeerId={messagePeer} initialChallengePeer={messageChallengePeer} onChallengeOpened={clearMessageChallenge} />{!social.activeConversationId && !social.activeAsyncChallengeId && <NavBar active="messages" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />}<PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} onChallenge={openPlayerChallenge} /></div>;
+  if (stage === 'history') return <div className="app app-nav app-top"><MatchHistory history={history} onBack={() => setStage('profile')} onOpenPlayer={players.open} onMessage={openMessages} friends={social.friends} /><PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} onChallenge={openPlayerChallenge} /><NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} /></div>;
+>>>>>>> 6646450f4e1e9e7719542c3e43d037ca7bb7ef3d
 
   if (stage === 'feed') {
     return (
       <div className={`app app-nav app-community${communityInThread ? " community-in-thread" : ""}`}>
         <Toast toast={toast} onDismiss={dismissToast} />
         <main id="main-content" tabIndex={-1} aria-labelledby="community-title" className="community-main">
+<<<<<<< HEAD
           <Suspense fallback={<HomeLoading />}>
             <LazyFeedScreen
               feed={feed}
@@ -1238,6 +1244,17 @@ function AppContent() {
               onOpenPlayer={players.open}
             />
           </Suspense>
+=======
+          <FeedScreen
+            feed={feed}
+            onThreadChange={setCommunityInThread}
+            controls={<TopControls {...topProps} home />}
+            myTopics={statsHook.stats.topics || []}
+            onPlayTopic={startWithCategory}
+            onOpenTopicLeaderboard={(key) => openLeaderboard(key, 'feed')}
+            onOpenPlayer={players.open}
+          />
+>>>>>>> 6646450f4e1e9e7719542c3e43d037ca7bb7ef3d
         </main>
         <PlayerSheet players={players} social={social} onSelectTopic={openTopic} onMessage={openMessages} onChallenge={openPlayerChallenge} />
         {!communityInThread && <NavBar active="feed" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />}

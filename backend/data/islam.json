@@ -7,17 +7,8 @@
       "la migration de La Mecque à Médine en 622",
       "la profession de foi"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel terme islamique décrit le Coran ?",
-    "answers": [
-      "la tradition prophétique",
-      "le texte sacré central de l'islam",
-      "la migration de La Mecque à Médine en 622",
-      "la profession de foi"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quelle définition correspond à la Sunna ?",
@@ -27,7 +18,8 @@
       "la tradition prophétique",
       "la prière rituelle"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel terme islamique décrit la Sunna ?",
@@ -37,7 +29,8 @@
       "la prière rituelle",
       "la tradition prophétique"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "Quelle définition correspond à l'hégire ?",
@@ -47,7 +40,8 @@
       "la prière rituelle",
       "l'aumône obligatoire"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel terme islamique décrit l'hégire ?",
@@ -57,7 +51,8 @@
       "la prière rituelle",
       "l'aumône obligatoire"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Quelle définition correspond à la chahada ?",
@@ -67,17 +62,8 @@
       "la profession de foi",
       "le jeûne du Ramadan"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel terme islamique décrit la chahada ?",
-    "answers": [
-      "la prière rituelle",
-      "l'aumône obligatoire",
-      "le jeûne du Ramadan",
-      "la profession de foi"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quelle définition correspond à la salat ?",
@@ -87,7 +73,8 @@
       "le jeûne du Ramadan",
       "le pèlerinage à La Mecque"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel terme islamique décrit la salat ?",
@@ -97,7 +84,8 @@
       "le jeûne du Ramadan",
       "le pèlerinage à La Mecque"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "Quelle définition correspond à la zakat ?",
@@ -107,7 +95,8 @@
       "l'aumône obligatoire",
       "la direction de la prière"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel terme islamique décrit la zakat ?",
@@ -117,7 +106,8 @@
       "la direction de la prière",
       "l'aumône obligatoire"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Quelle définition correspond au sawm ?",
@@ -127,17 +117,8 @@
       "la direction de la prière",
       "le sanctuaire au centre de la Grande Mosquée de La Mecque"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel terme islamique décrit le sawm ?",
-    "answers": [
-      "le pèlerinage à La Mecque",
-      "le jeûne du Ramadan",
-      "la direction de la prière",
-      "le sanctuaire au centre de la Grande Mosquée de La Mecque"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quelle définition correspond au hajj ?",
@@ -147,7 +128,8 @@
       "le pèlerinage à La Mecque",
       "le neuvième mois du calendrier hégirien"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel terme islamique décrit le hajj ?",
@@ -157,7 +139,8 @@
       "le neuvième mois du calendrier hégirien",
       "le pèlerinage à La Mecque"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quelle définition correspond à la qibla ?",
@@ -167,7 +150,8 @@
       "le neuvième mois du calendrier hégirien",
       "la fête marquant la fin du Ramadan"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel terme islamique décrit la qibla ?",
@@ -177,7 +161,8 @@
       "le neuvième mois du calendrier hégirien",
       "la fête marquant la fin du Ramadan"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Quelle définition correspond à la Kaaba ?",
@@ -187,17 +172,8 @@
       "le sanctuaire au centre de la Grande Mosquée de La Mecque",
       "la fête du sacrifice"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel terme islamique décrit la Kaaba ?",
-    "answers": [
-      "le neuvième mois du calendrier hégirien",
-      "la fête marquant la fin du Ramadan",
-      "la fête du sacrifice",
-      "le sanctuaire au centre de la Grande Mosquée de La Mecque"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quelle définition correspond au Ramadan ?",
@@ -207,7 +183,8 @@
       "la fête du sacrifice",
       "un calendrier lunaire"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel terme islamique décrit le Ramadan ?",
@@ -217,7 +194,8 @@
       "la fête du sacrifice",
       "un calendrier lunaire"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quelle définition correspond à l'Aïd al-Fitr ?",
@@ -227,7 +205,8 @@
       "la fête marquant la fin du Ramadan",
       "un chapitre du Coran"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel terme islamique décrit l'Aïd al-Fitr ?",
@@ -237,7 +216,8 @@
       "un chapitre du Coran",
       "la fête marquant la fin du Ramadan"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Quelle définition correspond à l'Aïd al-Adha ?",
@@ -247,17 +227,8 @@
       "un chapitre du Coran",
       "un récit rapportant une parole ou un acte attribué au Prophète"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel terme islamique décrit l'Aïd al-Adha ?",
-    "answers": [
-      "un calendrier lunaire",
-      "la fête du sacrifice",
-      "un chapitre du Coran",
-      "un récit rapportant une parole ou un acte attribué au Prophète"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quelle définition correspond au calendrier hégirien ?",
@@ -267,7 +238,8 @@
       "un calendrier lunaire",
       "une niche indiquant la qibla"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel terme islamique décrit le calendrier hégirien ?",
@@ -277,7 +249,8 @@
       "une niche indiquant la qibla",
       "un calendrier lunaire"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Quelle définition correspond à une sourate ?",
@@ -287,7 +260,8 @@
       "une niche indiquant la qibla",
       "une tour associée à la mosquée"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel terme islamique décrit une sourate ?",
@@ -297,7 +271,8 @@
       "une niche indiquant la qibla",
       "une tour associée à la mosquée"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quelle définition correspond à un hadith ?",
@@ -307,17 +282,8 @@
       "un récit rapportant une parole ou un acte attribué au Prophète",
       "la personne qui dirige notamment la prière collective"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel terme islamique décrit un hadith ?",
-    "answers": [
-      "une niche indiquant la qibla",
-      "une tour associée à la mosquée",
-      "la personne qui dirige notamment la prière collective",
-      "un récit rapportant une parole ou un acte attribué au Prophète"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quelle définition correspond au mihrab ?",
@@ -327,7 +293,8 @@
       "la personne qui dirige notamment la prière collective",
       "l'appel à la prière"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel terme islamique décrit le mihrab ?",
@@ -337,7 +304,8 @@
       "la personne qui dirige notamment la prière collective",
       "l'appel à la prière"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Quelle définition correspond au minaret ?",
@@ -347,7 +315,8 @@
       "une tour associée à la mosquée",
       "la ville de la mosquée du Prophète"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel terme islamique décrit le minaret ?",
@@ -357,7 +326,8 @@
       "la ville de la mosquée du Prophète",
       "une tour associée à la mosquée"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quelle définition correspond à l'imam ?",
@@ -367,17 +337,8 @@
       "la ville de la mosquée du Prophète",
       "la ville d'Al-Aqsa"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel terme islamique décrit l'imam ?",
-    "answers": [
-      "l'appel à la prière",
-      "la personne qui dirige notamment la prière collective",
-      "la ville de la mosquée du Prophète",
-      "la ville d'Al-Aqsa"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quelle définition correspond à l'adhan ?",
@@ -387,7 +348,8 @@
       "l'appel à la prière",
       "le courant majoritaire de l'islam"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel terme islamique décrit l'adhan ?",
@@ -397,7 +359,8 @@
       "le courant majoritaire de l'islam",
       "l'appel à la prière"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Quelle définition correspond à Médine ?",
@@ -407,7 +370,8 @@
       "le courant majoritaire de l'islam",
       "un courant accordant une place centrale à la succession par Ali et sa lignée"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel terme islamique décrit Médine ?",
@@ -417,7 +381,8 @@
       "le courant majoritaire de l'islam",
       "un courant accordant une place centrale à la succession par Ali et sa lignée"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Quelle définition correspond à Jérusalem dans la tradition islamique ?",
@@ -427,17 +392,8 @@
       "la ville d'Al-Aqsa",
       "des traditions de spiritualité mystique musulmane"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel terme islamique décrit Jérusalem dans la tradition islamique ?",
-    "answers": [
-      "le courant majoritaire de l'islam",
-      "un courant accordant une place centrale à la succession par Ali et sa lignée",
-      "des traditions de spiritualité mystique musulmane",
-      "la ville d'Al-Aqsa"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quelle définition correspond au sunnisme ?",
@@ -447,7 +403,8 @@
       "des traditions de spiritualité mystique musulmane",
       "le texte sacré central de l'islam"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel terme islamique décrit le sunnisme ?",
@@ -457,7 +414,8 @@
       "des traditions de spiritualité mystique musulmane",
       "le texte sacré central de l'islam"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Quelle définition correspond au chiisme ?",
@@ -467,7 +425,8 @@
       "un courant accordant une place centrale à la succession par Ali et sa lignée",
       "la tradition prophétique"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel terme islamique décrit le chiisme ?",
@@ -477,7 +436,8 @@
       "la tradition prophétique",
       "un courant accordant une place centrale à la succession par Ali et sa lignée"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quelle définition correspond au soufisme ?",
@@ -487,7 +447,8 @@
       "la tradition prophétique",
       "la migration de La Mecque à Médine en 622"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quel terme islamique décrit le soufisme ?",
@@ -497,6 +458,119 @@
       "la tradition prophétique",
       "la migration de La Mecque à Médine en 622"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Combien de prières rituelles la pratique islamique prescrit-elle par jour ?",
+    "answers": [
+      "Cinq",
+      "Trois",
+      "Quatre",
+      "Sept"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pratiques",
+    "fact": "cinq-prieres-canoniques",
+    "source": "https://www.rpl.hds.harvard.edu/files/rpl/files/islam-_pluralism_project_and_religious_literacy_project_harvard_divinity_school_june_8_2016.pdf"
+  },
+  {
+    "text": "Quel fruit est cité dans un hadith comme aliment pour rompre le jeûne ?",
+    "answers": [
+      "La figue",
+      "Le raisin",
+      "La datte",
+      "La grenade"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "traditions",
+    "fact": "iftar-dattes-hadith",
+    "source": "https://sunnah.com/abudawud:2356"
+  },
+  {
+    "text": "Quel ange transmet la révélation à Muhammad selon la tradition musulmane ?",
+    "answers": [
+      "Michel (Mikail)",
+      "Gabriel (Jibril)",
+      "Israfil",
+      "Malik"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "textes",
+    "fact": "gabriel-revelation-muhammad",
+    "source": "https://quran.com/2/97"
+  },
+  {
+    "text": "Quel rite permet de se purifier avec de l’eau après une impureté mineure, avant la prière ?",
+    "answers": [
+      "La profession de foi (chahada)",
+      "L’appel à la prière (adhan)",
+      "La prosternation (sujud)",
+      "Les ablutions mineures (wudu)"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "pratiques",
+    "fact": "wudu-ablutions-mineures",
+    "source": "https://quran.com/5/6"
+  },
+  {
+    "text": "Dans quel mois du calendrier islamique ont lieu les principaux rites du hajj ?",
+    "answers": [
+      "Ramadan",
+      "Mouharram",
+      "Chawwal",
+      "Dhou al-Hijja"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "calendrier",
+    "fact": "hajj-dhou-al-hijja",
+    "source": "https://haj.gov.sa/-/media/Project/HAJJ/Awareness-Guides/Hajj-Guide-Extra/English/En-Hajj-Uk.pdf"
+  },
+  {
+    "text": "Quel monument de Jérusalem, commandé par le calife Abd al-Malik, présente un plan octogonal ?",
+    "answers": [
+      "Le Dôme de la Chaîne",
+      "Le Dôme du Rocher",
+      "La mosquée al-Qibli",
+      "La Porte dorée"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "architecture",
+    "fact": "jerusalem-dome-rocher",
+    "source": "https://www.metmuseum.org/exhibitions/listings/2012/byzantium-and-islam/blog/where-in-the-world/posts/dome-of-the-rock"
+  },
+  {
+    "text": "Quel événement les chiites duodécimains commémorent-ils particulièrement à Achoura ?",
+    "answers": [
+      "L’arrivée de Muhammad à Médine",
+      "La naissance d’Ali",
+      "Le martyre de Husayn à Kerbala",
+      "Le retour de Muhammad à La Mecque"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "traditions",
+    "fact": "achoura-martyre-husayn-kerbala",
+    "source": "https://islamicstudies.harvard.edu/news/day-ashura-islamic-history"
+  },
+  {
+    "text": "Quelle mosquée d’Edirne, inscrite au patrimoine mondial, est l’œuvre de l’architecte Sinan ?",
+    "answers": [
+      "La mosquée Selimiye",
+      "La mosquée Süleymaniye",
+      "La mosquée Şehzade",
+      "La mosquée Sultanahmet"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "architecture",
+    "fact": "sinan-selimiye-edirne",
+    "source": "https://whc.unesco.org/en/list/1366/"
   }
 ]

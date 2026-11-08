@@ -7,7 +7,8 @@
       "Géorgie",
       "Floride"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel est le vrai nom de Travis Scott ?",
@@ -17,7 +18,8 @@
       "Rakim Mayers",
       "Nayvadius Wilburn"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-02"
   },
   {
     "text": "Sur quel album figure le titre « Pornography » ?",
@@ -27,7 +29,9 @@
       "Rodeo",
       "Utopia"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:pornography",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Oh My Dis Side » ?",
@@ -37,7 +41,9 @@
       "Coordinate",
       "Pornography"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:pornography",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Oh My Dis Side » ?",
@@ -47,7 +53,9 @@
       "Astroworld",
       "Utopia"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:oh my dis side",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « 3500 » ?",
@@ -57,7 +65,9 @@
       "Beibs in the Trap",
       "Goosebumps"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:oh my dis side",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « 3500 » ?",
@@ -67,7 +77,9 @@
       "Rodeo",
       "Utopia"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:3500",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Wasted » ?",
@@ -77,7 +89,9 @@
       "Sicko Mode",
       "3500"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:3500",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Wasted » ?",
@@ -87,7 +101,9 @@
       "Astroworld",
       "Utopia"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:wasted",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « 90210 » ?",
@@ -97,7 +113,9 @@
       "Stop Trying to Be God",
       "No Bystanders"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:wasted",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « 90210 » ?",
@@ -107,7 +125,9 @@
       "Rodeo",
       "Utopia"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:90210",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Antidote » ?",
@@ -117,7 +137,9 @@
       "Modern Jam",
       "90210"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:90210",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Antidote » ?",
@@ -127,7 +149,9 @@
       "Astroworld",
       "Utopia"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:antidote",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Pornography » ?",
@@ -137,7 +161,9 @@
       "God’s Country",
       "Fe!n"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:antidote",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « The Ends » ?",
@@ -147,7 +173,9 @@
       "Birds in the Trap Sing McKnight",
       "Utopia"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:the ends",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Way Back » ?",
@@ -157,7 +185,9 @@
       "3500",
       "The Ends"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:the ends",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Way Back » ?",
@@ -167,7 +197,9 @@
       "Astroworld",
       "Utopia"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:way back",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Coordinate » ?",
@@ -177,7 +209,9 @@
       "90210",
       "Antidote"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:way back",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Coordinate » ?",
@@ -187,7 +221,9 @@
       "Birds in the Trap Sing McKnight",
       "Utopia"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:coordinate",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Through the Late Night » ?",
@@ -197,7 +233,9 @@
       "Sicko Mode",
       "Coordinate"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:coordinate",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Through the Late Night » ?",
@@ -207,7 +245,9 @@
       "Astroworld",
       "Utopia"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:through the late night",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Beibs in the Trap » ?",
@@ -217,7 +257,9 @@
       "Stop Trying to Be God",
       "No Bystanders"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:through the late night",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Beibs in the Trap » ?",
@@ -227,7 +269,9 @@
       "Birds in the Trap Sing McKnight",
       "Utopia"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:beibs in the trap",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Goosebumps » ?",
@@ -237,7 +281,9 @@
       "Modern Jam",
       "Beibs in the Trap"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:beibs in the trap",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Goosebumps » ?",
@@ -247,7 +293,9 @@
       "Astroworld",
       "Utopia"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:goosebumps",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « The Ends » ?",
@@ -257,7 +305,9 @@
       "God’s Country",
       "Fe!n"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:goosebumps",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Stargazing » ?",
@@ -267,7 +317,9 @@
       "Astroworld",
       "Utopia"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:stargazing",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Carousel » ?",
@@ -277,7 +329,9 @@
       "3500",
       "Stargazing"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:stargazing",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Carousel » ?",
@@ -287,7 +341,9 @@
       "Birds in the Trap Sing McKnight",
       "Utopia"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:carousel",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Sicko Mode » ?",
@@ -297,7 +353,9 @@
       "90210",
       "Antidote"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:carousel",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Sicko Mode » ?",
@@ -307,7 +365,9 @@
       "Astroworld",
       "Utopia"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:sicko mode",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « R.I.P. Screw » ?",
@@ -317,7 +377,9 @@
       "Coordinate",
       "Sicko Mode"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:sicko mode",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « R.I.P. Screw » ?",
@@ -327,7 +389,9 @@
       "Birds in the Trap Sing McKnight",
       "Utopia"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:r i p screw",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Stop Trying to Be God » ?",
@@ -337,7 +401,9 @@
       "Beibs in the Trap",
       "Goosebumps"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:r i p screw",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Stop Trying to Be God » ?",
@@ -347,7 +413,9 @@
       "Astroworld",
       "Utopia"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:stop trying to be god",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « No Bystanders » ?",
@@ -357,7 +425,9 @@
       "Modern Jam",
       "Stop Trying to Be God"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:stop trying to be god",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « No Bystanders » ?",
@@ -367,7 +437,9 @@
       "Birds in the Trap Sing McKnight",
       "Utopia"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:no bystanders",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Stargazing » ?",
@@ -377,7 +449,9 @@
       "God’s Country",
       "Fe!n"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:no bystanders",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Hyaena » ?",
@@ -387,7 +461,9 @@
       "Utopia",
       "Astroworld"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:hyaena",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Thank God » ?",
@@ -397,7 +473,9 @@
       "3500",
       "Hyaena"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:hyaena",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Thank God » ?",
@@ -407,7 +485,9 @@
       "Birds in the Trap Sing McKnight",
       "Astroworld"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:thank god",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Modern Jam » ?",
@@ -417,7 +497,9 @@
       "90210",
       "Antidote"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:thank god",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Modern Jam » ?",
@@ -427,7 +509,9 @@
       "Utopia",
       "Astroworld"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:modern jam",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « My Eyes » ?",
@@ -437,7 +521,9 @@
       "Coordinate",
       "Modern Jam"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:modern jam",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « My Eyes » ?",
@@ -447,7 +533,9 @@
       "Birds in the Trap Sing McKnight",
       "Astroworld"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:my eyes",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « God’s Country » ?",
@@ -457,7 +545,9 @@
       "Beibs in the Trap",
       "Goosebumps"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:my eyes",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « God’s Country » ?",
@@ -467,7 +557,9 @@
       "Utopia",
       "Astroworld"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:god s country",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Fe!n » ?",
@@ -477,7 +569,9 @@
       "Sicko Mode",
       "God’s Country"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:god s country",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Fe!n » ?",
@@ -487,7 +581,9 @@
       "Birds in the Trap Sing McKnight",
       "Astroworld"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:fe n",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Hyaena » ?",
@@ -497,6 +593,224 @@
       "Stop Trying to Be God",
       "No Bystanders"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:fe n",
+    "format": "album"
+  },
+  {
+    "text": "Quel rappeur canadien se fait entendre dès l’introduction de « SICKO MODE » ?",
+    "answers": [
+      "Drake",
+      "NAV",
+      "Tory Lanez",
+      "Kardinal Offishall"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "collaborations",
+    "fact": "travis-sicko-drake"
+  },
+  {
+    "text": "Dans quel jeu vidéo Travis Scott a-t-il présenté le concert virtuel « Astronomical » ?",
+    "answers": [
+      "Roblox",
+      "Fortnite",
+      "Minecraft",
+      "Rocket League"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "scene",
+    "fact": "travis-fortnite-astronomical"
+  },
+  {
+    "text": "Sous quel nom Travis Scott a-t-il lancé son label ?",
+    "answers": [
+      "Dreamville Records",
+      "OVO Sound",
+      "Cactus Jack Records",
+      "Top Dawg Entertainment"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "projets",
+    "fact": "travis-cactus-jack-label"
+  },
+  {
+    "text": "Quel rappeur est invité sur la version originale de « goosebumps » ?",
+    "answers": [
+      "Lil Wayne",
+      "J. Cole",
+      "Future",
+      "Kendrick Lamar"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "collaborations",
+    "fact": "travis-goosebumps-kendrick"
+  },
+  {
+    "text": "Quelle chaîne de restauration a proposé un menu au nom de Travis Scott en 2020 ?",
+    "answers": [
+      "McDonald’s",
+      "Burger King",
+      "Wendy’s",
+      "Taco Bell"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "culture",
+    "fact": "travis-mcdonalds-menu"
+  },
+  {
+    "text": "Dans quelle ville du Texas se trouvait le parc d’attractions Astroworld qui l’a inspiré ?",
+    "answers": [
+      "Dallas",
+      "Houston",
+      "Austin",
+      "San Antonio"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "parcours",
+    "fact": "travis-theme-park-astroworld"
+  },
+  {
+    "text": "Avec quel artiste Travis Scott forme-t-il le duo The Scotts ?",
+    "answers": [
+      "Don Toliver",
+      "Sheck Wes",
+      "Kid Cudi",
+      "Young Thug"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "projets",
+    "fact": "travis-scotts-cudi"
+  },
+  {
+    "text": "Avec quelle chanteuse Travis Scott interprète-t-il « TKN » ?",
+    "answers": [
+      "Karol G",
+      "Nathy Peluso",
+      "Becky G",
+      "Rosalía"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "collaborations",
+    "fact": "travis-tkn-rosalia"
+  },
+  {
+    "text": "Quel rappeur est crédité aux côtés de Travis Scott sur « FE!N » ?",
+    "answers": [
+      "Don Toliver",
+      "Future",
+      "Playboi Carti",
+      "21 Savage"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "collaborations",
+    "fact": "travis-fein-playboi-carti",
+    "source": "https://music.apple.com/us/song/1708274783"
+  },
+  {
+    "text": "Quelle gamme de baskets Travis Scott revisite-t-il avec ses modèles « Black Phantom » à virgule inversée ?",
+    "answers": [
+      "Air Jordan 1",
+      "Adidas Superstar",
+      "Puma Suede",
+      "Reebok Club C"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "culture",
+    "fact": "travis-air-jordan-one-collaboration",
+    "source": "https://www.nike.com/launch/t/air-jordan-1-low-travis-scott-black-phantom/"
+  },
+  {
+    "text": "Quel titre porte le film musical de Travis Scott projeté au cinéma à l’été 2023 ?",
+    "answers": [
+      "Moon Man’s Landing",
+      "Day N Vegas",
+      "Rolling Loud",
+      "Circus Maximus"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "cinema",
+    "fact": "travis-film-circus-maximus-2023",
+    "source": "https://www.travisscott.com/utopia-world/circus-maximus/"
+  },
+  {
+    "text": "Quel groupe tient la tête d’affiche du spectacle de la mi-temps du Super Bowl où Travis Scott se produit en 2019 ?",
+    "answers": [
+      "Coldplay",
+      "Maroon 5",
+      "The Black Eyed Peas",
+      "Imagine Dragons"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "scene",
+    "fact": "travis-super-bowl-maroon-five-2019",
+    "source": "https://www.nfl.com/photos/2019-super-bowl-liii-pepsi-halftime-show-0ap3000001016055"
+  },
+  {
+    "text": "Quelle distinction honorifique Travis Scott reçoit-il aux BET Hip Hop Awards de 2024 ?",
+    "answers": [
+      "Impact Track",
+      "People’s Champ",
+      "I Am Hip Hop Award",
+      "Hustler of the Year"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "recompenses",
+    "fact": "travis-bet-i-am-hip-hop-2024",
+    "source": "https://www.bet.com/hip-hop-awards/articles/2g98ak/hip-hop-awards-2024-travis-scott-accepts-i-am-hip-hop-award"
+  },
+  {
+    "text": "Quelle plateforme diffuse le documentaire « Travis Scott: Look Mom I Can Fly » sorti en 2019 ?",
+    "answers": [
+      "Netflix",
+      "Prime Video",
+      "Disney+",
+      "Hulu"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "cinema",
+    "fact": "travis-documentaire-look-mom-netflix",
+    "source": "https://www.netflix.com/title/81046796"
+  },
+  {
+    "text": "Quel rappeur figure avec Kanye West sur le single « Watch » de Travis Scott ?",
+    "answers": [
+      "Lil Baby",
+      "Lil Uzi Vert",
+      "Lil Wayne",
+      "Lil Yachty"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "collaborations",
+    "fact": "travis-watch-lil-uzi-kanye",
+    "source": "https://music.apple.com/us/song/1378632301"
+  },
+  {
+    "text": "Pour quel film de Christopher Nolan Travis Scott enregistre-t-il la chanson « The Plan » ?",
+    "answers": [
+      "Interstellar",
+      "Dunkerque",
+      "Oppenheimer",
+      "Tenet"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "cinema",
+    "fact": "travis-the-plan-tenet-bande-originale",
+    "source": "https://music.apple.com/us/song/1528775150"
   }
 ]

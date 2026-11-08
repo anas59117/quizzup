@@ -7,7 +7,8 @@
       "le cabernet sauvignon",
       "la syrah"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Dans quelle région viticole se trouve la ville d'Épernay ?",
@@ -17,7 +18,8 @@
       "le Rhône et la Saône au sud de la Bourgogne",
       "la vallée de la Loire"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-02"
   },
   {
     "text": "À quel terroir associe-t-on le chablis ?",
@@ -27,17 +29,8 @@
       "la Bourgogne",
       "la vallée du Rhône"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quelle région viticole situe-t-on le chablis ?",
-    "answers": [
-      "le Rhône et la Saône au sud de la Bourgogne",
-      "la vallée de la Loire",
-      "la vallée du Rhône",
-      "la Bourgogne"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "À quel terroir associe-t-on le beaujolais ?",
@@ -47,7 +40,8 @@
       "la vallée du Rhône",
       "le Bordelais"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le beaujolais ?",
@@ -57,7 +51,8 @@
       "la vallée du Rhône",
       "le Bordelais"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "À quel terroir associe-t-on le sancerre ?",
@@ -67,7 +62,8 @@
       "la vallée de la Loire",
       "l'Alsace"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le sancerre ?",
@@ -77,7 +73,8 @@
       "l'Alsace",
       "la vallée de la Loire"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-07"
   },
   {
     "text": "À quel terroir associe-t-on le côtes-du-rhône ?",
@@ -87,17 +84,8 @@
       "l'Alsace",
       "le pays nantais"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quelle région viticole situe-t-on le côtes-du-rhône ?",
-    "answers": [
-      "le Bordelais",
-      "la vallée du Rhône",
-      "l'Alsace",
-      "le pays nantais"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "À quel terroir associe-t-on le saint-émilion ?",
@@ -107,7 +95,8 @@
       "le Bordelais",
       "le Lot"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le saint-émilion ?",
@@ -117,7 +106,8 @@
       "le Lot",
       "le Bordelais"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "À quel terroir associe-t-on le gewurztraminer d'Alsace ?",
@@ -127,7 +117,8 @@
       "le Lot",
       "le Béarn"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le gewurztraminer d'Alsace ?",
@@ -137,7 +128,8 @@
       "le Lot",
       "le Béarn"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-13"
   },
   {
     "text": "À quel terroir associe-t-on le muscadet ?",
@@ -147,17 +139,8 @@
       "le pays nantais",
       "la Provence"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quelle région viticole situe-t-on le muscadet ?",
-    "answers": [
-      "le Lot",
-      "le Béarn",
-      "la Provence",
-      "le pays nantais"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "À quel terroir associe-t-on le cahors ?",
@@ -167,7 +150,8 @@
       "la Provence",
       "la Corse"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le cahors ?",
@@ -177,7 +161,8 @@
       "la Provence",
       "la Corse"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "À quel terroir associe-t-on le jurançon ?",
@@ -187,7 +172,8 @@
       "le Béarn",
       "le Jura"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le jurançon ?",
@@ -197,7 +183,8 @@
       "le Jura",
       "le Béarn"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-19"
   },
   {
     "text": "À quel terroir associe-t-on le bandol ?",
@@ -207,17 +194,8 @@
       "le Jura",
       "la Toscane"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quelle région viticole situe-t-on le bandol ?",
-    "answers": [
-      "la Corse",
-      "la Provence",
-      "le Jura",
-      "la Toscane"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "À quel terroir associe-t-on le patrimonio ?",
@@ -227,7 +205,8 @@
       "la Corse",
       "le Piémont"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le patrimonio ?",
@@ -237,7 +216,8 @@
       "le Piémont",
       "la Corse"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "À quel terroir associe-t-on le vin jaune ?",
@@ -247,7 +227,8 @@
       "le Piémont",
       "la vallée du Douro"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le vin jaune ?",
@@ -257,7 +238,8 @@
       "le Piémont",
       "la vallée du Douro"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-25"
   },
   {
     "text": "À quel terroir associe-t-on le chianti ?",
@@ -267,17 +249,8 @@
       "la Toscane",
       "l'Espagne"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quelle région viticole situe-t-on le chianti ?",
-    "answers": [
-      "le Piémont",
-      "la vallée du Douro",
-      "l'Espagne",
-      "la Toscane"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "À quel terroir associe-t-on le barolo ?",
@@ -287,7 +260,8 @@
       "l'Espagne",
       "l'Andalousie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le barolo ?",
@@ -297,7 +271,8 @@
       "l'Espagne",
       "l'Andalousie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "À quel terroir associe-t-on le porto ?",
@@ -307,7 +282,8 @@
       "la vallée du Douro",
       "la Hongrie"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le porto ?",
@@ -317,7 +293,8 @@
       "la Hongrie",
       "la vallée du Douro"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-31"
   },
   {
     "text": "À quel terroir associe-t-on le rioja ?",
@@ -327,17 +304,8 @@
       "la Hongrie",
       "l'Allemagne"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quelle région viticole situe-t-on le rioja ?",
-    "answers": [
-      "l'Andalousie",
-      "l'Espagne",
-      "la Hongrie",
-      "l'Allemagne"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "À quel terroir associe-t-on le sherry ou xérès ?",
@@ -347,7 +315,8 @@
       "l'Andalousie",
       "l'Argentine"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le sherry ou xérès ?",
@@ -357,7 +326,8 @@
       "l'Argentine",
       "l'Andalousie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "À quel terroir associe-t-on le tokaji ?",
@@ -367,7 +337,8 @@
       "l'Argentine",
       "la Nouvelle-Zélande"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le tokaji ?",
@@ -377,7 +348,8 @@
       "l'Argentine",
       "la Nouvelle-Zélande"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-37"
   },
   {
     "text": "À quel terroir associe-t-on le riesling de Moselle ?",
@@ -387,17 +359,8 @@
       "l'Allemagne",
       "l'Afrique du Sud"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quelle région viticole situe-t-on le riesling de Moselle ?",
-    "answers": [
-      "l'Argentine",
-      "la Nouvelle-Zélande",
-      "l'Afrique du Sud",
-      "l'Allemagne"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "À quel terroir associe-t-on le malbec de Mendoza ?",
@@ -407,7 +370,8 @@
       "l'Afrique du Sud",
       "la Californie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le malbec de Mendoza ?",
@@ -417,7 +381,8 @@
       "l'Afrique du Sud",
       "la Californie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "À quel terroir associe-t-on le sauvignon blanc de Marlborough ?",
@@ -427,7 +392,8 @@
       "la Nouvelle-Zélande",
       "la Grèce"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le sauvignon blanc de Marlborough ?",
@@ -437,7 +403,8 @@
       "la Grèce",
       "la Nouvelle-Zélande"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-43"
   },
   {
     "text": "À quel terroir associe-t-on le pinotage ?",
@@ -447,17 +414,8 @@
       "la Grèce",
       "la Champagne"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quelle région viticole situe-t-on le pinotage ?",
-    "answers": [
-      "la Californie",
-      "l'Afrique du Sud",
-      "la Grèce",
-      "la Champagne"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "À quel terroir associe-t-on le cabernet de Napa Valley ?",
@@ -467,7 +425,8 @@
       "la Californie",
       "la Bourgogne"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le cabernet de Napa Valley ?",
@@ -477,7 +436,8 @@
       "la Bourgogne",
       "la Californie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "À quel terroir associe-t-on le retsina ?",
@@ -487,7 +447,8 @@
       "la Bourgogne",
       "le Rhône et la Saône au sud de la Bourgogne"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Dans quelle région viticole situe-t-on le retsina ?",
@@ -497,6 +458,119 @@
       "la Bourgogne",
       "le Rhône et la Saône au sud de la Bourgogne"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "À quelle étape correspond l’année indiquée par le millésime d’un vin ?",
+    "answers": [
+      "La mise en bouteille",
+      "L’ouverture de la bouteille",
+      "La récolte des raisins",
+      "La sortie de la cave"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "etiquette",
+    "fact": "vin-millesime-annee-recolte",
+    "source": "https://www.oiv.int/fr/node/3040/download/pdf"
+  },
+  {
+    "text": "Lors de la fermentation alcoolique du moût, quels organismes transforment les sucres en alcool ?",
+    "answers": [
+      "Les levures",
+      "Les algues",
+      "Les virus",
+      "Les acariens"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "vinification",
+    "fact": "vin-fermentation-alcoolique-levures",
+    "source": "https://www.oiv.int/fr/node/4155"
+  },
+  {
+    "text": "Parmi ces cépages cultivés en Champagne, lequel produit des raisins blancs ?",
+    "answers": [
+      "Le pinot noir",
+      "Le meunier",
+      "Le gamay",
+      "Le chardonnay"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "cepages",
+    "fact": "champagne-cepage-blanc-chardonnay",
+    "source": "https://www.champagne.fr/fr/decouvrir-le-champagne/un-grand-vin-d-assemblage/les-cepages-en-champagne"
+  },
+  {
+    "text": "Quel champignon provoque la pourriture noble recherchée pour le sauternes ?",
+    "answers": [
+      "Saccharomyces cerevisiae",
+      "Botrytis cinerea",
+      "Penicillium roqueforti",
+      "Aspergillus oryzae"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "viticulture",
+    "fact": "sauternes-botrytis-pourriture-noble",
+    "source": "https://www.bordeaux.com/fr/mag/blog/quand-la-pourriture-se-fait-noble/"
+  },
+  {
+    "text": "Quelle couche se forme à la surface du vin jaune du Jura pendant son élevage en fût ?",
+    "answers": [
+      "Une pellicule d’huile",
+      "Une mousse de sucre",
+      "Un voile de levures",
+      "Une croûte de sel"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "vinification",
+    "fact": "vin-jaune-voile-levures",
+    "source": "https://www.inao.gouv.fr/node/6268/printable/pdf"
+  },
+  {
+    "text": "Quel cépage doit être utilisé pour élaborer le barolo DOCG ?",
+    "answers": [
+      "Le sangiovese",
+      "Le barbera",
+      "Le dolcetto",
+      "Le nebbiolo"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "cepages",
+    "fact": "barolo-cepage-nebbiolo",
+    "source": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2019-01/docg_barolo.pdf"
+  },
+  {
+    "text": "Lorsqu’on élabore un rosé de saignée, qu’effectue-t-on après un bref contact du jus avec les peaux ?",
+    "answers": [
+      "On congèle tout le moût",
+      "On prélève une partie du jus de la cuve",
+      "On filtre seulement les pépins",
+      "On mélange le jus avec du vin blanc fini"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "vinification",
+    "fact": "vin-rose-saignee-prelevement-jus",
+    "source": "https://www.oiv.int/public/medias/3102/focus-2015-les-vins-roses-fr.pdf"
+  },
+  {
+    "text": "Pendant l’élaboration du champagne, à quoi sert le remuage des bouteilles avant le dégorgement ?",
+    "answers": [
+      "À faire descendre le dépôt vers le goulot",
+      "À faire mûrir les raisins restants",
+      "À éliminer la mousse par décantation",
+      "À égaliser le taux de sucre entre bouteilles"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "effervescents",
+    "fact": "champagne-remuage-depot-vers-goulot",
+    "source": "https://www.champagne.fr/fr/decouvrir-le-champagne/elaboration-du-champagne/le-remuage"
   }
 ]

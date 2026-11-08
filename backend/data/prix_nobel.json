@@ -7,17 +7,8 @@
       "Albert Einstein",
       "Martin Luther King Jr."
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel lauréat ou groupe correspond au prix Nobel de physique 1901 ?",
-    "answers": [
-      "Marie Curie",
-      "Wilhelm Röntgen",
-      "Albert Einstein",
-      "Martin Luther King Jr."
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Qui a reçu le prix Nobel de chimie 1911 ?",
@@ -27,7 +18,8 @@
       "Marie Curie",
       "Albert Camus"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de chimie 1911 ?",
@@ -37,7 +29,8 @@
       "Albert Camus",
       "Marie Curie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "Qui a reçu le prix Nobel de physique 1921 ?",
@@ -47,7 +40,8 @@
       "Albert Camus",
       "Jean-Paul Sartre"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de physique 1921 ?",
@@ -57,7 +51,8 @@
       "Albert Camus",
       "Jean-Paul Sartre"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Qui a reçu le prix Nobel de la paix 1964 ?",
@@ -67,17 +62,8 @@
       "Martin Luther King Jr.",
       "Mère Teresa"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel lauréat ou groupe correspond au prix Nobel de la paix 1964 ?",
-    "answers": [
-      "Albert Camus",
-      "Jean-Paul Sartre",
-      "Mère Teresa",
-      "Martin Luther King Jr."
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Qui a reçu le prix Nobel de littérature 1957 ?",
@@ -87,7 +73,8 @@
       "Mère Teresa",
       "Desmond Tutu"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de littérature 1957 ?",
@@ -97,7 +84,8 @@
       "Mère Teresa",
       "Desmond Tutu"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "Qui a reçu le prix Nobel de littérature 1964, refusé par son lauréat ?",
@@ -107,7 +95,8 @@
       "Jean-Paul Sartre",
       "Nelson Mandela et Frederik de Klerk"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de littérature 1964, refusé par son lauréat ?",
@@ -117,7 +106,8 @@
       "Nelson Mandela et Frederik de Klerk",
       "Jean-Paul Sartre"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Qui a reçu le prix Nobel de la paix 1979 ?",
@@ -127,17 +117,8 @@
       "Nelson Mandela et Frederik de Klerk",
       "Naguib Mahfouz"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel lauréat ou groupe correspond au prix Nobel de la paix 1979 ?",
-    "answers": [
-      "Desmond Tutu",
-      "Mère Teresa",
-      "Nelson Mandela et Frederik de Klerk",
-      "Naguib Mahfouz"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Qui a reçu le prix Nobel de la paix 1984 ?",
@@ -147,7 +128,8 @@
       "Desmond Tutu",
       "Wole Soyinka"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de la paix 1984 ?",
@@ -157,7 +139,8 @@
       "Wole Soyinka",
       "Desmond Tutu"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Qui a reçu le prix Nobel de la paix 1993 ?",
@@ -167,7 +150,8 @@
       "Wole Soyinka",
       "Toni Morrison"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de la paix 1993 ?",
@@ -177,7 +161,8 @@
       "Wole Soyinka",
       "Toni Morrison"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Qui a reçu le prix Nobel de littérature 1988 ?",
@@ -187,17 +172,8 @@
       "Naguib Mahfouz",
       "Muhammad Yunus et la Grameen Bank"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel lauréat ou groupe correspond au prix Nobel de littérature 1988 ?",
-    "answers": [
-      "Wole Soyinka",
-      "Toni Morrison",
-      "Muhammad Yunus et la Grameen Bank",
-      "Naguib Mahfouz"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Qui a reçu le prix Nobel de littérature 1986 ?",
@@ -207,7 +183,8 @@
       "Muhammad Yunus et la Grameen Bank",
       "Kailash Satyarthi et Malala Yousafzai"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de littérature 1986 ?",
@@ -217,7 +194,8 @@
       "Muhammad Yunus et la Grameen Bank",
       "Kailash Satyarthi et Malala Yousafzai"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Qui a reçu le prix Nobel de littérature 1993 ?",
@@ -227,7 +205,8 @@
       "Toni Morrison",
       "Bob Dylan"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de littérature 1993 ?",
@@ -237,7 +216,8 @@
       "Bob Dylan",
       "Toni Morrison"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Qui a reçu le prix Nobel de la paix 2006 ?",
@@ -247,17 +227,8 @@
       "Bob Dylan",
       "Arthur Ashkin"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel lauréat ou groupe correspond au prix Nobel de la paix 2006 ?",
-    "answers": [
-      "Kailash Satyarthi et Malala Yousafzai",
-      "Muhammad Yunus et la Grameen Bank",
-      "Bob Dylan",
-      "Arthur Ashkin"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Qui a reçu le prix Nobel de la paix 2014 ?",
@@ -267,7 +238,8 @@
       "Kailash Satyarthi et Malala Yousafzai",
       "John Goodenough, Stanley Whittingham et Akira Yoshino"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de la paix 2014 ?",
@@ -277,7 +249,8 @@
       "John Goodenough, Stanley Whittingham et Akira Yoshino",
       "Kailash Satyarthi et Malala Yousafzai"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Qui a reçu le prix Nobel de littérature 2016 ?",
@@ -287,7 +260,8 @@
       "John Goodenough, Stanley Whittingham et Akira Yoshino",
       "le Programme alimentaire mondial"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de littérature 2016 ?",
@@ -297,7 +271,8 @@
       "John Goodenough, Stanley Whittingham et Akira Yoshino",
       "le Programme alimentaire mondial"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Qui a reçu le prix Nobel de physique 2018, partagé notamment pour les pinces optiques ?",
@@ -307,17 +282,8 @@
       "Arthur Ashkin",
       "Henri Becquerel, Pierre Curie et Marie Curie"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel lauréat ou groupe correspond au prix Nobel de physique 2018, partagé notamment pour les pinces optiques ?",
-    "answers": [
-      "John Goodenough, Stanley Whittingham et Akira Yoshino",
-      "le Programme alimentaire mondial",
-      "Henri Becquerel, Pierre Curie et Marie Curie",
-      "Arthur Ashkin"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Qui a reçu le prix Nobel de chimie 2019 ?",
@@ -327,7 +293,8 @@
       "Henri Becquerel, Pierre Curie et Marie Curie",
       "Alexander Fleming, Ernst Chain et Howard Florey"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de chimie 2019 ?",
@@ -337,7 +304,8 @@
       "Henri Becquerel, Pierre Curie et Marie Curie",
       "Alexander Fleming, Ernst Chain et Howard Florey"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Qui a reçu le prix Nobel de la paix 2020 ?",
@@ -347,7 +315,8 @@
       "le Programme alimentaire mondial",
       "Saint-John Perse"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de la paix 2020 ?",
@@ -357,7 +326,8 @@
       "Saint-John Perse",
       "le Programme alimentaire mondial"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Qui a reçu le prix Nobel de physique 1903 ?",
@@ -367,17 +337,8 @@
       "Saint-John Perse",
       "Claude Simon"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel lauréat ou groupe correspond au prix Nobel de physique 1903 ?",
-    "answers": [
-      "Alexander Fleming, Ernst Chain et Howard Florey",
-      "Henri Becquerel, Pierre Curie et Marie Curie",
-      "Saint-John Perse",
-      "Claude Simon"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Qui a reçu le prix Nobel de médecine 1945 ?",
@@ -387,7 +348,8 @@
       "Alexander Fleming, Ernst Chain et Howard Florey",
       "Anouar el-Sadate et Menahem Begin"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de médecine 1945 ?",
@@ -397,7 +359,8 @@
       "Anouar el-Sadate et Menahem Begin",
       "Alexander Fleming, Ernst Chain et Howard Florey"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Qui a reçu le prix Nobel de littérature 1960 ?",
@@ -407,7 +370,8 @@
       "Anouar el-Sadate et Menahem Begin",
       "Yasser Arafat, Shimon Peres et Yitzhak Rabin"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de littérature 1960 ?",
@@ -417,7 +381,8 @@
       "Anouar el-Sadate et Menahem Begin",
       "Yasser Arafat, Shimon Peres et Yitzhak Rabin"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Qui a reçu le prix Nobel de littérature 1985 ?",
@@ -427,17 +392,8 @@
       "Claude Simon",
       "Elinor Ostrom et Oliver Williamson"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel lauréat ou groupe correspond au prix Nobel de littérature 1985 ?",
-    "answers": [
-      "Anouar el-Sadate et Menahem Begin",
-      "Yasser Arafat, Shimon Peres et Yitzhak Rabin",
-      "Elinor Ostrom et Oliver Williamson",
-      "Claude Simon"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Qui a reçu le prix Nobel de la paix 1978 ?",
@@ -447,7 +403,8 @@
       "Elinor Ostrom et Oliver Williamson",
       "Wilhelm Röntgen"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de la paix 1978 ?",
@@ -457,7 +414,8 @@
       "Elinor Ostrom et Oliver Williamson",
       "Wilhelm Röntgen"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Qui a reçu le prix Nobel de la paix 1994 ?",
@@ -467,7 +425,8 @@
       "Yasser Arafat, Shimon Peres et Yitzhak Rabin",
       "Marie Curie"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel de la paix 1994 ?",
@@ -477,7 +436,8 @@
       "Marie Curie",
       "Yasser Arafat, Shimon Peres et Yitzhak Rabin"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Qui a reçu le prix Nobel d'économie 2009 ?",
@@ -487,7 +447,8 @@
       "Marie Curie",
       "Albert Einstein"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quel lauréat ou groupe correspond au prix Nobel d'économie 2009 ?",
@@ -497,6 +458,119 @@
       "Marie Curie",
       "Albert Einstein"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quelle invention, brevetée en 1867, a contribué à la fortune d’Alfred Nobel ?",
+    "answers": [
+      "Le télégraphe sans fil",
+      "La lampe à incandescence",
+      "La dynamite",
+      "Le moteur Diesel"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "fondation",
+    "fact": "alfred-nobel-invention-dynamite",
+    "source": "https://www.nobelprize.org/uploads/2018/07/annual_review_14.pdf"
+  },
+  {
+    "text": "Dans quelle ville se déroule la cérémonie du prix Nobel de la paix ?",
+    "answers": [
+      "Oslo",
+      "Stockholm",
+      "Copenhague",
+      "Helsinki"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "ceremonie",
+    "fact": "nobel-paix-ceremonie-oslo",
+    "source": "https://www.nobelprize.org/prizes/facts/facts-on-the-nobel-peace-prize/"
+  },
+  {
+    "text": "Quelle institution crée en 1968 le prix d’économie en mémoire d’Alfred Nobel ?",
+    "answers": [
+      "La Banque de France",
+      "L’Académie suédoise",
+      "Le Fonds monétaire international",
+      "La Banque centrale de Suède"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "fondation",
+    "fact": "nobel-economie-banque-centrale-suede",
+    "source": "https://www.nobelprize.org/organization/statutes-for-the-prize-in-economic-sciences/"
+  },
+  {
+    "text": "Quelle découverte est citée explicitement pour le Nobel de physique 1921 d’Albert Einstein ?",
+    "answers": [
+      "La dilatation du temps",
+      "La loi de l’effet photoélectrique",
+      "La nature du rayonnement cosmique",
+      "La fission nucléaire"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "sciences",
+    "fact": "nobel-1921-einstein-effet-photoelectrique",
+    "source": "https://www.nobelprize.org/prizes/physics/1921/einstein/facts/"
+  },
+  {
+    "text": "Le Nobel de médecine 2005 reconnaît le lien entre certains ulcères de l’estomac et quel agent ?",
+    "answers": [
+      "Un virus",
+      "Un champignon",
+      "Une bactérie",
+      "Un parasite unicellulaire"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "sciences",
+    "fact": "nobel-2005-marshall-warren-bacterie",
+    "source": "https://www.nobelprize.org/prizes/medicine/2005/press-release/"
+  },
+  {
+    "text": "Qu’utilisent les pinces optiques d’Arthur Ashkin, distinguées par le Nobel de physique, pour saisir des particules microscopiques ?",
+    "answers": [
+      "Une pointe métallique",
+      "Un champ gravitationnel",
+      "Des ultrasons",
+      "Un faisceau laser"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "sciences",
+    "fact": "nobel-2018-pinces-optiques-lumiere",
+    "source": "https://www.nobelprize.org/prizes/physics/2018/press-release/"
+  },
+  {
+    "text": "Le Nobel de la paix distingue le HCR en 1954 puis en 1981. Quel public cette agence de l’ONU a-t-elle pour mission de protéger ?",
+    "answers": [
+      "Les prisonniers de guerre",
+      "Les réfugiés",
+      "Les journalistes de guerre",
+      "Les travailleurs saisonniers"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "paix",
+    "fact": "nobel-hcr-1954-1981-refugies",
+    "source": "https://www.nobelprize.org/prizes/facts/facts-on-the-nobel-peace-prize/"
+  },
+  {
+    "text": "Quel délai minimal doit s’écouler avant que les nominations aux prix Nobel puissent être rendues publiques ?",
+    "answers": [
+      "50 ans",
+      "25 ans",
+      "75 ans",
+      "100 ans"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "archives",
+    "fact": "nobel-confidentialite-nominations-cinquante-ans",
+    "source": "https://www.nobelprize.org/about/statutes-of-the-nobel-foundation"
   }
 ]

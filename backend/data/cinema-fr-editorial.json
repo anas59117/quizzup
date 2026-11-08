@@ -1,0 +1,450 @@
+[
+  {
+    "text": "Qui a réalisé \"Le Fabuleux Destin d’Amélie Poulain\" ?",
+    "answers": ["Luc Besson", "Jean-Pierre Jeunet", "Michel Gondry", "Claude Lelouch"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "creation",
+    "fact": "amelie-jean-pierre-jeunet"
+  },
+  {
+    "text": "Qui incarne OSS 117 dans « Le Caire, nid d’espions » ?",
+    "answers": ["Jean Dujardin", "Gad Elmaleh", "Dany Boon", "Omar Sy"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "oss117-jean-dujardin"
+  },
+  {
+    "text": "Quel film muet français a remporté l’Oscar du meilleur film en 2012 ?",
+    "answers": ["Intouchables", "The Artist", "La Môme", "Amour"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "recompenses",
+    "fact": "the-artist-oscar-2012"
+  },
+  {
+    "text": "Quel duo de réalisateurs a fait \"Intouchables\" ?",
+    "answers": ["Nakache et Toledano", "Dardenne et Dardenne", "Besson et Kassovitz", "Ozon et Audiard"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "creation",
+    "fact": "intouchables-realisateurs"
+  },
+  {
+    "text": "Dans \"Intouchables\", quel acteur interprète Philippe ?",
+    "answers": ["Omar Sy", "François Cluzet", "Vincent Cassel", "Daniel Auteuil"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "intouchables-cluzet"
+  },
+  {
+    "text": "Quel produit dangereux les chauffeurs transportent-ils dans « Le Salaire de la peur » ?",
+    "answers": ["De l’essence", "De la nitroglycérine", "Du kérosène", "Du gaz liquéfié"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "intrigues",
+    "fact": "salaire-de-la-peur-nitroglycerine"
+  },
+  {
+    "text": "Qui a réalisé « Les Visiteurs », avec Jean Reno et Christian Clavier ?",
+    "answers": ["Jean-Marie Poiré", "Gérard Oury", "Francis Veber", "Patrice Leconte"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "creation",
+    "fact": "les-visiteurs-jean-marie-poire"
+  },
+  {
+    "text": "Qui incarne Astérix dans « Astérix et Obélix contre César », sorti en 1999 ?",
+    "answers": ["Christian Clavier", "Édouard Baer", "Guillaume Gallienne", "Franck Dubosc"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "asterix-clavier"
+  },
+  {
+    "text": "Quel Gaulois Gérard Depardieu joue-t-il dans « Astérix et Obélix : Mission Cléopâtre » ?",
+    "answers": ["Astérix", "Obélix", "Panoramix", "Abraracourcix"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "depardieu-obelix"
+  },
+  {
+    "text": "Quelle actrice a remporté l’Oscar de la meilleure actrice pour son rôle d’Édith Piaf dans \"La Môme\" ?",
+    "answers": ["Juliette Binoche", "Marion Cotillard", "Audrey Tautou", "Léa Seydoux"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "recompenses",
+    "fact": "marion-cotillard-oscar"
+  },
+  {
+    "text": "Qui est cet acteur ?",
+    "image": "/images/players/gerard_depardieu.jpg",
+    "credit": "Photo : Siebbi (CC BY 3.0)",
+    "answers": ["Gérard Depardieu", "Jean Reno", "Daniel Auteuil", "Alain Delon"],
+    "correct": 0,
+    "angle": "personnages",
+    "format": "portrait",
+    "fact": "portrait:/images/players/gerard_depardieu.jpg",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Qui est cette actrice ?",
+    "image": "/images/players/catherine_deneuve.jpg",
+    "credit": "Photo : Martin Kraft (CC BY-SA 3.0)",
+    "answers": ["Juliette Binoche", "Sophie Marceau", "Catherine Deneuve", "Isabelle Adjani"],
+    "correct": 2,
+    "angle": "personnages",
+    "format": "portrait",
+    "fact": "portrait:/images/players/catherine_deneuve.jpg",
+    "difficulty": "easy"
+  },
+  {
+    "text": "Qui est cette actrice ?",
+    "image": "/images/players/isabelle_adjani.jpg",
+    "credit": "Photo : Georges Biard (CC BY-SA 4.0)",
+    "answers": ["Isabelle Adjani", "Sophie Marceau", "Juliette Binoche", "Catherine Deneuve"],
+    "correct": 0,
+    "angle": "personnages",
+    "format": "portrait",
+    "fact": "portrait:/images/players/isabelle_adjani.jpg",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Qui est cette actrice ?",
+    "image": "/images/players/juliette_binoche.jpg",
+    "credit": "Photo : Elena Ternovaja (CC BY-SA 3.0)",
+    "answers": ["Isabelle Adjani", "Sophie Marceau", "Catherine Deneuve", "Juliette Binoche"],
+    "correct": 3,
+    "angle": "personnages",
+    "format": "portrait",
+    "fact": "portrait:/images/players/juliette_binoche.jpg",
+    "difficulty": "medium"
+  },
+  {
+    "text": "Dans « La Grande Vadrouille », quel métier exerce Augustin Bouvet, le personnage de Bourvil ?",
+    "answers": ["Chef d’orchestre", "Peintre en bâtiment", "Facteur", "Pâtissier"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "grande-vadrouille-bourvil-peintre",
+    "source": "https://www.canalplus.com/cinema/la-grande-vadrouille/h/4462900_40099/resume-casting/"
+  },
+  {
+    "text": "Dans « Le Dîner de cons », avec quoi François Pignon construit-il ses maquettes ?",
+    "answers": ["Des bouchons", "Des briques en plastique", "Des morceaux de carton", "Des allumettes"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "diner-de-cons-maquettes-allumettes",
+    "source": "https://ftp.gaumont.com/COMMUNICATION/CORPORATE/SELECTION_PEPITE_MARS_2025.pdf"
+  },
+  {
+    "text": "Dans quelle ville le directeur de la Poste est-il muté dans « Bienvenue chez les Ch’tis » ?",
+    "answers": ["Bergues", "Arras", "Dunkerque", "Lille"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "bienvenue-chez-les-chtis-bergues",
+    "source": "https://www.unifrance.org/film/28483/bienvenue-chez-les-ch-tis"
+  },
+  {
+    "text": "Dans « Le Père Noël est une ordure », quelle activité associative occupe les bénévoles le soir du réveillon ?",
+    "answers": ["Une maraude", "Une distribution de jouets", "Une permanence téléphonique", "Un repas solidaire"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "pere-noel-ordure-permanence",
+    "source": "https://www.canalplus.com/cinema/le-pere-noel-est-une-ordure/h/4519507_40099/resume-casting/"
+  },
+  {
+    "text": "Qui joue Clément Mathieu, le surveillant qui fait chanter les élèves dans « Les Choristes » ?",
+    "answers": ["François Berléand", "Gérard Jugnot", "Kad Merad", "Jean-Pierre Marielle"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "choristes-clement-mathieu-jugnot",
+    "source": "https://www.unifrance.org/film/24171/les-choristes"
+  },
+  {
+    "text": "Qui a réalisé le film d’animation « Kirikou et la Sorcière » ?",
+    "answers": ["Michel Ocelot", "Sylvain Chomet", "Jean-François Laguionie", "Jacques-Rémy Girerd"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "animation",
+    "fact": "kirikou-realisation-ocelot",
+    "source": "https://www.michelocelot.fr/kirikou-et-la-sorciere"
+  },
+  {
+    "text": "Dans quelle ville Daniel conduit-il son taxi dans le premier « Taxi », avec Samy Naceri ?",
+    "answers": ["Nice", "Toulon", "Montpellier", "Marseille"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "taxi-1998-marseille",
+    "source": "https://www.filmfrance.net/films/taxi/"
+  },
+  {
+    "text": "Qui incarne Edmond Dantès dans « Le Comte de Monte-Cristo » sorti en 2024 ?",
+    "answers": ["François Civil", "Benjamin Lavernhe", "Pierre Niney", "Louis Garrel"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "monte-cristo-2024-niney",
+    "source": "https://www.festival-cannes.com/en/f/le-comte-de-monte-cristo/"
+  },
+  {
+    "text": "Dans « Mission Cléopâtre », que doit construire Numérobis en trois mois ?",
+    "answers": ["Un amphithéâtre", "Un palais", "Un aqueduc", "Une pyramide"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "mission-cleopatre-numerobis-palais",
+    "source": "https://www.unifrance.org/film/21386/asterix-et-obelix-mission-cleopatre"
+  },
+  {
+    "text": "Quel cinéaste a réalisé « Le Voyage dans la Lune », où une capsule se fiche dans l’œil de la Lune ?",
+    "answers": ["Louis Lumière", "Alice Guy", "Émile Cohl", "Georges Méliès"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "histoire",
+    "fact": "voyage-dans-la-lune-melies",
+    "source": "https://www.cinematheque.fr/film/52565.html"
+  },
+  {
+    "text": "Dans le film d’animation « Ernest et Célestine », quel animal est Célestine ?",
+    "answers": ["Une souris", "Une renarde", "Une lapine", "Une ourse"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "animation",
+    "fact": "ernest-celestine-souris",
+    "source": "https://www.cinematheque.fr/film/116478.html"
+  },
+  {
+    "text": "Comment les personnages des « Parapluies de Cherbourg » interprètent-ils leurs dialogues ?",
+    "answers": ["Ils les récitent en vers", "Ils les parlent en voix off", "Ils les chantent intégralement", "Ils les jouent en langue des signes"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "techniques",
+    "fact": "parapluies-cherbourg-dialogues-chantes",
+    "source": "https://www.festival-cannes.com/2024/les-parapluies-ont-eu-60-ans/"
+  },
+  {
+    "text": "Dans « Le Samouraï » de Jean-Pierre Melville, qui interprète le tueur à gages Jef Costello ?",
+    "answers": ["Lino Ventura", "Jean-Paul Belmondo", "Maurice Ronet", "Alain Delon"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "samourai-jef-costello-alain-delon",
+    "source": "https://www.criterion.com/films/184-le-samourai"
+  },
+  {
+    "text": "Quelle sœur de Catherine Deneuve lui donne la réplique dans « Les Demoiselles de Rochefort » ?",
+    "answers": ["Françoise Dorléac", "Danielle Darrieux", "Anne Vernon", "Bernadette Lafont"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "demoiselles-rochefort-soeurs-dorleac",
+    "source": "https://www.cinematheque.fr/film/48037.html"
+  },
+  {
+    "text": "Comment les personnages de « Ma vie de Courgette » ont-ils été animés ?",
+    "answers": ["Par dessin sur pellicule", "Par capture de mouvement", "Avec des marionnettes image par image", "Avec des silhouettes en papier découpé"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "techniques",
+    "fact": "ma-vie-de-courgette-marionnettes",
+    "source": "https://medias.unifrance.org/medias/122/113/160122/presse/my-life-as-a-courgette-presskit-french.pdf"
+  },
+  {
+    "text": "Pendant quelle course le cycliste Champion est-il enlevé dans « Les Triplettes de Belleville » ?",
+    "answers": ["Le Tour d’Italie", "Le Tour de France", "Le Paris-Roubaix", "Le Tour d’Espagne"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "animation",
+    "fact": "triplettes-belleville-enlevement-tour-de-france",
+    "source": "https://www.festival-cannes.com/f/les-triplettes-de-belleville/"
+  },
+  {
+    "text": "Quel jeune acteur incarne Antoine Doinel dans « Les Quatre Cents Coups » de François Truffaut ?",
+    "answers": ["Jean-Claude Brialy", "Jean-Pierre Léaud", "Jean-Louis Trintignant", "Jacques Perrin"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "quatre-cents-coups-doinel-leaud",
+    "source": "https://www.cinematheque.fr/film/51579.html"
+  },
+  {
+    "text": "Quel Oscar Justine Triet et Arthur Harari ont-ils remporté pour « Anatomie d’une chute » ?",
+    "answers": ["Meilleur scénario adapté", "Meilleur film", "Meilleur montage", "Meilleur scénario original"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "recompenses",
+    "fact": "anatomie-chute-oscar-scenario-original",
+    "source": "https://www.oscars.org/oscars/ceremonies/2024"
+  },
+  {
+    "text": "Pour quelle occasion Marianne est-elle chargée de peindre Héloïse dans « Portrait de la jeune fille en feu » ?",
+    "answers": ["Le mariage d’Héloïse", "Son entrée au couvent", "Sa présentation à la cour", "Sa première exposition"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "intrigues",
+    "fact": "portrait-jeune-fille-en-feu-mariage",
+    "source": "https://www.festival-cannes.com/f/portrait-de-la-jeune-fille-en-feu/"
+  },
+  {
+    "text": "Qui a composé la musique de la version française du « Grand Bleu » de Luc Besson ?",
+    "answers": ["Gabriel Yared", "Vladimir Cosma", "Éric Serra", "Bruno Coulais"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "creation",
+    "fact": "grand-bleu-musique-eric-serra",
+    "source": "https://www.festival-cannes.com/f/le-grand-bleu-3/"
+  },
+  {
+    "text": "Dans « Un prophète », quel détenu est interprété par Tahar Rahim ?",
+    "answers": ["César Luciani", "Ryad", "Reyeb", "Malik El Djebena"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "un-prophete-tahar-rahim-malik",
+    "source": "https://medias.unifrance.org/medias/16/155/39696/presse/un-prophete-2009-presskit-francais-1.pdf"
+  },
+  {
+    "text": "Quel film de Louis Malle, situé dans un pensionnat sous l’Occupation, a remporté le Lion d’or ?",
+    "answers": ["Au revoir les enfants", "Lacombe Lucien", "Milou en mai", "Le Souffle au cœur"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "recompenses",
+    "fact": "au-revoir-les-enfants-lion-or",
+    "source": "https://www.labiennale.org/en/history-venice-film-festival"
+  },
+  {
+    "text": "Quel personnage Vincent Cassel interprète-t-il dans « La Haine » ?",
+    "answers": ["Hubert", "Saïd", "Vinz", "Samir"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "la-haine-vinz-vincent-cassel",
+    "source": "https://www.festival-cannes.com/f/la-haine/"
+  },
+  {
+    "text": "Quel cinéaste signe son premier long métrage avec « Diva », sur un coursier passionné d’opéra ?",
+    "answers": ["Leos Carax", "Jean-Jacques Beineix", "Jean-Jacques Annaud", "Bertrand Blier"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "creation",
+    "fact": "diva-premier-film-beineix",
+    "source": "https://www.cnc.fr/cinema/actualites/mort-de-jeanjacques-beineix-realisateur-de-372-le-matin_1610484"
+  },
+  {
+    "text": "Qui interprète Garance dans « Les Enfants du paradis » de Marcel Carné ?",
+    "answers": ["Michèle Morgan", "Simone Signoret", "Madeleine Renaud", "Arletty"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "personnages",
+    "fact": "enfants-du-paradis-garance-arletty",
+    "source": "https://www.cinematheque.fr/film/47284.html"
+  },
+  {
+    "text": "Quel acteur incarne à la fois la Bête et Avenant dans « La Belle et la Bête » de Cocteau ?",
+    "answers": ["Jean Marais", "Louis Jourdan", "Pierre Brasseur", "Gérard Philipe"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "personnages",
+    "fact": "belle-et-la-bete-jean-marais-avenant",
+    "source": "https://www.criterion.com/films/177-beauty-and-the-beast"
+  },
+  {
+    "text": "Quel film d’animation de René Laloux a reçu un Prix spécial au Festival de Cannes en 1973 ?",
+    "answers": ["Les Maîtres du temps", "La Planète sauvage", "Gandahar", "Comment Wang-Fô fut sauvé"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "recompenses",
+    "fact": "planete-sauvage-cannes-prix-special",
+    "source": "https://www.festival-cannes.com/mediatheque/rene-laloux-roland-topor-prix-special-la-planete-sauvage/"
+  },
+  {
+    "text": "Qui a réalisé « Le Ballon rouge », le court métrage où un ballon suit un garçon dans Paris ?",
+    "answers": ["Jacques Tati", "Jean Vigo", "Albert Lamorisse", "René Clair"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "creation",
+    "fact": "ballon-rouge-albert-lamorisse",
+    "source": "https://www.festival-cannes.com/f/le-ballon-rouge/"
+  },
+  {
+    "text": "Dans quel établissement parisien les frères Lumière organisent-ils leur projection publique payante du 28 décembre 1895 ?",
+    "answers": ["Le musée Grévin", "Le théâtre du Châtelet", "L’Olympia", "Le Grand Café"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "histoire",
+    "fact": "lumiere-projection-grand-cafe",
+    "source": "https://www.cinematheque.fr/expositions-virtuelles/guide-expo-machine/index.htm"
+  },
+  {
+    "text": "Quels résultats la chanteuse attend-elle avec anxiété dans « Cléo de 5 à 7 » d’Agnès Varda ?",
+    "answers": ["Des résultats médicaux", "Le classement de son disque", "Le résultat d’une audition", "Le verdict d’un procès"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "intrigues",
+    "fact": "cleo-de-cinq-a-sept-resultats-medicaux",
+    "source": "https://www.festival-cannes.com/2012/cleo-de-5-a-7-une-lecon-de-vie/"
+  },
+  {
+    "text": "Quelle forme d’animation donne leur allure aux contes de Michel Ocelot dans « Princes et Princesses » ?",
+    "answers": ["Le dessin au pastel", "La peinture sur verre", "Les ombres chinoises", "Le collage de photographies"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "animation",
+    "fact": "princes-et-princesses-ombres-chinoises",
+    "source": "https://www.michelocelot.fr/princes-et-princesses"
+  },
+  {
+    "text": "Quel procédé donne son titre à « La Nuit américaine » de François Truffaut ?",
+    "answers": ["Éclairer une scène tournée la nuit", "Assombrir une scène tournée de jour", "Ajouter un éclairage d’orage en studio", "Superposer des étoiles à un ciel nocturne"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "techniques",
+    "fact": "nuit-americaine-tournage-jour",
+    "source": "https://www.criterion.com/current/posts/3659-day-for-night-are-movies-magic"
+  },
+  {
+    "text": "Quel cinéaste a réalisé « Céline et Julie vont en bateau », où une maison rejoue la même histoire ?",
+    "answers": ["Éric Rohmer", "Jean Eustache", "Alain Resnais", "Jacques Rivette"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "creation",
+    "fact": "celine-julie-vont-en-bateau-rivette",
+    "source": "https://www.cinematheque.fr/film/50952.html"
+  },
+  {
+    "text": "Quel écrivain a signé le roman dont Marcel Pagnol a tiré son film « Regain » ?",
+    "answers": ["Jean Giono", "Alphonse Daudet", "Henri Bosco", "Jules Renard"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "creation",
+    "fact": "regain-pagnol-roman-giono",
+    "source": "https://www.marcel-pagnol.com/film/regain-1937/"
+  },
+  {
+    "text": "Quel engin l’équipe du « Peuple migrateur » a-t-elle utilisé pour filmer les oiseaux à leur hauteur ?",
+    "answers": ["Un bras-grue fixe", "Un dirigeable de transport", "Un avion de ligne", "Un ULM"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "techniques",
+    "fact": "peuple-migrateur-tournage-ulm",
+    "source": "https://www.sonyclassics.com/wingedmigration/_media/_presskit/presskit.pdf"
+  },
+  {
+    "text": "Quel acteur du « Trou » de Jacques Becker avait participé à la tentative d’évasion qui inspire le film ?",
+    "answers": ["Marc Michel", "Jean Keraudy", "Michel Constantin", "Philippe Leroy"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "histoire",
+    "fact": "le-trou-jean-keraudy-evasion",
+    "source": "https://www.criterion.com/current/posts/138-the-time-it-takes-le-trou-and-jacques-becker"
+  }
+]

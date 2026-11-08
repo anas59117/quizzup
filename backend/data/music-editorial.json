@@ -1,0 +1,432 @@
+[
+  {
+    "text": "Quelle artiste a sorti l’album « 1989 » ?",
+    "answers": ["Adele", "Katy Perry", "Taylor Swift", "Lorde"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "oeuvres",
+    "fact": "swift-1989"
+  },
+  {
+    "text": "Combien de musiciens formaient les Beatles dans leur formation classique, avec Ringo Starr ?",
+    "answers": ["3", "4", "5", "6"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "scene",
+    "fact": "beatles-quatuor"
+  },
+  {
+    "text": "Qui est surnommé le « King of Pop » ?",
+    "answers": ["Elvis Presley", "Prince", "Michael Jackson", "James Brown"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "scene",
+    "fact": "king-of-pop"
+  },
+  {
+    "text": "Quel instrument à cordes frappées compte généralement 88 touches dans sa version acoustique moderne ?",
+    "answers": ["Orgue", "Clavecin", "Accordéon", "Piano"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "instruments",
+    "fact": "piano-touches"
+  },
+  {
+    "text": "À quel genre musical Bob Marley est-il associé ?",
+    "answers": ["Reggae", "Ska", "Blues", "Soul"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "genres",
+    "fact": "marley-reggae"
+  },
+  {
+    "text": "Quel groupe interprète « Bohemian Rhapsody » ?",
+    "answers": ["Led Zeppelin", "Queen", "The Who", "Pink Floyd"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "oeuvres",
+    "fact": "bohemian-rhapsody"
+  },
+  {
+    "text": "Qui chante « Rolling in the Deep » ?",
+    "answers": ["Beyoncé", "Rihanna", "Adele", "Sia"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "oeuvres",
+    "fact": "adele-rolling-in-the-deep"
+  },
+  {
+    "text": "Combien de cordes compte une guitare classique standard ?",
+    "answers": ["4", "5", "7", "6"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "instruments",
+    "fact": "guitare-classique-cordes"
+  },
+  {
+    "text": "Quel rappeur a sorti « The Marshall Mathers LP » ?",
+    "answers": ["Eminem", "Jay-Z", "Nas", "Dr. Dre"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "oeuvres",
+    "fact": "marshall-mathers-lp"
+  },
+  {
+    "text": "Que signifie « BPM » en musique ?",
+    "answers": ["Basses par mesure", "Battements par minute", "Barres par minute", "Boucles par morceau"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "technique",
+    "fact": "definition-bpm"
+  },
+  {
+    "text": "Parmi ces instruments, lequel se joue habituellement avec un archet ?",
+    "answers": ["La guitare", "Le violon", "La mandoline", "Le banjo"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "instruments",
+    "fact": "violon-archet",
+    "source": "https://www.yamaha.com/en/musical_instrument_guide/violin/mechanism/mechanism004.html"
+  },
+  {
+    "text": "Sur une batterie, quel nom porte la paire de cymbales qu’on ouvre ou ferme avec une pédale ?",
+    "answers": ["La ride", "La crash", "La splash", "Le charleston"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "instruments",
+    "fact": "batterie-charleston-pedale",
+    "source": "https://hub.yamaha.com/drums/stage/the-modern-drum-set-part-4-foot-pedals/"
+  },
+  {
+    "text": "Le saxophone est souvent en métal. À quelle famille appartient-il ?",
+    "answers": ["Les bois", "Les cuivres", "Les cordes", "Les percussions"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "instruments",
+    "fact": "saxophone-famille-bois",
+    "source": "https://hub.yamaha.com/winds/wood/the-woodwind-family-explained/"
+  },
+  {
+    "text": "De quel instrument à cordes le musicien indien Ravi Shankar était-il virtuose ?",
+    "answers": ["Le sarod", "Le santour", "Le sitar", "La tampura"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "instruments",
+    "fact": "ravi-shankar-sitar",
+    "source": "https://www.grammy.com/news/sitarist-ravi-shankar-dies/"
+  },
+  {
+    "text": "Quel instrument à soufflet Astor Piazzolla jouait-il dans ses ensembles de tango ?",
+    "answers": ["L’accordéon chromatique", "Le mélodéon", "L’harmonium", "Le bandonéon"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "instruments",
+    "fact": "piazzolla-bandoneon-tango",
+    "source": "https://www.mim.be/fr/activity/astor-bandido"
+  },
+  {
+    "text": "Quel instrument électronique se joue en déplaçant les mains près de deux antennes, sans les toucher ?",
+    "answers": ["Le thérémine", "Les ondes Martenot", "Le synthétiseur Moog", "Le Mellotron"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "instruments",
+    "fact": "theremine-antennes",
+    "source": "https://collectionsdumusee.philharmoniedeparis.fr/0156615-theremin-r-c-a.aspx"
+  },
+  {
+    "text": "Quel instrument traditionnel mandingue associe une caisse en calebasse à vingt et une cordes ?",
+    "answers": ["Le balafon", "La kora", "Le ngoni", "Le kamalengoni"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "instruments",
+    "fact": "kora-harpe-mandigue",
+    "source": "https://www.metmuseum.org/art/collection/search/501115"
+  },
+  {
+    "text": "Quel terme désigne un chant sans accompagnement instrumental ?",
+    "answers": ["En canon", "En contrechant", "A cappella", "À l’unisson"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "technique",
+    "fact": "chant-a-cappella"
+  },
+  {
+    "text": "Dans une chanson, comment s’appelle la partie qui revient généralement avec les mêmes paroles entre les couplets ?",
+    "answers": ["Le refrain", "L’introduction", "Le pont", "La coda"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "technique",
+    "fact": "refrain-chanson"
+  },
+  {
+    "text": "En lisant « crescendo » sur une partition, que doit faire l’interprète ?",
+    "answers": ["Jouer de plus en plus vite", "Jouer de plus en plus doux", "Jouer de plus en plus fort", "Jouer de plus en plus lentement"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "technique",
+    "fact": "crescendo-intensite"
+  },
+  {
+    "text": "Sur une partition, que demande l’indication « staccato » ?",
+    "answers": ["Lier les notes", "Accélérer le tempo", "Prolonger les notes", "Détacher les notes"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "technique",
+    "fact": "staccato-notes-detachees"
+  },
+  {
+    "text": "Comment nomme-t-on une note attaquée sur un temps faible et prolongée sur le temps fort suivant ?",
+    "answers": ["Une anacrouse", "Une syncope", "Un contretemps", "Une appoggiature"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "technique",
+    "fact": "syncope-temps-faible",
+    "source": "https://college.berklee.edu/bt/212/lesson.html"
+  },
+  {
+    "text": "Quel intervalle sépare une note d’une autre dont la fréquence est deux fois plus élevée ?",
+    "answers": ["Une quinte", "Une octave", "Une quarte", "Une tierce"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "technique",
+    "fact": "octave-frequence-double"
+  },
+  {
+    "text": "Dans la gamme chromatique, combien de demi-tons forment un triton ?",
+    "answers": ["4", "5", "6", "7"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "technique",
+    "fact": "triton-six-demi-tons",
+    "source": "https://viva.pressbooks.pub/openmusictheorycopy/chapter/analyzing-atonal-music/"
+  },
+  {
+    "text": "Quelle chanteuse française a rendu célèbre « La Vie en rose » ?",
+    "answers": ["Édith Piaf", "Juliette Gréco", "Dalida", "Barbara"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "oeuvres",
+    "fact": "piaf-vie-en-rose",
+    "source": "https://catalogue.bnf.fr/ark:/12148/cb38316177h"
+  },
+  {
+    "text": "Quel compositeur a mis en musique l’« Ode à la joie » dans le finale de sa Neuvième Symphonie ?",
+    "answers": ["Wolfgang Amadeus Mozart", "Johann Sebastian Bach", "Johannes Brahms", "Ludwig van Beethoven"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "oeuvres",
+    "fact": "hymne-joie-beethoven",
+    "source": "https://philharmoniedeparis.fr/fr/magazine/series/les-cles-du-classique/les-cles-du-classique-46-la-neuvieme-symphonie-de-beethoven"
+  },
+  {
+    "text": "Sur quel album de Daft Punk « One More Time » figure-t-il en ouverture ?",
+    "answers": ["Homework", "Human After All", "Discovery", "Random Access Memories"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "oeuvres",
+    "fact": "daft-punk-discovery-ouverture",
+    "source": "https://daftpunk.com/discovery/"
+  },
+  {
+    "text": "Dans quelle ville espagnole se trouve la manufacture de tabac où travaille Carmen dans l’opéra de Bizet ?",
+    "answers": ["Grenade", "Valence", "Madrid", "Séville"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "oeuvres",
+    "fact": "carmen-seville-manufacture",
+    "source": "https://www.operadeparis.fr/saison-25-26/opera/carmen"
+  },
+  {
+    "text": "Quel ballet de Stravinsky a provoqué un tumulte dans la salle lors de sa création au Théâtre des Champs-Élysées ?",
+    "answers": ["L’Oiseau de feu", "Le Sacre du printemps", "Petrouchka", "Pulcinella"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "oeuvres",
+    "fact": "sacre-printemps-premiere",
+    "source": "https://www.theatrechampselysees.fr/medias-hors-champs/article/un-siecle-histoire-1913-2013"
+  },
+  {
+    "text": "Quel album de Miles Davis contient « So What » et « Blue in Green » ?",
+    "answers": ["Kind of Blue", "Milestones", "Bitches Brew", "Sketches of Spain"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "oeuvres",
+    "fact": "miles-davis-kind-of-blue",
+    "source": "https://www.milesdavis.com/albums/kind-of-blue/"
+  },
+  {
+    "text": "Quel compositeur a orchestré en 1922 les « Tableaux d’une exposition » de Moussorgski, écrits pour piano ?",
+    "answers": ["Claude Debussy", "Paul Dukas", "Camille Saint-Saëns", "Maurice Ravel"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "oeuvres",
+    "fact": "tableaux-exposition-orchestration-ravel",
+    "source": "https://philharmoniedeparis.fr/fr/magazine/series/les-cles-du-classique/les-cles-du-classique-9-moussorgskiravel-tableaux-dune-exposition"
+  },
+  {
+    "text": "Quel art musical andalou associe traditionnellement chant, danse et guitare ?",
+    "answers": ["Le fado", "Le flamenco", "Le tango", "Le boléro"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "genres",
+    "fact": "flamenco-andalousie",
+    "source": "https://ich.unesco.org/fr/RL/le-flamenco-00363"
+  },
+  {
+    "text": "Quelle musique accompagne les défilés des écoles au Sambodrome de Rio ?",
+    "answers": ["La salsa", "Le merengue", "La samba", "La cumbia"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "genres",
+    "fact": "samba-carnaval-rio",
+    "source": "https://riotur.rio/editorial/escolas-da-serie-ouro-divulgam-sambas-enredo-para-o-carnaval-2026/"
+  },
+  {
+    "text": "Quel style associe-t-on au jeu de guitare de Django Reinhardt dans le Quintette du Hot Club de France ?",
+    "answers": ["Le jazz manouche", "Le bebop", "Le cool jazz", "Le free jazz"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "genres",
+    "fact": "django-jazz-manouche",
+    "source": "https://librairie.philharmoniedeparis.fr/catalogues-exposition/django-reinhardt"
+  },
+  {
+    "text": "Quel genre algérien Khaled a-t-il fait connaître à l’international avec des titres comme « Didi » ?",
+    "answers": ["Le chaâbi", "Le gnawa", "Le raï", "Le malouf"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "genres",
+    "fact": "khaled-didi-rai",
+    "source": "https://music.apple.com/ni/artist/khaled/384924?l=en"
+  },
+  {
+    "text": "Quel genre électronique le DJ Frankie Knuckles a-t-il contribué à façonner au club Warehouse, à Chicago ?",
+    "answers": ["La house", "La techno", "La trance", "La drum and bass"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "genres",
+    "fact": "chicago-frankie-knuckles-house",
+    "source": "https://www.choosechicago.com/blog/music/the-history-of-house-music-in-chicago/"
+  },
+  {
+    "text": "Quel genre capverdien est associé à Cesária Évora, la « diva aux pieds nus » ?",
+    "answers": ["Le fado", "La morna", "La kizomba", "Le zouk"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "genres",
+    "fact": "cesaria-evora-morna",
+    "source": "https://www.grammy.com/news/cesaria-evora-dies/"
+  },
+  {
+    "text": "Comment appelle-t-on le retour sur scène d’un artiste qui joue encore un morceau après le programme ?",
+    "answers": ["Une première partie", "Une répétition", "Un entracte", "Un rappel"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "scene",
+    "fact": "concert-rappel"
+  },
+  {
+    "text": "Dans un orchestre symphonique, qui donne habituellement le départ aux musiciens d’un geste de la baguette ?",
+    "answers": ["Le chef d’orchestre", "Le régisseur", "Le soliste", "Le premier violon"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "scene",
+    "fact": "orchestre-chef-depart"
+  },
+  {
+    "text": "Dans quelle ville française Jean-Louis Foulquier a-t-il créé les Francofolies ?",
+    "answers": ["Nantes", "Bordeaux", "Rennes", "La Rochelle"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "scene",
+    "fact": "francofolies-la-rochelle",
+    "source": "https://www.francofolies.fr/histoire/"
+  },
+  {
+    "text": "Quel festival de musique électronique a lieu dans le parc De Schorre, à Boom en Belgique ?",
+    "answers": ["Awakenings", "Tomorrowland", "Creamfields", "Sónar"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "scene",
+    "fact": "tomorrowland-boom",
+    "source": "https://belgium.tomorrowland.com/fr/pratique/how-to-get-there/"
+  },
+  {
+    "text": "À Woodstock en 1969, qui a joué l’hymne américain à la guitare électrique ?",
+    "answers": ["Carlos Santana", "Pete Townshend", "Jimi Hendrix", "Jerry Garcia"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "scene",
+    "fact": "woodstock-hendrix-hymne",
+    "source": "https://www.bethelwoodscenter.org/news/detail/jimi-hendrix-50-years-of-peace-music"
+  },
+  {
+    "text": "Dans quelle salle de Harlem Ella Fitzgerald a-t-elle remporté le concours Amateur Night au début de sa carrière ?",
+    "answers": ["Le Cotton Club", "L’Apollo Theater", "Le Savoy Ballroom", "Le Minton’s Playhouse"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "scene",
+    "fact": "ella-fitzgerald-apollo-amateur-night",
+    "source": "https://www.apollotheater.org/history"
+  },
+  {
+    "text": "Comment appelle-t-on une nouvelle interprétation d’une chanson déjà publiée par un autre artiste ?",
+    "answers": ["Un remix", "Un pot-pourri", "Une reprise", "Une improvisation"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "creation",
+    "fact": "chanson-reprise"
+  },
+  {
+    "text": "Quel rôle consiste à écrire le texte d’une chanson ?",
+    "answers": ["Le compositeur", "L’arrangeur", "L’interprète", "Le parolier"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "creation",
+    "fact": "parolier-texte-chanson"
+  },
+  {
+    "text": "Beyoncé intègre un extrait d’un enregistrement de Major Lazer dans « Run the World (Girls) ». Quel est le procédé ?",
+    "answers": ["L’échantillonnage", "La transposition", "La reprise", "Le fondu enchaîné"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "creation",
+    "fact": "beyonce-major-lazer-echantillonnage",
+    "source": "https://www.grammy.com/news/major-lazer-diplo-switch-interview-guns-dont-kill-people-lazers-do-anniversary/"
+  },
+  {
+    "text": "En studio, quelle étape consiste à équilibrer les pistes de voix et d’instruments déjà enregistrées ?",
+    "answers": ["L’enregistrement", "L’arrangement", "Le mastering", "Le mixage"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "creation",
+    "fact": "studio-mixage-pistes",
+    "source": "https://www.ableton.com/en/live-manual/12/mixing/"
+  },
+  {
+    "text": "Lors d’un fondu enchaîné entre deux morceaux, que fait le DJ ?",
+    "answers": ["Il coupe le premier avant de lancer le second", "Il baisse le premier pendant que le second monte", "Il baisse les deux au même rythme", "Il relance le premier depuis le début"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "creation",
+    "fact": "dj-fondu-enchaine",
+    "source": "https://www.ableton.com/en/live-manual/12/mixing/"
+  },
+  {
+    "text": "Quel effet simule les nombreuses réflexions d’une voix dans une grande salle ?",
+    "answers": ["La réverbération", "Le compresseur", "Le trémolo", "La distorsion"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "creation",
+    "fact": "studio-reverberation-salle"
+  },
+  {
+    "text": "Quel protocole transmet des notes et leur vélocité, sans transmettre le son de l’instrument ?",
+    "answers": ["AES3", "S/PDIF", "MIDI", "ADAT"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "creation",
+    "fact": "midi-notes-velocite",
+    "source": "https://midi.org/about-midi-part-3midi-messages"
+  }
+]

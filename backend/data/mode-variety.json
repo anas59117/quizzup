@@ -1,0 +1,215 @@
+[
+  {
+    "text": "Quel couturier présente en 1947 la collection surnommée « New Look » ?",
+    "answers": ["Christian Dior", "Cristóbal Balenciaga", "Hubert de Givenchy", "Pierre Balmain"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "histoire",
+    "fact": "new-look"
+  },
+  {
+    "text": "Qui présente dans sa collection de 1966 le smoking devenu un emblème de sa mode féminine ?",
+    "answers": ["Christian Lacroix", "Yves Saint Laurent", "André Courrèges", "Pierre Cardin"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "creations",
+    "fact": "smoking",
+    "source": "https://museeyslparis.com/biographie/premier-smoking?theme=maison-de-couture_and_mode"
+  },
+  {
+    "text": "Quel accessoire Chanel désigne-t-on par le numéro 2.55 ?",
+    "answers": ["Une paire de ballerines", "Un foulard", "Un sac à main", "Une montre"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "accessoires",
+    "fact": "sac-255"
+  },
+  {
+    "text": "Quelle couturière a créé avec Salvador Dalí une robe ornée d’un grand homard ?",
+    "answers": ["Madeleine Vionnet", "Jeanne Lanvin", "Nina Ricci", "Elsa Schiaparelli"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "creations",
+    "fact": "robe-homard",
+    "source": "https://madparis.fr/IMG/pdf/cp-shocking-schiap-fr.pdf"
+  },
+  {
+    "text": "Quel créateur japonais lance la ligne de vêtements plissés Pleats Please ?",
+    "answers": ["Issey Miyake", "Yohji Yamamoto", "Kenzo Takada", "Rei Kawakubo"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "creations",
+    "fact": "pleats-please"
+  },
+  {
+    "text": "Quelle maison a fait de la chaussure Tabi à bout fendu une signature ?",
+    "answers": ["Dries Van Noten", "Maison Margiela", "Balmain", "Alaïa"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "accessoires",
+    "fact": "tabi",
+    "source": "https://www.maisonmargiela.com/en-pl/mm-the-tabi.html"
+  },
+  {
+    "text": "Quel type d’accessoire est le carré de soie d’Hermès ?",
+    "answers": ["Une pochette rigide", "Une ceinture", "Un foulard", "Un bracelet"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "accessoires",
+    "fact": "carre-hermes",
+    "source": "https://www.hermes.com/ca/fr/content/235056-six-generations-d-artisan/"
+  },
+  {
+    "text": "À quoi servent les rivets ajoutés aux premiers jeans de travail de Levi Strauss et Jacob Davis ?",
+    "answers": ["À fixer une doublure amovible", "À maintenir les boutons ouverts", "À identifier la taille du vêtement", "À renforcer les points de tension"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "histoire",
+    "fact": "jean-rivets",
+    "source": "https://www.levi.com/US/en_US/features/denim-dictionary"
+  },
+  {
+    "text": "Quel couturier a présenté les chaussures Armadillo dans son défilé « Plato’s Atlantis » ?",
+    "answers": ["Alexander McQueen", "John Galliano", "Vivienne Westwood", "Jean Paul Gaultier"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "accessoires",
+    "fact": "armadillo"
+  },
+  {
+    "text": "Quel nom porte le tissu de laine épais et texturé traditionnellement associé aux vestes britanniques ?",
+    "answers": ["Le tulle", "Le tweed", "Le satin", "La mousseline"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "textiles",
+    "fact": "veste-tweed"
+  },
+  {
+    "text": "Quel colorant donne traditionnellement son bleu au jean ?",
+    "answers": ["Le safran", "Le carmin", "L’indigo", "La garance"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "textiles",
+    "fact": "denim-indigo"
+  },
+  {
+    "text": "Quel métier à tisser a utilisé des cartes perforées pour commander des motifs complexes ?",
+    "answers": ["Le métier à bras simple", "La machine à tricoter circulaire", "Le rouet à pédale", "Le métier Jacquard"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "textiles",
+    "fact": "jacquard"
+  },
+  {
+    "text": "Quel insecte produit les fibres utilisées pour la soie de mûrier ?",
+    "answers": ["Le ver à soie", "L’abeille", "La libellule", "Le scarabée"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "textiles",
+    "fact": "soie-origine"
+  },
+  {
+    "text": "Que signifie « couper dans le biais » en couture ?",
+    "answers": ["Couper parallèle à la lisière", "Couper en diagonale par rapport au droit-fil", "Couper le tissu en deux épaisseurs", "Couper seulement le long d’une couture"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "techniques",
+    "fact": "biais"
+  },
+  {
+    "text": "À quoi sert une toile d’essayage avant de couper le tissu définitif ?",
+    "answers": ["À imperméabiliser le tissu", "À créer un motif imprimé", "À vérifier le volume et la coupe", "À fixer les boutons en métal"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "techniques",
+    "fact": "toile-prototype"
+  },
+  {
+    "text": "Comment appelle-t-on le bord replié et cousu au bas d’un pantalon ?",
+    "answers": ["Une pince", "Un revers de col", "Un soufflet", "Un ourlet"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "techniques",
+    "fact": "ourlet"
+  },
+  {
+    "text": "Quel type de tissage forme les lignes diagonales caractéristiques du denim traditionnel ?",
+    "answers": ["Le sergé", "La toile", "Le satin", "Le tulle"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "textiles",
+    "fact": "serge"
+  },
+  {
+    "text": "Que dessinent les coutures princesse sur un vêtement ajusté ?",
+    "answers": ["Des poches disposées en biais", "De longues lignes qui épousent le buste", "Des plis ouverts au bas des manches", "Un empiècement carré dans le dos"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "techniques",
+    "fact": "princesse-ligne"
+  },
+  {
+    "text": "Dans quel système les vêtements sont-ils produits à l’avance en tailles standard ?",
+    "answers": ["La haute couture sur mesure", "Le sur-mesure intégral", "Le prêt-à-porter", "Le moulage sur mannequin"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "histoire",
+    "fact": "pret-a-porter"
+  },
+  {
+    "text": "Quelle créatrice britannique a contribué à populariser la minijupe dans le Londres des années 1960 ?",
+    "answers": ["Barbara Hulanicki", "Zandra Rhodes", "Laura Ashley", "Mary Quant"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "histoire",
+    "fact": "mary-quant"
+  },
+  {
+    "text": "Quel courant musical et vestimentaire a marqué les premières créations londoniennes de Vivienne Westwood ?",
+    "answers": ["Le punk", "Le grunge", "Le disco", "Le hip-hop"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "histoire",
+    "fact": "westwood-punk"
+  },
+  {
+    "text": "Quelle couturière française est devenue célèbre pour ses robes aux drapés coupés dans le biais ?",
+    "answers": ["Elsa Schiaparelli", "Madeleine Vionnet", "Coco Chanel", "Jeanne Paquin"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "creations",
+    "fact": "vionnet-biais"
+  },
+  {
+    "text": "Quel vêtement, souvent associé aux Andes, se compose traditionnellement d’une étoffe percée pour la tête ?",
+    "answers": ["Le kimono", "Le caftan", "Le poncho", "Le sari"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "traditions",
+    "fact": "poncho"
+  },
+  {
+    "text": "Quel accessoire maintient fermé un kimono japonais traditionnel ?",
+    "answers": ["Un éventail", "Un châle", "Une broche", "Un obi"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "traditions",
+    "fact": "obi"
+  },
+  {
+    "text": "Quel vêtement ample est porté dans plusieurs pays d’Afrique de l’Ouest, souvent par-dessus d’autres pièces ?",
+    "answers": ["Le boubou", "Le kilt", "La toge", "Le hakama"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "traditions",
+    "fact": "boubou"
+  },
+  {
+    "text": "Dans le batik traditionnel, quel matériau protège certaines zones du tissu avant la teinture ?",
+    "answers": ["Le sel", "La cire", "L’amidon seul", "La craie"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "traditions",
+    "fact": "batik-reserve"
+  }
+]

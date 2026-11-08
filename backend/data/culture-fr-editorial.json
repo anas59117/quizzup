@@ -1,0 +1,410 @@
+[
+  {
+    "text": "Quelle est la capitale de la France ?",
+    "answers": ["Lyon", "Marseille", "Paris", "Toulouse"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "patrimoine",
+    "fact": "paris-capitale"
+  },
+  {
+    "text": "En quelle année a eu lieu la prise de la Bastille ?",
+    "answers": ["1789", "1799", "1804", "1815"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "symboles",
+    "fact": "bastille-1789",
+    "format": "date"
+  },
+  {
+    "text": "Quel roi de France a été exécuté pendant la Révolution française ?",
+    "answers": ["Louis XIV", "Louis XV", "Louis XVI", "Charles X"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "symboles",
+    "fact": "louis-xvi-revolution"
+  },
+  {
+    "text": "Quel plat traditionnel de Bourgogne est à base de bœuf mijoté au vin rouge ?",
+    "answers": ["Cassoulet", "Bœuf bourguignon", "Pot-au-feu", "Blanquette"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "gastronomie",
+    "fact": "boeuf-bourguignon"
+  },
+  {
+    "text": "Combien de régions administratives compte la France métropolitaine depuis 2016 ?",
+    "answers": ["11", "13", "18", "22"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "patrimoine",
+    "fact": "regions-metropole"
+  },
+  {
+    "text": "Quel fleuve traverse la ville de Paris ?",
+    "answers": ["La Loire", "Le Rhône", "La Seine", "La Garonne"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "patrimoine",
+    "fact": "seine-paris"
+  },
+  {
+    "text": "Quel est le point culminant de la France ?",
+    "answers": ["Le Mont Blanc", "Le Pic du Midi", "Le Mont Ventoux", "Le Puy de Dôme"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "patrimoine",
+    "fact": "mont-blanc"
+  },
+  {
+    "text": "Quelle est la devise nationale de la France ?",
+    "answers": ["Unité, Travail, Progrès", "Liberté, Égalité, Fraternité", "Honneur et Patrie", "Paix et Prospérité"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "symboles",
+    "fact": "devise-francaise"
+  },
+  {
+    "text": "Qui a écrit \"Les Misérables\" ?",
+    "answers": ["Victor Hugo", "Émile Zola", "Honoré de Balzac", "Gustave Flaubert"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "lettres",
+    "fact": "miserables-auteur"
+  },
+  {
+    "text": "Dans quelle ville se trouve la place du Capitole, devant l’hôtel de ville ?",
+    "answers": ["Lyon", "Nice", "Toulouse", "Bordeaux"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "patrimoine",
+    "fact": "capitole-toulouse"
+  },
+  {
+    "text": "À quelle occasion des concerts gratuits investissent-ils les rues le 21 juin ?",
+    "answers": ["La Fête de la musique", "La Nuit des musées", "Les Journées du patrimoine", "La Nuit blanche"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "traditions",
+    "fact": "fete-musique"
+  },
+  {
+    "text": "Dans quelle ville allume-t-on traditionnellement des lumignons aux fenêtres le 8 décembre ?",
+    "answers": ["Lille", "Lyon", "Bordeaux", "Nantes"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "traditions",
+    "fact": "fete-lumieres",
+    "source": "https://www.fetedeslumieres.lyon.fr/fr/page/autour-du-lumignon"
+  },
+  {
+    "text": "Quelle tradition bretonne rassemble des danseurs au son de musiques et de chants ?",
+    "answers": ["La féria", "La sardinade", "Le fest-noz", "La cavalcade"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "traditions",
+    "fact": "fest-noz",
+    "source": "https://ich.unesco.org/fr/RL/le-fest-noz-rassemblement-festif-base-sur-la-pratique-collective-des-danses-traditionnelles-de-bretagne-00707"
+  },
+  {
+    "text": "Dans quelle ville du Nord le carnaval comporte-t-il un lancer de harengs depuis l’hôtel de ville ?",
+    "answers": ["Lille", "Valenciennes", "Cambrai", "Dunkerque"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "traditions",
+    "fact": "carnaval-dunkerque"
+  },
+  {
+    "text": "Quel personnage féminin symbolise la République française ?",
+    "answers": ["Marianne", "Jeanne d’Arc", "Liberté de Bartholdi", "Bécassine"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "symboles",
+    "fact": "marianne"
+  },
+  {
+    "text": "Dans quel ordre voit-on les bandes du drapeau français de la hampe vers l’extérieur ?",
+    "answers": ["Blanc, bleu, rouge", "Bleu, blanc, rouge", "Rouge, blanc, bleu", "Bleu, rouge, blanc"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "symboles",
+    "fact": "bleu-blanc-rouge"
+  },
+  {
+    "text": "Qui a composé le chant devenu « La Marseillaise » ?",
+    "answers": ["Claude Debussy", "Hector Berlioz", "Rouget de Lisle", "Camille Saint-Saëns"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "symboles",
+    "fact": "marseillaise"
+  },
+  {
+    "text": "Quelle fête se tient à Paris le 14 juillet 1790, un an après la prise de la Bastille ?",
+    "answers": ["La Fête de l’Être suprême", "La Fête de la Raison", "La Fête de la République", "La Fête de la Fédération"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "symboles",
+    "fact": "fete-nationale-1790"
+  },
+  {
+    "text": "Quel animal apparaît comme emblème sur de nombreux maillots de l’équipe de France ?",
+    "answers": ["Le coq", "L’aigle", "Le lion", "Le cerf"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "symboles",
+    "fact": "coq-gaulois"
+  },
+  {
+    "text": "Dans quel plat provençal mijotent notamment courgettes, aubergines et tomates ?",
+    "answers": ["La choucroute", "La ratatouille", "Le cassoulet", "La blanquette"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "gastronomie",
+    "fact": "ratatouille-cuisine"
+  },
+  {
+    "text": "À quelle région historique la quiche aux lardons doit-elle son nom ?",
+    "answers": ["L’Alsace", "La Bretagne", "La Lorraine", "La Normandie"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "gastronomie",
+    "fact": "quiche-lorraine"
+  },
+  {
+    "text": "Quelle pâtisserie bretonne alterne pâte, beurre et sucre pour former un feuilletage caramélisé ?",
+    "answers": ["Le canelé", "La tarte Tatin", "Le Paris-Brest", "Le kouign-amann"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "gastronomie",
+    "fact": "kouign-amann"
+  },
+  {
+    "text": "Quel condiment basque est traditionnellement séché en guirlandes rouges avant d’être réduit en poudre ?",
+    "answers": ["Le piment d’Espelette", "Le poivre de Sichuan", "La moutarde de Dijon", "Le safran du Quercy"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "gastronomie",
+    "fact": "espelette",
+    "source": "https://www.inao.gouv.fr/produit/piment-despelette-ou-piment-despelette-ezpeletako-biperra-20184"
+  },
+  {
+    "text": "Avec quel lait fabrique-t-on le roquefort ?",
+    "answers": ["Du lait de chèvre", "Du lait de brebis", "Du lait de vache", "Du lait de bufflonne"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "gastronomie",
+    "fact": "roquefort",
+    "source": "https://extranet.inao.gouv.fr/fichier/DUEPNORoquefort-251119.pdf"
+  },
+  {
+    "text": "À quelle ville est associée la bouillabaisse traditionnelle ?",
+    "answers": ["Toulouse", "Strasbourg", "Marseille", "Lyon"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "gastronomie",
+    "fact": "bouillabaisse"
+  },
+  {
+    "text": "Quel mets créole épicé est une charcuterie traditionnellement préparée à base de sang de porc ?",
+    "answers": ["Le colombo", "Le féroce d’avocat", "Les accras de morue", "Le boudin antillais"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "gastronomie",
+    "fact": "boudin-antillais"
+  },
+  {
+    "text": "Dans quel massif le comté AOP est-il traditionnellement produit ?",
+    "answers": ["Le Jura", "Les Vosges", "Les Pyrénées", "Le Morvan"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "gastronomie",
+    "fact": "comte"
+  },
+  {
+    "text": "Qui a écrit « Le Petit Prince » ?",
+    "answers": ["Jules Verne", "Antoine de Saint-Exupéry", "Marcel Pagnol", "Albert Camus"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "lettres",
+    "fact": "petit-prince"
+  },
+  {
+    "text": "Quel animal la cigale va-t-elle voir quand elle manque de nourriture dans la fable de La Fontaine ?",
+    "answers": ["Le renard", "Le corbeau", "La fourmi", "Le lièvre"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "lettres",
+    "fact": "cigale"
+  },
+  {
+    "text": "Dans quelle comédie de Molière un faux dévot abuse-t-il de la confiance d’Orgon ?",
+    "answers": ["Le Malade imaginaire", "L’Avare", "Les Fourberies de Scapin", "Tartuffe"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "lettres",
+    "fact": "tartuffe"
+  },
+  {
+    "text": "Dans quel univers social se déroule une grande partie de « Germinal » ?",
+    "answers": ["Les mines de charbon", "Les ports de pêche", "Les maisons de couture", "Les exploitations viticoles"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "lettres",
+    "fact": "germinal"
+  },
+  {
+    "text": "Combien de syllabes compte un alexandrin classique ?",
+    "answers": ["Dix", "Douze", "Huit", "Quatorze"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "lettres",
+    "fact": "alexandrin"
+  },
+  {
+    "text": "Quel écrivain est l’auteur d’« À la recherche du temps perdu » ?",
+    "answers": ["Gustave Flaubert", "Émile Zola", "Marcel Proust", "André Gide"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "lettres",
+    "fact": "recherche-temps"
+  },
+  {
+    "text": "Quel groupe littéraire explore l’écriture avec des contraintes comme le lipogramme ?",
+    "answers": ["La Pléiade", "Le Parnasse", "Les Goncourt", "L’Oulipo"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "lettres",
+    "fact": "oulipo"
+  },
+  {
+    "text": "Comment s’appelle le procédé qui transforme « lourd » en « relou » ?",
+    "answers": ["Le verlan", "Le calembour", "L’euphémisme", "L’allitération"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "langue",
+    "fact": "verlan"
+  },
+  {
+    "text": "Que signifie l’expression « mi-figue, mi-raisin » ?",
+    "answers": ["Entièrement convaincu", "À moitié satisfait, à moitié déçu", "Très pressé", "Sans aucune préférence"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "langue",
+    "fact": "figue-raisin"
+  },
+  {
+    "text": "Que veut dire « quand les poules auront des dents » ?",
+    "answers": ["Bientôt", "Souvent", "Jamais", "Par hasard"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "langue",
+    "fact": "poule-dents"
+  },
+  {
+    "text": "On dit « Quelle ponctualité ! » à quelqu’un qui arrive très en retard. Quelle figure emploie-t-on ?",
+    "answers": ["Une comparaison", "Une anaphore", "Une gradation", "Une antiphrase"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "langue",
+    "fact": "antiphrase"
+  },
+  {
+    "text": "Quel nom donne-t-on à la coupe au milieu d’un alexandrin classique ?",
+    "answers": ["La césure", "La liaison", "Le rejet", "La rime"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "langue",
+    "fact": "cesure"
+  },
+  {
+    "text": "Quel peintre a signé « Impression, soleil levant » ?",
+    "answers": ["Édouard Manet", "Claude Monet", "Auguste Renoir", "Paul Cézanne"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "arts",
+    "fact": "impression-monet"
+  },
+  {
+    "text": "Quel peintre a réalisé « La Liberté guidant le peuple » ?",
+    "answers": ["Théodore Géricault", "Jacques-Louis David", "Eugène Delacroix", "Gustave Courbet"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "arts",
+    "fact": "liberte-delacroix",
+    "source": "https://api-www.louvre.fr/sites/default/files/2024-09/Dossier%20p%C3%A9dagogique%20Libert%C3%A9%20FR.pdf"
+  },
+  {
+    "text": "Quel tableau de Géricault représente les survivants d’un naufrage sur une embarcation de fortune ?",
+    "answers": ["Le Déjeuner sur l’herbe", "L’Enterrement à Ornans", "Le Serment des Horaces", "Le Radeau de la Méduse"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "arts",
+    "fact": "radeau-gericault"
+  },
+  {
+    "text": "Quel usage avait le bâtiment parisien du musée d’Orsay avant d’être un musée ?",
+    "answers": ["Une gare ferroviaire", "Une halle de marché", "Un théâtre", "Un palais de justice"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "patrimoine",
+    "fact": "orsay-gare"
+  },
+  {
+    "text": "Quel ouvrage romain servait à acheminer l’eau vers Nîmes ?",
+    "answers": ["Le pont d’Avignon", "Le pont du Gard", "Le pont de Normandie", "Le viaduc de Millau"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "patrimoine",
+    "fact": "pont-gard"
+  },
+  {
+    "text": "Quel monument normand couronne un îlot entouré par la mer lors des grandes marées ?",
+    "answers": ["Le château de Caen", "Le palais Bénédictine", "Le Mont-Saint-Michel", "Le château de Falaise"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "patrimoine",
+    "fact": "mont-st-michel"
+  },
+  {
+    "text": "Quels architectes ont signé le Centre Pompidou avec Gianfranco Franchini ?",
+    "answers": ["Ieoh Ming Pei et Jean Nouvel", "Le Corbusier et Pierre Jeanneret", "Norman Foster et Frank Gehry", "Renzo Piano et Richard Rogers"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "patrimoine",
+    "fact": "pompidou-architectes",
+    "source": "https://www.centrepompidou.fr/fr/pompidou-plus/magazine/article/de-pompidou-a-beaubourg-lhistoire-secrete-du-projet-de-renzo-piano-et-richard-rogers"
+  },
+  {
+    "text": "Quel événement raconte la Tapisserie de Bayeux ?",
+    "answers": ["La conquête de l’Angleterre par Guillaume", "La prise de Jérusalem par les croisés", "Le sacre de Charlemagne", "La bataille de Bouvines"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "patrimoine",
+    "fact": "tapisserie-bayeux"
+  },
+  {
+    "text": "Dans quel département se trouve la grotte Chauvet ?",
+    "answers": ["La Dordogne", "L’Ardèche", "L’Ariège", "Le Lot"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "patrimoine",
+    "fact": "grotte-chauvet"
+  },
+  {
+    "text": "Quel genre mêlant chant, danse et percussions est inscrit au patrimoine immatériel pour La Réunion ?",
+    "answers": ["Le gwoka", "Le fest-noz", "Le maloya", "Le fado"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "arts",
+    "fact": "maloya",
+    "source": "https://ich.unesco.org/fr/RL/le-maloya-00249"
+  },
+  {
+    "text": "Quel dramaturge a écrit « Cyrano de Bergerac », créé au théâtre en 1897 ?",
+    "answers": ["Georges Feydeau", "Victor Hugo", "Alfred de Musset", "Edmond Rostand"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "lettres",
+    "fact": "edmond-rostand"
+  }
+]

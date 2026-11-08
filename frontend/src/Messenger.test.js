@@ -7,7 +7,7 @@ let root, container;
 beforeEach(() => { localStorage.setItem('quizzup-lang', 'en'); container = document.createElement('div'); document.body.appendChild(container); root = createRoot(container); });
 afterEach(() => { act(() => root.unmount()); container.remove(); });
 const base = () => ({ friends: [{id:'peer',name:'Camille',online:true}], requests: [], conversations: [], messages: {}, connected: true, clientId:'me', openConversation:jest.fn(),closeConversation:jest.fn(),requestConversations:jest.fn(),sendDM:jest.fn(() => false),createChallenge:jest.fn(() => true),respondChallenge:jest.fn(),requestHistory:jest.fn() });
-const render = social => act(() => root.render(<I18nProvider><Messenger social={social}/></I18nProvider>));
+const render = (social, props) => act(() => root.render(<I18nProvider><Messenger social={social} {...props}/></I18nProvider>));
 test('inbox uses real peers and server unread then opens a thread', () => {
  const social=base(); social.conversations=[{peer:social.friends[0],unread:3,lastMessage:{text:'Hello',kind:'text',createdAt:'2026-10-18'}}]; social.unreadCount=3;
  render(social); expect(container.querySelector('.messenger-row').textContent).toContain('Hello'); expect(container.querySelector('.messenger-row-meta b').textContent).toBe('3');
@@ -51,4 +51,15 @@ test('take turns chooser sends async mode while recipient cannot play before acc
  render(social);expect(container.querySelector('.messenger-duel').textContent).not.toContain('Play my');
  act(()=>container.querySelector('.messenger-challenge').click());expect(container.querySelector('.messenger-modes button').getAttribute('aria-pressed')).toBe('true');
  act(()=>container.querySelectorAll('.messenger-modes button')[1].click());act(()=>container.querySelector('.messenger-themes button').click());expect(social.createChallenge).toHaveBeenCalledWith('peer','movies','async');
+});
+
+test('a profile challenge opens the chooser only for the intended conversation', () => {
+ const social=base(), opened=jest.fn();
+ render({...social,activeConversationId:'other'},{initialChallengePeer:'peer',onChallengeOpened:opened});
+ expect(container.querySelector('.messenger-sheet')).toBeNull();
+ render({...social,activeConversationId:'peer'},{initialChallengePeer:'peer',onChallengeOpened:opened});
+ expect(container.querySelector('.messenger-sheet')).not.toBeNull();
+ expect(opened).toHaveBeenCalledTimes(1);
+ act(() => container.querySelector('.messenger-themes button').click());
+ expect(social.createChallenge).toHaveBeenCalledWith('peer','movies','live');
 });

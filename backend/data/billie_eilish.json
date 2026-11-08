@@ -7,7 +7,8 @@
       "Frank",
       "Felix"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel est le titre du premier album studio de Billie Eilish ?",
@@ -17,17 +18,21 @@
       "Hit Me Hard and Soft",
       "Don’t Smile at Me"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-02",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Copycat » ?",
+    "text": "Sur quel disque figure le titre « Copycat » ?",
     "answers": [
       "When We All Fall Asleep, Where Do We Go?",
       "Happier Than Ever",
       "Don’t Smile at Me",
       "Hit Me Hard and Soft"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:copycat",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Idontwannabeyouanymore » ?",
@@ -37,17 +42,21 @@
       "You Should See Me in a Crown",
       "Copycat"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:copycat",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Idontwannabeyouanymore » ?",
+    "text": "Sur quel disque figure le titre « Idontwannabeyouanymore » ?",
     "answers": [
       "Don’t Smile at Me",
       "When We All Fall Asleep, Where Do We Go?",
       "Happier Than Ever",
       "Hit Me Hard and Soft"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:idontwannabeyouanymore",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « My Boy » ?",
@@ -57,17 +66,21 @@
       "Wish You Were Gay",
       "When the Party’s Over"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:idontwannabeyouanymore",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « My Boy » ?",
+    "text": "Sur quel disque figure le titre « My Boy » ?",
     "answers": [
       "When We All Fall Asleep, Where Do We Go?",
       "Happier Than Ever",
       "Don’t Smile at Me",
       "Hit Me Hard and Soft"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:my boy",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Watch » ?",
@@ -77,17 +90,21 @@
       "Billie Bossa Nova",
       "My Boy"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:my boy",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Watch » ?",
+    "text": "Sur quel disque figure le titre « Watch » ?",
     "answers": [
       "Don’t Smile at Me",
       "When We All Fall Asleep, Where Do We Go?",
       "Happier Than Ever",
       "Hit Me Hard and Soft"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:watch",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Party Favor » ?",
@@ -97,17 +114,21 @@
       "Oxytocin",
       "Goldwing"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:watch",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Party Favor » ?",
+    "text": "Sur quel disque figure le titre « Party Favor » ?",
     "answers": [
       "When We All Fall Asleep, Where Do We Go?",
       "Happier Than Ever",
       "Don’t Smile at Me",
       "Hit Me Hard and Soft"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:party favor",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Bellyache » ?",
@@ -117,17 +138,21 @@
       "Chihiro",
       "Party Favor"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:party favor",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Bellyache » ?",
+    "text": "Sur quel disque figure le titre « Bellyache » ?",
     "answers": [
       "Don’t Smile at Me",
       "When We All Fall Asleep, Where Do We Go?",
       "Happier Than Ever",
       "Hit Me Hard and Soft"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:bellyache",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Copycat » ?",
@@ -137,17 +162,21 @@
       "Wildflower",
       "The Greatest"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:bellyache",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Bad Guy » ?",
+    "text": "Sur quel disque figure le titre « Bad Guy » ?",
     "answers": [
       "Don’t Smile at Me",
       "Happier Than Ever",
       "When We All Fall Asleep, Where Do We Go?",
       "Hit Me Hard and Soft"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:bad guy",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Xanny » ?",
@@ -157,17 +186,21 @@
       "My Boy",
       "Bad Guy"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:bad guy",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Xanny » ?",
+    "text": "Sur quel disque figure le titre « Xanny » ?",
     "answers": [
       "When We All Fall Asleep, Where Do We Go?",
       "Don’t Smile at Me",
       "Happier Than Ever",
       "Hit Me Hard and Soft"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:xanny",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « You Should See Me in a Crown » ?",
@@ -177,17 +210,21 @@
       "Party Favor",
       "Bellyache"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:xanny",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « You Should See Me in a Crown » ?",
+    "text": "Sur quel disque figure le titre « You Should See Me in a Crown » ?",
     "answers": [
       "Don’t Smile at Me",
       "Happier Than Ever",
       "When We All Fall Asleep, Where Do We Go?",
       "Hit Me Hard and Soft"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:you should see me in a crown",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « All the Good Girls Go to Hell » ?",
@@ -197,17 +234,21 @@
       "Billie Bossa Nova",
       "You Should See Me in a Crown"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:you should see me in a crown",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « All the Good Girls Go to Hell » ?",
+    "text": "Sur quel disque figure le titre « All the Good Girls Go to Hell » ?",
     "answers": [
       "When We All Fall Asleep, Where Do We Go?",
       "Don’t Smile at Me",
       "Happier Than Ever",
       "Hit Me Hard and Soft"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:all the good girls go to hell",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Wish You Were Gay » ?",
@@ -217,17 +258,21 @@
       "Oxytocin",
       "Goldwing"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:all the good girls go to hell",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Wish You Were Gay » ?",
+    "text": "Sur quel disque figure le titre « Wish You Were Gay » ?",
     "answers": [
       "Don’t Smile at Me",
       "Happier Than Ever",
       "When We All Fall Asleep, Where Do We Go?",
       "Hit Me Hard and Soft"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:wish you were gay",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « When the Party’s Over » ?",
@@ -237,17 +282,21 @@
       "Chihiro",
       "Wish You Were Gay"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:wish you were gay",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « When the Party’s Over » ?",
+    "text": "Sur quel disque figure le titre « When the Party’s Over » ?",
     "answers": [
       "When We All Fall Asleep, Where Do We Go?",
       "Don’t Smile at Me",
       "Happier Than Ever",
       "Hit Me Hard and Soft"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:when the party s over",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Bad Guy » ?",
@@ -257,17 +306,21 @@
       "Wildflower",
       "The Greatest"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:when the party s over",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Getting Older » ?",
+    "text": "Sur quel disque figure le titre « Getting Older » ?",
     "answers": [
       "Don’t Smile at Me",
       "When We All Fall Asleep, Where Do We Go?",
       "Happier Than Ever",
       "Hit Me Hard and Soft"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:getting older",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « I Didn’t Change My Number » ?",
@@ -277,17 +330,21 @@
       "My Boy",
       "Getting Older"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:getting older",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « I Didn’t Change My Number » ?",
+    "text": "Sur quel disque figure le titre « I Didn’t Change My Number » ?",
     "answers": [
       "Happier Than Ever",
       "Don’t Smile at Me",
       "When We All Fall Asleep, Where Do We Go?",
       "Hit Me Hard and Soft"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:i didn t change my number",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Billie Bossa Nova » ?",
@@ -297,17 +354,21 @@
       "Party Favor",
       "Bellyache"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:i didn t change my number",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Billie Bossa Nova » ?",
+    "text": "Sur quel disque figure le titre « Billie Bossa Nova » ?",
     "answers": [
       "Don’t Smile at Me",
       "When We All Fall Asleep, Where Do We Go?",
       "Happier Than Ever",
       "Hit Me Hard and Soft"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:billie bossa nova",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « My Future » ?",
@@ -317,17 +378,21 @@
       "You Should See Me in a Crown",
       "Billie Bossa Nova"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:billie bossa nova",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « My Future » ?",
+    "text": "Sur quel disque figure le titre « My Future » ?",
     "answers": [
       "Happier Than Ever",
       "Don’t Smile at Me",
       "When We All Fall Asleep, Where Do We Go?",
       "Hit Me Hard and Soft"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:my future",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Oxytocin » ?",
@@ -337,17 +402,21 @@
       "Wish You Were Gay",
       "When the Party’s Over"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:my future",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Oxytocin » ?",
+    "text": "Sur quel disque figure le titre « Oxytocin » ?",
     "answers": [
       "Don’t Smile at Me",
       "When We All Fall Asleep, Where Do We Go?",
       "Happier Than Ever",
       "Hit Me Hard and Soft"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:oxytocin",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Goldwing » ?",
@@ -357,17 +426,21 @@
       "Chihiro",
       "Oxytocin"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:oxytocin",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Goldwing » ?",
+    "text": "Sur quel disque figure le titre « Goldwing » ?",
     "answers": [
       "Happier Than Ever",
       "Don’t Smile at Me",
       "When We All Fall Asleep, Where Do We Go?",
       "Hit Me Hard and Soft"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:goldwing",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Getting Older » ?",
@@ -377,17 +450,21 @@
       "Wildflower",
       "The Greatest"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:goldwing",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Skinny » ?",
+    "text": "Sur quel disque figure le titre « Skinny » ?",
     "answers": [
       "Don’t Smile at Me",
       "When We All Fall Asleep, Where Do We Go?",
       "Hit Me Hard and Soft",
       "Happier Than Ever"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:skinny",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Lunch » ?",
@@ -397,17 +474,21 @@
       "My Boy",
       "Skinny"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:skinny",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Lunch » ?",
+    "text": "Sur quel disque figure le titre « Lunch » ?",
     "answers": [
       "Hit Me Hard and Soft",
       "Don’t Smile at Me",
       "When We All Fall Asleep, Where Do We Go?",
       "Happier Than Ever"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:lunch",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Chihiro » ?",
@@ -417,17 +498,21 @@
       "Party Favor",
       "Bellyache"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:lunch",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Chihiro » ?",
+    "text": "Sur quel disque figure le titre « Chihiro » ?",
     "answers": [
       "Don’t Smile at Me",
       "When We All Fall Asleep, Where Do We Go?",
       "Hit Me Hard and Soft",
       "Happier Than Ever"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:chihiro",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Birds of a Feather » ?",
@@ -437,17 +522,21 @@
       "You Should See Me in a Crown",
       "Chihiro"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:chihiro",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Birds of a Feather » ?",
+    "text": "Sur quel disque figure le titre « Birds of a Feather » ?",
     "answers": [
       "Hit Me Hard and Soft",
       "Don’t Smile at Me",
       "When We All Fall Asleep, Where Do We Go?",
       "Happier Than Ever"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:birds of a feather",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Wildflower » ?",
@@ -457,17 +546,21 @@
       "Wish You Were Gay",
       "When the Party’s Over"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:birds of a feather",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « Wildflower » ?",
+    "text": "Sur quel disque figure le titre « Wildflower » ?",
     "answers": [
       "Don’t Smile at Me",
       "When We All Fall Asleep, Where Do We Go?",
       "Hit Me Hard and Soft",
       "Happier Than Ever"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:wildflower",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « The Greatest » ?",
@@ -477,17 +570,21 @@
       "Billie Bossa Nova",
       "Wildflower"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:wildflower",
+    "format": "album"
   },
   {
-    "text": "Sur quel album figure le titre « The Greatest » ?",
+    "text": "Sur quel disque figure le titre « The Greatest » ?",
     "answers": [
       "Hit Me Hard and Soft",
       "Don’t Smile at Me",
       "When We All Fall Asleep, Where Do We Go?",
       "Happier Than Ever"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:the greatest",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Skinny » ?",
@@ -497,6 +594,228 @@
       "Oxytocin",
       "Goldwing"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:the greatest",
+    "format": "album"
+  },
+  {
+    "text": "Pour quel film Billie Eilish et Finneas ont-ils écrit « What Was I Made For? » ?",
+    "answers": [
+      "Barbie",
+      "Oppenheimer",
+      "La La Land",
+      "A Star Is Born"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "cinema",
+    "fact": "billie-barbie-what-was",
+    "source": "https://press.oscars.org/news/jon-batiste-becky-g-billie-eilish-and-finneas-oconnell-scott-george-and-osage-singers-ryan"
+  },
+  {
+    "text": "Avec qui Billie Eilish interprète-t-elle « lovely » ?",
+    "answers": [
+      "The Weeknd",
+      "Khalid",
+      "Troye Sivan",
+      "Shawn Mendes"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "collaborations",
+    "fact": "billie-lovely-khalid"
+  },
+  {
+    "text": "Quelle chanson Billie Eilish interprète-t-elle pour le James Bond sorti en 2021 ?",
+    "answers": [
+      "Writing’s on the Wall",
+      "Skyfall",
+      "No Time to Die",
+      "Another Way to Die"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "cinema",
+    "fact": "billie-bond-song",
+    "source": "https://www.grammy.com/news/billie-eilish-and-finneas-win-best-song-written-visual-media-single-2021-grammy-awards-show/"
+  },
+  {
+    "text": "Quel chanteur apparaît sur le remix officiel de « bad guy » ?",
+    "answers": [
+      "Post Malone",
+      "Charlie Puth",
+      "Ed Sheeran",
+      "Justin Bieber"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "collaborations",
+    "fact": "billie-bad-guy-remix"
+  },
+  {
+    "text": "Quel titre de Billie Eilish gagne le Grammy de l’enregistrement de l’année en 2021 ?",
+    "answers": [
+      "everything i wanted",
+      "Therefore I Am",
+      "Your Power",
+      "Happier Than Ever"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "recompenses",
+    "fact": "billie-grammy-everything-i-wanted",
+    "source": "https://www.grammy.com/news/billie-eilish-wins-record-of-the-year-2021-winner/"
+  },
+  {
+    "text": "Qui a réalisé le documentaire « Billie Eilish: The World’s a Little Blurry » ?",
+    "answers": [
+      "Morgan Neville",
+      "R. J. Cutler",
+      "Jon M. Chu",
+      "Davis Guggenheim"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "cinema",
+    "fact": "billie-blurry-cutler"
+  },
+  {
+    "text": "Dans quelle salle en plein air a été tourné le concert filmé « Happier Than Ever: A Love Letter to Los Angeles » ?",
+    "answers": [
+      "Le Greek Theatre",
+      "Le Red Rocks Amphitheatre",
+      "Le Hollywood Bowl",
+      "Le Madison Square Garden"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "scene",
+    "fact": "billie-hollywood-bowl",
+    "source": "https://press.disneyplus.com/news/billie-elish-cinematic-concert-experience-to-premiere-september-3-on-disney-plus"
+  },
+  {
+    "text": "Qui a écrit « Ocean Eyes », la chanson qui a fait connaître Billie Eilish ?",
+    "answers": [
+      "Jack Antonoff",
+      "Lorde",
+      "Dan Auerbach",
+      "Finneas"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "production",
+    "fact": "billie-ocean-eyes-auteur"
+  },
+  {
+    "text": "Dans quelle catégorie les Oscars récompensent-ils Billie Eilish et Finneas pour leurs contributions à James Bond puis à « Barbie » ?",
+    "answers": [
+      "Meilleure musique de film",
+      "Meilleur son",
+      "Meilleure chanson originale",
+      "Meilleur montage"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "recompenses",
+    "fact": "billie-oscars-categorie-chanson-originale",
+    "source": "https://www.oscars.org/oscars/ceremonies/2024"
+  },
+  {
+    "text": "De quelle couleur sont les larmes qui coulent sur le visage de Billie Eilish dans le clip de « when the party’s over » ?",
+    "answers": [
+      "Noires",
+      "Rouges",
+      "Bleues",
+      "Dorées"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "clips",
+    "fact": "billie-when-party-over-larmes-noires",
+    "source": "https://www.youtube.com/watch?v=pbMwTqkKSps"
+  },
+  {
+    "text": "Quel instrument saturé marque le passage de « Happier Than Ever » d’une ballade douce à une fin rock ?",
+    "answers": [
+      "Le piano",
+      "La harpe",
+      "Le violon",
+      "La guitare électrique"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "style",
+    "fact": "billie-happier-than-ever-guitare-saturee",
+    "source": "https://www.youtube.com/watch?v=5GJWxDKyk3A"
+  },
+  {
+    "text": "Dans quelle série entend-on le duo « Lo Vas a Olvidar » de Billie Eilish et Rosalía, dans un épisode consacré à Jules ?",
+    "answers": [
+      "Sex Education",
+      "Euphoria",
+      "Skins",
+      "Élite"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "cinema",
+    "fact": "billie-lo-vas-olvidar-euphoria",
+    "source": "https://www.sonymusic.es/actualidad/rosalia-y-billie-eilish-se-unen-en-lo-vas-a-olvidar/"
+  },
+  {
+    "text": "Quel artiste japonais signe le clip animé de « you should see me in a crown » ?",
+    "answers": [
+      "Hayao Miyazaki",
+      "Yoshitomo Nara",
+      "Takashi Murakami",
+      "Makoto Shinkai"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "clips",
+    "fact": "billie-crown-clip-murakami",
+    "source": "https://www.youtube.com/watch?v=coLerbRvgsQ"
+  },
+  {
+    "text": "Quelle chanson Billie Eilish interprète-t-elle lors de la passation vers Los Angeles à la clôture des Jeux de Paris 2024 ?",
+    "answers": [
+      "Birds of a Feather",
+      "Bad Guy",
+      "Ocean Eyes",
+      "Lunch"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "scene",
+    "fact": "billie-la28-passation-birds-feather",
+    "source": "https://www.youtube.com/watch?v=vln_WalLcp0"
+  },
+  {
+    "text": "Quel instrument Fender et Billie Eilish conçoivent-ils pour son modèle signature lancé en 2020 ?",
+    "answers": [
+      "Une basse à cinq cordes",
+      "Un ukulélé",
+      "Une guitare électrique",
+      "Une mandoline"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "instruments",
+    "fact": "billie-fender-ukulele-signature",
+    "source": "https://www.fender.com/articles/gear/billie-eilish-signature-ukulele"
+  },
+  {
+    "text": "Quel son entendu en Australie a inspiré le rythme sous le motif de synthétiseur de « bad guy » ?",
+    "answers": [
+      "Une annonce de gare",
+      "Une sirène de plage",
+      "Un avertisseur de tramway",
+      "Le bip d’un passage piéton"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "production",
+    "fact": "billie-bad-guy-rythme-passage-pieton",
+    "source": "https://www.abc.net.au/triplej/news/billie-eilish-triple-j-hottest-100-bad-guy-win-feature-interview/11901030"
   }
 ]

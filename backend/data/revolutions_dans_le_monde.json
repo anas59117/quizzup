@@ -7,17 +7,9 @@
       "14 juillet 1789",
       "1791-1804"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère révolutionnaire correspond à la révolution anglaise dite Glorieuse ?",
-    "answers": [
-      "1776",
-      "1688",
-      "14 juillet 1789",
-      "1791-1804"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la Déclaration d'indépendance américaine ?",
@@ -27,7 +19,9 @@
       "1776",
       "1848"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03",
+    "format": "date"
   },
   {
     "text": "Quel repère révolutionnaire correspond à la Déclaration d'indépendance américaine ?",
@@ -37,7 +31,9 @@
       "1848",
       "1776"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la prise de la Bastille ?",
@@ -47,7 +43,9 @@
       "1848",
       "1910"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05",
+    "format": "date"
   },
   {
     "text": "Quel repère révolutionnaire correspond à la prise de la Bastille ?",
@@ -57,7 +55,9 @@
       "1848",
       "1910"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la révolution haïtienne ?",
@@ -67,17 +67,9 @@
       "1791-1804",
       "1917"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère révolutionnaire correspond à la révolution haïtienne ?",
-    "answers": [
-      "1848",
-      "1910",
-      "1917",
-      "1791-1804"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on les révolutions européennes du Printemps des peuples ?",
@@ -87,17 +79,21 @@
       "1917",
       "1949"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09",
+    "format": "date"
   },
   {
-    "text": "Quel repère révolutionnaire correspond à les révolutions européennes du Printemps des peuples ?",
+    "text": "Quel repère révolutionnaire correspond aux révolutions européennes du Printemps des peuples ?",
     "answers": [
       "1910",
       "1848",
       "1917",
       "1949"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la révolution mexicaine ?",
@@ -107,7 +103,9 @@
       "1910",
       "1959"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11",
+    "format": "date"
   },
   {
     "text": "Quel repère révolutionnaire correspond à la révolution mexicaine ?",
@@ -117,7 +115,9 @@
       "1959",
       "1910"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la révolution russe de Février ?",
@@ -127,17 +127,9 @@
       "1959",
       "1954-1962"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère révolutionnaire correspond à la révolution russe de Février ?",
-    "answers": [
-      "1949",
-      "1917",
-      "1959",
-      "1954-1962"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la révolution d'Octobre ?",
@@ -147,7 +139,9 @@
       "1917",
       "1954-1962"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15",
+    "format": "date"
   },
   {
     "text": "Quel repère révolutionnaire correspond à la révolution d'Octobre ?",
@@ -157,7 +151,9 @@
       "1954-1962",
       "1917"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la révolution chinoise communiste victorieuse ?",
@@ -167,7 +163,9 @@
       "1954-1962",
       "1974"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17",
+    "format": "date"
   },
   {
     "text": "Quel repère révolutionnaire correspond à la révolution chinoise communiste victorieuse ?",
@@ -177,7 +175,9 @@
       "1954-1962",
       "1974"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la révolution cubaine victorieuse ?",
@@ -187,17 +187,9 @@
       "1959",
       "1979"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère révolutionnaire correspond à la révolution cubaine victorieuse ?",
-    "answers": [
-      "1954-1962",
-      "1974",
-      "1979",
-      "1959"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la révolution algérienne ?",
@@ -207,7 +199,9 @@
       "1979",
       "1989"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21",
+    "format": "date"
   },
   {
     "text": "Quel repère révolutionnaire correspond à la révolution algérienne ?",
@@ -217,7 +211,9 @@
       "1979",
       "1989"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la révolution des Œillets ?",
@@ -227,7 +223,9 @@
       "1974",
       "2004"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23",
+    "format": "date"
   },
   {
     "text": "Quel repère révolutionnaire correspond à la révolution des Œillets ?",
@@ -237,7 +235,9 @@
       "2004",
       "1974"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la révolution iranienne ?",
@@ -247,17 +247,9 @@
       "2004",
       "2010-2011"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère révolutionnaire correspond à la révolution iranienne ?",
-    "answers": [
-      "1989",
-      "1979",
-      "2004",
-      "2010-2011"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la révolution sandiniste victorieuse ?",
@@ -267,7 +259,9 @@
       "1979",
       "2010-2011"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27",
+    "format": "date"
   },
   {
     "text": "Quel repère révolutionnaire correspond à la révolution sandiniste victorieuse ?",
@@ -277,7 +271,9 @@
       "2010-2011",
       "1979"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la révolution de Velours ?",
@@ -287,7 +283,9 @@
       "2010-2011",
       "1934-1935"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29",
+    "format": "date"
   },
   {
     "text": "Quel repère révolutionnaire correspond à la révolution de Velours ?",
@@ -297,7 +295,9 @@
       "2010-2011",
       "1934-1935"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la révolution orange ?",
@@ -307,17 +307,9 @@
       "2004",
       "la Révolution française"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère révolutionnaire correspond à la révolution orange ?",
-    "answers": [
-      "2010-2011",
-      "1934-1935",
-      "la Révolution française",
-      "2004"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la révolution tunisienne ?",
@@ -327,7 +319,9 @@
       "la Révolution française",
       "la révolution américaine"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33",
+    "format": "date"
   },
   {
     "text": "Quel repère révolutionnaire correspond à la révolution tunisienne ?",
@@ -337,7 +331,9 @@
       "la Révolution française",
       "la révolution américaine"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on la longue marche chinoise ?",
@@ -347,7 +343,9 @@
       "1934-1935",
       "la révolution haïtienne"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35",
+    "format": "date"
   },
   {
     "text": "Quel repère révolutionnaire correspond à la longue marche chinoise ?",
@@ -357,7 +355,9 @@
       "la révolution haïtienne",
       "1934-1935"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on le serment du Jeu de paume ?",
@@ -367,17 +367,8 @@
       "la révolution haïtienne",
       "la révolution mexicaine"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère révolutionnaire correspond à le serment du Jeu de paume ?",
-    "answers": [
-      "la révolution américaine",
-      "la Révolution française",
-      "la révolution haïtienne",
-      "la révolution mexicaine"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on le Boston Tea Party ?",
@@ -387,17 +378,19 @@
       "la révolution américaine",
       "la révolution russe"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
-    "text": "Quel repère révolutionnaire correspond à le Boston Tea Party ?",
+    "text": "Quel repère révolutionnaire correspond au Boston Tea Party ?",
     "answers": [
       "la révolution haïtienne",
       "la révolution mexicaine",
       "la révolution russe",
       "la révolution américaine"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on Toussaint Louverture ?",
@@ -407,7 +400,8 @@
       "la révolution russe",
       "la révolution chinoise"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel repère révolutionnaire correspond à Toussaint Louverture ?",
@@ -417,7 +411,8 @@
       "la révolution russe",
       "la révolution chinoise"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on Emiliano Zapata ?",
@@ -427,17 +422,8 @@
       "la révolution mexicaine",
       "l'Afrique du Sud"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère révolutionnaire correspond à Emiliano Zapata ?",
-    "answers": [
-      "la révolution russe",
-      "la révolution chinoise",
-      "l'Afrique du Sud",
-      "la révolution mexicaine"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on Lénine ?",
@@ -447,7 +433,8 @@
       "l'Afrique du Sud",
       "1688"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel repère révolutionnaire correspond à Lénine ?",
@@ -457,7 +444,8 @@
       "l'Afrique du Sud",
       "1688"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on Mao Zedong ?",
@@ -467,7 +455,8 @@
       "la révolution chinoise",
       "1776"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel repère révolutionnaire correspond à Mao Zedong ?",
@@ -477,7 +466,8 @@
       "1776",
       "la révolution chinoise"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "À quelle date, quel pays ou mouvement associe-t-on Nelson Mandela et la fin de l'apartheid ?",
@@ -487,7 +477,8 @@
       "1776",
       "14 juillet 1789"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quel repère révolutionnaire correspond à Nelson Mandela et la fin de l'apartheid ?",
@@ -497,6 +488,115 @@
       "1776",
       "14 juillet 1789"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quel texte anglais limite le pouvoir de la Couronne après la Glorieuse Révolution ?",
+    "answers": [
+      "Le Bill of Rights de 1689",
+      "L’Acte d’Union de 1707",
+      "L’Habeas Corpus de 1679",
+      "Le Reform Act de 1832"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "institutions",
+    "fact": "glorieuse-bill-rights",
+    "source": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/overview/billofrights/"
+  },
+  {
+    "text": "Combien de colonies britanniques déclarent leur indépendance dans le texte américain de 1776 ?",
+    "answers": [
+      "Dix",
+      "Treize",
+      "Douze",
+      "Quinze"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "institutions",
+    "fact": "colonies-americaines-nombre",
+    "source": "https://www.archives.gov/founding-docs/declaration-transcript"
+  },
+  {
+    "text": "Quel général proclame l’indépendance d’Haïti après la défaite de l’expédition française ?",
+    "answers": [
+      "Henri Christophe",
+      "Alexandre Pétion",
+      "Jean-Jacques Dessalines",
+      "Toussaint Louverture"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "haiti-dessalines"
+  },
+  {
+    "text": "Quel président du Mexique est poussé à la démission au début de la révolution lancée en 1910 ?",
+    "answers": [
+      "Venustiano Carranza",
+      "Álvaro Obregón",
+      "Benito Juárez",
+      "Porfirio Díaz"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "personnages",
+    "fact": "mexique-diaz",
+    "source": "https://www.loc.gov/exhibits/mexican-revolution-and-the-united-states/timeline.html"
+  },
+  {
+    "text": "Quel mouvement prend le pouvoir à Petrograd pendant la révolution russe d’Octobre ?",
+    "answers": [
+      "Les bolcheviks",
+      "Les mencheviks",
+      "Les décembristes",
+      "Les cadets"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "mouvements",
+    "fact": "petrograd-bolcheviks"
+  },
+  {
+    "text": "Lors du soulèvement portugais de 1974, quelles fleurs sont placées dans les canons des fusils ?",
+    "answers": [
+      "Des roses",
+      "Des œillets",
+      "Des jonquilles",
+      "Des coquelicots"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "symboles",
+    "fact": "portugal-oeillets-fusils"
+  },
+  {
+    "text": "Quelle chanson diffusée à la radio a servi de signal aux militaires lors de la révolution des Œillets ?",
+    "answers": [
+      "A Portuguesa",
+      "Uma Casa Portuguesa",
+      "Grândola, Vila Morena",
+      "Lisboa Antiga"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "symboles",
+    "fact": "portugal-signal-radio",
+    "source": "https://app.parlamento.pt/ARParJov2021/NewsArticle/Download/68/901070F0-0C8F-4C6A-A176-F6A6275C8DD5.pdf"
+  },
+  {
+    "text": "Quel dramaturge et dissident devient président après la révolution de Velours ?",
+    "answers": [
+      "Alexander Dubček",
+      "Milan Kundera",
+      "Lech Wałęsa",
+      "Václav Havel"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "prague-havel"
   }
 ]

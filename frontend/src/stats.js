@@ -18,18 +18,18 @@ export function useStats() {
 export function ProfileStats({ stats }) {
   const { t } = useI18n();
   const rows = [
-    [stats.level, t('level')],
-    [stats.games, t('games')],
-    [stats.wins, t('wins')],
-    [stats.dayStreak || 0, t('dayStreak')],
-    [stats.streak, t('streak')],
+    [stats.games || 0, t('games')],
+    [stats.wins || 0, t('wins')],
     [stats.coins || 0, t('coinBalance')],
   ];
   return (
-    <div className="profile-stats">
-      {rows.map(([v, l]) => (
-        <div key={l} className="pstat"><div className="pstat-val">{v}</div><div className="pstat-lbl">{l}</div></div>
-      ))}
-    </div>
+    <>
+      <dl className="profile-stats">
+        {rows.map(([value, label]) => (
+          <div key={label} className="pstat"><dt className="pstat-lbl">{label}</dt><dd className="pstat-val">{value}</dd></div>
+        ))}
+      </dl>
+      {stats.streak > 0 && <p className="profile-win-streak">{t('streak')} · {stats.streak}</p>}
+    </>
   );
 }

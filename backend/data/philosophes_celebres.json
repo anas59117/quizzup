@@ -7,17 +7,8 @@
       "Socrate",
       "Marc Aurèle"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel penseur est connu pour l'allégorie de la caverne ?",
-    "answers": [
-      "Aristote",
-      "Platon",
-      "Socrate",
-      "Marc Aurèle"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel philosophe associe-t-on à l'éthique de la vertu ?",
@@ -27,7 +18,8 @@
       "Aristote",
       "Épictète"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel penseur est connu pour l'éthique de la vertu ?",
@@ -37,7 +29,8 @@
       "Épictète",
       "Aristote"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel philosophe associe-t-on à « Connais-toi toi-même » dans la tradition philosophique grecque ?",
@@ -47,7 +40,8 @@
       "Épictète",
       "René Descartes"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel penseur est connu pour « Connais-toi toi-même » dans la tradition philosophique grecque ?",
@@ -57,37 +51,30 @@
       "Épictète",
       "René Descartes"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
-    "text": "Quel philosophe associe-t-on à le stoïcisme romain des Pensées pour moi-même ?",
+    "text": "Quel philosophe associe-t-on au stoïcisme romain des Pensées pour moi-même ?",
     "answers": [
       "Épictète",
       "René Descartes",
       "Marc Aurèle",
       "Blaise Pascal"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
-    "text": "Quel penseur est connu pour le stoïcisme romain des Pensées pour moi-même ?",
-    "answers": [
-      "Épictète",
-      "René Descartes",
-      "Blaise Pascal",
-      "Marc Aurèle"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel philosophe associe-t-on à le Manuel stoïcien ?",
+    "text": "Quel philosophe associe-t-on au Manuel stoïcien ?",
     "answers": [
       "Épictète",
       "René Descartes",
       "Blaise Pascal",
       "John Locke"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel penseur est connu pour le Manuel stoïcien ?",
@@ -97,17 +84,19 @@
       "Blaise Pascal",
       "John Locke"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
-    "text": "Quel philosophe associe-t-on à le doute méthodique ?",
+    "text": "Quel philosophe associe-t-on au doute méthodique ?",
     "answers": [
       "Blaise Pascal",
       "John Locke",
       "René Descartes",
       "Jean-Jacques Rousseau"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel penseur est connu pour le doute méthodique ?",
@@ -117,27 +106,19 @@
       "Jean-Jacques Rousseau",
       "René Descartes"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
-    "text": "Quel philosophe associe-t-on à le pari sur l'existence de Dieu ?",
+    "text": "Quel philosophe associe-t-on au pari sur l'existence de Dieu ?",
     "answers": [
       "Blaise Pascal",
       "John Locke",
       "Jean-Jacques Rousseau",
       "Emmanuel Kant"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel penseur est connu pour le pari sur l'existence de Dieu ?",
-    "answers": [
-      "John Locke",
-      "Blaise Pascal",
-      "Jean-Jacques Rousseau",
-      "Emmanuel Kant"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quel philosophe associe-t-on à l'empirisme de l'Essai sur l'entendement humain ?",
@@ -147,7 +128,8 @@
       "John Locke",
       "Georg Wilhelm Friedrich Hegel"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel penseur est connu pour l'empirisme de l'Essai sur l'entendement humain ?",
@@ -157,17 +139,19 @@
       "Georg Wilhelm Friedrich Hegel",
       "John Locke"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
-    "text": "Quel philosophe associe-t-on à le contrat social et la volonté générale ?",
+    "text": "Quel philosophe associe-t-on au contrat social et la volonté générale ?",
     "answers": [
       "Jean-Jacques Rousseau",
       "Emmanuel Kant",
       "Georg Wilhelm Friedrich Hegel",
       "Jeremy Bentham"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel penseur est connu pour le contrat social et la volonté générale ?",
@@ -177,7 +161,8 @@
       "Georg Wilhelm Friedrich Hegel",
       "Jeremy Bentham"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel philosophe associe-t-on à l'impératif catégorique ?",
@@ -187,17 +172,8 @@
       "Emmanuel Kant",
       "John Rawls"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel penseur est connu pour l'impératif catégorique ?",
-    "answers": [
-      "Georg Wilhelm Friedrich Hegel",
-      "Jeremy Bentham",
-      "John Rawls",
-      "Emmanuel Kant"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quel philosophe associe-t-on à la dialectique du maître et de l'esclave ?",
@@ -207,7 +183,8 @@
       "John Rawls",
       "Friedrich Nietzsche"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel penseur est connu pour la dialectique du maître et de l'esclave ?",
@@ -217,7 +194,8 @@
       "John Rawls",
       "Friedrich Nietzsche"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel philosophe associe-t-on à l'utilitarisme classique ?",
@@ -227,7 +205,8 @@
       "Jeremy Bentham",
       "Karl Marx"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel penseur est connu pour l'utilitarisme classique ?",
@@ -237,37 +216,30 @@
       "Karl Marx",
       "Jeremy Bentham"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
-    "text": "Quel philosophe associe-t-on à le voile d'ignorance ?",
+    "text": "Quel philosophe associe-t-on au voile d'ignorance ?",
     "answers": [
       "John Rawls",
       "Friedrich Nietzsche",
       "Karl Marx",
       "Henri Bergson"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
-    "text": "Quel penseur est connu pour le voile d'ignorance ?",
-    "answers": [
-      "Friedrich Nietzsche",
-      "John Rawls",
-      "Karl Marx",
-      "Henri Bergson"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel philosophe associe-t-on à le surhomme ?",
+    "text": "Quel philosophe associe-t-on au surhomme ?",
     "answers": [
       "Karl Marx",
       "Henri Bergson",
       "Friedrich Nietzsche",
       "Martin Heidegger"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel penseur est connu pour le surhomme ?",
@@ -277,7 +249,8 @@
       "Martin Heidegger",
       "Friedrich Nietzsche"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel philosophe associe-t-on à la lutte des classes ?",
@@ -287,7 +260,8 @@
       "Martin Heidegger",
       "Jean-Paul Sartre"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel penseur est connu pour la lutte des classes ?",
@@ -297,7 +271,8 @@
       "Martin Heidegger",
       "Jean-Paul Sartre"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel philosophe associe-t-on à la durée ?",
@@ -307,17 +282,8 @@
       "Henri Bergson",
       "Albert Camus"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel penseur est connu pour la durée ?",
-    "answers": [
-      "Martin Heidegger",
-      "Jean-Paul Sartre",
-      "Albert Camus",
-      "Henri Bergson"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quel philosophe associe-t-on à l'être-pour-la-mort ?",
@@ -327,7 +293,8 @@
       "Albert Camus",
       "Hannah Arendt"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel penseur est connu pour l'être-pour-la-mort ?",
@@ -337,7 +304,8 @@
       "Albert Camus",
       "Hannah Arendt"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel philosophe associe-t-on à l'existentialisme athée ?",
@@ -347,7 +315,8 @@
       "Jean-Paul Sartre",
       "Blaise Pascal"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel penseur est connu pour l'existentialisme athée ?",
@@ -357,7 +326,8 @@
       "Blaise Pascal",
       "Jean-Paul Sartre"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel philosophe associe-t-on à l'absurde ?",
@@ -367,17 +337,8 @@
       "Simone de Beauvoir",
       "Ludwig Wittgenstein"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel penseur est connu pour l'absurde ?",
-    "answers": [
-      "Hannah Arendt",
-      "Albert Camus",
-      "Simone de Beauvoir",
-      "Ludwig Wittgenstein"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quel philosophe associe-t-on à la banalité du mal ?",
@@ -387,7 +348,8 @@
       "Hannah Arendt",
       "Karl Popper"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel penseur est connu pour la banalité du mal ?",
@@ -397,17 +359,19 @@
       "Karl Popper",
       "Hannah Arendt"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
-    "text": "Quel philosophe associe-t-on à le Deuxième Sexe et l'analyse de l'altérité féminine ?",
+    "text": "Quel philosophe associe-t-on au Deuxième Sexe et l'analyse de l'altérité féminine ?",
     "answers": [
       "Simone de Beauvoir",
       "Ludwig Wittgenstein",
       "Karl Popper",
       "Carol Gilligan"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel penseur est connu pour le Deuxième Sexe et l'analyse de l'altérité féminine ?",
@@ -417,27 +381,19 @@
       "Karl Popper",
       "Carol Gilligan"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
-    "text": "Quel philosophe associe-t-on à les jeux de langage ?",
+    "text": "Quel philosophe associe-t-on aux jeux de langage ?",
     "answers": [
       "Karl Popper",
       "Carol Gilligan",
       "Ludwig Wittgenstein",
       "Michel Foucault"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel penseur est connu pour les jeux de langage ?",
-    "answers": [
-      "Karl Popper",
-      "Carol Gilligan",
-      "Michel Foucault",
-      "Ludwig Wittgenstein"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quel philosophe associe-t-on à la falsifiabilité scientifique ?",
@@ -447,7 +403,8 @@
       "Michel Foucault",
       "Platon"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel penseur est connu pour la falsifiabilité scientifique ?",
@@ -457,7 +414,8 @@
       "Michel Foucault",
       "Platon"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel philosophe associe-t-on à l'éthique de la sollicitude ?",
@@ -467,7 +425,8 @@
       "Carol Gilligan",
       "Aristote"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel penseur est connu pour l'éthique de la sollicitude ?",
@@ -477,7 +436,8 @@
       "Aristote",
       "Carol Gilligan"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel philosophe associe-t-on à l'archéologie du savoir ?",
@@ -487,7 +447,8 @@
       "Aristote",
       "Socrate"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quel penseur est connu pour l'archéologie du savoir ?",
@@ -497,6 +458,119 @@
       "Aristote",
       "Socrate"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quel nom porte l’école philosophique fondée par Épicure à Athènes ?",
+    "answers": [
+      "L’Académie",
+      "Le Jardin",
+      "Le Lycée",
+      "Le Portique"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "ecoles",
+    "fact": "epicure-jardin-ecole",
+    "source": "https://plato.stanford.edu/entries/epicurus/"
+  },
+  {
+    "text": "À quel métier Socrate compare-t-il son art d’aider à faire naître des idées dans le « Théétète » ?",
+    "answers": [
+      "Sculpteur",
+      "Jardinier",
+      "Pilote de navire",
+      "Sage-femme"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "methodes",
+    "fact": "socrate-maieutique-accouchement",
+    "source": "https://plato.stanford.edu/entries/socrates/"
+  },
+  {
+    "text": "Quelle plante Pascal emploie-t-il dans les « Pensées » pour évoquer un être humain fragile mais capable de penser ?",
+    "answers": [
+      "Un roseau",
+      "Un olivier",
+      "Une vigne",
+      "Un chêne"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "textes",
+    "fact": "pascal-roseau-pensant",
+    "source": "https://www.penseesdepascal.fr/Transition/Transition5-moderne.php"
+  },
+  {
+    "text": "Dans le « Léviathan » de Hobbes, vers quoi tend l’état de nature en l’absence de pouvoir commun ?",
+    "answers": [
+      "L’égalité des richesses",
+      "L’unanimité politique",
+      "La guerre de chacun contre chacun",
+      "La liberté sans aucun conflit"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "politique",
+    "fact": "hobbes-etat-nature-guerre",
+    "source": "https://plato.stanford.edu/entries/hobbes-moral/"
+  },
+  {
+    "text": "Quelle réforme Mary Wollstonecraft défend-elle dans sa « Défense des droits de la femme » ?",
+    "answers": [
+      "Supprimer l’enseignement des sciences",
+      "Donner aux filles une éducation solide",
+      "Réserver l’instruction aux nobles",
+      "Remplacer les écoles par des guildes"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "politique",
+    "fact": "wollstonecraft-education-femmes",
+    "source": "https://plato.stanford.edu/entries/wollstonecraft/"
+  },
+  {
+    "text": "Quel animal Zhuangzi rêve-t-il d’être, dans un récit qui brouille la frontière entre rêve et veille ?",
+    "answers": [
+      "Une grue",
+      "Une carpe",
+      "Un tigre",
+      "Un papillon"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "textes",
+    "fact": "zhuangzi-reve-papillon",
+    "source": "https://plato.stanford.edu/entries/zhuangzi/"
+  },
+  {
+    "text": "Selon Hume, qu’est-ce qui nous conduit à attendre un même effet après avoir observé plusieurs fois la même suite d’événements ?",
+    "answers": [
+      "L’habitude",
+      "La logique seule",
+      "La mémoire du futur",
+      "Une intuition infaillible"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "connaissance",
+    "fact": "hume-causalite-habitude",
+    "source": "https://plato.stanford.edu/archives/win2014/entries/hume/index.html"
+  },
+  {
+    "text": "Sur quelle méthode Spinoza modèle-t-il l’« Éthique », avec définitions, axiomes et propositions démontrées ?",
+    "answers": [
+      "La chronique historique",
+      "Le dialogue théâtral",
+      "La démonstration géométrique",
+      "L’étude de cas clinique"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "methodes",
+    "fact": "spinoza-ethique-methode-geometrique",
+    "source": "https://plato.stanford.edu/entries/spinoza/"
   }
 ]

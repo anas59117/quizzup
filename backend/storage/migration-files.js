@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
-const { STORE_NAMES, emptyStore } = require('./catalog');
+const { STORE_NAMES, ADDITIVE_STORES, emptyStore } = require('./catalog');
 const { encodeSnapshot, canonicalHash } = require('./codec');
 const fail = code => { throw Object.assign(new Error(code), { code }); };
 const bytesHash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
@@ -45,7 +45,12 @@ function readSource(directory) {
   const seal = readOptional(path.join(root, 'migration-manifest.json'));
   if (seal) {
     const expected = JSON.parse(seal.toString('utf8'));
-    if (expected.version !== 1 || expected.datasetHash !== result.datasetHash || result.stores.some(s => s.source !== 'primary')) fail('BACKUP_VERIFICATION_FAILED');
+    const names = Array.isArray(expected.stores) ? expected.stores.map(store => store.name) : [];
+    if (expected.version !== 1 || new Set(names).size !== names.length
+      || names.some(name => !STORE_NAMES.includes(name))
+      || STORE_NAMES.some(name => !names.includes(name) && !ADDITIVE_STORES.includes(name))
+      || result.stores.some(store => store.source !== (names.includes(store.name) ? 'primary' : 'missing-default'))
+      || expected.datasetHash !== canonicalHash(Object.fromEntries(names.map(name => [name, data[name]])))) fail('BACKUP_VERIFICATION_FAILED');
   }
   return { data, manifest: result };
 }

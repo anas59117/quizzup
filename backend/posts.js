@@ -8,6 +8,8 @@ const { normalizePostsStore } = require('./store-normalize');
 const { randomId } = require('./ids');
 const { cleanAvatar } = require('./sanitize');
 const { profileOf } = require('./social');
+const { isFollowing } = require('./follows');
+const { blockedPair } = require('./user-reports');
 
 const STORE = getStorePath('posts.json');
 const MAX_POSTS = 3000; // oldest posts drop off once this cap is hit (per-theme feeds need depth)
@@ -29,9 +31,16 @@ const persist = createJsonWriter(STORE, () => ({ posts }));
 
 function toClientShape(p, viewerId) {
   const author = p.authorId && profileOf(p.authorId);
+  const comments = p.comments || [];
+  const lastComment = comments[comments.length - 1];
+  const canSeeLastComment = viewerId && lastComment &&
+    !blockedPair(viewerId, p.authorId) && !blockedPair(viewerId, lastComment.authorId);
   return {
     id: p.id, authorId: p.authorId || null, authorName: author?.name || p.authorName, authorAvatar: author?.avatar || p.authorAvatar,
-    category: p.category, text: p.text, mediaUrl: p.mediaUrl || null, commentsCount: (p.comments || []).length, question: p.question ? {prompt:p.question.prompt,answers:p.question.answers} : null, reactions: p.reactedBy.length, reacted: !!viewerId && p.reactedBy.includes(viewerId), createdAt: p.createdAt,
+    authorFollowed: !!viewerId && !!p.authorId && isFollowing(viewerId, p.authorId),
+    category: p.category, text: p.text, mediaUrl: p.mediaUrl || null,
+    commentsCount: comments.length, lastComment: canSeeLastComment ? lastComment : null,
+    question: p.question ? {prompt:p.question.prompt,answers:p.question.answers} : null, reactions: p.reactedBy.length, reacted: !!viewerId && p.reactedBy.includes(viewerId), createdAt: p.createdAt,
   };
 }
 

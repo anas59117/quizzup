@@ -7,17 +7,9 @@
       "les XIe et XIIe siècles",
       "le XVIe siècle"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère historique correspond à la dynastie idrisside ?",
-    "answers": [
-      "les XIVe et XVe siècles",
-      "la fin du VIIIe siècle",
-      "les XIe et XIIe siècles",
-      "le XVIe siècle"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on la fondation de Fès par les Idrissides ?",
@@ -27,7 +19,9 @@
       "les VIIIe et IXe siècles",
       "les XIIe et XIIIe siècles"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond à la fondation de Fès par les Idrissides ?",
@@ -37,7 +31,9 @@
       "les XIIe et XIIIe siècles",
       "les VIIIe et IXe siècles"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on la dynastie almoravide ?",
@@ -47,7 +43,9 @@
       "le XIVe siècle",
       "1578"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond à la dynastie almoravide ?",
@@ -57,7 +55,9 @@
       "le XIVe siècle",
       "1578"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on la fondation de Marrakech ?",
@@ -67,17 +67,8 @@
       "les Almoravides",
       "les XVIe et XVIIe siècles"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère historique correspond à la fondation de Marrakech ?",
-    "answers": [
-      "les XIIe et XIIIe siècles",
-      "1578",
-      "les XVIe et XVIIe siècles",
-      "les Almoravides"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on la dynastie almohade ?",
@@ -87,7 +78,9 @@
       "les XVIe et XVIIe siècles",
       "le XVIIe siècle à aujourd'hui"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond à la dynastie almohade ?",
@@ -97,7 +90,9 @@
       "les XVIe et XVIIe siècles",
       "le XVIIe siècle à aujourd'hui"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on la bataille des Trois Rois ?",
@@ -107,7 +102,9 @@
       "1578",
       "1672-1727"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond à la bataille des Trois Rois ?",
@@ -117,7 +114,9 @@
       "1672-1727",
       "1578"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on la dynastie saadienne ?",
@@ -127,17 +126,9 @@
       "1672-1727",
       "le traité de Fès de 1912"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère historique correspond à la dynastie saadienne ?",
-    "answers": [
-      "le XVIIe siècle à aujourd'hui",
-      "les XVIe et XVIIe siècles",
-      "1672-1727",
-      "le traité de Fès de 1912"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on la dynastie alaouite ?",
@@ -147,7 +138,9 @@
       "le XVIIe siècle à aujourd'hui",
       "1912-1956"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond à la dynastie alaouite ?",
@@ -157,7 +150,9 @@
       "1912-1956",
       "le XVIIe siècle à aujourd'hui"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on le règne de Moulay Ismaïl ?",
@@ -167,7 +162,9 @@
       "1912-1956",
       "les années 1920"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond au règne de Moulay Ismaïl ?",
@@ -177,7 +174,9 @@
       "1912-1956",
       "les années 1920"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on le traité franco-marocain établissant le protectorat ?",
@@ -187,17 +186,8 @@
       "le traité de Fès de 1912",
       "la résistance rifaine"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère historique correspond au traité franco-marocain établissant le protectorat ?",
-    "answers": [
-      "1912-1956",
-      "les années 1920",
-      "la résistance rifaine",
-      "le traité de Fès de 1912"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on le protectorat espagnol au nord ?",
@@ -207,7 +197,9 @@
       "la résistance rifaine",
       "11 janvier 1944"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond au protectorat espagnol au nord ?",
@@ -217,7 +209,9 @@
       "la résistance rifaine",
       "11 janvier 1944"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on la guerre du Rif ?",
@@ -227,7 +221,9 @@
       "les années 1920",
       "1953"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond à la guerre du Rif ?",
@@ -237,7 +233,9 @@
       "1953",
       "les années 1920"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on la figure d'Abdelkrim el-Khattabi ?",
@@ -247,17 +245,8 @@
       "1953",
       "1955"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère historique correspond à la figure d'Abdelkrim el-Khattabi ?",
-    "answers": [
-      "11 janvier 1944",
-      "la résistance rifaine",
-      "1953",
-      "1955"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on le manifeste de l'Indépendance ?",
@@ -267,7 +256,9 @@
       "11 janvier 1944",
       "1956"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond au manifeste de l'Indépendance ?",
@@ -277,7 +268,9 @@
       "1956",
       "11 janvier 1944"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on l'exil de Mohammed V ?",
@@ -287,7 +280,9 @@
       "1956",
       "1958"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond à l'exil de Mohammed V ?",
@@ -297,7 +292,9 @@
       "1956",
       "1958"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on le retour de Mohammed V ?",
@@ -307,17 +304,9 @@
       "1955",
       "1969"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère historique correspond au retour de Mohammed V ?",
-    "answers": [
-      "1956",
-      "1958",
-      "1969",
-      "1955"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on l'indépendance du Maroc ?",
@@ -327,7 +316,9 @@
       "1969",
       "1975"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond à l'indépendance du Maroc ?",
@@ -337,7 +328,9 @@
       "1969",
       "1975"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on la récupération de Tarfaya ?",
@@ -347,7 +340,9 @@
       "1958",
       "1961-1999"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond à la récupération de Tarfaya ?",
@@ -357,7 +352,9 @@
       "1961-1999",
       "1958"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on la récupération de Sidi Ifni ?",
@@ -367,17 +364,9 @@
       "1961-1999",
       "1999"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère historique correspond à la récupération de Sidi Ifni ?",
-    "answers": [
-      "1975",
-      "1969",
-      "1961-1999",
-      "1999"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on la Marche verte ?",
@@ -387,7 +376,9 @@
       "1975",
       "2011"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond à la Marche verte ?",
@@ -397,7 +388,9 @@
       "2011",
       "1975"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on le règne de Hassan II ?",
@@ -407,7 +400,9 @@
       "2011",
       "1993"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond au règne de Hassan II ?",
@@ -417,7 +412,9 @@
       "2011",
       "1993"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on le début du règne de Mohammed VI ?",
@@ -427,17 +424,9 @@
       "1999",
       "une institution fondée au IXe siècle"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère historique correspond au début du règne de Mohammed VI ?",
-    "answers": [
-      "2011",
-      "1993",
-      "une institution fondée au IXe siècle",
-      "1999"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on la Constitution révisée par référendum ?",
@@ -447,7 +436,9 @@
       "une institution fondée au IXe siècle",
       "la fin du VIIIe siècle"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond à la Constitution révisée par référendum ?",
@@ -457,7 +448,9 @@
       "une institution fondée au IXe siècle",
       "la fin du VIIIe siècle"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on la mosquée Hassan-II inaugurée à Casablanca ?",
@@ -467,7 +460,9 @@
       "1993",
       "les VIIIe et IXe siècles"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond à la mosquée Hassan-II inaugurée à Casablanca ?",
@@ -477,7 +472,9 @@
       "les VIIIe et IXe siècles",
       "1993"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47",
+    "format": "date"
   },
   {
     "text": "À quelle date, dynastie ou notion associe-t-on l'université Al Quaraouiyine à Fès ?",
@@ -487,7 +484,9 @@
       "les VIIIe et IXe siècles",
       "les XIe et XIIe siècles"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49",
+    "format": "date"
   },
   {
     "text": "Quel repère historique correspond à l'université Al Quaraouiyine à Fès ?",
@@ -497,6 +496,231 @@
       "les VIIIe et IXe siècles",
       "les XIe et XIIe siècles"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49",
+    "format": "date"
+  },
+  {
+    "text": "Quel site antique près de Meknès est connu pour les mosaïques de ses maisons romaines ?",
+    "answers": [
+      "Volubilis",
+      "Lixus",
+      "Chellah",
+      "Tamuda"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "archeologie",
+    "fact": "volubilis-mosaiques",
+    "source": "https://whc.unesco.org/en/list/836/"
+  },
+  {
+    "text": "Quel terme désigne le village fortifié d’Aït-Ben-Haddou ?",
+    "answers": [
+      "Un riad",
+      "Un ksar",
+      "Un foundouk",
+      "Un minaret"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "architecture",
+    "fact": "ait-ben-haddou-ksar",
+    "source": "https://whc.unesco.org/en/list/444/"
+  },
+  {
+    "text": "Quelle ville Moulay Ismaïl choisit-il comme capitale impériale ?",
+    "answers": [
+      "Rabat",
+      "Tétouan",
+      "Meknès",
+      "Safi"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "dynasties",
+    "fact": "moulay-ismail-meknes",
+    "source": "https://whc.unesco.org/en/list/793/"
+  },
+  {
+    "text": "Quel ancien port fortifié était connu sous le nom de Mogador ?",
+    "answers": [
+      "Agadir",
+      "Asilah",
+      "El Jadida",
+      "Essaouira"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "economie",
+    "fact": "essaouira-port",
+    "source": "https://whc.unesco.org/en/list/753/"
+  },
+  {
+    "text": "Quelle puissance européenne a construit la cité fortifiée de Mazagan, aujourd’hui El Jadida ?",
+    "answers": [
+      "Le Portugal",
+      "L’Espagne",
+      "Les Pays-Bas",
+      "L’Angleterre"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "patrimoine",
+    "fact": "el-jadida-mazagan",
+    "source": "https://whc.unesco.org/en/list/1058/"
+  },
+  {
+    "text": "Quel édifice de Marrakech porte le nom de Koutoubia ?",
+    "answers": [
+      "Un hammam",
+      "Une mosquée",
+      "Une médersa",
+      "Un palais"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "architecture",
+    "fact": "marrakech-koutoubia",
+    "source": "https://whc.unesco.org/en/list/331/"
+  },
+  {
+    "text": "Dans la médina de Fès, à quelle activité historique le site de Chouara est-il associé ?",
+    "answers": [
+      "La frappe de monnaie",
+      "Le tissage de tapis",
+      "Le tannage des peaux",
+      "La taille du marbre"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "artisanat",
+    "fact": "fes-chouara"
+  },
+  {
+    "text": "Après la Reconquista, des réfugiés venus de quelle région ont fortement marqué la médina de Tétouan ?",
+    "answers": [
+      "La Sicile",
+      "La Provence",
+      "La Bavière",
+      "L’Andalousie"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "patrimoine",
+    "fact": "tetouan-andalousie",
+    "source": "https://whc.unesco.org/en/list/837/"
+  },
+  {
+    "text": "À Rabat, quelle partie d’une mosquée la tour Hassan devait-elle former ?",
+    "answers": [
+      "La salle de prière",
+      "Le mihrab",
+      "Le minaret",
+      "La cour des ablutions"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "architecture",
+    "fact": "maroc-profondeur-tour-hassan-minaret",
+    "source": "https://www.visitmorocco.com/fr/voyage/rabat/medina"
+  },
+  {
+    "text": "Quelle langue la Constitution de 2011 reconnaît-elle comme officielle aux côtés de l’arabe ?",
+    "answers": [
+      "L’amazighe",
+      "Le français",
+      "L’espagnol",
+      "L’anglais"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "institutions",
+    "fact": "maroc-profondeur-amazighe-langue-officielle",
+    "source": "https://maroc.ma/sites/default/files/2024-10/constitution_du_1er_juillet_2011.pdf"
+  },
+  {
+    "text": "Dans quelle ville se trouvent les tombeaux des sultans saadiens ?",
+    "answers": [
+      "Fès",
+      "Marrakech",
+      "Meknès",
+      "Tétouan"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "patrimoine",
+    "fact": "tombeaux-saadiens-ville",
+    "source": "https://whc.unesco.org/en/list/331/"
+  },
+  {
+    "text": "Quel site de Rabat conserve des vestiges de la ville romaine de Sala Colonia ?",
+    "answers": [
+      "La kasbah des Oudayas",
+      "Le Chellah",
+      "La tour Hassan",
+      "Le palais royal"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "archeologie",
+    "fact": "maroc-profondeur-chellah-sala-colonia",
+    "source": "https://whc.unesco.org/document/169121"
+  },
+  {
+    "text": "À quoi servait l’agadir d’Aït Kin, dans la province de Tata ?",
+    "answers": [
+      "À frapper la monnaie du sultan",
+      "À entreposer les récoltes et les biens des familles",
+      "À abriter le port d’une ville",
+      "À laver et teindre les étoffes"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "vie-quotidienne",
+    "fact": "maroc-profondeur-agadir-grenier",
+    "source": "https://maroc.ma/fr/actualites/agadir-ait-kin-un-joyau-du-patrimoine-architectural-et-touristique-de-tata"
+  },
+  {
+    "text": "À quelle dynastie appartenait Abou Inan, commanditaire de la médersa Bou Inania de Fès ?",
+    "answers": [
+      "Les Almohades",
+      "Les Saadiens",
+      "Les Idrissides",
+      "Les Mérinides"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "enseignement",
+    "fact": "maroc-profondeur-bou-inania-merinides",
+    "source": "https://www.visitmorocco.com/sites/default/files/atoms/files/Fes%20FR.pdf"
+  },
+  {
+    "text": "Quelle cité du Tafilalet était un grand relais des caravanes de l’or transsahariennes ?",
+    "answers": [
+      "Sijilmassa",
+      "Aghmat",
+      "Taroudant",
+      "Ceuta"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "commerce",
+    "fact": "maroc-profondeur-sijilmassa-caravanes-or",
+    "source": "https://caravans.library.northwestern.edu/tour/saharan-frontiers/sijilmasa/"
+  },
+  {
+    "text": "Dans quelle ville du Maroc la légation américaine est-elle devenue la première propriété diplomatique des États-Unis à l’étranger ?",
+    "answers": [
+      "Rabat",
+      "Tétouan",
+      "Tanger",
+      "Essaouira"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "diplomatie",
+    "fact": "maroc-profondeur-tanger-legation-americaine",
+    "source": "https://diplomacy.state.gov/tangier-old-legation-americas-first-diplomatic-property/"
   }
 ]

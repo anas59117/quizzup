@@ -111,11 +111,18 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
     await capture(a, "home");
     // Find a real player through their community post and send the request in UI.
     await b.locator('.home-community-teaser').click();
+    await b.locator('.community-publish').click();
     await b.getByLabel('Ta publication', { exact: true }).fill('Retrouve Bob pour le test entre amis');
-    await b.getByRole('button', { name: 'Publier', exact: true }).click();
+    await b.locator('.community-composer .feed-post-btn').click();
     await b.locator('.feed-post-text').filter({ hasText: 'Retrouve Bob' }).waitFor();
     await a.locator('.home-community-teaser').click();
-    await a.getByRole('button', { name: 'BobSocial', exact: true }).click();
+    const bobPost = a.locator('.community-post').filter({hasText: 'Retrouve Bob'});
+    await bobPost.getByRole('button', {name: '+ Suivre', exact: true}).click();
+    await bobPost.getByRole('button', {name: 'Abonné', exact: true}).waitFor();
+    await a.getByRole('button', {name: 'Abonnements', exact: true}).click();
+    await bobPost.getByRole('button', {name: 'Abonné', exact: true}).waitFor();
+    await a.getByRole('button', {name: 'Récents', exact: true}).click();
+    await bobPost.locator('.community-author').click();
     const bobProfile = a.getByRole('dialog', { name: 'BobSocial', exact: true });
     await bobProfile.getByRole('button', { name: 'Ajouter en ami', exact: true }).click();
     await bobProfile.getByRole('button', { name: 'Demande envoyée', exact: true }).waitFor();
@@ -230,12 +237,9 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
     console.log(
       "PASS real friend accept, persistent DM, unread, offline recipient/reconnect",
     );
-    await a
-      .getByRole("button", {
-        name: "Défier",
-        exact: true,
-      })
-      .click();
+    await a.getByRole("button", { name: "Voir le profil · BobSocial", exact: true }).click();
+    const friendSheet = a.getByRole("dialog", { name: "BobSocial", exact: true });
+    await friendSheet.getByRole("button", { name: "Défier", exact: true }).click();
     await a.locator(".messenger-themes button").first().click();
     await b
       .getByRole("button", {
@@ -318,12 +322,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
           exact: true,
         })
         .fill(text);
-      await a
-        .getByRole("button", {
-          name: "Publier",
-          exact: true,
-        })
-        .click();
+      await a.locator('.community-composer .feed-post-btn').click();
       await a
         .locator(".feed-post-text")
         .filter({
@@ -331,7 +330,10 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
         })
         .waitFor();
     };
+    const openComposer = () => a.locator('.community-publish').click();
+    await openComposer();
     await post("Publication réelle");
+    await openComposer();
     await a
       .getByRole("button", {
         name: "Photo",
@@ -356,6 +358,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
       });
     await post("Photo réelle");
     await a.locator(".community-photo").evaluate((img) => img.decode());
+    await openComposer();
     await a
       .getByRole("button", {
         name: "Question",
@@ -377,6 +380,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
     const card = a.locator(".feed-post").filter({
       hasText: "Question réelle",
     });
+    await card.locator(".community-quiz-open").click();
     await card
       .getByRole("button", {
         name: "4",
@@ -391,21 +395,29 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
       .waitFor();
     await card
       .getByRole("button", {
-        name: /Commentaires/,
+        name: /Réponses/,
       })
       .click();
-    await card.getByLabel("Ton commentaire").fill("Commentaire réel");
-    await card
+    const thread = a.locator(".community-thread");
+    await a.getByRole("heading", { name: "Discussion", exact: true }).waitFor();
+    assert.equal(await a.locator(".navbar").count(), 0);
+    await thread.getByLabel("Ta réponse").fill("Commentaire réel");
+    await thread
       .getByRole("button", {
         name: "Envoyer",
         exact: true,
       })
       .click();
-    await card
+    await thread
       .getByText("Commentaire réel", {
         exact: false,
       })
       .waitFor();
+    await a.screenshot({path: path.join(out, "social-community-thread.png")});
+    await a.getByRole("button", {name: "Retour au fil"}).click();
+    await a.locator(".navbar").waitFor();
+    await card.locator(".community-preview-reply").filter({hasText: "Commentaire réel"}).waitFor();
+    assert.equal(await card.count(), 1, "returning from a discussion must not duplicate its post");
     console.log(
       "PASS community text, HTTP image upload, canonical question result and real comment",
     );
@@ -445,9 +457,9 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
       waitUntil: "commit",
     });
     await a.locator(".home-head").waitFor();
-    await a.getByRole("button", { name: /^Messages/ }).click();
-    await a.locator(".messenger-row").filter({ hasText: "BobSocial" }).click();
-    await a.getByRole("button", { name: "Défier", exact: true }).click();
+    await a.locator(".home-community-teaser").click();
+    await a.locator(".community-post").filter({ hasText: "Retrouve Bob" }).locator(".community-author").click();
+    await a.getByRole("dialog", { name: "BobSocial", exact: true }).getByRole("button", { name: "Défier", exact: true }).click();
     await a
       .getByRole("button", { name: "Chacun son tour", exact: true })
       .click();

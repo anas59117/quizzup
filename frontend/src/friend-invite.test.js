@@ -48,10 +48,26 @@ test('profile forwards room actions and localizes social counts in English', () 
   localStorage.setItem('quizzup-lang', 'en');
   const invite = jest.fn(), join = jest.fn();
   render(<ProfileContent name="Alex" avatar="robot" stats={{ level: 7, following: 2 }} social={social} onInviteFriend={invite} onJoinFriend={join} />);
-  expect(container.querySelector('.pf-social').textContent).toBe('0 games · 0 friends · 2 players followed');
+  const counts = container.querySelector('.profile-player-social');
+  expect(counts.querySelector('button').textContent.trim()).toBe('0 friends');
+  expect(counts.querySelector('span').textContent).toBe('2 players followed');
   const buttons = container.querySelectorAll('.friend-invite-actions button');
   expect(buttons[0].textContent).toBe('Invite a friend');
   expect(buttons[1].textContent).toBe('I have a code');
   act(() => buttons[0].click()); act(() => buttons[1].click());
   expect(invite).toHaveBeenCalledTimes(1); expect(join).toHaveBeenCalledTimes(1);
+});
+
+test('profile puts invitation actions after up to three contacts and keeps the remaining friends accessible', () => {
+  const friends = ['Camille', 'Nadia', 'Alex', 'Sam'].map(name => ({ id: name, name }));
+  for (const count of [1, 4]) {
+    render(<ProfileContent name="Sisi" stats={{ level: 1 }} social={{ ...social, friends: friends.slice(0, count) }} />);
+    const list = container.querySelector('.profile-friends .friends-screen');
+    const contacts = [...list.querySelectorAll('.friend-name')];
+    const actions = list.querySelector('.friend-invite-actions');
+    expect(contacts).toHaveLength(count);
+    expect(list.querySelectorAll('.friend-invite-actions')).toHaveLength(1);
+    expect(contacts[Math.min(3, count) - 1].compareDocumentPosition(actions) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    if (count > 3) expect(actions.compareDocumentPosition(contacts[3]) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  }
 });

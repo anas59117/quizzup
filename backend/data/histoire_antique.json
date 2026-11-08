@@ -7,17 +7,8 @@
       "Athènes",
       "la Chine"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère historique correspond à l'écriture cunéiforme ?",
-    "answers": [
-      "l'Égypte antique",
-      "la Mésopotamie",
-      "Athènes",
-      "la Chine"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on les hiéroglyphes ?",
@@ -27,17 +18,19 @@
       "l'Égypte antique",
       "Sparte"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
-    "text": "Quel repère historique correspond à les hiéroglyphes ?",
+    "text": "Quel repère historique correspond aux hiéroglyphes ?",
     "answers": [
       "Babylone",
       "Athènes",
       "Sparte",
       "l'Égypte antique"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on le code d'Hammurabi ?",
@@ -47,17 +40,19 @@
       "Sparte",
       "Rome et Carthage"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
-    "text": "Quel repère historique correspond à le code d'Hammurabi ?",
+    "text": "Quel repère historique correspond au code d'Hammurabi ?",
     "answers": [
       "Athènes",
       "Babylone",
       "Sparte",
       "Rome et Carthage"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on la démocratie directe antique ?",
@@ -67,17 +62,8 @@
       "Athènes",
       "490 av. J.-C."
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère historique correspond à la démocratie directe antique ?",
-    "answers": [
-      "Sparte",
-      "Rome et Carthage",
-      "490 av. J.-C.",
-      "Athènes"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on la cité rivale d'Athènes durant la guerre du Péloponnèse ?",
@@ -87,7 +73,8 @@
       "490 av. J.-C.",
       "323 av. J.-C."
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel repère historique correspond à la cité rivale d'Athènes durant la guerre du Péloponnèse ?",
@@ -97,7 +84,8 @@
       "490 av. J.-C.",
       "323 av. J.-C."
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on les guerres puniques ?",
@@ -107,17 +95,19 @@
       "Rome et Carthage",
       "44 av. J.-C."
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
-    "text": "Quel repère historique correspond à les guerres puniques ?",
+    "text": "Quel repère historique correspond aux guerres puniques ?",
     "answers": [
       "490 av. J.-C.",
       "323 av. J.-C.",
       "44 av. J.-C.",
       "Rome et Carthage"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on la bataille de Marathon ?",
@@ -127,17 +117,8 @@
       "44 av. J.-C.",
       "27 av. J.-C."
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère historique correspond à la bataille de Marathon ?",
-    "answers": [
-      "323 av. J.-C.",
-      "490 av. J.-C.",
-      "44 av. J.-C.",
-      "27 av. J.-C."
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on la mort d'Alexandre le Grand ?",
@@ -147,7 +128,8 @@
       "323 av. J.-C.",
       "79 apr. J.-C."
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel repère historique correspond à la mort d'Alexandre le Grand ?",
@@ -157,7 +139,8 @@
       "79 apr. J.-C.",
       "323 av. J.-C."
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on l'assassinat de Jules César ?",
@@ -167,7 +150,8 @@
       "79 apr. J.-C.",
       "313"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel repère historique correspond à l'assassinat de Jules César ?",
@@ -177,7 +161,8 @@
       "79 apr. J.-C.",
       "313"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on le début traditionnel de l'Empire romain ?",
@@ -187,17 +172,8 @@
       "27 av. J.-C.",
       "476"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère historique correspond à le début traditionnel de l'Empire romain ?",
-    "answers": [
-      "79 apr. J.-C.",
-      "313",
-      "476",
-      "27 av. J.-C."
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on l'éruption qui ensevelit Pompéi ?",
@@ -207,7 +183,8 @@
       "476",
       "la Chine"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel repère historique correspond à l'éruption qui ensevelit Pompéi ?",
@@ -217,7 +194,8 @@
       "476",
       "la Chine"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on l'édit de Milan ?",
@@ -227,7 +205,8 @@
       "313",
       "l'empire Maurya"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel repère historique correspond à l'édit de Milan ?",
@@ -237,7 +216,8 @@
       "l'empire Maurya",
       "313"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on la chute de l'Empire romain d'Occident ?",
@@ -247,17 +227,8 @@
       "l'empire Maurya",
       "l'empire achéménide"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère historique correspond à la chute de l'Empire romain d'Occident ?",
-    "answers": [
-      "la Chine",
-      "476",
-      "l'empire Maurya",
-      "l'empire achéménide"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on la dynastie Qin ?",
@@ -267,7 +238,8 @@
       "la Chine",
       "l'Égypte hellénistique"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel repère historique correspond à la dynastie Qin ?",
@@ -277,7 +249,8 @@
       "l'Égypte hellénistique",
       "la Chine"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on l'empereur Ashoka ?",
@@ -287,7 +260,8 @@
       "l'Égypte hellénistique",
       "la Grèce antique"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel repère historique correspond à l'empereur Ashoka ?",
@@ -297,7 +271,8 @@
       "l'Égypte hellénistique",
       "la Grèce antique"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on la cité de Persépolis ?",
@@ -307,17 +282,8 @@
       "l'empire achéménide",
       "l'île de Pharos"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère historique correspond à la cité de Persépolis ?",
-    "answers": [
-      "l'Égypte hellénistique",
-      "la Grèce antique",
-      "l'île de Pharos",
-      "l'empire achéménide"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on la bibliothèque d'Alexandrie ?",
@@ -327,7 +293,8 @@
       "l'île de Pharos",
       "Babylone selon la tradition"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel repère historique correspond à la bibliothèque d'Alexandrie ?",
@@ -337,7 +304,8 @@
       "l'île de Pharos",
       "Babylone selon la tradition"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on le colosse de Rhodes ?",
@@ -347,17 +315,19 @@
       "la Grèce antique",
       "Rome"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
-    "text": "Quel repère historique correspond à le colosse de Rhodes ?",
+    "text": "Quel repère historique correspond au colosse de Rhodes ?",
     "answers": [
       "l'île de Pharos",
       "Babylone selon la tradition",
       "Rome",
       "la Grèce antique"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on le phare d'Alexandrie ?",
@@ -367,17 +337,8 @@
       "Rome",
       "la civilisation romaine"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère historique correspond à le phare d'Alexandrie ?",
-    "answers": [
-      "Babylone selon la tradition",
-      "l'île de Pharos",
-      "Rome",
-      "la civilisation romaine"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on les jardins suspendus ?",
@@ -387,17 +348,19 @@
       "Babylone selon la tradition",
       "Olympie"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
-    "text": "Quel repère historique correspond à les jardins suspendus ?",
+    "text": "Quel repère historique correspond aux jardins suspendus ?",
     "answers": [
       "Rome",
       "la civilisation romaine",
       "Olympie",
       "Babylone selon la tradition"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on la voie Appienne ?",
@@ -407,7 +370,8 @@
       "la Perse antique",
       "la Phénicie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel repère historique correspond à la voie Appienne ?",
@@ -417,7 +381,8 @@
       "la Perse antique",
       "la Phénicie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on les thermes publics ?",
@@ -427,17 +392,8 @@
       "la civilisation romaine",
       "la Phénicie"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère historique correspond à les thermes publics ?",
-    "answers": [
-      "Olympie",
-      "la Perse antique",
-      "la Phénicie",
-      "la civilisation romaine"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on les Jeux olympiques antiques ?",
@@ -447,17 +403,19 @@
       "la Phénicie",
       "la Mésopotamie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
-    "text": "Quel repère historique correspond à les Jeux olympiques antiques ?",
+    "text": "Quel repère historique correspond aux Jeux olympiques antiques ?",
     "answers": [
       "la Perse antique",
       "Olympie",
       "la Phénicie",
       "la Mésopotamie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "À quelle civilisation, date ou lieu associe-t-on le zoroastrisme ?",
@@ -467,17 +425,19 @@
       "la Perse antique",
       "l'Égypte antique"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
-    "text": "Quel repère historique correspond à le zoroastrisme ?",
+    "text": "Quel repère historique correspond au zoroastrisme ?",
     "answers": [
       "la Phénicie",
       "la Mésopotamie",
       "l'Égypte antique",
       "la Perse antique"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quelle cité phénicienne a fondé Carthage ?",
@@ -487,7 +447,8 @@
       "Byblos",
       "Ougarit"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quel peuple de navigateurs a créé l'alphabet dont dérive l'alphabet grec ?",
@@ -497,6 +458,117 @@
       "les Sumériens",
       "les Hittites"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-50"
+  },
+  {
+    "text": "Pour quel pharaon a-t-on construit la plus grande des pyramides de Gizeh ?",
+    "answers": [
+      "Khéphren",
+      "Khéops",
+      "Mykérinos",
+      "Djéser"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "monuments",
+    "fact": "antique-grande-pyramide-kheops",
+    "source": "https://egymonuments.gov.eg/monuments/the-great-pyramid/"
+  },
+  {
+    "text": "Que transportait un aqueduc romain vers une ville ?",
+    "answers": [
+      "Du grain",
+      "Du vin",
+      "De l’eau",
+      "Du sel"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "techniques",
+    "fact": "antique-aqueduc-romain-eau"
+  },
+  {
+    "text": "Quelle structure l’armée de terre cuite est-elle destinée à accompagner ?",
+    "answers": [
+      "Un temple des Zhou",
+      "Un palais des Han",
+      "Une forteresse des Ming",
+      "Le mausolée du premier empereur Qin"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "archeologie",
+    "fact": "antique-terre-cuite-qin-mausolee",
+    "source": "https://whc.unesco.org/en/list/441/"
+  },
+  {
+    "text": "À Athènes, sur quel objet pouvait-on inscrire le nom d’un citoyen lors d’un vote d’ostracisme ?",
+    "answers": [
+      "Un tesson de poterie",
+      "Une tablette de cire",
+      "Une feuille de papyrus",
+      "Une lame de bronze"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "institutions",
+    "fact": "antique-ostracisme-tesson",
+    "source": "https://dev.ascsa.edu.gr/publications/book/?i=9780876612255"
+  },
+  {
+    "text": "À Actium, Octavien affronte les forces de Marc Antoine et de quelle souveraine ?",
+    "answers": [
+      "Zénobie",
+      "Bérénice II",
+      "Cléopâtre VII",
+      "Arsinoé II"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "conflits",
+    "fact": "antique-actium-antoine-cleopatre",
+    "source": "https://www.worldhistory.org/Battle_of_Actium/"
+  },
+  {
+    "text": "Comment appelle-t-on l’un des premiers recueils publics de lois de la République romaine ?",
+    "answers": [
+      "Le Code de Justinien",
+      "La Loi des Douze Tables",
+      "L’Édit de Caracalla",
+      "Le Code théodosien"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "droit",
+    "fact": "antique-douze-tables-rome"
+  },
+  {
+    "text": "Quel était l’usage du plateau mésopotamien connu sous le nom de « Jeu royal d’Ur » ?",
+    "answers": [
+      "Faire progresser des pions dans un jeu",
+      "Calculer les impôts",
+      "Mesurer le temps",
+      "Compter les offrandes"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "vie-quotidienne",
+    "fact": "antique-jeu-royal-ur-usage",
+    "source": "https://www.britishmuseum.org/sites/default/files/2019-09/Mesop_Sumer_presnotes_KS2.pdf"
+  },
+  {
+    "text": "À qui était dédié le temple romain de la Maison Carrée à Nîmes ?",
+    "answers": [
+      "Romulus et Rémus",
+      "Marc Aurèle et Commode",
+      "Auguste et Livie",
+      "Caius et Lucius César"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "monuments",
+    "fact": "antique-maison-carree-dedicataires",
+    "source": "https://whc.unesco.org/fr/list/1569"
   }
 ]

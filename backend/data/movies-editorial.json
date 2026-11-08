@@ -1,0 +1,429 @@
+[
+  {
+    "text": "Quel film a remporté l’Oscar du meilleur film en 2023 ?",
+    "answers": ["Everything Everywhere All at Once", "The Fabelmans", "Top Gun: Maverick", "Tár"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "palmares",
+    "fact": "oscar-2023"
+  },
+  {
+    "text": "Qui a réalisé « Inception » ?",
+    "answers": ["Denis Villeneuve", "Christopher Nolan", "Ridley Scott", "James Cameron"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "signatures",
+    "fact": "inception-nolan"
+  },
+  {
+    "text": "Dans « Matrix », de quelle couleur est la pilule que prend Neo ?",
+    "answers": ["Bleue", "Verte", "Rouge", "Jaune"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "matrix-pilule"
+  },
+  {
+    "text": "Quel acteur incarne Iron Man dans le MCU ?",
+    "answers": ["Chris Evans", "Mark Ruffalo", "Chris Hemsworth", "Robert Downey Jr."],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "signatures",
+    "fact": "iron-man-acteur"
+  },
+  {
+    "text": "Quel film a été le premier à dépasser deux milliards de dollars de recettes dans le monde ?",
+    "answers": ["Avatar", "Avengers: Endgame", "Titanic", "Star Wars : Le Réveil de la Force"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "palmares",
+    "fact": "avatar-premiers-deux-milliards",
+    "source": "https://www.guinnessworldrecords.com/world-records/first-movie-to-gross-over-2-billion"
+  },
+  {
+    "text": "Quel studio d’animation a créé « Toy Story » ?",
+    "answers": ["DreamWorks", "Pixar", "Illumination", "Studio Ghibli"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "animation",
+    "fact": "toy-story-studio"
+  },
+  {
+    "text": "Qui joue le Joker dans « The Dark Knight » ?",
+    "answers": ["Joaquin Phoenix", "Jared Leto", "Heath Ledger", "Jack Nicholson"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "signatures",
+    "fact": "dark-knight-joker"
+  },
+  {
+    "text": "En quelle année est sorti le premier « Jurassic Park » ?",
+    "answers": ["1990", "1991", "1992", "1993"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "sorties",
+    "fact": "jurassic-park-1993"
+  },
+  {
+    "text": "Dans quelle saga entend-on « Que la Force soit avec toi » ?",
+    "answers": ["Star Wars", "Star Trek", "Les Gardiens de la Galaxie", "Dune"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "star-wars-force"
+  },
+  {
+    "text": "Qui a réalisé « Parasite » ?",
+    "answers": ["Park Chan-wook", "Bong Joon-ho", "Wong Kar-wai", "Hirokazu Kore-eda"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "signatures",
+    "fact": "parasite-realisation"
+  },
+  {
+    "text": "Dans « Retour vers le futur », quelle voiture sert de machine à voyager dans le temps ?",
+    "answers": ["Une Ford Mustang", "Une DeLorean", "Une Pontiac Firebird", "Une Chevrolet Corvette"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "delorean-machine"
+  },
+  {
+    "text": "On recrée en studio des bruits de pas synchronisés à l’image. Comment s’appelle ce travail ?",
+    "answers": ["Le doublage", "L’étalonnage", "Le mixage", "Le bruitage"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "fabrication",
+    "fact": "bruitage-pas",
+    "source": "https://www.oscars.org/sites/oscars/files/complete_sound_and_music_activities_guide.pdf"
+  },
+  {
+    "text": "Dans « Perfect Blue », quel métier Mima abandonne-t-elle pour devenir actrice ?",
+    "answers": ["Chanteuse pop", "Présentatrice télé", "Mannequin", "Danseuse classique"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "animation",
+    "fact": "perfect-blue-reconversion",
+    "source": "https://gkids.com/films/perfect-blue/"
+  },
+  {
+    "text": "Quel prix récompense le meilleur film de la compétition officielle à Cannes ?",
+    "answers": ["Le Lion d’or", "L’Ours d’or", "La Palme d’or", "Le Léopard d’or"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "palmares",
+    "fact": "cannes-trophee",
+    "source": "https://www.festival-cannes.com/en/the-festival/the-palme-d-or/"
+  },
+  {
+    "text": "Quel cinéaste espagnol a dirigé Penélope Cruz dans « Volver » ?",
+    "answers": ["Alejandro Amenábar", "Víctor Erice", "Pedro Almodóvar", "Julio Medem"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "signatures",
+    "fact": "volver-almodovar"
+  },
+  {
+    "text": "À quel courant appartiennent les décors anguleux du « Cabinet du docteur Caligari » ?",
+    "answers": ["L’expressionnisme allemand", "Le néoréalisme italien", "Le surréalisme français", "Le réalisme poétique"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "genres",
+    "fact": "caligari-expressionnisme",
+    "source": "https://www.bfi.org.uk/features/100-years-cabinet-dr-caligari"
+  },
+  {
+    "text": "Dans quelle ville Rémy veut-il devenir chef dans « Ratatouille » ?",
+    "answers": ["Lyon", "Marseille", "Bordeaux", "Paris"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "animation",
+    "fact": "ratatouille-paris",
+    "source": "https://www.pixar.com/ratatouille"
+  },
+  {
+    "text": "Dans « The Truman Show », qu’est en réalité la ville où vit Truman ?",
+    "answers": ["Une base militaire", "Le décor d’une émission", "Une colonie spatiale", "Un parc d’attractions"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "intrigues",
+    "fact": "truman-ville-plateau"
+  },
+  {
+    "text": "Quel film a reçu la toute première Palme d’or à Cannes, en 1955 ?",
+    "answers": ["Marty", "Les Quatre Cents Coups", "La Dolce Vita", "Le Salaire de la peur"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "palmares",
+    "fact": "premiere-palme-marty",
+    "source": "https://www.festival-cannes.com/en/the-festival/the-palme-d-or/"
+  },
+  {
+    "text": "Quelle étape consiste à sélectionner et à assembler les prises pour construire le film ?",
+    "answers": ["Le mixage", "La réalisation des décors", "La direction de la photographie", "Le montage"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "fabrication",
+    "fact": "montage-choix-prises"
+  },
+  {
+    "text": "Dans « Princesse Mononoké », quels animaux ont élevé San ?",
+    "answers": ["Des sangliers", "Des loups", "Des ours", "Des renards"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "animation",
+    "fact": "mononoke-loups",
+    "source": "https://gkids.com/films/princess-mononoke/"
+  },
+  {
+    "text": "Qui a créé les costumes de « Black Panther », récompensés aux Oscars ?",
+    "answers": ["Sandy Powell", "Colleen Atwood", "Ruth E. Carter", "Jacqueline Durran"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "signatures",
+    "fact": "ruth-carter-wakanda",
+    "source": "https://www.oscars.org/oscars/ceremonies/2019"
+  },
+  {
+    "text": "Quel sport structure l’intrigue du premier « Rocky » ?",
+    "answers": ["La lutte", "Le judo", "L’escrime", "La boxe"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "genres",
+    "fact": "rocky-sport"
+  },
+  {
+    "text": "Quel film de Quentin Tarantino a reçu la Palme d’or en 1994 ?",
+    "answers": ["Reservoir Dogs", "Jackie Brown", "Pulp Fiction", "Kill Bill : Volume 1"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "palmares",
+    "fact": "pulp-fiction-palme",
+    "source": "https://www.festival-cannes.com/en/f/pulp-fiction/"
+  },
+  {
+    "text": "Dans le film saoudien « Wadjda », qu’espère acheter la jeune héroïne en gagnant un concours ?",
+    "answers": ["Un vélo", "Une guitare", "Un appareil photo", "Une machine à coudre"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "intrigues",
+    "fact": "wadjda-velo",
+    "source": "https://razor-film.de/en/movies/wadjda/"
+  },
+  {
+    "text": "Dans « Intouchables », quel comédien joue Driss, l’auxiliaire de vie de Philippe ?",
+    "answers": ["François Cluzet", "Omar Sy", "Kad Merad", "Jamel Debbouze"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "signatures",
+    "fact": "intouchables-driss"
+  },
+  {
+    "text": "Comment appelle-t-on une scène filmée en un seul plan continu ?",
+    "answers": ["Un fondu enchaîné", "Un champ-contrechamp", "Un plan-séquence", "Un raccord dans l’axe"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "fabrication",
+    "fact": "plan-sequence-definition"
+  },
+  {
+    "text": "Dans quel film d’Akira Kurosawa des témoins donnent-ils des versions contradictoires d’un crime ?",
+    "answers": ["Les Sept Samouraïs", "Le Château de l’araignée", "Entre le ciel et l’enfer", "Rashōmon"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "intrigues",
+    "fact": "rashomon-temoignages",
+    "source": "https://www.bfi.org.uk/film/878cd0fa-33da-547a-b128-84cec508f7da/rashomon"
+  },
+  {
+    "text": "Dans « Coco », quel métier Miguel rêve-t-il d’exercer ?",
+    "answers": ["Cuisinier", "Musicien", "Couturier", "Dessinateur"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "animation",
+    "fact": "coco-vocation",
+    "source": "https://www.pixar.com/coco"
+  },
+  {
+    "text": "Quel film mêle western et science-fiction avec Yul Brynner dans le rôle d’un pistolero robot ?",
+    "answers": ["Mondwest", "Soleil vert", "La Planète des singes", "Le Dernier Pistolero"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "genres",
+    "fact": "mondwest-pistolero-robot",
+    "source": "https://catalog.afi.com/Film/54403-WESTWORLD?cxt=filmography"
+  },
+  {
+    "text": "Quel film l’Académie présente-t-elle comme le tout premier lauréat de l’Oscar du meilleur film ?",
+    "answers": ["L’Aurore (Sunrise)", "Le Chanteur de jazz", "La Foule", "Les Ailes (Wings)"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "palmares",
+    "fact": "wings-premier-oscar",
+    "source": "https://www.oscars.org/oscars/ceremonies/1929"
+  },
+  {
+    "text": "Dans « Dune », sur quelle planète extrait-on l’Épice ?",
+    "answers": ["Arrakis", "Caladan", "Giedi Prime", "Kaitain"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "dune-arrakis"
+  },
+  {
+    "text": "Dans quel pays Marjane grandit-elle au début de « Persepolis » ?",
+    "answers": ["En Irak", "En Turquie", "En Iran", "En Afghanistan"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "animation",
+    "fact": "persepolis-revolution-iran",
+    "source": "https://www.sonypictures.com/movies/persepolis"
+  },
+  {
+    "text": "Dans un célèbre raccord de « 2001 : l’Odyssée de l’espace », quelle image succède à celle d’un os lancé en l’air ?",
+    "answers": ["Un astre derrière le Soleil", "Un engin spatial en orbite", "Un astronaute en apesanteur", "Un monolithe sur la Lune"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "fabrication",
+    "fact": "odyssee-os-vaisseau",
+    "source": "https://www.bfi.org.uk/film/cefccdb2-b558-5623-9c17-72b4be7bd4c1/2001-a-space-odyssey"
+  },
+  {
+    "text": "Quel trophée l’Académie des arts et techniques du cinéma décerne-t-elle aux films en France ?",
+    "answers": ["Le Molière", "Le Prix Goncourt", "Le César", "La Victoire de la musique"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "palmares",
+    "fact": "cesars-film-academie",
+    "source": "https://www.academie-cinema.org/lacademie/histoire/"
+  },
+  {
+    "text": "Qui a réalisé la trilogie du dollar, qui se termine par « Le Bon, la Brute et le Truand » ?",
+    "answers": ["Sergio Corbucci", "Sergio Leone", "Clint Eastwood", "Sam Peckinpah"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "signatures",
+    "fact": "leone-dollars-trilogie"
+  },
+  {
+    "text": "Dans quel pays se déroule l’aventure de « Wolfwalkers » ?",
+    "answers": ["En Écosse", "Au Pays de Galles", "En Islande", "En Irlande"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "animation",
+    "fact": "wolfwalkers-irlande",
+    "source": "https://www.cartoonsaloon.ie/irish-animation-studio/feature-films/wolfwalkers/"
+  },
+  {
+    "text": "Qui a réalisé les trois films du « Seigneur des anneaux » sortis de 2001 à 2003 ?",
+    "answers": ["Peter Jackson", "Guillermo del Toro", "Sam Raimi", "George Lucas"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "signatures",
+    "fact": "anneaux-jackson"
+  },
+  {
+    "text": "Quel poste Monsieur Gustave occupe-t-il au Grand Budapest Hotel ?",
+    "answers": ["Chef cuisinier", "Concierge", "Réceptionniste de nuit", "Bagagiste"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "intrigues",
+    "fact": "grand-budapest-gustave",
+    "source": "https://www.searchlightpictures.com/thegrandbudapesthotel/"
+  },
+  {
+    "text": "Quel film a été nommé aux Oscars comme long métrage d’animation, documentaire et film international ?",
+    "answers": ["Valse avec Bachir", "Persepolis", "Flee", "La Tortue rouge"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "animation",
+    "fact": "flee-trois-nominations",
+    "source": "https://www.oscars.org/oscars/ceremonies/2022"
+  },
+  {
+    "text": "Au quidditch dans les films « Harry Potter », quelle balle l’attrapeur tente-t-il de saisir ?",
+    "answers": ["Le Vif d’or", "Le Souafle", "Un Cognard", "Le Ballon d’or"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "quidditch-vif-or"
+  },
+  {
+    "text": "Quelle poule orchestre les premières tentatives d’évasion dans « Chicken Run » ?",
+    "answers": ["Babs", "Mac", "Bunty", "Ginger"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "animation",
+    "fact": "chicken-run-ginger",
+    "source": "https://www.aardman.com/film-tv-games/chicken-run/"
+  },
+  {
+    "text": "Quel film d’Alfonso Cuarón a remporté le Lion d’or à Venise ?",
+    "answers": ["Roma", "Gravity", "Les Fils de l’homme", "Y tu mamá también"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "palmares",
+    "fact": "roma-lion-or",
+    "source": "https://www.labiennale.org/en/news/official-awards-75th-venice-film-festival"
+  },
+  {
+    "text": "Dans quel lieu vit Shrek au début du premier film ?",
+    "answers": ["Une tour", "Un marais", "Un moulin", "Une grotte"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "animation",
+    "fact": "shrek-marais"
+  },
+  {
+    "text": "Dans le premier « Alien », comment s’appelle le vaisseau de l’équipage de Ripley ?",
+    "answers": ["Sulaco", "Prometheus", "Auriga", "Nostromo"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "intrigues",
+    "fact": "alien-nostromo"
+  },
+  {
+    "text": "Qui a composé « Gabriel’s Oboe » pour le film « Mission » ?",
+    "answers": ["Nino Rota", "John Barry", "Ennio Morricone", "Jerry Goldsmith"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "signatures",
+    "fact": "mission-morricone-hautbois",
+    "source": "https://www.wisemusicclassical.com/work/62254/The-Mission-Gabriels-Oboe--Ennio-Morricone/"
+  },
+  {
+    "text": "Quel film sud-coréen est devenu le premier long métrage non anglophone à gagner l’Oscar du meilleur film ?",
+    "answers": ["Burning", "Old Boy", "Memories of Murder", "Parasite"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "palmares",
+    "fact": "parasite-premier-non-anglophone",
+    "source": "https://www.festival-cannes.com/en/the-festival/the-palme-d-or/"
+  },
+  {
+    "text": "Pour quel film Roger Deakins a-t-il remporté son premier Oscar de la meilleure photographie ?",
+    "answers": ["1917", "Skyfall", "Blade Runner 2049", "Sicario"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "fabrication",
+    "fact": "deakins-premier-oscar",
+    "source": "https://awardsdatabase.oscars.org/Search/GetResults?query=%7B%22Nominee%22%3A%22Roger+Deakins%22%2C%22Sort%22%3A%221-Nominee-Alpha%22%2C%22Search%22%3A%22Basic%22%7D"
+  },
+  {
+    "text": "Au cinéma, à quoi correspond une grande profondeur de champ ?",
+    "answers": ["Un écart marqué entre les zones claires et sombres", "Une netteté sur une large plage de distances", "Un angle de prise de vue très large", "Un grossissement important du sujet"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "fabrication",
+    "fact": "profondeur-champ-nettete"
+  },
+  {
+    "text": "Quel court métrage de science-fiction de Chris Marker est constitué presque entièrement de photos fixes ?",
+    "answers": ["La Jetée", "Sans Soleil", "Level Five", "Le Joli Mai"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "genres",
+    "fact": "la-jetee-photos-fixes",
+    "source": "https://www.bfi.org.uk/film/e6855ee9-c56d-5914-9f9b-69307cef5b18/la-jetee"
+  }
+]

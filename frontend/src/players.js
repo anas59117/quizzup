@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from "react";
-import { CATEGORIES } from "./ui";
+import { CATEGORIES, Icon } from "./ui";
 import { useI18n } from "./i18n";
 import { PlayerAvatar } from "./PlayerAvatar";
 
@@ -148,7 +148,7 @@ export function usePlayers(wsRef) {
   return { viewing, open, close, handleMessage, toggleFollow };
 }
 
-export function PlayerSheet({ players, social, onSelectTopic, onMessage }) {
+export function PlayerSheet({ players, social, onSelectTopic, onMessage, onChallenge }) {
   const { t, lang } = useI18n();
   const v = players.viewing;
   const [confirmRemove, setConfirmRemove] = useState(false);
@@ -227,22 +227,8 @@ export function PlayerSheet({ players, social, onSelectTopic, onMessage }) {
                 {t("level")} {p.level} · {p.online ? t("online") : t("offline")}
               </div>
             </div>
-            <div className="follow-counts">
-              <div>
-                <strong>{p.followers}</strong>
-                <small>{t("followers")}</small>
-              </div>
-              <div>
-                <strong>{p.following}</strong>
-                <small>{t("followingCount")}</small>
-              </div>
-              <div>
-                <strong>{p.games}</strong>
-                <small>{t("games")}</small>
-              </div>
-            </div>
             {!p.isYou && (
-              <div className="player-sheet-actions">
+              <div className="player-sheet-actions player-sheet-primary">
                 <button
                   className={`follow-btn ${p.isFollowing ? "is-following" : ""}`}
                   onClick={players.toggleFollow}
@@ -251,40 +237,54 @@ export function PlayerSheet({ players, social, onSelectTopic, onMessage }) {
                 >
                   {p.isFollowing ? t("followingState") : t("follow")}
                 </button>
+                {isFriend && onChallenge && (
+                  <button className="player-challenge-action" type="button" onClick={() => onChallenge(p.id)}>
+                    <Icon name="bolt" size={17} /> {lang === "fr" ? "Défier" : "Challenge"}
+                  </button>
+                )}
                 {isFriend && onMessage && (
-                  <button
-                    className="social-btn"
-                    onClick={() => onMessage(p.id)}
-                  >
-                    {lang === "fr" ? "Message / Défi" : "Message / Challenge"}
+                  <button className="social-btn outline" type="button" onClick={() => onMessage(p.id)}>
+                    Message
                   </button>
                 )}
-                {isFriend && (
-                  <button
-                    className="social-btn outline"
-                    disabled={removing}
-                    onClick={() => {
-                      if (!confirmRemove) {
-                        setConfirmRemove(true);
-                        return;
-                      }
-                      setRemoveError("");
-                      if (social.removeFriend(p.id)) setRemoving(true);
-                      else
-                        setRemoveError(
-                          lang === "fr"
-                            ? "Connexion indisponible. Réessaie."
-                            : "Connection unavailable. Please retry.",
-                        );
-                    }}
-                  >
-                    {removing
-                      ? t("removingFriend")
-                      : confirmRemove
-                        ? t("confirmRemoveFriend")
-                        : t("removeFriend")}
+                {!isFriend && social && (
+                  <button className="social-btn outline" type="button" disabled={requestSent} onClick={() => social.addFriend(p.id)}>
+                    {requestSent ? t("friendRequestPending") : t("addFriendShort")}
                   </button>
                 )}
+              </div>
+            )}
+            <div className="follow-counts">
+              <div><strong>{p.followers || 0}</strong><small>{t("followers")}</small></div>
+              <div><strong>{p.following || 0}</strong><small>{t("followingCount")}</small></div>
+              <div><strong>{p.games || 0}</strong><small>{t("games")}</small></div>
+            </div>
+            {isFriend && !p.isYou && (
+              <div className="player-sheet-actions player-sheet-friend-tools">
+                <button
+                  className="social-btn outline"
+                  disabled={removing}
+                  onClick={() => {
+                    if (!confirmRemove) {
+                      setConfirmRemove(true);
+                      return;
+                    }
+                    setRemoveError("");
+                    if (social.removeFriend(p.id)) setRemoving(true);
+                    else
+                      setRemoveError(
+                        lang === "fr"
+                          ? "Connexion indisponible. Réessaie."
+                          : "Connection unavailable. Please retry.",
+                      );
+                  }}
+                >
+                  {removing
+                    ? t("removingFriend")
+                    : confirmRemove
+                      ? t("confirmRemoveFriend")
+                      : t("removeFriend")}
+                </button>
                 {confirmRemove && !removing && (
                   <button
                     className="social-btn outline"
@@ -294,19 +294,6 @@ export function PlayerSheet({ players, social, onSelectTopic, onMessage }) {
                   </button>
                 )}
                 {removeError && <p role="alert">{removeError}</p>}
-                {social && (
-                  <button
-                    className="social-btn outline"
-                    onClick={() => social.addFriend(p.id)}
-                    disabled={isFriend || requestSent}
-                  >
-                    {isFriend
-                      ? t("alreadyFriends")
-                      : requestSent
-                        ? t("friendRequestPending")
-                        : t("addFriendShort")}
-                  </button>
-                )}
               </div>
             )}
             <div className="section-title">{t("topicsLabel")}</div>

@@ -202,7 +202,7 @@ export function useSocial(wsRef, clientId) {
   };
 }
 
-export function FriendsScreen({ social, onInviteFriend, onJoinFriend, pending, onOpenMessages }) {
+export function FriendsScreen({ social, onInviteFriend, onJoinFriend, pending, onOpenMessages, showContactsFirst = false }) {
   const { t } = useI18n();
   const [openChat, setOpenChat] = useState(null);
   const [draft, setDraft] = useState('');
@@ -222,6 +222,77 @@ export function FriendsScreen({ social, onInviteFriend, onJoinFriend, pending, o
     const timer = setTimeout(() => setPendingRemove(null), 6000);
     return () => clearTimeout(timer);
   }, [pendingRemove]);
+
+  const friendRows = social.friends.map((f) => (
+    <div key={`friend:${f.id}`} className="friends-block">
+      <div
+        className="friend-row"
+        role="button"
+        tabIndex={0}
+        aria-expanded={openChat === f.id}
+        onClick={() => {
+          setConfirmRemove(null);
+          if (onOpenMessages) onOpenMessages(f.id); else setOpenChat(openChat === f.id ? null : f.id);
+        }}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            setConfirmRemove(null);
+            if (onOpenMessages) onOpenMessages(f.id); else setOpenChat(openChat === f.id ? null : f.id);
+          }
+        }}
+      >
+        <div className={`friend-ava ${f.online ? 'online' : ''}`}><PlayerAvatar avatar={f.avatar} /></div>
+        <div className="friend-name">{f.name}</div>
+        <div className={`friend-status ${f.online ? 'on' : 'off'}`}>{f.online ? t('online') : t('offline')}</div>
+      </div>
+      {openChat === f.id && (
+        <div className="friend-chat">
+          <div className="friend-chat-msgs">
+            {(social.dms[f.id] || []).map((m, i) => (
+              <div
+                key={i}
+                className={`chat-bubble ${m.from === 'me' ? 'me' : m.from === 'system' ? 'system' : 'them'}`}
+              >
+                {m.kind === 'unavailable' ? t('messageUnavailable') : m.text}
+              </div>
+            ))}
+          </div>
+          <div className="friend-chat-input">
+            <input value={draft} maxLength={200} placeholder={t('messagePlaceholder')}
+              onChange={(e) => setDraft(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && draft.trim() && social.sendDM(f.id, draft)) setDraft('');
+              }} />
+            <button onClick={() => {
+              if (draft.trim() && social.sendDM(f.id, draft)) setDraft('');
+            }}>{t('send')}</button>
+          </div>
+          <button
+            className={`friend-remove-link ${confirmRemove === f.id ? 'confirm' : ''}`}
+            onClick={() => {
+              if (confirmRemove === f.id) {
+                if (social.removeFriend(f.id)) setPendingRemove(f.id);
+              } else {
+                setConfirmRemove(f.id);
+              }
+            }}
+            disabled={pendingRemove === f.id}
+          >
+            {pendingRemove === f.id
+              ? t('removingFriend')
+              : confirmRemove === f.id
+                ? t('confirmRemoveFriend')
+                : t('removeFriend')}
+          </button>
+        </div>
+      )}
+    </div>
+  ));
+  const inviteIndex = showContactsFirst ? Math.min(3, friendRows.length) : 0;
+  friendRows.splice(inviteIndex, 0,
+    <FriendInviteActions key="invite-actions" onInviteFriend={onInviteFriend} onJoinFriend={onJoinFriend} pending={pending} />
+  );
 
   return (
     <div className="friends-screen">
@@ -247,73 +318,7 @@ export function FriendsScreen({ social, onInviteFriend, onJoinFriend, pending, o
       )}
       <div className="friends-section-title">{t('friendsCount', { count: social.friends.length })}</div>
       {social.friends.length === 0 && <div className="friends-empty"><strong>{t('friendsEmptyTitle')}</strong><p>{t('friendsInviteHelp')}</p></div>}
-      <FriendInviteActions onInviteFriend={onInviteFriend} onJoinFriend={onJoinFriend} pending={pending} />
-      {social.friends.map((f) => (
-        <div key={f.id} className="friends-block">
-          <div
-            className="friend-row"
-            role="button"
-            tabIndex={0}
-            aria-expanded={openChat === f.id}
-            onClick={() => {
-              setConfirmRemove(null);
-              if (onOpenMessages) onOpenMessages(f.id); else setOpenChat(openChat === f.id ? null : f.id);
-            }}
-            onKeyDown={(event) => {
-              if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                setConfirmRemove(null);
-                if (onOpenMessages) onOpenMessages(f.id); else setOpenChat(openChat === f.id ? null : f.id);
-              }
-            }}
-          >
-            <div className={`friend-ava ${f.online ? 'online' : ''}`}><PlayerAvatar avatar={f.avatar} /></div>
-            <div className="friend-name">{f.name}</div>
-            <div className={`friend-status ${f.online ? 'on' : 'off'}`}>{f.online ? t('online') : t('offline')}</div>
-          </div>
-          {openChat === f.id && (
-            <div className="friend-chat">
-              <div className="friend-chat-msgs">
-                {(social.dms[f.id] || []).map((m, i) => (
-                  <div
-                    key={i}
-                    className={`chat-bubble ${m.from === 'me' ? 'me' : m.from === 'system' ? 'system' : 'them'}`}
-                  >
-                    {m.kind === 'unavailable' ? t('messageUnavailable') : m.text}
-                  </div>
-                ))}
-              </div>
-              <div className="friend-chat-input">
-                <input value={draft} maxLength={200} placeholder={t('messagePlaceholder')}
-                  onChange={(e) => setDraft(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' && draft.trim() && social.sendDM(f.id, draft)) setDraft('');
-                  }} />
-                <button onClick={() => {
-                  if (draft.trim() && social.sendDM(f.id, draft)) setDraft('');
-                }}>{t('send')}</button>
-              </div>
-              <button
-                className={`friend-remove-link ${confirmRemove === f.id ? 'confirm' : ''}`}
-                onClick={() => {
-                  if (confirmRemove === f.id) {
-                    if (social.removeFriend(f.id)) setPendingRemove(f.id);
-                  } else {
-                    setConfirmRemove(f.id);
-                  }
-                }}
-                disabled={pendingRemove === f.id}
-              >
-                {pendingRemove === f.id
-                  ? t('removingFriend')
-                  : confirmRemove === f.id
-                    ? t('confirmRemoveFriend')
-                    : t('removeFriend')}
-              </button>
-            </div>
-          )}
-        </div>
-      ))}
+      {friendRows}
     </div>
   );
 }

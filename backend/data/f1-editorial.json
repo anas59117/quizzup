@@ -1,0 +1,441 @@
+[
+  {
+    "text": "Combien de fois Michael Schumacher a-t-il été champion du monde de F1 ?",
+    "answers": ["5", "6", "7", "8"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pilotes",
+    "fact": "schumacher-sept"
+  },
+  {
+    "text": "Quelle écurie de F1 est associée à la couleur rouge et au cheval cabré ?",
+    "answers": ["McLaren", "Ferrari", "Red Bull", "Williams"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "ecuries",
+    "fact": "ferrari-cheval"
+  },
+  {
+    "text": "Quel pilote a égalé le record de 7 titres mondiaux de Schumacher ?",
+    "answers": ["Sebastian Vettel", "Max Verstappen", "Lewis Hamilton", "Fernando Alonso"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pilotes",
+    "fact": "hamilton-sept"
+  },
+  {
+    "text": "Lors de quel Grand Prix les pilotes passent-ils par le virage de la Rascasse ?",
+    "answers": ["Le Grand Prix d’Italie", "Le Grand Prix de Belgique", "Le Grand Prix de Monaco", "Le Grand Prix de Grande-Bretagne"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "circuits",
+    "fact": "rascasse-monaco"
+  },
+  {
+    "text": "Dans le barème instauré en 2010, combien de points rapporte la victoire d’un Grand Prix disputé sur sa distance complète ?",
+    "answers": ["10", "20", "25", "30"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "reglement",
+    "fact": "bareme-gp-victoire"
+  },
+  {
+    "text": "Quel pilote français a été champion du monde en 1985 et 1986 ?",
+    "answers": ["Alain Prost", "René Arnoux", "Jean Alesi", "Olivier Panis"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "pilotes",
+    "fact": "prost-1985-1986"
+  },
+  {
+    "text": "Quel drapeau signale la fin d’une course de F1 ?",
+    "answers": ["Un drapeau rouge", "Un drapeau à damier", "Un drapeau jaune", "Un drapeau bleu"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "reglement",
+    "fact": "drapeau-damier"
+  },
+  {
+    "text": "Quelle écurie Frank Williams et Patrick Head ont-ils fondée ensemble en 1977 ?",
+    "answers": ["Williams", "McLaren", "Force India", "Brawn GP"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "ecuries",
+    "fact": "williams-head-fondateurs"
+  },
+  {
+    "text": "Quel circuit français historique est connu pour sa ligne droite du Mistral ?",
+    "answers": ["Magny-Cours", "Paul Ricard", "Charade", "Reims-Gueux"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "circuits",
+    "fact": "mistral-paul-ricard"
+  },
+  {
+    "text": "Combien de roues comptait la Tyrrell P34 qui a couru en Formule 1 dans les années 1970 ?",
+    "answers": ["3", "4", "6", "2"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "technique",
+    "fact": "tyrrell-p34-roues"
+  },
+  {
+    "text": "De quel pays Ayrton Senna était-il originaire ?",
+    "answers": ["Argentine", "Espagne", "Brésil", "Italie"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pilotes",
+    "fact": "senna-nationalite",
+    "source": "https://www.formula1.com/en/latest/article/who-was-ayrton-senna-and-why-is-he-regarded-as-one-of-f1s-greatest-drivers.2GZEdmgHd9mPeCae2n6n4K"
+  },
+  {
+    "text": "Quel drapeau signale qu’une course de F1 est suspendue ?",
+    "answers": ["Rouge", "Vert", "Bleu", "Jaune"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "reglement",
+    "fact": "drapeau-rouge-suspension",
+    "source": "https://www.fia.com/sites/default/files/appendix_h_2024_published_30.10.2024.pdf"
+  },
+  {
+    "text": "Comment reconnaît-on un pneu slick de F1 à sa bande de roulement ?",
+    "answers": ["Elle présente des rainures profondes", "Elle est garnie de clous", "Elle porte des lamelles en zigzag", "Elle est lisse"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "technique",
+    "fact": "pneu-slick-surface",
+    "source": "https://www.formula1.com/en/page/f1-glossary"
+  },
+  {
+    "text": "Sur quel circuit s’est disputé le Grand Prix d’Italie 2024 ?",
+    "answers": ["Imola", "Monza", "Mugello", "Misano"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "circuits",
+    "fact": "monza-grand-prix-italie-2024",
+    "source": "https://www.formula1.com/en/racing/2024/italy"
+  },
+  {
+    "text": "Quelle partie du corps le halo est-il conçu pour protéger en priorité ?",
+    "answers": ["Les mains", "Les genoux", "Les pieds", "La tête"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "technique",
+    "fact": "halo-protection-tete",
+    "source": "https://www.formula1.com/en/latest/article/tech-tuesday-a-close-look-at-the-halo-and-how-it-saved-hamiltons-neck-in.68Ajvw12Xza2P3JvuXGRO3.68Ajvw12Xza2P3JvuXGRO3"
+  },
+  {
+    "text": "Qu’est-ce que la pole position en F1 ?",
+    "answers": ["La première place sur la grille", "Le meilleur tour en course", "La place au bout de la voie des stands", "La première place du classement provisoire"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "reglement",
+    "fact": "pole-position-definition",
+    "source": "https://www.formula1.com/en/page/f1-glossary"
+  },
+  {
+    "text": "Dans quel pays se trouve le circuit de Spa-Francorchamps ?",
+    "answers": ["Allemagne", "Belgique", "Pays-Bas", "Suisse"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "circuits",
+    "fact": "spa-francorchamps-pays",
+    "source": "https://www.formula1.com/en/racing/2024/belgium"
+  },
+  {
+    "text": "Quel classement désigne l’écurie championne en Formule 1 ?",
+    "answers": ["Le championnat des pilotes", "Le classement des arrêts aux stands", "Le championnat des constructeurs", "Le classement des pole positions"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "ecuries",
+    "fact": "titre-constructeurs-cible"
+  },
+  {
+    "text": "Quel pilote a remporté son premier titre mondial de F1 en 2021 ?",
+    "answers": ["Max Verstappen", "Charles Leclerc", "Lando Norris", "Lewis Hamilton"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pilotes",
+    "fact": "verstappen-premier-titre-2021",
+    "source": "https://www.formula1.com/en/latest/article/the-four-time-world-champions-verstappen-joins-in-the-all-time-list-and.DIIOvqAthyjnqsyOrzMon"
+  },
+  {
+    "text": "En F1, que désigne l’expression anglaise « pit lane » ?",
+    "answers": ["La ligne droite de départ", "La zone de dégagement", "La voie des stands", "La grille de départ"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "reglement",
+    "fact": "pit-lane-definition",
+    "source": "https://www.formula1.com/en/page/f1-glossary"
+  },
+  {
+    "text": "Avec quelle écurie Sebastian Vettel a-t-il décroché ses quatre titres de 2010 à 2013 ?",
+    "answers": ["Ferrari", "Red Bull", "Mercedes", "McLaren"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "ecuries",
+    "fact": "vettel-quatre-titres-red-bull",
+    "source": "https://www.formula1.com/en/latest/article/from-ascari-to-verstappen-how-all-11-back-to-back-f1-champions-did-the.fucMK0cjyroXk8sgn0i7s.fucMK0cjyroXk8sgn0i7s"
+  },
+  {
+    "text": "Quelle pièce le DRS ouvrait-il sur les monoplaces de F1 en 2024 ?",
+    "answers": ["Un volet de l’aileron avant", "Une trappe dans le plancher", "Une prise d’air du capot", "Un volet de l’aileron arrière"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "technique",
+    "fact": "drs-aileron-arriere",
+    "source": "https://www.formula1.com/en/page/f1-glossary"
+  },
+  {
+    "text": "Quel Français a signé sa première victoire en F1 à Monza en 2020 ?",
+    "answers": ["Esteban Ocon", "Pierre Gasly", "Romain Grosjean", "Charles Pic"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "grands-prix",
+    "fact": "gasly-monza-2020",
+    "source": "https://www.formula1.com/en/latest/article/gasly-takes-maiden-win-in-monza-thriller-from-sainz-as-penalty-leaves.2wjQyiSgOy8ggwcJlWHhsi"
+  },
+  {
+    "text": "Quel circuit a accueilli la première manche du championnat du monde de F1 en 1950 ?",
+    "answers": ["Monza", "Monaco", "Reims-Gueux", "Silverstone"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "histoire",
+    "fact": "silverstone-premier-mondial-1950",
+    "source": "https://www.formula1.com/en/latest/article/10-fascinating-facts-about-the-very-first-f1-race-held-at-silverstone-on.31fH6fHiwjnE5eFpPERxwd"
+  },
+  {
+    "text": "Quel circuit de F1 a un tracé en huit avec un passage sur un pont ?",
+    "answers": ["Suzuka", "Sepang", "Shanghai", "Silverstone"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "circuits",
+    "fact": "suzuka-trace-en-huit",
+    "source": "https://www.formula1.com/en/latest/article/circuit-guide-everything-you-need-to-know-about-the-suzuka-circuit.2BbgsRdkeux78UBGbmYiZV"
+  },
+  {
+    "text": "Dans quel Grand Prix Lando Norris a-t-il décroché sa première victoire en 2024 ?",
+    "answers": ["Monaco", "Grande-Bretagne", "Miami", "Canada"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "grands-prix",
+    "fact": "norris-premiere-victoire-miami",
+    "source": "https://www.formula1.com/en/latest/article/norris-admits-first-win-is-a-weight-off-but-says-he-never-doubted-victory.7h9WHGdg6EQT5rbZ4M4xUA"
+  },
+  {
+    "text": "Quelle écurie a remporté le championnat des constructeurs de F1 en 2024 ?",
+    "answers": ["Ferrari", "Red Bull", "Mercedes", "McLaren"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "ecuries",
+    "fact": "mclaren-constructeurs-2024",
+    "source": "https://www.formula1.com/en/results/2024/team"
+  },
+  {
+    "text": "Quel pilote a remporté le titre mondial de F1 en 2007 avec Ferrari ?",
+    "answers": ["Felipe Massa", "Kimi Räikkönen", "Fernando Alonso", "Lewis Hamilton"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "pilotes",
+    "fact": "raikkonen-titre-2007",
+    "source": "https://www.formula1.com/en/results/2007/drivers"
+  },
+  {
+    "text": "En F1, quelle action caractérise une tentative d’undercut sur un rival ?",
+    "answers": ["Prolonger son relais au-delà du sien", "Le dépasser sous drapeau jaune", "S’arrêter aux stands avant lui", "Laisser un écart au départ"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "technique",
+    "fact": "undercut-arret-anticipe",
+    "source": "https://www.formula1.com/en/page/f1-glossary"
+  },
+  {
+    "text": "En course en 2024, quel drapeau avertissait un pilote qu’il devait laisser passer une voiture qui lui prenait un tour ?",
+    "answers": ["Bleu", "Vert", "Rouge", "À damier"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "reglement",
+    "fact": "drapeau-bleu-tour-retard",
+    "source": "https://www.fia.com/sites/default/files/appendix_h_2024_published_30.10.2024.pdf"
+  },
+  {
+    "text": "En quelle saison les groupes propulseurs V6 turbo hybrides sont-ils arrivés en F1 ?",
+    "answers": ["2006", "2010", "2014", "2022"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "technique",
+    "fact": "moteurs-v6-turbo-hybrides-2014",
+    "source": "https://www.formula1.com/en/latest/article/the-key-regulation-changes-in-f1-history-and-the-teams-that-nailed-them.2iq8c5E6S1HOffT5PBLl6i"
+  },
+  {
+    "text": "Quel Grand Prix est devenu en 2008 la première course de F1 disputée de nuit ?",
+    "answers": ["Bahreïn", "Malaisie", "Chine", "Singapour"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "histoire",
+    "fact": "singapour-premiere-course-nuit-2008",
+    "source": "https://www.formula1.com/en/latest/article/do-you-remember-f1s-first-ever-night-race.40aylFbXcPZSJRGiQv5Dgh.40aylFbXcPZSJRGiQv5Dgh"
+  },
+  {
+    "text": "Pour quelle écurie Esteban Ocon a-t-il gagné le Grand Prix de Hongrie 2021 ?",
+    "answers": ["AlphaTauri", "Alpine", "Aston Martin", "Williams"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "grands-prix",
+    "fact": "ocon-alpine-hongrie-2021",
+    "source": "https://www.formula1.com/en/results/2021/races"
+  },
+  {
+    "text": "Quel coéquipier de Lewis Hamilton l’a devancé au championnat du monde 2016 ?",
+    "answers": ["Nico Rosberg", "Valtteri Bottas", "Jenson Button", "George Russell"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "pilotes",
+    "fact": "rosberg-titre-2016",
+    "source": "https://www.formula1.com/en/results/2016/drivers"
+  },
+  {
+    "text": "Qui est devenu le premier champion du monde des pilotes de F1 en 1950 ?",
+    "answers": ["Juan Manuel Fangio", "Alberto Ascari", "Luigi Fagioli", "Giuseppe Farina"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "histoire",
+    "fact": "farina-premier-champion-1950",
+    "source": "https://www.formula1.com/en/information/drivers-hall-of-fame-nino-farina.42vZMEuSei8avz76yMDHpf"
+  },
+  {
+    "text": "Quelle écurie d’usine Ross Brawn a-t-il reprise pour former Brawn GP en 2009 ?",
+    "answers": ["Toyota", "BMW Sauber", "Honda", "Renault"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "ecuries",
+    "fact": "brawn-gp-rachat-honda-2009",
+    "source": "https://www.formula1.com/en/information/drivers-hall-of-fame-jenson-button.3BuV7MDE7ykNAThxxLr8vT"
+  },
+  {
+    "text": "Au volant de quelle écurie Olivier Panis a-t-il gagné à Monaco en 1996 ?",
+    "answers": ["Ligier", "Prost Grand Prix", "Benetton", "Tyrrell"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "grands-prix",
+    "fact": "panis-ligier-monaco-1996",
+    "source": "https://www.formula1.com/en/results/1996/races/643/monaco/race-result"
+  },
+  {
+    "text": "Sur quel circuit Ayrton Senna a-t-il remporté le Grand Prix d’Europe 1993 sous la pluie ?",
+    "answers": ["Brands Hatch", "Donington Park", "Estoril", "Nürburgring"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "circuits",
+    "fact": "donington-grand-prix-europe-1993",
+    "source": "https://www.formula1.com/en/latest/article/he-was-walking-on-water-sennas-magical-donington-lap-of-the-gods-remembered.2cYFK0Zr1J9z8fypFxnZRi.2cYFK0Zr1J9z8fypFxnZRi"
+  },
+  {
+    "text": "Quel diamètre de jante a remplacé les 13 pouces en F1 en 2022 ?",
+    "answers": ["15 pouces", "18 pouces", "16 pouces", "20 pouces"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "technique",
+    "fact": "jantes-18-pouces-2022",
+    "source": "https://www.formula1.com/en/latest/article/7-key-rule-changes-for-the-2022-season.2E7JH9MywymU8xxw6r5yDS.2E7JH9MywymU8xxw6r5yDS"
+  },
+  {
+    "text": "Combien de points le vainqueur d’un Sprint disputé en entier marquait-il en 2024 ?",
+    "answers": ["8", "6", "10", "12"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "reglement",
+    "fact": "sprint-vainqueur-8-points-2024",
+    "source": "https://www.formula1.com/en/latest/article/2024-f1-sprint-rules-format-explained.5pQvaAY52nnX9vZYAYgf3O"
+  },
+  {
+    "text": "Quel champion de F1 a aussi été champion du monde en moto 500 cm³ ?",
+    "answers": ["Jack Brabham", "Jim Clark", "John Surtees", "Graham Hill"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "histoire",
+    "fact": "surtees-titres-moto-f1",
+    "source": "https://www.formula1.com/en/information/drivers-hall-of-fame-john-surtees.7a0aXDMmG4DZeRFpzeN4vz"
+  },
+  {
+    "text": "Quel pilote a remporté sa première victoire en F1 lors du Grand Prix de Sakhir 2020 ?",
+    "answers": ["Lance Stroll", "George Russell", "Carlos Sainz", "Sergio Pérez"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "grands-prix",
+    "fact": "perez-premiere-victoire-sakhir-2020",
+    "source": "https://www.formula1.com/en/results/2020/races/1060/bahrain/race-result"
+  },
+  {
+    "text": "Avec quelle écurie Michael Schumacher a-t-il pris son premier départ en F1 en 1991 ?",
+    "answers": ["Benetton", "Sauber", "Jordan", "Ligier"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "ecuries",
+    "fact": "schumacher-debuts-jordan-1991",
+    "source": "https://www.formula1.com/en/latest/article/schumacher-debut-91-jordan-spa-belgium.D9U3LeioK5CKXIPUxKsUn"
+  },
+  {
+    "text": "Dans quelle ville se trouve le circuit de l’Albert Park, utilisé en F1 ?",
+    "answers": ["Adélaïde", "Melbourne", "Sydney", "Perth"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "circuits",
+    "fact": "albert-park-ville",
+    "source": "https://www.formula1.com/en/racing/2024/australia"
+  },
+  {
+    "text": "Quel pilote a été sacré champion du monde de F1 à titre posthume en 1970 ?",
+    "answers": ["Jim Clark", "Ronnie Peterson", "Gilles Villeneuve", "Jochen Rindt"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "histoire",
+    "fact": "rindt-titre-posthume-1970",
+    "source": "https://www.formula1.com/en/information/drivers-hall-of-fame-jochen-rindt.297CPloKgJFry8fsI3oVyx"
+  },
+  {
+    "text": "Quelle écurie alignait la BT46B à ventilateur au Grand Prix de Suède 1978 ?",
+    "answers": ["Brabham", "Tyrrell", "Lotus", "McLaren"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "technique",
+    "fact": "bt46b-ventilateur-brabham-1978",
+    "source": "https://www.formula1.com/en/latest/article/from-a-six-wheeled-car-to-the-flip-flop-wing-8-of-the-wildest-tech.1GRhOeOV4saRcrbvxWYMtG.1GRhOeOV4saRcrbvxWYMtG"
+  },
+  {
+    "text": "En Q1 en 2024, quel seuil de temps pouvait obliger un pilote à obtenir une dérogation pour courir ?",
+    "answers": ["107 % du meilleur temps de Q1", "102 % du meilleur temps de Q1", "105 % du meilleur temps de Q1", "110 % du meilleur temps de Q1"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "reglement",
+    "fact": "qualification-q1-seuil-107-2024",
+    "source": "https://www.fia.com/sites/default/files/fia_2024_formula_1_sporting_regulations_-_issue_7_-_2024-07-31.pdf"
+  },
+  {
+    "text": "Quelle monoplace à effet de sol Mario Andretti a-t-il pilotée lors de son sacre en 1978 ?",
+    "answers": ["Lotus 72", "McLaren M23", "Ferrari 312 T2", "Lotus 79"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "technique",
+    "fact": "lotus-79-effet-sol-1978",
+    "source": "https://www.formula1.com/en/latest/article/watch-the-origins-of-ground-effect.6i1MZBs5xe6cjO2deb57hV.6i1MZBs5xe6cjO2deb57hV"
+  },
+  {
+    "text": "Qui a remporté le championnat du monde de F1 en 1982 avec une seule victoire cette saison-là ?",
+    "answers": ["Didier Pironi", "John Watson", "Keke Rosberg", "Alain Prost"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "pilotes",
+    "fact": "keke-rosberg-champion-1982",
+    "source": "https://www.formula1.com/en/information/drivers-hall-of-fame-keke-rosberg.5oGvi8v8jkuvLTXHTgm0bt"
+  },
+  {
+    "text": "En 2024, sur une course complète disputée en pneus secs, combien de gommes différentes fallait-il utiliser ?",
+    "answers": ["1", "2", "3", "4"],
+    "difficulty": "expert",
+    "angle": "reglement",
+    "fact": "pneus-sec-deux-gommes-2024",
+    "source": "https://www.fia.com/sites/default/files/fia_2024_formula_1_sporting_regulations_-_issue_7_-_2024-07-31.pdf",
+    "correct": 1
+  }
+]

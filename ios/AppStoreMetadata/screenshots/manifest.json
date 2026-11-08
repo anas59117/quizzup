@@ -1,0 +1,489 @@
+{
+  "commit": "c2588e600a467face0bc837a4574337c95be7e83",
+  "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-26-5",
+  "capturedAt": "2026-11-06T11:47:51.030Z",
+  "nativeViews": true,
+  "contentLanguage": "Original French question bank; FR/EN interface chrome only",
+  "captures": [
+    {
+      "screen": "home",
+      "language": "fr",
+      "profile": "iphone-large-dynamic-island",
+      "path": "fr/iphone-large-dynamic-island/01-home.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "0268f3ecc1948ee67f4525db76a24fe2ffc5323fdd2cfe9f2f1de974cea15cd3"
+    },
+    {
+      "screen": "faceoff",
+      "language": "fr",
+      "profile": "iphone-large-dynamic-island",
+      "path": "fr/iphone-large-dynamic-island/02-faceoff.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "80adc9120e9af28993b939854c70765c8ce2dda302cc9237d8cc669cfe4e5f6b"
+    },
+    {
+      "screen": "question",
+      "language": "fr",
+      "profile": "iphone-large-dynamic-island",
+      "path": "fr/iphone-large-dynamic-island/03-question.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "d2d6c92a4315c2c034c21b09d0d88970fe78c756a32cbb7ef339f7b0cf416c72"
+    },
+    {
+      "screen": "answer",
+      "language": "fr",
+      "profile": "iphone-large-dynamic-island",
+      "path": "fr/iphone-large-dynamic-island/04-answer.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "bed367110327631017a86db61909d300876051b9679d2298ae5c8282abb0326d"
+    },
+    {
+      "screen": "result",
+      "language": "fr",
+      "profile": "iphone-large-dynamic-island",
+      "path": "fr/iphone-large-dynamic-island/05-result.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "16e1147c01e091d6158d858070579f227a47437378efb0c65d30fd1e999e4318"
+    },
+    {
+      "screen": "themes",
+      "language": "fr",
+      "profile": "iphone-large-dynamic-island",
+      "path": "fr/iphone-large-dynamic-island/06-themes.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "f87ef57b40a090e05267544e0e61239ffe41446c1a1b2d24cd89b9e88126cce9"
+    },
+    {
+      "screen": "messages",
+      "language": "fr",
+      "profile": "iphone-large-dynamic-island",
+      "path": "fr/iphone-large-dynamic-island/07-messages.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "8f224f2bbcbc224f30d09cc433f8ee973c7eaa33aed92cf5a4fbb12a9e06ee4d"
+    },
+    {
+      "screen": "profile",
+      "language": "fr",
+      "profile": "iphone-large-dynamic-island",
+      "path": "fr/iphone-large-dynamic-island/08-profile.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "4006ac0f40a093315f36e535a36716b938149475d2a42e448705574be56045fe"
+    },
+    {
+      "screen": "home",
+      "language": "en",
+      "profile": "iphone-large-dynamic-island",
+      "path": "en/iphone-large-dynamic-island/01-home.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "32c1e8a50a4c3c71d90b7a842a76ced62ac7a824d01fd910459b1e723e26b31d"
+    },
+    {
+      "screen": "faceoff",
+      "language": "en",
+      "profile": "iphone-large-dynamic-island",
+      "path": "en/iphone-large-dynamic-island/02-faceoff.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "a47251bcafc3326eaae5382b96e76fc648e721347d6d9d3a7d7d18ab21954ae0"
+    },
+    {
+      "screen": "question",
+      "language": "en",
+      "profile": "iphone-large-dynamic-island",
+      "path": "en/iphone-large-dynamic-island/03-question.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "d3c18f715a65021206ddda494e97d1cbf33ee5660bd6403e681478762f8d15ec"
+    },
+    {
+      "screen": "answer",
+      "language": "en",
+      "profile": "iphone-large-dynamic-island",
+      "path": "en/iphone-large-dynamic-island/04-answer.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "81258abf99ad6f7b2f562deb83bc470b15a2d6e5790ece652abb5e887f6ca775"
+    },
+    {
+      "screen": "result",
+      "language": "en",
+      "profile": "iphone-large-dynamic-island",
+      "path": "en/iphone-large-dynamic-island/05-result.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "13ce33528255e11ca73fc8023b326bafb2bc8f8b973aa402e9afc91ccfa14b9c"
+    },
+    {
+      "screen": "themes",
+      "language": "en",
+      "profile": "iphone-large-dynamic-island",
+      "path": "en/iphone-large-dynamic-island/06-themes.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "6cf880cf71151576b0726b50793a083f0b17a2658821caea5764ada04a80d7d9"
+    },
+    {
+      "screen": "messages",
+      "language": "en",
+      "profile": "iphone-large-dynamic-island",
+      "path": "en/iphone-large-dynamic-island/07-messages.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "d327f29d7d4410fc0ec6d88201e8f2bd9ee0489da2135cf6f2affc44aac5fdd1"
+    },
+    {
+      "screen": "profile",
+      "language": "en",
+      "profile": "iphone-large-dynamic-island",
+      "path": "en/iphone-large-dynamic-island/08-profile.jpg",
+      "width": 1290,
+      "height": 2796,
+      "components": 3,
+      "sha256": "790001c57b8b38ed800aea93bc39dbf18f8a9eb5bb294ddbbfb86a80facc6e87"
+    },
+    {
+      "screen": "home",
+      "language": "fr",
+      "profile": "iphone-large-face-id",
+      "path": "fr/iphone-large-face-id/01-home.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "a79468da0b2add657a4dc2f5435a078b1b3879e8afec00a1fdd65d23a64acfa3"
+    },
+    {
+      "screen": "faceoff",
+      "language": "fr",
+      "profile": "iphone-large-face-id",
+      "path": "fr/iphone-large-face-id/02-faceoff.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "2b75f1f2b8a428612e4e288b18beb3ea03709bfda987f3eacde8a05ed9a2e96e"
+    },
+    {
+      "screen": "question",
+      "language": "fr",
+      "profile": "iphone-large-face-id",
+      "path": "fr/iphone-large-face-id/03-question.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "afd397670e8fdcd8e7c9756cffaabbada271358ce5be8a58fe0f7b6e62f62d55"
+    },
+    {
+      "screen": "answer",
+      "language": "fr",
+      "profile": "iphone-large-face-id",
+      "path": "fr/iphone-large-face-id/04-answer.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "b58afb112f38e8661a773fe925a2dd70e46c908adcfe10b9109db3e1aaf80b01"
+    },
+    {
+      "screen": "result",
+      "language": "fr",
+      "profile": "iphone-large-face-id",
+      "path": "fr/iphone-large-face-id/05-result.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "792727a29ef73a695db64f13daa0cb49d942918f328215f910c62deb7b6c3cde"
+    },
+    {
+      "screen": "themes",
+      "language": "fr",
+      "profile": "iphone-large-face-id",
+      "path": "fr/iphone-large-face-id/06-themes.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "1e4daa4047df3a038e70d35134e9e7c831ffc54ba80032b976d97e73663de6d1"
+    },
+    {
+      "screen": "messages",
+      "language": "fr",
+      "profile": "iphone-large-face-id",
+      "path": "fr/iphone-large-face-id/07-messages.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "a0ad4bed228b7a7229164bd16c0a306b51c056c7ad5ce2b50f32dab847a7e47e"
+    },
+    {
+      "screen": "profile",
+      "language": "fr",
+      "profile": "iphone-large-face-id",
+      "path": "fr/iphone-large-face-id/08-profile.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "4846db48611cfd5b85928387077733251c44a8810f7ae14f5f139eb4f9c4340e"
+    },
+    {
+      "screen": "home",
+      "language": "en",
+      "profile": "iphone-large-face-id",
+      "path": "en/iphone-large-face-id/01-home.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "a5adb74bf100ee747888a051b409dbdb3fcaa5260e0efcbbb45496401555c8da"
+    },
+    {
+      "screen": "faceoff",
+      "language": "en",
+      "profile": "iphone-large-face-id",
+      "path": "en/iphone-large-face-id/02-faceoff.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "7d8a4f29155532ed801138d87d82d2b519f4a0562a571aa5fc4ecef9c0715bde"
+    },
+    {
+      "screen": "question",
+      "language": "en",
+      "profile": "iphone-large-face-id",
+      "path": "en/iphone-large-face-id/03-question.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "2b1af5ae00d7fdc62dad31e1e4523c670eb6b8e60a3b4082752f6405a9f3d496"
+    },
+    {
+      "screen": "answer",
+      "language": "en",
+      "profile": "iphone-large-face-id",
+      "path": "en/iphone-large-face-id/04-answer.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "77715a9ba807966c48027854ed8a83e16c46ea07c5d79b2419de3f1f5dc7ddaa"
+    },
+    {
+      "screen": "result",
+      "language": "en",
+      "profile": "iphone-large-face-id",
+      "path": "en/iphone-large-face-id/05-result.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "4222a627750bfbda2c3d881d5d0e4e001dc22d48c4f905a0f6c8fa27748f0f4f"
+    },
+    {
+      "screen": "themes",
+      "language": "en",
+      "profile": "iphone-large-face-id",
+      "path": "en/iphone-large-face-id/06-themes.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "b253a2baca6c048c77446aa280dfa8c41d407f9477de7cd17ea4b14e0219ec4b"
+    },
+    {
+      "screen": "messages",
+      "language": "en",
+      "profile": "iphone-large-face-id",
+      "path": "en/iphone-large-face-id/07-messages.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "c667d17598fd12d1ffd5e970b36fc9f961a160fb5a74401fb584567c9e0f68dc"
+    },
+    {
+      "screen": "profile",
+      "language": "en",
+      "profile": "iphone-large-face-id",
+      "path": "en/iphone-large-face-id/08-profile.jpg",
+      "width": 1284,
+      "height": 2778,
+      "components": 3,
+      "sha256": "a73c67be4fb966ac974a9c2269edb501b10d1efa19b15d1be63937f7ec71d363"
+    },
+    {
+      "screen": "home",
+      "language": "fr",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "fr/iphone-medium-dynamic-island/01-home.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "5993bc3eb56ff328d9fdeb641e69b658a080a8d818dc76995d9ebcc72a7e5791"
+    },
+    {
+      "screen": "faceoff",
+      "language": "fr",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "fr/iphone-medium-dynamic-island/02-faceoff.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "082de552295f7625937ee137cda95d05118b7638aa2feebe66ac31cfa33aba87"
+    },
+    {
+      "screen": "question",
+      "language": "fr",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "fr/iphone-medium-dynamic-island/03-question.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "e4c1a7af728260b81bc5950b34955031e00f5e68f075df9a34cc7382f9f833b9"
+    },
+    {
+      "screen": "answer",
+      "language": "fr",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "fr/iphone-medium-dynamic-island/04-answer.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "2defeecf6e9621dfc3b776d727be97f6299479879773d980093bb2de48a7d1e1"
+    },
+    {
+      "screen": "result",
+      "language": "fr",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "fr/iphone-medium-dynamic-island/05-result.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "6506a993b66ae10698094c1d8fa11c4cdad66a800e5421795a003a125ef4d56b"
+    },
+    {
+      "screen": "themes",
+      "language": "fr",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "fr/iphone-medium-dynamic-island/06-themes.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "122074842b4e06dafce4e9964d600128b768ca346db33e87dcc8bb8f4e817ba6"
+    },
+    {
+      "screen": "messages",
+      "language": "fr",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "fr/iphone-medium-dynamic-island/07-messages.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "392d233f66c8eb2b221c66981f43a1a2e1240c41f20533ab83ca2ec2bd0e4948"
+    },
+    {
+      "screen": "profile",
+      "language": "fr",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "fr/iphone-medium-dynamic-island/08-profile.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "f48db8444537aad0da9295fb23b4ccbf7dfd55533b8e1c88a909889507676d73"
+    },
+    {
+      "screen": "home",
+      "language": "en",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "en/iphone-medium-dynamic-island/01-home.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "682e9473974825874cee4b01ab4a5c413f6027a52888cf858c6bb532bd279067"
+    },
+    {
+      "screen": "faceoff",
+      "language": "en",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "en/iphone-medium-dynamic-island/02-faceoff.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "ce6cc540340a7033595bf21138ccc3ce5c33467b939885c5c90530b0bc9f9640"
+    },
+    {
+      "screen": "question",
+      "language": "en",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "en/iphone-medium-dynamic-island/03-question.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "8fc3a5f7fe01a14794ae701749d4e49a7bf08992fc090ad8c5e5a83b984a8d86"
+    },
+    {
+      "screen": "answer",
+      "language": "en",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "en/iphone-medium-dynamic-island/04-answer.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "83fe70bb683c4501ac99d7be7228f24631ebae31e6cc8ac7b8d9e63cd5e3879b"
+    },
+    {
+      "screen": "result",
+      "language": "en",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "en/iphone-medium-dynamic-island/05-result.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "9577fd0f9e847d2745f17ff6e1216887e1cc70e30acced436d1b055d0543c081"
+    },
+    {
+      "screen": "themes",
+      "language": "en",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "en/iphone-medium-dynamic-island/06-themes.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "0c799421dd9742746665de5b7cf303e868aee7cab93795a836e27dab03f03269"
+    },
+    {
+      "screen": "messages",
+      "language": "en",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "en/iphone-medium-dynamic-island/07-messages.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "7cc82d0b1cce55092152e82b5925299f7ebe56c031fad10441e621cc94d5047f"
+    },
+    {
+      "screen": "profile",
+      "language": "en",
+      "profile": "iphone-medium-dynamic-island",
+      "path": "en/iphone-medium-dynamic-island/08-profile.jpg",
+      "width": 1179,
+      "height": 2556,
+      "components": 3,
+      "sha256": "0db8fa3fa53e8526b345fc66ad7370a02ea582693e261e5885b981e911ea798e"
+    }
+  ]
+}

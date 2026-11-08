@@ -1,0 +1,411 @@
+[
+  {
+    "text": "Quel roi de France est surnommé le \"Roi Soleil\" ?",
+    "answers": ["Louis XIII", "Louis XIV", "Louis XV", "Louis XVI"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "roi-soleil"
+  },
+  {
+    "text": "En quelle année Napoléon Bonaparte a-t-il été sacré empereur ?",
+    "answers": ["1799", "1804", "1812", "1815"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "institutions",
+    "fact": "napoleon-sacre",
+    "format": "date"
+  },
+  {
+    "text": "Quelle bataille de 1815 marque la défaite finale de Napoléon ?",
+    "answers": ["Austerlitz", "Waterloo", "Trafalgar", "Iéna"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "conflits",
+    "fact": "waterloo"
+  },
+  {
+    "text": "Qui était Jeanne d’Arc ?",
+    "answers": ["Une reine de France", "Une héroïne militaire pendant la guerre de Cent Ans", "Une philosophe des Lumières", "Une impératrice romaine"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "jeanne-role"
+  },
+  {
+    "text": "En quelle année la France a-t-elle aboli la peine de mort ?",
+    "answers": ["1969", "1981", "1995", "2000"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "societes",
+    "fact": "peine-de-mort-abolition",
+    "format": "date"
+  },
+  {
+    "text": "Quel monument parisien a été construit pour l’Exposition universelle de 1889 ?",
+    "answers": ["L’Arc de Triomphe", "La Tour Eiffel", "Le Sacré-Cœur", "Le Grand Palais"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "patrimoine",
+    "fact": "tour-eiffel-1889"
+  },
+  {
+    "text": "Qui était le premier président de la Ve République française ?",
+    "answers": ["Georges Pompidou", "Charles de Gaulle", "François Mitterrand", "René Coty"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "institutions",
+    "fact": "de-gaulle-ve-republique"
+  },
+  {
+    "text": "Quelle guerre a opposé la France et l’Angleterre de 1337 à 1453 ?",
+    "answers": ["La Guerre de Cent Ans", "La Guerre de Sept Ans", "Les Guerres de Religion", "La Fronde"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "conflits",
+    "fact": "guerre-de-cent-ans"
+  },
+  {
+    "text": "Quel traité signé en 1919 règle la paix entre l’Allemagne et les puissances alliées après la Grande Guerre ?",
+    "answers": ["Le Traité de Vienne", "Le Traité de Versailles", "Le Traité de Westphalie", "Le Traité de Rome"],
+    "correct": 1,
+    "source": "https://www.chateauversailles.fr/decouvrir/histoire/grandes-dates/traite-versailles",
+    "difficulty": "medium",
+    "angle": "diplomatie",
+    "fact": "versailles-1919"
+  },
+  {
+    "text": "Quel château Louis XIV transforme-t-il en résidence principale et siège de la cour ?",
+    "answers": ["Le Louvre", "Le Château de Versailles", "Fontainebleau", "Le Château de Chambord"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "patrimoine",
+    "fact": "louis-xiv-versailles"
+  },
+  {
+    "text": "Quel général romain affronte Vercingétorix à Alésia ?",
+    "answers": ["Jules César", "Pompée", "Marc Antoine", "Scipion l’Africain"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "conflits",
+    "fact": "gaulois-guerre"
+  },
+  {
+    "text": "Quel roi des Francs a été baptisé par l’évêque Remi de Reims ?",
+    "answers": ["Dagobert Ier", "Clovis", "Pépin le Bref", "Charlemagne"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "clovis-bapteme"
+  },
+  {
+    "text": "Quel pape couronne Charlemagne empereur à Rome en 800 ?",
+    "answers": ["Grégoire Ier", "Urbain II", "Léon III", "Innocent III"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "institutions",
+    "fact": "charlemagne-sacre"
+  },
+  {
+    "text": "Quel roi élu en 987 a donné son nom à la dynastie capétienne ?",
+    "answers": ["Louis VI", "Philippe Auguste", "Robert II", "Hugues Capet"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "institutions",
+    "fact": "capet"
+  },
+  {
+    "text": "Quel roi de France remporte la bataille de Bouvines en 1214 ?",
+    "answers": ["Philippe Auguste", "Louis IX", "Philippe le Bel", "Louis XI"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "conflits",
+    "fact": "bouvines"
+  },
+  {
+    "text": "Quel roi de France canonisé est aussi appelé Saint Louis ?",
+    "answers": ["Louis VII", "Louis IX", "Louis X", "Louis XI"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "louis-ix-justice"
+  },
+  {
+    "text": "Quelle épidémie frappe durement la France au milieu du XIVᵉ siècle ?",
+    "answers": ["Le choléra", "La grippe espagnole", "La peste noire", "La fièvre jaune"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "societes",
+    "fact": "peste-xiv"
+  },
+  {
+    "text": "Quel nom porte le soulèvement paysan de 1358 dans le nord du royaume de France ?",
+    "answers": ["La Fronde", "La révolte des Canuts", "La révolte des Bonnets rouges", "La Grande Jacquerie"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "societes",
+    "fact": "jacquerie"
+  },
+  {
+    "text": "Dans quelle ville Jeanne d’Arc aide-t-elle à lever un siège en 1429 ?",
+    "answers": ["Orléans", "Rouen", "Reims", "Tours"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "conflits",
+    "fact": "orleans-jeanne"
+  },
+  {
+    "text": "Quelle ordonnance impose l’usage du français dans les actes de justice et d’administration du royaume ?",
+    "answers": ["L’ordonnance de Montils-lès-Tours", "L’ordonnance de Villers-Cotterêts", "L’édit de Nantes", "L’édit de Fontainebleau"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "institutions",
+    "fact": "villers-cotterets"
+  },
+  {
+    "text": "Quel château du Val de Loire François Ier a-t-il fait bâtir ?",
+    "answers": ["Azay-le-Rideau", "Chenonceau", "Chambord", "Cheverny"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "patrimoine",
+    "fact": "renaissance-chambord"
+  },
+  {
+    "text": "Quel roi promulgue l’édit de Nantes, qui accorde des droits aux protestants ?",
+    "answers": ["Louis XIII", "Charles IX", "François Ier", "Henri IV"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "diplomatie",
+    "fact": "nantes-edit"
+  },
+  {
+    "text": "Sous quel roi le cardinal de Richelieu exerce-t-il son rôle de principal ministre ?",
+    "answers": ["Louis XIII", "Louis XII", "Louis XIV", "Henri IV"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "richelieu-roi"
+  },
+  {
+    "text": "Quel nom porte la série de révoltes qui éclatent pendant la minorité de Louis XIV ?",
+    "answers": ["La Ligue", "La Fronde", "Les guerres de Religion", "La Grande Jacquerie"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "conflits",
+    "fact": "fronde"
+  },
+  {
+    "text": "Quel traité signé en 1659 met fin à la guerre entre la France et l’Espagne ?",
+    "answers": ["Le traité d’Utrecht", "Le traité de Nimègue", "Le traité des Pyrénées", "Le traité de Ryswick"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "diplomatie",
+    "fact": "pyrenees"
+  },
+  {
+    "text": "À quel pays la France vend-elle la Louisiane en 1803 ?",
+    "answers": ["À l’Espagne", "Au Royaume-Uni", "Au Mexique", "Aux États-Unis"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "diplomatie",
+    "fact": "louisiane-vente"
+  },
+  {
+    "text": "Par quel moyen les frères Montgolfier ont-ils marqué l’histoire du vol ?",
+    "answers": ["Le ballon à air chaud", "Le planeur", "Le dirigeable à hydrogène", "L’avion à vapeur"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sciences",
+    "fact": "montgolfiere"
+  },
+  {
+    "text": "Dans quelle salle des députés jurent-ils en 1789 de donner une constitution à la France ?",
+    "answers": ["La galerie des Glaces", "La salle du Jeu de paume", "La salle des Menus-Plaisirs", "La salle du Manège"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "institutions",
+    "fact": "jeu-de-paume",
+    "source": "https://www.chateauversailles.fr/decouvrir/histoire/les-grandes-dates/serment-jeu-paume"
+  },
+  {
+    "text": "Quel révolutionnaire montagnard est renversé le 9 Thermidor an II ?",
+    "answers": ["Georges Danton", "Jean-Paul Marat", "Maximilien Robespierre", "Camille Desmoulins"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "terreur-robespierre"
+  },
+  {
+    "text": "Quelle assemblée abolit la royauté en septembre 1792 ?",
+    "answers": ["L’Assemblée constituante", "Le Conseil des Cinq-Cents", "Le Corps législatif", "La Convention nationale"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "institutions",
+    "fact": "republique-premiere"
+  },
+  {
+    "text": "Quel nom le calendrier révolutionnaire donne-t-il au mois qui suit pluviôse ?",
+    "answers": ["Ventôse", "Germinal", "Nivôse", "Prairial"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "societes",
+    "fact": "ventose"
+  },
+  {
+    "text": "Quel État devient indépendant en 1804 à la suite de la révolution de Saint-Domingue ?",
+    "answers": ["La République dominicaine", "Haïti", "Cuba", "La Jamaïque"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "diplomatie",
+    "fact": "saint-domingue"
+  },
+  {
+    "text": "Quel texte adopté en 1804 unifie une large partie du droit privé français ?",
+    "answers": ["La Charte constitutionnelle", "Le Code pénal", "Le Code civil", "Le Code de commerce"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "institutions",
+    "fact": "napoleon-code"
+  },
+  {
+    "text": "Quel roi est renversé lors des Trois Glorieuses de juillet 1830 ?",
+    "answers": ["Louis XVIII", "Louis-Philippe", "Napoléon III", "Charles X"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "conflits",
+    "fact": "trois-glorieuses"
+  },
+  {
+    "text": "Quel souverain règne sous la monarchie de Juillet ?",
+    "answers": ["Louis-Philippe", "Charles X", "Napoléon III", "Louis XVIII"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "institutions",
+    "fact": "juillet-philippe"
+  },
+  {
+    "text": "Dans quelle ville des ouvriers de la soie se soulèvent-ils en 1831 ?",
+    "answers": ["Roubaix", "Lyon", "Nantes", "Saint-Étienne"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "societes",
+    "fact": "canuts"
+  },
+  {
+    "text": "Quel homme politique prépare le décret qui abolit l’esclavage dans les colonies françaises en 1848 ?",
+    "answers": ["Alphonse de Lamartine", "Jules Ferry", "Victor Schœlcher", "François Guizot"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "societes",
+    "fact": "abolition-esclavage"
+  },
+  {
+    "text": "Dans quelle ville se déroule la Semaine sanglante de mai 1871 ?",
+    "answers": ["Lyon", "Marseille", "Bordeaux", "Paris"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "conflits",
+    "fact": "commune-paris"
+  },
+  {
+    "text": "Contre quelle maladie Louis Pasteur utilise-t-il un vaccin sur Joseph Meister en 1885 ?",
+    "answers": ["La rage", "La variole", "La tuberculose", "Le tétanos"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sciences",
+    "fact": "pasteur-vaccin"
+  },
+  {
+    "text": "Quel écrivain publie « J’accuse… ! » dans le journal L’Aurore ?",
+    "answers": ["Anatole France", "Émile Zola", "Guy de Maupassant", "Victor Hugo"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "societes",
+    "fact": "dreyfus-jaccuse"
+  },
+  {
+    "text": "Qu’organise la loi française du 9 décembre 1905 ?",
+    "answers": ["L’enseignement primaire obligatoire", "La liberté syndicale", "La séparation des Églises et de l’État", "Le repos hebdomadaire"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "institutions",
+    "fact": "separation-eglises",
+    "source": "https://www.vie-publique.fr/eclairage/20205-laicite-le-regime-de-separation-entre-letat-et-les-cultes"
+  },
+  {
+    "text": "Quel élément découvert par Marie et Pierre Curie tient son nom de la Pologne ?",
+    "answers": ["Le radium", "Le francium", "Le curium", "Le polonium"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "sciences",
+    "fact": "curie-element"
+  },
+  {
+    "text": "Quel niveau d’enseignement les lois Jules Ferry rendent-elles gratuit dans le public et obligatoire pour les enfants ?",
+    "answers": ["L’enseignement primaire", "L’enseignement secondaire", "L’enseignement supérieur", "L’apprentissage professionnel"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "societes",
+    "fact": "ecole-ferry"
+  },
+  {
+    "text": "Quelle avancée sociale est votée en France sous le Front populaire en 1936 ?",
+    "answers": ["La semaine de 35 heures", "Deux semaines de congés payés", "La retraite à 60 ans", "Le salaire minimum interprofessionnel de croissance"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "societes",
+    "fact": "front-populaire-conges",
+    "source": "https://www.assemblee-nationale.fr/dyn/histoire/il-y-a-90-ans-le-front-populaire-et-les-lois-sociales-de-la-republique"
+  },
+  {
+    "text": "Qui préside la première réunion du Conseil national de la Résistance en 1943 ?",
+    "answers": ["Charles de Gaulle", "Pierre Brossolette", "Jean Moulin", "Lucie Aubrac"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "resistance-cnr"
+  },
+  {
+    "text": "À quel type d’élection les Françaises votent-elles pour la première fois en 1945 ?",
+    "answers": ["Les élections cantonales", "Les élections législatives", "Un référendum constitutionnel", "Les élections municipales"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "societes",
+    "fact": "vote-femmes",
+    "source": "https://www.vie-publique.fr/eclairage/19618-parite-politique-hommes-femmes-quels-resultats"
+  },
+  {
+    "text": "Quel ministre français présente en 1950 le plan à l’origine de la Communauté européenne du charbon et de l’acier ?",
+    "answers": ["Robert Schuman", "Jean Monnet", "René Pleven", "Pierre Mendès France"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "diplomatie",
+    "fact": "ceca",
+    "source": "https://european-union.europa.eu/principles-countries-history/history-eu/1945-59/schuman-declaration-may-1950_fr"
+  },
+  {
+    "text": "Dans quelle ville la France et cinq autres États signent-ils les traités fondateurs de la CEE en 1957 ?",
+    "answers": ["Bruxelles", "Rome", "Strasbourg", "Luxembourg"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "diplomatie",
+    "fact": "europa-rome"
+  },
+  {
+    "text": "Quelle ministre défend devant l’Assemblée nationale le projet de loi sur l’interruption volontaire de grossesse en 1974 ?",
+    "answers": ["Édith Cresson", "Yvette Roudy", "Simone Veil", "Gisèle Halimi"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "ivg-veil"
+  },
+  {
+    "text": "Sur quelle liaison la SNCF inaugure-t-elle ses premiers services TGV en 1981 ?",
+    "answers": ["Paris et Lille", "Paris et Marseille", "Paris et Bordeaux", "Paris et Lyon"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "sciences",
+    "fact": "tgv-1981",
+    "source": "https://www.archives.sncf.com/le-tgv-paris-sud-est/"
+  }
+]

@@ -92,6 +92,88 @@ test('every quiz category produces a complete progressive six-round match', () =
   }
 });
 
+test('expanded quizzes draw four or more angles from banks of at least 50 questions', async () => {
+  const { getMixedQuestions } = require('./questions');
+  const difficulties = ['easy', 'easy', 'medium', 'medium', 'hard', 'expert'];
+  let seed = 0x717;
+  const random = () => {
+    seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
+    return seed / 2 ** 32;
+  };
+
+  const portraitKeys = [
+    'bollywood', 'cinema_fr', 'premier_league', 'la_liga', 'bundesliga', 'serie_a',
+    'actors', 'tennis', 'rugby', 'athletisme', 'science_stars', 'humour', 'mode', 'kpop',
+    'series_ado_romance',
+  ];
+  const keys = [
+    'movies', 'music', 'sports', 'gaming', 'science',
+    'geography', 'histoire_fr', 'culture_fr', 'f1', 'retro_games',
+    'got', 'tv_shows', ...portraitKeys,
+  ];
+  for (const key of keys) {
+    const bank = CATEGORIES[key].questions;
+    assert.ok(bank.length >= 50, key + ' has at least 50 questions');
+    assert.equal(new Set(bank.map(question => question.fact)).size, bank.length, key + ' covers unique facts');
+    assert.ok(bank.every(question => question.angle && question.fact && question.difficulty), key + ' classifies every question');
+
+    const checkMatch = (questions) => {
+      assert.deepEqual(questions.map(question => question.difficulty), difficulties);
+      assert.ok(new Set(questions.map(question => question.angle)).size >= 4, key + ' covers four angles');
+      if (portraitKeys.includes(key)) {
+        assert.ok(questions.filter(question => question.image).length <= 2, key + ' draws at most two portraits');
+      }
+    };
+    const seen = new Set();
+    for (let i = 0; i < 100; i++) {
+      const questions = getQuestions(6, key, random);
+      checkMatch(questions);
+      for (const question of questions) seen.add(question.fact);
+    }
+    assert.ok(seen.size >= 40, key + ' draws broadly from the expanded bank');
+    checkMatch(await getMixedQuestions(6, key));
+  }
+});
+
+test('audited banks skip repeated facts and limit dominant formats in six-question matches', () => {
+  const formats = {
+    revolutions_dans_le_monde: 'date',
+    histoire_de_l_algerie: 'date',
+    histoire_du_maroc: 'date',
+    histoire_de_la_tunisie: 'date',
+    grandes_explorations: 'date',
+    moyen_age: 'date',
+    etats_unis_culture_generale: 'date',
+    kanye_west: 'album',
+    travis_scott: 'album',
+    dua_lipa: 'album',
+    billie_eilish: 'album',
+    legendes_de_l_esport: 'attribution',
+    jeux_mobile_populaires: 'attribution',
+  };
+  const keys = Object.keys(CATEGORIES).filter(key => CATEGORIES[key].variety?.maxPerOpening);
+  assert.ok(keys.length >= 39);
+  for (const key of Object.keys(formats)) assert.ok(keys.includes(key), key);
+  let seed = 0x272;
+  const random = () => {
+    seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
+    return seed / 2 ** 32;
+  };
+  for (const key of keys) {
+    const finals = new Set();
+    for (let i = 0; i < 200; i++) {
+      const rounds = getQuestions(6, key, random);
+      assert.equal(rounds.length, 6, key);
+      assert.ok(rounds.every(question => question.fact), key + ' identifies facts');
+      assert.equal(new Set(rounds.map(question => question.fact)).size, 6, key + ' keeps facts distinct');
+      const limited = formats[key];
+      if (limited) assert.ok(rounds.filter(question => question.format === limited).length <= 2, key + ' mixes formats');
+      finals.add(rounds.at(-1).fact);
+    }
+    assert.ok(finals.size >= 4, key + ' varies the final question');
+  }
+});
+
 test('answers are shuffled at serve time and the correct index follows the right answer', () => {
   const { shuffleAnswers } = require('./questions');
   const q = { text: 'Q', answers: ['A', 'B', 'C', 'D'], correct: 1 };
@@ -106,4 +188,31 @@ test('answers are shuffled at serve time and the correct index follows the right
   assert.deepEqual(q.answers, ['A', 'B', 'C', 'D']);
   const fixed = { text: 'Q', answers: ['X', 'Y', 'Z', 'Toutes les réponses'], correct: 3 };
   assert.deepEqual(shuffleAnswers(fixed), fixed);
+});
+
+test('the two rebuilt quizzes deliver varied six-question matches through both draw paths', async () => {
+  const { getMixedQuestions } = require('./questions');
+  const formats = { ligue_1: 'portrait', premiere_guerre_mondiale: 'date' };
+  let seed = 0x1eaf;
+  const random = () => {
+    seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
+    return seed / 2 ** 32;
+  };
+  for (const [key, limitedFormat] of Object.entries(formats)) {
+    const assertVariety = (rounds) => {
+      assert.deepEqual(rounds.map(q => q.difficulty), ['easy', 'easy', 'medium', 'medium', 'hard', 'expert']);
+      assert.ok(rounds.every(q => q.angle), key + ' assigns an editorial angle to every question');
+      assert.ok(new Set(rounds.map(q => q.angle)).size >= 4, key + ' includes at least four angles');
+      assert.ok(rounds.filter(q => (q.image ? 'portrait' : q.format) === limitedFormat).length <= 2, key + ' respects its format limit');
+      assert.equal(new Set(rounds.map(q => q.fact || q.image || q.text)).size, 6, key + ' does not repeat a fact');
+    };
+    const seenLimitedFormat = new Set();
+    for (let i = 0; i < 500; i++) {
+      const match = getQuestions(6, key, random);
+      assertVariety(match);
+      for (const q of match) if ((q.image ? 'portrait' : q.format) === limitedFormat) seenLimitedFormat.add(q.image || q.text);
+    }
+    assert.ok(seenLimitedFormat.size >= 5, key + ' still draws a variety of questions in the limited format');
+    for (let i = 0; i < 30; i++) assertVariety(await getMixedQuestions(6, key));
+  }
 });

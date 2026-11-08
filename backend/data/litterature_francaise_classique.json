@@ -7,17 +7,8 @@
       "Molière",
       "Madame de La Fayette"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel auteur est associé au Cid ?",
-    "answers": [
-      "Jean Racine",
-      "Pierre Corneille",
-      "Molière",
-      "Madame de La Fayette"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Qui a écrit Phèdre ?",
@@ -27,7 +18,8 @@
       "Jean Racine",
       "Jean de La Bruyère"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel auteur est associé à Phèdre ?",
@@ -37,7 +29,8 @@
       "Jean de La Bruyère",
       "Jean Racine"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "Qui a écrit Le Misanthrope ?",
@@ -47,7 +40,8 @@
       "Jean de La Bruyère",
       "Voltaire"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel auteur est associé au Misanthrope ?",
@@ -57,7 +51,8 @@
       "Jean de La Bruyère",
       "Voltaire"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Qui a écrit La Princesse de Clèves ?",
@@ -67,17 +62,8 @@
       "Madame de La Fayette",
       "Jean-Jacques Rousseau"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel auteur est associé à La Princesse de Clèves ?",
-    "answers": [
-      "Jean de La Bruyère",
-      "Voltaire",
-      "Jean-Jacques Rousseau",
-      "Madame de La Fayette"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Qui a écrit Les Caractères ?",
@@ -87,7 +73,8 @@
       "Jean-Jacques Rousseau",
       "Beaumarchais"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel auteur est associé aux Caractères ?",
@@ -97,7 +84,8 @@
       "Jean-Jacques Rousseau",
       "Beaumarchais"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "Qui a écrit Candide ?",
@@ -107,7 +95,8 @@
       "Voltaire",
       "Stendhal"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel auteur est associé à Candide ?",
@@ -117,7 +106,8 @@
       "Stendhal",
       "Voltaire"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Qui a écrit Les Confessions ?",
@@ -127,17 +117,8 @@
       "Stendhal",
       "Honoré de Balzac"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel auteur est associé aux Confessions ?",
-    "answers": [
-      "Beaumarchais",
-      "Jean-Jacques Rousseau",
-      "Stendhal",
-      "Honoré de Balzac"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Qui a écrit Le Mariage de Figaro ?",
@@ -147,7 +128,8 @@
       "Beaumarchais",
       "Victor Hugo"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel auteur est associé au Mariage de Figaro ?",
@@ -157,7 +139,8 @@
       "Victor Hugo",
       "Beaumarchais"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Qui a écrit Le Rouge et le Noir ?",
@@ -167,7 +150,8 @@
       "Victor Hugo",
       "Gustave Flaubert"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel auteur est associé au Rouge et le Noir ?",
@@ -177,7 +161,8 @@
       "Victor Hugo",
       "Gustave Flaubert"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Qui a écrit Le Père Goriot ?",
@@ -187,17 +172,8 @@
       "Honoré de Balzac",
       "Émile Zola"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel auteur est associé au Père Goriot ?",
-    "answers": [
-      "Victor Hugo",
-      "Gustave Flaubert",
-      "Émile Zola",
-      "Honoré de Balzac"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Qui a écrit Les Misérables ?",
@@ -207,7 +183,8 @@
       "Émile Zola",
       "Guy de Maupassant"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel auteur est associé aux Misérables ?",
@@ -217,7 +194,8 @@
       "Émile Zola",
       "Guy de Maupassant"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Qui a écrit Madame Bovary ?",
@@ -227,7 +205,8 @@
       "Gustave Flaubert",
       "Charles Baudelaire"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel auteur est associé à Madame Bovary ?",
@@ -237,7 +216,8 @@
       "Charles Baudelaire",
       "Gustave Flaubert"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Qui a écrit Germinal ?",
@@ -247,17 +227,8 @@
       "Charles Baudelaire",
       "Arthur Rimbaud"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel auteur est associé à Germinal ?",
-    "answers": [
-      "Guy de Maupassant",
-      "Émile Zola",
-      "Charles Baudelaire",
-      "Arthur Rimbaud"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Qui a écrit Bel-Ami ?",
@@ -267,7 +238,8 @@
       "Guy de Maupassant",
       "Edmond Rostand"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel auteur est associé à Bel-Ami ?",
@@ -277,7 +249,8 @@
       "Edmond Rostand",
       "Guy de Maupassant"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Qui a écrit Les Fleurs du mal ?",
@@ -287,7 +260,8 @@
       "Edmond Rostand",
       "Marcel Proust"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel auteur est associé aux Fleurs du mal ?",
@@ -297,7 +271,8 @@
       "Edmond Rostand",
       "Marcel Proust"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Qui a écrit Le Bateau ivre ?",
@@ -307,17 +282,8 @@
       "Arthur Rimbaud",
       "André Malraux"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel auteur est associé au Bateau ivre ?",
-    "answers": [
-      "Edmond Rostand",
-      "Marcel Proust",
-      "André Malraux",
-      "Arthur Rimbaud"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Qui a écrit Cyrano de Bergerac ?",
@@ -327,7 +293,8 @@
       "André Malraux",
       "Albert Camus"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel auteur est associé à Cyrano de Bergerac ?",
@@ -337,7 +304,8 @@
       "André Malraux",
       "Albert Camus"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Qui a écrit Du côté de chez Swann ?",
@@ -347,7 +315,8 @@
       "Marcel Proust",
       "Jean-Paul Sartre"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel auteur est associé à Du côté de chez Swann ?",
@@ -357,7 +326,8 @@
       "Jean-Paul Sartre",
       "Marcel Proust"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Qui a écrit La Condition humaine ?",
@@ -367,17 +337,8 @@
       "Jean-Paul Sartre",
       "Simone de Beauvoir"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel auteur est associé à La Condition humaine ?",
-    "answers": [
-      "Albert Camus",
-      "André Malraux",
-      "Jean-Paul Sartre",
-      "Simone de Beauvoir"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Qui a écrit L'Étranger ?",
@@ -387,7 +348,8 @@
       "Albert Camus",
       "Marguerite Yourcenar"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel auteur est associé à L'Étranger ?",
@@ -397,7 +359,8 @@
       "Marguerite Yourcenar",
       "Albert Camus"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Qui a écrit Huis clos ?",
@@ -407,7 +370,8 @@
       "Albert Camus",
       "Marguerite Yourcenar"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel auteur est associé à Huis clos ?",
@@ -417,7 +381,8 @@
       "Albert Camus",
       "Marguerite Yourcenar"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Qui a écrit Le Deuxième Sexe ?",
@@ -427,17 +392,8 @@
       "Simone de Beauvoir",
       "Marguerite Yourcenar"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel auteur est associé au Deuxième Sexe ?",
-    "answers": [
-      "Jean-Paul Sartre",
-      "Albert Camus",
-      "Marguerite Yourcenar",
-      "Simone de Beauvoir"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Qui a écrit Les Mots ?",
@@ -447,7 +403,8 @@
       "Marguerite Yourcenar",
       "Pierre Corneille"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel auteur est associé aux Mots ?",
@@ -457,7 +414,8 @@
       "Marguerite Yourcenar",
       "Pierre Corneille"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Qui a écrit La Peste ?",
@@ -467,7 +425,8 @@
       "Albert Camus",
       "Jean Racine"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel auteur est associé à La Peste ?",
@@ -477,7 +436,8 @@
       "Jean Racine",
       "Albert Camus"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Qui a écrit Mémoires d'Hadrien ?",
@@ -487,7 +447,8 @@
       "Jean Racine",
       "Molière"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quel auteur est associé à Mémoires d'Hadrien ?",
@@ -497,6 +458,119 @@
       "Jean Racine",
       "Molière"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Chez quels aubergistes Cosette vit-elle avant que Jean Valjean ne vienne la chercher dans « Les Misérables » ?",
+    "answers": [
+      "Les Gillenormand",
+      "Les Thénardier",
+      "Les Fauchelevent",
+      "Les Pontmercy"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "miserables-cosette-thenardier",
+    "source": "https://gallica.bnf.fr/accueil/fr/html/petit-papa-noel-quand-tu-descendras-du-ciel-episode-2"
+  },
+  {
+    "text": "Qu’extraient les ouvriers que suit Émile Zola dans « Germinal » ?",
+    "answers": [
+      "Du sel",
+      "Du fer",
+      "Du cuivre",
+      "Du charbon"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "germinal-mine-charbon",
+    "source": "https://expositions.bnf.fr/zola/zola/pedago/fiches/person2.pdf"
+  },
+  {
+    "text": "Qu’a caché Harpagon dans son jardin et croit-il perdu dans « L’Avare » ?",
+    "answers": [
+      "Une cassette d’argent",
+      "Un contrat de mariage",
+      "Un bijou de famille",
+      "Un acte de propriété"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "intrigues",
+    "fact": "avare-harpagon-cassette",
+    "source": "https://www.comedie-francaise.fr/2026-2027/lavare"
+  },
+  {
+    "text": "Dans quel commerce Denise Baudu travaille-t-elle dans « Au Bonheur des Dames » ?",
+    "answers": [
+      "Un atelier de couture",
+      "Une épicerie de quartier",
+      "Un grand magasin",
+      "Une maison de ventes"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "societe",
+    "fact": "bonheur-des-dames-grand-magasin",
+    "source": "https://catalogue.bnf.fr/ark%3A/12148/cb48621383m"
+  },
+  {
+    "text": "Sous quel genre « Le Cid » est-il publié dans sa première édition, en 1637 ?",
+    "answers": [
+      "Comédie-ballet",
+      "Tragi-comédie",
+      "Farce",
+      "Drame romantique"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "formes",
+    "fact": "cid-premiere-edition-tragi-comedie",
+    "source": "https://www.comedie-francaise.fr/www/comedie/media/cid2.pdf"
+  },
+  {
+    "text": "Comment se conclut le procès de Gustave Flaubert pour « Madame Bovary » en 1857 ?",
+    "answers": [
+      "Par une peine de prison",
+      "Par une amende",
+      "Par son exil",
+      "Par son acquittement"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "histoire",
+    "fact": "madame-bovary-proces-acquittement",
+    "source": "https://catalogue.bnf.fr/ark%3A/12148/cb35966972n"
+  },
+  {
+    "text": "Dans « Demain, dès l’aube », vers la tombe de quelle fille de Victor Hugo mène le voyage du poème ?",
+    "answers": [
+      "Léopoldine",
+      "Adèle",
+      "Cosette",
+      "Esméralda"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "poesie",
+    "fact": "hugo-demain-des-aube-leopoldine",
+    "source": "https://www.museevictorhugo.fr/wp-content/uploads/2019/01/Leopoldine-guide-de-visite-web.pdf"
+  },
+  {
+    "text": "La chantefable médiévale « Aucassin et Nicolette » alterne quelles formes de récit ?",
+    "answers": [
+      "Des lettres et des dialogues",
+      "Des dictons et des énigmes",
+      "Des passages en prose et en vers",
+      "Des sonnets et des maximes"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "formes",
+    "fact": "aucassin-nicolette-prose-vers",
+    "source": "https://gallica.bnf.fr/ark%3A/12148/bpt6k28244g.pdf"
   }
 ]

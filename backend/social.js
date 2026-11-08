@@ -5,6 +5,7 @@
 const { createJsonWriter, readJsonFileSync } = require('./json-writer');
 const { getStorePath } = require('./store-path');
 const { normalizeSocialStore } = require('./store-normalize');
+const { blockedPair } = require('./user-reports');
 
 const STORE = getStorePath('social.json');
 const MAX_FRIENDS = 200;
@@ -72,13 +73,14 @@ function profileOf(clientId) {
 
 function areFriends(a, b) {
   return !!(
-    friends[a] && friends[a].includes(b)
+    !blockedPair(a, b) && friends[a] && friends[a].includes(b)
     && friends[b] && friends[b].includes(a)
   );
 }
 
 function sendRequest(fromId, toId) {
   if (!fromId || !toId || fromId === toId) return { ok: false };
+  if (blockedPair(fromId, toId)) return { ok: false, reason: 'blocked' };
   if (!profiles[toId]) return { ok: false, reason: 'unknown_user' };
   if (areFriends(fromId, toId)) return { ok: false, reason: 'already_friends' };
   requests[toId] = requests[toId] || [];
@@ -97,6 +99,7 @@ function sendRequest(fromId, toId) {
 // friendship (and therefore DM access, gated by areFriends()) with a victim
 // who never sent a request.
 function acceptRequest(id, fromId) {
+  if (blockedPair(id, fromId)) return false;
   if (!(requests[id] || []).includes(fromId)) return false;
   friends[id] = friends[id] || [];
   friends[fromId] = friends[fromId] || [];
@@ -132,7 +135,7 @@ function getFriendsList(clientId) {
 }
 
 function getPendingRequests(clientId) {
-  return (requests[clientId] || []).map((id) => profileOf(id)).filter(Boolean);
+  return (requests[clientId] || []).filter(id => !blockedPair(clientId, id)).map((id) => profileOf(id)).filter(Boolean);
 }
 
 function deleteUser(clientId) {

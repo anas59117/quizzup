@@ -1,89 +1,125 @@
 import SwiftUI
 
+// The website result palette: cream typography, red actions, gold rewards.
 struct ResultView: View {
     @EnvironmentObject var game: GameSocket
 
     var body: some View {
-        guard let result = game.result else { return AnyView(EmptyView()) }
-        let isSolo = game.opponents.isEmpty && result.reason != "opponent_disconnected" && result.reason != "opponent_left"
-        let left = result.reason == "opponent_disconnected" || result.reason == "opponent_left"
-
-        return AnyView(
-            ScrollView {
-                VStack(spacing: 16) {
-                    Text(titleText(isSolo: isSolo, won: result.won, tie: result.tie))
-                        .font(.system(size: 30, weight: .heavy))
-                        .foregroundColor(titleColor(isSolo: isSolo, won: result.won, tie: result.tie))
-
-                    Text(left ? game.t("someoneLeft") : game.t("finalScore", ["n": "\(result.finalScore)"]))
-                        .foregroundColor(Theme.textDim)
-
-                    if let stats = result.stats {
-                        LevelRing(level: stats.level, xpIntoLevel: stats.xpIntoLevel, xpForLevel: stats.xpForLevel)
-                    }
-
-                    VStack(spacing: 6) {
-                        xpRow(game.t("matchScore"), "\(result.xpBreakdown.matchScore)")
-                        xpRow(game.t("finishBonus"), "+\(result.xpBreakdown.finishBonus)")
-                        xpRow(game.t("winBonus"), "+\(result.xpBreakdown.winBonus)")
-                        xpRow(game.t("xpTotal"), "\(result.xp)", bold: true)
-                    }
-                    .padding()
-                    .background(Theme.surface)
-                    .cornerRadius(14)
-
-                    if !result.leaderboard.isEmpty {
-                        VStack(spacing: 6) {
-                            ForEach(result.leaderboard) { row in
-                                HStack {
-                                    Text(row.avatar)
-                                    Text(row.name)
-                                    if row.id != game.myId {
-                                        ReportBlockButton(targetId: row.id, targetName: row.name)
-                                    }
-                                    Spacer()
-                                    Text("\(row.score)").bold()
-                                }
-                                .padding(10)
-                                .background(row.id == game.myId ? Theme.accent.opacity(0.15) : Theme.surface)
-                                .cornerRadius(10)
-                            }
+        ZStack {
+            Theme.canvas.ignoresSafeArea()
+            if let result = game.result {
+                ScrollView {
+                    VStack(spacing: 20) {
+                        NativeBrandLogo()
+                        Image(systemName: result.won ? "trophy.fill" : result.tie ? "equal.circle.fill" : "flag.checkered")
+                            .font(.system(size: 58)).foregroundColor(Theme.gold).accessibilityHidden(true)
+                        Text(title(result))
+                            .font(.largeTitle.weight(.heavy)).foregroundColor(Theme.paper)
+                            .multilineTextAlignment(.center).accessibilityAddTraits(.isHeader)
+                        Text(left(result) ? game.t("someoneLeft") : game.t("finalScore", ["n": "\(result.finalScore)"]))
+                            .font(.subheadline).foregroundColor(NativeDuelColors.secondary)
+                        resultPlayers(result)
+                        rewards(result)
+                        VStack(spacing: 10) {
+                            Button(game.rematchWaiting ? (game.lang == "fr" ? "Revanche proposée…" : "Rematch requested…") : game.t("rematch")) { game.requestRematch() }
+                                .buttonStyle(NativeDuelActionStyle())
+                                .disabled(game.rematchWaiting)
+                            Button(game.opponents.isEmpty ? game.t("newGame") : game.t("newOpponent")) {
+                                game.quickMatch()
+                            }.buttonStyle(NativeDuelActionStyle(prominent: false))
+                                .disabled(game.isStarting)
+                            Button(game.t("backHome")) { game.playAgain() }
+                                .font(.subheadline.weight(.semibold)).foregroundColor(NativeDuelColors.secondary)
+                                .frame(maxWidth: .infinity, minHeight: 44)
                         }
                     }
-
-                    Text(game.t("coins", ["n": "\(result.coins)"])).font(.headline).foregroundColor(Theme.gold)
-
-                    VStack(spacing: 10) {
-                        Button(game.t("rematch")) {
-                            game.playAgain()
-                            game.quickMatch()
-                        }.buttonStyle(PrimaryButtonStyle())
-
-                        Button(isSolo ? game.t("newGame") : game.t("newOpponent")) { game.playAgain() }
-                            .buttonStyle(SecondaryButtonStyle())
-
-                        Button(game.t("backHome")) { game.playAgain() }
-                            .buttonStyle(SecondaryButtonStyle())
-                    }
+                    .padding(.horizontal, 24).padding(.vertical, 28)
                 }
-                .padding(24)
             }
-        )
+        }.foregroundColor(Theme.paper)
     }
 
-    private func titleText(isSolo: Bool, won: Bool, tie: Bool) -> String {
-        isSolo ? game.t("finished") : won ? game.t("victory") : tie ? game.t("draw") : game.t("defeat")
+    private func left(_ result: GameEnd) -> Bool {
+        result.reason == "opponent_disconnected" || result.reason == "opponent_left"
     }
-    private func titleColor(isSolo: Bool, won: Bool, tie: Bool) -> Color {
-        isSolo || tie ? Theme.gold : won ? Theme.green : Theme.red
+    private func title(_ result: GameEnd) -> String {
+        if game.opponents.isEmpty && !left(result) { return game.t("finished") }
+        return game.t(result.won ? "victory" : result.tie ? "draw" : "defeat")
+    }
+
+    private func resultPlayers(_ result: GameEnd) -> some View {
+        VStack(spacing: 0) {
+            if !result.leaderboard.isEmpty {
+                ForEach(Array(result.leaderboard.enumerated()), id: \.element.id) { index, player in
+                    resultRow(rank: index + 1, id: player.id, name: player.name, avatar: player.avatar,
+                              score: player.score, targetId: moderationId(player.id, result: result))
+                }
+            } else {
+                resultRow(rank: 1, id: game.myId ?? "", name: game.name, avatar: game.avatar,
+                          score: result.finalScore, targetId: game.myId ?? "")
+                ForEach(Array(result.others.enumerated()), id: \.element.id) { index, player in
+                    resultRow(rank: index + 2, id: player.id, name: player.name, avatar: player.avatar,
+                              score: player.score, targetId: player.clientId ?? player.id)
+                }
+            }
+        }
+        .background(Theme.paper, in: RoundedRectangle(cornerRadius: 14))
+    }
+
+    private func resultRow(rank: Int, id: String, name: String, avatar: String, score: Int, targetId: String) -> some View {
+        HStack(spacing: 10) {
+            Text(String(format: "%02d", rank)).font(.caption.weight(.bold)).foregroundColor(Theme.ink.opacity(0.6))
+            NativePlayerPortrait(avatar: avatar, size: 44)
+            VStack(alignment: .leading, spacing: 3) {
+                Text(name).font(.headline).foregroundColor(Theme.ink)
+                if id == game.myId {
+                    Text(game.lang == "fr" ? "TOI" : "YOU").font(.caption2.weight(.bold)).foregroundColor(Theme.brand)
+                }
+            }
+            Spacer(minLength: 0)
+            Text("\(score)").font(.title2.weight(.heavy)).monospacedDigit().foregroundColor(Theme.ink)
+            if id != game.myId {
+                ReportBlockButton(targetId: targetId, targetName: name, foreground: Theme.muted)
+                    .frame(minWidth: 44, minHeight: 44).tint(Theme.ink)
+            }
+        }
+        .padding(.horizontal, 12).padding(.vertical, 12)
+    }
+
+    private func moderationId(_ id: String, result: GameEnd) -> String {
+        result.others.first(where: { $0.id == id })?.clientId
+            ?? game.opponents.first(where: { $0.id == id })?.clientId ?? id
+    }
+
+    private func rewards(_ result: GameEnd) -> some View {
+        VStack(spacing: 16) {
+            HStack(spacing: 14) {
+                if let stats = result.stats {
+                    LevelRing(level: stats.level, xpIntoLevel: stats.xpIntoLevel, xpForLevel: stats.xpForLevel)
+                }
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("+\(result.xp) XP").font(.title2.weight(.heavy)).foregroundColor(Theme.gold)
+                    Text(game.t("coins", ["n": "\(result.coins)"])).font(.subheadline).foregroundColor(Theme.paper)
+                }
+                Spacer(minLength: 0)
+            }
+            Divider().overlay(Theme.paper.opacity(0.1))
+            xpRow(game.t("matchScore"), "\(result.xpBreakdown.matchScore)")
+            xpRow(game.t("finishBonus"), "+\(result.xpBreakdown.finishBonus)")
+            xpRow(game.t("winBonus"), "+\(result.xpBreakdown.winBonus)")
+            xpRow(game.t("xpTotal"), "\(result.xp)", bold: true)
+        }
+        .padding(18)
+        .background(Color.white.opacity(0.035), in: RoundedRectangle(cornerRadius: 14))
+        .overlay(RoundedRectangle(cornerRadius: 14).stroke(Theme.gold.opacity(0.25), lineWidth: 1))
     }
 
     private func xpRow(_ label: String, _ value: String, bold: Bool = false) -> some View {
         HStack {
-            Text(label).foregroundColor(bold ? Theme.text : Theme.textDim)
+            Text(label).foregroundColor(bold ? Theme.paper : NativeDuelColors.secondary)
             Spacer()
-            Text(value).fontWeight(bold ? .bold : .regular)
-        }
+            Text(value).fontWeight(bold ? .bold : .regular).foregroundColor(bold ? Theme.gold : Theme.paper)
+        }.font(.subheadline)
     }
 }
 
@@ -92,29 +128,26 @@ struct LevelRing: View {
     let xpIntoLevel: Int
     let xpForLevel: Int
 
-    private var pct: Double { xpForLevel > 0 ? Double(xpIntoLevel) / Double(xpForLevel) : 0 }
-
+    private var progress: Double { min(1, max(0, xpForLevel > 0 ? Double(xpIntoLevel) / Double(xpForLevel) : 0)) }
     var body: some View {
         ZStack {
-            Circle().stroke(Color.white.opacity(0.15), lineWidth: 6)
-            Circle().trim(from: 0, to: pct)
-                .stroke(Theme.accent, style: StrokeStyle(lineWidth: 6, lineCap: .round))
-                .rotationEffect(.degrees(-90))
-            Text("\(level)").font(.title2.bold())
+            Circle().stroke(Theme.paper.opacity(0.15), lineWidth: 5)
+            Circle().trim(from: 0, to: progress)
+                .stroke(Theme.gold, style: StrokeStyle(lineWidth: 5, lineCap: .round)).rotationEffect(.degrees(-90))
+            Text("\(level)").font(.title2.bold()).foregroundColor(Theme.paper)
         }
-        .frame(width: 64, height: 64)
+        .frame(width: 60, height: 60)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Level \(level)")
+        .accessibilityValue("\(xpIntoLevel) / \(xpForLevel) XP")
     }
 }
 
 struct SecondaryButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .font(.headline)
-            .foregroundColor(Theme.text)
-            .frame(maxWidth: .infinity)
-            .padding()
-            .background(Theme.surface)
-            .cornerRadius(12)
+        configuration.label.font(.headline).foregroundColor(Theme.paper)
+            .frame(maxWidth: .infinity, minHeight: 24).padding()
+            .background(Color.white.opacity(0.07), in: RoundedRectangle(cornerRadius: 11))
             .opacity(configuration.isPressed ? 0.8 : 1)
     }
 }

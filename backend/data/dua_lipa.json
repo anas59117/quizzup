@@ -7,7 +7,8 @@
       "Italiennes",
       "Irlandaises"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Dans quelle ville Dua Lipa est-elle née ?",
@@ -17,7 +18,8 @@
       "Birmingham",
       "Liverpool"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-02"
   },
   {
     "text": "Sur quel album figure le titre « Genesis » ?",
@@ -27,7 +29,9 @@
       "Dua Lipa",
       "Radical Optimism"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:genesis",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Lost in Your Light » ?",
@@ -37,7 +41,9 @@
       "Cool",
       "Genesis"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:genesis",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Lost in Your Light » ?",
@@ -47,7 +53,9 @@
       "Club Future Nostalgia",
       "Radical Optimism"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:lost in your light",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Hotter than Hell » ?",
@@ -57,7 +65,9 @@
       "Levitating",
       "Hallucinate"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:lost in your light",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Hotter than Hell » ?",
@@ -67,7 +77,9 @@
       "Dua Lipa",
       "Radical Optimism"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:hotter than hell",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Be the One » ?",
@@ -77,7 +89,9 @@
       "Hallucinate (Mr Fingers Deep Stripped Mix)",
       "Hotter than Hell"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:hotter than hell",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Be the One » ?",
@@ -87,7 +101,9 @@
       "Club Future Nostalgia",
       "Radical Optimism"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:be the one",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « IDGAF » ?",
@@ -97,7 +113,9 @@
       "Break My Heart (Moodymann Remix)",
       "Love Is Religion (The Blessed Madonna Remix)"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:be the one",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « IDGAF » ?",
@@ -107,7 +125,9 @@
       "Dua Lipa",
       "Radical Optimism"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:idgaf",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « New Rules » ?",
@@ -117,7 +137,9 @@
       "Training Season",
       "IDGAF"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:idgaf",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « New Rules » ?",
@@ -127,7 +149,9 @@
       "Club Future Nostalgia",
       "Radical Optimism"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:new rules",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Genesis » ?",
@@ -137,7 +161,9 @@
       "Whatcha Doing",
       "Illusion"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:new rules",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Break My Heart » ?",
@@ -147,7 +173,9 @@
       "Future Nostalgia",
       "Radical Optimism"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:break my heart",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Don’t Start Now » ?",
@@ -157,7 +185,9 @@
       "Hotter than Hell",
       "Future Nostalgia"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:future nostalgia",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Don’t Start Now » ?",
@@ -167,7 +197,9 @@
       "Club Future Nostalgia",
       "Radical Optimism"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:don t start now",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Cool » ?",
@@ -177,7 +209,9 @@
       "IDGAF",
       "New Rules"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:don t start now",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Cool » ?",
@@ -187,7 +221,9 @@
       "Future Nostalgia",
       "Radical Optimism"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:cool",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Physical » ?",
@@ -197,7 +233,9 @@
       "Hallucinate (Mr Fingers Deep Stripped Mix)",
       "Cool"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:cool",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Physical » ?",
@@ -207,7 +245,9 @@
       "Club Future Nostalgia",
       "Radical Optimism"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:physical",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Levitating » ?",
@@ -217,7 +257,9 @@
       "Break My Heart (Moodymann Remix)",
       "Love Is Religion (The Blessed Madonna Remix)"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:physical",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Levitating » ?",
@@ -227,7 +269,9 @@
       "Future Nostalgia",
       "Radical Optimism"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:levitating",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Hallucinate » ?",
@@ -237,7 +281,9 @@
       "Training Season",
       "Levitating"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:levitating",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Hallucinate » ?",
@@ -247,7 +293,9 @@
       "Club Future Nostalgia",
       "Radical Optimism"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:hallucinate",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Future Nostalgia » ?",
@@ -257,7 +305,9 @@
       "Whatcha Doing",
       "Illusion"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:hallucinate",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Levitating (The Blessed Madonna Remix) » ?",
@@ -267,7 +317,9 @@
       "Club Future Nostalgia",
       "Radical Optimism"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:levitating the blessed madonna remix",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Physical (Mark Ronson Remix) » ?",
@@ -277,7 +329,9 @@
       "Hotter than Hell",
       "Levitating (The Blessed Madonna Remix)"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:levitating the blessed madonna remix",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Physical (Mark Ronson Remix) » ?",
@@ -287,7 +341,9 @@
       "Future Nostalgia",
       "Radical Optimism"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:physical mark ronson remix",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Hallucinate (Mr Fingers Deep Stripped Mix) » ?",
@@ -297,7 +353,9 @@
       "IDGAF",
       "New Rules"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:physical mark ronson remix",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Hallucinate (Mr Fingers Deep Stripped Mix) » ?",
@@ -307,7 +365,9 @@
       "Club Future Nostalgia",
       "Radical Optimism"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:hallucinate mr fingers deep stripped mix",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Don’t Start Now (Yaeji Remix) » ?",
@@ -317,7 +377,9 @@
       "Cool",
       "Hallucinate (Mr Fingers Deep Stripped Mix)"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:hallucinate mr fingers deep stripped mix",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Don’t Start Now (Yaeji Remix) » ?",
@@ -327,7 +389,9 @@
       "Future Nostalgia",
       "Radical Optimism"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:don t start now yaeji remix",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Break My Heart (Moodymann Remix) » ?",
@@ -337,7 +401,9 @@
       "Levitating",
       "Hallucinate"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:don t start now yaeji remix",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Break My Heart (Moodymann Remix) » ?",
@@ -347,7 +413,9 @@
       "Club Future Nostalgia",
       "Radical Optimism"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:break my heart moodymann remix",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Love Is Religion (The Blessed Madonna Remix) » ?",
@@ -357,7 +425,9 @@
       "Training Season",
       "Break My Heart (Moodymann Remix)"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:break my heart moodymann remix",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Love Is Religion (The Blessed Madonna Remix) » ?",
@@ -367,7 +437,9 @@
       "Future Nostalgia",
       "Radical Optimism"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:love is religion the blessed madonna remix",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Levitating (The Blessed Madonna Remix) » ?",
@@ -377,7 +449,9 @@
       "Whatcha Doing",
       "Illusion"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:love is religion the blessed madonna remix",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « End of an Era » ?",
@@ -387,7 +461,9 @@
       "Radical Optimism",
       "Club Future Nostalgia"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:end of an era",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Houdini » ?",
@@ -397,7 +473,9 @@
       "Hotter than Hell",
       "End of an Era"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:end of an era",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Houdini » ?",
@@ -407,7 +485,9 @@
       "Future Nostalgia",
       "Club Future Nostalgia"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:houdini",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Training Season » ?",
@@ -417,7 +497,9 @@
       "IDGAF",
       "New Rules"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:houdini",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Training Season » ?",
@@ -427,7 +509,9 @@
       "Radical Optimism",
       "Club Future Nostalgia"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:training season",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « These Walls » ?",
@@ -437,7 +521,9 @@
       "Cool",
       "Training Season"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:training season",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « These Walls » ?",
@@ -447,7 +533,9 @@
       "Future Nostalgia",
       "Club Future Nostalgia"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:these walls",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Whatcha Doing » ?",
@@ -457,7 +545,9 @@
       "Levitating",
       "Hallucinate"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:these walls",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Whatcha Doing » ?",
@@ -467,7 +557,9 @@
       "Radical Optimism",
       "Club Future Nostalgia"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:whatcha doing",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Illusion » ?",
@@ -477,7 +569,9 @@
       "Hallucinate (Mr Fingers Deep Stripped Mix)",
       "Whatcha Doing"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:whatcha doing",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Illusion » ?",
@@ -487,7 +581,9 @@
       "Future Nostalgia",
       "Club Future Nostalgia"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:illusion",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « End of an Era » ?",
@@ -497,6 +593,227 @@
       "Break My Heart (Moodymann Remix)",
       "Love Is Religion (The Blessed Madonna Remix)"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:illusion",
+    "format": "album"
+  },
+  {
+    "text": "Pour quel film Dua Lipa a-t-elle enregistré « Dance the Night » ?",
+    "answers": [
+      "Barbie",
+      "Mean Girls",
+      "Clueless",
+      "Ocean’s 8"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "cinema",
+    "fact": "dua-barbie-dance",
+    "source": "https://www.grammy.com/news/creating-barbie-the-album-videos-behind-the-scenes-mark-ronson-dua-lipa-nicki-minaj/"
+  },
+  {
+    "text": "Quel chanteur britannique partage le titre « Cold Heart » avec Dua Lipa ?",
+    "answers": [
+      "Rod Stewart",
+      "Elton John",
+      "Sting",
+      "George Michael"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "collaborations",
+    "fact": "dua-cold-heart-elton"
+  },
+  {
+    "text": "Quel DJ écossais signe « One Kiss » avec Dua Lipa ?",
+    "answers": [
+      "David Guetta",
+      "Avicii",
+      "Calvin Harris",
+      "Zedd"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "collaborations",
+    "fact": "dua-one-kiss-calvin",
+    "source": "https://www.grammy.com/news/dua-lipa-calvin-harris-other-dream-collabs-new-rules-more/"
+  },
+  {
+    "text": "Quel Grammy individuel Dua Lipa remporte-t-elle en 2019, en plus du prix partagé pour « Electricity » ?",
+    "answers": [
+      "Meilleure prestation pop en solo",
+      "Meilleure vidéo musicale",
+      "Meilleure chanson dance",
+      "Meilleur nouvel artiste"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "recompenses",
+    "fact": "dua-grammy-revelation",
+    "source": "https://www.grammy.com/news/2019-61st-annual-grammy-awards-nominations-complete-nominees-and-winners-list/"
+  },
+  {
+    "text": "Dans quelle capitale le Sunny Hill Festival a-t-il fait ses débuts en 2018 ?",
+    "answers": [
+      "Pristina",
+      "Tirana",
+      "Skopje",
+      "Sarajevo"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "scene",
+    "fact": "dua-sunny-hill-pristina"
+  },
+  {
+    "text": "Dans quel film d’espionnage de Matthew Vaughn Dua Lipa joue-t-elle LaGrange ?",
+    "answers": [
+      "Kingsman : Services secrets",
+      "Argylle",
+      "Mission impossible : Dead Reckoning",
+      "Agent Stone"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "cinema",
+    "fact": "dua-argylle-lagrange"
+  },
+  {
+    "text": "Quel musicien de Tame Impala a coproduit « Houdini » ?",
+    "answers": [
+      "Alex Turner",
+      "Mark Ronson",
+      "Kevin Parker",
+      "Jack Antonoff"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "production",
+    "fact": "dua-houdini-parker"
+  },
+  {
+    "text": "Quel duo de producteurs signe « Electricity » avec Dua Lipa ?",
+    "answers": [
+      "Major Lazer",
+      "Disclosure",
+      "The Chemical Brothers",
+      "Silk City"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "production",
+    "fact": "dua-electricity-silk-city"
+  },
+  {
+    "text": "Quelle variante de Barbie Dua Lipa incarne-t-elle dans le film de Greta Gerwig ?",
+    "answers": [
+      "Barbie astronaute",
+      "Barbie sirène",
+      "Barbie présidente",
+      "Barbie médecin"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "cinema",
+    "fact": "dua-barbie-sirene-role",
+    "source": "https://www.grammy.com/news/everything-we-know-about-the-barbie-soundtrack-featuring-new-dua-lipa-song/"
+  },
+  {
+    "text": "Quelle salle londonienne accueille le concert orchestral filmé de Dua Lipa en octobre 2024 ?",
+    "answers": [
+      "L’Eventim Apollo",
+      "Le London Palladium",
+      "Le Barbican",
+      "Le Royal Albert Hall"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "scene",
+    "fact": "dua-royal-albert-hall-2024-concert",
+    "source": "https://catalogue.royalalberthall.com/record/performance/PERF22592"
+  },
+  {
+    "text": "Quel format permet aux abonnés de recevoir les recommandations culturelles de Service95, le projet de Dua Lipa ?",
+    "answers": [
+      "Une lettre d’information",
+      "Un SMS automatique",
+      "Un journal papier quotidien",
+      "Une émission de radio en direct"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "projets",
+    "fact": "dua-service95-newsletter",
+    "source": "https://www.service95.com/subscribe-to-service95"
+  },
+  {
+    "text": "Quel Grammy Dua Lipa reçoit-elle en 2021 pour « Future Nostalgia » ?",
+    "answers": [
+      "Album de l’année",
+      "Meilleur album de musique électronique",
+      "Meilleur album vocal pop",
+      "Meilleur album de musique alternative"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "recompenses",
+    "fact": "dua-future-nostalgia-grammy-album-pop-2021",
+    "source": "https://www.grammy.com/awards/categories/best-pop-vocal-album/2021/"
+  },
+  {
+    "text": "Dans le clip de « We’re Good », quel animal suit-on à bord d’un paquebot ?",
+    "answers": [
+      "Un crabe",
+      "Un homard",
+      "Un poulpe",
+      "Une étoile de mer"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "clips",
+    "fact": "dua-were-good-homard-paquebot",
+    "source": "https://www.youtube.com/watch?v=jr47YisIsz8"
+  },
+  {
+    "text": "Quelles artistes rejoignent Dua Lipa sur le remix de « Levitating » signé The Blessed Madonna ?",
+    "answers": [
+      "Kylie Minogue et Doja Cat",
+      "Ariana Grande et Nicki Minaj",
+      "Lady Gaga et Cardi B",
+      "Madonna et Missy Elliott"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "collaborations",
+    "fact": "dua-levitating-remix-madonna-missy",
+    "source": "https://music.apple.com/us/album/levitating-the-blessed-madonna-remix-feat-madonna/1527115169"
+  },
+  {
+    "text": "Pour quel single Dua Lipa tourne-t-elle une vidéo à part dans le style d’un cours d’aérobic rétro ?",
+    "answers": [
+      "Physical",
+      "Hallucinate",
+      "Break My Heart",
+      "Love Again"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "clips",
+    "fact": "dua-physical-video-aerobic",
+    "source": "https://www.youtube.com/watch?v=YvVonQ7LUJ0"
+  },
+  {
+    "text": "Quel producteur est crédité comme artiste sur « UN DÍA (ONE DAY) » avec Dua Lipa, J Balvin et Bad Bunny ?",
+    "answers": [
+      "Sky Rompiendo",
+      "DJ Snake",
+      "Tainy",
+      "Diplo"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "production",
+    "fact": "dua-un-dia-tainy-producteur",
+    "source": "https://www.grammy.com/news/no-days-tainy-talks-dua-lipa-collab-contributing-spongebob-soundtrack-more/"
   }
 ]

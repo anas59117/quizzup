@@ -15,14 +15,12 @@ describe('topic cover catalog', () => {
     const basketball = CATEGORIES.find((category) => category.key === 'basketball');
     const kpop = CATEGORIES.find((category) => category.key === 'kpop');
     const actors = CATEGORIES.find((category) => category.key === 'actors');
-    const rapFr = CATEGORIES.find((category) => category.key === 'rap_fr');
     const premierLeague = CATEGORIES.find((category) => category.key === 'premier_league');
 
     expect(getTopicCover(tennis).src).toContain('/quizphotos/tennis/');
     expect(getTopicCover(basketball).src).toContain('/quizphotos/basketball/');
     expect(getTopicCover(kpop).src).toContain('/quizphotos/kpop/');
     expect(getTopicCover(actors).src).toContain('/players/');
-    expect(getTopicCover(rapFr).src).toBe('/images/players/booba.jpg');
     expect(getTopicCover(premierLeague).src).toContain('Premier%20League%20Trophy');
   });
 

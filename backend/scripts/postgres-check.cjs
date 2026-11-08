@@ -25,7 +25,7 @@ const { spawn } = require('node:child_process');
     const url = `postgresql://postgres:${password}@127.0.0.1:${port}/quizzup_test`;
     const files = process.argv.slice(2);
     const load = files[0] === '--load';
-    const child = spawn(process.execPath, load ? ['scripts/load-check.cjs', ...(files.slice(1).length ? files.slice(1) : ['200'])] : ['--test', ...(files.length ? files : ['storage-postgres.integration.test.js'])], {
+    const child = spawn(process.execPath, load ? ['scripts/load-check.cjs', ...(files.slice(1).length ? files.slice(1) : ['200'])] : ['--test', ...(files.length ? files : ['storage-postgres.integration.test.js', 'storage-moderation.integration.test.js'])], {
       cwd: path.resolve(__dirname, '..'), windowsHide: true, stdio: 'inherit',
       env: { ...process.env, PG_TEST_URL: url, ...(load ? { LOAD_POSTGRES_URL: url } : {}) },
     });

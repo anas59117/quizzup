@@ -23,6 +23,7 @@ const playersLaLiga = require('./data/players-la-liga.json');
 const playersBundesliga = require('./data/players-bundesliga.json');
 const playersSerieA = require('./data/players-serie-a.json');
 const playersLigue1 = require('./data/players-ligue-1.json');
+const ligue1 = require('./data/ligue-1-editorial.json');
 const playersBollywood = require('./data/players-bollywood.json');
 const playersActorsAZ = require('./data/players-actors-az.json');
 const playersActorsMZ = require('./data/players-actors-mz.json');
@@ -563,104 +564,91 @@ const recordsDuMonde = require('./data/records_du_monde.json');
 const phenomenesNaturels = require('./data/phenomenes_naturels.json');
 const monnaiesDuMonde = require('./data/monnaies_du_monde.json');
 const ilesDuMonde = require('./data/iles_du_monde.json');
+const moviesEditorial = require('./data/movies-editorial.json');
+const musicEditorial = require('./data/music-editorial.json');
+const sportsEditorial = require('./data/sports-editorial.json');
+const gamingEditorial = require('./data/gaming-editorial.json');
+const scienceEditorial = require('./data/science-editorial.json');
+const geographyEditorial = require('./data/geography-editorial.json');
+const histoireFrEditorial = require('./data/histoire-fr-editorial.json');
+const cultureFrEditorial = require('./data/culture-fr-editorial.json');
+const gotEditorial = require('./data/got-editorial.json');
+const f1Editorial = require('./data/f1-editorial.json');
+const tvShowsEditorial = require('./data/tv-shows-editorial.json');
+const retroGamesEditorial = require('./data/retro-games-editorial.json');
+const cinemaFrEditorial = require('./data/cinema-fr-editorial.json');
+const bollywoodEditorial = require('./data/bollywood-editorial.json');
+
+const premierLeagueVarietyQuestions = require('./data/premier-league-variety.json');
+const laLigaVarietyQuestions = require('./data/la-liga-variety.json');
+const bundesligaVarietyQuestions = require('./data/bundesliga-variety.json');
+const serieAVarietyQuestions = require('./data/serie-a-variety.json');
+const actorsVarietyQuestions = require('./data/actors-variety.json');
+const tennisVarietyQuestions = require('./data/tennis-variety.json');
+const rugbyVarietyQuestions = require('./data/rugby-variety.json');
+const athletismeVarietyQuestions = require('./data/athletisme-variety.json');
+const scienceStarsVarietyQuestions = require('./data/science-stars-variety.json');
+const humourVarietyQuestions = require('./data/humour-variety.json');
+const modeVarietyQuestions = require('./data/mode-variety.json');
+const kpopVarietyQuestions = require('./data/kpop-variety.json');
+const seriesAdoRomanceVarietyQuestions = require('./data/series-ado-romance-variety.json');
+
+const GENERAL_QUIZ_VARIETY = { minAngles: 4 };
+const AUDITED_QUESTION_VARIETY = { maxPerOpening: 3, mixLegacyDifficulty: true };
+const AUDITED_DATE_VARIETY = { ...AUDITED_QUESTION_VARIETY, limitedFormat: 'date', maxPerMatch: 2 };
+const AUDITED_ALBUM_VARIETY = { ...AUDITED_QUESTION_VARIETY, limitedFormat: 'album', maxPerMatch: 2 };
+const AUDITED_ATTRIBUTION_VARIETY = { ...AUDITED_QUESTION_VARIETY, limitedFormat: 'attribution', maxPerMatch: 2 };
+const PORTRAIT_QUIZ_VARIETY = { minAngles: 4, limitedFormat: 'portrait', maxPerMatch: 2 };
+
+function withPortraits(photos, editorial, angle) {
+  return [
+    ...photos.map((question, index) => ({
+      ...question,
+      angle,
+      format: 'portrait',
+      fact: 'portrait:' + question.image,
+      difficulty: index < photos.length / 2 ? 'easy' : 'medium',
+    })),
+    ...editorial,
+  ];
+}
 
 const CATEGORIES = {
   movies: {
     label: 'Cinéma',
     icon: '🎬',
-    questions: [
-      { text: 'Quel film a remporté l’Oscar du meilleur film en 2023 ?', answers: ['Everything Everywhere All at Once', 'The Fabelmans', 'Top Gun: Maverick', 'Tár'], correct: 0 },
-      { text: 'Qui a réalisé « Inception » ?', answers: ['Denis Villeneuve', 'Christopher Nolan', 'Ridley Scott', 'James Cameron'], correct: 1 },
-      { text: 'Dans « Matrix », de quelle couleur est la pilule que prend Neo ?', answers: ['Bleue', 'Verte', 'Rouge', 'Jaune'], correct: 2 },
-      { text: 'Quel acteur incarne Iron Man dans le MCU ?', answers: ['Chris Evans', 'Mark Ruffalo', 'Chris Hemsworth', 'Robert Downey Jr.'], correct: 3 },
-      { text: 'Quel film détient le record de recettes au box-office mondial ?', answers: ['Avatar', 'Avengers: Endgame', 'Titanic', 'Star Wars : Le Réveil de la Force'], correct: 0 },
-      { text: 'Quel studio d’animation a créé « Toy Story » ?', answers: ['DreamWorks', 'Pixar', 'Illumination', 'Studio Ghibli'], correct: 1 },
-      { text: 'Qui joue le Joker dans « The Dark Knight » ?', answers: ['Joaquin Phoenix', 'Jared Leto', 'Heath Ledger', 'Jack Nicholson'], correct: 2 },
-      { text: 'En quelle année est sorti le premier « Jurassic Park » ?', answers: ['1990', '1991', '1992', '1993'], correct: 3 },
-      { text: 'Dans quelle saga entend-on « Que la Force soit avec toi » ?', answers: ['Star Wars', 'Star Trek', 'Les Gardiens de la Galaxie', 'Dune'], correct: 0 },
-      { text: 'Qui a réalisé « Parasite » ?', answers: ['Park Chan-wook', 'Bong Joon-ho', 'Wong Kar-wai', 'Hirokazu Kore-eda'], correct: 1 },
-    ],
+    variety: GENERAL_QUIZ_VARIETY,
+    questions: moviesEditorial,
   },
   music: {
     label: 'Musique',
     icon: '🎵',
-    questions: [
-      { text: 'Quelle artiste a sorti l’album « 1989 » ?', answers: ['Adele', 'Katy Perry', 'Taylor Swift', 'Lorde'], correct: 2 },
-      { text: 'Combien de membres comptaient les Beatles ?', answers: ['3', '4', '5', '6'], correct: 1 },
-      { text: 'Qui est surnommé le « King of Pop » ?', answers: ['Elvis Presley', 'Prince', 'Michael Jackson', 'James Brown'], correct: 2 },
-      { text: 'Quel instrument possède 88 touches ?', answers: ['Orgue', 'Clavecin', 'Accordéon', 'Piano'], correct: 3 },
-      { text: 'À quel genre musical Bob Marley est-il associé ?', answers: ['Reggae', 'Ska', 'Blues', 'Soul'], correct: 0 },
-      { text: 'Quel groupe interprète « Bohemian Rhapsody » ?', answers: ['Led Zeppelin', 'Queen', 'The Who', 'Pink Floyd'], correct: 1 },
-      { text: 'Qui chante « Rolling in the Deep » ?', answers: ['Beyoncé', 'Rihanna', 'Adele', 'Sia'], correct: 2 },
-      { text: 'Combien de cordes compte une guitare classique standard ?', answers: ['4', '5', '7', '6'], correct: 3 },
-      { text: 'Quel rappeur a sorti « The Marshall Mathers LP » ?', answers: ['Eminem', 'Jay-Z', 'Nas', 'Dr. Dre'], correct: 0 },
-      { text: 'Que signifie « BPM » en musique ?', answers: ['Basses par mesure', 'Battements par minute', 'Barres par minute', 'Boucles par morceau'], correct: 1 },
-    ],
+    variety: GENERAL_QUIZ_VARIETY,
+    questions: musicEditorial,
   },
   sports: {
     label: 'Sports',
     icon: '⚽',
-    questions: [
-      { text: 'Combien de joueurs une équipe de football aligne-t-elle sur le terrain ?', answers: ['11', '10', '9', '12'], correct: 0 },
-      { text: 'Quel pays a remporté la Coupe du monde 2022 ?', answers: ['France', 'Argentine', 'Brésil', 'Allemagne'], correct: 1 },
-      { text: 'Au basket, combien de points vaut un lancer franc ?', answers: ['3', '2', '1', '4'], correct: 2 },
-      { text: 'Quel sport se joue avec un volant ?', answers: ['Tennis', 'Squash', 'Tennis de table', 'Badminton'], correct: 3 },
-      { text: 'Tous les combien ont lieu les Jeux olympiques d’été ?', answers: ['Tous les 4 ans', 'Tous les 2 ans', 'Tous les 3 ans', 'Tous les 5 ans'], correct: 0 },
-      { text: 'Quel joueur détient le record de titres du Grand Chelem en simple messieurs ?', answers: ['Roger Federer', 'Novak Djokovic', 'Rafael Nadal', 'Pete Sampras'], correct: 1 },
-      { text: 'Dans quel sport réalise-t-on un « slam dunk » ?', answers: ['Volley-ball', 'Handball', 'Basket-ball', 'Netball'], correct: 2 },
-      { text: 'Combien d’anneaux figurent sur le drapeau olympique ?', answers: ['4', '6', '7', '5'], correct: 3 },
-      { text: 'Dans quel pays le rugby est-il né ?', answers: ['Angleterre', 'Pays de Galles', 'Écosse', 'Irlande'], correct: 0 },
-      { text: 'Au bowling, quel est le score maximal possible sur une seule frame ?', answers: ['20', '30', '25', '15'], correct: 1 },
-    ],
+    variety: GENERAL_QUIZ_VARIETY,
+    questions: sportsEditorial,
   },
   geography: {
     label: 'Géographie',
     icon: '🌍',
-    questions: [
-      { text: 'Quelle est la capitale de la France ?', answers: ['Paris', 'Lyon', 'Marseille', 'Nice'], correct: 0 },
-      { text: 'Quel est le plus grand océan de la planète ?', answers: ['Atlantique', 'Pacifique', 'Indien', 'Arctique'], correct: 1 },
-      { text: 'Dans quelle chaîne de montagnes se trouve l’Everest ?', answers: ['Andes', 'Alpes', 'Himalaya', 'Rocheuses'], correct: 2 },
-      { text: 'Dans quel pays d’Asie du Sud se trouve l’État du Kerala ?', answers: ['Pakistan', 'Bangladesh', 'Sri Lanka', 'Inde'], correct: 3 },
-      { text: 'Quelle est la capitale de l’Australie ?', answers: ['Canberra', 'Sydney', 'Melbourne', 'Perth'], correct: 0 },
-      { text: 'Quel est le plus vaste désert chaud du monde ?', answers: ['Gobi', 'Sahara', 'Kalahari', 'Mojave'], correct: 1 },
-      { text: 'Quelle est la capitale du Japon ?', answers: ['Osaka', 'Kyoto', 'Tokyo', 'Nagoya'], correct: 2 },
-      { text: 'Sur quel continent se trouve la forêt amazonienne ?', answers: ['Afrique', 'Asie', 'Océanie', 'Amérique du Sud'], correct: 3 },
-      { text: 'Quel pays se situe à la fois en Europe et en Asie ?', answers: ['Turquie', 'Grèce', 'Égypte', 'Italie'], correct: 0 },
-      { text: 'Quel est le plus petit État souverain du monde ?', answers: ['Monaco', 'Vatican', 'Saint-Marin', 'Liechtenstein'], correct: 1 },
-      { text: 'À quel pays appartient l’enclave de Cabinda ?', answers: ['Namibie', 'République du Congo', 'République démocratique du Congo', 'Angola'], correct: 3, difficulty: 'expert' },
-    ],
+    variety: GENERAL_QUIZ_VARIETY,
+    questions: geographyEditorial,
   },
   gaming: {
     label: 'Gaming',
     icon: '🎮',
-    questions: [
-      { text: 'Quelle entreprise a créé Mario ?', answers: ['Nintendo', 'Sega', 'Sony', 'Atari'], correct: 0 },
-      { text: 'Dans Minecraft, dans quel matériau fabrique-t-on sa toute première pioche ?', answers: ['Fer', 'Bois', 'Pierre', 'Diamant'], correct: 1 },
-      { text: 'Quel est le jeu vidéo le plus vendu de l’histoire ?', answers: ['Tetris', 'GTA V', 'Minecraft', 'Wii Sports'], correct: 2 },
-      { text: 'Quel jeu propose un battle royale à 100 joueurs sur une île ?', answers: ['Valorant', 'Overwatch', 'League of Legends', 'Fortnite'], correct: 3 },
-      { text: 'Que signifie « FPS » quand on parle d’un genre de jeu ?', answers: ['First-Person Shooter', 'Fast Play Speed', 'Final Player Standing', 'Free Play Session'], correct: 0 },
-      { text: 'Qui est le héros de la saga « The Legend of Zelda » ?', answers: ['Zelda', 'Link', 'Ganon', 'Navi'], correct: 1 },
-      { text: 'Quelle console Sony est sortie en 2020 ?', answers: ['Xbox Series X', 'Switch', 'PlayStation 5', 'Steam Deck'], correct: 2 },
-      { text: 'De quel type est Pikachu ?', answers: ['Feu', 'Eau', 'Plante', 'Électrik'], correct: 3 },
-      { text: 'Quel jeu a popularisé le genre MOBA aux côtés de Dota ?', answers: ['League of Legends', 'Counter-Strike', 'World of Warcraft', 'StarCraft'], correct: 0 },
-      { text: 'De quelle couleur est Sonic ?', answers: ['Vert', 'Bleu', 'Rouge', 'Jaune'], correct: 1 },
-    ],
+    variety: GENERAL_QUIZ_VARIETY,
+    questions: gamingEditorial,
   },
   science: {
     label: 'Science',
     icon: '🧬',
-    questions: [
-      { text: 'Quelle est la formule chimique de l’eau ?', answers: ['H2O', 'CO2', 'O2', 'NaCl'], correct: 0 },
-      { text: 'Combien de planètes compte le système solaire ?', answers: ['7', '8', '9', '10'], correct: 1 },
-      { text: 'Quel gaz les plantes absorbent-elles dans l’atmosphère ?', answers: ['L’oxygène', 'L’azote', 'Le dioxyde de carbone', 'L’hydrogène'], correct: 2 },
-      { text: 'Quelle est la plus grande planète du système solaire ?', answers: ['Saturne', 'Neptune', 'La Terre', 'Jupiter'], correct: 3 },
-      { text: 'Quel organite est surnommé la « centrale énergétique » de la cellule ?', answers: ['La mitochondrie', 'Le noyau', 'Le ribosome', 'L’appareil de Golgi'], correct: 0 },
-      { text: 'À quelle température l’eau bout-elle au niveau de la mer ?', answers: ['90 °C', '100 °C', '110 °C', '120 °C'], correct: 1 },
-      { text: 'Quelle est la vitesse approximative de la lumière ?', answers: ['300 km/s', '30 000 km/s', '300 000 km/s', '3 000 km/s'], correct: 2 },
-      { text: 'Quel élément a pour numéro atomique 1 ?', answers: ['L’hélium', 'L’oxygène', 'Le carbone', 'L’hydrogène'], correct: 3 },
-      { text: 'Quelle force nous maintient au sol ?', answers: ['La gravité', 'Le magnétisme', 'La friction', 'L’inertie'], correct: 0 },
-      { text: 'Combien d’os compte le corps humain adulte ?', answers: ['186', '206', '226', '246'], correct: 1 },
-    ],
+    variety: GENERAL_QUIZ_VARIETY,
+    questions: scienceEditorial,
   },
   rap_fr: {
     label: 'Rap Français',
@@ -707,44 +695,61 @@ const CATEGORIES = {
   premier_league: {
     label: 'Premier League',
     icon: '🦁',
-    questions: [...playersPremierLeague],
+    variety: PORTRAIT_QUIZ_VARIETY,
+    questions: withPortraits(playersPremierLeague.filter(question => question.image), premierLeagueVarietyQuestions, 'joueurs'),
   },
   la_liga: {
     label: 'La Liga',
     icon: '🐂',
-    questions: [...playersLaLiga],
+    variety: PORTRAIT_QUIZ_VARIETY,
+    questions: withPortraits(playersLaLiga, laLigaVarietyQuestions, 'joueurs'),
   },
   bundesliga: {
     label: 'Bundesliga',
     icon: '🦅',
-    questions: [...playersBundesliga],
+    variety: PORTRAIT_QUIZ_VARIETY,
+    questions: withPortraits(playersBundesliga, bundesligaVarietyQuestions, 'joueurs'),
   },
   serie_a: {
     label: 'Serie A',
     icon: '👢',
-    questions: [...playersSerieA],
+    variety: PORTRAIT_QUIZ_VARIETY,
+    questions: withPortraits(playersSerieA, serieAVarietyQuestions, 'joueurs'),
   },
   ligue_1: {
     label: 'Ligue 1',
     icon: '🐓',
+    variety: { minAngles: 4, limitedFormat: 'portrait', maxPerMatch: 2 },
     questions: [
-      ...playersLigue1,
-      { text: 'Quel entraîneur a conduit le RC Lens au titre de champion de France en 1997-1998 ?', answers: ['Élie Baup', 'Guy Roux', 'Daniel Leclercq', 'Claude Puel'], correct: 2, difficulty: 'expert' },
-      { text: 'Quel entraîneur conduit Montpellier à son premier titre de champion de France en 2011-2012 ?', answers: ['René Girard', 'Rolland Courbis', 'Laurent Blanc', 'Christophe Galtier'], correct: 0, difficulty: 'expert' },
-      { text: 'Quel club réalise le doublé championnat et Coupe de France sous Guy Roux en 1995-1996 ?', answers: ['FC Nantes', 'AJ Auxerre', 'RC Lens', 'FC Metz'], correct: 1, difficulty: 'expert' },
-      { text: 'Quel club met fin aux sept sacres consécutifs de l’OL en remportant le championnat 2008-2009 ?', answers: ['Olympique de Marseille', 'LOSC Lille', 'Girondins de Bordeaux', 'AS Monaco'], correct: 2, difficulty: 'expert' },
-      { text: 'Quel entraîneur conduit Monaco au titre de champion de France en 2016-2017 ?', answers: ['Claudio Ranieri', 'Niko Kovač', 'Lucien Favre', 'Leonardo Jardim'], correct: 3, difficulty: 'expert' },
+      ...playersLigue1.map(question => ({
+        ...question,
+        angle: 'joueurs',
+        format: 'portrait',
+        fact: 'portrait:' + question.answers[question.correct],
+      })),
+      ...ligue1,
     ],
   },
   bollywood: {
     label: 'Bollywood',
     icon: '🇮🇳',
-    questions: [...playersBollywood],
+    variety: { minAngles: 4, limitedFormat: 'portrait', maxPerMatch: 2 },
+    questions: [
+      ...playersBollywood.map((question, index) => ({
+        ...question,
+        angle: 'personnages',
+        format: 'portrait',
+        fact: 'portrait:' + question.image,
+        difficulty: index < 7 ? 'easy' : 'medium',
+      })),
+      ...bollywoodEditorial,
+    ],
   },
   actors: {
     label: 'Acteurs',
     icon: '⭐',
-    questions: [...playersActorsAZ, ...playersActorsMZ],
+    variety: PORTRAIT_QUIZ_VARIETY,
+    questions: withPortraits([...playersActorsAZ, ...playersActorsMZ], actorsVarietyQuestions, 'personnes'),
   },
   netflix: {
     label: 'Netflix',
@@ -754,18 +759,8 @@ const CATEGORIES = {
   got: {
     label: 'Game of Thrones',
     icon: '🐉',
-    questions: [
-      { text: 'Sur quels romans est basée la série "Game of Thrones" ?', answers: ['Le Seigneur des Anneaux', 'Le Trône de Fer (A Song of Ice and Fire)', 'La Roue du Temps', 'Les Chroniques de Narnia'], correct: 1 },
-      { text: 'Quelle est la devise de la Maison Stark ?', answers: ['Le feu et le sang', 'L’hiver vient', 'Ouïe-nous rugir', 'Un Lannister paie toujours ses dettes'], correct: 1 },
-      { text: 'Quel est le symbole animal de la Maison Lannister ?', answers: ['Un loup', 'Un cerf', 'Un lion', 'Un dragon'], correct: 2 },
-      { text: 'Qui est surnommé "le Lutin" dans la série ?', answers: ['Jon Snow', 'Tyrion Lannister', 'Bran Stark', 'Samwell Tarly'], correct: 1 },
-      { text: 'Comment s’appelle le trône convoité, forgé à partir d’épées fondues ?', answers: ['Le Trône de Fer', 'Le Trône d’Or', 'Le Siège des Rois', 'Le Trône des Dragons'], correct: 0 },
-      { text: 'Quelle actrice interprète Daenerys Targaryen ?', answers: ['Sophie Turner', 'Emilia Clarke', 'Maisie Williams', 'Natalie Dormer'], correct: 1 },
-      { text: 'Comment s’appelle l’immense mur de glace au nord de Westeros ?', answers: ['La Barrière', 'Le Rempart', 'Le Mur', 'La Frontière'], correct: 2 },
-      { text: 'Quel chef de la Maison Stark est exécuté publiquement à la fin de la saison 1 ?', answers: ['Robb Stark', 'Ned Stark', 'Bran Stark', 'Rickon Stark'], correct: 1 },
-      { text: 'Quel est le nom du continent où se déroule la majeure partie de l’histoire ?', answers: ['Essos', 'Westeros', 'Sothoryos', 'Ulthos'], correct: 1 },
-      { text: 'Comment s’appelle l’épée en acier valyrien de la Maison Stark ?', answers: ['Glace', 'Torche', 'Grand-Griffe', 'Dents-de-Lion'], correct: 0 },
-    ],
+    variety: GENERAL_QUIZ_VARIETY,
+    questions: gotEditorial,
   },
   harry_potter: {
     label: 'Harry Potter',
@@ -805,18 +800,8 @@ const CATEGORIES = {
   f1: {
     label: 'Formule 1',
     icon: '🏎️',
-    questions: [
-      { text: 'Combien de fois Michael Schumacher a-t-il été champion du monde de F1 ?', answers: ['5', '6', '7', '8'], correct: 2 },
-      { text: 'Quelle écurie de F1 est associée à la couleur rouge et au cheval cabré ?', answers: ['McLaren', 'Ferrari', 'Red Bull', 'Williams'], correct: 1 },
-      { text: 'Quel pilote a égalé le record de 7 titres mondiaux de Schumacher ?', answers: ['Sebastian Vettel', 'Max Verstappen', 'Lewis Hamilton', 'Fernando Alonso'], correct: 2 },
-      { text: 'Dans quel pays se déroule le Grand Prix de Monaco ?', answers: ['France', 'Italie', 'Monaco', 'Espagne'], correct: 2 },
-      { text: 'Combien de points rapporte une victoire en Grand Prix depuis 2010 ?', answers: ['10', '20', '25', '30'], correct: 2 },
-      { text: 'Quel pilote français a été champion du monde en 1985 et 1986 ?', answers: ['Alain Prost', 'René Arnoux', 'Jean Alesi', 'Olivier Panis'], correct: 0 },
-      { text: 'Quel drapeau signale la fin d’une course de F1 ?', answers: ['Un drapeau rouge', 'Un drapeau à damier', 'Un drapeau jaune', 'Un drapeau bleu'], correct: 1 },
-      { text: 'Quelle écurie britannique a été fondée par Frank Williams ?', answers: ['Williams', 'McLaren', 'Force India', 'Brawn GP'], correct: 0 },
-      { text: 'Quel circuit français historique est connu pour sa ligne droite du Mistral ?', answers: ['Magny-Cours', 'Paul Ricard', 'Charade', 'Reims-Gueux'], correct: 1 },
-      { text: 'Combien de roues compte une monoplace de Formule 1 ?', answers: ['3', '4', '6', '2'], correct: 1 },
-    ],
+    variety: GENERAL_QUIZ_VARIETY,
+    questions: f1Editorial,
   },
   nba: {
     label: 'Basket NBA',
@@ -826,34 +811,14 @@ const CATEGORIES = {
   tv_shows: {
     label: 'Séries Cultes',
     icon: '📺',
-    questions: [
-      { text: 'Dans quelle ville se déroule la série "Friends" ?', answers: ['Los Angeles', 'New York', 'Chicago', 'Boston'], correct: 1 },
-      { text: 'Quel est le nom du café où se retrouvent les personnages de "Friends" ?', answers: ['Central Perk', 'Coffee Bean', 'The Grind', 'Java House'], correct: 0 },
-      { text: 'Quelle série met en scène un professeur de chimie devenu fabricant de drogue ?', answers: ['Breaking Bad', 'Dexter', 'Ozark', 'The Wire'], correct: 0 },
-      { text: 'Quel est le prénom du personnage principal de "Dr House" ?', answers: ['Gregory', 'James', 'Robert', 'Eric'], correct: 0 },
-      { text: 'Quelle série britannique culte met en scène un détective au 221B Baker Street ?', answers: ['Sherlock', 'Luther', 'Broadchurch', 'Peaky Blinders'], correct: 0 },
-      { text: 'Combien d’amis composent le groupe principal de la série "Friends" ?', answers: ['4', '5', '6', '7'], correct: 2 },
-      { text: 'Quelle série américaine se déroule dans un bureau de vente de papier à Scranton ?', answers: ['The Office', 'Parks and Recreation', '30 Rock', 'Community'], correct: 0 },
-      { text: 'Quel est le nom de famille de Walter White dans "Breaking Bad" ?', answers: ['White', 'Pinkman', 'Schrader', 'Fring'], correct: 0 },
-      { text: 'Quelle chaîne américaine a diffusé "Friends" à l’origine ?', answers: ['CBS', 'ABC', 'NBC', 'Fox'], correct: 2 },
-      { text: 'De quelle addiction souffre le Dr House tout au long de la série ?', answers: ['L’alcool', 'La Vicodin', 'La morphine', 'La cocaïne'], correct: 1 },
-    ],
+    variety: GENERAL_QUIZ_VARIETY,
+    questions: tvShowsEditorial,
   },
   histoire_fr: {
     label: 'Histoire de France',
     icon: '⚜️',
-    questions: [
-      { text: 'Quel roi de France est surnommé le "Roi Soleil" ?', answers: ['Louis XIII', 'Louis XIV', 'Louis XV', 'Louis XVI'], correct: 1 },
-      { text: 'En quelle année Napoléon Bonaparte a-t-il été sacré empereur ?', answers: ['1799', '1804', '1812', '1815'], correct: 1 },
-      { text: 'Quelle bataille de 1815 marque la défaite finale de Napoléon ?', answers: ['Austerlitz', 'Waterloo', 'Trafalgar', 'Iéna'], correct: 1 },
-      { text: 'Qui était Jeanne d’Arc ?', answers: ['Une reine de France', 'Une héroïne militaire pendant la guerre de Cent Ans', 'Une philosophe des Lumières', 'Une impératrice romaine'], correct: 1 },
-      { text: 'En quelle année la France a-t-elle aboli la peine de mort ?', answers: ['1969', '1981', '1995', '2000'], correct: 1 },
-      { text: 'Quel monument parisien a été construit pour l’Exposition universelle de 1889 ?', answers: ['L’Arc de Triomphe', 'La Tour Eiffel', 'Le Sacré-Cœur', 'Le Grand Palais'], correct: 1 },
-      { text: 'Qui était le premier président de la Ve République française ?', answers: ['Georges Pompidou', 'Charles de Gaulle', 'François Mitterrand', 'René Coty'], correct: 1 },
-      { text: 'Quelle guerre a opposé la France et l’Angleterre de 1337 à 1453 ?', answers: ['La Guerre de Cent Ans', 'La Guerre de Sept Ans', 'Les Guerres de Religion', 'La Fronde'], correct: 0 },
-      { text: 'Quel traité a officiellement mis fin à la Première Guerre mondiale en 1919 ?', answers: ['Le Traité de Vienne', 'Le Traité de Versailles', 'Le Traité de Westphalie', 'Le Traité de Rome'], correct: 1 },
-      { text: 'Quel palais royal Louis XIV a-t-il fait construire près de Paris ?', answers: ['Le Louvre', 'Le Château de Versailles', 'Fontainebleau', 'Le Château de Chambord'], correct: 1 },
-    ],
+    variety: GENERAL_QUIZ_VARIETY,
+    questions: histoireFrEditorial,
   },
   seconde_guerre_mondiale: {
     label: 'Seconde Guerre Mondiale',
@@ -913,59 +878,26 @@ const CATEGORIES = {
   retro_games: {
     label: 'Jeux Vidéo Rétro',
     icon: '👾',
-    questions: [
-      { text: 'Quel plombier italien est le héros des jeux Nintendo créés par Shigeru Miyamoto ?', answers: ['Luigi', 'Mario', 'Wario', 'Yoshi'], correct: 1 },
-      { text: 'Quelle console a lancé la série "Sonic the Hedgehog" en 1991 ?', answers: ['La Super Nintendo', 'La Sega Mega Drive', 'La PlayStation', 'La Game Boy'], correct: 1 },
-      { text: 'Quel jeu d’arcade de 1980 met en scène un personnage jaune mangeant des pac-gommes ?', answers: ['Pac-Man', 'Donkey Kong', 'Space Invaders', 'Galaga'], correct: 0 },
-      { text: 'Quelle entreprise a créé la console portable Game Boy ?', answers: ['Sega', 'Sony', 'Nintendo', 'Atari'], correct: 2 },
-      { text: 'Quel est le nom de la princesse que Mario doit régulièrement sauver ?', answers: ['La Princesse Zelda', 'La Princesse Peach', 'La Princesse Daisy', 'La Princesse Rosalina'], correct: 1 },
-      { text: 'Quel est le but principal du jeu Tetris ?', answers: ['Aligner des lignes de blocs pour les faire disparaître', 'Collecter des pièces', 'Battre un boss final', 'Résoudre des énigmes'], correct: 0 },
-      { text: 'Quelle console de Sony est sortie en 1994, rivalisant avec la Nintendo 64 ?', answers: ['La PlayStation', 'La Xbox', 'La Dreamcast', 'La PlayStation 2'], correct: 0 },
-      { text: 'Quel héros vêtu de vert doit sauver la princesse Zelda ?', answers: ['Link', 'Kirby', 'Fox McCloud', 'Ness'], correct: 0 },
-      { text: 'Quel jeu de combat oppose des personnages comme Ryu et Ken ?', answers: ['Mortal Kombat', 'Street Fighter', 'Tekken', 'Virtua Fighter'], correct: 1 },
-      { text: 'Quelle entreprise japonaise a créé la console Sega Mega Drive ?', answers: ['Sega', 'Namco', 'Konami', 'Capcom'], correct: 0 },
-    ],
+    variety: GENERAL_QUIZ_VARIETY,
+    questions: retroGamesEditorial,
   },
   cinema_fr: {
     label: 'Cinéma Français',
     icon: '🎭',
-    questions: [
-      { text: 'Qui a réalisé "Le Fabuleux Destin d’Amélie Poulain" ?', answers: ['Luc Besson', 'Jean-Pierre Jeunet', 'Michel Gondry', 'Claude Lelouch'], correct: 1 },
-      { text: 'Quel acteur incarne OSS 117 dans la saga de films comiques ?', answers: ['Jean Dujardin', 'Gad Elmaleh', 'Dany Boon', 'Omar Sy'], correct: 0 },
-      { text: 'Quel film muet français a remporté l’Oscar du meilleur film en 2012 ?', answers: ['Intouchables', 'The Artist', 'La Môme', 'Amour'], correct: 1 },
-      { text: 'Quel duo de réalisateurs a fait "Intouchables" ?', answers: ['Nakache et Toledano', 'Dardenne et Dardenne', 'Besson et Kassovitz', 'Ozon et Audiard'], correct: 0 },
-      { text: 'Dans "Intouchables", quel acteur interprète Philippe ?', answers: ['Omar Sy', 'François Cluzet', 'Vincent Cassel', 'Daniel Auteuil'], correct: 1 },
-      { text: 'Quelle série française met en scène un braqueur inspiré d’Arsène Lupin ?', answers: ['Dix pour cent', 'Lupin', 'Le Bureau des Légendes', 'Engrenages'], correct: 1 },
-      { text: 'Qui interprète le rôle principal dans la série "Lupin" ?', answers: ['Omar Sy', 'Jean Dujardin', 'Tahar Rahim', 'Eric Judor'], correct: 0 },
-      { text: 'Quel acteur a incarné Astérix face à Gérard Depardieu (Obélix) dans les premiers films ?', answers: ['Christian Clavier', 'Édouard Baer', 'Guillaume Gallienne', 'Franck Dubosc'], correct: 0 },
-      { text: 'Gérard Depardieu incarne quel personnage de bande dessinée au cinéma ?', answers: ['Astérix', 'Obélix', 'Panoramix', 'Abraracourcix'], correct: 1 },
-      { text: 'Quelle actrice a remporté l’Oscar de la meilleure actrice pour son rôle d’Édith Piaf dans "La Môme" ?', answers: ['Juliette Binoche', 'Marion Cotillard', 'Audrey Tautou', 'Léa Seydoux'], correct: 1 },
-      { text: 'Qui est cet acteur ?', image: '/images/players/gerard_depardieu.jpg', credit: 'Photo : Siebbi (CC BY 3.0)', answers: ['Gérard Depardieu', 'Jean Reno', 'Daniel Auteuil', 'Alain Delon'], correct: 0 },
-      { text: 'Qui est cette actrice ?', image: '/images/players/catherine_deneuve.jpg', credit: 'Photo : Martin Kraft (CC BY-SA 3.0)', answers: ['Juliette Binoche', 'Sophie Marceau', 'Catherine Deneuve', 'Isabelle Adjani'], correct: 2 },
-      { text: 'Qui est cette actrice ?', image: '/images/players/isabelle_adjani.jpg', credit: 'Photo : Georges Biard (CC BY-SA 4.0)', answers: ['Isabelle Adjani', 'Sophie Marceau', 'Juliette Binoche', 'Catherine Deneuve'], correct: 0 },
-      { text: 'Qui est cette actrice ?', image: '/images/players/juliette_binoche.jpg', credit: 'Photo : Elena Ternovaja (CC BY-SA 3.0)', answers: ['Isabelle Adjani', 'Sophie Marceau', 'Catherine Deneuve', 'Juliette Binoche'], correct: 3 },
-    ],
+    variety: { minAngles: 4, limitedFormat: 'portrait', maxPerMatch: 2 },
+    questions: cinemaFrEditorial,
   },
   culture_fr: {
     label: 'Culture Générale FR',
     icon: '🇫🇷',
-    questions: [
-      { text: 'Quelle est la capitale de la France ?', answers: ['Lyon', 'Marseille', 'Paris', 'Toulouse'], correct: 2 },
-      { text: 'En quelle année a eu lieu la prise de la Bastille ?', answers: ['1789', '1799', '1804', '1815'], correct: 0 },
-      { text: 'Quel roi de France a été exécuté pendant la Révolution française ?', answers: ['Louis XIV', 'Louis XV', 'Louis XVI', 'Charles X'], correct: 2 },
-      { text: 'Quel plat traditionnel de Bourgogne est à base de bœuf mijoté au vin rouge ?', answers: ['Cassoulet', 'Bœuf bourguignon', 'Pot-au-feu', 'Blanquette'], correct: 1 },
-      { text: 'Combien de régions administratives compte la France métropolitaine depuis 2016 ?', answers: ['11', '13', '18', '22'], correct: 1 },
-      { text: 'Quel fleuve traverse la ville de Paris ?', answers: ['La Loire', 'Le Rhône', 'La Seine', 'La Garonne'], correct: 2 },
-      { text: 'Quel est le point culminant de la France ?', answers: ['Le Mont Blanc', 'Le Pic du Midi', 'Le Mont Ventoux', 'Le Puy de Dôme'], correct: 0 },
-      { text: 'Quelle est la devise nationale de la France ?', answers: ['Unité, Travail, Progrès', 'Liberté, Égalité, Fraternité', 'Honneur et Patrie', 'Paix et Prospérité'], correct: 1 },
-      { text: 'Qui a écrit "Les Misérables" ?', answers: ['Victor Hugo', 'Émile Zola', 'Honoré de Balzac', 'Gustave Flaubert'], correct: 0 },
-      { text: 'Quelle ville française est surnommée "la Ville Lumière" ?', answers: ['Lyon', 'Nice', 'Paris', 'Bordeaux'], correct: 2 },
-    ],
+    variety: GENERAL_QUIZ_VARIETY,
+    questions: cultureFrEditorial,
   },
   tennis: {
     label: 'Tennis',
     icon: '🎾',
-    questions: [...playersTennis],
+    variety: PORTRAIT_QUIZ_VARIETY,
+    questions: withPortraits(playersTennis, tennisVarietyQuestions, 'joueurs'),
   },
   basketball: {
     label: 'Basketteurs en photo',
@@ -975,7 +907,8 @@ const CATEGORIES = {
   rugby: {
     label: 'Rugby',
     icon: '🏉',
-    questions: [...playersRugby],
+    variety: PORTRAIT_QUIZ_VARIETY,
+    questions: withPortraits(playersRugby, rugbyVarietyQuestions, 'joueurs'),
   },
   boxe: {
     label: 'Boxeurs en photo',
@@ -985,32 +918,38 @@ const CATEGORIES = {
   athletisme: {
     label: 'Athlétisme',
     icon: '🏃',
-    questions: [...playersAthletisme],
+    variety: PORTRAIT_QUIZ_VARIETY,
+    questions: withPortraits(playersAthletisme, athletismeVarietyQuestions, 'sportifs'),
   },
   science_stars: {
     label: 'Savants Célèbres',
     icon: '🔬',
-    questions: [...playersScience],
+    variety: PORTRAIT_QUIZ_VARIETY,
+    questions: withPortraits(playersScience, scienceStarsVarietyQuestions, 'scientifiques'),
   },
   humour: {
     label: 'Humour',
     icon: '😂',
-    questions: [...playersHumour],
+    variety: PORTRAIT_QUIZ_VARIETY,
+    questions: withPortraits(playersHumour, humourVarietyQuestions, 'personnes'),
   },
   mode: {
     label: 'Mode',
     icon: '💃',
-    questions: [...playersMode],
+    variety: PORTRAIT_QUIZ_VARIETY,
+    questions: withPortraits(playersMode, modeVarietyQuestions, 'personnes'),
   },
   kpop: {
     label: 'K-pop',
     icon: '🇰🇷',
-    questions: [...playersKpop],
+    variety: PORTRAIT_QUIZ_VARIETY,
+    questions: withPortraits(playersKpop, kpopVarietyQuestions, 'personnes'),
   },
   series_ado_romance: {
     label: 'Séries Ado & Romance',
     icon: '💕',
-    questions: [...playersSeriesAdoRomance],
+    variety: PORTRAIT_QUIZ_VARIETY,
+    questions: withPortraits(playersSeriesAdoRomance, seriesAdoRomanceVarietyQuestions, 'personnes'),
   },
   drapeaux: {
     label: 'Drapeaux',
@@ -1169,25 +1108,30 @@ const CATEGORIES = {
   films_musicaux: { label: 'Films musicaux', icon: '🎶', questions: [...filmsMusicaux] },
   biopics_celebres: { label: 'Biopics célèbres', icon: '🎬', questions: [...biopicsCelebres] },
   capitales_du_monde: { label: 'Capitales du monde', icon: '🌍', questions: [...capitalesDuMonde] },
-  fleuves_montagnes: { label: 'Fleuves & montagnes', icon: '🏔️', questions: [...fleuvesMontagnes] },
-  europe_culture_histoire: { label: 'Europe (culture/histoire)', icon: '🏰', questions: [...europeCultureHistoire] },
+  fleuves_montagnes: { label: 'Fleuves & montagnes', icon: '🏔️', variety: AUDITED_QUESTION_VARIETY, questions: [...fleuvesMontagnes] },
+  europe_culture_histoire: { label: 'Europe (culture/histoire)', icon: '🏰', variety: AUDITED_QUESTION_VARIETY, questions: [...europeCultureHistoire] },
   afrique_culture_histoire: { label: 'Afrique (culture/histoire)', icon: '🌍', questions: [...afriqueCultureHistoire] },
   asie_culture_histoire: { label: 'Asie (culture/histoire)', icon: '🏯', questions: [...asieCultureHistoire] },
   amerique_latine: { label: 'Amérique latine', icon: '🌎', questions: [...ameriqueLatine] },
-  etats_unis_culture_generale: { label: 'États-Unis (culture générale)', icon: '🗽', questions: [...etatsUnisCultureGenerale] },
-  histoire_antique: { label: 'Histoire antique', icon: '🏛️', questions: [...histoireAntique] },
+  etats_unis_culture_generale: { label: 'États-Unis (culture générale)', icon: '🗽', variety: AUDITED_DATE_VARIETY, questions: [...etatsUnisCultureGenerale] },
+  histoire_antique: { label: 'Histoire antique', icon: '🏛️', variety: AUDITED_QUESTION_VARIETY, questions: [...histoireAntique] },
   mythologie_grecque: { label: 'Mythologie grecque', icon: '⚡', questions: [...mythologieGrecque] },
-  mythologie_nordique: { label: 'Mythologie nordique', icon: '🔨', questions: [...mythologieNordique] },
-  mythologie_egyptienne: { label: 'Mythologie égyptienne', icon: '𓂀', questions: [...mythologieEgyptienne] },
-  moyen_age: { label: 'Moyen Âge', icon: '⚔️', questions: [...moyenAge] },
-  premiere_guerre_mondiale: { label: 'Première Guerre mondiale', icon: '🪖', questions: [...premiereGuerreMondiale] },
-  revolutions_dans_le_monde: { label: 'Révolutions dans le monde', icon: '✊', questions: [...revolutionsDansLeMonde] },
-  grandes_explorations: { label: 'Grandes explorations', icon: '🧭', questions: [...grandesExplorations] },
-  litterature_francaise_classique: { label: 'Littérature française classique', icon: '📖', questions: [...litteratureFrancaiseClassique] },
-  litterature_mondiale: { label: 'Littérature mondiale', icon: '📚', questions: [...litteratureMondiale] },
-  philosophes_celebres: { label: 'Philosophes célèbres', icon: '💭', questions: [...philosophesCelebres] },
-  peintres_oeuvres_d_art: { label: 'Peintres & œuvres d\'art', icon: '🎨', questions: [...peintresOeuvresDArt] },
-  sculpteurs_monuments: { label: 'Sculpteurs & monuments', icon: '🗿', questions: [...sculpteursMonuments] },
+  mythologie_nordique: { label: 'Mythologie nordique', icon: '🔨', variety: AUDITED_QUESTION_VARIETY, questions: [...mythologieNordique] },
+  mythologie_egyptienne: { label: 'Mythologie égyptienne', icon: '𓂀', variety: AUDITED_QUESTION_VARIETY, questions: [...mythologieEgyptienne] },
+  moyen_age: { label: 'Moyen Âge', icon: '⚔️', variety: AUDITED_DATE_VARIETY, questions: [...moyenAge] },
+  premiere_guerre_mondiale: {
+    label: 'Première Guerre mondiale',
+    icon: '🪖',
+    variety: { minAngles: 4, limitedFormat: 'date', maxPerMatch: 2 },
+    questions: [...premiereGuerreMondiale],
+  },
+  revolutions_dans_le_monde: { label: 'Révolutions dans le monde', icon: '✊', variety: AUDITED_DATE_VARIETY, questions: [...revolutionsDansLeMonde] },
+  grandes_explorations: { label: 'Grandes explorations', icon: '🧭', variety: AUDITED_DATE_VARIETY, questions: [...grandesExplorations] },
+  litterature_francaise_classique: { label: 'Littérature française classique', icon: '📖', variety: AUDITED_QUESTION_VARIETY, questions: [...litteratureFrancaiseClassique] },
+  litterature_mondiale: { label: 'Littérature mondiale', icon: '📚', variety: AUDITED_QUESTION_VARIETY, questions: [...litteratureMondiale] },
+  philosophes_celebres: { label: 'Philosophes célèbres', icon: '💭', variety: AUDITED_QUESTION_VARIETY, questions: [...philosophesCelebres] },
+  peintres_oeuvres_d_art: { label: 'Peintres & œuvres d\'art', icon: '🎨', variety: AUDITED_QUESTION_VARIETY, questions: [...peintresOeuvresDArt] },
+  sculpteurs_monuments: { label: 'Sculpteurs & monuments', icon: '🗿', variety: AUDITED_QUESTION_VARIETY, questions: [...sculpteursMonuments] },
   architecture_celebre: { label: "Architecture célèbre", icon: "🏛️", questions: [...architectureCelebre] },
   merveilles_du_monde: { label: "Merveilles du monde", icon: "🌐", questions: [...merveillesDuMonde] },
   animaux: { label: "Animaux", icon: "🐾", questions: [...animaux] },
@@ -1195,24 +1139,24 @@ const CATEGORIES = {
   dinosaures: { label: "Dinosaures", icon: "🦖", questions: [...dinosaures] },
   environnement_ecologie: { label: "Environnement & écologie", icon: "🌱", questions: [...environnementEcologie] },
   inventions_inventeurs: { label: "Inventions & inventeurs", icon: "💡", questions: [...inventionsInventeurs] },
-  prix_nobel: { label: "Prix Nobel", icon: "🏅", questions: [...prixNobel] },
-  langues_du_monde: { label: "Langues du monde", icon: "🗣️", questions: [...languesDuMonde] },
-  traditions_fetes_du_monde: { label: "Traditions & fêtes du monde", icon: "🎊", questions: [...traditionsFetesDuMonde] },
-  gastronomie_francaise: { label: "Gastronomie française", icon: "🥐", questions: [...gastronomieFrancaise] },
-  gastronomie_du_monde: { label: "Gastronomie du monde", icon: "🍜", questions: [...gastronomieDuMonde] },
-  vins_terroirs: { label: "Vins & terroirs", icon: "🍇", questions: [...vinsTerroirs] },
-  hymnes_nationaux: { label: "Hymnes nationaux", icon: "🎼", questions: [...hymnesNationaux] },
-  femmes_celebres_de_l_histoire: { label: "Femmes célèbres de l'histoire", icon: "👩‍🏫", questions: [...femmesCelebresDeLHistoire] },
+  prix_nobel: { label: "Prix Nobel", icon: "🏅", variety: AUDITED_QUESTION_VARIETY, questions: [...prixNobel] },
+  langues_du_monde: { label: "Langues du monde", icon: "🗣️", variety: AUDITED_QUESTION_VARIETY, questions: [...languesDuMonde] },
+  traditions_fetes_du_monde: { label: "Traditions & fêtes du monde", icon: "🎊", variety: AUDITED_QUESTION_VARIETY, questions: [...traditionsFetesDuMonde] },
+  gastronomie_francaise: { label: "Gastronomie française", icon: "🥐", variety: AUDITED_QUESTION_VARIETY, questions: [...gastronomieFrancaise] },
+  gastronomie_du_monde: { label: "Gastronomie du monde", icon: "🍜", variety: AUDITED_QUESTION_VARIETY, questions: [...gastronomieDuMonde] },
+  vins_terroirs: { label: "Vins & terroirs", icon: "🍇", variety: AUDITED_QUESTION_VARIETY, questions: [...vinsTerroirs] },
+  hymnes_nationaux: { label: "Hymnes nationaux", icon: "🎼", variety: AUDITED_QUESTION_VARIETY, questions: [...hymnesNationaux] },
+  femmes_celebres_de_l_histoire: { label: "Femmes célèbres de l'histoire", icon: "👩‍🏫", variety: AUDITED_QUESTION_VARIETY, questions: [...femmesCelebresDeLHistoire] },
   dates_cles_de_l_histoire: { label: "Dates clés de l'histoire", icon: "📅", questions: [...datesClesDeLHistoire] },
-  rois_reines_d_europe: { label: "Rois & reines d'Europe", icon: "👑", questions: [...roisReinesDEurope] },
-  presidents_francais: { label: "Présidents français", icon: "🇫🇷", questions: [...presidentsFrancais] },
-  presidents_americains: { label: "Présidents américains", icon: "🇺🇸", questions: [...presidentsAmericains] },
+  rois_reines_d_europe: { label: "Rois & reines d'Europe", icon: "👑", variety: AUDITED_QUESTION_VARIETY, questions: [...roisReinesDEurope] },
+  presidents_francais: { label: "Présidents français", icon: "🇫🇷", variety: AUDITED_QUESTION_VARIETY, questions: [...presidentsFrancais] },
+  presidents_americains: { label: "Présidents américains", icon: "🇺🇸", variety: AUDITED_QUESTION_VARIETY, questions: [...presidentsAmericains] },
   grandes_villes_du_monde: { label: "Grandes villes du monde", icon: "🏙️", questions: [...grandesVillesDuMonde] },
-  especes_en_voie_de_disparition: { label: "Espèces en voie de disparition", icon: "🐼", questions: [...especesEnVoieDeDisparition] },
-  histoire_du_maroc: { label: "Histoire du Maroc", icon: "🇲🇦", questions: [...histoireDuMaroc] },
-  histoire_de_l_algerie: { label: "Histoire de l'Algérie", icon: "🇩🇿", questions: [...histoireDeLAlgerie] },
-  histoire_de_la_tunisie: { label: "Histoire de la Tunisie", icon: "🇹🇳", questions: [...histoireDeLaTunisie] },
-  islam: { label: "Islam", icon: "☪️", questions: [...islam] },
+  especes_en_voie_de_disparition: { label: "Espèces en voie de disparition", icon: "🐼", variety: AUDITED_QUESTION_VARIETY, questions: [...especesEnVoieDeDisparition] },
+  histoire_du_maroc: { label: "Histoire du Maroc", icon: "🇲🇦", variety: AUDITED_DATE_VARIETY, questions: [...histoireDuMaroc] },
+  histoire_de_l_algerie: { label: "Histoire de l'Algérie", icon: "🇩🇿", variety: AUDITED_DATE_VARIETY, questions: [...histoireDeLAlgerie] },
+  histoire_de_la_tunisie: { label: "Histoire de la Tunisie", icon: "🇹🇳", variety: AUDITED_DATE_VARIETY, questions: [...histoireDeLaTunisie] },
+  islam: { label: "Islam", icon: "☪️", variety: AUDITED_QUESTION_VARIETY, questions: [...islam] },
   christianisme: { label: "Christianisme", icon: "✝️", questions: [...christianisme] },
   judaisme: { label: "Judaïsme", icon: "✡️", questions: [...judaisme] },
   bouddhisme: { label: "Bouddhisme", icon: "☸️", questions: [...bouddhisme] },
@@ -1227,9 +1171,9 @@ const CATEGORIES = {
   overwatch: { label: "Overwatch", icon: "🦸", questions: [...overwatch] },
   counter_strike: { label: "Counter-Strike", icon: "🎯", questions: [...counterStrike] },
   world_of_warcraft: { label: "World of Warcraft", icon: "⚔️", questions: [...worldOfWarcraft] },
-  legendes_de_l_esport: { label: "Légendes de l'esport", icon: "🏆", questions: [...legendesDeLEsport] },
-  streamers_gaming_fr: { label: "Streamers gaming FR", icon: "🎙️", questions: [...streamersGamingFr] },
-  jeux_mobile_populaires: { label: "Jeux mobile populaires", icon: "📱", questions: [...jeuxMobilePopulaires] },
+  legendes_de_l_esport: { label: "Légendes de l'esport", icon: "🏆", variety: AUDITED_ATTRIBUTION_VARIETY, questions: [...legendesDeLEsport] },
+  streamers_gaming_fr: { label: "Streamers gaming FR", icon: "🎙️", variety: AUDITED_QUESTION_VARIETY, questions: [...streamersGamingFr] },
+  jeux_mobile_populaires: { label: "Jeux mobile populaires", icon: "📱", variety: AUDITED_ATTRIBUTION_VARIETY, questions: [...jeuxMobilePopulaires] },
   histoire_des_consoles: { label: "Histoire des consoles", icon: "🎮", questions: [...histoireDesConsoles] },
   fc_barcelone: { label: "FC Barcelone", icon: "🔵", questions: [...fcBarcelone] },
   manchester_united: { label: "Manchester United", icon: "🔴", questions: [...manchesterUnited] },
@@ -1241,8 +1185,8 @@ const CATEGORIES = {
   inter_milan: { label: "Inter Milan", icon: "🔵", questions: [...interMilan] },
   borussia_dortmund: { label: "Borussia Dortmund", icon: "🟡", questions: [...borussiaDortmund] },
   olympique_de_marseille: { label: "Olympique de Marseille", icon: "⚪", questions: [...olympiqueDeMarseille] },
-  cyclisme_stars: { label: "Cyclisme (Stars)", icon: "🚴", questions: [...cyclismeStars] },
-  musique_stars: { label: "Musique (Stars)", icon: "🎤", questions: [...musiqueStars] },
+  cyclisme_stars: { label: "Cyclisme (Stars)", icon: "🚴", variety: AUDITED_QUESTION_VARIETY, questions: [...cyclismeStars] },
+  musique_stars: { label: "Musique (Stars)", icon: "🎤", variety: AUDITED_QUESTION_VARIETY, questions: [...musiqueStars] },
 
   // Catalogue expansion batch 1.
   booba: { label: "Booba", icon: "🎤", questions: [...booba] },
@@ -1261,15 +1205,15 @@ const CATEGORIES = {
   soprano: { label: "Soprano", icon: "🎤", questions: [...soprano] },
   drake: { label: "Drake", icon: "🎤", questions: [...drake] },
   eminem: { label: "Eminem", icon: "🎤", questions: [...eminem] },
-  kanye_west: { label: "Kanye West", icon: "🎤", questions: [...kanyeWest] },
-  travis_scott: { label: "Travis Scott", icon: "🎤", questions: [...travisScott] },
+  kanye_west: { label: "Kanye West", icon: "🎤", variety: AUDITED_ALBUM_VARIETY, questions: [...kanyeWest] },
+  travis_scott: { label: "Travis Scott", icon: "🎤", variety: AUDITED_ALBUM_VARIETY, questions: [...travisScott] },
   the_weeknd: { label: "The Weeknd", icon: "🎤", questions: [...theWeeknd] },
   rihanna: { label: "Rihanna", icon: "🎤", questions: [...rihanna] },
   beyonce: { label: "Beyoncé", icon: "🎤", questions: [...beyonce] },
   taylor_swift: { label: "Taylor Swift", icon: "🎤", questions: [...taylorSwift] },
   michael_jackson: { label: "Michael Jackson", icon: "🎤", questions: [...michaelJackson] },
-  dua_lipa: { label: "Dua Lipa", icon: "🎤", questions: [...duaLipa] },
-  billie_eilish: { label: "Billie Eilish", icon: "🎤", questions: [...billieEilish] },
+  dua_lipa: { label: "Dua Lipa", icon: "🎤", variety: AUDITED_ALBUM_VARIETY, questions: [...duaLipa] },
+  billie_eilish: { label: "Billie Eilish", icon: "🎤", variety: AUDITED_ALBUM_VARIETY, questions: [...billieEilish] },
   stromae: { label: "Stromae", icon: "🎤", questions: [...stromae] },
   freeze_corleone: { label: "Freeze Corleone", icon: "🎤", questions: [...freezeCorleone] },
   werenoi: { label: "Werenoi", icon: "🎤", questions: [...werenoi] },
@@ -1526,34 +1470,84 @@ function categoryPool(categoryKey) {
   const pool = [];
   for (const [key, cat] of categories) {
     const total = cat.questions.length;
+    // Appending questions with explicit levels should not flatten the existing
+    // progression or leave a single authored question as the only expert.
+    const legacyCount = cat.variety?.mixLegacyDifficulty
+      ? cat.questions.filter(question => question.difficulty == null).length
+      : 0;
+    let legacyIndex = 0;
     cat.questions.forEach((question, index) => {
+      const rankAmongLegacyQuestions = legacyCount && question.difficulty == null;
       pool.push({
         ...question,
         category: cat.label,
         icon: cat.icon,
         _categoryKey: key,
-        _difficultyScore: difficultyScore(question, index, total),
+        _difficultyScore: rankAmongLegacyQuestions
+          ? difficultyScore(question, legacyIndex++, legacyCount)
+          : difficultyScore(question, index, total),
       });
     });
   }
   return pool;
 }
 
-function selectProgressiveQuestions(items, count, random = Math.random) {
+function questionOpening(question) {
+  return question.text.toLocaleLowerCase('fr').match(/[\p{L}\p{N}]+/gu)?.slice(0, 5).join(' ');
+}
+
+function preferDifferentOpenings(candidates, selected, limit) {
+  const openings = new Map();
+  for (const question of selected) {
+    const opening = questionOpening(question);
+    openings.set(opening, (openings.get(opening) || 0) + 1);
+  }
+  const varied = candidates.filter(question => (openings.get(questionOpening(question)) || 0) < limit);
+  return varied.length ? varied : candidates;
+}
+
+function preferVariety(unused, selected, variety) {
+  const atFormatLimit = variety.limitedFormat &&
+    selected.filter(question => question.format === variety.limitedFormat).length >= variety.maxPerMatch;
+  const underLimit = atFormatLimit
+    ? unused.filter(question => question.format !== variety.limitedFormat)
+    : unused;
+  // Reports can shrink a bank. Keep a full match when the remaining pool
+  // cannot satisfy the cap or offer another angle.
+  let eligible = underLimit.length ? underLimit : unused;
+  if (variety.maxPerOpening) {
+    eligible = preferDifferentOpenings(eligible, selected, variety.maxPerOpening);
+  }
+  if (!variety.minAngles) return eligible;
+  const angles = new Set(selected.map(question => question.angle).filter(Boolean));
+  if (angles.size >= variety.minAngles) return eligible;
+  const newAngles = eligible.filter(question => question.angle && !angles.has(question.angle));
+  return newAngles.length ? newAngles : eligible;
+}
+
+function selectProgressiveQuestions(items, count, random = Math.random, variety) {
   const available = items.slice();
   const selected = [];
   const usedQuestions = new Set();
   const usedAnswers = new Set();
+  const usedFacts = new Set();
 
   for (let round = 0; round < Math.min(count, available.length); round++) {
     const difficulty = difficultyForRound(round, count);
     const [min, max] = DIFFICULTY_BANDS[difficulty];
-    const unused = available.filter((q) => !usedQuestions.has(questionKey(q)));
-    let candidates = unused.filter((q) => q._difficultyScore >= min && q._difficultyScore <= max);
+    const unused = available.filter(q =>
+      !usedQuestions.has(questionKey(q)) && (!variety || !q.fact || !usedFacts.has(q.fact))
+    );
+    const eligible = variety ? preferVariety(unused, selected, variety) : unused;
+    let candidates = eligible.filter(q => q._difficultyScore >= min && q._difficultyScore <= max);
+
+    if (difficulty === 'expert' && variety?.mixLegacyDifficulty && candidates.length < 4) {
+      candidates = eligible.filter(q => q._difficultyScore >= DIFFICULTY_SCORE.hard);
+    }
 
     // Prefer questions whose expert level was checked editorially over the
     // positional estimate when an expert round can offer one.
-    if (difficulty === 'expert') {
+    if (difficulty === 'expert' && !variety?.mixLegacyDifficulty) {
       const editorialExperts = candidates.filter((q) => q.difficulty === 'expert');
       if (editorialExperts.length) candidates = editorialExperts;
     }
@@ -1568,7 +1562,7 @@ function selectProgressiveQuestions(items, count, random = Math.random) {
     // Pick the closest remaining question rather than shortening the match.
     if (!candidates.length) {
       const target = DIFFICULTY_SCORE[difficulty];
-      candidates = unused
+      candidates = eligible
         .slice()
         .sort((a, b) => Math.abs(a._difficultyScore - target) - Math.abs(b._difficultyScore - target));
       const closestDistance = candidates.length
@@ -1583,6 +1577,7 @@ function selectProgressiveQuestions(items, count, random = Math.random) {
     const chosen = candidates[Math.floor(random() * candidates.length)];
     selected.push({ ...chosen, difficulty });
     usedQuestions.add(questionKey(chosen));
+    if (variety && chosen.fact) usedFacts.add(chosen.fact);
     usedAnswers.add(answerKey(chosen));
   }
 
@@ -1606,18 +1601,17 @@ function shuffleAnswers(question, random = Math.random) {
 }
 
 function getQuestions(count, categoryKey, random = Math.random) {
-  return selectProgressiveQuestions(categoryPool(categoryKey), count, random)
+  return selectProgressiveQuestions(categoryPool(categoryKey), count, random, CATEGORIES[categoryKey]?.variety)
     .map((question) => shuffleAnswers(question, random));
 }
 
-// Curated French content is authoritative now that every category contains at
-// least 50 reviewed local questions. OpenTDB remains an emergency fallback for
+// Curated French content is authoritative. OpenTDB remains an emergency fallback for
 // an unexpectedly undersized bank, but it no longer overrides the difficulty
 // curve or injects random English questions into normal matches.
 async function getMixedQuestions(count, categoryKey) {
   const localPool = categoryPool(categoryKey)
     .filter((q) => !reports.isQuarantined(questionKey(q)));
-  const questions = selectProgressiveQuestions(localPool, count);
+  const questions = selectProgressiveQuestions(localPool, count, Math.random, CATEGORIES[categoryKey]?.variety);
 
   if (questions.length < count && categoryKey && CATEGORIES[categoryKey] && trivia.isSupported(categoryKey)) {
     const cat = CATEGORIES[categoryKey];

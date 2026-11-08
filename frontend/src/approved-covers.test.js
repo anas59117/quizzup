@@ -21,3 +21,17 @@ test.each(approvedKeys)('%s uses its approved local artwork even with legacy typ
 test('real group photos preserve the complete group', () => {
   expect(getTopicCover(CATEGORIES.find(c => c.key === 'bts')).fit).toBe('contain');
 });
+
+test.each(['minecraft', 'rap_fr', 'spider_man', 'real_madrid', 'fc_barcelone', 'manchester_city', 'equipe_de_france_football', 'euphoria', 'sex_education', 'batman', 'star_wars'])('%s uses text-free artwork with a separate bottom caption', key => {
+  const category = CATEGORIES.find(c => c.key === key);
+  const cover = getTopicCover(category);
+  expect(cover.approved).toBe(true);
+  expect(cover.embeddedTitle).toBe(false);
+  expect(cover.src).toContain(`/approved-v2/${key}-`);
+  expect(cover.srcSet).toContain('320w');
+  expect(cover.srcSet).toContain('640w');
+  const markup = renderToStaticMarkup(<CategoryTileV4 c={category} />);
+  expect(markup).toContain('tile-v4__label');
+  expect(markup).toContain(category.label);
+  expect(markup).not.toContain('tile-v4__big-line');
+});

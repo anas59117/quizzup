@@ -21,6 +21,7 @@ targets:
       - Sources/QuizzUp
     resources:
       - path: Sources/QuizzUp/Resources/PrivacyInfo.xcprivacy
+      - path: Sources/QuizzUp/Resources/topic-catalog.json
     dependencies:
       - package: FirebaseSDK
         product: FirebaseAuth
@@ -45,6 +46,10 @@ targets:
         com.apple.developer.applesignin:
           - Default
     settings:
+      configs:
+        Debug:
+          # Keep package-specific flags intact; only the app consumes this flag.
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) DEBUG $(QUIZZUP_CAPTURE_CONDITION)"
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.quizzup.app
         MARKETING_VERSION: "1.0"

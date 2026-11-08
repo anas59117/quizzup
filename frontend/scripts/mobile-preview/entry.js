@@ -47,7 +47,7 @@ function Preview() {
   const social = React.useMemo(() => ({ friends: [], requests: [], dms: {}, outgoingRequests: new Set(), gameChat: [], gameChatSeenRef: { current: 0 }, sendGameChat: () => false }), []);
   const opponents = params.has('gameSolo') ? [] : [{ id: '2', name: 'clem10', avatar: 'owl', score: 55, answered: !!reveal?.others, correct: false }];
   if (params.has('group')) opponents.push({ id: '3', name: 'Alex', avatar: '🦊', score: 12 }, { id: '4', name: 'Sam', avatar: '🐼', score: 10 });
-  const controls = <TopControls muted={muted} toggleMute={() => setMuted(!muted)} theme={theme} toggleTheme={toggleTheme} playing={screen === 'game'} home={['home','themes','profile'].includes(screen)} />;
+  const controls = <TopControls muted={muted} toggleMute={() => setMuted(!muted)} theme={theme} toggleTheme={toggleTheme} playing={screen === 'game'} home={['home','themes','profile','quiz'].includes(screen)} />;
   const stats = { games: 27, wins: 12, level: 6, xpIntoLevel: 121, xpForLevel: 1200, xp: 2400, coins: 420, topics: params.has('personal') ? [{key:'ligue_champions',level:8},{key:'rap_fr',level:5},{key:'harry_potter',level:3},{key:'minecraft',level:2}] : [], followedThemes: params.has('personal') ? ['ligue_champions','rap_fr','harry_potter','minecraft'] : [], ownedItems: ['robot','fox'], equippedItems: { avatars: 'fox' } };
   const result = { won: !params.has('loss') && !params.has('tie'), tie: params.has('tie'), solo: params.has('solo'), finalScore: 84, xp: 224, coins: 50, stats,
     topic: { key: 'ligue_champions', level: 3 }, matchTally: { rounds: 6, correct: 5, answered: 6, totalMs: 36000 },
@@ -61,8 +61,10 @@ function Preview() {
     {screen === 'covers' && <main className="container wide themes-refined"><h1>{params.has('international') ? (lang==='fr'?'Couvertures multilingues':'International covers') : 'Les 55 nouveaux quiz'}</h1>{params.has('international')&&<button className="btn" onClick={toggleLang} aria-label="Change preview language">{lang==='fr'?'Voir en anglais':'View in French'}</button>}{[['football','Football'],['sport','Sports'],['music','Musique'],['gaming','Jeux vidéo'],['cinema','Cinéma'],['sagas','Sagas'],['series','Séries'],['culture','Culture']].map(([key,label]) => <section className="expanded-cover-group" data-family={key} key={key}><h2>{label}</h2><div className="topics-grid-v4">{(params.has('international') ? CATEGORIES.filter(c=>internationalTitles[c.key]) : catalogueExpansion).filter(c=>c.family===key).map(c=><CategoryTileV4 key={c.key} c={c} onClick={()=>openTopic(c.key)} />)}</div></section>)}</main>}
     {screen === 'home' && <HomeContent controls={controls} name="Sisi" avatar="fox" stats={stats} soloMode={solo} setSoloMode={setSolo}
       quickMatch={play} startWithCategory={openTopic} onOpenProfile={() => setScreen('profile')} onSeeAll={() => setScreen('themes')} />}
-    {screen === 'profile' && <ProfileContent controls={controls} name="Sisi" avatar="fox" stats={stats} social={social} clientId="preview-self" isGoogleLinked={googleLinked} googleEmail="sisi@example.test" linkGoogle={()=>setGoogleLinked(true)}
-      streak={{ streak: 1, calendar: [] }} onSaveProfile={() => {}} onOpenLeaderboard={() => {}} onOpenShop={() => setScreen('shop')} />}
+    {screen === 'profile' && <ProfileContent controls={controls} name={params.has('guest') ? 'Joueur3395' : 'Sisi'} avatar={params.has('guest') ? 'robot' : 'fox'}
+      stats={params.has('guest') ? { games: 0, level: 1, xpForLevel: 200, topics: [] } : stats} social={{...social, friends: previewFriends}} clientId="preview-self" isGoogleLinked={googleLinked} googleEmail="sisi@example.test" linkGoogle={()=>setGoogleLinked(true)}
+      streak={params.has('guest') ? null : { streak: 1, calendar: [] }} onSaveProfile={() => {}} onOpenLeaderboard={() => {}}
+      onOpenTopic={openTopic} onDiscoverTopics={() => setScreen('themes')} onInviteFriend={play} onJoinFriend={play} />}
     {screen === 'waiting' && <WaitingContent name="Sisi" avatar="fox" level={6} categoryKey="ligue_champions" onCancel={() => setScreen('home')} onPlaySolo={play} />}
     {screen === 'shop' && <ShopContent controls={controls} name="Sisi" avatar="fox" stats={stats} onBuy={() => {}} onEquip={() => {}} onPlay={play} onBack={() => setScreen('home')} />}
     {screen === 'themes' && <CategoriesContent controls={controls} family={family} onSelectFamily={setFamily} onBack={()=>setScreen('home')} startWithCategory={openTopic} />}
@@ -78,7 +80,7 @@ function Preview() {
       answer={idx => { setSelected(idx); setReveal({ yourCorrect: idx === 0, correctIndex: 0, pointsEarned: idx === 0 ? 17 : 0, others: [] }); }}
       opponents={opponents} avatar="fox" name="Sisi" score={reveal?.yourCorrect ? 17 : 0} reportQuestion={() => {}}
       social={social} GameChat={GameChat} />}
-    {browse && <NavBar active={screen === 'themes' ? 'categories' : screen} onQuickMatch={play} onNav={next=>setScreen(next === 'categories' ? 'themes' : next)} />}
+    {browse && <NavBar active={screen === 'themes' ? 'categories' : screen === 'quiz' ? 'home' : screen} onQuickMatch={play} onNav={next=>setScreen(next === 'categories' ? 'themes' : next)} />}
   </div>;
 }
 createRoot(document.getElementById('root')).render(<I18nProvider><GameFeelProvider>{params.has('app') ? <App /> : <><SkipLink /><Preview /></>}</GameFeelProvider></I18nProvider>);
