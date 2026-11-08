@@ -7,7 +7,8 @@
       "Harald à la Belle Chevelure",
       "Leif Erikson"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel dieu nordique Ragnar affirme-t-il descendre ?",
@@ -17,7 +18,8 @@
       "Loki",
       "Tyr"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-02"
   },
   {
     "text": "Quel personnage correspond à cette description : fermier devenu jarl puis roi et explorateur vers l’ouest ?",
@@ -27,17 +29,19 @@
       "Ragnar Lothbrok",
       "Bjorn Côtes-de-Fer"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
-    "text": "Quelle description correspond à Ragnar Lothbrok ?",
+    "text": "Quel monastère Ragnar et ses compagnons attaquent-ils lors de leur premier raid en Angleterre ?",
     "answers": [
-      "guerrière au bouclier devenue jarl puis reine",
-      "frère de Ragnar devenu duc de Normandie",
-      "fils de Ragnar et Lagertha devenu roi de Kattegat",
-      "fermier devenu jarl puis roi et explorateur vers l’ouest"
+      "Canterbury",
+      "Westminster",
+      "Ely",
+      "Lindisfarne"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-4"
   },
   {
     "text": "Quel personnage correspond à cette description : guerrière au bouclier devenue jarl puis reine ?",
@@ -47,7 +51,8 @@
       "Sigurd Œil-de-Serpent",
       "Floki"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quelle description correspond à Lagertha ?",
@@ -57,7 +62,8 @@
       "moine anglo-saxon capturé puis ami de Ragnar",
       "souverain du Wessex fasciné par Ragnar"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel personnage correspond à cette description : frère de Ragnar devenu duc de Normandie ?",
@@ -67,7 +73,8 @@
       "Rollo",
       "Aslaug"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quelle description correspond à Rollo ?",
@@ -77,7 +84,8 @@
       "guerrière devenue la compagne d’Ubbe",
       "frère de Ragnar devenu duc de Normandie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-07"
   },
   {
     "text": "Quel personnage correspond à cette description : fils de Ragnar et Lagertha devenu roi de Kattegat ?",
@@ -87,17 +95,19 @@
       "Torvi",
       "Jarl Borg"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
-    "text": "Quelle description correspond à Bjorn Côtes-de-Fer ?",
+    "text": "Dans quel royaume d’Angleterre règne le roi Ælle dans Vikings ?",
     "answers": [
-      "prétendante au trône de Mercie",
-      "fils de Ragnar et Lagertha devenu roi de Kattegat",
-      "ancien intendant de Lagertha ayant pris Hedeby",
-      "fermier devenu jarl puis roi et explorateur vers l’ouest"
+      "Le Wessex",
+      "La Northumbrie",
+      "La Mercie",
+      "L’Est-Anglie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-10"
   },
   {
     "text": "Quel personnage correspond à cette description : fils de Ragnar et Aslaug célèbre pour sa stratégie et sa cruauté ?",
@@ -107,7 +117,8 @@
       "Ivar le Désossé",
       "Kalf"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quelle description correspond à Ivar le Désossé ?",
@@ -117,7 +128,8 @@
       "constructeur de navires dévoué aux dieux nordiques",
       "fils de Ragnar et Aslaug célèbre pour sa stratégie et sa cruauté"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel personnage correspond à cette description : fils de Ragnar cherchant de nouvelles terres à l’ouest ?",
@@ -127,7 +139,8 @@
       "Bjorn Côtes-de-Fer",
       "Ivar le Désossé"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quelle description correspond à Ubbe ?",
@@ -137,7 +150,8 @@
       "roi ambitieux rêvant d’unifier la Norvège",
       "frère guerrier de Harald"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-13"
   },
   {
     "text": "Quel personnage correspond à cette description : fils de Ragnar partagé entre ses frères ?",
@@ -147,7 +161,8 @@
       "Hvitserk",
       "Roi Ecbert"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quelle description correspond à Hvitserk ?",
@@ -157,7 +172,8 @@
       "prétendante au trône de Mercie",
       "fils de Ragnar partagé entre ses frères"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel personnage correspond à cette description : fils de Ragnar tué lors d’une dispute avec Ivar ?",
@@ -167,7 +183,8 @@
       "Harald à la Belle Chevelure",
       "Halfdan le Noir"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quelle description correspond à Sigurd Œil-de-Serpent ?",
@@ -177,7 +194,8 @@
       "fils de Ragnar et Aslaug célèbre pour sa stratégie et sa cruauté",
       "fils de Ragnar cherchant de nouvelles terres à l’ouest"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel personnage correspond à cette description : constructeur de navires dévoué aux dieux nordiques ?",
@@ -187,7 +205,8 @@
       "Floki",
       "Prince Oleg"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quelle description correspond à Floki ?",
@@ -197,7 +216,8 @@
       "seconde épouse de Ragnar et mère de quatre de ses fils",
       "constructeur de navires dévoué aux dieux nordiques"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-19"
   },
   {
     "text": "Quel personnage correspond à cette description : moine anglo-saxon capturé puis ami de Ragnar ?",
@@ -207,7 +227,8 @@
       "Ragnar Lothbrok",
       "Lagertha"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quelle description correspond à Athelstan ?",
@@ -217,7 +238,8 @@
       "roi danois allié puis rival de Ragnar",
       "dirigeant de la Rus’ de Kiev accueillant Ivar"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel personnage correspond à cette description : souverain du Wessex fasciné par Ragnar ?",
@@ -227,7 +249,8 @@
       "Roi Ecbert",
       "Hvitserk"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quelle description correspond à Roi Ecbert ?",
@@ -237,7 +260,8 @@
       "fils de Ragnar et Lagertha devenu roi de Kattegat",
       "souverain du Wessex fasciné par Ragnar"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel personnage correspond à cette description : fille du roi Aelle et mère d’Alfred ?",
@@ -247,7 +271,8 @@
       "Roi Ecbert",
       "Alfred"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quelle description correspond à Judith ?",
@@ -257,7 +282,8 @@
       "moine anglo-saxon capturé puis ami de Ragnar",
       "souverain du Wessex fasciné par Ragnar"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-25"
   },
   {
     "text": "Quel personnage correspond à cette description : fils d’Athelstan devenu roi du Wessex ?",
@@ -267,7 +293,8 @@
       "Alfred",
       "Torvi"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quelle description correspond à Alfred ?",
@@ -277,7 +304,8 @@
       "chef du Götaland ennemi de Ragnar",
       "fils d’Athelstan devenu roi du Wessex"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel personnage correspond à cette description : seconde épouse de Ragnar et mère de quatre de ses fils ?",
@@ -287,7 +315,8 @@
       "Évêque Heahmund",
       "Princesse Kwenthrith"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quelle description correspond à Aslaug ?",
@@ -297,7 +326,8 @@
       "fermier devenu jarl puis roi et explorateur vers l’ouest",
       "guerrière au bouclier devenue jarl puis reine"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel personnage correspond à cette description : roi ambitieux rêvant d’unifier la Norvège ?",
@@ -307,7 +337,8 @@
       "Harald à la Belle Chevelure",
       "Bjorn Côtes-de-Fer"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quelle description correspond à Harald à la Belle Chevelure ?",
@@ -317,7 +348,8 @@
       "constructeur de navires dévoué aux dieux nordiques",
       "roi ambitieux rêvant d’unifier la Norvège"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-31"
   },
   {
     "text": "Quel personnage correspond à cette description : frère guerrier de Harald ?",
@@ -327,7 +359,8 @@
       "Sigurd Œil-de-Serpent",
       "Floki"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quelle description correspond à Halfdan le Noir ?",
@@ -337,7 +370,8 @@
       "roi ambitieux rêvant d’unifier la Norvège",
       "épouse de Floki au tempérament bienveillant"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel personnage correspond à cette description : épouse de Floki au tempérament bienveillant ?",
@@ -347,7 +381,8 @@
       "Helga",
       "Aslaug"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quelle description correspond à Helga ?",
@@ -357,7 +392,8 @@
       "ancien intendant de Lagertha ayant pris Hedeby",
       "épouse de Floki au tempérament bienveillant"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel personnage correspond à cette description : guerrière devenue la compagne d’Ubbe ?",
@@ -367,7 +403,8 @@
       "Jarl Borg",
       "Roi Horik"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quelle description correspond à Torvi ?",
@@ -377,7 +414,8 @@
       "fils de Ragnar cherchant de nouvelles terres à l’ouest",
       "fils de Ragnar partagé entre ses frères"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-37"
   },
   {
     "text": "Quel personnage correspond à cette description : chef du Götaland ennemi de Ragnar ?",
@@ -387,7 +425,8 @@
       "Jarl Borg",
       "Ragnar Lothbrok"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quelle description correspond à Jarl Borg ?",
@@ -397,7 +436,8 @@
       "seconde épouse de Ragnar et mère de quatre de ses fils",
       "chef du Götaland ennemi de Ragnar"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel personnage correspond à cette description : roi danois allié puis rival de Ragnar ?",
@@ -407,7 +447,8 @@
       "Ivar le Désossé",
       "Ubbe"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quelle description correspond à Roi Horik ?",
@@ -417,7 +458,8 @@
       "dirigeant de la Rus’ de Kiev accueillant Ivar",
       "homme d’Église et guerrier saxon"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel personnage correspond à cette description : dirigeant de la Rus’ de Kiev accueillant Ivar ?",
@@ -427,7 +469,8 @@
       "Prince Oleg",
       "Roi Ecbert"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quelle description correspond à Prince Oleg ?",
@@ -437,7 +480,8 @@
       "fils de Ragnar et Aslaug célèbre pour sa stratégie et sa cruauté",
       "dirigeant de la Rus’ de Kiev accueillant Ivar"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-43"
   },
   {
     "text": "Quel personnage correspond à cette description : homme d’Église et guerrier saxon ?",
@@ -447,7 +491,8 @@
       "Harald à la Belle Chevelure",
       "Halfdan le Noir"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quelle description correspond à Évêque Heahmund ?",
@@ -457,7 +502,8 @@
       "souverain du Wessex fasciné par Ragnar",
       "fille du roi Aelle et mère d’Alfred"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel personnage correspond à cette description : prétendante au trône de Mercie ?",
@@ -467,7 +513,8 @@
       "Princesse Kwenthrith",
       "Prince Oleg"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quelle description correspond à Princesse Kwenthrith ?",
@@ -477,7 +524,8 @@
       "chef du Götaland ennemi de Ragnar",
       "prétendante au trône de Mercie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel personnage correspond à cette description : ancien intendant de Lagertha ayant pris Hedeby ?",
@@ -487,7 +535,8 @@
       "Lagertha",
       "Rollo"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quelle description correspond à Kalf ?",
@@ -497,6 +546,7 @@
       "guerrière au bouclier devenue jarl puis reine",
       "frère de Ragnar devenu duc de Normandie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
   }
 ]

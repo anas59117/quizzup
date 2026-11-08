@@ -7,7 +7,8 @@
       "Wyoming",
       "Oregon"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel personnage meurt régulièrement dans les premières saisons ?",
@@ -17,7 +18,8 @@
       "Kyle",
       "Cartman"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-02"
   },
   {
     "text": "Quel personnage correspond à cette description : garçon au bonnet bleu souvent présenté comme le plus raisonnable du groupe ?",
@@ -27,17 +29,19 @@
       "Stan Marsh",
       "Kenny McCormick"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
-    "text": "Quelle description correspond à Stan Marsh ?",
+    "text": "Quel restaurant Cartman veut-il à tout prix visiter dans un épisode de la saison 7 ?",
     "answers": [
-      "garçon au bonnet vert issu d’une famille juive",
-      "garçon manipulateur portant un bonnet bleu et jaune",
-      "garçon à la capuche orange dont la voix est étouffée",
-      "garçon au bonnet bleu souvent présenté comme le plus raisonnable du groupe"
+      "City Wok",
+      "Tweek Bros. Coffee",
+      "Raisins",
+      "Casa Bonita"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-4"
   },
   {
     "text": "Quel personnage correspond à cette description : garçon au bonnet vert issu d’une famille juive ?",
@@ -47,7 +51,8 @@
       "Shelly Marsh",
       "Gerald Broflovski"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quelle description correspond à Kyle Broflovski ?",
@@ -57,7 +62,8 @@
       "mère très protectrice de Kyle",
       "petit frère canadien adopté de Kyle"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel personnage correspond à cette description : garçon manipulateur portant un bonnet bleu et jaune ?",
@@ -67,7 +73,8 @@
       "Eric Cartman",
       "Wendy Testaburger"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quelle description correspond à Eric Cartman ?",
@@ -77,7 +84,8 @@
       "garçon au bonnet bleu connu pour son geste grossier",
       "garçon manipulateur portant un bonnet bleu et jaune"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-07"
   },
   {
     "text": "Quel personnage correspond à cette description : garçon à la capuche orange dont la voix est étouffée ?",
@@ -87,17 +95,19 @@
       "Craig Tucker",
       "Tweek Tweak"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
-    "text": "Quelle description correspond à Kenny McCormick ?",
+    "text": "Quel alias Cartman adopte-t-il lorsqu’il monte son équipe de super-héros ?",
     "answers": [
-      "mère permissive d’Eric Cartman",
-      "garçon à la capuche orange dont la voix est étouffée",
-      "personnage infernal ayant une relation avec Saddam Hussein",
-      "garçon au bonnet bleu souvent présenté comme le plus raisonnable du groupe"
+      "Mystérion",
+      "Le Coon",
+      "Outilshed",
+      "Mosquito"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-10"
   },
   {
     "text": "Quel personnage correspond à cette description : enfant naïf souvent puni par ses parents ?",
@@ -107,7 +117,8 @@
       "Butters Stotch",
       "Satan"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quelle description correspond à Butters Stotch ?",
@@ -117,7 +128,8 @@
       "père avocat de Kyle",
       "enfant naïf souvent puni par ses parents"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel personnage correspond à cette description : père de Stan connu pour ses décisions absurdes ?",
@@ -127,7 +139,8 @@
       "Kenny McCormick",
       "Butters Stotch"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quelle description correspond à Randy Marsh ?",
@@ -137,7 +150,8 @@
       "camarade riche dont le prénom a été corrigé en Tolkien",
       "élève humoriste utilisant des béquilles"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-13"
   },
   {
     "text": "Quel personnage correspond à cette description : mère de Stan et Shelly ?",
@@ -147,7 +161,8 @@
       "Sharon Marsh",
       "Ike Broflovski"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quelle description correspond à Sharon Marsh ?",
@@ -157,7 +172,8 @@
       "mère permissive d’Eric Cartman",
       "mère de Stan et Shelly"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel personnage correspond à cette description : sœur aînée de Stan portant un appareil dentaire ?",
@@ -167,7 +183,8 @@
       "Tolkien Black",
       "Jimmy Valmer"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quelle description correspond à Shelly Marsh ?",
@@ -177,7 +194,8 @@
       "enfant naïf souvent puni par ses parents",
       "père de Stan connu pour ses décisions absurdes"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel personnage correspond à cette description : père avocat de Kyle ?",
@@ -187,7 +205,8 @@
       "Gerald Broflovski",
       "Mr. Mackey"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quelle description correspond à Gerald Broflovski ?",
@@ -197,7 +216,8 @@
       "élève brillante et petite amie intermittente de Stan",
       "père avocat de Kyle"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-19"
   },
   {
     "text": "Quel personnage correspond à cette description : mère très protectrice de Kyle ?",
@@ -207,7 +227,8 @@
       "Stan Marsh",
       "Kyle Broflovski"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quelle description correspond à Sheila Broflovski ?",
@@ -217,7 +238,8 @@
       "camarade de classe souvent présenté comme populaire",
       "conseiller scolaire répétant souvent m’kay"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel personnage correspond à cette description : petit frère canadien adopté de Kyle ?",
@@ -227,7 +249,8 @@
       "Ike Broflovski",
       "Sharon Marsh"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quelle description correspond à Ike Broflovski ?",
@@ -237,7 +260,8 @@
       "garçon à la capuche orange dont la voix est étouffée",
       "petit frère canadien adopté de Kyle"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel personnage correspond à cette description : enseignant devenu plusieurs fois une figure politique ?",
@@ -247,7 +271,8 @@
       "Ike Broflovski",
       "Chef"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quelle description correspond à Mr. Garrison ?",
@@ -257,7 +282,8 @@
       "mère très protectrice de Kyle",
       "petit frère canadien adopté de Kyle"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-25"
   },
   {
     "text": "Quel personnage correspond à cette description : ancien cuisinier de l’école chantant souvent des chansons suggestives ?",
@@ -267,7 +293,8 @@
       "Chef",
       "Craig Tucker"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quelle description correspond à Chef ?",
@@ -277,7 +304,8 @@
       "enfant anxieux dont les parents tiennent un café",
       "ancien cuisinier de l’école chantant souvent des chansons suggestives"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel personnage correspond à cette description : élève brillante et petite amie intermittente de Stan ?",
@@ -287,7 +315,8 @@
       "PC Principal",
       "Liane Cartman"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quelle description correspond à Wendy Testaburger ?",
@@ -297,7 +326,8 @@
       "garçon au bonnet bleu souvent présenté comme le plus raisonnable du groupe",
       "garçon au bonnet vert issu d’une famille juive"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel personnage correspond à cette description : camarade riche dont le prénom a été corrigé en Tolkien ?",
@@ -307,7 +337,8 @@
       "Tolkien Black",
       "Kenny McCormick"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quelle description correspond à Tolkien Black ?",
@@ -317,7 +348,8 @@
       "père avocat de Kyle",
       "camarade riche dont le prénom a été corrigé en Tolkien"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-31"
   },
   {
     "text": "Quel personnage correspond à cette description : élève humoriste utilisant des béquilles ?",
@@ -327,7 +359,8 @@
       "Shelly Marsh",
       "Gerald Broflovski"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quelle description correspond à Jimmy Valmer ?",
@@ -337,7 +370,8 @@
       "camarade riche dont le prénom a été corrigé en Tolkien",
       "élève en fauteuil roulant répétant souvent son prénom"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel personnage correspond à cette description : élève en fauteuil roulant répétant souvent son prénom ?",
@@ -347,7 +381,8 @@
       "Timmy Burch",
       "Wendy Testaburger"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quelle description correspond à Timmy Burch ?",
@@ -357,7 +392,8 @@
       "personnage infernal ayant une relation avec Saddam Hussein",
       "élève en fauteuil roulant répétant souvent son prénom"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel personnage correspond à cette description : garçon au bonnet bleu connu pour son geste grossier ?",
@@ -367,7 +403,8 @@
       "Tweek Tweak",
       "Clyde Donovan"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quelle description correspond à Craig Tucker ?",
@@ -377,7 +414,8 @@
       "père de Stan connu pour ses décisions absurdes",
       "mère de Stan et Shelly"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-37"
   },
   {
     "text": "Quel personnage correspond à cette description : enfant anxieux dont les parents tiennent un café ?",
@@ -387,7 +425,8 @@
       "Tweek Tweak",
       "Stan Marsh"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quelle description correspond à Tweek Tweak ?",
@@ -397,7 +436,8 @@
       "élève brillante et petite amie intermittente de Stan",
       "enfant anxieux dont les parents tiennent un café"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel personnage correspond à cette description : camarade de classe souvent présenté comme populaire ?",
@@ -407,7 +447,8 @@
       "Butters Stotch",
       "Randy Marsh"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quelle description correspond à Clyde Donovan ?",
@@ -417,7 +458,8 @@
       "conseiller scolaire répétant souvent m’kay",
       "directeur obsédé par le politiquement correct"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel personnage correspond à cette description : conseiller scolaire répétant souvent m’kay ?",
@@ -427,7 +469,8 @@
       "Mr. Mackey",
       "Ike Broflovski"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quelle description correspond à Mr. Mackey ?",
@@ -437,7 +480,8 @@
       "enfant naïf souvent puni par ses parents",
       "conseiller scolaire répétant souvent m’kay"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-43"
   },
   {
     "text": "Quel personnage correspond à cette description : directeur obsédé par le politiquement correct ?",
@@ -447,7 +491,8 @@
       "Tolkien Black",
       "Jimmy Valmer"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quelle description correspond à PC Principal ?",
@@ -457,7 +502,8 @@
       "petit frère canadien adopté de Kyle",
       "enseignant devenu plusieurs fois une figure politique"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel personnage correspond à cette description : mère permissive d’Eric Cartman ?",
@@ -467,7 +513,8 @@
       "Liane Cartman",
       "Mr. Mackey"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quelle description correspond à Liane Cartman ?",
@@ -477,7 +524,8 @@
       "enfant anxieux dont les parents tiennent un café",
       "mère permissive d’Eric Cartman"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel personnage correspond à cette description : personnage infernal ayant une relation avec Saddam Hussein ?",
@@ -487,7 +535,8 @@
       "Kyle Broflovski",
       "Eric Cartman"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quelle description correspond à Satan ?",
@@ -497,6 +546,7 @@
       "garçon au bonnet vert issu d’une famille juive",
       "garçon manipulateur portant un bonnet bleu et jaune"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
   }
 ]

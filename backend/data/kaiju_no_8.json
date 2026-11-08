@@ -1,53 +1,58 @@
 [
   {
-    "text": "Quel est le métier de Kafka Hibeno au début de l'histoire ?",
+    "text": "Quel travail Kafka Hibino exerce-t-il au début du manga ?",
     "answers": [
-      "Pompier",
-      "Soldat des forces de défense",
-      "Nettoyeur de cadavres de kaiju",
-      "Chercheur scientifique"
+      "Maintenance des armures militaires",
+      "Étude des cellules de kaiju",
+      "Nettoyage après les attaques de kaiju",
+      "Secours aux victimes des attaques"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-1"
   },
   {
-    "text": "Quel âge a Kafka Hibeno au début du manga ?",
+    "text": "Quel âge a Kafka Hibino au début du manga ?",
     "answers": [
       "25 ans",
       "18 ans",
       "32 ans",
       "40 ans"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-02"
   },
   {
-    "text": "Qui est Mina Ashiro ?",
+    "text": "Quel poste Mina Ashiro occupe-t-elle au début du récit ?",
     "answers": [
-      "La sœur de Kafka",
-      "La capitaine de la 3e division des forces de défense",
-      "Une journaliste",
-      "Une kaiju déguisée en humaine"
+      "Capitaine de la 1re division",
+      "Capitaine de la 3e division",
+      "Vice-capitaine de la 3e division",
+      "Directrice des Forces de défense"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-3"
   },
   {
-    "text": "Quelle promesse Kafka et Mina se sont-ils faite étant enfants ?",
+    "text": "Quel objectif Kafka et Mina se fixent-ils enfants ?",
     "answers": [
-      "Devenir les plus forts du Japon",
-      "Éliminer tous les kaiju ensemble",
-      "Quitter le pays",
-      "Se marier un jour"
+      "Créer une unité de chercheurs",
+      "Combattre les kaiju ensemble",
+      "Construire un refuge souterrain",
+      "Inventer une armure militaire"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-4"
   },
   {
-    "text": "Comment Kafka obtient-il ses pouvoirs de kaiju ?",
+    "text": "Qu’est-ce qui déclenche la première transformation de Kafka ?",
     "answers": [
-      "Par une expérience scientifique",
-      "Il boit un sérum expérimental",
-      "Il est mordu par un kaiju",
-      "Un petit kaiju entre dans son corps par la bouche"
+      "Une arme de kaiju fusionne avec lui",
+      "Une morsure contamine une plaie",
+      "Une armure endommagée l’infecte",
+      "Un petit kaiju pénètre dans son corps"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-5"
   },
   {
     "text": "Quel numéro est attribué à Kafka en tant que kaiju ?",
@@ -57,47 +62,52 @@
       "Kaiju No. 6",
       "Kaiju No. 1"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-06"
   },
   {
-    "text": "Pourquoi le numéro 8 est-il significatif ?",
+    "text": "À qui le nom de code « Kaiju n° 8 » est-il attribué ?",
     "answers": [
-      "C'est le 8e monstre apparu cette année",
-      "C'est son matricule militaire",
-      "C'est le 8e kaiju le plus puissant jamais détecté",
-      "C'est le chiffre porte-bonheur de Kafka"
+      "Reno Ichikawa",
+      "Gen Narumi",
+      "Kafka Hibino",
+      "Soshiro Hoshina"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-06"
   },
   {
-    "text": "Qui est Reno Ichikawa ?",
+    "text": "Avec qui Kafka travaille-t-il dans le nettoyage avant l’examen des Forces de défense ?",
     "answers": [
-      "Le jeune collègue et ami de Kafka",
-      "Le rival de Kafka",
-      "Le commandant en chef",
-      "Un kaiju humanoïde"
+      "Reno Ichikawa",
+      "Gen Narumi",
+      "Iharu Furuhashi",
+      "Soshiro Hoshina"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-8"
   },
   {
-    "text": "Quel est le nom des forces militaires qui combattent les kaiju ?",
+    "text": "Quelle organisation japonaise a pour mission de neutraliser les kaiju ?",
     "answers": [
-      "Les Forces d'Autodéfense contre les Kaiju",
-      "Les Chasseurs de Kaiju",
-      "La Brigade de Défense",
-      "L'Armée Anti-Monstre"
+      "Les Forces de défense",
+      "Le Bureau de recherche sur les kaiju",
+      "L’Unité nationale d’évacuation",
+      "La Brigade de la sécurité civile"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-9"
   },
   {
-    "text": "Quelle est la particularité de l'arme utilisée par les forces de défense ?",
+    "text": "Que récupèrent les Forces de défense pour concevoir certaines armes anti-kaiju ?",
     "answers": [
-      "Elle fonctionne à l'énergie solaire",
-      "Elle utilise des cellules de kaiju",
-      "Elle est fabriquée par des aliens",
-      "C'est une arme magique"
+      "Des circuits d’armures",
+      "Des tissus de kaiju",
+      "Des pièces de drones",
+      "Des matériaux d’abris"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-10"
   },
   {
     "text": "Qui est le vice-capitaine de la 3e division ?",
@@ -107,7 +117,8 @@
       "Gen Narumi",
       "Kikoru Shinomiya"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-11"
   },
   {
     "text": "Quelle est la spécialité de combat de Hoshina ?",
@@ -117,7 +128,8 @@
       "Le combat à l'épée",
       "Les explosifs"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-12"
   },
   {
     "text": "Qui est Kikoru Shinomiya ?",
@@ -127,7 +139,8 @@
       "Une kaiju alliée",
       "Une recrue d'élite, fille du directeur général"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-13"
   },
   {
     "text": "Quelle est l'attitude initiale de Kikoru envers Kafka ?",
@@ -137,67 +150,74 @@
       "Indifférente",
       "Admirative"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-14"
   },
   {
-    "text": "Quel est le taux de force de combat ('fortitude') nécessaire pour être recruté ?",
+    "text": "Quel taux de puissance libérée Kafka affiche-t-il au départ lorsqu’il enfile la combinaison de combat ?",
     "answers": [
-      "50%",
-      "65%",
-      "30%",
-      "10%"
+      "0 %",
+      "10 %",
+      "25 %",
+      "50 %"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-15"
   },
   {
-    "text": "Quel est le pourcentage de fortitude de Kafka sous forme humaine ?",
+    "text": "Quelle mesure permet de comparer la puissance des kaiju ?",
     "answers": [
-      "9%",
-      "1%",
-      "0%",
-      "15%"
+      "Le taux de récupération",
+      "La fortitude",
+      "L’indice de synchronisation",
+      "La durée de transformation"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-16"
   },
   {
-    "text": "Que se passe-t-il quand Kafka se transforme en Kaiju No. 8 ?",
+    "text": "Que conserve Kafka lors de sa première transformation complète ?",
     "answers": [
-      "Il se dédouble",
-      "Il gagne une puissance colossale tout en gardant sa conscience",
-      "Il perd tout contrôle",
-      "Il devient minuscule"
+      "Sa voix humaine",
+      "Sa conscience",
+      "Son apparence humaine",
+      "Son uniforme intact"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-17"
   },
   {
-    "text": "Qui est Gen Narumi ?",
+    "text": "Quelle division des Forces de défense Gen Narumi dirige-t-il ?",
     "answers": [
-      "Un kaiju intelligent",
-      "Le capitaine de la 1re division, le plus fort du Japon",
-      "Un ancien nettoyeur",
-      "Le père de Mina"
+      "La 2e",
+      "La 1re",
+      "La 3e",
+      "La 4e"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-18"
   },
   {
-    "text": "Quelle est la personnalité de Gen Narumi ?",
+    "text": "À quel loisir Gen Narumi consacre-t-il une partie de son temps libre ?",
     "answers": [
-      "Colérique et impulsif",
-      "Silencieux et mystérieux",
-      "Enfantin et accro aux jeux vidéo",
-      "Sérieux et strict"
+      "La pêche sportive",
+      "Les échecs",
+      "Les jeux vidéo",
+      "Le modélisme"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-19"
   },
   {
-    "text": "Quel manga a inspiré le concept de combat géant de Kaiju No. 8 ?",
+    "text": "Qui signe la musique de la première saison de l’anime ?",
     "answers": [
-      "Pacific Rim",
-      "Ultraman / les films kaiju classiques",
-      "L'Attaque des Titans",
-      "Godzilla"
+      "Hiroyuki Sawano",
+      "Yuta Bandoh",
+      "Yuki Hayashi",
+      "Evan Call"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-20"
   },
   {
     "text": "Qui est l'auteur de Kaiju No. 8 ?",
@@ -207,17 +227,19 @@
       "Hajime Isayama",
       "Yukinobu Tatsu"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
-    "text": "Dans quel magazine le manga est-il publié ?",
+    "text": "Sur quelle plateforme japonaise le manga est-il prépublié ?",
     "answers": [
       "Weekly Shōnen Jump",
       "Young Jump",
       "Shōnen Magazine",
       "Shōnen Jump+"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-22"
   },
   {
     "text": "En quelle année le manga a-t-il commencé sa publication ?",
@@ -227,7 +249,8 @@
       "2021",
       "2020"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel studio anime Kaiju No. 8 ?",
@@ -237,27 +260,30 @@
       "MAPPA",
       "Bones"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-24"
   },
   {
-    "text": "Quel est le secret que Kafka doit cacher à tout prix ?",
+    "text": "Quelle division Mina et Hoshina dirigent-ils ensemble ?",
     "answers": [
-      "Son passé criminel",
-      "Sa relation avec Mina",
-      "Son âge réel",
-      "Sa transformation en kaiju"
+      "La 1re",
+      "La 2e",
+      "La 4e",
+      "La 3e"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-3"
   },
   {
-    "text": "Que risque Kafka si sa nature de kaiju est découverte ?",
+    "text": "Quelle autorité militaire dirige les Forces de défense quand le secret de Kafka est révélé ?",
     "answers": [
-      "Un simple renvoi",
-      "L'exécution ou la détention",
-      "L'exil",
-      "Rien de spécial"
+      "Gen Narumi",
+      "Isao Shinomiya",
+      "Mina Ashiro",
+      "Soshiro Hoshina"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-26"
   },
   {
     "text": "Quel personnage découvre en premier le secret de Kafka ?",
@@ -267,7 +293,8 @@
       "Soshiro Hoshina",
       "Kikoru Shinomiya"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-27"
   },
   {
     "text": "Comment réagit Reno en apprenant le secret ?",
@@ -277,167 +304,184 @@
       "Il le dénonce",
       "Il essaie de le tuer"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-28"
   },
   {
-    "text": "Quel est le niveau de menace d'un kaiju de type 'Daikaiju' ?",
+    "text": "Quel terme désigne les kaiju d’une puissance exceptionnelle ?",
     "answers": [
-      "Faible",
-      "Moyen",
-      "Le plus élevé / catastrophique",
-      "Inconnu"
+      "Yōjū",
+      "Kaiju hybrides",
+      "Daikaiju",
+      "Kaiju parasites"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-29"
   },
   {
-    "text": "Quel est le nom du petit kaiju qui a fusionné avec Kafka ?",
+    "text": "Dans la saison 1, quel kaiju mène l’assaut sur la base de Tachikawa ?",
     "answers": [
-      "Parasite-kun",
-      "No. 8 Junior",
-      "Chibi",
-      "Il n'a pas de nom officiel"
+      "Le n° 6",
+      "Le n° 8",
+      "Le n° 9",
+      "Le n° 10"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-30"
   },
   {
-    "text": "Quelle est l'arme principale de Kikoru ?",
+    "text": "Quelle arme Kikoru utilise-t-elle au sein des Forces de défense ?",
     "answers": [
-      "Un fusil anti-kaiju",
-      "Un katana",
-      "Des grenades spéciales",
-      "Une hache de combat géante"
+      "Un sabre double",
+      "Un lance-missiles",
+      "Un fusil à longue portée",
+      "Une hache"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-31"
   },
   {
-    "text": "Pourquoi Kafka a-t-il échoué à intégrer les forces de défense avant ?",
+    "text": "À quel poste Kafka entre-t-il d’abord dans la 3e division après l’examen ?",
     "answers": [
-      "Il avait un casier judiciaire",
-      "Il a raté l'examen écrit",
-      "Son taux de fortitude était trop bas",
-      "Il était trop vieux"
+      "Capitaine",
+      "Vice-capitaine",
+      "Cadet",
+      "Instructeur"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-32"
   },
   {
-    "text": "Quel événement traumatisant Kafka et Mina ont-ils vécu enfants ?",
+    "text": "Quel site de la 3e division fait l’objet d’une attaque au cours de la première saison ?",
     "answers": [
-      "La perte de leurs parents",
-      "Un incendie",
-      "Une attaque de kaiju qui a détruit leur quartier",
-      "Un tremblement de terre"
+      "Le quartier général d’Ariake",
+      "Le centre de formation de Hachioji",
+      "La base de Tachikawa",
+      "Le laboratoire de Sagamihara"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-30"
   },
   {
-    "text": "Quelle est la relation entre Kafka et Mina à l'âge adulte ?",
+    "text": "Comment Mina et Kafka se connaissent-ils avant d’intégrer les Forces de défense ?",
     "answers": [
-      "Supérieure/subordonné avec tension non résolue",
-      "Ennemis",
-      "Ils ne se reconnaissent pas",
-      "Ils sont en couple"
+      "Ils sont amis d’enfance",
+      "Ils ont étudié à l’académie ensemble",
+      "Ils ont travaillé dans le même laboratoire",
+      "Ils se sont rencontrés à l’examen"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-34"
   },
   {
-    "text": "Combien de divisions comptent les forces de défense ?",
+    "text": "Dans quelle division Kafka et Kikoru combattent-ils sous les ordres de Narumi lors de la saison 2 ?",
     "answers": [
-      "3",
-      "7",
-      "10",
-      "5"
+      "La 2e",
+      "La 3e",
+      "La 4e",
+      "La 1re"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-18"
   },
   {
-    "text": "Quel personnage a un père influent dans les forces de défense ?",
+    "text": "Quel lien unit Isao et Kikoru Shinomiya ?",
+    "answers": [
+      "Père et fille",
+      "Frère et sœur",
+      "Oncle et nièce",
+      "Grand-père et petite-fille"
+    ],
+    "correct": 0,
+    "fact": "revision-36"
+  },
+  {
+    "text": "Comment se prénomme la mère de Kikoru ?",
+    "answers": [
+      "Mina",
+      "Konomi",
+      "Akari",
+      "Hikari"
+    ],
+    "correct": 3,
+    "fact": "revision-37"
+  },
+  {
+    "text": "À quel milieu l’histoire rattache-t-elle Kafka avant son retour aux examens de recrutement ?",
+    "answers": [
+      "À la recherche en laboratoire",
+      "À la police de quartier",
+      "À la formation des pilotes",
+      "Au nettoyage des sites de combat"
+    ],
+    "correct": 3,
+    "fact": "revision-1"
+  },
+  {
+    "text": "Quelle partie de son corps Kafka transforme-t-il notamment pour frapper sans se métamorphoser entièrement ?",
+    "answers": [
+      "Le cou",
+      "Une oreille",
+      "Le dos",
+      "Un bras"
+    ],
+    "correct": 3,
+    "fact": "revision-39"
+  },
+  {
+    "text": "À quel personnage Kafka a-t-il promis de combattre les kaiju à ses côtés ?",
     "answers": [
       "Kikoru Shinomiya",
-      "Reno",
-      "Kafka",
-      "Mina"
+      "Konomi Okonogi",
+      "Mina Ashiro",
+      "Hikari Shinomiya"
     ],
-    "correct": 0
+    "correct": 2,
+    "fact": "revision-4"
   },
   {
-    "text": "Quel est le principal reproche du père de Kikoru envers elle ?",
+    "text": "Dans quel pays se déroule principalement Kaiju No. 8 ?",
     "answers": [
-      "Elle ne suit pas ses ordres",
-      "Elle est trop faible",
-      "Elle fréquente Kafka",
-      "Il la considère comme un outil et non sa fille"
+      "Corée du Sud",
+      "Chine",
+      "Japon",
+      "États-Unis"
     ],
-    "correct": 3
+    "correct": 2,
+    "fact": "revision-41"
   },
   {
-    "text": "Quel est le record de ventes du manga Kaiju No. 8 à sa sortie ?",
+    "text": "Dans la terminologie de la série, que désigne un yōjū ?",
     "answers": [
-      "Succès uniquement à l'étranger",
-      "Échec commercial",
-      "Ventes modestes",
-      "Manga le plus vendu de Jump+ dès ses débuts"
+      "Un kaiju secondaire",
+      "Un kaiju numéroté",
+      "Une armure militaire",
+      "Une arme numérotée"
     ],
-    "correct": 3
+    "correct": 0,
+    "fact": "revision-42"
   },
   {
-    "text": "Quelle est la forme de Kafka quand il se transforme partiellement ?",
+    "text": "Quel type de cible Mina neutralise-t-elle avec son arme à longue portée ?",
     "answers": [
-      "Seulement ses yeux changent",
-      "Des ailes apparaissent",
-      "Il grandit de 3 mètres",
-      "Son bras se transforme en arme kaiju"
+      "Les kaiju cachés dans des galeries",
+      "Les kaiju de grande taille",
+      "Les kaiju volant en essaim",
+      "Les kaiju infiltrés parmi les humains"
     ],
-    "correct": 3
+    "correct": 1,
+    "fact": "revision-43"
   },
   {
-    "text": "Quel est le principal thème de Kaiju No. 8 ?",
+    "text": "Que désigne « Numbers » dans les Forces de défense ?",
     "answers": [
-      "La technologie contre la nature",
-      "La revanche",
-      "Ne jamais abandonner ses rêves, même tardivement",
-      "La trahison"
+      "Des armes issues de kaiju identifiés",
+      "Des grades réservés aux capitaines",
+      "Des escadrons d’évacuation",
+      "Des exercices de recrutement"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle est la taille approximative de Kafka en forme Kaiju No. 8 ?",
-    "answers": [
-      "2 mètres",
-      "5 mètres",
-      "Taille humaine avec armure kaiju",
-      "30 mètres"
-    ],
-    "correct": 2
-  },
-  {
-    "text": "Quel type de kaiju sont les 'yoju' ?",
-    "answers": [
-      "Des petits kaiju de faible niveau",
-      "Des kaiju volants",
-      "Des kaiju aquatiques",
-      "Des kaiju géants"
-    ],
-    "correct": 0
-  },
-  {
-    "text": "Qui est responsable de la recherche sur les armes anti-kaiju ?",
-    "answers": [
-      "Kafka lui-même",
-      "La division scientifique / le département R&D",
-      "Des kaiju domestiqués",
-      "Les Nations Unies"
-    ],
-    "correct": 1
-  },
-  {
-    "text": "Quel est le surnom que les fans donnent à Kafka ?",
-    "answers": [
-      "Ojisan (le tonton)",
-      "Kaiju-man",
-      "Le Vieux",
-      "Le Nettoyeur"
-    ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-44"
   },
   {
     "text": "Quel personnage kaiju intelligent apparaît comme antagoniste majeur ?",
@@ -447,7 +491,8 @@
       "Le Roi Kaiju",
       "Kaiju No. 1"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Quelle capacité spéciale a Kaiju No. 9 ?",
@@ -457,27 +502,30 @@
       "Contrôler la gravité",
       "Se rendre invisible"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-46"
   },
   {
-    "text": "Quelle est la motivation de Kaiju No. 9 ?",
+    "text": "Quel kaiju absorbe Isao Shinomiya ?",
     "answers": [
-      "Absorber d'autres kaiju pour devenir plus fort",
-      "Détruire l'humanité",
-      "Retourner dans sa dimension",
-      "Faire la paix"
+      "Le n° 9",
+      "Le n° 10",
+      "Le n° 8",
+      "Le n° 6"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-47"
   },
   {
-    "text": "Quel combat marque le premier vrai test de Kafka face à un kaiju puissant ?",
+    "text": "Avec quel type d’arme Hoshina se montre-t-il particulièrement efficace contre les petits kaiju ?",
     "answers": [
-      "Contre Hoshina",
-      "Contre Mina",
-      "Contre un Daikaiju lors de l'examen",
-      "Contre Kaiju No. 9"
+      "Des explosifs",
+      "Un fusil de précision",
+      "Un canon à longue portée",
+      "Des lames"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-12"
   },
   {
     "text": "En quelle année l'anime Kaiju No. 8 a-t-il été diffusé ?",
@@ -487,16 +535,18 @@
       "2024",
       "2025"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-49"
   },
   {
-    "text": "Quel est le slogan/catchphrase souvent associé au manga ?",
+    "text": "Quel est le titre du premier générique d’ouverture de l’anime, interprété par Yungblud ?",
     "answers": [
-      "La force de l'âge",
-      "Le kaiju le plus humain",
-      "Deviens le monstre pour protéger les humains",
-      "Le héros malgré lui"
+      "Nobody",
+      "Invincible",
+      "Abyss",
+      "You Can’t Run From Yourself"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-50"
   }
 ]

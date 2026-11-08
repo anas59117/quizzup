@@ -7,7 +7,8 @@
       "Valve",
       "Ubisoft"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quelle ressource permet de jouer des cartes pendant un combat ?",
@@ -17,486 +18,535 @@
       "Les gemmes",
       "L’or"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-02"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : combattant de mêlée peu coûteux à moustache ?",
+    "text": "Quelle carte correspond à cette description : combattant de mêlée peu coûteux à moustache ?",
     "answers": [
       "Archères",
       "Boule de feu",
       "Chevalier",
       "Princesse"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à Chevalier ?",
+    "text": "Quelle description correspond à Chevalier ?",
     "answers": [
       "unité résistante qui cible uniquement les bâtiments",
       "sort couvrant une large zone contre les essaims",
       "sort légendaire roulant au sol et repoussant les troupes",
       "combattant de mêlée peu coûteux à moustache"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte Chevalier appartient-elle ?",
+    "text": "De quel type est la carte « Chevalier » ?",
     "answers": [
       "Troupe",
-      "Condition de victoire",
+      "Sort",
       "Bâtiment",
-      "Champion"
+      "Objet cosmétique"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : duo d’unités à distance capables de viser l’air ?",
+    "text": "Quelle carte correspond à cette description : duo d’unités à distance capables de viser l’air ?",
     "answers": [
       "Géant",
       "Archères",
       "Flèches",
       "La Bûche"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-06"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à Archères ?",
+    "text": "Quelle description correspond à Archères ?",
     "answers": [
       "tireuse à longue portée utilisant un mousquet",
       "bâtiment dont les dégâts augmentent sur une même cible",
       "duo d’unités à distance capables de viser l’air",
       "unité légendaire pouvant être déployée presque partout"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-06"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte Archères appartient-elle ?",
+    "text": "De quel type est la carte « Archères » ?",
     "answers": [
-      "Condition de victoire",
+      "Troupe",
+      "Sort",
       "Bâtiment",
-      "Champion",
-      "Troupe"
+      "Objet cosmétique"
     ],
-    "correct": 3
+    "correct": 0,
+    "fact": "legacy-08"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : unité résistante qui cible uniquement les bâtiments ?",
+    "text": "Quelle carte correspond à cette description : unité résistante qui cible uniquement les bâtiments ?",
     "answers": [
       "Géant",
       "Mousquetaire",
       "Tour de l’enfer",
       "Mineur"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à Géant ?",
+    "text": "Quelle description correspond à Géant ?",
     "answers": [
       "robot rapide infligeant de lourds dégâts en mêlée",
       "unité résistante qui cible uniquement les bâtiments",
       "combattant rapide sautant la rivière et visant les bâtiments",
       "sort légendaire invoquant des squelettes progressivement"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte Géant appartient-elle ?",
+    "text": "De quel type est la carte « Géant » ?",
     "answers": [
+      "Troupe",
       "Sort",
       "Bâtiment",
-      "Troupe",
-      "Champion"
+      "Objet cosmétique"
     ],
-    "correct": 2
+    "correct": 0,
+    "fact": "legacy-11"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : tireuse à longue portée utilisant un mousquet ?",
+    "text": "Quelle carte correspond à cette description : tireuse à longue portée utilisant un mousquet ?",
     "answers": [
       "Mini P.E.K.K.A",
       "Chevaucheur de cochon",
       "Cimetière",
       "Mousquetaire"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-12"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à Mousquetaire ?",
+    "text": "Quelle description correspond à Mousquetaire ?",
     "answers": [
       "tireuse à longue portée utilisant un mousquet",
       "sort de zone qui repousse légèrement les unités",
       "unité légendaire tirant de très loin des flèches de zone",
       "unité lourde infligeant des dégâts en arrivant et en sautant"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-12"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte Mousquetaire appartient-elle ?",
+    "text": "De quel type est la carte « Mousquetaire » ?",
     "answers": [
-      "Condition de victoire",
       "Troupe",
+      "Sort",
       "Bâtiment",
-      "Champion"
+      "Objet cosmétique"
     ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-14"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : robot rapide infligeant de lourds dégâts en mêlée ?",
+    "text": "Quelle carte correspond à cette description : robot rapide infligeant de lourds dégâts en mêlée ?",
     "answers": [
       "Boule de feu",
       "Princesse",
       "Mini P.E.K.K.A",
       "Méga chevalier"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à Mini P.E.K.K.A ?",
+    "text": "Quelle description correspond à Mini P.E.K.K.A ?",
     "answers": [
       "sort couvrant une large zone contre les essaims",
       "sort légendaire roulant au sol et repoussant les troupes",
       "unité aérienne à distance construite par le maître bâtisseur",
       "robot rapide infligeant de lourds dégâts en mêlée"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte Mini P.E.K.K.A appartient-elle ?",
+    "text": "De quel type est la carte « Mini P.E.K.K.A » ?",
     "answers": [
       "Troupe",
-      "Condition de victoire",
+      "Sort",
       "Bâtiment",
-      "Champion"
+      "Objet cosmétique"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : sort de zone qui repousse légèrement les unités ?",
+    "text": "Quelle carte correspond à cette description : sort de zone qui repousse légèrement les unités ?",
     "answers": [
       "Flèches",
       "Boule de feu",
       "Gel",
       "Machine volante"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-18"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à Boule de feu ?",
+    "text": "Quelle description correspond à Boule de feu ?",
     "answers": [
       "bâtiment dont les dégâts augmentent sur une même cible",
       "unité légendaire pouvant être déployée presque partout",
       "sort de zone qui repousse légèrement les unités",
       "bâtiment qui produit de l’élixir au fil du temps"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-18"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte Boule de feu appartient-elle ?",
+    "text": "De quel type est la carte « Boule de feu » ?",
     "answers": [
       "Troupe",
+      "Sort",
       "Bâtiment",
-      "Champion",
-      "Sort"
+      "Objet cosmétique"
     ],
-    "correct": 3
+    "correct": 1,
+    "fact": "legacy-20"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : sort couvrant une large zone contre les essaims ?",
+    "text": "Quelle carte correspond à cette description : sort couvrant une large zone contre les essaims ?",
     "answers": [
       "Flèches",
       "Tour de l’enfer",
       "Mineur",
       "Extracteur d’élixir"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à Flèches ?",
+    "text": "Quelle description correspond à Flèches ?",
     "answers": [
       "combattant rapide sautant la rivière et visant les bâtiments",
       "sort couvrant une large zone contre les essaims",
       "sort légendaire invoquant des squelettes progressivement",
       "combattant de mêlée peu coûteux à moustache"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte Flèches appartient-elle ?",
+    "text": "De quel type est la carte « Flèches » ?",
     "answers": [
       "Troupe",
-      "Bâtiment",
       "Sort",
-      "Champion"
+      "Bâtiment",
+      "Objet cosmétique"
     ],
-    "correct": 2
+    "correct": 1,
+    "fact": "legacy-23"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : bâtiment dont les dégâts augmentent sur une même cible ?",
+    "text": "Quelle carte correspond à cette description : bâtiment dont les dégâts augmentent sur une même cible ?",
     "answers": [
       "Chevaucheur de cochon",
       "Cimetière",
       "Chevalier",
       "Tour de l’enfer"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-24"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à Tour de l’enfer ?",
+    "text": "Quelle description correspond à Tour de l’enfer ?",
     "answers": [
       "bâtiment dont les dégâts augmentent sur une même cible",
       "unité légendaire tirant de très loin des flèches de zone",
       "unité lourde infligeant des dégâts en arrivant et en sautant",
       "duo d’unités à distance capables de viser l’air"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-24"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte Tour de l’enfer appartient-elle ?",
+    "text": "De quel type est la carte « Tour de l’enfer » ?",
     "answers": [
       "Troupe",
-      "Bâtiment",
       "Sort",
-      "Champion"
+      "Bâtiment",
+      "Objet cosmétique"
     ],
-    "correct": 1
+    "correct": 2,
+    "fact": "legacy-26"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : combattant rapide sautant la rivière et visant les bâtiments ?",
+    "text": "Quelle carte correspond à cette description : combattant rapide sautant la rivière et visant les bâtiments ?",
     "answers": [
       "Princesse",
       "Méga chevalier",
       "Chevaucheur de cochon",
       "Archères"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à Chevaucheur de cochon ?",
+    "text": "Quelle description correspond à Chevaucheur de cochon ?",
     "answers": [
       "sort légendaire roulant au sol et repoussant les troupes",
       "unité aérienne à distance construite par le maître bâtisseur",
       "unité résistante qui cible uniquement les bâtiments",
       "combattant rapide sautant la rivière et visant les bâtiments"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte Chevaucheur de cochon appartient-elle ?",
+    "text": "De quel type est la carte « Chevaucheur de cochon » ?",
     "answers": [
       "Troupe",
       "Sort",
       "Bâtiment",
-      "Champion"
+      "Objet cosmétique"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : unité légendaire tirant de très loin des flèches de zone ?",
+    "text": "Quelle carte correspond à cette description : unité légendaire tirant de très loin des flèches de zone ?",
     "answers": [
       "La Bûche",
       "Princesse",
       "Machine volante",
       "Géant"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-30"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à Princesse ?",
+    "text": "Quelle description correspond à Princesse ?",
     "answers": [
       "unité légendaire pouvant être déployée presque partout",
       "bâtiment qui produit de l’élixir au fil du temps",
       "unité légendaire tirant de très loin des flèches de zone",
       "tireuse à longue portée utilisant un mousquet"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-30"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte Princesse appartient-elle ?",
+    "text": "De quel type est la carte « Princesse » ?",
     "answers": [
-      "Condition de victoire",
+      "Troupe",
+      "Sort",
       "Bâtiment",
-      "Champion",
-      "Troupe"
+      "Objet cosmétique"
     ],
-    "correct": 3
+    "correct": 0,
+    "fact": "legacy-32"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : sort légendaire roulant au sol et repoussant les troupes ?",
+    "text": "Quelle carte correspond à cette description : sort légendaire roulant au sol et repoussant les troupes ?",
     "answers": [
       "La Bûche",
       "Mineur",
       "Extracteur d’élixir",
       "Mousquetaire"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à La Bûche ?",
+    "text": "Quelle description correspond à La Bûche ?",
     "answers": [
       "sort légendaire invoquant des squelettes progressivement",
       "sort légendaire roulant au sol et repoussant les troupes",
       "combattant de mêlée peu coûteux à moustache",
       "robot rapide infligeant de lourds dégâts en mêlée"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte La Bûche appartient-elle ?",
+    "text": "De quel type est la carte « La Bûche » ?",
     "answers": [
       "Troupe",
-      "Bâtiment",
       "Sort",
-      "Champion"
+      "Bâtiment",
+      "Objet cosmétique"
     ],
-    "correct": 2
+    "correct": 1,
+    "fact": "legacy-35"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : unité légendaire pouvant être déployée presque partout ?",
+    "text": "Quelle carte correspond à cette description : unité légendaire pouvant être déployée presque partout ?",
     "answers": [
       "Cimetière",
       "Chevalier",
       "Mini P.E.K.K.A",
       "Mineur"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-36"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à Mineur ?",
+    "text": "Quelle description correspond à Mineur ?",
     "answers": [
       "unité légendaire pouvant être déployée presque partout",
       "unité lourde infligeant des dégâts en arrivant et en sautant",
       "duo d’unités à distance capables de viser l’air",
       "sort de zone qui repousse légèrement les unités"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-36"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte Mineur appartient-elle ?",
+    "text": "De quel type est la carte « Mineur » ?",
     "answers": [
-      "Sort",
       "Troupe",
+      "Sort",
       "Bâtiment",
-      "Champion"
+      "Objet cosmétique"
     ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-38"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : sort légendaire invoquant des squelettes progressivement ?",
+    "text": "Quelle carte correspond à cette description : sort légendaire invoquant des squelettes progressivement ?",
     "answers": [
       "Méga chevalier",
       "Archères",
       "Cimetière",
       "Boule de feu"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à Cimetière ?",
+    "text": "Quelle description correspond à Cimetière ?",
     "answers": [
       "unité aérienne à distance construite par le maître bâtisseur",
       "unité résistante qui cible uniquement les bâtiments",
       "sort couvrant une large zone contre les essaims",
       "sort légendaire invoquant des squelettes progressivement"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte Cimetière appartient-elle ?",
+    "text": "De quel type est la carte « Cimetière » ?",
     "answers": [
-      "Sort",
       "Troupe",
+      "Sort",
       "Bâtiment",
-      "Champion"
+      "Objet cosmétique"
     ],
-    "correct": 0
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : unité lourde infligeant des dégâts en arrivant et en sautant ?",
+    "text": "Quelle carte correspond à cette description : unité lourde infligeant des dégâts en arrivant et en sautant ?",
     "answers": [
       "Machine volante",
       "Méga chevalier",
       "Géant",
       "Flèches"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-42"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à Méga chevalier ?",
+    "text": "Quelle description correspond à Méga chevalier ?",
     "answers": [
       "bâtiment qui produit de l’élixir au fil du temps",
       "tireuse à longue portée utilisant un mousquet",
       "unité lourde infligeant des dégâts en arrivant et en sautant",
       "bâtiment dont les dégâts augmentent sur une même cible"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-42"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte Méga chevalier appartient-elle ?",
+    "text": "De quel type est la carte « Méga chevalier » ?",
     "answers": [
-      "Condition de victoire",
+      "Troupe",
+      "Sort",
       "Bâtiment",
-      "Champion",
-      "Troupe"
+      "Objet cosmétique"
     ],
-    "correct": 3
+    "correct": 0,
+    "fact": "legacy-44"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : unité aérienne à distance construite par le maître bâtisseur ?",
+    "text": "Quelle carte correspond à cette description : unité aérienne à distance construite par le maître bâtisseur ?",
     "answers": [
       "Machine volante",
       "Extracteur d’élixir",
       "Mousquetaire",
       "Tour de l’enfer"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à Machine volante ?",
+    "text": "Quelle description correspond à Machine volante ?",
     "answers": [
       "combattant de mêlée peu coûteux à moustache",
       "unité aérienne à distance construite par le maître bâtisseur",
       "robot rapide infligeant de lourds dégâts en mêlée",
       "combattant rapide sautant la rivière et visant les bâtiments"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte Machine volante appartient-elle ?",
+    "text": "De quel type est la carte « Machine volante » ?",
     "answers": [
-      "Condition de victoire",
-      "Bâtiment",
       "Troupe",
-      "Champion"
+      "Sort",
+      "Bâtiment",
+      "Objet cosmétique"
     ],
-    "correct": 2
+    "correct": 0,
+    "fact": "legacy-47"
   },
   {
-    "text": "Dans « Clash Royale », quelle carte correspond à cette description : bâtiment qui produit de l’élixir au fil du temps ?",
+    "text": "Quelle carte correspond à cette description : bâtiment qui produit de l’élixir au fil du temps ?",
     "answers": [
       "Chevalier",
       "Mini P.E.K.K.A",
       "Chevaucheur de cochon",
       "Extracteur d’élixir"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-48"
   },
   {
-    "text": "Dans « Clash Royale », quelle description correspond à Extracteur d’élixir ?",
+    "text": "Quelle description correspond à Extracteur d’élixir ?",
     "answers": [
       "bâtiment qui produit de l’élixir au fil du temps",
       "duo d’unités à distance capables de viser l’air",
       "sort de zone qui repousse légèrement les unités",
       "unité légendaire tirant de très loin des flèches de zone"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-48"
   },
   {
-    "text": "Dans « Clash Royale », à quel type de carte Extracteur d’élixir appartient-elle ?",
+    "text": "De quel type est la carte « Extracteur d’élixir » ?",
     "answers": [
       "Troupe",
-      "Bâtiment",
       "Sort",
-      "Champion"
+      "Bâtiment",
+      "Objet cosmétique"
     ],
-    "correct": 1
+    "correct": 2,
+    "fact": "legacy-50"
   }
 ]

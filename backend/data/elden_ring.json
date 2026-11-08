@@ -7,7 +7,8 @@
       "l'ordre cosmique brisé",
       "la reine divine de l'Entre-terre"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel élément correspond à cette description : « le personnage joueur » ?",
@@ -17,7 +18,8 @@
       "Radagon",
       "Mohg"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-01"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente l'Entre-terre ?",
@@ -27,7 +29,8 @@
       "le monde principal",
       "le second seigneur d'Elden et autre aspect de Marika"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel élément correspond à cette description : « le monde principal » ?",
@@ -37,7 +40,8 @@
       "Godrick le Greffé",
       "L'Entre-terre"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente l'Anneau d'Elden ?",
@@ -47,17 +51,19 @@
       "le second seigneur d'Elden et autre aspect de Marika",
       "la jeune femme proposant un accord au joueur"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
-    "text": "Quel élément correspond à cette description : « l'ordre cosmique brisé » ?",
+    "text": "Quel type d’objet permet d’invoquer des esprits alliés dans certains combats ?",
     "answers": [
-      "FromSoftware",
-      "L'Anneau d'Elden",
-      "Marika l'Éternelle",
-      "Morgott"
+      "Les pierres de forge",
+      "Les cendres d’esprit",
+      "Les clés-lames",
+      "Les graines dorées"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-6"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente Marika l'Éternelle ?",
@@ -67,7 +73,8 @@
       "la reine divine de l'Entre-terre",
       "la monture spectrale"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quel élément correspond à cette description : « la reine divine de l'Entre-terre » ?",
@@ -77,7 +84,8 @@
       "Torrent",
       "Marika l'Éternelle"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-07"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente Radagon ?",
@@ -87,7 +95,8 @@
       "la monture spectrale",
       "le boss gardant l'accès à Voilorage"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel élément correspond à cette description : « le second seigneur d'Elden et autre aspect de Marika » ?",
@@ -97,7 +106,8 @@
       "George R. R. Martin",
       "Godrick le Greffé"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente Mélina ?",
@@ -107,7 +117,8 @@
       "la jeune femme proposant un accord au joueur",
       "le seigneur de Voilorage"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel élément correspond à cette description : « la jeune femme proposant un accord au joueur » ?",
@@ -117,7 +128,8 @@
       "Mohg",
       "Mélina"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente Torrent ?",
@@ -127,7 +139,8 @@
       "le seigneur de Voilorage",
       "la reine de la Pleine Lune"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quel élément correspond à cette description : « la monture spectrale » ?",
@@ -137,7 +150,8 @@
       "Godrick le Greffé",
       "Margit"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-13"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente Margit ?",
@@ -147,7 +161,8 @@
       "le boss gardant l'accès à Voilorage",
       "le Fléau des astres"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel élément correspond à cette description : « le boss gardant l'accès à Voilorage » ?",
@@ -157,7 +172,8 @@
       "La Table ronde",
       "Margit"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente Godrick le Greffé ?",
@@ -167,7 +183,8 @@
       "le Fléau des astres",
       "le seigneur du manoir du Volcan"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel élément correspond à cette description : « le seigneur de Voilorage » ?",
@@ -177,7 +194,8 @@
       "Les fioles de larmes pourpres",
       "Shadow of the Erdtree"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente Rennala ?",
@@ -187,7 +205,8 @@
       "la reine de la Pleine Lune",
       "le roi des Réprouvés"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quel élément correspond à cette description : « la reine de la Pleine Lune » ?",
@@ -197,7 +216,8 @@
       "La sortie originale",
       "Rennala"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-19"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente Radahn ?",
@@ -207,7 +227,8 @@
       "le roi des Réprouvés",
       "la Lame de Miquella"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel élément correspond à cette description : « le Fléau des astres » ?",
@@ -217,7 +238,8 @@
       "George R. R. Martin",
       "Torrent"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente Rykard ?",
@@ -227,17 +249,19 @@
       "le seigneur du manoir du Volcan",
       "le seigneur du Sang"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
-    "text": "Quel élément correspond à cette description : « le seigneur du manoir du Volcan » ?",
+    "text": "Quelle ressource sert à la fois à monter de niveau et à payer les marchands ?",
     "answers": [
-      "La Table ronde",
-      "La sortie originale",
-      "Le Sans-éclat",
-      "Rykard"
+      "Les points de grâce",
+      "Les fragments de carte",
+      "Les larmes sacrées",
+      "Les runes"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-31"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente Morgott ?",
@@ -247,7 +271,8 @@
       "le seigneur du Sang",
       "l'expérience et la monnaie principale"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quel élément correspond à cette description : « le roi des Réprouvés » ?",
@@ -257,7 +282,8 @@
       "Mohg",
       "Les fioles de larmes pourpres"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-25"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente Malenia ?",
@@ -267,7 +293,8 @@
       "la Lame de Miquella",
       "les points de repos"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel élément correspond à cette description : « la Lame de Miquella » ?",
@@ -277,7 +304,8 @@
       "L'Entre-terre",
       "Malenia"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente Mohg ?",
@@ -287,7 +315,8 @@
       "les points de repos",
       "le refuge central des Sans-éclat"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel élément correspond à cette description : « le seigneur du Sang » ?",
@@ -297,7 +326,8 @@
       "Shadow of the Erdtree",
       "La Table ronde"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente les runes ?",
@@ -307,7 +337,8 @@
       "l'expérience et la monnaie principale",
       "la restauration des points de vie"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quel élément correspond à cette description : « l'expérience et la monnaie principale » ?",
@@ -317,7 +348,8 @@
       "Torrent",
       "Les runes"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-31"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente les sites de grâce ?",
@@ -327,7 +359,8 @@
       "la restauration des points de vie",
       "la restauration des points de focalisation"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel élément correspond à cette description : « les points de repos » ?",
@@ -337,7 +370,8 @@
       "Mohg",
       "La sortie originale"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente la Table ronde ?",
@@ -347,7 +381,8 @@
       "le refuge central des Sans-éclat",
       "le studio développeur"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel élément correspond à cette description : « le refuge central des Sans-éclat » ?",
@@ -357,7 +392,8 @@
       "La sortie originale",
       "La Table ronde"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente les fioles de larmes pourpres ?",
@@ -367,7 +403,8 @@
       "le studio développeur",
       "le réalisateur du jeu"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quel élément correspond à cette description : « la restauration des points de vie » ?",
@@ -377,7 +414,8 @@
       "Radahn",
       "Godrick le Greffé"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-37"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente les fioles de larmes céruléennes ?",
@@ -387,7 +425,8 @@
       "la restauration des points de focalisation",
       "le contributeur à la mythologie de fond"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel élément correspond à cette description : « la restauration des points de focalisation » ?",
@@ -397,7 +436,8 @@
       "Shadow of the Erdtree",
       "Les fioles de larmes céruléennes"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente FromSoftware ?",
@@ -407,7 +447,8 @@
       "le contributeur à la mythologie de fond",
       "2022"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel élément correspond à cette description : « le studio développeur » ?",
@@ -417,7 +458,8 @@
       "Hidetaka Miyazaki",
       "Torrent"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente Hidetaka Miyazaki ?",
@@ -427,7 +469,8 @@
       "le réalisateur du jeu",
       "l'extension majeure sortie en 2024"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quel élément correspond à cette description : « le réalisateur du jeu » ?",
@@ -437,7 +480,8 @@
       "FromSoftware",
       "Hidetaka Miyazaki"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-43"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente George R. R. Martin ?",
@@ -447,7 +491,8 @@
       "l'extension majeure sortie en 2024",
       "le personnage joueur"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel élément correspond à cette description : « le contributeur à la mythologie de fond » ?",
@@ -457,7 +502,8 @@
       "Mélina",
       "L'Anneau d'Elden"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "En quelle année est sorti le jeu original Elden Ring ?",
@@ -467,7 +513,8 @@
       "2022",
       "2023"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel événement de l'histoire d'Elden Ring a eu lieu en 2022 ?",
@@ -477,7 +524,8 @@
       "La sortie d'Elden Ring Nightreign",
       "La sortie du jeu original"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Dans l'univers d'Elden Ring, que désigne ou représente Shadow of the Erdtree ?",
@@ -487,7 +535,8 @@
       "le monde principal",
       "l'ordre cosmique brisé"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quel élément correspond à cette description : « l'extension majeure sortie en 2024 » ?",
@@ -497,6 +546,7 @@
       "Les sites de grâce",
       "FromSoftware"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
   }
 ]

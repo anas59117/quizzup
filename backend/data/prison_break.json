@@ -7,7 +7,8 @@
       "Pour infiltrer un gang",
       "Pour protéger un témoin"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel pénitencier accueille Michael dans la première saison ?",
@@ -17,7 +18,8 @@
       "Ogygia",
       "Bolshoi Booze"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-02"
   },
   {
     "text": "Quel personnage correspond à cette description : ingénieur ayant tatoué les plans de la prison sur son corps ?",
@@ -27,17 +29,19 @@
       "Michael Scofield",
       "Fernando Sucre"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
-    "text": "Quelle description correspond à Michael Scofield ?",
+    "text": "Dans quel pays se trouve le pénitencier de Sona ?",
     "answers": [
-      "frère de Michael condamné à mort à tort",
-      "médecin de Fox River devenue la compagne de Michael",
-      "compagnon de cellule fidèle de Michael",
-      "ingénieur ayant tatoué les plans de la prison sur son corps"
+      "Mexique",
+      "Colombie",
+      "Costa Rica",
+      "Panama"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-4"
   },
   {
     "text": "Quel personnage correspond à cette description : frère de Michael condamné à mort à tort ?",
@@ -47,7 +51,8 @@
       "Alexander Mahone",
       "Brad Bellick"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quelle description correspond à Lincoln Burrows ?",
@@ -57,7 +62,8 @@
       "agent des services secrets lié à la conspiration",
       "directeur de Fox River appréciant Michael"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel personnage correspond à cette description : médecin de Fox River devenue la compagne de Michael ?",
@@ -67,7 +73,8 @@
       "Sara Tancredi",
       "Veronica Donovan"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quelle description correspond à Sara Tancredi ?",
@@ -77,7 +84,8 @@
       "compagne de Whistler devenue proche de Lincoln",
       "médecin de Fox River devenue la compagne de Michael"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-07"
   },
   {
     "text": "Quel personnage correspond à cette description : compagnon de cellule fidèle de Michael ?",
@@ -87,17 +95,19 @@
       "Sofia Lugo",
       "Norman St. John"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
-    "text": "Quelle description correspond à Fernando Sucre ?",
+    "text": "Quel acteur joue Lincoln Burrows, le frère que Michael cherche à sauver ?",
     "answers": [
-      "second mari de Sara et agent secret appelé Poséidon",
-      "compagnon de cellule fidèle de Michael",
-      "détenu que Michael soupçonne d’être D. B. Cooper",
-      "ingénieur ayant tatoué les plans de la prison sur son corps"
+      "Amaury Nolasco",
+      "Dominic Purcell",
+      "Robert Knepper",
+      "William Fichtner"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-10"
   },
   {
     "text": "Quel personnage correspond à cette description : détenu dangereux surnommé T-Bag ?",
@@ -107,7 +117,8 @@
       "Theodore Bagwell",
       "Charles Westmoreland"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quelle description correspond à Theodore Bagwell ?",
@@ -117,7 +128,8 @@
       "chef des gardiens de Fox River devenu fugitif",
       "détenu dangereux surnommé T-Bag"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel personnage correspond à cette description : ancien soldat surnommé C-Note ?",
@@ -127,7 +139,8 @@
       "Fernando Sucre",
       "Theodore Bagwell"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quelle description correspond à Benjamin Miles Franklin ?",
@@ -137,7 +150,8 @@
       "fils adolescent de Lincoln",
       "agente de la Compagnie surnommée Susan B. Anthony"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-13"
   },
   {
     "text": "Quel personnage correspond à cette description : mafieux contrôlant le travail pénitentiaire ?",
@@ -147,7 +161,8 @@
       "John Abruzzi",
       "Henry Pope"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quelle description correspond à John Abruzzi ?",
@@ -157,7 +172,8 @@
       "second mari de Sara et agent secret appelé Poséidon",
       "mafieux contrôlant le travail pénitentiaire"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel personnage correspond à cette description : agent du FBI chargé de traquer les évadés ?",
@@ -167,7 +183,8 @@
       "L. J. Burrows",
       "Gretchen Morgan"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quelle description correspond à Alexander Mahone ?",
@@ -177,7 +194,8 @@
       "détenu dangereux surnommé T-Bag",
       "ancien soldat surnommé C-Note"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel personnage correspond à cette description : chef des gardiens de Fox River devenu fugitif ?",
@@ -187,7 +205,8 @@
       "Brad Bellick",
       "Donald Self"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quelle description correspond à Brad Bellick ?",
@@ -197,7 +216,8 @@
       "avocate et ancienne compagne de Lincoln",
       "chef des gardiens de Fox River devenu fugitif"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-19"
   },
   {
     "text": "Quel personnage correspond à cette description : agent des services secrets lié à la conspiration ?",
@@ -207,7 +227,8 @@
       "Michael Scofield",
       "Lincoln Burrows"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quelle description correspond à Paul Kellerman ?",
@@ -217,7 +238,8 @@
       "bras droit de Lechero qui tente de prendre le contrôle de Sona",
       "agent fédéral recrutant l’équipe pour récupérer Scylla"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel personnage correspond à cette description : directeur de Fox River appréciant Michael ?",
@@ -227,7 +249,8 @@
       "Henry Pope",
       "John Abruzzi"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quelle description correspond à Henry Pope ?",
@@ -237,7 +260,8 @@
       "compagnon de cellule fidèle de Michael",
       "directeur de Fox River appréciant Michael"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel personnage correspond à cette description : jeune voleur surnommé Tweener ?",
@@ -247,7 +271,8 @@
       "Henry Pope",
       "Charles Patoshik"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quelle description correspond à David Apolskis ?",
@@ -257,7 +282,8 @@
       "agent des services secrets lié à la conspiration",
       "directeur de Fox River appréciant Michael"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-25"
   },
   {
     "text": "Quel personnage correspond à cette description : détenu instable surnommé Haywire ?",
@@ -267,7 +293,8 @@
       "Charles Patoshik",
       "Sofia Lugo"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quelle description correspond à Charles Patoshik ?",
@@ -277,7 +304,8 @@
       "chef des détenus de Sona surnommé Lechero",
       "détenu instable surnommé Haywire"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel personnage correspond à cette description : avocate et ancienne compagne de Lincoln ?",
@@ -287,7 +315,8 @@
       "Christina Scofield",
       "Jacob Ness"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quelle description correspond à Veronica Donovan ?",
@@ -297,7 +326,8 @@
       "ingénieur ayant tatoué les plans de la prison sur son corps",
       "frère de Michael condamné à mort à tort"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel personnage correspond à cette description : fils adolescent de Lincoln ?",
@@ -307,7 +337,8 @@
       "L. J. Burrows",
       "Fernando Sucre"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quelle description correspond à L. J. Burrows ?",
@@ -317,7 +348,8 @@
       "chef des gardiens de Fox River devenu fugitif",
       "fils adolescent de Lincoln"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-31"
   },
   {
     "text": "Quel personnage correspond à cette description : agente de la Compagnie surnommée Susan B. Anthony ?",
@@ -327,7 +359,8 @@
       "Alexander Mahone",
       "Brad Bellick"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quelle description correspond à Gretchen Morgan ?",
@@ -337,7 +370,8 @@
       "fils adolescent de Lincoln",
       "détenu de Sona que Michael doit faire évader"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel personnage correspond à cette description : détenu de Sona que Michael doit faire évader ?",
@@ -347,7 +381,8 @@
       "James Whistler",
       "Veronica Donovan"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quelle description correspond à James Whistler ?",
@@ -357,7 +392,8 @@
       "détenu que Michael soupçonne d’être D. B. Cooper",
       "détenu de Sona que Michael doit faire évader"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel personnage correspond à cette description : compagne de Whistler devenue proche de Lincoln ?",
@@ -367,7 +403,8 @@
       "Norman St. John",
       "Sammy Norino"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quelle description correspond à Sofia Lugo ?",
@@ -377,7 +414,8 @@
       "ancien soldat surnommé C-Note",
       "mafieux contrôlant le travail pénitentiaire"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-37"
   },
   {
     "text": "Quel personnage correspond à cette description : chef des détenus de Sona surnommé Lechero ?",
@@ -387,7 +425,8 @@
       "Norman St. John",
       "Michael Scofield"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quelle description correspond à Norman St. John ?",
@@ -397,7 +436,8 @@
       "avocate et ancienne compagne de Lincoln",
       "chef des détenus de Sona surnommé Lechero"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel personnage correspond à cette description : bras droit de Lechero qui tente de prendre le contrôle de Sona ?",
@@ -407,7 +447,8 @@
       "Theodore Bagwell",
       "Benjamin Miles Franklin"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quelle description correspond à Sammy Norino ?",
@@ -417,7 +458,8 @@
       "agent fédéral recrutant l’équipe pour récupérer Scylla",
       "mère de Michael travaillant pour ses propres intérêts"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel personnage correspond à cette description : agent fédéral recrutant l’équipe pour récupérer Scylla ?",
@@ -427,7 +469,8 @@
       "Donald Self",
       "Henry Pope"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quelle description correspond à Donald Self ?",
@@ -437,7 +480,8 @@
       "détenu dangereux surnommé T-Bag",
       "agent fédéral recrutant l’équipe pour récupérer Scylla"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-43"
   },
   {
     "text": "Quel personnage correspond à cette description : mère de Michael travaillant pour ses propres intérêts ?",
@@ -447,7 +491,8 @@
       "L. J. Burrows",
       "Gretchen Morgan"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quelle description correspond à Christina Scofield ?",
@@ -457,7 +502,8 @@
       "directeur de Fox River appréciant Michael",
       "jeune voleur surnommé Tweener"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel personnage correspond à cette description : second mari de Sara et agent secret appelé Poséidon ?",
@@ -467,7 +513,8 @@
       "Jacob Ness",
       "Donald Self"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quelle description correspond à Jacob Ness ?",
@@ -477,7 +524,8 @@
       "chef des détenus de Sona surnommé Lechero",
       "second mari de Sara et agent secret appelé Poséidon"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel personnage correspond à cette description : détenu que Michael soupçonne d’être D. B. Cooper ?",
@@ -487,7 +535,8 @@
       "Lincoln Burrows",
       "Sara Tancredi"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quelle description correspond à Charles Westmoreland ?",
@@ -497,6 +546,7 @@
       "frère de Michael condamné à mort à tort",
       "médecin de Fox River devenue la compagne de Michael"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
   }
 ]

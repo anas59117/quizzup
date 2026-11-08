@@ -7,7 +7,8 @@
       "Manchester",
       "Londres"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel acteur interprète Thomas Shelby ?",
@@ -17,7 +18,8 @@
       "Paul Anderson",
       "Sam Claflin"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-02"
   },
   {
     "text": "Quel personnage correspond à cette description : chef stratège de la famille Shelby et député de Birmingham ?",
@@ -27,17 +29,19 @@
       "Thomas Shelby",
       "Ada Shelby"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
-    "text": "Quelle description correspond à Thomas Shelby ?",
+    "text": "Quel commerce sert de point de départ à l’ascension de la famille Shelby ?",
     "answers": [
-      "frère aîné impulsif de Thomas",
-      "tante des Shelby et trésorière de l’entreprise familiale",
-      "sœur de Thomas engagée politiquement",
-      "chef stratège de la famille Shelby et député de Birmingham"
+      "Le négoce de charbon",
+      "La vente de voitures",
+      "L’importation de coton",
+      "Les paris hippiques"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-4"
   },
   {
     "text": "Quel personnage correspond à cette description : frère aîné impulsif de Thomas ?",
@@ -47,7 +51,8 @@
       "Chester Campbell",
       "Alfie Solomons"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quelle description correspond à Arthur Shelby ?",
@@ -57,7 +62,8 @@
       "fils de Polly devenu comptable de la Shelby Company",
       "épouse américaine de Michael"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel personnage correspond à cette description : tante des Shelby et trésorière de l’entreprise familiale ?",
@@ -67,7 +73,8 @@
       "Polly Gray",
       "Linda Shelby"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quelle description correspond à Polly Gray ?",
@@ -77,7 +84,8 @@
       "homme politique fasciste affronté par Thomas",
       "tante des Shelby et trésorière de l’entreprise familiale"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-07"
   },
   {
     "text": "Quel personnage correspond à cette description : sœur de Thomas engagée politiquement ?",
@@ -87,17 +95,19 @@
       "Oswald Mosley",
       "May Carleton"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
-    "text": "Quelle description correspond à Ada Shelby ?",
+    "text": "Au début de la série, quel inspecteur est envoyé à Birmingham pour retrouver des armes volées ?",
     "answers": [
-      "communiste et premier mari d’Ada",
-      "sœur de Thomas engagée politiquement",
-      "fils de Thomas découvert tardivement",
-      "chef stratège de la famille Shelby et député de Birmingham"
+      "Alfie Solomons",
+      "Chester Campbell",
+      "Billy Kimber",
+      "Darby Sabini"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-10"
   },
   {
     "text": "Quel personnage correspond à cette description : frère de Thomas et ancien combattant ?",
@@ -107,7 +117,8 @@
       "John Shelby",
       "Duke Shelby"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quelle description correspond à John Shelby ?",
@@ -117,7 +128,8 @@
       "gangster juif de Camden interprété par Tom Hardy",
       "frère de Thomas et ancien combattant"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel personnage correspond à cette description : plus jeune frère de la fratrie Shelby ?",
@@ -127,7 +139,8 @@
       "Ada Shelby",
       "John Shelby"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quelle description correspond à Finn Shelby ?",
@@ -137,7 +150,8 @@
       "gitan allié aux Shelby et père de Bonnie",
       "boxeur et fils d’Aberama"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-13"
   },
   {
     "text": "Quel personnage correspond à cette description : agente infiltrée devenue l’amour de Thomas ?",
@@ -147,7 +161,8 @@
       "Grace Burgess",
       "Gina Gray"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quelle description correspond à Grace Burgess ?",
@@ -157,7 +172,8 @@
       "communiste et premier mari d’Ada",
       "agente infiltrée devenue l’amour de Thomas"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel personnage correspond à cette description : inspecteur envoyé à Birmingham pour combattre les gangs ?",
@@ -167,7 +183,8 @@
       "Aberama Gold",
       "Bonnie Gold"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quelle description correspond à Chester Campbell ?",
@@ -177,7 +194,8 @@
       "frère de Thomas et ancien combattant",
       "plus jeune frère de la fratrie Shelby"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel personnage correspond à cette description : gangster juif de Camden interprété par Tom Hardy ?",
@@ -187,7 +205,8 @@
       "Alfie Solomons",
       "Johnny Dogs"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quelle description correspond à Alfie Solomons ?",
@@ -197,7 +216,8 @@
       "épouse d’Arthur cherchant à l’éloigner du gang",
       "gangster juif de Camden interprété par Tom Hardy"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-19"
   },
   {
     "text": "Quel personnage correspond à cette description : fils de Polly devenu comptable de la Shelby Company ?",
@@ -207,7 +227,8 @@
       "Thomas Shelby",
       "Arthur Shelby"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quelle description correspond à Michael Gray ?",
@@ -217,7 +238,8 @@
       "palefrenier fidèle travaillant au chantier de Charlie",
       "ami gitan de Thomas Shelby"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel personnage correspond à cette description : épouse américaine de Michael ?",
@@ -227,7 +249,8 @@
       "Gina Gray",
       "Grace Burgess"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quelle description correspond à Gina Gray ?",
@@ -237,7 +260,8 @@
       "sœur de Thomas engagée politiquement",
       "épouse américaine de Michael"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel personnage correspond à cette description : ancienne prostituée devenue secrétaire puis épouse de Thomas ?",
@@ -247,7 +271,8 @@
       "Gina Gray",
       "Esme Shelby"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quelle description correspond à Lizzie Stark ?",
@@ -257,7 +282,8 @@
       "fils de Polly devenu comptable de la Shelby Company",
       "épouse américaine de Michael"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-25"
   },
   {
     "text": "Quel personnage correspond à cette description : épouse de John issue de la famille Lee ?",
@@ -267,7 +293,8 @@
       "Esme Shelby",
       "Oswald Mosley"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quelle description correspond à Esme Shelby ?",
@@ -277,7 +304,8 @@
       "aristocrate chargée d’entraîner le cheval de Thomas",
       "épouse de John issue de la famille Lee"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel personnage correspond à cette description : épouse d’Arthur cherchant à l’éloigner du gang ?",
@@ -287,7 +315,8 @@
       "Charlie Strong",
       "Freddie Thorne"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quelle description correspond à Linda Shelby ?",
@@ -297,7 +326,8 @@
       "chef stratège de la famille Shelby et député de Birmingham",
       "frère aîné impulsif de Thomas"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel personnage correspond à cette description : gitan allié aux Shelby et père de Bonnie ?",
@@ -307,7 +337,8 @@
       "Aberama Gold",
       "Ada Shelby"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quelle description correspond à Aberama Gold ?",
@@ -317,7 +348,8 @@
       "gangster juif de Camden interprété par Tom Hardy",
       "gitan allié aux Shelby et père de Bonnie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-31"
   },
   {
     "text": "Quel personnage correspond à cette description : boxeur et fils d’Aberama ?",
@@ -327,7 +359,8 @@
       "Chester Campbell",
       "Alfie Solomons"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quelle description correspond à Bonnie Gold ?",
@@ -337,7 +370,8 @@
       "gitan allié aux Shelby et père de Bonnie",
       "mafieux américain venu venger sa famille"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel personnage correspond à cette description : mafieux américain venu venger sa famille ?",
@@ -347,7 +381,8 @@
       "Luca Changretta",
       "Linda Shelby"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quelle description correspond à Luca Changretta ?",
@@ -357,7 +392,8 @@
       "fils de Thomas découvert tardivement",
       "mafieux américain venu venger sa famille"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel personnage correspond à cette description : homme politique fasciste affronté par Thomas ?",
@@ -367,7 +403,8 @@
       "May Carleton",
       "Curly"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quelle description correspond à Oswald Mosley ?",
@@ -377,7 +414,8 @@
       "plus jeune frère de la fratrie Shelby",
       "agente infiltrée devenue l’amour de Thomas"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-37"
   },
   {
     "text": "Quel personnage correspond à cette description : aristocrate chargée d’entraîner le cheval de Thomas ?",
@@ -387,7 +425,8 @@
       "May Carleton",
       "Thomas Shelby"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quelle description correspond à May Carleton ?",
@@ -397,7 +436,8 @@
       "épouse d’Arthur cherchant à l’éloigner du gang",
       "aristocrate chargée d’entraîner le cheval de Thomas"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel personnage correspond à cette description : palefrenier fidèle travaillant au chantier de Charlie ?",
@@ -407,7 +447,8 @@
       "John Shelby",
       "Finn Shelby"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quelle description correspond à Curly ?",
@@ -417,7 +458,8 @@
       "ami gitan de Thomas Shelby",
       "oncle de Thomas dirigeant le chantier"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel personnage correspond à cette description : ami gitan de Thomas Shelby ?",
@@ -427,7 +469,8 @@
       "Johnny Dogs",
       "Gina Gray"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quelle description correspond à Johnny Dogs ?",
@@ -437,7 +480,8 @@
       "frère de Thomas et ancien combattant",
       "ami gitan de Thomas Shelby"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-43"
   },
   {
     "text": "Quel personnage correspond à cette description : oncle de Thomas dirigeant le chantier ?",
@@ -447,7 +491,8 @@
       "Aberama Gold",
       "Bonnie Gold"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quelle description correspond à Charlie Strong ?",
@@ -457,7 +502,8 @@
       "épouse américaine de Michael",
       "ancienne prostituée devenue secrétaire puis épouse de Thomas"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel personnage correspond à cette description : communiste et premier mari d’Ada ?",
@@ -467,7 +513,8 @@
       "Freddie Thorne",
       "Johnny Dogs"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quelle description correspond à Freddie Thorne ?",
@@ -477,7 +524,8 @@
       "aristocrate chargée d’entraîner le cheval de Thomas",
       "communiste et premier mari d’Ada"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel personnage correspond à cette description : fils de Thomas découvert tardivement ?",
@@ -487,7 +535,8 @@
       "Arthur Shelby",
       "Polly Gray"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quelle description correspond à Duke Shelby ?",
@@ -497,6 +546,7 @@
       "frère aîné impulsif de Thomas",
       "tante des Shelby et trésorière de l’entreprise familiale"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
   }
 ]

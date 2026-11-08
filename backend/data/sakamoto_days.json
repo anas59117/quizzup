@@ -2,72 +2,79 @@
   {
     "text": "Quel était le métier de Taro Sakamoto avant sa retraite ?",
     "answers": [
-      "Le tueur à gages le plus redouté",
-      "Policier",
-      "Agent secret",
-      "Garde du corps"
+      "Tueur à gages",
+      "Garde du corps",
+      "Détective privé",
+      "Agent de renseignement"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-1"
   },
   {
-    "text": "Pourquoi Sakamoto a-t-il quitté le monde des assassins ?",
+    "text": "Qu’est-ce qui pousse Taro Sakamoto à se retirer de la vie d’assassin ?",
     "answers": [
-      "Il a été blessé gravement",
-      "Il a été trahi",
-      "Il est tombé amoureux et s'est marié",
-      "Il a perdu ses pouvoirs"
+      "Sa rivalité avec Nagumo",
+      "Son entrée à la JCC",
+      "Sa rencontre avec Aoi",
+      "La disparition de Shin"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-2"
   },
   {
-    "text": "Quel commerce Sakamoto tient-il après sa retraite ?",
+    "text": "Quel commerce Taro tient-il avec sa famille ?",
     "answers": [
-      "Une supérette/konbini",
-      "Un restaurant de ramen",
-      "Une librairie",
-      "Un dojo"
+      "Une supérette",
+      "Un restaurant",
+      "Une pharmacie",
+      "Une librairie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-3"
   },
   {
-    "text": "Quelle transformation physique Sakamoto a-t-il subie ?",
+    "text": "Comment s’appelle la famille de commerçants au cœur de l’histoire ?",
     "answers": [
-      "Il est devenu obèse",
-      "Il a perdu un bras",
-      "Il a vieilli prématurément",
-      "Il est devenu très musclé"
+      "Sakamoto",
+      "Asakura",
+      "Mashimo",
+      "Shishiba"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-4"
   },
   {
-    "text": "Malgré son physique, que conserve Sakamoto ?",
+    "text": "Comment Taro se défend-il malgré les années passées loin de son ancien métier ?",
     "answers": [
-      "Ses compétences de combat exceptionnelles",
-      "Sa vitesse uniquement",
-      "Seulement sa mémoire",
-      "Rien du tout"
+      "Il a gardé ses réflexes de combat",
+      "Shin se bat à sa place",
+      "Il fait appel à l’Ordre",
+      "Il quitte le pays en secret"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-5"
   },
   {
-    "text": "Qui est Shin Asakura ?",
+    "text": "Quel ancien assassin devient employé de la supérette de Taro ?",
     "answers": [
-      "Un policier",
-      "Un ancien assassin devenu employé de Sakamoto",
-      "Le fils de Sakamoto",
-      "Le rival de Sakamoto"
+      "Yoichi Nagumo",
+      "Shin Asakura",
+      "Heisuke Mashimo",
+      "Kei Uzuki"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-6"
   },
   {
-    "text": "Quel pouvoir spécial possède Shin ?",
+    "text": "Quel pouvoir distingue Shin Asakura ?",
     "answers": [
-      "La régénération",
-      "La super force",
-      "L'invisibilité",
-      "La télépathie (lire dans les pensées)"
+      "Changer d’apparence",
+      "Se rendre invisible",
+      "Effacer les souvenirs",
+      "Lire les pensées"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-7"
   },
   {
     "text": "Comment s'appelle la femme de Sakamoto ?",
@@ -77,7 +84,8 @@
       "Hana Sakamoto",
       "Yuki Sakamoto"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-08"
   },
   {
     "text": "Qui est l'auteur du manga Sakamoto Days ?",
@@ -87,7 +95,8 @@
       "Yuto Suzuki",
       "Tatsuki Fujimoto"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-09"
   },
   {
     "text": "Dans quel magazine le manga est-il publié ?",
@@ -97,7 +106,8 @@
       "Weekly Shōnen Jump",
       "Young Jump"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-10"
   },
   {
     "text": "En quelle année la prépublication du manga Sakamoto Days a-t-elle commencé ?",
@@ -107,7 +117,8 @@
       "2020",
       "2021"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel studio produit l'anime Sakamoto Days ?",
@@ -117,127 +128,140 @@
       "A-1 Pictures",
       "MAPPA"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-12"
   },
   {
-    "text": "Quel est le style de combat de Sakamoto ?",
+    "text": "Qu’est-ce qui caractérise le style de combat de Sakamoto ?",
     "answers": [
-      "Uniquement les armes à feu",
-      "Improvisation avec tout objet du quotidien",
-      "Arts martiaux traditionnels uniquement",
-      "Explosifs"
+      "Il privilégie les armes de très longue portée",
+      "Il détourne des objets à portée de main",
+      "Il prépare des pièges avant chaque duel",
+      "Il utilise toujours les mêmes lames"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-13"
   },
   {
-    "text": "Quels objets Sakamoto utilise-t-il comme armes ?",
+    "text": "Qui conseille à Taro de revenir au métier d’assassin dans le premier épisode ?",
     "answers": [
-      "Des objets de supermarché (canettes, balais, etc.)",
-      "Des gadgets high-tech",
-      "Des épées uniquement",
-      "Des poisons"
+      "Shin Asakura",
+      "Heisuke Mashimo",
+      "Osaragi",
+      "Kashima"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-14"
   },
   {
-    "text": "Qui est Lu Xiaotang ?",
+    "text": "De quel milieu vient la famille de Lu Shaotang ?",
     "answers": [
-      "Un chef cuisinier",
-      "Le père de Shin",
-      "Un tueur chinois silencieux qui rejoint le groupe",
-      "Un policier infiltré"
+      "La police japonaise",
+      "Le renseignement militaire",
+      "La mafia chinoise",
+      "Le commerce de proximité"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-15"
   },
   {
-    "text": "Quelle est la particularité de Lu ?",
+    "text": "Qui poursuit Lu lors de sa première rencontre avec Taro et Shin dans l’anime ?",
     "answers": [
-      "Il communique principalement par gestes et dessins",
-      "Il parle énormément",
-      "Il est immortel",
-      "Il est aveugle"
+      "Deux assassins jumeaux",
+      "Deux membres de l’Ordre",
+      "Des policiers en civil",
+      "Les élèves d’une académie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-16"
   },
   {
-    "text": "Qui veut assassiner Sakamoto ?",
+    "text": "Quel nom porte le groupe d’élite des assassins de l’Association japonaise ?",
     "answers": [
-      "Le gouvernement",
-      "Sa femme",
-      "L'organisation des assassins (l'Ordre)",
-      "La police"
+      "Le Laboratoire",
+      "La JCC",
+      "L’Ordre",
+      "L’Équipe Sakamoto"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-17"
   },
   {
-    "text": "Pourquoi l'Ordre veut-il éliminer Sakamoto ?",
+    "text": "Où la famille Sakamoto est-elle prise pour cible après l’annonce de la prime dans l’anime ?",
     "answers": [
-      "Un ancien allié a mis sa tête à prix",
-      "Il a trahi un secret",
-      "Par jalousie",
-      "Il a volé de l'argent"
+      "Dans un parc d’attractions",
+      "Dans une gare",
+      "Dans une salle de cinéma",
+      "Dans un aquarium"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-18"
   },
   {
-    "text": "Quel personnage est un ancien camarade assassin devenu ennemi ?",
+    "text": "Quel assassin affronte Taro en tête-à-tête au parc d’attractions ?",
     "answers": [
-      "Heisuke",
+      "Kashima",
+      "Boiled",
       "Nagumo",
-      "Shin",
-      "Lu"
+      "Shishiba"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-19"
   },
   {
-    "text": "Quelle est la relation entre Sakamoto et Nagumo ?",
+    "text": "Dans quel cadre Nagumo et Sakamoto se sont-ils connus avant la retraite de Taro ?",
     "answers": [
-      "Inconnus",
-      "Anciens partenaires/rivaux devenus ennemis puis alliés",
-      "Frères",
-      "Père et fils"
+      "La gestion d’une supérette",
+      "La formation des assassins",
+      "La police de Tokyo",
+      "Un tournoi de quartier"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-20"
   },
   {
-    "text": "Quel est le ton général de Sakamoto Days ?",
+    "text": "Quel genre se mêle aux combats d’assassins dans Sakamoto Days ?",
     "answers": [
-      "Action comique avec des scènes intenses",
-      "Romance pure",
-      "Horreur",
-      "Sombre et réaliste"
+      "La comédie",
+      "Le western",
+      "Le récit historique",
+      "Le space opera"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-21"
   },
   {
-    "text": "À quel film/franchise le concept de Sakamoto Days est-il souvent comparé ?",
+    "text": "Quelle règle Taro a-t-il promise à Aoi de respecter ?",
     "answers": [
-      "Matrix",
-      "Mission Impossible",
-      "James Bond",
-      "John Wick"
+      "Ne jamais utiliser d’arme",
+      "Ne plus quitter le quartier",
+      "Ne parler à aucun assassin",
+      "Ne plus tuer"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-22"
   },
   {
-    "text": "Sakamoto parle-t-il beaucoup ?",
+    "text": "Qui travaille avec Heisuke pour combattre un adversaire invisible dans le Laboratoire ?",
     "answers": [
-      "Oui, il est très bavard",
-      "Seulement quand il combat",
-      "Il ne parle jamais",
-      "Non, il est plutôt silencieux et s'exprime par ses actions"
+      "Aoi",
+      "Hana",
+      "Nagumo",
+      "Shin"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-23"
   },
   {
-    "text": "Qu'est-ce qui motive Sakamoto à se battre à nouveau ?",
+    "text": "Qu’est-ce que Taro cherche avant tout à protéger lorsqu’il est rattrapé par son passé ?",
     "answers": [
-      "La vengeance",
-      "Protéger sa famille",
-      "L'ennui",
-      "L'argent"
+      "Son rang à l’Ordre",
+      "Sa famille",
+      "Un dossier de la JCC",
+      "Un contrat avec le Laboratoire"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-24"
   },
   {
     "text": "Quel est le nom de la fille de Sakamoto ?",
@@ -247,17 +271,19 @@
       "Aoi",
       "Yuki"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-25"
   },
   {
-    "text": "Quel est l'élément comique récurrent lié au physique de Sakamoto ?",
+    "text": "Dans quelle épreuve Taro et son équipe rencontrent-ils un tireur d’élite dans l’anime ?",
     "answers": [
-      "Il trébuche tout le temps",
-      "Il est allergique aux combats",
-      "Son corps obèse fait des mouvements impossibles d'agilité",
-      "Il dort pendant les batailles"
+      "Un examen de tir de la police",
+      "Un concours de pêche municipal",
+      "Un tournoi de survie du quartier",
+      "Un duel d’admission à l’Ordre"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-26"
   },
   {
     "text": "Quel personnage est un expert en déguisement ?",
@@ -267,47 +293,52 @@
       "Shin",
       "Sakamoto"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-27"
   },
   {
-    "text": "Quel est le rang de Sakamoto dans le classement des assassins ?",
+    "text": "Quel nom désigne l’association japonaise des assassins dans l’édition anglaise de VIZ ?",
     "answers": [
-      "Non classé",
-      "Moyen",
-      "Top 10",
-      "Numéro 1 légendaire"
+      "JCC",
+      "JSA",
+      "JDF",
+      "JAA"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-28"
   },
   {
-    "text": "Comment Sakamoto gère-t-il sa couverture de commerçant ?",
+    "text": "Qui affronte Kashima pendant l’infiltration du Laboratoire ?",
     "answers": [
-      "Très mal, tout le monde sait",
-      "Il ne s'en occupe pas",
-      "Sérieusement, il tient vraiment à son magasin",
-      "C'est un front pour du crime"
+      "Shin Asakura",
+      "Lu Shaotang",
+      "Taro Sakamoto",
+      "Heisuke Mashimo"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-29"
   },
   {
-    "text": "Quel type de scènes d'action Sakamoto Days est-il réputé avoir ?",
+    "text": "Quelle menace rend l’affrontement au Laboratoire difficile pour Shin et Heisuke ?",
     "answers": [
-      "Lentes et stratégiques",
-      "Très courtes",
-      "Principalement verbales",
-      "Des chorégraphies fluides et cinématiques"
+      "Le bâtiment est en feu",
+      "Leur adversaire lit leurs pensées",
+      "L’électricité de la salle est coupée",
+      "Leur adversaire est invisible"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-30"
   },
   {
-    "text": "Qui est Heisuke Mashimo ?",
+    "text": "Quelle est la spécialité de Heisuke Mashimo ?",
     "answers": [
-      "Un médecin allié",
-      "Un chef cuisinier",
-      "Un tueur pharmacien maître des poisons",
-      "Un flic corrompu"
+      "Le combat au sabre",
+      "Le déguisement",
+      "Le tir de précision",
+      "Le maniement des poisons"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-31"
   },
   {
     "text": "En quelle année l'anime Sakamoto Days a-t-il été diffusé ?",
@@ -317,117 +348,129 @@
       "2026",
       "2023"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-32"
   },
   {
-    "text": "Quel genre musical a été choisi pour l'ambiance de l'anime ?",
+    "text": "Quel surnom est aussi employé pour l’antagoniste Slur dans l’édition VIZ ?",
     "answers": [
-      "Du rock classique",
-      "De l'électro",
-      "Du hip-hop/funk dynamique",
-      "De la musique classique"
+      "K",
+      "Z",
+      "X",
+      "Zero"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-33"
   },
   {
-    "text": "Quelle est la devise de vie de Sakamoto après sa retraite ?",
+    "text": "Quel est le cadre de la vie de Taro après sa retraite ?",
     "answers": [
-      "Voyager le monde",
-      "Vivre tranquillement avec sa famille",
-      "Tuer ou être tué",
-      "Devenir le plus riche"
+      "Un internat pour assassins",
+      "Un commerce de quartier",
+      "Une base militaire",
+      "Un laboratoire secret"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-3"
   },
   {
-    "text": "Quel personnage féminin est une tueuse redoutable alliée de Sakamoto ?",
+    "text": "Quelle employée de la supérette est enlevée pendant que Taro et Shin sont absents dans l’anime ?",
     "answers": [
+      "Aoi Sakamoto",
+      "Hana Sakamoto",
       "Osaragi",
-      "Uzuki",
-      "Shishiba",
-      "Lucy"
+      "Lu Shaotang"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-35"
   },
   {
-    "text": "Combien de tomes le manga compte-t-il environ (mi-2025) ?",
+    "text": "Dans quel type de bâtiment Taro et Shin s’introduisent-ils pour sauver Lu ?",
     "answers": [
-      "5",
-      "20+",
-      "15+",
-      "10"
+      "Un tribunal",
+      "Une banque",
+      "Un laboratoire",
+      "Une caserne"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-36"
   },
   {
-    "text": "Le manga Sakamoto Days a-t-il remporté des prix ?",
+    "text": "Qui est l’antagoniste qui menace la famille de Taro dans le tome 7 de l’édition VIZ ?",
     "answers": [
-      "Oui, notamment au Next Manga Award",
-      "Non",
-      "Il a été nominé mais n'a rien gagné",
-      "Seulement des prix internationaux"
+      "X",
+      "Boiled",
+      "Nagumo",
+      "Hyo"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-33"
   },
   {
-    "text": "Quel objet du quotidien Sakamoto utilise-t-il dans un combat célèbre du manga ?",
+    "text": "Quel jeu constitue une étape de l’examen de transfert à la JCC dans le tome 8 de l’édition VIZ ?",
     "answers": [
-      "Un téléphone",
-      "Un rouleau de PQ / des produits de supermarché",
-      "Une chaise",
-      "Un stylo"
+      "Une épreuve d’orientation",
+      "Un jeu d’attrape-queues",
+      "Un concours de tir sur cible",
+      "Une course d’obstacles en solo"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-38"
   },
   {
-    "text": "Quelle est la réaction habituelle des ennemis qui découvrent que le gros commerçant est Sakamoto ?",
+    "text": "Lors de l’examen de transfert à la JCC, contre quel mentor Shin se retrouve-t-il en compétition ?",
     "answers": [
-      "Indifférence",
-      "Ils rient",
-      "Terreur absolue",
-      "Admiration"
+      "Heisuke Mashimo",
+      "Nagumo",
+      "Taro Sakamoto",
+      "Hyo"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-39"
   },
   {
-    "text": "Quel est le JCC (JAM Criminal Community) dans le manga ?",
+    "text": "À quoi la JCC sert-elle dans Sakamoto Days ?",
     "answers": [
-      "Un jeu de cartes",
-      "Une école de combat",
-      "Un réseau social pour criminels",
-      "L'organisation secrète des assassins professionnels"
+      "À gérer les affaires du quartier",
+      "À fabriquer les armes de l’Ordre",
+      "À recueillir les plaintes de civils",
+      "À former des assassins"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-40"
   },
   {
-    "text": "Quelle est la particularité des dessins de Yuto Suzuki ?",
+    "text": "Après le combat au Laboratoire, où le groupe va-t-il pour se détendre dans l’anime ?",
     "answers": [
-      "Panneaux d'action très dynamiques et cinématographiques",
-      "Réalisme photographique",
-      "Style minimaliste",
-      "Style chibi"
+      "Dans des bains publics",
+      "Dans un cinéma",
+      "Dans un musée",
+      "Dans un café de quartier"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-41"
   },
   {
-    "text": "Qui est Slur dans l'histoire ?",
+    "text": "Quel est le nom de famille de Shin ?",
     "answers": [
-      "Un fantôme",
-      "Un allié de Sakamoto",
-      "Le grand antagoniste qui menace l'équilibre du monde des assassins",
-      "Le fils de Nagumo"
+      "Mashimo",
+      "Sakamoto",
+      "Asakura",
+      "Uzuki"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-42"
   },
   {
-    "text": "Sakamoto utilise-t-il des armes à feu ?",
+    "text": "Quel membre de l’Ordre se distingue par sa maîtrise des déguisements ?",
     "answers": [
-      "Uniquement des armes à feu",
-      "Oui, mais il préfère les objets improvisés",
-      "Jamais",
-      "Seulement des couteaux"
+      "Hyo",
+      "Nagumo",
+      "Takamura",
+      "Shishiba"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-27"
   },
   {
     "text": "Comment Sakamoto maigrit-il temporairement dans certains arcs ?",
@@ -437,66 +480,73 @@
       "Il ne maigrit jamais",
       "Avec un régime"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-44"
   },
   {
-    "text": "Quelle est l'apparence de Sakamoto quand il est mince ?",
+    "text": "Que cherchent les membres de l’Ordre dans l’épisode « Hard-Boiled » ?",
     "answers": [
-      "Effrayant",
-      "Extrêmement beau et charismatique",
-      "Ordinaire",
-      "Identique"
+      "La cachette de Lu",
+      "L’auteur d’une série de meurtres d’assassins",
+      "L’organisateur du tournoi de survie",
+      "Le propriétaire du Laboratoire"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-45"
   },
   {
-    "text": "Quel est le rapport entre l'anime et les ventes du manga ?",
+    "text": "Quel personnage rejoint Taro pour retrouver Lu après son enlèvement dans l’anime ?",
     "answers": [
-      "Le manga a été arrêté",
-      "Aucun impact",
-      "L'anime a fait baisser les ventes",
-      "L'annonce de l'anime a boosté les ventes massivement"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quelle scène du chapitre 1 établit immédiatement le ton du manga ?",
-    "answers": [
-      "Une discussion philosophique",
-      "Une scène romantique",
-      "Un flashback de son passé",
-      "Sakamoto neutralisant des tueurs dans son konbini"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Comment Shin est-il arrivé chez Sakamoto ?",
-    "answers": [
-      "Via une annonce d'emploi",
-      "Ils sont amis d'enfance",
-      "Par hasard",
-      "Envoyé pour le tuer, il finit par travailler pour lui"
-    ],
-    "correct": 3
-  },
-  {
-    "text": "Quel personnage sert souvent de comic relief avec ses réactions exagérées ?",
-    "answers": [
-      "Lu",
-      "Nagumo",
-      "Sakamoto",
+      "Boiled",
+      "Hyo",
+      "Osaragi",
       "Shin"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-46"
   },
   {
-    "text": "Pourquoi Sakamoto Days est-il considéré comme un des meilleurs mangas récents du Jump ?",
+    "text": "Quel membre de la famille tient la supérette avec Taro ?",
     "answers": [
-      "Son mystère",
-      "Ses scènes d'action innovantes et son humour unique",
-      "Ses dessins minimalistes",
-      "Son histoire romantique"
+      "Kashima",
+      "Nagumo",
+      "Heisuke",
+      "Aoi"
     ],
-    "correct": 1
+    "correct": 3,
+    "fact": "revision-47"
+  },
+  {
+    "text": "Qu’est-ce qui déclenche le retour d’assassins à la poursuite de Taro après sa retraite ?",
+    "answers": [
+      "Une dette auprès de la JCC",
+      "Un contrat signé par Aoi",
+      "La disparition du chef de l’Ordre",
+      "Une prime sur sa tête"
+    ],
+    "correct": 3,
+    "fact": "revision-18"
+  },
+  {
+    "text": "Quel montant l’équipe de Taro espère gagner au tournoi de survie du quartier ?",
+    "answers": [
+      "Dix mille yens",
+      "Cent mille yens",
+      "Dix millions de yens",
+      "Un million de yens"
+    ],
+    "correct": 3,
+    "fact": "revision-49"
+  },
+  {
+    "text": "En quel mois la première partie de l’anime a-t-elle débuté en 2025 ?",
+    "answers": [
+      "Avril",
+      "Janvier",
+      "Juillet",
+      "Octobre"
+    ],
+    "correct": 1,
+    "fact": "legacy-32"
   }
 ]

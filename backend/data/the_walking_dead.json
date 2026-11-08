@@ -7,7 +7,8 @@
       "Pompier",
       "Militaire"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quelle arme Daryl Dixon utilise-t-il souvent ?",
@@ -17,7 +18,8 @@
       "Une batte",
       "Un revolver doré"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-02"
   },
   {
     "text": "Quel personnage correspond à cette description : ancien adjoint du shérif devenu chef du groupe ?",
@@ -27,17 +29,19 @@
       "Rick Grimes",
       "Glenn Rhee"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
-    "text": "Quelle description correspond à Rick Grimes ?",
+    "text": "Quel organisme Rick et son groupe espèrent-ils trouver opérationnel à Atlanta à la fin de la saison 1 ?",
     "answers": [
-      "fils de Rick reconnaissable à son chapeau de shérif",
-      "épouse de Rick et mère de Carl",
-      "ancien partenaire de Rick devenu son rival",
-      "ancien adjoint du shérif devenu chef du groupe"
+      "La FEMA",
+      "Le FBI",
+      "La NASA",
+      "Le CDC"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-4"
   },
   {
     "text": "Quel personnage correspond à cette description : fils de Rick reconnaissable à son chapeau de shérif ?",
@@ -47,7 +51,8 @@
       "Maggie Greene",
       "Michonne"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quelle description correspond à Carl Grimes ?",
@@ -57,7 +62,8 @@
       "fermier et vétérinaire père de Maggie",
       "dirigeant autoritaire de Woodbury"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel personnage correspond à cette description : épouse de Rick et mère de Carl ?",
@@ -67,7 +73,8 @@
       "Lori Grimes",
       "Morgan Jones"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quelle description correspond à Lori Grimes ?",
@@ -77,7 +84,8 @@
       "survivant prétendant d’abord connaître un remède",
       "épouse de Rick et mère de Carl"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-07"
   },
   {
     "text": "Quel personnage correspond à cette description : ancien partenaire de Rick devenu son rival ?",
@@ -87,17 +95,19 @@
       "Eugene Porter",
       "Sasha Williams"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
-    "text": "Quelle description correspond à Shane Walsh ?",
+    "text": "À quel endroit les panneaux promettant un refuge conduisent-ils le groupe de Rick à la fin de la saison 4 ?",
     "answers": [
-      "cheffe des Chuchoteurs et mère de Lydia",
-      "ancien partenaire de Rick devenu son rival",
-      "géant masqué et bras droit d'Alpha",
-      "fils de Rick reconnaissable à son chapeau de shérif"
+      "Alexandria",
+      "Terminus",
+      "Woodbury",
+      "Le Royaume"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-10"
   },
   {
     "text": "Quel personnage correspond à cette description : survivant expert à l’arbalète ?",
@@ -107,7 +117,8 @@
       "Daryl Dixon",
       "Beta"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quelle description correspond à Daryl Dixon ?",
@@ -117,7 +128,8 @@
       "combattante utilisant un katana",
       "survivant expert à l’arbalète"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel personnage correspond à cette description : survivante devenue une combattante redoutable ?",
@@ -127,7 +139,8 @@
       "Shane Walsh",
       "Daryl Dixon"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quelle description correspond à Carol Peletier ?",
@@ -137,7 +150,8 @@
       "dirigeant du Royaume accompagné de la tigresse Shiva",
       "survivante arrivée avec Abraham et Eugene"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-13"
   },
   {
     "text": "Quel personnage correspond à cette description : ancien livreur ayant rencontré Rick à Atlanta ?",
@@ -147,7 +161,8 @@
       "Glenn Rhee",
       "Le Gouverneur"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quelle description correspond à Glenn Rhee ?",
@@ -157,7 +172,8 @@
       "cheffe des Chuchoteurs et mère de Lydia",
       "ancien livreur ayant rencontré Rick à Atlanta"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel personnage correspond à cette description : fille de Hershel et compagne de Glenn ?",
@@ -167,7 +183,8 @@
       "Ezekiel",
       "Rosita Espinosa"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quelle description correspond à Maggie Greene ?",
@@ -177,7 +194,8 @@
       "survivant expert à l’arbalète",
       "survivante devenue une combattante redoutable"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel personnage correspond à cette description : combattante utilisant un katana ?",
@@ -187,7 +205,8 @@
       "Michonne",
       "Aaron"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quelle description correspond à Michonne ?",
@@ -197,7 +216,8 @@
       "premier survivant rencontré par Rick après son réveil",
       "combattante utilisant un katana"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-19"
   },
   {
     "text": "Quel personnage correspond à cette description : fermier et vétérinaire père de Maggie ?",
@@ -207,7 +227,8 @@
       "Rick Grimes",
       "Carl Grimes"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quelle description correspond à Hershel Greene ?",
@@ -217,7 +238,8 @@
       "prêtre ayant survécu enfermé dans son église",
       "recruteur ayant conduit le groupe vers Alexandria"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel personnage correspond à cette description : dirigeant autoritaire de Woodbury ?",
@@ -227,7 +249,8 @@
       "Le Gouverneur",
       "Glenn Rhee"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quelle description correspond au Gouverneur ?",
@@ -237,7 +260,8 @@
       "ancien partenaire de Rick devenu son rival",
       "dirigeant autoritaire de Woodbury"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel personnage correspond à cette description : chef des Sauveurs armé de la batte Lucille ?",
@@ -247,7 +271,8 @@
       "Le Gouverneur",
       "Judith Grimes"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quelle description correspond à Negan ?",
@@ -257,7 +282,8 @@
       "fermier et vétérinaire père de Maggie",
       "dirigeant autoritaire de Woodbury"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-25"
   },
   {
     "text": "Quel personnage correspond à cette description : fille élevée par Rick et Michonne ?",
@@ -267,7 +293,8 @@
       "Judith Grimes",
       "Eugene Porter"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quelle description correspond à Judith Grimes ?",
@@ -277,7 +304,8 @@
       "sœur de Tyreese et tireuse d’élite",
       "fille élevée par Rick et Michonne"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel personnage correspond à cette description : premier survivant rencontré par Rick après son réveil ?",
@@ -287,7 +315,8 @@
       "Paul Rovia",
       "Alpha"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quelle description correspond à Morgan Jones ?",
@@ -297,7 +326,8 @@
       "ancien adjoint du shérif devenu chef du groupe",
       "fils de Rick reconnaissable à son chapeau de shérif"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel personnage correspond à cette description : dirigeant du Royaume accompagné de la tigresse Shiva ?",
@@ -307,7 +337,8 @@
       "Ezekiel",
       "Shane Walsh"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quelle description correspond à Ezekiel ?",
@@ -317,7 +348,8 @@
       "combattante utilisant un katana",
       "dirigeant du Royaume accompagné de la tigresse Shiva"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-31"
   },
   {
     "text": "Quel personnage correspond à cette description : survivante arrivée avec Abraham et Eugene ?",
@@ -327,7 +359,8 @@
       "Maggie Greene",
       "Michonne"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quelle description correspond à Rosita Espinosa ?",
@@ -337,7 +370,8 @@
       "dirigeant du Royaume accompagné de la tigresse Shiva",
       "ancien sergent déterminé à conduire Eugene à Washington"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel personnage correspond à cette description : ancien sergent déterminé à conduire Eugene à Washington ?",
@@ -347,7 +381,8 @@
       "Abraham Ford",
       "Morgan Jones"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quelle description correspond à Abraham Ford ?",
@@ -357,7 +392,8 @@
       "géant masqué et bras droit d’Alpha",
       "ancien sergent déterminé à conduire Eugene à Washington"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel personnage correspond à cette description : survivant prétendant d’abord connaître un remède ?",
@@ -367,7 +403,8 @@
       "Sasha Williams",
       "Gabriel Stokes"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quelle description correspond à Eugene Porter ?",
@@ -377,7 +414,8 @@
       "survivante devenue une combattante redoutable",
       "ancien livreur ayant rencontré Rick à Atlanta"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-37"
   },
   {
     "text": "Quel personnage correspond à cette description : sœur de Tyreese et tireuse d’élite ?",
@@ -387,7 +425,8 @@
       "Sasha Williams",
       "Rick Grimes"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quelle description correspond à Sasha Williams ?",
@@ -397,7 +436,8 @@
       "premier survivant rencontré par Rick après son réveil",
       "sœur de Tyreese et tireuse d’élite"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel personnage correspond à cette description : prêtre ayant survécu enfermé dans son église ?",
@@ -407,7 +447,8 @@
       "Daryl Dixon",
       "Carol Peletier"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quelle description correspond à Gabriel Stokes ?",
@@ -417,7 +458,8 @@
       "recruteur ayant conduit le groupe vers Alexandria",
       "éclaireur surnommé Jesus"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel personnage correspond à cette description : recruteur ayant conduit le groupe vers Alexandria ?",
@@ -427,7 +469,8 @@
       "Aaron",
       "Le Gouverneur"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quelle description correspond à Aaron ?",
@@ -437,7 +480,8 @@
       "survivant expert à l’arbalète",
       "recruteur ayant conduit le groupe vers Alexandria"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-43"
   },
   {
     "text": "Quel personnage correspond à cette description : éclaireur surnommé Jesus ?",
@@ -447,7 +491,8 @@
       "Ezekiel",
       "Rosita Espinosa"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quelle description correspond à Paul Rovia ?",
@@ -457,7 +502,8 @@
       "dirigeant autoritaire de Woodbury",
       "chef des Sauveurs armé de la batte Lucille"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel personnage correspond à cette description : cheffe des Chuchoteurs et mère de Lydia ?",
@@ -467,7 +513,8 @@
       "Alpha",
       "Aaron"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quelle description correspond à Alpha ?",
@@ -477,7 +524,8 @@
       "sœur de Tyreese et tireuse d’élite",
       "cheffe des Chuchoteurs et mère de Lydia"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel personnage correspond à cette description : géant masqué et bras droit d’Alpha ?",
@@ -487,7 +535,8 @@
       "Carl Grimes",
       "Lori Grimes"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quelle description correspond à Beta ?",
@@ -497,6 +546,7 @@
       "fils de Rick reconnaissable à son chapeau de shérif",
       "épouse de Rick et mère de Carl"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
   }
 ]

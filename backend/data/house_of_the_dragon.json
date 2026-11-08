@@ -7,7 +7,8 @@
       "Les Lannister",
       "Les Baratheon"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel conflit civil constitue le cœur de la série ?",
@@ -17,7 +18,8 @@
       "La Rébellion de Robert",
       "La Longue Nuit"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-02"
   },
   {
     "text": "Quel personnage correspond à cette description : princesse désignée héritière du Trône de Fer par Viserys ?",
@@ -27,17 +29,19 @@
       "Rhaenyra Targaryen",
       "Alicent Hightower"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
-    "text": "Quelle description correspond à Rhaenyra Targaryen ?",
+    "text": "Quel siège ancestral est associé à la maison Velaryon ?",
     "answers": [
-      "frère de Viserys et époux de Rhaenyra",
-      "roi dont la succession déclenche la guerre civile",
-      "seconde épouse de Viserys et mère d’Aegon II",
-      "princesse désignée héritière du Trône de Fer par Viserys"
+      "Peyredragon",
+      "Accalmie",
+      "Harrenhal",
+      "Lamarck"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-4"
   },
   {
     "text": "Quel personnage correspond à cette description : frère de Viserys et époux de Rhaenyra ?",
@@ -47,7 +51,8 @@
       "Helaena Targaryen",
       "Jacaerys Velaryon"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quelle description correspond à Daemon Targaryen ?",
@@ -57,7 +62,8 @@
       "fils de Rhaenyra tué au-dessus d’Accalmie",
       "princesse surnommée la Reine qui ne fut jamais"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel personnage correspond à cette description : roi dont la succession déclenche la guerre civile ?",
@@ -67,7 +73,8 @@
       "Viserys I Targaryen",
       "Mysaria"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quelle description correspond à Viserys I Targaryen ?",
@@ -77,7 +84,8 @@
       "fille de Corlys et ancienne cavalière de Vhagar",
       "roi dont la succession déclenche la guerre civile"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-07"
   },
   {
     "text": "Quel personnage correspond à cette description : seconde épouse de Viserys et mère d’Aegon II ?",
@@ -87,17 +95,19 @@
       "Laena Velaryon",
       "Baela Targaryen"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
-    "text": "Quelle description correspond à Alicent Hightower ?",
+    "text": "De quelle couleur est la faction d’Alicent Hightower pendant la Danse des Dragons ?",
     "answers": [
-      "fils illégitime de Corlys Velaryon devenu cavalier de Fumée-des-Mers",
-      "seconde épouse de Viserys et mère d’Aegon II",
-      "forgeron revendiquant le dragon Vermithor",
-      "princesse désignée héritière du Trône de Fer par Viserys"
+      "Noire",
+      "Verte",
+      "Rouge",
+      "Dorée"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-10"
   },
   {
     "text": "Quel personnage correspond à cette description : Main du Roi et père d’Alicent ?",
@@ -107,7 +117,8 @@
       "Otto Hightower",
       "Hugh Marteau"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quelle description correspond à Otto Hightower ?",
@@ -117,7 +128,8 @@
       "fils aîné de Rhaenyra et héritier des Noirs",
       "Main du Roi et père d’Alicent"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel personnage correspond à cette description : fils d’Alicent couronné roi par les Verts ?",
@@ -127,7 +139,8 @@
       "Alicent Hightower",
       "Otto Hightower"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quelle description correspond à Aegon II Targaryen ?",
@@ -137,7 +150,8 @@
       "conseiller manipulateur surnommé le Pied-bot",
       "chevalier considéré comme le père biologique des premiers fils de Rhaenyra"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-13"
   },
   {
     "text": "Quel personnage correspond à cette description : prince borgne chevauchant Vhagar ?",
@@ -147,7 +161,8 @@
       "Aemond Targaryen",
       "Rhaenys Targaryen"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quelle description correspond à Aemond Targaryen ?",
@@ -157,7 +172,8 @@
       "fils illégitime de Corlys Velaryon devenu cavalier de Fumée-des-Mers",
       "prince borgne chevauchant Vhagar"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel personnage correspond à cette description : reine rêveuse et sœur-épouse d’Aegon II ?",
@@ -167,7 +183,8 @@
       "Larys Strong",
       "Harwin Strong"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quelle description correspond à Helaena Targaryen ?",
@@ -177,7 +194,8 @@
       "Main du Roi et père d’Alicent",
       "fils d’Alicent couronné roi par les Verts"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel personnage correspond à cette description : fils aîné de Rhaenyra et héritier des Noirs ?",
@@ -187,7 +205,8 @@
       "Jacaerys Velaryon",
       "Erryk Cargyll"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quelle description correspond à Jacaerys Velaryon ?",
@@ -197,7 +216,8 @@
       "ancienne maîtresse de Daemon devenue maîtresse des renseignements",
       "fils aîné de Rhaenyra et héritier des Noirs"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-19"
   },
   {
     "text": "Quel personnage correspond à cette description : fils de Rhaenyra tué au-dessus d’Accalmie ?",
@@ -207,7 +227,8 @@
       "Rhaenyra Targaryen",
       "Daemon Targaryen"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quelle description correspond à Lucerys Velaryon ?",
@@ -217,7 +238,8 @@
       "fille de Daemon et Laena élevée dans le Val",
       "garde royal ayant rejoint Rhaenyra"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel personnage correspond à cette description : princesse surnommée la Reine qui ne fut jamais ?",
@@ -227,7 +249,8 @@
       "Rhaenys Targaryen",
       "Aemond Targaryen"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quelle description correspond à Rhaenys Targaryen ?",
@@ -237,7 +260,8 @@
       "seconde épouse de Viserys et mère d’Aegon II",
       "princesse surnommée la Reine qui ne fut jamais"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel personnage correspond à cette description : Seigneur des Marées surnommé le Serpent de Mer ?",
@@ -247,7 +271,8 @@
       "Rhaenys Targaryen",
       "Criston Cole"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quelle description correspond à Corlys Velaryon ?",
@@ -257,7 +282,8 @@
       "fils de Rhaenyra tué au-dessus d’Accalmie",
       "princesse surnommée la Reine qui ne fut jamais"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-25"
   },
   {
     "text": "Quel personnage correspond à cette description : ancien garde de Rhaenyra devenu partisan des Verts ?",
@@ -267,7 +293,8 @@
       "Criston Cole",
       "Laena Velaryon"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quelle description correspond à Criston Cole ?",
@@ -277,7 +304,8 @@
       "fille de Daemon et Laena, cavalière de Danselune",
       "ancien garde de Rhaenyra devenu partisan des Verts"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel personnage correspond à cette description : ancienne maîtresse de Daemon devenue maîtresse des renseignements ?",
@@ -287,7 +315,8 @@
       "Arryk Cargyll",
       "Addam de Carène"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quelle description correspond à Mysaria ?",
@@ -297,7 +326,8 @@
       "princesse désignée héritière du Trône de Fer par Viserys",
       "frère de Viserys et époux de Rhaenyra"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel personnage correspond à cette description : conseiller manipulateur surnommé le Pied-bot ?",
@@ -307,7 +337,8 @@
       "Larys Strong",
       "Alicent Hightower"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quelle description correspond à Larys Strong ?",
@@ -317,7 +348,8 @@
       "fils aîné de Rhaenyra et héritier des Noirs",
       "conseiller manipulateur surnommé le Pied-bot"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-31"
   },
   {
     "text": "Quel personnage correspond à cette description : chevalier considéré comme le père biologique des premiers fils de Rhaenyra ?",
@@ -327,7 +359,8 @@
       "Helaena Targaryen",
       "Jacaerys Velaryon"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quelle description correspond à Harwin Strong ?",
@@ -337,7 +370,8 @@
       "conseiller manipulateur surnommé le Pied-bot",
       "premier époux de Rhaenyra et cavalier d’Aquaflamme"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel personnage correspond à cette description : premier époux de Rhaenyra et cavalier de Fumée-des-Mers ?",
@@ -347,7 +381,8 @@
       "Laenor Velaryon",
       "Mysaria"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quelle description correspond à Laenor Velaryon ?",
@@ -357,7 +392,8 @@
       "forgeron revendiquant le dragon Vermithor",
       "premier époux de Rhaenyra et cavalier de Fumée-des-Mers"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel personnage correspond à cette description : fille de Corlys et ancienne cavalière de Vhagar ?",
@@ -367,7 +403,8 @@
       "Baela Targaryen",
       "Rhaena Targaryen"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quelle description correspond à Laena Velaryon ?",
@@ -377,7 +414,8 @@
       "fils d’Alicent couronné roi par les Verts",
       "prince borgne chevauchant Vhagar"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-37"
   },
   {
     "text": "Quel personnage correspond à cette description : fille de Daemon et Laena, cavalière de Danselune ?",
@@ -387,7 +425,8 @@
       "Baela Targaryen",
       "Rhaenyra Targaryen"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quelle description correspond à Baela Targaryen ?",
@@ -397,7 +436,8 @@
       "ancienne maîtresse de Daemon devenue maîtresse des renseignements",
       "fille de Daemon et Laena, cavalière de Danselune"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel personnage correspond à cette description : fille de Daemon et Laena, sœur jumelle de Baela ?",
@@ -407,7 +447,8 @@
       "Otto Hightower",
       "Aegon II Targaryen"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quelle description correspond à Rhaena Targaryen ?",
@@ -417,7 +458,8 @@
       "garde royal ayant rejoint Rhaenyra",
       "jumeau d’Erryk resté fidèle aux Verts"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel personnage correspond à cette description : garde royal ayant rejoint Rhaenyra ?",
@@ -427,7 +469,8 @@
       "Erryk Cargyll",
       "Rhaenys Targaryen"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quelle description correspond à Erryk Cargyll ?",
@@ -437,7 +480,8 @@
       "Main du Roi et père d’Alicent",
       "garde royal ayant rejoint Rhaenyra"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-43"
   },
   {
     "text": "Quel personnage correspond à cette description : jumeau d’Erryk resté fidèle aux Verts ?",
@@ -447,7 +491,8 @@
       "Larys Strong",
       "Harwin Strong"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quelle description correspond à Arryk Cargyll ?",
@@ -457,7 +502,8 @@
       "princesse surnommée la Reine qui ne fut jamais",
       "Seigneur des Marées surnommé le Serpent de Mer"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel personnage correspond à cette description : fils illégitime de Corlys Velaryon devenu cavalier de Fumée-des-Mers ?",
@@ -467,7 +513,8 @@
       "Addam de Carène",
       "Erryk Cargyll"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quelle description correspond à Addam de Carène ?",
@@ -477,7 +524,8 @@
       "fille de Daemon et Laena, cavalière de Danselune",
       "fils illégitime de Corlys Velaryon devenu cavalier de Fumée-des-Mers"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel personnage correspond à cette description : forgeron revendiquant le dragon Vermithor ?",
@@ -487,7 +535,8 @@
       "Daemon Targaryen",
       "Viserys I Targaryen"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quelle description correspond à Hugh Marteau ?",
@@ -497,6 +546,7 @@
       "frère de Viserys et époux de Rhaenyra",
       "roi dont la succession déclenche la guerre civile"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
   }
 ]

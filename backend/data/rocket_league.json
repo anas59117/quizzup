@@ -7,7 +7,8 @@
       "Le tennis",
       "Le baseball"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel studio a développé Rocket League ?",
@@ -17,486 +18,535 @@
       "Rockstar Games",
       "Rare"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-02"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : voiture emblématique visible sur le logo et très utilisée en compétition ?",
+    "text": "Quel élément correspond à cette description : voiture emblématique visible sur le logo et très utilisée en compétition ?",
     "answers": [
       "Dominus",
       "Soccar",
       "Octane",
       "Snow Day"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à Octane ?",
+    "text": "Quelle description correspond à Octane ?",
     "answers": [
       "carrosserie cubique partageant la hitbox de l’Octane",
       "mode ajoutant des pouvoirs aléatoires comme le grappin",
       "arène urbaine futuriste aux enseignes lumineuses",
       "voiture emblématique visible sur le logo et très utilisée en compétition"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient Octane ?",
+    "text": "À quelle catégorie appartient Octane ?",
     "answers": [
       "Carrosserie",
       "Mode standard",
       "Arène",
       "Technique avancée"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : carrosserie longue et plate appréciée pour les frappes puissantes ?",
+    "text": "Quel élément correspond à cette description : carrosserie longue et plate appréciée pour les frappes puissantes ?",
     "answers": [
       "Fennec",
       "Dominus",
       "Rumble",
       "Neo Tokyo"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-06"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à Dominus ?",
+    "text": "Quelle description correspond à Dominus ?",
     "answers": [
       "carrosserie basse donnant son nom à une famille de hitbox",
       "mode où il faut endommager le sol adverse avec une balle chargée",
       "carrosserie longue et plate appréciée pour les frappes puissantes",
       "stade conçu comme une grande enceinte de finale"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-06"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient Dominus ?",
+    "text": "À quelle catégorie appartient Dominus ?",
     "answers": [
       "Mode standard",
       "Arène",
       "Technique avancée",
       "Carrosserie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-08"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : carrosserie cubique partageant la hitbox de l’Octane ?",
+    "text": "Quel élément correspond à cette description : carrosserie cubique partageant la hitbox de l’Octane ?",
     "answers": [
       "Fennec",
       "Breakout",
       "Dropshot",
       "Champions Field"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à Fennec ?",
+    "text": "Quelle description correspond à Fennec ?",
     "answers": [
       "véhicule de type fourgon avec une hitbox haute",
       "carrosserie cubique partageant la hitbox de l’Octane",
       "mode inspiré du basketball avec des paniers surélevés",
       "l’un des stades classiques du jeu"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient Fennec ?",
+    "text": "À quelle catégorie appartient Fennec ?",
     "answers": [
       "Mode standard",
       "Arène",
       "Carrosserie",
       "Technique avancée"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : carrosserie basse donnant son nom à une famille de hitbox ?",
+    "text": "Quel élément correspond à cette description : carrosserie basse donnant son nom à une famille de hitbox ?",
     "answers": [
       "Merc",
       "Hoops",
       "DFH Stadium",
       "Breakout"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-12"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à Breakout ?",
+    "text": "Quelle description correspond à Breakout ?",
     "answers": [
       "carrosserie basse donnant son nom à une famille de hitbox",
       "mode principal inspiré du football automobile",
       "mode utilisant un palet à la place du ballon",
       "arène classique entourée de collines"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-12"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient Breakout ?",
+    "text": "À quelle catégorie appartient Breakout ?",
     "answers": [
       "Mode standard",
       "Carrosserie",
       "Arène",
       "Technique avancée"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-14"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : véhicule de type fourgon avec une hitbox haute ?",
+    "text": "Quel élément correspond à cette description : véhicule de type fourgon avec une hitbox haute ?",
     "answers": [
       "Soccar",
       "Snow Day",
       "Merc",
       "Mannfield"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à Merc ?",
+    "text": "Quelle description correspond à Merc ?",
     "answers": [
       "mode ajoutant des pouvoirs aléatoires comme le grappin",
       "arène urbaine futuriste aux enseignes lumineuses",
       "mécanique de tir utilisant une rotation arrière particulière",
       "véhicule de type fourgon avec une hitbox haute"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient Merc ?",
+    "text": "À quelle catégorie appartient Merc ?",
     "answers": [
       "Carrosserie",
       "Mode standard",
       "Arène",
       "Technique avancée"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : mode principal inspiré du football automobile ?",
+    "text": "Quel élément correspond à cette description : mode principal inspiré du football automobile ?",
     "answers": [
       "Rumble",
       "Soccar",
       "Neo Tokyo",
       "Musty Flick"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-18"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à Soccar ?",
+    "text": "Quelle description correspond à Soccar ?",
     "answers": [
       "mode où il faut endommager le sol adverse avec une balle chargée",
       "stade conçu comme une grande enceinte de finale",
       "mode principal inspiré du football automobile",
       "technique qui redonne un saut après contact des quatre roues avec la balle"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-18"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient Soccar ?",
+    "text": "À quelle catégorie appartient Soccar ?",
     "answers": [
       "Carrosserie",
       "Arène",
       "Technique avancée",
       "Mode standard"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-20"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : mode ajoutant des pouvoirs aléatoires comme le grappin ?",
+    "text": "Quel élément correspond à cette description : mode ajoutant des pouvoirs aléatoires comme le grappin ?",
     "answers": [
       "Rumble",
       "Dropshot",
       "Champions Field",
       "Flip Reset"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à Rumble ?",
+    "text": "Quelle description correspond à Rumble ?",
     "answers": [
       "mode inspiré du basketball avec des paniers surélevés",
       "mode ajoutant des pouvoirs aléatoires comme le grappin",
       "l’un des stades classiques du jeu",
       "voiture emblématique visible sur le logo et très utilisée en compétition"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient Rumble ?",
+    "text": "À quelle catégorie appartient Rumble ?",
     "answers": [
       "Carrosserie",
       "Arène",
-      "Mode extra",
+      "Mode alternatif",
       "Technique avancée"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : mode où il faut endommager le sol adverse avec une balle chargée ?",
+    "text": "Quel élément correspond à cette description : mode où il faut endommager le sol adverse avec une balle chargée ?",
     "answers": [
       "Hoops",
       "DFH Stadium",
       "Octane",
       "Dropshot"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-24"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à Dropshot ?",
+    "text": "Quelle description correspond à Dropshot ?",
     "answers": [
       "mode où il faut endommager le sol adverse avec une balle chargée",
       "mode utilisant un palet à la place du ballon",
       "arène classique entourée de collines",
       "carrosserie longue et plate appréciée pour les frappes puissantes"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-24"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient Dropshot ?",
+    "text": "À quelle catégorie appartient Dropshot ?",
     "answers": [
       "Carrosserie",
-      "Mode extra",
+      "Mode alternatif",
       "Arène",
       "Technique avancée"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-26"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : mode inspiré du basketball avec des paniers surélevés ?",
+    "text": "Quel élément correspond à cette description : mode inspiré du basketball avec des paniers surélevés ?",
     "answers": [
       "Snow Day",
       "Mannfield",
       "Hoops",
       "Dominus"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à Hoops ?",
+    "text": "Quelle description correspond à Hoops ?",
     "answers": [
       "arène urbaine futuriste aux enseignes lumineuses",
       "mécanique de tir utilisant une rotation arrière particulière",
       "carrosserie cubique partageant la hitbox de l’Octane",
       "mode inspiré du basketball avec des paniers surélevés"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient Hoops ?",
+    "text": "À quelle catégorie appartient Hoops ?",
     "answers": [
-      "Mode extra",
+      "Mode alternatif",
       "Carrosserie",
       "Arène",
       "Technique avancée"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : mode utilisant un palet à la place du ballon ?",
+    "text": "Quel élément correspond à cette description : mode utilisant un palet à la place du ballon ?",
     "answers": [
       "Neo Tokyo",
       "Snow Day",
       "Musty Flick",
       "Fennec"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-30"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à Snow Day ?",
+    "text": "Quelle description correspond à Snow Day ?",
     "answers": [
       "stade conçu comme une grande enceinte de finale",
       "technique qui redonne un saut après contact des quatre roues avec la balle",
       "mode utilisant un palet à la place du ballon",
       "carrosserie basse donnant son nom à une famille de hitbox"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-30"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient Snow Day ?",
+    "text": "À quelle catégorie appartient Snow Day ?",
     "answers": [
       "Carrosserie",
       "Arène",
       "Technique avancée",
-      "Mode extra"
+      "Mode alternatif"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-32"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : arène urbaine futuriste aux enseignes lumineuses ?",
+    "text": "Quel élément correspond à cette description : arène urbaine futuriste aux enseignes lumineuses ?",
     "answers": [
       "Neo Tokyo",
       "Champions Field",
       "Flip Reset",
       "Breakout"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à Neo Tokyo ?",
+    "text": "Quelle description correspond à Neo Tokyo ?",
     "answers": [
       "l’un des stades classiques du jeu",
       "arène urbaine futuriste aux enseignes lumineuses",
       "voiture emblématique visible sur le logo et très utilisée en compétition",
       "véhicule de type fourgon avec une hitbox haute"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient Neo Tokyo ?",
+    "text": "À quelle catégorie appartient Neo Tokyo ?",
     "answers": [
       "Carrosserie",
-      "Mode extra",
+      "Mode alternatif",
       "Arène",
       "Technique avancée"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : stade conçu comme une grande enceinte de finale ?",
+    "text": "Quel élément correspond à cette description : stade conçu comme une grande enceinte de finale ?",
     "answers": [
       "DFH Stadium",
       "Octane",
       "Merc",
       "Champions Field"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-36"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à Champions Field ?",
+    "text": "Quelle description correspond à Champions Field ?",
     "answers": [
       "stade conçu comme une grande enceinte de finale",
       "arène classique entourée de collines",
       "carrosserie longue et plate appréciée pour les frappes puissantes",
       "mode principal inspiré du football automobile"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-36"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient Champions Field ?",
+    "text": "À quelle catégorie appartient Champions Field ?",
     "answers": [
       "Carrosserie",
       "Arène",
-      "Mode extra",
+      "Mode alternatif",
       "Technique avancée"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-38"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : l’un des stades classiques du jeu ?",
+    "text": "Quel élément correspond à cette description : l’un des stades classiques du jeu ?",
     "answers": [
       "Merc",
       "Dominus",
       "DFH Stadium",
       "Soccar"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à DFH Stadium ?",
+    "text": "Quelle description correspond à DFH Stadium ?",
     "answers": [
       "mécanique de tir utilisant une rotation arrière particulière",
       "carrosserie cubique partageant la hitbox de l’Octane",
       "mode ajoutant des pouvoirs aléatoires comme le grappin",
       "l’un des stades classiques du jeu"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient DFH Stadium ?",
+    "text": "À quelle catégorie appartient DFH Stadium ?",
     "answers": [
       "Arène",
       "Carrosserie",
-      "Mode extra",
+      "Mode alternatif",
       "Technique avancée"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : arène classique entourée de collines ?",
+    "text": "Quel élément correspond à cette description : arène classique entourée de collines ?",
     "answers": [
       "Musty Flick",
       "Mannfield",
       "Fennec",
       "Rumble"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-42"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à Mannfield ?",
+    "text": "Quelle description correspond à Mannfield ?",
     "answers": [
       "technique qui redonne un saut après contact des quatre roues avec la balle",
       "carrosserie basse donnant son nom à une famille de hitbox",
       "arène classique entourée de collines",
       "mode où il faut endommager le sol adverse avec une balle chargée"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-42"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient Mannfield ?",
+    "text": "À quelle catégorie appartient Mannfield ?",
     "answers": [
       "Carrosserie",
-      "Mode extra",
+      "Mode alternatif",
       "Technique avancée",
       "Arène"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-44"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : mécanique de tir utilisant une rotation arrière particulière ?",
+    "text": "Quel élément correspond à cette description : mécanique de tir utilisant une rotation arrière particulière ?",
     "answers": [
       "Musty Flick",
       "Flip Reset",
       "Breakout",
       "Dropshot"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à Musty Flick ?",
+    "text": "Quelle description correspond à Musty Flick ?",
     "answers": [
       "voiture emblématique visible sur le logo et très utilisée en compétition",
       "mécanique de tir utilisant une rotation arrière particulière",
       "véhicule de type fourgon avec une hitbox haute",
       "mode inspiré du basketball avec des paniers surélevés"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient Musty Flick ?",
+    "text": "À quelle catégorie appartient Musty Flick ?",
     "answers": [
       "Carrosserie",
-      "Mode extra",
+      "Mode alternatif",
       "Technique avancée",
       "Objet cosmétique"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
-    "text": "Dans « Rocket League », quel élément de Rocket League correspond à cette description : technique qui redonne un saut après contact des quatre roues avec la balle ?",
+    "text": "Quel élément correspond à cette description : technique qui redonne un saut après contact des quatre roues avec la balle ?",
     "answers": [
       "Octane",
       "Merc",
       "Hoops",
       "Flip Reset"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-48"
   },
   {
-    "text": "Dans « Rocket League », quelle description correspond à Flip Reset ?",
+    "text": "Quelle description correspond à Flip Reset ?",
     "answers": [
       "technique qui redonne un saut après contact des quatre roues avec la balle",
       "carrosserie longue et plate appréciée pour les frappes puissantes",
       "mode principal inspiré du football automobile",
       "mode utilisant un palet à la place du ballon"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-48"
   },
   {
-    "text": "Dans « Rocket League », à quelle catégorie appartient Flip Reset ?",
+    "text": "À quelle catégorie appartient Flip Reset ?",
     "answers": [
       "Carrosserie",
       "Technique avancée",
-      "Mode extra",
+      "Mode alternatif",
       "Objet cosmétique"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-50"
   }
 ]

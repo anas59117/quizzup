@@ -7,7 +7,8 @@
       "Le Canada",
       "Le Luxembourg"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Dans quelle ville Damso est-il né ?",
@@ -17,7 +18,8 @@
       "Paris",
       "Lubumbashi"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-02"
   },
   {
     "text": "Quel est le vrai prénom de Damso ?",
@@ -27,7 +29,8 @@
       "Tarik",
       "Élie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel est le surnom de Damso ?",
@@ -37,7 +40,8 @@
       "Dems",
       "Le Jefe"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-04"
   },
   {
     "text": "Quel rappeur a repéré Damso en 2015 ?",
@@ -47,7 +51,8 @@
       "Orelsan",
       "Kaaris"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel collectif Damso a-t-il rejoint grâce à Booba ?",
@@ -57,7 +62,8 @@
       "Sexion d'Assaut",
       "L'Entourage"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-06"
   },
   {
     "text": "Quel est le premier album studio de Damso, sorti en 2016 ?",
@@ -67,7 +73,8 @@
       "Batterie faible",
       "QALF"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quel album de Damso est sorti en 2017 ?",
@@ -77,7 +84,8 @@
       "Ipséité",
       "QALF"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-08"
   },
   {
     "text": "Quel album de Damso est sorti en 2018 ?",
@@ -87,7 +95,8 @@
       "QALF",
       "Batterie faible"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel album de Damso est sorti en 2020 ?",
@@ -97,7 +106,8 @@
       "Batterie faible",
       "QALF"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-10"
   },
   {
     "text": "Que signifie « QALF » ?",
@@ -107,17 +117,19 @@
       "Que l'amour libère fort",
       "Quand arrive la fin"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-11"
   },
   {
-    "text": "Quel est le titre le plus célèbre de l'album Ipséité, certifié diamant ?",
+    "text": "Quel titre d’Ipséité porte le nom d’une danse popularisée par Los del Río ?",
     "answers": [
       "BruxellesVie",
       "Macarena",
       "Julien",
       "911"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-12"
   },
   {
     "text": "Sur quel album figure « Macarena » ?",
@@ -127,7 +139,9 @@
       "Ipséité",
       "QALF"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-12",
+    "format": "album"
   },
   {
     "text": "Quelle particularité ont les titres de l'album Ipséité ?",
@@ -137,7 +151,8 @@
       "Ils sont numérotés en chiffres romains",
       "Ils commencent par une lettre grecque"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-14"
   },
   {
     "text": "Sur quel album figure « BruxellesVie » ?",
@@ -147,7 +162,9 @@
       "QALF",
       "Lithopédion"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-15",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure « Débrouillard » ?",
@@ -157,7 +174,9 @@
       "Ipséité",
       "QALF"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-16",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure « Mosaïque solitaire » ?",
@@ -167,7 +186,9 @@
       "Lithopédion",
       "Ipséité"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-17",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure « Signaler » ?",
@@ -177,7 +198,9 @@
       "Batterie faible",
       "QALF"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-18",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure « Julien » ?",
@@ -187,7 +210,9 @@
       "QALF",
       "Lithopédion"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-19",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure « Feu de bois » ?",
@@ -197,7 +222,9 @@
       "Ipséité",
       "Batterie faible"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-20",
+    "format": "album"
   },
   {
     "text": "Avec quelle chanteuse belge Damso chante-t-il « Silence » sur Lithopédion ?",
@@ -207,7 +234,8 @@
       "Stromae",
       "Aya Nakamura"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel titre de Lithopédion porte le nom de l'album précédent de Damso ?",
@@ -217,7 +245,8 @@
       "Salle d'attente",
       "Ipséité"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-22"
   },
   {
     "text": "Quel est le seul clip tourné pour l'album Lithopédion ?",
@@ -227,7 +256,8 @@
       "Feu de bois",
       "Humain"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel album de Damso a remporté une Victoire de la musique en 2019 ?",
@@ -237,7 +267,8 @@
       "Batterie faible",
       "QALF"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-24"
   },
   {
     "text": "Quel single de QALF est accompagné d'un clip avec Noémie Lenoir ?",
@@ -247,7 +278,8 @@
       "Julien",
       "Smog"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Avec quel rappeur belge Damso chante-t-il « BXL ZOO » sur QALF ?",
@@ -257,7 +289,8 @@
       "Shay",
       "Krisy"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-26"
   },
   {
     "text": "Avec quelle chanteuse Damso chante-t-il « Cœur en miettes » sur QALF ?",
@@ -267,7 +300,8 @@
       "Lous and the Yakuza",
       "Shay"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Avec quelle star congolaise Damso chante-t-il « Fais ça bien » sur QALF ?",
@@ -277,7 +311,8 @@
       "Innoss'B",
       "Werrason"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-28"
   },
   {
     "text": "Quelle certification l'album Ipséité a-t-il obtenue ?",
@@ -287,7 +322,8 @@
       "Disque de platine",
       "Aucune"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel est le premier projet de Damso, sorti en 2014 ?",
@@ -297,7 +333,8 @@
       "Ipséité",
       "Autopsie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-30"
   },
   {
     "text": "Avec quel morceau Damso s'est-il fait remarquer par Booba ?",
@@ -307,7 +344,8 @@
       "BruxellesVie",
       "Julien"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-31"
   },
   {
     "text": "Quelle suite de QALF est sortie en 2021 ?",
@@ -317,7 +355,8 @@
       "QALF Infinity",
       "QALF Deluxe"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-32"
   },
   {
     "text": "Quel album de Damso est sorti en novembre 2024 ?",
@@ -327,7 +366,8 @@
       "J'ai menti",
       "Lithopédion"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel album annoncé pour 2025 est présenté comme le dernier de Damso ?",
@@ -337,7 +377,8 @@
       "Ipséité",
       "Bēyāh"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-34"
   },
   {
     "text": "En 2018, pour quel événement la fédération belge a-t-elle annulé l'hymne confié à Damso ?",
@@ -347,7 +388,8 @@
       "Les Jeux olympiques",
       "Le Tour de France"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-35"
   },
   {
     "text": "Quelle est la nationalité de Damso ?",
@@ -357,7 +399,8 @@
       "Franco-algérienne",
       "Canadienne"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-36"
   },
   {
     "text": "Avec quelle chanteuse Damso chante-t-il « Débrouillard » ?",
@@ -367,7 +410,8 @@
       "Krisy",
       "Lous and the Yakuza"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-37"
   },
   {
     "text": "Sur quel album figure « Kin la belle » ?",
@@ -377,7 +421,9 @@
       "Ipséité",
       "QALF"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-38",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure « Graine de sablier » ?",
@@ -387,7 +433,9 @@
       "Ipséité",
       "QALF"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-39",
+    "format": "album"
   },
   {
     "text": "Quelle lettre grecque ouvre le titre « Macarena » sur Ipséité ?",
@@ -398,7 +446,8 @@
       "Σ (sigma)"
     ],
     "correct": 1,
-    "difficulty": "expert"
+    "difficulty": "expert",
+    "fact": "legacy-40"
   },
   {
     "text": "Quel titre ouvre l'album Ipséité ?",
@@ -409,7 +458,8 @@
       "Une âme pour deux"
     ],
     "correct": 2,
-    "difficulty": "expert"
+    "difficulty": "expert",
+    "fact": "legacy-41"
   },
   {
     "text": "Quel titre ouvre l'album Batterie faible ?",
@@ -420,7 +470,8 @@
       "Amnésie"
     ],
     "correct": 0,
-    "difficulty": "expert"
+    "difficulty": "expert",
+    "fact": "legacy-42"
   },
   {
     "text": "Que désigne le mot « lithopédion » selon Damso ?",
@@ -431,7 +482,8 @@
       "Une maladie des cordes vocales"
     ],
     "correct": 2,
-    "difficulty": "expert"
+    "difficulty": "expert",
+    "fact": "legacy-43"
   },
   {
     "text": "Avec quel artiste Damso chante-t-il « Peur d'être père » ?",
@@ -442,7 +494,8 @@
       "YG Pablo"
     ],
     "correct": 1,
-    "difficulty": "expert"
+    "difficulty": "expert",
+    "fact": "legacy-44"
   },
   {
     "text": "Quand est sorti l'album Lithopédion ?",
@@ -453,7 +506,8 @@
       "1er janvier 2018"
     ],
     "correct": 1,
-    "difficulty": "expert"
+    "difficulty": "expert",
+    "fact": "legacy-45"
   },
   {
     "text": "Quand est sorti l'album Batterie faible ?",
@@ -464,7 +518,8 @@
       "26 avril 2017"
     ],
     "correct": 2,
-    "difficulty": "expert"
+    "difficulty": "expert",
+    "fact": "legacy-46"
   },
   {
     "text": "Avec quel groupe Damso a-t-il commencé à rapper en 2006 ?",
@@ -475,7 +530,8 @@
       "Starflam"
     ],
     "correct": 2,
-    "difficulty": "expert"
+    "difficulty": "expert",
+    "fact": "legacy-47"
   },
   {
     "text": "Combien de titres de Lithopédion sont certifiés diamant ?",
@@ -486,7 +542,8 @@
       "12"
     ],
     "correct": 0,
-    "difficulty": "expert"
+    "difficulty": "expert",
+    "fact": "legacy-48"
   },
   {
     "text": "Sur quel label est sorti Batterie faible ?",
@@ -497,7 +554,8 @@
       "Capitol Music France"
     ],
     "correct": 3,
-    "difficulty": "expert"
+    "difficulty": "expert",
+    "fact": "legacy-49"
   },
   {
     "text": "Combien de titres compte l'édition standard d'Ipséité ?",
@@ -508,6 +566,7 @@
       "24"
     ],
     "correct": 1,
-    "difficulty": "expert"
+    "difficulty": "expert",
+    "fact": "legacy-50"
   }
 ]

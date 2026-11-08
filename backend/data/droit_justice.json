@@ -3,516 +3,602 @@
     "text": "Quel texte fondateur proclame les droits de l'Homme en France en 1789 ?",
     "answers": ["La Déclaration des Droits de l'Homme et du Citoyen", "La Constitution de 1791", "Le Code civil", "La Charte de 1814"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "legacy-01"
   },
   {
     "text": "Quel est l'âge de la majorité légale en France ?",
     "answers": ["18 ans", "16 ans", "21 ans", "17 ans"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "legacy-02"
   },
   {
-    "text": "Comment appelle-t-on le principe selon lequel nul ne peut être condamné sans procès ?",
-    "answers": ["La présomption d'innocence", "Le droit à la défense", "Le principe de légalité", "Le principe du contradictoire"],
+    "text": "Quel principe veut qu’une personne soit tenue pour innocente tant que sa culpabilité n’a pas été établie ?",
+    "answers": ["La présomption d’innocence", "Le principe du contradictoire", "Le droit de garder le silence", "Le principe de légalité"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "revision-3"
   },
   {
     "text": "Quel code régit les relations entre particuliers en France (contrats, propriété, famille) ?",
     "answers": ["Le Code civil", "Le Code pénal", "Le Code du travail", "Le Code de commerce"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "legacy-04"
   },
   {
-    "text": "Qui a codifié le Code civil français en 1804 ?",
+    "text": "Sous quel Premier consul le Code civil français est-il promulgué en 1804 ?",
     "answers": ["Napoléon Bonaparte", "Louis XIV", "Robespierre", "Charles de Gaulle"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-5"
   },
   {
-    "text": "Quel tribunal juge les crimes les plus graves en France ?",
-    "answers": ["La Cour d'assises", "Le Tribunal correctionnel", "Le Tribunal de police", "Le Conseil de prud'hommes"],
+    "text": "En France, quelle juridiction criminelle de première instance peut comprendre un jury citoyen ?",
+    "answers": ["La cour d’assises", "Le tribunal correctionnel", "La cour criminelle départementale", "La chambre de l’instruction"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-6"
   },
   {
-    "text": "Qu'est-ce que la séparation des pouvoirs ?",
-    "answers": ["La distinction entre pouvoir législatif, exécutif et judiciaire", "La séparation entre l'Église et l'État", "La division du territoire en régions", "La distinction entre droit public et droit privé"],
+    "text": "Quels pouvoirs distingue la séparation des pouvoirs dans sa formulation classique ?",
+    "answers": ["Législatif, exécutif et judiciaire", "Exécutif, monétaire et électoral", "Judiciaire, territorial et fiscal", "Législatif, diplomatique et électoral"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "revision-7"
   },
   {
     "text": "Quel philosophe français a théorisé la séparation des pouvoirs ?",
     "answers": ["Montesquieu", "Voltaire", "Rousseau", "Diderot"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-08"
   },
   {
-    "text": "Qu'est-ce qu'un délit en droit pénal français ?",
-    "answers": ["Une infraction de gravité moyenne jugée par le Tribunal correctionnel", "L'infraction la plus grave", "Une infraction mineure", "Un litige entre deux entreprises"],
+    "text": "Quelle catégorie d’infractions le tribunal correctionnel juge-t-il en principe ?",
+    "answers": ["Les délits", "Les crimes", "Les contraventions", "Les litiges civils"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-9"
   },
   {
     "text": "Quelle est la plus haute juridiction de l'ordre judiciaire en France ?",
     "answers": ["La Cour de cassation", "Le Conseil d'État", "Le Conseil constitutionnel", "La Cour d'appel"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-10"
   },
   {
     "text": "Que signifie 'habeas corpus' ?",
     "answers": ["Le droit de ne pas être détenu arbitrairement", "Le droit de se taire", "Le droit à un avocat", "Le droit de vote"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-11"
   },
   {
     "text": "Quel organe contrôle la constitutionnalité des lois en France ?",
     "answers": ["Le Conseil constitutionnel", "La Cour de cassation", "Le Conseil d'État", "Le Sénat"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-12"
   },
   {
-    "text": "Qu'est-ce que la légitime défense ?",
-    "answers": ["Le droit de se défendre proportionnellement face à une agression injuste", "Le droit de se faire justice soi-même", "Le droit de porter une arme", "Le droit de fuir une agression"],
+    "text": "Quelle condition l’acte de défense d’une personne doit-il remplir pour relever de la légitime défense ?",
+    "answers": ["Être proportionné à l’agression", "Être exercé après la fin de l’agression", "Avoir été autorisé par un juge", "Viser à punir l’agresseur"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "revision-13"
   },
   {
-    "text": "Quel est le rôle du procureur de la République ?",
-    "answers": ["Représenter la société et engager les poursuites pénales", "Défendre l'accusé", "Juger les affaires", "Rédiger les lois"],
+    "text": "Quel rôle le procureur exerce-t-il dans le procès pénal ?",
+    "answers": ["Représenter les intérêts de la société", "Représenter la personne poursuivie", "Représenter la victime à titre privé", "Présider la formation de jugement"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-14"
   },
   {
-    "text": "Qu'est-ce que la garde à vue ?",
-    "answers": ["La rétention d'un suspect dans les locaux de police pour enquête", "Une peine de prison", "Une amende", "Un contrôle d'identité"],
+    "text": "En procédure pénale, qu’est-ce qu’une garde à vue ?",
+    "answers": ["Une mesure de contrainte pour les besoins de l’enquête", "Une peine prononcée par le tribunal correctionnel", "Une mise en détention ordonnée après condamnation", "Une convocation à laquelle on peut librement renoncer"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "revision-15"
   },
   {
-    "text": "Combien de temps peut durer une garde à vue initiale en France ?",
+    "text": "En droit commun, quelle est la durée maximale initiale d’une garde à vue avant prolongation ?",
     "answers": ["24 heures", "48 heures", "12 heures", "72 heures"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-16"
   },
   {
     "text": "Quel est le principe 'nulla poena sine lege' ?",
     "answers": ["Pas de peine sans loi (légalité des peines)", "Pas de procès sans avocat", "Pas de peine de mort", "Pas d'accusation sans preuve"],
     "correct": 0,
-    "difficulty": "difficile"
+    "difficulty": "difficile",
+    "fact": "legacy-17"
   },
   {
     "text": "Quelle cour européenne juge les violations des droits de l'Homme ?",
     "answers": ["La Cour européenne des droits de l'Homme (CEDH)", "La Cour de justice de l'UE", "La Cour pénale internationale", "Le Tribunal de La Haye"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-18"
   },
   {
     "text": "Où siège la Cour européenne des droits de l'Homme ?",
     "answers": ["Strasbourg", "Bruxelles", "Luxembourg", "La Haye"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-19"
   },
   {
-    "text": "Qu'est-ce que la Cour pénale internationale (CPI) ?",
-    "answers": ["Un tribunal qui juge les crimes de guerre, génocides et crimes contre l'humanité", "Un tribunal européen", "Un tribunal américain", "Un tribunal pour les litiges commerciaux"],
+    "text": "Quel crime fait partie de ceux qui relèvent de la compétence de la Cour pénale internationale ?",
+    "answers": ["Le génocide", "Le vol à main armée", "La contrefaçon de monnaie", "La fraude fiscale"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-20"
   },
   {
     "text": "Où siège la Cour pénale internationale ?",
     "answers": ["La Haye (Pays-Bas)", "Genève (Suisse)", "New York (USA)", "Bruxelles (Belgique)"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-21"
   },
   {
-    "text": "Quel est le droit fondamental de toute personne arrêtée ?",
-    "answers": ["Le droit à un avocat", "Le droit de fuir", "Le droit de mentir", "Le droit au silence uniquement"],
+    "text": "En France, quelle assistance une personne gardée à vue peut-elle demander ?",
+    "answers": ["L’assistance d’un avocat", "La présence de son employeur", "La présence de son assureur", "L’assistance d’un greffier"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "revision-22"
   },
   {
-    "text": "Qu'est-ce que la prescription en droit pénal ?",
-    "answers": ["Le délai au-delà duquel une infraction ne peut plus être poursuivie", "L'ordonnance d'un médecin", "La condamnation d'un accusé", "Le non-lieu prononcé par un juge"],
+    "text": "Quel effet produit la prescription de l’action publique en matière pénale ?",
+    "answers": ["Elle fait obstacle aux poursuites", "Elle réduit la durée de la peine", "Elle transforme la nature de l’infraction", "Elle entraîne un nouveau procès"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-23"
   },
   {
-    "text": "Quel est le délai de prescription pour un crime en France ?",
+    "text": "En droit commun français, quel est le délai de prescription de l’action publique pour un crime, hors exceptions ?",
     "answers": ["20 ans", "10 ans", "30 ans", "5 ans"],
     "correct": 0,
-    "difficulty": "difficile"
+    "difficulty": "difficile",
+    "fact": "revision-24"
   },
   {
     "text": "Qu'est-ce qu'un référendum ?",
     "answers": ["Un vote populaire direct sur une question politique", "Une élection présidentielle", "Un vote du Parlement", "Un sondage d'opinion"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "legacy-25"
   },
   {
-    "text": "Quel article de la Constitution française définit les pouvoirs du Président ?",
+    "text": "Quel article de la Constitution française charge le président de veiller au respect de la Constitution ?",
     "answers": ["L'article 5", "L'article 1", "L'article 49", "L'article 16"],
     "correct": 0,
-    "difficulty": "difficile"
+    "difficulty": "difficile",
+    "fact": "revision-26"
   },
   {
-    "text": "Qu'est-ce que le bicamérisme ?",
-    "answers": ["Un système législatif à deux chambres (Assemblée nationale et Sénat)", "Un système à une seule chambre", "Un système judiciaire", "Un système avec trois pouvoirs"],
+    "text": "Que signifie le bicamérisme pour un parlement ?",
+    "answers": ["Il comprend deux chambres", "Il comprend une chambre", "Il est renouvelé deux fois par an", "Il vote à deux tours"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-27"
   },
   {
     "text": "Quelle est la différence entre un crime et un délit en droit français ?",
     "answers": ["Le crime est l'infraction la plus grave, le délit est de gravité moyenne", "Il n'y a aucune différence", "Le délit est plus grave que le crime", "Le crime concerne les entreprises, le délit les particuliers"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-28"
   },
   {
     "text": "Quel principe interdit de juger deux fois une personne pour les mêmes faits ?",
     "answers": ["Non bis in idem", "Habeas corpus", "In dubio pro reo", "Res judicata"],
     "correct": 0,
-    "difficulty": "difficile"
+    "difficulty": "difficile",
+    "fact": "legacy-29"
   },
   {
-    "text": "Qu'est-ce que le droit de grâce ?",
-    "answers": ["Le pouvoir du Président de réduire ou supprimer une peine", "Le droit de faire appel", "Le droit d'être gracié par un juge", "Le droit de demander pardon"],
+    "text": "En France, qui peut accorder une grâce individuelle ?",
+    "answers": ["Le président de la République", "Le Premier ministre", "Le ministre de la Justice", "Le président du Sénat"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-30"
   },
   {
     "text": "Quel tribunal juge les litiges entre employeurs et salariés en France ?",
     "answers": ["Le Conseil de prud'hommes", "Le Tribunal correctionnel", "Le Tribunal de commerce", "Le Tribunal administratif"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-31"
   },
   {
-    "text": "Qu'est-ce que la laïcité en droit français ?",
-    "answers": ["La séparation de l'État et des religions", "L'interdiction de toute religion", "La promotion d'une religion officielle", "La tolérance religieuse"],
+    "text": "Quel principe oblige l’État à respecter toutes les croyances et garantit le libre exercice des cultes dans le cadre de la loi ?",
+    "answers": ["La laïcité", "L’immunité parlementaire", "L’indivisibilité du territoire", "Le bicamérisme"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "revision-32"
   },
   {
     "text": "En quelle année la peine de mort a-t-elle été abolie en France ?",
     "answers": ["1981", "1975", "1989", "1968"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-33"
   },
   {
     "text": "Qui était le Garde des Sceaux qui a fait abolir la peine de mort en France ?",
     "answers": ["Robert Badinter", "Jacques Chirac", "François Mitterrand", "Simone Veil"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-34"
   },
   {
     "text": "Qu'est-ce que le droit d'asile ?",
     "answers": ["Le droit de demander protection dans un pays étranger en cas de persécution", "Le droit de voyager librement", "Le droit à un logement", "Le droit de changer de nationalité"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "legacy-35"
   },
   {
     "text": "Quel document international a proclamé les droits fondamentaux universels en 1948 ?",
     "answers": ["La Déclaration universelle des droits de l'Homme", "La Charte des Nations Unies", "Les accords de Genève", "Le traité de Versailles"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-36"
   },
   {
-    "text": "Comment appelle-t-on un avocat commis d'office ?",
-    "answers": ["Un avocat désigné par le bâtonnier pour défendre une personne sans avocat", "Un avocat spécialiste du droit commercial", "Un procureur adjoint", "Un juge suppléant"],
+    "text": "Dans quel cas parle-t-on d’un avocat commis d’office ?",
+    "answers": ["Lorsqu’un avocat est désigné pour assister une personne", "Lorsqu’une personne choisit et mandate elle-même un avocat", "Lorsqu’un avocat représente le ministère public", "Lorsqu’un avocat témoigne en faveur de son client"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-37"
   },
   {
     "text": "Qu'est-ce que le sursis en droit pénal ?",
     "answers": ["La suspension de l'exécution d'une peine sous conditions", "L'annulation d'une condamnation", "Le report d'un procès", "L'augmentation d'une peine"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-38"
   },
   {
-    "text": "Quel organe juge les litiges entre l'administration et les citoyens en France ?",
-    "answers": ["Le Tribunal administratif", "Le Tribunal de grande instance", "La Cour d'assises", "Le Conseil constitutionnel"],
+    "text": "Quelle juridiction statue en principe en première instance sur les litiges administratifs ?",
+    "answers": ["Le tribunal administratif", "Le tribunal judiciaire", "La cour administrative d’appel", "Le Conseil constitutionnel"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-39"
   },
   {
     "text": "Quelle est la plus haute juridiction de l'ordre administratif en France ?",
     "answers": ["Le Conseil d'État", "La Cour de cassation", "Le Conseil constitutionnel", "Le Tribunal administratif"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-40"
   },
   {
     "text": "Qu'est-ce que le secret professionnel de l'avocat ?",
     "answers": ["L'obligation de ne pas divulguer les confidences de son client", "L'interdiction de témoigner en justice", "Le droit de refuser un client", "L'obligation de dénoncer un crime"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-41"
   },
   {
-    "text": "Comment s'appelle le principe selon lequel la loi ne peut pas rétroagir en matière pénale ?",
-    "answers": ["La non-rétroactivité de la loi pénale", "La prescription", "L'amnistie", "La grâce présidentielle"],
+    "text": "Quel principe interdit d’appliquer une peine nouvelle plus sévère à des faits antérieurs à la loi ?",
+    "answers": ["La non-rétroactivité de la loi pénale", "La prescription de l’action publique", "L’individualisation des peines", "La présomption d’innocence"],
     "correct": 0,
-    "difficulty": "difficile"
+    "difficulty": "difficile",
+    "fact": "revision-42"
   },
   {
     "text": "Qu'est-ce qu'un vice de procédure ?",
     "answers": ["Une irrégularité dans le déroulement d'une procédure judiciaire", "Un mensonge de l'accusé", "Un défaut de l'accusation", "Une erreur dans la loi"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-43"
   },
   {
-    "text": "Quel est le rôle d'un juge d'instruction ?",
-    "answers": ["Mener l'enquête dans les affaires pénales complexes", "Prononcer la peine", "Défendre l'accusé", "Rédiger les lois"],
+    "text": "Quelle mission caractérise le juge d’instruction en France ?",
+    "answers": ["Instruire à charge et à décharge", "Plaider pour la partie civile", "Prononcer le verdict du procès", "Requérir une peine à l’audience"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-44"
   },
   {
-    "text": "Qu'est-ce que l'immunité parlementaire ?",
-    "answers": ["La protection des parlementaires contre les poursuites pour leurs votes et opinions", "L'interdiction de critiquer un parlementaire", "Le droit de ne pas voter", "L'obligation d'assister à toutes les séances"],
+    "text": "En France, quels actes sont couverts par l’irresponsabilité parlementaire ?",
+    "answers": ["Les opinions et votes émis dans l’exercice du mandat", "Toutes les déclarations faites dans la vie privée", "Les actes accomplis avant la prise de fonction", "Tous les actes commis pendant la durée du mandat"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-45"
   },
   {
     "text": "Quel philosophe a écrit 'Du contrat social' en 1762 ?",
     "answers": ["Jean-Jacques Rousseau", "Montesquieu", "Voltaire", "John Locke"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-46"
   },
   {
     "text": "Qu'est-ce que la Magna Carta ?",
     "answers": ["La Grande Charte anglaise de 1215 limitant le pouvoir royal", "La Constitution américaine", "Un traité de paix européen", "La déclaration d'indépendance américaine"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-47"
   },
   {
     "text": "Comment s'appelle le système juridique basé sur la jurisprudence, utilisé dans les pays anglo-saxons ?",
     "answers": ["La common law", "Le droit civil", "Le droit coutumier", "Le droit canonique"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-48"
   },
   {
     "text": "Quel tribunal international a jugé les criminels nazis après la Seconde Guerre mondiale ?",
     "answers": ["Le Tribunal de Nuremberg", "La Cour de La Haye", "La CPI", "La CEDH"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-49"
   },
   {
     "text": "Qu'est-ce qu'un État de droit ?",
     "answers": ["Un État où tous, y compris les gouvernants, sont soumis au droit", "Un État avec beaucoup de lois", "Un État démocratique uniquement", "Un État avec un pouvoir judiciaire fort"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-50"
   },
   {
-    "text": "Quel est le rôle du Médiateur de la République (Défenseur des droits) ?",
-    "answers": ["Protéger les droits des citoyens face à l'administration", "Juger les affaires pénales", "Rédiger les lois", "Nommer les juges"],
+    "text": "Quelle autorité peut être saisie lorsqu’un service public porte atteinte aux droits d’un usager ?",
+    "answers": ["Le Défenseur des droits", "Le président du Sénat", "Le Conseil supérieur de la magistrature", "Le Conseil économique, social et environnemental"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-51"
   },
   {
     "text": "Qu'est-ce que la CNIL en France ?",
     "answers": ["La Commission Nationale de l'Informatique et des Libertés", "La Cour Nationale de l'Instruction Légale", "Le Comité National d'Investigation Législative", "La Chambre Nationale des Inspections Légales"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-52"
   },
   {
     "text": "Comment s'appelle le droit de ne pas témoigner contre soi-même ?",
     "answers": ["Le droit de se taire (droit au silence)", "Le droit de grâce", "Le droit d'asile", "Le droit de retrait"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "legacy-53"
   },
   {
     "text": "Qu'est-ce que le PACS en France ?",
     "answers": ["Le Pacte Civil de Solidarité, un contrat entre deux personnes", "Un programme d'aide sociale", "Un accord de commerce", "Un plan d'action culturelle"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "legacy-54"
   },
   {
     "text": "En quelle année le mariage pour tous a-t-il été légalisé en France ?",
     "answers": ["2013", "2015", "2010", "2017"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-55"
   },
   {
-    "text": "Qu'est-ce qu'une QPC (Question Prioritaire de Constitutionnalité) ?",
-    "answers": ["Le droit pour tout justiciable de contester la constitutionnalité d'une loi", "Un examen passé par les juges", "Un type de référendum", "Une question posée au Parlement"],
+    "text": "Que peut contester un justiciable au moyen d’une QPC ?",
+    "answers": ["Une loi qui porterait atteinte à un droit constitutionnel", "Un décret pour une erreur de publication", "Une décision de justice pour défaut de preuve", "Un contrat privé pour vice du consentement"],
     "correct": 0,
-    "difficulty": "difficile"
+    "difficulty": "difficile",
+    "fact": "revision-56"
   },
   {
     "text": "Quel est le principe de proportionnalité des peines ?",
     "answers": ["La peine doit être proportionnée à la gravité de l'infraction", "Toutes les infractions méritent la même peine", "La peine est décidée par la victime", "La peine doit être la plus sévère possible"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-57"
   },
   {
-    "text": "Qu'est-ce que l'extradition ?",
-    "answers": ["La remise d'une personne par un État à un autre pour y être jugée", "L'expulsion d'un étranger", "L'interdiction de quitter un pays", "Le rapatriement d'un citoyen"],
+    "text": "Que permet une procédure d’extradition ?",
+    "answers": ["Remettre une personne à un autre État", "Déférer une loi au Conseil constitutionnel", "Transférer un dossier entre deux tribunaux", "Retirer sa nationalité à une personne"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-58"
   },
   {
     "text": "Quel amendement de la Constitution américaine garantit la liberté d'expression ?",
     "answers": ["Le 1er amendement", "Le 2e amendement", "Le 5e amendement", "Le 14e amendement"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-59"
   },
   {
-    "text": "Comment s'appelle la procédure permettant de destituer le Président aux États-Unis ?",
-    "answers": ["L'impeachment", "Le recall", "La motion de censure", "La destitution populaire"],
+    "text": "Comment s’appelle la mise en accusation d’un président américain par la Chambre des représentants ?",
+    "answers": ["L’impeachment", "Le contrôle de constitutionnalité", "Le vote de clôture", "L’obstruction parlementaire"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-60"
   },
   {
     "text": "Qu'est-ce que le droit international humanitaire ?",
     "answers": ["L'ensemble des règles protégeant les personnes en temps de guerre", "Le droit commercial international", "Le droit de l'immigration", "Le droit de l'environnement"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-61"
   },
   {
     "text": "Quelles sont les Conventions de Genève ?",
     "answers": ["Des traités définissant les règles de protection des victimes de guerre", "Des accords commerciaux", "Des traités sur le changement climatique", "Des accords sur les réfugiés"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-62"
   },
   {
     "text": "Quel est le rôle de la Cour de justice de l'Union européenne ?",
     "answers": ["Assurer l'interprétation uniforme du droit de l'UE", "Juger les crimes de guerre", "Élire le président de la Commission", "Voter les lois européennes"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-63"
   },
   {
     "text": "Où siège la Cour de justice de l'Union européenne ?",
     "answers": ["Luxembourg", "Bruxelles", "Strasbourg", "La Haye"],
     "correct": 0,
-    "difficulty": "difficile"
+    "difficulty": "difficile",
+    "fact": "legacy-64"
   },
   {
     "text": "Qu'est-ce que le droit naturel ?",
     "answers": ["Des droits considérés comme inhérents à la nature humaine, indépendants des lois écrites", "Le droit de l'environnement", "Le droit des animaux", "Le droit coutumier"],
     "correct": 0,
-    "difficulty": "difficile"
+    "difficulty": "difficile",
+    "fact": "legacy-65"
   },
   {
-    "text": "Comment appelle-t-on la partie qui accuse dans un procès pénal ?",
-    "answers": ["La partie civile ou le ministère public", "La défense", "Le greffier", "Le juré"],
+    "text": "En France, qui soutient en principe l’accusation au nom de la société lors d’un procès pénal ?",
+    "answers": ["Le ministère public", "L’avocat de la défense", "Le greffe du tribunal", "Le juge des libertés et de la détention"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-66"
   },
   {
     "text": "Qu'est-ce qu'un jury populaire ?",
     "answers": ["Des citoyens tirés au sort qui participent au jugement d'un crime", "Un groupe d'avocats", "Un comité de juges professionnels", "Un conseil de police"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "legacy-67"
   },
   {
     "text": "Quel article de la DDHC de 1789 affirme que 'les hommes naissent libres et égaux en droits' ?",
     "answers": ["L'article 1er", "L'article 2", "L'article 4", "L'article 11"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-68"
   },
   {
-    "text": "Qu'est-ce que le contrôle judiciaire ?",
-    "answers": ["Des obligations imposées à un suspect en attendant son procès (alternative à la détention)", "Un contrôle d'identité", "Un examen des juges", "Un audit de la justice"],
+    "text": "En procédure pénale, qu’implique un placement sous contrôle judiciaire ?",
+    "answers": ["Le respect d’obligations fixées par un juge", "L’incarcération automatique avant le procès", "L’interdiction de demander un avocat", "La suspension définitive des poursuites"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-69"
   },
   {
     "text": "Quel est le principe de l'indépendance de la justice ?",
     "answers": ["Le pouvoir judiciaire ne doit pas être soumis au pouvoir politique", "Les juges sont élus par le peuple", "Les juges sont nommés à vie", "La justice est gratuite"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-70"
   },
   {
     "text": "Quel philosophe anglais a théorisé les droits naturels (vie, liberté, propriété) ?",
     "answers": ["John Locke", "Thomas Hobbes", "David Hume", "Jeremy Bentham"],
     "correct": 0,
-    "difficulty": "difficile"
+    "difficulty": "difficile",
+    "fact": "legacy-71"
   },
   {
-    "text": "Qu'est-ce que la récidive en droit pénal ?",
-    "answers": ["Le fait de commettre une nouvelle infraction après une condamnation définitive", "Le fait de nier les faits", "Le fait de se constituer partie civile", "Le fait de faire appel"],
+    "text": "En droit pénal, que suppose la récidive légale ?",
+    "answers": ["Une condamnation définitive suivie d’une nouvelle infraction dans les conditions prévues par la loi", "Deux infractions poursuivies ensemble avant toute condamnation définitive", "Une condamnation annulée suivie d’une plainte pour les mêmes faits", "Un rappel à la loi sans nouvelle infraction"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "revision-72"
   },
   {
-    "text": "Comment s'appelle le document qui lance les poursuites pénales en France ?",
-    "answers": ["Le réquisitoire introductif", "L'acte d'accusation", "La plainte", "L'assignation"],
+    "text": "Quel acte le procureur adresse-t-il au juge d’instruction pour ouvrir une information judiciaire ?",
+    "answers": ["Un réquisitoire introductif", "Une ordonnance de non-lieu", "Un jugement correctionnel", "Un acte d’appel"],
     "correct": 0,
-    "difficulty": "difficile"
+    "difficulty": "difficile",
+    "fact": "revision-73"
   },
   {
-    "text": "Qu'est-ce que le principe du contradictoire ?",
-    "answers": ["Chaque partie doit pouvoir répondre aux arguments de l'autre", "Le juge contredit toujours l'accusé", "Les témoins sont confrontés", "Les avocats débattent en public"],
+    "text": "Que garantit le principe du contradictoire ?",
+    "answers": ["La possibilité de discuter les arguments et pièces adverses", "L’obligation pour les parties de partager le même avocat", "La possibilité de juger sans prévenir la partie adverse", "L’interdiction de contester les pièces de la partie adverse"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-74"
   },
   {
     "text": "Quel est le rôle du greffier dans un tribunal ?",
     "answers": ["Assister le juge et tenir le registre des actes de la procédure", "Défendre l'accusé", "Représenter l'État", "Interroger les témoins"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-75"
   },
   {
-    "text": "Qu'est-ce que la Cour des comptes ?",
-    "answers": ["Une juridiction qui contrôle l'utilisation de l'argent public", "Un tribunal fiscal", "Une banque d'État", "Un organisme de recouvrement"],
+    "text": "Quelle institution contrôle notamment le bon emploi des fonds publics ?",
+    "answers": ["La Cour des comptes", "La Cour de cassation", "Le Conseil constitutionnel", "La Cour d’assises"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-76"
   },
   {
-    "text": "Qu'est-ce que le droit de propriété intellectuelle ?",
-    "answers": ["La protection juridique des créations de l'esprit (brevets, droits d'auteur, marques)", "Le droit de posséder un bien immobilier", "Le droit à l'éducation", "Le droit de copier librement"],
+    "text": "Quel titre protège en principe une invention technique qui remplit les conditions prévues par la loi ?",
+    "answers": ["Un brevet", "Un dépôt de marque", "Un droit de réponse", "Un dépôt de nom de domaine"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-77"
   },
   {
     "text": "En France, combien de temps dure le mandat d'un président de la République ?",
     "answers": ["5 ans", "4 ans", "6 ans", "7 ans"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "legacy-78"
   },
   {
-    "text": "Qu'est-ce qu'une constitution ?",
-    "answers": ["La loi fondamentale qui organise les pouvoirs d'un État", "Un code de lois pénales", "Un traité international", "Un accord entre partis politiques"],
+    "text": "À quoi sert une constitution ?",
+    "answers": ["À organiser les pouvoirs d’un État", "À fixer les tarifs des services publics", "À établir les sanctions disciplinaires", "À déterminer les prix et les salaires"],
     "correct": 0,
-    "difficulty": "facile"
+    "difficulty": "facile",
+    "fact": "revision-79"
   },
   {
     "text": "Quel est le système juridique où les juges s'appuient principalement sur les codes écrits ?",
     "answers": ["Le droit civil (romano-germanique)", "La common law", "Le droit coutumier", "Le droit religieux"],
     "correct": 0,
-    "difficulty": "difficile"
+    "difficulty": "difficile",
+    "fact": "legacy-80"
   },
   {
     "text": "Qu'est-ce que la loi salique ?",
     "answers": ["Une ancienne loi franque excluant les femmes de la succession au trône", "Une loi sur le sel", "Une loi romaine", "Une loi sur les impôts"],
     "correct": 0,
-    "difficulty": "difficile"
+    "difficulty": "difficile",
+    "fact": "legacy-81"
   },
   {
     "text": "Comment appelle-t-on la peine alternative à l'emprisonnement consistant en un travail non rémunéré ?",
     "answers": ["Le travail d'intérêt général (TIG)", "La liberté conditionnelle", "La mise à l'épreuve", "Le bracelet électronique"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "legacy-82"
   },
   {
-    "text": "Qu'est-ce qu'un crime contre l'humanité ?",
-    "answers": ["Un acte inhumain commis de manière systématique contre une population civile", "Tout meurtre", "Un crime économique international", "Un crime environnemental"],
+    "text": "Quel contexte est requis par le Statut de Rome pour qualifier certains actes de crimes contre l’humanité ?",
+    "answers": ["Une attaque généralisée ou systématique contre une population civile", "Un affrontement opposant exclusivement des forces armées", "Une décision prise par un tribunal pénal international", "Une déclaration de guerre officielle entre deux États"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-83"
   },
   {
     "text": "Les crimes contre l'humanité sont-ils imprescriptibles en France ?",
     "answers": ["Oui, ils ne se prescrivent jamais", "Non, ils se prescrivent après 30 ans", "Non, après 50 ans", "Cela dépend de la gravité"],
     "correct": 0,
-    "difficulty": "difficile"
+    "difficulty": "difficile",
+    "fact": "legacy-84"
   },
   {
-    "text": "Qu'est-ce que le RGPD en matière de droits ?",
-    "answers": ["Un règlement européen protégeant les données personnelles des citoyens", "Un registre judiciaire", "Un protocole de sécurité nationale", "Un traité commercial"],
+    "text": "Sur quel type d’informations porte le RGPD ?",
+    "answers": ["Les données à caractère personnel", "Les secrets de fabrication industriels", "Les informations militaires classifiées", "Les statistiques entièrement anonymes"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-85"
   },
   {
-    "text": "Comment appelle-t-on le vote d'une assemblée pour renverser un gouvernement ?",
-    "answers": ["La motion de censure", "L'impeachment", "Le référendum", "La dissolution"],
+    "text": "Quel texte les députés français peuvent-ils voter pour mettre en cause la responsabilité du gouvernement ?",
+    "answers": ["Une motion de censure", "Une proposition de résolution", "Une question orale", "Une loi de règlement"],
     "correct": 0,
-    "difficulty": "moyen"
+    "difficulty": "moyen",
+    "fact": "revision-86"
   }
 ]

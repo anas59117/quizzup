@@ -7,7 +7,8 @@
       "Yoshifumi Kondō",
       "Hiromasa Yonebayashi"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "En quelle année le film Le Voyage de Chihiro est-il sorti au Japon ?",
@@ -17,17 +18,19 @@
       "2004",
       "1989"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-02"
   },
   {
-    "text": "Quel réalisateur a signé Le Voyage de Chihiro ?",
+    "text": "Dans quel lieu Chihiro est-elle engagée par Yubaba ?",
     "answers": [
-      "Isao Takahata",
-      "Goro Miyazaki",
-      "Hayao Miyazaki",
-      "Hiromasa Yonebayashi"
+      "Une école de sorcellerie",
+      "Un château volant",
+      "Un établissement de bains",
+      "Une boulangerie"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "revision-3"
   },
   {
     "text": "Quel personnage, lieu ou élément appartient au film Le Voyage de Chihiro ?",
@@ -37,7 +40,8 @@
       "les lucioles",
       "Sans-Visage"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-04"
   },
   {
     "text": "Quel compositeur est associé à la musique du film Le Voyage de Chihiro ?",
@@ -47,7 +51,8 @@
       "Yūji Nomi",
       "Cécile Corbel"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Qui a réalisé le film Mon voisin Totoro ?",
@@ -57,7 +62,8 @@
       "Hiromasa Yonebayashi",
       "Isao Takahata"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-06"
   },
   {
     "text": "En quelle année le film Mon voisin Totoro est-il sorti au Japon ?",
@@ -67,17 +73,19 @@
       "1988",
       "1986"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
-    "text": "Quel personnage est au centre du film Mon voisin Totoro ?",
+    "text": "Dans Mon voisin Totoro, où Mei et Satsuki emménagent-elles avec leur père ?",
     "answers": [
-      "Kiki",
-      "Pazu et Sheeta",
-      "Seita et Setsuko",
-      "Satsuki et Mei"
+      "Sur une île",
+      "Dans un port",
+      "À Tokyo",
+      "À la campagne"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-8"
   },
   {
     "text": "Comment s'appellent les deux sœurs de Mon voisin Totoro ?",
@@ -87,7 +95,8 @@
       "Kiki et Ursula",
       "Pazu et Sheeta"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel compositeur est associé à la musique du film Mon voisin Totoro ?",
@@ -97,7 +106,8 @@
       "Yūji Nomi",
       "Cécile Corbel"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-10"
   },
   {
     "text": "Qui a réalisé le film Princesse Mononoké ?",
@@ -107,7 +117,8 @@
       "Hayao Miyazaki",
       "Yoshifumi Kondō"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "En quelle année le film Princesse Mononoké est-il sorti au Japon ?",
@@ -117,7 +128,8 @@
       "2013",
       "1997"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-12"
   },
   {
     "text": "Quel personnage est au centre du film Princesse Mononoké ?",
@@ -127,7 +139,8 @@
       "Seita et Setsuko",
       "Kaguya"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quel personnage, lieu ou élément appartient au film Princesse Mononoké ?",
@@ -137,7 +150,8 @@
       "un coupeur de bambou",
       "le Baron"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-14"
   },
   {
     "text": "Quel compositeur est associé à la musique du film Princesse Mononoké ?",
@@ -147,7 +161,8 @@
       "Joe Hisaishi",
       "Cécile Corbel"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Qui a réalisé le film Le Château ambulant ?",
@@ -157,7 +172,8 @@
       "Hiromasa Yonebayashi",
       "Hayao Miyazaki"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-16"
   },
   {
     "text": "En quelle année le film Le Château ambulant est-il sorti au Japon ?",
@@ -167,7 +183,8 @@
       "2013",
       "1995"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel personnage est au centre du film Le Château ambulant ?",
@@ -177,7 +194,8 @@
       "Kaguya",
       "Shizuku"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-18"
   },
   {
     "text": "Quel personnage, lieu ou élément appartient au film Le Château ambulant ?",
@@ -187,7 +205,8 @@
       "Calcifer",
       "les Chapardeurs"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quel compositeur est associé à la musique du film Le Château ambulant ?",
@@ -197,7 +216,8 @@
       "Cécile Corbel",
       "Joe Hisaishi"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-20"
   },
   {
     "text": "Qui a réalisé le film Kiki la petite sorcière ?",
@@ -207,7 +227,8 @@
       "Yoshifumi Kondō",
       "Hiromasa Yonebayashi"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "En quelle année le film Kiki la petite sorcière est-il sorti au Japon ?",
@@ -217,7 +238,8 @@
       "1995",
       "2010"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-22"
   },
   {
     "text": "Comment s'appelle le chat noir de Kiki la petite sorcière ?",
@@ -227,17 +249,19 @@
       "Jiji",
       "Tama"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
-    "text": "Quel personnage, lieu ou élément appartient au film Kiki la petite sorcière ?",
+    "text": "Quel service Kiki propose-t-elle à l’aide de son balai ?",
     "answers": [
-      "le Baron",
-      "les Chapardeurs",
-      "Sans-Visage",
-      "Jiji"
+      "Des cours de vol",
+      "Des tours guidés",
+      "Des spectacles",
+      "Des livraisons"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-24"
   },
   {
     "text": "Quel compositeur est associé à la musique du film Kiki la petite sorcière ?",
@@ -247,7 +271,8 @@
       "Yūji Nomi",
       "Cécile Corbel"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Qui a réalisé le film Le Château dans le ciel ?",
@@ -257,7 +282,8 @@
       "Yoshifumi Kondō",
       "Hiromasa Yonebayashi"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-26"
   },
   {
     "text": "En quelle année le film Le Château dans le ciel est-il sorti au Japon ?",
@@ -267,17 +293,19 @@
       "1986",
       "2001"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
-    "text": "Quel personnage est au centre du film Le Château dans le ciel ?",
+    "text": "Quels personnages sont au centre du Château dans le ciel ?",
     "answers": [
       "Shizuku",
       "Arrietty",
       "Chihiro",
       "Pazu et Sheeta"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "revision-28"
   },
   {
     "text": "Quel personnage, lieu ou élément appartient au film Le Château dans le ciel ?",
@@ -287,7 +315,8 @@
       "Sans-Visage",
       "Totoro"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel compositeur est associé à la musique du film Le Château dans le ciel ?",
@@ -297,7 +326,8 @@
       "Yūji Nomi",
       "Cécile Corbel"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-30"
   },
   {
     "text": "Qui a réalisé le film Le Tombeau des lucioles ?",
@@ -307,7 +337,8 @@
       "Isao Takahata",
       "Hiromasa Yonebayashi"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "En quelle année le film Le Tombeau des lucioles est-il sorti au Japon ?",
@@ -317,27 +348,30 @@
       "1997",
       "1988"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-32"
   },
   {
-    "text": "Quel personnage est au centre du film Le Tombeau des lucioles ?",
+    "text": "Comment se prénomment le frère et la sœur du Tombeau des lucioles ?",
     "answers": [
       "Seita et Setsuko",
       "Arrietty",
       "Chihiro",
       "Satsuki et Mei"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "revision-33"
   },
   {
-    "text": "Quel réalisateur a signé Le Tombeau des lucioles ?",
+    "text": "Dans quel pays se déroule Le Tombeau des lucioles pendant la Seconde Guerre mondiale ?",
     "answers": [
-      "Hayao Miyazaki",
-      "Isao Takahata",
-      "Mamoru Hosoda",
-      "Makoto Shinkai"
+      "Chine",
+      "Japon",
+      "Corée",
+      "Vietnam"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "revision-34"
   },
   {
     "text": "Quel compositeur est associé à la musique du film Le Tombeau des lucioles ?",
@@ -347,7 +381,8 @@
       "Michio Mamiya",
       "Cécile Corbel"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Qui a réalisé le film Le Conte de la princesse Kaguya ?",
@@ -357,7 +392,8 @@
       "Hiromasa Yonebayashi",
       "Isao Takahata"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-36"
   },
   {
     "text": "En quelle année le film Le Conte de la princesse Kaguya est-il sorti au Japon ?",
@@ -367,7 +403,8 @@
       "1988",
       "1997"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "De quel conte japonais ancien est tiré Le Conte de la princesse Kaguya ?",
@@ -377,7 +414,8 @@
       "Momotarō",
       "Le Dit du Genji"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-38"
   },
   {
     "text": "Quel personnage, lieu ou élément appartient au film Le Conte de la princesse Kaguya ?",
@@ -387,7 +425,8 @@
       "un coupeur de bambou",
       "l'Esprit de la forêt"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel compositeur est associé à la musique du film Le Conte de la princesse Kaguya ?",
@@ -397,7 +436,8 @@
       "Cécile Corbel",
       "Joe Hisaishi"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-40"
   },
   {
     "text": "Qui a réalisé le film Si tu tends l’oreille ?",
@@ -407,7 +447,8 @@
       "Isao Takahata",
       "Hiromasa Yonebayashi"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "En quelle année le film Si tu tends l’oreille est-il sorti au Japon ?",
@@ -417,7 +458,8 @@
       "1988",
       "1997"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-42"
   },
   {
     "text": "Quel personnage est au centre du film Si tu tends l’oreille ?",
@@ -427,7 +469,8 @@
       "Shizuku",
       "Ashitaka"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quel personnage, lieu ou élément appartient au film Si tu tends l’oreille ?",
@@ -437,7 +480,8 @@
       "l'Esprit de la forêt",
       "le Baron"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-44"
   },
   {
     "text": "Quel compositeur est associé à la musique du film Si tu tends l’oreille ?",
@@ -447,7 +491,8 @@
       "Michio Mamiya",
       "Cécile Corbel"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Qui a réalisé le film Arrietty : Le Petit Monde des Chapardeurs ?",
@@ -457,7 +502,8 @@
       "Isao Takahata",
       "Yoshifumi Kondō"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-46"
   },
   {
     "text": "En quelle année le film Arrietty : Le Petit Monde des Chapardeurs est-il sorti au Japon ?",
@@ -467,7 +513,8 @@
       "2010",
       "1997"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quelle taille approximative fait l'héroïne d'Arrietty : Le Petit Monde des Chapardeurs ?",
@@ -477,7 +524,8 @@
       "Environ 1 m",
       "Environ 10 cm"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-48"
   },
   {
     "text": "De quel roman britannique s'inspire Arrietty ?",
@@ -487,7 +535,8 @@
       "Peter Pan",
       "Le Monde de Narnia"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quel compositeur est associé à la musique du film Arrietty : Le Petit Monde des Chapardeurs ?",
@@ -497,6 +546,7 @@
       "Michio Mamiya",
       "Yūji Nomi"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-50"
   }
 ]
