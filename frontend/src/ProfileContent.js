@@ -260,11 +260,7 @@ function Specialty({ topic, lang, levelLabel, onSelect, compact = false }) {
     <button type="button" className={compact ? 'profile-specialty-row' : 'pf-theme-tile profile-specialty'} onClick={() => onSelect?.(topic.key)}>
       {!compact && <span className="profile-specialty-art">
         {cover?.src ? <img src={cover.src} srcSet={cover.srcSet} sizes="(min-width: 900px) 180px, 31vw"
-<<<<<<< HEAD
           alt="" loading="lazy" decoding="async" style={{ objectPosition: cover.embeddedTitle ? 'center top' : cover.focal }} /> : <Icon name="themes" size={22} />}
-=======
-          alt="" decoding="async" style={{ objectPosition: cover.embeddedTitle ? 'center top' : cover.focal }} /> : <Icon name="themes" size={22} />}
->>>>>>> 6646450f4e1e9e7719542c3e43d037ca7bb7ef3d
       </span>}
       <span className="pf-theme-copy">
         <strong className="pf-theme-name">{title}</strong>

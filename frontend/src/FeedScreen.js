@@ -259,11 +259,7 @@ export function FeedScreen({ feed, myTopics = [], controls, onPlayTopic, onOpenT
               {chipKeys.map((key) => {
                 const cover = getTopicCover(topics.get(key));
                 return <button key={key} type="button" aria-pressed={category === key} onClick={() => setCategory(category === key ? null : key)}>
-<<<<<<< HEAD
                   {cover?.src && <img src={cover.src} srcSet={cover.srcSet} sizes="24px" alt="" loading="lazy" decoding="async" style={{ objectPosition: cover.focal }} />}
-=======
-                  {cover?.src && <img src={cover.src} srcSet={cover.srcSet} sizes="24px" alt="" style={{ objectPosition: cover.focal }} />}
->>>>>>> 6646450f4e1e9e7719542c3e43d037ca7bb7ef3d
                   <span>{titleFor(key, lang)}</span>
                 </button>;
               })}
