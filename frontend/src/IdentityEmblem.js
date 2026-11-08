@@ -12,5 +12,5 @@ export function IdentityEmblem({ frame, className = '' }) {
   if (!hasEmblem(frame)) return null;
   return <img className={`identity-emblem emblem-${frame} ${className}`.trim()}
     src={`${process.env.PUBLIC_URL || ''}/images/emblems/${frame}.svg`}
-    width="160" height="120" alt="" aria-hidden="true" draggable={false} />;
+    width="160" height="120" alt="" loading="lazy" decoding="async" aria-hidden="true" draggable={false} />;
 }

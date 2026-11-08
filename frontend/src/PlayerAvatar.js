@@ -17,6 +17,6 @@ export function PlayerAvatar({ avatar, fallbackAvatar = 'robot', className = '' 
   const index = AVATAR_IDS.indexOf(id);
   return <span className={`player-avatar${photo ? ' player-avatar--photo' : ''} ${className}`} data-avatar={id} aria-hidden="true"
     style={{ '--avatar-x': `${(index % 5) * 25}%`, '--avatar-y': `${Math.floor(index / 5) * 100}%` }}>
-    {photo && <img key={photo} className="player-avatar-photo" src={photo} alt="" crossOrigin="anonymous" onError={event => { event.currentTarget.style.display = 'none'; }} />}
+    {photo && <img key={photo} className="player-avatar-photo" src={photo} alt="" loading="lazy" decoding="async" crossOrigin="anonymous" onError={event => { event.currentTarget.style.display = 'none'; }} />}
   </span>;
 }
