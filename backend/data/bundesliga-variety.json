@@ -1,7 +1,12 @@
 [
   {
     "text": "Quel club dispute ses rencontres de Bundesliga à domicile à l’Allianz Arena ?",
-    "answers": ["Borussia Dortmund", "VfB Stuttgart", "Bayern Munich", "Bayer Leverkusen"],
+    "answers": [
+      "Borussia Dortmund",
+      "VfB Stuttgart",
+      "Bayern Munich",
+      "Bayer Leverkusen"
+    ],
     "correct": 2,
     "difficulty": "easy",
     "angle": "stades",
@@ -10,7 +15,12 @@
   },
   {
     "text": "Quel club reçoit au Signal Iduna Park, aussi appelé Westfalenstadion ?",
-    "answers": ["Borussia Dortmund", "Schalke 04", "Werder Brême", "Borussia Mönchengladbach"],
+    "answers": [
+      "Borussia Dortmund",
+      "Schalke 04",
+      "Werder Brême",
+      "Borussia Mönchengladbach"
+    ],
     "correct": 0,
     "difficulty": "easy",
     "angle": "stades",
@@ -19,7 +29,12 @@
   },
   {
     "text": "Quel club est le rival du Borussia Dortmund dans le Revierderby ?",
-    "answers": ["Bayern Munich", "Eintracht Francfort", "RB Leipzig", "Schalke 04"],
+    "answers": [
+      "Bayern Munich",
+      "Eintracht Francfort",
+      "RB Leipzig",
+      "Schalke 04"
+    ],
     "correct": 3,
     "difficulty": "easy",
     "angle": "clubs",
@@ -28,7 +43,12 @@
   },
   {
     "text": "Quel club a terminé la Bundesliga 2023-2024 sans perdre un seul match ?",
-    "answers": ["Bayern Munich", "Bayer Leverkusen", "VfB Stuttgart", "Borussia Dortmund"],
+    "answers": [
+      "Bayern Munich",
+      "Bayer Leverkusen",
+      "VfB Stuttgart",
+      "Borussia Dortmund"
+    ],
     "correct": 1,
     "difficulty": "easy",
     "angle": "records",
@@ -37,7 +57,12 @@
   },
   {
     "text": "Comment appelle-t-on le trophée en forme de bouclier remis au champion de Bundesliga ?",
-    "answers": ["DFB-Pokal", "Torschützenkanone", "Supercup", "Meisterschale"],
+    "answers": [
+      "DFB-Pokal",
+      "Torschützenkanone",
+      "Supercup",
+      "Meisterschale"
+    ],
     "correct": 3,
     "difficulty": "easy",
     "angle": "palmares",
@@ -46,7 +71,12 @@
   },
   {
     "text": "Dans quelle ville est installé le Werder, champion d’Allemagne en 2004 ?",
-    "answers": ["Brême", "Hambourg", "Hanovre", "Düsseldorf"],
+    "answers": [
+      "Brême",
+      "Hambourg",
+      "Hanovre",
+      "Düsseldorf"
+    ],
     "correct": 0,
     "difficulty": "easy",
     "angle": "clubs",
@@ -55,7 +85,12 @@
   },
   {
     "text": "Quelles couleurs valent au Borussia Dortmund son surnom de Schwarzgelben ?",
-    "answers": ["Rouge et blanc", "Noir et jaune", "Bleu et blanc", "Vert et noir"],
+    "answers": [
+      "Rouge et blanc",
+      "Noir et jaune",
+      "Bleu et blanc",
+      "Vert et noir"
+    ],
     "correct": 1,
     "difficulty": "easy",
     "angle": "clubs",
@@ -64,7 +99,12 @@
   },
   {
     "text": "Quel club joue à domicile au Stadion An der Alten Försterei ?",
-    "answers": ["Hertha Berlin", "VfL Bochum", "Union Berlin", "SC Fribourg"],
+    "answers": [
+      "Hertha Berlin",
+      "VfL Bochum",
+      "Union Berlin",
+      "SC Fribourg"
+    ],
     "correct": 2,
     "difficulty": "medium",
     "angle": "stades",
@@ -73,7 +113,12 @@
   },
   {
     "text": "Combien de buts Robert Lewandowski a-t-il inscrits en Bundesliga en 2020-2021 ?",
-    "answers": ["41", "36", "39", "44"],
+    "answers": [
+      "41",
+      "36",
+      "39",
+      "44"
+    ],
     "correct": 0,
     "difficulty": "medium",
     "angle": "records",
@@ -82,7 +127,12 @@
   },
   {
     "text": "Quel entraîneur a remporté les titres 2010-2011 et 2011-2012 avec Dortmund ?",
-    "answers": ["Thomas Tuchel", "Ottmar Hitzfeld", "Jürgen Klopp", "Jürgen Röber"],
+    "answers": [
+      "Thomas Tuchel",
+      "Ottmar Hitzfeld",
+      "Jürgen Klopp",
+      "Jürgen Röber"
+    ],
     "correct": 2,
     "difficulty": "medium",
     "angle": "entraineurs",
@@ -91,7 +141,12 @@
   },
   {
     "text": "Quel club a été sacré champion de Bundesliga en 2006-2007 ?",
-    "answers": ["Schalke 04", "VfB Stuttgart", "Werder Brême", "Bayern Munich"],
+    "answers": [
+      "Schalke 04",
+      "VfB Stuttgart",
+      "Werder Brême",
+      "Bayern Munich"
+    ],
     "correct": 1,
     "difficulty": "medium",
     "angle": "palmares",
@@ -100,7 +155,12 @@
   },
   {
     "text": "Qui a terminé meilleur buteur de Bundesliga en 2016-2017, avec 31 buts pour Dortmund ?",
-    "answers": ["Robert Lewandowski", "Marco Reus", "Anthony Modeste", "Pierre-Emerick Aubameyang"],
+    "answers": [
+      "Robert Lewandowski",
+      "Marco Reus",
+      "Anthony Modeste",
+      "Pierre-Emerick Aubameyang"
+    ],
     "correct": 3,
     "difficulty": "medium",
     "angle": "joueurs",
@@ -109,7 +169,12 @@
   },
   {
     "text": "Quel club affronte Hambourg dans le Nordderby historique ?",
-    "answers": ["Holstein Kiel", "Werder Brême", "Hannover 96", "VfL Wolfsburg"],
+    "answers": [
+      "Holstein Kiel",
+      "Werder Brême",
+      "Hannover 96",
+      "VfL Wolfsburg"
+    ],
     "correct": 1,
     "difficulty": "medium",
     "angle": "clubs",
@@ -118,7 +183,12 @@
   },
   {
     "text": "En quelle année les clubs ont-ils disputé les premiers matchs de la Bundesliga ?",
-    "answers": ["1954", "1960", "1970", "1963"],
+    "answers": [
+      "1954",
+      "1960",
+      "1970",
+      "1963"
+    ],
     "correct": 3,
     "difficulty": "medium",
     "angle": "histoire",
@@ -127,7 +197,12 @@
   },
   {
     "text": "Quel club a remporté la Bundesliga en 2008-2009 avec le duo Grafite–Džeko ?",
-    "answers": ["VfL Wolfsburg", "Bayern Munich", "Hertha Berlin", "Schalke 04"],
+    "answers": [
+      "VfL Wolfsburg",
+      "Bayern Munich",
+      "Hertha Berlin",
+      "Schalke 04"
+    ],
     "correct": 0,
     "difficulty": "medium",
     "angle": "palmares",
@@ -136,7 +211,12 @@
   },
   {
     "text": "Quel club berlinois reçoit à l’Olympiastadion lorsqu’il évolue en Bundesliga ?",
-    "answers": ["Union Berlin", "Viktoria Berlin", "Hertha Berlin", "Tennis Borussia Berlin"],
+    "answers": [
+      "Union Berlin",
+      "Viktoria Berlin",
+      "Hertha Berlin",
+      "Tennis Borussia Berlin"
+    ],
     "correct": 2,
     "difficulty": "medium",
     "angle": "stades",
@@ -145,7 +225,12 @@
   },
   {
     "text": "Quel club est devenu le premier champion de Bundesliga en 1964 ?",
-    "answers": ["Eintracht Francfort", "Meidericher SV", "Borussia Dortmund", "1. FC Cologne"],
+    "answers": [
+      "Eintracht Francfort",
+      "Meidericher SV",
+      "Borussia Dortmund",
+      "1. FC Cologne"
+    ],
     "correct": 3,
     "difficulty": "hard",
     "angle": "histoire",
@@ -154,7 +239,12 @@
   },
   {
     "text": "Quel entraîneur a gagné le titre 1997-1998 avec le promu Kaiserslautern ?",
-    "answers": ["Christoph Daum", "Otto Rehhagel", "Ottmar Hitzfeld", "Felix Magath"],
+    "answers": [
+      "Christoph Daum",
+      "Otto Rehhagel",
+      "Ottmar Hitzfeld",
+      "Felix Magath"
+    ],
     "correct": 1,
     "difficulty": "hard",
     "angle": "entraineurs",
@@ -163,7 +253,12 @@
   },
   {
     "text": "Avec combien de buts Gerd Müller a-t-il terminé sa carrière en Bundesliga ?",
-    "answers": ["295", "320", "365", "402"],
+    "answers": [
+      "295",
+      "320",
+      "365",
+      "402"
+    ],
     "correct": 2,
     "difficulty": "hard",
     "angle": "records",
@@ -172,7 +267,12 @@
   },
   {
     "text": "Quel attaquant du Werder a terminé meilleur buteur de Bundesliga en 2003-2004 ?",
-    "answers": ["Aílton", "Ivan Klasnić", "Miroslav Klose", "Johan Micoud"],
+    "answers": [
+      "Aílton",
+      "Ivan Klasnić",
+      "Miroslav Klose",
+      "Johan Micoud"
+    ],
     "correct": 0,
     "difficulty": "hard",
     "angle": "joueurs",
@@ -181,7 +281,12 @@
   },
   {
     "text": "Quel entraîneur a mené le Bayern Munich à 91 points en Bundesliga en 2012-2013 ?",
-    "answers": ["Louis van Gaal", "Felix Magath", "Jupp Heynckes", "Pep Guardiola"],
+    "answers": [
+      "Louis van Gaal",
+      "Felix Magath",
+      "Jupp Heynckes",
+      "Pep Guardiola"
+    ],
     "correct": 2,
     "difficulty": "hard",
     "angle": "entraineurs",
@@ -190,7 +295,12 @@
   },
   {
     "text": "Contre quel club Lewandowski a-t-il inscrit cinq buts en neuf minutes en septembre 2015 ?",
-    "answers": ["Bayer Leverkusen", "Borussia Dortmund", "Schalke 04", "VfL Wolfsburg"],
+    "answers": [
+      "Bayer Leverkusen",
+      "Borussia Dortmund",
+      "Schalke 04",
+      "VfL Wolfsburg"
+    ],
     "correct": 3,
     "difficulty": "hard",
     "angle": "records",
@@ -199,7 +309,12 @@
   },
   {
     "text": "Quel club de Franconie a remporté la Bundesliga 1967-1968 ?",
-    "answers": ["SpVgg Greuther Fürth", "1. FC Nuremberg", "Bayern Hof", "Würzburger Kickers"],
+    "answers": [
+      "SpVgg Greuther Fürth",
+      "1. FC Nuremberg",
+      "Bayern Hof",
+      "Würzburger Kickers"
+    ],
     "correct": 1,
     "difficulty": "hard",
     "angle": "palmares",
@@ -208,7 +323,12 @@
   },
   {
     "text": "Quel joueur a marqué le tout premier but de l’histoire de la Bundesliga en 1963 ?",
-    "answers": ["Timo Konietzka", "Uwe Seeler", "Helmut Rahn", "Max Morlock"],
+    "answers": [
+      "Timo Konietzka",
+      "Uwe Seeler",
+      "Helmut Rahn",
+      "Max Morlock"
+    ],
     "correct": 0,
     "difficulty": "expert",
     "angle": "histoire",
@@ -217,7 +337,12 @@
   },
   {
     "text": "Quel défenseur a disputé 602 matchs de Bundesliga, tous avec l’Eintracht Francfort ?",
-    "answers": ["Manfred Binz", "Bruno Pezzey", "Thomas Berthold", "Karl-Heinz Körbel"],
+    "answers": [
+      "Manfred Binz",
+      "Bruno Pezzey",
+      "Thomas Berthold",
+      "Karl-Heinz Körbel"
+    ],
     "correct": 3,
     "difficulty": "expert",
     "angle": "records",
@@ -226,7 +351,12 @@
   },
   {
     "text": "Quel meneur de jeu a participé aux premiers titres de Mönchengladbach en 1970 et 1971 ?",
-    "answers": ["Wolfgang Overath", "Paul Breitner", "Günter Netzer", "Rainer Bonhof"],
+    "answers": [
+      "Wolfgang Overath",
+      "Paul Breitner",
+      "Günter Netzer",
+      "Rainer Bonhof"
+    ],
     "correct": 2,
     "difficulty": "expert",
     "angle": "joueurs",
@@ -235,7 +365,12 @@
   },
   {
     "text": "Quel club de Basse-Saxe a remporté la Bundesliga 1966-1967 ?",
-    "answers": ["Eintracht Brunswick", "Hannover 96", "VfL Wolfsburg", "VfL Osnabrück"],
+    "answers": [
+      "Eintracht Brunswick",
+      "Hannover 96",
+      "VfL Wolfsburg",
+      "VfL Osnabrück"
+    ],
     "correct": 0,
     "difficulty": "expert",
     "angle": "palmares",
@@ -244,11 +379,302 @@
   },
   {
     "text": "Quel attaquant de Schalke a fini meilleur buteur de Bundesliga en 1975-1976 avec 29 buts ?",
-    "answers": ["Erwin Kremers", "Klaus Fischer", "Rüdiger Abramczik", "Manfred Dubski"],
+    "answers": [
+      "Erwin Kremers",
+      "Klaus Fischer",
+      "Rüdiger Abramczik",
+      "Manfred Dubski"
+    ],
     "correct": 1,
     "difficulty": "expert",
     "angle": "joueurs",
     "fact": "bundesliga-fischer-meilleur-buteur-1976",
     "source": "https://www.bundesliga.com/en/bundesliga/news/a-history-of-top-scorers-by-season-lewandowski-muller-aubameyang-19353"
+  },
+  {
+    "text": "Quel club a remporté le plus de titres de champion d'Allemagne ?",
+    "answers": [
+      "Borussia Dortmund",
+      "Bayern Munich",
+      "Hambourg SV",
+      "Borussia Mönchengladbach"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "palmares",
+    "fact": "bundesliga-bayern-plus-titres"
+  },
+  {
+    "text": "Quel entraîneur a mené le Borussia Dortmund à deux titres consécutifs en 2011 et 2012 ?",
+    "answers": [
+      "Thomas Tuchel",
+      "Lucien Favre",
+      "Jürgen Klopp",
+      "Edin Terzić"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "carriere",
+    "fact": "bundesliga-klopp-dortmund-deux-titres"
+  },
+  {
+    "text": "Quel club de Bundesliga joue ses matchs à domicile au Westfalenstadion ?",
+    "answers": [
+      "Schalke 04",
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "RB Leipzig"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "culture",
+    "fact": "bundesliga-dortmund-westfalenstadion"
+  },
+  {
+    "text": "Quel joueur a inscrit 5 buts en 9 minutes contre Wolfsburg en 2015 ?",
+    "answers": [
+      "Thomas Müller",
+      "Robert Lewandowski",
+      "Pierre-Emerick Aubameyang",
+      "Mario Gómez"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "records",
+    "fact": "bundesliga-lewandowski-5-buts-9-min"
+  },
+  {
+    "text": "Quel club est surnommé « Die Werkself » (l'équipe de l'usine) ?",
+    "answers": [
+      "VfL Wolfsburg",
+      "Bayer Leverkusen",
+      "TSG Hoffenheim",
+      "RB Leipzig"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "culture",
+    "fact": "bundesliga-leverkusen-werkself"
+  },
+  {
+    "text": "Quel gardien légendaire du Bayern Munich a remporté trois Ligues des champions ?",
+    "answers": [
+      "Oliver Kahn",
+      "Manuel Neuer",
+      "Sepp Maier",
+      "Jens Lehmann"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "carriere",
+    "fact": "bundesliga-sepp-maier-trois-c1"
+  },
+  {
+    "text": "En quelle année la Bundesliga a-t-elle été créée ?",
+    "answers": [
+      "1955",
+      "1959",
+      "1963",
+      "1970"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "histoire",
+    "fact": "bundesliga-creation-1963"
+  },
+  {
+    "text": "Quel club de l'ex-RDA a joué en Bundesliga après la réunification ?",
+    "answers": [
+      "Dynamo Dresde",
+      "Hansa Rostock",
+      "RB Leipzig",
+      "Union Berlin"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "histoire",
+    "fact": "bundesliga-dynamo-dresde-reunification"
+  },
+  {
+    "text": "Quel buteur gabonais a été meilleur buteur de Bundesliga en 2016-2017 avec le BVB ?",
+    "answers": [
+      "Mario Gómez",
+      "Robert Lewandowski",
+      "Pierre-Emerick Aubameyang",
+      "Patrik Schick"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "palmares",
+    "fact": "bundesliga-aubameyang-meilleur-buteur-2017-bvb"
+  },
+  {
+    "text": "Quel club a terminé la saison 2023-2024 invaincu en Bundesliga ?",
+    "answers": [
+      "Bayern Munich",
+      "Borussia Dortmund",
+      "Bayer Leverkusen",
+      "RB Leipzig"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "palmares",
+    "fact": "bundesliga-leverkusen-invaincu-2023-24"
+  },
+  {
+    "text": "Quel stade de Bundesliga a la plus grande capacité debout d'Europe avec le Mur Jaune ?",
+    "answers": [
+      "Allianz Arena",
+      "Olympiastadion Berlin",
+      "Signal Iduna Park",
+      "Volksparkstadion"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "culture",
+    "fact": "bundesliga-signal-iduna-mur-jaune"
+  },
+  {
+    "text": "Quel entraîneur a remporté le triplé Bundesliga-Coupe-Ligue des champions avec le Bayern en 2013 ?",
+    "answers": [
+      "Pep Guardiola",
+      "Carlo Ancelotti",
+      "Jupp Heynckes",
+      "Hansi Flick"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "palmares",
+    "fact": "bundesliga-heynckes-triple-2013"
+  },
+  {
+    "text": "Quel club de Bundesliga est basé à Leipzig et a été fondé en 2009 ?",
+    "answers": [
+      "Energie Cottbus",
+      "RB Leipzig",
+      "Dynamo Dresde",
+      "Erzgebirge Aue"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "culture",
+    "fact": "bundesliga-rb-leipzig-fonde-2009"
+  },
+  {
+    "text": "Quel joueur allemand détient le record de buts en une saison de Bundesliga avec 41 buts ?",
+    "answers": [
+      "Gerd Müller",
+      "Robert Lewandowski",
+      "Karl-Heinz Rummenigge",
+      "Jupp Heynckes"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "records",
+    "fact": "bundesliga-lewandowski-41-buts-record-saison"
+  },
+  {
+    "text": "Quel club de Bundesliga joue dans le stade appelé Volksparkstadion ?",
+    "answers": [
+      "Hambourg SV",
+      "Werder Brême",
+      "Hertha Berlin",
+      "FC Cologne"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "culture",
+    "fact": "bundesliga-hambourg-volksparkstadion"
+  },
+  {
+    "text": "Quel entraîneur turc a dirigé Galatasaray puis le VfB Stuttgart en Bundesliga ?",
+    "answers": [
+      "Fatih Terim",
+      "Armin Veh",
+      "Giovanni Trapattoni",
+      "Tayfun Korkut"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "carriere",
+    "fact": "bundesliga-korkut-stuttgart"
+  },
+  {
+    "text": "Quel club a été le premier promu à remporter la Bundesliga, en 1998 ?",
+    "answers": [
+      "VfB Stuttgart",
+      "1. FC Kaiserslautern",
+      "SC Fribourg",
+      "Fortuna Düsseldorf"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "palmares",
+    "fact": "bundesliga-kaiserslautern-promu-champion-1998"
+  },
+  {
+    "text": "Combien d'équipes participent à une saison de Bundesliga ?",
+    "answers": [
+      "16",
+      "18",
+      "20",
+      "22"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "regles",
+    "fact": "bundesliga-18-equipes"
+  },
+  {
+    "text": "Quel joueur brésilien a été sacré meilleur buteur de la Bundesliga en 2004 avec le Werder Brême ?",
+    "answers": [
+      "Grafite",
+      "Diego",
+      "Ailton",
+      "Cláudio Pizarro"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "palmares",
+    "fact": "bundesliga-ailton-buteur-2004-werder"
+  },
+  {
+    "text": "Quel derby oppose le Borussia Dortmund au Schalke 04 ?",
+    "answers": [
+      "Der Klassiker",
+      "Nordderby",
+      "Revierderby",
+      "Rheinderby"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "culture",
+    "fact": "bundesliga-revierderby-dortmund-schalke"
+  },
+  {
+    "text": "Quel club munichois évolue en deuxième division et est le rival local du Bayern ?",
+    "answers": [
+      "SpVgg Greuther Fürth",
+      "1860 Munich",
+      "FC Augsbourg",
+      "SSV Jahn Ratisbonne"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "culture",
+    "fact": "bundesliga-1860-munich-rival-bayern"
+  },
+  {
+    "text": "Quel attaquant polonais a quitté le Bayern Munich pour le FC Barcelone en 2022 ?",
+    "answers": [
+      "Arkadiusz Milik",
+      "Robert Lewandowski",
+      "Piotr Zieliński",
+      "Krzysztof Piątek"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "carriere",
+    "fact": "bundesliga-lewandowski-depart-barca-2022"
   }
 ]

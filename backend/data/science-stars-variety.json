@@ -1,26 +1,702 @@
 [
-  {"text":"Dans E = mc², quelle grandeur Einstein relie-t-il à l’énergie de repos d’un corps ?","answers":["Sa température","Sa masse","Son volume","Son accélération"],"correct":1,"difficulty":"easy","angle":"physique","fact":"einstein-masse-energie","source":"https://www.einstein-online.info/en/emc/"},
-  {"text":"Quel mécanisme Charles Darwin place-t-il au cœur de « L’Origine des espèces » ?","answers":["La génération spontanée","La fixité des espèces","La transmission des souvenirs","La sélection naturelle"],"correct":3,"difficulty":"easy","angle":"vivant","fact":"darwin-selection-naturelle-origine-especes","source":"https://darwin-online.org.uk/content/contentblock?basepage=1&itemID=F373&viewtype=text"},
-  {"text":"Quelles plantes Gregor Mendel croise-t-il pour étudier la transmission de caractères comme la couleur des graines ?","answers":["Des pois","Des haricots","Des lentilles","Des fèves"],"correct":0,"difficulty":"easy","angle":"vivant","fact":"mendel-experiences-pois","source":"https://www.genome.gov/25520230/online-education-kit-1865-mendels-peas"},
-  {"text":"Contre quelle maladie l’équipe de Louis Pasteur vaccine-t-elle Joseph Meister après une morsure en 1885 ?","answers":["Le tétanos","La variole","La rage","La diphtérie"],"correct":2,"difficulty":"easy","angle":"medecine","fact":"pasteur-vaccination-meister-rage","source":"https://www.pasteur.fr/fr/en-ce-moment/nos-actualites/actualites/lhistoire-de-la-premiere-vaccination-contre-la-rage-en-1885"},
-  {"text":"Quel outil de chimie Dmitri Mendeleïev développe-t-il pour classer les éléments et prévoir l’existence de certains ?","answers":["L’échelle de pH","Le tableau périodique","Le spectre visible","La série de réactivité"],"correct":1,"difficulty":"easy","angle":"chimie","fact":"mendeleiev-classement-tableau-periodique","source":"https://www.acs.org/content/dam/acsorg/education/resources/highschool/chemmatters/issues/2018-2019/february-2019/periodic-table-150.pdf"},
-  {"text":"Avec quel instrument Galilée observe-t-il le relief de la Lune au début du XVIIᵉ siècle ?","answers":["Une lunette astronomique","Un microscope","Un baromètre","Un cadran solaire"],"correct":0,"difficulty":"easy","angle":"terre-espace","fact":"galilee-lunette-lune","source":"https://science.nasa.gov/solar-system/moon/galileos-observations-of-the-moon-jupiter-venus-and-the-sun/"},
-  {"text":"Quel type de machine James Watt améliore-t-il en ajoutant un condenseur séparé ?","answers":["Le moulin à vent","Le moteur électrique","La machine à vapeur","Le moteur à essence"],"correct":2,"difficulty":"easy","angle":"technologie","fact":"watt-condenseur-machine-vapeur","source":"https://blog.sciencemuseum.org.uk/james-watt-and-the-separate-condenser/"},
-  {"text":"À quel pays Marie et Pierre Curie rendent-ils hommage en nommant le polonium ?","answers":["La France","La Suède","L’Autriche","La Pologne"],"correct":3,"difficulty":"medium","angle":"chimie","fact":"curie-polonium-pologne","source":"https://www.nobelprize.org/prizes/themes/marie-and-pierre-curie-and-the-discovery-of-polonium-and-radium/"},
-  {"text":"Pour quelle machine Ada Lovelace publie-t-elle des notes décrivant une suite d’opérations à exécuter ?","answers":["La machine à différences de Babbage","La Pascaline","La machine analytique de Babbage","La calculatrice de Leibniz"],"correct":2,"difficulty":"medium","angle":"technologie","fact":"lovelace-machine-analytique-babbage","source":"https://www.computerhistory.org/babbage/adalovelace"},
-  {"text":"Quel antibiotique Alexander Fleming identifie-t-il en étudiant une moisissure qui freine la croissance de bactéries ?","answers":["La pénicilline","La streptomycine","L’érythromycine","La tétracycline"],"correct":0,"difficulty":"medium","angle":"medecine","fact":"fleming-moisissure-penicilline","source":"https://www.nobelprize.org/uploads/2018/06/fleming-lecture.pdf"},
-  {"text":"Quelle grandeur Ératosthène estime-t-il à partir d’ombres observées dans deux villes ?","answers":["La distance Terre-Lune","La circonférence de la Terre","La hauteur de l’atmosphère","Le diamètre du Soleil"],"correct":1,"difficulty":"medium","angle":"mathematiques","fact":"eratosthene-ombres-circonference-terre","source":"https://science.nasa.gov/solar-system/skywatching/night-sky-network/tropical-solstice-shadows/"},
-  {"text":"De quel savant Émilie du Châtelet a-t-elle traduit en français les « Principes mathématiques de la philosophie naturelle » ?","answers":["Galilée","Gottfried Wilhelm Leibniz","Christiaan Huygens","Isaac Newton"],"correct":3,"difficulty":"medium","angle":"mathematiques","fact":"du-chatelet-traduction-principes-newton","source":"https://www.bnf.fr/fr/mediatheque/une-histoire-de-la-gravite-avec-isaac-newton-et-emilie-du-chatelet"},
-  {"text":"À Gombe, Jane Goodall observe des chimpanzés utiliser des brindilles pour attraper quels insectes ?","answers":["Des fourmis tisserandes","Des criquets","Des termites","Des abeilles"],"correct":2,"difficulty":"medium","angle":"vivant","fact":"goodall-chimpanzes-brindilles-termites","source":"https://janegoodall.org/news/how-jane-changed-science-forever/"},
-  {"text":"Chez les céphéides, à quelle grandeur Henrietta Leavitt relie-t-elle la période de variation de l’éclat ?","answers":["La luminosité intrinsèque","La vitesse de rotation","La température de surface","La distance à la Terre"],"correct":0,"difficulty":"medium","angle":"terre-espace","fact":"leavitt-cepheides-periode-luminosite","source":"https://www.cfa.harvard.edu/news/remembering-astronomer-henrietta-swan-leavitt"},
-  {"text":"Quel trajet de la lumière permet la vision selon Ibn al-Haytham, dit Alhazen ?","answers":["De l’œil vers l’objet","De l’objet vers l’œil","De la rétine vers la paupière","D’un œil vers l’autre"],"correct":1,"difficulty":"medium","angle":"physique","fact":"ibn-al-haytham-lumiere-entre-oeil","source":"https://www.unesco.org/en/articles/ibn-al-haythams-scientific-method"},
-  {"text":"Quelle technique a produit la Photo 51 de l’ADN, réalisée par Raymond Gosling sous la direction de Rosalind Franklin ?","answers":["La microscopie optique","La spectroscopie infrarouge","La microscopie électronique","La diffraction des rayons X"],"correct":3,"difficulty":"hard","angle":"vivant","fact":"franklin-gosling-photo-51-diffraction-x","source":"https://www.kcl.ac.uk/the-story-behind-photograph-51"},
-  {"text":"Quel astronaute demande à Katherine Johnson de vérifier les calculs de son vol orbital en 1962 ?","answers":["Alan Shepard","Scott Carpenter","John Glenn","Gus Grissom"],"correct":2,"difficulty":"hard","angle":"technologie","fact":"katherine-johnson-verification-john-glenn","source":"https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/"},
-  {"text":"Quel indice fossile a soutenu l’idée de Wegener que l’Afrique et l’Amérique du Sud avaient été réunies ?","answers":["Des mammouths sur les deux continents","Des fossiles de Mesosaurus des deux côtés de l’Atlantique","Les premiers chevaux fossiles en Europe","Des coraux fossiles près de la Méditerranée"],"correct":1,"difficulty":"hard","angle":"terre-espace","fact":"wegener-mesosaurus-afrique-amerique-sud","source":"https://www.usgs.gov/educational-resources/wegeners-puzzling-continental-drift-evidence"},
-  {"text":"Dans l’explication de la combustion par Lavoisier, quel composant de l’air se combine au corps qui brûle ?","answers":["Le dioxygène","Le diazote","L’argon","Le dioxyde de carbone"],"correct":0,"difficulty":"hard","angle":"chimie","fact":"lavoisier-combustion-role-oxygene","source":"https://www.acs.org/education/whatischemistry/landmarks/lavoisier.html"},
-  {"text":"Que déduit Rutherford des fortes déviations de certaines particules alpha dans les expériences de Geiger et Marsden ?","answers":["Que l’atome est plein et homogène","Que les électrons ont une charge positive","Que l’atome se divise à chaque choc","Que la charge positive est concentrée dans un noyau"],"correct":3,"difficulty":"hard","angle":"physique","fact":"rutherford-diffusion-alpha-noyau","source":"https://history.aip.org/exhibits/rutherford/sections/alpha-particles-atom.html"},
-  {"text":"En plaçant un thermomètre au-delà du rouge d’un spectre solaire, quel rayonnement William Herschel met-il en évidence ?","answers":["Les ultraviolets","Les infrarouges","Les rayons X","Les micro-ondes"],"correct":1,"difficulty":"expert","angle":"terre-espace","fact":"herschel-thermometre-infrarouge","source":"https://science.nasa.gov/ems/07_infraredwaves/"},
-  {"text":"Selon Noether, quelle conservation est liée à l’invariance de l’action par translation dans le temps ?","answers":["Celle du moment cinétique","Celle de la quantité de mouvement","Celle de la charge électrique","Celle de l’énergie"],"correct":3,"difficulty":"expert","angle":"mathematiques","fact":"noether-translation-temps-energie-conservee","source":"https://perimeterinstitute.ca/news/poetry-logical-ideas"},
-  {"text":"Chez quelle plante Barbara McClintock met-elle en évidence des éléments génétiques capables de changer de place ?","answers":["Le maïs","Le blé","Le riz","L’orge"],"correct":0,"difficulty":"expert","angle":"vivant","fact":"mcclintock-mais-elements-mobiles","source":"https://www.nobelprize.org/womenwhochangedscience/stories/barbara-mcclintock?keyword=genetics"},
-  {"text":"De quelle plante l’équipe de Tu Youyou extrait-elle l’artémisinine, substance active contre le paludisme ?","answers":["La digitale pourpre","Le quinquina","L’armoise annuelle","La pervenche de Madagascar"],"correct":2,"difficulty":"expert","angle":"medecine","fact":"tu-youyou-artemisinine-armoise-annuelle","source":"https://www.nobelprize.org/uploads/2018/06/tu-lecture.pdf"}
+  {
+    "text": "Dans E = mc², quelle grandeur Einstein relie-t-il à l’énergie de repos d’un corps ?",
+    "answers": [
+      "Sa température",
+      "Sa masse",
+      "Son volume",
+      "Son accélération"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "physique",
+    "fact": "einstein-masse-energie",
+    "source": "https://www.einstein-online.info/en/emc/"
+  },
+  {
+    "text": "Quel mécanisme Charles Darwin place-t-il au cœur de « L’Origine des espèces » ?",
+    "answers": [
+      "La génération spontanée",
+      "La fixité des espèces",
+      "La transmission des souvenirs",
+      "La sélection naturelle"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "vivant",
+    "fact": "darwin-selection-naturelle-origine-especes",
+    "source": "https://darwin-online.org.uk/content/contentblock?basepage=1&itemID=F373&viewtype=text"
+  },
+  {
+    "text": "Quelles plantes Gregor Mendel croise-t-il pour étudier la transmission de caractères comme la couleur des graines ?",
+    "answers": [
+      "Des pois",
+      "Des haricots",
+      "Des lentilles",
+      "Des fèves"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "vivant",
+    "fact": "mendel-experiences-pois",
+    "source": "https://www.genome.gov/25520230/online-education-kit-1865-mendels-peas"
+  },
+  {
+    "text": "Contre quelle maladie l’équipe de Louis Pasteur vaccine-t-elle Joseph Meister après une morsure en 1885 ?",
+    "answers": [
+      "Le tétanos",
+      "La variole",
+      "La rage",
+      "La diphtérie"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "medecine",
+    "fact": "pasteur-vaccination-meister-rage",
+    "source": "https://www.pasteur.fr/fr/en-ce-moment/nos-actualites/actualites/lhistoire-de-la-premiere-vaccination-contre-la-rage-en-1885"
+  },
+  {
+    "text": "Quel outil de chimie Dmitri Mendeleïev développe-t-il pour classer les éléments et prévoir l’existence de certains ?",
+    "answers": [
+      "L’échelle de pH",
+      "Le tableau périodique",
+      "Le spectre visible",
+      "La série de réactivité"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "chimie",
+    "fact": "mendeleiev-classement-tableau-periodique",
+    "source": "https://www.acs.org/content/dam/acsorg/education/resources/highschool/chemmatters/issues/2018-2019/february-2019/periodic-table-150.pdf"
+  },
+  {
+    "text": "Avec quel instrument Galilée observe-t-il le relief de la Lune au début du XVIIᵉ siècle ?",
+    "answers": [
+      "Une lunette astronomique",
+      "Un microscope",
+      "Un baromètre",
+      "Un cadran solaire"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "terre-espace",
+    "fact": "galilee-lunette-lune",
+    "source": "https://science.nasa.gov/solar-system/moon/galileos-observations-of-the-moon-jupiter-venus-and-the-sun/"
+  },
+  {
+    "text": "Quel type de machine James Watt améliore-t-il en ajoutant un condenseur séparé ?",
+    "answers": [
+      "Le moulin à vent",
+      "Le moteur électrique",
+      "La machine à vapeur",
+      "Le moteur à essence"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "technologie",
+    "fact": "watt-condenseur-machine-vapeur",
+    "source": "https://blog.sciencemuseum.org.uk/james-watt-and-the-separate-condenser/"
+  },
+  {
+    "text": "À quel pays Marie et Pierre Curie rendent-ils hommage en nommant le polonium ?",
+    "answers": [
+      "La France",
+      "La Suède",
+      "L’Autriche",
+      "La Pologne"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "chimie",
+    "fact": "curie-polonium-pologne",
+    "source": "https://www.nobelprize.org/prizes/themes/marie-and-pierre-curie-and-the-discovery-of-polonium-and-radium/"
+  },
+  {
+    "text": "Pour quelle machine Ada Lovelace publie-t-elle des notes décrivant une suite d’opérations à exécuter ?",
+    "answers": [
+      "La machine à différences de Babbage",
+      "La Pascaline",
+      "La machine analytique de Babbage",
+      "La calculatrice de Leibniz"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "technologie",
+    "fact": "lovelace-machine-analytique-babbage",
+    "source": "https://www.computerhistory.org/babbage/adalovelace"
+  },
+  {
+    "text": "Quel antibiotique Alexander Fleming identifie-t-il en étudiant une moisissure qui freine la croissance de bactéries ?",
+    "answers": [
+      "La pénicilline",
+      "La streptomycine",
+      "L’érythromycine",
+      "La tétracycline"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "medecine",
+    "fact": "fleming-moisissure-penicilline",
+    "source": "https://www.nobelprize.org/uploads/2018/06/fleming-lecture.pdf"
+  },
+  {
+    "text": "Quelle grandeur Ératosthène estime-t-il à partir d’ombres observées dans deux villes ?",
+    "answers": [
+      "La distance Terre-Lune",
+      "La circonférence de la Terre",
+      "La hauteur de l’atmosphère",
+      "Le diamètre du Soleil"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "mathematiques",
+    "fact": "eratosthene-ombres-circonference-terre",
+    "source": "https://science.nasa.gov/solar-system/skywatching/night-sky-network/tropical-solstice-shadows/"
+  },
+  {
+    "text": "De quel savant Émilie du Châtelet a-t-elle traduit en français les « Principes mathématiques de la philosophie naturelle » ?",
+    "answers": [
+      "Galilée",
+      "Gottfried Wilhelm Leibniz",
+      "Christiaan Huygens",
+      "Isaac Newton"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "mathematiques",
+    "fact": "du-chatelet-traduction-principes-newton",
+    "source": "https://www.bnf.fr/fr/mediatheque/une-histoire-de-la-gravite-avec-isaac-newton-et-emilie-du-chatelet"
+  },
+  {
+    "text": "À Gombe, Jane Goodall observe des chimpanzés utiliser des brindilles pour attraper quels insectes ?",
+    "answers": [
+      "Des fourmis tisserandes",
+      "Des criquets",
+      "Des termites",
+      "Des abeilles"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "vivant",
+    "fact": "goodall-chimpanzes-brindilles-termites",
+    "source": "https://janegoodall.org/news/how-jane-changed-science-forever/"
+  },
+  {
+    "text": "Chez les céphéides, à quelle grandeur Henrietta Leavitt relie-t-elle la période de variation de l’éclat ?",
+    "answers": [
+      "La luminosité intrinsèque",
+      "La vitesse de rotation",
+      "La température de surface",
+      "La distance à la Terre"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "terre-espace",
+    "fact": "leavitt-cepheides-periode-luminosite",
+    "source": "https://www.cfa.harvard.edu/news/remembering-astronomer-henrietta-swan-leavitt"
+  },
+  {
+    "text": "Quel trajet de la lumière permet la vision selon Ibn al-Haytham, dit Alhazen ?",
+    "answers": [
+      "De l’œil vers l’objet",
+      "De l’objet vers l’œil",
+      "De la rétine vers la paupière",
+      "D’un œil vers l’autre"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "physique",
+    "fact": "ibn-al-haytham-lumiere-entre-oeil",
+    "source": "https://www.unesco.org/en/articles/ibn-al-haythams-scientific-method"
+  },
+  {
+    "text": "Quelle technique a produit la Photo 51 de l’ADN, réalisée par Raymond Gosling sous la direction de Rosalind Franklin ?",
+    "answers": [
+      "La microscopie optique",
+      "La spectroscopie infrarouge",
+      "La microscopie électronique",
+      "La diffraction des rayons X"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "vivant",
+    "fact": "franklin-gosling-photo-51-diffraction-x",
+    "source": "https://www.kcl.ac.uk/the-story-behind-photograph-51"
+  },
+  {
+    "text": "Quel astronaute demande à Katherine Johnson de vérifier les calculs de son vol orbital en 1962 ?",
+    "answers": [
+      "Alan Shepard",
+      "Scott Carpenter",
+      "John Glenn",
+      "Gus Grissom"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "technologie",
+    "fact": "katherine-johnson-verification-john-glenn",
+    "source": "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/"
+  },
+  {
+    "text": "Quel indice fossile a soutenu l’idée de Wegener que l’Afrique et l’Amérique du Sud avaient été réunies ?",
+    "answers": [
+      "Des mammouths sur les deux continents",
+      "Des fossiles de Mesosaurus des deux côtés de l’Atlantique",
+      "Les premiers chevaux fossiles en Europe",
+      "Des coraux fossiles près de la Méditerranée"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "terre-espace",
+    "fact": "wegener-mesosaurus-afrique-amerique-sud",
+    "source": "https://www.usgs.gov/educational-resources/wegeners-puzzling-continental-drift-evidence"
+  },
+  {
+    "text": "Dans l’explication de la combustion par Lavoisier, quel composant de l’air se combine au corps qui brûle ?",
+    "answers": [
+      "Le dioxygène",
+      "Le diazote",
+      "L’argon",
+      "Le dioxyde de carbone"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "chimie",
+    "fact": "lavoisier-combustion-role-oxygene",
+    "source": "https://www.acs.org/education/whatischemistry/landmarks/lavoisier.html"
+  },
+  {
+    "text": "Que déduit Rutherford des fortes déviations de certaines particules alpha dans les expériences de Geiger et Marsden ?",
+    "answers": [
+      "Que l’atome est plein et homogène",
+      "Que les électrons ont une charge positive",
+      "Que l’atome se divise à chaque choc",
+      "Que la charge positive est concentrée dans un noyau"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "physique",
+    "fact": "rutherford-diffusion-alpha-noyau",
+    "source": "https://history.aip.org/exhibits/rutherford/sections/alpha-particles-atom.html"
+  },
+  {
+    "text": "En plaçant un thermomètre au-delà du rouge d’un spectre solaire, quel rayonnement William Herschel met-il en évidence ?",
+    "answers": [
+      "Les ultraviolets",
+      "Les infrarouges",
+      "Les rayons X",
+      "Les micro-ondes"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "terre-espace",
+    "fact": "herschel-thermometre-infrarouge",
+    "source": "https://science.nasa.gov/ems/07_infraredwaves/"
+  },
+  {
+    "text": "Selon Noether, quelle conservation est liée à l’invariance de l’action par translation dans le temps ?",
+    "answers": [
+      "Celle du moment cinétique",
+      "Celle de la quantité de mouvement",
+      "Celle de la charge électrique",
+      "Celle de l’énergie"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "mathematiques",
+    "fact": "noether-translation-temps-energie-conservee",
+    "source": "https://perimeterinstitute.ca/news/poetry-logical-ideas"
+  },
+  {
+    "text": "Chez quelle plante Barbara McClintock met-elle en évidence des éléments génétiques capables de changer de place ?",
+    "answers": [
+      "Le maïs",
+      "Le blé",
+      "Le riz",
+      "L’orge"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "vivant",
+    "fact": "mcclintock-mais-elements-mobiles",
+    "source": "https://www.nobelprize.org/womenwhochangedscience/stories/barbara-mcclintock?keyword=genetics"
+  },
+  {
+    "text": "De quelle plante l’équipe de Tu Youyou extrait-elle l’artémisinine, substance active contre le paludisme ?",
+    "answers": [
+      "La digitale pourpre",
+      "Le quinquina",
+      "L’armoise annuelle",
+      "La pervenche de Madagascar"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "medecine",
+    "fact": "tu-youyou-artemisinine-armoise-annuelle",
+    "source": "https://www.nobelprize.org/uploads/2018/06/tu-lecture.pdf"
+  },
+  {
+    "text": "Quel physicien a formulé les trois lois du mouvement publiées dans les « Principia Mathematica » ?",
+    "answers": [
+      "Galilée",
+      "Isaac Newton",
+      "Johannes Kepler",
+      "René Descartes"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "physique",
+    "fact": "newton-trois-lois-mouvement",
+    "source": "https://www.britannica.com/science/Newtons-laws-of-motion"
+  },
+  {
+    "text": "Quel scientifique a découvert la pénicilline par accident en 1928 ?",
+    "answers": [
+      "Louis Pasteur",
+      "Robert Koch",
+      "Alexander Fleming",
+      "Joseph Lister"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "medecine",
+    "fact": "fleming-decouverte-penicilline-1928",
+    "source": "https://www.nobelprize.org/prizes/physiology-or-medicine/1945/fleming/biographical/"
+  },
+  {
+    "text": "Quelle scientifique a reçu deux prix Nobel, l'un en physique et l'autre en chimie ?",
+    "answers": [
+      "Rosalind Franklin",
+      "Lise Meitner",
+      "Dorothy Hodgkin",
+      "Marie Curie"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "chimie",
+    "fact": "marie-curie-deux-prix-nobel",
+    "source": "https://www.nobelprize.org/prizes/chemistry/1911/marie-curie/biographical/"
+  },
+  {
+    "text": "Quel astronome a défendu le modèle héliocentrique selon lequel la Terre tourne autour du Soleil ?",
+    "answers": [
+      "Ptolémée",
+      "Nicolas Copernic",
+      "Tycho Brahe",
+      "Edmund Halley"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "terre-espace",
+    "fact": "copernic-heliocentrisme",
+    "source": "https://www.britannica.com/biography/Nicolaus-Copernicus"
+  },
+  {
+    "text": "Quel mathématicien grec est célèbre pour son théorème reliant les côtés d'un triangle rectangle ?",
+    "answers": [
+      "Euclide",
+      "Archimède",
+      "Pythagore",
+      "Thalès"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "mathematiques",
+    "fact": "pythagore-theoreme-triangle-rectangle",
+    "source": "https://www.britannica.com/science/Pythagorean-theorem"
+  },
+  {
+    "text": "Quel physicien est connu pour ses expériences sur la chute des corps et l'inertie ?",
+    "answers": [
+      "Galilée",
+      "Aristote",
+      "Archimède",
+      "Torricelli"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "physique",
+    "fact": "galilee-chute-corps-inertie",
+    "source": "https://www.britannica.com/biography/Galileo-Galilei"
+  },
+  {
+    "text": "Quel naturaliste britannique a voyagé à bord du HMS Beagle pour étudier la faune ?",
+    "answers": [
+      "Alfred Wallace",
+      "Charles Darwin",
+      "Joseph Banks",
+      "Thomas Huxley"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "vivant",
+    "fact": "darwin-voyage-hms-beagle",
+    "source": "https://www.darwinproject.ac.uk/beagle-voyage"
+  },
+  {
+    "text": "Quel chimiste français a démontré que la combustion est une réaction avec l'oxygène, réfutant la théorie du phlogistique ?",
+    "answers": [
+      "Joseph Priestley",
+      "Antoine Lavoisier",
+      "Henry Cavendish",
+      "John Dalton"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "chimie",
+    "fact": "lavoisier-combustion-phlogistique",
+    "source": "https://www.acs.org/education/whatischemistry/landmarks/lavoisier.html"
+  },
+  {
+    "text": "Quel physicien a proposé la théorie de la relativité restreinte en 1905 ?",
+    "answers": [
+      "Max Planck",
+      "Niels Bohr",
+      "Albert Einstein",
+      "Werner Heisenberg"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "physique",
+    "fact": "einstein-relativite-restreinte-1905",
+    "source": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/"
+  },
+  {
+    "text": "Quelle mathématicienne et astronome d'Alexandrie a été assassinée en 415 ?",
+    "answers": [
+      "Agnodice",
+      "Hypatie",
+      "Théano",
+      "Aspasie"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "mathematiques",
+    "fact": "hypatie-alexandrie-415",
+    "source": "https://www.britannica.com/biography/Hypatia"
+  },
+  {
+    "text": "Quel scientifique a inventé le vaccin contre la variole en utilisant la vaccine ?",
+    "answers": [
+      "Louis Pasteur",
+      "Robert Koch",
+      "Edward Jenner",
+      "Ignaz Semmelweis"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "medecine",
+    "fact": "jenner-vaccin-variole-vaccine",
+    "source": "https://www.who.int/news-room/spotlight/history-of-vaccination/history-of-smallpox-vaccination"
+  },
+  {
+    "text": "Quel physicien a formulé les équations unificatrices de l'électricité et du magnétisme ?",
+    "answers": [
+      "Michael Faraday",
+      "James Clerk Maxwell",
+      "André-Marie Ampère",
+      "Heinrich Hertz"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "physique",
+    "fact": "maxwell-equations-electromagnetisme",
+    "source": "https://www.britannica.com/biography/James-Clerk-Maxwell"
+  },
+  {
+    "text": "Quel astronome a découvert que les planètes suivent des orbites elliptiques ?",
+    "answers": [
+      "Tycho Brahe",
+      "Johannes Kepler",
+      "Galilée",
+      "Nicolas Copernic"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "terre-espace",
+    "fact": "kepler-orbites-elliptiques",
+    "source": "https://www.britannica.com/biography/Johannes-Kepler"
+  },
+  {
+    "text": "Quel scientifique a proposé la structure en double hélice de l'ADN avec Francis Crick ?",
+    "answers": [
+      "Linus Pauling",
+      "James Watson",
+      "Rosalind Franklin",
+      "Maurice Wilkins"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "vivant",
+    "fact": "watson-crick-double-helice-adn",
+    "source": "https://www.nature.com/articles/171737a0"
+  },
+  {
+    "text": "Quel inventeur serbo-américain a mis au point le courant alternatif et la bobine Tesla ?",
+    "answers": [
+      "Thomas Edison",
+      "Nikola Tesla",
+      "George Westinghouse",
+      "Guglielmo Marconi"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "technologie",
+    "fact": "tesla-courant-alternatif",
+    "source": "https://www.britannica.com/biography/Nikola-Tesla"
+  },
+  {
+    "text": "Quel mathématicien indien a introduit le concept du zéro comme nombre à part entière ?",
+    "answers": [
+      "Aryabhata",
+      "Brahmagupta",
+      "Ramanujan",
+      "Bhaskara"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "mathematiques",
+    "fact": "brahmagupta-zero-nombre",
+    "source": "https://www.britannica.com/biography/Brahmagupta"
+  },
+  {
+    "text": "Quelle physicienne autrichienne a fourni l'explication théorique de la fission nucléaire ?",
+    "answers": [
+      "Emmy Noether",
+      "Lise Meitner",
+      "Chien-Shiung Wu",
+      "Maria Goeppert Mayer"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "physique",
+    "fact": "meitner-fission-nucleaire",
+    "source": "https://www.britannica.com/biography/Lise-Meitner"
+  },
+  {
+    "text": "Quel chimiste russe a prédit l'existence du gallium et du germanium grâce à son tableau périodique ?",
+    "answers": [
+      "Antoine Lavoisier",
+      "Dmitri Mendeleïev",
+      "Linus Pauling",
+      "Svante Arrhenius"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "chimie",
+    "fact": "mendeleiev-prediction-gallium-germanium",
+    "source": "https://www.acs.org/content/dam/acsorg/education/resources/highschool/chemmatters/issues/2018-2019/february-2019/periodic-table-150.pdf"
+  },
+  {
+    "text": "Quel physicien a proposé le principe d'incertitude en mécanique quantique ?",
+    "answers": [
+      "Erwin Schrödinger",
+      "Max Born",
+      "Werner Heisenberg",
+      "Paul Dirac"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "physique",
+    "fact": "heisenberg-principe-incertitude",
+    "source": "https://www.nobelprize.org/prizes/physics/1932/heisenberg/biographical/"
+  },
+  {
+    "text": "Quelle astronome américaine a prouvé l'existence de la matière noire par l'étude des courbes de rotation des galaxies ?",
+    "answers": [
+      "Jocelyn Bell Burnell",
+      "Vera Rubin",
+      "Cecilia Payne",
+      "Annie Jump Cannon"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "terre-espace",
+    "fact": "vera-rubin-matiere-noire",
+    "source": "https://www.britannica.com/biography/Vera-Rubin"
+  },
+  {
+    "text": "Quel médecin hongrois a réduit la mortalité maternelle en imposant le lavage des mains ?",
+    "answers": [
+      "Robert Koch",
+      "Joseph Lister",
+      "Ignaz Semmelweis",
+      "Florence Nightingale"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "medecine",
+    "fact": "semmelweis-lavage-mains",
+    "source": "https://www.britannica.com/biography/Ignaz-Semmelweis"
+  },
+  {
+    "text": "Quel mathématicien a démontré le dernier théorème de Fermat en 1995 ?",
+    "answers": [
+      "Pierre de Fermat",
+      "Andrew Wiles",
+      "Grigori Perelman",
+      "Terence Tao"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "mathematiques",
+    "fact": "andrew-wiles-fermat-1995",
+    "source": "https://www.britannica.com/biography/Andrew-Wiles"
+  },
+  {
+    "text": "Quelle physicienne sino-américaine a prouvé expérimentalement la non-conservation de la parité ?",
+    "answers": [
+      "Marie Curie",
+      "Chien-Shiung Wu",
+      "Maria Goeppert Mayer",
+      "Lisa Randall"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "physique",
+    "fact": "chien-shiung-wu-parite",
+    "source": "https://www.britannica.com/biography/Chien-Shiung-Wu"
+  },
+  {
+    "text": "Quel naturaliste a co-découvert la sélection naturelle indépendamment de Darwin ?",
+    "answers": [
+      "Thomas Huxley",
+      "Jean-Baptiste Lamarck",
+      "Alfred Russel Wallace",
+      "Georges Cuvier"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "vivant",
+    "fact": "wallace-selection-naturelle-independante",
+    "source": "https://www.britannica.com/biography/Alfred-Russel-Wallace"
+  },
+  {
+    "text": "Quel informaticien britannique est considéré comme le père de l'informatique théorique et a conçu une machine abstraite universelle ?",
+    "answers": [
+      "John von Neumann",
+      "Charles Babbage",
+      "Alan Turing",
+      "Claude Shannon"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "technologie",
+    "fact": "turing-machine-universelle",
+    "source": "https://www.britannica.com/biography/Alan-Turing"
+  },
+  {
+    "text": "Quelle astrophysicienne a découvert les pulsars lors de ses travaux de doctorat en 1967 ?",
+    "answers": [
+      "Vera Rubin",
+      "Jocelyn Bell Burnell",
+      "Cecilia Payne",
+      "Margaret Burbidge"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "terre-espace",
+    "fact": "bell-burnell-pulsars-1967",
+    "source": "https://www.britannica.com/biography/Jocelyn-Bell-Burnell"
+  }
 ]

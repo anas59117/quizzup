@@ -1,26 +1,676 @@
 [
-  {"text":"Quelle distance mesure un tour sur une piste extérieure standard, au couloir intérieur ?","answers":["200 m","400 m","300 m","500 m"],"correct":1,"difficulty":"easy","angle":"courses","fact":"athletisme-piste-tour-quatre-cents","source":"https://worldathletics.org/disciplines/sprints/400-metres"},
-  {"text":"Au relais sur piste, quel objet les athlètes se transmettent-ils ?","answers":["Une chasuble","Une corde","Un bracelet","Un témoin"],"correct":3,"difficulty":"easy","angle":"courses","fact":"athletisme-relais-temoin-main","source":"https://worldathletics.org/disciplines/relay-event/4x100-metres-relay"},
-  {"text":"Sur quelle surface un athlète atterrit-il au saut en longueur ?","answers":["Du sable","Du gazon","Un tapis épais","Des copeaux"],"correct":0,"difficulty":"easy","angle":"sauts","fact":"athletisme-longueur-reception-sable","source":"https://worldathletics.org/disciplines/jumps/long-jump"},
-  {"text":"Dans quelle épreuve de saut l’athlète prend-il appui sur une longue tige flexible pour franchir la barre ?","answers":["Le saut en hauteur","Le triple saut","Le saut à la perche","Le saut en longueur"],"correct":2,"difficulty":"easy","angle":"sauts","fact":"athletisme-perche-materiel-barre","source":"https://worldathletics.org/disciplines/jumps/pole-vault"},
-  {"text":"Sur quel équipement un sprinteur prend-il appui au départ d’un 100 m ?","answers":["Un tapis de réception","Des blocs de départ","Une planche d’appel","Un plot de virage"],"correct":1,"difficulty":"easy","angle":"regles","fact":"athletisme-sprint-blocs-depart","source":"https://worldathletics.org/disciplines/sprints/100-metres"},
-  {"text":"Dans quel lancer d’athlétisme utilise-t-on un engin allongé muni d’une pointe ?","answers":["Le javelot","Le disque","Le poids","Le marteau"],"correct":0,"difficulty":"easy","angle":"lancers","fact":"athletisme-javelot-long-engin-pointu","source":"https://worldathletics.org/disciplines/throws/javelin-throw"},
-  {"text":"Sur une piste extérieure standard, quel sprint individuel se court intégralement en ligne droite ?","answers":["400 m","800 m","100 m","200 m"],"correct":2,"difficulty":"easy","angle":"courses","fact":"athletisme-100-metres-sans-virage","source":"https://worldathletics.org/disciplines/sprints/100-metres"},
-  {"text":"Quel obstacle du 3 000 m steeple comporte un bassin d’eau derrière une barrière ?","answers":["Une fosse d’appel","Une haie mobile","Un talus","Une rivière"],"correct":3,"difficulty":"medium","angle":"courses","fact":"athletisme-steeple-riviere","source":"https://worldathletics.org/disciplines/middlelong/3000-metres-steeplechase"},
-  {"text":"Au lancer du poids, où place-t-on l’engin juste avant de le propulser d’une main ?","answers":["À hauteur de hanche","Derrière le genou","Contre le cou ou le menton","Au-dessus de la tête"],"correct":2,"difficulty":"medium","angle":"lancers","fact":"athletisme-poids-cou-depart","source":"https://worldathletics.org/disciplines/throws/shot-put"},
-  {"text":"Quel engin est formé d’une boule métallique reliée par un câble à une poignée ?","answers":["Le marteau","Le poids","Le disque","Le javelot"],"correct":0,"difficulty":"medium","angle":"lancers","fact":"athletisme-marteau-cable-poignee","source":"https://worldathletics.org/disciplines/throws/hammer-throw"},
-  {"text":"Combien de pieds peuvent prendre simultanément appui lors de l’appel au saut en hauteur ?","answers":["Deux","Un","Aucun","Deux pour la dernière tentative seulement"],"correct":1,"difficulty":"medium","angle":"sauts","fact":"athletisme-hauteur-appel-un-pied","source":"https://worldathletics.org/disciplines/jumps/high-jump"},
-  {"text":"Pour départager deux sprinteurs à la photo-finish, quelle partie du corps compte à l’arrivée ?","answers":["La tête","La main","Le pied","Le torse"],"correct":3,"difficulty":"medium","angle":"regles","fact":"athletisme-photo-finish-torse","source":"https://worldathletics.org/download/download?filename=e7faf2e8-0385-4686-bbd0-acdb5d958e8f.pdf&urlslug=Competition+and+Technical+Rules+%E2%80%93+2026+Edition"},
-  {"text":"Quelle course clôt le décathlon masculin en plein air ?","answers":["800 m","400 m","1 500 m","3 000 m"],"correct":2,"difficulty":"medium","angle":"combines","fact":"athletisme-decathlon-derniere-epreuve-1500","source":"https://worldathletics.org/disciplines/combined/decathlon"},
-  {"text":"À Atlanta en 1996, sur quelle distance Marie-José Pérec gagne-t-elle l’or en plus du 200 m ?","answers":["400 m","800 m","100 m","1 500 m"],"correct":0,"difficulty":"medium","angle":"histoire","fact":"athletisme-perec-atlanta-400","source":"https://worldathletics.org/news/news/three-time-olympic-champion-marie-jose-perec-1"},
-  {"text":"En marche athlétique, quel défaut les juges surveillent-ils concernant le contact avec le sol ?","answers":["Un contact du talon en premier","Une perte de contact visible des deux pieds","Une pose du pied hors de l’axe du genou","Un pas qui dépasse un mètre"],"correct":1,"difficulty":"medium","angle":"regles","fact":"athletisme-marche-contact-visible","source":"https://worldathletics.org/download/download?filename=e7faf2e8-0385-4686-bbd0-acdb5d958e8f.pdf&urlslug=Competition+and+Technical+Rules+%E2%80%93+2026+Edition"},
-  {"text":"Combien de haies chaque athlète doit-il franchir sur un 400 m haies ?","answers":["Huit","Douze","Sept","Dix"],"correct":3,"difficulty":"hard","angle":"courses","fact":"athletisme-400-haies-dix-obstacles","source":"https://worldathletics.org/disciplines/hurdles/400-metres-hurdles"},
-  {"text":"Après le premier bond du triple saut, sur quel pied l’athlète doit-il retomber ?","answers":["Sur le pied opposé","Sur les deux pieds","Sur son pied d’appel","Sur le pied de son choix"],"correct":2,"difficulty":"hard","angle":"sauts","fact":"athletisme-triple-saut-premier-bond-meme-pied","source":"https://worldathletics.org/disciplines/jump/triple-jump"},
-  {"text":"Quelle course clôt l’heptathlon féminin en plein air ?","answers":["400 m","800 m","1 500 m","200 m"],"correct":1,"difficulty":"hard","angle":"combines","fact":"athletisme-heptathlon-derniere-epreuve-800","source":"https://worldathletics.org/disciplines/combined-events/heptathlon"},
-  {"text":"En plus de trois titres sur piste à Berlin en 1936, dans quelle épreuve de saut Jesse Owens gagne-t-il l’or ?","answers":["Saut en longueur","Triple saut","Saut en hauteur","Saut à la perche"],"correct":0,"difficulty":"hard","angle":"histoire","fact":"athletisme-owens-1936-or-saut-longueur","source":"https://www.olympics.com/ioc/news/jesse-owens-and-the-greatest-45-minutes-in-sport"},
-  {"text":"Quelle est la masse réglementaire du disque pour les femmes seniors ?","answers":["750 g","1,5 kg","2 kg","1 kg"],"correct":3,"difficulty":"hard","angle":"lancers","fact":"athletisme-disque-feminin-senior-un-kilo","source":"https://worldathletics.org/disciplines/throws/discus-throw"},
-  {"text":"Au relais, qu’observe le juge pour savoir si la transmission a lieu dans la zone autorisée ?","answers":["Le torse du relayeur sortant","La position du témoin","Le dernier appui du relayeur entrant","L’écart entre les deux athlètes"],"correct":1,"difficulty":"expert","angle":"regles","fact":"athletisme-relais-zone-position-temoin","source":"https://worldathletics.org/download/download?filename=e7faf2e8-0385-4686-bbd0-acdb5d958e8f.pdf&urlslug=Competition+and+Technical+Rules+%E2%80%93+2026+Edition"},
-  {"text":"En course dans une épreuve combinée, combien de faux départs sont tolérés au total avant disqualification des fautifs suivants ?","answers":["Deux","Aucun","Trois","Un"],"correct":3,"difficulty":"expert","angle":"combines","fact":"athletisme-combine-faux-depart-premier-autorise","source":"https://worldathletics.org/download/download?filename=e7faf2e8-0385-4686-bbd0-acdb5d958e8f.pdf&urlslug=Competition+and+Technical+Rules+%E2%80%93+2026+Edition"},
-  {"text":"Quelle distance Bob Beamon atteint-il au saut en longueur aux Jeux de Mexico en 1968 ?","answers":["8,90 m","8,65 m","8,95 m","8,50 m"],"correct":0,"difficulty":"expert","angle":"histoire","fact":"athletisme-beamon-mexico-1968-huit-quatre-vingt-dix","source":"https://worldathletics.org/athletes/united-states/bob-beamon-14344992"},
-  {"text":"Hors barrage, combien d’échecs consécutifs éliminent un perchiste, même à des hauteurs différentes ?","answers":["Deux","Cinq","Trois","Quatre"],"correct":2,"difficulty":"expert","angle":"sauts","fact":"athletisme-perche-trois-echecs-consecutifs","source":"https://worldathletics.org/download/download?filename=e7faf2e8-0385-4686-bbd0-acdb5d958e8f.pdf&urlslug=Competition+and+Technical+Rules+%E2%80%93+2026+Edition"}
+  {
+    "text": "Quelle distance mesure un tour sur une piste extérieure standard, au couloir intérieur ?",
+    "answers": [
+      "200 m",
+      "400 m",
+      "300 m",
+      "500 m"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "courses",
+    "fact": "athletisme-piste-tour-quatre-cents",
+    "source": "https://worldathletics.org/disciplines/sprints/400-metres"
+  },
+  {
+    "text": "Au relais sur piste, quel objet les athlètes se transmettent-ils ?",
+    "answers": [
+      "Une chasuble",
+      "Une corde",
+      "Un bracelet",
+      "Un témoin"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "courses",
+    "fact": "athletisme-relais-temoin-main",
+    "source": "https://worldathletics.org/disciplines/relay-event/4x100-metres-relay"
+  },
+  {
+    "text": "Sur quelle surface un athlète atterrit-il au saut en longueur ?",
+    "answers": [
+      "Du sable",
+      "Du gazon",
+      "Un tapis épais",
+      "Des copeaux"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sauts",
+    "fact": "athletisme-longueur-reception-sable",
+    "source": "https://worldathletics.org/disciplines/jumps/long-jump"
+  },
+  {
+    "text": "Dans quelle épreuve de saut l’athlète prend-il appui sur une longue tige flexible pour franchir la barre ?",
+    "answers": [
+      "Le saut en hauteur",
+      "Le triple saut",
+      "Le saut à la perche",
+      "Le saut en longueur"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "sauts",
+    "fact": "athletisme-perche-materiel-barre",
+    "source": "https://worldathletics.org/disciplines/jumps/pole-vault"
+  },
+  {
+    "text": "Sur quel équipement un sprinteur prend-il appui au départ d’un 100 m ?",
+    "answers": [
+      "Un tapis de réception",
+      "Des blocs de départ",
+      "Une planche d’appel",
+      "Un plot de virage"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "regles",
+    "fact": "athletisme-sprint-blocs-depart",
+    "source": "https://worldathletics.org/disciplines/sprints/100-metres"
+  },
+  {
+    "text": "Dans quel lancer d’athlétisme utilise-t-on un engin allongé muni d’une pointe ?",
+    "answers": [
+      "Le javelot",
+      "Le disque",
+      "Le poids",
+      "Le marteau"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "lancers",
+    "fact": "athletisme-javelot-long-engin-pointu",
+    "source": "https://worldathletics.org/disciplines/throws/javelin-throw"
+  },
+  {
+    "text": "Sur une piste extérieure standard, quel sprint individuel se court intégralement en ligne droite ?",
+    "answers": [
+      "400 m",
+      "800 m",
+      "100 m",
+      "200 m"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "courses",
+    "fact": "athletisme-100-metres-sans-virage",
+    "source": "https://worldathletics.org/disciplines/sprints/100-metres"
+  },
+  {
+    "text": "Quel obstacle du 3 000 m steeple comporte un bassin d’eau derrière une barrière ?",
+    "answers": [
+      "Une fosse d’appel",
+      "Une haie mobile",
+      "Un talus",
+      "Une rivière"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "courses",
+    "fact": "athletisme-steeple-riviere",
+    "source": "https://worldathletics.org/disciplines/middlelong/3000-metres-steeplechase"
+  },
+  {
+    "text": "Au lancer du poids, où place-t-on l’engin juste avant de le propulser d’une main ?",
+    "answers": [
+      "À hauteur de hanche",
+      "Derrière le genou",
+      "Contre le cou ou le menton",
+      "Au-dessus de la tête"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "lancers",
+    "fact": "athletisme-poids-cou-depart",
+    "source": "https://worldathletics.org/disciplines/throws/shot-put"
+  },
+  {
+    "text": "Quel engin est formé d’une boule métallique reliée par un câble à une poignée ?",
+    "answers": [
+      "Le marteau",
+      "Le poids",
+      "Le disque",
+      "Le javelot"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "lancers",
+    "fact": "athletisme-marteau-cable-poignee",
+    "source": "https://worldathletics.org/disciplines/throws/hammer-throw"
+  },
+  {
+    "text": "Combien de pieds peuvent prendre simultanément appui lors de l’appel au saut en hauteur ?",
+    "answers": [
+      "Deux",
+      "Un",
+      "Aucun",
+      "Deux pour la dernière tentative seulement"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "sauts",
+    "fact": "athletisme-hauteur-appel-un-pied",
+    "source": "https://worldathletics.org/disciplines/jumps/high-jump"
+  },
+  {
+    "text": "Pour départager deux sprinteurs à la photo-finish, quelle partie du corps compte à l’arrivée ?",
+    "answers": [
+      "La tête",
+      "La main",
+      "Le pied",
+      "Le torse"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "regles",
+    "fact": "athletisme-photo-finish-torse",
+    "source": "https://worldathletics.org/download/download?filename=e7faf2e8-0385-4686-bbd0-acdb5d958e8f.pdf&urlslug=Competition+and+Technical+Rules+%E2%80%93+2026+Edition"
+  },
+  {
+    "text": "Quelle course clôt le décathlon masculin en plein air ?",
+    "answers": [
+      "800 m",
+      "400 m",
+      "1 500 m",
+      "3 000 m"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "combines",
+    "fact": "athletisme-decathlon-derniere-epreuve-1500",
+    "source": "https://worldathletics.org/disciplines/combined/decathlon"
+  },
+  {
+    "text": "À Atlanta en 1996, sur quelle distance Marie-José Pérec gagne-t-elle l’or en plus du 200 m ?",
+    "answers": [
+      "400 m",
+      "800 m",
+      "100 m",
+      "1 500 m"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "histoire",
+    "fact": "athletisme-perec-atlanta-400",
+    "source": "https://worldathletics.org/news/news/three-time-olympic-champion-marie-jose-perec-1"
+  },
+  {
+    "text": "En marche athlétique, quel défaut les juges surveillent-ils concernant le contact avec le sol ?",
+    "answers": [
+      "Un contact du talon en premier",
+      "Une perte de contact visible des deux pieds",
+      "Une pose du pied hors de l’axe du genou",
+      "Un pas qui dépasse un mètre"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "regles",
+    "fact": "athletisme-marche-contact-visible",
+    "source": "https://worldathletics.org/download/download?filename=e7faf2e8-0385-4686-bbd0-acdb5d958e8f.pdf&urlslug=Competition+and+Technical+Rules+%E2%80%93+2026+Edition"
+  },
+  {
+    "text": "Combien de haies chaque athlète doit-il franchir sur un 400 m haies ?",
+    "answers": [
+      "Huit",
+      "Douze",
+      "Sept",
+      "Dix"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "courses",
+    "fact": "athletisme-400-haies-dix-obstacles",
+    "source": "https://worldathletics.org/disciplines/hurdles/400-metres-hurdles"
+  },
+  {
+    "text": "Après le premier bond du triple saut, sur quel pied l’athlète doit-il retomber ?",
+    "answers": [
+      "Sur le pied opposé",
+      "Sur les deux pieds",
+      "Sur son pied d’appel",
+      "Sur le pied de son choix"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "sauts",
+    "fact": "athletisme-triple-saut-premier-bond-meme-pied",
+    "source": "https://worldathletics.org/disciplines/jump/triple-jump"
+  },
+  {
+    "text": "Quelle course clôt l’heptathlon féminin en plein air ?",
+    "answers": [
+      "400 m",
+      "800 m",
+      "1 500 m",
+      "200 m"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "combines",
+    "fact": "athletisme-heptathlon-derniere-epreuve-800",
+    "source": "https://worldathletics.org/disciplines/combined-events/heptathlon"
+  },
+  {
+    "text": "En plus de trois titres sur piste à Berlin en 1936, dans quelle épreuve de saut Jesse Owens gagne-t-il l’or ?",
+    "answers": [
+      "Saut en longueur",
+      "Triple saut",
+      "Saut en hauteur",
+      "Saut à la perche"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "histoire",
+    "fact": "athletisme-owens-1936-or-saut-longueur",
+    "source": "https://www.olympics.com/ioc/news/jesse-owens-and-the-greatest-45-minutes-in-sport"
+  },
+  {
+    "text": "Quelle est la masse réglementaire du disque pour les femmes seniors ?",
+    "answers": [
+      "750 g",
+      "1,5 kg",
+      "2 kg",
+      "1 kg"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "lancers",
+    "fact": "athletisme-disque-feminin-senior-un-kilo",
+    "source": "https://worldathletics.org/disciplines/throws/discus-throw"
+  },
+  {
+    "text": "Au relais, qu’observe le juge pour savoir si la transmission a lieu dans la zone autorisée ?",
+    "answers": [
+      "Le torse du relayeur sortant",
+      "La position du témoin",
+      "Le dernier appui du relayeur entrant",
+      "L’écart entre les deux athlètes"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "regles",
+    "fact": "athletisme-relais-zone-position-temoin",
+    "source": "https://worldathletics.org/download/download?filename=e7faf2e8-0385-4686-bbd0-acdb5d958e8f.pdf&urlslug=Competition+and+Technical+Rules+%E2%80%93+2026+Edition"
+  },
+  {
+    "text": "En course dans une épreuve combinée, combien de faux départs sont tolérés au total avant disqualification des fautifs suivants ?",
+    "answers": [
+      "Deux",
+      "Aucun",
+      "Trois",
+      "Un"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "combines",
+    "fact": "athletisme-combine-faux-depart-premier-autorise",
+    "source": "https://worldathletics.org/download/download?filename=e7faf2e8-0385-4686-bbd0-acdb5d958e8f.pdf&urlslug=Competition+and+Technical+Rules+%E2%80%93+2026+Edition"
+  },
+  {
+    "text": "Quelle distance Bob Beamon atteint-il au saut en longueur aux Jeux de Mexico en 1968 ?",
+    "answers": [
+      "8,90 m",
+      "8,65 m",
+      "8,95 m",
+      "8,50 m"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "histoire",
+    "fact": "athletisme-beamon-mexico-1968-huit-quatre-vingt-dix",
+    "source": "https://worldathletics.org/athletes/united-states/bob-beamon-14344992"
+  },
+  {
+    "text": "Hors barrage, combien d’échecs consécutifs éliminent un perchiste, même à des hauteurs différentes ?",
+    "answers": [
+      "Deux",
+      "Cinq",
+      "Trois",
+      "Quatre"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "sauts",
+    "fact": "athletisme-perche-trois-echecs-consecutifs",
+    "source": "https://worldathletics.org/download/download?filename=e7faf2e8-0385-4686-bbd0-acdb5d958e8f.pdf&urlslug=Competition+and+Technical+Rules+%E2%80%93+2026+Edition"
+  },
+  {
+    "text": "Quel athlète jamaïcain détient le record du monde du 100 m en 9 s 58 ?",
+    "answers": [
+      "Yohan Blake",
+      "Usain Bolt",
+      "Asafa Powell",
+      "Tyson Gay"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "records",
+    "fact": "athletisme-bolt-record-100m-9s58"
+  },
+  {
+    "text": "Quelle athlète éthiopienne a remporté trois titres olympiques consécutifs sur 10 000 m ?",
+    "answers": [
+      "Tirunesh Dibaba",
+      "Almaz Ayana",
+      "Derartu Tulu",
+      "Meseret Defar"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "palmares",
+    "fact": "athletisme-dibaba-trois-titres-10000"
+  },
+  {
+    "text": "Combien de haies un coureur doit-il franchir sur un 110 m haies ?",
+    "answers": [
+      "8",
+      "10",
+      "12",
+      "14"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "regles",
+    "fact": "athletisme-110-haies-dix-obstacles"
+  },
+  {
+    "text": "Quel athlète américain a battu le record du monde du saut en longueur à Mexico en 1968 avec 8,90 m ?",
+    "answers": [
+      "Carl Lewis",
+      "Bob Beamon",
+      "Jesse Owens",
+      "Mike Powell"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "records",
+    "fact": "athletisme-beamon-mexico-890"
+  },
+  {
+    "text": "À quelle distance se court le marathon ?",
+    "answers": [
+      "40,195 km",
+      "42,195 km",
+      "44,195 km",
+      "38,195 km"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "regles",
+    "fact": "athletisme-marathon-42195"
+  },
+  {
+    "text": "Quel athlète britannique a remporté le 5 000 m et le 10 000 m aux JO de Londres 2012 ?",
+    "answers": [
+      "Mo Farah",
+      "Joshua Cheptegei",
+      "Kenenisa Bekele",
+      "Haile Gebrselassie"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "palmares",
+    "fact": "athletisme-farah-double-londres-2012"
+  },
+  {
+    "text": "Quelle épreuve combinée féminine comprend sept disciplines ?",
+    "answers": [
+      "Pentathlon",
+      "Décathlon",
+      "Heptathlon",
+      "Triathlon"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "regles",
+    "fact": "athletisme-heptathlon-sept-epreuves"
+  },
+  {
+    "text": "Quel record du monde féminin du 100 m, établi par Florence Griffith-Joyner en 1988, tient toujours ?",
+    "answers": [
+      "10,49 s",
+      "10,62 s",
+      "10,79 s",
+      "10,91 s"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "records",
+    "fact": "athletisme-flo-jo-record-100m-10s49"
+  },
+  {
+    "text": "De quel pays est originaire le sprinteur Carl Lewis, neuf fois champion olympique ?",
+    "answers": [
+      "Jamaïque",
+      "Canada",
+      "États-Unis",
+      "Trinité-et-Tobago"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "carriere",
+    "fact": "athletisme-carl-lewis-neuf-or-usa"
+  },
+  {
+    "text": "Quel athlète kényan détient le record du monde du marathon masculin ?",
+    "answers": [
+      "Eliud Kipchoge",
+      "Kelvin Kiptum",
+      "Dennis Kimetto",
+      "Wilson Kipsang"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "records",
+    "fact": "athletisme-kiptum-record-marathon"
+  },
+  {
+    "text": "Quel lancer consiste à projeter une boule métallique reliée à un câble ?",
+    "answers": [
+      "Le lancer de poids",
+      "Le lancer de disque",
+      "Le lancer de marteau",
+      "Le lancer de javelot"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "regles",
+    "fact": "athletisme-marteau-boule-cable"
+  },
+  {
+    "text": "À quels Jeux olympiques Usain Bolt a-t-il réalisé son premier triplé 100 m, 200 m, relais 4 × 100 m ?",
+    "answers": [
+      "Athènes 2004",
+      "Pékin 2008",
+      "Londres 2012",
+      "Rio 2016"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "palmares",
+    "fact": "athletisme-bolt-triple-pekin-2008"
+  },
+  {
+    "text": "Quelle athlète russe détient le record du monde du saut à la perche féminin avec 5,06 m ?",
+    "answers": [
+      "Sandi Morris",
+      "Yelena Isinbayeva",
+      "Angelica Bengtsson",
+      "Katie Moon"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "records",
+    "fact": "athletisme-isinbayeva-perche-record"
+  },
+  {
+    "text": "Quel athlète français a été champion olympique du décathlon en 2004 ?",
+    "answers": [
+      "Kevin Mayer",
+      "Roman Šebrle",
+      "Bryan Clay",
+      "Roman Barras"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "palmares",
+    "fact": "athletisme-mayer-deuxieme-decathlon"
+  },
+  {
+    "text": "Combien de tours de piste faut-il parcourir pour un 1 500 m ?",
+    "answers": [
+      "3 tours et demi",
+      "3 tours trois quarts",
+      "4 tours",
+      "3 tours"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "regles",
+    "fact": "athletisme-1500m-trois-tours-trois-quarts"
+  },
+  {
+    "text": "Quel athlète suédois détient le record du monde du saut à la perche masculin ?",
+    "answers": [
+      "Renaud Lavillenie",
+      "Sergueï Bubka",
+      "Mondo Duplantis",
+      "Sam Kendricks"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "records",
+    "fact": "athletisme-duplantis-record-perche"
+  },
+  {
+    "text": "Quelle athlète américaine a remporté six médailles d'or olympiques en sprint entre 1984 et 1988 ?",
+    "answers": [
+      "Marion Jones",
+      "Florence Griffith-Joyner",
+      "Allyson Felix",
+      "Gail Devers"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "palmares",
+    "fact": "athletisme-flo-jo-or-sprint"
+  },
+  {
+    "text": "Quel est le nom de la course d'obstacles sur piste qui inclut un passage dans l'eau ?",
+    "answers": [
+      "Le 400 m haies",
+      "Le 3 000 m steeple",
+      "Le 110 m haies",
+      "Le cross-country"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "regles",
+    "fact": "athletisme-steeple-passage-eau"
+  },
+  {
+    "text": "Quel athlète tchèque a remporté quatre médailles d'or aux JO d'Helsinki 1952 en fond ?",
+    "answers": [
+      "Emil Zátopek",
+      "Lasse Virén",
+      "Paavo Nurmi",
+      "Haile Gebrselassie"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "palmares",
+    "fact": "athletisme-zatopek-helsinki-1952"
+  },
+  {
+    "text": "Quelle épreuve de lancers utilise un engin en forme de disque plat ?",
+    "answers": [
+      "Le lancer de poids",
+      "Le lancer de disque",
+      "Le lancer de marteau",
+      "Le lancer de javelot"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "regles",
+    "fact": "athletisme-disque-engin-plat"
+  },
+  {
+    "text": "Quel athlète américain a remporté neuf médailles d'or olympiques en sprint et saut en longueur ?",
+    "answers": [
+      "Jesse Owens",
+      "Carl Lewis",
+      "Michael Johnson",
+      "Bob Beamon"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "palmares",
+    "fact": "athletisme-carl-lewis-neuf-or-olympiques"
+  },
+  {
+    "text": "Quel record du monde du 200 m masculin Usain Bolt a-t-il établi à Berlin en 2009 ?",
+    "answers": [
+      "19,19 s",
+      "19,32 s",
+      "19,58 s",
+      "19,72 s"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "records",
+    "fact": "athletisme-bolt-200m-19s19-berlin"
+  },
+  {
+    "text": "Quelle athlète française a remporté le 400 m aux JO d'Atlanta 1996 ?",
+    "answers": [
+      "Christine Arron",
+      "Marie-José Pérec",
+      "Muriel Hurtis",
+      "Maryse Éwanjé-Épée"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "palmares",
+    "fact": "athletisme-perec-or-400-atlanta"
+  },
+  {
+    "text": "Quel est le poids de l'engin utilisé par les hommes au lancer du poids ?",
+    "answers": [
+      "5 kg",
+      "6 kg",
+      "7,26 kg",
+      "8 kg"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "regles",
+    "fact": "athletisme-poids-masculin-7kg26"
+  },
+  {
+    "text": "Quel sprinter canadien a été déchu de son titre olympique du 100 m en 1988 pour dopage ?",
+    "answers": [
+      "Donovan Bailey",
+      "Ben Johnson",
+      "Bruny Surin",
+      "Andre De Grasse"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "culture",
+    "fact": "athletisme-ben-johnson-dopage-1988"
+  },
+  {
+    "text": "Quelle Kényane est devenue la plus jeune championne olympique du 800 m à Pékin 2008 à seulement 18 ans ?",
+    "answers": [
+      "Vivian Cheruiyot",
+      "Pamela Jelimo",
+      "Jemima Sumgong",
+      "Mary Moraa"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "records",
+    "fact": "athletisme-jelimo-800m-pekin"
+  }
 ]

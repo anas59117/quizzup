@@ -1,7 +1,12 @@
 [
   {
     "text": "Quel club a devancé le PSG pour remporter la Ligue 1 en 2020-2021 ?",
-    "answers": ["LOSC Lille", "Olympique Lyonnais", "AS Monaco", "Stade Rennais"],
+    "answers": [
+      "LOSC Lille",
+      "Olympique Lyonnais",
+      "AS Monaco",
+      "Stade Rennais"
+    ],
     "correct": 0,
     "difficulty": "easy",
     "angle": "palmares",
@@ -10,7 +15,12 @@
   },
   {
     "text": "Quel club a été le premier à atteindre dix titres de champion de France de première division ?",
-    "answers": ["Olympique de Marseille", "AS Saint-Étienne", "FC Nantes", "AS Monaco"],
+    "answers": [
+      "Olympique de Marseille",
+      "AS Saint-Étienne",
+      "FC Nantes",
+      "AS Monaco"
+    ],
     "correct": 1,
     "difficulty": "medium",
     "angle": "palmares",
@@ -19,7 +29,12 @@
   },
   {
     "text": "Quel club a enchaîné sept titres de champion de France, de 2002 à 2008 ?",
-    "answers": ["Girondins de Bordeaux", "Paris Saint-Germain", "Olympique Lyonnais", "AS Saint-Étienne"],
+    "answers": [
+      "Girondins de Bordeaux",
+      "Paris Saint-Germain",
+      "Olympique Lyonnais",
+      "AS Saint-Étienne"
+    ],
     "correct": 2,
     "difficulty": "easy",
     "angle": "palmares",
@@ -28,7 +43,12 @@
   },
   {
     "text": "Quel club est devenu le premier champion de France professionnel, en 1933 ?",
-    "answers": ["FC Sète", "RC Roubaix", "Olympique de Marseille", "Olympique Lillois"],
+    "answers": [
+      "FC Sète",
+      "RC Roubaix",
+      "Olympique de Marseille",
+      "Olympique Lillois"
+    ],
     "correct": 3,
     "difficulty": "hard",
     "angle": "histoire",
@@ -37,7 +57,12 @@
   },
   {
     "text": "Quel club, aujourd’hui disparu, a remporté le championnat de France en 1946-1947 ?",
-    "answers": ["CO Roubaix-Tourcoing", "Olympique Lillois", "FC Nancy", "RC Paris"],
+    "answers": [
+      "CO Roubaix-Tourcoing",
+      "Olympique Lillois",
+      "FC Nancy",
+      "RC Paris"
+    ],
     "correct": 0,
     "difficulty": "expert",
     "angle": "histoire",
@@ -46,7 +71,12 @@
   },
   {
     "text": "Quel club a remporté le championnat de France en 1999-2000 ?",
-    "answers": ["Paris Saint-Germain", "AS Monaco", "Olympique Lyonnais", "Girondins de Bordeaux"],
+    "answers": [
+      "Paris Saint-Germain",
+      "AS Monaco",
+      "Olympique Lyonnais",
+      "Girondins de Bordeaux"
+    ],
     "correct": 1,
     "difficulty": "medium",
     "angle": "palmares",
@@ -55,7 +85,12 @@
   },
   {
     "text": "Quel club a décroché le titre de champion de France en 1998-1999 ?",
-    "answers": ["AS Monaco", "Olympique de Marseille", "Girondins de Bordeaux", "Paris Saint-Germain"],
+    "answers": [
+      "AS Monaco",
+      "Olympique de Marseille",
+      "Girondins de Bordeaux",
+      "Paris Saint-Germain"
+    ],
     "correct": 2,
     "difficulty": "hard",
     "angle": "palmares",
@@ -64,7 +99,12 @@
   },
   {
     "text": "En 2009-2010, quel club a renoué avec le titre de champion de France sous Didier Deschamps ?",
-    "answers": ["AJ Auxerre", "Olympique Lyonnais", "LOSC Lille", "Olympique de Marseille"],
+    "answers": [
+      "AJ Auxerre",
+      "Olympique Lyonnais",
+      "LOSC Lille",
+      "Olympique de Marseille"
+    ],
     "correct": 3,
     "difficulty": "easy",
     "angle": "palmares",
@@ -73,7 +113,12 @@
   },
   {
     "text": "Quel club reçoit ses adversaires au Stade Vélodrome ?",
-    "answers": ["Olympique de Marseille", "OGC Nice", "Montpellier HSC", "Toulouse FC"],
+    "answers": [
+      "Olympique de Marseille",
+      "OGC Nice",
+      "Montpellier HSC",
+      "Toulouse FC"
+    ],
     "correct": 0,
     "difficulty": "easy",
     "angle": "clubs",
@@ -82,7 +127,12 @@
   },
   {
     "text": "Quelle équipe joue ses matchs à domicile au stade Geoffroy-Guichard ?",
-    "answers": ["RC Lens", "AS Saint-Étienne", "Olympique Lyonnais", "FC Nantes"],
+    "answers": [
+      "RC Lens",
+      "AS Saint-Étienne",
+      "Olympique Lyonnais",
+      "FC Nantes"
+    ],
     "correct": 1,
     "difficulty": "easy",
     "angle": "clubs",
@@ -91,7 +141,12 @@
   },
   {
     "text": "Quel club joue à Bollaert-Delelis ?",
-    "answers": ["LOSC Lille", "Stade de Reims", "RC Lens", "FC Metz"],
+    "answers": [
+      "LOSC Lille",
+      "Stade de Reims",
+      "RC Lens",
+      "FC Metz"
+    ],
     "correct": 2,
     "difficulty": "easy",
     "angle": "clubs",
@@ -100,7 +155,12 @@
   },
   {
     "text": "Quel club joue au stade de la Beaujoire ?",
-    "answers": ["Stade Rennais", "Stade Brestois", "FC Lorient", "FC Nantes"],
+    "answers": [
+      "Stade Rennais",
+      "Stade Brestois",
+      "FC Lorient",
+      "FC Nantes"
+    ],
     "correct": 3,
     "difficulty": "easy",
     "angle": "clubs",
@@ -109,7 +169,12 @@
   },
   {
     "text": "Dans quel stade le PSG a-t-il disputé ses matchs de Ligue 1 en 2023-2024 ?",
-    "answers": ["Parc des Princes", "Stade de France", "Stade Charléty", "Stade Jean-Bouin"],
+    "answers": [
+      "Parc des Princes",
+      "Stade de France",
+      "Stade Charléty",
+      "Stade Jean-Bouin"
+    ],
     "correct": 0,
     "difficulty": "easy",
     "angle": "clubs",
@@ -118,7 +183,12 @@
   },
   {
     "text": "Quel est le stade de l’AS Monaco ?",
-    "answers": ["Allianz Riviera", "Stade Louis-II", "Stade de la Mosson", "Stade Vélodrome"],
+    "answers": [
+      "Allianz Riviera",
+      "Stade Louis-II",
+      "Stade de la Mosson",
+      "Stade Vélodrome"
+    ],
     "correct": 1,
     "difficulty": "medium",
     "angle": "clubs",
@@ -127,7 +197,12 @@
   },
   {
     "text": "Quel club joue ses matchs à domicile à l’Allianz Riviera ?",
-    "answers": ["AS Monaco", "Olympique de Marseille", "OGC Nice", "Montpellier HSC"],
+    "answers": [
+      "AS Monaco",
+      "Olympique de Marseille",
+      "OGC Nice",
+      "Montpellier HSC"
+    ],
     "correct": 2,
     "difficulty": "medium",
     "angle": "clubs",
@@ -136,7 +211,12 @@
   },
   {
     "text": "Quel club a pour enceinte le Roazhon Park ?",
-    "answers": ["FC Nantes", "Stade Brestois", "FC Lorient", "Stade Rennais"],
+    "answers": [
+      "FC Nantes",
+      "Stade Brestois",
+      "FC Lorient",
+      "Stade Rennais"
+    ],
     "correct": 3,
     "difficulty": "medium",
     "angle": "clubs",
@@ -145,7 +225,12 @@
   },
   {
     "text": "Quel joueur de l’OM a inscrit 44 buts en championnat lors de la saison 1970-1971 ?",
-    "answers": ["Josip Skoblar", "Gunnar Andersson", "Roger Magnusson", "Salif Keïta"],
+    "answers": [
+      "Josip Skoblar",
+      "Gunnar Andersson",
+      "Roger Magnusson",
+      "Salif Keïta"
+    ],
     "correct": 0,
     "difficulty": "hard",
     "angle": "records",
@@ -154,7 +239,12 @@
   },
   {
     "text": "Quel gardien a disputé 618 matchs dans l’élite française entre 1996 et 2014 ?",
-    "answers": ["Fabien Barthez", "Mickaël Landreau", "Grégory Coupet", "Jean-Luc Ettori"],
+    "answers": [
+      "Fabien Barthez",
+      "Mickaël Landreau",
+      "Grégory Coupet",
+      "Jean-Luc Ettori"
+    ],
     "correct": 1,
     "difficulty": "medium",
     "angle": "records",
@@ -163,7 +253,12 @@
   },
   {
     "text": "Quel Parisien a donné 18 passes décisives en Ligue 1 sur la saison 2015-2016 ?",
-    "answers": ["Javier Pastore", "Lucas Moura", "Ángel Di María", "Zlatan Ibrahimović"],
+    "answers": [
+      "Javier Pastore",
+      "Lucas Moura",
+      "Ángel Di María",
+      "Zlatan Ibrahimović"
+    ],
     "correct": 2,
     "difficulty": "hard",
     "angle": "records",
@@ -172,7 +267,12 @@
   },
   {
     "text": "Quel Lyonnais a distribué quatre passes décisives dans un même match de Ligue 1 en 2018 ?",
-    "answers": ["Nabil Fekir", "Houssem Aouar", "Bertrand Traoré", "Memphis Depay"],
+    "answers": [
+      "Nabil Fekir",
+      "Houssem Aouar",
+      "Bertrand Traoré",
+      "Memphis Depay"
+    ],
     "correct": 3,
     "difficulty": "expert",
     "angle": "records",
@@ -181,7 +281,12 @@
   },
   {
     "text": "Quel club est resté invaincu lors de ses 32 premiers matchs de championnat en 1994-1995 ?",
-    "answers": ["FC Nantes", "Paris Saint-Germain", "AS Monaco", "RC Lens"],
+    "answers": [
+      "FC Nantes",
+      "Paris Saint-Germain",
+      "AS Monaco",
+      "RC Lens"
+    ],
     "correct": 0,
     "difficulty": "hard",
     "angle": "records",
@@ -190,7 +295,12 @@
   },
   {
     "text": "Quel attaquant a inscrit 299 buts dans le championnat de France de première division ?",
-    "answers": ["Bernard Lacombe", "Delio Onnis", "Hervé Revelli", "Carlos Bianchi"],
+    "answers": [
+      "Bernard Lacombe",
+      "Delio Onnis",
+      "Hervé Revelli",
+      "Carlos Bianchi"
+    ],
     "correct": 1,
     "difficulty": "medium",
     "angle": "records",
@@ -199,7 +309,12 @@
   },
   {
     "text": "Dans quel club Kylian Mbappé s’est-il révélé en Ligue 1 en 2016-2017 ?",
-    "answers": ["Paris Saint-Germain", "LOSC Lille", "AS Monaco", "Olympique Lyonnais"],
+    "answers": [
+      "Paris Saint-Germain",
+      "LOSC Lille",
+      "AS Monaco",
+      "Olympique Lyonnais"
+    ],
     "correct": 2,
     "difficulty": "easy",
     "angle": "joueurs",
@@ -208,7 +323,12 @@
   },
   {
     "text": "Avec quel club l’Argentin Delio Onnis a-t-il été meilleur buteur du championnat en 1981-1982 ?",
-    "answers": ["Stade de Reims", "AS Monaco", "SC Toulon", "Tours FC"],
+    "answers": [
+      "Stade de Reims",
+      "AS Monaco",
+      "SC Toulon",
+      "Tours FC"
+    ],
     "correct": 3,
     "difficulty": "medium",
     "angle": "joueurs",
@@ -217,7 +337,12 @@
   },
   {
     "text": "Quel avant-centre de l’OM a terminé meilleur buteur de Ligue 1 en 2009-2010 ?",
-    "answers": ["Mamadou Niang", "Djibril Cissé", "André-Pierre Gignac", "Loïc Rémy"],
+    "answers": [
+      "Mamadou Niang",
+      "Djibril Cissé",
+      "André-Pierre Gignac",
+      "Loïc Rémy"
+    ],
     "correct": 0,
     "difficulty": "hard",
     "angle": "joueurs",
@@ -226,7 +351,12 @@
   },
   {
     "text": "Quel attaquant du PSG a terminé meilleur buteur du championnat en 2016-2017, avec 35 buts ?",
-    "answers": ["Zlatan Ibrahimović", "Edinson Cavani", "Ezequiel Lavezzi", "Ángel Di María"],
+    "answers": [
+      "Zlatan Ibrahimović",
+      "Edinson Cavani",
+      "Ezequiel Lavezzi",
+      "Ángel Di María"
+    ],
     "correct": 1,
     "difficulty": "medium",
     "angle": "joueurs",
@@ -235,7 +365,12 @@
   },
   {
     "text": "Quel joueur est devenu meilleur passeur de Ligue 1 en 2025-2026 sous le maillot du RC Lens ?",
-    "answers": ["Florian Sotoca", "Angelo Fulgini", "Adrien Thomasson", "Wesley Saïd"],
+    "answers": [
+      "Florian Sotoca",
+      "Angelo Fulgini",
+      "Adrien Thomasson",
+      "Wesley Saïd"
+    ],
     "correct": 2,
     "difficulty": "hard",
     "angle": "joueurs",
@@ -244,7 +379,12 @@
   },
   {
     "text": "Quel président a dirigé l’Olympique Lyonnais pendant sa série de sept titres de champion ?",
-    "answers": ["Jean-Louis Triaud", "Michel Seydoux", "Pape Diouf", "Jean-Michel Aulas"],
+    "answers": [
+      "Jean-Louis Triaud",
+      "Michel Seydoux",
+      "Pape Diouf",
+      "Jean-Michel Aulas"
+    ],
     "correct": 3,
     "difficulty": "easy",
     "angle": "histoire",
@@ -253,7 +393,12 @@
   },
   {
     "text": "Qui dirigeait le PSG lors de son titre de champion de France en 2015-2016 ?",
-    "answers": ["Laurent Blanc", "Carlo Ancelotti", "Unai Emery", "Antoine Kombouaré"],
+    "answers": [
+      "Laurent Blanc",
+      "Carlo Ancelotti",
+      "Unai Emery",
+      "Antoine Kombouaré"
+    ],
     "correct": 0,
     "difficulty": "medium",
     "angle": "entraineurs",
@@ -262,7 +407,12 @@
   },
   {
     "text": "Quel entraîneur a mené le FC Nantes au titre de champion en 2000-2001 ?",
-    "answers": ["Jean-Claude Suaudeau", "Raynald Denoueix", "Robert Budzynski", "Élie Baup"],
+    "answers": [
+      "Jean-Claude Suaudeau",
+      "Raynald Denoueix",
+      "Robert Budzynski",
+      "Élie Baup"
+    ],
     "correct": 1,
     "difficulty": "hard",
     "angle": "entraineurs",
@@ -271,7 +421,12 @@
   },
   {
     "text": "Quel entraîneur a remporté le premier titre de champion de France de l’Olympique Lyonnais en 2001-2002 ?",
-    "answers": ["Paul Le Guen", "Gérard Houllier", "Jacques Santini", "Claude Puel"],
+    "answers": [
+      "Paul Le Guen",
+      "Gérard Houllier",
+      "Jacques Santini",
+      "Claude Puel"
+    ],
     "correct": 2,
     "difficulty": "hard",
     "angle": "entraineurs",
@@ -280,7 +435,12 @@
   },
   {
     "text": "Quel entraîneur a conduit le RC Lens au titre de champion de France en 1997-1998 ?",
-    "answers": ["Élie Baup", "Guy Roux", "Claude Puel", "Daniel Leclercq"],
+    "answers": [
+      "Élie Baup",
+      "Guy Roux",
+      "Claude Puel",
+      "Daniel Leclercq"
+    ],
     "correct": 3,
     "difficulty": "expert",
     "angle": "entraineurs",
@@ -289,7 +449,12 @@
   },
   {
     "text": "Quel entraîneur conduit Montpellier à son premier titre de champion de France en 2011-2012 ?",
-    "answers": ["René Girard", "Rolland Courbis", "Laurent Blanc", "Christophe Galtier"],
+    "answers": [
+      "René Girard",
+      "Rolland Courbis",
+      "Laurent Blanc",
+      "Christophe Galtier"
+    ],
     "correct": 0,
     "difficulty": "expert",
     "angle": "entraineurs",
@@ -298,7 +463,12 @@
   },
   {
     "text": "Quel club réalise le doublé championnat et Coupe de France sous Guy Roux en 1995-1996 ?",
-    "answers": ["FC Nantes", "AJ Auxerre", "RC Lens", "FC Metz"],
+    "answers": [
+      "FC Nantes",
+      "AJ Auxerre",
+      "RC Lens",
+      "FC Metz"
+    ],
     "correct": 1,
     "difficulty": "expert",
     "angle": "histoire",
@@ -307,7 +477,12 @@
   },
   {
     "text": "Quel club met fin aux sept sacres consécutifs de l’OL en remportant le championnat 2008-2009 ?",
-    "answers": ["Olympique de Marseille", "LOSC Lille", "Girondins de Bordeaux", "AS Monaco"],
+    "answers": [
+      "Olympique de Marseille",
+      "LOSC Lille",
+      "Girondins de Bordeaux",
+      "AS Monaco"
+    ],
     "correct": 2,
     "difficulty": "expert",
     "angle": "histoire",
@@ -316,11 +491,212 @@
   },
   {
     "text": "Quel entraîneur conduit Monaco au titre de champion de France en 2016-2017 ?",
-    "answers": ["Claudio Ranieri", "Niko Kovač", "Lucien Favre", "Leonardo Jardim"],
+    "answers": [
+      "Claudio Ranieri",
+      "Niko Kovač",
+      "Lucien Favre",
+      "Leonardo Jardim"
+    ],
     "correct": 3,
     "difficulty": "expert",
     "angle": "entraineurs",
     "fact": "monaco-2017",
     "source": "https://ligue1.com/en/articles/l1_article_290-"
+  },
+  {
+    "text": "Quel club a remporté le premier championnat de France professionnel en 1932-1933 ?",
+    "answers": [
+      "Olympique de Marseille",
+      "RC Paris",
+      "Olympique Lillois",
+      "FC Sochaux"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "histoire",
+    "fact": "ligue-1-lillois-premier-champion-1933",
+    "source": "https://www.ligue1.fr/histoire"
+  },
+  {
+    "text": "Quel joueur brésilien a été élu meilleur joueur de Ligue 1 en 2018 avec le PSG ?",
+    "answers": [
+      "Neymar",
+      "Thiago Silva",
+      "Marquinhos",
+      "Kylian Mbappé"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "joueurs",
+    "fact": "ligue-1-mbappe-meilleur-joueur-2018",
+    "source": "https://www.ligue1.fr/trophees-unfp"
+  },
+  {
+    "text": "Combien de titres de champion de France l'AS Saint-Étienne a-t-elle remportés ?",
+    "answers": [
+      "8",
+      "10",
+      "12",
+      "7"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "palmares",
+    "fact": "ligue-1-asse-10-titres",
+    "source": "https://www.ligue1.fr/histoire"
+  },
+  {
+    "text": "Quel entraîneur a mené Monaco au titre de champion de France en 2016-2017 ?",
+    "answers": [
+      "Claudio Ranieri",
+      "Leonardo Jardim",
+      "Niko Kovač",
+      "Thierry Henry"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "entraineurs",
+    "fact": "ligue-1-jardim-monaco-2017",
+    "source": "https://www.asmonaco.com/en/club/history/"
+  },
+  {
+    "text": "Quel club détient le record de buts marqués en une saison de Ligue 1 avec 118 réalisations en 2016-2017 ?",
+    "answers": [
+      "PSG",
+      "Olympique Lyonnais",
+      "AS Monaco",
+      "Olympique de Marseille"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "records",
+    "fact": "ligue-1-monaco-118-buts-2017",
+    "source": "https://www.ligue1.fr/records"
+  },
+  {
+    "text": "Quel stade accueille les matchs à domicile de l'OGC Nice depuis 2013 ?",
+    "answers": [
+      "Stade du Ray",
+      "Allianz Riviera",
+      "Stade Louis-II",
+      "Stade Vélodrome"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "clubs",
+    "fact": "ligue-1-nice-allianz-riviera",
+    "source": "https://www.ogcnice.com/en/club/"
+  },
+  {
+    "text": "Quel joueur camerounais a été meilleur buteur de Ligue 1 en 2019-2020 avec 18 buts pour le PSG ?",
+    "answers": [
+      "Samuel Eto'o",
+      "Vincent Aboubakar",
+      "Karl Toko Ekambi",
+      "Kylian Mbappé"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "joueurs",
+    "fact": "ligue-1-mbappe-buteur-2020",
+    "source": "https://www.ligue1.fr/trophees-unfp"
+  },
+  {
+    "text": "Quel club a terminé la saison 2022-2023 de Ligue 1 à la deuxième place derrière le PSG ?",
+    "answers": [
+      "Olympique de Marseille",
+      "RC Lens",
+      "AS Monaco",
+      "Olympique Lyonnais"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "palmares",
+    "fact": "ligue-1-lens-deuxieme-2023",
+    "source": "https://www.ligue1.fr/classement"
+  },
+  {
+    "text": "Quel entraîneur argentin a dirigé l'Olympique de Marseille de 2014 à 2019 ?",
+    "answers": [
+      "Jorge Sampaoli",
+      "Marcelo Bielsa",
+      "Rudi Garcia",
+      "André Villas-Boas"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "entraineurs",
+    "fact": "ligue-1-rudi-garcia-om",
+    "source": "https://www.om.fr/fr/historique"
+  },
+  {
+    "text": "Quel club a battu le record de points en Ligue 1 avec 96 points en 2015-2016 ?",
+    "answers": [
+      "AS Monaco",
+      "PSG",
+      "Olympique Lyonnais",
+      "Olympique de Marseille"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "records",
+    "fact": "ligue-1-psg-96-points-2016",
+    "source": "https://www.ligue1.fr/records"
+  },
+  {
+    "text": "Quel joueur ivoirien a inscrit plus de 100 buts en Ligue 1 avec Lille et Chelsea ?",
+    "answers": [
+      "Didier Drogba",
+      "Salomon Kalou",
+      "Gervinho",
+      "Nicolas Pépé"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "joueurs",
+    "fact": "ligue-1-pepe-100-buts",
+    "source": "https://www.ligue1.fr/joueur"
+  },
+  {
+    "text": "Quel club promu a terminé la saison 2020-2021 à la cinquième place de Ligue 1 ?",
+    "answers": [
+      "RC Lens",
+      "FC Lorient",
+      "Clermont Foot",
+      "Troyes"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "palmares",
+    "fact": "ligue-1-lens-cinquieme-2021",
+    "source": "https://www.ligue1.fr/classement"
+  },
+  {
+    "text": "Quel entraîneur a remporté sept titres de Ligue 1 consécutifs avec le PSG entre 2013 et 2020 ?",
+    "answers": [
+      "Laurent Blanc",
+      "Unai Emery",
+      "Thomas Tuchel",
+      "Aucun entraîneur unique"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "entraineurs",
+    "fact": "ligue-1-psg-sept-titres-differents-coachs",
+    "source": "https://www.ligue1.fr/histoire"
+  },
+  {
+    "text": "Quel joueur détient le record du plus grand nombre de sélections en équipe de France tout en étant passé par la Ligue 1 ?",
+    "answers": [
+      "Thierry Henry",
+      "Hugo Lloris",
+      "Lilian Thuram",
+      "Marcel Desailly"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "joueurs",
+    "fact": "ligue-1-thuram-selections-france",
+    "source": "https://www.fff.fr/equipes-de-france/1/france-a/matchs"
   }
 ]

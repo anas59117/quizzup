@@ -1,7 +1,12 @@
 [
   {
     "text": "Quels clubs milanais partagent le stade de San Siro en Serie A ?",
-    "answers": ["AC Milan et Monza", "Inter et Atalanta", "AC Milan et Inter", "Inter et Como"],
+    "answers": [
+      "AC Milan et Monza",
+      "Inter et Atalanta",
+      "AC Milan et Inter",
+      "Inter et Como"
+    ],
     "correct": 2,
     "difficulty": "easy",
     "angle": "stades",
@@ -10,7 +15,12 @@
   },
   {
     "text": "Quel club affronte l’AS Roma dans le derby de la capitale italienne ?",
-    "answers": ["Lazio", "Fiorentina", "Napoli", "Torino"],
+    "answers": [
+      "Lazio",
+      "Fiorentina",
+      "Napoli",
+      "Torino"
+    ],
     "correct": 0,
     "difficulty": "easy",
     "angle": "clubs",
@@ -19,7 +29,12 @@
   },
   {
     "text": "Que désigne le « scudetto » arboré sur le maillot du champion d’Italie ?",
-    "answers": ["Le trophée du meilleur buteur", "L’emblème de la coupe d’Italie", "Le badge d’un club promu", "L’écusson du titre national"],
+    "answers": [
+      "Le trophée du meilleur buteur",
+      "L’emblème de la coupe d’Italie",
+      "Le badge d’un club promu",
+      "L’écusson du titre national"
+    ],
     "correct": 3,
     "difficulty": "easy",
     "angle": "palmares",
@@ -28,7 +43,12 @@
   },
   {
     "text": "Quel club reçoit ses adversaires au stade Diego Armando Maradona en Serie A ?",
-    "answers": ["Cagliari", "Napoli", "Lecce", "Palermo"],
+    "answers": [
+      "Cagliari",
+      "Napoli",
+      "Lecce",
+      "Palermo"
+    ],
     "correct": 1,
     "difficulty": "easy",
     "angle": "stades",
@@ -37,7 +57,12 @@
   },
   {
     "text": "Quel club turinois est surnommé les « Bianconeri » ?",
-    "answers": ["Torino", "Genoa", "Spezia", "Juventus"],
+    "answers": [
+      "Torino",
+      "Genoa",
+      "Spezia",
+      "Juventus"
+    ],
     "correct": 3,
     "difficulty": "easy",
     "angle": "clubs",
@@ -46,7 +71,12 @@
   },
   {
     "text": "Quel club a remporté la Serie A 2021-2022 ?",
-    "answers": ["AC Milan", "Inter", "Juventus", "Napoli"],
+    "answers": [
+      "AC Milan",
+      "Inter",
+      "Juventus",
+      "Napoli"
+    ],
     "correct": 0,
     "difficulty": "easy",
     "angle": "palmares",
@@ -55,7 +85,12 @@
   },
   {
     "text": "Quel club florentin joue à domicile au stade Artemio Franchi ?",
-    "answers": ["Empoli", "Fiorentina", "Bologna", "Pisa"],
+    "answers": [
+      "Empoli",
+      "Fiorentina",
+      "Bologna",
+      "Pisa"
+    ],
     "correct": 1,
     "difficulty": "easy",
     "angle": "stades",
@@ -64,7 +99,12 @@
   },
   {
     "text": "Quel entraîneur a conduit Naples au scudetto en 2022-2023 ?",
-    "answers": ["Maurizio Sarri", "Gennaro Gattuso", "Luciano Spalletti", "Carlo Ancelotti"],
+    "answers": [
+      "Maurizio Sarri",
+      "Gennaro Gattuso",
+      "Luciano Spalletti",
+      "Carlo Ancelotti"
+    ],
     "correct": 2,
     "difficulty": "medium",
     "angle": "entraineurs",
@@ -73,7 +113,12 @@
   },
   {
     "text": "Quel club de Gênes a remporté le scudetto en 1990-1991 ?",
-    "answers": ["Sampdoria", "Genoa", "Virtus Entella", "Sestri Levante"],
+    "answers": [
+      "Sampdoria",
+      "Genoa",
+      "Virtus Entella",
+      "Sestri Levante"
+    ],
     "correct": 0,
     "difficulty": "medium",
     "angle": "palmares",
@@ -82,7 +127,12 @@
   },
   {
     "text": "Quel joueur a inscrit son 250e but de Serie A avec la Roma sur le terrain du Torino en 2016 ?",
-    "answers": ["Daniele De Rossi", "Vincenzo Montella", "Francesco Totti", "Roberto Baggio"],
+    "answers": [
+      "Daniele De Rossi",
+      "Vincenzo Montella",
+      "Francesco Totti",
+      "Roberto Baggio"
+    ],
     "correct": 2,
     "difficulty": "medium",
     "angle": "joueurs",
@@ -91,7 +141,12 @@
   },
   {
     "text": "Quel club reçoit en championnat au stade Renato-Dall’Ara ?",
-    "answers": ["Parma", "Bologna", "Modena", "Sassuolo"],
+    "answers": [
+      "Parma",
+      "Bologna",
+      "Modena",
+      "Sassuolo"
+    ],
     "correct": 1,
     "difficulty": "medium",
     "angle": "stades",
@@ -100,7 +155,12 @@
   },
   {
     "text": "Quel entraîneur dirigeait l’Inter lors de son titre de champion en 2020-2021 ?",
-    "answers": ["Simone Inzaghi", "Roberto Mancini", "Stefano Pioli", "Antonio Conte"],
+    "answers": [
+      "Simone Inzaghi",
+      "Roberto Mancini",
+      "Stefano Pioli",
+      "Antonio Conte"
+    ],
     "correct": 3,
     "difficulty": "medium",
     "angle": "entraineurs",
@@ -109,7 +169,12 @@
   },
   {
     "text": "Contre quel club l’AS Roma a-t-elle assuré son titre en s’imposant 3-1 en juin 2001 ?",
-    "answers": ["Lazio", "Parma", "Udinese", "Fiorentina"],
+    "answers": [
+      "Lazio",
+      "Parma",
+      "Udinese",
+      "Fiorentina"
+    ],
     "correct": 1,
     "difficulty": "medium",
     "angle": "histoire",
@@ -118,7 +183,12 @@
   },
   {
     "text": "Dans quelle ville l’Atalanta dispute-t-elle ses matchs de Serie A à domicile ?",
-    "answers": ["Brescia", "Vérone", "Udine", "Bergame"],
+    "answers": [
+      "Brescia",
+      "Vérone",
+      "Udine",
+      "Bergame"
+    ],
     "correct": 3,
     "difficulty": "medium",
     "angle": "clubs",
@@ -127,7 +197,12 @@
   },
   {
     "text": "Quel gardien a disputé 657 matchs de Serie A au cours de sa carrière ?",
-    "answers": ["Gianluigi Buffon", "Dino Zoff", "Gianluca Pagliuca", "Walter Zenga"],
+    "answers": [
+      "Gianluigi Buffon",
+      "Dino Zoff",
+      "Gianluca Pagliuca",
+      "Walter Zenga"
+    ],
     "correct": 0,
     "difficulty": "medium",
     "angle": "records",
@@ -136,7 +211,12 @@
   },
   {
     "text": "Quel club a marqué les années 1940 par les titres du « Grande Torino » ?",
-    "answers": ["Juventus", "Genoa", "Torino", "Pro Vercelli"],
+    "answers": [
+      "Juventus",
+      "Genoa",
+      "Torino",
+      "Pro Vercelli"
+    ],
     "correct": 2,
     "difficulty": "medium",
     "angle": "histoire",
@@ -145,7 +225,12 @@
   },
   {
     "text": "Quel club d’Osvaldo Bagnoli a remporté le scudetto en 1984-1985 ?",
-    "answers": ["Chievo Vérone", "Udinese", "Atalanta", "Hellas Vérone"],
+    "answers": [
+      "Chievo Vérone",
+      "Udinese",
+      "Atalanta",
+      "Hellas Vérone"
+    ],
     "correct": 3,
     "difficulty": "hard",
     "angle": "palmares",
@@ -154,7 +239,12 @@
   },
   {
     "text": "Quel total la Juventus a-t-elle atteint en Serie A en 2013-2014 ?",
-    "answers": ["96 points", "102 points", "99 points", "105 points"],
+    "answers": [
+      "96 points",
+      "102 points",
+      "99 points",
+      "105 points"
+    ],
     "correct": 1,
     "difficulty": "hard",
     "angle": "records",
@@ -163,7 +253,12 @@
   },
   {
     "text": "Quel club d’Émilie-Romagne est monté en Serie A pour la première fois en 1990 ?",
-    "answers": ["Modena", "Bologna", "Parma", "Piacenza"],
+    "answers": [
+      "Modena",
+      "Bologna",
+      "Parma",
+      "Piacenza"
+    ],
     "correct": 2,
     "difficulty": "hard",
     "angle": "histoire",
@@ -172,7 +267,12 @@
   },
   {
     "text": "Quel attaquant surnommé « Rombo di Tuono » a remporté le scudetto avec Cagliari en 1970 ?",
-    "answers": ["Gigi Riva", "Roberto Boninsegna", "Pietro Anastasi", "Angelo Domenghini"],
+    "answers": [
+      "Gigi Riva",
+      "Roberto Boninsegna",
+      "Pietro Anastasi",
+      "Angelo Domenghini"
+    ],
     "correct": 0,
     "difficulty": "hard",
     "angle": "joueurs",
@@ -181,7 +281,12 @@
   },
   {
     "text": "Combien de matchs de Serie A l’AC Milan a-t-il enchaînés sans défaite de 1991 à 1993 ?",
-    "answers": ["46", "52", "58", "64"],
+    "answers": [
+      "46",
+      "52",
+      "58",
+      "64"
+    ],
     "correct": 2,
     "difficulty": "hard",
     "angle": "records",
@@ -190,7 +295,12 @@
   },
   {
     "text": "Quel club a remporté la Serie A 1968-1969 ?",
-    "answers": ["Cagliari", "Inter", "AC Milan", "Fiorentina"],
+    "answers": [
+      "Cagliari",
+      "Inter",
+      "AC Milan",
+      "Fiorentina"
+    ],
     "correct": 3,
     "difficulty": "hard",
     "angle": "palmares",
@@ -199,7 +309,12 @@
   },
   {
     "text": "Combien de scudetti consécutifs la Juventus a-t-elle remportés de 2012 à 2020 ?",
-    "answers": ["6", "9", "7", "8"],
+    "answers": [
+      "6",
+      "9",
+      "7",
+      "8"
+    ],
     "correct": 1,
     "difficulty": "hard",
     "angle": "records",
@@ -208,7 +323,12 @@
   },
   {
     "text": "Qui entraînait la Lazio lors de son titre de champion d’Italie en 1999-2000 ?",
-    "answers": ["Sven-Göran Eriksson", "Dino Zoff", "Alberto Zaccheroni", "Roberto Mancini"],
+    "answers": [
+      "Sven-Göran Eriksson",
+      "Dino Zoff",
+      "Alberto Zaccheroni",
+      "Roberto Mancini"
+    ],
     "correct": 0,
     "difficulty": "expert",
     "angle": "entraineurs",
@@ -217,7 +337,12 @@
   },
   {
     "text": "Quel attaquant de Bari a partagé le titre de meilleur buteur de Serie A en 1995-1996 ?",
-    "answers": ["Giuseppe Signori", "Enrico Chiesa", "Abel Balbo", "Igor Protti"],
+    "answers": [
+      "Giuseppe Signori",
+      "Enrico Chiesa",
+      "Abel Balbo",
+      "Igor Protti"
+    ],
     "correct": 3,
     "difficulty": "expert",
     "angle": "joueurs",
@@ -226,7 +351,12 @@
   },
   {
     "text": "Quel gardien de l’AC Milan a enchaîné 929 minutes sans encaisser en Serie A en 1993-1994 ?",
-    "answers": ["Giovanni Galli", "Walter Zenga", "Sebastiano Rossi", "Angelo Peruzzi"],
+    "answers": [
+      "Giovanni Galli",
+      "Walter Zenga",
+      "Sebastiano Rossi",
+      "Angelo Peruzzi"
+    ],
     "correct": 2,
     "difficulty": "expert",
     "angle": "records",
@@ -235,7 +365,12 @@
   },
   {
     "text": "Quel club a battu l’Inter en match de barrage pour le titre de champion en 1964 ?",
-    "answers": ["Bologna", "AC Milan", "Juventus", "Fiorentina"],
+    "answers": [
+      "Bologna",
+      "AC Milan",
+      "Juventus",
+      "Fiorentina"
+    ],
     "correct": 0,
     "difficulty": "expert",
     "angle": "histoire",
@@ -244,11 +379,324 @@
   },
   {
     "text": "Quel club a remporté la première Serie A à poule unique en 1929-1930, sous le nom d’Ambrosiana ?",
-    "answers": ["Juventus", "Inter", "Genoa", "Pro Vercelli"],
+    "answers": [
+      "Juventus",
+      "Inter",
+      "Genoa",
+      "Pro Vercelli"
+    ],
     "correct": 1,
     "difficulty": "expert",
     "angle": "palmares",
     "fact": "serie-a-ambrosiana-titre-1930",
     "source": "https://www.inter.it/en/club/palmares/serie-a?season=1929-1930"
+  },
+  {
+    "text": "Quel club italien est surnommé les « Nerazzurri » ?",
+    "answers": [
+      "AC Milan",
+      "Napoli",
+      "Atalanta",
+      "Inter"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "clubs",
+    "fact": "serie-a-inter-nerazzurri",
+    "source": "https://www.inter.it/en/club"
+  },
+  {
+    "text": "Quel club a remporté le scudetto en 2023-2024 ?",
+    "answers": [
+      "AC Milan",
+      "Juventus",
+      "Inter",
+      "Napoli"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "palmares",
+    "fact": "serie-a-inter-champion-2024",
+    "source": "https://www.inter.it/en/news/2024-04-22-scudetto"
+  },
+  {
+    "text": "Quel buteur suédois a joué pour la Juventus, l'Inter et l'AC Milan en Serie A ?",
+    "answers": [
+      "Henrik Larsson",
+      "Zlatan Ibrahimović",
+      "Freddie Ljungberg",
+      "Jesper Blomqvist"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "joueurs",
+    "fact": "serie-a-ibrahimovic-juve-inter-milan",
+    "source": "https://www.legaseriea.it/serie-a/statistiche/calciatori"
+  },
+  {
+    "text": "Quel entraîneur italien a dirigé l'AC Milan lors de ses victoires en Ligue des champions 2003 et 2007 ?",
+    "answers": [
+      "Fabio Capello",
+      "Arrigo Sacchi",
+      "Carlo Ancelotti",
+      "Alberto Zaccheroni"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "entraineurs",
+    "fact": "serie-a-ancelotti-milan-ucl",
+    "source": "https://www.acmilan.com/en/club/history"
+  },
+  {
+    "text": "Quel stade accueille les matchs à domicile de la Juventus ?",
+    "answers": [
+      "Allianz Stadium",
+      "Stadio Olimpico",
+      "San Siro",
+      "Artemio Franchi"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "stades",
+    "fact": "serie-a-juventus-allianz-stadium",
+    "source": "https://www.juventus.com/en/allianz-stadium"
+  },
+  {
+    "text": "Quel joueur argentin a été sacré meilleur buteur de Serie A avec la Lazio en 2019-2020 ?",
+    "answers": [
+      "Mauro Icardi",
+      "Paulo Dybala",
+      "Gonzalo Higuaín",
+      "Ciro Immobile"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "joueurs",
+    "fact": "serie-a-immobile-capocannoniere-2020",
+    "source": "https://www.legaseriea.it/serie-a/statistiche/calciatori"
+  },
+  {
+    "text": "Combien d'équipes participent à la Serie A chaque saison ?",
+    "answers": [
+      "16",
+      "18",
+      "20",
+      "22"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "clubs",
+    "fact": "serie-a-vingt-equipes",
+    "source": "https://www.legaseriea.it/serie-a"
+  },
+  {
+    "text": "Quel club de Serie A est basé à Cagliari, en Sardaigne ?",
+    "answers": [
+      "Lecce",
+      "Cagliari",
+      "Empoli",
+      "Salernitana"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "clubs",
+    "fact": "serie-a-cagliari-sardaigne",
+    "source": "https://www.cagliaricalcio.com"
+  },
+  {
+    "text": "Quel défenseur italien a passé 25 saisons à l'AC Milan ?",
+    "answers": [
+      "Franco Baresi",
+      "Fabio Cannavaro",
+      "Alessandro Nesta",
+      "Paolo Maldini"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "joueurs",
+    "fact": "serie-a-maldini-25-saisons-milan",
+    "source": "https://www.acmilan.com/en/club/history"
+  },
+  {
+    "text": "Quel club a été relégué en Serie B en 2006 à la suite du scandale du Calciopoli ?",
+    "answers": [
+      "AC Milan",
+      "Inter",
+      "Fiorentina",
+      "Juventus"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "histoire",
+    "fact": "serie-a-juventus-relegation-calciopoli-2006",
+    "source": "https://www.juventus.com/en/news/articles/le6end-six-years-of-records"
+  },
+  {
+    "text": "Quel attaquant argentin a inscrit 36 buts en une saison de Serie A avec le Napoli en 2015-2016 ?",
+    "answers": [
+      "Mauro Icardi",
+      "Carlos Tévez",
+      "Paulo Dybala",
+      "Gonzalo Higuaín"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "records",
+    "fact": "serie-a-higuain-36-buts-2016",
+    "source": "https://www.legaseriea.it/serie-a/statistiche/calciatori"
+  },
+  {
+    "text": "Quel entraîneur a mené l'AC Milan à trois titres de champion d'Italie entre 1988 et 1994 ?",
+    "answers": [
+      "Giovanni Trapattoni",
+      "Arrigo Sacchi",
+      "Fabio Capello",
+      "Nils Liedholm"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "entraineurs",
+    "fact": "serie-a-capello-milan-trois-titres",
+    "source": "https://www.acmilan.com/en/club/history"
+  },
+  {
+    "text": "Quel numéro 10 argentin a porté le Napoli vers ses deux premiers scudetti en 1987 et 1990 ?",
+    "answers": [
+      "Claudio Caniggia",
+      "Gabriel Batistuta",
+      "Diego Maradona",
+      "Hernán Crespo"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "joueurs",
+    "fact": "serie-a-maradona-napoli-scudetti",
+    "source": "https://sscnapoli.it/la-storia/"
+  },
+  {
+    "text": "Quelle ville accueille le derby de la Mole entre la Juventus et le Torino ?",
+    "answers": [
+      "Milan",
+      "Rome",
+      "Turin",
+      "Gênes"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "clubs",
+    "fact": "serie-a-derby-mole-turin",
+    "source": "https://www.legaseriea.it/serie-a"
+  },
+  {
+    "text": "Quel entraîneur portugais a dirigé l'Inter lors de son triplé historique en 2010 ?",
+    "answers": [
+      "André Villas-Boas",
+      "José Mourinho",
+      "Jorge Jesus",
+      "Leonardo Jardim"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "entraineurs",
+    "fact": "serie-a-mourinho-inter-triple-2010",
+    "source": "https://www.inter.it/en/news/2010-05-22-triple"
+  },
+  {
+    "text": "Quel gardien de la Juventus a remporté le Ballon d'Or en 2006 ?",
+    "answers": [
+      "Gianluigi Donnarumma",
+      "Gianluigi Buffon",
+      "Dino Zoff",
+      "Fabien Barthez"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "joueurs",
+    "fact": "serie-a-buffon-pas-ballon-or",
+    "source": "https://www.legaseriea.it/serie-a/statistiche/calciatori"
+  },
+  {
+    "text": "Quel club a remporté la Coppa Italia en 2024 ?",
+    "answers": [
+      "Atalanta",
+      "Juventus",
+      "Inter",
+      "Fiorentina"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "palmares",
+    "fact": "serie-a-juventus-coppa-italia-2024",
+    "source": "https://www.legaseriea.it"
+  },
+  {
+    "text": "Quel est le surnom de l'AS Roma ?",
+    "answers": [
+      "I Lupi",
+      "I Grifoni",
+      "Le Aquile",
+      "I Rossoblu"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "clubs",
+    "fact": "serie-a-roma-surnom-lupi",
+    "source": "https://www.asroma.com"
+  },
+  {
+    "text": "Dans quel stade le Napoli joue-t-il ses matchs à domicile depuis 2020 sous son nom actuel ?",
+    "answers": [
+      "Stade San Paolo",
+      "Stade Diego Armando Maradona",
+      "Stade Olimpico",
+      "Stade Bentegodi"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "stades",
+    "fact": "serie-a-napoli-stade-maradona-nom",
+    "source": "https://sscnapoli.it"
+  },
+  {
+    "text": "Quel joueur brésilien a été meilleur buteur de Serie A en 2017-2018 avec la Lazio ?",
+    "answers": [
+      "Neymar",
+      "Ciro Immobile",
+      "Mauro Icardi",
+      "Lucas Moura"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "joueurs",
+    "fact": "serie-a-immobile-capocannoniere-2018",
+    "source": "https://www.legaseriea.it/serie-a/statistiche/calciatori"
+  },
+  {
+    "text": "Quel club sarde a créé la surprise en remportant le scudetto en 1969-1970 ?",
+    "answers": [
+      "Cagliari",
+      "Sassari Torres",
+      "Palermo",
+      "Bari"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "histoire",
+    "fact": "serie-a-cagliari-scudetto-1970",
+    "source": "https://www.cagliaricalcio.com"
+  },
+  {
+    "text": "Quel entraîneur a conduit l'Inter à cinq scudetti consécutifs entre 2006 et 2010 ?",
+    "answers": [
+      "Héctor Cúper",
+      "Roberto Mancini",
+      "José Mourinho",
+      "Luciano Spalletti"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "entraineurs",
+    "fact": "serie-a-mancini-inter-titres-consecutifs",
+    "source": "https://www.inter.it/en/club/palmares"
   }
 ]
