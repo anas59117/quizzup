@@ -7,17 +7,8 @@
       "le plus petit rhinocéros vivant",
       "un grand félin endémique de Sumatra"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle espèce décrit le vaquita ?",
-    "answers": [
-      "un rhinocéros très rare d'Indonésie",
-      "un petit marsouin du golfe de Californie",
-      "le plus petit rhinocéros vivant",
-      "un grand félin endémique de Sumatra"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quelle description correspond au rhinocéros de Java ?",
@@ -27,7 +18,8 @@
       "un rhinocéros très rare d'Indonésie",
       "un grand singe de Sumatra"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Quelle espèce décrit le rhinocéros de Java ?",
@@ -37,7 +29,8 @@
       "un grand singe de Sumatra",
       "un rhinocéros très rare d'Indonésie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "Quelle description correspond au rhinocéros de Sumatra ?",
@@ -47,7 +40,8 @@
       "un grand singe de Sumatra",
       "un grand singe des montagnes des Virunga et de Bwindi"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quelle espèce décrit le rhinocéros de Sumatra ?",
@@ -57,7 +51,8 @@
       "un grand singe de Sumatra",
       "un grand singe des montagnes des Virunga et de Bwindi"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Quelle description correspond au tigre de Sumatra ?",
@@ -67,17 +62,8 @@
       "un grand félin endémique de Sumatra",
       "un félin de l'Extrême-Orient russe et chinois"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle espèce décrit le tigre de Sumatra ?",
-    "answers": [
-      "un grand singe de Sumatra",
-      "un grand singe des montagnes des Virunga et de Bwindi",
-      "un félin de l'Extrême-Orient russe et chinois",
-      "un grand félin endémique de Sumatra"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quelle description correspond à l'orang-outan de Tapanuli ?",
@@ -87,7 +73,8 @@
       "un félin de l'Extrême-Orient russe et chinois",
       "un bovidé rare du Vietnam et du Laos"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Quelle espèce décrit l'orang-outan de Tapanuli ?",
@@ -97,7 +84,8 @@
       "un félin de l'Extrême-Orient russe et chinois",
       "un bovidé rare du Vietnam et du Laos"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "Quelle description correspond au gorille de montagne ?",
@@ -107,7 +95,8 @@
       "un grand singe des montagnes des Virunga et de Bwindi",
       "un éléphant des forêts tropicales africaines"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quelle espèce décrit le gorille de montagne ?",
@@ -117,7 +106,8 @@
       "un éléphant des forêts tropicales africaines",
       "un grand singe des montagnes des Virunga et de Bwindi"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Quelle description correspond au léopard de l'Amour ?",
@@ -127,17 +117,8 @@
       "un éléphant des forêts tropicales africaines",
       "un perroquet nocturne incapable de voler de Nouvelle-Zélande"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle espèce décrit le léopard de l'Amour ?",
-    "answers": [
-      "un bovidé rare du Vietnam et du Laos",
-      "un félin de l'Extrême-Orient russe et chinois",
-      "un éléphant des forêts tropicales africaines",
-      "un perroquet nocturne incapable de voler de Nouvelle-Zélande"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quelle description correspond au saola ?",
@@ -147,7 +128,8 @@
       "un bovidé rare du Vietnam et du Laos",
       "un amphibien des canaux de Xochimilco"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quelle espèce décrit le saola ?",
@@ -157,7 +139,8 @@
       "un amphibien des canaux de Xochimilco",
       "un bovidé rare du Vietnam et du Laos"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quelle description correspond à l'éléphant de forêt d'Afrique ?",
@@ -167,7 +150,8 @@
       "un amphibien des canaux de Xochimilco",
       "une tortue marine recherchée pour son écaille"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quelle espèce décrit l'éléphant de forêt d'Afrique ?",
@@ -177,7 +161,8 @@
       "un amphibien des canaux de Xochimilco",
       "une tortue marine recherchée pour son écaille"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Quelle description correspond au kakapo ?",
@@ -187,17 +172,8 @@
       "un perroquet nocturne incapable de voler de Nouvelle-Zélande",
       "un crocodilien au museau très étroit"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle espèce décrit le kakapo ?",
-    "answers": [
-      "un amphibien des canaux de Xochimilco",
-      "une tortue marine recherchée pour son écaille",
-      "un crocodilien au museau très étroit",
-      "un perroquet nocturne incapable de voler de Nouvelle-Zélande"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quelle description correspond à l'axolotl sauvage ?",
@@ -207,7 +183,8 @@
       "un crocodilien au museau très étroit",
       "une antilope du Sahara"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quelle espèce décrit l'axolotl sauvage ?",
@@ -217,7 +194,8 @@
       "un crocodilien au museau très étroit",
       "une antilope du Sahara"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quelle description correspond à la tortue imbriquée ?",
@@ -227,7 +205,8 @@
       "une tortue marine recherchée pour son écaille",
       "un cheval sauvage d'Asie centrale"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quelle espèce décrit la tortue imbriquée ?",
@@ -237,7 +216,8 @@
       "un cheval sauvage d'Asie centrale",
       "une tortue marine recherchée pour son écaille"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Quelle description correspond au gavial du Gange ?",
@@ -247,17 +227,8 @@
       "un cheval sauvage d'Asie centrale",
       "un grand vautour nord-américain"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle espèce décrit le gavial du Gange ?",
-    "answers": [
-      "une antilope du Sahara",
-      "un crocodilien au museau très étroit",
-      "un cheval sauvage d'Asie centrale",
-      "un grand vautour nord-américain"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quelle description correspond à l'antilope addax ?",
@@ -267,7 +238,8 @@
       "une antilope du Sahara",
       "un primate de Madagascar"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quelle espèce décrit l'antilope addax ?",
@@ -277,7 +249,8 @@
       "un primate de Madagascar",
       "une antilope du Sahara"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Quelle description correspond au cheval de Przewalski ?",
@@ -287,7 +260,8 @@
       "un primate de Madagascar",
       "un mammifère écailleux de Palawan"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quelle espèce décrit le cheval de Przewalski ?",
@@ -297,7 +271,8 @@
       "un primate de Madagascar",
       "un mammifère écailleux de Palawan"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quelle description correspond au condor de Californie ?",
@@ -307,17 +282,8 @@
       "un grand vautour nord-américain",
       "un cétacé très menacé de l'Atlantique Nord"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle espèce décrit le condor de Californie ?",
-    "answers": [
-      "un primate de Madagascar",
-      "un mammifère écailleux de Palawan",
-      "un cétacé très menacé de l'Atlantique Nord",
-      "un grand vautour nord-américain"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quelle description correspond au lémurien indri ?",
@@ -327,7 +293,8 @@
       "un cétacé très menacé de l'Atlantique Nord",
       "un cétacé côtier et fluvial d'Asie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quelle espèce décrit le lémurien indri ?",
@@ -337,7 +304,8 @@
       "un cétacé très menacé de l'Atlantique Nord",
       "un cétacé côtier et fluvial d'Asie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Quelle description correspond au pangolin des Philippines ?",
@@ -347,7 +315,8 @@
       "un mammifère écailleux de Palawan",
       "un requin pélagique aux nageoires arrondies"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quelle espèce décrit le pangolin des Philippines ?",
@@ -357,7 +326,8 @@
       "un requin pélagique aux nageoires arrondies",
       "un mammifère écailleux de Palawan"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quelle description correspond à la baleine franche de l'Atlantique Nord ?",
@@ -367,17 +337,8 @@
       "un requin pélagique aux nageoires arrondies",
       "un poisson migrateur autrefois présent dans de grands fleuves européens"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle espèce décrit la baleine franche de l'Atlantique Nord ?",
-    "answers": [
-      "un cétacé côtier et fluvial d'Asie",
-      "un cétacé très menacé de l'Atlantique Nord",
-      "un requin pélagique aux nageoires arrondies",
-      "un poisson migrateur autrefois présent dans de grands fleuves européens"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quelle description correspond au dauphin de l'Irrawaddy ?",
@@ -387,7 +348,8 @@
       "un cétacé côtier et fluvial d'Asie",
       "un reptile endémique de La Réunion"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quelle espèce décrit le dauphin de l'Irrawaddy ?",
@@ -397,7 +359,8 @@
       "un reptile endémique de La Réunion",
       "un cétacé côtier et fluvial d'Asie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Quelle description correspond au requin océanique ?",
@@ -407,7 +370,8 @@
       "un reptile endémique de La Réunion",
       "un oiseau nichant notamment au Maroc"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quelle espèce décrit le requin océanique ?",
@@ -417,7 +381,8 @@
       "un reptile endémique de La Réunion",
       "un oiseau nichant notamment au Maroc"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Quelle description correspond à l'esturgeon européen ?",
@@ -427,17 +392,8 @@
       "un poisson migrateur autrefois présent dans de grands fleuves européens",
       "un félin de la péninsule Ibérique"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle espèce décrit l'esturgeon européen ?",
-    "answers": [
-      "un reptile endémique de La Réunion",
-      "un oiseau nichant notamment au Maroc",
-      "un félin de la péninsule Ibérique",
-      "un poisson migrateur autrefois présent dans de grands fleuves européens"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quelle description correspond au gecko diurne de Manapany ?",
@@ -447,7 +403,8 @@
       "un félin de la péninsule Ibérique",
       "un petit marsouin du golfe de Californie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quelle espèce décrit le gecko diurne de Manapany ?",
@@ -457,7 +414,8 @@
       "un félin de la péninsule Ibérique",
       "un petit marsouin du golfe de Californie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Quelle description correspond à l'ibis chauve ?",
@@ -467,7 +425,8 @@
       "un oiseau nichant notamment au Maroc",
       "un rhinocéros très rare d'Indonésie"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quelle espèce décrit l'ibis chauve ?",
@@ -477,7 +436,8 @@
       "un rhinocéros très rare d'Indonésie",
       "un oiseau nichant notamment au Maroc"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quelle description correspond au lynx ibérique ?",
@@ -487,7 +447,8 @@
       "un rhinocéros très rare d'Indonésie",
       "le plus petit rhinocéros vivant"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quelle espèce décrit le lynx ibérique ?",
@@ -497,6 +458,119 @@
       "un rhinocéros très rare d'Indonésie",
       "le plus petit rhinocéros vivant"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quelle capacité permet à l’axolotl de remplacer une patte perdue ?",
+    "answers": [
+      "La mue",
+      "La métamorphose",
+      "La cicatrisation seule",
+      "La régénération"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "adaptations",
+    "fact": "axolotl-regeneration-membre",
+    "source": "https://www.smithsonianmag.com/smart-news/axolotls-may-hold-the-key-to-regrowing-limbs-and-scientists-are-unraveling-their-secrets-to-help-humans-do-the-same-180986781/"
+  },
+  {
+    "text": "Que mange principalement le panda géant ?",
+    "answers": [
+      "De l’eucalyptus",
+      "Du bambou",
+      "Des aiguilles de pin",
+      "Des feuilles de thé"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "alimentation",
+    "fact": "panda-bambou",
+    "source": "https://www.worldwildlife.org/species/giant-panda/"
+  },
+  {
+    "text": "Quel geste défensif permet au pangolin de protéger son ventre ?",
+    "answers": [
+      "Il se roule en boule",
+      "Il se dresse sur ses pattes arrière",
+      "Il projette ses écailles",
+      "Il rentre la tête dans une carapace"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "adaptations",
+    "fact": "pangolin-defense-boule",
+    "source": "https://www.worldwildlife.org/species/pangolin/"
+  },
+  {
+    "text": "Quel métal des munitions peut intoxiquer le condor de Californie quand il mange une carcasse ?",
+    "answers": [
+      "Le titane",
+      "L’aluminium",
+      "Le plomb",
+      "Le zinc"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "menaces",
+    "fact": "condor-californie-plomb-munitions",
+    "source": "https://www.fws.gov/program/california-condor-recovery/initiatives"
+  },
+  {
+    "text": "Où la tortue luth creuse-t-elle son nid pour pondre ses œufs ?",
+    "answers": [
+      "Dans la vase sous-marine",
+      "Dans une mangrove inondée",
+      "Dans le sable d’une plage",
+      "Dans le lit d’un fleuve"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "reproduction",
+    "fact": "tortue-luth-ponte-plage",
+    "source": "https://www.fisheries.noaa.gov/species/leatherback-turtle"
+  },
+  {
+    "text": "Quel indice conduit des scientifiques à identifier le saola au début des années 1990 ?",
+    "answers": [
+      "Un crâne aux longues cornes droites",
+      "Des œufs découverts dans un nid",
+      "Des écailles abandonnées après une mue",
+      "Des peintures rupestres"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "decouvertes",
+    "fact": "saola-identification-cranes-cornes",
+    "source": "https://www.worldwildlife.org/species/saola/"
+  },
+  {
+    "text": "Chez les kākāpōs, qui émet les grondements graves de la parade nuptiale ?",
+    "answers": [
+      "Les femelles",
+      "Les mâles",
+      "Les poussins",
+      "Les deux parents après l’éclosion"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "reproduction",
+    "fact": "kakapo-appels-males-parade",
+    "source": "https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kakapo/behaviour/"
+  },
+  {
+    "text": "Comment le programme de sauvegarde obtient-il des crécerelles de Maurice à relâcher dans la nature ?",
+    "answers": [
+      "Le transfert depuis une autre île",
+      "Le transfert depuis une population continentale",
+      "La collecte de faucons d’une espèce voisine",
+      "L’élevage en captivité"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "conservation",
+    "fact": "maurice-crecerelle-elevage-retour",
+    "source": "https://www.mauritian-wildlife.org/mwf-files/files/files/MAURITIUS%20KESTREL%20CONSERVATION%20PROJECT_2024%20APPEAL.pdf"
   }
 ]

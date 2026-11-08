@@ -7,17 +7,8 @@
       "la période ottomane",
       "1830"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère de l'histoire algérienne correspond à la cité antique de Timgad ?",
-    "answers": [
-      "le IIIe et le IIe siècle av. J.-C.",
-      "l'époque romaine",
-      "la période ottomane",
-      "1830"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on le royaume numide de Massinissa ?",
@@ -27,7 +18,9 @@
       "le IIIe et le IIe siècle av. J.-C.",
       "les années 1830 et 1840"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond au royaume numide de Massinissa ?",
@@ -37,7 +30,9 @@
       "les années 1830 et 1840",
       "le IIIe et le IIe siècle av. J.-C."
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on la régence d'Alger ?",
@@ -47,7 +42,8 @@
       "les années 1830 et 1840",
       "1871"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond à la régence d'Alger ?",
@@ -57,7 +53,8 @@
       "les années 1830 et 1840",
       "1871"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on le débarquement français à Sidi-Ferruch ?",
@@ -67,17 +64,9 @@
       "1830",
       "1881"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère de l'histoire algérienne correspond au débarquement français à Sidi-Ferruch ?",
-    "answers": [
-      "les années 1830 et 1840",
-      "1871",
-      "1881",
-      "1830"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on la résistance de l'émir Abdelkader ?",
@@ -87,7 +76,9 @@
       "1881",
       "Messali Hadj"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond à la résistance de l'émir Abdelkader ?",
@@ -97,7 +88,9 @@
       "1881",
       "Messali Hadj"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on l'insurrection de Mokrani ?",
@@ -107,7 +100,9 @@
       "1871",
       "mai 1945"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond à l'insurrection de Mokrani ?",
@@ -117,7 +112,9 @@
       "mai 1945",
       "1871"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on le code de l'indigénat en Algérie ?",
@@ -127,17 +124,9 @@
       "mai 1945",
       "1954"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère de l'histoire algérienne correspond au code de l'indigénat en Algérie ?",
-    "answers": [
-      "Messali Hadj",
-      "1881",
-      "mai 1945",
-      "1954"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on l'Étoile nord-africaine ?",
@@ -147,7 +136,8 @@
       "Messali Hadj",
       "1er novembre 1954"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond à l'Étoile nord-africaine ?",
@@ -157,7 +147,8 @@
       "1er novembre 1954",
       "Messali Hadj"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on les massacres de Sétif, Guelma et Kherrata ?",
@@ -167,7 +158,9 @@
       "1er novembre 1954",
       "1956-1957"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond aux massacres de Sétif, Guelma et Kherrata ?",
@@ -177,7 +170,9 @@
       "1er novembre 1954",
       "1956-1957"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on la création du FLN ?",
@@ -187,17 +182,9 @@
       "1954",
       "1958"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère de l'histoire algérienne correspond à la création du FLN ?",
-    "answers": [
-      "1926",
-      "1947",
-      "1958",
-      "1954"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on le déclenchement de la guerre d'indépendance ?",
@@ -207,7 +194,9 @@
       "1956",
       "1958"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond au déclenchement de la guerre d'indépendance ?",
@@ -217,7 +206,9 @@
       "1956",
       "1958"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on la bataille d'Alger ?",
@@ -227,7 +218,9 @@
       "1956-1957",
       "mars 1962"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond à la bataille d'Alger ?",
@@ -237,7 +230,9 @@
       "mars 1962",
       "1956-1957"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on le congrès de la Soummam ?",
@@ -247,17 +242,9 @@
       "mars 1962",
       "1er juillet 1962"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère de l'histoire algérienne correspond au congrès de la Soummam ?",
-    "answers": [
-      "1958",
-      "1956",
-      "mars 1962",
-      "1er juillet 1962"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on la création du GPRA ?",
@@ -267,7 +254,9 @@
       "1958",
       "5 juillet 1962"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond à la création du GPRA ?",
@@ -277,7 +266,9 @@
       "5 juillet 1962",
       "1958"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on les accords d'Évian ?",
@@ -287,7 +278,9 @@
       "5 juillet 1962",
       "Ahmed Ben Bella"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond aux accords d'Évian ?",
@@ -297,7 +290,9 @@
       "5 juillet 1962",
       "Ahmed Ben Bella"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on le référendum d'autodétermination ?",
@@ -307,17 +302,9 @@
       "1er juillet 1962",
       "Houari Boumédiène"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère de l'histoire algérienne correspond au référendum d'autodétermination ?",
-    "answers": [
-      "5 juillet 1962",
-      "Ahmed Ben Bella",
-      "Houari Boumédiène",
-      "1er juillet 1962"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on la proclamation de l'indépendance ?",
@@ -327,7 +314,9 @@
       "Houari Boumédiène",
       "1988"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond à la proclamation de l'indépendance ?",
@@ -337,7 +326,9 @@
       "Houari Boumédiène",
       "1988"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on le premier président de l'Algérie indépendante ?",
@@ -347,7 +338,8 @@
       "Ahmed Ben Bella",
       "1992"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond au premier président de l'Algérie indépendante ?",
@@ -357,7 +349,8 @@
       "1992",
       "Ahmed Ben Bella"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on le coup d'État de 1965 ?",
@@ -367,17 +360,8 @@
       "1992",
       "les années 1990"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère de l'histoire algérienne correspond au coup d'État de 1965 ?",
-    "answers": [
-      "1988",
-      "Houari Boumédiène",
-      "1992",
-      "les années 1990"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on les émeutes d'Octobre ?",
@@ -387,7 +371,9 @@
       "1988",
       "1999"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond aux émeutes d'Octobre ?",
@@ -397,7 +383,9 @@
       "1999",
       "1988"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on l'interruption du processus électoral ?",
@@ -407,7 +395,9 @@
       "1999",
       "2019"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond à l'interruption du processus électoral ?",
@@ -417,7 +407,9 @@
       "1999",
       "2019"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on la décennie noire ?",
@@ -427,17 +419,9 @@
       "les années 1990",
       "un site historique classé par l'UNESCO"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère de l'histoire algérienne correspond à la décennie noire ?",
-    "answers": [
-      "1999",
-      "2019",
-      "un site historique classé par l'UNESCO",
-      "les années 1990"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on l'élection d'Abdelaziz Bouteflika ?",
@@ -447,7 +431,9 @@
       "un site historique classé par l'UNESCO",
       "l'époque romaine"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond à l'élection d'Abdelaziz Bouteflika ?",
@@ -457,7 +443,9 @@
       "un site historique classé par l'UNESCO",
       "l'époque romaine"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45",
+    "format": "date"
   },
   {
     "text": "À quelle date, personne ou période associe-t-on le mouvement du Hirak ?",
@@ -467,7 +455,9 @@
       "2019",
       "le IIIe et le IIe siècle av. J.-C."
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire algérienne correspond au mouvement du Hirak ?",
@@ -477,7 +467,9 @@
       "le IIIe et le IIe siècle av. J.-C.",
       "2019"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47",
+    "format": "date"
   },
   {
     "text": "Quel site, classé au patrimoine mondial de l'UNESCO en 1992, correspond à la vieille ville historique d'Alger ?",
@@ -487,7 +479,8 @@
       "Djémila",
       "Tipaza"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Comment appelle-t-on la vieille ville historique d'Alger, classée à l'UNESCO en 1992 ?",
@@ -497,6 +490,116 @@
       "Djémila",
       "Tipaza"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quel site antique algérien rassemble des ruines sur le littoral méditerranéen à l’ouest d’Alger ?",
+    "answers": [
+      "Tipasa",
+      "Timgad",
+      "Djemila",
+      "Lambèse"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "archeologie",
+    "fact": "tipasa-littoral",
+    "source": "https://whc.unesco.org/en/list/193/"
+  },
+  {
+    "text": "Quel nom la ville romaine aujourd’hui appelée Djemila portait-elle ?",
+    "answers": [
+      "Thamugadi",
+      "Cuicul",
+      "Cirta",
+      "Hippo Regius"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "archeologie",
+    "fact": "djemila-cuicul",
+    "source": "https://whc.unesco.org/en/list/191/"
+  },
+  {
+    "text": "Quel ensemble historique du Sahara algérien comprend les villes fortifiées de Ghardaïa et de Beni Isguen ?",
+    "answers": [
+      "Le massif des Aurès",
+      "La plaine de la Mitidja",
+      "La vallée du M’Zab",
+      "Le plateau du Tassili n’Ajjer"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "patrimoine",
+    "fact": "mzab-villes",
+    "source": "https://whc.unesco.org/en/list/188/"
+  },
+  {
+    "text": "Quel témoignage ancien fait notamment la renommée du Tassili n’Ajjer ?",
+    "answers": [
+      "Des thermes romains",
+      "Des mosaïques byzantines",
+      "Des remparts ottomans",
+      "Des peintures et gravures rupestres"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "patrimoine",
+    "fact": "tassili-art-rupestre",
+    "source": "https://whc.unesco.org/en/list/179/"
+  },
+  {
+    "text": "Quel site fortifié a servi de première capitale à la dynastie hammadide ?",
+    "answers": [
+      "La Kalâa des Béni Hammad",
+      "La Casbah d’Alger",
+      "La citadelle de Béjaïa",
+      "Le palais du Méchouar"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "dynasties",
+    "fact": "kalaa-hammadides",
+    "source": "https://whc.unesco.org/en/list/102/"
+  },
+  {
+    "text": "Qui est le premier président du Gouvernement provisoire de la République algérienne, formé en 1958 ?",
+    "answers": [
+      "Ahmed Ben Bella",
+      "Ferhat Abbas",
+      "Hocine Aït Ahmed",
+      "Mohamed Boudiaf"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "institutions",
+    "fact": "gpra-ferhat-abbas"
+  },
+  {
+    "text": "Dans quelle ville l’émir Abdelkader protège-t-il des chrétiens menacés lors des violences de 1860 ?",
+    "answers": [
+      "Beyrouth",
+      "Le Caire",
+      "Damas",
+      "Istanbul"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "emir-abdelkader-damas"
+  },
+  {
+    "text": "Dans quelle région algérienne l’insurrection de Mokrani trouve-t-elle un foyer majeur ?",
+    "answers": [
+      "Le Hoggar",
+      "Le Souf",
+      "La Saoura",
+      "La Kabylie"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "conflits",
+    "fact": "mokrani-kabylie"
   }
 ]

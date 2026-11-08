@@ -1,0 +1,434 @@
+[
+  {
+    "text": "Dans quelle ville se déroule la série \"Friends\" ?",
+    "answers": ["Los Angeles", "New York", "Chicago", "Boston"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "decors",
+    "fact": "friends-new-york"
+  },
+  {
+    "text": "Quel est le nom du café où se retrouvent les personnages de \"Friends\" ?",
+    "answers": ["Central Perk", "Coffee Bean", "The Grind", "Java House"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "decors",
+    "fact": "friends-central-perk"
+  },
+  {
+    "text": "Quelle série met en scène un professeur de chimie devenu fabricant de drogue ?",
+    "answers": ["Breaking Bad", "Dexter", "Ozark", "The Wire"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "breaking-bad-chimie"
+  },
+  {
+    "text": "Quel est le prénom du personnage principal de \"Dr House\" ?",
+    "answers": ["Gregory", "James", "Robert", "Eric"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "house-prenom"
+  },
+  {
+    "text": "Quelle série britannique culte met en scène un détective au 221B Baker Street ?",
+    "answers": ["Sherlock", "Luther", "Broadchurch", "Peaky Blinders"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "sherlock-baker-street"
+  },
+  {
+    "text": "Combien d’amis composent le groupe principal de la série \"Friends\" ?",
+    "answers": ["4", "5", "6", "7"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "friends-six"
+  },
+  {
+    "text": "Quelle série américaine se déroule dans un bureau de vente de papier à Scranton ?",
+    "answers": ["The Office", "Parks and Recreation", "30 Rock", "Community"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "decors",
+    "fact": "office-scranton"
+  },
+  {
+    "text": "Quel pseudonyme Walter White prend-il dans « Breaking Bad » ?",
+    "answers": ["Heisenberg", "Einstein", "Schrödinger", "Planck"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "heisenberg-alias"
+  },
+  {
+    "text": "Quelle chaîne américaine a diffusé \"Friends\" à l’origine ?",
+    "answers": ["CBS", "ABC", "NBC", "Fox"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "creation",
+    "fact": "friends-nbc"
+  },
+  {
+    "text": "À quel antidouleur le Dr House développe-t-il une dépendance ?",
+    "answers": ["L’aspirine", "La Vicodin", "Le paracétamol", "L’ibuprofène"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "house-vicodin"
+  },
+  {
+    "text": "À quoi ressemble le TARDIS du Docteur dans « Doctor Who » ?",
+    "answers": ["À une cabine téléphonique rouge", "À une cabine de police", "À une borne de secours", "À un kiosque à journaux"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "objets",
+    "fact": "doctor-who-tardis-cabine-police",
+    "source": "https://www.doctorwho.tv/news-and-features/what-is-the-tardis"
+  },
+  {
+    "text": "Dans quel type d’installation Homer travaille-t-il dans « Les Simpson » ?",
+    "answers": ["Une raffinerie de pétrole", "Une station d’épuration", "Un barrage hydroélectrique", "Une centrale nucléaire"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "metiers",
+    "fact": "simpson-homer-centrale"
+  },
+  {
+    "text": "Dans « Les Shadoks », quelle tâche les personnages répètent-ils sans relâche ?",
+    "answers": ["Pomper", "Scier du bois", "Creuser des tunnels", "Moudre du grain"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "formats",
+    "fact": "shadoks-activite-pomper",
+    "source": "https://catalogue.ina.fr/doc/TV-RADIO/TV_1324861.006/les-shadoks"
+  },
+  {
+    "text": "Avec quelle agente du FBI Mulder forme-t-il son duo dans « X-Files » ?",
+    "answers": ["Monica Reyes", "Diana Fowley", "Dana Scully", "Marita Covarrubias"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "x-files-scully-binome-mulder"
+  },
+  {
+    "text": "Quel métier exercent les personnages principaux de « Dix pour cent » ?",
+    "answers": ["Scénaristes", "Réalisateurs", "Agents artistiques", "Critiques de cinéma"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "metiers",
+    "fact": "dix-pour-cent-agents-artistiques"
+  },
+  {
+    "text": "Dans quel secteur travaille Lisa chez Kerima dans « Le Destin de Lisa » ?",
+    "answers": ["La mode", "L’édition", "L’hôtellerie", "La pharmacie"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "metiers",
+    "fact": "destin-lisa-kerima-mode",
+    "source": "https://www.tf1.fr/fr-mg/tf1/le-destin-de-lisa"
+  },
+  {
+    "text": "Chez quels membres de sa famille Will emménage-t-il au début du « Prince de Bel-Air » ?",
+    "answers": ["Ses grands-parents", "Son frère et sa belle-sœur", "Sa mère et son beau-père", "Son oncle et sa tante"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "prince-bel-air-will-banks"
+  },
+  {
+    "text": "Quel est le nom de la famille au cœur de « La Petite Maison dans la prairie » ?",
+    "answers": ["Oleson", "Ingalls", "Edwards", "Garvey"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "petite-maison-famille-ingalls",
+    "source": "https://www.m6.fr/la-petite-maison-dans-la-prairie-p_3808"
+  },
+  {
+    "text": "Comment s’appelle le grimoire des sœurs Halliwell dans « Charmed » ?",
+    "answers": ["Le Livre des Ombres", "Le Livre des Morts", "Le Livre des Secrets", "Le Livre des Sortilèges"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "objets",
+    "fact": "charmed-livre-ombres"
+  },
+  {
+    "text": "Comment s’appelle la voiture parlante de Michael Knight dans la série originale « K2000 » ?",
+    "answers": ["KARR", "Goliath", "KITT", "DART"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "objets",
+    "fact": "knight-voiture-kitt"
+  },
+  {
+    "text": "Où Michael dissimule-t-il les plans de la prison au début de « Prison Break » ?",
+    "answers": ["Dans les lettres à son frère", "Dans ses tatouages", "Dans les pages d’une Bible", "Dans les fichiers de son avocat"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "prison-break-tatouage-plans"
+  },
+  {
+    "text": "Quelle créature la famille Tanner recueille-t-elle au début d’« Alf » ?",
+    "answers": ["Un robot", "Un loup-garou", "Un fantôme", "Un extraterrestre"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "alf-extraterrestre-tanner",
+    "source": "https://www.alfofficial.com/where-to-watch/"
+  },
+  {
+    "text": "Pour quel service français les agents du « Bureau des légendes » travaillent-ils ?",
+    "answers": ["La DGSI", "La police judiciaire", "La gendarmerie nationale", "La DGSE"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "metiers",
+    "fact": "bureau-legendes-service-dgse",
+    "source": "https://www.canalplus.com/articles/series/le-bureau-des-legendes-entre-fiction-realite-et-secret-defense"
+  },
+  {
+    "text": "De qui découvre-t-on le corps au tout début de « Twin Peaks » ?",
+    "answers": ["Laura Palmer", "Donna Hayward", "Audrey Horne", "Shelly Johnson"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "intrigues",
+    "fact": "twin-peaks-victime-laura-palmer",
+    "source": "https://www.paramountplus.com/shows/twin_peaks/episodes/1/"
+  },
+  {
+    "text": "Dans quelle ville les musiciens de « Treme » reprennent-ils leur vie après le passage de Katrina ?",
+    "answers": ["Houston", "Mobile", "La Nouvelle-Orléans", "Bâton-Rouge"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "decors",
+    "fact": "treme-ville-nouvelle-orleans",
+    "source": "https://www.hbomaxlapress.com/programming/series/74"
+  },
+  {
+    "text": "Que font les cinq jeunes quand l’orage éclate au début de « Misfits » ?",
+    "answers": ["Un stage de premiers secours", "Des travaux d’intérêt général", "Un exercice militaire", "Un chantier archéologique"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "intrigues",
+    "fact": "misfits-travaux-interet-general",
+    "source": "https://www.channel4.com/press/news/e4s-bafta-winning-smash-hit-drama-series-misfits-goes-out-bang"
+  },
+  {
+    "text": "Quel type d’entreprise la famille Fisher dirige-t-elle dans « Six Feet Under » ?",
+    "answers": ["Une agence d’assurances", "Des pompes funèbres", "Une société de transport", "Une entreprise du bâtiment"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "metiers",
+    "fact": "six-feet-under-fisher-pompes-funebres",
+    "source": "https://www.hbomax.com/lc/en/show/8b7307e8-1034-426f-b01a-06c832e436ea"
+  },
+  {
+    "text": "Dans « Lost », quelle durée affiche le compte à rebours de la station du Cygne après la saisie du code ?",
+    "answers": ["48 minutes", "72 minutes", "144 minutes", "108 minutes"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "intrigues",
+    "fact": "lost-bunker-intervalle",
+    "source": "https://tv.apple.com/fr/episode/108-minutes/umc.cmc.3anbkfu9a2l32iv0f3fz7n0uj?showId=umc.cmc.224vt3dmosi0331a2yc8ny3l8"
+  },
+  {
+    "text": "Quel bibliothécaire de Sunnydale forme Buffy à son rôle de Tueuse ?",
+    "answers": ["Wesley Wyndam-Pryce", "Jonathan Levinson", "Rupert Giles", "Quentin Travers"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "buffy-mentor-giles",
+    "source": "https://www.disneyplus.com/browse/entity-f2c277c5-62b4-417c-b277-8435b70176dd"
+  },
+  {
+    "text": "Dans quel secteur travaille Don Draper dans « Mad Men » ?",
+    "answers": ["La publicité", "L’édition", "L’immobilier", "La banque"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "metiers",
+    "fact": "mad-men-secteur-publicite",
+    "source": "https://www.amc.com/blogs/landmark-television-series-mad-men-comes-home-to-amc--1008226"
+  },
+  {
+    "text": "D’où vient la version originale d’« Un gars, une fille », adaptée avec Jean Dujardin et Alexandra Lamy ?",
+    "answers": ["De Suisse romande", "De Belgique", "Du Luxembourg", "Du Québec"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "formats",
+    "fact": "un-gars-une-fille-original-quebec",
+    "source": "https://presse.radio-canada.ca/television/12030/de-nouveaux-episodes-de-un-gars-une-fille-sur-ici-tou-tv-extra/"
+  },
+  {
+    "text": "Dans quel engin solaire Esteban, Zia et Tao volent-ils dans « Les Mystérieuses Cités d’Or » ?",
+    "answers": ["Le Grand Aigle", "Le Grand Condor", "Le Faucon d’or", "Le Phénix d’argent"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "objets",
+    "fact": "cites-or-grand-condor",
+    "source": "https://www.canalplus.com/bj/jeunesse/les-mysterieuses-cites-d-or/h/4218826_50001"
+  },
+  {
+    "text": "Quelle entreprise Philip Jennings dirige-t-il dans « The Americans » ?",
+    "answers": ["Une agence de voyages", "Une agence immobilière", "Un cabinet comptable", "Un atelier de réparation"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "metiers",
+    "fact": "the-americans-philip-agence-voyages",
+    "source": "https://www.fxnetworks.com/shows/the-americans/cast/matthew-rhys-philip-jennings"
+  },
+  {
+    "text": "À qui l’héroïne de « Fleabag » s’adresse-t-elle souvent en regardant la caméra ?",
+    "answers": ["À un enquêteur", "À un thérapeute", "Au public", "À l’équipe d’un documentaire"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "formats",
+    "fact": "fleabag-adresse-camera"
+  },
+  {
+    "text": "Quels animaux fascinent Woo Young-woo dans « Extraordinary Attorney Woo » ?",
+    "answers": ["Les pieuvres", "Les manchots", "Les baleines", "Les tortues marines"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "attorney-woo-baleines",
+    "source": "https://www.youtube.com/watch?v=kMVXzQxj4EI"
+  },
+  {
+    "text": "Quels pays sont reliés par le pont où débute l’enquête de « Bron/Broen » ?",
+    "answers": ["La Norvège et la Suède", "Le Danemark et l’Allemagne", "La Suède et la Finlande", "Le Danemark et la Suède"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "decors",
+    "fact": "bron-broen-frontiere-danemark-suede",
+    "source": "https://www.primevideo.com/detail/0H7M16MB9A9HZ59HIOSRSR809Z"
+  },
+  {
+    "text": "Quelle psychiatre Tony consulte-t-il dans « Les Soprano » ?",
+    "answers": ["Janice Soprano", "Jennifer Melfi", "Adriana La Cerva", "Gloria Trillo"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "personnages",
+    "fact": "soprano-psychiatre-melfi",
+    "source": "https://www.hbomax.com/show/818c3d9d-1831-48a6-9583-0364a7f98453/cast-and-crew/dr-jennifer-melfi"
+  },
+  {
+    "text": "Pendant quelle guerre se déroule la série « M*A*S*H » ?",
+    "answers": ["La guerre de Corée", "La guerre du Viêt Nam", "La Seconde Guerre mondiale", "La guerre du Golfe"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "decors",
+    "fact": "mash-guerre-coree",
+    "source": "https://www.metv.com/shows/m-a-s-h"
+  },
+  {
+    "text": "Qui compose la musique de la série animée « Cowboy Bebop » ?",
+    "answers": ["Yoko Kanno", "Joe Hisaishi", "Yuki Kajiura", "Shirō Sagisu"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "creation",
+    "fact": "cowboy-bebop-musique-kanno",
+    "source": "https://www.sunrise-world.net/titles/pickup_041.php"
+  },
+  {
+    "text": "Quel est le nom du groupe de médias de la famille Roy dans « Succession » ?",
+    "answers": ["Pierce Global Media", "GoJo", "Waystar Royco", "Vaulter"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "metiers",
+    "fact": "succession-groupe-waystar-royco",
+    "source": "https://shop.hbo.com/products/succession-waystar-royco-fleece-crewneck-sweatshirt"
+  },
+  {
+    "text": "Dans quel naufrage l’héritier présomptif de Downton meurt-il au début de la série « Downton Abbey » ?",
+    "answers": ["Celui du Lusitania", "Celui de l’Empress of Ireland", "Celui du Britannic", "Celui du Titanic"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "intrigues",
+    "fact": "downton-abbey-titanic-heritier",
+    "source": "https://www.itv.com/watch/downton-abbey/1a8697/1a8697a0001"
+  },
+  {
+    "text": "Quelle romancière a écrit les livres adaptés dans « L’Amie prodigieuse » ?",
+    "answers": ["Elsa Morante", "Elena Ferrante", "Natalia Ginzburg", "Susanna Tamaro"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "formats",
+    "fact": "amie-prodigieuse-romans-ferrante",
+    "source": "https://www.hbomaxlapress.com/programming/series/314"
+  },
+  {
+    "text": "Quel ouvrage cède dans la série française « Les Revenants » ?",
+    "answers": ["Un viaduc", "Une écluse", "Un barrage", "Un tunnel"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "intrigues",
+    "fact": "revenants-rupture-barrage",
+    "source": "https://www.canalplus.com/series/les-revenants-saison-2/h/5474799_50001/saisons/"
+  },
+  {
+    "text": "Quel ministère Birgitte Nyborg dirige-t-elle au début de « Borgen : Le Pouvoir et la Gloire » ?",
+    "answers": ["La Justice", "Les Affaires étrangères", "La Défense", "Les Finances"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "metiers",
+    "fact": "borgen-nyborg-ministre-affaires-etrangeres",
+    "source": "https://media.netflix.com/en/only-on-netflix/81282868"
+  },
+  {
+    "text": "Comment s’appelle la commune fictive d’« Un village français » ?",
+    "answers": ["Villeneuve", "Montreuil", "Saint-Martin", "Villefranche"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "decors",
+    "fact": "village-francais-villeneuve",
+    "source": "https://www.canalplus.com/series/un-village-francais/h/4444320_40099/saison-1/resume-casting/"
+  },
+  {
+    "text": "Dans quelle localité fictive le Dr Fleischman s’installe-t-il dans « Bienvenue en Alaska » ?",
+    "answers": ["Rockwell", "Silver Creek", "Eagle River", "Cicely"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "decors",
+    "fact": "northern-exposure-cicely",
+    "source": "https://www.primevideo.com/detail/0HHD2PCBA86II93IN6Y7REEP7F"
+  },
+  {
+    "text": "Dans le « Dallas » original, qui a tiré sur J. R. Ewing lors du célèbre suspense de fin de saison ?",
+    "answers": ["Sue Ellen Ewing", "Kristin Shepard", "Pamela Barnes Ewing", "Lucy Ewing"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "intrigues",
+    "fact": "dallas-kristin-tire-sur-jr",
+    "source": "https://www.history.com/this-day-in-history/november-21/millions-tune-in-to-find-out-who-shot-j-r"
+  },
+  {
+    "text": "Dans quelle entreprise Roy et Moss travaillent-ils dans « The IT Crowd » ?",
+    "answers": ["Wernham Hogg", "JLB Credit", "Sunshine Desserts", "Reynholm Industries"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "metiers",
+    "fact": "it-crowd-reynholm-industries",
+    "source": "https://www.primevideo.com/detail/0RMSU5GZSKJEI23SSYI7WN8E4N"
+  },
+  {
+    "text": "Quelle part de la population mondiale disparaît soudainement dans « The Leftovers » ?",
+    "answers": ["5 %", "10 %", "2 %", "20 %"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "intrigues",
+    "fact": "leftovers-depart-deux-pour-cent",
+    "source": "https://www.hbomaxlapress.com/programming/series/208"
+  },
+  {
+    "text": "Quel village gallois sert de décor principal au « Village » dans la série « Le Prisonnier » ?",
+    "answers": ["Portmeirion", "Beddgelert", "Betws-y-Coed", "Llanberis"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "creation",
+    "fact": "prisonnier-tournage-portmeirion",
+    "source": "https://www.itv.com/thismorning/articles/tv-plots-diarmuid-gavin-the-prisoner-portmeirion"
+  }
+]

@@ -7,17 +7,8 @@
       "Miguel de Cervantes",
       "William Shakespeare"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel écrivain est l'auteur de L'Odyssée ?",
-    "answers": [
-      "Dante Alighieri",
-      "Homère",
-      "Miguel de Cervantes",
-      "William Shakespeare"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Qui a écrit La Divine Comédie ?",
@@ -27,7 +18,8 @@
       "Dante Alighieri",
       "Johann Wolfgang von Goethe"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel écrivain est l'auteur de La Divine Comédie ?",
@@ -37,7 +29,8 @@
       "Johann Wolfgang von Goethe",
       "Dante Alighieri"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "Qui a écrit Don Quichotte ?",
@@ -47,7 +40,8 @@
       "Johann Wolfgang von Goethe",
       "Jane Austen"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel écrivain est l'auteur de Don Quichotte ?",
@@ -57,7 +51,8 @@
       "Johann Wolfgang von Goethe",
       "Jane Austen"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Qui a écrit Hamlet ?",
@@ -67,17 +62,8 @@
       "William Shakespeare",
       "Mary Shelley"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel écrivain est l'auteur de Hamlet ?",
-    "answers": [
-      "Johann Wolfgang von Goethe",
-      "Jane Austen",
-      "Mary Shelley",
-      "William Shakespeare"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Qui a écrit Faust ?",
@@ -87,7 +73,8 @@
       "Mary Shelley",
       "Emily Brontë"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel écrivain est l'auteur de Faust ?",
@@ -97,7 +84,8 @@
       "Mary Shelley",
       "Emily Brontë"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "Qui a écrit Orgueil et Préjugés ?",
@@ -107,7 +95,8 @@
       "Jane Austen",
       "Herman Melville"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel écrivain est l'auteur de Orgueil et Préjugés ?",
@@ -117,7 +106,8 @@
       "Herman Melville",
       "Jane Austen"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Qui a écrit Frankenstein ?",
@@ -127,17 +117,8 @@
       "Herman Melville",
       "Léon Tolstoï"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel écrivain est l'auteur de Frankenstein ?",
-    "answers": [
-      "Emily Brontë",
-      "Mary Shelley",
-      "Herman Melville",
-      "Léon Tolstoï"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Qui a écrit Les Hauts de Hurlevent ?",
@@ -147,7 +128,8 @@
       "Emily Brontë",
       "Fiodor Dostoïevski"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel écrivain est l'auteur des Hauts de Hurlevent ?",
@@ -157,7 +139,8 @@
       "Fiodor Dostoïevski",
       "Emily Brontë"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Qui a écrit Moby-Dick ?",
@@ -167,7 +150,8 @@
       "Fiodor Dostoïevski",
       "Mark Twain"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel écrivain est l'auteur de Moby-Dick ?",
@@ -177,7 +161,8 @@
       "Fiodor Dostoïevski",
       "Mark Twain"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Qui a écrit Guerre et Paix ?",
@@ -187,17 +172,8 @@
       "Léon Tolstoï",
       "Franz Kafka"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel écrivain est l'auteur de Guerre et Paix ?",
-    "answers": [
-      "Fiodor Dostoïevski",
-      "Mark Twain",
-      "Franz Kafka",
-      "Léon Tolstoï"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Qui a écrit Crime et Châtiment ?",
@@ -207,7 +183,8 @@
       "Franz Kafka",
       "James Joyce"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel écrivain est l'auteur de Crime et Châtiment ?",
@@ -217,7 +194,8 @@
       "Franz Kafka",
       "James Joyce"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Qui a écrit Les Aventures de Huckleberry Finn ?",
@@ -227,7 +205,8 @@
       "Mark Twain",
       "Virginia Woolf"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel écrivain est l'auteur des Aventures de Huckleberry Finn ?",
@@ -237,7 +216,8 @@
       "Virginia Woolf",
       "Mark Twain"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Qui a écrit La Métamorphose ?",
@@ -247,17 +227,8 @@
       "Virginia Woolf",
       "George Orwell"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel écrivain est l'auteur de La Métamorphose ?",
-    "answers": [
-      "James Joyce",
-      "Franz Kafka",
-      "Virginia Woolf",
-      "George Orwell"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Qui a écrit Ulysse ?",
@@ -267,7 +238,8 @@
       "James Joyce",
       "George Orwell"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel écrivain est l'auteur de Ulysse ?",
@@ -277,7 +249,8 @@
       "George Orwell",
       "James Joyce"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Qui a écrit Mrs Dalloway ?",
@@ -287,7 +260,8 @@
       "George Orwell",
       "Ernest Hemingway"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel écrivain est l'auteur de Mrs Dalloway ?",
@@ -297,7 +271,8 @@
       "George Orwell",
       "Ernest Hemingway"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Qui a écrit Le Procès ?",
@@ -307,17 +282,8 @@
       "Franz Kafka",
       "Gabriel García Márquez"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel écrivain est l'auteur du Procès ?",
-    "answers": [
-      "George Orwell",
-      "Ernest Hemingway",
-      "Gabriel García Márquez",
-      "Franz Kafka"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Qui a écrit 1984 ?",
@@ -327,7 +293,8 @@
       "Gabriel García Márquez",
       "Mikhaïl Boulgakov"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel écrivain est l'auteur de 1984 ?",
@@ -337,7 +304,8 @@
       "Gabriel García Márquez",
       "Mikhaïl Boulgakov"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Qui a écrit Le Vieil Homme et la Mer ?",
@@ -347,7 +315,8 @@
       "Ernest Hemingway",
       "Umberto Eco"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel écrivain est l'auteur du Vieil Homme et la Mer ?",
@@ -357,7 +326,8 @@
       "Umberto Eco",
       "Ernest Hemingway"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Qui a écrit Cent ans de solitude ?",
@@ -367,17 +337,8 @@
       "Umberto Eco",
       "Margaret Atwood"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel écrivain est l'auteur de Cent ans de solitude ?",
-    "answers": [
-      "Mikhaïl Boulgakov",
-      "Gabriel García Márquez",
-      "Umberto Eco",
-      "Margaret Atwood"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Qui a écrit Le Maître et Marguerite ?",
@@ -387,7 +348,8 @@
       "Mikhaïl Boulgakov",
       "Toni Morrison"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel écrivain est l'auteur du Maître et Marguerite ?",
@@ -397,7 +359,8 @@
       "Toni Morrison",
       "Mikhaïl Boulgakov"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Qui a écrit Le Nom de la rose ?",
@@ -407,7 +370,8 @@
       "Toni Morrison",
       "Salman Rushdie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel écrivain est l'auteur du Nom de la rose ?",
@@ -417,7 +381,8 @@
       "Toni Morrison",
       "Salman Rushdie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Qui a écrit La Servante écarlate ?",
@@ -427,17 +392,8 @@
       "Margaret Atwood",
       "Arundhati Roy"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel écrivain est l'auteur de La Servante écarlate ?",
-    "answers": [
-      "Toni Morrison",
-      "Salman Rushdie",
-      "Arundhati Roy",
-      "Margaret Atwood"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Qui a écrit Beloved ?",
@@ -447,7 +403,8 @@
       "Arundhati Roy",
       "Homère"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel écrivain est l'auteur de Beloved ?",
@@ -457,7 +414,8 @@
       "Arundhati Roy",
       "Homère"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Qui a écrit Les Enfants de minuit ?",
@@ -467,7 +425,8 @@
       "Salman Rushdie",
       "Dante Alighieri"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel écrivain est l'auteur des Enfants de minuit ?",
@@ -477,7 +436,8 @@
       "Dante Alighieri",
       "Salman Rushdie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Qui a écrit Le Dieu des Petits Riens ?",
@@ -487,7 +447,8 @@
       "Dante Alighieri",
       "Miguel de Cervantes"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quel écrivain est l'auteur du Dieu des Petits Riens ?",
@@ -497,6 +458,119 @@
       "Dante Alighieri",
       "Miguel de Cervantes"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quels objets Don Quichotte prend-il pour des géants qu’il veut combattre ?",
+    "answers": [
+      "Des tours de guet",
+      "Des moulins à vent",
+      "Des ponts-levis",
+      "Des clochers"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "quichotte-moulins-geants",
+    "source": "https://cvc.cervantes.es/literatura/clasicos/quijote/edicion/parte1/cap08/default.htm"
+  },
+  {
+    "text": "Dans « 1984 » de George Orwell, quel appareil diffuse la propagande et permet de surveiller les habitants ?",
+    "answers": [
+      "Le phonographe",
+      "Le télégraphe",
+      "Le projecteur",
+      "Le télécran"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "societe",
+    "fact": "orwell-1984-telecran",
+    "source": "https://www.orwellfoundation.com/wp-content/uploads/2010/09/Nineteen-Eighty-Four.pdf"
+  },
+  {
+    "text": "Dans le roman de Mary Shelley, quel rôle Victor Frankenstein joue-t-il pour la créature ?",
+    "answers": [
+      "Il lui donne la vie",
+      "Il est son frère aîné",
+      "Il est son avocat",
+      "Il lui apprend à lire"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "frankenstein-createur-creature",
+    "source": "https://www.loc.gov/item/2017600664/"
+  },
+  {
+    "text": "Que prépare Clarissa dans la journée qui sert de cadre à « Mrs Dalloway » ?",
+    "answers": [
+      "Un procès",
+      "Un voyage en Italie",
+      "Une réception chez elle",
+      "Son premier cours"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "intrigues",
+    "fact": "mrs-dalloway-preparation-reception",
+    "source": "https://shop.themorgan.org/products/mrs-dalloway-the-virginia-woolf-library-authorized-edition"
+  },
+  {
+    "text": "Quel poète de l’Antiquité guide Dante à travers l’Enfer dans « La Divine Comédie » ?",
+    "answers": [
+      "Homère",
+      "Virgile",
+      "Horace",
+      "Ovide"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "divine-comedie-virgile-guide-enfer",
+    "source": "https://dante.princeton.edu/dante/pdp/virgil.html"
+  },
+  {
+    "text": "Quel métier Gregor Samsa exerce-t-il avant sa transformation dans « La Métamorphose » de Kafka ?",
+    "answers": [
+      "Comptable",
+      "Horloger",
+      "Instituteur",
+      "Voyageur de commerce"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "societe",
+    "fact": "metamorphose-samsa-voyageur-commerce",
+    "source": "https://www.penguinrandomhouse.com/books/831761/metamorphosis-pocket-classics-by-franz-kafka/"
+  },
+  {
+    "text": "Dans quelle société de cour se déroule principalement « Le Dit du Genji » ?",
+    "answers": [
+      "Le Japon de l’époque de Heian",
+      "La Chine des Tang",
+      "La Corée de Joseon",
+      "Le Japon de l’époque d’Edo"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "cadres",
+    "fact": "dit-du-genji-cour-heian",
+    "source": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Tale_of_Genji_A_Japanese_Classic_Illuminated.pdf"
+  },
+  {
+    "text": "Quel épisode Uta-napishti raconte-t-il dans la tablette XI de l’« Épopée de Gilgamesh » ?",
+    "answers": [
+      "La fondation de Babylone",
+      "Le vol du feu",
+      "La survie à un déluge",
+      "La découverte de l’écriture"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "textes",
+    "fact": "gilgamesh-tablette-onze-deluge",
+    "source": "https://www.metmuseum.org/ko/essays/flood-stories"
   }
 ]

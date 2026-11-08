@@ -1,0 +1,444 @@
+[
+  {
+    "text": "Combien de joueurs au maximum une équipe de football peut-elle aligner au coup d’envoi ?",
+    "answers": ["11", "10", "9", "12"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "regles",
+    "fact": "football-joueurs",
+    "source": "https://www.theifab.com/fr/laws/latest/the-players/"
+  },
+  {
+    "text": "Quel pays a remporté la Coupe du monde masculine de football en 2022 ?",
+    "answers": ["France", "Argentine", "Brésil", "Allemagne"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "histoire",
+    "fact": "argentine-mondial-2022"
+  },
+  {
+    "text": "Au basket, combien de points vaut un lancer franc ?",
+    "answers": ["3", "2", "1", "4"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "regles",
+    "fact": "basket-lancer-franc"
+  },
+  {
+    "text": "Quel sport se joue avec un volant ?",
+    "answers": ["Tennis", "Squash", "Tennis de table", "Badminton"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "equipement",
+    "fact": "badminton-volant"
+  },
+  {
+    "text": "Tous les combien ont lieu les Jeux olympiques d’été ?",
+    "answers": ["Tous les 4 ans", "Tous les 2 ans", "Tous les 3 ans", "Tous les 5 ans"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "histoire",
+    "fact": "jo-ete-cadence"
+  },
+  {
+    "text": "Quel joueur a remporté son 24ᵉ titre du Grand Chelem en simple à l’US Open 2023 ?",
+    "answers": ["Roger Federer", "Novak Djokovic", "Rafael Nadal", "Pete Sampras"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "figures",
+    "fact": "djokovic-24e-us-open",
+    "source": "https://www.atptour.com/en/news/djokovic-medvedev-us-open-2023-final"
+  },
+  {
+    "text": "Dans quel sport réalise-t-on un « slam dunk » ?",
+    "answers": ["Volley-ball", "Handball", "Basket-ball", "Netball"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "disciplines",
+    "fact": "basket-dunk"
+  },
+  {
+    "text": "Combien d’anneaux figurent sur le drapeau olympique ?",
+    "answers": ["4", "6", "7", "5"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "histoire",
+    "fact": "anneaux-olympiques"
+  },
+  {
+    "text": "Dans quel pays le rugby est-il né ?",
+    "answers": ["Angleterre", "Pays de Galles", "Écosse", "Irlande"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "histoire",
+    "fact": "rugby-origine"
+  },
+  {
+    "text": "Au bowling à dix quilles, combien de points peut rapporter une seule frame, bonus inclus ?",
+    "answers": ["20", "30", "25", "15"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "regles",
+    "fact": "bowling-frame-max",
+    "source": "https://bowl.com/getmedia/e1732c51-d417-442e-9e0a-c07710bf578a/071624_USBC-Playing-Rules.pdf"
+  },
+  {
+    "text": "En volley-ball en salle, combien de touches une équipe a-t-elle pour renvoyer le ballon, hors contre ?",
+    "answers": ["1", "2", "3", "4"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "regles",
+    "fact": "volley-trois-touches",
+    "source": "https://www.fivb.com/volleyball/the-game/basic-rules/"
+  },
+  {
+    "text": "Au rugby à XV, combien vaut un essai avant la transformation ?",
+    "answers": ["5 points", "3 points", "6 points", "7 points"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "regles",
+    "fact": "rugby-quinze-essai",
+    "source": "https://passport.world.rugby/laws-of-the-game/laws-by-number/8-scoring"
+  },
+  {
+    "text": "Dans un jeu de tennis avec avantage, que devient le score si vous gagnez le point à 40-40 ?",
+    "answers": ["Jeu gagné", "Égalité maintenue", "Début du jeu décisif", "Avantage pour vous"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "regles",
+    "fact": "tennis-avantage",
+    "source": "https://www.itftennis.com/en/about-us/organisation/tennis-glossary/"
+  },
+  {
+    "text": "Au hockey sur glace, que peut-on siffler si un palet envoyé de son camp franchit la ligne de but adverse sans être touché ?",
+    "answers": ["Hors-jeu", "Dégagement interdit", "Obstruction", "Retard de jeu"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "regles",
+    "fact": "hockey-degagement-interdit",
+    "source": "https://www.nhl.com/kraken/news/seattle-kraken-analytics-with-alison-understanding-icings-329805304"
+  },
+  {
+    "text": "Au judo, quel score suffit à lui seul pour gagner immédiatement avant la fin du temps réglementaire ?",
+    "answers": ["Waza-ari", "Ippon", "Yuko", "Shido"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "regles",
+    "fact": "judo-ippon",
+    "source": "https://www.ijf.org/news/show/a-morning-of-intensity-and-determination"
+  },
+  {
+    "text": "Au handball en salle, combien de temps l’équipe joue-t-elle en infériorité après une exclusion temporaire ordinaire ?",
+    "answers": ["30 secondes", "1 minute", "5 minutes", "2 minutes"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "regles",
+    "fact": "handball-exclusion-temporaire",
+    "source": "https://www.ihf.info/sites/default/files/2025-06/09A%20-%20Rules%20of%20the%20Game_Indoor%20Handball_E_with%20highlighted%20changes.pdf"
+  },
+  {
+    "text": "À quelle arme d’escrime une touche double peut-elle donner un point à chacun des deux adversaires ?",
+    "answers": ["Au fleuret", "Au sabre", "À l’épée", "À l’épée et au fleuret"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "regles",
+    "fact": "escrime-double-touche",
+    "source": "https://static.fie.org/uploads/35/179354-technical%20rules%20ang.pdf"
+  },
+  {
+    "text": "Au curling, quel accessoire les coéquipiers utilisent-ils devant la pierre en mouvement ?",
+    "answers": ["Un balai", "Une crosse", "Une pelle", "Un rouleau"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "equipement",
+    "fact": "curling-balai",
+    "source": "https://worldcurling.org/about/curling/"
+  },
+  {
+    "text": "Avec quoi les biathlètes tirent-ils sur les cibles ?",
+    "answers": ["Un arc", "Une arbalète", "Un pistolet", "Une carabine"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "equipement",
+    "fact": "biathlon-carabine",
+    "source": "https://www.biathlonworld.com/discover-biathlon/how-it-works/rules-overview"
+  },
+  {
+    "text": "Au baseball, quel joueur porte une mitaine renforcée pour recevoir les lancers derrière le marbre ?",
+    "answers": ["Le lanceur", "Le joueur de première base", "Le receveur", "L’arrêt-court"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "equipement",
+    "fact": "baseball-receveur-mitaine",
+    "source": "https://www.mlb.com/glossary/positions/catcher"
+  },
+  {
+    "text": "En canoë-kayak de vitesse, quelle pagaie utilise-t-on en kayak ?",
+    "answers": ["Une pagaie à deux pales", "Une pagaie à une pale", "Deux pagaies à une pale", "Deux avirons"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "equipement",
+    "fact": "kayak-pagaie-double",
+    "source": "https://www.canoeicf.com/canoe-kayak-difference"
+  },
+  {
+    "text": "Quelle combinaison équipe un vélo de piste en compétition ?",
+    "answers": ["Pignon fixe, freins à disque", "Pignon fixe, sans freins", "Roue libre, sans freins", "Roue libre, freins à patins"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "equipement",
+    "fact": "cyclisme-piste-pignon-fixe",
+    "source": "https://www.uci.org/article/the-science-of-track-speed/5M2rrXZUZfOuGsiyh6j9vU"
+  },
+  {
+    "text": "Quel type d’arc utilise des cames pour réduire l’effort nécessaire au maintien de la corde à pleine allonge ?",
+    "answers": ["L’arc à poulies", "L’arc classique", "L’arc long", "L’arc nu"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "equipement",
+    "fact": "tir-arc-cames",
+    "source": "https://www.worldarchery.sport/sport/equipment/compound"
+  },
+  {
+    "text": "Dans quel ordre s’enchaînent les épreuves d’un triathlon olympique ?",
+    "answers": ["Vélo, natation, course", "Course, natation, vélo", "Natation, vélo, course", "Natation, course, vélo"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "disciplines",
+    "fact": "triathlon-ordre",
+    "source": "https://triathlon.org/talk-like-a-triathlete"
+  },
+  {
+    "text": "Sur quel agrès étroit les gymnastes enchaînent-elles sauts et équilibres en gymnastique artistique ?",
+    "answers": ["Le sol", "La poutre", "Les barres asymétriques", "La table de saut"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "disciplines",
+    "fact": "gymnastique-poutre",
+    "source": "https://www.gymnastics.sport/site/pages/disciplines/app-wag.php"
+  },
+  {
+    "text": "Par quelle nage débute un quatre nages individuel en compétition ?",
+    "answers": ["Le dos", "La brasse", "La nage libre", "Le papillon"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "disciplines",
+    "fact": "natation-quatre-nages-papillon",
+    "source": "https://www.worldaquatics.com/swimming/rules"
+  },
+  {
+    "text": "Quelle épreuve d’escalade se dispute uniquement sur des murs bas, avec des tapis au sol ?",
+    "answers": ["La difficulté", "La vitesse", "Le combiné bloc-difficulté", "Le bloc"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "disciplines",
+    "fact": "escalade-bloc-tapis",
+    "source": "https://www1.ifsc-climbing.org/boulder/index"
+  },
+  {
+    "text": "Quels sports associe le combiné nordique ?",
+    "answers": ["Ski de fond et tir", "Saut à ski et ski de fond", "Slalom et descente", "Saut à ski et slalom"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "disciplines",
+    "fact": "combine-nordique-saut-fond",
+    "source": "https://www.fis-ski.com/nordic-combined/news/2024-25/nordic-combined-101-how-nordic-combined-works"
+  },
+  {
+    "text": "Dans quelle épreuve de cyclisme sur piste les deux partenaires se relaient-ils en se donnant la main ?",
+    "answers": ["L’américaine", "Le keirin", "Le scratch", "L’élimination"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "disciplines",
+    "fact": "cyclisme-madison-relais",
+    "source": "https://www.uci.org/article/what-makes-the-madison-so-captivating/1K4yqP4hCJs0iUSS0kp1iY"
+  },
+  {
+    "text": "Quelles sont les trois épreuves du concours complet d’équitation ?",
+    "answers": ["Dressage, endurance, voltige", "Cross, endurance, saut d’obstacles", "Dressage, cross, saut d’obstacles", "Cross, attelage, dressage"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "disciplines",
+    "fact": "equitation-complet-epreuves",
+    "source": "https://www.fei.org/eventing"
+  },
+  {
+    "text": "Sur quelle surface joue-t-on les matchs de Wimbledon ?",
+    "answers": ["Terre battue", "Gazon", "Résine acrylique", "Moquette"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "lieux",
+    "fact": "wimbledon-gazon",
+    "source": "https://www.wimbledon.com/en_GB/about/grass_courts"
+  },
+  {
+    "text": "Quelle montée du Tour de France est célèbre pour ses 21 virages numérotés ?",
+    "answers": ["Le mont Ventoux", "Le col du Tourmalet", "L’Alpe d’Huez", "Le col du Galibier"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "lieux",
+    "fact": "alpe-huez-virages-tour",
+    "source": "https://www.alpedhuez.com/fr/activites/activites-ete/velo/les-21-virages/"
+  },
+  {
+    "text": "Quel Grand Prix de Formule 1 emprunte les rues de Monte-Carlo et un tunnel ?",
+    "answers": ["Singapour", "Las Vegas", "Bakou", "Monaco"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "lieux",
+    "fact": "monaco-f1-rues",
+    "source": "https://www.formula1.com/en/racing/2026/monaco"
+  },
+  {
+    "text": "Dans quelle ville se trouve le stade du Maracanã, théâtre de la finale du Mondial 2014 ?",
+    "answers": ["Rio de Janeiro", "São Paulo", "Brasília", "Belo Horizonte"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "lieux",
+    "fact": "maracana-rio",
+    "source": "https://inside.fifa.com/news/maracana-seven-momentous-matches-from-its-70-years"
+  },
+  {
+    "text": "Sur quel fleuve anglais se tient la célèbre régate d’aviron de Henley ?",
+    "answers": ["La Severn", "La Tamise", "La Trent", "La Tyne"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "lieux",
+    "fact": "henley-tamise",
+    "source": "https://www.hrr.co.uk/guide-to-rowing-and-the-regatta/"
+  },
+  {
+    "text": "Quelle capitale abrite le tremplin de saut à ski de Holmenkollen ?",
+    "answers": ["Stockholm", "Helsinki", "Reykjavik", "Oslo"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "lieux",
+    "fact": "holmenkollen-oslo",
+    "source": "https://holmenkollen.com/en/"
+  },
+  {
+    "text": "Quelle ville a accueilli les premiers Jeux olympiques modernes, en 1896 ?",
+    "answers": ["Paris", "Londres", "Athènes", "Rome"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "histoire",
+    "fact": "athenes-premiers-jo-modernes",
+    "source": "https://www.olympics.com/ioc/celebrate-olympic-games"
+  },
+  {
+    "text": "Quelle est la distance officielle du marathon ?",
+    "answers": ["42,195 km", "40 km", "45 km", "50 km"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "histoire",
+    "fact": "marathon-distance-officielle",
+    "source": "https://worldathletics.org/disciplines/relays/marathon"
+  },
+  {
+    "text": "Quel sport James Naismith a-t-il inventé en utilisant deux paniers à pêches ?",
+    "answers": ["Le volley-ball", "Le handball", "Le basket-ball", "Le badminton"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "histoire",
+    "fact": "naismith-paniers-peches",
+    "source": "https://www.fiba.basketball/en/news/basketballs-first-game-was-125-years-ago-today"
+  },
+  {
+    "text": "Quelle sélection a remporté la première Coupe du monde masculine de rugby à XV ?",
+    "answers": ["La France", "La Nouvelle-Zélande", "L’Australie", "L’Angleterre"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "histoire",
+    "fact": "rugby-premier-mondial-nouvelle-zelande",
+    "source": "https://www.world.rugby/news/617532/tournament-history"
+  },
+  {
+    "text": "Dans quelle station française ont eu lieu les premiers Jeux olympiques d’hiver ?",
+    "answers": ["Chamonix", "Albertville", "Grenoble", "Morzine"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "histoire",
+    "fact": "chamonix-premiers-jeux-hiver",
+    "source": "https://www.olympics.com/ioc/faq/history-and-origin-of-the-games/when-were-the-first-olympic-winter-games-held"
+  },
+  {
+    "text": "Aux Jeux de Mexico, quel athlète a popularisé une technique de saut en hauteur dos à la barre ?",
+    "answers": ["Javier Sotomayor", "Valeri Brumel", "Stefan Holm", "Dick Fosbury"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "histoire",
+    "fact": "fosbury-saut-dos",
+    "source": "https://www.olympics.com/ioc/news/richard-fosbury-high-jump-revolution"
+  },
+  {
+    "text": "Quelle sélection masculine a gagné à Amsterdam en 1928 le premier de ses six titres olympiques de suite en hockey sur gazon ?",
+    "answers": ["Les Pays-Bas", "Le Pakistan", "L’Inde", "La Grande-Bretagne"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "histoire",
+    "fact": "hockey-gazon-inde-amsterdam",
+    "source": "https://www.fih.hockey/events/the-olympic-games-paris-2024/news/nearing-a-century-of-olympic-excellence-india-men"
+  },
+  {
+    "text": "Sur quelles distances Usain Bolt a-t-il réussi le doublé olympique individuel à Pékin, Londres et Rio ?",
+    "answers": ["100 m et 200 m", "200 m et 400 m", "400 m et 800 m", "100 m et 400 m"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "figures",
+    "fact": "bolt-double-sprint"
+  },
+  {
+    "text": "Dans quel sport Laure Manaudou a-t-elle remporté l’or olympique à Athènes en 2004 ?",
+    "answers": ["Le plongeon", "La natation", "L’aviron", "Le triathlon"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "figures",
+    "fact": "manaudou-natation-athenes",
+    "source": "https://www.ffnatation.fr/sites/default/files/2025-09/FFN_100ANS_V11.pdf"
+  },
+  {
+    "text": "Sur quel agrès Nadia Comăneci a-t-elle obtenu son premier 10 sur 10 aux Jeux de Montréal ?",
+    "answers": ["La poutre", "Le sol", "Le saut de cheval", "Les barres asymétriques"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "figures",
+    "fact": "comaneci-premier-dix-barres",
+    "source": "https://www.gymnastics.sport/site/news/displaynews.php?urlNews=2883549"
+  },
+  {
+    "text": "Dans quel sport Nikola Karabatic a-t-il été champion olympique avec les Bleus ?",
+    "answers": ["Le basket-ball", "Le volley-ball", "Le rugby à 7", "Le handball"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "figures",
+    "fact": "karabatic-sport-handball",
+    "source": "https://www.ihf.info/media-center/news/paris-2024-germany-race-back-take-dramatic-win-against-france-karabatic-retires"
+  },
+  {
+    "text": "Quel marathonien a remporté pieds nus le titre olympique à Rome en 1960 ?",
+    "answers": ["Abebe Bikila", "Emil Zátopek", "Kipchoge Keino", "Mamo Wolde"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "figures",
+    "fact": "bikila-rome-pieds-nus",
+    "source": "https://worldathletics.org/heritage/news/abebe-bikila-1960-olympic-marathon-victory"
+  },
+  {
+    "text": "Dans quel sport Kelly Slater a-t-il décroché onze titres mondiaux ?",
+    "answers": ["Le skateboard", "Le snowboard", "Le surf", "Le kitesurf"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "figures",
+    "fact": "slater-onze-titres-surf",
+    "source": "https://surfingwalkoffame.com/kelly-slater/"
+  },
+  {
+    "text": "À Londres en 1948, quel titre individuel Fanny Blankers-Koen a-t-elle gagné en plus du 100 m et du 200 m ?",
+    "answers": ["Le 400 m", "Le 80 m haies", "Le saut en longueur", "Le saut en hauteur"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "figures",
+    "fact": "blankers-koen-londres-haies",
+    "source": "https://www.olympics.com/cio/news/le-jour-ou-fanny-blankers-koen-a-bouscule-toutes-les-regles"
+  }
+]

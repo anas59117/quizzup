@@ -7,17 +7,8 @@
       "la magie et la maternité",
       "le ciel et la royauté"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans la religion égyptienne antique, que caractérise Rê ?",
-    "answers": [
-      "la royauté défunte et l'au-delà",
-      "le Soleil",
-      "la magie et la maternité",
-      "le ciel et la royauté"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Osiris ?",
@@ -27,7 +18,8 @@
       "la royauté défunte et l'au-delà",
       "l'embaumement"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise Osiris ?",
@@ -37,7 +29,8 @@
       "l'embaumement",
       "la royauté défunte et l'au-delà"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Isis ?",
@@ -47,7 +40,8 @@
       "l'embaumement",
       "l'écriture et la sagesse"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise Isis ?",
@@ -57,7 +51,8 @@
       "l'embaumement",
       "l'écriture et la sagesse"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Horus ?",
@@ -67,17 +62,8 @@
       "le ciel et la royauté",
       "l'amour, la musique et la joie"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans la religion égyptienne antique, que caractérise Horus ?",
-    "answers": [
-      "l'embaumement",
-      "l'écriture et la sagesse",
-      "l'amour, la musique et la joie",
-      "le ciel et la royauté"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Anubis ?",
@@ -87,7 +73,8 @@
       "l'amour, la musique et la joie",
       "la guerre et la guérison"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise Anubis ?",
@@ -97,7 +84,8 @@
       "l'amour, la musique et la joie",
       "la guerre et la guérison"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Thot ?",
@@ -107,7 +95,8 @@
       "l'écriture et la sagesse",
       "les artisans et la création"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise Thot ?",
@@ -117,7 +106,8 @@
       "les artisans et la création",
       "l'écriture et la sagesse"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Hathor ?",
@@ -127,17 +117,8 @@
       "les artisans et la création",
       "la vérité et l'ordre cosmique"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans la religion égyptienne antique, que caractérise Hathor ?",
-    "answers": [
-      "la guerre et la guérison",
-      "l'amour, la musique et la joie",
-      "les artisans et la création",
-      "la vérité et l'ordre cosmique"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Sekhmet ?",
@@ -147,7 +128,8 @@
       "la guerre et la guérison",
       "la protection du foyer, souvent figurée en chatte"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise Sekhmet ?",
@@ -157,7 +139,8 @@
       "la protection du foyer, souvent figurée en chatte",
       "la guerre et la guérison"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Ptah ?",
@@ -167,7 +150,8 @@
       "la protection du foyer, souvent figurée en chatte",
       "le crocodile et la puissance du Nil"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise Ptah ?",
@@ -177,7 +161,8 @@
       "la protection du foyer, souvent figurée en chatte",
       "le crocodile et la puissance du Nil"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Maât ?",
@@ -187,17 +172,8 @@
       "la vérité et l'ordre cosmique",
       "le soleil levant, figuré en scarabée"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans la religion égyptienne antique, que caractérise Maât ?",
-    "answers": [
-      "la protection du foyer, souvent figurée en chatte",
-      "le crocodile et la puissance du Nil",
-      "le soleil levant, figuré en scarabée",
-      "la vérité et l'ordre cosmique"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Bastet ?",
@@ -207,7 +183,8 @@
       "le soleil levant, figuré en scarabée",
       "le ciel"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise Bastet ?",
@@ -217,7 +194,8 @@
       "le soleil levant, figuré en scarabée",
       "le ciel"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Sobek ?",
@@ -227,7 +205,8 @@
       "le crocodile et la puissance du Nil",
       "la terre"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise Sobek ?",
@@ -237,7 +216,8 @@
       "la terre",
       "le crocodile et la puissance du Nil"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Khépri ?",
@@ -247,17 +227,8 @@
       "la terre",
       "le désert et le désordre"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans la religion égyptienne antique, que caractérise Khépri ?",
-    "answers": [
-      "le ciel",
-      "le soleil levant, figuré en scarabée",
-      "la terre",
-      "le désert et le désordre"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Nout ?",
@@ -267,7 +238,8 @@
       "le ciel",
       "la protection des morts"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise Nout ?",
@@ -277,7 +249,8 @@
       "la protection des morts",
       "le ciel"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Geb ?",
@@ -287,7 +260,8 @@
       "la protection des morts",
       "le grand dieu de Thèbes"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise Geb ?",
@@ -297,7 +271,8 @@
       "la protection des morts",
       "le grand dieu de Thèbes"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Seth ?",
@@ -307,17 +282,8 @@
       "le désert et le désordre",
       "le serpent ennemi de Rê"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans la religion égyptienne antique, que caractérise Seth ?",
-    "answers": [
-      "la protection des morts",
-      "le grand dieu de Thèbes",
-      "le serpent ennemi de Rê",
-      "le désert et le désordre"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Nephtys ?",
@@ -327,7 +293,8 @@
       "le serpent ennemi de Rê",
       "des formules funéraires"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise Nephtys ?",
@@ -337,7 +304,8 @@
       "le serpent ennemi de Rê",
       "des formules funéraires"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Amon ?",
@@ -347,7 +315,8 @@
       "le grand dieu de Thèbes",
       "le jugement du défunt"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise Amon ?",
@@ -357,7 +326,8 @@
       "le jugement du défunt",
       "le grand dieu de Thèbes"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on Apophis ?",
@@ -367,17 +337,8 @@
       "le jugement du défunt",
       "la vie"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans la religion égyptienne antique, que caractérise Apophis ?",
-    "answers": [
-      "des formules funéraires",
-      "le serpent ennemi de Rê",
-      "le jugement du défunt",
-      "la vie"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on le Livre des morts ?",
@@ -387,7 +348,8 @@
       "des formules funéraires",
       "le crocodile et la puissance du Nil"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise le Livre des morts ?",
@@ -397,7 +359,8 @@
       "le crocodile et la puissance du Nil",
       "des formules funéraires"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on la pesée du cœur ?",
@@ -407,7 +370,8 @@
       "la stabilité",
       "une protection royale et solaire"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise la pesée du cœur ?",
@@ -417,7 +381,8 @@
       "la stabilité",
       "une protection royale et solaire"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on l'ankh ?",
@@ -427,17 +392,8 @@
       "la vie",
       "la conservation des organes du défunt"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans la religion égyptienne antique, que caractérise l'ankh ?",
-    "answers": [
-      "la stabilité",
-      "une protection royale et solaire",
-      "la conservation des organes du défunt",
-      "la vie"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on le djed ?",
@@ -447,7 +403,8 @@
       "la conservation des organes du défunt",
       "le Soleil"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise le djed ?",
@@ -457,7 +414,8 @@
       "la conservation des organes du défunt",
       "le Soleil"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on le disque solaire ailé ?",
@@ -467,7 +425,8 @@
       "une protection royale et solaire",
       "le crocodile et la puissance du Nil"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise le disque solaire ailé ?",
@@ -477,7 +436,8 @@
       "le crocodile et la puissance du Nil",
       "une protection royale et solaire"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "À quel domaine, symbole ou rite associe-t-on les vases canopes ?",
@@ -487,7 +447,8 @@
       "la royauté défunte et l'au-delà",
       "la magie et la maternité"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Dans la religion égyptienne antique, que caractérise les vases canopes ?",
@@ -497,6 +458,119 @@
       "la royauté défunte et l'au-delà",
       "la magie et la maternité"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Sous quelle forme la tête d’Anubis est-elle généralement représentée ?",
+    "answers": [
+      "Une tête de chacal",
+      "Une tête d’ibis",
+      "Une tête de lion",
+      "Une tête de faucon"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "iconographie",
+    "fact": "egypte-myth-anubis-tete-canide",
+    "source": "https://www.metmuseum.org/fr/exhibitions/divine-egypt/inside-the-exhibition"
+  },
+  {
+    "text": "Quel dieu solaire Akhenaton a-t-il placé au centre de son culte ?",
+    "answers": [
+      "Amon",
+      "Ptah",
+      "Khnoum",
+      "Aton"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "cultes",
+    "fact": "egypte-myth-akhenaton-disque-aton",
+    "source": "https://www.metmuseum.org/fr/essays/art-architecture-and-the-city-in-the-reign-of-amenhotep-iv-akhenaten-ca-13531336-b-c"
+  },
+  {
+    "text": "Quel animal donne sa silhouette à Taouret, déesse protectrice des femmes enceintes ?",
+    "answers": [
+      "La lionne",
+      "La chatte",
+      "L’hippopotame",
+      "La vache"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "protections",
+    "fact": "egypte-myth-taouret-hippopotame",
+    "source": "https://www.metmuseum.org/de/essays/hippopotami-in-ancient-egypt"
+  },
+  {
+    "text": "Quelle créature menace de dévorer le cœur qui échoue à la pesée du jugement funéraire ?",
+    "answers": [
+      "Apophis",
+      "Ammit",
+      "Bès",
+      "Sobek"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "au-dela",
+    "fact": "egypte-myth-ammit-devore-coeur",
+    "source": "https://www.britishmuseum.org/sites/default/files/2019-09/Presnotes_reading_a_papyrus_FINAL.pdf"
+  },
+  {
+    "text": "Sous quelle forme animale le dieu Apis était-il vénéré à Memphis ?",
+    "answers": [
+      "Un bélier",
+      "Un babouin",
+      "Un taureau",
+      "Un crocodile"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "cultes",
+    "fact": "egypte-myth-apis-taureau",
+    "source": "https://www.metmuseum.org/art/collection/search/570723"
+  },
+  {
+    "text": "Quelle fleur porte le dieu Nefertoum sur sa tête dans de nombreuses représentations ?",
+    "answers": [
+      "Le lotus",
+      "L’iris",
+      "Le lys",
+      "La rose"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "symboles",
+    "fact": "egypte-myth-nefertoum-lotus",
+    "source": "https://www.metmuseum.org/art/collection/search/570682"
+  },
+  {
+    "text": "Combien d’heures de la nuit la barque solaire traverse-t-elle dans le récit de l’Amdouat ?",
+    "answers": [
+      "7",
+      "9",
+      "24",
+      "12"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "textes",
+    "fact": "egypte-myth-amdouat-douze-heures",
+    "source": "https://www.metmuseum.org/art/collection/search/551100"
+  },
+  {
+    "text": "À quel centre religieux se rattache le récit de la création par Atoum et son Ennéade ?",
+    "answers": [
+      "Hermopolis",
+      "Héliopolis",
+      "Memphis",
+      "Abydos"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "cosmogonie",
+    "fact": "egypte-myth-enneade-heliopolis",
+    "source": "https://mini-site.louvre.fr/portesduciel/FR/01expo/01-01-06.php"
   }
 ]

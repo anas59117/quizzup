@@ -7,17 +7,9 @@
       "StarCraft",
       "Street Fighter"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré Faker ?",
-    "answers": [
-      "Counter-Strike",
-      "League of Legends",
-      "StarCraft",
-      "Street Fighter"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement s1mple ?",
@@ -27,17 +19,9 @@
       "Counter-Strike",
       "Quake et plusieurs FPS"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré s1mple ?",
-    "answers": [
-      "StarCraft",
-      "Street Fighter",
-      "Quake et plusieurs FPS",
-      "Counter-Strike"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-03",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Flash ?",
@@ -47,7 +31,9 @@
       "Quake et plusieurs FPS",
       "Dota 2"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05",
+    "format": "attribution"
   },
   {
     "text": "Dans quelle scène esport s'est illustré Flash ?",
@@ -57,7 +43,9 @@
       "Quake et plusieurs FPS",
       "Dota 2"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Daigo Umehara ?",
@@ -67,17 +55,9 @@
       "Street Fighter",
       "Counter-Strike"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré Daigo Umehara ?",
-    "answers": [
-      "Quake et plusieurs FPS",
-      "Dota 2",
-      "Counter-Strike",
-      "Street Fighter"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Fatal1ty ?",
@@ -87,17 +67,9 @@
       "Counter-Strike",
       "League of Legends"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré Fatal1ty ?",
-    "answers": [
-      "Dota 2",
-      "Quake et plusieurs FPS",
-      "Counter-Strike",
-      "League of Legends"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-09",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement N0tail ?",
@@ -107,7 +79,9 @@
       "Dota 2",
       "StarCraft II"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11",
+    "format": "attribution"
   },
   {
     "text": "Dans quelle scène esport s'est illustré N0tail ?",
@@ -117,7 +91,9 @@
       "StarCraft II",
       "Dota 2"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement KuroKy ?",
@@ -127,17 +103,9 @@
       "League of Legends",
       "StarCraft II"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré KuroKy ?",
-    "answers": [
-      "Counter-Strike",
-      "Dota 2",
-      "League of Legends",
-      "StarCraft II"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Puppey ?",
@@ -147,17 +115,9 @@
       "Dota 2",
       "StarCraft II"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré Puppey ?",
-    "answers": [
-      "Counter-Strike",
-      "League of Legends",
-      "StarCraft II",
-      "Dota 2"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-15",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement GeT_RiGhT ?",
@@ -167,7 +127,9 @@
       "StarCraft II",
       "les jeux de combat"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17",
+    "format": "attribution"
   },
   {
     "text": "Dans quelle scène esport s'est illustré GeT_RiGhT ?",
@@ -177,7 +139,9 @@
       "StarCraft II",
       "les jeux de combat"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement dev1ce ?",
@@ -187,17 +151,9 @@
       "Counter-Strike",
       "les jeux de combat"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré dev1ce ?",
-    "answers": [
-      "League of Legends",
-      "StarCraft II",
-      "les jeux de combat",
-      "Counter-Strike"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Coldzera ?",
@@ -207,17 +163,9 @@
       "StarCraft II",
       "les jeux de combat"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré Coldzera ?",
-    "answers": [
-      "League of Legends",
-      "Counter-Strike",
-      "StarCraft II",
-      "les jeux de combat"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-21",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement ZywOo ?",
@@ -227,7 +175,9 @@
       "Counter-Strike",
       "les jeux de combat"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23",
+    "format": "attribution"
   },
   {
     "text": "Dans quelle scène esport s'est illustré ZywOo ?",
@@ -237,7 +187,9 @@
       "les jeux de combat",
       "Counter-Strike"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Caps ?",
@@ -247,17 +199,9 @@
       "les jeux de combat",
       "Street Fighter"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré Caps ?",
-    "answers": [
-      "StarCraft II",
-      "League of Legends",
-      "les jeux de combat",
-      "Street Fighter"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Uzi ?",
@@ -267,17 +211,9 @@
       "League of Legends",
       "Street Fighter"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré Uzi ?",
-    "answers": [
-      "StarCraft II",
-      "les jeux de combat",
-      "Street Fighter",
-      "League of Legends"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-27",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Mata ?",
@@ -287,7 +223,9 @@
       "les jeux de combat",
       "Street Fighter"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29",
+    "format": "attribution"
   },
   {
     "text": "Dans quelle scène esport s'est illustré Mata ?",
@@ -297,7 +235,9 @@
       "les jeux de combat",
       "Street Fighter"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Ruler ?",
@@ -307,17 +247,9 @@
       "League of Legends",
       "Street Fighter"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré Ruler ?",
-    "answers": [
-      "StarCraft II",
-      "les jeux de combat",
-      "Street Fighter",
-      "League of Legends"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Scarlett ?",
@@ -327,17 +259,9 @@
       "Street Fighter",
       "Super Smash Bros. Melee"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré Scarlett ?",
-    "answers": [
-      "les jeux de combat",
-      "StarCraft II",
-      "Street Fighter",
-      "Super Smash Bros. Melee"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-33",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement SonicFox ?",
@@ -347,7 +271,9 @@
       "les jeux de combat",
       "Call of Duty"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35",
+    "format": "attribution"
   },
   {
     "text": "Dans quelle scène esport s'est illustré SonicFox ?",
@@ -357,7 +283,9 @@
       "Call of Duty",
       "les jeux de combat"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Tokido ?",
@@ -367,17 +295,9 @@
       "Super Smash Bros. Melee",
       "Call of Duty"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré Tokido ?",
-    "answers": [
-      "les jeux de combat",
-      "Street Fighter",
-      "Super Smash Bros. Melee",
-      "Call of Duty"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Justin Wong ?",
@@ -387,17 +307,9 @@
       "les jeux de combat",
       "League of Legends"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré Justin Wong ?",
-    "answers": [
-      "Super Smash Bros. Melee",
-      "Call of Duty",
-      "League of Legends",
-      "les jeux de combat"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-39",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Hungrybox ?",
@@ -407,7 +319,9 @@
       "SoulCalibur et les jeux de combat",
       "Counter-Strike"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41",
+    "format": "attribution"
   },
   {
     "text": "Dans quelle scène esport s'est illustré Hungrybox ?",
@@ -417,7 +331,9 @@
       "SoulCalibur et les jeux de combat",
       "Counter-Strike"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Mang0 ?",
@@ -427,17 +343,9 @@
       "Super Smash Bros. Melee",
       "Counter-Strike"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré Mang0 ?",
-    "answers": [
-      "Call of Duty",
-      "SoulCalibur et les jeux de combat",
-      "Counter-Strike",
-      "Super Smash Bros. Melee"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Crimsix ?",
@@ -447,17 +355,9 @@
       "Counter-Strike",
       "League of Legends"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Dans quelle scène esport s'est illustré Crimsix ?",
-    "answers": [
-      "SoulCalibur et les jeux de combat",
-      "Call of Duty",
-      "Counter-Strike",
-      "League of Legends"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-45",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement Kayane ?",
@@ -467,7 +367,9 @@
       "SoulCalibur et les jeux de combat",
       "StarCraft"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47",
+    "format": "attribution"
   },
   {
     "text": "Dans quelle scène esport s'est illustré Kayane ?",
@@ -477,7 +379,9 @@
       "StarCraft",
       "SoulCalibur et les jeux de combat"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47",
+    "format": "attribution"
   },
   {
     "text": "À quel jeu associe-t-on principalement KennyS ?",
@@ -487,7 +391,9 @@
       "StarCraft",
       "Street Fighter"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49",
+    "format": "attribution"
   },
   {
     "text": "Dans quelle scène esport s'est illustré KennyS ?",
@@ -497,6 +403,232 @@
       "StarCraft",
       "Street Fighter"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49",
+    "format": "attribution"
+  },
+  {
+    "text": "Quel joueur réalise la célèbre série de parades de l’« Evo Moment 37 » ?",
+    "answers": [
+      "Justin Wong",
+      "Daigo Umehara",
+      "Tokido",
+      "Alex Valle"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "moments",
+    "fact": "evo-moment-37-parades-daigo",
+    "source": "https://evo.gg/evomuseum/"
+  },
+  {
+    "text": "Quel trophée récompense les vainqueurs des Worlds de League of Legends ?",
+    "answers": [
+      "L’Aegis of Champions",
+      "Le trophée de l’Evo",
+      "Le trophée de la DreamHack",
+      "La Coupe de l’invocateur"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "trophees",
+    "fact": "worlds-lol-coupe-invocateur",
+    "source": "https://merch.riotgames.com/en-us/product/2019-worlds-championship-summoners-cup/"
+  },
+  {
+    "text": "Quel combattant Hungrybox joue-t-il principalement en compétition sur « Super Smash Bros. Melee » ?",
+    "answers": [
+      "Kirby",
+      "Fox",
+      "Rondoudou",
+      "Falco"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "hungrybox-jigglypuff-melee",
+    "source": "https://teamliquid.com/news/2023/03/17/welcome-2023-coinbase-ambassadors"
+  },
+  {
+    "text": "Sur quelle voie Faker joue-t-il lors du titre mondial de T1 en 2023 ?",
+    "answers": [
+      "La voie du milieu",
+      "La voie du haut",
+      "La voie du bas",
+      "La jungle"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "roles",
+    "fact": "faker-couloir-central",
+    "source": "https://lolesports.com/en-US/teams/faker"
+  },
+  {
+    "text": "Quelle équipe gagne les éditions 2018 et 2019 de The International sur « Dota 2 » ?",
+    "answers": [
+      "OG",
+      "Team Liquid",
+      "PSG.LGD",
+      "Evil Geniuses"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "equipes",
+    "fact": "og-deux-international-consecutifs",
+    "source": "https://ogs.gg/back-to-back-ti-winners/"
+  },
+  {
+    "text": "Quelle joueuse remporte le tournoi « StarCraft II » des IEM de PyeongChang en 2018 ?",
+    "answers": [
+      "Mystik",
+      "Geguri",
+      "Scarlett",
+      "Kayane"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "tournois",
+    "fact": "scarlett-iem-pyeongchang",
+    "source": "https://news.blizzard.com/en-gb/article/21509419/scarlett-noregret-and-the-house-changing-starcraft-ii-esports"
+  },
+  {
+    "text": "Qui remporte la finale solo de la Coupe du monde de « Fortnite » en 2019 ?",
+    "answers": [
+      "psalm",
+      "Aqua",
+      "Nyhrox",
+      "Bugha"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "tournois",
+    "fact": "bugha-fortnite-world-cup-solo",
+    "source": "https://www.fortnite.com/news/the-fortnite-world-cup-a-record-setting-tournament?lang=fr"
+  },
+  {
+    "text": "Quelle équipe gagne le premier Major de « Counter-Strike: Global Offensive », à la DreamHack Winter ?",
+    "answers": [
+      "Ninjas in Pyjamas",
+      "Fnatic",
+      "VeryGames",
+      "Astana Dragons"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "equipes",
+    "fact": "fnatic-premier-major-csgo",
+    "source": "https://blog.counter-strike.net/2013/12/8278/"
+  },
+  {
+    "text": "Dans une série au meilleur des cinq manches, combien de manches faut-il gagner pour remporter la série ?",
+    "answers": [
+      "Deux",
+      "Quatre",
+      "Trois",
+      "Cinq"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "formats",
+    "fact": "esport-bo5-trois-manches",
+    "source": "https://lolesports.com/en-GB/news/worlds-2026-primer"
+  },
+  {
+    "text": "Sur quelle carte se jouent les matchs de la compétition principale de « League of Legends » à cinq contre cinq ?",
+    "answers": [
+      "La Faille de l’invocateur",
+      "L’Abîme hurlant",
+      "La Forêt torturée",
+      "La Brèche de cristal"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "cartes",
+    "fact": "league-esport-faille-invocateur",
+    "source": "https://www.leagueoflegends.com/en-us/how-to-play/"
+  },
+  {
+    "text": "Avec quelle équipe s1mple remporte-t-il le Major de Stockholm en 2021 ?",
+    "answers": [
+      "G2 Esports",
+      "Team Liquid",
+      "FaZe Clan",
+      "Natus Vincere"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "equipes",
+    "fact": "s1mple-navi-major-stockholm",
+    "source": "https://navi.gg/en/publications/9182-cs-pgl-major-champions"
+  },
+  {
+    "text": "Que se passe-t-il en cas d’égalité à la fin du temps réglementaire dans un match standard de « Rocket League » ?",
+    "answers": [
+      "Les équipes tirent des pénaltys",
+      "Le premier but en prolongation donne la victoire",
+      "L’équipe qui a le plus tiré gagne",
+      "On rejoue le match depuis le début"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "regles",
+    "fact": "rocket-league-prolongation-but-en-or",
+    "source": "https://www.rocketleague.com/competitive/rules?lang=en"
+  },
+  {
+    "text": "Lors d’un veto de cartes en compétition sur « Counter-Strike », que font les équipes à tour de rôle ?",
+    "answers": [
+      "Elles choisissent le temps de chaque manche",
+      "Elles retirent ou sélectionnent des cartes",
+      "Elles désignent le meilleur joueur adverse",
+      "Elles établissent la liste des armes permises"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "formats",
+    "fact": "counter-strike-veto-cartes",
+    "source": "https://assets.blast.tv/rulebook/BLASTtv_Austin_Major_Rulebook.pdf"
+  },
+  {
+    "text": "Quelle équipe remporte le premier « VALORANT Champions », disputé à Berlin ?",
+    "answers": [
+      "Gambit Esports",
+      "Sentinels",
+      "Team Liquid",
+      "Acend"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "palmares",
+    "fact": "valorant-acend-premier-champions",
+    "source": "https://www.riotgames.com/zh-cn/news/henna-cats-and-the-evil-eye-how-rioters-in-turkey-helped-create-valorants-fade"
+  },
+  {
+    "text": "Quel pilote remporte la première Nations Cup de « Gran Turismo » lors des finales mondiales de 2018 ?",
+    "answers": [
+      "Igor Fraga",
+      "Mikail Hizal",
+      "Takuma Miyazono",
+      "Coque López"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "palmares",
+    "fact": "gran-turismo-fraga-nations-cup-2018",
+    "source": "https://www.gran-turismo.com/us/gtsport/livereport/00_1725414.html"
+  },
+  {
+    "text": "Quel joueur reçoit le titre de MVP de la saison régulière inaugurale de l’Overwatch League ?",
+    "answers": [
+      "Profit",
+      "Fleta",
+      "JJoNak",
+      "Saebyeolbe"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "distinctions",
+    "fact": "jjonak-overwatch-league-mvp-2018",
+    "source": "https://news.blizzard.com/fr-fr/article/23190452/sila-v-edinstve"
   }
 ]

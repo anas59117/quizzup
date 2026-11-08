@@ -7,17 +7,8 @@
       "le Mexique",
       "le Brésil"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Où célèbre-t-on traditionnellement Diwali ?",
-    "answers": [
-      "le Japon",
-      "l'Inde et plusieurs traditions religieuses d'Asie du Sud",
-      "le Mexique",
-      "le Brésil"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "À quel pays ou espace associe-t-on Hanami ?",
@@ -27,7 +18,8 @@
       "le Japon",
       "Munich en Allemagne"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Où célèbre-t-on traditionnellement Hanami ?",
@@ -37,7 +29,8 @@
       "Munich en Allemagne",
       "le Japon"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "À quel pays ou espace associe-t-on Día de Muertos ?",
@@ -47,7 +40,8 @@
       "Munich en Allemagne",
       "l'Inde et le Népal"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Où célèbre-t-on traditionnellement Día de Muertos ?",
@@ -57,7 +51,8 @@
       "Munich en Allemagne",
       "l'Inde et le Népal"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "À quel pays ou espace associe-t-on le carnaval de Rio ?",
@@ -67,17 +62,8 @@
       "le Brésil",
       "de nombreux pays d'Asie"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Où célèbre-t-on traditionnellement le carnaval de Rio ?",
-    "answers": [
-      "Munich en Allemagne",
-      "l'Inde et le Népal",
-      "de nombreux pays d'Asie",
-      "le Brésil"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "À quel pays ou espace associe-t-on Oktoberfest ?",
@@ -87,7 +73,8 @@
       "de nombreux pays d'Asie",
       "la Thaïlande"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Où célèbre-t-on traditionnellement Oktoberfest ?",
@@ -97,7 +84,8 @@
       "de nombreux pays d'Asie",
       "la Thaïlande"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "À quel pays ou espace associe-t-on Holi ?",
@@ -107,7 +95,8 @@
       "l'Inde et le Népal",
       "la Chine et l'Asie de l'Est"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Où célèbre-t-on traditionnellement Holi ?",
@@ -117,7 +106,8 @@
       "la Chine et l'Asie de l'Est",
       "l'Inde et le Népal"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "À quel pays ou espace associe-t-on le Nouvel An lunaire ?",
@@ -127,17 +117,8 @@
       "la Chine et l'Asie de l'Est",
       "les États-Unis"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Où célèbre-t-on traditionnellement le Nouvel An lunaire ?",
-    "answers": [
-      "la Thaïlande",
-      "de nombreux pays d'Asie",
-      "la Chine et l'Asie de l'Est",
-      "les États-Unis"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "À quel pays ou espace associe-t-on Songkran ?",
@@ -147,7 +128,8 @@
       "la Thaïlande",
       "la Suède"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Où célèbre-t-on traditionnellement Songkran ?",
@@ -157,7 +139,8 @@
       "la Suède",
       "la Thaïlande"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "À quel pays ou espace associe-t-on la fête de la Mi-Automne ?",
@@ -167,7 +150,8 @@
       "la Suède",
       "le Pérou"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Où célèbre-t-on traditionnellement la fête de la Mi-Automne ?",
@@ -177,7 +161,8 @@
       "la Suède",
       "le Pérou"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "À quel pays ou espace associe-t-on Thanksgiving fédéral de novembre ?",
@@ -187,17 +172,8 @@
       "les États-Unis",
       "l'Iran et l'Asie centrale"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Où célèbre-t-on traditionnellement Thanksgiving fédéral de novembre ?",
-    "answers": [
-      "la Suède",
-      "le Pérou",
-      "l'Iran et l'Asie centrale",
-      "les États-Unis"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "À quel pays ou espace associe-t-on Midsommar ?",
@@ -207,7 +183,8 @@
       "l'Iran et l'Asie centrale",
       "l'Irlande"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Où célèbre-t-on traditionnellement Midsommar ?",
@@ -217,7 +194,8 @@
       "l'Iran et l'Asie centrale",
       "l'Irlande"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "À quel pays ou espace associe-t-on Inti Raymi ?",
@@ -227,7 +205,8 @@
       "le Pérou",
       "Buñol en Espagne"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Où célèbre-t-on traditionnellement Inti Raymi ?",
@@ -237,7 +216,8 @@
       "Buñol en Espagne",
       "le Pérou"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "À quel pays ou espace associe-t-on Nowruz ?",
@@ -247,17 +227,8 @@
       "Buñol en Espagne",
       "l'Italie"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Où célèbre-t-on traditionnellement Nowruz ?",
-    "answers": [
-      "l'Irlande",
-      "l'Iran et l'Asie centrale",
-      "Buñol en Espagne",
-      "l'Italie"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "À quel pays ou espace associe-t-on la Saint-Patrick ?",
@@ -267,7 +238,8 @@
       "l'Irlande",
       "Kyoto au Japon"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Où célèbre-t-on traditionnellement la Saint-Patrick ?",
@@ -277,7 +249,8 @@
       "Kyoto au Japon",
       "l'Irlande"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "À quel pays ou espace associe-t-on la Tomatina ?",
@@ -287,7 +260,8 @@
       "Kyoto au Japon",
       "la Thaïlande"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Où célèbre-t-on traditionnellement la Tomatina ?",
@@ -297,7 +271,8 @@
       "Kyoto au Japon",
       "la Thaïlande"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "À quel pays ou espace associe-t-on le carnaval de Venise ?",
@@ -307,17 +282,8 @@
       "l'Italie",
       "l'Éthiopie"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Où célèbre-t-on traditionnellement le carnaval de Venise ?",
-    "answers": [
-      "Kyoto au Japon",
-      "la Thaïlande",
-      "l'Éthiopie",
-      "l'Italie"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "À quel pays ou espace associe-t-on le festival de Gion Matsuri ?",
@@ -327,7 +293,8 @@
       "l'Éthiopie",
       "la Mongolie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Où célèbre-t-on traditionnellement le festival de Gion Matsuri ?",
@@ -337,7 +304,8 @@
       "l'Éthiopie",
       "la Mongolie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "À quel pays ou espace associe-t-on le festival des lanternes Yi Peng ?",
@@ -347,7 +315,8 @@
       "la Thaïlande",
       "l'Écosse"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Où célèbre-t-on traditionnellement le festival des lanternes Yi Peng ?",
@@ -357,7 +326,8 @@
       "l'Écosse",
       "la Thaïlande"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "À quel pays ou espace associe-t-on le festival Timkat ?",
@@ -367,17 +337,8 @@
       "l'Écosse",
       "les Pays-Bas et la Belgique"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Où célèbre-t-on traditionnellement le festival Timkat ?",
-    "answers": [
-      "la Mongolie",
-      "l'Éthiopie",
-      "l'Écosse",
-      "les Pays-Bas et la Belgique"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "À quel pays ou espace associe-t-on le festival Naadam ?",
@@ -387,7 +348,8 @@
       "la Mongolie",
       "Pampelune en Espagne"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Où célèbre-t-on traditionnellement le festival Naadam ?",
@@ -397,7 +359,8 @@
       "Pampelune en Espagne",
       "la Mongolie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "À quel pays ou espace associe-t-on le Burns Night ?",
@@ -407,7 +370,8 @@
       "Pampelune en Espagne",
       "le Japon"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Où célèbre-t-on traditionnellement le Burns Night ?",
@@ -417,7 +381,8 @@
       "Pampelune en Espagne",
       "le Japon"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "À quel pays ou espace associe-t-on le Sinterklaas ?",
@@ -427,17 +392,8 @@
       "les Pays-Bas et la Belgique",
       "le Japon"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Où célèbre-t-on traditionnellement le Sinterklaas ?",
-    "answers": [
-      "Pampelune en Espagne",
-      "l'Écosse",
-      "le Japon",
-      "les Pays-Bas et la Belgique"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "À quel pays ou espace associe-t-on le festival de San Fermín ?",
@@ -447,7 +403,8 @@
       "le Japon",
       "l'Inde et plusieurs traditions religieuses d'Asie du Sud"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Où célèbre-t-on traditionnellement le festival de San Fermín ?",
@@ -457,7 +414,8 @@
       "le Japon",
       "l'Inde et plusieurs traditions religieuses d'Asie du Sud"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "À quel pays ou espace associe-t-on le réveillon Hogmanay ?",
@@ -467,7 +425,8 @@
       "l'Écosse",
       "le Mexique"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Où célèbre-t-on traditionnellement le réveillon Hogmanay ?",
@@ -477,7 +436,8 @@
       "le Mexique",
       "l'Écosse"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "À quel pays ou espace associe-t-on le festival Obon ?",
@@ -487,7 +447,8 @@
       "le Mexique",
       "le Brésil"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Où célèbre-t-on traditionnellement le festival Obon ?",
@@ -497,6 +458,119 @@
       "le Mexique",
       "le Brésil"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Que se lancent les participants pendant les célébrations les plus connues de Holi ?",
+    "answers": [
+      "Des rubans de papier",
+      "Des graines de riz",
+      "Des poudres colorées",
+      "Des confettis métalliques"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "gestes",
+    "fact": "holi-poudres-colorees",
+    "source": "https://www.incredibleindia.gov.in/en/festivals-and-events/holi"
+  },
+  {
+    "text": "Quels arbres en fleurs sont le plus souvent admirés lors du hanami au Japon ?",
+    "answers": [
+      "Les cerisiers",
+      "Les pommiers",
+      "Les magnolias",
+      "Les camélias"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "symboles",
+    "fact": "hanami-cerisiers-floraison",
+    "source": "https://www.japan.travel/en/au/experience/cherry-blossoms/"
+  },
+  {
+    "text": "Quel événement saisonnier correspond au début de Nowruz dans la tradition iranienne ?",
+    "answers": [
+      "Le solstice d’été",
+      "L’équinoxe d’automne",
+      "Le solstice d’hiver",
+      "L’équinoxe de printemps"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "calendrier",
+    "fact": "nowruz-equinoxe-printemps",
+    "source": "https://ich.unesco.org/en/decisions/4.COM/13.03"
+  },
+  {
+    "text": "Quelle fleur orange appelée « cempasúchil » orne les autels du Día de Muertos au Mexique ?",
+    "answers": [
+      "Le coquelicot",
+      "La rose d’Inde",
+      "La capucine",
+      "Le souci officinal"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "symboles",
+    "fact": "dia-muertos-fleur-cempasuchil",
+    "source": "https://www.gob.mx/agricultura/articulos/flor-de-cempasuchil-belleza-espiritual"
+  },
+  {
+    "text": "Quelles sont les trois disciplines emblématiques du Naadam mongol ?",
+    "answers": [
+      "Tir à l’arc, polo et course à pied",
+      "Lutte, escrime et course à cheval",
+      "Lutte, tir à l’arc et course à cheval",
+      "Polo, tir à l’arc et escrime"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "epreuves",
+    "fact": "naadam-lutte-tir-arc-cheval",
+    "source": "https://ich.unesco.org/en/RL/naadam-the-mongolian-festival-of-the-three-manly-games-00395"
+  },
+  {
+    "text": "Quel nom porte la danse collective associée à la fête japonaise d’Obon ?",
+    "answers": [
+      "Le gagaku",
+      "Le kabuki",
+      "Le nō",
+      "Le bon odori"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "danse",
+    "fact": "obon-japon-danse-bon-odori",
+    "source": "https://www.japan.travel/en/sg/story/how-much-do-you-know-about-summer-traditions-japan/"
+  },
+  {
+    "text": "En Suède, que porte traditionnellement sur la tête la personne qui incarne Lucie dans le cortège de décembre ?",
+    "answers": [
+      "Un voile rouge",
+      "Une couronne de bougies",
+      "Un chapeau brodé",
+      "Une guirlande de clochettes"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "symboles",
+    "fact": "sainte-lucie-suede-couronne-bougies",
+    "source": "https://www.nordiskamuseet.se/en/traditions-celebrations/lucia/"
+  },
+  {
+    "text": "À Kyoto, que désigne le mot « yamahoko » dans les processions du Gion Matsuri ?",
+    "answers": [
+      "Les chars décorés",
+      "Les masques en papier",
+      "Les tambours du cortège",
+      "Les éventails des danseurs"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "artisanat",
+    "fact": "gion-matsuri-yamahoko-chars",
+    "source": "https://ich.unesco.org/en/RL/yama-hoko-yatai-float-festivals-in-japan-01059"
   }
 ]

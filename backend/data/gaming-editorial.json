@@ -1,0 +1,433 @@
+[
+  {
+    "text": "Quelle entreprise a créé Mario ?",
+    "answers": ["Nintendo", "Sega", "Sony", "Atari"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "studios",
+    "fact": "mario-nintendo"
+  },
+  {
+    "text": "Dans Minecraft, quel matériau utilise la pioche du premier palier de fabrication ?",
+    "answers": ["Fer", "Bois", "Pierre", "Diamant"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "mecaniques",
+    "fact": "minecraft-pioche-bois"
+  },
+  {
+    "text": "Quel jeu avait annoncé avoir franchi les 300 millions d’exemplaires vendus en octobre 2023 ?",
+    "answers": ["Tetris", "GTA V", "Minecraft", "Wii Sports"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "histoire",
+    "fact": "minecraft-300m",
+    "source": "https://www.minecraft.net/en-us/15th-anniversary"
+  },
+  {
+    "text": "Dans quel jeu les joueurs sautent-ils du Bus de combat pour atterrir sur l’île ?",
+    "answers": ["Valorant", "Overwatch", "League of Legends", "Fortnite"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "mecaniques",
+    "fact": "fortnite-bus",
+    "source": "https://www.fortnite.com/%40epic/battle-royale?lang=en-US"
+  },
+  {
+    "text": "Que signifie « FPS » quand on parle d’un genre de jeu ?",
+    "answers": ["First-Person Shooter", "Fast Play Speed", "Final Player Standing", "Free Play Session"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "genres",
+    "fact": "definition-fps"
+  },
+  {
+    "text": "Quel personnage joue-t-on dans « The Legend of Zelda: Breath of the Wild » ?",
+    "answers": ["Zelda", "Link", "Ganon", "Navi"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "univers",
+    "fact": "zelda-hero"
+  },
+  {
+    "text": "Quelle console Sony est sortie en 2020 ?",
+    "answers": ["Xbox Series X", "Switch", "PlayStation 5", "Steam Deck"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "materiel",
+    "fact": "sony-console-2020"
+  },
+  {
+    "text": "De quel type est Pikachu ?",
+    "answers": ["Feu", "Eau", "Plante", "Électrik"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "univers",
+    "fact": "pikachu-type"
+  },
+  {
+    "text": "Dans quel MOBA joue-t-on sur la Faille de l’invocateur ?",
+    "answers": ["League of Legends", "Dota 2", "Heroes of the Storm", "Smite"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "univers",
+    "fact": "lol-faille"
+  },
+  {
+    "text": "De quelle couleur est Sonic ?",
+    "answers": ["Vert", "Bleu", "Rouge", "Jaune"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "univers",
+    "fact": "sonic-couleur"
+  },
+  {
+    "text": "Dans quel pays se déroule l’essentiel du voyage d’Ezio dans « Assassin’s Creed II » ?",
+    "answers": ["En Espagne", "En France", "En Italie", "En Grèce"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "univers",
+    "fact": "assassins-creed-ii-renaissance",
+    "source": "https://www.ubisoft.com/en-gb/games/assassins-creed-ii"
+  },
+  {
+    "text": "Dans « Hades », qui accorde à Zagreus des bienfaits pendant ses tentatives d’évasion ?",
+    "answers": ["Les dieux de l’Olympe", "Les juges des Enfers", "Les Titans emprisonnés", "Les héros de l’Élysée"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "mecaniques",
+    "fact": "hades-bienfaits-olympe",
+    "source": "https://www.supergiantgames.com/blog/hades-updates/"
+  },
+  {
+    "text": "Quel studio a développé « Journey », où l’on traverse un désert vers une montagne ?",
+    "answers": ["Giant Squid", "Mobius Digital", "Giant Sparrow", "thatgamecompany"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "studios",
+    "fact": "journey-developpeur",
+    "source": "https://annapurnainteractive.com/games/journey"
+  },
+  {
+    "text": "Quelle console portable de Nintendo possède deux écrans superposés, dont un tactile ?",
+    "answers": ["La Game Boy Advance SP", "La Nintendo DS", "La Game Boy Color", "La Nintendo Switch Lite"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "materiel",
+    "fact": "nintendo-ds-deux-ecrans",
+    "source": "https://www.nintendo.com/en-gb/Hardware/Nintendo-History/Nintendo-History-625945.html"
+  },
+  {
+    "text": "Dans un jeu de stratégie en temps réel, quand les camps peuvent-ils normalement donner des ordres ?",
+    "answers": ["À tour de rôle", "En même temps", "Après chaque combat", "À des tours tirés au sort"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "genres",
+    "fact": "strategie-temps-reel-actions"
+  },
+  {
+    "text": "Quel surnom Nintendo associe-t-il à Mario dans le jeu d’arcade « Donkey Kong » de 1981 ?",
+    "answers": ["Mr. Game & Watch", "Hammer Bro", "Kid Icarus", "Jumpman"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "histoire",
+    "fact": "mario-jumpman-arcade",
+    "source": "https://www.nintendo.com/en-ca/whatsnew/wahoo-see-the-platforming-history-of-super-mario-and-even-get-a-few-fun-facts/"
+  },
+  {
+    "text": "Dans « Tetris », quelle rangée disparaît lorsqu’elle est remplie sans aucun trou ?",
+    "answers": ["Une colonne verticale", "Une diagonale", "Une ligne horizontale", "Un carré de quatre cases"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "mecaniques",
+    "fact": "tetris-ligne-pleine",
+    "source": "https://play.tetris.com/about"
+  },
+  {
+    "text": "Dans quel jeu explore-t-on Rapture, une cité construite sous l’océan ?",
+    "answers": ["BioShock", "Dishonored", "Half-Life 2", "SOMA"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "univers",
+    "fact": "bioshock-rapture",
+    "source": "https://assets.2k.com/1a6ngf98576c/44QfFXIkkvaGAIgYlRSARd/bccf98e53286dfe35bf5baceff9da93d/BIOSHOCK_PS3_MANUAL_ENG.pdf"
+  },
+  {
+    "text": "De quelle ville part le convoi de chariots dans « The Oregon Trail » ?",
+    "answers": ["Omaha, Nebraska", "St. Louis, Missouri", "Sacramento, Californie", "Independence, Missouri"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "histoire",
+    "fact": "oregon-trail-independence",
+    "source": "https://www.museumofplay.org/games/the-oregon-trail/"
+  },
+  {
+    "text": "Quel jeu est une simulation centrée sur le quotidien d’un foyer ?",
+    "answers": ["SimCity", "Les Sims", "Cities: Skylines", "RollerCoaster Tycoon"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "genres",
+    "fact": "sims-simulation-vie"
+  },
+  {
+    "text": "Quel studio a créé la série « Uncharted » ?",
+    "answers": ["Naughty Dog", "Insomniac Games", "Guerrilla Games", "Sucker Punch Productions"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "studios",
+    "fact": "uncharted-naughty-dog"
+  },
+  {
+    "text": "Sur quelle console la carte mémoire à écran appelée VMU s’insère-t-elle dans la manette ?",
+    "answers": ["La Saturn", "La PlayStation", "La Dreamcast", "La Nintendo 64"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "materiel",
+    "fact": "dreamcast-vmu",
+    "source": "https://www.sega.jp/history/hard/dreamcast/devices.html"
+  },
+  {
+    "text": "Dans « Animal Crossing: New Horizons », où le joueur commence-t-il sa nouvelle vie ?",
+    "answers": ["Dans un village de montagne", "Sur une île déserte", "Dans un train de nuit", "Dans une station balnéaire"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "univers",
+    "fact": "animal-crossing-ile-deserte"
+  },
+  {
+    "text": "Quel support physique la première PlayStation utilise-t-elle pour lire ses jeux ?",
+    "answers": ["Le CD-ROM", "Le DVD-ROM", "La cartouche", "La disquette"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "materiel",
+    "fact": "playstation-cd-rom",
+    "source": "https://www.playstation.com/en-us/playstation-history/1994-ps-one/"
+  },
+  {
+    "text": "Dans « Into the Breach », quels éléments du champ de bataille alimentent les méchas ?",
+    "answers": ["Les cases d’eau", "Les montagnes intactes", "Les bâtiments civils", "Les points d’apparition des Veks"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "mecaniques",
+    "fact": "into-breach-batiments-energie",
+    "source": "https://subsetgames.com/itb.html"
+  },
+  {
+    "text": "Sur la Nintendo Switch d’origine, quel accessoire permet de jouer sur un téléviseur ?",
+    "answers": ["Le support Joy-Con", "La dragonne Joy-Con", "La manette Pro", "La station d’accueil"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "materiel",
+    "fact": "switch-mode-televiseur"
+  },
+  {
+    "text": "Dans « Civilization VI », comment se déroule une partie solo standard ?",
+    "answers": ["Au tour par tour", "En temps réel continu", "En manches d’une minute", "En duels chronométrés"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "genres",
+    "fact": "civilization-vi-tour-par-tour"
+  },
+  {
+    "text": "Dans « Mario Kart 8 Deluxe », quel objet peut détruire une carapace bleue à portée ?",
+    "answers": ["Le champignon turbo", "La banane", "Le super klaxon", "Le boomerang"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "mecaniques",
+    "fact": "mario-kart-klaxon-carapace",
+    "source": "https://www.nintendo.com/en-gb/News/2014/April/Nintendo-gives-a-karting-crash-course-with-new-Mario-Kart-8-information-879498.html"
+  },
+  {
+    "text": "Quel personnage accompagne Ellie pendant l’essentiel du premier « The Last of Us » ?",
+    "answers": ["Tommy", "Henry", "Sam", "Joel"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "univers",
+    "fact": "the-last-of-us-joel-ellie",
+    "source": "https://www.playstation.com/en-us/games/the-last-of-us-part-i"
+  },
+  {
+    "text": "Dans « Street Fighter II », quel combattant lance le Sonic Boom ?",
+    "answers": ["Ryu", "Guile", "Chun-Li", "Dhalsim"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "mecaniques",
+    "fact": "street-fighter-guile-sonic-boom",
+    "source": "https://captown.capcom.com/uploads/game/manual/23/SF2_en_G.be3a67c7-ad2f-47f6-9619-6ae47a163188.pdf"
+  },
+  {
+    "text": "Quel créateur a signé « Papers, Please » et « Return of the Obra Dinn » ?",
+    "answers": ["Eric Barone", "Jonathan Blow", "Toby Fox", "Lucas Pope"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "studios",
+    "fact": "lucas-pope-papers-obra-dinn",
+    "source": "https://www.dukope.com/"
+  },
+  {
+    "text": "Dans quel jeu ouvre-t-on des passages reliant deux surfaces pour résoudre des énigmes ?",
+    "answers": ["The Witness", "Portal", "Braid", "Tetris Effect"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "mecaniques",
+    "fact": "portal-deux-ouvertures"
+  },
+  {
+    "text": "Quel est le nom français du monde où commence l’aventure d’« Elden Ring » ?",
+    "answers": ["L’Entre-terre", "Bordeciel", "Les Royaumes oubliés", "Le Continent"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "univers",
+    "fact": "elden-ring-entre-terre",
+    "source": "https://fr.bandainamcoent.eu/elden-ring/infos/elden-ring-resume-de-lhistoire"
+  },
+  {
+    "text": "Quel modèle de distribution a permis d’essayer gratuitement le premier épisode de « Doom » en 1993 ?",
+    "answers": ["La location d’une cartouche", "L’abonnement mensuel", "Le shareware", "L’accès anticipé payant"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "histoire",
+    "fact": "doom-distribution-shareware",
+    "source": "https://slayersclub.bethesda.net/en-ZA/news/id-software-35th-anniversary"
+  },
+  {
+    "text": "Dans quelle série marque-t-on des points en reproduisant des chorégraphies à l’écran ?",
+    "answers": ["Guitar Hero", "SingStar", "Just Dance", "Rock Band"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "genres",
+    "fact": "just-dance-choregraphies"
+  },
+  {
+    "text": "Quel studio a développé les jeux coopératifs « It Takes Two » et « A Way Out » ?",
+    "answers": ["Telltale Games", "Quantic Dream", "Team17", "Hazelight Studios"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "studios",
+    "fact": "hazelight-deux-coop",
+    "source": "https://www.ea.com/games/bundles/hazelight-bundle/buy"
+  },
+  {
+    "text": "Dans quelle ville se trouve le quartier de Martinaise, où l’on enquête dans « Disco Elysium » ?",
+    "answers": ["Dunwall", "Revachol", "Karnaca", "Midgar"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "univers",
+    "fact": "disco-elysium-revachol",
+    "source": "https://zaumstudio.com/"
+  },
+  {
+    "text": "Avec quelle console le capteur de mouvements Kinect a-t-il été lancé en 2010 ?",
+    "answers": ["La Xbox 360", "La PlayStation 3", "La Wii", "La Xbox One"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "materiel",
+    "fact": "kinect-xbox-360",
+    "source": "https://news.xbox.com/en-us/2010/10/21/join-me-at-the-official-kinect-launch-in-nyc/"
+  },
+  {
+    "text": "Dans « Splatoon 3 », quel critère départage les équipes en Guerre de territoire ?",
+    "answers": ["Le nombre d’adversaires éliminés", "La surface de sol encrée", "Le volume d’encre utilisé", "Le nombre de cibles détruites"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "mecaniques",
+    "fact": "splatoon-territoire-encre",
+    "source": "https://www.nintendo.com/fr-fr/News/2024/decembre/Bien-debuter-dans-Splatoon-3-tout-savoir-sur-le-jeu-en-ligne-2645154.html"
+  },
+  {
+    "text": "Quelle console était livrée avec des calques à poser sur le téléviseur pour habiller l’image des jeux ?",
+    "answers": ["L’Atari 2600", "L’Intellivision", "La Magnavox Odyssey", "La ColecoVision"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "materiel",
+    "fact": "odyssey-calques-televiseur",
+    "source": "https://collection.powerhouse.com.au/object/476387"
+  },
+  {
+    "text": "Dans quel classique de l’arcade avale-t-on des pastilles dans un labyrinthe peuplé de fantômes ?",
+    "answers": ["Dig Dug", "Frogger", "Space Invaders", "Pac-Man"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "histoire",
+    "fact": "pac-man-arcade-labyrinthe"
+  },
+  {
+    "text": "Dans quel jeu gravit-on une tour en construisant son paquet de cartes au fil des combats ?",
+    "answers": ["Slay the Spire", "Darkest Dungeon", "Dead Cells", "Crypt of the NecroDancer"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "genres",
+    "fact": "slay-spire-deck-ascension",
+    "source": "https://store.steampowered.com/app/646570/Slay_the_Spire/"
+  },
+  {
+    "text": "Quelle est la durée maximale d’une boucle temporelle normale dans « Outer Wilds » ?",
+    "answers": ["12 minutes", "30 minutes", "45 minutes", "22 minutes"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "mecaniques",
+    "fact": "outer-wilds-boucle-vingt-deux",
+    "source": "https://blog.playstation.com/archive/2019/10/08/explore-a-solar-system-that-resets-every-22-minutes-in-the-outer-wilds-out-this-month"
+  },
+  {
+    "text": "Quel mot anglais désigne un point de reprise en cours de niveau ?",
+    "answers": ["Checkpoint", "Leaderboard", "Matchmaking", "Power-up"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "mecaniques",
+    "fact": "checkpoint-reprise"
+  },
+  {
+    "text": "Comment s’appelle le royaume souterrain exploré dans « Hollow Knight » ?",
+    "answers": ["Lordran", "Pharloom", "Hallownest", "Drangleic"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "univers",
+    "fact": "hollow-knight-hallownest",
+    "source": "https://news.xbox.com/en-us/2018/09/25/hollow-knight-voidheart-edition-available-now-on-xbox-one/"
+  },
+  {
+    "text": "Quel studio a développé « Psychonauts » et « Brütal Legend » ?",
+    "answers": ["Obsidian Entertainment", "Double Fine Productions", "Gearbox Software", "Remedy Entertainment"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "studios",
+    "fact": "psychonauts-brutal-legend-double-fine",
+    "source": "https://www.doublefine.com/about"
+  },
+  {
+    "text": "Quel jeu d’horreur lancé en 1996 a pour décor principal le manoir Spencer ?",
+    "answers": ["Resident Evil", "Silent Hill", "Alone in the Dark", "Clock Tower"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "histoire",
+    "fact": "resident-evil-manoir-spencer",
+    "source": "https://game.capcom.com/residentevil/it/umbrella-20200821110000.html"
+  },
+  {
+    "text": "Quel support stockait les séquences animées de « Dragon’s Lair » dans la borne d’arcade d’origine ?",
+    "answers": ["Le CD-ROM", "La disquette", "La cartouche ROM", "Le LaserDisc"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "histoire",
+    "fact": "dragons-lair-laserdisc",
+    "source": "https://www.americanhistory.si.edu/es/collections/object/nmah_681347"
+  },
+  {
+    "text": "Quel principe de progression est caractéristique d’un metroidvania ?",
+    "answers": ["Choisir les niveaux sur une carte sans retour", "Revenir dans des zones avec de nouvelles capacités", "Recommencer toute la campagne après chaque échec", "Attendre son tour avant de déplacer son personnage"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "genres",
+    "fact": "metroidvania-retour-capacites"
+  },
+  {
+    "text": "Quel jeu multijoueur de 1983 est associé à la conceptrice Dani Bunten Berry ?",
+    "answers": ["Archon: The Light and the Dark", "Pinball Construction Set", "M.U.L.E.", "Lode Runner"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "histoire",
+    "fact": "mule-dani-bunten-berry",
+    "source": "https://www.museumofplay.org/blog/game-changers-women-who-built-community-through-play/"
+  }
+]

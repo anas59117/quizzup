@@ -7,17 +7,9 @@
       "1498",
       "1519-1522"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère de l'histoire des explorations correspond à le voyage de Christophe Colomb vers les Caraïbes ?",
-    "answers": [
-      "1488",
-      "1492",
-      "1498",
-      "1519-1522"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01",
+    "format": "date"
   },
   {
     "text": "À quelle date ou personne associe-t-on le contournement du cap de Bonne-Espérance par Bartolomeu Dias ?",
@@ -27,17 +19,21 @@
       "1488",
       "1500"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03",
+    "format": "date"
   },
   {
-    "text": "Quel repère de l'histoire des explorations correspond à le contournement du cap de Bonne-Espérance par Bartolomeu Dias ?",
+    "text": "Quel repère de l'histoire des explorations correspond au contournement du cap de Bonne-Espérance par Bartolomeu Dias ?",
     "answers": [
       "1498",
       "1519-1522",
       "1500",
       "1488"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03",
+    "format": "date"
   },
   {
     "text": "À quelle date ou personne associe-t-on l'arrivée de Vasco de Gama en Inde par mer ?",
@@ -47,7 +43,9 @@
       "1500",
       "le début du XVe siècle"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire des explorations correspond à l'arrivée de Vasco de Gama en Inde par mer ?",
@@ -57,7 +55,9 @@
       "1500",
       "le début du XVe siècle"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05",
+    "format": "date"
   },
   {
     "text": "À quelle date ou personne associe-t-on la première circumnavigation achevée par l'expédition de Magellan-Elcano ?",
@@ -67,17 +67,9 @@
       "1519-1522",
       "le XIVe siècle"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère de l'histoire des explorations correspond à la première circumnavigation achevée par l'expédition de Magellan-Elcano ?",
-    "answers": [
-      "1500",
-      "le début du XVe siècle",
-      "le XIVe siècle",
-      "1519-1522"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07",
+    "format": "date"
   },
   {
     "text": "À quelle date ou personne associe-t-on le voyage de Cabral vers le Brésil ?",
@@ -87,17 +79,21 @@
       "le XIVe siècle",
       "le XIIIe siècle"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09",
+    "format": "date"
   },
   {
-    "text": "Quel repère de l'histoire des explorations correspond à le voyage de Cabral vers le Brésil ?",
+    "text": "Quel repère de l'histoire des explorations correspond au voyage de Cabral vers le Brésil ?",
     "answers": [
       "le début du XVe siècle",
       "1500",
       "le XIVe siècle",
       "le XIIIe siècle"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09",
+    "format": "date"
   },
   {
     "text": "À quelle date ou personne associe-t-on les expéditions de Zheng He ?",
@@ -107,17 +103,21 @@
       "le début du XVe siècle",
       "1520-1521"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11",
+    "format": "date"
   },
   {
-    "text": "Quel repère de l'histoire des explorations correspond à les expéditions de Zheng He ?",
+    "text": "Quel repère de l'histoire des explorations correspond aux expéditions de Zheng He ?",
     "answers": [
       "le XIVe siècle",
       "le XIIIe siècle",
       "1520-1521",
       "le début du XVe siècle"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11",
+    "format": "date"
   },
   {
     "text": "À quelle date ou personne associe-t-on le voyage d'Ibn Battûta ?",
@@ -127,17 +127,9 @@
       "1520-1521",
       "1728"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère de l'histoire des explorations correspond à le voyage d'Ibn Battûta ?",
-    "answers": [
-      "le XIIIe siècle",
-      "le XIVe siècle",
-      "1520-1521",
-      "1728"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13",
+    "format": "date"
   },
   {
     "text": "À quelle date ou personne associe-t-on le voyage de Marco Polo vers l'Asie ?",
@@ -147,17 +139,21 @@
       "le XIIIe siècle",
       "1768-1771"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15",
+    "format": "date"
   },
   {
-    "text": "Quel repère de l'histoire des explorations correspond à le voyage de Marco Polo vers l'Asie ?",
+    "text": "Quel repère de l'histoire des explorations correspond au voyage de Marco Polo vers l'Asie ?",
     "answers": [
       "1520-1521",
       "1728",
       "1768-1771",
       "le XIIIe siècle"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15",
+    "format": "date"
   },
   {
     "text": "À quelle date ou personne associe-t-on la traversée du Pacifique par Magellan ?",
@@ -167,7 +163,9 @@
       "1768-1771",
       "1804-1806"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire des explorations correspond à la traversée du Pacifique par Magellan ?",
@@ -177,27 +175,22 @@
       "1768-1771",
       "1804-1806"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17",
+    "format": "date"
   },
   {
-    "text": "À quelle date ou personne associe-t-on la découverte européenne du détroit de Béring par Vitus Béring ?",
+    "text": "À quelle date ou personne associe-t-on la traversée du détroit de Béring par Vitus Béring ?",
     "answers": [
       "1768-1771",
       "1804-1806",
       "1728",
       "1888"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère de l'histoire des explorations correspond à la découverte européenne du détroit de Béring par Vitus Béring ?",
-    "answers": [
-      "1768-1771",
-      "1804-1806",
-      "1888",
-      "1728"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19",
+    "format": "date",
+    "source": "https://collections.dartmouth.edu/arctica-beta/html/EA15-23.html"
   },
   {
     "text": "À quelle date ou personne associe-t-on le premier voyage de James Cook ?",
@@ -207,17 +200,21 @@
       "1888",
       "1911"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21",
+    "format": "date"
   },
   {
-    "text": "Quel repère de l'histoire des explorations correspond à le premier voyage de James Cook ?",
+    "text": "Quel repère de l'histoire des explorations correspond au premier voyage de James Cook ?",
     "answers": [
       "1804-1806",
       "1768-1771",
       "1888",
       "1911"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21",
+    "format": "date"
   },
   {
     "text": "À quelle date ou personne associe-t-on l'expédition de Lewis et Clark ?",
@@ -227,7 +224,9 @@
       "1804-1806",
       "1914-1917"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire des explorations correspond à l'expédition de Lewis et Clark ?",
@@ -237,7 +236,9 @@
       "1914-1917",
       "1804-1806"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23",
+    "format": "date"
   },
   {
     "text": "À quelle date ou personne associe-t-on la première traversée du Groenland par Nansen ?",
@@ -247,17 +248,9 @@
       "1914-1917",
       "1953"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère de l'histoire des explorations correspond à la première traversée du Groenland par Nansen ?",
-    "answers": [
-      "1911",
-      "1888",
-      "1914-1917",
-      "1953"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25",
+    "format": "date"
   },
   {
     "text": "À quelle date ou personne associe-t-on l'atteinte du pôle Sud par Amundsen ?",
@@ -267,7 +260,9 @@
       "1911",
       "1960"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire des explorations correspond à l'atteinte du pôle Sud par Amundsen ?",
@@ -277,7 +272,9 @@
       "1960",
       "1911"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27",
+    "format": "date"
   },
   {
     "text": "À quelle date ou personne associe-t-on l'expédition de Shackleton sur l'Endurance ?",
@@ -287,7 +284,9 @@
       "1960",
       "Youri Gagarine"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire des explorations correspond à l'expédition de Shackleton sur l'Endurance ?",
@@ -297,7 +296,9 @@
       "1960",
       "Youri Gagarine"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29",
+    "format": "date"
   },
   {
     "text": "À quelle date ou personne associe-t-on la première ascension confirmée de l'Everest ?",
@@ -307,17 +308,9 @@
       "1953",
       "Neil Armstrong"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère de l'histoire des explorations correspond à la première ascension confirmée de l'Everest ?",
-    "answers": [
-      "1960",
-      "Youri Gagarine",
-      "Neil Armstrong",
-      "1953"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31",
+    "format": "date"
   },
   {
     "text": "À quelle date ou personne associe-t-on la première descente au fond du Challenger Deep par le Trieste ?",
@@ -327,7 +320,9 @@
       "Neil Armstrong",
       "Mariner 4"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire des explorations correspond à la première descente au fond du Challenger Deep par le Trieste ?",
@@ -337,7 +332,9 @@
       "Neil Armstrong",
       "Mariner 4"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33",
+    "format": "date"
   },
   {
     "text": "À quelle date ou personne associe-t-on le premier humain dans l'espace ?",
@@ -347,17 +344,19 @@
       "Youri Gagarine",
       "Apollo 11"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
-    "text": "Quel repère de l'histoire des explorations correspond à le premier humain dans l'espace ?",
+    "text": "Quel repère de l'histoire des explorations correspond au premier humain dans l'espace ?",
     "answers": [
       "Neil Armstrong",
       "Mariner 4",
       "Apollo 11",
       "Youri Gagarine"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel astronaute fut le premier humain à marcher sur la Lune ?",
@@ -367,17 +366,8 @@
       "John Glenn",
       "Alan Shepard"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui fut le premier homme à poser le pied sur la Lune en 1969 ?",
-    "answers": [
-      "Youri Gagarine",
-      "Neil Armstrong",
-      "John Glenn",
-      "Alan Shepard"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "À quelle date ou personne associe-t-on la sonde ayant effectué le premier survol de Mars ?",
@@ -387,7 +377,8 @@
       "Mariner 4",
       "David Livingstone"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel repère de l'histoire des explorations correspond à la sonde ayant effectué le premier survol de Mars ?",
@@ -397,7 +388,8 @@
       "David Livingstone",
       "Mariner 4"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "À quelle date ou personne associe-t-on la mission ayant posé les premiers humains sur la Lune ?",
@@ -407,7 +399,8 @@
       "David Livingstone",
       "Thor Heyerdahl"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel repère de l'histoire des explorations correspond à la mission ayant posé les premiers humains sur la Lune ?",
@@ -417,7 +410,8 @@
       "David Livingstone",
       "Thor Heyerdahl"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "À quelle date ou personne associe-t-on le premier tour du monde en solitaire à la voile avec escales ?",
@@ -427,17 +421,8 @@
       "Joshua Slocum",
       "1798-1801"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère de l'histoire des explorations correspond à le premier tour du monde en solitaire à la voile avec escales ?",
-    "answers": [
-      "David Livingstone",
-      "Thor Heyerdahl",
-      "1798-1801",
-      "Joshua Slocum"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "À quelle date ou personne associe-t-on l'explorateur associé aux chutes Victoria en Europe ?",
@@ -447,7 +432,8 @@
       "1798-1801",
       "1492"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel repère de l'histoire des explorations correspond à l'explorateur associé aux chutes Victoria en Europe ?",
@@ -457,7 +443,8 @@
       "1798-1801",
       "1492"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "À quelle date ou personne associe-t-on l'explorateur norvégien du Kon-Tiki ?",
@@ -467,7 +454,8 @@
       "Thor Heyerdahl",
       "1488"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel repère de l'histoire des explorations correspond à l'explorateur norvégien du Kon-Tiki ?",
@@ -477,7 +465,8 @@
       "1488",
       "Thor Heyerdahl"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "À quelle date ou personne associe-t-on l'expédition française en Égypte dirigée par Bonaparte ?",
@@ -487,7 +476,9 @@
       "1488",
       "1498"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49",
+    "format": "date"
   },
   {
     "text": "Quel repère de l'histoire des explorations correspond à l'expédition française en Égypte dirigée par Bonaparte ?",
@@ -497,6 +488,232 @@
       "1488",
       "1498"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49",
+    "format": "date"
+  },
+  {
+    "text": "En navigation astronomique, que mesure un sextant pour aider à faire le point ?",
+    "answers": [
+      "La profondeur sous la quille",
+      "L’angle entre un astre et l’horizon",
+      "La vitesse du vent",
+      "La distance déjà parcourue"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "navigation",
+    "fact": "explorations-sextant-angle-horizon",
+    "source": "https://www.rmg.co.uk/collections/objects/search/NAV1242"
+  },
+  {
+    "text": "Dans quelle région se trouve le passage du Nord-Ouest entre Atlantique et Pacifique ?",
+    "answers": [
+      "Le canal de Panama",
+      "La Patagonie",
+      "L’Arctique canadien",
+      "Le sud du Groenland"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "routes",
+    "fact": "explorations-nord-ouest-arctique",
+    "source": "https://www.nesdis.noaa.gov/news/jpss-satellites-help-ships-navigate-the-northwest-passage"
+  },
+  {
+    "text": "À bord de quel navire Charles Darwin a-t-il participé à une expédition comme naturaliste ?",
+    "answers": [
+      "Le Challenger",
+      "Le Resolution",
+      "Le Discovery",
+      "Le Beagle"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "sciences",
+    "fact": "explorations-darwin-beagle",
+    "source": "https://www.christs.cam.ac.uk/darwin-and-voyage-beagle"
+  },
+  {
+    "text": "Quel rôle Sacagawea a-t-elle joué auprès de l’expédition Lewis et Clark ?",
+    "answers": [
+      "Elle a contribué à l’interprétation avec des peuples rencontrés",
+      "Elle a commandé les bateaux de l’expédition",
+      "Elle a financé le départ",
+      "Elle a imprimé le récit officiel"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "rencontres",
+    "fact": "explorations-sacagawea-interpretation",
+    "source": "https://www.nps.gov/places/hiring-of-charbonneau-and-sacagawea.htm"
+  },
+  {
+    "text": "Quelle collectrice de plantes s’est embarquée déguisée en homme dans l’expédition de Bougainville ?",
+    "answers": [
+      "Jeanne Villepreux-Power",
+      "Émilie du Châtelet",
+      "Jeanne Barret",
+      "Sophie Germain"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "botanique",
+    "fact": "explorations-barret-bougainville",
+    "source": "https://www.mnhn.fr/fr/jeanne-barret-1740-1807"
+  },
+  {
+    "text": "Pourquoi la coque du « Fram » avait-elle des flancs arrondis ?",
+    "answers": [
+      "Pour briser la glace par son seul poids",
+      "Pour que la pression de la glace soulève le navire",
+      "Pour pouvoir naviguer sous la banquise",
+      "Pour déployer des voiles à partir de la coque"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "navires",
+    "fact": "explorations-fram-coque-glace",
+    "source": "https://frammuseum.no/en/polar-history/vessels/the-polar-ship-fram/"
+  },
+  {
+    "text": "Quel continent apparaît sur le fragment conservé de la carte du monde de Piri Reis, à l’ouest de l’Atlantique ?",
+    "answers": [
+      "L’Amérique du Sud",
+      "L’Australie",
+      "L’Asie",
+      "L’Antarctique"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "cartographie",
+    "fact": "explorations-piri-reis-amerique-sud",
+    "source": "https://www.unesco.org/en/memory-world/piri-reis-world-map-1513"
+  },
+  {
+    "text": "Quel volcan antarctique porte le nom du navire amiral de James Clark Ross ?",
+    "answers": [
+      "Le mont Terror",
+      "Le mont Melbourne",
+      "Le mont Sidley",
+      "Le mont Erebus"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "reperes",
+    "fact": "explorations-ross-erebus-volcan",
+    "source": "https://legacy.bas.ac.uk/about_antarctica/geography/rock/volcanoes.php"
+  },
+  {
+    "text": "Sur quel type d’astre l’atterrisseur Philae de la mission Rosetta s’est-il posé ?",
+    "answers": [
+      "Un astéroïde",
+      "Une lune de Jupiter",
+      "Une planète naine",
+      "Une comète"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "espace",
+    "fact": "explorations-profondeur-philae-comete",
+    "source": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Comet_rendezvous"
+  },
+  {
+    "text": "Quel phénomène astronomique James Cook est-il allé observer à Tahiti lors de son premier voyage ?",
+    "answers": [
+      "Une éclipse totale de Lune",
+      "Le passage de Vénus devant le Soleil",
+      "Le passage de Mercure devant le Soleil",
+      "Le retour de la comète de Halley"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "astronomie",
+    "fact": "explorations-profondeur-cook-tahiti-venus",
+    "source": "https://science.nasa.gov/earth/earth-observatory/cooks-view-of-the-transit-of-venus-78158/"
+  },
+  {
+    "text": "Quel fleuve Jacques Cartier a-t-il remonté pour atteindre Hochelaga, sur le site de Montréal ?",
+    "answers": [
+      "Le Saint-Laurent",
+      "Le Mississippi",
+      "L’Hudson",
+      "Le Mackenzie"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "itineraires",
+    "fact": "explorations-profondeur-cartier-saint-laurent",
+    "source": "https://parks.canada.ca/lhn-nhs/qc/cartierbrebeuf/culture/histoire-history/evenement-event/cartier/b"
+  },
+  {
+    "text": "Que prélevait notamment l’expédition océanographique du HMS Challenger dans les grands fonds ?",
+    "answers": [
+      "Des carottes de banquise",
+      "Des échantillons de l’air en altitude",
+      "Des sédiments",
+      "Des minerais de l’intérieur des volcans"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "oceanographie",
+    "fact": "explorations-profondeur-challenger-prelevements-fonds",
+    "source": "https://www.nhm.ac.uk/our-science/services/collections/mineralogy/ocean-bottom-deposits.html"
+  },
+  {
+    "text": "L’Anse aux Meadows, à Terre-Neuve, conserve des traces de quels navigateurs médiévaux ?",
+    "answers": [
+      "Les Scandinaves",
+      "Les Vénitiens",
+      "Les Génois",
+      "Les Portugais"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "archeologie",
+    "fact": "explorations-profondeur-anse-meadows-norrois",
+    "source": "https://parks.canada.ca/lhn-nhs/nl/meadows/culture"
+  },
+  {
+    "text": "Quelle plante l’expédition du Bounty devait-elle rapporter de Tahiti vers les Antilles ?",
+    "answers": [
+      "Le caféier",
+      "Le cacaoyer",
+      "L’arbre à pain",
+      "L’hévéa"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "botanique",
+    "fact": "explorations-profondeur-bounty-arbre-pain",
+    "source": "https://www.rmg.co.uk/collections/library/rmgl-157723"
+  },
+  {
+    "text": "En l’honneur de qui Jules Dumont d’Urville a-t-il nommé la Terre Adélie ?",
+    "answers": [
+      "Sa mère",
+      "Son épouse",
+      "Sa sœur",
+      "Sa fille"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "toponymie",
+    "fact": "explorations-profondeur-terre-adelie-epouse",
+    "source": "https://www.musee-marine.fr/le-magazine/dossiers-thematiques/voyages-aux-bouts-des-mondes-la-mer-sans-limites/jules-dumont-durville-lappel-de-la-decouverte.html"
+  },
+  {
+    "text": "Que mesurait la mission de La Condamine près de l’équateur pour préciser la forme de la Terre ?",
+    "answers": [
+      "La profondeur moyenne des océans",
+      "La vitesse du courant équatorial",
+      "La hauteur moyenne des Andes",
+      "Un arc de méridien"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "geodesie",
+    "fact": "explorations-profondeur-condamine-arc-meridien",
+    "source": "https://www.academie-sciences.fr/exposition-la-figure-de-la-terre-un-debat-scientifique-franco-anglais-xvii-xxi-siecle"
   }
 ]

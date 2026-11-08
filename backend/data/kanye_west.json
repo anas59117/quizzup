@@ -7,7 +7,8 @@
       "Los Angeles",
       "Houston"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel métier musical Kanye West exerçait-il avant sa percée comme rappeur ?",
@@ -17,7 +18,8 @@
       "Batteur",
       "Ingénieur du son"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-02"
   },
   {
     "text": "Sur quel album figure le titre « We Don’t Care » ?",
@@ -27,7 +29,9 @@
       "The College Dropout",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:we don t care",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « All Falls Down » ?",
@@ -37,7 +41,9 @@
       "Gold Digger",
       "We Don’t Care"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:we don t care",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « All Falls Down » ?",
@@ -47,7 +53,9 @@
       "Graduation",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:all falls down",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Spaceship » ?",
@@ -57,7 +65,9 @@
       "Crack Music",
       "Roses"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:all falls down",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Spaceship » ?",
@@ -67,7 +77,9 @@
       "The College Dropout",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:spaceship",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Jesus Walks » ?",
@@ -77,7 +89,9 @@
       "Stronger",
       "Spaceship"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:spaceship",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Jesus Walks » ?",
@@ -87,7 +101,9 @@
       "Graduation",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:jesus walks",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Never Let Me Down » ?",
@@ -97,7 +113,9 @@
       "Good Life",
       "Can’t Tell Me Nothing"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:jesus walks",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Never Let Me Down » ?",
@@ -107,7 +125,9 @@
       "The College Dropout",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:never let me down",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Slow Jamz » ?",
@@ -117,7 +137,9 @@
       "Power",
       "Never Let Me Down"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:never let me down",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Slow Jamz » ?",
@@ -127,7 +149,9 @@
       "Graduation",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:slow jamz",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « We Don’t Care » ?",
@@ -137,7 +161,9 @@
       "Monster",
       "Runaway"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:slow jamz",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Heard ’Em Say » ?",
@@ -147,7 +173,9 @@
       "Late Registration",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:heard em say",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Touch the Sky » ?",
@@ -157,7 +185,9 @@
       "Spaceship",
       "Heard ’Em Say"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:heard em say",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Touch the Sky » ?",
@@ -167,7 +197,9 @@
       "Graduation",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:touch the sky",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Gold Digger » ?",
@@ -177,7 +209,9 @@
       "Never Let Me Down",
       "Slow Jamz"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:touch the sky",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Gold Digger » ?",
@@ -187,7 +221,9 @@
       "Late Registration",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:gold digger",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Drive Slow » ?",
@@ -197,7 +233,9 @@
       "Stronger",
       "Gold Digger"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:gold digger",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Drive Slow » ?",
@@ -207,7 +245,9 @@
       "Graduation",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:drive slow",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Crack Music » ?",
@@ -217,7 +257,9 @@
       "Good Life",
       "Can’t Tell Me Nothing"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:drive slow",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Crack Music » ?",
@@ -227,7 +269,9 @@
       "Late Registration",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:crack music",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Roses » ?",
@@ -237,7 +281,9 @@
       "Power",
       "Crack Music"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:crack music",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Roses » ?",
@@ -247,7 +293,9 @@
       "Graduation",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:roses",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Heard ’Em Say » ?",
@@ -257,7 +305,9 @@
       "Monster",
       "Runaway"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:roses",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Good Morning » ?",
@@ -267,7 +317,9 @@
       "Graduation",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:good morning",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Champion » ?",
@@ -277,7 +329,9 @@
       "Spaceship",
       "Good Morning"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:good morning",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Champion » ?",
@@ -287,7 +341,9 @@
       "Late Registration",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:champion",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Stronger » ?",
@@ -297,7 +353,9 @@
       "Never Let Me Down",
       "Slow Jamz"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:champion",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Stronger » ?",
@@ -307,7 +365,9 @@
       "Graduation",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:stronger",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « I Wonder » ?",
@@ -317,7 +377,9 @@
       "Gold Digger",
       "Stronger"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:stronger",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « I Wonder » ?",
@@ -327,7 +389,9 @@
       "Late Registration",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:i wonder",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Good Life » ?",
@@ -337,7 +401,9 @@
       "Crack Music",
       "Roses"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:i wonder",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Good Life » ?",
@@ -347,7 +413,9 @@
       "Graduation",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:good life",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Can’t Tell Me Nothing » ?",
@@ -357,7 +425,9 @@
       "Power",
       "Good Life"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:good life",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Can’t Tell Me Nothing » ?",
@@ -367,7 +437,9 @@
       "Late Registration",
       "My Beautiful Dark Twisted Fantasy"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:can t tell me nothing",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Good Morning » ?",
@@ -377,7 +449,9 @@
       "Monster",
       "Runaway"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:can t tell me nothing",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Dark Fantasy » ?",
@@ -387,7 +461,9 @@
       "My Beautiful Dark Twisted Fantasy",
       "Graduation"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:dark fantasy",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Gorgeous » ?",
@@ -397,7 +473,9 @@
       "Spaceship",
       "Dark Fantasy"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:dark fantasy",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Gorgeous » ?",
@@ -407,7 +485,9 @@
       "Late Registration",
       "Graduation"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:gorgeous",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Power » ?",
@@ -417,7 +497,9 @@
       "Never Let Me Down",
       "Slow Jamz"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:gorgeous",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Power » ?",
@@ -427,7 +509,9 @@
       "My Beautiful Dark Twisted Fantasy",
       "Graduation"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:power",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « All of the Lights » ?",
@@ -437,7 +521,9 @@
       "Gold Digger",
       "Power"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:power",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « All of the Lights » ?",
@@ -447,7 +533,9 @@
       "Late Registration",
       "Graduation"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:all of the lights",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Monster » ?",
@@ -457,7 +545,9 @@
       "Crack Music",
       "Roses"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:all of the lights",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Monster » ?",
@@ -467,7 +557,9 @@
       "My Beautiful Dark Twisted Fantasy",
       "Graduation"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "titre:monster",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Runaway » ?",
@@ -477,7 +569,9 @@
       "Stronger",
       "Monster"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "titre:monster",
+    "format": "album"
   },
   {
     "text": "Sur quel album figure le titre « Runaway » ?",
@@ -487,7 +581,9 @@
       "Late Registration",
       "Graduation"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "titre:runaway",
+    "format": "album"
   },
   {
     "text": "Lequel de ces titres figure sur le même album que « Dark Fantasy » ?",
@@ -497,6 +593,225 @@
       "Good Life",
       "Can’t Tell Me Nothing"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "titre:runaway",
+    "format": "album"
+  },
+  {
+    "text": "Quel acteur et chanteur ouvre « Gold Digger » en reprenant une mélodie de Ray Charles ?",
+    "answers": [
+      "Jamie Foxx",
+      "Will Smith",
+      "Eddie Murphy",
+      "Donald Glover"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "collaborations",
+    "fact": "kanye-gold-digger-fox"
+  },
+  {
+    "text": "Avec quel rappeur Kanye West a-t-il formé le duo de « Watch the Throne » ?",
+    "answers": [
+      "Common",
+      "Jay-Z",
+      "Nas",
+      "Pusha T"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "collaborations",
+    "fact": "kanye-watch-throne-jay"
+  },
+  {
+    "text": "Quel duo français est échantillonné dans « Stronger » ?",
+    "answers": [
+      "Justice",
+      "Air",
+      "Daft Punk",
+      "Cassius"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "production",
+    "fact": "kanye-stronger-sample",
+    "source": "https://www.grammy.com/news/feature-kanye-west-turns-40-808s-graduation-and-beyond/"
+  },
+  {
+    "text": "Avec qui Kanye West forme-t-il Kids See Ghosts ?",
+    "answers": [
+      "Chance the Rapper",
+      "Travis Scott",
+      "Lupe Fiasco",
+      "Kid Cudi"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "projets",
+    "fact": "kanye-kids-see-ghosts-cudi"
+  },
+  {
+    "text": "Quelle marque collabore avec Kanye West pour lancer la Yeezy Boost 750 en 2015 ?",
+    "answers": [
+      "Adidas",
+      "Nike",
+      "Puma",
+      "Reebok"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "mode",
+    "fact": "kanye-yeezy-adidas"
+  },
+  {
+    "text": "Quel chanteur interprète le refrain de « Homecoming » ?",
+    "answers": [
+      "Brandon Flowers",
+      "Chris Martin",
+      "Bono",
+      "Damon Albarn"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "collaborations",
+    "fact": "kanye-homecoming-martin"
+  },
+  {
+    "text": "Quelle chanteuse est échantillonnée dans « Through the Wire » ?",
+    "answers": [
+      "Diana Ross",
+      "Donna Summer",
+      "Chaka Khan",
+      "Aretha Franklin"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "production",
+    "fact": "kanye-through-wire-khan"
+  },
+  {
+    "text": "Quel projet musical a enregistré « Woods », échantillonné dans « Lost in the World » ?",
+    "answers": [
+      "Fleet Foxes",
+      "The National",
+      "Sufjan Stevens",
+      "Bon Iver"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "production",
+    "fact": "kanye-lost-world-bon-iver"
+  },
+  {
+    "text": "Quel artiste japonais a créé le visuel de la pochette de « Graduation » ?",
+    "answers": [
+      "Takashi Murakami",
+      "Yayoi Kusama",
+      "Yoshitomo Nara",
+      "Hiroshi Sugimoto"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "visuels",
+    "fact": "kanye-graduation-pochette-murakami",
+    "source": "https://my.biennale.com/artists/takashi-murakami/press-kit"
+  },
+  {
+    "text": "Avec quelle chanteuse Kanye West partage-t-il le titre « American Boy » ?",
+    "answers": [
+      "Alicia Keys",
+      "Kelly Rowland",
+      "Janelle Monáe",
+      "Estelle"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "collaborations",
+    "fact": "kanye-american-boy-estelle",
+    "source": "https://www.grammy.com/awards/categories/best-rap-sung-collaboration/2009/"
+  },
+  {
+    "text": "Dans quelle catégorie « The College Dropout » vaut-il un Grammy à Kanye West en 2005 ?",
+    "answers": [
+      "Meilleur album de rap",
+      "Album de l’année",
+      "Meilleur album vocal pop",
+      "Meilleur album R&B"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "recompenses",
+    "fact": "kanye-college-dropout-grammy-rap-2005",
+    "source": "https://www.grammy.com/awards/categories/best-rap-album/2005/"
+  },
+  {
+    "text": "Quel type de danse accompagne Kanye West au piano dans le film « Runaway » ?",
+    "answers": [
+      "Du flamenco",
+      "Du tango",
+      "Un ballet classique",
+      "Des claquettes"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "clips",
+    "fact": "kanye-runaway-danseuses-ballet",
+    "source": "https://www.youtube.com/watch?v=Jg5wkZ-dJXA"
+  },
+  {
+    "text": "Sur « 808s & Heartbreak », quel effet donne au chant de Kanye West sa sonorité électronique caractéristique ?",
+    "answers": [
+      "Une saturation de bande",
+      "L’Auto-Tune",
+      "Un écho à ressort",
+      "Un effet de panoramique"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "production",
+    "fact": "kanye-808s-autotune-voix",
+    "source": "https://music.apple.com/us/album/808s-heartbreak/1440895024"
+  },
+  {
+    "text": "Quelle tradition musicale porte le chœur qui accompagne Kanye West lors du « Sunday Service » ?",
+    "answers": [
+      "Le chant grégorien",
+      "Le chant lyrique",
+      "Le barbershop",
+      "Le gospel"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "style",
+    "fact": "kanye-sunday-service-choeur-gospel",
+    "source": "https://www.grammy.com/news/kanye-west-will-bring-his-sunday-service-coachella-2019/"
+  },
+  {
+    "text": "Quel groupe a enregistré « I Want You Back », échantillonné dans « Izzo (H.O.V.A.) » que Kanye West produit pour Jay-Z ?",
+    "answers": [
+      "Les Jackson 5",
+      "Les Four Tops",
+      "Les Temptations",
+      "Les Commodores"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "production",
+    "fact": "kanye-izzo-echantillon-jackson-five",
+    "source": "https://tidal.com/magazine/article/there-goes-gravity-a-life-in-rock-and-roll-excerpt-share/1-11838"
+  },
+  {
+    "text": "Quel artiste vidéo réalise « Power », conçu comme un tableau animé autour de Kanye West ?",
+    "answers": [
+      "Hype Williams",
+      "Michel Gondry",
+      "Marco Brambilla",
+      "Anton Corbijn"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "clips",
+    "fact": "kanye-power-marco-brambilla",
+    "source": "https://marcobrambilla.com/power/"
   }
 ]

@@ -1,0 +1,410 @@
+[
+  {
+    "text": "Quelle est la capitale de la France ?",
+    "answers": ["Paris", "Lyon", "Marseille", "Nice"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "villes",
+    "fact": "france-capitale"
+  },
+  {
+    "text": "Quel est le plus grand océan de la planète ?",
+    "answers": ["Atlantique", "Pacifique", "Indien", "Arctique"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "eaux",
+    "fact": "pacifique-ocean"
+  },
+  {
+    "text": "Dans quelle chaîne de montagnes se trouve l’Everest ?",
+    "answers": ["Andes", "Alpes", "Himalaya", "Rocheuses"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "relief",
+    "fact": "everest-himalaya"
+  },
+  {
+    "text": "Dans quel pays d’Asie du Sud se trouve l’État du Kerala ?",
+    "answers": ["Pakistan", "Bangladesh", "Sri Lanka", "Inde"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "territoires",
+    "fact": "kerala-inde"
+  },
+  {
+    "text": "Quelle est la capitale de l’Australie ?",
+    "answers": ["Canberra", "Sydney", "Melbourne", "Perth"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "villes",
+    "fact": "canberra-australie"
+  },
+  {
+    "text": "Quel est le plus vaste désert chaud du monde ?",
+    "answers": ["Gobi", "Sahara", "Kalahari", "Mojave"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "climats",
+    "fact": "sahara-desert-chaud"
+  },
+  {
+    "text": "Quelle est la capitale du Japon ?",
+    "answers": ["Osaka", "Kyoto", "Tokyo", "Nagoya"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "villes",
+    "fact": "tokyo-japon"
+  },
+  {
+    "text": "Sur quel continent se trouve la forêt amazonienne ?",
+    "answers": ["Afrique", "Asie", "Océanie", "Amérique du Sud"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "milieux",
+    "fact": "amazonie-continent"
+  },
+  {
+    "text": "La Thrace orientale constitue la partie européenne de quel pays ?",
+    "answers": ["Turquie", "Grèce", "Égypte", "Italie"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "territoires",
+    "fact": "turquie-thrace"
+  },
+  {
+    "text": "Quel est le plus petit État souverain du monde ?",
+    "answers": ["Monaco", "Vatican", "Saint-Marin", "Liechtenstein"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "territoires",
+    "fact": "vatican-superficie"
+  },
+  {
+    "text": "À quel pays appartient l’enclave de Cabinda ?",
+    "answers": ["Namibie", "République du Congo", "République démocratique du Congo", "Angola"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "territoires",
+    "fact": "cabinda-angola"
+  },
+  {
+    "text": "Quel sommet de l’Alaska est le plus élevé d’Amérique du Nord ?",
+    "answers": ["Denali (mont McKinley)", "Mont Logan", "Mont Rainier", "Pico de Orizaba"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "relief",
+    "fact": "denali",
+    "source": "https://www.usgs.gov/geology-and-ecology-of-national-parks/denali-national-park-and-preserve"
+  },
+  {
+    "text": "Dans quel pays s’élève le Kilimandjaro ?",
+    "answers": ["Kenya", "Tanzanie", "Ouganda", "Éthiopie"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "relief",
+    "fact": "kilimandjaro"
+  },
+  {
+    "text": "Quelle chaîne longe la façade occidentale de l’Amérique du Sud ?",
+    "answers": ["Les Appalaches", "Les Alpes", "La cordillère des Andes", "L’Atlas"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "relief",
+    "fact": "cordillere-andes"
+  },
+  {
+    "text": "Dans quel pays se trouve le sommet de l’Aconcagua ?",
+    "answers": ["Chili", "Pérou", "Bolivie", "Argentine"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "relief",
+    "fact": "aconcagua"
+  },
+  {
+    "text": "Quelle chaîne de montagnes marque conventionnellement une partie de la limite entre Europe et Asie ?",
+    "answers": ["L’Oural", "Les Carpates", "Les Apennins", "L’Altaï"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "relief",
+    "fact": "oural"
+  },
+  {
+    "text": "Quel massif traverse le Maroc, l’Algérie et la Tunisie ?",
+    "answers": ["Le Rif", "L’Atlas", "Le Zagros", "Le Caucase"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "relief",
+    "fact": "atlas-maroc"
+  },
+  {
+    "text": "Quel haut plateau s’étend au nord de l’Himalaya ?",
+    "answers": ["Le plateau de Mongolie", "Le plateau du Deccan", "Le plateau tibétain", "Le plateau iranien"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "relief",
+    "fact": "plateau-tibet"
+  },
+  {
+    "text": "Dans quelle mer le Danube se jette-t-il ?",
+    "answers": ["La mer Baltique", "La mer Adriatique", "La mer du Nord", "La mer Noire"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "eaux",
+    "fact": "danube-mer",
+    "source": "https://whc.unesco.org/en/list/588/"
+  },
+  {
+    "text": "Quel fleuve traverse Le Caire avant de se jeter dans la Méditerranée ?",
+    "answers": ["Le Nil", "L’Euphrate", "Le Jourdain", "Le Tigre"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "eaux",
+    "fact": "nil-egypte"
+  },
+  {
+    "text": "Sur quel fleuve se trouvent les chutes Victoria, entre la Zambie et le Zimbabwe ?",
+    "answers": ["Le Limpopo", "Le Zambèze", "L’Orange", "Le Congo"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "eaux",
+    "fact": "victoria-chutes",
+    "source": "https://whc.unesco.org/en/list/509/"
+  },
+  {
+    "text": "Quel lac sibérien est le plus profond du monde ?",
+    "answers": ["Le lac Ladoga", "Le lac Balkhach", "Le lac Baïkal", "Le lac Onega"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "eaux",
+    "fact": "baikal",
+    "source": "https://whc.unesco.org/fr/list/754/"
+  },
+  {
+    "text": "Quels pays se partagent le lac Titicaca ?",
+    "answers": ["Pérou et Équateur", "Chili et Bolivie", "Argentine et Chili", "Pérou et Bolivie"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "eaux",
+    "fact": "titicaca-frontiere"
+  },
+  {
+    "text": "Dans quel pays le fleuve Okavango forme-t-il un grand delta intérieur ?",
+    "answers": ["Botswana", "Namibie", "Angola", "Zambie"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "eaux",
+    "fact": "okavango",
+    "source": "https://whc.unesco.org/fr/list/1432"
+  },
+  {
+    "text": "Quels deux pays se partagent la mer d’Aral et son ancien lit ?",
+    "answers": ["Azerbaïdjan et Turkménistan", "Kazakhstan et Ouzbékistan", "Iran et Kazakhstan", "Kirghizistan et Tadjikistan"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "eaux",
+    "fact": "aral-bassin",
+    "source": "https://science.nasa.gov/earth/earth-observatory/dunes-and-desert-replace-the-aral-sea-152887/"
+  },
+  {
+    "text": "Quel désert occupe une partie du nord du Chili ?",
+    "answers": ["Le Sonora", "Le Namib", "L’Atacama", "Le Kalahari"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "climats",
+    "fact": "andes-atacama"
+  },
+  {
+    "text": "Quel nom donne-t-on aux vents saisonniers qui rythment les pluies en Asie du Sud ?",
+    "answers": ["Les alizés", "Les vents catabatiques", "Les brises de mer", "Les moussons"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "climats",
+    "fact": "mousson"
+  },
+  {
+    "text": "Pourquoi un versant à l’abri du vent reçoit-il souvent moins de pluie que l’autre côté d’un massif ?",
+    "answers": ["L’air humide a déjà perdu une partie de son eau", "L’altitude y augmente la pression de l’air", "L’eau salée y remplace l’eau douce", "La vallée arrête toute évaporation"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "climats",
+    "fact": "ombre-pluvio"
+  },
+  {
+    "text": "Quel courant froid longe le Pérou et le Chili et contribue à l’aridité du littoral ?",
+    "answers": ["Le courant du Brésil", "Le courant de Humboldt", "Le courant des Aiguilles", "Le courant du Kuroshio"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "climats",
+    "fact": "humboldt"
+  },
+  {
+    "text": "Quelle est la capitale du Maroc ?",
+    "answers": ["Casablanca", "Fès", "Rabat", "Marrakech"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "villes",
+    "fact": "capitales-maroc"
+  },
+  {
+    "text": "Quelle est la capitale fédérale du Canada ?",
+    "answers": ["Toronto", "Vancouver", "Montréal", "Ottawa"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "villes",
+    "fact": "capitales-canada"
+  },
+  {
+    "text": "Quelle ville a remplacé Rio de Janeiro comme capitale du Brésil en 1960 ?",
+    "answers": ["Brasília", "São Paulo", "Salvador", "Belo Horizonte"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "villes",
+    "fact": "brasilia"
+  },
+  {
+    "text": "Quel détroit sépare les rives européenne et asiatique d’Istanbul ?",
+    "answers": ["Les Dardanelles", "Le Bosphore", "Le détroit de Gibraltar", "Le détroit de Kertch"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "villes",
+    "fact": "bosphore-istanbul"
+  },
+  {
+    "text": "Quelle est la capitale de la Tanzanie ?",
+    "answers": ["Dar es Salaam", "Arusha", "Dodoma", "Mwanza"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "villes",
+    "fact": "capitale-tanzanie"
+  },
+  {
+    "text": "Quelle ville est la capitale du Bhoutan ?",
+    "answers": ["Paro", "Punakha", "Phuntsholing", "Thimphou"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "villes",
+    "fact": "capitales-bhoutan",
+    "source": "https://www.mowhs.gov.bt/wp-content/uploads/2019/08/Strategic-Environment-Assessment-for-Thimphu-Structure-Plan-2018.pdf"
+  },
+  {
+    "text": "Quelle ligne imaginaire sépare les hémisphères Nord et Sud ?",
+    "answers": ["L’équateur", "Le tropique du Cancer", "Le méridien de Greenwich", "Le cercle polaire arctique"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "cartes",
+    "fact": "equateur-hemispheres"
+  },
+  {
+    "text": "Quelle coordonnée indique la position à l’est ou à l’ouest de Greenwich ?",
+    "answers": ["La latitude", "La longitude", "L’altitude", "L’azimut"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "cartes",
+    "fact": "longitude"
+  },
+  {
+    "text": "Sur une carte au 1:100 000, quelle distance réelle représente un centimètre ?",
+    "answers": ["Dix mètres", "Cent mètres", "Un kilomètre", "Dix kilomètres"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "cartes",
+    "fact": "echelle"
+  },
+  {
+    "text": "Sur une carte topographique, que relie une courbe de niveau ?",
+    "answers": ["Des points de même latitude", "Des cours d’eau voisins", "Des sommets de même nom", "Des points de même altitude"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "cartes",
+    "fact": "courbes-niveau"
+  },
+  {
+    "text": "Sur une carte de Mercator, comment la taille apparente des régions évolue-t-elle près des pôles ?",
+    "answers": ["Elle est fortement agrandie", "Elle est fortement réduite", "Elle reste proportionnelle à la surface réelle", "Elle ne dépend que de la longitude"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "cartes",
+    "fact": "mercator"
+  },
+  {
+    "text": "Dans quel océan se trouve Madagascar ?",
+    "answers": ["Océan Atlantique", "Océan Indien", "Océan Pacifique", "Océan Austral"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "territoires",
+    "fact": "madagascar-ocean"
+  },
+  {
+    "text": "À quel royaume appartient le Groenland, territoire autonome ?",
+    "answers": ["Norvège", "Suède", "Danemark", "Pays-Bas"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "territoires",
+    "fact": "drapeau-monde-groenland"
+  },
+  {
+    "text": "À quel pays appartient l’archipel de Madère ?",
+    "answers": ["Espagne", "France", "Italie", "Portugal"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "territoires",
+    "fact": "madere"
+  },
+  {
+    "text": "Quel pays partage l’île de Timor avec le Timor oriental ?",
+    "answers": ["Indonésie", "Malaisie", "Philippines", "Papouasie-Nouvelle-Guinée"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "territoires",
+    "fact": "timor"
+  },
+  {
+    "text": "Quel pays est entièrement entouré par l’Afrique du Sud ?",
+    "answers": ["Eswatini", "Lesotho", "Botswana", "Zimbabwe"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "territoires",
+    "fact": "lesotho"
+  },
+  {
+    "text": "Entre quelle péninsule et quelle île passe le détroit de Malacca ?",
+    "answers": ["La péninsule Malaise et Bornéo", "La péninsule Indochinoise et Java", "La péninsule Malaise et Sumatra", "La péninsule Indochinoise et Célèbes"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "territoires",
+    "fact": "detroit-malacca"
+  },
+  {
+    "text": "Au large de quel pays se trouve la Grande Barrière de corail ?",
+    "answers": ["Afrique du Sud", "Mexique", "Inde", "Australie"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "milieux",
+    "fact": "barriere-corail",
+    "source": "https://whc.unesco.org/en/list/154/"
+  },
+  {
+    "text": "Quel milieu côtier est formé d’arbres adaptés à l’eau salée ou saumâtre ?",
+    "answers": ["Une mangrove", "Une tourbière", "Une steppe", "Une forêt boréale"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "milieux",
+    "fact": "mangrove"
+  },
+  {
+    "text": "Dans quel type de roche les paysages karstiques se forment-ils le plus couramment ?",
+    "answers": ["Le granite", "Le calcaire", "Le basalte", "Le schiste"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "milieux",
+    "fact": "karst"
+  },
+  {
+    "text": "Comment appelle-t-on un bassin dont les eaux ne rejoignent pas l’océan ?",
+    "answers": ["Un bassin exoréique", "Un bassin océanique", "Un bassin endoréique", "Un bassin d’avant-pays"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "milieux",
+    "fact": "bassin-endor"
+  }
+]

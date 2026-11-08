@@ -7,17 +7,8 @@
       "le chanteur surnommé le King du rock'n'roll",
       "la chanteuse surnommée la Reine de la soul"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel artiste décrit Michael Jackson ?",
-    "answers": [
-      "la chanteuse surnommée la Reine de la pop",
-      "le chanteur surnommé le Roi de la pop",
-      "le chanteur surnommé le King du rock'n'roll",
-      "la chanteuse surnommée la Reine de la soul"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quelle star de la musique correspond à Madonna ?",
@@ -27,7 +18,8 @@
       "la chanteuse surnommée la Reine de la pop",
       "l'artiste ayant commencé dans Destiny's Child"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel artiste décrit Madonna ?",
@@ -37,7 +29,8 @@
       "l'artiste ayant commencé dans Destiny's Child",
       "la chanteuse surnommée la Reine de la pop"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "Quelle star de la musique correspond à Elvis Presley ?",
@@ -47,7 +40,8 @@
       "l'artiste ayant commencé dans Destiny's Child",
       "la chanteuse barbadienne de Umbrella"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel artiste décrit Elvis Presley ?",
@@ -57,7 +51,8 @@
       "l'artiste ayant commencé dans Destiny's Child",
       "la chanteuse barbadienne de Umbrella"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Quelle star de la musique correspond à Aretha Franklin ?",
@@ -67,17 +62,8 @@
       "la chanteuse surnommée la Reine de la soul",
       "l'auteure-compositrice de l'album 1989"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel artiste décrit Aretha Franklin ?",
-    "answers": [
-      "l'artiste ayant commencé dans Destiny's Child",
-      "la chanteuse barbadienne de Umbrella",
-      "l'auteure-compositrice de l'album 1989",
-      "la chanteuse surnommée la Reine de la soul"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quelle star de la musique correspond à Beyoncé ?",
@@ -87,7 +73,8 @@
       "l'auteure-compositrice de l'album 1989",
       "la chanteuse britannique des albums 19, 21, 25 et 30"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel artiste décrit Beyoncé ?",
@@ -97,7 +84,8 @@
       "l'auteure-compositrice de l'album 1989",
       "la chanteuse britannique des albums 19, 21, 25 et 30"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "Quelle star de la musique correspond à Rihanna ?",
@@ -107,7 +95,8 @@
       "la chanteuse barbadienne de Umbrella",
       "l'interprète de I Will Always Love You dans Bodyguard"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel artiste décrit Rihanna ?",
@@ -117,7 +106,8 @@
       "l'interprète de I Will Always Love You dans Bodyguard",
       "la chanteuse barbadienne de Umbrella"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Quelle star de la musique correspond à Taylor Swift ?",
@@ -127,17 +117,8 @@
       "l'interprète de I Will Always Love You dans Bodyguard",
       "l'auteur de Purple Rain"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel artiste décrit Taylor Swift ?",
-    "answers": [
-      "la chanteuse britannique des albums 19, 21, 25 et 30",
-      "l'auteure-compositrice de l'album 1989",
-      "l'interprète de I Will Always Love You dans Bodyguard",
-      "l'auteur de Purple Rain"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quelle star de la musique correspond à Adele ?",
@@ -147,7 +128,8 @@
       "la chanteuse britannique des albums 19, 21, 25 et 30",
       "l'artiste de Songs in the Key of Life"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel artiste décrit Adele ?",
@@ -157,7 +139,8 @@
       "l'artiste de Songs in the Key of Life",
       "la chanteuse britannique des albums 19, 21, 25 et 30"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quelle star de la musique correspond à Whitney Houston ?",
@@ -167,7 +150,8 @@
       "l'artiste de Songs in the Key of Life",
       "l'artiste ayant incarné Ziggy Stardust"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel artiste décrit Whitney Houston ?",
@@ -177,7 +161,8 @@
       "l'artiste de Songs in the Key of Life",
       "l'artiste ayant incarné Ziggy Stardust"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Quelle star de la musique correspond à Prince ?",
@@ -187,17 +172,8 @@
       "l'auteur de Purple Rain",
       "le chanteur principal de Queen"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel artiste décrit Prince ?",
-    "answers": [
-      "l'artiste de Songs in the Key of Life",
-      "l'artiste ayant incarné Ziggy Stardust",
-      "le chanteur principal de Queen",
-      "l'auteur de Purple Rain"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quelle star de la musique correspond à Stevie Wonder ?",
@@ -207,7 +183,8 @@
       "le chanteur principal de Queen",
       "le Beatle auteur de Imagine"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel artiste décrit Stevie Wonder ?",
@@ -217,7 +194,8 @@
       "le chanteur principal de Queen",
       "le Beatle auteur de Imagine"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quelle star de la musique correspond à David Bowie ?",
@@ -227,7 +205,8 @@
       "l'artiste ayant incarné Ziggy Stardust",
       "le Beatle ayant fondé Wings"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel artiste décrit David Bowie ?",
@@ -237,7 +216,8 @@
       "le Beatle ayant fondé Wings",
       "l'artiste ayant incarné Ziggy Stardust"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Quelle star de la musique correspond à Freddie Mercury ?",
@@ -247,17 +227,8 @@
       "le Beatle ayant fondé Wings",
       "la star jamaïcaine du reggae et des Wailers"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel artiste décrit Freddie Mercury ?",
-    "answers": [
-      "le Beatle auteur de Imagine",
-      "le chanteur principal de Queen",
-      "le Beatle ayant fondé Wings",
-      "la star jamaïcaine du reggae et des Wailers"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quelle star de la musique correspond à John Lennon ?",
@@ -267,7 +238,8 @@
       "le Beatle auteur de Imagine",
       "l'interprète de La Vie en rose"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel artiste décrit John Lennon ?",
@@ -277,7 +249,8 @@
       "l'interprète de La Vie en rose",
       "le Beatle auteur de Imagine"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Quelle star de la musique correspond à Paul McCartney ?",
@@ -287,7 +260,8 @@
       "l'interprète de La Vie en rose",
       "l'auteur-interprète de La Bohème"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel artiste décrit Paul McCartney ?",
@@ -297,7 +271,8 @@
       "l'interprète de La Vie en rose",
       "l'auteur-interprète de La Bohème"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quelle star de la musique correspond à Bob Marley ?",
@@ -307,17 +282,8 @@
       "la star jamaïcaine du reggae et des Wailers",
       "l'auteur-interprète de Quand la musique est bonne"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel artiste décrit Bob Marley ?",
-    "answers": [
-      "l'interprète de La Vie en rose",
-      "l'auteur-interprète de La Bohème",
-      "l'auteur-interprète de Quand la musique est bonne",
-      "la star jamaïcaine du reggae et des Wailers"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quelle star de la musique correspond à Édith Piaf ?",
@@ -327,7 +293,8 @@
       "l'auteur-interprète de Quand la musique est bonne",
       "l'interprète québécoise de Pour que tu m'aimes encore"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel artiste décrit Édith Piaf ?",
@@ -337,7 +304,8 @@
       "l'auteur-interprète de Quand la musique est bonne",
       "l'interprète québécoise de Pour que tu m'aimes encore"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Quelle star de la musique correspond à Charles Aznavour ?",
@@ -347,7 +315,8 @@
       "l'auteur-interprète de La Bohème",
       "l'artiste belge de Papaoutai"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel artiste décrit Charles Aznavour ?",
@@ -357,7 +326,8 @@
       "l'artiste belge de Papaoutai",
       "l'auteur-interprète de La Bohème"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quelle star de la musique correspond à Jean-Jacques Goldman ?",
@@ -367,17 +337,8 @@
       "l'artiste belge de Papaoutai",
       "le duo français casqué de Get Lucky"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel artiste décrit Jean-Jacques Goldman ?",
-    "answers": [
-      "l'interprète québécoise de Pour que tu m'aimes encore",
-      "l'auteur-interprète de Quand la musique est bonne",
-      "l'artiste belge de Papaoutai",
-      "le duo français casqué de Get Lucky"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quelle star de la musique correspond à Céline Dion ?",
@@ -387,7 +348,8 @@
       "l'interprète québécoise de Pour que tu m'aimes encore",
       "la chanteuse et pianiste de Feeling Good"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel artiste décrit Céline Dion ?",
@@ -397,7 +359,8 @@
       "la chanteuse et pianiste de Feeling Good",
       "l'interprète québécoise de Pour que tu m'aimes encore"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Quelle star de la musique correspond à Stromae ?",
@@ -407,7 +370,8 @@
       "la chanteuse et pianiste de Feeling Good",
       "la chanteuse britannique de Back to Black"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel artiste décrit Stromae ?",
@@ -417,7 +381,8 @@
       "la chanteuse et pianiste de Feeling Good",
       "la chanteuse britannique de Back to Black"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Quelle star de la musique correspond à Daft Punk ?",
@@ -427,17 +392,8 @@
       "le duo français casqué de Get Lucky",
       "le rappeur de l'album To Pimp a Butterfly"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel artiste décrit Daft Punk ?",
-    "answers": [
-      "la chanteuse et pianiste de Feeling Good",
-      "la chanteuse britannique de Back to Black",
-      "le rappeur de l'album To Pimp a Butterfly",
-      "le duo français casqué de Get Lucky"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quelle star de la musique correspond à Nina Simone ?",
@@ -447,7 +403,8 @@
       "le rappeur de l'album To Pimp a Butterfly",
       "le chanteur surnommé le Roi de la pop"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel artiste décrit Nina Simone ?",
@@ -457,7 +414,8 @@
       "le rappeur de l'album To Pimp a Butterfly",
       "le chanteur surnommé le Roi de la pop"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Quelle star de la musique correspond à Amy Winehouse ?",
@@ -467,7 +425,8 @@
       "la chanteuse britannique de Back to Black",
       "la chanteuse surnommée la Reine de la pop"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel artiste décrit Amy Winehouse ?",
@@ -477,7 +436,8 @@
       "la chanteuse surnommée la Reine de la pop",
       "la chanteuse britannique de Back to Black"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quelle star de la musique correspond à Kendrick Lamar ?",
@@ -487,7 +447,8 @@
       "la chanteuse surnommée la Reine de la pop",
       "le chanteur surnommé le King du rock'n'roll"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quel artiste décrit Kendrick Lamar ?",
@@ -497,6 +458,119 @@
       "la chanteuse surnommée la Reine de la pop",
       "le chanteur surnommé le King du rock'n'roll"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "De quel instrument Elton John s’accompagne-t-il habituellement sur scène ?",
+    "answers": [
+      "La batterie",
+      "Le piano",
+      "Le saxophone",
+      "La contrebasse"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "instruments",
+    "fact": "elton-john-instrument-piano",
+    "source": "https://www.eltonjohn.com/elton-john"
+  },
+  {
+    "text": "Avec quel acteur Lady Gaga chante-t-elle « Shallow » dans « A Star Is Born » ?",
+    "answers": [
+      "Ryan Gosling",
+      "Joaquin Phoenix",
+      "Rami Malek",
+      "Bradley Cooper"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "duos",
+    "fact": "lady-gaga-shallow-bradley-cooper",
+    "source": "https://www.youtube.com/watch?v=bo_efYhYU2A"
+  },
+  {
+    "text": "Quel collectif Bob Geldof et Midge Ure rassemblent-ils pour enregistrer leur single de Noël en 1984 ?",
+    "answers": [
+      "USA for Africa",
+      "The Traveling Wilburys",
+      "Band Aid",
+      "Artists United Against Apartheid"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "collectifs",
+    "fact": "band-aid-geldof-ure-single",
+    "source": "https://www.officialcharts.com/chart-news/midge-ure-do-they-know-it-s-christmas-isn-t-perfect-but-it-does-the-job-__7253/"
+  },
+  {
+    "text": "Sous quel label Diana Ross et les Supremes enregistrent-elles « Stop! In the Name of Love » ?",
+    "answers": [
+      "Motown",
+      "Stax",
+      "Atlantic",
+      "Chess"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "labels",
+    "fact": "supremes-label-motown",
+    "source": "https://www.motownmuseum.org/artist/supremes/"
+  },
+  {
+    "text": "Qui écrit « I Will Always Love You », repris ensuite par Whitney Houston ?",
+    "answers": [
+      "Dolly Parton",
+      "Carole King",
+      "Linda Ronstadt",
+      "Patsy Cline"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "ecriture",
+    "fact": "dolly-parton-compose-i-will-always-love-you",
+    "source": "https://www.dollyparton.com/news/whitney-houston-i-will-always-love-you"
+  },
+  {
+    "text": "Quelle chanteuse de fado enregistre l’album « Terra » avec le producteur Javier Limón ?",
+    "answers": [
+      "Amália Rodrigues",
+      "Ana Moura",
+      "Mariza",
+      "Dulce Pontes"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "albums",
+    "fact": "mariza-fado-album-terra",
+    "source": "https://antena1.rtp.pt/musica/discos/disco-a1-terra-mariza/"
+  },
+  {
+    "text": "Quel musicien signe les arrangements d’« Histoire de Melody Nelson » avec Serge Gainsbourg ?",
+    "answers": [
+      "Michel Colombier",
+      "Alain Goraguer",
+      "Michel Legrand",
+      "Jean-Claude Vannier"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "ecriture",
+    "fact": "gainsbourg-vannier-arrangements-melody-nelson",
+    "source": "https://catalogue.bnf.fr/ark%3A/12148/cb46934822z"
+  },
+  {
+    "text": "Quel batteur de l’Africa 70 contribue avec Fela Kuti à façonner l’afrobeat ?",
+    "answers": [
+      "Hugh Masekela",
+      "Tony Allen",
+      "Manu Dibango",
+      "Femi Kuti"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "styles",
+    "fact": "tony-allen-fela-kuti-afrobeat",
+    "source": "https://www.grammy.com/news/tony-allen-influential-nigerian-drummer-co-founder-afrobeat-dies-79/"
   }
 ]

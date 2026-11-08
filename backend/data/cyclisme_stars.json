@@ -7,17 +7,8 @@
       "le premier quintuple vainqueur du Tour de France",
       "l'Espagnol vainqueur de cinq Tours consécutifs"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle star du cyclisme décrit Eddy Merckx ?",
-    "answers": [
-      "le Français surnommé le Blaireau",
-      "le Belge surnommé le Cannibale",
-      "le premier quintuple vainqueur du Tour de France",
-      "l'Espagnol vainqueur de cinq Tours consécutifs"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel cycliste correspond à Bernard Hinault ?",
@@ -27,7 +18,8 @@
       "le Français surnommé le Blaireau",
       "le champion italien surnommé le Campionissimo"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Quelle star du cyclisme décrit Bernard Hinault ?",
@@ -37,7 +29,8 @@
       "le champion italien surnommé le Campionissimo",
       "le Français surnommé le Blaireau"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel cycliste correspond à Jacques Anquetil ?",
@@ -47,7 +40,8 @@
       "le champion italien surnommé le Campionissimo",
       "le rival italien de Fausto Coppi"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quelle star du cyclisme décrit Jacques Anquetil ?",
@@ -57,7 +51,8 @@
       "le champion italien surnommé le Campionissimo",
       "le rival italien de Fausto Coppi"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel cycliste correspond à Miguel Indurain ?",
@@ -67,17 +62,8 @@
       "l'Espagnol vainqueur de cinq Tours consécutifs",
       "le Français vainqueur de trois Tours consécutifs"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle star du cyclisme décrit Miguel Indurain ?",
-    "answers": [
-      "le champion italien surnommé le Campionissimo",
-      "le rival italien de Fausto Coppi",
-      "le Français vainqueur de trois Tours consécutifs",
-      "l'Espagnol vainqueur de cinq Tours consécutifs"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quel cycliste correspond à Fausto Coppi ?",
@@ -87,7 +73,8 @@
       "le Français vainqueur de trois Tours consécutifs",
       "le Français surnommé l'éternel second"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Quelle star du cyclisme décrit Fausto Coppi ?",
@@ -97,7 +84,8 @@
       "le Français vainqueur de trois Tours consécutifs",
       "le Français surnommé l'éternel second"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel cycliste correspond à Gino Bartali ?",
@@ -107,7 +95,8 @@
       "le rival italien de Fausto Coppi",
       "le premier Américain vainqueur du Tour"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quelle star du cyclisme décrit Gino Bartali ?",
@@ -117,7 +106,8 @@
       "le premier Américain vainqueur du Tour",
       "le rival italien de Fausto Coppi"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel cycliste correspond à Louison Bobet ?",
@@ -127,17 +117,8 @@
       "le premier Américain vainqueur du Tour",
       "l'Irlandais auteur du triplé Giro-Tour-Mondial en 1987"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle star du cyclisme décrit Louison Bobet ?",
-    "answers": [
-      "le Français surnommé l'éternel second",
-      "le Français vainqueur de trois Tours consécutifs",
-      "le premier Américain vainqueur du Tour",
-      "l'Irlandais auteur du triplé Giro-Tour-Mondial en 1987"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quel cycliste correspond à Raymond Poulidor ?",
@@ -147,7 +128,8 @@
       "le Français surnommé l'éternel second",
       "l'Italien surnommé le Pirate"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quelle star du cyclisme décrit Raymond Poulidor ?",
@@ -157,7 +139,8 @@
       "l'Italien surnommé le Pirate",
       "le Français surnommé l'éternel second"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel cycliste correspond à Greg LeMond ?",
@@ -167,7 +150,8 @@
       "l'Italien surnommé le Pirate",
       "l'Allemand vainqueur du Tour 1997"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quelle star du cyclisme décrit Greg LeMond ?",
@@ -177,7 +161,8 @@
       "l'Italien surnommé le Pirate",
       "l'Allemand vainqueur du Tour 1997"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel cycliste correspond à Stephen Roche ?",
@@ -187,17 +172,8 @@
       "l'Irlandais auteur du triplé Giro-Tour-Mondial en 1987",
       "le Britannique quadruple vainqueur du Tour"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle star du cyclisme décrit Stephen Roche ?",
-    "answers": [
-      "l'Italien surnommé le Pirate",
-      "l'Allemand vainqueur du Tour 1997",
-      "le Britannique quadruple vainqueur du Tour",
-      "l'Irlandais auteur du triplé Giro-Tour-Mondial en 1987"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quel cycliste correspond à Marco Pantani ?",
@@ -207,7 +183,8 @@
       "le Britannique quadruple vainqueur du Tour",
       "le Gallois vainqueur du Tour 2018"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quelle star du cyclisme décrit Marco Pantani ?",
@@ -217,7 +194,8 @@
       "le Britannique quadruple vainqueur du Tour",
       "le Gallois vainqueur du Tour 2018"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel cycliste correspond à Jan Ullrich ?",
@@ -227,7 +205,8 @@
       "l'Allemand vainqueur du Tour 1997",
       "le Slovène vainqueur du Tour dès 2020"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quelle star du cyclisme décrit Jan Ullrich ?",
@@ -237,7 +216,8 @@
       "le Slovène vainqueur du Tour dès 2020",
       "l'Allemand vainqueur du Tour 1997"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel cycliste correspond à Chris Froome ?",
@@ -247,17 +227,8 @@
       "le Slovène vainqueur du Tour dès 2020",
       "le Danois vainqueur du Tour 2022"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle star du cyclisme décrit Chris Froome ?",
-    "answers": [
-      "le Gallois vainqueur du Tour 2018",
-      "le Britannique quadruple vainqueur du Tour",
-      "le Slovène vainqueur du Tour dès 2020",
-      "le Danois vainqueur du Tour 2022"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quel cycliste correspond à Geraint Thomas ?",
@@ -267,7 +238,8 @@
       "le Gallois vainqueur du Tour 2018",
       "le Slovaque triple champion du monde sur route"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quelle star du cyclisme décrit Geraint Thomas ?",
@@ -277,7 +249,8 @@
       "le Slovaque triple champion du monde sur route",
       "le Gallois vainqueur du Tour 2018"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel cycliste correspond à Tadej Pogačar ?",
@@ -287,7 +260,8 @@
       "le Slovaque triple champion du monde sur route",
       "le sprinteur britannique de l'île de Man"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quelle star du cyclisme décrit Tadej Pogačar ?",
@@ -297,7 +271,8 @@
       "le Slovaque triple champion du monde sur route",
       "le sprinteur britannique de l'île de Man"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel cycliste correspond à Jonas Vingegaard ?",
@@ -307,17 +282,8 @@
       "le Danois vainqueur du Tour 2022",
       "le sprinteur italien surnommé le Roi Lion"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle star du cyclisme décrit Jonas Vingegaard ?",
-    "answers": [
-      "le Slovaque triple champion du monde sur route",
-      "le sprinteur britannique de l'île de Man",
-      "le sprinteur italien surnommé le Roi Lion",
-      "le Danois vainqueur du Tour 2022"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quel cycliste correspond à Peter Sagan ?",
@@ -327,7 +293,8 @@
       "le sprinteur italien surnommé le Roi Lion",
       "le Belge spécialiste des classiques pavées"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quelle star du cyclisme décrit Peter Sagan ?",
@@ -337,7 +304,8 @@
       "le sprinteur italien surnommé le Roi Lion",
       "le Belge spécialiste des classiques pavées"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel cycliste correspond à Mark Cavendish ?",
@@ -347,7 +315,8 @@
       "le sprinteur britannique de l'île de Man",
       "le Suisse surnommé Spartacus"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quelle star du cyclisme décrit Mark Cavendish ?",
@@ -357,7 +326,8 @@
       "le Suisse surnommé Spartacus",
       "le sprinteur britannique de l'île de Man"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel cycliste correspond à Mario Cipollini ?",
@@ -367,17 +337,8 @@
       "le Suisse surnommé Spartacus",
       "la Néerlandaise championne multidisciplinaire"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle star du cyclisme décrit Mario Cipollini ?",
-    "answers": [
-      "le Belge spécialiste des classiques pavées",
-      "le sprinteur italien surnommé le Roi Lion",
-      "le Suisse surnommé Spartacus",
-      "la Néerlandaise championne multidisciplinaire"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quel cycliste correspond à Tom Boonen ?",
@@ -387,7 +348,8 @@
       "le Belge spécialiste des classiques pavées",
       "la Française championne sur route et contre-la-montre"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quelle star du cyclisme décrit Tom Boonen ?",
@@ -397,7 +359,8 @@
       "la Française championne sur route et contre-la-montre",
       "le Belge spécialiste des classiques pavées"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel cycliste correspond à Fabian Cancellara ?",
@@ -407,7 +370,8 @@
       "la Française championne sur route et contre-la-montre",
       "la Néerlandaise championne olympique sur route 2016"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quelle star du cyclisme décrit Fabian Cancellara ?",
@@ -417,7 +381,8 @@
       "la Française championne sur route et contre-la-montre",
       "la Néerlandaise championne olympique sur route 2016"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel cycliste correspond à Marianne Vos ?",
@@ -427,17 +392,8 @@
       "la Néerlandaise championne multidisciplinaire",
       "la Britannique légendaire du contre-la-montre"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle star du cyclisme décrit Marianne Vos ?",
-    "answers": [
-      "la Française championne sur route et contre-la-montre",
-      "la Néerlandaise championne olympique sur route 2016",
-      "la Britannique légendaire du contre-la-montre",
-      "la Néerlandaise championne multidisciplinaire"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quel cycliste correspond à Jeannie Longo ?",
@@ -447,7 +403,8 @@
       "la Britannique légendaire du contre-la-montre",
       "le Belge surnommé le Cannibale"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quelle star du cyclisme décrit Jeannie Longo ?",
@@ -457,7 +414,8 @@
       "la Britannique légendaire du contre-la-montre",
       "le Belge surnommé le Cannibale"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel cycliste correspond à Anna van der Breggen ?",
@@ -467,7 +425,8 @@
       "la Néerlandaise championne olympique sur route 2016",
       "le Français surnommé le Blaireau"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quelle star du cyclisme décrit Anna van der Breggen ?",
@@ -477,7 +436,8 @@
       "le Français surnommé le Blaireau",
       "la Néerlandaise championne olympique sur route 2016"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel cycliste correspond à Beryl Burton ?",
@@ -487,7 +447,8 @@
       "le Français surnommé le Blaireau",
       "le premier quintuple vainqueur du Tour de France"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quelle star du cyclisme décrit Beryl Burton ?",
@@ -497,6 +458,119 @@
       "le Français surnommé le Blaireau",
       "le premier quintuple vainqueur du Tour de France"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quel maillot de classement Mark Cavendish remporte-t-il au Tour de France 2011 ?",
+    "answers": [
+      "Le maillot vert",
+      "Le maillot jaune",
+      "Le maillot à pois",
+      "Le maillot blanc"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "maillots",
+    "fact": "cavendish-tour-2011-maillot-vert",
+    "source": "https://www.letour.fr/en/news/2011/cadel-australia-s-first-tour-champion/1045125"
+  },
+  {
+    "text": "Quel vainqueur du Tour des Flandres est le petit-fils de Raymond Poulidor ?",
+    "answers": [
+      "Wout van Aert",
+      "Peter Sagan",
+      "Mathieu van der Poel",
+      "Fabian Cancellara"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "familles",
+    "fact": "poulidor-petit-fils-van-der-poel",
+    "source": "https://www.uci.org/pressrelease/uci-grants-alpecin-fenix-permission-to-wear-special-poupou-jersey-on-first-day-of-tour-de-france/1RtEZuwq8BS68B2Y9jjaQ5"
+  },
+  {
+    "text": "Dans quelle discipline Pauline Ferrand-Prévot remporte-t-elle l’or à Paris 2024 ?",
+    "answers": [
+      "L’omnium sur piste",
+      "Le cross-country en VTT",
+      "Le BMX racing",
+      "Le contre-la-montre sur route"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "disciplines",
+    "fact": "ferrand-prevot-vtt-paris",
+    "source": "https://www.uci.org/article/olympic-games-paris-2024-ferrand-prevot-dominates-womens-mountain-bike/43tpCHQjpIrguz5Fbf0OKG"
+  },
+  {
+    "text": "Quelle ascension accueille le célèbre duel entre Anquetil et Poulidor lors du Tour 1964 ?",
+    "answers": [
+      "Le mont Ventoux",
+      "Le col du Tourmalet",
+      "L’Alpe d’Huez",
+      "Le puy de Dôme"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "duels",
+    "fact": "anquetil-poulidor-puy-de-dome",
+    "source": "https://www.puy-de-dome.fr/fileadmin/user_upload/WEB_DP_TOUR_DE_FRANCE_A4.pdf"
+  },
+  {
+    "text": "Qui remporte la première édition du Tour de France Femmes avec Zwift, en 2022 ?",
+    "answers": [
+      "Demi Vollering",
+      "Marianne Vos",
+      "Katarzyna Niewiadoma",
+      "Annemiek van Vleuten"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "palmares",
+    "fact": "van-vleuten-tour-femmes-2022",
+    "source": "https://www.letourfemmes.fr/fr/actus/2022/van-vleuten-les-couleurs-du-triomphe/1293067"
+  },
+  {
+    "text": "Quelle marque conçoit le vélo de piste de Chris Boardman pour sa victoire olympique à Barcelone ?",
+    "answers": [
+      "Pinarello",
+      "Lotus",
+      "Colnago",
+      "Peugeot"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "materiel",
+    "fact": "boardman-lotus-poursuite-barcelone",
+    "source": "https://media.lotuscars.com/en/galleries/lotus-olympic-track-bikes.html"
+  },
+  {
+    "text": "Quel écart sépare Greg LeMond et Laurent Fignon au classement final du Tour 1989 ?",
+    "answers": [
+      "Deux secondes",
+      "Quatorze secondes",
+      "Huit secondes",
+      "Trente-sept secondes"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "duels",
+    "fact": "lemond-fignon-tour-1989-huit-secondes",
+    "source": "https://www.letour.fr/en/news/2024/stage-21/monaco-to-nice-every-second-counts/1324378"
+  },
+  {
+    "text": "Quel monument Sean Kelly remporte-t-il après avoir repris Moreno Argentin dans la descente du Poggio ?",
+    "answers": [
+      "Milan-San Remo",
+      "Le Tour de Lombardie",
+      "Le Tour des Flandres",
+      "Liège-Bastogne-Liège"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "classiques",
+    "fact": "sean-kelly-milan-san-remo-poggio",
+    "source": "https://www.milanosanremo.it/en/the-modern-era/"
   }
 ]

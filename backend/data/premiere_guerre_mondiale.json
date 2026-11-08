@@ -1,502 +1,484 @@
 [
   {
-    "text": "À quelle date, alliance ou notion associe-t-on l'assassinat de François-Ferdinand à Sarajevo ?",
-    "answers": [
-      "28 juin 1914",
-      "28 juillet 1914",
-      "septembre 1914",
-      "1916"
-    ],
-    "correct": 0
+    "text": "Quel héritier du trône austro-hongrois est assassiné à Sarajevo en 1914 ?",
+    "answers": ["François-Ferdinand", "Charles Ier", "Frédéric III", "Nicolas II"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "origines",
+    "fact": "sarajevo-victime",
+    "source": "https://www.theworldwar.org/sites/default/files/2022-03/English_version.bassdef.pdf"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à l'assassinat de François-Ferdinand à Sarajevo ?",
-    "answers": [
-      "28 juillet 1914",
-      "28 juin 1914",
-      "septembre 1914",
-      "1916"
-    ],
-    "correct": 1
+    "text": "Quels États forment la Triple-Entente à la veille de la guerre ?",
+    "answers": ["France, Italie et Russie", "France, Royaume-Uni et Russie", "Royaume-Uni, Belgique et Italie", "France, Royaume-Uni et Allemagne"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "origines",
+    "fact": "triple-entente",
+    "source": "https://www.theworldwar.org/sites/default/files/2022-03/English_version.bassdef.pdf"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on la déclaration de guerre de l'Autriche-Hongrie à la Serbie ?",
-    "answers": [
-      "septembre 1914",
-      "1916",
-      "28 juillet 1914",
-      "1917"
-    ],
-    "correct": 2
+    "text": "Après l’attentat de Sarajevo, à quel État l’Autriche-Hongrie adresse-t-elle un ultimatum ?",
+    "answers": ["Roumanie", "Grèce", "Serbie", "Bulgarie"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "origines",
+    "fact": "serbie-ultimatum",
+    "source": "https://www.theworldwar.org/sites/default/files/2022-03/English_version.bassdef.pdf"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à la déclaration de guerre de l'Autriche-Hongrie à la Serbie ?",
-    "answers": [
-      "septembre 1914",
-      "1916",
-      "1917",
-      "28 juillet 1914"
-    ],
-    "correct": 3
+    "text": "La violation de la neutralité de quel pays précipite l’entrée en guerre du Royaume-Uni en 1914 ?",
+    "answers": ["Suisse", "Pays-Bas", "Danemark", "Belgique"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "origines",
+    "fact": "belgique-neutralite",
+    "source": "https://www.theworldwar.org/sites/default/files/2022-03/English_version.bassdef.pdf"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on la première bataille de la Marne ?",
-    "answers": [
-      "septembre 1914",
-      "1916",
-      "1917",
-      "mars 1918"
-    ],
-    "correct": 0
+    "text": "Quel plan allemand prévoyait de battre rapidement la France avant de concentrer les forces contre la Russie ?",
+    "answers": ["Plan Schlieffen", "Plan XVII", "Plan Joffre", "Plan Conrad"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "origines",
+    "fact": "plan-schlieffen",
+    "source": "https://www.theworldwar.org/sites/default/files/2022-03/English_version.bassdef.pdf"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à la première bataille de la Marne ?",
-    "answers": [
-      "1916",
-      "septembre 1914",
-      "1917",
-      "mars 1918"
-    ],
-    "correct": 1
+    "text": "Quel empire rejoint le camp de l’Allemagne et de l’Autriche-Hongrie à l’automne 1914 ?",
+    "answers": ["Empire russe", "Empire ottoman", "Empire britannique", "Empire japonais"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "origines",
+    "fact": "empires-centraux",
+    "source": "https://www.theworldwar.org/learn/about-wwi/key-dates"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on la bataille de Verdun ?",
-    "answers": [
-      "1917",
-      "mars 1918",
-      "1916",
-      "11 novembre 1918"
-    ],
-    "correct": 2
+    "text": "Sur quel front se déroulent les batailles de la Marne, de Verdun et de la Somme ?",
+    "answers": ["Front de l’Est", "Front italien", "Front de l’Ouest", "Front des Balkans"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "batailles",
+    "fact": "front-ouest",
+    "source": "https://www.theworldwar.org/learn/about-wwi/key-dates"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à la bataille de Verdun ?",
-    "answers": [
-      "1917",
-      "mars 1918",
-      "11 novembre 1918",
-      "1916"
-    ],
-    "correct": 3
+    "text": "Quel usage l’armée française fait-elle des taxis parisiens lors de la première bataille de la Marne ?",
+    "answers": ["Évacuer le gouvernement vers Bordeaux", "Déplacer des blessés vers Londres", "Acheminer des vivres aux habitants de Paris", "Transporter des renforts vers le front"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "batailles",
+    "fact": "taxis-marne",
+    "source": "https://www.cheminsdememoire.gouv.fr/fr/un-taxi-renault"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on la bataille de la Somme ?",
-    "answers": [
-      "1916",
-      "1917",
-      "mars 1918",
-      "11 novembre 1918"
-    ],
-    "correct": 0
+    "text": "En quelle année se déroule la bataille de Verdun ?",
+    "answers": ["1916", "1914", "1915", "1917"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "batailles",
+    "fact": "verdun-date",
+    "format": "date",
+    "source": "https://www.cheminsdememoire.gouv.fr/fr/revue/verdun-1916-2016"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à la bataille de la Somme ?",
-    "answers": [
-      "1917",
-      "1916",
-      "mars 1918",
-      "11 novembre 1918"
-    ],
-    "correct": 1
+    "text": "Quelle route permet de ravitailler Verdun depuis Bar-le-Duc ?",
+    "answers": ["La route Napoléon", "La Voie sacrée", "La Voie de la Liberté", "La route des Crêtes"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "batailles",
+    "fact": "voie-sacree",
+    "source": "https://www.cheminsdememoire.gouv.fr/fr/revue/verdun-1916-2016"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on l'entrée en guerre des États-Unis ?",
-    "answers": [
-      "mars 1918",
-      "11 novembre 1918",
-      "1917",
-      "28 juin 1919"
-    ],
-    "correct": 2
+    "text": "Quel détroit les Alliés cherchent-ils à contrôler lors de la campagne de Gallipoli ?",
+    "answers": ["Le détroit de Gibraltar", "Le détroit d’Ormuz", "Les Dardanelles", "Le détroit de Messine"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "batailles",
+    "fact": "dardanelles",
+    "source": "https://www.theworldwar.org/learn/about-wwi/key-dates"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à l'entrée en guerre des États-Unis ?",
-    "answers": [
-      "mars 1918",
-      "11 novembre 1918",
-      "28 juin 1919",
-      "1917"
-    ],
-    "correct": 3
+    "text": "Quelles flottes s’affrontent lors de la bataille du Jutland en 1916 ?",
+    "answers": ["Française et italienne", "Allemande et russe", "Britannique et ottomane", "Britannique et allemande"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "batailles",
+    "fact": "jutland",
+    "source": "https://www.theworldwar.org/learn/about-wwi/key-dates"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on la révolution russe de Février ?",
-    "answers": [
-      "1917",
-      "mars 1918",
-      "11 novembre 1918",
-      "28 juin 1919"
-    ],
-    "correct": 0
+    "text": "Quel général lance l’offensive française du Chemin des Dames en avril 1917 ?",
+    "answers": ["Robert Nivelle", "Joseph Joffre", "Ferdinand Foch", "Louis Franchet d’Espèrey"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "batailles",
+    "fact": "chemin-dames",
+    "source": "https://www.cheminsdememoire.gouv.fr/fr/la-malmaison"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à la révolution russe de Février ?",
-    "answers": [
-      "mars 1918",
-      "1917",
-      "11 novembre 1918",
-      "28 juin 1919"
-    ],
-    "correct": 1
+    "text": "Quelle armée subit une lourde défaite à Caporetto en 1917 ?",
+    "answers": ["L’armée française", "L’armée italienne", "L’armée serbe", "L’armée britannique"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "batailles",
+    "fact": "caporetto",
+    "source": "https://www.theworldwar.org/learn/about-wwi/key-dates"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on le traité de Brest-Litovsk ?",
-    "answers": [
-      "11 novembre 1918",
-      "28 juin 1919",
-      "mars 1918",
-      "la France, le Royaume-Uni et la Russie"
-    ],
-    "correct": 2
+    "text": "À quel moment se déroule la première bataille de la Marne ?",
+    "answers": ["Décembre 1914", "Septembre 1915", "Septembre 1914", "Juillet 1918"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "batailles",
+    "fact": "premiere-marne",
+    "format": "date",
+    "source": "https://www.cheminsdememoire.gouv.fr/fr/revue/larmee-francaise-en-1914"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à le traité de Brest-Litovsk ?",
-    "answers": [
-      "11 novembre 1918",
-      "28 juin 1919",
-      "la France, le Royaume-Uni et la Russie",
-      "mars 1918"
-    ],
-    "correct": 3
+    "text": "Comment surnomme-t-on couramment les soldats français de la Grande Guerre ?",
+    "answers": ["Les grognards", "Les chouans", "Les maquisards", "Les poilus"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "tranchees",
+    "fact": "poilus",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on l'armistice sur le front occidental ?",
-    "answers": [
-      "11 novembre 1918",
-      "28 juin 1919",
-      "la France, le Royaume-Uni et la Russie",
-      "l'Allemagne, l'Autriche-Hongrie, l'Empire ottoman et la Bulgarie"
-    ],
-    "correct": 0
+    "text": "Dans la guerre de tranchées, que désigne le « no man’s land » ?",
+    "answers": ["Le terrain entre les lignes ennemies", "L’arrière du front réservé aux hôpitaux", "Une tranchée de réserve", "Un camp de prisonniers"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "tranchees",
+    "fact": "no-mans-land",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à l'armistice sur le front occidental ?",
-    "answers": [
-      "28 juin 1919",
-      "11 novembre 1918",
-      "la France, le Royaume-Uni et la Russie",
-      "l'Allemagne, l'Autriche-Hongrie, l'Empire ottoman et la Bulgarie"
-    ],
-    "correct": 1
+    "text": "Dans un réseau de tranchées, à quoi servent les boyaux de communication ?",
+    "answers": ["À évacuer la fumée des abris", "À relier les différentes lignes de tranchées", "À faire passer l’eau jusqu’aux cuisines", "À délimiter le terrain entre les deux armées"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "tranchees",
+    "fact": "boyaux",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on le traité de Versailles ?",
-    "answers": [
-      "la France, le Royaume-Uni et la Russie",
-      "l'Allemagne, l'Autriche-Hongrie, l'Empire ottoman et la Bulgarie",
-      "28 juin 1919",
-      "une stratégie allemande passant par la Belgique"
-    ],
-    "correct": 2
+    "text": "Pourquoi pose-t-on des caillebotis au fond des tranchées ?",
+    "answers": ["Pour bloquer les communications adverses", "Pour repérer l’emplacement des mines", "Pour marcher au-dessus de la boue et de l’eau", "Pour renforcer les murs des abris"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "tranchees",
+    "fact": "caillebotis",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à le traité de Versailles ?",
-    "answers": [
-      "la France, le Royaume-Uni et la Russie",
-      "l'Allemagne, l'Autriche-Hongrie, l'Empire ottoman et la Bulgarie",
-      "une stratégie allemande passant par la Belgique",
-      "28 juin 1919"
-    ],
-    "correct": 3
+    "text": "Qu’est-ce qui favorise le « pied des tranchées » ?",
+    "answers": ["L’inhalation de gaz chloré", "Le souffle des obus à proximité", "La poussière soulevée par la cavalerie", "Des pieds longtemps exposés au froid et à l’humidité"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "tranchees",
+    "fact": "pied-tranchee",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on la Triple-Entente avant-guerre ?",
-    "answers": [
-      "la France, le Royaume-Uni et la Russie",
-      "l'Allemagne, l'Autriche-Hongrie, l'Empire ottoman et la Bulgarie",
-      "une stratégie allemande passant par la Belgique",
-      "l'offensive Nivelle de 1917"
-    ],
-    "correct": 0
+    "text": "Quel objet permet d’observer le terrain sans lever la tête au-dessus du parapet ?",
+    "answers": ["Un périscope", "Un télémètre à main", "Une boussole", "Un sextant"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "tranchees",
+    "fact": "periscope",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à la Triple-Entente avant-guerre ?",
-    "answers": [
-      "l'Allemagne, l'Autriche-Hongrie, l'Empire ottoman et la Bulgarie",
-      "la France, le Royaume-Uni et la Russie",
-      "une stratégie allemande passant par la Belgique",
-      "l'offensive Nivelle de 1917"
-    ],
-    "correct": 1
+    "text": "Quel avantage présente une tranchée construite avec des changements de direction ?",
+    "answers": ["Permettre à l’artillerie de tirer plus loin", "Limiter la propagation des tirs et des explosions", "Accélérer le déplacement en ligne droite", "Cacher la ligne sur les cartes d’état-major"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "tranchees",
+    "fact": "zigzag",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on les Empires centraux ?",
-    "answers": [
-      "une stratégie allemande passant par la Belgique",
-      "l'offensive Nivelle de 1917",
-      "l'Allemagne, l'Autriche-Hongrie, l'Empire ottoman et la Bulgarie",
-      "la campagne de Gallipoli"
-    ],
-    "correct": 2
+    "text": "Que font des soldats britanniques et allemands lors de la trêve de Noël 1914 ?",
+    "answers": ["Ils évacuent ensemble la Belgique", "Ils signent un traité de paix", "Ils se rencontrent entre les tranchées", "Ils rejoignent une armée commune"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "tranchees",
+    "fact": "treve-noel",
+    "source": "https://shop.iwm.org.uk/blogs/news/wartime-christmas"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à les Empires centraux ?",
-    "answers": [
-      "une stratégie allemande passant par la Belgique",
-      "l'offensive Nivelle de 1917",
-      "la campagne de Gallipoli",
-      "l'Allemagne, l'Autriche-Hongrie, l'Empire ottoman et la Bulgarie"
-    ],
-    "correct": 3
+    "text": "Lors de quelle bataille l’armée britannique engage-t-elle ses premiers chars en 1916 ?",
+    "answers": ["Verdun", "Le Jutland", "Gallipoli", "La Somme"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "armes",
+    "fact": "chars-somme",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on le plan Schlieffen ?",
-    "answers": [
-      "une stratégie allemande passant par la Belgique",
-      "l'offensive Nivelle de 1917",
-      "la campagne de Gallipoli",
-      "les corps australien et néo-zélandais"
-    ],
-    "correct": 0
+    "text": "Quel gaz est utilisé à grande échelle par les Allemands à Ypres en avril 1915 ?",
+    "answers": ["Chlore", "Ypérite", "Phosgène", "Monoxyde de carbone"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "armes",
+    "fact": "gaz-ypres",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à le plan Schlieffen ?",
-    "answers": [
-      "l'offensive Nivelle de 1917",
-      "une stratégie allemande passant par la Belgique",
-      "la campagne de Gallipoli",
-      "les corps australien et néo-zélandais"
-    ],
-    "correct": 1
+    "text": "Quel équipement les soldats portent-ils pour se protéger des gaz de combat ?",
+    "answers": ["Un casque d’acier", "Un masque respiratoire", "Des guêtres de cuir", "Une paire de jumelles"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "armes",
+    "fact": "masque",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on le chemin des Dames ?",
-    "answers": [
-      "la campagne de Gallipoli",
-      "les corps australien et néo-zélandais",
-      "l'offensive Nivelle de 1917",
-      "le transport de soldats français en 1914"
-    ],
-    "correct": 2
+    "text": "À quoi servent notamment les avions d’observation au début de la guerre ?",
+    "answers": ["À poser des mines navales", "À creuser des abris", "À repérer les positions ennemies", "À couper les barbelés au sol"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "armes",
+    "fact": "reconnaissance",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à le chemin des Dames ?",
-    "answers": [
-      "la campagne de Gallipoli",
-      "les corps australien et néo-zélandais",
-      "le transport de soldats français en 1914",
-      "l'offensive Nivelle de 1917"
-    ],
-    "correct": 3
+    "text": "Quelle arme permet de tirer de longues rafales pour défendre une position ?",
+    "answers": ["Le mortier", "Le fusil à verrou", "Le canon de campagne", "La mitrailleuse"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "armes",
+    "fact": "mitrailleuse",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on les Dardanelles ?",
-    "answers": [
-      "la campagne de Gallipoli",
-      "les corps australien et néo-zélandais",
-      "le transport de soldats français en 1914",
-      "les soldats français"
-    ],
-    "correct": 0
+    "text": "Quel obstacle est installé devant les tranchées pour ralentir l’infanterie ennemie ?",
+    "answers": ["Des réseaux de barbelés", "Des rails de chemin de fer", "Des sacs de ravitaillement", "Des toiles de camouflage"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "armes",
+    "fact": "barbeles",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à les Dardanelles ?",
-    "answers": [
-      "les corps australien et néo-zélandais",
-      "la campagne de Gallipoli",
-      "le transport de soldats français en 1914",
-      "les soldats français"
-    ],
-    "correct": 1
+    "text": "Dans un barrage roulant, comment évoluent les tirs d’artillerie pendant l’assaut ?",
+    "answers": ["Ils restent sur la tranchée de départ", "Ils avancent par paliers devant l’infanterie", "Ils cessent au premier mouvement des fantassins", "Ils sont dirigés uniquement derrière les troupes amies"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "armes",
+    "fact": "artillerie-barrage",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on les ANZAC ?",
-    "answers": [
-      "le transport de soldats français en 1914",
-      "les soldats français",
-      "les corps australien et néo-zélandais",
-      "l'espace entre les lignes adverses"
-    ],
-    "correct": 2
+    "text": "En France, que fabriquent les ouvrières surnommées « munitionnettes » ?",
+    "answers": ["Des uniformes pour la marine", "Des pansements pour les hôpitaux", "Des munitions pour l’armée", "Des semelles pour les soldats"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "societes",
+    "fact": "munitionnettes",
+    "source": "https://www.theworldwar.org/learn/women"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à les ANZAC ?",
-    "answers": [
-      "le transport de soldats français en 1914",
-      "les soldats français",
-      "l'espace entre les lignes adverses",
-      "les corps australien et néo-zélandais"
-    ],
-    "correct": 3
+    "text": "À quoi servent notamment les affiches de propagande diffusées pendant la guerre ?",
+    "answers": ["À communiquer les plans militaires secrets", "À dresser les cartes des tranchées", "À publier les accords de paix", "À mobiliser le soutien des civils"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "societes",
+    "fact": "propagande",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2025-01/Artists%20%26%20War%20Teacher%20Notes%20-%20First%20World%20War.pdf"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on les taxis de la Marne ?",
-    "answers": [
-      "le transport de soldats français en 1914",
-      "les soldats français",
-      "l'espace entre les lignes adverses",
-      "les sous-marins allemands"
-    ],
-    "correct": 0
+    "text": "Pourquoi des affiches invitent-elles les civils à souscrire des emprunts de guerre ?",
+    "answers": ["Pour financer l’effort militaire", "Pour distribuer les rations", "Pour recruter des médecins", "Pour organiser la démobilisation"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "societes",
+    "fact": "emprunts",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2025-01/Artists%20%26%20War%20Teacher%20Notes%20-%20First%20World%20War.pdf"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à les taxis de la Marne ?",
-    "answers": [
-      "les soldats français",
-      "le transport de soldats français en 1914",
-      "l'espace entre les lignes adverses",
-      "les sous-marins allemands"
-    ],
-    "correct": 1
+    "text": "Quel est le but du rationnement des denrées pendant la guerre ?",
+    "answers": ["Augmenter la solde des militaires", "Répartir des produits devenus rares", "Réserver les commerces aux officiers", "Financer les emprunts de guerre"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "societes",
+    "fact": "rationnement",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on les poilus ?",
-    "answers": [
-      "l'espace entre les lignes adverses",
-      "les sous-marins allemands",
-      "les soldats français",
-      "une bataille navale de 1916"
-    ],
-    "correct": 2
+    "text": "Le nom de « tirailleurs sénégalais » désigne des soldats recrutés principalement dans quelle région ?",
+    "answers": ["Les colonies françaises des Antilles", "Les territoires de l’Indochine française", "L’Afrique subsaharienne sous administration française", "Les îles françaises du Pacifique"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "societes",
+    "fact": "tirailleurs",
+    "source": "https://www.cheminsdememoire.gouv.fr/sites/default/files/editeur/MC10.pdf"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à les poilus ?",
-    "answers": [
-      "l'espace entre les lignes adverses",
-      "les sous-marins allemands",
-      "une bataille navale de 1916",
-      "les soldats français"
-    ],
-    "correct": 3
+    "text": "Dans l’armée française, quel phénomène suit l’échec de l’offensive du Chemin des Dames au printemps 1917 ?",
+    "answers": ["Une démobilisation générale", "L’abolition du service militaire", "L’évacuation de Verdun", "Des mutineries"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "societes",
+    "fact": "mutineries",
+    "source": "https://www.cheminsdememoire.gouv.fr/fr/la-malmaison"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on le no man's land ?",
-    "answers": [
-      "l'espace entre les lignes adverses",
-      "les sous-marins allemands",
-      "une bataille navale de 1916",
-      "une proposition allemande d'alliance au Mexique"
-    ],
-    "correct": 0
+    "text": "Quel objectif poursuit le blocus naval allié contre l’Allemagne ?",
+    "answers": ["Limiter l’arrivée de vivres et de matières premières", "Protéger les navires marchands allemands", "Transporter des troupes vers la Russie", "Sécuriser la pêche dans la mer Baltique"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "diplomatie",
+    "fact": "blocus",
+    "source": "https://www.iwm.org.uk/sites/default/files/files/2023-10/first_world_war_large_print_guide.pdf"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à le no man's land ?",
-    "answers": [
-      "les sous-marins allemands",
-      "l'espace entre les lignes adverses",
-      "une bataille navale de 1916",
-      "une proposition allemande d'alliance au Mexique"
-    ],
-    "correct": 1
+    "text": "En quelle année les États-Unis déclarent-ils la guerre à l’Allemagne ?",
+    "answers": ["1915", "1917", "1916", "1918"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "diplomatie",
+    "fact": "usa-date",
+    "format": "date",
+    "source": "https://www.theworldwar.org/learn/about-wwi/us-enters-war"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on les U-Boote ?",
-    "answers": [
-      "une bataille navale de 1916",
-      "une proposition allemande d'alliance au Mexique",
-      "les sous-marins allemands",
-      "Woodrow Wilson"
-    ],
-    "correct": 2
+    "text": "Le télégramme Zimmermann propose une alliance allemande à quel pays ?",
+    "answers": ["Espagne", "Argentine", "Mexique", "Brésil"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "diplomatie",
+    "fact": "zimmermann",
+    "source": "https://www.theworldwar.org/learn/about-wwi/us-enters-war"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à les U-Boote ?",
-    "answers": [
-      "une bataille navale de 1916",
-      "une proposition allemande d'alliance au Mexique",
-      "Woodrow Wilson",
-      "les sous-marins allemands"
-    ],
-    "correct": 3
+    "text": "Comment le paquebot britannique Lusitania est-il coulé en 1915 ?",
+    "answers": ["Par une batterie côtière ottomane", "Par un croiseur austro-hongrois", "Par un raid de zeppelins", "Par un sous-marin allemand"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "diplomatie",
+    "fact": "lusitania",
+    "source": "https://www.theworldwar.org/learn/about-wwi/us-enters-war"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on la bataille du Jutland ?",
-    "answers": [
-      "une bataille navale de 1916",
-      "une proposition allemande d'alliance au Mexique",
-      "Woodrow Wilson",
-      "une organisation internationale créée après la guerre"
-    ],
-    "correct": 0
+    "text": "Quel traité met fin à la participation de la Russie à la guerre contre les Empires centraux ?",
+    "answers": ["Brest-Litovsk", "Versailles", "Saint-Germain-en-Laye", "Trianon"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "diplomatie",
+    "fact": "brest-litovsk",
+    "source": "https://www.theworldwar.org/learn/about-wwi/key-dates"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à la bataille du Jutland ?",
-    "answers": [
-      "une proposition allemande d'alliance au Mexique",
-      "une bataille navale de 1916",
-      "Woodrow Wilson",
-      "une organisation internationale créée après la guerre"
-    ],
-    "correct": 1
+    "text": "Quand entre en vigueur l’armistice qui met fin aux combats sur le front occidental ?",
+    "answers": ["28 juin 1919", "11 novembre 1918", "3 mars 1918", "4 août 1914"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "diplomatie",
+    "fact": "armistice-date",
+    "format": "date",
+    "source": "https://www.cheminsdememoire.gouv.fr/fr/memorial-de-l-armistice"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on le télégramme Zimmermann ?",
-    "answers": [
-      "Woodrow Wilson",
-      "une organisation internationale créée après la guerre",
-      "une proposition allemande d'alliance au Mexique",
-      "une conséquence de la guerre"
-    ],
-    "correct": 2
+    "text": "Quand le traité de Versailles avec l’Allemagne est-il signé ?",
+    "answers": ["11 novembre 1918", "10 janvier 1920", "28 juin 1919", "3 mars 1918"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "diplomatie",
+    "fact": "versaille-date",
+    "format": "date",
+    "source": "https://www.chateauversailles.fr/decouvrir/histoire/grandes-dates/traite-versailles"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à le télégramme Zimmermann ?",
-    "answers": [
-      "Woodrow Wilson",
-      "une organisation internationale créée après la guerre",
-      "une conséquence de la guerre",
-      "une proposition allemande d'alliance au Mexique"
-    ],
-    "correct": 3
+    "text": "Quelle organisation internationale de paix est prévue par le traité de Versailles ?",
+    "answers": ["L’Organisation des Nations unies", "Le Conseil de l’Europe", "L’Union paneuropéenne", "La Société des Nations"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "diplomatie",
+    "fact": "societe-des-nations",
+    "source": "https://www.chateauversailles.fr/decouvrir/histoire/grandes-dates/traite-versailles"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on les quatorze points ?",
-    "answers": [
-      "Woodrow Wilson",
-      "une organisation internationale créée après la guerre",
-      "une conséquence de la guerre",
-      "28 juin 1914"
-    ],
-    "correct": 0
+    "text": "À Paris, sous quel monument repose le Soldat inconnu de la Première Guerre mondiale ?",
+    "answers": ["L’Arc de triomphe", "Le Panthéon", "Le dôme des Invalides", "La colonne Vendôme"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "memoire",
+    "fact": "inconnu",
+    "source": "https://www.paris-arc-de-triomphe.fr/decouvrir/le-soldat-inconnu"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à les quatorze points ?",
-    "answers": [
-      "une organisation internationale créée après la guerre",
-      "Woodrow Wilson",
-      "une conséquence de la guerre",
-      "28 juin 1914"
-    ],
-    "correct": 1
+    "text": "Quel ossuaire rassemble des restes de soldats non identifiés du champ de bataille de Verdun ?",
+    "answers": ["L’ossuaire de Notre-Dame-de-Lorette", "L’ossuaire de Douaumont", "L’ossuaire de Dormans", "L’ossuaire de la Gruerie"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "memoire",
+    "fact": "douaumont",
+    "source": "https://www.cheminsdememoire.gouv.fr/fr/verdun"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on la Société des Nations ?",
-    "answers": [
-      "28 juin 1914",
-      "28 juillet 1914",
-      "une organisation internationale créée après la guerre",
-      "septembre 1914"
-    ],
-    "correct": 2
+    "text": "Quelle fleur est devenue en France un symbole du souvenir et de la solidarité envers les combattants ?",
+    "answers": ["Le lys", "Le coquelicot", "Le bleuet", "La violette"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "memoire",
+    "fact": "bleuet",
+    "source": "https://www.bleuetdefrance.fr/decouvrir/notre-histoire/"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à la Société des Nations ?",
-    "answers": [
-      "28 juin 1914",
-      "28 juillet 1914",
-      "septembre 1914",
-      "une organisation internationale créée après la guerre"
-    ],
-    "correct": 3
+    "text": "Au Royaume-Uni, quelle fleur porte-t-on pour les commémorations du souvenir ?",
+    "answers": ["Le bleuet", "La jonquille", "La rose blanche", "Le coquelicot"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "memoire",
+    "fact": "poppy",
+    "source": "https://www.britishlegion.org.uk/get-involved/remembrance/the-poppy"
   },
   {
-    "text": "À quelle date, alliance ou notion associe-t-on la disparition de l'Autriche-Hongrie ?",
-    "answers": [
-      "une conséquence de la guerre",
-      "28 juin 1914",
-      "28 juillet 1914",
-      "septembre 1914"
-    ],
-    "correct": 0
+    "text": "Où les délégations signent-elles l’armistice du 11 novembre 1918, dans la forêt de Compiègne ?",
+    "answers": ["Un wagon ferroviaire", "Une mairie", "Une chapelle", "Un château"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "memoire",
+    "fact": "rets-wagon",
+    "source": "https://www.cheminsdememoire.gouv.fr/fr/memorial-de-l-armistice"
   },
   {
-    "text": "Quel repère de la Première Guerre mondiale correspond à la disparition de l'Autriche-Hongrie ?",
-    "answers": [
-      "28 juin 1914",
-      "une conséquence de la guerre",
-      "28 juillet 1914",
-      "septembre 1914"
-    ],
-    "correct": 1
+    "text": "Quel maréchal représente le commandement allié lors de la signature de l’armistice du 11 novembre 1918 ?",
+    "answers": ["Joseph Joffre", "Ferdinand Foch", "Philippe Pétain", "Louis Franchet d’Espèrey"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "memoire",
+    "fact": "rets-chef",
+    "source": "https://www.cheminsdememoire.gouv.fr/fr/memorial-de-l-armistice"
+  },
+  {
+    "text": "Quel pilote français s’illustre dans l’escadrille des Cigognes avant de disparaître en mission en 1917 ?",
+    "answers": ["René Fonck", "Roland Garros", "Georges Guynemer", "Charles Nungesser"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "armes",
+    "fact": "guynemer-cigognes",
+    "source": "https://www.cheminsdememoire.gouv.fr/sites/default/files/editeur/expo_1914_1918_as.pdf"
+  },
+  {
+    "text": "Quel surnom est resté associé au 369ᵉ régiment d’infanterie américain, qui a combattu sous commandement français ?",
+    "answers": ["Buffalo Soldiers", "Rough Riders", "Doughboys", "Harlem Hellfighters"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "societes",
+    "fact": "harlem-hellfighters",
+    "source": "https://www.theworldwar.org/fr/learn/about-wwi/african-american-history-and-wwi"
+  },
+  {
+    "text": "Quel général commande le corps expéditionnaire américain envoyé en France pendant la Première Guerre mondiale ?",
+    "answers": ["John J. Pershing", "Douglas MacArthur", "George C. Marshall", "Tasker H. Bliss"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "batailles",
+    "fact": "pershing",
+    "source": "https://www.theworldwar.org/learn/about-wwi/key-dates"
   }
 ]

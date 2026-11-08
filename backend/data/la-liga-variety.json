@@ -1,0 +1,254 @@
+[
+  {
+    "text": "Quels clubs s’affrontent lors du Clásico en Liga ?",
+    "answers": ["Atlético de Madrid et Real Madrid", "FC Barcelone et Espanyol", "FC Barcelone et Real Madrid", "Séville FC et Real Betis"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "clubs",
+    "fact": "liga-clasico-adversaires",
+    "source": "https://www.laliga.com/en-ES/partidazos/el-clasico"
+  },
+  {
+    "text": "Quel club de Liga joue à domicile à San Mamés ?",
+    "answers": ["Athletic Club", "Real Sociedad", "Osasuna", "Deportivo Alavés"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "stades",
+    "fact": "liga-san-mames-athletic",
+    "source": "https://www.laliga.com/en-GB/clubs/athletic-club"
+  },
+  {
+    "text": "Quel club a pour stade historique le Mestalla ?",
+    "answers": ["Villarreal CF", "Levante UD", "Getafe CF", "Valence CF"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "stades",
+    "fact": "liga-mestalla-valencia",
+    "source": "https://www.laliga.com/en-GB/news/liga-bbva-stadium-directory"
+  },
+  {
+    "text": "À quel joueur le trophée Pichichi est-il décerné chaque saison de Liga ?",
+    "answers": ["Au meilleur passeur", "Au meilleur buteur", "Au gardien le moins battu", "Au joueur le plus utilisé"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "records",
+    "fact": "liga-pichichi-meilleur-buteur",
+    "source": "https://www.laliga.com/noticias/conoces-la-historia-de-pichichi"
+  },
+  {
+    "text": "Quel club affronte le Real Betis dans le derby sévillan ?",
+    "answers": ["Cádiz CF", "Málaga CF", "Grenade CF", "Séville FC"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "clubs",
+    "fact": "liga-gran-derbi-betis-sevilla",
+    "source": "https://www.laliga.com/partidazos/el-gran-derbi"
+  },
+  {
+    "text": "Quel club de Liga est surnommé le « Sous-marin jaune » ?",
+    "answers": ["Villarreal CF", "UD Las Palmas", "Cádiz CF", "Levante UD"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "clubs",
+    "fact": "liga-villarreal-sous-marin-jaune",
+    "source": "https://www.laliga.com/noticias/por-que-al-villarreal-se-le-llama-submarino-amarillo"
+  },
+  {
+    "text": "Quel club madrilène a été champion d’Espagne en 2020-2021 ?",
+    "answers": ["Real Madrid", "Atlético de Madrid", "Getafe CF", "Rayo Vallecano"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "palmares",
+    "fact": "liga-atletico-champion-2021",
+    "source": "https://www.laliga.com/noticias/todos-los-campeones-de-la-historia-de-laliga"
+  },
+  {
+    "text": "Quel club dispute ses matchs de Liga à domicile au stade d’Anoeta ?",
+    "answers": ["Deportivo Alavés", "Osasuna", "Real Sociedad", "Athletic Club"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "stades",
+    "fact": "liga-anoeta-real-sociedad",
+    "source": "https://www.laliga.com/en-GB/news/liga-bbva-stadium-directory"
+  },
+  {
+    "text": "Combien de buts Lionel Messi a-t-il inscrits en Liga en 2011-2012 ?",
+    "answers": ["50", "42", "46", "54"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "records",
+    "fact": "liga-messi-50-buts-2012",
+    "source": "https://www.fcbarcelona.com/en/news/2070529/leo"
+  },
+  {
+    "text": "Qui a entraîné le Barça lors de son titre en Liga en 2024-2025 ?",
+    "answers": ["Xavi Hernández", "Ronald Koeman", "Hansi Flick", "Ernesto Valverde"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "entraineurs",
+    "fact": "liga-flick-barca-2025",
+    "source": "https://www.laliga.com/en-US/news/fc-barcelona-crowned-champions-of-laliga-ea-sports-2024-25"
+  },
+  {
+    "text": "Quel club a remporté le premier championnat d’Espagne, disputé en 1929 ?",
+    "answers": ["Athletic Club", "FC Barcelone", "Real Madrid", "Real Sociedad"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "histoire",
+    "fact": "liga-barca-premier-champion-1929",
+    "source": "https://www.laliga.com/noticias/todos-los-campeones-de-la-historia-de-laliga"
+  },
+  {
+    "text": "Quel club galicien a remporté la Liga 1999-2000 ?",
+    "answers": ["Celta Vigo", "SD Compostela", "Racing de Ferrol", "Deportivo La Corogne"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "palmares",
+    "fact": "liga-deportivo-champion-2000",
+    "source": "https://www.laliga.com/noticias/todos-los-campeones-de-la-historia-de-laliga"
+  },
+  {
+    "text": "Qui a marqué de la tête pour l’Atlético au Camp Nou lors du match décisif pour le titre de 2014 ?",
+    "answers": ["João Miranda", "Diego Godín", "Gabi", "David Villa"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "joueurs",
+    "fact": "liga-godin-but-titre-2014",
+    "source": "https://www.laliga.com/noticias/la-epica-rojiblanca-conquista-la-liga"
+  },
+  {
+    "text": "Quel club joue ses matchs à domicile au stade de Balaídos ?",
+    "answers": ["Deportivo La Corogne", "Racing Santander", "Real Oviedo", "Celta Vigo"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "stades",
+    "fact": "liga-balaidos-celta",
+    "source": "https://www.laliga.com/en-GB/news/liga-bbva-stadium-directory"
+  },
+  {
+    "text": "Qui a mené Valence au titre de champion d’Espagne en 2003-2004 ?",
+    "answers": ["Rafael Benítez", "Héctor Cúper", "Claudio Ranieri", "Unai Emery"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "entraineurs",
+    "fact": "liga-valence-benitez-2004",
+    "source": "https://www.uefa.com/uefachampionsleague/news/0250-0c50f17f2748-19cee5440620-1000--benitez-to-leave-valencia/"
+  },
+  {
+    "text": "Quel club barcelonais joue à domicile au RCDE Stadium ?",
+    "answers": ["FC Barcelone", "Girona FC", "Espanyol", "CE Sabadell"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "clubs",
+    "fact": "liga-espanyol-rcde-stadium",
+    "source": "https://www.laliga.com/en-US/news/fc-barcelona-crowned-champions-of-laliga-ea-sports-2024-25"
+  },
+  {
+    "text": "Combien de buts le Real Madrid a-t-il marqués en Liga en 2011-2012 ?",
+    "answers": ["111", "116", "126", "121"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "records",
+    "fact": "liga-real-madrid-121-buts-2012",
+    "source": "https://www.laliga.com/en-ES/news/laliga-of-records"
+  },
+  {
+    "text": "Quel club a battu le Real Madrid lors de la dernière journée en 1992, offrant le titre au Barça ?",
+    "answers": ["Real Oviedo", "CD Tenerife", "Real Valladolid", "Real Burgos"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "histoire",
+    "fact": "liga-tenerife-derniere-journee-1992",
+    "source": "https://www.laliga.com/en-GB/news/a-final-matchday-with-the-title-on-the-line-and-the-precedents-of-years-gone-by"
+  },
+  {
+    "text": "Quel club basque a remporté la Liga 1980-1981 ?",
+    "answers": ["Athletic Club", "Atlético de Madrid", "Real Sociedad", "FC Barcelone"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "palmares",
+    "fact": "liga-real-sociedad-1981",
+    "source": "https://www.laliga.com/noticias/todos-los-campeones-de-la-historia-de-laliga"
+  },
+  {
+    "text": "Quel entraîneur a mené le Barça au titre lors d’un 4-0 contre Valladolid en mai 2010 ?",
+    "answers": ["Pep Guardiola", "Frank Rijkaard", "Luis Enrique", "Tito Vilanova"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "entraineurs",
+    "fact": "liga-guardiola-valladolid-2010",
+    "source": "https://www.laliga.com/en-GB/news/a-final-matchday-with-the-title-on-the-line-and-the-precedents-of-years-gone-by"
+  },
+  {
+    "text": "Quel entraîneur a guidé le Real Madrid au titre en 2007, après un dernier match gagné 3-1 contre Majorque ?",
+    "answers": ["Vanderlei Luxemburgo", "Bernd Schuster", "Fabio Capello", "Vicente del Bosque"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "entraineurs",
+    "fact": "liga-capello-titre-2007",
+    "source": "https://www.laliga.com/en-GB/news/a-final-matchday-with-the-title-on-the-line-and-the-precedents-of-years-gone-by"
+  },
+  {
+    "text": "Quel stade la Liga a-t-elle honoré comme son doyen lors de son 90e anniversaire en 2019 ?",
+    "answers": ["Mestalla", "Balaídos", "La Romareda", "El Molinón"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "stades",
+    "fact": "liga-el-molinon-stade-doyen",
+    "source": "https://www.laliga.com/en-GB/news/laliga-remembers-90-years-of-professional-football-history"
+  },
+  {
+    "text": "Quel club sévillan a remporté le championnat d’Espagne en 1934-1935 ?",
+    "answers": ["Séville FC", "Real Betis", "Recreativo de Huelva", "Córdoba CF"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "palmares",
+    "fact": "liga-betis-champion-1935",
+    "source": "https://www.laliga.com/noticias/todos-los-campeones-de-la-historia-de-laliga"
+  },
+  {
+    "text": "Quel joueur de l’Espanyol a inscrit le premier but de l’histoire de la Liga en 1929 ?",
+    "answers": ["Pitus Prat", "Ricardo Zamora", "Josep Samitier", "Ángel Arocha"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "histoire",
+    "fact": "liga-pitus-prat-premier-buteur-1929",
+    "source": "https://www.laliga.com/en-GB/news/laliga-remembers-90-years-of-professional-football-history"
+  },
+  {
+    "text": "Quel gardien du Barça a entamé la Liga 2014-2015 par 754 minutes sans encaisser de but ?",
+    "answers": ["Marc-André ter Stegen", "Jordi Masip", "Víctor Valdés", "Claudio Bravo"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "records",
+    "fact": "liga-bravo-754-minutes-2014",
+    "source": "https://www.laliga.com/en-ES/news/laliga-of-records"
+  },
+  {
+    "text": "Quel était le vrai nom du buteur de l’Athletic surnommé « Pichichi » ?",
+    "answers": ["Telmo Zarraonandía", "Guillermo Gorostiza", "Rafael Moreno Aranzadi", "José Iraragorri"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "joueurs",
+    "fact": "liga-pichichi-nom-aranzadi",
+    "source": "https://www.laliga.com/noticias/conoces-la-historia-de-pichichi"
+  },
+  {
+    "text": "En quelle saison le Séville FC a-t-il remporté le championnat d’Espagne ?",
+    "answers": ["1945-1946", "1934-1935", "1941-1942", "1947-1948"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "palmares",
+    "fact": "liga-sevilla-champion-1946",
+    "source": "https://www.laliga.com/noticias/todos-los-campeones-de-la-historia-de-laliga"
+  },
+  {
+    "text": "Quel buteur historique Lionel Messi a-t-il dépassé au classement de la Liga en novembre 2014 ?",
+    "answers": ["Hugo Sánchez", "Telmo Zarra", "Raúl", "Alfredo Di Stéfano"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "records",
+    "fact": "liga-messi-depasse-zarra-2014",
+    "source": "https://www.laliga.com/en-ES/news/laliga-of-records"
+  }
+]

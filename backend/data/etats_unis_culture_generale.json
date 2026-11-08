@@ -7,17 +7,9 @@
       "1803",
       "1861-1865"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère correspond à la Déclaration d'indépendance ?",
-    "answers": [
-      "1787",
-      "1776",
-      "1803",
-      "1861-1865"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on la Constitution fédérale ?",
@@ -27,7 +19,9 @@
       "1787",
       "le 13e amendement"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03",
+    "format": "date"
   },
   {
     "text": "Quel repère correspond à la Constitution fédérale ?",
@@ -37,7 +31,9 @@
       "le 13e amendement",
       "1787"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on l'achat de la Louisiane ?",
@@ -47,7 +43,9 @@
       "le 13e amendement",
       "le 15e amendement"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05",
+    "format": "date"
   },
   {
     "text": "Quel repère correspond à l'achat de la Louisiane ?",
@@ -57,7 +55,9 @@
       "le 13e amendement",
       "le 15e amendement"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on la guerre de Sécession ?",
@@ -67,17 +67,9 @@
       "1861-1865",
       "le 19e amendement"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère correspond à la guerre de Sécession ?",
-    "answers": [
-      "le 13e amendement",
-      "le 15e amendement",
-      "le 19e amendement",
-      "1861-1865"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on l'abolition constitutionnelle de l'esclavage ?",
@@ -87,7 +79,8 @@
       "le 19e amendement",
       "les années 1930"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel repère correspond à l'abolition constitutionnelle de l'esclavage ?",
@@ -97,7 +90,8 @@
       "le 19e amendement",
       "les années 1930"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on le droit de vote sans distinction de race ?",
@@ -107,17 +101,19 @@
       "le 15e amendement",
       "1941"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
-    "text": "Quel repère correspond à le droit de vote sans distinction de race ?",
+    "text": "Quel repère correspond au droit de vote sans distinction de race ?",
     "answers": [
       "le 19e amendement",
       "les années 1930",
       "1941",
       "le 15e amendement"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on le droit de vote des femmes au niveau fédéral ?",
@@ -127,17 +123,8 @@
       "1941",
       "1969"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère correspond à le droit de vote des femmes au niveau fédéral ?",
-    "answers": [
-      "les années 1930",
-      "le 19e amendement",
-      "1941",
-      "1969"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on la Grande Dépression ?",
@@ -147,7 +134,9 @@
       "les années 1930",
       "les années 1970"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15",
+    "format": "date"
   },
   {
     "text": "Quel repère correspond à la Grande Dépression ?",
@@ -157,7 +146,9 @@
       "les années 1970",
       "les années 1930"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on l'attaque de Pearl Harbor ?",
@@ -167,7 +158,9 @@
       "les années 1970",
       "les années 1950 et 1960"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17",
+    "format": "date"
   },
   {
     "text": "Quel repère correspond à l'attaque de Pearl Harbor ?",
@@ -177,7 +170,9 @@
       "les années 1970",
       "les années 1950 et 1960"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on l'alunissage d'Apollo 11 ?",
@@ -187,17 +182,9 @@
       "1969",
       "1849"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère correspond à l'alunissage d'Apollo 11 ?",
-    "answers": [
-      "les années 1970",
-      "les années 1950 et 1960",
-      "1849",
-      "1969"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on le scandale du Watergate ?",
@@ -207,17 +194,21 @@
       "1849",
       "la Pennsylvanie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21",
+    "format": "date"
   },
   {
-    "text": "Quel repère correspond à le scandale du Watergate ?",
+    "text": "Quel repère correspond au scandale du Watergate ?",
     "answers": [
       "les années 1950 et 1960",
       "les années 1970",
       "1849",
       "la Pennsylvanie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on le mouvement des droits civiques ?",
@@ -227,17 +218,21 @@
       "les années 1950 et 1960",
       "New York"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23",
+    "format": "date"
   },
   {
-    "text": "Quel repère correspond à le mouvement des droits civiques ?",
+    "text": "Quel repère correspond au mouvement des droits civiques ?",
     "answers": [
       "1849",
       "la Pennsylvanie",
       "New York",
       "les années 1950 et 1960"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on la ruée vers l'or en Californie ?",
@@ -247,17 +242,9 @@
       "New York",
       "le Dakota du Sud"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère correspond à la ruée vers l'or en Californie ?",
-    "answers": [
-      "la Pennsylvanie",
-      "1849",
-      "New York",
-      "le Dakota du Sud"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25",
+    "format": "date"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on la bataille de Gettysburg ?",
@@ -267,7 +254,8 @@
       "la Pennsylvanie",
       "l'Arizona"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel repère correspond à la bataille de Gettysburg ?",
@@ -277,7 +265,8 @@
       "l'Arizona",
       "la Pennsylvanie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on la Statue de la Liberté ?",
@@ -287,7 +276,8 @@
       "l'Arizona",
       "le Wyoming, le Montana et l'Idaho"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel repère correspond à la Statue de la Liberté ?",
@@ -297,7 +287,8 @@
       "l'Arizona",
       "le Wyoming, le Montana et l'Idaho"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on le mont Rushmore ?",
@@ -307,17 +298,8 @@
       "le Dakota du Sud",
       "la Californie"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère correspond à le mont Rushmore ?",
-    "answers": [
-      "l'Arizona",
-      "le Wyoming, le Montana et l'Idaho",
-      "la Californie",
-      "le Dakota du Sud"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on le Grand Canyon ?",
@@ -327,17 +309,19 @@
       "la Californie",
       "La Nouvelle-Orléans"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
-    "text": "Quel repère correspond à le Grand Canyon ?",
+    "text": "Quel repère correspond au Grand Canyon ?",
     "answers": [
       "le Wyoming, le Montana et l'Idaho",
       "l'Arizona",
       "la Californie",
       "La Nouvelle-Orléans"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on le parc de Yellowstone ?",
@@ -347,17 +331,19 @@
       "le Wyoming, le Montana et l'Idaho",
       "Los Angeles"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
-    "text": "Quel repère correspond à le parc de Yellowstone ?",
+    "text": "Quel repère correspond au parc de Yellowstone ?",
     "answers": [
       "la Californie",
       "La Nouvelle-Orléans",
       "Los Angeles",
       "le Wyoming, le Montana et l'Idaho"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on la Silicon Valley ?",
@@ -367,17 +353,8 @@
       "Los Angeles",
       "Washington"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel repère correspond à la Silicon Valley ?",
-    "answers": [
-      "La Nouvelle-Orléans",
-      "la Californie",
-      "Los Angeles",
-      "Washington"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on le jazz ?",
@@ -387,17 +364,19 @@
       "La Nouvelle-Orléans",
       "neuf juges lorsque tous les sièges sont pourvus"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
-    "text": "Quel repère correspond à le jazz ?",
+    "text": "Quel repère correspond au jazz ?",
     "answers": [
       "Los Angeles",
       "Washington",
       "neuf juges lorsque tous les sièges sont pourvus",
       "La Nouvelle-Orléans"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on Hollywood ?",
@@ -407,7 +386,8 @@
       "neuf juges lorsque tous les sièges sont pourvus",
       "le Sénat et la Chambre des représentants"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel repère correspond à Hollywood ?",
@@ -417,7 +397,8 @@
       "neuf juges lorsque tous les sièges sont pourvus",
       "le Sénat et la Chambre des représentants"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on la Maison-Blanche ?",
@@ -427,17 +408,8 @@
       "Washington",
       "les cinquante États"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel repère correspond à la Maison-Blanche ?",
-    "answers": [
-      "neuf juges lorsque tous les sièges sont pourvus",
-      "le Sénat et la Chambre des représentants",
-      "les cinquante États",
-      "Washington"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on la Cour suprême ?",
@@ -447,7 +419,8 @@
       "les cinquante États",
       "1776"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel repère correspond à la Cour suprême ?",
@@ -457,7 +430,8 @@
       "les cinquante États",
       "1776"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on le Congrès ?",
@@ -467,17 +441,19 @@
       "le Sénat et la Chambre des représentants",
       "1787"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
-    "text": "Quel repère correspond à le Congrès ?",
+    "text": "Quel repère correspond au Congrès ?",
     "answers": [
       "les cinquante États",
       "1776",
       "1787",
       "le Sénat et la Chambre des représentants"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "À quelle date, quel lieu ou quelle notion associe-t-on le drapeau à cinquante étoiles ?",
@@ -487,16 +463,128 @@
       "1787",
       "1803"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
-    "text": "Quel repère correspond à le drapeau à cinquante étoiles ?",
+    "text": "Quel repère correspond au drapeau à cinquante étoiles ?",
     "answers": [
       "1776",
       "les cinquante États",
       "1787",
       "1803"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quel sport oppose les équipes qualifiées pour les « World Series » aux États-Unis ?",
+    "answers": [
+      "Le football américain",
+      "Le basketball",
+      "Le hockey sur glace",
+      "Le baseball"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "sports",
+    "fact": "usa-world-series-baseball"
+  },
+  {
+    "text": "Qui a écrit « Gatsby le Magnifique » ?",
+    "answers": [
+      "Ernest Hemingway",
+      "F. Scott Fitzgerald",
+      "John Steinbeck",
+      "William Faulkner"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "litterature",
+    "fact": "usa-gatsby-fitzgerald"
+  },
+  {
+    "text": "De quelle ville partait la route 66 historique vers la Californie ?",
+    "answers": [
+      "Chicago",
+      "Detroit",
+      "Cleveland",
+      "Pittsburgh"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "routes",
+    "fact": "usa-route-66-depart-chicago",
+    "source": "https://home.nps.gov/articles/000/interpretation-of-route-66-in-oklahoma.htm"
+  },
+  {
+    "text": "Devant quel monument Martin Luther King a-t-il prononcé le discours « I Have a Dream » ?",
+    "answers": [
+      "Le Capitole",
+      "Le Jefferson Memorial",
+      "Le Lincoln Memorial",
+      "Le Washington Monument"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "droits-civiques",
+    "fact": "usa-lincoln-memorial-i-have-a-dream",
+    "source": "https://home.nps.gov/places/000/lincoln-memorial-i-have-a-dream-marker.htm"
+  },
+  {
+    "text": "Que défendaient les auteurs des « Federalist Papers » ?",
+    "answers": [
+      "La ratification de la Constitution",
+      "La création de la Cour suprême par amendement",
+      "L’acquisition de la Louisiane",
+      "La fin du mandat présidentiel de quatre ans"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "institutions",
+    "fact": "usa-federalist-papers-ratification",
+    "source": "https://guides.loc.gov/federalist-papers/full-text"
+  },
+  {
+    "text": "Quel Grand Lac se trouve entièrement sur le territoire des États-Unis ?",
+    "answers": [
+      "Le lac Supérieur",
+      "Le lac Huron",
+      "Le lac Michigan",
+      "Le lac Érié"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "geographie",
+    "fact": "usa-michigan-grand-lac-entierement-americain",
+    "source": "https://19january2021snapshot.epa.gov/greatlakes/lake-michigan-1_.html"
+  },
+  {
+    "text": "Quel écrivain de la Renaissance de Harlem a signé le poème « The Weary Blues » ?",
+    "answers": [
+      "Claude McKay",
+      "Langston Hughes",
+      "Countee Cullen",
+      "Jean Toomer"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "litterature",
+    "fact": "usa-langston-hughes-weary-blues",
+    "source": "https://www.poetryfoundation.org/poems/47347/the-weary-blues"
+  },
+  {
+    "text": "Quel savant britannique a légué la fortune qui a permis de fonder la Smithsonian Institution ?",
+    "answers": [
+      "Joseph Banks",
+      "Humphry Davy",
+      "Michael Faraday",
+      "James Smithson"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "musees",
+    "fact": "usa-james-smithson-legs-smithsonian",
+    "source": "https://www.si.edu/stories/james-smithson-scientist-who-started-smithsonian"
   }
 ]

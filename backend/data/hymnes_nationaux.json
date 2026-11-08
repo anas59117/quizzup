@@ -7,17 +7,8 @@
       "le Royaume-Uni",
       "l'Italie"
     ],
-    "correct": 0
-  },
-  {
-    "text": "À quel pays correspond l'hymne La Marseillaise ?",
-    "answers": [
-      "les États-Unis",
-      "la France",
-      "le Royaume-Uni",
-      "l'Italie"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "De quel pays l'hymne est-il The Star-Spangled Banner ?",
@@ -27,7 +18,8 @@
       "les États-Unis",
       "l'Allemagne"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "À quel pays correspond l'hymne The Star-Spangled Banner ?",
@@ -37,7 +29,8 @@
       "l'Allemagne",
       "les États-Unis"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "De quel pays l'hymne est-il God Save the King ?",
@@ -47,7 +40,8 @@
       "l'Allemagne",
       "l'Espagne"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "À quel pays correspond l'hymne God Save the King ?",
@@ -57,7 +51,8 @@
       "l'Allemagne",
       "l'Espagne"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "De quel pays l'hymne est-il Il Canto degli Italiani ?",
@@ -67,17 +62,8 @@
       "l'Italie",
       "le Portugal"
     ],
-    "correct": 2
-  },
-  {
-    "text": "À quel pays correspond l'hymne Il Canto degli Italiani ?",
-    "answers": [
-      "l'Allemagne",
-      "l'Espagne",
-      "le Portugal",
-      "l'Italie"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "De quel pays l'hymne est-il Das Lied der Deutschen ?",
@@ -87,7 +73,8 @@
       "le Portugal",
       "l'Australie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "À quel pays correspond l'hymne Das Lied der Deutschen ?",
@@ -97,7 +84,8 @@
       "le Portugal",
       "l'Australie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "De quel pays l'hymne est-il La Marcha Real ?",
@@ -107,7 +95,8 @@
       "l'Espagne",
       "le Canada"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "À quel pays correspond l'hymne La Marcha Real ?",
@@ -117,7 +106,8 @@
       "le Canada",
       "l'Espagne"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "De quel pays l'hymne est-il A Portuguesa ?",
@@ -127,17 +117,8 @@
       "le Canada",
       "le Japon"
     ],
-    "correct": 0
-  },
-  {
-    "text": "À quel pays correspond l'hymne A Portuguesa ?",
-    "answers": [
-      "l'Australie",
-      "le Portugal",
-      "le Canada",
-      "le Japon"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "De quel pays l'hymne est-il Advance Australia Fair ?",
@@ -147,7 +128,8 @@
       "l'Australie",
       "la Chine"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "À quel pays correspond l'hymne Advance Australia Fair ?",
@@ -157,7 +139,8 @@
       "la Chine",
       "l'Australie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel pays a pour hymne « Kimigayo » ?",
@@ -167,7 +150,8 @@
       "la Corée du Sud",
       "l'Inde"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "japon-kimigayo"
   },
   {
     "text": "Quel pays a pour hymne « Jana Gana Mana » ?",
@@ -177,7 +161,8 @@
       "la Chine",
       "le Pakistan"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-18"
   },
   {
     "text": "De quel pays l'hymne est-il Kimigayo ?",
@@ -187,7 +172,8 @@
       "le Japon",
       "la Corée du Sud"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "japon-kimigayo"
   },
   {
     "text": "À quel pays correspond l'hymne Kimigayo ?",
@@ -197,7 +183,8 @@
       "la Corée du Sud",
       "le Japon"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "japon-kimigayo"
   },
   {
     "text": "De quel pays l'hymne est-il March of the Volunteers ?",
@@ -207,17 +194,8 @@
       "la Corée du Sud",
       "Israël"
     ],
-    "correct": 0
-  },
-  {
-    "text": "À quel pays correspond l'hymne March of the Volunteers ?",
-    "answers": [
-      "l'Inde",
-      "la Chine",
-      "la Corée du Sud",
-      "Israël"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "De quel pays l'hymne est-il Jana Gana Mana ?",
@@ -227,7 +205,8 @@
       "l'Inde",
       "l'Égypte"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "À quel pays correspond l'hymne Jana Gana Mana ?",
@@ -237,27 +216,30 @@
       "l'Égypte",
       "l'Inde"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
-    "text": "De quel pays l'hymne est-il Aegukga ?",
+    "text": "De quel pays l'hymne est-il Aegukga dans sa version composée par Ahn Eak-tai ?",
     "answers": [
       "la Corée du Sud",
       "Israël",
       "l'Égypte",
       "le Maroc"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "coree-sud-aegukga"
   },
   {
-    "text": "À quel pays correspond l'hymne Aegukga ?",
+    "text": "À quel pays correspond l'hymne Aegukga dans sa version composée par Ahn Eak-tai ?",
     "answers": [
       "Israël",
       "la Corée du Sud",
       "l'Égypte",
       "le Maroc"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "coree-sud-aegukga"
   },
   {
     "text": "De quel pays l'hymne est-il Hatikvah ?",
@@ -267,17 +249,8 @@
       "Israël",
       "l'Algérie"
     ],
-    "correct": 2
-  },
-  {
-    "text": "À quel pays correspond l'hymne Hatikvah ?",
-    "answers": [
-      "l'Égypte",
-      "le Maroc",
-      "l'Algérie",
-      "Israël"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "De quel pays l'hymne est-il Bilady, Bilady, Bilady ?",
@@ -287,7 +260,8 @@
       "l'Algérie",
       "la Tunisie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "À quel pays correspond l'hymne Bilady, Bilady, Bilady ?",
@@ -297,7 +271,8 @@
       "l'Algérie",
       "la Tunisie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "De quel pays l'hymne est-il Cherifian Anthem ?",
@@ -307,7 +282,8 @@
       "le Maroc",
       "l'Afrique du Sud"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "À quel pays correspond l'hymne Cherifian Anthem ?",
@@ -317,7 +293,8 @@
       "l'Afrique du Sud",
       "le Maroc"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-31"
   },
   {
     "text": "De quel pays l'hymne est-il Kassaman ?",
@@ -327,17 +304,8 @@
       "l'Afrique du Sud",
       "la Tanzanie"
     ],
-    "correct": 0
-  },
-  {
-    "text": "À quel pays correspond l'hymne Kassaman ?",
-    "answers": [
-      "la Tunisie",
-      "l'Algérie",
-      "l'Afrique du Sud",
-      "la Tanzanie"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "De quel pays l'hymne est-il Humat al-Hima ?",
@@ -347,7 +315,8 @@
       "la Tunisie",
       "le Belize"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "À quel pays correspond l'hymne Humat al-Hima ?",
@@ -357,27 +326,32 @@
       "le Belize",
       "la Tunisie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
-    "text": "De quel pays l'hymne est-il Nkosi Sikelel' iAfrika ?",
+    "text": "Quel pays a pour hymne une combinaison de « Nkosi Sikelel’ iAfrika » et « Die Stem » ?",
     "answers": [
       "l'Afrique du Sud",
       "le Nigeria",
       "le Belize",
       "le Mexique"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-37",
+    "source": "https://www.gov.za/about-sa/national-anthem-0"
   },
   {
-    "text": "À quel pays correspond l'hymne Nkosi Sikelel' iAfrika ?",
+    "text": "L’hymne national de quel pays mêle « Nkosi Sikelel’ iAfrika » et « Die Stem » ?",
     "answers": [
       "le Nigeria",
       "l'Afrique du Sud",
       "le Belize",
       "le Mexique"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-37",
+    "source": "https://www.gov.za/about-sa/national-anthem-0"
   },
   {
     "text": "De quel pays l'hymne est-il Mungu ibariki Afrika ?",
@@ -387,17 +361,8 @@
       "la Tanzanie",
       "le Brésil"
     ],
-    "correct": 2
-  },
-  {
-    "text": "À quel pays correspond l'hymne Mungu ibariki Afrika ?",
-    "answers": [
-      "le Belize",
-      "le Mexique",
-      "le Brésil",
-      "la Tanzanie"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "De quel pays l'hymne est-il Land of the Free ?",
@@ -407,7 +372,8 @@
       "le Brésil",
       "l'Argentine"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "À quel pays correspond l'hymne Land of the Free ?",
@@ -417,7 +383,8 @@
       "le Brésil",
       "l'Argentine"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "De quel pays l'hymne est-il Himno Nacional Mexicano ?",
@@ -427,7 +394,8 @@
       "le Mexique",
       "la Suède"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "À quel pays correspond l'hymne Himno Nacional Mexicano ?",
@@ -437,7 +405,8 @@
       "la Suède",
       "le Mexique"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-43"
   },
   {
     "text": "De quel pays l'hymne est-il Hino Nacional Brasileiro ?",
@@ -447,17 +416,8 @@
       "la Suède",
       "la France"
     ],
-    "correct": 0
-  },
-  {
-    "text": "À quel pays correspond l'hymne Hino Nacional Brasileiro ?",
-    "answers": [
-      "l'Argentine",
-      "le Brésil",
-      "la Suède",
-      "la France"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "De quel pays l'hymne est-il Himno Nacional Argentino ?",
@@ -467,7 +427,8 @@
       "l'Argentine",
       "les États-Unis"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "À quel pays correspond l'hymne Himno Nacional Argentino ?",
@@ -477,7 +438,8 @@
       "les États-Unis",
       "l'Argentine"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "De quel pays l'hymne est-il Du gamla, Du fria ?",
@@ -487,7 +449,8 @@
       "les États-Unis",
       "le Royaume-Uni"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "À quel pays correspond l'hymne Du gamla, Du fria ?",
@@ -497,6 +460,119 @@
       "les États-Unis",
       "le Royaume-Uni"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Qui a composé le chant devenu « La Marseillaise » ?",
+    "answers": [
+      "Hector Berlioz",
+      "Claude Debussy",
+      "Claude Joseph Rouget de Lisle",
+      "Charles Gounod"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "auteurs",
+    "fact": "hymnes-marseillaise-rouget",
+    "source": "https://www.elysee.fr/la-presidence/la-marseillaise-de-rouget-de-lisle"
+  },
+  {
+    "text": "Quelle est la particularité de la version officielle de la « Marcha Real » espagnole ?",
+    "answers": [
+      "Elle est sans paroles",
+      "Elle est chantée en latin",
+      "Elle alterne deux langues",
+      "Elle est récitée sans mélodie"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "paroles",
+    "fact": "hymnes-espagne-version-sans-paroles",
+    "source": "https://www.lamoncloa.gob.es/documents/1560_1997.pdf"
+  },
+  {
+    "text": "Dans quelle langue les premières paroles d’« Ô Canada » ont-elles été écrites ?",
+    "answers": [
+      "En anglais",
+      "En gaélique écossais",
+      "En latin",
+      "En français"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "langues",
+    "fact": "hymnes-canada-texte-original-francais",
+    "source": "https://www.canada.ca/en/canadian-heritage/services/anthem-canada/history-o-canada.html"
+  },
+  {
+    "text": "Quel écrivain a composé « Jana Gana Mana », devenu l’hymne indien ?",
+    "answers": [
+      "Bankim Chandra Chatterjee",
+      "Rabindranath Tagore",
+      "Sarojini Naidu",
+      "Premchand"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "auteurs",
+    "fact": "hymnes-inde-tagore-jana-gana-mana",
+    "source": "https://www.india.gov.in/explore-india/facts-of-india/national-identity/national-anthem"
+  },
+  {
+    "text": "Combien de langues se succèdent dans les paroles de l’hymne national sud-africain ?",
+    "answers": [
+      "3",
+      "5",
+      "7",
+      "11"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "langues",
+    "fact": "hymnes-afrique-sud-cinq-langues",
+    "source": "https://www.gov.za/about-sa/national-anthem-0"
+  },
+  {
+    "text": "Quelle partie du « Deutschlandlied » constitue l’hymne officiel de l’Allemagne ?",
+    "answers": [
+      "La première strophe",
+      "Les deux premières strophes",
+      "Les trois strophes",
+      "La troisième strophe"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "protocole",
+    "fact": "hymnes-allemagne-troisieme-strophe",
+    "source": "https://www.bundesregierung.de/breg-de/schwerpunkte/nationalhymne-deutschland-461412"
+  },
+  {
+    "text": "Quel chant a le statut d’hymne national en Nouvelle-Zélande aux côtés de l’hymne royal ?",
+    "answers": [
+      "God Defend New Zealand",
+      "Advance Australia Fair",
+      "Song of Australia",
+      "Waltzing Matilda"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "protocole",
+    "fact": "hymnes-nz-god-defend-double-statut",
+    "source": "https://www.mch.govt.nz/our-work/flags-anthems-and-emblems/national-anthems"
+  },
+  {
+    "text": "De quelle chanson britannique provient la mélodie de l’hymne national des États-Unis ?",
+    "answers": [
+      "Rule, Britannia!",
+      "Auld Lang Syne",
+      "To Anacreon in Heaven",
+      "Heart of Oak"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "melodies",
+    "fact": "hymnes-usa-melodie-anacreon",
+    "source": "https://www.loc.gov/collections/patriotic-melodies/articles-and-essays/star-spangled-banner/"
   }
 ]

@@ -7,17 +7,8 @@
       "Henri V",
       "Henri VIII"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui correspond au Roi-Soleil ?",
-    "answers": [
-      "Charles VI",
-      "Louis XIV",
-      "Henri V",
-      "Henri VIII"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel souverain associe-t-on à la guerre de Cent Ans et la folie du roi ?",
@@ -27,7 +18,8 @@
       "Charles VI",
       "Élisabeth Ire"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Qui correspond à la guerre de Cent Ans et la folie du roi ?",
@@ -37,7 +29,8 @@
       "Élisabeth Ire",
       "Charles VI"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel souverain associe-t-on à la victoire anglaise d'Azincourt ?",
@@ -47,7 +40,8 @@
       "Élisabeth Ire",
       "Guillaume III"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Qui correspond à la victoire anglaise d'Azincourt ?",
@@ -57,7 +51,8 @@
       "Élisabeth Ire",
       "Guillaume III"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel souverain associe-t-on à la rupture de l'Angleterre avec Rome ?",
@@ -67,17 +62,8 @@
       "Henri VIII",
       "Victoria"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui correspond à la rupture de l'Angleterre avec Rome ?",
-    "answers": [
-      "Élisabeth Ire",
-      "Guillaume III",
-      "Victoria",
-      "Henri VIII"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quel souverain associe-t-on à l'âge élisabéthain ?",
@@ -87,7 +73,8 @@
       "Victoria",
       "Marie-Antoinette"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Qui correspond à l'âge élisabéthain ?",
@@ -97,7 +84,8 @@
       "Victoria",
       "Marie-Antoinette"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel souverain associe-t-on à la Glorieuse Révolution aux côtés de Marie II ?",
@@ -107,7 +95,8 @@
       "Guillaume III",
       "Isabelle Ire"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Qui correspond à la Glorieuse Révolution aux côtés de Marie II ?",
@@ -117,7 +106,8 @@
       "Isabelle Ire",
       "Guillaume III"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel souverain associe-t-on à la longue époque victorienne ?",
@@ -127,17 +117,8 @@
       "Isabelle Ire",
       "Ferdinand II"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui correspond à la longue époque victorienne ?",
-    "answers": [
-      "Marie-Antoinette",
-      "Victoria",
-      "Isabelle Ire",
-      "Ferdinand II"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quel souverain associe-t-on à la reine de France épouse de Louis XVI ?",
@@ -147,7 +128,8 @@
       "Marie-Antoinette",
       "Philippe II"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Qui correspond à la reine de France épouse de Louis XVI ?",
@@ -157,7 +139,8 @@
       "Philippe II",
       "Marie-Antoinette"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel souverain associe-t-on à la reine de Castille ayant soutenu Colomb ?",
@@ -167,7 +150,8 @@
       "Philippe II",
       "Frédéric II"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Qui correspond à la reine de Castille ayant soutenu Colomb ?",
@@ -177,7 +161,8 @@
       "Philippe II",
       "Frédéric II"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel souverain associe-t-on au roi d'Aragon uni dynastiquement à Isabelle ?",
@@ -187,17 +172,8 @@
       "Ferdinand II",
       "Marie-Thérèse"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui correspond au roi d'Aragon uni dynastiquement à Isabelle ?",
-    "answers": [
-      "Philippe II",
-      "Frédéric II",
-      "Marie-Thérèse",
-      "Ferdinand II"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quel souverain associe-t-on au monarque espagnol de l'Invincible Armada ?",
@@ -207,7 +183,8 @@
       "Marie-Thérèse",
       "Frédéric Ier"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Qui correspond au monarque espagnol de l'Invincible Armada ?",
@@ -217,7 +194,8 @@
       "Marie-Thérèse",
       "Frédéric Ier"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel souverain associe-t-on au roi de Prusse surnommé le Grand ?",
@@ -227,7 +205,8 @@
       "Frédéric II",
       "Louis IX"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Qui correspond au roi de Prusse surnommé le Grand ?",
@@ -237,7 +216,8 @@
       "Louis IX",
       "Frédéric II"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel souverain associe-t-on à l'impératrice d'Autriche mère de Marie-Antoinette ?",
@@ -247,17 +227,8 @@
       "Louis IX",
       "François Ier"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui correspond à l'impératrice d'Autriche mère de Marie-Antoinette ?",
-    "answers": [
-      "Frédéric Ier",
-      "Marie-Thérèse",
-      "Louis IX",
-      "François Ier"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quel souverain associe-t-on à l'empereur du Saint-Empire dit Barberousse ?",
@@ -267,7 +238,8 @@
       "Frédéric Ier",
       "Henri IV"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Qui correspond à l'empereur du Saint-Empire dit Barberousse ?",
@@ -277,7 +249,8 @@
       "Henri IV",
       "Frédéric Ier"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel souverain associe-t-on au roi de France canonisé et croisé ?",
@@ -287,7 +260,8 @@
       "Henri IV",
       "Nicolas II"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Qui correspond au roi de France canonisé et croisé ?",
@@ -297,7 +271,8 @@
       "Henri IV",
       "Nicolas II"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel souverain associe-t-on au roi de France associé à Marignan ?",
@@ -307,17 +282,8 @@
       "François Ier",
       "Catherine II"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui correspond au roi de France associé à Marignan ?",
-    "answers": [
-      "Henri IV",
-      "Nicolas II",
-      "Catherine II",
-      "François Ier"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quel souverain associe-t-on au roi de France assassiné par Ravaillac ?",
@@ -327,7 +293,8 @@
       "Catherine II",
       "Albert Ier"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Qui correspond au roi de France assassiné par Ravaillac ?",
@@ -337,7 +304,8 @@
       "Catherine II",
       "Albert Ier"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel souverain associe-t-on au dernier tsar de Russie ?",
@@ -347,7 +315,8 @@
       "Nicolas II",
       "Wilhelmine"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Qui correspond au dernier tsar de Russie ?",
@@ -357,7 +326,8 @@
       "Wilhelmine",
       "Nicolas II"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel souverain associe-t-on à la souveraine russe dite la Grande ?",
@@ -367,17 +337,8 @@
       "Wilhelmine",
       "Othon Ier"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui correspond à la souveraine russe dite la Grande ?",
-    "answers": [
-      "Albert Ier",
-      "Catherine II",
-      "Wilhelmine",
-      "Othon Ier"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quel souverain associe-t-on au roi des Belges durant la Première Guerre mondiale ?",
@@ -387,7 +348,8 @@
       "Albert Ier",
       "Haakon VII"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Qui correspond au roi des Belges durant la Première Guerre mondiale ?",
@@ -397,7 +359,8 @@
       "Haakon VII",
       "Albert Ier"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel souverain associe-t-on à la reine des Pays-Bas durant la Seconde Guerre mondiale ?",
@@ -407,7 +370,8 @@
       "Haakon VII",
       "Christian X"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Qui correspond à la reine des Pays-Bas durant la Seconde Guerre mondiale ?",
@@ -417,7 +381,8 @@
       "Haakon VII",
       "Christian X"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel souverain associe-t-on au premier roi de la Grèce moderne ?",
@@ -427,17 +392,8 @@
       "Othon Ier",
       "Édouard VIII"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui correspond au premier roi de la Grèce moderne ?",
-    "answers": [
-      "Haakon VII",
-      "Christian X",
-      "Édouard VIII",
-      "Othon Ier"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quel souverain associe-t-on au roi de Norvège élu en 1905 ?",
@@ -447,7 +403,8 @@
       "Édouard VIII",
       "Louis XIV"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Qui correspond au roi de Norvège élu en 1905 ?",
@@ -457,7 +414,8 @@
       "Édouard VIII",
       "Louis XIV"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel souverain associe-t-on au roi du Danemark durant l'occupation allemande ?",
@@ -467,7 +425,8 @@
       "Christian X",
       "Charles VI"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Qui correspond au roi du Danemark durant l'occupation allemande ?",
@@ -477,7 +436,8 @@
       "Charles VI",
       "Christian X"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel souverain associe-t-on au roi britannique ayant abdiqué en 1936 ?",
@@ -487,7 +447,8 @@
       "Charles VI",
       "Henri V"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Qui correspond au roi britannique ayant abdiqué en 1936 ?",
@@ -497,6 +458,119 @@
       "Charles VI",
       "Henri V"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "À quelle maison royale appartenait Élisabeth II ?",
+    "answers": [
+      "Tudor",
+      "Stuart",
+      "Hanovre",
+      "Windsor"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "dynasties",
+    "fact": "monarques-elizabeth-ii-windsor",
+    "source": "https://www.royal.uk/house-windsor"
+  },
+  {
+    "text": "Quelle ville Pierre le Grand a-t-il fondée sur les rives de la Neva ?",
+    "answers": [
+      "Moscou",
+      "Saint-Pétersbourg",
+      "Kazan",
+      "Novgorod"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "fondations",
+    "fact": "monarques-pierre-grand-saint-petersbourg",
+    "source": "https://whc.unesco.org/fr/list/540/"
+  },
+  {
+    "text": "Quel roi de France a épousé Marie Stuart ?",
+    "answers": [
+      "François II",
+      "Henri II",
+      "Charles IX",
+      "Henri III"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "alliances",
+    "fact": "monarques-marie-stuart-francois-ii",
+    "source": "https://www.royal.uk/mary-queen-scots-r1542-1567"
+  },
+  {
+    "text": "Qui est devenu le premier roi des Belges après l’indépendance du pays ?",
+    "answers": [
+      "Léopold II",
+      "Albert Ier",
+      "Léopold Ier",
+      "Philippe de Belgique"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "couronnements",
+    "fact": "monarques-leopold-premier-roi-belges",
+    "source": "https://www.monarchie.be/fr/famille-royale/histoire-de-la-monarchie/le-roi-leopold-i"
+  },
+  {
+    "text": "Quelle reine d’Espagne les carlistes ont-ils contestée au début de son règne ?",
+    "answers": [
+      "Isabelle II",
+      "Isabelle Ire de Castille",
+      "Jeanne Ire de Castille",
+      "Marie-Louise d’Orléans"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "successions",
+    "fact": "monarques-isabelle-ii-succession-carliste",
+    "source": "https://www.congreso.es/es/cem/regen"
+  },
+  {
+    "text": "Dans quelle ville Christine de Suède s’est-elle installée après son abdication et sa conversion au catholicisme ?",
+    "answers": [
+      "Paris",
+      "Madrid",
+      "Rome",
+      "Lisbonne"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "abdications",
+    "fact": "monarques-christine-suede-installee-rome",
+    "source": "https://www.kungligaslotten.se/english/list-of-swedish-monarchs/kristina.html"
+  },
+  {
+    "text": "De quel royaume Roger II est-il devenu le premier roi, avec Palerme pour capitale ?",
+    "answers": [
+      "Le royaume de Sardaigne",
+      "Le royaume de Sicile",
+      "Le royaume de Naples",
+      "Le royaume de Jérusalem"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "royaumes",
+    "fact": "monarques-roger-ii-roi-sicile",
+    "source": "https://whc.unesco.org/en/list/1487"
+  },
+  {
+    "text": "Quel empereur a promulgué la Pragmatique Sanction qui permit à sa fille Marie-Thérèse d’hériter de ses États ?",
+    "answers": [
+      "Léopold Ier du Saint-Empire",
+      "Joseph Ier du Saint-Empire",
+      "Charles VII du Saint-Empire",
+      "Charles VI du Saint-Empire"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "successions",
+    "fact": "monarques-charles-vi-sanction-pragmatique",
+    "source": "https://www.habsburger.net/en/chapter/charles-vi-and-pragmatic-sanction"
   }
 ]

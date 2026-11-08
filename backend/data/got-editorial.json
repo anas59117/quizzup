@@ -1,0 +1,421 @@
+[
+  {
+    "text": "Sur quels romans est basée la série \"Game of Thrones\" ?",
+    "answers": ["Le Seigneur des Anneaux", "Le Trône de Fer (A Song of Ice and Fire)", "La Roue du Temps", "Les Chroniques de Narnia"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "creation",
+    "fact": "romans-martin"
+  },
+  {
+    "text": "Quelle est la devise de la Maison Stark ?",
+    "answers": ["Le feu et le sang", "L’hiver vient", "Ouïe-nous rugir", "Un Lannister paie toujours ses dettes"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "alliances",
+    "fact": "stark-devise"
+  },
+  {
+    "text": "Quel est le symbole animal de la Maison Lannister ?",
+    "answers": ["Un loup", "Un cerf", "Un lion", "Un dragon"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "alliances",
+    "fact": "lannister-lion"
+  },
+  {
+    "text": "Qui est surnommé \"le Lutin\" dans la série ?",
+    "answers": ["Jon Snow", "Tyrion Lannister", "Bran Stark", "Samwell Tarly"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "tyrion-lutin"
+  },
+  {
+    "text": "Comment s’appelle le trône convoité, forgé à partir d’épées fondues ?",
+    "answers": ["Le Trône de Fer", "Le Trône d’Or", "Le Siège des Rois", "Le Trône des Dragons"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "objets",
+    "fact": "trone-fer"
+  },
+  {
+    "text": "Quelle actrice interprète Daenerys Targaryen ?",
+    "answers": ["Sophie Turner", "Emilia Clarke", "Maisie Williams", "Natalie Dormer"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "creation",
+    "fact": "daenerys-actrice"
+  },
+  {
+    "text": "Comment s’appelle l’immense mur de glace au nord de Westeros ?",
+    "answers": ["La Barrière", "Le Rempart", "Le Mur", "La Frontière"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "lieux",
+    "fact": "mur-glace"
+  },
+  {
+    "text": "Quel chef de la Maison Stark est exécuté publiquement à la fin de la saison 1 ?",
+    "answers": ["Robb Stark", "Ned Stark", "Bran Stark", "Rickon Stark"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "intrigues",
+    "fact": "ned-execution"
+  },
+  {
+    "text": "Quel est le nom du continent où se déroule la majeure partie de l’histoire ?",
+    "answers": ["Essos", "Westeros", "Sothoryos", "Ulthos"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "lieux",
+    "fact": "westeros-continent"
+  },
+  {
+    "text": "Comment s’appelle l’épée en acier valyrien de la Maison Stark ?",
+    "answers": ["Glace", "Torche", "Grand-Griffe", "Dents-de-Lion"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "objets",
+    "fact": "glace-epee-stark"
+  },
+  {
+    "text": "Quel château abrite la famille Stark au début de la série ?",
+    "answers": ["Les Eyrié", "Vivesaigues", "Winterfell", "Peyredragon"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "lieux",
+    "fact": "winterfell-stark"
+  },
+  {
+    "text": "Quel dragon Daenerys chevauche-t-elle lors de son évasion de l’arène de Meereen ?",
+    "answers": ["Drogon", "Rhaegal", "Viserion", "Balerion"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "creatures",
+    "fact": "drogon-daenerys"
+  },
+  {
+    "text": "Quel ordre Jon Snow rejoint-il au début de la série ?",
+    "answers": ["La Garde royale", "La Compagnie Dorée", "La Fraternité sans Bannière", "La Garde de Nuit"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "alliances",
+    "fact": "jon-garde-de-nuit"
+  },
+  {
+    "text": "Quel chef dothraki épouse Daenerys au début de la série ?",
+    "answers": ["Khal Moro", "Khal Drogo", "Khal Jhaqo", "Khal Rhalko"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "alliances",
+    "fact": "daenerys-mariage-drogo"
+  },
+  {
+    "text": "Qui devient reine du Nord dans le dernier épisode ?",
+    "answers": ["Arya Stark", "Sansa Stark", "Daenerys Targaryen", "Yara Greyjoy"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "sansa-reine-nord"
+  },
+  {
+    "text": "Comment s’appelle la petite épée que Jon offre à Arya ?",
+    "answers": ["Féale", "Grand-Griffe", "Veuve-Pleurante", "Aiguille"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "objets",
+    "fact": "arya-aiguille",
+    "source": "https://georgerrmartin.com/grrm_merch/needle-sword-of-arya-stark/"
+  },
+  {
+    "text": "Qui est le frère jumeau de Cersei Lannister ?",
+    "answers": ["Jaime Lannister", "Tyrion Lannister", "Lancel Lannister", "Kevan Lannister"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "alliances",
+    "fact": "jaime-jumeau-cersei"
+  },
+  {
+    "text": "Quel Stark devient la Corneille à trois yeux ?",
+    "answers": ["Robb", "Rickon", "Bran", "Arya"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "magie",
+    "fact": "bran-corneille-trois-yeux"
+  },
+  {
+    "text": "Qui porte le coup fatal au Roi de la Nuit à Winterfell ?",
+    "answers": ["Jon Snow", "Brienne de Torth", "Jorah Mormont", "Arya Stark"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "conflits",
+    "fact": "arya-roi-nuit"
+  },
+  {
+    "text": "Quel nom Jon Snow donne-t-il à son loup blanc ?",
+    "answers": ["Nymeria", "Été", "Fantôme", "Broussaille"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "creatures",
+    "fact": "jon-loup-fantome"
+  },
+  {
+    "text": "Où les trois dragons de Daenerys éclosent-ils ?",
+    "answers": ["Dans les souterrains de Meereen", "Sur le bûcher funéraire de Drogo", "Dans la demeure des Nonmourants", "Dans la forteresse de Peyredragon"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "creatures",
+    "fact": "daenerys-eclosion-bucher"
+  },
+  {
+    "text": "Quel est le surnom de Petyr Baelish ?",
+    "answers": ["Littlefinger", "Le Limier", "Le Régicide", "L’Araignée"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "intrigues",
+    "fact": "baelish-surnom"
+  },
+  {
+    "text": "Dans quelle ville Arya se rend-elle pour retrouver les Sans-Visage ?",
+    "answers": ["Braavos", "Qarth", "Meereen", "Pentos"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "lieux",
+    "fact": "braavos-sans-visage"
+  },
+  {
+    "text": "Quels soldats choisissent Ver Gris comme commandant ?",
+    "answers": ["Les Puînés", "La Compagnie Dorée", "Les Immaculés", "Les Sauvageons"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "alliances",
+    "fact": "ver-gris-immacules"
+  },
+  {
+    "text": "Quelle substance Tyrion utilise-t-il pour incendier la flotte de Stannis dans la baie de la Néra ?",
+    "answers": ["L’huile de baleine", "Le feu grégeois", "Le goudron", "Le soufre"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "conflits",
+    "fact": "nerra-feu-gregeois"
+  },
+  {
+    "text": "Qui accomplit le rituel qui ramène Jon Snow à la vie ?",
+    "answers": ["Davos Mervault", "Thoros de Myr", "Qyburn", "Mélisandre"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "magie",
+    "fact": "melisandre-ressuscite-jon"
+  },
+  {
+    "text": "Comment appelle-t-on le massacre qui coûte la vie à Robb et à Catelyn Stark ?",
+    "answers": ["Les Noces royales", "La bataille des Bâtards", "Le sac de Port-Réal", "Les Noces pourpres"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "intrigues",
+    "fact": "noces-pourpres-massacre"
+  },
+  {
+    "text": "Quelle arme Tyrion utilise-t-il pour tuer son père, Tywin ?",
+    "answers": ["Une dague", "Une arbalète", "Une lance", "Un arc"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "objets",
+    "fact": "tyrion-arbalete-tywin"
+  },
+  {
+    "text": "Quelle blessure Locke inflige-t-il à Jaime lorsqu’il le retient prisonnier ?",
+    "answers": ["Il lui crève un œil", "Il lui tranche la langue", "Il lui coupe la main droite", "Il lui brise le genou"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "conflits",
+    "fact": "jaime-perte-main"
+  },
+  {
+    "text": "Qui répète à Jon la réplique « You know nothing, Jon Snow » ?",
+    "answers": ["Ygritte", "Mélisandre", "Gilly", "Daenerys"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "alliances",
+    "fact": "ygritte-replique-jon"
+  },
+  {
+    "text": "Dans quelle ville Sam se rend-il pour étudier à la Citadelle ?",
+    "answers": ["Port-Réal", "Blancport", "Villevieille", "Lannisport"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "lieux",
+    "fact": "citadelle-villevieille",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-6-guide"
+  },
+  {
+    "text": "À quels animaux Ramsay est-il livré après la bataille des Bâtards ?",
+    "answers": ["Des loups", "Des ours", "Des sangliers", "Ses propres chiens"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "conflits",
+    "fact": "ramsay-chiens",
+    "source": "https://www.emmys.com/sites/default/files/Downloads/GameofThronesEP%20609%20-%20Battle%20of%20the%20Bastards%20-%20GOT%20S6.pdf"
+  },
+  {
+    "text": "Quelle région est le fief de la maison Greyjoy ?",
+    "answers": ["Les Îles de Fer", "Le Conflans", "Le Val d’Arryn", "Les Terres de l’Orage"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "lieux",
+    "fact": "greyjoy-iles-de-fer"
+  },
+  {
+    "text": "Dans quelle ville Daenerys acquiert-elle ses premiers Immaculés ?",
+    "answers": ["Yunkai", "Astapor", "Qarth", "Volantis"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "lieux",
+    "fact": "astapor-immacules",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-3-guide"
+  },
+  {
+    "text": "Quel est le vrai nom du guerrier surnommé le Limier ?",
+    "answers": ["Gregor Clegane", "Sandor Clegane", "Bronn", "Ilyn Payne"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "intrigues",
+    "fact": "limier-sandor-clegane"
+  },
+  {
+    "text": "Qui avoue à Jaime avoir empoisonné Joffrey ?",
+    "answers": ["Olenna Tyrell", "Margaery Tyrell", "Sansa Stark", "Cersei Lannister"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "intrigues",
+    "fact": "olenna-aveu-joffrey",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-7-guide"
+  },
+  {
+    "text": "Quel ancien membre de la Garde de Nuit fédère le peuple libre avant l’arrivée de Jon ?",
+    "answers": ["Tormund", "Craster", "Rattleshirt", "Mance Rayder"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "alliances",
+    "fact": "mance-roi-au-dela-mur",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-3-guide"
+  },
+  {
+    "text": "Quel dragon le Roi de la Nuit ramène-t-il à la vie ?",
+    "answers": ["Drogon", "Rhaegal", "Viserion", "Balerion"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "creatures",
+    "fact": "viserion-roi-nuit",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-7-guide"
+  },
+  {
+    "text": "Qui se bat pour Tyrion lors de son procès aux Eyrié ?",
+    "answers": ["Jaime Lannister", "Bronn", "Oberyn Martell", "Sandor Clegane"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "conflits",
+    "fact": "bronn-duel-eyrie",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-1-guide"
+  },
+  {
+    "text": "À quelle compagnie de mercenaires appartient Daario quand il rencontre Daenerys ?",
+    "answers": ["La Compagnie Dorée", "Les Braves Compaings", "Les Fils de la Harpie", "Les Puînés"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "alliances",
+    "fact": "daario-puines",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-3-guide"
+  },
+  {
+    "text": "Qui poignarde le prince Doran Martell à Dorne ?",
+    "answers": ["Ellaria Sand", "Obara Sand", "Tyene Sand", "Nymeria Sand"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "intrigues",
+    "fact": "ellaria-assassine-doran",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-6-guide"
+  },
+  {
+    "text": "Quelle consigne en anglais donne naissance au nom « Hodor » ?",
+    "answers": ["Close the gate", "Hold the door", "Hold the wall", "Guard the door"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "magie",
+    "fact": "hodor-origine-hold-the-door",
+    "source": "https://www.youtube.com/watch?v=5DoBY8M_bCg"
+  },
+  {
+    "text": "Qui soigne la grisécaille de Jorah à la Citadelle ?",
+    "answers": ["L’archimestre Ebrose", "Mestre Aemon", "Samwell Tarly", "Mestre Pycelle"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "magie",
+    "fact": "jorah-grisecaille-sam",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-7-guide"
+  },
+  {
+    "text": "Qui apprend à Davos à lire quand il est emprisonné à Peyredragon ?",
+    "answers": ["Shireen Baratheon", "Selyse Baratheon", "Mélisandre", "Gendry"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "intrigues",
+    "fact": "shireen-apprend-lire-davos",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-3-guide"
+  },
+  {
+    "text": "Qui épouse Roslin Frey juste avant le massacre des Noces pourpres ?",
+    "answers": ["Robb Stark", "Brynden Tully", "Roose Bolton", "Edmure Tully"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "alliances",
+    "fact": "edmure-epouse-roslin",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-3-guide"
+  },
+  {
+    "text": "Avec quoi Mélisandre prélève-t-elle le sang de Gendry pour son rituel ?",
+    "answers": ["Des aiguilles", "Des ventouses", "Des sangsues", "Un poignard"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "magie",
+    "fact": "gendry-sangsues-melisandre",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-3-guide"
+  },
+  {
+    "text": "Qui précipite Lysa Arryn dans le vide par la Porte de la Lune ?",
+    "answers": ["Petyr Baelish", "Sansa Stark", "Tyrion Lannister", "Robin Arryn"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "intrigues",
+    "fact": "lysa-defenestration-petyr",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-4-guide"
+  },
+  {
+    "text": "De quelle maison est issu le mestre Aemon, qui sert à Châteaunoir ?",
+    "answers": ["Arryn", "Targaryen", "Martell", "Hightower"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "alliances",
+    "fact": "aemon-maison-targaryen",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-4-guide"
+  },
+  {
+    "text": "Qui confie son nouveau-né à Ned à la tour de la Joie ?",
+    "answers": ["Elia Martell", "Ashara Dayne", "Rhaella Targaryen", "Lyanna Stark"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "intrigues",
+    "fact": "lyanna-remet-nouveau-ne-ned",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-6-guide"
+  },
+  {
+    "text": "Qui affronte la Montagne pour défendre Tyrion lors de son procès à Port-Réal ?",
+    "answers": ["Loras Tyrell", "Bronn", "Oberyn Martell", "Barristan Selmy"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "conflits",
+    "fact": "oberyn-duel-tyrion",
+    "source": "https://www.sky.com/watch/game-of-thrones/season-4-guide"
+  }
+]

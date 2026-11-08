@@ -1,0 +1,441 @@
+[
+  {
+    "text": "Quel héros de Nintendo est le frère de Luigi ?",
+    "answers": ["Luigi", "Mario", "Wario", "Yoshi"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "frere-luigi"
+  },
+  {
+    "text": "Quelle console a lancé la série \"Sonic the Hedgehog\" en 1991 ?",
+    "answers": ["La Super Nintendo", "La Sega Mega Drive", "La PlayStation", "La Game Boy"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "consoles",
+    "fact": "sonic-mega-drive"
+  },
+  {
+    "text": "Dans « Pac-Man », que deviennent les fantômes lorsqu’il mange une super pac-gomme ?",
+    "answers": ["Ils deviennent brièvement vulnérables", "Ils se dédoublent", "Ils quittent définitivement le labyrinthe", "Ils traversent les murs"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "arcade",
+    "fact": "pac-man-super-pac-gomme"
+  },
+  {
+    "text": "Quelle entreprise a créé la console portable Game Boy ?",
+    "answers": ["Sega", "Sony", "Nintendo", "Atari"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "consoles",
+    "fact": "game-boy-nintendo"
+  },
+  {
+    "text": "Quel est le nom de la princesse que Mario doit régulièrement sauver ?",
+    "answers": ["La Princesse Zelda", "La Princesse Peach", "La Princesse Daisy", "La Princesse Rosalina"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "peach-mario"
+  },
+  {
+    "text": "Quelle pièce de « Tetris » est formée de quatre blocs alignés ?",
+    "answers": ["La pièce I", "La pièce L", "La pièce T", "La pièce O"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "mecaniques",
+    "fact": "tetris-piece-i"
+  },
+  {
+    "text": "Quelle console Sony a lancé sa gamme au Japon en décembre 1994 ?",
+    "answers": ["La PlayStation", "La PlayStation 2", "La PlayStation Portable", "La PlayStation Vita"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "consoles",
+    "fact": "playstation-lancement-japon"
+  },
+  {
+    "text": "Dans le premier « The Legend of Zelda », quel objet Link reconstitue-t-il en huit fragments ?",
+    "answers": ["La Triforce de la sagesse", "La Triforce du pouvoir", "Le bouclier hylien", "L’Épée de légende"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "personnages",
+    "fact": "triforce-sagesse-fragments"
+  },
+  {
+    "text": "Quel jeu de combat oppose des personnages comme Ryu et Ken ?",
+    "answers": ["Mortal Kombat", "Street Fighter", "Tekken", "Virtua Fighter"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "arcade",
+    "fact": "street-fighter-ryu-ken"
+  },
+  {
+    "text": "Quelle entreprise japonaise a créé la console Sega Mega Drive ?",
+    "answers": ["Sega", "Namco", "Konami", "Capcom"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "studios",
+    "fact": "sega-mega-drive"
+  },
+  {
+    "text": "Quel sport d’adresse reproduit « Pong », avec deux raquettes et une balle ?",
+    "answers": ["Le badminton", "Le squash", "Le volley-ball", "Le tennis de table"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "arcade",
+    "fact": "pong-tennis-de-table",
+    "source": "https://atari.com/collections/pong-collection"
+  },
+  {
+    "text": "Dans « Kirby’s Dream Land » sur Game Boy, comment Kirby attrape-t-il ses ennemis ?",
+    "answers": ["Il lance une toile", "Il les aspire", "Il les frappe au marteau", "Il les attrape au lasso"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "mecaniques",
+    "fact": "kirby-aspiration",
+    "source": "https://iwataasks.nintendo.com/interviews/wii/kirby-dream-land/0/3/"
+  },
+  {
+    "text": "Quel savant affronte Crash dans le premier « Crash Bandicoot » ?",
+    "answers": ["Dr Neo Cortex", "Dr Robotnik", "Dr Wily", "Dr Nefarious"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "crash-bandicoot-neo-cortex",
+    "source": "https://blog.playstation.com/?p=186581"
+  },
+  {
+    "text": "Que ramasse principalement Sonic pour se protéger dans son premier jeu sur Mega Drive ?",
+    "answers": ["Des rubis", "Des étoiles", "Des anneaux", "Des pièces"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "mecaniques",
+    "fact": "sonic-mega-drive-anneaux",
+    "source": "https://manuals.sega.com/origins/en/?pid=4"
+  },
+  {
+    "text": "Dans « Super Mario 64 », dans quels objets Mario saute-t-il pour accéder à la plupart des niveaux ?",
+    "answers": ["Des miroirs", "Des tableaux", "Des armoires", "Des statues"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "mecaniques",
+    "fact": "mario-64-tableaux",
+    "source": "https://www.nintendo.com/eu/media/downloads/games_8/emanuals/nintendo_8/Manual_Nintendo64_SuperMario64_EN.pdf"
+  },
+  {
+    "text": "Quel pistolet optique utilisait-on avec « Duck Hunt » sur la NES ?",
+    "answers": ["Le Super Scope", "Le GunCon", "Le Menacer", "Le Zapper"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "accessoires",
+    "fact": "duck-hunt-zapper",
+    "source": "https://www.nintendo.com/en-gb/Hardware/Nintendo-History/Nintendo-Entertainment-System/Accessories/Accessories-627029.html"
+  },
+  {
+    "text": "Dans le premier « Mortal Kombat », comment s’appelle le coup de grâce que le vainqueur peut exécuter ?",
+    "answers": ["Brutality", "Babality", "Fatality", "Friendship"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "arcade",
+    "fact": "mortal-kombat-fatality",
+    "source": "https://atari.com/products/mortal-kombat-legacy-kollection"
+  },
+  {
+    "text": "Dans « Metal Gear Solid » sur PlayStation, dans quel objet Solid Snake peut-il se cacher pour passer inaperçu ?",
+    "answers": ["Un carton", "Un tonneau", "Une valise", "Un coffre-fort"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "metal-gear-solid-carton",
+    "source": "https://secure.cdn.us.playstation.com/manuals/classic/games/metal-gear-solid-manual-fr.pdf"
+  },
+  {
+    "text": "Dans « Bomberman », avec quoi détruit-on les blocs fragiles d’un labyrinthe ?",
+    "answers": ["Des bombes", "Des flèches", "Des pièges à ressort", "Des jets d’eau"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "mecaniques",
+    "fact": "bomberman-bombes",
+    "source": "https://dds.konami.com/games/manual/pcemini/en_Bomber93.pdf"
+  },
+  {
+    "text": "Qui explore les ruines dans le premier « Tomb Raider », sorti en 1996 ?",
+    "answers": ["Jill Valentine", "Claire Redfield", "Lara Croft", "Aya Brea"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "personnages",
+    "fact": "tomb-raider-lara-croft",
+    "source": "https://blog.playstation.com/?p=400015"
+  },
+  {
+    "text": "Laquelle de ces consoles Nintendo est une console de salon ?",
+    "answers": ["Game Boy Advance", "Game Boy Color", "Nintendo DS", "Nintendo GameCube"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "consoles",
+    "fact": "gamecube-console-salon",
+    "source": "https://www.nintendo.com/en-gb/Hardware/Nintendo-History/Nintendo-History-625945.html"
+  },
+  {
+    "text": "Que pilote-t-on dans le premier « Gran Turismo » sur PlayStation ?",
+    "answers": ["Des motos", "Des voitures", "Des karts", "Des bateaux"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "mecaniques",
+    "fact": "gran-turismo-course-automobile",
+    "source": "https://www.playstation.com/en-us/gran-turismo/"
+  },
+  {
+    "text": "Sous quel nom la console connue en Europe comme la NES a-t-elle été lancée au Japon ?",
+    "answers": ["Super Famicom", "PC Engine", "Famicom", "Master System"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "consoles",
+    "fact": "nes-nom-japon-famicom",
+    "source": "https://www.nintendo.com/en-gb/Hardware/Nintendo-History/Nintendo-History-625945.html"
+  },
+  {
+    "text": "Sur quelle console « GoldenEye 007 » est-il sorti en 1997 ?",
+    "answers": ["Nintendo 64", "PlayStation", "Sega Saturn", "Super Nintendo"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "consoles",
+    "fact": "goldeneye-007-sortie-n64",
+    "source": "https://www.nintendo.com/en-ca/whatsnew/goldeneye-007-returns-for-nintendo-switch-online-expansion-pack-members/"
+  },
+  {
+    "text": "Quel fils de Dracula explore son château dans « Castlevania: Symphony of the Night » ?",
+    "answers": ["Richter Belmont", "Trevor Belmont", "Simon Belmont", "Alucard"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "castlevania-symphony-alucard",
+    "source": "https://www.konami.com/games/castlevania/us/en-us/page/history_1997_ps"
+  },
+  {
+    "text": "Dans le jeu d’arcade « Dig Dug », comment peut-on vaincre les monstres avec la pompe ?",
+    "answers": ["En les gelant", "En les gonflant", "En les électrocutant", "En les assommant"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "arcade",
+    "fact": "dig-dug-pompe",
+    "source": "https://atari.com/products/dig-dug"
+  },
+  {
+    "text": "Quel studio a développé « Donkey Kong Country » sur Super Nintendo ?",
+    "answers": ["Rare", "HAL Laboratory", "Hudson Soft", "Treasure"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "studios",
+    "fact": "donkey-kong-country-developpeur-rare",
+    "source": "https://www.nintendo.com/en-gb/Games/Super-Nintendo/Donkey-Kong-Country-276896.html"
+  },
+  {
+    "text": "Sur quelle console Sega le premier « Shenmue » est-il sorti en 1999 au Japon ?",
+    "answers": ["Saturn", "Mega Drive", "Dreamcast", "Master System"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "consoles",
+    "fact": "shenmue-sortie-dreamcast",
+    "source": "https://www.sega.jp/history/hard/dreamcast/software.html"
+  },
+  {
+    "text": "Quel concepteur donne son nom au premier « Civilization », paru en 1991 ?",
+    "answers": ["Will Wright", "Sid Meier", "Peter Molyneux", "Richard Garriott"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "micro-ordinateurs",
+    "fact": "civilization-1991-sid-meier"
+  },
+  {
+    "text": "Quel est le nom complet du personnage jouable dans le premier « Metroid » ?",
+    "answers": ["Samus Belmont", "Samus Ripley", "Samus Drake", "Samus Aran"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "metroid-nes-samus-aran",
+    "source": "https://www.nintendo.com/en-gb/Games/NES/Metroid--275726.html"
+  },
+  {
+    "text": "Quel créateur français a conçu « Another World », sorti en 1991 ?",
+    "answers": ["Paul Cuisset", "Michel Ancel", "Frédérick Raynal", "Éric Chahi"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "studios",
+    "fact": "another-world-eric-chahi",
+    "source": "https://www.anotherworld.fr/page_arbre.htm"
+  },
+  {
+    "text": "Dans « The Secret of Monkey Island », que doit-on maîtriser pour gagner les duels à l’épée ?",
+    "answers": ["Les répliques aux insultes", "Les sorts de feu", "Les attaques sautées", "Les coups chargés"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "mecaniques",
+    "fact": "monkey-island-duel-insultes",
+    "source": "https://grumpygamer.com/stuff_and_things_and_monkey_island/"
+  },
+  {
+    "text": "Sur la borne à boutons de « Track & Field », comment fait-on courir l’athlète plus vite ?",
+    "answers": ["En gardant un bouton enfoncé", "En appuyant sur le bouton de saut", "En martelant les boutons de course", "En alternant marche et saut"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "arcade",
+    "fact": "track-and-field-boutons-course",
+    "source": "https://flyers.arcade-museum.com/videogames/show/4334"
+  },
+  {
+    "text": "Quel soldat en armure incarne-t-on dans « Halo: Combat Evolved » sur la première Xbox ?",
+    "answers": ["Marcus Fenix", "Master Chief", "Sam Fisher", "Gordon Freeman"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "personnages",
+    "fact": "halo-combat-evolved-master-chief",
+    "source": "https://news.xbox.com/en-us/2015/10/26/halo-5-primer-the-story-so-far/"
+  },
+  {
+    "text": "Dans « Final Fantasy VII » de 1997, qu’équipe-t-on sur les armes pour accéder à des sorts ?",
+    "answers": ["Des matérias", "Des orbes de sphérier", "Des cartes de Triple Triade", "Des fragments de cristal"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "mecaniques",
+    "fact": "final-fantasy-vii-materias",
+    "source": "https://secure.cdn.us.playstation.com/manuals/classic/games/final-fantasy-vii-manual-fr.pdf"
+  },
+  {
+    "text": "Sur quel ordinateur le premier « Prince of Persia » est-il sorti en 1989 ?",
+    "answers": ["Commodore 64", "Amiga 500", "Atari ST", "Apple II"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "micro-ordinateurs",
+    "fact": "prince-of-persia-original-apple-ii",
+    "source": "https://news.ubisoft.com/en-gb/article/6yLrRf7b0U1MBYxmlxE225/prince-of-persia-35th-anniversary-a-look-back-at-the-original-game"
+  },
+  {
+    "text": "Quel studio de Dundee a développé le premier « Lemmings » en 1991 ?",
+    "answers": ["Bullfrog Productions", "DMA Design", "Team17", "The Bitmap Brothers"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "studios",
+    "fact": "lemmings-dma-design",
+    "source": "https://lemmings.info/lemmings-1991/"
+  },
+  {
+    "text": "Quel créateur a caché sa signature dans « Adventure » sur Atari 2600 ?",
+    "answers": ["David Crane", "Rob Fulop", "Warren Robinett", "Howard Scott Warshaw"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "studios",
+    "fact": "adventure-warren-robinett",
+    "source": "https://www.museumofplay.org/blog/hunting-for-easter-eggs/"
+  },
+  {
+    "text": "Quel studio a développé « Wolfenstein 3D » sur PC en 1992 ?",
+    "answers": ["Apogee Software", "id Software", "Epic MegaGames", "Raven Software"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "micro-ordinateurs",
+    "fact": "wolfenstein-3d-id-software",
+    "source": "https://slayersclub.bethesda.net/en-ZA/news/id-software-35th-anniversary"
+  },
+  {
+    "text": "Dans « Galaga », que peut-on obtenir en récupérant son chasseur capturé sans le détruire ?",
+    "answers": ["Un bouclier permanent", "Un tir laser continu", "Un double vaisseau", "Un missile à tête chercheuse"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "arcade",
+    "fact": "galaga-double-vaisseau",
+    "source": "https://www.bandainamcoent.co.jp/cs/download/virtual_consolearcade/detail/detail06/06.html"
+  },
+  {
+    "text": "Quelles couleurs composent l’image de la console Virtual Boy ?",
+    "answers": ["Vert et noir", "Bleu et blanc", "Orange et noir", "Rouge et noir"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "consoles",
+    "fact": "virtual-boy-affichage-rouge-noir",
+    "source": "https://www.nintendo.com/en-gb/Iwata-Asks/Iwata-Asks-Nintendo-3DS/Vol-1-And-That-s-How-the-Nintendo-3DS-Was-Made/2-Shigeru-Miyamoto-Talks-Virtual-Boy/2-Shigeru-Miyamoto-Talks-Virtual-Boy-229419.html"
+  },
+  {
+    "text": "Quel accessoire reliait une cartouche Game Boy à une manette Nintendo 64 ?",
+    "answers": ["Le Transfer Pak", "Le Rumble Pak", "Le Controller Pak", "L’Expansion Pak"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "accessoires",
+    "fact": "nintendo-64-transfer-pak",
+    "source": "https://www.nintendo.com/en-gb/Hardware/Nintendo-History/Nintendo-64/Accessories/Accessories-627128.html"
+  },
+  {
+    "text": "Combien de manettes pouvait-on brancher sur un seul Multitap de la première PlayStation ?",
+    "answers": ["2", "6", "8", "4"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "accessoires",
+    "fact": "playstation-multitap-quatre-manettes",
+    "source": "https://www.playstation.com/fr-fr/playstation-history/1994-ps-one/"
+  },
+  {
+    "text": "Quel jeu de Sega est sorti sur borne d’arcade en 1999 avant d’arriver sur Dreamcast ?",
+    "answers": ["Jet Set Radio", "Crazy Taxi", "Shenmue", "ChuChu Rocket!"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "arcade",
+    "fact": "crazy-taxi-borne-1999",
+    "source": "https://www.sega.jp/history/arcade/product/8973/"
+  },
+  {
+    "text": "Quel vaisseau dirige-t-on dans « Gradius », le jeu d’arcade de Konami sorti en 1985 ?",
+    "answers": ["Vic Viper", "R-9 Arrowhead", "Silver Hawk", "Axelay"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "arcade",
+    "fact": "gradius-vaisseau-vic-viper",
+    "source": "https://www.konami.com/games/jp/ja/products/dl_ps4_gradius_arch/"
+  },
+  {
+    "text": "Sous quel nom la TurboGrafx-16 était-elle commercialisée au Japon ?",
+    "answers": ["SuperGrafx", "WonderSwan", "PC Engine", "Famicom"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "consoles",
+    "fact": "turbografx-pc-engine-japon",
+    "source": "https://www.konami.com/games/ca/en/topics/1281/"
+  },
+  {
+    "text": "Quel sigle désignait la version de la Neo Geo destinée aux salles d’arcade ?",
+    "answers": ["AES", "MVS", "CDZ", "CPS"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "arcade",
+    "fact": "neo-geo-mvs-version-arcade",
+    "source": "https://neogeomuseum.snk-corp.co.jp/english/whats/index.php"
+  },
+  {
+    "text": "Pour quel ordinateur Acornsoft a-t-il édité une version d’« Elite » dès 1984 ?",
+    "answers": ["BBC Micro", "ZX Spectrum", "Commodore 64", "Amstrad CPC"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "micro-ordinateurs",
+    "fact": "elite-bbc-micro-1984",
+    "source": "https://www.computinghistory.org.uk/det/34811/Elite-%28Sealed%29/"
+  },
+  {
+    "text": "Quel créateur est à l’origine du jeu de science-fiction « Flashback » de 1992 ?",
+    "answers": ["Éric Chahi", "Jordan Mechner", "Paul Cuisset", "Frédérick Raynal"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "studios",
+    "fact": "flashback-paul-cuisset",
+    "source": "https://www.microids.com/game-flashback-us/"
+  },
+  {
+    "text": "Pour quel jeu Lucasfilm Games a-t-il initialement conçu son moteur SCUMM ?",
+    "answers": ["Loom", "Zak McKracken", "The Secret of Monkey Island", "Maniac Mansion"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "micro-ordinateurs",
+    "fact": "scumm-premier-jeu-maniac-mansion",
+    "source": "https://www.lucasfilm.com/news/lucasfilm-originals-scumm/"
+  }
+]

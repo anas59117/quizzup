@@ -7,17 +7,8 @@
       "Raphaël",
       "Michel-Ange"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel peintre associe-t-on à La Joconde ?",
-    "answers": [
-      "Sandro Botticelli",
-      "Léonard de Vinci",
-      "Raphaël",
-      "Michel-Ange"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quel artiste a peint La Cène ?",
@@ -27,7 +18,8 @@
       "Léonard de Vinci",
       "Michel-Ange"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel peintre associe-t-on à La Cène ?",
@@ -37,7 +29,8 @@
       "Michel-Ange",
       "Léonard de Vinci"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "Quel artiste a peint La Naissance de Vénus ?",
@@ -47,7 +40,8 @@
       "Michel-Ange",
       "Diego Vélasquez"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel peintre associe-t-on à La Naissance de Vénus ?",
@@ -57,7 +51,8 @@
       "Michel-Ange",
       "Diego Vélasquez"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Quel artiste a peint L'École d'Athènes ?",
@@ -67,17 +62,8 @@
       "Raphaël",
       "Johannes Vermeer"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel peintre associe-t-on à L'École d'Athènes ?",
-    "answers": [
-      "Michel-Ange",
-      "Diego Vélasquez",
-      "Johannes Vermeer",
-      "Raphaël"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quel artiste a peint La Création d'Adam ?",
@@ -87,7 +73,8 @@
       "Johannes Vermeer",
       "Rembrandt"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel peintre associe-t-on à La Création d'Adam ?",
@@ -97,7 +84,8 @@
       "Johannes Vermeer",
       "Rembrandt"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "Quel artiste a peint Les Ménines ?",
@@ -107,7 +95,8 @@
       "Diego Vélasquez",
       "Jacques-Louis David"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel peintre associe-t-on aux Ménines ?",
@@ -117,7 +106,8 @@
       "Jacques-Louis David",
       "Diego Vélasquez"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Quel artiste a peint La Jeune Fille à la perle ?",
@@ -127,17 +117,8 @@
       "Jacques-Louis David",
       "Eugène Delacroix"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel peintre associe-t-on à La Jeune Fille à la perle ?",
-    "answers": [
-      "Rembrandt",
-      "Johannes Vermeer",
-      "Jacques-Louis David",
-      "Eugène Delacroix"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quel artiste a peint La Ronde de nuit ?",
@@ -147,7 +128,8 @@
       "Rembrandt",
       "Édouard Manet"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel peintre associe-t-on à La Ronde de nuit ?",
@@ -157,7 +139,8 @@
       "Édouard Manet",
       "Rembrandt"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quel artiste a peint Le Sacre de Napoléon ?",
@@ -167,7 +150,8 @@
       "Édouard Manet",
       "Claude Monet"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel peintre associe-t-on au Sacre de Napoléon ?",
@@ -177,7 +161,8 @@
       "Édouard Manet",
       "Claude Monet"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Quel artiste a peint La Liberté guidant le peuple ?",
@@ -187,17 +172,8 @@
       "Eugène Delacroix",
       "Auguste Renoir"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel peintre associe-t-on à La Liberté guidant le peuple ?",
-    "answers": [
-      "Édouard Manet",
-      "Claude Monet",
-      "Auguste Renoir",
-      "Eugène Delacroix"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quel artiste a peint Olympia ?",
@@ -207,7 +183,8 @@
       "Auguste Renoir",
       "Vincent van Gogh"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel peintre associe-t-on à Olympia ?",
@@ -217,7 +194,8 @@
       "Auguste Renoir",
       "Vincent van Gogh"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quel artiste a peint Impression, soleil levant ?",
@@ -227,7 +205,8 @@
       "Claude Monet",
       "Edvard Munch"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel peintre associe-t-on à Impression, soleil levant ?",
@@ -237,7 +216,8 @@
       "Edvard Munch",
       "Claude Monet"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Quel artiste a peint Bal du moulin de la Galette ?",
@@ -247,17 +227,8 @@
       "Edvard Munch",
       "Pablo Picasso"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel peintre associe-t-on à Bal du moulin de la Galette ?",
-    "answers": [
-      "Vincent van Gogh",
-      "Auguste Renoir",
-      "Edvard Munch",
-      "Pablo Picasso"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quel artiste a peint La Nuit étoilée ?",
@@ -267,7 +238,8 @@
       "Vincent van Gogh",
       "Salvador Dalí"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel peintre associe-t-on à La Nuit étoilée ?",
@@ -277,7 +249,8 @@
       "Salvador Dalí",
       "Vincent van Gogh"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Quel artiste a peint Le Cri ?",
@@ -287,7 +260,8 @@
       "Salvador Dalí",
       "Grant Wood"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel peintre associe-t-on au Cri ?",
@@ -297,7 +271,8 @@
       "Salvador Dalí",
       "Grant Wood"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quel artiste a peint Les Demoiselles d'Avignon ?",
@@ -307,17 +282,8 @@
       "Pablo Picasso",
       "Edward Hopper"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel peintre associe-t-on aux Demoiselles d'Avignon ?",
-    "answers": [
-      "Salvador Dalí",
-      "Grant Wood",
-      "Edward Hopper",
-      "Pablo Picasso"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quel artiste a peint Guernica ?",
@@ -327,7 +293,8 @@
       "Grant Wood",
       "Edward Hopper"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel peintre associe-t-on à Guernica ?",
@@ -337,7 +304,8 @@
       "Grant Wood",
       "Edward Hopper"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Quel artiste a peint La Persistance de la mémoire ?",
@@ -347,7 +315,8 @@
       "Salvador Dalí",
       "Frida Kahlo"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel peintre associe-t-on à La Persistance de la mémoire ?",
@@ -357,7 +326,8 @@
       "Frida Kahlo",
       "Salvador Dalí"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quel artiste a peint American Gothic ?",
@@ -367,17 +337,8 @@
       "Frida Kahlo",
       "Vassily Kandinsky"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quel peintre associe-t-on à American Gothic ?",
-    "answers": [
-      "Edward Hopper",
-      "Grant Wood",
-      "Frida Kahlo",
-      "Vassily Kandinsky"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quel artiste a peint Nighthawks ?",
@@ -387,7 +348,8 @@
       "Edward Hopper",
       "Kasimir Malevitch"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel peintre associe-t-on à Nighthawks ?",
@@ -397,7 +359,8 @@
       "Kasimir Malevitch",
       "Edward Hopper"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Quel artiste a peint Autoportrait au collier d'épines et colibri ?",
@@ -407,7 +370,8 @@
       "Kasimir Malevitch",
       "René Magritte"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel peintre associe-t-on à Autoportrait au collier d'épines et colibri ?",
@@ -417,7 +381,8 @@
       "Kasimir Malevitch",
       "René Magritte"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Quel artiste a peint Composition VIII ?",
@@ -427,17 +392,8 @@
       "Vassily Kandinsky",
       "Andy Warhol"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quel peintre associe-t-on à Composition VIII ?",
-    "answers": [
-      "Kasimir Malevitch",
-      "René Magritte",
-      "Andy Warhol",
-      "Vassily Kandinsky"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quel artiste a peint Carré noir ?",
@@ -447,7 +403,8 @@
       "Andy Warhol",
       "Léonard de Vinci"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel peintre associe-t-on à Carré noir ?",
@@ -457,7 +414,8 @@
       "Andy Warhol",
       "Léonard de Vinci"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Quel artiste a peint Les Amants ?",
@@ -467,7 +425,8 @@
       "René Magritte",
       "Sandro Botticelli"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel peintre associe-t-on aux Amants ?",
@@ -477,7 +436,8 @@
       "Sandro Botticelli",
       "René Magritte"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quel artiste a peint Campbell's Soup Cans ?",
@@ -487,7 +447,8 @@
       "Sandro Botticelli",
       "Raphaël"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quel peintre associe-t-on à Campbell's Soup Cans ?",
@@ -497,6 +458,119 @@
       "Sandro Botticelli",
       "Raphaël"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quel arbre sombre se dresse au premier plan dans « La Nuit étoilée » de Van Gogh ?",
+    "answers": [
+      "Un palmier",
+      "Un cyprès",
+      "Un peuplier",
+      "Un chêne"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "sujets",
+    "fact": "nuit-etoilee-van-gogh-cypres",
+    "source": "https://www.moma.org/collection/works/79802"
+  },
+  {
+    "text": "Comment Seurat applique-t-il la couleur dans les passages pointillistes de « La Grande Jatte » ?",
+    "answers": [
+      "En larges aplats uniformes",
+      "En coulées de peinture",
+      "En traits gravés dans le vernis",
+      "En petites touches juxtaposées"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "techniques",
+    "fact": "seurat-pointillisme-touches",
+    "source": "https://archive.artic.edu/sciarttech/global_pages/g3.4.html"
+  },
+  {
+    "text": "Quel procédé estompe les contours du visage de « La Joconde » par de subtils dégradés ?",
+    "answers": [
+      "Le sfumato",
+      "Le dripping",
+      "Le frottage",
+      "La sérigraphie"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "techniques",
+    "fact": "joconde-sfumato-contours",
+    "source": "https://www.louvre.fr/decouvrir/vie-du-musee/la-joconde-exposition-immersive"
+  },
+  {
+    "text": "Quel événement de 1937 Picasso évoque-t-il dans « Guernica » ?",
+    "answers": [
+      "L’incendie d’un musée",
+      "Une grève des mineurs",
+      "Le bombardement d’une ville basque",
+      "La chute d’une monarchie"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "contexte",
+    "fact": "guernica-bombardement-1937",
+    "source": "https://guernica.museoreinasofia.es/en/contextos/bombing-gernika-6211"
+  },
+  {
+    "text": "Quel lieu éclairé voit-on à travers la vitrine dans « Nighthawks » d’Edward Hopper ?",
+    "answers": [
+      "Une pharmacie",
+      "Un restaurant avec un comptoir",
+      "Un théâtre",
+      "Un poste de police"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "sujets",
+    "fact": "nighthawks-hopper-comptoir",
+    "source": "https://archive.artic.edu/hopper/artwork/111628"
+  },
+  {
+    "text": "Qui distingue-t-on dans le miroir au fond du tableau « Les Ménines » de Vélasquez ?",
+    "answers": [
+      "Le peintre et son apprenti",
+      "Deux gardes",
+      "L’infante et sa suivante",
+      "Le roi et la reine"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "composition",
+    "fact": "menines-miroir-roi-reine",
+    "source": "https://museupicassobcn.cat/en/whats-on/discover-online/inhabitants-museum-las-meninas"
+  },
+  {
+    "text": "Quelle montagne apparaît au loin dans « La Grande Vague de Kanagawa » de Hokusai ?",
+    "answers": [
+      "Le mont Fuji",
+      "Le mont Hiei",
+      "Le mont Aso",
+      "Le mont Tsukuba"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "estampes",
+    "fact": "grande-vague-hokusai-mont-fuji",
+    "source": "https://www.metmuseum.org/art/collection/search/56353"
+  },
+  {
+    "text": "Dans « Les Ambassadeurs » de Holbein, quel motif déformé devient reconnaissable lorsqu’on regarde la toile de biais ?",
+    "answers": [
+      "Une rose",
+      "Une clef",
+      "Un crâne",
+      "Un sablier"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "composition",
+    "fact": "holbein-ambassadeurs-crane-anamorphose",
+    "source": "https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors"
   }
 ]

@@ -7,17 +7,8 @@
       "le Maghreb",
       "le Pérou"
     ],
-    "correct": 0
-  },
-  {
-    "text": "De quelle tradition culinaire relève la paella ?",
-    "answers": [
-      "le Japon",
-      "l'Espagne",
-      "le Maghreb",
-      "le Pérou"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on les sushis ?",
@@ -27,7 +18,8 @@
       "le Japon",
       "la Grèce et les Balkans"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "De quelle tradition culinaire relève les sushis ?",
@@ -37,7 +29,8 @@
       "la Grèce et les Balkans",
       "le Japon"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le couscous ?",
@@ -47,7 +40,8 @@
       "la Grèce et les Balkans",
       "le Vietnam"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "De quelle tradition culinaire relève le couscous ?",
@@ -57,7 +51,8 @@
       "la Grèce et les Balkans",
       "le Vietnam"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le ceviche ?",
@@ -67,17 +62,8 @@
       "le Pérou",
       "la Corée"
     ],
-    "correct": 2
-  },
-  {
-    "text": "De quelle tradition culinaire relève le ceviche ?",
-    "answers": [
-      "la Grèce et les Balkans",
-      "le Vietnam",
-      "la Corée",
-      "le Pérou"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on la moussaka ?",
@@ -87,7 +73,8 @@
       "la Corée",
       "la Thaïlande"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "De quelle tradition culinaire relève la moussaka ?",
@@ -97,7 +84,8 @@
       "la Corée",
       "la Thaïlande"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le pho ?",
@@ -107,7 +95,8 @@
       "le Vietnam",
       "l'Asie du Sud"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "De quelle tradition culinaire relève le pho ?",
@@ -117,7 +106,8 @@
       "l'Asie du Sud",
       "le Vietnam"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le kimchi ?",
@@ -127,17 +117,8 @@
       "l'Asie du Sud",
       "la Hongrie"
     ],
-    "correct": 0
-  },
-  {
-    "text": "De quelle tradition culinaire relève le kimchi ?",
-    "answers": [
-      "la Thaïlande",
-      "la Corée",
-      "l'Asie du Sud",
-      "la Hongrie"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le pad thaï ?",
@@ -147,7 +128,8 @@
       "la Thaïlande",
       "le Brésil"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "De quelle tradition culinaire relève le pad thaï ?",
@@ -157,7 +139,8 @@
       "le Brésil",
       "la Thaïlande"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le biryani ?",
@@ -167,7 +150,8 @@
       "le Brésil",
       "le Québec"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "De quelle tradition culinaire relève le biryani ?",
@@ -177,7 +161,8 @@
       "le Brésil",
       "le Québec"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le goulasch ?",
@@ -187,17 +172,8 @@
       "la Hongrie",
       "l'Indonésie"
     ],
-    "correct": 2
-  },
-  {
-    "text": "De quelle tradition culinaire relève le goulasch ?",
-    "answers": [
-      "le Brésil",
-      "le Québec",
-      "l'Indonésie",
-      "la Hongrie"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on la feijoada ?",
@@ -207,7 +183,8 @@
       "l'Indonésie",
       "l'Afrique du Sud"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "De quelle tradition culinaire relève la feijoada ?",
@@ -217,7 +194,8 @@
       "l'Indonésie",
       "l'Afrique du Sud"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le poutine ?",
@@ -227,7 +205,8 @@
       "le Québec",
       "le Royaume-Uni"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "De quelle tradition culinaire relève le poutine ?",
@@ -237,7 +216,8 @@
       "le Royaume-Uni",
       "le Québec"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le nasi goreng ?",
@@ -247,17 +227,8 @@
       "le Royaume-Uni",
       "le Mexique"
     ],
-    "correct": 0
-  },
-  {
-    "text": "De quelle tradition culinaire relève le nasi goreng ?",
-    "answers": [
-      "l'Afrique du Sud",
-      "l'Indonésie",
-      "le Royaume-Uni",
-      "le Mexique"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le bobotie ?",
@@ -267,7 +238,8 @@
       "l'Afrique du Sud",
       "l'Italie"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "De quelle tradition culinaire relève le bobotie ?",
@@ -277,7 +249,8 @@
       "l'Italie",
       "l'Afrique du Sud"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le fish and chips ?",
@@ -287,7 +260,8 @@
       "l'Italie",
       "le Moyen-Orient"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "De quelle tradition culinaire relève le fish and chips ?",
@@ -297,7 +271,8 @@
       "l'Italie",
       "le Moyen-Orient"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on les tacos ?",
@@ -307,17 +282,8 @@
       "le Mexique",
       "l'Éthiopie"
     ],
-    "correct": 2
-  },
-  {
-    "text": "De quelle tradition culinaire relève les tacos ?",
-    "answers": [
-      "l'Italie",
-      "le Moyen-Orient",
-      "l'Éthiopie",
-      "le Mexique"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on la pizza napolitaine ?",
@@ -327,7 +293,8 @@
       "l'Éthiopie",
       "la Jamaïque"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "De quelle tradition culinaire relève la pizza napolitaine ?",
@@ -337,7 +304,8 @@
       "l'Éthiopie",
       "la Jamaïque"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le falafel ?",
@@ -347,7 +315,8 @@
       "le Moyen-Orient",
       "la Géorgie"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "De quelle tradition culinaire relève le falafel ?",
@@ -357,7 +326,8 @@
       "la Géorgie",
       "le Moyen-Orient"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le doro wat ?",
@@ -367,17 +337,8 @@
       "la Géorgie",
       "la Pologne"
     ],
-    "correct": 0
-  },
-  {
-    "text": "De quelle tradition culinaire relève le doro wat ?",
-    "answers": [
-      "la Jamaïque",
-      "l'Éthiopie",
-      "la Géorgie",
-      "la Pologne"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le jerk chicken ?",
@@ -387,7 +348,8 @@
       "la Jamaïque",
       "l'Autriche"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "De quelle tradition culinaire relève le jerk chicken ?",
@@ -397,7 +359,8 @@
       "l'Autriche",
       "la Jamaïque"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le khachapuri ?",
@@ -407,7 +370,8 @@
       "l'Autriche",
       "le sud des États-Unis et le Texas"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "De quelle tradition culinaire relève le khachapuri ?",
@@ -417,7 +381,8 @@
       "l'Autriche",
       "le sud des États-Unis et le Texas"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le pierogi ?",
@@ -427,17 +392,8 @@
       "la Pologne",
       "l'ancien espace ottoman et le Moyen-Orient"
     ],
-    "correct": 2
-  },
-  {
-    "text": "De quelle tradition culinaire relève le pierogi ?",
-    "answers": [
-      "l'Autriche",
-      "le sud des États-Unis et le Texas",
-      "l'ancien espace ottoman et le Moyen-Orient",
-      "la Pologne"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le Wiener Schnitzel ?",
@@ -447,7 +403,8 @@
       "l'ancien espace ottoman et le Moyen-Orient",
       "l'Espagne"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "De quelle tradition culinaire relève le Wiener Schnitzel ?",
@@ -457,7 +414,8 @@
       "l'ancien espace ottoman et le Moyen-Orient",
       "l'Espagne"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le chili con carne ?",
@@ -467,7 +425,8 @@
       "le sud des États-Unis et le Texas",
       "le Japon"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "De quelle tradition culinaire relève le chili con carne ?",
@@ -477,7 +436,8 @@
       "le Japon",
       "le sud des États-Unis et le Texas"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "À quel pays ou espace culinaire associe-t-on le baklava ?",
@@ -487,7 +447,8 @@
       "le Japon",
       "le Maghreb"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "De quelle tradition culinaire relève le baklava ?",
@@ -497,6 +458,119 @@
       "le Japon",
       "le Maghreb"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quel fromage accompagne les frites et la sauce brune dans la poutine québécoise classique ?",
+    "answers": [
+      "Du brie",
+      "Du fromage bleu",
+      "Du fromage en grains",
+      "Du parmesan"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "ingredients",
+    "fact": "poutine-fromage-grains-sauce-frites",
+    "source": "https://www.bonjourquebec.com/fr-fr/blogue/conseils/quand-les-papilles-voyagent-le-guide-gourmand-des-regions-du-quebec"
+  },
+  {
+    "text": "Avec quoi assaisonne-t-on le riz des sushis japonais classiques ?",
+    "answers": [
+      "Du vinaigre de riz",
+      "De l’huile de sésame",
+      "Du lait de coco",
+      "Du bouillon de miso"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "ingredients",
+    "fact": "sushi-riz-vinaigre",
+    "source": "https://www.maff.go.jp/e/policies/market/k_ryouri/search_menu/1896/index.html"
+  },
+  {
+    "text": "Quel procédé donne au kimchi traditionnel son acidité caractéristique après la préparation des légumes ?",
+    "answers": [
+      "La cuisson sous pression",
+      "Le fumage au bois",
+      "La dessiccation",
+      "La fermentation"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "fermentation",
+    "fact": "kimchi-fermentation-legumes",
+    "source": "https://ich.unesco.org/en/RL/kimjang-making-and-sharing-kimchi-in-the-republic-of-korea-00881"
+  },
+  {
+    "text": "Dans le khachapuri d’Adjarie, qu’ajoute-t-on au centre du pain en forme de barque garni de fromage ?",
+    "answers": [
+      "Une figue",
+      "Un œuf",
+      "Une gousse d’ail",
+      "Une pomme de terre"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "formes",
+    "fact": "khachapuri-adjarie-oeuf-barque",
+    "source": "https://georgia.travel/ship-and-sun-the-inspiration-for-ajarian-khachapuri"
+  },
+  {
+    "text": "Dans la partie supérieure perforée d’un couscoussier, comment cuit-on les grains de semoule ?",
+    "answers": [
+      "Au four",
+      "Dans l’huile",
+      "À la vapeur",
+      "À sec sur une plaque"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "cuisson",
+    "fact": "couscous-semoule-cuisson-vapeur",
+    "source": "https://ich.unesco.org/en/RL/knowledge-expertise-and-practices-related-to-producing-and-consuming-couscous-01602"
+  },
+  {
+    "text": "Quel pain plat accompagne couramment le ragoût de poulet doro wat en Éthiopie ?",
+    "answers": [
+      "Le naan",
+      "Le lavash",
+      "Le roti",
+      "L’injera"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "service",
+    "fact": "doro-wat-accompagnement-injera",
+    "source": "https://ethiopianembassy.org/culture/"
+  },
+  {
+    "text": "Après avoir enrobé de pâte les ingrédients d’un tempura, comment les cuit-on traditionnellement ?",
+    "answers": [
+      "À la vapeur",
+      "En friture",
+      "Sous un gril",
+      "En papillote"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "cuisson",
+    "fact": "tempura-cuisson-friture",
+    "source": "https://www.japan.travel/en/luxury/detail/mikawa-zezankyo-tempura/"
+  },
+  {
+    "text": "Comment le cahier des charges de la « Pizza Napoletana » STG prescrit-il de former le disque de pâte ?",
+    "answers": [
+      "À la main, par pression des doigts",
+      "Avec un rouleau en bois",
+      "Entre deux plaques métalliques",
+      "Avec une presse mécanique"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "faconnage",
+    "fact": "pizza-napoletana-stg-etaler-mains",
+    "source": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A52016XC0518%2804%29"
   }
 ]

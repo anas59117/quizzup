@@ -1,0 +1,430 @@
+[
+  {
+    "text": "Quelle est la formule chimique de l’eau ?",
+    "answers": ["H2O", "CO2", "O2", "NaCl"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "chimie",
+    "fact": "formule-eau"
+  },
+  {
+    "text": "Combien de planètes compte le système solaire ?",
+    "answers": ["7", "8", "9", "10"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "espace",
+    "fact": "systeme-solaire-planetes"
+  },
+  {
+    "text": "Pour la photosynthèse, quel gaz les plantes prélèvent-elles dans l’air ?",
+    "answers": ["L’oxygène", "L’azote", "Le dioxyde de carbone", "L’hydrogène"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "vivant",
+    "fact": "photosynthese-co2"
+  },
+  {
+    "text": "Quelle est la plus grande planète du système solaire ?",
+    "answers": ["Saturne", "Neptune", "La Terre", "Jupiter"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "espace",
+    "fact": "plus-grande-planete"
+  },
+  {
+    "text": "Quel organite est surnommé la « centrale énergétique » de la cellule ?",
+    "answers": ["La mitochondrie", "Le noyau", "Le ribosome", "L’appareil de Golgi"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "vivant",
+    "fact": "mitochondrie-energie"
+  },
+  {
+    "text": "À quelle température l’eau pure bout-elle environ sous une pression d’une atmosphère ?",
+    "answers": ["90 °C", "100 °C", "110 °C", "120 °C"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "chimie",
+    "fact": "eau-ebullition-standard"
+  },
+  {
+    "text": "Quelle est la vitesse approximative de la lumière dans le vide ?",
+    "answers": ["300 km/s", "30 000 km/s", "300 000 km/s", "3 000 km/s"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "physique",
+    "fact": "vitesse-lumiere"
+  },
+  {
+    "text": "Quel élément a pour numéro atomique 1 ?",
+    "answers": ["L’hélium", "L’oxygène", "Le carbone", "L’hydrogène"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "chimie",
+    "fact": "element-numero-1"
+  },
+  {
+    "text": "Quelle force nous maintient au sol ?",
+    "answers": ["La gravité", "Le magnétisme", "La friction", "L’inertie"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "physique",
+    "fact": "gravite-sol"
+  },
+  {
+    "text": "Combien d’os compte généralement le squelette humain adulte ?",
+    "answers": ["186", "206", "226", "246"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "corps-humain",
+    "fact": "nombre-os-adulte"
+  },
+  {
+    "text": "Qu’est-ce qui donne sa couleur rougeâtre à la poussière de Mars ?",
+    "answers": ["Des cristaux de glace", "Du soufre pur", "Des oxydes de fer", "Des sels de cuivre"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "espace",
+    "fact": "mars-poussiere-oxydes-fer",
+    "source": "https://science.nasa.gov/mars/facts/"
+  },
+  {
+    "text": "Quel astre masque le Soleil lors d’une éclipse solaire vue de la Terre ?",
+    "answers": ["La Lune", "Mars", "Vénus", "Mercure"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "espace",
+    "fact": "eclipse-solaire-lune",
+    "source": "https://science.nasa.gov/moon/eclipses/"
+  },
+  {
+    "text": "Quelle grandeur exprime-t-on en années-lumière ?",
+    "answers": ["Une durée", "Une vitesse", "Une énergie", "Une distance"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "espace",
+    "fact": "annee-lumiere-distance",
+    "source": "https://science.nasa.gov/exoplanets/what-is-a-light-year/"
+  },
+  {
+    "text": "Quand une exoplanète passe devant son étoile, quel signal peut trahir sa présence ?",
+    "answers": ["Une hausse brutale de luminosité", "Une légère baisse de luminosité", "Un élargissement de l’image de l’étoile", "Un arrêt de la rotation de l’étoile"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "espace",
+    "fact": "transit-exoplanete-luminosite",
+    "source": "https://science.nasa.gov/exoplanets/whats-a-transit/"
+  },
+  {
+    "text": "Qu’est-ce qui chauffe l’intérieur d’Io et alimente ses volcans ?",
+    "answers": ["Les déformations dues aux forces de marée", "Le rayonnement solaire sur sa surface", "Les chocs répétés de petites météorites", "Le vent solaire capté par son atmosphère"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "espace",
+    "fact": "io-chauffage-marees",
+    "source": "https://science.nasa.gov/jupiter/jupiter-moons/io/facts/"
+  },
+  {
+    "text": "Une étoile a une parallaxe annuelle de 0,1 seconde d’arc. À quelle distance se trouve-t-elle ?",
+    "answers": ["1 parsec", "0,1 parsec", "10 parsecs", "100 parsecs"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "espace",
+    "fact": "parallaxe-dixieme-seconde-dix-parsecs",
+    "source": "https://astro.unl.edu/naap/distance/parallax.html"
+  },
+  {
+    "text": "Pourquoi le son d’une cloche ne peut-il pas traverser le vide ?",
+    "answers": ["Le vide inverse les vibrations du son", "Le son doit se réfléchir pour se propager", "Le vide absorbe les vibrations du son", "Les vibrations du son ont besoin de matière"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "physique",
+    "fact": "son-vide-milieu"
+  },
+  {
+    "text": "Quelle force s’exerce quand on rapproche les pôles nord de deux aimants ?",
+    "answers": ["Une attraction magnétique", "Une répulsion magnétique", "Une attraction électrique", "Aucune force magnétique"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "physique",
+    "fact": "aimants-poles-identiques-repulsion"
+  },
+  {
+    "text": "Une ambulance passe devant toi, sirène allumée. Comment la note perçue change-t-elle au passage ?",
+    "answers": ["Elle passe de plus grave à plus aiguë", "Elle reste constante", "Elle passe de plus aiguë à plus grave", "Elle alterne entre aigu et grave"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "physique",
+    "fact": "doppler-sirene-passage"
+  },
+  {
+    "text": "Pourquoi un prisme de verre sépare-t-il les couleurs de la lumière blanche ?",
+    "answers": ["Il dévie chaque couleur d’un angle différent", "Il produit une couleur différente sur chaque face", "Il change la fréquence de chaque rayon", "Il réfléchit les couleurs sous le même angle"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "physique",
+    "fact": "prisme-dispersion-deviation"
+  },
+  {
+    "text": "Un faisceau traverse deux polariseurs idéaux dont les axes sont perpendiculaires. Que transmet le second ?",
+    "answers": ["La moitié de la lumière reçue", "Toute la lumière reçue", "Seulement la lumière rouge", "Aucune lumière"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "physique",
+    "fact": "polariseurs-axes-perpendiculaires",
+    "source": "https://openstax.org/books/university-physics-volume-3/pages/1-7-polarization"
+  },
+  {
+    "text": "Où le plan d’oscillation d’un pendule de Foucault idéal reste-t-il fixe par rapport au sol ?",
+    "answers": ["Au pôle Nord", "À l’équateur", "Au tropique du Cancer", "Au pôle Sud"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "physique",
+    "fact": "foucault-precession-nulle-equateur",
+    "source": "https://www.physics.wisc.edu/ingersollmuseum/exhibits/mechanics/foucaultpendulummodel/"
+  },
+  {
+    "text": "Quel métal est liquide à 20 °C sous la pression atmosphérique normale ?",
+    "answers": ["Le gallium", "L’étain", "Le mercure", "L’aluminium"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "chimie",
+    "fact": "mercure-liquide-vingt-degres",
+    "source": "https://periodic-table.rsc.org/element/80/mercury"
+  },
+  {
+    "text": "Quel gaz représente environ quatre cinquièmes de l’air sec ?",
+    "answers": ["Le dioxygène", "Le diazote", "L’argon", "Le dioxyde de carbone"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "chimie",
+    "fact": "air-sec-diazote-majoritaire"
+  },
+  {
+    "text": "Quel élément constitue à la fois le diamant et le graphite ?",
+    "answers": ["Le carbone", "Le silicium", "Le bore", "Le soufre"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "chimie",
+    "fact": "graphite-diamant-carbone"
+  },
+  {
+    "text": "Deux atomes neutres du même élément sont des isotopes différents. Qu’est-ce qui les distingue ?",
+    "answers": ["Le nombre de protons", "Le nombre d’électrons", "La masse d’un proton", "Le nombre de neutrons"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "chimie",
+    "fact": "isotopes-neutrons"
+  },
+  {
+    "text": "Combien de fois l’activité des ions H⁺ est-elle plus élevée à pH 3 qu’à pH 5 ?",
+    "answers": ["2 fois", "100 fois", "10 fois", "1 000 fois"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "chimie",
+    "fact": "ph-ecart-deux-activite-centuple",
+    "source": "https://goldbook.iupac.org/terms/view/P04524"
+  },
+  {
+    "text": "Quel élément produit deux raies d’émission jaunes caractéristiques vers 589 nm ?",
+    "answers": ["Le potassium", "Le lithium", "Le sodium", "Le calcium"],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "chimie",
+    "fact": "sodium-doublet-jaune",
+    "source": "https://physics.nist.gov/PhysRefData/Handbook/Tables/sodiumtable3.htm"
+  },
+  {
+    "text": "À quel groupe animal appartient une chauve-souris ?",
+    "answers": ["Les mammifères", "Les oiseaux", "Les reptiles", "Les amphibiens"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "vivant",
+    "fact": "chauves-souris-mammiferes"
+  },
+  {
+    "text": "À quel groupe appartient la levure de boulanger ?",
+    "answers": ["Les bactéries", "Les algues", "Les protozoaires", "Les champignons"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "vivant",
+    "fact": "levure-boulanger-champignon"
+  },
+  {
+    "text": "Dans un lichen, quel organisme s’associe à une algue ou à une cyanobactérie ?",
+    "answers": ["Une mousse", "Une fougère", "Un champignon", "Un petit crustacé"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "vivant",
+    "fact": "lichen-partenaire-fongique",
+    "source": "https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/stelprdb5274996.pdf"
+  },
+  {
+    "text": "Après exposition à un antibiotique, pourquoi des bactéries résistantes peuvent-elles devenir majoritaires ?",
+    "answers": ["Elles survivent et laissent plus de descendants", "Elles disparaissent avant les bactéries sensibles", "Toutes les bactéries acquièrent la même mutation", "Les bactéries sensibles se divisent plus vite"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "vivant",
+    "fact": "antibiotique-selection-bacteries-resistantes",
+    "source": "https://www.cdc.gov/antimicrobial-resistance/about/"
+  },
+  {
+    "text": "Dans quel tissu circule l’eau absorbée par les racines avant d’atteindre les feuilles ?",
+    "answers": ["Le phloème", "L’épiderme", "Le cambium", "Le xylème"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "vivant",
+    "fact": "xyleme-eau-racines-feuilles",
+    "source": "https://openstax.org/books/biology-2e/pages/30-5-transport-of-water-and-solutes-in-plants"
+  },
+  {
+    "text": "Dans le code génétique standard, lequel de ces codons de l’ARN messager arrête la traduction ?",
+    "answers": ["AUG", "UGA", "UGG", "UAC"],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "vivant",
+    "fact": "code-genetique-standard-uga-stop",
+    "source": "https://www.ncbi.nlm.nih.gov/datasets/docs/v2/data-processing/taxonomy-processing/genetic-codes/"
+  },
+  {
+    "text": "Quel tissu relie un muscle à un os et transmet sa traction ?",
+    "answers": ["Un ligament", "Un cartilage", "Un ménisque", "Un tendon"],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "corps-humain",
+    "fact": "tendon-muscle-os"
+  },
+  {
+    "text": "Quelle partie de l’œil se rétrécit quand on passe de l’ombre au plein soleil ?",
+    "answers": ["Le cristallin", "La pupille", "La rétine", "La cornée"],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "corps-humain",
+    "fact": "pupille-contraction-lumiere",
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK381/"
+  },
+  {
+    "text": "Dans quelle partie du tube digestif l’essentiel des nutriments est-il absorbé ?",
+    "answers": ["L’intestin grêle", "L’œsophage", "L’estomac", "Le côlon"],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "corps-humain",
+    "fact": "intestin-grele-absorption-nutriments",
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK279303/"
+  },
+  {
+    "text": "Quel organe libère de l’insuline lorsque la glycémie augmente ?",
+    "answers": ["Le foie", "La rate", "Le pancréas", "La vésicule biliaire"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "corps-humain",
+    "fact": "pancreas-secretion-insuline",
+    "source": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes"
+  },
+  {
+    "text": "Dans l’oreille interne, où sont détectées les rotations de la tête ?",
+    "answers": ["Dans la cochlée", "Dans les canaux semi-circulaires", "Dans l’utricule", "Dans le saccule"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "corps-humain",
+    "fact": "oreille-canaux-semicirculaires-rotation",
+    "source": "https://www.nidcd.nih.gov/health/balance-disorders"
+  },
+  {
+    "text": "Quel vaisseau apporte au foie la majeure partie du sang provenant de l’intestin ?",
+    "answers": ["L’artère hépatique", "La veine cave inférieure", "L’artère mésentérique", "La veine porte"],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "corps-humain",
+    "fact": "veine-porte-intestin-foie",
+    "source": "https://www.ncbi.nlm.nih.gov/books/NBK554589/"
+  },
+  {
+    "text": "Quel nom prend le magma lorsqu’il sort d’un volcan et s’écoule à l’air libre ?",
+    "answers": ["La lave", "La cendre", "La vapeur", "La poussière"],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "terre-climat",
+    "fact": "magma-surface-lave",
+    "source": "https://www.usgs.gov/faqs/what-difference-between-magma-and-lava"
+  },
+  {
+    "text": "Quelle roche peut se former quand des grains de sable riches en quartz se compactent et se cimentent ?",
+    "answers": ["Le granite", "Le gneiss", "Le grès", "Le quartzite"],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "terre-climat",
+    "fact": "gres-sable-cimente",
+    "source": "https://www.nps.gov/subjects/geology/sedimentary.htm"
+  },
+  {
+    "text": "À masse constante, pourquoi le niveau de l’océan peut-il monter quand son eau se réchauffe ?",
+    "answers": ["L’eau devient plus dense", "L’eau occupe davantage de volume", "L’eau se comprime davantage", "L’eau devient plus salée"],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "terre-climat",
+    "fact": "ocean-niveau-dilatation-thermique",
+    "source": "https://oceanservice.noaa.gov/facts/sealevelclimate.html"
+  },
+  {
+    "text": "Pourquoi trouve-t-on des bandes magnétiques symétriques de part et d’autre d’une dorsale océanique ?",
+    "answers": ["La croûte s’enfonce sous la dorsale des deux côtés", "Les courants trient les minéraux autour de la dorsale", "Chaque côté connaît un champ terrestre opposé", "La croûte naît à la dorsale et s’en écarte des deux côtés"],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "terre-climat",
+    "fact": "dorsale-bandes-magnetiques-symetrie",
+    "source": "https://pubs.usgs.gov/gip/dynamic/developing.html"
+  },
+  {
+    "text": "Quel gaz noble issu du potassium 40 sert à dater certaines roches volcaniques ?",
+    "answers": ["L’argon 40", "L’hélium 4", "Le néon 20", "Le xénon 129"],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "terre-climat",
+    "fact": "datation-potassium-argon-quarante",
+    "source": "https://www.usgs.gov/observatories/yvo/news/a-beginners-guide-dating-rocks"
+  },
+  {
+    "text": "Sur une éprouvette graduée, quelle grandeur exprime-t-on en millilitres ?",
+    "answers": ["La masse", "La longueur", "Le volume", "La température"],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "experiences",
+    "fact": "millilitre-volume-eprouvette"
+  },
+  {
+    "text": "Un microscope a un oculaire ×10 et un objectif ×40. Quel est son grossissement total ?",
+    "answers": ["×50", "×40", "×4", "×400"],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "experiences",
+    "fact": "microscope-produit-oculaire-objectif"
+  },
+  {
+    "text": "Une balance affiche toujours 102 g pour un étalon de 100 g. Quel défaut cela révèle-t-il ?",
+    "answers": ["Un biais de mesure", "Une forte dispersion", "Une résolution de 10 g", "Une dérive croissante"],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "experiences",
+    "fact": "balance-etalon-ecart-systematique",
+    "source": "https://www.itl.nist.gov/div898/handbook/mpc/section4/mpc45.htm"
+  },
+  {
+    "text": "Dans un essai en double aveugle, quelle information cache-t-on aux volontaires et à ceux qui les évaluent ?",
+    "answers": ["L’objectif général de l’essai", "La durée de chaque visite", "Le traitement attribué à chacun", "Les critères d’admission"],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "experiences",
+    "fact": "essai-double-aveugle-attribution-masquee",
+    "source": "https://www.nccih.nih.gov/health/know-science/how-to-make-sense-of-a-scientific-journal-article/methods/design-of-the-study"
+  },
+  {
+    "text": "En chromatographie sur papier, pourquoi deux colorants peuvent-ils parcourir des distances différentes ?",
+    "answers": ["Seule leur masse molaire détermine leur vitesse", "Ils n’ont pas la même affinité pour le papier et le solvant", "Seule la taille des pores du papier les sépare", "Le colorant le plus foncé retient toujours plus de solvant"],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "experiences",
+    "fact": "chromatographie-papier-affinites",
+    "source": "https://goldbook.iupac.org/terms/view/C01075/pdf"
+  }
+]

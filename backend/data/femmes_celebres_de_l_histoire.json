@@ -7,17 +7,8 @@
       "Cléopâtre VII",
       "Zénobie"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle personnalité décrit la première femme à recevoir un prix Nobel ?",
-    "answers": [
-      "Hatchepsout",
-      "Marie Curie",
-      "Cléopâtre VII",
-      "Zénobie"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Quelle femme historique correspond à la pharaonne du XVe siècle av. J.-C. ?",
@@ -27,7 +18,8 @@
       "Hatchepsout",
       "Jeanne d'Arc"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Quelle personnalité décrit la pharaonne du XVe siècle av. J.-C. ?",
@@ -37,7 +29,8 @@
       "Jeanne d'Arc",
       "Hatchepsout"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "Quelle femme historique correspond à la dernière souveraine lagide d'Égypte ?",
@@ -47,7 +40,8 @@
       "Jeanne d'Arc",
       "Élisabeth Ire"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Quelle personnalité décrit la dernière souveraine lagide d'Égypte ?",
@@ -57,7 +51,8 @@
       "Jeanne d'Arc",
       "Élisabeth Ire"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Quelle femme historique correspond à la reine de Palmyre ayant défié Rome ?",
@@ -67,17 +62,8 @@
       "Zénobie",
       "Catherine II"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle personnalité décrit la reine de Palmyre ayant défié Rome ?",
-    "answers": [
-      "Jeanne d'Arc",
-      "Élisabeth Ire",
-      "Catherine II",
-      "Zénobie"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Quelle femme historique correspond à la sainte associée au siège d'Orléans ?",
@@ -87,7 +73,8 @@
       "Catherine II",
       "Olympe de Gouges"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Quelle personnalité décrit la sainte associée au siège d'Orléans ?",
@@ -97,7 +84,8 @@
       "Catherine II",
       "Olympe de Gouges"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "Quelle femme historique correspond à la reine d'Angleterre de l'âge élisabéthain ?",
@@ -107,7 +95,8 @@
       "Élisabeth Ire",
       "Harriet Tubman"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Quelle personnalité décrit la reine d'Angleterre de l'âge élisabéthain ?",
@@ -117,7 +106,8 @@
       "Harriet Tubman",
       "Élisabeth Ire"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Quelle femme historique correspond à la souveraine russe dite la Grande ?",
@@ -127,17 +117,8 @@
       "Harriet Tubman",
       "Emmeline Pankhurst"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle personnalité décrit la souveraine russe dite la Grande ?",
-    "answers": [
-      "Olympe de Gouges",
-      "Catherine II",
-      "Harriet Tubman",
-      "Emmeline Pankhurst"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Quelle femme historique correspond à l'auteure de la Déclaration des droits de la femme ?",
@@ -147,7 +128,8 @@
       "Olympe de Gouges",
       "Ada Lovelace"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Quelle personnalité décrit l'auteure de la Déclaration des droits de la femme ?",
@@ -157,7 +139,8 @@
       "Ada Lovelace",
       "Olympe de Gouges"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Quelle femme historique correspond à la militante du chemin de fer clandestin ?",
@@ -167,7 +150,8 @@
       "Ada Lovelace",
       "Clara Barton"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Quelle personnalité décrit la militante du chemin de fer clandestin ?",
@@ -177,7 +161,8 @@
       "Ada Lovelace",
       "Clara Barton"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Quelle femme historique correspond à la suffragette britannique fondatrice de la WSPU ?",
@@ -187,17 +172,8 @@
       "Emmeline Pankhurst",
       "Elizabeth Blackwell"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle personnalité décrit la suffragette britannique fondatrice de la WSPU ?",
-    "answers": [
-      "Ada Lovelace",
-      "Clara Barton",
-      "Elizabeth Blackwell",
-      "Emmeline Pankhurst"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Quelle femme historique correspond à la pionnière de l'informatique et des algorithmes ?",
@@ -207,7 +183,8 @@
       "Elizabeth Blackwell",
       "Lucie Aubrac"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Quelle personnalité décrit la pionnière de l'informatique et des algorithmes ?",
@@ -217,7 +194,8 @@
       "Elizabeth Blackwell",
       "Lucie Aubrac"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Quelle femme historique correspond à la fondatrice du mouvement de la Croix-Rouge américaine ?",
@@ -227,7 +205,8 @@
       "Clara Barton",
       "Rosa Parks"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Quelle personnalité décrit la fondatrice du mouvement de la Croix-Rouge américaine ?",
@@ -237,7 +216,8 @@
       "Rosa Parks",
       "Clara Barton"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Quelle femme historique correspond à la première femme médecin diplômée aux États-Unis ?",
@@ -247,17 +227,8 @@
       "Rosa Parks",
       "Margaret Thatcher"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle personnalité décrit la première femme médecin diplômée aux États-Unis ?",
-    "answers": [
-      "Lucie Aubrac",
-      "Elizabeth Blackwell",
-      "Rosa Parks",
-      "Margaret Thatcher"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Quelle résistante française a organisé en 1943 l'évasion de son mari Raymond, arrêté à Caluire ?",
@@ -267,7 +238,8 @@
       "Lucie Aubrac",
       "Germaine Tillion"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Quelle ethnologue résistante, déportée à Ravensbrück, est entrée au Panthéon en 2015 ?",
@@ -277,7 +249,8 @@
       "Joséphine Baker",
       "Germaine Tillion"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-28"
   },
   {
     "text": "Quelle femme historique correspond à la militante ayant refusé de céder son siège à Montgomery ?",
@@ -287,7 +260,8 @@
       "Angela Merkel",
       "Amelia Earhart"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Quelle personnalité décrit la militante ayant refusé de céder son siège à Montgomery ?",
@@ -297,7 +271,8 @@
       "Angela Merkel",
       "Amelia Earhart"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Quelle femme historique correspond à la première femme Première ministre du Royaume-Uni ?",
@@ -307,7 +282,8 @@
       "Margaret Thatcher",
       "Valentina Terechkova"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Quelle personnalité décrit la première femme Première ministre du Royaume-Uni ?",
@@ -317,7 +293,8 @@
       "Valentina Terechkova",
       "Margaret Thatcher"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-31"
   },
   {
     "text": "Quelle femme historique correspond à la première femme chancelière d'Allemagne ?",
@@ -327,17 +304,8 @@
       "Valentina Terechkova",
       "Jane Goodall"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle personnalité décrit la première femme chancelière d'Allemagne ?",
-    "answers": [
-      "Amelia Earhart",
-      "Angela Merkel",
-      "Valentina Terechkova",
-      "Jane Goodall"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Quelle femme historique correspond à la première femme à effectuer seule un vol transatlantique ?",
@@ -347,7 +315,8 @@
       "Amelia Earhart",
       "Malala Yousafzai"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Quelle personnalité décrit la première femme à effectuer seule un vol transatlantique ?",
@@ -357,7 +326,8 @@
       "Malala Yousafzai",
       "Amelia Earhart"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Quelle femme historique correspond à la première femme dans l'espace ?",
@@ -367,7 +337,8 @@
       "Malala Yousafzai",
       "Wangari Maathai"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Quelle personnalité décrit la première femme dans l'espace ?",
@@ -377,7 +348,8 @@
       "Malala Yousafzai",
       "Wangari Maathai"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-37"
   },
   {
     "text": "Quelle femme historique correspond à la primatologue spécialiste des chimpanzés ?",
@@ -387,17 +359,8 @@
       "Jane Goodall",
       "Ellen Johnson Sirleaf"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Quelle personnalité décrit la primatologue spécialiste des chimpanzés ?",
-    "answers": [
-      "Malala Yousafzai",
-      "Wangari Maathai",
-      "Ellen Johnson Sirleaf",
-      "Jane Goodall"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Quelle femme historique correspond à la militante pakistanaise prix Nobel de la paix 2014 ?",
@@ -407,7 +370,8 @@
       "Ellen Johnson Sirleaf",
       "Ruth Bader Ginsburg"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Quelle personnalité décrit la militante pakistanaise prix Nobel de la paix 2014 ?",
@@ -417,7 +381,8 @@
       "Ellen Johnson Sirleaf",
       "Ruth Bader Ginsburg"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Quelle femme historique correspond à la fondatrice du Green Belt Movement ?",
@@ -427,7 +392,8 @@
       "Wangari Maathai",
       "Katherine Johnson"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Quelle personnalité décrit la fondatrice du Green Belt Movement ?",
@@ -437,7 +403,8 @@
       "Katherine Johnson",
       "Wangari Maathai"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-43"
   },
   {
     "text": "Quelle femme historique correspond à la première femme présidente élue en Afrique ?",
@@ -447,17 +414,8 @@
       "Katherine Johnson",
       "Marie Curie"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Quelle personnalité décrit la première femme présidente élue en Afrique ?",
-    "answers": [
-      "Ruth Bader Ginsburg",
-      "Ellen Johnson Sirleaf",
-      "Katherine Johnson",
-      "Marie Curie"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Quelle femme historique correspond à la juriste américaine surnommée RBG ?",
@@ -467,7 +425,8 @@
       "Ruth Bader Ginsburg",
       "Hatchepsout"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Quelle personnalité décrit la juriste américaine surnommée RBG ?",
@@ -477,7 +436,8 @@
       "Hatchepsout",
       "Ruth Bader Ginsburg"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Quelle femme historique correspond à la mathématicienne de la NASA mise en lumière par Hidden Figures ?",
@@ -487,7 +447,8 @@
       "Hatchepsout",
       "Cléopâtre VII"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Quelle personnalité décrit la mathématicienne de la NASA mise en lumière par Hidden Figures ?",
@@ -497,6 +458,119 @@
       "Hatchepsout",
       "Cléopâtre VII"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quelle ministre a défendu devant l’Assemblée nationale le projet de loi sur l’IVG devenu la loi Veil ?",
+    "answers": [
+      "Simone Veil",
+      "Gisèle Halimi",
+      "Yvette Roudy",
+      "Françoise Giroud"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "politique",
+    "fact": "femmes-veil-projet-ivg",
+    "source": "https://www2.assemblee-nationale.fr/decouvrir-l-assemblee/histoire/grands-discours-parlementaires/simone-veil-26-novembre-1974"
+  },
+  {
+    "text": "Qui a écrit « Printemps silencieux », un livre sur les dégâts causés par certains pesticides ?",
+    "answers": [
+      "Jane Jacobs",
+      "Margaret Mead",
+      "Dorothy Hodgkin",
+      "Rachel Carson"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "environnement",
+    "fact": "femmes-carson-printemps-silencieux",
+    "source": "https://www.fws.gov/staff-profile/rachel-carson-1907-1964-author-modern-environmental-movement"
+  },
+  {
+    "text": "Qu’étudiait Mary Anning à partir de ses découvertes sur la côte de Lyme Regis ?",
+    "answers": [
+      "Des minéraux radioactifs",
+      "Des pollens fossilisés dans la glace",
+      "Des fossiles",
+      "Des coquillages vivants"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "sciences",
+    "fact": "femmes-anning-fossiles-lyme-regis",
+    "source": "https://www.nhm.ac.uk/discover/mary-anning-unsung-hero.html"
+  },
+  {
+    "text": "Contre quelle violence Ida B. Wells a-t-elle mené campagne par ses enquêtes et ses pamphlets ?",
+    "answers": [
+      "Le travail des enfants dans les mines",
+      "Les lynchages racistes",
+      "La traite des femmes à l’étranger",
+      "Les violences dans les asiles"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "journalisme",
+    "fact": "femmes-wells-lynchages-enquetes",
+    "source": "https://www.nps.gov/people/idabwells.htm"
+  },
+  {
+    "text": "Qui a écrit « La Cité des dames », œuvre qui rassemble des exemples de femmes remarquables ?",
+    "answers": [
+      "Marie de France",
+      "Marguerite de Navarre",
+      "Christine de Pizan",
+      "Louise Labé"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "litterature",
+    "fact": "femmes-pizan-cite-des-dames",
+    "source": "https://gallica.bnf.fr/selections/fr/html/christine-de-pizan-et-la-defense-des-femmes"
+  },
+  {
+    "text": "Dans quel pays Bessie Coleman a-t-elle obtenu son brevet de pilote ?",
+    "answers": [
+      "En France",
+      "Aux États-Unis",
+      "Au Canada",
+      "En Belgique"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "aviation",
+    "fact": "femmes-coleman-brevet-france",
+    "source": "https://airandspace.si.edu/stories/editorial/celebrating-centennial-bessie-coleman"
+  },
+  {
+    "text": "Quel droit Sor Juana Inés de la Cruz a-t-elle notamment défendu dans sa réponse à Sor Filotea ?",
+    "answers": [
+      "Le vote des femmes aux élections",
+      "L’accès des femmes au commandement militaire",
+      "L’égalité successorale entre tous les enfants",
+      "L’accès des femmes à l’étude"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "litterature",
+    "fact": "femmes-sor-juana-respuesta-etudes",
+    "source": "https://www.gaceta.unam.mx/sor-juana-ines-de-la-cruz-vigente/"
+  },
+  {
+    "text": "L’expérience de Chien-Shiung Wu sur le cobalt 60 a montré qu’une symétrie pouvait être violée. Laquelle ?",
+    "answers": [
+      "La symétrie de rotation",
+      "La parité",
+      "L’invariance par translation spatiale",
+      "L’invariance par translation temporelle"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "physique",
+    "fact": "femmes-wu-parite-interaction-faible",
+    "source": "https://nvlpubs.nist.gov/nistpubs/sp958-lide/111-115.pdf"
   }
 ]

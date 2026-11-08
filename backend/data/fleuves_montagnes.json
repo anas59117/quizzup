@@ -7,17 +7,8 @@
       "l'Europe centrale et orientale",
       "les États-Unis"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Où trouve-t-on principalement Nil ?",
-    "answers": [
-      "l'Amérique du Sud",
-      "l'Afrique du Nord-Est",
-      "l'Europe centrale et orientale",
-      "les États-Unis"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "Dans quelle région se situe principalement Amazone ?",
@@ -27,7 +18,8 @@
       "l'Amérique du Sud",
       "la Chine"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "Où trouve-t-on principalement Amazone ?",
@@ -37,7 +29,8 @@
       "la Chine",
       "l'Amérique du Sud"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "Dans quelle région se situe principalement Danube ?",
@@ -47,7 +40,8 @@
       "la Chine",
       "l'Inde et le Bangladesh"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "Où trouve-t-on principalement Danube ?",
@@ -57,7 +51,8 @@
       "la Chine",
       "l'Inde et le Bangladesh"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "Dans quelle région se situe principalement Mississippi ?",
@@ -67,17 +62,8 @@
       "les États-Unis",
       "l'Asie du Sud-Est"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Où trouve-t-on principalement Mississippi ?",
-    "answers": [
-      "la Chine",
-      "l'Inde et le Bangladesh",
-      "l'Asie du Sud-Est",
-      "les États-Unis"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "Dans quelle région se situe principalement Yangtsé ?",
@@ -87,7 +73,8 @@
       "l'Asie du Sud-Est",
       "la Russie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "Où trouve-t-on principalement Yangtsé ?",
@@ -97,7 +84,8 @@
       "l'Asie du Sud-Est",
       "la Russie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-09"
   },
   {
     "text": "Dans quelle région se situe principalement Gange ?",
@@ -107,7 +95,8 @@
       "l'Inde et le Bangladesh",
       "l'Europe occidentale"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "Où trouve-t-on principalement Gange ?",
@@ -117,7 +106,8 @@
       "l'Europe occidentale",
       "l'Inde et le Bangladesh"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "Dans quelle région se situe principalement Mékong ?",
@@ -127,17 +117,8 @@
       "l'Europe occidentale",
       "l'Afrique centrale"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Où trouve-t-on principalement Mékong ?",
-    "answers": [
-      "la Russie",
-      "l'Asie du Sud-Est",
-      "l'Europe occidentale",
-      "l'Afrique centrale"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "Dans quelle région se situe principalement Volga ?",
@@ -147,7 +128,8 @@
       "la Russie",
       "l'Afrique de l'Ouest"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "Où trouve-t-on principalement Volga ?",
@@ -157,7 +139,8 @@
       "l'Afrique de l'Ouest",
       "la Russie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-15"
   },
   {
     "text": "Dans quelle région se situe principalement Rhin ?",
@@ -167,7 +150,8 @@
       "l'Afrique de l'Ouest",
       "la Mésopotamie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "Où trouve-t-on principalement Rhin ?",
@@ -177,7 +161,8 @@
       "l'Afrique de l'Ouest",
       "la Mésopotamie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "Dans quelle région se situe principalement Congo ?",
@@ -187,17 +172,8 @@
       "l'Afrique centrale",
       "le Venezuela et la Colombie"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Où trouve-t-on principalement Congo ?",
-    "answers": [
-      "l'Afrique de l'Ouest",
-      "la Mésopotamie",
-      "le Venezuela et la Colombie",
-      "l'Afrique centrale"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "Dans quelle région se situe principalement Niger ?",
@@ -207,7 +183,8 @@
       "le Venezuela et la Colombie",
       "l'Australie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "Où trouve-t-on principalement Niger ?",
@@ -217,7 +194,8 @@
       "le Venezuela et la Colombie",
       "l'Australie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-21"
   },
   {
     "text": "Dans quelle région se situe principalement Tigre ?",
@@ -227,7 +205,8 @@
       "la Mésopotamie",
       "l'Himalaya"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "Où trouve-t-on principalement Tigre ?",
@@ -237,7 +216,8 @@
       "l'Himalaya",
       "la Mésopotamie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "Dans quelle région se situe principalement Euphrate ?",
@@ -247,17 +227,8 @@
       "l'Australie",
       "l'Himalaya"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Où trouve-t-on principalement Euphrate ?",
-    "answers": [
-      "le Venezuela et la Colombie",
-      "la Mésopotamie",
-      "l'Australie",
-      "l'Himalaya"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "Dans quelle région se situe principalement Orénoque ?",
@@ -267,7 +238,8 @@
       "le Venezuela et la Colombie",
       "le Karakoram"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "Où trouve-t-on principalement Orénoque ?",
@@ -277,7 +249,8 @@
       "le Karakoram",
       "le Venezuela et la Colombie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-27"
   },
   {
     "text": "Dans quelle région se situe principalement Murray ?",
@@ -287,7 +260,8 @@
       "le Karakoram",
       "la Tanzanie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "Où trouve-t-on principalement Murray ?",
@@ -297,7 +271,8 @@
       "le Karakoram",
       "la Tanzanie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "Dans quelle région se situe principalement Everest ?",
@@ -307,17 +282,8 @@
       "l'Himalaya",
       "les Alpes"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Où trouve-t-on principalement Everest ?",
-    "answers": [
-      "le Karakoram",
-      "la Tanzanie",
-      "les Alpes",
-      "l'Himalaya"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "Dans quelle région se situe principalement K2 ?",
@@ -327,7 +293,8 @@
       "les Alpes",
       "les Andes"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "Où trouve-t-on principalement K2 ?",
@@ -337,7 +304,8 @@
       "les Alpes",
       "les Andes"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-33"
   },
   {
     "text": "Dans quelle région se situe principalement Kilimandjaro ?",
@@ -347,7 +315,8 @@
       "la Tanzanie",
       "l'Alaska"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "Où trouve-t-on principalement Kilimandjaro ?",
@@ -357,7 +326,8 @@
       "l'Alaska",
       "la Tanzanie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "Dans quelle région se situe principalement Mont Blanc ?",
@@ -367,17 +337,8 @@
       "l'Alaska",
       "le Caucase"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Où trouve-t-on principalement Mont Blanc ?",
-    "answers": [
-      "les Andes",
-      "les Alpes",
-      "l'Alaska",
-      "le Caucase"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "Dans quelle région se situe principalement Aconcagua ?",
@@ -387,7 +348,8 @@
       "les Andes",
       "le Japon"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "Où trouve-t-on principalement Aconcagua ?",
@@ -397,7 +359,8 @@
       "le Japon",
       "les Andes"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-39"
   },
   {
     "text": "Dans quelle région se situe principalement Denali ?",
@@ -407,7 +370,8 @@
       "le Japon",
       "l'Italie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "Où trouve-t-on principalement Denali ?",
@@ -417,7 +381,8 @@
       "le Japon",
       "l'Italie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "Dans quelle région se situe principalement Elbrouz ?",
@@ -427,17 +392,8 @@
       "le Caucase",
       "la Sicile"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Où trouve-t-on principalement Elbrouz ?",
-    "answers": [
-      "le Japon",
-      "l'Italie",
-      "la Sicile",
-      "le Caucase"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "Dans quelle région se situe principalement Fuji ?",
@@ -447,7 +403,8 @@
       "la Sicile",
       "l'Afrique du Nord-Est"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "Où trouve-t-on principalement Fuji ?",
@@ -457,7 +414,8 @@
       "la Sicile",
       "l'Afrique du Nord-Est"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-45"
   },
   {
     "text": "Dans quelle région se situe principalement Vésuve ?",
@@ -467,7 +425,8 @@
       "l'Italie",
       "l'Amérique du Sud"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "Où trouve-t-on principalement Vésuve ?",
@@ -477,7 +436,8 @@
       "l'Amérique du Sud",
       "l'Italie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "Dans quelle région se situe principalement Etna ?",
@@ -487,7 +447,8 @@
       "l'Amérique du Sud",
       "l'Europe centrale et orientale"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "Où trouve-t-on principalement Etna ?",
@@ -497,6 +458,118 @@
       "l'Amérique du Sud",
       "l'Europe centrale et orientale"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Comment appelle-t-on l’endroit où deux cours d’eau se rejoignent ?",
+    "answers": [
+      "Un méandre",
+      "Un estuaire",
+      "Un confluent",
+      "Un seuil"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "hydrologie",
+    "fact": "reliefs-confluence-definition",
+    "source": "https://www.vigicrues.gouv.fr/ftp/aide/Guide_lexique_vigicrues.pdf"
+  },
+  {
+    "text": "Dans quel océan la Loire se jette-t-elle ?",
+    "answers": [
+      "L’Atlantique",
+      "Le Pacifique",
+      "L’océan Indien",
+      "L’océan Arctique"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "embouchures",
+    "fact": "reliefs-loire-embouchure-atlantique"
+  },
+  {
+    "text": "Quel fleuve forme les chutes Victoria entre la Zambie et le Zimbabwe ?",
+    "answers": [
+      "Le Limpopo",
+      "L’Orange",
+      "Le Rufiji",
+      "Le Zambèze"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "chutes",
+    "fact": "reliefs-zambeze-chutes-victoria",
+    "source": "https://whc.unesco.org/en/list/509"
+  },
+  {
+    "text": "Quel fleuve prend naissance au pied d’un glacier dans le Valais suisse ?",
+    "answers": [
+      "La Seine",
+      "Le Rhône",
+      "La Saône",
+      "La Loire"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "sources",
+    "fact": "reliefs-rhone-source-glacier",
+    "source": "https://www.myswitzerland.com/fr-fr/destinations/glacier-du-rhone/"
+  },
+  {
+    "text": "Quel fleuve se termine dans un delta intérieur au Botswana ?",
+    "answers": [
+      "Le Sénégal",
+      "L’Okavango",
+      "Le Limpopo",
+      "Le Zambèze"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "embouchures",
+    "fact": "reliefs-okavango-delta-interieur",
+    "source": "https://whc.unesco.org/en/list/1432/"
+  },
+  {
+    "text": "Quelle plaque océanique s’enfonce sous l’Amérique du Sud le long des Andes centrales ?",
+    "answers": [
+      "Cocos",
+      "Juan de Fuca",
+      "Philippine",
+      "Nazca"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "tectonique",
+    "fact": "reliefs-andes-subduction-nazca",
+    "source": "https://pubs.usgs.gov/gip/dynamic/Nazca.html"
+  },
+  {
+    "text": "Quel fleuve traverse les gorges des Portes de Fer entre la Serbie et la Roumanie ?",
+    "answers": [
+      "Le Danube",
+      "Le Dniestr",
+      "La Drave",
+      "La Vistule"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "gorges",
+    "fact": "reliefs-danube-portes-de-fer",
+    "source": "https://www.britannica.com/place/Iron-Gate-gorge-Europe"
+  },
+  {
+    "text": "Quel sommet est le point culminant des Pyrénées ?",
+    "answers": [
+      "Le Vignemale",
+      "Le mont Perdu",
+      "L’Aneto",
+      "Le pic du Midi d’Ossau"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "sommets",
+    "fact": "reliefs-aneto-point-culminant-pyrenees",
+    "source": "https://www.spain.info/en/activities/climb-salenques-ridge-aneto-3404m/"
   }
 ]

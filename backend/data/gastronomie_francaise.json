@@ -7,17 +7,8 @@
       "le Languedoc",
       "la Lorraine"
     ],
-    "correct": 0
-  },
-  {
-    "text": "D'où vient traditionnellement la bouillabaisse ?",
-    "answers": [
-      "l'Alsace",
-      "Marseille",
-      "le Languedoc",
-      "la Lorraine"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01"
   },
   {
     "text": "À quelle région ou ville associe-t-on la choucroute garnie ?",
@@ -27,7 +18,8 @@
       "l'Alsace",
       "la Bretagne"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-03"
   },
   {
     "text": "D'où vient traditionnellement la choucroute garnie ?",
@@ -37,7 +29,8 @@
       "la Bretagne",
       "l'Alsace"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-03"
   },
   {
     "text": "À quelle région ou ville associe-t-on le cassoulet ?",
@@ -47,7 +40,8 @@
       "la Bretagne",
       "la Savoie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05"
   },
   {
     "text": "D'où vient traditionnellement le cassoulet ?",
@@ -57,7 +51,8 @@
       "la Bretagne",
       "la Savoie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05"
   },
   {
     "text": "De quelle région vient le kouign-amann ?",
@@ -67,7 +62,8 @@
       "la Bretagne",
       "la Provence"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-07"
   },
   {
     "text": "De quelle ville est originaire la bouillabaisse ?",
@@ -77,7 +73,8 @@
       "Montpellier",
       "Marseille"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-08"
   },
   {
     "text": "À quelle région ou ville associe-t-on la galette-saucisse ?",
@@ -87,17 +84,8 @@
       "la Provence",
       "la Bourgogne"
     ],
-    "correct": 0
-  },
-  {
-    "text": "D'où vient traditionnellement la galette-saucisse ?",
-    "answers": [
-      "la Savoie",
-      "la Bretagne",
-      "la Provence",
-      "la Bourgogne"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-09"
   },
   {
     "text": "À quelle région ou ville associe-t-on la fondue savoyarde ?",
@@ -107,7 +95,8 @@
       "la Savoie",
       "la Sologne"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11"
   },
   {
     "text": "D'où vient traditionnellement la fondue savoyarde ?",
@@ -117,7 +106,8 @@
       "la Sologne",
       "la Savoie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11"
   },
   {
     "text": "À quelle région ou ville associe-t-on la ratatouille ?",
@@ -127,7 +117,8 @@
       "la Sologne",
       "Bordeaux"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-13"
   },
   {
     "text": "D'où vient traditionnellement la ratatouille ?",
@@ -137,7 +128,8 @@
       "la Sologne",
       "Bordeaux"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-13"
   },
   {
     "text": "À quelle région ou ville associe-t-on le bœuf bourguignon ?",
@@ -147,17 +139,8 @@
       "la Bourgogne",
       "la Bretagne"
     ],
-    "correct": 2
-  },
-  {
-    "text": "D'où vient traditionnellement le bœuf bourguignon ?",
-    "answers": [
-      "la Sologne",
-      "Bordeaux",
-      "la Bretagne",
-      "la Bourgogne"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-15"
   },
   {
     "text": "À quelle région ou ville associe-t-on la tarte Tatin ?",
@@ -167,7 +150,8 @@
       "la Bretagne",
       "Nice"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17"
   },
   {
     "text": "D'où vient traditionnellement la tarte Tatin ?",
@@ -177,7 +161,8 @@
       "la Bretagne",
       "Nice"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17"
   },
   {
     "text": "À quelle région ou ville associe-t-on le canelé ?",
@@ -187,7 +172,8 @@
       "Bordeaux",
       "l'Aubrac"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-19"
   },
   {
     "text": "D'où vient traditionnellement le canelé ?",
@@ -197,7 +183,8 @@
       "l'Aubrac",
       "Bordeaux"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-19"
   },
   {
     "text": "À quelle région ou ville associe-t-on le kouign-amann ?",
@@ -207,17 +194,8 @@
       "l'Aubrac",
       "le Nord"
     ],
-    "correct": 0
-  },
-  {
-    "text": "D'où vient traditionnellement le kouign-amann ?",
-    "answers": [
-      "Nice",
-      "la Bretagne",
-      "l'Aubrac",
-      "le Nord"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-21"
   },
   {
     "text": "À quelle région ou ville associe-t-on la socca ?",
@@ -227,7 +205,8 @@
       "Nice",
       "le Loiret"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23"
   },
   {
     "text": "D'où vient traditionnellement la socca ?",
@@ -237,7 +216,8 @@
       "le Loiret",
       "Nice"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23"
   },
   {
     "text": "À quelle région ou ville associe-t-on l'aligot ?",
@@ -247,7 +227,8 @@
       "le Loiret",
       "Nice"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-25"
   },
   {
     "text": "D'où vient traditionnellement l'aligot ?",
@@ -257,7 +238,8 @@
       "le Loiret",
       "Nice"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-25"
   },
   {
     "text": "À quelle région ou ville associe-t-on la flamiche au maroilles ?",
@@ -267,17 +249,8 @@
       "le Nord",
       "la Normandie"
     ],
-    "correct": 2
-  },
-  {
-    "text": "D'où vient traditionnellement la flamiche au maroilles ?",
-    "answers": [
-      "le Loiret",
-      "Nice",
-      "la Normandie",
-      "le Nord"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-27"
   },
   {
     "text": "À quelle région ou ville associe-t-on le pithiviers ?",
@@ -287,7 +260,8 @@
       "la Normandie",
       "la Picardie"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29"
   },
   {
     "text": "D'où vient traditionnellement le pithiviers ?",
@@ -297,7 +271,8 @@
       "la Normandie",
       "la Picardie"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29"
   },
   {
     "text": "À quelle région ou ville associe-t-on la salade niçoise ?",
@@ -307,7 +282,8 @@
       "Nice",
       "la Lorraine"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-31"
   },
   {
     "text": "D'où vient traditionnellement la salade niçoise ?",
@@ -317,7 +293,8 @@
       "la Lorraine",
       "Nice"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-31"
   },
   {
     "text": "À quelle région ou ville associe-t-on les tripes à la mode de Caen ?",
@@ -327,17 +304,8 @@
       "la Lorraine",
       "le Sud-Ouest"
     ],
-    "correct": 0
-  },
-  {
-    "text": "D'où vient traditionnellement les tripes à la mode de Caen ?",
-    "answers": [
-      "la Picardie",
-      "la Normandie",
-      "la Lorraine",
-      "le Sud-Ouest"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-33"
   },
   {
     "text": "À quelle région ou ville associe-t-on la ficelle picarde ?",
@@ -347,7 +315,8 @@
       "la Picardie",
       "la Bretagne"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35"
   },
   {
     "text": "D'où vient traditionnellement la ficelle picarde ?",
@@ -357,7 +326,8 @@
       "la Bretagne",
       "la Picardie"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35"
   },
   {
     "text": "À quelle région ou ville associe-t-on le pâté lorrain ?",
@@ -367,7 +337,8 @@
       "la Bretagne",
       "Lyon"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-37"
   },
   {
     "text": "D'où vient traditionnellement le pâté lorrain ?",
@@ -377,7 +348,8 @@
       "la Bretagne",
       "Lyon"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-37"
   },
   {
     "text": "À quelle région ou ville associe-t-on la garbure ?",
@@ -387,17 +359,8 @@
       "le Sud-Ouest",
       "l'Ain"
     ],
-    "correct": 2
-  },
-  {
-    "text": "D'où vient traditionnellement la garbure ?",
-    "answers": [
-      "la Bretagne",
-      "Lyon",
-      "l'Ain",
-      "le Sud-Ouest"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-39"
   },
   {
     "text": "À quelle région ou ville associe-t-on le far breton ?",
@@ -407,7 +370,8 @@
       "l'Ain",
       "le Limousin"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41"
   },
   {
     "text": "D'où vient traditionnellement le far breton ?",
@@ -417,7 +381,8 @@
       "l'Ain",
       "le Limousin"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41"
   },
   {
     "text": "À quelle région ou ville associe-t-on les quenelles de brochet ?",
@@ -427,7 +392,8 @@
       "Lyon",
       "le Pays basque"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-43"
   },
   {
     "text": "D'où vient traditionnellement les quenelles de brochet ?",
@@ -437,7 +403,8 @@
       "le Pays basque",
       "Lyon"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-43"
   },
   {
     "text": "À quelle région ou ville associe-t-on la poularde de Bresse ?",
@@ -447,17 +414,8 @@
       "le Pays basque",
       "Marseille"
     ],
-    "correct": 0
-  },
-  {
-    "text": "D'où vient traditionnellement la poularde de Bresse ?",
-    "answers": [
-      "le Limousin",
-      "l'Ain",
-      "le Pays basque",
-      "Marseille"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-45"
   },
   {
     "text": "À quelle région ou ville associe-t-on le clafoutis aux cerises ?",
@@ -467,7 +425,8 @@
       "le Limousin",
       "l'Alsace"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47"
   },
   {
     "text": "D'où vient traditionnellement le clafoutis aux cerises ?",
@@ -477,7 +436,8 @@
       "l'Alsace",
       "le Limousin"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47"
   },
   {
     "text": "À quelle région ou ville associe-t-on le gâteau basque ?",
@@ -487,7 +447,8 @@
       "l'Alsace",
       "le Languedoc"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49"
   },
   {
     "text": "D'où vient traditionnellement le gâteau basque ?",
@@ -497,6 +458,119 @@
       "l'Alsace",
       "le Languedoc"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49"
+  },
+  {
+    "text": "Quel fruit caramélise au fond du moule dans la tarte Tatin classique ?",
+    "answers": [
+      "La pêche",
+      "L’abricot",
+      "La pomme",
+      "La prune"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "ingredients",
+    "fact": "tatin-fruit-pomme-classique",
+    "source": "https://www.academiedugout.fr/recettes/tarte-tatin-aux_655_2"
+  },
+  {
+    "text": "Quelle texture caractérise l’extérieur d’un canelé bordelais bien cuit ?",
+    "answers": [
+      "Une croûte caramélisée et croustillante",
+      "Une croûte feuilletée",
+      "Une coque meringuée",
+      "Une pâte blanche et molle"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "cuisson",
+    "fact": "canele-croute-caramelisee",
+    "source": "https://www.bordeaux-tourisme.com/gastronomie/produits-locaux/canneles-gourmandises-bordelaises"
+  },
+  {
+    "text": "Quel fromage donne à l’aligot de l’Aubrac sa texture filante ?",
+    "answers": [
+      "Le roquefort",
+      "Le crottin de Chavignol",
+      "Le brie de Meaux",
+      "La tome fraîche"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "fromages",
+    "fact": "aligot-tome-fraiche-filant",
+    "source": "https://agriculture.gouv.fr/laligot-la-bonne-etoile-de-laubrac"
+  },
+  {
+    "text": "Quelle farine constitue la base de la socca niçoise ?",
+    "answers": [
+      "De sarrasin",
+      "De pois chiches",
+      "De châtaigne",
+      "De riz"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "ingredients",
+    "fact": "socca-farine-pois-chiches",
+    "source": "https://fetedesmai.nice.fr/wp-content/uploads/2021/04/fiche-recette_Socca.pdf"
+  },
+  {
+    "text": "Quel liquide ajoute-t-on au roux pour préparer une béchamel classique ?",
+    "answers": [
+      "Du bouillon de volaille",
+      "Du vin blanc",
+      "Du lait",
+      "Du jus de citron"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "sauces",
+    "fact": "bechamel-roux-lait",
+    "source": "https://www.academiedugout.fr/recettes/sauce-bechamel_7639_2"
+  },
+  {
+    "text": "De quel animal vient le lait utilisé pour fabriquer le roquefort AOP ?",
+    "answers": [
+      "La chèvre",
+      "La vache",
+      "La bufflonne",
+      "La brebis"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "fromages",
+    "fact": "roquefort-lait-brebis-aop",
+    "source": "https://www.inao.gouv.fr/produit/roquefort-24302"
+  },
+  {
+    "text": "Quel ingrédient aide à émulsionner le beurre dans une sauce hollandaise classique ?",
+    "answers": [
+      "La farine",
+      "Les jaunes d’œufs",
+      "Les blancs d’œufs",
+      "La fécule de pomme de terre"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "sauces",
+    "fact": "hollandaise-emulsion-jaunes-oeufs",
+    "source": "https://www.academiedugout.fr/recettes/sauce-hollandaise_7623_2"
+  },
+  {
+    "text": "Quel aromate Paul Bocuse fait-il revenir au vinaigre de vin blanc avant de monter son beurre blanc ?",
+    "answers": [
+      "L’échalote",
+      "L’estragon",
+      "L’ail",
+      "Le poireau"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "sauces",
+    "fact": "beurre-blanc-bocuse-reduction-echalotes",
+    "source": "https://www.academiedugout.fr/recettes/beurre-blanc_5383_2"
   }
 ]

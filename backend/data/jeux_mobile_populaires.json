@@ -7,17 +7,9 @@
       "Niantic",
       "Tencent et Lightspeed & Quantum"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a développé ou publié Candy Crush Saga ?",
-    "answers": [
-      "Supercell",
-      "King",
-      "Niantic",
-      "Tencent et Lightspeed & Quantum"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-01",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Clash of Clans ?",
@@ -27,17 +19,9 @@
       "Supercell",
       "TiMi Studio Group"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a développé ou publié Clash of Clans ?",
-    "answers": [
-      "Niantic",
-      "Tencent et Lightspeed & Quantum",
-      "TiMi Studio Group",
-      "Supercell"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-03",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Clash Royale ?",
@@ -47,7 +31,9 @@
       "Tencent et Lightspeed & Quantum",
       "TiMi Studio Group"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-05",
+    "format": "attribution"
   },
   {
     "text": "Qui a développé ou publié Clash Royale ?",
@@ -57,7 +43,9 @@
       "Tencent et Lightspeed & Quantum",
       "TiMi Studio Group"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-05",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Brawl Stars ?",
@@ -67,17 +55,9 @@
       "Supercell",
       "TiMi Studio Group"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a développé ou publié Brawl Stars ?",
-    "answers": [
-      "Niantic",
-      "Tencent et Lightspeed & Quantum",
-      "TiMi Studio Group",
-      "Supercell"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-07",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Pokémon GO ?",
@@ -87,17 +67,9 @@
       "TiMi Studio Group",
       "HoYoverse"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a développé ou publié Pokémon GO ?",
-    "answers": [
-      "Tencent et Lightspeed & Quantum",
-      "Niantic",
-      "TiMi Studio Group",
-      "HoYoverse"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-09",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à PUBG Mobile ?",
@@ -107,7 +79,9 @@
       "Tencent et Lightspeed & Quantum",
       "Kiloo et SYBO"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-11",
+    "format": "attribution"
   },
   {
     "text": "Qui a développé ou publié PUBG Mobile ?",
@@ -117,7 +91,9 @@
       "Kiloo et SYBO",
       "Tencent et Lightspeed & Quantum"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-11",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Call of Duty: Mobile ?",
@@ -127,17 +103,9 @@
       "Kiloo et SYBO",
       "Imangi Studios"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a développé ou publié Call of Duty: Mobile ?",
-    "answers": [
-      "HoYoverse",
-      "TiMi Studio Group",
-      "Kiloo et SYBO",
-      "Imangi Studios"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-13",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Genshin Impact ?",
@@ -147,17 +115,9 @@
       "HoYoverse",
       "Rovio"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a développé ou publié Genshin Impact ?",
-    "answers": [
-      "Kiloo et SYBO",
-      "Imangi Studios",
-      "Rovio",
-      "HoYoverse"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-15",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Honkai: Star Rail ?",
@@ -167,7 +127,9 @@
       "Imangi Studios",
       "Rovio"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-17",
+    "format": "attribution"
   },
   {
     "text": "Qui a développé ou publié Honkai: Star Rail ?",
@@ -177,7 +139,9 @@
       "Imangi Studios",
       "Rovio"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-17",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Subway Surfers ?",
@@ -187,17 +151,9 @@
       "Kiloo et SYBO",
       "Halfbrick"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a développé ou publié Subway Surfers ?",
-    "answers": [
-      "Imangi Studios",
-      "Rovio",
-      "Halfbrick",
-      "Kiloo et SYBO"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-19",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Temple Run ?",
@@ -207,17 +163,9 @@
       "Halfbrick",
       "ustwo games"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a développé ou publié Temple Run ?",
-    "answers": [
-      "Rovio",
-      "Imangi Studios",
-      "Halfbrick",
-      "ustwo games"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-21",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Angry Birds ?",
@@ -227,7 +175,9 @@
       "Rovio",
       "Innersloth"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-23",
+    "format": "attribution"
   },
   {
     "text": "Qui a développé ou publié Angry Birds ?",
@@ -237,7 +187,9 @@
       "Innersloth",
       "Rovio"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-23",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Fruit Ninja ?",
@@ -247,17 +199,9 @@
       "Innersloth",
       "Roblox Corporation"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a développé ou publié Fruit Ninja ?",
-    "answers": [
-      "ustwo games",
-      "Halfbrick",
-      "Innersloth",
-      "Roblox Corporation"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-25",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Jetpack Joyride ?",
@@ -267,17 +211,9 @@
       "Halfbrick",
       "Roblox Corporation"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a développé ou publié Jetpack Joyride ?",
-    "answers": [
-      "ustwo games",
-      "Innersloth",
-      "Roblox Corporation",
-      "Halfbrick"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-27",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Monument Valley ?",
@@ -287,7 +223,9 @@
       "Roblox Corporation",
       "Garena"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-29",
+    "format": "attribution"
   },
   {
     "text": "Qui a développé ou publié Monument Valley ?",
@@ -297,7 +235,9 @@
       "Roblox Corporation",
       "Garena"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-29",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Among Us ?",
@@ -307,17 +247,9 @@
       "Innersloth",
       "Moonton"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a développé ou publié Among Us ?",
-    "answers": [
-      "Roblox Corporation",
-      "Garena",
-      "Moonton",
-      "Innersloth"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-31",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Roblox sur mobile ?",
@@ -327,17 +259,9 @@
       "Moonton",
       "Riot Games"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a développé ou publié Roblox sur mobile ?",
-    "answers": [
-      "Garena",
-      "Roblox Corporation",
-      "Moonton",
-      "Riot Games"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-33",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Free Fire ?",
@@ -347,7 +271,9 @@
       "Garena",
       "Second Dinner"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-35",
+    "format": "attribution"
   },
   {
     "text": "Qui a développé ou publié Free Fire ?",
@@ -357,7 +283,9 @@
       "Second Dinner",
       "Garena"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-35",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Mobile Legends: Bang Bang ?",
@@ -367,17 +295,9 @@
       "Second Dinner",
       "PopCap Games"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a développé ou publié Mobile Legends: Bang Bang ?",
-    "answers": [
-      "Riot Games",
-      "Moonton",
-      "Second Dinner",
-      "PopCap Games"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-37",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à League of Legends: Wild Rift ?",
@@ -387,17 +307,9 @@
       "Riot Games",
       "PONOS"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a développé ou publié League of Legends: Wild Rift ?",
-    "answers": [
-      "Second Dinner",
-      "PopCap Games",
-      "PONOS",
-      "Riot Games"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-39",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Marvel Snap ?",
@@ -407,7 +319,9 @@
       "PONOS",
       "RobTop Games"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-41",
+    "format": "attribution"
   },
   {
     "text": "Qui a développé ou publié Marvel Snap ?",
@@ -417,7 +331,9 @@
       "PONOS",
       "RobTop Games"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-41",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Plants vs. Zombies ?",
@@ -427,17 +343,9 @@
       "PopCap Games",
       "Dong Nguyen"
     ],
-    "correct": 2
-  },
-  {
-    "text": "Qui a développé ou publié Plants vs. Zombies ?",
-    "answers": [
-      "PONOS",
-      "RobTop Games",
-      "Dong Nguyen",
-      "PopCap Games"
-    ],
-    "correct": 3
+    "correct": 2,
+    "fact": "legacy-43",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à The Battle Cats ?",
@@ -447,17 +355,9 @@
       "Dong Nguyen",
       "King"
     ],
-    "correct": 0
-  },
-  {
-    "text": "Qui a développé ou publié The Battle Cats ?",
-    "answers": [
-      "RobTop Games",
-      "PONOS",
-      "Dong Nguyen",
-      "King"
-    ],
-    "correct": 1
+    "correct": 0,
+    "fact": "legacy-45",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Geometry Dash ?",
@@ -467,7 +367,9 @@
       "RobTop Games",
       "Supercell"
     ],
-    "correct": 2
+    "correct": 2,
+    "fact": "legacy-47",
+    "format": "attribution"
   },
   {
     "text": "Qui a développé ou publié Geometry Dash ?",
@@ -477,7 +379,9 @@
       "Supercell",
       "RobTop Games"
     ],
-    "correct": 3
+    "correct": 3,
+    "fact": "legacy-47",
+    "format": "attribution"
   },
   {
     "text": "Quel studio ou éditeur associe-t-on à Flappy Bird ?",
@@ -487,7 +391,9 @@
       "Supercell",
       "Niantic"
     ],
-    "correct": 0
+    "correct": 0,
+    "fact": "legacy-49",
+    "format": "attribution"
   },
   {
     "text": "Qui a développé ou publié Flappy Bird ?",
@@ -497,6 +403,232 @@
       "Supercell",
       "Niantic"
     ],
-    "correct": 1
+    "correct": 1,
+    "fact": "legacy-49",
+    "format": "attribution"
+  },
+  {
+    "text": "Combien de bonbons identiques faut-il aligner au minimum dans la règle de base de « Candy Crush Saga » ?",
+    "answers": [
+      "Deux",
+      "Quatre",
+      "Cinq",
+      "Trois"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "mecaniques",
+    "fact": "candy-crush-alignement-minimal",
+    "source": "https://community.king.com/en/candy-crush-saga/discussion/497746/how-do-i-play"
+  },
+  {
+    "text": "Sur quel type de voies court-on dans « Subway Surfers » ?",
+    "answers": [
+      "Des pistes cyclables",
+      "Des voies ferrées",
+      "Des voies de karting",
+      "Des pistes d’atterrissage"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "decors",
+    "fact": "subway-surfers-voies-ferrees",
+    "source": "https://subwaysurfers.com/"
+  },
+  {
+    "text": "Quelle illusion transforme les chemins accessibles à Ida dans « Monument Valley » ?",
+    "answers": [
+      "Des effets de perspective",
+      "Des projections holographiques",
+      "Des ombres chinoises",
+      "Des reflets dans un lac"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "visuel",
+    "fact": "monument-valley-illusions-perspective",
+    "source": "https://apps.apple.com/us/app/monument-valley/id728293409"
+  },
+  {
+    "text": "Quel objet faut-il utiliser pour faire éclore un œuf en marchant dans « Pokémon GO » ?",
+    "answers": [
+      "Un leurre",
+      "Une baie Framby",
+      "Un incubateur",
+      "Un encens"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "objets",
+    "fact": "pokemon-go-oeuf-incubateur",
+    "source": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2358-incubators-hatching-pokemon-eggs/"
+  },
+  {
+    "text": "Quelle ressource se recharge au fil d’un combat pour permettre de jouer des cartes dans « Clash Royale » ?",
+    "answers": [
+      "L’or",
+      "Les gemmes",
+      "L’élixir",
+      "Les couronnes"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "ressources",
+    "fact": "clash-royale-elixir-cartes",
+    "source": "https://support.supercell.com/clash-royale/en/articles/elixir.html"
+  },
+  {
+    "text": "Combien de lieux figurent sur le plateau d’une partie standard de « Marvel Snap » ?",
+    "answers": [
+      "Trois",
+      "Deux",
+      "Quatre",
+      "Six"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "mecaniques",
+    "fact": "marvel-snap-trois-lieux",
+    "source": "https://marvelsnap.com/how-to-play/"
+  },
+  {
+    "text": "Quel héros s’empare d’un jetpack dans « Jetpack Joyride » ?",
+    "answers": [
+      "Dan the Man",
+      "Barry Steakfries",
+      "Jake",
+      "Guy Dangerous"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "personnages",
+    "fact": "jetpack-joyride-barry-steakfries",
+    "source": "https://www.halfbrick.com/blog/jetpack-joyride-update-meet-flash-the-dog"
+  },
+  {
+    "text": "Quel artiste signe « Stereo Madness », le morceau du premier niveau de « Geometry Dash » ?",
+    "answers": [
+      "DJVI",
+      "Waterflame",
+      "F-777",
+      "ForeverBound"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "musique",
+    "fact": "geometry-dash-stereo-madness-foreverbound",
+    "source": "https://foreverbound.newgrounds.com/news/post/985415"
+  },
+  {
+    "text": "Quel objet sert à lancer les oiseaux contre les constructions des cochons dans le premier « Angry Birds » ?",
+    "answers": [
+      "Une catapulte à manivelle",
+      "Un canon à poudre",
+      "Une arbalète",
+      "Un lance-pierre"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "objets",
+    "fact": "angry-birds-lance-pierre-original",
+    "source": "https://www.angrybirds.com/games/rovio-classics-angry-birds/"
+  },
+  {
+    "text": "Quel objet faut-il éviter de trancher dans le mode classique de « Fruit Ninja » ?",
+    "answers": [
+      "Les ananas",
+      "Les bombes",
+      "Les noix de coco",
+      "Les pastèques"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "obstacles",
+    "fact": "fruit-ninja-bombes-eviter",
+    "source": "https://www.halfbrick.com/blog/the-ultimate-beginners-guide-to-fruit-ninja"
+  },
+  {
+    "text": "Quel mode de « Brawl Stars » demande de marquer des buts ?",
+    "answers": [
+      "Brawl Ball",
+      "Razzia de gemmes",
+      "Braquage",
+      "Zone réservée"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "modes",
+    "fact": "brawl-stars-brawl-ball-buts",
+    "source": "https://support.supercell.com/brawl-stars/fr/articles/game-modes-12.html"
+  },
+  {
+    "text": "Dans le mode classique d’« Among Us », comment l’équipage peut-il gagner sans éliminer les imposteurs ?",
+    "answers": [
+      "En se réunissant à chaque alarme",
+      "En éteignant toutes les lumières",
+      "En accomplissant toutes ses tâches",
+      "En bloquant tous les conduits"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "victoire",
+    "fact": "among-us-equipage-taches-victoire",
+    "source": "https://www.innersloth.com/games/among-us/"
+  },
+  {
+    "text": "Quel bâtiment améliore-t-on pour débloquer de nouvelles constructions dans le village principal de « Clash of Clans » ?",
+    "answers": [
+      "Le château de clan",
+      "La caserne",
+      "L’hôtel de ville",
+      "Le laboratoire"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "progression",
+    "fact": "clash-of-clans-hotel-ville-paliers",
+    "source": "https://supercell.com/en/games/clashofclans/blog/release-notes/august-update-3/"
+  },
+  {
+    "text": "Quel élément maîtrise Lisa, la bibliothécaire de Mondstadt dans « Genshin Impact » ?",
+    "answers": [
+      "Électro",
+      "Pyro",
+      "Hydro",
+      "Cryo"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "elements",
+    "fact": "genshin-lisa-electro-mondstadt",
+    "source": "https://genshin.hoyoverse.com/m/es/news/detail/166383"
+  },
+  {
+    "text": "Comment s’appelle le train qui voyage entre les mondes dans « Honkai: Star Rail » ?",
+    "answers": [
+      "Le Luofu de Xianzhou",
+      "L’Astral Express",
+      "Le Navis Astriger",
+      "La Station spatiale Herta"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "univers",
+    "fact": "honkai-star-rail-astral-express",
+    "source": "https://blog.playstation.com/2023/10/09/honkai-star-rail-version-1-4-brings-the-space-fantasy-rpg-to-ps5-on-oct-10/"
+  },
+  {
+    "text": "Quel objet volé déclenche la course-poursuite au début du premier « Temple Run » ?",
+    "answers": [
+      "Un masque rituel",
+      "Un sceptre en or",
+      "Une pierre précieuse",
+      "Une idole maudite"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "intrigues",
+    "fact": "temple-run-idole-derobee-original",
+    "source": "https://imangistudios.com/thegames/temple-run/"
   }
 ]
