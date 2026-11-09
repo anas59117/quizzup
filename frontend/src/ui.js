@@ -493,15 +493,15 @@ export const CATEGORIES = [
 // every quiz inside it) — labels/descriptions are translated UI chrome,
 // unlike the quiz-specific CATEGORIES labels above.
 export const FAMILIES = [
-  { key: 'sport', mark: 'SP', grad: 'g3' },
   { key: 'football', mark: 'FB', grad: 'g8' },
+  { key: 'culture', mark: 'IQ', grad: 'g10' },
   { key: 'cinema', mark: 'CI', grad: 'g13' },
   { key: 'series', mark: 'SE', grad: 'g22' },
-  { key: 'music', mark: 'MU', grad: 'g7' },
   { key: 'sagas', mark: 'SA', grad: 'g15' },
   { key: 'manga', mark: 'MG', grad: 'g9' },
+  { key: 'music', mark: 'MU', grad: 'g7' },
+  { key: 'sport', mark: 'SP', grad: 'g3' },
   { key: 'gaming', mark: 'GG', grad: 'g5' },
-  { key: 'culture', mark: 'IQ', grad: 'g10' },
 ];
 
 const topicRanks = new Map(Object.values(topicPopularity).flatMap(

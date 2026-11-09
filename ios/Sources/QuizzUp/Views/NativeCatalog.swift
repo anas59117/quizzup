@@ -37,15 +37,15 @@ enum NativeCatalog {
         return Dictionary(ranks, uniquingKeysWith: min)
     }()
     static let families: [NativeTopicFamily] = [
-        .init(id: "sport", french: "Sport", english: "Sport", symbol: "figure.run"),
         .init(id: "football", french: "Football", english: "Football", symbol: "soccerball"),
+        .init(id: "culture", french: "Culture générale", english: "General knowledge", symbol: "globe.europe.africa"),
         .init(id: "cinema", french: "Cinéma", english: "Cinema", symbol: "film"),
         .init(id: "series", french: "Séries", english: "TV series", symbol: "tv"),
-        .init(id: "music", french: "Musique", english: "Music", symbol: "music.note"),
         .init(id: "sagas", french: "Sagas", english: "Sagas", symbol: "sparkles"),
         .init(id: "manga", french: "Manga & anime", english: "Manga & anime", symbol: "book.closed"),
-        .init(id: "gaming", french: "Jeux vidéo", english: "Gaming", symbol: "gamecontroller"),
-        .init(id: "culture", french: "Culture générale", english: "General knowledge", symbol: "globe.europe.africa")
+        .init(id: "music", french: "Musique", english: "Music", symbol: "music.note"),
+        .init(id: "sport", french: "Sport", english: "Sport", symbol: "figure.run"),
+        .init(id: "gaming", french: "Jeux vidéo", english: "Gaming", symbol: "gamecontroller")
     ]
     static func entry(for key: String) -> NativeCatalogEntry? { entries[key] }
     static func orderedByPopularity(_ categories: [Category]) -> [Category] {
