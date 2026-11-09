@@ -16,7 +16,6 @@ final class AuthManager: NSObject, ObservableObject {
     @Published var user: FirebaseAuth.User?
     enum Provider: Equatable { case apple, google }
 
-    private static let emailLinkHost = "quizzup-ae633.firebaseapp.com"
     private static let pendingEmailKey = "quizzup.pendingSignInEmail"
 
     @Published private(set) var activeProvider: Provider?
@@ -190,7 +189,7 @@ final class AuthManager: NSObject, ObservableObject {
     func sendEmailLink(to email: String, language: String) async -> Bool {
         guard !StoreCaptureConfiguration.enabled, !isAuthenticating,
               let bundleID = Bundle.main.bundleIdentifier,
-              let continueURL = URL(string: "https://\(Self.emailLinkHost)") else { return false }
+              let continueURL = URL(string: "https://\(NativeEmailSignInLink.host)") else { return false }
         let settings = ActionCodeSettings()
         settings.url = continueURL
         settings.handleCodeInApp = true
@@ -211,9 +210,9 @@ final class AuthManager: NSObject, ObservableObject {
 
     func receiveEmailLink(_ url: URL) {
         guard !StoreCaptureConfiguration.enabled, user == nil,
-              url.scheme == "https", url.host == Self.emailLinkHost,
-              Auth.auth().isSignIn(withEmailLink: url.absoluteString) else { return }
-        emailLink = url.absoluteString
+              let actionURL = NativeEmailSignInLink.actionURL(from: url),
+              Auth.auth().isSignIn(withEmailLink: actionURL.absoluteString) else { return }
+        emailLink = actionURL.absoluteString
     }
 
     func discardEmailLink() { emailLink = nil }

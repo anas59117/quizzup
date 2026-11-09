@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "site": "quizzup-ae633",
+    "public": "public",
+    "headers": [
+      {
+        "source": "/.well-known/apple-app-site-association",
+        "headers": [{ "key": "Content-Type", "value": "application/json" }]
+      }
+    ]
+  }
+}
