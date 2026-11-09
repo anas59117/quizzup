@@ -21,13 +21,14 @@ const formatDate = (value, lang) => {
   return date.toLocaleDateString(lang, { day: "numeric", month: "short" });
 };
 
-function Quiz({ post, feed, fr }) {
+function Quiz({ post, feed }) {
+  const { t } = useI18n();
   const [expanded, setExpanded] = useState(false);
   const result = feed.answers[post.id];
   const { prompt, answers } = post.question;
   return (
     <div className="community-quiz">
-      <p className="community-quiz-title"><Icon name="bolt" /> {fr ? "Mini-quiz" : "Quick quiz"}</p>
+      <p className="community-quiz-title"><Icon name="bolt" /> {t('miniQuiz')}</p>
       {expanded || result ? (
         <fieldset className="community-question">
           <legend>{prompt}</legend>
@@ -40,12 +41,12 @@ function Quiz({ post, feed, fr }) {
             ))}
           </div>
           {result && <p role="status">{result.correct
-            ? fr ? "Bonne réponse !" : "Correct!"
-            : (fr ? "Bonne réponse : " : "Correct answer: ") + answers[result.correctIndex]}</p>}
+            ? t('correctExcl')
+            : t('correctAnswerPrefix') + answers[result.correctIndex]}</p>}
         </fieldset>
       ) : (
         <button className="community-quiz-open" type="button" onClick={() => setExpanded(true)}>
-          <span>{prompt}</span><span>{fr ? "Répondre" : "Answer"} <Icon name="arrow" /></span>
+          <span>{prompt}</span><span>{t('answerVerb')} <Icon name="arrow" /></span>
         </button>
       )}
     </div>
@@ -53,7 +54,7 @@ function Quiz({ post, feed, fr }) {
 }
 
 function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, onThread }) {
-  const fr = lang === "fr";
+  const { t } = useI18n();
   const [notice, setNotice] = useState("");
   const photo = communityMediaUrl(post.mediaUrl);
   const reported = feed.reportedIds.has(post.id);
@@ -62,9 +63,9 @@ function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, o
   const share = async () => {
     try {
       const result = await shareCommunityPost(post);
-      setNotice(result === "copied" ? (fr ? "Lien copié" : "Link copied") : "");
+      setNotice(result === "copied" ? t(‘linkCopied’) : "");
     } catch {
-      setNotice(fr ? "Partage indisponible" : "Sharing unavailable");
+      setNotice(t(‘sharingUnavailable’));
     }
   };
   return (
@@ -78,7 +79,7 @@ function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, o
           <button className="community-follow" type="button" aria-pressed={!!post.authorFollowed}
             disabled={feed.pending[`follow:${post.authorId}`]}
             onClick={() => feed.followAuthor(post.authorId, post.authorFollowed)}>
-            {post.authorFollowed ? (fr ? "Abonné" : "Following") : (fr ? "+ Suivre" : "+ Follow")}
+            {post.authorFollowed ? t(‘followingLabel’) : t(‘followShort’)}
           </button>
         )}
       </header>
@@ -86,29 +87,29 @@ function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, o
         <button className="community-theme-link" type="button" onClick={() => onTopic(post.category)}>
           <Icon name="themes" /> {titleFor(post.category, lang)}
         </button>
-        <span className="community-post-type">{post.question ? (fr ? "Mini-quiz" : "Quick quiz") : "Discussion"}</span>
+        <span className="community-post-type">{post.question ? t(‘miniQuiz’) : t(‘discussionLabel’)}</span>
       </div>
       <p className="feed-post-text">{post.text}</p>
-      {photo && <img className="community-photo" src={photo} alt={fr ? "Photo de la publication" : "Post photo"} loading="lazy" />}
-      {post.question && <Quiz post={post} feed={feed} fr={fr} />}
+      {photo && <img className="community-photo" src={photo} alt={t(‘postPhotoAlt’)} loading="lazy" />}
+      {post.question && <Quiz post={post} feed={feed} />}
       <div className="community-post-actions">
-        <button type="button" aria-pressed={!!post.reacted} aria-label={fr ? `J’aime · ${likes}` : `Like · ${likes}`}
+        <button type="button" aria-pressed={!!post.reacted} aria-label={`${t(‘likeLabel’)} · ${likes}`}
           disabled={feed.pending[`react:${post.id}`]} onClick={() => feed.react(post.id)}>
           <Icon name="heart" /> <span>{likes}</span>
         </button>
         {onThread ? (
-          <button type="button" aria-label={fr ? `Réponses · ${comments}` : `Replies · ${comments}`}
+          <button type="button" aria-label={`${t(‘repliesTitle’)} · ${comments}`}
             onClick={(event) => onThread(post.id, event.currentTarget)}>
-            <Icon name="chat" /> <span>{comments} {fr ? (comments > 1 ? "réponses" : "réponse") : (comments === 1 ? "reply" : "replies")}</span>
+            <Icon name="chat" /> <span>{comments} {comments === 1 ? t(‘replyWord’) : t(‘repliesWord’)}</span>
           </button>
         ) : <span className="community-action-count"><Icon name="chat" /> {comments}</span>}
         <details className="community-post-more">
-          <summary aria-label={fr ? "Plus d’actions" : "More actions"}>…</summary>
+          <summary aria-label={t(‘moreActions’)}>…</summary>
           <div onClick={(event) => { event.currentTarget.parentElement.open = false; }}>
-            <button type="button" onClick={share}><Icon name="share" /> {fr ? "Partager" : "Share"}</button>
-            {onPlayTopic && <button type="button" onClick={() => onPlayTopic(post.category)}><Icon name="bolt" /> {fr ? "Jouer" : "Play"}</button>}
+            <button type="button" onClick={share}><Icon name="share" /> {t(‘shareLabel’)}</button>
+            {onPlayTopic && <button type="button" onClick={() => onPlayTopic(post.category)}><Icon name="bolt" /> {t(‘playActionLabel’)}</button>}
             <button type="button" disabled={reported} onClick={() => feed.report(post.id)}>
-              {reported ? (fr ? "Signalé" : "Reported") : (fr ? "Signaler" : "Report")}
+              {reported ? t(‘reportedLabel’) : t(‘reportLabel’)}
             </button>
           </div>
         </details>
@@ -126,7 +127,7 @@ function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, o
 }
 
 function Replies({ postId, feed, lang, onOpenPlayer }) {
-  const fr = lang === "fr";
+  const { t } = useI18n();
   const replies = feed.comments[postId] || [];
   const [draft, setDraft] = useState("");
   const submitted = useRef(null);
@@ -145,11 +146,11 @@ function Replies({ postId, feed, lang, onOpenPlayer }) {
   return (
     <>
       <section className="community-replies" aria-labelledby="community-replies-title">
-        <h2 id="community-replies-title">{fr ? "Réponses" : "Replies"}</h2>
+        <h2 id="community-replies-title">{t('repliesTitle')}</h2>
         {feed.pending[`comments:${postId}`] ? (
-          <p className="community-notice" role="status">{fr ? "Chargement…" : "Loading…"}</p>
+          <p className="community-notice" role="status">{t('loadingDots')}</p>
         ) : !feed.error && !replies.length && (
-          <p className="community-notice">{fr ? "Sois le premier à répondre." : "Be the first to reply."}</p>
+          <p className="community-notice">{t('beFirstReply')}</p>
         )}
         {replies.map((reply) => (
           <article className="community-reply" key={reply.id}>
@@ -161,20 +162,19 @@ function Replies({ postId, feed, lang, onOpenPlayer }) {
             <p>{reply.text}</p>
           </article>
         ))}
-        {feed.error && <p className="community-notice" role="alert">{feed.error} <button type="button" onClick={() => feed.loadComments(postId)}>{fr ? "Réessayer" : "Retry"}</button></p>}
+        {feed.error && <p className="community-notice" role="alert">{feed.error} <button type="button" onClick={() => feed.loadComments(postId)}>{t('retryLabel')}</button></p>}
       </section>
       <form className="community-reply-form" onSubmit={sendReply}>
-        <input aria-label={fr ? "Ta réponse" : "Your reply"} placeholder={fr ? "Écrire une réponse…" : "Write a reply…"}
+        <input aria-label={t('yourReply')} placeholder={t('writeReply')}
           value={draft} maxLength={240} onChange={(event) => setDraft(event.target.value)} />
-        <button aria-label={fr ? "Envoyer" : "Send"} disabled={!draft.trim() || feed.pending[`comment:${postId}`]}><Icon name="send" /></button>
+        <button aria-label={t('sendLabel')} disabled={!draft.trim() || feed.pending[`comment:${postId}`]}><Icon name="send" /></button>
       </form>
     </>
   );
 }
 
 export function FeedScreen({ feed, myTopics = [], controls, onPlayTopic, onOpenTopicLeaderboard, onOpenPlayer, onThreadChange }) {
-  const { lang } = useI18n();
-  const fr = lang === "fr";
+  const { t, lang } = useI18n();
   const [threadId, setThreadId] = useState(null);
   const [composing, setComposing] = useState(false);
   const origin = useRef(null);
@@ -226,8 +226,8 @@ export function FeedScreen({ feed, myTopics = [], controls, onPlayTopic, onOpenT
       {thread ? (
         <>
           <header className="community-bar community-thread-bar">
-            <button className="community-thread-back" type="button" onClick={closeThread} aria-label={fr ? "Retour au fil" : "Back to feed"}>←</button>
-            <h1 id="community-title" ref={threadHeading} tabIndex={-1}>Discussion</h1>
+            <button className="community-thread-back" type="button" onClick={closeThread} aria-label={t('backToFeed')}>←</button>
+            <h1 id="community-title" ref={threadHeading} tabIndex={-1}>{t('discussionLabel')}</h1>
           </header>
           <div key="thread" className="community-thread">
             <CommunityPost key={thread.id} post={thread} {...postProps} />
@@ -238,20 +238,20 @@ export function FeedScreen({ feed, myTopics = [], controls, onPlayTopic, onOpenT
         <>
           <header className="community-bar">
             <span className="community-brand" aria-hidden="true"><Icon name="bolt" /></span>
-            <h1 id="community-title" tabIndex={-1}>{fr ? "Communauté" : "Community"}</h1>
-            <button className="community-publish" type="button" onClick={() => setComposing(true)}><span aria-hidden="true">+</span> {fr ? "Publier" : "Post"}</button>
+            <h1 id="community-title" tabIndex={-1}>{t('communityTitle')}</h1>
+            <button className="community-publish" type="button" onClick={() => setComposing(true)}><span aria-hidden="true">+</span> {t('publishAction')}</button>
             {controls && <div className="community-settings">{controls}</div>}
           </header>
           <div key="feed" className="community-feed">
-            <div className="community-tabs" aria-label={fr ? "Fil de publications" : "Feed"}>
-              {[["all", fr ? "Récents" : "Latest"], ["following", fr ? "Abonnements" : "Following"]].map(([scope, label]) => (
+            <div className="community-tabs" aria-label={t('feedLabel')}>
+              {[["all", t('latestTab')], ["following", t('followingTab')]].map(([scope, label]) => (
                 <button key={scope} type="button" aria-pressed={feed.filter.scope === scope}
                   onClick={() => { if (scope !== feed.filter.scope) feed.setFilter({ ...feed.filter, scope }); }}>{label}</button>
               ))}
             </div>
             <div className="community-topics">
-              <select aria-label={fr ? "Filtrer par thème" : "Filter by theme"} value={category || ""} onChange={(event) => setCategory(event.target.value || null)}>
-                <option value="">{fr ? "Tous les thèmes" : "All themes"}</option>
+              <select aria-label={t('filterByTheme')} value={category || ""} onChange={(event) => setCategory(event.target.value || null)}>
+                <option value="">{t('allThemesFilter')}</option>
                 {sortedTopics.map((topic) => (
                   <option key={topic.key} value={topic.key}>{titleFor(topic.key, lang)}</option>
                 ))}
@@ -267,20 +267,20 @@ export function FeedScreen({ feed, myTopics = [], controls, onPlayTopic, onOpenT
             </div>
             {category && <div className="community-topic-actions">
               <strong>{titleFor(category, lang)}</strong>
-              {onPlayTopic && <button type="button" onClick={() => onPlayTopic(category)}>{fr ? "Jouer" : "Play"}</button>}
-              {onOpenTopicLeaderboard && <button type="button" onClick={() => onOpenTopicLeaderboard(category)}>{fr ? "Classement" : "Ranking"}</button>}
+              {onPlayTopic && <button type="button" onClick={() => onPlayTopic(category)}>{t('playActionLabel')}</button>}
+              {onOpenTopicLeaderboard && <button type="button" onClick={() => onOpenTopicLeaderboard(category)}>{t('rankingLabel')}</button>}
             </div>}
-            {feed.error && !composing && <p className="community-notice" role="alert">{feed.error} <button type="button" onClick={feed.refresh}>{fr ? "Réessayer" : "Retry"}</button></p>}
-            {feed.loading && <p className="community-notice" role="status">{fr ? "Chargement…" : "Loading…"}</p>}
+            {feed.error && !composing && <p className="community-notice" role="alert">{feed.error} <button type="button" onClick={feed.refresh}>{t('retryLabel')}</button></p>}
+            {feed.loading && <p className="community-notice" role="status">{t('loadingDots')}</p>}
             {!feed.loading && !feed.error && !feed.posts.length && (
               <div className="community-empty">
                 <Icon name="chat" />
-                <h2>{feed.filter.scope === "following" ? (fr ? "Tes abonnements" : "Your following feed") : (fr ? "Lance la conversation" : "Start the conversation")}</h2>
+                <h2>{feed.filter.scope === "following" ? t('yourFollowingFeed') : t('startConversation')}</h2>
                 <p>{feed.filter.scope === "following"
-                  ? (fr ? "Les publications des joueurs que tu suis apparaîtront ici." : "Posts from players you follow will appear here.")
-                  : (fr ? "Partage une idée, une photo ou un mini-quiz." : "Share an idea, a photo or a quick quiz.")}</p>
+                  ? t('followingFeedEmpty')
+                  : t('shareIdeaPhoto')}</p>
                 <button type="button" onClick={() => feed.filter.scope === "following" ? feed.setFilter({ scope: "all" }) : setComposing(true)}>
-                  {feed.filter.scope === "following" ? (fr ? "Voir les publications récentes" : "See recent posts") : (fr ? "Créer une publication" : "Create a post")}
+                  {feed.filter.scope === "following" ? t('seeRecentPosts') : t('createPostAction')}
                 </button>
               </div>
             )}

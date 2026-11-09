@@ -80,7 +80,6 @@ export function ProfileContent({
     } finally { setUploading(false); }
   };
 
-  const fr = lang === 'fr';
   const level = stats.level || 1;
   const xpTarget = Math.max(0, Number(stats.xpForLevel) || 0);
   const xp = Math.min(xpTarget, Math.max(0, Number(stats.xpIntoLevel) || 0));
@@ -103,7 +102,7 @@ export function ProfileContent({
                 </button>
               </div>
               <div className="profile-player-name">
-                <span className="profile-player-kicker">{fr ? 'Mon profil' : 'My profile'}</span>
+                <span className="profile-player-kicker">{t('myProfile')}</span>
                 <h1 id="profile-title" tabIndex={-1} className="pf-name">{name}</h1>
               </div>
             </div>
@@ -117,7 +116,7 @@ export function ProfileContent({
                   <progress aria-label={t('overallProgress')} value={xp} max={xpTarget} />
                   <p>{(xpTarget - xp).toLocaleString(lang)} {t('beforeNextLevel')} {level + 1}</p>
                 </>
-              ) : <p>{fr ? 'Joue pour gagner de l’XP.' : 'Play to earn XP.'}</p>}
+              ) : <p>{t(‘playForXp’)}</p>}
             </div>
             <div className="profile-player-social">
               {social && <button type="button" onClick={() => {
@@ -176,10 +175,10 @@ export function ProfileContent({
 
           {!hasPlayed && (
             <section className="profile-player-section profile-first-quiz" aria-labelledby="profile-first-quiz">
-              <div><h2 id="profile-first-quiz">{fr ? 'À toi de jouer' : 'Your turn to play'}</h2>
-                <p>{fr ? 'Joue ta première partie pour commencer ta collection de spécialités.' : 'Play your first game to start building your specialties.'}</p>
+              <div><h2 id="profile-first-quiz">{t('yourTurnToPlay')}</h2>
+                <p>{t('playFirstGameSpecialties')}</p>
               </div>
-              {onDiscoverTopics && <button type="button" onClick={onDiscoverTopics}><Icon name="bolt" size={17} />{fr ? 'Choisir mon premier quiz' : 'Choose my first quiz'}</button>}
+              {onDiscoverTopics && <button type="button" onClick={onDiscoverTopics}><Icon name="bolt" size={17} />{t('chooseFirstQuiz')}</button>}
             </section>
           )}
 
@@ -197,30 +196,30 @@ export function ProfileContent({
         <div className="profile-activity">
           {topics.length > 0 ? (
             <section className="profile-player-section" aria-labelledby="profile-specialties">
-              <h2 id="profile-specialties" className="pf-section-title">{fr ? 'Mes spécialités' : 'My specialties'}</h2>
+              <h2 id="profile-specialties" className="pf-section-title">{t('mySpecialties')}</h2>
               <div className="pf-themes profile-specialty-grid">
                 {topics.slice(0, 3).map(topic => <Specialty key={topic.key} topic={topic} lang={lang} levelLabel={t('level')} onSelect={onOpenTopic} />)}
               </div>
               {topics.length > 3 && (
                 <details className="profile-more-topics">
-                  <summary>{fr ? 'Mes autres thèmes' : 'My other topics'} <span>{topics.length - 3}</span></summary>
+                  <summary>{t('myOtherTopics')} <span>{topics.length - 3}</span></summary>
                   <div>{topics.slice(3).map(topic => <Specialty key={topic.key} topic={topic} lang={lang} levelLabel={t('level')} onSelect={onOpenTopic} compact />)}</div>
                 </details>
               )}
             </section>
           ) : null}
 
-          {social && <section ref={friendsSection} className="profile-player-section profile-friends" aria-label={fr ? 'Mes amis' : 'My friends'} tabIndex={-1}>
+          {social && <section ref={friendsSection} className="profile-player-section profile-friends" aria-label={t('myFriendsLabel')} tabIndex={-1}>
             <FriendsScreen social={social} onInviteFriend={onInviteFriend} onJoinFriend={onJoinFriend} pending={pending} showContactsFirst />
           </section>}
 
           <section className="profile-player-section" aria-labelledby="profile-results">
             <div className="profile-player-section-head">
               <h2 id="profile-results" className="pf-section-title">{t('statistics')}</h2>
-              {onOpenHistory && <button className="profile-history-action" type="button" onClick={onOpenHistory}><Icon name="feed" size={17} />{fr ? 'Historique' : 'Match history'}</button>}
+              {onOpenHistory && <button className="profile-history-action" type="button" onClick={onOpenHistory}><Icon name="feed" size={17} />{t('matchHistoryTitle')}</button>}
             </div>
             {hasPlayed || stats.coins > 0 ? <ProfileStats stats={stats} /> : (
-              <p className="profile-results-empty">{fr ? 'Tes résultats apparaîtront après ta première partie.' : 'Your results will appear after your first game.'}</p>
+              <p className="profile-results-empty">{t('resultsAfterFirst')}</p>
             )}
           </section>
 
@@ -232,7 +231,7 @@ export function ProfileContent({
               <span className="pl-tier">{league.tier.icon} {league.tier.label}</span>
               <span className="pl-lp">{league.lp} LP</span>
               <span className="pl-progress"><span className="pl-progress-fill" style={{ width: `${league.progress}%`, background: league.tier.color }} /></span>
-              <span className="pl-stats">{league.wins} {t('wins').toLowerCase()} · {league.losses} {t('losses').toLowerCase()} · {league.winRate}% {fr ? 'de réussite' : 'win rate'}</span>
+              <span className="pl-stats">{league.wins} {t('wins').toLowerCase()} · {league.losses} {t('losses').toLowerCase()} · {league.winRate}% {t('successRate')}</span>
             </button>
           )}
           <div className="profile-secondary-links">

@@ -2,9 +2,10 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { CATEGORIES, Icon } from "./ui";
 import { localizedTopicTitle } from "./topicTitles";
 import { uploadCommunityPhoto } from "./community-media";
+import { useI18n } from "./i18n";
 
 export function CommunityComposer({ feed, lang, open, onDismiss }) {
-  const fr = lang === "fr";
+  const { t } = useI18n();
   const dialog = useRef(null);
   useEffect(() => {
     const element = dialog.current;
@@ -55,16 +56,12 @@ export function CommunityComposer({ feed, lang, open, onDismiss }) {
     try {
       const extra = {};
       if (mode === "image") {
-        if (!file) throw new Error(fr ? "Choisis une photo" : "Choose a photo");
+        if (!file) throw new Error(t('choosePhoto'));
         extra.mediaUrl = await uploadCommunityPhoto(file);
       }
       if (mode === "question") {
         if (!prompt.trim() || options.some((a) => !a.trim()))
-          throw new Error(
-            fr
-              ? "Complète la question et les quatre réponses"
-              : "Complete the question and four answers",
-          );
+          throw new Error(t('completeQuestionError'));
         extra.question = {
           prompt: prompt.trim(),
           answers: options.map((a) => a.trim()),
@@ -82,11 +79,11 @@ export function CommunityComposer({ feed, lang, open, onDismiss }) {
     <dialog ref={dialog} className="community-publish-dialog" aria-labelledby="community-publish-title" onCancel={(event) => { event.preventDefault(); onDismiss(); }}>
       <form className="community-composer" onSubmit={submit}>
         <header className="community-dialog-heading">
-          <h2 id="community-publish-title">{fr ? "Nouvelle publication" : "New post"}</h2>
-          <button type="button" onClick={onDismiss} aria-label={fr ? "Fermer" : "Close"}><Icon name="close" /></button>
+          <h2 id="community-publish-title">{t('newPostTitle')}</h2>
+          <button type="button" onClick={onDismiss} aria-label={t('closeLabel')}><Icon name="close" /></button>
         </header>
         <select
-          aria-label={fr ? "Thème de la publication" : "Post theme"}
+          aria-label={t('postThemeLabel')}
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
@@ -107,7 +104,7 @@ export function CommunityComposer({ feed, lang, open, onDismiss }) {
             >
               {
                 {
-                  text: fr ? "Texte" : "Text",
+                  text: t('textType'),
                   image: "Photo",
                   question: "Question",
                 }[m]
@@ -116,8 +113,8 @@ export function CommunityComposer({ feed, lang, open, onDismiss }) {
           ))}
         </div>
         <textarea
-          aria-label={fr ? "Ta publication" : "Your post"}
-          placeholder={fr ? "Quoi de neuf ?" : "What’s new?"}
+          aria-label={t('yourPostLabel')}
+          placeholder={t('whatsNewPlaceholder')}
           value={draft}
           maxLength={240}
           disabled={feed.pending.create || uploading}
@@ -135,7 +132,7 @@ export function CommunityComposer({ feed, lang, open, onDismiss }) {
         {mode === "question" && (
           <div className="community-question-editor">
             <input
-              placeholder={fr ? "Écris ta question" : "Write your question"}
+              placeholder={t('writeQuestion')}
               aria-label="Question"
               value={prompt}
               maxLength={240}
@@ -148,11 +145,11 @@ export function CommunityComposer({ feed, lang, open, onDismiss }) {
                   name="correct"
                   checked={correct === i}
                   onChange={() => setCorrect(i)}
-                  aria-label={`${fr ? "Bonne réponse" : "Correct answer"} ${i + 1}`}
+                  aria-label={`${t('correctAnswerField')} ${i + 1}`}
                 />
                 <input
-                  placeholder={`${fr ? "Réponse" : "Answer"} ${i + 1}`}
-                  aria-label={`${fr ? "Réponse" : "Answer"} ${i + 1}`}
+                  placeholder={`${t('answerField')} ${i + 1}`}
+                  aria-label={`${t('answerField')} ${i + 1}`}
                   value={a}
                   maxLength={100}
                   onChange={(e) =>
@@ -169,7 +166,7 @@ export function CommunityComposer({ feed, lang, open, onDismiss }) {
           className="feed-post-btn"
           disabled={!draft.trim() || uploading || feed.pending.create}
         >
-          {uploading || feed.pending.create ? "…" : fr ? "Publier" : "Post"}
+          {uploading || feed.pending.create ? "…" : t('publishAction')}
         </button>
         {(error || feed.error) && <p role="alert">{error || feed.error}</p>}
       </form>

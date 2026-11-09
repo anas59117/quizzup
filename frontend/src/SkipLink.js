@@ -2,7 +2,7 @@ import React from 'react';
 import { useI18n } from './i18n';
 
 export function SkipLink() {
-  const { lang } = useI18n();
+  const { t } = useI18n();
   return <a className="skip-link" href="#main-content" tabIndex={0} onClick={event => {
     event.preventDefault();
     const main = document.getElementById('main-content');
@@ -11,5 +11,5 @@ export function SkipLink() {
     const target = main.querySelector('h1[tabindex="-1"]') || main;
     target.focus({ preventScroll: true });
     target.scrollIntoView({ block: 'nearest' });
-  }}>{lang === 'fr' ? 'Aller au contenu' : 'Skip to content'}</a>;
+  }}>{t('skipToContent')}</a>;
 }

@@ -6,8 +6,7 @@ import { createPortal } from 'react-dom';
 import { useI18n } from './i18n';
 
 export function PlaySheet({ onClose, onDuel, onSolo, onInvite, onJoin, pending }) {
-  const { lang } = useI18n();
-  const fr = lang === 'fr';
+  const { t } = useI18n();
   const panel = useRef(null);
   const titleId = useId();
   const closeRef = useRef(onClose); closeRef.current = onClose;
@@ -38,11 +37,11 @@ export function PlaySheet({ onClose, onDuel, onSolo, onInvite, onJoin, pending }
   };
   return createPortal(<div className="play-sheet-backdrop" onClick={event => { if (event.target === event.currentTarget) onClose(); }}>
     <section ref={panel} className="play-sheet" role="dialog" aria-modal="true" aria-labelledby={titleId} onKeyDown={keydown}>
-      <header><h2 id={titleId}>{fr ? 'On joue ?' : 'Ready to play?'}</h2><button type="button" onClick={onClose} aria-label={fr ? 'Fermer' : 'Close'}>×</button></header>
-      <button type="button" disabled={pending} onClick={onDuel}><strong>{fr ? 'Duel rapide' : 'Quick duel'}</strong><small>{fr ? 'Trouver un adversaire' : 'Find an opponent'}</small><span aria-hidden="true">→</span></button>
-      <button type="button" disabled={pending} onClick={onSolo}><strong>Solo</strong><small>{fr ? 'Jouer à ton rythme' : 'Play on your own'}</small><span aria-hidden="true">→</span></button>
-      <button type="button" disabled={pending} onClick={onInvite}><strong>{fr ? 'Inviter un ami' : 'Invite a friend'}</strong><small>{fr ? 'Créer une partie privée' : 'Create a private game'}</small><span aria-hidden="true">→</span></button>
-      <button type="button" disabled={pending} onClick={onJoin}><strong>{fr ? 'J’ai un code' : 'I have a code'}</strong><small>{fr ? 'Rejoindre une partie' : 'Join a game'}</small><span aria-hidden="true">→</span></button>
+      <header><h2 id={titleId}>{t(‘readyToPlay’)}</h2><button type="button" onClick={onClose} aria-label={t(‘closeLabel’)}>×</button></header>
+      <button type="button" disabled={pending} onClick={onDuel}><strong>{t(‘quickDuel’)}</strong><small>{t(‘findOpponent’)}</small><span aria-hidden="true">→</span></button>
+      <button type="button" disabled={pending} onClick={onSolo}><strong>Solo</strong><small>{t(‘playOwnPace’)}</small><span aria-hidden="true">→</span></button>
+      <button type="button" disabled={pending} onClick={onInvite}><strong>{t(‘inviteFriend’)}</strong><small>{t(‘createPrivateGame’)}</small><span aria-hidden="true">→</span></button>
+      <button type="button" disabled={pending} onClick={onJoin}><strong>{t(‘haveFriendCode’)}</strong><small>{t(‘joinGameLabel’)}</small><span aria-hidden="true">→</span></button>
     </section>
   </div>, document.body);
 }

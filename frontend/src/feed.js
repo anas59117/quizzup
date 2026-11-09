@@ -15,8 +15,7 @@ export function useFeed(wsRef, clientId) {
     [comments, setComments] = useState({}),
     [answers, setAnswers] = useState({}),
     [createdVersion, setCreatedVersion] = useState(0);
-  const { lang } = useI18n();
-  const fr = lang === "fr";
+  const { t } = useI18n();
   const requestTimers = useRef({});
   const sharedRequest = useRef(null);
   const filterRef = useRef(filter),
@@ -36,11 +35,7 @@ export function useFeed(wsRef, clientId) {
           };
           setPending(pendingRef.current);
           setLoading(false);
-          setError(
-            fr
-              ? "Délai dépassé. Réessaie, ton brouillon est conservé."
-              : "Request timed out. Retry; your draft is saved.",
-          );
+          setError(t('draftSavedTimeout'));
         }, 12000);
       pendingRef.current = {
         ...pendingRef.current,
@@ -48,18 +43,18 @@ export function useFeed(wsRef, clientId) {
       };
       setPending(pendingRef.current);
     },
-    [fr],
+    [t],
   );
   const send = useCallback(
     (obj) => {
       if (wsRef.current?.readyState !== 1) {
-        setError(fr ? "Connexion indisponible" : "Connection unavailable");
+        setError(t('connectionUnavailable'));
         return false;
       }
       wsRef.current.send(JSON.stringify(obj));
       return true;
     },
-    [wsRef, fr],
+    [wsRef, t],
   );
   const refresh = useCallback(() => {
     const f = filterRef.current;
@@ -106,11 +101,7 @@ export function useFeed(wsRef, clientId) {
               80,
             );
           } else
-            setError(
-              fr
-                ? "Cette publication est indisponible."
-                : "This post is unavailable.",
-            );
+            setError(t('postUnavailable'));
           break;
         }
         case "post_created": {
@@ -141,7 +132,7 @@ export function useFeed(wsRef, clientId) {
             }),
           );
           if (data.reason === "blocked")
-            setError(fr ? "Abonnement indisponible." : "Following unavailable.");
+            setError(t('followingUnavailable'));
           break;
         case "post_reacted":
           markPending(`react:${data.id}`, false);
@@ -200,11 +191,7 @@ export function useFeed(wsRef, clientId) {
           }));
           break;
         case "community_error":
-          setError(
-            fr
-              ? "Action impossible. Réessaie, ton brouillon est conservé."
-              : "Unable to complete. Retry; your draft is saved.",
-          );
+          setError(t('actionFailedRetry'));
           Object.values(requestTimers.current).forEach(clearTimeout);
           setLoading(false);
           pendingRef.current = {};
@@ -214,7 +201,7 @@ export function useFeed(wsRef, clientId) {
           break;
       }
     },
-    [clientId, markPending, fr],
+    [clientId, markPending, t],
   );
   const setFilter = useCallback(
     (next) => {

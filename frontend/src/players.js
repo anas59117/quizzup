@@ -169,9 +169,7 @@ export function PlayerSheet({ players, social, onSelectTopic, onMessage, onChall
     const timer = setTimeout(() => {
       setRemoving(false);
       setRemoveError(
-        lang === "fr"
-          ? "Retrait non confirmé. Réessaie."
-          : "Removal not confirmed. Please retry.",
+        t('removalNotConfirmed'),
       );
     }, 12000);
     return () => clearTimeout(timer);
@@ -239,7 +237,7 @@ export function PlayerSheet({ players, social, onSelectTopic, onMessage, onChall
                 </button>
                 {isFriend && onChallenge && (
                   <button className="player-challenge-action" type="button" onClick={() => onChallenge(p.id)}>
-                    <Icon name="bolt" size={17} /> {lang === "fr" ? "Défier" : "Challenge"}
+                    <Icon name="bolt" size={17} /> {t('challengeVerb')}
                   </button>
                 )}
                 {isFriend && onMessage && (
@@ -272,11 +270,7 @@ export function PlayerSheet({ players, social, onSelectTopic, onMessage, onChall
                     setRemoveError("");
                     if (social.removeFriend(p.id)) setRemoving(true);
                     else
-                      setRemoveError(
-                        lang === "fr"
-                          ? "Connexion indisponible. Réessaie."
-                          : "Connection unavailable. Please retry.",
-                      );
+                      setRemoveError(t('connectionRetryShort'));
                   }}
                 >
                   {removing
@@ -290,7 +284,7 @@ export function PlayerSheet({ players, social, onSelectTopic, onMessage, onChall
                     className="social-btn outline"
                     onClick={() => setConfirmRemove(false)}
                   >
-                    {lang === "fr" ? "Annuler" : "Cancel"}
+                    {t('cancelVerb')}
                   </button>
                 )}
                 {removeError && <p role="alert">{removeError}</p>}

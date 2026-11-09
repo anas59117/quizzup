@@ -3,8 +3,7 @@ import { PlayerAvatar } from "./PlayerAvatar";
 import { topicLabel } from "./players";
 import { useI18n } from "./i18n";
 export function useMatchHistory(wsRef) {
-  const { lang } = useI18n();
-  const fr = lang === "fr";
+  const { t } = useI18n();
   const timer = useRef();
   useEffect(() => () => clearTimeout(timer.current), []);
   const [matches, setMatches] = useState([]),
@@ -15,15 +14,13 @@ export function useMatchHistory(wsRef) {
     setError("");
     if (wsRef.current?.readyState !== 1) {
       setLoading(false);
-      setError(fr ? "Connexion indisponible" : "Connection unavailable");
+      setError(t('connectionUnavailable'));
       return false;
     }
     setLoading(true);
     timer.current = setTimeout(() => {
       setLoading(false);
-      setError(
-        fr ? "Délai dépassé. Réessaie." : "Request timed out. Please retry.",
-      );
+      setError(t('requestTimeout'));
     }, 12000);
     wsRef.current.send(
       JSON.stringify({
@@ -31,7 +28,7 @@ export function useMatchHistory(wsRef) {
       }),
     );
     return true;
-  }, [wsRef, fr]);
+  }, [wsRef, t]);
   const handleMessage = useCallback(
     (data) => {
       if (data.type === "match_history") {
@@ -43,10 +40,10 @@ export function useMatchHistory(wsRef) {
       if (data.type === "social_error" && data.action === "match_history") {
         setLoading(false);
         clearTimeout(timer.current);
-        setError(fr ? "Historique indisponible" : "History unavailable");
+        setError(t('historyUnavailable'));
       }
     },
-    [fr],
+    [t],
   );
   return {
     matches,
@@ -63,33 +60,28 @@ export function MatchHistory({
   onMessage,
   friends = [],
 }) {
-  const { lang } = useI18n();
-  const fr = lang === "fr";
+  const { t, lang } = useI18n();
   return (
     <main id="main-content" tabIndex={-1} aria-labelledby="history-title" className="container community-history">
       <header>
-        <button onClick={onBack} aria-label={fr ? "Retour" : "Back"}>
+        <button onClick={onBack} aria-label={t('back')}>
           ←
         </button>
-        <h1 id="history-title" tabIndex={-1}>{fr ? "Historique" : "Match history"}</h1>
+        <h1 id="history-title" tabIndex={-1}>{t('matchHistoryTitle')}</h1>
       </header>
       {history.loading && (
-        <p role="status">{fr ? "Chargement…" : "Loading…"}</p>
+        <p role="status">{t('loadingDots')}</p>
       )}
       {history.error && (
         <p role="alert">
           {history.error}{" "}
           <button onClick={history.refresh}>
-            {fr ? "Réessayer" : "Retry"}
+            {t('retryLabel')}
           </button>
         </p>
       )}
       {!history.loading && !history.error && !history.matches.length && (
-        <p>
-          {fr
-            ? "Tes prochaines parties apparaîtront ici."
-            : "Your next matches will appear here."}
-        </p>
+        <p>{t('noMatchesYet')}</p>
       )}
       {history.matches.map((m) => (
         <article className="history-card" key={m.id}>
@@ -103,9 +95,9 @@ export function MatchHistory({
           <span>
             {
               {
-                win: fr ? "Victoire" : "Win",
-                loss: fr ? "Défaite" : "Loss",
-                tie: fr ? "Égalité" : "Tie",
+                win: t('resultWinShort'),
+                loss: t('resultLossShort'),
+                tie: t('resultTieShort'),
                 solo: "Solo",
               }[m.outcome]
             }
@@ -118,7 +110,7 @@ export function MatchHistory({
               </button>
               {friends.some((f) => f.id === o.id) && (
                 <button onClick={() => onMessage(o.id)}>
-                  {fr ? "Message / Défi" : "Message / Challenge"}
+                  {t('messageChallenge')}
                 </button>
               )}
             </div>

@@ -36,7 +36,6 @@ const FEATURED_TOPICS = FEATURED_TOPIC_KEYS
 // Signature: four equal topic covers lead directly into a compact discovery shelf.
 export function HomeContent({ startWithCategory, onSeeAll, pending, stats, controls, onOpenCommunity, communityPost }) {
   const { t, lang } = useI18n();
-  const fr = lang === 'fr';
   const personalKeys = [...new Set([...(stats?.followedThemes || []), ...(stats?.recentThemes || []).map(topic => topic.key), ...[...(stats?.topics || [])].sort((a,b) => (b.updatedAt || 0) - (a.updatedAt || 0)).map(topic => topic.key)])];
   const personalThemes = personalKeys.map(key => CATEGORIES.find(c => c.key === key)).filter(Boolean);
   const myThemes = [...personalThemes, ...FEATURED_TOPICS.filter(c => !personalThemes.some(mine => mine.key === c.key))].slice(0, 4);
@@ -46,20 +45,20 @@ export function HomeContent({ startWithCategory, onSeeAll, pending, stats, contr
       <BrandLogo />
       <div className="home-actions"><button type="button" className="home-action" onClick={() => onSeeAll?.(null, true)} aria-label={t('searchPlaceholder')}><Icon name="search" size={24} /></button>{controls}</div>
     </header>
-    <h1 id="home-title" tabIndex={-1} className="screen-reader-only">{fr ? 'Accueil' : 'Home'}</h1>
+    <h1 id="home-title" tabIndex={-1} className="screen-reader-only">{t('homeTitle')}</h1>
     <section aria-labelledby="home-my-themes">
-      <div className="section-head-v4"><h2 id="home-my-themes" className="section-title-v4">{fr ? 'Mes thèmes' : 'My themes'}</h2><button className="section-edit" onClick={() => onSeeAll?.()}>{t('seeAll')} <Icon name="arrow" size={16} /></button></div>
-      {!personalThemes.length && <p className="home-starter-label">{fr ? 'Quelques idées pour commencer' : 'Suggestions to get started'}</p>}
+      <div className="section-head-v4"><h2 id="home-my-themes" className="section-title-v4">{t('myThemesSection')}</h2><button className="section-edit" onClick={() => onSeeAll?.()}>{t('seeAll')} <Icon name="arrow" size={16} /></button></div>
+      {!personalThemes.length && <p className="home-starter-label">{t('suggestionsToStart')}</p>}
       <div className="topics-grid-v4">{myThemes.map((c, index) => {
         const level = [...(stats?.topics || []), ...(stats?.recentThemes || [])].find(topic => topic.key === c.key)?.level;
-        return <div key={c.key} className="topic-tile-wrap" data-topic={c.key}><CategoryTileV4 c={c} priority={index < 2 ? 'high' : 'eager'} onClick={() => startWithCategory(c.key)} disabled={pending} />{personalThemes.length > 0 && !personalThemes.some(mine => mine.key === c.key) && <span className="home-theme-suggestion">{fr ? 'Suggestion' : 'Suggested'}</span>}{Number.isFinite(level) && <span className="personal-theme-level">{t('level')} {level}</span>}</div>;
+        return <div key={c.key} className="topic-tile-wrap" data-topic={c.key}><CategoryTileV4 c={c} priority={index < 2 ? 'high' : 'eager'} onClick={() => startWithCategory(c.key)} disabled={pending} />{personalThemes.length > 0 && !personalThemes.some(mine => mine.key === c.key) && <span className="home-theme-suggestion">{t('suggestedLabel')}</span>}{Number.isFinite(level) && <span className="personal-theme-level">{t('level')} {level}</span>}</div>;
       })}</div>
     </section>
-    <section aria-labelledby="home-discover"><div className="section-head-v4"><h2 id="home-discover" className="section-title-v4">{fr ? 'À découvrir' : 'Discover'}</h2></div><div className="home-discovery">{discovery.map(c => <CategoryTileV4 key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}</div></section>
+    <section aria-labelledby="home-discover"><div className="section-head-v4"><h2 id="home-discover" className="section-title-v4">{t('discoverSection')}</h2></div><div className="home-discovery">{discovery.map(c => <CategoryTileV4 key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}</div></section>
     <section aria-labelledby="home-community" className="home-community-section">
       <button className={`home-community-teaser${communityPost ? '' : ' is-empty'}`} onClick={() => onOpenCommunity?.(communityPost?.id)}>
-        <span className="home-community-content"><strong id="home-community" className="home-community-heading">{fr ? 'Communauté' : 'Community'}</strong>
-        {communityPost ? <span className="home-community-post"><span className="home-community-avatar"><PlayerAvatar avatar={communityPost.authorAvatar} /></span><span className="home-community-copy"><strong>{communityPost.authorName}</strong><small>{topicLabel(communityPost.category)}</small><span>{communityPost.text}</span><small>{communityPost.commentsCount || 0} {fr ? 'réponses' : 'replies'}</small></span></span> : <span className="home-community-invitation">{fr ? 'Rejoindre les discussions' : 'Join the discussions'}</span>}</span><Icon name="arrow" size={20} />
+        <span className="home-community-content"><strong id="home-community" className="home-community-heading">{t('communityTitle')}</strong>
+        {communityPost ? <span className="home-community-post"><span className="home-community-avatar"><PlayerAvatar avatar={communityPost.authorAvatar} /></span><span className="home-community-copy"><strong>{communityPost.authorName}</strong><small>{topicLabel(communityPost.category)}</small><span>{communityPost.text}</span><small>{communityPost.commentsCount || 0} {t('repliesTitle').toLowerCase()}</small></span></span> : <span className="home-community-invitation">{t('joinDiscussions')}</span>}</span><Icon name="arrow" size={20} />
       </button>
     </section>
   </main>;
@@ -89,7 +88,6 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
   const { t, lang } = useI18n();
   const [failedCover, setFailedCover] = useState(null);
   const [loadedCover, setLoadedCover] = useState(null);
-  const fr = lang === 'fr';
   const cover = category ? getTopicCover(category) : null;
   const tint = cover?.detailTint || ({ spider_man: '#721027', marvel: '#721027', foot_fr: '#142e55', harry_potter: '#58401e', minecraft: '#294d36', rap_fr: '#4d192c', ligue_champions: '#142e55', liga_portugal: '#194c3c' })[category?.key]
     || ({ football: '#142e55', sport: '#183c49', music: '#4d192c', gaming: '#273c42', cinema: '#42302f', sagas: '#493326', series: '#483049', manga: '#423241', culture: '#263f54' })[category?.family] || '#4b2436';
@@ -112,7 +110,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
   const preview = PREVIEW_SUB[category.key] || { desc: category.desc };
   const title = localizedTopicTitle(category, lang);
   const family = category.family ? famLabel(t, category.family) : 'Quiz';
-  const description = (fr ? preview.desc : preview.en) || category.desc || '';
+  const description = (lang === 'fr' ? preview.desc : preview.en) || category.desc || '';
   const eyebrow = preview.eyebrow || family;
   const topicStats = (stats?.topics || []).find(topic => topic.key === category.key) || {};
   const completion = Number.isFinite(topicStats.completion) ? `${topicStats.completion}%` : '—';
@@ -126,7 +124,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
       <header className="cp-head">
         <button className="cp-back" onClick={onBack} aria-label={t('back')}><Icon name="arrow" size={18} className="cp-back-ic" /></button>
         <div className="cp-head-right">
-          <button className="cp-icon-btn" aria-label={following ? (fr ? 'Ne plus suivre ce thème' : 'Unfollow theme') : (fr ? 'Suivre ce thème' : 'Follow theme')} aria-pressed={!!following} onClick={onToggleFollow}><Icon name="heart" size={18} /></button>
+          <button className="cp-icon-btn" aria-label={following ? t('unfollowTheme') : t('followTheme')} aria-pressed={!!following} onClick={onToggleFollow}><Icon name="heart" size={18} /></button>
           {controls}
         </div>
       </header>
@@ -143,26 +141,26 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
         {description && <p className="cp-info">{description}</p>}
       </div>
       <div className="cp-cta">
-        <button className="cp-play" onClick={onPlay} disabled={pending}><Icon name="bolt" size={20} />{fr ? 'Jouer maintenant' : 'Play now'}</button>
-        <button className="cp-ghost" onClick={onChallenge} disabled={pending} aria-label={fr ? 'Défier un ami' : 'Challenge a friend'}><Icon name="users" size={22} /></button>
+        <button className="cp-play" onClick={onPlay} disabled={pending}><Icon name="bolt" size={20} />{t('playNow')}</button>
+        <button className="cp-ghost" onClick={onChallenge} disabled={pending} aria-label={t('challengeFriend')}><Icon name="users" size={22} /></button>
       </div>
-      <div className="cp-stats" aria-label={fr ? 'Ta progression' : 'Your progress'}>
-        <div className="cp-stat cp-stat-level"><Icon name="trophy" size={16} /><b>{fr ? 'Niveau' : 'Level'} {topicLevel}</b></div>
-        <div className="cp-stat"><span>{fr ? 'Progression' : 'Progress'}</span><b>{completion}</b></div>
-        <div className="cp-stat" title={fr ? 'Meilleure série' : 'Best streak'}><span>{fr ? 'Série' : 'Streak'}</span><b>{bestStreak}</b></div>
+      <div className="cp-stats" aria-label={t('yourProgress')}>
+        <div className="cp-stat cp-stat-level"><Icon name="trophy" size={16} /><b>{t('level')} {topicLevel}</b></div>
+        <div className="cp-stat"><span>{t('progressLabel')}</span><b>{completion}</b></div>
+        <div className="cp-stat" title={t('bestStreakLabel')}><span>{t('streakLabelShort')}</span><b>{bestStreak}</b></div>
       </div>
       <section className="cp-friends" aria-labelledby="quiz-friends-title">
         <div className="cp-friends-symbol" aria-hidden="true"><Icon name="users" size={23} /></div>
         <button className="cp-friend-invite" onClick={onChallenge} disabled={pending}>
-          <span id="quiz-friends-title" className="cp-friends-title">{fr ? 'Défie tes amis' : 'Challenge your friends'}</span>
-          <span className="cp-friends-empty">{fr ? 'Invite un ami à jouer sur ce thème.' : 'Invite a friend to play this topic.'}</span>
+          <span id="quiz-friends-title" className="cp-friends-title">{t('challengeYourFriends')}</span>
+          <span className="cp-friends-empty">{t('inviteFriendTopic')}</span>
         </button>
         {friendsOnTopic.length > 0 && <div className="cp-friends-row">
           {friendsOnTopic.slice(0, 4).map(friend => <div key={friend.id} className="cp-friend-ava" title={friend.name}>{(friend.name || '?')[0].toUpperCase()}</div>)}
-          {friendsOnTopic.length > 4 && <span className="cp-friends-more">+ {friendsOnTopic.length - 4} {fr ? 'autres' : 'more'}</span>}
+          {friendsOnTopic.length > 4 && <span className="cp-friends-more">+ {friendsOnTopic.length - 4} {t('othersMore')}</span>}
         </div>}
       </section>
-      <div className="social-entry-row"><button onClick={onCommunity}><Icon name="chat" size={18} />{fr ? 'Communauté' : 'Community'}</button><button onClick={onLeaderboard}><Icon name="trophy" size={18} />{fr ? 'Classement' : 'Ranking'}</button></div>
+      <div className="social-entry-row"><button onClick={onCommunity}><Icon name="chat" size={18} />{t('communityTitle')}</button><button onClick={onLeaderboard}><Icon name="trophy" size={18} />{t('rankingLabel')}</button></div>
       </div>
     </main>
   );
