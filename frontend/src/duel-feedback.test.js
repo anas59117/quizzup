@@ -134,10 +134,27 @@ test('reading stage reserves answer positions and blocks input until all choices
 test('side gauges use cumulative confirmed score and conceal opponent outcome until reveal', () => {
   question({ reveal: { round: 1, yourCorrect: true, yourAnswer: 0, yourScore: 40, pointsEarned: 12 } });
   expect(container.querySelector('.duel-score-rail.mine').getAttribute('aria-valuenow')).toBe('40');
+  expect(container.querySelector('.duel-score-rail.mine').getAttribute('data-gained')).toBe('true');
   expect(container.querySelector('.duel-score-rail.other').getAttribute('aria-valuenow')).toBe('15');
   expect(container.querySelector('.hud-chip:not(.mine)').getAttribute('data-state')).toBe('waiting');
   expect(container.querySelector('.game-progress')).toBeNull();
   expect(container.querySelector('.game-progress-text').textContent).toContain('1 / 6');
+});
+
+test('sound control shares the round header and a zero-point reveal does not accent the gauge', () => {
+  const toggleSound = jest.fn();
+  question({
+    question: { ...questionProps.question, category: 'Ligue 1' },
+    controls: <button type="button" onClick={toggleSound}>Mute sound</button>,
+    reveal: { round: 1, yourCorrect: true, yourAnswer: 0, yourScore: 28, pointsEarned: 0 },
+  });
+  const header = container.querySelector('.game-round-meta');
+  expect(header.querySelector('.game-cattag').textContent).toBe('Ligue 1');
+  const sound = header.querySelector('button');
+  expect(sound.textContent).toBe('Mute sound');
+  act(() => sound.click());
+  expect(toggleSound).toHaveBeenCalledTimes(1);
+  expect(container.querySelector('.duel-score-rail.mine').hasAttribute('data-gained')).toBe(false);
 });
 
 test('ivory answer controls use the answer itself without decorative letter badges', () => {

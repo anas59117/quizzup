@@ -18,6 +18,7 @@ import catalogueExpansion from '../../src/catalogueExpansion.json';
 import internationalTitles from '../../src/internationalTopicTitles.json';
 if (!SFX.muted) SFX.toggle();
 const params = new URLSearchParams(location.search);
+const duelDesign = params.has('duel-design');
 localStorage.setItem('quizzup-lang', params.has('en') ? 'en' : 'fr');
 const question = {
   question: 'Dans « Spider-Man 2099 », quelle est la profession de Miguel O’Hara ?',
@@ -30,6 +31,15 @@ if (params.has('photo')) {
   question.question = 'Quel joueur se trouve sur cette photo ?';
   question.image = '/images/players/booba.jpg';
 }
+if (duelDesign) Object.assign(question, params.has('photo') ? {
+  question: 'Quel joueur se trouve sur cette photo ?',
+  answers: ['Kylian Mbappé', 'Antoine Griezmann', 'Karim Benzema', 'Olivier Giroud'],
+  category: 'Ligue 1', image: '/images/players/kylian_mbappe.jpg', round: 4,
+} : {
+  question: 'Qui dirigeait le PSG lors de son titre de champion de France en 2015-2016 ?',
+  answers: ['Unai Emery', 'Carlo Ancelotti', 'Antoine Kombouaré', 'Laurent Blanc'],
+  category: 'Ligue 1', round: 4,
+});
 function Preview() {
   const { lang, toggleLang } = useI18n();
   const [screen, setScreen] = useState(params.has('new-covers') ? 'covers' : ['home', 'profile', 'waiting', 'result', 'shop', 'themes', 'quiz', 'intro', 'messages'].find(key => params.has(key)) || 'game');
@@ -45,7 +55,8 @@ function Preview() {
   const [peer, setPeer] = useState(null);
   const [googleLinked, setGoogleLinked] = useState(params.has('linked'));
   const social = React.useMemo(() => ({ friends: [], requests: [], dms: {}, outgoingRequests: new Set(), gameChat: [], gameChatSeenRef: { current: 0 }, sendGameChat: () => false }), []);
-  const opponents = params.has('gameSolo') ? [] : [{ id: '2', name: 'clem10', avatar: 'owl', score: 55, answered: !!reveal?.others, correct: false }];
+  const opponent = duelDesign ? { name: 'momo10', avatar: 'robot', score: 15 } : { name: 'clem10', avatar: 'owl', score: 55 };
+  const opponents = params.has('gameSolo') ? [] : [{ id: '2', ...opponent, answered: !!reveal?.others, correct: false }];
   if (params.has('group')) opponents.push({ id: '3', name: 'Alex', avatar: '🦊', score: 12 }, { id: '4', name: 'Sam', avatar: '🐼', score: 10 });
   const controls = <TopControls muted={muted} toggleMute={() => setMuted(!muted)} theme={theme} toggleTheme={toggleTheme} playing={screen === 'game'} home={['home','themes','profile','quiz'].includes(screen)} />;
   const stats = { games: 27, wins: 12, level: 6, xpIntoLevel: 121, xpForLevel: 1200, xp: 2400, coins: 420, topics: params.has('personal') ? [{key:'ligue_champions',level:8},{key:'rap_fr',level:5},{key:'harry_potter',level:3},{key:'minecraft',level:2}] : [], followedThemes: params.has('personal') ? ['ligue_champions','rap_fr','harry_potter','minecraft'] : [], ownedItems: ['robot','fox'], equippedItems: { avatars: 'fox' } };
@@ -57,7 +68,7 @@ function Preview() {
   const previewFriends = params.has('populated') ? [{id:'friend-1',name:'Camille',avatar:'fox',online:true},{id:'friend-2',name:'Nadia',avatar:'owl',online:false},{id:'friend-3',name:'Alex',avatar:'robot',online:false}] : [];
   const previewMessages = previewFriends.length ? { ...social, friends: previewFriends, conversations: previewFriends.map((person,index)=>({peer:person,unread:index===0?2:0,lastMessage:{kind:'text',text:['Une revanche sur le ciné ?','On joue ce soir ?','Bien joué pour le dernier duel !'][index],createdAt:'2026-10-19T11:30:00Z'}})),messages:{'friend-1':[{id:'sample',fromId:'friend-1',kind:'text',text:'Une revanche sur le ciné ?',createdAt:'2026-10-19T11:30:00Z'}]}} : {...social,messages:{},conversations:[]};
   return <div className={screen === 'home' ? 'app app-top app-nav app-home' : screen === 'messages' ? `app app-messenger${!peer?' app-nav messenger-inbox-nav':''}` : screen === 'game' ? 'app game-bg app-question' : screen === 'result' ? 'app results-bg' : screen === 'waiting' ? 'app game-bg app-matchmaking' : screen === 'intro' ? 'app game-bg' : `app app-top app-nav ${screen === 'quiz' ? 'app-category-preview' : screen === 'shop' ? 'app-shop' : screen === 'profile' ? 'app-profile' : screen === 'themes' ? 'app-themes' : ''}`}>
-    {!['home','quiz','profile','shop','themes','messages'].includes(screen) && controls}
+    {!['home','quiz','profile','shop','themes','messages','game'].includes(screen) && controls}
     {screen === 'covers' && <main className="container wide themes-refined"><h1>{params.has('international') ? (lang==='fr'?'Couvertures multilingues':'International covers') : 'Les 55 nouveaux quiz'}</h1>{params.has('international')&&<button className="btn" onClick={toggleLang} aria-label="Change preview language">{lang==='fr'?'Voir en anglais':'View in French'}</button>}{[['football','Football'],['sport','Sports'],['music','Musique'],['gaming','Jeux vidéo'],['cinema','Cinéma'],['sagas','Sagas'],['series','Séries'],['culture','Culture']].map(([key,label]) => <section className="expanded-cover-group" data-family={key} key={key}><h2>{label}</h2><div className="topics-grid-v4">{(params.has('international') ? CATEGORIES.filter(c=>internationalTitles[c.key]) : catalogueExpansion).filter(c=>c.family===key).map(c=><CategoryTileV4 key={c.key} c={c} onClick={()=>openTopic(c.key)} />)}</div></section>)}</main>}
     {screen === 'home' && <HomeContent controls={controls} name="Sisi" avatar="fox" stats={stats} soloMode={solo} setSoloMode={setSolo}
       quickMatch={play} startWithCategory={openTopic} onOpenProfile={() => setScreen('profile')} onSeeAll={() => setScreen('themes')} />}
@@ -77,9 +88,9 @@ function Preview() {
         leagueAward={params.has('solo') || params.has('tie') ? null : { lpChange: params.has('loss') ? -20 : 25 }} notices={[{id: 1, message: '4 jours de suite ! Reviens demain pour continuer.'}]} rematch={play} newMatch={play} playAgain={() => setScreen('home')} />
     </>}
     {screen === 'game' && <QuestionContent question={question} timeLeft={9} selected={selected} reveal={reveal}
-      answer={idx => { setSelected(idx); setReveal({ yourCorrect: idx === 0, correctIndex: 0, pointsEarned: idx === 0 ? 17 : 0, others: [] }); }}
-      opponents={opponents} avatar="fox" name="Sisi" score={reveal?.yourCorrect ? 17 : 0} reportQuestion={() => {}}
-      social={social} GameChat={GameChat} />}
+      answer={idx => { const correctIndex = duelDesign && !question.image ? 3 : 0; setSelected(idx); setReveal({ yourCorrect: idx === correctIndex, correctIndex, pointsEarned: idx === correctIndex ? 17 : 0, others: [] }); }}
+      opponents={opponents} avatar="fox" name="Sisi" score={(duelDesign ? 50 : 0) + (reveal?.yourCorrect ? 17 : 0)} reportQuestion={() => {}}
+      social={social} GameChat={GameChat} controls={controls} />}
     {browse && <NavBar active={screen === 'themes' ? 'categories' : screen === 'quiz' ? 'home' : screen} onQuickMatch={play} onNav={next=>setScreen(next === 'categories' ? 'themes' : next)} />}
   </div>;
 }

@@ -1370,11 +1370,12 @@ function AppContent() {
 
   if (stage === 'playing' && question) {
     return (
-      <div className="app game-bg app-question"><TopControls {...topProps} playing /><Toast toast={toast} onDismiss={dismissToast} />
+      <div className="app game-bg app-question"><Toast toast={toast} onDismiss={dismissToast} />
         <QuestionContent
           question={question} timeLeft={timeLeft} reveal={reveal} selected={selected} answer={answer}
           opponents={opponents} avatar={avatar} frame={statsHook.stats.frame} name={name} score={score}
           reportQuestion={reportQuestion} reported={reported} social={social} GameChat={GameChat}
+          controls={<TopControls {...topProps} playing />}
         />
       </div>);
   }

@@ -8,7 +8,7 @@ import { PlayerHud } from './multiplayer';
 import { useGameFeel } from './GameFeelProvider';
 import { useRoundTiming } from './round-timing';
 
-export function QuestionContent({ question, timeLeft, reveal, selected, answer, opponents = [], avatar, frame, name, score, reportQuestion, reported, social, GameChat }) {
+export function QuestionContent({ question, timeLeft, reveal, selected, answer, opponents = [], avatar, frame, name, score, reportQuestion, reported, social, GameChat, controls }) {
   const { t } = useI18n();
   const gf = useGameFeel();
   const buttonRefs = useRef([]);
@@ -115,7 +115,7 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
     <div data-round-phase={timing.phase} className={`container game game-v4 duel-premium${opponents.length > 1 ? ' game-v4--group' : ''}${!opponents.length ? ' duel-premium--solo' : ''}${question.image ? ' game-v4--photo' : ''}`}>
       <div className="hud-timer-block">
         <span className="hud-timer-label">{t('time')}</span>
-        <span style={{ '--timer-progress': `${pct}%` }} className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr && !isInstantAck ? '\u2713' : timeLeft}</span>
+        <span style={{ '--timer-progress': `${sr && !isInstantAck ? 100 : pct}%` }} className={`hud-timer ${timeLeft <= 3 && !sr ? 'urgent' : ''}`}>{sr && !isInstantAck ? '\u2713' : timeLeft}</span>
       </div>
       <PlayerHud
         me={{ avatar, frame, name, score: Number.isFinite(reveal?.yourScore) ? reveal.yourScore : score,
@@ -125,32 +125,26 @@ export function QuestionContent({ question, timeLeft, reveal, selected, answer, 
         revealing={sr && !isInstantAck}
       />
 
+      <div className="game-round-meta">
+        <div className="duel-round-details">
+          <div className="game-progress-text">{t('questionLabel')} {round} / {total}</div>
+          {question.category && (
+            <div className="game-category">
+              <span className="game-cattag" title={question.category}>{question.category}</span>
+            </div>
+          )}
+        </div>
+        {controls}
+      </div>
+
       <div className="duel-arena-stage">
       <div className="duel-score-rails">
         {railPlayers.map((player, index) => <div key={player.id} className={`duel-score-rail ${player.mine ? 'mine' : 'other'}`}
-          data-gained={player.mine && sr && reveal.yourCorrect ? 'true' : undefined}
+          data-gained={player.mine && reveal?.yourCorrect && reveal.pointsEarned > 0 ? 'true' : undefined}
           style={{ '--rail-index': player.mine ? 0 : index - 1 }} role="progressbar"
           aria-label={`${player.name} · ${t('matchScore')}`} aria-valuemin={0} aria-valuemax={maxScore} aria-valuenow={player.score || 0}>
           <span style={{ height: `${Math.min(100, Math.max(0, (player.score || 0) / maxScore * 100))}%` }} />
         </div>)}
-      </div>
-      {/* The round count carries progression; side rails carry the scores. */}
-      <div className="game-round-meta">
-      <div className="game-progress-text">
-        {t('questionLabel')} {round} / {total}
-      </div>
-
-      {/* Category tag */}
-      {question.category && (
-        <div className="game-category">
-          <span className="game-cattag">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" />
-            </svg>
-            {question.category}
-          </span>
-        </div>
-      )}
       </div>
 
       <div className={`answers-wrapper ${gf.opponentPop ? 'opponent-just-answered' : ''}`}>

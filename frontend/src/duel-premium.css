@@ -2,11 +2,18 @@
    Rules: comfortable targets, stable reading stage, confirmed feedback only.
    Signature: glacier and copper score rails frame the full playing field. */
 .duel-visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-.app.app-question { background:#111312 !important; }
+.app.app-question {
+  --duel-top:calc(clamp(14px, 3.5dvh, 30px) + var(--safe-top, 0px));
+  --duel-bottom:max(12px, var(--safe-bottom, 0px));
+  align-items:flex-start;
+  min-height:100dvh;
+  padding-top:var(--duel-top) !important;
+  padding-bottom:var(--duel-bottom);
+  background:#111312 !important;
+}
 .app-question .container.duel-premium {
   --duel-own:#55c4ef; --duel-other:#e7955a; --duel-ink:#151615;
   display:flex; flex-direction:column; padding:0 !important;
-  min-height:calc(100dvh - 60px - var(--safe-top, 0px) - var(--safe-bottom, 0px));
   background:#111312 !important;
 }
 .app-question .duel-premium .duel-hud { min-height:72px; margin:0 0 4px !important; padding:0 !important; align-items:start !important; gap:68px !important; }
@@ -32,23 +39,42 @@
 .duel-points-ring { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
 .app-question .duel-premium .hud-timer-block { top:0 !important; }
 .duel-premium .hud-timer-label { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
-.app-question .duel-premium .hud-timer { width:52px !important; height:52px !important; border:4px solid var(--duel-own) !important; background:#111312 !important; color:#f8f6f1 !important; font-size:27px !important; box-shadow:none !important; }
-.duel-premium .hud-timer.urgent { border-color:var(--duel-other) !important; }
-.duel-arena-stage { position:relative; flex:1; display:flex; flex-direction:column; padding:0 16px; min-width:0; }
+.app-question .duel-premium .hud-timer {
+  width:54px !important; height:54px !important; border:4px solid transparent !important;
+  background:linear-gradient(#111312, #111312) padding-box,
+    conic-gradient(#f4efe4 var(--timer-progress, 100%), #454845 0) border-box !important;
+  color:#f8f6f1 !important; font-size:27px !important; box-shadow:none !important;
+}
+.duel-arena-stage { position:relative; padding:0 16px clamp(12px, 3dvh, 26px); min-width:0; }
 .duel-score-rails { pointer-events:none; }
-.duel-score-rail { position:absolute; top:0; bottom:0; width:7px; border-radius:7px; background:#3c403d; display:flex; align-items:flex-end; overflow:hidden; }
+.duel-score-rail { position:absolute; top:0; bottom:0; width:8px; border-radius:8px; background:#353936; display:flex; align-items:flex-end; overflow:hidden; }
 .duel-score-rail.mine { left:0; } .duel-score-rail.other { right:calc(var(--rail-index)*9px); }
-.duel-score-rail span { width:100%; border-radius:inherit; background:var(--duel-own); transition:height 550ms ease-out; }
+.duel-score-rail span { position:relative; width:100%; border-radius:inherit; background:var(--duel-own); transition:height 550ms ease-out; }
 .duel-score-rail.other span { background:var(--duel-other); }
-.app-question .duel-premium .game-round-meta { display:grid; justify-items:center; gap:16px; padding:8px 0 0; }
+.duel-score-rail[data-gained] span::after {
+  content:''; position:absolute; inset:0 0 auto; height:12px; border-radius:inherit;
+  background:linear-gradient(#f8feff, transparent); animation:duelGaugeGain 850ms ease-out both;
+}
+@keyframes duelGaugeGain { 0% { opacity:.95; } 100% { opacity:0; } }
+.app-question .duel-premium .game-round-meta {
+  display:grid; grid-template-columns:44px minmax(0,1fr) 44px; align-items:center;
+  justify-items:stretch; gap:4px; min-height:44px; padding:0; margin-bottom:6px;
+}
+.duel-round-details { grid-column:2; display:flex; align-items:center; justify-content:center; gap:clamp(6px, 2.4vw, 12px); min-width:0; }
 .duel-premium .game-round-meta .game-progress-text,.duel-premium .game-round-meta .game-category { position:static; margin:0 !important; }
-.duel-premium .game-progress-text { color:#bfc2bd !important; font-size:12px !important; }
-.duel-premium .game-cattag { background:#262a27 !important; border:1px solid #424641 !important; color:#dedfd9 !important; padding:5px 18px !important; font-size:11px !important; letter-spacing:.06em; }
-.duel-premium .game-cattag svg { display:none; }
-.app-question .duel-premium .answers-wrapper { flex:1; display:flex; align-items:stretch; padding:0; }
-.app-question .duel-premium .question-panel { display:flex; flex:1; flex-direction:column; justify-content:center; width:100%; padding:0 !important; }
-.app-question .duel-premium .question { padding:24px 0 0 !important; margin:0 !important; color:#f7f5f0 !important; font-size:clamp(22px,5.9vw,28px) !important; line-height:1.25 !important; text-shadow:none !important; overflow-wrap:anywhere; }
-.app-question .duel-premium .answers { margin:0; padding:28px 0 0 !important; gap:10px !important; flex-shrink:0; }
+.duel-premium .game-round-meta .game-progress-text { flex:none; color:#bfc2bd !important; font-size:12px !important; white-space:nowrap; }
+.duel-premium .game-round-meta .game-category { min-width:0; max-width:100%; }
+.duel-premium .game-round-meta .game-cattag { display:block !important; max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; background:#262a27 !important; border:1px solid #424641 !important; color:#dedfd9 !important; padding:5px 12px !important; font-size:11px !important; letter-spacing:.04em; }
+.app-question .duel-premium .game-round-meta .top-controls {
+  grid-column:3; position:static; justify-self:end; padding:0; transform:none;
+  border:0; background:none; box-shadow:none; backdrop-filter:none;
+}
+.app-question .duel-premium .game-round-meta .ctrl-btn { width:44px; height:44px; background:transparent !important; color:#f4efe4 !important; }
+.app-question .duel-premium .game-round-meta .ctrl-btn:hover { background:#262a27 !important; }
+.app-question .duel-premium .answers-wrapper { padding:0; }
+.app-question .duel-premium .question-panel { display:flex; flex-direction:column; width:100%; padding:0 !important; }
+.app-question .duel-premium .question { padding:clamp(16px, 4dvh, 36px) 0 0 !important; margin:0 !important; color:#f7f5f0 !important; font-size:clamp(22px,5.9vw,28px) !important; line-height:1.25 !important; text-shadow:none !important; text-wrap:balance; overflow-wrap:anywhere; }
+.app-question .duel-premium .answers { margin:0; padding:clamp(22px, 4dvh, 34px) 0 0 !important; gap:10px !important; flex-shrink:0; }
 .app-question .duel-premium .answers .answer { position:relative; min-height:clamp(60px,9.5dvh,88px); padding:14px 24px !important; border-radius:12px !important; border:1px solid #e1ded4 !important; background:#f7f2e8 !important; color:var(--duel-ink) !important; justify-content:center !important; text-align:center !important; font-size:clamp(17px,4.9vw,22px) !important; line-height:1.25; font-weight:700 !important; animation:none; transition:background-color 180ms,border-color 180ms !important; }
 .duel-premium .answer-text { flex:1; min-width:0; overflow-wrap:anywhere; }
 .duel-premium .answer-result-icon { position:absolute; right:7px; font-size:17px; }
@@ -61,7 +87,7 @@
 .duel-premium .mobile-answer-feedback { line-height:1.4; }
 .app-question .duel-premium.game-v4--photo .question-panel { justify-content:flex-start; }
 .app-question .duel-premium.game-v4--photo .question { padding-top:16px !important; font-size:clamp(20px,5.5vw,26px) !important; }
-.app-question .duel-premium .player-photo-wrap { position:relative; width:100%; height:clamp(90px,calc(100dvh - 455px),320px); flex-shrink:0; margin:16px auto 0; border-radius:12px; overflow:hidden; background:#1d211e; }
+.app-question .duel-premium .player-photo-wrap { position:relative; width:100%; height:clamp(90px,calc(100dvh - 480px - var(--safe-top, 0px) - var(--safe-bottom, 0px)),320px); flex-shrink:0; margin:16px auto 0; border-radius:12px; overflow:hidden; background:#1d211e; }
 .app-question .duel-premium .player-photo { display:block; width:100%; height:100%; max-height:none; object-fit:contain; border-radius:0; }
 .duel-premium .photo-credit { position:absolute; left:0; bottom:0; width:100%; padding:3px 6px; background:#111e; color:#fff; font-size:10px; }
 .app-question .duel-premium.game-v4--photo .answers { grid-template-columns:repeat(2,minmax(0,1fr)) !important; padding-top:12px !important; }
@@ -81,13 +107,12 @@
 @keyframes duelAnswerEnter { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
 .duel-premium .answers .answer.duel-answer-enter { animation:duelAnswerEnter var(--answer-duration,250ms) ease-out both; }
 @media (max-height:739px) {
-  .app-question .duel-premium .game-round-meta { gap:10px; padding-top:2px; }
   .app-question .duel-premium .question { padding-top:18px !important; font-size:22px !important; }
   .app-question .duel-premium .answers { padding-top:20px !important; gap:9px !important; }
   .app-question .duel-premium .answers .answer { min-height:60px; font-size:18px !important; }
   .app-question .duel-premium.game-v4--photo .answers .answer { min-height:54px; font-size:16px !important; }
 }
-@media (max-height:550px) {
+@media (max-height:620px) {
   .app-question .duel-premium .duel-hud { min-height:58px; gap:54px !important; }
   .duel-premium .duel-hud .hud-chip { width:calc((100% - 54px)/2); grid-template-columns:38px minmax(0,1fr); grid-template-rows:18px 22px 14px; gap:0 5px !important; }
   .duel-premium .duel-hud .hud-chip:not(.mine) { grid-template-columns:minmax(0,1fr) 38px; }
@@ -95,16 +120,16 @@
   .duel-hud .hud-chip-ava { width:32px !important; height:32px !important; }
   .duel-hud .hud-chip-name { font-size:10px !important; } .duel-hud .hud-chip-score { font-size:21px !important; }
   .app-question .duel-premium .hud-timer { width:42px !important; height:42px !important; font-size:22px !important; }
-  .app-question .duel-premium .game-round-meta { gap:4px; }
-  .app-question .duel-premium .game-cattag { padding:2px 10px !important; }
+  .duel-premium .game-round-meta .game-cattag { padding:3px 10px !important; }
   .app-question .duel-premium .question,.app-question .duel-premium.game-v4--photo .question { padding-top:10px !important; font-size:18px !important; }
   .app-question .duel-premium .answers { padding-top:12px !important; gap:7px !important; }
   .app-question .duel-premium .answers .answer,.app-question .duel-premium.game-v4--photo .answers .answer { min-height:44px; padding:9px 22px !important; font-size:15px !important; }
-  .app-question .duel-premium .player-photo-wrap { height:82px; margin-top:10px; }
+  .app-question .duel-premium .player-photo-wrap { height:clamp(82px, calc(100dvh - 370px - var(--safe-top, 0px) - var(--safe-bottom, 0px)), 144px); margin-top:10px; }
 }
 @media (prefers-reduced-motion:reduce) {
   .duel-premium .question,.duel-premium .answers .answer,.duel-premium .answers .answer.duel-answer-enter,.duel-premium .hud-timer,.duel-premium .opponent-just-answered { animation:none !important; transition:none !important; }
   .duel-score-rail span { transition:none; }
+  .duel-score-rail[data-gained] span::after { animation:none; opacity:.65; }
 }
 
 /* Begin only on canonical full round_result; preserve each answer's box. */
