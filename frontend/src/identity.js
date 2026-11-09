@@ -6,15 +6,15 @@ import { IdentityEmblem, hasEmblem } from './IdentityEmblem';
 // Rules: one ink tone and one spot colour per identity; no decorative glow.
 // Signature: a large edition number makes each identity recognisable in play.
 export const IDENTITIES = {
-  none: { number: ‘00’, mark: ‘Q’, fr: ‘Classique’, en: ‘Classic’, es: ‘Clásico’, lineFr: ‘Le jeu parle pour toi.’, lineEn: ‘Let your game speak.’, lineEs: ‘El juego habla por ti.’ },
-  bronze: { number: ‘01’, mark: ‘B’, fr: ‘Bronze’, en: ‘Bronze’, es: ‘Bronce’, lineFr: ‘Les débuts d’une légende.’, lineEn: ‘Every legend starts somewhere.’, lineEs: ‘Toda leyenda empieza en algún lugar.’ },
-  argent: { number: ‘02’, mark: ‘A’, fr: ‘Argent’, en: ‘Silver’, es: ‘Plata’, lineFr: ‘Précis. Calme. Implacable.’, lineEn: ‘Sharp. Calm. Relentless.’, lineEs: ‘Preciso. Calmado. Implacable.’ },
-  or: { number: ‘03’, mark: ‘O’, fr: ‘Or’, en: ‘Gold’, es: ‘Oro’, lineFr: ‘La place se gagne.’, lineEn: ‘Earn your place.’, lineEs: ‘El lugar se gana.’ },
-  neon: { number: ‘04’, mark: ‘N’, fr: ‘Néon’, en: ‘Neon’, es: ‘Neón’, lineFr: ‘La nuit t’appartient.’, lineEn: ‘Own the night.’, lineEs: ‘La noche es tuya.’ },
-  flamme: { number: ‘05’, mark: ‘F’, fr: ‘Flamme’, en: ‘Flame’, es: ‘Llama’, lineFr: ‘Toujours en feu.’, lineEn: ‘Always on fire.’, lineEs: ‘Siempre en llamas.’ },
-  glace: { number: ‘06’, mark: ‘G’, fr: ‘Glace’, en: ‘Ice’, es: ‘Hielo’, lineFr: ‘Garde la tête froide.’, lineEn: ‘Keep your cool.’, lineEs: ‘Mantén la cabeza fría.’ },
-  arcenciel: { number: ‘07’, mark: ‘P’, fr: ‘Prisme’, en: ‘Prism’, es: ‘Prisma’, lineFr: ‘Toutes les facettes du jeu.’, lineEn: ‘Every side of the game.’, lineEs: ‘Todas las facetas del juego.’ },
-  diamant: { number: ‘08’, mark: ‘D’, fr: ‘Diamant’, en: ‘Diamond’, es: ‘Diamante’, lineFr: ‘Impossible à ignorer.’, lineEn: ‘Impossible to miss.’, lineEs: ‘Imposible de ignorar.’ },
+  none: { number: '00', mark: 'Q', fr: 'Classique', en: 'Classic', es: 'Clásico', lineFr: 'Le jeu parle pour toi.', lineEn: 'Let your game speak.', lineEs: 'El juego habla por ti.' },
+  bronze: { number: '01', mark: 'B', fr: 'Bronze', en: 'Bronze', es: 'Bronce', lineFr: 'Les débuts d’une légende.', lineEn: 'Every legend starts somewhere.', lineEs: 'Toda leyenda empieza en algún lugar.' },
+  argent: { number: '02', mark: 'A', fr: 'Argent', en: 'Silver', es: 'Plata', lineFr: 'Précis. Calme. Implacable.', lineEn: 'Sharp. Calm. Relentless.', lineEs: 'Preciso. Calmado. Implacable.' },
+  or: { number: '03', mark: 'O', fr: 'Or', en: 'Gold', es: 'Oro', lineFr: 'La place se gagne.', lineEn: 'Earn your place.', lineEs: 'El lugar se gana.' },
+  neon: { number: '04', mark: 'N', fr: 'Néon', en: 'Neon', es: 'Neón', lineFr: 'La nuit t’appartient.', lineEn: 'Own the night.', lineEs: 'La noche es tuya.' },
+  flamme: { number: '05', mark: 'F', fr: 'Flamme', en: 'Flame', es: 'Llama', lineFr: 'Toujours en feu.', lineEn: 'Always on fire.', lineEs: 'Siempre en llamas.' },
+  glace: { number: '06', mark: 'G', fr: 'Glace', en: 'Ice', es: 'Hielo', lineFr: 'Garde la tête froide.', lineEn: 'Keep your cool.', lineEs: 'Mantén la cabeza fría.' },
+  arcenciel: { number: '07', mark: 'P', fr: 'Prisme', en: 'Prism', es: 'Prisma', lineFr: 'Toutes les facettes du jeu.', lineEn: 'Every side of the game.', lineEs: 'Todas las facetas del juego.' },
+  diamant: { number: '08', mark: 'D', fr: 'Diamant', en: 'Diamond', es: 'Diamante', lineFr: 'Impossible à ignorer.', lineEn: 'Impossible to miss.', lineEs: 'Imposible de ignorar.' },
 };
 
 export function identityFor(frame) {

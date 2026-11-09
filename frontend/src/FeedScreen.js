@@ -63,9 +63,9 @@ function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, o
   const share = async () => {
     try {
       const result = await shareCommunityPost(post);
-      setNotice(result === "copied" ? t(‘linkCopied’) : "");
+      setNotice(result === "copied" ? t('linkCopied') : "");
     } catch {
-      setNotice(t(‘sharingUnavailable’));
+      setNotice(t('sharingUnavailable'));
     }
   };
   return (
@@ -79,7 +79,7 @@ function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, o
           <button className="community-follow" type="button" aria-pressed={!!post.authorFollowed}
             disabled={feed.pending[`follow:${post.authorId}`]}
             onClick={() => feed.followAuthor(post.authorId, post.authorFollowed)}>
-            {post.authorFollowed ? t(‘followingLabel’) : t(‘followShort’)}
+            {post.authorFollowed ? t('followingLabel') : t('followShort')}
           </button>
         )}
       </header>
@@ -87,29 +87,29 @@ function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, o
         <button className="community-theme-link" type="button" onClick={() => onTopic(post.category)}>
           <Icon name="themes" /> {titleFor(post.category, lang)}
         </button>
-        <span className="community-post-type">{post.question ? t(‘miniQuiz’) : t(‘discussionLabel’)}</span>
+        <span className="community-post-type">{post.question ? t('miniQuiz') : t('discussionLabel')}</span>
       </div>
       <p className="feed-post-text">{post.text}</p>
-      {photo && <img className="community-photo" src={photo} alt={t(‘postPhotoAlt’)} loading="lazy" />}
+      {photo && <img className="community-photo" src={photo} alt={t('postPhotoAlt')} loading="lazy" />}
       {post.question && <Quiz post={post} feed={feed} />}
       <div className="community-post-actions">
-        <button type="button" aria-pressed={!!post.reacted} aria-label={`${t(‘likeLabel’)} · ${likes}`}
+        <button type="button" aria-pressed={!!post.reacted} aria-label={`${t('likeLabel')} · ${likes}`}
           disabled={feed.pending[`react:${post.id}`]} onClick={() => feed.react(post.id)}>
           <Icon name="heart" /> <span>{likes}</span>
         </button>
         {onThread ? (
-          <button type="button" aria-label={`${t(‘repliesTitle’)} · ${comments}`}
+          <button type="button" aria-label={`${t('repliesTitle')} · ${comments}`}
             onClick={(event) => onThread(post.id, event.currentTarget)}>
-            <Icon name="chat" /> <span>{comments} {comments === 1 ? t(‘replyWord’) : t(‘repliesWord’)}</span>
+            <Icon name="chat" /> <span>{comments} {comments === 1 ? t('replyWord') : t('repliesWord')}</span>
           </button>
         ) : <span className="community-action-count"><Icon name="chat" /> {comments}</span>}
         <details className="community-post-more">
-          <summary aria-label={t(‘moreActions’)}>…</summary>
+          <summary aria-label={t('moreActions')}>…</summary>
           <div onClick={(event) => { event.currentTarget.parentElement.open = false; }}>
-            <button type="button" onClick={share}><Icon name="share" /> {t(‘shareLabel’)}</button>
-            {onPlayTopic && <button type="button" onClick={() => onPlayTopic(post.category)}><Icon name="bolt" /> {t(‘playActionLabel’)}</button>}
+            <button type="button" onClick={share}><Icon name="share" /> {t('shareLabel')}</button>
+            {onPlayTopic && <button type="button" onClick={() => onPlayTopic(post.category)}><Icon name="bolt" /> {t('playActionLabel')}</button>}
             <button type="button" disabled={reported} onClick={() => feed.report(post.id)}>
-              {reported ? t(‘reportedLabel’) : t(‘reportLabel’)}
+              {reported ? t('reportedLabel') : t('reportLabel')}
             </button>
           </div>
         </details>

@@ -148,7 +148,7 @@ test('browser Back and Forward restore the previous QuizzUp screen', async () =>
 test('browser Back from a quiz family restores the themes overview', () => {
   click('Thèmes');
   const themesEntry = window.history.state;
-  act(() => container.querySelector('.family-list button').click());
+  act(() => container.querySelector('.family-list button[data-family="sport"]').click());
   expect(window.history.state?.quizzup?.family).toBe('sport');
 
   act(() => window.dispatchEvent(new PopStateEvent('popstate', { state: themesEntry })));

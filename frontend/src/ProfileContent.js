@@ -116,7 +116,7 @@ export function ProfileContent({
                   <progress aria-label={t('overallProgress')} value={xp} max={xpTarget} />
                   <p>{(xpTarget - xp).toLocaleString(lang)} {t('beforeNextLevel')} {level + 1}</p>
                 </>
-              ) : <p>{t(‘playForXp’)}</p>}
+              ) : <p>{t('playForXp')}</p>}
             </div>
             <div className="profile-player-social">
               {social && <button type="button" onClick={() => {

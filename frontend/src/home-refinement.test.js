@@ -43,7 +43,7 @@ test('community teaser uses real content and opens its post', () => {
 test('home settings show one gear and put sound inside', () => {
   const mute=jest.fn(),theme=jest.fn(); render(<TopControls home muted toggleMute={mute} theme="dark" toggleTheme={theme} />);
   expect(container.querySelectorAll('button')).toHaveLength(1); act(()=>container.querySelector('button').click()); click('Activer le son'); click('Mode clair');
-  expect(mute).toHaveBeenCalledTimes(1); expect(theme).toHaveBeenCalledTimes(1); expect(container.textContent).toContain('Switch to English');
+  expect(mute).toHaveBeenCalledTimes(1); expect(theme).toHaveBeenCalledTimes(1); expect(container.textContent).toContain('Changer de langue');
 });
 test('messages has current-page state and capped unread badge; play choices call real callbacks', () => {
   const quick=jest.fn(),invite=jest.fn(),join=jest.fn(); render(<NavBar active="messages" unreadCount={123} onNav={jest.fn()} onQuickMatch={quick} onInviteFriend={invite} onJoinFriend={join} />);

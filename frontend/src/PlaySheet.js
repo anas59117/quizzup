@@ -37,11 +37,11 @@ export function PlaySheet({ onClose, onDuel, onSolo, onInvite, onJoin, pending }
   };
   return createPortal(<div className="play-sheet-backdrop" onClick={event => { if (event.target === event.currentTarget) onClose(); }}>
     <section ref={panel} className="play-sheet" role="dialog" aria-modal="true" aria-labelledby={titleId} onKeyDown={keydown}>
-      <header><h2 id={titleId}>{t(‘readyToPlay’)}</h2><button type="button" onClick={onClose} aria-label={t(‘closeLabel’)}>×</button></header>
-      <button type="button" disabled={pending} onClick={onDuel}><strong>{t(‘quickDuel’)}</strong><small>{t(‘findOpponent’)}</small><span aria-hidden="true">→</span></button>
-      <button type="button" disabled={pending} onClick={onSolo}><strong>Solo</strong><small>{t(‘playOwnPace’)}</small><span aria-hidden="true">→</span></button>
-      <button type="button" disabled={pending} onClick={onInvite}><strong>{t(‘inviteFriend’)}</strong><small>{t(‘createPrivateGame’)}</small><span aria-hidden="true">→</span></button>
-      <button type="button" disabled={pending} onClick={onJoin}><strong>{t(‘haveFriendCode’)}</strong><small>{t(‘joinGameLabel’)}</small><span aria-hidden="true">→</span></button>
+      <header><h2 id={titleId}>{t('readyToPlay')}</h2><button type="button" onClick={onClose} aria-label={t('closeLabel')}>×</button></header>
+      <button type="button" disabled={pending} onClick={onDuel}><strong>{t('quickDuel')}</strong><small>{t('findOpponent')}</small><span aria-hidden="true">→</span></button>
+      <button type="button" disabled={pending} onClick={onSolo}><strong>Solo</strong><small>{t('playOwnPace')}</small><span aria-hidden="true">→</span></button>
+      <button type="button" disabled={pending} onClick={onInvite}><strong>{t('inviteFriend')}</strong><small>{t('createPrivateGame')}</small><span aria-hidden="true">→</span></button>
+      <button type="button" disabled={pending} onClick={onJoin}><strong>{t('haveFriendCode')}</strong><small>{t('joinGameLabel')}</small><span aria-hidden="true">→</span></button>
     </section>
   </div>, document.body);
 }
