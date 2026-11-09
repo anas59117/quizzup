@@ -24,12 +24,20 @@ struct ContentView: View {
 
 struct ErrorView: View {
     @EnvironmentObject var game: GameSocket
+    @EnvironmentObject var auth: AuthManager
     var body: some View {
         VStack(spacing: 16) {
             Text(game.t("connectionLost")).font(.title2.bold())
             Text(game.socialError ?? game.t("serverUnreachable")).foregroundColor(.white).multilineTextAlignment(.center)
             Button(game.t("retry")) { game.retryConnection() }
                 .buttonStyle(PrimaryButtonStyle())
+            if game.openingProfile || game.needsNickname {
+                Button(game.t("authSwitchAccount")) {
+                    auth.signOut()
+                    game.resetForSignOut()
+                }
+                .frame(minHeight: 44)
+            }
         }
         .padding()
     }
