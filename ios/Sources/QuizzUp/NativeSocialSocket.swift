@@ -15,7 +15,10 @@ extension GameSocket {
             if let raw = object["profile"] as? [String: Any] {
                 name = raw["name"] as? String ?? name; avatar = raw["avatar"] as? String ?? avatar
                 persistIdentity(); profileSaving = false
-                if stage == .join { stage = .home }
+                if stage == .join {
+                    if let clientId { UserDefaults.standard.set(true, forKey: "quizzup.profileConfirmed.\(clientId)") }
+                    stage = .home
+                }
             }
         case "profile_update_failed": profileSaving = false; socialError = t("serverUnreachable")
         case "friends_list": friends = decode(object["friends"], as: [NativeFriend].self) ?? []

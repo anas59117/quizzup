@@ -16,8 +16,14 @@ enum StoreCaptureConfiguration { static let enabled = true }
             precondition(condition, message)
             print("PASS " + message)
         }
+        let auth = AuthManager()
+        game.identify(idToken: "test-token", authManager: auth)
+        try receive(["type":"identified", "profile":["id":"new-player", "name":"Player1234", "avatar":"robot"]])
+        check(game.stage == .join && game.name.isEmpty, "New players choose a name instead of keeping the temporary name")
+        game.resetForSignOut()
+        game.identify(idToken: "test-token", authManager: auth)
         try receive(["type":"identified", "profile":["id":"alice", "name":"Alice", "avatar":"fox"]])
-        check(game.clientId == "alice" && game.name == "Alice" && game.avatar == "fox", "Canonical server identity")
+        check(game.stage == .home && game.clientId == "alice" && game.name == "Alice" && game.avatar == "fox", "Returning players go straight to home with their canonical identity")
         try receive(["type":"game_start", "totalRounds":6, "opponents":[["id":"old", "clientId":"bob", "name":"Bob", "avatar":"owl"]]])
         check(game.opponents.count == 1 && game.opponents[0].score == 0, "Game start without score defaults")
         game.isStarting = true
@@ -54,6 +60,6 @@ enum StoreCaptureConfiguration { static let enabled = true }
         game.conversationOpen = true; game.activeConversation = "bob"
         game.resetForSignOut()
         check(game.stage == .authGate && game.clientId == nil && game.messages.isEmpty && game.activeConversation == nil && !game.conversationOpen, "Sign out clears account and conversation state")
-        print("Verified 14 native receiver contracts with no live network or identity provider")
+        print("Verified 15 native receiver contracts with no live network or identity provider")
     }
 }

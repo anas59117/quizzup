@@ -14,7 +14,7 @@ struct JoinView: View {
                         .accessibilityLabel(fr ? "Changer la langue" : "Change language")
                 }.padding(.bottom, 32)
                 NativePlayerPortrait(avatar: game.avatar, size: 88)
-                Text(fr ? "Prêt à faire ton retour ?" : "Ready for your comeback?")
+                Text(game.t("usernamePlaceholder"))
                     .font(.system(size: 30, weight: .bold)).multilineTextAlignment(.center)
                 Text(fr ? "Choisis le nom que tes adversaires verront." : "Choose the name your opponents will see.")
                     .font(.body).multilineTextAlignment(.center)

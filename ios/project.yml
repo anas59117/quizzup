@@ -9,10 +9,10 @@ packages:
   # Firebase here is purely the identity provider shared with the web app.
   FirebaseSDK:
     url: https://github.com/firebase/firebase-ios-sdk
-    from: 10.29.0
+    from: 11.15.0
   GoogleSignIn:
     url: https://github.com/google/GoogleSignIn-iOS
-    from: 7.1.0
+    from: 8.0.0
 targets:
   QuizzUp:
     type: application
@@ -47,6 +47,8 @@ targets:
       properties:
         com.apple.developer.applesignin:
           - Default
+        com.apple.developer.associated-domains:
+          - applinks:quizzup-ae633.firebaseapp.com
     settings:
       configs:
         Debug:

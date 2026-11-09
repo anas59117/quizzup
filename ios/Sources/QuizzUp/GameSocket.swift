@@ -31,6 +31,7 @@ final class GameSocket: ObservableObject {
     }
 
     @Published var stage: Stage = .authGate
+    @Published private(set) var openingProfile = false
     @Published var name: String = UserDefaults.standard.string(forKey: "quizzup.name") ?? ""
     @Published var avatar: String = UserDefaults.standard.string(forKey: "quizzup.avatar") ?? "robot"
     @Published var soloMode = false
@@ -43,8 +44,10 @@ final class GameSocket: ObservableObject {
     @Published var lang: String = L10n.detectDefaultLang()
 
     func t(_ key: String, _ vars: [String: String] = [:]) -> String { L10n.t(key, lang: lang, vars) }
-    func toggleLang() {
-        lang = lang == "fr" ? "en" : "fr"
+    func toggleLang() { setLanguage(lang == "fr" ? "en" : "fr") }
+
+    func setLanguage(_ language: String) {
+        lang = language
         UserDefaults.standard.set(lang, forKey: "quizzup.lang")
     }
 
@@ -116,7 +119,10 @@ final class GameSocket: ObservableObject {
         task = t
         t.resume()
         listen()
-        if let idToken { send(["type": "identify", "idToken": idToken, "name": name, "avatar": avatar, "presentationVersion": 1]) }
+        if let idToken {
+            send(["type": "identify", "idToken": idToken, "name": openingProfile ? "" : name,
+                  "avatar": openingProfile ? "robot" : avatar, "presentationVersion": 1])
+        }
     }
 
     /// Opens a socket (if needed) with an up-to-date ID token, then sends
@@ -146,6 +152,7 @@ final class GameSocket: ObservableObject {
     func identify(idToken: String, authManager: AuthManager) {
         self.idToken = idToken
         self.authManager = authManager
+        openingProfile = true
         ensureConnected()
     }
 
@@ -196,6 +203,20 @@ final class GameSocket: ObservableObject {
                 if let value = profile["name"] as? String { name = value }
                 if let value = profile["avatar"] as? String { avatar = value }
                 persistIdentity()
+            }
+            if openingProfile {
+                openingProfile = false
+                if stage == .authGate {
+                    let confirmed = clientId.map { UserDefaults.standard.bool(forKey: "quizzup.profileConfirmed.\($0)") } ?? false
+                    // The backend gives newly identified sockets a temporary PlayerNNNN name.
+                    let generatedName = name.range(of: #"^Player[1-9][0-9]{3}$"#, options: .regularExpression) != nil
+                    if confirmed || (clientId != nil && !name.isEmpty && !generatedName) {
+                        stage = .home
+                    } else {
+                        name = ""
+                        stage = .join
+                    }
+                }
             }
             if obj["reconnected"] as? Bool == true {
                 isStarting = false
@@ -399,7 +420,14 @@ final class GameSocket: ObservableObject {
     }
     func cancelQueue() { if !cancelPending, send(["type": "cancel_queue"]) { cancelPending = true } }
     func requestRematch() { if !rematchWaiting, send(["type": "rematch"]) { rematchWaiting = true } }
-    func retryConnection() { stage = .home; requestProfile() }
+    func retryConnection() {
+        if openingProfile {
+            stage = .authGate
+        } else {
+            stage = .home
+            requestProfile()
+        }
+    }
 
     func decode<T: Decodable>(_ value: Any?, as type: T.Type) -> T? {
         guard let value, JSONSerialization.isValidJSONObject(value), let data = try? JSONSerialization.data(withJSONObject: value) else { return nil }
@@ -452,6 +480,8 @@ final class GameSocket: ObservableObject {
         disconnect()
         idToken = nil
         authManager = nil
+        openingProfile = false
+        name = ""; avatar = "robot"
         pendingAction = nil; clientId = nil; stats = nil
         activeConversation = nil; conversationOpen = false; lastSentMessageID = nil
         friends = []; friendRequests = []; conversations = []; messages = [:]

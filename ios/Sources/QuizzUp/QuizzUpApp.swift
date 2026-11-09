@@ -25,9 +25,11 @@ struct QuizzUpApp: App {
                 #if DEBUG && STORE_CAPTURE
                 .onAppear { StoreCaptureConfiguration.markReady() }
                 #endif
-                // Completes Google Sign-In's OAuth redirect back into the app.
+                // Route Google OAuth callbacks and Firebase email links.
                 .onOpenURL { url in
-                    GIDSignIn.sharedInstance.handle(url)
+                    if !GIDSignIn.sharedInstance.handle(url) {
+                        auth.receiveEmailLink(url)
+                    }
                 }
         }
     }

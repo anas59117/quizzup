@@ -1,116 +1,190 @@
 import SwiftUI
 
-/// Mandatory sign-in screen — nothing past this point (JoinView/Home/play)
-/// is reachable without a real account, per product decision. Both buttons
-/// go through AuthManager into the same Firebase project the web app uses.
 struct AuthGateView: View {
     @EnvironmentObject var game: GameSocket
     @EnvironmentObject var auth: AuthManager
-    // Only true while auth.authError came from completeSignInIfNeeded's own
-    // silent retry (an already-cached session whose token fetch failed) —
-    // never from a fresh, user-initiated sign-in attempt. Without this, a
-    // failed "switch account" tap could show Retry and, if tapped, silently
-    // resume the OLD cached session instead of the account the user just
-    // tried to sign into.
-    @State private var showAutoRetry = false
+    @State private var showEmail = false
+    @State private var connectingSession = false
+    @State private var sessionError = false
 
     var body: some View {
-        VStack(spacing: 20) {
-            HStack {
-                Spacer()
-                Button(game.lang.uppercased()) { game.toggleLang() }
-                    .font(.subheadline.bold()).frame(minWidth: 44, minHeight: 44)
-                    .accessibilityLabel(game.lang == "fr" ? "Changer la langue" : "Change language")
+        ViewThatFits(in: .vertical) {
+            VStack(spacing: 0) {
+                languageMenu
+                Spacer(minLength: 24)
+                welcome.padding(.top, 28)
+                Spacer(minLength: 36)
+                actions
             }
-            Spacer()
-            NativeBrandLogo().scaleEffect(1.3).padding(.vertical, 16)
-            Text(game.t("tagline")).foregroundColor(.white).multilineTextAlignment(.center)
-
-            Spacer()
-
-            if auth.isAuthenticating {
-                ProgressView().tint(Theme.text)
-            }
-
-            if let error = auth.authError {
-                Text(error).font(.subheadline).foregroundColor(.white).multilineTextAlignment(.center)
-                // Covers the already-signed-in-at-launch case: if the one-shot
-                // onAppear token fetch fails, onChange(of: uid) never fires
-                // again (the uid isn't changing), so this is the only way
-                // back without force-quitting the app.
-                if showAutoRetry {
-                    Button(game.t("retry")) { completeSignInIfNeeded() }
-                        .font(.caption.bold())
-                        .foregroundColor(Theme.gold).frame(minHeight: 44)
+            ScrollView {
+                VStack(spacing: 26) {
+                    languageMenu
+                    welcome
+                    actions
                 }
+            }
+        }
+        .foregroundColor(.white)
+        .padding(.horizontal, 24)
+        .padding(.bottom, 20)
+        .frame(maxWidth: 430)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Theme.brand.ignoresSafeArea())
+        .sheet(isPresented: $showEmail) { EmailSignInView() }
+        .onAppear {
+            showEmail = auth.emailLink != nil
+            completeSignInIfNeeded()
+        }
+        .onChange(of: auth.emailLink) { link in
+            if link != nil { showEmail = true }
+        }
+        .onChange(of: auth.user?.uid) { uid in
+            if uid != nil {
+                showEmail = false
+                completeSignInIfNeeded()
+            }
+        }
+    }
+
+    private var languageMenu: some View {
+        Menu {
+            Button("Français") { game.setLanguage("fr") }
+            Button("English") { game.setLanguage("en") }
+        } label: {
+            Label(game.lang.uppercased(), systemImage: "chevron.down")
+                .labelStyle(.titleAndIcon)
+                .font(.subheadline.bold())
+                .frame(minWidth: 55, minHeight: 44)
+        }
+        .accessibilityLabel(game.t("languageMenu"))
+        .frame(maxWidth: .infinity, alignment: .trailing)
+    }
+
+    private var welcome: some View {
+        VStack(spacing: 13) {
+            NativeBrandLogo(scale: 1.43)
+                .accessibilityAddTraits(.isHeader)
+            Text(game.t("openingTagline"))
+                .font(.body)
+                .multilineTextAlignment(.center)
+        }
+        .frame(maxWidth: .infinity)
+    }
+
+    private var actions: some View {
+        VStack(spacing: 10) {
+            if connectingSession || game.openingProfile {
+                HStack(spacing: 10) {
+                    ProgressView().tint(.white)
+                    Text(game.t("signInLoading"))
+                }
+                .font(.subheadline)
+            }
+            if sessionError {
+                VStack(spacing: 0) {
+                    Text(game.t("serverUnreachable")).font(.subheadline)
+                    Button(game.t("retry"), action: completeSignInIfNeeded)
+                        .frame(minHeight: 44)
+                }
+                .multilineTextAlignment(.center)
+            }
+
+            providerButton(.apple, title: "signInApple", error: "appleSignInFailed") {
+                Image(systemName: "apple.logo").accessibilityHidden(true)
+            }
+            providerButton(.google, title: "signInGoogle", error: "googleSignInFailed") {
+                Image("GoogleSignInMark")
+                    .resizable().renderingMode(.original)
+                    .frame(width: 18, height: 18)
+                    .accessibilityHidden(true)
             }
 
             Button {
-                showAutoRetry = false
-                auth.signInWithApple()
+                showEmail = true
             } label: {
-                HStack {
-                    Image(systemName: "apple.logo")
-                    Text(game.t("signInApple"))
-                }
-                .font(.headline)
-                .foregroundColor(.black)
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(Color.white)
-                .cornerRadius(12)
+                Label(game.t("signInEmail"), systemImage: "envelope")
+                    .font(.subheadline.weight(.semibold))
+                    .padding(.horizontal, 12)
+                    .frame(minHeight: 44)
             }
-            .disabled(auth.isAuthenticating)
+            .disabled(auth.isAuthenticating || connectingSession || game.openingProfile)
 
+            if let url = URL(string: "https://\(GameSocket.frontendHost)/privacy.html") {
+                Link(destination: url) {
+                    Text(game.t("authPrivacyPolicy"))
+                        .font(.footnote)
+                        .underline()
+                        .padding(.horizontal, 10)
+                        .frame(minHeight: 44)
+                }
+                .padding(.top, 5)
+            }
+        }
+        .buttonStyle(.plain)
+    }
+
+    private func providerButton<Icon: View>(
+        _ provider: AuthManager.Provider,
+        title: String,
+        error: String,
+        @ViewBuilder icon: () -> Icon
+    ) -> some View {
+        VStack(spacing: 5) {
             Button {
-                showAutoRetry = false
-                auth.signInWithGoogle()
+                sessionError = false
+                auth.signIn(with: provider)
             } label: {
-                HStack {
-                    Image(systemName: "g.circle.fill")
-                    Text(game.t("signInGoogle"))
+                HStack(spacing: 10) {
+                    if auth.activeProvider == provider {
+                        ProgressView().tint(Theme.ink)
+                        Text(game.t("signInLoading"))
+                    } else {
+                        icon()
+                        Text(game.t(title))
+                    }
                 }
                 .font(.headline)
                 .foregroundColor(Theme.ink)
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(Theme.paper)
-                .cornerRadius(12)
+                .frame(maxWidth: .infinity, minHeight: 53)
+                .padding(.horizontal, 12)
+                .background(.white, in: RoundedRectangle(cornerRadius: 12))
             }
-            .disabled(auth.isAuthenticating)
+            .disabled(auth.isAuthenticating || connectingSession || game.openingProfile)
 
-            if let url = URL(string: "https://\(GameSocket.frontendHost)/privacy.html") {
-                Link(game.t("privacyPolicy"), destination: url)
-                    .font(.caption)
-                    .foregroundColor(.white)
+            if auth.failedProvider == provider {
+                HStack {
+                    Text(game.t(error)).font(.footnote)
+                    Spacer()
+                    Button {
+                        auth.signIn(with: provider)
+                    } label: {
+                        Text(game.t("retry")).font(.footnote.bold()).underline()
+                            .frame(minHeight: 44)
+                    }
+                    .disabled(auth.isAuthenticating || connectingSession || game.openingProfile)
+                }
+                .padding(.horizontal, 10)
+                .background(.black.opacity(0.24), in: RoundedRectangle(cornerRadius: 9))
             }
-            Spacer()
-        }
-        .foregroundColor(.white).padding(24).frame(maxWidth: 520).frame(maxWidth: .infinity)
-        .background(Theme.brand.ignoresSafeArea())
-        // onAppear covers a user whose Firebase session is already
-        // persisted at launch (AuthManager.init() sets `user` synchronously,
-        // so onChange below never fires for them); onChange covers a fresh
-        // sign-in completing while this view is already on screen.
-        .onAppear { completeSignInIfNeeded() }
-        .onChange(of: auth.user?.uid) { newUid in
-            guard newUid != nil else { return }
-            completeSignInIfNeeded()
         }
     }
 
     private func completeSignInIfNeeded() {
-        guard let uid = auth.user?.uid else { return }
+        guard let uid = auth.user?.uid, !connectingSession else { return }
+        connectingSession = true
+        sessionError = false
         Task {
             let token = await auth.getIdToken()
-            guard auth.user?.uid == uid else { return }
-            guard let idToken = token else {
-                auth.authError = game.t("serverUnreachable")
-                showAutoRetry = true
+            connectingSession = false
+            guard auth.user?.uid == uid else {
+                completeSignInIfNeeded()
                 return
             }
-            game.identify(idToken: idToken, authManager: auth)
-            game.stage = .join
+            guard let token else {
+                sessionError = true
+                return
+            }
+            game.identify(idToken: token, authManager: auth)
         }
     }
 }

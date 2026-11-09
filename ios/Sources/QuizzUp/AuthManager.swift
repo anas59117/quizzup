@@ -9,13 +9,23 @@ import GoogleSignIn
 
 /// Mandatory sign-in gate for the iOS app (the web app allows anonymous
 /// play; this app requires a real account, per product decision — see
-/// AuthGateView). Both providers land in the same Firebase project as the
+/// AuthGateView). Sign-in uses the same Firebase project as the
 /// web app, so a player's uid/stats/friends carry over if they play both.
 @MainActor
 final class AuthManager: NSObject, ObservableObject {
     @Published var user: FirebaseAuth.User?
-    @Published var isAuthenticating = false
-    @Published var authError: String?
+    enum Provider: Equatable { case apple, google }
+
+    private static let emailLinkHost = "quizzup-ae633.firebaseapp.com"
+    private static let pendingEmailKey = "quizzup.pendingSignInEmail"
+
+    @Published private(set) var activeProvider: Provider?
+    @Published private(set) var failedProvider: Provider?
+    @Published private(set) var emailLink: String?
+    @Published private(set) var emailBusy = false
+
+    var isAuthenticating: Bool { activeProvider != nil || emailBusy }
+    var pendingEmail: String { UserDefaults.standard.string(forKey: Self.pendingEmailKey) ?? "" }
 
     override init() {
         super.init()
@@ -34,7 +44,10 @@ final class AuthManager: NSObject, ObservableObject {
     func signOut() {
         guard !StoreCaptureConfiguration.enabled else { return }
         try? Auth.auth().signOut()
-        try? GIDSignIn.sharedInstance.signOut()
+        GIDSignIn.sharedInstance.signOut()
+        failedProvider = nil
+        discardEmailLink()
+        UserDefaults.standard.removeObject(forKey: Self.pendingEmailKey)
         user = nil
     }
 
@@ -77,6 +90,7 @@ final class AuthManager: NSObject, ObservableObject {
         UserDefaults.standard.removeObject(forKey: "quizzup.name")
         UserDefaults.standard.removeObject(forKey: "quizzup.avatar")
         UserDefaults.standard.removeObject(forKey: "quizzup.lang")
+        UserDefaults.standard.removeObject(forKey: "quizzup.profileConfirmed.\(firebaseUser.uid)")
         user = nil
         isDeletingAccount = false
     }
@@ -105,8 +119,17 @@ final class AuthManager: NSObject, ObservableObject {
 
     private var currentAppleNonce: String?
 
-    func signInWithApple() {
-        guard !StoreCaptureConfiguration.enabled else { return }
+    func signIn(with provider: Provider) {
+        guard !StoreCaptureConfiguration.enabled, !isAuthenticating else { return }
+        failedProvider = nil
+        activeProvider = provider
+        switch provider {
+        case .apple: signInWithApple()
+        case .google: signInWithGoogle()
+        }
+    }
+
+    private func signInWithApple() {
         let nonce = Self.randomNonceString()
         currentAppleNonce = nonce
         let request = ASAuthorizationAppleIDProvider().createRequest()
@@ -116,53 +139,98 @@ final class AuthManager: NSObject, ObservableObject {
         let controller = ASAuthorizationController(authorizationRequests: [request])
         controller.delegate = self
         controller.presentationContextProvider = self
-        isAuthenticating = true
-        authError = nil
         controller.performRequests()
     }
 
     // MARK: - Google Sign-In
 
-    func signInWithGoogle() {
-        guard !StoreCaptureConfiguration.enabled else { return }
-        guard let clientID = FirebaseApp.app()?.options.clientID else {
-            authError = "Missing GoogleService-Info.plist"
-            return
-        }
-        guard let rootVC = Self.activeKeyWindow()?.rootViewController else {
-            authError = localizedSignInFailed
+    private func signInWithGoogle() {
+        guard let clientID = FirebaseApp.app()?.options.clientID,
+              let rootVC = Self.activeKeyWindow()?.rootViewController else {
+            finishProvider(.google, failed: true)
             return
         }
 
-        isAuthenticating = true
-        authError = nil
         GIDSignIn.sharedInstance.configuration = GIDConfiguration(clientID: clientID)
         GIDSignIn.sharedInstance.signIn(withPresenting: rootVC) { [weak self] result, error in
             Task { @MainActor in
                 guard let self else { return }
-                self.isAuthenticating = false
                 if let error {
-                    self.authError = error.localizedDescription
+                    self.finishProvider(.google, failed: (error as? GIDSignInError)?.code != .canceled)
                     return
                 }
                 guard let googleUser = result?.user, let idToken = googleUser.idToken?.tokenString else {
-                    self.authError = self.localizedSignInFailed
+                    self.finishProvider(.google, failed: true)
                     return
                 }
                 let credential = GoogleAuthProvider.credential(
                     withIDToken: idToken, accessToken: googleUser.accessToken.tokenString
                 )
-                await self.finishSignIn(with: credential)
+                await self.finishSignIn(with: credential, provider: .google)
             }
         }
     }
 
-    private func finishSignIn(with credential: AuthCredential) async {
+    private func finishProvider(_ provider: Provider, failed: Bool) {
+        activeProvider = nil
+        if failed { failedProvider = provider }
+    }
+
+    private func finishSignIn(with credential: AuthCredential, provider: Provider) async {
         do {
             let result = try await Auth.auth().signIn(with: credential)
+            finishProvider(provider, failed: false)
+            discardEmailLink()
             user = result.user
         } catch {
-            authError = error.localizedDescription
+            finishProvider(provider, failed: true)
+        }
+    }
+
+    func sendEmailLink(to email: String, language: String) async -> Bool {
+        guard !StoreCaptureConfiguration.enabled, !isAuthenticating,
+              let bundleID = Bundle.main.bundleIdentifier,
+              let continueURL = URL(string: "https://\(Self.emailLinkHost)") else { return false }
+        let settings = ActionCodeSettings()
+        settings.url = continueURL
+        settings.handleCodeInApp = true
+        settings.setIOSBundleID(bundleID)
+
+        emailBusy = true
+        defer { emailBusy = false }
+        let auth = Auth.auth()
+        auth.languageCode = language
+        do {
+            try await auth.sendSignInLink(toEmail: email, actionCodeSettings: settings)
+            UserDefaults.standard.set(email, forKey: Self.pendingEmailKey)
+            return true
+        } catch {
+            return false
+        }
+    }
+
+    func receiveEmailLink(_ url: URL) {
+        guard !StoreCaptureConfiguration.enabled, user == nil,
+              url.scheme == "https", url.host == Self.emailLinkHost,
+              Auth.auth().isSignIn(withEmailLink: url.absoluteString) else { return }
+        emailLink = url.absoluteString
+    }
+
+    func discardEmailLink() { emailLink = nil }
+
+    func signInWithEmail(_ email: String) async -> Bool {
+        guard !StoreCaptureConfiguration.enabled, !isAuthenticating,
+              user == nil, let emailLink else { return false }
+        emailBusy = true
+        defer { emailBusy = false }
+        do {
+            let result = try await Auth.auth().signIn(withEmail: email, link: emailLink)
+            discardEmailLink()
+            UserDefaults.standard.removeObject(forKey: Self.pendingEmailKey)
+            user = result.user
+            return true
+        } catch {
+            return false
         }
     }
 
@@ -194,11 +262,6 @@ final class AuthManager: NSObject, ObservableObject {
             .first
     }
 
-    // AuthManager has no GameSocket reference for its `lang`/`t()`, but both
-    // read the same "quizzup.lang" UserDefaults key, so this stays in sync.
-    fileprivate var localizedSignInFailed: String {
-        L10n.t("signInFailed", lang: L10n.detectDefaultLang())
-    }
 }
 
 extension AuthManager: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
@@ -208,29 +271,26 @@ extension AuthManager: ASAuthorizationControllerDelegate, ASAuthorizationControl
 
     nonisolated func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         Task { @MainActor in
-            isAuthenticating = false
+            let nonce = currentAppleNonce
+            currentAppleNonce = nil
             guard let credential = authorization.credential as? ASAuthorizationAppleIDCredential,
-                  let nonce = currentAppleNonce,
+                  let nonce,
                   let tokenData = credential.identityToken,
                   let idTokenString = String(data: tokenData, encoding: .utf8) else {
-                authError = localizedSignInFailed
+                finishProvider(.apple, failed: true)
                 return
             }
-            let firebaseCredential = OAuthProvider.credential(
-                withProviderID: "apple.com", idToken: idTokenString, rawNonce: nonce
+            let firebaseCredential = OAuthProvider.appleCredential(
+                withIDToken: idTokenString, rawNonce: nonce, fullName: credential.fullName
             )
-            await finishSignIn(with: firebaseCredential)
+            await finishSignIn(with: firebaseCredential, provider: .apple)
         }
     }
 
     nonisolated func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         Task { @MainActor in
-            isAuthenticating = false
-            // A user tapping "Cancel" on the system sheet also lands here —
-            // don't surface that as a scary error message.
-            if (error as? ASAuthorizationError)?.code != .canceled {
-                authError = error.localizedDescription
-            }
+            currentAppleNonce = nil
+            finishProvider(.apple, failed: (error as? ASAuthorizationError)?.code != .canceled)
         }
     }
 }
