@@ -32,6 +32,7 @@ final class GameSocket: ObservableObject {
 
     @Published var stage: Stage = .authGate
     @Published private(set) var openingProfile = false
+    var needsNickname = false
     @Published var name: String = UserDefaults.standard.string(forKey: "quizzup.name") ?? ""
     @Published var avatar: String = UserDefaults.standard.string(forKey: "quizzup.avatar") ?? "robot"
     @Published var soloMode = false
@@ -210,12 +211,9 @@ final class GameSocket: ObservableObject {
                     let confirmed = clientId.map { UserDefaults.standard.bool(forKey: "quizzup.profileConfirmed.\($0)") } ?? false
                     // The backend gives newly identified sockets a temporary PlayerNNNN name.
                     let generatedName = name.range(of: #"^Player[1-9][0-9]{3}$"#, options: .regularExpression) != nil
-                    if confirmed || (clientId != nil && !name.isEmpty && !generatedName) {
-                        stage = .home
-                    } else {
-                        name = ""
-                        stage = .join
-                    }
+                    needsNickname = !(confirmed || (clientId != nil && !name.isEmpty && !generatedName))
+                    if needsNickname { name = "" }
+                    stage = needsNickname ? .join : .home
                 }
             }
             if obj["reconnected"] as? Bool == true {
@@ -325,6 +323,7 @@ final class GameSocket: ObservableObject {
             stage = .error
         case "error":
             isStarting = false
+            if openingProfile { disconnect() }
             stage = .error
         default:
             break
@@ -421,7 +420,8 @@ final class GameSocket: ObservableObject {
     func cancelQueue() { if !cancelPending, send(["type": "cancel_queue"]) { cancelPending = true } }
     func requestRematch() { if !rematchWaiting, send(["type": "rematch"]) { rematchWaiting = true } }
     func retryConnection() {
-        if openingProfile {
+        if openingProfile || needsNickname {
+            disconnect()
             stage = .authGate
         } else {
             stage = .home
@@ -481,6 +481,7 @@ final class GameSocket: ObservableObject {
         idToken = nil
         authManager = nil
         openingProfile = false
+        needsNickname = false
         name = ""; avatar = "robot"
         pendingAction = nil; clientId = nil; stats = nil
         activeConversation = nil; conversationOpen = false; lastSentMessageID = nil

@@ -1,4 +1,5 @@
 import SwiftUI
+import AuthenticationServices
 
 struct AuthGateView: View {
     @EnvironmentObject var game: GameSocket
@@ -6,6 +7,8 @@ struct AuthGateView: View {
     @State private var showEmail = false
     @State private var connectingSession = false
     @State private var sessionError = false
+
+    private var providerDisabled: Bool { auth.user != nil || auth.isAuthenticating || connectingSession || game.openingProfile }
 
     var body: some View {
         ViewThatFits(in: .vertical) {
@@ -83,15 +86,21 @@ struct AuthGateView: View {
             if sessionError {
                 VStack(spacing: 0) {
                     Text(game.t("serverUnreachable")).font(.subheadline)
-                    Button(game.t("retry"), action: completeSignInIfNeeded)
+                    HStack(spacing: 16) {
+                        Button(game.t("retry"), action: completeSignInIfNeeded)
+                            .frame(minHeight: 44)
+                        Button(game.t("authSwitchAccount")) {
+                            auth.signOut()
+                            game.resetForSignOut()
+                            sessionError = false
+                        }
                         .frame(minHeight: 44)
+                    }
                 }
                 .multilineTextAlignment(.center)
             }
 
-            providerButton(.apple, title: "signInApple", error: "appleSignInFailed") {
-                Image(systemName: "apple.logo").accessibilityHidden(true)
-            }
+            appleButton
             providerButton(.google, title: "signInGoogle", error: "googleSignInFailed") {
                 Image("GoogleSignInMark")
                     .resizable().renderingMode(.original)
@@ -107,7 +116,7 @@ struct AuthGateView: View {
                     .padding(.horizontal, 12)
                     .frame(minHeight: 44)
             }
-            .disabled(auth.isAuthenticating || connectingSession || game.openingProfile)
+            .disabled(providerDisabled)
 
             if let url = URL(string: "https://\(GameSocket.frontendHost)/privacy.html") {
                 Link(destination: url) {
@@ -123,6 +132,29 @@ struct AuthGateView: View {
         .buttonStyle(.plain)
     }
 
+    private var appleButton: some View {
+        VStack(spacing: 5) {
+            SignInWithAppleButton(.continue) { request in
+                auth.prepareAppleSignIn(request)
+            } onCompletion: { result in
+                auth.completeAppleSignIn(result)
+            }
+            .signInWithAppleButtonStyle(.white)
+            .frame(height: 53)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .environment(\.locale, Locale(identifier: game.lang))
+            .disabled(providerDisabled)
+
+            if auth.failedProvider == .apple {
+                Text(game.t("appleSignInFailed"))
+                    .font(.footnote)
+                    .frame(maxWidth: .infinity, minHeight: 44)
+                    .padding(.horizontal, 10)
+                    .background(.black.opacity(0.24), in: RoundedRectangle(cornerRadius: 9))
+            }
+        }
+    }
+
     private func providerButton<Icon: View>(
         _ provider: AuthManager.Provider,
         title: String,
@@ -132,7 +164,7 @@ struct AuthGateView: View {
         VStack(spacing: 5) {
             Button {
                 sessionError = false
-                auth.signIn(with: provider)
+                auth.signInWithGoogle()
             } label: {
                 HStack(spacing: 10) {
                     if auth.activeProvider == provider {
@@ -149,19 +181,19 @@ struct AuthGateView: View {
                 .padding(.horizontal, 12)
                 .background(.white, in: RoundedRectangle(cornerRadius: 12))
             }
-            .disabled(auth.isAuthenticating || connectingSession || game.openingProfile)
+            .disabled(providerDisabled)
 
             if auth.failedProvider == provider {
                 HStack {
                     Text(game.t(error)).font(.footnote)
                     Spacer()
                     Button {
-                        auth.signIn(with: provider)
+                        auth.signInWithGoogle()
                     } label: {
                         Text(game.t("retry")).font(.footnote.bold()).underline()
                             .frame(minHeight: 44)
                     }
-                    .disabled(auth.isAuthenticating || connectingSession || game.openingProfile)
+                    .disabled(providerDisabled)
                 }
                 .padding(.horizontal, 10)
                 .background(.black.opacity(0.24), in: RoundedRectangle(cornerRadius: 9))

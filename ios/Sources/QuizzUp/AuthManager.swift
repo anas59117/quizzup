@@ -118,32 +118,43 @@ final class AuthManager: NSObject, ObservableObject {
 
     private var currentAppleNonce: String?
 
-    func signIn(with provider: Provider) {
-        guard !StoreCaptureConfiguration.enabled, !isAuthenticating else { return }
+    func prepareAppleSignIn(_ request: ASAuthorizationAppleIDRequest) {
+        guard !StoreCaptureConfiguration.enabled, !isAuthenticating, user == nil else { return }
         failedProvider = nil
-        activeProvider = provider
-        switch provider {
-        case .apple: signInWithApple()
-        case .google: signInWithGoogle()
-        }
-    }
-
-    private func signInWithApple() {
+        activeProvider = .apple
         let nonce = Self.randomNonceString()
         currentAppleNonce = nonce
-        let request = ASAuthorizationAppleIDProvider().createRequest()
         request.requestedScopes = [.fullName, .email]
         request.nonce = Self.sha256(nonce)
+    }
 
-        let controller = ASAuthorizationController(authorizationRequests: [request])
-        controller.delegate = self
-        controller.presentationContextProvider = self
-        controller.performRequests()
+    func completeAppleSignIn(_ result: Result<ASAuthorization, Error>) {
+        guard activeProvider == .apple else { return }
+        let nonce = currentAppleNonce
+        currentAppleNonce = nil
+        switch result {
+        case .success(let authorization):
+            guard let credential = authorization.credential as? ASAuthorizationAppleIDCredential,
+                  let nonce, let tokenData = credential.identityToken,
+                  let token = String(data: tokenData, encoding: .utf8) else {
+                finishProvider(.apple, failed: true)
+                return
+            }
+            let firebaseCredential = OAuthProvider.appleCredential(
+                withIDToken: token, rawNonce: nonce, fullName: credential.fullName
+            )
+            Task { await finishSignIn(with: firebaseCredential, provider: .apple) }
+        case .failure(let error):
+            finishProvider(.apple, failed: (error as? ASAuthorizationError)?.code != .canceled)
+        }
     }
 
     // MARK: - Google Sign-In
 
-    private func signInWithGoogle() {
+    func signInWithGoogle() {
+        guard !StoreCaptureConfiguration.enabled, !isAuthenticating, user == nil else { return }
+        failedProvider = nil
+        activeProvider = .google
         guard let clientID = FirebaseApp.app()?.options.clientID,
               let rootVC = Self.activeKeyWindow()?.rootViewController else {
             finishProvider(.google, failed: true)
@@ -187,7 +198,7 @@ final class AuthManager: NSObject, ObservableObject {
     }
 
     func sendEmailLink(to email: String, language: String) async -> Bool {
-        guard !StoreCaptureConfiguration.enabled, !isAuthenticating,
+        guard !StoreCaptureConfiguration.enabled, !isAuthenticating, user == nil,
               let bundleID = Bundle.main.bundleIdentifier,
               let continueURL = URL(string: "https://\(NativeEmailSignInLink.host)") else { return false }
         let settings = ActionCodeSettings()
@@ -255,41 +266,10 @@ final class AuthManager: NSObject, ObservableObject {
         SHA256.hash(data: Data(input.utf8)).map { String(format: "%02x", $0) }.joined()
     }
 
-    fileprivate static func activeKeyWindow() -> UIWindow? {
+    private static func activeKeyWindow() -> UIWindow? {
         UIApplication.shared.connectedScenes
             .compactMap { ($0 as? UIWindowScene)?.keyWindow }
             .first
     }
 
-}
-
-extension AuthManager: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
-    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-        Self.activeKeyWindow() ?? ASPresentationAnchor()
-    }
-
-    nonisolated func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-        Task { @MainActor in
-            let nonce = currentAppleNonce
-            currentAppleNonce = nil
-            guard let credential = authorization.credential as? ASAuthorizationAppleIDCredential,
-                  let nonce,
-                  let tokenData = credential.identityToken,
-                  let idTokenString = String(data: tokenData, encoding: .utf8) else {
-                finishProvider(.apple, failed: true)
-                return
-            }
-            let firebaseCredential = OAuthProvider.appleCredential(
-                withIDToken: idTokenString, rawNonce: nonce, fullName: credential.fullName
-            )
-            await finishSignIn(with: firebaseCredential, provider: .apple)
-        }
-    }
-
-    nonisolated func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        Task { @MainActor in
-            currentAppleNonce = nil
-            finishProvider(.apple, failed: (error as? ASAuthorizationError)?.code != .canceled)
-        }
-    }
 }

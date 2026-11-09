@@ -17,6 +17,7 @@ extension GameSocket {
                 persistIdentity(); profileSaving = false
                 if stage == .join {
                     if let clientId { UserDefaults.standard.set(true, forKey: "quizzup.profileConfirmed.\(clientId)") }
+                    needsNickname = false
                     stage = .home
                 }
             }
