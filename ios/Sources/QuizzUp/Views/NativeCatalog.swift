@@ -27,6 +27,15 @@ enum NativeCatalog {
               let result = try? JSONDecoder().decode([String: NativeCatalogEntry].self, from: data) else { return [:] }
         return result
     }()
+    private static let popularityRanks: [String: Int] = {
+        guard let url = Bundle.main.url(forResource: "topicPopularity", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let order = try? JSONDecoder().decode([String: [String]].self, from: data) else { return [:] }
+        let ranks = order.values.flatMap { keys in
+            keys.enumerated().map { (keyIndex, key) in (key, keyIndex) }
+        }
+        return Dictionary(ranks, uniquingKeysWith: min)
+    }()
     static let families: [NativeTopicFamily] = [
         .init(id: "sport", french: "Sport", english: "Sport", symbol: "figure.run"),
         .init(id: "football", french: "Football", english: "Football", symbol: "soccerball"),
@@ -39,6 +48,11 @@ enum NativeCatalog {
         .init(id: "culture", french: "Culture générale", english: "General knowledge", symbol: "globe.europe.africa")
     ]
     static func entry(for key: String) -> NativeCatalogEntry? { entries[key] }
+    static func orderedByPopularity(_ categories: [Category]) -> [Category] {
+        categories.sorted { left, right in
+            (popularityRanks[left.key] ?? Int.max) < (popularityRanks[right.key] ?? Int.max)
+        }
+    }
     static func title(for category: Category, lang: String) -> String {
         guard let entry = entries[category.key] else { return category.label }
         if lang != "fr", let english = entry.englishLabel, !english.isEmpty { return english }

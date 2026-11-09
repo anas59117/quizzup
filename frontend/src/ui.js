@@ -3,6 +3,7 @@ import React, { useState, useEffect, useCallback, useRef, useId, memo } from 're
 import { useI18n } from './i18n';
 import { getTopicCover } from './topicCovers';
 import catalogueExpansion from './catalogueExpansion.json';
+import topicPopularity from './topicPopularity.json';
 import { PlayerAvatar } from './PlayerAvatar';
 import { BrandLogo, BrandMark } from './Brand';
 
@@ -503,8 +504,14 @@ export const FAMILIES = [
   { key: 'culture', mark: 'IQ', grad: 'g10' },
 ];
 
+const topicRanks = new Map(Object.values(topicPopularity).flatMap(
+  (keys) => keys.map((key, index) => [key, index])
+));
+
 export function categoriesInFamily(familyKey) {
-  return CATEGORIES.filter((c) => c.family === familyKey);
+  return CATEGORIES.filter((c) => c.family === familyKey).sort(
+    (a, b) => (topicRanks.get(a.key) ?? CATEGORIES.length) - (topicRanks.get(b.key) ?? CATEGORIES.length)
+  );
 }
 
 // Strips accents so "francais" matches "Français" — search shouldn't

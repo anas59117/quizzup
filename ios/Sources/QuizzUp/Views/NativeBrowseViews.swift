@@ -86,10 +86,12 @@ struct NativeThemesView: View {
     private var fr: Bool { game.lang == "fr" }
     private var selectedFamily: NativeTopicFamily? { NativeCatalog.families.first { $0.id == family } }
     private var filtered: [Category] {
-        game.categories.filter { category in
+        let search = query.trimmingCharacters(in: .whitespaces)
+        let results = game.categories.filter { category in
             (family == nil || family == "all" || NativeCatalog.entry(for: category.key)?.family == family)
-                && (query.trimmingCharacters(in: .whitespaces).isEmpty || NativeCatalog.matches(category, query: query.trimmingCharacters(in: .whitespaces), lang: game.lang))
+                && (search.isEmpty || NativeCatalog.matches(category, query: search, lang: game.lang))
         }
+        return selectedFamily != nil && search.isEmpty ? NativeCatalog.orderedByPopularity(results) : results
     }
     var body: some View {
         ScrollView {

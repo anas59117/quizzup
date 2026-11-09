@@ -19,6 +19,8 @@ targets:
     platform: iOS
     sources:
       - Sources/QuizzUp
+      - path: ../frontend/src/topicPopularity.json
+        buildPhase: resources
     resources:
       - path: Sources/QuizzUp/Resources/PrivacyInfo.xcprivacy
       - path: Sources/QuizzUp/Resources/topic-catalog.json
