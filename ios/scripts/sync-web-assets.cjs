@@ -29,12 +29,18 @@ webpack({ mode: 'production', target: 'node', context: frontend,
       for (const key of featured) {
         const entry = catalogue[key];
         if (entry?.src?.startsWith('/images/')) {
-          const image = await sharp(path.join(frontend, 'public', entry.src)).resize(640, 640, { fit: 'cover' }).jpeg({ quality: 88 }).toBuffer();
+          const image = await sharp(path.join(frontend, 'public', entry.src))
+            .resize(840, 840, { fit: 'inside', withoutEnlargement: true })
+            .jpeg({ quality: 88 }).toBuffer();
           entry.assetName = 'topic-' + key;
           await imageSet(entry.assetName, image, 'jpg');
         }
       }
       fs.writeFileSync(path.join(resources, 'topic-catalog.json'), JSON.stringify(catalogue, null, 2) + '\n');
+      if (process.argv.includes('--catalog-only')) {
+        console.log(`Synced ${Object.keys(catalogue).length} topics and bundled featured artwork`);
+        return;
+      }
       const sprite = path.join(frontend, 'src/assets/avatars-v2.png');
       const metadata = await sharp(sprite).metadata();
       const ids = ['fox', 'robot', 'brain', 'astronaut', 'ninja', 'dragon', 'cat', 'owl', 'ghost', 'lion'];

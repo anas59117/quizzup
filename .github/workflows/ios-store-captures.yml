@@ -2,16 +2,24 @@ name: QuizzUp App Store captures
 
 on:
   push:
-    branches: ['codex/ios-store-assets-*']
+    branches: ['codex/ios-store-assets-*', 'codex/ios-visual-parity-*']
     paths:
       - 'ios/Sources/**'
       - 'ios/scripts/**'
       - 'ios/project.yml'
       - '.github/workflows/ios-store-captures.yml'
   workflow_dispatch:
+    inputs:
+      visual_review:
+        description: 'Capture one French iPhone across the app for visual review'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
+
+env:
+  VISUAL_REVIEW: ${{ inputs.visual_review || startsWith(github.ref_name, 'codex/ios-visual-parity-') }}
 
 concurrency:
   group: quizzup-store-captures-${{ github.ref }}
@@ -57,6 +65,7 @@ jobs:
               exit 1
             }
       - name: Compile Release and verify capture arguments are absent
+        if: env.VISUAL_REVIEW != 'true'
         run: |
           xcodebuild build \
             -project QuizzUp.xcodeproj -scheme QuizzUp \
@@ -69,10 +78,17 @@ jobs:
             }
           node -e 'const fs=require("fs");const p=process.env.RUNNER_TEMP+"/ios-capture-build/Build/Products/Release-iphonesimulator/QuizzUp.app/QuizzUp";if(fs.readFileSync(p).includes(Buffer.from("--store-capture-screen")))throw Error("Capture mode leaked into Release");'
       - name: Capture eight screens in French and English on native devices
+        if: env.VISUAL_REVIEW != 'true'
         run: |
           node scripts/capture-store-screenshots.cjs \
             "$RUNNER_TEMP/ios-capture-build/Build/Products/Debug-iphonesimulator/QuizzUp.app" \
             "$RUNNER_TEMP/quizzup-native-screenshots"
+      - name: Capture app screens for visual review
+        if: env.VISUAL_REVIEW == 'true'
+        run: |
+          node scripts/capture-store-screenshots.cjs \
+            "$RUNNER_TEMP/ios-capture-build/Build/Products/Debug-iphonesimulator/QuizzUp.app" \
+            "$RUNNER_TEMP/quizzup-native-screenshots" --visual-review
       - name: Upload screenshots ready for App Store Connect
         uses: actions/upload-artifact@v4
         with:

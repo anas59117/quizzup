@@ -103,6 +103,8 @@ struct PlayerStats: Codable {
     let level: Int
     let xpIntoLevel: Int
     let xpForLevel: Int
+    var following: Int?
+    var ownedItems: [String]?
 }
 
 struct GameEnd: Codable {

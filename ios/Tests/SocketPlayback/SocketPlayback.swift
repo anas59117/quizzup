@@ -18,6 +18,15 @@ enum StoreCaptureConfiguration { static let enabled = true }
         }
         try receive(["type":"identified", "profile":["id":"alice", "name":"Alice", "avatar":"fox"]])
         check(game.clientId == "alice" && game.name == "Alice" && game.avatar == "fox", "Canonical server identity")
+        game.roomScreenOpen = true
+        game.roomPending = true
+        let room: [String: Any] = ["type":"room_created", "code":"AB234", "players":[["id":"self", "name":"Alice", "avatar":"fox", "connected":true]], "isHost":true, "canStart":false]
+        try receive(room)
+        check(!game.roomPending && game.privateRoom?.code == "AB234" && game.privateRoom?.canStart == false, "Only a confirmed room is presented, with the server’s launch eligibility")
+        try receive(["type":"room_closed"])
+        check(game.privateRoom == nil && game.roomError != nil, "Remote room closure clears the lobby and displays a recovery message")
+        try receive(["type":"leaderboard_list", "category":"science", "entries":[["id":"alice", "rank":1, "name":"Alice", "avatar":"fox", "xp":84]]])
+        check(game.topicLeaderboards["science"]?.first?.score == 84, "The category ranking uses authoritative topic XP")
         try receive(["type":"game_start", "totalRounds":6, "opponents":[["id":"old", "clientId":"bob", "name":"Bob", "avatar":"owl"]]])
         check(game.opponents.count == 1 && game.opponents[0].score == 0, "Game start without score defaults")
         game.isStarting = true
@@ -54,6 +63,6 @@ enum StoreCaptureConfiguration { static let enabled = true }
         game.conversationOpen = true; game.activeConversation = "bob"
         game.resetForSignOut()
         check(game.stage == .authGate && game.clientId == nil && game.messages.isEmpty && game.activeConversation == nil && !game.conversationOpen, "Sign out clears account and conversation state")
-        print("Verified 14 native receiver contracts with no live network or identity provider")
+        print("Verified native receiver contracts with no live network or identity provider")
     }
 }

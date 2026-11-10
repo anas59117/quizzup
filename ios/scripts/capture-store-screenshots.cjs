@@ -7,6 +7,12 @@ if(process.platform!=='darwin')throw Error('Native captures require macOS with X
 const app=path.resolve(process.argv[2]||'');
 assert.ok(app.endsWith('.app')&&fs.existsSync(app),'Pass the compiled STORE_CAPTURE simulator .app');
 const output=path.resolve(process.argv[3]||path.join(root,'ios/AppStoreMetadata/screenshots'));
+const visualReview=process.argv.includes('--visual-review');
+const captureProfiles=visualReview ? profiles.filter(profile=>profile.type==='iPhone-15') : profiles;
+const captureLanguages=visualReview ? ['fr'] : ['fr','en'];
+const captureScreens=visualReview
+ ? ['home','themes','family','detail','messages','community','profile','waiting','faceoff','question','answer','result']
+ : scenarios;
 const rawDirectory=path.join(process.env.RUNNER_TEMP||require('node:os').tmpdir(),'quizzup-native-capture-raw');
 fs.mkdirSync(output,{recursive:true});fs.mkdirSync(rawDirectory,{recursive:true});
 validatePng(fs.readFileSync(path.join(root,'ios/Sources/QuizzUp/Resources/Assets.xcassets/AppIcon.appiconset/icon-1024.png')),1024,1024,true);
@@ -16,7 +22,7 @@ const runtime=JSON.parse(run('xcrun',['simctl','list','runtimes','--json'])).run
 assert.ok(runtime,'No available iOS Simulator runtime');
 const types=JSON.parse(run('xcrun',['simctl','list','devicetypes','--json'])).devicetypes;
 const captures=[];
-for(const profile of profiles){
+for(const profile of captureProfiles){
  const type=types.find(t=>t.identifier===`com.apple.CoreSimulator.SimDeviceType.${profile.type}`);
  assert.ok(type,`Simulator type not installed: ${profile.type}`);
  const udid=run('xcrun',['simctl','create',`QuizzUp-${profile.key}`,type.identifier,runtime.identifier]);
@@ -29,14 +35,14 @@ for(const profile of profiles){
   run('xcrun',['simctl','install',udid,app]);
   const data=run('xcrun',['simctl','get_app_container',udid,'com.quizzup.app','data']);
   const ready=path.join(data,'Documents/store-capture-ready.json');
-  for(const language of ['fr','en'])for(const screen of scenarios){
+  for(const language of captureLanguages)for(const screen of captureScreens){
    if(fs.existsSync(ready))fs.unlinkSync(ready);
    run('xcrun',['simctl','launch','--terminate-running-process',udid,'com.quizzup.app','--store-capture-screen',screen,'--store-capture-language',language]);
    const deadline=Date.now()+30000;
    while(!fs.existsSync(ready)&&Date.now()<deadline)pause(200);
    assert.ok(fs.existsSync(ready),`View did not become ready: ${profile.key}/${language}/${screen}`);
    assert.deepEqual(JSON.parse(fs.readFileSync(ready,'utf8')),{screen,language});
-   const name=`${String(scenarios.indexOf(screen)+1).padStart(2,'0')}-${screen}`;
+   const name=`${String(captureScreens.indexOf(screen)+1).padStart(2,'0')}-${screen}`;
    const raw=path.join(rawDirectory,`${profile.key}-${language}-${name}.png`);
    const relative=`${language}/${profile.key}/${name}.jpg`;
    const destination=path.join(output,relative);
@@ -59,7 +65,7 @@ for(const profile of profiles){
   }
  }
 }
-assert.equal(captures.length,profiles.length * scenarios.length * 2);
+assert.equal(captures.length,captureProfiles.length * captureScreens.length * captureLanguages.length);
 const commit=process.env.GITHUB_SHA||run('git',['-C',root,'rev-parse','HEAD']);
 fs.writeFileSync(path.join(output,'manifest.json'),JSON.stringify({commit,runtime:runtime.identifier,capturedAt:new Date().toISOString(),nativeViews:true,contentLanguage:'Original French question bank; FR/EN interface chrome only',captures},null,2)+'\n');
 console.log(`Verified ${captures.length} native, opaque App Store captures; no resizing.`);

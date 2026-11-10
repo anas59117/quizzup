@@ -65,6 +65,12 @@ final class GameSocket: ObservableObject {
     @Published var stats: PlayerStats?
     @Published var topicProgress: [NativeTopicProgress] = []
     @Published var followedThemes: [String] = []
+    @Published var topicLeaderboards: [String: [NativeTopicRankingEntry]] = [:]
+    @Published var community = NativeCommunityState()
+    @Published var privateRoom: NativePrivateRoom?
+    @Published var roomPending = false
+    @Published var roomError: String?
+    var roomScreenOpen = false
     @Published var friends: [NativeFriend] = []
     @Published var friendRequests: [NativeFriend] = []
     @Published var conversations: [NativeConversation] = []
@@ -116,7 +122,10 @@ final class GameSocket: ObservableObject {
         task = t
         t.resume()
         listen()
-        if let idToken { send(["type": "identify", "idToken": idToken, "name": name, "avatar": avatar, "presentationVersion": 1]) }
+        if let idToken {
+            send(["type": "identify", "idToken": idToken, "name": name, "avatar": avatar,
+                  "presentationVersion": 1, "recoverRoom": roomScreenOpen])
+        }
     }
 
     /// Opens a socket (if needed) with an up-to-date ID token, then sends
@@ -132,7 +141,9 @@ final class GameSocket: ObservableObject {
             let fresh = await authManager.getIdToken()
             guard generation == key, self.authManager === authManager else { return }
             guard let fresh else {
-                isStarting = false; profileSaving = false; socialError = t("serverUnreachable"); return
+                isStarting = false; profileSaving = false
+                if roomPending { roomPending = false; roomError = t("serverUnreachable") }
+                socialError = t("serverUnreachable"); return
             }
             self.idToken = fresh
             self.ensureConnected()
@@ -184,9 +195,28 @@ final class GameSocket: ObservableObject {
         guard let obj = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
               let type = obj["type"] as? String else { return }
         let decoder = JSONDecoder()
+        if type == "rate_limited", obj["code"] as? String == "ROOM_JOIN_RATE_LIMITED" {
+            roomPending = false
+            roomError = lang == "fr" ? "Réessaie dans un instant." : "Try again in a moment."
+            return
+        }
         if handleSocial(type, object: obj) { return }
 
         switch type {
+        case "room_created", "room_update":
+            guard roomScreenOpen else { _ = send(["type": "leave_room"]); return }
+            privateRoom = try? decoder.decode(NativePrivateRoom.self, from: data)
+            roomPending = false; roomError = nil
+        case "room_left", "room_closed", "room_not_found", "room_unavailable", "room_full":
+            privateRoom = nil; roomPending = false
+            if type != "room_left" {
+                roomError = lang == "fr" ? "Ce salon n’est plus disponible." : "This room is unavailable."
+            }
+        case "leaderboard_list":
+            if let category = obj["category"] as? String,
+               let entries = decode(obj["entries"], as: [NativeTopicRankingEntry].self) {
+                topicLeaderboards[category] = entries
+            }
         case "session":
             myId = obj["playerId"] as? String
         case "identified":
@@ -214,6 +244,7 @@ final class GameSocket: ObservableObject {
             stage = .waiting
             isStarting = false
         case "game_start":
+            privateRoom = nil; roomPending = false; roomError = nil
             if let arr = obj["opponents"], let d = try? JSONSerialization.data(withJSONObject: arr) {
                 opponents = (try? decoder.decode([Opponent].self, from: d)) ?? []
             }
@@ -297,7 +328,12 @@ final class GameSocket: ObservableObject {
                 isStarting = false
                 stopTimer()
             }
-        case "already_playing": isStarting = false
+        case "already_playing":
+            isStarting = false
+            if roomPending {
+                roomPending = false
+                roomError = lang == "fr" ? "Tu es déjà dans une partie ou un salon." : "You’re already in a game or room."
+            }
         case "auth_required", "already_connected":
             disconnect()
             socialError = t("serverUnreachable")
@@ -397,6 +433,34 @@ final class GameSocket: ObservableObject {
             idToken = fresh; ensureConnected()
         }
     }
+    func setThemeFollowing(_ category: String, following: Bool) {
+        connect(["type": "theme_follow", "category": category, "following": following])
+    }
+    func requestTopicLeaderboard(_ category: String) {
+        connect(["type": "leaderboard_list", "category": category])
+    }
+    func openPrivateRoom(category: String?, code: String? = nil) {
+        guard !roomPending, privateRoom == nil else { return }
+        roomPending = true; roomError = nil
+        var action: [String: Any] = ["name": name, "avatar": avatar, "presentationVersion": 1]
+        if let code {
+            action["type"] = "join_room"; action["code"] = code
+        } else {
+            action["type"] = "create_room"; action["category"] = category.map { $0 as Any } ?? NSNull()
+        }
+        connect(action)
+    }
+    func leavePrivateRoom() {
+        if ["create_room", "join_room"].contains(pendingAction?["type"] as? String ?? "") {
+            pendingAction = nil
+        }
+        if privateRoom != nil || roomPending { _ = send(["type": "leave_room"]) }
+        privateRoom = nil; roomPending = false; roomError = nil
+    }
+    func startPrivateRoom(_ room: NativePrivateRoom) {
+        guard room.isHost, room.canStart, !roomPending else { return }
+        if send(["type": "start_room", "code": room.code]) { roomPending = true }
+    }
     func cancelQueue() { if !cancelPending, send(["type": "cancel_queue"]) { cancelPending = true } }
     func requestRematch() { if !rematchWaiting, send(["type": "rematch"]) { rematchWaiting = true } }
     func retryConnection() { stage = .home; requestProfile() }
@@ -442,6 +506,7 @@ final class GameSocket: ObservableObject {
         task = nil
         isStarting = false
         connected = false; cancelPending = false; profileSaving = false
+        roomPending = false; privateRoom = nil; roomError = nil
         inboxLoading = false; historyLoading = false; pendingMessageID = nil
     }
 
@@ -457,6 +522,31 @@ final class GameSocket: ObservableObject {
         friends = []; friendRequests = []; conversations = []; messages = [:]
         historyHasMore = [:]
         topicProgress = []; followedThemes = []
+        topicLeaderboards = [:]
+        community = NativeCommunityState()
+        roomScreenOpen = false
         stage = .authGate
     }
+}
+
+struct NativeTopicRankingEntry: Decodable, Identifiable {
+    let id: String
+    let rank: Int
+    let name: String
+    let avatar: String
+    let xp: Int
+    var score: Int { xp }
+}
+
+struct NativePrivateRoom: Decodable {
+    struct Player: Decodable, Identifiable {
+        let id: String
+        let name: String
+        let avatar: String
+        let connected: Bool
+    }
+    let code: String
+    let players: [Player]
+    let isHost: Bool
+    let canStart: Bool
 }

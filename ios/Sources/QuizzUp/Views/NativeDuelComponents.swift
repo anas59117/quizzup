@@ -1,69 +1,120 @@
 import SwiftUI
 
 enum NativeDuelColors {
-    static let secondary = Color(hex: 0xADB7B3)
-    static let mine = Color(hex: 0x4BC4EC)
-    static let other = Color(hex: 0xF19150)
+    static let introCanvas = Color(hex: 0x0A0A0A)
+    static let atlasPaper = Color(hex: 0xF4F2EB)
+    static let atlasGold = Color(hex: 0xF4CD62)
+    static let arena = Color(hex: 0x111312)
+    static let secondary = Color(hex: 0xC3C6C3)
+    static let mine = Color(hex: 0x55C4EF)
+    static let other = Color(hex: 0xE7955A)
+    static let correct = Color(hex: 0x77EFAF)
+    static let wrong = Color(hex: 0xFFADB6)
 }
 
+enum NativeDuelAnswerState { case waiting, submitted, correct, wrong, timeout }
+
 struct NativeDuelPlayer: View {
+    @ScaledMetric(relativeTo: .title2) private var scoreSize: CGFloat = 25
     let avatar: String
     let name: String
     let score: Int
     let color: Color
-    let answered: Bool
-    let correct: Bool?
+    let state: NativeDuelAnswerState
     let status: String
     var trailing = false
+    var compact = false
+    var stacked = false
 
     var body: some View {
-        VStack(alignment: trailing ? .trailing : .leading, spacing: 5) {
-            HStack(spacing: 7) {
-                if !trailing { portrait }
-                VStack(alignment: trailing ? .trailing : .leading, spacing: 1) {
-                    Text(name).font(.caption.weight(.semibold)).lineLimit(2)
-                    Text("\(score)").font(.title2.weight(.heavy)).monospacedDigit().foregroundColor(color)
+        VStack(alignment: stacked ? .center : trailing ? .trailing : .leading, spacing: 4) {
+            if stacked {
+                portrait
+                identity
+            } else {
+                HStack(spacing: compact ? 5 : 8) {
+                    if !trailing { portrait }
+                    identity
+                    if trailing { portrait }
                 }
-                if trailing { portrait }
             }
-            Label(status, systemImage: answered ? "checkmark.circle.fill" : "circle")
-                .font(.caption2).foregroundColor(answered ? color : NativeDuelColors.secondary)
+            Text(status).font(.caption2).lineLimit(1).foregroundColor(statusColor)
         }
-        .frame(maxWidth: .infinity, alignment: trailing ? .trailing : .leading)
+        .frame(maxWidth: .infinity, alignment: stacked ? .center : trailing ? .trailing : .leading)
         .accessibilityElement(children: .combine)
     }
+
+    private var identity: some View {
+        VStack(alignment: stacked ? .center : trailing ? .trailing : .leading, spacing: 0) {
+            Text(name).font(.caption.weight(.semibold)).lineLimit(1)
+            Text("\(score)").font(.system(size: scoreSize * (compact ? 0.84 : 1), weight: .bold))
+                .monospacedDigit().foregroundColor(color)
+        }
+    }
+
     private var portrait: some View {
-        NativePlayerPortrait(avatar: avatar, size: 42)
-            .padding(3).overlay(Circle().stroke(color, lineWidth: 2))
+        NativePlayerPortrait(avatar: avatar, size: compact || stacked ? 32 : 44)
+            .padding(compact || stacked ? 3 : 4)
+            .overlay(Circle().strokeBorder(color, lineWidth: compact || stacked ? 2 : 3))
             .overlay(alignment: .topTrailing) {
-                if answered {
-                    Image(systemName: correct == false ? "xmark.circle.fill" : "checkmark.circle.fill")
-                        .font(.caption).foregroundColor(correct == false ? Theme.red : color)
-                        .background(Theme.canvas, in: Circle())
+                if let mark {
+                    Text(mark).font(.system(size: 11, weight: .heavy))
+                        .foregroundColor(state == .correct ? NativeDuelColors.arena : .white)
+                        .frame(width: 18, height: 18)
+                        .background(markBackground, in: Circle())
+                        .overlay(Circle().strokeBorder(NativeDuelColors.arena, lineWidth: 2))
+                        .offset(x: 3, y: -3)
+                        .accessibilityHidden(true)
                 }
             }
+    }
+
+    private var mark: String? {
+        switch state {
+        case .waiting: return nil
+        case .submitted: return "•"
+        case .correct: return "✓"
+        case .wrong: return "✕"
+        case .timeout: return "–"
+        }
+    }
+
+    private var markBackground: Color {
+        switch state {
+        case .correct: return NativeDuelColors.correct
+        case .wrong: return Color(hex: 0xC81E3A)
+        default: return Color(hex: 0x484B48)
+        }
+    }
+
+    private var statusColor: Color {
+        switch state {
+        case .correct: return NativeDuelColors.correct
+        case .wrong: return NativeDuelColors.wrong
+        default: return NativeDuelColors.secondary
+        }
     }
 }
 
 struct NativeDuelTimer: View {
     let seconds: Int
     let limit: Int
-    let reading: Bool
     let revealing: Bool
+    var compact = false
 
     var body: some View {
         ZStack {
-            Circle().stroke(Color.white.opacity(0.15), lineWidth: 3)
-            Circle().trim(from: 0, to: reading || revealing ? 1 : min(1, max(0, Double(seconds) / Double(max(1, limit)))))
-                .stroke(seconds <= 3 && !reading ? NativeDuelColors.other : NativeDuelColors.mine,
-                        style: StrokeStyle(lineWidth: 3, lineCap: .round))
+            Circle().strokeBorder(Color(hex: 0x454845), lineWidth: 4)
+            Circle().inset(by: 2)
+                .trim(from: 0, to: revealing ? 1 : min(1, max(0, Double(seconds) / Double(max(1, limit)))))
+                .stroke(Color(hex: 0xF4EFE4), lineWidth: 4)
                 .rotationEffect(.degrees(-90))
-            if reading { Image(systemName: "text.alignleft").font(.headline) }
-            else if revealing { Image(systemName: "checkmark").font(.headline) }
-            else { Text("\(seconds)").font(.title2.weight(.heavy)).monospacedDigit() }
+            if revealing { Image(systemName: "checkmark").font(.title2.weight(.bold)) }
+            else { Text("\(seconds)").font(.system(size: compact ? 22 : 27, weight: .bold)).monospacedDigit() }
         }
-        .frame(width: 50, height: 50).padding(.top, 1)
-        .accessibilityValue(reading ? "…" : "\(seconds)")
+        .frame(width: compact ? 42 : 54, height: compact ? 42 : 54)
+        .accessibilityElement(children: .ignore)
+        .accessibilityValue(revealing ? "✓" : "\(seconds)")
     }
 }
 
@@ -75,26 +126,30 @@ struct NativeScoreRail: View {
 
     var body: some View {
         GeometryReader { geometry in
-            Capsule().fill(Color.white.opacity(0.16))
+            Capsule().fill(Color(hex: 0x353936))
                 .overlay(alignment: .bottom) {
                     Capsule().fill(color)
                         .frame(height: geometry.size.height * CGFloat(min(1, max(0, Double(score) / Double(max(1, maximum))))))
                 }
         }
-        .frame(width: 6).accessibilityHidden(true)
-        .animation(reduceMotion ? nil : .easeOut(duration: 0.45), value: score)
+        .frame(width: 8).accessibilityHidden(true).allowsHitTesting(false)
+        .animation(reduceMotion ? nil : .easeOut(duration: 0.55), value: score)
     }
 }
 
 struct NativeDuelActionStyle: ButtonStyle {
+    @Environment(\.isEnabled) private var isEnabled
     var prominent = true
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label.font(.headline.weight(.bold))
-            .foregroundColor(prominent ? Theme.paper : Theme.ink)
-            .frame(maxWidth: .infinity, minHeight: 24)
-            .padding(.horizontal, 16).padding(.vertical, 15)
-            .background(prominent ? Theme.brand : Theme.paper, in: RoundedRectangle(cornerRadius: 11))
-            .opacity(configuration.isPressed ? 0.8 : 1)
+        configuration.label.font(prominent ? .headline.weight(.bold) : .subheadline.weight(.semibold))
+            .multilineTextAlignment(.center)
+            .foregroundColor(prominent ? Color(hex: 0xC81E3A) : .white)
+            .padding(.horizontal, 8).padding(.vertical, 10)
+            .frame(maxWidth: .infinity, minHeight: prominent ? 54 : 48)
+            .background(prominent ? Color.white : Color.white.opacity(0.10), in: RoundedRectangle(cornerRadius: 16))
+            .overlay(RoundedRectangle(cornerRadius: 16).strokeBorder(Color.white.opacity(prominent ? 0 : 0.35)))
+            .contentShape(RoundedRectangle(cornerRadius: 16))
+            .opacity(!isEnabled ? 0.5 : configuration.isPressed ? 0.8 : 1)
     }
 }
 

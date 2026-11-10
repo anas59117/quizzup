@@ -1,7 +1,5 @@
-// Direction: the website's cover-led editorial catalogue, translated to SwiftUI.
-// Rules: square artwork, quiet native controls, meaningful empty states.
-// Signature: readable HTML-equivalent captions over cinematic covers.
 import SwiftUI
+import UIKit
 
 struct NativeSectionTitle: View {
     let title: String
@@ -13,36 +11,90 @@ struct NativeSectionTitle: View {
 }
 
 struct NativeTopicArt: View {
-    let category: Category
     @EnvironmentObject var game: GameSocket
+    let category: Category
+    var ratio: CGFloat? = 1
+    var detail = false
+    var tint = Color(hex: 0x241B27)
+    @State private var remoteArtwork: (url: URL, image: UIImage)?
     private var entry: NativeCatalogEntry? { NativeCatalog.entry(for: category.key) }
+    private var fit: Bool { (detail ? entry?.detailFit ?? entry?.fit : entry?.fit) == "contain" }
+    private var bundledArtwork: UIImage? {
+        entry?.assetName.flatMap { UIImage(named: $0) }
+    }
+    private var artworkURL: URL? {
+        if detail, let source = entry?.detailSrc { return GameSocket.absoluteImageURL(source) }
+        if bundledArtwork == nil, let source = entry?.src { return GameSocket.absoluteImageURL(source) }
+        return nil
+    }
+    private var artwork: UIImage? {
+        if let remoteArtwork, remoteArtwork.url == artworkURL { return remoteArtwork.image }
+        return bundledArtwork
+    }
+    private var focal: CGPoint {
+        let value = detail ? entry?.detailFocal ?? entry?.focal : entry?.focal
+        let tokens = value?.split(separator: " ") ?? []
+        return CGPoint(
+            x: position(tokens.first, leading: "left", trailing: "right"),
+            y: position(tokens.dropFirst().first, leading: "top", trailing: "bottom")
+        )
+    }
+
     var body: some View {
         GeometryReader { geometry in
+            let size = geometry.size
             ZStack {
-                Color(hex: 0x241B27)
-                Text(NativeCatalog.mark(for: NativeCatalog.title(for: category, lang: game.lang)))
-                    .font(.system(size: 54, weight: .black, design: .rounded))
-                    .foregroundColor(.white.opacity(0.85)).minimumScaleFactor(0.5)
-                    .padding(16)
-                if let assetName = entry?.assetName {
-                    Image(assetName).resizable().scaledToFill()
-                        .frame(width: geometry.size.width, height: geometry.size.height)
-                } else if let src = entry?.src, let url = GameSocket.absoluteImageURL(src) {
-                    AsyncImage(url: url) { phase in
-                        if let image = phase.image {
-                            image.resizable()
-                                .aspectRatio(contentMode: entry?.fit == "contain" ? .fit : .fill)
-                                .frame(width: geometry.size.width, height: geometry.size.height)
-                                .background(Color(hex: 0x141217))
-                        }
+                tint
+                if let image = artwork {
+                    if detail && fit {
+                        picture(image, in: size, contain: false)
+                            .scaleEffect(1.06).blur(radius: 16).opacity(0.45)
                     }
+                    picture(image, in: size, contain: fit)
+                } else {
+                    fallback
                 }
             }
-            .frame(width: geometry.size.width, height: geometry.size.height)
+            .frame(width: size.width, height: size.height)
             .clipped()
         }
-        .aspectRatio(1, contentMode: .fit)
+        .aspectRatio(ratio, contentMode: .fit)
         .accessibilityHidden(true)
+        .task(id: artworkURL) {
+            guard let url = artworkURL, remoteArtwork?.url != url,
+                  let (data, response) = try? await URLSession.shared.data(from: url),
+                  let http = response as? HTTPURLResponse, (200..<300).contains(http.statusCode),
+                  !Task.isCancelled, let image = UIImage(data: data) else { return }
+            remoteArtwork = (url, image)
+        }
+    }
+
+    private var fallback: some View {
+        Text(NativeCatalog.mark(for: NativeCatalog.title(for: category, lang: game.lang)))
+            .font(.system(size: detail ? 78 : 52, weight: .black, design: .rounded))
+            .foregroundColor(.white.opacity(0.85)).minimumScaleFactor(0.5).padding(16)
+    }
+
+    private func picture(_ image: UIImage, in size: CGSize, contain: Bool) -> some View {
+        let horizontal = size.width / max(1, image.size.width)
+        let vertical = size.height / max(1, image.size.height)
+        let scale = contain ? min(horizontal, vertical) : max(horizontal, vertical)
+        let width = image.size.width * scale
+        let height = image.size.height * scale
+        return Image(uiImage: image).resizable()
+            .frame(width: width, height: height)
+            .position(
+                x: width / 2 + (size.width - width) * focal.x,
+                y: height / 2 + (size.height - height) * focal.y
+            )
+    }
+
+    private func position(_ token: Substring?, leading: String, trailing: String) -> CGFloat {
+        guard let token else { return 0.5 }
+        if token == leading { return 0 }
+        if token == trailing { return 1 }
+        if token.hasSuffix("%"), let percent = Double(token.dropLast()) { return CGFloat(percent / 100) }
+        return 0.5
     }
 }
 
@@ -50,29 +102,41 @@ struct NativeTopicTile: View {
     @EnvironmentObject var game: GameSocket
     let category: Category
     var level: Int? = nil
+    var landscape = false
+    var suggested = false
+    private var fr: Bool { game.lang == "fr" }
     private var title: String { NativeCatalog.title(for: category, lang: game.lang) }
+
     var body: some View {
-        NativeTopicArt(category: category)
+        NativeTopicArt(category: category, ratio: landscape ? 1.65 : 1)
             .overlay(alignment: .bottom) {
-                LinearGradient(colors: [.clear, .black.opacity(0.86)], startPoint: .top, endPoint: .bottom)
-                    .frame(height: 86).allowsHitTesting(false)
+                LinearGradient(colors: [.clear, .black.opacity(0.83)], startPoint: .top, endPoint: .bottom)
+                    .frame(height: landscape ? 64 : 80).allowsHitTesting(false)
             }
             .overlay(alignment: .bottomLeading) {
-                VStack(alignment: .leading, spacing: 5) {
-                    Text(title).font(.system(size: 15, weight: .bold))
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(title).font(.system(size: landscape ? 13 : 15, weight: .bold))
                         .lineLimit(3).fixedSize(horizontal: false, vertical: true)
                     if let level {
-                        Text("\(game.lang == "fr" ? "Niveau" : "Level") \(level)")
-                            .font(.system(size: 12, weight: .medium))
+                        Text("\(fr ? "Niveau" : "Level") \(level)").font(.system(size: 12, weight: .medium))
                     }
                 }
                 .foregroundColor(.white).padding(12)
+            }
+            .overlay(alignment: .topLeading) {
+                if suggested {
+                    Text(fr ? "Suggestion" : "Suggested")
+                        .font(.system(size: 10)).foregroundColor(.white)
+                        .padding(.horizontal, 6).padding(.vertical, 4)
+                        .background(Theme.ink.opacity(0.88), in: RoundedRectangle(cornerRadius: 5))
+                        .padding(8)
+                }
             }
             .clipShape(RoundedRectangle(cornerRadius: 19))
             .contentShape(RoundedRectangle(cornerRadius: 19))
             .accessibilityElement(children: .ignore)
             .accessibilityLabel(title)
-            .accessibilityValue(level.map { "\(game.lang == "fr" ? "Niveau" : "Level") \($0)" } ?? "")
+            .accessibilityValue(level.map { "\(fr ? "Niveau" : "Level") \($0)" } ?? (suggested ? (fr ? "Suggestion" : "Suggested") : ""))
     }
 }
 
@@ -84,76 +148,62 @@ struct NativeThemesView: View {
     @State private var family: String?
     private let columns = [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)]
     private var fr: Bool { game.lang == "fr" }
+    private var search: String { query.trimmingCharacters(in: .whitespacesAndNewlines) }
     private var selectedFamily: NativeTopicFamily? { NativeCatalog.families.first { $0.id == family } }
     private var filtered: [Category] {
-        let search = query.trimmingCharacters(in: .whitespaces)
-        let results = game.categories.filter { category in
-            (family == nil || family == "all" || NativeCatalog.entry(for: category.key)?.family == family)
-                && (search.isEmpty || NativeCatalog.matches(category, query: search, lang: game.lang))
+        if !search.isEmpty {
+            return game.categories.filter { NativeCatalog.matches($0, query: search, lang: game.lang) }
         }
-        return selectedFamily != nil && search.isEmpty ? NativeCatalog.orderedByPopularity(results) : results
+        return NativeCatalog.orderedByPopularity(game.categories.filter { NativeCatalog.entry(for: $0.key)?.family == family })
     }
+
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 18) {
-                if family != nil {
-                    Button {
-                        family = nil
-                        query = ""
-                        searchFocused = false
-                    } label: {
-                        Label(fr ? "Toutes les familles" : "All categories", systemImage: "arrow.left")
-                            .font(.system(size: 14, weight: .medium)).frame(minHeight: 44)
-                    }.foregroundColor(.white)
-                }
-                NativeSectionTitle(title: selectedFamily?.title(lang: game.lang) ?? (fr ? "Thèmes" : "Themes"))
-                HStack(spacing: 10) {
-                    Image(systemName: "magnifyingglass").foregroundColor(Theme.muted)
-                    TextField(fr ? "Rechercher un thème…" : "Search themes…", text: $query)
-                        .font(.system(size: 16)).foregroundColor(Theme.ink)
-                        .autocorrectionDisabled().submitLabel(.search)
-                        .focused($searchFocused)
-                    if !query.isEmpty {
-                        Button { query = "" } label: {
-                            Image(systemName: "xmark.circle.fill").foregroundColor(Theme.muted)
-                                .frame(width: 36, height: 44)
-                        }.accessibilityLabel(fr ? "Effacer la recherche" : "Clear search")
+            VStack(alignment: .leading, spacing: 0) {
+                HStack(alignment: .firstTextBaseline, spacing: 10) {
+                    NativeSectionTitle(title: (search.isEmpty ? selectedFamily?.title(lang: game.lang) : nil)
+                                       ?? (fr ? "Tous les thèmes" : "All Topics"))
+                    if selectedFamily != nil {
+                        Spacer(minLength: 0)
+                        Button {
+                            family = nil
+                            query = ""
+                            searchFocused = false
+                        } label: {
+                            Label(fr ? "Tous les thèmes" : "All topics", systemImage: "arrow.left")
+                                .font(.system(size: 13, weight: .semibold)).frame(minHeight: 44)
+                        }
+                        .buttonStyle(.plain).foregroundColor(.white)
                     }
                 }
-                .padding(.horizontal, 14).frame(minHeight: 52)
-                .background(Theme.paper, in: RoundedRectangle(cornerRadius: 16))
-                .environment(\.colorScheme, .light).tint(Theme.brand)
+                .padding(.bottom, 16)
+                searchField
+                Text(fr ? "Recherche dans tous les thèmes" : "Search across all topics")
+                    .font(.system(size: 12)).foregroundColor(.white)
+                    .padding(.top, 8).padding(.bottom, 20)
                 if game.categories.isEmpty {
                     NativeCatalogEmptyView()
-                } else if family == nil && query.isEmpty {
+                } else if family == nil && search.isEmpty {
                     familyGrid
-                    Button { family = "all" } label: {
-                        Label(fr ? "Tous les thèmes" : "All themes", systemImage: "square.grid.2x2")
-                            .font(.system(size: 15, weight: .semibold))
-                            .frame(maxWidth: .infinity, minHeight: 50)
-                    }
-                    .foregroundColor(Theme.ink)
-                    .background(Theme.paper, in: RoundedRectangle(cornerRadius: 16))
                 } else if filtered.isEmpty {
                     VStack(alignment: .leading, spacing: 8) {
-                        Text(fr ? "Aucun thème trouvé" : "No themes found").font(.headline)
-                        Text(fr ? "Essayez un autre nom ou une autre famille." : "Try another name or category.")
-                            .font(.subheadline)
-                    }.foregroundColor(.white).padding(.vertical, 16)
+                        Text(fr ? "Aucun quiz trouvé" : "No quizzes found").font(.headline)
+                        Text(fr ? "Essayez un autre nom." : "Try a different name.").font(.subheadline)
+                    }
+                    .foregroundColor(.white).padding(.vertical, 16)
                 } else {
-                    Text("\(filtered.count) \(fr ? "thèmes" : "themes")")
-                        .font(.system(size: 13)).foregroundColor(.white.opacity(0.9))
                     LazyVGrid(columns: columns, spacing: 12) {
                         ForEach(filtered) { category in
-                            NavigationLink(value: category) {
-                                NativeTopicTile(category: category, level: game.topicProgress.first { $0.key == category.key }?.level)
-                            }.buttonStyle(.plain)
+                            NavigationLink(value: NativeBrowseRoute.topic(category)) {
+                                NativeTopicTile(category: category)
+                            }
+                            .buttonStyle(.plain)
                         }
                     }
                 }
             }
             .padding(.horizontal, 16).padding(.bottom, 24)
-            .frame(maxWidth: 600).frame(maxWidth: .infinity)
+            .frame(maxWidth: 560).frame(maxWidth: .infinity)
         }
         .scrollDismissesKeyboard(.interactively)
         .onAppear { activateSearch() }
@@ -161,29 +211,81 @@ struct NativeThemesView: View {
         .refreshable { game.loadCategories() }
     }
 
+    init(focusSearch: Binding<Bool>) {
+        _focusSearch = focusSearch
+        #if DEBUG && STORE_CAPTURE
+        if StoreCaptureConfiguration.options?.screen == "family" { _family = State(initialValue: "football") }
+        #endif
+    }
+
+    private var searchField: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "magnifyingglass")
+                .foregroundColor(Theme.muted).accessibilityHidden(true)
+            TextField("", text: $query, prompt: Text(fr ? "Rechercher un quiz…" : "Search a quiz…").foregroundColor(Theme.muted))
+                .font(.system(size: 16)).foregroundColor(Theme.ink)
+                .autocorrectionDisabled().submitLabel(.search).focused($searchFocused)
+                .accessibilityLabel(fr ? "Rechercher un quiz" : "Search for a quiz")
+                .accessibilityHint(fr ? "Recherche dans tous les thèmes" : "Search across all topics")
+            if !query.isEmpty {
+                Button { query = "" } label: {
+                    Image(systemName: "xmark.circle.fill").foregroundColor(Theme.muted)
+                        .frame(width: 44, height: 44)
+                }
+                .buttonStyle(.plain).accessibilityLabel(fr ? "Effacer la recherche" : "Clear search")
+            }
+        }
+        .padding(.horizontal, 14).frame(minHeight: 50)
+        .background(Theme.paper, in: RoundedRectangle(cornerRadius: 16))
+        .environment(\.colorScheme, .light).tint(Theme.brand)
+    }
+
     private var familyGrid: some View {
-        LazyVGrid(columns: columns, spacing: 12) {
+        let counts = Dictionary(grouping: game.categories) { NativeCatalog.entry(for: $0.key)?.family ?? "" }.mapValues(\.count)
+        return LazyVGrid(columns: columns, spacing: 12) {
             ForEach(NativeCatalog.families) { item in
-                let count = game.categories.filter { NativeCatalog.entry(for: $0.key)?.family == item.id }.count
+                let count = counts[item.id, default: 0]
+                let palette = familyColors(item.id)
                 Button {
                     family = item.id
                     searchFocused = false
                 } label: {
-                    VStack(alignment: .leading, spacing: 9) {
-                        Image(systemName: item.symbol).font(.system(size: 22))
-                            .foregroundColor(Theme.brand)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Image(systemName: item.symbol).font(.system(size: 19, weight: .medium))
+                            .foregroundColor(palette.0)
                             .frame(width: 40, height: 40)
-                            .background(Theme.brand.opacity(0.08), in: RoundedRectangle(cornerRadius: 12))
+                            .background(palette.1, in: RoundedRectangle(cornerRadius: 12))
+                            .padding(.bottom, 4)
+                            .accessibilityHidden(true)
                         Text(item.title(lang: game.lang))
                             .font(.system(size: 16, weight: .bold)).foregroundColor(Theme.ink)
-                        Text("\(count) \(fr ? "thèmes" : "themes")")
+                            .multilineTextAlignment(.leading)
+                        Text("\(count) \(fr ? "quiz" : (count == 1 ? "quiz" : "quizzes"))")
                             .font(.system(size: 12)).foregroundColor(Theme.muted)
                     }
-                    .padding(14).frame(maxWidth: .infinity, minHeight: 128, alignment: .leading)
+                    .padding(14).frame(maxWidth: .infinity, minHeight: 120, alignment: .topLeading)
                     .background(Theme.paper, in: RoundedRectangle(cornerRadius: 20))
-                }.buttonStyle(.plain)
+                }
+                .buttonStyle(.plain).accessibilityElement(children: .combine)
             }
         }
+    }
+
+    private func familyColors(_ id: String) -> (Color, Color) {
+        let hex: (UInt32, UInt32)
+        switch id {
+        case "football": hex = (0x28684D, 0xE0EEE4)
+        case "culture": hex = (0x276A70, 0xDFEEF0)
+        case "cinema": hex = (0x6F466E, 0xF1E3EE)
+        case "series": hex = (0x894328, 0xF4E4D7)
+        case "sagas": hex = (0x5D4A85, 0xECE5F5)
+        case "manga": hex = (0x94412C, 0xF8E4DB)
+        case "music": hex = (0x8C325B, 0xF7E0EB)
+        case "sport": hex = (0x8B540B, 0xF7EDCB)
+        case "gaming": hex = (0x305E89, 0xE0EBF5)
+        default: hex = (0xA82543, 0xFAE8ED)
+        }
+        return (Color(hex: hex.0), Color(hex: hex.1))
     }
 
     private func activateSearch() {
@@ -202,61 +304,8 @@ struct NativeCatalogEmptyView: View {
                 .font(.system(size: 15))
             Button(game.lang == "fr" ? "Charger les thèmes" : "Load themes") { game.loadCategories() }
                 .font(.system(size: 15, weight: .bold)).frame(minHeight: 44)
-        }.foregroundColor(.white).padding(.vertical, 16)
-    }
-}
-
-struct NativeTopicDetail: View {
-    @EnvironmentObject var game: GameSocket
-    let category: Category
-    @State private var showPlay = false
-    private var fr: Bool { game.lang == "fr" }
-    var body: some View {
-        ScrollView {
-            VStack(spacing: 20) {
-                Text(NativeCatalog.familyTitle(for: category, lang: game.lang).uppercased())
-                    .font(.system(size: 12, weight: .bold)).tracking(1.5)
-                    .foregroundColor(.white.opacity(0.9))
-                Text(NativeCatalog.title(for: category, lang: game.lang))
-                    .font(.system(size: 32, weight: .bold)).tracking(-0.7)
-                    .multilineTextAlignment(.center).foregroundColor(.white)
-                    .accessibilityAddTraits(.isHeader)
-                NativeTopicArt(category: category)
-                    .frame(maxWidth: 320).clipShape(RoundedRectangle(cornerRadius: 20))
-                if fr, let description = NativeCatalog.entry(for: category.key)?.description, !description.isEmpty {
-                    Text(description).font(.system(size: 16)).multilineTextAlignment(.center)
-                        .foregroundColor(.white.opacity(0.95))
-                }
-                HStack(spacing: 24) {
-                    VStack(spacing: 5) {
-                        Text("\(category.count)").font(.system(size: 25, weight: .bold))
-                        Text(fr ? "questions" : "questions").font(.system(size: 13))
-                    }
-                    if let progress = game.topicProgress.first(where: { $0.key == category.key }) {
-                        VStack(spacing: 5) {
-                            Text("\(progress.level)").font(.system(size: 25, weight: .bold))
-                            Text(fr ? "niveau" : "level").font(.system(size: 13))
-                        }
-                    }
-                }.foregroundColor(.white).padding(.vertical, 8)
-                Button { showPlay = true } label: {
-                    Label(fr ? "Jouer" : "Play", systemImage: "bolt.fill")
-                        .font(.system(size: 18, weight: .bold))
-                        .frame(maxWidth: .infinity, minHeight: 56)
-                        .foregroundColor(Theme.ink)
-                        .background(Theme.gold, in: RoundedRectangle(cornerRadius: 18))
-                }.disabled(game.isStarting)
-            }
-            .padding(24).frame(maxWidth: 550).frame(maxWidth: .infinity)
         }
-        .background(Theme.brand.ignoresSafeArea())
-        .tint(.white)
-        .toolbar(.visible, for: .navigationBar)
-        .toolbarBackground(Theme.brand, for: .navigationBar)
-        .toolbarBackground(.visible, for: .navigationBar)
-        .toolbarColorScheme(.dark, for: .navigationBar)
-        .navigationBarTitleDisplayMode(.inline)
-        .sheet(isPresented: $showPlay) { NativePlaySheet(category: category) }
+        .foregroundColor(.white).padding(.vertical, 16)
     }
 }
 
@@ -264,49 +313,80 @@ struct NativePlaySheet: View {
     @EnvironmentObject var game: GameSocket
     @Environment(\.dismiss) private var dismiss
     let category: Category?
+    @State private var roomMode: NativeRoomSheet.Mode?
     private var fr: Bool { game.lang == "fr" }
+
     var body: some View {
-        NavigationStack {
-            VStack(alignment: .leading, spacing: 20) {
-                Text(category.map { NativeCatalog.title(for: $0, lang: game.lang) } ?? (fr ? "À vous de jouer" : "Let's play"))
-                    .font(.system(size: 28, weight: .bold)).tracking(-0.6)
-                Text(fr ? "Choisissez votre façon de jouer." : "Choose how you want to play.")
-                    .font(.system(size: 15)).foregroundColor(Theme.muted)
-                modeButton(solo: false, symbol: "person.2", title: fr ? "Duel rapide" : "Quick duel", subtitle: fr ? "Affrontez d’autres joueurs" : "Challenge other players")
-                modeButton(solo: true, symbol: "person", title: fr ? "En solo" : "Solo", subtitle: fr ? "Entraînez-vous à votre rythme" : "Practice on your own")
-                Spacer(minLength: 0)
-            }
-            .foregroundColor(Theme.ink).padding(24)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            .background(Theme.paper.ignoresSafeArea())
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(fr ? "Fermer" : "Close") { dismiss() }.foregroundColor(Theme.brand)
-                }
+        Group {
+            if let roomMode {
+                NativeRoomSheet(category: roomMode == .create ? category : nil, mode: roomMode)
+            } else {
+                menu
             }
         }
-        .presentationDetents([.medium, .large]).presentationDragIndicator(.visible)
+        .background(Theme.paper.ignoresSafeArea())
         .preferredColorScheme(.light)
+        .presentationDetents([.medium, .large])
+        .presentationDragIndicator(.visible)
     }
-    private func modeButton(solo: Bool, symbol: String, title: String, subtitle: String) -> some View {
-        Button {
-            guard !game.isStarting else { return }
-            game.soloMode = solo
-            dismiss()
-            if let category { game.startWithCategory(category.key) } else { game.quickMatch() }
-        } label: {
-            HStack(spacing: 14) {
-                Image(systemName: symbol).font(.system(size: 24)).frame(width: 36)
-                VStack(alignment: .leading, spacing: 5) {
-                    Text(title).font(.system(size: 18, weight: .bold))
-                    Text(subtitle).font(.system(size: 13))
+
+    private var menu: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 0) {
+                HStack {
+                    Text(category.map { NativeCatalog.title(for: $0, lang: game.lang) }
+                         ?? (fr ? "On joue ?" : "Ready to play?"))
+                        .font(.title2.bold()).tracking(-0.6)
+                        .accessibilityAddTraits(.isHeader)
+                    Spacer(minLength: 0)
+                    Button { dismiss() } label: {
+                        Image(systemName: "xmark").font(.system(size: 16, weight: .semibold))
+                            .foregroundColor(Theme.brand).frame(width: 44, height: 44)
+                    }
+                    .buttonStyle(.plain).accessibilityLabel(fr ? "Fermer" : "Close")
+                }
+                .padding(.bottom, 8)
+                row(fr ? "Duel rapide" : "Quick duel", subtitle: fr ? "Trouver un adversaire" : "Find an opponent") {
+                    start(solo: false)
+                }
+                row("Solo", subtitle: fr ? "Jouer à ton rythme" : "Play at your own pace") {
+                    start(solo: true)
+                }
+                row(fr ? "Inviter un ami" : "Invite a friend", subtitle: fr ? "Créer une partie privée" : "Create a private game") {
+                    roomMode = .create
+                }
+                row(fr ? "J’ai un code" : "I have a code", subtitle: fr ? "Rejoindre une partie" : "Join a game") {
+                    roomMode = .join
+                }
+            }
+            .foregroundColor(Theme.ink)
+            .padding(20).frame(maxWidth: 480).frame(maxWidth: .infinity, alignment: .top)
+        }
+    }
+
+    private func row(_ title: String, subtitle: String, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            HStack(spacing: 12) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(title).font(.body.bold()).foregroundColor(Theme.ink)
+                    Text(subtitle).font(.footnote).foregroundColor(Theme.muted)
                 }
                 Spacer(minLength: 0)
-                Image(systemName: "arrow.right")
+                Image(systemName: "arrow.right").foregroundColor(Theme.brand)
             }
-            .foregroundColor(solo ? Theme.ink : .white).padding(18)
-            .frame(maxWidth: .infinity, minHeight: 80, alignment: .leading)
-            .background(solo ? Theme.gold : Theme.brand, in: RoundedRectangle(cornerRadius: 18))
-        }.buttonStyle(.plain).disabled(game.isStarting)
+            .multilineTextAlignment(.leading)
+            .padding(.vertical, 12)
+            .frame(maxWidth: .infinity, minHeight: 65, alignment: .leading)
+            .overlay(alignment: .top) { Theme.ink.opacity(0.14).frame(height: 1) }
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain).disabled(game.isStarting)
+    }
+
+    private func start(solo: Bool) {
+        guard !game.isStarting else { return }
+        game.soloMode = solo
+        dismiss()
+        if let category { game.startWithCategory(category.key) } else { game.quickMatch() }
     }
 }

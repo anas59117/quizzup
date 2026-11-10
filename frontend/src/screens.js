@@ -14,6 +14,7 @@ import { ShopArt as QV4ShopArt } from './shop-art';
 import { BrandLogo } from './Brand';
 import { getTopicCover } from './topicCovers';
 import { localizedTopicTitle } from './topicTitles';
+import { topicDetailPresentation } from './topicDetailPresentation';
 
 const FEATURED_TOPIC_KEYS = [
   'spider_man', 'harry_potter', 'minecraft', 'rap_fr',
@@ -64,24 +65,6 @@ export function HomeContent({ startWithCategory, onSeeAll, pending, stats, contr
   </main>;
 }
 
-// Short, complete pitches keep the entry into a duel concise in both languages.
-const PREVIEW_SUB = {
-  spider_man: { eyebrow: 'POP CULTURE · MARVEL', desc: 'De Peter Parker à Miles Morales. Le multivers n’aura plus de secrets pour toi.', en: 'From Peter Parker to Miles Morales. Discover every corner of the multiverse.' },
-  harry_potter: { eyebrow: 'POP CULTURE · WIZARDING', desc: 'Poudlard, sortilèges et créatures magiques. Mets tes connaissances à l’épreuve.', en: 'Hogwarts, spells and magical creatures. Put your knowledge to the test.' },
-  marvel: { eyebrow: 'POP CULTURE · MARVEL', desc: 'Avengers, X-Men et tout l’univers Marvel réuni.', en: 'Avengers, X-Men and the entire Marvel universe.' },
-  dc_comics: { eyebrow: 'POP CULTURE · DC', desc: 'Justice League, Batman, Superman : explore l’univers DC Comics.', en: 'Justice League, Batman, Superman: explore the DC Comics universe.' },
-  batman: { eyebrow: 'POP CULTURE · DC', desc: 'Gotham, le Chevalier Noir, Joker et toute la Bat-Famille.', en: 'Gotham, the Dark Knight, the Joker and the whole Bat-Family.' },
-  star_wars: { eyebrow: 'POP CULTURE · LUCASFILM', desc: 'La Force, les Jedi et les Sith. Explore toute la saga galactique.', en: 'The Force, the Jedi and the Sith. Explore the entire galactic saga.' },
-  game_of_thrones: { desc: 'Westeros, dragons, trônes et trahisons.', en: 'Westeros, dragons, thrones and betrayals.' },
-  one_piece: { eyebrow: 'MANGA · SHŌNEN', desc: 'Luffy et son équipage à la recherche du One Piece.', en: 'Join Luffy and his crew on the quest for the One Piece.' },
-  pokemon: { eyebrow: 'POP CULTURE · GAMING', desc: 'Pokémon, régions et évolutions : à toi de tous les reconnaître.', en: 'Pokémon, regions and evolutions: how many can you recognize?' },
-  minecraft: { eyebrow: 'GAMING · SANDBOX', desc: 'Blocs, créatures, biomes et dimensions du jeu culte.', en: 'Blocks, creatures, biomes and dimensions of the iconic game.' },
-  rap_fr: { desc: 'PNL, Booba, Jul, SCH et les grands noms du rap français.', en: 'PNL, Booba, Jul, SCH and the biggest names in French rap.' },
-  werenoi: { desc: 'La discographie et l’univers de Werenoi.', en: 'Explore Werenoi’s discography and musical world.' },
-  ligue_champions: { desc: 'Finales, légendes et records de la compétition européenne.', en: 'Finals, legends and records of European club football.' },
-  foot_fr: { desc: 'Ligue 1, les Bleus et les légendes du football français.', en: 'Ligue 1, Les Bleus and the legends of French football.' },
-};
-
 // Direction: full-width artwork dissolves into one continuous themed canvas.
 // Rules: preserve faces, keep the pitch complete, lead with play and compact progress.
 export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChallenge, pending, friendsOnTopic = [], controls, onCommunity, onLeaderboard, following, onToggleFollow }) {
@@ -89,8 +72,8 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
   const [failedCover, setFailedCover] = useState(null);
   const [loadedCover, setLoadedCover] = useState(null);
   const cover = category ? getTopicCover(category) : null;
-  const tint = cover?.detailTint || ({ spider_man: '#721027', marvel: '#721027', foot_fr: '#142e55', harry_potter: '#58401e', minecraft: '#294d36', rap_fr: '#4d192c', ligue_champions: '#142e55', liga_portugal: '#194c3c' })[category?.key]
-    || ({ football: '#142e55', sport: '#183c49', music: '#4d192c', gaming: '#273c42', cinema: '#42302f', sagas: '#493326', series: '#483049', manga: '#423241', culture: '#263f54' })[category?.family] || '#4b2436';
+  const presentation = topicDetailPresentation(category, cover);
+  const { tint } = presentation;
   useEffect(() => {
     if (!category) return undefined;
     const app = document.querySelector('.app-category-preview');
@@ -107,11 +90,10 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
   }, [category, tint]);
   if (!category) return null;
   const artwork = cover?.src && failedCover !== cover.src ? cover : null;
-  const preview = PREVIEW_SUB[category.key] || { desc: category.desc };
   const title = localizedTopicTitle(category, lang);
   const family = category.family ? famLabel(t, category.family) : 'Quiz';
-  const description = (lang === 'fr' ? preview.desc : preview.en) || category.desc || '';
-  const eyebrow = preview.eyebrow || family;
+  const description = (lang === 'fr' ? presentation.description : presentation.englishDescription) || '';
+  const eyebrow = presentation.eyebrow || family;
   const topicStats = (stats?.topics || []).find(topic => topic.key === category.key) || {};
   const completion = Number.isFinite(topicStats.completion) ? `${topicStats.completion}%` : '—';
   const bestStreak = Number.isFinite(topicStats.bestStreak) ? topicStats.bestStreak : '—';
@@ -119,7 +101,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
   const resolvedImage = artwork && loadedCover?.src === artwork.src ? loadedCover.url : null;
   return (
     <main id="main-content" tabIndex={-1} aria-labelledby="quiz-title" className={`container wide category-preview-v4 cp-detail${artwork ? ' cp-has-artwork' : ''}`} data-topic={category.key} data-family={category.family}
-      style={{ '--cp-tint': tint, '--cp-image': resolvedImage ? `url(${JSON.stringify(resolvedImage)})` : 'none', '--cp-fit': category.key === 'foot_fr' || artwork?.embeddedTitle || artwork?.fit === 'contain' ? 'contain' : 'cover', '--cp-focal': category.key === 'spider_man' ? 'center 20%' : artwork?.focal || 'center' }}>
+      style={{ '--cp-tint': tint, '--cp-image': resolvedImage ? `url(${JSON.stringify(resolvedImage)})` : 'none', '--cp-fit': artwork ? presentation.fit : 'cover', '--cp-focal': artwork || category.key === 'spider_man' ? presentation.focal : 'center' }}>
       <div className="cp-bg" aria-hidden="true" />
       <header className="cp-head">
         <button className="cp-back" onClick={onBack} aria-label={t('back')}><Icon name="arrow" size={18} className="cp-back-ic" /></button>

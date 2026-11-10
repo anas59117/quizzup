@@ -27,6 +27,7 @@ private struct NativeLightning: Shape {
 struct NativePlayerPortrait: View {
     let avatar: String
     var size: CGFloat = 48
+    var cornerRadius: CGFloat?
     private var imageName: String {
         let legacy = ["🦊": "fox", "🤖": "robot", "🧠": "brain", "👻": "ghost", "🐱": "cat", "🦉": "owl", "🐉": "dragon"]
         let known = ["fox", "robot", "brain", "astronaut", "ninja", "dragon", "cat", "owl", "ghost", "lion"]
@@ -41,6 +42,8 @@ struct NativePlayerPortrait: View {
                     if let image = phase.image { image.resizable().scaledToFill() }
                 }
             }
-        }.frame(width: size, height: size).clipShape(Circle()).accessibilityHidden(true)
+        }.frame(width: size, height: size)
+            .clipShape(RoundedRectangle(cornerRadius: cornerRadius ?? size / 2))
+            .accessibilityHidden(true)
     }
 }

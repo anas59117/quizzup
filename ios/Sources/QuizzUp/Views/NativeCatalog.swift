@@ -9,6 +9,14 @@ struct NativeCatalogEntry: Decodable {
     let description: String?
     let assetName: String?
     let icon: String?
+    let focal: String?
+    let detailTint: String?
+    let detailFit: String?
+    let detailFocal: String?
+    let detailSrc: String?
+    let detailEyebrow: String?
+    let detailDescription: String?
+    let detailEnglishDescription: String?
 }
 
 struct NativeTopicFamily: Identifiable {

@@ -21,7 +21,7 @@ enum StoreCaptureConfiguration {
         let args = ProcessInfo.processInfo.arguments
         guard let index = args.firstIndex(of: "--store-capture-screen") else { return nil }
         guard index + 1 < args.count,
-              ["home", "faceoff", "question", "answer", "result", "themes", "messages", "profile"].contains(args[index + 1]),
+              ["home", "waiting", "faceoff", "question", "answer", "result", "themes", "family", "detail", "community", "messages", "profile"].contains(args[index + 1]),
               let languageIndex = args.firstIndex(of: "--store-capture-language"),
               languageIndex + 1 < args.count,
               ["fr", "en"].contains(args[languageIndex + 1]) else {
@@ -80,6 +80,7 @@ enum StoreCaptureConfiguration {
             stats: PlayerStats(games: 27, wins: 16, streak: 2, xp: 1620, level: 4, xpIntoLevel: 420, xpForLevel: 800)
         )
         switch options.screen {
+        case "waiting": game.stage = .waiting
         case "faceoff": game.stage = .roundIntro
         case "question", "answer": game.stage = .question
         case "result": game.stage = .finished

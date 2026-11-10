@@ -61,5 +61,29 @@ final class NativeSocialPayloadTests: XCTestCase {
         let topic = try decode(NativeTopicProgress.self, #"{"key":"minecraft","level":4,"updatedAt":1788163200123}"#)
         XCTAssertEqual(topic.id, "minecraft")
         XCTAssertEqual(topic.level, 4)
+        XCTAssertNil(topic.completion)
+        XCTAssertNil(topic.bestStreak)
+    }
+
+    func testTopicProgressDecodesDetailStatistics() throws {
+        let topic = try decode(NativeTopicProgress.self, #"{"key":"minecraft","level":4,"completion":27,"bestStreak":6}"#)
+        XCTAssertEqual(topic.completion, 27)
+        XCTAssertEqual(topic.bestStreak, 6)
+    }
+
+    func testFeedUpdateKeepsUnscopedHomePostSeparateFromFilteredPosts() throws {
+        let post = try decode(NativeCommunityPost.self, #"{"id":"p_1","authorId":"alice","authorName":"Alice","authorAvatar":"robot","authorFollowed":false,"category":"minecraft","text":"On joue ?","mediaUrl":null,"question":{"prompt":"Quelle pierre ?","answers":["Or","Fer","Cuivre","Diamant"]},"reactions":3,"reacted":true,"commentsCount":1,"createdAt":1788163200123}"#)
+        var state = NativeCommunityState()
+        state.filter = .init(category: "harry_potter")
+        state.loading = true
+        state.receiveFeed([post], filter: .init())
+        XCTAssertTrue(state.posts.isEmpty)
+        XCTAssertTrue(state.loading)
+        XCTAssertEqual(state.latestPost?.id, post.id)
+        XCTAssertEqual(state.latestPost?.question?.answers.count, 4)
+
+        state.receiveFeed([], filter: .init(category: "harry_potter"))
+        XCTAssertFalse(state.loading)
+        XCTAssertEqual(state.latestPost?.id, post.id)
     }
 }
