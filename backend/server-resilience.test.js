@@ -5,12 +5,40 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { isolatedServer } = require('./test-support/isolated-server.cjs');
 
-function connect(port, sockets) {
+function connect(port, sockets, options) {
   return new Promise((resolve, reject) => {
-    const ws = new WebSocket(`ws://127.0.0.1:${port}/ws`);
+    const ws = new WebSocket(`ws://127.0.0.1:${port}/ws`, options);
     sockets.push(ws); ws.on('error', reject); ws.once('open', () => resolve(ws));
   });
 }
+
+test('a native socket can connect with browser origins restricted, and still has to identify', { timeout: 15000 }, async () => {
+  const origin = 'https://quizzup.example';
+  const server = await isolatedServer({ CORS_ORIGIN: origin });
+  const sockets = [];
+  try {
+    const native = await connect(server.port, sockets);
+    const authRequired = new Promise(resolve => native.on('message', raw => {
+      const message = JSON.parse(raw);
+      if (message.type === 'auth_required') resolve(message.code);
+    }));
+    native.send(JSON.stringify({ type: 'solo', category: 'sports' }));
+    assert.equal(await authRequired, 'IDENTIFY_FIRST');
+    await connect(server.port, sockets, { origin });
+    for (const blockedOrigin of ['https://foreign.example', 'null']) {
+      const blocked = new WebSocket(`ws://127.0.0.1:${server.port}/ws`, { origin: blockedOrigin });
+      sockets.push(blocked);
+      const status = await new Promise((resolve, reject) => {
+        blocked.on('error', () => {});
+        blocked.once('open', () => reject(new Error(`Unexpected allowed origin: ${blockedOrigin}`)));
+        blocked.once('unexpected-response', (_, response) => {
+          response.resume(); blocked.terminate(); resolve(response.statusCode);
+        });
+      });
+      assert.equal(status, 403);
+    }
+  } finally { sockets.forEach(ws => ws.terminate()); await server.close(); }
+});
 
 test('shutdown drains HTTP authentication and refuses late account mutations', { timeout: 15000 }, async () => {
   const server = await isolatedServer({}, {}, false, [path.join(__dirname, 'test-support/slow-firebase.cjs')]);

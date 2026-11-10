@@ -69,6 +69,9 @@ const allowedOrigins = String(process.env.CORS_ORIGIN || '')
 const allowAnyOrigin = allowedOrigins.includes('*');
 
 function isAllowedOrigin(origin) {
+  // Native clients may omit Origin. Browser clients still need an allowed
+  // origin, and every socket must identify before using account/game actions.
+  if (origin === undefined) return true;
   if (!allowedOrigins.length || allowAnyOrigin) return true;
   return !!origin && allowedOrigins.includes(normalizeOrigin(origin));
 }
