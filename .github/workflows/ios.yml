@@ -148,6 +148,7 @@ jobs:
                     CURRENT_PROJECT_VERSION: "$GITHUB_RUN_NUMBER"
           EOF
           xcodegen generate --spec .archive-signing.yml
+          /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $GITHUB_RUN_NUMBER" Sources/QuizzUp/Resources/Info.plist
 
       - name: Resolve packages
         run: xcodebuild -resolvePackageDependencies -project QuizzUp.xcodeproj -scheme QuizzUp
@@ -167,6 +168,12 @@ jobs:
           APP_STORE_API_KEY_ID: ${{ secrets.APP_STORE_API_KEY_ID }}
           APP_STORE_API_ISSUER: ${{ secrets.APP_STORE_API_ISSUER }}
         run: |
+          APP_PLIST="$RUNNER_TEMP/QuizzUp.xcarchive/Products/Applications/QuizzUp.app/Info.plist"
+          ARCHIVED_BUILD=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$APP_PLIST")
+          test "$ARCHIVED_BUILD" = "$GITHUB_RUN_NUMBER" || {
+            echo "Archive has build $ARCHIVED_BUILD, expected $GITHUB_RUN_NUMBER"
+            exit 1
+          }
           test -n "$APP_STORE_API_KEY_B64" && test -n "$APP_STORE_API_KEY_ID" && test -n "$APP_STORE_API_ISSUER"
           KEY_PATH="$RUNNER_TEMP/AuthKey_$APP_STORE_API_KEY_ID.p8"
           echo "$APP_STORE_API_KEY_B64" | base64 --decode > "$KEY_PATH"
