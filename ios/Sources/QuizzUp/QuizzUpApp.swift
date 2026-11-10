@@ -21,7 +21,6 @@ struct QuizzUpApp: App {
             ContentView()
                 .environmentObject(game)
                 .environmentObject(auth)
-                .preferredColorScheme(.dark)
                 #if DEBUG && STORE_CAPTURE
                 .onAppear { StoreCaptureConfiguration.markReady() }
                 #endif

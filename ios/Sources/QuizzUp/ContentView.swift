@@ -18,6 +18,7 @@ struct ContentView: View {
             }
         }
         .foregroundColor(Theme.text)
+        .preferredColorScheme(game.stage == .home ? nil : .dark)
         .onAppear { game.loadCategories() }
     }
 }

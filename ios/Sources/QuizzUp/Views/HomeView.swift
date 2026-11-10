@@ -98,6 +98,7 @@ struct HomeView: View {
             }
         }
         .tint(Theme.brand)
+        .preferredColorScheme(tab == .messages || game.conversationOpen ? .light : .dark)
         .safeAreaInset(edge: .bottom, spacing: 0) { if !game.conversationOpen { dock } }
         .sheet(isPresented: $showSettings) { NativeSettingsView() }
         .sheet(isPresented: $showPlay) { NativePlaySheet(category: nil) }
