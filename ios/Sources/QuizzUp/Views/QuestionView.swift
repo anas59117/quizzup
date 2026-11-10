@@ -86,7 +86,7 @@ struct QuestionView: View {
         .padding(.bottom, compact ? 12 : 24)
         .frame(minHeight: minimumHeight, alignment: hasPhoto ? .top : .center)
         .padding(.leading, 16)
-        .padding(.trailing, max(16, game.opponents.count * 9 + 7))
+        .padding(.trailing, CGFloat(max(16, game.opponents.count * 9 + 7)))
         .overlay(alignment: .leading) {
             NativeScoreRail(score: game.score, maximum: scoreMaximum(question), color: NativeDuelColors.mine)
         }
