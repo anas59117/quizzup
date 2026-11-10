@@ -366,9 +366,10 @@ private struct NativeProfileEditor: View {
         .tint(Theme.brand).preferredColorScheme(.light).interactiveDismissDisabled(busy)
         .onAppear { name = game.name; avatar = game.avatar; game.socialError = nil }
         .task(id: photoItem) {
-            guard let photoItem else { return }
+            guard let selection = photoItem else { return }
+            photoData = nil
             do {
-                let data = try await NativeSocialPhoto.prepare(photoItem)
+                let data = try await NativeSocialPhoto.prepare(selection)
                 guard !Task.isCancelled else { return }
                 photoData = data
                 photoError = nil
