@@ -281,13 +281,19 @@ private struct NativeHomeContent: View {
         var seen = Set<String>()
         return (keys.compactMap { byKey[$0] } + game.categories).filter { seen.insert($0.key).inserted }
     }
+    private var personal: [Category] { Array(ordered.filter { personalKeys.contains($0.key) }.prefix(4)) }
+    private var primary: [Category] { personal.isEmpty ? Array(ordered.prefix(4)) : personal }
+    private var discoveries: [Category] {
+        let displayed = Set(primary.map(\.key))
+        return Array(ordered.filter { !personalKeys.contains($0.key) && !displayed.contains($0.key) }.prefix(2))
+    }
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
                 VStack(alignment: .leading, spacing: 9) {
                     HStack {
-                        NativeSectionTitle(title: fr ? "Mes thèmes" : "My themes")
+                        NativeSectionTitle(title: personal.isEmpty ? (fr ? "Pour commencer" : "Get started") : (fr ? "Mes thèmes" : "My themes"))
                         Spacer(minLength: 6)
                         Button(action: onSeeAll) {
                             HStack(spacing: 5) {
@@ -298,7 +304,7 @@ private struct NativeHomeContent: View {
                         }
                         .buttonStyle(.plain).foregroundColor(.white)
                     }
-                    if personalKeys.isEmpty {
+                    if personal.isEmpty {
                         Text(fr ? "Quelques idées pour commencer" : "Suggestions to get started")
                             .font(.system(size: 12)).foregroundColor(Color(hex: 0xFFF1EC))
                     }
@@ -306,12 +312,11 @@ private struct NativeHomeContent: View {
                         NativeCatalogEmptyView()
                     } else {
                         LazyVGrid(columns: columns, spacing: 12) {
-                            ForEach(Array(ordered.prefix(4))) { category in
+                            ForEach(primary) { category in
                                 NavigationLink(value: NativeBrowseRoute.topic(category)) {
                                     NativeTopicTile(
                                         category: category,
-                                        level: game.topicProgress.first { $0.key == category.key }?.level,
-                                        suggested: !personalKeys.isEmpty && !personalKeys.contains(category.key)
+                                        level: game.topicProgress.first { $0.key == category.key }?.level
                                     )
                                 }
                                 .buttonStyle(.plain)
@@ -319,11 +324,11 @@ private struct NativeHomeContent: View {
                         }
                     }
                 }
-                if ordered.count > 4 {
+                if !discoveries.isEmpty {
                     VStack(alignment: .leading, spacing: 9) {
                         NativeSectionTitle(title: fr ? "À découvrir" : "Discover")
                         LazyVGrid(columns: columns, spacing: 12) {
-                            ForEach(Array(ordered.dropFirst(4).prefix(2))) { category in
+                            ForEach(discoveries) { category in
                                 NavigationLink(value: NativeBrowseRoute.topic(category)) {
                                     NativeTopicTile(category: category, landscape: true)
                                 }

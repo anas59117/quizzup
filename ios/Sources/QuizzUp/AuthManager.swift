@@ -106,7 +106,7 @@ final class AuthManager: NSObject, ObservableObject {
     private var currentAppleNonce: String?
 
     func signInWithApple() {
-        guard !StoreCaptureConfiguration.enabled else { return }
+        guard !StoreCaptureConfiguration.enabled, !isAuthenticating else { return }
         let nonce = Self.randomNonceString()
         currentAppleNonce = nonce
         let request = ASAuthorizationAppleIDProvider().createRequest()
@@ -124,7 +124,7 @@ final class AuthManager: NSObject, ObservableObject {
     // MARK: - Google Sign-In
 
     func signInWithGoogle() {
-        guard !StoreCaptureConfiguration.enabled else { return }
+        guard !StoreCaptureConfiguration.enabled, !isAuthenticating else { return }
         guard let clientID = FirebaseApp.app()?.options.clientID else {
             authError = "Missing GoogleService-Info.plist"
             return
@@ -142,7 +142,7 @@ final class AuthManager: NSObject, ObservableObject {
                 guard let self else { return }
                 self.isAuthenticating = false
                 if let error {
-                    self.authError = error.localizedDescription
+                    if (error as NSError).code != -5 { self.authError = self.message(for: error) }
                     return
                 }
                 guard let googleUser = result?.user, let idToken = googleUser.idToken?.tokenString else {
@@ -158,12 +158,68 @@ final class AuthManager: NSObject, ObservableObject {
     }
 
     private func finishSignIn(with credential: AuthCredential) async {
+        isAuthenticating = true
+        defer { isAuthenticating = false }
         do {
             let result = try await Auth.auth().signIn(with: credential)
             user = result.user
         } catch {
-            authError = error.localizedDescription
+            authError = message(for: error)
         }
+    }
+
+    // MARK: - Email and password (same Firebase identity as other providers)
+
+    func signInWithEmail(_ email: String, password: String, creatingAccount: Bool) async -> Bool {
+        guard !StoreCaptureConfiguration.enabled, !isAuthenticating, user == nil else { return false }
+        isAuthenticating = true
+        authError = nil
+        defer { isAuthenticating = false }
+        do {
+            let result: AuthDataResult
+            if creatingAccount {
+                result = try await Auth.auth().createUser(withEmail: email, password: password)
+            } else {
+                result = try await Auth.auth().signIn(withEmail: email, password: password)
+            }
+            user = result.user
+            return true
+        } catch {
+            authError = message(for: error)
+            return false
+        }
+    }
+
+    func resetPassword(for email: String, language: String) async -> Bool {
+        guard !StoreCaptureConfiguration.enabled, !isAuthenticating, user == nil else { return false }
+        isAuthenticating = true
+        authError = nil
+        defer { isAuthenticating = false }
+        Auth.auth().languageCode = language
+        do {
+            try await Auth.auth().sendPasswordReset(withEmail: email)
+            return true
+        } catch {
+            if AuthErrorCode.Code(rawValue: (error as NSError).code) == .userNotFound { return true }
+            authError = message(for: error)
+            return false
+        }
+    }
+
+    fileprivate func message(for error: Error) -> String {
+        let key: String
+        switch AuthErrorCode.Code(rawValue: (error as NSError).code) {
+        case .invalidEmail: key = "emailInvalid"
+        case .weakPassword: key = "emailWeakPassword"
+        case .emailAlreadyInUse: key = "emailAlreadyInUse"
+        case .invalidCredential, .wrongPassword, .userNotFound: key = "emailCredentialsFailed"
+        case .tooManyRequests: key = "authTooManyRequests"
+        case .networkError: key = "serverUnreachable"
+        case .operationNotAllowed: key = "authUnavailable"
+        case .userDisabled: key = "authAccountUnavailable"
+        default: key = "signInFailed"
+        }
+        return L10n.t(key, lang: L10n.detectDefaultLang())
     }
 
     // MARK: - Nonce helpers (required by Sign in with Apple + Firebase, to
@@ -229,7 +285,7 @@ extension AuthManager: ASAuthorizationControllerDelegate, ASAuthorizationControl
             // A user tapping "Cancel" on the system sheet also lands here —
             // don't surface that as a scary error message.
             if (error as? ASAuthorizationError)?.code != .canceled {
-                authError = error.localizedDescription
+                authError = message(for: error)
             }
         }
     }

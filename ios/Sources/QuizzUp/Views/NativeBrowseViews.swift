@@ -11,6 +11,7 @@ struct NativeSectionTitle: View {
 }
 
 struct NativeTopicArt: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @EnvironmentObject var game: GameSocket
     let category: Category
     var ratio: CGFloat? = 1
@@ -18,6 +19,7 @@ struct NativeTopicArt: View {
     var landscape = false
     var tint = Color(hex: 0x241B27)
     @State private var remoteArtwork: (url: URL, image: UIImage)?
+    @State private var failedURL: URL?
     private var entry: NativeCatalogEntry? { NativeCatalog.entry(for: category.key) }
     private var fit: Bool { (detail ? entry?.detailFit ?? entry?.fit : entry?.fit) == "contain" }
     private var bundledArtwork: UIImage? {
@@ -52,20 +54,27 @@ struct NativeTopicArt: View {
                         picture(image, in: size, contain: false)
                             .scaleEffect(1.06).blur(radius: 16).opacity(0.45)
                     }
-                    picture(image, in: size, contain: fit)
-                } else {
+                    picture(image, in: size, contain: fit).transition(.opacity)
+                } else if artworkURL == nil || failedURL == artworkURL {
                     fallback
+                } else {
+                    Image(systemName: "photo").font(.system(size: 30, weight: .ultraLight))
+                        .foregroundColor(.white.opacity(0.18))
                 }
             }
             .frame(width: size.width, height: size.height)
             .clipped()
         }
         .aspectRatio(ratio, contentMode: .fit)
+        .animation(reduceMotion ? nil : .easeOut(duration: 0.18), value: artwork != nil)
         .accessibilityHidden(true)
         .task(id: artworkURL) {
-            guard let url = artworkURL, remoteArtwork?.url != url,
-                  let image = await NativeImageCache.shared.load(url), !Task.isCancelled else { return }
-            remoteArtwork = (url, image)
+            guard let url = artworkURL, remoteArtwork?.url != url else { return }
+            failedURL = nil
+            let image = await NativeImageCache.shared.load(url)
+            guard !Task.isCancelled else { return }
+            if let image { remoteArtwork = (url, image) }
+            else { failedURL = url }
         }
     }
 
@@ -198,6 +207,11 @@ struct NativeThemesView: View {
                                 NativeTopicTile(category: category)
                             }
                             .buttonStyle(.plain)
+                            .onAppear {
+                                if let index = filtered.firstIndex(where: { $0.key == category.key }) {
+                                    NativeImageCache.shared.prefetchCovers(Array(filtered.dropFirst(index + 1).prefix(4)))
+                                }
+                            }
                         }
                     }
                 }

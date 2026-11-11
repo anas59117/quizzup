@@ -1,13 +1,14 @@
 import SwiftUI
 
 struct NativeBrandLogo: View {
+    var scale: CGFloat = 1
     var body: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: 8 * scale) {
             ZStack {
-                Circle().stroke(Color.white, lineWidth: 2.3).padding(3)
+                Circle().stroke(Color.white, lineWidth: 2.3 * scale).padding(3 * scale)
                 NativeLightning().fill(Color.white)
-            }.frame(width: 36, height: 36)
-            Text("QuizzUp").font(.system(size: 27, weight: .heavy)).tracking(-1.1)
+            }.frame(width: 36 * scale, height: 36 * scale)
+            Text("QuizzUp").font(.system(size: 27 * scale, weight: .heavy)).tracking(-1.1 * scale)
                 .lineLimit(1).fixedSize(horizontal: true, vertical: false)
         }.foregroundColor(.white).accessibilityElement(children: .ignore).accessibilityLabel("QuizzUp")
     }

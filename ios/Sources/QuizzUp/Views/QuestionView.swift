@@ -107,8 +107,8 @@ struct QuestionView: View {
     private func duelHeader(_ question: Question, compact: Bool) -> some View {
         let group = game.opponents.count > 1
         let timer = NativeDuelTimer(seconds: game.timeLeft, limit: question.timeLimit,
-                                   revealing: game.reveal != nil, compact: compact)
-            .accessibilityLabel(game.t("time"))
+                                   revealing: game.reveal != nil, waiting: game.answerAccepted, compact: compact)
+            .accessibilityLabel(game.answerAccepted && game.reveal == nil ? copy("En attente de l’adversaire", "Waiting for your opponent") : game.t("time"))
 
         return VStack(spacing: 8) {
             if group { timer }
