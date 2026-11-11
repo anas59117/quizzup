@@ -24,7 +24,7 @@ enum StoreCaptureConfiguration {
             "home", "home-empty", "home-return", "waiting", "faceoff", "question", "question-photo", "answer", "result",
             "themes", "family", "detail", "detail-scrolled", "community", "community-compose", "settings",
             "messages", "messages-empty", "profile", "profile-empty",
-            "auth", "auth-restoring", "auth-email", "auth-email-keyboard",
+            "auth", "auth-restoring", "auth-email", "auth-email-keyboard", "auth-email-create", "auth-email-reset",
         ]
         guard index + 1 < args.count,
               screens.contains(args[index + 1]),
@@ -103,7 +103,7 @@ enum StoreCaptureConfiguration {
             stats: PlayerStats(games: 27, wins: 16, streak: 2, xp: 1620, level: 4, xpIntoLevel: 420, xpForLevel: 800)
         )
         switch options.screen {
-        case "auth", "auth-restoring", "auth-email", "auth-email-keyboard": game.stage = .authGate
+        case let screen where screen.hasPrefix("auth"): game.stage = .authGate
         case "waiting": game.stage = .waiting
         case "faceoff": game.stage = .roundIntro
         case "question", "question-photo", "answer": game.stage = .question

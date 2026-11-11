@@ -37,7 +37,7 @@ struct EmailSignInView: View {
                     }
                     VStack(alignment: .leading, spacing: 8) {
                         Text(game.t("emailAddress")).font(.subheadline.weight(.semibold))
-                        TextField("name@example.com", text: $email)
+                        TextField("", text: $email, prompt: Text("name@example.com").foregroundColor(Theme.muted))
                             .keyboardType(.emailAddress).textContentType(.emailAddress)
                             .textInputAutocapitalization(.never).autocorrectionDisabled()
                             .focused($focused, equals: .email).submitLabel(resetting ? .send : .next)
@@ -84,10 +84,14 @@ struct EmailSignInView: View {
                         .opacity(canSubmit ? 1 : 0.55)
                     }
                     .disabled(!canSubmit)
-                    Button(game.t(resetting ? "emailBackToSignIn" : "emailForgotPassword")) {
-                        resetting.toggle(); resetSent = false; auth.authError = nil; focused = .email
+                    if !creatingAccount || resetting {
+                        Button(game.t(resetting ? "emailBackToSignIn" : "emailForgotPassword")) {
+                            resetting.toggle()
+                            if !resetting { creatingAccount = false }
+                            resetSent = false; auth.authError = nil; focused = .email
+                        }
+                        .font(.subheadline.weight(.semibold)).foregroundColor(Theme.brand).frame(minHeight: 44)
                     }
-                    .font(.subheadline.weight(.semibold)).foregroundColor(Theme.brand).frame(minHeight: 44)
                 }
                 .disabled(auth.isAuthenticating)
                 .padding(24).frame(maxWidth: 480).frame(maxWidth: .infinity)
@@ -96,11 +100,17 @@ struct EmailSignInView: View {
             .navigationTitle(game.t("signInEmail")).navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button(game.t("cancel")) { dismiss() }.disabled(auth.isAuthenticating)
+                    Button { dismiss() } label: {
+                        Image(systemName: "xmark").frame(width: 44, height: 44)
+                    }
+                    .accessibilityLabel(game.t("cancel")).disabled(auth.isAuthenticating)
                 }
                 ToolbarItemGroup(placement: .keyboard) {
                     Spacer()
-                    Button(game.t("emailHideKeyboard")) { focused = nil }
+                    Button { focused = nil } label: {
+                        Image(systemName: "keyboard.chevron.compact.down").frame(width: 44, height: 44)
+                    }
+                    .accessibilityLabel(game.t("emailHideKeyboard"))
                 }
             }
         }
@@ -109,8 +119,11 @@ struct EmailSignInView: View {
         .onChange(of: creatingAccount) { _ in
             auth.authError = nil; confirmation = ""; focused = nil
         }
+        .onChange(of: email) { _ in resetSent = false }
         .onAppear {
             #if DEBUG && STORE_CAPTURE
+            if StoreCaptureConfiguration.options?.screen == "auth-email-create" { creatingAccount = true }
+            if StoreCaptureConfiguration.options?.screen == "auth-email-reset" { resetting = true }
             if StoreCaptureConfiguration.options?.screen == "auth-email-keyboard" {
                 email = "alex@example.com"
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { focused = .password }
