@@ -73,12 +73,17 @@ struct HomeView: View {
             #if DEBUG && STORE_CAPTURE
             switch StoreCaptureConfiguration.options?.screen {
             case "themes", "family": tab = .themes
-            case "messages": tab = .messages
+            case "messages", "messages-empty": tab = .messages
             case "profile", "profile-empty": tab = .profile
             case "community": path = [.community(nil)]
             case "detail":
                 if let category = game.categories.first(where: { $0.key == "spider_man" }) {
                     path = [.topic(category)]
+                }
+            case "home-return":
+                if let category = game.categories.first(where: { $0.key == "ligue_champions" }) {
+                    path = [.topic(category)]
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) { closeRoute() }
                 }
             default: break
             }

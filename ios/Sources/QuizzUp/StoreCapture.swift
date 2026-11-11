@@ -21,7 +21,7 @@ enum StoreCaptureConfiguration {
         let args = ProcessInfo.processInfo.arguments
         guard let index = args.firstIndex(of: "--store-capture-screen") else { return nil }
         guard index + 1 < args.count,
-              ["home", "waiting", "faceoff", "question", "answer", "result", "themes", "family", "detail", "community", "messages", "profile"].contains(args[index + 1]),
+              ["home", "home-empty", "home-return", "waiting", "faceoff", "question", "answer", "result", "themes", "family", "detail", "community", "messages", "messages-empty", "profile", "profile-empty"].contains(args[index + 1]),
               let languageIndex = args.firstIndex(of: "--store-capture-language"),
               languageIndex + 1 < args.count,
               ["fr", "en"].contains(args[languageIndex + 1]) else {
@@ -51,7 +51,7 @@ enum StoreCaptureConfiguration {
         game.friends = [NativeFriend(id: "store-demo-camille", name: "Camille", avatar: "owl", online: true), NativeFriend(id: "store-demo-sam", name: "Sam", avatar: "astronaut", online: false)]
         let message = NativeMessage(id: "store-message", fromId: "store-demo-camille", toId: "store-demo-alex", kind: "text", text: options.language == "fr" ? "On se fait une revanche ?" : "Ready for a rematch?", createdAt: 1793920000000)
         game.conversations = [NativeConversation(peer: game.friends[0], lastMessage: message, unread: 1)]
-        if options.screen == "profile-empty" {
+        if ["home-empty", "home-return", "messages-empty", "profile-empty"].contains(options.screen) {
             game.topicProgress = []
             game.followedThemes = []
             game.friends = []
@@ -98,7 +98,8 @@ enum StoreCaptureConfiguration {
     @MainActor
     static func markReady() {
         guard let options else { return }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        let delay = options.screen == "home-return" ? 3.0 : 1.0
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             let receipt: [String: String] = ["screen": options.screen, "language": options.language]
             do {
