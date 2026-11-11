@@ -11,7 +11,7 @@ const visualReview=process.argv.includes('--visual-review');
 const captureProfiles=visualReview ? profiles.filter(profile=>profile.type==='iPhone-15') : profiles;
 const captureLanguages=visualReview ? ['fr'] : ['fr','en'];
 const captureScreens=visualReview
- ? ['home','themes','family','detail','messages','community','profile','waiting','faceoff','question','answer','result']
+ ? ['home','themes','family','detail','messages','community','profile','profile-empty','waiting','faceoff','question','answer','result']
  : scenarios;
 const rawDirectory=path.join(process.env.RUNNER_TEMP||require('node:os').tmpdir(),'quizzup-native-capture-raw');
 fs.mkdirSync(output,{recursive:true});fs.mkdirSync(rawDirectory,{recursive:true});

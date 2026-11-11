@@ -33,6 +33,7 @@ targets:
       path: Sources/QuizzUp/Resources/Info.plist
       properties:
         UILaunchScreen: {}
+        ITSAppUsesNonExemptEncryption: false
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait
         # Google Sign-In's OAuth redirect comes back through this custom URL

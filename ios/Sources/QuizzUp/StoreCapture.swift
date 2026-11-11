@@ -51,6 +51,13 @@ enum StoreCaptureConfiguration {
         game.friends = [NativeFriend(id: "store-demo-camille", name: "Camille", avatar: "owl", online: true), NativeFriend(id: "store-demo-sam", name: "Sam", avatar: "astronaut", online: false)]
         let message = NativeMessage(id: "store-message", fromId: "store-demo-camille", toId: "store-demo-alex", kind: "text", text: options.language == "fr" ? "On se fait une revanche ?" : "Ready for a rematch?", createdAt: 1793920000000)
         game.conversations = [NativeConversation(peer: game.friends[0], lastMessage: message, unread: 1)]
+        if options.screen == "profile-empty" {
+            game.topicProgress = []
+            game.followedThemes = []
+            game.friends = []
+            game.conversations = []
+            game.stats = PlayerStats(games: 0, wins: 0, streak: 0, xp: 0, level: 1, xpIntoLevel: 0, xpForLevel: 200)
+        }
         game.opponents = [Opponent(id: "store-demo-camille", name: "Camille", avatar: "owl", score: 28)]
         game.score = options.screen == "result" ? 118 : 34
         game.totalRounds = 6

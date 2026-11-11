@@ -15,6 +15,7 @@ struct NativeTopicArt: View {
     let category: Category
     var ratio: CGFloat? = 1
     var detail = false
+    var landscape = false
     var tint = Color(hex: 0x241B27)
     @State private var remoteArtwork: (url: URL, image: UIImage)?
     private var entry: NativeCatalogEntry? { NativeCatalog.entry(for: category.key) }
@@ -36,7 +37,7 @@ struct NativeTopicArt: View {
         let tokens = value?.split(separator: " ") ?? []
         return CGPoint(
             x: position(tokens.first, leading: "left", trailing: "right"),
-            y: position(tokens.dropFirst().first, leading: "top", trailing: "bottom")
+            y: landscape ? 0 : position(tokens.dropFirst().first, leading: "top", trailing: "bottom")
         )
     }
 
@@ -108,7 +109,7 @@ struct NativeTopicTile: View {
     private var title: String { NativeCatalog.title(for: category, lang: game.lang) }
 
     var body: some View {
-        NativeTopicArt(category: category, ratio: landscape ? 1.65 : 1)
+        NativeTopicArt(category: category, ratio: landscape ? 1.65 : 1, landscape: landscape)
             .overlay(alignment: .bottom) {
                 LinearGradient(colors: [.clear, .black.opacity(0.83)], startPoint: .top, endPoint: .bottom)
                     .frame(height: landscape ? 64 : 80).allowsHitTesting(false)

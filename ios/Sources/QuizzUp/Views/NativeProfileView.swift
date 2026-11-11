@@ -9,7 +9,6 @@ struct NativeProfileView: View {
     }
 
     @EnvironmentObject var game: GameSocket
-    @EnvironmentObject var auth: AuthManager
     @State private var showSettings = false
     @State private var showEditor = false
     @State private var roomSheet: NativeRoomSheet.Mode?
@@ -25,6 +24,7 @@ struct NativeProfileView: View {
     private var level: Int { game.stats?.level ?? 1 }
     private var xpGoal: Int { max(0, game.stats?.xpForLevel ?? 0) }
     private var xp: Int { max(0, min(xpGoal, game.stats?.xpIntoLevel ?? 0)) }
+    private var newPlayer: Bool { (game.stats?.games ?? 0) == 0 && specialties.isEmpty }
     private var specialties: [Specialty] {
         let categories = Dictionary(game.categories.map { ($0.key, $0) }, uniquingKeysWith: { first, _ in first })
         return game.topicProgress.compactMap { topic in
@@ -42,15 +42,15 @@ struct NativeProfileView: View {
                         if let error = game.socialError, !showEditor {
                             Text(error).font(.system(size: 14)).foregroundColor(.white)
                         }
-                        if (game.stats?.games ?? 0) == 0 && specialties.isEmpty { firstQuiz }
-                        if let email = auth.user?.email { account(email: email) }
+                        if newPlayer { firstQuiz }
                         if !specialties.isEmpty { themes }
                         friends.id("profile-friends")
-                        statistics
+                        if !newPlayer { statistics }
                     }
                     .padding(.horizontal, 16).padding(.top, 4).padding(.bottom, 24)
                     .frame(maxWidth: 600).frame(maxWidth: .infinity)
                 }
+                .clipped()
             }
         }
         .background(Theme.brand.ignoresSafeArea())
@@ -113,7 +113,7 @@ struct NativeProfileView: View {
                         .font(.system(size: 12).monospacedDigit()).foregroundColor(Theme.muted)
                 }
             }
-            if xpGoal > 0 {
+            if xpGoal > 0 && !newPlayer {
                 GeometryReader { geometry in
                     Capsule().fill(soft).overlay(alignment: .leading) {
                         Capsule().fill(Theme.brand).frame(width: geometry.size.width * CGFloat(xp) / CGFloat(xpGoal))
@@ -122,7 +122,7 @@ struct NativeProfileView: View {
                 .frame(height: 8).padding(.top, 8).accessibilityHidden(true)
                 Text(fr ? "\((xpGoal - xp).formatted()) XP avant le niveau \(level + 1)" : "\((xpGoal - xp).formatted()) XP to level \(level + 1)")
                     .font(.system(size: 12)).foregroundColor(Theme.muted).padding(.top, 6)
-            } else {
+            } else if !newPlayer {
                 Text(fr ? "Joue pour gagner de l’XP." : "Play to earn XP.")
                     .font(.system(size: 12)).foregroundColor(Theme.muted).padding(.top, 6)
             }
@@ -162,16 +162,6 @@ struct NativeProfileView: View {
             }
         }.padding(15).frame(maxWidth: .infinity, alignment: .leading)
             .foregroundColor(Theme.ink).background(Theme.paper, in: RoundedRectangle(cornerRadius: 16))
-    }
-
-    private func account(email: String) -> some View {
-        HStack(alignment: .top, spacing: 8) {
-            Image(systemName: "checkmark").font(.system(size: 15, weight: .bold)).accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
-                Text(fr ? "Compte connecté" : "Account connected").font(.system(size: 12, weight: .bold))
-                Text(email).font(.system(size: 12)).textSelection(.enabled)
-            }
-        }.foregroundColor(.white).padding(.horizontal, 4)
     }
 
     private var themes: some View {
@@ -229,7 +219,7 @@ struct NativeProfileView: View {
             if game.friends.isEmpty {
                 Text(fr ? "Tes amis apparaîtront ici" : "Your friends will appear here")
                     .font(.system(size: 13, weight: .bold))
-                Text(fr ? "Crée un salon privé et partage son code avec un ami, ou rejoins le sien. Après votre partie, ajoutez-vous pour vous retrouver ici." : "Create a private room and share its code with a friend, or join theirs. After your match, add each other to find them here.")
+                Text(fr ? "Invite un ami pour votre premier duel." : "Invite a friend for your first duel together.")
                     .font(.system(size: 13)).foregroundColor(Theme.muted).fixedSize(horizontal: false, vertical: true)
             } else {
                 ForEach(game.friends) { friend in

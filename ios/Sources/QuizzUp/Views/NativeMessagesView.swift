@@ -5,7 +5,6 @@ struct NativeMessagesView: View {
     @FocusState private var searchFocused: Bool
     @State private var search = ""
     @State private var roomSheet: NativeRoomSheet.Mode?
-    var onBack: () -> Void = {}
     var onInvite: (() -> Void)?
     var onJoin: (() -> Void)?
     var preferredCategory: Category?
@@ -25,10 +24,11 @@ struct NativeMessagesView: View {
     var body: some View {
         VStack(spacing: 0) {
             header
+            searchField
+                .padding(.horizontal, 20).padding(.bottom, 16)
             Rectangle().fill(line).frame(height: 1)
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
-                    searchField
                     if let error = game.socialError {
                         Text(error).font(.subheadline).foregroundColor(accent).padding(.top, 12)
                             .accessibilityAddTraits(.updatesFrequently)
@@ -58,6 +58,7 @@ struct NativeMessagesView: View {
                 .frame(maxWidth: 600).frame(maxWidth: .infinity)
             }
             .scrollDismissesKeyboard(.interactively)
+            .clipped()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Theme.paper.ignoresSafeArea())
@@ -72,12 +73,6 @@ struct NativeMessagesView: View {
 
     private var header: some View {
         HStack(spacing: 8) {
-            Button(action: onBack) {
-                Image(systemName: "arrow.left").font(.system(size: 17, weight: .medium))
-                    .frame(width: 44, height: 44).contentShape(Rectangle())
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel(fr ? "Retour" : "Back")
             Text("Messages").font(.system(size: 28, weight: .bold)).tracking(-0.8)
                 .accessibilityAddTraits(.isHeader)
             Spacer()

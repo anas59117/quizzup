@@ -44,8 +44,51 @@ struct HomeView: View {
         return category
     }
     private var unread: Int { game.conversations.reduce(0) { $0 + $1.unread } }
+    private var browseBackground: Color {
+        if let category = visibleTopic {
+            let value = NativeCatalog.entry(for: category.key)?.detailTint ?? "#4B2436"
+            return Color(hex: UInt32(value.dropFirst(), radix: 16) ?? 0x4B2436)
+        }
+        return tab == .messages || game.conversationOpen ? Theme.paper : Theme.brand
+    }
 
     var body: some View {
+        VStack(spacing: 0) {
+            navigation
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            if !game.conversationOpen {
+                dock.id(visibleTopic?.key ?? "browse")
+            }
+        }
+        .background(browseBackground.ignoresSafeArea())
+        .tint(Theme.brand)
+        .preferredColorScheme(tab == .messages || game.conversationOpen ? .light : .dark)
+        .sheet(isPresented: $showSettings) { NativeSettingsView() }
+        .sheet(isPresented: $showPlay) { NativePlaySheet(category: nil) }
+        .sheet(isPresented: $showRoom) {
+            NativeRoomSheet(category: nil, mode: roomMode)
+                .presentationDetents([.medium, .large]).presentationDragIndicator(.visible)
+        }
+        .onAppear {
+            #if DEBUG && STORE_CAPTURE
+            switch StoreCaptureConfiguration.options?.screen {
+            case "themes", "family": tab = .themes
+            case "messages": tab = .messages
+            case "profile", "profile-empty": tab = .profile
+            case "community": path = [.community(nil)]
+            case "detail":
+                if let category = game.categories.first(where: { $0.key == "spider_man" }) {
+                    path = [.topic(category)]
+                }
+            default: break
+            }
+            #endif
+            if game.categories.isEmpty { game.loadCategories() }
+            game.requestProfile()
+        }
+    }
+
+    private var navigation: some View {
         NavigationStack(path: $path) {
             VStack(spacing: 0) {
                 if tab == .home || tab == .themes { header }
@@ -57,7 +100,6 @@ struct HomeView: View {
                         NativeThemesView(focusSearch: $focusSearch)
                     case .messages:
                         NativeMessagesView(
-                            onBack: { select(.home) },
                             onInvite: { openRoom(.create) },
                             onJoin: { openRoom(.join) },
                             preferredCategory: messageCategory
@@ -73,6 +115,7 @@ struct HomeView: View {
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .clipped()
             }
             .background(Theme.brand.ignoresSafeArea())
             .toolbar(.hidden, for: .navigationBar)
@@ -97,32 +140,6 @@ struct HomeView: View {
                 }
             }
         }
-        .tint(Theme.brand)
-        .preferredColorScheme(tab == .messages || game.conversationOpen ? .light : .dark)
-        .safeAreaInset(edge: .bottom, spacing: 0) { if !game.conversationOpen { dock } }
-        .sheet(isPresented: $showSettings) { NativeSettingsView() }
-        .sheet(isPresented: $showPlay) { NativePlaySheet(category: nil) }
-        .sheet(isPresented: $showRoom) {
-            NativeRoomSheet(category: nil, mode: roomMode)
-                .presentationDetents([.medium, .large]).presentationDragIndicator(.visible)
-        }
-        .onAppear {
-            #if DEBUG && STORE_CAPTURE
-            switch StoreCaptureConfiguration.options?.screen {
-            case "themes", "family": tab = .themes
-            case "messages": tab = .messages
-            case "profile": tab = .profile
-            case "community": path = [.community(nil)]
-            case "detail":
-                if let category = game.categories.first(where: { $0.key == "spider_man" }) {
-                    path = [.topic(category)]
-                }
-            default: break
-            }
-            #endif
-            if game.categories.isEmpty { game.loadCategories() }
-            game.requestProfile()
-        }
     }
 
     private var header: some View {
@@ -130,6 +147,11 @@ struct HomeView: View {
             NativeBrandLogo()
             Spacer(minLength: 12)
             if tab == .home {
+                Button { openCommunity() } label: {
+                    Image(systemName: "person.2")
+                        .font(.system(size: 21)).frame(width: 44, height: 44)
+                }
+                .accessibilityLabel(fr ? "Communauté" : "Community")
                 Button {
                     select(.themes)
                     focusSearch = true
@@ -189,7 +211,7 @@ struct HomeView: View {
     }
 
     private func dockItem(_ item: BrowseTab, dark: Bool) -> some View {
-        let active = dark ? item == .home : tab == item
+        let active = tab == item
         let color = active ? (dark ? Color(hex: 0xFFE296) : Theme.brand) : (dark ? Color(hex: 0xD3BDC6) : Theme.muted)
         let messageCount = item == .messages ? unread : 0
         return Button { select(item) } label: {
