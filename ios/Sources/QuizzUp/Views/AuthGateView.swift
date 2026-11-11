@@ -13,6 +13,7 @@ struct AuthGateView: View {
     // resume the OLD cached session instead of the account the user just
     // tried to sign into.
     @State private var showAutoRetry = false
+    @State private var completingSignIn = false
 
     var body: some View {
         VStack(spacing: 20) {
@@ -28,7 +29,7 @@ struct AuthGateView: View {
 
             Spacer()
 
-            if auth.isAuthenticating {
+            if auth.isAuthenticating || completingSignIn || game.restoringSession {
                 ProgressView().tint(Theme.text)
             }
 
@@ -60,7 +61,7 @@ struct AuthGateView: View {
                 .background(Color.white)
                 .cornerRadius(12)
             }
-            .disabled(auth.isAuthenticating)
+            .disabled(auth.isAuthenticating || completingSignIn || game.restoringSession)
 
             Button {
                 showAutoRetry = false
@@ -77,7 +78,7 @@ struct AuthGateView: View {
                 .background(Theme.paper)
                 .cornerRadius(12)
             }
-            .disabled(auth.isAuthenticating)
+            .disabled(auth.isAuthenticating || completingSignIn || game.restoringSession)
 
             if let url = URL(string: "https://\(GameSocket.frontendHost)/privacy.html") {
                 Link(game.t("privacyPolicy"), destination: url)
@@ -100,8 +101,10 @@ struct AuthGateView: View {
     }
 
     private func completeSignInIfNeeded() {
-        guard let uid = auth.user?.uid else { return }
+        guard !completingSignIn, !game.restoringSession, let uid = auth.user?.uid else { return }
+        completingSignIn = true
         Task {
+            defer { completingSignIn = false }
             let token = await auth.getIdToken()
             guard auth.user?.uid == uid else { return }
             guard let idToken = token else {
@@ -110,7 +113,6 @@ struct AuthGateView: View {
                 return
             }
             game.identify(idToken: idToken, authManager: auth)
-            game.stage = .join
         }
     }
 }

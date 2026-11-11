@@ -11,12 +11,16 @@ extension GameSocket {
     func handleSocial(_ type: String, object: [String: Any]) -> Bool {
         if handleCommunity(type, object: object) { return true }
         switch type {
-        case "stats": if let raw = object["stats"] as? [String: Any] { updateStats(raw) }
+        case "stats":
+            if let raw = object["stats"] as? [String: Any] {
+                updateStats(raw)
+                restoreSessionAfterStats()
+            }
         case "profile_updated":
             if let raw = object["profile"] as? [String: Any] {
                 name = raw["name"] as? String ?? name; avatar = raw["avatar"] as? String ?? avatar
                 persistIdentity(); profileSaving = false
-                if stage == .join { stage = .home }
+                if stage == .join { markProfileComplete(); stage = .home }
             }
         case "profile_update_failed": profileSaving = false; socialError = t("serverUnreachable")
         case "friends_list": friends = decode(object["friends"], as: [NativeFriend].self) ?? []

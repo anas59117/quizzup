@@ -35,25 +35,37 @@ struct NativeTopicDetail: View {
     var body: some View {
         GeometryReader { geometry in
             let heroHeight = min(410, max(290, geometry.size.width * 0.97))
-            ScrollView {
-                VStack(spacing: 0) {
-                    artwork(height: heroHeight)
-                        .overlay(alignment: .top) {
-                            header.padding(.top, geometry.safeAreaInsets.top + 10)
+            ScrollViewReader { proxy in
+                ScrollView {
+                    VStack(spacing: 0) {
+                        artwork(height: heroHeight)
+                        VStack(alignment: .leading, spacing: 0) {
+                            introduction
+                            actions.padding(.top, 22)
+                            progressRow.padding(.top, 19)
+                            invitation.padding(.top, 18)
+                            socialLinks.padding(.top, 16).id("topic-social")
                         }
-                    VStack(alignment: .leading, spacing: 0) {
-                        introduction
-                        actions.padding(.top, 22)
-                        progressRow.padding(.top, 19)
-                        invitation.padding(.top, 18)
-                        socialLinks.padding(.top, 16)
+                        .padding(.horizontal, 24).padding(.bottom, 16)
+                        .padding(.top, -22)
                     }
-                    .padding(.horizontal, 24).padding(.bottom, 16)
-                    .padding(.top, -22)
+                    .frame(maxWidth: 600).frame(maxWidth: .infinity)
                 }
-                .frame(maxWidth: 600).frame(maxWidth: .infinity)
+                .ignoresSafeArea(edges: .top)
+                #if DEBUG && STORE_CAPTURE
+                .onAppear {
+                    if StoreCaptureConfiguration.options?.screen == "detail-scrolled" {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                            proxy.scrollTo("topic-social", anchor: .bottom)
+                        }
+                    }
+                }
+                #endif
             }
-            .ignoresSafeArea(edges: .top)
+        }
+        .overlay(alignment: .top) {
+            header.padding(.top, 10).padding(.bottom, 10)
+                .background(LinearGradient(colors: [tint.opacity(0.95), tint.opacity(0.7), .clear], startPoint: .top, endPoint: .bottom))
         }
         .background(tint.ignoresSafeArea())
         .toolbar(.hidden, for: .navigationBar)

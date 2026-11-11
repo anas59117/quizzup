@@ -524,6 +524,7 @@ struct NativeSettingsView: View {
                 Text(game.t("deleteAccountConfirmMessage"))
             }
         }
-        .tint(Theme.brand).preferredColorScheme(.light).interactiveDismissDisabled(auth.isDeletingAccount)
+        .foregroundColor(Theme.ink).tint(Theme.brand).preferredColorScheme(.light)
+        .interactiveDismissDisabled(auth.isDeletingAccount)
     }
 }

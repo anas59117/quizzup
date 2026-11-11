@@ -17,7 +17,7 @@ struct ContentView: View {
             case .error: ErrorView()
             }
         }
-        .foregroundColor(Theme.text)
+        .foregroundColor(game.stage == .home ? nil : Theme.text)
         .preferredColorScheme(game.stage == .home ? nil : .dark)
         .onAppear { game.loadCategories() }
     }

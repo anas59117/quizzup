@@ -29,6 +29,7 @@ struct NativeTopicArt: View {
         return nil
     }
     private var artwork: UIImage? {
+        if let url = artworkURL, let image = NativeImageCache.shared.cachedImage(for: url) { return image }
         if let remoteArtwork, remoteArtwork.url == artworkURL { return remoteArtwork.image }
         return bundledArtwork
     }
@@ -63,9 +64,7 @@ struct NativeTopicArt: View {
         .accessibilityHidden(true)
         .task(id: artworkURL) {
             guard let url = artworkURL, remoteArtwork?.url != url,
-                  let (data, response) = try? await URLSession.shared.data(from: url),
-                  let http = response as? HTTPURLResponse, (200..<300).contains(http.statusCode),
-                  !Task.isCancelled, let image = UIImage(data: data) else { return }
+                  let image = await NativeImageCache.shared.load(url), !Task.isCancelled else { return }
             remoteArtwork = (url, image)
         }
     }

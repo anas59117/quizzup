@@ -75,8 +75,9 @@ struct HomeView: View {
             case "themes", "family": tab = .themes
             case "messages", "messages-empty": tab = .messages
             case "profile", "profile-empty": tab = .profile
-            case "community": path = [.community(nil)]
-            case "detail":
+            case "community", "community-compose": path = [.community(nil)]
+            case "settings": showSettings = true
+            case "detail", "detail-scrolled":
                 if let category = game.categories.first(where: { $0.key == "spider_man" }) {
                     path = [.topic(category)]
                 }

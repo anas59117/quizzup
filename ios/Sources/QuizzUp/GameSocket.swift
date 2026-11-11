@@ -61,6 +61,7 @@ final class GameSocket: ObservableObject {
 
     @Published var result: GameEnd?
     @Published var connected = false
+    @Published var restoringSession = false
     @Published var clientId: String?
     @Published var stats: PlayerStats?
     @Published var topicProgress: [NativeTopicProgress] = []
@@ -96,6 +97,7 @@ final class GameSocket: ObservableObject {
     private var task: URLSessionWebSocketTask?
     private var timer: Timer?
     private var timelineGeneration = UUID()
+    private var awaitingInitialProfile = false
     var messageAttempt = UUID()
     private var generation = UUID()
     private var pendingAction: [String: Any]?
@@ -157,7 +159,36 @@ final class GameSocket: ObservableObject {
     func identify(idToken: String, authManager: AuthManager) {
         self.idToken = idToken
         self.authManager = authManager
+        restoringSession = stage == .authGate
+        awaitingInitialProfile = restoringSession
         ensureConnected()
+        let key = generation
+        Task {
+            try? await Task.sleep(nanoseconds: 12_000_000_000)
+            guard generation == key, restoringSession else { return }
+            restoringSession = false
+            socialError = t("serverUnreachable")
+            stage = .error
+        }
+    }
+
+    func restoreSessionAfterStats() {
+        guard restoringSession, let clientId, let stats else { return }
+        restoringSession = false
+        guard stage == .authGate else { awaitingInitialProfile = false; return }
+        let completed = UserDefaults.standard.bool(forKey: "quizzup.profileComplete.\(clientId)")
+        if completed || stats.games > 0 {
+            markProfileComplete()
+            stage = .home
+        } else {
+            stage = .join
+        }
+    }
+
+    func markProfileComplete() {
+        guard let clientId else { return }
+        UserDefaults.standard.set(true, forKey: "quizzup.profileComplete.\(clientId)")
+        awaitingInitialProfile = false
     }
 
     @discardableResult
@@ -272,6 +303,10 @@ final class GameSocket: ObservableObject {
             }
         case "round_intro":
             if let intro = try? decoder.decode(RoundIntro.self, from: data) {
+                #if canImport(UIKit)
+                let images = obj["preloadImages"] as? [String] ?? []
+                NativeImageCache.shared.prefetch(images.compactMap(Self.absoluteImageURL))
+                #endif
                 roundIntro = intro
                 question = nil
                 reveal = nil
@@ -463,7 +498,15 @@ final class GameSocket: ObservableObject {
     }
     func cancelQueue() { if !cancelPending, send(["type": "cancel_queue"]) { cancelPending = true } }
     func requestRematch() { if !rematchWaiting, send(["type": "rematch"]) { rematchWaiting = true } }
-    func retryConnection() { stage = .home; requestProfile() }
+    func retryConnection() {
+        if awaitingInitialProfile {
+            disconnect()
+            stage = .authGate
+        } else {
+            stage = .home
+            requestProfile()
+        }
+    }
 
     func decode<T: Decodable>(_ value: Any?, as type: T.Type) -> T? {
         guard let value, JSONSerialization.isValidJSONObject(value), let data = try? JSONSerialization.data(withJSONObject: value) else { return nil }
@@ -506,6 +549,7 @@ final class GameSocket: ObservableObject {
         task = nil
         isStarting = false
         connected = false; cancelPending = false; profileSaving = false
+        restoringSession = false
         roomPending = false; privateRoom = nil; roomError = nil
         inboxLoading = false; historyLoading = false; pendingMessageID = nil
     }
@@ -517,6 +561,7 @@ final class GameSocket: ObservableObject {
         disconnect()
         idToken = nil
         authManager = nil
+        awaitingInitialProfile = false
         pendingAction = nil; clientId = nil; stats = nil
         activeConversation = nil; conversationOpen = false; lastSentMessageID = nil
         friends = []; friendRequests = []; conversations = []; messages = [:]

@@ -16,6 +16,43 @@ enum StoreCaptureConfiguration { static let enabled = true }
             precondition(condition, message)
             print("PASS " + message)
         }
+        let returningID = "restore-test-\(UUID().uuidString)"
+        let newID = "setup-test-\(UUID().uuidString)"
+        defer {
+            UserDefaults.standard.removeObject(forKey: "quizzup.profileComplete.\(returningID)")
+            UserDefaults.standard.removeObject(forKey: "quizzup.profileComplete.\(newID)")
+        }
+        let restore = GameSocket()
+        restore.identify(idToken: "capture-fixture", authManager: AuthManager())
+        restore.handle(try JSONSerialization.data(withJSONObject: ["type":"identified", "profile":["id":returningID, "name":"Alice", "avatar":"fox"]]))
+        check(restore.stage == .authGate, "Restore waits for authoritative account statistics")
+        let playedStats: [String: Any] = ["games":2, "wins":1, "streak":0, "xp":357, "level":2, "xpIntoLevel":157, "xpForLevel":200]
+        restore.handle(try JSONSerialization.data(withJSONObject: ["type":"stats", "stats":playedStats]))
+        check(restore.stage == .home && !restore.restoringSession, "Existing player resumes directly at home")
+        let fresh = GameSocket()
+        fresh.identify(idToken: "capture-fixture", authManager: AuthManager())
+        fresh.handle(try JSONSerialization.data(withJSONObject: ["type":"identified", "profile":["id":newID, "name":"Player123", "avatar":"robot"]]))
+        var emptyStats = playedStats
+        emptyStats["games"] = 0
+        fresh.handle(try JSONSerialization.data(withJSONObject: ["type":"stats", "stats":emptyStats]))
+        check(fresh.stage == .join, "A different new account still gets its own profile setup")
+        fresh.restoringSession = false
+        fresh.stage = .error
+        fresh.retryConnection()
+        check(fresh.stage == .authGate, "Retry after an incomplete setup returns to account restoration")
+        fresh.identify(idToken: "capture-fixture", authManager: AuthManager())
+        fresh.handle(try JSONSerialization.data(withJSONObject: ["type":"stats", "stats":emptyStats]))
+        check(fresh.stage == .join, "Retried new account still requires confirmed profile setup")
+        fresh.handle(try JSONSerialization.data(withJSONObject: ["type":"profile_updated", "profile":["id":newID, "name":"Sam", "avatar":"owl"]]))
+        check(fresh.stage == .home, "Only acknowledged profile completion opens home")
+        fresh.stage = .authGate
+        fresh.restoringSession = true
+        fresh.handle(try JSONSerialization.data(withJSONObject: ["type":"stats", "stats":emptyStats]))
+        check(fresh.stage == .home, "An account with a completed profile resumes even before its first game")
+        fresh.stage = .question
+        fresh.restoringSession = true
+        fresh.handle(try JSONSerialization.data(withJSONObject: ["type":"stats", "stats":playedStats]))
+        check(fresh.stage == .question && !fresh.restoringSession, "Restored account statistics cannot replace a recovered active duel")
         try receive(["type":"identified", "profile":["id":"alice", "name":"Alice", "avatar":"fox"]])
         check(game.clientId == "alice" && game.name == "Alice" && game.avatar == "fox", "Canonical server identity")
         game.roomScreenOpen = true

@@ -20,8 +20,13 @@ enum StoreCaptureConfiguration {
     static let options: Options? = {
         let args = ProcessInfo.processInfo.arguments
         guard let index = args.firstIndex(of: "--store-capture-screen") else { return nil }
+        let screens = [
+            "home", "home-empty", "home-return", "waiting", "faceoff", "question", "question-photo", "answer", "result",
+            "themes", "family", "detail", "detail-scrolled", "community", "community-compose", "settings",
+            "messages", "messages-empty", "profile", "profile-empty",
+        ]
         guard index + 1 < args.count,
-              ["home", "home-empty", "home-return", "waiting", "faceoff", "question", "answer", "result", "themes", "family", "detail", "community", "messages", "messages-empty", "profile", "profile-empty"].contains(args[index + 1]),
+              screens.contains(args[index + 1]),
               let languageIndex = args.firstIndex(of: "--store-capture-language"),
               languageIndex + 1 < args.count,
               ["fr", "en"].contains(args[languageIndex + 1]) else {
@@ -75,6 +80,16 @@ enum StoreCaptureConfiguration {
             category: "Science", icon: "🧬", answers: ["7", "8", "9", "10"],
             timeLimit: 10, isBonus: false, image: nil, credit: nil
         )
+        if options.screen == "question-photo" {
+            let source = NativeCatalog.entry(for: "spider_man")?.src
+            game.question = Question(
+                round: 2, totalRounds: 6,
+                question: options.language == "fr" ? "Quel personnage est représenté ?" : "Which character is pictured?",
+                category: "Marvel", icon: "", answers: ["Spider-Man", "Batman", "Thor", "Superman"],
+                timeLimit: 10, isBonus: false, image: source, credit: nil
+            )
+            if let source, let url = GameSocket.absoluteImageURL(source) { NativeImageCache.shared.prefetch([url]) }
+        }
         game.result = GameEnd(
             finalScore: 118, won: true, tie: false,
             others: [OpponentFinal(id: "store-demo-camille", name: "Camille", avatar: "owl", score: 96)],
@@ -89,7 +104,7 @@ enum StoreCaptureConfiguration {
         switch options.screen {
         case "waiting": game.stage = .waiting
         case "faceoff": game.stage = .roundIntro
-        case "question", "answer": game.stage = .question
+        case "question", "question-photo", "answer": game.stage = .question
         case "result": game.stage = .finished
         default: game.stage = .home
         }
@@ -98,7 +113,7 @@ enum StoreCaptureConfiguration {
     @MainActor
     static func markReady() {
         guard let options else { return }
-        let delay = options.screen == "home-return" ? 3.0 : 1.0
+        let delay = ["home-return", "question-photo"].contains(options.screen) ? 3.0 : 1.0
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             let receipt: [String: String] = ["screen": options.screen, "language": options.language]

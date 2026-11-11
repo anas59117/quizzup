@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 // Answer visibility and selection are driven by the server timeline. The arena
 // reserves the choices' layout during reading so the prompt never moves.
@@ -6,6 +7,8 @@ struct QuestionView: View {
     @EnvironmentObject var game: GameSocket
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @ScaledMetric(relativeTo: .title2) private var questionSize: CGFloat = 24
+    @State private var questionArtwork: (url: URL, image: UIImage)?
+    @State private var failedImageURL: URL?
 
     var body: some View {
         GeometryReader { geometry in
@@ -71,7 +74,7 @@ struct QuestionView: View {
                 .frame(maxWidth: .infinity)
                 .accessibilityAddTraits(.isHeader)
             if let image = question.image, let url = GameSocket.absoluteImageURL(image) {
-                let photoHeight = compact ? min(144, max(82, safeHeight - 370)) : min(320, max(90, safeHeight - 480))
+                let photoHeight = compact ? min(144, max(82, safeHeight - 370)) : min(290, max(90, safeHeight - 510))
                 questionImage(url, credit: question.credit)
                     .frame(height: photoHeight).padding(.top, compact ? 10 : 16)
             }
@@ -151,13 +154,12 @@ struct QuestionView: View {
     private func questionImage(_ url: URL, credit: String?) -> some View {
         Color(hex: 0x1D211E)
             .overlay {
-                AsyncImage(url: url) { phase in
-                    if let image = phase.image {
-                        image.resizable().scaledToFit()
-                    } else if phase.error != nil {
-                        Image(systemName: "photo").font(.largeTitle).foregroundColor(NativeDuelColors.secondary)
-                    } else { ProgressView().tint(Theme.paper) }
-                }
+                if let image = NativeImageCache.shared.cachedImage(for: url)
+                    ?? (questionArtwork?.url == url ? questionArtwork?.image : nil) {
+                    Image(uiImage: image).resizable().scaledToFit()
+                } else if failedImageURL == url {
+                    Image(systemName: "photo").font(.largeTitle).foregroundColor(NativeDuelColors.secondary)
+                } else { ProgressView().tint(Theme.paper) }
             }
             .overlay(alignment: .bottomLeading) {
                 if game.answerAccepted || game.reveal != nil, let credit, !credit.isEmpty {
@@ -169,13 +171,19 @@ struct QuestionView: View {
             }
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .accessibilityLabel(copy("Illustration de la question", "Question illustration"))
+            .task(id: url) {
+                let image = await NativeImageCache.shared.load(url)
+                guard !Task.isCancelled else { return }
+                if let image { questionArtwork = (url, image); failedImageURL = nil }
+                else { failedImageURL = url }
+            }
     }
 
     private func answers(_ question: Question, screenHeight: CGFloat) -> some View {
         let hasPhoto = question.image != nil
         let columns = hasPhoto ? 2 : 1
         let rowCount = (question.answers.count + columns - 1) / columns
-        let minimumHeight = screenHeight <= 620 ? 44 : hasPhoto ? (screenHeight < 740 ? 54 : 64) : min(88, max(60, screenHeight * 0.095))
+        let minimumHeight = screenHeight <= 620 ? 44 : hasPhoto ? (screenHeight < 740 ? 64 : 76) : min(88, max(60, screenHeight * 0.095))
         let fontSize: CGFloat = screenHeight <= 620 ? 15 : hasPhoto ? (screenHeight < 740 ? 16 : 18) : (screenHeight < 740 ? 18 : 19)
         let spacing: CGFloat = screenHeight <= 620 ? 7 : 10
 

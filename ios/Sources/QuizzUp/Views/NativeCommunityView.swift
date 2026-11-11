@@ -38,11 +38,18 @@ struct NativeCommunityView: View {
                 .frame(maxWidth: 600).frame(maxWidth: .infinity)
             }
             .refreshable { game.requestCommunity(filter) }
+            .clipped()
         }
         .foregroundColor(Theme.ink)
         .background(Theme.paper.ignoresSafeArea())
         .tint(Theme.brand)
-        .onAppear { topic = category?.key; game.requestCommunity(filter) }
+        .onAppear {
+            topic = category?.key
+            game.requestCommunity(filter)
+            #if DEBUG && STORE_CAPTURE
+            composer = StoreCaptureConfiguration.options?.screen == "community-compose"
+            #endif
+        }
         .onChange(of: filter) { game.requestCommunity($0) }
         .onChange(of: game.connected) { if $0 { game.requestCommunity(filter) } }
         .sheet(isPresented: $composer) { NativeCommunityComposer(initialTopic: topic) }
@@ -108,14 +115,26 @@ struct NativeCommunityView: View {
     }
 
     private var emptyFeed: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Image(systemName: "bubble.left").foregroundColor(Theme.muted)
-            Text(fr ? "Lance la conversation" : "Start the conversation").font(.headline)
-            Text(fr ? "Partage une idée, une photo ou un mini-quiz." : "Share an idea, a photo or a mini quiz.")
-                .foregroundColor(Theme.muted)
-            Button(fr ? "Créer une publication" : "Create a post") { composer = true }
-                .font(.subheadline.bold()).frame(minHeight: 44)
-        }.padding(.top, 20)
+        VStack(spacing: 16) {
+            Image(systemName: "bubble.left.and.bubble.right")
+                .font(.system(size: 30, weight: .medium)).foregroundColor(Theme.brand)
+                .frame(width: 76, height: 76)
+                .background(Theme.brand.opacity(0.08), in: RoundedRectangle(cornerRadius: 22))
+                .accessibilityHidden(true)
+            Text(fr ? "Les meilleures discussions commencent ici." : "Great conversations start here.")
+                .font(.system(size: 24, weight: .bold)).tracking(-0.5)
+                .accessibilityAddTraits(.isHeader)
+            Text(fr ? "Une idée, une photo ou un mini-quiz ? Partage-le avec les autres joueurs." : "An idea, a photo or a mini quiz? Share it with other players.")
+                .font(.system(size: 15)).foregroundColor(Theme.muted).lineSpacing(3)
+            Button { composer = true } label: {
+                Label(fr ? "Écrire une publication" : "Write a post", systemImage: "square.and.pencil")
+                    .font(.system(size: 15, weight: .bold))
+                    .frame(maxWidth: .infinity, minHeight: 52)
+                    .foregroundColor(.white).background(Theme.brand, in: RoundedRectangle(cornerRadius: 14))
+            }.buttonStyle(.plain).padding(.top, 6)
+        }
+        .multilineTextAlignment(.center).padding(.horizontal, 20).padding(.vertical, 44)
+        .frame(maxWidth: .infinity, minHeight: 360)
     }
 
     private func postCard(_ post: NativeCommunityPost) -> some View {
@@ -237,6 +256,8 @@ private struct NativeCommunityComposer: View {
                 }.disabled(uploading || game.community.publishing || (includesQuestion && !questionReady)
                     || draft.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
             }
+            .scrollContentBackground(.hidden)
+            .background(Theme.paper.ignoresSafeArea())
             .navigationTitle(fr ? "Nouvelle publication" : "New post")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar { ToolbarItem(placement: .cancellationAction) { Button(fr ? "Fermer" : "Close") { dismiss() } } }
@@ -252,7 +273,8 @@ private struct NativeCommunityComposer: View {
                     if !Task.isCancelled, self.photo == photo { photoURL = url }
                 } catch { if !Task.isCancelled, self.photo == photo { photoError = true } }
             }
-        }.preferredColorScheme(.light)
+        }
+        .foregroundColor(Theme.ink).tint(Theme.brand).preferredColorScheme(.light)
     }
 }
 
@@ -284,6 +306,7 @@ private struct NativeCommunityDiscussion: View {
             .toolbar { ToolbarItem(placement: .cancellationAction) { Button(fr ? "Fermer" : "Close") { dismiss() } } }
             .onAppear { game.sendCommunity(["type": "post_comments", "postId": post.id]) }
             .onChange(of: game.community.lastReplyID) { if $0 != nil { draft = "" } }
-        }.preferredColorScheme(.light)
+        }
+        .foregroundColor(Theme.ink).tint(Theme.brand).preferredColorScheme(.light)
     }
 }
