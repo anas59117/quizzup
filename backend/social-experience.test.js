@@ -112,6 +112,6 @@ test('community previews respect the viewing player and preserve comment counts'
   assert.equal(posts.getPost(post.id, 'viewer').commentsCount, 2);
   userReports.unblockUser('commenter', 'viewer');
   userReports.blockUser('viewer', 'author');
-  assert.equal(posts.getPost(post.id, 'viewer').lastComment, null);
+  assert.equal(posts.getPost(post.id, 'viewer'), null);
   await require('./json-writer').flushAllJsonWriters();
 });

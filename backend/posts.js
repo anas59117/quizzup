@@ -10,36 +10,66 @@ const { cleanAvatar } = require('./sanitize');
 const { profileOf } = require('./social');
 const { isFollowing } = require('./follows');
 const { blockedPair } = require('./user-reports');
+const { STARTER_VERSION, createStarterPosts } = require('./community-starters');
 
 const STORE = getStorePath('posts.json');
 const MAX_POSTS = 3000; // oldest posts drop off once this cap is hit (per-theme feeds need depth)
 const MAX_TEXT_LEN = 240;
 const REPORT_THRESHOLD = 3; // flags before a post is hidden from the feed (same bar as reports.js)
 
+const saved = readJsonFileSync(
+  STORE,
+  { posts: [] },
+  (value) => !!value && typeof value === 'object' && Array.isArray(value.posts)
+);
+let starterVersion = Number.isSafeInteger(saved.starterVersion) ? saved.starterVersion : 0;
 let posts = normalizePostsStore(
-  readJsonFileSync(
-    STORE,
-    { posts: [] },
-    (value) => !!value && typeof value === 'object' && Array.isArray(value.posts)
-  ),
+  saved,
   { maxPosts: MAX_POSTS, maxTextLen: MAX_TEXT_LEN }
 ); // newest first
 // Remove only the five historical fabricated demo rows, preserving real posts.
 posts = posts.filter(p => p.authorId || !/^seed[1-5]$/.test(p.id));
 
-const persist = createJsonWriter(STORE, () => ({ posts }));
+const persist = createJsonWriter(STORE, () => ({ posts, starterVersion }));
+
+// Called at server startup, never during module import (tests and tools remain isolated).
+function seedStarterPosts() {
+  if (starterVersion >= STARTER_VERSION) return 0;
+  const ids = new Set(posts.map(p => p.id));
+  const additions = createStarterPosts().filter(p => !ids.has(p.id));
+  posts = [...posts, ...additions].slice(0, MAX_POSTS);
+  starterVersion = STARTER_VERSION;
+  persist();
+  return additions.length;
+}
+
+function commentToClient(c, viewerId) {
+  const author = profileOf(c.authorId);
+  const { reactedBy = [], ...comment } = c;
+  return { ...comment, authorName: author?.name || c.authorName,
+    authorAvatar: author?.avatar || c.authorAvatar,
+    reactions: reactedBy.length, reacted: !!viewerId && reactedBy.includes(viewerId) };
+}
+
+function commentVisible(p, c, viewerId) {
+  if (!viewerId) return true;
+  if (blockedPair(viewerId, c.authorId)) return false;
+  const parent = c.parentId && p.comments.find(root => root.id === c.parentId);
+  return !c.parentId || !!parent && !blockedPair(viewerId, parent.authorId);
+}
 
 function toClientShape(p, viewerId) {
   const author = p.authorId && profileOf(p.authorId);
   const comments = p.comments || [];
   const lastComment = comments[comments.length - 1];
   const canSeeLastComment = viewerId && lastComment &&
-    !blockedPair(viewerId, p.authorId) && !blockedPair(viewerId, lastComment.authorId);
+    !blockedPair(viewerId, p.authorId) && commentVisible(p, lastComment, viewerId);
   return {
     id: p.id, authorId: p.authorId || null, authorName: author?.name || p.authorName, authorAvatar: author?.avatar || p.authorAvatar,
     authorFollowed: !!viewerId && !!p.authorId && isFollowing(viewerId, p.authorId),
     category: p.category, text: p.text, mediaUrl: p.mediaUrl || null,
-    commentsCount: comments.length, lastComment: canSeeLastComment ? lastComment : null,
+    ...(p.isDemo ? { isDemo: true, demoAvatar: p.demoAvatar } : {}),
+    commentsCount: comments.length, lastComment: canSeeLastComment ? commentToClient(lastComment, viewerId) : null,
     question: p.question ? {prompt:p.question.prompt,answers:p.question.answers} : null, reactions: p.reactedBy.length, reacted: !!viewerId && p.reactedBy.includes(viewerId), createdAt: p.createdAt,
   };
 }
@@ -50,10 +80,13 @@ function getFeed(options = 30) {
   const opts = typeof options === 'number' ? { limit: options } : (options || {});
   const limit = Math.max(1, Math.min(100, Math.floor(Number(opts.limit) || 30)));
   const authors = Array.isArray(opts.authorIds) ? new Set(opts.authorIds) : null;
+  const categories = Array.isArray(opts.categories) ? new Set(opts.categories) : null;
   const out = [];
   for (const p of posts) {
     if (p.reportedBy.length >= REPORT_THRESHOLD) continue;
+    if (opts.viewerId && blockedPair(opts.viewerId, p.authorId)) continue;
     if (opts.category && p.category !== opts.category) continue;
+    if (categories && !categories.has(p.category)) continue;
     if (authors && !authors.has(p.authorId)) continue;
     out.push(toClientShape(p, opts.viewerId));
     if (out.length >= limit) break;
@@ -62,8 +95,8 @@ function getFeed(options = 30) {
 }
 
 function getPost(postId, viewerId) {
-  const post = posts.find(post => post.id === postId);
-  return post && post.reportedBy.length < REPORT_THRESHOLD ? toClientShape(post, viewerId) : null;
+  const post = visible(postId, viewerId);
+  return post ? toClientShape(post, viewerId) : null;
 }
 
 // clientId is required — an identified poster (see server.js's handleFeed)
@@ -96,7 +129,7 @@ function addPost(clientId, authorName, authorAvatar, category, text, options = {
 
 function toggleReaction(postId, clientId) {
   if (!clientId) return null;
-  const post = posts.find((p) => p.id === postId);
+  const post = visible(postId, clientId);
   if (!post) return null;
   const idx = post.reactedBy.indexOf(clientId);
   if (idx === -1) post.reactedBy.push(clientId);
@@ -155,31 +188,55 @@ function normalizeQuestion(q) {
   };
 }
 
-function visible(id) { return posts.find(p=>p.id===id && p.reportedBy.length<REPORT_THRESHOLD); }
-function getComments(id) {
-  const p = visible(id);
-  return p ? p.comments || [] : null;
+function visible(id, viewerId) {
+  return posts.find(p => p.id === id && p.reportedBy.length < REPORT_THRESHOLD && (!viewerId || !blockedPair(viewerId, p.authorId)));
+}
+function getComments(id, viewerId) {
+  const p = visible(id, viewerId);
+  return p ? (p.comments || []).filter(c => commentVisible(p, c, viewerId)).map(c => commentToClient(c, viewerId)) : null;
 }
 
-function addComment(id, uid, name, avatar, text) {
-  const p = visible(id);
+function addComment(id, uid, name, avatar, text, parentId = null) {
+  const p = visible(id, uid);
   const clean = typeof text === 'string' ? text.trim().slice(0, 300) : '';
   if (!p || !uid || !clean) return null;
+  if (parentId !== null) {
+    if (typeof parentId !== 'string' || !parentId) return null;
+    const parent = p.comments.find(c => c.id === parentId && c.parentId === null);
+    if (!parent || !commentVisible(p, parent, uid)) return null;
+  }
   const comment = {
     id: randomId('c_'),
     authorId: uid,
     authorName: String(name || 'Player').slice(0, 20),
     authorAvatar: cleanAvatar(avatar),
     text: clean,
+    parentId, reactedBy: [],
     createdAt: Date.now(),
   };
-  p.comments = [...(p.comments || []), comment].slice(-100);
+  p.comments = [...(p.comments || []), comment];
+  while (p.comments.length > 100) {
+    const index = p.comments.findIndex(c => c.id !== comment.id && c.id !== comment.parentId);
+    const [removed] = p.comments.splice(index, 1);
+    p.comments = p.comments.filter(c => c.parentId !== removed.id);
+  }
   persist();
-  return { postId: id, comment, commentsCount: p.comments.length };
+  return { postId: id, comment: commentToClient(comment, uid), commentsCount: p.comments.length };
 }
 
-function answerQuestion(id, index) {
-  const p = visible(id);
+function toggleCommentReaction(postId, commentId, uid) {
+  const p = uid && visible(postId, uid);
+  const comment = p && p.comments.find(c => c.id === commentId && commentVisible(p, c, uid));
+  if (!comment) return null;
+  const index = comment.reactedBy.indexOf(uid);
+  if (index < 0) comment.reactedBy.push(uid);
+  else comment.reactedBy.splice(index, 1);
+  persist();
+  return { postId, commentId, actorId: uid, reactions: comment.reactedBy.length, reacted: index < 0 };
+}
+
+function answerQuestion(id, index, viewerId) {
+  const p = visible(id, viewerId);
   if (!p?.question || !Number.isInteger(index) || index < 0 || index > 3)
     return null;
   return {
@@ -190,4 +247,4 @@ function answerQuestion(id, index) {
   };
 }
 
-module.exports = { getPost, getFeed, addPost, toggleReaction, reportPost, getComments, addComment, answerQuestion, normalizeQuestion };
+module.exports = { getPost, getFeed, addPost, toggleReaction, reportPost, getComments, addComment, toggleCommentReaction, seedStarterPosts, answerQuestion, normalizeQuestion };

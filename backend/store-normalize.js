@@ -1,4 +1,5 @@
 const { cleanAvatar } = require('./sanitize');
+const { trustedStarter } = require('./community-starters');
 
 function nullDict() {
   return Object.create(null);
@@ -154,6 +155,24 @@ function normalizeSocialStore(value, { maxFriends = 200, maxRequests = 100 } = {
   return { profiles, friends, requests };
 }
 
+function normalizeComments(value) {
+  const seen = new Set();
+  const comments = (Array.isArray(value) ? value : []).filter(c => {
+    const id = cleanId(c?.id);
+    if (!id || !cleanId(c.authorId) || typeof c.text !== 'string' || !c.text.trim() || seen.has(id)) return false;
+    seen.add(id);
+    return true;
+  }).slice(-100);
+  const roots = new Set(comments.filter(c => c.parentId == null).map(c => c.id));
+  return comments.filter(c => c.parentId == null || (typeof c.parentId === 'string' && roots.has(c.parentId) && c.parentId !== c.id)).map(c => ({
+    id: c.id, authorId: c.authorId,
+    authorName: String(c.authorName || 'Player').slice(0, 20),
+    authorAvatar: cleanAvatar(c.authorAvatar), text: c.text.trim().slice(0, 300),
+    createdAt: asNonNegativeInt(c.createdAt), parentId: c.parentId ?? null,
+    reactedBy: uniqueStringList(c.reactedBy, { limit: 10_000 }),
+  }));
+}
+
 function normalizePostsStore(value, { maxPosts = 500, maxTextLen = 240 } = {}) {
   if (!value || typeof value !== 'object' || !Array.isArray(value.posts))
     return [];
@@ -172,6 +191,7 @@ function normalizePostsStore(value, { maxPosts = 500, maxTextLen = 240 } = {}) {
     if (!text) continue;
 
     seenIds.add(id);
+    const starter = trustedStarter(raw);
     out.push({
       id,
       authorId: cleanId(raw.authorId) || null,
@@ -180,6 +200,7 @@ function normalizePostsStore(value, { maxPosts = 500, maxTextLen = 240 } = {}) {
           .trim()
           .slice(0, 20) || 'Player',
       authorAvatar: cleanAvatar(raw.authorAvatar),
+      ...(starter ? { isDemo: true, demoAvatar: starter.demoAvatar } : {}),
       category:
         typeof raw.category === 'string' ? raw.category.slice(0, 40) : null,
       text,
@@ -187,7 +208,7 @@ function normalizePostsStore(value, { maxPosts = 500, maxTextLen = 240 } = {}) {
         typeof raw.mediaUrl === 'string' &&
         /^\/community-media\/[a-f0-9]{24}-[a-f0-9]{32}\.jpg$/.test(raw.mediaUrl)
           ? raw.mediaUrl
-          : null,
+          : starter?.mediaUrl || null,
       question:
         raw.question &&
         typeof raw.question.prompt === 'string' &&
@@ -205,24 +226,7 @@ function normalizePostsStore(value, { maxPosts = 500, maxTextLen = 240 } = {}) {
               correctIndex: raw.question.correctIndex,
             }
           : null,
-      comments: (Array.isArray(raw.comments) ? raw.comments : [])
-        .filter(
-          (c) =>
-            c &&
-            cleanId(c.id) &&
-            cleanId(c.authorId) &&
-            typeof c.text === 'string' &&
-            c.text.trim(),
-        )
-        .slice(-100)
-        .map((c) => ({
-          id: c.id,
-          authorId: c.authorId,
-          authorName: String(c.authorName || 'Player').slice(0, 20),
-          authorAvatar: cleanAvatar(c.authorAvatar),
-          text: c.text.slice(0, 300),
-          createdAt: asNonNegativeInt(c.createdAt),
-        })),
+      comments: normalizeComments(raw.comments),
       reactedBy: uniqueStringList(raw.reactedBy, { limit: 10_000 }),
       reportedBy: uniqueStringList(raw.reportedBy, { limit: 10_000 }),
       createdAt: asNonNegativeInt(raw.createdAt, 0, Number.MAX_SAFE_INTEGER),

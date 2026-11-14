@@ -390,15 +390,19 @@ function handleFeed(ws, data, state) {
     if (!allowAction(actionLimiters.feedList, feedKey, ws, 'FEED_RATE_LIMITED'))
       return true;
     const category = validCategoryKey(data.category);
-    const scope = data.scope === 'following' && clientId ? 'following' : 'all';
+    const scope = data.scope === 'topics' ? 'topics' : data.scope === 'following' && clientId ? 'following' : 'all';
+    const categories = scope === 'topics'
+      ? [...new Set((Array.isArray(data.categories) ? data.categories : []).map(validCategoryKey).filter(Boolean))].sort()
+      : undefined;
     const feedPosts = posts.getFeed({
       limit: 40,
       viewerId: clientId,
       category,
+      categories,
       authorIds:
         scope === 'following' ? follows.getFollowing(clientId) : undefined,
     });
-    game.send(ws, { type: 'feed_list', posts: feedPosts, category, scope });
+    game.send(ws, { type: 'feed_list', posts: feedPosts, category, scope, ...(categories ? { categories } : {}) });
     return true;
   }
   if (data.type === 'post_create') {
@@ -440,11 +444,14 @@ function handleFeed(ws, data, state) {
     if (post)
       social
         .getAllOnline()
-        .forEach((peer) => game.send(peer, { type: 'post_created', post }));
+        .forEach(peer => {
+          const visiblePost = posts.getPost(post.id, peer.socialState?.clientId);
+          if (visiblePost) game.send(peer, { type: 'post_created', post: visiblePost });
+        });
     return true;
   }
   if (
-    ['post_comments', 'post_comment', 'post_question_answer'].includes(
+    ['post_comments', 'post_comment', 'comment_react', 'post_question_answer'].includes(
       data.type,
     )
   ) {
@@ -467,7 +474,7 @@ function handleFeed(ws, data, state) {
     const postId = String(data.postId || '');
     const result =
       data.type === 'post_comments'
-        ? posts.getComments(postId)
+        ? posts.getComments(postId, clientId)
         : data.type === 'post_comment'
           ? posts.addComment(
               postId,
@@ -475,8 +482,11 @@ function handleFeed(ws, data, state) {
               state.name,
               state.avatar,
               data.text,
+              data.parentId,
             )
-          : posts.answerQuestion(postId, data.answerIndex);
+          : data.type === 'comment_react'
+            ? posts.toggleCommentReaction(postId, data.commentId, clientId)
+            : posts.answerQuestion(postId, data.answerIndex, clientId);
     if (!result)
       game.send(ws, {
         type: 'community_error',
@@ -488,9 +498,19 @@ function handleFeed(ws, data, state) {
     else if (data.type === 'post_comment')
       social
         .getAllOnline()
-        .forEach((peer) =>
-          game.send(peer, { type: 'post_commented', ...result }),
-        );
+        .forEach((peer) => {
+          const comments = posts.getComments(postId, peer.socialState?.clientId);
+          const comment = comments?.find(c => c.id === result.comment.id);
+          if (comment) game.send(peer, { type: 'post_commented', ...result, comment });
+        });
+    else if (data.type === 'comment_react')
+      social.getAllOnline().forEach(peer => {
+        const viewerId = peer.socialState?.clientId;
+        if (userReports.blockedPair(viewerId, clientId)) return;
+        const comments = posts.getComments(postId, viewerId);
+        if (comments?.some(c => c.id === result.commentId))
+          game.send(peer, { type: 'post_comment_reacted', ...result });
+      });
     else game.send(ws, { type: 'post_question_result', ...result });
     return true;
   }
@@ -509,9 +529,11 @@ function handleFeed(ws, data, state) {
     if (result)
       social
         .getAllOnline()
-        .forEach((peer) =>
-          game.send(peer, { type: 'post_reacted', ...result }),
-        );
+        .forEach(peer => {
+          const viewerId = peer.socialState?.clientId;
+          if (!userReports.blockedPair(viewerId, clientId) && posts.getPost(result.id, viewerId))
+            game.send(peer, { type: 'post_reacted', ...result });
+        });
     return true;
   }
   if (data.type === 'post_report') {
@@ -1695,6 +1717,7 @@ async function gracefulShutdown(signal) {
 process.once('SIGTERM', () => gracefulShutdown('SIGTERM'));
 process.once('SIGINT', () => gracefulShutdown('SIGINT'));
 
+posts.seedStarterPosts();
 server.listen(PORT, async () => {
   console.log(`\u{1F3AE} QuizzUp backend on http://localhost:${PORT}`);
   warmCache();
