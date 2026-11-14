@@ -106,7 +106,9 @@ struct NativeCommunityView: View {
     private var tabs: some View {
         HStack(spacing: 0) {
             ForEach(0..<3) { index in
-                Button { scope = index } label: {
+                Button {
+                    if scope != index { topic = nil; scope = index }
+                } label: {
                     Text([fr ? "Pour toi" : "For you", fr ? "Abonnements" : "Following", fr ? "Mes thèmes" : "My topics"][index])
                         .font(.subheadline.weight(scope == index ? .bold : .medium))
                         .foregroundColor(scope == index ? Theme.accent : Theme.muted)

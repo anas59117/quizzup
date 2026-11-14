@@ -142,14 +142,19 @@ struct NativeCommunityMedia: View {
     }
     var body: some View {
         if let url {
-            AsyncImage(url: url) { phase in
-                if let image = phase.image {
-                    image.resizable().scaledToFit()
-                } else if phase.error != nil {
-                    Label("Image", systemImage: "photo").foregroundColor(Theme.muted)
-                        .frame(maxWidth: .infinity, minHeight: 80).background(Theme.field)
-                } else { ProgressView().frame(maxWidth: .infinity, minHeight: 140).background(Theme.field) }
+            GeometryReader { geometry in
+                AsyncImage(url: url) { phase in
+                    if let image = phase.image {
+                        image.resizable().scaledToFill()
+                    } else if phase.error != nil {
+                        Label("Image", systemImage: "photo").foregroundColor(Theme.muted)
+                    } else { ProgressView() }
+                }
+                .frame(width: geometry.size.width, height: geometry.size.height)
+                .background(Theme.field)
+                .clipped()
             }
+            .aspectRatio(1.75, contentMode: .fit)
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .accessibilityLabel("Photo")
         }

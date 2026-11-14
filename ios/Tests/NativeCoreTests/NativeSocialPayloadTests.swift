@@ -3,6 +3,21 @@ import XCTest
 @testable import QuizzUpNativeCore
 
 final class NativeSocialPayloadTests: XCTestCase {
+    func testBlockingRootAuthorRemovesTheirThreadAndKeepsUnrelatedDiscussion() throws {
+        let root = NativeCommunityReply(id: "root", authorId: "blocked", authorName: "B", authorAvatar: "cat", text: "Root", createdAt: 1000)
+        let child = NativeCommunityReply(id: "child", authorId: "friend", authorName: "F", authorAvatar: "owl", text: "Reply", createdAt: 2000, parentId: "root")
+        let unrelated = NativeCommunityReply(id: "other", authorId: "friend", authorName: "F", authorAvatar: "owl", text: "Other", createdAt: 3000)
+        var post = try decode(NativeCommunityPost.self, #"{"id":"p","authorId":"friend","authorName":"F","authorAvatar":"owl","authorFollowed":false,"text":"Hi","reactions":0,"reacted":false,"commentsCount":3,"createdAt":1000}"#)
+        post.lastComment = child
+        var state = NativeCommunityState()
+        state.posts = [post]; state.latestPost = post; state.replies["p"] = [root, child, unrelated]
+        state.hideAuthor("blocked")
+        XCTAssertEqual(state.replies["p"]?.map(\.id), ["other"])
+        XCTAssertEqual(state.posts.first?.id, "p")
+        XCTAssertNil(state.posts.first?.lastComment)
+        XCTAssertNil(state.latestPost?.lastComment)
+    }
+
     func testLegacyCommentDefaultsAndThreadPayload() throws {
         let old = try decode(NativeCommunityReply.self, #"{"id":"c1","authorId":"a","authorName":"Alice","authorAvatar":"robot","text":"Salut","createdAt":1000}"#)
         XCTAssertNil(old.parentId)

@@ -176,8 +176,21 @@ struct NativeCommunityState {
         hiddenAuthors.insert(id)
         posts.removeAll { $0.authorId == id }
         if latestPost?.authorId == id { latestPost = nil }
-        for key in Array(replies.keys) { replies[key]?.removeAll { $0.authorId == id } }
-        for index in posts.indices where posts[index].lastComment?.authorId == id { posts[index].lastComment = nil }
-        if latestPost?.lastComment?.authorId == id { latestPost?.lastComment = nil }
+        var hiddenCommentIDs: Set<String> = []
+        for key in Array(replies.keys) {
+            let comments = replies[key] ?? []
+            let hiddenRoots = Set(comments.filter { $0.authorId == id && $0.parentId == nil }.map(\.id))
+            let hidden = comments.filter { $0.authorId == id || hiddenRoots.contains($0.parentId ?? "") }
+            hiddenCommentIDs.formUnion(hidden.map(\.id))
+            replies[key] = comments.filter { !hiddenCommentIDs.contains($0.id) }
+        }
+        for index in posts.indices {
+            if let preview = posts[index].lastComment, preview.authorId == id || hiddenCommentIDs.contains(preview.id) {
+                posts[index].lastComment = nil
+            }
+        }
+        if let preview = latestPost?.lastComment, preview.authorId == id || hiddenCommentIDs.contains(preview.id) {
+            latestPost?.lastComment = nil
+        }
     }
 }
