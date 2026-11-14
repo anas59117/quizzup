@@ -9,6 +9,7 @@ final class NativeAudioManager: NSObject, ObservableObject {
     private var music: [NativeMusicCue: AVAudioPlayer] = [:]
     private var effects: [NativeSoundCue: AVAudioPlayer] = [:]
     private var pendingStops: [NativeMusicCue: DispatchWorkItem] = [:]
+    private var pendingEffectFinish: DispatchWorkItem?
     private var currentCue: NativeMusicCue?
     private var sessionReady = false
     private let session = AVAudioSession.sharedInstance()
@@ -32,7 +33,7 @@ final class NativeAudioManager: NSObject, ObservableObject {
         if StoreCaptureConfiguration.enabled {
             do { try session.setCategory(.ambient, mode: .default) }
             catch { preconditionFailure("Audio session category is unsupported") }
-            for name in [NativeMusicCue.search.rawValue, NativeMusicCue.duel.rawValue, "correct", "wrong"] {
+            for name in [NativeMusicCue.search.rawValue, NativeMusicCue.duel.rawValue, "correct", "wrong", "victory"] {
                 guard let player = Self.player(named: name), player.duration > 0 else {
                     preconditionFailure("Missing or unreadable bundled audio: \(name)")
                 }
@@ -64,11 +65,37 @@ final class NativeAudioManager: NSObject, ObservableObject {
 
     func playFeedback(_ feedback: NativeAnswerFeedback) {
         guard let cue = policy.consume(feedback), activateSession() else { return }
+        playEffect(cue)
+    }
+
+    func playVictory(_ feedback: NativeVictoryFeedback) {
+        guard let cue = policy.consume(feedback), activateSession() else { return }
+        playEffect(cue)
+    }
+
+    private func playEffect(_ cue: NativeSoundCue) {
+        pendingEffectFinish?.cancel(); pendingEffectFinish = nil
+        effects.values.forEach { $0.stop() }
         if effects[cue] == nil { effects[cue] = Self.player(named: cue.rawValue) }
-        guard let player = effects[cue] else { return }
+        guard let player = effects[cue] else { finishEffect(); return }
         player.currentTime = 0
-        player.volume = 0.65
-        player.play()
+        player.volume = cue == .wrong ? 0.5 : cue == .victory ? 0.6 : 0.65
+        guard player.play() else { finishEffect(); return }
+        for musicPlayer in music.values where musicPlayer.isPlaying {
+            musicPlayer.setVolume(0.05, fadeDuration: 0.04)
+        }
+        let finish = DispatchWorkItem { [weak self] in self?.finishEffect() }
+        pendingEffectFinish = finish
+        DispatchQueue.main.asyncAfter(deadline: .now() + player.duration + 0.08, execute: finish)
+    }
+
+    private func finishEffect() {
+        pendingEffectFinish = nil
+        if let cue = policy.playableCue, currentCue == cue, let player = music[cue], player.isPlaying {
+            player.setVolume(0.22, fadeDuration: 0.2)
+        } else if !effects.values.contains(where: \.isPlaying), !music.values.contains(where: \.isPlaying) {
+            deactivateSession()
+        }
     }
 
     private func activateSession() -> Bool {
@@ -84,6 +111,7 @@ final class NativeAudioManager: NSObject, ObservableObject {
 
     private func applyPlayback(softStop: Bool = false) {
         guard let cue = policy.playableCue else {
+            pendingEffectFinish?.cancel(); pendingEffectFinish = nil
             effects.values.forEach { $0.stop() }
             stopMusic(soft: softStop && policy.foreground && !policy.muted && !policy.interrupted)
             return
@@ -97,7 +125,7 @@ final class NativeAudioManager: NSObject, ObservableObject {
         player.numberOfLoops = -1
         player.volume = 0
         currentCue = cue
-        if player.play() { player.setVolume(0.22, fadeDuration: 0.45) }
+        if player.play() { player.setVolume(effects.values.contains(where: \.isPlaying) ? 0.05 : 0.22, fadeDuration: 0.45) }
         else { currentCue = nil }
     }
 
@@ -116,7 +144,8 @@ final class NativeAudioManager: NSObject, ObservableObject {
             guard let self, self.currentCue != cue else { return }
             player?.pause()
             self.pendingStops[cue] = nil
-            if self.currentCue == nil, !self.music.values.contains(where: \.isPlaying) { self.deactivateSession() }
+            if self.currentCue == nil, !self.music.values.contains(where: \.isPlaying),
+               !self.effects.values.contains(where: \.isPlaying) { self.deactivateSession() }
         }
         pendingStops[cue] = stop
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: stop)
@@ -129,7 +158,7 @@ final class NativeAudioManager: NSObject, ObservableObject {
     }
 
     private static func player(named name: String) -> AVAudioPlayer? {
-        guard let url = Bundle.main.url(forResource: name, withExtension: "mp3"),
+        guard let url = ["wav", "mp3"].compactMap({ Bundle.main.url(forResource: name, withExtension: $0) }).first,
               let player = try? AVAudioPlayer(contentsOf: url) else { return nil }
         player.prepareToPlay()
         return player
@@ -161,6 +190,7 @@ final class NativeAudioManager: NSObject, ObservableObject {
         Task { @MainActor [weak self] in
             guard let self else { return }
             self.pendingStops.values.forEach { $0.cancel() }; self.pendingStops.removeAll()
+            self.pendingEffectFinish?.cancel(); self.pendingEffectFinish = nil
             self.music.removeAll(); self.effects.removeAll(); self.currentCue = nil; self.sessionReady = false
             self.applyPlayback()
         }

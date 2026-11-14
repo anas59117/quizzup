@@ -90,6 +90,9 @@ jobs:
           if [[ "$GITHUB_REF_NAME" == codex/ios-visual-parity-audio-* ]]; then
             CAPTURE_ARGS+=(--duel-audio-review)
           fi
+          if [[ "$GITHUB_REF_NAME" == codex/ios-visual-parity-audio-feedback-* ]]; then
+            CAPTURE_ARGS+=(--audio-feedback-review)
+          fi
           if [[ "$GITHUB_REF_NAME" == codex/ios-visual-parity-dark-* ]]; then
             CAPTURE_ARGS+=(--appearance-review)
           fi

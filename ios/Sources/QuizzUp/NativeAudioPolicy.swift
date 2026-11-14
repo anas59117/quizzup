@@ -21,6 +21,7 @@ struct NativeAudioPolicy {
     var foreground = true
     var interrupted = false
     private var lastFeedbackID: UUID?
+    private var lastVictoryID: UUID?
 
     init(muted: Bool = false) { self.muted = muted }
 
@@ -32,5 +33,10 @@ struct NativeAudioPolicy {
         return feedback.correct ? .correct : .wrong
     }
 
-    mutating func consume(_ feedback: NativeVictoryFeedback) -> NativeSoundCue? { nil }
+    mutating func consume(_ feedback: NativeVictoryFeedback) -> NativeSoundCue? {
+        guard feedback.id != lastVictoryID else { return nil }
+        lastVictoryID = feedback.id
+        guard !muted, foreground, !interrupted, feedback.won, !feedback.tie, !feedback.solo else { return nil }
+        return .victory
+    }
 }

@@ -47,7 +47,12 @@ struct ContentView: View {
             audio.setForeground(scenePhase == .active)
             audio.setContext(musicCue)
         }
-        .onChange(of: game.stage) { _ in audio.setContext(musicCue) }
+        .onChange(of: game.stage) { stage in
+            audio.setContext(musicCue)
+            if stage == .finished, let result = game.result {
+                audio.playVictory(NativeVictoryFeedback(won: result.won, tie: result.tie, solo: game.soloMode))
+            }
+        }
         .onChange(of: game.answerFeedback) { feedback in
             guard let feedback else { return }
             audio.setContext(musicCue)
