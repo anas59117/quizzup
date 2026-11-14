@@ -24,7 +24,7 @@ struct NativeRoomSheet: View {
                     Spacer()
                     Button { dismiss() } label: {
                         Image(systemName: "xmark").font(.body.weight(.semibold))
-                            .foregroundColor(Theme.brand).frame(width: 44, height: 44)
+                            .foregroundColor(Theme.accent).frame(width: 44, height: 44)
                     }.accessibilityLabel(fr ? "Fermer" : "Close")
                 }
                 Divider()
@@ -36,7 +36,7 @@ struct NativeRoomSheet: View {
                     TextField(fr ? "Code du salon" : "Room code", text: $code)
                         .textInputAutocapitalization(.characters).autocorrectionDisabled()
                         .font(.title2.monospaced().bold())
-                        .padding(14).background(.white, in: RoundedRectangle(cornerRadius: 12))
+                        .padding(14).background(Theme.card, in: RoundedRectangle(cornerRadius: 12))
                         .onChange(of: code) { value in
                             let allowed = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"
                             code = String(value.uppercased().filter { allowed.contains($0) }.prefix(5))
@@ -49,13 +49,13 @@ struct NativeRoomSheet: View {
                     }.buttonStyle(PrimaryButtonStyle())
                 }
                 if game.roomPending { ProgressView().frame(maxWidth: .infinity) }
-                if let error = game.roomError { Text(error).font(.subheadline).foregroundColor(Theme.brand) }
+                if let error = game.roomError { Text(error).font(.subheadline).foregroundColor(Theme.accent) }
             }
             .padding(20).frame(maxWidth: 560).frame(maxWidth: .infinity)
         }
-        .foregroundColor(Theme.ink).tint(Theme.brand)
-        .background(Theme.paper.ignoresSafeArea())
-        .preferredColorScheme(.light)
+        .foregroundColor(Theme.ink).tint(Theme.accent)
+        .background(Theme.contentBackground.ignoresSafeArea())
+
         .onAppear {
             game.roomScreenOpen = true
             if mode == .create, game.privateRoom == nil { game.openPrivateRoom(category: category?.key) }

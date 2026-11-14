@@ -15,6 +15,7 @@ enum StoreCaptureConfiguration {
     struct Options {
         let screen: String
         let language: String
+        let appearance: NativeAppearance
     }
 
     static let options: Options? = {
@@ -26,6 +27,8 @@ enum StoreCaptureConfiguration {
             "messages", "messages-empty", "profile", "profile-empty",
             "auth", "auth-restoring", "auth-email", "auth-email-keyboard", "auth-email-create", "auth-email-reset",
             "question-muted", "community-suggestion",
+            "thread", "play", "join",
+            "room", "profile-edit", "settings-live",
         ]
         guard index + 1 < args.count,
               screens.contains(args[index + 1]),
@@ -34,12 +37,26 @@ enum StoreCaptureConfiguration {
               ["fr", "en"].contains(args[languageIndex + 1]) else {
             preconditionFailure("Invalid store capture arguments")
         }
-        return Options(screen: args[index + 1], language: args[languageIndex + 1])
+        var appearance = NativeAppearance.light
+        if let appearanceIndex = args.firstIndex(of: "--store-capture-appearance") {
+            guard appearanceIndex + 1 < args.count, let value = NativeAppearance(rawValue: args[appearanceIndex + 1]) else {
+                preconditionFailure("Invalid capture appearance")
+            }
+            appearance = value
+        }
+        return Options(screen: args[index + 1], language: args[languageIndex + 1], appearance: appearance)
     }()
 
     @MainActor
     static func prepare(_ game: GameSocket) {
         guard let options else { return }
+        UserDefaults.standard.set(options.appearance.rawValue, forKey: NativeAppearance.storageKey)
+        if options.screen == "settings-live" {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                let target: NativeAppearance = options.appearance == .dark ? .light : .dark
+                UserDefaults.standard.set(target.rawValue, forKey: NativeAppearance.storageKey)
+            }
+        }
         game.disconnect()
         game.lang = options.language
         game.name = "Alex"
@@ -58,6 +75,15 @@ enum StoreCaptureConfiguration {
         game.friends = [NativeFriend(id: "store-demo-camille", name: "Camille", avatar: "owl", online: true), NativeFriend(id: "store-demo-sam", name: "Sam", avatar: "astronaut", online: false)]
         let message = NativeMessage(id: "store-message", fromId: "store-demo-camille", toId: "store-demo-alex", kind: "text", text: options.language == "fr" ? "On se fait une revanche ?" : "Ready for a rematch?", createdAt: 1793920000000)
         game.conversations = [NativeConversation(peer: game.friends[0], lastMessage: message, unread: 1)]
+        if options.screen == "thread" {
+            game.messages["store-demo-camille"] = [message, NativeMessage(id: "store-reply", fromId: "store-demo-alex", toId: "store-demo-camille", kind: "text", text: options.language == "fr" ? "Avec plaisir, on joue sur quel thème ?" : "Absolutely! Which topic?", createdAt: 1793920060000)]
+        }
+        if options.screen == "community" {
+            // Visual test fixtures only: this code is excluded from Release and never publishes.
+            let post = NativeCommunityPost(id: "store-post", authorId: "store-demo-camille", authorName: "Camille", authorAvatar: "owl", authorFollowed: false, category: "science", text: options.language == "fr" ? "La question qui m’a fait hésiter aujourd’hui…" : "The question that made me hesitate today…", mediaUrl: nil, question: NativeCommunityQuestion(prompt: "Combien de planètes compte le système solaire ?", answers: ["7", "8", "9", "10"]), reactions: 2, reacted: false, commentsCount: 1, createdAt: 1793920000000)
+            game.community.posts = [post]
+            game.community.answers[post.id] = NativeCommunityAnswer(postId: post.id, answerIndex: 1, correctIndex: 1)
+        }
         if ["home-empty", "home-return", "messages-empty", "profile-empty"].contains(options.screen) {
             game.topicProgress = []
             game.followedThemes = []
@@ -104,6 +130,7 @@ enum StoreCaptureConfiguration {
             stats: PlayerStats(games: 27, wins: 16, streak: 2, xp: 1620, level: 4, xpIntoLevel: 420, xpForLevel: 800)
         )
         switch options.screen {
+        case "join": game.stage = .join
         case let screen where screen.hasPrefix("auth"): game.stage = .authGate
         case "waiting": game.stage = .waiting
         case "faceoff": game.stage = .roundIntro
@@ -116,10 +143,10 @@ enum StoreCaptureConfiguration {
     @MainActor
     static func markReady() {
         guard let options else { return }
-        let delay = ["home-return", "question-photo", "auth-email-keyboard"].contains(options.screen) ? 3.0 : 1.0
+        let delay = options.screen == "settings-live" ? 4.0 : ["home-return", "question-photo", "auth-email-keyboard"].contains(options.screen) ? 3.0 : 1.0
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            let receipt: [String: String] = ["screen": options.screen, "language": options.language]
+            let receipt: [String: String] = ["screen": options.screen, "language": options.language, "appearance": options.appearance.rawValue, "storedAppearance": NativeAppearance.stored(UserDefaults.standard.string(forKey: NativeAppearance.storageKey)).rawValue]
             do {
                 try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
                 let data = try JSONSerialization.data(withJSONObject: receipt)

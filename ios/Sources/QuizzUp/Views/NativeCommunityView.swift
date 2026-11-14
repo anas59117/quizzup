@@ -23,7 +23,7 @@ struct NativeCommunityView: View {
                 VStack(alignment: .leading, spacing: 12) {
                     filters
                     if let error = game.community.error {
-                        Button(error) { game.requestCommunity(filter) }.foregroundColor(Theme.brand)
+                        Button(error) { game.requestCommunity(filter) }.foregroundColor(Theme.accent)
                     }
                     if game.community.loading && game.community.posts.isEmpty {
                         ProgressView().frame(maxWidth: .infinity).padding(.vertical, 36)
@@ -43,8 +43,8 @@ struct NativeCommunityView: View {
             .clipped()
         }
         .foregroundColor(Theme.ink)
-        .background(Theme.paper.ignoresSafeArea())
-        .tint(Theme.brand)
+        .background(Theme.contentBackground.ignoresSafeArea())
+        .tint(Theme.accent)
         .onAppear {
             topic = category?.key
             game.requestCommunity(filter)
@@ -63,7 +63,7 @@ struct NativeCommunityView: View {
     private var header: some View {
         HStack(spacing: 8) {
             Button(action: onClose) {
-                Image(systemName: "arrow.left").foregroundColor(Theme.brand)
+                Image(systemName: "arrow.left").foregroundColor(Theme.accent)
                     .frame(width: 42, height: 42).background(Theme.paper, in: Circle())
             }.accessibilityLabel(fr ? "Retour" : "Back")
             Text(fr ? "Communauté" : "Community").font(.title3.bold()).lineLimit(1).minimumScaleFactor(0.7)
@@ -73,7 +73,7 @@ struct NativeCommunityView: View {
                 Label(fr ? "Publier" : "Post", systemImage: "plus")
                     .font(.subheadline.bold()).lineLimit(1)
                     .padding(.horizontal, 10).frame(minHeight: 42)
-                    .foregroundColor(Theme.ink).background(Theme.gold, in: RoundedRectangle(cornerRadius: 12))
+                    .foregroundColor(Theme.onGold).background(Theme.gold, in: RoundedRectangle(cornerRadius: 12))
             }
             Button(action: onSettings) {
                 Image(systemName: "gearshape").frame(width: 42, height: 42)
@@ -83,7 +83,7 @@ struct NativeCommunityView: View {
         .buttonStyle(.plain).foregroundColor(.white)
         .padding(.horizontal, 14).padding(.vertical, 7)
         .frame(maxWidth: 600).frame(maxWidth: .infinity)
-        .background(Theme.brand.ignoresSafeArea(edges: .top))
+        .background(Theme.pageBackground.ignoresSafeArea(edges: .top))
     }
 
     private var filters: some View {
@@ -110,9 +110,9 @@ struct NativeCommunityView: View {
     private func filterButton(_ title: String, value: Bool) -> some View {
         Button { following = value } label: {
             Text(title).font(.subheadline.bold()).frame(minHeight: 44)
-                .foregroundColor(following == value ? Theme.brand : Theme.muted)
+                .foregroundColor(following == value ? Theme.accent : Theme.muted)
                 .overlay(alignment: .bottom) {
-                    if following == value { Theme.brand.frame(height: 2) }
+                    if following == value { Theme.accent.frame(height: 2) }
                 }
         }.buttonStyle(.plain).accessibilityAddTraits(following == value ? .isSelected : [])
     }
@@ -120,9 +120,9 @@ struct NativeCommunityView: View {
     private var emptyFeed: some View {
         VStack(spacing: 16) {
             Image(systemName: "bubble.left.and.bubble.right")
-                .font(.system(size: 30, weight: .medium)).foregroundColor(Theme.brand)
+                .font(.system(size: 30, weight: .medium)).foregroundColor(Theme.accent)
                 .frame(width: 76, height: 76)
-                .background(Theme.brand.opacity(0.08), in: RoundedRectangle(cornerRadius: 22))
+                .background(Theme.accent.opacity(0.08), in: RoundedRectangle(cornerRadius: 22))
                 .accessibilityHidden(true)
             Text(fr ? "Les meilleures discussions commencent ici." : "Great conversations start here.")
                 .font(.system(size: 24, weight: .bold)).tracking(-0.5)
@@ -169,10 +169,10 @@ struct NativeCommunityView: View {
                         Text(prompt).font(.system(size: 14, weight: .medium))
                             .multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
                         Spacer(minLength: 0)
-                        Image(systemName: "arrow.up.left").foregroundColor(Theme.brand).accessibilityHidden(true)
+                        Image(systemName: "arrow.up.left").foregroundColor(Theme.accent).accessibilityHidden(true)
                     }
                     .foregroundColor(Theme.ink).padding(14).frame(maxWidth: .infinity, minHeight: 54, alignment: .leading)
-                    .background(Color.white, in: RoundedRectangle(cornerRadius: 14))
+                    .background(Theme.card, in: RoundedRectangle(cornerRadius: 14))
                     .overlay(RoundedRectangle(cornerRadius: 14).strokeBorder(Theme.ink.opacity(0.12)))
                 }
                 .buttonStyle(.plain)
@@ -221,7 +221,7 @@ struct NativeCommunityView: View {
                 Button { discussion = post } label: { Label(post.commentsCount.formatted(), systemImage: "bubble.left") }
             }.font(.subheadline).frame(minHeight: 40)
         }
-        .padding(14).background(.white, in: RoundedRectangle(cornerRadius: 16))
+        .padding(14).background(Theme.card, in: RoundedRectangle(cornerRadius: 16))
         .overlay { RoundedRectangle(cornerRadius: 16).strokeBorder(Theme.ink.opacity(0.08)).allowsHitTesting(false) }
     }
 
@@ -305,7 +305,7 @@ private struct NativeCommunityComposer: View {
                     || draft.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
             }
             .scrollContentBackground(.hidden)
-            .background(Theme.paper.ignoresSafeArea())
+            .background(Theme.contentBackground.ignoresSafeArea())
             .navigationTitle(fr ? "Nouvelle publication" : "New post")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -326,7 +326,7 @@ private struct NativeCommunityComposer: View {
                 } catch { if !Task.isCancelled, self.photo == photo { photoError = true } }
             }
         }
-        .foregroundColor(Theme.ink).tint(Theme.brand).preferredColorScheme(.light)
+        .foregroundColor(Theme.ink).tint(Theme.accent)
     }
 }
 
@@ -359,6 +359,6 @@ private struct NativeCommunityDiscussion: View {
             .onAppear { game.sendCommunity(["type": "post_comments", "postId": post.id]) }
             .onChange(of: game.community.lastReplyID) { if $0 != nil { draft = "" } }
         }
-        .foregroundColor(Theme.ink).tint(Theme.brand).preferredColorScheme(.light)
+        .foregroundColor(Theme.ink).tint(Theme.accent)
     }
 }

@@ -66,7 +66,7 @@ struct EmailSignInView: View {
                         }
                     }
                     if let error = auth.authError {
-                        Text(error).font(.subheadline).foregroundColor(Theme.brand)
+                        Text(error).font(.subheadline).foregroundColor(Theme.accent)
                             .accessibilityAddTraits(.updatesFrequently)
                     }
                     if resetSent {
@@ -90,13 +90,13 @@ struct EmailSignInView: View {
                             if !resetting { creatingAccount = false }
                             resetSent = false; auth.authError = nil; focused = .email
                         }
-                        .font(.subheadline.weight(.semibold)).foregroundColor(Theme.brand).frame(minHeight: 44)
+                        .font(.subheadline.weight(.semibold)).foregroundColor(Theme.accent).frame(minHeight: 44)
                     }
                 }
                 .disabled(auth.isAuthenticating)
                 .padding(24).frame(maxWidth: 480).frame(maxWidth: .infinity)
             }
-            .scrollDismissesKeyboard(.interactively).background(Theme.paper.ignoresSafeArea())
+            .scrollDismissesKeyboard(.interactively).background(Theme.contentBackground.ignoresSafeArea())
             .navigationTitle(game.t("signInEmail")).navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -114,7 +114,7 @@ struct EmailSignInView: View {
                 }
             }
         }
-        .buttonStyle(.plain).foregroundColor(Theme.ink).tint(Theme.brand).preferredColorScheme(.light)
+        .buttonStyle(.plain).foregroundColor(Theme.ink).tint(Theme.accent)
         .interactiveDismissDisabled(auth.isAuthenticating)
         .onChange(of: creatingAccount) { _ in
             auth.authError = nil; confirmation = ""; focused = nil
@@ -151,7 +151,7 @@ struct EmailSignInView: View {
 private struct EmailFieldStyle: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.body).padding(.horizontal, 14).frame(minHeight: 54)
-            .background(Color.white, in: RoundedRectangle(cornerRadius: 12))
-            .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Theme.muted.opacity(0.3)))
+            .background(Theme.card, in: RoundedRectangle(cornerRadius: 12))
+            .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Theme.controlBorder))
     }
 }

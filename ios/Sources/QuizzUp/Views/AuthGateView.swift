@@ -42,7 +42,7 @@ struct AuthGateView: View {
         .foregroundColor(.white)
         .padding(.horizontal, 24).padding(.bottom, 16)
         .frame(maxWidth: 440).frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Theme.brand.ignoresSafeArea())
+        .background(Theme.pageBackground.ignoresSafeArea())
         .buttonStyle(.plain)
         .sheet(isPresented: $showEmail) { EmailSignInView() }
         .onAppear {
@@ -98,7 +98,7 @@ struct AuthGateView: View {
             providerButton(title: "signInApple", background: .white, foreground: .black) {
                 Image(systemName: "apple.logo").font(.system(size: 22))
             } action: { auth.signInWithApple() }
-            providerButton(title: "signInGoogle", background: Theme.paper, foreground: Theme.ink) {
+            providerButton(title: "signInGoogle", background: Theme.lightPaper, foreground: Theme.onGold) {
                 Image("GoogleSignInMark").resizable().renderingMode(.original).frame(width: 21, height: 21)
             } action: { auth.signInWithGoogle() }
             providerButton(title: "signInEmail", background: .clear, foreground: .white) {

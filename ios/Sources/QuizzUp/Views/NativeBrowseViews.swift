@@ -150,6 +150,7 @@ struct NativeTopicTile: View {
 }
 
 struct NativeThemesView: View {
+    @Environment(\.colorScheme) private var colorScheme
     @EnvironmentObject var game: GameSocket
     @Binding var focusSearch: Bool
     @FocusState private var searchFocused: Bool
@@ -251,7 +252,7 @@ struct NativeThemesView: View {
         }
         .padding(.horizontal, 14).frame(minHeight: 50)
         .background(Theme.paper, in: RoundedRectangle(cornerRadius: 16))
-        .environment(\.colorScheme, .light).tint(Theme.brand)
+        .tint(Theme.accent)
     }
 
     private var familyGrid: some View {
@@ -286,6 +287,7 @@ struct NativeThemesView: View {
     }
 
     private func familyColors(_ id: String) -> (Color, Color) {
+        if colorScheme == .dark { return (Theme.accent, Theme.accent.opacity(0.14)) }
         let hex: (UInt32, UInt32)
         switch id {
         case "football": hex = (0x28684D, 0xE0EEE4)
@@ -339,7 +341,7 @@ struct NativePlaySheet: View {
             }
         }
         .background(Theme.paper.ignoresSafeArea())
-        .preferredColorScheme(.light)
+
         .presentationDetents([.medium, .large])
         .presentationDragIndicator(.visible)
     }
@@ -355,7 +357,7 @@ struct NativePlaySheet: View {
                     Spacer(minLength: 0)
                     Button { dismiss() } label: {
                         Image(systemName: "xmark").font(.system(size: 16, weight: .semibold))
-                            .foregroundColor(Theme.brand).frame(width: 44, height: 44)
+                            .foregroundColor(Theme.accent).frame(width: 44, height: 44)
                     }
                     .buttonStyle(.plain).accessibilityLabel(fr ? "Fermer" : "Close")
                 }
@@ -386,7 +388,7 @@ struct NativePlaySheet: View {
                     Text(subtitle).font(.footnote).foregroundColor(Theme.muted)
                 }
                 Spacer(minLength: 0)
-                Image(systemName: "arrow.right").foregroundColor(Theme.brand)
+                Image(systemName: "arrow.right").foregroundColor(Theme.accent)
             }
             .multilineTextAlignment(.leading)
             .padding(.vertical, 12)

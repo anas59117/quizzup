@@ -8,8 +8,8 @@ struct NativeMessagesView: View {
     var onInvite: (() -> Void)?
     var onJoin: (() -> Void)?
     var preferredCategory: Category?
-    private let accent = Color(hex: 0xAE1536)
-    private let line = Color(hex: 0xE8DEDB)
+    private let accent = Theme.accent
+    private let line = Theme.separator
     private var fr: Bool { game.lang == "fr" }
     private var peers: [NativeFriend] {
         let query = search.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -49,7 +49,7 @@ struct NativeMessagesView: View {
                     }
                     ForEach(peers) { friend in conversationRow(friend) }
                     NativeFriendInviteButtons(
-                        accent: accent, fill: accent, line: accent, filledInk: .white,
+                        accent: accent, fill: Theme.brand, line: accent, filledInk: .white,
                         onInvite: { if let onInvite { onInvite() } else { roomSheet = .create } },
                         onJoin: { if let onJoin { onJoin() } else { roomSheet = .join } }
                     ).padding(.top, 16)
@@ -61,9 +61,9 @@ struct NativeMessagesView: View {
             .clipped()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Theme.paper.ignoresSafeArea())
+        .background(Theme.contentBackground.ignoresSafeArea())
         .foregroundColor(Theme.ink)
-        .environment(\.colorScheme, .light)
+
         .onAppear { game.requestInbox() }
         .onChange(of: game.connected) { if $0 { game.requestInbox() } }
         .sheet(isPresented: Binding(get: { roomSheet != nil }, set: { if !$0 { roomSheet = nil } })) {
@@ -99,13 +99,13 @@ struct NativeMessagesView: View {
             }
         }
         .padding(.horizontal, 14).frame(minHeight: 50)
-        .background(Color(hex: 0xF1EAE7), in: RoundedRectangle(cornerRadius: 16))
+        .background(Theme.field, in: RoundedRectangle(cornerRadius: 16))
         .overlay(RoundedRectangle(cornerRadius: 16).strokeBorder(searchFocused ? accent : line))
     }
 
     private var emptyState: some View {
         VStack(spacing: 0) {
-            RoundedRectangle(cornerRadius: 26).fill(Color(hex: 0xF5E4E7))
+            RoundedRectangle(cornerRadius: 26).fill(Theme.accent.opacity(0.12))
                 .frame(width: 76, height: 76).rotationEffect(.degrees(-5))
                 .overlay {
                     Image(systemName: "bubble.left").font(.system(size: 32, weight: .medium))
@@ -166,7 +166,7 @@ struct NativeMessagesView: View {
                             if conversation.unread > 0 {
                                 Text("\(min(99, conversation.unread))").font(.caption.bold())
                                     .padding(.horizontal, 7).padding(.vertical, 4)
-                                    .foregroundColor(.white).background(accent, in: Capsule())
+                                    .foregroundColor(.white).background(Theme.brand, in: Capsule())
                             }
                         }
                     }
@@ -185,8 +185,8 @@ struct NativeMessagesView: View {
 struct NativeFriendInviteButtons: View {
     @EnvironmentObject var game: GameSocket
     var accent: Color = Theme.ink
-    var fill: Color = Color(hex: 0xF0E8E5)
-    var line: Color = Color(hex: 0xE8DEDB)
+    var fill: Color = Theme.field
+    var line: Color = Theme.separator
     var filledInk: Color = Theme.ink
     let onInvite: () -> Void
     let onJoin: () -> Void
@@ -240,12 +240,12 @@ struct NativeFriendCodeSheet: View {
                     }
                 }
                 if let notice = game.socialNotice { Text(notice).foregroundColor(Theme.ink) }
-                if let error = game.socialError { Text(error).foregroundColor(Theme.brand) }
+                if let error = game.socialError { Text(error).foregroundColor(Theme.accent) }
             }
             .navigationTitle(fr ? "Ajouter un ami" : "Add a friend")
             .toolbar { ToolbarItem(placement: .confirmationAction) { Button(fr ? "Fermer" : "Done") { dismiss() } } }
             .onAppear { game.socialError = nil; game.socialNotice = nil }
-        }.tint(Theme.brand).preferredColorScheme(.light)
+        }.tint(Theme.accent)
     }
 }
 
@@ -273,7 +273,7 @@ struct NativeMessageThread: View {
                             .frame(minHeight: 44).disabled(game.historyLoading)
                     }
                     if game.historyLoading { ProgressView() }
-                    if let error = game.socialError { Text(error).font(.subheadline).foregroundColor(Theme.brand) }
+                    if let error = game.socialError { Text(error).font(.subheadline).foregroundColor(Theme.accent) }
                     ForEach(messages) { message in messageRow(message).id(message.id) }
                 }.padding(16)
             }
@@ -286,7 +286,6 @@ struct NativeMessageThread: View {
         .navigationTitle(friend.name).navigationBarTitleDisplayMode(.inline)
         .toolbar(.visible, for: .navigationBar)
         .toolbarBackground(Theme.paper, for: .navigationBar).toolbarBackground(.visible, for: .navigationBar)
-        .toolbarColorScheme(.light, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 HStack(spacing: 0) {
@@ -322,10 +321,10 @@ struct NativeMessageThread: View {
                             }.buttonStyle(.bordered).controlSize(.large)
                         }
                     } else { Text(challenge.status == "pending" ? (fr ? "En attente de réponse" : "Waiting for a reply") : (fr ? "Défi terminé ou accepté" : "Challenge accepted or finished")).font(.caption) }
-                }.padding(14).background(Theme.gold.opacity(0.35)).cornerRadius(16)
+                }.padding(14).background(Theme.challengeBackground).cornerRadius(16)
             } else {
                 Text(message.text.isEmpty ? (fr ? "Résultat du duel" : "Duel result") : message.text)
-                    .padding(14).background(own ? Theme.brand : Color(hex: 0xEEE5E1)).foregroundColor(own ? .white : Theme.ink).cornerRadius(16)
+                    .padding(14).background(own ? Theme.brand : Theme.field).foregroundColor(own ? .white : Theme.ink).cornerRadius(16)
             }
             Text(message.date.formatted(date: .omitted, time: .shortened)).font(.system(size: 12)).foregroundColor(Theme.muted)
         }.frame(maxWidth: .infinity, alignment: own ? .trailing : .leading)
@@ -334,7 +333,7 @@ struct NativeMessageThread: View {
     private var composer: some View {
         HStack(alignment: .bottom, spacing: 10) {
             TextField(fr ? "Votre message…" : "Your message…", text: $draft, axis: .vertical)
-                .lineLimit(1...4).padding(12).background(Color(hex: 0xEEE5E1)).cornerRadius(14)
+                .lineLimit(1...4).padding(12).background(Theme.field).cornerRadius(14)
                 .onChange(of: draft) { value in if value.count > 300 { draft = String(value.prefix(300)) } }
             Button {
                 let retryID = draft == submittedDraft ? pendingDraftID : nil
@@ -343,9 +342,9 @@ struct NativeMessageThread: View {
             } label: {
                 if game.pendingMessageID != nil { ProgressView().frame(width: 46, height: 46) }
                 else { Image(systemName: "paperplane.fill").frame(width: 46, height: 46) }
-            }.background(Theme.gold).foregroundColor(Theme.ink).clipShape(Circle())
+            }.background(Theme.gold).foregroundColor(Theme.onGold).clipShape(Circle())
                 .disabled(!game.connected || game.pendingMessageID != nil || draft.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 .accessibilityLabel(fr ? "Envoyer le message" : "Send message")
-        }.padding(12).background(Theme.paper).environment(\.colorScheme, .light)
+        }.padding(12).background(Theme.paper)
     }
 }

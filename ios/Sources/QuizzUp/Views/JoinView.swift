@@ -21,22 +21,22 @@ struct JoinView: View {
                 TextField(game.t("usernamePlaceholder"), text: $game.name)
                     .textFieldStyle(.plain).textContentType(.nickname).autocorrectionDisabled()
                     .padding(18).background(Theme.paper).foregroundColor(Theme.ink).cornerRadius(16)
-                    .tint(Theme.brand)
-                    .environment(\.colorScheme, .light)
+                    .tint(Theme.accent)
+
                     .onChange(of: game.name) { value in if value.count > 20 { game.name = String(value.prefix(20)) } }
                 if let error = game.socialError { Text(error).font(.subheadline).multilineTextAlignment(.center) }
                 Button {
                     game.completeProfile()
                 } label: {
                     HStack {
-                        if game.profileSaving { ProgressView().tint(Theme.ink) }
+                        if game.profileSaving { ProgressView().tint(Theme.onGold) }
                         Text(game.t("continue")).font(.headline)
                     }.frame(maxWidth: .infinity, minHeight: 56)
-                }.background(Theme.gold).foregroundColor(Theme.ink).cornerRadius(16)
+                }.background(Theme.gold).foregroundColor(Theme.onGold).cornerRadius(16)
                     .disabled(game.profileSaving || game.name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 Link(game.t("privacyPolicy"), destination: URL(string: "https://\(GameSocket.frontendHost)/privacy.html")!)
                     .font(.footnote).padding(.top, 12)
             }.foregroundColor(.white).padding(24).frame(maxWidth: 520).frame(maxWidth: .infinity)
-        }.background(Theme.brand.ignoresSafeArea()).tint(.white)
+        }.background(Theme.pageBackground.ignoresSafeArea()).tint(.white)
     }
 }

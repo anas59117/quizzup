@@ -29,6 +29,7 @@ enum NativeBrowseRoute: Hashable {
 }
 
 struct HomeView: View {
+    @Environment(\.colorScheme) private var colorScheme
     @EnvironmentObject var game: GameSocket
     @State private var tab: BrowseTab = .home
     @State private var path: [NativeBrowseRoute] = []
@@ -49,7 +50,7 @@ struct HomeView: View {
             let value = NativeCatalog.entry(for: category.key)?.detailTint ?? "#4B2436"
             return Color(hex: UInt32(value.dropFirst(), radix: 16) ?? 0x4B2436)
         }
-        return tab == .messages || game.conversationOpen ? Theme.paper : Theme.brand
+        return tab == .messages || game.conversationOpen ? Theme.contentBackground : Theme.pageBackground
     }
 
     var body: some View {
@@ -61,8 +62,8 @@ struct HomeView: View {
             }
         }
         .background(browseBackground.ignoresSafeArea())
-        .tint(Theme.brand)
-        .preferredColorScheme(tab == .messages || game.conversationOpen ? .light : .dark)
+        .tint(Theme.accent)
+
         .sheet(isPresented: $showSettings) { NativeSettingsView() }
         .sheet(isPresented: $showPlay) { NativePlaySheet(category: nil) }
         .sheet(isPresented: $showRoom) {
@@ -74,9 +75,14 @@ struct HomeView: View {
             switch StoreCaptureConfiguration.options?.screen {
             case "themes", "family": tab = .themes
             case "messages", "messages-empty": tab = .messages
-            case "profile", "profile-empty": tab = .profile
+            case "profile", "profile-empty", "profile-edit": tab = .profile
             case "community", "community-compose", "community-suggestion": path = [.community(nil)]
-            case "settings": showSettings = true
+            case "settings", "settings-live": showSettings = true
+            case "room": roomMode = .join; showRoom = true
+            case "play": showPlay = true
+            case "thread":
+                tab = .messages
+                if let friend = game.friends.first { path = [.message(friend, preferredCategory: nil)] }
             case "detail", "detail-scrolled":
                 if let category = game.categories.first(where: { $0.key == "spider_man" }) {
                     path = [.topic(category)]
@@ -123,7 +129,7 @@ struct HomeView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .clipped()
             }
-            .background(Theme.brand.ignoresSafeArea())
+            .background(Theme.pageBackground.ignoresSafeArea())
             .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: NativeBrowseRoute.self) { route in
                 switch route {
@@ -177,11 +183,11 @@ struct HomeView: View {
         .foregroundColor(.white)
         .padding(.horizontal, 16).padding(.top, 14).padding(.bottom, tab == .home ? 12 : 20)
         .frame(maxWidth: 560).frame(maxWidth: .infinity)
-        .background(Theme.brand)
+        .background(Theme.pageBackground)
     }
 
     private var dock: some View {
-        let dark = visibleTopic != nil
+        let dark = visibleTopic != nil || colorScheme == .dark
         return HStack(spacing: 0) {
             dockItem(.home, dark: dark)
             dockItem(.themes, dark: dark)
@@ -205,7 +211,7 @@ struct HomeView: View {
         }
         .buttonStyle(.plain)
         .padding(.horizontal, 4).padding(.vertical, 5)
-        .background(dark ? Color(hex: 0x291B24) : Theme.paper, in: RoundedRectangle(cornerRadius: 26))
+        .background(visibleTopic != nil ? Color(hex: 0x291B24) : Theme.paper, in: RoundedRectangle(cornerRadius: 26))
         .overlay {
             RoundedRectangle(cornerRadius: 26)
                 .strokeBorder(dark ? .white.opacity(0.15) : Theme.ink.opacity(0.12))
@@ -218,7 +224,7 @@ struct HomeView: View {
 
     private func dockItem(_ item: BrowseTab, dark: Bool) -> some View {
         let active = tab == item
-        let color = active ? (dark ? Color(hex: 0xFFE296) : Theme.brand) : (dark ? Color(hex: 0xD3BDC6) : Theme.muted)
+        let color = active ? (visibleTopic != nil ? Color(hex: 0xFFE296) : Theme.accent) : (visibleTopic != nil ? Color(hex: 0xD3BDC6) : Theme.muted)
         let messageCount = item == .messages ? unread : 0
         return Button { select(item) } label: {
             VStack(spacing: 5) {
@@ -372,7 +378,7 @@ private struct NativeHomeContent: View {
                     }
                 }
                 Spacer(minLength: 0)
-                Image(systemName: "arrow.right").font(.system(size: 17)).foregroundColor(Theme.brand)
+                Image(systemName: "arrow.right").font(.system(size: 17)).foregroundColor(Theme.accent)
             }
             .multilineTextAlignment(.leading).foregroundColor(Theme.ink).padding(16)
             .frame(maxWidth: .infinity, minHeight: 80, alignment: .leading)

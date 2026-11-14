@@ -254,7 +254,7 @@ private struct NativeTopicRankingSheet: View {
                 HStack {
                     Text(fr ? "Classement du thème" : "Topic leaderboard")
                         .font(.system(size: 12, weight: .heavy)).tracking(1.2).textCase(.uppercase)
-                        .foregroundColor(Theme.brand)
+                        .foregroundColor(Theme.accent)
                     Spacer(minLength: 0)
                     Button { dismiss() } label: {
                         Image(systemName: "xmark").font(.system(size: 15, weight: .semibold))
@@ -272,7 +272,7 @@ private struct NativeTopicRankingSheet: View {
                     ForEach(entries, id: \.id) { player in
                         HStack(spacing: 12) {
                             Text("#\(player.rank)").font(.subheadline.bold()).monospacedDigit()
-                                .foregroundColor(Theme.brand).frame(minWidth: 29, alignment: .leading)
+                                .foregroundColor(Theme.accent).frame(minWidth: 29, alignment: .leading)
                             NativePlayerPortrait(avatar: player.avatar, size: 36)
                             Text(player.name).font(.subheadline.bold())
                             Spacer(minLength: 4)
@@ -285,16 +285,16 @@ private struct NativeTopicRankingSheet: View {
                     Text(fr ? "Impossible de charger le classement." : "The leaderboard could not load.")
                         .foregroundColor(Theme.muted)
                     Button(fr ? "Réessayer" : "Try again") { retry += 1 }
-                        .foregroundColor(Theme.brand).frame(minHeight: 44)
+                        .foregroundColor(Theme.accent).frame(minHeight: 44)
                 } else {
                     ProgressView(fr ? "Chargement du classement…" : "Loading the leaderboard…")
-                        .tint(Theme.brand)
+                        .tint(Theme.accent)
                 }
             }
             .padding(24).frame(maxWidth: 550).frame(maxWidth: .infinity, alignment: .top)
         }
-        .foregroundColor(Theme.ink).background(Theme.paper.ignoresSafeArea())
-        .preferredColorScheme(.light)
+        .foregroundColor(Theme.ink).background(Theme.contentBackground.ignoresSafeArea())
+
         .presentationDetents([.medium, .large]).presentationDragIndicator(.visible)
         .task(id: retry) {
             timedOut = false

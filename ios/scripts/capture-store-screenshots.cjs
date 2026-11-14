@@ -9,13 +9,22 @@ assert.ok(app.endsWith('.app')&&fs.existsSync(app),'Pass the compiled STORE_CAPT
 const output=path.resolve(process.argv[3]||path.join(root,'ios/AppStoreMetadata/screenshots'));
 const visualReview=process.argv.includes('--visual-review');
 const audioReview=visualReview&&process.argv.includes('--duel-audio-review');
+const appearanceReview=visualReview&&process.argv.includes('--appearance-review');
 const captureProfiles=visualReview ? profiles.filter(profile=>profile.type==='iPhone-15') : profiles;
 const captureLanguages=visualReview ? ['fr'] : ['fr','en'];
-const captureScreens=audioReview
+const captureScreens=appearanceReview
+ ? ['home','themes','family','profile','messages','thread','community','community-compose','settings','play','auth','auth-email','join','detail','room','profile-edit','settings-live']
+ : audioReview
  ? ['waiting','faceoff','question','question-photo','answer','question-muted','settings','community','community-suggestion','community-compose']
  : visualReview
  ? ['home','home-empty','home-return','themes','family','detail','detail-scrolled','messages','messages-empty','community','community-compose','settings','profile','profile-empty','waiting','faceoff','question','question-photo','answer','result','auth','auth-restoring','auth-email','auth-email-keyboard','auth-email-create','auth-email-reset']
  : scenarios;
+const capturePlans=appearanceReview ? [
+ {key:'light',preference:'light',system:'dark',screens:captureScreens},
+ {key:'dark',preference:'dark',system:'light',screens:captureScreens},
+ {key:'system-light',preference:'system',system:'light',screens:['home','settings']},
+ {key:'system-dark',preference:'system',system:'dark',screens:['home','settings']},
+] : [{key:'light',preference:'light',system:'light',screens:captureScreens}];
 const rawDirectory=path.join(process.env.RUNNER_TEMP||require('node:os').tmpdir(),'quizzup-native-capture-raw');
 fs.mkdirSync(output,{recursive:true});fs.mkdirSync(rawDirectory,{recursive:true});
 validatePng(fs.readFileSync(path.join(root,'ios/Sources/QuizzUp/Resources/Assets.xcassets/AppIcon.appiconset/icon-1024.png')),1024,1024,true);
@@ -38,16 +47,20 @@ for(const profile of captureProfiles){
   run('xcrun',['simctl','install',udid,app]);
   const data=run('xcrun',['simctl','get_app_container',udid,'com.quizzup.app','data']);
   const ready=path.join(data,'Documents/store-capture-ready.json');
-  for(const language of captureLanguages)for(const screen of captureScreens){
+  for(const plan of capturePlans){
+  run('xcrun',['simctl','ui',udid,'appearance',plan.system]);
+  for(const language of captureLanguages)for(const screen of plan.screens){
    if(fs.existsSync(ready))fs.unlinkSync(ready);
-   run('xcrun',['simctl','launch','--terminate-running-process',udid,'com.quizzup.app','--store-capture-screen',screen,'--store-capture-language',language]);
+   run('xcrun',['simctl','launch','--terminate-running-process',udid,'com.quizzup.app','--store-capture-screen',screen,'--store-capture-language',language,'--store-capture-appearance',plan.preference]);
    const deadline=Date.now()+30000;
    while(!fs.existsSync(ready)&&Date.now()<deadline)pause(200);
    assert.ok(fs.existsSync(ready),`View did not become ready: ${profile.key}/${language}/${screen}`);
-   assert.deepEqual(JSON.parse(fs.readFileSync(ready,'utf8')),{screen,language});
+   const finalPreference=screen==='settings-live' ? (plan.preference==='dark' ? 'light' : 'dark') : plan.preference;
+   assert.deepEqual(JSON.parse(fs.readFileSync(ready,'utf8')),{screen,language,appearance:plan.preference,storedAppearance:finalPreference});
    const name=`${String(captureScreens.indexOf(screen)+1).padStart(2,'0')}-${screen}`;
-   const raw=path.join(rawDirectory,`${profile.key}-${language}-${name}.png`);
-   const relative=`${language}/${profile.key}/${name}.jpg`;
+   const relative=`${appearanceReview ? plan.key+'/' : ''}${language}/${profile.key}/${name}.jpg`;
+   const saveCapture=(relative,expectedAppearance,suffix='')=>{
+   const raw=path.join(rawDirectory,`${profile.key}-${language}-${name}${suffix}.png`);
    const destination=path.join(output,relative);
    fs.mkdirSync(path.dirname(destination),{recursive:true});
    run('xcrun',['simctl','io',udid,'screenshot','--type=png',raw]);
@@ -57,8 +70,17 @@ for(const profile of captureProfiles){
    run('sips',['-s','format','jpeg','-s','formatOptions','100',raw,'--out',destination]);
    const bytes=fs.readFileSync(destination),info=jpegInfo(bytes);
    assert.deepEqual(info,{width:profile.width,height:profile.height,components:3});
-   captures.push({screen,language,profile:profile.key,path:relative,...info,sha256:crypto.createHash('sha256').update(bytes).digest('hex')});
+   captures.push({screen,language,appearance:plan.key,expectedAppearance,profile:profile.key,path:relative,...info,sha256:crypto.createHash('sha256').update(bytes).digest('hex')});
    console.log(`CAPTURED ${relative} ${info.width}x${info.height}`);
+   };
+   const duelScreen=['waiting','faceoff','question','question-photo','question-muted','answer','result'].includes(screen);
+   saveCapture(relative,duelScreen ? 'dark' : finalPreference==='system' ? plan.system : finalPreference);
+   if(appearanceReview&&plan.preference==='system'&&screen==='settings'){
+    const changed=plan.system==='dark'?'light':'dark';
+    run('xcrun',['simctl','ui',udid,'appearance',changed]);pause(1500);
+    saveCapture(`${plan.key}-live/${language}/${profile.key}/${name}.jpg`,changed,'-live');
+   }
+  }
   }
  }finally{
   // Cleanup must not mask a failed capture or stall the ephemeral CI runner.
@@ -68,7 +90,7 @@ for(const profile of captureProfiles){
   }
  }
 }
-assert.equal(captures.length,captureProfiles.length * captureScreens.length * captureLanguages.length);
+assert.equal(captures.length,captureProfiles.length * captureLanguages.length * (capturePlans.reduce((n,plan)=>n+plan.screens.length,0)+(appearanceReview?2:0)));
 const commit=process.env.GITHUB_SHA||run('git',['-C',root,'rev-parse','HEAD']);
 fs.writeFileSync(path.join(output,'manifest.json'),JSON.stringify({commit,runtime:runtime.identifier,capturedAt:new Date().toISOString(),nativeViews:true,contentLanguage:'Original French question bank; FR/EN interface chrome only',captures},null,2)+'\n');
 console.log(`Verified ${captures.length} native, opaque App Store captures; no resizing.`);

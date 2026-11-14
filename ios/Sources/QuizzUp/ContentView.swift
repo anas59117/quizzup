@@ -4,6 +4,14 @@ struct ContentView: View {
     @EnvironmentObject var game: GameSocket
     @EnvironmentObject private var audio: NativeAudioManager
     @Environment(\.scenePhase) private var scenePhase
+    @AppStorage(NativeAppearance.storageKey) private var appearance = NativeAppearance.system.rawValue
+
+    private var appearanceScheme: ColorScheme? {
+        switch game.stage {
+        case .waiting, .roundIntro, .question, .finished: return .dark
+        default: return Theme.colorScheme(for: .stored(appearance))
+        }
+    }
 
     private var musicCue: NativeMusicCue? {
         switch game.stage {
@@ -15,7 +23,7 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            Theme.brand.ignoresSafeArea()
+            Theme.pageBackground.ignoresSafeArea()
             switch game.stage {
             case .authGate: AuthGateView()
             case .join: JoinView()
@@ -28,7 +36,7 @@ struct ContentView: View {
             }
         }
         .foregroundColor(game.stage == .home ? nil : Theme.text)
-        .preferredColorScheme(game.stage == .home ? nil : .dark)
+        .preferredColorScheme(appearanceScheme)
         .overlay(alignment: .topTrailing) {
             if game.stage == .waiting || game.stage == .roundIntro {
                 NativeAudioToggle().padding(.trailing, 16).padding(.top, 6)
@@ -69,7 +77,8 @@ struct PrimaryButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(.headline)
-            .foregroundColor(Theme.ink)
+            .foregroundColor(Theme.onGold)
+            .tint(Theme.onGold)
             .frame(maxWidth: .infinity)
             .padding()
             .background(Theme.gold)

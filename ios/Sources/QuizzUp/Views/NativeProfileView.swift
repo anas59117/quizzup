@@ -18,8 +18,8 @@ struct NativeProfileView: View {
     var onDiscoverTopics: (() -> Void)?
     var onInvite: (() -> Void)?
     var onJoin: (() -> Void)?
-    private let line = Color(hex: 0xE8DEDB)
-    private let soft = Color(hex: 0xF0E8E5)
+    private let line = Theme.separator
+    private let soft = Theme.field
     private var fr: Bool { game.lang == "fr" }
     private var level: Int { game.stats?.level ?? 1 }
     private var xpGoal: Int { max(0, game.stats?.xpForLevel ?? 0) }
@@ -53,7 +53,12 @@ struct NativeProfileView: View {
                 .clipped()
             }
         }
-        .background(Theme.brand.ignoresSafeArea())
+        .background(Theme.pageBackground.ignoresSafeArea())
+        .onAppear {
+            #if DEBUG && STORE_CAPTURE
+            if StoreCaptureConfiguration.options?.screen == "profile-edit" { showEditor = true }
+            #endif
+        }
         .refreshable { game.requestProfile() }
         .sheet(isPresented: $showSettings) { NativeSettingsView() }
         .sheet(isPresented: $showEditor) { NativeProfileEditor() }
@@ -86,7 +91,7 @@ struct NativeProfileView: View {
                     .overlay(alignment: .bottomTrailing) {
                         Button { showEditor = true } label: {
                             Image(systemName: "pencil").font(.system(size: 14, weight: .semibold))
-                                .foregroundColor(Theme.brand)
+                                .foregroundColor(Theme.accent)
                                 .frame(width: 32, height: 32).background(soft, in: Circle())
                                 .overlay(Circle().strokeBorder(Theme.paper, lineWidth: 2))
                                 .frame(width: 44, height: 44).contentShape(Rectangle())
@@ -116,7 +121,7 @@ struct NativeProfileView: View {
             if xpGoal > 0 && !newPlayer {
                 GeometryReader { geometry in
                     Capsule().fill(soft).overlay(alignment: .leading) {
-                        Capsule().fill(Theme.brand).frame(width: geometry.size.width * CGFloat(xp) / CGFloat(xpGoal))
+                        Capsule().fill(Theme.accent).frame(width: geometry.size.width * CGFloat(xp) / CGFloat(xpGoal))
                     }
                 }
                 .frame(height: 8).padding(.top, 8).accessibilityHidden(true)
@@ -129,7 +134,7 @@ struct NativeProfileView: View {
             HStack(spacing: 14) {
                 Button(action: onFriends) {
                     Label { Text(friendCountLabel).underline() } icon: { Image(systemName: "person.2") }
-                        .font(.system(size: 12, weight: .bold)).foregroundColor(Theme.brand)
+                        .font(.system(size: 12, weight: .bold)).foregroundColor(Theme.accent)
                         .frame(minHeight: 44)
                 }.buttonStyle(.plain)
                 if let count = game.stats?.following {
@@ -176,7 +181,7 @@ struct NativeProfileView: View {
                                 Text(NativeCatalog.title(for: item.category, lang: game.lang))
                                     .font(.system(size: 12, weight: .bold)).lineLimit(2)
                                 Text("\(fr ? "Niveau" : "Level") \(item.topic.level)")
-                                    .font(.system(size: 11, weight: .semibold)).foregroundColor(Theme.brand)
+                                    .font(.system(size: 11, weight: .semibold)).foregroundColor(Theme.accent)
                             }
                             .padding(8).frame(maxWidth: .infinity, minHeight: 52, alignment: .topLeading)
                         }.foregroundColor(Theme.ink).background(Theme.paper)
@@ -228,7 +233,7 @@ struct NativeProfileView: View {
                             NativePlayerPortrait(avatar: friend.avatar, size: 36)
                             Text(friend.name).font(.system(size: 14, weight: .semibold))
                             Spacer()
-                            Image(systemName: "bubble.left").font(.system(size: 14)).foregroundColor(Theme.brand)
+                            Image(systemName: "bubble.left").font(.system(size: 14)).foregroundColor(Theme.accent)
                         }.padding(8).background(soft, in: RoundedRectangle(cornerRadius: 10))
                     }.buttonStyle(.plain)
                 }
@@ -332,12 +337,12 @@ private struct NativeProfileEditor: View {
                             } label: {
                                 NativePlayerPortrait(avatar: option, size: 44)
                                     .padding(4)
-                                    .overlay(Circle().strokeBorder(avatar == option && photoData == nil ? Theme.brand : .clear, lineWidth: 2))
+                                    .overlay(Circle().strokeBorder(avatar == option && photoData == nil ? Theme.accent : .clear, lineWidth: 2))
                             }.buttonStyle(.plain).accessibilityLabel(option.capitalized)
                         }
                     }
                 }
-                if let error = photoError ?? game.socialError { Text(error).foregroundColor(Theme.brand) }
+                if let error = photoError ?? game.socialError { Text(error).foregroundColor(Theme.accent) }
             }
             .disabled(busy)
             .scrollContentBackground(.hidden).background(Theme.paper)
@@ -353,7 +358,7 @@ private struct NativeProfileEditor: View {
                 }
             }
         }
-        .tint(Theme.brand).preferredColorScheme(.light).interactiveDismissDisabled(busy)
+        .tint(Theme.accent).interactiveDismissDisabled(busy)
         .onAppear { name = game.name; avatar = game.avatar; game.socialError = nil }
         .task(id: photoItem) {
             guard let selection = photoItem else { return }
@@ -450,6 +455,7 @@ enum NativeSocialPhoto {
 }
 
 struct NativeSettingsView: View {
+    @AppStorage(NativeAppearance.storageKey) private var appearance = NativeAppearance.system.rawValue
     @EnvironmentObject private var audio: NativeAudioManager
     @EnvironmentObject var game: GameSocket
     @EnvironmentObject var auth: AuthManager
@@ -460,6 +466,11 @@ struct NativeSettingsView: View {
         NavigationStack {
             Form {
                 Section(fr ? "Préférences" : "Preferences") {
+                    Picker(fr ? "Apparence" : "Appearance", selection: $appearance) {
+                        Text(fr ? "Automatique" : "Automatic").tag(NativeAppearance.system.rawValue)
+                        Text(fr ? "Clair" : "Light").tag(NativeAppearance.light.rawValue)
+                        Text(fr ? "Sombre" : "Dark").tag(NativeAppearance.dark.rawValue)
+                    }
                     Toggle(fr ? "Musique et effets sonores" : "Music and sound effects", isOn: Binding(
                         get: { !audio.isMuted }, set: { audio.setMuted(!$0) }
                     ))
@@ -483,12 +494,12 @@ struct NativeSettingsView: View {
                     } label: {
                         Label(fr ? "Se déconnecter" : "Sign out", systemImage: "rectangle.portrait.and.arrow.right")
                             .frame(minHeight: 36)
-                    }.foregroundColor(Theme.brand)
+                    }.foregroundColor(Theme.accent)
                     Button(role: .destructive) { showDeleteConfirm = true } label: {
                         Label(game.t("deleteAccount"), systemImage: "trash").frame(minHeight: 36)
                     }.disabled(auth.isDeletingAccount)
                     if let error = auth.deleteError {
-                        Text(error).font(.subheadline).foregroundColor(Theme.brand)
+                        Text(error).font(.subheadline).foregroundColor(Theme.accent)
                             .accessibilityLabel("\(fr ? "Erreur" : "Error"): \(error)")
                     }
                 }
@@ -510,7 +521,7 @@ struct NativeSettingsView: View {
             .overlay {
                 if auth.isDeletingAccount {
                     Theme.paper.opacity(0.85).ignoresSafeArea()
-                        .overlay(ProgressView(game.t("deleteAccount")).tint(Theme.brand))
+                        .overlay(ProgressView(game.t("deleteAccount")).tint(Theme.accent))
                 }
             }
             .alert(game.t("deleteAccountConfirmTitle"), isPresented: $showDeleteConfirm) {
@@ -528,7 +539,7 @@ struct NativeSettingsView: View {
                 Text(game.t("deleteAccountConfirmMessage"))
             }
         }
-        .foregroundColor(Theme.ink).tint(Theme.brand).preferredColorScheme(.light)
+        .foregroundColor(Theme.ink).tint(Theme.accent)
         .interactiveDismissDisabled(auth.isDeletingAccount)
     }
 }
