@@ -76,7 +76,7 @@ struct HomeView: View {
             case "themes", "family": tab = .themes
             case "messages", "messages-empty": tab = .messages
             case "profile", "profile-empty", "profile-edit": tab = .profile
-            case "community", "community-compose", "community-suggestion": path = [.community(nil)]
+            case "community", "community-compose", "community-suggestion", "community-discussion", "community-empty": path = [.community(nil)]
             case "settings", "settings-live": showSettings = true
             case "room": roomMode = .join; showRoom = true
             case "play": showPlay = true

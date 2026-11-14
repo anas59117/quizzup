@@ -94,7 +94,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
     }
     const [a, b] = pages;
     const capture = async (page, label) => {
-      for (const width of [320, 390]) {
+      for (const width of [320, 390, 1440]) {
         await page.setViewportSize({ width, height: 844 });
         assert(
           await page.evaluate(
@@ -122,6 +122,27 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
     await a.getByRole('button', {name: 'Abonnements', exact: true}).click();
     await bobPost.getByRole('button', {name: 'Abonné', exact: true}).waitFor();
     await a.getByRole('button', {name: 'Pour toi', exact: true}).click();
+    await bobPost.locator('.community-post-actions > button').nth(1).click();
+    await a.locator('.community-reply-form input').fill('Le duel nous départagera');
+    await a.locator('.community-reply-form > button').click();
+    await a.locator('.community-reply p').filter({hasText: 'Le duel nous départagera'}).waitFor();
+    await b.locator('.community-post').filter({hasText: 'Retrouve Bob'}).locator('.community-post-actions > button').nth(1).click();
+    const rootReply = b.locator('.community-reply').filter({hasText: 'Le duel nous départagera'});
+    await rootReply.locator('.community-reply-actions button').first().click();
+    await rootReply.locator('.community-reply-actions button[aria-pressed="true"]').waitFor();
+    await a.waitForFunction(() => document.querySelector('.community-reply-actions button span')?.textContent === '1');
+    assert.equal(await a.locator('.community-reply-actions button').first().getAttribute('aria-pressed'), 'false');
+    await rootReply.getByRole('button', {name: 'Répondre', exact: true}).click();
+    await b.locator('.community-reply-target').waitFor();
+    await b.locator('.community-reply-form input').fill('Team Spider-Man pour le prochain duel');
+    await b.locator('.community-reply-form > button').click();
+    await a.locator('.community-reply--nested p').filter({hasText: 'Team Spider-Man'}).waitFor();
+    await b.waitForFunction(() => document.querySelector('.community-reply-form input')?.value === '');
+    await capture(a, 'community-thread');
+    await a.locator('.community-thread-back').click();
+    await b.locator('.community-thread-back').click();
+    await capture(a, 'community-feed');
+    console.log('PASS real comments → per-user comment like → threaded reply → acknowledgement clears draft');
     await bobPost.locator('.community-author').click();
     const bobProfile = a.getByRole('dialog', { name: 'BobSocial', exact: true });
     await bobProfile.getByRole('button', { name: 'Ajouter en ami', exact: true }).click();

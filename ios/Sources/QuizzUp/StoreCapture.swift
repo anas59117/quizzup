@@ -26,7 +26,7 @@ enum StoreCaptureConfiguration {
             "themes", "family", "detail", "detail-scrolled", "community", "community-compose", "settings",
             "messages", "messages-empty", "profile", "profile-empty",
             "auth", "auth-restoring", "auth-email", "auth-email-keyboard", "auth-email-create", "auth-email-reset",
-            "question-muted", "community-suggestion",
+            "question-muted", "community-suggestion", "community-discussion", "community-empty",
             "thread", "play", "join",
             "room", "profile-edit", "settings-live",
         ]
@@ -78,11 +78,21 @@ enum StoreCaptureConfiguration {
         if options.screen == "thread" {
             game.messages["store-demo-camille"] = [message, NativeMessage(id: "store-reply", fromId: "store-demo-alex", toId: "store-demo-camille", kind: "text", text: options.language == "fr" ? "Avec plaisir, on joue sur quel thème ?" : "Absolutely! Which topic?", createdAt: 1793920060000)]
         }
-        if options.screen == "community" {
+        if options.screen.hasPrefix("community"), options.screen != "community-empty" {
             // Visual test fixtures only: this code is excluded from Release and never publishes.
-            let post = NativeCommunityPost(id: "store-post", authorId: "store-demo-camille", authorName: "Camille", authorAvatar: "owl", authorFollowed: false, category: "science", text: options.language == "fr" ? "La question qui m’a fait hésiter aujourd’hui…" : "The question that made me hesitate today…", mediaUrl: nil, question: NativeCommunityQuestion(prompt: "Combien de planètes compte le système solaire ?", answers: ["7", "8", "9", "10"]), reactions: 2, reacted: false, commentsCount: 1, createdAt: 1793920000000)
-            game.community.posts = [post]
-            game.community.answers[post.id] = NativeCommunityAnswer(postId: post.id, answerIndex: 1, correctIndex: 1)
+            let origin = "https://\(GameSocket.frontendHost)"
+            let spider = "/images/covers/approved-v2/spider_man-640.webp"
+            let marvel = "/images/covers/approved-v2/marvel-640.webp"
+            let now = Date().timeIntervalSince1970 * 1000
+            let first = NativeCommunityReply(id: "store-comment-1", authorId: "store-fan-1", authorName: "WebHeadClub", authorAvatar: origin + spider, text: options.language == "fr" ? "Andrew méritait un troisième film. Son retour était incroyable." : "Andrew deserved a third film. His return was incredible.", createdAt: now - 480_000, reactions: 4)
+            let answer = NativeCommunityReply(id: "store-comment-2", authorId: "store-fan-2", authorName: "AvengersHQ", authorAvatar: origin + marvel, text: options.language == "fr" ? "La scène dans No Way Home m’a tellement marqué !" : "That scene in No Way Home was unforgettable!", createdAt: now - 360_000, parentId: first.id, reactions: 2, reacted: true)
+            let third = NativeCommunityReply(id: "store-comment-3", authorId: "store-fan-3", authorName: "YamalFan", authorAvatar: origin + "/images/players/lamine_yamal.jpg", text: options.language == "fr" ? "Tobey pour l’émotion. La scène du train reste imbattable." : "Tobey for the emotion. The train scene is unbeatable.", createdAt: now - 120_000, reactions: 3)
+            let post = NativeCommunityPost(id: "store-post", authorId: nil, authorName: "SpideyVerse", authorAvatar: "robot", authorFollowed: false, category: "spider_man", text: options.language == "fr" ? "Votre Spider-Man préféré ?\nTobey, Andrew ou Tom ? Je défends Andrew." : "Your favourite Spider-Man?\nTobey, Andrew or Tom? I’m team Andrew.", mediaUrl: spider, question: nil, reactions: 12, reacted: false, commentsCount: 3, createdAt: now - 720_000, isDemo: true, demoAvatar: origin + spider, lastComment: third)
+            let next = NativeCommunityPost(id: "store-post-2", authorId: nil, authorName: "AvengersHQ", authorAvatar: "robot", authorFollowed: false, category: "marvel", text: options.language == "fr" ? "Infinity War ou Endgame ?\nJe préfère la tension d’Infinity War. Vous en dites quoi ?" : "Infinity War or Endgame?\nI prefer the tension in Infinity War. What do you think?", mediaUrl: marvel, question: nil, reactions: 0, reacted: false, commentsCount: 0, createdAt: now - 2_280_000, isDemo: true, demoAvatar: origin + marvel)
+            game.community.posts = [post, next]
+            game.community.replies[post.id] = [first, answer, third]
+            game.community.loadedReplyPosts.insert(post.id)
+            game.community.latestPost = post
         }
         if ["home-empty", "home-return", "messages-empty", "profile-empty"].contains(options.screen) {
             game.topicProgress = []
@@ -143,7 +153,7 @@ enum StoreCaptureConfiguration {
     @MainActor
     static func markReady() {
         guard let options else { return }
-        let delay = options.screen == "settings-live" ? 4.0 : ["home-return", "question-photo", "auth-email-keyboard"].contains(options.screen) ? 3.0 : 1.0
+        let delay = options.screen == "settings-live" ? 4.0 : options.screen.hasPrefix("community") || ["home-return", "question-photo", "auth-email-keyboard"].contains(options.screen) ? 3.0 : 1.0
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             let receipt: [String: String] = ["screen": options.screen, "language": options.language, "appearance": options.appearance.rawValue, "storedAppearance": NativeAppearance.stored(UserDefaults.standard.string(forKey: NativeAppearance.storageKey)).rawValue]

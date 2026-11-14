@@ -173,7 +173,9 @@ export function useFeed(wsRef, clientId) {
           setComments((p) => ({
             ...p,
             [data.postId]: [
-              ...(p[data.postId] || []).filter((x) => x.id !== data.comment.id),
+              ...(p[data.postId] || []).filter((x) => x.id !== data.comment.id
+                && !(data.removedCommentIds || []).includes(x.id)
+                && !(data.removedCommentIds || []).includes(x.parentId)),
               data.comment,
             ],
           }));

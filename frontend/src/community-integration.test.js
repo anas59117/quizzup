@@ -73,6 +73,17 @@ test("replies carry their root comment and keep the draft pending until confirma
   expect(feed.pending["comment:p"]).toBe(true);
 });
 
+test("server comment evictions keep the replied-to root and remove obsolete threads", () => {
+  const comments = Array.from({ length: 100 }, (_, index) => ({ id: `root-${index}`, authorId: "peer", text: `Comment ${index}` }));
+  act(() => feed.handleMessage({ type: "post_comments", postId: "p", comments }));
+  act(() => feed.handleMessage({ type: "post_commented", postId: "p", commentsCount: 100,
+    removedCommentIds: ["root-1"], comment: { id: "reply-new", parentId: "root-0", authorId: "me", text: "My reply" } }));
+  expect(feed.comments.p).toHaveLength(100);
+  expect(feed.comments.p.some((reply) => reply.id === "root-0")).toBe(true);
+  expect(feed.comments.p.some((reply) => reply.id === "root-1")).toBe(false);
+  expect(feed.comments.p.at(-1).parentId).toBe("root-0");
+});
+
 test("my topics requests keep canonical categories and reject stale topic responses", () => {
   act(() => feed.setFilter({ scope: "topics", categories: ["spider_man", "marvel", "marvel"] }));
   expect(JSON.parse(socket.current.send.mock.calls.at(-1)[0])).toMatchObject({
