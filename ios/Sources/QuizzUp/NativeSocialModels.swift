@@ -145,6 +145,24 @@ struct NativeCommunityState {
     var reactionAttempts: [String: UUID] = [:]
     var commentReactionAttempts: [String: UUID] = [:]
 
+    mutating func receiveComment(_ reply: NativeCommunityReply, postID: String, count: Int?, removedCommentIDs: [String]? = nil) {
+        let removed = Set(removedCommentIDs ?? [])
+        var comments = (replies[postID] ?? []).filter {
+            !removed.contains($0.id) && !removed.contains($0.parentId ?? "")
+        }
+        if !comments.contains(where: { $0.id == reply.id }) { comments.append(reply) }
+        replies[postID] = Array(comments.suffix(100))
+        for index in posts.indices where posts[index].id == postID {
+            if let count { posts[index].commentsCount = count }
+            posts[index].lastComment = reply
+        }
+        if var latest = latestPost, latest.id == postID {
+            if let count { latest.commentsCount = count }
+            latest.lastComment = reply
+            latestPost = latest
+        }
+    }
+
     mutating func receiveCommentReaction(postID: String, commentID: String, count: Int, reacted: Bool, own: Bool) {
         func update(_ reply: inout NativeCommunityReply) {
             guard reply.id == commentID else { return }

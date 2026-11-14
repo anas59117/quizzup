@@ -3,6 +3,29 @@ import XCTest
 @testable import QuizzUpNativeCore
 
 final class NativeSocialPayloadTests: XCTestCase {
+    func testCanonicalCommentEvictionPreservesOldRootWhenItReceivesReply() {
+        let roots = (0..<100).map { index in
+            NativeCommunityReply(id: "root\(index)", authorId: "a", authorName: "A", authorAvatar: "cat", text: "Root", createdAt: Double(index))
+        }
+        let child = NativeCommunityReply(id: "new", authorId: "b", authorName: "B", authorAvatar: "owl", text: "Reply", createdAt: 101, parentId: "root0")
+        var state = NativeCommunityState()
+        state.replies["p"] = roots
+        state.receiveComment(child, postID: "p", count: 100, removedCommentIDs: ["root1"])
+        XCTAssertEqual(state.replies["p"]?.count, 100)
+        XCTAssertEqual(state.replies["p"]?.first?.id, "root0")
+        XCTAssertFalse(state.replies["p"]?.contains { $0.id == "root1" } ?? true)
+        XCTAssertEqual(state.replies["p"]?.last?.parentId, "root0")
+        state.receiveComment(child, postID: "p", count: 100, removedCommentIDs: ["root1"])
+        XCTAssertEqual(state.replies["p"]?.count, 100)
+    }
+
+    func testLegacyCommentEventWithoutEvictionMetadataStillAppends() {
+        let reply = NativeCommunityReply(id: "new", authorId: "a", authorName: "A", authorAvatar: "cat", text: "Hi", createdAt: 1000)
+        var state = NativeCommunityState()
+        state.receiveComment(reply, postID: "p", count: 1)
+        XCTAssertEqual(state.replies["p"]?.map(\.id), ["new"])
+    }
+
     func testBlockingRootAuthorRemovesTheirThreadAndKeepsUnrelatedDiscussion() throws {
         let root = NativeCommunityReply(id: "root", authorId: "blocked", authorName: "B", authorAvatar: "cat", text: "Root", createdAt: 1000)
         let child = NativeCommunityReply(id: "child", authorId: "friend", authorName: "F", authorAvatar: "owl", text: "Reply", createdAt: 2000, parentId: "root")

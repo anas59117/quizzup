@@ -304,16 +304,11 @@ extension GameSocket {
             guard let id = object["postId"] as? String,
                   let reply = decode(object["comment"], as: NativeCommunityReply.self) else { return true }
             guard !community.hiddenAuthors.contains(reply.authorId) else { return true }
-            var replies = community.replies[id] ?? []
-            if !replies.contains(where: { $0.id == reply.id }) { replies.append(reply) }
-            community.replies[id] = Array(replies.suffix(100))
+            community.receiveComment(reply, postID: id, count: object["commentsCount"] as? Int,
+                                     removedCommentIDs: object["removedCommentIds"] as? [String])
             if reply.authorId == clientId, community.pendingReply == id {
                 community.lastReplyID = reply.id
                 community.pendingReply = nil
-            }
-            updateCommunityPost(id) { post in
-                if let count = object["commentsCount"] as? Int { post.commentsCount = count }
-                post.lastComment = reply
             }
         case "post_question_result":
             if let answer = decode(object, as: NativeCommunityAnswer.self) { community.answers[answer.postId] = answer }
