@@ -30,6 +30,8 @@ final class NativeAudioManager: NSObject, ObservableObject {
                                               name: AVAudioSession.mediaServicesWereResetNotification, object: session)
         #if DEBUG && STORE_CAPTURE
         if StoreCaptureConfiguration.enabled {
+            do { try session.setCategory(.ambient, mode: .default) }
+            catch { preconditionFailure("Audio session category is unsupported") }
             for name in [NativeMusicCue.search.rawValue, NativeMusicCue.duel.rawValue, "correct", "wrong"] {
                 guard let player = Self.player(named: name), player.duration > 0 else {
                     preconditionFailure("Missing or unreadable bundled audio: \(name)")
@@ -73,7 +75,7 @@ final class NativeAudioManager: NSObject, ObservableObject {
         if sessionReady { return true }
         do {
             // Ambient respects the phone's silent switch and doesn't stop other audio apps.
-            try session.setCategory(.ambient, mode: .default, options: [.mixWithOthers])
+            try session.setCategory(.ambient, mode: .default)
             try session.setActive(true)
             sessionReady = true
             return true
