@@ -8,9 +8,12 @@ const app=path.resolve(process.argv[2]||'');
 assert.ok(app.endsWith('.app')&&fs.existsSync(app),'Pass the compiled STORE_CAPTURE simulator .app');
 const output=path.resolve(process.argv[3]||path.join(root,'ios/AppStoreMetadata/screenshots'));
 const visualReview=process.argv.includes('--visual-review');
+const audioReview=visualReview&&process.argv.includes('--duel-audio-review');
 const captureProfiles=visualReview ? profiles.filter(profile=>profile.type==='iPhone-15') : profiles;
 const captureLanguages=visualReview ? ['fr'] : ['fr','en'];
-const captureScreens=visualReview
+const captureScreens=audioReview
+ ? ['waiting','faceoff','question','question-photo','answer','question-muted','settings','community','community-suggestion','community-compose']
+ : visualReview
  ? ['home','home-empty','home-return','themes','family','detail','detail-scrolled','messages','messages-empty','community','community-compose','settings','profile','profile-empty','waiting','faceoff','question','question-photo','answer','result','auth','auth-restoring','auth-email','auth-email-keyboard','auth-email-create','auth-email-reset']
  : scenarios;
 const rawDirectory=path.join(process.env.RUNNER_TEMP||require('node:os').tmpdir(),'quizzup-native-capture-raw');

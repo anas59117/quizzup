@@ -450,6 +450,7 @@ enum NativeSocialPhoto {
 }
 
 struct NativeSettingsView: View {
+    @EnvironmentObject private var audio: NativeAudioManager
     @EnvironmentObject var game: GameSocket
     @EnvironmentObject var auth: AuthManager
     @Environment(\.dismiss) private var dismiss
@@ -459,6 +460,9 @@ struct NativeSettingsView: View {
         NavigationStack {
             Form {
                 Section(fr ? "Préférences" : "Preferences") {
+                    Toggle(fr ? "Musique et effets sonores" : "Music and sound effects", isOn: Binding(
+                        get: { !audio.isMuted }, set: { audio.setMuted(!$0) }
+                    ))
                     Picker(fr ? "Langue" : "Language", selection: Binding(
                         get: { game.lang },
                         set: { if $0 != game.lang { game.toggleLang() } }

@@ -2,6 +2,16 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var game: GameSocket
+    @EnvironmentObject private var audio: NativeAudioManager
+    @Environment(\.scenePhase) private var scenePhase
+
+    private var musicCue: NativeMusicCue? {
+        switch game.stage {
+        case .waiting: return .search
+        case .roundIntro, .question: return .duel
+        default: return nil
+        }
+    }
 
     var body: some View {
         ZStack {
@@ -19,7 +29,26 @@ struct ContentView: View {
         }
         .foregroundColor(game.stage == .home ? nil : Theme.text)
         .preferredColorScheme(game.stage == .home ? nil : .dark)
-        .onAppear { game.loadCategories() }
+        .overlay(alignment: .topTrailing) {
+            if game.stage == .waiting || game.stage == .roundIntro {
+                NativeAudioToggle().padding(.trailing, 16).padding(.top, 6)
+            }
+        }
+        .onAppear {
+            game.loadCategories()
+            audio.setForeground(scenePhase == .active)
+            audio.setContext(musicCue)
+        }
+        .onChange(of: game.stage) { _ in audio.setContext(musicCue) }
+        .onChange(of: game.answerFeedback) { feedback in
+            guard let feedback else { return }
+            audio.setContext(musicCue)
+            audio.playFeedback(feedback)
+        }
+        .onChange(of: scenePhase) { phase in
+            audio.setForeground(phase == .active)
+            if phase == .active { game.refreshRoundClock() }
+        }
     }
 }
 

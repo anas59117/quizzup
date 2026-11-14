@@ -100,23 +100,21 @@ struct NativeDuelTimer: View {
     let seconds: Int
     let limit: Int
     let revealing: Bool
-    var waiting = false
     var compact = false
 
     var body: some View {
         ZStack {
             Circle().strokeBorder(Color(hex: 0x454845), lineWidth: 4)
             Circle().inset(by: 2)
-                .trim(from: 0, to: revealing || waiting ? 1 : min(1, max(0, Double(seconds) / Double(max(1, limit)))))
+                .trim(from: 0, to: revealing ? 1 : min(1, max(0, Double(seconds) / Double(max(1, limit)))))
                 .stroke(Color(hex: 0xF4EFE4), lineWidth: 4)
                 .rotationEffect(.degrees(-90))
             if revealing { Image(systemName: "checkmark").font(.title2.weight(.bold)) }
-            else if waiting { Image(systemName: "hourglass").font(.system(size: compact ? 18 : 22, weight: .medium)) }
             else { Text("\(seconds)").font(.system(size: compact ? 22 : 27, weight: .bold)).monospacedDigit() }
         }
         .frame(width: compact ? 42 : 54, height: compact ? 42 : 54)
         .accessibilityElement(children: .ignore)
-        .accessibilityValue(revealing ? "✓" : waiting ? "" : "\(seconds)")
+        .accessibilityValue(revealing ? "✓" : "\(seconds)")
     }
 }
 

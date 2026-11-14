@@ -90,6 +90,7 @@ final class GameSocket: ObservableObject {
     @Published var answerAccepted = false
     @Published var answerPoints = 0
     @Published var answerCorrect: Bool?
+    @Published var answerFeedback: NativeAnswerFeedback?
     @Published var cancelPending = false
     @Published var rematchWaiting = false
     @Published var profileSaving = false
@@ -304,6 +305,7 @@ final class GameSocket: ObservableObject {
             }
         case "round_intro":
             if let intro = try? decoder.decode(RoundIntro.self, from: data) {
+                stopTimer()
                 #if canImport(UIKit)
                 let images = obj["preloadImages"] as? [String] ?? []
                 NativeImageCache.shared.prefetch(images.compactMap(Self.absoluteImageURL))
@@ -317,6 +319,7 @@ final class GameSocket: ObservableObject {
             }
         case "question":
             if let q = try? decoder.decode(Question.self, from: data) {
+                answerFeedback = nil
                 question = q
                 selectedAnswer = obj["yourAnswer"] as? Int
                 reveal = nil
@@ -331,11 +334,15 @@ final class GameSocket: ObservableObject {
             }
         case "answer_ack":
             guard obj["round"] as? Int == question?.round else { return }
+            let firstAcknowledgement = !answerAccepted && reveal == nil
             selectedAnswer = obj["yourAnswer"] as? Int
             answerAccepted = true; answerInputOpen = false
             answerCorrect = obj["yourCorrect"] as? Bool
             answerPoints = obj["pointsEarned"] as? Int ?? 0
             score = obj["yourScore"] as? Int ?? score
+            if firstAcknowledgement, let correct = answerCorrect {
+                answerFeedback = NativeAnswerFeedback(correct: correct)
+            }
         case "opponent_answered":
             if let id = obj["id"] as? String, let index = opponents.firstIndex(where: { $0.id == id }) { opponents[index].answered = true }
         case "round_result":

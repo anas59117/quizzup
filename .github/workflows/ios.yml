@@ -41,7 +41,7 @@ jobs:
         run: |
           swift test
           swiftc -parse-as-library \
-            Sources/QuizzUp/{Models,NativeRoundTimeline,NativeSocialModels,Localization,GameSocket,NativeSocialSocket}.swift \
+            Sources/QuizzUp/{Models,NativeRoundTimeline,NativeAudioPolicy,NativeSocialModels,Localization,GameSocket,NativeSocialSocket}.swift \
             Tests/SocketPlayback/SocketPlayback.swift -o "$RUNNER_TEMP/native-socket-playback"
           "$RUNNER_TEMP/native-socket-playback"
 

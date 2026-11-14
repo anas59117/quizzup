@@ -9,6 +9,7 @@ struct NativeCommunityView: View {
     @State private var following = false
     @State private var topic: String?
     @State private var composer = false
+    @State private var composerDraft = ""
     @State private var discussion: NativeCommunityPost?
     @State private var moderationError = false
 
@@ -28,6 +29,7 @@ struct NativeCommunityView: View {
                         ProgressView().frame(maxWidth: .infinity).padding(.vertical, 36)
                     } else if game.community.posts.isEmpty {
                         emptyFeed
+                        discussionIdeas
                     } else {
                         LazyVStack(spacing: 12) {
                             ForEach(game.community.posts) { post in postCard(post) }
@@ -47,12 +49,13 @@ struct NativeCommunityView: View {
             topic = category?.key
             game.requestCommunity(filter)
             #if DEBUG && STORE_CAPTURE
-            composer = StoreCaptureConfiguration.options?.screen == "community-compose"
+            if StoreCaptureConfiguration.options?.screen == "community-compose" { beginPost() }
+            if StoreCaptureConfiguration.options?.screen == "community-suggestion" { beginPost(prompts[0]) }
             #endif
         }
         .onChange(of: filter) { game.requestCommunity($0) }
         .onChange(of: game.connected) { if $0 { game.requestCommunity(filter) } }
-        .sheet(isPresented: $composer) { NativeCommunityComposer(initialTopic: topic) }
+        .sheet(isPresented: $composer) { NativeCommunityComposer(initialTopic: topic, initialText: composerDraft) }
         .sheet(item: $discussion) { NativeCommunityDiscussion(post: $0) }
         .alert(fr ? "Action indisponible" : "Action unavailable", isPresented: $moderationError) { }
     }
@@ -66,7 +69,7 @@ struct NativeCommunityView: View {
             Text(fr ? "Communauté" : "Community").font(.title3.bold()).lineLimit(1).minimumScaleFactor(0.7)
                 .accessibilityAddTraits(.isHeader)
             Spacer(minLength: 4)
-            Button { composer = true } label: {
+            Button { beginPost() } label: {
                 Label(fr ? "Publier" : "Post", systemImage: "plus")
                     .font(.subheadline.bold()).lineLimit(1)
                     .padding(.horizontal, 10).frame(minHeight: 42)
@@ -126,7 +129,7 @@ struct NativeCommunityView: View {
                 .accessibilityAddTraits(.isHeader)
             Text(fr ? "Une idée, une photo ou un mini-quiz ? Partage-le avec les autres joueurs." : "An idea, a photo or a mini quiz? Share it with other players.")
                 .font(.system(size: 15)).foregroundColor(Theme.muted).lineSpacing(3)
-            Button { composer = true } label: {
+            Button { beginPost() } label: {
                 Label(fr ? "Écrire une publication" : "Write a post", systemImage: "square.and.pencil")
                     .font(.system(size: 15, weight: .bold))
                     .frame(maxWidth: .infinity, minHeight: 52)
@@ -135,6 +138,48 @@ struct NativeCommunityView: View {
         }
         .multilineTextAlignment(.center).padding(.horizontal, 20).padding(.vertical, 44)
         .frame(maxWidth: .infinity, minHeight: 360)
+    }
+
+    private var prompts: [String] {
+        fr ? [
+            "Quel thème vous rend presque imbattable ?",
+            "Quelle question vous a appris quelque chose aujourd’hui ?",
+            "Si vous pouviez ajouter un seul quiz à QuizzUp, lequel choisiriez-vous ?"
+        ] : [
+            "Which topic makes you almost unbeatable?",
+            "Which question taught you something new today?",
+            "If you could add one quiz to QuizzUp, what would it be?"
+        ]
+    }
+
+    private func beginPost(_ text: String = "") {
+        composerDraft = text
+        composer = true
+    }
+
+    private var discussionIdeas: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text(fr ? "Une idée pour lancer la discussion" : "Start a conversation")
+                .font(.system(size: 16, weight: .bold)).accessibilityAddTraits(.isHeader)
+            Text(fr ? "Choisis un sujet, ajoute ton avis et publie avec ton profil." : "Choose a topic, add your take and post from your profile.")
+                .font(.subheadline).foregroundColor(Theme.muted)
+            ForEach(prompts, id: \.self) { prompt in
+                Button { beginPost(prompt) } label: {
+                    HStack(spacing: 12) {
+                        Text(prompt).font(.system(size: 14, weight: .medium))
+                            .multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
+                        Spacer(minLength: 0)
+                        Image(systemName: "arrow.up.left").foregroundColor(Theme.brand).accessibilityHidden(true)
+                    }
+                    .foregroundColor(Theme.ink).padding(14).frame(maxWidth: .infinity, minHeight: 54, alignment: .leading)
+                    .background(Color.white, in: RoundedRectangle(cornerRadius: 14))
+                    .overlay(RoundedRectangle(cornerRadius: 14).strokeBorder(Theme.ink.opacity(0.12)))
+                }
+                .buttonStyle(.plain)
+                .accessibilityHint(fr ? "Ouvre un brouillon à personnaliser" : "Opens a draft for you to edit")
+            }
+        }
+        .padding(.bottom, 16)
     }
 
     private func postCard(_ post: NativeCommunityPost) -> some View {
@@ -206,7 +251,6 @@ private struct NativeCommunityComposer: View {
     @EnvironmentObject private var game: GameSocket
     @EnvironmentObject private var auth: AuthManager
     @Environment(\.dismiss) private var dismiss
-    let initialTopic: String?
     @State private var topic = ""
     @State private var draft = ""
     @State private var photo: PhotosPickerItem?
@@ -218,6 +262,10 @@ private struct NativeCommunityComposer: View {
     @State private var answers = Array(repeating: "", count: 4)
     @State private var correct = 0
     private var fr: Bool { game.lang == "fr" }
+    init(initialTopic: String?, initialText: String = "") {
+        _topic = State(initialValue: initialTopic ?? "")
+        _draft = State(initialValue: String(initialText.prefix(240)))
+    }
     private var questionReady: Bool {
         !prompt.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
             && answers.allSatisfy { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
@@ -260,8 +308,12 @@ private struct NativeCommunityComposer: View {
             .background(Theme.paper.ignoresSafeArea())
             .navigationTitle(fr ? "Nouvelle publication" : "New post")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar { ToolbarItem(placement: .cancellationAction) { Button(fr ? "Fermer" : "Close") { dismiss() } } }
-            .onAppear { topic = initialTopic ?? "" }
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button { dismiss() } label: { Image(systemName: "xmark").frame(width: 44, height: 44) }
+                        .accessibilityLabel(fr ? "Fermer" : "Close")
+                }
+            }
             .onChange(of: game.community.lastPublishedID) { if $0 != nil { dismiss() } }
             .task(id: photo) {
                 guard let photo else { return }

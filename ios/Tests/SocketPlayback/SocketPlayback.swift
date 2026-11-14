@@ -82,11 +82,18 @@ enum StoreCaptureConfiguration { static let enabled = true }
         game.refreshRoundClock(at: Date().addingTimeInterval(1.25))
         check(game.timeLeft > 0 && game.timeLeft < acceptedClock && game.answerAccepted && !game.answerInputOpen,
               "Accepted answer stays locked while the shared opponent deadline keeps counting down")
+        let feedbackID = game.answerFeedback?.id
+        check(game.answerFeedback?.correct == true, "Correct sound is requested only after a confirmed answer")
+        try receive(["type":"answer_ack", "round":3, "yourAnswer":1, "yourCorrect":true, "pointsEarned":18, "yourScore":52])
+        check(game.answerFeedback?.id == feedbackID, "Duplicate acknowledgements do not replay answer sounds")
+        game.refreshRoundClock(at: Date().addingTimeInterval(9))
+        check(game.timeLeft == 0 && !game.answerInputOpen, "The shared deadline expires without reopening a submitted answer")
         try receive(["type":"opponent_answered", "id":"new"])
         var recovered = question
         recovered.merge(["reconnect":true, "answered":true, "yourAnswer":1, "yourCorrect":true, "pointsEarned":18, "readingMs":0, "answerOpensInMs":0, "remainingMs":4300]) { _, new in new }
         try receive(recovered)
         check(game.answerAccepted && game.selectedAnswer == 1 && !game.answerInputOpen && game.opponents[0].answered, "Recovered answer remains locked and opponent state survives")
+        check(game.answerFeedback == nil, "A recovered answer does not replay old feedback")
         let recoveredClock = game.timeLeft
         game.refreshRoundClock(at: Date().addingTimeInterval(1.25))
         check(game.timeLeft > 0 && game.timeLeft < recoveredClock && !game.answerInputOpen,

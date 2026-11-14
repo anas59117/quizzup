@@ -45,7 +45,7 @@ jobs:
       - name: Replay native receiver and reconnect contracts
         run: |
           swiftc -parse-as-library \
-            Sources/QuizzUp/{Models,NativeRoundTimeline,NativeSocialModels,Localization,GameSocket,NativeSocialSocket}.swift \
+            Sources/QuizzUp/{Models,NativeRoundTimeline,NativeAudioPolicy,NativeSocialModels,Localization,GameSocket,NativeSocialSocket}.swift \
             Tests/SocketPlayback/SocketPlayback.swift -o "$RUNNER_TEMP/native-socket-playback"
           "$RUNNER_TEMP/native-socket-playback"
       - name: Install XcodeGen
@@ -86,9 +86,13 @@ jobs:
       - name: Capture app screens for visual review
         if: env.VISUAL_REVIEW == 'true'
         run: |
+          CAPTURE_ARGS=(--visual-review)
+          if [[ "$GITHUB_REF_NAME" == codex/ios-visual-parity-audio-* ]]; then
+            CAPTURE_ARGS+=(--duel-audio-review)
+          fi
           node scripts/capture-store-screenshots.cjs \
             "$RUNNER_TEMP/ios-capture-build/Build/Products/Debug-iphonesimulator/QuizzUp.app" \
-            "$RUNNER_TEMP/quizzup-native-screenshots" --visual-review
+            "$RUNNER_TEMP/quizzup-native-screenshots" "${CAPTURE_ARGS[@]}"
       - name: Upload screenshots ready for App Store Connect
         uses: actions/upload-artifact@v4
         with:

@@ -6,6 +6,7 @@ import GoogleSignIn
 struct QuizzUpApp: App {
     @StateObject private var game: GameSocket
     @StateObject private var auth: AuthManager
+    @StateObject private var audio = NativeAudioManager()
 
     init() {
         let game = GameSocket()
@@ -21,6 +22,7 @@ struct QuizzUpApp: App {
             ContentView()
                 .environmentObject(game)
                 .environmentObject(auth)
+                .environmentObject(audio)
                 #if DEBUG && STORE_CAPTURE
                 .onAppear { StoreCaptureConfiguration.markReady() }
                 #endif
