@@ -4,7 +4,7 @@ import Foundation
 
 // Compile only the wire models and deterministic clock. The iOS app keeps its
 // normal XcodeGen target, Firebase dependencies and UIKit/SwiftUI sources.
-let coreSources = ["Models.swift", "NativeRoundTimeline.swift", "NativeSocialModels.swift", "NativeEmailCredentials.swift"]
+let coreSources = ["Models.swift", "NativeRoundTimeline.swift", "NativeSocialModels.swift", "NativeEmailCredentials.swift", "NativeAudioPolicy.swift"]
 let sourceDirectory = URL(fileURLWithPath: #filePath)
     .deletingLastPathComponent().appendingPathComponent("Sources/QuizzUp")
 let excludedSources = (try? FileManager.default.contentsOfDirectory(atPath: sourceDirectory.path))?

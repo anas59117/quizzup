@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-enum Stage {
+enum Stage: Equatable {
     case authGate, join, home, waiting, roundIntro, question, finished, error
 }
 
@@ -96,6 +96,7 @@ final class GameSocket: ObservableObject {
 
     private var task: URLSessionWebSocketTask?
     private var timer: Timer?
+    private var roundTimeline: NativeRoundTimeline?
     private var timelineGeneration = UUID()
     private var awaitingInitialProfile = false
     var messageAttempt = UUID()
@@ -327,7 +328,6 @@ final class GameSocket: ObservableObject {
                 }
                 stage = .question
                 startTimer(question: q)
-                if answerAccepted { stopTimer() }
             }
         case "answer_ack":
             guard obj["round"] as? Int == question?.round else { return }
@@ -336,7 +336,6 @@ final class GameSocket: ObservableObject {
             answerCorrect = obj["yourCorrect"] as? Bool
             answerPoints = obj["pointsEarned"] as? Int ?? 0
             score = obj["yourScore"] as? Int ?? score
-            stopTimer()
         case "opponent_answered":
             if let id = obj["id"] as? String, let index = opponents.firstIndex(where: { $0.id == id }) { opponents[index].answered = true }
         case "round_result":
@@ -381,18 +380,21 @@ final class GameSocket: ObservableObject {
         }
     }
 
-    func refreshRoundClock(at date: Date = Date()) { }
+    func refreshRoundClock(at date: Date = Date()) {
+        guard stage == .question, reveal == nil, let roundTimeline else { return }
+        let phase = roundTimeline.state(at: date)
+        answersVisible = phase.visible
+        answerInputOpen = phase.open && selectedAnswer == nil && !answerAccepted
+        timeLeft = phase.seconds
+    }
 
     private func startTimer(question: Question) {
         stopTimer()
         let key = timelineGeneration
-        let timeline = NativeRoundTimeline(question: question)
+        roundTimeline = NativeRoundTimeline(question: question)
         let update = { [weak self] in
             guard let self, self.timelineGeneration == key else { return }
-            let phase = timeline.state(at: Date())
-            self.answersVisible = phase.visible
-            self.answerInputOpen = phase.open && self.selectedAnswer == nil && !self.answerAccepted && self.reveal == nil
-            self.timeLeft = phase.seconds
+            self.refreshRoundClock()
         }
         update()
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in Task { @MainActor in update() } }
@@ -402,6 +404,7 @@ final class GameSocket: ObservableObject {
         timelineGeneration = UUID()
         timer?.invalidate()
         timer = nil
+        roundTimeline = nil
     }
 
     // MARK: - Categories (REST, same data the web app's /categories exposes)
