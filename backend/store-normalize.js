@@ -201,8 +201,8 @@ function normalizePostsStore(value, { maxPosts = 500, maxTextLen = 240 } = {}) {
           .slice(0, 20) || 'Player',
       authorAvatar: cleanAvatar(raw.authorAvatar),
       ...(starter ? { isDemo: true, demoAvatar: starter.demoAvatar } : {}),
-      category:
-        typeof raw.category === 'string' ? raw.category.slice(0, 40) : null,
+      category: starter?.category ||
+        (typeof raw.category === 'string' ? raw.category.slice(0, 40) : null),
       text,
       mediaUrl:
         typeof raw.mediaUrl === 'string' &&

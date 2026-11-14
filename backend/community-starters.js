@@ -8,7 +8,7 @@ const starters = [
   ['avengers', 'AvengersHQ', 'marvel', 'Quel héros mérite le prochain grand quiz Marvel ?', cover('marvel')],
   ['hogwarts', 'PotterHead', 'harry_potter', 'Une seule maison pour toute la vie : laquelle choisiriez-vous ?', cover('harry_potter')],
   ['madrid', 'Madridista', 'real_madrid', 'Le match du Real que vous pourriez revoir sans jamais vous lasser ?', cover('real_madrid')],
-  ['yamal', 'YamalFan', 'lamine_yamal', 'Quel geste de Lamine Yamal vous a le plus marqué ?', '/images/players/lamine_yamal.jpg'],
+  ['yamal', 'YamalFan', 'fc_barcelone', 'Quel geste de Lamine Yamal vous a le plus marqué ?', '/images/players/lamine_yamal.jpg'],
   ['multiverse', 'MultiverseClub', 'marvel', 'Votre équipe de trois héros pour sauver le multivers ?', cover('marvel')],
   ['magic', 'LumosClub', 'harry_potter', 'Quel sort utiliseriez-vous en premier dans la vraie vie ?', cover('harry_potter')],
   ['webhead', 'WebHeadClub', 'spider_man', 'Le meilleur méchant de Spider-Man, selon vous ?', cover('spider_man')],

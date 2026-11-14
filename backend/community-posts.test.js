@@ -152,3 +152,27 @@ test('normalization repairs legacy comments and rejects dangling or nested reply
   assert.equal(p.comments[1].parentId, 'root');
   assert.deepEqual(p.comments[1].reactedBy, ['x']);
 });
+
+test('starter topics and local media resolve in shipped catalogs and assets', () => {
+  const { CATEGORIES } = require('./questions');
+  const { createStarterPosts } = require('./community-starters');
+  const publicRoot = path.resolve(__dirname, '../frontend/public');
+  const nativeCatalog = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../ios/Sources/QuizzUp/Resources/topic-catalog.json'), 'utf8'));
+  const starters = createStarterPosts();
+  for (const p of starters) {
+    assert.ok(Object.hasOwn(CATEGORIES, p.category), `Unknown starter topic ${p.category}`);
+    assert.ok(Object.hasOwn(nativeCatalog, p.category), `Unknown native starter topic ${p.category}`);
+    const avatar = new URL(p.demoAvatar);
+    assert.equal(avatar.origin, 'https://quizzup-ten.vercel.app');
+    for (const asset of [p.mediaUrl, avatar.pathname]) {
+      assert.match(asset, /^\/images\/(?:covers\/approved-v2\/[a-z0-9_]+-(?:320|640|1024)\.webp|players\/[a-z0-9_]+\.jpg)$/);
+      assert.ok(fs.statSync(path.join(publicRoot, asset)).isFile(), `Missing starter asset ${asset}`);
+    }
+  }
+  const yamal = starters.find(p => p.authorName === 'YamalFan');
+  assert.equal(yamal.category, 'fc_barcelone');
+  assert.equal(new URL(yamal.demoAvatar).pathname, '/images/players/lamine_yamal.jpg');
+  const { normalizePostsStore } = require('./store-normalize');
+  const [legacyYamal] = normalizePostsStore({ posts: [{ ...yamal, category: 'lamine_yamal' }] });
+  assert.equal(legacyYamal.category, 'fc_barcelone');
+});
