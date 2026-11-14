@@ -1,6 +1,7 @@
 import { useState, useCallback, useRef, useEffect } from "react";
 import { useI18n } from "./i18n";
 export { FeedScreen } from "./FeedScreen";
+const topicKeys = (values) => [...new Set((Array.isArray(values) ? values : []).filter((key) => typeof key === "string"))].sort();
 
 export function useFeed(wsRef, clientId) {
   const [posts, setPosts] = useState([]),
@@ -66,6 +67,7 @@ export function useFeed(wsRef, clientId) {
         type: "feed_list",
         scope: f.scope,
         category: f.category || undefined,
+        ...(f.scope === "topics" ? { categories: f.categories } : {}),
       })
     )
       setLoading(false);
@@ -78,6 +80,7 @@ export function useFeed(wsRef, clientId) {
           if (
             (data.category || null) !== f.category ||
             (data.scope || "all") !== f.scope
+            || (f.scope === "topics" && JSON.stringify(topicKeys(data.categories)) !== JSON.stringify(f.categories))
           )
             return;
           setPosts(data.posts || []);
@@ -113,6 +116,7 @@ export function useFeed(wsRef, clientId) {
           const f = filterRef.current;
           if (
             f.scope === "following" ||
+            (f.scope === "topics" && !f.categories.includes(data.post.category)) ||
             (f.category && data.post.category !== f.category)
           )
             break;
@@ -135,7 +139,7 @@ export function useFeed(wsRef, clientId) {
             setError(t('followingUnavailable'));
           break;
         case "post_reacted":
-          markPending(`react:${data.id}`, false);
+          if (data.actorId === clientId) markPending(`react:${data.id}`, false);
           setPosts((p) =>
             p.map((x) =>
               x.id === data.id
@@ -163,6 +167,7 @@ export function useFeed(wsRef, clientId) {
           }));
           break;
         case "post_commented":
+          if (!data.comment) break;
           if (data.comment.authorId === clientId)
             markPending(`comment:${data.postId}`, false);
           setComments((p) => ({
@@ -178,10 +183,20 @@ export function useFeed(wsRef, clientId) {
                 ? {
                     ...x,
                     commentsCount: data.commentsCount,
+                    lastComment: data.comment,
                   }
                 : x,
             ),
           );
+          break;
+        case "post_comment_reacted":
+          if (data.actorId === clientId) markPending(`comment-react:${data.commentId}`, false);
+          setComments((previous) => ({
+            ...previous,
+            [data.postId]: (previous[data.postId] || []).map((reply) => reply.id === data.commentId
+              ? { ...reply, reactions: data.reactions, reacted: data.actorId === clientId ? data.reacted : reply.reacted }
+              : reply),
+          }));
           break;
         case "post_question_result":
           markPending(`answer:${data.postId}`, false);
@@ -206,8 +221,9 @@ export function useFeed(wsRef, clientId) {
   const setFilter = useCallback(
     (next) => {
       const f = {
-        scope: next.scope === "following" ? "following" : "all",
+        scope: ["following", "topics"].includes(next.scope) ? next.scope : "all",
         category: next.category || null,
+        categories: topicKeys(next.categories),
       };
       filterRef.current = f;
       setFilterState(f);
@@ -280,11 +296,15 @@ export function useFeed(wsRef, clientId) {
         type: "post_comments",
         postId: id,
       }),
-    comment: (id, text) =>
+    reactComment: (postId, commentId) => action(`comment-react:${commentId}`, {
+      type: "comment_react", postId, commentId,
+    }),
+    comment: (id, text, parentId) =>
       action(`comment:${id}`, {
         type: "post_comment",
         postId: id,
         text,
+        ...(parentId ? { parentId } : {}),
       }),
     answer: (id, answerIndex) =>
       action(`answer:${id}`, {

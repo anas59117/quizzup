@@ -42,6 +42,53 @@ const post = {
   createdAt: "2026-10-18",
   reactions: 0,
 };
+
+test("demo starters are visibly labelled and use fandom images without a fake follow action", () => {
+  act(() => feed.handleMessage({ type: "feed_list", scope: "all", posts: [{
+    ...post, authorId: null, authorName: "Repaire Marvel", isDemo: true,
+    demoAvatar: "https://quizzup-ten.vercel.app/images/covers/approved-v2/spider_man-640.webp",
+    mediaUrl: "/images/covers/approved-v2/marvel-640.webp",
+  }] }));
+  expect(container.querySelector(".community-demo-label")).not.toBeNull();
+  expect(container.querySelector(".community-author img")?.getAttribute("src")).toContain("spider_man-640.webp");
+  expect(container.querySelector(".community-photo")?.getAttribute("src")).toContain("marvel-640.webp");
+  expect(container.querySelector(".community-follow")).toBeNull();
+});
+
+test("comment reaction broadcasts preserve my selection and update the real count", () => {
+  act(() => feed.handleMessage({ type: "post_comments", postId: "p", comments: [
+    { id: "c1", authorId: "peer", text: "My take", reactions: 1, reacted: true },
+  ] }));
+  act(() => feed.handleMessage({ type: "post_comment_reacted", postId: "p", commentId: "c1", actorId: "peer", reactions: 2, reacted: false }));
+  expect(feed.comments.p[0]).toMatchObject({ reactions: 2, reacted: true });
+  act(() => feed.handleMessage({ type: "post_comment_reacted", postId: "p", commentId: "c1", actorId: "me", reactions: 1, reacted: false }));
+  expect(feed.comments.p[0]).toMatchObject({ reactions: 1, reacted: false });
+});
+
+test("replies carry their root comment and keep the draft pending until confirmation", () => {
+  act(() => feed.comment("p", "A reply", "root-comment"));
+  expect(JSON.parse(socket.current.send.mock.calls.at(-1)[0])).toMatchObject({
+    type: "post_comment", postId: "p", parentId: "root-comment", text: "A reply",
+  });
+  expect(feed.pending["comment:p"]).toBe(true);
+});
+
+test("my topics requests keep canonical categories and reject stale topic responses", () => {
+  act(() => feed.setFilter({ scope: "topics", categories: ["spider_man", "marvel", "marvel"] }));
+  expect(JSON.parse(socket.current.send.mock.calls.at(-1)[0])).toMatchObject({
+    type: "feed_list", scope: "topics", categories: ["marvel", "spider_man"],
+  });
+  act(() => feed.handleMessage({ type: "feed_list", scope: "topics", categories: ["music"], posts: [post] }));
+  expect(feed.posts).toEqual([]);
+});
+
+test("only identified demo posts may display bundled fandom media", () => {
+  const image = "/images/covers/approved-v2/marvel-640.webp";
+  expect(communityMediaUrl(image, true)).toBe(image);
+  expect(communityMediaUrl(image)).toBeNull();
+  expect(communityMediaUrl("/images/covers/approved-v2/../private.webp", true)).toBeNull();
+  expect(communityMediaUrl("https://evil.example/photo.jpg", true)).toBeNull();
+});
 test("late feed responses cannot replace the selected theme and duplicate posts are ignored", () => {
   act(() => feed.setFilter({ category: "music" }));
   act(() =>

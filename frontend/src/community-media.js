@@ -1,7 +1,15 @@
 import { getBackendOrigin } from "./backend";
 import { ensureSignedIn } from "./firebase";
 import { prepareProfilePhoto } from "./profile-photo";
-export const communityMediaUrl = (value) =>
+const bundledFanImage = (value) => typeof value === "string" &&
+  /^\/images\/(?:covers\/approved-v2\/[a-z0-9_-]+-(?:320|640|1024)\.webp|players\/[a-z0-9_-]+\.jpg)$/.test(value);
+export const communityAvatarUrl = (post) => {
+  if (post.isDemo !== true || typeof post.demoAvatar !== "string") return null;
+  const path = post.demoAvatar.replace(/^https:\/\/quizzup-ten\.vercel\.app(?=\/)/, "");
+  return bundledFanImage(path) ? path : null;
+};
+export const communityMediaUrl = (value, isDemo = false) =>
+  isDemo === true && bundledFanImage(value) ? value :
   typeof value === "string" &&
   /^\/community-media\/[a-zA-Z0-9-]+\.jpg$/.test(value)
     ? `${getBackendOrigin()}${value}`

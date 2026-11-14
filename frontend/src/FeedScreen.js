@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { CommunityComposer } from "./CommunityComposer";
 import { PlayerAvatar } from "./PlayerAvatar";
-import { communityMediaUrl, shareCommunityPost } from "./community-media";
+import { communityAvatarUrl, communityMediaUrl, shareCommunityPost } from "./community-media";
 import { useI18n } from "./i18n";
 import { topicLabel } from "./players";
 import { getTopicCover } from "./topicCovers";
@@ -56,10 +56,12 @@ function Quiz({ post, feed }) {
 function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, onThread }) {
   const { t } = useI18n();
   const [notice, setNotice] = useState("");
-  const photo = communityMediaUrl(post.mediaUrl);
+  const photo = communityMediaUrl(post.mediaUrl, post.isDemo);
+  const fanAvatar = communityAvatarUrl(post);
   const reported = feed.reportedIds.has(post.id);
   const comments = post.commentsCount || 0;
   const likes = post.reactions || 0;
+  const [headline, ...body] = post.text.split(/\n+/);
   const share = async () => {
     try {
       const result = await shareCommunityPost(post);
@@ -71,11 +73,12 @@ function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, o
   return (
     <article className="community-post feed-post" id={`post-${post.id}`}>
       <header className="community-author-row">
-        <button className="community-author" type="button" onClick={() => onOpenPlayer?.(post.authorId)}>
-          <PlayerAvatar className="feed-post-ava" avatar={post.authorAvatar} />
-          <span><strong>{post.authorName}</strong><time dateTime={post.createdAt}>{formatDate(post.createdAt, lang)}</time></span>
+        <button className="community-author" type="button" disabled={!post.authorId} onClick={() => onOpenPlayer?.(post.authorId)}>
+          {fanAvatar ? <span className="player-avatar player-avatar--photo feed-post-ava" aria-hidden="true"><img className="player-avatar-photo" src={fanAvatar} alt="" loading="lazy" /></span>
+            : <PlayerAvatar className="feed-post-ava" avatar={post.authorAvatar} />}
+          <span><strong>{post.authorName}</strong>{post.isDemo === true && <span className="community-demo-label">{lang === "fr" ? "Compte démo" : "Demo account"}</span>}<time dateTime={post.createdAt}>{formatDate(post.createdAt, lang)}</time></span>
         </button>
-        {feed.clientId && post.authorId !== feed.clientId && (
+        {feed.clientId && post.authorId && post.authorId !== feed.clientId && (
           <button className="community-follow" type="button" aria-pressed={!!post.authorFollowed}
             disabled={feed.pending[`follow:${post.authorId}`]}
             onClick={() => feed.followAuthor(post.authorId, post.authorFollowed)}>
@@ -89,7 +92,7 @@ function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, o
         </button>
         <span className="community-post-type">{post.question ? t('miniQuiz') : t('discussionLabel')}</span>
       </div>
-      <p className="feed-post-text">{post.text}</p>
+      <p className="feed-post-text">{body.length ? <><strong>{headline}</strong><span>{body.join("\n")}</span></> : post.text}</p>
       {photo && <img className="community-photo" src={photo} alt={t('postPhotoAlt')} loading="lazy" />}
       {post.question && <Quiz post={post} feed={feed} />}
       <div className="community-post-actions">
@@ -130,43 +133,63 @@ function Replies({ postId, feed, lang, onOpenPlayer }) {
   const { t } = useI18n();
   const replies = feed.comments[postId] || [];
   const [draft, setDraft] = useState("");
+  const [replyTo, setReplyTo] = useState(null);
+  const input = useRef(null);
   const submitted = useRef(null);
   useEffect(() => {
     const attempt = submitted.current;
-    if (attempt && replies.some((c) => !attempt.ids.has(c.id) && c.text === attempt.text && c.authorId === feed.clientId)) {
+    if (attempt && replies.some((c) => !attempt.ids.has(c.id) && c.text === attempt.text && c.authorId === feed.clientId && (c.parentId || null) === attempt.parentId)) {
       setDraft((value) => value.trim() === attempt.text ? "" : value);
+      setReplyTo((value) => value?.id === attempt.parentId ? null : value);
       submitted.current = null;
     }
   }, [replies, feed.clientId]);
   const sendReply = (event) => {
     event.preventDefault();
     const text = draft.trim();
-    if (text && feed.comment(postId, text)) submitted.current = { text, ids: new Set(replies.map((c) => c.id)) };
+    if (text && feed.comment(postId, text, replyTo?.id)) submitted.current = { text, parentId: replyTo?.id || null, ids: new Set(replies.map((c) => c.id)) };
   };
+  const rootIds = new Set(replies.filter((reply) => !reply.parentId).map((reply) => reply.id));
+  const ordered = replies.filter((reply) => !reply.parentId || !rootIds.has(reply.parentId))
+    .flatMap((reply) => [reply, ...replies.filter((child) => child.parentId === reply.id)]);
   return (
     <>
       <section className="community-replies" aria-labelledby="community-replies-title">
-        <h2 id="community-replies-title">{t('repliesTitle')}</h2>
+        <h2 id="community-replies-title">{replies.length > 0 ? `${replies.length} ` : ""}{t('repliesTitle')}</h2>
         {feed.pending[`comments:${postId}`] ? (
           <p className="community-notice" role="status">{t('loadingDots')}</p>
         ) : !feed.error && !replies.length && (
           <p className="community-notice">{t('beFirstReply')}</p>
         )}
-        {replies.map((reply) => (
-          <article className="community-reply" key={reply.id}>
+        {ordered.map((reply) => (
+          <article className={`community-reply${reply.parentId && rootIds.has(reply.parentId) ? " community-reply--nested" : ""}`} key={reply.id}>
             <button className="community-reply-author" type="button" onClick={() => onOpenPlayer?.(reply.authorId)}>
               <PlayerAvatar avatar={reply.authorAvatar} />
               <strong>{reply.authorName}</strong>
               <time dateTime={reply.createdAt}>{formatDate(reply.createdAt, lang)}</time>
             </button>
             <p>{reply.text}</p>
+            <div className="community-reply-actions">
+              <button type="button" aria-pressed={!!reply.reacted} disabled={feed.pending[`comment-react:${reply.id}`]}
+                aria-label={`${t('likeLabel')} · ${reply.reactions || 0}`} onClick={() => feed.reactComment(postId, reply.id)}>
+                <Icon name="heart" /> <span>{reply.reactions || 0}</span>
+              </button>
+              <button type="button" onClick={() => {
+                setReplyTo({ id: reply.parentId || reply.id, name: reply.authorName });
+                input.current?.focus();
+              }}>{lang === "fr" ? "Répondre" : "Reply"}</button>
+            </div>
           </article>
         ))}
         {feed.error && <p className="community-notice" role="alert">{feed.error} <button type="button" onClick={() => feed.loadComments(postId)}>{t('retryLabel')}</button></p>}
       </section>
       <form className="community-reply-form" onSubmit={sendReply}>
-        <input aria-label={t('yourReply')} placeholder={t('writeReply')}
-          value={draft} maxLength={240} onChange={(event) => setDraft(event.target.value)} />
+        {replyTo && <div className="community-reply-target" role="status">
+          <span>{lang === "fr" ? "En réponse à" : "Replying to"} <strong>{replyTo.name}</strong></span>
+          <button type="button" aria-label={t('cancel')} onClick={() => setReplyTo(null)}>×</button>
+        </div>}
+        <input ref={input} aria-label={t('yourReply')} placeholder={t('writeReply')}
+          value={draft} maxLength={300} onChange={(event) => setDraft(event.target.value)} />
         <button aria-label={t('sendLabel')} disabled={!draft.trim() || feed.pending[`comment:${postId}`]}><Icon name="send" /></button>
       </form>
     </>
@@ -244,9 +267,10 @@ export function FeedScreen({ feed, myTopics = [], controls, onPlayTopic, onOpenT
           </header>
           <div key="feed" className="community-feed">
             <div className="community-tabs" aria-label={t('feedLabel')}>
-              {[["all", t('latestTab')], ["following", t('followingTab')]].map(([scope, label]) => (
+              {[["all", lang === "fr" ? "Pour toi" : "For you"], ["following", t('followingTab')], ["topics", lang === "fr" ? "Mes thèmes" : "My topics"]].map(([scope, label]) => (
                 <button key={scope} type="button" aria-pressed={feed.filter.scope === scope}
-                  onClick={() => { if (scope !== feed.filter.scope) feed.setFilter({ ...feed.filter, scope }); }}>{label}</button>
+                  onClick={() => { if (scope !== feed.filter.scope) feed.setFilter({ ...feed.filter, scope, category: null,
+                    categories: myTopics.map((item) => typeof item === "string" ? item : item.key || item.category).filter(Boolean) }); }}>{label}</button>
               ))}
             </div>
             <div className="community-topics">

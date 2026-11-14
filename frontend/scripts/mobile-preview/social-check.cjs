@@ -121,7 +121,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
     await bobPost.getByRole('button', {name: 'Abonné', exact: true}).waitFor();
     await a.getByRole('button', {name: 'Abonnements', exact: true}).click();
     await bobPost.getByRole('button', {name: 'Abonné', exact: true}).waitFor();
-    await a.getByRole('button', {name: 'Récents', exact: true}).click();
+    await a.getByRole('button', {name: 'Pour toi', exact: true}).click();
     await bobPost.locator('.community-author').click();
     const bobProfile = a.getByRole('dialog', { name: 'BobSocial', exact: true });
     await bobProfile.getByRole('button', { name: 'Ajouter en ami', exact: true }).click();
