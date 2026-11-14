@@ -1231,6 +1231,7 @@ function AppContent() {
           <Suspense fallback={<HomeLoading />}>
             <LazyFeedScreen
               feed={feed}
+              avatar={avatar}
               onThreadChange={setCommunityInThread}
               controls={<TopControls {...topProps} home />}
               myTopics={statsHook.stats.topics || []}

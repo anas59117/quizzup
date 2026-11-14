@@ -4,9 +4,9 @@ const STARTER_VERSION = 1;
 const cover = slug => `/images/covers/approved-v2/${slug}-640.webp`;
 const origin = 'https://quizzup-ten.vercel.app';
 const starters = [
-  ['spidey', 'SpideyVerse', 'spider_man', 'Votre Spider-Man préféré au cinéma ? Je lance le débat : Miles Morales !', cover('spider_man')],
-  ['avengers', 'AvengersHQ', 'marvel', 'Quel héros mérite le prochain grand quiz Marvel ?', cover('marvel')],
-  ['hogwarts', 'PotterHead', 'harry_potter', 'Une seule maison pour toute la vie : laquelle choisiriez-vous ?', cover('harry_potter')],
+  ['spidey', 'SpideyVerse', 'spider_man', 'Votre Spider-Man préféré ?\nTobey, Andrew ou Tom ? Je défends Andrew.', cover('spider_man')],
+  ['avengers', 'AvengersHQ', 'marvel', 'Infinity War ou Endgame ?\nJe préfère la tension d’Infinity War. Vous en pensez quoi ?', cover('marvel')],
+  ['hogwarts', 'PotterHead', 'harry_potter', 'Gryffondor ou Serpentard ?\nVous choisissez votre maison pour ses valeurs ou pour ses personnages ?', cover('harry_potter')],
   ['madrid', 'Madridista', 'real_madrid', 'Le match du Real que vous pourriez revoir sans jamais vous lasser ?', cover('real_madrid')],
   ['yamal', 'YamalFan', 'fc_barcelone', 'Quel geste de Lamine Yamal vous a le plus marqué ?', '/images/players/lamine_yamal.jpg'],
   ['multiverse', 'MultiverseClub', 'marvel', 'Votre équipe de trois héros pour sauver le multivers ?', cover('marvel')],

@@ -2,7 +2,7 @@ const assert = require("assert/strict"),
   fs = require("fs"),
   path = require("path"),
   { randomBytes } = require("crypto"),
-  { spawn } = require("child_process");
+  { spawn, execFileSync } = require("child_process");
 const { chromium } = require(
   process.env.PLAYWRIGHT_PATH ||
     "C:/Users/User/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright",
@@ -10,6 +10,9 @@ const { chromium } = require(
 const server = require("./serve.cjs"),
   out = path.resolve(__dirname, "../../.mobile-preview");
 const { createQaData } = require('./test-data.cjs');
+execFileSync(process.execPath, [path.join(__dirname, "build.cjs")], {
+  cwd: path.resolve(__dirname, "../.."), windowsHide: true, stdio: "pipe",
+});
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 (async () => {
   const data = createQaData(out, 'social-qa-');
@@ -326,7 +329,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
     );
     await a
       .getByRole("button", {
-        name: "Retour",
+        name: "← Retour",
         exact: true,
       })
       .click();
@@ -378,7 +381,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
         buffer: Buffer.from(jpeg, "base64"),
       });
     await post("Photo réelle");
-    await a.locator(".community-photo").evaluate((img) => img.decode());
+    await a.locator(".community-post").filter({hasText: "Photo réelle"}).locator(".community-photo").evaluate((img) => img.decode());
     await openComposer();
     await a
       .getByRole("button", {

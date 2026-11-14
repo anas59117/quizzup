@@ -62,6 +62,7 @@ function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, o
   const comments = post.commentsCount || 0;
   const likes = post.reactions || 0;
   const [headline, ...body] = post.text.split(/\n+/);
+  const Author = post.authorId ? "button" : "div";
   const share = async () => {
     try {
       const result = await shareCommunityPost(post);
@@ -73,11 +74,11 @@ function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, o
   return (
     <article className="community-post feed-post" id={`post-${post.id}`}>
       <header className="community-author-row">
-        <button className="community-author" type="button" disabled={!post.authorId} onClick={() => onOpenPlayer?.(post.authorId)}>
+        <Author className="community-author" type={post.authorId ? "button" : undefined} onClick={post.authorId ? () => onOpenPlayer?.(post.authorId) : undefined}>
           {fanAvatar ? <span className="player-avatar player-avatar--photo feed-post-ava" aria-hidden="true"><img className="player-avatar-photo" src={fanAvatar} alt="" loading="lazy" /></span>
             : <PlayerAvatar className="feed-post-ava" avatar={post.authorAvatar} />}
           <span><strong>{post.authorName}</strong>{post.isDemo === true && <span className="community-demo-label">{lang === "fr" ? "Compte démo" : "Demo account"}</span>}<time dateTime={post.createdAt}>{formatDate(post.createdAt, lang)}</time></span>
-        </button>
+        </Author>
         {feed.clientId && post.authorId && post.authorId !== feed.clientId && (
           <button className="community-follow" type="button" aria-pressed={!!post.authorFollowed}
             disabled={feed.pending[`follow:${post.authorId}`]}
@@ -196,7 +197,7 @@ function Replies({ postId, feed, lang, onOpenPlayer }) {
   );
 }
 
-export function FeedScreen({ feed, myTopics = [], controls, onPlayTopic, onOpenTopicLeaderboard, onOpenPlayer, onThreadChange }) {
+export function FeedScreen({ feed, myTopics = [], avatar = "robot", controls, onPlayTopic, onOpenTopicLeaderboard, onOpenPlayer, onThreadChange }) {
   const { t, lang } = useI18n();
   const [threadId, setThreadId] = useState(null);
   const [composing, setComposing] = useState(false);
@@ -289,6 +290,9 @@ export function FeedScreen({ feed, myTopics = [], controls, onPlayTopic, onOpenT
               })}
 
             </div>
+            <button className="community-compose-prompt" type="button" onClick={() => setComposing(true)}>
+              <PlayerAvatar avatar={avatar} /><span>{lang === "fr" ? "De quoi on parle aujourd’hui ?" : "What’s on your mind?"}</span><Icon name="edit" />
+            </button>
             {category && <div className="community-topic-actions">
               <strong>{titleFor(category, lang)}</strong>
               {onPlayTopic && <button type="button" onClick={() => onPlayTopic(category)}>{t('playActionLabel')}</button>}
