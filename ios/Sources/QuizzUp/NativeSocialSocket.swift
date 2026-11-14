@@ -147,8 +147,9 @@ extension GameSocket {
         community.error = nil
         guard !StoreCaptureConfiguration.enabled else { return }
         guard connected else { requestProfile(); return }
-        var request: [String: Any] = ["type": "feed_list", "scope": filter.following ? "following" : "all"]
+        var request: [String: Any] = ["type": "feed_list", "scope": filter.topicsOnly ? "topics" : filter.following ? "following" : "all"]
         if let category = filter.category { request["category"] = category }
+        if filter.topicsOnly { request["categories"] = filter.categories }
         community.loading = send(request)
         let attempt = UUID()
         community.listAttempt = attempt
@@ -191,10 +192,12 @@ extension GameSocket {
         }
     }
 
-    func replyToCommunityPost(_ postID: String, text: String) {
+    func replyToCommunityPost(_ postID: String, text: String, parentID: String? = nil) {
         let draft = String(text.trimmingCharacters(in: .whitespacesAndNewlines).prefix(300))
+        var payload: [String: Any] = ["type": "post_comment", "postId": postID, "text": draft]
+        if let parentID { payload["parentId"] = parentID }
         guard !draft.isEmpty, community.pendingReply == nil,
-              sendCommunity(["type": "post_comment", "postId": postID, "text": draft]) else { return }
+              sendCommunity(payload) else { return }
         community.pendingReply = postID
         let attempt = UUID()
         community.replyAttempt = attempt
@@ -203,6 +206,44 @@ extension GameSocket {
             guard community.pendingReply == postID, community.replyAttempt == attempt else { return }
             community.pendingReply = nil
             community.error = communityUnavailable
+        }
+    }
+
+    func reactToCommunityPost(_ id: String) {
+        guard !community.pendingReactions.contains(id), sendCommunity(["type": "post_react", "postId": id]) else { return }
+        community.pendingReactions.insert(id)
+        let attempt = UUID()
+        community.reactionAttempts[id] = attempt
+        Task {
+            try? await Task.sleep(nanoseconds: 12_000_000_000)
+            if community.reactionAttempts[id] == attempt, community.pendingReactions.remove(id) != nil {
+                community.reactionAttempts.removeValue(forKey: id)
+                community.error = communityUnavailable
+            }
+        }
+    }
+
+    func reactToCommunityComment(postID: String, commentID: String) {
+        guard !community.pendingCommentReactions.contains(commentID),
+              sendCommunity(["type": "comment_react", "postId": postID, "commentId": commentID]) else { return }
+        community.pendingCommentReactions.insert(commentID)
+        let attempt = UUID()
+        community.commentReactionAttempts[commentID] = attempt
+        Task {
+            try? await Task.sleep(nanoseconds: 12_000_000_000)
+            if community.commentReactionAttempts[commentID] == attempt, community.pendingCommentReactions.remove(commentID) != nil {
+                community.commentReactionAttempts.removeValue(forKey: commentID)
+                community.error = communityUnavailable
+            }
+        }
+    }
+
+    func requestCommunityReplies(_ postID: String) {
+        guard !StoreCaptureConfiguration.enabled else { return }
+        guard sendCommunity(["type": "post_comments", "postId": postID]) else { return }
+        Task {
+            try? await Task.sleep(nanoseconds: 12_000_000_000)
+            if !community.loadedReplyPosts.contains(postID) { community.error = communityUnavailable }
         }
     }
 
@@ -222,7 +263,8 @@ extension GameSocket {
                 community.error = communityUnavailable
                 return true
             }
-            let filter = NativeCommunityFilter(following: object["scope"] as? String == "following", category: object["category"] as? String)
+            let filter = NativeCommunityFilter(following: object["scope"] as? String == "following", category: object["category"] as? String,
+                                               topicsOnly: object["scope"] as? String == "topics", categories: object["categories"] as? [String] ?? [])
             community.receiveFeed(posts, filter: filter)
         case "post_created":
             guard let post = decode(object["post"], as: NativeCommunityPost.self),
@@ -232,24 +274,36 @@ extension GameSocket {
                 community.publishing = false
             }
             community.latestPost = post
-            if !community.filter.following, community.filter.category == nil || community.filter.category == post.category,
+            let inTopics = !community.filter.topicsOnly || post.category.map { community.filter.categories.contains($0) } == true
+            if !community.filter.following, inTopics, community.filter.category == nil || community.filter.category == post.category,
                !community.posts.contains(where: { $0.id == post.id }) {
                 community.posts.insert(post, at: 0)
             }
         case "post_reacted":
             guard let id = object["id"] as? String, let count = object["reactions"] as? Int else { return true }
             let own = object["actorId"] as? String == clientId
+            if own { community.pendingReactions.remove(id); community.reactionAttempts.removeValue(forKey: id) }
             let reacted = object["reacted"] as? Bool ?? false
             updateCommunityPost(id) { post in
                 post.reactions = count
                 if own { post.reacted = reacted }
             }
+        case "post_comment_reacted":
+            guard let postID = object["postId"] as? String, let commentID = object["commentId"] as? String,
+                  let count = object["reactions"] as? Int else { return true }
+            community.receiveCommentReaction(postID: postID, commentID: commentID, count: count,
+                                             reacted: object["reacted"] as? Bool ?? false,
+                                             own: object["actorId"] as? String == clientId)
         case "post_comments":
             if let id = object["postId"] as? String,
-               let replies = decode(object["comments"], as: [NativeCommunityReply].self) { community.replies[id] = replies }
+               let replies = decode(object["comments"], as: [NativeCommunityReply].self) {
+                community.replies[id] = replies.filter { !community.hiddenAuthors.contains($0.authorId) }
+                community.loadedReplyPosts.insert(id)
+            }
         case "post_commented":
             guard let id = object["postId"] as? String,
                   let reply = decode(object["comment"], as: NativeCommunityReply.self) else { return true }
+            guard !community.hiddenAuthors.contains(reply.authorId) else { return true }
             var replies = community.replies[id] ?? []
             if !replies.contains(where: { $0.id == reply.id }) { replies.append(reply) }
             community.replies[id] = Array(replies.suffix(100))
@@ -257,7 +311,10 @@ extension GameSocket {
                 community.lastReplyID = reply.id
                 community.pendingReply = nil
             }
-            if let count = object["commentsCount"] as? Int { updateCommunityPost(id) { $0.commentsCount = count } }
+            updateCommunityPost(id) { post in
+                if let count = object["commentsCount"] as? Int { post.commentsCount = count }
+                post.lastComment = reply
+            }
         case "post_question_result":
             if let answer = decode(object, as: NativeCommunityAnswer.self) { community.answers[answer.postId] = answer }
         case "post_report_ack":
@@ -277,12 +334,17 @@ extension GameSocket {
             let action = object["action"] as? String
             if action == "post_create" { community.publishing = false }
             if action == "post_comment" { community.pendingReply = nil }
+            if action == "post_react" { community.pendingReactions.removeAll() }
+            if action == "comment_react" { community.pendingCommentReactions.removeAll() }
             community.error = lang == "fr" ? "Cette action a échoué. Réessaie." : "This action failed. Try again."
         case "rate_limited":
             guard let code = object["code"] as? String,
-                  ["FEED_RATE_LIMITED", "POST_RATE_LIMITED", "REACTION_RATE_LIMITED", "REPORT_RATE_LIMITED", "FOLLOW_RATE_LIMITED"].contains(code) else { return false }
+                  ["FEED_RATE_LIMITED", "POST_RATE_LIMITED", "REACTION_RATE_LIMITED", "COMMENT_RATE_LIMITED", "COMMENT_REACTION_RATE_LIMITED", "REPORT_RATE_LIMITED", "FOLLOW_RATE_LIMITED"].contains(code) else { return false }
             if code == "FEED_RATE_LIMITED" { community.loading = false }
             if code == "POST_RATE_LIMITED" { community.publishing = false }
+            if code == "COMMENT_RATE_LIMITED" { community.pendingReply = nil }
+            if code == "REACTION_RATE_LIMITED" { community.pendingReactions.removeAll() }
+            if code == "COMMENT_REACTION_RATE_LIMITED" { community.pendingCommentReactions.removeAll() }
             community.error = lang == "fr" ? "Patiente un instant puis réessaie." : "Wait a moment and try again."
         default: return false
         }

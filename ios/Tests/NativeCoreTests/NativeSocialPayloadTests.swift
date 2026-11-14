@@ -3,6 +3,50 @@ import XCTest
 @testable import QuizzUpNativeCore
 
 final class NativeSocialPayloadTests: XCTestCase {
+    func testLegacyCommentDefaultsAndThreadPayload() throws {
+        let old = try decode(NativeCommunityReply.self, #"{"id":"c1","authorId":"a","authorName":"Alice","authorAvatar":"robot","text":"Salut","createdAt":1000}"#)
+        XCTAssertNil(old.parentId)
+        XCTAssertEqual(old.reactions, 0)
+        XCTAssertFalse(old.reacted)
+        let reply = try decode(NativeCommunityReply.self, #"{"id":"c2","authorId":"b","authorName":"Bob","authorAvatar":"cat","text":"Oui","createdAt":2000,"parentId":"c1","reactions":2,"reacted":true}"#)
+        XCTAssertEqual(reply.parentId, "c1")
+        XCTAssertEqual(reply.reactions, 2)
+        XCTAssertTrue(reply.reacted)
+    }
+
+    func testDemoAvatarRequiresDemoFlagAndSafeHTTPS() throws {
+        let base = #"{"id":"p","authorName":"Demo","authorAvatar":"robot","authorFollowed":false,"text":"Question ?","reactions":0,"reacted":false,"commentsCount":0,"createdAt":1000,"demoAvatar":"https://example.com/fandom.jpg""#
+        let real = try decode(NativeCommunityPost.self, base + "}")
+        XCTAssertEqual(real.displayAvatar, "robot")
+        let demo = try decode(NativeCommunityPost.self, base + ",\"isDemo\":true}")
+        XCTAssertEqual(demo.displayAvatar, "https://example.com/fandom.jpg")
+        let unsafe = try decode(NativeCommunityPost.self, (base + ",\"isDemo\":true}").replacingOccurrences(of: "https://", with: "http://"))
+        XCTAssertEqual(unsafe.displayAvatar, "robot")
+    }
+
+    func testCommentReactionBroadcastPreservesOwnSelectionAndUpdatesPreview() throws {
+        let reply = try decode(NativeCommunityReply.self, #"{"id":"c","authorId":"a","authorName":"A","authorAvatar":"cat","text":"Hi","createdAt":1000,"reacted":true,"reactions":1}"#)
+        var post = try decode(NativeCommunityPost.self, #"{"id":"p","authorName":"A","authorAvatar":"cat","authorFollowed":false,"text":"Hi","reactions":0,"reacted":false,"commentsCount":1,"createdAt":1000}"#)
+        post.lastComment = reply
+        var state = NativeCommunityState()
+        state.posts = [post]; state.latestPost = post; state.replies["p"] = [reply]
+        state.receiveCommentReaction(postID: "p", commentID: "c", count: 2, reacted: false, own: false)
+        XCTAssertEqual(state.replies["p"]?.first?.reactions, 2)
+        XCTAssertEqual(state.replies["p"]?.first?.reacted, true)
+        XCTAssertEqual(state.posts.first?.lastComment?.reactions, 2)
+        state.receiveCommentReaction(postID: "p", commentID: "c", count: 1, reacted: false, own: true)
+        XCTAssertEqual(state.latestPost?.lastComment?.reacted, false)
+    }
+
+    func testTopicsFilterRejectsStaleCategories() {
+        var state = NativeCommunityState()
+        state.filter = .init(topicsOnly: true, categories: ["marvel"])
+        state.loading = true
+        state.receiveFeed([], filter: .init(topicsOnly: true, categories: ["minecraft"]))
+        XCTAssertTrue(state.loading)
+        state.receiveFeed([], filter: .init(topicsOnly: true, categories: ["marvel"]))
+        XCTAssertFalse(state.loading)
+    }
     private func decode<T: Decodable>(_ type: T.Type, _ json: String) throws -> T {
         try JSONDecoder().decode(type, from: Data(json.utf8))
     }

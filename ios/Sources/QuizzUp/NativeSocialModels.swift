@@ -46,6 +46,8 @@ struct NativeConversation: Codable, Identifiable {
 struct NativeCommunityFilter: Equatable {
     var following = false
     var category: String?
+    var topicsOnly = false
+    var categories: [String] = []
 }
 
 struct NativeCommunityPost: Decodable, Identifiable {
@@ -62,7 +64,15 @@ struct NativeCommunityPost: Decodable, Identifiable {
     var reacted: Bool
     var commentsCount: Int
     let createdAt: Double
+    var isDemo: Bool? = nil
+    var demoAvatar: String? = nil
+    var lastComment: NativeCommunityReply? = nil
     var date: Date { Date(timeIntervalSince1970: createdAt / 1000) }
+    var displayAvatar: String {
+        guard isDemo == true, let demoAvatar, let url = URL(string: demoAvatar),
+              url.scheme == "https", url.host != nil, url.user == nil, url.password == nil else { return authorAvatar }
+        return demoAvatar
+    }
 }
 
 struct NativeCommunityQuestion: Decodable {
@@ -83,7 +93,33 @@ struct NativeCommunityReply: Decodable, Identifiable {
     let authorAvatar: String
     let text: String
     let createdAt: Double
+    var parentId: String? = nil
+    var reactions: Int = 0
+    var reacted: Bool = false
     var date: Date { Date(timeIntervalSince1970: createdAt / 1000) }
+
+    enum CodingKeys: String, CodingKey {
+        case id, authorId, authorName, authorAvatar, text, createdAt, parentId, reactions, reacted
+    }
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        id = try values.decode(String.self, forKey: .id)
+        authorId = try values.decode(String.self, forKey: .authorId)
+        authorName = try values.decode(String.self, forKey: .authorName)
+        authorAvatar = try values.decode(String.self, forKey: .authorAvatar)
+        text = try values.decode(String.self, forKey: .text)
+        createdAt = try values.decode(Double.self, forKey: .createdAt)
+        parentId = try values.decodeIfPresent(String.self, forKey: .parentId)
+        reactions = try values.decodeIfPresent(Int.self, forKey: .reactions) ?? 0
+        reacted = try values.decodeIfPresent(Bool.self, forKey: .reacted) ?? false
+    }
+
+    init(id: String, authorId: String, authorName: String, authorAvatar: String, text: String,
+         createdAt: Double, parentId: String? = nil, reactions: Int = 0, reacted: Bool = false) {
+        self.id = id; self.authorId = authorId; self.authorName = authorName; self.authorAvatar = authorAvatar
+        self.text = text; self.createdAt = createdAt; self.parentId = parentId
+        self.reactions = reactions; self.reacted = reacted
+    }
 }
 
 struct NativeCommunityState {
@@ -91,6 +127,7 @@ struct NativeCommunityState {
     var posts: [NativeCommunityPost] = []
     var latestPost: NativeCommunityPost?
     var replies: [String: [NativeCommunityReply]] = [:]
+    var loadedReplyPosts: Set<String> = []
     var answers: [String: NativeCommunityAnswer] = [:]
     var reported: Set<String> = []
     var hiddenAuthors: Set<String> = []
@@ -103,6 +140,29 @@ struct NativeCommunityState {
     var listAttempt = UUID()
     var postAttempt = UUID()
     var replyAttempt = UUID()
+    var pendingReactions: Set<String> = []
+    var pendingCommentReactions: Set<String> = []
+    var reactionAttempts: [String: UUID] = [:]
+    var commentReactionAttempts: [String: UUID] = [:]
+
+    mutating func receiveCommentReaction(postID: String, commentID: String, count: Int, reacted: Bool, own: Bool) {
+        func update(_ reply: inout NativeCommunityReply) {
+            guard reply.id == commentID else { return }
+            reply.reactions = count
+            if own { reply.reacted = reacted }
+        }
+        if var list = replies[postID] {
+            for index in list.indices { update(&list[index]) }
+            replies[postID] = list
+        }
+        for index in posts.indices where posts[index].id == postID {
+            if var preview = posts[index].lastComment { update(&preview); posts[index].lastComment = preview }
+        }
+        if var latest = latestPost, latest.id == postID, var preview = latest.lastComment {
+            update(&preview); latest.lastComment = preview; latestPost = latest
+        }
+        if own { pendingCommentReactions.remove(commentID); commentReactionAttempts.removeValue(forKey: commentID) }
+    }
 
     mutating func receiveFeed(_ incoming: [NativeCommunityPost], filter receivedFilter: NativeCommunityFilter) {
         let visible = incoming.filter { post in post.authorId.map { !hiddenAuthors.contains($0) } ?? true }
@@ -116,5 +176,8 @@ struct NativeCommunityState {
         hiddenAuthors.insert(id)
         posts.removeAll { $0.authorId == id }
         if latestPost?.authorId == id { latestPost = nil }
+        for key in Array(replies.keys) { replies[key]?.removeAll { $0.authorId == id } }
+        for index in posts.indices where posts[index].lastComment?.authorId == id { posts[index].lastComment = nil }
+        if latestPost?.lastComment?.authorId == id { latestPost?.lastComment = nil }
     }
 }
