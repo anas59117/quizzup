@@ -1,11 +1,18 @@
 import Foundation
 
 enum NativeMusicCue: String { case search = "lobby-tv-show", duel = "question-thinking-timer" }
-enum NativeSoundCue: String { case correct, wrong }
+enum NativeSoundCue: String { case correct, wrong, victory }
 
 struct NativeAnswerFeedback: Equatable {
     let id = UUID()
     let correct: Bool
+}
+
+struct NativeVictoryFeedback {
+    let id = UUID()
+    let won: Bool
+    let tie: Bool
+    let solo: Bool
 }
 
 struct NativeAudioPolicy {
@@ -24,4 +31,6 @@ struct NativeAudioPolicy {
         guard playableCue == .duel else { return nil }
         return feedback.correct ? .correct : .wrong
     }
+
+    mutating func consume(_ feedback: NativeVictoryFeedback) -> NativeSoundCue? { nil }
 }
