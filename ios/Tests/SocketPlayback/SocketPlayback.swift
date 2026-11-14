@@ -74,10 +74,23 @@ enum StoreCaptureConfiguration { static let enabled = true }
         check(!game.answersVisible && !game.answerInputOpen && game.timeLeft == 10, "Question appears before answers without spending answer time")
         check(!game.opponents[0].answered, "A new round resets the previous opponent answer")
         try receive(["type":"opponent_answered", "id":"new"])
+        var answering = question
+        answering.merge(["readingMs":0, "answerOpensInMs":0, "remainingMs":6000]) { _, new in new }
+        try receive(answering)
+        try receive(["type":"answer_ack", "round":3, "yourAnswer":1, "yourCorrect":true, "pointsEarned":18, "yourScore":52])
+        let acceptedClock = game.timeLeft
+        game.refreshRoundClock(at: Date().addingTimeInterval(1.25))
+        check(game.timeLeft > 0 && game.timeLeft < acceptedClock && game.answerAccepted && !game.answerInputOpen,
+              "Accepted answer stays locked while the shared opponent deadline keeps counting down")
+        try receive(["type":"opponent_answered", "id":"new"])
         var recovered = question
         recovered.merge(["reconnect":true, "answered":true, "yourAnswer":1, "yourCorrect":true, "pointsEarned":18, "readingMs":0, "answerOpensInMs":0, "remainingMs":4300]) { _, new in new }
         try receive(recovered)
         check(game.answerAccepted && game.selectedAnswer == 1 && !game.answerInputOpen && game.opponents[0].answered, "Recovered answer remains locked and opponent state survives")
+        let recoveredClock = game.timeLeft
+        game.refreshRoundClock(at: Date().addingTimeInterval(1.25))
+        check(game.timeLeft > 0 && game.timeLeft < recoveredClock && !game.answerInputOpen,
+              "Recovered accepted answer resumes the server remaining time without reopening input")
         try receive(["type":"round_result", "round":3, "correctIndex":1, "yourAnswer":1, "yourCorrect":true, "pointsEarned":18, "yourScore":52, "others":[["id":"new", "answered":true, "correct":true, "score":45]]])
         check(game.score == 52 && game.opponents[0].score == 45 && game.reveal?.correctIndex == 1, "Reveal advances both authoritative score rails")
         game.isStarting = true

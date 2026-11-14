@@ -381,6 +381,8 @@ final class GameSocket: ObservableObject {
         }
     }
 
+    func refreshRoundClock(at date: Date = Date()) { }
+
     private func startTimer(question: Question) {
         stopTimer()
         let key = timelineGeneration
