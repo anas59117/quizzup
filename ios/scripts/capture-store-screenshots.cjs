@@ -10,9 +10,10 @@ const output=path.resolve(process.argv[3]||path.join(root,'ios/AppStoreMetadata/
 const visualReview=process.argv.includes('--visual-review');
 const audioReview=visualReview&&process.argv.includes('--duel-audio-review');
 const appearanceReview=visualReview&&process.argv.includes('--appearance-review');
+const appearanceSettingsReview=appearanceReview&&process.argv.includes('--appearance-settings-review');
 const captureProfiles=visualReview ? profiles.filter(profile=>profile.type==='iPhone-15') : profiles;
 const captureLanguages=visualReview ? ['fr'] : ['fr','en'];
-const captureScreens=appearanceReview
+const captureScreens=appearanceSettingsReview ? ['settings','settings-live'] : appearanceReview
  ? ['home','themes','family','profile','messages','thread','community','community-compose','settings','play','auth','auth-email','join','detail','room','profile-edit','settings-live']
  : audioReview
  ? ['waiting','faceoff','question','question-photo','answer','question-muted','settings','community','community-suggestion','community-compose']

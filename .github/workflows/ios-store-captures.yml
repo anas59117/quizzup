@@ -93,6 +93,9 @@ jobs:
           if [[ "$GITHUB_REF_NAME" == codex/ios-visual-parity-dark-* ]]; then
             CAPTURE_ARGS+=(--appearance-review)
           fi
+          if [[ "$GITHUB_REF_NAME" == codex/ios-visual-parity-dark-settings-* ]]; then
+            CAPTURE_ARGS+=(--appearance-settings-review)
+          fi
           node scripts/capture-store-screenshots.cjs \
             "$RUNNER_TEMP/ios-capture-build/Build/Products/Debug-iphonesimulator/QuizzUp.app" \
             "$RUNNER_TEMP/quizzup-native-screenshots" "${CAPTURE_ARGS[@]}"

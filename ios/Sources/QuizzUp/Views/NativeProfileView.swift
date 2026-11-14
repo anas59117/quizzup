@@ -540,6 +540,7 @@ struct NativeSettingsView: View {
             }
         }
         .foregroundColor(Theme.ink).tint(Theme.accent)
+        .preferredColorScheme(Theme.colorScheme(for: .stored(appearance)))
         .interactiveDismissDisabled(auth.isDeletingAccount)
     }
 }
