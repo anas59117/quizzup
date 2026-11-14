@@ -214,14 +214,18 @@ function addComment(id, uid, name, avatar, text, parentId = null) {
     parentId, reactedBy: [],
     createdAt: Date.now(),
   };
+  const previousIds = (p.comments || []).map(c => c.id);
   p.comments = [...(p.comments || []), comment];
   while (p.comments.length > 100) {
     const index = p.comments.findIndex(c => c.id !== comment.id && c.id !== comment.parentId);
     const [removed] = p.comments.splice(index, 1);
     p.comments = p.comments.filter(c => c.parentId !== removed.id);
   }
+  const retainedIds = new Set(p.comments.map(c => c.id));
+  const removedCommentIds = previousIds.filter(id => !retainedIds.has(id));
   persist();
-  return { postId: id, comment: commentToClient(comment, uid), commentsCount: p.comments.length };
+  return { postId: id, comment: commentToClient(comment, uid), commentsCount: p.comments.length,
+    ...(removedCommentIds.length ? { removedCommentIds } : {}) };
 }
 
 function toggleCommentReaction(postId, commentId, uid) {

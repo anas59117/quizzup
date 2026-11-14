@@ -75,12 +75,29 @@ test('topics filters intersect category and an explicit empty selection matches 
 test('a reply at the retention cap remains stored together with its root', () => {
   const p = make();
   const root = comment(p.id, 'old-root', 'Old root').comment;
-  for (let i = 0; i < 99; i++) comment(p.id, 'writer', `New root ${i}`);
-  const reply = comment(p.id, 'reply-writer', 'Reply to oldest root', root.id).comment;
+  const newerRoots = [];
+  for (let i = 0; i < 99; i++) newerRoots.push(comment(p.id, 'writer', `New root ${i}`).comment);
+  const result = comment(p.id, 'reply-writer', 'Reply to oldest root', root.id);
+  const reply = result.comment;
   const stored = posts.getComments(p.id, 'viewer');
   assert.equal(stored.length, 100);
   assert.ok(stored.some(c => c.id === root.id));
   assert.ok(stored.some(c => c.id === reply.id));
+  assert.deepEqual(result.removedCommentIds, [newerRoots[0].id]);
+});
+
+test('retention acknowledgments list an evicted root and every evicted reply', () => {
+  const p = make();
+  const root = comment(p.id, 'root-writer', 'Old root').comment;
+  const firstReply = comment(p.id, 'reply-writer', 'First reply', root.id).comment;
+  const secondReply = comment(p.id, 'reply-writer', 'Second reply', root.id).comment;
+  for (let i = 0; i < 97; i++) comment(p.id, 'writer', `New root ${i}`);
+  const result = comment(p.id, 'writer', 'Latest root');
+  assert.deepEqual(result.removedCommentIds, [root.id, firstReply.id, secondReply.id]);
+  const stored = posts.getComments(p.id, 'viewer');
+  assert.equal(stored.length, 98);
+  assert.ok(stored.some(c => c.id === result.comment.id));
+  assert.ok(result.removedCommentIds.every(id => !stored.some(c => c.id === id)));
 });
 
 test('blocked and reported posts are unavailable through detail and post reactions', () => {
