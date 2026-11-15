@@ -22,6 +22,7 @@ afterEach(() => {
   container.remove();
   window.matchMedia = previousMatchMedia;
   document.documentElement.removeAttribute('data-theme');
+  document.documentElement.style.removeProperty('color-scheme');
 });
 function ThemeHarness() {
   const [theme, toggle] = useTheme();
@@ -68,9 +69,21 @@ test.each([[null, 'light'], ['light', 'light'], ['dark', 'dark'], ['system', 'da
     const run = new Function('window', 'document', 'localStorage', script);
     run(window, document, localStorage);
     expect(document.documentElement.dataset.theme).toBe(expected);
+    expect(document.documentElement.style.colorScheme).toBe(expected);
     expect(localStorage.getItem('quizzup-theme')).toBe(saved);
   },
 );
+test('the HTML bootstrap stays light when browser storage is unavailable', () => {
+  media.matches = true;
+  document.documentElement.dataset.theme = 'light';
+  const html = fs.readFileSync(path.resolve(__dirname, '../public/index.html'), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)[1];
+  const run = new Function('window', 'document', 'localStorage', script);
+  expect(() => run(window, document, { getItem() { throw new Error('Storage blocked'); } })).not.toThrow();
+  expect(document.documentElement.dataset.theme).toBe('light');
+  expect(document.documentElement.style.colorScheme).toBe('light');
+});
+
 test('a failed cover keeps a recognisable graphic and working quiz action', () => {
   const open = jest.fn();
   act(() => root.render(<CategoryTileV4 c={{ key: 'example_quiz', label: 'Quiz Spatial', cover: '/missing.webp' }} onClick={open} />));

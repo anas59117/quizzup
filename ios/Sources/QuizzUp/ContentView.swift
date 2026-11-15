@@ -4,7 +4,7 @@ struct ContentView: View {
     @EnvironmentObject var game: GameSocket
     @EnvironmentObject private var audio: NativeAudioManager
     @Environment(\.scenePhase) private var scenePhase
-    @AppStorage(NativeAppearance.storageKey) private var appearance = NativeAppearance.system.rawValue
+    @AppStorage(NativeAppearance.storageKey) private var appearance = NativeAppearance.defaultValue.rawValue
 
     private var appearanceScheme: ColorScheme? {
         switch game.stage {

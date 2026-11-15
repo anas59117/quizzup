@@ -455,7 +455,7 @@ enum NativeSocialPhoto {
 }
 
 struct NativeSettingsView: View {
-    @AppStorage(NativeAppearance.storageKey) private var appearance = NativeAppearance.system.rawValue
+    @AppStorage(NativeAppearance.storageKey) private var appearance = NativeAppearance.defaultValue.rawValue
     @EnvironmentObject private var audio: NativeAudioManager
     @EnvironmentObject var game: GameSocket
     @EnvironmentObject var auth: AuthManager

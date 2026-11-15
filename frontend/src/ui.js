@@ -598,8 +598,8 @@ export function useTheme() {
   const [preference, setPreference] = useState(() => {
     try {
       const saved = localStorage.getItem('quizzup-theme');
-      return saved === 'dark' || saved === 'light' ? saved : 'system';
-    } catch { return 'system'; }
+      return saved === 'dark' || saved === 'light' || saved === 'system' ? saved : 'light';
+    } catch { return 'light'; }
   });
   const [systemTheme, setSystemTheme] = useState(() => window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   useEffect(() => {
@@ -612,6 +612,7 @@ export function useTheme() {
   const theme = preference === 'system' ? systemTheme : preference;
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.style.colorScheme = theme;
   }, [theme]);
   const toggle = useCallback(() => {
     const next = theme === 'dark' ? 'light' : 'dark';
