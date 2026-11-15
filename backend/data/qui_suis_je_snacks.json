@@ -1,0 +1,457 @@
+[
+  {
+    "text": "Je suis née en Italie, dans la famille Ferrero, à une époque où le cacao se faisait rare. Je suis une pâte à tartiner aux noisettes et au cacao, servie dans un pot en verre au couvercle rouge. Qui suis-je ?",
+    "answers": [
+      "Nutella",
+      "Nocilla",
+      "Ovomaltine",
+      "Pâte à tartiner Lotus"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pâtes-tartiner",
+    "fact": "qui-suis-je-nutella"
+  },
+  {
+    "text": "Je suis un œuf en chocolat au lait qui cache un jouet à monter à l'intérieur. J'ai longtemps été interdit aux États-Unis à cause de la surprise cachée dans ma coquille. Qui suis-je ?",
+    "answers": [
+      "Kinder Maxi",
+      "Kinder Surprise",
+      "Kinder Joy",
+      "Kinder Schoko-Bons"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "chocolats-barres",
+    "fact": "qui-suis-je-kinder-surprise"
+  },
+  {
+    "text": "Je suis un petit bonbon au chocolat enrobé d'une coquille colorée. Mon slogan promet que je fonds dans la bouche, pas dans la main. Mes mascottes rouge et jaune se disputent dans mes pubs. Qui suis-je ?",
+    "answers": [
+      "Smarties",
+      "Skittles",
+      "M&M's",
+      "Dragibus"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "bonbons",
+    "fact": "qui-suis-je-mms"
+  },
+  {
+    "text": "Je suis vendue dans un tube en carton qui empêche mes chips de se casser. Toutes mes chips ont exactement la même forme incurvée et s'empilent parfaitement. Qui suis-je ?",
+    "answers": [
+      "Lay's",
+      "Doritos",
+      "Tuc",
+      "Pringles"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "chips-aperitifs",
+    "fact": "qui-suis-je-pringles"
+  },
+  {
+    "text": "Je suis un petit ourson en gomme, né en Allemagne dans les années 1920. Le slogan de ma marque promet la belle vie aux petits comme aux grands. Qui suis-je ?",
+    "answers": [
+      "L'ours d'or Haribo",
+      "Le Croco Lutti",
+      "Le Nounours à la guimauve",
+      "Le Chamallows"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "bonbons",
+    "fact": "qui-suis-je-ours-or-haribo"
+  },
+  {
+    "text": "Je suis une barre de gaufrettes enrobées de chocolat, conçue pour être cassée en doigts. Mon slogan anglais invite à faire une pause. Qui suis-je ?",
+    "answers": [
+      "Twix",
+      "KitKat",
+      "Crunch",
+      "Lion"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "chocolats-barres",
+    "fact": "qui-suis-je-kitkat"
+  },
+  {
+    "text": "Je suis un biscuit noir et rond, fourré d'une crème blanche. On aime me tourner, me lécher puis me tremper dans un verre de lait. Qui suis-je ?",
+    "answers": [
+      "Prince",
+      "BN",
+      "Oreo",
+      "Pim's"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "biscuits",
+    "fact": "qui-suis-je-oreo"
+  },
+  {
+    "text": "Je suis un bonbon rond et coloré aux saveurs de fruits, avec une coque croquante. Mon slogan invite à goûter l'arc-en-ciel. Qui suis-je ?",
+    "answers": [
+      "M&M's",
+      "Smarties",
+      "Dragibus",
+      "Skittles"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "bonbons",
+    "fact": "qui-suis-je-skittles"
+  },
+  {
+    "text": "Je suis un bâtonnet de glace à la vanille enrobé d'une épaisse coque de chocolat craquant. Je me présente comme une glace de luxe pour adultes. Qui suis-je ?",
+    "answers": [
+      "Magnum",
+      "Cornetto",
+      "Solero",
+      "Nuii"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "glaces",
+    "fact": "qui-suis-je-magnum"
+  },
+  {
+    "text": "Je suis un chewing-gum rose, spécialiste des bulles géantes. Mon emballage cache un tatouage temporaire à décalquer sur la peau. Qui suis-je ?",
+    "answers": [
+      "Hollywood",
+      "Malabar",
+      "Freedent",
+      "Bazooka"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "chewing-gums",
+    "fact": "qui-suis-je-malabar"
+  },
+  {
+    "text": "Je suis une barre chocolatée fourrée de nougat, de caramel et de cacahuètes entières. Ma pub affirme que tu n'es plus toi-même quand tu as faim. Qui suis-je ?",
+    "answers": [
+      "Mars",
+      "Lion",
+      "Snickers",
+      "Twix"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "chocolats-barres",
+    "fact": "qui-suis-je-snickers"
+  },
+  {
+    "text": "Je suis un chocolat suisse au miel et au nougat aux amandes, moulé en barreaux triangulaires. Sur mon emblème de montagne se cache un ours. Qui suis-je ?",
+    "answers": [
+      "Milka",
+      "Lindt",
+      "Côte d'Or",
+      "Toblerone"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "chocolats-barres",
+    "fact": "qui-suis-je-toblerone"
+  },
+  {
+    "text": "Je suis vendu par paire de barres identiques : un biscuit sablé, du caramel et du chocolat au lait. Mes pubs ont longtemps opposé ma barre de gauche à ma barre de droite. Qui suis-je ?",
+    "answers": [
+      "Twix",
+      "KitKat",
+      "Kinder Country",
+      "Mars"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "chocolats-barres",
+    "fact": "qui-suis-je-twix"
+  },
+  {
+    "text": "Je suis un long caramel à mâcher, né en France dans les années 1950. Mon emballage cache une blague, souvent très nulle, à raconter dans la cour de récré. Qui suis-je ?",
+    "answers": [
+      "Le Maoam",
+      "Le Carambar",
+      "Le Werther's Original",
+      "Le Négro"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "bonbons",
+    "fact": "qui-suis-je-carambar"
+  },
+  {
+    "text": "Je suis une dragée ronde à la menthe, vendue en rouleau. Mélangée à un soda light, je provoque un célèbre geyser dans les vidéos d'expériences. Qui suis-je ?",
+    "answers": [
+      "Tic Tac",
+      "Smint",
+      "Mentos",
+      "Frisk"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "bonbons",
+    "fact": "qui-suis-je-mentos"
+  },
+  {
+    "text": "Je suis une toute petite dragée à la menthe, vendue dans une boîte transparente à clapet. On me distribue une par une en secouant ma boîte. Je suis fabriquée par la même famille italienne que les œufs en chocolat. Qui suis-je ?",
+    "answers": [
+      "Smint",
+      "Mentos",
+      "Frisk",
+      "Tic Tac"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "bonbons",
+    "fact": "qui-suis-je-tic-tac"
+  },
+  {
+    "text": "Je suis une barre de noix de coco râpée enrobée de chocolat. Ma pub promet le goût du paradis, quelque part sous les cocotiers. Qui suis-je ?",
+    "answers": [
+      "Bounty",
+      "Raffaello",
+      "Milky Way",
+      "Kinder Maxi"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "chocolats-barres",
+    "fact": "qui-suis-je-bounty"
+  },
+  {
+    "text": "Je suis une marque de chips vendue dans des sachets colorés, du nature au barbecue. Mon slogan historique parie que vous ne pourrez pas en manger qu'une seule. Qui suis-je ?",
+    "answers": [
+      "Pringles",
+      "Lay's",
+      "Brets",
+      "Vico"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "chips-aperitifs",
+    "fact": "qui-suis-je-lays"
+  },
+  {
+    "text": "Je suis un chocolat au lait des Alpes, vendu en tablettes lilas. Ma mascotte est une vache mauve. Qui suis-je ?",
+    "answers": [
+      "Lindt",
+      "Côte d'Or",
+      "Milka",
+      "Poulain"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "chocolats-barres",
+    "fact": "qui-suis-je-milka"
+  },
+  {
+    "text": "Je suis une glace servie dans un cornet de gaufrette croustillant. Ma particularité : un bain de chocolat cache le bout du cornet, pour une dernière bouchée réussie. Qui suis-je ?",
+    "answers": [
+      "Magnum",
+      "Solero",
+      "Extrême",
+      "Cornetto"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "glaces",
+    "fact": "qui-suis-je-cornetto"
+  },
+  {
+    "text": "Je suis un bonbon français en forme de fraise rouge, au cœur tendre de guimauve enrobé de sucre. Je partage mon nom avec un manège de fête foraine qui fait sauter. Qui suis-je ?",
+    "answers": [
+      "Tagada",
+      "Chamallows",
+      "Arlequin",
+      "Schtroumpfs"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "bonbons",
+    "fact": "qui-suis-je-tagada"
+  },
+  {
+    "text": "Je suis une confiserie américaine au beurre de cacahuète enrobée de chocolat, souvent vendue en petites coupes. Mon emballage est orange vif. Qui suis-je ?",
+    "answers": [
+      "Butterfinger",
+      "Reese's",
+      "Baby Ruth",
+      "PayDay"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "chocolats-barres",
+    "fact": "qui-suis-je-reeses"
+  },
+  {
+    "text": "Je suis une petite bille de malt croustillante et aérée, enrobée de chocolat au lait. Ma pub vante un plaisir chocolaté plus léger. Qui suis-je ?",
+    "answers": [
+      "M&M's",
+      "Smarties",
+      "Maltesers",
+      "Revels"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "bonbons",
+    "fact": "qui-suis-je-maltesers"
+  },
+  {
+    "text": "Je suis une lentille de chocolat enrobée d'une coquille colorée, cousine britannique de mon concurrent aux lettres. J'ai longtemps été vendue en tube dont le bouchon portait une lettre de l'alphabet. Qui suis-je ?",
+    "answers": [
+      "M&M's",
+      "Skittles",
+      "Dragibus",
+      "Smarties"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "bonbons",
+    "fact": "qui-suis-je-smarties"
+  },
+  {
+    "text": "Je suis une barre de mousse au lait enrobée de chocolat, sans caramel en Europe. Mon nom anglais évoque notre galaxie, la Voie lactée. Qui suis-je ?",
+    "answers": [
+      "Milky Way",
+      "Mars",
+      "Galaxy",
+      "Kinder Délice"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "chocolats-barres",
+    "fact": "qui-suis-je-milky-way"
+  },
+  {
+    "text": "Je suis un triangle de tortilla de maïs, souvent au goût de fromage nacho. La légende veut que je sois né dans un parc d'attractions californien, à partir de tortillas invendues. Qui suis-je ?",
+    "answers": [
+      "Bugles",
+      "Doritos",
+      "Tostitos",
+      "Lay's"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "chips-aperitifs",
+    "fact": "qui-suis-je-doritos"
+  },
+  {
+    "text": "Je suis une barre chocolatée mêlant céréales croustillantes, caramel et gaufrette. Mon nom rugissant s'affiche en lettres blanches sur fond rouge. Qui suis-je ?",
+    "answers": [
+      "KitKat",
+      "Crunch",
+      "Lion",
+      "Kinder Country"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "chocolats-barres",
+    "fact": "qui-suis-je-lion"
+  },
+  {
+    "text": "Je suis une barre de nougat et de caramel enrobée de chocolat. Mon nom est celui de mon fondateur, pas celui d'une planète. Qui suis-je ?",
+    "answers": [
+      "Snickers",
+      "Milky Way",
+      "Galaxy",
+      "Mars"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "chocolats-barres",
+    "fact": "qui-suis-je-mars"
+  },
+  {
+    "text": "Je suis une gaufrette croustillante fourrée d'une crème au lait et aux noisettes, enrobée de chocolat. Je suis vendue par paire de barres emballées séparément. Qui suis-je ?",
+    "answers": [
+      "Kinder Bueno",
+      "Kinder Maxi",
+      "Kinder Country",
+      "Twix"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "chocolats-barres",
+    "fact": "qui-suis-je-kinder-bueno"
+  },
+  {
+    "text": "Je suis un dessert glacé en couches ondulées, alternant crème glacée et fines feuilles de chocolat. On me tranche comme un gâteau au moment du dessert en famille. Qui suis-je ?",
+    "answers": [
+      "Cornetto",
+      "Viennetta",
+      "Magnum",
+      "Carte d'Or"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "glaces",
+    "fact": "qui-suis-je-viennetta"
+  },
+  {
+    "text": "Je suis un snack d'apéritif français : une cacahuète enrobée d'une coque soufflée et croustillante. Mon sachet rouge est un classique des apéros entre potes. Qui suis-je ?",
+    "answers": [
+      "Benenuts",
+      "Vico",
+      "Curly",
+      "Mix"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "chips-aperitifs",
+    "fact": "qui-suis-je-curly"
+  },
+  {
+    "text": "Je suis une petite bille colorée à la coque dure, fabriquée par la marque à l'ours d'or. Contrairement à mes cousins gélifiés, je ne contiens pas de gélatine. Qui suis-je ?",
+    "answers": [
+      "Skittles",
+      "Smarties",
+      "M&M's",
+      "Dragibus"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "bonbons",
+    "fact": "qui-suis-je-dragibus"
+  },
+  {
+    "text": "Je suis un chocolat français vendu en petits sachets de plusieurs pièces. Ma coque sombre et croquante cache un cœur blanc et tendre. Qui suis-je ?",
+    "answers": [
+      "Mi-cho-ko",
+      "Car en Sac",
+      "Pastille Vichy",
+      "Cachou Lajaunie"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "bonbons",
+    "fact": "qui-suis-je-mi-cho-ko"
+  },
+  {
+    "text": "Je suis un soufflé de pomme de terre en forme de patte de monstre, star des goûters d'anniversaire français. Mon paquet violet met en scène un monstre rigolo. Qui suis-je ?",
+    "answers": [
+      "Bugles",
+      "Monster Munch",
+      "3D's",
+      "Curly"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "chips-aperitifs",
+    "fact": "qui-suis-je-monster-munch"
+  },
+  {
+    "text": "Je suis le premier chewing-gum lancé en France, dans les années 1950. Mon nom sent bon le cinéma américain et ses boulevards étoilés. Qui suis-je ?",
+    "answers": [
+      "Freedent",
+      "Malabar",
+      "Hollywood",
+      "Stimorol"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "chewing-gums",
+    "fact": "qui-suis-je-hollywood"
+  }
+]

@@ -1,0 +1,457 @@
+[
+  {
+    "text": "Je suis un plat italien né à Naples. Je suis composé d'une pâte garnie de sauce tomate et de fromage fondu. Ma version la plus célèbre porte le nom d'une reine d'Italie. Qui suis-je ?",
+    "answers": [
+      "Pizza",
+      "Focaccia",
+      "Calzone",
+      "Bruschetta"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "origine-europe",
+    "fact": "qui-suis-je-pizza"
+  },
+  {
+    "text": "Je viens du Japon. Je suis fait de riz vinaigré souvent accompagné de poisson cru. On me déguste avec de la sauce soja et du wasabi. Qui suis-je ?",
+    "answers": [
+      "Sashimi",
+      "Sushi",
+      "Onigiri",
+      "Tempura"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "origine-asie",
+    "fact": "qui-suis-je-sushi"
+  },
+  {
+    "text": "Je suis un plat mexicain. Je suis une tortilla de maïs pliée, garnie de viande, d'oignons et de coriandre. On me mange avec les doigts. Qui suis-je ?",
+    "answers": [
+      "Burrito",
+      "Quesadilla",
+      "Tacos",
+      "Enchilada"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "origine-ameriques",
+    "fact": "qui-suis-je-tacos"
+  },
+  {
+    "text": "Je tiens mon nom d'une ville allemande, mais c'est aux États-Unis que je suis devenu une icône. Je suis un steak haché glissé dans un petit pain rond. Je suis la star des fast-foods. Qui suis-je ?",
+    "answers": [
+      "Hot-dog",
+      "Cheesesteak",
+      "Sloppy joe",
+      "Hamburger"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "origine-inattendue",
+    "fact": "qui-suis-je-hamburger"
+  },
+  {
+    "text": "On me croit français, mais mon ancêtre est une viennoiserie autrichienne en forme de lune. Je suis feuilleté, doré et incontournable au petit-déjeuner. Qui suis-je ?",
+    "answers": [
+      "Croissant",
+      "Pain au chocolat",
+      "Brioche",
+      "Pain aux raisins"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "origine-inattendue",
+    "fact": "qui-suis-je-croissant"
+  },
+  {
+    "text": "Je suis née en Espagne, dans la région de Valence. Je suis un plat de riz safrané cuisiné dans une grande poêle peu profonde. Je contiens souvent des fruits de mer ou du poulet. Qui suis-je ?",
+    "answers": [
+      "Risotto",
+      "Paella",
+      "Fideuà",
+      "Jambalaya"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "origine-europe",
+    "fact": "qui-suis-je-paella"
+  },
+  {
+    "text": "Je suis un plat d'Afrique du Nord. Je suis fait de semoule de blé cuite à la vapeur, servie avec des légumes et de la viande. J'arrive souvent en tête des plats préférés des Français. Qui suis-je ?",
+    "answers": [
+      "Tajine",
+      "Pastilla",
+      "Couscous",
+      "Brick"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "origine-afrique-orient",
+    "fact": "qui-suis-je-couscous"
+  },
+  {
+    "text": "Ma viande cuit sur une broche verticale. Ma version en sandwich, très populaire en Europe, aurait été inventée par un immigré turc à Berlin dans les années 1970. On me sert dans un pain pita ou une galette. Qui suis-je ?",
+    "answers": [
+      "Gyros",
+      "Shawarma",
+      "Souvlaki",
+      "Kebab"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "origine-inattendue",
+    "fact": "qui-suis-je-kebab"
+  },
+  {
+    "text": "Je viens du Québec. Je suis un plat réconfortant composé de frites, de fromage en grains et de sauce brune. On m'associe aux longs hivers canadiens. Qui suis-je ?",
+    "answers": [
+      "Poutine",
+      "Pâté chinois",
+      "Tourtière",
+      "Smoked meat de Montréal"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "origine-ameriques",
+    "fact": "qui-suis-je-poutine"
+  },
+  {
+    "text": "On me croit mexicain, mais je suis né au Texas. Je suis un ragoût épicé de viande hachée, de haricots rouges et de piments. Je suis le plat officiel de l'État du Texas. Qui suis-je ?",
+    "answers": [
+      "Fajitas",
+      "Chili con carne",
+      "Mole poblano",
+      "Pozole"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "origine-inattendue",
+    "fact": "qui-suis-je-chili-con-carne"
+  },
+  {
+    "text": "Je suis un plat japonais inspiré de la cuisine chinoise. Je suis une soupe de nouilles servie dans un bouillon, avec des tranches de porc et un œuf mollet. Les étudiants du monde entier me connaissent aussi en version instantanée. Qui suis-je ?",
+    "answers": [
+      "Udon",
+      "Soba",
+      "Ramen",
+      "Phở"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "origine-asie",
+    "fact": "qui-suis-je-ramen"
+  },
+  {
+    "text": "Je suis un plat convivial des montagnes suisses. On me mange en trempant des morceaux de pain dans du fromage fondu au centre de la table. Attention à celui qui perd son pain dans le caquelon ! Qui suis-je ?",
+    "answers": [
+      "Raclette",
+      "Tartiflette",
+      "Aligot",
+      "Fondue"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "origine-europe",
+    "fact": "qui-suis-je-fondue"
+  },
+  {
+    "text": "Je suis le plat de rue le plus célèbre de Thaïlande. Je suis fait de nouilles de riz sautées avec des crevettes ou du poulet, un œuf, des cacahuètes et du jus de tamarin. On me sert avec un quartier de citron vert. Qui suis-je ?",
+    "answers": [
+      "Pad thaï",
+      "Bo bun",
+      "Nouilles cantonaises",
+      "Laksa"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "origine-asie",
+    "fact": "qui-suis-je-pad-thai"
+  },
+  {
+    "text": "Je donne mon nom au plat en terre cuite au couvercle conique dans lequel je cuis. Je suis un mijoté marocain de viande ou de poulet, souvent aux olives ou aux pruneaux. Qui suis-je ?",
+    "answers": [
+      "Couscous",
+      "Tajine",
+      "Méchoui",
+      "Tangia"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "origine-afrique-orient",
+    "fact": "qui-suis-je-tajine"
+  },
+  {
+    "text": "Je suis une spécialité du Moyen-Orient. Je suis une purée de pois chiches mélangée à du tahini, du citron et de l'ail. On me trempe avec du pain pita à l'apéritif. Qui suis-je ?",
+    "answers": [
+      "Guacamole",
+      "Tzatziki",
+      "Houmous",
+      "Tapenade"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "origine-afrique-orient",
+    "fact": "qui-suis-je-houmous"
+  },
+  {
+    "text": "Je suis le plat emblématique du Royaume-Uni. Je suis un poisson pané et frit, servi avec des frites, traditionnellement emballé dans du papier. On m'accompagne souvent de vinaigre de malt. Qui suis-je ?",
+    "answers": [
+      "Bangers and mash",
+      "Shepherd's pie",
+      "Cornish pasty",
+      "Fish and chips"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "origine-europe",
+    "fact": "qui-suis-je-fish-and-chips"
+  },
+  {
+    "text": "Je suis un grand classique de la cuisine française, originaire de Bourgogne. Je suis du bœuf mijoté longuement dans du vin rouge avec des carottes, des oignons et des champignons. Qui suis-je ?",
+    "answers": [
+      "Bœuf bourguignon",
+      "Blanquette de veau",
+      "Pot-au-feu",
+      "Civet de lièvre"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "origine-europe",
+    "fact": "qui-suis-je-boeuf-bourguignon"
+  },
+  {
+    "text": "Je suis un plat du nord de l'Italie. Je suis un riz rond cuit lentement dans du bouillon, remué jusqu'à devenir crémeux. Ma version au safran est la fierté de Milan. Qui suis-je ?",
+    "answers": [
+      "Polenta",
+      "Risotto",
+      "Gnocchi",
+      "Orzo"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "origine-europe",
+    "fact": "qui-suis-je-risotto"
+  },
+  {
+    "text": "Je suis une spécialité française d'une région frontalière de l'Allemagne. Je suis une tarte salée garnie d'un appareil à base d'œufs, de crème et de lardons. Je me mange chaude ou froide. Qui suis-je ?",
+    "answers": [
+      "Tarte flambée",
+      "Tourte au Munster",
+      "Quiche lorraine",
+      "Pissaladière"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "origine-europe",
+    "fact": "qui-suis-je-quiche-lorraine"
+  },
+  {
+    "text": "Je suis un snack de rue du Moyen-Orient. Je suis une boulette frite de pois chiches ou de fèves, parfumée aux herbes et aux épices. Je régale surtout les végétariens. Qui suis-je ?",
+    "answers": [
+      "Kefta",
+      "Kibbeh",
+      "Merguez",
+      "Falafel"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "origine-afrique-orient",
+    "fact": "qui-suis-je-falafel"
+  },
+  {
+    "text": "Je suis un plat italien originaire de la région de Bologne. Je suis un gratin fait de couches de pâtes alternées avec une sauce à la viande et de la béchamel. Qui suis-je ?",
+    "answers": [
+      "Lasagnes",
+      "Cannelloni",
+      "Parmigiana",
+      "Tortellini"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "origine-europe",
+    "fact": "qui-suis-je-lasagnes"
+  },
+  {
+    "text": "Je viens d'Hawaï, où je nourrissais les pêcheurs. Je suis un bol de riz froid garni de poisson cru mariné, d'avocat et de légumes croquants. Je suis devenu la star healthy des déjeuners. Qui suis-je ?",
+    "answers": [
+      "Chirashi",
+      "Poke bowl",
+      "Buddha bowl",
+      "Bibimbap"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "origine-ameriques",
+    "fact": "qui-suis-je-poke-bowl"
+  },
+  {
+    "text": "Je suis né de la rencontre entre la cuisine vietnamienne et la baguette héritée de l'époque coloniale française. Je suis un sandwich croustillant garni de viande marinée, de carottes et de coriandre. Qui suis-je ?",
+    "answers": [
+      "Bánh xèo",
+      "Phở",
+      "Banh mi",
+      "Bo bun"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "origine-asie",
+    "fact": "qui-suis-je-banh-mi"
+  },
+  {
+    "text": "Je suis un ravioli japonais d'inspiration chinoise. Je suis poêlé sur une face et cuit à la vapeur, ce qui me rend croustillant et moelleux à la fois. Je suis souvent garni de porc et de chou. Qui suis-je ?",
+    "answers": [
+      "Wonton",
+      "Dim sum",
+      "Bao",
+      "Gyoza"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "origine-asie",
+    "fact": "qui-suis-je-gyoza"
+  },
+  {
+    "text": "Je suis un plat emblématique du Pérou. Je suis fait de poisson cru « cuit » par une marinade dans du jus de citron vert, avec des oignons rouges et de la coriandre. Qui suis-je ?",
+    "answers": [
+      "Ceviche",
+      "Tartare de poisson",
+      "Carpaccio de thon",
+      "Aguachile"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "origine-ameriques",
+    "fact": "qui-suis-je-ceviche"
+  },
+  {
+    "text": "Je suis le plat national de la Hongrie. Je suis un ragoût de bœuf longuement mijoté, parfumé au paprika. Mon origine remonte aux bergers magyars. Qui suis-je ?",
+    "answers": [
+      "Stroganoff",
+      "Goulash",
+      "Bortsch",
+      "Paprikash"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "origine-europe",
+    "fact": "qui-suis-je-goulash"
+  },
+  {
+    "text": "Je suis le plat emblématique de la Belgique et du Nord de la France. J'associe des coquillages cuits au vin blanc et à l'échalote avec des frites croustillantes. Qui suis-je ?",
+    "answers": [
+      "Chaudrée de palourdes",
+      "Plateau de fruits de mer",
+      "Moules-frites",
+      "Matelote"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "origine-europe",
+    "fact": "qui-suis-je-moules-frites"
+  },
+  {
+    "text": "Je suis un plat des Alpes, né chez les bergers suisses. Je porte le nom du fromage que l'on fait fondre et que l'on gratte sur des pommes de terre. Charcuterie et cornichons m'accompagnent. Qui suis-je ?",
+    "answers": [
+      "Fondue",
+      "Tartiflette",
+      "Croziflette",
+      "Raclette"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "origine-europe",
+    "fact": "qui-suis-je-raclette"
+  },
+  {
+    "text": "Je suis une spécialité vietnamienne. Je suis un rouleau frit garni de porc, de champignons noirs et de carottes, trempé dans une sauce nuoc-mâm. On m'enroule souvent dans une feuille de salade. Qui suis-je ?",
+    "answers": [
+      "Nems",
+      "Rouleau de printemps",
+      "Samoussa",
+      "Galette de riz"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "origine-asie",
+    "fact": "qui-suis-je-nems"
+  },
+  {
+    "text": "Je suis un plat mexicain popularisé aux États-Unis. Je suis une grande tortilla de blé roulée autour de riz, de haricots, de viande et de fromage. Mon nom signifie « petit âne » en espagnol. Qui suis-je ?",
+    "answers": [
+      "Tacos",
+      "Burrito",
+      "Quesadilla",
+      "Chimichanga"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "origine-ameriques",
+    "fact": "qui-suis-je-burrito"
+  },
+  {
+    "text": "Je suis une spécialité tunisienne. Je suis une fine feuille de pâte pliée en triangle, farcie d'un œuf, de thon et de câpres, puis frite. Mon jaune d'œuf doit couler à la première bouchée. Qui suis-je ?",
+    "answers": [
+      "Bourek",
+      "Fatira",
+      "Brick",
+      "Sfenj"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "origine-afrique-orient",
+    "fact": "qui-suis-je-brick"
+  },
+  {
+    "text": "Je suis un plat festif marocain. Je suis une tourte feuilletée qui mélange sucré et salé : volaille ou pigeon, amandes, cannelle et sucre glace. Mon contraste surprend toujours. Qui suis-je ?",
+    "answers": [
+      "Mhancha",
+      "Tangia",
+      "Rfissa",
+      "Pastilla"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "origine-afrique-orient",
+    "fact": "qui-suis-je-pastilla"
+  },
+  {
+    "text": "Je suis un plat coréen dont le nom signifie « riz mélangé ». Je suis un bol de riz surmonté de légumes colorés, de bœuf et d'un œuf, relevé de pâte de piment. On me remue avant de me manger. Qui suis-je ?",
+    "answers": [
+      "Bibimbap",
+      "Bulgogi",
+      "Kimbap",
+      "Japchae"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "origine-asie",
+    "fact": "qui-suis-je-bibimbap"
+  },
+  {
+    "text": "Ma saucisse est née à Francfort, en Allemagne, mais c'est à New York que je suis devenu légendaire. Je suis une saucisse dans un pain allongé, nappée de moutarde ou de ketchup. Je règne sur les matchs de baseball. Qui suis-je ?",
+    "answers": [
+      "Hamburger",
+      "Hot-dog",
+      "Bratwurst",
+      "Corn dog"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "origine-ameriques",
+    "fact": "qui-suis-je-hot-dog"
+  },
+  {
+    "text": "Je suis une spécialité d'Osaka, au Japon. Mon nom signifie « ce que tu aimes, grillé ». Je suis une sorte de crêpe-omelette au chou, nappée de sauce brune et de mayonnaise, saupoudrée de bonite séchée. Qui suis-je ?",
+    "answers": [
+      "Takoyaki",
+      "Yakisoba",
+      "Okonomiyaki",
+      "Tamagoyaki"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "origine-asie",
+    "fact": "qui-suis-je-okonomiyaki"
+  }
+]

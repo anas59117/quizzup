@@ -1,0 +1,457 @@
+[
+  {
+    "text": "Je suis un burger à deux étages né aux États-Unis à la fin des années 1960. Ma sauce « spéciale » et ma chansonnette publicitaire ont fait le tour du monde. Je suis l'icône du plus grand fast-food de la planète. Qui suis-je ?",
+    "answers": [
+      "Whopper",
+      "Big Mac",
+      "Big King",
+      "Double Cheese"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "produits-cultes",
+    "fact": "qui-suis-je-big-mac"
+  },
+  {
+    "text": "Je suis né d'un stand de hamburgers tenu par deux frères à San Bernardino, en Californie. Un vendeur de mixeurs nommé Ray Kroc a fait de moi un empire mondial. Mes arches dorées forment la lettre M. Qui suis-je ?",
+    "answers": [
+      "McDonald's",
+      "Burger King",
+      "Wendy's",
+      "Carl's Jr."
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "burgers",
+    "fact": "qui-suis-je-mcdonalds"
+  },
+  {
+    "text": "Je suis le burger signature d'une chaîne américaine où les steaks sont grillés à la flamme. On peut me composer à sa guise, « comme vous l'aimez ». Mon nom clame haut et fort ma taille géante. Qui suis-je ?",
+    "answers": [
+      "Big Mac",
+      "Double Cheese",
+      "Whopper",
+      "Baconator"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "produits-cultes",
+    "fact": "qui-suis-je-whopper"
+  },
+  {
+    "text": "Je suis une chaîne née dans le Kentucky, et le portrait de mon fondateur moustachu en costume blanc trône encore sur mon logo. Ma recette secrète comporterait 11 herbes et épices. Je sers mon poulet frit dans des buckets. Qui suis-je ?",
+    "answers": [
+      "Popeyes",
+      "Chick-fil-A",
+      "Nando's",
+      "KFC"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "poulet-frit",
+    "fact": "qui-suis-je-kfc"
+  },
+  {
+    "text": "Je suis une chaîne de sandwichs où l'on choisit pain, garnitures et sauces sous ses yeux. Mon format fétiche mesure un pied de long, le fameux footlong. Mon nom fait penser au métro new-yorkais. Qui suis-je ?",
+    "answers": [
+      "Quiznos",
+      "Subway",
+      "Jimmy John's",
+      "Pret A Manger"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "sandwichs",
+    "fact": "qui-suis-je-subway"
+  },
+  {
+    "text": "Je suis une boisson glacée mixée, souvent coiffée de crème chantilly. On me décline au caramel, au moka ou à la vanille. Je suis la star des cafés à la sirène verte. Qui suis-je ?",
+    "answers": [
+      "Frappuccino",
+      "Milk-shake",
+      "Smoothie",
+      "Iced Latte"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "cafe-desserts",
+    "fact": "qui-suis-je-frappuccino"
+  },
+  {
+    "text": "Je suis une chaîne de pizza spécialiste de la livraison à domicile, née dans le Michigan. Mon logo est une tuile de jeu de société à points. J'ai bâti ma réputation sur la rapidité de mes livreurs. Qui suis-je ?",
+    "answers": [
+      "Pizza Hut",
+      "Papa John's",
+      "Domino's Pizza",
+      "Sbarro"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pizza",
+    "fact": "qui-suis-je-dominos"
+  },
+  {
+    "text": "Je suis un petit morceau de poulet pané, né en 1983 dans une enseigne aux arches dorées. On me trempe dans des sauces, de la barbecue à la sweet and sour. Je me mange en boîtes de 4, 6, 9 ou 20. Qui suis-je ?",
+    "answers": [
+      "Chicken Tenders",
+      "Wings",
+      "Popcorn Chicken",
+      "Chicken McNuggets"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "produits-cultes",
+    "fact": "qui-suis-je-mcnuggets"
+  },
+  {
+    "text": "Je suis né à Seattle en 1971, et mon logo est une sirène à deux queues. Mes tailles de gobelets s'appellent Tall, Grande et Venti. J'ai popularisé le latte et le Pumpkin Spice Latte. Qui suis-je ?",
+    "answers": [
+      "Starbucks",
+      "Costa Coffee",
+      "Dunkin'",
+      "Tim Hortons"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "cafe-desserts",
+    "fact": "qui-suis-je-starbucks"
+  },
+  {
+    "text": "Je suis une enseigne de burgers emblématique en France et en Belgique, fondée en Belgique en 1971. Mon logo historique était un grand Q rouge et jaune. Mon burger signature s'appelle le Giant. Qui suis-je ?",
+    "answers": [
+      "McDonald's",
+      "Quick",
+      "Burger King",
+      "Five Guys"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "burgers",
+    "fact": "qui-suis-je-quick"
+  },
+  {
+    "text": "Je suis une chaîne américaine spécialiste du taco et de la cuisine tex-mex, fondée en Californie en 1962. Mon logo est une cloche violette. On y mange tacos, burritos et quesadillas à toute heure. Qui suis-je ?",
+    "answers": [
+      "Chipotle",
+      "Del Taco",
+      "Taco Bell",
+      "Qdoba"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "tex-mex",
+    "fact": "qui-suis-je-taco-bell"
+  },
+  {
+    "text": "Je suis née en 1958 à Wichita, dans le Kansas, fondée par deux frères encore étudiants. Mon logo historique est un toit rouge. J'ai popularisé la pan pizza à la pâte épaisse. Qui suis-je ?",
+    "answers": [
+      "Domino's Pizza",
+      "Papa John's",
+      "Little Caesars",
+      "Pizza Hut"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "pizza",
+    "fact": "qui-suis-je-pizza-hut"
+  },
+  {
+    "text": "Je suis une chaîne de burgers née en Virginie dans les années 1980, tenue à l'origine par une famille et ses fils. On y grignote des cacahuètes gratuites en attendant sa commande. Mes frites sont coupées sur place. Qui suis-je ?",
+    "answers": [
+      "Five Guys",
+      "Shake Shack",
+      "In-N-Out Burger",
+      "Smashburger"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "burgers",
+    "fact": "qui-suis-je-five-guys"
+  },
+  {
+    "text": "Je suis une chaîne de burgers américaine. Ma mascotte est une fillette rousse à couettes, et mes steaks carrés dépassent du pain. J'ai lancé le fameux Baconator. Qui suis-je ?",
+    "answers": [
+      "McDonald's",
+      "Wendy's",
+      "Burger King",
+      "Hardee's"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "burgers",
+    "fact": "qui-suis-je-wendys"
+  },
+  {
+    "text": "Je suis une chaîne de poulet frit née en Louisiane, au goût cajun bien relevé. Mon nom rend hommage à un personnage du film « French Connection », pas au marin aux épinards. Mon burger au poulet a déclenché des files d'attente folles aux États-Unis. Qui suis-je ?",
+    "answers": [
+      "KFC",
+      "Chick-fil-A",
+      "Popeyes",
+      "Raising Cane's"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "poulet-frit",
+    "fact": "qui-suis-je-popeyes"
+  },
+  {
+    "text": "Je suis une chaîne américaine née près de Boston en 1950, célèbre pour mes beignets et mon café. Mes couleurs historiques sont le rose et l'orange. Mon nom d'origine évoquait le fait de tremper un donut dans son café. Qui suis-je ?",
+    "answers": [
+      "Krispy Kreme",
+      "Tim Hortons",
+      "Cinnabon",
+      "Dunkin' Donuts"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "cafe-desserts",
+    "fact": "qui-suis-je-dunkin"
+  },
+  {
+    "text": "Je suis née à Denver en 1993. Chez moi, on avance le long d'un comptoir pour composer son burrito ou son bol. Mon nom est celui d'un piment fumé mexicain. Qui suis-je ?",
+    "answers": [
+      "Chipotle",
+      "Taco Bell",
+      "Del Taco",
+      "Qdoba"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "tex-mex",
+    "fact": "qui-suis-je-chipotle"
+  },
+  {
+    "text": "Je suis un sandwich au poisson pané, avec une demi-tranche de fromage fondu et de la sauce tartare. J'ai été créé en 1962 par un franchisé pour les clients qui ne mangeaient pas de viande le vendredi. Je suis le seul poisson du menu d'une enseigne aux arches dorées. Qui suis-je ?",
+    "answers": [
+      "McChicken",
+      "Filet-O-Fish",
+      "Big Mac",
+      "McWrap"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "produits-cultes",
+    "fact": "qui-suis-je-filet-o-fish"
+  },
+  {
+    "text": "Je suis un dessert glacé mixé avec des éclats d'Oreo ou de M&M's. On me mange avec une grande cuillère au manche creux, dans les restaurants aux arches dorées. Qui suis-je ?",
+    "answers": [
+      "Sundae",
+      "King Fusion",
+      "McFlurry",
+      "Blizzard"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "cafe-desserts",
+    "fact": "qui-suis-je-mcflurry"
+  },
+  {
+    "text": "Je suis un burger au fromage qui porte un nom royal dans les restaurants français d'une grande chaîne américaine. Aux États-Unis, on me connaît comme le « quart de livre ». Une célèbre scène de « Pulp Fiction » parle de mon nom français. Qui suis-je ?",
+    "answers": [
+      "Big Mac",
+      "280 Original",
+      "Double Cheese",
+      "Royal Cheese"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "produits-cultes",
+    "fact": "qui-suis-je-royal-cheese"
+  },
+  {
+    "text": "Je suis une chaîne américaine spécialiste des beignets glacés, née en Caroline du Nord en 1937. Quand mon enseigne lumineuse « Hot Now » s'allume, les beignets sortent tout chauds. Mon beignet original est nappé d'un glaçage sucré. Qui suis-je ?",
+    "answers": [
+      "Krispy Kreme",
+      "Dunkin' Donuts",
+      "Tim Hortons",
+      "Cinnabon"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "cafe-desserts",
+    "fact": "qui-suis-je-krispy-kreme"
+  },
+  {
+    "text": "Je suis une chaîne de burgers culte de la côte Ouest, née en Californie en 1948. Mon menu officiel est minuscule, mais mon menu secret « Animal Style » fait rêver les fans. Mon logo est une flèche jaune. Qui suis-je ?",
+    "answers": [
+      "Shake Shack",
+      "In-N-Out Burger",
+      "Five Guys",
+      "Whataburger"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "burgers",
+    "fact": "qui-suis-je-in-n-out"
+  },
+  {
+    "text": "Je suis née d'un simple stand de hot-dogs installé dans un parc new-yorkais au début des années 2000. Je suis devenue une chaîne de burgers haut de gamme présente dans le monde entier. Mon ShackBurger et mes milk-shakes sont devenus cultes. Qui suis-je ?",
+    "answers": [
+      "Five Guys",
+      "Smashburger",
+      "Shake Shack",
+      "Umami Burger"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "burgers",
+    "fact": "qui-suis-je-shake-shack"
+  },
+  {
+    "text": "Je suis une chaîne américaine spécialiste du sandwich au poulet, née en Géorgie. Mes restaurants restent fermés le dimanche, par conviction religieuse de mon fondateur. Des vaches publicitaires supplient les gens de manger du poulet. Qui suis-je ?",
+    "answers": [
+      "Popeyes",
+      "KFC",
+      "Raising Cane's",
+      "Chick-fil-A"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "poulet-frit",
+    "fact": "qui-suis-je-chick-fil-a"
+  },
+  {
+    "text": "Je suis un sandwich au porc effiloché nappé de sauce barbecue, avec des oignons et des cornichons. Je disparais et je réapparais sans cesse du menu, créant l'événement à chaque retour. Mes fans traquent mes réapparitions sur des sites dédiés. Qui suis-je ?",
+    "answers": [
+      "McRib",
+      "McChicken",
+      "Croque McDo",
+      "Big Tasty"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "produits-cultes",
+    "fact": "qui-suis-je-mcrib"
+  },
+  {
+    "text": "Je suis une chaîne américaine spécialiste des sandwichs au rosbif tranché, née en 1964. Mon slogan affirme fièrement : « We have the meats ». Un immense chapeau de cow-boy me sert d'enseigne. Qui suis-je ?",
+    "answers": [
+      "Subway",
+      "Arby's",
+      "Quiznos",
+      "Firehouse Subs"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "sandwichs",
+    "fact": "qui-suis-je-arbys"
+  },
+  {
+    "text": "Je suis une institution canadienne du café et des beignets, fondée par un joueur de hockey professionnel. Mes petites bouchées de donuts s'appellent des Timbits. Au Canada, on m'aime presque autant que le sirop d'érable. Qui suis-je ?",
+    "answers": [
+      "Dunkin'",
+      "Starbucks",
+      "Tim Hortons",
+      "Krispy Kreme"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "cafe-desserts",
+    "fact": "qui-suis-je-tim-hortons"
+  },
+  {
+    "text": "Je suis un dessert glacé tellement épais qu'on me sert la tête en bas pour le prouver. On me mixe avec des Oreo, des Snickers ou des Smarties. Je suis la star d'une enseigne américaine qui se dit reine des laitages. Qui suis-je ?",
+    "answers": [
+      "McFlurry",
+      "Sundae",
+      "King Fusion",
+      "Blizzard"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "cafe-desserts",
+    "fact": "qui-suis-je-blizzard"
+  },
+  {
+    "text": "Je suis considérée comme la toute première chaîne de hamburgers fast-food des États-Unis, née en 1921. Mes petits burgers carrés cuits à la vapeur s'appellent des sliders. Harold et Kumar traversent tout le New Jersey dans un film pour venir me déguster. Qui suis-je ?",
+    "answers": [
+      "White Castle",
+      "Krystal",
+      "A&W",
+      "Big Boy"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "burgers",
+    "fact": "qui-suis-je-white-castle"
+  },
+  {
+    "text": "Je suis une chaîne née en Afrique du Sud, spécialiste du poulet grillé à la flamme mariné au piment peri-peri. Mon logo est un coq portugais, symbole de Barcelos. On choisit son niveau de piment, du doux à l'extra-brûlant. Qui suis-je ?",
+    "answers": [
+      "KFC",
+      "Nando's",
+      "Popeyes",
+      "Oporto"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "poulet-frit",
+    "fact": "qui-suis-je-nandos"
+  },
+  {
+    "text": "Je suis une chaîne de burgers américaine née à San Diego en 1951, pionnière du service au volant avec interphone. Ma mascotte est une tête de clown sortie d'une boîte à surprise. Curieusement, mes tacos sont presque aussi cultes que mes burgers. Qui suis-je ?",
+    "answers": [
+      "Sonic",
+      "Carl's Jr.",
+      "Jack in the Box",
+      "Whataburger"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "burgers",
+    "fact": "qui-suis-je-jack-in-the-box"
+  },
+  {
+    "text": "Je suis une chaîne américaine qui ne sert quasiment qu'une seule chose : des tenders de poulet frit avec leur sauce secrète. Je porte le nom du chien de mon fondateur, un labrador jaune. Je suis née en Louisiane en 1996. Qui suis-je ?",
+    "answers": [
+      "Chick-fil-A",
+      "Popeyes",
+      "Zaxby's",
+      "Raising Cane's"
+    ],
+    "correct": 3,
+    "difficulty": "expert",
+    "angle": "poulet-frit",
+    "fact": "qui-suis-je-raising-canes"
+  },
+  {
+    "text": "Je suis une enseigne américaine qui porte deux noms différents selon la région des États-Unis, mais un seul et même logo : une étoile jaune souriante. À l'Ouest, mon nom est celui du fils de mon fondateur. Je suis réputée pour mes burgers XXL bien généreux. Qui suis-je ?",
+    "answers": [
+      "Carl's Jr. / Hardee's",
+      "Sonic",
+      "A&W",
+      "Jack in the Box"
+    ],
+    "correct": 0,
+    "difficulty": "expert",
+    "angle": "burgers",
+    "fact": "qui-suis-je-carls-jr-hardees"
+  },
+  {
+    "text": "Je suis la plus grande chaîne de restauration rapide sino-américaine, née dans un centre commercial californien. Mon plat signature est le poulet à l'orange, sucré et légèrement épicé. On me croise dans les food courts et les aéroports du monde entier. Qui suis-je ?",
+    "answers": [
+      "P. F. Chang's",
+      "Panda Express",
+      "Wok to Walk",
+      "Pei Wei"
+    ],
+    "correct": 1,
+    "difficulty": "expert",
+    "angle": "cuisine-du-monde",
+    "fact": "qui-suis-je-panda-express"
+  },
+  {
+    "text": "Je suis une institution texane du burger, née à Corpus Christi en 1950. Mes restaurants historiques avaient un toit en A rayé orange et blanc. Les Texans me défendent avec passion face à la concurrence californienne. Qui suis-je ?",
+    "answers": [
+      "In-N-Out Burger",
+      "Culver's",
+      "Whataburger",
+      "Steak 'n Shake"
+    ],
+    "correct": 2,
+    "difficulty": "expert",
+    "angle": "burgers",
+    "fact": "qui-suis-je-whataburger"
+  }
+]

@@ -34,8 +34,11 @@ function pickRandomCategory() {
 }
 
 // Long questions get a few extra seconds so players have time to read them.
+// "Qui suis-je ?" questions are narrative riddles — always 20s to read + think.
 function timeLimitFor(question) {
-  const len = question && typeof question.text === 'string' ? question.text.length : 0;
+  const text = question && typeof question.text === 'string' ? question.text : '';
+  if (text.includes('Qui suis-je') || text.includes('Qui sommes-nous')) return 20;
+  const len = text.length;
   if (len > 150) return GAME_CONFIG.TIME_PER_QUESTION + 5;
   if (len > 100) return GAME_CONFIG.TIME_PER_QUESTION + 3;
   return GAME_CONFIG.TIME_PER_QUESTION;

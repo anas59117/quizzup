@@ -1,9 +1,9 @@
 import { CATEGORIES, FAMILIES, categoriesInFamily } from './ui';
 import topicPopularity from './topicPopularity.json';
 
-test('every quiz appears in exactly one of the nine displayed families', () => {
+test('every quiz appears in exactly one of the ten displayed families', () => {
   const keys = FAMILIES.map((family) => family.key);
-  expect(new Set(keys).size).toBe(9);
+  expect(new Set(keys).size).toBe(10);
   expect(new Set(CATEGORIES.map((quiz) => quiz.key)).size).toBe(CATEGORIES.length);
   expect(CATEGORIES.filter((quiz) => !keys.includes(quiz.family))).toEqual([]);
 
