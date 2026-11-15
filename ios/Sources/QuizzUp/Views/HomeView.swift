@@ -71,6 +71,11 @@ struct HomeView: View {
             NativeRoomSheet(category: nil, mode: roomMode)
                 .presentationDetents([.medium, .large]).presentationDragIndicator(.visible)
         }
+        .onChange(of: path) { routes in
+            if !routes.contains(.myPosts), game.community.leavePersonalFeed() {
+                game.requestCommunity(NativeCommunityFilter())
+            }
+        }
         .onAppear {
             #if DEBUG && STORE_CAPTURE
             switch StoreCaptureConfiguration.options?.screen {

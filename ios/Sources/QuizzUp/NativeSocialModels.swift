@@ -192,6 +192,17 @@ struct NativeCommunityState {
         if own { pendingCommentReactions.remove(commentID); commentReactionAttempts.removeValue(forKey: commentID) }
     }
 
+    @discardableResult
+    mutating func leavePersonalFeed() -> Bool {
+        guard filter.mine else { return false }
+        filter = NativeCommunityFilter()
+        posts = []
+        loading = false
+        error = nil
+        listAttempt = UUID()
+        return true
+    }
+
     mutating func receiveFeed(_ incoming: [NativeCommunityPost], filter receivedFilter: NativeCommunityFilter) {
         let visible = incoming.filter { post in post.authorId.map { !hiddenAuthors.contains($0) } ?? true }
         if receivedFilter == NativeCommunityFilter() { latestPost = visible.first }

@@ -56,4 +56,33 @@ final class NativeProfileProgressionTests: XCTestCase {
         XCTAssertFalse(NativeCommunityFilter(following: true).includesLivePost(try post(author: "me"), clientID: "me"))
     }
 
+    func testLeavingPersonalFeedPreservesPublicPreviewAndRejectsLateMineResponse() throws {
+        func post(_ id: String) throws -> NativeCommunityPost {
+            try JSONDecoder().decode(NativeCommunityPost.self, from: Data("{\"id\":\"\(id)\",\"authorName\":\"Alex\",\"authorAvatar\":\"fox\",\"authorFollowed\":false,\"text\":\"Quiz\",\"reactions\":0,\"reacted\":false,\"commentsCount\":0,\"createdAt\":1}".utf8))
+        }
+        let publicPost = try post("public")
+        let ownPost = try post("own")
+        var state = NativeCommunityState()
+        state.receiveFeed([publicPost], filter: .init())
+        state.filter = .init(mine: true)
+        state.receiveFeed([ownPost], filter: .init(mine: true))
+        state.loading = true
+        let personalAttempt = state.listAttempt
+
+        XCTAssertTrue(state.leavePersonalFeed())
+        XCTAssertEqual(state.filter, NativeCommunityFilter())
+        XCTAssertTrue(state.posts.isEmpty)
+        XCTAssertFalse(state.loading)
+        XCTAssertNotEqual(state.listAttempt, personalAttempt)
+        XCTAssertEqual(state.latestPost?.id, "public")
+
+        state.receiveFeed([ownPost], filter: .init(mine: true))
+        XCTAssertTrue(state.posts.isEmpty)
+        XCTAssertEqual(state.latestPost?.id, "public")
+        state.receiveFeed([publicPost], filter: .init())
+        XCTAssertEqual(state.posts.map(\.id), ["public"])
+        XCTAssertFalse(state.leavePersonalFeed())
+        XCTAssertEqual(state.posts.map(\.id), ["public"])
+    }
+
 }
