@@ -116,6 +116,23 @@ test('authenticated replies and comment likes broadcast confirmed identity, surv
   assert.equal((await b.wait('community_error')).code, 'INVALID_POST_ACTION');
 });
 
+test('mine feed uses authenticated identity and excludes other authors and starter posts', async () => {
+  const a = await connect(), b = await connect();
+  a.send({ type: 'post_create', text: 'My profile post', category: 'marvel' });
+  const own = (await a.wait('post_created')).post;
+  b.send({ type: 'post_create', text: 'Someone else post', category: 'marvel' });
+  await b.wait('post_created');
+  a.send({ type: 'feed_list', scope: 'mine', authorIds: [b.uid] });
+  const feed = await a.wait('feed_list');
+  assert.equal(feed.scope, 'mine');
+  assert.deepEqual(feed.posts.map(p => p.id), [own.id]);
+  b.send({ type: 'feed_list', scope: 'mine', category: 'harry_potter' });
+  assert.deepEqual((await b.wait('feed_list')).posts, []);
+  const anonymous = await connect(false);
+  anonymous.send({ type: 'feed_list', scope: 'mine', authorIds: [a.uid] });
+  assert.equal((await anonymous.wait('community_error')).code, 'AUTH_REQUIRED');
+});
+
 test('comment reactions reject anonymous, missing targets and rate-limited authenticated actions', async () => {
   const anonymous = await connect(false);
   anonymous.send({ type: 'comment_react', postId: 'missing', commentId: 'missing' });

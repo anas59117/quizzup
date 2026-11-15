@@ -1,11 +1,11 @@
 // Per-theme progression, like the original QuizUp: every finished game adds
 // XP to the player's level *in that theme*, and each theme has its own
-// leaderboard. Stored separately from stats.json so the global stats format
-// (and its normalizer) is untouched.
+// leaderboard. Stored separately from stats.json with the same progression
+// migration as global stats.
 
 const { createJsonWriter, readJsonFileSync } = require('./json-writer');
 const { getStorePath } = require('./store-path');
-const { levelFromXp } = require('./stats');
+const { levelFromXp, normalizeProgression, newProgression } = require('./progression');
 
 const STORE = getStorePath('topic-stats.json');
 const MAX_TOPICS_PER_PLAYER = 400;
@@ -35,7 +35,7 @@ function normalize(raw) {
     for (const [key, t] of Object.entries(topics)) {
       if (!KEY_RE.test(key) || !isPlainObject(t) || n >= MAX_TOPICS_PER_PLAYER) continue;
       const games = toCount(t.games, 1e9);
-      clean[key] = { games, wins: Math.min(games, toCount(t.wins, 1e9)), xp: toCount(t.xp), ...progress(t) };
+      clean[key] = { games, wins: Math.min(games, toCount(t.wins, 1e9)), xp: toCount(t.xp), ...normalizeProgression(t, toCount(t.xp)), ...progress(t) };
       n += 1;
     }
     out[clientId] = clean;
@@ -52,7 +52,7 @@ function record(clientId, categoryKey, { won = false, xp = 0, answers, updatedAt
   if (!clientId || typeof categoryKey !== 'string' || !KEY_RE.test(categoryKey)) return;
   const topics = store[clientId] || (store[clientId] = Object.create(null));
   if (!topics[categoryKey] && Object.keys(topics).length >= MAX_TOPICS_PER_PLAYER) return;
-  const t = topics[categoryKey] || (topics[categoryKey] = { games: 0, wins: 0, xp: 0, ...progress() });
+  const t = topics[categoryKey] || (topics[categoryKey] = { games: 0, wins: 0, xp: 0, ...newProgression(), ...progress() });
   t.games += 1;
   if (won) t.wins += 1;
   t.xp = Math.min(Number.MAX_SAFE_INTEGER, t.xp + toCount(xp));
@@ -75,7 +75,7 @@ function record(clientId, categoryKey, { won = false, xp = 0, answers, updatedAt
 }
 
 function withLevel(key, t) {
-  const { level, xpIntoLevel, xpForLevel } = levelFromXp(t.xp);
+  const { level, xpIntoLevel, xpForLevel } = levelFromXp(t.xp, t);
   const p = progress(t);
   const bank = bankKeys(key);
   const correctCount = p.correctlyAnswered === null ? null : p.correctlyAnswered.filter(k => bank.has(k)).length;

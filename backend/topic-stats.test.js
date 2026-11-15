@@ -15,7 +15,7 @@ test('records per-theme xp and ranks a theme leaderboard', () => {
 
   const alice = topicStats.getPlayerTopics('alice');
   assert.deepStrictEqual(alice.map((t) => t.key), ['psg', 'golf']);
-  assert.strictEqual(alice[0].level, 3); // 900 xp: levels 1 (200) + 2 (400) done
+  assert.strictEqual(alice[0].level, 2); // New records: first level costs 600 XP.
 
   const board = topicStats.getTopicLeaderboard('psg', 10, 'bob');
   assert.strictEqual(board.total, 2);
@@ -36,7 +36,7 @@ test('ignores invalid input', () => {
 
 test('normalize drops garbage', () => {
   const n = topicStats.normalize({ a: { psg: { games: 2, wins: 9, xp: -1 }, 'bad key!': { games: 1 } }, b: 7 });
-  assert.deepStrictEqual({ ...n.a.psg }, { games: 2, wins: 2, xp: 0, updatedAt: 0, bestStreak: null, currentStreak: 0, correctlyAnswered: null });
+  assert.deepStrictEqual({ ...n.a.psg }, { games: 2, wins: 2, xp: 0, progressionVersion: 2, progressionOffset: '0', updatedAt: 0, bestStreak: null, currentStreak: 0, correctlyAnswered: null });
   assert.ok(!n.a['bad key!']);
   assert.ok(!n.b);
 });

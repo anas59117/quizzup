@@ -734,6 +734,8 @@ function endGame(game, reason) {
     const winBonus = isSolo ? 0 : won ? 100 : isTie ? 50 : 0;
     const xpTotal = p.score + finishBonus + winBonus;
     const coinsEarned = isSolo ? 20 : won ? 50 : isTie ? 35 : 20;
+    const { level, xpIntoLevel, xpForLevel } = stats.getStats(p.clientId);
+    const progressionBefore = { level, xpIntoLevel, xpForLevel };
     // Solo sessions count as games played but neither extend nor break a PvP
     // win streak, and they cannot farm the multiplayer win bonus.
     stats.recordResult(p.clientId, won, isSolo || isTie, xpTotal, coinsEarned);
@@ -765,6 +767,7 @@ function endGame(game, reason) {
       coins: coinsEarned,
       xp: xpTotal,
       xpBreakdown: { matchScore: p.score, finishBonus, winBonus, xpTotal },
+      progressionBefore,
       stats: { ...stats.getStats(p.clientId), topics: topicStats.getPlayerTopics(p.clientId, 12) },
       topic: game.categoryKey ? topicStats.getTopic(p.clientId, game.categoryKey) : null,
       dayStreak: day.dayStreak,

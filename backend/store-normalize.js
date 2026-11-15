@@ -1,5 +1,6 @@
 const { cleanAvatar } = require('./sanitize');
 const { trustedStarter } = require('./community-starters');
+const { normalizeProgression } = require('./progression');
 
 function nullDict() {
   return Object.create(null);
@@ -48,6 +49,7 @@ function normalizeStatsStore(value) {
       streak: asNonNegativeInt(raw.streak, 0, 1_000_000_000),
       xp: asNonNegativeInt(raw.xp, 0, Number.MAX_SAFE_INTEGER),
       coins: asNonNegativeInt(raw.coins, 0, Number.MAX_SAFE_INTEGER),
+      ...normalizeProgression(raw, asNonNegativeInt(raw.xp)),
     };
     // Consecutive-days-played streak (optional; absent on older records).
     if (typeof raw.lastPlayDay === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(raw.lastPlayDay)) {

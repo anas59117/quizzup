@@ -14,7 +14,7 @@ test('stats normalization prevents string concatenation and invalid counters', (
   });
   assert.deepEqual(
     { ...stats.user },
-    { games: 12, wins: 12, streak: 0, xp: 450, coins: 0 }
+    { games: 12, wins: 12, streak: 0, xp: 450, coins: 0, progressionVersion: 2, progressionOffset: '900' }
   );
   assert.equal(stats.bad, undefined);
   assert.equal(Object.getPrototypeOf(stats), null);

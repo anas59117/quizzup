@@ -3,11 +3,11 @@ const assert = require('node:assert/strict');
 const { levelFromXp, rankLeaderboard } = require('./stats');
 
 test('level curve matches exact triangular XP boundaries', () => {
-  assert.deepEqual(levelFromXp(0), { level: 1, xpIntoLevel: 0, xpForLevel: 200 });
-  assert.deepEqual(levelFromXp(199), { level: 1, xpIntoLevel: 199, xpForLevel: 200 });
-  assert.deepEqual(levelFromXp(200), { level: 2, xpIntoLevel: 0, xpForLevel: 400 });
-  assert.deepEqual(levelFromXp(599), { level: 2, xpIntoLevel: 399, xpForLevel: 400 });
-  assert.deepEqual(levelFromXp(600), { level: 3, xpIntoLevel: 0, xpForLevel: 600 });
+  assert.deepEqual(levelFromXp(0), { level: 1, xpIntoLevel: 0, xpForLevel: 600 });
+  assert.deepEqual(levelFromXp(599), { level: 1, xpIntoLevel: 599, xpForLevel: 600 });
+  assert.deepEqual(levelFromXp(600), { level: 2, xpIntoLevel: 0, xpForLevel: 1200 });
+  assert.deepEqual(levelFromXp(1799), { level: 2, xpIntoLevel: 1199, xpForLevel: 1200 });
+  assert.deepEqual(levelFromXp(1800), { level: 3, xpIntoLevel: 0, xpForLevel: 1800 });
 });
 
 test('level calculation stays finite for very large persisted XP', () => {
@@ -18,8 +18,8 @@ test('level calculation stays finite for very large persisted XP', () => {
 });
 
 test('invalid XP is treated as zero', () => {
-  assert.deepEqual(levelFromXp(-10), { level: 1, xpIntoLevel: 0, xpForLevel: 200 });
-  assert.deepEqual(levelFromXp('nope'), { level: 1, xpIntoLevel: 0, xpForLevel: 200 });
+  assert.deepEqual(levelFromXp(-10), { level: 1, xpIntoLevel: 0, xpForLevel: 600 });
+  assert.deepEqual(levelFromXp('nope'), { level: 1, xpIntoLevel: 0, xpForLevel: 600 });
 });
 
 

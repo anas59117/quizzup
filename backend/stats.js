@@ -7,6 +7,7 @@ const { getStorePath } = require('./store-path');
 const { normalizeStatsStore } = require('./store-normalize');
 const shop = require('./shop');
 const { createLeaderboardCache } = require('./leaderboard-cache');
+const { levelFromXp, newProgression } = require('./progression');
 
 const STORE = getStorePath('stats.json');
 
@@ -23,27 +24,6 @@ function persist() {
   schedulePersist();
 }
 
-// Linear per-level cost (level N costs N*200 XP) has a triangular
-// cumulative curve: completing n levels costs 100*n*(n+1). Solve the
-// quadratic directly so a corrupted/very large XP value cannot force
-// millions of loop iterations during profile rendering.
-function levelFromXp(rawXp) {
-  const xp = Number.isFinite(Number(rawXp)) && Number(rawXp) > 0
-    ? Math.floor(Number(rawXp))
-    : 0;
-  const completedLevels = Math.max(
-    0,
-    Math.floor((-1 + Math.sqrt(1 + xp / 25)) / 2)
-  );
-  const level = completedLevels + 1;
-  const consumed = 100 * completedLevels * (completedLevels + 1);
-  return {
-    level,
-    xpIntoLevel: xp - consumed,
-    xpForLevel: level * 200,
-  };
-}
-
 function rankLeaderboardRows(source) {
   return Object.entries(source || {})
     .map(([id, value]) => {
@@ -52,7 +32,7 @@ function rankLeaderboardRows(source) {
       const streak = Math.max(0, Math.floor(Number(value?.streak) || 0));
       const xp = Math.max(0, Math.floor(Number(value?.xp) || 0));
       const coins = Math.max(0, Math.floor(Number(value?.coins) || 0));
-      const level = levelFromXp(xp).level;
+      const level = levelFromXp(xp, value).level;
       return {
         clientId: id,
         games,
@@ -120,7 +100,7 @@ function currentDayStreak(s, now = Date.now()) {
 // streak (only the first game of a day does).
 function recordPlayDay(clientId, now = Date.now()) {
   if (!clientId) return { dayStreak: 0, increased: false };
-  const s = stats[clientId] || (stats[clientId] = { games: 0, wins: 0, streak: 0, xp: 0, coins: 0 });
+  const s = ensure(clientId);
   const today = dayKey(now);
   if (s.lastPlayDay === today) return { dayStreak: s.dayStreak || 1, increased: false };
   const gap = s.lastPlayDay ? dayIndex(today) - dayIndex(s.lastPlayDay) : null;
@@ -146,7 +126,7 @@ function equippedItemsFor(s) {
 function getStats(clientId, now = Date.now()) {
   const s = clientId && stats[clientId];
   const xp = s ? s.xp || 0 : 0;
-  const { level, xpIntoLevel, xpForLevel } = levelFromXp(xp);
+  const { level, xpIntoLevel, xpForLevel } = levelFromXp(xp, s);
   return {
     games: s ? s.games : 0,
     wins: s ? s.wins : 0,
@@ -173,7 +153,7 @@ function getStats(clientId, now = Date.now()) {
 // streak. `xpEarned` accumulates toward the player's persistent level.
 function recordResult(clientId, won, tie, xpEarned, coinsEarned = 0) {
   if (!clientId) return;
-  const s = stats[clientId] || { games: 0, wins: 0, streak: 0, xp: 0, coins: 0 };
+  const s = ensure(clientId);
   s.games += 1;
   if (won) { s.wins += 1; s.streak += 1; }
   else if (!tie) { s.streak = 0; }
@@ -190,7 +170,7 @@ function recordResult(clientId, won, tie, xpEarned, coinsEarned = 0) {
 }
 
 function ensure(clientId) {
-  return stats[clientId] || (stats[clientId] = { games: 0, wins: 0, streak: 0, xp: 0, coins: 0 });
+  return stats[clientId] || (stats[clientId] = { games: 0, wins: 0, streak: 0, xp: 0, coins: 0, ...newProgression() });
 }
 
 function adRewardsLeft(s, now = Date.now()) {

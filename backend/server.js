@@ -386,11 +386,15 @@ function handleFeed(ws, data, state) {
     return true;
   }
   if (data.type === 'feed_list') {
+    if (data.scope === 'mine' && !clientId) {
+      game.send(ws, { type: 'community_error', action: data.type, code: 'AUTH_REQUIRED' });
+      return true;
+    }
     const feedKey = clientId || state.ip;
     if (!allowAction(actionLimiters.feedList, feedKey, ws, 'FEED_RATE_LIMITED'))
       return true;
     const category = validCategoryKey(data.category);
-    const scope = data.scope === 'topics' ? 'topics' : data.scope === 'following' && clientId ? 'following' : 'all';
+    const scope = data.scope === 'mine' ? 'mine' : data.scope === 'topics' ? 'topics' : data.scope === 'following' && clientId ? 'following' : 'all';
     const categories = scope === 'topics'
       ? [...new Set((Array.isArray(data.categories) ? data.categories : []).map(validCategoryKey).filter(Boolean))].sort()
       : undefined;
@@ -400,7 +404,7 @@ function handleFeed(ws, data, state) {
       category,
       categories,
       authorIds:
-        scope === 'following' ? follows.getFollowing(clientId) : undefined,
+        scope === 'mine' ? [clientId] : scope === 'following' ? follows.getFollowing(clientId) : undefined,
     });
     game.send(ws, { type: 'feed_list', posts: feedPosts, category, scope, ...(categories ? { categories } : {}) });
     return true;
