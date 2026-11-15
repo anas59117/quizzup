@@ -2,7 +2,7 @@ import React, { act } from 'react';
 import { createRoot } from 'react-dom/client';
 import { I18nProvider } from './i18n';
 import { CategoriesContent, ProfileContent } from './screens';
-import { CategoryTile } from './ui';
+import { CategoryTile,FAMILIES } from './ui';
 import { CategoryTileV4 } from './CategoryTileV4';
 import { HomeLoading } from './HomeLoading';
 
@@ -12,6 +12,24 @@ afterEach(()=>{act(()=>root.unmount());container.remove();});
 const render=element=>act(()=>root.render(<I18nProvider>{element}</I18nProvider>));
 const social={friends:[],requests:[],outgoingRequests:new Set()};
 const profileProps={name:'Alex',avatar:'robot',clientId:'self',stats:{level:4,topics:[{key:'rap_fr',level:3},{key:'minecraft',level:2}]},social};
+
+test('profile exposes own publications and a clearly named global level without XP clutter',()=>{
+ const open=jest.fn();render(<ProfileContent {...profileProps} onOpenOwnPosts={open} stats={{...profileProps.stats,games:12,xpIntoLevel:1260,xpForLevel:2400}} />);
+ expect(container.querySelector('.profile-player-progress').textContent).toContain('Niveau QuizzUp 4');
+ expect(container.querySelector('.progression-main').textContent).not.toContain('1260');
+ const posts=container.querySelector('.profile-own-posts');expect(posts).not.toBeNull();
+ act(()=>posts.click());expect(open).toHaveBeenCalledTimes(1);
+ expect([...container.querySelectorAll('button')].some(b=>b.textContent.includes('Modifier'))).toBe(true);
+});
+
+test('profile shows a compact friend preview and keeps the full list reachable',()=>{
+ const friends=Array.from({length:6},(_,i)=>({id:'friend'+i,name:'Ami '+i,avatar:'fox'}));
+ render(<ProfileContent {...profileProps} social={{...social,friends}} />);
+ expect(container.querySelectorAll('.profile-friend-portrait')).toHaveLength(4);
+ const all=container.querySelector('.profile-friends-all');expect(all).not.toBeNull();act(()=>all.click());
+ expect(container.querySelector('.friends-screen').textContent).toContain('Ami 5');
+ expect(container.querySelector('.profile-add-friend').textContent).toContain('Ajouter un ami');
+});
 
 test('profile themes identify the quiz and level and open the chosen quiz',()=>{
  const open=jest.fn();render(<ProfileContent {...profileProps} onOpenTopic={open} />);
@@ -46,7 +64,7 @@ test('one category Back clears a global search and returns to all categories',()
  const input=container.querySelector('input[type=search]');expect(input.getAttribute('aria-describedby')).toBe('themes-search-scope');
  act(()=>{Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set.call(input,'Minecraft');input.dispatchEvent(new Event('input',{bubbles:true}));});
  expect(container.querySelector('.tile-v4[data-topic=minecraft]')).not.toBeNull();
- act(()=>container.querySelector('.back-link').click());expect(input.value).toBe('');expect(container.querySelectorAll('.family-tile')).toHaveLength(9);expect(container.querySelector('.back-link')).toBeNull();
+ act(()=>container.querySelector('.back-link').click());expect(input.value).toBe('');expect(container.querySelectorAll('.family-tile')).toHaveLength(FAMILIES.length);expect(container.querySelector('.back-link')).toBeNull();
 });
 
 test('legacy tags do not fabricate popularity or quiz-photo badges',()=>{

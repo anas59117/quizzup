@@ -6,6 +6,7 @@ import { useI18n } from "./i18n";
 import { topicLabel } from "./players";
 import { getTopicCover } from "./topicCovers";
 import { localizedTopicTitle } from "./topicTitles";
+import {profileCopy} from './PlayerProgress';
 import { CATEGORIES, Icon } from "./ui";
 
 const topics = new Map(CATEGORIES.map((topic) => [topic.key, topic]));
@@ -196,8 +197,9 @@ function Replies({ postId, feed, lang, onOpenPlayer }) {
   );
 }
 
-export function FeedScreen({ feed, myTopics = [], avatar = "robot", controls, onPlayTopic, onOpenTopicLeaderboard, onOpenPlayer, onThreadChange }) {
+export function FeedScreen({ feed, myTopics = [], avatar = "robot", controls, onPlayTopic, onOpenTopicLeaderboard, onOpenPlayer, onThreadChange, onBackToProfile }) {
   const { t, lang } = useI18n();
+  const mine=feed.filter.scope==='mine',copy=profileCopy(lang);
   const [threadId, setThreadId] = useState(null);
   const [composing, setComposing] = useState(false);
   const origin = useRef(null);
@@ -260,19 +262,19 @@ export function FeedScreen({ feed, myTopics = [], avatar = "robot", controls, on
       ) : (
         <>
           <header className="community-bar">
-            <span className="community-brand" aria-hidden="true"><Icon name="bolt" /></span>
-            <h1 id="community-title" tabIndex={-1}>{t('communityTitle')}</h1>
+            {mine ? <button className="community-back-profile" type="button" aria-label={t('navProfile')} onClick={()=>onBackToProfile?onBackToProfile():feed.setFilter({scope:'all'})}><Icon name="arrow"/></button> : <span className="community-brand" aria-hidden="true"><Icon name="bolt" /></span>}
+            <h1 id="community-title" tabIndex={-1}>{mine?copy.posts:t('communityTitle')}</h1>
             <button className="community-publish" type="button" onClick={() => setComposing(true)}><span aria-hidden="true">+</span> {t('publishAction')}</button>
             {controls && <div className="community-settings">{controls}</div>}
           </header>
           <div key="feed" className="community-feed">
-            <div className="community-tabs" aria-label={t('feedLabel')}>
+            {!mine && <div className="community-tabs" aria-label={t('feedLabel')}>
               {[["all", lang === "fr" ? "Pour toi" : "For you"], ["following", t('followingTab')], ["topics", lang === "fr" ? "Mes thèmes" : "My topics"]].map(([scope, label]) => (
                 <button key={scope} type="button" aria-pressed={feed.filter.scope === scope}
                   onClick={() => { if (scope !== feed.filter.scope) feed.setFilter({ ...feed.filter, scope, category: null,
                     categories: myTopics.map((item) => typeof item === "string" ? item : item.key || item.category).filter(Boolean) }); }}>{label}</button>
               ))}
-            </div>
+            </div>}
             <div className="community-topics">
               <select aria-label={t('filterByTheme')} value={category || ""} onChange={(event) => setCategory(event.target.value || null)}>
                 <option value="">{t('allThemesFilter')}</option>
@@ -302,8 +304,8 @@ export function FeedScreen({ feed, myTopics = [], avatar = "robot", controls, on
             {!feed.loading && !feed.error && !feed.posts.length && (
               <div className="community-empty">
                 <Icon name="chat" />
-                <h2>{feed.filter.scope === "following" ? t('yourFollowingFeed') : t('startConversation')}</h2>
-                <p>{feed.filter.scope === "following"
+                <h2>{mine?copy.posts:feed.filter.scope === "following" ? t('yourFollowingFeed') : t('startConversation')}</h2>
+                <p>{mine?copy.postsEmpty:feed.filter.scope === "following"
                   ? t('followingFeedEmpty')
                   : t('shareIdeaPhoto')}</p>
                 <button type="button" onClick={() => feed.filter.scope === "following" ? feed.setFilter({ scope: "all" }) : setComposing(true)}>

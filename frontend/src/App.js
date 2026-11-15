@@ -287,13 +287,14 @@ function AppContent() {
     const update = () => {
       const hash = window.location.hash;
       if (/^#post-[a-zA-Z0-9_-]+$/.test(hash)) {
+        feed.setFilter({scope:'all',category:null});
         setSharedPostId(hash.slice(6));
         setStage('feed');
       }
     };
     window.addEventListener('hashchange', update);
     return () => window.removeEventListener('hashchange', update);
-  }, []);
+  }, [feed.setFilter]);
   useEffect(() => {
     if (social.connected && sharedPostId && !shareOpened.current && stage === 'home') {
       shareOpened.current = true;
@@ -301,13 +302,14 @@ function AppContent() {
     }
   }, [social.connected, sharedPostId, stage]);
   useEffect(() => {
+    if(stage!=='feed' && feed.filter.scope==='mine'){feed.setFilter({scope:'all',category:null});return;}
     if (!social.connected) return;
     if (stage === 'feed' || stage === 'home') {
       feed.refresh();
       if (sharedPostId) feed.openPost(sharedPostId);
     }
     if (stage === 'history') history.refresh();
-  }, [stage, social.connected, sharedPostId, feed.refresh, feed.openPost, history.refresh]);
+  }, [stage, social.connected, sharedPostId, feed.refresh, feed.openPost, feed.filter.scope, feed.setFilter, history.refresh]);
 
   useEffect(() => () => {
     if (tickRef.current) clearInterval(tickRef.current);
@@ -1123,7 +1125,7 @@ function AppContent() {
           name={name} avatar={avatar} frame={statsHook.stats.frame} stats={statsHook.stats} soloMode={soloMode} setSoloMode={setSoloMode}
           friendCount={social.friends.length}
           onOpenMessages={() => openMessages()} unreadCount={social.unreadCount}
-          onOpenCommunity={(postId) => { setStage('feed'); if (postId) feed.openPost(postId); }} onOpenHistory={() => setStage('history')}
+          onOpenCommunity={(postId) => { feed.setFilter({scope:'all',category:null});setStage('feed'); if (postId) feed.openPost(postId); }} onOpenHistory={() => setStage('history')}
           quickMatch={quickMatch} startWithCategory={previewCategory}
           onOpenProfile={() => setStage('profile')} onSeeAll={(fam, focusSearch) => { setCategoryFamily(fam || null); setStage('categories'); if (focusSearch) requestAnimationFrame(() => document.querySelector('.cat-search input, input[type=search]')?.focus()); }}
           createRoom={createRoom} onOpenEnterCode={openFriendCode}
@@ -1238,6 +1240,7 @@ function AppContent() {
               onPlayTopic={startWithCategory}
               onOpenTopicLeaderboard={(key) => openLeaderboard(key, 'feed')}
               onOpenPlayer={players.open}
+              onBackToProfile={()=>setStage('profile')}
             />
           </Suspense>
         </main>
@@ -1257,6 +1260,8 @@ function AppContent() {
           avatar={avatar} name={name} stats={statsHook.stats}
           isGoogleLinked={!!(firebaseUser && !firebaseUser.isAnonymous)} googleEmail={firebaseUser?.email}
           linkGoogle={linkGoogle} linking={linking} clientId={clientId} social={social}
+          onOpenOwnPosts={()=>{setSharedPostId(null);feed.setFilter({scope:'mine',category:null});setStage('feed');}}
+          onOpenMessages={openMessages}
           onOpenLeaderboard={openLeaderboard}
           onStartTournament={() => setStage('tournament')} onOpenSeasonPass={() => setStage('seasonpass')}
           onSaveProfile={saveProfile} profileSaving={pending}

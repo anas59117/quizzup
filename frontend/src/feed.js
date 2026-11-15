@@ -83,7 +83,7 @@ export function useFeed(wsRef, clientId) {
             || (f.scope === "topics" && JSON.stringify(topicKeys(data.categories)) !== JSON.stringify(f.categories))
           )
             return;
-          setPosts(data.posts || []);
+          setPosts(f.scope==='mine'?(data.posts || []).filter(post=>post.authorId===clientId):(data.posts || []));
           markPending("list", false);
           setLoading(false);
           break;
@@ -92,6 +92,7 @@ export function useFeed(wsRef, clientId) {
           if (data.postId !== sharedRequest.current) return;
           markPending("shared", false);
           if (data.post) {
+            if(filterRef.current.scope==='mine' && data.post.authorId!==clientId){setError(t('postUnavailable'));break;}
             setPosts((previous) => [
               data.post,
               ...previous.filter((post) => post.id !== data.post.id),
@@ -116,6 +117,7 @@ export function useFeed(wsRef, clientId) {
           const f = filterRef.current;
           if (
             f.scope === "following" ||
+            (f.scope === "mine" && data.post.authorId !== clientId) ||
             (f.scope === "topics" && !f.categories.includes(data.post.category)) ||
             (f.category && data.post.category !== f.category)
           )
@@ -223,16 +225,18 @@ export function useFeed(wsRef, clientId) {
   const setFilter = useCallback(
     (next) => {
       const f = {
-        scope: ["following", "topics"].includes(next.scope) ? next.scope : "all",
+        scope: ["following", "topics", "mine"].includes(next.scope) ? next.scope : "all",
         category: next.category || null,
         categories: topicKeys(next.categories),
       };
       filterRef.current = f;
+      sharedRequest.current=null;
+      markPending('shared',false);
       setFilterState(f);
       setPosts([]);
       refresh();
     },
-    [refresh],
+    [refresh,markPending],
   );
   const action = useCallback(
     (key, obj) => {

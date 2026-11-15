@@ -69,6 +69,19 @@ test("official launch discussions use the brand identity and ordinary text witho
   expect(container.querySelector(".feed-post-text").textContent).toContain("Lequel vous a le plus marqué");
 });
 
+test("my posts ignores foreign broadcasts and stale public-feed responses", () => {
+  act(()=>feed.setFilter({scope:'mine'}));
+  act(()=>feed.handleMessage({type:'feed_list',scope:'all',posts:[{...post,id:'foreign',authorId:'other',text:'Foreign public post'}]}));
+  expect(container.textContent).not.toContain('Foreign public post');
+  act(()=>feed.handleMessage({type:'feed_list',scope:'mine',posts:[{...post,text:'My own post'},{...post,id:'foreign',authorId:'other',text:'Foreign public post'}]}));
+  expect(container.textContent).toContain('My own post');
+  expect(container.textContent).not.toContain('Foreign public post');
+  expect(container.querySelector('.community-tabs')).toBeNull();
+  expect(container.querySelector('h1').textContent).toBe('My posts');
+  act(()=>feed.handleMessage({type:'post_created',post:{...post,id:'new-foreign',authorId:'other',text:'Foreign broadcast'}}));
+  expect(container.textContent).not.toContain('Foreign broadcast');
+});
+
 test("comment reaction broadcasts preserve my selection and update the real count", () => {
   act(() => feed.handleMessage({ type: "post_comments", postId: "p", comments: [
     { id: "c1", authorId: "peer", text: "My take", reactions: 1, reacted: true },

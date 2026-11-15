@@ -9,6 +9,7 @@ export function useSocial(wsRef, clientId) {
   const [friends, setFriends] = useState([]);
   const [requests, setRequests] = useState([]);
   const [outgoingRequests, setOutgoingRequests] = useState(() => new Set());
+  const [friendRequestError,setFriendRequestError]=useState(null);
   const [legacyDms, setDms] = useState({});
   const [dataState, dispatch] = useReducer(socialDataReducer, initialSocialData);
   const [activeConversationId, setActiveConversationId] = useState(null);
@@ -31,6 +32,8 @@ export function useSocial(wsRef, clientId) {
   );
 
   const handleMessage = useCallback((data) => {
+    if(data.type==='social_error' && data.action==='friend_request')setFriendRequestError({targetId:data.targetId || null});
+    if(data.type==='rate_limited' && data.code==='FRIEND_REQUEST_RATE_LIMITED')setFriendRequestError({targetId:null,rateLimited:true});
     if (data.type === 'async_challenge_state' || (data.type === 'social_error' && data.challengeId)) {
       const expected = asyncRequests.current[data.challengeId];
       if (data.requestId && expected && data.requestId !== expected) return;
@@ -53,9 +56,11 @@ export function useSocial(wsRef, clientId) {
         setRequests((r) => (r.some((x) => x.id === data.from.id) ? r : [...r, data.from]));
         break;
       case 'friend_request_sent':
+        setFriendRequestError(null);
         setOutgoingRequests((prev) => new Set(prev).add(data.targetId));
         break;
       case 'friend_request_rejected':
+        setFriendRequestError({targetId:data.targetId || null});
         setOutgoingRequests((prev) => {
           const next = new Set(prev);
           next.delete(data.targetId);
@@ -99,7 +104,7 @@ export function useSocial(wsRef, clientId) {
     }
   }, [clientId, send]);
 
-  const addFriend = (targetId) => send({ type: 'friend_request', targetId });
+  const addFriend = (targetId) => {setFriendRequestError(null);return send({ type: 'friend_request', targetId });};
   const acceptFriend = (id) => send({ type: 'friend_accept', requesterId: id });
   const declineFriend = (id) => send({ type: 'friend_decline', requesterId: id });
   const removeFriend = (id) => send({ type: 'friend_remove', targetId: id });
@@ -196,7 +201,7 @@ export function useSocial(wsRef, clientId) {
   return {
     ...dataState, clientId, connected, activeAsyncChallengeId, playAsyncChallenge, answerAsyncChallenge, closeAsyncChallenge, activeConversationId, requestConversations, requestHistory,
     openConversation, closeConversation, markRead, createChallenge, respondChallenge,
-    friends, requests, outgoingRequests, dms, gameChat, gameChatSeenRef,
+    friends, requests, outgoingRequests, friendRequestError, dms, gameChat, gameChatSeenRef,
     handleMessage, addFriend, acceptFriend, declineFriend, removeFriend,
     sendDM, sendGameChat, clearGameChat,
   };

@@ -14,12 +14,16 @@ on:
         description: 'Capture one French iPhone across the app for visual review'
         type: boolean
         default: false
+      profile_review:
+        description: 'Review profile and progression on standard and compact iPhones in parallel'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
 
 env:
-  VISUAL_REVIEW: ${{ inputs.visual_review || startsWith(github.ref_name, 'codex/ios-visual-parity-') }}
+  VISUAL_REVIEW: ${{ inputs.visual_review || inputs.profile_review || startsWith(github.ref_name, 'codex/ios-visual-parity-') }}
 
 concurrency:
   group: quizzup-store-captures-${{ github.ref }}
@@ -27,6 +31,10 @@ concurrency:
 
 jobs:
   screenshots:
+    strategy:
+      fail-fast: false
+      matrix:
+        profile: ${{ inputs.profile_review && fromJSON('["standard","compact"]') || fromJSON('["all"]') }}
     runs-on: macos-26
     timeout-minutes: 45
     defaults:
@@ -87,6 +95,9 @@ jobs:
         if: env.VISUAL_REVIEW == 'true'
         run: |
           CAPTURE_ARGS=(--visual-review)
+          if [[ "${{ inputs.profile_review }}" == 'true' ]]; then
+            CAPTURE_ARGS+=(--profile-review --profile-${{ matrix.profile }})
+          fi
           if [[ "$GITHUB_REF_NAME" == codex/ios-visual-parity-audio-* ]]; then
             CAPTURE_ARGS+=(--duel-audio-review)
           fi
@@ -106,17 +117,18 @@ jobs:
             "$RUNNER_TEMP/ios-capture-build/Build/Products/Debug-iphonesimulator/QuizzUp.app" \
             "$RUNNER_TEMP/quizzup-native-screenshots" "${CAPTURE_ARGS[@]}"
       - name: Upload screenshots ready for App Store Connect
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: quizzup-app-store-screenshots-${{ github.sha }}
+          name: quizzup-app-store-screenshots-${{ github.sha }}-${{ matrix.profile }}
           path: ${{ runner.temp }}/quizzup-native-screenshots/
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 30
       - name: Upload compiler logs on failure
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: quizzup-ios-capture-diagnostics-${{ github.sha }}
+          name: quizzup-ios-capture-diagnostics-${{ github.sha }}-${{ matrix.profile }}
           path: ${{ runner.temp }}/ios-*-build.log
           if-no-files-found: ignore
           retention-days: 7

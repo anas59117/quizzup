@@ -11,18 +11,20 @@ const visualReview=process.argv.includes('--visual-review');
 const audioReview=visualReview&&process.argv.includes('--duel-audio-review');
 const audioFeedbackReview=visualReview&&process.argv.includes('--audio-feedback-review');
 const communityReview=visualReview&&process.argv.includes('--community-review');
+const profileReview=visualReview&&process.argv.includes('--profile-review');
 const appearanceReview=visualReview&&process.argv.includes('--appearance-review');
 const appearanceSettingsReview=appearanceReview&&process.argv.includes('--appearance-settings-review');
-const captureProfiles=communityReview ? [profiles.find(profile=>profile.type==='iPhone-15'),{key:'iphone-compact-home-button',type:'iPhone-SE-3rd-generation',width:750,height:1334}] : visualReview ? profiles.filter(profile=>profile.type==='iPhone-15') : profiles;
+const reviewProfiles=[profiles.find(profile=>profile.type==='iPhone-15'),{key:'iphone-compact-home-button',type:'iPhone-SE-3rd-generation',width:750,height:1334}];
+const captureProfiles=profileReview ? [reviewProfiles[process.argv.includes('--profile-compact')?1:0]] : communityReview ? reviewProfiles : visualReview ? profiles.filter(profile=>profile.type==='iPhone-15') : profiles;
 const captureLanguages=visualReview ? ['fr'] : ['fr','en'];
-const captureScreens=communityReview ? ['community','community-discussion','community-compose','community-empty'] : audioFeedbackReview ? ['answer','result'] : appearanceSettingsReview ? ['settings','settings-live'] : appearanceReview
+const captureScreens=profileReview ? ['profile','profile-help','profile-friends','personal-posts','result-level-up'] : communityReview ? ['community','community-discussion','community-compose','community-empty'] : audioFeedbackReview ? ['answer','result'] : appearanceSettingsReview ? ['settings','settings-live'] : appearanceReview
  ? ['home','themes','family','profile','messages','thread','community','community-compose','settings','play','auth','auth-email','join','detail','room','profile-edit','settings-live']
  : audioReview
  ? ['waiting','faceoff','question','question-photo','answer','question-muted','settings','community','community-suggestion','community-compose']
  : visualReview
  ? ['home','home-empty','home-return','themes','family','detail','detail-scrolled','messages','messages-empty','community','community-compose','settings','profile','profile-empty','waiting','faceoff','question','question-photo','answer','result','auth','auth-restoring','auth-email','auth-email-keyboard','auth-email-create','auth-email-reset']
  : scenarios;
-const capturePlans=communityReview ? [
+const capturePlans=communityReview||profileReview ? [
  {key:'light',preference:'light',system:'light',screens:captureScreens},
  {key:'dark',preference:'dark',system:'dark',screens:captureScreens},
 ] : appearanceReview ? [
@@ -64,7 +66,7 @@ for(const profile of captureProfiles){
    const finalPreference=screen==='settings-live' ? (plan.preference==='dark' ? 'light' : 'dark') : plan.preference;
    assert.deepEqual(JSON.parse(fs.readFileSync(ready,'utf8')),{screen,language,appearance:plan.preference,storedAppearance:finalPreference});
    const name=`${String(captureScreens.indexOf(screen)+1).padStart(2,'0')}-${screen}`;
-   const relative=`${appearanceReview||communityReview ? plan.key+'/' : ''}${language}/${profile.key}/${name}.jpg`;
+   const relative=`${appearanceReview||communityReview||profileReview ? plan.key+'/' : ''}${language}/${profile.key}/${name}.jpg`;
    const saveCapture=(relative,expectedAppearance,suffix='')=>{
    const raw=path.join(rawDirectory,`${profile.key}-${language}-${name}${suffix}.png`);
    const destination=path.join(output,relative);
@@ -79,7 +81,7 @@ for(const profile of captureProfiles){
    captures.push({screen,language,appearance:plan.key,expectedAppearance,profile:profile.key,path:relative,...info,sha256:crypto.createHash('sha256').update(bytes).digest('hex')});
    console.log(`CAPTURED ${relative} ${info.width}x${info.height}`);
    };
-   const duelScreen=['waiting','faceoff','question','question-photo','question-muted','answer','result'].includes(screen);
+   const duelScreen=['waiting','faceoff','question','question-photo','question-muted','answer','result','result-level-up'].includes(screen);
    saveCapture(relative,duelScreen ? 'dark' : finalPreference==='system' ? plan.system : finalPreference);
    if(appearanceReview&&plan.preference==='system'&&screen==='settings'){
     const changed=plan.system==='dark'?'light':'dark';

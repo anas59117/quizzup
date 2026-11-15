@@ -7,19 +7,21 @@ import { useI18n } from './i18n';
 import { AVATAR_IDS, PlayerAvatar } from './PlayerAvatar';
 import { ProfilePhotoEditor } from './ProfilePhotoEditor';
 import { ProfileStats } from './stats';
-import { FriendsScreen } from './social';
 import { StreakCalendar } from './DailyStreak';
 import { getTopicCover } from './topicCovers';
 import { localizedTopicTitle } from './topicTitles';
+import {PlayerProgress, profileCopy} from './PlayerProgress';
+import {ProfileFriends} from './ProfileFriends';
 
 const categoriesByKey = new Map(CATEGORIES.map(category => [category.key, category]));
 
 export function ProfileContent({
   avatar, name, stats, isGoogleLinked, googleEmail, linkGoogle, linking,
   clientId, social, onOpenLeaderboard, onSaveProfile, profileSaving, onOpenTopic, onDiscoverTopics, streak,
-  league, onOpenLeague, onStartTournament, onOpenSeasonPass, onInviteFriend, onJoinFriend, pending, controls, onOpenHistory,
+  league, onOpenLeague, onStartTournament, onOpenSeasonPass, onInviteFriend, onJoinFriend, pending, controls, onOpenHistory, onOpenOwnPosts, onOpenMessages,
 }) {
   const { t, lang } = useI18n();
+  const copy=profileCopy(lang);
   const friendsSection = useRef(null);
   const [editing, setEditing] = useState(false);
   const [draftName, setDraftName] = useState(name || '');
@@ -80,9 +82,6 @@ export function ProfileContent({
     } finally { setUploading(false); }
   };
 
-  const level = stats.level || 1;
-  const xpTarget = Math.max(0, Number(stats.xpForLevel) || 0);
-  const xp = Math.min(xpTarget, Math.max(0, Number(stats.xpIntoLevel) || 0));
   const topics = stats.topics || [];
   const friendCount = social?.friends?.length || 0;
   const hasPlayed = stats.games > 0 || topics.length > 0;
@@ -105,18 +104,10 @@ export function ProfileContent({
                 <span className="profile-player-kicker">{t('myProfile')}</span>
                 <h1 id="profile-title" tabIndex={-1} className="pf-name">{name}</h1>
               </div>
+              <button className="profile-edit-action" type="button" aria-label={t('editProfile')} onClick={()=>editing?cancelEdit():setEditing(true)} disabled={saving} aria-expanded={editing}>{lang==='fr'?'Modifier':lang==='es'?'Editar':'Edit'}</button>
             </div>
             <div className="pf-level-card profile-player-progress">
-              <div className="profile-player-progress-head">
-                <strong>{t('level')} {level}</strong>
-                {xpTarget > 0 && <span>{xp.toLocaleString(lang)} / {xpTarget.toLocaleString(lang)} XP</span>}
-              </div>
-              {xpTarget > 0 ? (
-                <>
-                  <progress aria-label={t('overallProgress')} value={xp} max={xpTarget} />
-                  <p>{(xpTarget - xp).toLocaleString(lang)} {t('beforeNextLevel')} {level + 1}</p>
-                </>
-              ) : <p>{t('playForXp')}</p>}
+              <PlayerProgress stats={stats}/>
             </div>
             <div className="profile-player-social">
               {social && <button type="button" onClick={() => {
@@ -194,9 +185,11 @@ export function ProfileContent({
         </div>
 
         <div className="profile-activity">
+          {onOpenOwnPosts && <button type="button" className="profile-own-posts" onClick={onOpenOwnPosts}><Icon name="chat" size={20}/><span>{copy.posts}</span><Icon name="arrow" size={18}/></button>}
           {topics.length > 0 ? (
             <section className="profile-player-section" aria-labelledby="profile-specialties">
               <h2 id="profile-specialties" className="pf-section-title">{t('mySpecialties')}</h2>
+              <p className="profile-specialty-caption">{copy.perTopic}</p>
               <div className="pf-themes profile-specialty-grid">
                 {topics.slice(0, 3).map(topic => <Specialty key={topic.key} topic={topic} lang={lang} levelLabel={t('level')} onSelect={onOpenTopic} />)}
               </div>
@@ -210,7 +203,7 @@ export function ProfileContent({
           ) : null}
 
           {social && <section ref={friendsSection} className="profile-player-section profile-friends" aria-label={t('myFriendsLabel')} tabIndex={-1}>
-            <FriendsScreen social={social} onInviteFriend={onInviteFriend} onJoinFriend={onJoinFriend} pending={pending} showContactsFirst />
+            <ProfileFriends social={social} clientId={clientId} onOpenMessages={onOpenMessages} onInviteFriend={onInviteFriend} onJoinFriend={onJoinFriend} pending={pending}/>
           </section>}
 
           <section className="profile-player-section" aria-labelledby="profile-results">

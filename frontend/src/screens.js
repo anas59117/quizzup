@@ -3,7 +3,8 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { StreakBadge } from './DailyStreak';
 import { ShareCard } from './ShareCard';
 import { ChallengeButton } from './ChallengeLink';
-import { CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, LevelRing, Icon, BrowseHeader } from './ui';
+import { CATEGORIES, FAMILIES, categoriesInFamily, normalizeForSearch, famLabel, SoloToggle, CategoryTile, FamilyGrid, SearchBar, PlayerPhoto, Icon, BrowseHeader } from './ui';
+import {PlayerProgress} from './PlayerProgress';
 import { CategoryTileV4 } from './CategoryTileV4';
 import { Leaderboard } from './multiplayer';
 import { FriendInviteActions } from './FriendInviteActions';
@@ -387,10 +388,6 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
         {!isSolo && opp?.clientId && social.friends.some(f => f.id === opp.clientId) && <button className="social-btn" onClick={() => onOpenMessages?.(opp.clientId)}>Messages · {opp.name}</button>}
         {/* Reward signals stay visible — this is what the old screen got right */}
         <div className="res-rewards">
-          <div className="res-reward">
-            <b>+{result.xp}</b>
-            <span>{t('xpTotal')}</span>
-          </div>
           {result.coins > 0 && (
             <div className="res-reward">
               <b>+{coinsEarned}</b>
@@ -405,6 +402,7 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
           )}
         </div>
 
+        {result.stats && <div className="res-level"><PlayerProgress result stats={result.stats} before={result.progressionBefore} earned={result.xp}/></div>}
         <div className="res-cta">
           {!isSolo ? (
             <button className="res-btn-primary" onClick={rematch} disabled={rematchWaiting || rematchStarting}>
@@ -425,15 +423,6 @@ export function FinishedContent({ result, opponents, myId, avatar, name, frame, 
           </button>
         </div>
 
-        {result.stats && (
-          <div className="res-level">
-            <LevelRing level={result.stats.level} xpIntoLevel={result.stats.xpIntoLevel} xpForLevel={result.stats.xpForLevel} />
-            <div className="res-level-text">
-              <b>{t('level')} {result.stats.level}</b>
-              <span>{result.stats.xpIntoLevel} / {result.stats.xpForLevel} XP</span>
-            </div>
-          </div>
-        )}
 
         {adOffer && !adClaimed && result.coins > 0 && (
           <button className="res-btn-ad" onClick={onWatchAd}>

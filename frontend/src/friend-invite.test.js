@@ -62,6 +62,8 @@ test('profile puts invitation actions after up to three contacts and keeps the r
   const friends = ['Camille', 'Nadia', 'Alex', 'Sam'].map(name => ({ id: name, name }));
   for (const count of [1, 4]) {
     render(<ProfileContent name="Sisi" stats={{ level: 1 }} social={{ ...social, friends: friends.slice(0, count) }} />);
+    const all=container.querySelector('.profile-friends-all');
+    if(all.getAttribute('aria-expanded')!=='true')act(()=>all.click());
     const list = container.querySelector('.profile-friends .friends-screen');
     const contacts = [...list.querySelectorAll('.friend-name')];
     const actions = list.querySelector('.friend-invite-actions');
