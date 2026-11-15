@@ -526,6 +526,7 @@ function AppContent() {
         break;
       case 'rate_limited':
         clearPending();
+        feed.handleMessage(data);
         if (stage === 'leaderboard') setLeaderboardLoading(false);
         showToast(t('slowDown'), 'error');
         break;

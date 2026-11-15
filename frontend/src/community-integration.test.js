@@ -69,6 +69,37 @@ test("official launch discussions use the brand identity and ordinary text witho
   expect(container.querySelector(".feed-post-text").textContent).toContain("Lequel vous a le plus marqué");
 });
 
+test("duplicate refreshes share the in-flight feed request and changing scope still requests it", () => {
+  act(()=>{feed.refresh();feed.refresh();});
+  expect(socket.current.send).toHaveBeenCalledTimes(1);
+  act(()=>feed.setFilter({scope:'mine'}));
+  expect(socket.current.send).toHaveBeenCalledTimes(2);
+  act(()=>feed.refresh());
+  expect(socket.current.send).toHaveBeenCalledTimes(2);
+  act(()=>feed.handleMessage({type:'feed_list',scope:'mine',posts:[]}));
+  act(()=>feed.refresh());
+  expect(socket.current.send).toHaveBeenCalledTimes(3);
+});
+
+test("a feed rate limit stops the spinner immediately and allows a manual retry", () => {
+  act(()=>feed.refresh());
+  act(()=>feed.handleMessage({type:'rate_limited',code:'FEED_RATE_LIMITED'}));
+  expect(feed.loading).toBe(false);
+  expect(feed.pending.list).toBe(false);
+  expect(feed.error).not.toBe('');
+  act(()=>feed.refresh());
+  expect(socket.current.send).toHaveBeenCalledTimes(2);
+});
+
+test("a reconnected socket can reload an in-flight personal feed immediately", () => {
+  act(()=>feed.setFilter({scope:'mine'}));
+  const reconnected={readyState:1,send:jest.fn()};
+  socket.current=reconnected;
+  act(()=>feed.refresh());
+  expect(reconnected.send).toHaveBeenCalledTimes(1);
+  expect(JSON.parse(reconnected.send.mock.calls[0][0]).scope).toBe('mine');
+});
+
 test("my posts ignores foreign broadcasts and stale public-feed responses", () => {
   act(()=>feed.setFilter({scope:'mine'}));
   act(()=>feed.handleMessage({type:'feed_list',scope:'all',posts:[{...post,id:'foreign',authorId:'other',text:'Foreign public post'}]}));

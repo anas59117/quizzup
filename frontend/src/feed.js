@@ -19,6 +19,7 @@ export function useFeed(wsRef, clientId) {
   const { t } = useI18n();
   const requestTimers = useRef({});
   const sharedRequest = useRef(null);
+  const listRequest = useRef(null);
   const filterRef = useRef(filter),
     pendingRef = useRef({});
   useEffect(
@@ -59,6 +60,9 @@ export function useFeed(wsRef, clientId) {
   );
   const refresh = useCallback(() => {
     const f = filterRef.current;
+    const key=JSON.stringify([f.scope,f.category,f.categories || []]);
+    if(pendingRef.current.list && listRequest.current?.key===key && listRequest.current.socket===wsRef.current)return;
+    listRequest.current={key,socket:wsRef.current};
     setLoading(true);
     markPending("list", true);
     setError("");
@@ -69,9 +73,11 @@ export function useFeed(wsRef, clientId) {
         category: f.category || undefined,
         ...(f.scope === "topics" ? { categories: f.categories } : {}),
       })
-    )
+    ) {
+      markPending('list',false);
       setLoading(false);
-  }, [send, markPending]);
+    }
+  }, [send, markPending, wsRef]);
   const handleMessage = useCallback(
     (data) => {
       switch (data.type) {
@@ -208,6 +214,13 @@ export function useFeed(wsRef, clientId) {
             ...p,
             [data.postId]: data,
           }));
+          break;
+        case "rate_limited":
+          if(data.code!=='FEED_RATE_LIMITED')break;
+          markPending('list',false);
+          markPending('shared',false);
+          setLoading(false);
+          setError(t('slowDown'));
           break;
         case "community_error":
           setError(t('actionFailedRetry'));
