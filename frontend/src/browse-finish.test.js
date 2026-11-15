@@ -2,6 +2,8 @@ import React, { act } from 'react';
 import { createRoot } from 'react-dom/client';
 import { useTheme } from './ui';
 import { CategoryTileV4 } from './CategoryTileV4';
+import fs from 'fs';
+import path from 'path';
 
 let root, container, listeners, media, previousMatchMedia;
 beforeEach(() => {
@@ -25,10 +27,11 @@ function ThemeHarness() {
   const [theme, toggle] = useTheme();
   return <button onClick={toggle}>{theme}</button>;
 }
-test('system appearance stays live until the player makes a manual choice', () => {
+test('explicit automatic appearance stays live until the player makes a manual choice', () => {
+  localStorage.setItem('quizzup-theme', 'system');
   act(() => root.render(<ThemeHarness />));
   expect(container.textContent).toBe('light');
-  expect(localStorage.getItem('quizzup-theme')).toBeNull();
+  expect(localStorage.getItem('quizzup-theme')).toBe('system');
   act(() => { media.matches = true; listeners.forEach(fn => fn({ matches: true })); });
   expect(container.textContent).toBe('dark');
   act(() => container.querySelector('button').click());
@@ -37,12 +40,37 @@ test('system appearance stays live until the player makes a manual choice', () =
   act(() => { media.matches = true; listeners.forEach(fn => fn({ matches: true })); });
   expect(container.textContent).toBe('light');
 });
-test('invalid saved appearance falls back to the system preference', () => {
+test('a first visit stays light on a dark device until the player chooses dark', () => {
+  media.matches = true;
+  act(() => root.render(<ThemeHarness />));
+  expect(container.textContent).toBe('light');
+  expect(localStorage.getItem('quizzup-theme')).toBeNull();
+  act(() => container.querySelector('button').click());
+  expect(container.textContent).toBe('dark');
+  expect(localStorage.getItem('quizzup-theme')).toBe('dark');
+  act(() => { media.matches = false; listeners.forEach(fn => fn({ matches: false })); });
+  expect(container.textContent).toBe('dark');
+});
+
+test('invalid saved appearance falls back to light', () => {
   localStorage.setItem('quizzup-theme', 'broken');
   media.matches = true;
   act(() => root.render(<ThemeHarness />));
-  expect(document.documentElement.getAttribute('data-theme')).toBe('dark');
+  expect(document.documentElement.getAttribute('data-theme')).toBe('light');
 });
+
+test.each([[null, 'light'], ['light', 'light'], ['dark', 'dark'], ['system', 'dark'], ['broken', 'light']])(
+  'the HTML bootstrap respects stored choice %s before React mounts', (saved, expected) => {
+    media.matches = true;
+    if (saved !== null) localStorage.setItem('quizzup-theme', saved);
+    const html = fs.readFileSync(path.resolve(__dirname, '../public/index.html'), 'utf8');
+    const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)[1];
+    const run = new Function('window', 'document', 'localStorage', script);
+    run(window, document, localStorage);
+    expect(document.documentElement.dataset.theme).toBe(expected);
+    expect(localStorage.getItem('quizzup-theme')).toBe(saved);
+  },
+);
 test('a failed cover keeps a recognisable graphic and working quiz action', () => {
   const open = jest.fn();
   act(() => root.render(<CategoryTileV4 c={{ key: 'example_quiz', label: 'Quiz Spatial', cover: '/missing.webp' }} onClick={open} />));

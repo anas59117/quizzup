@@ -2,12 +2,16 @@ import XCTest
 @testable import QuizzUpNativeCore
 
 final class NativeAppearanceTests: XCTestCase {
-    func testStoredChoiceRestoresAndInvalidValuesFollowTheSystem() {
+    func testSavedChoicesRestoreWithoutChangingAnExistingPreference() {
         XCTAssertEqual(NativeAppearance.stored("light"), .light)
         XCTAssertEqual(NativeAppearance.stored("dark"), .dark)
         XCTAssertEqual(NativeAppearance.stored("system"), .system)
-        XCTAssertEqual(NativeAppearance.stored(nil), .system)
-        XCTAssertEqual(NativeAppearance.stored("broken"), .system)
+    }
+
+    func testFirstLaunchAndInvalidStorageDefaultToLightEvenOnADarkDevice() {
+        XCTAssertEqual(NativeAppearance.stored(nil), .light)
+        XCTAssertFalse(NativeAppearance.stored(nil).resolvedDark(systemDark: true))
+        XCTAssertEqual(NativeAppearance.stored("broken"), .light)
     }
 
     func testManualChoicesOverrideOppositeDeviceAppearance() {
