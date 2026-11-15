@@ -359,7 +359,11 @@ private struct NativeHomeContent: View {
                         .font(.system(size: 16, weight: .bold)).tracking(-0.25)
                     if let post = game.community.latestPost {
                         HStack(spacing: 10) {
-                            NativePlayerPortrait(avatar: post.authorAvatar, size: 44)
+                            if post.isOfficial == true {
+                                Image(systemName: "bolt.circle").font(.system(size: 29, weight: .semibold))
+                                    .foregroundColor(.white).frame(width: 44, height: 44)
+                                    .background(Theme.brand, in: Circle())
+                            } else { NativePlayerPortrait(avatar: post.authorAvatar, size: 44) }
                             VStack(alignment: .leading, spacing: 3) {
                                 Text(post.authorName).font(.system(size: 14, weight: .bold))
                                 if let category = game.categories.first(where: { $0.key == post.category }) {

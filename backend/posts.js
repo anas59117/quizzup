@@ -69,6 +69,7 @@ function toClientShape(p, viewerId) {
     authorFollowed: !!viewerId && !!p.authorId && isFollowing(viewerId, p.authorId),
     category: p.category, text: p.text, mediaUrl: p.mediaUrl || null,
     ...(p.isDemo ? { isDemo: true, demoAvatar: p.demoAvatar } : {}),
+    ...(p.isOfficial ? { isOfficial: true } : {}),
     commentsCount: comments.length, lastComment: canSeeLastComment ? commentToClient(lastComment, viewerId) : null,
     question: p.question ? {prompt:p.question.prompt,answers:p.question.answers} : null, reactions: p.reactedBy.length, reacted: !!viewerId && p.reactedBy.includes(viewerId), createdAt: p.createdAt,
   };
@@ -83,6 +84,8 @@ function getFeed(options = 30) {
   const categories = Array.isArray(opts.categories) ? new Set(opts.categories) : null;
   const out = [];
   for (const p of posts) {
+    // Retired demos remain available by permalink so real replies are preserved.
+    if (p.isDemo) continue;
     if (p.reportedBy.length >= REPORT_THRESHOLD) continue;
     if (opts.viewerId && blockedPair(opts.viewerId, p.authorId)) continue;
     if (opts.category && p.category !== opts.category) continue;

@@ -62,6 +62,15 @@ final class NativeSocialPayloadTests: XCTestCase {
         XCTAssertEqual(unsafe.displayAvatar, "robot")
     }
 
+    func testOfficialLaunchIdentityIsOptionalForExistingPosts() throws {
+        let base = #"{"id":"official","authorName":"QuizzUp","authorAvatar":"robot","authorFollowed":false,"text":"Infinity War ou Endgame ?","reactions":0,"reacted":false,"commentsCount":0,"createdAt":1000"#
+        let official = try decode(NativeCommunityPost.self, base + ",\"isOfficial\":true}")
+        XCTAssertEqual(official.isOfficial, true)
+        XCTAssertNil(official.isDemo)
+        let existing = try decode(NativeCommunityPost.self, base + "}")
+        XCTAssertNil(existing.isOfficial)
+    }
+
     func testCommentReactionBroadcastPreservesOwnSelectionAndUpdatesPreview() throws {
         let reply = try decode(NativeCommunityReply.self, #"{"id":"c","authorId":"a","authorName":"A","authorAvatar":"cat","text":"Hi","createdAt":1000,"reacted":true,"reactions":1}"#)
         var post = try decode(NativeCommunityPost.self, #"{"id":"p","authorName":"A","authorAvatar":"cat","authorFollowed":false,"text":"Hi","reactions":0,"reacted":false,"commentsCount":1,"createdAt":1000}"#)

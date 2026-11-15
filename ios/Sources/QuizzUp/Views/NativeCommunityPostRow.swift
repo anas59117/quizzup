@@ -10,16 +10,6 @@ struct NativeCommunityPostRow: View {
     var showsPreview = true
     let onDiscussion: () -> Void
     private var fr: Bool { game.lang == "fr" }
-    private var textParts: [String] {
-        if let newline = post.text.firstIndex(of: "\n") {
-            return [String(post.text[..<newline]), String(post.text[post.text.index(after: newline)...])]
-        }
-        if let question = post.text.firstIndex(of: "?"), post.text.distance(from: post.text.startIndex, to: question) < 150 {
-            let end = post.text.index(after: question)
-            return [String(post.text[..<end]), String(post.text[end...]).trimmingCharacters(in: .whitespacesAndNewlines)]
-        }
-        return [post.text]
-    }
     private var shareURL: URL {
         var components = URLComponents(string: "https://quizzup-ten.vercel.app/")!
         components.fragment = "post-" + post.id
@@ -29,13 +19,8 @@ struct NativeCommunityPostRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             NativeCommunityPostHeader(post: post)
-            VStack(alignment: .leading, spacing: 4) {
-                Text(textParts[0]).font(.title3.bold()).tracking(-0.35)
-                    .fixedSize(horizontal: false, vertical: true)
-                if textParts.count > 1, !textParts[1].isEmpty {
-                    Text(textParts[1]).font(.body).fixedSize(horizontal: false, vertical: true)
-                }
-            }.frame(maxWidth: .infinity, alignment: .leading)
+            Text(post.text).font(.body).fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
             if let media = post.mediaUrl { NativeCommunityMedia(path: media) }
             if let question = post.question { quiz(question) }
             HStack(spacing: 22) {
@@ -108,9 +93,16 @@ struct NativeCommunityPostHeader: View {
     }
     var body: some View {
         HStack(alignment: .top, spacing: 10) {
-            NativePlayerPortrait(avatar: post.displayAvatar, size: 46)
+            if post.isOfficial == true {
+                Image(systemName: "bolt.circle").font(.system(size: 27, weight: .semibold))
+                    .foregroundColor(.white).frame(width: 40, height: 40)
+                    .background(Theme.brand, in: Circle()).accessibilityHidden(true)
+            } else { NativePlayerPortrait(avatar: post.displayAvatar, size: 40) }
             VStack(alignment: .leading, spacing: 2) {
-                Text(post.authorName).font(.headline).fixedSize(horizontal: false, vertical: true)
+                HStack(spacing: 6) {
+                    Text(post.authorName).font(.subheadline.bold())
+                    if post.isOfficial == true { Text(fr ? "Équipe" : "Team").font(.caption2).foregroundColor(Theme.muted) }
+                }.fixedSize(horizontal: false, vertical: true)
                 HStack(spacing: 4) {
                     if let topicTitle { Text(topicTitle); Text("·") }
                     NativeCommunityDate(date: post.date)

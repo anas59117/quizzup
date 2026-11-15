@@ -65,6 +65,7 @@ struct NativeCommunityPost: Decodable, Identifiable {
     var commentsCount: Int
     let createdAt: Double
     var isDemo: Bool? = nil
+    var isOfficial: Bool? = nil
     var demoAvatar: String? = nil
     var lastComment: NativeCommunityReply? = nil
     var date: Date { Date(timeIntervalSince1970: createdAt / 1000) }

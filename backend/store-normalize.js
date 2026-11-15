@@ -195,15 +195,15 @@ function normalizePostsStore(value, { maxPosts = 500, maxTextLen = 240 } = {}) {
     out.push({
       id,
       authorId: cleanId(raw.authorId) || null,
-      authorName:
+      authorName: starter?.isOfficial ? starter.authorName :
         String(raw.authorName || 'Player')
           .trim()
           .slice(0, 20) || 'Player',
       authorAvatar: cleanAvatar(raw.authorAvatar),
-      ...(starter ? { isDemo: true, demoAvatar: starter.demoAvatar } : {}),
-      category: starter?.category ||
+      ...(starter?.isOfficial ? { isOfficial: true } : starter ? { isDemo: true, demoAvatar: starter.demoAvatar } : {}),
+      category: starter ? starter.category :
         (typeof raw.category === 'string' ? raw.category.slice(0, 40) : null),
-      text,
+      text: starter?.isOfficial ? starter.text : text,
       mediaUrl:
         typeof raw.mediaUrl === 'string' &&
         /^\/community-media\/[a-f0-9]{24}-[a-f0-9]{32}\.jpg$/.test(raw.mediaUrl)

@@ -109,21 +109,24 @@ test('blocked and reported posts are unavailable through detail and post reactio
   assert.equal(posts.toggleReaction(p.id, 'unblocked-viewer'), null);
 });
 
-test('startup starters are opt-in, zero-interaction, trusted and idempotent across restart', async () => {
+test('official launch posts are opt-in, zero-interaction, trusted and idempotent across restart', async () => {
   assert.equal(posts.getFeed(100).filter(p => p.isDemo).length, 0);
   const spoof = posts.addPost('spoofer', 'Spammer', 'robot', 'marvel', 'Spoof', {
-    isDemo: true, demoAvatar: 'https://evil.test/fake.jpg',
+    isDemo: true, isOfficial: true, demoAvatar: 'https://evil.test/fake.jpg',
     mediaUrl: '/images/covers/approved-v2/marvel-640.webp',
   });
   assert.equal(!!spoof.isDemo, false);
+  assert.equal(!!spoof.isOfficial, false);
   assert.equal(!!spoof.demoAvatar, false);
   assert.equal(spoof.mediaUrl, null);
-  assert.equal(posts.seedStarterPosts(), 8);
-  const starters = posts.getFeed(100).filter(p => p.isDemo);
-  assert.equal(starters.length, 8);
+  assert.equal(posts.seedStarterPosts(), 3);
+  const starters = posts.getFeed(100).filter(p => p.isOfficial);
+  assert.equal(starters.length, 3);
   for (const p of starters) {
     assert.equal(p.authorId, null);
-    assert.match(p.demoAvatar, /^https:\/\/quizzup-ten\.vercel\.app\/images\//);
+    assert.equal(p.authorName, 'QuizzUp');
+    assert.equal(p.mediaUrl, null);
+    assert.equal(!!p.isDemo, false);
     assert.equal(p.commentsCount, 0);
     assert.equal(p.reactions, 0);
     assert.equal(p.lastComment, null);
@@ -135,13 +138,13 @@ test('startup starters are opt-in, zero-interaction, trusted and idempotent acro
   posts.toggleReaction(p.id, 'real-user');
   await flushAllJsonWriters();
   const saved = JSON.parse(fs.readFileSync(path.join(process.env.DATA_DIR, 'posts.json')));
-  assert.equal(saved.starterVersion, 1);
+  assert.equal(saved.starterVersion, 2);
   delete require.cache[require.resolve('./posts')];
   posts = require('./posts');
   assert.equal(posts.seedStarterPosts(), 0);
-  assert.equal(posts.getFeed(100).filter(p => p.isDemo).length, 8);
+  assert.equal(posts.getFeed(100).filter(p => p.isOfficial).length, 3);
   const reloaded = posts.getPost(p.id, 'real-user');
-  assert.equal(reloaded.demoAvatar, p.demoAvatar);
+  assert.equal(reloaded.isOfficial, true);
   assert.equal(reloaded.mediaUrl, p.mediaUrl);
   assert.equal(reloaded.reactions, 1);
   const reloadedReply = posts.getComments(p.id, 'real-user').find(c => c.id === reply.id);
@@ -149,12 +152,12 @@ test('startup starters are opt-in, zero-interaction, trusted and idempotent acro
   assert.equal(reloadedReply.reacted, true);
   assert.equal(reloadedReply.reactions, 1);
   // A persisted one-time version also prevents removed starters from reappearing.
-  saved.posts = saved.posts.filter(row => row.id !== starters[7].id);
+  saved.posts = saved.posts.filter(row => row.id !== starters[2].id);
   fs.writeFileSync(path.join(process.env.DATA_DIR, 'posts.json'), JSON.stringify(saved));
   delete require.cache[require.resolve('./posts')];
   posts = require('./posts');
   assert.equal(posts.seedStarterPosts(), 0);
-  assert.equal(posts.getPost(starters[7].id, 'real-user'), null);
+  assert.equal(posts.getPost(starters[2].id, 'real-user'), null);
   assert.ok(posts.getPost(spoof.id, 'real-user'));
 });
 
@@ -170,25 +173,18 @@ test('normalization repairs legacy comments and rejects dangling or nested reply
   assert.deepEqual(p.comments[1].reactedBy, ['x']);
 });
 
-test('starter topics and local media resolve in shipped catalogs and assets', () => {
+test('official topics resolve in both catalogs and legacy discussions retain their canonical topic', () => {
   const { CATEGORIES } = require('./questions');
   const { createStarterPosts } = require('./community-starters');
-  const publicRoot = path.resolve(__dirname, '../frontend/public');
   const nativeCatalog = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../ios/Sources/QuizzUp/Resources/topic-catalog.json'), 'utf8'));
   const starters = createStarterPosts();
   for (const p of starters) {
+    if (p.category === null) continue;
     assert.ok(Object.hasOwn(CATEGORIES, p.category), `Unknown starter topic ${p.category}`);
     assert.ok(Object.hasOwn(nativeCatalog, p.category), `Unknown native starter topic ${p.category}`);
-    const avatar = new URL(p.demoAvatar);
-    assert.equal(avatar.origin, 'https://quizzup-ten.vercel.app');
-    for (const asset of [p.mediaUrl, avatar.pathname]) {
-      assert.match(asset, /^\/images\/(?:covers\/approved-v2\/[a-z0-9_]+-(?:320|640|1024)\.webp|players\/[a-z0-9_]+\.jpg)$/);
-      assert.ok(fs.statSync(path.join(publicRoot, asset)).isFile(), `Missing starter asset ${asset}`);
-    }
   }
-  const yamal = starters.find(p => p.authorName === 'YamalFan');
-  assert.equal(yamal.category, 'fc_barcelone');
-  assert.equal(new URL(yamal.demoAvatar).pathname, '/images/players/lamine_yamal.jpg');
+  const yamal = { id: 'community-starter-v1-yamal', authorId: null, isDemo: true,
+    text: 'Legacy discussion', authorName: 'YamalFan' };
   const { normalizePostsStore } = require('./store-normalize');
   const [legacyYamal] = normalizePostsStore({ posts: [{ ...yamal, category: 'lamine_yamal' }] });
   assert.equal(legacyYamal.category, 'fc_barcelone');

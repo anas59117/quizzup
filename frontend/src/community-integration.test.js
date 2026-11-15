@@ -55,6 +55,20 @@ test("demo starters are visibly labelled and use fandom images without a fake fo
   expect(container.querySelector(".community-follow")).toBeNull();
 });
 
+test("official launch discussions use the brand identity and ordinary text without demo personas", () => {
+  act(() => feed.handleMessage({ type: "feed_list", scope: "all", posts: [{
+    ...post, authorId: null, authorName: "QuizzUp", isOfficial: true,
+    text: "Infinity War ou Endgame ?\nLequel vous a le plus marqué ?", mediaUrl: null,
+  }] }));
+  expect(container.querySelector(".community-official-label")?.textContent).toBe("Team");
+  expect(container.querySelector(".community-brand-avatar")).not.toBeNull();
+  expect(container.querySelector(".community-demo-label")).toBeNull();
+  expect(container.querySelector(".community-photo")).toBeNull();
+  expect(container.querySelector(".feed-post-text strong")).toBeNull();
+  expect(container.querySelector(".community-follow")).toBeNull();
+  expect(container.querySelector(".feed-post-text").textContent).toContain("Lequel vous a le plus marqué");
+});
+
 test("comment reaction broadcasts preserve my selection and update the real count", () => {
   act(() => feed.handleMessage({ type: "post_comments", postId: "p", comments: [
     { id: "c1", authorId: "peer", text: "My take", reactions: 1, reacted: true },

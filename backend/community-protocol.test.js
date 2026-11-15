@@ -66,7 +66,7 @@ async function connect(authenticated = true) {
   return { ws, send, wait, messages, uid: identity?.uid, token: identity?.token };
 }
 
-test('server boot seeds demo content and topics responses echo canonical validated selections', async () => {
+test('server boot publishes official prompts and topics responses echo canonical validated selections', async () => {
   const c = await connect();
   c.send({ type: 'feed_list', scope: 'topics', categories: ['marvel', 'invalid', 'harry_potter', 'marvel'] });
   const feed = await c.wait('feed_list');
@@ -74,13 +74,15 @@ test('server boot seeds demo content and topics responses echo canonical validat
   assert.deepEqual(feed.categories, ['harry_potter', 'marvel']);
   assert.equal(feed.category, null);
   assert.ok(feed.posts.length > 0);
-  assert.ok(feed.posts.every(p => p.isDemo && !p.reactions && !p.commentsCount && ['marvel', 'harry_potter'].includes(p.category)));
+  assert.ok(feed.posts.every(p => p.isOfficial && p.authorName === 'QuizzUp' && !p.reactions && !p.commentsCount && ['marvel', 'harry_potter'].includes(p.category)));
   c.send({ type: 'feed_list', scope: 'topics', categories: [] });
   assert.deepEqual((await c.wait('feed_list')).posts, []);
   c.send({ type: 'feed_list', scope: 'topics', categories: 'marvel' });
   assert.deepEqual((await c.wait('feed_list')).posts, []);
   c.send({ type: 'feed_list', scope: 'all' });
-  assert.equal((await c.wait('feed_list')).posts.filter(p => p.isDemo).length, 8);
+  const all = (await c.wait('feed_list')).posts;
+  assert.equal(all.filter(p => p.isOfficial).length, 3);
+  assert.equal(all.filter(p => p.isDemo).length, 0);
 });
 
 test('authenticated replies and comment likes broadcast confirmed identity, survive refresh and respect blocks', async () => {

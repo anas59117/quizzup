@@ -55,19 +55,33 @@ function tone(freq, duration, type = 'sine', gain = 0.15, ramp = 0.02) {
   osc.stop(ac.currentTime + duration + 0.01);
 }
 
-function noise(duration, gain = 0.08) {
+let wrongBuffer = null;
+function wrongAnswerTone() {
   const ac = ctx();
   if (!ac || _muted) return;
-  const len = ac.sampleRate * duration;
-  const buf = ac.createBuffer(1, len, ac.sampleRate);
-  const data = buf.getChannelData(0);
-  for (let i = 0; i < len; i++) data[i] = Math.random() * 2 - 1;
+  if (!wrongBuffer) {
+    const rate = 44100;
+    wrongBuffer = ac.createBuffer(1, Math.round(rate * 0.26), rate);
+    const data = wrongBuffer.getChannelData(0);
+    let peak = 0;
+    for (let i = 0; i < data.length; i++) {
+      const t = i / rate;
+      let value = 0;
+      for (const [start, frequency, amplitude] of [[0, 587.33, 1], [0.105, 493.88, 0.9]]) {
+        const u = t - start, length = 0.155;
+        if (u < 0 || u >= length) continue;
+        const envelope = (1 - Math.exp(-u / 0.004)) ** 2 * Math.exp(-u / 0.055) * Math.min(1, (length - u) / 0.025) ** 2;
+        const phase = 2 * Math.PI * frequency * u;
+        value += amplitude * envelope * (Math.sin(phase) + 0.14 * Math.sin(2 * phase));
+      }
+      data[i] = value;
+      peak = Math.max(peak, Math.abs(value));
+    }
+    for (let i = 0; i < data.length; i++) data[i] *= 0.23 / peak;
+  }
   const src = ac.createBufferSource();
-  src.buffer = buf;
-  const g = ac.createGain();
-  g.gain.setValueAtTime(gain, ac.currentTime);
-  g.gain.linearRampToValueAtTime(0, ac.currentTime + duration);
-  src.connect(g).connect(ac.destination);
+  src.buffer = wrongBuffer;
+  src.connect(ac.destination);
   src.start();
 }
 
@@ -88,9 +102,7 @@ const SFX = {
     setTimeout(() => tone(784, 0.18, 'sine', 0.18, 0.01), 160);
   },
   wrong() {
-    tone(350, 0.15, 'sawtooth', 0.08, 0.01);
-    setTimeout(() => tone(280, 0.2, 'sawtooth', 0.08, 0.01), 120);
-    noise(0.08, 0.04);
+    wrongAnswerTone();
   },
   timeUp() {
     tone(440, 0.15, 'triangle', 0.1, 0.01);

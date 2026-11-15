@@ -61,7 +61,6 @@ function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, o
   const reported = feed.reportedIds.has(post.id);
   const comments = post.commentsCount || 0;
   const likes = post.reactions || 0;
-  const [headline, ...body] = post.text.split(/\n+/);
   const Author = post.authorId ? "button" : "div";
   const share = async () => {
     try {
@@ -75,9 +74,9 @@ function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, o
     <article className="community-post feed-post" id={`post-${post.id}`}>
       <header className="community-author-row">
         <Author className="community-author" type={post.authorId ? "button" : undefined} onClick={post.authorId ? () => onOpenPlayer?.(post.authorId) : undefined}>
-          {fanAvatar ? <span className="player-avatar player-avatar--photo feed-post-ava" aria-hidden="true"><img className="player-avatar-photo" src={fanAvatar} alt="" loading="lazy" /></span>
+          {post.isOfficial === true ? <span className="community-brand-avatar feed-post-ava" aria-hidden="true"><Icon name="bolt" /></span> : fanAvatar ? <span className="player-avatar player-avatar--photo feed-post-ava" aria-hidden="true"><img className="player-avatar-photo" src={fanAvatar} alt="" loading="lazy" /></span>
             : <PlayerAvatar className="feed-post-ava" avatar={post.authorAvatar} />}
-          <span><strong>{post.authorName}</strong>{post.isDemo === true && <span className="community-demo-label">{lang === "fr" ? "Compte démo" : "Demo account"}</span>}<time dateTime={post.createdAt}>{formatDate(post.createdAt, lang)}</time></span>
+          <span><strong>{post.authorName}{post.isOfficial === true && <span className="community-official-label">{lang === "fr" ? "Équipe" : "Team"}</span>}</strong>{post.isDemo === true && <span className="community-demo-label">{lang === "fr" ? "Compte démo" : "Demo account"}</span>}<time dateTime={post.createdAt}>{formatDate(post.createdAt, lang)}</time></span>
         </Author>
         {feed.clientId && post.authorId && post.authorId !== feed.clientId && (
           <button className="community-follow" type="button" aria-pressed={!!post.authorFollowed}
@@ -93,7 +92,7 @@ function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, o
         </button>
         <span className="community-post-type">{post.question ? t('miniQuiz') : t('discussionLabel')}</span>
       </div>
-      <p className="feed-post-text">{body.length ? <><strong>{headline}</strong><span>{body.join("\n")}</span></> : post.text}</p>
+      <p className="feed-post-text">{post.text}</p>
       {photo && <img className="community-photo" src={photo} alt={t('postPhotoAlt')} loading="lazy" />}
       {post.question && <Quiz post={post} feed={feed} />}
       <div className="community-post-actions">

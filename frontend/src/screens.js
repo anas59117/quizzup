@@ -59,7 +59,7 @@ export function HomeContent({ startWithCategory, onSeeAll, pending, stats, contr
     <section aria-labelledby="home-community" className="home-community-section">
       <button className={`home-community-teaser${communityPost ? '' : ' is-empty'}`} onClick={() => onOpenCommunity?.(communityPost?.id)}>
         <span className="home-community-content"><strong id="home-community" className="home-community-heading">{t('communityTitle')}</strong>
-        {communityPost ? <span className="home-community-post"><span className="home-community-avatar"><PlayerAvatar avatar={communityPost.authorAvatar} /></span><span className="home-community-copy"><strong>{communityPost.authorName}</strong><small>{topicLabel(communityPost.category)}</small><span>{communityPost.text}</span><small>{communityPost.commentsCount || 0} {t('repliesTitle').toLowerCase()}</small></span></span> : <span className="home-community-invitation">{t('joinDiscussions')}</span>}</span><Icon name="arrow" size={20} />
+        {communityPost ? <span className="home-community-post"><span className={`home-community-avatar${communityPost.isOfficial ? ' home-community-avatar--official' : ''}`}>{communityPost.isOfficial ? <Icon name="bolt" /> : <PlayerAvatar avatar={communityPost.authorAvatar} />}</span><span className="home-community-copy"><strong>{communityPost.authorName}</strong>{communityPost.category && <small>{topicLabel(communityPost.category)}</small>}<span>{communityPost.text}</span><small>{communityPost.commentsCount || 0} {t('repliesTitle').toLowerCase()}</small></span></span> : <span className="home-community-invitation">{t('joinDiscussions')}</span>}</span><Icon name="arrow" size={20} />
       </button>
     </section>
   </main>;
