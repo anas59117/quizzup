@@ -16,11 +16,12 @@ struct ResultView: View {
                 VStack(alignment: .leading, spacing: 0) {
                     heading(result)
                     scoreboard(result).padding(.top, 20)
-                    rewardStrip(result).padding(.top, 10)
-                    actions(result).padding(.top, 20)
+                    if result.coins > 0 { rewardStrip(result).padding(.top, 10) }
                     if let stats = result.stats {
-                        levelProgress(stats).padding(.top, 22)
+                        ResultLevelProgress(before: result.progressionBefore, stats: stats, french: game.lang == "fr")
+                            .padding(.top, 16)
                     }
+                    actions(result).padding(.top, 20)
                     Button {
                         showDetails.toggle()
                     } label: {
@@ -180,7 +181,6 @@ struct ResultView: View {
 
     private func rewardStrip(_ result: GameEnd) -> some View {
         HStack(spacing: 8) {
-            reward("+\(result.xp)", label: game.t("xpTotal"))
             if result.coins > 0 { reward("+\(result.coins)", label: copy("Pièces", "Coins")) }
         }
         .padding(8)
@@ -230,19 +230,6 @@ struct ResultView: View {
             .buttonStyle(NativeDuelActionStyle(prominent: false)).disabled(game.isStarting)
     }
 
-    private func levelProgress(_ stats: PlayerStats) -> some View {
-        HStack(spacing: 14) {
-            LevelRing(level: stats.level, xpIntoLevel: stats.xpIntoLevel, xpForLevel: stats.xpForLevel, tint: gold)
-                .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
-                Text("\(copy("Niveau", "Level")) \(stats.level)").font(.subheadline.weight(.bold))
-                Text("\(stats.xpIntoLevel) / \(stats.xpForLevel) XP").font(.caption)
-                    .monospacedDigit().foregroundColor(pale)
-            }
-        }
-        .accessibilityElement(children: .combine)
-    }
-
     private func breakdown(_ result: GameEnd) -> some View {
         VStack(alignment: .leading, spacing: 10) {
             Text(copy("Statistiques du match", "Match statistics"))
@@ -252,6 +239,9 @@ struct ResultView: View {
             xpRow(game.t("winBonus"), "+\(result.xpBreakdown.winBonus)")
             Divider().overlay(Color.white.opacity(0.2))
             xpRow(game.t("xpTotal"), "\(result.xp)", total: true)
+            if let stats = result.stats {
+                xpRow(copy("XP dans le niveau", "XP in this level"), "\(stats.xpIntoLevel) / \(stats.xpForLevel) XP")
+            }
         }
         .padding(16)
         .background(Color.black.opacity(0.22), in: RoundedRectangle(cornerRadius: 16))
@@ -270,22 +260,78 @@ struct ResultView: View {
     private func copy(_ french: String, _ english: String) -> String { game.lang == "fr" ? french : english }
 }
 
-private struct LevelRing: View {
-    let level: Int
-    let xpIntoLevel: Int
-    let xpForLevel: Int
-    let tint: Color
+private struct ResultLevelProgress: View {
+    let before: NativeProgressionSnapshot?
+    let stats: PlayerStats
+    let french: Bool
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var progress: Double = 0
+    @State private var displayedLevel: Int = 1
+    @State private var complete = false
+    private let gold = Color(hex: 0xFFD54A)
+    private var after: NativeProgressionSnapshot {
+        .init(level: stats.level, xpIntoLevel: stats.xpIntoLevel, xpForLevel: stats.xpForLevel)
+    }
+    private var leveledUp: Bool { before.map { $0.level < stats.level } ?? false }
 
-    private var progress: Double { min(1, max(0, xpForLevel > 0 ? Double(xpIntoLevel) / Double(xpForLevel) : 0)) }
     var body: some View {
-        ZStack {
-            Circle().fill(Color(hex: 0x9E182E))
-            Circle().strokeBorder(.white.opacity(0.17), lineWidth: 5)
-            Circle().inset(by: 2.5).trim(from: 0, to: progress)
-                .stroke(tint, lineWidth: 5).rotationEffect(.degrees(-90))
-            Text("\(level)").font(.subheadline.weight(.bold)).foregroundColor(.white)
+        VStack(alignment: .leading, spacing: 9) {
+            HStack(alignment: .firstTextBaseline) {
+                Text("\(french ? "Niveau QuizzUp" : "QuizzUp level") \(displayedLevel)")
+                    .font(.subheadline.bold())
+                Spacer(minLength: 0)
+                if complete && leveledUp { Image(systemName: "sparkles").foregroundColor(gold).accessibilityHidden(true) }
+            }
+            GeometryReader { geometry in
+                Capsule().fill(.white.opacity(0.18))
+                    .overlay(alignment: .leading) {
+                        Capsule().fill(gold).frame(width: geometry.size.width * CGFloat(progress))
+                    }
+            }.frame(height: 8).accessibilityHidden(true)
+            Text(complete && leveledUp
+                 ? (french ? "Niveau \(stats.level) atteint !" : "Level \(stats.level) reached!")
+                 : (french ? "Prochain niveau · \(displayedLevel + 1)" : "Next level · \(displayedLevel + 1)"))
+                .font(.caption.weight(.medium)).foregroundColor(Color(hex: 0xFFE5E9))
         }
-        .frame(width: 46, height: 46)
+        .padding(16).frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color.black.opacity(0.22), in: RoundedRectangle(cornerRadius: 16))
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(french ? "Niveau QuizzUp \(stats.level)" : "QuizzUp level \(stats.level)")
+        .accessibilityValue(leveledUp
+                            ? (french ? "Niveau \(stats.level) atteint !" : "Level \(stats.level) reached!")
+                            : (french ? "Progression vers le niveau \(stats.level + 1), \(Int(after.fraction * 100)) pour cent" : "Progress to level \(stats.level + 1), \(Int(after.fraction * 100)) percent"))
+        .task(id: after) { await animateProgress() }
+        .onChange(of: reduceMotion) { if $0 { showFinal() } }
+    }
+
+    private func showFinal() {
+        progress = after.fraction
+        displayedLevel = stats.level
+        complete = true
+    }
+
+    @MainActor private func animateProgress() async {
+        guard !reduceMotion, let before, before.level <= stats.level else { showFinal(); return }
+        complete = false
+        displayedLevel = before.level
+        progress = before.fraction
+        do {
+            try await Task.sleep(nanoseconds: 180_000_000)
+            guard !reduceMotion else { showFinal(); return }
+            if leveledUp {
+                // Only the two server snapshots are used: no client XP thresholds.
+                withAnimation(.easeOut(duration: 0.55)) { progress = 1 }
+                try await Task.sleep(nanoseconds: 600_000_000)
+                guard !reduceMotion else { showFinal(); return }
+                displayedLevel = stats.level
+                progress = 0
+                try await Task.sleep(nanoseconds: 100_000_000)
+            }
+            guard !reduceMotion else { showFinal(); return }
+            withAnimation(.easeOut(duration: 0.75)) { progress = after.fraction }
+            try await Task.sleep(nanoseconds: 750_000_000)
+            complete = true
+        } catch { return }
     }
 }
 

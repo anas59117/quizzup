@@ -107,6 +107,17 @@ struct PlayerStats: Codable {
     var ownedItems: [String]?
 }
 
+struct NativeProgressionSnapshot: Codable, Equatable, Hashable {
+    let level: Int
+    let xpIntoLevel: Int
+    let xpForLevel: Int
+
+    var fraction: Double {
+        guard xpForLevel > 0 else { return 0 }
+        return min(1, max(0, Double(xpIntoLevel) / Double(xpForLevel)))
+    }
+}
+
 struct GameEnd: Codable {
     let finalScore: Int
     let won: Bool
@@ -118,6 +129,7 @@ struct GameEnd: Codable {
     let xp: Int
     let xpBreakdown: XpBreakdown
     let stats: PlayerStats?
+    var progressionBefore: NativeProgressionSnapshot? = nil
 }
 
 struct OpponentFinal: Codable, Hashable {

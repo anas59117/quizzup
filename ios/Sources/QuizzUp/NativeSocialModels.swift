@@ -48,6 +48,15 @@ struct NativeCommunityFilter: Equatable {
     var category: String?
     var topicsOnly = false
     var categories: [String] = []
+    var mine = false
+
+    var scope: String { mine ? "mine" : topicsOnly ? "topics" : following ? "following" : "all" }
+
+    func includesLivePost(_ post: NativeCommunityPost, clientID: String?) -> Bool {
+        guard !following, !mine || (clientID != nil && post.authorId == clientID) else { return false }
+        guard category == nil || category == post.category else { return false }
+        return !topicsOnly || post.category.map { categories.contains($0) } == true
+    }
 }
 
 struct NativeCommunityPost: Decodable, Identifiable {

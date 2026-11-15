@@ -9,8 +9,11 @@ struct NativeProfileView: View {
     }
 
     @EnvironmentObject var game: GameSocket
+    @Environment(\.dynamicTypeSize) private var dynamicType
     @State private var showSettings = false
     @State private var showEditor = false
+    @State private var showProgressHelp = false
+    @State private var showAllFriends = false
     @State private var roomSheet: NativeRoomSheet.Mode?
     @State private var friendCodeSheet: NativeFriendCodeMode?
     var onOpenMessages: () -> Void = {}
@@ -29,39 +32,47 @@ struct NativeProfileView: View {
         let categories = Dictionary(game.categories.map { ($0.key, $0) }, uniquingKeysWith: { first, _ in first })
         return game.topicProgress.compactMap { topic in
             categories[topic.key].map { Specialty(topic: topic, category: $0) }
+        }.sorted {
+            if $0.topic.level != $1.topic.level { return $0.topic.level > $1.topic.level }
+            if ($0.topic.completion ?? 0) != ($1.topic.completion ?? 0) { return ($0.topic.completion ?? 0) > ($1.topic.completion ?? 0) }
+            return $0.id < $1.id
         }
     }
 
     var body: some View {
         VStack(spacing: 0) {
             header
-            ScrollViewReader { proxy in
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 20) {
-                        identity { withAnimation { proxy.scrollTo("profile-friends", anchor: .top) } }
-                        if let error = game.socialError, !showEditor {
-                            Text(error).font(.system(size: 14)).foregroundColor(.white)
-                        }
-                        if newPlayer { firstQuiz }
-                        if !specialties.isEmpty { themes }
-                        friends.id("profile-friends")
-                        if !newPlayer { statistics }
+            ScrollView {
+                VStack(alignment: .leading, spacing: 18) {
+                    identity
+                    if let error = game.socialError, !showEditor {
+                        Text(error).font(.subheadline).foregroundColor(.white)
                     }
-                    .padding(.horizontal, 16).padding(.top, 4).padding(.bottom, 24)
-                    .frame(maxWidth: 600).frame(maxWidth: .infinity)
+                    if newPlayer { firstQuiz }
+                    if !specialties.isEmpty { themes }
+                    friends
+                    publications
+                    if !newPlayer { statistics }
                 }
-                .clipped()
-            }
+                .padding(.horizontal, 16).padding(.top, 4).padding(.bottom, 24)
+                .frame(maxWidth: 600).frame(maxWidth: .infinity)
+            }.clipped()
         }
         .background(Theme.pageBackground.ignoresSafeArea())
         .onAppear {
             #if DEBUG && STORE_CAPTURE
-            if StoreCaptureConfiguration.options?.screen == "profile-edit" { showEditor = true }
+            switch StoreCaptureConfiguration.options?.screen {
+            case "profile-edit": showEditor = true
+            case "profile-help": showProgressHelp = true
+            case "profile-friends": showAllFriends = true
+            default: break
+            }
             #endif
         }
         .refreshable { game.requestProfile() }
         .sheet(isPresented: $showSettings) { NativeSettingsView() }
         .sheet(isPresented: $showEditor) { NativeProfileEditor() }
+        .sheet(isPresented: $showProgressHelp) { progressHelp }
         .sheet(item: $friendCodeSheet) { NativeFriendCodeSheet(mode: $0) }
         .sheet(isPresented: Binding(get: { roomSheet != nil }, set: { if !$0 { roomSheet = nil } })) {
             if let roomSheet { NativeRoomSheet(category: nil, mode: roomSheet) }
@@ -75,7 +86,7 @@ struct NativeProfileView: View {
             Button {
                 if let onSettings { onSettings() } else { showSettings = true }
             } label: {
-                Image(systemName: "gearshape").font(.system(size: 20, weight: .medium))
+                Image(systemName: "gearshape").font(.title3)
                     .frame(width: 44, height: 44).contentShape(Rectangle())
             }.buttonStyle(.plain).accessibilityLabel(fr ? "Réglages" : "Settings")
         }
@@ -84,84 +95,87 @@ struct NativeProfileView: View {
         .frame(maxWidth: 600).frame(maxWidth: .infinity)
     }
 
-    private func identity(onFriends: @escaping () -> Void) -> some View {
-        VStack(alignment: .leading, spacing: 0) {
-            HStack(spacing: 16) {
-                NativePlayerPortrait(avatar: game.avatar, size: 68, cornerRadius: 17)
-                    .overlay(alignment: .bottomTrailing) {
-                        Button { showEditor = true } label: {
-                            Image(systemName: "pencil").font(.system(size: 14, weight: .semibold))
-                                .foregroundColor(Theme.accent)
-                                .frame(width: 32, height: 32).background(soft, in: Circle())
-                                .overlay(Circle().strokeBorder(Theme.paper, lineWidth: 2))
-                                .frame(width: 44, height: 44).contentShape(Rectangle())
-                        }
-                        .buttonStyle(.plain)
-                        .accessibilityLabel(fr ? "Modifier le profil" : "Edit profile")
-                        .offset(x: 10, y: 12)
-                    }
-                    .frame(width: 74, alignment: .leading)
+    private var identity: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 12) {
+                NativePlayerPortrait(avatar: game.avatar, size: 60, cornerRadius: 17)
                 VStack(alignment: .leading, spacing: 3) {
                     Text(fr ? "MON PROFIL" : "MY PROFILE")
-                        .font(.system(size: 10, weight: .heavy)).tracking(1.2).foregroundColor(Theme.muted)
-                    Text(game.name).font(.system(size: 30, weight: .bold)).tracking(-0.8)
+                        .font(.caption2.weight(.heavy)).tracking(1.2).foregroundColor(Theme.muted)
+                    Text(game.name).font(.title2.bold()).tracking(-0.6)
                         .fixedSize(horizontal: false, vertical: true).accessibilityAddTraits(.isHeader)
                 }
                 Spacer(minLength: 0)
+                Button { showEditor = true } label: {
+                    Label(fr ? "Modifier" : "Edit", systemImage: "pencil")
+                        .font(.caption.weight(.bold)).padding(.horizontal, 10).frame(minHeight: 44)
+                        .foregroundColor(Theme.accent).background(soft, in: RoundedRectangle(cornerRadius: 12))
+                }.buttonStyle(.plain).accessibilityLabel(fr ? "Modifier le profil" : "Edit profile")
             }
-            Rectangle().fill(line).frame(height: 1).padding(.top, 16).padding(.bottom, 13)
-            HStack(alignment: .firstTextBaseline) {
-                Text("\(fr ? "Niveau" : "Level") \(level)").font(.system(size: 18, weight: .bold))
-                Spacer()
-                if xpGoal > 0 {
-                    Text("\(xp.formatted()) / \(xpGoal.formatted()) XP")
-                        .font(.system(size: 12).monospacedDigit()).foregroundColor(Theme.muted)
+            Rectangle().fill(line).frame(height: 1)
+            VStack(alignment: .leading, spacing: 5) {
+                HStack(spacing: 6) {
+                    Text("\(fr ? "Niveau QuizzUp" : "QuizzUp level") \(level)").font(.subheadline.bold())
+                    Spacer(minLength: 0)
+                    Button { showProgressHelp = true } label: {
+                        Image(systemName: "info.circle").font(.body).frame(width: 44, height: 44)
+                    }.buttonStyle(.plain).foregroundColor(Theme.accent)
+                        .accessibilityLabel(fr ? "Comprendre les niveaux et l’XP" : "About levels and XP")
                 }
+                ProgressView(value: Double(xp), total: Double(max(1, xpGoal)))
+                    .tint(Theme.accent)
+                    .accessibilityLabel(fr ? "Progression vers le niveau \(level + 1)" : "Progress to level \(level + 1)")
+                    .accessibilityValue("\(Int(Double(xp) / Double(max(1, xpGoal)) * 100)) %")
+                Text(fr ? "Prochain niveau · \(level + 1)" : "Next level · \(level + 1)")
+                    .font(.caption).foregroundColor(Theme.muted)
             }
-            if xpGoal > 0 && !newPlayer {
-                GeometryReader { geometry in
-                    Capsule().fill(soft).overlay(alignment: .leading) {
-                        Capsule().fill(Theme.accent).frame(width: geometry.size.width * CGFloat(xp) / CGFloat(xpGoal))
-                    }
-                }
-                .frame(height: 8).padding(.top, 8).accessibilityHidden(true)
-                Text(fr ? "\((xpGoal - xp).formatted()) XP avant le niveau \(level + 1)" : "\((xpGoal - xp).formatted()) XP to level \(level + 1)")
-                    .font(.system(size: 12)).foregroundColor(Theme.muted).padding(.top, 6)
-            } else if !newPlayer {
-                Text(fr ? "Joue pour gagner de l’XP." : "Play to earn XP.")
-                    .font(.system(size: 12)).foregroundColor(Theme.muted).padding(.top, 6)
-            }
-            HStack(spacing: 14) {
-                Button(action: onFriends) {
-                    Label { Text(friendCountLabel).underline() } icon: { Image(systemName: "person.2") }
-                        .font(.system(size: 12, weight: .bold)).foregroundColor(Theme.accent)
-                        .frame(minHeight: 44)
-                }.buttonStyle(.plain)
-                if let count = game.stats?.following {
-                    Text(fr ? "\(count) \(count == 1 ? "joueur suivi" : "joueurs suivis")" : "\(count) \(count == 1 ? "player followed" : "players followed")")
-                        .font(.system(size: 12)).foregroundColor(Theme.muted)
-                }
-            }.padding(.bottom, -8)
         }
-        .padding(17).frame(maxWidth: .infinity, alignment: .leading)
+        .padding(16).frame(maxWidth: .infinity, alignment: .leading)
         .foregroundColor(Theme.ink)
         .background(Theme.paper, in: RoundedRectangle(cornerRadius: 21))
     }
 
-    private var friendCountLabel: String {
-        let count = game.friends.count
-        return fr ? "\(count) \(count == 1 ? "ami" : "amis")" : "\(count) \(count == 1 ? "friend" : "friends")"
+    private var progressHelp: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 22) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(fr ? "Niveau QuizzUp \(level)" : "QuizzUp level \(level)").font(.title2.bold())
+                        Text(fr ? "Ton niveau QuizzUp reflète l’XP gagnée dans l’ensemble de tes parties, tous thèmes confondus. Le score et les bonus de partie font progresser cette expérience." : "Your QuizzUp level reflects the XP earned across all your games and topics. Match scores and bonuses contribute to this experience.")
+                        if let stats = game.stats {
+                            Text(fr ? "\(stats.xp.formatted()) XP au total" : "\(stats.xp.formatted()) total XP").font(.headline)
+                        }
+                        if xpGoal > 0 {
+                            ProgressView(value: Double(xp), total: Double(xpGoal)).tint(Theme.accent)
+                            Text("\(xp.formatted()) / \(xpGoal.formatted()) XP").monospacedDigit()
+                            Text(fr ? "Encore \((xpGoal - xp).formatted()) XP pour atteindre le niveau \(level + 1)." : "\((xpGoal - xp).formatted()) XP to reach level \(level + 1).")
+                        }
+                    }
+                    Divider()
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(fr ? "Le niveau dans un thème" : "Your level in a topic").font(.headline)
+                        Text(fr ? "Chaque spécialité a son propre niveau. Il indique ta progression dans ce thème précis et se distingue de ton niveau QuizzUp global." : "Every specialty has its own level. It tracks your progress in that specific topic, separately from your overall QuizzUp level.")
+                    }
+                }.font(.body).padding(20).frame(maxWidth: 600).frame(maxWidth: .infinity)
+            }
+            .foregroundColor(Theme.ink).background(Theme.paper.ignoresSafeArea())
+            .navigationTitle(fr ? "Niveaux et expérience" : "Levels and experience")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar { ToolbarItem(placement: .navigationBarTrailing) {
+                Button(fr ? "Fermer" : "Close") { showProgressHelp = false }.frame(minHeight: 44)
+            } }
+        }.tint(Theme.accent)
     }
 
     private var firstQuiz: some View {
         VStack(alignment: .leading, spacing: 7) {
-            Text(fr ? "À toi de jouer" : "Your turn to play").font(.system(size: 18, weight: .bold))
+            Text(fr ? "À toi de jouer" : "Your turn to play").font(.headline)
             Text(fr ? "Joue ta première partie pour commencer ta collection de spécialités." : "Play your first game to start building your specialties.")
-                .font(.system(size: 13)).foregroundColor(Theme.muted)
+                .font(.subheadline).foregroundColor(Theme.muted)
             if let onDiscoverTopics {
                 Button(action: onDiscoverTopics) {
                     Label(fr ? "Choisir mon premier quiz" : "Choose my first quiz", systemImage: "bolt.fill")
-                        .font(.system(size: 13, weight: .bold)).padding(.horizontal, 11).frame(minHeight: 44)
+                        .font(.subheadline.bold()).padding(.horizontal, 11).frame(minHeight: 44)
                         .foregroundColor(.white).background(Theme.brand, in: RoundedRectangle(cornerRadius: 10))
                 }.buttonStyle(.plain).padding(.top, 4)
             }
@@ -171,80 +185,118 @@ struct NativeProfileView: View {
 
     private var themes: some View {
         VStack(alignment: .leading, spacing: 10) {
-            title(fr ? "Mes spécialités" : "My specialties")
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 8, alignment: .top), count: 3), alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: 3) {
+                title(fr ? "Mes spécialités" : "My specialties")
+                Text(fr ? "Ton niveau dans chaque quiz" : "Your level in each quiz").font(.caption).foregroundColor(.white.opacity(0.85))
+            }
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 8, alignment: .top), count: dynamicType.isAccessibilitySize ? 1 : 3), alignment: .leading, spacing: 8) {
                 ForEach(specialties.prefix(3)) { item in
                     NavigationLink(value: NativeBrowseRoute.topic(item.category)) {
                         VStack(alignment: .leading, spacing: 0) {
-                            NativeTopicArt(category: item.category, ratio: 1.65)
+                            NativeTopicArt(category: item.category, ratio: 1.8)
                             VStack(alignment: .leading, spacing: 5) {
                                 Text(NativeCatalog.title(for: item.category, lang: game.lang))
-                                    .font(.system(size: 12, weight: .bold)).lineLimit(2)
+                                    .font(.caption.weight(.bold)).lineLimit(2, reservesSpace: true)
                                 Text("\(fr ? "Niveau" : "Level") \(item.topic.level)")
-                                    .font(.system(size: 11, weight: .semibold)).foregroundColor(Theme.accent)
-                            }
-                            .padding(8).frame(maxWidth: .infinity, minHeight: 52, alignment: .topLeading)
+                                    .font(.caption.weight(.semibold)).foregroundColor(Theme.accent)
+                                    .accessibilityLabel(fr ? "Niveau dans ce thème \(item.topic.level)" : "Level in this topic \(item.topic.level)")
+                            }.padding(9).frame(maxWidth: .infinity, alignment: .topLeading)
                         }.foregroundColor(Theme.ink).background(Theme.paper)
                             .clipShape(RoundedRectangle(cornerRadius: 12))
                     }.buttonStyle(.plain)
                 }
             }
             if specialties.count > 3 {
-                DisclosureGroup(fr ? "Mes autres thèmes (\(specialties.count - 3))" : "My other topics (\(specialties.count - 3))") {
+                DisclosureGroup {
                     ForEach(specialties.dropFirst(3)) { item in
                         NavigationLink(value: NativeBrowseRoute.topic(item.category)) {
                             HStack {
-                                Text(NativeCatalog.title(for: item.category, lang: game.lang)).font(.system(size: 14, weight: .semibold))
+                                Text(NativeCatalog.title(for: item.category, lang: game.lang)).font(.subheadline.weight(.semibold))
                                 Spacer()
-                                Text("\(fr ? "Niveau" : "Level") \(item.topic.level)").font(.system(size: 12))
+                                Text("\(fr ? "Niveau du thème" : "Topic level") \(item.topic.level)").font(.caption)
                             }.padding(.horizontal, 12).frame(minHeight: 44)
                                 .foregroundColor(Theme.ink).background(Theme.paper, in: RoundedRectangle(cornerRadius: 10))
                         }.buttonStyle(.plain)
                     }
-                }.font(.system(size: 14, weight: .semibold)).foregroundColor(.white).tint(.white)
+                } label: {
+                    Text(fr ? "Mes autres thèmes (\(specialties.count - 3))" : "My other topics (\(specialties.count - 3))")
+                        .frame(minHeight: 44)
+                }.font(.subheadline.weight(.semibold)).foregroundColor(.white).tint(.white)
             }
         }
     }
 
     private var friends: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack {
-                Text(fr ? "MES AMIS" : "MY FRIENDS").font(.system(size: 11, weight: .heavy)).tracking(1.2)
-                    .accessibilityAddTraits(.isHeader)
-                Spacer()
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 8) {
+                Text(fr ? "Mes amis" : "My friends").font(.headline).accessibilityAddTraits(.isHeader)
+                Spacer(minLength: 0)
+                Button { friendCodeSheet = .enter } label: {
+                    Label(fr ? "Ajouter un ami" : "Add a friend", systemImage: "plus")
+                        .font(.caption.weight(.bold)).frame(minHeight: 44)
+                }.buttonStyle(.plain).foregroundColor(Theme.accent)
                 Menu {
                     Button(fr ? "Ouvrir les messages" : "Open messages", action: onOpenMessages)
                     Button(fr ? "Partager mon code ami" : "Share my friend code") { friendCodeSheet = .share }
-                    Button(fr ? "Ajouter par code ami" : "Add by friend code") { friendCodeSheet = .enter }
                 } label: {
-                    Image(systemName: "ellipsis").font(.system(size: 16, weight: .semibold))
-                        .frame(width: 44, height: 36).contentShape(Rectangle())
+                    Image(systemName: "ellipsis").frame(width: 44, height: 44)
                 }.accessibilityLabel(fr ? "Actions pour mes amis" : "Friend actions")
             }
             if game.friends.isEmpty {
-                Text(fr ? "Tes amis apparaîtront ici" : "Your friends will appear here")
-                    .font(.system(size: 13, weight: .bold))
-                Text(fr ? "Invite un ami pour votre premier duel." : "Invite a friend for your first duel together.")
-                    .font(.system(size: 13)).foregroundColor(Theme.muted).fixedSize(horizontal: false, vertical: true)
+                Text(fr ? "Tes amis apparaîtront ici." : "Your friends will appear here.")
+                    .font(.subheadline).foregroundColor(Theme.muted)
             } else {
-                ForEach(game.friends) { friend in
-                    NavigationLink(value: NativeBrowseRoute.message(friend, preferredCategory: nil)) {
-                        HStack(spacing: 10) {
-                            NativePlayerPortrait(avatar: friend.avatar, size: 36)
-                            Text(friend.name).font(.system(size: 14, weight: .semibold))
-                            Spacer()
-                            Image(systemName: "bubble.left").font(.system(size: 14)).foregroundColor(Theme.accent)
-                        }.padding(8).background(soft, in: RoundedRectangle(cornerRadius: 10))
-                    }.buttonStyle(.plain)
+                HStack(alignment: .top, spacing: 8) {
+                    ForEach(game.friends.prefix(4)) { friend in
+                        NavigationLink(value: NativeBrowseRoute.message(friend, preferredCategory: nil)) {
+                            VStack(spacing: 5) {
+                                NativePlayerPortrait(avatar: friend.avatar, size: 44)
+                                Text(friend.name).font(.caption).lineLimit(1)
+                            }.frame(maxWidth: .infinity, minHeight: 66)
+                        }.buttonStyle(.plain).accessibilityLabel(fr ? "Écrire à \(friend.name)" : "Message \(friend.name)")
+                    }
                 }
+                DisclosureGroup(isExpanded: $showAllFriends) {
+                    ForEach(game.friends) { friend in
+                        NavigationLink(value: NativeBrowseRoute.message(friend, preferredCategory: nil)) {
+                            HStack(spacing: 10) {
+                                NativePlayerPortrait(avatar: friend.avatar, size: 36)
+                                Text(friend.name).font(.subheadline.weight(.semibold))
+                                Spacer(minLength: 0)
+                                Image(systemName: "bubble.left").foregroundColor(Theme.accent)
+                            }.padding(8).frame(minHeight: 44).background(soft, in: RoundedRectangle(cornerRadius: 10))
+                        }.buttonStyle(.plain)
+                    }
+                } label: {
+                    Text(fr ? "Voir tous (\(game.friends.count))" : "See all (\(game.friends.count))")
+                        .font(.subheadline.weight(.semibold)).frame(minHeight: 44)
+                }.tint(Theme.accent)
+            }
+            if !game.friendRequests.isEmpty {
+                Button(action: onOpenMessages) {
+                    Label(fr ? "Demandes d’amis (\(game.friendRequests.count))" : "Friend requests (\(game.friendRequests.count))", systemImage: "person.badge.plus")
+                        .font(.subheadline.weight(.semibold)).frame(minHeight: 44)
+                }.buttonStyle(.plain).foregroundColor(Theme.accent)
             }
             NativeFriendInviteButtons(
                 onInvite: { if let onInvite { onInvite() } else { roomSheet = .create } },
                 onJoin: { if let onJoin { onJoin() } else { roomSheet = .join } }
-            ).padding(.top, 4)
+            )
         }
-        .padding(13).frame(maxWidth: .infinity, alignment: .leading)
+        .padding(14).frame(maxWidth: .infinity, alignment: .leading)
         .foregroundColor(Theme.ink).background(Theme.paper, in: RoundedRectangle(cornerRadius: 16))
+    }
+
+    private var publications: some View {
+        NavigationLink(value: NativeBrowseRoute.myPosts) {
+            HStack(spacing: 10) {
+                Image(systemName: "text.bubble").foregroundColor(Theme.accent)
+                Text(fr ? "Mes publications" : "My posts").font(.subheadline.bold())
+                Spacer(minLength: 0)
+                Image(systemName: "chevron.right").font(.caption.weight(.bold)).foregroundColor(Theme.muted)
+            }.padding(.horizontal, 14).frame(minHeight: 54)
+                .foregroundColor(Theme.ink).background(Theme.paper, in: RoundedRectangle(cornerRadius: 14))
+        }.buttonStyle(.plain)
     }
 
     private var statistics: some View {
@@ -257,24 +309,20 @@ struct NativeProfileView: View {
                     statistic(stats.wins, title: fr ? "Victoires" : "Wins")
                     Rectangle().fill(line).frame(width: 1)
                     statistic(stats.streak, title: fr ? "Série" : "Streak")
-                }.frame(height: 70).background(Theme.paper, in: RoundedRectangle(cornerRadius: 14))
-            } else {
-                Text(fr ? "Tes résultats apparaîtront après ta première partie." : "Your results will appear after your first game.")
-                    .font(.system(size: 13)).foregroundColor(.white)
+                }.fixedSize(horizontal: false, vertical: true).background(Theme.paper, in: RoundedRectangle(cornerRadius: 14))
             }
         }
     }
 
     private func statistic(_ value: Int, title: String) -> some View {
         VStack(spacing: 4) {
-            Text(value.formatted()).font(.system(size: 23, weight: .bold)).foregroundColor(Theme.ink)
-            Text(title).font(.system(size: 12)).foregroundColor(Theme.muted)
-        }.frame(maxWidth: .infinity, maxHeight: .infinity).accessibilityElement(children: .combine)
+            Text(value.formatted()).font(.title2.bold()).foregroundColor(Theme.ink)
+            Text(title).font(.caption).foregroundColor(Theme.muted)
+        }.padding(.vertical, 12).frame(maxWidth: .infinity).accessibilityElement(children: .combine)
     }
 
     private func title(_ text: String) -> some View {
-        Text(text).font(.system(size: 18, weight: .bold)).foregroundColor(.white)
-            .accessibilityAddTraits(.isHeader)
+        Text(text).font(.headline).foregroundColor(.white).accessibilityAddTraits(.isHeader)
     }
 }
 

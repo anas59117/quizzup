@@ -29,6 +29,7 @@ enum StoreCaptureConfiguration {
             "question-muted", "community-suggestion", "community-discussion", "community-empty",
             "thread", "play", "join",
             "room", "profile-edit", "settings-live",
+            "profile-help", "profile-friends", "personal-posts", "result-level-up",
         ]
         guard index + 1 < args.count,
               screens.contains(args[index + 1]),
@@ -71,14 +72,21 @@ enum StoreCaptureConfiguration {
         }
         game.followedThemes = ["ligue_champions", "rap_fr", "harry_potter", "minecraft"]
         game.topicProgress = [.init(key: "ligue_champions", level: 8), .init(key: "rap_fr", level: 5), .init(key: "harry_potter", level: 3), .init(key: "minecraft", level: 2)]
-        game.stats = PlayerStats(games: 27, wins: 16, streak: 2, xp: 1620, level: 4, xpIntoLevel: 420, xpForLevel: 800)
-        game.friends = [NativeFriend(id: "store-demo-camille", name: "Camille", avatar: "owl", online: true), NativeFriend(id: "store-demo-sam", name: "Sam", avatar: "astronaut", online: false)]
+        game.stats = PlayerStats(games: 27, wins: 16, streak: 2, xp: 4860, level: 4, xpIntoLevel: 1260, xpForLevel: 2400)
+        game.friends = [
+            NativeFriend(id: "store-demo-camille", name: "Camille", avatar: "owl", online: true),
+            NativeFriend(id: "store-demo-sam", name: "Sam", avatar: "astronaut", online: false),
+            NativeFriend(id: "store-demo-lou", name: "Lou", avatar: "cat", online: false),
+            NativeFriend(id: "store-demo-noa", name: "Noa", avatar: "brain", online: true),
+            NativeFriend(id: "store-demo-marie", name: "Marie", avatar: "robot", online: false)
+        ]
         let message = NativeMessage(id: "store-message", fromId: "store-demo-camille", toId: "store-demo-alex", kind: "text", text: options.language == "fr" ? "On se fait une revanche ?" : "Ready for a rematch?", createdAt: 1793920000000)
         game.conversations = [NativeConversation(peer: game.friends[0], lastMessage: message, unread: 1)]
         if options.screen == "thread" {
             game.messages["store-demo-camille"] = [message, NativeMessage(id: "store-reply", fromId: "store-demo-alex", toId: "store-demo-camille", kind: "text", text: options.language == "fr" ? "Avec plaisir, on joue sur quel thème ?" : "Absolutely! Which topic?", createdAt: 1793920060000)]
         }
-        if options.screen.hasPrefix("community"), options.screen != "community-empty" {
+        if options.screen.hasPrefix("community") || options.screen == "personal-posts", options.screen != "community-empty" {
+            let personal = options.screen == "personal-posts"
             // Visual test fixtures only: this code is excluded from Release and never publishes.
             let origin = "https://\(GameSocket.frontendHost)"
             let spider = "/images/covers/approved-v2/spider_man-640.webp"
@@ -87,9 +95,10 @@ enum StoreCaptureConfiguration {
             let first = NativeCommunityReply(id: "store-comment-1", authorId: "store-fan-1", authorName: "WebHeadClub", authorAvatar: origin + spider, text: options.language == "fr" ? "Andrew méritait un troisième film. Son retour était incroyable." : "Andrew deserved a third film. His return was incredible.", createdAt: now - 480_000, reactions: 4)
             let answer = NativeCommunityReply(id: "store-comment-2", authorId: "store-fan-2", authorName: "AvengersHQ", authorAvatar: origin + marvel, text: options.language == "fr" ? "La scène dans No Way Home m’a tellement marqué !" : "That scene in No Way Home was unforgettable!", createdAt: now - 360_000, parentId: first.id, reactions: 2, reacted: true)
             let third = NativeCommunityReply(id: "store-comment-3", authorId: "store-fan-3", authorName: "YamalFan", authorAvatar: origin + "/images/players/lamine_yamal.jpg", text: options.language == "fr" ? "Tobey pour l’émotion. La scène du train reste imbattable." : "Tobey for the emotion. The train scene is unbeatable.", createdAt: now - 120_000, reactions: 3)
-            let post = NativeCommunityPost(id: "store-post", authorId: nil, authorName: "QuizzUp", authorAvatar: "robot", authorFollowed: false, category: "spider_man", text: options.language == "fr" ? "Votre Spider-Man préféré ? Tobey, Andrew ou Tom ? On ouvre le débat : lequel vous a le plus marqué, et pourquoi ?" : "Your favourite Spider-Man? Tobey, Andrew or Tom? Which one left the biggest impression, and why?", mediaUrl: nil, question: nil, reactions: 12, reacted: false, commentsCount: 3, createdAt: now - 720_000, isOfficial: true, lastComment: third)
+            let post = NativeCommunityPost(id: "store-post", authorId: personal ? game.clientId : nil, authorName: personal ? game.name : "QuizzUp", authorAvatar: personal ? game.avatar : "robot", authorFollowed: false, category: "spider_man", text: options.language == "fr" ? "Votre Spider-Man préféré ? Tobey, Andrew ou Tom ? On ouvre le débat : lequel vous a le plus marqué, et pourquoi ?" : "Your favourite Spider-Man? Tobey, Andrew or Tom? Which one left the biggest impression, and why?", mediaUrl: nil, question: nil, reactions: 12, reacted: false, commentsCount: 3, createdAt: now - 720_000, isOfficial: !personal, lastComment: third)
             let next = NativeCommunityPost(id: "store-post-2", authorId: nil, authorName: "QuizzUp", authorAvatar: "robot", authorFollowed: false, category: "marvel", text: options.language == "fr" ? "Infinity War ou Endgame ? On ouvre le débat : lequel vous a le plus marqué, et pourquoi ?" : "Infinity War or Endgame? Which one left the biggest impression, and why?", mediaUrl: nil, question: nil, reactions: 0, reacted: false, commentsCount: 0, createdAt: now - 2_280_000, isOfficial: true)
-            game.community.posts = [post, next]
+            if personal { game.community.filter = .init(mine: true) }
+            game.community.posts = personal ? [post] : [post, next]
             game.community.replies[post.id] = [first, answer, third]
             game.community.loadedReplyPosts.insert(post.id)
             game.community.latestPost = post
@@ -99,10 +108,10 @@ enum StoreCaptureConfiguration {
             game.followedThemes = []
             game.friends = []
             game.conversations = []
-            game.stats = PlayerStats(games: 0, wins: 0, streak: 0, xp: 0, level: 1, xpIntoLevel: 0, xpForLevel: 200)
+            game.stats = PlayerStats(games: 0, wins: 0, streak: 0, xp: 0, level: 1, xpIntoLevel: 0, xpForLevel: 600)
         }
         game.opponents = [Opponent(id: "store-demo-camille", name: "Camille", avatar: "owl", score: 28)]
-        game.score = options.screen == "result" ? 118 : 34
+        game.score = ["result", "result-level-up"].contains(options.screen) ? 118 : 34
         game.totalRounds = 6
         game.timeLeft = 8
         game.answersVisible = true
@@ -128,6 +137,7 @@ enum StoreCaptureConfiguration {
             )
             if let source, let url = GameSocket.absoluteImageURL(source) { NativeImageCache.shared.prefetch([url]) }
         }
+        let levelUp = options.screen == "result-level-up"
         game.result = GameEnd(
             finalScore: 118, won: true, tie: false,
             others: [OpponentFinal(id: "store-demo-camille", name: "Camille", avatar: "owl", score: 96)],
@@ -137,7 +147,12 @@ enum StoreCaptureConfiguration {
             ],
             reason: "complete", coins: 50, xp: 258,
             xpBreakdown: XpBreakdown(matchScore: 118, finishBonus: 40, winBonus: 100, xpTotal: 258),
-            stats: PlayerStats(games: 27, wins: 16, streak: 2, xp: 1620, level: 4, xpIntoLevel: 420, xpForLevel: 800)
+            stats: levelUp
+                ? PlayerStats(games: 27, wins: 16, streak: 2, xp: 6090, level: 5, xpIntoLevel: 90, xpForLevel: 3000)
+                : PlayerStats(games: 27, wins: 16, streak: 2, xp: 4860, level: 4, xpIntoLevel: 1260, xpForLevel: 2400),
+            progressionBefore: levelUp
+                ? NativeProgressionSnapshot(level: 4, xpIntoLevel: 2232, xpForLevel: 2400)
+                : NativeProgressionSnapshot(level: 4, xpIntoLevel: 1002, xpForLevel: 2400)
         )
         switch options.screen {
         case "join": game.stage = .join
@@ -145,7 +160,7 @@ enum StoreCaptureConfiguration {
         case "waiting": game.stage = .waiting
         case "faceoff": game.stage = .roundIntro
         case "question", "question-photo", "question-muted", "answer": game.stage = .question
-        case "result": game.stage = .finished
+        case "result", "result-level-up": game.stage = .finished
         default: game.stage = .home
         }
     }
@@ -153,7 +168,7 @@ enum StoreCaptureConfiguration {
     @MainActor
     static func markReady() {
         guard let options else { return }
-        let delay = options.screen == "settings-live" ? 4.0 : options.screen.hasPrefix("community") || ["home-return", "question-photo", "auth-email-keyboard"].contains(options.screen) ? 3.0 : 1.0
+        let delay = options.screen == "settings-live" ? 4.0 : options.screen.hasPrefix("community") || ["home-return", "question-photo", "auth-email-keyboard", "personal-posts", "profile-help", "profile-friends", "result", "result-level-up"].contains(options.screen) ? 3.0 : 1.0
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             let receipt: [String: String] = ["screen": options.screen, "language": options.language, "appearance": options.appearance.rawValue, "storedAppearance": NativeAppearance.stored(UserDefaults.standard.string(forKey: NativeAppearance.storageKey)).rawValue]

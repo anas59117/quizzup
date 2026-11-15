@@ -147,7 +147,7 @@ extension GameSocket {
         community.error = nil
         guard !StoreCaptureConfiguration.enabled else { return }
         guard connected else { requestProfile(); return }
-        var request: [String: Any] = ["type": "feed_list", "scope": filter.topicsOnly ? "topics" : filter.following ? "following" : "all"]
+        var request: [String: Any] = ["type": "feed_list", "scope": filter.scope]
         if let category = filter.category { request["category"] = category }
         if filter.topicsOnly { request["categories"] = filter.categories }
         community.loading = send(request)
@@ -264,7 +264,7 @@ extension GameSocket {
                 return true
             }
             let filter = NativeCommunityFilter(following: object["scope"] as? String == "following", category: object["category"] as? String,
-                                               topicsOnly: object["scope"] as? String == "topics", categories: object["categories"] as? [String] ?? [])
+                                               topicsOnly: object["scope"] as? String == "topics", categories: object["categories"] as? [String] ?? [], mine: object["scope"] as? String == "mine")
             community.receiveFeed(posts, filter: filter)
         case "post_created":
             guard let post = decode(object["post"], as: NativeCommunityPost.self),
@@ -274,8 +274,7 @@ extension GameSocket {
                 community.publishing = false
             }
             community.latestPost = post
-            let inTopics = !community.filter.topicsOnly || post.category.map { community.filter.categories.contains($0) } == true
-            if !community.filter.following, inTopics, community.filter.category == nil || community.filter.category == post.category,
+            if community.filter.includesLivePost(post, clientID: clientId),
                !community.posts.contains(where: { $0.id == post.id }) {
                 community.posts.insert(post, at: 0)
             }

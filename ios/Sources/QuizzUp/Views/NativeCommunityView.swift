@@ -8,6 +8,7 @@ struct NativeCommunityView: View {
     let category: Category?
     let onClose: () -> Void
     let onSettings: () -> Void
+    var mine = false
     @State private var scope = 0
     @State private var topic: String?
     @State private var composer = false
@@ -20,7 +21,7 @@ struct NativeCommunityView: View {
             .filter { valid.contains($0) }.sorted()
     }
     private var filter: NativeCommunityFilter {
-        .init(following: scope == 1, category: topic, topicsOnly: scope == 2, categories: scope == 2 ? personalKeys : [])
+        .init(following: scope == 1, category: topic, topicsOnly: scope == 2, categories: scope == 2 ? personalKeys : [], mine: mine)
     }
     private var topics: [Category] {
         let all = scope == 2 ? game.categories.filter { personalKeys.contains($0.key) } : game.categories
@@ -31,7 +32,7 @@ struct NativeCommunityView: View {
     var body: some View {
         VStack(spacing: 0) {
             header
-            tabs
+            if !mine { tabs }
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
                     topicChips.padding(.vertical, 8)
@@ -88,7 +89,7 @@ struct NativeCommunityView: View {
                     .accessibilityLabel(fr ? "Réglages" : "Settings")
             }
             HStack(alignment: .center, spacing: 8) {
-                Text(fr ? "Communauté" : "Community").font(.title2.bold()).tracking(-0.6)
+                Text(mine ? (fr ? "Mes publications" : "My posts") : (fr ? "Communauté" : "Community")).font(.title2.bold()).tracking(-0.6)
                     .accessibilityAddTraits(.isHeader).fixedSize(horizontal: false, vertical: true)
                 Spacer(minLength: 0)
                 Button { beginPost() } label: {
@@ -155,9 +156,9 @@ struct NativeCommunityView: View {
 
     private var emptyFeed: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(scope == 2 && personalKeys.isEmpty ? (fr ? "Tes thèmes, tes discussions." : "Your topics, your conversations.") : (fr ? "La discussion commence avec toi." : "The conversation starts with you."))
+            Text(mine ? (fr ? "Ta première publication t’attend." : "Your first post starts here.") : scope == 2 && personalKeys.isEmpty ? (fr ? "Tes thèmes, tes discussions." : "Your topics, your conversations.") : (fr ? "La discussion commence avec toi." : "The conversation starts with you."))
                 .font(.headline)
-            Text(scope == 2 && personalKeys.isEmpty ? (fr ? "Joue ou suis un thème pour retrouver ses publications ici." : "Play or follow a topic to see its posts here.") : (fr ? "Aucune publication pour ce filtre. Partage une question, une photo ou un mini-quiz." : "No posts for this filter yet. Share a question, photo or mini quiz."))
+            Text(mine ? (fr ? "Retrouve ici tes publications et leurs commentaires. Partage une question ou un mini-quiz avec la communauté." : "Your posts and their comments live here. Share a question or mini quiz with the community.") : scope == 2 && personalKeys.isEmpty ? (fr ? "Joue ou suis un thème pour retrouver ses publications ici." : "Play or follow a topic to see its posts here.") : (fr ? "Aucune publication pour ce filtre. Partage une question, une photo ou un mini-quiz." : "No posts for this filter yet. Share a question, photo or mini quiz."))
                 .font(.subheadline).foregroundColor(Theme.muted)
             Button { beginPost() } label: { Label(fr ? "Lancer la discussion" : "Start a conversation", systemImage: "square.and.pencil").font(.subheadline.bold()).frame(minHeight: 44) }
         }.padding(20).frame(maxWidth: .infinity, alignment: .leading)

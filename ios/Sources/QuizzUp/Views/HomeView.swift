@@ -25,6 +25,7 @@ private enum BrowseTab {
 enum NativeBrowseRoute: Hashable {
     case topic(Category)
     case community(Category?)
+    case myPosts
     case message(NativeFriend, preferredCategory: Category?)
 }
 
@@ -75,7 +76,8 @@ struct HomeView: View {
             switch StoreCaptureConfiguration.options?.screen {
             case "themes", "family": tab = .themes
             case "messages", "messages-empty": tab = .messages
-            case "profile", "profile-empty", "profile-edit": tab = .profile
+            case "profile", "profile-empty", "profile-edit", "profile-help", "profile-friends": tab = .profile
+            case "personal-posts": tab = .profile; path = [.myPosts]
             case "community", "community-compose", "community-suggestion", "community-discussion", "community-empty": path = [.community(nil)]
             case "settings", "settings-live": showSettings = true
             case "room": roomMode = .join; showRoom = true
@@ -146,6 +148,9 @@ struct HomeView: View {
                     )
                 case let .community(category):
                     NativeCommunityView(category: category, onClose: closeRoute, onSettings: { showSettings = true })
+                        .toolbar(.hidden, for: .navigationBar)
+                case .myPosts:
+                    NativeCommunityView(category: nil, onClose: closeRoute, onSettings: { showSettings = true }, mine: true)
                         .toolbar(.hidden, for: .navigationBar)
                 case let .message(friend, preferredCategory):
                     NativeMessageThread(friend: friend, preferredCategory: preferredCategory)
