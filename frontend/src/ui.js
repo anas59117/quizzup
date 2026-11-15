@@ -803,7 +803,7 @@ export const CategoryTile = memo(function CategoryTile({ c, onClick, disabled })
 // opens onto every specific quiz inside it, rather than listing all quizzes
 // flat on one screen.
 export const FamilyTile = memo(function FamilyTile({ fam, label, desc, count, onClick }) {
-  const symbols = { sport: 'trophy', football: 'football', cinema: 'cinema', series: 'television', music: 'music', sagas: 'orbit', manga: 'book', gaming: 'gamepad', culture: 'globe' };
+  const symbols = { sport: 'trophy', football: 'football', cinema: 'cinema', series: 'television', music: 'music', sagas: 'orbit', manga: 'book', gaming: 'gamepad', culture: 'globe', qui_suis_je: 'search' };
   return (
     <button className="family-tile" data-family={fam.key} onClick={onClick}>
       <span className={`family-icon ${fam.grad}`}><Icon name={symbols[fam.key]} size={28} /></span>
