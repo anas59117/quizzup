@@ -318,7 +318,7 @@ describe('topic cover catalog', () => {
 
   test('every family fallback remains available for future explicit use', () => {
     expect(Object.keys(FAMILY_TOPIC_COVERS).sort()).toEqual(
-      ['cinema', 'culture', 'football', 'gaming', 'manga', 'music', 'sagas', 'series', 'sport']
+      ['cinema', 'culture', 'football', 'gaming', 'manga', 'music', 'qui_suis_je', 'sagas', 'series', 'sport']
     );
   });
 
