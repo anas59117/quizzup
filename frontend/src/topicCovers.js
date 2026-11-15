@@ -38,6 +38,7 @@ export const FAMILY_TOPIC_COVERS = {
   culture: cover('OrteliusWorldMap.jpeg', 'center 42%'),
   gaming: cover('ArcadeGames.jpg', 'center 45%'),
   manga: cover('Bookshelves with manga.jpg', 'center 44%'),
+  qui_suis_je: cover('Question mark (black on white).svg', 'center 45%'),
 };
 
 // Every entry is reviewed for immediate topic recognition at thumbnail size.
@@ -452,6 +453,39 @@ export const TOPIC_COVERS = {
   arcane: remoteCover("https://static.tvmaze.com/uploads/images/original_untouched/536/1340287.jpg", "https://www.tvmaze.com/shows/55138/arcane-league-of-legends", 'center 28%'),
   bridgerton: remoteCover("https://static.tvmaze.com/uploads/images/original_untouched/614/1535959.jpg", "https://www.tvmaze.com/shows/42966/bridgerton", 'center 28%'),
   gossip_girl: remoteCover("https://static.tvmaze.com/uploads/images/original_untouched/499/1247570.jpg", "https://www.tvmaze.com/shows/567/gossip-girl", 'center 28%'),
+
+  // ── Qui suis-je ? (riddle / mystery-clue quizzes) ──────────────────────
+  qui_suis_je_acteurs: cover('Leonardo DiCaprio 2002.jpg', 'center 22%'),
+  qui_suis_je_actrices: cover('Angelina Jolie by Gage Skidmore 2.jpg', 'center 18%'),
+  qui_suis_je_boissons: cover('A bottle of Coca-Cola.jpg', 'center 45%'),
+  qui_suis_je_boxe_ufc: cover('Floyd Mayweather, Jr. vs. Manny Pacquiao.jpg', 'center 30%'),
+  qui_suis_je_disney: cover('SleepingBeautyCastle.JPG', 'center 42%'),
+  qui_suis_je_f1: cover('Lewis Hamilton 2016 Malaysia 2.jpg', 'center 22%'),
+  qui_suis_je_fastfood: cover("Burger King Double Cheeseburger Meal (25074117756).jpg", 'center 50%'),
+  qui_suis_je_foot: cover('Erling Haaland 2023 (cropped-v2).jpg', 'center 22%'),
+  qui_suis_je_groupes: cover('Coldplay in the Philippines on 20 January 2024 01.jpg', 'center 32%'),
+  qui_suis_je_humoristes: cover('Charlie Chaplin.jpg', 'center 20%'),
+  qui_suis_je_influenceurs: cover("Social Media App Icons On The Screen of A Smartphone.jpg", 'center 50%'),
+  qui_suis_je_itgirls: cover('Zendaya at Challengers premiere.jpg', 'center 22%'),
+  qui_suis_je_kpop: cover('BTS at the Billboard Music Awards 21 May 2018.jpg', 'center 28%'),
+  qui_suis_je_mascottes: cover('Pikachu Parade (14905092432).jpg', 'center 34%'),
+  qui_suis_je_memes: cover('Grumpy Cat by Gage Skidmore.jpg', 'center 30%'),
+  qui_suis_je_nba: cover("Michael Jordan's game-worn UNC jersey.jpg", 'center 35%'),
+  qui_suis_je_origine_plats: cover('Sushi platter.jpg', 'center 45%'),
+  qui_suis_je_pop_rock_anglo: cover('Queen - Freddie Mercury (Somebody to Love).jpg', 'center 22%'),
+  qui_suis_je_pop_stars: cover('Madonna Rebel Heart Tour 2015 - Stockholm (23051472299) (cropped 2).jpg', 'center 22%'),
+  qui_suis_je_rap_emergent: cover('Tyler, the Creator at Austin City Limits 2025 (3).jpg', 'center 22%'),
+  qui_suis_je_rap_fr: cover('Festival des Vieilles Charrues 2022 - Ninho - 041.jpg', 'center 28%'),
+  qui_suis_je_rap_us: cover('Snoop Dogg, 2023 (cropped).jpg', 'center 22%'),
+  qui_suis_je_sauces: cover('Homemade harissa.jpg', 'center 45%'),
+  qui_suis_je_series_ado: cover('Central Perk set.jpg', 'center 46%'),
+  qui_suis_je_snacks: cover('M&Ms store NYC.jpg', 'center 45%'),
+  qui_suis_je_superheros: cover("NYCC 2019 Cosplay of the Avengers 01.jpg", 'center 38%'),
+  qui_suis_je_telerealite: cover('VidCon 2017 - Crowd (35340773004).jpg', 'center 40%'),
+  qui_suis_je_tiktok: cover("TikTok Logo (2022).svg", 'center 45%'),
+  qui_suis_je_variete: cover('Edith Piaf914.jpg', 'center 22%'),
+  qui_suis_je_wwe: cover("Hulk Hogan WrestleMania 37 (cropped).jpg", 'center 28%'),
+  qui_suis_je_youtubeurs: cover("YouTube full-color icon (2017).svg", 'center 45%'),
 };
 
 export function getTopicCover(category) {
