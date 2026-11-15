@@ -87,9 +87,9 @@ function CommunityPost({ post, feed, lang, onOpenPlayer, onPlayTopic, onTopic, o
         )}
       </header>
       <div className="community-post-meta">
-        <button className="community-theme-link" type="button" onClick={() => onTopic(post.category)}>
+        {post.category && <button className="community-theme-link" type="button" onClick={() => onTopic(post.category)}>
           <Icon name="themes" /> {titleFor(post.category, lang)}
-        </button>
+        </button>}
         <span className="community-post-type">{post.question ? t('miniQuiz') : t('discussionLabel')}</span>
       </div>
       <p className="feed-post-text">{post.text}</p>
