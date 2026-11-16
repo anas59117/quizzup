@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var game: GameSocket
+    @EnvironmentObject private var auth: AuthManager
     @EnvironmentObject private var audio: NativeAudioManager
     @Environment(\.scenePhase) private var scenePhase
     @AppStorage(NativeAppearance.storageKey) private var appearance = NativeAppearance.defaultValue.rawValue
@@ -57,6 +58,9 @@ struct ContentView: View {
             guard let feedback else { return }
             audio.setContext(musicCue)
             audio.playFeedback(feedback)
+        }
+        .onChange(of: auth.deletionPending) { pending in
+            if pending { game.resetForSignOut() }
         }
         .onChange(of: scenePhase) { phase in
             audio.setForeground(phase == .active)

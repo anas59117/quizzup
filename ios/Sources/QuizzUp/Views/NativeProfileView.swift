@@ -508,7 +508,6 @@ struct NativeSettingsView: View {
     @EnvironmentObject var game: GameSocket
     @EnvironmentObject var auth: AuthManager
     @Environment(\.dismiss) private var dismiss
-    @State private var showDeleteConfirm = false
     private var fr: Bool { game.lang == "fr" }
     var body: some View {
         NavigationStack {
@@ -543,9 +542,7 @@ struct NativeSettingsView: View {
                         Label(fr ? "Se déconnecter" : "Sign out", systemImage: "rectangle.portrait.and.arrow.right")
                             .frame(minHeight: 36)
                     }.foregroundColor(Theme.accent)
-                    Button(role: .destructive) { showDeleteConfirm = true } label: {
-                        Label(game.t("deleteAccount"), systemImage: "trash").frame(minHeight: 36)
-                    }.disabled(auth.isDeletingAccount)
+                    NativeDeleteAccountButton(onDeleted: { dismiss() })
                     if let error = auth.deleteError {
                         Text(error).font(.subheadline).foregroundColor(Theme.accent)
                             .accessibilityLabel("\(fr ? "Erreur" : "Error"): \(error)")
@@ -571,20 +568,6 @@ struct NativeSettingsView: View {
                     Theme.paper.opacity(0.85).ignoresSafeArea()
                         .overlay(ProgressView(game.t("deleteAccount")).tint(Theme.accent))
                 }
-            }
-            .alert(game.t("deleteAccountConfirmTitle"), isPresented: $showDeleteConfirm) {
-                Button(game.t("cancel"), role: .cancel) {}
-                Button(game.t("deleteAccountConfirm"), role: .destructive) {
-                    Task {
-                        await auth.deleteAccount()
-                        if auth.user == nil {
-                            dismiss()
-                            game.resetForSignOut()
-                        }
-                    }
-                }
-            } message: {
-                Text(game.t("deleteAccountConfirmMessage"))
             }
         }
         .foregroundColor(Theme.ink).tint(Theme.accent)

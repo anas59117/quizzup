@@ -15,7 +15,9 @@ struct AuthGateView: View {
 
     var body: some View {
         Group {
-            if restoring {
+            if auth.deletionPending {
+                deletionRecovery
+            } else if restoring {
                 restoration
             } else {
                 ViewThatFits(in: .vertical) {
@@ -140,6 +142,19 @@ struct AuthGateView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
+    private var deletionRecovery: some View {
+        VStack(spacing: 22) {
+            NativeBrandLogo(scale: 1.45)
+            Text(game.t("deleteAccountPending")).multilineTextAlignment(.center)
+            if let error = auth.deleteError { Text(error).font(.subheadline).multilineTextAlignment(.center) }
+            if auth.isDeletingAccount { ProgressView().tint(.white) }
+            NativeDeleteAccountButton()
+            Button(game.t("authSwitchAccount")) {
+                auth.signOut(); auth.authError = nil; game.resetForSignOut()
+            }.disabled(auth.isDeletingAccount)
+        }
+    }
+
     private var privacy: some View {
         Group {
             if let url = URL(string: "https://\(GameSocket.frontendHost)/privacy.html") {
@@ -150,7 +165,7 @@ struct AuthGateView: View {
     }
 
     private func completeSignInIfNeeded() {
-        guard !completingSignIn, !game.restoringSession, let uid = auth.user?.uid else { return }
+        guard !auth.deletionPending, !completingSignIn, !game.restoringSession, let uid = auth.user?.uid else { return }
         auth.authError = nil
         completingSignIn = true
         Task {
@@ -159,6 +174,39 @@ struct AuthGateView: View {
             guard auth.user?.uid == uid else { return }
             guard let idToken = token else { auth.authError = game.t("serverUnreachable"); return }
             game.identify(idToken: idToken, authManager: auth)
+        }
+    }
+}
+
+/// The same secure confirmation is available after an interrupted deletion.
+struct NativeDeleteAccountButton: View {
+    @EnvironmentObject private var game: GameSocket
+    @EnvironmentObject private var auth: AuthManager
+    @State private var confirming = false
+    @State private var password = ""
+    var onDeleted: () -> Void = {}
+
+    var body: some View {
+        Button(role: .destructive) { password = ""; confirming = true } label: {
+            Label(game.t(auth.deletionPending ? "deleteAccountFinish" : "deleteAccount"), systemImage: "trash")
+                .frame(minHeight: 44)
+        }
+        .disabled(auth.isDeletingAccount)
+        .alert(game.t("deleteAccountConfirmTitle"), isPresented: $confirming) {
+            if auth.deletionNeedsPassword {
+                SecureField(game.t("emailPassword"), text: $password).textContentType(.password)
+            }
+            Button(game.t("cancel"), role: .cancel) { password = "" }
+            Button(game.t("deleteAccountConfirm"), role: .destructive) {
+                let enteredPassword = password
+                password = ""
+                Task {
+                    await auth.deleteAccount(password: enteredPassword)
+                    if auth.user == nil { game.resetForSignOut(); onDeleted() }
+                }
+            }.disabled(auth.deletionNeedsPassword && password.isEmpty)
+        } message: {
+            Text(game.t(auth.deletionNeedsPassword ? "deleteAccountPasswordHelp" : "deleteAccountConfirmMessage"))
         }
     }
 }

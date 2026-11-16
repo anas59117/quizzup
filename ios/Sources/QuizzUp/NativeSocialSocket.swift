@@ -22,7 +22,9 @@ extension GameSocket {
                 persistIdentity(); profileSaving = false
                 if stage == .join { markProfileComplete(); stage = .home }
             }
-        case "profile_update_failed": profileSaving = false; socialError = t("serverUnreachable")
+        case "profile_update_failed":
+            profileSaving = false
+            socialError = t(object["code"] as? String == "CONTENT_NOT_ALLOWED" ? "contentNotAllowed" : "serverUnreachable")
         case "friends_list": friends = decode(object["friends"], as: [NativeFriend].self) ?? []
         case "friend_requests": friendRequests = decode(object["requests"], as: [NativeFriend].self) ?? []
         case "friend_request_received":
@@ -81,6 +83,7 @@ extension GameSocket {
             inboxLoading = false; historyLoading = false; pendingMessageID = nil
             if type == "rate_limited" { profileSaving = false }
             socialError = lang == "fr" ? "L’action n’a pas abouti. Vérifie ta connexion et réessaie." : "The action could not be completed. Check your connection and retry."
+            if object["code"] as? String == "CONTENT_NOT_ALLOWED" { socialError = t("contentNotAllowed") }
         default: return false
         }
         return true
@@ -330,7 +333,8 @@ extension GameSocket {
             if action == "post_comment" { community.pendingReply = nil }
             if action == "post_react" { community.pendingReactions.removeAll() }
             if action == "comment_react" { community.pendingCommentReactions.removeAll() }
-            community.error = lang == "fr" ? "Cette action a échoué. Réessaie." : "This action failed. Try again."
+            community.error = object["code"] as? String == "CONTENT_NOT_ALLOWED" ? t("contentNotAllowed")
+                : (lang == "fr" ? "Cette action a échoué. Réessaie." : "This action failed. Try again.")
         case "rate_limited":
             guard let code = object["code"] as? String,
                   ["FEED_RATE_LIMITED", "POST_RATE_LIMITED", "REACTION_RATE_LIMITED", "COMMENT_RATE_LIMITED", "COMMENT_REACTION_RATE_LIMITED", "REPORT_RATE_LIMITED", "FOLLOW_RATE_LIMITED"].contains(code) else { return false }

@@ -2,7 +2,9 @@
 import Foundation
 
 @MainActor final class AuthManager {
+    var deletionResumed = false
     func getIdToken() async -> String? { nil }
+    func resumeAccountDeletion() { deletionResumed = true }
 }
 enum StoreCaptureConfiguration { static let enabled = true }
 
@@ -106,6 +108,12 @@ enum StoreCaptureConfiguration { static let enabled = true }
         game.profileSaving = true
         try receive(["type":"rate_limited"])
         check(!game.profileSaving && game.stage == .question && game.socialError != nil, "Rate limiting remains recoverable")
+        game.profileSaving = true
+        try receive(["type":"profile_update_failed", "code":"CONTENT_NOT_ALLOWED"])
+        check(!game.profileSaving && game.socialError == game.t("contentNotAllowed"), "Rejected profile content gives an actionable localized error")
+        game.community.publishing = true
+        try receive(["type":"community_error", "action":"post_create", "code":"CONTENT_NOT_ALLOWED"])
+        check(!game.community.publishing && game.community.error == game.t("contentNotAllowed"), "Rejected community content unlocks the preserved draft with a localized error")
         let message: [String: Any] = ["id":"m1", "fromId":"alice", "toId":"bob", "kind":"text", "text":"On joue ?", "createdAt":1793920000000, "clientMessageId":"draft1"]
         game.pendingMessageID = "draft1"
         try receive(["type":"dm_sent", "message":message])
@@ -118,8 +126,22 @@ enum StoreCaptureConfiguration { static let enabled = true }
         try receive(["type":"dm_history", "targetId":"bob", "messages":[earlier], "hasMore":true])
         check(game.messages["bob"]?.map(\.id) == ["m0", "m1"] && game.historyHasMore["bob"] == true, "Earlier history merges without discarding newer confirmed messages")
         game.conversationOpen = true; game.activeConversation = "bob"
+        check(game.recoverGameOnIdentify, "A fresh launch can recover a retained game")
+        game.playAgain()
+        check(!game.recoverGameOnIdentify, "Leaving results prevents replaying the retained finished game")
+        game.disconnect()
+        check(!game.recoverGameOnIdentify, "A transport loss preserves intentional result dismissal")
+        try receive(["type":"game_reconnected", "score":52, "totalRounds":6, "opponents":[]])
+        check(game.recoverGameOnIdentify, "An authoritative active-game recovery restores recovery for its eventual result")
+        game.playAgain()
+        try receive(["type":"game_start", "totalRounds":6, "opponents":[]])
+        check(game.recoverGameOnIdentify, "A newly started game restores active and result recovery")
         game.resetForSignOut()
         check(game.stage == .authGate && game.clientId == nil && game.messages.isEmpty && game.activeConversation == nil && !game.conversationOpen, "Sign out clears account and conversation state")
+        let deletingAuth = AuthManager()
+        game.identify(idToken: "capture-fixture", authManager: deletingAuth)
+        try receive(["type":"auth_required", "code":"ACCOUNT_DELETED"])
+        check(deletingAuth.deletionResumed && game.stage == .authGate, "A server deletion tombstone opens identity cleanup instead of retrying gameplay")
         print("Verified native receiver contracts with no live network or identity provider")
     }
 }

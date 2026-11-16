@@ -94,6 +94,7 @@ final class GameSocket: ObservableObject {
     @Published var cancelPending = false
     @Published var rematchWaiting = false
     @Published var profileSaving = false
+    var recoverGameOnIdentify = true
 
     private var task: URLSessionWebSocketTask?
     private var timer: Timer?
@@ -128,7 +129,8 @@ final class GameSocket: ObservableObject {
         listen()
         if let idToken {
             send(["type": "identify", "idToken": idToken, "name": name, "avatar": avatar,
-                  "presentationVersion": 1, "recoverRoom": roomScreenOpen])
+                  "presentationVersion": 1, "recoverRoom": roomScreenOpen,
+                  "recoverGame": recoverGameOnIdentify])
         }
     }
 
@@ -277,6 +279,7 @@ final class GameSocket: ObservableObject {
             stage = .waiting
             isStarting = false
         case "game_start":
+            recoverGameOnIdentify = true
             privateRoom = nil; roomPending = false; roomError = nil
             if let arr = obj["opponents"], let d = try? JSONSerialization.data(withJSONObject: arr) {
                 opponents = (try? decoder.decode([Opponent].self, from: d)) ?? []
@@ -288,6 +291,7 @@ final class GameSocket: ObservableObject {
             // No stage change here — the server always sends round_intro
             // immediately after game_start, which drives the transition.
         case "game_reconnected":
+            recoverGameOnIdentify = true
             isStarting = false
             if let restored = decode(obj["opponents"], as: [Opponent].self) { opponents = restored }
             score = obj["score"] as? Int ?? score
@@ -377,6 +381,11 @@ final class GameSocket: ObservableObject {
             }
         case "auth_required", "already_connected":
             disconnect()
+            if obj["code"] as? String == "ACCOUNT_DELETED" {
+                authManager?.resumeAccountDeletion()
+                stage = .authGate
+                return
+            }
             socialError = t("serverUnreachable")
             stage = .error
         case "error":
@@ -438,6 +447,7 @@ final class GameSocket: ObservableObject {
 
     func startWithCategory(_ key: String) {
         guard !isStarting else { return }
+        recoverGameOnIdentify = false
         isStarting = true
         persistIdentity()
         connect(["type": soloMode ? "solo" : "join", "name": name, "avatar": avatar, "category": key, "presentationVersion": 1])
@@ -445,6 +455,7 @@ final class GameSocket: ObservableObject {
 
     func quickMatch() {
         guard !isStarting else { return }
+        recoverGameOnIdentify = false
         isStarting = true
         persistIdentity()
         connect(["type": soloMode ? "solo" : "join", "name": name, "avatar": avatar, "category": NSNull(), "presentationVersion": 1])
@@ -457,6 +468,7 @@ final class GameSocket: ObservableObject {
     }
 
     func playAgain() {
+        recoverGameOnIdentify = false
         isStarting = false
         result = nil
         question = nil
@@ -581,6 +593,7 @@ final class GameSocket: ObservableObject {
         topicProgress = []; followedThemes = []
         topicLeaderboards = [:]
         community = NativeCommunityState()
+        recoverGameOnIdentify = true
         roomScreenOpen = false
         stage = .authGate
     }
