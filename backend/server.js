@@ -228,6 +228,14 @@ async function handleIdentify(ws, data, state) {
     return;
   }
 
+  // An earlier action may have changed memory while its durable write failed.
+  // Only a successful flush allows identify to confirm that onboarding state.
+  // Keep ordinary identification available during a storage outage.
+  let onboardingDurable = true;
+  try { await social.flush(); }
+  catch { onboardingDurable = false; }
+  if (ws.readyState !== 1 || deleted.isDeleted(uid) || (state.clientId && state.clientId !== uid)) return;
+
   const persistedProfile = social.profileOf(uid);
   if (!contentAllowed(persistedProfile?.name || requestedName)) { game.send(ws, { type: 'profile_update_failed', code: 'CONTENT_NOT_ALLOWED' }); return; }
   state.name = persistedProfile?.name || requestedName;
@@ -300,7 +308,7 @@ async function handleIdentify(ws, data, state) {
   }
 
   social.setOnline(state.clientId, ws, state.name, state.avatar);
-  game.send(ws, { type: 'identified', clientId: uid, reconnected, roomReconnected, profile: social.profileOf(uid), onboarding: social.onboardingOf(uid) });
+  game.send(ws, { type: 'identified', clientId: uid, reconnected, roomReconnected, profile: social.profileOf(uid), ...(onboardingDurable ? { onboarding: social.onboardingOf(uid) } : {}) });
   challenges.expire();
   game.send(ws, { type: 'conversations_list', ...messaging.summaries(state.clientId) });
   game.send(ws, { type: 'friends_list', friends: social.getFriendsList(state.clientId) });

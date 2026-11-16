@@ -173,3 +173,26 @@ test('onboarding update rate limit is shared by new sockets for the same account
   assert.equal(failed.clientId, identity.uid);
   assert.equal(JSON.parse(fs.readFileSync(path.join(f.server.dir, 'social.json'))).profiles[identity.uid].onboarding.status, 'pending');
 });
+
+test('failed onboarding persistence is omitted on reconnect until retry makes it durable', async t => {
+  const f = await fixture(t), identity = await guest(f.server), client = await f.connect(identity.token);
+  const blockedTemp = path.join(f.server.dir, 'social.json.tmp');
+  // Block the actual atomic write, rather than replacing the persistence API.
+  fs.mkdirSync(blockedTemp);
+  try {
+    client.send({ type: 'onboarding_update', action: 'skip' });
+    assert.equal((await client.wait('onboarding_update_failed')).code, 'STORAGE_UNAVAILABLE');
+    assert.equal(client.messages.some(message => message.type === 'onboarding_updated'), false);
+    const fresh = await f.connect(identity.token);
+    assert.equal(Object.hasOwn(fresh.identified, 'onboarding'), false, 'Reconnect cannot acknowledge unpersisted memory');
+    assert.equal(fresh.identified.profile.id, identity.uid);
+    assert((await fresh.wait('stats')).stats, 'Storage failure keeps ordinary identification/gameplay functional');
+    fs.rmdirSync(blockedTemp);
+    const skipped = await update(fresh, 'skip');
+    assert.deepEqual(skipped, { ...pending, status: 'skipped' });
+    await f.restart();
+    assert.deepEqual((await f.connect(identity.token)).identified.onboarding, skipped);
+  } finally {
+    if (fs.existsSync(blockedTemp)) fs.rmdirSync(blockedTemp);
+  }
+});
