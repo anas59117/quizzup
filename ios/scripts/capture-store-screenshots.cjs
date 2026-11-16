@@ -2,6 +2,44 @@ const fs=require('node:fs'),path=require('node:path'),cp=require('node:child_pro
 const {profiles,scenarios,validatePng,jpegInfo}=require('./store-assets.cjs');
 const run=(command,args,timeout=180000)=>cp.execFileSync(command,args,{encoding:'utf8',timeout,killSignal:'SIGKILL',stdio:['ignore','pipe','pipe']}).trim();
 const pause=ms=>Atomics.wait(new Int32Array(new SharedArrayBuffer(4)),0,0,ms);
+function waitForReady(ready,expected,{timeoutMs=120000,now=()=>performance.now(),pause:wait=pause,exists=fs.existsSync,read=file=>fs.readFileSync(file,'utf8')}={}){
+ assert.ok(Number.isInteger(timeoutMs)&&timeoutMs>=1000&&timeoutMs<=300000,'Readiness timeout must be 1000–300000ms');
+ const started=now(),deadline=started+timeoutMs;
+ while(!exists(ready)&&now()<deadline)wait(Math.min(200,deadline-now()));
+ assert.ok(exists(ready),`View did not become ready within ${timeoutMs}ms: ${expected.language}/${expected.screen}`);
+ // A marker from another launch or appearance must never count as ready.
+ assert.deepEqual(JSON.parse(read(ready)),expected);
+ return Math.round(now()-started);
+}
+function saveFailureDiagnostics({output,udid,ready,context={},error,execute=run,crashDirectories}){
+ const directory=path.join(output,'failure-diagnostics',context.profile||'setup',context.plan||'setup',context.language||'unknown',context.screen||'setup');
+ fs.mkdirSync(directory,{recursive:true});
+ const diagnosticErrors=[];
+ const attempt=(name,action)=>{try{action();}catch(failure){diagnosticErrors.push({name,error:failure.message});}};
+ // Capture the actual failed view before shutdown; never relaunch to hide it.
+ attempt('screenshot',()=>execute('xcrun',['simctl','io',udid,'screenshot','--type=png',path.join(directory,'screen.png')],15000));
+ attempt('readiness',()=>fs.writeFileSync(path.join(directory,'readiness.json'),ready&&fs.existsSync(ready)?fs.readFileSync(ready):JSON.stringify({missing:true})));
+ attempt('app-log',()=>fs.writeFileSync(path.join(directory,'app.log'),execute('xcrun',['simctl','spawn',udid,'log','show','--style','compact','--last','5m','--predicate','process == "QuizzUp" OR eventMessage CONTAINS[c] "com.quizzup.app"'],15000)));
+ attempt('app-process',()=>{
+  const processes=execute('xcrun',['simctl','spawn',udid,'launchctl','list'],5000);
+  fs.writeFileSync(path.join(directory,'app-process.txt'),processes.split('\n').filter(line=>/QuizzUp|com\.quizzup\.app/i.test(line)).join('\n')||'No QuizzUp process found.');
+ });
+ attempt('device-state',()=>fs.writeFileSync(path.join(directory,'device-state.json'),execute('xcrun',['simctl','list','devices','--json'],5000)));
+ const home=require('node:os').homedir();
+ const crashRoots=crashDirectories||[path.join(home,'Library/Logs/DiagnosticReports'),path.join(home,'Library/Developer/CoreSimulator/Devices',udid,'data/Library/Logs/CrashReporter')];
+ for(const source of crashRoots)attempt('crash-reports',()=>{
+  if(!fs.existsSync(source))return;
+  const reports=fs.readdirSync(source).filter(name=>/^QuizzUp.*\.(ips|crash)$/i.test(name))
+   .map(name=>({name,stat:fs.statSync(path.join(source,name))}))
+   .filter(({stat})=>stat.isFile()&&stat.mtimeMs>=(context.startedAt||Date.now()-300000)-5000&&stat.size<=5*1024*1024)
+   .sort((a,b)=>b.stat.mtimeMs-a.stat.mtimeMs).slice(0,10);
+  for(const {name} of reports){fs.mkdirSync(path.join(directory,'crashes'),{recursive:true});fs.copyFileSync(path.join(source,name),path.join(directory,'crashes',name));}
+ });
+ fs.writeFileSync(path.join(directory,'failure.json'),JSON.stringify({context,error:error?.message||String(error),collectedAt:new Date().toISOString(),diagnosticErrors},null,2)+'\n');
+ console.error(`Saved failed capture evidence: ${directory}`);
+ return directory;
+}
+function main(){
 const root=path.resolve(__dirname,'../..');
 if(process.platform!=='darwin')throw Error('Native captures require macOS with Xcode and an iOS Simulator');
 const app=path.resolve(process.argv[2]||'');
@@ -42,10 +80,13 @@ const runtime=JSON.parse(run('xcrun',['simctl','list','runtimes','--json'])).run
 assert.ok(runtime,'No available iOS Simulator runtime');
 const types=JSON.parse(run('xcrun',['simctl','list','devicetypes','--json'])).devicetypes;
 const captures=[];
+const readyTimeoutMs=Number(process.env.QUIZZUP_CAPTURE_READY_TIMEOUT_MS||120000);
+assert.ok(Number.isInteger(readyTimeoutMs)&&readyTimeoutMs>=1000&&readyTimeoutMs<=300000,'Readiness timeout must be 1000–300000ms');
 for(const profile of captureProfiles){
  const type=types.find(t=>t.identifier===`com.apple.CoreSimulator.SimDeviceType.${profile.type}`);
  assert.ok(type,`Simulator type not installed: ${profile.type}`);
  const udid=run('xcrun',['simctl','create',`QuizzUp-${profile.key}`,type.identifier,runtime.identifier]);
+ let ready,context={profile:profile.key,startedAt:Date.now()};
  try{
   console.log(`Booting ${profile.key} on ${runtime.identifier}; first-boot migration may take several minutes.`);
   run('xcrun',['simctl','boot',udid]);
@@ -54,17 +95,16 @@ for(const profile of captureProfiles){
   run('xcrun',['simctl','status_bar',udid,'override','--time','09:41','--dataNetwork','wifi','--wifiMode','active','--wifiBars','3','--batteryState','charged','--batteryLevel','100']);
   run('xcrun',['simctl','install',udid,app]);
   const data=run('xcrun',['simctl','get_app_container',udid,'com.quizzup.app','data']);
-  const ready=path.join(data,'Documents/store-capture-ready.json');
+  ready=path.join(data,'Documents/store-capture-ready.json');
   for(const plan of capturePlans){
   run('xcrun',['simctl','ui',udid,'appearance',plan.system]);
   for(const language of captureLanguages)for(const screen of plan.screens){
+   context={profile:profile.key,plan:plan.key,screen,language,startedAt:Date.now()};
    if(fs.existsSync(ready))fs.unlinkSync(ready);
-   run('xcrun',['simctl','launch','--terminate-running-process',udid,'com.quizzup.app','--store-capture-screen',screen,'--store-capture-language',language,'--store-capture-appearance',plan.preference]);
-   const deadline=Date.now()+30000;
-   while(!fs.existsSync(ready)&&Date.now()<deadline)pause(200);
-   assert.ok(fs.existsSync(ready),`View did not become ready: ${profile.key}/${language}/${screen}`);
+   context.launchOutput=run('xcrun',['simctl','launch','--terminate-running-process',udid,'com.quizzup.app','--store-capture-screen',screen,'--store-capture-language',language,'--store-capture-appearance',plan.preference]);
    const finalPreference=screen==='settings-live' ? (plan.preference==='dark' ? 'light' : 'dark') : plan.preference;
-   assert.deepEqual(JSON.parse(fs.readFileSync(ready,'utf8')),{screen,language,appearance:plan.preference,storedAppearance:finalPreference});
+   const waited=waitForReady(ready,{screen,language,appearance:plan.preference,storedAppearance:finalPreference},{timeoutMs:readyTimeoutMs});
+   console.log(`View ready: ${profile.key}/${language}/${screen} after ${waited}ms`);
    const name=`${String(captureScreens.indexOf(screen)+1).padStart(2,'0')}-${screen}`;
    const relative=`${appearanceReview||communityReview||profileReview ? plan.key+'/' : ''}${language}/${profile.key}/${name}.jpg`;
    const saveCapture=(relative,expectedAppearance,suffix='')=>{
@@ -90,6 +130,10 @@ for(const profile of captureProfiles){
    }
   }
   }
+ }catch(error){
+  try{saveFailureDiagnostics({output,udid,ready,context,error});}
+  catch(diagnosticError){console.warn(`Unable to save capture diagnostics: ${diagnosticError.message}`);}
+  throw error;
  }finally{
   // Cleanup must not mask a failed capture or stall the ephemeral CI runner.
   for(const action of ['shutdown','delete']){
@@ -102,3 +146,6 @@ assert.equal(captures.length,captureProfiles.length * captureLanguages.length * 
 const commit=process.env.GITHUB_SHA||run('git',['-C',root,'rev-parse','HEAD']);
 fs.writeFileSync(path.join(output,'manifest.json'),JSON.stringify({commit,runtime:runtime.identifier,capturedAt:new Date().toISOString(),nativeViews:true,contentLanguage:'Original French question bank; FR/EN interface chrome only',captures},null,2)+'\n');
 console.log(`Verified ${captures.length} native, opaque App Store captures; no resizing.`);
+}
+module.exports={waitForReady,saveFailureDiagnostics};
+if(require.main===module)main();
