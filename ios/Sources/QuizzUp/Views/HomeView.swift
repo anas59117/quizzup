@@ -34,6 +34,7 @@ struct HomeView: View {
     @EnvironmentObject var game: GameSocket
     @State private var tab: BrowseTab = .home
     @State private var path: [NativeBrowseRoute] = []
+    @State private var themesRootID = UUID()
     @State private var showSettings = false
     @State private var showPlay = false
     @State private var showRoom = false
@@ -117,6 +118,7 @@ struct HomeView: View {
                         NativeHomeContent(onSeeAll: { select(.themes) }, onCommunity: { openCommunity() })
                     case .themes:
                         NativeThemesView(focusSearch: $focusSearch)
+                            .id(themesRootID)
                     case .messages:
                         NativeMessagesView(
                             onInvite: { openRoom(.create) },
@@ -265,6 +267,8 @@ struct HomeView: View {
 
     private func select(_ destination: BrowseTab) {
         path.removeAll()
+        // Reselecting Themes also clears its local family, search and scroll state.
+        if destination == .themes { themesRootID = UUID() }
         tab = destination
         messageCategory = nil
         if destination == .profile || destination == .messages { game.requestProfile() }
