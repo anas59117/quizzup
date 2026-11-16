@@ -203,6 +203,7 @@ async function startGame(rawPlayers, categoryKey, { withBot = false } = {}) {
 
     // Re-check after the await as a defensive invariant in case another code
     // path created a session while questions were loading.
+    if (clientIds.some(id => require('./deleted-identities').isDeleted(id))) throw new Error('ACCOUNT_DELETED');
     const becameBusy = rawPlayers.find((p) => findActiveSessionByClientId(p.clientId));
     if (becameBusy) throw new Error('CLIENT_ALREADY_PLAYING');
 
@@ -701,7 +702,7 @@ function cancelRematch(clientId) {
 }
 
 function endGame(game, reason) {
-  if (game.status === 'finished') return;
+  if (game.status === 'finished' || game.status === 'cancelled') return;
   game.status = 'finished';
   game.phase = 'finished';
   game.finishedAt = Date.now();
@@ -786,7 +787,7 @@ function endGame(game, reason) {
     if (typeof messaging.recordMatchResults === 'function') messaging.recordMatchResults(game, results);
   } catch (err) { console.error('match conversation result failed:', err); }
 
-  setTimeout(() => {
+  game.retentionTimer = setTimeout(() => {
     // Wake any result screen still waiting for a rematch before dropping the
     // retained match state. Otherwise its button could stay in "waiting"
     // forever after the 60-second retention window expires.
@@ -810,7 +811,18 @@ function endGame(game, reason) {
   }, FINISHED_RETENTION_MS);
 }
 
-module.exports = {
+function cancelForIdentity(uid) {
+  for (const [id, g] of activeGames) {
+    if (![...(g.players || []), ...(g.departedPlayers || [])].some(p => p.clientId === uid)) continue;
+    g.status = 'cancelled'; clearTimeout(g.roundTimer); clearTimeout(g.retentionTimer); clearBotTimers(g);
+    for (const p of [...g.players, ...(g.departedPlayers || [])]) {
+      clearTimeout(p.reconnectTimer); if (playerSessions.get(p.id) === id) playerSessions.delete(p.id);
+      if (p.clientId !== uid) send(p.ws, { type: 'match_aborted', code: 'ACCOUNT_DELETED' });
+    }
+    g.rematchRequests?.clear(); activeGames.delete(id);
+  }
+}
+module.exports = { cancelForIdentity,
   activeGames, playerSessions, startingClients, rid, send,
   startGame, recordAnswer, endGame, removePlayer,
   disconnectPlayer, reconnectPlayer, reattachFinishedPlayer,

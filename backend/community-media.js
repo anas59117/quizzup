@@ -50,6 +50,7 @@ function mountMediaRoutes(app, { verifyIdToken, limiter, getClientIp }) {
             flag: 'wx',
             mode: 0o600,
           });
+          if (require('./deleted-identities').isDeleted(uid)) { await fs.promises.rm(file(mediaUrl), { force: true }); return res.status(401).json({ code: 'ACCOUNT_DELETED' }); }
           res.json({ mediaUrl });
         } catch {
           res.status(500).json({ code: 'MEDIA_SAVE_FAILED' });
@@ -66,7 +67,7 @@ function mountMediaRoutes(app, { verifyIdToken, limiter, getClientIp }) {
       .set({
         'Content-Type': 'image/jpeg',
         'X-Content-Type-Options': 'nosniff',
-        'Cache-Control': 'public, max-age=86400',
+        'Cache-Control': 'no-store',
       })
       .sendFile(target);
   });

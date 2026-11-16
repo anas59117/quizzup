@@ -1,5 +1,6 @@
 const path = require('node:path');
 const CATALOG = {
+  'deleted-identities': { root: 'object', groups: { identities: 'map', receipts: 'map' }, empty: { identities: {}, receipts: {} } },
   'account-links': { root: 'object', groups: { firebaseToCanonical: 'map' }, empty: { firebaseToCanonical: {} } },
   'async-challenges': { root: 'array', empty: [] },
   'category-stats': { root: 'map', empty: {} },
@@ -17,7 +18,7 @@ const CATALOG = {
 };
 const STORE_NAMES = Object.freeze(Object.keys(CATALOG));
 // Only stores introduced after the initial dataset may be initialized empty.
-const ADDITIVE_STORES = Object.freeze(['user-reports']);
+const ADDITIVE_STORES = Object.freeze(['user-reports', 'deleted-identities']);
 function definition(name) {
   if (!Object.hasOwn(CATALOG, name)) throw Object.assign(new Error('UNKNOWN_STORE'), { code: 'UNKNOWN_STORE' });
   return CATALOG[name];

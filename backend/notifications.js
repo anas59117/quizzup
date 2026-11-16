@@ -68,6 +68,7 @@ function take(clientId, now = Date.now()) {
 function deleteUser(clientId) {
   if (!clientId) return;
   delete inbox[clientId];
+  for (const id of Object.keys(inbox)) { inbox[id] = inbox[id].filter(n => n.fromId !== clientId); if (!inbox[id].length) delete inbox[id]; }
   persist();
 }
 

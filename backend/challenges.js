@@ -69,7 +69,7 @@ function createChallenges({
     reserved.add(id);
     try {
       const g = await start(c);
-      if (!g) throw Error('GAME_START_FAILED');
+      if (!g || !items.has(id) || require('./deleted-identities').isDeleted(c.fromId) || require('./deleted-identities').isDeleted(c.toId)) throw Error('GAME_START_FAILED');
       g.challengeId = c.id;
       c.gameId = g.id;
       return update(c, 'accepted');
@@ -82,6 +82,7 @@ function createChallenges({
     if (c.status === 'accepted' && c.mode !== 'async') update(c, 'expired');
   }
   return {
+    deleteUser(uid) { for (const [id, c] of items) if ([c.fromId, c.toId].includes(uid)) { items.delete(id); reserved.delete(id); } persist(); },
     expire() {
       for (const id of items.keys()) get(id);
     },

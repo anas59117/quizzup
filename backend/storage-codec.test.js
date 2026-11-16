@@ -4,6 +4,7 @@ const { STORE_NAMES, emptyStore } = require('./storage/catalog');
 const { encodeSnapshot, decodeSnapshot, canonicalHash } = require('./storage/codec');
 
 const samples = {
+  'deleted-identities': { identities: { hashedUid: 'hashedBearer' }, receipts: { hashedBearer: { done: true, at: 123 } } },
   'account-links': { firebaseToCanonical: { google: 'guest_123' } },
   'async-challenges': [{ id: 'b', score: 3 }, { id: 'a', score: 5 }],
   'category-stats': { '2026-11-01': { started: 2 } },
@@ -27,7 +28,7 @@ for (const name of Object.keys(samples)) test(`${name} survives an exact entity 
 });
 
 test('every supported store has a valid empty default', () => {
-  assert.equal(STORE_NAMES.length, 14);
+  assert.equal(STORE_NAMES.length, 15);
   for (const name of STORE_NAMES) {
     const value = emptyStore(name), encoded = encodeSnapshot(name, value);
     assert.deepEqual(decodeSnapshot(name, encoded.layout, encoded.records), value);

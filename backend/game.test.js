@@ -23,6 +23,19 @@ function fakeWs() {
   };
 }
 
+test('account deletion cancels active and retained games without recording rewards', () => {
+  const peer = fakeWs();
+  for (const status of ['active', 'finished']) {
+    const id = `deletion-${status}`;
+    const g = { id, status, players: [{ id: 'delete-player', clientId: 'delete-user', ws: fakeWs() }, { id: 'peer-player', clientId: 'peer-user', ws: peer }], botTimers: [], rematchRequests: new Set(['delete-user']), roundTimer: setTimeout(() => {}, 60000), retentionTimer: setTimeout(() => {}, 60000) };
+    game.activeGames.set(id, g); game.playerSessions.set('delete-player', id); game.playerSessions.set('peer-player', id);
+    game.cancelForIdentity('delete-user');
+    assert.equal(g.status, 'cancelled'); assert(!game.activeGames.has(id)); assert(!game.playerSessions.has('delete-player')); assert(!game.playerSessions.has('peer-player')); assert.equal(g.rematchRequests.size, 0);
+    game.endGame(g); assert.equal(g.status, 'cancelled', 'Stale completion cannot award deleted players');
+  }
+  assert.equal(peer.messages.filter(m => m.type === 'match_aborted' && m.code === 'ACCOUNT_DELETED').length, 2);
+});
+
 test('ignores answers outside the question phase', () => {
   const ws = fakeWs();
   const g = {

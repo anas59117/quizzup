@@ -119,4 +119,6 @@ function getRecentTopics(clientId, limit = 12) {
  return Object.entries((clientId && store[clientId]) || {}).map(([key,t]) => withLevel(key,t)).filter(t => t.updatedAt).sort((a,b) => b.updatedAt-a.updatedAt || a.key.localeCompare(b.key)).slice(0,Math.max(1,Math.min(50,Number(limit)||12)));
 }
 
-module.exports = { getRecentTopics, record, getPlayerTopics, getTopic, getTopicLeaderboard, normalize };
+function deleteUser(clientId) { delete store[clientId]; leaderboardCache.invalidate(); persist(); }
+
+module.exports = { deleteUser, getRecentTopics, record, getPlayerTopics, getTopic, getTopicLeaderboard, normalize };

@@ -11,7 +11,7 @@ test('source capture, verified backup and export preserve identities and order w
   fs.writeFileSync(path.join(root, 'stats.json'), JSON.stringify({ alice: { xp: 100 } }));
   fs.writeFileSync(path.join(root, 'posts.json'), JSON.stringify({ posts: [{ id: 'z' }, { id: 'a' }] }));
   const source = readSource(root);
-  assert.equal(source.manifest.stores.length, 14);
+  assert.equal(source.manifest.stores.length, 15);
   assert.equal(source.manifest.stores.find(s => s.name === 'messages').source, 'missing-default');
   const target = path.join(root, 'backup');
   writeDirectory(target, source.data);

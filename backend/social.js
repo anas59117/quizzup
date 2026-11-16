@@ -31,14 +31,14 @@ const persist = createJsonWriter(
 const online = new Map(); // clientId -> ws
 
 function setOnline(clientId, ws, name, avatar) {
-  if (!clientId) return;
+  if (!clientId || require('./deleted-identities').isDeleted(clientId)) return;
   online.set(clientId, ws);
   profiles[clientId] = { name, avatar };
   persist();
 }
 
 function updateProfile(clientId, name, avatar) {
-  if (!clientId) return null;
+  if (!clientId || require('./deleted-identities').isDeleted(clientId)) return null;
   profiles[clientId] = { name, avatar };
   persist();
   return profileOf(clientId);
@@ -68,7 +68,7 @@ function getAllOnline() {
 
 function profileOf(clientId) {
   const p = profiles[clientId];
-  return p ? { id: clientId, name: p.name, avatar: p.avatar, online: isOnline(clientId) } : null;
+  return p ? { id: clientId, name: require('./content-filter').contentAllowed(p.name) ? p.name : 'Player', avatar: p.avatar, online: isOnline(clientId) } : null;
 }
 
 function areFriends(a, b) {

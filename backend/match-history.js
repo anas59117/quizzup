@@ -44,5 +44,5 @@ function list(clientId,limit=30) {
  const n=Math.max(1,Math.min(MAX_MATCHES,Math.floor(Number(limit)||30)));
  return validId(clientId)?JSON.parse(JSON.stringify((store[clientId]||[]).slice(0,n))):[];
 }
-function deleteUser(clientId){if(!clientId)return;delete store[clientId];persist();}
+function deleteUser(clientId){if(!clientId)return;delete store[clientId];for(const rows of Object.values(store))for(const match of rows)match.opponents=match.opponents.map(p=>p.id===clientId?{...p,id:'deleted-player',name:'Deleted player',avatar:'robot'}:p);persist();}
 module.exports={list,recordMatch,resultsFor,normalize,MAX_MATCHES,deleteUser};

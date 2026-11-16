@@ -107,7 +107,14 @@ function stats() {
   };
 }
 
-module.exports = {
+function deleteUser(uid) {
+  for (let i = reports.length - 1; i >= 0; i--) if (reports[i].reporterId === uid || reports[i].targetId === uid) reports.splice(i, 1);
+  delete blocks[uid]; for (const list of Object.values(blocks)) list.delete(uid);
+  for (const name of Object.keys(flaggedNames)) delete flaggedNames[name];
+  for (const report of reports) if (report.targetName) { const key = report.targetName.toLowerCase().trim(); flaggedNames[key] = (flaggedNames[key] || 0) + 1; }
+  persist();
+}
+module.exports = { deleteUser,
   reportUser,
   blockUser,
   unblockUser,

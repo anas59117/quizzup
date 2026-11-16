@@ -78,6 +78,7 @@ function unlinkByCanonical(canonicalUid) {
 }
 
 module.exports = {
+  firebaseIdsForCanonical: canonicalUid => Object.keys(firebaseToCanonical).filter(uid => firebaseToCanonical[uid] === canonicalUid),
   canonicalForFirebase,
   linkFirebaseIdentity,
   isFirebaseLinkedTo,

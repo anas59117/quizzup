@@ -24,14 +24,14 @@ test('legacy PostgreSQL moderation upgrade is additive, atomic and preserves rep
     await writer.close();
     reader = await PostgresStore.open({ connectionString: url.href, readOnly: true });
     assert.deepEqual((await reader.load())['user-reports'], { reports: [], blocks: {}, flaggedNames: {} });
-    assert.equal((await reader.client.query('SELECT count(*)::int AS n FROM public.quizzup_storage_stores')).rows[0].n, 13);
+    assert.equal((await reader.client.query('SELECT count(*)::int AS n FROM public.quizzup_storage_stores')).rows[0].n, STORE_NAMES.length - 1);
     await reader.close(); reader = null;
     writer = await PostgresStore.open({ connectionString: url.href });
     await writer.client.query(`CREATE FUNCTION public.reject_moderation() RETURNS trigger LANGUAGE plpgsql AS $$
       BEGIN IF NEW.name='user-reports' THEN RAISE EXCEPTION 'test rollback'; END IF; RETURN NEW; END $$;
       CREATE TRIGGER reject_moderation BEFORE INSERT ON public.quizzup_storage_stores FOR EACH ROW EXECUTE FUNCTION public.reject_moderation()`);
     await assert.rejects(writer.load());
-    assert.equal((await writer.client.query('SELECT count(*)::int AS n FROM public.quizzup_storage_stores')).rows[0].n, 13);
+    assert.equal((await writer.client.query('SELECT count(*)::int AS n FROM public.quizzup_storage_stores')).rows[0].n, STORE_NAMES.length - 1);
     await writer.client.query('DROP TRIGGER reject_moderation ON public.quizzup_storage_stores; DROP FUNCTION public.reject_moderation()');
     const loaded = await writer.load();
     assert.deepEqual(loaded.stats, legacy.stats);

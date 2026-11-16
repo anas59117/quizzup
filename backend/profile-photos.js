@@ -38,10 +38,12 @@ function createPhotoStore(dataDir = resolveDataDir()) {
     && path.basename(reference).startsWith(`${owner(uid)}-`) && fs.existsSync(file(reference));
   async function save(uid, body, keep = null) {
     if (!uid || !validJpeg(body)) throw new Error('INVALID_PHOTO');
+    if (require('./deleted-identities').isDeleted(uid)) throw new Error('ACCOUNT_DELETED');
     await fs.promises.mkdir(dir, { recursive: true });
     const prefix = `${owner(uid)}-`;
     const reference = `/profile-photos/${prefix}${crypto.randomBytes(16).toString('hex')}.jpg`;
     await fs.promises.writeFile(file(reference), body, { flag: 'wx', mode: 0o600 });
+    if (require('./deleted-identities').isDeleted(uid)) { await fs.promises.rm(file(reference), { force: true }); throw new Error('ACCOUNT_DELETED'); }
     const files = (await fs.promises.readdir(dir)).filter(name => name.startsWith(prefix) && isPhotoPath(`/profile-photos/${name}`));
     const candidates = await Promise.all(files.map(async name => ({ name, time: (await fs.promises.stat(path.join(dir, name))).mtimeMs })));
     const retained = new Set([path.basename(reference), owns(uid, keep) ? path.basename(keep) : null]);
@@ -82,7 +84,7 @@ function mountPhotoRoutes(app, { verifyIdToken, social, limiter, getClientIp }) 
   app.get('/profile-photos/:filename', (req, res) => {
     const target = store.file(`/profile-photos/${req.params.filename}`);
     if (!target || !fs.existsSync(target)) return res.sendStatus(404);
-    res.set({ 'Content-Type': 'image/jpeg', 'X-Content-Type-Options': 'nosniff', 'Cache-Control': 'public, max-age=86400' });
+    res.set({ 'Content-Type': 'image/jpeg', 'X-Content-Type-Options': 'nosniff', 'Cache-Control': 'no-store' });
     res.sendFile(target);
   });
   return store;

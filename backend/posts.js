@@ -52,6 +52,7 @@ function commentToClient(c, viewerId) {
 }
 
 function commentVisible(p, c, viewerId) {
+  if (![c.text, c.authorName].every(require('./content-filter').contentAllowed)) return false;
   if (!viewerId) return true;
   if (blockedPair(viewerId, c.authorId)) return false;
   const parent = c.parentId && p.comments.find(root => root.id === c.parentId);
@@ -85,7 +86,7 @@ function getFeed(options = 30) {
   const out = [];
   for (const p of posts) {
     // Retired demos remain available by permalink so real replies are preserved.
-    if (p.isDemo) continue;
+    if (p.isDemo || !publicContentAllowed(p)) continue;
     if (p.reportedBy.length >= REPORT_THRESHOLD) continue;
     if (opts.viewerId && blockedPair(opts.viewerId, p.authorId)) continue;
     if (opts.category && p.category !== opts.category) continue;
@@ -107,6 +108,7 @@ function getPost(postId, viewerId) {
 // same bar as reacting to a post.
 function addPost(clientId, authorName, authorAvatar, category, text, options = {}) {
   if (!clientId) return null;
+  if (![text, authorName, options.question?.prompt, ...(Array.isArray(options.question?.answers) ? options.question.answers : [])].every(require('./content-filter').contentAllowed)) return null;
   const clean = String(text || '').trim().slice(0, MAX_TEXT_LEN);
   if (!clean) return null;
   const question = normalizeQuestion(options.question);
@@ -191,8 +193,9 @@ function normalizeQuestion(q) {
   };
 }
 
+function publicContentAllowed(p) { return [p.text, p.authorName, p.question?.prompt, ...(p.question?.answers || [])].every(require('./content-filter').contentAllowed); }
 function visible(id, viewerId) {
-  return posts.find(p => p.id === id && p.reportedBy.length < REPORT_THRESHOLD && (!viewerId || !blockedPair(viewerId, p.authorId)));
+  return posts.find(p => publicContentAllowed(p) && p.id === id && p.reportedBy.length < REPORT_THRESHOLD && (!viewerId || !blockedPair(viewerId, p.authorId)));
 }
 function getComments(id, viewerId) {
   const p = visible(id, viewerId);
@@ -200,6 +203,7 @@ function getComments(id, viewerId) {
 }
 
 function addComment(id, uid, name, avatar, text, parentId = null) {
+  if (![text, name].every(require('./content-filter').contentAllowed)) return null;
   const p = visible(id, uid);
   const clean = typeof text === 'string' ? text.trim().slice(0, 300) : '';
   if (!p || !uid || !clean) return null;
@@ -254,4 +258,15 @@ function answerQuestion(id, index, viewerId) {
   };
 }
 
-module.exports = { getPost, getFeed, addPost, toggleReaction, reportPost, getComments, addComment, toggleCommentReaction, seedStarterPosts, answerQuestion, normalizeQuestion };
+function deleteUser(uid) {
+  posts = posts.filter(p => p.authorId !== uid);
+  for (const p of posts) {
+    p.reactedBy = p.reactedBy.filter(id => id !== uid);
+    p.reportedBy = p.reportedBy.filter(id => id !== uid);
+    const removed = new Set(p.comments.filter(c => c.authorId === uid).map(c => c.id));
+    p.comments = p.comments.filter(c => !removed.has(c.id) && !removed.has(c.parentId));
+    for (const c of p.comments) c.reactedBy = c.reactedBy.filter(id => id !== uid);
+  }
+  persist();
+}
+module.exports = { deleteUser, getPost, getFeed, addPost, toggleReaction, reportPost, getComments, addComment, toggleCommentReaction, seedStarterPosts, answerQuestion, normalizeQuestion };

@@ -181,7 +181,8 @@ function createAsyncChallenges({
       throw Error('ROUND_NOT_EXPIRED');
     return state(run, p, finishRound(run, p, index));
   }
-  return { create, play, answer, flush: persist.flush };
+  function deleteUser(uid) { for (const [id, run] of runs) if (run.players.some(p => p.id === uid)) runs.delete(id); persist(); }
+  return { create, play, answer, deleteUser, flush: persist.flush };
 }
 function recordCompleted(run) {
   const social = require('./social'),

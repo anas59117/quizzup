@@ -10,6 +10,7 @@
 const crypto = require('crypto');
 const { verifyGuestToken, isGuestToken } = require('./guest-auth');
 const { canonicalForFirebase } = require('./account-links');
+const deleted = require('./deleted-identities');
 
 const API_KEY = process.env.FIREBASE_API_KEY;
 const LOOKUP_URL = 'https://identitytoolkit.googleapis.com/v1/accounts:lookup';
@@ -103,7 +104,8 @@ async function verifyIdToken(idToken) {
   }
 
   const firebaseUid = await verifyFirebaseIdToken(idToken);
-  return firebaseUid ? canonicalForFirebase(firebaseUid) : null;
+  const canonicalUid = firebaseUid && canonicalForFirebase(firebaseUid);
+  return firebaseUid && !deleted.isDeleted(firebaseUid) && !deleted.isDeleted(canonicalUid) ? canonicalUid : null;
 }
 
 function sweepCache() {
@@ -114,6 +116,11 @@ function sweepCache() {
 }
 
 module.exports = {
+  async isDeletedToken(token) { const uid = isGuestToken(token) ? verifyGuestToken(token, Date.now(), true) : await verifyFirebaseIdToken(token); return !!uid && (deleted.isDeleted(uid) || deleted.isDeleted(canonicalForFirebase(uid))); },
+  revokeFirebaseIdentity(uid) { for (const [key, entry] of cache) if (entry.uid === uid) cache.delete(key); },
+  recentFirebaseLogin(token, now = Date.now()) {
+    try { const p = JSON.parse(Buffer.from(token.split('.')[1], 'base64url')); return Number.isFinite(p.auth_time) && p.auth_time * 1000 <= now + 60000 && now - p.auth_time * 1000 <= 5 * 60 * 1000; } catch { return false; }
+  },
   verifyIdToken,
   verifyFirebaseIdToken,
   sweepCache,

@@ -19,7 +19,9 @@ const game = require('./game');
 const RateLimiter = require('./rate-limit');
 const { getClientIp } = require('./client-ip');
 const { flushAllJsonWriters } = require('./json-writer');
-const { verifyIdToken, verifyFirebaseIdToken, sweepCache } = require('./auth');
+const { verifyIdToken, verifyFirebaseIdToken, sweepCache, revokeFirebaseIdentity, recentFirebaseLogin, isDeletedToken } = require('./auth');
+const deleted = require('./deleted-identities');
+const { contentAllowed } = require('./content-filter');
 const { issueOrRefreshGuestToken, verifyGuestToken } = require('./guest-auth');
 const { linkFirebaseIdentity, unlinkByCanonical } = require('./account-links');
 const stats = require('./stats');
@@ -209,8 +211,8 @@ async function handleIdentify(ws, data, state) {
   // Verification can outlive the identification deadline or a network close.
   // Never register presence or recover a game onto an unusable transport.
   if (ws.readyState !== 1) return;
-  if (!uid) {
-    game.send(ws, { type: 'auth_required', code: 'INVALID_TOKEN' });
+  if (!uid || deleted.isDeleted(uid)) {
+    game.send(ws, { type: 'auth_required', code: await isDeletedToken(data.idToken) ? 'ACCOUNT_DELETED' : 'INVALID_TOKEN' });
     return;
   }
   // Recovery runs during identify, before a gameplay join can arrive.
@@ -226,6 +228,7 @@ async function handleIdentify(ws, data, state) {
   }
 
   const persistedProfile = social.profileOf(uid);
+  if (!contentAllowed(persistedProfile?.name || requestedName)) { game.send(ws, { type: 'profile_update_failed', code: 'CONTENT_NOT_ALLOWED' }); return; }
   state.name = persistedProfile?.name || requestedName;
   state.avatar = ownedAvatar(persistedProfile?.avatar || data.avatar, uid, state.avatar);
 
@@ -418,6 +421,7 @@ function handleFeed(ws, data, state) {
       !allowAction(actionLimiters.postCreate, clientId, ws, 'POST_RATE_LIMITED')
     )
       return true;
+    if (![data.text, data.question?.prompt, ...(Array.isArray(data.question?.answers) ? data.question.answers : [])].every(contentAllowed)) { game.send(ws, { type: 'community_error', action: data.type, code: 'CONTENT_NOT_ALLOWED' }); return true; }
     const category =
       typeof data.category === 'string' &&
       Object.prototype.hasOwnProperty.call(CATEGORIES, data.category)
@@ -475,6 +479,7 @@ function handleFeed(ws, data, state) {
       });
       return true;
     }
+    if (data.type === 'post_comment' && !contentAllowed(data.text)) { game.send(ws, { type: 'community_error', action: data.type, code: 'CONTENT_NOT_ALLOWED' }); return true; }
     const postId = String(data.postId || '');
     const result =
       data.type === 'post_comments'
@@ -707,6 +712,7 @@ async function handleMessaging(ws, data, state) {
         clientMessageId: data.clientMessageId,
       });
       await messaging.flush();
+      if (deleted.isDeleted(uid) || deleted.isDeleted(targetId)) return true;
       game.send(ws, { type: 'dm_sent', message });
       game.send(social.getWs(targetId), { type: 'dm', message });
     }
@@ -738,6 +744,7 @@ async function handleMessaging(ws, data, state) {
       await Promise.all([
         messaging.flush(), challenges.flush(), asyncChallenges.flush(),
       ]);
+      if (deleted.isDeleted(uid) || deleted.isDeleted(targetId)) return true;
       game.send(ws, { type: 'dm_sent', message });
       game.send(social.getWs(targetId), { type: 'dm', message });
       for (const id of [uid, targetId])
@@ -822,6 +829,7 @@ function handleSocial(ws, data, state) {
       return true;
     }
 
+    if (!contentAllowed(data.name)) { game.send(ws, { type: 'profile_update_failed', code: 'CONTENT_NOT_ALLOWED' }); return true; }
     const name = cleanDisplayName(data.name, state.name);
     if (isPhotoPath(data.avatar) && !photoStore.owns(clientId, data.avatar)) {
       game.send(ws, { type: 'profile_update_failed', code: 'INVALID_PHOTO' });
@@ -1111,6 +1119,7 @@ function handleGameplay(ws, data, state) {
       game.send(ws, { type: 'already_playing' });
       return true;
     }
+    if (!contentAllowed(data.name)) { game.send(ws, { type: 'profile_update_failed', code: 'CONTENT_NOT_ALLOWED' }); return true; }
     state.name = cleanDisplayName(data.name, state.name);
     const avatar = gameplayAvatar(data, state);
     const categoryKey = validCategoryKey(data.category);
@@ -1128,6 +1137,7 @@ function handleGameplay(ws, data, state) {
       game.send(ws, { type: 'already_playing' });
       return true;
     }
+    if (!contentAllowed(data.name)) { game.send(ws, { type: 'profile_update_failed', code: 'CONTENT_NOT_ALLOWED' }); return true; }
     state.name = cleanDisplayName(data.name, state.name);
     const avatar = gameplayAvatar(data, state);
     const categoryKey = validCategoryKey(data.category);
@@ -1205,6 +1215,7 @@ function handleGameplay(ws, data, state) {
       game.send(ws, { type: 'already_playing' });
       return true;
     }
+    if (!contentAllowed(data.name)) { game.send(ws, { type: 'profile_update_failed', code: 'CONTENT_NOT_ALLOWED' }); return true; }
     state.name = cleanDisplayName(data.name, state.name);
     const avatar = gameplayAvatar(data, state);
     const categoryKey = validCategoryKey(data.category);
@@ -1250,6 +1261,7 @@ function handleGameplay(ws, data, state) {
     if (room.players.some(player => userReports.blockedPair(player.clientId, state.clientId))) {
       game.send(ws, { type: 'room_unavailable' }); return true;
     }
+    if (!contentAllowed(data.name)) { game.send(ws, { type: 'profile_update_failed', code: 'CONTENT_NOT_ALLOWED' }); return true; }
     state.name = cleanDisplayName(data.name, state.name);
     const avatar = gameplayAvatar(data, state);
     room.players.push({
@@ -1382,6 +1394,7 @@ wss.on('connection', (ws, req) => {
     let data;
     try { data = JSON.parse(raw); } catch { return; }
     if (!data || typeof data.type !== 'string') return;
+    if (state.clientId && deleted.isDeleted(state.clientId)) { game.send(ws, { type: 'auth_required', code: 'ACCOUNT_DELETED' }); ws.close(1008, 'Account deleted'); return; }
 
     activeMessageHandlers++;
     try {
@@ -1488,7 +1501,7 @@ app.post('/auth/link-google', async (req, res) => {
     if (!res.destroyed) res.status(503).json({ code: 'SERVER_RESTARTING' });
     return;
   }
-  if (!firebaseUid) {
+  if (!firebaseUid || deleted.isDeleted(firebaseUid)) {
     res.status(401).json({ code: 'INVALID_FIREBASE_TOKEN' });
     return;
   }
@@ -1503,46 +1516,60 @@ app.post('/auth/link-google', async (req, res) => {
   res.json({ ok: true, uid: guestUid });
 });
 
-// Account deletion — Apple App Store Review Guideline 5.1.1(v).
-// Authenticates via Firebase ID token, resolves the canonical clientId,
-// then wipes every persisted data store that holds per-user data.
+// Resumable erasure: persist revocation before cancelling sessions or deleting data.
+const deletionJobs = new Map();
+function cancelIdentitySessions(uid) {
+  game.cancelForIdentity(uid);
+  for (let i = waitingPlayers.length - 1; i >= 0; i--) if (waitingPlayers[i].clientId === uid) waitingPlayers.splice(i, 1);
+  leaveRoomByClientId(uid);
+  pendingClients.delete(uid);
+  for (const ws of wss.clients) if (ws.socialState?.clientId === uid) {
+    game.send(ws, { type: 'auth_required', code: 'ACCOUNT_DELETED' });
+    ws.socialState.clientId = null;
+    ws.close(1008, 'Account deleted');
+  }
+}
+async function eraseAccount(record) {
+  if (record.done) return;
+  const uid = record.canonicalId;
+  if (deletionJobs.has(uid)) return deletionJobs.get(uid);
+  const job = (async () => {
+    await deleted.flush();
+    for (const firebaseId of record.firebaseIds) revokeFirebaseIdentity(firebaseId);
+    for (const identity of new Set([uid, ...record.firebaseIds])) {
+      cancelIdentitySessions(identity);
+      for (const store of [social, stats, topicStats, notifications, follows, matchHistory, posts, messaging, challenges, asyncChallenges, userReports]) store.deleteUser(identity);
+      await require('./erase-account-files').eraseUploads(identity);
+    }
+    unlinkByCanonical(uid);
+    await flushAllJsonWriters();
+    deleted.complete(record);
+    await deleted.flush();
+  })().finally(() => deletionJobs.delete(uid));
+  deletionJobs.set(uid, job);
+  return job;
+}
 app.post('/auth/delete-account', async (req, res) => {
-  const ip = getClientIp(req);
-  if (!accountLinkLimiter.check(ip)) {
-    res.status(429).json({ code: 'RATE_LIMITED' });
-    return;
-  }
-
+  if (!accountLinkLimiter.check(getClientIp(req))) return res.status(429).json({ code: 'RATE_LIMITED' });
   const token = authorizationBearer(req);
-  if (!token) {
-    res.status(401).json({ code: 'MISSING_TOKEN' });
-    return;
-  }
-
-  const firebaseUid = await verifyFirebaseIdToken(token);
-  if (shuttingDown || res.destroyed) {
-    if (!res.destroyed) res.status(503).json({ code: 'SERVER_RESTARTING' });
-    return;
-  }
-  if (!firebaseUid) {
-    res.status(401).json({ code: 'INVALID_TOKEN' });
-    return;
-  }
-
-  // Resolve the canonical clientId (may be the firebaseUid itself or a linked guest uid)
-  const { canonicalForFirebase } = require('./account-links');
-  const clientId = canonicalForFirebase(firebaseUid);
-
-  // Wipe all per-user data stores
-  social.deleteUser(clientId);
-  stats.deleteUser(clientId);
-  notifications.deleteUser(clientId);
-  follows.deleteUser(clientId);
-  matchHistory.deleteUser(clientId);
-  unlinkByCanonical(clientId);
-
-  res.set('Cache-Control', 'no-store');
-  res.json({ ok: true });
+  if (!token) return res.status(401).json({ code: 'MISSING_TOKEN' });
+  try {
+    let record = deleted.receipt(token);
+    if (!record) {
+      const firebaseUid = await verifyFirebaseIdToken(token);
+      if (!firebaseUid) return res.status(401).json({ code: 'INVALID_TOKEN' });
+      if (shuttingDown || res.destroyed) return res.destroyed ? undefined : res.status(503).json({ code: 'SERVER_RESTARTING' });
+      record = deleted.forIdentity(firebaseUid);
+      if (!record && !recentFirebaseLogin(token)) return res.status(401).json({ code: 'RECENT_LOGIN_REQUIRED' });
+      const links = require('./account-links');
+      const uid = record?.canonicalId || links.canonicalForFirebase(firebaseUid);
+      record = deleted.begin(uid, [...links.firebaseIdsForCanonical(uid), firebaseUid], token);
+    }
+    await eraseAccount(record);
+    await deleted.flush();
+    await require('./erase-account-files').eraseStoreBackups();
+    res.set('Cache-Control', 'no-store').json({ ok: true });
+  } catch { if (!res.destroyed) res.status(503).json({ code: 'STORAGE_UNAVAILABLE' }); }
 });
 
 // --- User report & block (Guideline 1.2) ---

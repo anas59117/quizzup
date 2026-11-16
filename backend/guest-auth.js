@@ -50,7 +50,7 @@ function issueGuestToken(uid = newGuestUid(), now = Date.now()) {
   };
 }
 
-function verifyGuestToken(token, now = Date.now()) {
+function verifyGuestToken(token, now = Date.now(), allowDeleted = false) {
   const secret = getSecret();
   if (!secret || typeof token !== 'string') return null;
 
@@ -76,7 +76,7 @@ function verifyGuestToken(token, now = Date.now()) {
     if (!Number.isFinite(payload?.iat) || !Number.isFinite(payload?.exp)) return null;
     if (payload.iat > nowSeconds + 60) return null;
     if (payload.exp <= nowSeconds) return null;
-    return payload.sub;
+    return !allowDeleted && require('./deleted-identities').isDeleted(payload.sub) ? null : payload.sub;
   } catch {
     return null;
   }

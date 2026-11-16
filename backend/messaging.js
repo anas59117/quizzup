@@ -136,7 +136,9 @@ function createMessaging({
         if (m.challenge?.id === challenge.id) m.challenge = { ...challenge };
     persist();
   }
+  function deleteUser(uid) { for (const [key, t] of threads) if (t.members.includes(uid)) threads.delete(key); themes.delete(uid); persist(); }
   return {
+    deleteUser,
     send,
     history,
     read,
