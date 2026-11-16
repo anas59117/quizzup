@@ -125,6 +125,24 @@ enum StoreCaptureConfiguration { static let enabled = true }
         let earlier: [String: Any] = ["id":"m0", "fromId":"bob", "toId":"alice", "kind":"text", "text":"Salut", "createdAt":1793919999000]
         try receive(["type":"dm_history", "targetId":"bob", "messages":[earlier], "hasMore":true])
         check(game.messages["bob"]?.map(\.id) == ["m0", "m1"] && game.historyHasMore["bob"] == true, "Earlier history merges without discarding newer confirmed messages")
+        let unaffectedAuth = AuthManager()
+        game.identify(idToken: "capture-fixture", authManager: unaffectedAuth)
+        try receive(answering)
+        game.isStarting = true; game.cancelPending = true; game.rematchWaiting = true
+        try receive(["type":"match_aborted", "code":"ACCOUNT_DELETED"])
+        check(game.stage == .home && game.question == nil && game.roundIntro == nil && game.reveal == nil && game.result == nil,
+              "An aborted match returns the unaffected opponent home without stale round or result UI")
+        check(!game.isStarting && !game.cancelPending && !game.rematchWaiting && !game.answerInputOpen && !game.recoverGameOnIdentify,
+              "An aborted match clears pending match controls and retained recovery")
+        check(!unaffectedAuth.deletionResumed && game.clientId == "alice" && game.connected && game.messages["bob"]?.count == 2,
+              "Opponent account deletion preserves this player's identity, transport and conversations")
+        let abortedClock = game.timeLeft
+        game.refreshRoundClock(at: Date().addingTimeInterval(60))
+        check(game.timeLeft == abortedClock, "The cancelled round clock cannot update after an aborted match")
+        try receive(["type":"game_start", "totalRounds":6, "opponents":[]])
+        try receive(answering)
+        check(game.stage == .question && game.answerInputOpen && game.recoverGameOnIdentify,
+              "The unaffected player can enter a fresh game after cancellation")
         game.conversationOpen = true; game.activeConversation = "bob"
         check(game.recoverGameOnIdentify, "A fresh launch can recover a retained game")
         game.playAgain()

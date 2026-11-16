@@ -271,6 +271,16 @@ final class GameSocket: ObservableObject {
             if conversationOpen { requestInbox() }
         case "queue_cancelled": cancelPending = false; isStarting = false; stage = .home
         case "queue_cancel_failed": cancelPending = false
+        case "match_aborted":
+            // This event concerns the match, not this player's account.
+            stopTimer()
+            if ["join", "solo", "start_room", "rematch"].contains(pendingAction?["type"] as? String ?? "") { pendingAction = nil }
+            cancelPending = false; rematchWaiting = false
+            restoringSession = false; awaitingInitialProfile = false
+            opponents = []; score = 0; timeLeft = 10
+            answersVisible = false; answerInputOpen = false
+            answerAccepted = false; answerPoints = 0; answerCorrect = nil; answerFeedback = nil
+            playAgain()
         case "rematch_waiting", "rematch_starting": rematchWaiting = true
         case "rematch_cancelled", "rematch_unavailable":
             rematchWaiting = false
