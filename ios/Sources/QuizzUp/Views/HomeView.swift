@@ -67,7 +67,9 @@ struct HomeView: View {
         .tint(Theme.accent)
 
         .sheet(isPresented: $showSettings) { NativeSettingsView() }
-        .sheet(isPresented: $showPlay) { NativePlaySheet(category: nil) }
+        .sheet(isPresented: $showPlay, onDismiss: { game.completePlaySheetDismissal() }) {
+            NativePlaySheet(category: nil)
+        }
         .sheet(isPresented: $showRoom) {
             NativeRoomSheet(category: nil, mode: roomMode)
                 .presentationDetents([.medium, .large]).presentationDragIndicator(.visible)

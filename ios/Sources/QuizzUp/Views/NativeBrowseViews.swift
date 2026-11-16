@@ -401,8 +401,7 @@ struct NativePlaySheet: View {
 
     private func start(solo: Bool) {
         guard !game.isStarting else { return }
-        game.soloMode = solo
+        game.queuePlaySheetLaunch(category: category?.key, solo: solo)
         dismiss()
-        if let category { game.startWithCategory(category.key) } else { game.quickMatch() }
     }
 }

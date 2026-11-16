@@ -98,6 +98,7 @@ final class GameSocket: ObservableObject {
     @Published var onboardingLaunch: NativeOnboardingLaunch?
     @Published var onboardingProgressionVisible = false
     @Published var onboardingSyncError: String?
+    var pendingPlaySheetLaunch: NativePlaySheetIntent?
     var recoverGameOnIdentify = true
 
     private var task: URLSessionWebSocketTask?
@@ -294,6 +295,7 @@ final class GameSocket: ObservableObject {
             stage = .waiting
             isStarting = false
         case "game_start":
+            completeWelcomeAfterRealGame()
             recoverGameOnIdentify = true
             privateRoom = nil; roomPending = false; roomError = nil
             if let arr = obj["opponents"], let d = try? JSONSerialization.data(withJSONObject: arr) {
@@ -380,6 +382,7 @@ final class GameSocket: ObservableObject {
             }
         case "game_end":
             if let end = try? decoder.decode(GameEnd.self, from: data) {
+                if end.reason == "complete" { completeWelcomeAfterRealGame() }
                 result = end
                 score = end.finalScore
                 stats = end.stats ?? stats
@@ -590,6 +593,7 @@ final class GameSocket: ObservableObject {
         isStarting = false
         connected = false; cancelPending = false; profileSaving = false
         onboardingLaunch = nil; onboardingProgressionVisible = false
+        pendingPlaySheetLaunch = nil
         restoringSession = false
         roomPending = false; privateRoom = nil; roomError = nil
         inboxLoading = false; historyLoading = false; pendingMessageID = nil

@@ -69,7 +69,9 @@ struct NativeTopicDetail: View {
         }
         .background(tint.ignoresSafeArea())
         .toolbar(.hidden, for: .navigationBar)
-        .sheet(isPresented: $showPlay) { NativePlaySheet(category: category) }
+        .sheet(isPresented: $showPlay, onDismiss: { game.completePlaySheetDismissal() }) {
+            NativePlaySheet(category: category)
+        }
         .sheet(isPresented: $showRanking) { NativeTopicRankingSheet(category: category) }
     }
 

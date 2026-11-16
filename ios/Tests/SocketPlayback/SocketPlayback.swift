@@ -58,8 +58,10 @@ enum StoreCaptureConfiguration { static let enabled = true }
         let tutor = GameSocket()
         let tutorID = "tutorial-\(UUID().uuidString)"
         let otherID = "tutorial-other-\(UUID().uuidString)"
+        let recoveredID = "tutorial-recovered-\(UUID().uuidString)"
+        let bypassID = "tutorial-bypass-\(UUID().uuidString)"
         defer {
-            for id in [tutorID, otherID] {
+            for id in [tutorID, otherID, recoveredID, bypassID] {
                 UserDefaults.standard.removeObject(forKey: "quizzup.onboardingPending.\(id)")
                 UserDefaults.standard.removeObject(forKey: "quizzup.profileComplete.\(id)")
             }
@@ -74,6 +76,16 @@ enum StoreCaptureConfiguration { static let enabled = true }
         try tutorReceive(["type":"stats", "stats":emptyStats])
         check(tutor.stage == .home && tutor.onboarding.showsWelcome,
               "Server-confirmed profile survives reinstall before the first game and invites the new player")
+        tutor.queuePlaySheetLaunch(category: "science", solo: true)
+        check(tutor.onboardingLaunch == nil && !tutor.isStarting,
+              "Selecting a mode only queues intent while the play sheet is dismissing")
+        tutor.completePlaySheetDismissal()
+        check(tutor.onboardingLaunch?.category == "science" && tutor.onboardingLaunch?.solo == true && !tutor.isStarting,
+              "The dismissal callback preserves the chosen solo mode and topic without starting before rules")
+        tutor.onboardingLaunch = nil
+        tutor.completePlaySheetDismissal()
+        check(tutor.onboardingLaunch == nil && !tutor.isStarting,
+              "A cancelled or already drained play sheet cannot start a match")
         tutor.startWithCategory("science")
         check(tutor.onboardingLaunch?.category == "science" && !tutor.isStarting && tutor.stage == .home,
               "First chosen duel waits at real mode rules before any matchmaking request")
@@ -103,6 +115,27 @@ enum StoreCaptureConfiguration { static let enabled = true }
         tutor.resetForSignOut()
         check(tutor.onboarding.server == nil && tutor.onboardingLaunch == nil && tutor.onboarding.pending.isEmpty,
               "Sign out removes all presented help and account-bound in-memory intents")
+        let recoveredTutorial = GameSocket()
+        let endWire: [String: Any] = ["type":"game_end", "finalScore":80, "won":true, "tie":false,
+            "others":[], "leaderboard":[], "reason":"complete", "coins":0, "xp":120,
+            "xpBreakdown":["matchScore":80, "finishBonus":40, "winBonus":0, "xpTotal":120], "stats":playedStats]
+        recoveredTutorial.handle(try JSONSerialization.data(withJSONObject: endWire))
+        check(recoveredTutorial.stage == .finished && !recoveredTutorial.onboardingProgressionVisible,
+              "A recovered final result waits for this account's onboarding eligibility")
+        var recoveredState = onboardingWire
+        recoveredState["status"] = "completed"; recoveredState["profileComplete"] = true
+        recoveredTutorial.handle(try JSONSerialization.data(withJSONObject: ["type":"identified",
+            "profile":["id":recoveredID, "name":"Sam", "avatar":"robot"], "onboarding":recoveredState]))
+        check(recoveredTutorial.onboardingProgressionVisible,
+              "Identifying after a recovered final result reveals its still-unseen progression explanation")
+        let bypassTutorial = GameSocket()
+        var pendingState = recoveredState; pendingState["status"] = "pending"
+        bypassTutorial.handle(try JSONSerialization.data(withJSONObject: ["type":"identified",
+            "profile":["id":bypassID, "name":"Sam", "avatar":"robot"], "onboarding":pendingState]))
+        bypassTutorial.handle(try JSONSerialization.data(withJSONObject: ["type":"game_start", "opponents":[], "totalRounds":6]))
+        check(!bypassTutorial.onboarding.showsWelcome && bypassTutorial.onboarding.pending.contains(.complete)
+              && bypassTutorial.onboarding.server?.status == .pending,
+              "Starting a real game without the invitation dismisses the first-quiz welcome while awaiting saved completion")
         try receive(["type":"identified", "profile":["id":"alice", "name":"Alice", "avatar":"fox"]])
         check(game.clientId == "alice" && game.name == "Alice" && game.avatar == "fox", "Canonical server identity")
         game.roomScreenOpen = true

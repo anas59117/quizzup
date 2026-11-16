@@ -79,3 +79,8 @@ struct NativeOnboardingLaunch: Identifiable {
     var manual = false
     var initialPractice = false
 }
+
+struct NativePlaySheetIntent {
+    let accountID: String?
+    let launch: NativeOnboardingLaunch
+}

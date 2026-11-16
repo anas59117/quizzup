@@ -11,6 +11,10 @@ extension GameSocket {
         onboarding.identify(accountID: clientId, state: decode(object["onboarding"], as: NativeOnboardingState.self), restored: restored)
         onboardingLaunch = nil
         onboardingSyncError = nil
+        if stage == .finished, result?.reason == "complete" {
+            completeWelcomeAfterRealGame()
+            onboardingProgressionVisible = onboarding.needsProgression
+        }
         flushOnboarding()
     }
 
@@ -51,6 +55,26 @@ extension GameSocket {
         guard onboarding.needsRules else { return false }
         onboardingLaunch = NativeOnboardingLaunch(category: category, solo: solo)
         return true
+    }
+
+    func queuePlaySheetLaunch(category: String?, solo: Bool) {
+        guard !isStarting else { return }
+        pendingPlaySheetLaunch = NativePlaySheetIntent(accountID: clientId,
+            launch: NativeOnboardingLaunch(category: category, solo: solo))
+    }
+
+    func completeWelcomeAfterRealGame() {
+        if onboarding.showsWelcome { updateOnboarding(.complete) }
+    }
+
+    /// Called by the presenting sheet's onDismiss, after its presentation ends.
+    func completePlaySheetDismissal() {
+        guard let intent = pendingPlaySheetLaunch else { return }
+        pendingPlaySheetLaunch = nil
+        guard intent.accountID == clientId, stage == .home, !isStarting else { return }
+        soloMode = intent.launch.solo
+        if let category = intent.launch.category { startWithCategory(category) }
+        else { quickMatch() }
     }
 
     func beginOnboardingMatch() {

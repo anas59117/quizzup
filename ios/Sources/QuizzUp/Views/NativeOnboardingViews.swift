@@ -7,11 +7,15 @@ struct NativeOnboardingSkip: View {
     @EnvironmentObject var game: GameSocket
     var action: (() -> Void)? = nil
     var body: some View {
-        Button(game.lang == "fr" ? "Passer le tutoriel" : "Skip tutorial") {
+        Button {
             if let action { action() } else { game.updateOnboarding(.skip) }
+        } label: {
+            Text(game.lang == "fr" ? "Passer le tutoriel" : "Skip tutorial")
+                .font(.body.weight(.semibold)).underline()
+                .frame(maxWidth: .infinity, minHeight: 44)
+                .contentShape(Rectangle())
         }
-        .font(.body.weight(.semibold)).underline()
-        .foregroundColor(Theme.accent).frame(minHeight: 44)
+        .foregroundColor(Theme.accent)
         .buttonStyle(.plain)
     }
 }
@@ -123,6 +127,7 @@ struct NativeOnboardingGuide: View {
             Text(modeSolo
                  ? copy("Tu joues seul : réponds aux questions du thème choisi et découvre ton score à la fin.", "Play on your own: answer questions on your chosen topic and see your score at the end.")
                  : copy("Tu affrontes un autre joueur sur le même quiz. Le meilleur score remporte le duel.", "Face another player on the same quiz. The highest score wins the duel."))
+            Text(copy("La partie compte \(game.totalRounds) manches.", "The game has \(game.totalRounds) rounds."))
             Text(copy("Lis la question, puis choisis une des 4 réponses avant la fin du chrono. Une bonne réponse rapide rapporte davantage de points. Tu verras la bonne réponse après chaque question.", "Read the question, then choose one of 4 answers before the timer ends. A quick correct answer earns more points. The correct answer appears after each question."))
                 .foregroundColor(Theme.muted)
             if !manual {
