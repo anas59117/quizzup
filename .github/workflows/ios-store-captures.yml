@@ -13,7 +13,7 @@ on:
       runner:
         description: 'macOS runner (macos-15 uses Xcode 26.3)'
         type: choice
-        options: [macos-26, macos-15]
+        options: [macos-26, macos-15, macos-15-intel]
         default: macos-26
       visual_review:
         description: 'Capture one French iPhone across the app for visual review'
@@ -49,7 +49,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Select Xcode 26.3 on alternate runner
-        if: inputs.runner == 'macos-15'
+        if: startsWith(inputs.runner, 'macos-15')
         run: sudo xcode-select --switch /Applications/Xcode_26.3.app/Contents/Developer
       - uses: actions/setup-node@v4
         with:
