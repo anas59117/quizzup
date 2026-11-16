@@ -77,6 +77,7 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             QUIZZUP_CAPTURE_CONDITION=STORE_CAPTURE \
             > "$RUNNER_TEMP/ios-capture-build.log" 2>&1 || {
+              grep -n -A 5 -B 3 'error:' "$RUNNER_TEMP/ios-capture-build.log" || true
               tail -100 "$RUNNER_TEMP/ios-capture-build.log"
               exit 1
             }
@@ -89,6 +90,7 @@ jobs:
             -configuration Release -derivedDataPath "$RUNNER_TEMP/ios-capture-build" \
             CODE_SIGNING_ALLOWED=NO \
             > "$RUNNER_TEMP/ios-release-build.log" 2>&1 || {
+              grep -n -A 5 -B 3 'error:' "$RUNNER_TEMP/ios-release-build.log" || true
               tail -100 "$RUNNER_TEMP/ios-release-build.log"
               exit 1
             }

@@ -80,7 +80,12 @@ jobs:
             -destination 'generic/platform=iOS Simulator' \
             -configuration Debug \
             CODE_SIGNING_ALLOWED=NO \
-            | tail -20
+            > "$RUNNER_TEMP/ios-debug-build.log" 2>&1 || {
+              grep -n -A 5 -B 3 'error:' "$RUNNER_TEMP/ios-debug-build.log" || true
+              tail -60 "$RUNNER_TEMP/ios-debug-build.log"
+              exit 1
+            }
+          tail -20 "$RUNNER_TEMP/ios-debug-build.log"
 
   archive:
     needs: build
