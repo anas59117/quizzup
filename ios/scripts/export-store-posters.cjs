@@ -1,5 +1,5 @@
 // Frame verified native captures in the approved continuous marketing artwork.
-// Usage: node export-store-posters.cjs <native-captures-directory> <new-output-directory>
+// Usage: node export-store-posters.cjs <native-captures-directory> <new-output-directory> [--source-profile=key]
 const fs = require('node:fs'), path = require('node:path'), crypto = require('node:crypto');
 const sharp = require(process.env.SHARP_PATH || 'sharp');
 const { chromium } = require(process.env.PLAYWRIGHT_PATH || 'playwright');
@@ -7,6 +7,8 @@ const { profiles } = require('./store-assets.cjs');
 const source = path.resolve(process.argv[2] || 'ios/AppStoreMetadata/screenshots');
 const output = path.resolve(process.argv[3] || 'ios/AppStoreMetadata/posters');
 const manifest = JSON.parse(fs.readFileSync(path.join(source, 'manifest.json'), 'utf8'));
+const sourceProfile = process.argv.find(arg => arg.startsWith('--source-profile='))?.split('=')[1];
+if (sourceProfile && !profiles.some(profile => profile.key === sourceProfile)) throw Error('Unknown native source profile');
 if (manifest.nativeViews !== true) throw Error('Real native simulator captures are required');
 if (fs.existsSync(output)) throw Error('Preserve existing exports; choose a new output directory');
 const template = fs.readFileSync(path.join(__dirname, '../AppStoreMetadata/store-panorama-template.html'), 'utf8');
@@ -35,7 +37,7 @@ const english = [
         for (const [before, after] of english) html = html.replaceAll(before, after);
       }
       for (const screen of ['faceoff', 'question', 'answer', 'result']) {
-        const capture = manifest.captures.find(c => c.language === language && c.profile === profile.key && c.screen === screen);
+        const capture = manifest.captures.find(c => c.language === language && c.profile === (sourceProfile || profile.key) && c.screen === screen);
         if (!capture) throw Error(`Missing native capture ${language}/${screen}`);
         const image = fs.readFileSync(path.join(source, capture.path));
         if (crypto.createHash('sha256').update(image).digest('hex') !== capture.sha256) throw Error(`Changed capture ${capture.path}`);
@@ -55,11 +57,11 @@ const english = [
             .resize(profile.width, profile.height).flatten({ background: '#bd1235' }).removeAlpha().png().toFile(filename);
           const meta = await sharp(filename).metadata();
           if (meta.width !== profile.width || meta.height !== profile.height || meta.hasAlpha) throw Error('Invalid export ' + relative);
-          files.push({ path: relative, nativeProfile: profile.key, width: meta.width, height: meta.height, alpha: meta.hasAlpha });
+          files.push({ path: relative, nativeProfile: sourceProfile || profile.key, width: meta.width, height: meta.height, alpha: meta.hasAlpha });
         }
       }
     }
   } finally { await browser.close(); }
-  fs.writeFileSync(path.join(output, 'verification.json'), JSON.stringify({ nativeCommit: manifest.commit, nativeCaptureDate: manifest.capturedAt, contentLanguage: manifest.contentLanguage, marketingFraming: true, submittedToApple: false, files }, null, 2));
+  fs.writeFileSync(path.join(output, 'verification.json'), JSON.stringify({ nativeCommit: manifest.commit, nativeCaptureDate: manifest.capturedAt, contentLanguage: manifest.contentLanguage, nativeCaptureMatrixStatus: manifest.captureMatrixStatus || 'complete', marketingFraming: true, submittedToApple: false, files }, null, 2));
   console.log(`Verified ${files.length} French/English posters from genuine native captures: ${output}`);
 })().catch(error => { console.error(error.message); process.exitCode = 1; });
