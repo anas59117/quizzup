@@ -23,12 +23,16 @@ on:
         description: 'Review profile and progression on standard and compact iPhones in parallel'
         type: boolean
         default: false
+      onboarding_review:
+        description: 'Review optional onboarding in light and dark mode on one iPhone'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
 
 env:
-  VISUAL_REVIEW: ${{ inputs.visual_review || inputs.profile_review || startsWith(github.ref_name, 'codex/ios-visual-parity-') }}
+  VISUAL_REVIEW: ${{ inputs.visual_review || inputs.profile_review || inputs.onboarding_review || startsWith(github.ref_name, 'codex/ios-visual-parity-') }}
 
 concurrency:
   group: quizzup-store-captures-${{ github.ref }}
@@ -61,7 +65,7 @@ jobs:
       - name: Replay native receiver and reconnect contracts
         run: |
           swiftc -parse-as-library \
-            Sources/QuizzUp/{Models,NativeRoundTimeline,NativeAudioPolicy,NativeSocialModels,Localization,GameSocket,NativeSocialSocket}.swift \
+            Sources/QuizzUp/{Models,NativeRoundTimeline,NativeAudioPolicy,NativeSocialModels,NativeOnboarding,Localization,GameSocket,NativeSocialSocket,NativeOnboardingSocket}.swift \
             Tests/SocketPlayback/SocketPlayback.swift -o "$RUNNER_TEMP/native-socket-playback"
           "$RUNNER_TEMP/native-socket-playback"
       - name: Install XcodeGen
@@ -107,6 +111,9 @@ jobs:
           CAPTURE_ARGS=(--visual-review)
           if [[ "${{ inputs.profile_review }}" == 'true' ]]; then
             CAPTURE_ARGS+=(--profile-review --profile-${{ matrix.profile }})
+          fi
+          if [[ "${{ inputs.onboarding_review }}" == 'true' ]]; then
+            CAPTURE_ARGS+=(--onboarding-review)
           fi
           if [[ "$GITHUB_REF_NAME" == codex/ios-visual-parity-audio-* ]]; then
             CAPTURE_ARGS+=(--duel-audio-review)
