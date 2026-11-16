@@ -30,6 +30,7 @@ enum StoreCaptureConfiguration {
             "thread", "play", "join",
             "room", "profile-edit", "settings-live",
             "profile-help", "profile-friends", "personal-posts", "result-level-up",
+            "onboarding-home", "onboarding-rules", "onboarding-trial", "onboarding-help", "onboarding-progression",
         ]
         guard index + 1 < args.count,
               screens.contains(args[index + 1]),
@@ -154,7 +155,18 @@ enum StoreCaptureConfiguration {
                 ? NativeProgressionSnapshot(level: 4, xpIntoLevel: 2232, xpForLevel: 2400)
                 : NativeProgressionSnapshot(level: 4, xpIntoLevel: 1002, xpForLevel: 2400)
         )
+        if options.screen.hasPrefix("onboarding-") {
+            let state = NativeOnboardingState(version: 1, status: options.screen == "onboarding-home" ? .pending : .completed,
+                rulesSeen: false, communitySeen: false, progressionSeen: false, profileComplete: true)
+            game.onboarding.identify(accountID: "store-demo-alex", state: state)
+            if ["onboarding-rules", "onboarding-trial", "onboarding-help"].contains(options.screen) {
+                game.onboardingLaunch = NativeOnboardingLaunch(category: "science", solo: false,
+                    manual: options.screen == "onboarding-help", initialPractice: options.screen == "onboarding-trial")
+            }
+            game.onboardingProgressionVisible = options.screen == "onboarding-progression"
+        }
         switch options.screen {
+        case "onboarding-progression": game.stage = .finished
         case "join": game.stage = .join
         case let screen where screen.hasPrefix("auth"): game.stage = .authGate
         case "waiting": game.stage = .waiting

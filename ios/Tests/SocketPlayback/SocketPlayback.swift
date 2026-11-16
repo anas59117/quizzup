@@ -55,6 +55,54 @@ enum StoreCaptureConfiguration { static let enabled = true }
         fresh.restoringSession = true
         fresh.handle(try JSONSerialization.data(withJSONObject: ["type":"stats", "stats":playedStats]))
         check(fresh.stage == .question && !fresh.restoringSession, "Restored account statistics cannot replace a recovered active duel")
+        let tutor = GameSocket()
+        let tutorID = "tutorial-\(UUID().uuidString)"
+        let otherID = "tutorial-other-\(UUID().uuidString)"
+        defer {
+            for id in [tutorID, otherID] {
+                UserDefaults.standard.removeObject(forKey: "quizzup.onboardingPending.\(id)")
+                UserDefaults.standard.removeObject(forKey: "quizzup.profileComplete.\(id)")
+            }
+        }
+        func tutorReceive(_ object: [String: Any]) throws {
+            tutor.handle(try JSONSerialization.data(withJSONObject: object))
+        }
+        var onboardingWire: [String: Any] = ["version":1, "status":"pending", "rulesSeen":false,
+            "communitySeen":false, "progressionSeen":false, "profileComplete":true]
+        tutor.identify(idToken: "capture-fixture", authManager: AuthManager())
+        try tutorReceive(["type":"identified", "profile":["id":tutorID, "name":"Sam", "avatar":"robot"], "onboarding":onboardingWire])
+        try tutorReceive(["type":"stats", "stats":emptyStats])
+        check(tutor.stage == .home && tutor.onboarding.showsWelcome,
+              "Server-confirmed profile survives reinstall before the first game and invites the new player")
+        tutor.startWithCategory("science")
+        check(tutor.onboardingLaunch?.category == "science" && !tutor.isStarting && tutor.stage == .home,
+              "First chosen duel waits at real mode rules before any matchmaking request")
+        tutor.updateOnboarding(.skip)
+        check(tutor.onboardingLaunch == nil && !tutor.onboarding.offersContext && tutor.onboarding.server?.status == .pending,
+              "Skip immediately exits help while the saved account status still awaits acknowledgement")
+        try tutorReceive(["type":"onboarding_update_failed", "clientId":tutorID, "code":"STORAGE_UNAVAILABLE"])
+        check(tutor.onboarding.pending.contains(.skip) && tutor.onboardingSyncError != nil,
+              "A failed skip remains an unsaved retry intent with an honest error")
+        try tutorReceive(["type":"identified", "profile":["id":tutorID, "name":"Sam", "avatar":"robot"], "onboarding":onboardingWire])
+        check(tutor.onboarding.pending.contains(.skip) && !tutor.onboarding.showsWelcome,
+              "Reconnect retains the same account's unacknowledged skip")
+        onboardingWire["profileComplete"] = false
+        onboardingWire["status"] = "skipped"
+        try tutorReceive(["type":"identified", "profile":["id":otherID, "name":"Player", "avatar":"robot"], "onboarding":onboardingWire])
+        tutor.stage = .authGate; tutor.restoringSession = true
+        try tutorReceive(["type":"stats", "stats":emptyStats])
+        check(tutor.stage == .join && tutor.onboarding.pending.isEmpty,
+              "Switching account clears another user's writes, and skipped tutorial cannot bypass a required pseudo")
+        var stale = onboardingWire; stale["profileComplete"] = true
+        try tutorReceive(["type":"onboarding_updated", "clientId":tutorID, "onboarding":stale])
+        check(tutor.onboarding.server?.profileComplete == false,
+              "An old account's late onboarding acknowledgement cannot complete this account's profile")
+        try tutorReceive(["type":"profile_updated", "profile":["id":otherID, "name":"Sam", "avatar":"robot"], "onboarding":stale])
+        check(tutor.stage == .home && tutor.onboarding.server?.profileComplete == true && !tutor.onboarding.offersContext,
+              "A skipped account can complete its required pseudo without restarting the tutorial")
+        tutor.resetForSignOut()
+        check(tutor.onboarding.server == nil && tutor.onboardingLaunch == nil && tutor.onboarding.pending.isEmpty,
+              "Sign out removes all presented help and account-bound in-memory intents")
         try receive(["type":"identified", "profile":["id":"alice", "name":"Alice", "avatar":"fox"]])
         check(game.clientId == "alice" && game.name == "Alice" && game.avatar == "fox", "Canonical server identity")
         game.roomScreenOpen = true

@@ -43,6 +43,9 @@ struct ContentView: View {
                 NativeAudioToggle().padding(.trailing, 16).padding(.top, 6)
             }
         }
+        .sheet(item: $game.onboardingLaunch) { launch in
+            NativeOnboardingGuide(solo: launch.solo, manual: launch.manual, initialPractice: launch.initialPractice)
+        }
         .onAppear {
             game.loadCategories()
             audio.setForeground(scenePhase == .active)

@@ -16,6 +16,9 @@ struct ResultView: View {
                 VStack(alignment: .leading, spacing: 0) {
                     heading(result)
                     scoreboard(result).padding(.top, 20)
+                    if game.onboardingProgressionVisible, game.onboarding.needsProgression {
+                        NativeOnboardingProgression(result: result).padding(.top, 16)
+                    }
                     if result.coins > 0 { rewardStrip(result).padding(.top, 10) }
                     if let stats = result.stats {
                         ResultLevelProgress(before: result.progressionBefore, stats: stats, french: game.lang == "fr")

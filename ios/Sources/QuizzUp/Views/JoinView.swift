@@ -15,7 +15,7 @@ struct JoinView: View {
                 }.padding(.bottom, 32)
                 NativePlayerPortrait(avatar: game.avatar, size: 88)
                 Text(fr ? "Prêt à faire ton retour ?" : "Ready for your comeback?")
-                    .font(.system(size: 30, weight: .bold)).multilineTextAlignment(.center)
+                    .font(.largeTitle.bold()).multilineTextAlignment(.center)
                 Text(fr ? "Choisis le nom que tes adversaires verront." : "Choose the name your opponents will see.")
                     .font(.body).multilineTextAlignment(.center)
                 TextField(game.t("usernamePlaceholder"), text: $game.name)

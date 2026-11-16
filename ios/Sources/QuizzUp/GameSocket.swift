@@ -94,6 +94,10 @@ final class GameSocket: ObservableObject {
     @Published var cancelPending = false
     @Published var rematchWaiting = false
     @Published var profileSaving = false
+    @Published var onboarding = NativeOnboardingSession()
+    @Published var onboardingLaunch: NativeOnboardingLaunch?
+    @Published var onboardingProgressionVisible = false
+    @Published var onboardingSyncError: String?
     var recoverGameOnIdentify = true
 
     private var task: URLSessionWebSocketTask?
@@ -181,7 +185,7 @@ final class GameSocket: ObservableObject {
         restoringSession = false
         guard stage == .authGate else { awaitingInitialProfile = false; return }
         let completed = UserDefaults.standard.bool(forKey: "quizzup.profileComplete.\(clientId)")
-        if completed || stats.games > 0 {
+        if onboarding.server?.profileComplete ?? (completed || stats.games > 0) {
             markProfileComplete()
             stage = .home
         } else {
@@ -262,6 +266,7 @@ final class GameSocket: ObservableObject {
                 if let value = profile["avatar"] as? String { avatar = value }
                 persistIdentity()
             }
+            identifyOnboarding(obj)
             if obj["reconnected"] as? Bool == true {
                 isStarting = false
                 if ["join", "solo"].contains(pendingAction?["type"] as? String ?? "") { pendingAction = nil }
@@ -379,6 +384,7 @@ final class GameSocket: ObservableObject {
                 score = end.finalScore
                 stats = end.stats ?? stats
                 if let raw = obj["stats"] as? [String: Any] { updateStats(raw) }
+                onboardingProgressionVisible = end.reason == "complete" && onboarding.needsProgression
                 stage = .finished
                 isStarting = false
                 stopTimer()
@@ -456,7 +462,7 @@ final class GameSocket: ObservableObject {
     }
 
     func startWithCategory(_ key: String) {
-        guard !isStarting else { return }
+        guard !isStarting, !offerOnboardingRules(category: key, solo: soloMode) else { return }
         recoverGameOnIdentify = false
         isStarting = true
         persistIdentity()
@@ -464,7 +470,7 @@ final class GameSocket: ObservableObject {
     }
 
     func quickMatch() {
-        guard !isStarting else { return }
+        guard !isStarting, !offerOnboardingRules(category: nil, solo: soloMode) else { return }
         recoverGameOnIdentify = false
         isStarting = true
         persistIdentity()
@@ -583,6 +589,7 @@ final class GameSocket: ObservableObject {
         task = nil
         isStarting = false
         connected = false; cancelPending = false; profileSaving = false
+        onboardingLaunch = nil; onboardingProgressionVisible = false
         restoringSession = false
         roomPending = false; privateRoom = nil; roomError = nil
         inboxLoading = false; historyLoading = false; pendingMessageID = nil
@@ -597,6 +604,8 @@ final class GameSocket: ObservableObject {
         authManager = nil
         awaitingInitialProfile = false
         pendingAction = nil; clientId = nil; stats = nil
+        onboarding = NativeOnboardingSession(); onboardingLaunch = nil
+        onboardingProgressionVisible = false; onboardingSyncError = nil
         activeConversation = nil; conversationOpen = false; lastSentMessageID = nil
         friends = []; friendRequests = []; conversations = []; messages = [:]
         historyHasMore = [:]

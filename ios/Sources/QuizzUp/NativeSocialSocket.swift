@@ -11,6 +11,8 @@ extension GameSocket {
     func handleSocial(_ type: String, object: [String: Any]) -> Bool {
         if handleCommunity(type, object: object) { return true }
         switch type {
+        case "onboarding_updated": receiveOnboarding(object)
+        case "onboarding_update_failed": onboardingUpdateFailed(object)
         case "stats":
             if let raw = object["stats"] as? [String: Any] {
                 updateStats(raw)
@@ -19,6 +21,7 @@ extension GameSocket {
         case "profile_updated":
             if let raw = object["profile"] as? [String: Any] {
                 name = raw["name"] as? String ?? name; avatar = raw["avatar"] as? String ?? avatar
+                receiveOnboarding(object)
                 persistIdentity(); profileSaving = false
                 if stage == .join { markProfileComplete(); stage = .home }
             }

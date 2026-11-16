@@ -311,6 +311,11 @@ private struct NativeHomeContent: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
+                if game.onboarding.showsWelcome {
+                    NativeOnboardingWelcome(onChoose: onSeeAll)
+                } else if game.onboarding.needsCommunity {
+                    NativeOnboardingCommunityHint(onOpen: onCommunity)
+                }
                 VStack(alignment: .leading, spacing: 9) {
                     HStack {
                         NativeSectionTitle(title: personal.isEmpty ? (fr ? "Pour commencer" : "Get started") : (fr ? "Mes thèmes" : "My themes"))
