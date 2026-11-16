@@ -1,6 +1,7 @@
 const { cleanAvatar } = require('./sanitize');
 const { trustedStarter } = require('./community-starters');
 const { normalizeProgression } = require('./progression');
+const { normalizeOnboarding } = require('./onboarding');
 
 function nullDict() {
   return Object.create(null);
@@ -114,6 +115,7 @@ function normalizeSocialStore(value, { maxFriends = 200, maxRequests = 100 } = {
       profiles[id] = {
         name: String(raw.name || 'Player').trim().slice(0, 20) || 'Player',
         avatar: cleanAvatar(raw.avatar),
+        onboarding: normalizeOnboarding(raw.onboarding),
       };
     }
   }

@@ -157,6 +157,7 @@ const actionLimiters = {
   friendRequest: new RateLimiter(60 * 1000, 10),
   friendMutation: new RateLimiter(60 * 1000, 30),
   profileUpdate: new RateLimiter(60 * 1000, 8),
+  onboardingUpdate: new RateLimiter(60 * 1000, 30),
   dm: new RateLimiter(10 * 1000, 20),
   gameChat: new RateLimiter(10 * 1000, 12),
   roomJoin: new RateLimiter(30 * 1000, 10),
@@ -299,7 +300,7 @@ async function handleIdentify(ws, data, state) {
   }
 
   social.setOnline(state.clientId, ws, state.name, state.avatar);
-  game.send(ws, { type: 'identified', reconnected, roomReconnected, profile: social.profileOf(uid) });
+  game.send(ws, { type: 'identified', clientId: uid, reconnected, roomReconnected, profile: social.profileOf(uid), onboarding: social.onboardingOf(uid) });
   challenges.expire();
   game.send(ws, { type: 'conversations_list', ...messaging.summaries(state.clientId) });
   game.send(ws, { type: 'friends_list', friends: social.getFriendsList(state.clientId) });
@@ -816,7 +817,25 @@ async function handleMessaging(ws, data, state) {
   return true;
 }
 
-function handleSocial(ws, data, state) {
+async function handleOnboarding(ws, data, state) {
+  if (data.type !== 'onboarding_update') return false;
+  const { clientId } = state;
+  const fail = code => game.send(ws, { type: 'onboarding_update_failed', ...(clientId ? { clientId } : {}), code });
+  if (!clientId) { fail('AUTH_REQUIRED'); return true; }
+  if (!actionLimiters.onboardingUpdate.check(clientId)) { fail('ONBOARDING_RATE_LIMITED'); return true; }
+  if (Object.keys(data).some(key => key !== 'type' && key !== 'action')) { fail('INVALID_PAYLOAD'); return true; }
+  const result = social.updateOnboarding(clientId, data.action);
+  if (!result.ok) { fail(result.code); return true; }
+  try {
+    await social.flush();
+    if (ws.readyState === 1 && state.clientId === clientId && !deleted.isDeleted(clientId)) {
+      game.send(ws, { type: 'onboarding_updated', clientId, onboarding: social.onboardingOf(clientId) });
+    }
+  } catch { fail('STORAGE_UNAVAILABLE'); }
+  return true;
+}
+
+async function handleSocial(ws, data, state) {
   const { clientId } = state;
   if (handleFollow(ws, data, state)) return true;
 
@@ -839,8 +858,11 @@ function handleSocial(ws, data, state) {
     state.name = name;
     state.avatar = avatar;
     const profile = social.updateProfile(clientId, name, avatar);
-
-    game.send(ws, { type: 'profile_updated', profile });
+    social.completeOnboardingProfile(clientId);
+    try { await social.flush(); }
+    catch { game.send(ws, { type: 'profile_update_failed', code: 'STORAGE_UNAVAILABLE' }); return true; }
+    if (ws.readyState !== 1 || state.clientId !== clientId || deleted.isDeleted(clientId)) return true;
+    game.send(ws, { type: 'profile_updated', profile, onboarding: social.onboardingOf(clientId) });
     social.getFriendsList(clientId).forEach((friend) => {
       const friendWs = social.getWs(friend.id);
       if (friendWs) {
@@ -1411,7 +1433,8 @@ wss.on('connection', (ws, req) => {
         return;
       }
       if (await handleMessaging(ws, data, state)) return;
-      if (handleSocial(ws, data, state)) return;
+      if (await handleOnboarding(ws, data, state)) return;
+      if (await handleSocial(ws, data, state)) return;
       if (handleLeaderboard(ws, data, state)) return;
       if (handleShop(ws, data, state)) return;
       if (handleFeed(ws, data, state)) return;

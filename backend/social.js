@@ -6,6 +6,7 @@ const { createJsonWriter, readJsonFileSync } = require('./json-writer');
 const { getStorePath } = require('./store-path');
 const { normalizeSocialStore } = require('./store-normalize');
 const { blockedPair } = require('./user-reports');
+const { normalizeOnboarding, applyOnboardingAction } = require('./onboarding');
 
 const STORE = getStorePath('social.json');
 const MAX_FRIENDS = 200;
@@ -19,7 +20,7 @@ const savedSocial = normalizeSocialStore(
   ),
   { maxFriends: MAX_FRIENDS, maxRequests: MAX_PENDING_REQUESTS }
 );
-let profiles = savedSocial.profiles; // clientId -> { name, avatar }
+let profiles = savedSocial.profiles; // clientId -> { name, avatar, onboarding (private) }
 let friends = savedSocial.friends; // clientId -> [clientId, ...]
 let requests = savedSocial.requests; // clientId -> incoming requester ids
 
@@ -33,15 +34,36 @@ const online = new Map(); // clientId -> ws
 function setOnline(clientId, ws, name, avatar) {
   if (!clientId || require('./deleted-identities').isDeleted(clientId)) return;
   online.set(clientId, ws);
-  profiles[clientId] = { name, avatar };
+  profiles[clientId] = { name, avatar, onboarding: profiles[clientId]?.onboarding || normalizeOnboarding(null, 'pending') };
   persist();
 }
 
 function updateProfile(clientId, name, avatar) {
   if (!clientId || require('./deleted-identities').isDeleted(clientId)) return null;
-  profiles[clientId] = { name, avatar };
+  profiles[clientId] = { name, avatar, onboarding: profiles[clientId]?.onboarding || normalizeOnboarding(null, 'pending') };
   persist();
   return profileOf(clientId);
+}
+
+function onboardingOf(clientId) {
+  const state = profiles[clientId]?.onboarding;
+  return state ? { ...state } : null;
+}
+
+function updateOnboarding(clientId, action) {
+  if (!profiles[clientId] || require('./deleted-identities').isDeleted(clientId)) return { ok: false, code: 'ACCOUNT_DELETED' };
+  const result = applyOnboardingAction(profiles[clientId].onboarding, action);
+  if (result.ok) {
+    profiles[clientId].onboarding = result.onboarding;
+    persist();
+  }
+  return result;
+}
+
+function completeOnboardingProfile(clientId) {
+  if (!profiles[clientId] || require('./deleted-identities').isDeleted(clientId)) return;
+  profiles[clientId].onboarding = { ...profiles[clientId].onboarding, profileComplete: true };
+  persist();
 }
 
 function setOffline(clientId, ws = null) {
@@ -165,4 +187,5 @@ module.exports = {
   setOnline, updateProfile, setOffline, isOnline, getWs, getAllOnline, areFriends,
   sendRequest, acceptRequest, declineRequest, removeFriend,
   getFriendsList, getPendingRequests, profileOf, deleteUser,
+  onboardingOf, updateOnboarding, completeOnboardingProfile, flush: persist.flush,
 };

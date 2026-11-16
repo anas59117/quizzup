@@ -34,6 +34,7 @@ test('updateProfile persists the authoritative display identity', async () => {
   assert.deepEqual(stored.profiles.guest_profile_test, {
     name: 'Nova',
     avatar: '🦊',
+    onboarding: { version: 1, status: 'pending', rulesSeen: false, communitySeen: false, progressionSeen: false, profileComplete: false },
   });
 });
 
