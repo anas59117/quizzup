@@ -72,7 +72,7 @@ final class AuthManager: NSObject, ObservableObject {
         do {
             try await NativeAccountDeletion.run(
                 reauthenticate: { try await self.reauthenticateForDeletion(firebaseUser, password: password) },
-                token: { try await firebaseUser.getIDTokenForcingRefresh(true) },
+                token: { try await firebaseUser.idTokenForcingRefresh(true) },
                 markPending: {
                     // Persist before sending: a lost HTTP reply must not restore gameplay.
                     self.resumeAccountDeletion()
