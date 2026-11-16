@@ -16,7 +16,7 @@ extension GameSocket {
 
     func onboardingUpdateFailed(_ object: [String: Any]) {
         guard (object["clientId"] as? String).map({ $0 == clientId }) ?? false else { return }
-        onboardingSyncError = lang == "fr" ? "Choix non enregistré. Nouvelle tentative à la reconnexion." : "Choice not saved. Retrying when reconnected."
+        onboardingSyncError = lang == "fr" ? "Choix non enregistrÃ©. Nouvelle tentative Ã  la reconnexion." : "Choice not saved. Retrying when reconnected."
     }
 
     func receiveOnboarding(_ object: [String: Any]) {
