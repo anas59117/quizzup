@@ -53,7 +53,8 @@ enum NativeCatalog {
         .init(id: "manga", french: "Manga & anime", english: "Manga & anime", symbol: "book.closed"),
         .init(id: "music", french: "Musique", english: "Music", symbol: "music.note"),
         .init(id: "sport", french: "Sport", english: "Sport", symbol: "figure.run"),
-        .init(id: "gaming", french: "Jeux vidéo", english: "Gaming", symbol: "gamecontroller")
+        .init(id: "gaming", french: "Jeux vidéo", english: "Gaming", symbol: "gamecontroller"),
+        .init(id: "qui_suis_je", french: "Qui suis-je ?", english: "Who Am I?", symbol: "magnifyingglass")
     ]
     static func entry(for key: String) -> NativeCatalogEntry? { entries[key] }
     static func orderedByPopularity(_ categories: [Category]) -> [Category] {
