@@ -698,7 +698,7 @@ function AppContent() {
         break;
       case 'profile_update_failed':
         clearPending();
-        showToast(t('profileUpdateUnavailable'), 'error');
+        showToast(t(data.code==='CONTENT_NOT_ALLOWED'?'contentNotAllowed':'profileUpdateUnavailable'), 'error');
         break;
       case 'follow_updated':
         players.handleMessage(data);

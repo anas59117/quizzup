@@ -223,7 +223,7 @@ export function useFeed(wsRef, clientId) {
           setError(t('slowDown'));
           break;
         case "community_error":
-          setError(t('actionFailedRetry'));
+          setError(t(data.code==='CONTENT_NOT_ALLOWED'?'contentNotAllowed':'actionFailedRetry'));
           Object.values(requestTimers.current).forEach(clearTimeout);
           setLoading(false);
           pendingRef.current = {};

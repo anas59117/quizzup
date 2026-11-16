@@ -113,6 +113,16 @@ test("my posts ignores foreign broadcasts and stale public-feed responses", () =
   expect(container.textContent).not.toContain('Foreign broadcast');
 });
 
+test("a moderation rejection explains how to retry without acknowledging publication",()=>{
+  act(()=>feed.createPost('music','My draft'));
+  act(()=>feed.handleMessage({type:'community_error',action:'post_create',code:'CONTENT_NOT_ALLOWED'}));
+  expect(feed.error).toContain('Edit');
+  expect(feed.pending.create).toBeFalsy();
+  expect(feed.createdVersion).toBe(0);
+  act(()=>feed.createPost('music','Revised draft'));
+  expect(JSON.parse(socket.current.send.mock.calls.at(-1)[0]).text).toBe('Revised draft');
+});
+
 test("comment reaction broadcasts preserve my selection and update the real count", () => {
   act(() => feed.handleMessage({ type: "post_comments", postId: "p", comments: [
     { id: "c1", authorId: "peer", text: "My take", reactions: 1, reacted: true },

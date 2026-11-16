@@ -493,6 +493,7 @@ export const STRINGS = {
     removalNotConfirmed: 'Retrait non confirmé. Réessaie.',
     connectionRetryShort: 'Connexion indisponible. Réessaie.',
     actionFailedRetry: 'Action impossible. Réessaie, ton brouillon est conservé.',
+    contentNotAllowed: 'Ce contenu ne peut pas être publié. Modifie le texte puis réessaie.',
 },
   en: {
     inviteFriend: 'Invite a friend',
@@ -982,6 +983,7 @@ export const STRINGS = {
     removalNotConfirmed: 'Removal not confirmed. Please retry.',
     connectionRetryShort: 'Connection unavailable. Please retry.',
     actionFailedRetry: 'Unable to complete. Retry; your draft is saved.',
+    contentNotAllowed: 'This content cannot be published. Edit the text and try again.',
 },
   es: {
     legendBack: 'LA LEYENDA HA VUELTO',
@@ -1470,6 +1472,7 @@ export const STRINGS = {
     removalNotConfirmed: 'Eliminación no confirmada. Inténtalo de nuevo.',
     connectionRetryShort: 'Conexión no disponible. Inténtalo de nuevo.',
     actionFailedRetry: 'Acción imposible. Inténtalo de nuevo, tu borrador está guardado.',
+    contentNotAllowed: 'Este contenido no se puede publicar. Edita el texto y vuelve a intentarlo.',
 },
 };
 
