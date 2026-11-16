@@ -16,7 +16,7 @@ const english = [
   ['LE PLAISIR DE SAVOIR. ENSEMBLE.', 'THE JOY OF KNOWING. TOGETHER.'], ['01 / LE FACE-À-FACE', '01 / FACE TO FACE'],
   ['Retrouve la compétition', 'The competition is back'], ['LE DUEL<br><em>REPREND.</em>', 'THE DUEL<br><em>IS BACK.</em>'],
   ['02 / LA QUESTION', '02 / THE QUESTION'], ['Fais parler tes connaissances', 'Put your knowledge to the test'],
-  ['10 SECONDES.<br><em>À TOI DE JOUER.</em>', '10 SECONDS.<br><em>YOUR MOVE.</em>'],
+  ['LE CHRONO<br><em>EST LANCÉ.</em>', 'THE CLOCK<br><em>IS TICKING.</em>'],
   ['03 / LE DÉCLIC', '03 / THE MOMENT'], ['La bonne réponse. Le bon réflexe.', 'The right answer. The right instinct.'],
   ['CHAQUE<br>RÉPONSE <em>COMPTE.</em>', 'EVERY<br>ANSWER <em>COUNTS.</em>'],
   ['04 / LA REVANCHE', '04 / THE REMATCH'], ['La rivalité continue', 'The rivalry continues'], ['ENCORE<br><em>UNE PARTIE ?</em>', 'ONE MORE<br><em>ROUND?</em>'],
