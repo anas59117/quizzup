@@ -1501,6 +1501,10 @@ app.post('/auth/link-google', async (req, res) => {
     if (!res.destroyed) res.status(503).json({ code: 'SERVER_RESTARTING' });
     return;
   }
+  if (deleted.isDeleted(guestUid)) {
+    res.status(401).json({ code: 'INVALID_GUEST_TOKEN' });
+    return;
+  }
   if (!firebaseUid || deleted.isDeleted(firebaseUid)) {
     res.status(401).json({ code: 'INVALID_FIREBASE_TOKEN' });
     return;
@@ -1593,7 +1597,7 @@ async function moderateUser(req, res, action) {
       const session = game.findActiveSessionByClientId(uid) || game.findFinishedSessionByClientId(uid);
       targetId = session?.game.players.find(player => player.id === targetId)?.clientId;
     }
-    if (typeof targetId !== 'string' || !targetId.trim() || targetId.length > 200 || targetId === uid)
+    if (typeof targetId !== 'string' || !targetId.trim() || targetId.length > 200 || targetId === uid || deleted.isDeleted(targetId))
       return res.status(400).json({ code: 'INVALID_TARGET' });
     if (action === 'block') {
       social.removeFriend(uid, targetId);

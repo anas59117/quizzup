@@ -24,5 +24,9 @@ global.fetch = async (url, options) => {
   const token = JSON.parse(options.body).idToken;
   if (!token?.endsWith('.test-signature')) return new Response('{}', { status: 401 });
   const payload = JSON.parse(Buffer.from(token.split('.')[1], 'base64url'));
+  if (payload.sub === 'review-delayed-link-identity' && process.env.TEST_SLOW_FIREBASE_LINK === '1') {
+    process.send?.({ type: 'test-firebase-link-pending' });
+    await new Promise(resolve => process.once('message', message => { if (message.type === 'test-release-firebase-link') resolve(); }));
+  }
   return new Response(JSON.stringify({ users: [{ localId: payload.sub }] }), { status: 200 });
 };

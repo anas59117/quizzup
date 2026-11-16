@@ -11,9 +11,22 @@ const valid = value => object(value) && object(value.identities) && object(value
   && Object.entries(value.identities).every(([key, receiptKey]) => hash(key) && hash(receiptKey) && Object.hasOwn(value.receipts, receiptKey))
   && Object.entries(value.receipts).every(([key, record]) => hash(key) && object(record) && Number.isFinite(record.at)
     && (record.done === true || record.done === false && typeof record.canonicalId === 'string' && Array.isArray(record.firebaseIds) && record.firebaseIds.every(id => typeof id === 'string')));
-const saved = readJsonFileSync(file, empty, valid);
-// Unlike replaceable profile data, corrupt revocation data cannot safely reset.
-if (!require('./storage/runtime').postgres() && [file, `${file}.bak`].some(candidate => require('node:fs').existsSync(candidate)) && saved === empty) throw Error('INVALID_REVOCATION_STORE');
+function readRevocations() {
+  if (require('./storage/runtime').postgres()) return readJsonFileSync(file, empty, valid);
+  // A corrupt primary may contain newer tombstones than its backup. Only a
+  // missing primary (an interrupted atomic rename) permits backup recovery.
+  for (const candidate of [file, `${file}.bak`]) {
+    try {
+      const value = JSON.parse(require('node:fs').readFileSync(candidate, 'utf8'));
+      if (!valid(value)) throw Error('INVALID_REVOCATION_STORE');
+      return value;
+    } catch (error) {
+      if (error.code !== 'ENOENT') throw Error('INVALID_REVOCATION_STORE');
+    }
+  }
+  return empty;
+}
+const saved = readRevocations();
 const identities = Object.assign(Object.create(null), saved.identities || {});
 const receipts = Object.assign(Object.create(null), saved.receipts || {});
 const digest = value => crypto.createHash('sha256').update(String(value)).digest('hex');

@@ -47,6 +47,40 @@ test('deletion erases author data, closes sockets, persists revocation and is id
     assert(!replay.events.some(e => e.type === 'identified'));
   } finally { clients.forEach(c => c.ws.terminate()); await server.close(); }
 });
+test('in-flight Google linking cannot restore an erased guest or add a new Firebase mapping', { timeout: 20000 }, async () => {
+  const guest = 'guest_CCCCCCCCCCCCCCCCCCCCCCCC', secret = 'local-link-race-review-secret-32-characters';
+  const server = await isolatedServer({ FIREBASE_API_KEY: 'local-test-only', GUEST_AUTH_SECRET: secret, TEST_SLOW_FIREBASE_LINK: '1' }, {
+    'account-links': { firebaseToCanonical: { [uid]: guest } },
+  }, false, [path.join(__dirname, 'test-support/deletion-auth.cjs')]);
+  try {
+    const previous = process.env.GUEST_AUTH_SECRET; process.env.GUEST_AUTH_SECRET = secret;
+    const guestBearer = require('./guest-auth').issueGuestToken(guest).token;
+    if (previous === undefined) delete process.env.GUEST_AUTH_SECRET; else process.env.GUEST_AUTH_SECRET = previous;
+    const now = Math.floor(Date.now() / 1000);
+    const firebaseBearer = `e30.${Buffer.from(JSON.stringify({ sub: 'review-delayed-link-identity', exp: now + 3600, auth_time: now })).toString('base64url')}.test-signature`;
+    const pending = new Promise(resolve => { const listen = message => { if (message.type === 'test-firebase-link-pending') { server.child.off('message', listen); resolve(); } }; server.child.on('message', listen); });
+    const linking = fetch(`http://127.0.0.1:${server.port}/auth/link-google`, { method: 'POST', headers: { Authorization: `Bearer ${guestBearer}`, 'X-Firebase-Id-Token': firebaseBearer } });
+    await pending;
+    const deletion = await fetch(`http://127.0.0.1:${server.port}/auth/delete-account`, { method: 'POST', headers: { Authorization: `Bearer ${token()}` } }); assert.equal(deletion.status, 200);
+    server.child.send({ type: 'test-release-firebase-link' });
+    const result = await linking; assert.equal(result.status, 401); assert.equal((await result.json()).code, 'INVALID_GUEST_TOKEN');
+    const links = JSON.parse(fs.readFileSync(path.join(server.dir, 'account-links.json')));
+    assert.deepEqual(links.firebaseToCanonical, {});
+  } finally { await server.close(); }
+});
+test('reporting or blocking a deleted target cannot recreate personal references', { timeout: 20000 }, async () => {
+  const server = await isolatedServer({ FIREBASE_API_KEY: 'local-test-only' }, {}, false, [path.join(__dirname, 'test-support/deletion-auth.cjs')]);
+  try {
+    const deletion = await fetch(`http://127.0.0.1:${server.port}/auth/delete-account`, { method: 'POST', headers: { Authorization: `Bearer ${token()}` } }); assert.equal(deletion.status, 200);
+    const survivor = await (await fetch(`http://127.0.0.1:${server.port}/auth/guest`, { method: 'POST' })).json();
+    for (const action of ['report', 'block']) {
+      const result = await fetch(`http://127.0.0.1:${server.port}/users/${action}`, { method: 'POST', headers: { Authorization: `Bearer ${survivor.token}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ targetId: uid, targetName: 'Deleted Author', reason: 'review' }) });
+      assert.equal(result.status, 400); assert.equal((await result.json()).code, 'INVALID_TARGET');
+    }
+    const reports = fs.readFileSync(path.join(server.dir, 'user-reports.json'), 'utf8');
+    assert(!reports.includes(uid)); assert(!reports.includes('Deleted Author'));
+  } finally { await server.close(); }
+});
 test('failed revocation flush returns 503 and retry completes without delayed-game resurrection', { timeout: 20000 }, async () => {
   const jwt = token(), preload = path.join(__dirname, 'test-support/deletion-auth.cjs');
   const server = await isolatedServer({ FIREBASE_API_KEY: 'local-test-only', TEST_DELETE_FLUSH_FAILURE: '1', TEST_SLOW_QUESTIONS: '1' }, {}, false, [preload]);
