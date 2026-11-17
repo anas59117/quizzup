@@ -51,18 +51,12 @@ struct NativeAvatarTile: View {
     let option: NativeAvatarCatalogue.Option
     let fr: Bool
     var selected = false
-    var lockedPrice: Int? = nil
     var highlight = Theme.accent
 
     var body: some View {
         VStack(spacing: 5) {
             NativePlayerPortrait(avatar: option.id, size: 44, cornerRadius: 12)
-                .opacity(lockedPrice == nil ? 1 : 0.72)
             Text(option.label(fr: fr)).font(.caption.weight(.semibold))
-            if let lockedPrice {
-                Label(fr ? "\(lockedPrice) pièces" : "\(lockedPrice) coins", systemImage: "lock.fill")
-                    .font(.caption2).foregroundColor(Theme.muted)
-            }
         }
         .multilineTextAlignment(.center)
         .frame(maxWidth: .infinity, minHeight: 72)

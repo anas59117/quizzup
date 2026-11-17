@@ -337,7 +337,6 @@ private struct NativeProfileEditor: View {
     private var cleanName: String {
         String(name.split(whereSeparator: \.isWhitespace).joined(separator: " ").prefix(20))
     }
-    private var ownedAvatars: Set<String> { Set(game.stats?.ownedItems ?? []) }
 
     var body: some View {
         NavigationStack {
@@ -366,34 +365,22 @@ private struct NativeProfileEditor: View {
                         }
                     }
                 }
-                Section {
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 80), spacing: 8)], spacing: 8) {
-                        ForEach(NativeAvatarCatalogue.options) { option in
-                            if let price = option.lockedPrice(owned: ownedAvatars) {
-                                NativeAvatarTile(option: option, fr: fr, lockedPrice: price)
-                                    .accessibilityElement(children: .ignore)
-                                    .accessibilityLabel(fr ? "\(option.french), verrouillé, \(price) pièces" : "\(option.english), locked, \(price) coins")
-                            } else {
-                                let selected = photoData == nil && !avatar.hasPrefix("/profile-photos/")
-                                    && NativeAvatarCatalogue.portraitID(for: avatar) == option.id
-                                Button {
-                                    photoItem = nil
-                                    photoData = nil
-                                    avatar = option.id
-                                } label: {
-                                    NativeAvatarTile(option: option, fr: fr, selected: selected)
-                                }
-                                .buttonStyle(.plain)
-                                .accessibilityLabel(option.label(fr: fr))
-                                .accessibilityAddTraits(selected ? .isSelected : [])
+                Section(fr ? "Choisir un avatar" : "Choose an avatar") {
+                    HStack(alignment: .top, spacing: 8) {
+                        ForEach(NativeAvatarCatalogue.starters) { option in
+                            let selected = photoData == nil && !avatar.hasPrefix("/profile-photos/")
+                                && NativeAvatarCatalogue.portraitID(for: avatar) == option.id
+                            Button {
+                                photoItem = nil
+                                photoData = nil
+                                avatar = option.id
+                            } label: {
+                                NativeAvatarTile(option: option, fr: fr, selected: selected)
                             }
+                            .buttonStyle(.plain)
+                            .accessibilityLabel(option.label(fr: fr))
+                            .accessibilityAddTraits(selected ? .isSelected : [])
                         }
-                    }
-                } header: {
-                    Text(fr ? "Choisir un avatar" : "Choose an avatar")
-                } footer: {
-                    if NativeAvatarCatalogue.options.contains(where: { $0.lockedPrice(owned: ownedAvatars) != nil }) {
-                        Text(fr ? "À débloquer avec des pièces" : "Unlock with coins")
                     }
                 }
                 if let error = photoError ?? game.socialError { Text(error).foregroundColor(Theme.accent) }

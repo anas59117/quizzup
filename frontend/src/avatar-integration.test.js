@@ -33,10 +33,11 @@ test('friend requests, friend rows and player sheets share the illustrated ident
   expect(container.querySelector('.profile-avatar').textContent).toBe('');
 });
 
-test('profile editor offers all starters before inventory refresh and preserves paid ownership', () => {
-  render(<ProfileContent avatar="fox" name="Sisi" stats={{level:1,ownedItems:['dragon']}} social={social} />);
+test('profile picker shows exactly three starters even with an equipped paid avatar', () => {
+  render(<ProfileContent avatar="dragon" name="Sisi" stats={{level:1,ownedItems:['dragon']}} social={social} />);
   act(()=>container.querySelector('.pf-edit-dot').click());
-  expect([...container.querySelectorAll('.avatar-opt .player-avatar')].map(el=>el.dataset.avatar)).toEqual(['fox','robot','dragon','cat']);
+  expect([...container.querySelectorAll('.avatar-opt .player-avatar')].map(el=>el.dataset.avatar)).toEqual(['robot','fox','cat']);
+  expect(container.querySelector('.pf-avatar .player-avatar').dataset.avatar).toBe('dragon');
 });
 
 test('shop equips the starter cat with zero coins and keeps the paid owl locked', async () => {
