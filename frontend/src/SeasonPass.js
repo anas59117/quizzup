@@ -1,7 +1,10 @@
 /**
  * SeasonPass — Battle Pass avec niveaux gratuits et premium
  */
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
+
+import { Icon } from './ui';
+import { ProgressionHeading, useProgressionCopy } from './ProgressionUI';
 
 const PASS_LEVELS = [
   { level: 1, free: { coins: 50, xp: 100 }, premium: { coins: 150, xp: 300, item: '🖼️ Cadre Bronze' } },
@@ -62,68 +65,27 @@ export function useSeasonPass() {
   return { ...pass, currentLevel, levelProgress, addPassXP, buyPremium, claimReward };
 }
 
-export function SeasonPassPanel({ pass, onClaim, t }) {
-  return (
-    <div className="season-pass">
-      <div className="sp-header">
-        <div>
-          <div className="sp-title">{t('seasonPass')}</div>
-          <div className="sp-sub">{t('season')} — {t('level')} {pass.currentLevel}/10</div>
-        </div>
-        {!pass.premium && (
-          <button className="sp-buy" onClick={pass.buyPremium}>
-            💎 {t('buyPremium')}
-          </button>
-        )}
-        {pass.premium && <div className="sp-premium-badge">💎 PREMIUM</div>}
+export function SeasonPassPanel({ pass, onBack }) {
+  const { copy } = useProgressionCopy();
+  const currentLevel = Math.max(1, Math.min(10, pass.currentLevel || 1));
+  return <main id="main-content" className="progression-page" aria-labelledby="progression-title" tabIndex={-1}>
+    <ProgressionHeading title={copy('Pass de saison', 'Season pass', 'Pase de temporada')} eyebrow={copy('La suite se prépare', 'More is on the way', 'Se prepara lo próximo')} onBack={onBack} />
+    <section className="progression-card progression-pass-intro">
+      <div><span className="progression-badge"><Icon name="info" size={16} />{copy('En préparation', 'In preparation', 'En preparación')}</span>
+        <h2>{copy('Un aperçu de ton parcours.', 'A preview of your journey.', 'Un vistazo a tu recorrido.')}</h2>
+        <p>{copy('Le pass et ses récompenses ne sont pas encore disponibles. Aucun achat ni retrait de récompense n’est possible ici.', 'The pass and its rewards are not available yet. Purchases and reward claims are unavailable here.', 'El pase y sus recompensas aún no están disponibles. No es posible comprar ni reclamar recompensas aquí.')}</p>
       </div>
-
-      <div className="sp-progress-wrap">
-        <div className="sp-progress-bar">
-          <div className="sp-progress-fill" style={{ width: `${pass.levelProgress}%` }} />
-        </div>
-        <div className="sp-xp">{pass.xp % 500}/500 XP</div>
-      </div>
-
-      <div className="sp-levels">
-        {PASS_LEVELS.map(lvl => {
-          const isClaimed = pass.claimed.includes(lvl.level);
-          const isUnlocked = pass.currentLevel >= lvl.level;
-          return (
-            <div key={lvl.level} className={`sp-level ${isUnlocked ? 'unlocked' : ''} ${isClaimed ? 'claimed' : ''}`}>
-              <div className="sp-lvl-num">{lvl.level}</div>
-              
-              <div className="sp-rewards-row">
-                <div className="sp-free-reward">
-                  <span className="sp-tag free">FREE</span>
-                  <div className="sp-reward-items">
-                    {lvl.free.coins && <span>+{lvl.free.coins}🪙</span>}
-                    {lvl.free.xp && <span>+{lvl.free.xp}⭐</span>}
-                  </div>
-                  {isUnlocked && !isClaimed && (
-                    <button className="sp-claim" onClick={() => onClaim(lvl.level)}>{t('claim')}</button>
-                  )}
-                  {isClaimed && <span className="sp-checked">✅</span>}
-                </div>
-
-                <div className={`sp-premium-reward ${pass.premium ? '' : 'locked'}`}>
-                  <span className="sp-tag premium">PREMIUM</span>
-                  <div className="sp-reward-items">
-                    {lvl.premium.coins && <span>+{lvl.premium.coins}🪙</span>}
-                    {lvl.premium.xp && <span>+{lvl.premium.xp}⭐</span>}
-                    {lvl.premium.item && <span className="sp-item">{lvl.premium.item}</span>}
-                  </div>
-                  {pass.premium && isUnlocked && !isClaimed && (
-                    <button className="sp-claim premium" onClick={() => onClaim(lvl.level)}>{t('claim')}</button>
-                  )}
-                  {pass.premium && isClaimed && <span className="sp-checked">✅</span>}
-                  {!pass.premium && <span className="sp-lock">🔒</span>}
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
+      <div className="progression-pass-level"><span className="progression-eyebrow">{copy('Niveau local', 'Local level', 'Nivel local')}</span><p className="progression-number">{currentLevel}<span>/ 10</span></p><span>{pass.xp || 0} XP</span></div>
+    </section>
+    <section aria-labelledby="pass-levels-title">
+      <div className="progression-track-heading"><h2 id="pass-levels-title">{copy('Le parcours en aperçu', 'Journey preview', 'Vista previa del recorrido')}</h2><p>{copy('Progression sur cet appareil', 'Progress on this device', 'Progreso en este dispositivo')}</p></div>
+      <ol className="progression-levels">{PASS_LEVELS.map(({ level }) => <li className={`progression-card progression-level ${level === currentLevel ? 'is-current' : ''}`} key={level} aria-current={level === currentLevel ? 'step' : undefined}>
+        <span className="progression-eyebrow">{copy('Niveau', 'Level', 'Nivel')}</span><strong className="progression-level-number">{String(level).padStart(2, '0')}</strong>
+        <span className="progression-level-status"><Icon name="key" size={18} />{copy('Récompenses à venir', 'Rewards to come', 'Próximas recompensas')}</span>
+        <span className="progression-note">{(level - 1) * 500} XP</span>
+        {level === currentLevel && <span className="progression-current">{copy('Ton niveau local', 'Your local level', 'Tu nivel local')}</span>}
+      </li>)}</ol>
+    </section>
+    <p className="progression-local-note"><Icon name="info" size={18} />{copy('Ces niveaux reflètent uniquement les données de cet appareil. Le contenu définitif du pass sera annoncé à son lancement.', 'These levels reflect this device’s data only. Final pass content will be announced at launch.', 'Estos niveles reflejan solo los datos de este dispositivo. El contenido definitivo del pase se anunciará en su lanzamiento.')}</p>
+  </main>;
 }

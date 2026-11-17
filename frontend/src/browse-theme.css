@@ -41,10 +41,6 @@
 .tile-v4__cover { z-index: 3; object-fit: var(--cover-fit, cover); background: #141217; }
 .tile-cover-img { object-fit: var(--cover-fit, cover) !important; }
 /* Every cover keeps the standard bottom title and its local contrast fade. */
-/* A landscape crop would cut off a title baked into a square poster. */
-.home-refined .home-discovery:has(.tile-v4--poster) .tile-v4 {
-  aspect-ratio: 1 / 1 !important;
-}
 .home-refined .topic-tile-wrap:has(.tile-v4--poster) .personal-theme-level {
   left: 8px; bottom: 8px; padding: 4px 7px; border-radius: 8px;
   background: #141217d9; color: #fff; text-shadow: none;

@@ -1,0 +1,35 @@
+/* Native brand and controls; web layouts retain their own responsive space. */
+.app-themes .browse-header .top-controls,
+.app-profile .browse-header .top-controls {
+  flex: 0 0 auto;
+  gap: 2px;
+}
+.ctrl-community { min-width: 44px; min-height: 44px; }
+.app.app-progression { display: block; padding: var(--safe-top,0px) 0 108px !important; background: var(--browse-bg) !important; }
+.app-progression::before { display: none; }
+.app-progression > .browse-header {
+  width: min(1040px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 24px 0 0;
+}
+.app-progression > .browse-header .top-controls {
+  position: relative !important;
+  inset: auto !important;
+  display: flex;
+  flex: 0 0 auto;
+}
+.app-home .home-refined .home-discovery .tile-v4__cover { object-position: center top; }
+.app-progression > .browse-header .ctrl-btn {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: #fffaf2;
+}
+.app-progression .mobile-controls-panel { z-index: 70; }
+@media (max-width: 600px) {
+  .app-progression > .browse-header {
+    width: calc(100% - 32px);
+    padding-top: 16px;
+  }
+}

@@ -17,6 +17,8 @@ import { useMatchHistory } from './MatchHistory';
 import './community.css';
 import './home-refinement.css';
 import './browse-theme.css';
+import './progression.css';
+import './web-harmony.css';
 import './accessibility.css';
 import { SkipLink } from './SkipLink';
 import { HomeLoading } from './HomeLoading';
@@ -33,10 +35,10 @@ import { OnboardingOverlay, useOnboarding } from './OnboardingOverlay';
 import { useDailyStreak } from './DailyStreak';
 import { ChallengeReceiver } from './ChallengeLink';
 import { useNotifications, NotificationContainer } from './NotificationSystem';
-import { useAdSystem, AdRewardsPanel } from './AdSystem';
 import { useSeasonPass, SeasonPassPanel } from './SeasonPass';
 import { FriendsScreen } from './social';
 import { LeagueContent, useLeague } from './LeagueSystem';
+import TournamentPage from './TournamentPage';
 import { AVATAR_IDS } from './PlayerAvatar';
 import { isProfilePhoto, uploadProfilePhoto } from './profile-photo';
 import { anchorQuestion, roundTiming } from './round-timing';
@@ -47,7 +49,7 @@ const LazyMatchHistory = lazy(() => import('./MatchHistory').then(m => ({ defaul
 
 const LIVE_SESSION_KEY = 'quizzup-live-session';
 const HISTORY_KEY = 'quizzup';
-const BROWSABLE_STAGES = new Set(['home', 'feed', 'categories', 'profile', 'leaderboard', 'enter_code', 'shop', 'friends', 'league', 'seasonpass', 'category_preview', 'messages', 'history']);
+const BROWSABLE_STAGES = new Set(['home', 'feed', 'categories', 'profile', 'leaderboard', 'enter_code', 'shop', 'friends', 'league', 'seasonpass', 'tournament', 'category_preview', 'messages', 'history']);
 const SESSION_STAGES = new Set(['waiting', 'room_wait', 'playing', 'finished', 'error']);
 
 function browserLocation(stage, family) {
@@ -264,17 +266,10 @@ function AppContent() {
   };
   const league = useLeague();
   const { notifications, notify, removeNotification } = useNotifications();
-  const adSystem = useAdSystem();
   const seasonPass = useSeasonPass();
 
   const statsHook = useStats();
 
-  const handleAdReward = useCallback((coins, xp) => {
-    const newCoins = (statsHook.stats.coins || 0) + coins;
-    statsHook.handleStatsMessage({ stats: { coins: newCoins } });
-    seasonPass.addPassXP(xp);
-    notify(`+${coins} coins +${xp} XP!`, 'success');
-  }, [statsHook.stats.coins, statsHook.handleStatsMessage, seasonPass.addPassXP, notify]);
   const feed = useFeed(wsRef, clientId);
   const [communityInThread, setCommunityInThread] = useState(false);
   const players = usePlayers(wsRef);
@@ -836,6 +831,13 @@ function AppContent() {
   }
 
   // Opens a theme's community page (its filtered feed + level + ranking).
+  function openCommunity(postId) {
+    feed.setFilter({ scope: 'all', category: null });
+    setCommunityInThread(false);
+    setStage('feed');
+    if (typeof postId === 'string') feed.openPost(postId);
+  }
+
   function openTopic(key) {
     if (!key) return;
     feed.setFilter({ scope: 'all', category: key });
@@ -1128,7 +1130,7 @@ function AppContent() {
           name={name} avatar={avatar} frame={statsHook.stats.frame} stats={statsHook.stats} soloMode={soloMode} setSoloMode={setSoloMode}
           friendCount={social.friends.length}
           onOpenMessages={() => openMessages()} unreadCount={social.unreadCount}
-          onOpenCommunity={(postId) => { feed.setFilter({scope:'all',category:null});setStage('feed'); if (postId) feed.openPost(postId); }} onOpenHistory={() => setStage('history')}
+          onOpenCommunity={openCommunity} onOpenHistory={() => setStage('history')}
           quickMatch={quickMatch} startWithCategory={previewCategory}
           onOpenProfile={() => setStage('profile')} onSeeAll={(fam, focusSearch) => { setCategoryFamily(fam || null); setStage('categories'); if (focusSearch) requestAnimationFrame(() => document.querySelector('.cat-search input, input[type=search]')?.focus()); }}
           createRoom={createRoom} onOpenEnterCode={openFriendCode}
@@ -1195,7 +1197,7 @@ function AppContent() {
     return (
       <div className="app app-nav app-top app-themes">
         <Toast toast={toast} onDismiss={dismissToast} />
-        <CategoriesContent controls={<TopControls {...topProps} home />} startWithCategory={previewCategory} onBack={() => setStage('home')}
+        <CategoriesContent controls={<TopControls {...topProps} home onCommunity={() => openCommunity()} />} startWithCategory={previewCategory} onBack={() => setStage('home')}
           family={categoryFamily} onSelectFamily={setCategoryFamily} pending={pending} />
         <NavBar active="categories" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>
@@ -1220,7 +1222,7 @@ function AppContent() {
           onToggleFollow={() => sendSocket({ type: 'theme_follow', category: matchCategory, following: !(statsHook.stats.followedThemes || []).includes(matchCategory) })}
           pending={pending}
         />
-        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
+        <NavBar active={previewOriginRef.current === 'categories' ? 'categories' : 'home'} onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>
     );
   }
@@ -1258,7 +1260,7 @@ function AppContent() {
       <div className="app app-nav app-top app-profile"><Toast toast={toast} onDismiss={dismissToast} />
         <NotificationContainer notifications={notifications} onDismiss={removeNotification} />
         <ProfileContent
-          controls={<TopControls {...topProps} home />}
+          controls={<TopControls {...topProps} home onCommunity={() => openCommunity()} />}
           onInviteFriend={createRoom} onJoinFriend={openFriendCode} pending={pending}
           avatar={avatar} name={name} stats={statsHook.stats}
           isGoogleLinked={!!(firebaseUser && !firebaseUser.isAnonymous)} googleEmail={firebaseUser?.email}
@@ -1326,24 +1328,17 @@ function AppContent() {
 
   if (stage === 'league') {
     return (
-      <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
-        <LeagueContent league={league} onBack={() => setStage('home')} t={t} />
-        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
+      <div className="app app-nav app-top app-progression"><BrowseHeader controls={<TopControls {...topProps} home onCommunity={() => openCommunity()} />} /><Toast toast={toast} onDismiss={dismissToast} />
+        <LeagueContent league={league} onBack={() => setStage('profile')} onPlay={() => quickMatch('duel')} t={t} />
+        <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>);
   }
 
   if (stage === 'seasonpass') {
     return (
-      <div className="app app-nav app-top"><TopControls {...topProps} /><Toast toast={toast} onDismiss={dismissToast} />
-        <div className="container seasonpass-page">
-          <div className="sp-page-header">
-            <button className="sp-back" onClick={() => setStage('home')}>←</button>
-            <h2>🎯 {t('seasonPass')}</h2>
-          </div>
-          <SeasonPassPanel pass={seasonPass} onClaim={(lvl) => { seasonPass.claimReward(lvl); notify(t('rewardClaimed'), 'success'); }} t={t} />
-          <AdRewardsPanel adSystem={adSystem} onReward={handleAdReward} t={t} />
-        </div>
-        <NavBar active="home" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
+      <div className="app app-nav app-top app-progression"><BrowseHeader controls={<TopControls {...topProps} home onCommunity={() => openCommunity()} />} /><Toast toast={toast} onDismiss={dismissToast} />
+        <SeasonPassPanel pass={seasonPass} onBack={() => setStage('profile')} t={t} />
+        <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>);
   }
 
@@ -1416,38 +1411,11 @@ function AppContent() {
 
   if (stage === 'tournament') {
     return (
-      <div className="app">
-        <div className="container center">
-          <div style={{textAlign: 'center', padding: 40}}>
-            <h2 style={{color: '#fff', fontSize: '2rem', marginBottom: 16}}>🏆 Tournament Mode</h2>
-            <p style={{color: 'rgba(255,255,255,0.6)', marginBottom: 32}}>4 players, 3 rounds, 1 winner</p>
-            <div style={{background: 'rgba(255,255,255,0.05)', borderRadius: 20, padding: 24, marginBottom: 32, maxWidth: 320, margin: '0 auto 32px'}}>
-              <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16}}>
-                <span style={{color: '#2ecc71', fontWeight: 800}}>👤 You</span>
-                <span style={{color: 'rgba(255,255,255,0.3)'}}>VS</span>
-                <span style={{color: 'rgba(255,255,255,0.7)'}}>🤖 Bot</span>
-              </div>
-              <div style={{height: 2, background: 'rgba(255,255,255,0.1)', marginBottom: 16}} />
-              <p style={{color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem'}}>Semi-Final & Final after</p>
-            </div>
-            <div style={{display: 'flex', gap: 12, justifyContent: 'center', marginBottom: 32}}>
-              <div style={{background: 'rgba(255,255,255,0.05)', padding: '10px 20px', borderRadius: 12}}>🥇 +500 coins</div>
-              <div style={{background: 'rgba(255,255,255,0.05)', padding: '10px 20px', borderRadius: 12}}>🥈 +200 coins</div>
-            </div>
-            <button 
-              style={{width: '100%', maxWidth: 280, padding: '14px', borderRadius: 14, border: 'none', background: 'linear-gradient(135deg, #ff4d6d, #ff8fa3)', color: '#fff', fontWeight: 900, fontSize: '1rem', cursor: 'pointer', marginBottom: 12}}
-              onClick={() => { alert('Tournament mode coming in the next update! 🚀'); setStage('home'); }}
-            >
-              Start Tournament
-            </button>
-            <button 
-              style={{padding: '10px 24px', borderRadius: 12, border: 'none', background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.7)', fontWeight: 700, cursor: 'pointer'}}
-              onClick={() => setStage('home')}
-            >
-              Back
-            </button>
-          </div>
-        </div>
+      <div className="app app-nav app-top app-progression">
+        <BrowseHeader controls={<TopControls {...topProps} home onCommunity={() => openCommunity()} />} />
+        <Toast toast={toast} onDismiss={dismissToast} />
+        <TournamentPage onBack={() => setStage('profile')} onPlay={() => quickMatch('duel')} />
+        <NavBar active="profile" onNav={onNav} onQuickMatch={quickMatch} onInviteFriend={createRoom} onJoinFriend={openFriendCode} unreadCount={social.unreadCount} pending={pending} />
       </div>
     );
   }

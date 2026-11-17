@@ -40,6 +40,32 @@ test('community teaser uses real content and opens its post', () => {
   expect(container.querySelector('.home-community-avatar .player-avatar').dataset.avatar).toBe('fox');
   click('Ton meilleur concert'); expect(open).toHaveBeenCalledWith('real');
 });
+test('home exposes a community shortcut before search and keeps section headings semantic', () => {
+  const community = jest.fn(), seeAll = jest.fn();
+  render(<HomeContent stats={{}} onOpenCommunity={community} onSeeAll={seeAll} />);
+  const actions = [...container.querySelectorAll('.home-actions button')];
+  expect(actions[0].getAttribute('aria-label')).toBe('Communauté');
+  act(() => actions[0].click());
+  expect(community.mock.calls).toEqual([[]]);
+  act(() => actions[1].click());
+  expect(seeAll).toHaveBeenCalledWith(null, true);
+  expect(container.querySelector('h1').className).toBe('screen-reader-only');
+  expect([...container.querySelectorAll('section')].every(section => section.querySelector('h2')?.id === section.getAttribute('aria-labelledby'))).toBe(true);
+  expect(container.querySelectorAll('.home-explore-row > section')).toHaveLength(2);
+});
+
+test('pending home keeps all six topic actions disabled and community available', () => {
+  const start = jest.fn(), community = jest.fn();
+  render(<HomeContent stats={{}} pending startWithCategory={start} onOpenCommunity={community} />);
+  const cards = [...container.querySelectorAll('.tile-v4')];
+  expect(cards).toHaveLength(6);
+  expect(cards.every(card => card.disabled)).toBe(true);
+  act(() => cards[0].click());
+  expect(start).not.toHaveBeenCalled();
+  act(() => container.querySelector('.home-community-teaser').click());
+  expect(community).toHaveBeenCalledWith(undefined);
+});
+
 test('home settings show one gear and put sound inside', () => {
   const mute=jest.fn(),theme=jest.fn(); render(<TopControls home muted toggleMute={mute} theme="dark" toggleTheme={theme} />);
   expect(container.querySelectorAll('button')).toHaveLength(1); act(()=>container.querySelector('button').click()); click('Activer le son'); click('Mode clair');

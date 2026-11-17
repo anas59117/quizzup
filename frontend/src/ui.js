@@ -659,7 +659,7 @@ export function BrowseHeader({ controls }) {
   </header>;
 }
 
-export const TopControls = memo(function TopControls({ muted, toggleMute, theme, toggleTheme, playing = false, home = false }) {
+export const TopControls = memo(function TopControls({ muted, toggleMute, theme, toggleTheme, playing = false, home = false, onCommunity }) {
   const { lang, toggleLang, t } = useI18n();
   const [open, setOpen] = useState(false);
   const rootRef = useRef(null);
@@ -693,6 +693,9 @@ export const TopControls = memo(function TopControls({ muted, toggleMute, theme,
         <Icon name={muted ? 'mute' : 'volume'} size={18} />
       </button>}
       {!playing && <>
+        {onCommunity && <button type="button" className="ctrl-btn ctrl-community" onClick={onCommunity} aria-label={t('communityTitle')} title={t('communityTitle')}>
+          <Icon name="users" size={24} />
+        </button>}
         <button ref={triggerRef} type="button" className="ctrl-btn" aria-expanded={open}
           aria-controls={panelId} aria-label={t('settingsLabel')} onClick={() => setOpen(!open)}>
           <svg className="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

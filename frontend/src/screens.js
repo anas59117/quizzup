@@ -45,10 +45,10 @@ export function HomeContent({ startWithCategory, onSeeAll, pending, stats, contr
   return <main id="main-content" tabIndex={-1} aria-labelledby="home-title" className="container wide home-v4 home-refined">
     <header className="home-head home-head--v4">
       <BrandLogo />
-      <div className="home-actions"><button type="button" className="home-action" onClick={() => onSeeAll?.(null, true)} aria-label={t('searchPlaceholder')}><Icon name="search" size={24} /></button>{controls}</div>
+      <div className="home-actions"><button type="button" className="home-action" onClick={() => onOpenCommunity?.()} aria-label={t('communityTitle')}><Icon name="users" size={24} /></button><button type="button" className="home-action" onClick={() => onSeeAll?.(null, true)} aria-label={t('searchPlaceholder')}><Icon name="search" size={24} /></button>{controls}</div>
     </header>
     <h1 id="home-title" tabIndex={-1} className="screen-reader-only">{t('homeTitle')}</h1>
-    <section aria-labelledby="home-my-themes">
+    <section aria-labelledby="home-my-themes" className="home-personal-section">
       <div className="section-head-v4"><h2 id="home-my-themes" className="section-title-v4">{t('myThemesSection')}</h2><button className="section-edit" onClick={() => onSeeAll?.()}>{t('seeAll')} <Icon name="arrow" size={16} /></button></div>
       {!personalThemes.length && <p className="home-starter-label">{t('suggestionsToStart')}</p>}
       <div className="topics-grid-v4">{myThemes.map((c, index) => {
@@ -56,13 +56,16 @@ export function HomeContent({ startWithCategory, onSeeAll, pending, stats, contr
         return <div key={c.key} className="topic-tile-wrap" data-topic={c.key}><CategoryTileV4 c={c} priority={index < 2 ? 'high' : 'eager'} onClick={() => startWithCategory(c.key)} disabled={pending} />{personalThemes.length > 0 && !personalThemes.some(mine => mine.key === c.key) && <span className="home-theme-suggestion">{t('suggestedLabel')}</span>}{Number.isFinite(level) && <span className="personal-theme-level">{t('level')} {level}</span>}</div>;
       })}</div>
     </section>
-    <section aria-labelledby="home-discover"><div className="section-head-v4"><h2 id="home-discover" className="section-title-v4">{t('discoverSection')}</h2></div><div className="home-discovery">{discovery.map(c => <CategoryTileV4 key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}</div></section>
+    <div className="home-explore-row">
+    <section aria-labelledby="home-discover" className="home-discover-section"><div className="section-head-v4"><h2 id="home-discover" className="section-title-v4">{t('discoverSection')}</h2></div><div className="home-discovery">{discovery.map(c => <CategoryTileV4 key={c.key} c={c} onClick={() => startWithCategory(c.key)} disabled={pending} />)}</div></section>
     <section aria-labelledby="home-community" className="home-community-section">
+      <div className="section-head-v4"><h2 id="home-community" className="section-title-v4">{t('communityTitle')}</h2></div>
       <button className={`home-community-teaser${communityPost ? '' : ' is-empty'}`} onClick={() => onOpenCommunity?.(communityPost?.id)}>
-        <span className="home-community-content"><strong id="home-community" className="home-community-heading">{t('communityTitle')}</strong>
+        <span className="home-community-content">
         {communityPost ? <span className="home-community-post"><span className={`home-community-avatar${communityPost.isOfficial ? ' home-community-avatar--official' : ''}`}>{communityPost.isOfficial ? <Icon name="bolt" /> : <PlayerAvatar avatar={communityPost.authorAvatar} />}</span><span className="home-community-copy"><strong>{communityPost.authorName}</strong>{communityPost.category && <small>{topicLabel(communityPost.category)}</small>}<span>{communityPost.text}</span><small>{communityPost.commentsCount || 0} {t('repliesTitle').toLowerCase()}</small></span></span> : <span className="home-community-invitation">{t('joinDiscussions')}</span>}</span><Icon name="arrow" size={20} />
       </button>
     </section>
+    </div>
   </main>;
 }
 
