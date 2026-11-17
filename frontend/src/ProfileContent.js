@@ -4,7 +4,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BrowseHeader, CATEGORIES, Icon } from './ui';
 import { useI18n } from './i18n';
-import { AVATAR_IDS, PlayerAvatar } from './PlayerAvatar';
+import { AVATAR_IDS, FREE_AVATAR_IDS, PlayerAvatar } from './PlayerAvatar';
 import { ProfilePhotoEditor } from './ProfilePhotoEditor';
 import { ProfileStats } from './stats';
 import { StreakCalendar } from './DailyStreak';
@@ -134,7 +134,7 @@ export function ProfileContent({
                 onRemove={() => { setDraftPhoto(null); setDraftAvatar(fallbackAvatar); setSubmitted(false); }} busy={saving} />
               <div className="profile-editor-label">{t('chooseAvatar')}</div>
               <div className="profile-avatar-grid" role="group" aria-label={t('chooseAvatar')}>
-                {AVATAR_IDS.filter((id) => id === 'robot' || stats.ownedItems?.includes(id)).map((option, index) => (
+                {AVATAR_IDS.filter((id) => FREE_AVATAR_IDS.includes(id) || stats.ownedItems?.includes(id)).map((option, index) => (
                   <button
                     key={option}
                     className={`avatar-opt ${draftAvatar === option ? 'active' : ''}`}

@@ -5,6 +5,7 @@ import { profilePhotoUrl } from './profile-photo';
 // One illustrated identity across the shop, profile and duel. Legacy account
 // values stay intact on the server; only their presentation uses this collection.
 export const AVATAR_IDS = ['fox', 'robot', 'brain', 'astronaut', 'ninja', 'dragon', 'cat', 'owl', 'ghost', 'lion'];
+export const FREE_AVATAR_IDS = ['robot', 'fox', 'cat'];
 const LEGACY_AVATARS = { '🦊': 'fox', '🤖': 'robot', '🧠': 'brain', '👻': 'ghost', '🐱': 'cat', '🦉': 'owl', '🐉': 'dragon' };
 
 export function avatarId(value) {

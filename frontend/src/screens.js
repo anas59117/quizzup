@@ -10,7 +10,7 @@ import { Leaderboard } from './multiplayer';
 import { FriendInviteActions } from './FriendInviteActions';
 import { TopicLevelList, topicTitleKey, topicLabel } from './players';
 import { useI18n } from './i18n';
-import { PlayerAvatar, avatarId } from './PlayerAvatar';
+import { FREE_AVATAR_IDS, PlayerAvatar, avatarId } from './PlayerAvatar';
 import { ShopArt as QV4ShopArt } from './shop-art';
 import { BrandLogo } from './Brand';
 import { getTopicCover } from './topicCovers';
@@ -493,13 +493,13 @@ const QV4SHOP_CATEGORIES = [
   ['celebrations', 'Célébrations', 'Savoure la victoire.', 'Tu as gagné. Profite de ton moment.'],
 ];
 const QV4SHOP_ITEMS = [
-  { id: 'fox', category: 'avatars', name: 'Renard rusé', price: 350, art: 'fox', tone: 'amber', description: 'Malin. Rapide. Toujours une longueur d’avance.', badge: 'POPULAIRE' },
+  { id: 'fox', category: 'avatars', name: 'Renard rusé', price: 0, art: 'fox', tone: 'amber', description: 'Malin. Rapide. Toujours une longueur d’avance.', badge: 'POPULAIRE' },
   { id: 'robot', category: 'avatars', name: 'Petit robot', price: 0, art: 'robot', tone: 'cyan', description: 'Curieux, positif, toujours partant.' },
   { id: 'brain', category: 'avatars', name: 'Cerveau en feu', price: 500, art: 'brain', tone: 'pink', description: 'Réfléchit vite. Très vite.', badge: 'NOUVEAU' },
   { id: 'astronaut', category: 'avatars', name: 'Cosmo', price: 450, art: 'astronaut', tone: 'cyan', description: 'La tête dans les étoiles, les réponses sur Terre.' },
   { id: 'ninja', category: 'avatars', name: 'Ninja furtif', price: 500, art: 'ninja', tone: 'pink', description: 'Discret jusqu’à la réponse décisive.' },
   { id: 'dragon', category: 'avatars', name: 'Dragon malicieux', price: 600, art: 'dragon', tone: 'green', description: 'Petit dragon. Grandes ambitions.', badge: 'NOUVEAU' },
-  { id: 'cat', category: 'avatars', name: 'Chat de minuit', price: 400, art: 'cat', tone: 'pink', description: 'Neuf vies et un instinct redoutable.' },
+  { id: 'cat', category: 'avatars', name: 'Chat de minuit', price: 0, art: 'cat', tone: 'pink', description: 'Neuf vies et un instinct redoutable.' },
   { id: 'owl', category: 'avatars', name: 'Hibou savant', price: 450, art: 'owl', tone: 'cyan', description: 'Il a lu la question avant tout le monde.' },
   { id: 'ghost', category: 'avatars', name: 'Fantôme joueur', price: 350, art: 'ghost', tone: 'ice', description: 'Adorable. Un peu imprévisible.' },
   { id: 'lion', category: 'avatars', name: 'Lion royal', price: 650, art: 'lion', tone: 'amber', description: 'Une crinière, une couronne et du panache.' },
@@ -616,7 +616,7 @@ export function ShopContent({ avatar = 'robot', name = 'QuizMaster', stats = {},
   const serverEquipment = serverStats.equippedItems && typeof serverStats.equippedItems === 'object' ? serverStats.equippedItems : {};
   const session = {
     coins: Number.isFinite(serverStats.coins) ? Math.max(0, Math.floor(serverStats.coins)) : 0,
-    owned: ['robot', ...inventory],
+    owned: [...FREE_AVATAR_IDS, ...inventory],
     equipped: Object.fromEntries(QV4SHOP_CATEGORIES.map(([key]) => [key, QV4SHOP_ITEMS.some(item => item.category === key && item.id === serverEquipment[key]) ? serverEquipment[key] : null])),
   };
   const items = QV4SHOP_ITEMS.filter(item => item.category === category);

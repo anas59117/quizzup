@@ -25,6 +25,7 @@ const { contentAllowed } = require('./content-filter');
 const { issueOrRefreshGuestToken, verifyGuestToken } = require('./guest-auth');
 const { linkFirebaseIdentity, unlinkByCanonical } = require('./account-links');
 const stats = require('./stats');
+const { getAvatarItem } = require('./shop');
 const categoryStats = require('./category-stats');
 const topicStats = require('./topic-stats');
 const follows = require('./follows');
@@ -142,7 +143,13 @@ const mediaStore = mountMediaRoutes(app, { verifyIdToken, limiter: photoLimiter,
 
 function ownedAvatar(value, uid, fallback = 'robot') {
   const avatar = cleanAvatar(value, fallback);
-  return isPhotoPath(avatar) && !photoStore.owns(uid, avatar) ? fallback : avatar;
+  if (isPhotoPath(avatar) && !photoStore.owns(uid, avatar)) return fallback;
+  return canUseAvatarItem(avatar, uid) ? avatar : fallback;
+}
+
+function canUseAvatarItem(avatar, uid) {
+  const item = getAvatarItem(avatar);
+  return !item || stats.ownsItem(uid, item.id);
 }
 
 function gameplayAvatar(data, state) {
@@ -239,7 +246,10 @@ async function handleIdentify(ws, data, state) {
   const persistedProfile = social.profileOf(uid);
   if (!contentAllowed(persistedProfile?.name || requestedName)) { game.send(ws, { type: 'profile_update_failed', code: 'CONTENT_NOT_ALLOWED' }); return; }
   state.name = persistedProfile?.name || requestedName;
-  state.avatar = ownedAvatar(persistedProfile?.avatar || data.avatar, uid, state.avatar);
+  // Keep existing profile appearances while checking ownership for new selections.
+  state.avatar = persistedProfile && !isPhotoPath(persistedProfile.avatar)
+    ? persistedProfile.avatar
+    : ownedAvatar(persistedProfile?.avatar || data.avatar, uid);
 
   // Check the target identity before attaching it to this socket. This
   // prevents a rejected duplicate socket from marking the legitimate one
@@ -862,7 +872,11 @@ async function handleSocial(ws, data, state) {
       game.send(ws, { type: 'profile_update_failed', code: 'INVALID_PHOTO' });
       return true;
     }
-    const avatar = ownedAvatar(data.avatar, clientId, state.avatar);
+    const avatar = cleanAvatar(data.avatar, state.avatar);
+    if (avatar !== social.profileOf(clientId)?.avatar && !canUseAvatarItem(avatar, clientId)) {
+      game.send(ws, { type: 'profile_update_failed', code: 'AVATAR_NOT_OWNED' });
+      return true;
+    }
     state.name = name;
     state.avatar = avatar;
     const profile = social.updateProfile(clientId, name, avatar);

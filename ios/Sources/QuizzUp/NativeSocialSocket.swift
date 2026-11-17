@@ -27,7 +27,11 @@ extension GameSocket {
             }
         case "profile_update_failed":
             profileSaving = false
-            socialError = t(object["code"] as? String == "CONTENT_NOT_ALLOWED" ? "contentNotAllowed" : "serverUnreachable")
+            switch object["code"] as? String {
+            case "CONTENT_NOT_ALLOWED": socialError = t("contentNotAllowed")
+            case "AVATAR_NOT_OWNED": socialError = t("avatarNotOwned")
+            default: socialError = t("serverUnreachable")
+            }
         case "friends_list": friends = decode(object["friends"], as: [NativeFriend].self) ?? []
         case "friend_requests": friendRequests = decode(object["requests"], as: [NativeFriend].self) ?? []
         case "friend_request_received":

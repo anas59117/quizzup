@@ -30,9 +30,7 @@ struct NativePlayerPortrait: View {
     var size: CGFloat = 48
     var cornerRadius: CGFloat?
     private var imageName: String {
-        let legacy = ["🦊": "fox", "🤖": "robot", "🧠": "brain", "👻": "ghost", "🐱": "cat", "🦉": "owl", "🐉": "dragon"]
-        let known = ["fox", "robot", "brain", "astronaut", "ninja", "dragon", "cat", "owl", "ghost", "lion"]
-        return "avatar-" + (known.contains(avatar) ? avatar : legacy[avatar] ?? "robot")
+        "avatar-" + NativeAvatarCatalogue.portraitID(for: avatar)
     }
     var body: some View {
         ZStack {
@@ -46,5 +44,37 @@ struct NativePlayerPortrait: View {
         }.frame(width: size, height: size)
             .clipShape(RoundedRectangle(cornerRadius: cornerRadius ?? size / 2))
             .accessibilityHidden(true)
+    }
+}
+
+struct NativeAvatarTile: View {
+    let option: NativeAvatarCatalogue.Option
+    let fr: Bool
+    var selected = false
+    var lockedPrice: Int? = nil
+    var highlight = Theme.accent
+
+    var body: some View {
+        VStack(spacing: 5) {
+            NativePlayerPortrait(avatar: option.id, size: 44, cornerRadius: 12)
+                .opacity(lockedPrice == nil ? 1 : 0.72)
+            Text(option.label(fr: fr)).font(.caption.weight(.semibold))
+            if let lockedPrice {
+                Label(fr ? "\(lockedPrice) pièces" : "\(lockedPrice) coins", systemImage: "lock.fill")
+                    .font(.caption2).foregroundColor(Theme.muted)
+            }
+        }
+        .multilineTextAlignment(.center)
+        .frame(maxWidth: .infinity, minHeight: 72)
+        .padding(.vertical, 5)
+        .background(highlight.opacity(selected ? 0.14 : 0.05), in: RoundedRectangle(cornerRadius: 12))
+        .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(highlight.opacity(selected ? 1 : 0.24), lineWidth: selected ? 2 : 1))
+        .overlay(alignment: .topTrailing) {
+            if selected {
+                Image(systemName: "checkmark.circle.fill").font(.caption.weight(.semibold))
+                    .foregroundColor(highlight).padding(6).accessibilityHidden(true)
+            }
+        }
+        .contentShape(RoundedRectangle(cornerRadius: 12))
     }
 }

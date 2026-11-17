@@ -5,6 +5,9 @@ const fs = require('fs');
 const os = require('os');
 
 process.env.DATA_DIR = fs.mkdtempSync(path.join(os.tmpdir(), 'qz-shop-'));
+fs.writeFileSync(path.join(process.env.DATA_DIR, 'stats.json'), JSON.stringify({
+  existing: { coins: 110, ownedItems: ['cat', 'dragon'], equippedItems: { avatars: 'dragon' } },
+}));
 const stats = require('./stats');
 const shop = require('./shop');
 const { normalizeStatsStore } = require('./store-normalize');
@@ -12,6 +15,38 @@ const { normalizeStatsStore } = require('./store-normalize');
 function give(clientId, coins) {
   stats.recordResult(clientId, false, true, 0, coins);
 }
+
+test('all three starter avatars are priced at zero and equip without a purchase', () => {
+  const client = 'new-avatar-owner';
+  assert.deepStrictEqual(stats.getStats(client).ownedItems, ['robot', 'fox', 'cat']);
+  for (const avatar of ['robot', 'fox', 'cat']) {
+    assert.strictEqual(shop.getItem(avatar).price, 0);
+    assert.strictEqual(stats.buyFrame(client, avatar).error, 'owned');
+    assert.strictEqual(stats.equipFrame(client, avatar).ok, true);
+    assert.strictEqual(stats.getStats(client).equippedItems.avatars, avatar);
+    assert.strictEqual(stats.getStats(client).coins, 0);
+  }
+});
+
+test('old inventories gain starters without duplicates, charges or loss of purchased avatars', () => {
+  const existing = stats.getStats('existing');
+  assert.deepStrictEqual(existing.ownedItems, ['robot', 'fox', 'cat', 'dragon']);
+  assert.strictEqual(existing.equippedItems.avatars, 'dragon');
+  assert.strictEqual(stats.equipFrame('existing', 'fox').ok, true);
+  assert.strictEqual(stats.equipFrame('existing', 'dragon').ok, true);
+  assert.strictEqual(stats.getStats('existing').coins, 110);
+});
+
+test('a paid avatar requires its full coin price before it can be equipped', () => {
+  const client = 'paid-avatar-owner';
+  give(client, 449);
+  assert.strictEqual(stats.equipFrame(client, 'owl').error, 'not_owned');
+  assert.strictEqual(stats.buyFrame(client, 'owl').error, 'coins');
+  give(client, 1);
+  assert.strictEqual(stats.buyFrame(client, 'owl').ok, true);
+  assert.strictEqual(stats.getStats(client).coins, 0);
+  assert.strictEqual(stats.getStats(client).equippedItems.avatars, 'owl');
+});
 
 test('buying a frame spends coins, owns it and equips it', () => {
   give('buyer', 500);

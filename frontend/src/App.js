@@ -23,7 +23,7 @@ import { HomeLoading } from './HomeLoading';
 import { useBrowseMotion } from './useBrowseMotion';
 import { usePlayers, PlayerSheet, topicLabel } from './players';
 import { RoomLobby } from './multiplayer';
-import { AVATARS, useTheme, TopControls, BrowseHeader, NavBar, ErrorScreen, Toast } from './ui';
+import { useTheme, TopControls, BrowseHeader, NavBar, ErrorScreen, Toast } from './ui';
 import { HomeContent, EnterCodeContent, CategoriesContent, CategoryPreviewContent, ProfileContent, LeaderboardContent, WaitingContent, RoundIntroContent, QuestionContent, FinishedContent, ShopContent } from './screens';
 import { CATEGORIES as CATS_V4 } from './ui';
 import { initAds, adsEnabled, countFinishedGame, interstitialThen, requestRewardOffer } from './ads';
@@ -123,7 +123,7 @@ function AppContent() {
   const [avatar, setAvatar] = useState(() => {
     let saved = '';
     try { saved = localStorage.getItem('quizzup-avatar') || ''; } catch { /* ignore */ }
-    return saved || AVATARS[Math.floor(Math.random() * AVATARS.length)];
+    return saved || 'robot';
   });
   useEffect(() => {
     try {
@@ -696,10 +696,12 @@ function AppContent() {
         }
         showToast(t('profileUpdated'), 'success');
         break;
-      case 'profile_update_failed':
+      case 'profile_update_failed': {
         clearPending();
-        showToast(t(data.code==='CONTENT_NOT_ALLOWED'?'contentNotAllowed':'profileUpdateUnavailable'), 'error');
+        const key = { CONTENT_NOT_ALLOWED: 'contentNotAllowed', AVATAR_NOT_OWNED: 'avatarNotOwned' }[data.code];
+        showToast(t(key || 'profileUpdateUnavailable'), 'error');
         break;
+      }
       case 'follow_updated':
         players.handleMessage(data);
         feed.handleMessage(data);

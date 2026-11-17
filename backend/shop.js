@@ -25,17 +25,17 @@ function getFrame(id) {
 // (the client renders them, the server is the only authority).
 const ITEM_CATEGORIES = Object.freeze(['avatars', 'entries', 'reactions', 'celebrations']);
 
-// 'robot' is the free starter avatar: owned by everyone, never purchasable.
-const FREE_ITEMS = Object.freeze(['robot']);
+// Starter avatars are owned by everyone and never purchasable.
+const FREE_ITEMS = Object.freeze(['robot', 'fox', 'cat']);
 
 const ITEMS = Object.freeze([
-  { id: 'fox', category: 'avatars', price: 350 },
+  { id: 'fox', category: 'avatars', price: 0 },
   { id: 'robot', category: 'avatars', price: 0 },
   { id: 'brain', category: 'avatars', price: 500 },
   { id: 'astronaut', category: 'avatars', price: 450 },
   { id: 'ninja', category: 'avatars', price: 500 },
   { id: 'dragon', category: 'avatars', price: 600 },
-  { id: 'cat', category: 'avatars', price: 400 },
+  { id: 'cat', category: 'avatars', price: 0 },
   { id: 'owl', category: 'avatars', price: 450 },
   { id: 'ghost', category: 'avatars', price: 350 },
   { id: 'lion', category: 'avatars', price: 650 },
@@ -65,9 +65,15 @@ const ITEMS = Object.freeze([
 ]);
 
 const ITEM_BY_ID = new Map(ITEMS.map((i) => [i.id, i]));
+const LEGACY_AVATARS = new Map(Object.entries({ '🦊': 'fox', '🤖': 'robot', '🧠': 'brain', '👻': 'ghost', '🐱': 'cat', '🦉': 'owl', '🐉': 'dragon' }));
 
 function getItem(id) {
   return typeof id === 'string' ? ITEM_BY_ID.get(id) || null : null;
+}
+
+function getAvatarItem(value) {
+  const item = getItem(LEGACY_AVATARS.get(value) || value);
+  return item?.category === 'avatars' ? item : null;
 }
 
 function isFreeItem(id) {
@@ -80,6 +86,6 @@ const MAX_AD_REWARDS_PER_DAY = 5;
 
 module.exports = {
   FRAMES, getFrame,
-  ITEMS, ITEM_CATEGORIES, FREE_ITEMS, getItem, isFreeItem,
+  ITEMS, ITEM_CATEGORIES, FREE_ITEMS, getItem, getAvatarItem, isFreeItem,
   MAX_AD_REWARDS_PER_DAY,
 };

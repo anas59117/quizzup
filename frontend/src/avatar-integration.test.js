@@ -1,7 +1,7 @@
 import React, { act } from 'react';
 import { createRoot } from 'react-dom/client';
 import { I18nProvider } from './i18n';
-import { LeaderboardContent, ProfileContent } from './screens';
+import { LeaderboardContent, ProfileContent, ShopContent } from './screens';
 import { FriendsScreen } from './social';
 import { PlayerSheet } from './players';
 import { PlayerAvatar } from './PlayerAvatar';
@@ -33,10 +33,25 @@ test('friend requests, friend rows and player sheets share the illustrated ident
   expect(container.querySelector('.profile-avatar').textContent).toBe('');
 });
 
-test('profile editor offers the free starter and server-owned avatars only', () => {
-  render(<ProfileContent avatar="fox" name="Sisi" stats={{level:1,ownedItems:['fox']}} social={social} />);
+test('profile editor offers all starters before inventory refresh and preserves paid ownership', () => {
+  render(<ProfileContent avatar="fox" name="Sisi" stats={{level:1,ownedItems:['dragon']}} social={social} />);
   act(()=>container.querySelector('.pf-edit-dot').click());
-  expect([...container.querySelectorAll('.avatar-opt .player-avatar')].map(el=>el.dataset.avatar)).toEqual(['fox','robot']);
+  expect([...container.querySelectorAll('.avatar-opt .player-avatar')].map(el=>el.dataset.avatar)).toEqual(['fox','robot','dragon','cat']);
+});
+
+test('shop equips the starter cat with zero coins and keeps the paid owl locked', async () => {
+  const equip = jest.fn(), buy = jest.fn();
+  render(<ShopContent avatar="robot" stats={{coins: 0}} onEquip={equip} onBuy={buy} />);
+  act(() => container.querySelector('button[aria-label="Essayer Chat de minuit"]').click());
+  const action = () => container.querySelector('.shop-v4-dialog-primary');
+  expect(action().textContent).toBe('Équiper');
+  await act(async () => action().click());
+  expect(equip).toHaveBeenCalledWith('cat');
+  expect(buy).not.toHaveBeenCalled();
+  act(() => container.querySelector('.shop-v4-close').click());
+  act(() => container.querySelector('button[aria-label="Essayer Hibou savant"]').click());
+  expect(action().textContent).toBe('450 pièces manquantes');
+  expect(action().disabled).toBe(true);
 });
 
 const photo = `/profile-photos/${'a'.repeat(24)}-${'b'.repeat(32)}.jpg`;

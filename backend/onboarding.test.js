@@ -9,7 +9,7 @@ const pending = { version: 1, status: 'pending', rulesSeen: false, communitySeen
 const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
 const firebaseToken = uid => `e30.${Buffer.from(JSON.stringify({ sub: uid, exp: Math.floor(Date.now() / 1000) + 3600, auth_time: Math.floor(Date.now() / 1000) })).toString('base64url')}.test-signature`;
 
-async function session(server, token) {
+async function session(server, token, avatar = 'robot') {
   const ws = new WebSocket(`ws://127.0.0.1:${server.port}/ws`), messages = [], receivedTypes = [];
   ws.on('message', raw => { const message = JSON.parse(raw); messages.push(message); receivedTypes.push(message.type); });
   await new Promise((resolve, reject) => { ws.once('open', resolve); ws.once('error', reject); });
@@ -24,7 +24,7 @@ async function session(server, token) {
   };
   const client = { ws, send, wait, messages, receivedTypes };
   if (token) {
-    send({ type: 'identify', idToken: token, name: 'Initial', avatar: 'robot' });
+    send({ type: 'identify', idToken: token, name: 'Initial', avatar });
     client.identified = await wait('identified');
   }
   return client;
@@ -47,7 +47,7 @@ async function fixture(t, env = {}, seed = {}, preloads = []) {
   });
   return {
     get server() { return servers.at(-1); },
-    async connect(token) { const client = await session(servers.at(-1), token); clients.push(client); return client; },
+    async connect(token, avatar) { const client = await session(servers.at(-1), token, avatar); clients.push(client); return client; },
     async restart() {
       clients.forEach(client => client.ws.terminate());
       const current = servers.at(-1); await current.close();
@@ -67,12 +67,39 @@ test('new identities receive private pending onboarding before stats; only succe
   assert.equal((await update(client, 'rules')).profileComplete, false);
   client.send({ type: 'profile_update', name: 'Nova', avatar: 'fox' });
   const ack = await client.wait('profile_updated');
+  assert.equal(ack.profile.avatar, 'fox');
   assert.equal(ack.onboarding.profileComplete, true);
   assert.equal(ack.profile.onboarding, undefined);
   const fresh = await f.connect(identity.token);
   assert.equal(fresh.identified.onboarding.profileComplete, true);
   assert.equal(fresh.identified.profile.name, 'Nova');
   assert.deepEqual((await fresh.wait('stats')).stats, beforeStats);
+});
+
+test('new players can save a starter and cannot use an unowned paid avatar', async t => {
+  const f = await fixture(t), identity = await guest(f.server);
+  const client = await f.connect(identity.token, 'dragon');
+  assert.equal(client.identified.profile.avatar, 'robot');
+  client.send({ type: 'profile_update', name: 'Nova', avatar: '🐉' });
+  assert.equal((await client.wait('profile_update_failed')).code, 'AVATAR_NOT_OWNED');
+  assert.equal((await update(client, 'rules')).profileComplete, false);
+  client.send({ type: 'profile_update', name: 'Nova', avatar: 'cat' });
+  assert.equal((await client.wait('profile_updated')).profile.avatar, 'cat');
+  assert.equal((await f.connect(identity.token, 'dragon')).identified.profile.avatar, 'cat');
+  client.send({ type: 'create_room', avatar: 'dragon' });
+  assert.equal((await client.wait('room_created')).players[0].avatar, 'cat');
+});
+
+test('an existing player can still select a previously purchased avatar', async t => {
+  const uid = 'legacy-paid-avatar-user';
+  const f = await fixture(t, { FIREBASE_API_KEY: 'local-test-only' }, {
+    social: { profiles: { [uid]: { name: 'Existing', avatar: 'cat' } }, friends: {}, requests: {} },
+    stats: { [uid]: { coins: 110, ownedItems: ['dragon'] } },
+  }, [path.join(__dirname, 'test-support/deletion-auth.cjs')]);
+  const client = await f.connect(firebaseToken(uid));
+  client.send({ type: 'profile_update', name: 'Existing', avatar: 'dragon' });
+  assert.equal((await client.wait('profile_updated')).profile.avatar, 'dragon');
+  assert.equal((await client.wait('stats')).stats.coins, 110);
 });
 
 test('skip is idempotent, never bypasses profile, dominates late completion and persists across sockets and restart', async t => {

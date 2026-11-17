@@ -4,7 +4,7 @@ import { useI18n } from './i18n';
 import { getTopicCover } from './topicCovers';
 import catalogueExpansion from './catalogueExpansion.json';
 import topicPopularity from './topicPopularity.json';
-import { PlayerAvatar } from './PlayerAvatar';
+import { FREE_AVATAR_IDS, PlayerAvatar } from './PlayerAvatar';
 import { BrandLogo, BrandMark } from './Brand';
 
 
@@ -60,8 +60,6 @@ export const Icon = memo(function Icon({ name, size = 20, className = '' }) {
     </svg>
   );
 });
-
-export const AVATARS = ['robot'];
 
 export const CATEGORIES = [
   { key: 'movies', label: 'Films', icon: '\u{1F3AC}', grad: 'g1', tag: '\u{1F525}', desc: 'Blockbusters & classiques', family: 'cinema' },
@@ -591,7 +589,7 @@ export const JoinScreen = memo(function JoinScreen({ name, setName, avatar, setA
         <input className="input" placeholder={t('usernamePlaceholder')} value={name} maxLength={20}
           onChange={(e) => setName(e.target.value)} />
         <div className="avatar-picker">
-        {AVATARS.map((a, index) => (
+        {FREE_AVATAR_IDS.map((a, index) => (
           <button
             key={a}
             className={`avatar-opt ${avatar === a ? 'active' : ''}`}

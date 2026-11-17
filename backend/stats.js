@@ -140,7 +140,7 @@ function getStats(clientId, now = Date.now()) {
     ownedFrames: ['none', ...((s && s.owned) || [])],
     // Boutique v4 inventory: flat list of owned item ids plus the item
     // equipped in each category.
-    ownedItems: [...shop.FREE_ITEMS, ...((s && s.ownedItems) || [])],
+    ownedItems: [...new Set([...shop.FREE_ITEMS, ...(s?.ownedItems || [])])],
     equippedItems: equippedItemsFor(s),
     adRewardsLeft: adRewardsLeft(s, now),
     level,
@@ -202,12 +202,15 @@ function buyItem(clientId, itemId) {
   return { ok: true };
 }
 
+function ownsItem(clientId, itemId) {
+  return shop.isFreeItem(itemId) || !!stats[clientId]?.ownedItems?.includes(itemId);
+}
+
 function equipItem(clientId, itemId) {
   const item = shop.getItem(itemId);
   if (!item) return { ok: false, error: 'unknown' };
+  if (!ownsItem(clientId, item.id)) return { ok: false, error: 'not_owned' };
   const s = ensure(clientId);
-  const owned = shop.isFreeItem(item.id) || (s.ownedItems || []).includes(item.id);
-  if (!owned) return { ok: false, error: 'not_owned' };
   s.equippedItems = s.equippedItems && typeof s.equippedItems === 'object' ? s.equippedItems : {};
   s.equippedItems[item.category] = item.id;
   persist();
@@ -276,4 +279,4 @@ function deleteUser(clientId) {
 }
 
 module.exports = { getStats, getLeaderboard, rankLeaderboard, recordResult, recordPlayDay, dayKey, levelFromXp,
-  getFrame, buyFrame, equipFrame, setLastReward, claimAdReward, deleteUser };
+  getFrame, buyFrame, equipFrame, ownsItem, setLastReward, claimAdReward, deleteUser };

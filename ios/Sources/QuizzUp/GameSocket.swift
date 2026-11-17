@@ -497,7 +497,7 @@ final class GameSocket: ObservableObject {
         stage = .home
     }
 
-    func completeProfile() {
+    func completeProfile(avatar: String) {
         guard !profileSaving else { return }
         profileSaving = true
         connect(["type": "profile_update", "name": String(name.trimmingCharacters(in: .whitespacesAndNewlines).prefix(20)), "avatar": avatar])
