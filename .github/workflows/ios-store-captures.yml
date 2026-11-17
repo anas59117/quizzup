@@ -23,6 +23,10 @@ on:
         description: 'Review profile and progression on standard and compact iPhones in parallel'
         type: boolean
         default: false
+      avatar_review:
+        description: 'Review starter avatar selection in light and dark mode'
+        type: boolean
+        default: false
       onboarding_review:
         description: 'Review optional onboarding in light and dark mode on one iPhone'
         type: boolean
@@ -32,7 +36,7 @@ permissions:
   contents: read
 
 env:
-  VISUAL_REVIEW: ${{ inputs.visual_review || inputs.profile_review || inputs.onboarding_review || startsWith(github.ref_name, 'codex/ios-visual-parity-') }}
+  VISUAL_REVIEW: ${{ inputs.visual_review || inputs.profile_review || inputs.onboarding_review || inputs.avatar_review || startsWith(github.ref_name, 'codex/ios-visual-parity-') }}
 
 concurrency:
   group: quizzup-store-captures-${{ github.ref }}
@@ -109,6 +113,9 @@ jobs:
         if: env.VISUAL_REVIEW == 'true'
         run: |
           CAPTURE_ARGS=(--visual-review)
+          if [[ "${{ inputs.avatar_review }}" == 'true' ]]; then
+            CAPTURE_ARGS+=(--avatar-review)
+          fi
           if [[ "${{ inputs.profile_review }}" == 'true' ]]; then
             CAPTURE_ARGS+=(--profile-review --profile-${{ matrix.profile }})
           fi
