@@ -766,10 +766,12 @@ function AppContent() {
     }, 15000);
   }, []);
 
-  function startWithCategory(catKey) {
+  function startWithCategory(catKey, mode) {
     if (pending) return;
     setMatchCategory(catKey);
-    const action = { type: soloMode ? 'solo' : 'join', category: catKey };
+    const solo = mode === 'solo' || (mode !== 'duel' && soloMode);
+    setSoloMode(solo);
+    const action = { type: solo ? 'solo' : 'join', category: catKey };
     matchActionRef.current = action;
     beginPending();
     connect(action);
@@ -866,10 +868,10 @@ function AppContent() {
     }
   }
 
-  function createRoom() {
+  function createRoom(category = null) {
     if (pending) return;
     beginPending();
-    connect({ type: 'create_room', category: null });
+    connect({ type: 'create_room', category: typeof category === 'string' ? category : null });
   }
 
   function openFriendCode() {
@@ -1215,8 +1217,10 @@ function AppContent() {
           category={previewCat}
           stats={statsHook.stats}
           onBack={() => setStage(previewOriginRef.current)}
-          onPlay={() => matchCategory && startWithCategory(matchCategory)}
+          onPlay={(mode) => matchCategory && startWithCategory(matchCategory, mode)}
           onChallenge={() => openMessages()}
+          onInvite={() => createRoom(matchCategory)}
+          onJoin={openFriendCode}
           onCommunity={() => { feed.setFilter({ scope: 'all', category: matchCategory }); setStage('feed'); }}
           onLeaderboard={() => openLeaderboard(matchCategory, 'category_preview')}
           following={(statsHook.stats.followedThemes || []).includes(matchCategory)}

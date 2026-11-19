@@ -15,6 +15,9 @@ afterEach(() => { act(() => root.unmount()); container.remove(); });
 function render(key = 'spider_man', props = {}) {
   act(() => root.render(<I18nProvider><CategoryPreviewContent category={CATEGORIES.find(c => c.key === key)} stats={{}} {...props} /></I18nProvider>));
 }
+function choose(label) {
+  act(() => [...document.querySelectorAll('.play-sheet > button')].find(button => button.textContent.startsWith(label)).click());
+}
 
 test('cover leads the page and playing is offered before secondary statistics', () => {
   render();
@@ -37,6 +40,8 @@ test('an unavailable cover preserves the themed hero, title and working play act
   expect(container.querySelector('.cp-cover-fallback')).not.toBeNull();
   expect(container.querySelector('#quiz-title').textContent).toContain('Spider-Man');
   act(() => container.querySelector('.cp-play').click());
+  expect(onPlay).not.toHaveBeenCalled();
+  choose('Duel rapide');
   expect(onPlay).toHaveBeenCalledTimes(1);
 });
 
@@ -45,8 +50,44 @@ test('real progress and existing play, friend, follow and navigation callbacks r
   render('foot_fr', { stats: { topics: [{ key: 'foot_fr', completion: 60, bestStreak: 8, level: 3 }] }, onPlay, onChallenge, onToggleFollow, onBack, following: true });
   expect(container.querySelector('.cp-stats').textContent).toContain('60%');
   expect(container.querySelector('.cp-stats').textContent).toContain('Niveau 3');
-  for (const selector of ['.cp-play', '.cp-ghost', '.cp-icon-btn[aria-pressed]', '.cp-back']) act(() => container.querySelector(selector).click());
+  act(() => container.querySelector('.cp-play').click());
+  choose('Duel rapide');
+  for (const selector of ['.cp-ghost', '.cp-icon-btn[aria-pressed]', '.cp-back']) act(() => container.querySelector(selector).click());
   for (const callback of [onPlay, onChallenge, onToggleFollow, onBack]) expect(callback).toHaveBeenCalledTimes(1);
+});
+
+test.each([['Duel rapide', 'duel'], ['Solo', 'solo']])('quiz play waits for %s and keeps the selected topic', (label, mode) => {
+  const onPlay = jest.fn();
+  render('ligue_champions', { onPlay });
+  act(() => container.querySelector('.cp-play').click());
+  expect(onPlay).not.toHaveBeenCalled();
+  expect(document.querySelector('[role=dialog]')).not.toBeNull();
+  choose(label);
+  expect(onPlay).toHaveBeenCalledWith(mode);
+  expect(container.querySelector('main').dataset.topic).toBe('ligue_champions');
+  expect(document.querySelector('[role=dialog]')).toBeNull();
+});
+
+test('closing the quiz mode chooser starts nothing and restores focus', () => {
+  const onPlay = jest.fn();
+  render('spider_man', { onPlay });
+  const play = container.querySelector('.cp-play');
+  play.focus();
+  act(() => play.click());
+  act(() => document.querySelector('[role=dialog]').dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })));
+  expect(onPlay).not.toHaveBeenCalled();
+  expect(document.querySelector('[role=dialog]')).toBeNull();
+  expect(document.activeElement).toBe(play);
+});
+
+test.each([['Inviter un ami', 'onInvite'], ['J’ai un code', 'onJoin']])('quiz chooser routes %s without starting matchmaking', (label, callback) => {
+  const onPlay = jest.fn(), action = jest.fn();
+  render('spider_man', { onPlay, [callback]: action });
+  act(() => container.querySelector('.cp-play').click());
+  choose(label);
+  expect(action).toHaveBeenCalledTimes(1);
+  expect(onPlay).not.toHaveBeenCalled();
+  expect(document.querySelector('[role=dialog]')).toBeNull();
 });
 
 test('English actions are translated and pending prevents duplicate play or challenges', () => {
