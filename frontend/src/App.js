@@ -20,6 +20,7 @@ import './browse-theme.css';
 import './progression.css';
 import './web-harmony.css';
 import './accessibility.css';
+import './mobile-scroll.css';
 import { SkipLink } from './SkipLink';
 import { HomeLoading } from './HomeLoading';
 import { useBrowseMotion } from './useBrowseMotion';

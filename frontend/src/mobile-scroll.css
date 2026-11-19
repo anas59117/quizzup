@@ -1,0 +1,33 @@
+/* Keep the document on its vertical axis. Horizontal topic filters remain
+   independent scrollers; pinch zoom and normal page scrolling stay enabled. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+}
+
+@supports (overflow: clip) {
+  html,
+  body { overflow-x: clip; }
+
+  /* hidden + visible computes to hidden + auto and creates another scroll
+     container. These full-height browsing pages only need clipping. */
+  .app.app-home,
+  .app.app-themes,
+  .app.app-profile,
+  .app.app-progression {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+}
+
+/* These screens contain vertical grids, rather than horizontal carousels.
+   Do not apply pan-y to the social feed, shop, dialogs or chat scrollers. */
+.home-refined,
+.themes-refined,
+.pf-v4,
+.progression-page,
+.navbar {
+  touch-action: pan-y pinch-zoom;
+}
