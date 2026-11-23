@@ -13,8 +13,8 @@ packages:
   GoogleSignIn:
     url: https://github.com/google/GoogleSignIn-iOS
     from: 7.1.0
-  # Google Mobile Ads — interstitials served at the end of a match. ATT
-  # consent is requested lazily from ResultView, not at launch.
+  # Google Mobile Ads — interstitials before a new game after 4 completions.
+  # ATT is deferred until a safe context after the first completed game.
   GoogleMobileAds:
     url: https://github.com/googleads/swift-package-manager-google-mobile-ads
     from: 11.0.0
@@ -43,7 +43,7 @@ targets:
       - package: GoogleMobileAds
         product: GoogleMobileAds
       - package: GoogleUserMessagingPlatform
-        product: UserMessagingPlatform
+        product: GoogleUserMessagingPlatform
     info:
       path: Sources/QuizzUp/Resources/Info.plist
       properties:
@@ -63,9 +63,11 @@ targets:
         # which is safe to ship and always serves a test creative.
         # Swap it for the real App ID shown in the AdMob console
         # (Settings → App settings → App ID, format: ca-app-pub-XXXX~YYYY)
-        # before the first paid release. The production ad-unit ID lives
-        # in AdsManager.swift (productionInterstitialUnitID).
+        # before enabling monetisation. Set QuizzUpAdsTestMode to false and
+        # fill QuizzUpInterstitialUnitID after configuring consent in AdMob.
         GADApplicationIdentifier: "ca-app-pub-3940256099942544~1458002511"
+        QuizzUpAdsTestMode: true
+        QuizzUpInterstitialUnitID: ""
         # Shown in the iOS ATT system prompt. Apple requires a plain-language
         # reason — personalised ads benefit the app's economics directly.
         NSUserTrackingUsageDescription: "Nous utilisons cet identifiant pour vous proposer des publicités plus pertinentes et soutenir le développement gratuit de QuizzUp."

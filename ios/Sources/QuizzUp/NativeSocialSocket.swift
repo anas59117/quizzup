@@ -141,8 +141,19 @@ extension GameSocket {
         if !key.isEmpty { _ = send(["type": "friend_request", "targetId": key]) }
     }
     func respondToFriend(_ id: String, accept: Bool) { _ = send(["type": accept ? "friend_accept" : "friend_decline", "requesterId": id]) }
-    func challengeFriend(_ id: String, category: String) { _ = send(["type": "challenge_create", "targetId": id, "category": category, "mode": "live"]) }
-    func respondToChallenge(_ id: String, accept: Bool) { _ = send(["type": "challenge_respond", "challengeId": id, "accept": accept]) }
+    func challengeFriend(_ id: String, category: String) {
+        beginMatch { [self] in
+            _ = send(["type": "challenge_create", "targetId": id, "category": category, "mode": "live"])
+            isStarting = false
+        }
+    }
+    func respondToChallenge(_ id: String, accept: Bool) {
+        let respond = { [self] in
+            _ = send(["type": "challenge_respond", "challengeId": id, "accept": accept])
+            isStarting = false
+        }
+        if accept { beginMatch(respond) } else { respond() }
+    }
 }
 
 @MainActor

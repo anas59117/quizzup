@@ -203,6 +203,8 @@ test('starts solo only after cancellation is acknowledged, retaining the selecte
   const topic = container.querySelector('[data-topic="ligue_champions"] button');
   act(() => topic.click());
   click('Jouer maintenant');
+  expect(socket.connect.mock.calls.some(([action]) => action.type === 'join')).toBe(false);
+  click('Duel rapide');
   const category = socket.connect.mock.calls.find(([action]) => action.type === 'join')[0].category;
   expect(category).toBe('ligue_champions');
   receive({ type: 'waiting' });

@@ -3,16 +3,10 @@ import UIKit
 
 struct ResultView: View {
     @EnvironmentObject var game: GameSocket
-    @EnvironmentObject var premium: PremiumStatus
     @Environment(\.dynamicTypeSize) private var dynamicType
     @ScaledMetric(relativeTo: .largeTitle) private var headlineSize: CGFloat = 38
     @ScaledMetric(relativeTo: .title) private var scoreSize: CGFloat = 38
     @State private var showDetails = false
-    // Each distinct GameEnd instance should only count once in the ad
-    // cadence, even if the result view re-renders. We stash the finished
-    // match reference here and compare on `onChange`.
-    @State private var countedResultSignature: String?
-
     private let gold = Color(hex: 0xFFD54A)
     private let pale = Color(hex: 0xFFE5E9)
 
@@ -56,42 +50,6 @@ struct ResultView: View {
                 }
                 .ignoresSafeArea()
         }
-        // Count the match + request ATT the first time a result lands,
-        // so the ad cadence advances exactly once per real match, not once
-        // per scroll re-render.
-        .onAppear { handleResultArrival() }
-        .onChange(of: game.result?.reason) { _ in handleResultArrival() }
-    }
-
-    private func handleResultArrival() {
-        guard let result = game.result else { return }
-        let signature = "\(result.reason)-\(result.finalScore)-\(result.xp)"
-        guard countedResultSignature != signature else { return }
-        countedResultSignature = signature
-        #if !(DEBUG && STORE_CAPTURE)
-        if !premium.isPremium {
-            AdsManager.shared.noteMatchFinished()
-            // First chance to legitimately ask for tracking is right after
-            // the player has seen the app do something real.
-            AdsManager.shared.requestTrackingAuthorizationIfNeeded()
-        }
-        #endif
-    }
-
-    // Wrap an action in a potential interstitial. Premium users and the
-    // App-Store capture build pass straight through.
-    private func withAd(_ action: @escaping () -> Void) {
-        #if DEBUG && STORE_CAPTURE
-        action()
-        #else
-        if premium.isPremium {
-            action()
-            return
-        }
-        AdsManager.shared.maybePresent(from: UIApplication.shared.topMostViewController) {
-            action()
-        }
-        #endif
     }
 
     private func heading(_ result: GameEnd) -> some View {
@@ -249,7 +207,7 @@ struct ResultView: View {
                 homeButton
             } else {
                 Button(game.rematchWaiting ? copy("En attente…", "Waiting…") : game.t("rematch")) {
-                    withAd { game.requestRematch() }
+                    game.requestRematch()
                 }
                     .buttonStyle(NativeDuelActionStyle()).disabled(game.rematchWaiting || game.isStarting)
                 if dynamicType.isAccessibilitySize {
@@ -268,14 +226,11 @@ struct ResultView: View {
     }
 
     private func newMatch(title: String, prominent: Bool) -> some View {
-        Button(title) { withAd { game.quickMatch() } }
+        Button(title) { game.quickMatch() }
             .buttonStyle(NativeDuelActionStyle(prominent: prominent)).disabled(game.isStarting)
     }
 
-    // Deliberately NOT wrapped in `withAd`: interrupting the "Retour à
-    // l'accueil" intent with an interstitial reads as aggressive and
-    // tanks the exit experience. Ads only fire when the player chose
-    // to keep playing (Rematch, Nouvel adversaire).
+    // Returning home never passes through the pre-game ad gate.
     private var homeButton: some View {
         Button(game.t("backHome")) { game.playAgain() }
             .buttonStyle(NativeDuelActionStyle(prominent: false)).disabled(game.isStarting)

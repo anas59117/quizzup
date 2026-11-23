@@ -16,13 +16,13 @@ struct QuizzUpApp: App {
         #endif
         _game = StateObject(wrappedValue: game)
         _auth = StateObject(wrappedValue: AuthManager())
-        // Kick off AdMob as early as possible so the first interstitial is
-        // in memory by the time a match finishes. ATT is NOT requested here
-        // (Apple rejects apps that prompt during the splash); it's deferred
-        // to the first match-end in ResultView. Skipped in App-Store-capture
-        // builds so the screenshot runs are never interrupted by an ad.
         #if !(DEBUG && STORE_CAPTURE)
-        AdsManager.shared.start()
+        AdsManager.shared.presentationAllowed = { [weak game] in
+            guard let game, !game.isStarting else { return false }
+            return [.authGate, .join, .home, .finished].contains(game.stage)
+        }
+        game.beforeStartingMatch = { action in AdsManager.shared.maybePresent(then: action) }
+        game.onCompletedMatch = { id in AdsManager.shared.noteMatchFinished(id: id) }
         #endif
     }
 
@@ -38,6 +38,9 @@ struct QuizzUpApp: App {
                 #endif
                 .onAppear {
                     AdsManager.shared.isPremium = premium.isPremium
+                    #if !(DEBUG && STORE_CAPTURE)
+                    AdsManager.shared.start()
+                    #endif
                 }
                 .onChange(of: premium.isPremium) { newValue in
                     AdsManager.shared.isPremium = newValue

@@ -53,8 +53,14 @@ struct ContentView: View {
         }
         .onChange(of: game.stage) { stage in
             audio.setContext(musicCue)
+            #if !(DEBUG && STORE_CAPTURE)
+            AdsManager.shared.sceneBecameActive()
+            #endif
             if stage == .finished, let result = game.result {
                 audio.playVictory(NativeVictoryFeedback(won: result.won, tie: result.tie, solo: game.soloMode))
+                #if !(DEBUG && STORE_CAPTURE)
+                AdsManager.shared.requestTrackingAuthorizationIfNeeded()
+                #endif
             }
         }
         .onChange(of: game.answerFeedback) { feedback in
@@ -67,7 +73,12 @@ struct ContentView: View {
         }
         .onChange(of: scenePhase) { phase in
             audio.setForeground(phase == .active)
-            if phase == .active { game.refreshRoundClock() }
+            if phase == .active {
+                game.refreshRoundClock()
+                #if !(DEBUG && STORE_CAPTURE)
+                AdsManager.shared.sceneBecameActive()
+                #endif
+            }
         }
     }
 }

@@ -2,294 +2,234 @@ import SwiftUI
 import GoogleMobileAds
 import UserMessagingPlatform
 import AppTrackingTransparency
-import AdSupport
 
-// Centralises the AdMob lifecycle for the app:
-// - starts the SDK once at launch,
-// - requests GDPR / EU consent via Google UMP (the Consent Management
-//   Platform required by both Google's EU consent policy and the RGPD —
-//   this is separate from, and runs before, Apple's ATT prompt),
-// - requests ATT at the first sensible moment (never during the opening
-//   splash, so it doesn't fight Apple Sign-In / Google Sign-In sheets),
-// - preloads an interstitial and exposes a single `maybePresent` entry
-//   point used from the end-of-match flow in `ResultView`.
-//
-// Consent order matters — Google UMP MUST be gathered before the Mobile
-// Ads SDK makes its first ad request in an EEA/UK/CH region. We handle
-// that by delaying the first `loadInterstitialIfNeeded()` until UMP is
-// resolved.
-//
-// Business rules (locked in /areas/quizzup.md):
-// - Premium users never see ads.
-// - The first `freeMatchesCount` matches of a brand-new install are ad-free.
-// - Thereafter an interstitial shows every `matchesBetweenAds` finished
-//   matches, with a hard floor of `minSecondsBetweenAds` seconds between
-//   two consecutive ads.
-//
-// Counters are persisted in `UserDefaults` so a background kill or an app
-// relaunch doesn't let the user skip the cooldown.
 @MainActor
 final class AdsManager: NSObject, ObservableObject {
-
-    // MARK: - Public config
-
-    struct Config {
-        /// Matches at the start of a fresh install that are kept ad-free so
-        /// first-time players see the loop before any ad.
-        var freeMatchesCount: Int = 3
-        /// After the free-match grace period, serve an ad every N matches.
-        var matchesBetweenAds: Int = 4
-        /// Hard cooldown between two interstitials, regardless of match count.
-        var minSecondsBetweenAds: TimeInterval = 180
-    }
-
     static let shared = AdsManager()
-
-    /// Real AdMob IDs live in Info.plist via `GADApplicationIdentifier`;
-    /// the SDK reads it from there. The ad-unit ID below is the ONLY place
-    /// the interstitial unit is referenced — swap the test ID for the
-    /// production unit returned by the AdMob console, then rebuild.
-    ///
-    /// Google's reserved test IDs (safe to ship in Debug, guaranteed to
-    /// serve a test creative): https://developers.google.com/admob/ios/test-ads
+    // Explicit test mode until BOTH publisher IDs and AdMob privacy messages
+    // are configured. This mode does not generate advertising revenue.
     static let testInterstitialUnitID = "ca-app-pub-3940256099942544/4411468910"
-    static let productionInterstitialUnitID = "REPLACE_WITH_PRODUCTION_INTERSTITIAL_UNIT_ID"
-
-    private var interstitialUnitID: String {
-        #if DEBUG
-        return Self.testInterstitialUnitID
-        #else
-        return Self.productionInterstitialUnitID.hasPrefix("REPLACE_")
-            ? Self.testInterstitialUnitID
-            : Self.productionInterstitialUnitID
-        #endif
+    private var interstitialUnitID: String? {
+        if Bundle.main.object(forInfoDictionaryKey: "QuizzUpAdsTestMode") as? Bool == true {
+            return Self.testInterstitialUnitID
+        }
+        let appID = Bundle.main.object(forInfoDictionaryKey: "GADApplicationIdentifier") as? String ?? ""
+        let unitID = Bundle.main.object(forInfoDictionaryKey: "QuizzUpInterstitialUnitID") as? String ?? ""
+        guard appID.hasPrefix("ca-app-pub-"), !appID.contains("3940256099942544"),
+              unitID.hasPrefix("ca-app-pub-"), unitID.contains("/"),
+              !unitID.contains("3940256099942544") else { return nil }
+        return unitID
     }
 
-    // MARK: - State
-
-    var config = Config()
+    @Published private(set) var privacyOptionsRequired = false
+    @Published private(set) var consentBusy = false
+    @Published private(set) var privacyError = false
     var isPremium = false {
         didSet {
-            if isPremium {
-                interstitial = nil
-                isLoading = false
-            } else if started && umpResolved {
-                loadInterstitialIfNeeded()
-            }
+            if isPremium { invalidateAd() }
+            else { startAdsIfAllowed() }
         }
     }
-
+    private let policy = NativeAdsPolicy()
+    private let launch = NativeAdContinuation()
     private var interstitial: GADInterstitialAd?
+    private var presentedAd: GADInterstitialAd?
+    private var loadedAt: Date?
+    private var loadGeneration = UUID()
     private var isLoading = false
-    private var started = false
-    private var umpResolved = false
-    private var pendingContinuation: (() -> Void)?
+    private var consentAttempted = false
+    private var consentFinished = false
+    private var consentFormPending = false
+    var presentationAllowed: () -> Bool = { false }
+    private var sdkStarted = false
+    private var sdkStarting = false
+    private var trackingPending = false
+    private var trackingBusy = false
 
-    private enum Keys {
-        static let matchesSinceLastAd = "quizzup.ads.matchesSinceLastAd"
-        static let totalMatchesPlayed = "quizzup.ads.totalMatchesPlayed"
-        static let lastAdShownAt = "quizzup.ads.lastAdShownAt"
+    private var canRequestAds: Bool {
+        NativeAdsPolicy.mayRequestAds(consent: UMPConsentInformation.sharedInstance.canRequestAds,
+                                     premium: isPremium) && !consentBusy && !trackingBusy
     }
 
-    // MARK: - Lifecycle
-
-    /// Call once from `QuizzUpApp.init()`. Resolves UMP consent (shows the
-    /// GDPR form the first time in Europe), then starts the Google Mobile
-    /// Ads SDK, then kicks off a background load of the first interstitial.
-    /// ATT is NOT prompted here — that happens lazily on the first match-end.
+    /// Start from a visible active scene, after the premium state is known.
     func start() {
-        guard !started else { return }
-        started = true
-        gatherUMPConsent { [weak self] in
-            guard let self else { return }
-            self.umpResolved = true
-            GADMobileAds.sharedInstance().start { _ in }
-            self.loadInterstitialIfNeeded()
-        }
-    }
-
-    /// Ask iOS for App Tracking Transparency consent. Must be called from a
-    /// user-visible foreground state (Apple rejects apps that request ATT
-    /// during the splash). We invoke it the first time a match ends.
-    /// Runs AFTER UMP has resolved, so the user has already seen the GDPR
-    /// explanation and the ATT prompt makes sense in context.
-    func requestTrackingAuthorizationIfNeeded() {
-        guard #available(iOS 14, *) else { return }
-        guard ATTrackingManager.trackingAuthorizationStatus == .notDetermined else { return }
-        ATTrackingManager.requestTrackingAuthorization { _ in
-            // The SDK reads the latest status automatically on next request;
-            // no need to restart. Non-personalised ads are served when the
-            // user denies tracking, so revenue still flows.
-        }
-    }
-
-    // MARK: - Google UMP (GDPR consent)
-
-    /// Requests a consent info update and, if a form is available, presents
-    /// it. Called once at launch from `start()`. Outside the EEA / UK / CH
-    /// the UMP SDK returns almost immediately with `ConsentStatus.notRequired`
-    /// and we proceed to initialise ads normally.
-    private func gatherUMPConsent(_ completion: @escaping () -> Void) {
+        guard !consentAttempted, interstitialUnitID != nil,
+              UIApplication.shared.applicationState == .active,
+              UIApplication.shared.topMostViewController != nil else { return }
+        consentAttempted = true
+        consentBusy = true
         let parameters = UMPRequestParameters()
-        #if DEBUG
-        // Force the EEA debug geography in Debug builds so the consent form
-        // can be reviewed from a non-EU test device. Remove or flip to
-        // `.disabled` in Release — real geography is used in production.
-        let debugSettings = UMPDebugSettings()
-        debugSettings.geography = .EEA
-        parameters.debugSettings = debugSettings
-        #endif
         parameters.tagForUnderAgeOfConsent = false
-
-        UMPConsentInformation.sharedInstance.requestConsentInfoUpdate(with: parameters) { [weak self] requestError in
-            guard let self else { return }
-            if let requestError {
-                print("UMP consent info update failed: \(requestError.localizedDescription)")
-                // Fail-open: still try to initialise ads so a single UMP hiccup
-                // doesn't knock out monetisation entirely. The SDK will serve
-                // non-personalised ads when consent is uncertain.
-                completion()
-                return
-            }
+        // Real geography on physical devices. UMP recognises simulators as
+        // test devices; additional test devices are registered explicitly.
+        UMPConsentInformation.sharedInstance.requestConsentInfoUpdate(with: parameters) { [weak self] error in
             Task { @MainActor in
-                self.presentUMPFormIfNeeded(completion)
+                guard let self else { return }
+                self.privacyOptionsRequired = UMPConsentInformation.sharedInstance.privacyOptionsRequirementStatus == .required
+                guard error == nil else {
+                    self.finishConsent()
+                    return
+                }
+                self.consentFormPending = true
+                self.presentPendingConsentIfPossible()
             }
         }
     }
 
-    private func presentUMPFormIfNeeded(_ completion: @escaping () -> Void) {
-        let status = UMPConsentInformation.sharedInstance.consentStatus
-        guard status == .required else {
-            // .notRequired (outside EEA) and .obtained (already answered)
-            // both proceed straight to ad init.
-            completion()
-            return
+    private func presentPendingConsentIfPossible() {
+        guard consentFormPending, presentationAllowed(),
+              UIApplication.shared.applicationState == .active,
+              UIApplication.shared.activeRootViewController?.presentedViewController == nil,
+              let presenter = UIApplication.shared.topMostViewController else { return }
+        consentFormPending = false
+        UMPConsentForm.loadAndPresentIfRequired(from: presenter) { [weak self] _ in
+            Task { @MainActor in self?.finishConsent() }
         }
-        guard let presenter = UIApplication.shared.topMostViewController else {
-            // Retry once the UI is up. This runs during app launch; the
-            // first scene callback will usually land a few ms later.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-                self?.presentUMPFormIfNeeded(completion)
+    }
+
+    private func finishConsent() {
+        consentBusy = false
+        consentFinished = true
+        privacyOptionsRequired = UMPConsentInformation.sharedInstance.privacyOptionsRequirementStatus == .required
+        // On an error, cached consent is usable ONLY when UMP authorises it.
+        // Otherwise the player can keep playing without any ad request.
+        startAdsIfAllowed()
+        requestTrackingAuthorizationIfNeeded()
+    }
+
+    func presentPrivacyOptions() {
+        guard !consentBusy, !trackingBusy, !launch.isPending,
+              let presenter = UIApplication.shared.topMostViewController else { return }
+        consentBusy = true
+        privacyError = false
+        invalidateAd()
+        UMPConsentForm.presentPrivacyOptionsForm(from: presenter) { [weak self] error in
+            Task { @MainActor in
+                self?.privacyError = error != nil
+                self?.finishConsent()
             }
+        }
+    }
+
+    func sceneBecameActive() {
+        start()
+        presentPendingConsentIfPossible()
+        requestTrackingAuthorizationIfNeeded()
+        startAdsIfAllowed()
+    }
+
+    func noteMatchFinished(id: String) {
+        policy.noteCompletedMatch(id: id)
+        trackingPending = true
+    }
+
+    func requestTrackingAuthorizationIfNeeded() {
+        guard trackingPending, presentationAllowed(), !isPremium, consentFinished, !consentBusy, !trackingBusy,
+              !launch.isPending, UIApplication.shared.applicationState == .active,
+              UIApplication.shared.activeRootViewController?.presentedViewController == nil,
+              UMPConsentInformation.sharedInstance.canRequestAds else { return }
+        guard ATTrackingManager.trackingAuthorizationStatus == .notDetermined else {
+            trackingPending = false
             return
         }
-        UMPConsentForm.loadAndPresentIfRequired(from: presenter) { formError in
-            if let formError {
-                print("UMP form presentation failed: \(formError.localizedDescription)")
+        trackingPending = false
+        trackingBusy = true
+        invalidateAd()
+        ATTrackingManager.requestTrackingAuthorization { [weak self] _ in
+            Task { @MainActor in
+                self?.trackingBusy = false
+                self?.startAdsIfAllowed()
             }
-            completion()
         }
     }
 
-    // MARK: - Match lifecycle
-
-    /// Call this exactly once each time a full multiplayer or solo match
-    /// finishes. It handles the counter bookkeeping; it does NOT decide
-    /// whether to present — presentation is `maybePresent(from:then:)`.
-    func noteMatchFinished() {
-        let defaults = UserDefaults.standard
-        defaults.set(defaults.integer(forKey: Keys.totalMatchesPlayed) + 1, forKey: Keys.totalMatchesPlayed)
-        defaults.set(defaults.integer(forKey: Keys.matchesSinceLastAd) + 1, forKey: Keys.matchesSinceLastAd)
+    /// Unavailable/unauthorised ads never hold up the player's next game.
+    func maybePresent(then: @escaping () -> Void) {
+        guard !launch.isPending else { return }
+        guard canRequestAds, policy.isDue(at: Date().timeIntervalSince1970),
+              UIApplication.shared.applicationState == .active,
+              let presenter = UIApplication.shared.topMostViewController,
+              !presenter.isBeingDismissed else { then(); return }
+        if let loadedAt, Date().timeIntervalSince(loadedAt) >= 3600 { invalidateAd() }
+        guard let ad = interstitial else { then(); loadInterstitialIfNeeded(); return }
+        do { try ad.canPresent(fromRootViewController: presenter) }
+        catch { invalidateAd(); then(); loadInterstitialIfNeeded(); return }
+        guard launch.begin(then) else { return }
+        presentedAd = ad
+        interstitial = nil
+        ad.fullScreenContentDelegate = self
+        ad.present(fromRootViewController: presenter)
     }
 
-    /// Present an interstitial if business rules allow it. Calls `then`
-    /// after the ad dismisses (or immediately when nothing is shown), so
-    /// the caller can safely chain its own action — "Rejouer", "Nouvel
-    /// adversaire" — behind this call.
-    func maybePresent(from presenter: UIViewController?, then: @escaping () -> Void) {
-        guard shouldPresent() else {
-            then()
-            return
-        }
-        guard let interstitial, let presenter else {
-            // No ad ready → swallow this slot and move on. We don't want to
-            // keep the user staring at a loader just so we can serve a pub.
-            then()
-            loadInterstitialIfNeeded()
-            return
-        }
-        pendingContinuation = then
-        interstitial.fullScreenContentDelegate = self
-        interstitial.present(fromRootViewController: presenter)
+    private func invalidateAd() {
+        loadGeneration = UUID()
+        interstitial = nil
+        loadedAt = nil
+        isLoading = false
     }
 
-    // MARK: - Internal
-
-    private func shouldPresent() -> Bool {
-        guard !isPremium else { return false }
-        let defaults = UserDefaults.standard
-        let total = defaults.integer(forKey: Keys.totalMatchesPlayed)
-        guard total > config.freeMatchesCount else { return false }
-        let sinceLast = defaults.integer(forKey: Keys.matchesSinceLastAd)
-        guard sinceLast >= config.matchesBetweenAds else { return false }
-        let lastShown = defaults.double(forKey: Keys.lastAdShownAt)
-        if lastShown > 0 {
-            let elapsed = Date().timeIntervalSince1970 - lastShown
-            guard elapsed >= config.minSecondsBetweenAds else { return false }
+    private func startAdsIfAllowed() {
+        guard consentFinished, canRequestAds, interstitialUnitID != nil else { return }
+        if sdkStarted { loadInterstitialIfNeeded(); return }
+        guard !sdkStarting else { return }
+        sdkStarting = true
+        GADMobileAds.sharedInstance().start { [weak self] _ in
+            Task { @MainActor in
+                self?.sdkStarting = false
+                self?.sdkStarted = true
+                self?.loadInterstitialIfNeeded()
+            }
         }
-        return true
     }
 
     private func loadInterstitialIfNeeded() {
-        guard umpResolved, !isPremium, !isLoading, interstitial == nil else { return }
+        guard sdkStarted, canRequestAds, !launch.isPending, !isLoading, interstitial == nil,
+              let unitID = interstitialUnitID else { return }
         isLoading = true
-        let request = GADRequest()
-        GADInterstitialAd.load(withAdUnitID: interstitialUnitID, request: request) { [weak self] ad, error in
-            guard let self else { return }
+        let generation = loadGeneration
+        GADInterstitialAd.load(withAdUnitID: unitID, request: GADRequest()) { [weak self] ad, error in
             Task { @MainActor in
+                guard let self, self.loadGeneration == generation else { return }
                 self.isLoading = false
-                if let error {
-                    print("AdsManager interstitial load failed: \(error.localizedDescription)")
-                    return
-                }
+                guard error == nil, self.canRequestAds else { return }
                 self.interstitial = ad
+                self.loadedAt = Date()
             }
         }
+    }
+
+    private func finishPresentation(_ ad: GADFullScreenPresentingAd) {
+        guard let presentedAd, (ad as AnyObject) === presentedAd else { return }
+        self.presentedAd = nil
+        launch.finish()
+        loadInterstitialIfNeeded()
     }
 }
 
 extension AdsManager: GADFullScreenContentDelegate {
     nonisolated func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
-        Task { @MainActor in
-            self.interstitial = nil
-            let continuation = self.pendingContinuation
-            self.pendingContinuation = nil
-            continuation?()
-            self.loadInterstitialIfNeeded()
-        }
+        Task { @MainActor in self.finishPresentation(ad) }
     }
-
     nonisolated func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         Task { @MainActor in
-            let defaults = UserDefaults.standard
-            defaults.set(Date().timeIntervalSince1970, forKey: Keys.lastAdShownAt)
-            defaults.set(0, forKey: Keys.matchesSinceLastAd)
+            guard let shown = self.presentedAd, (ad as AnyObject) === shown else { return }
+            self.policy.noteAdShown(at: Date().timeIntervalSince1970)
         }
     }
-
     nonisolated func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        Task { @MainActor in
-            self.interstitial = nil
-            let continuation = self.pendingContinuation
-            self.pendingContinuation = nil
-            continuation?()
-            self.loadInterstitialIfNeeded()
-        }
+        Task { @MainActor in self.finishPresentation(ad) }
     }
 }
 
-// Convenience helper to find the currently presented UIViewController.
-// SwiftUI gives no direct access, so we walk the active scene's key window.
 extension UIApplication {
-    var topMostViewController: UIViewController? {
-        let scene = connectedScenes
-            .compactMap { $0 as? UIWindowScene }
+    var activeRootViewController: UIViewController? {
+        let scene = connectedScenes.compactMap { $0 as? UIWindowScene }
             .first(where: { $0.activationState == .foregroundActive })
-        let window = scene?.windows.first(where: { $0.isKeyWindow }) ?? scene?.windows.first
-        var controller = window?.rootViewController
-        while let presented = controller?.presentedViewController {
-            controller = presented
-        }
+        return (scene?.windows.first(where: { $0.isKeyWindow }) ?? scene?.windows.first)?.rootViewController
+    }
+    var topMostViewController: UIViewController? {
+        var controller = activeRootViewController
+        while let presented = controller?.presentedViewController { controller = presented }
         return controller
     }
 }

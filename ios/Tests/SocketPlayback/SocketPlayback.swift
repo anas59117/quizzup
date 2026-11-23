@@ -120,6 +120,26 @@ enum StoreCaptureConfiguration { static let enabled = true }
             "others":[], "leaderboard":[], "reason":"complete", "coins":0, "xp":120,
             "xpBreakdown":["matchScore":80, "finishBonus":40, "winBonus":0, "xpTotal":120], "stats":playedStats]
         recoveredTutorial.handle(try JSONSerialization.data(withJSONObject: endWire))
+        let adGame = GameSocket()
+        var deferredLaunch: (() -> Void)?
+        var launches = 0
+        adGame.beforeStartingMatch = { deferredLaunch = $0 }
+        adGame.beginMatch { launches += 1 }
+        check(adGame.isStarting && launches == 0, "The pre-game gate runs before server readiness")
+        adGame.beginMatch { launches += 100 }
+        deferredLaunch?()
+        deferredLaunch?()
+        check(launches == 1, "Double taps and duplicate ad callbacks only launch once")
+        adGame.playAgain()
+        check(!adGame.isStarting, "Returning home does not open the ad gate")
+        var completedIDs: [String] = []
+        adGame.onCompletedMatch = { completedIDs.append($0) }
+        var adEnd = endWire
+        adEnd["gameId"] = "ads-completed-game"
+        adGame.handle(try JSONSerialization.data(withJSONObject: adEnd))
+        adEnd["reason"] = "opponent_left"
+        adGame.handle(try JSONSerialization.data(withJSONObject: adEnd))
+        check(completedIDs == ["ads-completed-game"], "Only server-confirmed completed games advance ad cadence")
         check(recoveredTutorial.stage == .finished && !recoveredTutorial.onboardingProgressionVisible,
               "A recovered final result waits for this account's onboarding eligibility")
         var recoveredState = onboardingWire

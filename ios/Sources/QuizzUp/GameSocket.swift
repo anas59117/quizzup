@@ -21,7 +21,7 @@ final class GameSocket: ObservableObject {
     // served as static assets by the web app's own deployment (they live
     // under frontend/public/images/), not by the backend — so they need to
     // be resolved against the frontend's host, not backendHost.
-    static let frontendHost = "quizzup-ten.vercel.app"
+    static let frontendHost = "quizzup.io"
 
     static func absoluteImageURL(_ path: String) -> URL? {
         if path.hasPrefix("https://") { return URL(string: path) }
@@ -39,6 +39,10 @@ final class GameSocket: ObservableObject {
     // against a double-tap firing two start requests before the server's
     // own re-entrancy check (isInActiveGame in server.js) can see the first.
     @Published var isStarting = false
+    // Injected by the app. Portable receiver tests run without the ads SDK.
+    var beforeStartingMatch: (@escaping () -> Void) -> Void = { $0() }
+    var onCompletedMatch: (String) -> Void = { _ in }
+    private var adsMatchID = UUID().uuidString
     @Published var categories: [Category] = []
     @Published var lang: String = L10n.detectDefaultLang()
 
@@ -295,6 +299,7 @@ final class GameSocket: ObservableObject {
             stage = .waiting
             isStarting = false
         case "game_start":
+            adsMatchID = obj["gameId"] as? String ?? UUID().uuidString
             completeWelcomeAfterRealGame()
             recoverGameOnIdentify = true
             privateRoom = nil; roomPending = false; roomError = nil
@@ -308,6 +313,7 @@ final class GameSocket: ObservableObject {
             // No stage change here — the server always sends round_intro
             // immediately after game_start, which drives the transition.
         case "game_reconnected":
+            adsMatchID = obj["gameId"] as? String ?? adsMatchID
             recoverGameOnIdentify = true
             isStarting = false
             if let restored = decode(obj["opponents"], as: [Opponent].self) { opponents = restored }
@@ -382,6 +388,9 @@ final class GameSocket: ObservableObject {
             }
         case "game_end":
             if let end = try? decoder.decode(GameEnd.self, from: data) {
+                if end.reason == "complete" {
+                    onCompletedMatch(obj["gameId"] as? String ?? adsMatchID)
+                }
                 if end.reason == "complete" { completeWelcomeAfterRealGame() }
                 result = end
                 score = end.finalScore
@@ -466,18 +475,34 @@ final class GameSocket: ObservableObject {
 
     func startWithCategory(_ key: String) {
         guard !isStarting, !offerOnboardingRules(category: key, solo: soloMode) else { return }
-        recoverGameOnIdentify = false
-        isStarting = true
-        persistIdentity()
-        connect(["type": soloMode ? "solo" : "join", "name": name, "avatar": avatar, "category": key, "presentationVersion": 1])
+        let solo = soloMode
+        beginMatch { [self] in
+            recoverGameOnIdentify = false
+            persistIdentity()
+            connect(["type": solo ? "solo" : "join", "name": name, "avatar": avatar, "category": key, "presentationVersion": 1])
+        }
     }
 
     func quickMatch() {
         guard !isStarting, !offerOnboardingRules(category: nil, solo: soloMode) else { return }
-        recoverGameOnIdentify = false
+        let solo = soloMode
+        beginMatch { [self] in
+            recoverGameOnIdentify = false
+            persistIdentity()
+            connect(["type": solo ? "solo" : "join", "name": name, "avatar": avatar, "category": NSNull(), "presentationVersion": 1])
+        }
+    }
+
+    func beginMatch(_ action: @escaping () -> Void) {
+        guard !isStarting else { return }
         isStarting = true
-        persistIdentity()
-        connect(["type": soloMode ? "solo" : "join", "name": name, "avatar": avatar, "category": NSNull(), "presentationVersion": 1])
+        let accountGeneration = generation
+        var resumed = false
+        beforeStartingMatch { [weak self] in
+            guard !resumed, let self, self.generation == accountGeneration, self.isStarting else { return }
+            resumed = true
+            action()
+        }
     }
 
     func answer(_ index: Int) {
@@ -518,6 +543,16 @@ final class GameSocket: ObservableObject {
         connect(["type": "leaderboard_list", "category": category])
     }
     func openPrivateRoom(category: String?, code: String? = nil) {
+        if code != nil {
+            beginMatch { [self] in
+                openPrivateRoomAfterAd(category: category, code: code)
+                isStarting = false
+            }
+        } else {
+            openPrivateRoomAfterAd(category: category, code: code)
+        }
+    }
+    private func openPrivateRoomAfterAd(category: String?, code: String?) {
         guard !roomPending, privateRoom == nil else { return }
         roomPending = true; roomError = nil
         var action: [String: Any] = ["name": name, "avatar": avatar, "presentationVersion": 1]
@@ -537,10 +572,19 @@ final class GameSocket: ObservableObject {
     }
     func startPrivateRoom(_ room: NativePrivateRoom) {
         guard room.isHost, room.canStart, !roomPending else { return }
-        if send(["type": "start_room", "code": room.code]) { roomPending = true }
+        beginMatch { [self] in
+            if send(["type": "start_room", "code": room.code]) { roomPending = true }
+            isStarting = false
+        }
     }
     func cancelQueue() { if !cancelPending, send(["type": "cancel_queue"]) { cancelPending = true } }
-    func requestRematch() { if !rematchWaiting, send(["type": "rematch"]) { rematchWaiting = true } }
+    func requestRematch() {
+        guard !rematchWaiting else { return }
+        beginMatch { [self] in
+            if send(["type": "rematch"]) { rematchWaiting = true }
+            isStarting = false
+        }
+    }
     func retryConnection() {
         if awaitingInitialProfile {
             disconnect()
