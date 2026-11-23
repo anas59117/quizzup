@@ -453,5 +453,525 @@
     "difficulty": "expert",
     "angle": "boys-girls-bands",
     "fact": "qui-suis-je-nsync"
+  },
+  {
+    "text": "Je suis un groupe de rock britannique formé à Liverpool en 1960. Nous avons révolutionné la musique pop et notre chanson « Hey Jude » est légendaire. Qui suis-je ?",
+    "answers": [
+      "The Rolling Stones",
+      "The Beatles",
+      "The Who",
+      "Pink Floyd"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "rock-classique",
+    "fact": "qui-suis-je-the-beatles"
+  },
+  {
+    "text": "Je suis un groupe de rock américain dont le chanteur charismatique est mort en 2017. Nos tubes incluent « Numb » et « In the End ». Qui suis-je ?",
+    "answers": [
+      "Evanescence",
+      "Three Days Grace",
+      "Linkin Park",
+      "Papa Roach"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "rock-2000s",
+    "fact": "qui-suis-je-linkin-park"
+  },
+  {
+    "text": "Je suis un groupe de k-pop sud-coréen composé de sept membres. Nous avons battu des records mondiaux et notre ARMY est immense. Qui suis-je ?",
+    "answers": [
+      "EXO",
+      "SEVENTEEN",
+      "BTS",
+      "Stray Kids"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "kpop",
+    "fact": "qui-suis-je-bts"
+  },
+  {
+    "text": "Je suis un groupe de rock britannique connu pour « Bohemian Rhapsody ». Notre chanteur Freddie Mercury est une icône. Qui suis-je ?",
+    "answers": [
+      "Led Zeppelin",
+      "Queen",
+      "Deep Purple",
+      "AC/DC"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "rock-legendes",
+    "fact": "qui-suis-je-queen"
+  },
+  {
+    "text": "Je suis un groupe de hip-hop français originaire de Vitry-sur-Seine. « Le monde chico » et « Que la famille » sont nos albums cultes. Qui suis-je ?",
+    "answers": [
+      "IAM",
+      "NTM",
+      "PNL",
+      "Sexion d'Assaut"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "rap-fr",
+    "fact": "qui-suis-je-pnl"
+  },
+  {
+    "text": "Je suis un groupe de rock alternatif britannique. « Creep » et « OK Computer » m'ont rendu célèbre, et mon chanteur s'appelle Thom Yorke. Qui suis-je ?",
+    "answers": [
+      "Muse",
+      "Radiohead",
+      "Coldplay",
+      "Blur"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "rock-alternatif",
+    "fact": "qui-suis-je-radiohead"
+  },
+  {
+    "text": "Je suis un groupe de pop rock britannique dont le chanteur est Chris Martin. « Yellow » et « Fix You » sont parmi nos plus grands succès. Qui suis-je ?",
+    "answers": [
+      "Oasis",
+      "Radiohead",
+      "Coldplay",
+      "Keane"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pop-rock",
+    "fact": "qui-suis-je-coldplay"
+  },
+  {
+    "text": "Je suis un groupe de hard rock australien formé en 1973. « Highway to Hell » et « Back in Black » sont nos hymnes. Qui suis-je ?",
+    "answers": [
+      "Iron Maiden",
+      "Guns N' Roses",
+      "AC/DC",
+      "Metallica"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "hard-rock",
+    "fact": "qui-suis-je-acdc"
+  },
+  {
+    "text": "Je suis un groupe de rap français composé de JoeyStarr et Kool Shen. Originaires de Seine-Saint-Denis, nous sommes pionniers du rap français. Qui suis-je ?",
+    "answers": [
+      "IAM",
+      "NTM",
+      "Assassin",
+      "Ministère A.M.E.R."
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "rap-fr-old-school",
+    "fact": "qui-suis-je-ntm"
+  },
+  {
+    "text": "Je suis un boys band sud-coréen de k-pop composé de neuf membres. Connus pour nos chorégraphies puissantes, « God's Menu » est l'un de nos titres phares. Qui suis-je ?",
+    "answers": [
+      "ATEEZ",
+      "Stray Kids",
+      "TXT",
+      "ENHYPEN"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "kpop-4gen",
+    "fact": "qui-suis-je-stray-kids"
+  },
+  {
+    "text": "Je suis un groupe de metal américain connu pour mes masques et combinaisons. Nous sommes neuf membres et « Duality » est un de nos titres emblématiques. Qui suis-je ?",
+    "answers": [
+      "Korn",
+      "Marilyn Manson",
+      "Slipknot",
+      "Disturbed"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "metal",
+    "fact": "qui-suis-je-slipknot"
+  },
+  {
+    "text": "Je suis un groupe de rock britannique des années 90 mené par les frères Gallagher. « Wonderwall » est notre chanson la plus connue. Qui suis-je ?",
+    "answers": [
+      "Blur",
+      "Oasis",
+      "Pulp",
+      "The Verve"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "britpop",
+    "fact": "qui-suis-je-oasis"
+  },
+  {
+    "text": "Je suis un groupe de pop américain des années 90 composé de cinq garçons. « I Want It That Way » est notre tube planétaire. Qui suis-je ?",
+    "answers": [
+      "*NSYNC",
+      "Backstreet Boys",
+      "98 Degrees",
+      "Boyz II Men"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "boys-band",
+    "fact": "qui-suis-je-backstreet-boys"
+  },
+  {
+    "text": "Je suis un groupe de rock progressif britannique. « Comfortably Numb » et l'album « The Dark Side of the Moon » sont nos chefs-d'œuvre. Qui suis-je ?",
+    "answers": [
+      "Genesis",
+      "Pink Floyd",
+      "Yes",
+      "King Crimson"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "prog-rock",
+    "fact": "qui-suis-je-pink-floyd"
+  },
+  {
+    "text": "Je suis un groupe de rap français originaire de Marseille. « Je danse le Mia » est notre tube culte et nous avons marqué les années 90. Qui suis-je ?",
+    "answers": [
+      "NTM",
+      "Fonky Family",
+      "IAM",
+      "113"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "rap-fr-marseille",
+    "fact": "qui-suis-je-iam"
+  },
+  {
+    "text": "Je suis un girl group de k-pop surnommé « la nation ». Composé de quatre membres, « DDU-DU DDU-DU » a explosé les charts. Qui suis-je ?",
+    "answers": [
+      "TWICE",
+      "Red Velvet",
+      "BLACKPINK",
+      "aespa"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "kpop-gg",
+    "fact": "qui-suis-je-blackpink"
+  },
+  {
+    "text": "Je suis un groupe de rock américain dont les membres portent du maquillage. Formé dans les années 70, « Rock and Roll All Nite » est notre hymne. Qui suis-je ?",
+    "answers": [
+      "Mötley Crüe",
+      "Alice Cooper",
+      "KISS",
+      "Twisted Sister"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "glam-rock",
+    "fact": "qui-suis-je-kiss"
+  },
+  {
+    "text": "Je suis un groupe de thrash metal américain formé en 1981. « Master of Puppets » et « Enter Sandman » sont nos titres iconiques. Qui suis-je ?",
+    "answers": [
+      "Megadeth",
+      "Metallica",
+      "Slayer",
+      "Anthrax"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "metal",
+    "fact": "qui-suis-je-metallica"
+  },
+  {
+    "text": "Je suis un groupe de pop punk américain. « All the Small Things » est mon tube des années 2000 et nous aimons l'humour potache. Qui suis-je ?",
+    "answers": [
+      "Green Day",
+      "Sum 41",
+      "Blink-182",
+      "Good Charlotte"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pop-punk",
+    "fact": "qui-suis-je-blink-182"
+  },
+  {
+    "text": "Je suis un groupe de rock alternatif américain mené par Dave Grohl, ancien batteur de Nirvana. « Everlong » est l'un de nos plus grands titres. Qui suis-je ?",
+    "answers": [
+      "Pearl Jam",
+      "Foo Fighters",
+      "Soundgarden",
+      "Stone Temple Pilots"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "rock-alternatif",
+    "fact": "qui-suis-je-foo-fighters"
+  },
+  {
+    "text": "Je suis un groupe de rock britannique formé à Liverpool en 1960. Nous avons révolutionné la musique pop et notre chanson « Hey Jude » est légendaire. Qui suis-je ?",
+    "answers": [
+      "The Rolling Stones",
+      "The Beatles",
+      "The Who",
+      "Pink Floyd"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "rock-classique",
+    "fact": "qui-suis-je-the-beatles"
+  },
+  {
+    "text": "Je suis un groupe de rock américain dont le chanteur charismatique est mort en 2017. Nos tubes incluent « Numb » et « In the End ». Qui suis-je ?",
+    "answers": [
+      "Evanescence",
+      "Three Days Grace",
+      "Linkin Park",
+      "Papa Roach"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "rock-2000s",
+    "fact": "qui-suis-je-linkin-park"
+  },
+  {
+    "text": "Je suis un groupe de k-pop sud-coréen composé de sept membres. Nous avons battu des records mondiaux et notre ARMY est immense. Qui suis-je ?",
+    "answers": [
+      "EXO",
+      "SEVENTEEN",
+      "BTS",
+      "Stray Kids"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "kpop",
+    "fact": "qui-suis-je-bts"
+  },
+  {
+    "text": "Je suis un groupe de rock britannique connu pour « Bohemian Rhapsody ». Notre chanteur Freddie Mercury est une icône. Qui suis-je ?",
+    "answers": [
+      "Led Zeppelin",
+      "Queen",
+      "Deep Purple",
+      "AC/DC"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "rock-legendes",
+    "fact": "qui-suis-je-queen"
+  },
+  {
+    "text": "Je suis un groupe de hip-hop français originaire de Vitry-sur-Seine. « Le monde chico » et « Que la famille » sont nos albums cultes. Qui suis-je ?",
+    "answers": [
+      "IAM",
+      "NTM",
+      "PNL",
+      "Sexion d'Assaut"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "rap-fr",
+    "fact": "qui-suis-je-pnl"
+  },
+  {
+    "text": "Je suis un groupe de rock alternatif britannique. « Creep » et « OK Computer » m'ont rendu célèbre, et mon chanteur s'appelle Thom Yorke. Qui suis-je ?",
+    "answers": [
+      "Muse",
+      "Radiohead",
+      "Coldplay",
+      "Blur"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "rock-alternatif",
+    "fact": "qui-suis-je-radiohead"
+  },
+  {
+    "text": "Je suis un groupe de pop rock britannique dont le chanteur est Chris Martin. « Yellow » et « Fix You » sont parmi nos plus grands succès. Qui suis-je ?",
+    "answers": [
+      "Oasis",
+      "Radiohead",
+      "Coldplay",
+      "Keane"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pop-rock",
+    "fact": "qui-suis-je-coldplay"
+  },
+  {
+    "text": "Je suis un groupe de hard rock australien formé en 1973. « Highway to Hell » et « Back in Black » sont nos hymnes. Qui suis-je ?",
+    "answers": [
+      "Iron Maiden",
+      "Guns N' Roses",
+      "AC/DC",
+      "Metallica"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "hard-rock",
+    "fact": "qui-suis-je-acdc"
+  },
+  {
+    "text": "Je suis un groupe de rap français composé de JoeyStarr et Kool Shen. Originaires de Seine-Saint-Denis, nous sommes pionniers du rap français. Qui suis-je ?",
+    "answers": [
+      "IAM",
+      "NTM",
+      "Assassin",
+      "Ministère A.M.E.R."
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "rap-fr-old-school",
+    "fact": "qui-suis-je-ntm"
+  },
+  {
+    "text": "Je suis un boys band sud-coréen de k-pop composé de neuf membres. Connus pour nos chorégraphies puissantes, « God's Menu » est l'un de nos titres phares. Qui suis-je ?",
+    "answers": [
+      "ATEEZ",
+      "Stray Kids",
+      "TXT",
+      "ENHYPEN"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "kpop-4gen",
+    "fact": "qui-suis-je-stray-kids"
+  },
+  {
+    "text": "Je suis un groupe de metal américain connu pour mes masques et combinaisons. Nous sommes neuf membres et « Duality » est un de nos titres emblématiques. Qui suis-je ?",
+    "answers": [
+      "Korn",
+      "Marilyn Manson",
+      "Slipknot",
+      "Disturbed"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "metal",
+    "fact": "qui-suis-je-slipknot"
+  },
+  {
+    "text": "Je suis un groupe de rock britannique des années 90 mené par les frères Gallagher. « Wonderwall » est notre chanson la plus connue. Qui suis-je ?",
+    "answers": [
+      "Blur",
+      "Oasis",
+      "Pulp",
+      "The Verve"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "britpop",
+    "fact": "qui-suis-je-oasis"
+  },
+  {
+    "text": "Je suis un groupe de pop américain des années 90 composé de cinq garçons. « I Want It That Way » est notre tube planétaire. Qui suis-je ?",
+    "answers": [
+      "*NSYNC",
+      "Backstreet Boys",
+      "98 Degrees",
+      "Boyz II Men"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "boys-band",
+    "fact": "qui-suis-je-backstreet-boys"
+  },
+  {
+    "text": "Je suis un groupe de rock progressif britannique. « Comfortably Numb » et l'album « The Dark Side of the Moon » sont nos chefs-d'œuvre. Qui suis-je ?",
+    "answers": [
+      "Genesis",
+      "Pink Floyd",
+      "Yes",
+      "King Crimson"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "prog-rock",
+    "fact": "qui-suis-je-pink-floyd"
+  },
+  {
+    "text": "Je suis un groupe de rap français originaire de Marseille. « Je danse le Mia » est notre tube culte et nous avons marqué les années 90. Qui suis-je ?",
+    "answers": [
+      "NTM",
+      "Fonky Family",
+      "IAM",
+      "113"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "rap-fr-marseille",
+    "fact": "qui-suis-je-iam"
+  },
+  {
+    "text": "Je suis un girl group de k-pop surnommé « la nation ». Composé de quatre membres, « DDU-DU DDU-DU » a explosé les charts. Qui suis-je ?",
+    "answers": [
+      "TWICE",
+      "Red Velvet",
+      "BLACKPINK",
+      "aespa"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "kpop-gg",
+    "fact": "qui-suis-je-blackpink"
+  },
+  {
+    "text": "Je suis un groupe de rock américain dont les membres portent du maquillage. Formé dans les années 70, « Rock and Roll All Nite » est notre hymne. Qui suis-je ?",
+    "answers": [
+      "Mötley Crüe",
+      "Alice Cooper",
+      "KISS",
+      "Twisted Sister"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "glam-rock",
+    "fact": "qui-suis-je-kiss"
+  },
+  {
+    "text": "Je suis un groupe de thrash metal américain formé en 1981. « Master of Puppets » et « Enter Sandman » sont nos titres iconiques. Qui suis-je ?",
+    "answers": [
+      "Megadeth",
+      "Metallica",
+      "Slayer",
+      "Anthrax"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "metal",
+    "fact": "qui-suis-je-metallica"
+  },
+  {
+    "text": "Je suis un groupe de pop punk américain. « All the Small Things » est mon tube des années 2000 et nous aimons l'humour potache. Qui suis-je ?",
+    "answers": [
+      "Green Day",
+      "Sum 41",
+      "Blink-182",
+      "Good Charlotte"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pop-punk",
+    "fact": "qui-suis-je-blink-182"
+  },
+  {
+    "text": "Je suis un groupe de rock alternatif américain mené par Dave Grohl, ancien batteur de Nirvana. « Everlong » est l'un de nos plus grands titres. Qui suis-je ?",
+    "answers": [
+      "Pearl Jam",
+      "Foo Fighters",
+      "Soundgarden",
+      "Stone Temple Pilots"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "rock-alternatif",
+    "fact": "qui-suis-je-foo-fighters"
   }
 ]

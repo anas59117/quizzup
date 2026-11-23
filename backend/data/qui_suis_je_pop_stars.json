@@ -453,5 +453,525 @@
     "difficulty": "expert",
     "angle": "pop-latino",
     "fact": "qui-suis-je-ricky-martin"
+  },
+  {
+    "text": "Je suis une chanteuse américaine surnommée la « Reine de la Pop ». J'ai choqué le monde avec « Like a Virgin » dans les années 80 et je continue de me réinventer décennie après décennie. Qui suis-je ?",
+    "answers": [
+      "Madonna",
+      "Cyndi Lauper",
+      "Whitney Houston",
+      "Janet Jackson"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "icones-pop",
+    "fact": "qsj-madonna"
+  },
+  {
+    "text": "Je suis un chanteur canadien découvert adolescent sur YouTube. Mon tube « Baby » m'a rendu mondialement célèbre, et j'ai depuis évolué vers un style plus mature avec « Peaches ». Qui suis-je ?",
+    "answers": [
+      "Justin Bieber",
+      "Shawn Mendes",
+      "The Weeknd",
+      "Drake"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-masculine",
+    "fact": "qsj-justin-bieber"
+  },
+  {
+    "text": "Je suis une chanteuse originaire de la Barbade. « Umbrella » m'a propulsée au sommet, et je suis aussi devenue milliardaire grâce à ma marque de cosmétiques Fenty Beauty. Qui suis-je ?",
+    "answers": [
+      "Rihanna",
+      "Beyoncé",
+      "Nicki Minaj",
+      "Cardi B"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-business",
+    "fact": "qsj-rihanna"
+  },
+  {
+    "text": "Je suis une chanteuse colombienne connue pour mes mouvements de hanches légendaires. J'ai chanté au Super Bowl et mes tubes « Hips Don't Lie » et « Waka Waka » sont planétaires. Qui suis-je ?",
+    "answers": [
+      "Shakira",
+      "Jennifer Lopez",
+      "Gloria Estefan",
+      "Camila Cabello"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-latino",
+    "fact": "qsj-shakira"
+  },
+  {
+    "text": "Je suis un chanteur britannique ancien membre des One Direction. En solo, j'ai cartonné avec « Watermelon Sugar » et « As It Was », et je suis connu pour mon style vestimentaire flamboyant. Qui suis-je ?",
+    "answers": [
+      "Harry Styles",
+      "Zayn Malik",
+      "Louis Tomlinson",
+      "Niall Horan"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-british",
+    "fact": "qsj-harry-styles"
+  },
+  {
+    "text": "Je suis une chanteuse américaine qui a commencé sur Disney Channel. « Wrecking Ball » a marqué ma transformation artistique, et je suis connue pour mes performances provocatrices. Qui suis-je ?",
+    "answers": [
+      "Miley Cyrus",
+      "Selena Gomez",
+      "Demi Lovato",
+      "Ariana Grande"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "pop-transition",
+    "fact": "qsj-miley-cyrus"
+  },
+  {
+    "text": "Je suis un chanteur portoricain qui a commencé avec le groupe Menudo. « Livin' la Vida Loca » m'a rendu célèbre dans le monde entier dans les années 90. Qui suis-je ?",
+    "answers": [
+      "Ricky Martin",
+      "Enrique Iglesias",
+      "Marc Anthony",
+      "Luis Fonsi"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "pop-latino-classique",
+    "fact": "qsj-ricky-martin"
+  },
+  {
+    "text": "Je suis une chanteuse américaine surnommée « Queen Bey ». Ancienne leader des Destiny's Child, j'ai révolutionné la pop avec des albums visuels comme « Lemonade ». Qui suis-je ?",
+    "answers": [
+      "Beyoncé",
+      "Rihanna",
+      "Alicia Keys",
+      "Mary J. Blige"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-reine",
+    "fact": "qsj-beyonce"
+  },
+  {
+    "text": "Je suis une chanteuse néo-zélandaise qui a explosé à 16 ans avec « Royals ». Mon style minimaliste et mes textes introspectifs m'ont distinguée dans le paysage pop. Qui suis-je ?",
+    "answers": [
+      "Lorde",
+      "Billie Eilish",
+      "Halsey",
+      "Alessia Cara"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "pop-alternative",
+    "fact": "qsj-lorde"
+  },
+  {
+    "text": "Je suis un chanteur canadien connu pour « Blinding Lights », l'un des plus grands hits de tous les temps. Mon style mêle pop, R&B et new wave, et je me produis souvent avec un look mystérieux. Qui suis-je ?",
+    "answers": [
+      "The Weeknd",
+      "Drake",
+      "Post Malone",
+      "Bruno Mars"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-rnb",
+    "fact": "qsj-the-weeknd"
+  },
+  {
+    "text": "Je suis une chanteuse britannique dont la voix puissante a ému le monde entier. « Someone Like You » et « Hello » sont devenus des hymnes de rupture universels. Qui suis-je ?",
+    "answers": [
+      "Adele",
+      "Amy Winehouse",
+      "Dua Lipa",
+      "Florence Welch"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-ballade",
+    "fact": "qsj-adele"
+  },
+  {
+    "text": "Je suis un chanteur hawaïen dont le tube « Just the Way You Are » a conquis la planète. Showman né, j'ai enchaîné les hits comme « Uptown Funk » avec Mark Ronson. Qui suis-je ?",
+    "answers": [
+      "Bruno Mars",
+      "Jason Derulo",
+      "Pharrell Williams",
+      "Ne-Yo"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-showman",
+    "fact": "qsj-bruno-mars"
+  },
+  {
+    "text": "Je suis une chanteuse américaine qui a explosé avec « Bad Guy » à seulement 17 ans. Je compose avec mon frère Finneas et je suis connue pour mon esthétique sombre et oversized. Qui suis-je ?",
+    "answers": [
+      "Billie Eilish",
+      "Olivia Rodrigo",
+      "Lorde",
+      "Halsey"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-gen-z",
+    "fact": "qsj-billie-eilish"
+  },
+  {
+    "text": "Je suis une chanteuse américaine d'origine albanaise et britannique. « New Rules » m'a lancée, et je suis devenue l'une des artistes les plus streamées au monde avec « Levitating ». Qui suis-je ?",
+    "answers": [
+      "Dua Lipa",
+      "Charli XCX",
+      "Rita Ora",
+      "Bebe Rexha"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-dance",
+    "fact": "qsj-dua-lipa"
+  },
+  {
+    "text": "Je suis un auteur-compositeur britannique connu pour mes ballades romantiques jouées à la guitare acoustique. « Shape of You » est l'un des titres les plus streamés de l'histoire. Qui suis-je ?",
+    "answers": [
+      "Ed Sheeran",
+      "Sam Smith",
+      "James Arthur",
+      "Lewis Capaldi"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-acoustique",
+    "fact": "qsj-ed-sheeran"
+  },
+  {
+    "text": "Je suis une chanteuse américaine qui a percé avec « drivers license » à 18 ans. Mon album « SOUR » a capturé les émotions adolescentes et m'a valu plusieurs Grammy Awards. Qui suis-je ?",
+    "answers": [
+      "Olivia Rodrigo",
+      "Billie Eilish",
+      "Madison Beer",
+      "Conan Gray"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-nouvelle-vague",
+    "fact": "qsj-olivia-rodrigo"
+  },
+  {
+    "text": "Je suis une chanteuse et actrice américaine issue de Nickelodeon. Ma voix de soprano et mes tubes comme « Thank U, Next » et « 7 Rings » m'ont élevée au rang de superstar. Qui suis-je ?",
+    "answers": [
+      "Ariana Grande",
+      "Victoria Justice",
+      "Jennette McCurdy",
+      "Selena Gomez"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-diva",
+    "fact": "qsj-ariana-grande"
+  },
+  {
+    "text": "Je suis un chanteur portoricain qui a popularisé le reggaeton dans le monde entier. « Despacito » avec Daddy Yankee est devenu un phénomène planétaire en 2017. Qui suis-je ?",
+    "answers": [
+      "Luis Fonsi",
+      "Maluma",
+      "J Balvin",
+      "Ozuna"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "pop-reggaeton",
+    "fact": "qsj-luis-fonsi"
+  },
+  {
+    "text": "Je suis une chanteuse américaine ancienne membre des Destiny's Child aux côtés de Beyoncé. En solo, j'ai sorti des hits R&B comme « Motivation » et je suis aussi actrice. Qui suis-je ?",
+    "answers": [
+      "Kelly Rowland",
+      "Michelle Williams",
+      "Solange",
+      "Brandy"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "pop-girl-group",
+    "fact": "qsj-kelly-rowland"
+  },
+  {
+    "text": "Je suis un chanteur et producteur américain qui a marqué les années 2000 avec les Black Eyed Peas. J'ai aussi produit des hits solo et je suis passionné de technologie. Qui suis-je ?",
+    "answers": [
+      "will.i.am",
+      "Pharrell Williams",
+      "Timbaland",
+      "Kanye West"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "pop-production",
+    "fact": "qsj-william"
+  },
+  {
+    "text": "Je suis une chanteuse américaine surnommée la « Reine de la Pop ». J'ai choqué le monde avec « Like a Virgin » dans les années 80 et je continue de me réinventer décennie après décennie. Qui suis-je ?",
+    "answers": [
+      "Madonna",
+      "Cyndi Lauper",
+      "Whitney Houston",
+      "Janet Jackson"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "icones-pop",
+    "fact": "qsj-madonna"
+  },
+  {
+    "text": "Je suis un chanteur canadien découvert adolescent sur YouTube. Mon tube « Baby » m'a rendu mondialement célèbre, et j'ai depuis évolué vers un style plus mature avec « Peaches ». Qui suis-je ?",
+    "answers": [
+      "Justin Bieber",
+      "Shawn Mendes",
+      "The Weeknd",
+      "Drake"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-masculine",
+    "fact": "qsj-justin-bieber"
+  },
+  {
+    "text": "Je suis une chanteuse originaire de la Barbade. « Umbrella » m'a propulsée au sommet, et je suis aussi devenue milliardaire grâce à ma marque de cosmétiques Fenty Beauty. Qui suis-je ?",
+    "answers": [
+      "Rihanna",
+      "Beyoncé",
+      "Nicki Minaj",
+      "Cardi B"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-business",
+    "fact": "qsj-rihanna"
+  },
+  {
+    "text": "Je suis une chanteuse colombienne connue pour mes mouvements de hanches légendaires. J'ai chanté au Super Bowl et mes tubes « Hips Don't Lie » et « Waka Waka » sont planétaires. Qui suis-je ?",
+    "answers": [
+      "Shakira",
+      "Jennifer Lopez",
+      "Gloria Estefan",
+      "Camila Cabello"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-latino",
+    "fact": "qsj-shakira"
+  },
+  {
+    "text": "Je suis un chanteur britannique ancien membre des One Direction. En solo, j'ai cartonné avec « Watermelon Sugar » et « As It Was », et je suis connu pour mon style vestimentaire flamboyant. Qui suis-je ?",
+    "answers": [
+      "Harry Styles",
+      "Zayn Malik",
+      "Louis Tomlinson",
+      "Niall Horan"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-british",
+    "fact": "qsj-harry-styles"
+  },
+  {
+    "text": "Je suis une chanteuse américaine qui a commencé sur Disney Channel. « Wrecking Ball » a marqué ma transformation artistique, et je suis connue pour mes performances provocatrices. Qui suis-je ?",
+    "answers": [
+      "Miley Cyrus",
+      "Selena Gomez",
+      "Demi Lovato",
+      "Ariana Grande"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "pop-transition",
+    "fact": "qsj-miley-cyrus"
+  },
+  {
+    "text": "Je suis un chanteur portoricain qui a commencé avec le groupe Menudo. « Livin' la Vida Loca » m'a rendu célèbre dans le monde entier dans les années 90. Qui suis-je ?",
+    "answers": [
+      "Ricky Martin",
+      "Enrique Iglesias",
+      "Marc Anthony",
+      "Luis Fonsi"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "pop-latino-classique",
+    "fact": "qsj-ricky-martin"
+  },
+  {
+    "text": "Je suis une chanteuse américaine surnommée « Queen Bey ». Ancienne leader des Destiny's Child, j'ai révolutionné la pop avec des albums visuels comme « Lemonade ». Qui suis-je ?",
+    "answers": [
+      "Beyoncé",
+      "Rihanna",
+      "Alicia Keys",
+      "Mary J. Blige"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-reine",
+    "fact": "qsj-beyonce"
+  },
+  {
+    "text": "Je suis une chanteuse néo-zélandaise qui a explosé à 16 ans avec « Royals ». Mon style minimaliste et mes textes introspectifs m'ont distinguée dans le paysage pop. Qui suis-je ?",
+    "answers": [
+      "Lorde",
+      "Billie Eilish",
+      "Halsey",
+      "Alessia Cara"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "pop-alternative",
+    "fact": "qsj-lorde"
+  },
+  {
+    "text": "Je suis un chanteur canadien connu pour « Blinding Lights », l'un des plus grands hits de tous les temps. Mon style mêle pop, R&B et new wave, et je me produis souvent avec un look mystérieux. Qui suis-je ?",
+    "answers": [
+      "The Weeknd",
+      "Drake",
+      "Post Malone",
+      "Bruno Mars"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-rnb",
+    "fact": "qsj-the-weeknd"
+  },
+  {
+    "text": "Je suis une chanteuse britannique dont la voix puissante a ému le monde entier. « Someone Like You » et « Hello » sont devenus des hymnes de rupture universels. Qui suis-je ?",
+    "answers": [
+      "Adele",
+      "Amy Winehouse",
+      "Dua Lipa",
+      "Florence Welch"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-ballade",
+    "fact": "qsj-adele"
+  },
+  {
+    "text": "Je suis un chanteur hawaïen dont le tube « Just the Way You Are » a conquis la planète. Showman né, j'ai enchaîné les hits comme « Uptown Funk » avec Mark Ronson. Qui suis-je ?",
+    "answers": [
+      "Bruno Mars",
+      "Jason Derulo",
+      "Pharrell Williams",
+      "Ne-Yo"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-showman",
+    "fact": "qsj-bruno-mars"
+  },
+  {
+    "text": "Je suis une chanteuse américaine qui a explosé avec « Bad Guy » à seulement 17 ans. Je compose avec mon frère Finneas et je suis connue pour mon esthétique sombre et oversized. Qui suis-je ?",
+    "answers": [
+      "Billie Eilish",
+      "Olivia Rodrigo",
+      "Lorde",
+      "Halsey"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-gen-z",
+    "fact": "qsj-billie-eilish"
+  },
+  {
+    "text": "Je suis une chanteuse américaine d'origine albanaise et britannique. « New Rules » m'a lancée, et je suis devenue l'une des artistes les plus streamées au monde avec « Levitating ». Qui suis-je ?",
+    "answers": [
+      "Dua Lipa",
+      "Charli XCX",
+      "Rita Ora",
+      "Bebe Rexha"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-dance",
+    "fact": "qsj-dua-lipa"
+  },
+  {
+    "text": "Je suis un auteur-compositeur britannique connu pour mes ballades romantiques jouées à la guitare acoustique. « Shape of You » est l'un des titres les plus streamés de l'histoire. Qui suis-je ?",
+    "answers": [
+      "Ed Sheeran",
+      "Sam Smith",
+      "James Arthur",
+      "Lewis Capaldi"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-acoustique",
+    "fact": "qsj-ed-sheeran"
+  },
+  {
+    "text": "Je suis une chanteuse américaine qui a percé avec « drivers license » à 18 ans. Mon album « SOUR » a capturé les émotions adolescentes et m'a valu plusieurs Grammy Awards. Qui suis-je ?",
+    "answers": [
+      "Olivia Rodrigo",
+      "Billie Eilish",
+      "Madison Beer",
+      "Conan Gray"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-nouvelle-vague",
+    "fact": "qsj-olivia-rodrigo"
+  },
+  {
+    "text": "Je suis une chanteuse et actrice américaine issue de Nickelodeon. Ma voix de soprano et mes tubes comme « Thank U, Next » et « 7 Rings » m'ont élevée au rang de superstar. Qui suis-je ?",
+    "answers": [
+      "Ariana Grande",
+      "Victoria Justice",
+      "Jennette McCurdy",
+      "Selena Gomez"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "pop-diva",
+    "fact": "qsj-ariana-grande"
+  },
+  {
+    "text": "Je suis un chanteur portoricain qui a popularisé le reggaeton dans le monde entier. « Despacito » avec Daddy Yankee est devenu un phénomène planétaire en 2017. Qui suis-je ?",
+    "answers": [
+      "Luis Fonsi",
+      "Maluma",
+      "J Balvin",
+      "Ozuna"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "pop-reggaeton",
+    "fact": "qsj-luis-fonsi"
+  },
+  {
+    "text": "Je suis une chanteuse américaine ancienne membre des Destiny's Child aux côtés de Beyoncé. En solo, j'ai sorti des hits R&B comme « Motivation » et je suis aussi actrice. Qui suis-je ?",
+    "answers": [
+      "Kelly Rowland",
+      "Michelle Williams",
+      "Solange",
+      "Brandy"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "pop-girl-group",
+    "fact": "qsj-kelly-rowland"
+  },
+  {
+    "text": "Je suis un chanteur et producteur américain qui a marqué les années 2000 avec les Black Eyed Peas. J'ai aussi produit des hits solo et je suis passionné de technologie. Qui suis-je ?",
+    "answers": [
+      "will.i.am",
+      "Pharrell Williams",
+      "Timbaland",
+      "Kanye West"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "pop-production",
+    "fact": "qsj-william"
   }
 ]

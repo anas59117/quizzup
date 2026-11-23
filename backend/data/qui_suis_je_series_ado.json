@@ -453,5 +453,525 @@
     "difficulty": "expert",
     "angle": "series-ados",
     "fact": "qui-suis-je-cassie-howard"
+  },
+  {
+    "text": "Je suis une série américaine où des lycéens naviguent entre amour, dépression et drogues dans une banlieue américaine. Zendaya y joue le rôle principal de Rue. Qui suis-je ?",
+    "answers": [
+      "Euphoria",
+      "Skins",
+      "13 Reasons Why",
+      "Gossip Girl"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-drame",
+    "fact": "qsj-euphoria"
+  },
+  {
+    "text": "Je suis une série Netflix qui suit les élèves d'un lycée espagnol huppé nommé Las Encinas. Meurtres, secrets et triangles amoureux rythment chaque saison. Qui suis-je ?",
+    "answers": [
+      "Élite",
+      "La Casa de Papel",
+      "Toy Boy",
+      "Vis a Vis"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-espagnole",
+    "fact": "qsj-elite"
+  },
+  {
+    "text": "Je suis une série britannique culte où chaque saison suit un groupe d'ados différent à Bristol. Fêtes, drogues et problèmes familiaux : j'ai inventé le genre « teen drama réaliste ». Qui suis-je ?",
+    "answers": [
+      "Skins",
+      "Misfits",
+      "The Inbetweeners",
+      "Euphoria"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-uk",
+    "fact": "qsj-skins"
+  },
+  {
+    "text": "Je suis une série Netflix où un lycéen timide ouvre un cabinet de conseil en sexualité avec une camarade rebelle. L'humour et la bienveillance sont mes marques de fabrique. Qui suis-je ?",
+    "answers": [
+      "Sex Education",
+      "Never Have I Ever",
+      "Heartstopper",
+      "The End of the F***ing World"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-comedie",
+    "fact": "qsj-sex-education"
+  },
+  {
+    "text": "Je suis une série qui suit la vie de privilégiés de l'Upper East Side à Manhattan. « XOXO, Gossip Girl » : une blogueuse anonyme y dévoile tous les secrets. Qui suis-je ?",
+    "answers": [
+      "Gossip Girl",
+      "The O.C.",
+      "90210",
+      "Pretty Little Liars"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-luxe",
+    "fact": "qsj-gossip-girl"
+  },
+  {
+    "text": "Je suis une série Netflix adaptée d'un roman controversé. Après le suicide d'une lycéenne, des cassettes audio révèlent les 13 raisons de son geste. Qui suis-je ?",
+    "answers": [
+      "13 Reasons Why",
+      "Euphoria",
+      "A Teacher",
+      "The Society"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-polemique",
+    "fact": "qsj-13-reasons-why"
+  },
+  {
+    "text": "Je suis une série des années 2000 se déroulant à Orange County, en Californie. Ryan Atwood, un ado des quartiers populaires, débarque dans un milieu riche. Qui suis-je ?",
+    "answers": [
+      "The O.C.",
+      "One Tree Hill",
+      "Gossip Girl",
+      "90210"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-2000",
+    "fact": "qsj-the-oc"
+  },
+  {
+    "text": "Je suis une série des années 90 sur un groupe de lycéens et leurs problèmes quotidiens en Californie du Sud. Brandon et Brenda Walsh en sont les personnages centraux. Qui suis-je ?",
+    "answers": [
+      "Beverly Hills 90210",
+      "Dawson",
+      "Buffy",
+      "Saved by the Bell"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-classique",
+    "fact": "qsj-90210"
+  },
+  {
+    "text": "Je suis une série Netflix adaptée d'un webtoon. Nick et Charlie, deux lycéens britanniques, vivent une histoire d'amour touchante. Mon style doux et coloré a conquis le monde. Qui suis-je ?",
+    "answers": [
+      "Heartstopper",
+      "Young Royals",
+      "Love, Victor",
+      "Sex Education"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-lgbtq",
+    "fact": "qsj-heartstopper"
+  },
+  {
+    "text": "Je suis une série des années 2000 se déroulant à Tree Hill, en Caroline du Nord. Les demi-frères Lucas et Nathan Scott s'affrontent sur et en dehors du terrain de basketball. Qui suis-je ?",
+    "answers": [
+      "One Tree Hill (Les Frères Scott)",
+      "Friday Night Lights",
+      "The O.C.",
+      "Smallville"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-sport",
+    "fact": "qsj-one-tree-hill"
+  },
+  {
+    "text": "Je suis une série qui mêle enquête policière et teen drama. Après la disparition de leur amie, quatre lycéennes reçoivent des messages menaçants d'un mystérieux « A ». Qui suis-je ?",
+    "answers": [
+      "Pretty Little Liars",
+      "Riverdale",
+      "Gossip Girl",
+      "The Lying Game"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-mystere",
+    "fact": "qsj-pretty-little-liars"
+  },
+  {
+    "text": "Je suis une série qui réinvente les personnages d'Archie Comics dans une ambiance sombre et mystérieuse. Meurtres, gangs et intrigues secouent la petite ville de Riverdale. Qui suis-je ?",
+    "answers": [
+      "Riverdale",
+      "Chilling Adventures of Sabrina",
+      "Pretty Little Liars",
+      "Teen Wolf"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-dark",
+    "fact": "qsj-riverdale"
+  },
+  {
+    "text": "Je suis une série Netflix qui suit Devi, une lycéenne indo-américaine, entre ambitions académiques, drames amoureux et deuil. Mindy Kaling est ma créatrice. Qui suis-je ?",
+    "answers": [
+      "Never Have I Ever",
+      "Sex Education",
+      "Ginny & Georgia",
+      "Dash & Lily"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-diversite",
+    "fact": "qsj-never-have-i-ever"
+  },
+  {
+    "text": "Je suis une série britannique absurde et violente. Un ado perturbé rencontre une fille imprévisible, et ensemble ils fuient en road trip chaotique. Qui suis-je ?",
+    "answers": [
+      "The End of the F***ing World",
+      "Skins",
+      "Misfits",
+      "Black Mirror"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-dark-uk",
+    "fact": "qsj-end-of-world"
+  },
+  {
+    "text": "Je suis une série des années 90-2000 où Dawson, un ado passionné de cinéma, grandit à Capeside avec ses amis. Joey, Pacey et Jen font partie de mon quatuor iconique. Qui suis-je ?",
+    "answers": [
+      "Dawson (Dawson's Creek)",
+      "Felicity",
+      "Freaks and Geeks",
+      "My So-Called Life"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-nostalgie",
+    "fact": "qsj-dawson"
+  },
+  {
+    "text": "Je suis une série qui suit un lycéen mordu par un loup-garou. Entre créatures surnaturelles et drames de lycée, la ville de Beacon Hills cache bien des secrets. Qui suis-je ?",
+    "answers": [
+      "Teen Wolf",
+      "The Vampire Diaries",
+      "Shadowhunters",
+      "Buffy"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-fantastique",
+    "fact": "qsj-teen-wolf"
+  },
+  {
+    "text": "Je suis une série Netflix se déroulant dans les années 80 à Hawkins, Indiana. Un groupe d'ados affronte des créatures d'une dimension parallèle appelée l'Upside Down. Qui suis-je ?",
+    "answers": [
+      "Stranger Things",
+      "Dark",
+      "The Society",
+      "Locke & Key"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-sf",
+    "fact": "qsj-stranger-things"
+  },
+  {
+    "text": "Je suis une série suédoise Netflix où un prince tombe amoureux d'un camarade de son internat. L'amour et le devoir royal s'affrontent dans cette histoire émouvante. Qui suis-je ?",
+    "answers": [
+      "Young Royals",
+      "Heartstopper",
+      "Skam",
+      "Love, Victor"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-scandinave",
+    "fact": "qsj-young-royals"
+  },
+  {
+    "text": "Je suis une série norvégienne suivant le quotidien de lycéens à Oslo. Chaque saison se concentre sur un personnage différent. J'ai été adaptée dans de nombreux pays. Qui suis-je ?",
+    "answers": [
+      "Skam",
+      "Young Royals",
+      "Ragnarok",
+      "Quicksand"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "series-ado-realiste",
+    "fact": "qsj-skam"
+  },
+  {
+    "text": "Je suis une série Netflix où une mère et sa fille s'installent dans une petite ville de Nouvelle-Angleterre. Derrière l'apparence idyllique se cachent des secrets et un passé criminel. Qui suis-je ?",
+    "answers": [
+      "Ginny & Georgia",
+      "Gilmore Girls",
+      "Virgin River",
+      "Sweet Magnolias"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-famille",
+    "fact": "qsj-ginny-georgia"
+  },
+  {
+    "text": "Je suis une série américaine où des lycéens naviguent entre amour, dépression et drogues dans une banlieue américaine. Zendaya y joue le rôle principal de Rue. Qui suis-je ?",
+    "answers": [
+      "Euphoria",
+      "Skins",
+      "13 Reasons Why",
+      "Gossip Girl"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-drame",
+    "fact": "qsj-euphoria"
+  },
+  {
+    "text": "Je suis une série Netflix qui suit les élèves d'un lycée espagnol huppé nommé Las Encinas. Meurtres, secrets et triangles amoureux rythment chaque saison. Qui suis-je ?",
+    "answers": [
+      "Élite",
+      "La Casa de Papel",
+      "Toy Boy",
+      "Vis a Vis"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-espagnole",
+    "fact": "qsj-elite"
+  },
+  {
+    "text": "Je suis une série britannique culte où chaque saison suit un groupe d'ados différent à Bristol. Fêtes, drogues et problèmes familiaux : j'ai inventé le genre « teen drama réaliste ». Qui suis-je ?",
+    "answers": [
+      "Skins",
+      "Misfits",
+      "The Inbetweeners",
+      "Euphoria"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-uk",
+    "fact": "qsj-skins"
+  },
+  {
+    "text": "Je suis une série Netflix où un lycéen timide ouvre un cabinet de conseil en sexualité avec une camarade rebelle. L'humour et la bienveillance sont mes marques de fabrique. Qui suis-je ?",
+    "answers": [
+      "Sex Education",
+      "Never Have I Ever",
+      "Heartstopper",
+      "The End of the F***ing World"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-comedie",
+    "fact": "qsj-sex-education"
+  },
+  {
+    "text": "Je suis une série qui suit la vie de privilégiés de l'Upper East Side à Manhattan. « XOXO, Gossip Girl » : une blogueuse anonyme y dévoile tous les secrets. Qui suis-je ?",
+    "answers": [
+      "Gossip Girl",
+      "The O.C.",
+      "90210",
+      "Pretty Little Liars"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-luxe",
+    "fact": "qsj-gossip-girl"
+  },
+  {
+    "text": "Je suis une série Netflix adaptée d'un roman controversé. Après le suicide d'une lycéenne, des cassettes audio révèlent les 13 raisons de son geste. Qui suis-je ?",
+    "answers": [
+      "13 Reasons Why",
+      "Euphoria",
+      "A Teacher",
+      "The Society"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-polemique",
+    "fact": "qsj-13-reasons-why"
+  },
+  {
+    "text": "Je suis une série des années 2000 se déroulant à Orange County, en Californie. Ryan Atwood, un ado des quartiers populaires, débarque dans un milieu riche. Qui suis-je ?",
+    "answers": [
+      "The O.C.",
+      "One Tree Hill",
+      "Gossip Girl",
+      "90210"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-2000",
+    "fact": "qsj-the-oc"
+  },
+  {
+    "text": "Je suis une série des années 90 sur un groupe de lycéens et leurs problèmes quotidiens en Californie du Sud. Brandon et Brenda Walsh en sont les personnages centraux. Qui suis-je ?",
+    "answers": [
+      "Beverly Hills 90210",
+      "Dawson",
+      "Buffy",
+      "Saved by the Bell"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-classique",
+    "fact": "qsj-90210"
+  },
+  {
+    "text": "Je suis une série Netflix adaptée d'un webtoon. Nick et Charlie, deux lycéens britanniques, vivent une histoire d'amour touchante. Mon style doux et coloré a conquis le monde. Qui suis-je ?",
+    "answers": [
+      "Heartstopper",
+      "Young Royals",
+      "Love, Victor",
+      "Sex Education"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-lgbtq",
+    "fact": "qsj-heartstopper"
+  },
+  {
+    "text": "Je suis une série des années 2000 se déroulant à Tree Hill, en Caroline du Nord. Les demi-frères Lucas et Nathan Scott s'affrontent sur et en dehors du terrain de basketball. Qui suis-je ?",
+    "answers": [
+      "One Tree Hill (Les Frères Scott)",
+      "Friday Night Lights",
+      "The O.C.",
+      "Smallville"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-sport",
+    "fact": "qsj-one-tree-hill"
+  },
+  {
+    "text": "Je suis une série qui mêle enquête policière et teen drama. Après la disparition de leur amie, quatre lycéennes reçoivent des messages menaçants d'un mystérieux « A ». Qui suis-je ?",
+    "answers": [
+      "Pretty Little Liars",
+      "Riverdale",
+      "Gossip Girl",
+      "The Lying Game"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-mystere",
+    "fact": "qsj-pretty-little-liars"
+  },
+  {
+    "text": "Je suis une série qui réinvente les personnages d'Archie Comics dans une ambiance sombre et mystérieuse. Meurtres, gangs et intrigues secouent la petite ville de Riverdale. Qui suis-je ?",
+    "answers": [
+      "Riverdale",
+      "Chilling Adventures of Sabrina",
+      "Pretty Little Liars",
+      "Teen Wolf"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-dark",
+    "fact": "qsj-riverdale"
+  },
+  {
+    "text": "Je suis une série Netflix qui suit Devi, une lycéenne indo-américaine, entre ambitions académiques, drames amoureux et deuil. Mindy Kaling est ma créatrice. Qui suis-je ?",
+    "answers": [
+      "Never Have I Ever",
+      "Sex Education",
+      "Ginny & Georgia",
+      "Dash & Lily"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-diversite",
+    "fact": "qsj-never-have-i-ever"
+  },
+  {
+    "text": "Je suis une série britannique absurde et violente. Un ado perturbé rencontre une fille imprévisible, et ensemble ils fuient en road trip chaotique. Qui suis-je ?",
+    "answers": [
+      "The End of the F***ing World",
+      "Skins",
+      "Misfits",
+      "Black Mirror"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-dark-uk",
+    "fact": "qsj-end-of-world"
+  },
+  {
+    "text": "Je suis une série des années 90-2000 où Dawson, un ado passionné de cinéma, grandit à Capeside avec ses amis. Joey, Pacey et Jen font partie de mon quatuor iconique. Qui suis-je ?",
+    "answers": [
+      "Dawson (Dawson's Creek)",
+      "Felicity",
+      "Freaks and Geeks",
+      "My So-Called Life"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-nostalgie",
+    "fact": "qsj-dawson"
+  },
+  {
+    "text": "Je suis une série qui suit un lycéen mordu par un loup-garou. Entre créatures surnaturelles et drames de lycée, la ville de Beacon Hills cache bien des secrets. Qui suis-je ?",
+    "answers": [
+      "Teen Wolf",
+      "The Vampire Diaries",
+      "Shadowhunters",
+      "Buffy"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-fantastique",
+    "fact": "qsj-teen-wolf"
+  },
+  {
+    "text": "Je suis une série Netflix se déroulant dans les années 80 à Hawkins, Indiana. Un groupe d'ados affronte des créatures d'une dimension parallèle appelée l'Upside Down. Qui suis-je ?",
+    "answers": [
+      "Stranger Things",
+      "Dark",
+      "The Society",
+      "Locke & Key"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "series-ado-sf",
+    "fact": "qsj-stranger-things"
+  },
+  {
+    "text": "Je suis une série suédoise Netflix où un prince tombe amoureux d'un camarade de son internat. L'amour et le devoir royal s'affrontent dans cette histoire émouvante. Qui suis-je ?",
+    "answers": [
+      "Young Royals",
+      "Heartstopper",
+      "Skam",
+      "Love, Victor"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-scandinave",
+    "fact": "qsj-young-royals"
+  },
+  {
+    "text": "Je suis une série norvégienne suivant le quotidien de lycéens à Oslo. Chaque saison se concentre sur un personnage différent. J'ai été adaptée dans de nombreux pays. Qui suis-je ?",
+    "answers": [
+      "Skam",
+      "Young Royals",
+      "Ragnarok",
+      "Quicksand"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "series-ado-realiste",
+    "fact": "qsj-skam"
+  },
+  {
+    "text": "Je suis une série Netflix où une mère et sa fille s'installent dans une petite ville de Nouvelle-Angleterre. Derrière l'apparence idyllique se cachent des secrets et un passé criminel. Qui suis-je ?",
+    "answers": [
+      "Ginny & Georgia",
+      "Gilmore Girls",
+      "Virgin River",
+      "Sweet Magnolias"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "series-ado-famille",
+    "fact": "qsj-ginny-georgia"
   }
 ]

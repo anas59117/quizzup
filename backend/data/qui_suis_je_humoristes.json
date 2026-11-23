@@ -453,5 +453,525 @@
     "difficulty": "expert",
     "angle": "imitateurs",
     "fact": "qui-suis-je-marc-antoine-le-bret"
+  },
+  {
+    "text": "Je suis un humoriste français d'origine camerounaise connu pour « Chocolat ». Mon personnage de présentateur raté de JT est culte. Qui suis-je ?",
+    "answers": [
+      "Jamel Debbouze",
+      "Gad Elmaleh",
+      "Michel Boujenah",
+      "Dany Boon"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "one-man-show",
+    "fact": "qui-suis-je-chocolat-humoriste"
+  },
+  {
+    "text": "Je suis un humoriste et acteur français connu pour « Bienvenue chez les Ch'tis ». Je suis originaire du Nord de la France. Qui suis-je ?",
+    "answers": [
+      "Kad Merad",
+      "Franck Dubosc",
+      "Dany Boon",
+      "Élie Semoun"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "humoristes-fr",
+    "fact": "qui-suis-je-dany-boon"
+  },
+  {
+    "text": "Je suis un humoriste américain connu pour mes stand-ups provocateurs sur Netflix et pour avoir gifler quelqu'un aux Oscars en 2022. Ah non, c'est celui qui a giflé ! Je suis celui qui a reçu la gifle. Qui suis-je ?",
+    "answers": [
+      "Dave Chappelle",
+      "Kevin Hart",
+      "Chris Rock",
+      "Eddie Murphy"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "standup-us",
+    "fact": "qui-suis-je-chris-rock"
+  },
+  {
+    "text": "Je suis un humoriste marocain-français qui a percé avec le Jamel Comedy Club. Mon spectacle « 100% Debbouze » est culte. Qui suis-je ?",
+    "answers": [
+      "Gad Elmaleh",
+      "Jamel Debbouze",
+      "Kev Adams",
+      "Redouanne Harjane"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "humoristes-fr",
+    "fact": "qui-suis-je-jamel-debbouze"
+  },
+  {
+    "text": "Je suis un humoriste français très populaire chez les jeunes. J'ai commencé très tôt et mon spectacle « Voilà Voilà » a rempli les salles. Qui suis-je ?",
+    "answers": [
+      "Jamel Debbouze",
+      "Roman Frayssinet",
+      "Kev Adams",
+      "Artus"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "humoristes-jeunes",
+    "fact": "qui-suis-je-kev-adams"
+  },
+  {
+    "text": "Je suis un humoriste américain considéré comme l'un des meilleurs stand-up comedians. Mes spéciales Netflix sont légendaires et je parle souvent de race en Amérique. Qui suis-je ?",
+    "answers": [
+      "Kevin Hart",
+      "Chris Rock",
+      "Dave Chappelle",
+      "Trevor Noah"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "standup-us",
+    "fact": "qui-suis-je-dave-chappelle"
+  },
+  {
+    "text": "Je suis un humoriste et acteur français connu pour « Qu'est-ce qu'on a fait au Bon Dieu ? ». Mon physique imposant est ma marque de fabrique. Qui suis-je ?",
+    "answers": [
+      "Dany Boon",
+      "Franck Dubosc",
+      "Kad Merad",
+      "Christian Clavier"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "comedie-fr",
+    "fact": "qui-suis-je-christian-clavier"
+  },
+  {
+    "text": "Je suis un humoriste franco-marocain qui a fait le Marrakech du Rire. Mon one-man-show « Gad Gone Wild » a tourné dans le monde entier. Qui suis-je ?",
+    "answers": [
+      "Jamel Debbouze",
+      "Redouanne Harjane",
+      "Gad Elmaleh",
+      "Hassan El Fad"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "humoristes-fr",
+    "fact": "qui-suis-je-gad-elmaleh"
+  },
+  {
+    "text": "Je suis un humoriste américain au physique petit et énergique. Mes films et stand-ups sont des succès commerciaux énormes et j'adore crier sur scène. Qui suis-je ?",
+    "answers": [
+      "Chris Tucker",
+      "Kevin Hart",
+      "Martin Lawrence",
+      "Cedric the Entertainer"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "standup-us",
+    "fact": "qui-suis-je-kevin-hart"
+  },
+  {
+    "text": "Je suis un humoriste et acteur britannique connu pour « Mr. Bean ». Mon humour muet et mes mimiques sont reconnus dans le monde entier. Qui suis-je ?",
+    "answers": [
+      "Ricky Gervais",
+      "Rowan Atkinson",
+      "John Cleese",
+      "Sacha Baron Cohen"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "humour-uk",
+    "fact": "qui-suis-je-rowan-atkinson"
+  },
+  {
+    "text": "Je suis un humoriste français spécialiste de l'improvisation. J'ai créé le spectacle « Artus, dernière avant Vegas » et je suis aussi acteur. Qui suis-je ?",
+    "answers": [
+      "Roman Frayssinet",
+      "Artus",
+      "Jarry",
+      "Redouanne Harjane"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "humoristes-impro",
+    "fact": "qui-suis-je-artus"
+  },
+  {
+    "text": "Je suis un humoriste sud-africain qui a présenté « The Daily Show » aux États-Unis pendant 7 ans. Bilingue, j'ai grandi pendant l'apartheid. Qui suis-je ?",
+    "answers": [
+      "John Oliver",
+      "Trevor Noah",
+      "Hasan Minhaj",
+      "Seth Meyers"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "late-show",
+    "fact": "qui-suis-je-trevor-noah"
+  },
+  {
+    "text": "Je suis un humoriste et acteur britannique connu pour « Borat » et « Ali G ». Mes personnages provocateurs sont célèbres dans le monde entier. Qui suis-je ?",
+    "answers": [
+      "Ricky Gervais",
+      "James Corden",
+      "Sacha Baron Cohen",
+      "Russell Brand"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "humour-uk",
+    "fact": "qui-suis-je-sacha-baron-cohen"
+  },
+  {
+    "text": "Je suis un humoriste français connu pour mes sketchs sur les couples. « Camping » et « Disco » sont mes films les plus populaires. Qui suis-je ?",
+    "answers": [
+      "Dany Boon",
+      "Franck Dubosc",
+      "Jean-Paul Rouve",
+      "Kad Merad"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "comedie-fr",
+    "fact": "qui-suis-je-franck-dubosc"
+  },
+  {
+    "text": "Je suis un humoriste et imitateur français célèbre pour mes imitations de personnalités politiques. J'ai présenté des émissions sur Canal+. Qui suis-je ?",
+    "answers": [
+      "Laurent Gerra",
+      "Nicolas Canteloup",
+      "Yassine Belattar",
+      "Arnaud Tsamere"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "imitateurs",
+    "fact": "qui-suis-je-nicolas-canteloup"
+  },
+  {
+    "text": "Je suis un humoriste américain légendaire connu pour mes films comme « Un prince à New York » et « Le Professeur Foldingue ». Qui suis-je ?",
+    "answers": [
+      "Martin Lawrence",
+      "Chris Tucker",
+      "Eddie Murphy",
+      "Will Smith"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "comedie-us",
+    "fact": "qui-suis-je-eddie-murphy"
+  },
+  {
+    "text": "Je suis un humoriste français au style absurde et décalé. J'ai participé à « On n'demande qu'à en rire » et mon spectacle solo cartonne. Je suis aussi juré dans une émission populaire. Qui suis-je ?",
+    "answers": [
+      "Artus",
+      "Jarry",
+      "Arnaud Tsamere",
+      "Jérémy Ferrari"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "humoristes-tv",
+    "fact": "qui-suis-je-jarry"
+  },
+  {
+    "text": "Je suis un humoriste français d'origine algérienne. Mes one-man-shows font salle comble et je suis connu pour mon humour sur la vie quotidienne et les communautés. Qui suis-je ?",
+    "answers": [
+      "Jamel Debbouze",
+      "Redouanne Harjane",
+      "Gad Elmaleh",
+      "Kheiron"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "humoristes-fr",
+    "fact": "qui-suis-je-kheiron"
+  },
+  {
+    "text": "Je suis un duo d'humoristes français composé d'Éric et Ramzy. Nos films « La Tour Montparnasse Infernale » et nos sketchs sont cultes. Qui suis-je ?",
+    "answers": [
+      "Les Inconnus",
+      "Éric et Ramzy",
+      "Omar et Fred",
+      "Kad et Olivier"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "duos-humour",
+    "fact": "qui-suis-je-eric-et-ramzy"
+  },
+  {
+    "text": "Je suis un humoriste français connu pour mon humour noir et mes spectacles choc. « Hallelujah Bordel ! » traite de sujets tabous avec virulence. Qui suis-je ?",
+    "answers": [
+      "Dieudonné",
+      "Jérémy Ferrari",
+      "Pierre-Emmanuel Barré",
+      "Blanche Gardin"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "humour-noir",
+    "fact": "qui-suis-je-jeremy-ferrari"
+  },
+  {
+    "text": "Je suis un humoriste français d'origine camerounaise connu pour « Chocolat ». Mon personnage de présentateur raté de JT est culte. Qui suis-je ?",
+    "answers": [
+      "Jamel Debbouze",
+      "Gad Elmaleh",
+      "Michel Boujenah",
+      "Dany Boon"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "one-man-show",
+    "fact": "qui-suis-je-chocolat-humoriste"
+  },
+  {
+    "text": "Je suis un humoriste et acteur français connu pour « Bienvenue chez les Ch'tis ». Je suis originaire du Nord de la France. Qui suis-je ?",
+    "answers": [
+      "Kad Merad",
+      "Franck Dubosc",
+      "Dany Boon",
+      "Élie Semoun"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "humoristes-fr",
+    "fact": "qui-suis-je-dany-boon"
+  },
+  {
+    "text": "Je suis un humoriste américain connu pour mes stand-ups provocateurs sur Netflix et pour avoir gifler quelqu'un aux Oscars en 2022. Ah non, c'est celui qui a giflé ! Je suis celui qui a reçu la gifle. Qui suis-je ?",
+    "answers": [
+      "Dave Chappelle",
+      "Kevin Hart",
+      "Chris Rock",
+      "Eddie Murphy"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "standup-us",
+    "fact": "qui-suis-je-chris-rock"
+  },
+  {
+    "text": "Je suis un humoriste marocain-français qui a percé avec le Jamel Comedy Club. Mon spectacle « 100% Debbouze » est culte. Qui suis-je ?",
+    "answers": [
+      "Gad Elmaleh",
+      "Jamel Debbouze",
+      "Kev Adams",
+      "Redouanne Harjane"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "humoristes-fr",
+    "fact": "qui-suis-je-jamel-debbouze"
+  },
+  {
+    "text": "Je suis un humoriste français très populaire chez les jeunes. J'ai commencé très tôt et mon spectacle « Voilà Voilà » a rempli les salles. Qui suis-je ?",
+    "answers": [
+      "Jamel Debbouze",
+      "Roman Frayssinet",
+      "Kev Adams",
+      "Artus"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "humoristes-jeunes",
+    "fact": "qui-suis-je-kev-adams"
+  },
+  {
+    "text": "Je suis un humoriste américain considéré comme l'un des meilleurs stand-up comedians. Mes spéciales Netflix sont légendaires et je parle souvent de race en Amérique. Qui suis-je ?",
+    "answers": [
+      "Kevin Hart",
+      "Chris Rock",
+      "Dave Chappelle",
+      "Trevor Noah"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "standup-us",
+    "fact": "qui-suis-je-dave-chappelle"
+  },
+  {
+    "text": "Je suis un humoriste et acteur français connu pour « Qu'est-ce qu'on a fait au Bon Dieu ? ». Mon physique imposant est ma marque de fabrique. Qui suis-je ?",
+    "answers": [
+      "Dany Boon",
+      "Franck Dubosc",
+      "Kad Merad",
+      "Christian Clavier"
+    ],
+    "correct": 3,
+    "difficulty": "medium",
+    "angle": "comedie-fr",
+    "fact": "qui-suis-je-christian-clavier"
+  },
+  {
+    "text": "Je suis un humoriste franco-marocain qui a fait le Marrakech du Rire. Mon one-man-show « Gad Gone Wild » a tourné dans le monde entier. Qui suis-je ?",
+    "answers": [
+      "Jamel Debbouze",
+      "Redouanne Harjane",
+      "Gad Elmaleh",
+      "Hassan El Fad"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "humoristes-fr",
+    "fact": "qui-suis-je-gad-elmaleh"
+  },
+  {
+    "text": "Je suis un humoriste américain au physique petit et énergique. Mes films et stand-ups sont des succès commerciaux énormes et j'adore crier sur scène. Qui suis-je ?",
+    "answers": [
+      "Chris Tucker",
+      "Kevin Hart",
+      "Martin Lawrence",
+      "Cedric the Entertainer"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "standup-us",
+    "fact": "qui-suis-je-kevin-hart"
+  },
+  {
+    "text": "Je suis un humoriste et acteur britannique connu pour « Mr. Bean ». Mon humour muet et mes mimiques sont reconnus dans le monde entier. Qui suis-je ?",
+    "answers": [
+      "Ricky Gervais",
+      "Rowan Atkinson",
+      "John Cleese",
+      "Sacha Baron Cohen"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "humour-uk",
+    "fact": "qui-suis-je-rowan-atkinson"
+  },
+  {
+    "text": "Je suis un humoriste français spécialiste de l'improvisation. J'ai créé le spectacle « Artus, dernière avant Vegas » et je suis aussi acteur. Qui suis-je ?",
+    "answers": [
+      "Roman Frayssinet",
+      "Artus",
+      "Jarry",
+      "Redouanne Harjane"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "humoristes-impro",
+    "fact": "qui-suis-je-artus"
+  },
+  {
+    "text": "Je suis un humoriste sud-africain qui a présenté « The Daily Show » aux États-Unis pendant 7 ans. Bilingue, j'ai grandi pendant l'apartheid. Qui suis-je ?",
+    "answers": [
+      "John Oliver",
+      "Trevor Noah",
+      "Hasan Minhaj",
+      "Seth Meyers"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "late-show",
+    "fact": "qui-suis-je-trevor-noah"
+  },
+  {
+    "text": "Je suis un humoriste et acteur britannique connu pour « Borat » et « Ali G ». Mes personnages provocateurs sont célèbres dans le monde entier. Qui suis-je ?",
+    "answers": [
+      "Ricky Gervais",
+      "James Corden",
+      "Sacha Baron Cohen",
+      "Russell Brand"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "humour-uk",
+    "fact": "qui-suis-je-sacha-baron-cohen"
+  },
+  {
+    "text": "Je suis un humoriste français connu pour mes sketchs sur les couples. « Camping » et « Disco » sont mes films les plus populaires. Qui suis-je ?",
+    "answers": [
+      "Dany Boon",
+      "Franck Dubosc",
+      "Jean-Paul Rouve",
+      "Kad Merad"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "comedie-fr",
+    "fact": "qui-suis-je-franck-dubosc"
+  },
+  {
+    "text": "Je suis un humoriste et imitateur français célèbre pour mes imitations de personnalités politiques. J'ai présenté des émissions sur Canal+. Qui suis-je ?",
+    "answers": [
+      "Laurent Gerra",
+      "Nicolas Canteloup",
+      "Yassine Belattar",
+      "Arnaud Tsamere"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "imitateurs",
+    "fact": "qui-suis-je-nicolas-canteloup"
+  },
+  {
+    "text": "Je suis un humoriste américain légendaire connu pour mes films comme « Un prince à New York » et « Le Professeur Foldingue ». Qui suis-je ?",
+    "answers": [
+      "Martin Lawrence",
+      "Chris Tucker",
+      "Eddie Murphy",
+      "Will Smith"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "comedie-us",
+    "fact": "qui-suis-je-eddie-murphy"
+  },
+  {
+    "text": "Je suis un humoriste français au style absurde et décalé. J'ai participé à « On n'demande qu'à en rire » et mon spectacle solo cartonne. Je suis aussi juré dans une émission populaire. Qui suis-je ?",
+    "answers": [
+      "Artus",
+      "Jarry",
+      "Arnaud Tsamere",
+      "Jérémy Ferrari"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "humoristes-tv",
+    "fact": "qui-suis-je-jarry"
+  },
+  {
+    "text": "Je suis un humoriste français d'origine algérienne. Mes one-man-shows font salle comble et je suis connu pour mon humour sur la vie quotidienne et les communautés. Qui suis-je ?",
+    "answers": [
+      "Jamel Debbouze",
+      "Redouanne Harjane",
+      "Gad Elmaleh",
+      "Kheiron"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "humoristes-fr",
+    "fact": "qui-suis-je-kheiron"
+  },
+  {
+    "text": "Je suis un duo d'humoristes français composé d'Éric et Ramzy. Nos films « La Tour Montparnasse Infernale » et nos sketchs sont cultes. Qui suis-je ?",
+    "answers": [
+      "Les Inconnus",
+      "Éric et Ramzy",
+      "Omar et Fred",
+      "Kad et Olivier"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "duos-humour",
+    "fact": "qui-suis-je-eric-et-ramzy"
+  },
+  {
+    "text": "Je suis un humoriste français connu pour mon humour noir et mes spectacles choc. « Hallelujah Bordel ! » traite de sujets tabous avec virulence. Qui suis-je ?",
+    "answers": [
+      "Dieudonné",
+      "Jérémy Ferrari",
+      "Pierre-Emmanuel Barré",
+      "Blanche Gardin"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "humour-noir",
+    "fact": "qui-suis-je-jeremy-ferrari"
   }
 ]

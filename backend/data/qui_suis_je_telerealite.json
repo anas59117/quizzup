@@ -453,5 +453,525 @@
     "difficulty": "expert",
     "angle": "secret-story",
     "fact": "qui-suis-je-romain-chavent"
+  },
+  {
+    "text": "Je suis une émission de télé-réalité française où des célibataires cherchent l'amour sur une île paradisiaque. Les « tentateurs » et « tentatrices » testent la fidélité des couples. Qui suis-je ?",
+    "answers": [
+      "L'Île de la tentation",
+      "Les Marseillais",
+      "La Villa des Cœurs Brisés",
+      "10 Couples Parfaits"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-couple",
+    "fact": "qsj-ile-tentation"
+  },
+  {
+    "text": "Je suis une émission américaine emblématique où des candidats forment des alliances et s'éliminent pour gagner le titre de « Survivor ». Lancée en 2000, j'ai inventé le genre. Qui suis-je ?",
+    "answers": [
+      "Survivor (Koh-Lanta version US)",
+      "The Amazing Race",
+      "Big Brother",
+      "Fear Factor"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "telerealite-aventure",
+    "fact": "qsj-survivor"
+  },
+  {
+    "text": "Je suis une émission française d'aventure où des candidats survivent sur une île, s'affrontent dans des épreuves et votent pour éliminer leurs concurrents au conseil. Qui suis-je ?",
+    "answers": [
+      "Koh-Lanta",
+      "Survivor",
+      "The Island",
+      "Wild"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-aventure-fr",
+    "fact": "qsj-koh-lanta"
+  },
+  {
+    "text": "Je suis une émission de télé-réalité qui suit la vie quotidienne de la famille Kardashian-Jenner. Lancée en 2007, j'ai fait de Kim une star planétaire. Qui suis-je ?",
+    "answers": [
+      "Keeping Up with the Kardashians",
+      "The Simple Life",
+      "The Real Housewives",
+      "Jersey Shore"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-famille",
+    "fact": "qsj-kardashians"
+  },
+  {
+    "text": "Je suis une émission où des célébrités françaises vivent ensemble dans un loft et sont filmées 24h/24. Ma première saison en 2001 a choqué et fasciné la France. Qui suis-je ?",
+    "answers": [
+      "Loft Story",
+      "Secret Story",
+      "Star Academy",
+      "Big Brother"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-pionniere",
+    "fact": "qsj-loft-story"
+  },
+  {
+    "text": "Je suis une émission française où les candidats habitent dans une maison secrète, chacun gardant un secret que les autres doivent découvrir pour les éliminer. Qui suis-je ?",
+    "answers": [
+      "Secret Story",
+      "Loft Story",
+      "Big Brother",
+      "Les Anges"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-mystere",
+    "fact": "qsj-secret-story"
+  },
+  {
+    "text": "Je suis une émission américaine où un(e) célibataire choisit parmi 25 prétendant(e)s en distribuant des roses à chaque épisode. Les cérémonie des roses sont mon moment iconique. Qui suis-je ?",
+    "answers": [
+      "The Bachelor / The Bachelorette",
+      "Love Island",
+      "Too Hot to Handle",
+      "Love is Blind"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-rose",
+    "fact": "qsj-the-bachelor"
+  },
+  {
+    "text": "Je suis une émission où des candidats vivent dans une villa à Marseille (puis voyagent à travers le monde). Jessica, Thibault et les autres en ont fait une série culte de W9. Qui suis-je ?",
+    "answers": [
+      "Les Marseillais",
+      "Les Anges",
+      "La Villa",
+      "Les Ch'tis"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-w9",
+    "fact": "qsj-les-marseillais"
+  },
+  {
+    "text": "Je suis une compétition de drag queens présentée par RuPaul. Les candidates rivalisent de talent en lip-sync, couture et charisme pour être couronnées « America's Next Drag Superstar ». Qui suis-je ?",
+    "answers": [
+      "RuPaul's Drag Race",
+      "Legendary",
+      "Glow Up",
+      "Making the Cut"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "telerealite-drag",
+    "fact": "qsj-drag-race"
+  },
+  {
+    "text": "Je suis une émission Netflix où des célibataires se rencontrent et se fiancent sans jamais se voir, uniquement en se parlant à travers un mur. La révélation physique arrive après la demande. Qui suis-je ?",
+    "answers": [
+      "Love is Blind",
+      "The Circle",
+      "Too Hot to Handle",
+      "Dating Around"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-netflix",
+    "fact": "qsj-love-is-blind"
+  },
+  {
+    "text": "Je suis une émission française de cuisine où des candidats amateurs s'affrontent sous le regard de chefs étoilés. Les épreuves d'invention et de pâtisserie sont redoutées. Qui suis-je ?",
+    "answers": [
+      "Top Chef",
+      "MasterChef",
+      "Le Meilleur Pâtissier",
+      "Cauchemar en cuisine"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-cuisine",
+    "fact": "qsj-top-chef"
+  },
+  {
+    "text": "Je suis une émission Netflix où des célibataires dans une villa luxueuse ne doivent avoir aucun contact physique sous peine de perdre de l'argent. La tentation est mon moteur. Qui suis-je ?",
+    "answers": [
+      "Too Hot to Handle",
+      "Love Island",
+      "Love is Blind",
+      "FBoy Island"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-abstinence",
+    "fact": "qsj-too-hot"
+  },
+  {
+    "text": "Je suis une émission britannique se déroulant dans une villa ensoleillée. Les candidats doivent se mettre en couple pour rester dans la compétition. Les « recouplings » créent le drame. Qui suis-je ?",
+    "answers": [
+      "Love Island",
+      "The Bachelor",
+      "Ex on the Beach",
+      "Temptation Island"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-uk",
+    "fact": "qsj-love-island"
+  },
+  {
+    "text": "Je suis une émission française de musique où des élèves vivent dans un château et apprennent le chant et la danse. Nikos Aliagas et les professeurs ont fait de moi un phénomène de société. Qui suis-je ?",
+    "answers": [
+      "Star Academy",
+      "The Voice",
+      "Nouvelle Star",
+      "Popstars"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-musique",
+    "fact": "qsj-star-academy"
+  },
+  {
+    "text": "Je suis une émission américaine où des candidats vivent dans une même maison, filmés en permanence, et votent chaque semaine pour éliminer un colocataire. Je suis le format original de Loft Story. Qui suis-je ?",
+    "answers": [
+      "Big Brother",
+      "Loft Story",
+      "The Real World",
+      "Survivor"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "telerealite-surveillance",
+    "fact": "qsj-big-brother"
+  },
+  {
+    "text": "Je suis une émission de NRJ12 qui envoie des candidats de télé-réalité à Los Angeles, Miami ou d'autres destinations de rêve. Mon nom évoque des êtres célestes. Qui suis-je ?",
+    "answers": [
+      "Les Anges",
+      "Les Marseillais",
+      "La Villa",
+      "Hollywood Girls"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-nrj12",
+    "fact": "qsj-les-anges"
+  },
+  {
+    "text": "Je suis une émission de relooking où deux équipes de stylistes transforment une personne. Version française présentée par Cristina Córdula, je suis un rendez-vous incontournable de M6. Qui suis-je ?",
+    "answers": [
+      "Les Reines du Shopping",
+      "Relooking extrême",
+      "Nouveau Look pour une Nouvelle Vie",
+      "Belle toute nue"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-mode",
+    "fact": "qsj-reines-shopping"
+  },
+  {
+    "text": "Je suis une émission Netflix où des joueurs se font éliminer en participant à des jeux stratégiques. L'anonymat et la manipulation sont au cœur du concept. Qui suis-je ?",
+    "answers": [
+      "The Circle",
+      "Squid Game: The Challenge",
+      "The Mole",
+      "The Traitors"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "telerealite-strategie",
+    "fact": "qsj-the-circle"
+  },
+  {
+    "text": "Je suis une émission américaine de la côte du New Jersey. Snooki, The Situation et leurs amis y font la fête toutes les nuits dans une maison au bord de la plage. Qui suis-je ?",
+    "answers": [
+      "Jersey Shore",
+      "Geordie Shore",
+      "The Real World",
+      "Party Down South"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "telerealite-fete",
+    "fact": "qsj-jersey-shore"
+  },
+  {
+    "text": "Je suis une émission française diffusée sur TF1 où quatre agriculteurs cherchent l'amour. Les prétendantes écrivent des lettres et viennent vivre à la ferme. Qui suis-je ?",
+    "answers": [
+      "L'Amour est dans le pré",
+      "Mariés au premier regard",
+      "Qui veut épouser mon fils",
+      "L'amour est aveugle"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-campagne",
+    "fact": "qsj-amour-pre"
+  },
+  {
+    "text": "Je suis une émission de télé-réalité française où des célibataires cherchent l'amour sur une île paradisiaque. Les « tentateurs » et « tentatrices » testent la fidélité des couples. Qui suis-je ?",
+    "answers": [
+      "L'Île de la tentation",
+      "Les Marseillais",
+      "La Villa des Cœurs Brisés",
+      "10 Couples Parfaits"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-couple",
+    "fact": "qsj-ile-tentation"
+  },
+  {
+    "text": "Je suis une émission américaine emblématique où des candidats forment des alliances et s'éliminent pour gagner le titre de « Survivor ». Lancée en 2000, j'ai inventé le genre. Qui suis-je ?",
+    "answers": [
+      "Survivor (Koh-Lanta version US)",
+      "The Amazing Race",
+      "Big Brother",
+      "Fear Factor"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "telerealite-aventure",
+    "fact": "qsj-survivor"
+  },
+  {
+    "text": "Je suis une émission française d'aventure où des candidats survivent sur une île, s'affrontent dans des épreuves et votent pour éliminer leurs concurrents au conseil. Qui suis-je ?",
+    "answers": [
+      "Koh-Lanta",
+      "Survivor",
+      "The Island",
+      "Wild"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-aventure-fr",
+    "fact": "qsj-koh-lanta"
+  },
+  {
+    "text": "Je suis une émission de télé-réalité qui suit la vie quotidienne de la famille Kardashian-Jenner. Lancée en 2007, j'ai fait de Kim une star planétaire. Qui suis-je ?",
+    "answers": [
+      "Keeping Up with the Kardashians",
+      "The Simple Life",
+      "The Real Housewives",
+      "Jersey Shore"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-famille",
+    "fact": "qsj-kardashians"
+  },
+  {
+    "text": "Je suis une émission où des célébrités françaises vivent ensemble dans un loft et sont filmées 24h/24. Ma première saison en 2001 a choqué et fasciné la France. Qui suis-je ?",
+    "answers": [
+      "Loft Story",
+      "Secret Story",
+      "Star Academy",
+      "Big Brother"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-pionniere",
+    "fact": "qsj-loft-story"
+  },
+  {
+    "text": "Je suis une émission française où les candidats habitent dans une maison secrète, chacun gardant un secret que les autres doivent découvrir pour les éliminer. Qui suis-je ?",
+    "answers": [
+      "Secret Story",
+      "Loft Story",
+      "Big Brother",
+      "Les Anges"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-mystere",
+    "fact": "qsj-secret-story"
+  },
+  {
+    "text": "Je suis une émission américaine où un(e) célibataire choisit parmi 25 prétendant(e)s en distribuant des roses à chaque épisode. Les cérémonie des roses sont mon moment iconique. Qui suis-je ?",
+    "answers": [
+      "The Bachelor / The Bachelorette",
+      "Love Island",
+      "Too Hot to Handle",
+      "Love is Blind"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-rose",
+    "fact": "qsj-the-bachelor"
+  },
+  {
+    "text": "Je suis une émission où des candidats vivent dans une villa à Marseille (puis voyagent à travers le monde). Jessica, Thibault et les autres en ont fait une série culte de W9. Qui suis-je ?",
+    "answers": [
+      "Les Marseillais",
+      "Les Anges",
+      "La Villa",
+      "Les Ch'tis"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-w9",
+    "fact": "qsj-les-marseillais"
+  },
+  {
+    "text": "Je suis une compétition de drag queens présentée par RuPaul. Les candidates rivalisent de talent en lip-sync, couture et charisme pour être couronnées « America's Next Drag Superstar ». Qui suis-je ?",
+    "answers": [
+      "RuPaul's Drag Race",
+      "Legendary",
+      "Glow Up",
+      "Making the Cut"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "telerealite-drag",
+    "fact": "qsj-drag-race"
+  },
+  {
+    "text": "Je suis une émission Netflix où des célibataires se rencontrent et se fiancent sans jamais se voir, uniquement en se parlant à travers un mur. La révélation physique arrive après la demande. Qui suis-je ?",
+    "answers": [
+      "Love is Blind",
+      "The Circle",
+      "Too Hot to Handle",
+      "Dating Around"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-netflix",
+    "fact": "qsj-love-is-blind"
+  },
+  {
+    "text": "Je suis une émission française de cuisine où des candidats amateurs s'affrontent sous le regard de chefs étoilés. Les épreuves d'invention et de pâtisserie sont redoutées. Qui suis-je ?",
+    "answers": [
+      "Top Chef",
+      "MasterChef",
+      "Le Meilleur Pâtissier",
+      "Cauchemar en cuisine"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-cuisine",
+    "fact": "qsj-top-chef"
+  },
+  {
+    "text": "Je suis une émission Netflix où des célibataires dans une villa luxueuse ne doivent avoir aucun contact physique sous peine de perdre de l'argent. La tentation est mon moteur. Qui suis-je ?",
+    "answers": [
+      "Too Hot to Handle",
+      "Love Island",
+      "Love is Blind",
+      "FBoy Island"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-abstinence",
+    "fact": "qsj-too-hot"
+  },
+  {
+    "text": "Je suis une émission britannique se déroulant dans une villa ensoleillée. Les candidats doivent se mettre en couple pour rester dans la compétition. Les « recouplings » créent le drame. Qui suis-je ?",
+    "answers": [
+      "Love Island",
+      "The Bachelor",
+      "Ex on the Beach",
+      "Temptation Island"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-uk",
+    "fact": "qsj-love-island"
+  },
+  {
+    "text": "Je suis une émission française de musique où des élèves vivent dans un château et apprennent le chant et la danse. Nikos Aliagas et les professeurs ont fait de moi un phénomène de société. Qui suis-je ?",
+    "answers": [
+      "Star Academy",
+      "The Voice",
+      "Nouvelle Star",
+      "Popstars"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-musique",
+    "fact": "qsj-star-academy"
+  },
+  {
+    "text": "Je suis une émission américaine où des candidats vivent dans une même maison, filmés en permanence, et votent chaque semaine pour éliminer un colocataire. Je suis le format original de Loft Story. Qui suis-je ?",
+    "answers": [
+      "Big Brother",
+      "Loft Story",
+      "The Real World",
+      "Survivor"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "telerealite-surveillance",
+    "fact": "qsj-big-brother"
+  },
+  {
+    "text": "Je suis une émission de NRJ12 qui envoie des candidats de télé-réalité à Los Angeles, Miami ou d'autres destinations de rêve. Mon nom évoque des êtres célestes. Qui suis-je ?",
+    "answers": [
+      "Les Anges",
+      "Les Marseillais",
+      "La Villa",
+      "Hollywood Girls"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-nrj12",
+    "fact": "qsj-les-anges"
+  },
+  {
+    "text": "Je suis une émission de relooking où deux équipes de stylistes transforment une personne. Version française présentée par Cristina Córdula, je suis un rendez-vous incontournable de M6. Qui suis-je ?",
+    "answers": [
+      "Les Reines du Shopping",
+      "Relooking extrême",
+      "Nouveau Look pour une Nouvelle Vie",
+      "Belle toute nue"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-mode",
+    "fact": "qsj-reines-shopping"
+  },
+  {
+    "text": "Je suis une émission Netflix où des joueurs se font éliminer en participant à des jeux stratégiques. L'anonymat et la manipulation sont au cœur du concept. Qui suis-je ?",
+    "answers": [
+      "The Circle",
+      "Squid Game: The Challenge",
+      "The Mole",
+      "The Traitors"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "telerealite-strategie",
+    "fact": "qsj-the-circle"
+  },
+  {
+    "text": "Je suis une émission américaine de la côte du New Jersey. Snooki, The Situation et leurs amis y font la fête toutes les nuits dans une maison au bord de la plage. Qui suis-je ?",
+    "answers": [
+      "Jersey Shore",
+      "Geordie Shore",
+      "The Real World",
+      "Party Down South"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "telerealite-fete",
+    "fact": "qsj-jersey-shore"
+  },
+  {
+    "text": "Je suis une émission française diffusée sur TF1 où quatre agriculteurs cherchent l'amour. Les prétendantes écrivent des lettres et viennent vivre à la ferme. Qui suis-je ?",
+    "answers": [
+      "L'Amour est dans le pré",
+      "Mariés au premier regard",
+      "Qui veut épouser mon fils",
+      "L'amour est aveugle"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "telerealite-campagne",
+    "fact": "qsj-amour-pre"
   }
 ]
