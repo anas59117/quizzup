@@ -713,5 +713,265 @@
     "difficulty": "easy",
     "angle": "boissons-chocolat",
     "fact": "qui-suis-je-nesquik"
+  },
+  {
+    "text": "Je suis une boisson gazeuse créée en 1886 par un pharmacien d'Atlanta. Ma recette est l'un des secrets industriels les mieux gardés au monde. Qui suis-je ?",
+    "answers": [
+      "Pepsi",
+      "Dr Pepper",
+      "Coca-Cola",
+      "RC Cola"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "sodas",
+    "fact": "qui-suis-je-coca-cola"
+  },
+  {
+    "text": "Je suis une boisson énergisante autrichienne à base de taurine. Mon slogan dit que je donne des ailes et je sponsorise des sports extrêmes. Qui suis-je ?",
+    "answers": [
+      "Monster",
+      "Red Bull",
+      "Burn",
+      "Rockstar"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "energy-drinks",
+    "fact": "qui-suis-je-red-bull"
+  },
+  {
+    "text": "Je suis un thé glacé né de la collaboration entre une marque de thé et PepsiCo. Mon logo est un soleil et je suis très populaire en France. Qui suis-je ?",
+    "answers": [
+      "Arizona",
+      "Lipton Ice Tea",
+      "Fuze Tea",
+      "Nestea"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "thes-glaces",
+    "fact": "qui-suis-je-lipton-ice-tea"
+  },
+  {
+    "text": "Je suis une boisson japonaise non alcoolisée à base de riz. Pétillante ou plate, je suis souvent servie dans les restaurants asiatiques. Qui suis-je ?",
+    "answers": [
+      "Saké",
+      "Ramune",
+      "Calpis",
+      "Yakult"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "boissons-asie",
+    "fact": "qui-suis-je-calpis"
+  },
+  {
+    "text": "Je suis une limonade française créée en 1898 dans le Puy-de-Dôme. Ma bouteille verte est reconnaissable entre mille. Qui suis-je ?",
+    "answers": [
+      "Perrier",
+      "Badoit",
+      "Lorina",
+      "Volvic"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "limonades",
+    "fact": "qui-suis-je-lorina"
+  },
+  {
+    "text": "Je suis une eau gazeuse française dans une bouteille verte iconique. Mes bulles fines sont naturelles et je suis associée au luxe et aux cocktails. Qui suis-je ?",
+    "answers": [
+      "San Pellegrino",
+      "Badoit",
+      "Perrier",
+      "Vichy Célestins"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "eaux-gazeuses",
+    "fact": "qui-suis-je-perrier"
+  },
+  {
+    "text": "Je suis un soda au goût unique, mélange de 23 saveurs. Créé au Texas en 1885, je suis en fait plus ancien que Coca-Cola. Qui suis-je ?",
+    "answers": [
+      "Root Beer",
+      "Dr Pepper",
+      "Mountain Dew",
+      "7Up"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "sodas",
+    "fact": "qui-suis-je-dr-pepper"
+  },
+  {
+    "text": "Je suis une boisson lactée fermentée vendue en petites bouteilles. D'origine japonaise, je suis censée être bonne pour la digestion. Qui suis-je ?",
+    "answers": [
+      "Actimel",
+      "Danio",
+      "Yakult",
+      "Kéfir"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "boissons-lactees",
+    "fact": "qui-suis-je-yakult"
+  },
+  {
+    "text": "Je suis un café glacé prêt à boire de la marque Starbucks, vendu en bouteille dans les supermarchés. Mon nom signifie « latte » en italien. Qui suis-je ?",
+    "answers": [
+      "Nescafé Shakissimo",
+      "Starbucks Frappuccino",
+      "Illy Issimo",
+      "Costa Coffee Ready"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "cafes-glaces",
+    "fact": "qui-suis-je-starbucks-frappuccino"
+  },
+  {
+    "text": "Je suis une boisson pétillante à l'orange créée par Cadbury-Schweppes. Très populaire au Royaume-Uni, mon nom évoque un agrume. Qui suis-je ?",
+    "answers": [
+      "Fanta",
+      "Orangina",
+      "Oasis",
+      "Tango"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "sodas-orange",
+    "fact": "qui-suis-je-tango"
+  },
+  {
+    "text": "Je suis une boisson gazeuse française à base de jus d'orange avec de la pulpe. Ma bouteille ronde est célèbre et je me secoue avant de me boire. Qui suis-je ?",
+    "answers": [
+      "Fanta",
+      "Orangina",
+      "Oasis",
+      "Minute Maid"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "sodas-orange",
+    "fact": "qui-suis-je-orangina"
+  },
+  {
+    "text": "Je suis une boisson à base de fruits tropicaux vendue en brique. Ma marque est très populaire en Afrique et dans les Caraïbes. Qui suis-je ?",
+    "answers": [
+      "Capri-Sun",
+      "Banga",
+      "Tropicana",
+      "Tampico"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "jus-tropicaux",
+    "fact": "qui-suis-je-tampico"
+  },
+  {
+    "text": "Je suis un soda au citron vert créé en 1929. Mon nom contient deux chiffres et je suis souvent utilisé comme base de cocktail. Qui suis-je ?",
+    "answers": [
+      "Sprite",
+      "7Up",
+      "Sierra Mist",
+      "Schweppes Tonic"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "sodas-citron",
+    "fact": "qui-suis-je-7up"
+  },
+  {
+    "text": "Je suis une boisson énergisante américaine avec une griffe verte sur fond noir. Je suis le principal concurrent de Red Bull. Qui suis-je ?",
+    "answers": [
+      "Rockstar",
+      "Monster Energy",
+      "Reign",
+      "Bang"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "energy-drinks",
+    "fact": "qui-suis-je-monster"
+  },
+  {
+    "text": "Je suis un jus de pomme pétillant français, souvent servi aux enfants lors des fêtes à la place du champagne. Qui suis-je ?",
+    "answers": [
+      "Cidre Doux",
+      "Champomy",
+      "Pomme d'Api",
+      "Carola"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "boissons-fete",
+    "fact": "qui-suis-je-champomy"
+  },
+  {
+    "text": "Je suis une boisson au soja d'origine chinoise, consommée depuis des millénaires. Riche en protéines, je suis une alternative au lait. Qui suis-je ?",
+    "answers": [
+      "Lait d'amande",
+      "Lait de coco",
+      "Lait de soja",
+      "Lait d'avoine"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "boissons-vegetales",
+    "fact": "qui-suis-je-lait-de-soja"
+  },
+  {
+    "text": "Je suis une boisson gazeuse italienne amère, souvent de couleur rouge. Je suis un apéritif classique à base d'agrumes et d'herbes. Qui suis-je ?",
+    "answers": [
+      "Aperol",
+      "Campari",
+      "San Bitter",
+      "Chinotto"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "boissons-aperitif",
+    "fact": "qui-suis-je-san-bitter"
+  },
+  {
+    "text": "Je suis une petite bouteille de jus en forme de tonneau avec une paille. Très populaire chez les enfants, je viens en plusieurs parfums fruités. Qui suis-je ?",
+    "answers": [
+      "Capri-Sun",
+      "Oasis",
+      "Minute Maid",
+      "Fruité"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "jus-enfants",
+    "fact": "qui-suis-je-capri-sun"
+  },
+  {
+    "text": "Je suis une boisson gazeuse japonaise servie dans une bouteille en verre fermée par une bille. Il faut pousser la bille pour m'ouvrir. Qui suis-je ?",
+    "answers": [
+      "Pocari Sweat",
+      "Calpis Soda",
+      "Ramune",
+      "Mitsuya Cider"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "boissons-japon",
+    "fact": "qui-suis-je-ramune"
+  },
+  {
+    "text": "Je suis une boisson chocolatée en poudre à mélanger avec du lait. Mon personnage mascotte est un lapin et je suis très populaire auprès des enfants. Qui suis-je ?",
+    "answers": [
+      "Nesquik",
+      "Banania",
+      "Poulain",
+      "Cola Cao"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "boissons-chocolat",
+    "fact": "qui-suis-je-nesquik"
   }
 ]

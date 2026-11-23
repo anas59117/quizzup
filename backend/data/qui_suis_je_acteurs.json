@@ -863,5 +863,265 @@
     "difficulty": "easy",
     "angle": "acteurs-fantastique",
     "fact": "qui-suis-je-daniel-radcliffe"
+  },
+  {
+    "text": "Je suis un acteur australien qui a incarné un gladiateur romain oscarisé et un capitaine de navire dans « Master and Commander ». Qui suis-je ?",
+    "answers": [
+      "Hugh Jackman",
+      "Russell Crowe",
+      "Mel Gibson",
+      "Sam Worthington"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "acteurs-action",
+    "fact": "qui-suis-je-russell-crowe"
+  },
+  {
+    "text": "Je suis un acteur américain connu pour jouer des personnages taiseux et impitoyables. J'ai été « No Country for Old Men » et le tueur Chigurh m'a valu un Oscar. Qui suis-je ?",
+    "answers": [
+      "Javier Bardem",
+      "Josh Brolin",
+      "Tommy Lee Jones",
+      "Woody Harrelson"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "acteurs-thriller",
+    "fact": "qui-suis-je-javier-bardem"
+  },
+  {
+    "text": "Je suis un acteur britannique devenu célèbre en enfilant le costume de James Bond à partir de « Casino Royale » en 2006. Qui suis-je ?",
+    "answers": [
+      "Idris Elba",
+      "Henry Cavill",
+      "Daniel Craig",
+      "Tom Hardy"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "acteurs-espion",
+    "fact": "qui-suis-je-daniel-craig"
+  },
+  {
+    "text": "Je suis un acteur et humoriste canadien star de comédies des années 90. J'ai incarné un détective animalier et un personnage avec un masque verte magique. Qui suis-je ?",
+    "answers": [
+      "Adam Sandler",
+      "Jim Carrey",
+      "Mike Myers",
+      "Ben Stiller"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "acteurs-comedie",
+    "fact": "qui-suis-je-jim-carrey"
+  },
+  {
+    "text": "Je suis un acteur américain oscarisé pour « Training Day ». Premier Afro-Américain à remporter deux Oscars du meilleur acteur, j'ai aussi brillé dans « Malcolm X ». Qui suis-je ?",
+    "answers": [
+      "Morgan Freeman",
+      "Samuel L. Jackson",
+      "Denzel Washington",
+      "Will Smith"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "acteurs-drame",
+    "fact": "qui-suis-je-denzel-washington"
+  },
+  {
+    "text": "Je suis un acteur irlandais connu pour mes rôles de gentleman. J'ai incarné Oskar Schindler et participé à la saga « Star Wars » en tant que Qui-Gon Jinn. Qui suis-je ?",
+    "answers": [
+      "Liam Neeson",
+      "Colin Farrell",
+      "Pierce Brosnan",
+      "Cillian Murphy"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "acteurs-drame",
+    "fact": "qui-suis-je-liam-neeson"
+  },
+  {
+    "text": "Je suis un acteur américain au regard perçant. J'ai joué un loup de Wall Street et un aviateur dans « Aviator ». Je milite activement pour l'environnement. Ah non, c'est le même… Je suis en fait connu pour « Interstellar » et « The Dark Knight ». Qui suis-je ?",
+    "answers": [
+      "Leonardo DiCaprio",
+      "Christian Bale",
+      "Matthew McConaughey",
+      "Jake Gyllenhaal"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "acteurs-sf",
+    "fact": "qui-suis-je-matthew-mcconaughey"
+  },
+  {
+    "text": "Je suis un acteur sino-américain spécialiste des arts martiaux. Mes cascades dans « Rush Hour » et « Police Story » sont légendaires. Qui suis-je ?",
+    "answers": [
+      "Jet Li",
+      "Donnie Yen",
+      "Jackie Chan",
+      "Bruce Lee"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "acteurs-action",
+    "fact": "qui-suis-je-jackie-chan"
+  },
+  {
+    "text": "Je suis un acteur britannique connu pour incarner un détective au 221B Baker Street dans une série BBC moderne. J'ai aussi joué Doctor Strange chez Marvel. Qui suis-je ?",
+    "answers": [
+      "Tom Hiddleston",
+      "Benedict Cumberbatch",
+      "Martin Freeman",
+      "Andrew Scott"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "acteurs-series",
+    "fact": "qui-suis-je-benedict-cumberbatch"
+  },
+  {
+    "text": "Je suis un acteur américain au crâne rasé. J'ai conduit des voitures très vite dans la saga « Fast & Furious » et j'ai été « Riddick ». Qui suis-je ?",
+    "answers": [
+      "Jason Statham",
+      "Dwayne Johnson",
+      "Vin Diesel",
+      "Bruce Willis"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "acteurs-action",
+    "fact": "qui-suis-je-vin-diesel"
+  },
+  {
+    "text": "Je suis un acteur sud-coréen devenu mondialement célèbre grâce au film « Parasite » de Bong Joon-ho, où je jouais le père de famille. Qui suis-je ?",
+    "answers": [
+      "Lee Jung-jae",
+      "Park Seo-joon",
+      "Song Kang-ho",
+      "Choi Min-sik"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "acteurs-coreen",
+    "fact": "qui-suis-je-song-kang-ho"
+  },
+  {
+    "text": "Je suis un acteur français au regard intense. J'ai incarné un flic dans « Mesrine » et un empereur dans « Napoléon » de Ridley Scott. Qui suis-je ?",
+    "answers": [
+      "Vincent Cassel",
+      "Jean Dujardin",
+      "Gilles Lellouche",
+      "Joaquin Phoenix"
+    ],
+    "correct": 3,
+    "difficulty": "hard",
+    "angle": "acteurs-historique",
+    "fact": "qui-suis-je-joaquin-phoenix"
+  },
+  {
+    "text": "Je suis un acteur américain qui a rendu le personnage de Tony Stark / Iron Man iconique dans le MCU pendant plus de 10 ans. Qui suis-je ?",
+    "answers": [
+      "Chris Evans",
+      "Robert Downey Jr.",
+      "Chris Hemsworth",
+      "Mark Ruffalo"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "acteurs-marvel",
+    "fact": "qui-suis-je-robert-downey-jr"
+  },
+  {
+    "text": "Je suis un acteur et catcheur américain surnommé « The Rock ». Je suis devenu l'acteur le mieux payé d'Hollywood. Qui suis-je ?",
+    "answers": [
+      "John Cena",
+      "Dave Bautista",
+      "Dwayne Johnson",
+      "Terry Crews"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "acteurs-action",
+    "fact": "qui-suis-je-dwayne-johnson"
+  },
+  {
+    "text": "Je suis un acteur espagnol passé par le cinéma de Pedro Almodóvar. J'ai incarné le Zorro au cinéma et obtenu un rôle dans « The Mask of Zorro ». Qui suis-je ?",
+    "answers": [
+      "Penélope Cruz",
+      "Antonio Banderas",
+      "Javier Bardem",
+      "Oscar Isaac"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "acteurs-aventure",
+    "fact": "qui-suis-je-antonio-banderas"
+  },
+  {
+    "text": "Je suis un acteur britannique qui incarne le sorcier Newt Scamander dans les « Animaux Fantastiques ». J'ai aussi joué dans « The Theory of Everything ». Qui suis-je ?",
+    "answers": [
+      "Eddie Redmayne",
+      "Tom Holland",
+      "Andrew Garfield",
+      "Daniel Radcliffe"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "acteurs-fantastique",
+    "fact": "qui-suis-je-eddie-redmayne"
+  },
+  {
+    "text": "Je suis un acteur français connu pour « Intouchables », l'un des plus gros succès du cinéma français. J'ai joué le rôle de Driss. Qui suis-je ?",
+    "answers": [
+      "Jamel Debbouze",
+      "Dany Boon",
+      "Omar Sy",
+      "Gad Elmaleh"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "acteurs-comedie-fr",
+    "fact": "qui-suis-je-omar-sy"
+  },
+  {
+    "text": "Je suis un acteur américain qui a incarné Wolverine pendant 17 ans dans la saga X-Men. Je viens en réalité d'Australie. Qui suis-je ?",
+    "answers": [
+      "Chris Hemsworth",
+      "Hugh Jackman",
+      "Liam Hemsworth",
+      "Russell Crowe"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "acteurs-marvel",
+    "fact": "qui-suis-je-hugh-jackman"
+  },
+  {
+    "text": "Je suis un acteur américain connu pour « Breaking Bad » où j'incarnais un professeur de chimie devenu baron de la drogue. Qui suis-je ?",
+    "answers": [
+      "Aaron Paul",
+      "Bob Odenkirk",
+      "Bryan Cranston",
+      "Jonathan Banks"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "acteurs-series",
+    "fact": "qui-suis-je-bryan-cranston"
+  },
+  {
+    "text": "Je suis un acteur britannique devenu une star en jouant un jeune sorcier à lunettes rondes pendant 8 films. Qui suis-je ?",
+    "answers": [
+      "Rupert Grint",
+      "Tom Felton",
+      "Daniel Radcliffe",
+      "Eddie Redmayne"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "acteurs-fantastique",
+    "fact": "qui-suis-je-daniel-radcliffe"
   }
 ]

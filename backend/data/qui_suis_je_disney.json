@@ -713,5 +713,265 @@
     "difficulty": "easy",
     "angle": "princesses",
     "fact": "qui-suis-je-belle"
+  },
+  {
+    "text": "Je suis une princesse qui a échangé sa voix contre des jambes pour rejoindre le monde des humains. J'adore collectionner les objets de la surface. Qui suis-je ?",
+    "answers": [
+      "Cendrillon",
+      "Ariel",
+      "Belle",
+      "Jasmine"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "princesses",
+    "fact": "qui-suis-je-ariel"
+  },
+  {
+    "text": "Je suis un génie bleu vivant dans une lampe magique. J'accorde trois vœux et j'adore faire des imitations. Qui suis-je ?",
+    "answers": [
+      "Jafar",
+      "Le Génie",
+      "Aladdin",
+      "Iago"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "personnages-magiques",
+    "fact": "qui-suis-je-genie-aladdin"
+  },
+  {
+    "text": "Je suis un lionceau qui a fui sa terre natale après la mort de mon père, avant de revenir réclamer mon trône. Qui suis-je ?",
+    "answers": [
+      "Scar",
+      "Mufasa",
+      "Simba",
+      "Kovu"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "personnages-animaux",
+    "fact": "qui-suis-je-simba"
+  },
+  {
+    "text": "Je suis une reine capable de créer de la glace et de la neige. J'ai longtemps caché mes pouvoirs avant de les libérer en chantant « Let It Go ». Qui suis-je ?",
+    "answers": [
+      "Anna",
+      "Elsa",
+      "Raiponce",
+      "Moana"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "princesses-modernes",
+    "fact": "qui-suis-je-elsa"
+  },
+  {
+    "text": "Je suis un petit robot nettoyeur resté seul sur Terre. Je suis tombé amoureux d'un robot sonde nommé EVE. Qui suis-je ?",
+    "answers": [
+      "Baymax",
+      "WALL-E",
+      "R2-D2",
+      "BB-8"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "robots-pixar",
+    "fact": "qui-suis-je-wall-e"
+  },
+  {
+    "text": "Je suis un poisson-clown dont le père a traversé l'océan pour me retrouver. J'ai une nageoire plus petite que l'autre. Qui suis-je ?",
+    "answers": [
+      "Marin",
+      "Nemo",
+      "Dory",
+      "Gill"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "pixar-ocean",
+    "fact": "qui-suis-je-nemo"
+  },
+  {
+    "text": "Je suis une jeune polynésienne choisie par l'océan pour sauver son île. J'ai navigué avec un demi-dieu nommé Maui. Qui suis-je ?",
+    "answers": [
+      "Lilo",
+      "Pocahontas",
+      "Moana",
+      "Raya"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "princesses-modernes",
+    "fact": "qui-suis-je-moana"
+  },
+  {
+    "text": "Je suis un bonhomme de neige qui adore les câlins et rêve de découvrir l'été. J'ai été créé par Elsa. Qui suis-je ?",
+    "answers": [
+      "Marshmallow",
+      "Olaf",
+      "Sven",
+      "Kristoff"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "frozen",
+    "fact": "qui-suis-je-olaf"
+  },
+  {
+    "text": "Je suis un jouet cow-boy qui a peur d'être remplacé par un ranger de l'espace. Mon propriétaire s'appelle Andy. Qui suis-je ?",
+    "answers": [
+      "Buzz l'Éclair",
+      "Woody",
+      "Jessie",
+      "Rex"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "toy-story",
+    "fact": "qui-suis-je-woody"
+  },
+  {
+    "text": "Je suis un demi-dieu polynésien qui a volé le cœur de Te Fiti. J'ai un hameçon magique et je peux changer de forme. Qui suis-je ?",
+    "answers": [
+      "Triton",
+      "Hercule",
+      "Maui",
+      "Tamatoa"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "demi-dieux",
+    "fact": "qui-suis-je-maui"
+  },
+  {
+    "text": "Je suis une jeune fille chinoise qui a pris la place de son père à l'armée en se déguisant en homme. Mon dragon s'appelle Mushu. Qui suis-je ?",
+    "answers": [
+      "Pocahontas",
+      "Mulan",
+      "Jasmine",
+      "Raya"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "heroines",
+    "fact": "qui-suis-je-mulan"
+  },
+  {
+    "text": "Je suis un vilain charismatique au sceptre de cobra. Vizir royal devenu sorcier, je voulais la lampe magique pour régner. Qui suis-je ?",
+    "answers": [
+      "Hades",
+      "Jafar",
+      "Scar",
+      "Maléfique"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "vilains",
+    "fact": "qui-suis-je-jafar"
+  },
+  {
+    "text": "Je suis une fée aux ailes scintillantes, compagne de Peter Pan. Je suis jalouse, colérique et ma poussière de fée fait voler. Qui suis-je ?",
+    "answers": [
+      "Nani",
+      "Fée Clochette",
+      "Flora",
+      "Maléfique"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "personnages-magiques",
+    "fact": "qui-suis-je-fee-clochette"
+  },
+  {
+    "text": "Je suis un vieux jouet ranger de l'espace qui croit être un vrai astronaute. Ma réplique culte est « Vers l'infini et au-delà ! ». Qui suis-je ?",
+    "answers": [
+      "Woody",
+      "Slinky",
+      "Buzz l'Éclair",
+      "Rex"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "toy-story",
+    "fact": "qui-suis-je-buzz"
+  },
+  {
+    "text": "Je suis une princesse enfermée dans une tour par une fausse mère. Mes cheveux de 20 mètres ont des pouvoirs magiques de guérison. Qui suis-je ?",
+    "answers": [
+      "Cendrillon",
+      "Aurore",
+      "Raiponce",
+      "Blanche-Neige"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "princesses",
+    "fact": "qui-suis-je-raiponce"
+  },
+  {
+    "text": "Je suis un dieu des Enfers sarcastique aux flammes bleues. Je veux renverser Zeus et j'envoie des monstres contre Hercule. Qui suis-je ?",
+    "answers": [
+      "Jafar",
+      "Hadès",
+      "Scar",
+      "Gaston"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "vilains",
+    "fact": "qui-suis-je-hades"
+  },
+  {
+    "text": "Je suis un rat parisien passionné de cuisine. Mon rêve est de devenir chef dans un grand restaurant. Qui suis-je ?",
+    "answers": [
+      "Emile",
+      "Stuart Little",
+      "Rémy",
+      "Templeton"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pixar-cuisine",
+    "fact": "qui-suis-je-remy"
+  },
+  {
+    "text": "Je suis une super-héroïne élastique, mère de famille et membre des Indestructibles. Mon vrai nom est Helen Parr. Qui suis-je ?",
+    "answers": [
+      "Violet",
+      "Elastigirl",
+      "Mirage",
+      "Edna Mode"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "pixar-superheros",
+    "fact": "qui-suis-je-elastigirl"
+  },
+  {
+    "text": "Je suis un méchant lion à la cicatrice sur l'œil. J'ai tué mon frère Mufasa pour devenir roi de la Terre des Lions. Qui suis-je ?",
+    "answers": [
+      "Simba",
+      "Zira",
+      "Scar",
+      "Shenzi"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "vilains",
+    "fact": "qui-suis-je-scar"
+  },
+  {
+    "text": "Je suis une jeune fille qui rêve de plus que sa vie de village. Je tombe amoureuse d'une Bête et j'adore les livres plus que tout. Qui suis-je ?",
+    "answers": [
+      "Cendrillon",
+      "Aurore",
+      "Ariel",
+      "Belle"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "princesses",
+    "fact": "qui-suis-je-belle"
   }
 ]

@@ -713,5 +713,265 @@
     "difficulty": "easy",
     "angle": "pub-noel",
     "fact": "qui-suis-je-ours-coca-cola"
+  },
+  {
+    "text": "Je suis un personnage jaune en forme d'éponge qui vit dans un ananas au fond de l'océan. Mon meilleur ami est une étoile de mer. Qui suis-je ?",
+    "answers": [
+      "Bob l'Éponge",
+      "Patrick",
+      "Dora",
+      "Stitch"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "dessins-animes",
+    "fact": "qui-suis-je-bob-leponge"
+  },
+  {
+    "text": "Je suis la mascotte de Nintendo, un plombier moustachu en salopette rouge et casquette rouge. Je sauve la princesse Peach. Qui suis-je ?",
+    "answers": [
+      "Luigi",
+      "Wario",
+      "Mario",
+      "Toad"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "jeux-video",
+    "fact": "qui-suis-je-mario"
+  },
+  {
+    "text": "Je suis un hérisson bleu ultra-rapide, mascotte de SEGA. Je collectionne des anneaux dorés et mon ennemi est le Dr. Robotnik. Qui suis-je ?",
+    "answers": [
+      "Crash Bandicoot",
+      "Sonic",
+      "Spyro",
+      "Pac-Man"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "jeux-video",
+    "fact": "qui-suis-je-sonic"
+  },
+  {
+    "text": "Je suis une souris noire aux grandes oreilles rondes, créée en 1928. Je suis la mascotte du plus grand empire de divertissement au monde. Qui suis-je ?",
+    "answers": [
+      "Jerry",
+      "Mickey Mouse",
+      "Minnie",
+      "Donald"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "disney",
+    "fact": "qui-suis-je-mickey"
+  },
+  {
+    "text": "Je suis un Pokémon jaune électrique qui est devenu la mascotte de toute la franchise. Mon cri « Pika Pika » est reconnaissable partout. Qui suis-je ?",
+    "answers": [
+      "Évoli",
+      "Rondoudou",
+      "Pikachu",
+      "Salamèche"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pokemon",
+    "fact": "qui-suis-je-pikachu"
+  },
+  {
+    "text": "Je suis un clown aux cheveux rouges et au visage blanc, mascotte de la plus grande chaîne de fast-food du monde. Qui suis-je ?",
+    "answers": [
+      "Le Roi Burger King",
+      "Ronald McDonald",
+      "Colonel Sanders",
+      "Wendy"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "fast-food",
+    "fact": "qui-suis-je-ronald-mcdonald"
+  },
+  {
+    "text": "Je suis un bonhomme en forme de M&M's, disponible en plusieurs couleurs. Rouge et Jaune sont les plus connus d'entre nous. Qui suis-je ?",
+    "answers": [
+      "Les Smarties",
+      "Les M&M's",
+      "Les Skittles",
+      "Les Haribo"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "confiserie",
+    "fact": "qui-suis-je-mms"
+  },
+  {
+    "text": "Je suis un tigre orange et musclé qui apparaît sur les boîtes de céréales. Mon slogan dit que c'est « Grrreat! ». Qui suis-je ?",
+    "answers": [
+      "Coco le singe",
+      "Tony le Tigre",
+      "Toucan Sam",
+      "le Lapin Nesquik"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "cereales",
+    "fact": "qui-suis-je-tony-le-tigre"
+  },
+  {
+    "text": "Je suis un petit fantôme jaune qui mange des pac-gommes dans un labyrinthe. Je suis l'un des premiers personnages de jeu vidéo. Qui suis-je ?",
+    "answers": [
+      "Space Invader",
+      "Pac-Man",
+      "Pong",
+      "Tetris"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "retro-gaming",
+    "fact": "qui-suis-je-pac-man"
+  },
+  {
+    "text": "Je suis un lapin rose qui continue de marcher et marcher. Je suis la mascotte d'une marque de piles. Qui suis-je ?",
+    "answers": [
+      "Le Lapin Duracell",
+      "Le Lapin Energizer",
+      "Le Lapin Nesquik",
+      "Bugs Bunny"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "piles",
+    "fact": "qui-suis-je-lapin-duracell"
+  },
+  {
+    "text": "Je suis un personnage vert avec une grosse tête, mascotte d'une marque de chips. Mon sourire et ma moustache sont sur chaque tube. Qui suis-je ?",
+    "answers": [
+      "Monsieur Pringles",
+      "Chester Cheetah",
+      "Julius Pringles",
+      "Monsieur Propre"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks",
+    "fact": "qui-suis-je-pringles"
+  },
+  {
+    "text": "Je suis un bibendum blanc fait de pneus empilés. Mascotte d'une entreprise française de pneumatiques, j'existe depuis 1898. Qui suis-je ?",
+    "answers": [
+      "Michelin Man",
+      "Goodyear Blimp",
+      "Firestone",
+      "Continental"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "automobile",
+    "fact": "qui-suis-je-bibendum-michelin"
+  },
+  {
+    "text": "Je suis une sirène verte à deux queues sur un fond vert. Je suis le logo d'une chaîne de café mondiale basée à Seattle. Qui suis-je ?",
+    "answers": [
+      "La sirène Starbucks",
+      "La sirène Costa",
+      "Dunkin'",
+      "Tim Hortons"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "cafe",
+    "fact": "qui-suis-je-sirene-starbucks"
+  },
+  {
+    "text": "Je suis un chat bleu robot venu du futur pour aider un garçon maladroit. Ma poche magique contient des gadgets incroyables. Qui suis-je ?",
+    "answers": [
+      "Hello Kitty",
+      "Doraemon",
+      "Meowth",
+      "Chat Bus"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "manga",
+    "fact": "qui-suis-je-doraemon"
+  },
+  {
+    "text": "Je suis un personnage à quatre doigts, chauve et jaune. Je travaille dans une centrale nucléaire et j'adore les donuts et la bière. Qui suis-je ?",
+    "answers": [
+      "Peter Griffin",
+      "Homer Simpson",
+      "Stan Smith",
+      "Bob l'Éponge"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "series-animees",
+    "fact": "qui-suis-je-homer-simpson"
+  },
+  {
+    "text": "Je suis un petit chat blanc sans bouche avec un nœud rouge. Créée au Japon, je suis l'une des mascottes les plus lucratives au monde. Qui suis-je ?",
+    "answers": [
+      "Pusheen",
+      "Hello Kitty",
+      "Doraemon",
+      "Nyanko"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "kawaii",
+    "fact": "qui-suis-je-hello-kitty"
+  },
+  {
+    "text": "Je suis un guépard orange cool avec des lunettes de soleil, mascotte d'une marque de chips au fromage. « It ain't easy being cheesy » est ma phrase. Qui suis-je ?",
+    "answers": [
+      "Tony le Tigre",
+      "Chester Cheetah",
+      "Le Lapin Nesquik",
+      "Julius Pringles"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "snacks",
+    "fact": "qui-suis-je-chester-cheetah"
+  },
+  {
+    "text": "Je suis un homme chauve, musclé et souriant avec une boucle d'oreille. Je suis la mascotte d'une marque de produits ménagers. Qui suis-je ?",
+    "answers": [
+      "Ajax",
+      "Monsieur Propre",
+      "Cif",
+      "Saint Marc"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "menage",
+    "fact": "qui-suis-je-monsieur-propre"
+  },
+  {
+    "text": "Je suis un personnage de jeu vidéo qui construit et détruit des blocs dans un monde pixelisé. Mon visage carré est devenu iconique. Qui suis-je ?",
+    "answers": [
+      "Roblox",
+      "Terraria",
+      "Steve de Minecraft",
+      "Lego"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "jeux-video",
+    "fact": "qui-suis-je-steve-minecraft"
+  },
+  {
+    "text": "Je suis un ours polaire qui apparaît dans les publicités d'une célèbre boisson gazeuse pendant les fêtes de Noël. Qui suis-je ?",
+    "answers": [
+      "L'ours Haribo",
+      "L'ours Coca-Cola",
+      "L'ours Butagaz",
+      "L'ours Milka"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "pub-noel",
+    "fact": "qui-suis-je-ours-coca-cola"
   }
 ]

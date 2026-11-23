@@ -713,5 +713,265 @@
     "difficulty": "hard",
     "angle": "sushi",
     "fact": "qui-suis-je-sushi-shop"
+  },
+  {
+    "text": "Je suis une chaîne de fast-food américaine au clown rouge et jaune. Mon sandwich le plus célèbre est le Big Mac et je suis présent dans plus de 100 pays. Qui suis-je ?",
+    "answers": [
+      "Burger King",
+      "KFC",
+      "McDonald's",
+      "Wendy's"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "burgers",
+    "fact": "qui-suis-je-mcdonalds"
+  },
+  {
+    "text": "Je suis une chaîne de poulet frit créée par un colonel du Kentucky. Ma recette secrète contient 11 herbes et épices. Qui suis-je ?",
+    "answers": [
+      "Popeyes",
+      "Chick-fil-A",
+      "KFC",
+      "Church's"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "poulet",
+    "fact": "qui-suis-je-kfc"
+  },
+  {
+    "text": "Je suis une chaîne de sandwichs où le client choisit ses ingrédients sur un pain allongé. Mon slogan dit « Eat Fresh ». Qui suis-je ?",
+    "answers": [
+      "Subway",
+      "Quiznos",
+      "Jimmy John's",
+      "Pret A Manger"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sandwichs",
+    "fact": "qui-suis-je-subway"
+  },
+  {
+    "text": "Je suis une chaîne de burgers dont la mascotte est un roi avec une couronne. Mon Whopper est grillé à la flamme. Qui suis-je ?",
+    "answers": [
+      "McDonald's",
+      "Five Guys",
+      "Burger King",
+      "Carl's Jr."
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "burgers",
+    "fact": "qui-suis-je-burger-king"
+  },
+  {
+    "text": "Je suis une chaîne de pizza américaine connue pour la livraison. Mon nom contient un jeu de dominos et j'ai été fondée en 1960. Qui suis-je ?",
+    "answers": [
+      "Pizza Hut",
+      "Papa John's",
+      "Domino's",
+      "Little Caesars"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pizza",
+    "fact": "qui-suis-je-dominos"
+  },
+  {
+    "text": "Je suis une chaîne de café américaine à la sirène verte. J'ai popularisé le Frappuccino et les boissons personnalisées. Qui suis-je ?",
+    "answers": [
+      "Costa Coffee",
+      "Dunkin'",
+      "Starbucks",
+      "Tim Hortons"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "cafe",
+    "fact": "qui-suis-je-starbucks"
+  },
+  {
+    "text": "Je suis une chaîne de beignets américaine à l'enseigne orange et rose. Mon café et mes donuts sont célèbres, surtout sur la côte Est. Qui suis-je ?",
+    "answers": [
+      "Krispy Kreme",
+      "Tim Hortons",
+      "Dunkin'",
+      "Mister Donut"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "donuts",
+    "fact": "qui-suis-je-dunkin"
+  },
+  {
+    "text": "Je suis une chaîne de tacos et burritos américaine au design inspiré du Mexique. Mon menu inclut le Crunchwrap Supreme. Qui suis-je ?",
+    "answers": [
+      "Chipotle",
+      "Taco Bell",
+      "Del Taco",
+      "Qdoba"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "mexicain",
+    "fact": "qui-suis-je-taco-bell"
+  },
+  {
+    "text": "Je suis une chaîne de burgers premium où les frites sont servies dans un grand gobelet et les cacahuètes sont gratuites. Qui suis-je ?",
+    "answers": [
+      "Shake Shack",
+      "In-N-Out",
+      "Five Guys",
+      "Smashburger"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "burgers-premium",
+    "fact": "qui-suis-je-five-guys"
+  },
+  {
+    "text": "Je suis une chaîne de burritos américaine qui mise sur les ingrédients frais et responsables. Mon bol burrito est très populaire. Qui suis-je ?",
+    "answers": [
+      "Taco Bell",
+      "Qdoba",
+      "Chipotle",
+      "Moe's"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "mexicain",
+    "fact": "qui-suis-je-chipotle"
+  },
+  {
+    "text": "Je suis une chaîne de poulet frit née à la Nouvelle-Orléans. Mon poulet épicé de Louisiane rivalise avec KFC. Qui suis-je ?",
+    "answers": [
+      "Chick-fil-A",
+      "Popeyes",
+      "Raising Cane's",
+      "Zaxby's"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "poulet",
+    "fact": "qui-suis-je-popeyes"
+  },
+  {
+    "text": "Je suis une chaîne de burgers culte de la côte Ouest américaine. Mon menu secret est légendaire et ma carte est volontairement simple. Qui suis-je ?",
+    "answers": [
+      "Five Guys",
+      "Shake Shack",
+      "In-N-Out",
+      "Whataburger"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "burgers-culte",
+    "fact": "qui-suis-je-in-n-out"
+  },
+  {
+    "text": "Je suis une chaîne de kebab et shawarma très populaire en France. Mes restaurants sont reconnaissables à leur enseigne jaune et rouge. Qui suis-je ?",
+    "answers": [
+      "Bagelstein",
+      "O'Tacos",
+      "Père & Fish",
+      "Nabab Kebab"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "fast-food-fr",
+    "fact": "qui-suis-je-otacos"
+  },
+  {
+    "text": "Je suis une chaîne de pizza connue pour sa croûte farcie (Stuffed Crust) et mes buffets à volonté. Mon toit rouge est iconique. Qui suis-je ?",
+    "answers": [
+      "Domino's",
+      "Papa John's",
+      "Pizza Hut",
+      "Little Caesars"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pizza",
+    "fact": "qui-suis-je-pizza-hut"
+  },
+  {
+    "text": "Je suis une chaîne japonaise de nouilles instantanées servies dans un gobelet. Mon inventeur a créé les Cup Noodles. Qui suis-je ?",
+    "answers": [
+      "Maruchan",
+      "Nissin",
+      "Samyang",
+      "Nongshim"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "noodles",
+    "fact": "qui-suis-je-nissin"
+  },
+  {
+    "text": "Je suis une chaîne de glaces américaine connue pour mes Blizzard, des coupes de glace mélangées avec des toppings. Qui suis-je ?",
+    "answers": [
+      "Baskin-Robbins",
+      "Cold Stone",
+      "Dairy Queen",
+      "Ben & Jerry's"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "glaces",
+    "fact": "qui-suis-je-dairy-queen"
+  },
+  {
+    "text": "Je suis une chaîne de fast-food française spécialisée dans les bagels garnis. Mon nom joue sur le mot « bagel ». Qui suis-je ?",
+    "answers": [
+      "Bagel Corner",
+      "Bagelstein",
+      "Class'Croute",
+      "Paul"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "fast-food-fr",
+    "fact": "qui-suis-je-bagelstein"
+  },
+  {
+    "text": "Je suis une chaîne américaine de poulet connue pour être fermée le dimanche pour raisons religieuses. Mon sandwich au poulet est légendaire. Qui suis-je ?",
+    "answers": [
+      "Popeyes",
+      "Raising Cane's",
+      "Chick-fil-A",
+      "Wingstop"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "poulet",
+    "fact": "qui-suis-je-chick-fil-a"
+  },
+  {
+    "text": "Je suis une chaîne de burgers new-yorkaise avec une enseigne verte. Mes ShackBurgers et mes milkshakes ont conquis le monde. Qui suis-je ?",
+    "answers": [
+      "Five Guys",
+      "Shake Shack",
+      "Smashburger",
+      "Fatburger"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "burgers-premium",
+    "fact": "qui-suis-je-shake-shack"
+  },
+  {
+    "text": "Je suis une chaîne de sushi à emporter très répandue en France. Mes boîtes de makis et California rolls sont vendues en grande surface. Qui suis-je ?",
+    "answers": [
+      "Sushi Daily",
+      "Eat Sushi",
+      "Sushi Shop",
+      "Planet Sushi"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "sushi",
+    "fact": "qui-suis-je-sushi-shop"
   }
 ]
