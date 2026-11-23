@@ -132,6 +132,10 @@ enum StoreCaptureConfiguration { static let enabled = true }
         check(launches == 1, "Double taps and duplicate ad callbacks only launch once")
         adGame.playAgain()
         check(!adGame.isStarting, "Returning home does not open the ad gate")
+        adGame.isStarting = true
+        adGame.respondToChallenge("unrelated-declined-challenge", accept: false)
+        check(adGame.isStarting, "Declining an unrelated challenge preserves an in-flight launch")
+        adGame.playAgain()
         var completedIDs: [String] = []
         adGame.onCompletedMatch = { completedIDs.append($0) }
         var adEnd = endWire

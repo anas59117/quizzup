@@ -150,7 +150,7 @@ extension GameSocket {
     func respondToChallenge(_ id: String, accept: Bool) {
         let respond = { [self] in
             _ = send(["type": "challenge_respond", "challengeId": id, "accept": accept])
-            isStarting = false
+            if accept { isStarting = false }
         }
         if accept { beginMatch(respond) } else { respond() }
     }
