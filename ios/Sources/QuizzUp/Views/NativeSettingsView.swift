@@ -8,18 +8,6 @@ struct NativeSettingsView: View {
     @EnvironmentObject var auth: AuthManager
     @Environment(\.dismiss) private var dismiss
     private var fr: Bool { game.lang == "fr" }
-    private var consentCheckLabel: String {
-        switch ads.consentCheckState {
-        case .notStarted: return fr ? "Vérification non démarrée" : "Check not started"
-        case .waitingForApp: return fr ? "En attente du démarrage de l’app" : "Waiting for app startup"
-        case .checking: return fr ? "Vérification auprès de Google…" : "Checking with Google…"
-        case .waitingForScreen: return fr ? "Ferme cet écran pour continuer la vérification" : "Close this screen to continue the check"
-        case .presenting: return fr ? "Chargement du formulaire Google…" : "Loading Google form…"
-        case .finished: return fr ? "Vérification terminée" : "Check completed"
-        case .failed: return fr ? "Vérification indisponible" : "Check unavailable"
-        case .unavailable: return fr ? "Configuration publicitaire indisponible" : "Advertising configuration unavailable"
-        }
-    }
     var body: some View {
         NavigationStack {
             Form {
@@ -66,33 +54,15 @@ struct NativeSettingsView: View {
                     }
                 }
                 Section(fr ? "À propos" : "About") {
-                    LabeledContent("Version", value: "\(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "?") (\(Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "?"))")
-                    Text(consentCheckLabel).font(.footnote)
-                    if Bundle.main.object(forInfoDictionaryKey: "QuizzUpAdsTestMode") as? Bool == true,
-                       !ads.consentDetails.isEmpty {
-                        Text(ads.consentDetails).font(.caption).textSelection(.enabled)
-                    }
-                    if ads.privacyOptionsRequired {
-                        Button(fr ? "Choix publicitaires" : "Advertising choices") {
+                    Button(fr ? "Vérification publicitaire" : "Advertising privacy") {
+                        if ads.privacyOptionsRequired {
                             ads.presentPrivacyOptions()
-                        }
-                        .disabled(ads.consentBusy)
-                    }
-                    if ads.privacyError {
-                        Text(fr ? "La vérification des choix publicitaires a échoué. Tu peux continuer à jouer et réessayer." : "Advertising privacy check failed. You can keep playing and try again.")
-                            .font(.footnote)
-                        if Bundle.main.object(forInfoDictionaryKey: "QuizzUpAdsTestMode") as? Bool == true,
-                           let code = ads.consentErrorCode {
-                            Text(code).font(.caption).textSelection(.enabled)
-                        }
-                    }
-                    if !ads.privacyOptionsRequired || ads.privacyError {
-                        Button(fr ? "Vérifier les choix publicitaires" : "Check advertising choices") {
+                        } else {
                             dismiss()
                             ads.retryConsent()
                         }
-                        .disabled(ads.consentBusy)
                     }
+                    .disabled(ads.consentBusy)
                     Link(game.t("privacyPolicy"), destination: URL(string: "https://\(GameSocket.frontendHost)/privacy.html")!)
                     Link(fr ? "Crédits des images" : "Image credits", destination: URL(string: "https://\(GameSocket.frontendHost)/image-credits.html")!)
                 }
