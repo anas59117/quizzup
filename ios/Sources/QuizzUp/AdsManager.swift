@@ -24,6 +24,11 @@ final class AdsManager: NSObject, ObservableObject {
     @Published private(set) var privacyOptionsRequired = false
     @Published private(set) var consentBusy = false
     @Published private(set) var privacyError = false
+    @Published private(set) var consentErrorCode: String?
+    private var consentFailures = 0
+    private var consentRetryAfter = Date.distantPast
+    private var consentRetryTask: Task<Void, Never>?
+    private var presentationRetryTask: Task<Void, Never>?
     var isPremium = false {
         didSet {
             if isPremium { invalidateAd() }
@@ -53,11 +58,15 @@ final class AdsManager: NSObject, ObservableObject {
 
     /// Start from a visible active scene, after the premium state is known.
     func start() {
-        guard !consentAttempted, interstitialUnitID != nil,
+        guard !consentAttempted, !consentBusy, !trackingBusy, !launch.isPending,
+              Date() >= consentRetryAfter,
+              interstitialUnitID != nil,
               UIApplication.shared.applicationState == .active,
               UIApplication.shared.topMostViewController != nil else { return }
         consentAttempted = true
         consentBusy = true
+        privacyError = false
+        consentErrorCode = nil
         let parameters = UMPRequestParameters()
         parameters.tagForUnderAgeOfConsent = false
         // Real geography on physical devices. UMP recognises simulators as
@@ -66,8 +75,8 @@ final class AdsManager: NSObject, ObservableObject {
             Task { @MainActor in
                 guard let self else { return }
                 self.privacyOptionsRequired = UMPConsentInformation.sharedInstance.privacyOptionsRequirementStatus == .required
-                guard error == nil else {
-                    self.finishConsent()
+                if let error {
+                    self.consentFailed(error)
                     return
                 }
                 self.consentFormPending = true
@@ -77,14 +86,71 @@ final class AdsManager: NSObject, ObservableObject {
     }
 
     private func presentPendingConsentIfPossible() {
-        guard consentFormPending, presentationAllowed(),
+        guard consentFormPending, presentationAllowed(), !trackingBusy, !launch.isPending,
               UIApplication.shared.applicationState == .active,
               UIApplication.shared.activeRootViewController?.presentedViewController == nil,
-              let presenter = UIApplication.shared.topMostViewController else { return }
-        consentFormPending = false
-        UMPConsentForm.loadAndPresentIfRequired(from: presenter) { [weak self] _ in
-            Task { @MainActor in self?.finishConsent() }
+              let presenter = UIApplication.shared.topMostViewController else {
+            retryDeferredPresentation()
+            return
         }
+        consentFormPending = false
+        UMPConsentForm.loadAndPresentIfRequired(from: presenter) { [weak self] error in
+            Task { @MainActor in
+                guard let self else { return }
+                if let error { self.consentFailed(error) }
+                else {
+                    self.consentFailures = 0
+                    self.finishConsent()
+                }
+            }
+        }
+    }
+
+    /// A sheet may close without a game-stage/scene change. Wait for that
+    /// transition, but stop polling during gameplay or in the background.
+    private func retryDeferredPresentation() {
+        guard consentFormPending, presentationRetryTask == nil else { return }
+        presentationRetryTask = Task { @MainActor [weak self] in
+            defer { self?.presentationRetryTask = nil }
+            while true {
+                do { try await Task.sleep(nanoseconds: 1_000_000_000) }
+                catch { return }
+                guard let self, self.consentFormPending, self.presentationAllowed(),
+                      UIApplication.shared.applicationState == .active else { return }
+                self.presentPendingConsentIfPossible()
+            }
+        }
+    }
+
+    private func consentFailed(_ error: Error) {
+        let error = error as NSError
+        consentErrorCode = "\(error.domain):\(error.code)"
+        NSLog("UMP consent failed [%@:%ld]", error.domain, error.code)
+        privacyError = true
+        consentFormPending = false
+        consentFailures += 1
+        consentRetryAfter = Date().addingTimeInterval(30)
+        // Cached consent is still usable only if UMP explicitly permits ads.
+        finishConsent()
+        guard consentFailures <= 3 else { return }
+        consentAttempted = false
+        consentRetryTask?.cancel()
+        consentRetryTask = Task { @MainActor [weak self] in
+            do { try await Task.sleep(nanoseconds: 30_000_000_000) }
+            catch { return }
+            guard let self else { return }
+            self.start()
+        }
+    }
+
+    /// Called after dismissing settings; does not reset stored user choices.
+    func retryConsent() {
+        guard !consentBusy, !trackingBusy, !launch.isPending else { return }
+        consentRetryTask?.cancel()
+        consentFailures = 0
+        consentRetryAfter = .distantPast
+        consentAttempted = false
+        start()
     }
 
     private func finishConsent() {

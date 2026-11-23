@@ -59,10 +59,19 @@ struct NativeSettingsView: View {
                             ads.presentPrivacyOptions()
                         }
                         .disabled(ads.consentBusy)
-                        if ads.privacyError {
-                            Text(fr ? "Impossible d’ouvrir les choix. Réessaie." : "Could not open choices. Try again.")
-                                .font(.footnote)
+                    }
+                    if ads.privacyError {
+                        Text(fr ? "La vérification des choix publicitaires a échoué. Tu peux continuer à jouer et réessayer." : "Advertising privacy check failed. You can keep playing and try again.")
+                            .font(.footnote)
+                        if Bundle.main.object(forInfoDictionaryKey: "QuizzUpAdsTestMode") as? Bool == true,
+                           let code = ads.consentErrorCode {
+                            Text(code).font(.caption).textSelection(.enabled)
                         }
+                        Button(fr ? "Réessayer la vérification" : "Retry privacy check") {
+                            dismiss()
+                            ads.retryConsent()
+                        }
+                        .disabled(ads.consentBusy)
                     }
                     Link(game.t("privacyPolicy"), destination: URL(string: "https://\(GameSocket.frontendHost)/privacy.html")!)
                     Link(fr ? "Crédits des images" : "Image credits", destination: URL(string: "https://\(GameSocket.frontendHost)/image-credits.html")!)
