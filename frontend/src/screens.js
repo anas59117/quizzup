@@ -16,6 +16,7 @@ import { BrandLogo } from './Brand';
 import { getTopicCover } from './topicCovers';
 import { localizedTopicTitle } from './topicTitles';
 import { topicDetailPresentation } from './topicDetailPresentation';
+import { PlaySheet } from './PlaySheet';
 
 const FEATURED_TOPIC_KEYS = [
   'spider_man', 'harry_potter', 'minecraft', 'rap_fr',
@@ -71,8 +72,9 @@ export function HomeContent({ startWithCategory, onSeeAll, pending, stats, contr
 
 // Direction: full-width artwork dissolves into one continuous themed canvas.
 // Rules: preserve faces, keep the pitch complete, lead with play and compact progress.
-export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChallenge, pending, friendsOnTopic = [], controls, onCommunity, onLeaderboard, following, onToggleFollow }) {
+export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChallenge, onInvite, onJoin, pending, friendsOnTopic = [], controls, onCommunity, onLeaderboard, following, onToggleFollow }) {
   const { t, lang } = useI18n();
+  const [playOpen, setPlayOpen] = useState(false);
   const [failedCover, setFailedCover] = useState(null);
   const [loadedCover, setLoadedCover] = useState(null);
   const cover = category ? getTopicCover(category) : null;
@@ -127,7 +129,7 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
         {description && <p className="cp-info">{description}</p>}
       </div>
       <div className="cp-cta">
-        <button className="cp-play" onClick={onPlay} disabled={pending}><Icon name="bolt" size={20} />{t('playNow')}</button>
+        <button className="cp-play" onClick={() => setPlayOpen(true)} disabled={pending} aria-haspopup="dialog" aria-expanded={playOpen}><Icon name="bolt" size={20} />{t('playNow')}</button>
         <button className="cp-ghost" onClick={onChallenge} disabled={pending} aria-label={t('challengeFriend')}><Icon name="users" size={22} /></button>
       </div>
       <div className="cp-stats" aria-label={t('yourProgress')}>
@@ -148,6 +150,11 @@ export function CategoryPreviewContent({ category, stats, onBack, onPlay, onChal
       </section>
       <div className="social-entry-row"><button onClick={onCommunity}><Icon name="chat" size={18} />{t('communityTitle')}</button><button onClick={onLeaderboard}><Icon name="trophy" size={18} />{t('rankingLabel')}</button></div>
       </div>
+      {playOpen && <PlaySheet pending={pending} onClose={() => setPlayOpen(false)}
+        onDuel={() => { setPlayOpen(false); onPlay?.('duel'); }}
+        onSolo={() => { setPlayOpen(false); onPlay?.('solo'); }}
+        onInvite={() => { setPlayOpen(false); (onInvite || onChallenge)?.(); }}
+        onJoin={() => { setPlayOpen(false); onJoin?.(); }} />}
     </main>
   );
 }
