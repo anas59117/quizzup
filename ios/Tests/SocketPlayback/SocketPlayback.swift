@@ -167,6 +167,31 @@ enum StoreCaptureConfiguration { static let enabled = true }
         let room: [String: Any] = ["type":"room_created", "code":"AB234", "players":[["id":"self", "name":"Alice", "avatar":"fox", "connected":true]], "isHost":true, "canStart":false]
         try receive(room)
         check(!game.roomPending && game.privateRoom?.code == "AB234" && game.privateRoom?.canStart == false, "Only a confirmed room is presented, with the server’s launch eligibility")
+        var readyRoom = room
+        readyRoom["type"] = "room_update"
+        readyRoom["canStart"] = true
+        try receive(readyRoom)
+        var afterRoomAd: (() -> Void)?
+        game.beforeStartingMatch = { afterRoomAd = $0 }
+        game.startPrivateRoom(game.privateRoom!)
+        check(game.isStarting && !game.roomPending, "Room readiness is not sent before the interstitial closes")
+        var unreadyRoom = room
+        unreadyRoom["type"] = "room_update"
+        try receive(unreadyRoom) // The guest leaves while the host watches the ad.
+        afterRoomAd?()
+        check(!game.roomPending && !game.isStarting && game.roomError != nil,
+              "A room that becomes unready during an ad cancels cleanly and can be retried")
+        try receive(readyRoom)
+        check(game.privateRoom?.canStart == true && game.roomError == nil,
+              "A returning guest restores the current room eligibility after the cancelled launch")
+        game.startPrivateRoom(game.privateRoom!)
+        var replacementRoom = readyRoom
+        replacementRoom["code"] = "CD567"
+        try receive(replacementRoom)
+        afterRoomAd?()
+        check(!game.roomPending && !game.isStarting && game.roomError != nil,
+              "A deferred launch cannot start a different replacement room")
+        game.beforeStartingMatch = { $0() }
         try receive(["type":"room_closed"])
         check(game.privateRoom == nil && game.roomError != nil, "Remote room closure clears the lobby and displays a recovery message")
         try receive(["type":"leaderboard_list", "category":"science", "entries":[["id":"alice", "rank":1, "name":"Alice", "avatar":"fox", "xp":84]]])

@@ -573,8 +573,16 @@ final class GameSocket: ObservableObject {
     func startPrivateRoom(_ room: NativePrivateRoom) {
         guard room.isHost, room.canStart, !roomPending else { return }
         beginMatch { [self] in
-            if send(["type": "start_room", "code": room.code]) { roomPending = true }
-            isStarting = false
+            defer { isStarting = false }
+            guard roomScreenOpen, let current = privateRoom, current.code == room.code,
+                  current.isHost, current.canStart, !roomPending else {
+                if roomError == nil {
+                    roomError = lang == "fr" ? "Le salon a changé. Vérifie les joueurs puis réessaie."
+                        : "The room has changed. Check the players and try again."
+                }
+                return
+            }
+            if send(["type": "start_room", "code": current.code]) { roomPending = true }
         }
     }
     func cancelQueue() { if !cancelPending, send(["type": "cancel_queue"]) { cancelPending = true } }
