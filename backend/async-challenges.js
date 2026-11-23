@@ -1,6 +1,7 @@
 const { createJsonWriter, readJsonFileSync } = require('./json-writer');
 const { getStorePath } = require('./store-path');
 const { GAME_CONFIG } = require('./config');
+const { assertReleaseTopicAllowed } = require('./questions');
 const PRESENTATION_MS = 2050,
   WINDOW_MS = 10000,
   ROUNDS = 6,
@@ -29,6 +30,7 @@ function createAsyncChallenges({
   );
   const persist = createJsonWriter(file, () => [...runs.values()]);
   function create(c, questions) {
+    assertReleaseTopicAllowed(c.category);
     if (runs.has(c.id)) return;
     if (
       !Array.isArray(questions) ||
@@ -67,6 +69,9 @@ function createAsyncChallenges({
       run = runs.get(id);
     if (!c || !run || c.mode !== 'async' || ![c.fromId, c.toId].includes(uid))
       throw Error('CHALLENGE_FORBIDDEN');
+    // Both records survive releases; neither may bypass the current catalog.
+    assertReleaseTopicAllowed(c.category);
+    assertReleaseTopicAllowed(run.category);
     if (!friends(c.fromId, c.toId)) throw Error('NOT_FRIENDS');
     if (
       ['declined', 'expired'].includes(c.status) ||

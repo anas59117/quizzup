@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { CATEGORIES, getQuestions, shuffleQuestions, difficultyForRound, selectProgressiveQuestions } = require('./questions');
+const { CATEGORIES, listCategories, isReleaseExcludedTopic, getQuestions, shuffleQuestions, difficultyForRound, selectProgressiveQuestions } = require('./questions');
 
 test('question shuffle does not mutate the source array', () => {
   const source = [1, 2, 3, 4];
@@ -76,7 +76,7 @@ test('progressive selection avoids repeated correct answers when alternatives ex
 
 test('every quiz category produces a complete progressive six-round match', () => {
   const expected = ['easy', 'easy', 'medium', 'medium', 'hard', 'expert'];
-  for (const key of Object.keys(CATEGORIES)) {
+  for (const { key } of listCategories()) {
     const selected = getQuestions(6, key, () => 0);
     assert.equal(selected.length, 6, `${key} must provide six questions`);
     assert.deepEqual(
@@ -117,6 +117,10 @@ test('expanded quizzes draw four or more angles from banks of at least 50 questi
     assert.equal(new Set(bank.map(question => question.fact)).size, bank.length, key + ' covers unique facts');
     assert.ok(bank.every(question => question.angle && question.fact && question.difficulty), key + ' classifies every question');
 
+    if (isReleaseExcludedTopic(key)) {
+      assert.throws(() => getQuestions(6, key), /CATEGORY_UNAVAILABLE/);
+      continue;
+    }
     const checkMatch = (questions) => {
       assert.deepEqual(questions.map(question => question.difficulty), difficulties);
       assert.ok(new Set(questions.map(question => question.angle)).size >= 4, key + ' covers four angles');
@@ -163,7 +167,7 @@ test('audited banks skip repeated facts and limit dominant formats in six-questi
     seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
     return seed / 2 ** 32;
   };
-  for (const key of keys) {
+  for (const key of keys.filter(key => !isReleaseExcludedTopic(key))) {
     const finals = new Set();
     for (let i = 0; i < 200; i++) {
       const rounds = getQuestions(6, key, random);

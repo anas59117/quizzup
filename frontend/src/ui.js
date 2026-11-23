@@ -3,6 +3,8 @@ import React, { useState, useEffect, useCallback, useRef, useId, memo } from 're
 import { useI18n } from './i18n';
 import { getTopicCover } from './topicCovers';
 import catalogueExpansion from './catalogueExpansion.json';
+import releaseExcludedTopics from './releaseExcludedTopics.json';
+const releaseExcludedTopicKeys = new Set(releaseExcludedTopics);
 import topicPopularity from './topicPopularity.json';
 import { FREE_AVATAR_IDS, PlayerAvatar } from './PlayerAvatar';
 import { BrandLogo, BrandMark } from './Brand';
@@ -516,7 +518,7 @@ export const CATEGORIES = [
   { key: 'qui_suis_je_wwe', label: "Qui suis-je ? WWE", icon: '🕵️', grad: 'g412', tag: '✨', desc: "Devine le catcheur WWE", family: 'qui_suis_je' },
   { key: 'qui_suis_je_youtubeurs', label: "Qui suis-je ? Youtubeurs", icon: '🕵️', grad: 'g413', tag: '✨', desc: "Devine le youtubeur mystère", family: 'qui_suis_je' },
   ...catalogueExpansion,
-];
+].filter((category) => !releaseExcludedTopicKeys.has(category.key));
 
 // Big topic families (QuizUp-style browsing: tap a broad category to see
 // every quiz inside it) — labels/descriptions are translated UI chrome,

@@ -1,3 +1,4 @@
+import releaseExcludedTopics from './releaseExcludedTopics.json';
 import { CATEGORIES } from './ui';
 import { FAMILY_TOPIC_COVERS, TOPIC_COVERS, getTopicCover } from './topicCovers';
 
@@ -323,7 +324,7 @@ describe('topic cover catalog', () => {
   });
 
   test('the editorial catalog contains only known category keys', () => {
-    const categoryKeys = new Set(CATEGORIES.map((category) => category.key));
+    const categoryKeys = new Set([...CATEGORIES.map((category) => category.key), ...releaseExcludedTopics]);
     const unknown = Object.keys(TOPIC_COVERS).filter((key) => !categoryKeys.has(key));
 
     expect(unknown).toEqual([]);

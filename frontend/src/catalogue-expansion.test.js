@@ -3,12 +3,13 @@ import path from 'path';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { CATEGORIES, categoriesInFamily } from './ui';
+import releaseExcludedTopics from './releaseExcludedTopics.json';
 import { CategoryTileV4 } from './CategoryTileV4';
 import { getTopicCover } from './topicCovers';
 
 const added = `football_feminin tottenham as_roma benfica galatasaray espagne_football gardiens_legendaires allemagne_football angleterre_football senegal_football transferts_mercato cricket judo surf skateboard escalade country_music punk_grunge musique_arabe_rai ariana_grande bad_bunny bruno_mars rappeurs_uk ed_sheeran post_malone kendrick_lamar j_cole vald laylow plk hamza apex_legends dark_souls diablo halo tekken_mortal_kombat stardew_valley rick_and_morty narcos better_call_saul suits grey_s_anatomy the_mandalorian family_guy mathematiques_logique informatique_technologie economie_finance psychologie droit_justice congo_rdc entrepreneurs_tech records_du_monde phenomenes_naturels monnaies_du_monde iles_du_monde`.split(' ');
 
-test.each(added)('%s is browsable once, with a local responsive cover and working card', key => {
+test.each(added.filter(key => !releaseExcludedTopics.includes(key)))('%s is browsable once, with a local responsive cover and working card', key => {
   const matches = CATEGORIES.filter(c => c.key === key);
   expect(matches).toHaveLength(1);
   const category = matches[0];

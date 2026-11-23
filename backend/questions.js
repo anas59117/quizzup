@@ -11,6 +11,13 @@
 const trivia = require('./trivia-api');
 const reports = require('./reports');
 
+// Provisional release policy; keep complete authored banks for validation.
+const releaseExcludedTopics = new Set(require('../frontend/src/releaseExcludedTopics.json'));
+function isReleaseExcludedTopic(key) { return releaseExcludedTopics.has(key); }
+function assertReleaseTopicAllowed(key) {
+  if (isReleaseExcludedTopic(key)) throw Error('CATEGORY_UNAVAILABLE');
+}
+
 // "Guess the player" photo questions, pre-built (image, credit, baked
 // distractors) by scripts/fetch-player-photos.js + a one-off build step.
 // Kept as data files rather than inline literals so this file stays short.
@@ -1496,9 +1503,10 @@ function difficultyScore(question, index, total) {
 }
 
 function categoryPool(categoryKey) {
+  assertReleaseTopicAllowed(categoryKey);
   const categories = categoryKey && CATEGORIES[categoryKey]
     ? [[categoryKey, CATEGORIES[categoryKey]]]
-    : Object.entries(CATEGORIES);
+    : Object.entries(CATEGORIES).filter(([key]) => !isReleaseExcludedTopic(key));
 
   const pool = [];
   for (const [key, cat] of categories) {
@@ -1664,12 +1672,12 @@ async function getMixedQuestions(count, categoryKey) {
 // Warm the API cache for every supported category (best-effort, non-blocking).
 function warmCache() {
   for (const [key, c] of Object.entries(CATEGORIES)) {
-    if (trivia.isSupported(key)) trivia.refill(key, c.label, c.icon);
+    if (!isReleaseExcludedTopic(key) && trivia.isSupported(key)) trivia.refill(key, c.label, c.icon);
   }
 }
 
 function listCategories() {
-  return Object.entries(CATEGORIES).map(([key, c]) => ({
+  return Object.entries(CATEGORIES).filter(([key]) => !isReleaseExcludedTopic(key)).map(([key, c]) => ({
     key,
     label: c.label,
     icon: c.icon,
@@ -1678,6 +1686,9 @@ function listCategories() {
 }
 
 module.exports = {
+  categoryPool,
+  isReleaseExcludedTopic,
+  assertReleaseTopicAllowed,
   shuffleAnswers,
   CATEGORIES,
   getQuestions,

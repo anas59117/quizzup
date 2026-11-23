@@ -5,7 +5,7 @@ const express = require('express');
 const { WebSocketServer } = require('ws');
 const cors = require('cors');
 const http = require('http');
-const { listCategories, warmCache, questionKey, CATEGORIES } = require('./questions');
+const { listCategories, warmCache, questionKey, CATEGORIES, isReleaseExcludedTopic, assertReleaseTopicAllowed } = require('./questions');
 const reports = require('./reports');
 const userReports = require('./user-reports');
 const social = require('./social');
@@ -191,7 +191,7 @@ function allowAction(limiterInstance, key, ws, code = 'RATE_LIMITED') {
 }
 
 function validCategoryKey(value) {
-  return typeof value === 'string' && Object.prototype.hasOwnProperty.call(CATEGORIES, value)
+  return typeof value === 'string' && !isReleaseExcludedTopic(value) && Object.prototype.hasOwnProperty.call(CATEGORIES, value)
     ? value
     : null;
 }
@@ -788,6 +788,7 @@ async function handleMessaging(ws, data, state) {
     }
     if (data.type === 'challenge_respond') {
       if (typeof data.accept !== 'boolean') throw Error('INVALID_RESPONSE');
+      if (data.accept) assertReleaseTopicAllowed(challenges.get(data.challengeId)?.category);
       await challenges.respond(uid, data.challengeId, data.accept, {
         available: (c) =>
           (c.mode === 'async' ? [c.toId] : [c.fromId, c.toId]).every((id) => {
@@ -1139,6 +1140,10 @@ function handleGameplay(ws, data, state) {
     'start_room', 'leave_room', 'rematch', 'cancel_rematch', 'report', 'leave',
   ]);
   if (gameplayTypes.has(data.type) && !requireAuth(ws, state)) return true;
+  if (['solo', 'join', 'create_room'].includes(data.type) && isReleaseExcludedTopic(data.category)) {
+    game.send(ws, { type: 'error', code: 'CATEGORY_UNAVAILABLE', message: 'Ce thème est indisponible.' });
+    return true;
+  }
   if (['join', 'solo', 'create_room', 'join_room'].includes(data.type) && data.presentationVersion === 1) {
     ws.presentationVersion = 1;
   }
