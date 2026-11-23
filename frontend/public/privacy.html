@@ -17,7 +17,7 @@
 <body>
 
 <h1>QuizzUp</h1>
-<p><em><span lang="fr">Dernière mise à jour</span> / <span lang="en">Last updated</span>: 17 novembre 2026</em></p>
+<p><em><span lang="fr">Dernière mise à jour</span> / <span lang="en">Last updated</span>: 23 novembre 2026</em></p>
 
 <div class="lang-note"><span lang="fr">🇫🇷 Version française ci-dessous</span> — <span lang="en">🇬🇧 English version further down the page.</span></div>
 
@@ -25,47 +25,40 @@
 
 <h2>1. Quelles données sont collectées ?</h2>
 <ul>
-  <li><strong>Identité de jeu</strong> : le pseudo et l'avatar (emoji) que tu choisis en entrant dans l'app.</li>
-  <li><strong>Identifiant anonyme</strong> : un identifiant Firebase unique et anonyme, généré automatiquement, qui permet de retrouver tes statistiques et tes amis d'une session à l'autre.</li>
-  <li><strong>Compte Google (optionnel)</strong> : si tu choisis de lier un compte Google, ton adresse e-mail et ton nom Google sont associés à ton identifiant. Cette étape est entièrement facultative.</li>
+  <li><strong>Identité de jeu</strong> : le pseudo et l'avatar que tu choisis.</li>
+  <li><strong>Identifiant de compte</strong> : l'application iOS utilise un identifiant Firebase associé à une connexion Apple, Google ou e-mail. Le site peut également utiliser une identité invitée signée par le serveur de QuizzUp.</li>
+  <li><strong>Connexion</strong> : selon le moyen choisi, ton adresse e-mail et les informations de profil transmises par Apple ou Google peuvent être associées à ton compte. Les mots de passe e-mail sont traités par Firebase Authentication, pas stockés par le serveur de jeu.</li>
   <li><strong>Statistiques de jeu</strong> : nombre de parties, victoires, série de victoires, XP et niveau.</li>
   <li><strong>Fonctions sociales</strong> : ta liste d'amis, les demandes d'ami, les messages privés entre amis, les messages du chat pendant une partie, et les posts publics que tu publies sur le fil d'actualité.</li>
-  <li><strong>Données d'abonnement</strong> : si tu souscris à l'offre Premium, l'achat est géré par Apple (App Store) ou Google (Play Store). Nous recevons uniquement la confirmation du statut de ton abonnement (actif/expiré), sans accès à tes données de paiement.</li>
+  <li><strong>Photos partagées</strong> : lorsque tu choisis volontairement une photo de profil ou une image pour une publication, cette image est envoyée au serveur pour être affichée dans le service.</li>
 </ul>
 
 <h2>2. Publicité</h2>
-<p>QuizzUp affiche des publicités interstitielles via <strong>Google AdMob</strong>. AdMob peut collecter :</p>
-<ul>
-  <li>Un identifiant publicitaire (IDFA sur iOS, GAID sur Android).</li>
-  <li>Des données techniques de l'appareil (modèle, OS, langue).</li>
-  <li>Des données d'interaction avec les publicités.</li>
-</ul>
-<p>Tu peux réinitialiser ton identifiant publicitaire ou désactiver la personnalisation des annonces dans les réglages de ton appareil. Les abonnés Premium ne voient aucune publicité.</p>
-<p>Pour en savoir plus : <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Politique de confidentialité de Google Ads</a>.</p>
+<p>La version iOS 1.0 ne contient pas de SDK AdMob, ne collecte pas d'identifiant publicitaire et ne propose pas d'abonnement payant. Cette politique sera actualisée avant l'activation de nouvelles fonctions publicitaires ou d'achat.</p>
 
 <h2>3. Ce qui n'est PAS collecté</h2>
 <ul>
   <li>Aucune localisation précise (GPS).</li>
-  <li>Aucune donnée de paiement directe (les transactions passent par Apple/Google).</li>
-  <li>Aucun accès à tes contacts, photos ou fichiers.</li>
+  <li>Aucune donnée de paiement dans la version iOS 1.0.</li>
+  <li>Aucun accès à ton carnet d'adresses ni à l'ensemble de ta photothèque. Seules les images que tu sélectionnes pour les partager sont transmises.</li>
 </ul>
 
 <h2>4. À quoi servent ces données ?</h2>
-<p>Uniquement à faire fonctionner le jeu : matchmaking multijoueur, sauvegarde de la progression, fonctions sociales (amis, chat, fil d'actualité) et gestion de l'abonnement Premium. Les messages privés ne sont visibles que par les deux amis concernés. Les posts du fil d'actualité sont publics et visibles par tous les joueurs.</p>
+<p>Les données servent à faire fonctionner le jeu : connexion, matchmaking multijoueur, sauvegarde de la progression et fonctions sociales (amis, chat, fil d'actualité). Les messages privés sont destinés aux participants à la conversation. Les posts du fil d'actualité sont publics. Les contenus transitent par le serveur pour fournir ces fonctions et traiter les signalements.</p>
 
 <h2>5. Où sont stockées les données ?</h2>
 <p>L'authentification est gérée par <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Firebase / Google</a>. Les statistiques, amis et messages sont stockés sur le serveur de jeu de QuizzUp (hébergé par Railway, infrastructure cloud).</p>
 
 <h2>6. Partage avec des tiers</h2>
-<p>Aucune donnée personnelle n'est vendue. Les seuls tiers impliqués sont :</p>
+<p>Aucune donnée personnelle n'est vendue. Les prestataires utilisés pour le fonctionnement du service comprennent :</p>
 <ul>
-  <li><strong>Firebase / Google</strong> : authentification et notifications.</li>
-  <li><strong>Google AdMob</strong> : diffusion de publicités (utilisateurs gratuits uniquement).</li>
-  <li><strong>Apple / Google</strong> : traitement des achats d'abonnement Premium.</li>
+  <li><strong>Firebase / Google</strong> : authentification des comptes.</li>
+  <li><strong>Apple / Google</strong> : connexion au compte lorsque tu choisis ce fournisseur.</li>
+  <li><strong>Railway et Vercel</strong> : hébergement du serveur de jeu et du site. Certaines images de quiz peuvent être chargées auprès de leur hébergeur d'origine, avec les données techniques nécessaires à la requête.</li>
 </ul>
 
 <h2>7. Suppression de tes données</h2>
-<p>Pour demander la suppression de ton compte et de toutes tes données, contacte-nous à : <a href="mailto:quizzup.contact@gmail.com">quizzup.contact@gmail.com</a></p>
+<p>Dans l'application iOS, ouvre Réglages puis « Supprimer mon compte ». Tu peux également nous contacter à : <a href="mailto:quizzup.contact@gmail.com">quizzup.contact@gmail.com</a> pour une demande liée à tes données.</p>
 <p>Nous traiterons ta demande dans un délai de 30 jours.</p>
 
 <h2>8. Enfants</h2>
@@ -87,47 +80,40 @@
 
 <h2>1. What data is collected?</h2>
 <ul>
-  <li><strong>Game identity</strong>: the username and avatar (emoji) you choose when entering the app.</li>
-  <li><strong>Anonymous identifier</strong>: a unique, anonymous Firebase ID, generated automatically, used to retrieve your stats and friends across sessions.</li>
-  <li><strong>Google account (optional)</strong>: if you choose to link a Google account, your email and Google name are associated with your identifier. This step is entirely optional.</li>
+  <li><strong>Game identity</strong>: the username and avatar you choose.</li>
+  <li><strong>Account identifier</strong>: the iOS app uses a Firebase identifier associated with Apple, Google or email sign-in. The website can also use a guest identity signed by the QuizzUp server.</li>
+  <li><strong>Sign-in</strong>: depending on your choice, your email and profile information provided by Apple or Google may be linked to your account. Email passwords are handled by Firebase Authentication, not stored by the game server.</li>
   <li><strong>Game stats</strong>: games played, wins, win streak, XP and level.</li>
   <li><strong>Social features</strong>: your friends list, friend requests, direct messages between friends, in-match chat messages, and public posts you publish to the topic feed.</li>
-  <li><strong>Subscription data</strong>: if you subscribe to the Premium plan, the purchase is handled by Apple (App Store) or Google (Play Store). We only receive confirmation of your subscription status (active/expired), with no access to your payment details.</li>
+  <li><strong>Shared photos</strong>: when you voluntarily select a profile photo or an image for a post, that image is uploaded to the server for display in the service.</li>
 </ul>
 
 <h2>2. Advertising</h2>
-<p>QuizzUp displays interstitial ads through <strong>Google AdMob</strong>. AdMob may collect:</p>
-<ul>
-  <li>An advertising identifier (IDFA on iOS, GAID on Android).</li>
-  <li>Technical device data (model, OS, language).</li>
-  <li>Ad interaction data.</li>
-</ul>
-<p>You can reset your advertising identifier or opt out of ad personalization in your device settings. Premium subscribers see no ads.</p>
-<p>Learn more: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Ads Privacy Policy</a>.</p>
+<p>iOS version 1.0 contains no AdMob SDK, collects no advertising identifier and offers no paid subscription. This policy will be updated before new advertising or purchasing features are enabled.</p>
 
 <h2>3. What is NOT collected</h2>
 <ul>
   <li>No precise (GPS) location.</li>
-  <li>No direct payment data (transactions go through Apple/Google).</li>
-  <li>No access to your contacts, photos or files.</li>
+  <li>No payment data in iOS version 1.0.</li>
+  <li>No access to your address book or entire photo library. Only the images you select for sharing are uploaded.</li>
 </ul>
 
 <h2>4. How this data is used</h2>
-<p>Solely to run the game: multiplayer matchmaking, saving your progress, social features (friends, chat, feed) and managing Premium subscriptions. Direct messages are visible only to the two friends involved. Feed posts are public and visible to all players.</p>
+<p>Data is used to run the game: sign-in, multiplayer matchmaking, saving progress and social features (friends, chat and feed). Private messages are intended for conversation participants. Feed posts are public. Content passes through the server to provide these features and handle reports.</p>
 
 <h2>5. Where data is stored</h2>
 <p>Authentication is handled by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Firebase / Google</a>. Stats, friends and messages are stored on QuizzUp's game server (hosted on Railway, cloud infrastructure).</p>
 
 <h2>6. Sharing with third parties</h2>
-<p>No personal data is sold. The only third parties involved are:</p>
+<p>No personal data is sold. Service providers used to operate the service include:</p>
 <ul>
-  <li><strong>Firebase / Google</strong>: authentication and notifications.</li>
-  <li><strong>Google AdMob</strong>: ad delivery (free users only).</li>
-  <li><strong>Apple / Google</strong>: processing Premium subscription purchases.</li>
+  <li><strong>Firebase / Google</strong>: account authentication.</li>
+  <li><strong>Apple / Google</strong>: sign-in when you choose that provider.</li>
+  <li><strong>Railway and Vercel</strong>: game server and website hosting. Some quiz images may load from their original host, with the technical data needed for that request.</li>
 </ul>
 
 <h2>7. Deleting your data</h2>
-<p>To request deletion of your account and all your data, contact us at: <a href="mailto:quizzup.contact@gmail.com">quizzup.contact@gmail.com</a></p>
+<p>In the iOS app, open Settings and choose “Delete my account”. You can also contact <a href="mailto:quizzup.contact@gmail.com">quizzup.contact@gmail.com</a> about your personal data.</p>
 <p>We will process your request within 30 days.</p>
 
 <h2>8. Children</h2>
