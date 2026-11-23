@@ -453,5 +453,265 @@
     "difficulty": "expert",
     "angle": "chewing-gums",
     "fact": "qui-suis-je-hollywood"
+  },
+  {
+    "text": "Je suis un biscuit français iconique composé de deux coques de meringue aux amandes et d'une ganache. Coloré et délicat, je suis devenu un symbole de la pâtisserie française. Qui suis-je ?",
+    "answers": [
+      "Macaron",
+      "Madeleine",
+      "Financier",
+      "Religieuse"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks-francais",
+    "fact": "qsj-macaron"
+  },
+  {
+    "text": "Je suis un snack japonais composé de pâte croustillante en forme de bâtonnet, enrobée de chocolat. Mon nom fait référence à la prononciation japonaise d'un mot allemand pour « biscuit ». Qui suis-je ?",
+    "answers": [
+      "Pocky",
+      "Kit Kat",
+      "Pretz",
+      "Koala's March"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks-japonais",
+    "fact": "qsj-pocky"
+  },
+  {
+    "text": "Je suis un snack américain orange et en forme de doigts. Croustillant et au goût de fromage, je laisse une poudre orange caractéristique sur les doigts de ceux qui me mangent. Qui suis-je ?",
+    "answers": [
+      "Cheetos",
+      "Doritos",
+      "Cheez-It",
+      "Goldfish"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks-fromage",
+    "fact": "qsj-cheetos"
+  },
+  {
+    "text": "Je suis un biscuit italien sec en forme d'amande allongée. On me trempe traditionnellement dans le vin santo ou le café. Mon nom signifie « deux fois cuit ». Qui suis-je ?",
+    "answers": [
+      "Biscotti (cantucci)",
+      "Amaretti",
+      "Savoiardi",
+      "Pizzelle"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "snacks-italiens",
+    "fact": "qsj-biscotti"
+  },
+  {
+    "text": "Je suis une barre chocolatée avec du caramel et des cacahuètes, enrobée de chocolat au lait. Mon nom est celui d'une planète, et je suis l'une des barres les plus vendues au monde. Qui suis-je ?",
+    "answers": [
+      "Snickers",
+      "Mars",
+      "Twix",
+      "Milky Way"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks-barres",
+    "fact": "qsj-snickers"
+  },
+  {
+    "text": "Je suis un snack mexicain fait de tortilla de maïs frite en triangle. Assaisonné de différentes saveurs, mon nom signifie « petit doré » en espagnol. Qui suis-je ?",
+    "answers": [
+      "Doritos",
+      "Tostitos",
+      "Takis",
+      "Cheetos"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks-tortilla",
+    "fact": "qsj-doritos"
+  },
+  {
+    "text": "Je suis un snack coréen : des nouilles instantanées très épicées au poulet, dans un emballage noir et rouge. Le « fire noodle challenge » m'a rendu viral sur YouTube. Qui suis-je ?",
+    "answers": [
+      "Buldak (Samyang)",
+      "Shin Ramyun",
+      "Jin Ramen",
+      "Chapagetti"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "snacks-coreeens",
+    "fact": "qsj-buldak"
+  },
+  {
+    "text": "Je suis un biscuit composé de deux galettes au chocolat séparées par une crème blanche vanillée. Certains me séparent pour manger la crème d'abord. Qui suis-je ?",
+    "answers": [
+      "Oreo",
+      "Prince",
+      "Granola",
+      "BN"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks-biscuits",
+    "fact": "qsj-oreo"
+  },
+  {
+    "text": "Je suis un snack turc : un fin bretzel en forme d'anneau, croustillant et couvert de graines de sésame. Les vendeurs ambulants d'Istanbul me proposent à chaque coin de rue. Qui suis-je ?",
+    "answers": [
+      "Simit",
+      "Bretzel",
+      "Bagel",
+      "Lavash"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "snacks-turcs",
+    "fact": "qsj-simit"
+  },
+  {
+    "text": "Je suis un snack français en forme de petit gâteau bombé, doré et moelleux. Marcel Proust m'a rendu célèbre dans « À la recherche du temps perdu ». Qui suis-je ?",
+    "answers": [
+      "Madeleine",
+      "Macaron",
+      "Financier",
+      "Chouquette"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks-litteraires",
+    "fact": "qsj-madeleine"
+  },
+  {
+    "text": "Je suis un snack indien frit, en forme de triangle, farci de pommes de terre épicées et de petits pois. On me sert avec du chutney à la menthe ou au tamarin. Qui suis-je ?",
+    "answers": [
+      "Samosa",
+      "Pakora",
+      "Vada",
+      "Kachori"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks-indiens",
+    "fact": "qsj-samosa"
+  },
+  {
+    "text": "Je suis un snack mexicain en forme de rouleau de tortilla de maïs épicé. Ma saveur intense de chili et de citron vert a conquis le monde, et mon emballage violet est distinctif. Qui suis-je ?",
+    "answers": [
+      "Takis",
+      "Doritos",
+      "Hot Cheetos",
+      "Ruffles"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks-epices",
+    "fact": "qsj-takis"
+  },
+  {
+    "text": "Je suis un bonbon à la gélatine en forme d'ourson. Inventé en Allemagne par Haribo en 1922, je suis le bonbon gélatiné le plus célèbre du monde. Qui suis-je ?",
+    "answers": [
+      "Ourson d'or Haribo",
+      "Dragibus",
+      "Fraise Tagada",
+      "Schtroumpf"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks-bonbons",
+    "fact": "qsj-ourson-haribo"
+  },
+  {
+    "text": "Je suis un snack brésilien en forme de petite boule panée et frite, farcie de poulet effiloché. On me sert dans les bars et les fêtes au Brésil. Qui suis-je ?",
+    "answers": [
+      "Coxinha",
+      "Pão de queijo",
+      "Pastel",
+      "Empanada"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "snacks-bresiliens",
+    "fact": "qsj-coxinha"
+  },
+  {
+    "text": "Je suis un snack composé de gaufrettes fines recouvertes de chocolat. Mon slogan dit qu'on peut prendre une pause avec moi, et je me casse en barres. Qui suis-je ?",
+    "answers": [
+      "Kit Kat",
+      "Twix",
+      "Kinder Bueno",
+      "Lion"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks-gaufrettes",
+    "fact": "qsj-kitkat"
+  },
+  {
+    "text": "Je suis un snack libanais à base de pois chiches mixés avec du tahini, du citron et de l'ail. Onctueux et divin avec du pain pita, je suis devenu un incontournable mondial. Qui suis-je ?",
+    "answers": [
+      "Houmous",
+      "Baba ganoush",
+      "Falafel",
+      "Muhammara"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks-libanais",
+    "fact": "qsj-houmous"
+  },
+  {
+    "text": "Je suis un snack composé de chips empilées dans un tube en carton. Ma forme parabolique parfaite et mon emballage iconique me distinguent des autres chips. Qui suis-je ?",
+    "answers": [
+      "Pringles",
+      "Lays Stax",
+      "Lay's",
+      "Doritos"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks-chips",
+    "fact": "qsj-pringles"
+  },
+  {
+    "text": "Je suis une pâte à tartiner italienne à base de noisettes et de cacao, créée par Ferrero. Sur du pain, des crêpes ou à la cuillère, je suis le goûter préféré de millions de personnes. Qui suis-je ?",
+    "answers": [
+      "Nutella",
+      "Nocciolata",
+      "Ovomaltine",
+      "Lotus Biscoff spread"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks-pate-tartiner",
+    "fact": "qsj-nutella"
+  },
+  {
+    "text": "Je suis un snack japonais croustillant à base de riz soufflé, enrobé de sauce soja et de nori (algue). On me trouve dans les konbini et je suis parfait avec le thé vert. Qui suis-je ?",
+    "answers": [
+      "Senbei",
+      "Mochi",
+      "Pocky",
+      "Onigiri"
+    ],
+    "correct": 0,
+    "difficulty": "hard",
+    "angle": "snacks-riz",
+    "fact": "qsj-senbei"
+  },
+  {
+    "text": "Je suis une confiserie française composée de petites billes de sucre colorées et croquantes. Mon nom rime avec « abus » et je suis un classique des sachets Haribo. Qui suis-je ?",
+    "answers": [
+      "Dragibus",
+      "Schtroumpfs",
+      "Fraises Tagada",
+      "Crocodiles"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "snacks-haribo",
+    "fact": "qsj-dragibus"
   }
 ]

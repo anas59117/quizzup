@@ -453,5 +453,265 @@
     "difficulty": "expert",
     "angle": "sauces-cuisine-francaise",
     "fact": "qui-suis-je-beurre-blanc"
+  },
+  {
+    "text": "Je suis une sauce rouge originaire d'Asie, à base de piments rouges, vinaigre et ail. Ma bouteille verte avec un coq est reconnaissable entre mille. Qui suis-je ?",
+    "answers": [
+      "Sriracha",
+      "Tabasco",
+      "Sambal",
+      "Gochujang"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sauces-piquantes",
+    "fact": "qsj-sriracha"
+  },
+  {
+    "text": "Je suis une sauce japonaise sucrée-salée utilisée pour laquer les grillades. Composée de soja, mirin et sucre, je suis incontournable dans la cuisine de yakitori. Qui suis-je ?",
+    "answers": [
+      "Sauce teriyaki",
+      "Sauce soja",
+      "Sauce ponzu",
+      "Sauce tonkatsu"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sauces-asiatiques",
+    "fact": "qsj-teriyaki"
+  },
+  {
+    "text": "Je suis une sauce épaisse et épicée originaire de Corée. À base de piment rouge fermenté, je suis indispensable dans le bibimbap et le tteokbokki. Qui suis-je ?",
+    "answers": [
+      "Gochujang",
+      "Sriracha",
+      "Doubanjiang",
+      "Sambal oelek"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "sauces-coreeennes",
+    "fact": "qsj-gochujang"
+  },
+  {
+    "text": "Je suis une sauce verte mexicaine à base d'avocat, de coriandre et de piment. On me sert avec des tacos, des nachos et des burritos. Qui suis-je ?",
+    "answers": [
+      "Guacamole",
+      "Salsa verde",
+      "Chimichurri",
+      "Mole"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sauces-mexicaines",
+    "fact": "qsj-guacamole"
+  },
+  {
+    "text": "Je suis une sauce italienne à base de tomates, ail et basilic frais. Simple mais iconique, je suis la base de la plupart des plats de pâtes. Qui suis-je ?",
+    "answers": [
+      "Sauce marinara",
+      "Sauce bolognaise",
+      "Sauce arrabiata",
+      "Pesto"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sauces-italiennes",
+    "fact": "qsj-marinara"
+  },
+  {
+    "text": "Je suis une sauce française à base de jaunes d'œufs et de beurre clarifié, parfumée au citron. Je suis traditionnellement servie avec les œufs Benedict. Qui suis-je ?",
+    "answers": [
+      "Sauce hollandaise",
+      "Sauce béarnaise",
+      "Sauce béchamel",
+      "Sauce Mornay"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "sauces-françaises",
+    "fact": "qsj-hollandaise"
+  },
+  {
+    "text": "Je suis une sauce épaisse et brune originaire d'Angleterre, à base d'anchois, de tamarin et de vinaigre. Mon nom vient d'une ville du centre de l'Angleterre. Qui suis-je ?",
+    "answers": [
+      "Sauce Worcestershire",
+      "HP Sauce",
+      "Sauce brune",
+      "Marmite"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "sauces-anglaises",
+    "fact": "qsj-worcestershire"
+  },
+  {
+    "text": "Je suis une sauce verte argentine à base de persil, ail, huile d'olive et vinaigre. On me sert traditionnellement avec l'asado, le barbecue argentin. Qui suis-je ?",
+    "answers": [
+      "Chimichurri",
+      "Guacamole",
+      "Salsa verde",
+      "Pesto"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "sauces-sud-americaines",
+    "fact": "qsj-chimichurri"
+  },
+  {
+    "text": "Je suis une pâte de sésame originaire du Moyen-Orient. Mélangée avec du citron et de l'ail, je deviens une sauce crémeuse indispensable pour les falafels et les kebabs. Qui suis-je ?",
+    "answers": [
+      "Tahini",
+      "Houmous",
+      "Baba ganoush",
+      "Labneh"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sauces-moyen-orient",
+    "fact": "qsj-tahini"
+  },
+  {
+    "text": "Je suis une sauce française considérée comme une « sauce mère ». À base de lait et de roux blanc, je suis la base des gratins, lasagnes et croque-monsieurs. Qui suis-je ?",
+    "answers": [
+      "Sauce béchamel",
+      "Sauce hollandaise",
+      "Sauce Mornay",
+      "Sauce velouté"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sauces-meres",
+    "fact": "qsj-bechamel"
+  },
+  {
+    "text": "Je suis une sauce de poisson fermentée utilisée dans toute l'Asie du Sud-Est. Très salée et umami, je suis la base du pad thaï et de nombreux plats vietnamiens. Qui suis-je ?",
+    "answers": [
+      "Nuoc-mâm (sauce de poisson)",
+      "Sauce soja",
+      "Sauce d'huître",
+      "Sauce hoisin"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "sauces-fermentees",
+    "fact": "qsj-nuoc-mam"
+  },
+  {
+    "text": "Je suis une sauce italienne verte à base de basilic, pignons de pin, parmesan et huile d'olive. Originaire de Gênes, je suis servie avec les trofie et les trenette. Qui suis-je ?",
+    "answers": [
+      "Pesto",
+      "Sauce verte",
+      "Chimichurri",
+      "Salsa verde"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sauces-genoise",
+    "fact": "qsj-pesto"
+  },
+  {
+    "text": "Je suis une sauce rouge américaine emblématique, sucrée et vinaigrée. On me trouve sur chaque table de diner, et je suis le condiment préféré des hamburgers et des frites. Qui suis-je ?",
+    "answers": [
+      "Ketchup",
+      "Sauce BBQ",
+      "Relish",
+      "Sauce cocktail"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sauces-americaines",
+    "fact": "qsj-ketchup"
+  },
+  {
+    "text": "Je suis une sauce chinoise épaisse et sucrée à base de soja fermenté. Mon nom signifie « sauce de la mer » et je suis utilisée pour les canards laqués et les rouleaux de printemps. Qui suis-je ?",
+    "answers": [
+      "Sauce hoisin",
+      "Sauce d'huître",
+      "Sauce soja",
+      "Sauce aux prunes"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "sauces-chinoises",
+    "fact": "qsj-hoisin"
+  },
+  {
+    "text": "Je suis une sauce rouge américaine originaire de Louisiane. Faite de piments de Tabasco vieillis en fûts de chêne, ma petite bouteille est présente dans 195 pays. Qui suis-je ?",
+    "answers": [
+      "Tabasco",
+      "Sriracha",
+      "Frank's RedHot",
+      "Cholula"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sauces-louisiane",
+    "fact": "qsj-tabasco"
+  },
+  {
+    "text": "Je suis une sauce japonaise à base d'agrumes et de sauce soja. Mon goût acidulé et délicat accompagne les sashimis et les salades. Qui suis-je ?",
+    "answers": [
+      "Sauce ponzu",
+      "Sauce teriyaki",
+      "Sauce soja",
+      "Wasabi"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "sauces-japonaises",
+    "fact": "qsj-ponzu"
+  },
+  {
+    "text": "Je suis une sauce à base de moutarde, créée à Dijon en France. Mon goût piquant et crémeux fait de moi l'accompagnement parfait des viandes et vinaigrettes. Qui suis-je ?",
+    "answers": [
+      "Moutarde de Dijon",
+      "Moutarde à l'ancienne",
+      "Sauce rémoulade",
+      "Sauce gribiche"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sauces-moutarde",
+    "fact": "qsj-moutarde-dijon"
+  },
+  {
+    "text": "Je suis une sauce indienne à base de yaourt, menthe et coriandre. Fraîche et parfumée, je suis servie avec les samosas, biryanis et tikkas. Qui suis-je ?",
+    "answers": [
+      "Raïta",
+      "Chutney de menthe",
+      "Sauce tikka",
+      "Korma"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "sauces-indiennes",
+    "fact": "qsj-raita"
+  },
+  {
+    "text": "Je suis une sauce épaisse et fumée, indispensable au barbecue américain. À base de tomate, vinaigre et cassonade, chaque État du sud a sa propre recette. Qui suis-je ?",
+    "answers": [
+      "Sauce BBQ",
+      "Ketchup",
+      "Sauce steak",
+      "Sauce HP"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sauces-bbq",
+    "fact": "qsj-bbq"
+  },
+  {
+    "text": "Je suis une sauce nord-africaine à base de piments rouges séchés, ail et épices. Piquante et parfumée, je suis incontournable dans les couscous et les tajines. Qui suis-je ?",
+    "answers": [
+      "Harissa",
+      "Chermoula",
+      "Ras el hanout",
+      "Sauce piquante"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "sauces-maghrebines",
+    "fact": "qsj-harissa"
   }
 ]

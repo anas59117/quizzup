@@ -453,5 +453,265 @@
     "difficulty": "expert",
     "angle": "legendes-historiques",
     "fact": "qui-suis-je-gilles-villeneuve"
+  },
+  {
+    "text": "Je suis un pilote britannique sept fois champion du monde de F1. Je suis connu pour mon style de vie glamour et mon engagement social. Qui suis-je ?",
+    "answers": [
+      "Jenson Button",
+      "Lewis Hamilton",
+      "Lando Norris",
+      "George Russell"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "champions",
+    "fact": "qui-suis-je-lewis-hamilton"
+  },
+  {
+    "text": "Je suis un pilote allemand légendaire, sept fois champion du monde. Mon accident de ski en 2013 a bouleversé le monde du sport. Qui suis-je ?",
+    "answers": [
+      "Sebastian Vettel",
+      "Nico Rosberg",
+      "Michael Schumacher",
+      "Mick Schumacher"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "legendes",
+    "fact": "qui-suis-je-michael-schumacher"
+  },
+  {
+    "text": "Je suis un pilote néerlandais champion du monde consécutif avec Red Bull. Mon père était aussi pilote de F1. Je suis connu pour mon agressivité en piste. Qui suis-je ?",
+    "answers": [
+      "Pierre Gasly",
+      "Max Verstappen",
+      "Carlos Sainz",
+      "Charles Leclerc"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "champions-actuels",
+    "fact": "qui-suis-je-max-verstappen"
+  },
+  {
+    "text": "Je suis un pilote monégasque de Ferrari. Fils de famille royale du sport auto, j'ai grandi à Monaco et je suis un espoir de la F1. Qui suis-je ?",
+    "answers": [
+      "Carlos Sainz",
+      "Lando Norris",
+      "Charles Leclerc",
+      "Pierre Gasly"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pilotes-actuels",
+    "fact": "qui-suis-je-charles-leclerc"
+  },
+  {
+    "text": "Je suis un pilote brésilien triple champion du monde, mort tragiquement à Imola en 1994. Je suis considéré comme le plus grand pilote de l'histoire. Qui suis-je ?",
+    "answers": [
+      "Alain Prost",
+      "Ayrton Senna",
+      "Nelson Piquet",
+      "Rubens Barrichello"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "legendes",
+    "fact": "qui-suis-je-ayrton-senna"
+  },
+  {
+    "text": "Je suis un pilote français quadruple champion du monde dans les années 80 et 90. Mon rival le plus célèbre était Ayrton Senna. Qui suis-je ?",
+    "answers": [
+      "Jean Alesi",
+      "Alain Prost",
+      "René Arnoux",
+      "Jacques Laffite"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "legendes-francaises",
+    "fact": "qui-suis-je-alain-prost"
+  },
+  {
+    "text": "Je suis un pilote allemand quadruple champion du monde avec Red Bull Racing entre 2010 et 2013. J'ai pris ma retraite en 2022. Qui suis-je ?",
+    "answers": [
+      "Nico Rosberg",
+      "Sebastian Vettel",
+      "Nico Hülkenberg",
+      "Michael Schumacher"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "champions",
+    "fact": "qui-suis-je-sebastian-vettel"
+  },
+  {
+    "text": "Je suis un pilote espagnol double champion du monde avec Renault. Connu pour ma longévité, j'ai couru en F1 après 40 ans. Qui suis-je ?",
+    "answers": [
+      "Carlos Sainz Sr.",
+      "Fernando Alonso",
+      "Pedro de la Rosa",
+      "Marc Gené"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "champions",
+    "fact": "qui-suis-je-fernando-alonso"
+  },
+  {
+    "text": "Je suis un pilote britannique de McLaren. Très populaire sur les réseaux sociaux, je suis connu pour mon humour et mon talent. Je streame aussi sur Twitch. Qui suis-je ?",
+    "answers": [
+      "George Russell",
+      "Lando Norris",
+      "Oscar Piastri",
+      "Alex Albon"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "pilotes-gen-z",
+    "fact": "qui-suis-je-lando-norris"
+  },
+  {
+    "text": "Je suis un pilote finlandais surnommé « Iceman » pour mon sang-froid légendaire. Champion du monde 2007 avec Ferrari, je suis un homme de peu de mots. Qui suis-je ?",
+    "answers": [
+      "Valtteri Bottas",
+      "Mika Häkkinen",
+      "Kimi Räikkönen",
+      "Heikki Kovalainen"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "personnalites",
+    "fact": "qui-suis-je-kimi-raikkonen"
+  },
+  {
+    "text": "Je suis un pilote autrichien triple champion du monde dans les années 70. J'ai survécu à un terrible accident au Nürburgring en 1976. Qui suis-je ?",
+    "answers": [
+      "James Hunt",
+      "Niki Lauda",
+      "Jochen Rindt",
+      "Gerhard Berger"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "legendes-70s",
+    "fact": "qui-suis-je-niki-lauda"
+  },
+  {
+    "text": "Je suis un pilote français qui court pour Alpine/BWT. J'ai remporté ma première victoire en F1 à Monza en 2020 avec AlphaTauri. Qui suis-je ?",
+    "answers": [
+      "Esteban Ocon",
+      "Pierre Gasly",
+      "Romain Grosjean",
+      "Jean-Éric Vergne"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "pilotes-francais",
+    "fact": "qui-suis-je-pierre-gasly"
+  },
+  {
+    "text": "Je suis un pilote britannique de Mercedes. Ancien protégé de Toto Wolff, j'ai pris la place de Valtteri Bottas en 2022. Qui suis-je ?",
+    "answers": [
+      "Lando Norris",
+      "Alex Albon",
+      "George Russell",
+      "Oliver Bearman"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "pilotes-actuels",
+    "fact": "qui-suis-je-george-russell"
+  },
+  {
+    "text": "Je suis un pilote australien connu pour mes célébrations avec un « shoey » (boire du champagne dans ma chaussure). J'ai couru pour Red Bull et McLaren. Qui suis-je ?",
+    "answers": [
+      "Oscar Piastri",
+      "Jack Doohan",
+      "Daniel Ricciardo",
+      "Mark Webber"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "personnalites",
+    "fact": "qui-suis-je-daniel-ricciardo"
+  },
+  {
+    "text": "Je suis le fondateur d'une des écuries les plus mythiques de F1. Italien passionné de course, mon nom est synonyme de vitesse et de rouge. Qui suis-je ?",
+    "answers": [
+      "Ferruccio Lamborghini",
+      "Enzo Ferrari",
+      "Alfieri Maserati",
+      "Ettore Bugatti"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "fondateurs",
+    "fact": "qui-suis-je-enzo-ferrari"
+  },
+  {
+    "text": "Je suis un pilote finlandais double champion du monde en 1998 et 1999 avec McLaren. Mon rival était Michael Schumacher. Qui suis-je ?",
+    "answers": [
+      "Kimi Räikkönen",
+      "Valtteri Bottas",
+      "Mika Häkkinen",
+      "David Coulthard"
+    ],
+    "correct": 2,
+    "difficulty": "hard",
+    "angle": "legendes-90s",
+    "fact": "qui-suis-je-mika-hakkinen"
+  },
+  {
+    "text": "Je suis un pilote espagnol fils d'un double champion de rallye. Je course pour Ferrari après Williams et McLaren. Qui suis-je ?",
+    "answers": [
+      "Fernando Alonso",
+      "Carlos Sainz",
+      "Pedro de la Rosa",
+      "Jaime Alguersuari"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "pilotes-actuels",
+    "fact": "qui-suis-je-carlos-sainz"
+  },
+  {
+    "text": "Je suis un directeur d'écurie autrichien à la tête de Red Bull Racing. Mon leadership a permis de dominer la F1 avec Verstappen. Qui suis-je ?",
+    "answers": [
+      "Toto Wolff",
+      "Zak Brown",
+      "Christian Horner",
+      "Frédéric Vasseur"
+    ],
+    "correct": 2,
+    "difficulty": "medium",
+    "angle": "team-principals",
+    "fact": "qui-suis-je-christian-horner"
+  },
+  {
+    "text": "Je suis un pilote britannique champion du monde 2009 avec Brawn GP, l'une des histoires les plus incroyables de la F1. Qui suis-je ?",
+    "answers": [
+      "David Coulthard",
+      "Jenson Button",
+      "Damon Hill",
+      "Johnny Herbert"
+    ],
+    "correct": 1,
+    "difficulty": "hard",
+    "angle": "champions-surprise",
+    "fact": "qui-suis-je-jenson-button"
+  },
+  {
+    "text": "Je suis un pilote allemand qui a battu Lewis Hamilton pour le titre en 2016 avec Mercedes, puis j'ai pris ma retraite immédiatement après. Qui suis-je ?",
+    "answers": [
+      "Sebastian Vettel",
+      "Nico Rosberg",
+      "Ralf Schumacher",
+      "Nico Hülkenberg"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "champions",
+    "fact": "qui-suis-je-nico-rosberg"
   }
 ]

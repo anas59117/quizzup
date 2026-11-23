@@ -453,5 +453,415 @@
     "difficulty": "expert",
     "angle": "justice-league",
     "fact": "qui-suis-je-martian-manhunter"
+  },
+  {
+    "text": "Je suis un détective qui vit au 221B Baker Street. Qui suis-je ?",
+    "answers": [
+      "Hercule Poirot",
+      "Philip Marlowe",
+      "Sherlock Holmes",
+      "Columbo"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Je suis un ogre vert qui vit dans un marais. Qui suis-je ?",
+    "answers": [
+      "Hulk",
+      "Fiona",
+      "Shrek",
+      "Le Grinch"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Je suis un super-héros qui se transforme quand il est en colère et devient vert. Qui suis-je ?",
+    "answers": [
+      "Thor",
+      "Hulk",
+      "Green Lantern",
+      "Shrek"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Je suis un vampire de Transylvanie créé par Bram Stoker. Qui suis-je ?",
+    "answers": [
+      "Nosferatu",
+      "Lestat",
+      "Dracula",
+      "Edward Cullen"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Je suis un archéologue aventurier avec un chapeau et un fouet. Qui suis-je ?",
+    "answers": [
+      "Lara Croft",
+      "Allan Quatermain",
+      "Indiana Jones",
+      "Nathan Drake"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Je suis un robot doré qui parle 6 millions de langues. Qui suis-je ?",
+    "answers": [
+      "R2-D2",
+      "WALL-E",
+      "C-3PO",
+      "Data"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Je suis un sorcier avec une cicatrice en forme d'éclair. Qui suis-je ?",
+    "answers": [
+      "Gandalf",
+      "Dumbledore",
+      "Harry Potter",
+      "Merlin"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Je suis une princesse guerrière de Themyscira. Qui suis-je ?",
+    "answers": [
+      "Supergirl",
+      "Catwoman",
+      "Black Widow",
+      "Wonder Woman"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Je suis un hobbit chargé de détruire un anneau maléfique. Qui suis-je ?",
+    "answers": [
+      "Bilbon",
+      "Sam",
+      "Frodon",
+      "Merry"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Je suis un agent secret britannique au service de Sa Majesté, 007. Qui suis-je ?",
+    "answers": [
+      "Jason Bourne",
+      "Ethan Hunt",
+      "Jack Ryan",
+      "James Bond"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Je suis un manchot qui rêve de danser dans un monde qui chante. Qui suis-je ?",
+    "answers": [
+      "Skipper",
+      "Mumble",
+      "Pingu",
+      "Kowalski"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Je suis le roi lion qui reprend sa place après un exil. Qui suis-je ?",
+    "answers": [
+      "Mufasa",
+      "Scar",
+      "Simba",
+      "Kovu"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Je suis un super-héros qui tire des toiles d'araignée. Qui suis-je ?",
+    "answers": [
+      "Batman",
+      "Spider-Man",
+      "Daredevil",
+      "Ant-Man"
+    ],
+    "correct": 1
+  },
+  {
+    "text": "Je suis un poisson chirurgien bleu qui souffre de pertes de mémoire. Qui suis-je ?",
+    "answers": [
+      "Nemo",
+      "Marlin",
+      "Gill",
+      "Dory"
+    ],
+    "correct": 3
+  },
+  {
+    "text": "Je suis un milliardaire qui combat le crime la nuit à Gotham. Qui suis-je ?",
+    "answers": [
+      "Iron Man",
+      "Green Arrow",
+      "Batman",
+      "Moon Knight"
+    ],
+    "correct": 2
+  },
+  {
+    "text": "Je suis un super-héros orphelin élevé par son oncle et sa tante. Mordu par une araignée radioactive, je lance des toiles et grimpe aux murs. Mon sens de l'araignée me prévient du danger. Qui suis-je ?",
+    "answers": [
+      "Spider-Man",
+      "Batman",
+      "Daredevil",
+      "Ant-Man"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "heros-marvel",
+    "fact": "qsj-spiderman"
+  },
+  {
+    "text": "Je suis un milliardaire qui combat le crime la nuit dans une ville sombre appelée Gotham. Je n'ai aucun super-pouvoir, mais ma technologie et mes arts martiaux font de moi un justicier redouté. Qui suis-je ?",
+    "answers": [
+      "Batman",
+      "Iron Man",
+      "Green Arrow",
+      "The Punisher"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "heros-dc",
+    "fact": "qsj-batman"
+  },
+  {
+    "text": "Je suis un dieu nordique maniant un marteau magique appelé Mjölnir. Fils d'Odin et prince d'Asgard, je fais partie des Avengers. Qui suis-je ?",
+    "answers": [
+      "Thor",
+      "Loki",
+      "Hercules",
+      "Odin"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "heros-mythologie",
+    "fact": "qsj-thor"
+  },
+  {
+    "text": "Je suis un super-héros doté d'un anneau de pouvoir vert alimenté par ma volonté. Je fais partie d'un corps intergalactique qui protège l'univers, secteur par secteur. Qui suis-je ?",
+    "answers": [
+      "Green Lantern",
+      "Green Arrow",
+      "Martian Manhunter",
+      "Nova"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "heros-cosmique",
+    "fact": "qsj-green-lantern"
+  },
+  {
+    "text": "Je suis une super-héroïne originaire de Themyscira, l'île des Amazones. Ma force, mon lasso de vérité et mes bracelets pare-balles font de moi l'une des plus puissantes héroïnes de DC. Qui suis-je ?",
+    "answers": [
+      "Wonder Woman",
+      "Supergirl",
+      "Batgirl",
+      "Black Widow"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "heroines-dc",
+    "fact": "qsj-wonder-woman"
+  },
+  {
+    "text": "Je suis un super-héros aveugle de Hell's Kitchen. Mes autres sens sont surdéveloppés et je combats le crime la nuit en costume rouge. Mon ennemi juré est le Caïd. Qui suis-je ?",
+    "answers": [
+      "Daredevil",
+      "Spider-Man",
+      "Luke Cage",
+      "Iron Fist"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "heros-street",
+    "fact": "qsj-daredevil"
+  },
+  {
+    "text": "Je suis un roi surhumain régnant sur le Wakanda, un pays africain technologiquement avancé. Mon costume est fait de vibranium et je suis un Avenger. Qui suis-je ?",
+    "answers": [
+      "Black Panther",
+      "Storm",
+      "Blade",
+      "Luke Cage"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "heros-wakanda",
+    "fact": "qsj-black-panther"
+  },
+  {
+    "text": "Je suis un mutant capable de projeter des rayons d'énergie par les yeux. Leader des X-Men, je porte une visière rouge pour contrôler mon pouvoir. Qui suis-je ?",
+    "answers": [
+      "Cyclope",
+      "Wolverine",
+      "Havok",
+      "Cable"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "heros-xmen",
+    "fact": "qsj-cyclope"
+  },
+  {
+    "text": "Je suis un super-héros dont les pouvoirs viennent de la vitesse. Capable de courir plus vite que la lumière, je protège Central City en un éclair. Mon symbole est un éclair jaune. Qui suis-je ?",
+    "answers": [
+      "Flash",
+      "Quicksilver",
+      "Kid Flash",
+      "Reverse-Flash"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "heros-vitesse",
+    "fact": "qsj-flash"
+  },
+  {
+    "text": "Je suis un scientifique transformé en monstre vert quand je suis en colère. Plus je suis furieux, plus je suis fort. Mon alter ego est Bruce Banner. Qui suis-je ?",
+    "answers": [
+      "Hulk",
+      "Abomination",
+      "She-Hulk",
+      "Thing"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "heros-force",
+    "fact": "qsj-hulk"
+  },
+  {
+    "text": "Je suis un ancien soldat américain transformé en super-soldat grâce à un sérum expérimental. Mon bouclier en vibranium est mon arme iconique et je suis le leader des Avengers. Qui suis-je ?",
+    "answers": [
+      "Captain America",
+      "Bucky Barnes",
+      "Falcon",
+      "Red Guardian"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "heros-patriotique",
+    "fact": "qsj-captain-america"
+  },
+  {
+    "text": "Je suis un mutant doté d'un squelette en adamantium et de griffes rétractables. Mon facteur de guérison me rend quasi immortel. Je suis un membre emblématique des X-Men. Qui suis-je ?",
+    "answers": [
+      "Wolverine",
+      "Sabretooth",
+      "Deadpool",
+      "X-23"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "heros-mutant",
+    "fact": "qsj-wolverine"
+  },
+  {
+    "text": "Je suis un mercenaire immortel connu pour briser le quatrième mur et parler au public. Mon humour décalé et mon costume rouge et noir me distinguent. Qui suis-je ?",
+    "answers": [
+      "Deadpool",
+      "Wolverine",
+      "Deathstroke",
+      "Red Hood"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "heros-humour",
+    "fact": "qsj-deadpool"
+  },
+  {
+    "text": "Je suis un milliardaire, génie, playboy et philanthrope. Mon armure high-tech me permet de voler et de tirer des rayons d'énergie. J'ai fondé les Avengers. Qui suis-je ?",
+    "answers": [
+      "Iron Man",
+      "Batman",
+      "War Machine",
+      "Rescue"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "heros-tech",
+    "fact": "qsj-iron-man"
+  },
+  {
+    "text": "Je suis un roi atlante mi-humain mi-atlante. Je peux respirer sous l'eau, communiquer avec les créatures marines et manier un trident. Qui suis-je ?",
+    "answers": [
+      "Aquaman",
+      "Namor",
+      "Mera",
+      "Triton"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "heros-ocean",
+    "fact": "qsj-aquaman"
+  },
+  {
+    "text": "Je suis un super-héros extraterrestre envoyé bébé sur Terre depuis Krypton. Le soleil jaune me donne des pouvoirs extraordinaires. Mon vrai nom est Kal-El. Qui suis-je ?",
+    "answers": [
+      "Superman",
+      "Supergirl",
+      "General Zod",
+      "Martian Manhunter"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "heros-alien",
+    "fact": "qsj-superman"
+  },
+  {
+    "text": "Je suis une sorcière écarlate capable de manipuler la réalité elle-même. Fille de Magneto dans certaines versions, j'ai créé une réalité alternative dans « House of M ». Qui suis-je ?",
+    "answers": [
+      "Scarlet Witch (Wanda)",
+      "Jean Grey",
+      "Storm",
+      "Rogue"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "heroines-magie",
+    "fact": "qsj-scarlet-witch"
+  },
+  {
+    "text": "Je suis un ancien chirurgien devenu le Sorcier Suprême après un accident de voiture. Je protège la Terre contre les menaces mystiques depuis mon Sanctum Sanctorum. Qui suis-je ?",
+    "answers": [
+      "Doctor Strange",
+      "Doctor Doom",
+      "Doctor Fate",
+      "Scarlet Witch"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "heros-mystique",
+    "fact": "qsj-doctor-strange"
+  },
+  {
+    "text": "Je suis une mutante capable de contrôler la météo. Originaire du Kenya, je suis devenue la reine du Wakanda et l'une des X-Men les plus puissantes. Qui suis-je ?",
+    "answers": [
+      "Storm (Tornade)",
+      "Jean Grey",
+      "Rogue",
+      "Psylocke"
+    ],
+    "correct": 0,
+    "difficulty": "medium",
+    "angle": "heroines-xmen",
+    "fact": "qsj-storm"
+  },
+  {
+    "text": "Je suis un ancien gardien de la galaxie, un raton laveur génétiquement modifié expert en armes lourdes. Mon meilleur ami est un arbre qui ne dit que trois mots. Qui suis-je ?",
+    "answers": [
+      "Rocket Raccoon",
+      "Star-Lord",
+      "Drax",
+      "Gamora"
+    ],
+    "correct": 0,
+    "difficulty": "easy",
+    "angle": "heros-gardiens",
+    "fact": "qsj-rocket"
   }
 ]

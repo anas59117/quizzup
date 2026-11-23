@@ -453,5 +453,265 @@
     "difficulty": "expert",
     "angle": "rock-alternatif",
     "fact": "qui-suis-je-iggy-pop"
+  },
+  {
+    "text": "Je suis un chanteur britannique aux cheveux roux. Mes ballades à la guitare acoustique comme « Shape of You » et « Perfect » ont battu des records. Qui suis-je ?",
+    "answers": [
+      "Sam Smith",
+      "Lewis Capaldi",
+      "Ed Sheeran",
+      "James Blunt"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pop-uk",
+    "fact": "qui-suis-je-ed-sheeran"
+  },
+  {
+    "text": "Je suis une chanteuse américaine surnommée « Queen B ». Ancienne membre des Destiny's Child, « Single Ladies » est mon hymne. Qui suis-je ?",
+    "answers": [
+      "Rihanna",
+      "Beyoncé",
+      "Alicia Keys",
+      "Mary J. Blige"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "rnb-pop",
+    "fact": "qui-suis-je-beyonce"
+  },
+  {
+    "text": "Je suis une chanteuse barbadienne connue pour « Umbrella » et « We Found Love ». Ma marque de beauté Fenty a révolutionné l'industrie. Qui suis-je ?",
+    "answers": [
+      "Beyoncé",
+      "Nicki Minaj",
+      "Rihanna",
+      "Cardi B"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pop-caribeen",
+    "fact": "qui-suis-je-rihanna"
+  },
+  {
+    "text": "Je suis une pop star américaine qui est passée de country girl à icône mondiale. « Shake It Off » et « Anti-Hero » sont mes tubes. Ma tournée Eras est historique. Qui suis-je ?",
+    "answers": [
+      "Katy Perry",
+      "Miley Cyrus",
+      "Taylor Swift",
+      "Ariana Grande"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pop-us",
+    "fact": "qui-suis-je-taylor-swift"
+  },
+  {
+    "text": "Je suis un chanteur canadien découvert sur YouTube à 13 ans. « Baby » et « Sorry » ont marqué les années 2010. Qui suis-je ?",
+    "answers": [
+      "Shawn Mendes",
+      "The Weeknd",
+      "Justin Bieber",
+      "Drake"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pop-canada",
+    "fact": "qui-suis-je-justin-bieber"
+  },
+  {
+    "text": "Je suis un chanteur britannique, ancien membre des One Direction. « Watermelon Sugar » et « As It Was » sont mes hits solo. Qui suis-je ?",
+    "answers": [
+      "Zayn Malik",
+      "Niall Horan",
+      "Louis Tomlinson",
+      "Harry Styles"
+    ],
+    "correct": 3,
+    "difficulty": "easy",
+    "angle": "pop-uk",
+    "fact": "qui-suis-je-harry-styles"
+  },
+  {
+    "text": "Je suis une chanteuse américaine connue pour « Bad Guy » et mon style musical minimaliste. J'ai remporté plusieurs Grammys très jeune avec mon frère producteur. Qui suis-je ?",
+    "answers": [
+      "Olivia Rodrigo",
+      "Dua Lipa",
+      "Billie Eilish",
+      "Halsey"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pop-gen-z",
+    "fact": "qui-suis-je-billie-eilish-pop"
+  },
+  {
+    "text": "Je suis un chanteur canadien connu pour « Blinding Lights » et « Starboy ». Mon style mêle R&B et pop sombre. Qui suis-je ?",
+    "answers": [
+      "Drake",
+      "Justin Bieber",
+      "The Weeknd",
+      "Tory Lanez"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "rnb-pop",
+    "fact": "qui-suis-je-the-weeknd"
+  },
+  {
+    "text": "Je suis une chanteuse néo-zélandaise qui a percé à 16 ans avec « Royals ». Mon album « Melodrama » est acclamé par la critique. Qui suis-je ?",
+    "answers": [
+      "Halsey",
+      "Lorde",
+      "Billie Eilish",
+      "Charli XCX"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "pop-alternatif",
+    "fact": "qui-suis-je-lorde"
+  },
+  {
+    "text": "Je suis un chanteur et auteur britannique. « Someone Like You » et « Hello » ont fait pleurer la planète. Ma voix puissante est ma signature. Qui suis-je ?",
+    "answers": [
+      "Sam Smith",
+      "Amy Winehouse",
+      "Adele",
+      "Dua Lipa"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pop-uk",
+    "fact": "qui-suis-je-adele"
+  },
+  {
+    "text": "Je suis un chanteur portoricain qui mélange reggaeton et pop. « Despacito » avec Daddy Yankee est devenu un phénomène mondial. Qui suis-je ?",
+    "answers": [
+      "Bad Bunny",
+      "J Balvin",
+      "Luis Fonsi",
+      "Maluma"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "latin-pop",
+    "fact": "qui-suis-je-luis-fonsi"
+  },
+  {
+    "text": "Je suis une chanteuse américaine ancienne star Disney. « Drivers License » a lancé ma carrière solo et Gen Z m'adore. Qui suis-je ?",
+    "answers": [
+      "Sabrina Carpenter",
+      "Billie Eilish",
+      "Olivia Rodrigo",
+      "Madison Beer"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pop-gen-z",
+    "fact": "qui-suis-je-olivia-rodrigo"
+  },
+  {
+    "text": "Je suis une chanteuse colombienne qui mêle pop, rock et latin. « Hips Don't Lie » et le show du Super Bowl 2020 sont iconiques. Qui suis-je ?",
+    "answers": [
+      "Jennifer Lopez",
+      "Shakira",
+      "Camila Cabello",
+      "Rosalía"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "pop-latina",
+    "fact": "qui-suis-je-shakira"
+  },
+  {
+    "text": "Je suis un chanteur canadien connu pour ses tubes R&B et rap. « God's Plan » et « One Dance » sont parmi mes plus gros hits. Qui suis-je ?",
+    "answers": [
+      "The Weeknd",
+      "Justin Bieber",
+      "Drake",
+      "Post Malone"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "hip-hop-pop",
+    "fact": "qui-suis-je-drake"
+  },
+  {
+    "text": "Je suis un chanteur et musicien américain connu pour « Uptown Funk » et « 24K Magic ». Mon style rétro s'inspire du funk des années 80. Qui suis-je ?",
+    "answers": [
+      "Pharrell Williams",
+      "Anderson .Paak",
+      "Bruno Mars",
+      "Jason Derulo"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pop-funk",
+    "fact": "qui-suis-je-bruno-mars"
+  },
+  {
+    "text": "Je suis une chanteuse britannique au style soul et jazz. « Back to Black » et « Rehab » sont mes chefs-d'œuvre. Je suis partie trop tôt à 27 ans. Qui suis-je ?",
+    "answers": [
+      "Adele",
+      "Duffy",
+      "Amy Winehouse",
+      "Joss Stone"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "soul-uk",
+    "fact": "qui-suis-je-amy-winehouse"
+  },
+  {
+    "text": "Je suis une chanteuse pop américaine connue pour « Espresso » et « Feather ». Ancienne actrice Disney, j'ai explosé en 2024. Qui suis-je ?",
+    "answers": [
+      "Olivia Rodrigo",
+      "Sabrina Carpenter",
+      "Madison Beer",
+      "Tate McRae"
+    ],
+    "correct": 1,
+    "difficulty": "easy",
+    "angle": "pop-2024",
+    "fact": "qui-suis-je-sabrina-carpenter"
+  },
+  {
+    "text": "Je suis un chanteur portoricain qui domine le reggaeton mondial. « Yonaguni » et « Dakiti » sont mes tubes. Je chante presque exclusivement en espagnol. Qui suis-je ?",
+    "answers": [
+      "J Balvin",
+      "Ozuna",
+      "Bad Bunny",
+      "Rauw Alejandro"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "reggaeton",
+    "fact": "qui-suis-je-bad-bunny"
+  },
+  {
+    "text": "Je suis un chanteur et rappeur américain couvert de tatouages sur le visage. « Rockstar » et « Circles » mélangent pop, rock et hip-hop. Qui suis-je ?",
+    "answers": [
+      "Lil Peep",
+      "Machine Gun Kelly",
+      "Post Malone",
+      "Juice WRLD"
+    ],
+    "correct": 2,
+    "difficulty": "easy",
+    "angle": "pop-rap",
+    "fact": "qui-suis-je-post-malone"
+  },
+  {
+    "text": "Je suis une chanteuse pop britannique connue pour « Brat » et « Boom Clap ». Mon album « Brat » a défini l'été 2024. Qui suis-je ?",
+    "answers": [
+      "Dua Lipa",
+      "Charli XCX",
+      "Rita Ora",
+      "Jessie J"
+    ],
+    "correct": 1,
+    "difficulty": "medium",
+    "angle": "pop-uk",
+    "fact": "qui-suis-je-charli-xcx"
   }
 ]
