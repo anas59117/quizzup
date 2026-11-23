@@ -12,7 +12,7 @@ const trivia = require('./trivia-api');
 const reports = require('./reports');
 
 // Provisional release policy; keep complete authored banks for validation.
-const releaseExcludedTopics = new Set(require('../frontend/src/releaseExcludedTopics.json'));
+const releaseExcludedTopics = new Set(require('./release-excluded-topics.json'));
 function isReleaseExcludedTopic(key) { return releaseExcludedTopics.has(key); }
 function assertReleaseTopicAllowed(key) {
   if (isReleaseExcludedTopic(key)) throw Error('CATEGORY_UNAVAILABLE');

@@ -8,7 +8,7 @@
 **Does your app contain, display, or access third-party content?** Yes — quiz content and imagery include third-party material. Confirm the relevant licenses, permissions and attribution before submission; this checklist does not establish those rights.
 
 ## Privacy
-**Privacy Policy URL:** https://quizzup-ten.vercel.app/privacy.html
+**Privacy Policy URL:** https://quizzup.io/privacy.html
 
 ### Data collected:
 | Data Type | Collected | Linked to Identity | Used for Tracking |
@@ -20,8 +20,10 @@
 | Messages (sender, recipient, content, timestamp) | Yes | Yes | No |
 | Friends / in-app social graph | Yes | Yes | No |
 
+Google Sign-In and Firebase Auth also declare device/account identifiers, approximate IP-based location, usage data and diagnostic data for authentication, fraud prevention and analytics. The versioned Google Sign-In manifest includes phone contact data. These SDK declarations are included in App Privacy, without advertising tracking.
+
 ### Data NOT collected:
-- Location, device address book, health, financial, browsing history, search history, advertising data, phone number. The app does not request the device's contacts or photo library. Account profile images may be displayed from an existing account; there is no native photo upload in this version.
+- Precise device location, device address book, health, financial, browsing history, search history, advertising data. The app does not request device contacts or unrestricted photo-library access. Users can select a photo for a community post using the system photo picker; community photos, posts and comments are linked to their account and used for app functionality. Account profile images may also be displayed from an existing account. This release includes no advertising SDK or advertising tracking.
 
 The privacy manifest also declares gameplay content, messages and the in-app social graph for app functionality, linked to the account and without tracking. These source declarations must be reconciled with the final App Store Connect privacy answers and third-party SDK privacy reports before submission.
 

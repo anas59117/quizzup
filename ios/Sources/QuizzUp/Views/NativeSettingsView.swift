@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct NativeSettingsView: View {
-    @ObservedObject private var ads = AdsManager.shared
     @AppStorage(NativeAppearance.storageKey) private var appearance = NativeAppearance.defaultValue.rawValue
     @EnvironmentObject private var audio: NativeAudioManager
     @EnvironmentObject var game: GameSocket
@@ -54,15 +53,6 @@ struct NativeSettingsView: View {
                     }
                 }
                 Section(fr ? "À propos" : "About") {
-                    Button(fr ? "Vérification publicitaire" : "Advertising privacy") {
-                        if ads.privacyOptionsRequired {
-                            ads.presentPrivacyOptions()
-                        } else {
-                            dismiss()
-                            ads.retryConsent()
-                        }
-                    }
-                    .disabled(ads.consentBusy)
                     Link(game.t("privacyPolicy"), destination: URL(string: "https://\(GameSocket.frontendHost)/privacy.html")!)
                     Link(fr ? "Crédits des images" : "Image credits", destination: URL(string: "https://\(GameSocket.frontendHost)/image-credits.html")!)
                 }

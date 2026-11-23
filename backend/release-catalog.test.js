@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 process.env.DATA_DIR = fs.mkdtempSync(path.join(os.tmpdir(), 'release-catalog-'));
-const excluded = require('../frontend/src/releaseExcludedTopics.json');
+const excluded = require('./release-excluded-topics.json');
 const { CATEGORIES, listCategories, getQuestions, getMixedQuestions, categoryPool } = require('./questions');
 const { createAsyncChallenges } = require('./async-challenges');
 

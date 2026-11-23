@@ -5,10 +5,16 @@ on:
     branches: [main]
     paths:
       - 'ios/**'
+      - 'backend/release-excluded-topics.json'
+      - 'frontend/src/releaseExcludedTopics.json'
+      - 'frontend/scripts/restricted-topic-covers.json'
       - '.github/workflows/ios.yml'
   pull_request:
     paths:
       - 'ios/**'
+      - 'backend/release-excluded-topics.json'
+      - 'frontend/src/releaseExcludedTopics.json'
+      - 'frontend/scripts/restricted-topic-covers.json'
       - '.github/workflows/ios.yml'
   workflow_dispatch:
     inputs:
@@ -48,6 +54,7 @@ jobs:
 
       - name: Verify native timing and receiver contracts
         run: |
+          node --test scripts/release-config.test.cjs
           swift test
           swiftc -parse-as-library \
             Sources/QuizzUp/{Models,NativeRoundTimeline,NativeAudioPolicy,NativeSocialModels,NativeOnboarding,Localization,GameSocket,NativeSocialSocket,NativeOnboardingSocket}.swift \
@@ -192,14 +199,15 @@ jobs:
             echo "Archive has build $ARCHIVED_BUILD, expected $GITHUB_RUN_NUMBER"
             exit 1
           }
-          # Inspect the shipped plist, not just the XcodeGen source spec.
-          ARCHIVED_ADMOB_ID=$(/usr/libexec/PlistBuddy -c 'Print :GADApplicationIdentifier' "$APP_PLIST")
-          ARCHIVED_TEST_MODE=$(/usr/libexec/PlistBuddy -c 'Print :QuizzUpAdsTestMode' "$APP_PLIST")
-          ARCHIVED_AD_UNIT=$(/usr/libexec/PlistBuddy -c 'Print :QuizzUpInterstitialUnitID' "$APP_PLIST")
-          test "$ARCHIVED_ADMOB_ID" = 'ca-app-pub-8063787213241660~8267818819'
-          test "$ARCHIVED_AD_UNIT" = 'ca-app-pub-8063787213241660/1263426767'
-          test "$ARCHIVED_TEST_MODE" = 'true'
-          echo "Archived AdMob configuration verified (test ads)."
+          # The first public release contains neither ad SDKs nor tracking prompts.
+          for KEY in GADApplicationIdentifier QuizzUpAdsTestMode QuizzUpInterstitialUnitID NSUserTrackingUsageDescription SKAdNetworkItems; do
+            if /usr/libexec/PlistBuddy -c "Print :$KEY" "$APP_PLIST" >/dev/null 2>&1; then
+              echo "Unexpected advertising key in release: $KEY"; exit 1
+            fi
+          done
+          test ! -d "$RUNNER_TEMP/QuizzUp.xcarchive/Products/Applications/QuizzUp.app/Frameworks/GoogleMobileAds.framework"
+          test ! -d "$RUNNER_TEMP/QuizzUp.xcarchive/Products/Applications/QuizzUp.app/Frameworks/UserMessagingPlatform.framework"
+          echo "Archived ad-free configuration verified."
           test -n "$APP_STORE_API_KEY_B64" && test -n "$APP_STORE_API_KEY_ID" && test -n "$APP_STORE_API_ISSUER"
           KEY_PATH="$RUNNER_TEMP/AuthKey_$APP_STORE_API_KEY_ID.p8"
           echo "$APP_STORE_API_KEY_B64" | base64 --decode > "$KEY_PATH"

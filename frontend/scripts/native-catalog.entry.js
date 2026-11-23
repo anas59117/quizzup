@@ -2,9 +2,12 @@ import { CATEGORIES } from '../src/ui';
 import { getTopicCover } from '../src/topicCovers';
 import { localizedTopicTitle } from '../src/topicTitles';
 import { topicDetailPresentation } from '../src/topicDetailPresentation';
+import restrictedTopicCovers from './restricted-topic-covers.json';
+
+const restricted = new Set(restrictedTopicCovers);
 
 export default Object.fromEntries(CATEGORIES.map(category => {
-  const cover = getTopicCover(category);
+  const cover = restricted.has(category.key) ? null : getTopicCover(category);
   const detail = topicDetailPresentation(category, cover);
   const preferred = cover?.srcSet?.split(',').map(s => s.trim()).find(s => s.endsWith('640w'))?.split(' ')[0];
   return [category.key, {

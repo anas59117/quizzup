@@ -34,9 +34,10 @@
 </ul>
 
 <h2>2. Publicité</h2>
-<p>Les nouvelles versions iOS intègrent Google AdMob et sa plateforme de consentement UMP. Les anciens builds sans ce SDK restent sans publicité. L’intégration est actuellement configurée avec les identifiants de test Google et ne génère pas de revenu publicitaire. Lorsqu’une publicité est disponible et autorisée, elle peut apparaître avant une nouvelle partie après quatre parties terminées, avec au moins trois minutes entre deux publicités. Aucun abonnement payant n’est actuellement proposé.</p>
-<p>Selon les fonctions et les choix autorisés, le SDK peut traiter des identifiants d’appareil, l’adresse IP et une localisation approximative déduite de celle-ci, des interactions publicitaires et des diagnostics techniques. L’identifiant publicitaire Apple (IDFA) nécessite l’autorisation de suivi iOS. Les choix de consentement sont recueillis avec UMP ; lorsque l’option est requise, tu peux les revoir dans Réglages → Choix publicitaires. Refuser le suivi n’empêche pas de jouer. Si le consentement nécessaire ne peut pas être établi, aucune publicité n’est demandée. Voir les <a href="https://policies.google.com/privacy">règles de confidentialité de Google</a>.</p>
+<p>La version iOS destinée à la première publication sur l’App Store ne contient aucun SDK publicitaire, n’affiche aucune publicité et ne demande aucune autorisation de suivi publicitaire. Aucun abonnement payant n’est proposé.</p>
+<p>Certaines versions de test TestFlight antérieures intégraient Google AdMob et UMP avec des annonces de test. Cette intégration a été retirée de la version soumise pour publication. Toute introduction future de publicité fera l’objet d’une mise à jour de l’application et des informations de confidentialité.</p>
 
+<p>Les services de connexion Google Sign-In et Firebase Authentication peuvent traiter des identifiants de compte et d’appareil, des données techniques d’usage et de diagnostic, ainsi qu’une localisation approximative déduite de l’adresse IP pour la sécurité et la prévention de la fraude. Selon les informations fournies au service de connexion, des coordonnées de profil, dont un numéro de téléphone, peuvent être traitées par le fournisseur. QuizzUp ne demande pas de numéro de téléphone pour jouer et n’utilise pas ces données pour le suivi publicitaire.</p>
 <h2>3. Ce qui n'est PAS collecté</h2>
 <ul>
   <li>Aucune localisation précise (GPS).</li>
@@ -53,7 +54,7 @@
 <h2>6. Partage avec des tiers</h2>
 <p>Aucune donnée personnelle n'est vendue. Les prestataires utilisés pour le fonctionnement du service comprennent :</p>
 <ul>
-  <li><strong>Firebase / Google</strong> : authentification des comptes ; Google AdMob et UMP dans les nouvelles versions iOS pour les fonctions publicitaires et le consentement décrits ci-dessus.</li>
+  <li><strong>Firebase / Google</strong> : authentification des comptes. Les SDK publicitaires ne sont pas inclus dans la version destinée à la première publication.</li>
   <li><strong>Apple / Google</strong> : connexion au compte lorsque tu choisis ce fournisseur.</li>
   <li><strong>Railway et Vercel</strong> : hébergement du serveur de jeu et du site. Certaines images de quiz peuvent être chargées auprès de leur hébergeur d'origine, avec les données techniques nécessaires à la requête.</li>
 </ul>
@@ -90,9 +91,10 @@
 </ul>
 
 <h2>2. Advertising</h2>
-<p>New iOS builds integrate Google AdMob and its UMP consent platform. Older builds without this SDK remain ad-free. The integration currently uses Google test identifiers and generates no advertising revenue. When an ad is available and permitted, it may appear before a new game after four completed games, with at least three minutes between ads. No paid subscription is currently offered.</p>
-<p>Depending on enabled features and permitted choices, the SDK may process device identifiers, IP address and approximate location inferred from it, ad interactions and technical diagnostics. Apple’s advertising identifier (IDFA) requires iOS tracking permission. UMP collects consent choices; when required, you can revisit them in Settings → Advertising choices. Declining tracking does not prevent gameplay. No ad is requested when the necessary consent cannot be established. See <a href="https://policies.google.com/privacy">Google’s privacy policy</a>.</p>
+<p>The iOS version prepared for the first App Store release contains no advertising SDK, displays no ads and requests no advertising tracking permission. No paid subscription is offered.</p>
+<p>Some earlier TestFlight builds included Google AdMob and UMP with test ads. This integration has been removed from the version submitted for publication. Any future introduction of ads will require an app update and updated privacy information.</p>
 
+<p>Google Sign-In and Firebase Authentication may process account and device identifiers, technical usage and diagnostic data, and approximate location inferred from an IP address for security and fraud prevention. Depending on the information supplied to the sign-in service, profile contact details, including a phone number, may be processed by the provider. QuizzUp does not ask for a phone number to play and does not use this data for advertising tracking.</p>
 <h2>3. What is NOT collected</h2>
 <ul>
   <li>No precise (GPS) location.</li>
@@ -109,7 +111,7 @@
 <h2>6. Sharing with third parties</h2>
 <p>No personal data is sold. Service providers used to operate the service include:</p>
 <ul>
-  <li><strong>Firebase / Google</strong>: account authentication; Google AdMob and UMP in new iOS builds for the advertising and consent features described above.</li>
+  <li><strong>Firebase / Google</strong>: account authentication. Advertising SDKs are not included in the first public release.</li>
   <li><strong>Apple / Google</strong>: sign-in when you choose that provider.</li>
   <li><strong>Railway and Vercel</strong>: game server and website hosting. Some quiz images may load from their original host, with the technical data needed for that request.</li>
 </ul>
