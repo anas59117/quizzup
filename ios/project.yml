@@ -59,15 +59,12 @@ targets:
           - CFBundleURLSchemes:
               - com.googleusercontent.apps.825347964948-bslauj5e58lf5fqkd72kfu3mm46jvngs
         # ────────────────────────── AdMob ──────────────────────────
-        # AdMob App ID. The value below is Google's reserved TEST App ID,
-        # which is safe to ship and always serves a test creative.
-        # Swap it for the real App ID shown in the AdMob console
-        # (Settings → App settings → App ID, format: ca-app-pub-XXXX~YYYY)
-        # before enabling monetisation. Set QuizzUpAdsTestMode to false and
-        # fill QuizzUpInterstitialUnitID after configuring consent in AdMob.
-        GADApplicationIdentifier: "ca-app-pub-3940256099942544~1458002511"
+        # Publisher IDs supplied from the QuizzUp iOS AdMob console.
+        # Keep test creatives until the consent message and test devices
+        # are configured. Release monetisation uses QuizzUpAdsTestMode: false.
+        GADApplicationIdentifier: "ca-app-pub-8063787213241660~8267818819"
         QuizzUpAdsTestMode: true
-        QuizzUpInterstitialUnitID: ""
+        QuizzUpInterstitialUnitID: "ca-app-pub-8063787213241660/1263426767"
         # Shown in the iOS ATT system prompt. Apple requires a plain-language
         # reason — personalised ads benefit the app's economics directly.
         NSUserTrackingUsageDescription: "Nous utilisons cet identifiant pour vous proposer des publicités plus pertinentes et soutenir le développement gratuit de QuizzUp."
