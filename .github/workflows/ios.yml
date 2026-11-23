@@ -192,6 +192,14 @@ jobs:
             echo "Archive has build $ARCHIVED_BUILD, expected $GITHUB_RUN_NUMBER"
             exit 1
           }
+          # Inspect the shipped plist, not just the XcodeGen source spec.
+          ARCHIVED_ADMOB_ID=$(/usr/libexec/PlistBuddy -c 'Print :GADApplicationIdentifier' "$APP_PLIST")
+          ARCHIVED_TEST_MODE=$(/usr/libexec/PlistBuddy -c 'Print :QuizzUpAdsTestMode' "$APP_PLIST")
+          ARCHIVED_AD_UNIT=$(/usr/libexec/PlistBuddy -c 'Print :QuizzUpInterstitialUnitID' "$APP_PLIST")
+          test "$ARCHIVED_ADMOB_ID" = 'ca-app-pub-8063787213241660~8267818819'
+          test "$ARCHIVED_AD_UNIT" = 'ca-app-pub-8063787213241660/1263426767'
+          test "$ARCHIVED_TEST_MODE" = 'true'
+          echo "Archived AdMob configuration verified (test ads)."
           test -n "$APP_STORE_API_KEY_B64" && test -n "$APP_STORE_API_KEY_ID" && test -n "$APP_STORE_API_ISSUER"
           KEY_PATH="$RUNNER_TEMP/AuthKey_$APP_STORE_API_KEY_ID.p8"
           echo "$APP_STORE_API_KEY_B64" | base64 --decode > "$KEY_PATH"

@@ -25,6 +25,11 @@ final class AdsManager: NSObject, ObservableObject {
     @Published private(set) var consentBusy = false
     @Published private(set) var privacyError = false
     @Published private(set) var consentErrorCode: String?
+    enum ConsentCheckState {
+        case notStarted, waitingForApp, checking, waitingForScreen, presenting, finished, failed, unavailable
+    }
+    @Published private(set) var consentCheckState: ConsentCheckState = .notStarted
+    @Published private(set) var consentDetails = ""
     private var consentFailures = 0
     private var consentRetryAfter = Date.distantPast
     private var consentRetryTask: Task<Void, Never>?
@@ -59,12 +64,19 @@ final class AdsManager: NSObject, ObservableObject {
     /// Start from a visible active scene, after the premium state is known.
     func start() {
         guard !consentAttempted, !consentBusy, !trackingBusy, !launch.isPending,
-              Date() >= consentRetryAfter,
-              interstitialUnitID != nil,
-              UIApplication.shared.applicationState == .active,
-              UIApplication.shared.topMostViewController != nil else { return }
+              Date() >= consentRetryAfter else { return }
+        guard interstitialUnitID != nil else {
+            consentCheckState = .unavailable
+            return
+        }
+        guard UIApplication.shared.applicationState == .active,
+              UIApplication.shared.topMostViewController != nil else {
+            consentCheckState = .waitingForApp
+            return
+        }
         consentAttempted = true
         consentBusy = true
+        consentCheckState = .checking
         privacyError = false
         consentErrorCode = nil
         let parameters = UMPRequestParameters()
@@ -80,6 +92,7 @@ final class AdsManager: NSObject, ObservableObject {
                     return
                 }
                 self.consentFormPending = true
+                self.consentCheckState = .waitingForScreen
                 self.presentPendingConsentIfPossible()
             }
         }
@@ -94,12 +107,14 @@ final class AdsManager: NSObject, ObservableObject {
             return
         }
         consentFormPending = false
+        consentCheckState = .presenting
         UMPConsentForm.loadAndPresentIfRequired(from: presenter) { [weak self] error in
             Task { @MainActor in
                 guard let self else { return }
                 if let error { self.consentFailed(error) }
                 else {
                     self.consentFailures = 0
+                    self.consentCheckState = .finished
                     self.finishConsent()
                 }
             }
@@ -127,6 +142,7 @@ final class AdsManager: NSObject, ObservableObject {
         consentErrorCode = "\(error.domain):\(error.code)"
         NSLog("UMP consent failed [%@:%ld]", error.domain, error.code)
         privacyError = true
+        consentCheckState = .failed
         consentFormPending = false
         consentFailures += 1
         consentRetryAfter = Date().addingTimeInterval(30)
@@ -156,6 +172,8 @@ final class AdsManager: NSObject, ObservableObject {
     private func finishConsent() {
         consentBusy = false
         consentFinished = true
+        let info = UMPConsentInformation.sharedInstance
+        consentDetails = "Google: consent=\(info.consentStatus.rawValue), options=\(info.privacyOptionsRequirementStatus.rawValue), ads=\(info.canRequestAds)"
         privacyOptionsRequired = UMPConsentInformation.sharedInstance.privacyOptionsRequirementStatus == .required
         // On an error, cached consent is usable ONLY when UMP authorises it.
         // Otherwise the player can keep playing without any ad request.

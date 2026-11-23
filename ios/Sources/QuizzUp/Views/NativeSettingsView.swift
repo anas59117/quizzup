@@ -8,6 +8,18 @@ struct NativeSettingsView: View {
     @EnvironmentObject var auth: AuthManager
     @Environment(\.dismiss) private var dismiss
     private var fr: Bool { game.lang == "fr" }
+    private var consentCheckLabel: String {
+        switch ads.consentCheckState {
+        case .notStarted: return fr ? "Vérification non démarrée" : "Check not started"
+        case .waitingForApp: return fr ? "En attente du démarrage de l’app" : "Waiting for app startup"
+        case .checking: return fr ? "Vérification auprès de Google…" : "Checking with Google…"
+        case .waitingForScreen: return fr ? "Ferme cet écran pour continuer la vérification" : "Close this screen to continue the check"
+        case .presenting: return fr ? "Chargement du formulaire Google…" : "Loading Google form…"
+        case .finished: return fr ? "Vérification terminée" : "Check completed"
+        case .failed: return fr ? "Vérification indisponible" : "Check unavailable"
+        case .unavailable: return fr ? "Configuration publicitaire indisponible" : "Advertising configuration unavailable"
+        }
+    }
     var body: some View {
         NavigationStack {
             Form {
@@ -54,6 +66,12 @@ struct NativeSettingsView: View {
                     }
                 }
                 Section(fr ? "À propos" : "About") {
+                    LabeledContent("Version", value: "\(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "?") (\(Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "?"))")
+                    Text(consentCheckLabel).font(.footnote)
+                    if Bundle.main.object(forInfoDictionaryKey: "QuizzUpAdsTestMode") as? Bool == true,
+                       !ads.consentDetails.isEmpty {
+                        Text(ads.consentDetails).font(.caption).textSelection(.enabled)
+                    }
                     if ads.privacyOptionsRequired {
                         Button(fr ? "Choix publicitaires" : "Advertising choices") {
                             ads.presentPrivacyOptions()
@@ -67,7 +85,9 @@ struct NativeSettingsView: View {
                            let code = ads.consentErrorCode {
                             Text(code).font(.caption).textSelection(.enabled)
                         }
-                        Button(fr ? "Réessayer la vérification" : "Retry privacy check") {
+                    }
+                    if !ads.privacyOptionsRequired || ads.privacyError {
+                        Button(fr ? "Vérifier les choix publicitaires" : "Check advertising choices") {
                             dismiss()
                             ads.retryConsent()
                         }
