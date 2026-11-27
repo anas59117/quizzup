@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct NativeSettingsView: View {
+    @ObservedObject private var ads = AdsManager.shared
     @AppStorage(NativeAppearance.storageKey) private var appearance = NativeAppearance.defaultValue.rawValue
     @EnvironmentObject private var audio: NativeAudioManager
     @EnvironmentObject var game: GameSocket
@@ -53,6 +54,14 @@ struct NativeSettingsView: View {
                     }
                 }
                 Section(fr ? "À propos" : "About") {
+                    Button { ads.requestPrivacyOptions(french: fr) } label: {
+                        HStack {
+                            Text(fr ? "Choix publicitaires" : "Advertising choices")
+                            Spacer()
+                            if ads.consentBusy { ProgressView().tint(Theme.accent) }
+                        }.frame(minHeight: 44)
+                    }
+                    .disabled(ads.consentBusy)
                     Link(game.t("privacyPolicy"), destination: URL(string: "https://\(GameSocket.frontendHost)/privacy.html")!)
                     Link(fr ? "Crédits des images" : "Image credits", destination: URL(string: "https://\(GameSocket.frontendHost)/image-credits.html")!)
                 }
@@ -77,5 +86,13 @@ struct NativeSettingsView: View {
         .foregroundColor(Theme.ink).tint(Theme.accent)
         .preferredColorScheme(Theme.colorScheme(for: .stored(appearance)))
         .interactiveDismissDisabled(auth.isDeletingAccount)
+        .alert(fr ? "Choix publicitaires" : "Advertising choices", isPresented: Binding(
+            get: { ads.privacyNotice != nil },
+            set: { if !$0 { ads.clearPrivacyNotice() } }
+        )) {
+            Button("OK") { ads.clearPrivacyNotice() }
+        } message: {
+            Text(ads.privacyNotice ?? "")
+        }
     }
 }

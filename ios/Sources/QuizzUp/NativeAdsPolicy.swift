@@ -24,7 +24,24 @@ struct NativeAdsPolicy {
         defaults.set(now, forKey: shownKey)
         defaults.set(0, forKey: countKey)
     }
-    static func mayRequestAds(consent: Bool, premium: Bool) -> Bool { consent && !premium }
+    static func mayRequestAds(consent: Bool, premium: Bool,
+                              privacyBusy: Bool = false, trackingResolved: Bool = true) -> Bool {
+        consent && !premium && !privacyBusy && trackingResolved
+    }
+}
+
+enum NativeAdEnvironment {
+    static func usesTestAds(debug: Bool, receiptName: String?) -> Bool {
+        debug || receiptName == "sandboxReceipt"
+    }
+
+    static func validProductionIdentifiers(app: String, unit: String) -> Bool {
+        let pattern = "^ca-app-pub-[0-9]{16}"
+        guard app.range(of: pattern + "~[0-9]{10}$", options: .regularExpression) != nil,
+              unit.range(of: pattern + "/[0-9]{10}$", options: .regularExpression) != nil,
+              !app.contains("3940256099942544"), !unit.contains("3940256099942544") else { return false }
+        return app.split(separator: "~").first == unit.split(separator: "/").first
+    }
 }
 
 /// Owns one launch intention until dismissal OR failure, never both.

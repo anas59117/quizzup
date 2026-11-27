@@ -199,15 +199,27 @@ jobs:
             echo "Archive has build $ARCHIVED_BUILD, expected $GITHUB_RUN_NUMBER"
             exit 1
           }
-          # The first public release contains neither ad SDKs nor tracking prompts.
-          for KEY in GADApplicationIdentifier QuizzUpAdsTestMode QuizzUpInterstitialUnitID NSUserTrackingUsageDescription SKAdNetworkItems; do
-            if /usr/libexec/PlistBuddy -c "Print :$KEY" "$APP_PLIST" >/dev/null 2>&1; then
-              echo "Unexpected advertising key in release: $KEY"; exit 1
-            fi
-          done
-          test ! -d "$RUNNER_TEMP/QuizzUp.xcarchive/Products/Applications/QuizzUp.app/Frameworks/GoogleMobileAds.framework"
-          test ! -d "$RUNNER_TEMP/QuizzUp.xcarchive/Products/Applications/QuizzUp.app/Frameworks/UserMessagingPlatform.framework"
-          echo "Archived ad-free configuration verified."
+          APP_PATH="$RUNNER_TEMP/QuizzUp.xcarchive/Products/Applications/QuizzUp.app"
+          export APP_PATH
+          python3 - <<'PYVERIFY'
+          import os, pathlib, plistlib
+          app = pathlib.Path(os.environ['APP_PATH'])
+          info = plistlib.loads((app / 'Info.plist').read_bytes())
+          assert info['CFBundleShortVersionString'] == '1.1'
+          assert info['GADApplicationIdentifier'] == 'ca-app-pub-8063787213241660~8267818819'
+          assert info['QuizzUpInterstitialUnitID'] == 'ca-app-pub-8063787213241660/1263426767'
+          assert info['NSUserTrackingUsageDescription'].strip()
+          assert len(info['SKAdNetworkItems']) >= 1
+          assert not info.get('QuizzUpAdsTestMode', False)
+          manifest = plistlib.loads((app / 'PrivacyInfo.xcprivacy').read_bytes())
+          assert manifest['NSPrivacyTracking'] is True
+          assert len(manifest['NSPrivacyCollectedDataTypes']) == 18
+          # UMP is a static library; its resource manifest must survive linking.
+          manifests = list(app.rglob('PrivacyInfo.xcprivacy'))
+          assert any('UserMessagingPlatform' in str(p) for p in manifests), manifests
+          assert any('GoogleMobileAds' in str(p) for p in manifests), manifests
+          print('Archived advertising configuration and SDK privacy manifests verified.')
+          PYVERIFY
           test -n "$APP_STORE_API_KEY_B64" && test -n "$APP_STORE_API_KEY_ID" && test -n "$APP_STORE_API_ISSUER"
           KEY_PATH="$RUNNER_TEMP/AuthKey_$APP_STORE_API_KEY_ID.p8"
           echo "$APP_STORE_API_KEY_B64" | base64 --decode > "$KEY_PATH"

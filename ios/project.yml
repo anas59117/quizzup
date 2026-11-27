@@ -13,6 +13,12 @@ packages:
   GoogleSignIn:
     url: https://github.com/google/GoogleSignIn-iOS
     from: 7.1.0
+  GoogleMobileAds:
+    url: https://github.com/googleads/swift-package-manager-google-mobile-ads
+    exactVersion: 13.13.0
+  GoogleUserMessagingPlatform:
+    url: https://github.com/googleads/swift-package-manager-google-user-messaging-platform
+    exactVersion: 3.1.0
 targets:
   QuizzUp:
     type: application
@@ -29,11 +35,70 @@ targets:
         product: FirebaseAuth
       - package: GoogleSignIn
         product: GoogleSignIn
+      - package: GoogleMobileAds
+        product: GoogleMobileAds
+      - package: GoogleUserMessagingPlatform
+        product: GoogleUserMessagingPlatform
     info:
       path: Sources/QuizzUp/Resources/Info.plist
       properties:
+        CFBundleShortVersionString: "$(MARKETING_VERSION)"
         UILaunchScreen: {}
         ITSAppUsesNonExemptEncryption: false
+        GADApplicationIdentifier: "ca-app-pub-8063787213241660~8267818819"
+        QuizzUpInterstitialUnitID: "ca-app-pub-8063787213241660/1263426767"
+        NSUserTrackingUsageDescription: "Avec votre accord, cet identifiant permet de vous proposer des publicités personnalisées et de soutenir QuizzUp. Vous pouvez refuser et continuer à jouer."
+        SKAdNetworkItems:
+          - SKAdNetworkIdentifier: cstr6suwn9.skadnetwork
+          - SKAdNetworkIdentifier: 4fzdc2evr5.skadnetwork
+          - SKAdNetworkIdentifier: 2fnua5tdw4.skadnetwork
+          - SKAdNetworkIdentifier: ydx93a7ass.skadnetwork
+          - SKAdNetworkIdentifier: p78axxw29g.skadnetwork
+          - SKAdNetworkIdentifier: v72qych5uu.skadnetwork
+          - SKAdNetworkIdentifier: ludvb6z3bs.skadnetwork
+          - SKAdNetworkIdentifier: cp8zw746q7.skadnetwork
+          - SKAdNetworkIdentifier: 3sh42y64q3.skadnetwork
+          - SKAdNetworkIdentifier: c6k4g5qg8m.skadnetwork
+          - SKAdNetworkIdentifier: s39g8k73mm.skadnetwork
+          - SKAdNetworkIdentifier: wg4vff78zm.skadnetwork
+          - SKAdNetworkIdentifier: 3qy4746246.skadnetwork
+          - SKAdNetworkIdentifier: f38h382jlk.skadnetwork
+          - SKAdNetworkIdentifier: hs6bdukanm.skadnetwork
+          - SKAdNetworkIdentifier: mlmmfzh3r3.skadnetwork
+          - SKAdNetworkIdentifier: v4nxqhlyqp.skadnetwork
+          - SKAdNetworkIdentifier: wzmmz9fp6w.skadnetwork
+          - SKAdNetworkIdentifier: su67r6k2v3.skadnetwork
+          - SKAdNetworkIdentifier: yclnxrl5pm.skadnetwork
+          - SKAdNetworkIdentifier: t38b2kh725.skadnetwork
+          - SKAdNetworkIdentifier: 7ug5zh24hu.skadnetwork
+          - SKAdNetworkIdentifier: gta9lk7p23.skadnetwork
+          - SKAdNetworkIdentifier: vutu7akeur.skadnetwork
+          - SKAdNetworkIdentifier: y5ghdn5j9k.skadnetwork
+          - SKAdNetworkIdentifier: v9wttpbfk9.skadnetwork
+          - SKAdNetworkIdentifier: n38lu8286q.skadnetwork
+          - SKAdNetworkIdentifier: 47vhws6wlr.skadnetwork
+          - SKAdNetworkIdentifier: kbd757ywx3.skadnetwork
+          - SKAdNetworkIdentifier: 9t245vhmpl.skadnetwork
+          - SKAdNetworkIdentifier: a2p9lx4jpn.skadnetwork
+          - SKAdNetworkIdentifier: 22mmun2rn5.skadnetwork
+          - SKAdNetworkIdentifier: 44jx6755aq.skadnetwork
+          - SKAdNetworkIdentifier: k674qkevps.skadnetwork
+          - SKAdNetworkIdentifier: 4468km3ulz.skadnetwork
+          - SKAdNetworkIdentifier: 2u9pt9hc89.skadnetwork
+          - SKAdNetworkIdentifier: 8s468mfl3y.skadnetwork
+          - SKAdNetworkIdentifier: klf5c3l5u5.skadnetwork
+          - SKAdNetworkIdentifier: ppxm28t8ap.skadnetwork
+          - SKAdNetworkIdentifier: kbmxgpxpgc.skadnetwork
+          - SKAdNetworkIdentifier: uw77j35x4d.skadnetwork
+          - SKAdNetworkIdentifier: 578prtvx9j.skadnetwork
+          - SKAdNetworkIdentifier: 4dzt52r2t5.skadnetwork
+          - SKAdNetworkIdentifier: tl55sbb4fm.skadnetwork
+          - SKAdNetworkIdentifier: c3frkrj4fj.skadnetwork
+          - SKAdNetworkIdentifier: e5fvkxwrpn.skadnetwork
+          - SKAdNetworkIdentifier: 8c4e2ghe7u.skadnetwork
+          - SKAdNetworkIdentifier: 3rd42ekr43.skadnetwork
+          - SKAdNetworkIdentifier: 97r2b46745.skadnetwork
+          - SKAdNetworkIdentifier: 3qcr597p9d.skadnetwork
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait
         # Google Sign-In's OAuth redirect comes back through this custom URL
@@ -55,7 +120,7 @@ targets:
           SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) DEBUG $(QUIZZUP_CAPTURE_CONDITION)"
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.quizzup.app
-        MARKETING_VERSION: "1.0"
+        MARKETING_VERSION: "1.1"
         CURRENT_PROJECT_VERSION: "1"
         SWIFT_VERSION: "5.0"
         TARGETED_DEVICE_FAMILY: "1"
