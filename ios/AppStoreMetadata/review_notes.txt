@@ -1,7 +1,7 @@
 App Review Notes — QuizzUp
 
 SIGN-IN
-Sign-in is required. Use Continue with Apple, Continue with Google, or Continue with email. Email sign-in supports existing accounts, account creation and password reset. Review access through a working supported provider or a dedicated review account must be verified before submission.
+Sign-in is required. Use Continue with Apple, Continue with Google, or Continue with email. Email sign-in supports existing accounts, account creation and password reset. The dedicated review account is provided in the App Review Information fields.
 
 TESTING THE APP
 1. Sign in using Continue with Apple, Continue with Google, or Continue with email.
@@ -24,6 +24,6 @@ Version 1.1 introduces Google AdMob interstitial ads at natural transitions befo
 
 Google UMP updates the consent information at every app launch and presents a consent message when required. Settings > Advertising choices (Réglages > Choix publicitaires) opens the applicable privacy choices, or explains when Google does not require a form or the service is temporarily unavailable. European and US state privacy messages are configured in AdMob. After the first completed game, ATT permission is requested in a safe screen only after UMP permits ad requests. Refusing ATT does not prevent playing and uses non-personalized ad requests without IDFA. No ad SDK initialization or ad request occurs while ATT is undetermined. Google publisher first-party IDs and automatic device coarse-location collection are disabled; IP-derived approximate location may still be processed.
 
-Debug and TestFlight builds use Google's test interstitial unit automatically. App Store production builds use the configured QuizzUp unit. To observe a test ad, complete four games, resolve any applicable privacy/ATT prompts, and start a fifth game. Account/app approval by Google and network inventory can affect availability; playing always remains possible.
+Debug and TestFlight builds use Google's test interstitial unit automatically. App Store production builds use the configured QuizzUp unit. To observe a test ad, complete four games, resolve any applicable privacy/ATT prompts, and start a fifth game. Account/app approval by Google and network inventory can affect availability; playing always remains possible. Ad requests remain subject to platform privacy and network restrictions: iOS may block declared tracking domains when ATT is denied, resulting in no ad. Unavailable ads never gate gameplay.
 
 Firebase authentication may provide an email address and name in addition to the user ID. A display name, avatar and game history are used for gameplay, scores and progression. Private messages, the in-app friends list and community posts/comments are stored for account functionality. Users can choose a photo for a community post through the system photo picker. They can report content and block users. There is no device address-book access. Account deletion is available in Settings. Full privacy policy: https://quizzup.io/privacy.html

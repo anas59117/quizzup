@@ -202,7 +202,7 @@ jobs:
           APP_PATH="$RUNNER_TEMP/QuizzUp.xcarchive/Products/Applications/QuizzUp.app"
           export APP_PATH
           python3 - <<'PYVERIFY'
-          import os, pathlib, plistlib
+          import os, pathlib, plistlib, re
           app = pathlib.Path(os.environ['APP_PATH'])
           info = plistlib.loads((app / 'Info.plist').read_bytes())
           assert info['CFBundleShortVersionString'] == '1.1'
@@ -216,6 +216,22 @@ jobs:
           assert len(manifest['NSPrivacyCollectedDataTypes']) == 18
           # UMP is a static library; its resource manifest must survive linking.
           manifests = list(app.rglob('PrivacyInfo.xcprivacy'))
+          # A syntactically valid plist can still fail App Store validation (TN3181).
+          for privacy_path in manifests:
+              privacy = plistlib.loads(privacy_path.read_bytes())
+              domains = privacy.get('NSPrivacyTrackingDomains')
+              if privacy.get('NSPrivacyTracking') is True:
+                  assert isinstance(domains, list) and domains, privacy_path
+                  assert all(isinstance(d, str) and re.fullmatch(r'(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,}', d, re.I) for d in domains), privacy_path
+              else:
+                  assert domains is None or (isinstance(domains, list) and not domains), privacy_path
+              if 'NSPrivacyAccessedAPITypes' in privacy:
+                  apis = privacy['NSPrivacyAccessedAPITypes']
+                  assert isinstance(apis, list) and apis, privacy_path
+                  for api in apis:
+                      assert isinstance(api.get('NSPrivacyAccessedAPIType'), str) and api['NSPrivacyAccessedAPIType'], privacy_path
+                      reasons = api.get('NSPrivacyAccessedAPITypeReasons')
+                      assert isinstance(reasons, list) and reasons and all(isinstance(r, str) and r for r in reasons), privacy_path
           assert any('UserMessagingPlatform' in str(p) for p in manifests), manifests
           assert any('GoogleMobileAds' in str(p) for p in manifests), manifests
           print('Archived advertising configuration and SDK privacy manifests verified.')

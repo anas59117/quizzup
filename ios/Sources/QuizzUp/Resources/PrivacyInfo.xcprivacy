@@ -5,7 +5,12 @@
 	<key>NSPrivacyTracking</key>
 	<true/>
 	<key>NSPrivacyTrackingDomains</key>
-	<array/>
+	<!-- Exact ad hosts in the official Google Mobile Ads 13.13.0 binary.
+	     SDK tracing documentation: https://support.google.com/admob/answer/7671795 -->
+	<array>
+		<string>googleads.g.doubleclick.net</string>
+		<string>pagead2.googlesyndication.com</string>
+	</array>
 	<key>NSPrivacyCollectedDataTypes</key>
 	<array>
 		<dict>

@@ -5,6 +5,36 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '../..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 
+function validateTrackingDomains(manifest) {
+  manifest = manifest.replace(/<!--[\s\S]*?-->/g, '');
+  const tracking = /<key>NSPrivacyTracking<\/key>\s*<true\s*\/>/.test(manifest);
+  const array = manifest.match(/<key>NSPrivacyTrackingDomains<\/key>\s*<array\s*(?:\/>|>([\s\S]*?)<\/array>)/);
+  if (manifest.includes('<key>NSPrivacyTrackingDomains</key>')) assert.ok(array, 'Tracking domains must be an array');
+  if (array) assert.equal((array[1] ?? '').replace(/<string>[^<]*<\/string>/g, '').trim(), '', 'Tracking domains must contain strings only');
+  const domains = [...(array?.[1] ?? '').matchAll(/<string>([^<]*)<\/string>/g)].map(match => match[1]);
+  if (tracking) assert.ok(domains.length > 0, 'Tracking requires at least one domain (Apple TN3181)');
+  else assert.equal(domains.length, 0, 'Tracking-disabled manifests cannot declare tracking domains (Apple TN3181)');
+  for (const domain of domains) {
+    assert.match(domain, /^(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,}$/i, 'Domain must have no scheme, path or query');
+  }
+  return domains;
+}
+
+test('tracking manifest rejects empty domains and malformed URLs before upload', () => {
+  const fixture = value => `<key>NSPrivacyTracking</key><true/><key>NSPrivacyTrackingDomains</key>${value}`;
+  assert.throws(() => validateTrackingDomains(fixture('<array/>')), /at least one domain/);
+  assert.deepEqual(validateTrackingDomains('<key>NSPrivacyTracking</key><false/><key>NSPrivacyTrackingDomains</key><array/>'), []);
+  assert.throws(() => validateTrackingDomains('<key>NSPrivacyTracking</key><false/><key>NSPrivacyTrackingDomains</key><string>bad</string>'), /must be an array/);
+  assert.throws(() => validateTrackingDomains('<key>NSPrivacyTracking</key><false/><key>NSPrivacyTrackingDomains</key><array><string>googleads.g.doubleclick.net</string></array>'), /Tracking-disabled/);
+  assert.throws(() => validateTrackingDomains(fixture('<array><string>https://googleads.g.doubleclick.net/</string></array>')), /Domain must/);
+  const domains = validateTrackingDomains(read('ios/Sources/QuizzUp/Resources/PrivacyInfo.xcprivacy'));
+  assert.deepEqual(domains, ['googleads.g.doubleclick.net', 'pagead2.googlesyndication.com']);
+  const manifest = read('ios/Sources/QuizzUp/Resources/PrivacyInfo.xcprivacy');
+  for (const key of ['NSPrivacyTracking', 'NSPrivacyTrackingDomains']) {
+    assert.equal(manifest.split(`<key>${key}</key>`).length - 1, 1, `Duplicate ${key}`);
+  }
+});
+
 test('advertising update pins verified SDKs and keeps test creatives out of production configuration', () => {
   const project = read('ios/project.yml');
   assert.match(project, /GoogleMobileAds:[\s\S]*?exactVersion: 13\.13\.0/);
