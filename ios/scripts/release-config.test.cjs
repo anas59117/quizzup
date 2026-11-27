@@ -2,8 +2,32 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { spawnSync } = require('node:child_process');
 const root = path.resolve(__dirname, '../..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
+
+test('archive API validator accepts optional empty vendor arrays but requires root declarations and entry reasons', () => {
+  const workflow = read('.github/workflows/ios.yml');
+  const source = workflow.match(/          def validate_accessed_apis[\s\S]*?(?=          app =)/)?.[0];
+  assert.ok(source, 'Archive must expose the exact validator exercised here');
+  const validator = source.split('\n').map(line => line.slice(10)).join('\n');
+  const fixtures = `
+root = 'app/PrivacyInfo.xcprivacy'
+vendor = 'app/GoogleUtilities.bundle/PrivacyInfo.xcprivacy'
+validate_accessed_apis({}, vendor, root)
+validate_accessed_apis({'NSPrivacyAccessedAPITypes': []}, vendor, root)
+valid = {'NSPrivacyAccessedAPIType': 'NSPrivacyAccessedAPICategoryUserDefaults', 'NSPrivacyAccessedAPITypeReasons': ['CA92.1']}
+validate_accessed_apis({'NSPrivacyAccessedAPITypes': [valid]}, root, root)
+for data, location in [({}, root), ({'NSPrivacyAccessedAPITypes': []}, root), ({'NSPrivacyAccessedAPITypes': 'bad'}, vendor), ({'NSPrivacyAccessedAPITypes': [{'NSPrivacyAccessedAPIType': 'NSPrivacyAccessedAPICategoryUserDefaults', 'NSPrivacyAccessedAPITypeReasons': []}]}, vendor)]:
+    try:
+        validate_accessed_apis(data, location, root)
+    except AssertionError:
+        continue
+    raise AssertionError('Invalid declaration accepted: ' + str(data))
+`;
+  const result = spawnSync(process.platform === 'win32' ? 'python' : 'python3', ['-c', validator + fixtures], { encoding: 'utf8' });
+  assert.equal(result.status, 0, result.stderr || String(result.error));
+});
 
 function validateTrackingDomains(manifest) {
   manifest = manifest.replace(/<!--[\s\S]*?-->/g, '');

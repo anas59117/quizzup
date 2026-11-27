@@ -203,6 +203,19 @@ jobs:
           export APP_PATH
           python3 - <<'PYVERIFY'
           import os, pathlib, plistlib, re
+          def validate_accessed_apis(privacy, privacy_path, root_path):
+              apis = privacy.get('NSPrivacyAccessedAPITypes')
+              if privacy_path == root_path:
+                  assert isinstance(apis, list) and apis, privacy_path
+              elif apis is None:
+                  return
+              # Vendor optional empty arrays mean no required-reason APIs.
+              assert isinstance(apis, list), privacy_path
+              for api in apis:
+                  assert isinstance(api, dict), privacy_path
+                  assert isinstance(api.get('NSPrivacyAccessedAPIType'), str) and api['NSPrivacyAccessedAPIType'], privacy_path
+                  reasons = api.get('NSPrivacyAccessedAPITypeReasons')
+                  assert isinstance(reasons, list) and reasons and all(isinstance(r, str) and r for r in reasons), privacy_path
           app = pathlib.Path(os.environ['APP_PATH'])
           info = plistlib.loads((app / 'Info.plist').read_bytes())
           assert info['CFBundleShortVersionString'] == '1.1'
@@ -225,13 +238,7 @@ jobs:
                   assert all(isinstance(d, str) and re.fullmatch(r'(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,}', d, re.I) for d in domains), privacy_path
               else:
                   assert domains is None or (isinstance(domains, list) and not domains), privacy_path
-              if 'NSPrivacyAccessedAPITypes' in privacy:
-                  apis = privacy['NSPrivacyAccessedAPITypes']
-                  assert isinstance(apis, list) and apis, privacy_path
-                  for api in apis:
-                      assert isinstance(api.get('NSPrivacyAccessedAPIType'), str) and api['NSPrivacyAccessedAPIType'], privacy_path
-                      reasons = api.get('NSPrivacyAccessedAPITypeReasons')
-                      assert isinstance(reasons, list) and reasons and all(isinstance(r, str) and r for r in reasons), privacy_path
+              validate_accessed_apis(privacy, privacy_path, app / 'PrivacyInfo.xcprivacy')
           assert any('UserMessagingPlatform' in str(p) for p in manifests), manifests
           assert any('GoogleMobileAds' in str(p) for p in manifests), manifests
           print('Archived advertising configuration and SDK privacy manifests verified.')
