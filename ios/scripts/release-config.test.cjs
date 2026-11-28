@@ -85,6 +85,8 @@ test('advertising update pins verified SDKs and keeps test creatives out of prod
 
 test('release topics retain artwork and valid bundled image references', () => {
   const catalog = JSON.parse(read('ios/Sources/QuizzUp/Resources/topic-catalog.json'));
+  const liveTopics = require('../../backend/questions').listCategories();
+  for (const topic of liveTopics) assert.ok(catalog[topic.key], `Backend topic missing from illustrated catalog: ${topic.key}`);
   assert.ok(!read('frontend/scripts/native-catalog.entry.js').includes('restricted.has'), 'Catalog regeneration must preserve artwork');
   for (const [key, entry] of Object.entries(catalog)) {
     assert.ok(entry.src || entry.assetName, `Missing artwork: ${key}`);

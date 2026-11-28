@@ -25,6 +25,13 @@ webpack({ mode: 'production', target: 'node', context: frontend,
     try {
       if (error || stats.hasErrors()) throw error || Error(stats.toString({ all: false, errors: true }));
       const catalogue = require(path.join(temporary, 'catalog.cjs')).default;
+      // Covers explicitly bundled by the source catalogue retain their original bytes.
+      for (const entry of Object.values(catalogue)) {
+        if (entry.assetName && entry.src?.startsWith('/images/')) {
+          const source = path.join(frontend, 'public', entry.src);
+          await imageSet(entry.assetName, fs.readFileSync(source), path.extname(source).slice(1));
+        }
+      }
       const featured = ['spider_man', 'harry_potter', 'minecraft', 'rap_fr', 'ligue_champions', 'marvel', 'one_piece', 'pokemon'];
       for (const key of featured) {
         const entry = catalogue[key];

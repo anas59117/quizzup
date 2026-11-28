@@ -10,6 +10,7 @@ export default Object.fromEntries(CATEGORIES.map(category => {
     label: localizedTopicTitle(category, 'fr'), englishLabel: localizedTopicTitle(category, 'en'),
     icon: category.icon || '', family: category.family || 'culture', src: preferred || cover?.src || null,
     fit: cover?.fit || 'cover', description: category.desc || null, focal: cover?.focal,
+    assetName: cover?.assetName,
     detailTint: detail.tint, detailFit: detail.fit, detailFocal: detail.focal,
     detailSrc: preferred && preferred !== cover?.src ? cover?.src : undefined,
     detailEyebrow: detail.eyebrow, detailDescription: detail.description,

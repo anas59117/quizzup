@@ -438,5 +438,149 @@
     "grad": "g10",
     "desc": "Archipels, cultures et géographie insulaire",
     "family": "culture"
+  },
+  {
+    "key": "inoxtag",
+    "label": "Inoxtag",
+    "icon": "▶️",
+    "grad": "g1",
+    "desc": "Vidéos, défis et grandes aventures",
+    "family": "culture"
+  },
+  {
+    "key": "squeezie",
+    "label": "Squeezie",
+    "icon": "▶️",
+    "grad": "g1",
+    "desc": "Vidéos, concepts et moments cultes",
+    "family": "culture"
+  },
+  {
+    "key": "michou",
+    "label": "Michou",
+    "icon": "▶️",
+    "grad": "g1",
+    "desc": "Vidéos, jeux et aventures entre amis",
+    "family": "culture"
+  },
+  {
+    "key": "aminematue",
+    "label": "AmineMaTue",
+    "icon": "▶️",
+    "grad": "g1",
+    "desc": "Streams, football et événements",
+    "family": "culture"
+  },
+  {
+    "key": "stromae",
+    "label": "Stromae",
+    "icon": "🎤",
+    "grad": "g1",
+    "desc": "Chansons, albums et univers musical",
+    "family": "music"
+  },
+  {
+    "key": "sdm",
+    "label": "SDM",
+    "icon": "🎤",
+    "grad": "g1",
+    "desc": "Albums, collaborations et morceaux cultes",
+    "family": "music"
+  },
+  {
+    "key": "solo_leveling",
+    "label": "Solo Leveling",
+    "icon": "📖",
+    "grad": "g1",
+    "desc": "Sung Jinwoo, chasseurs et donjons",
+    "family": "manga"
+  },
+  {
+    "key": "frieren",
+    "label": "Frieren",
+    "icon": "📖",
+    "grad": "g1",
+    "desc": "Mages, compagnons et souvenirs de voyage",
+    "family": "manga"
+  },
+  {
+    "key": "oshi_no_ko",
+    "label": "Oshi no Ko",
+    "icon": "📖",
+    "grad": "g1",
+    "desc": "Idoles, secrets et destins croisés",
+    "family": "manga"
+  },
+  {
+    "key": "kaiju_no_8",
+    "label": "Kaiju No. 8",
+    "icon": "📖",
+    "grad": "g1",
+    "desc": "Kafka Hibino et les Forces de Défense",
+    "family": "manga"
+  },
+  {
+    "key": "mashle",
+    "label": "Mashle",
+    "icon": "📖",
+    "grad": "g1",
+    "desc": "Mash, magie et force hors du commun",
+    "family": "manga"
+  },
+  {
+    "key": "sakamoto_days",
+    "label": "Sakamoto Days",
+    "icon": "📖",
+    "grad": "g1",
+    "desc": "Taro Sakamoto et les légendes des assassins",
+    "family": "manga"
+  },
+  {
+    "key": "dune_film",
+    "label": "Dune",
+    "icon": "🎬",
+    "grad": "g1",
+    "desc": "Arrakis, les Atréides et les secrets de l’Épice",
+    "family": "cinema"
+  },
+  {
+    "key": "pirates_des_caraibes",
+    "label": "Pirates des Caraïbes",
+    "icon": "🎬",
+    "grad": "g1",
+    "desc": "Jack Sparrow, équipages et trésors maudits",
+    "family": "sagas"
+  },
+  {
+    "key": "freeze_corleone",
+    "label": "Freeze Corleone",
+    "icon": "🎤",
+    "grad": "g1",
+    "desc": "Albums, morceaux et parcours du rappeur",
+    "family": "music"
+  },
+  {
+    "key": "werenoi",
+    "label": "Werenoi",
+    "icon": "🎤",
+    "grad": "g1",
+    "desc": "Morceaux, albums et succès du rappeur",
+    "family": "music"
+  },
+  {
+    "key": "niska",
+    "label": "Niska",
+    "icon": "🎤",
+    "grad": "g1",
+    "desc": "Morceaux, albums et parcours du Charo",
+    "family": "music"
+  },
+  {
+    "key": "lamine_yamal",
+    "label": "Lamine Yamal",
+    "icon": "⚽",
+    "grad": "g8",
+    "desc": "Barcelone, la Roja et le parcours du prodige",
+    "family": "football"
   }
 ]
