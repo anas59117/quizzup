@@ -83,13 +83,19 @@ test('advertising update pins verified SDKs and keeps test creatives out of prod
   assert.match(manifest, /CollectedDataTypeCrashData/);
 });
 
-test('restricted promotional covers cannot ship or resolve in the native catalog', () => {
-  const restricted = JSON.parse(read('frontend/scripts/restricted-topic-covers.json'));
+test('release topics retain artwork and valid bundled image references', () => {
   const catalog = JSON.parse(read('ios/Sources/QuizzUp/Resources/topic-catalog.json'));
-  for (const key of restricted) {
-    if (!catalog[key]) continue;
-    assert.ok(!catalog[key].src && !catalog[key].detailSrc && !catalog[key].assetName, key);
-    assert.ok(!fs.existsSync(path.join(root, 'ios/Sources/QuizzUp/Resources/Assets.xcassets', `topic-${key}.imageset`)), key);
+  assert.ok(!read('frontend/scripts/native-catalog.entry.js').includes('restricted.has'), 'Catalog regeneration must preserve artwork');
+  for (const [key, entry] of Object.entries(catalog)) {
+    assert.ok(entry.src || entry.assetName, `Missing artwork: ${key}`);
+    for (const source of [entry.src, entry.detailSrc]) {
+      if (source?.startsWith('/images/')) assert.ok(fs.existsSync(path.join(root, 'frontend/public', source)), `${key}: ${source}`);
+    }
+    if (entry.assetName) {
+      const directory = path.join(root, 'ios/Sources/QuizzUp/Resources/Assets.xcassets', `${entry.assetName}.imageset`);
+      const contents = JSON.parse(fs.readFileSync(path.join(directory, 'Contents.json'), 'utf8'));
+      for (const image of contents.images.filter(image => image.filename)) assert.ok(fs.existsSync(path.join(directory, image.filename)), key);
+    }
   }
 });
 
